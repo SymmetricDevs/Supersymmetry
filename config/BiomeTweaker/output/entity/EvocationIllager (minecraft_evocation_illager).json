@@ -1,0 +1,6 @@
+
+{
+  "Name": "EvocationIllager",
+  "Registry ID": "minecraft:evocation_illager",
+  "Class": "net.minecraft.entity.monster.EntityEvoker"
+}

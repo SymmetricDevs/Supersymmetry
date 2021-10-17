@@ -1,0 +1,6 @@
+
+{
+  "Name": "SnowMan",
+  "Registry ID": "minecraft:snowman",
+  "Class": "net.minecraft.entity.monster.EntitySnowman"
+}

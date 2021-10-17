@@ -1,0 +1,54 @@
+{
+  "weight": 200,
+  "density": 0.7,
+  "min_height": 45,
+  "max_height": 151,
+  "dimension_filter": ["dimension_id:0"],
+  "surface_stone_material": "iron",
+  "name": "Magnetite Vein",
+  "description": "Magnetite is very important. It's a source of iron, and it's a way to make magnets.",
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [15, 15]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 37,
+          "value": "ore:magnetite"
+        },
+		{
+          "weight": 15,
+          "value": "ore:poor:magnetite"
+        },	
+		{
+          "weight": 15,
+          "value": "ore:rich:magnetite"
+        },	
+		{
+          "weight": 7,
+          "value": "ore:pure:magnetite"
+        },		
+		        {
+          "weight": 13,
+          "value": "ore:vanadium_magnetite"
+        },
+		{
+          "weight": 5,
+          "value": "ore:poor:vanadium_magnetite"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:rich:vanadium_magnetite"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:pure:vanadium_magnetite"
+        }
+      ]
+    }
+  }
+}

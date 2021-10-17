@@ -1,0 +1,6 @@
+
+{
+  "Name": "Squid",
+  "Registry ID": "minecraft:squid",
+  "Class": "net.minecraft.entity.passive.EntitySquid"
+}

@@ -1,0 +1,18 @@
+{
+  "path": "mod_roots/soils/elemental_soil_soil.json",
+  "enabled": true,
+  "id": "elemental_soil_soil",
+  "name": "Elemental Soil",
+  "varients": [
+    {
+      "item": "roots:elemental_soil",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": true,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": true
+    }
+  ]
+}

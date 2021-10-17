@@ -1,0 +1,86 @@
+{
+  "weight": 120,
+  "density": 0.5,
+  "min_height": 75,
+  "max_height": 125,
+  "dimension_filter": ["dimension_id:10"],
+  "name": "Basaltic Mineral Vein",
+  "description": "Found in the middle layer of the Beneath. Contains Basaltic and Granitic mineral sands, as well as calcite.",
+
+  "generator": {
+    "type": "ellipsoid",
+	"radius": [15, 15]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 15,
+          "value": "ore:basaltic_mineral_sand"
+        },
+		{
+          "weight": 6,
+          "value": "ore:poor:basaltic_mineral_sand"
+        },	
+		{
+          "weight": 6,
+          "value": "ore:rich:basaltic_mineral_sand"
+        },	
+		{
+          "weight": 3,
+          "value": "ore:pure:basaltic_mineral_sand"
+        },
+		{
+          "weight": 15,
+          "value": "ore:granitic_mineral_sand"
+        },
+		{
+          "weight": 6,
+          "value": "ore:poor:granitic_mineral_sand"
+        },	
+		{
+          "weight": 6,
+          "value": "ore:rich:granitic_mineral_sand"
+        },	
+		{
+          "weight": 3,
+          "value": "ore:pure:granitic_mineral_sand"
+        },
+		{
+          "weight": 15,
+          "value": "ore:glauconite"
+        },
+		{
+          "weight": 6,
+          "value": "ore:poor:glauconite"
+        },	
+		{
+          "weight": 6,
+          "value": "ore:rich:glauconite"
+        },	
+		{
+          "weight": 3,
+          "value": "ore:pure:glauconite"
+        },
+				{
+          "weight": 5,
+          "value": "ore:glauconite_sand"
+        },
+		{
+          "weight": 2,
+          "value": "ore:poor:glauconite_sand"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:rich:glauconite_sand"
+        },	
+		{
+          "weight": 1,
+          "value": "ore:pure:glauconite_sand"
+        }
+	]
+    }
+  }
+}

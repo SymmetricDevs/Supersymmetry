@@ -1,0 +1,27 @@
+# ----------------------------------------------------------- #
+# ########################################################### #
+#              ### cluster_caverns.cave Info ###              #
+# ########################################################### #
+#   This preset is designed to demonstrate how you can        #
+# combine the clusters feature with noise blocks to create    #
+# biome-restricted caverns.                                   #
+# ----------------------------------------------------------- #
+{
+  enabled: false
+  biomes: {
+    types: HILLS
+  }
+  clusters: {
+    states: air
+    chance: 0.75
+    radiusX: [ 28, 33 ]
+    radiusY: [ 21, 26 ]
+    radiusZ: [ 28, 33 ]
+    centerHeight: [ 33, 39 ]
+    noise: {
+      frequency: 0.02
+      scale: 0.35
+      stretch: 0.4
+    }
+  }
+}

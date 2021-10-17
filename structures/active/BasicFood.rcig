@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "basic_food",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 16,
+      "max": 16,
+      "item": {
+        "id": "minecraft:bread",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 16,
+      "max": 16,
+      "item": {
+        "id": "minecraft:carrot",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 16,
+      "max": 16,
+      "item": {
+        "id": "minecraft:potato",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 8,
+      "max": 8,
+      "item": {
+        "id": "toughasnails:purified_water_bottle",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

@@ -1,0 +1,8 @@
+{
+  "path": "mod_harvestcraft/mutations/brusselsprout_mutation.json",
+  "enabled": true,
+  "chance": 0.5,
+  "child": "harvestcraft:brusselsprout_plant",
+  "parent1": "harvestcraft:cabbage_plant",
+  "parent2": "harvestcraft:peas_plant"
+}

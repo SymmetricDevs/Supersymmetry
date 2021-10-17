@@ -1,0 +1,8 @@
+{
+  "path": "mod_harvestcraft/mutations/radish_mutation.json",
+  "enabled": true,
+  "chance": 0.5,
+  "child": "harvestcraft:radish_plant",
+  "parent1": "harvestcraft:tomato_plant",
+  "parent2": "harvestcraft:brusselsprout_plant"
+}

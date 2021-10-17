@@ -1,0 +1,6 @@
+
+{
+  "Name": "quark:wraith",
+  "Registry ID": "quark:wraith",
+  "Class": "vazkii.quark.world.entity.EntityWraith"
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "contenttweaker:items/ultra_deep_precious_metal"
+  }
+}

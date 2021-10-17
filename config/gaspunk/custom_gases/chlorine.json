@@ -1,0 +1,14 @@
+{
+  "gasType": "GAS",
+  "particleType": "GAS",
+  "color": "0x8854fd4e",
+  "agents": [
+    {
+      "agent": "gaspunk:lung_odored",
+      "potency": 0.85
+    }
+  ],
+  "tooltipLines": [
+    "Chlorine Gas"
+  ]
+}

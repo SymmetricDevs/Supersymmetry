@@ -1,0 +1,8 @@
+{
+  "path": "mod_harvestcraft/mutations/sweetpotato_mutation.json",
+  "enabled": true,
+  "chance": 0.5,
+  "child": "harvestcraft:sweetpotato_plant",
+  "parent1": "vanilla:potato_plant",
+  "parent2": "vanilla:sugarcane_plant"
+}

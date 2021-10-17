@@ -1,0 +1,8 @@
+{
+  "path": "vanilla/mutations/white_tulip_mutation.json",
+  "enabled": true,
+  "chance": 0.75,
+  "child": "vanilla:white_tulip_plant",
+  "parent1": "vanilla:daisy_plant",
+  "parent2": "vanilla:dandelion_plant"
+}

@@ -1,0 +1,19 @@
+{
+  "gasType": "GAS",
+  "particleType": "GAS",
+  "color": "55cafe66",
+  "agents": [
+    {
+      "agent": "gaspunk:lachrymator",
+      "potency": 0.5
+    },
+    {
+      "agent": "gaspunk:nerve",
+      "potency": 0.375
+    }
+  ],
+  "tooltipLines": [
+    "For more examples, check the technical wiki:",
+    "https://github.com/Ladysnake/Gaspunk/wiki"
+  ]
+}

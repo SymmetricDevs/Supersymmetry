@@ -1,0 +1,8 @@
+{
+  "path": "resource/mutations/jaslumine_mutation.json",
+  "enabled": true,
+  "chance": 0.25,
+  "child": "resource:jaslumine_plant",
+  "parent1": "resource:ferranium_plant",
+  "parent2": "vanilla:potato_plant"
+}

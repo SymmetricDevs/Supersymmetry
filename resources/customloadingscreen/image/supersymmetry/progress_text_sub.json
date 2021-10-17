@@ -1,0 +1,13 @@
+{
+    "parent": "builtin/text",
+    "position_type": "CENTER",
+    "offset_pos": "CENTER",
+    "text": "(sub_status == 'zerocore:debugtool') ? 'It is gonna be stuck here for a while, be patient...' : sub_status",
+    "position": {
+        "x": "0",
+        "y": "screen_height * 0.3 + 10",
+        "width": "0",
+        "height": "0"
+    },
+    "colour": "0xFFBDBDBD"
+}

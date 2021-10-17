@@ -1,0 +1,13 @@
+{
+    "parent": "builtin/text",
+    "position_type": "CENTER",
+    "offset_pos": "CENTER",
+    "text": "(floor(percentage * 100)) + '.' + (floor(percentage * 10000) % 100) + '%'",
+    "position": {
+        "x": "0",
+        "y": "screen_height * 0.3 - 20",
+        "width": "30",
+        "height": "30"
+    },
+    "colour": "0xFFFFFFFF"
+}

@@ -1,0 +1,18 @@
+{
+    "parent": "builtin/image",
+    "image": "customloadingscreen:image/supersymmetry/progress_round.png",
+    "position_type": "CENTER",
+    "offset_pos": "CENTER",
+    "position": {
+        "x": "-screen_width * 0.4 + percentage * screen_width * 0.4",
+        "y": "screen_height * 0.3 - 10",
+        "width": "percentage * screen_width * 0.8",
+        "height": "4"
+    },
+    "texture": {
+        "x": "0",
+        "y": "0",
+        "width": "percentage",
+        "height": "1"
+    }
+}

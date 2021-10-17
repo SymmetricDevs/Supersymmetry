@@ -1,0 +1,6 @@
+{
+  "factory": "sickness",
+  "toxic": "true",
+  "ignoreBreath": "false",
+  "sickness": "gaspunk:lung_control_loss"
+}

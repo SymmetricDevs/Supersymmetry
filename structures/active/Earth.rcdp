@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "dimensions": "id\u003d0"
+    },
+    {
+      "dimensions": "$NO_TOP_LIMIT \u0026 $BOTTOM_LIMIT \u0026 $INFINITE \u0026 $EARTH"
+    }
+  ],
+  "metadata": {
+    "title": "Earth",
+    "description": [
+      "Earth only"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  biomes: {
+    names: [
+      minecraft:mesa
+      minecraft:mesa_rock
+      minecraft:mesa_clear_rock
+    ]
+  }
+  layers: [
+    {
+      state: gregtech:granite:1
+      height: [ 0, 16 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ -7, 4 ]
+      }
+    }
+    {
+      state: minecraft:stone
+      height: [ 0, 48 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+      }
+    }
+    {
+      state: quark:limestone
+      height: [ 0, 58 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ 0, 4 ]
+      }
+    }
+    {
+      state: quark:jasper
+      height: [ 0, 204 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.9
+        range: [ -16, 16 ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "gasType": "GAS",
+  "particleType": "GAS",
+  "color": "0x00000000",
+  "agents": [
+    {
+      "agent": "gaspunk:pulmonary",
+      "potency": 0.5
+    }
+  ],
+  "tooltipLines": [
+    "Carbon Monoxide"
+  ]
+}

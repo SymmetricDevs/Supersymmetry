@@ -1,0 +1,6 @@
+
+{
+  "Name": "VillagerGolem",
+  "Registry ID": "minecraft:villager_golem",
+  "Class": "net.minecraft.entity.monster.EntityIronGolem"
+}

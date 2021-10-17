@@ -1,0 +1,30 @@
+{
+  "rules": [
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "minecraft:tallgrass:*"
+          ]
+        },
+        "harvester": {
+          "type": "PLAYER",
+          "heldItemMainHand": {
+            "items": [
+				"notreepunching:knife/flint"
+			]
+          }
+        }
+      },
+      "drops": [
+		{
+			"item": {
+				"items": [
+					"notreepunching:grass_fiber"
+				]
+			}
+		}
+	  ]
+    }
+  ]
+}

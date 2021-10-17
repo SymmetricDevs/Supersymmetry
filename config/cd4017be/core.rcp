@@ -1,0 +1,22 @@
+VERSION = 1;
+
+!Energy API: multiplier for conversion into J [Joules] with 1kJ ~ 1 tick furnace fuel burn time.
+!To disable conversion or reading for a mod, set the value to 'NaN'
+!Don't use '0', '/0'(=infinity) or negative values unless you are crazy and absolutely know what you're doing!
+energy_value_RF = 100;	!Forge energy
+energy_value_EU = 400;	!Industrialcraft EU
+energy_value_OC = 1000;	!OpenComputers
+energy_value_VC = 1000;	!VoidCraft
+
+!For mod development purposes only: allows convenient ingame editing of tool-tips and other localization strings (only works for my mods).
+!This defines the directory of language files where changes should be written to. Setting no or an invalid directory will disable this feature.
+!Controls:
+!Press F4 ingame while looking at text to enable edit mode (a blinking cursor appears in the text). Note: this doesn't work in the main ingame view (open chat screen or inventory if needed).
+!In there you can type normally and create selections by moving the cursor via arrow keys while holding SHIFT (cursor turns into blinking square brackets).
+!The key combinations CTRL + C, CTRL + X, CTRL + V work as usual. CTRL + Z reverts to the state when PAGE_UP/DOWN or ESCAPE was last pressed.
+!Use PAGE_UP / PAGE_DOWN to switch to the previous / next translation key (as shown in the list at bottom left on the screen).
+!Press ESCAPE to leave edit mode.
+!Pressing F4 + S saves all modifications to the language file for the currently selected Game Language, which should be located in the folder specified by the following path string:
+tooltip_editor_file = nil; !"../../src/resources/assets/cd4017be_lib/lang";
+
+!Final Note: don't try to edit an item's "extra" tool-tip!

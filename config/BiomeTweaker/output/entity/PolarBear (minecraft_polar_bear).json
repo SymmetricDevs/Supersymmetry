@@ -1,0 +1,6 @@
+
+{
+  "Name": "PolarBear",
+  "Registry ID": "minecraft:polar_bear",
+  "Class": "net.minecraft.entity.monster.EntityPolarBear"
+}

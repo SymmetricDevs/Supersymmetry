@@ -1,0 +1,18 @@
+{
+    "parent": "builtin/image",
+    "image": "customloadingscreen:image/supersymmetry/banner.png",
+    "position_type": "CENTER",
+    "offset_pos": "CENTER",
+    "position": {
+        "x": "0",
+        "y": "screen_height * -0.3",
+        "width": "screen_width * 0.7",
+        "height": "screen_height * 0.14"
+    },
+    "texture": {
+        "x": "0",
+        "y": "0",
+        "width": "1",
+        "height": "1"
+    }
+}

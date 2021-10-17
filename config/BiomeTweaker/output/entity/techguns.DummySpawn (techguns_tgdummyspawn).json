@@ -1,0 +1,6 @@
+
+{
+  "Name": "techguns.DummySpawn",
+  "Registry ID": "techguns:tgdummyspawn",
+  "Class": "techguns.entities.npcs.TGDummySpawn"
+}

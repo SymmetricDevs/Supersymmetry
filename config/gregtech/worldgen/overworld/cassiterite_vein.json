@@ -1,0 +1,97 @@
+{
+  "weight": 120,
+  "density": 0.4,
+  "min_height": 35,
+  "max_height": 55,
+  "surface_stone_material": "tin",
+  "dimension_filter": ["dimension_id:0"],
+  "name": "Cassiterite Vein",
+  "description": "Cassiterite, the most common source of tin in the world. It's only found in deserts. Warning: contains asbestos.",
+  "biome_modifier": {
+    "type": "biome_dictionary",
+	"SANDY": 150,
+	"DRY": 200,
+	"WET": -250,
+	"FOREST": -250,
+	"MESA": 50,
+	"HOT": 50
+},
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [15, 15]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 20,
+          "value": "ore:cassiterite"
+        },
+		{
+          "weight": 8,
+          "value": "ore:poor:cassiterite"
+        },	
+		{
+          "weight": 8,
+          "value": "ore:rich:cassiterite"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:pure:cassiterite"
+        },		
+		        {
+          "weight": 10,
+          "value": "ore:diatomite"
+        },
+		{
+          "weight": 4,
+          "value": "ore:poor:diatomite"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:rich:diatomite"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:pure:diatomite"
+        },
+		{
+          "weight": 10,
+          "value": "ore:garnet_sand"
+        },
+		{
+          "weight": 4,
+          "value": "ore:poor:garnet_sand"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:rich:garnet_sand"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:pure:garnet_sand"
+        },
+		{
+          "weight": 10,
+          "value": "ore:asbestos"
+        },
+		{
+          "weight": 4,
+          "value": "ore:poor:asbestos"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:rich:asbestos"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:pure:asbestos"
+        }
+		
+	]
+    }
+  }
+}

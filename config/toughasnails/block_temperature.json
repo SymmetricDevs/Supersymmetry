@@ -1,0 +1,39 @@
+[
+  {
+    "state": {
+      "block": "toughasnails:campfire",
+      "properties": {
+        "burning": "true"
+      }
+    },
+    "temperature": 5.0
+  },
+  {
+    "state": {
+      "block": "minecraft:lit_furnace",
+      "properties": {}
+    },
+    "temperature": 3.0
+  },
+  {
+    "state": {
+      "block": "minecraft:lava",
+      "properties": {}
+    },
+    "temperature": 15.0
+  },
+  {
+    "state": {
+      "block": "minecraft:flowing_lava",
+      "properties": {}
+    },
+    "temperature": 15.0
+  },
+  {
+    "state": {
+      "block": "minecraft:magma",
+      "properties": {}
+    },
+    "temperature": 12.5
+  }
+]

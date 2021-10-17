@@ -1,0 +1,6 @@
+
+{
+  "Name": "ZombieVillager",
+  "Registry ID": "minecraft:zombie_villager",
+  "Class": "net.minecraft.entity.monster.EntityZombieVillager"
+}

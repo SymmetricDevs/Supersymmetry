@@ -1,0 +1,6 @@
+
+{
+  "Name": "invasion_cyberman",
+  "Registry ID": "tardis:invasion_cyberman",
+  "Class": "net.tardis.mod.common.entities.EntityCybermanInvasion"
+}

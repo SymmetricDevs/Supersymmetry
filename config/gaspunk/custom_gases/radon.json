@@ -1,0 +1,14 @@
+{
+  "gasType": "GAS",
+  "particleType": "GAS",
+  "color": "0x00000000",
+  "agents": [
+    {
+      "agent": "gaspunk:radiation",
+      "potency": 1
+    }
+  ],
+  "tooltipLines": [
+    "Radioactive Radon Gas"
+  ]
+}

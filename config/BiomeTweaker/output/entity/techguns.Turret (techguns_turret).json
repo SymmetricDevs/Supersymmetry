@@ -1,0 +1,6 @@
+
+{
+  "Name": "techguns.Turret",
+  "Registry ID": "techguns:turret",
+  "Class": "techguns.entities.npcs.NPCTurret"
+}

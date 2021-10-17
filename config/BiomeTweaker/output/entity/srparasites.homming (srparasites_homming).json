@@ -1,0 +1,6 @@
+
+{
+  "Name": "srparasites.homming",
+  "Registry ID": "srparasites:homming",
+  "Class": "com.dhanantry.scapeandrunparasites.entity.projectile.EntityProjectileHomming"
+}

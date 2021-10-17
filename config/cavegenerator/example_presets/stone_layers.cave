@@ -1,0 +1,30 @@
+ # ----------------------------------------------------------- #
+ # ########################################################### #
+ #               ### stone_layers.cave Info ###                #
+ # ########################################################### #
+ #   This preset is designed to demonstrate the use of the     #
+ # included StoneLayer objects. Make sure to list these in     #
+ # from bottom to top.                                         #
+ # ----------------------------------------------------------- #
+{
+  $VANILLA: "ALL" # Default tunnels, ravines, etc.
+  enabled: false
+  stoneLayers: [
+    {
+      state: "stone:1" # granite
+      maxHeight: 12
+    }
+    {
+      state: "stone:5" # andesite
+      maxHeight: 23
+    }
+    {
+      state: "stone" # normal stone
+      maxHeight: 44
+    }
+    {
+      state: "stone:3" # diorite
+      maxHeight: 60
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+fluid.low_vacuum=Low Vacuum
+fluid.medium_vacuum=Medium Vacuum
+fluid.high_vacuum=High Vacuum
+fluid.ultra_high_vacuum=Ultra High Vacuum
+fluid.extremely_high_vacuum=Extremely High Vacuum
+
+fluid.hot_hp_hydrogen=Hot High Pressure Hydrogen
+fluid.hp_hydrogen=High Pressure Hydrogen
+fluid.cold_hp_hydrogen=Cold High Pressure Hydrogen
+
+fluid.hot_hp_oxygen=Hot High Pressure Oxygen
+fluid.hp_oxygen=High Pressure Oxygen
+fluid.cold_hp_oxygen=Cold High Pressure Oxygen
+
+fluid.hot_hp_helium=Hot High Pressure Helium
+fluid.hp_helium=High Pressure Helium
+fluid.cold_hp_helium=Cold High Pressure Helium
+
+fluid.hot_hp_neon=Hot High Pressure Neon
+fluid.hp_neon=High Pressure Neon
+fluid.cold_hp_neon=Cold High Pressure Neon
+
+fluid.hot_hp_argon=Hot High Pressure Argon
+fluid.hp_argon=High Pressure Argon
+fluid.cold_hp_argon=Cold High Pressure Argon
+
+fluid.liquid_krypton=Liquid Krypton
+fluid.hot_hp_krypton=Hot High Pressure Krypton
+fluid.hp_krypton=High Pressure Krypton
+fluid.cold_hp_krypton=Cold High Pressure Krypton
+
+fluid.liquid_xenon=Liquid Xenon
+fluid.hot_hp_xenon=Hot High Pressure Xenon
+fluid.hp_xenon=High Pressure Xenon
+fluid.cold_hp_xenon=Cold High Pressure Xenon
+
+fluid.hot_hp_air=Hot High Pressure Air
+fluid.hp_air=High Pressure Air
+fluid.cold_hp_air=Cold High Pressure Air
+
+fluid.hot_hp_nitrogen=Hot High Pressure Nitrogen
+fluid.hp_nitrogen=High Pressure Nitrogen
+fluid.cold_hp_nitrogen=Cold High Pressure Nitrogen
+
+fluid.warm_water=Warm Water
+fluid.warm_ethylene_glycol=Warm Ethylene Glycol
+
+fluid.hot_compressed_ammonia=Hot Compressed Ammonia
+fluid.compressed_ammonia=Compressed Ammonia
+fluid.cold_ammonia=Cold Ammonia
+
+fluid.hot_compressed_propane=Hot Compressed Propane
+fluid.compressed_propane=Compressed Propane
+fluid.cold_propane=Cold Propane

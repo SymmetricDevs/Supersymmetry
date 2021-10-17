@@ -1,0 +1,81 @@
+{
+  biomes: {
+    names: [
+      minecraft:ice_flats
+      minecraft:ice_mountains
+      minecraft:frozen_ocean
+      minecraft:frozen_river
+      minecraft:cold_beach
+      minecraft:mutated_ice_flats
+      biomesoplenty:snowy_tundra
+      biomesoplenty:glacier
+      biomesoplenty:tundra
+      biomesoplenty:cold_desert
+    ]
+  }
+  layers: [
+    {
+      state: minecraft:stone:1
+      height: [ 0, 12 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ 0, 3 ]
+      }
+    }
+    {
+      state: minecraft:stone
+      height: [ 0, 48 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ 0, 3 ]
+      }
+    }
+    {
+      state: biomesoplenty:hard_ice
+      height: [ 0, 64 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ -4, 4 ]
+      }
+    }
+    {
+      state: minecraft:ice
+      height: [ 0, 16 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ -4, 4 ]
+      }
+    }
+    {
+      state: minecraft:packed_ice
+      height: [ 0, 32 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ -4, 4 ]
+      }
+    }
+    {
+      state: quark:limestone
+      height: [ 0, 255 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ 0, 3 ]
+      }
+    }
+    {
+      state: quark:slate
+      height: [ 0, 255 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ 0, 3 ]
+      }
+    }
+  ]
+}

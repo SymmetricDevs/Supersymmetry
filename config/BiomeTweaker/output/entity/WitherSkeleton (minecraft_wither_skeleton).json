@@ -1,0 +1,6 @@
+
+{
+  "Name": "WitherSkeleton",
+  "Registry ID": "minecraft:wither_skeleton",
+  "Class": "net.minecraft.entity.monster.EntityWitherSkeleton"
+}

@@ -1,0 +1,6 @@
+
+{
+  "Name": "quark:foxhound",
+  "Registry ID": "quark:foxhound",
+  "Class": "vazkii.quark.world.entity.EntityFoxhound"
+}

@@ -1,0 +1,10 @@
+{
+  "result": "gaspunk:colored_smoke_red",
+  "input": {
+    "item": "minecraft:water_bucket"
+  },
+  "ingredient": {
+    "type": "forge:ore_dict",
+    "ore": "dustRedstone"
+  }
+}

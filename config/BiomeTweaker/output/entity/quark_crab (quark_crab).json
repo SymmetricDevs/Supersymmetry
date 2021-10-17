@@ -1,0 +1,6 @@
+
+{
+  "Name": "quark:crab",
+  "Registry ID": "quark:crab",
+  "Class": "vazkii.quark.world.entity.EntityCrab"
+}

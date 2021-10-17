@@ -1,0 +1,88 @@
+{
+  "path": "resource/plants/petinia_plant.json",
+  "enabled": true,
+  "id": "resource:petinia_plant",
+  "plant_name": "Petinia",
+  "seed_name": "Petinia Seeds",
+  "seed_items": [],
+  "description": {
+    "translations": {},
+    "default": "A distant cousin of the familiar petunia flower, this plant produces a substance frequently used to plate metal cans."
+  },
+  "growth_chance": 0.9,
+  "growth_bonus": 0.025,
+  "bonemeal": false,
+  "tier": 1,
+  "weedable": false,
+  "aggressive": false,
+  "spread_chance": 0.1,
+  "spawn_chance": 0.0,
+  "grass_drop_chance": 0.0,
+  "seed_drop_chance": 1.0,
+  "seed_drop_bonus": 0.0,
+  "products": {
+    "products": [
+      {
+        "min": 1,
+        "max": 2,
+        "chance": 0.95,
+        "required": true,
+        "item": "oredict:nuggetTin",
+        "meta": 0,
+        "tags": "",
+        "ignoreMeta": false,
+        "ignoreTags": [],
+        "useOreDict": false
+      }
+    ]
+  },
+  "requirement": {
+    "min_light": 10,
+    "max_light": 16,
+    "soils": [
+      "farmland_soil",
+      "grass_soil",
+      "fertilized_dirt_soil",
+      "fertile_soil",
+      "loamy_farmland_soil",
+      "sandy_farmland_soil",
+      "silty_farmland_soil",
+      "fertilized_farmland_stable_soil",
+      "fertilized_farmland_rich_stable_soil",
+      "fertilized_farmland_rich_soil",
+      "fertilized_farmland_healthy_stable_soil",
+      "fertilized_farmland_healthy_soil"
+    ],
+    "conditions": [
+      {
+        "amount": 1,
+        "min_x": 0,
+        "min_y": -2,
+        "min_z": 0,
+        "max_x": 0,
+        "max_y": -2,
+        "max_z": 0,
+        "item": "oredict:oreTin",
+        "meta": 0,
+        "tags": "",
+        "ignoreMeta": true,
+        "ignoreTags": [],
+        "useOreDict": true
+      }
+    ]
+  },
+  "texture": {
+    "render_type": "hash",
+    "seed_texture": "agricraft:items/seed_petinia",
+    "plant_textures": [
+      "agricraft:blocks/crop_petinia1",
+      "agricraft:blocks/crop_petinia1",
+      "agricraft:blocks/crop_petinia1",
+      "agricraft:blocks/crop_petinia2",
+      "agricraft:blocks/crop_petinia2",
+      "agricraft:blocks/crop_petinia2",
+      "agricraft:blocks/crop_petinia3",
+      "agricraft:blocks/crop_petinia4"
+    ]
+  }
+}

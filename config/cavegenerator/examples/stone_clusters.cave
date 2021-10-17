@@ -1,0 +1,39 @@
+# ----------------------------------------------------------- #
+# ########################################################### #
+#              ### stone_clusters.cave Info ###               #
+# ########################################################### #
+#   This preset is designed to demonstrate the use of the     #
+# Cluster objects included with this mod. I highly recommend  #
+# disabling vanilla stone clusters in the config file when    #
+# using this feature. It will look and perform better without #
+# it.                                                         #
+# ----------------------------------------------------------- #
+{
+  imports: blocks.cave
+  $VANILLA: "ALL" # Default ravines and lava settings.
+  enabled: false
+  clusters: [
+    {
+      states: $ANDESITE
+      chance: 0.15
+      radiusX: [ 16, 23 ]
+      radiusY: [ 11, 18 ]
+      radiusZ: [ 16, 23 ]
+      centerHeight: [ 20, 32 ]
+    }
+    {
+      states: $DIORITE
+      chance: 0.25
+      centerHeight: [ 49, 58 ]
+    }
+    {
+      states: $GRANITE
+      chance: 0.3
+      radiusX: [ 16, 23 ]
+      radiusY: [ 11, 18 ]
+      radiusZ: [ 16, 23 ]
+      # Center height can be negative.
+      centerHeight: [ -3, 3 ]
+    }
+  ]
+}

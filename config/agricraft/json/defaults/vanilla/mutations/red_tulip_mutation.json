@@ -1,0 +1,8 @@
+{
+  "path": "vanilla/mutations/red_tulip_mutation.json",
+  "enabled": true,
+  "chance": 0.75,
+  "child": "vanilla:red_tulip_plant",
+  "parent1": "vanilla:poppy_plant",
+  "parent2": "vanilla:allium_plant"
+}

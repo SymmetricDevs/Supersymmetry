@@ -1,0 +1,253 @@
+{
+	"images": {
+		"title": {
+			"image": "supersymmetry:mainmenu/banner.png",
+			"posX": -300,
+			"posY": 1,
+			"width": 600,
+			"height": 60,
+			"alignment": "top_center"
+		}
+	},
+	"buttons": {
+		"singleplayer": {
+			"text": "Singleplayer",
+			"hoverText": "Singleplayer",
+			"alignment": "bottom_left",
+			"posX": 0,
+			"posY": -23,
+			"width": 200,
+			"height": 20,
+			"imageWidth": 200,
+			"imageHeight": 20,
+			"hoverTextColor": 65484,
+			"clickSound": "block.lever.click",
+			"texture": "supersymmetry:mainmenu/button_long.png",
+			"action": {
+				"type": "openGui",
+				"gui": "singleplayer"
+			}
+		},
+		"multiplayer": {
+			"text": "Multiplayer",
+			"hoverText": "Join us",
+			"alignment": "bottom_left",
+			"posX": 202,
+			"posY": -23,
+			"width": 200,
+			"height": 20,
+			"imageWidth": 200,
+			"imageHeight": 20,
+			"texture": "supersymmetry:mainmenu/button_long.png",
+			"hoverTextColor": 65484,
+			"clickSound": "block.lever.click",
+			"action": {
+				"type": "openGui",
+				"gui": "multiplayer"
+			}
+		},
+		"mods": {
+			"text": "§6#modsactive#§r/§e#modsloaded#§r Mods",
+			"posX": -101,
+			"posY": 95,
+			"width": 98,
+			"height": 20,
+			"alignment": "top_right",
+			"hoverTextColor": 65484,
+			"clickSound": "block.lever.click",
+			"imageWidth": 100,
+			"imageHeight": 20,
+			"texture": "supersymmetry:mainmenu/button.png",
+			"action": {
+				"type": "openGui",
+				"gui": "mods"
+			}
+		},
+		"options": {
+			"text": "§dSettings§r",
+			"posX": -101,
+			"posY": 118,
+			"width": 98,
+			"height": 20,
+			"alignment": "top_right",
+			"hoverTextColor": 65484,
+			"clickSound": "block.lever.click",
+			"imageWidth": 100,
+			"imageHeight": 20,
+			"texture": "supersymmetry:mainmenu/button.png",
+			"action": {
+				"type": "openGui",
+				"gui": "options"
+			}
+		},
+		"quit": {
+			"text": "Quit Game",
+			"hoverText": "§4You can never escape Greg.",
+			"posX": -200,
+			"posY": -23,
+			"alignment": "bottom_right",
+			"width": 200,
+			"height": 20,
+			"hoverTextColor": 65484,
+			"clickSound": "block.lever.click",
+			"imageWidth": 200,
+			"imageHeight": 20,
+			"texture": "supersymmetry:mainmenu/button_long.png",
+			"action": {
+				"type": "quit"
+			}
+		},
+        "discord": {
+            "text": "§bDiscord Server§r",
+            "posX": -101,
+            "posY": 26,
+            "width": 98,
+            "height": 20,
+            "alignment": "top_right",
+            "clickSound": "block.lever.click",
+						"texture": "supersymmetry:mainmenu/button.png",
+			"imageWidth": 100,
+			"imageHeight": 20,
+
+            "tooltip": "§7Join the §9§lDiscord§7 to talk with other players!§r",
+            "action": {
+                "type": "openLink",
+                "link": "https://discord.gg/BNbbK98rh6" //TODO: Put link
+            }
+        },
+		"github": {
+			"text": "§aReport a bug§r",
+			"posX": -101,
+			"posY": 49,
+			"width": 98,
+			"height": 20,
+			"alignment": "top_right",
+			"texture": "supersymmetry:mainmenu/button.png",
+			"clickSound": "block.lever.click",
+			"tooltip": "§rJoin §a§lGitHub§7 to report bugs and to contribute to the project!§r",
+			"imageWidth": 100,
+			"imageHeight": 20,
+			"action": {
+				"type": "openLink",
+				"link": "https://github.com/CHANGETHISLINKPLZ" //TODO: Put links
+			}
+		},
+		"accounts": {
+			"text": "Welcome, §e#username#§r!",
+			"posX": 3,
+			"posY": 3,
+			"width": 98,
+			"height": 20,
+			"alignment": "top_left",
+			"clickSound": "block.lever.click",
+			"imageWidth": 100,
+			"imageHeight": 20,
+			"hoverTextColor": 65484,
+			"texture": "supersymmetry:mainmenu/button.png",
+			"wrappedButton": 17325,
+			"tooltip": "§7Currently logged in user: §e#username#§r | §aClick to switch between accounts!§r"
+		},
+		"open_folder": {
+			"text": "§eOpen MC Folder§r",
+			"posX": -101,
+			"posY": 3,
+			"width": 98,
+			"height": 20,
+			"alignment": "top_right",
+			"clickSound": "block.lever.click",
+			"imageWidth": 100,
+			"imageHeight": 20,
+			"hoverTextColor": 65484,
+			"texture": "supersymmetry:mainmenu/button.png",
+			"tooltip": "§7Click here to open the §eMinecraft folder§7.§r",
+			"action": {
+				"type": "openFolder",
+				"folderName": "/"
+			}
+		},
+		"refresh": {
+			"text": "§cRefresh Menu§r",
+			"posX": -101,
+			"posY": 72,
+			"width": 98,
+			"height": 20,
+			"alignment": "top_right",
+			"imageWidth": 100,
+			"imageHeight": 20,
+			"hoverTextColor": 65484,
+			"texture": "supersymmetry:mainmenu/button.png",
+			"clickSound": "block.lever.click",
+			"tooltip": "§7Click here to §erefresh§7 the menu.§r",
+			"action": {
+				"type": "refresh"
+			}
+		}
+	},
+		"labels": {
+		"minecraft_version": {
+			"text": "§aMinecraft §2#mcversion#",
+			"hoverText": "§aMinecraft Coder Pack §2#mcpversion#",
+			"color": -1,
+			"posX": 2,
+			"posY": -52,
+			"alignment": "bottom_left"
+		},
+		"modinfo": {
+			"alignment": "bottom_left",
+			"text": "Forge Version: §6#forgeversion#§r | §6#modsactive#§r mods active out of §e#modsloaded#§r",
+			"hoverText": "FML Version: §6#fmlversion# §r| §6#modsactive#§r mods active out of §e#modsloaded#§r",
+			"color": -1,
+			"posX": 2,
+			"posY": -32
+		},
+		"credits": {
+			"text": "Copyright Mojang AB. Do not distribute!",
+			"color": -1,
+			"alignment": "bottom_left",
+			"posX": 198,
+			"posY": -42,
+			"anchor": "end",
+			"hoverText": "§6Click here to see the Minecraft credits§r",
+			"action": {
+				"type": "openGui",
+				"gui": "credits"
+			}
+		},
+		"time": {
+			"text": "§rIt is §6#time#, #date#",
+			"posX": 3,
+			"posY": 26,
+			"color": -1,
+			"alignment": "top_left"
+		}
+	},
+	"other": {
+		"splash-text": {
+			"posX": 105,
+			"posY": 105,
+			"color": -256,
+			"alignment": "top_center",
+			"texts": "file:supersymmetry:mainmenu/splashes.txt"
+		},
+		"background": {
+			"image": "",
+			"mode": "fill",
+			"slideshow": {
+				"images": [
+                    "supersymmetry:backgrounds/01.png",
+                    "supersymmetry:backgrounds/02.png",
+                    "supersymmetry:backgrounds/03.png",
+                    "supersymmetry:backgrounds/04.png",
+                    "supersymmetry:backgrounds/05.png",
+                    "supersymmetry:backgrounds/06.png",
+					"supersymmetry:backgrounds/07.png"
+				],
+				"shuffle": true,
+				"displayDuration": 90,
+				"fadeDuration": 40,
+				"sync": true
+			}
+		}
+	}
+}
+

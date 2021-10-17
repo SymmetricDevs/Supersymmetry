@@ -1,0 +1,6 @@
+
+{
+  "Name": "ElderGuardian",
+  "Registry ID": "minecraft:elder_guardian",
+  "Class": "net.minecraft.entity.monster.EntityElderGuardian"
+}

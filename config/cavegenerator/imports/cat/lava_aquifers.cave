@@ -1,0 +1,25 @@
+{
+  imports: cat/common.cave::half_rel()
+  enabled: true
+  caverns: {
+    height: $half_rel(9, 44)
+    generators: [
+      {
+        threshold: [ -1, -0.8 ]
+        frequency: 0.01
+        stretch: 0.4
+      }
+    ]
+    shell: {
+      radius: 2
+      decorators: {
+        states: magma
+        matchers: air
+      }
+    }
+    caveBlocks: {
+      states: lava
+      height: $half_rel(9, 44)
+    }
+  }
+}

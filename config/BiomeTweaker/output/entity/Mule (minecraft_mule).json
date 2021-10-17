@@ -1,0 +1,6 @@
+
+{
+  "Name": "Mule",
+  "Registry ID": "minecraft:mule",
+  "Class": "net.minecraft.entity.passive.EntityMule"
+}

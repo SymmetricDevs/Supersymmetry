@@ -1,0 +1,6 @@
+
+{
+  "Name": "quark:dweller",
+  "Registry ID": "quark:dweller",
+  "Class": "vazkii.quark.world.entity.EntityDweller"
+}

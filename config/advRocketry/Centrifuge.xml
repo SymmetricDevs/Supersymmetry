@@ -1,0 +1,35 @@
+<!-->
+	IMPORTANT NOTICE TO MODPACK MAKERS!!!!
+	
+	XML recipes are being DEPRECATED soon.
+	This means that recipes registered via the XML for MACHINES will no longer work
+	To avoid issues that may arise from this, please either distribute a RESOURCE PACK
+	with relevant JSON recipes OR user Craft tweaker + Advanced rocketry tweaker (3rd party)
+	https://minecraft.curseforge.com/projects/advanced-rocketry-tweaker
+	
+	IMPORTANT NOTICE TO MODPACK MAKERS!!!!
+	
+	
+	<Recipe timeRequired="NUMBER" power="NUMBER">
+		<input>
+			<fluidStack>FLUID NAME;SIZE</fluidStack>
+			<itemStack>ITEM_NAME;SIZE;META</itemStack>
+			<oreDict>OREDICT_NAME;SIZE</oreDict>
+        </input>
+		<output>
+			<fluidStack>FLUID_NAME;SIZE</fluidStack>
+			<itemStack>ITEM_NAME;SIZE;META</itemStack>
+			<oreDict>OREDICT_NAME;SIZE</oreDict>
+		</output>
+	</Recipe>
+	
+	Can have Multiple In/Outputs
+	Some Machines can only Accept either Fluids or Items
+	
+	timeRequired="NUMBER"	how long a Recipe takes, Unit is in Ticks.
+	power="NUMBER" how much Power the Recipes takes per Tick. Unit is in RF.
+	
+	The "useDefault" attribute will prevent loading of recipes if set to "false"
+<!-->
+<Recipes useDefault="false">
+</Recipes>

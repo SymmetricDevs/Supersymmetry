@@ -1,0 +1,84 @@
+{
+  "path": "vanilla/plants/red_mushroom_plant.json",
+  "enabled": true,
+  "id": "vanilla:red_mushroom_plant",
+  "plant_name": "Red Mushroom",
+  "seed_name": "Red Mushroom Spores",
+  "seed_items": [
+    {
+      "item": "agricraft:agri_seed",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": false,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": false
+    },
+    {
+      "item": "minecraft:red_mushroom",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": false,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": false
+    }
+  ],
+  "description": {
+    "translations": {
+      "en_US": "Shrooms, ever so trippy."
+    },
+    "default": "Badger, badger, badger."
+  },
+  "growth_chance": 0.9,
+  "growth_bonus": 0.025,
+  "bonemeal": true,
+  "tier": 1,
+  "weedable": false,
+  "aggressive": false,
+  "spread_chance": 0.1,
+  "spawn_chance": 0.0,
+  "grass_drop_chance": 0.0,
+  "seed_drop_chance": 1.0,
+  "seed_drop_bonus": 0.0,
+  "products": {
+    "products": [
+      {
+        "min": 2,
+        "max": 4,
+        "chance": 1.0,
+        "required": true,
+        "item": "minecraft:red_mushroom",
+        "meta": 0,
+        "tags": "",
+        "ignoreMeta": false,
+        "ignoreTags": [],
+        "useOreDict": false
+      }
+    ]
+  },
+  "requirement": {
+    "min_light": 0,
+    "max_light": 10,
+    "soils": [
+      "mycelium_soil"
+    ],
+    "conditions": []
+  },
+  "texture": {
+    "render_type": "hash",
+    "seed_texture": "agricraft:items/seed_shroom_red",
+    "plant_textures": [
+      "agricraft:blocks/crop_shroom_red1",
+      "agricraft:blocks/crop_shroom_red1",
+      "agricraft:blocks/crop_shroom_red1",
+      "agricraft:blocks/crop_shroom_red2",
+      "agricraft:blocks/crop_shroom_red2",
+      "agricraft:blocks/crop_shroom_red3",
+      "agricraft:blocks/crop_shroom_red3",
+      "agricraft:blocks/crop_shroom_red4"
+    ]
+  }
+}

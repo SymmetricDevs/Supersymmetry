@@ -1,0 +1,27 @@
+{
+  "rules": [
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "minecraft:log:*",
+			"biomesoplenty:log_0:*",
+			"biomesoplenty:log_1:*",
+			"biomesoplenty:log_2:*",
+			"biomesoplenty:log_3:*",
+			"biomesoplenty:log_4:*",
+			"gregtech:log:0"
+          ]
+        },
+        "harvester": {
+          "type": "PLAYER",
+          "heldItemMainHand": {
+            "type": "BLACKLIST",
+            "harvestLevel": "axe;0;-1"
+          }
+        }
+      },
+      "drops": [{}]
+    }
+  ]
+}

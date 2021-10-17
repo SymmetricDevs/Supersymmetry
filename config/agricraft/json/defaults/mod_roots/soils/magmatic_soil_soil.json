@@ -1,0 +1,18 @@
+{
+  "path": "mod_roots/soils/magmatic_soil_soil.json",
+  "enabled": true,
+  "id": "magmatic_soil_soil",
+  "name": "Magmatic Soil",
+  "varients": [
+    {
+      "item": "roots:elemental_soil_fire",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": true,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "gasType": "GAS",
+  "particleType": "GAS",
+  "color": "0x00000000",
+  "agents": [
+    {
+      "agent": "gaspunk:lung_odored",
+      "potency": 0.75
+    }
+  ],
+  "tooltipLines": [
+    "Hydrogen Cyanide Gas"
+  ]
+}

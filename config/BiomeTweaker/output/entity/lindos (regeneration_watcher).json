@@ -1,0 +1,6 @@
+
+{
+  "Name": "lindos",
+  "Registry ID": "regeneration:watcher",
+  "Class": "me.suff.mc.regen.common.entity.EntityWatcher"
+}

@@ -1,0 +1,6 @@
+
+{
+  "Name": "srparasites.sim_cow",
+  "Registry ID": "srparasites:sim_cow",
+  "Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfCow"
+}

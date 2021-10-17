@@ -1,0 +1,85 @@
+{
+  "path": "vanilla/plants/sugarcane_plant.json",
+  "enabled": true,
+  "id": "vanilla:sugarcane_plant",
+  "plant_name": "Sugarcane",
+  "seed_name": "Sugarcane Seeds",
+  "seed_items": [
+    {
+      "item": "agricraft:agri_seed",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": false,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": false
+    },
+    {
+      "item": "minecraft:reeds",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": false,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": false
+    }
+  ],
+  "description": {
+    "translations": {
+      "en_US": "High in fructose, a healthy part of your daily breakfast.",
+      "es_ES": "Mucho azucar."
+    },
+    "default": "A good source of sugar."
+  },
+  "growth_chance": 0.9,
+  "growth_bonus": 0.025,
+  "bonemeal": true,
+  "tier": 1,
+  "weedable": false,
+  "aggressive": false,
+  "spread_chance": 0.1,
+  "spawn_chance": 0.0,
+  "grass_drop_chance": 0.0,
+  "seed_drop_chance": 1.0,
+  "seed_drop_bonus": 0.0,
+  "products": {
+    "products": [
+      {
+        "min": 1,
+        "max": 2,
+        "chance": 1000.0,
+        "required": true,
+        "item": "minecraft:reeds",
+        "meta": 0,
+        "tags": "",
+        "ignoreMeta": false,
+        "ignoreTags": [],
+        "useOreDict": false
+      }
+    ]
+  },
+  "requirement": {
+    "min_light": 10,
+    "max_light": 16,
+    "soils": [
+      "sand_soil"
+    ],
+    "conditions": []
+  },
+  "texture": {
+    "render_type": "hash",
+    "seed_texture": "agricraft:items/seed_sugarcane",
+    "plant_textures": [
+      "agricraft:blocks/crop_sugarcane1",
+      "agricraft:blocks/crop_sugarcane1",
+      "agricraft:blocks/crop_sugarcane1",
+      "agricraft:blocks/crop_sugarcane2",
+      "agricraft:blocks/crop_sugarcane2",
+      "agricraft:blocks/crop_sugarcane3",
+      "agricraft:blocks/crop_sugarcane3",
+      "agricraft:blocks/crop_sugarcane4"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+
+{
+  "Name": "anomaly",
+  "Registry ID": "weeping-angels:anomaly",
+  "Class": "me.swirtzly.angels.common.entities.EntityAnomaly"
+}

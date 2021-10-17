@@ -1,0 +1,8 @@
+{
+  "path": "resource/mutations/petinia_mutation.json",
+  "enabled": true,
+  "chance": 0.25,
+  "child": "resource:petinia_plant",
+  "parent1": "resource:ferranium_plant",
+  "parent2": "vanilla:wheat_plant"
+}

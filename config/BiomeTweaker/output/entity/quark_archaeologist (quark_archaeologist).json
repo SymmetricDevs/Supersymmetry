@@ -1,0 +1,6 @@
+
+{
+  "Name": "quark:archaeologist",
+  "Registry ID": "quark:archaeologist",
+  "Class": "vazkii.quark.world.entity.EntityArchaeologist"
+}

@@ -1,0 +1,18 @@
+{
+  "path": "mod_rustic/soils/fertile_soil.json",
+  "enabled": true,
+  "id": "fertile_soil",
+  "name": "Fertile Soil",
+  "varients": [
+    {
+      "item": "rustic:fertile_soil",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": true,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": true
+    }
+  ]
+}

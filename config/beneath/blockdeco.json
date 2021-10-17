@@ -1,0 +1,52 @@
+[
+  {
+    "ore": "minecraft:dirt",
+    "oremeta": 0,
+    "source": "minecraft:stone",
+    "srcmeta": 0,
+    "veins": 33,
+    "size": 24,
+    "miny": 0,
+    "maxy": 256
+  },
+  {
+    "ore": "minecraft:gravel",
+    "oremeta": 0,
+    "source": "minecraft:stone",
+    "srcmeta": 0,
+    "veins": 33,
+    "size": 22,
+    "miny": 0,
+    "maxy": 256
+  },
+  {
+    "ore": "minecraft:stone",
+    "oremeta": 1,
+    "source": "minecraft:stone",
+    "srcmeta": 0,
+    "veins": 33,
+    "size": 24,
+    "miny": 0,
+    "maxy": 160
+  },
+  {
+    "ore": "minecraft:stone",
+    "oremeta": 3,
+    "source": "minecraft:stone",
+    "srcmeta": 0,
+    "veins": 33,
+    "size": 24,
+    "miny": 0,
+    "maxy": 160
+  },
+  {
+    "ore": "minecraft:stone",
+    "oremeta": 5,
+    "source": "minecraft:stone",
+    "srcmeta": 0,
+    "veins": 33,
+    "size": 24,
+    "miny": 0,
+    "maxy": 160
+  }
+]

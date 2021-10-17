@@ -1,0 +1,70 @@
+{
+  "beachBiomeLocation": "minecraft:beaches",
+  "generators": {
+    "glowshrooms": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "glowshroom"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 1.5,
+      "enable": true
+    },
+    "leaf_piles": {
+      "with": {
+        "block": "biomesoplenty:plant_0",
+        "properties": {
+          "variant": "leafpile"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 0.1,
+      "enable": true
+    },
+    "flowers": {
+      "amountPerChunk": 0.2,
+      "enable": true,
+      "generators": {}
+    },
+    "miners_delight": {
+      "with": {
+        "block": "biomesoplenty:flower_1",
+        "properties": {
+          "variant": "miners_delight"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 0.25,
+      "enable": true
+    },
+    "dead_leaf_piles": {
+      "with": {
+        "block": "biomesoplenty:plant_0",
+        "properties": {
+          "variant": "deadleafpile"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 0.3,
+      "enable": true
+    },
+    "grass": {
+      "amountPerChunk": 0.1,
+      "enable": true,
+      "generators": {}
+    },
+    "roots": {
+      "with": {
+        "block": "biomesoplenty:plant_1",
+        "properties": {
+          "variant": "root"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 4.0,
+      "enable": true
+    }
+  }
+}

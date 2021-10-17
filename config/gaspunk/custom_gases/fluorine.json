@@ -1,0 +1,14 @@
+{
+  "gasType": "GAS",
+  "particleType": "GAS",
+  "color": "0x88d3c804",
+  "agents": [
+    {
+      "agent": "gaspunk:lung_odored",
+      "potency": 0.95
+    }
+  ],
+  "tooltipLines": [
+    "Fluorine Gas"
+  ]
+}

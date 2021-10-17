@@ -1,0 +1,71 @@
+{
+  "weight": 160,
+  "density": 0.5,
+  "min_height": 75,
+  "max_height": 120,
+  "dimension_filter": ["dimension_id:-1"],
+  "surface_stone_material": "copper",
+  "name": "Nether Chalcopyrite Vein",
+  "description": "Found in the top part of the Nether. Source of Copper. Contains Chalcopyrite, Vermiculite and Alunite.",
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [15, 15]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 20,
+          "value": "ore:chalcopyrite"
+        },
+		{
+          "weight": 8,
+          "value": "ore:poor:chalcopyrite"
+        },	
+		{
+          "weight": 8,
+          "value": "ore:rich:chalcopyrite"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:pure:chalcopyrite"
+        },
+		{
+          "weight": 15,
+          "value": "ore:vermiculite"
+        },
+		{
+          "weight": 6,
+          "value": "ore:poor:vermiculite"
+        },	
+		{
+          "weight": 6,
+          "value": "ore:rich:vermiculite"
+        },	
+		{
+          "weight": 3,
+          "value": "ore:pure:vermiculite"
+        },
+		{
+          "weight": 10,
+          "value": "ore:alunite"
+        },
+		{
+          "weight": 4,
+          "value": "ore:poor:alunite"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:rich:alunite"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:pure:alunite"
+        }
+	]
+    }
+  }
+}

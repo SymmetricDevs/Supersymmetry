@@ -1,0 +1,14 @@
+{
+  "EntityTest1": [
+    "eat_grass"
+  ],
+  "EntityTest2": [
+    "jump_boost",
+    "eat_grass"
+  ],
+  "EntityTest3": [
+    "wooly",
+    "speed",
+    "milky"
+  ]
+}

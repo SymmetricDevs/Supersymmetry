@@ -1,0 +1,8 @@
+{
+  "path": "vanilla/mutations/allium_mutation.json",
+  "enabled": true,
+  "chance": 0.75,
+  "child": "vanilla:allium_plant",
+  "parent1": "vanilla:poppy_plant",
+  "parent2": "vanilla:orchid_plant"
+}

@@ -1,0 +1,18 @@
+{
+  "path": "mod_roots/soils/caelic_soil_soil.json",
+  "enabled": true,
+  "id": "caelic_soil_soil",
+  "name": "Caelic Soil",
+  "varients": [
+    {
+      "item": "roots:elemental_soil_air",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": true,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": true
+    }
+  ]
+}

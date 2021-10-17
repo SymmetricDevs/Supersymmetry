@@ -1,0 +1,180 @@
+{
+  "canGenerateRivers": false,
+  "skyColor": -1,
+  "fogDensity": 1.0,
+  "hasBiomeEssence": false,
+  "variationBelow": 15.0,
+  "variationAbove": 30.0,
+  "seaFloorBlock": {
+    "block": "minecraft:dirt",
+    "properties": {
+      "snowy": "false",
+      "variant": "dirt"
+    }
+  },
+  "fillerBlock": {
+    "block": "minecraft:dirt",
+    "properties": {
+      "snowy": "false",
+      "variant": "dirt"
+    }
+  },
+  "averageHeight": 100.0,
+  "topBlock": {
+    "block": "minecraft:grass",
+    "properties": {
+      "snowy": "false"
+    }
+  },
+  "fogColor": -1,
+  "canGenerateVillages": false,
+  "canSpawnInBiome": false,
+  "generators": {
+    "glowshrooms": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "glowshroom"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 1.5,
+      "enable": true
+    },
+    "leaf_piles": {
+      "with": {
+        "block": "biomesoplenty:plant_0",
+        "properties": {
+          "variant": "leafpile"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 0.8,
+      "enable": true
+    },
+    "miners_delight": {
+      "with": {
+        "block": "biomesoplenty:flower_1",
+        "properties": {
+          "variant": "miners_delight"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 0.25,
+      "enable": true
+    },
+    "dead_leaf_piles": {
+      "with": {
+        "block": "biomesoplenty:plant_0",
+        "properties": {
+          "variant": "deadleafpile"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 1.2,
+      "enable": true
+    },
+    "emeralds": {
+      "minHeight": 4,
+      "with": {
+        "block": "minecraft:emerald_ore",
+        "properties": {}
+      },
+      "amountPerChunk": 12.0,
+      "maxHeight": 32,
+      "enable": true
+    },
+    "roots": {
+      "with": {
+        "block": "biomesoplenty:plant_1",
+        "properties": {
+          "variant": "root"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 4.0,
+      "enable": true
+    },
+    "trees": {
+      "amountPerChunk": 3.0,
+      "enable": true,
+      "generators": {}
+    },
+    "water_reeds": {
+      "with": {
+        "block": "biomesoplenty:plant_1",
+        "properties": {
+          "variant": "reed"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 0.4,
+      "enable": true
+    },
+    "gravel": {
+      "with": {
+        "block": "minecraft:gravel",
+        "properties": {}
+      },
+      "maxRadius": 7,
+      "amountPerChunk": 6.0,
+      "enable": true
+    },
+    "flax": {
+      "with": {
+        "block": "biomesoplenty:double_plant",
+        "properties": {
+          "half": "lower",
+          "variant": "flax"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 0.1,
+      "enable": true,
+      "withTop": {
+        "block": "biomesoplenty:double_plant",
+        "properties": {
+          "half": "upper",
+          "variant": "flax"
+        }
+      }
+    },
+    "grass": {
+      "amountPerChunk": 1.5,
+      "enable": true,
+      "generators": {}
+    },
+    "berry_bushes": {
+      "with": {
+        "block": "biomesoplenty:plant_0",
+        "properties": {
+          "variant": "berrybush"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 0.2,
+      "enable": true
+    },
+    "lakes": {
+      "liquid": {
+        "block": "minecraft:water",
+        "properties": {
+          "level": "0"
+        }
+      },
+      "amountPerChunk": 1.8,
+      "enable": true,
+      "frozenLiquid": {
+        "block": "minecraft:ice",
+        "properties": {}
+      },
+      "grassBorderWith": {
+        "block": "minecraft:grass",
+        "properties": {
+          "snowy": "false"
+        }
+      }
+    }
+  },
+  "weights": {}
+}

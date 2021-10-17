@@ -1,0 +1,6 @@
+
+{
+  "Name": "LavaSlime",
+  "Registry ID": "minecraft:magma_cube",
+  "Class": "net.minecraft.entity.monster.EntityMagmaCube"
+}

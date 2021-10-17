@@ -1,0 +1,8 @@
+{
+  "path": "mod_harvestcraft/mutations/parsnip_mutation.json",
+  "enabled": true,
+  "chance": 0.5,
+  "child": "harvestcraft:parsnip_plant",
+  "parent1": "vanilla:carrot_plant",
+  "parent2": "harvestcraft:beet_plant"
+}

@@ -1,0 +1,6 @@
+
+{
+  "Name": "quark:stoneling",
+  "Registry ID": "quark:stoneling",
+  "Class": "vazkii.quark.world.entity.EntityStoneling"
+}

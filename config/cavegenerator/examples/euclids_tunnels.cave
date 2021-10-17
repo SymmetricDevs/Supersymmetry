@@ -1,0 +1,34 @@
+# ----------------------------------------------------------- #
+# ########################################################### #
+#              ### euclids_tunnels.cave Info ###              #
+# ########################################################### #
+#   This preset demonstrates a slightly more advanced use of  #
+# the caverns feature. It is used in this preset to produce   #
+# tunnel-like caves using cellular or voronoi noise           #
+# generation. For more information on using noise3D blocks,   # 
+# see vanilla.cave.                                           #
+# ----------------------------------------------------------- #
+{
+  imports: [
+    defaults.cave::caveBlocks as LAVA_CAVE_BLOCK
+  ]
+  enabled: false
+  caverns: {
+    enabled: true
+    height: [ 5, 75 ]
+    generators: {
+      frequency: 0.02
+      threshold: -0.2
+      stretch: 0.75
+      type: Cellular
+      returnType: Distance3Div
+      jitter: 1
+      perturb: true
+      perturbAmp: 10
+      perturbFreq: 0.025
+      invert: true
+    }
+  }
+  # Default lava.
+  caveBlocks: $LAVA_CAVE_BLOCK
+}

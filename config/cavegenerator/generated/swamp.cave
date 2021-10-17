@@ -1,0 +1,68 @@
+{
+  biomes: {
+    names: [
+      minecraft:swampland
+      minecraft:mutated_swampland
+      minecraft:river
+      biomesoplenty:bayou
+      biomesoplenty:bog
+      biomesoplenty:lush_swamp
+      biomesoplenty:mangrove
+      biomesoplenty:chaparral
+      biomesoplenty:wetland
+      biomesoplenty:dead_swamp
+      biomesoplenty:fen
+      biomesoplenty:quagmire
+      biomesoplenty:land_of_lakes
+      biomesoplenty:marsh
+      biomesoplenty:moor
+    ]
+  }
+  layers: [
+    {
+      state: minecraft:stone:1
+      height: [ 0, 16 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ 0, 3 ]
+      }
+    }
+    {
+      state: minecraft:stone:5
+      height: [ 0, 44 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ -3, 3 ]
+      }
+    }
+    {
+      state: minecraft:stone
+      height: [ 0, 60 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ -3, 3 ]
+      }
+    }
+    {
+      state: quark:limestone
+      height: [ 0, 64 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.015
+        range: [ 0, 3 ]
+      }
+    }
+    {
+      state: quark:jasper
+      height: [ 0, 8 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.017
+        range: [ -4, 3 ]
+      }
+    }
+  ]
+}

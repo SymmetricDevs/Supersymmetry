@@ -1,0 +1,8 @@
+{
+  "path": "resource/mutations/aurigold_mutation.json",
+  "enabled": true,
+  "chance": 0.25,
+  "child": "resource:aurigold_plant",
+  "parent1": "resource:ferranium_plant",
+  "parent2": "resource:redstodendron_plant"
+}

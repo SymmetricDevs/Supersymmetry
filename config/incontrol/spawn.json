@@ -1,0 +1,84 @@
+[
+  {
+	"dimension": 0,
+	"mob": [
+		"minecraft:pig",
+		"minecraft:cow",
+		"minecraft:sheep",
+		"minecraft:rabbit",
+		"minecraft:llama",
+		"minecraft:chicken",
+		"minecraft:horse",
+		"minecraft:squid"
+	],
+	"mintime": 0,
+	"maxtime": 12000,
+	"maxcount": {
+		"amount": 2,
+		"perplayer": true
+	},
+	"result": "default"
+  },
+  {
+	"dimension": 0,
+	"mod": "betteranimalsplus",
+	"maxcount": {
+		"amount": 4,
+		"perplayer": true
+	},
+	"result": "default"
+  },
+  {
+	"dimension": 0,
+	"mob": [
+		"minecraft:zombie"
+	],
+	"mintime": 14000,
+	"maxtime": 23999,
+	"seesky": true,
+	"maxcount": {
+		"amount": 5,
+		"perplayer": true
+	},
+	"result": "default",
+	"healthmultiply": 2,
+	"speedmultiply": 2.5,
+	"damagemultiply": 2,
+	"angry": true
+  },
+    {
+	"dimension": 0,
+	"mob": [
+		"techguns:outcast"
+	],
+	"spawner": true,
+	"maxcount": {
+		"amount": 4,
+		"perplayer": true
+	},
+	"result": "default",
+	"speedmultiply": 1.5,
+	"angry": true
+  },
+  {
+	"dimension": 0,
+    "result": "deny"
+  },
+  {
+	"dimension": 10,
+	"mob": [
+		"minecraft:spider",
+		"beneath:shadow",
+		"weeping-angels:weepingangel"
+	],
+	"maxcount": {
+		"amount": 3,
+		"perplayer": true
+	},
+	"result": "default"
+  },
+  {
+	"dimension": 10,
+	"result": "deny"
+  }
+]

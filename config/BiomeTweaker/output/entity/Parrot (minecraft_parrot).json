@@ -1,0 +1,6 @@
+
+{
+  "Name": "Parrot",
+  "Registry ID": "minecraft:parrot",
+  "Class": "net.minecraft.entity.passive.EntityParrot"
+}

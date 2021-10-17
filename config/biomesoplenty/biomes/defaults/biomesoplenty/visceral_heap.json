@@ -1,0 +1,89 @@
+{
+  "wallBlock": {
+    "block": "biomesoplenty:flesh",
+    "properties": {}
+  },
+  "fillerBlock": {
+    "block": "biomesoplenty:flesh",
+    "properties": {}
+  },
+  "skyColor": -1,
+  "topBlock": {
+    "block": "biomesoplenty:flesh",
+    "properties": {}
+  },
+  "fogColor": -1,
+  "fogDensity": 1.0,
+  "roofTopBlock": {
+    "block": "minecraft:netherrack",
+    "properties": {}
+  },
+  "hasBiomeEssence": false,
+  "roofFillerBlock": {
+    "block": "minecraft:netherrack",
+    "properties": {}
+  },
+  "generators": {
+    "hive": {
+      "maxRadius": 9,
+      "bottomExtra": 4,
+      "amountPerChunk": 0.2,
+      "enable": true,
+      "halfHeight": 7,
+      "emptyChance": 0.25,
+      "layerSize": 3
+    },
+    "blood_pools": {
+      "liquid": {
+        "block": "biomesoplenty:blood",
+        "properties": {
+          "level": "0"
+        }
+      },
+      "amountPerChunk": 6.0,
+      "enable": true,
+      "grassBorderWith": {
+        "block": "minecraft:grass",
+        "properties": {
+          "snowy": "false"
+        }
+      }
+    },
+    "eyebulbs": {
+      "with": {
+        "block": "biomesoplenty:double_plant",
+        "properties": {
+          "half": "lower",
+          "variant": "eyebulb"
+        }
+      },
+      "generationAttempts": 16,
+      "amountPerChunk": 1.0,
+      "enable": true,
+      "withTop": {
+        "block": "biomesoplenty:double_plant",
+        "properties": {
+          "half": "upper",
+          "variant": "eyebulb"
+        }
+      }
+    },
+    "bones": {
+      "minHeight": 1,
+      "with": {
+        "block": "minecraft:bone_block",
+        "properties": {
+          "axis": "y"
+        }
+      },
+      "generationAttempts": 12,
+      "amountPerChunk": 1.5,
+      "maxHeight": 4,
+      "enable": true,
+      "randomDirection": false
+    }
+  },
+  "weights": {
+    "hell": 5
+  }
+}

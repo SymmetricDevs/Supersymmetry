@@ -1,0 +1,59 @@
+{
+  biomes: {
+    names: [
+      minecraft:smaller_extreme_hills
+      minecraft:jungle
+      minecraft:jungle_hills
+      minecraft:jungle_edge
+      minecraft:mutated_jungle
+      minecraft:mutated_jungle_edge
+    ]
+  }
+  layers: [
+    {
+      state: minecraft:stone:1
+      height: [ 0, 16 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.008
+        range: [ -7, 7 ]
+      }
+    }
+    {
+      state: minecraft:stone:3
+      height: [ 0, 48 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.012
+        range: [ -8, 8 ]
+      }
+    }
+    {
+      state: minecraft:stone:5
+      height: [ 0, 70 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.016
+        range: [ -3, 3 ]
+      }
+    }
+    {
+      state: quark:jasper
+      height: [ 0, 24 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.00015
+        range: [ 0, 3 ]
+      }
+    }
+    {
+      state: minecraft:stone
+      height: [ 0, 255 ]
+      ceiling: {
+        scale: 0.9 # Removed in 1.0. You can delete this field.
+        frequency: 0.017
+        range: [ -4, 4 ]
+      }
+    }
+  ]
+}

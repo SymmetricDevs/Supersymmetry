@@ -1,0 +1,18 @@
+{
+    "parent": "builtin/image",
+    "image": "customloadingscreen:image/supersymmetry/ram_bar.png",
+    "position_type": "TOP_LEFT",
+    "offset_pos": "TOP_LEFT",
+    "position": {
+        "x": "0",
+        "y": "0",
+        "width": "screen_width * mem_percent",
+        "height": "4"
+    },
+    "texture": {
+        "x": "0",
+        "y": "0",
+        "width": "mem_percent",
+        "height": "1"
+    }
+}

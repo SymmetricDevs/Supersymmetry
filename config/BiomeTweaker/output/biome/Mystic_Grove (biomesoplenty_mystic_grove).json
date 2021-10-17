@@ -1,0 +1,455 @@
+
+{
+  "ID": 72,
+  "Name": "Mystic Grove",
+  "Resource Location": "biomesoplenty:mystic_grove",
+  "Class": "biomesoplenty.common.biome.overworld.BiomeGenMysticGrove",
+  "Root Height": -0.11764706,
+  "Height Variation": 0.106249996,
+  "Top Block": "biomesoplenty:grass[snowy\u003dfalse,variant\u003dsilty]",
+  "Filler Block": "biomesoplenty:dirt[coarse\u003dfalse,variant\u003dsilty]",
+  "Ocean Top Block": "Disabled. Activate in BiomeTweakerCore.",
+  "Ocean Filler Block": "Disabled. Activate in BiomeTweakerCore.",
+  "Actual Filler Blocks": "Disabled. Activate in BiomeTweakerCore.",
+  "Grass Color": "Disabled. Activate in BiomeTweakerCore.",
+  "Foliage Color": "Disabled. Activate in BiomeTweakerCore.",
+  "Water Color": "16715898",
+  "Temperature": 0.7,
+  "Humidity": 0.8,
+  "Water Tint": 16715898,
+  "Enable Rain": true,
+  "Enable Snow": false,
+  "Dictionary Types": [
+    "WET",
+    "MAGICAL",
+    "DENSE",
+    "FOREST",
+    "LUSH",
+    "RARE"
+  ],
+  "BiomeManager Entries": {},
+  "Spawnable Creatures": [
+    {
+      "Entity Class": "net.minecraft.entity.passive.EntityRabbit",
+      "Weight": 4,
+      "Min Group Count": 2,
+      "Max Group Count": 3
+    }
+  ],
+  "Spawnable Monsters": [
+    {
+      "Entity Class": "net.minecraft.entity.monster.EntitySpider",
+      "Weight": 100,
+      "Min Group Count": 4,
+      "Max Group Count": 4
+    },
+    {
+      "Entity Class": "net.minecraft.entity.monster.EntityZombie",
+      "Weight": 95,
+      "Min Group Count": 4,
+      "Max Group Count": 4
+    },
+    {
+      "Entity Class": "net.minecraft.entity.monster.EntityZombieVillager",
+      "Weight": 5,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "net.minecraft.entity.monster.EntitySkeleton",
+      "Weight": 100,
+      "Min Group Count": 4,
+      "Max Group Count": 4
+    },
+    {
+      "Entity Class": "net.minecraft.entity.monster.EntityCreeper",
+      "Weight": 100,
+      "Min Group Count": 4,
+      "Max Group Count": 4
+    },
+    {
+      "Entity Class": "net.minecraft.entity.monster.EntitySlime",
+      "Weight": 100,
+      "Min Group Count": 4,
+      "Max Group Count": 4
+    },
+    {
+      "Entity Class": "net.minecraft.entity.monster.EntityEnderman",
+      "Weight": 10,
+      "Min Group Count": 1,
+      "Max Group Count": 4
+    },
+    {
+      "Entity Class": "net.minecraft.entity.monster.EntityWitch",
+      "Weight": 5,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "net.minecraft.entity.monster.EntityWitch",
+      "Weight": 10,
+      "Min Group Count": 4,
+      "Max Group Count": 4
+    },
+    {
+      "Entity Class": "net.tardis.mod.common.entities.EntityCybermanInvasion",
+      "Weight": 0,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "me.swirtzly.angels.common.entities.EntityWeepingAngel",
+      "Weight": 20,
+      "Min Group Count": 0,
+      "Max Group Count": 4
+    },
+    {
+      "Entity Class": "flaxbeard.cyberware.common.entity.EntityCyberZombie",
+      "Weight": 0,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.primitive.EntityShyco",
+      "Weight": 15,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.adapted.EntityShycoAdapted",
+      "Weight": 15,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.primitive.EntityEmana",
+      "Weight": 10,
+      "Min Group Count": 2,
+      "Max Group Count": 3
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.adapted.EntityEmanaAdapted",
+      "Weight": 10,
+      "Min Group Count": 2,
+      "Max Group Count": 3
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.primitive.EntityHull",
+      "Weight": 30,
+      "Min Group Count": 4,
+      "Max Group Count": 6
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.adapted.EntityHullAdapted",
+      "Weight": 30,
+      "Min Group Count": 4,
+      "Max Group Count": 6
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.primitive.EntityCanra",
+      "Weight": 5,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.adapted.EntityCanraAdapted",
+      "Weight": 5,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.primitive.EntityNogla",
+      "Weight": 10,
+      "Min Group Count": 1,
+      "Max Group Count": 2
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.adapted.EntityNoglaAdapted",
+      "Weight": 10,
+      "Min Group Count": 1,
+      "Max Group Count": 2
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.primitive.EntityBano",
+      "Weight": 10,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.adapted.EntityBanoAdapted",
+      "Weight": 10,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.primitive.EntityRanrac",
+      "Weight": 10,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.adapted.EntityRanracAdapted",
+      "Weight": 10,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.inborn.EntityRathol",
+      "Weight": 20,
+      "Min Group Count": 2,
+      "Max Group Count": 2
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.inborn.EntityButhol",
+      "Weight": 15,
+      "Min Group Count": 1,
+      "Max Group Count": 2
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.inborn.EntityMudo",
+      "Weight": 30,
+      "Min Group Count": 3,
+      "Max Group Count": 6
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.inborn.EntityLodo",
+      "Weight": 30,
+      "Min Group Count": 2,
+      "Max Group Count": 5
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.inborn.EntityKol",
+      "Weight": 15,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityHost",
+      "Weight": 30,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfBear",
+      "Weight": 30,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityDorpa",
+      "Weight": 10,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfEnderman",
+      "Weight": 30,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfHuman",
+      "Weight": 30,
+      "Min Group Count": 3,
+      "Max Group Count": 5
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfCow",
+      "Weight": 25,
+      "Min Group Count": 1,
+      "Max Group Count": 3
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfSheep",
+      "Weight": 25,
+      "Min Group Count": 1,
+      "Max Group Count": 3
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfWolf",
+      "Weight": 25,
+      "Min Group Count": 3,
+      "Max Group Count": 6
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfPig",
+      "Weight": 25,
+      "Min Group Count": 3,
+      "Max Group Count": 6
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfVillager",
+      "Weight": 25,
+      "Min Group Count": 3,
+      "Max Group Count": 6
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfHorse",
+      "Weight": 25,
+      "Min Group Count": 3,
+      "Max Group Count": 6
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfPlayer",
+      "Weight": 15,
+      "Min Group Count": 3,
+      "Max Group Count": 6
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.pure.EntityAlafha",
+      "Weight": 5,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.pure.EntityOmboo",
+      "Weight": 15,
+      "Min Group Count": 2,
+      "Max Group Count": 2
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.ancient.EntityOronco",
+      "Weight": 1,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    },
+    {
+      "Entity Class": "com.dhanantry.scapeandrunparasites.entity.monster.ancient.EntityTerla",
+      "Weight": 1,
+      "Min Group Count": 1,
+      "Max Group Count": 1
+    }
+  ],
+  "Spawnable Water Creatures": [
+    {
+      "Entity Class": "net.minecraft.entity.passive.EntitySquid",
+      "Weight": 10,
+      "Min Group Count": 4,
+      "Max Group Count": 4
+    }
+  ],
+  "Spawnable Cave Creatures": [
+    {
+      "Entity Class": "net.minecraft.entity.passive.EntityBat",
+      "Weight": 10,
+      "Min Group Count": 8,
+      "Max Group Count": 8
+    }
+  ],
+  "Spawn Biome": false,
+  "Tweaked": false,
+  "BOP Generators": {
+    "BIG_SHROOM Generators": [
+      {
+        "ID": "big_mushrooms",
+        "Name": "big_red_mushroom"
+      }
+    ],
+    "LILYPAD Generators": [
+      {
+        "ID": "flora",
+        "Name": "medium_lily"
+      },
+      {
+        "ID": "flora",
+        "Name": "algae"
+      },
+      {
+        "ID": "flora",
+        "Name": "small_lily"
+      },
+      {
+        "ID": "flora",
+        "Name": "flower_lily"
+      },
+      {
+        "ID": "flora",
+        "Name": "lily"
+      },
+      {
+        "ID": "flora",
+        "Name": "tiny_lily"
+      }
+    ],
+    "FLOWERS Generators": [
+      {
+        "ID": "flora",
+        "Name": "glowshrooms"
+      },
+      {
+        "ID": "flora",
+        "Name": "leaf_piles"
+      },
+      {
+        "ID": "weighted",
+        "Name": "flowers"
+      },
+      {
+        "ID": "flora",
+        "Name": "miners_delight"
+      },
+      {
+        "ID": "flora",
+        "Name": "clover_patches"
+      },
+      {
+        "ID": "flora",
+        "Name": "roots"
+      },
+      {
+        "ID": "flora",
+        "Name": "sprouts"
+      }
+    ],
+    "GRASS Generators": [
+      {
+        "ID": "weighted",
+        "Name": "grass"
+      }
+    ],
+    "SAND Generators": [
+      {
+        "ID": "lakes",
+        "Name": "hot_springs"
+      },
+      {
+        "ID": "lakes",
+        "Name": "poison_lakes"
+      },
+      {
+        "ID": "ore_single",
+        "Name": "topaz"
+      }
+    ],
+    "SHROOM Generators": [
+      {
+        "ID": "flora",
+        "Name": "brown_mushrooms"
+      },
+      {
+        "ID": "flora",
+        "Name": "blue_milk_caps"
+      },
+      {
+        "ID": "flora",
+        "Name": "red_mushrooms"
+      }
+    ],
+    "TREE Generators": [
+      {
+        "ID": "weighted",
+        "Name": "trees"
+      }
+    ]
+  },
+  "BOP Owner": "BIOMESOPLENTY",
+  "BOP Weight Map": {
+    "WET_TEMPERATE": 1
+  },
+  "BOP Climate Weights": {
+    "WET_TEMPERATE": [
+      1
+    ]
+  },
+  "BOP Island Weight": 0
+}

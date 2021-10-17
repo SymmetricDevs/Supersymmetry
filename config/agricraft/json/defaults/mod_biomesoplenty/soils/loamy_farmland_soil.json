@@ -1,0 +1,18 @@
+{
+  "path": "mod_biomesoplenty/soils/loamy_farmland_soil.json",
+  "enabled": true,
+  "id": "loamy_farmland_soil",
+  "name": "Loamy Farmland",
+  "varients": [
+    {
+      "item": "biomesoplenty:farmland_0",
+      "meta": 14,
+      "tags": "",
+      "ignoreMeta": true,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": true
+    }
+  ]
+}

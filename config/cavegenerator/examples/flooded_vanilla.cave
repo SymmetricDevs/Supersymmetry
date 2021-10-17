@@ -1,0 +1,40 @@
+# ----------------------------------------------------------- #
+# ########################################################### #
+#             ### flooded_vanilla.cave Info ###               #
+# ########################################################### #
+#   This is a simple preset which demonstrates the effect of  #
+# CaveBlocks and WallDecorators. It is designed to imitate    #
+# vanilla cave style with the addition of water and gravel on #
+# on the floor.                                               #
+# ----------------------------------------------------------- #
+{
+  $VANILLA: "ALL" # Default tunnels, ravines, and rooms.
+  enabled: false
+  caveBlocks: [
+    # Fills y=(12-45) with water.
+    {
+      states: water
+      height: [ 12, 45 ]
+    }
+    # Manually places obsidian above lava.
+    {
+      states: obsidian
+      height: 11
+    }
+    # Imitates the normal lava placement behavior.
+    {
+      states: lava
+      height: [ 0, 10 ]
+    }
+  ]
+  wallDecorators: [
+    # Spawns gravel on the floor.
+    {
+      states: gravel
+      chance: 0.25
+      originHeight: [ 0, 63 ]
+      matchers: [ "stone", "dirt" ]
+      directions: down
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "path": "vanilla/plants/weed_plant.json",
+  "enabled": false,
+  "id": "vanilla:weed_plant",
+  "plant_name": "Weed",
+  "seed_name": "Weed Seeds",
+  "seed_items": [],
+  "description": {
+    "translations": {},
+    "default": "An annoying plant of no use."
+  },
+  "growth_chance": 0.9,
+  "growth_bonus": 0.025,
+  "bonemeal": true,
+  "tier": 1,
+  "weedable": true,
+  "aggressive": true,
+  "spread_chance": 0.1,
+  "spawn_chance": 0.1,
+  "grass_drop_chance": 0.0,
+  "seed_drop_chance": 1.0,
+  "seed_drop_bonus": 0.0,
+  "products": {
+    "products": []
+  },
+  "requirement": {
+    "min_light": 0,
+    "max_light": 16,
+    "soils": [
+      "farmland_soil",
+      "gravel_soil",
+      "grass_soil",
+      "sand_soil"
+    ],
+    "conditions": []
+  },
+  "texture": {
+    "render_type": "hash",
+    "seed_texture": "agricraft:items/seed_unknown",
+    "plant_textures": [
+      "agricraft:blocks/weed_stage_0",
+      "agricraft:blocks/weed_stage_0",
+      "agricraft:blocks/weed_stage_1",
+      "agricraft:blocks/weed_stage_1",
+      "agricraft:blocks/weed_stage_2",
+      "agricraft:blocks/weed_stage_2",
+      "agricraft:blocks/weed_stage_2",
+      "agricraft:blocks/weed_stage_3"
+    ]
+  }
+}

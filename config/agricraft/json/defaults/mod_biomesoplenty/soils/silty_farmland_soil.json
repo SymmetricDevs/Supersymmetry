@@ -1,0 +1,18 @@
+{
+  "path": "mod_biomesoplenty/soils/silty_farmland_soil.json",
+  "enabled": true,
+  "id": "silty_farmland_soil",
+  "name": "Silty Farmland",
+  "varients": [
+    {
+      "item": "biomesoplenty:farmland_1",
+      "meta": 14,
+      "tags": "",
+      "ignoreMeta": true,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": true
+    }
+  ]
+}

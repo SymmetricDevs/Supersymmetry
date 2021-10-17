@@ -1,0 +1,73 @@
+{
+  "path": "mod_roots/plants/roots_spirit_herb_plant.json",
+  "enabled": true,
+  "id": "roots:spirit_herb_plant",
+  "plant_name": "Spirit Herb",
+  "seed_name": "Spirit Herb Seeds",
+  "seed_items": [
+    {
+      "item": "roots:spirit_herb_seed",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": false,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": false
+    }
+  ],
+  "description": {
+    "translations": {},
+    "default": "Spirit Herb seeds."
+  },
+  "growth_chance": 0.9,
+  "growth_bonus": 0.025,
+  "bonemeal": false,
+  "tier": 1,
+  "weedable": false,
+  "aggressive": false,
+  "spread_chance": 0.1,
+  "spawn_chance": 0.0,
+  "grass_drop_chance": 0.0,
+  "seed_drop_chance": 1.0,
+  "seed_drop_bonus": 0.0,
+  "products": {
+    "products": [
+      {
+        "min": 1,
+        "max": 5,
+        "chance": 0.9,
+        "required": true,
+        "item": "roots:spirit_herb",
+        "meta": 0,
+        "tags": "",
+        "ignoreMeta": false,
+        "ignoreTags": [],
+        "useOreDict": false
+      }
+    ]
+  },
+  "requirement": {
+    "min_light": 10,
+    "max_light": 16,
+    "soils": [
+      "elemental_soil_soil",
+      "caelic_soil_soil",
+      "magmatic_soil_soil",
+      "terran_soil_soil",
+      "aqueous_soil_soil"
+    ],
+    "conditions": []
+  },
+  "texture": {
+    "render_type": "hash",
+    "seed_texture": "roots:items/spirit_herb_seed",
+    "plant_textures": [
+      "roots:blocks/spirit_herb_0",
+      "roots:blocks/spirit_herb_1",
+      "roots:blocks/spirit_herb_2",
+      "roots:blocks/spirit_herb_3",
+      "roots:blocks/spirit_herb_4"
+    ]
+  }
+}

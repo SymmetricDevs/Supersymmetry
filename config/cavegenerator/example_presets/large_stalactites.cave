@@ -1,0 +1,40 @@
+# ----------------------------------------------------------- #
+# ########################################################### #
+#             ### large_stalactites.cave Info ###             #
+# ########################################################### #
+#   This preset is designed to demonstrate the dedicated      #
+# stalactite spawners included with the mod. Unlike           #
+# WallDecorators, these decorators are not unique to the      #
+# caves that spawn them. They will appear anywhere they can.  #
+# ----------------------------------------------------------- #
+{
+  imports: [
+    defaults.cave::LAVA_CAVE_BLOCK
+  ]
+  enabled: false
+  # Default lava.
+  caveBlocks: $LAVA_CAVE_BLOCK
+  largeStalactites: [
+    {
+      state: stone
+      chance: 0.075
+      maxLength: 6
+      minHeight: 15
+      maxHeight: 50
+      matchers: stone
+    }
+  ]
+  largeStalagmites: [
+    {
+      state: stone
+      chance: 0.05
+      minHeight: 10
+      maxHeight: 50
+      # Spawn this decorator according to its default
+      # noise settings.
+      noise2D: {}
+    }
+  ]
+  # These fit better in caverns or at least larger tunnels.
+  caverns: { enabled: true }
+}

@@ -1,0 +1,6 @@
+
+{
+  "Name": "MushroomCow",
+  "Registry ID": "minecraft:mooshroom",
+  "Class": "net.minecraft.entity.passive.EntityMooshroom"
+}

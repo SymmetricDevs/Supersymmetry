@@ -1,0 +1,55 @@
+{
+  "weight": 80,
+  "density": 0.4,
+  "min_height": 65,
+  "max_height": 100,
+  "dimension_filter": ["dimension_id:-1"],
+  "surface_stone_material": "gold",
+  "name": "Precious Metal Vein",
+  "description": "Source of Gold. Smelting Precious Ore only yields a few nuggets of gold, but you can increase that using the Gold Chain, which unlocks at Tier 2.",
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [11, 11]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 37,
+          "value": "ore:precious_metal"
+        },
+		{
+          "weight": 15,
+          "value": "ore:poor:precious_metal"
+        },	
+		{
+          "weight": 15,
+          "value": "ore:rich:precious_metal"
+        },	
+		{
+          "weight": 7,
+          "value": "ore:pure:precious_metal"
+        },
+		{
+          "weight": 12,
+          "value": "ore:gold"
+        },
+		{
+          "weight": 5,
+          "value": "ore:poor:gold"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:rich:gold"
+        },	
+		{
+          "weight": 3,
+          "value": "ore:pure:gold"
+        }
+			]
+    }
+  }
+}

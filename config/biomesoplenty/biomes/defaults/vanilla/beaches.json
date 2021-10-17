@@ -1,0 +1,57 @@
+{
+  "beachBiomeLocation": "minecraft:beaches",
+  "generators": {
+    "glowshrooms": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "glowshroom"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 1.5,
+      "enable": true
+    },
+    "sea_oats": {
+      "with": {
+        "block": "biomesoplenty:double_plant",
+        "properties": {
+          "half": "lower",
+          "variant": "sea_oats"
+        }
+      },
+      "generationAttempts": 96,
+      "amountPerChunk": 6.0,
+      "enable": true,
+      "withTop": {
+        "block": "biomesoplenty:double_plant",
+        "properties": {
+          "half": "upper",
+          "variant": "sea_oats"
+        }
+      }
+    },
+    "miners_delight": {
+      "with": {
+        "block": "biomesoplenty:flower_1",
+        "properties": {
+          "variant": "miners_delight"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 0.25,
+      "enable": true
+    },
+    "roots": {
+      "with": {
+        "block": "biomesoplenty:plant_1",
+        "properties": {
+          "variant": "root"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 4.0,
+      "enable": true
+    }
+  }
+}

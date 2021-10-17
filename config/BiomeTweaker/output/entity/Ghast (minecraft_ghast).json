@@ -1,0 +1,6 @@
+
+{
+  "Name": "Ghast",
+  "Registry ID": "minecraft:ghast",
+  "Class": "net.minecraft.entity.monster.EntityGhast"
+}

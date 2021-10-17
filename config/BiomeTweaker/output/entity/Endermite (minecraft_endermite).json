@@ -1,0 +1,6 @@
+
+{
+  "Name": "Endermite",
+  "Registry ID": "minecraft:endermite",
+  "Class": "net.minecraft.entity.monster.EntityEndermite"
+}

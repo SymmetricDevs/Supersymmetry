@@ -1,0 +1,30 @@
+{
+  "weight": 0,
+  "density": 1.0,
+  "max_height": 195,
+  "min_height": 140,
+  "priority": -100,
+  "count_as_vein": false,
+  "generation_predicate": "any",
+  "dimension_filter": ["dimension_id:10"],
+  "vein_populator": {
+    "type": "fluid_spring",
+    "chance": 0.15
+  },
+  "generator": {
+    "type": "sphere",
+    "radius": [16, 16]
+  },
+  "filler": {
+    "type": "ignore_bedrock",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 100,
+          "value": "fluid:oil_heavy"
+        }
+      ]
+    }
+  }
+}

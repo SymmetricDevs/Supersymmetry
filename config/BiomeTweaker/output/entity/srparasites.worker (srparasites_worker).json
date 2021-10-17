@@ -1,0 +1,6 @@
+
+{
+  "Name": "srparasites.worker",
+  "Registry ID": "srparasites:worker",
+  "Class": "com.dhanantry.scapeandrunparasites.entity.monster.inborn.EntityKol"
+}

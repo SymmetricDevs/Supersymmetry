@@ -1,0 +1,18 @@
+{
+  "path": "mod_farmingforblockheads/soils/fertilized_farmland_healthy_soil.json",
+  "enabled": true,
+  "id": "fertilized_farmland_healthy_soil",
+  "name": "Fertilized Farmland (Healthy)",
+  "varients": [
+    {
+      "item": "farmingforblockheads:fertilized_farmland_healthy",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": true,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": true
+    }
+  ]
+}

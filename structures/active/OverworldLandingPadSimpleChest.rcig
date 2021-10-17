@@ -1,0 +1,191 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "OverworldLandingPadSimpleChest",
+  "items": [
+    {
+      "weight": 99.99998474121094,
+      "min": 32,
+      "max": 64,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 8,
+        "count": 1
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 32,
+      "max": 64,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 27,
+        "count": 1
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "appliedenergistics2:interface",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:storage_cell_1k",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {}
+        }
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:storage_cell_1k",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {}
+        }
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:storage_cell_1k",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {}
+        }
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:storage_cell_1k",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {}
+        }
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gp_inhaler:inhaler",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:healing_vapor"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gp_inhaler:inhaler",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:healing_vapor"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 32750,
+        "count": 1
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 615,
+        "count": 1
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:energy_acceptor",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "appliedenergistics2:part",
+        "damage": 360,
+        "count": 1
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 8,
+      "max": 16,
+      "item": {
+        "id": "appliedenergistics2:part",
+        "damage": 36,
+        "count": 1
+      }
+    },
+    {
+      "weight": 99.99998474121094,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:drive",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

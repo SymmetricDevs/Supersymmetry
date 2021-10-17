@@ -1,0 +1,39 @@
+# ----------------------------------------------------------- #
+# ########################################################### #
+#               ### stalactites.cave Info ###                 #
+# ########################################################### #
+#   This preset is designed to demonstrate a basic use case   #
+# of the WallDecorator objects included with this mod. While  #
+# there are dedicated stalactite / stalagmite objects in this #
+# mod, this is more so intended to show what WallDecorators   #
+# can do, in addition to just replacing cave walls.           #
+# ----------------------------------------------------------- #
+{
+  $VANILLA: "ALL" # Default tunnels, ravines, etc.
+  enabled: false
+  blankSlate: false 
+  wallDecorators: [
+    # Direction#DOWN -> stalagmites
+    {
+      # There aren't really any good stalagmite blocks
+      # in vanilla. This will have to do.
+      states: cobblestone_wall
+      chance: 0.15
+      minHeight: 10
+      maxHeight: 55
+      matchers: stone
+      directions: down
+      preference: replace_original
+    }
+    # Direction#UP -> stalactites
+    {
+      states: cobblestone_wall
+      chance: 0.15
+      minHeight: 10
+      maxHeight: 55
+      matchers: stone
+      directions: up
+      preference: replace_original
+    }
+  ]
+}
