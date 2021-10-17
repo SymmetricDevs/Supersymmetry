@@ -129,7 +129,7 @@
 			"imageHeight": 20,
 			"action": {
 				"type": "openLink",
-				"link": "https://github.com/CHANGETHISLINKPLZ" //TODO: Put links
+				"link": "https://github.com/Zalgo239/Supersymmetry/issues" 
 			}
 		},
 		"accounts": {
