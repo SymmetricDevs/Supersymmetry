@@ -8,8 +8,8 @@ import hashlib
 
 modlist = []
 basePath = os.path.realpath(__file__)[:-7] + ".."
-copyDirs = ["/scripts", "/resources", "/config", "/mods"]
-serverCopyDirs = ["/scripts", "/config", "/mods"]
+copyDirs = ["/scripts", "/resources", "/config", "/mods", "/structures"]
+serverCopyDirs = ["/scripts", "/config", "/mods", "/structures"]
 modURLlist = []
 
 with open(basePath + "/manifest.json") as file:
