@@ -20587,7 +20587,8 @@
       },
       "rewards:9": {},
       "preRequisites:11": [
-        244
+        244,
+        269
       ],
       "questID:3": 240
     },
@@ -20733,7 +20734,7 @@
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Wafers",
-          "desc:8": "To make circuits, we\u0027ll need wafers. (I\u0027m not talking about the German cookie, I\u0027m talking about the silicon §othing§r).\n\nMaking blank wafers is easy, you just need to slice your Monocrystalline Silicon Boule using a §6LV Cutting Machine§r.\n\nAlso don\u0027t forget that wafers unlock an easier assembler recipe for Diodes. That\u0027s pretty cool.",
+          "desc:8": "To make circuits, we\u0027ll need wafers. (I\u0027m not talking about the German cookie, I\u0027m talking about the silicon §othing§r).\n\nMaking blank wafers is easy, you just need to slice your Monocrystalline Silicon Boule using a §6Cutting Machine§r. (Remember to make an MV one, you\u0027ll need it later)\n\nAlso don\u0027t forget that wafers unlock an easier assembler recipe for Diodes. That\u0027s pretty cool.",
           "icon:10": {
             "id:8": "gregtech:meta_item_2",
             "Count:3": 1,
@@ -21464,7 +21465,7 @@
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Capacitors",
-          "desc:8": "§6Capacitors §rare one of the basic components of Electronic Circuits. Let\u0027s make some!",
+          "desc:8": "§6Capacitors §rare one of the basic components of Electronic Circuits. Let\u0027s make some!\n\nYou can also use Refined SMD Capacitors in place of normal Capacitors, if you want to increase your yield with an extra step.",
           "icon:10": {
             "id:8": "gregtech:meta_item_2",
             "Count:3": 1,
@@ -21483,7 +21484,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "questlogic:8": "AND",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "repeattime:3": -1,
           "repeat_relative:1": 1,
           "lockedprogress:1": 0,
@@ -21521,6 +21522,32 @@
           },
           "taskID:8": "bq_standard:retrieval",
           "index:3": 0
+        },
+        "1:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gtadditions:ga_meta_item",
+              "Count:3": 1,
+              "Damage:2": 32242,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 1
         }
       },
       "rewards:9": {},
@@ -21602,7 +21629,7 @@
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Trans Sister",
-          "desc:8": "§6Transistors§r are another vital component of Electronic Circuits. Let\u0027s make some.",
+          "desc:8": "§6Transistors§r are another vital component of Electronic Circuits. Let\u0027s make some.\n\nYou can also use Refined SMD Transistors in place of normal Transistors, if you want.",
           "icon:10": {
             "id:8": "gregtech:meta_item_2",
             "Count:3": 1,
@@ -21621,7 +21648,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "questlogic:8": "AND",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "repeattime:3": -1,
           "repeat_relative:1": 1,
           "lockedprogress:1": 0,
@@ -21659,6 +21686,32 @@
           },
           "taskID:8": "bq_standard:retrieval",
           "index:3": 0
+        },
+        "1:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gtadditions:ga_meta_item",
+              "Count:3": 1,
+              "Damage:2": 32240,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 1
         }
       },
       "rewards:9": {},
@@ -21670,7 +21723,7 @@
     "257:10": {
       "properties:10": {
         "betterquesting:10": {
-          "name:8": "It\u0027s even funnier the second time!",
+          "name:8": "§6Pain. Suffering. Anguish.",
           "desc:8": "Make an §6Electronic Assembly§r in the Circuit Assembler. It\u0027s an MV circuit, and a much cheaper one than the Primitive Assembly.",
           "icon:10": {
             "id:8": "gtadditions:ga_meta_item",
@@ -21873,6 +21926,790 @@
         258
       ],
       "questID:3": 259
+    },
+    "260:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "New advancements in cock and ball circuitry",
+          "desc:8": "You can make diodes with §6polyethylene§r and foils now. \n\nRefined SMD Diodes act as normal Diodes, but they are much cheaper to make and the recipe yields more.",
+          "icon:10": {
+            "id:8": "gtadditions:ga_meta_item",
+            "Count:3": 1,
+            "Damage:2": 32243,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gtadditions:ga_meta_item",
+              "Count:3": 1,
+              "Damage:2": 32243,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        252
+      ],
+      "questID:3": 260
+    },
+    "261:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Refined SMD Resistor",
+          "desc:8": "You can make resistors with §6polyethylene§r and foils now. \n\nRefined SMD Resistors act as normal Resistors, but they are much cheaper to make and the recipe yields more.",
+          "icon:10": {
+            "id:8": "gtadditions:ga_meta_item",
+            "Count:3": 1,
+            "Damage:2": 32241,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gtadditions:ga_meta_item",
+              "Count:3": 1,
+              "Damage:2": 32241,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        252
+      ],
+      "questID:3": 261
+    },
+    "262:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "It\u0027s even funnier the second time!!",
+          "desc:8": "Building an MV Circuit Assembler will unlock §6Refined Circuits§r, the third type of circuit in SUPERSYMMETRY.\n\nThere are 4 circuits in the Refined Circuit Line.\nWe have the §bRefined Processor §r(LV), the §bRefined Assembly §r(MV), the §bRefined Computer §r(HV) and the §bRefined Mainframe§r (EV). Yes, you read that right. You can make Tier 5 circuits at Tier 3.\n\nThis is the only way to get EV circuits at the moment. Remember that from this point on, you can always make circuits 2 tiers ahead of your current tier. For example, when you reach HV, you can make IV circuits.\n\nThe Refined Circuits are even cheaper than the electronic circuits, so this is an easy way to get lots of low-tier circuits.\n\n§oMan, I really said the word \"circuit\" a lot, right?",
+          "icon:10": {
+            "id:8": "gregtech:machine",
+            "Count:3": 1,
+            "Damage:2": 2001,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 1,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 2001,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        259
+      ],
+      "questID:3": 262
+    },
+    "263:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Yum, turtle food!",
+          "desc:8": "If you want to make the next tier of circuits, you\u0027ll need plastic circuit boards. Let\u0027s make some.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_2",
+            "Count:3": 1,
+            "Damage:2": 32448,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_2",
+              "Count:3": 1,
+              "Damage:2": 32448,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        262
+      ],
+      "questID:3": 263
+    },
+    "264:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Sodium Persulfate",
+          "desc:8": "Sodium Persulfate will be needed to etch your next circuit board. Making it is a two-step process:\n\nSalt + Sulfuric Acid \u003d Sodium Bisulfate and Hydrochloric Acid\n\nSodium Bisulfate gives Sodium Persulfate in the Electrolyzer.",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "sodium_persulfate",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "sodium_persulfate",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        263
+      ],
+      "questID:3": 264
+    },
+    "265:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Good Circuit Boards(TM)",
+          "desc:8": "Now we\u0027re finally starting to get to actual circuit boards. The first one was just a piece of resin on a stick. The second one was a solidified piece of glue. Now we\u0027re using actual CHEMICALS with FUNNY BIG WORDS to make them. Isn\u0027t it nice?\n\n§3Make the Good Circuit Board.",
+          "icon:10": {
+            "id:8": "gtadditions:ga_meta_item",
+            "Count:3": 1,
+            "Damage:2": 32031,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gtadditions:ga_meta_item",
+              "Count:3": 1,
+              "Damage:2": 32031,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        264
+      ],
+      "questID:3": 265
+    },
+    "266:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Your Gregification level has increased.",
+          "desc:8": "Make the first Refined Circuit, the Refined Processor.",
+          "icon:10": {
+            "id:8": "gtadditions:ga_meta_item",
+            "Count:3": 1,
+            "Damage:2": 32203,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gtadditions:ga_meta_item",
+              "Count:3": 1,
+              "Damage:2": 32203,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        265
+      ],
+      "questID:3": 266
+    },
+    "267:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "§c§lThis isn\u0027t even its final form!",
+          "desc:8": "Make the second stage of Refined Circuits, the Refined Assembly.",
+          "icon:10": {
+            "id:8": "gtadditions:ga_meta_item",
+            "Count:3": 1,
+            "Damage:2": 32204,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gtadditions:ga_meta_item",
+              "Count:3": 1,
+              "Damage:2": 32204,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        266
+      ],
+      "questID:3": 267
+    },
+    "268:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "§c§lThis can\u0027t get worse, right?",
+          "desc:8": "Make the Refined Computer, the 3rd tier of Refined Circuits.",
+          "icon:10": {
+            "id:8": "gtadditions:ga_meta_item",
+            "Count:3": 1,
+            "Damage:2": 32205,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gtadditions:ga_meta_item",
+              "Count:3": 1,
+              "Damage:2": 32205,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        270
+      ],
+      "questID:3": 268
+    },
+    "269:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Advanced BrainTech(TM) Salami Cutting Machine V2.0",
+          "desc:8": "You\u0027ll need an §6MV Cutting Machine §rto slice the finished wafers into wafer chips. Let\u0027s make it.",
+          "icon:10": {
+            "id:8": "gregtech:machine",
+            "Count:3": 1,
+            "Damage:2": 221,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 221,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        243
+      ],
+      "questID:3": 269
+    },
+    "270:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "RAM Wafer",
+          "desc:8": "Make a §6RAM Wafer§r, we\u0027ll need it for our Refined Supercomputer.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_2",
+            "Count:3": 1,
+            "Damage:2": 32485,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_2",
+              "Count:3": 1,
+              "Damage:2": 32485,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        267
+      ],
+      "questID:3": 270
+    },
+    "271:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "§c§lFollow the teachings of Gregorius Techneticies!",
+          "desc:8": "Make a Refined Mainframe, the first ever EV-tier circuit you can make in SUPERSYMMETRY.\n\nGood luck!",
+          "icon:10": {
+            "id:8": "gtadditions:ga_meta_item",
+            "Count:3": 1,
+            "Damage:2": 32206,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gtadditions:ga_meta_item",
+              "Count:3": 1,
+              "Damage:2": 32206,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        268
+      ],
+      "questID:3": 271
     }
   },
   "questLines:9": {
@@ -22973,8 +23810,8 @@
         "47:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
-          "y:3": 492,
+          "x:3": 120,
+          "y:3": 498,
           "id:3": 159
         },
         "48:10": {
@@ -23580,6 +24417,90 @@
           "x:3": 288,
           "y:3": 258,
           "id:3": 259
+        },
+        "41:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 270,
+          "y:3": -48,
+          "id:3": 260
+        },
+        "42:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 318,
+          "y:3": -48,
+          "id:3": 261
+        },
+        "43:10": {
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 282,
+          "y:3": 306,
+          "id:3": 262
+        },
+        "44:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 360,
+          "y:3": 318,
+          "id:3": 263
+        },
+        "45:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 360,
+          "y:3": 264,
+          "id:3": 264
+        },
+        "46:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 360,
+          "y:3": 210,
+          "id:3": 265
+        },
+        "47:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 408,
+          "y:3": 210,
+          "id:3": 266
+        },
+        "48:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 456,
+          "y:3": 210,
+          "id:3": 267
+        },
+        "49:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 552,
+          "y:3": 210,
+          "id:3": 268
+        },
+        "50:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 198,
+          "y:3": 78,
+          "id:3": 269
+        },
+        "51:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 504,
+          "y:3": 210,
+          "id:3": 270
+        },
+        "52:10": {
+          "sizeX:3": 42,
+          "sizeY:3": 48,
+          "x:3": 600,
+          "y:3": 198,
+          "id:3": 271
         }
       },
       "lineID:3": 3,
@@ -24228,6 +25149,13 @@
           "x:3": -312,
           "y:3": -240,
           "id:3": 237
+        },
+        "38:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 168,
+          "y:3": -228,
+          "id:3": 264
         }
       },
       "lineID:3": 16,
@@ -24680,6 +25608,34 @@
           "x:3": 96,
           "y:3": 96,
           "id:3": 259
+        },
+        "6:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 150,
+          "y:3": 0,
+          "id:3": 266
+        },
+        "7:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 150,
+          "y:3": 48,
+          "id:3": 267
+        },
+        "8:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 150,
+          "y:3": 96,
+          "id:3": 268
+        },
+        "9:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 150,
+          "y:3": 150,
+          "id:3": 271
         }
       },
       "lineID:3": 21,
