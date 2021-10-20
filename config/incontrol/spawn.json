@@ -41,7 +41,6 @@
 		"perplayer": true
 	},
 	"result": "default",
-	"healthmultiply": 2,
 	"speedmultiply": 2.5,
 	"damagemultiply": 2,
 	"angry": true

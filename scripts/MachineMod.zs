@@ -169,6 +169,72 @@ for solder in soldering_alloys{
 		.duration(40)
 		.EUt(60)
 		.buildAndRegister();
+	assembler.recipeBuilder()
+		.inputs([
+			<ore:plateAluminium>,
+			<ore:plateCurvedAluminium>,
+			<ore:gearSmallSteel>,
+			<ore:wireFineSteel>
+		])
+		.fluidInputs(solder*72)
+		.outputs(<machinemod:mowerdeck>)
+		.duration(20)
+		.EUt(60)
+		.buildAndRegister();
+	assembler.recipeBuilder()
+		.inputs([
+			<machinemod:mowerdeck>,
+			<machinemod:engine>,
+			<machinemod:transmission>,
+			<machinemod:wheel>*4,
+			<ore:gearSteel>
+		])
+		.fluidInputs(solder*72)
+		.outputs(<machinemod:lawnmower>)
+		.duration(40)
+		.EUt(60)
+		.buildAndRegister();
+	assembler.recipeBuilder()
+		.inputs([
+			<ore:plateAluminium>*8,
+			<ore:stickAluminium>*16,
+			<ore:stickLongAluminium>*2,
+			<ore:plateAluminium>*12,
+			<machinemod:wheel>*4,
+			<machinemod:engine>*1,
+			<machinemod:transmission>*1,
+			<machinemod:operatorsbooth>
+		])
+		.fluidInputs(solder*72)
+		.outputs(<machinemod:combine>)
+		.duration(40)
+		.EUt(60)
+		.buildAndRegister();
+	assembler.recipeBuilder()
+		.inputs([
+			<machinemod:tracksegment>*2,
+			<machinemod:engine>,
+			<ore:gearSteel>*4,
+			<ore:plateSteel>*8,
+			<machinemod:operatorsbooth>,
+			robotArms[2]*2
+		])
+		.fluidInputs(solder*72)
+		.outputs(<machinemod:bulldozer>)
+		.duration(40)
+		.EUt(60)
+		.buildAndRegister();
+	assembler.recipeBuilder()
+	.inputs([
+		<ore:plateAluminium>*4,
+		<ore:stickAluminium>
+	])
+	.notConsumable(intCircuit(30))
+	.fluidInputs(solder*72)
+	.outputs(<machinemod:fuelcan:1000>)
+	.duration(20)
+	.EUt(30)
+	.buildAndRegister();
 }
 
 assembler.recipeBuilder()
@@ -278,6 +344,21 @@ fluid_canner.recipeBuilder()
 	.duration(200)
 	.EUt(60)
 	.buildAndRegister();
+	
+val fuels as ILiquidStack[] = [
+	<liquid:naphtha>*1000,
+	<liquid:fuel>*1000
+];
+
+for fuel in fuels {
+	fluid_canner.recipeBuilder()
+		.inputs(<machinemod:fuelcan:1000>)
+		.fluidInputs(fuel)
+		.outputs(<machinemod:fuelcan>)
+		.duration(20)
+		.EUt(16)
+		.buildAndRegister();
+}
 	
 forming_press.recipeBuilder()
 	.inputs(<ore:dustZircon.mold.base>*8)

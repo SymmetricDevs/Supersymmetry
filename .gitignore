@@ -4,3 +4,14 @@ mods/
 usercache.json
 usernamecache.json
 build/modlist.*
+config/AppliedEnergistics2/CustomRecipes.cfg
+config/AppliedEnergistics2/items.csv
+config/InvTweaks.cfg
+config/jei/jei.cfg
+config/jei/worldSettings.cfg
+config/jei/bookmarks.ini
+config/splash.properties
+config/jei/bookmark.ini
+config/jei/worldSettings.cfg
+config/AppliedEnergistics2/items.csv
+config/BiomeTweaker/output/*
