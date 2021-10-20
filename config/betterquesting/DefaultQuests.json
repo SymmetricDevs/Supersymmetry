@@ -5959,7 +5959,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 1,
           "name:8": "Bottling Machine",
-          "desc:8": "The §bBottling Machine§r is a 3x2x3 multi-block. It is used to fill liquid containers.\n\nThe Bottling Machine requires:\n\n3 Steel Scaffolding\n2 Iron Sheetmetal\n1 Redstone Engineering Block\n2 Light Engineering Blocks\n3 Conveyor Belts\n1 Fluid Pump\n1 Glass\n\nHere\u0027s an image guide on how to form the multiblock: §9https://tinyurl.com/ie-bottler §r(the link doesn\u0027t work, you have to manually type it out, sadly)\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the bottling machine is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack the middle conveyor with the §6Engineer\u0027s Hammer §rto form the multiblock.\nIf the bottling machine doesn\u0027t form, you may try switching the order of the conveyors. \n\nThe Bottling Machine has no GUI. Redstone Flux is supplied on the §6top-right§r block of the multi-block (where the Light Engineering Block was).\nIf you cannot get fluid to go in the machine, try putting a tank near it and using a §7LV Pump §rand fluid pipes to transfer the fluid.\n\nFluids are added through the bottom-middle block of the backside. Items are added by dropping them on the Bottling Machine\u0027s Conveyor Belts. When a liquid storing item (such as a Bucket or Jerrycan) is introduced to the Bottling Machine, the Bottling Machine will fill and output it, consuming some RF.\n\n\n\n"
+          "desc:8": "The §bBottling Machine§r is a 3x2x3 multi-block. It is used to fill liquid containers.\n\nThe Bottling Machine requires:\n\n3 Steel Scaffolding\n2 Iron Sheetmetal\n1 Redstone Engineering Block\n2 Light Engineering Blocks\n3 Conveyor Belts\n1 Fluid Pump\n1 Glass\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the bottling machine is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack the middle conveyor with the §6Engineer\u0027s Hammer §rto form the multiblock.\nIf the bottling machine doesn\u0027t form, you may try switching the order of the conveyors. \n\nThe Bottling Machine has no GUI. Redstone Flux is supplied on the §6top-right§r block of the multi-block (where the Light Engineering Block was).\nIf you cannot get fluid to go in the machine, try putting a tank near it and using a §7LV Pump §rand fluid pipes to transfer the fluid.\n\nFluids are added through the bottom-middle block of the backside. Items are added by dropping them on the Bottling Machine\u0027s Conveyor Belts. When a liquid storing item (such as a Bucket or Jerrycan) is introduced to the Bottling Machine, the Bottling Machine will fill and output it, consuming some RF.\n\n{ResourceLocation:supersymmetry:guides/ie-bottler.png}"
         }
       },
       "tasks:9": {
@@ -7792,7 +7792,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Metal Press",
-          "desc:8": "The §bMetal Press§r is a 3x1x3 multi-block. It is used to mold metals, and it makes plates at a higher efficiency.\n\nThe Metal Press requires:\n\n2 Steel Scaffoldings\n1 Redstone Engineering Block\n1 Piston\n1 Heavy Engineering Block\n2 Conveyor Belts\n\nHere\u0027s an image guide on how to form the multiblock: §9https://tinyurl.com/ie-metalpress §r(the link doesn\u0027t work, you have to manually type it out, sadly)\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the metal press is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack the middle conveyor with the §6Engineer\u0027s Hammer §rto form the multiblock.\nItems are added by dropping them onto the structure. Right-clicking (a Metal Press with a Mold will attach the Mold to the Metal Press. The mold can be detached by shift right-clicking with an Engineer\u0027s Hammer.\n\n"
+          "desc:8": "The §bMetal Press§r is a 3x1x3 multi-block. It is used to mold metals, and it makes plates at a higher efficiency.\n\nThe Metal Press requires:\n\n2 Steel Scaffoldings\n1 Redstone Engineering Block\n1 Piston\n1 Heavy Engineering Block\n2 Conveyor Belts\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the metal press is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack the middle conveyor with the §6Engineer\u0027s Hammer §rto form the multiblock.\nItems are added by dropping them onto the structure. Right-clicking (a Metal Press with a Mold will attach the Mold to the Metal Press. The mold can be detached by shift right-clicking with an Engineer\u0027s Hammer.\n\n{ResourceLocation:supersymmetry:guides/ie-metalpress.png}"
         }
       },
       "tasks:9": {
@@ -8358,7 +8358,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Assembler",
-          "desc:8": "The IE §bAssembler§r is a 3x3x3 multi-block. It is used to assemble things together (duh)\n\nIt requires:\n\n9 Iron Sheetmetal, \n6 Steel Scaffoldings,\n6 Iron Sheetmetal Slabs, \n2 Redstone Engineering Blocks, \n2 Light Engineering Blocks and 2 Conveyor Belts\n\nHere\u0027s an image guide on how to form the multiblock: §9https://tinyurl.com/ie-assembler §r(the link doesn\u0027t work, you have to manually type it out, sadly)\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the metal press is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack it with the §6Engineer\u0027s Hammer §rto form the multiblock.\n\nRecipes can be set inside of the Assembler, as seen to the right. The fluid tanks in the Assembler will automatically fill liquid containers used in recipes, such as Water Buckets. It will automatically craft the recipes if it has the correct materials.\n"
+          "desc:8": "The IE §bAssembler§r is a 3x3x3 multi-block. It is used to assemble things together (duh)\n\nIt requires:\n\n9 Iron Sheetmetal, \n6 Steel Scaffoldings,\n6 Iron Sheetmetal Slabs, \n2 Redstone Engineering Blocks, \n2 Light Engineering Blocks and 2 Conveyor Belts\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the metal press is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack it with the §6Engineer\u0027s Hammer §rto form the multiblock.\n\nRecipes can be set inside of the Assembler, as seen to the right. The fluid tanks in the Assembler will automatically fill liquid containers used in recipes, such as Water Buckets. It will automatically craft the recipes if it has the correct materials.\n\n{ResourceLocation:supersymmetry:guides/ie-assembler.png}"
         }
       },
       "tasks:9": {
@@ -8989,7 +8989,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Steam Hammer",
-          "desc:8": "The §6Steam Hammer§r is used to process some parts before they are placed onto a Frame. It is the smallest machine in Immersive Railroading, it\u0027s 5 blocks in width, 1 in depth, and 6 in height.\n\nIt is built from:\n\n3 x Heavy Engineering Block\n1 x Block of Steel (If the multiblock doesn\u0027t form, try using an Immersive Engineering block of steel. You can change the types using a chisel)\n1 x Piston\n10 x Light Engineering Block\n\nOperating the Steam Hammer requires power, which is input through the top block. \nTo operate the hammer, right-click the central block to open the GUI. \n\nAn image guide for the Steam Hammer can be found here: §9§nhttps://tinyurl.com/ir-steamhammer"
+          "desc:8": "The §6Steam Hammer§r is used to process some parts before they are placed onto a Frame. It is the smallest machine in Immersive Railroading, it\u0027s 5 blocks in width, 1 in depth, and 6 in height.\n\nIt is built from:\n\n3 x Heavy Engineering Block\n1 x Block of Steel (If the multiblock doesn\u0027t form, try using an Immersive Engineering block of steel. You can change the types using a chisel)\n1 x Piston\n10 x Light Engineering Block\n\nOperating the Steam Hammer requires power, which is input through the top block. \nTo operate the hammer, right-click the central block to open the GUI. \n\n{ResourceLocation:supersymmetry:guides/steamhammer.jpg}"
         }
       },
       "tasks:9": {
@@ -9227,7 +9227,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Boiler Roller",
-          "desc:8": "The §6Boiler Roller§r turns Boiler Plates created in the Plate Rolling Machine into the needed boiler pieces for a given steam locomotive.\n\nIt is built from:\n\n24 x Stone Slab\n4 x Heavy Engineering Block\n8 x Light Engineering Block\n\n\nAn image guide for the Boiler Roller can be found here: §9§nhttps://tinyurl.com/ir-boilerroller\n§r\nTo operate, the machine needs §cRF power§r, which is input through the orange-yellow colored block on the left front of the machine. \nThe roller creates the appropriate part automatically - just have a boilerplate in hand and right-click the machine. "
+          "desc:8": "The §6Boiler Roller§r turns Boiler Plates created in the Plate Rolling Machine into the needed boiler pieces for a given steam locomotive.\n\nIt is built from:\n\n24 x Stone Slab\n4 x Heavy Engineering Block\n8 x Light Engineering Block\n\n§r\nTo operate, the machine needs §cRF power§r, which is input through the orange-yellow colored block on the left front of the machine. \nThe roller creates the appropriate part automatically - just have a boilerplate in hand and right-click the machine. \n\n{ResourceLocation:supersymmetry:guides/boilerroller.png}"
         }
       },
       "tasks:9": {
@@ -12847,7 +12847,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 1,
           "name:8": "Pumpjack",
-          "desc:8": "The §bPumpjack§o§o§r is a 6x4x3 multi-block. It extracts fluids like Crude Oil from reservoirs that are below bedrock. You need to have a Core Sample Drill to use it. It requires §41024 RF/t §rto run (§664 EU/t§r)\n\nThe Pumpjack requires:\n\n11 Steel Scaffolding\n6 Treated Wood Fences\n4 Fluid Pipes\n4 Steel Sheetmetal\n2 Blocks of Steel\n2 Light Engineering Blocks\n2 Heavy Engineering Blocks\n1 Redstone Engineering Block\n\nOnce your Pumpjack is powered and an empty pipe is connected to either fluid port, the jack pumps at a rate of 15 mB/tick.\n\nIf there\u0027s a reservoir below it, it brings the fluid to the surface. Multiple Pumpjacks in one chunk increases the rate of extraction. \nIf the reservoir is emptied, up to 6 mB/tick of fluid can continue to be extracted from the drained reservoir using a single Pumpjack.\n\nYou can check the §6Engineer\u0027s Manual§r for help. \nHere\u0027s an image guide on how to form the multiblock: §9https://tinyurl.com/ie-pumpjack §\n\n§r\nAfter putting together the structure, whack the Heavy Engineering Block with the §6Engineer\u0027s Hammer §rto form the multiblock."
+          "desc:8": "The §bPumpjack§o§o§r is a 6x4x3 multi-block. It extracts fluids like Crude Oil from reservoirs that are below bedrock. You need to have a Core Sample Drill to use it. It requires §41024 RF/t §rto run (§664 EU/t§r)\n\nThe Pumpjack requires:\n\n11 Steel Scaffolding\n6 Treated Wood Fences\n4 Fluid Pipes\n4 Steel Sheetmetal\n2 Blocks of Steel\n2 Light Engineering Blocks\n2 Heavy Engineering Blocks\n1 Redstone Engineering Block\n\nOnce your Pumpjack is powered and an empty pipe is connected to either fluid port, the jack pumps at a rate of 15 mB/tick.\n\nIf there\u0027s a reservoir below it, it brings the fluid to the surface. Multiple Pumpjacks in one chunk increases the rate of extraction. \nIf the reservoir is emptied, up to 6 mB/tick of fluid can continue to be extracted from the drained reservoir using a single Pumpjack.\n\nYou can check the §6Engineer\u0027s Manual§r for help. \n§r\nAfter putting together the structure, whack the Heavy Engineering Block with the §6Engineer\u0027s Hammer §rto form the multiblock.\n\n{ResourceLocation:supersymmetry:guides/ie-pumpjack.png}"
         }
       },
       "tasks:9": {
@@ -18839,7 +18839,22 @@
           "desc:8": "§6Seed Oil §rcan be extracted by plants using a Fluid Extractor. Let\u0027s make some.\n\n\n§3"
         }
       },
-      "tasks:9": {},
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "seed_oil",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
       "rewards:9": {},
       "preRequisites:11": [
         216
@@ -22249,7 +22264,7 @@
     "265:10": {
       "properties:10": {
         "betterquesting:10": {
-          "name:8": "Good Circuit Boards(TM)",
+          "name:8": "Circuit Board #3",
           "desc:8": "Now we\u0027re finally starting to get to actual circuit boards. The first one was just a piece of resin on a stick. The second one was a solidified piece of glue. Now we\u0027re using actual CHEMICALS with FUNNY BIG WORDS to make them. Isn\u0027t it nice?\n\n§3Make the Good Circuit Board.",
           "icon:10": {
             "id:8": "gtadditions:ga_meta_item",
@@ -22456,8 +22471,8 @@
     "268:10": {
       "properties:10": {
         "betterquesting:10": {
-          "name:8": "§c§lThis can\u0027t get worse, right?",
-          "desc:8": "Make the Refined Computer, the 3rd tier of Refined Circuits.",
+          "name:8": "§c§lExtreme, unimaginable pain.",
+          "desc:8": "Make the Refined Computer, the 3rd tier of Refined Circuits.\n\n\n",
           "icon:10": {
             "id:8": "gtadditions:ga_meta_item",
             "Count:3": 1,
@@ -22710,6 +22725,631 @@
         268
       ],
       "questID:3": 271
+    },
+    "272:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Sticky Situation",
+          "desc:8": "Make Glue from putting sticky resin in a centrifuge. You\u0027ll need a lot of it for MV circuits.",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "glue",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "glue",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        123
+      ],
+      "questID:3": 272
+    },
+    "273:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "You\u0027re probably getting used to this.",
+          "desc:8": "Make an HV Electric Motor to progress into HV Tier.\n\n§3You will need polyethylene for this. Make the Pyrolyse Oven to get it.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_1",
+            "Count:3": 1,
+            "Damage:2": 32602,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 32602,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        236
+      ],
+      "questID:3": 273
+    },
+    "274:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "HV Cables",
+          "desc:8": "HV §6Gold Cables §rneed polyethylene to be fully insulated. Let\u0027s make some.\n\nYou can also use polyethylene in place of polycaprolactam in MV cable recipes.",
+          "icon:10": {
+            "id:8": "gregtech:cable",
+            "Count:3": 1,
+            "Damage:2": 5026,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:cable",
+              "Count:3": 4,
+              "Damage:2": 5026,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        252
+      ],
+      "questID:3": 274
+    },
+    "275:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Explosive Tier: II ",
+          "desc:8": "Now that you have unlocked stainless steel, you are able to produce even better missiles. The problem is... they require liquid oxygen, which is NOT an easy substance to get access to. Getting Liquid Oxygen is a 9-step chain. Look at the Cryogenics tab for more info.\n\nBut for now, let\u0027s make a Tier 2 Launcher Platform.",
+          "icon:10": {
+            "id:8": "icbmclassic:launcherscreen",
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "icbmclassic:launcherscreen",
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "icbmclassic:launcherbase",
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": ""
+            },
+            "2:10": {
+              "id:8": "icbmclassic:launcherframe",
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        236
+      ],
+      "questID:3": 275
+    },
+    "276:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "*YEET!*",
+          "desc:8": "The Fragmentation Missile will explode into about 20 smaller pieces of explosives when it hits the ground.",
+          "icon:10": {
+            "id:8": "icbmclassic:explosives",
+            "Count:3": 1,
+            "Damage:2": 8,
+            "ForgeCaps:10": {
+              "Parent:10": {}
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "icbmclassic:missile",
+              "Count:3": 1,
+              "Damage:2": 8,
+              "ForgeCaps:10": {
+                "Parent:10": {
+                  "explosive:10": {}
+                },
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        275
+      ],
+      "questID:3": 276
+    },
+    "277:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "High-Pressure",
+          "desc:8": "The Thermobaric Missile is as close as we can get to a nuke, without actually using nuclear power. It makes a big hole.",
+          "icon:10": {
+            "id:8": "icbmclassic:explosives",
+            "Count:3": 1,
+            "Damage:2": 13,
+            "ForgeCaps:10": {
+              "Parent:10": {}
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "icbmclassic:missile",
+              "Count:3": 1,
+              "Damage:2": 13,
+              "ForgeCaps:10": {
+                "Parent:10": {
+                  "explosive:10": {}
+                },
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        275
+      ],
+      "questID:3": 277
+    },
+    "278:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "For when you need a door",
+          "desc:8": "The Breaching Missile will rip a huge hole in whatever structure you\u0027re launching it at. Useful if you need a back door.",
+          "icon:10": {
+            "id:8": "icbmclassic:explosives",
+            "Count:3": 1,
+            "Damage:2": 11,
+            "ForgeCaps:10": {
+              "Parent:10": {}
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "icbmclassic:missile",
+              "Count:3": 1,
+              "Damage:2": 11,
+              "ForgeCaps:10": {
+                "Parent:10": {
+                  "explosive:10": {}
+                },
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        275
+      ],
+      "questID:3": 278
+    },
+    "279:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "COVID-20",
+          "desc:8": "The Contagious Missile will spawn a bunch of zombies to wherever you\u0027re launching it.",
+          "icon:10": {
+            "id:8": "icbmclassic:explosives",
+            "Count:3": 1,
+            "Damage:2": 9,
+            "ForgeCaps:10": {
+              "Parent:10": {}
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "icbmclassic:missile",
+              "Count:3": 1,
+              "Damage:2": 9,
+              "ForgeCaps:10": {
+                "Parent:10": {
+                  "explosive:10": {}
+                },
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        275
+      ],
+      "questID:3": 279
+    },
+    "280:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "*EARBLAST*",
+          "desc:8": "The Sonic Missile will obliterate any person\u0027s ears if they get close to the landing site.",
+          "icon:10": {
+            "id:8": "icbmclassic:explosives",
+            "Count:3": 1,
+            "Damage:2": 10,
+            "ForgeCaps:10": {
+              "Parent:10": {}
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "icbmclassic:missile",
+              "Count:3": 1,
+              "Damage:2": 10,
+              "ForgeCaps:10": {
+                "Parent:10": {
+                  "explosive:10": {}
+                },
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        275
+      ],
+      "questID:3": 280
+    },
+    "281:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "It\u0027ll fail, just like the platform",
+          "desc:8": "If you want to use diesel, you need to mix light fuel and heavy fuel, and you can only do that with an §6MV Mixer§r.\n\nBy the way, don\u0027t forget to get an MV diesel generator, if you want to use diesel at MV.",
+          "icon:10": {
+            "id:8": "gregtech:machine",
+            "Count:3": 1,
+            "Damage:2": 371,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 371,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        174
+      ],
+      "questID:3": 282
     }
   },
   "questLines:9": {
@@ -23551,22 +24191,22 @@
         "10:10": {
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -48,
-          "y:3": 408,
+          "x:3": -66,
+          "y:3": 414,
           "id:3": 108
         },
         "11:10": {
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 0,
-          "y:3": 408,
+          "x:3": -18,
+          "y:3": 414,
           "id:3": 109
         },
         "12:10": {
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 48,
-          "y:3": 408,
+          "x:3": 30,
+          "y:3": 414,
           "id:3": 110
         },
         "13:10": {
@@ -23579,14 +24219,14 @@
         "14:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
+          "x:3": 84,
           "y:3": 408,
           "id:3": 112
         },
         "15:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
+          "x:3": 84,
           "y:3": 228,
           "id:3": 113
         },
@@ -23614,28 +24254,28 @@
         "19:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 54,
-          "y:3": 462,
+          "x:3": 36,
+          "y:3": 468,
           "id:3": 119
         },
         "20:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 6,
-          "y:3": 462,
+          "x:3": -12,
+          "y:3": 468,
           "id:3": 121
         },
         "21:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
-          "y:3": 528,
+          "x:3": 84,
+          "y:3": 534,
           "id:3": 122
         },
         "22:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
+          "x:3": 84,
           "y:3": 264,
           "id:3": 123
         },
@@ -23719,22 +24359,22 @@
         "34:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 498,
+          "x:3": 66,
+          "y:3": 504,
           "id:3": 146
         },
         "35:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
-          "y:3": 564,
+          "x:3": 84,
+          "y:3": 570,
           "id:3": 147
         },
         "36:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
-          "y:3": 462,
+          "x:3": 84,
+          "y:3": 468,
           "id:3": 148
         },
         "37:10": {
@@ -23782,7 +24422,7 @@
         "43:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
+          "x:3": 84,
           "y:3": 336,
           "id:3": 155
         },
@@ -23810,119 +24450,119 @@
         "47:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 498,
+          "x:3": 102,
+          "y:3": 504,
           "id:3": 159
         },
         "48:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
+          "x:3": 120,
           "y:3": 336,
           "id:3": 160
         },
         "49:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
+          "x:3": 84,
           "y:3": 372,
           "id:3": 161
         },
         "50:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 54,
-          "y:3": 522,
+          "x:3": 36,
+          "y:3": 528,
           "id:3": 162
         },
         "51:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
+          "x:3": 120,
           "y:3": 372,
           "id:3": 163
         },
         "52:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 54,
-          "y:3": 570,
+          "x:3": 36,
+          "y:3": 576,
           "id:3": 164
         },
         "53:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
+          "x:3": 84,
           "y:3": 300,
           "id:3": 165
         },
         "54:10": {
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 228,
+          "x:3": 192,
           "y:3": 342,
           "id:3": 166
         },
         "55:10": {
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 228,
+          "x:3": 192,
           "y:3": 408,
           "id:3": 168
         },
         "56:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
+          "x:3": 120,
           "y:3": 300,
           "id:3": 170
         },
         "57:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
+          "x:3": 120,
           "y:3": 264,
           "id:3": 171
         },
         "58:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
+          "x:3": 168,
           "y:3": 264,
           "id:3": 172
         },
         "59:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
+          "x:3": 168,
           "y:3": 300,
           "id:3": 173
         },
         "60:10": {
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 276,
+          "x:3": 240,
           "y:3": 288,
           "id:3": 174
         },
         "61:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
+          "x:3": 120,
           "y:3": 228,
           "id:3": 178
         },
         "62:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
+          "x:3": 168,
           "y:3": 228,
           "id:3": 179
         },
         "63:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 252,
+          "x:3": 216,
           "y:3": 228,
           "id:3": 180
         },
@@ -24062,8 +24702,8 @@
         "83:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": 480,
+          "x:3": 258,
+          "y:3": 420,
           "id:3": 201
         },
         "84:10": {
@@ -24076,7 +24716,7 @@
         "85:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
+          "x:3": 120,
           "y:3": 408,
           "id:3": 233
         },
@@ -24090,14 +24730,14 @@
         "87:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 294,
+          "x:3": 258,
           "y:3": 372,
           "id:3": 246
         },
         "88:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 294,
+          "x:3": 258,
           "y:3": 342,
           "id:3": 247
         }
@@ -24149,140 +24789,140 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
-          "y:3": 72,
+          "y:3": 66,
           "id:3": 200
         },
         "3:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 36,
+          "y:3": 30,
           "id:3": 202
         },
         "4:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 72,
+          "y:3": 66,
           "id:3": 203
         },
         "5:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 108,
+          "y:3": 102,
           "id:3": 204
         },
         "6:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 144,
+          "y:3": 138,
           "id:3": 205
         },
         "7:10": {
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -132,
-          "y:3": 138,
+          "y:3": 132,
           "id:3": 206
         },
         "8:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -186,
-          "y:3": 144,
+          "y:3": 138,
           "id:3": 207
         },
         "9:10": {
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -132,
-          "y:3": 102,
+          "y:3": 96,
           "id:3": 208
         },
         "10:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": 84,
+          "y:3": 78,
           "id:3": 220
         },
         "11:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 156,
+          "y:3": 150,
           "id:3": 221
         },
         "12:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 156,
+          "y:3": 150,
           "id:3": 222
         },
         "13:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -126,
-          "y:3": 186,
+          "y:3": 180,
           "id:3": 223
         },
         "14:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -90,
-          "y:3": 186,
+          "y:3": 180,
           "id:3": 224
         },
         "15:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -90,
-          "y:3": 222,
+          "y:3": 216,
           "id:3": 225
         },
         "16:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -126,
-          "y:3": 222,
+          "y:3": 216,
           "id:3": 226
         },
         "17:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
-          "y:3": 222,
+          "y:3": 216,
           "id:3": 227
         },
         "18:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
-          "y:3": 186,
+          "y:3": 180,
           "id:3": 228
         },
         "19:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
-          "y:3": 192,
+          "y:3": 186,
           "id:3": 231
         },
         "20:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
-          "y:3": 192,
+          "y:3": 186,
           "id:3": 232
         },
         "21:10": {
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
-          "y:3": 240,
+          "y:3": 234,
           "id:3": 236
         },
         "22:10": {
@@ -24372,8 +25012,8 @@
         "34:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 342,
-          "y:3": -12,
+          "x:3": 294,
+          "y:3": -90,
           "id:3": 253
         },
         "35:10": {
@@ -24501,6 +25141,69 @@
           "x:3": 600,
           "y:3": 198,
           "id:3": 271
+        },
+        "53:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 246,
+          "id:3": 273
+        },
+        "54:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 342,
+          "y:3": -12,
+          "id:3": 274
+        },
+        "55:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -126,
+          "y:3": 246,
+          "id:3": 275
+        },
+        "56:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -162,
+          "y:3": 246,
+          "id:3": 276
+        },
+        "57:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -162,
+          "y:3": 282,
+          "id:3": 277
+        },
+        "58:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -126,
+          "y:3": 282,
+          "id:3": 278
+        },
+        "59:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -90,
+          "y:3": 282,
+          "id:3": 279
+        },
+        "60:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -90,
+          "y:3": 246,
+          "id:3": 280
+        },
+        "61:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -72,
+          "y:3": -12,
+          "id:3": 282
         }
       },
       "lineID:3": 3,
@@ -24888,14 +25591,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
-          "y:3": -180,
+          "y:3": -168,
           "id:3": 117
         },
         "1:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
-          "y:3": -180,
+          "y:3": -168,
           "id:3": 118
         },
         "2:10": {
@@ -24930,7 +25633,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
-          "y:3": -180,
+          "y:3": -168,
           "id:3": 125
         },
         "7:10": {
@@ -24958,14 +25661,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
-          "y:3": -180,
+          "y:3": -168,
           "id:3": 129
         },
         "11:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": -180,
+          "y:3": -168,
           "id:3": 130
         },
         "12:10": {
@@ -24986,28 +25689,28 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
-          "y:3": -132,
+          "y:3": -120,
           "id:3": 138
         },
         "15:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
-          "y:3": -132,
+          "y:3": -120,
           "id:3": 139
         },
         "16:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
-          "y:3": -132,
+          "y:3": -120,
           "id:3": 140
         },
         "17:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
-          "y:3": -132,
+          "y:3": -120,
           "id:3": 141
         },
         "18:10": {
@@ -25070,49 +25773,49 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
-          "y:3": -84,
+          "y:3": -72,
           "id:3": 212
         },
         "27:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
-          "y:3": -36,
+          "y:3": -24,
           "id:3": 213
         },
         "28:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,
-          "y:3": 12,
+          "y:3": 24,
           "id:3": 214
         },
         "29:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
-          "y:3": 12,
+          "y:3": 24,
           "id:3": 215
         },
         "30:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
-          "y:3": -36,
+          "y:3": -24,
           "id:3": 217
         },
         "31:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
-          "y:3": -84,
+          "y:3": -72,
           "id:3": 218
         },
         "32:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
-          "y:3": -84,
+          "y:3": -72,
           "id:3": 219
         },
         "33:10": {
@@ -25147,7 +25850,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
-          "y:3": -240,
+          "y:3": -228,
           "id:3": 237
         },
         "38:10": {
@@ -25156,6 +25859,13 @@
           "x:3": 168,
           "y:3": -228,
           "id:3": 264
+        },
+        "39:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -252,
+          "y:3": -228,
+          "id:3": 272
         }
       },
       "lineID:3": 16,
