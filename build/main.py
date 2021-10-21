@@ -25,8 +25,8 @@ except Exception as e:
 
 for mod in manifest["externalDeps"]:
     with open(basePath + "/mods/" + mod["url"].split("/")[-1], "w+b") as jar:
-        r = requests.get(mod["url"])
         for i in range(1,100):
+            r = requests.get(mod["url"])
             if i == 99:
                 raise Exception("Download failed")
 
