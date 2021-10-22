@@ -1,4 +1,4 @@
-# if there is a problem with building, please ping htmlcsjs#0209 on discord
+# if there is a problem with building, please let htmlcsjs know
 import os
 import shutil
 import subprocess
@@ -38,6 +38,7 @@ for mod in manifest["externalDeps"]:
                 break
             else:
                 print("hash unsuccsessful")
+                print("use", str(hash), "this if it is consistant across runs")
                 pass
 
 for dir in copyDirs:
