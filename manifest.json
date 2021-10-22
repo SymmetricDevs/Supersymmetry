@@ -16,7 +16,7 @@
   "externalDeps":[
         {
             "url" : "https://github.com/PrototypeTrousers/Applied-Energistics-2/releases/download/omni-fixes-v47/appliedenergistics2-rv6-stable-7.omni-fixes-v47b.jar",
-            "hash" : "f331425def8cfe7606193b6bd3c3022c144945716149db60894c0bfdd6787f23",
+            "hash" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
             "name": "Applied Energistics 2 Trousers Edition"
         }
     ],
