@@ -32,7 +32,7 @@
       },
       "generationAttempts": 64,
       "amountPerChunk": 0.25,
-      "enable": true
+      "enable": false
     },
     "roots": {
       "with": {
@@ -55,7 +55,7 @@
       },
       "amountPerChunk": 24.0,
       "maxHeight": 32,
-      "enable": true
+      "enable": false
     },
     "biome_essence": {
       "minHeight": 4,
