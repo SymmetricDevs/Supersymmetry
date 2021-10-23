@@ -62,16 +62,11 @@
     "max_light": 16,
     "soils": [
       "farmland_soil",
+      "grass_soil",
       "fertilized_dirt_soil",
       "fertile_soil",
       "loamy_farmland_soil",
-      "sandy_farmland_soil",
-      "silty_farmland_soil",
-      "fertilized_farmland_stable_soil",
-      "fertilized_farmland_rich_stable_soil",
-      "fertilized_farmland_rich_soil",
-      "fertilized_farmland_healthy_stable_soil",
-      "fertilized_farmland_healthy_soil"
+      "silty_farmland_soil"
     ],
     "conditions": []
   },

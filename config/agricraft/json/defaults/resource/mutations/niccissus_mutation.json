@@ -1,6 +1,6 @@
 {
   "path": "resource/mutations/niccissus_mutation.json",
-  "enabled": true,
+  "enabled": false,
   "chance": 0.25,
   "child": "resource:niccissus_plant",
   "parent1": "resource:ferranium_plant",

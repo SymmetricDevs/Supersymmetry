@@ -1,6 +1,6 @@
 {
   "path": "resource/mutations/nitorwart_mutation.json",
-  "enabled": true,
+  "enabled": false,
   "chance": 0.75,
   "child": "resource:nitorwart_plant",
   "parent1": "resource:redstodendron_plant",
