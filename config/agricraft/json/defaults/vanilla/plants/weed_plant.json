@@ -14,7 +14,7 @@
   "bonemeal": true,
   "tier": 1,
   "weedable": true,
-  "aggressive": true,
+  "aggressive": false,
   "spread_chance": 0.1,
   "spawn_chance": 0.1,
   "grass_drop_chance": 0.0,
@@ -28,9 +28,11 @@
     "max_light": 16,
     "soils": [
       "farmland_soil",
-      "gravel_soil",
       "grass_soil",
-      "sand_soil"
+      "fertilized_dirt_soil",
+      "fertile_soil",
+      "loamy_farmland_soil",
+      "silty_farmland_soil"
     ],
     "conditions": []
   },

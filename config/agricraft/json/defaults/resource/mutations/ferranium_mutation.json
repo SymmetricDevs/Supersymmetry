@@ -1,6 +1,6 @@
 {
   "path": "resource/mutations/ferranium_mutation.json",
-  "enabled": true,
+  "enabled": false,
   "chance": 0.5,
   "child": "resource:ferranium_plant",
   "parent1": "vanilla:melon_plant",

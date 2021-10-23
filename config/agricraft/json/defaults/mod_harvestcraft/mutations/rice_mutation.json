@@ -1,8 +1,0 @@
-{
-  "path": "mod_harvestcraft/mutations/rice_mutation.json",
-  "enabled": true,
-  "chance": 0.5,
-  "child": "harvestcraft:rice_plant",
-  "parent1": "harvestcraft:rye_plant",
-  "parent2": "vanilla:sugarcane_plant"
-}
