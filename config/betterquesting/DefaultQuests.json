@@ -7087,7 +7087,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Double Barrel Shotgun",
-          "desc:8": "The §aDouble Barrel Shotgun§r is the first ever gun that you can make. It uses §aShotgun Rounds §o§rfor ammo."
+          "desc:8": "The §aDouble Barrel Shotgun§r is the first ever gun that you can make. It uses §aShotgun Rounds §o§rfor ammo.\n\nIt\u0027s a shotgun, this means it will shoot 8 times at once. For more info, look at the tooltip."
         }
       },
       "tasks:9": {
@@ -17092,7 +17092,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Incendiary Turrets",
-          "desc:8": "The Gun Turret yeets fire at whatever gets into a 18 block radius of it. It needs a Tier 2 or higher turret base. \n\nIt uses §4250 RF§r (14.8 EU) per shot, and it shoots 0.8 times per second.\n\nIt uses flaming clay as ammo."
+          "desc:8": "The Incendiary Turret yeets fire at whatever gets into a 18 block radius of it. It needs a Tier 2 or higher turret base. \n\nIt uses §4250 RF§r (14.8 EU) per shot, and it shoots 0.8 times per second.\n\nIt uses flaming clay as ammo."
         }
       },
       "tasks:9": {
@@ -17266,7 +17266,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Combat Shotgun",
-          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds.\n\nFor more info, look at the tooltip."
+          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds. It\u0027s also multishot, this means it will shoot 8 times at once.\n\nFor more info, look at the tooltip."
         }
       },
       "tasks:9": {
@@ -20906,42 +20906,12 @@
               "OreDict:8": ""
             },
             "1:10": {
-              "id:8": "gregtech:machine",
-              "Count:3": 1,
-              "Damage:2": 710,
-              "OreDict:8": ""
-            },
-            "2:10": {
-              "id:8": "gregtech:machine",
-              "Count:3": 1,
-              "Damage:2": 711,
-              "OreDict:8": ""
-            },
-            "3:10": {
-              "id:8": "gregtech:machine",
-              "Count:3": 1,
-              "Damage:2": 712,
-              "OreDict:8": ""
-            },
-            "4:10": {
-              "id:8": "gregtech:machine",
-              "Count:3": 1,
-              "Damage:2": 713,
-              "OreDict:8": ""
-            },
-            "5:10": {
-              "id:8": "gregtech:machine",
-              "Count:3": 1,
-              "Damage:2": 714,
-              "OreDict:8": ""
-            },
-            "6:10": {
               "id:8": "gregtech:wire_coil",
               "Count:3": 16,
               "Damage:2": 0,
               "OreDict:8": ""
             },
-            "7:10": {
+            "2:10": {
               "id:8": "gregtech:machine_casing",
               "Count:3": 1,
               "Damage:2": 0,
@@ -23303,6 +23273,57 @@
     "281:10": {
       "properties:10": {
         "betterquesting:10": {
+          "name:8": "Weapons Factory II",
+          "desc:8": "The §6MV Weapons Factory §rmakes higher-tier weapons, ammo, and turret gear. Let\u0027s make it.",
+          "icon:10": {
+            "id:8": "gregtech:machine",
+            "Count:3": 1,
+            "Damage:2": 16010,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 16010,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        200
+      ],
+      "questID:3": 281
+    },
+    "282:10": {
+      "properties:10": {
+        "betterquesting:10": {
           "name:8": "It\u0027ll fail, just like the platform",
           "desc:8": "If you want to use diesel, you need to mix light fuel and heavy fuel, and you can only do that with an §6MV Mixer§r.\n\nBy the way, don\u0027t forget to get an MV diesel generator, if you want to use diesel at MV.",
           "icon:10": {
@@ -23350,6 +23371,1113 @@
         174
       ],
       "questID:3": 282
+    },
+    "283:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Mac 10",
+          "desc:8": "The §6Mac 10§r is the first submachine gun you can make in this modpack. It uses §6SMG Magazines §ras ammo. It has a dual-wield penalty, this means it will make less damage if you\u0027re using it with two hands. Look at the tooltip for more info.",
+          "icon:10": {
+            "id:8": "techguns:mac10",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "camo:1": 0,
+              "ammovariant:8": "default",
+              "ammo:2": 32
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "techguns:mac10",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "tag:10": {
+                "camo:1": 0,
+                "ammovariant:8": "default",
+                "ammo:2": 32
+              },
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "techguns:itemshared",
+              "Count:3": 1,
+              "Damage:2": 9,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        281
+      ],
+      "questID:3": 283
+    },
+    "284:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Thompson SMG",
+          "desc:8": "The §6Thompson SMG§r is another submachine gun you can make at MV. It uses §6SMG Magazines §ras ammo. It\u0027s a two handed gun. \n\nLook at the tooltip for more info.",
+          "icon:10": {
+            "id:8": "techguns:thompson",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "camo:1": 0,
+              "ammovariant:8": "default",
+              "ammo:2": 20
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "techguns:thompson",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "tag:10": {
+                "camo:1": 0,
+                "ammovariant:8": "default",
+                "ammo:2": 20
+              },
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "techguns:itemshared",
+              "Count:3": 1,
+              "Damage:2": 9,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        281
+      ],
+      "questID:3": 284
+    },
+    "285:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "AKM ",
+          "desc:8": "The §6AKM§r is the first assault rifle you can make in this modpack. It uses §6Assault Rifle Magazines §ras ammo. \n\nFor more info, look at the tooltip.",
+          "icon:10": {
+            "id:8": "techguns:ak47",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "camo:1": 0,
+              "ammovariant:8": "default",
+              "ammo:2": 30
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "techguns:ak47",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "tag:10": {
+                "camo:1": 0,
+                "ammovariant:8": "default",
+                "ammo:2": 30
+              },
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "techguns:itemshared",
+              "Count:3": 1,
+              "Damage:2": 13,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        281
+      ],
+      "questID:3": 285
+    },
+    "286:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "M4 Assault Rifle",
+          "desc:8": "The §6M4§r is another assault rifle you can make at MV. It uses §6Assault Rifle Magazines §ras ammo. It\u0027s also a two-handed gun. \n\nFor more info, look at the tooltip.",
+          "icon:10": {
+            "id:8": "techguns:m4",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "camo:1": 0,
+              "ammovariant:8": "default",
+              "ammo:2": 30
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "techguns:m4",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "tag:10": {
+                "camo:1": 0,
+                "ammovariant:8": "default",
+                "ammo:2": 30
+              },
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "techguns:itemshared",
+              "Count:3": 1,
+              "Damage:2": 13,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        281
+      ],
+      "questID:3": 286
+    },
+    "287:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Turret Components at MV",
+          "desc:8": "MV turrets will be much more powerful than MV ones, so let\u0027s get started. You\u0027ll need Tier 3 turret chambers, turret bases, and turret barrels.",
+          "icon:10": {
+            "id:8": "openmodularturrets:turret_base",
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "openmodularturrets:turret_base",
+              "Count:3": 1,
+              "Damage:2": 2,
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "openmodularturrets:intermediate_tiered",
+              "Count:3": 1,
+              "Damage:2": 7,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            },
+            "2:10": {
+              "id:8": "openmodularturrets:intermediate_tiered",
+              "Count:3": 1,
+              "Damage:2": 12,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        281
+      ],
+      "questID:3": 287
+    },
+    "288:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Grenade Launcher Turret",
+          "desc:8": "The Grenade Launcher Turret is pretty simple, it *YOINKS* grenades at whatever gets into a 25 block radius of it. It needs a Tier 3 or higher turret base. \n\nIt uses §48 000 RF§r (500 EU) per shot, and it shoots 2.5 times per second.\n\nIt uses grenades as ammo.",
+          "icon:10": {
+            "id:8": "openmodularturrets:grenade_turret",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "openmodularturrets:grenade_turret",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "openmodularturrets:ammo_meta",
+              "Count:3": 1,
+              "Damage:2": 3,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        287
+      ],
+      "questID:3": 288
+    },
+    "289:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "This has nothing to do with relativity.",
+          "desc:8": "The §6Relativistic Turret §rslows down all targetable entities in range. The effect becomes stronger the closer the target is to the turret. It does not consume ammo.\n\n",
+          "icon:10": {
+            "id:8": "openmodularturrets:relativistic_turret",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "openmodularturrets:relativistic_turret",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        287
+      ],
+      "questID:3": 289
+    },
+    "290:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Coal Tar",
+          "desc:8": "§4Coal Tar§r is made by putting coal, charcoal, lignite, or coal coke into a §6pyrolyse oven§r. Coal Tar opens up a lot of chemical chains, that we will see in the next quests.",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "coal_tar",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "coal_tar",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        245
+      ],
+      "questID:3": 290
+    },
+    "291:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "How Circuits Work",
+          "desc:8": "Circuits in Gregicality are defined by two characteristics: their §6technological level§r (electronic, quantum, optical, etc,) and their \"rank\" in a given §6technology tier§r (assembly, mainframe, etc.)\n\nThese two characteristics give a circuit its name and voltage tier (e.g. the Micro Computer, an EV circuit and the 3rd micro circuit.)\n\nThe first technological tier of circuits, primitive circuits, is crafted by hand. The following tiers are fabricated in Circuit Assemblers, or the Assembly Line for high-end assemblies, computers and mainframes. Circuits at the Quantum tier or higher require the Large Circuit Assembly Line, craftable using LuV circuits (the first of which is the Nano Mainframe.)\n\nHigher technological tiers demand more complex processing chains for their respective components, but generally follow similar patterns in terms of what components they require (SMDs, circuit boards, metal frames for mainframes, etc.) Technological advancement will also allow you to make previous circuits more efficiently (e.g. using SoCs to craft Refined Processors without through-hole/SMD components.)\n\n{ResourceLocation:supersymmetry:guides/circuits.png}",
+          "icon:10": {
+            "id:8": "opencomputers:upgrade",
+            "Count:3": 1,
+            "Damage:2": 14,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 1,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "taskID:8": "bq_standard:checkbox",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        41
+      ],
+      "questID:3": 291
+    },
+    "292:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Vinyl Chloride",
+          "desc:8": "Making §6Polyvinyl Chloride§r, or PVC, will only require two extra steps from Ethylene. First of all, you make Vinyl Chloride, by mixing Ethylene with Chlorine or Hydrochloric Acid.",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "vinyl_chloride",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "vinyl_chloride",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        251
+      ],
+      "questID:3": 292
+    },
+    "293:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Polyvinyl Chloride",
+          "desc:8": "Now that you have your Vinyl Chloride, you just have to §opolymerize §rit to turn it into PVC. \n\nPolymerizing is just a really fancy chemistry word for \"blasting the thing with oxygen or air\". I\u0027ve probably said something horribly wrong in that sentence, but it makes sense for GregTech. I just make quests, I\u0027m not a chemist.\n\nAnyways, PVC is §6THE best early game material for pipes§r. If your pipes aren\u0027t good enough, you should probably make PVC ones.",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "polyvinyl_chloride",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "polyvinyl_chloride",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        292
+      ],
+      "questID:3": 293
+    },
+    "294:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Benzene",
+          "desc:8": "§6Benzene §ris a good source of power in the MV age. One bucket of Benzene gives 288,000 EU, lasting 1:52 minutes in an MV gas turbine, or almost 8 minutes in an LV gas turbine.\n\nBenzene can also be used in an Immersive Engineering gas turbine, or in an IE Steam Boiler.",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "benzene",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "benzene",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        290
+      ],
+      "questID:3": 294
+    },
+    "295:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "This doesn\u0027t get you high.",
+          "desc:8": "The §6Cracker Unit §ris a GregTech multiblock that is used to thermally crack heavy hydrocarbons into lighter fractions. This machine allows Light or Heavy Fuel to be further distilled into the lighter fractions, or into the secondary products Toluene and Lubricant more efficiently.\n\nThe Cracking Unit needs:\n\n1 Cracker Unit Controller\n16 Cupronickel Coil Blocks\n1 input hatch (any tier)\n1 output hatch (any tier)\n1 Maintenance Hatch\n1 LV Energy Input Hatch (we can\u0027t get the MV one right now)\n20 Stainless Steel Metal Casings\n\nThe Cracker Unit also allows a more efficient route for getting polyethylene, but we\u0027ll see that in another quest.",
+          "icon:10": {
+            "id:8": "gregtech:machine",
+            "Count:3": 1,
+            "Damage:2": 2538,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 525,
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "gregtech:wire_coil",
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            },
+            "2:10": {
+              "id:8": "gregtech:metal_casing_stainless_steel",
+              "Count:3": 20,
+              "Damage:2": 0,
+              "OreDict:8": "gtMetalCasingStainlessSteel"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        236
+      ],
+      "questID:3": 295
+    },
+    "296:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Propene",
+          "desc:8": "§6Propene §ris another hydrocarbon that you can make using the Cracker Unit. First of all make either Steam-Cracked Light Fuel or Steam-Cracked Naphtha, then distill them into Propene.\n\n§3Don\u0027t confuse Propene with Propane. They\u0027re NOT the same thing. §r",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "propene",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "propene",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        295
+      ],
+      "questID:3": 296
+    },
+    "297:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Easier Polyethylene",
+          "desc:8": "You can make §6polyethylene §reven easier if you have the Cracking Unit. \n\nYou just have to get Steam Cracked Light Fuel, then distill it to Ethylene, and add oxygen or air to make it Polyethylene.",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "plastic",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "plastic",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        295
+      ],
+      "questID:3": 297
+    },
+    "298:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "This doesn\u0027t make beer.",
+          "desc:8": "The §6Distillation Tower§r is a GregTech multiblock that distills huge amounts of fluids. It is an advanced version of the Distillery, able to output all products at the same time and with greater energy efficiency and throughput.\n\nThe Distillation Tower needs:\n\n1 Cracker Unit Controller\n1 input hatch (any tier)\n5+ output hatch (any tier) (you need more output hatches if you want to extract more than 5 fluids at once)\n1 Maintenance Hatch\n1 Muffler Hatch\n1 LV Energy Input Hatch (we can\u0027t get the MV one right now)\n39 Stainless Steel Metal Casings\n\nThe Cracker Unit also allows a more efficient route for getting polyethylene, but we\u0027ll see that in another quest.",
+          "icon:10": {
+            "id:8": "gregtech:machine",
+            "Count:3": 1,
+            "Damage:2": 2538,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 1,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 515,
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "gregtech:metal_casing_stainless_steel",
+              "Count:3": 39,
+              "Damage:2": 0,
+              "OreDict:8": "gtMetalCasingStainlessSteel"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        236
+      ],
+      "questID:3": 298
     }
   },
   "questLines:9": {
@@ -24844,8 +25972,8 @@
         "10:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 78,
+          "x:3": 36,
+          "y:3": 66,
           "id:3": 220
         },
         "11:10": {
@@ -25201,9 +26329,121 @@
         "61:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 114,
+          "id:3": 281
+        },
+        "62:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
           "x:3": -72,
           "y:3": -12,
           "id:3": 282
+        },
+        "63:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": 138,
+          "id:3": 283
+        },
+        "64:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 138,
+          "id:3": 284
+        },
+        "65:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": 102,
+          "id:3": 285
+        },
+        "66:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 102,
+          "id:3": 286
+        },
+        "67:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 156,
+          "y:3": 114,
+          "id:3": 287
+        },
+        "68:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": 168,
+          "id:3": 288
+        },
+        "69:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 180,
+          "y:3": 168,
+          "id:3": 289
+        },
+        "70:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 54,
+          "y:3": -54,
+          "id:3": 290
+        },
+        "71:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 246,
+          "y:3": -78,
+          "id:3": 292
+        },
+        "72:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 198,
+          "y:3": -78,
+          "id:3": 293
+        },
+        "73:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 54,
+          "y:3": -90,
+          "id:3": 294
+        },
+        "74:10": {
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 24,
+          "y:3": 300,
+          "id:3": 295
+        },
+        "75:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 30,
+          "y:3": 348,
+          "id:3": 296
+        },
+        "76:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 78,
+          "y:3": 306,
+          "id:3": 297
+        },
+        "77:10": {
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -54,
+          "y:3": 300,
+          "id:3": 298
         }
       },
       "lineID:3": 3,
@@ -25866,6 +27106,34 @@
           "x:3": -252,
           "y:3": -228,
           "id:3": 272
+        },
+        "40:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": -168,
+          "id:3": 290
+        },
+        "41:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": -168,
+          "id:3": 294
+        },
+        "42:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 168,
+          "y:3": -168,
+          "id:3": 296
+        },
+        "43:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": -168,
+          "id:3": 297
         }
       },
       "lineID:3": 16,
@@ -26113,6 +27381,27 @@
           "x:3": 336,
           "y:3": 96,
           "id:3": 211
+        },
+        "23:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 48,
+          "id:3": 245
+        },
+        "24:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 192,
+          "y:3": 138,
+          "id:3": 295
+        },
+        "25:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
+          "y:3": 138,
+          "id:3": 298
         }
       },
       "lineID:3": 18,
@@ -26346,6 +27635,13 @@
           "x:3": 150,
           "y:3": 150,
           "id:3": 271
+        },
+        "10:10": {
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -60,
+          "y:3": -12,
+          "id:3": 291
         }
       },
       "lineID:3": 21,
