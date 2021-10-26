@@ -1,3 +1,6 @@
+
+# Fluids
+
 fluid.low_vacuum=Low Vacuum
 fluid.medium_vacuum=Medium Vacuum
 fluid.high_vacuum=High Vacuum
@@ -52,3 +55,11 @@ fluid.cold_ammonia=Cold Ammonia
 fluid.hot_compressed_propane=Hot Compressed Propane
 fluid.compressed_propane=Compressed Propane
 fluid.cold_propane=Cold Propane
+
+# GregTech RecipeMaps
+
+recipemap.fluid_de_compressor.name=Fluid (De)Compression
+recipemap.weapons_factory.name=Weapons Factory
+recipemap.large_weapons_factory.name=Large Weapons Factory
+recipemap.ore_sorter.name=Ore Sorting
+recipemap.railroad_engineering_station.name=Railroad Engineering Station
