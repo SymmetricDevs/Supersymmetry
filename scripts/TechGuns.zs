@@ -35,6 +35,7 @@ val name_removals as string[] = [
 		"techguns:simplemachine_10_charging_station",
 		"techguns:simplemachine_11_blast_furnace",
 		"techguns:simplemachine2_8_grinder",
+		"techguns:simplemachine2_9_armor_bench",
 		"techguns:multiblockmachine_0_fabricator_housing",
 		"techguns:multiblockmachine_1_fabricator_glass",
 		"techguns:multiblockmachine_2_fabricator_controller",

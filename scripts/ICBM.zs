@@ -50,7 +50,12 @@ val name_removals as string[] = [
 	"icbmclassic:explosives/contagious",
 	"icbmclassic:explosives/sonic",
 	"icbmclassic:explosives/breaching",
-	"icbmclassic:explosives/thermobaric"
+	"icbmclassic:explosives/thermobaric",
+	"icbmclassic:explosives/exothermic",
+	"icbmclassic:explosives/endothermic",
+	"icbmclassic:explosives/anti_grav",
+	"icbmclassic:explosives/ender",
+	"icbmclassic:explosives/hypersonic"
 ];
 
 for item in name_removals {
@@ -164,7 +169,7 @@ for fuel in thermobaric_fuels {
 			<ore:plateCurvedAluminium>*4
 		])
 		.fluidInputs(fuel)
-		.outputs(<icbmclassic:explosives:11>)
+		.outputs(<icbmclassic:explosives:13>)
 		.duration(400)
 		.EUt(60)
 		.buildAndRegister();
