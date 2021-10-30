@@ -3,6 +3,12 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
 
+import mods.gregtech.recipe.RecipeMap;
+import mods.gregtech.recipe.RecipeMaps;
+import mods.gtadditions.recipe.Utils;
+import mods.gtadditions.recipe.LargeRecipeMap;
+import mods.gtadditions.recipe.GARecipeMaps;
+
 val name_removals as string[] = [
 	"machinemod:assemblytable",
 	"machinemod:aslphaltslab",
@@ -325,6 +331,21 @@ assembler.recipeBuilder()
 	.duration(40)
 	.EUt(60)
 	.buildAndRegister();
+	
+assembler.recipeBuilder()
+	.inputs([
+		<machinemod:engine>,
+		robotArms[2],
+		<machinemod:wheel>*4,
+		<ore:stickLongSteel>*2,
+		<ore:plateSteel>*8,
+		<ore:plateCurvedSteel>*2,
+		<machinemod:operatorsbooth>
+	])
+	.outputs(<machinemod:loader>)
+	.duration(400)
+	.EUt(60)
+	.buildAndRegister();
 
 blast_furnace.recipeBuilder()
 	.inputs(<contenttweaker:full_engine_block_cast>)
@@ -381,4 +402,37 @@ mixer.recipeBuilder()
 	.outputs(<ore:dustZircon.mold.base>.firstItem*8)
 	.duration(200)
 	.EUt(30)
+	.buildAndRegister();
+	
+mixer.recipeBuilder()
+	.inputs([<ore:dustSand>*16])
+	.fluidInputs([
+		<liquid:ammonium_nitrate>*950,
+		<liquid:fuel>*50
+	])
+	.outputs(<machinemod:anfo>*16)
+	.duration(60)
+	.EUt(60)
+	.buildAndRegister();
+	
+//Blasted Stone Ore Sorting
+
+<multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
+	.inputs([
+		<ore:anyBlastedStone>*16
+	])
+	.outputs([
+		<contenttweaker:rock_carbon>,
+		<contenttweaker:rock_carbonate>,
+		<contenttweaker:rock_clay>,
+		<contenttweaker:rock_oxide>,
+		<contenttweaker:rock_phosphate>,
+		<contenttweaker:rock_precious>,
+		<contenttweaker:rock_radioactive>,
+		<contenttweaker:rock_sedimentary>,
+		<contenttweaker:rock_silicate>,
+		<contenttweaker:rock_sulfur>
+	])
+	.duration(20)
+	.EUt(60)
 	.buildAndRegister();
