@@ -231,16 +231,28 @@ for solder in soldering_alloys{
 		.EUt(60)
 		.buildAndRegister();
 	assembler.recipeBuilder()
-	.inputs([
-		<ore:plateAluminium>*4,
-		<ore:stickAluminium>
-	])
-	.notConsumable(intCircuit(30))
-	.fluidInputs(solder*72)
-	.outputs(<machinemod:fuelcan:1000>)
-	.duration(20)
-	.EUt(30)
-	.buildAndRegister();
+		.inputs([
+			<ore:plateAluminium>*4,
+			<ore:stickAluminium>
+		])
+		.notConsumable(intCircuit(30))
+		.fluidInputs(solder*72)
+		.outputs(<machinemod:fuelcan:1000>)
+		.duration(20)
+		.EUt(30)
+		.buildAndRegister();
+	assembler.recipeBuilder()
+		.inputs([
+			<ore:plateStainlessSteel>,
+			<ore:gearSmallStainlessSteel>*8,
+			<ore:plateCurvedStainlessSteel>*2,
+			pumps[3]
+		])
+		.fluidInputs(solder*72)
+		.outputs(<machinemod:elytrajetleg:15000>)
+		.duration(40)
+		.EUt(120)
+		.buildAndRegister();
 }
 
 assembler.recipeBuilder()
@@ -378,6 +390,14 @@ for fuel in fuels {
 		.outputs(<machinemod:fuelcan>)
 		.duration(20)
 		.EUt(16)
+		.buildAndRegister();
+		
+	fluid_canner.recipeBuilder()
+		.inputs(<machinemod:elytrajetleg>.anyDamage())
+		.fluidInputs(fuel)
+		.outputs(<machinemod:elytrajetleg>)
+		.duration(20)
+		.EUt(24)
 		.buildAndRegister();
 }
 	

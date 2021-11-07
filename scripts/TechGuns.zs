@@ -27,6 +27,8 @@ val name_removals as string[] = [
 		"techguns:itemshared_2_shotgunrounds",
 		"techguns:itemshared_65_circuitboard",
 		"techguns:itemshared_66_circuitboardelite",
+		"techguns:itemshared_90_gliderbackpack",
+		"techguns:itemshared_91_gliderwing",
 		"techguns:basicmachine_0_ammo_press",
 		"techguns:basicmachine_1_metal_press",
 		"techguns:basicmachine_1_metal_press_alt",
@@ -183,6 +185,18 @@ recipes.addShaped("tg_pistol_rounds", <techguns:itemshared:1>*12, [
 	[null, <ore:gregHardHammers>, null],
 	[null, <ore:roundLead>, null],
 	[<ore:plateCurvedBrass>, <ore:dustGunpowder>, <ore:plateCurvedBrass>]
+]);
+
+recipes.addShaped("tg_glider_backpack", <techguns:itemshared:90>, [
+	[<techguns:itemshared:60>, <techguns:itemshared:60>, <techguns:itemshared:60>],
+	[<ore:boltAluminium>, <ore:plateAluminium>, <ore:boltAluminium>],
+	[<techguns:itemshared:60>, <techguns:itemshared:60>, <techguns:itemshared:60>]
+]);
+
+recipes.addShaped("tg_glider_wing", <techguns:itemshared:91>, [
+	[<ore:stickAluminium>, <ore:stickAluminium>, <ore:stickAluminium>],
+	[<ore:platePlastic>, <ore:platePlastic>, <ore:platePlastic>],
+	[<ore:platePlastic>, <ore:platePlastic>, <ore:platePlastic>]
 ]);
 
 
