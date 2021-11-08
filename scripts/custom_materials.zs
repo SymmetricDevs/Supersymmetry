@@ -9,6 +9,7 @@ import mods.gregtech.material.MaterialRegistry;
 //-----------------------------------DUSTS-----------------------------------
 
 Utils.registerDust("zircon.mold.base", 1200, 15441471, "DULL");
+Utils.registerDust("ammonium_nitrate", 1201, 0xDEDEDE, "ROUGH");
 
 //-----------------------------------FLUIDS-----------------------------------
 
