@@ -133,23 +133,32 @@ recipes.addShaped(
 );
 
 val solidfuels as IOreDictEntry[] = [
-	<ore:dustSugar>
+	<ore:dustSugar>,
+	<ore:dustGunpowder>,
+	<ore:dustAluminium>,
+	<ore:dustBeryllium>,
+	<ore:dustHexanitrohexaaxaisowurtzitane>
 ];
 
 val solidoxys as IOreDictEntry[] = [
-	<ore:dustSaltpeter>
+	<ore:dustSaltpeter>,
+	<ore:dustNiter>, // this will be merged into saltpeter in CEu
+	<ore:dustAmmoniumNitrate>
 ];
 
 val liquidfuels as ILiquidStack[] = [
 	<liquid:liquid_hydrogen>,
+	<liquid:ethane>,
 	<liquid:ethanol>,
-	<liquid:rp>
+	<liquid:rp>,
+	<liquid:monomethylhydrazine>
 ];
 
 val liquidoxys as ILiquidStack[] = [
 	<liquid:liquid_oxygen>,
 	<liquid:hydrogen_peroxide>,
-	<liquid:nitric_acid>
+	<liquid:nitric_acid>,
+	<liquid:dinitrogen_tetroxide>
 ];
 
 for solder in soldering_alloys {
