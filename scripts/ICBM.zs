@@ -3,6 +3,10 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
 
+import scripts.thermodynamics.ICryoGas.ICryoGas;
+import scripts.thermodynamics.ISuperconductor.ISuperconductor;
+import scripts.thermodynamics.thermo;
+
 val name_removals as string[] = [
 	"icbmclassic:missile/vanilla/missile.module",
 	"icbmclassic:launcher/base/base.tier.1",
@@ -187,6 +191,63 @@ weapons_factory.recipeBuilder()
 	.duration(400)
 	.EUt(60)
 	.buildAndRegister();
+	
+//Explosives tier 3
+
+val HV_SC_CriticalTemp as int = 80;
+for solder in soldering_alloys {
+	for CryoGas in thermo.CryoGases {
+		if(HV_SC_CriticalTemp > CryoGas.getTemperature()){
+			//EMP
+			weapons_factory.recipeBuilder()
+				.inputs([
+					<gtadditions:ga_cell_casing>,
+					<ore:plateStainlessSteel>*2,
+					<ore:wireGtSingleHvSuperconductor>*8,
+					<metaitem:fluid_cell>*2
+				])
+				.fluidInputs([
+					solder*72,
+					CryoGas.getLiquidGas(2)
+				])
+				.outputs(<icbmclassic:explosives:16>)
+				.duration(200)
+				.EUt(300)
+				.buildAndRegister();
+		}
+		//Endothermic
+		weapons_factory.recipeBuilder()
+			.inputs([
+				<metaitem:fluid_cell>*8,
+				<icbmclassic:explosives:6>*8,
+				<ore:plateCurvedStainlessSteel>*4
+			])
+			.fluidInputs([
+				solder*72,
+				CryoGas.getLiquidGas(32)
+			])
+			.outputs(<icbmclassic:explosives:18>)
+			.duration(60)
+			.EUt(300)
+			.buildAndRegister();
+	}
+	for fuel in thermobaric_fuels {
+		weapons_factory.recipeBuilder()
+			.inputs([
+				<metaitem:fluid_cell>*8,
+				<icbmclassic:explosives:6>*8,
+				<ore:plateCurvedStainlessSteel>*4
+			])
+			.fluidInputs([
+				solder*72,
+				fuel
+			])
+			.outputs(<icbmclassic:explosives:17>)
+			.duration(60)
+			.EUt(300)
+			.buildAndRegister();
+	}
+}
 
 //Launchers
 for solder in soldering_alloys {
