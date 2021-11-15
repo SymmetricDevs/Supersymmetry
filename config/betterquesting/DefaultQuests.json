@@ -8214,7 +8214,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 1,
           "name:8": "How Electricity Works",
-          "desc:8": "This pack has two different types of electricity: §cRF (Redstone Flux) §rand §bEU (Energy Units)§r§r. What we have been using up until now is RF. \n\nIn the next tier, we will unlock EU and GregTech machines, and we will explain the EU system in more detail there.\n\nRemember that 8 RF equals 1 EU, and if GregTech machines get a higher voltage that they can handle, they will explode. To convert between RF and EU you will need to use energy converters. \n\n------------------\nTo store RF, you need to make a §cLow Voltage Capacitor. §r\nTo transfer RF, you need to use §cLow Voltage RF wire§r. Make a LV Wire Coil, and connect it to a LV Wire Connector to transfer the energy."
+          "desc:8": "This pack has two different types of electricity: §cRF (Redstone Flux) §rand §bEU (Energy Units)§r§r. What we have been using up until now is RF. \n\nIn the next tier, we will unlock EU and GregTech machines, and we will explain the EU system in more detail there.\n\nRemember that 16 RF equals 1 EU, and if GregTech machines get a higher voltage that they can handle, they will explode. To convert between RF and EU you will need to use energy converters. \n\n------------------\nTo store RF, you need to make a §cLow Voltage Capacitor. §r\nTo transfer RF, you need to use §cLow Voltage RF wire§r. Make a LV Wire Coil, and connect it to a LV Wire Connector to transfer the energy."
         }
       },
       "tasks:9": {
@@ -10809,7 +10809,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Electricity 103 - Power Converting",
-          "desc:8": "Let\u0027s talk about energy conversion. There are two types of energy, §cRF §n§rand §eEU§r.\n\nThe one you\u0027ve been using is §cRF§r. We are going to use §eEU §rin the next tier.\n\nTo convert between EU and RF you will need an §eenergy converter§r. The conversion rate is 8 to 1, you will generate 1 EU for every 8 RF you make.\n\nYes, you can still make RF and convert it back into EU, but it\u0027s really not efficient right now (Do you really want to make 5 water wheels to generate 30 EU/t?)\n\n\n§3Click the checkbox to complete the EU tutorial.\nThis will unlock about 20 quests for machines. "
+          "desc:8": "Let\u0027s talk about energy conversion. There are two types of energy, §cRF §n§rand §eEU§r.\n\nThe one you\u0027ve been using is §cRF§r. We are going to use §eEU §rin the next tier.\n\nTo convert between EU and RF you will need an §eenergy converter§r. The conversion rate is 16 to 1, you will generate 1 EU for every 16 RF you make.\n\nYes, you can still make RF and convert it back into EU, but it\u0027s really not efficient right now (Do you really want to make 5 water wheels to generate 30 EU/t?)\n\n\n§3Click the checkbox to complete the EU tutorial.\nThis will unlock about 20 quests for machines. "
         }
       },
       "tasks:9": {
@@ -12848,7 +12848,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 1,
           "name:8": "Pumpjack",
-          "desc:8": "The §bPumpjack§o§o§r is a 6x4x3 multi-block. It extracts fluids like Crude Oil from reservoirs that are below bedrock. You need to have a Core Sample Drill to use it. It requires §41024 RF/t §rto run (§6128 EU/t§r)\n\nThe Pumpjack requires:\n\n11 Steel Scaffolding\n6 Treated Wood Fences\n4 Fluid Pipes\n4 Steel Sheetmetal\n2 Blocks of Steel\n2 Light Engineering Blocks\n2 Heavy Engineering Blocks\n1 Redstone Engineering Block\n\nOnce your Pumpjack is powered and an empty pipe is connected to either fluid port, the jack pumps at a rate of 15 mB/tick.\n\nIf there\u0027s a reservoir below it, it brings the fluid to the surface. Multiple Pumpjacks in one chunk increases the rate of extraction. \nIf the reservoir is emptied, up to 6 mB/tick of fluid can continue to be extracted from the drained reservoir using a single Pumpjack.\n\nYou can check the §6Engineer\u0027s Manual§r for help. \n§r\nAfter putting together the structure, whack the Heavy Engineering Block with the §6Engineer\u0027s Hammer §rto form the multiblock.\n\n{ResourceLocation:supersymmetry:guides/ie-pumpjack.png}"
+          "desc:8": "The §bPumpjack§o§o§r is a 6x4x3 multi-block. It extracts fluids like Crude Oil from reservoirs that are below bedrock. You need to have a Core Sample Drill to use it. It requires §41024 RF/t §rto run (§664 EU/t§r)\n\nThe Pumpjack requires:\n\n11 Steel Scaffolding\n6 Treated Wood Fences\n4 Fluid Pipes\n4 Steel Sheetmetal\n2 Blocks of Steel\n2 Light Engineering Blocks\n2 Heavy Engineering Blocks\n1 Redstone Engineering Block\n\nOnce your Pumpjack is powered and an empty pipe is connected to either fluid port, the jack pumps at a rate of 15 mB/tick.\n\nIf there\u0027s a reservoir below it, it brings the fluid to the surface. Multiple Pumpjacks in one chunk increases the rate of extraction. \nIf the reservoir is emptied, up to 6 mB/tick of fluid can continue to be extracted from the drained reservoir using a single Pumpjack.\n\nYou can check the §6Engineer\u0027s Manual§r for help. \n§r\nAfter putting together the structure, whack the Heavy Engineering Block with the §6Engineer\u0027s Hammer §rto form the multiblock.\n\n{ResourceLocation:supersymmetry:guides/ie-pumpjack.png}"
         }
       },
       "tasks:9": {
@@ -17028,7 +17028,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Gun Turret",
-          "desc:8": "The Gun Turret shoots at whatever gets into a 18 block radius of it. It needs a Tier 2 or higher turret base."
+          "desc:8": "The Gun Turret shoots at whatever gets into a 18 block radius of it. It needs a Tier 2 or higher turret base. \n\nIt uses §4100 RF§r (6.25 EU) per shot, and it shoots 2.5 times per second.\n\nIt uses bullets as ammo."
         }
       },
       "tasks:9": {
@@ -17094,7 +17094,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Incendiary Turrets",
-          "desc:8": "The Incendiary Turret yeets fire at whatever gets into a 18 block radius of it. It needs a Tier 2 or higher turret base."
+          "desc:8": "The Incendiary Turret yeets fire at whatever gets into a 18 block radius of it. It needs a Tier 2 or higher turret base. \n\nIt uses §4250 RF§r (14.8 EU) per shot, and it shoots 0.8 times per second.\n\nIt uses flaming clay as ammo."
         }
       },
       "tasks:9": {
@@ -17357,7 +17357,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Diggy Diggy Hole",
-          "desc:8": "The §6Excavator§r is a complex multiblock structure that is able to dig up mineral deposits that are inaccessible with normal mining (they\u0027re below bedrock!)\n\nThe Excavator requires:\n26 Steel Scaffolding\n15 Steel Sheetmetal\n9 Block of Steel (Immersive Engineering variant)\n9 Light Engineering Block\n5 Heavy Engineering Block\n3 Radiator Block\n1 Redstone Engineering Block\n\nThe Excavator uses §c960 RF/t§r (§6120§r EU/t), so you\u0027ll need 4 LV generators or 1 MV one to power it.\n\nYou can check the §6Engineer\u0027s Manual§r for help. \nAfter putting together the structure, whack it with the §6Engineer\u0027s Hammer §rto form the multiblock."
+          "desc:8": "The §6Excavator§r is a complex multiblock structure that is able to dig up mineral deposits that are inaccessible with normal mining (they\u0027re below bedrock!)\n\nThe Excavator requires:\n26 Steel Scaffolding\n15 Steel Sheetmetal\n9 Block of Steel (Immersive Engineering variant)\n9 Light Engineering Block\n5 Heavy Engineering Block\n3 Radiator Block\n1 Redstone Engineering Block\n\nThe Excavator uses §c4096 RF/t§r (§6256§r EU/t), so you\u0027ll need 8 LV generators or 2 MV ones to power it.\n\nYou can check the §6Engineer\u0027s Manual§r for help. \nAfter putting together the structure, whack it with the §6Engineer\u0027s Hammer §rto form the multiblock."
         }
       },
       "tasks:9": {
@@ -18528,7 +18528,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Alternator",
-          "desc:8": "The Alternator is a multiblock structure that turns §6kinetic energy§r into electricity.\nIt needs to have a Kinetic Energy generator connected to it to work (like the Gas Turbine).\n\nThe Alternator requires:\n\n9 Light Engineering Block\n8 Generator Block\n4 High Voltage Coil Block\n4 Radiator Block\n4 Steel Sheetmetal\n2 Steel Blocks\n2 Heavy Engineering Block\n\nThe Alternator can store up to 1.200.000 RF, outputting §c2048 RF/t§r (256 EU/t)\n\nYou can check the §6Engineer\u0027s Manual§r for help on how to build the structure.\n§r\nAfter putting together the structure, whack the Heavy Engineering Block with the §6Engineer\u0027s Hammer §rto form the multiblock."
+          "desc:8": "The Alternator is a multiblock structure that turns §6kinetic energy§r into electricity.\nIt needs to have a Kinetic Energy generator connected to it to work (like the Gas Turbine).\n\nThe Alternator requires:\n\n9 Light Engineering Block\n8 Generator Block\n4 High Voltage Coil Block\n4 Radiator Block\n4 Steel Sheetmetal\n2 Steel Blocks\n2 Heavy Engineering Block\n\nThe Alternator can store up to 1.200.000 RF, outputting §c2048 RF/t§r (64 EU/t)\n\nYou can check the §6Engineer\u0027s Manual§r for help on how to build the structure.\n§r\nAfter putting together the structure, whack the Heavy Engineering Block with the §6Engineer\u0027s Hammer §rto form the multiblock."
         }
       },
       "tasks:9": {
@@ -23835,7 +23835,7 @@
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Grenade Launcher Turret",
-          "desc:8": "The Grenade Launcher Turret is pretty simple, it *YOINKS* grenades at whatever gets into a 25 block radius of it. It needs a Tier 3 or higher turret base. \n\nIt uses §48 000 RF§r (1 000 EU) per shot, and it shoots 2.5 times per second.\n\nIt uses grenades as ammo.",
+          "desc:8": "The Grenade Launcher Turret is pretty simple, it *YOINKS* grenades at whatever gets into a 25 block radius of it. It needs a Tier 3 or higher turret base. \n\nIt uses §48 000 RF§r (500 EU) per shot, and it shoots 2.5 times per second.\n\nIt uses grenades as ammo.",
           "icon:10": {
             "id:8": "openmodularturrets:grenade_turret",
             "Count:3": 1,
@@ -25275,7 +25275,7 @@
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Drilling Rig",
-          "desc:8": "The Drilling Rig will drill a huge hole, and it will turn blocks of stone into Crushed Stone.",
+          "desc:8": "The Drilling Rig will drill a huge hole. When that is done right click on the hole with§6§r and blow the thing up, you will get blasted stone that you can pick up with a loader. If put in the ore sorter, blasted stone will give all the rock types.",
           "icon:10": {
             "id:8": "machinemod:drillingrig",
             "Count:3": 1,
@@ -25408,6 +25408,1035 @@
         310
       ],
       "questID:3": 312
+    },
+    "313:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Poop Gas",
+          "desc:8": "You can make §dMethane §rin a variety of ways. \n\n- Combine 4 Hydrogens and 1 Carbon in a Chemical Reactor (not very efficient)\n- Centrifuge Rubber Wood or food items\n- Get it by distilling oil products (you\u0027ll need a Distillation Tower, unlocked at Tier 3)",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "methane",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "methane",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        112
+      ],
+      "questID:3": 313
+    },
+    "314:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Chemical Reactor Mark III ",
+          "desc:8": "Some new recipes, like Polytetrafluoroethylene, will need a §dHV Chemical Reactor§r§r. Let\u0027s make one.",
+          "icon:10": {
+            "id:8": "gregtech:machine",
+            "Count:3": 1,
+            "Damage:2": 192,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 192,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        300
+      ],
+      "questID:3": 314
+    },
+    "315:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Can\u0027t get enough of this #1",
+          "desc:8": "Make an HV Electric Piston.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_1",
+            "Count:3": 1,
+            "Damage:2": 32642,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 32642,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        259
+      ],
+      "questID:3": 315
+    },
+    "316:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Can\u0027t get enough of this #2",
+          "desc:8": "Make an HV Electric Pump.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_1",
+            "Count:3": 1,
+            "Damage:2": 32612,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 32612,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        259
+      ],
+      "questID:3": 316
+    },
+    "317:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Can\u0027t get enough of this #3",
+          "desc:8": "Make an HV Electric Robot Arm.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_1",
+            "Count:3": 1,
+            "Damage:2": 32652,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 32652,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        259
+      ],
+      "questID:3": 317
+    },
+    "318:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Can\u0027t get enough of this #4",
+          "desc:8": "Make an HV Conveyor Module.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_1",
+            "Count:3": 1,
+            "Damage:2": 32632,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 32632,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        259
+      ],
+      "questID:3": 318
+    },
+    "319:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "You\u0027re gonna hate this #6",
+          "desc:8": "Make an LV Emitter, you\u0027ll need it for some more advanced machines. \n\nNote that this requires §9quartzite§r, which is found in Quartzite veins in the Beneath and in Nether Quartz veins in the Nether.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_1",
+            "Count:3": 1,
+            "Damage:2": 32680,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 32680,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        104
+      ],
+      "questID:3": 319
+    },
+    "320:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "You\u0027re gonna hate this #5",
+          "desc:8": "Make an LV Emitter, you\u0027ll need it for some more advanced machines. \n\nNote that this requires §9quartzite§r, which is found in Quartzite veins in the Beneath and in Nether Quartz veins in the Nether.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_1",
+            "Count:3": 1,
+            "Damage:2": 32690,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 32690,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        104
+      ],
+      "questID:3": 320
+    },
+    "321:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Better, Faster, Stronger #6",
+          "desc:8": "Make an MV Emitter, you\u0027ll need it for some more advanced machinery later on.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_1",
+            "Count:3": 1,
+            "Damage:2": 32681,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 32681,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        174
+      ],
+      "questID:3": 321
+    },
+    "322:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Better, Faster, Stronger #5",
+          "desc:8": "Make an MV Sensor, you\u0027ll need it for some more advanced machinery later on.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_1",
+            "Count:3": 1,
+            "Damage:2": 32691,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 32691,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        174
+      ],
+      "questID:3": 322
+    },
+    "323:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Fluorine",
+          "desc:8": "You can get Fluorine from electrolyzing §bBlue Topaz§r, §6Topaz§r, §7Bastnasite §rand §dLepidolite§r.",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "fluorine",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "fluorine",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        112
+      ],
+      "questID:3": 323
+    },
+    "324:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Don\u0027t inject it in your blood",
+          "desc:8": "Chloroform is made of Methane and Chlorine. It\u0027s used to make Polytetrafluoroethylene, the 3rd tier of plastic in GregTech.\n\nIf you need help with getting Methane, look at the Chemistry tab.",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "chloroform",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "chloroform",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        314
+      ],
+      "questID:3": 324
+    },
+    "325:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Hydrofluoric Acid",
+          "desc:8": "Hydrofluoric Acid is made by combining Hydrogen and Fluorine (duh). If you need help with getting Fluorine, look at JEI or the Chemistry tab, you\u0027re in fucking Tier 4, I shouldn\u0027t be telling you this.",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "hydrofluoric_acid",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "hydrofluoric_acid",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        314
+      ],
+      "questID:3": 325
+    },
+    "326:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Teflon ",
+          "desc:8": "Combine Chloroform and Hydrofluoric Acid to make Tetrafluoroethylene. Then polymerize (blast it with air or oxygen) it to get Polytetrafluoroethylene.\n\nPolytetrafluoroethylene is a really complicated and long name. You can just call it PTFE or Teflon.",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "tag:10": {
+              "FluidName:8": "polytetrafluoroethylene",
+              "Amount:3": 1000
+            },
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "FluidName:8": "polytetrafluoroethylene",
+              "Amount:3": 1000
+            }
+          },
+          "taskID:8": "bq_standard:fluid",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        324,
+        325
+      ],
+      "questID:3": 326
+    },
+    "327:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Kanthal",
+          "desc:8": "If you want to upgrade your Electric Blast Furnace, you\u0027ll need Kanthal. It\u0027s just an Iron + Aluminum + Nickel alloy.",
+          "icon:10": {
+            "id:8": "gregtech:meta_item_1",
+            "Count:3": 1,
+            "Damage:2": 10127,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "regenAmount:3": 0,
+                "trait:8": "regeneration:boring",
+                "arch_status:8": "NORMAL_ITEM",
+                "skinType:8": "STEVE",
+                "skin:8": "NONE"
+              }
+            },
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 10127,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "regenAmount:3": 0,
+                  "trait:8": "regeneration:boring",
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "skin:8": "NONE"
+                }
+              },
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        300
+      ],
+      "questID:3": 327
+    },
+    "328:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Coil Upgrade #1 \u003e Kanthal",
+          "desc:8": "Better materials need higher temperatures. You can just exchange the old coils with the new ones. Kanthal coils let you reach 2700 K, enough to smelt titanium. \n\nYou can even reuse the old Cupronickel coils in other machines like the Cracking Unit or Pyrolyse Oven.",
+          "icon:10": {
+            "id:8": "gregtech:wire_coil",
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "ignoreNBT:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "autoConsume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:wire_coil",
+              "Count:3": 16,
+              "Damage:2": 1,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {},
+      "preRequisites:11": [
+        327
+      ],
+      "questID:3": 328
     }
   },
   "questLines:9": {
@@ -26798,6 +27827,20 @@
           "x:3": 258,
           "y:3": 342,
           "id:3": 247
+        },
+        "89:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 168,
+          "id:3": 319
+        },
+        "90:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 168,
+          "id:3": 320
         }
       },
       "lineID:3": 2,
@@ -27472,6 +28515,20 @@
           "x:3": 210,
           "y:3": -246,
           "id:3": 312
+        },
+        "92:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": -60,
+          "id:3": 321
+        },
+        "93:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": -60,
+          "id:3": 322
         }
       },
       "lineID:3": 3,
@@ -27516,6 +28573,76 @@
           "x:3": -24,
           "y:3": 48,
           "id:3": 300
+        },
+        "2:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -72,
+          "y:3": 60,
+          "id:3": 314
+        },
+        "3:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": -72,
+          "id:3": 315
+        },
+        "4:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": -72,
+          "id:3": 316
+        },
+        "5:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": -72,
+          "id:3": 317
+        },
+        "6:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": -72,
+          "id:3": 318
+        },
+        "7:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -108,
+          "y:3": 84,
+          "id:3": 324
+        },
+        "8:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -108,
+          "y:3": 36,
+          "id:3": 325
+        },
+        "9:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": 60,
+          "id:3": 326
+        },
+        "10:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 60,
+          "id:3": 327
+        },
+        "11:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 60,
+          "id:3": 328
         }
       },
       "lineID:3": 4,
@@ -27524,7 +28651,7 @@
     "5:10": {
       "properties:10": {
         "betterquesting:10": {
-          "visibility:8": "UNLOCKED",
+          "visibility:8": "NORMAL",
           "name:8": "§7Extreme Voltage",
           "icon:10": {
             "id:8": "gregtech:meta_item_2",
@@ -28177,6 +29304,20 @@
           "x:3": 108,
           "y:3": -168,
           "id:3": 297
+        },
+        "44:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -132,
+          "y:3": -228,
+          "id:3": 313
+        },
+        "45:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 228,
+          "y:3": -348,
+          "id:3": 323
         }
       },
       "lineID:3": 16,
