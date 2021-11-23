@@ -78,6 +78,13 @@ recipes.addShaped("rubber_rod_manual", <ore:stickRubber>.firstItem, [
 	[null, null, null]
 ]);
 
+//Manual chad for early paper
+recipes.addShapeless("manual_chad", <ore:dustPaper>.firstItem, [
+	<ore:dustWood>,
+	<ore:dustWood>,
+	<minecraft:water_bucket>.giveBack()
+]);
+
 //Brewery recipes
 for i in 1 to voltageTiers.length{
 	recipes.addShaped("gt_brewery_" + voltageTiers[i], breweries[i], [

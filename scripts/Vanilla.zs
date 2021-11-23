@@ -370,3 +370,21 @@ for stone in furnace_materials {
 
 //Max stack size changes
 <minecraft:potion>.maxStackSize = 8;
+
+//Gregtech machine only recipes
+
+for solder in soldering_alloys {
+	assembler.recipeBuilder()
+		.inputs([
+			<ore:stickTitanium>*2,
+			<ore:boltTitanium>*2,
+			<ore:plateTitanium>,
+			<ore:platePolycaprolactam>*4,
+			<ore:foilPolytetrafluoroethylene>*2
+		])
+		.fluidInputs(solder*72)
+		.outputs(<minecraft:elytra>)
+		.duration(200)
+		.EUt(300)
+		.buildAndRegister();
+}

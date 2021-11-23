@@ -99,6 +99,12 @@ Utils.registerFluid("precious_runoff", 11129077);
 //Radioactive water
 Utils.registerFluid("radioactive_runoff", 11129077);
 
+//Hot Air
+Utils.registerFluid("hot_air", 11129077);
+
+//Hot Brine
+Utils.registerFluid("hot_brine", 15592833);
+
 //-----------------------------------OTHER TWEAKS-----------------------------------
 
 <material:steel>.addFlags(["GENERATE_SPRING", "GENERATE_SPRING_SMALL"]);

@@ -56,10 +56,6 @@ fluid.hot_compressed_propane=Hot Compressed Propane
 fluid.compressed_propane=Compressed Propane
 fluid.cold_propane=Cold Propane
 
-# Simple Materials
-metaitem.zircon.mold.base.name=Zircon Mold Base
-metaitem.ammonium_nitrate.name=Solid Ammonium Nitrate
-
 # GregTech RecipeMaps
 
 recipemap.fluid_de_compressor.name=Fluid (De)Compression
