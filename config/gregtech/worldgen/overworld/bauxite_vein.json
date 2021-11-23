@@ -1,12 +1,12 @@
 {
-  "weight": 250,
+  "weight": 110,
   "density": 0.6,
-  "min_height": 80,
-  "max_height": 200,
-  "dimension_filter": ["dimension_id:10"],
-  "surface_stone_material": "nickel",
-  "name": "Nickel Vein",
-  "description": "Source of Nickel and Cobalt. Cobaltite can be centrifuged to get Arsenic (yikes)",
+  "min_height": 0,
+  "max_height": 100,
+  "dimension_filter": ["dimension_id:0"],
+  "surface_stone_material": "aluminium",
+  "name": "Bauxite Vein",
+  "description": "Source of Aluminium and Titanium.",
 
   "generator": {
     "type": "ellipsoid",
