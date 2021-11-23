@@ -114,6 +114,12 @@ var large_weapons_factory = Builder.start(loc, meta)
 		    .build())
     .buildAndRegister();
 	
+recipes.addShaped("quencher", <gregtech:machine:20003>, [
+	[pumps[3], conveyors[3], pumps[3]],
+	[circuits[3], <gregtech:metal_casing:4>, circuits[3]],
+	[<ore:cableGtSingleGold>, circuits[3], <ore:cableGtSingleGold>]
+]);
+	
 //IQuenchingFluid(cold fluid, hot fluid, amount, duration, isInert)
 val Water as IQuenchingFluid = IQuenchingFluid(<liquid:water>, <liquid:warm_water>, 1000, 100, false);
 
@@ -136,9 +142,23 @@ val QuenchingFluids as IQuenchingFluid[] = [
 
 //IIngotQuenchable(ingot, hot ingot, needsInert, EUt)
 val Titanium as IIngotQuenchable = IIngotQuenchable(<ore:ingotTitanium>.firstItem, <ore:ingotHotTitanium>, false, 120);
+val Erbium as IIngotQuenchable = IIngotQuenchable(<ore:ingotErbium>.firstItem, <ore:ingotHotErbium>, false, 120);
+val Iridium as IIngotQuenchable = IIngotQuenchable(<ore:ingotIridium>.firstItem, <ore:ingotHotIridium>, false, 120);
+val Lutetium as IIngotQuenchable = IIngotQuenchable(<ore:ingotLutetium>.firstItem, <ore:ingotHotLutetium>, false, 120);
+val Niobium as IIngotQuenchable = IIngotQuenchable(<ore:ingotNiobium>.firstItem, <ore:ingotHotNiobium>, false, 120);
+val Osmium as IIngotQuenchable = IIngotQuenchable(<ore:ingotOsmium>.firstItem, <ore:ingotHotOsmium>, false, 120);
+val Scandium as IIngotQuenchable = IIngotQuenchable(<ore:ingotScandium>.firstItem, <ore:ingotHotScandium>, false, 120);
+val Thulium as IIngotQuenchable = IIngotQuenchable(<ore:ingotThulium>.firstItem, <ore:ingotHotThulium>, false, 120);
 
 val Ingots as IIngotQuenchable[] = [
-	Titanium
+	Titanium,
+	Erbium,
+	Iridium,
+	Lutetium,
+	Niobium,
+	Osmium,
+	Scandium,
+	Thulium
 ];
 
 for ingot in Ingots {

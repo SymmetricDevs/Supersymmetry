@@ -21,7 +21,8 @@ val smelting_removals = [
 	<ore:ingotPlatinum>,
 	<ore:nuggetPlatinum>,
 	<ore:ingotIronMagnetic>,
-	<ore:gemCharcoal>
+	<ore:gemCharcoal>,
+	<ore:ingotTitanium>
 ] as IIngredient[];
 
 for entry in smelting_removals {
