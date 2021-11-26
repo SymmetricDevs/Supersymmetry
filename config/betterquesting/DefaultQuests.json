@@ -11425,7 +11425,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Lathe",
-          "desc:8": "The §2Lathe §rturns ingots into rods. It\u0027s more efficient than doing it by hand, as it gives one rod and a small dust when you give it an ingot."
+          "desc:8": "The §2Lathe §rturns ingots into rods. It\u0027s more efficient than doing it by hand, as it gives 2 rods when you give it an ingot."
         }
       },
       "tasks:9": {
