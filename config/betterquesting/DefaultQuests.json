@@ -5082,7 +5082,7 @@
           "requiredItems:9": {
             "0:10": {
               "id:8": "gregtech:meta_item_1",
-              "Count:3": 64,
+              "Count:3": 16,
               "Damage:2": 10044,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
@@ -5348,7 +5348,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 1,
           "name:8": "Engineer\u0027s Workbench",
-          "desc:8": "To continue with Immersive Engineering, we\u0027ll need an Engineer\u0027s Workbench.\nIt makes things using §bblueprints§., and it\u0027s made using treated wood. (You can get creosote from the Coke Oven.)\n\n§rThe most important blueprints that we\u0027ll need will be the one for §bbasic circuits§r, as it allows us to make vacuum tubes."
+          "desc:8": "To continue with Immersive Engineering, we\u0027ll need an Engineer\u0027s Workbench.\nIt makes things using §bblueprints§., and it\u0027s made using treated wood. (You can get creosote from the Coke Oven.)\n\n§rThe most important blueprints that we\u0027ll need will be the one for §bbasic circuits§r, as it allows us to make vacuum tubes.\n\nIf you can\u0027t find your Engineer\u0027s Manual anymore, try getting it from the Akashic Tome quest in the first chapter of the book."
         }
       },
       "tasks:9": {
@@ -5388,32 +5388,9 @@
           "index:3": 0
         }
       },
-      "rewards:9": {
-        "0:10": {
-          "rewards:9": {
-            "0:10": {
-              "id:8": "immersiveengineering:tool",
-              "Count:3": 2,
-              "Damage:2": 3,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "regenAmount:3": 0,
-                  "trait:8": "regeneration:boring",
-                  "arch_status:8": "NORMAL_ITEM",
-                  "skinType:8": "STEVE",
-                  "skin:8": "NONE"
-                }
-              },
-              "OreDict:8": ""
-            }
-          },
-          "rewardID:8": "bq_standard:item",
-          "index:3": 0
-        }
-      },
+      "rewards:9": {},
       "preRequisites:11": [
-        42,
-        44
+        42
       ],
       "questID:3": 41
     },
@@ -5595,8 +5572,7 @@
         }
       },
       "preRequisites:11": [
-        34,
-        41
+        34
       ],
       "questID:3": 43
     },
@@ -5678,7 +5654,8 @@
         }
       },
       "preRequisites:11": [
-        43
+        43,
+        41
       ],
       "questID:3": 44
     },
@@ -6270,7 +6247,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Haha, water go swoosh",
-          "desc:8": "The §bWater Wheel§r must be connected to a §3flowing water stream§r in order to work, and the amount of power produced scales directly with the number of flowing water blocks adjacent to the wheel. \n\nThe maximum amount of power that a Water Wheel can produce is §c30 RF/t§r, which arises from a water source flowing \"in a semi-circle from the top down one side and along the bottom.\""
+          "desc:8": "The §bWater Wheel§r must be connected to a §3flowing water stream§r in order to work, and the amount of power produced scales directly with the number of flowing water blocks adjacent to the wheel. \n\nThe maximum amount of power that a Water Wheel can produce is §c30 RF/t§r, which arises from a water source flowing \"in a semi-circle from the top down one side and along the bottom.\"\n\nYou can put up to three Water Wheels on one dynamo to maximize energy output."
         }
       },
       "tasks:9": {
@@ -8214,7 +8191,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 1,
           "name:8": "How Electricity Works",
-          "desc:8": "This pack has two different types of electricity: §cRF (Redstone Flux) §rand §bEU (Energy Units)§r§r. What we have been using up until now is RF. \n\nIn the next tier, we will unlock EU and GregTech machines, and we will explain the EU system in more detail there.\n\nRemember that 16 RF equals 1 EU, and if GregTech machines get a higher voltage that they can handle, they will explode. To convert between RF and EU you will need to use energy converters. \n\n------------------\nTo store RF, you need to make a §cLow Voltage Capacitor. §r\nTo transfer RF, you need to use §cLow Voltage RF wire§r. Make a LV Wire Coil, and connect it to a LV Wire Connector to transfer the energy."
+          "desc:8": "This pack has two different types of electricity: §cRF (Redstone Flux) §rand §bEU (Energy Units)§r§r. What we are going to use in the Industrial Age is RF. \n\nIn the next tier, we will unlock EU and GregTech machines, and we will explain the EU system in more detail there.\n\nRemember that 16 RF equals 1 EU, and if GregTech machines get a higher voltage that they can handle, they will explode. To convert between RF and EU you will need to use energy converters. \n\n------------------\nTo store RF, you need to make a §cLow Voltage Capacitor. §r\nTo transfer RF, you need to use §cLow Voltage RF wire§r. Make a LV Wire Coil, and connect it to a LV Wire Connector to transfer the energy.\n\nDon\u0027t get confused between Immersive Engineering electricity and GregTech electricity. Immersive Engineering LV and GregTech LV are two completely different things, so don\u0027t mix them up."
         }
       },
       "tasks:9": {
@@ -10025,7 +10002,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 1,
           "name:8": "Rubber and Sulfur",
-          "desc:8": "The final step of the chain is combining 6 rubber pulp with 1 §bsulfur §rin an Alloy Smelter, to get 6§6 rubber bars§r.\n\nThis step requires you to go to §4the nether§r, as sulfur is only found there at Y levels 80 to 128.\nGood luck! (and don\u0027t die!)"
+          "desc:8": "The final step of the chain is combining 6 rubber pulp with 1 §bsulfur §rin an Alloy Smelter, to get 6§6 rubber bars§r.\n\nSulfur is found in §7sphalerite §rveins in the Overworld and §4the nether§r. For more information, check JEI."
         }
       },
       "tasks:9": {
