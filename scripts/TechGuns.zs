@@ -2,6 +2,9 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
+import mods.techguns.GunStats;
+import mods.techguns.ArmorStats;
+
 
 
 val name_removals as string[] = [
@@ -373,3 +376,42 @@ lathe.recipeBuilder()
 	.duration(30)
 	.EUt(30)
 	.buildAndRegister();
+	
+	
+//-------------------Change TechGuns damage values to be better suited with SUSy progression----------------
+
+//Double Barrel Shotgun
+GunStats.setWeaponStat("sawedoff","DAMAGE",1.5);
+GunStats.setWeaponStat("sawedoff","DAMAGE_MIN",1.2);
+
+//Handcannon
+GunStats.setWeaponStat("handcannon","DAMAGE",8.0);
+GunStats.setWeaponStat("handcannon","DAMAGE_MIN",6.0);
+
+//Revolver
+GunStats.setWeaponStat("revolver","DAMAGE",10.0);
+GunStats.setWeaponStat("revolver","DAMAGE_MIN",7.5);
+
+//Combat Shotgun
+GunStats.setWeaponStat("combatshotgun","DAMAGE",3.0);
+GunStats.setWeaponStat("combatshotgun","DAMAGE_MIN",2.4);
+
+//Pistol
+GunStats.setWeaponStat("pistol","DAMAGE",20.0);
+GunStats.setWeaponStat("pistol","DAMAGE_MIN",16.0);
+
+//Mac-10
+GunStats.setWeaponStat("mac10","DAMAGE",32.0);
+GunStats.setWeaponStat("mac10","DAMAGE_MIN",28.0);
+
+//M4 assault rifle
+GunStats.setWeaponStat("m4","DAMAGE",36.0);
+GunStats.setWeaponStat("m4","DAMAGE_MIN",30.0);
+
+//Thompson SMG
+GunStats.setWeaponStat("thompson","DAMAGE",45.0);
+GunStats.setWeaponStat("thompson","DAMAGE_MIN",40.0);
+
+//AK47
+GunStats.setWeaponStat("thompson","DAMAGE",40.0);
+GunStats.setWeaponStat("thompson","DAMAGE_MIN",36.0);
