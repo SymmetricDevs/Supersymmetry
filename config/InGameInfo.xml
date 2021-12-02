@@ -207,20 +207,6 @@
 	  	     <icon>
                 <str>minecraft:diamond_sword</str>
             </icon>
-         <str> Body Temperature: $e</str>
-	       	<round>
-			<add>
-               <div>
-				<var>tancurrtemp</var>
-				<num>10</num>
-			    </div>
-           			<num>35.3</num>	  
-            </add>
-				<num>1</num>
-			</round>
-
-		 <str>$r °C</str>
-		 	 
       </line>
 	  </lines>
    <lines at="bottomleft">
