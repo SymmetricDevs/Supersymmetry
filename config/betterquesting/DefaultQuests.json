@@ -48,7 +48,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 1,
           "name:8": "The Start of a New Adventure",
-          "desc:8": "Welcome to §9§9§9§b§b§b§b§b§b§l§l§l§l§l§lSupersymmetry§r§r§r§r§r§r! \nYou probably opened the questbook because you want to know how to proceed, so we will teach you how.\n\nIf this was any other pack we will tell you to get 4 logs of wood or whatever, but §l§l§l§l§l§§§6§6§6§6§6§6§leverything is Gregified§r§r§r§r§r§r§r§r§r§r§r§r, so you can\u0027t punch wood. \n\nSo you have to start by getting §6a rock§r. When you pick up a rock from the ground, press the §l§l§l§l§l§l§a§a§a§a§a§a[SUBMIT]§r§r§r§r§r§r button to complete the quest and continue.\n\nThis pack contains the §cTough as Nails §rmod, that adds thirst, body temperature and other §mpainful§r fun things. We will explain you how Tough as Nails works in another quest, but if you feel thirsty, you can drink water from the ocean by pressing §aRight Click§r underwater.\n\nIf you lose this questbook, you can check the quests by pressing the §2§aGRAVE §rkey (the one to the right of the L key).\n\n----------------------------------------\n§3WELCOME TO SUPERSYMMETRY!\n§r----------------------------------------\n§r- Find shelter\n- Prepare for the winter\n- Acquire basic resources\n- Try not to die\n------------------------------------"
+          "desc:8": "Welcome to §9§9§9§b§b§b§b§b§b§l§l§l§l§l§lSupersymmetry§r§r§r§r§r§r! \nYou probably opened the questbook because you want to know how to proceed, so we will teach you how.\n\nIf this was any other pack we will tell you to get 4 logs of wood or whatever, but §l§l§l§l§l§§§6§6§6§6§6§6§leverything is Gregified§r§r§r§r§r§r§r§r§r§r§r§r, so you can\u0027t punch wood. \n\nSo you have to start by getting §6a rock§r. When you pick up a rock from the ground, press the §l§l§l§l§l§l§a§a§a§a§a§a[SUBMIT]§r§r§r§r§r§r button to complete the quest and continue.\n\nIf you lose this questbook, you can check the quests by pressing the §2§aGRAVE §rkey (the one to the right of the L key).\n\n----------------------------------------\n§3WELCOME TO SUPERSYMMETRY!\n§r----------------------------------------\n§r- Find shelter\n- Prepare for the winter\n- Acquire basic resources\n- Try not to die\n------------------------------------"
         }
       },
       "tasks:9": {
@@ -193,7 +193,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Tough As A Tungstensteel Ingot",
-          "desc:8": "§cTough as Nails§r is a mod that adds more §mpain§r realism to Minecraft by adding two critical mechanics:\n\n-§bThirst§r. The easiest way to restore thirst is from §adrinking water from a water source§r, but drinking unpurified water will §amake you thirsty faster§r. You can purify water by making a §acharcoal filter§r, but we\u0027ll get to that later.\n\n-§b§cBody Temperature§r§r. The temperature changes based on a number of factors, like the season, the biome in which you are in, the time of day, the weather, and your armor. Getting extremely hot or extremely cold can lead to §4Hyperthermia§r or §3Hypothermia§r, respectively. These are dangerous effects that, if left untreated, can slowly kill you.\n\n-§aSeasons§r. You are only able to grow some crops in certain seasons (but you can change that using a §agreenhouse§r, or with automated farming), and the environment around you will change throughout the year. The game starts in mid spring, or in April."
+          "desc:8": "§aSerene Seasons§r is a mod that adds more §mpain§r realism to Minecraft by adding a critical mechanic:\n\n-§aSeasons§r. You are only able to grow some crops in certain seasons (but you can change that using a §agreenhouse§r, or with automated farming), and the environment around you will change throughout the year. The game starts in mid spring, or in April."
         }
       },
       "tasks:9": {
@@ -2545,29 +2545,7 @@
           "index:3": 0
         }
       },
-      "rewards:9": {
-        "0:10": {
-          "rewards:9": {
-            "0:10": {
-              "id:8": "extratan:lemonade",
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "regenAmount:3": 0,
-                  "trait:8": "regeneration:boring",
-                  "arch_status:8": "NORMAL_ITEM",
-                  "skinType:8": "STEVE",
-                  "skin:8": "NONE"
-                }
-              },
-              "OreDict:8": ""
-            }
-          },
-          "rewardID:8": "bq_standard:item",
-          "index:3": 0
-        }
-      },
+      "rewards:9": {},
       "preRequisites:11": [
         23,
         13,
@@ -3087,1378 +3065,7 @@
           "index:3": 0
         }
       },
-      "rewards:9": {
-        "0:10": {
-          "choices:9": {
-            "0:10": {
-              "id:8": "minecraft:chest",
-              "Count:3": 1,
-              "Damage:2": 0,
-              "tag:10": {
-                "RepairCost:3": 0,
-                "BlockEntityTag:10": {
-                  "ForgeCaps:10": {
-                    "nuclearcraft:capability_default_radiation_resistance:10": {
-                      "shieldingRadResistance:6": 0.0,
-                      "radiationResistance:6": 0.0
-                    }
-                  },
-                  "Items:9": {
-                    "0:10": {
-                      "Slot:1": 0,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "1:10": {
-                      "Slot:1": 1,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "toughasnails:purified_water_bottle",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "2:10": {
-                      "Slot:1": 2,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cake",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "3:10": {
-                      "Slot:1": 3,
-                      "id:8": "minecraft:log",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "4:10": {
-                      "Slot:1": 4,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:clay_ball",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "5:10": {
-                      "Slot:1": 5,
-                      "id:8": "minecraft:log",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "6:10": {
-                      "Slot:1": 6,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cake",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "7:10": {
-                      "Slot:1": 7,
-                      "id:8": "minecraft:torch",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "8:10": {
-                      "Slot:1": 8,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "9:10": {
-                      "Slot:1": 9,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "10:10": {
-                      "Slot:1": 10,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cake",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "11:10": {
-                      "Slot:1": 11,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "12:10": {
-                      "Slot:1": 12,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cake",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "13:10": {
-                      "Slot:1": 13,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:written_book",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "pages:9": {
-                          "0:8": "{\"text\":\"You picked the MEH reward chest!\\n\\n-- REWARDS --\\n8x Leather\\n8x Cake\\n128x Torch\\n128x Clay\\n2x Purified Water Bottle\\n256x Oak Wood\"}"
-                        },
-                        "author:8": "Regian",
-                        "title:8": "REWARD CHEST A",
-                        "resolved:1": 1
-                      },
-                      "Damage:2": 0
-                    },
-                    "14:10": {
-                      "Slot:1": 14,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cake",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "15:10": {
-                      "Slot:1": 15,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "16:10": {
-                      "Slot:1": 16,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cake",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "17:10": {
-                      "Slot:1": 17,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "18:10": {
-                      "Slot:1": 18,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "19:10": {
-                      "Slot:1": 19,
-                      "id:8": "minecraft:torch",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "20:10": {
-                      "Slot:1": 20,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cake",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "21:10": {
-                      "Slot:1": 21,
-                      "id:8": "minecraft:log",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "22:10": {
-                      "Slot:1": 22,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:clay_ball",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "23:10": {
-                      "Slot:1": 23,
-                      "id:8": "minecraft:log",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "24:10": {
-                      "Slot:1": 24,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cake",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "25:10": {
-                      "Slot:1": 25,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "toughasnails:purified_water_bottle",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "26:10": {
-                      "Slot:1": 26,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    }
-                  },
-                  "id:8": "minecraft:chest",
-                  "Lock:8": ""
-                },
-                "display:10": {
-                  "Lore:9": {
-                    "0:8": "(+NBT)"
-                  },
-                  "Name:8": "Reward Chest A"
-                }
-              },
-              "OreDict:8": ""
-            },
-            "1:10": {
-              "id:8": "minecraft:chest",
-              "Count:3": 1,
-              "Damage:2": 0,
-              "tag:10": {
-                "RepairCost:3": 0,
-                "BlockEntityTag:10": {
-                  "ForgeCaps:10": {
-                    "nuclearcraft:capability_default_radiation_resistance:10": {
-                      "shieldingRadResistance:6": 0.0,
-                      "radiationResistance:6": 0.0
-                    }
-                  },
-                  "Items:9": {
-                    "0:10": {
-                      "Slot:1": 0,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "1:10": {
-                      "Slot:1": 1,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "2:10": {
-                      "Slot:1": 2,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "3:10": {
-                      "Slot:1": 3,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "4:10": {
-                      "Slot:1": 4,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "5:10": {
-                      "Slot:1": 5,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "6:10": {
-                      "Slot:1": 6,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "7:10": {
-                      "Slot:1": 7,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "8:10": {
-                      "Slot:1": 8,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "9:10": {
-                      "Slot:1": 9,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "qmd:flesh",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Rotten Flesh"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "10:10": {
-                      "Slot:1": 10,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "qmd:flesh",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Rotten Flesh"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "11:10": {
-                      "Slot:1": 11,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "qmd:flesh",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Rotten Flesh"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "12:10": {
-                      "Slot:1": 12,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "qmd:flesh",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Rotten Flesh"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "13:10": {
-                      "Slot:1": 13,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:written_book",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "pages:9": {
-                          "0:8": "{\"text\":\"You picked the BAD reward chest!\\n\\n-- REWARDS --\\n18x Piece of Shit\\n8x Rotten Flesh\\n\"}"
-                        },
-                        "author:8": "Regian",
-                        "title:8": "REWARD CHEST B"
-                      },
-                      "Damage:2": 0
-                    },
-                    "14:10": {
-                      "Slot:1": 14,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "qmd:flesh",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Rotten Flesh"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "15:10": {
-                      "Slot:1": 15,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "qmd:flesh",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Rotten Flesh"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "16:10": {
-                      "Slot:1": 16,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "qmd:flesh",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Rotten Flesh"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "17:10": {
-                      "Slot:1": 17,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "qmd:flesh",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Rotten Flesh"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "18:10": {
-                      "Slot:1": 18,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "19:10": {
-                      "Slot:1": 19,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "20:10": {
-                      "Slot:1": 20,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "21:10": {
-                      "Slot:1": 21,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "22:10": {
-                      "Slot:1": 22,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "23:10": {
-                      "Slot:1": 23,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "24:10": {
-                      "Slot:1": 24,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "25:10": {
-                      "Slot:1": 25,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "26:10": {
-                      "Slot:1": 26,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "biomesoplenty:mudball",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Piece of Shit"
-                        }
-                      },
-                      "Damage:2": 0
-                    }
-                  },
-                  "id:8": "minecraft:chest",
-                  "Lock:8": ""
-                },
-                "display:10": {
-                  "Lore:9": {
-                    "0:8": "(+NBT)"
-                  },
-                  "Name:8": "Reward Chest B"
-                }
-              },
-              "OreDict:8": ""
-            },
-            "2:10": {
-              "id:8": "minecraft:chest",
-              "Count:3": 1,
-              "Damage:2": 0,
-              "tag:10": {
-                "RepairCost:3": 0,
-                "BlockEntityTag:10": {
-                  "ForgeCaps:10": {
-                    "nuclearcraft:capability_default_radiation_resistance:10": {
-                      "shieldingRadResistance:6": 0.0,
-                      "radiationResistance:6": 0.0
-                    }
-                  },
-                  "Items:9": {
-                    "0:10": {
-                      "Slot:1": 0,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather_helmet",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "1:10": {
-                      "Slot:1": 1,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:clay_ball",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "2:10": {
-                      "Slot:1": 2,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cooked_beef",
-                      "Count:1": 12,
-                      "Damage:2": 0
-                    },
-                    "3:10": {
-                      "Slot:1": 3,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cooked_beef",
-                      "Count:1": 12,
-                      "Damage:2": 0
-                    },
-                    "4:10": {
-                      "Slot:1": 4,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cooked_beef",
-                      "Count:1": 12,
-                      "Damage:2": 0
-                    },
-                    "5:10": {
-                      "Slot:1": 5,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cooked_beef",
-                      "Count:1": 12,
-                      "Damage:2": 0
-                    },
-                    "6:10": {
-                      "Slot:1": 6,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:cooked_beef",
-                      "Count:1": 12,
-                      "Damage:2": 0
-                    },
-                    "7:10": {
-                      "Slot:1": 7,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:clay_ball",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "8:10": {
-                      "Slot:1": 8,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather_chestplate",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "9:10": {
-                      "Slot:1": 9,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:paper",
-                      "Count:1": 6,
-                      "Damage:2": 0
-                    },
-                    "10:10": {
-                      "Slot:1": 10,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:flint",
-                      "Count:1": 12,
-                      "Damage:2": 0
-                    },
-                    "11:10": {
-                      "Slot:1": 11,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:beetroot_soup",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "RepairCost:3": 0,
-                        "display:10": {
-                          "Name:8": "Борщ"
-                        }
-                      },
-                      "Damage:2": 0
-                    },
-                    "12:10": {
-                      "Slot:1": 12,
-                      "id:8": "minecraft:sand",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "13:10": {
-                      "Slot:1": 13,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:written_book",
-                      "Count:1": 1,
-                      "tag:10": {
-                        "pages:9": {
-                          "0:8": "{\"text\":\"You picked the GOOD reward chest!\\n\\n-- REWARDS --\\n1x Leather Cap\\n1x Leather Chestplate\\n1x Leather Pants\\n1x Leather Boots\\n24x Flint\\n256x Clay\\n300x Gravel\\n128x Sand\\n1x Борщ\\n1x Mushroom Stew\"}",
-                          "1:8": "{\"text\":\"60x Steak\\n12x Paper\"}"
-                        },
-                        "author:8": "Regian",
-                        "title:8": "REWARD CHEST C"
-                      },
-                      "Damage:2": 0
-                    },
-                    "14:10": {
-                      "Slot:1": 14,
-                      "id:8": "minecraft:sand",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "15:10": {
-                      "Slot:1": 15,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:mushroom_stew",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "16:10": {
-                      "Slot:1": 16,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:flint",
-                      "Count:1": 12,
-                      "Damage:2": 0
-                    },
-                    "17:10": {
-                      "Slot:1": 17,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:paper",
-                      "Count:1": 6,
-                      "Damage:2": 0
-                    },
-                    "18:10": {
-                      "Slot:1": 18,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather_leggings",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    },
-                    "19:10": {
-                      "Slot:1": 19,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:clay_ball",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "20:10": {
-                      "Slot:1": 20,
-                      "id:8": "minecraft:gravel",
-                      "Count:1": 60,
-                      "Damage:2": 0
-                    },
-                    "21:10": {
-                      "Slot:1": 21,
-                      "id:8": "minecraft:gravel",
-                      "Count:1": 60,
-                      "Damage:2": 0
-                    },
-                    "22:10": {
-                      "Slot:1": 22,
-                      "id:8": "minecraft:gravel",
-                      "Count:1": 60,
-                      "Damage:2": 0
-                    },
-                    "23:10": {
-                      "Slot:1": 23,
-                      "id:8": "minecraft:gravel",
-                      "Count:1": 60,
-                      "Damage:2": 0
-                    },
-                    "24:10": {
-                      "Slot:1": 24,
-                      "id:8": "minecraft:gravel",
-                      "Count:1": 60,
-                      "Damage:2": 0
-                    },
-                    "25:10": {
-                      "Slot:1": 25,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:clay_ball",
-                      "Count:1": 64,
-                      "Damage:2": 0
-                    },
-                    "26:10": {
-                      "Slot:1": 26,
-                      "ForgeCaps:10": {
-                        "regeneration:arch:10": {
-                          "arch_status:8": "NORMAL_ITEM",
-                          "skinType:8": "STEVE",
-                          "regenAmount:3": 0,
-                          "skin:8": "NONE",
-                          "trait:8": "regeneration:boring"
-                        }
-                      },
-                      "id:8": "minecraft:leather_boots",
-                      "Count:1": 1,
-                      "Damage:2": 0
-                    }
-                  },
-                  "id:8": "minecraft:chest",
-                  "Lock:8": ""
-                },
-                "display:10": {
-                  "Lore:9": {
-                    "0:8": "(+NBT)"
-                  },
-                  "Name:8": "Reward Chest C"
-                }
-              },
-              "OreDict:8": ""
-            }
-          },
-          "rewardID:8": "bq_standard:choice",
-          "index:3": 0
-        }
-      },
+      "rewards:9": {},
       "preRequisites:11": [
         22
       ],
@@ -9389,97 +7996,6 @@
           "visibility:8": "ALWAYS",
           "simultaneous:1": 0,
           "icon:10": {
-            "id:8": "toughasnails:canteen",
-            "Count:3": 1,
-            "Damage:2": 0,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "regenAmount:3": 0,
-                "trait:8": "regeneration:boring",
-                "arch_status:8": "NORMAL_ITEM",
-                "skinType:8": "STEVE",
-                "skin:8": "NONE"
-              }
-            },
-            "OreDict:8": ""
-          },
-          "globalshare:1": 0,
-          "questlogic:8": "AND",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "autoclaim:1": 0,
-          "repeat_relative:1": 1,
-          "ismain:1": 0,
-          "name:8": "What is this, a water bottle for ants?",
-          "desc:8": "§6Canteens §rcan be used to store water, since we don\u0027t have water bottles yet."
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "partialMatch:1": 1,
-          "ignoreNBT:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "autoConsume:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "id:8": "toughasnails:canteen",
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "regenAmount:3": 0,
-                  "trait:8": "regeneration:boring",
-                  "arch_status:8": "NORMAL_ITEM",
-                  "skinType:8": "STEVE",
-                  "skin:8": "NONE"
-                }
-              },
-              "OreDict:8": ""
-            }
-          },
-          "taskID:8": "bq_standard:retrieval",
-          "index:3": 0
-        }
-      },
-      "rewards:9": {
-        "0:10": {
-          "rewards:9": {
-            "0:10": {
-              "id:8": "minecraft:leather",
-              "Count:3": 2,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "regenAmount:3": 0,
-                  "trait:8": "regeneration:boring",
-                  "arch_status:8": "NORMAL_ITEM",
-                  "skinType:8": "STEVE",
-                  "skin:8": "NONE"
-                }
-              },
-              "OreDict:8": ""
-            }
-          },
-          "rewardID:8": "bq_standard:item",
-          "index:3": 0
-        }
-      },
-      "preRequisites:11": [
-        88
-      ],
-      "questID:3": 89
-    },
-    "90:10": {
-      "properties:10": {
-        "betterquesting:10": {
-          "issilent:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "lockedprogress:1": 0,
-          "tasklogic:8": "AND",
-          "repeattime:3": -1,
-          "visibility:8": "ALWAYS",
-          "simultaneous:1": 0,
-          "icon:10": {
             "id:8": "minecraft:coal",
             "Count:3": 1,
             "Damage:2": 0,
@@ -9538,7 +8054,7 @@
       ],
       "questID:3": 90
     },
-    "91:10": {
+    "90:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -9589,7 +8105,7 @@
       ],
       "questID:3": 91
     },
-    "92:10": {
+    "91:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -9640,7 +8156,7 @@
       ],
       "questID:3": 92
     },
-    "93:10": {
+    "92:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -9724,7 +8240,7 @@
       ],
       "questID:3": 93
     },
-    "94:10": {
+    "93:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -9788,7 +8304,7 @@
       ],
       "questID:3": 94
     },
-    "95:10": {
+    "94:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -9879,7 +8395,7 @@
       ],
       "questID:3": 95
     },
-    "96:10": {
+    "95:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -9970,7 +8486,7 @@
       ],
       "questID:3": 96
     },
-    "97:10": {
+    "96:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10079,7 +8595,7 @@
       ],
       "questID:3": 97
     },
-    "98:10": {
+    "97:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10127,7 +8643,7 @@
       "preRequisites:11": [],
       "questID:3": 98
     },
-    "99:10": {
+    "98:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10200,7 +8716,7 @@
       ],
       "questID:3": 99
     },
-    "100:10": {
+    "99:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10306,7 +8822,7 @@
       ],
       "questID:3": 100
     },
-    "101:10": {
+    "100:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10397,7 +8913,7 @@
       ],
       "questID:3": 101
     },
-    "102:10": {
+    "101:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10488,7 +9004,7 @@
       ],
       "questID:3": 102
     },
-    "103:10": {
+    "102:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10579,7 +9095,7 @@
       ],
       "questID:3": 103
     },
-    "104:10": {
+    "103:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10678,7 +9194,7 @@
       ],
       "questID:3": 104
     },
-    "105:10": {
+    "104:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10716,7 +9232,7 @@
       ],
       "questID:3": 105
     },
-    "106:10": {
+    "105:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10754,7 +9270,7 @@
       ],
       "questID:3": 106
     },
-    "107:10": {
+    "106:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10830,7 +9346,7 @@
       ],
       "questID:3": 107
     },
-    "108:10": {
+    "107:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10903,7 +9419,7 @@
       ],
       "questID:3": 108
     },
-    "109:10": {
+    "108:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -10976,7 +9492,7 @@
       ],
       "questID:3": 109
     },
-    "110:10": {
+    "109:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11040,7 +9556,7 @@
       ],
       "questID:3": 110
     },
-    "111:10": {
+    "110:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11113,7 +9629,7 @@
       ],
       "questID:3": 111
     },
-    "112:10": {
+    "111:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11190,7 +9706,7 @@
       ],
       "questID:3": 112
     },
-    "113:10": {
+    "112:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11278,7 +9794,7 @@
       ],
       "questID:3": 113
     },
-    "114:10": {
+    "113:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11329,7 +9845,7 @@
       ],
       "questID:3": 114
     },
-    "115:10": {
+    "114:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11402,7 +9918,7 @@
       ],
       "questID:3": 115
     },
-    "116:10": {
+    "115:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11425,7 +9941,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Lathe",
-          "desc:8": "The §2Lathe §rturns ingots into rods. It\u0027s more efficient than doing it by hand, as it gives 2 rods when you give it an ingot."
+          "desc:8": "The §2Lathe §rturns ingots into rods. It\u0027s more efficient than doing it by hand, as it gives one rod and a small dust when you give it an ingot."
         }
       },
       "tasks:9": {
@@ -11475,7 +9991,7 @@
       ],
       "questID:3": 116
     },
-    "117:10": {
+    "116:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11544,7 +10060,7 @@
       ],
       "questID:3": 117
     },
-    "118:10": {
+    "117:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11613,7 +10129,7 @@
       ],
       "questID:3": 118
     },
-    "119:10": {
+    "118:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11678,7 +10194,7 @@
       ],
       "questID:3": 119
     },
-    "120:10": {
+    "119:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11739,7 +10255,7 @@
       ],
       "questID:3": 120
     },
-    "121:10": {
+    "120:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11814,7 +10330,7 @@
       ],
       "questID:3": 121
     },
-    "122:10": {
+    "121:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11883,7 +10399,7 @@
       ],
       "questID:3": 122
     },
-    "123:10": {
+    "122:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11934,7 +10450,7 @@
       ],
       "questID:3": 123
     },
-    "124:10": {
+    "123:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -11985,7 +10501,7 @@
       ],
       "questID:3": 124
     },
-    "125:10": {
+    "124:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12055,7 +10571,7 @@
       ],
       "questID:3": 125
     },
-    "126:10": {
+    "125:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12116,7 +10632,7 @@
       ],
       "questID:3": 126
     },
-    "127:10": {
+    "126:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12177,7 +10693,7 @@
       ],
       "questID:3": 127
     },
-    "128:10": {
+    "127:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12238,7 +10754,7 @@
       ],
       "questID:3": 128
     },
-    "129:10": {
+    "128:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12299,7 +10815,7 @@
       ],
       "questID:3": 129
     },
-    "130:10": {
+    "129:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12384,7 +10900,7 @@
       ],
       "questID:3": 130
     },
-    "131:10": {
+    "130:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12453,7 +10969,7 @@
       ],
       "questID:3": 131
     },
-    "132:10": {
+    "131:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12522,7 +11038,7 @@
       ],
       "questID:3": 132
     },
-    "133:10": {
+    "132:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12609,7 +11125,7 @@
       ],
       "questID:3": 133
     },
-    "134:10": {
+    "133:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12678,7 +11194,7 @@
       ],
       "questID:3": 134
     },
-    "135:10": {
+    "134:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12736,7 +11252,7 @@
       ],
       "questID:3": 135
     },
-    "136:10": {
+    "135:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12802,7 +11318,7 @@
       ],
       "questID:3": 136
     },
-    "137:10": {
+    "136:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12932,7 +11448,7 @@
       ],
       "questID:3": 137
     },
-    "138:10": {
+    "137:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -12993,7 +11509,7 @@
       ],
       "questID:3": 138
     },
-    "139:10": {
+    "138:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13054,7 +11570,7 @@
       ],
       "questID:3": 139
     },
-    "140:10": {
+    "139:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13115,7 +11631,7 @@
       ],
       "questID:3": 140
     },
-    "141:10": {
+    "140:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13230,7 +11746,7 @@
       ],
       "questID:3": 141
     },
-    "142:10": {
+    "141:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13281,7 +11797,7 @@
       ],
       "questID:3": 142
     },
-    "143:10": {
+    "142:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13332,7 +11848,7 @@
       ],
       "questID:3": 143
     },
-    "144:10": {
+    "143:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13393,7 +11909,7 @@
       ],
       "questID:3": 144
     },
-    "145:10": {
+    "144:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13454,7 +11970,7 @@
       ],
       "questID:3": 145
     },
-    "146:10": {
+    "145:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13505,7 +12021,7 @@
       ],
       "questID:3": 146
     },
-    "147:10": {
+    "146:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13600,7 +12116,7 @@
       ],
       "questID:3": 147
     },
-    "148:10": {
+    "147:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13669,7 +12185,7 @@
       ],
       "questID:3": 148
     },
-    "149:10": {
+    "148:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13738,7 +12254,7 @@
       ],
       "questID:3": 149
     },
-    "150:10": {
+    "149:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13799,7 +12315,7 @@
       ],
       "questID:3": 150
     },
-    "151:10": {
+    "150:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13860,7 +12376,7 @@
       ],
       "questID:3": 151
     },
-    "152:10": {
+    "151:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13921,7 +12437,7 @@
       ],
       "questID:3": 152
     },
-    "153:10": {
+    "152:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -13982,7 +12498,7 @@
       ],
       "questID:3": 153
     },
-    "154:10": {
+    "153:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14067,7 +12583,7 @@
       ],
       "questID:3": 154
     },
-    "155:10": {
+    "154:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14118,7 +12634,7 @@
       ],
       "questID:3": 155
     },
-    "156:10": {
+    "155:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14169,7 +12685,7 @@
       ],
       "questID:3": 156
     },
-    "157:10": {
+    "156:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14242,7 +12758,7 @@
       ],
       "questID:3": 157
     },
-    "158:10": {
+    "157:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14293,7 +12809,7 @@
       ],
       "questID:3": 158
     },
-    "159:10": {
+    "158:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14344,7 +12860,7 @@
       ],
       "questID:3": 159
     },
-    "160:10": {
+    "159:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14413,7 +12929,7 @@
       ],
       "questID:3": 160
     },
-    "161:10": {
+    "160:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14464,7 +12980,7 @@
       ],
       "questID:3": 161
     },
-    "162:10": {
+    "161:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14515,7 +13031,7 @@
       ],
       "questID:3": 162
     },
-    "163:10": {
+    "162:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14584,7 +13100,7 @@
       ],
       "questID:3": 163
     },
-    "164:10": {
+    "163:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14653,7 +13169,7 @@
       ],
       "questID:3": 164
     },
-    "165:10": {
+    "164:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14704,7 +13220,7 @@
       ],
       "questID:3": 165
     },
-    "166:10": {
+    "165:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14888,7 +13404,7 @@
       ],
       "questID:3": 166
     },
-    "167:10": {
+    "166:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -14957,7 +13473,7 @@
       ],
       "questID:3": 167
     },
-    "168:10": {
+    "167:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15063,7 +13579,7 @@
       ],
       "questID:3": 168
     },
-    "169:10": {
+    "168:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15133,7 +13649,7 @@
       ],
       "questID:3": 169
     },
-    "170:10": {
+    "169:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15202,7 +13718,7 @@
       ],
       "questID:3": 170
     },
-    "171:10": {
+    "170:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15271,7 +13787,7 @@
       ],
       "questID:3": 171
     },
-    "172:10": {
+    "171:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15341,7 +13857,7 @@
       ],
       "questID:3": 172
     },
-    "173:10": {
+    "172:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15433,7 +13949,7 @@
       ],
       "questID:3": 173
     },
-    "174:10": {
+    "173:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15555,7 +14071,7 @@
       ],
       "questID:3": 174
     },
-    "175:10": {
+    "174:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15624,7 +14140,7 @@
       ],
       "questID:3": 175
     },
-    "176:10": {
+    "175:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15705,7 +14221,7 @@
       ],
       "questID:3": 176
     },
-    "177:10": {
+    "176:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15780,7 +14296,7 @@
       ],
       "questID:3": 177
     },
-    "178:10": {
+    "177:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15841,7 +14357,7 @@
       ],
       "questID:3": 178
     },
-    "179:10": {
+    "178:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15902,7 +14418,7 @@
       ],
       "questID:3": 179
     },
-    "180:10": {
+    "179:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -15966,7 +14482,7 @@
       ],
       "questID:3": 180
     },
-    "181:10": {
+    "180:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16039,7 +14555,7 @@
       ],
       "questID:3": 181
     },
-    "182:10": {
+    "181:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16122,7 +14638,7 @@
       ],
       "questID:3": 182
     },
-    "183:10": {
+    "182:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16241,7 +14757,7 @@
       ],
       "questID:3": 183
     },
-    "184:10": {
+    "183:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16339,7 +14855,7 @@
       ],
       "questID:3": 184
     },
-    "185:10": {
+    "184:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16420,7 +14936,7 @@
       ],
       "questID:3": 185
     },
-    "186:10": {
+    "185:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16481,7 +14997,7 @@
       ],
       "questID:3": 186
     },
-    "187:10": {
+    "186:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16538,7 +15054,7 @@
       ],
       "questID:3": 187
     },
-    "188:10": {
+    "187:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16621,7 +15137,7 @@
       ],
       "questID:3": 188
     },
-    "189:10": {
+    "188:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16710,7 +15226,7 @@
       ],
       "questID:3": 189
     },
-    "190:10": {
+    "189:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16796,7 +15312,7 @@
       ],
       "questID:3": 190
     },
-    "191:10": {
+    "190:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16847,7 +15363,7 @@
       ],
       "questID:3": 191
     },
-    "192:10": {
+    "191:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16898,7 +15414,7 @@
       ],
       "questID:3": 192
     },
-    "193:10": {
+    "192:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -16982,7 +15498,7 @@
       ],
       "questID:3": 193
     },
-    "194:10": {
+    "193:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -17048,7 +15564,7 @@
       ],
       "questID:3": 194
     },
-    "195:10": {
+    "194:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -17114,7 +15630,7 @@
       ],
       "questID:3": 195
     },
-    "196:10": {
+    "195:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -17208,7 +15724,7 @@
       ],
       "questID:3": 196
     },
-    "197:10": {
+    "196:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -17302,7 +15818,7 @@
       ],
       "questID:3": 197
     },
-    "198:10": {
+    "197:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -17430,7 +15946,7 @@
       ],
       "questID:3": 198
     },
-    "199:10": {
+    "198:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -17572,7 +16088,7 @@
       ],
       "questID:3": 199
     },
-    "200:10": {
+    "199:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -17645,7 +16161,7 @@
       ],
       "questID:3": 200
     },
-    "201:10": {
+    "200:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -17714,7 +16230,7 @@
       ],
       "questID:3": 201
     },
-    "202:10": {
+    "201:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -17805,7 +16321,7 @@
       ],
       "questID:3": 202
     },
-    "203:10": {
+    "202:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -17896,7 +16412,7 @@
       ],
       "questID:3": 203
     },
-    "204:10": {
+    "203:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -17965,7 +16481,7 @@
       ],
       "questID:3": 204
     },
-    "205:10": {
+    "204:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18056,7 +16572,7 @@
       ],
       "questID:3": 205
     },
-    "206:10": {
+    "205:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18192,7 +16708,7 @@
       ],
       "questID:3": 206
     },
-    "207:10": {
+    "206:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18255,7 +16771,7 @@
       ],
       "questID:3": 207
     },
-    "208:10": {
+    "207:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18395,7 +16911,7 @@
       ],
       "questID:3": 208
     },
-    "209:10": {
+    "208:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18482,7 +16998,7 @@
       ],
       "questID:3": 209
     },
-    "210:10": {
+    "209:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18570,7 +17086,7 @@
       ],
       "questID:3": 210
     },
-    "211:10": {
+    "210:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18657,7 +17173,7 @@
       ],
       "questID:3": 211
     },
-    "212:10": {
+    "211:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18718,7 +17234,7 @@
       ],
       "questID:3": 212
     },
-    "213:10": {
+    "212:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18779,7 +17295,7 @@
       ],
       "questID:3": 213
     },
-    "214:10": {
+    "213:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18840,7 +17356,7 @@
       ],
       "questID:3": 214
     },
-    "215:10": {
+    "214:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18901,7 +17417,7 @@
       ],
       "questID:3": 215
     },
-    "216:10": {
+    "215:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -18952,7 +17468,7 @@
       ],
       "questID:3": 216
     },
-    "217:10": {
+    "216:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19029,7 +17545,7 @@
       ],
       "questID:3": 217
     },
-    "218:10": {
+    "217:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19091,7 +17607,7 @@
       ],
       "questID:3": 218
     },
-    "219:10": {
+    "218:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19160,7 +17676,7 @@
       ],
       "questID:3": 219
     },
-    "220:10": {
+    "219:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19233,7 +17749,7 @@
       ],
       "questID:3": 220
     },
-    "221:10": {
+    "220:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19312,7 +17828,7 @@
       ],
       "questID:3": 221
     },
-    "222:10": {
+    "221:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19445,7 +17961,7 @@
       ],
       "questID:3": 222
     },
-    "223:10": {
+    "222:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19502,7 +18018,7 @@
       ],
       "questID:3": 223
     },
-    "224:10": {
+    "223:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19559,7 +18075,7 @@
       ],
       "questID:3": 224
     },
-    "225:10": {
+    "224:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19616,7 +18132,7 @@
       ],
       "questID:3": 225
     },
-    "226:10": {
+    "225:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19673,7 +18189,7 @@
       ],
       "questID:3": 226
     },
-    "227:10": {
+    "226:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19730,7 +18246,7 @@
       ],
       "questID:3": 227
     },
-    "228:10": {
+    "227:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19787,7 +18303,7 @@
       ],
       "questID:3": 228
     },
-    "229:10": {
+    "228:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19856,7 +18372,7 @@
       ],
       "questID:3": 229
     },
-    "230:10": {
+    "229:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19925,7 +18441,7 @@
       ],
       "questID:3": 230
     },
-    "231:10": {
+    "230:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -19994,7 +18510,7 @@
       ],
       "questID:3": 231
     },
-    "232:10": {
+    "231:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -20064,7 +18580,7 @@
       ],
       "questID:3": 232
     },
-    "233:10": {
+    "232:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -20133,7 +18649,7 @@
       ],
       "questID:3": 233
     },
-    "234:10": {
+    "233:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -20178,123 +18694,13 @@
           "index:3": 0
         }
       },
-      "rewards:9": {
-        "0:10": {
-          "rewards:9": {
-            "0:10": {
-              "id:8": "toughasnails:canteen",
-              "Count:3": 1,
-              "Damage:2": 0,
-              "tag:10": {
-                "RepairCost:3": 0,
-                "display:10": {
-                  "Name:8": "Useless Water Bottle"
-                }
-              },
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "regenAmount:3": 0,
-                  "trait:8": "regeneration:boring",
-                  "arch_status:8": "NORMAL_ITEM",
-                  "skinType:8": "STEVE",
-                  "skin:8": "NONE"
-                }
-              },
-              "OreDict:8": ""
-            }
-          },
-          "rewardID:8": "bq_standard:item",
-          "index:3": 0
-        }
-      },
+      "rewards:9": {},
       "preRequisites:11": [
         12
       ],
       "questID:3": 234
     },
-    "235:10": {
-      "properties:10": {
-        "betterquesting:10": {
-          "issilent:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "lockedprogress:1": 0,
-          "tasklogic:8": "AND",
-          "repeattime:3": -1,
-          "visibility:8": "ALWAYS",
-          "simultaneous:1": 0,
-          "icon:10": {
-            "id:8": "toughasnails:purified_water_bottle",
-            "Count:3": 1,
-            "Damage:2": 0,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "regenAmount:3": 0,
-                "trait:8": "regeneration:boring",
-                "arch_status:8": "NORMAL_ITEM",
-                "skinType:8": "STEVE",
-                "skin:8": "NONE"
-              }
-            },
-            "OreDict:8": ""
-          },
-          "globalshare:1": 0,
-          "questlogic:8": "AND",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "autoclaim:1": 0,
-          "repeat_relative:1": 1,
-          "ismain:1": 0,
-          "name:8": "Better Water",
-          "desc:8": "The §6Purified Water Bottle §rwill heal more thirst than a normal water bottle. You make it by smelting a normal water bottle in a furnace."
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "partialMatch:1": 1,
-          "ignoreNBT:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "autoConsume:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "id:8": "toughasnails:purified_water_bottle",
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "regenAmount:3": 0,
-                  "trait:8": "regeneration:boring",
-                  "arch_status:8": "NORMAL_ITEM",
-                  "skinType:8": "STEVE",
-                  "skin:8": "NONE"
-                }
-              },
-              "OreDict:8": ""
-            }
-          },
-          "taskID:8": "bq_standard:retrieval",
-          "index:3": 0
-        }
-      },
-      "rewards:9": {
-        "0:10": {
-          "rewards:9": {
-            "0:10": {
-              "id:8": "minecraft:torch",
-              "Count:3": 64,
-              "Damage:2": 0,
-              "OreDict:8": ""
-            }
-          },
-          "rewardID:8": "bq_standard:item",
-          "index:3": 0
-        }
-      },
-      "preRequisites:11": [
-        234
-      ],
-      "questID:3": 235
-    },
-    "236:10": {
+    "234:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -20364,7 +18770,7 @@
       ],
       "questID:3": 236
     },
-    "237:10": {
+    "235:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -20412,7 +18818,7 @@
       ],
       "questID:3": 237
     },
-    "238:10": {
+    "236:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Oilsands",
@@ -20463,7 +18869,7 @@
       ],
       "questID:3": 238
     },
-    "239:10": {
+    "237:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Circuits, Assemble",
@@ -20516,7 +18922,7 @@
       ],
       "questID:3": 239
     },
-    "240:10": {
+    "238:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Crunchy, now with 30% more silicon!",
@@ -20586,7 +18992,7 @@
       ],
       "questID:3": 240
     },
-    "241:10": {
+    "239:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Circuit Board #2",
@@ -20655,7 +19061,7 @@
       ],
       "questID:3": 241
     },
-    "242:10": {
+    "240:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "This will take a very, very long time.",
@@ -20724,7 +19130,7 @@
       ],
       "questID:3": 242
     },
-    "243:10": {
+    "241:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Wafers",
@@ -20793,7 +19199,7 @@
       ],
       "questID:3": 243
     },
-    "244:10": {
+    "242:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Don\u0027t put your hand inside it",
@@ -20844,7 +19250,7 @@
       ],
       "questID:3": 244
     },
-    "245:10": {
+    "243:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "I fear no man, but that thing... it scares me.",
@@ -20907,7 +19313,7 @@
       ],
       "questID:3": 245
     },
-    "246:10": {
+    "244:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Maintenance",
@@ -20954,7 +19360,7 @@
       ],
       "questID:3": 246
     },
-    "247:10": {
+    "245:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Enough power to sustain any Aperture Science™ personality constructs.",
@@ -21023,7 +19429,7 @@
       ],
       "questID:3": 247
     },
-    "248:10": {
+    "246:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Basically poop, but vegan",
@@ -21084,7 +19490,7 @@
       ],
       "questID:3": 248
     },
-    "249:10": {
+    "247:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "MV Distillery",
@@ -21135,7 +19541,7 @@
       ],
       "questID:3": 249
     },
-    "250:10": {
+    "248:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Ethanol",
@@ -21197,7 +19603,7 @@
       ],
       "questID:3": 250
     },
-    "251:10": {
+    "249:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Ethylene",
@@ -21258,7 +19664,7 @@
       ],
       "questID:3": 251
     },
-    "252:10": {
+    "250:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Extreme Amounts of Pain",
@@ -21319,7 +19725,7 @@
       ],
       "questID:3": 252
     },
-    "253:10": {
+    "251:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Geneva doesn\u0027t exist yet",
@@ -21425,7 +19831,7 @@
       ],
       "questID:3": 253
     },
-    "254:10": {
+    "252:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Capacitors",
@@ -21520,7 +19926,7 @@
       ],
       "questID:3": 254
     },
-    "255:10": {
+    "253:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "You\u0027re in for one HELL of a ride.",
@@ -21589,7 +19995,7 @@
       ],
       "questID:3": 255
     },
-    "256:10": {
+    "254:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Trans Sister",
@@ -21684,7 +20090,7 @@
       ],
       "questID:3": 256
     },
-    "257:10": {
+    "255:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "§6Pain. Suffering. Anguish.",
@@ -21753,7 +20159,7 @@
       ],
       "questID:3": 257
     },
-    "258:10": {
+    "256:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Integrated Circuits",
@@ -21822,7 +20228,7 @@
       ],
       "questID:3": 258
     },
-    "259:10": {
+    "257:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "§c§lThis will only get worse.",
@@ -21891,7 +20297,7 @@
       ],
       "questID:3": 259
     },
-    "260:10": {
+    "258:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "New advancements in cock and ball circuitry",
@@ -21960,7 +20366,7 @@
       ],
       "questID:3": 260
     },
-    "261:10": {
+    "259:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Refined SMD Resistor",
@@ -22029,7 +20435,7 @@
       ],
       "questID:3": 261
     },
-    "262:10": {
+    "260:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "It\u0027s even funnier the second time!!",
@@ -22080,7 +20486,7 @@
       ],
       "questID:3": 262
     },
-    "263:10": {
+    "261:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Yum, turtle food!",
@@ -22149,7 +20555,7 @@
       ],
       "questID:3": 263
     },
-    "264:10": {
+    "262:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Sodium Persulfate",
@@ -22210,7 +20616,7 @@
       ],
       "questID:3": 264
     },
-    "265:10": {
+    "263:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Circuit Board #3",
@@ -22279,7 +20685,7 @@
       ],
       "questID:3": 265
     },
-    "266:10": {
+    "264:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Your Gregification level has increased.",
@@ -22348,7 +20754,7 @@
       ],
       "questID:3": 266
     },
-    "267:10": {
+    "265:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "§c§lThis isn\u0027t even its final form!",
@@ -22417,7 +20823,7 @@
       ],
       "questID:3": 267
     },
-    "268:10": {
+    "266:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "§c§lExtreme, unimaginable pain.",
@@ -22486,7 +20892,7 @@
       ],
       "questID:3": 268
     },
-    "269:10": {
+    "267:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Advanced BrainTech(TM) Salami Cutting Machine V2.0",
@@ -22537,7 +20943,7 @@
       ],
       "questID:3": 269
     },
-    "270:10": {
+    "268:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "RAM Wafer",
@@ -22606,7 +21012,7 @@
       ],
       "questID:3": 270
     },
-    "271:10": {
+    "269:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "§c§lFollow the teachings of Gregorius Techneticies!",
@@ -22675,7 +21081,7 @@
       ],
       "questID:3": 271
     },
-    "272:10": {
+    "270:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Sticky Situation",
@@ -22736,7 +21142,7 @@
       ],
       "questID:3": 272
     },
-    "273:10": {
+    "271:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "You\u0027re probably getting used to this.",
@@ -22805,7 +21211,7 @@
       ],
       "questID:3": 273
     },
-    "274:10": {
+    "272:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "HV Cables",
@@ -22856,7 +21262,7 @@
       ],
       "questID:3": 274
     },
-    "275:10": {
+    "273:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Explosive Tier: II ",
@@ -22919,7 +21325,7 @@
       ],
       "questID:3": 275
     },
-    "276:10": {
+    "274:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "*YEET!*",
@@ -22985,7 +21391,7 @@
       ],
       "questID:3": 276
     },
-    "277:10": {
+    "275:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "High-Pressure",
@@ -23051,7 +21457,7 @@
       ],
       "questID:3": 277
     },
-    "278:10": {
+    "276:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "For when you need a door",
@@ -23117,7 +21523,7 @@
       ],
       "questID:3": 278
     },
-    "279:10": {
+    "277:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "COVID-20",
@@ -23183,7 +21589,7 @@
       ],
       "questID:3": 279
     },
-    "280:10": {
+    "278:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "*EARBLAST*",
@@ -23249,7 +21655,7 @@
       ],
       "questID:3": 280
     },
-    "281:10": {
+    "279:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Weapons Factory II",
@@ -23300,7 +21706,7 @@
       ],
       "questID:3": 281
     },
-    "282:10": {
+    "280:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "It\u0027ll fail, just like the platform",
@@ -23351,7 +21757,7 @@
       ],
       "questID:3": 282
     },
-    "283:10": {
+    "281:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Mac 10",
@@ -23445,7 +21851,7 @@
       ],
       "questID:3": 283
     },
-    "284:10": {
+    "282:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Thompson SMG",
@@ -23539,7 +21945,7 @@
       ],
       "questID:3": 284
     },
-    "285:10": {
+    "283:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "AKM ",
@@ -23633,7 +22039,7 @@
       ],
       "questID:3": 285
     },
-    "286:10": {
+    "284:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "M4 Assault Rifle",
@@ -23727,7 +22133,7 @@
       ],
       "questID:3": 286
     },
-    "287:10": {
+    "285:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Turret Components at MV",
@@ -23808,7 +22214,7 @@
       ],
       "questID:3": 287
     },
-    "288:10": {
+    "286:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Grenade Launcher Turret",
@@ -23874,7 +22280,7 @@
       ],
       "questID:3": 288
     },
-    "289:10": {
+    "287:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "This has nothing to do with relativity.",
@@ -23925,7 +22331,7 @@
       ],
       "questID:3": 289
     },
-    "290:10": {
+    "288:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Coal Tar",
@@ -23986,7 +22392,7 @@
       ],
       "questID:3": 290
     },
-    "291:10": {
+    "289:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "How Circuits Work",
@@ -24033,7 +22439,7 @@
       ],
       "questID:3": 291
     },
-    "292:10": {
+    "290:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Vinyl Chloride",
@@ -24094,7 +22500,7 @@
       ],
       "questID:3": 292
     },
-    "293:10": {
+    "291:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Polyvinyl Chloride",
@@ -24155,7 +22561,7 @@
       ],
       "questID:3": 293
     },
-    "294:10": {
+    "292:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Benzene",
@@ -24216,7 +22622,7 @@
       ],
       "questID:3": 294
     },
-    "295:10": {
+    "293:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "This doesn\u0027t get you high.",
@@ -24279,7 +22685,7 @@
       ],
       "questID:3": 295
     },
-    "296:10": {
+    "294:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Propene",
@@ -24340,7 +22746,7 @@
       ],
       "questID:3": 296
     },
-    "297:10": {
+    "295:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Easier Polyethylene",
@@ -24401,7 +22807,7 @@
       ],
       "questID:3": 297
     },
-    "298:10": {
+    "296:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "This doesn\u0027t make beer.",
@@ -24458,7 +22864,7 @@
       ],
       "questID:3": 298
     },
-    "299:10": {
+    "297:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "MV Assembler",
@@ -24509,7 +22915,7 @@
       ],
       "questID:3": 299
     },
-    "300:10": {
+    "298:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Tier 4 - How the hell do I get titanium?",
@@ -24560,7 +22966,7 @@
       ],
       "questID:3": 300
     },
-    "301:10": {
+    "299:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Earth-Moving Vehicles",
@@ -24629,7 +23035,7 @@
       ],
       "questID:3": 301
     },
-    "302:10": {
+    "300:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Forming Press",
@@ -24680,7 +23086,7 @@
       ],
       "questID:3": 302
     },
-    "303:10": {
+    "301:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Zircon Mold",
@@ -24749,7 +23155,7 @@
       ],
       "questID:3": 303
     },
-    "304:10": {
+    "302:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "MV Fluid Canner",
@@ -24815,7 +23221,7 @@
       ],
       "questID:3": 304
     },
-    "305:10": {
+    "303:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Full Engine Block",
@@ -24884,7 +23290,7 @@
       ],
       "questID:3": 305
     },
-    "306:10": {
+    "304:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Engine Block",
@@ -24953,7 +23359,7 @@
       ],
       "questID:3": 306
     },
-    "307:10": {
+    "305:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Combine Harvester",
@@ -25022,7 +23428,7 @@
       ],
       "questID:3": 307
     },
-    "308:10": {
+    "306:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Bulldozer",
@@ -25091,7 +23497,7 @@
       ],
       "questID:3": 308
     },
-    "309:10": {
+    "307:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "that dump truck ass fr",
@@ -25160,7 +23566,7 @@
       ],
       "questID:3": 309
     },
-    "310:10": {
+    "308:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Filling Up",
@@ -25248,7 +23654,7 @@
       ],
       "questID:3": 310
     },
-    "311:10": {
+    "309:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Drilling Rig",
@@ -25317,7 +23723,7 @@
       ],
       "questID:3": 311
     },
-    "312:10": {
+    "310:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Lawn Mower",
@@ -25386,7 +23792,7 @@
       ],
       "questID:3": 312
     },
-    "313:10": {
+    "311:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Poop Gas",
@@ -25447,7 +23853,7 @@
       ],
       "questID:3": 313
     },
-    "314:10": {
+    "312:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Chemical Reactor Mark III ",
@@ -25498,7 +23904,7 @@
       ],
       "questID:3": 314
     },
-    "315:10": {
+    "313:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Can\u0027t get enough of this #1",
@@ -25567,7 +23973,7 @@
       ],
       "questID:3": 315
     },
-    "316:10": {
+    "314:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Can\u0027t get enough of this #2",
@@ -25636,7 +24042,7 @@
       ],
       "questID:3": 316
     },
-    "317:10": {
+    "315:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Can\u0027t get enough of this #3",
@@ -25705,7 +24111,7 @@
       ],
       "questID:3": 317
     },
-    "318:10": {
+    "316:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Can\u0027t get enough of this #4",
@@ -25774,7 +24180,7 @@
       ],
       "questID:3": 318
     },
-    "319:10": {
+    "317:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "You\u0027re gonna hate this #6",
@@ -25843,7 +24249,7 @@
       ],
       "questID:3": 319
     },
-    "320:10": {
+    "318:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "You\u0027re gonna hate this #5",
@@ -25912,7 +24318,7 @@
       ],
       "questID:3": 320
     },
-    "321:10": {
+    "319:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Better, Faster, Stronger #6",
@@ -25981,7 +24387,7 @@
       ],
       "questID:3": 321
     },
-    "322:10": {
+    "320:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Better, Faster, Stronger #5",
@@ -26050,7 +24456,7 @@
       ],
       "questID:3": 322
     },
-    "323:10": {
+    "321:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Fluorine",
@@ -26111,7 +24517,7 @@
       ],
       "questID:3": 323
     },
-    "324:10": {
+    "322:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Don\u0027t inject it in your blood",
@@ -26172,7 +24578,7 @@
       ],
       "questID:3": 324
     },
-    "325:10": {
+    "323:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Hydrofluoric Acid",
@@ -26233,7 +24639,7 @@
       ],
       "questID:3": 325
     },
-    "326:10": {
+    "324:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Teflon ",
@@ -26295,7 +24701,7 @@
       ],
       "questID:3": 326
     },
-    "327:10": {
+    "325:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Kanthal",
@@ -26364,7 +24770,7 @@
       ],
       "questID:3": 327
     },
-    "328:10": {
+    "326:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Coil Upgrade #2 \u003e Kanthal",
@@ -26416,7 +24822,7 @@
       ],
       "questID:3": 328
     },
-    "329:10": {
+    "327:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Quenching Machine ",
@@ -26485,7 +24891,7 @@
       ],
       "questID:3": 329
     },
-    "330:10": {
+    "328:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Nichrome",
@@ -26554,7 +24960,7 @@
       ],
       "questID:3": 330
     },
-    "331:10": {
+    "329:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Coil Upgrade #3 \u003e Nichrome",
@@ -26606,7 +25012,7 @@
       ],
       "questID:3": 331
     },
-    "332:10": {
+    "330:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Elytra",
@@ -26675,7 +25081,7 @@
       ],
       "questID:3": 332
     },
-    "333:10": {
+    "331:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Bauxite Ore",
@@ -26759,7 +25165,7 @@
       ],
       "questID:3": 333
     },
-    "334:10": {
+    "332:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Magnesium",
@@ -26828,7 +25234,7 @@
       ],
       "questID:3": 334
     },
-    "335:10": {
+    "333:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "Titanium Tetrachloride",
@@ -26889,7 +25295,7 @@
       ],
       "questID:3": 335
     },
-    "336:10": {
+    "334:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "WE FUCKING DID IT GAMERS WE BEAT THE GAME",
@@ -26959,7 +25365,7 @@
       ],
       "questID:3": 336
     },
-    "337:10": {
+    "335:10": {
       "properties:10": {
         "betterquesting:10": {
           "name:8": "*Insert funny ASSembler pun here*",
@@ -27286,44 +25692,30 @@
         "35:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
-          "y:3": 144,
-          "id:3": 89
-        },
-        "36:10": {
-          "sizeX:3": 24,
-          "sizeY:3": 24,
           "x:3": -108,
           "y:3": 360,
           "id:3": 90
         },
-        "37:10": {
+        "36:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 384,
           "id:3": 93
         },
-        "38:10": {
+        "37:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 36,
           "id:3": 135
         },
-        "39:10": {
+        "38:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 336,
           "id:3": 234
-        },
-        "40:10": {
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": 288,
-          "id:3": 235
         }
       },
       "lineID:3": 0,
@@ -30552,5 +28944,6 @@
       "order:3": 22
     }
   },
-  "format:8": "2.0.0"
+  "format:8": "2.0.0",
+  "build:8": "3.5.329"
 }
