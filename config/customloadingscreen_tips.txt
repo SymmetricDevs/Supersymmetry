@@ -43,7 +43,6 @@ help I'm trapped in a loading screen
 Do NOT try the thermonuclear core under any circumstance!
 Gregicality: now with more realistic particle physics!
 Approximately 28% of loading tips are memes
-If your temperature is higher than 37.5, you might die
 Supracausal Mainframe only takes 6,000 hours instead of 20,000!
 Look for sulfur in the Nether
 You need a Pyrolyse Oven for Polyethylene
@@ -70,6 +69,5 @@ Loss on uninsulated cables is twice as big as on insulated ones
 Use the Traveler Backpack if you want an upgraded inventory
 You can bind the quests menu to a key, instead of using the book
 Make sure you have backups!
-If your temperature is lower than 35.6, you might die
 Industrial Renewal tanks can have up to 1,000,000mB of storage
 The Electrolyzer separates substances into their basic chemicals
