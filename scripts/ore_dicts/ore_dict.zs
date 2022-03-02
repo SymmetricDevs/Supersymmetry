@@ -56,7 +56,6 @@ function unify (ore as IOreDictEntry, p as int) {
 <ore:blockAluminum>.remove(<ore:blockAluminum>.firstItem);
 <ore:blockAluminum>.remove(<libvulpes:metal0:9>);
 <ore:ingotAluminum>.remove(<ore:ingotAluminum>.firstItem);
-<ore:ingotAluminum>.remove(<machinemod:aluminumingot>);
 
 // Certus Compatability
 <ore:crystalCertusQuartz>.add(<metaitem:gemCertusQuartz>);
@@ -112,11 +111,8 @@ JEI.hide(<nuclearcraft:ore:7>);
 <ore:mineralRockSilicate>.add(<contenttweaker:rock_silicate>);
 <ore:mineralRockSulfur>.add(<contenttweaker:rock_sulfur>);
 
-//Blasted Stone
-<ore:anyBlastedStone>.add(<machinemod:machineblastedstone>);
-<ore:anyBlastedStone>.add(<machinemod:machineblastedgranite>);
-<ore:anyBlastedStone>.add(<machinemod:machineblasteddiorite>);
-<ore:anyBlastedStone>.add(<machinemod:machineblastedandesite>);
+//Concrete
+//<ore:concrete>.add(<gregtech:concrete:0>);
 
 unify_oredicts(<ore:ingot*>);
 unify_oredicts(<ore:ore*>);

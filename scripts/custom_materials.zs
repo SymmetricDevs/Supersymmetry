@@ -11,6 +11,25 @@ import mods.gregtech.material.MaterialRegistry;
 Utils.registerDust("zircon.mold.base", 1200, 15441471, "DULL");
 Utils.registerDust("ammonium_nitrate", 1201, 0xDEDEDE, "ROUGH");
 
+//-----------------------------------INGOTS-----------------------------------
+
+val vacuum_steel = MaterialRegistry.createIngotMaterial(600, "vacuumsteel", 0xC8C8DC, "SHINY", 7, null, 7, 0, 500, 1800);
+vacuum_steel.addFlags([
+	"GENERATE_PLATE",
+	"NO_WORKING", 
+	"NO_SMASHING", 
+	"NO_SMELTING",
+	"GENERATE_GEAR",
+	"GENERATE_SMALL_GEAR",
+	"GENERATE_ROD",
+	"GENERATE_LONG_ROD",
+	"GENERATE_BOLT_SCREW",
+	"GENERATE_FRAME",
+	"EXCLUDE_BLOCK_CRAFTING_RECIPES",
+	"EXCLUDE_PLATE_COMPRESSOR_RECIPE",
+	"EXCLUDE_BLOCK_CRAFTING_BY_HAND_RECIPES"
+]);
+
 //-----------------------------------FLUIDS-----------------------------------
 
 Utils.registerFluid("low_vacuum", 16777215);

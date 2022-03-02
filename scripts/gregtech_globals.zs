@@ -3,9 +3,6 @@
 //Script based on the gregtech_globals.zs script from the Gregicality Community Pack
 
 import mods.gregtech.recipe.RecipeMap;
-import mods.gtadditions.recipe.Utils;
-import mods.gtadditions.recipe.LargeRecipeMap;
-import mods.gtadditions.recipe.GARecipeMaps;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
@@ -68,7 +65,7 @@ global thermal_centrifuge as RecipeMap =            RecipeMap.getByName("thermal
 global unpacker as RecipeMap =                      RecipeMap.getByName("unpacker");
 global vacuum_freezer as RecipeMap =                RecipeMap.getByName("vacuum_freezer");
 global wiremill as RecipeMap =                      RecipeMap.getByName("wiremill");
-global stock_manipulator as RecipeMap =             RecipeMap.getByName("stock_manipulator");
+global primitive_blast_furnace as RecipeMap = 	    RecipeMap.getByName("primitive_blast_furnace");
 global weapons_factory as RecipeMap =               RecipeMap.getByName("weapons_factory");
 
 // Tiered Components
@@ -161,12 +158,12 @@ global tieredSticks as IIngredient[] = [<ore:stickWroughtIron>, <ore:stickSteel>
     <ore:stickBohrium>, <ore:stickQuantum>, <ore:stickQuantum>,
     <ore:stickQuantum>];
 	
-global tieredGlass as IIngredient[] = [<ore:blockGlass>, <ore:blockGlass>, <gtadditions:ga_transparent_casing>, <gtadditions:ga_transparent_casing:1>, 
+/*global tieredGlass as IIngredient[] = [<ore:blockGlass>, <ore:blockGlass>, <gtadditions:ga_transparent_casing>, <gtadditions:ga_transparent_casing:1>, 
     <gtadditions:ga_transparent_casing:2>, <gtadditions:ga_transparent_casing:3>, <gtadditions:ga_transparent_casing:4>, 
     <gtadditions:ga_transparent_casing:5>, <gtadditions:ga_transparent_casing:6>, <gtadditions:ga_transparent_casing:6>,
     <gtadditions:ga_transparent_casing:6> ,<gtadditions:ga_transparent_casing:6>, <gtadditions:ga_transparent_casing:6>,
     <gtadditions:ga_transparent_casing:6>];
-    
+    */
 global tieredCables as IIngredient[] = [<ore:cableGtSingleRedAlloy>, <ore:cableGtSingleTin>, <ore:cableGtSingleCopper>, <ore:cableGtSingleGold>, 
     <ore:cableGtSingleAluminium>, <ore:cableGtSingleTungsten>, <ore:cableGtSingleVanadiumGallium>, 
     <ore:cableGtSingleNaquadah>, <ore:cableGtSingleNaquadahAlloy>, <ore:cableGtSingleAbyssalAlloy>,
@@ -184,21 +181,22 @@ global soldering_alloys as ILiquidStack[] = [<liquid:tin>, <liquid:soldering_all
 global intCircuit as function(int)IIngredient = function(i as int) as IIngredient {
 	return <metaitem:circuit.integrated>.withTag({Configuration: i});
 };
-
+/*
 global breweries as IItemStack[] = [null, <meta_tile_entity:gregtech:brewery.lv>, <meta_tile_entity:gregtech:brewery.mv>, <meta_tile_entity:gregtech:brewery.hv>,
 	<meta_tile_entity:gregtech:brewery.ev>, <meta_tile_entity:gtadditions:brewery.iv>, <meta_tile_entity:gtadditions:brewery.luv>,
 	<meta_tile_entity:gtadditions:brewery.zpm>, <meta_tile_entity:gtadditions:brewery.uv>, <meta_tile_entity:gtadditions:brewery.uhv>,
 	<meta_tile_entity:gtadditions:brewery.uev>, <meta_tile_entity:gtadditions:brewery.uiv>, <meta_tile_entity:gtadditions:brewery.umv>,
 	<meta_tile_entity:gtadditions:brewery.uxv>
 ];
-
+*/
+/*
 global distilleries as IItemStack[] = [null, <meta_tile_entity:gregtech:distillery.lv>, <meta_tile_entity:gregtech:distillery.mv>, <meta_tile_entity:gregtech:distillery.hv>,
 	<meta_tile_entity:gregtech:distillery.ev>, <meta_tile_entity:gtadditions:distillery.iv>, <meta_tile_entity:gtadditions:distillery.luv>,
 	<meta_tile_entity:gtadditions:distillery.zpm>, <meta_tile_entity:gtadditions:distillery.uv>, <meta_tile_entity:gtadditions:distillery.uhv>,
 	<meta_tile_entity:gtadditions:distillery.uev>, <meta_tile_entity:gtadditions:distillery.uiv>, <meta_tile_entity:gtadditions:distillery.umv>,
 	<meta_tile_entity:gtadditions:distillery.uxv>
 ];
-
+*/
 global createGreenHouseRecipes as function(IIngredient, IItemStack)void = function(seed as IIngredient, output as IItemStack) as void {
 	green_house.recipeBuilder()
 		.notConsumable(seed)

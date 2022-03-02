@@ -8,32 +8,14 @@ import crafttweaker.block.IBlockDefinition;
 
 import mods.appliedenergistics2.Grinder;
 
-import mods.immersiveengineering.AlloySmelter;
-import mods.immersiveengineering.BlastFurnace;
-
-import mods.gregtech.recipe.PBFRecipeBuilder;
-
 val name_removals = [
-	"immersiveengineering:stone_decoration/cokebrick",
-	"immersiveengineering:stone_decoration/blastbrick",
 	"gregtech:iron_magnetic_stick",
-	"immersiveengineering:stone_decoration/blastbrick_reinforced",
-	"immersiveengineering:wooden_devices/crate",
-	"immersiveengineering:wooden_devices/barrel",
 	"appliedenergistics2:misc/grindstone_woodengear",
 	"machinemod:woodengear",
 	"gtadditions:clay_brick",
 	"gtadditions:eight_clay_brick",
 	"notreepunching:misc/clay_tool_clay_brick",
 	"notreepunching:misc/clay_tool_clay_brick_2",
-	"immersiveengineering:metal_decoration/coil_copper",
-	"immersiveengineering:metal_decoration/coil_electrum",
-	"immersiveengineering:metal_decoration/coil_hv",
-	"immersiveengineering:wirecoils/wirecoil_lv",
-	"immersiveengineering:wirecoils/wirecoil_mv",
-	"immersiveengineering:wirecoils/wirecoil_hv",
-	"immersiveengineering:wirecoils/wirecoil_hv2",
-	"immersiveengineering:material/stick_treated",
 	"gtadditions:ga_primitive_blast_furnace",
 	"gregtech:coke_oven",
 	"appliedenergistics2:misc/grindstone",
@@ -118,20 +100,6 @@ recipes.addShaped("brick_x8", <notreepunching:clay_brick>*8, [
 	[<ore:ingotClay>, <ore:ingotClay>, <ore:ingotClay>],
 ]);
 
-//IE Crate Crafting
-recipes.addShaped("ie_wooden_storage_crate", <immersiveengineering:wooden_device0>, [
-	[<ore:screwIron>, <ore:plankTreatedWood>, <ore:screwIron>],
-	[<ore:plankTreatedWood>, <ore:gregSaws>, <ore:plankTreatedWood>],
-	[<ore:screwIron>, <ore:plankTreatedWood>, <ore:screwIron>]
-]);
-
-//IE Wooden Barrel
-recipes.addShaped("ie_wooden_barrel", <immersiveengineering:wooden_device0:1>, [
-	[<ore:gregSoftHammers>, <ore:slimeball>, <ore:gregSaws>],
-	[<ore:plankTreatedWood>, <ore:stickLongIron>, <ore:plankTreatedWood>],
-	[<ore:plankTreatedWood>, <ore:stickLongIron>, <ore:plankTreatedWood>]
-]);
-
 //Wooden Gear Crafting
 recipes.addShaped("woodgear", <metaitem:gearWood>, [
 	[<ore:stickWood>, <ore:plankWood>, <ore:stickWood>],
@@ -150,12 +118,6 @@ recipes.addShaped("ae2_grindstone", <appliedenergistics2:grindstone>, [
 recipes.addShaped("hot_iron_rod", <contenttweaker:hot_iron_rod>, [
 	[<ore:gregFiles>, null, null],
 	[null, <metaitem:hot_iron_ingot>, null],
-	[null, null, null]
-]);
-
-recipes.addShaped("ie_treated_stick", <immersiveengineering:material>*2, [
-	[null, null, null],
-	[<ore:gregSaws>, <ore:plankTreatedWood>, null],
 	[null, null, null]
 ]);
 
@@ -189,13 +151,6 @@ recipes.addShaped("gt_co", <meta_tile_entity:coke_oven>, [
 	[<gregtech:metal_casing:8>, <ore:plateBronze>, <gregtech:metal_casing:8>]
 ]);
 
-//IE Blast Bricks
-recipes.addShaped("ie_blast_bricks", <immersiveengineering:stone_decoration:1>*4, [
-	[<metaitem:brick.fireclay>, <metaitem:brick.coke>, null],
-	[<metaitem:brick.coke>, <metaitem:brick.fireclay>, null],
-	[null, null, null]
-]);
-
 //Voltaic Pile Crafting
 recipes.addShapeless("voltaic_pile", <contenttweaker:voltaic_pile>, [<ore:plateCopper>, <ore:plateSilver>, <contenttweaker:electrolyte_paper>]);
 recipes.addShapeless("voltaic_pile_1", <contenttweaker:voltaic_pile>, [<ore:plateCopper>, <ore:plateZinc>, <contenttweaker:electrolyte_paper>]);
@@ -204,51 +159,6 @@ recipes.addShapeless("voltaic_pile_1", <contenttweaker:voltaic_pile>, [<ore:plat
 recipes.addShapeless("magnetic_iron_stick", <ore:stickIronMagnetic>.firstItem, [<contenttweaker:hot_iron_rod>, <contenttweaker:voltaic_pile>, <ore:wireFineCopper>]);
 recipes.addShapeless("magnetic_iron_stick_1", <ore:stickIronMagnetic>.firstItem, [<contenttweaker:hot_iron_rod>, <contenttweaker:magnetite_chunk>]);
 recipes.addShapeless("magnetic_iron_stick_2", <ore:stickIronMagnetic>.firstItem * 2, [<contenttweaker:hot_iron_rod>, <ore:stickIronMagnetic>]);
-
-val gt_wires as IOreDictEntry[] = [
-	<ore:wireGtSingleCopper>,
-	<ore:wireGtSingleElectrum>,
-	<ore:wireGtSingleSteel>
-];
-
-val coils as IItemStack[] = [
-	<immersiveengineering:wirecoil:0>,
-	<immersiveengineering:wirecoil:1>,
-	<immersiveengineering:wirecoil:2>
-];
-
-val coil_blocks as IItemStack[] = [
-	<immersiveengineering:metal_decoration0:0>,
-	<immersiveengineering:metal_decoration0:1>,
-	<immersiveengineering:metal_decoration0:2>
-];
-
-val coil_blocks_recipes_names as string[] = [
-	"ie_lv_coil_block",
-	"ie_mv_coil_block",
-	"ie_hv_coil_block",
-];
-
-val coil_recipes_names as string[] = [
-	"ie_lv_coil",
-	"ie_mv_coil",
-	"ie_hv_coil",
-];
-
-for i in 0 to 3 {
-	recipes.addShaped(coil_blocks_recipes_names[i], coil_blocks[i], [
-		[coils[i], coils[i], coils[i]],
-		[coils[i], <ore:stickIron>, coils[i]],
-		[coils[i], coils[i], coils[i]]
-	]);
-	
-	recipes.addShaped(coil_recipes_names[i], coils[i]*4, [
-		[gt_wires[i], gt_wires[i], gt_wires[i]],
-		[gt_wires[i], <ore:stickTreatedWood>, gt_wires[i]],
-		[gt_wires[i], gt_wires[i], gt_wires[i]]
-	]);
-	
-}
 
 recipes.addShaped("wood_stick", <minecraft:stick>*2, [
 	[null, null, null],
@@ -262,84 +172,85 @@ recipes.addShaped("interdimensional_pipe", <dimstack:dim_pipe>, [
 	[<ore:frameGtSteel>, <ore:gemNetherQuartz>, <ore:frameGtSteel>]
 ]);
 
-//----------Recipes using IE machines----------
-
-mods.immersiveengineering.AlloySmelter.removeRecipe(<ore:ingotConstantan>.firstItem);
-mods.immersiveengineering.AlloySmelter.addRecipe(<ore:ingotCupronickel>.firstItem*2, <ore:dustCopper>, <ore:dustNickel>, 200);
-
-//mods.immersiveengineering.BlastFurnace.addRecipe(<minecraft:iron_ingot>, <ore:dustIron>, 1000, <immersiveengineering:material:7>);
-//mods.immersiveengineering.BlastFurnace.addRecipe(<ore:ingotNickel>.firstItem, <ore:dustNickel>, 1000, <immersiveengineering:material:7>);
+val fuels as IOreDictEntry[] = [
+	<ore:coal>
+];
 
 //----------Recipes using GT machines----------
-PBFRecipeBuilder.start()
-    .input(<ore:dustIron> * 1)
-    .output(<minecraft:iron_ingot>)
+
+for fuel in fuels{
+
+primitive_blast_furnace.recipeBuilder()
+    .inputs(<ore:dustIron> * 1)
+    .outputs(<minecraft:iron_ingot>)
     .duration(1000)
-    .fuelAmount(1)
+    .inputs(fuel * 1)
     .buildAndRegister();
 	
-PBFRecipeBuilder.start()
-    .input(<ore:dustMagnetite> * 7)
-    .output(<minecraft:iron_ingot> * 3)
+primitive_blast_furnace.recipeBuilder()
+    .inputs(<ore:dustMagnetite> * 7)
+    .outputs(<minecraft:iron_ingot> * 3)
     .duration(1000)
-    .fuelAmount(1)
+    .inputs(fuel * 1)
     .buildAndRegister();
 	
-PBFRecipeBuilder.start()
-    .input(<ore:dustVanadiumMagnetite> * 8)
-    .output(<minecraft:iron_ingot> * 3)
+primitive_blast_furnace.recipeBuilder()
+    .inputs(<ore:dustVanadiumMagnetite> * 8)
+    .outputs(<minecraft:iron_ingot> * 3)
     .duration(1000)
-    .fuelAmount(1)
+    .inputs(fuel * 1)
     .buildAndRegister();
 	
-PBFRecipeBuilder.start()
-    .input(<ore:dustBandedIron> * 5)
-    .output(<minecraft:iron_ingot> * 2)
+primitive_blast_furnace.recipeBuilder()
+    .inputs(<ore:dustBandedIron> * 5)
+    .outputs(<minecraft:iron_ingot> * 2)
     .duration(1000)
-    .fuelAmount(1)
+    .inputs(fuel * 1)
     .buildAndRegister();
 	
-PBFRecipeBuilder.start()
-    .input(<ore:dustBrownLimonite> * 4)
-    .output(<minecraft:iron_ingot> * 1)
+primitive_blast_furnace.recipeBuilder()
+    .inputs(<ore:dustBrownLimonite> * 4)
+    .outputs(<minecraft:iron_ingot> * 1)
     .duration(1000)
-    .fuelAmount(1)
+    .inputs(fuel * 1)
     .buildAndRegister();
 	
-PBFRecipeBuilder.start()
-    .input(<ore:dustYellowLimonite> * 4)
-    .output(<minecraft:iron_ingot> * 1)
+primitive_blast_furnace.recipeBuilder()
+    .inputs(<ore:dustYellowLimonite> * 4)
+    .outputs(<minecraft:iron_ingot> * 1)
     .duration(1000)
-    .fuelAmount(1)
+    .inputs(fuel * 1)
     .buildAndRegister();
 	
-PBFRecipeBuilder.start()
-    .input(<ore:dustPyrite> * 2)
-    .output(<minecraft:iron_ingot> * 1)
+primitive_blast_furnace.recipeBuilder()
+    .inputs(<ore:dustPyrite> * 2)
+    .outputs(<minecraft:iron_ingot> * 1)
     .duration(1000)
-    .fuelAmount(1)
+    .inputs(fuel * 1)
     .buildAndRegister();
 	
-PBFRecipeBuilder.start()
-    .input(<ore:dustNickel> * 1)
-    .output(<ore:ingotNickel>.firstItem * 1)
+primitive_blast_furnace.recipeBuilder()
+    .inputs(<ore:dustNickel> * 1)
+    .outputs(<ore:ingotNickel>.firstItem * 1)
     .duration(1000)
-    .fuelAmount(1)
+    .inputs(fuel * 1)
     .buildAndRegister();
 	
-PBFRecipeBuilder.start()
-    .input(<ore:dustGarnierite> * 2)
-    .output(<ore:ingotNickel>.firstItem * 1)
+primitive_blast_furnace.recipeBuilder()
+    .inputs(<ore:dustGarnierite> * 2)
+    .outputs(<ore:ingotNickel>.firstItem * 1)
     .duration(1000)
-    .fuelAmount(1)
+    .inputs(fuel * 1)
     .buildAndRegister();
 	
-PBFRecipeBuilder.start()
-    .input(<ore:dustPentlandite> * 17)
-    .output(<ore:ingotNickel>.firstItem * 9)
+primitive_blast_furnace.recipeBuilder()
+    .inputs(<ore:dustPentlandite> * 17)
+    .outputs(<ore:ingotNickel>.firstItem * 9)
     .duration(1000)
-    .fuelAmount(1)
+    .inputs(fuel * 1)
     .buildAndRegister();
+	
+}
 	
 //-----Quartz Grindstone ores -----
 val OreMap = {

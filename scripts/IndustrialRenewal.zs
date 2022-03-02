@@ -132,7 +132,7 @@ recipes.addShaped("irw_frame", <industrialrenewal:frame>*6, [
 ]);
 
 recipes.addShaped("irw_catwalk_hatch", <industrialrenewal:catwalk_hatch>, [
-	[<ore:plateSteel>, <engineersdoors:trapdoor_steel>, <ore:plateSteel>],
+	[<ore:plateSteel>, <minecraft:iron_trapdoor>, <ore:plateSteel>],
 	[<ore:stickSteel>, <minecraft:ladder>, <ore:stickSteel>],
 	[<ore:stickSteel>, <ore:stickSteel>, <ore:stickSteel>]
 ]);
@@ -146,13 +146,13 @@ recipes.addShaped("irw_bunker_hatch", <industrialrenewal:bunker_hatch>, [
 recipes.addShaped("irw_steel_drill", <industrialrenewal:drill_steel>, [
 	[null, <ore:stickSteel>, null],
 	[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>],
-	[<ore:plateSteel>, <immersiveengineering:drillhead>, <ore:plateSteel>]
+	[<ore:plateSteel>, <metaitem:toolHeadDrillSteel>, <ore:plateSteel>]
 ]);
 
 recipes.addShaped("irw_diamond_drill", <industrialrenewal:drill_diamond>, [
 	[null, <ore:stickSteel>, null],
 	[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>],
-	[<ore:plateDiamond>, <immersiveengineering:drillhead>, <ore:plateDiamond>]
+	[<ore:plateDiamond>, <metaitem:toolHeadDrillSteel>, <ore:plateDiamond>]
 ]);
 
 recipes.addShaped("irw_hazard_block", <industrialrenewal:block_hazard>*32, [
@@ -324,7 +324,7 @@ recipes.addShaped("irw_electric_gate", <industrialrenewal:electric_gate>, [
 ]);
 
 fluid_canner.recipeBuilder().EUt(30).duration(20)
-	.inputs(<immersiveengineering:toolupgrade:0>)
+	.inputs(<techguns:itemshared:24>)
 	.fluidInputs(<liquid:carbon_dioxide>*1000)
 	.outputs(<industrialrenewal:item_fire_extinguisher>)
 	.buildAndRegister();

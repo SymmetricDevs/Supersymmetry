@@ -1,3 +1,4 @@
+#norun
 #priority 496
 
 import crafttweaker.item.IIngredient;
@@ -5,10 +6,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.gregtech.recipe.RecipeMap;
-import mods.gtadditions.recipe.Utils;
-import mods.gtadditions.recipe.LargeRecipeMap;
-import mods.gtadditions.recipe.GARecipeMaps;
-
+#norun
 import scripts.thermodynamics.ICryoGas.ICryoGas;
 import scripts.thermodynamics.ISuperconductor.ISuperconductor;
 import scripts.thermodynamics.thermo;
@@ -30,7 +28,7 @@ val Superconductors as ISuperconductor[] = [
 
 
 for SC in Superconductors {
-	mods.gtadditions.recipe.Utils.removeRecipeByOutput(chemical_bath, [SC.getSC(16)], null, false);
+	//mods.gtadditions.recipe.Utils.removeRecipeByOutput(chemical_bath, [SC.getSC(16)], null, false);
 	for CryoGas in thermo.CryoGases {
 		if(SC.getCriticalTemperature() > CryoGas.getTemperature()){
 			chemical_bath.recipeBuilder()

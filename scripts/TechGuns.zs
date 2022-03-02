@@ -8,8 +8,6 @@ import mods.techguns.ArmorStats;
 
 
 val name_removals as string[] = [
-		"immersiveengineering:tool/revolver",
-		"immersiveengineering:metal_devices/tesla_coil",
 		"techguns:itemshared_38_ironbarrel",
 		"techguns:revolver",
 		"techguns:goldenrevolver",
@@ -88,18 +86,6 @@ recipes.addShaped("stone_bullets", <techguns:itemshared:0>*16, [
 	[null, null, null]
 ]);
 
-recipes.addShaped("ie_revolver", <immersiveengineering:revolver>, [
-	[<ore:gregScrewDrivers>, <ore:gregWrenches>, <ore:gregFiles>],
-	[<immersiveengineering:material:14>, <immersiveengineering:material:15>, <immersiveengineering:material:16>],
-	[null, <ore:plateSteel>, <immersiveengineering:material:13>]
-]);
-
-recipes.addShaped("ie_tesla_coil", <immersiveengineering:metal_device1:8>, [
-	[<ore:plateCurvedSteel>, <ore:plateCurvedSteel>, <ore:plateCurvedSteel>],
-	[<ore:gregScrewDrivers>, <ore:coilCopper>, <ore:gregWrenches>],
-	[<immersiveengineering:connector:8>, <ore:coilCopper>, <immersiveengineering:metal_device0:2>]
-]);
-
 recipes.addShaped("iron_barrel", <techguns:itemshared:38>, [
 	[null, <ore:gregFiles>, null],
 	[<ore:gregScrewDrivers>, <ore:stickIron>, <ore:gregHardHammers>],
@@ -108,7 +94,7 @@ recipes.addShaped("iron_barrel", <techguns:itemshared:38>, [
 
 recipes.addShaped("techguns_revolver", <techguns:revolver>, [
 	[<ore:gregScrewDrivers>, <ore:gregWrenches>, <ore:gregFiles>],
-	[<techguns:itemshared:37>, <immersiveengineering:material:15>, <immersiveengineering:material:16>],
+	[<techguns:itemshared:37>, <ore:plateCurvedSteel>, <ore:boltSteel>],
 	[null, <ore:plateSteel>, <techguns:itemshared:42>]
 ]);
 

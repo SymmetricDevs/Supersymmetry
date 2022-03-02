@@ -1,3 +1,4 @@
+#norun
 import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.recipe.RecipeMaps;
 import mods.gregtech.recipe.FuelRecipe;

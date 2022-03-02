@@ -1,3 +1,4 @@
+#norun
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
@@ -143,7 +144,9 @@ val name_removals = [
 	"immersiveengineering:armor/faraday_helm",
 	"immersiveengineering:metal_devices/turret_chemthrower",
 	"immersiveengineering:metal_devices/turret_gun",
-	"immersiveengineering:material/dust_electrum"
+	"immersiveengineering:material/dust_electrum",
+	"immersiveengineering:stone_decoration/concrete2",
+	"immersiveengineering:stone_decoration/concrete"
 ] as string[];
 
 for item in name_removals {
@@ -630,6 +633,12 @@ recipes.addShaped("ie_garden_cloche", <immersiveengineering:metal_device1:13>, [
 	[<ore:paneGlass>, circuits[0], <ore:paneGlass>],
 	[<ore:paneGlass>, null, <ore:paneGlass>],
 	[<ore:plankTreatedWood>, <immersiveengineering:material:8>, <ore:plankTreatedWood>]
+]);
+
+recipes.addShaped("ie_concrete_conversion", <immersiveengineering:stone_decoration:5>, [
+	[null, null, null],
+	[null, <gregtech:concrete:0>, null],
+	[null, null, null]
 ]);
 
 alloy_smelter.recipeBuilder()

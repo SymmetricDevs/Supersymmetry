@@ -110,7 +110,7 @@ for solder in soldering_alloys {
 			<openmodularturrets:intermediate_regular:0>,
 			circuits[1],
 			motors[1]*2,
-			<immersiveengineering:chemthrower>
+			pumps[1]
 		])
 		.fluidInputs(solder*72)
 		.outputs(<openmodularturrets:incendiary_turret>)

@@ -56,7 +56,7 @@ hot_iron_rod.register();
 voltaic_pile.register();
 electrolyte_paper.register();
 
-//-----------------------------------STEAM AGE ITEMS-----------------------------------
+//-----------------------------------STEAM AGE-----------------------------------
 
 var vacuum_ejector_cascade = VanillaFactory.createItem("vacuum_ejector_cascade");
 vacuum_ejector_cascade.maxStackSize = 1;
@@ -71,7 +71,7 @@ unsoldered_vacuum_ejector.register();
 var unfinished_vacuum_tube = VanillaFactory.createItem("unfinished_vacuum_tube");
 unfinished_vacuum_tube.register();
 
-//-----------------------------------MV AGE ITEMS-----------------------------------
+//-----------------------------------MV AGE-----------------------------------
 
 var engine_block_cast = VanillaFactory.createItem("engine_block_cast");
 var full_engine_block_cast = VanillaFactory.createItem("full_engine_block_cast");
@@ -79,6 +79,13 @@ var engine_block = VanillaFactory.createItem("engine_block");
 engine_block_cast.register();
 full_engine_block_cast.register();
 engine_block.register();
+
+//-----------------------------------HV AGE-----------------------------------
+
+//-----------------------------------EV AGE-----------------------------------
+
+var vacuum_casing = VanillaFactory.createBlock("vacuum_casing", <blockmaterial:iron>);
+vacuum_casing.register();
 
 //-----------------------------------PLANET BLOCKS-----------------------------------
 

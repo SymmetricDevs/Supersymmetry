@@ -103,7 +103,24 @@ val name_removals as string[] = [
 	"biomesoplenty:boat_jacaranda",
 	"biomesoplenty:boat_mahogany",
 	"biomesoplenty:boat_ebony",
-	"biomesoplenty:boat_eucalyptus"
+	"biomesoplenty:boat_eucalyptus",
+	"minecraft:white_concrete_powder",
+	"minecraft:orange_concrete_powder",
+	"minecraft:magenta_concrete_powder",
+	"minecraft:light_blue_concrete_powder",
+	"minecraft:yellow_concrete_powder",
+	"minecraft:lime_concrete_powder",
+	"minecraft:white_concrete_powder",
+	"minecraft:pink_concrete_powder",
+	"minecraft:gray_concrete_powder",
+	"minecraft:light_gray_concrete_powder",
+	"minecraft:cyan_concrete_powder",
+	"minecraft:purple_concrete_powder",
+	"minecraft:blue_concrete_powder",
+	"minecraft:brown_concrete_powder",
+	"minecraft:green_concrete_powder",
+	"minecraft:red_concrete_powder",
+	"minecraft:black_concrete_powder"
 ];
 
 for item in name_removals {
@@ -366,6 +383,39 @@ for stone in furnace_materials {
 		[stone, stone, stone]
 	]);
 	i+=1;
+}
+
+val dyes as IOreDictEntry[] = [
+	<ore:dyeWhite>,
+	<ore:dyeOrange>,
+	<ore:dyeMagenta>,
+	<ore:dyeLightBlue>,
+	<ore:dyeYellow>,
+	<ore:dyeLime>,
+	<ore:dyePink>,
+	<ore:dyeGray>,
+	<ore:dyeLightGray>,
+	<ore:dyeCyan>,
+	<ore:dyePurple>,
+	<ore:dyeBlue>,
+	<ore:dyeBrown>,
+	<ore:dyeGreen>,
+	<ore:dyeRed>,
+	<ore:dyeBlack>
+];
+
+for i in 0 to dyes.length {
+	recipes.addShapeless("dye_concrete" + i, <minecraft:concrete>.definition.makeStack(i)*8, [
+		<ore:concrete>,
+		<ore:concrete>,
+		<ore:concrete>,
+		<ore:concrete>,
+		<ore:concrete>,
+		<ore:concrete>,
+		<ore:concrete>,
+		<ore:concrete>,
+		dyes[i]
+	]);
 }
 
 //Max stack size changes

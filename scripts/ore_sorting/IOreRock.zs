@@ -7,9 +7,6 @@ import crafttweaker.liquid.ILiquidStack;
 import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.recipe.RecipeMaps;
 import mods.gregtech.recipe.RecipeBuilder;
-import mods.gtadditions.recipe.Utils;
-import mods.gtadditions.recipe.LargeRecipeMap;
-import mods.gtadditions.recipe.GARecipeMaps;
 
 zenClass IOreRock{
 	val rock as IItemStack;

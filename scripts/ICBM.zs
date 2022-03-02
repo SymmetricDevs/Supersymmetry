@@ -1,3 +1,4 @@
+#norun
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
@@ -201,7 +202,7 @@ for solder in soldering_alloys {
 			//EMP
 			weapons_factory.recipeBuilder()
 				.inputs([
-					<gtadditions:ga_cell_casing>,
+					<gregtech:metal_casing:3>,
 					<ore:plateStainlessSteel>*2,
 					<ore:wireGtSingleHvSuperconductor>*8,
 					<metaitem:fluid_cell>*2

@@ -1,3 +1,4 @@
+#norun
 #priority 999
 
 import mods.devtech.machines.RegisterMachine;
