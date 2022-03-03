@@ -112,7 +112,7 @@
             "tooltip": "§7Join the §9§lDiscord§7 to talk with other players!§r",
             "action": {
                 "type": "openLink",
-                "link": "https://discord.gg/BNbbK98rh6" //TODO: Put link
+                "link": "https://discord.gg/zYSxDZxQDn" 
             }
         },
 		"github": {
@@ -129,7 +129,25 @@
 			"imageHeight": 20,
 			"action": {
 				"type": "openLink",
-				"link": "https://github.com/Zalgo239/Supersymmetry/issues" 
+				"link": "https://github.com/Zalgo239/Supersymmetry" 
+			}
+		},
+
+		"googledocs":{
+			"text": "§3Datasheets§3",
+			"posX": -101,
+			"posY": 141,
+			"width": 98,
+			"height": 20,
+			"alignment": "top_right",
+			"texture": "supersymmetry:mainmenu/button.png",
+			"clickSound": "block.lever.click",
+			"tooltip": "§rNeed help with finding ore veins, or other game information? The Datasheets are here!§r",
+			"imageWidth": 100,
+			"imageHeight": 20,
+			"action": {
+				"type": "openLink",
+				"link": "https://docs.google.com/spreadsheets/d/1Fs8qD99pRDpkTqtLE6fJlXYYXZNGlIo_1DkdGxqAbm0/edit?usp=sharing" 
 			}
 		},
 		"accounts": {
@@ -240,7 +258,8 @@
                     "supersymmetry:backgrounds/04.png",
                     "supersymmetry:backgrounds/05.png",
                     "supersymmetry:backgrounds/06.png",
-					"supersymmetry:backgrounds/07.png"
+		    "supersymmetry:backgrounds/07.png"
+
 				],
 				"shuffle": true,
 				"displayDuration": 90,
