@@ -1,0 +1,197 @@
+{
+  enabled: false
+  caveBlocks: [
+    {
+      states: water
+      height: [
+        12
+        63
+      ]
+    }
+    {
+      states: magma
+      height: 11
+      integrity: 0.025
+    }
+    {
+      states: obsidian
+      height: 11
+    }
+    {
+      states: lava
+      height: [
+        0
+        10
+      ]
+    }
+  ]
+  wallDecorators: [
+    {
+      states: gravel
+      height: [
+        5
+        63
+      ]
+      matchers: [
+        stone
+        dirt
+      ]
+      directions: down
+      integrity: 0.25
+    }
+  ]
+  burrows: [
+    {
+      radius: 2.5
+      target: 0.065
+      branches: {
+        count: 8
+        chance: 0.8
+        systemChance: 0
+      }
+      offset: {
+        range: [
+          20
+          40
+        ]
+      }
+    }
+  ]
+  caverns: [
+    {
+      height: [
+        0
+        25
+      ]
+      stretch: 0.75
+      floor: {
+        range: [
+          1
+          9
+        ]
+      }
+    }
+  ]
+  tunnels: [
+    {
+      height: [
+        8
+        128
+      ]
+      count: 3
+      chance: 0.25
+      systemChance: 0.01
+      systemDensity: 2
+      noiseYReduction: false
+      checkWater: false
+    }
+  ]
+  ravines: [
+    {
+      height: [
+        18
+        69
+      ]
+      chance: 0.007692307692307693
+      cutoffStrength: 0.3
+      noiseYFactor: 0.8
+      pitch: [
+        1.5
+        1
+      ]
+      dPitch: [
+        0.1
+        0
+        0.95
+      ]
+      walls: {
+        frequency: 0.05
+      }
+      checkWater: false
+    }
+    {
+      height: [
+        18
+        69
+      ]
+      chance: 0.004
+      cutoffStrength: 0
+      pitch: [
+        1.5
+        2.5
+      ]
+      dPitch: [
+        0.1
+        0
+        0.95
+      ]
+      scale: [
+        4.5
+        2
+        1
+      ]
+      stretch: [
+        0.25
+        0.15
+        1
+      ]
+      checkWater: false
+    }
+  ]
+  clusters: [
+    {
+      states: stone:5
+      chance: 0.01
+      radiusX: [
+        16
+        23
+      ]
+      radiusY: [
+        11
+        18
+      ]
+      radiusZ: [
+        16
+        23
+      ]
+      centerHeight: [
+        20
+        32
+      ]
+    }
+    {
+      states: stone:3
+      chance: 0.01
+      centerHeight: [
+        49
+        58
+      ]
+    }
+    {
+      states: stone:1
+      chance: 0.015
+      radiusX: [
+        20
+        27
+      ]
+      radiusY: [
+        15
+        22
+      ]
+      radiusZ: [
+        20
+        27
+      ]
+      centerHeight: [
+        5
+        12
+      ]
+    }
+  ]
+  stalactites: []
+  biomes: {
+    types: [
+      OCEAN
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+{
+  enabled: false
+  caveBlocks: {
+    states: lava
+    height: [
+      0
+      10
+    ]
+  }
+  replaceableBlocks: [
+    stone
+    dirt
+    clay
+    leaves
+    sandstone
+    stone:3
+  ]
+  caverns: {
+    height: [
+      45
+      83
+    ]
+    generators: {
+      threshold: -0.5
+    }
+  }
+  stalactites: [
+    {
+      type: stalactite
+      state: stone
+      length: [
+        4
+        7
+      ]
+      height: [
+        45
+        83
+      ]
+      space: 3
+      size: large
+      chance: 0.024
+    }
+    {
+      type: speleothem
+      state: stone
+      length: [
+        8
+        14
+      ]
+      height: [
+        45
+        83
+      ]
+      space: 8
+      size: giant
+      chance: 0.016
+    }
+    {
+      type: speleothem
+      state: stone
+      length: [
+        6
+        8
+      ]
+      height: [
+        45
+        83
+      ]
+      space: 5
+      size: giant
+      chance: 0.004
+    }
+  ]
+  biomes: {
+    names: [
+      birch_forest_hills
+      mutated_birch_forest
+      mutated_birch_forest_hills
+      desert_hills
+      extreme_hills
+      extreme_hills_with_trees
+      mutated_extreme_hills
+      mutated_extreme_hills_with_trees
+      smaller_extreme_hills
+      mutated_forest
+      jungle_hills
+      mutated_jungle
+      mutated_jungle_edge
+      mesa_rock
+      mesa_clear_rock
+      mutated_mesa
+      mutated_mesa_rock
+      mutated_mesa_clear_rock
+      redwood_taiga_hills
+      mutated_redwood_taiga_hills
+      savanna_rock
+      mutated_savanna
+      mutated_savanna_rock
+      mutated_swampland
+      taiga_hills
+      mutated_taiga
+    ]
+  }
+}

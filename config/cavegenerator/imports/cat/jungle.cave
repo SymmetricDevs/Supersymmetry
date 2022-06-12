@@ -1,0 +1,146 @@
+{
+  imports: [
+    cat/common.cave::half_rel()
+    cat/common.cave::full_rel()
+    cat/common.cave::bottom_ost()
+    types.cave::vines()
+    types.cave::roots()
+    types.cave::simple_generator()
+    blocks.cave::COARSE_DIRT
+  ]
+  variables: {
+    ROOT_HEIGHT: $half_rel(5, 56)
+    ROOT_REPLACEABLE: [ "stone", "dirt", "air", "clay", "water" ]
+    POND_RANGE: 2
+    # Generic configurations for spawining
+    # one of the bush features.
+    # Parameters:
+    #  @1 -> filename
+    bush(): {
+      name: @1
+      # Todo: this is based on the default burrow offset
+      height: $half_rel(10, 30)
+      count: 6
+      chance: 0.25
+      offset: [ 0, 0, 0 ]
+      directions: down
+      rotateRandomly: false
+      matchers: [ "stone", "dirt", "$COARSE_DIRT", "gravel", "mossy_cobblestone" ]
+      airChecks: [
+        [ 1, 2, 1 ]
+        [ 0, 2, -1 ]
+        [ -1, 2, 0 ]
+        [ -1, 2, -1 ]
+      ]
+    }
+    # Generic configurations for spawning
+    # hanging spawning features.
+    # Parameters:
+    #  @1 -> filename
+    spawner(): {
+      name: @1
+      height: $half_rel(10, 40)
+      chance: 0.1
+      offset: [ 0, -4, 0 ]
+      directions: up
+      matchers: [ "stone", "dirt" ]
+      airChecks: [
+        [ 0, -6, 0 ]
+      ]
+    }
+  }
+  replaceableBlocks: [
+    stone
+    dirt
+    grass
+    clay
+    vine:1
+    vine:2
+    vine:4
+    vine:8
+    mossy_cobblestone
+    gravel
+    leaves
+    $COARSE_DIRT
+  ]
+  replaceDecorators: false
+  wallDecorators: [
+    {
+      states: leaves
+      directions: [ "up", "side" ]
+      integrity: 0.35
+      placement: overlay
+      height: $full_rel(47, 78)
+      matchers: [ "stone", "dirt" ]
+      noise: $simple_generator(-0.25)
+    }
+    {
+      states: $COARSE_DIRT
+      height: $half_rel(10, 45)
+      integrity: 0.4
+      directions: down
+      matchers: dirt
+    }
+    {
+      states: gravel
+      height: $half_rel(10, 45)
+      integrity: 0.2
+      directions: down
+    }
+    {
+      states: mossy_cobblestone
+      height: $half_rel(10, 45)
+      integrity: 0.1
+      directions: down
+    }
+    $vines(0.1, [10, 30])
+  ]
+  tunnels: [
+    # Modified openings from generic.cave
+    {
+      height: $full_rel(8, 128)
+      count: 6
+      chance: 0.25
+      systemChance: 0.01
+      systemDensity: 2
+      noiseYReduction: false
+    }
+    $roots(5, $ROOT_HEIGHT, 1, 3, $ROOT_REPLACEABLE)
+  ]
+  burrows: {
+    radius: 3.5
+    target: 0.075
+    branches: {
+      count: 7
+      chance: 0.075
+      systemChance: 0
+      resizeBranches: false
+      scale: [ 1.5, 0.9 ]
+      stretch: [ 0.7, 0, 1, 0.05 ]
+      dPitch: [ 0, 0, 1, 1 ]
+      # Don't let the ponds dig deeper
+      ponds: []
+    }
+    offset: {
+      range: $half_rel(10, 30)
+    }
+    ponds: {
+      height: $bottom_ost(4, 4 + $POND_RANGE)
+      depth: 1
+      states: water
+    }
+  }
+  clusters: {
+    states: [ "dirt", "dirt", "dirt", "clay" ]
+    radius: [ 20, 35 ]
+    centerHeight: $half_rel(28, 50)
+  }
+  structures: [
+    $bush(bush1_sm)
+    $bush(bush2_sm)
+    $bush(bush3_sm)
+    $bush(bush4_med)
+    $spawner(hanging_spawner_zombie)
+    $spawner(hanging_spawner_skeleton)
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  enabled: true
+  caveBlocks: {
+    states: lava
+    height: [
+      0
+      10
+    ]
+  }
+  burrows: [
+    {
+      radius: 2.5
+      target: 0.065
+      branches: {
+        count: 7
+        chance: 0.4
+        systemChance: 0
+      }
+      offset: {
+        range: [
+          20
+          40
+        ]
+      }
+    }
+    {
+      replaceableBlocks: [
+        hardened_clay
+        stained_hardened_clay:8
+        stained_hardened_clay:9
+        clay
+        stone
+        sandstone
+        sand
+      ]
+      radius: 3.5
+      target: 0.075
+      height: [
+        25
+        75
+      ]
+      offset: {
+        range: [
+          30
+          70
+        ]
+        frequency: 0.006
+        seed: 10
+      }
+    }
+  ]
+  caverns: [
+    {
+      generators: {
+        threshold: -0.7
+        stretch: 0.25
+        perturb: true
+        perturbFreq: 0.35
+      }
+      height: [
+        5
+        50
+      ]
+    }
+  ]
+  clusters: [
+    {
+      states: [
+        hardened_clay
+        stained_hardened_clay:8
+        stained_hardened_clay:9
+        clay
+      ]
+      chance: 0.06
+      radius: [
+        30
+        40
+      ]
+      radiusY: [
+        5
+        7
+      ]
+      centerHeight: [
+        15
+        45
+      ]
+    }
+  ]
+  stalactites: {
+    type: speleothem
+    state: stone
+    matchers: stone
+    length: [
+      4
+      5
+    ]
+    space: 4
+    chance: 0.1
+  }
+  optionalLavaAquifers: {
+    height: [
+      5
+      50
+    ]
+    deferred: true
+    generators: {
+      threshold: [
+        -1
+        -0.6
+      ]
+      frequency: 0.01
+    }
+    ceiling: {
+      range: [
+        -4
+        -8
+      ]
+    }
+    floor: {
+      range: [
+        25
+        65
+      ]
+      frequency: 0.006
+      seed: 10
+    }
+    caveBlocks: {
+      states: lava
+      height: [
+        0
+        255
+      ]
+    }
+    shell: {
+      radius: 2
+      decorators: [
+        {
+          states: magma
+          height: [
+            0
+            255
+          ]
+          integrity: 0.5
+        }
+        {
+          states: stone
+          height: [
+            0
+            255
+          ]
+          matchers: air
+          integrity: 1
+        }
+      ]
+    }
+  }
+  biomes: {
+    types: [
+      SANDY
+    ]
+  }
+}

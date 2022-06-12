@@ -1,0 +1,68 @@
+{
+  enabled: false
+  caveBlocks: {
+    states: lava
+    height: [
+      0
+      10
+    ]
+  }
+  blacklistBiomes: true
+  biomes: {
+    names: [
+      birch_forest_hills
+      mutated_birch_forest
+      mutated_birch_forest_hills
+      desert_hills
+      extreme_hills
+      extreme_hills_with_trees
+      mutated_extreme_hills
+      mutated_extreme_hills_with_trees
+      smaller_extreme_hills
+      mutated_forest
+      jungle_hills
+      mutated_jungle
+      mutated_jungle_edge
+      mesa_rock
+      mesa_clear_rock
+      mutated_mesa
+      mutated_mesa_rock
+      mutated_mesa_clear_rock
+      redwood_taiga_hills
+      mutated_redwood_taiga_hills
+      savanna_rock
+      mutated_savanna
+      mutated_savanna_rock
+      mutated_swampland
+      taiga_hills
+      mutated_taiga
+    ]
+  }
+  ravines: {
+    replaceableBlocks: [
+      stone
+      dirt
+      grass
+      sandstone
+      sand
+    ]
+    chance: 0.0035
+    height: [
+      8
+      128
+    ]
+    originHeight: [
+      67
+      69
+    ]
+    scale: [
+      -1.5
+      0.5
+    ]
+    stretch: [
+      10
+      1
+    ]
+    cutoffStrength: 0
+  }
+}

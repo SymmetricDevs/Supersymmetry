@@ -1,0 +1,35 @@
+# This feature should be one of the last to spawn.
+{
+  enabled: false
+  tunnels: {
+    count: 2
+    height: [ 6, 20 ]
+    replaceSolidBlocks: true
+    hasBranches: false
+    chance: 0.125
+    distance: 15
+    systemChance: 0
+    shell: {
+      radius: 2
+      sphereResolution: 1
+      decorators: {
+        states: obsidian
+        matchers: stone
+        integrity: 0.8
+      }
+    }
+    caveBlocks: [
+      {
+        states: [ "lava", "diamond_ore", "emerald_ore", "gold_ore" ]
+        integrity: 0.05
+      }
+      {
+        states: gravel
+        integrity: 0.5
+      }
+      {
+        states: stone
+      }
+    ]
+  }
+}

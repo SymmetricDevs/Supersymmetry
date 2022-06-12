@@ -1,0 +1,76 @@
+{
+  imports: [
+    cat/common.cave::half_rel()
+    blocks.cave::COARSE_DIRT
+  ]
+  variables: {
+    mushroom(): {
+      name: @1
+      height: $half_rel(10, 45)
+      matchers: mycelium
+      directions: down
+      count: 4
+      chance: 0.35
+      airChecks: [
+        [ 0, 8, 0 ]
+        [ 2, 6, 2 ]
+        [ -2, 6, 2 ]
+        [ 2, 6, -2 ]
+        [ -2, 6, -2 ]
+      ]
+    }
+  }
+  shell: {
+    radius: 3
+    decorators: {
+      states: dirt
+      height: [ 0, 255 ]
+      noise: {
+        threshold: 0.1
+      }
+    }
+  }
+  wallDecorators: [
+    {
+      states: $COARSE_DIRT
+      matchers: dirt
+      directions: down
+      integrity: 0.2
+      height: [ 0, 255 ]
+    }
+    {
+      states: mycelium
+      matchers: dirt
+      directions: down
+      height: [ 0, 255 ]
+    }
+  ]
+  caverns: {
+    height: $half_rel(10, 55)
+    generators: {
+      threshold: -0.3
+      # octaves: 3
+      perturb: true
+      perturbFreq: 0.4
+    }
+    floor: {
+      frequency: 0.05
+      perturb: true
+      perturbFreq: 0.4
+      range: [ 0, 3 ]
+    }
+  }
+  structures: [
+    $mushroom(red_mushroom)
+    $mushroom(brown_mushroom_sm)
+    $mushroom(brown_mushroom_lg)
+    {
+      name: fossils/fossil_spine_03
+      offset: [ 0, -4, 0 ]
+      matchers: [ "stone", "mycelium" ]
+      directions: down
+      integrity: 0.7
+      chance: 0.03
+    }
+  ]
+}

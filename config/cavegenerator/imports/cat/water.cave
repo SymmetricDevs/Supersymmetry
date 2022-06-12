@@ -1,0 +1,35 @@
+{
+  imports: cat/common.cave::half_rel()
+  caveBlocks: [
+    # Fills y=(12-45) with water.
+    {
+      states: water
+      height: $half_rel(12, 63)
+    }
+    {
+      states: magma
+      height: 11
+      integrity: 0.025
+    }
+    # Manually places obsidian above lava.
+    {
+      states: obsidian
+      height: 11
+    }
+    # Imitates the normal lava placement behavior.
+    {
+      states: lava
+      height: [ 0, 10 ]
+    }
+  ]
+  wallDecorators: [
+    # Spawns gravel on the floor.
+    {
+      states: gravel
+      height: $half_rel(5, 63)
+      matchers: [ "stone", "dirt" ]
+      directions: down
+      integrity: 0.25
+    }
+  ]
+}

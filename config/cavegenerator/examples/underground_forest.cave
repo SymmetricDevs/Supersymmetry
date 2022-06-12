@@ -1,0 +1,221 @@
+# ----------------------------------------------------------- #
+# ########################################################### #
+#            ### underground_forest.cave Info ###             #
+# ########################################################### #
+#   This preset demonstrates a more fleshed-out use case of   #
+# this mod. It applies a variety of decorations to caves.     #
+# ----------------------------------------------------------- #
+{
+  imports: blocks.cave
+  enabled: false
+  pillars: [
+    # Quartz columns
+    {
+      state: quartz_block:2
+      stairBlock: quartz_stairs
+      length: [ 6, 12 ]
+    }
+  ]
+  # Showcasing how structures can be used to provide new kinds
+  # of decorations.
+  structures: [
+    # Extra fossils
+    {
+      name: fossils/fossil_spine_03
+      offset: [ 0, -4, 0 ]
+      matchers: [ "stone", "$ANDESITE", "grass", "gravel" ]
+      directions: down
+      integrity: 0.7
+      chance: 0.03
+    }
+    # Hanging spawners from cave ceilings.
+    {
+      name: hanging_spawner
+      offset: [ 0, -5, 0 ]
+      matchers: [ "stone", "$ANDESITE" ]
+      airChecks: [
+        [ 0, -6, 0 ] # Require air 6 blocks below the source.
+      ]
+      directions: up
+      chance: 0.15
+    }
+    # Giant red mushrooms
+    {
+      name: red_mushroom
+      offset: [ 0, 1, 0 ]
+      matchers: [ "stone", "$ANDESITE", "grass", "gravel" ]
+      directions: down
+      count: 2
+      chance: 0.09
+      height: [ 18, 40 ]
+    }
+  ]
+  # Some variety in terms of the stone that spawns underground.
+  clusters: [
+    # Giant andesite veins.
+    {
+      states: $ANDESITE
+      chance: 0.15
+      radiusX: [ 16, 23 ]
+      radiusY: [ 12, 19 ]
+      radiusZ: [ 16, 23 ]
+      centerHeight: [ 20, 32 ]
+    }
+  ]
+  # Relatively small and short caverns.
+  caverns: {
+    height: [ 6, 50 ]
+    generators: {
+      frequency: 0.0167
+      scale: 0.4
+      stretch: 0.3
+    }
+  }
+  # Imitates standard lava placement, 2 blocks lower.
+  caveBlocks: [
+    { states: "water", height: [ 0, 8 ] }
+  ]
+  # A variety of blocks on the ground and ceiling.
+  wallDecorators: [
+    # Patches of grass.
+    {
+      states: grass
+      height: [ 9, 50 ]
+      directions: down
+      matchers: [ "stone", "$ANDESITE" ]
+      placement: embed
+      noise: {}
+    }
+    # Sporadic gravel.
+    {
+      states: gravel
+      chance: 0.75
+      height: [ 9, 50 ]
+      directions: down
+      matchers: [ "stone", "$ANDESITE" ]
+      placement: embed
+    }
+    # Sporadic coarse dirt.
+    {
+      states: $COARSE_DIRT
+      chance: 0.3
+      height: [ 9, 50 ]
+      directions: down
+      matchers: [ "stone", "$ANDESITE" ]
+      placement: embed
+    }
+    # Lights on the ceiling.
+    {
+      states: sea_lantern
+      chance: 0.003
+      height: [ 9, 50 ]
+      directions: up
+      matchers: [ "stone", "$ANDESITE" ]
+      placement: embed
+    }
+    # Cobwebs on the ceiling.
+    {
+      states: web
+      chance: 0.001
+      height: [ 9, 50 ]
+      directions: up
+      matchers: [ "stone", "$ANDESITE" ]
+      placement: overlay
+    }
+    # Grass can be matched in this case because the original
+    # block was never replaced, i.e. replace_match was used.
+    # Spawns extra ferns on the ground.
+    {
+      states: tallgrass:2
+      chance: 0.05
+      height: [ 9, 50 ]
+      directions: down
+      matchers: grass
+      placement: overlay
+    }
+    # Extra tall grass on the ground.
+    {
+      states: tallgrass:1
+      chance: 0.2
+      height: [ 9, 50 ]
+      directions: down
+      matchers: grass
+      placement: overlay
+    }
+    # Poppies
+    {
+      states: red_flower
+      chance: 0.02
+      height: [ 9, 50 ]
+      directions: down
+      matchers: grass
+      placement: overlay
+    }
+    # Dandelions
+    {
+      states: yellow_flower
+      chance: 0.01
+      height: [ 9, 50 ]
+      directions: down
+      matchers: grass
+      placement: overlay
+    }
+    # Mushrooms
+    {
+      states: [ "red_mushroom", "brown_mushroom" ]
+      chance: 0.02
+      height: [ 9, 50 ]
+      directions: down
+      matchers: [ "grass", "stone", "$ANDESITE" ]
+      placement: overlay
+    }
+  ]
+  # Some hanging features.
+  stalactites: [
+    # Rare glowstone in the ceiling.
+    {
+      type: stalactite
+      state: glowstone
+      size: small
+      length: [ 1, 3 ]
+      height: [ 20, 40 ]
+      chance: 0.1
+      matchers: [ "stone", "$ANDESITE" ]
+      region: {
+        frequency: 0.0125
+        scale: 0.4
+      }
+    }
+    # Hanging leaves
+    {
+      type: stalactite
+      state: leaves:1
+      size: small
+      length: [ 1, 4 ]
+      height: [ 15, 50 ]
+      matchers: [ "stone", "$ANDESITE" ]
+      region: { frequency: 0.2 }
+    }
+    # Actual stalactites
+    {
+      type: stalactite
+      state: stone
+      size: medium
+      length: [ 4, 8 ]
+      height: [ 15, 50 ]
+      chance: 0.01
+      matchers: stone
+    }
+    # Small stone boulders
+    {
+      type: stalagmite
+      state: stone
+      size: medium
+      symmetrical: false
+      length: [ 1, 3 ]
+      height: [ 15, 50 ]
+      chance: 0.02
+      region: {}
+    }
+  ]
+}
