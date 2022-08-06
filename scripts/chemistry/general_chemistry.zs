@@ -5,6 +5,7 @@ import crafttweaker.oredict.IOreDictEntry;
 
 import mods.gregtech.recipe.RecipeMap;
 
+/*
 fluid_solidifier.recipeBuilder()
     .notConsumable(<metaitem:shape.mold.ball>)
     .fluidInputs(<liquid:ammonium_nitrate> * 250)
@@ -12,3 +13,4 @@ fluid_solidifier.recipeBuilder()
     .duration(40)
     .EUt(16)
     .buildAndRegister();
+*/

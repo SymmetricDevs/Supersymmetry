@@ -3,9 +3,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.gregtech.recipe.RecipeMap;
-import mods.gtadditions.recipe.Utils;
-import mods.gtadditions.recipe.LargeRecipeMap;
-import mods.gtadditions.recipe.GARecipeMaps;
 
 val name_removals as string[] = [
 	"gtadditions:ga_gregtech.machine.brewery.lv",
@@ -40,7 +37,7 @@ for item in name_removals{
 	recipes.removeByRecipeName(item);
 }
 
-Utils.removeRecipeByOutput(assembler, [<metaitem:circuit.vacuum_tube>], null, false);
+//Utils.removeRecipeByOutput(assembler, [<metaitem:circuit.vacuum_tube>], null, false);
 
 recipes.addShaped("tin_wire_rubber", <ore:cableGtSingleTin>.firstItem, [
 	[<ore:wireGtSingleTin>, <ore:plateRubber>, null],
@@ -78,12 +75,6 @@ recipes.addShaped("rubber_rod_manual", <ore:stickRubber>.firstItem, [
 	[null, null, null]
 ]);
 
-recipes.addShaped("gt_concrete_conversion", <gregtech:concrete:0>, [
-	[null, null, null],
-	[null, <immersiveengineering:stone_decoration:5>, null],
-	[null, null, null]
-]);
-
 //Manual chad for early paper
 val water_ingredient as IIngredient = <liquid:water>*1000;
 recipes.addShapeless("manual_chad", <ore:dustPaper>.firstItem, [
@@ -93,6 +84,7 @@ recipes.addShapeless("manual_chad", <ore:dustPaper>.firstItem, [
 ]);
 
 //Brewery recipes
+/*
 for i in 1 to voltageTiers.length{
 	recipes.addShaped("gt_brewery_" + voltageTiers[i], breweries[i], [
 		[tieredGlass[i], pumps[i], tieredGlass[i]],
@@ -114,8 +106,10 @@ alloy_smelter.recipeBuilder()
 	.duration(400)
 	.EUt(8)
 	.buildAndRegister();
-	
+*/
+
 //Vacuum tubes
+/*
 assembler.recipeBuilder()
 	.inputs([
 		<ore:platePaper>*2,
@@ -155,8 +149,9 @@ blast_furnace.recipeBuilder()
 	.duration(60)
 	.EUt(60)
 	.buildAndRegister();
+	*/
 
 //Primitive blast furnace disassembling removal
-disassembler.findRecipe(32, [<gregtech:machine:510>*1], null).remove();
+//disassembler.findRecipe(32, [<gregtech:machine:510>*1], null).remove();
 //TechGuns carbon plate removal
-fluid_solidifier.findRecipe(8, [<metaitem:shape.mold.plate>*1], [<liquid:carbon>*144]).remove();
+//fluid_solidifier.findRecipe(8, [<metaitem:shape.mold.plate>*1], [<liquid:carbon>*144]).remove();

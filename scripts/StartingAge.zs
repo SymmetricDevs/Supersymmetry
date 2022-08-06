@@ -3,6 +3,9 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
 
+import mods.gregtech.recipe.RecipeMap;
+import mods.gregtech.recipe.RecipeMaps;
+
 import crafttweaker.block.IBlock;
 import crafttweaker.block.IBlockDefinition;
 
@@ -16,7 +19,7 @@ val name_removals = [
 	"gtadditions:eight_clay_brick",
 	"notreepunching:misc/clay_tool_clay_brick",
 	"notreepunching:misc/clay_tool_clay_brick_2",
-	"gtadditions:ga_primitive_blast_furnace",
+	"gregtech:bronze_primitive_blast_furnace",
 	"gregtech:coke_oven",
 	"appliedenergistics2:misc/grindstone",
 	"notreepunching:tools/iron_saw",
@@ -78,15 +81,16 @@ for item in name_removals {
     recipes.removeByRecipeName(item);
 }
 
+
 val smelting_removals_binary = [
-	[<minecraft:brick>, <metaitem:compressed.clay>]
+	[<minecraft:brick>, <metaitem:compressed.clay>],
+	[<minecraft:brick>, <minecraft:clay_ball>]
 ] as IIngredient[][];
 
 for item in smelting_removals_binary {
 	furnace.remove(item[0], item[1]);
 }
 
-furnace.remove(<minecraft:brick>, <minecraft:clay_ball>);
 
 //Vanilla Brick Crafting
 recipes.addShaped("brick_x1", <notreepunching:clay_brick>*1, [
@@ -114,12 +118,13 @@ recipes.addShaped("ae2_grindstone", <appliedenergistics2:grindstone>, [
 	[<ore:cobblestone>, <ore:gemFlint>, <ore:cobblestone>]
 ]);
 
-//Hot Iron Rod Crafting
+/*Hot Iron Rod Crafting
 recipes.addShaped("hot_iron_rod", <contenttweaker:hot_iron_rod>, [
 	[<ore:gregFiles>, null, null],
 	[null, <metaitem:hot_iron_ingot>, null],
 	[null, null, null]
 ]);
+*/
 
 //Magnetite Chunk Crafting
 recipes.addShapeless("magnetite_chunk", <contenttweaker:magnetite_chunk>, [<ore:oreMagnetite>]);
@@ -251,7 +256,8 @@ primitive_blast_furnace.recipeBuilder()
     .buildAndRegister();
 	
 }
-	
+
+/*
 //-----Quartz Grindstone ores -----
 val OreMap = {
 	<ore:oreIron> : <ore:dustIron>.firstItem*2,
@@ -370,7 +376,7 @@ val OreMap = {
 for key in OreMap {
 	Grinder.addRecipe(OreMap[key], key, 1);
 }
-
+*/
 //NoTreePunching tool stats tweak
 
 <notreepunching:pickaxe/flint>.maxDamage = 200;

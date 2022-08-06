@@ -323,7 +323,7 @@ recipes.addShaped("irw_electric_gate", <industrialrenewal:electric_gate>, [
 	[<ore:stickSteel>, <ore:wireGtSingleSteel>, <ore:stickSteel>]
 ]);
 
-fluid_canner.recipeBuilder().EUt(30).duration(20)
+canner.recipeBuilder().EUt(30).duration(20)
 	.inputs(<techguns:itemshared:24>)
 	.fluidInputs(<liquid:carbon_dioxide>*1000)
 	.outputs(<industrialrenewal:item_fire_extinguisher>)

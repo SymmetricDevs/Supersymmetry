@@ -38,12 +38,12 @@ val GasMapMV as string[ILiquidStack] = {
 	<liquid:carbon_monoxide> : "gaspunk:carbon_monoxide",
 	<liquid:chlorine> : "gaspunk:chlorine",
 	<liquid:diborane> : "gaspunk:diborane",
-	<liquid:hydrogen_cyanide> : "gaspunk:hydrogen_cyanide",
+	<liquid:gtfo_hydrogen_cyanide> : "gaspunk:hydrogen_cyanide",
 	<liquid:radon> : "gaspunk:radon"
 };
 
 for key in GasMapMV {
-	fluid_canner.recipeBuilder()
+	canner.recipeBuilder()
 		.inputs([<minecraft:glass_bottle>])
 		.fluidInputs(key*100)
 		.outputs(<gaspunk:gas_tube>.withTag({"gaspunk:contained_gas": GasMapMV[key]}))

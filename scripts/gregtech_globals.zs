@@ -1,4 +1,4 @@
-#priority 1000
+#priority 10000
 
 //Script based on the gregtech_globals.zs script from the Gregicality Community Pack
 
@@ -7,6 +7,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 
+//Recipe Maps
 
 global alloy_smelter as RecipeMap =                 RecipeMap.getByName("alloy_smelter");
 global arc_furnace as RecipeMap =                   RecipeMap.getByName("arc_furnace");
@@ -37,7 +38,7 @@ global electrolyzer as RecipeMap =                  RecipeMap.getByName("electro
 global extractor as RecipeMap =                     RecipeMap.getByName("extractor");
 global extruder as  RecipeMap =                     RecipeMap.getByName("extruder");
 global fermenter as RecipeMap =                     RecipeMap.getByName("fermenter");
-global fluid_canner as RecipeMap =                  RecipeMap.getByName("fluid_canner");
+//global fluid_canner as RecipeMap =                  RecipeMap.getByName("fluid_canner");
 global fluid_extractor as RecipeMap =               RecipeMap.getByName("fluid_extractor");
 global fluid_heater as RecipeMap =                  RecipeMap.getByName("fluid_heater");
 global fluid_solidifier as RecipeMap =              RecipeMap.getByName("fluid_solidifier");
@@ -47,7 +48,7 @@ global fusion_reactor as RecipeMap =                RecipeMap.getByName("fusion_
 global gas_centrifuge as RecipeMap =                RecipeMap.getByName("gas_centrifuge");
 global green_house as RecipeMap =                   RecipeMap.getByName("green_house");
 global implosion_compressor as RecipeMap =          RecipeMap.getByName("implosion_compressor");
-global large_centrifuge as RecipeMap =              LargeRecipeMap.of(GARecipeMaps.LARGE_CENTRIFUGE_RECIPES);
+//global large_centrifuge as RecipeMap =              LargeRecipeMap.of(GARecipeMaps.LARGE_CENTRIFUGE_RECIPES);
 global large_chemical_reactor as RecipeMap =        RecipeMap.getByName("large_chemical_reactor");
 //global large_forge_hammer as RecipeMap =            LargeRecipeMap.of(GARecipeMaps.LARGE_FORGE_HAMMER_RECIPES);
 global large_mixer as RecipeMap =                   RecipeMap.getByName("large_mixer");
@@ -70,69 +71,70 @@ global weapons_factory as RecipeMap =               RecipeMap.getByName("weapons
 
 // Tiered Components
 
-global voltageTiers as string[] = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "umv", "uxv"];
+global voltageTiers as string[] = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
 
 global voltageTiersInt as int[] = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
+global voltAmps as int[] =        [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
 
 global circuits as IIngredient[] = [<ore:circuitPrimitive>, <ore:circuitBasic>, <ore:circuitGood>, 
     <ore:circuitAdvanced>, <ore:circuitExtreme>, <ore:circuitElite>, 
     <ore:circuitMaster>, <ore:circuitUltimate>, <ore:circuitSuperconductor>, 
     <ore:circuitInfinite>, <ore:circuitUev>, <ore:circuitUiv>, 
-    <ore:circuitUmv>, <ore:circuitUxv>];
+    <ore:circuitUxv>, <ore:circuitOpv>];
 
 global conveyors as IIngredient[] = [null, <metaitem:conveyor.module.lv>, <metaitem:conveyor.module.mv>, <metaitem:conveyor.module.hv>, 
     <metaitem:conveyor.module.ev>, <metaitem:conveyor.module.iv>, <metaitem:conveyor.module.luv>, 
     <metaitem:conveyor.module.zpm>, <metaitem:conveyor.module.uv>, <metaitem:conveyor.module.uhv>,
-    <metaitem:conveyor.module.uev>, <metaitem:conveyor.module.uiv>, <metaitem:conveyor.module.umv>,
+    <metaitem:conveyor.module.uev>, <metaitem:conveyor.module.uiv>, <metaitem:conveyor.module.opv>,
     <metaitem:conveyor.module.uxv>];
 
 global pumps as IIngredient[] = [null, <metaitem:electric.pump.lv>, <metaitem:electric.pump.mv>, <metaitem:electric.pump.hv>,
     <metaitem:electric.pump.ev>, <metaitem:electric.pump.iv>, <metaitem:electric.pump.luv>, 
     <metaitem:electric.pump.zpm>, <metaitem:electric.pump.uv>, <metaitem:electric.pump.uhv>,
-    <metaitem:electric.pump.uev>, <metaitem:electric.pump.uiv>, <metaitem:electric.pump.umv>,
-    <metaitem:electric.pump.uxv>];
+    <metaitem:electric.pump.uev>, <metaitem:electric.pump.uiv>, <metaitem:electric.pump.uxv>,
+    <metaitem:electric.pump.opv>];
 
 global field_generators as IIngredient[]= [null, <metaitem:field.generator.lv>, <metaitem:field.generator.mv>, <metaitem:field.generator.hv>, 
     <metaitem:field.generator.ev>, <metaitem:field.generator.iv>, <metaitem:field.generator.luv>, 
     <metaitem:field.generator.zpm>, <metaitem:field.generator.uv>, <metaitem:field.generator.uhv>,
-    <metaitem:field.generator.uev>, <metaitem:field.generator.uiv>, <metaitem:field.generator.umv>,
-    <metaitem:field.generator.uxv>];
+    <metaitem:field.generator.uev>, <metaitem:field.generator.uiv>, <metaitem:field.generator.uxv>,
+    <metaitem:field.generator.opv>];
 
 global emitters as IIngredient[] = [null, <metaitem:emitter.lv>, <metaitem:emitter.mv>, <metaitem:emitter.hv>, 
     <metaitem:emitter.ev>, <metaitem:emitter.iv>, <metaitem:emitter.luv>, 
     <metaitem:emitter.zpm>, <metaitem:emitter.uv>, <metaitem:emitter.uhv>,
-    <metaitem:emitter.uev>, <metaitem:emitter.uiv>, <metaitem:emitter.umv>,
-    <metaitem:emitter.uxv>];
+    <metaitem:emitter.uev>, <metaitem:emitter.uiv>, <metaitem:emitter.uxv>,
+    <metaitem:emitter.opv>];
 	
 global sensors as IIngredient[] = [null, <metaitem:sensor.lv>, <metaitem:sensor.mv>, <metaitem:sensor.hv>, 
     <metaitem:sensor.ev>, <metaitem:sensor.iv>, <metaitem:sensor.luv>, 
     <metaitem:sensor.zpm>, <metaitem:sensor.uv>, <metaitem:sensor.uhv>,
-    <metaitem:sensor.uev>, <metaitem:sensor.uiv>, <metaitem:sensor.umv>,
-    <metaitem:sensor.uxv>];
+    <metaitem:sensor.uev>, <metaitem:sensor.uiv>, <metaitem:sensor.uxv>,
+    <metaitem:sensor.opv>];
 
 global motors as IIngredient[] = [null, <metaitem:electric.motor.lv>, <metaitem:electric.motor.mv>, <metaitem:electric.motor.hv>, 
     <metaitem:electric.motor.ev>, <metaitem:electric.motor.iv>, <metaitem:electric.motor.luv>, 
     <metaitem:electric.motor.zpm>, <metaitem:electric.motor.uv>, <metaitem:electric.motor.uhv>,
-    <metaitem:electric.motor.uev>, <metaitem:electric.motor.uiv>, <metaitem:electric.motor.umv>,
-    <metaitem:electric.motor.uxv>];
+    <metaitem:electric.motor.uev>, <metaitem:electric.motor.uiv>, <metaitem:electric.motor.uxv>,
+    <metaitem:electric.motor.opv>];
 
 global pistons as IIngredient[] = [null, <metaitem:electric.piston.lv>, <metaitem:electric.piston.mv>, <metaitem:electric.piston.hv>, 
     <metaitem:electric.piston.ev>, <metaitem:electric.piston.iv>, <metaitem:electric.piston.luv>, 
     <metaitem:electric.piston.zpm>, <metaitem:electric.piston.uv>, <metaitem:electric.piston.uhv>,
-    <metaitem:electric.piston.uev>, <metaitem:electric.piston.uiv>, <metaitem:electric.piston.umv>,
-    <metaitem:electric.piston.uxv>];
+    <metaitem:electric.piston.uev>, <metaitem:electric.piston.uiv>, <metaitem:electric.piston.uxv>,
+    <metaitem:electric.piston.opv>];
 
 global robotArms as IIngredient[] = [null, <metaitem:robot.arm.lv>, <metaitem:robot.arm.mv>, <metaitem:robot.arm.hv>, 
     <metaitem:robot.arm.ev>, <metaitem:robot.arm.iv>, <metaitem:robot.arm.luv>, 
     <metaitem:robot.arm.zpm>, <metaitem:robot.arm.uv>, <metaitem:robot.arm.uhv>,
-    <metaitem:robot.arm.uev>, <metaitem:robot.arm.uiv>, <metaitem:robot.arm.umv>,
-    <metaitem:robot.arm.uxv>];
+    <metaitem:robot.arm.uev>, <metaitem:robot.arm.uiv>, <metaitem:robot.arm.uxv>,
+    <metaitem:robot.arm.opv>];
 
 global hulls as IIngredient[] = [<meta_tile_entity:hull.ulv>, <meta_tile_entity:hull.lv>, <meta_tile_entity:hull.mv>, <meta_tile_entity:hull.hv>, 
     <meta_tile_entity:hull.ev>, <meta_tile_entity:hull.iv>, <meta_tile_entity:hull.luv>,
     <meta_tile_entity:hull.zpm>, <meta_tile_entity:hull.uv>, <meta_tile_entity:gtadditions:hull.uhv>,
-    <meta_tile_entity:gtadditions:hull.uev>, <meta_tile_entity:gtadditions:hull.uiv>, <meta_tile_entity:gtadditions:hull.umv>,
-    <meta_tile_entity:gtadditions:hull.uxv>];
+    <meta_tile_entity:gtadditions:hull.uev>, <meta_tile_entity:gtadditions:hull.uiv>, <meta_tile_entity:gtadditions:hull.uxv>,
+    <meta_tile_entity:gtadditions:hull.opv>];
 
 global tieredWires as IIngredient[] = [<ore:wireGtSingleRedAlloy>, <ore:wireGtSingleTin>, <ore:wireGtSingleCopper>, <ore:wireGtSingleGold>, 
     <ore:wireGtSingleAluminium>, <ore:wireGtSingleTungsten>, <ore:wireGtSingleVanadiumGallium>, 
@@ -185,16 +187,16 @@ global intCircuit as function(int)IIngredient = function(i as int) as IIngredien
 global breweries as IItemStack[] = [null, <meta_tile_entity:gregtech:brewery.lv>, <meta_tile_entity:gregtech:brewery.mv>, <meta_tile_entity:gregtech:brewery.hv>,
 	<meta_tile_entity:gregtech:brewery.ev>, <meta_tile_entity:gtadditions:brewery.iv>, <meta_tile_entity:gtadditions:brewery.luv>,
 	<meta_tile_entity:gtadditions:brewery.zpm>, <meta_tile_entity:gtadditions:brewery.uv>, <meta_tile_entity:gtadditions:brewery.uhv>,
-	<meta_tile_entity:gtadditions:brewery.uev>, <meta_tile_entity:gtadditions:brewery.uiv>, <meta_tile_entity:gtadditions:brewery.umv>,
-	<meta_tile_entity:gtadditions:brewery.uxv>
+	<meta_tile_entity:gtadditions:brewery.uev>, <meta_tile_entity:gtadditions:brewery.uiv>, <meta_tile_entity:gtadditions:brewery.uxv>,
+	<meta_tile_entity:gtadditions:brewery.opv>
 ];
 */
 /*
 global distilleries as IItemStack[] = [null, <meta_tile_entity:gregtech:distillery.lv>, <meta_tile_entity:gregtech:distillery.mv>, <meta_tile_entity:gregtech:distillery.hv>,
 	<meta_tile_entity:gregtech:distillery.ev>, <meta_tile_entity:gtadditions:distillery.iv>, <meta_tile_entity:gtadditions:distillery.luv>,
 	<meta_tile_entity:gtadditions:distillery.zpm>, <meta_tile_entity:gtadditions:distillery.uv>, <meta_tile_entity:gtadditions:distillery.uhv>,
-	<meta_tile_entity:gtadditions:distillery.uev>, <meta_tile_entity:gtadditions:distillery.uiv>, <meta_tile_entity:gtadditions:distillery.umv>,
-	<meta_tile_entity:gtadditions:distillery.uxv>
+	<meta_tile_entity:gtadditions:distillery.uev>, <meta_tile_entity:gtadditions:distillery.uiv>, <meta_tile_entity:gtadditions:distillery.uxv>,
+	<meta_tile_entity:gtadditions:distillery.opv>
 ];
 */
 global createGreenHouseRecipes as function(IIngredient, IItemStack)void = function(seed as IIngredient, output as IItemStack) as void {
