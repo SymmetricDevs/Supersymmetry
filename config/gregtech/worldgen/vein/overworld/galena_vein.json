@@ -1,0 +1,34 @@
+{
+  "weight": 30,
+  "density": 0.75,
+  "max_height": 64,
+  "min_height": 0,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "lead"
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      20,
+      20
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:galena"
+      },
+      {
+        "secondary": "ore:lead"
+      },
+      {
+        "between": "ore:silver"
+      },
+      {
+        "sporadic": "ore:silver"
+      }
+    ]
+  }
+}
