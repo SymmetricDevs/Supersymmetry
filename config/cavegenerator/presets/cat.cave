@@ -1,0 +1,75 @@
+{
+  imports: [
+    cat/generic.cave          as GENERIC_FEATURES
+    cat/generic.cave::tunnels as GENERIC_TUNNELS
+    cat/generic.cave::ravines as GENERIC_RAVINES
+    cat/maze.cave::tunnels    as MAZE_TUNNELS
+    cat/crack.cave::ravines   as SURFACE_CRACKS
+    cat/water.cave            as WATER_DECORATORS
+    cat/snow.cave             as SNOW_FEATURES
+    cat/desert.cave           as DESERT_FEATURES
+    cat/mushroom.cave         as MUSHROOM_FEATURES
+    cat/jungle.cave           as JUNGLE_FEATURES
+    cat/mountain.cave         as MOUNTAIN_FEATURES
+    cat/common.cave           :: DECORATED_BIOMES
+    cat/common.cave           :: DENSE_CAVE_BIOMES
+    cat/common.cave           :: MOUNTAIN_CAVE_BIOMES
+    conditions.cave           :: SNOWY_BIOMES
+    conditions.cave           :: SANDY_BIOMES
+    conditions.cave           :: MUSHROOM_BIOMES
+    conditions.cave           :: OCEAN_BIOMES
+    defaults.cave::caveBlocks as LAVA_CAVE_BLOCK
+  ]
+  enabled: true
+  inner: [
+    {
+      $SNOW_FEATURES: ALL
+      biomes: $SNOWY_BIOMES
+      ravines: $GENERIC_RAVINES
+    }
+    {
+      $DESERT_FEATURES: ALL
+      biomes: $SANDY_BIOMES
+    }
+    {
+      $MUSHROOM_FEATURES: ALL
+      biomes: $MUSHROOM_BIOMES
+      caveBlocks: []
+    }
+    {
+      $JUNGLE_FEATURES: ALL
+      biomes: $DENSE_CAVE_BIOMES
+      ravines: $GENERIC_RAVINES
+      caveBlocks: []
+    }
+    {
+      $MOUNTAIN_FEATURES: ALL
+      biomes: $MOUNTAIN_CAVE_BIOMES
+    }
+    {
+      blacklistBiomes: true
+      biomes: $MOUNTAIN_CAVE_BIOMES
+      ravines: $SURFACE_CRACKS
+    }
+    {
+      $GENERIC_FEATURES: ALL
+      $WATER_DECORATORS: ALL
+      biomes: $OCEAN_BIOMES
+      *tunnels.checkWater: false
+      *ravines.checkWater: false
+      stalactites: []
+    }
+    {
+      $GENERIC_FEATURES: ALL
+      blacklistBiomes: true
+      biomes: $DECORATED_BIOMES
+      tunnels: [
+        $GENERIC_TUNNELS
+        $MAZE_TUNNELS
+      ]
+    }
+  ]
+  # This feature should be spawned
+  # in all of the inner presets.
+  caveBlocks: $LAVA_CAVE_BLOCK
+}

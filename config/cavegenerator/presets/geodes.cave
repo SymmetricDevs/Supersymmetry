@@ -1,0 +1,6 @@
+# This feature should be one of the last to spawn.
+{
+  imports: types.cave::geode
+  enabled: false
+  tunnels: $geode()
+}

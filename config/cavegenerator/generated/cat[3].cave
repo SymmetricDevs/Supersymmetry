@@ -1,0 +1,518 @@
+{
+  enabled: true
+  caveBlocks: []
+  replaceableBlocks: [
+    stone
+    dirt
+    grass
+    clay
+    vine:1
+    vine:2
+    vine:4
+    vine:8
+    mossy_cobblestone
+    gravel
+    leaves
+    dirt:1
+  ]
+  replaceDecorators: false
+  wallDecorators: [
+    {
+      states: leaves
+      directions: [
+        up
+        side
+      ]
+      integrity: 0.35
+      placement: overlay
+      height: [
+        47
+        78
+      ]
+      matchers: [
+        stone
+        dirt
+      ]
+      noise: {
+        threshold: -0.25
+        type: simplex
+      }
+    }
+    {
+      states: dirt:1
+      height: [
+        10
+        45
+      ]
+      integrity: 0.4
+      directions: down
+      matchers: dirt
+    }
+    {
+      states: gravel
+      height: [
+        10
+        45
+      ]
+      integrity: 0.2
+      directions: down
+    }
+    {
+      states: mossy_cobblestone
+      height: [
+        10
+        45
+      ]
+      integrity: 0.1
+      directions: down
+    }
+    [
+      {
+        placement: overlay
+        states: vine:1
+        directions: south
+        integrity: 0.1
+        height: [
+          10
+          30
+        ]
+      }
+      {
+        placement: overlay
+        states: vine:2
+        directions: west
+        integrity: 0.1
+        height: [
+          10
+          30
+        ]
+      }
+      {
+        placement: overlay
+        states: vine:4
+        directions: north
+        integrity: 0.1
+        height: [
+          10
+          30
+        ]
+      }
+      {
+        placement: overlay
+        states: vine:8
+        directions: east
+        integrity: 0.1
+        height: [
+          10
+          30
+        ]
+      }
+    ]
+  ]
+  tunnels: [
+    {
+      height: [
+        8
+        128
+      ]
+      count: 6
+      chance: 0.25
+      systemChance: 0.01
+      systemDensity: 2
+      noiseYReduction: false
+    }
+    {
+      height: [
+        5
+        56
+      ]
+      replaceableBlocks: [
+        stone
+        dirt
+        air
+        clay
+        water
+      ]
+      count: 5
+      chance: 0.4
+      systemChance: 0.05
+      noiseYReduction: false
+      resolution: 6
+      scale: [
+        -2.5
+        0
+      ]
+      stretch: 1.5
+      pitch: [
+        1.5
+        0.75
+      ]
+      dPitch: [
+        0
+        0
+        1
+        1
+      ]
+      checkWater: false
+      wallDecorators: []
+      caveBlocks: {
+        states: log:12
+        height: [
+          0
+          255
+        ]
+      }
+      shell: {
+        radius: 3
+        decorators: {
+          integrity: 0.75
+          states: dirt
+          matchers: stone
+        }
+      }
+    }
+  ]
+  burrows: {
+    radius: 3.5
+    target: 0.075
+    branches: {
+      count: 7
+      chance: 0.075
+      systemChance: 0
+      resizeBranches: false
+      scale: [
+        1.5
+        0.9
+      ]
+      stretch: [
+        0.7
+        0
+        1
+        0.05
+      ]
+      dPitch: [
+        0
+        0
+        1
+        1
+      ]
+      ponds: []
+    }
+    offset: {
+      range: [
+        10
+        30
+      ]
+    }
+    ponds: {
+      height: [
+        9
+        11
+      ]
+      depth: 1
+      states: water
+    }
+  }
+  clusters: {
+    states: [
+      dirt
+      dirt
+      dirt
+      clay
+    ]
+    radius: [
+      20
+      35
+    ]
+    centerHeight: [
+      28
+      50
+    ]
+  }
+  structures: [
+    {
+      name: bush1_sm
+      height: [
+        10
+        30
+      ]
+      count: 6
+      chance: 0.25
+      offset: [
+        0
+        0
+        0
+      ]
+      directions: down
+      rotateRandomly: false
+      matchers: [
+        stone
+        dirt
+        dirt:1
+        gravel
+        mossy_cobblestone
+      ]
+      airChecks: [
+        [
+          1
+          2
+          1
+        ]
+        [
+          0
+          2
+          -1
+        ]
+        [
+          -1
+          2
+          0
+        ]
+        [
+          -1
+          2
+          -1
+        ]
+      ]
+    }
+    {
+      name: bush2_sm
+      height: [
+        10
+        30
+      ]
+      count: 6
+      chance: 0.25
+      offset: [
+        0
+        0
+        0
+      ]
+      directions: down
+      rotateRandomly: false
+      matchers: [
+        stone
+        dirt
+        dirt:1
+        gravel
+        mossy_cobblestone
+      ]
+      airChecks: [
+        [
+          1
+          2
+          1
+        ]
+        [
+          0
+          2
+          -1
+        ]
+        [
+          -1
+          2
+          0
+        ]
+        [
+          -1
+          2
+          -1
+        ]
+      ]
+    }
+    {
+      name: bush3_sm
+      height: [
+        10
+        30
+      ]
+      count: 6
+      chance: 0.25
+      offset: [
+        0
+        0
+        0
+      ]
+      directions: down
+      rotateRandomly: false
+      matchers: [
+        stone
+        dirt
+        dirt:1
+        gravel
+        mossy_cobblestone
+      ]
+      airChecks: [
+        [
+          1
+          2
+          1
+        ]
+        [
+          0
+          2
+          -1
+        ]
+        [
+          -1
+          2
+          0
+        ]
+        [
+          -1
+          2
+          -1
+        ]
+      ]
+    }
+    {
+      name: bush4_med
+      height: [
+        10
+        30
+      ]
+      count: 6
+      chance: 0.25
+      offset: [
+        0
+        0
+        0
+      ]
+      directions: down
+      rotateRandomly: false
+      matchers: [
+        stone
+        dirt
+        dirt:1
+        gravel
+        mossy_cobblestone
+      ]
+      airChecks: [
+        [
+          1
+          2
+          1
+        ]
+        [
+          0
+          2
+          -1
+        ]
+        [
+          -1
+          2
+          0
+        ]
+        [
+          -1
+          2
+          -1
+        ]
+      ]
+    }
+    {
+      name: hanging_spawner_zombie
+      height: [
+        10
+        40
+      ]
+      chance: 0.1
+      offset: [
+        0
+        -4
+        0
+      ]
+      directions: up
+      matchers: [
+        stone
+        dirt
+      ]
+      airChecks: [
+        [
+          0
+          -6
+          0
+        ]
+      ]
+    }
+    {
+      name: hanging_spawner_skeleton
+      height: [
+        10
+        40
+      ]
+      chance: 0.1
+      offset: [
+        0
+        -4
+        0
+      ]
+      directions: up
+      matchers: [
+        stone
+        dirt
+      ]
+      airChecks: [
+        [
+          0
+          -6
+          0
+        ]
+      ]
+    }
+  ]
+  biomes: {
+    types: JUNGLE
+    names: roofed_forest
+  }
+  ravines: [
+    {
+      height: [
+        18
+        69
+      ]
+      chance: 0.007692307692307693
+      cutoffStrength: 0.3
+      noiseYFactor: 0.8
+      pitch: [
+        1.5
+        1
+      ]
+      dPitch: [
+        0.1
+        0
+        0.95
+      ]
+      walls: {
+        frequency: 0.05
+      }
+    }
+    {
+      height: [
+        18
+        69
+      ]
+      chance: 0.004
+      cutoffStrength: 0
+      pitch: [
+        1.5
+        2.5
+      ]
+      dPitch: [
+        0.1
+        0
+        0.95
+      ]
+      scale: [
+        4.5
+        2
+        1
+      ]
+      stretch: [
+        0.25
+        0.15
+        1
+      ]
+    }
+  ]
+}

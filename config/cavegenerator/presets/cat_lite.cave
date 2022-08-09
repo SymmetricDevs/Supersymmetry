@@ -1,0 +1,45 @@
+{
+  imports: [
+    cat/generic.cave          as GENERIC_FEATURES
+    cat/generic.cave::tunnels as GENERIC_TUNNELS
+    cat/maze.cave::tunnels    as MAZE_TUNNELS
+    cat/crack.cave::ravines   as SURFACE_CRACKS
+    cat/water.cave            as WATER_DECORATORS
+    cat/mountain.cave         as MOUNTAIN_FEATURES
+    cat/common.cave           :: MOUNTAIN_CAVE_BIOMES
+    conditions.cave           :: OCEAN_BIOMES
+    defaults.cave::caveBlocks as LAVA_CAVE_BLOCK
+  ]
+  enabled: false
+  inner: [
+    {
+      $MOUNTAIN_FEATURES: ALL
+      biomes: $MOUNTAIN_CAVE_BIOMES
+    }
+    {
+      blacklistBiomes: true
+      biomes: $MOUNTAIN_CAVE_BIOMES
+      ravines: $SURFACE_CRACKS
+    }
+    {
+      $GENERIC_FEATURES: ALL
+      $WATER_DECORATORS: ALL
+      biomes: $OCEAN_BIOMES
+      *tunnels.checkWater: false
+      *ravines.checkWater: false
+      stalactites: []
+    }
+    {
+      $GENERIC_FEATURES: ALL
+      blacklistBiomes: true
+      biomes: $OCEAN_BIOMES
+      tunnels: [
+        $GENERIC_TUNNELS
+        $MAZE_TUNNELS
+      ]
+    }
+  ]
+  # This feature should be spawned
+  # in all of the inner presets.
+  caveBlocks: $LAVA_CAVE_BLOCK
+}

@@ -1,0 +1,287 @@
+{
+  enabled: true
+  caveBlocks: {
+    states: lava
+    height: [
+      0
+      10
+    ]
+  }
+  wallDecorators: [
+    {
+      states: snow
+      directions: down
+      height: [
+        37
+        75
+      ]
+      integrity: 1
+    }
+    {
+      states: snow
+      directions: down
+      height: [
+        33
+        37
+      ]
+      integrity: 0.6
+    }
+    {
+      states: snow
+      directions: down
+      height: [
+        29
+        33
+      ]
+      integrity: 0.35
+    }
+  ]
+  tunnels: [
+    {
+      count: 2
+      height: [
+        8
+        128
+      ]
+      chance: 0.6
+      systemChance: 0.5
+      systemDensity: 2
+      reseedBranches: false
+    }
+  ]
+  burrows: [
+    {
+      replaceableBlocks: [
+        water
+        stone
+        dirt
+        ice
+        grass
+        grass:1
+      ]
+      radius: 3.5
+      height: [
+        12
+        81
+      ]
+      offset: {
+        range: [
+          18
+          75
+        ]
+        frequency: 0.006
+        seed: 2249
+        cache: true
+      }
+    }
+    {
+      radius: 3
+      target: 0.125
+      exponent: 2
+      height: [
+        12
+        37
+      ]
+      map: {
+        perturb: true
+        perturbAmp: 0.1
+        perturbFreq: 2.5
+        frequency: 0.01
+      }
+      offset: {
+        range: [
+          18
+          31
+        ]
+        frequency: 0.01
+      }
+    }
+  ]
+  caverns: [
+    {
+      height: [
+        5
+        88
+      ]
+      generators: {
+        threshold: [
+          -1
+          -0.4
+        ]
+        frequency: 0.01
+      }
+      ceiling: {
+        range: [
+          -20
+          -10
+        ]
+      }
+      floor: {
+        range: [
+          31
+          88
+        ]
+        frequency: 0.006
+        seed: 2249
+        cache: true
+      }
+      caveBlocks: {
+        states: packed_ice
+        height: [
+          31
+          56
+        ]
+      }
+      wallDecorators: {
+        states: snow
+        directions: down
+        height: [
+          57
+          75
+        ]
+        integrity: 1
+      }
+    }
+    {
+      height: [
+        5
+        25
+      ]
+    }
+  ]
+  stalactites: [
+    {
+      state: packed_ice
+      type: stalactite
+      length: [
+        3
+        4
+      ]
+      space: 3
+      chance: 0.02
+      height: [
+        40
+        69
+      ]
+    }
+    {
+      state: snow
+      type: speleothem
+      size: large
+      symmetrical: true
+      length: [
+        5
+        7
+      ]
+      space: 4
+      chance: 0.001
+      height: [
+        40
+        63
+      ]
+    }
+    {
+      state: packed_ice
+      type: stalagmite
+      length: 3
+      symmetrical: false
+      space: 3
+      chance: 0.003
+      height: [
+        40
+        63
+      ]
+    }
+  ]
+  structures: [
+    {
+      name: igloo/igloo_top
+      matchers: snow
+      directions: down
+      integrity: 1
+      chance: 0.5
+      height: [
+        50
+        63
+      ]
+      rotateRandomly: true
+      airChecks: [
+        [
+          3
+          1
+          0
+        ]
+        [
+          0
+          1
+          3
+        ]
+        [
+          -3
+          1
+          0
+        ]
+        [
+          0
+          1
+          -3
+        ]
+      ]
+    }
+  ]
+  biomes: {
+    types: [
+      SNOWY
+    ]
+  }
+  ravines: [
+    {
+      height: [
+        18
+        69
+      ]
+      chance: 0.007692307692307693
+      cutoffStrength: 0.3
+      noiseYFactor: 0.8
+      pitch: [
+        1.5
+        1
+      ]
+      dPitch: [
+        0.1
+        0
+        0.95
+      ]
+      walls: {
+        frequency: 0.05
+      }
+    }
+    {
+      height: [
+        18
+        69
+      ]
+      chance: 0.004
+      cutoffStrength: 0
+      pitch: [
+        1.5
+        2.5
+      ]
+      dPitch: [
+        0.1
+        0
+        0.95
+      ]
+      scale: [
+        4.5
+        2
+        1
+      ]
+      stretch: [
+        0.25
+        0.15
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  enabled: false
+  clusters: [
+    {
+      states: [
+        gravel
+        coal_ore
+      ]
+      chance: 0.005
+      integrity: 0.4
+      radius: [
+        35
+        50
+      ]
+      seed: 5784
+      noise: {
+        frequency: 0.02
+        threshold: -0.2
+        stretch: 0.75
+        type: Cellular
+        returnType: Distance3Div
+        jitter: 1
+        perturb: true
+        perturbAmp: 10
+        perturbFreq: 0.025
+        invert: true
+        cache: true
+        seed: 5784
+      }
+    }
+    {
+      states: [
+        stone:5
+        iron_ore
+      ]
+      chance: 0.004
+      integrity: 0.4
+      radius: [
+        35
+        50
+      ]
+      seed: 1905
+      noise: {
+        frequency: 0.02
+        threshold: -0.2
+        stretch: 0.75
+        type: Cellular
+        returnType: Distance3Div
+        jitter: 1
+        perturb: true
+        perturbAmp: 10
+        perturbFreq: 0.025
+        invert: true
+        cache: true
+        seed: 1905
+      }
+    }
+    {
+      states: [
+        stone:1
+        gold_ore
+      ]
+      chance: 0.00030
+      integrity: 0.4
+      radius: [
+        35
+        50
+      ]
+      seed: 3219
+      noise: {
+        frequency: 0.02
+        threshold: -0.2
+        stretch: 0.75
+        type: Cellular
+        returnType: Distance3Div
+        jitter: 1
+        perturb: true
+        perturbAmp: 10
+        perturbFreq: 0.025
+        invert: true
+        cache: true
+        seed: 3219
+      }
+    }
+  ]
+}

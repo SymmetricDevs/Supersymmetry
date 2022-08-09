@@ -1,0 +1,631 @@
+{
+  enabled: false
+  inner: [
+    {
+      replaceableBlocks: [
+        stone
+        dirt
+        clay
+        leaves
+        sandstone
+        stone:3
+      ]
+      caverns: {
+        height: [
+          45
+          83
+        ]
+        generators: {
+          threshold: -0.5
+        }
+      }
+      stalactites: [
+        {
+          type: stalactite
+          state: stone
+          length: [
+            4
+            7
+          ]
+          height: [
+            45
+            83
+          ]
+          space: 3
+          size: large
+          chance: 0.024
+        }
+        {
+          type: speleothem
+          state: stone
+          length: [
+            8
+            14
+          ]
+          height: [
+            45
+            83
+          ]
+          space: 8
+          size: giant
+          chance: 0.016
+        }
+        {
+          type: speleothem
+          state: stone
+          length: [
+            6
+            8
+          ]
+          height: [
+            45
+            83
+          ]
+          space: 5
+          size: giant
+          chance: 0.004
+        }
+      ]
+      biomes: {
+        names: [
+          birch_forest_hills
+          mutated_birch_forest
+          mutated_birch_forest_hills
+          desert_hills
+          extreme_hills
+          extreme_hills_with_trees
+          mutated_extreme_hills
+          mutated_extreme_hills_with_trees
+          smaller_extreme_hills
+          mutated_forest
+          jungle_hills
+          mutated_jungle
+          mutated_jungle_edge
+          mesa_rock
+          mesa_clear_rock
+          mutated_mesa
+          mutated_mesa_rock
+          mutated_mesa_clear_rock
+          redwood_taiga_hills
+          mutated_redwood_taiga_hills
+          savanna_rock
+          mutated_savanna
+          mutated_savanna_rock
+          mutated_swampland
+          taiga_hills
+          mutated_taiga
+        ]
+      }
+    }
+    {
+      blacklistBiomes: true
+      biomes: {
+        names: [
+          birch_forest_hills
+          mutated_birch_forest
+          mutated_birch_forest_hills
+          desert_hills
+          extreme_hills
+          extreme_hills_with_trees
+          mutated_extreme_hills
+          mutated_extreme_hills_with_trees
+          smaller_extreme_hills
+          mutated_forest
+          jungle_hills
+          mutated_jungle
+          mutated_jungle_edge
+          mesa_rock
+          mesa_clear_rock
+          mutated_mesa
+          mutated_mesa_rock
+          mutated_mesa_clear_rock
+          redwood_taiga_hills
+          mutated_redwood_taiga_hills
+          savanna_rock
+          mutated_savanna
+          mutated_savanna_rock
+          mutated_swampland
+          taiga_hills
+          mutated_taiga
+        ]
+      }
+      ravines: {
+        replaceableBlocks: [
+          stone
+          dirt
+          grass
+          sandstone
+          sand
+        ]
+        chance: 0.0035
+        height: [
+          8
+          128
+        ]
+        originHeight: [
+          67
+          69
+        ]
+        scale: [
+          -1.5
+          0.5
+        ]
+        stretch: [
+          10
+          1
+        ]
+        cutoffStrength: 0
+      }
+    }
+    {
+      wallDecorators: [
+        {
+          states: gravel
+          height: [
+            5
+            63
+          ]
+          matchers: [
+            stone
+            dirt
+          ]
+          directions: down
+          integrity: 0.25
+        }
+      ]
+      burrows: [
+        {
+          radius: 2.5
+          target: 0.065
+          branches: {
+            count: 8
+            chance: 0.8
+            systemChance: 0
+          }
+          offset: {
+            range: [
+              20
+              40
+            ]
+          }
+        }
+      ]
+      caverns: [
+        {
+          height: [
+            0
+            25
+          ]
+          stretch: 0.75
+          floor: {
+            range: [
+              1
+              9
+            ]
+          }
+        }
+      ]
+      tunnels: [
+        {
+          height: [
+            8
+            128
+          ]
+          count: 3
+          chance: 0.25
+          systemChance: 0.01
+          systemDensity: 2
+          noiseYReduction: false
+          checkWater: false
+        }
+      ]
+      ravines: [
+        {
+          height: [
+            18
+            69
+          ]
+          chance: 0.007692307692307693
+          cutoffStrength: 0.3
+          noiseYFactor: 0.8
+          pitch: [
+            1.5
+            1
+          ]
+          dPitch: [
+            0.1
+            0
+            0.95
+          ]
+          walls: {
+            frequency: 0.05
+          }
+          checkWater: false
+        }
+        {
+          height: [
+            18
+            69
+          ]
+          chance: 0.004
+          cutoffStrength: 0
+          pitch: [
+            1.5
+            2.5
+          ]
+          dPitch: [
+            0.1
+            0
+            0.95
+          ]
+          scale: [
+            4.5
+            2
+            1
+          ]
+          stretch: [
+            0.25
+            0.15
+            1
+          ]
+          checkWater: false
+        }
+      ]
+      clusters: [
+        {
+          states: stone:5
+          chance: 0.01
+          radiusX: [
+            16
+            23
+          ]
+          radiusY: [
+            11
+            18
+          ]
+          radiusZ: [
+            16
+            23
+          ]
+          centerHeight: [
+            20
+            32
+          ]
+        }
+        {
+          states: stone:3
+          chance: 0.01
+          centerHeight: [
+            49
+            58
+          ]
+        }
+        {
+          states: stone:1
+          chance: 0.015
+          radiusX: [
+            20
+            27
+          ]
+          radiusY: [
+            15
+            22
+          ]
+          radiusZ: [
+            20
+            27
+          ]
+          centerHeight: [
+            5
+            12
+          ]
+        }
+      ]
+      stalactites: []
+      caveBlocks: [
+        {
+          states: water
+          height: [
+            12
+            63
+          ]
+        }
+        {
+          states: magma
+          height: 11
+          integrity: 0.025
+        }
+        {
+          states: obsidian
+          height: 11
+        }
+        {
+          states: lava
+          height: [
+            0
+            10
+          ]
+        }
+      ]
+      biomes: {
+        types: [
+          OCEAN
+        ]
+      }
+    }
+    {
+      wallDecorators: [
+        {
+          states: dirt
+          height: [
+            58
+            75
+          ]
+          integrity: 0.5
+          matchers: [
+            stone
+            stone:3
+          ]
+        }
+        {
+          states: dirt
+          height: [
+            48
+            58
+          ]
+          integrity: 0.25
+          matchers: [
+            stone
+            stone:3
+          ]
+        }
+      ]
+      burrows: [
+        {
+          radius: 2.5
+          target: 0.065
+          branches: {
+            count: 8
+            chance: 0.8
+            systemChance: 0
+          }
+          offset: {
+            range: [
+              20
+              40
+            ]
+          }
+        }
+      ]
+      caverns: [
+        {
+          height: [
+            0
+            25
+          ]
+          stretch: 0.75
+          floor: {
+            range: [
+              1
+              9
+            ]
+          }
+        }
+      ]
+      tunnels: [
+        [
+          {
+            height: [
+              8
+              128
+            ]
+            count: 3
+            chance: 0.25
+            systemChance: 0.01
+            systemDensity: 2
+            noiseYReduction: false
+          }
+        ]
+        {
+          count: 4
+          height: [
+            8
+            128
+          ]
+          chance: 0.01
+          systemChance: 1
+          systemDensity: 3
+          resizeBranches: false
+          yaw: [
+            0
+            0.5
+            1
+            0
+          ]
+          dYaw: [
+            0
+            0.5
+            1
+            0
+          ]
+          pitch: [
+            5.5
+            0.2
+            1
+            0
+          ]
+          dPitch: [
+            0.1
+            0
+            1
+            0
+          ]
+          wallDecorators: [
+            {
+              states: dirt
+              height: [
+                0
+                50
+              ]
+              integrity: 0.45
+              directions: down
+            }
+            {
+              states: [
+                mossy_cobblestone
+                dirt:1
+                gravel
+              ]
+              height: [
+                0
+                50
+              ]
+              integrity: 0.25
+              directions: down
+            }
+            {
+              states: web
+              height: [
+                0
+                50
+              ]
+              integrity: 0.05
+              directions: up
+              placement: overlay
+            }
+          ]
+        }
+      ]
+      ravines: [
+        {
+          height: [
+            18
+            69
+          ]
+          chance: 0.007692307692307693
+          cutoffStrength: 0.3
+          noiseYFactor: 0.8
+          pitch: [
+            1.5
+            1
+          ]
+          dPitch: [
+            0.1
+            0
+            0.95
+          ]
+          walls: {
+            frequency: 0.05
+          }
+        }
+        {
+          height: [
+            18
+            69
+          ]
+          chance: 0.004
+          cutoffStrength: 0
+          pitch: [
+            1.5
+            2.5
+          ]
+          dPitch: [
+            0.1
+            0
+            0.95
+          ]
+          scale: [
+            4.5
+            2
+            1
+          ]
+          stretch: [
+            0.25
+            0.15
+            1
+          ]
+        }
+      ]
+      clusters: [
+        {
+          states: stone:5
+          chance: 0.01
+          radiusX: [
+            16
+            23
+          ]
+          radiusY: [
+            11
+            18
+          ]
+          radiusZ: [
+            16
+            23
+          ]
+          centerHeight: [
+            20
+            32
+          ]
+        }
+        {
+          states: stone:3
+          chance: 0.01
+          centerHeight: [
+            49
+            58
+          ]
+        }
+        {
+          states: stone:1
+          chance: 0.015
+          radiusX: [
+            20
+            27
+          ]
+          radiusY: [
+            15
+            22
+          ]
+          radiusZ: [
+            20
+            27
+          ]
+          centerHeight: [
+            5
+            12
+          ]
+        }
+      ]
+      stalactites: [
+        {
+          type: speleothem
+          state: stone
+          height: [
+            0
+            25
+          ]
+          length: [
+            7
+            10
+          ]
+          space: 2
+          size: large
+          chance: 0.01
+        }
+      ]
+      blacklistBiomes: true
+      biomes: {
+        types: [
+          OCEAN
+        ]
+      }
+    }
+  ]
+  caveBlocks: {
+    states: lava
+    height: [
+      0
+      10
+    ]
+  }
+}

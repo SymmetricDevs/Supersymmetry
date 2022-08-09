@@ -1,0 +1,13 @@
+{
+  imports: [
+    blocks.cave::ANDESITE
+    blocks.cave::GRANITE
+    types.cave::ore_vein
+  ]
+  enabled: false
+  clusters: [
+    $ore_vein(coal_ore, gravel, 0.005, 5784)
+    $ore_vein(iron_ore, $ANDESITE, 0.004, 1905)
+    $ore_vein(gold_ore, $GRANITE, 0.0003, 3219)
+  ]
+}
