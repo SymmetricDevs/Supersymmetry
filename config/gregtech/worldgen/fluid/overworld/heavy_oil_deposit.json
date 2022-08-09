@@ -1,0 +1,19 @@
+{
+  "weight": 15,
+  "name": "Heavy Oil Deposit",
+  "yield": {
+    "min": 100,
+    "max": 200
+  },
+  "depletion": {
+    "amount": 1,
+    "chance": 100,
+    "depleted_yield": 20
+  },
+  "fluid": "oil_heavy",
+  "biome_modifier": {
+    "type": "biome_dictionary",
+    "ocean": 5,
+    "sandy": 10
+  }
+}
