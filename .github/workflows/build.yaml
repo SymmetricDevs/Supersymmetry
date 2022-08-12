@@ -42,3 +42,4 @@ jobs:
             buildOut/client.zip
             buildOut/server.zip
             buildOut/modlist.html
+
