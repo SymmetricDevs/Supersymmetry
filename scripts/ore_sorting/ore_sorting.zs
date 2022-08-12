@@ -94,7 +94,7 @@ val oxide_tier_1 as IItemStack[] = [
 	<ore:oreMagnetite>.firstItem*1,
 	<ore:oreYellowLimonite>.firstItem*1,
 	<ore:oreBrownLimonite>.firstItem*1,
-	<ore:oreBandedIron>.firstItem*1,
+	<ore:oreHematite>.firstItem*1,
 	<ore:oreRuby>.firstItem*1,
 	<ore:oreTenorite>.firstItem*1,
 	<ore:oreCuprite>.firstItem*1
@@ -187,7 +187,7 @@ val radioactive_tier_1 as IItemStack[] = [
 
 //SULFUR (TIER 1)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(1))
+	.circuit(1)
 	.inputs(rock_sulfur.getRock(sulfur_tier_1.length))
 	.outputs(sulfur_tier_1)
 	.fluidInputs(rock_sulfur.getFluidIn(fluid_amount * sulfur_tier_1.length))
@@ -198,7 +198,7 @@ val radioactive_tier_1 as IItemStack[] = [
 	
 //SULFUR (TIER 2)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(2))
+	.circuit(2)
 	.inputs(rock_sulfur.getRock(sulfur_tier_1.length + sulfur_tier_2.length))
 	.outputs(sulfur_tier_1)
 	.outputs(sulfur_tier_2)
@@ -210,7 +210,7 @@ val radioactive_tier_1 as IItemStack[] = [
 	
 //OXIDE (TIER 1)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(1))
+	.circuit(1)
 	.inputs(rock_oxide.getRock(oxide_tier_1.length))
 	.outputs(oxide_tier_1)
 	.fluidInputs(rock_oxide.getFluidIn(fluid_amount * oxide_tier_1.length))
@@ -221,7 +221,7 @@ val radioactive_tier_1 as IItemStack[] = [
 	
 //OXIDE (TIER 2)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(2))
+	.circuit(2)
 	.inputs(rock_oxide.getRock(oxide_tier_1.length + oxide_tier_2.length))
 	.outputs(oxide_tier_1)
 	.outputs(oxide_tier_2)
@@ -233,7 +233,7 @@ val radioactive_tier_1 as IItemStack[] = [
 	
 //SEDIMENTARY (TIER 1)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(1))
+	.circuit(1)
 	.inputs(rock_sedimentary.getRock(sedimentary_tier_1.length))
 	.outputs(sedimentary_tier_1)
 	.fluidInputs(rock_sedimentary.getFluidIn(fluid_amount * sedimentary_tier_1.length))
@@ -244,7 +244,7 @@ val radioactive_tier_1 as IItemStack[] = [
 	
 //SILICATE (TIER 1)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(1))
+	.circuit(1)
 	.inputs(rock_silicate.getRock(silicate_tier_1.length))
 	.outputs(silicate_tier_1)
 	.fluidInputs(rock_silicate.getFluidIn(fluid_amount * silicate_tier_1.length))
@@ -255,7 +255,7 @@ val radioactive_tier_1 as IItemStack[] = [
 
 //SILICATE (TIER 2)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(2))
+	.circuit(2)
 	.inputs(rock_silicate.getRock(silicate_tier_1.length + silicate_tier_2.length))
 	.outputs(silicate_tier_1)
 	.outputs(silicate_tier_2)
@@ -267,7 +267,7 @@ val radioactive_tier_1 as IItemStack[] = [
 	
 //CARBONATE (TIER 1)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(1))
+	.circuit(1)
 	.inputs(rock_carbonate.getRock(carbonate_tier_1.length))
 	.outputs(carbonate_tier_1)
 	.fluidInputs(rock_carbonate.getFluidIn(fluid_amount * carbonate_tier_1.length))
@@ -278,7 +278,7 @@ val radioactive_tier_1 as IItemStack[] = [
 	
 //CLAY (TIER 1)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(1))
+	.circuit(1)
 	.inputs(rock_clay.getRock(clay_tier_1.length))
 	.outputs(clay_tier_1)
 	.fluidInputs(rock_clay.getFluidIn(fluid_amount * clay_tier_1.length))
@@ -289,7 +289,7 @@ val radioactive_tier_1 as IItemStack[] = [
 	
 //CARBON (TIER 1)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(2))
+	.circuit(2)
 	.inputs(rock_carbon.getRock(carbon_tier_1.length))
 	.outputs(carbon_tier_1)
 	.fluidInputs(rock_carbon.getFluidIn(fluid_amount * carbon_tier_1.length))
@@ -300,7 +300,7 @@ val radioactive_tier_1 as IItemStack[] = [
 	
 //PHOSPHATE (TIER 1)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(2))
+	.circuit(2)
 	.inputs(rock_phosphate.getRock(phosphate_tier_1.length))
 	.outputs(phosphate_tier_1)
 	.fluidInputs(rock_phosphate.getFluidIn(fluid_amount * phosphate_tier_1.length))
@@ -311,7 +311,7 @@ val radioactive_tier_1 as IItemStack[] = [
 	
 //PRECIOUS (TIER 1)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(3))
+	.circuit(3)
 	.inputs(rock_precious.getRock(precious_tier_1.length))
 	.outputs(precious_tier_1)
 	.fluidInputs(rock_precious.getFluidIn(fluid_amount * precious_tier_1.length))
@@ -322,7 +322,7 @@ val radioactive_tier_1 as IItemStack[] = [
 	
 //PRECIOUS (TIER 1)
 <multiblock:multiblocktweaker:ore_sorter>.recipeMap.recipeBuilder()
-	.notConsumable(intCircuit(3))
+	.circuit(3)
 	.inputs(rock_radioactive.getRock(radioactive_tier_1.length))
 	.outputs(radioactive_tier_1)
 	.fluidInputs(rock_radioactive.getFluidIn(fluid_amount * radioactive_tier_1.length))

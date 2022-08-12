@@ -105,7 +105,7 @@ recipes.addShaped(
 <multiblock:multiblocktweaker:railroad_engineering_station>.recipeMap.recipeBuilder()
     .duration(5)
     .EUt(60)
-    .notConsumable(intCircuit(0))
+    .circuit(0)
     .fluidInputs(<liquid:steel> * 288)
     .outputs(<immersiverailroading:item_rail_part>*16)
     .buildAndRegister();

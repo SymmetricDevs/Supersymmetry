@@ -218,7 +218,7 @@ weapons_factory.recipeBuilder()
 	.inputs([<ore:plateSteel>, 
 			<ore:springSmallSteel>*4
 		])
-	.notConsumable(intCircuit(1))
+	.circuit(1)
 	.outputs(<techguns:itemshared:12>*4)
 	.duration(10)
 	.EUt(16)
@@ -277,7 +277,7 @@ weapons_factory.recipeBuilder()
 		<ore:springSmallSteel>*4,
 		<ore:plateSteel>
 	])
-	.notConsumable(intCircuit(2))
+	.circuit(2)
 	.outputs(<techguns:itemshared:10>*4)
 	.duration(20)
 	.EUt(60)
@@ -288,7 +288,7 @@ weapons_factory.recipeBuilder()
 		<ore:springSmallSteel>*4,
 		<ore:plateSteel>
 	])
-	.notConsumable(intCircuit(3))
+	.circuit(3)
 	.outputs(<techguns:itemshared:14>*4)
 	.duration(20)
 	.EUt(60)
