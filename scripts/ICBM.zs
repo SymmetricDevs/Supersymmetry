@@ -153,7 +153,7 @@ for solder in soldering_alloys {
 			.inputs([
 				<icbmclassic:explosives:0>,
 				<ore:plateSteel>*8,
-				<ore:plateCurvedSteel>*8
+				<ore:plateSteel>*8
 			])
 			.fluidInputs(solder*72)
 			.outputs(<icbmclassic:explosives:11>)
@@ -171,7 +171,7 @@ for fuel in thermobaric_fuels {
 		.inputs([
 			<metaitem:fluid_cell>*8,
 			<icbmclassic:explosives:6>,
-			<ore:plateCurvedAluminium>*4
+			<ore:plateAluminium>*4
 		])
 		.fluidInputs(fuel)
 		.outputs(<icbmclassic:explosives:13>)
@@ -184,7 +184,7 @@ weapons_factory.recipeBuilder()
 	.inputs([
 		<metaitem:fluid_cell>*8,
 		<icbmclassic:explosives:6>,
-		<ore:plateCurvedAluminium>*4,
+		<ore:plateAluminium>*4,
 		<minecraft:rotten_flesh>*8
 	])
 	.fluidInputs(<liquid:biomass>*8000)
@@ -221,7 +221,7 @@ for solder in soldering_alloys {
 			.inputs([
 				<metaitem:fluid_cell>*8,
 				<icbmclassic:explosives:6>*8,
-				<ore:plateCurvedStainlessSteel>*4
+				<ore:plateStainlessSteel>*4
 			])
 			.fluidInputs([
 				solder*72,
@@ -237,7 +237,7 @@ for solder in soldering_alloys {
 			.inputs([
 				<metaitem:fluid_cell>*8,
 				<icbmclassic:explosives:6>*8,
-				<ore:plateCurvedStainlessSteel>*4
+				<ore:plateStainlessSteel>*4
 			])
 			.fluidInputs([
 				solder*72,

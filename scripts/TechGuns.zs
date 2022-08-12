@@ -94,13 +94,13 @@ recipes.addShaped("iron_barrel", <techguns:itemshared:38>, [
 
 recipes.addShaped("techguns_revolver", <techguns:revolver>, [
 	[<ore:gregScrewDrivers>, <ore:gregWrenches>, <ore:gregFiles>],
-	[<techguns:itemshared:37>, <ore:plateCurvedSteel>, <ore:boltSteel>],
+	[<techguns:itemshared:37>, <ore:plateSteel>, <ore:boltSteel>],
 	[null, <ore:plateSteel>, <techguns:itemshared:42>]
 ]);
 
 recipes.addShaped("techguns_boltaction", <techguns:boltaction>, [
 	[<ore:gregScrewDrivers>, <ore:gregWrenches>, <ore:gregFiles>],
-	[<ore:blockGlassColorless>, <ore:plateCurvedIron>, null],
+	[<ore:blockGlassColorless>, <ore:plateIron>, null],
 	[<techguns:itemshared:39>, <techguns:itemshared:33>, <techguns:itemshared:42>]
 ]);
 
@@ -173,7 +173,7 @@ recipes.addShaped("tg_combat_boots", <techguns:t2_combat_boots>, [
 recipes.addShaped("tg_pistol_rounds", <techguns:itemshared:1>*12, [
 	[null, <ore:gregHardHammers>, null],
 	[null, <ore:roundLead>, null],
-	[<ore:plateCurvedBrass>, <ore:dustGunpowder>, <ore:plateCurvedBrass>]
+	[<ore:plateBrass>, <ore:dustGunpowder>, <ore:plateBrass>]
 ]);
 
 recipes.addShaped("tg_glider_backpack", <techguns:itemshared:90>, [
@@ -225,7 +225,7 @@ weapons_factory.recipeBuilder()
 	.buildAndRegister();
 	
 weapons_factory.recipeBuilder()
-	.inputs([<ore:plateCurvedBrass>,
+	.inputs([<ore:plateBrass>,
 			<ore:gunpowder>,
 			<ore:roundLead>
 		])
@@ -263,7 +263,7 @@ weapons_factory.recipeBuilder()
 	.buildAndRegister();
 	
 weapons_factory.recipeBuilder()
-	.inputs([<ore:plateCurvedCupronickel>,
+	.inputs([<ore:plateCupronickel>,
 			<ore:dustGunpowder>,
 			<ore:roundLead>
 		])

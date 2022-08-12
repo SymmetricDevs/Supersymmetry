@@ -66,7 +66,7 @@ for item in name_removals {
 }
 
 recipes.addShaped("irw_screwdriver", <industrialrenewal:screwdrive>, [
-	[<ore:stickSteel>, <ore:plateCurvedSteel>, motors[1]],
+	[<ore:stickSteel>, <ore:plateSteel>, motors[1]],
 	[null, <ore:gregScrewDrivers>, <ore:stickSteel>],
 	[null, <ore:gregWrenches>, <ore:stickSteel>]
 ]);
@@ -108,9 +108,9 @@ recipes.addShaped("irw_small_slabs", <industrialrenewal:small_slab>*24, [
 ]);
 
 recipes.addShaped("irw_barrel", <industrialrenewal:barrel_item>*2, [
-	[<ore:plateCurvedIron>, <industrialrenewal:small_slab>, <ore:plateCurvedIron>],
-	[<ore:plateCurvedIron>, null, <ore:plateCurvedIron>],
-	[<ore:plateCurvedIron>, <industrialrenewal:small_slab>, <ore:plateCurvedIron>]
+	[<ore:plateIron>, <industrialrenewal:small_slab>, <ore:plateIron>],
+	[<ore:plateIron>, null, <ore:plateIron>],
+	[<ore:plateIron>, <industrialrenewal:small_slab>, <ore:plateIron>]
 ]);
 
 recipes.addShaped("irw_motor", <industrialrenewal:motor>, [

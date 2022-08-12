@@ -22,7 +22,7 @@ brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <m
 for solder in soldering_alloys {
 	weapons_factory.recipeBuilder()
 		.inputs([
-			<ore:ringPlastic>*4,
+			<ore:ringRubber>*4,
 			<ore:platePlastic>,
 			<ore:plateSteel>
 		])
@@ -38,7 +38,7 @@ val GasMapMV as string[ILiquidStack] = {
 	<liquid:carbon_monoxide> : "gaspunk:carbon_monoxide",
 	<liquid:chlorine> : "gaspunk:chlorine",
 	<liquid:diborane> : "gaspunk:diborane",
-	<liquid:gtfo_hydrogen_cyanide> : "gaspunk:hydrogen_cyanide",
+	<liquid:hydrogen_cyanide> : "gaspunk:hydrogen_cyanide",
 	<liquid:radon> : "gaspunk:radon"
 };
 

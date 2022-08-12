@@ -1,4 +1,4 @@
-#priority 999
+#priority 10001
 
 import mods.gregtech.machine.MachineBuilder;
 import mods.gregtech.recipe.RecipeMapBuilder;
@@ -57,7 +57,6 @@ val weapons_factory as RecipeMap = RecipeMapBuilder.create("weapons_factory")
     .setInputs(9)
     .setOutputs(1)
     .setFluidInputs(2)
-    .setFluidOutputs(0)
     .setHidden(false)
     .setDurationBar("textures/gui/progress_bar/progress_bar_weapons_factory.png", MoveType.RIGHT)
     .build();

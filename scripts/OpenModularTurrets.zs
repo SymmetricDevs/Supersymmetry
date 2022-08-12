@@ -150,7 +150,7 @@ for solder in soldering_alloys {
 	
 	weapons_factory.recipeBuilder()
 		.inputs([
-			<ore:plateCurvedSteel>,
+			<ore:plateSteel>,
 			<ore:dustGunpowder>,
 			<ore:roundLead>
 		])
@@ -201,7 +201,7 @@ for solder in soldering_alloys {
 		
 	weapons_factory.recipeBuilder()
 		.inputs([
-			<ore:plateDenseAluminium>,
+			<ore:plateAluminium>*9,
 			<ore:wireFineRedAlloy>,
 			<ore:plateAluminium>,
 			<ore:springSteel>,
@@ -215,7 +215,7 @@ for solder in soldering_alloys {
 		
 	weapons_factory.recipeBuilder()
 		.inputs([
-			<ore:plateDenseStainlessSteel>,
+			<ore:plateStainlessSteel>*9,
 			<ore:wireFineRedAlloy>,
 			<ore:plateStainlessSteel>,
 			<ore:springSteel>,
