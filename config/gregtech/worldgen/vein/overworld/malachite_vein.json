@@ -21,7 +21,7 @@
         "primary": "ore:malachite"
       },
       {
-        "secondary": "ore:banded_iron"
+        "secondary": "ore:hematite"
       },
       {
         "between": "ore:yellow_limonite"

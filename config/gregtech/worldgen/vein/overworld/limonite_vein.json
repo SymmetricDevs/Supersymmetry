@@ -24,7 +24,7 @@
         "secondary": "ore:brown_limonite"
       },
       {
-        "between": "ore:banded_iron"
+        "between": "ore:hematite"
       },
       {
         "sporadic": "ore:opal"
