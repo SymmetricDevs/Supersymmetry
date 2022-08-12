@@ -8,7 +8,6 @@ import mods.gregtech.machine.Renderer;
 import mods.gregtech.machine.MoveType;
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IIngredient;
-import scripts.gregtech_globals.intCircuit;
 
 //val tiers as string[] = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv"];
 

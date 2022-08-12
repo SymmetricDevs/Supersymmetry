@@ -15,8 +15,6 @@ val name_removals = [
 	"gregtech:iron_magnetic_stick",
 	"appliedenergistics2:misc/grindstone_woodengear",
 	"machinemod:woodengear",
-	"gtadditions:clay_brick",
-	"gtadditions:eight_clay_brick",
 	"notreepunching:misc/clay_tool_clay_brick",
 	"notreepunching:misc/clay_tool_clay_brick_2",
 	"gregtech:bronze_primitive_blast_furnace",
@@ -91,26 +89,6 @@ for item in smelting_removals_binary {
 	furnace.remove(item[0], item[1]);
 }
 
-
-//Vanilla Brick Crafting
-recipes.addShaped("brick_x1", <notreepunching:clay_brick>*1, [
-	[<ore:ingotClay>, <ore:formWood>, null],
-	[null, null, null],
-	[null, null, null],
-]);
-recipes.addShaped("brick_x8", <notreepunching:clay_brick>*8, [
-	[<ore:ingotClay>, <ore:ingotClay>, <ore:ingotClay>],
-	[<ore:ingotClay>, <ore:formWood>, <ore:ingotClay>],
-	[<ore:ingotClay>, <ore:ingotClay>, <ore:ingotClay>],
-]);
-
-//Wooden Gear Crafting
-recipes.addShaped("woodgear", <metaitem:gearWood>, [
-	[<ore:stickWood>, <ore:plankWood>, <ore:stickWood>],
-	[<ore:plankWood>, <ore:gregScrewDrivers>, <ore:plankWood>],
-	[<ore:stickWood>, <ore:plankWood>, <ore:stickWood>]
-]);
-
 //AE2 Grindstone Crafting
 recipes.addShaped("ae2_grindstone", <appliedenergistics2:grindstone>, [
 	[<ore:stone>, <ore:gearWood>, <ore:stone>],
@@ -143,27 +121,52 @@ recipes.addShaped("electrolyte_paper_1", <contenttweaker:electrolyte_paper>, [
 ]);
 
 //Primitive Blast Furnace
-recipes.addShaped("ga_pbf", <meta_tile_entity:primitive_blast_furnace.bronze>, [
+recipes.addShaped("ga_pbf", <metaitem:primitive_blast_furnace.bronze>, [
 	[<ore:gregHardHammers>, <ore:stickBronze>, <ore:screwBronze>],
 	[<ore:plateBronze>, <gregtech:metal_casing:1>, <ore:stickBronze>],
 	[<ore:gregScrewDrivers>, <ore:stickBronze>, <ore:screwBronze>]
 ]);
 
+macerator.findRecipe(2, [<metaitem:primitive_blast_furnace.bronze>], null).remove();
+macerator.recipeBuilder()
+	.inputs(<metaitem:primitive_blast_furnace.bronze>)
+	.outputs(<metaitem:dustTinyBronze> * 24)
+	.duration(6).EUt(2).buildAndRegister();
+arc_furnace.findRecipe(30, [<metaitem:primitive_blast_furnace.bronze>], [<liquid:oxygen> * 6]).remove();
+arc_furnace.recipeBuilder()
+	.inputs(<metaitem:primitive_blast_furnace.bronze>)
+	.fluidInputs([<liquid:oxygen> * 6])
+	.outputs(<metaitem:nuggetBronze> * 24)
+	.duration(6).EUt(30).buildAndRegister();
+
 //Coke Oven
-recipes.addShaped("gt_co", <meta_tile_entity:coke_oven>, [
+recipes.addShaped("gt_coke_oven", <metaitem:coke_oven>, [
 	[<gregtech:metal_casing:8>, <ore:plateBronze>, <gregtech:metal_casing:8>],
 	[<ore:plateBronze>, <ore:gregWrenches>, <ore:plateBronze>],
 	[<gregtech:metal_casing:8>, <ore:plateBronze>, <gregtech:metal_casing:8>]
 ]);
+
+<recipemap:macerator>.findRecipe(2, [<metaitem:coke_oven>], null).remove();
+macerator.recipeBuilder()
+	.inputs(<metaitem:primitive_blast_furnace.bronze>)
+	.outputs(<metaitem:dustBronze> * 4)
+	.duration(56).EUt(2).buildAndRegister();
+
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:coke_oven>], [<liquid:oxygen> * 56]).remove();
+arc_furnace.recipeBuilder()
+	.inputs(<metaitem:primitive_blast_furnace.bronze>)
+	.fluidInputs([<liquid:oxygen> * 56])
+	.outputs(<metaitem:ingotBronze> * 4)
+	.duration(56).EUt(30).buildAndRegister();
 
 //Voltaic Pile Crafting
 recipes.addShapeless("voltaic_pile", <contenttweaker:voltaic_pile>, [<ore:plateCopper>, <ore:plateSilver>, <contenttweaker:electrolyte_paper>]);
 recipes.addShapeless("voltaic_pile_1", <contenttweaker:voltaic_pile>, [<ore:plateCopper>, <ore:plateZinc>, <contenttweaker:electrolyte_paper>]);
 
 //Magnetic Rod Crafting
-recipes.addShapeless("magnetic_iron_stick", <ore:stickIronMagnetic>.firstItem, [<contenttweaker:hot_iron_rod>, <contenttweaker:voltaic_pile>, <ore:wireFineCopper>]);
-recipes.addShapeless("magnetic_iron_stick_1", <ore:stickIronMagnetic>.firstItem, [<contenttweaker:hot_iron_rod>, <contenttweaker:magnetite_chunk>]);
-recipes.addShapeless("magnetic_iron_stick_2", <ore:stickIronMagnetic>.firstItem * 2, [<contenttweaker:hot_iron_rod>, <ore:stickIronMagnetic>]);
+recipes.addShapeless("magnetic_iron_stick", <metaitem:stickIronMagnetic>, [<contenttweaker:hot_iron_rod>, <contenttweaker:voltaic_pile>, <ore:wireFineCopper>]);
+recipes.addShapeless("magnetic_iron_stick_1", <metaitem:stickIronMagnetic>, [<contenttweaker:hot_iron_rod>, <contenttweaker:magnetite_chunk>]);
+recipes.addShapeless("magnetic_iron_stick_2", <metaitem:stickIronMagnetic> * 2, [<contenttweaker:hot_iron_rod>, <ore:stickIronMagnetic>]);
 
 recipes.addShaped("wood_stick", <minecraft:stick>*2, [
 	[null, null, null],
@@ -173,7 +176,7 @@ recipes.addShaped("wood_stick", <minecraft:stick>*2, [
 
 recipes.addShaped("interdimensional_pipe", <dimstack:dim_pipe>, [
 	[<ore:frameGtSteel>, <ore:gemNetherQuartz>, <ore:frameGtSteel>],
-	[<ore:frameGtSteel>, <meta_tile_entity:gtadditions:crate.wood>, <ore:frameGtSteel>],
+	[<ore:frameGtSteel>, <metaitem:crate.wood>, <ore:frameGtSteel>],
 	[<ore:frameGtSteel>, <ore:gemNetherQuartz>, <ore:frameGtSteel>]
 ]);
 
@@ -186,78 +189,77 @@ val fuels as IOreDictEntry[] = [
 for fuel in fuels{
 
 primitive_blast_furnace.recipeBuilder()
-    .inputs(<ore:dustIron> * 1)
+    .inputs(<ore:dustIron>)
     .outputs(<minecraft:iron_ingot>)
     .duration(1000)
-    .inputs(fuel * 1)
+    .inputs(fuel)
     .buildAndRegister();
 	
 primitive_blast_furnace.recipeBuilder()
     .inputs(<ore:dustMagnetite> * 7)
     .outputs(<minecraft:iron_ingot> * 3)
     .duration(1000)
-    .inputs(fuel * 1)
+    .inputs(fuel)
     .buildAndRegister();
 	
 primitive_blast_furnace.recipeBuilder()
     .inputs(<ore:dustVanadiumMagnetite> * 8)
     .outputs(<minecraft:iron_ingot> * 3)
     .duration(1000)
-    .inputs(fuel * 1)
+    .inputs(fuel)
     .buildAndRegister();
 	
 primitive_blast_furnace.recipeBuilder()
-    .inputs(<ore:dustBandedIron> * 5)
+    .inputs(<ore:dustHematite> * 5)
     .outputs(<minecraft:iron_ingot> * 2)
     .duration(1000)
-    .inputs(fuel * 1)
+    .inputs(fuel)
     .buildAndRegister();
 	
 primitive_blast_furnace.recipeBuilder()
     .inputs(<ore:dustBrownLimonite> * 4)
-    .outputs(<minecraft:iron_ingot> * 1)
+    .outputs(<minecraft:iron_ingot>)
     .duration(1000)
-    .inputs(fuel * 1)
+    .inputs(fuel)
     .buildAndRegister();
 	
 primitive_blast_furnace.recipeBuilder()
     .inputs(<ore:dustYellowLimonite> * 4)
-    .outputs(<minecraft:iron_ingot> * 1)
+    .outputs(<minecraft:iron_ingot>)
     .duration(1000)
-    .inputs(fuel * 1)
+    .inputs(fuel)
     .buildAndRegister();
 	
 primitive_blast_furnace.recipeBuilder()
     .inputs(<ore:dustPyrite> * 2)
-    .outputs(<minecraft:iron_ingot> * 1)
+    .outputs(<minecraft:iron_ingot>)
     .duration(1000)
-    .inputs(fuel * 1)
+    .inputs(fuel)
     .buildAndRegister();
 	
 primitive_blast_furnace.recipeBuilder()
-    .inputs(<ore:dustNickel> * 1)
-    .outputs(<ore:ingotNickel>.firstItem * 1)
+    .inputs(<ore:dustNickel>)
+    .outputs(<ore:ingotNickel>.firstItem)
     .duration(1000)
-    .inputs(fuel * 1)
+    .inputs(fuel)
     .buildAndRegister();
 	
 primitive_blast_furnace.recipeBuilder()
     .inputs(<ore:dustGarnierite> * 2)
-    .outputs(<ore:ingotNickel>.firstItem * 1)
+    .outputs(<ore:ingotNickel>.firstItem)
     .duration(1000)
-    .inputs(fuel * 1)
+    .inputs(fuel)
     .buildAndRegister();
 	
 primitive_blast_furnace.recipeBuilder()
-    .inputs(<ore:dustPentlandite> * 17)
+    .inputs(<ore:dustPentlandite>7)
     .outputs(<ore:ingotNickel>.firstItem * 9)
     .duration(1000)
-    .inputs(fuel * 1)
+    .inputs(fuel)
     .buildAndRegister();
 	
 }
 
-/*
 //-----Quartz Grindstone ores -----
 val OreMap = {
 	<ore:oreIron> : <ore:dustIron>.firstItem*2,
@@ -270,10 +272,9 @@ val OreMap = {
 	<ore:oreSphalerite> : <ore:dustSphalerite>.firstItem*4,
 	<ore:oreMagnetite> : <ore:dustMagnetite>.firstItem*4,
 	<ore:oreVanadiumMagnetite> : <ore:dustVanadiumMagnetite>.firstItem*4,
-	<ore:oreBandedIron> : <ore:dustBandedIron>.firstItem*4,
+	<ore:oreHematite> : <ore:dustHematite>.firstItem*4,
 	<ore:oreBrownLimonite> : <ore:dustBrownLimonite>.firstItem*4,
 	<ore:oreYellowLimonite> : <ore:dustYellowLimonite>.firstItem*4,
-	<ore:oreTenorite> : <ore:dustTenorite>.firstItem*4,
 	<ore:oreTetrahedrite> : <ore:dustTetrahedrite>.firstItem*4,
 	<ore:oreBornite> : <ore:dustBornite>.firstItem*4,
 	<ore:oreChalcopyrite> : <ore:dustChalcopyrite>.firstItem*4,
@@ -282,75 +283,6 @@ val OreMap = {
 	<ore:oreCassiterite> : <ore:dustCassiterite>.firstItem*4,
 	<ore:oreGalena> : <ore:dustGalena>.firstItem*4,
 	<ore:orePyrite> : <ore:dustPyrite>.firstItem*4,
-
-	<ore:orePoorIron> : <ore:dustIron>.firstItem*1,
-	<ore:orePoorGold> : <ore:dustGold>.firstItem*1,
-	<ore:orePoorCopper> : <ore:dustCopper>.firstItem*1,
-	<ore:orePoorTin> : <ore:dustTin>.firstItem*1,
-	<ore:orePoorSilver> : <ore:dustSilver>.firstItem*1,
-	<ore:orePoorLead> : <ore:dustLead>.firstItem*1,
-	<ore:orePoorZinc> : <ore:dustZinc>.firstItem*1,
-	<ore:orePoorSphalerite> : <ore:dustSphalerite>.firstItem*2,
-	<ore:orePoorMagnetite> : <ore:dustMagnetite>.firstItem*2,
-	<ore:orePoorVanadiumMagnetite> : <ore:dustVanadiumMagnetite>.firstItem*2,
-	<ore:orePoorBandedIron> : <ore:dustBandedIron>.firstItem*2,
-	<ore:orePoorBrownLimonite> : <ore:dustBrownLimonite>.firstItem*2,
-	<ore:orePoorYellowLimonite> : <ore:dustYellowLimonite>.firstItem*2,
-	<ore:orePoorTenorite> : <ore:dustTenorite>.firstItem*2,
-	<ore:orePoorTetrahedrite> : <ore:dustTetrahedrite>.firstItem*2,
-	<ore:orePoorBornite> : <ore:dustBornite>.firstItem*2,
-	<ore:orePoorChalcopyrite> : <ore:dustChalcopyrite>.firstItem*2,
-	<ore:orePoorMalachite> : <ore:dustMalachite>.firstItem*2,
-	<ore:orePoorEnargite> : <ore:dustEnargite>.firstItem*2,
-	<ore:orePoorCassiterite> : <ore:dustCassiterite>.firstItem*2,
-	<ore:orePoorGalena> : <ore:dustGalena>.firstItem*2,
-	<ore:orePoorPyrite> : <ore:dustPyrite>.firstItem*2,
-
-	<ore:oreRichIron> : <ore:dustIron>.firstItem*3,
-	<ore:oreRichGold> : <ore:dustGold>.firstItem*3,
-	<ore:oreRichCopper> : <ore:dustCopper>.firstItem*3,
-	<ore:oreRichTin> : <ore:dustTin>.firstItem*3,
-	<ore:oreRichSilver> : <ore:dustSilver>.firstItem*3,
-	<ore:oreRichLead> : <ore:dustLead>.firstItem*3,
-	<ore:oreRichZinc> : <ore:dustZinc>.firstItem*3,
-	<ore:oreRichSphalerite> : <ore:dustSphalerite>.firstItem*6,
-	<ore:oreRichMagnetite> : <ore:dustMagnetite>.firstItem*6,
-	<ore:oreRichVanadiumMagnetite> : <ore:dustVanadiumMagnetite>.firstItem*6,
-	<ore:oreRichBandedIron> : <ore:dustBandedIron>.firstItem*6,
-	<ore:oreRichBrownLimonite> : <ore:dustBrownLimonite>.firstItem*6,
-	<ore:oreRichYellowLimonite> : <ore:dustYellowLimonite>.firstItem*6,
-	<ore:oreRichTenorite> : <ore:dustTenorite>.firstItem*6,
-	<ore:oreRichTetrahedrite> : <ore:dustTetrahedrite>.firstItem*6,
-	<ore:oreRichBornite> : <ore:dustBornite>.firstItem*6,
-	<ore:oreRichChalcopyrite> : <ore:dustChalcopyrite>.firstItem*6,
-	<ore:oreRichMalachite> : <ore:dustMalachite>.firstItem*6,
-	<ore:oreRichEnargite> : <ore:dustEnargite>.firstItem*6,
-	<ore:oreRichCassiterite> : <ore:dustCassiterite>.firstItem*6,
-	<ore:oreRichGalena> : <ore:dustGalena>.firstItem*6,
-	<ore:oreRichPyrite> : <ore:dustPyrite>.firstItem*6,
-
-	<ore:orePureIron> : <ore:dustIron>.firstItem*4,
-	<ore:orePureGold> : <ore:dustGold>.firstItem*4,
-	<ore:orePureCopper> : <ore:dustCopper>.firstItem*4,
-	<ore:orePureTin> : <ore:dustTin>.firstItem*4,
-	<ore:orePureSilver> : <ore:dustSilver>.firstItem*4,
-	<ore:orePureLead> : <ore:dustLead>.firstItem*4,
-	<ore:orePureZinc> : <ore:dustZinc>.firstItem*4,
-	<ore:orePureSphalerite> : <ore:dustSphalerite>.firstItem*8,
-	<ore:orePureMagnetite> : <ore:dustMagnetite>.firstItem*8,
-	<ore:orePureVanadiumMagnetite> : <ore:dustVanadiumMagnetite>.firstItem*8,
-	<ore:orePureBandedIron> : <ore:dustBandedIron>.firstItem*8,
-	<ore:orePureBrownLimonite> : <ore:dustBrownLimonite>.firstItem*8,
-	<ore:orePureYellowLimonite> : <ore:dustYellowLimonite>.firstItem*8,
-	<ore:orePureTenorite> : <ore:dustTenorite>.firstItem*8,
-	<ore:orePureTetrahedrite> : <ore:dustTetrahedrite>.firstItem*8,
-	<ore:orePureBornite> : <ore:dustBornite>.firstItem*8,
-	<ore:orePureChalcopyrite> : <ore:dustChalcopyrite>.firstItem*8,
-	<ore:orePureMalachite> : <ore:dustMalachite>.firstItem*8,
-	<ore:orePureEnargite> : <ore:dustEnargite>.firstItem*8,
-	<ore:orePureCassiterite> : <ore:dustCassiterite>.firstItem*8,
-	<ore:orePureGalena> : <ore:dustGalena>.firstItem*8,
-	<ore:orePurePyrite> : <ore:dustPyrite>.firstItem*8,
 
 	<ore:ingotTin> : <ore:dustTin>.firstItem,
 	<ore:ingotCopper> : <ore:dustCopper>.firstItem,
@@ -370,13 +302,12 @@ val OreMap = {
 	<ore:nuggetBrass> : <ore:dustTinyBrass>.firstItem,
 	<ore:nuggetNickel> : <ore:dustTinyNickel>.firstItem,
 
-
 } as IItemStack[IOreDictEntry];
 
 for key in OreMap {
 	Grinder.addRecipe(OreMap[key], key, 1);
 }
-*/
+
 //NoTreePunching tool stats tweak
 
 <notreepunching:pickaxe/flint>.maxDamage = 200;

@@ -235,7 +235,7 @@ for solder in soldering_alloys{
 			<ore:plateAluminium>*4,
 			<ore:stickAluminium>
 		])
-		.notConsumable(intCircuit(30))
+		.circuit(30)
 		.fluidInputs(solder*72)
 		.outputs(<machinemod:fuelcan:1000>)
 		.duration(20)
@@ -370,7 +370,7 @@ blast_furnace.recipeBuilder()
 	.EUt(100)
 	.buildAndRegister();
 
-fluid_canner.recipeBuilder()
+canner.recipeBuilder()
 	.inputs(<contenttweaker:engine_block_cast>)
 	.fluidInputs(<liquid:aluminium>*576)
 	.outputs(<contenttweaker:full_engine_block_cast>)
@@ -384,7 +384,7 @@ val fuels as ILiquidStack[] = [
 ];
 
 for fuel in fuels {
-	fluid_canner.recipeBuilder()
+	canner.recipeBuilder()
 		.inputs(<machinemod:fuelcan:1000>)
 		.fluidInputs(fuel)
 		.outputs(<machinemod:fuelcan>)
@@ -392,7 +392,7 @@ for fuel in fuels {
 		.EUt(16)
 		.buildAndRegister();
 		
-	fluid_canner.recipeBuilder()
+	canner.recipeBuilder()
 		.inputs(<machinemod:elytrajetleg>.anyDamage())
 		.fluidInputs(fuel)
 		.outputs(<machinemod:elytrajetleg>)
