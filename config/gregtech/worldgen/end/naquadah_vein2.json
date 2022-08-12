@@ -1,0 +1,29 @@
+{
+  "weight": 8,
+  "density": 0.7,
+  "max_height": 65,
+  "min_height": 30,
+  "dimension_filter": ["name:the_end"],
+  "surface_stone_material": "naquadah",
+  
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [25, 25]
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 90,
+          "value": "ore:naquadric_compound"
+        },
+        {
+          "weight": 10,
+          "value": "ore:enriched_naquadric_compound"
+        }
+      ]
+    }
+  }
+}

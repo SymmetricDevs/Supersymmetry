@@ -1,0 +1,18 @@
+{
+  "path": "mod_roots/soils/terran_soil_soil.json",
+  "enabled": true,
+  "id": "terran_soil_soil",
+  "name": "Terran Soil",
+  "varients": [
+    {
+      "item": "roots:elemental_soil_earth",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": true,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": true
+    }
+  ]
+}

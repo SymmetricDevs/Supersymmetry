@@ -1,6 +1,6 @@
 
 {
-  "ID": 142,
+  "ID": 141,
   "Name": "Regolith Lowlands",
   "Resource Location": "advancedrocketry:moondark",
   "Class": "zmaster587.advancedRocketry.world.biome.BiomeGenMoonDark",
@@ -20,8 +20,8 @@
   "Enable Rain": false,
   "Enable Snow": false,
   "Dictionary Types": [
-    "COLD",
     "DRY",
+    "COLD",
     "WASTELAND"
   ],
   "BiomeManager Entries": {},

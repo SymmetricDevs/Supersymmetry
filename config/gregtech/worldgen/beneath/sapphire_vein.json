@@ -1,0 +1,55 @@
+{
+  "weight": 80,
+  "density": 0.4,
+  "min_height": 110,
+  "max_height": 155,
+  "dimension_filter": ["dimension_id:10"],
+  "surface_stone_material": "aluminium",
+  "name": "Sapphire Vein",
+  "description": "Contains sapphire and green sapphire. Can be electrolyzed to get aluminium.",
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [14, 14]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 25,
+          "value": "ore:sapphire"
+        },
+		{
+          "weight": 10,
+          "value": "ore:poor:sapphire"
+        },	
+		{
+          "weight": 10,
+          "value": "ore:rich:sapphire"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:pure:sapphire"
+        },
+		{
+          "weight": 25,
+          "value": "ore:green_sapphire"
+        },
+		{
+          "weight": 10,
+          "value": "ore:poor:green_sapphire"
+        },	
+		{
+          "weight": 10,
+          "value": "ore:rich:green_sapphire"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:pure:green_sapphire"
+        }
+		]
+    }
+  }
+}

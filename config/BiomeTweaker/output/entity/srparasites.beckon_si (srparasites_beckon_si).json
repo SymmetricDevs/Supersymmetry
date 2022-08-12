@@ -2,5 +2,5 @@
 {
   "Name": "srparasites.beckon_si",
   "Registry ID": "srparasites:beckon_si",
-  "Class": "com.dhanantry.scapeandrunparasites.entity.monster.venkrol.EntityVenkrol"
+  "Class": "com.dhanantry.scapeandrunparasites.entity.monster.deterrent.EntityVenkrol"
 }

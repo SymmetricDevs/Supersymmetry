@@ -1,0 +1,8 @@
+{
+  "path": "mod_botania/mutations/botania_yellow_mutation.json",
+  "enabled": true,
+  "chance": 0.5,
+  "child": "botania:yellow_flower_plant",
+  "parent1": "botania:white_flower_plant",
+  "parent2": "vanilla:wheat_plant"
+}

@@ -1,0 +1,72 @@
+{
+  "path": "mod_agriculturalexpansion/plants/iridium_sprout_plant.json",
+  "enabled": true,
+  "id": "agriculturalexpansion:iridium_sprout_plant",
+  "plant_name": "Iridium Crop",
+  "seed_name": "Iridium Sprout",
+  "seed_items": [
+    {
+      "item": "agriculturalexpansion:iridium_sprout",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": false,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": false
+    }
+  ],
+  "description": {
+    "translations": {},
+    "default": "Iridium Sprout."
+  },
+  "growth_chance": 0.9,
+  "growth_bonus": 0.025,
+  "bonemeal": false,
+  "tier": 1,
+  "weedable": false,
+  "aggressive": false,
+  "spread_chance": 0.1,
+  "spawn_chance": 0.0,
+  "grass_drop_chance": 0.0,
+  "seed_drop_chance": 1.0,
+  "seed_drop_bonus": 0.0,
+  "products": {
+    "products": [
+      {
+        "min": 1,
+        "max": 5,
+        "chance": 0.9,
+        "required": true,
+        "item": "agriculturalexpansion:iridium_essence",
+        "meta": 0,
+        "tags": "",
+        "ignoreMeta": false,
+        "ignoreTags": [],
+        "useOreDict": false
+      }
+    ]
+  },
+  "requirement": {
+    "min_light": 10,
+    "max_light": 16,
+    "soils": [
+      "farmland_soil"
+    ],
+    "conditions": []
+  },
+  "texture": {
+    "render_type": "cross",
+    "seed_texture": "agriculturalexpansion:items/iridium_sprout",
+    "plant_textures": [
+      "agriculturalexpansion:blocks/crop0",
+      "agriculturalexpansion:blocks/crop1",
+      "agriculturalexpansion:blocks/crop2",
+      "agriculturalexpansion:blocks/crop3",
+      "agriculturalexpansion:blocks/crop4",
+      "agriculturalexpansion:blocks/crop5",
+      "agriculturalexpansion:blocks/iridium_crop6",
+      "agriculturalexpansion:blocks/iridium_crop7"
+    ]
+  }
+}

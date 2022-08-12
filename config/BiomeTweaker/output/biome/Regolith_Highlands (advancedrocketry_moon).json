@@ -1,6 +1,6 @@
 
 {
-  "ID": 125,
+  "ID": 124,
   "Name": "Regolith Highlands",
   "Resource Location": "advancedrocketry:moon",
   "Class": "zmaster587.advancedRocketry.world.biome.BiomeGenMoon",
@@ -20,8 +20,8 @@
   "Enable Rain": false,
   "Enable Snow": false,
   "Dictionary Types": [
-    "COLD",
     "DRY",
+    "COLD",
     "WASTELAND"
   ],
   "BiomeManager Entries": {},

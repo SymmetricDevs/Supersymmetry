@@ -1,0 +1,54 @@
+{
+  "weight": 80,
+  "density": 1,
+  "min_height": 1,
+  "max_height": 60,
+  "dimension_filter": ["dimension_id:10"],
+  "name": "Oilsands Vein",
+  "description": "Oil in stone form. Just don't tell America.",
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [9, 9]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 45,
+          "value": "ore:oilsands"
+        },
+		{
+          "weight": 18,
+          "value": "ore:poor:oilsands"
+        },	
+		{
+          "weight": 18,
+          "value": "ore:rich:oilsands"
+        },	
+		{
+          "weight": 9,
+          "value": "ore:pure:oilsands"
+        },
+		{
+          "weight": 5,
+          "value": "ore:lignite"
+        },
+		{
+          "weight": 2,
+          "value": "ore:poor:lignite"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:rich:lignite"
+        },	
+		{
+          "weight": 1,
+          "value": "ore:pure:lignite"
+        }
+		]
+    }
+  }
+}

@@ -2,5 +2,5 @@
 {
   "Name": "srparasites.sentry",
   "Registry ID": "srparasites:sentry",
-  "Class": "com.dhanantry.scapeandrunparasites.entity.monster.venkrol.EntityUnvo"
+  "Class": "com.dhanantry.scapeandrunparasites.entity.monster.deterrent.EntityUnvo"
 }

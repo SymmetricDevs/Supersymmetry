@@ -1,0 +1,8 @@
+{
+  "path": "mod_botania/mutations/botania_magenta_mutation.json",
+  "enabled": true,
+  "chance": 0.5,
+  "child": "botania:magenta_flower_plant",
+  "parent1": "botania:orange_flower_plant",
+  "parent2": "botania:purple_flower_plant"
+}

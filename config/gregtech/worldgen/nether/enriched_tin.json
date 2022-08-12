@@ -1,0 +1,35 @@
+{
+  "weight": 10,
+  "density": 1,
+  "min_height": 0,
+  "max_height": 30,
+  "dimension_filter": ["dimension_id:-1"],
+  "surface_stone_material": "tin",
+  "name": "Enriched Tin Vein",
+  "description": "Incredibly rare! 1 in 120 chance to spawn in the Nether. Only contains pure tin!",
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [20, 20]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 50,
+          "value": "ore:pure:tin"
+        },
+		{
+          "weight": 45,
+          "value": "ore:pure:cassiterite"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:poor:gold"
+        }
+	]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "weight": 0,
+  "density": 1.0,
+  "max_height": 180,
+  "min_height": 95,
+  "priority": -100,
+  "dimension_filter": ["dimension_id:10"],
+  "count_as_vein": false,
+  "generation_predicate": "any",
+  "generator": {
+    "type": "plate",
+    "length": [20, 36],
+    "depth": [20, 36],
+    "height": [5, 10]
+  },
+  "filler": {
+    "type": "ignore_bedrock",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 100,
+          "value": "fluid:natural_gas"
+        }
+      ]
+    }
+  }
+}

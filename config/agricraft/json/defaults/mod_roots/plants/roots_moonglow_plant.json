@@ -1,0 +1,76 @@
+{
+  "path": "mod_roots/plants/roots_moonglow_plant.json",
+  "enabled": true,
+  "id": "roots:moonglow_plant",
+  "plant_name": "Moonglow",
+  "seed_name": "Moonglow Seeds",
+  "seed_items": [
+    {
+      "item": "roots:moonglow_seed",
+      "meta": 0,
+      "tags": "",
+      "ignoreMeta": false,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": false
+    }
+  ],
+  "description": {
+    "translations": {},
+    "default": "Moonglow seeds."
+  },
+  "growth_chance": 0.9,
+  "growth_bonus": 0.025,
+  "bonemeal": false,
+  "tier": 1,
+  "weedable": false,
+  "aggressive": false,
+  "spread_chance": 0.1,
+  "spawn_chance": 0.0,
+  "grass_drop_chance": 0.0,
+  "seed_drop_chance": 1.0,
+  "seed_drop_bonus": 0.0,
+  "products": {
+    "products": [
+      {
+        "min": 1,
+        "max": 5,
+        "chance": 0.9,
+        "required": true,
+        "item": "roots:moonglow_leaf",
+        "meta": 0,
+        "tags": "",
+        "ignoreMeta": false,
+        "ignoreTags": [],
+        "useOreDict": false
+      }
+    ]
+  },
+  "requirement": {
+    "min_light": 10,
+    "max_light": 16,
+    "soils": [
+      "elemental_soil_soil",
+      "caelic_soil_soil",
+      "magmatic_soil_soil",
+      "terran_soil_soil",
+      "aqueous_soil_soil"
+    ],
+    "conditions": []
+  },
+  "texture": {
+    "render_type": "hash",
+    "seed_texture": "roots:items/moonglow_seed",
+    "plant_textures": [
+      "roots:blocks/moonglow_0",
+      "roots:blocks/moonglow_1",
+      "roots:blocks/moonglow_2",
+      "roots:blocks/moonglow_3",
+      "roots:blocks/moonglow_4",
+      "roots:blocks/moonglow_5",
+      "roots:blocks/moonglow_6",
+      "roots:blocks/moonglow_7"
+    ]
+  }
+}

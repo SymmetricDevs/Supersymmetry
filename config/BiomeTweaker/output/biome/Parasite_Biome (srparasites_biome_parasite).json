@@ -1,6 +1,6 @@
 
 {
-  "ID": 122,
+  "ID": 121,
   "Name": "Parasite Biome",
   "Resource Location": "srparasites:biome_parasite",
   "Class": "com.dhanantry.scapeandrunparasites.world.biome.BiomeInfestedPlain",
@@ -20,7 +20,6 @@
   "Enable Rain": false,
   "Enable Snow": false,
   "Dictionary Types": [
-    "DRY",
     "SPOOKY"
   ],
   "BiomeManager Entries": {

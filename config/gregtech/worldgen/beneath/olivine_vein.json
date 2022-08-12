@@ -1,0 +1,71 @@
+{
+  "weight": 160,
+  "density": 0.7,
+  "min_height": 0,
+  "max_height": 90,
+  "dimension_filter": ["dimension_id:10"],
+  "name": "Olivine Vein",
+  "description": "Olivine, the most common material in Earth's mantle. Can be used to make circuits.",
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [14, 14]
+
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 25,
+          "value": "ore:olivine"
+        },
+		{
+          "weight": 10,
+          "value": "ore:poor:olivine"
+        },	
+		{
+          "weight": 10,
+          "value": "ore:rich:olivine"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:pure:olivine"
+        },
+		{
+          "weight": 13,
+          "value": "ore:prasiolite"
+        },
+		{
+          "weight": 5,
+          "value": "ore:poor:prasiolite"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:rich:prasiolite"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:pure:prasiolite"
+        },
+		{
+          "weight": 13,
+          "value": "ore:bentonite"
+        },
+		{
+          "weight": 5,
+          "value": "ore:poor:bentonite"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:rich:bentonite"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:pure:bentonite"
+        }
+	]
+    }
+  }
+}

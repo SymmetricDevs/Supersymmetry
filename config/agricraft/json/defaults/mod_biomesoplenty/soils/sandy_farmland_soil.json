@@ -1,0 +1,18 @@
+{
+  "path": "mod_biomesoplenty/soils/sandy_farmland_soil.json",
+  "enabled": true,
+  "id": "sandy_farmland_soil",
+  "name": "Sandy Farmland",
+  "varients": [
+    {
+      "item": "biomesoplenty:farmland_0",
+      "meta": 15,
+      "tags": "",
+      "ignoreMeta": true,
+      "ignoreTags": [
+        "*"
+      ],
+      "useOreDict": true
+    }
+  ]
+}

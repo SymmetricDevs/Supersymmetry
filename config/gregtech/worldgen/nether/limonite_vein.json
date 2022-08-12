@@ -1,0 +1,54 @@
+{
+  "weight": 200,
+  "density": 0.7,
+  "min_height": 65,
+  "max_height": 100,
+  "dimension_filter": ["dimension_id:10"],
+  "surface_stone_material": "iron",
+  "name": "Limonite Vein",
+  "description": "Made of 100% Iron. Found in the upper layer of the Nether. Sadly, limonite formations aren't that big.",
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [11, 11]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 25,
+          "value": "ore:brown_limonite"
+        },
+		{
+          "weight": 10,
+          "value": "ore:poor:brown_limonite"
+        },	
+		{
+          "weight": 10,
+          "value": "ore:rich:brown_limonite"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:pure:brown_limonite"
+        },
+		{
+          "weight": 25,
+          "value": "ore:yellow_limonite"
+        },
+		{
+          "weight": 10,
+          "value": "ore:poor:yellow_limonite"
+        },	
+		{
+          "weight": 10,
+          "value": "ore:rich:yellow_limonite"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:pure:yellow_limonite"
+        }
+]
+    }
+  }
+}

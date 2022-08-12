@@ -1,0 +1,58 @@
+{
+  "weight": 200,
+  "density": 0.7,
+  "min_height": 55,
+  "max_height": 139,
+  "dimension_filter": ["dimension_id:0"],
+  "surface_stone_material": "tin",
+  "name": "Tin Vein",
+  "description": "Tin is mostly found near rivers, with its companion ore, cassiterite.",
+  "biome_modifier": {
+    "type": "biome_dictionary",
+	"WET": 500
+},
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [15, 15]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 37,
+          "value": "ore:tin"
+        },
+		{
+          "weight": 15,
+          "value": "ore:poor:tin"
+        },	
+		{
+          "weight": 15,
+          "value": "ore:rich:tin"
+        },	
+		{
+          "weight": 7,
+          "value": "ore:pure:tin"
+        },		
+		        {
+          "weight": 13,
+          "value": "ore:cassiterite"
+        },
+		{
+          "weight": 5,
+          "value": "ore:poor:cassiterite"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:rich:cassiterite"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:pure:cassiterite"
+        }
+      ]
+    }
+  }
+}

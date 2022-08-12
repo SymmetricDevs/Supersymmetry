@@ -1,0 +1,72 @@
+{
+  "weight": 75,
+  "density": 0.3,
+  "min_height": 10,
+  "max_height": 110,
+  "dimension_filter": ["dimension_id:10"],
+
+  "surface_stone_material": "diamond",
+  "name": "Diamond Vein",
+  "description": "When carbon comes together and gets highly compressed, it turns to diamond. Found in the lower layer of the Beneath.",
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [15, 15]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 23,
+          "value": "ore:coal"
+        },
+		{
+          "weight": 9,
+          "value": "ore:poor:coal"
+        },	
+		{
+          "weight": 9,
+          "value": "ore:rich:coal"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:pure:coal"
+        },
+		{
+          "weight": 23,
+          "value": "ore:graphite"
+        },
+		{
+          "weight": 9,
+          "value": "ore:poor:graphite"
+        },	
+		{
+          "weight": 9,
+          "value": "ore:rich:graphite"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:pure:graphite"
+        },
+		{
+          "weight": 5,
+          "value": "ore:diamond"
+        },
+		{
+          "weight": 2,
+          "value": "ore:poor:diamond"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:rich:diamond"
+        },	
+		{
+          "weight": 1,
+          "value": "ore:pure:diamond"
+        }
+	]
+    }
+  }
+}

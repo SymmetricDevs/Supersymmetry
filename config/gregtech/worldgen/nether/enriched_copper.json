@@ -1,0 +1,36 @@
+{
+  "weight": 10,
+  "density": 1,
+  "min_height": 30,
+  "max_height": 60,
+  "dimension_filter": ["dimension_id:-1"],
+  "surface_stone_material": "copper",
+  "name": "Enriched Copper Vein",
+  "description": "Incredibly rare! 1 in 120 chance to spawn in the Nether. Only contains pure copper!",
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [20, 20]
+
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 50,
+          "value": "ore:pure:copper"
+        },
+		{
+          "weight": 45,
+          "value": "ore:pure:malachite"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:poor:gold"
+        }
+	]
+    }
+  }
+}

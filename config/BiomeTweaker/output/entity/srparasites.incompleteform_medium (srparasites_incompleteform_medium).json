@@ -2,5 +2,5 @@
 {
   "Name": "srparasites.incompleteform_medium",
   "Registry ID": "srparasites:incompleteform_medium",
-  "Class": "com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInhooM"
+  "Class": "com.dhanantry.scapeandrunparasites.entity.monster.crude.EntityInhooM"
 }

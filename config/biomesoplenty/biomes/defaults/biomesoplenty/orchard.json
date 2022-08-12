@@ -86,7 +86,7 @@
       },
       "generationAttempts": 64,
       "amountPerChunk": 0.25,
-      "enable": false
+      "enable": true
     },
     "grass": {
       "amountPerChunk": 1.5,
@@ -114,7 +114,7 @@
       },
       "amountPerChunk": 12.0,
       "maxHeight": 32,
-      "enable": false
+      "enable": true
     },
     "roots": {
       "with": {

@@ -1,0 +1,55 @@
+{
+  "weight": 80,
+  "density": 0.4,
+  "min_height": 110,
+  "max_height": 155,
+  "dimension_filter": ["dimension_id:10"],
+  "surface_stone_material": "aluminium",
+  "name": "Almandine Vein",
+  "description": "Contains almandine and pyrope, which can be electrolyzed to get precious metals.",
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [14, 14]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 25,
+          "value": "ore:almandine"
+        },
+		{
+          "weight": 10,
+          "value": "ore:poor:almandine"
+        },	
+		{
+          "weight": 10,
+          "value": "ore:rich:almandine"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:pure:almandine"
+        },
+		{
+          "weight": 25,
+          "value": "ore:pyrope"
+        },
+		{
+          "weight": 10,
+          "value": "ore:poor:pyrope"
+        },	
+		{
+          "weight": 10,
+          "value": "ore:rich:pyrope"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:pure:pyrope"
+        }
+		]
+    }
+  }
+}

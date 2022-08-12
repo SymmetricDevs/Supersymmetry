@@ -1,0 +1,55 @@
+{
+  "weight": 80,
+  "density": 0.4,
+  "min_height": 90,
+  "max_height": 125,
+  "dimension_filter": ["dimension_id:-1"],
+  "surface_stone_material": "phosphorus",
+  "name": "Apatite Vein",
+  "description": "Source of Phosphor and Apatite. Found in the top part of the Nether.",
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [11, 10]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+		{
+          "weight": 37,
+          "value": "ore:apatite"
+        },
+		{
+          "weight": 15,
+          "value": "ore:poor:apatite"
+        },	
+		{
+          "weight": 15,
+          "value": "ore:rich:apatite"
+        },	
+		{
+          "weight": 7,
+          "value": "ore:pure:apatite"
+        },
+		{
+          "weight": 12,
+          "value": "ore:phosphor"
+        },
+		{
+          "weight": 5,
+          "value": "ore:poor:phosphor"
+        },	
+		{
+          "weight": 5,
+          "value": "ore:rich:phosphor"
+        },	
+		{
+          "weight": 3,
+          "value": "ore:pure:phosphor"
+        }
+			]
+    }
+  }
+}

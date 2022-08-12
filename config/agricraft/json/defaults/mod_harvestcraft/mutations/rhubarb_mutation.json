@@ -1,0 +1,8 @@
+{
+  "path": "mod_harvestcraft/mutations/rhubarb_mutation.json",
+  "enabled": true,
+  "chance": 0.5,
+  "child": "harvestcraft:rhubarb_plant",
+  "parent1": "vanilla:sugarcane_plant",
+  "parent2": "harvestcraft:lettuce_plant"
+}

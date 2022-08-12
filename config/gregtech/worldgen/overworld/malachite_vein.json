@@ -1,0 +1,92 @@
+{
+  "weight": 120,
+  "density": 0.4,
+  "min_height": 35,
+  "max_height": 55,
+  "dimension_filter": ["dimension_id:0"],
+ "surface_stone_material": "copper",
+  "name": "Malachite Vein",
+  "description": "Malachite is a source of copper found deep underground. It's paired with limonite, which is a source of iron, and banded iron. It's very common in plains.",
+  "biome_modifier": {
+    "type": "biome_dictionary",
+	"PLAINS": 499
+},
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [15, 15]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 20,
+          "value": "ore:malachite"
+        },
+		{
+          "weight": 8,
+          "value": "ore:poor:malachite"
+        },	
+		{
+          "weight": 8,
+          "value": "ore:rich:malachite"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:pure:malachite"
+        },		
+		        {
+          "weight": 10,
+          "value": "ore:brown_limonite"
+        },
+		{
+          "weight": 4,
+          "value": "ore:poor:brown_limonite"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:rich:brown_limonite"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:pure:brown_limonite"
+        },
+		{
+          "weight": 10,
+          "value": "ore:banded_iron"
+        },
+		{
+          "weight": 4,
+          "value": "ore:poor:banded_iron"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:rich:banded_iron"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:pure:banded_iron"
+        },
+		{
+          "weight": 10,
+          "value": "ore:yellow_limonite"
+        },
+		{
+          "weight": 4,
+          "value": "ore:poor:yellow_limonite"
+        },	
+		{
+          "weight": 4,
+          "value": "ore:rich:yellow_limonite"
+        },	
+		{
+          "weight": 2,
+          "value": "ore:pure:yellow_limonite"
+        }
+		
+	]
+    }
+  }
+}

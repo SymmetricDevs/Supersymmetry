@@ -1,0 +1,28 @@
+{
+  "weight": 35,
+  "priority": 100,
+  "density": 1.0,
+  "min_height": 25,
+  "count_as_vein": false,
+
+  "generator": {
+    "type": "sphere",
+    "radius": [10, 20]
+  },
+  "filler": {
+    "type": "ignore_bedrock",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 100,
+          "value": {
+            "block": "gregtech:mineral",
+            "variant": "basalt",
+            "chiseling_variant": "normal"
+          }
+        }
+      ]
+    }
+  }
+}
