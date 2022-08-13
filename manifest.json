@@ -11,8 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Supersymmetry",
-  "externalDeps": [],
-  "version": "1.0.0-alpha1",
+  "version": "1.0.0-alpha2",
   "author": "Zalgo",
   "files": [
     {
@@ -62,8 +61,8 @@
     },
     {
       "projectID": 362056,
-      "fileID": 3493623,
-      "required": false
+      "fileID": 3924367,
+      "required": true
     },
     {
       "projectID": 310812,
@@ -74,11 +73,6 @@
       "projectID": 296686,
       "fileID": 3907346,
       "required": true
-    },
-    {
-      "projectID": 231868,
-      "fileID": 2972849,
-      "required": false
     },
     {
       "projectID": 267602,
@@ -128,7 +122,7 @@
     {
       "projectID": 477021,
       "fileID": 3861606,
-      "required": true
+      "required": false
     },
     {
       "projectID": 387275,
@@ -193,11 +187,11 @@
     {
       "projectID": 564858,
       "fileID": 3783615,
-      "required": true
+      "required": false
     },
     {
       "projectID": 624967,
-      "fileID": 3917924,
+      "fileID": 3927838,
       "required": true
     },
     {
@@ -382,7 +376,7 @@
     },
     {
       "projectID": 570458,
-      "fileID": 3888235,
+      "fileID": 3925410,
       "required": true
     },
     {
@@ -507,7 +501,7 @@
     },
     {
       "projectID": 310941,
-      "fileID": 3632560,
+      "fileID": 3931277,
       "required": true
     },
     {
@@ -663,7 +657,7 @@
     {
       "projectID": 557242,
       "fileID": 3859788,
-      "required": true
+      "required": false
     },
     {
       "projectID": 237307,
@@ -798,11 +792,11 @@
     {
       "projectID": 460609,
       "fileID": 3898244,
-      "required": true
+      "required": false
     },
     {
       "projectID": 409087,
-      "fileID": 3919239,
+      "fileID": 3927890,
       "required": true
     },
     {
@@ -823,7 +817,7 @@
     {
       "projectID": 559781,
       "fileID": 3786221,
-      "required": true
+      "required": false
     },
     {
       "projectID": 303557,
@@ -846,11 +840,6 @@
       "required": true
     },
     {
-      "projectID": 297193,
-      "fileID": 3328798,
-      "required": false
-    },
-    {
       "projectID": 238747,
       "fileID": 2739582,
       "required": true
@@ -866,11 +855,6 @@
       "required": true
     },
     {
-      "projectID": 297197,
-      "fileID": 3328800,
-      "required": false
-    },
-    {
       "projectID": 260912,
       "fileID": 2745852,
       "required": true
@@ -881,19 +865,9 @@
       "required": true
     },
     {
-      "projectID": 297199,
-      "fileID": 3328801,
-      "required": false
-    },
-    {
       "projectID": 285012,
       "fileID": 2823889,
       "required": true
-    },
-    {
-      "projectID": 297200,
-      "fileID": 3328802,
-      "required": false
     },
     {
       "projectID": 60089,
