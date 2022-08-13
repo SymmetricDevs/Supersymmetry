@@ -11,6 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Supersymmetry",
+  "externalDeps": [],
   "version": "1.0.0-alpha2",
   "author": "Zalgo",
   "files": [
