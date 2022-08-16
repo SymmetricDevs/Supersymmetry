@@ -11,7 +11,28 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Supersymmetry",
-  "externalDeps": [],
+  "externalDeps": [
+    {
+      "url" : "https://github.com/GregTechCEu/gregicality-science/releases/download/v0.0.1-alpha/GregicalityMultiblocks-1.12.2-1.1.4-gcys-alpha-v0.0.1-compat.jar",
+      "hash" : "4c2038a650b669b97335ec20b76ba58b5827597858d4e72e45ea81f7b60da0cd",
+      "name": "Gregicality: Multiblocks"
+    },
+    {
+      "url" : "https://github.com/GregTechCEu/gregicality-science/releases/download/v0.0.1-alpha/GregicalityScience-1.12.2-0.0.1-alpha.jar",
+      "hash" : "22aee685a8bfcb462c66c95d0e9c5c752c0bc1e9719f95e5fa59a8f0b8fc5b30",
+      "name": "Gregicality: Science"
+    },
+    {
+      "url" : "https://cdn.discordapp.com/attachments/852613353864036412/1007693161772109985/GregTech_Food_Option-1.12.2-1.7.0.jar",
+      "hash" : "507104653fb9c47c45a91154250d0241c23fe8f74984129572ed164cd552cd09",
+      "name": "GregTechFoodOption"
+    },
+    {
+      "url" : "https://github.com/GregTechCEu/gregicality-science/releases/download/v0.0.1-alpha/gregtech-1.12.2-2.4.0-gcys-alpha.jar",
+      "hash" : "a2461b070944295c80568b3e9ee0e3871363ac610183ac53a0f007d2393bfb1a",
+      "name": "GregTech Community Edition Unofficial"
+    }
+  ],
   "version": "1.0.0-alpha2",
   "author": "Zalgo",
   "files": [
