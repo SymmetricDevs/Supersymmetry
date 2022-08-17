@@ -78,14 +78,14 @@ def build(args):
 
                 r = requests.get(mod["url"])
 
-                hash = hashlib.sha256(jar.read()).hexdigest()
+                hash = hashlib.sha256(r.content).hexdigest()
                 if str(hash) == mod["hash"]:
                     jar.write(r.content)
                     modlist.append(mod["name"])
-                    print("hash succsessful")
+                    print("hash succsessful for {}".format(mod["name"]))
                     break
                 else:
-                    print("hash unsuccsessful")
+                    print("hash unsuccsessful for {}".format(mod["name"]))
                     print("use", str(hash), "this if it is consistant across runs")
                     pass
     for dir in copyDirs:
