@@ -18,7 +18,6 @@ jobs:
       id: vars
       shell: bash
       run: |
-        export CFAPIKEY=${{ secrets.CFAPIKEY }}
         echo "::set-output name=sha_short::$(git rev-parse --short $GITHUB_SHA)"
     - name: Install requests
       run: |
@@ -31,6 +30,8 @@ jobs:
     - name: Run Build
       run: |
         python build/main.py
+      env:
+        CFAPIKEY: ${{ secrets.CFAPIKEY }}
     - name: Automatic Releases
       uses: marvinpinto/action-automatic-releases@v1.1.1
       with:
