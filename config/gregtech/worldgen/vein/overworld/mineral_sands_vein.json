@@ -5,7 +5,7 @@
   "min_height": 0,
   "vein_populator": {
     "type": "surface_rock",
-    "material": "lead"
+    "material": "gypsum"
   },
   "generator": {
     "type": "layered",
@@ -18,16 +18,16 @@
     "type": "layered",
     "values": [
       {
-        "primary": "ore:galena"
+        "primary": "ore:basaltic_mineral_sand"
       },
       {
-        "secondary": "ore:lead"
+        "secondary": "ore:granitic_mineral_sand"
       },
       {
-        "between": "ore:silver"
+        "between": "ore:fullers_earth"
       },
       {
-        "sporadic": "ore:silver"
+        "sporadic": "ore:gypsum"
       }
     ]
   }

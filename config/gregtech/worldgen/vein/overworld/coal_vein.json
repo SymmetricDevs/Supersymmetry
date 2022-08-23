@@ -1,8 +1,8 @@
 {
-  "weight": 80,
-  "density": 0.15,
-  "max_height": 80,
-  "min_height": 30,
+  "weight": 120,
+  "density": 0.75,
+  "max_height": 250,
+  "min_height": 0,
   "vein_populator": {
     "type": "surface_rock",
     "material": "coal"
@@ -11,7 +11,7 @@
     "type": "layered",
     "radius": [
       20,
-      32
+      20
     ]
   },
   "filler": {

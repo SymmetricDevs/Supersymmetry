@@ -5,7 +5,7 @@
   "min_height": 0,
   "vein_populator": {
     "type": "surface_rock",
-    "material": "lead"
+    "material": "bauxite"
   },
   "generator": {
     "type": "layered",
@@ -18,16 +18,16 @@
     "type": "layered",
     "values": [
       {
-        "primary": "ore:galena"
+        "primary": "ore:bauxite"
       },
       {
-        "secondary": "ore:lead"
+        "secondary": "ore:bauxite"
       },
       {
-        "between": "ore:silver"
+        "between": "ore:bauxite"
       },
       {
-        "sporadic": "ore:silver"
+        "sporadic": "ore:ilmenite"
       }
     ]
   }

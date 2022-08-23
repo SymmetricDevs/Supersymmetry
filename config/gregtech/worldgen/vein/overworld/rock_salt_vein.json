@@ -1,11 +1,11 @@
 {
-  "weight": 30,
+  "weight": 40,
   "density": 0.75,
-  "max_height": 64,
+  "max_height": 80,
   "min_height": 0,
   "vein_populator": {
     "type": "surface_rock",
-    "material": "lead"
+    "material": "rock_salt"
   },
   "generator": {
     "type": "layered",
@@ -18,16 +18,16 @@
     "type": "layered",
     "values": [
       {
-        "primary": "ore:galena"
+        "primary": "ore:rock_salt"
       },
       {
-        "secondary": "ore:lead"
+        "secondary": "ore:salt"
       },
       {
-        "between": "ore:silver"
+        "between": "ore:lepidolite"
       },
       {
-        "sporadic": "ore:silver"
+        "sporadic": "ore:spodumene"
       }
     ]
   }

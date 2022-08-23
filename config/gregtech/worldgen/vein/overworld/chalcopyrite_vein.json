@@ -1,11 +1,11 @@
 {
-  "weight": 30,
+  "weight": 60,
   "density": 0.75,
-  "max_height": 64,
-  "min_height": 0,
+  "max_height": 0,
+  "min_height": 96,
   "vein_populator": {
     "type": "surface_rock",
-    "material": "lead"
+    "material": "copper"
   },
   "generator": {
     "type": "layered",
@@ -18,16 +18,16 @@
     "type": "layered",
     "values": [
       {
-        "primary": "ore:galena"
+        "primary": "ore:chalcopyrite"
       },
       {
-        "secondary": "ore:lead"
+        "secondary": "ore:chalcopyrite"
       },
       {
-        "between": "ore:silver"
+        "between": "ore:chalcocite"
       },
       {
-        "sporadic": "ore:silver"
+        "sporadic": "ore:bornite"
       }
     ]
   }
