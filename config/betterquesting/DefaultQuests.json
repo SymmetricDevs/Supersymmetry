@@ -4640,6 +4640,148 @@
       }
     },
     "47:10": {
+      "questID:3": 47,
+      "preRequisites:11": [
+        300
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "lockedprogress:1": 0,
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "visibility:8": "NORMAL",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "gregtech:machine",
+            "Count:3": 1,
+            "Damage:2": 1035,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "autoclaim:1": 0,
+          "repeat_relative:1": 1,
+          "ismain:1": 1,
+          "name:8": "Cleanroom",
+          "desc:8": "If you want to make more advanced (also cheaper!) circuits you will need a §6cleanroom§r. \n\nThe cleanroom is a multiblock between 3x4x3 and 15x15x15 (WxHxL) blocks. You will need to place §6plascrete§o§r blocks on all sides, a §acontroller§r in the top center, §bfilter machine casings§r for all blocks on the top, and energy and maintenance hatches.\n\nWhen at 100% efficiency, the cleanroom drains 4 EU/t. However, while it\u0027s charging up to that value (0% through 99%), the cleanroom will drain 40 EU/t. For this reason, it is recommended to have at least two amps of LV feeding into an LV energy hatch (or 1 amp of anything higher than LV feeding into an appropriate energy hatch). \n\n§c§c§cRecipes start running when the cleanroom is \u003e90% clean. §r§r§rDoing a \"Needs Cleanroom\" recipe in a cleanroom without 100% efficiency can potentially slow down recipe times or make them progress backwards. Be absolutely sure that your cleanroom is running at 100% efficiency.\n\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nThe Cleanroom requires:\n\n- 1 Cleanroom Controller\n- 1 HV Energy Hatch\n- 1 HV Machine Hull\n- 1 Fluid Passthrough Hatch\n- 1 Item Passthrough Hatch\n- 1 HV Diode\n- 1 Maintenance Hatch\n- 6 Cleanroom Glass\n- 75 Plascrete\n- 8 Filter Casing\n- 2 Iron Doors"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1035,
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1213,
+              "OreDict:8": ""
+            },
+            "2:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 988,
+              "OreDict:8": ""
+            },
+            "3:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1403,
+              "OreDict:8": ""
+            },
+            "4:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1402,
+              "OreDict:8": ""
+            },
+            "5:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1303,
+              "OreDict:8": ""
+            },
+            "6:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1654,
+              "OreDict:8": ""
+            },
+            "7:10": {
+              "id:8": "gregtech:transparent_casing",
+              "Count:3": 6,
+              "Damage:2": 3,
+              "OreDict:8": ""
+            },
+            "8:10": {
+              "id:8": "gregtech:cleanroom_casing",
+              "Count:3": 64,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            },
+            "9:10": {
+              "id:8": "gregtech:cleanroom_casing",
+              "Count:3": 8,
+              "Damage:2": 1,
+              "OreDict:8": ""
+            },
+            "10:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "minecraft:iron_door",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 4,
+              "Damage:2": 625,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "48:10": {
       "questID:3": 48,
       "preRequisites:11": [
         75
@@ -4678,8 +4820,8 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 1,
-          "name:8": "Bottling Machine",
-          "desc:8": "The §bBottling Machine§r is a 3x2x3 multi-block. It is used to fill liquid containers.\n\nThe Bottling Machine requires:\n\n3 Steel Scaffolding\n2 Iron Sheetmetal\n1 Redstone Engineering Block\n2 Light Engineering Blocks\n3 Conveyor Belts\n1 Fluid Pump\n1 Glass\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the bottling machine is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack the middle conveyor with the §6Engineer\u0027s Hammer §rto form the multiblock.\nIf the bottling machine doesn\u0027t form, you may try switching the order of the conveyors. \n\nThe Bottling Machine has no GUI. Redstone Flux is supplied on the §6top-right§r block of the multi-block (where the Light Engineering Block was).\nIf you cannot get fluid to go in the machine, try putting a tank near it and using a §7LV Pump §rand fluid pipes to transfer the fluid.\n\nFluids are added through the bottom-middle block of the backside. Items are added by dropping them on the Bottling Machine\u0027s Conveyor Belts. When a liquid storing item (such as a Bucket or Jerrycan) is introduced to the Bottling Machine, the Bottling Machine will fill and output it, consuming some RF.\n\n{ResourceLocation:supersymmetry:guides/ie-bottler.png}"
+          "name:8": "§c§lDEPRECATED Bottling Machine",
+          "desc:8": "The §bBottling Machine§r is a 3x2x3 multi-block. It is used to fill liquid containers.\n\nThe Bottling Machine requires:\n\n3 Steel Scaffolding\n2 Iron Sheetmetal\n1 Redstone Engineering Block\n2 Light Engineering Blocks\n3 Conveyor Belts\n1 Fluid Pump\n1 Glass\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the bottling machine is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack the middle conveyor with the §6Engineer\u0027s Hammer §rto form the multiblock.\nIf the bottling machine doesn\u0027t form, you may try switching the order of the conveyors. \n\nThe Bottling Machine has no GUI. Redstone Flux is supplied on the §6top-right§r block of the multi-block (where the Light Engineering Block was).\nIf you cannot get fluid to go in the machine, try putting a tank near it and using a §7LV Pump §rand fluid pipes to transfer the fluid.\n\nFluids are added through the bottom-middle block of the backside. Items are added by dropping them on the Bottling Machine\u0027s Conveyor Belts. When a liquid storing item (such as a Bucket or Jerrycan) is introduced to the Bottling Machine, the Bottling Machine will fill and output it, consuming some RF.\n\n{ResourceLocation:supersymmetry:guides/ie-bottler.png}\n"
         }
       },
       "tasks:9": {
@@ -4861,7 +5003,7 @@
         }
       }
     },
-    "48:10": {
+    "49:10": {
       "questID:3": 49,
       "preRequisites:11": [
         26
@@ -4967,7 +5109,7 @@
         }
       }
     },
-    "49:10": {
+    "50:10": {
       "questID:3": 50,
       "preRequisites:11": [
         49
@@ -5066,7 +5208,7 @@
         }
       }
     },
-    "50:10": {
+    "51:10": {
       "questID:3": 51,
       "preRequisites:11": [
         50
@@ -5165,7 +5307,7 @@
         }
       }
     },
-    "51:10": {
+    "52:10": {
       "questID:3": 52,
       "preRequisites:11": [
         50
@@ -5268,7 +5410,7 @@
         }
       }
     },
-    "52:10": {
+    "53:10": {
       "questID:3": 53,
       "preRequisites:11": [
         49,
@@ -5372,7 +5514,7 @@
         }
       }
     },
-    "53:10": {
+    "54:10": {
       "questID:3": 54,
       "preRequisites:11": [
         44,
@@ -5465,7 +5607,7 @@
         }
       }
     },
-    "54:10": {
+    "55:10": {
       "questID:3": 55,
       "preRequisites:11": [
         33
@@ -5512,7 +5654,7 @@
       },
       "rewards:9": {}
     },
-    "55:10": {
+    "56:10": {
       "questID:3": 56,
       "preRequisites:11": [
         31
@@ -5576,7 +5718,7 @@
         }
       }
     },
-    "56:10": {
+    "57:10": {
       "questID:3": 57,
       "preRequisites:11": [
         31
@@ -5649,7 +5791,7 @@
         }
       }
     },
-    "57:10": {
+    "58:10": {
       "questID:3": 58,
       "preRequisites:11": [
         31
@@ -5713,7 +5855,7 @@
         }
       }
     },
-    "58:10": {
+    "59:10": {
       "questID:3": 59,
       "preRequisites:11": [
         31
@@ -5786,7 +5928,58 @@
         }
       }
     },
-    "59:10": {
+    "60:10": {
+      "questID:3": 60,
+      "preRequisites:11": [
+        47
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "lockedprogress:1": 0,
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "visibility:8": "NORMAL",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "gregtech:machine",
+            "Count:3": 1,
+            "Damage:2": 636,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "autoclaim:1": 0,
+          "repeat_relative:1": 1,
+          "ismain:1": 0,
+          "name:8": "MV Circuit Assembler",
+          "desc:8": "A MV circuit assembler is needed to make Micro circuits, the next GregTech circuit line."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 636,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {}
+    },
+    "61:10": {
       "questID:3": 61,
       "preRequisites:11": [
         30
@@ -5902,7 +6095,7 @@
         }
       }
     },
-    "60:10": {
+    "62:10": {
       "questID:3": 62,
       "preRequisites:11": [
         30
@@ -6018,7 +6211,7 @@
         }
       }
     },
-    "61:10": {
+    "63:10": {
       "questID:3": 63,
       "preRequisites:11": [
         31
@@ -6134,7 +6327,7 @@
         }
       }
     },
-    "62:10": {
+    "64:10": {
       "questID:3": 64,
       "preRequisites:11": [
         54
@@ -6225,7 +6418,7 @@
         }
       }
     },
-    "63:10": {
+    "65:10": {
       "questID:3": 65,
       "preRequisites:11": [
         54
@@ -6373,7 +6566,7 @@
         }
       }
     },
-    "64:10": {
+    "66:10": {
       "questID:3": 66,
       "preRequisites:11": [
         54,
@@ -6496,7 +6689,7 @@
         }
       }
     },
-    "65:10": {
+    "67:10": {
       "questID:3": 67,
       "preRequisites:11": [],
       "properties:10": {
@@ -6544,7 +6737,7 @@
       },
       "rewards:9": {}
     },
-    "66:10": {
+    "68:10": {
       "questID:3": 68,
       "preRequisites:11": [
         67
@@ -6594,7 +6787,7 @@
       },
       "rewards:9": {}
     },
-    "67:10": {
+    "69:10": {
       "questID:3": 69,
       "preRequisites:11": [
         68
@@ -6644,7 +6837,7 @@
       },
       "rewards:9": {}
     },
-    "68:10": {
+    "70:10": {
       "questID:3": 70,
       "preRequisites:11": [
         67
@@ -6694,7 +6887,7 @@
       },
       "rewards:9": {}
     },
-    "69:10": {
+    "71:10": {
       "questID:3": 71,
       "preRequisites:11": [
         75
@@ -6733,8 +6926,8 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Metal Press",
-          "desc:8": "The §bMetal Press§r is a 3x1x3 multi-block. It is used to mold metals, and it makes plates at a higher efficiency.\n\nThe Metal Press requires:\n\n2 Steel Scaffoldings\n1 Redstone Engineering Block\n1 Piston\n1 Heavy Engineering Block\n2 Conveyor Belts\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the metal press is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack the middle conveyor with the §6Engineer\u0027s Hammer §rto form the multiblock.\nItems are added by dropping them onto the structure. Right-clicking (a Metal Press with a Mold will attach the Mold to the Metal Press. The mold can be detached by shift right-clicking with an Engineer\u0027s Hammer.\n\n{ResourceLocation:supersymmetry:guides/ie-metalpress.png}"
+          "name:8": "§c§lDEPRECATED Metal Press",
+          "desc:8": "The §bMetal Press§r is a 3x1x3 multi-block. It is used to mold metals, and it makes plates at a higher efficiency.\n\nThe Metal Press requires:\n\n2 Steel Scaffoldings\n1 Redstone Engineering Block\n1 Piston\n1 Heavy Engineering Block\n2 Conveyor Belts\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the metal press is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack the middle conveyor with the §6Engineer\u0027s Hammer §rto form the multiblock.\nItems are added by dropping them onto the structure. Right-clicking (a Metal Press with a Mold will attach the Mold to the Metal Press. The mold can be detached by shift right-clicking with an Engineer\u0027s Hammer.\n\n{ResourceLocation:supersymmetry:guides/ie-metalpress.png}\n"
         }
       },
       "tasks:9": {
@@ -6865,7 +7058,7 @@
         }
       }
     },
-    "70:10": {
+    "72:10": {
       "questID:3": 72,
       "preRequisites:11": [
         75
@@ -7086,7 +7279,7 @@
         }
       }
     },
-    "71:10": {
+    "73:10": {
       "questID:3": 73,
       "preRequisites:11": [
         75
@@ -7156,7 +7349,7 @@
         }
       }
     },
-    "72:10": {
+    "74:10": {
       "questID:3": 75,
       "preRequisites:11": [
         50
@@ -7261,7 +7454,7 @@
         }
       }
     },
-    "73:10": {
+    "75:10": {
       "questID:3": 76,
       "preRequisites:11": [
         49
@@ -7344,7 +7537,7 @@
       },
       "rewards:9": {}
     },
-    "74:10": {
+    "76:10": {
       "questID:3": 77,
       "preRequisites:11": [
         75
@@ -7383,7 +7576,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Assembler",
+          "name:8": "§c§lDEPRECATED Assembler",
           "desc:8": "The IE §bAssembler§r is a 3x3x3 multi-block. It is used to assemble things together (duh)\n\nIt requires:\n\n9 Iron Sheetmetal, \n6 Steel Scaffoldings,\n6 Iron Sheetmetal Slabs, \n2 Redstone Engineering Blocks, \n2 Light Engineering Blocks and 2 Conveyor Belts\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the metal press is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack it with the §6Engineer\u0027s Hammer §rto form the multiblock.\n\nRecipes can be set inside of the Assembler, as seen to the right. The fluid tanks in the Assembler will automatically fill liquid containers used in recipes, such as Water Buckets. It will automatically craft the recipes if it has the correct materials.\n\n{ResourceLocation:supersymmetry:guides/ie-assembler.png}"
         }
       },
@@ -7541,7 +7734,7 @@
         }
       }
     },
-    "75:10": {
+    "77:10": {
       "questID:3": 78,
       "preRequisites:11": [
         75
@@ -7580,7 +7773,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Distillation Tower",
+          "name:8": "§c§lDEPRECATED Distillation Tower",
           "desc:8": "The §3Distillation Tower§r is a large 4x16x4 multiblock used to process fluids into other fluids. \n\nIt can be used to process oil into other things. In the LV age you can do this in one machine (the Distillery), but we can\u0027t do that now.\n\nRemember that we also have another distillation tower, but that is unlocked at MV. That one can extract up to 12 things out of one fluid.\n\nThe Distillation Tower requires:\n\n25 Steel Scaffolding\n33 Steel Scaffolding Slab\n17 Fluid Pipes\n60 Iron Sheetmetal\n4 Heavy Engineering Blocks\n1 Redstone Engineering Block\n\nIf you want to know how to build it, look at the schematic in the §6Engineer\u0027s Manual§r. After completing the structure, whack it with an §6Engineer\u0027s Hammer §rto form the multiblock.\n\nThe port on the back of the Distillation Tower is used to input the fluids. §cRedstone Flux (RF)§r is inputted from the top of the furnace located on the back of the multiblock. Bitumen is output through the port on the front of the machine, and the outputs on the bottom side. The multiblock\u0027s processes can be halted via Redstone through the control panel with the red dot."
         }
       },
@@ -7713,7 +7906,7 @@
       },
       "rewards:9": {}
     },
-    "76:10": {
+    "78:10": {
       "questID:3": 79,
       "preRequisites:11": [
         78
@@ -7752,7 +7945,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Better Boiling ",
+          "name:8": "§c§lDEPRECATED Better Boiling ",
           "desc:8": "The §3IE Boiler§r is a 5x3x3 multiblock used to boil water using oil products, to get steam.\n\nThe Boiler requires:\n\n10 Steel Scaffolding\n10 Fluid Pipes\n18 Iron Sheetmetal\n4 Heavy Engineering Blocks\n1 Redstone Engineering Block\n\nIf you want to know how to build it, look at the schematic in the §6Engineer\u0027s Manual§r. After completing the structure, whack it with an §6Engineer\u0027s Hammer §rto form the multiblock.\n\nYou can use many different fluids to boil water and get steam. Look up the Boiler on JEI and press U to see which fluids you can use. They are mostly made using the distillation tower."
         }
       },
@@ -7872,7 +8065,7 @@
         }
       }
     },
-    "77:10": {
+    "79:10": {
       "questID:3": 80,
       "preRequisites:11": [
         39
@@ -7981,7 +8174,7 @@
         }
       }
     },
-    "78:10": {
+    "80:10": {
       "questID:3": 81,
       "preRequisites:11": [
         80
@@ -8020,8 +8213,8 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Casting Basin",
-          "desc:8": "The §bCasting Basin§r creates different parts for rolling stock, specifically wheels and frames, as well as the Rail Cast for use with the Track Roller. The Gauge selector changes between gauges.\n\n§bImmersive Railroading multiblocks are HUGE, so we can\u0027t show an image preview.\n\n§rThe Casting Basin requires:\n\n114 Stone Bricks\n15 Heavy Engineering Block\n126 Sand\n86 Blast Brick\n63 Steel Scaffolding\n1 Block of Steel (If the multiblock doesn\u0027t form, try using an Immersive Engineering block of steel. You can change between the different types using a Chisel.)\n\nUse the §6Immersive Railroading manual §rto see how to form the structure.\n\nPower is input through the top of the machine, on the color-coded yellow/orange block.\n\nTo create a selected part, drop Steel Blocks or Steel Ingots into the Basin and make sure it has power. The part will be created in short order - right-click on the Basin to retrieve the part.\n\nParts made in the casting basin can be recycled by dropping them back into the basin.\n\n"
+          "name:8": "§6§lREWORK NEEDED§6§l Casting Basin",
+          "desc:8": "The §bCasting Basin§r creates different parts for rolling stock, specifically wheels and frames, as well as the Rail Cast for use with the Track Roller. The Gauge selector changes between gauges.\n\n§bImmersive Railroading multiblocks are HUGE, so we can\u0027t show an image preview.\n\n§rThe Casting Basin requires:\n\n114 Stone Bricks\n15 Heavy Engineering Block\n126 Sand\n86 Blast Brick\n63 Steel Scaffolding\n1 Block of Steel (If the multiblock doesn\u0027t form, try using an Immersive Engineering block of steel. You can change between the different types using a Chisel.)\n\nUse the §6Immersive Railroading manual §rto see how to form the structure.\n\nPower is input through the top of the machine, on the color-coded yellow/orange block.\n\nTo create a selected part, drop Steel Blocks or Steel Ingots into the Basin and make sure it has power. The part will be created in short order - right-click on the Basin to retrieve the part.\n\nParts made in the casting basin can be recycled by dropping them back into the basin.\n"
         }
       },
       "tasks:9": {
@@ -8127,7 +8320,7 @@
       },
       "rewards:9": {}
     },
-    "79:10": {
+    "81:10": {
       "questID:3": 82,
       "preRequisites:11": [
         80
@@ -8163,7 +8356,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Track Roller",
+          "name:8": "§6§lREWORK NEEDED§6§l Track Roller",
           "desc:8": "The §6Track Roller§r is used to create track pieces for use with Track Blueprints.\n\nThe Track Roller requires a clear, level space that is 30 blocks deep, 2 blocks wide, and 3 blocks tall. When placed, the short side will be facing the player, and offset 1 block to the right. After placing, right-click with a Large Wrench anywhere on the arrangement of blocks to assemble the machine.\n\nIt is built from:\n\n44 Steel Scaffolding\n16 Heavy Engineering Block\n32 Light Engineering Block\n\n\nThe Track Roller requires power to operate, which can be input at the top of the multiblock (it must be §cRF§r, not EU)\nTo make tracks, you need to make a §6Rail Casting§r first from the §6Casting Basin§r."
         }
       },
@@ -8239,7 +8432,7 @@
       },
       "rewards:9": {}
     },
-    "80:10": {
+    "82:10": {
       "questID:3": 83,
       "preRequisites:11": [
         80
@@ -8280,7 +8473,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Steam Hammer",
+          "name:8": "§6§lREWORK NEEDED§6§l Steam Hammer",
           "desc:8": "The §6Steam Hammer§r is used to process some parts before they are placed onto a Frame. It is the smallest machine in Immersive Railroading, it\u0027s 5 blocks in width, 1 in depth, and 6 in height.\n\nIt is built from:\n\n3 x Heavy Engineering Block\n1 x Block of Steel (If the multiblock doesn\u0027t form, try using an Immersive Engineering block of steel. You can change the types using a chisel)\n1 x Piston\n10 x Light Engineering Block\n\nOperating the Steam Hammer requires power, which is input through the top block. \nTo operate the hammer, right-click the central block to open the GUI. \n\n{ResourceLocation:supersymmetry:guides/steamhammer.jpg}"
         }
       },
@@ -8362,7 +8555,7 @@
       },
       "rewards:9": {}
     },
-    "81:10": {
+    "83:10": {
       "questID:3": 84,
       "preRequisites:11": [
         83
@@ -8439,7 +8632,7 @@
       },
       "rewards:9": {}
     },
-    "82:10": {
+    "84:10": {
       "questID:3": 85,
       "preRequisites:11": [
         80
@@ -8479,7 +8672,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Plate Rolling Machine",
+          "name:8": "§6§lREWORK NEEDED§6§l Plate Rolling Machine",
           "desc:8": "The §6Plate Rolling Machine§r creates Steel Plates and Boiler Plates from Steel Blocks, which are used in the crafting of Locomotives.\n\nIt is built from:\n\n41 x Heavy Engineering Block\n90 x Steel Scaffolding\n88 x Light Engineering Block\n\nThe machine uses §cRF power§r.\n\nSteel Blocks are input by right-clicking the machine with the blocks in hand, and Steel Blocks can be placed while a plate is being made, which makes the process a bit more efficient.\n\n"
         }
       },
@@ -8555,7 +8748,7 @@
       },
       "rewards:9": {}
     },
-    "83:10": {
+    "85:10": {
       "questID:3": 86,
       "preRequisites:11": [
         80
@@ -8596,7 +8789,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Boiler Roller",
+          "name:8": "§6§lREWORK NEEDED§6§l Boiler Roller",
           "desc:8": "The §6Boiler Roller§r turns Boiler Plates created in the Plate Rolling Machine into the needed boiler pieces for a given steam locomotive.\n\nIt is built from:\n\n24 x Stone Slab\n4 x Heavy Engineering Block\n8 x Light Engineering Block\n\n§r\nTo operate, the machine needs §cRF power§r, which is input through the orange-yellow colored block on the left front of the machine. \nThe roller creates the appropriate part automatically - just have a boilerplate in hand and right-click the machine. \n\n{ResourceLocation:supersymmetry:guides/boilerroller.png}"
         }
       },
@@ -8659,7 +8852,7 @@
       },
       "rewards:9": {}
     },
-    "84:10": {
+    "86:10": {
       "questID:3": 87,
       "preRequisites:11": [
         7
@@ -8723,7 +8916,7 @@
         }
       }
     },
-    "85:10": {
+    "87:10": {
       "questID:3": 88,
       "preRequisites:11": [
         5
@@ -8814,7 +9007,7 @@
         }
       }
     },
-    "86:10": {
+    "88:10": {
       "questID:3": 89,
       "preRequisites:11": [
         20
@@ -8883,7 +9076,7 @@
       },
       "rewards:9": {}
     },
-    "87:10": {
+    "89:10": {
       "questID:3": 90,
       "preRequisites:11": [
         12
@@ -8965,7 +9158,7 @@
         }
       }
     },
-    "88:10": {
+    "90:10": {
       "questID:3": 91,
       "preRequisites:11": [
         149
@@ -9071,7 +9264,7 @@
         }
       }
     },
-    "89:10": {
+    "91:10": {
       "questID:3": 92,
       "preRequisites:11": [
         31
@@ -9144,7 +9337,7 @@
         }
       }
     },
-    "90:10": {
+    "92:10": {
       "questID:3": 93,
       "preRequisites:11": [
         12
@@ -9256,7 +9449,7 @@
         }
       }
     },
-    "91:10": {
+    "93:10": {
       "questID:3": 94,
       "preRequisites:11": [
         31
@@ -9320,7 +9513,7 @@
         }
       }
     },
-    "92:10": {
+    "94:10": {
       "questID:3": 95,
       "preRequisites:11": [
         94
@@ -9411,7 +9604,7 @@
         }
       }
     },
-    "93:10": {
+    "95:10": {
       "questID:3": 96,
       "preRequisites:11": [
         95
@@ -9517,7 +9710,7 @@
         }
       }
     },
-    "94:10": {
+    "96:10": {
       "questID:3": 97,
       "preRequisites:11": [
         96
@@ -9635,7 +9828,7 @@
         }
       }
     },
-    "95:10": {
+    "97:10": {
       "questID:3": 98,
       "preRequisites:11": [],
       "properties:10": {
@@ -9683,7 +9876,7 @@
       },
       "rewards:9": {}
     },
-    "96:10": {
+    "98:10": {
       "questID:3": 99,
       "preRequisites:11": [
         66
@@ -9756,7 +9949,7 @@
         }
       }
     },
-    "97:10": {
+    "99:10": {
       "questID:3": 100,
       "preRequisites:11": [
         99
@@ -9862,7 +10055,7 @@
         }
       }
     },
-    "98:10": {
+    "100:10": {
       "questID:3": 101,
       "preRequisites:11": [
         99
@@ -9953,7 +10146,7 @@
         }
       }
     },
-    "99:10": {
+    "101:10": {
       "questID:3": 102,
       "preRequisites:11": [
         99
@@ -10065,7 +10258,7 @@
         }
       }
     },
-    "100:10": {
+    "102:10": {
       "questID:3": 103,
       "preRequisites:11": [
         99
@@ -10156,7 +10349,7 @@
         }
       }
     },
-    "101:10": {
+    "103:10": {
       "questID:3": 104,
       "preRequisites:11": [
         99
@@ -10255,7 +10448,7 @@
         }
       }
     },
-    "102:10": {
+    "104:10": {
       "questID:3": 105,
       "preRequisites:11": [
         104
@@ -10293,7 +10486,7 @@
       },
       "rewards:9": {}
     },
-    "103:10": {
+    "105:10": {
       "questID:3": 108,
       "preRequisites:11": [
         105
@@ -10366,7 +10559,7 @@
         }
       }
     },
-    "104:10": {
+    "106:10": {
       "questID:3": 109,
       "preRequisites:11": [
         105
@@ -10439,7 +10632,7 @@
         }
       }
     },
-    "105:10": {
+    "107:10": {
       "questID:3": 110,
       "preRequisites:11": [
         105
@@ -10503,7 +10696,7 @@
         }
       }
     },
-    "106:10": {
+    "108:10": {
       "questID:3": 111,
       "preRequisites:11": [
         105
@@ -10576,7 +10769,7 @@
         }
       }
     },
-    "107:10": {
+    "109:10": {
       "questID:3": 112,
       "preRequisites:11": [
         105
@@ -10653,7 +10846,7 @@
         }
       }
     },
-    "108:10": {
+    "110:10": {
       "questID:3": 113,
       "preRequisites:11": [
         105
@@ -10741,7 +10934,7 @@
         }
       }
     },
-    "109:10": {
+    "111:10": {
       "questID:3": 114,
       "preRequisites:11": [
         105
@@ -10805,7 +10998,7 @@
         }
       }
     },
-    "110:10": {
+    "112:10": {
       "questID:3": 115,
       "preRequisites:11": [
         105
@@ -10878,7 +11071,7 @@
         }
       }
     },
-    "111:10": {
+    "113:10": {
       "questID:3": 116,
       "preRequisites:11": [
         105
@@ -10951,144 +11144,6 @@
         }
       }
     },
-    "112:10": {
-      "questID:3": 117,
-      "preRequisites:11": [
-        112
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "issilent:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "lockedprogress:1": 0,
-          "tasklogic:8": "AND",
-          "repeattime:3": -1,
-          "visibility:8": "ALWAYS",
-          "simultaneous:1": 0,
-          "icon:10": {
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "skinType:8": "STEVE",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "id:8": "gregtech:meta_item_1",
-            "Count:3": 1,
-            "Damage:2": 10827,
-            "OreDict:8": "ingotPreciousMetal"
-          },
-          "globalshare:1": 0,
-          "questlogic:8": "AND",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "autoclaim:1": 0,
-          "repeat_relative:1": 1,
-          "ismain:1": 0,
-          "name:8": "Gold Processing",
-          "desc:8": "Do you want to know how to refine gold? If yes, this quest is for you!\n\nYou may have noticed that smelting §6precious metal §rto gold isn\u0027t really a good idea. It smelts into 1 nugget per ore.\nI will teach you how to get more gold out of that. Let\u0027s start by getting precious metal dust.\nIf you follow all 4 steps of the chain, you will get 3 gold ingots for every precious metal you smelt. Pretty cool, huh?"
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "partialMatch:1": 1,
-          "autoConsume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "consume:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "skinType:8": "STEVE",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "id:8": "gregtech:meta_item_1",
-              "Count:3": 1,
-              "Damage:2": 2827,
-              "OreDict:8": "dustPreciousMetal"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      },
-      "rewards:9": {}
-    },
-    "113:10": {
-      "questID:3": 118,
-      "preRequisites:11": [
-        117
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "issilent:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "lockedprogress:1": 0,
-          "tasklogic:8": "AND",
-          "repeattime:3": -1,
-          "visibility:8": "ALWAYS",
-          "simultaneous:1": 0,
-          "icon:10": {
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "skinType:8": "STEVE",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "id:8": "gregtech:meta_item_1",
-            "Count:3": 1,
-            "Damage:2": 10828,
-            "OreDict:8": "ingotGoldAlloy"
-          },
-          "globalshare:1": 0,
-          "questlogic:8": "AND",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "autoclaim:1": 0,
-          "repeat_relative:1": 1,
-          "ismain:1": 0,
-          "name:8": "Gold Processing: Step 1",
-          "desc:8": "The next step in the chain is §6gold alloy§r. Combine §6precious metal §rand §6copper§r in an alloy smelter to get gold alloy.\n\n"
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "partialMatch:1": 1,
-          "autoConsume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "consume:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "skinType:8": "STEVE",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "id:8": "gregtech:meta_item_1",
-              "Count:3": 1,
-              "Damage:2": 10828,
-              "OreDict:8": ""
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      },
-      "rewards:9": {}
-    },
     "114:10": {
       "questID:3": 119,
       "preRequisites:11": [
@@ -11128,7 +11183,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Hydrogen and Oxygen",
+          "name:8": "You probably learnt this in 7th grade",
           "desc:8": "Separate §9water §rto get hydrogen and oxygen. "
         }
       },
@@ -11558,84 +11613,6 @@
       }
     },
     "120:10": {
-      "questID:3": 125,
-      "preRequisites:11": [
-        118,
-        128
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "issilent:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "lockedprogress:1": 0,
-          "tasklogic:8": "AND",
-          "repeattime:3": -1,
-          "visibility:8": "ALWAYS",
-          "simultaneous:1": 0,
-          "icon:10": {
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "skinType:8": "STEVE",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "id:8": "betterquesting:placeholder",
-            "Count:3": 1,
-            "tag:10": {
-              "orig_meta:3": 904,
-              "orig_id:8": "gtadditions:ga_dust"
-            },
-            "Damage:2": 904,
-            "OreDict:8": "dustGoldLeach"
-          },
-          "globalshare:1": 0,
-          "questlogic:8": "AND",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "autoclaim:1": 0,
-          "repeat_relative:1": 1,
-          "ismain:1": 0,
-          "name:8": "Gold Processing: Step 2",
-          "desc:8": "The next step of gold processing is mixing gold alloy with §bnitric acid §rto make §6Gold Leach§r."
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "partialMatch:1": 1,
-          "autoConsume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "consume:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "skinType:8": "STEVE",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "id:8": "betterquesting:placeholder",
-              "Count:3": 1,
-              "tag:10": {
-                "orig_meta:3": 904,
-                "orig_id:8": "gtadditions:ga_dust"
-              },
-              "Damage:2": 904,
-              "OreDict:8": ""
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      },
-      "rewards:9": {}
-    },
-    "121:10": {
       "questID:3": 126,
       "preRequisites:11": [
         121
@@ -11674,7 +11651,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Hydrochloric Acid",
+          "name:8": "It\u0027s in your stomach",
           "desc:8": "§6Hydrochloric acid§r will be needed for a lot of stuff, including circuits. It\u0027s made out of hydrogen and chlorine. "
         }
       },
@@ -11696,7 +11673,7 @@
       },
       "rewards:9": {}
     },
-    "122:10": {
+    "121:10": {
       "questID:3": 127,
       "preRequisites:11": [
         120
@@ -11757,7 +11734,7 @@
       },
       "rewards:9": {}
     },
-    "123:10": {
+    "122:10": {
       "questID:3": 128,
       "preRequisites:11": [
         127
@@ -11816,118 +11793,11 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
-    },
-    "124:10": {
-      "questID:3": 129,
-      "preRequisites:11": [
-        125
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "issilent:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "lockedprogress:1": 0,
-          "tasklogic:8": "AND",
-          "repeattime:3": -1,
-          "visibility:8": "ALWAYS",
-          "simultaneous:1": 0,
-          "icon:10": {
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "skinType:8": "STEVE",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "id:8": "forge:bucketfilled",
-            "Count:3": 1,
-            "tag:10": {
-              "FluidName:8": "chloroauric_acid",
-              "Amount:3": 1000
-            },
-            "Damage:2": 0,
-            "OreDict:8": ""
-          },
-          "globalshare:1": 0,
-          "questlogic:8": "AND",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "autoclaim:1": 0,
-          "repeat_relative:1": 1,
-          "ismain:1": 0,
-          "name:8": "Gold Processing: Step 3",
-          "desc:8": "Reacting the §g§6gold leach §rwith §3hydrochloric acid§r will create Leached Copper and §6Chloroauric Acid§r.\n\nYou can use the Chemical Dehydrator to get some cool byproducts out of the leached copper (like silver, nickel and lead)"
-        }
-      },
-      "tasks:9": {
+      "rewards:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "groupDetect:1": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "FluidName:8": "chloroauric_acid",
-              "Amount:3": 1000
-            }
-          },
-          "ignoreNBT:1": 0,
+          "rewardID:8": "bq_standard:item",
           "index:3": 0,
-          "consume:1": 0,
-          "taskID:8": "bq_standard:fluid"
-        }
-      },
-      "rewards:9": {}
-    },
-    "125:10": {
-      "questID:3": 130,
-      "preRequisites:11": [
-        129,
-        131
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "issilent:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "lockedprogress:1": 0,
-          "tasklogic:8": "AND",
-          "repeattime:3": -1,
-          "visibility:8": "ALWAYS",
-          "simultaneous:1": 0,
-          "icon:10": {
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "skinType:8": "STEVE",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "id:8": "gregtech:meta_dust",
-            "Count:3": 1,
-            "Damage:2": 41,
-            "OreDict:8": ""
-          },
-          "globalshare:1": 0,
-          "questlogic:8": "AND",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "autoclaim:1": 0,
-          "repeat_relative:1": 1,
-          "ismain:1": 0,
-          "name:8": "Gold Processing: Step 4",
-          "desc:8": "The final step of the gold chain requires us to turn §7chloroauric acid §rinto §6gold dust§r using the chemical reactor.\n\nYou\u0027ll need to make §7Potassium Metabisulfite§r (Don\u0027t worry, it\u0027s not that complicated! It\u0027s just potassium, sulfur, and oxygen in a mixer. :) )\nThen just smelt the dust to make a gold ingot."
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "partialMatch:1": 1,
-          "autoConsume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "consume:1": 0,
-          "requiredItems:9": {
+          "rewards:9": {
             "0:10": {
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
@@ -11940,31 +11810,14 @@
               },
               "id:8": "gregtech:meta_item_1",
               "Count:3": 1,
-              "Damage:2": 2832,
-              "OreDict:8": ""
-            },
-            "1:10": {
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "skinType:8": "STEVE",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "id:8": "gregtech:meta_dust",
-              "Count:3": 1,
-              "Damage:2": 41,
+              "Damage:2": 80,
               "OreDict:8": ""
             }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          }
         }
-      },
-      "rewards:9": {}
+      }
     },
-    "126:10": {
+    "123:10": {
       "questID:3": 131,
       "preRequisites:11": [
         110
@@ -12031,9 +11884,22 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1612,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "127:10": {
+    "124:10": {
       "questID:3": 132,
       "preRequisites:11": [
         110
@@ -12100,9 +11966,22 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1611,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "128:10": {
+    "125:10": {
       "questID:3": 133,
       "preRequisites:11": [
         113,
@@ -12168,7 +12047,7 @@
         }
       }
     },
-    "129:10": {
+    "126:10": {
       "questID:3": 134,
       "preRequisites:11": [
         66
@@ -12262,7 +12141,7 @@
         }
       }
     },
-    "130:10": {
+    "127:10": {
       "questID:3": 135,
       "preRequisites:11": [
         0
@@ -12309,7 +12188,7 @@
       },
       "rewards:9": {}
     },
-    "131:10": {
+    "128:10": {
       "questID:3": 136,
       "preRequisites:11": [
         99
@@ -12405,7 +12284,7 @@
       },
       "rewards:9": {}
     },
-    "132:10": {
+    "129:10": {
       "questID:3": 137,
       "preRequisites:11": [
         136
@@ -12444,7 +12323,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 1,
-          "name:8": "Pumpjack",
+          "name:8": "§c§lDEPRECATED Pumpjack",
           "desc:8": "The §bPumpjack§o§o§r is a 6x4x3 multi-block. It extracts fluids like Crude Oil from reservoirs that are below bedrock. You need to have a Core Sample Drill to use it. It requires §41024 RF/t §rto run (§664 EU/t§r)\n\nThe Pumpjack requires:\n\n11 Steel Scaffolding\n6 Treated Wood Fences\n4 Fluid Pipes\n4 Steel Sheetmetal\n2 Blocks of Steel\n2 Light Engineering Blocks\n2 Heavy Engineering Blocks\n1 Redstone Engineering Block\n\nOnce your Pumpjack is powered and an empty pipe is connected to either fluid port, the jack pumps at a rate of 15 mB/tick.\n\nIf there\u0027s a reservoir below it, it brings the fluid to the surface. Multiple Pumpjacks in one chunk increases the rate of extraction. \nIf the reservoir is emptied, up to 6 mB/tick of fluid can continue to be extracted from the drained reservoir using a single Pumpjack.\n\nYou can check the §6Engineer\u0027s Manual§r for help. \n§r\nAfter putting together the structure, whack the Heavy Engineering Block with the §6Engineer\u0027s Hammer §rto form the multiblock.\n\n{ResourceLocation:supersymmetry:guides/ie-pumpjack.png}"
         }
       },
@@ -12652,7 +12531,7 @@
         }
       }
     },
-    "133:10": {
+    "130:10": {
       "questID:3": 138,
       "preRequisites:11": [
         133
@@ -12735,7 +12614,7 @@
         }
       }
     },
-    "134:10": {
+    "131:10": {
       "questID:3": 139,
       "preRequisites:11": [
         138
@@ -12809,7 +12688,7 @@
         }
       }
     },
-    "135:10": {
+    "132:10": {
       "questID:3": 140,
       "preRequisites:11": [
         139
@@ -12883,7 +12762,7 @@
         }
       }
     },
-    "136:10": {
+    "133:10": {
       "questID:3": 141,
       "preRequisites:11": [
         140
@@ -12992,7 +12871,7 @@
         }
       }
     },
-    "137:10": {
+    "134:10": {
       "questID:3": 142,
       "preRequisites:11": [
         105
@@ -13056,7 +12935,7 @@
         }
       }
     },
-    "138:10": {
+    "135:10": {
       "questID:3": 143,
       "preRequisites:11": [
         105
@@ -13129,7 +13008,7 @@
         }
       }
     },
-    "139:10": {
+    "136:10": {
       "questID:3": 144,
       "preRequisites:11": [
         112
@@ -13188,9 +13067,22 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:warning_sign",
+              "Count:3": 1,
+              "Damage:2": 6,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "140:10": {
+    "137:10": {
       "questID:3": 145,
       "preRequisites:11": [
         144
@@ -13251,7 +13143,7 @@
       },
       "rewards:9": {}
     },
-    "141:10": {
+    "138:10": {
       "questID:3": 146,
       "preRequisites:11": [
         148
@@ -13302,7 +13194,7 @@
       },
       "rewards:9": {}
     },
-    "142:10": {
+    "139:10": {
       "questID:3": 147,
       "preRequisites:11": [
         122
@@ -13410,7 +13302,7 @@
         }
       }
     },
-    "143:10": {
+    "140:10": {
       "questID:3": 148,
       "preRequisites:11": [
         110
@@ -13445,7 +13337,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Getting Antimony",
+          "name:8": "The bane of every GTNH player",
           "desc:8": "§6Antimony§r is the main component of battery hulls, along with lead.\nYou can get antimony by smelting §2Stibnite Ore§r, which is found in the Nether in the §cTetrahedrite §rvein, at Y levels 0 to 120."
         }
       },
@@ -13501,7 +13393,7 @@
         }
       }
     },
-    "144:10": {
+    "141:10": {
       "questID:3": 149,
       "preRequisites:11": [
         12
@@ -13625,7 +13517,7 @@
         }
       }
     },
-    "145:10": {
+    "142:10": {
       "questID:3": 150,
       "preRequisites:11": [
         133
@@ -13708,7 +13600,7 @@
         }
       }
     },
-    "146:10": {
+    "143:10": {
       "questID:3": 151,
       "preRequisites:11": [
         150
@@ -13791,7 +13683,7 @@
         }
       }
     },
-    "147:10": {
+    "144:10": {
       "questID:3": 152,
       "preRequisites:11": [
         133
@@ -13865,7 +13757,7 @@
         }
       }
     },
-    "148:10": {
+    "145:10": {
       "questID:3": 153,
       "preRequisites:11": [
         152
@@ -13948,7 +13840,7 @@
         }
       }
     },
-    "149:10": {
+    "146:10": {
       "questID:3": 154,
       "preRequisites:11": [
         153,
@@ -14033,7 +13925,7 @@
         }
       }
     },
-    "150:10": {
+    "147:10": {
       "questID:3": 155,
       "preRequisites:11": [
         105
@@ -14097,7 +13989,7 @@
         }
       }
     },
-    "151:10": {
+    "148:10": {
       "questID:3": 156,
       "preRequisites:11": [
         151
@@ -14174,7 +14066,7 @@
         }
       }
     },
-    "152:10": {
+    "149:10": {
       "questID:3": 157,
       "preRequisites:11": [
         141
@@ -14273,7 +14165,7 @@
         }
       }
     },
-    "153:10": {
+    "150:10": {
       "questID:3": 158,
       "preRequisites:11": [
         105
@@ -14346,7 +14238,7 @@
         }
       }
     },
-    "154:10": {
+    "151:10": {
       "questID:3": 159,
       "preRequisites:11": [
         148
@@ -14419,7 +14311,7 @@
         }
       }
     },
-    "155:10": {
+    "152:10": {
       "questID:3": 162,
       "preRequisites:11": [
         119
@@ -14483,7 +14375,7 @@
         }
       }
     },
-    "156:10": {
+    "153:10": {
       "questID:3": 164,
       "preRequisites:11": [
         162
@@ -14574,7 +14466,7 @@
         }
       }
     },
-    "157:10": {
+    "154:10": {
       "questID:3": 165,
       "preRequisites:11": [
         105
@@ -14638,7 +14530,7 @@
         }
       }
     },
-    "158:10": {
+    "155:10": {
       "questID:3": 166,
       "preRequisites:11": [
         105
@@ -14821,7 +14713,7 @@
         }
       }
     },
-    "159:10": {
+    "156:10": {
       "questID:3": 167,
       "preRequisites:11": [
         110
@@ -14856,7 +14748,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Silicon Dioxide",
+          "name:8": "Literally just sand lmao",
           "desc:8": "Getting §7Silicon Dioxide §rmight sound complicated, but it\u0027s easy! It\u0027s literally just sand in an electrolyzer."
         }
       },
@@ -14890,7 +14782,7 @@
       },
       "rewards:9": {}
     },
-    "160:10": {
+    "157:10": {
       "questID:3": 168,
       "preRequisites:11": [
         166
@@ -14996,7 +14888,7 @@
         }
       }
     },
-    "161:10": {
+    "158:10": {
       "questID:3": 169,
       "preRequisites:11": [
         166,
@@ -15079,7 +14971,7 @@
         }
       }
     },
-    "162:10": {
+    "159:10": {
       "questID:3": 170,
       "preRequisites:11": [
         123
@@ -15170,7 +15062,7 @@
         }
       }
     },
-    "163:10": {
+    "160:10": {
       "questID:3": 171,
       "preRequisites:11": [
         123
@@ -15252,7 +15144,7 @@
         }
       }
     },
-    "164:10": {
+    "161:10": {
       "questID:3": 172,
       "preRequisites:11": [
         171,
@@ -15335,7 +15227,7 @@
         }
       }
     },
-    "165:10": {
+    "162:10": {
       "questID:3": 173,
       "preRequisites:11": [
         172,
@@ -15427,7 +15319,7 @@
         }
       }
     },
-    "166:10": {
+    "163:10": {
       "questID:3": 174,
       "preRequisites:11": [
         173
@@ -15518,7 +15410,7 @@
         }
       }
     },
-    "167:10": {
+    "164:10": {
       "questID:3": 175,
       "preRequisites:11": [
         200
@@ -15585,9 +15477,22 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:ore_stibnite_0",
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "168:10": {
+    "165:10": {
       "questID:3": 176,
       "preRequisites:11": [
         31
@@ -15635,13 +15540,13 @@
             "1:10": {
               "id:8": "gregtech:machine",
               "Count:3": 1,
-              "Damage:2": 4177,
+              "Damage:2": 1652,
               "OreDict:8": ""
             },
             "2:10": {
               "id:8": "gregtech:machine",
               "Count:3": 1,
-              "Damage:2": 4176,
+              "Damage:2": 1651,
               "OreDict:8": ""
             },
             "3:10": {
@@ -15666,9 +15571,31 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtechfoodoption:gtfo_meta_item",
+              "Count:3": 4,
+              "Damage:2": 60,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "169:10": {
+    "166:10": {
       "questID:3": 177,
       "preRequisites:11": [
         31
@@ -15716,13 +15643,13 @@
             "1:10": {
               "id:8": "gregtech:machine",
               "Count:3": 1,
-              "Damage:2": 4177,
+              "Damage:2": 1652,
               "OreDict:8": ""
             },
             "2:10": {
               "id:8": "gregtech:machine",
               "Count:3": 1,
-              "Damage:2": 4176,
+              "Damage:2": 1651,
               "OreDict:8": ""
             },
             "3:10": {
@@ -15741,9 +15668,22 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:ore_hematite_0",
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "170:10": {
+    "167:10": {
       "questID:3": 178,
       "preRequisites:11": [
         113
@@ -15817,7 +15757,7 @@
         }
       }
     },
-    "171:10": {
+    "168:10": {
       "questID:3": 179,
       "preRequisites:11": [
         178
@@ -15900,7 +15840,7 @@
         }
       }
     },
-    "172:10": {
+    "169:10": {
       "questID:3": 180,
       "preRequisites:11": [
         179
@@ -15964,7 +15904,7 @@
         }
       }
     },
-    "173:10": {
+    "170:10": {
       "questID:3": 181,
       "preRequisites:11": [
         124
@@ -16037,7 +15977,7 @@
         }
       }
     },
-    "174:10": {
+    "171:10": {
       "questID:3": 182,
       "preRequisites:11": [
         181
@@ -16123,7 +16063,7 @@
         }
       }
     },
-    "175:10": {
+    "172:10": {
       "questID:3": 183,
       "preRequisites:11": [
         182
@@ -16162,7 +16102,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Radiator",
+          "name:8": "§c§lDEPRECATED Radiator",
           "desc:8": "The Radiator is a multiblock that cools hot fluids and hot gasses down. \n\nIt requires \n\n54 Radiator Block\n7 Fluid Pipe\n2 Light Engineering Block\n\nIf you want to know how to build it, look at the schematic in the §6Engineer\u0027s Manual§r. \nAfter completing the structure, whack the Light Engineering Block with an §6Engineer\u0027s Hammer §rto form the multiblock.\nThe radiator can also be built horizontally."
         }
       },
@@ -16294,7 +16234,7 @@
         }
       }
     },
-    "176:10": {
+    "173:10": {
       "questID:3": 184,
       "preRequisites:11": [
         183
@@ -16395,7 +16335,7 @@
         }
       }
     },
-    "177:10": {
+    "174:10": {
       "questID:3": 185,
       "preRequisites:11": [
         182
@@ -16434,7 +16374,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Heat Exchanger",
+          "name:8": "§c§lDEPRECATED Heat Exchanger",
           "desc:8": "The Heat Exchanger is a multiblock structure that quickly moves heat from one fluid to another.\n\nIt requires:\n18 Iron Sheetmetal\n10 Fluid Pipe\n9 Steel Scaffolding\n5 Radiator Block\n2 Light Engineering Block\n1 Redstone Engineering Block\n\nIf you want to know how to build it, look at the schematic in the §6Engineer\u0027s Manual§r. \nAfter completing the structure, whack it with an §6Engineer\u0027s Hammer §rto form the multiblock."
         }
       },
@@ -16567,7 +16507,7 @@
       },
       "rewards:9": {}
     },
-    "178:10": {
+    "175:10": {
       "questID:3": 186,
       "preRequisites:11": [
         185
@@ -16631,7 +16571,7 @@
       },
       "rewards:9": {}
     },
-    "179:10": {
+    "176:10": {
       "questID:3": 187,
       "preRequisites:11": [
         186
@@ -16688,7 +16628,7 @@
       },
       "rewards:9": {}
     },
-    "180:10": {
+    "177:10": {
       "questID:3": 188,
       "preRequisites:11": [
         184
@@ -16774,7 +16714,7 @@
         }
       }
     },
-    "181:10": {
+    "178:10": {
       "questID:3": 189,
       "preRequisites:11": [
         188
@@ -16866,7 +16806,7 @@
         }
       }
     },
-    "182:10": {
+    "179:10": {
       "questID:3": 190,
       "preRequisites:11": [
         189
@@ -16991,7 +16931,7 @@
         }
       }
     },
-    "183:10": {
+    "180:10": {
       "questID:3": 191,
       "preRequisites:11": [
         103
@@ -17079,7 +17019,7 @@
         }
       }
     },
-    "184:10": {
+    "181:10": {
       "questID:3": 192,
       "preRequisites:11": [
         191
@@ -17152,7 +17092,7 @@
         }
       }
     },
-    "185:10": {
+    "182:10": {
       "questID:3": 193,
       "preRequisites:11": [
         192
@@ -17273,7 +17213,7 @@
         }
       }
     },
-    "186:10": {
+    "183:10": {
       "questID:3": 194,
       "preRequisites:11": [
         193
@@ -17361,7 +17301,7 @@
         }
       }
     },
-    "187:10": {
+    "184:10": {
       "questID:3": 195,
       "preRequisites:11": [
         193
@@ -17449,7 +17389,7 @@
         }
       }
     },
-    "188:10": {
+    "185:10": {
       "questID:3": 196,
       "preRequisites:11": [
         191
@@ -17565,7 +17505,7 @@
         }
       }
     },
-    "189:10": {
+    "186:10": {
       "questID:3": 197,
       "preRequisites:11": [
         191
@@ -17681,7 +17621,7 @@
         }
       }
     },
-    "190:10": {
+    "187:10": {
       "questID:3": 198,
       "preRequisites:11": [
         136
@@ -17917,7 +17857,7 @@
         }
       }
     },
-    "191:10": {
+    "188:10": {
       "questID:3": 199,
       "preRequisites:11": [
         198
@@ -18111,7 +18051,7 @@
         }
       }
     },
-    "192:10": {
+    "189:10": {
       "questID:3": 200,
       "preRequisites:11": [
         174
@@ -18175,7 +18115,7 @@
         }
       }
     },
-    "193:10": {
+    "190:10": {
       "questID:3": 201,
       "preRequisites:11": [
         168
@@ -18266,7 +18206,7 @@
         }
       }
     },
-    "194:10": {
+    "191:10": {
       "questID:3": 202,
       "preRequisites:11": [
         174
@@ -18357,7 +18297,7 @@
         }
       }
     },
-    "195:10": {
+    "192:10": {
       "questID:3": 203,
       "preRequisites:11": [
         174
@@ -18448,7 +18388,7 @@
         }
       }
     },
-    "196:10": {
+    "193:10": {
       "questID:3": 204,
       "preRequisites:11": [
         174
@@ -18539,7 +18479,7 @@
         }
       }
     },
-    "197:10": {
+    "194:10": {
       "questID:3": 205,
       "preRequisites:11": [
         174
@@ -18630,7 +18570,7 @@
         }
       }
     },
-    "198:10": {
+    "195:10": {
       "questID:3": 206,
       "preRequisites:11": [
         205
@@ -18792,7 +18732,7 @@
         }
       }
     },
-    "199:10": {
+    "196:10": {
       "questID:3": 207,
       "preRequisites:11": [
         206
@@ -18855,7 +18795,7 @@
       },
       "rewards:9": {}
     },
-    "200:10": {
+    "197:10": {
       "questID:3": 208,
       "preRequisites:11": [
         204
@@ -18881,7 +18821,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Railroad Assembler",
+          "name:8": "§6§lREWORK NEEDED§6§l Railroad Assembler",
           "desc:8": "The §6Railroad Engineering Station §ris a multiblock that makes equipment for Immersive Railroading. The IR multiblocks are huge and clunky, so this is a pretty good alternative.\n\nThe Railroad Engineering Station requires:\n\n1 Railroad Engineering Station controller\n8 Input Bus\n3 Input Hatch\n1 Output Bus\n1 Energy Input Hatch\n55 Steel Metal Casing\n14 Steel Frame\n\n"
         }
       },
@@ -19021,7 +18961,7 @@
         }
       }
     },
-    "201:10": {
+    "198:10": {
       "questID:3": 209,
       "preRequisites:11": [],
       "properties:10": {
@@ -19058,7 +18998,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Gas Turbine",
+          "name:8": "§c§lDEPRECATED Gas Turbine",
           "desc:8": "The Immersive Engineering §6gas turbine§r is a multiblock that produces §4kinetic energy §r(not normal energy) from fluids and gases. It needs an alternator to work.\n(Not to be confused with the GregTech gas turbine, which is just a single block generator)\n\nThe Gas Turbine requires:\n\n20 Steel Sheetmetal\n16 Heavy Engineering Block\n8 High-Voltage Coil Block\n8 Steel Block (If the structure doesn\u0027t form, try using an Immersive Engineering steel block. Use a Chisel to change between types)\n3 Steel Sheetmetal Slab\n3 Steel Scaffolding\n2 Fluid Pipes\n1 Redstone Engineering Block\n\nYou can check the §6Engineer\u0027s Manual§r for help on how to build the structure.\n\nAfter putting together the structure, whack the Steel Block (the one on the short side) with the §6Engineer\u0027s Hammer §rto form the multiblock."
         }
       },
@@ -19197,7 +19137,7 @@
       },
       "rewards:9": {}
     },
-    "202:10": {
+    "199:10": {
       "questID:3": 210,
       "preRequisites:11": [
         209,
@@ -19237,7 +19177,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Alternator",
+          "name:8": "§c§lDEPRECATED Alternator",
           "desc:8": "The Alternator is a multiblock structure that turns §6kinetic energy§r into electricity.\nIt needs to have a Kinetic Energy generator connected to it to work (like the Gas Turbine).\n\nThe Alternator requires:\n\n9 Light Engineering Block\n8 Generator Block\n4 High Voltage Coil Block\n4 Radiator Block\n4 Steel Sheetmetal\n2 Steel Blocks\n2 Heavy Engineering Block\n\nThe Alternator can store up to 1.200.000 RF, outputting §c2048 RF/t§r (64 EU/t)\n\nYou can check the §6Engineer\u0027s Manual§r for help on how to build the structure.\n§r\nAfter putting together the structure, whack the Heavy Engineering Block with the §6Engineer\u0027s Hammer §rto form the multiblock."
         }
       },
@@ -19376,7 +19316,7 @@
       },
       "rewards:9": {}
     },
-    "203:10": {
+    "200:10": {
       "questID:3": 211,
       "preRequisites:11": [],
       "properties:10": {
@@ -19413,7 +19353,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Steam Turbine",
+          "name:8": "§c§lDEPRECATED Steam Turbine",
           "desc:8": "The §6Steam Turbine§r is a multiblock that uses Steam to produce §ckinetic energy§r (it needs an alternator to be turned into RF)\n.\nNot to be confused with the GT steam turbine, which is a singleblock generator.\n\nThe Steam Turbine requires:\n27 Steel Sheetmetal\n24 Heavy Engineering Block\n10 Steel Block\n6 Fluid Pipes\n4 Radiator Block\n3 Steel Scaffolding\n1 Redstone Engineering Block.\n\nYou can check the §6Engineer\u0027s Manual§r for help on how to build the structure.\n\nAfter putting together the structure, whack the Steel Block (the one on the short side) with the §6Engineer\u0027s Hammer §rto form the multiblock."
         }
       },
@@ -19552,7 +19492,7 @@
       },
       "rewards:9": {}
     },
-    "204:10": {
+    "201:10": {
       "questID:3": 212,
       "preRequisites:11": [
         200
@@ -19611,9 +19551,22 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1612,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "205:10": {
+    "202:10": {
       "questID:3": 213,
       "preRequisites:11": [
         200
@@ -19672,9 +19625,31 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 81,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "206:10": {
+    "203:10": {
       "questID:3": 214,
       "preRequisites:11": [
         216
@@ -19733,9 +19708,31 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 4,
+              "Damage:2": 78,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "207:10": {
+    "204:10": {
       "questID:3": 215,
       "preRequisites:11": [
         216
@@ -19774,7 +19771,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Fish Oil ",
+          "name:8": "Fish Oil",
           "desc:8": "Use your Fluid Extractor to extract §bFish Oil §rfrom fish."
         }
       },
@@ -19794,9 +19791,31 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 4,
+              "Damage:2": 78,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "208:10": {
+    "205:10": {
       "questID:3": 216,
       "preRequisites:11": [
         102
@@ -19869,7 +19888,7 @@
         }
       }
     },
-    "209:10": {
+    "206:10": {
       "questID:3": 217,
       "preRequisites:11": [
         214,
@@ -19934,11 +19953,8 @@
           "groupDetect:1": 0,
           "requiredFluids:9": {
             "0:10": {
-              "FluidName:8": "betterquesting.placeholder",
-              "Amount:3": 1000,
-              "Tag:10": {
-                "orig_id:8": "biodiesel"
-              }
+              "FluidName:8": "bio_diesel",
+              "Amount:3": 1000
             }
           },
           "ignoreNBT:1": 0,
@@ -19949,7 +19965,7 @@
       },
       "rewards:9": {}
     },
-    "210:10": {
+    "207:10": {
       "questID:3": 218,
       "preRequisites:11": [
         217,
@@ -19977,7 +19993,7 @@
             "id:8": "forge:bucketfilled",
             "Count:3": 1,
             "tag:10": {
-              "FluidName:8": "glyceryl",
+              "FluidName:8": "glyceryl_trinitrate",
               "Amount:3": 1000
             },
             "Damage:2": 0,
@@ -19999,11 +20015,8 @@
           "groupDetect:1": 0,
           "requiredFluids:9": {
             "0:10": {
-              "FluidName:8": "betterquesting.placeholder",
-              "Amount:3": 1000,
-              "Tag:10": {
-                "orig_id:8": "glyceryl"
-              }
+              "FluidName:8": "glyceryl_trinitrate",
+              "Amount:3": 1000
             }
           },
           "ignoreNBT:1": 0,
@@ -20012,9 +20025,22 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1612,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "211:10": {
+    "208:10": {
       "questID:3": 219,
       "preRequisites:11": [
         218
@@ -20081,9 +20107,22 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:warning_sign",
+              "Count:3": 4,
+              "Damage:2": 4,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "212:10": {
+    "209:10": {
       "questID:3": 220,
       "preRequisites:11": [
         200
@@ -20160,7 +20199,7 @@
         }
       }
     },
-    "213:10": {
+    "210:10": {
       "questID:3": 221,
       "preRequisites:11": [
         200
@@ -20239,7 +20278,7 @@
         }
       }
     },
-    "214:10": {
+    "211:10": {
       "questID:3": 222,
       "preRequisites:11": [
         221
@@ -20366,7 +20405,7 @@
         }
       }
     },
-    "215:10": {
+    "212:10": {
       "questID:3": 223,
       "preRequisites:11": [
         206
@@ -20423,7 +20462,7 @@
       },
       "rewards:9": {}
     },
-    "216:10": {
+    "213:10": {
       "questID:3": 224,
       "preRequisites:11": [
         223
@@ -20480,7 +20519,7 @@
       },
       "rewards:9": {}
     },
-    "217:10": {
+    "214:10": {
       "questID:3": 225,
       "preRequisites:11": [
         223
@@ -20537,7 +20576,7 @@
       },
       "rewards:9": {}
     },
-    "218:10": {
+    "215:10": {
       "questID:3": 226,
       "preRequisites:11": [
         223
@@ -20594,7 +20633,7 @@
       },
       "rewards:9": {}
     },
-    "219:10": {
+    "216:10": {
       "questID:3": 227,
       "preRequisites:11": [
         223
@@ -20651,7 +20690,7 @@
       },
       "rewards:9": {}
     },
-    "220:10": {
+    "217:10": {
       "questID:3": 228,
       "preRequisites:11": [
         223
@@ -20708,7 +20747,7 @@
       },
       "rewards:9": {}
     },
-    "221:10": {
+    "218:10": {
       "questID:3": 229,
       "preRequisites:11": [
         112
@@ -20743,7 +20782,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "PhosphorUS! SUS!",
+          "name:8": "It\u0027s literally just P",
           "desc:8": "§6Phosphorus §rcan be obtained via a two-step process from phosphor ore. First of all, electrolyze the Phosphor Dust into Calcium and Tricalcium Phosphate, then electrolyze the tricalcium phosphate to get pure Phosphorus."
         }
       },
@@ -20777,7 +20816,7 @@
       },
       "rewards:9": {}
     },
-    "222:10": {
+    "219:10": {
       "questID:3": 230,
       "preRequisites:11": [
         112
@@ -20812,7 +20851,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Calcium Stronk",
+          "name:8": "sans undertale",
           "desc:8": "§6Calcium §rcan be electrolyzed from a lot of dusts. You can use Phosphor dust, but also Calcite, Lazurite, or others. Check JEI for more info."
         }
       },
@@ -20844,9 +20883,31 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "minecraft:bone",
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "223:10": {
+    "220:10": {
       "questID:3": 231,
       "preRequisites:11": [
         221
@@ -20881,7 +20942,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Acquiring Chrome",
+          "name:8": "No, not the browser",
           "desc:8": "You can get §cChrome §rby electrolyzing §cRuby§r (found in Redstone veins), or Chromite and Uvarovite dusts, which aren\u0027t available right now."
         }
       },
@@ -20913,9 +20974,22 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:ore_ruby_0",
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "224:10": {
+    "221:10": {
       "questID:3": 232,
       "preRequisites:11": [
         110,
@@ -20985,7 +21059,7 @@
       },
       "rewards:9": {}
     },
-    "225:10": {
+    "222:10": {
       "questID:3": 233,
       "preRequisites:11": [
         112
@@ -21054,7 +21128,7 @@
       },
       "rewards:9": {}
     },
-    "226:10": {
+    "223:10": {
       "questID:3": 236,
       "preRequisites:11": [
         231,
@@ -21146,7 +21220,7 @@
         }
       }
     },
-    "227:10": {
+    "224:10": {
       "questID:3": 237,
       "preRequisites:11": [
         112
@@ -21172,7 +21246,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Carbon Dioxide",
+          "name:8": "CO2",
           "desc:8": "1 §7Carbon§r + 2 §9Oxygen§o§r \u003d 3 §8Carbon Dioxide§r. Easy, right?"
         }
       },
@@ -21192,9 +21266,35 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "forge:bucketfilled",
+              "Count:3": 1,
+              "tag:10": {
+                "FluidName:8": "nitrogen",
+                "Amount:3": 1000
+              },
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "228:10": {
+    "225:10": {
       "questID:3": 238,
       "preRequisites:11": [
         104
@@ -21258,7 +21358,7 @@
         }
       }
     },
-    "229:10": {
+    "226:10": {
       "questID:3": 239,
       "preRequisites:11": [
         241,
@@ -21333,7 +21433,7 @@
         }
       }
     },
-    "230:10": {
+    "227:10": {
       "questID:3": 240,
       "preRequisites:11": [
         244,
@@ -21425,7 +21525,7 @@
         }
       }
     },
-    "231:10": {
+    "228:10": {
       "questID:3": 241,
       "preRequisites:11": [
         252
@@ -21494,7 +21594,7 @@
       },
       "rewards:9": {}
     },
-    "232:10": {
+    "229:10": {
       "questID:3": 242,
       "preRequisites:11": [
         169
@@ -21585,7 +21685,7 @@
         }
       }
     },
-    "233:10": {
+    "230:10": {
       "questID:3": 243,
       "preRequisites:11": [
         242
@@ -21676,7 +21776,7 @@
         }
       }
     },
-    "234:10": {
+    "231:10": {
       "questID:3": 244,
       "preRequisites:11": [
         243
@@ -21749,7 +21849,7 @@
         }
       }
     },
-    "235:10": {
+    "232:10": {
       "questID:3": 245,
       "preRequisites:11": [
         174
@@ -21840,7 +21940,7 @@
         }
       }
     },
-    "236:10": {
+    "233:10": {
       "questID:3": 246,
       "preRequisites:11": [
         166
@@ -21878,7 +21978,7 @@
       },
       "rewards:9": {}
     },
-    "237:10": {
+    "234:10": {
       "questID:3": 247,
       "preRequisites:11": [
         166
@@ -21960,7 +22060,7 @@
         }
       }
     },
-    "238:10": {
+    "235:10": {
       "questID:3": 248,
       "preRequisites:11": [
         245
@@ -22043,7 +22143,7 @@
         }
       }
     },
-    "239:10": {
+    "236:10": {
       "questID:3": 249,
       "preRequisites:11": [
         248
@@ -22116,7 +22216,7 @@
         }
       }
     },
-    "240:10": {
+    "237:10": {
       "questID:3": 250,
       "preRequisites:11": [
         249,
@@ -22200,7 +22300,7 @@
         }
       }
     },
-    "241:10": {
+    "238:10": {
       "questID:3": 251,
       "preRequisites:11": [
         250
@@ -22298,7 +22398,7 @@
         }
       }
     },
-    "242:10": {
+    "239:10": {
       "questID:3": 252,
       "preRequisites:11": [
         251
@@ -22372,7 +22472,7 @@
         }
       }
     },
-    "243:10": {
+    "240:10": {
       "questID:3": 253,
       "preRequisites:11": [
         252
@@ -22478,7 +22578,7 @@
         }
       }
     },
-    "244:10": {
+    "241:10": {
       "questID:3": 254,
       "preRequisites:11": [
         252
@@ -22573,7 +22673,7 @@
       },
       "rewards:9": {}
     },
-    "245:10": {
+    "242:10": {
       "questID:3": 255,
       "preRequisites:11": [
         239
@@ -22664,7 +22764,7 @@
         }
       }
     },
-    "246:10": {
+    "243:10": {
       "questID:3": 256,
       "preRequisites:11": [
         255
@@ -22781,7 +22881,7 @@
         }
       }
     },
-    "247:10": {
+    "244:10": {
       "questID:3": 257,
       "preRequisites:11": [
         256
@@ -22872,7 +22972,7 @@
         }
       }
     },
-    "248:10": {
+    "245:10": {
       "questID:3": 258,
       "preRequisites:11": [
         257
@@ -22963,7 +23063,7 @@
         }
       }
     },
-    "249:10": {
+    "246:10": {
       "questID:3": 259,
       "preRequisites:11": [
         258
@@ -23084,7 +23184,7 @@
         }
       }
     },
-    "250:10": {
+    "247:10": {
       "questID:3": 260,
       "preRequisites:11": [
         252
@@ -23175,7 +23275,7 @@
         }
       }
     },
-    "251:10": {
+    "248:10": {
       "questID:3": 261,
       "preRequisites:11": [
         252
@@ -23266,7 +23366,7 @@
         }
       }
     },
-    "252:10": {
+    "249:10": {
       "questID:3": 262,
       "preRequisites:11": [
         259
@@ -23339,7 +23439,7 @@
         }
       }
     },
-    "253:10": {
+    "250:10": {
       "questID:3": 263,
       "preRequisites:11": [
         262
@@ -23430,7 +23530,7 @@
         }
       }
     },
-    "254:10": {
+    "251:10": {
       "questID:3": 264,
       "preRequisites:11": [
         263
@@ -23513,7 +23613,7 @@
         }
       }
     },
-    "255:10": {
+    "252:10": {
       "questID:3": 265,
       "preRequisites:11": [
         264
@@ -23595,7 +23695,7 @@
         }
       }
     },
-    "256:10": {
+    "253:10": {
       "questID:3": 269,
       "preRequisites:11": [
         243
@@ -23668,7 +23768,7 @@
         }
       }
     },
-    "257:10": {
+    "254:10": {
       "questID:3": 272,
       "preRequisites:11": [
         123
@@ -23727,9 +23827,31 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 80,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "258:10": {
+    "255:10": {
       "questID:3": 273,
       "preRequisites:11": [
         236
@@ -23811,7 +23933,7 @@
         }
       }
     },
-    "259:10": {
+    "256:10": {
       "questID:3": 274,
       "preRequisites:11": [
         252
@@ -23862,7 +23984,7 @@
       },
       "rewards:9": {}
     },
-    "260:10": {
+    "257:10": {
       "questID:3": 275,
       "preRequisites:11": [
         236
@@ -23925,7 +24047,7 @@
       },
       "rewards:9": {}
     },
-    "261:10": {
+    "258:10": {
       "questID:3": 276,
       "preRequisites:11": [
         275
@@ -23991,7 +24113,7 @@
       },
       "rewards:9": {}
     },
-    "262:10": {
+    "259:10": {
       "questID:3": 277,
       "preRequisites:11": [
         275
@@ -24057,7 +24179,7 @@
       },
       "rewards:9": {}
     },
-    "263:10": {
+    "260:10": {
       "questID:3": 278,
       "preRequisites:11": [
         275
@@ -24123,7 +24245,7 @@
       },
       "rewards:9": {}
     },
-    "264:10": {
+    "261:10": {
       "questID:3": 279,
       "preRequisites:11": [
         275
@@ -24189,7 +24311,7 @@
       },
       "rewards:9": {}
     },
-    "265:10": {
+    "262:10": {
       "questID:3": 280,
       "preRequisites:11": [
         275
@@ -24255,7 +24377,7 @@
       },
       "rewards:9": {}
     },
-    "266:10": {
+    "263:10": {
       "questID:3": 281,
       "preRequisites:11": [
         200
@@ -24306,7 +24428,7 @@
       },
       "rewards:9": {}
     },
-    "267:10": {
+    "264:10": {
       "questID:3": 282,
       "preRequisites:11": [
         200
@@ -24379,7 +24501,7 @@
         }
       }
     },
-    "268:10": {
+    "265:10": {
       "questID:3": 283,
       "preRequisites:11": [
         281
@@ -24495,7 +24617,7 @@
         }
       }
     },
-    "269:10": {
+    "266:10": {
       "questID:3": 284,
       "preRequisites:11": [
         281
@@ -24611,7 +24733,7 @@
         }
       }
     },
-    "270:10": {
+    "267:10": {
       "questID:3": 285,
       "preRequisites:11": [
         281
@@ -24727,7 +24849,7 @@
         }
       }
     },
-    "271:10": {
+    "268:10": {
       "questID:3": 286,
       "preRequisites:11": [
         281
@@ -24843,7 +24965,7 @@
         }
       }
     },
-    "272:10": {
+    "269:10": {
       "questID:3": 287,
       "preRequisites:11": [
         281
@@ -24946,7 +25068,7 @@
         }
       }
     },
-    "273:10": {
+    "270:10": {
       "questID:3": 288,
       "preRequisites:11": [
         287
@@ -25034,7 +25156,7 @@
         }
       }
     },
-    "274:10": {
+    "271:10": {
       "questID:3": 289,
       "preRequisites:11": [
         287
@@ -25107,7 +25229,7 @@
         }
       }
     },
-    "275:10": {
+    "272:10": {
       "questID:3": 290,
       "preRequisites:11": [
         245
@@ -25181,7 +25303,7 @@
         }
       }
     },
-    "276:10": {
+    "273:10": {
       "questID:3": 291,
       "preRequisites:11": [],
       "properties:10": {
@@ -25226,7 +25348,7 @@
       },
       "rewards:9": {}
     },
-    "277:10": {
+    "274:10": {
       "questID:3": 292,
       "preRequisites:11": [
         251
@@ -25287,7 +25409,7 @@
       },
       "rewards:9": {}
     },
-    "278:10": {
+    "275:10": {
       "questID:3": 293,
       "preRequisites:11": [
         292
@@ -25348,7 +25470,7 @@
       },
       "rewards:9": {}
     },
-    "279:10": {
+    "276:10": {
       "questID:3": 294,
       "preRequisites:11": [
         290
@@ -25422,7 +25544,7 @@
         }
       }
     },
-    "280:10": {
+    "277:10": {
       "questID:3": 295,
       "preRequisites:11": [
         236
@@ -25507,7 +25629,7 @@
         }
       }
     },
-    "281:10": {
+    "278:10": {
       "questID:3": 296,
       "preRequisites:11": [
         295
@@ -25568,7 +25690,7 @@
       },
       "rewards:9": {}
     },
-    "282:10": {
+    "279:10": {
       "questID:3": 297,
       "preRequisites:11": [
         295
@@ -25629,7 +25751,7 @@
       },
       "rewards:9": {}
     },
-    "283:10": {
+    "280:10": {
       "questID:3": 298,
       "preRequisites:11": [
         236
@@ -25699,7 +25821,7 @@
         }
       }
     },
-    "284:10": {
+    "281:10": {
       "questID:3": 299,
       "preRequisites:11": [
         200
@@ -25772,7 +25894,7 @@
         }
       }
     },
-    "285:10": {
+    "282:10": {
       "questID:3": 300,
       "preRequisites:11": [
         259
@@ -25799,7 +25921,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 1,
           "name:8": "Tier 4 - How the hell do I get titanium?",
-          "desc:8": "You know the drill. Make an HV Machine Hull.\n\n§6Don\u0027t forget to put your HV machinery separate from your LV and MV machinery. If you accidentally mix up the cables, you might create an explosion! \n\n§r----------------------------------------\n§b§3STAGE 4 HAS BEEN UNLOCKED! GOOD LUCK.\n§r----------------------------------------\n- Reach the maximum potential range of your missiles\n- Find new metallurgic processes to obtain titanium\n- Unlock flying vehicles to conquer the skies\n\nTier: 4\nEU/t: 512\n----------------------------------------"
+          "desc:8": "You know the drill. Make an HV Machine Hull.\n\n§r----------------------------------------\n§b§3STAGE 4 HAS BEEN UNLOCKED! GOOD LUCK.\n§r----------------------------------------\n- Reach the maximum potential range of your missiles\n- Find new metallurgic processes to obtain titanium\n- Unlock flying vehicles to conquer the skies\n\nTier: 4\nEU/t: 512\n----------------------------------------"
         }
       },
       "tasks:9": {
@@ -25823,7 +25945,7 @@
       },
       "rewards:9": {}
     },
-    "286:10": {
+    "283:10": {
       "questID:3": 301,
       "preRequisites:11": [
         174
@@ -25892,7 +26014,7 @@
       },
       "rewards:9": {}
     },
-    "287:10": {
+    "284:10": {
       "questID:3": 302,
       "preRequisites:11": [
         301
@@ -25943,7 +26065,7 @@
       },
       "rewards:9": {}
     },
-    "288:10": {
+    "285:10": {
       "questID:3": 303,
       "preRequisites:11": [
         302
@@ -26012,7 +26134,7 @@
       },
       "rewards:9": {}
     },
-    "289:10": {
+    "286:10": {
       "questID:3": 304,
       "preRequisites:11": [
         303
@@ -26078,7 +26200,7 @@
       },
       "rewards:9": {}
     },
-    "290:10": {
+    "287:10": {
       "questID:3": 305,
       "preRequisites:11": [
         304
@@ -26147,7 +26269,7 @@
       },
       "rewards:9": {}
     },
-    "291:10": {
+    "288:10": {
       "questID:3": 313,
       "preRequisites:11": [
         112
@@ -26186,7 +26308,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Poop Gas",
+          "name:8": "What\u0027s in a Fart?",
           "desc:8": "You can make §dMethane §rin a variety of ways. \n\n- Combine 4 Hydrogens and 1 Carbon in a Chemical Reactor (not very efficient)\n- Centrifuge Rubber Wood or food items\n- Get it by distilling oil products (you\u0027ll need a Distillation Tower, unlocked at Tier 3)"
         }
       },
@@ -26206,9 +26328,31 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 80,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "292:10": {
+    "289:10": {
       "questID:3": 314,
       "preRequisites:11": [
         300
@@ -26259,7 +26403,7 @@
       },
       "rewards:9": {}
     },
-    "293:10": {
+    "290:10": {
       "questID:3": 315,
       "preRequisites:11": [
         259
@@ -26326,9 +26470,31 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 129,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "294:10": {
+    "291:10": {
       "questID:3": 316,
       "preRequisites:11": [
         259
@@ -26395,9 +26561,31 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 129,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "295:10": {
+    "292:10": {
       "questID:3": 317,
       "preRequisites:11": [
         259
@@ -26464,9 +26652,31 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 129,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "296:10": {
+    "293:10": {
       "questID:3": 318,
       "preRequisites:11": [
         259
@@ -26533,9 +26743,31 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 129,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "297:10": {
+    "294:10": {
       "questID:3": 319,
       "preRequisites:11": [
         104
@@ -26626,7 +26858,7 @@
         }
       }
     },
-    "298:10": {
+    "295:10": {
       "questID:3": 320,
       "preRequisites:11": [
         104
@@ -26717,7 +26949,7 @@
         }
       }
     },
-    "299:10": {
+    "296:10": {
       "questID:3": 321,
       "preRequisites:11": [
         174
@@ -26808,7 +27040,7 @@
         }
       }
     },
-    "300:10": {
+    "297:10": {
       "questID:3": 322,
       "preRequisites:11": [
         174
@@ -26899,7 +27131,7 @@
         }
       }
     },
-    "301:10": {
+    "298:10": {
       "questID:3": 323,
       "preRequisites:11": [
         112
@@ -26938,8 +27170,8 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Fluorine",
-          "desc:8": "You can get Fluorine from electrolyzing §bBlue Topaz§r, §6Topaz§r, §7Bastnasite §rand §dLepidolite§r."
+          "name:8": "Tolyabi\u0027s Favorite",
+          "desc:8": "You can get §3Fluorine§r from electrolyzing §bBlue Topaz§r, §6Topaz§r, §7Bastnasite §rand §dLepidolite§r."
         }
       },
       "tasks:9": {
@@ -26960,7 +27192,7 @@
       },
       "rewards:9": {}
     },
-    "302:10": {
+    "299:10": {
       "questID:3": 324,
       "preRequisites:11": [
         314
@@ -26999,7 +27231,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Don\u0027t inject it in your blood",
+          "name:8": "This is *NOT* disinfectant",
           "desc:8": "Chloroform is made of Methane and Chlorine. It\u0027s used to make Polytetrafluoroethylene, the 3rd tier of plastic in GregTech.\n\nIf you need help with getting Methane, look at the Chemistry tab."
         }
       },
@@ -27019,9 +27251,31 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 82,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "303:10": {
+    "300:10": {
       "questID:3": 325,
       "preRequisites:11": [
         314
@@ -27060,8 +27314,8 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Hydrofluoric Acid",
-          "desc:8": "Hydrofluoric Acid is made by combining Hydrogen and Fluorine (duh). If you need help with getting Fluorine, look at JEI or the Chemistry tab, you\u0027re in fucking Tier 4, I shouldn\u0027t be telling you this."
+          "name:8": "Gregification Liquid",
+          "desc:8": "§8Hydrofluoric Acid§r is made by combining Hydrogen and Fluorine. \n\nIf you need help with getting Fluorine, look at JEI or the Chemistry tab, you\u0027re in Tier 4, I shouldn\u0027t be telling you this."
         }
       },
       "tasks:9": {
@@ -27076,13 +27330,35 @@
           },
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 82,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "304:10": {
+    "301:10": {
       "questID:3": 326,
       "preRequisites:11": [
         324,
@@ -27122,7 +27398,7 @@
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
           "ismain:1": 0,
-          "name:8": "Teflon ",
+          "name:8": "Teflon",
           "desc:8": "Combine Chloroform and Hydrofluoric Acid to make Tetrafluoroethylene. Then polymerize (blast it with air or oxygen) it to get Polytetrafluoroethylene.\n\nPolytetrafluoroethylene is a really complicated and long name. You can just call it PTFE or Teflon."
         }
       },
@@ -27142,9 +27418,31 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 16,
+              "Damage:2": 403,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "305:10": {
+    "302:10": {
       "questID:3": 327,
       "preRequisites:11": [
         329
@@ -27211,9 +27509,31 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 2,
+              "Damage:2": 173,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "306:10": {
+    "303:10": {
       "questID:3": 328,
       "preRequisites:11": [
         327,
@@ -27263,9 +27583,31 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_ingot",
+              "Count:3": 4,
+              "Damage:2": 323,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "307:10": {
+    "304:10": {
       "questID:3": 329,
       "preRequisites:11": [
         300
@@ -27347,7 +27689,7 @@
       },
       "rewards:9": {}
     },
-    "308:10": {
+    "305:10": {
       "questID:3": 330,
       "preRequisites:11": [
         328
@@ -27414,9 +27756,31 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 2,
+              "Damage:2": 174,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "309:10": {
+    "306:10": {
       "questID:3": 331,
       "preRequisites:11": [
         330,
@@ -27466,9 +27830,31 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_ingot",
+              "Count:3": 16,
+              "Damage:2": 323,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "310:10": {
+    "307:10": {
       "questID:3": 332,
       "preRequisites:11": [
         326
@@ -27528,6 +27914,7 @@
               },
               "id:8": "minecraft:elytra",
               "Count:3": 1,
+              "tag:10": {},
               "Damage:2": 0,
               "OreDict:8": ""
             }
@@ -27537,7 +27924,7 @@
       },
       "rewards:9": {}
     },
-    "311:10": {
+    "308:10": {
       "questID:3": 333,
       "preRequisites:11": [
         328
@@ -27619,9 +28006,31 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "skinType:8": "STEVE",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "id:8": "gregtech:meta_tool_head_pickaxe",
+              "Count:3": 1,
+              "Damage:2": 2,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "312:10": {
+    "309:10": {
       "questID:3": 334,
       "preRequisites:11": [
         333
@@ -27688,9 +28097,22 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1612,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "313:10": {
+    "310:10": {
       "questID:3": 335,
       "preRequisites:11": [
         333
@@ -27749,9 +28171,22 @@
           "taskID:8": "bq_standard:fluid"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1614,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "314:10": {
+    "311:10": {
       "questID:3": 336,
       "preRequisites:11": [
         335,
@@ -27819,9 +28254,22 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {}
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "gregtech:ore_chromite_0",
+              "Count:3": 8,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     },
-    "315:10": {
+    "312:10": {
       "questID:3": 337,
       "preRequisites:11": [
         300
@@ -29818,145 +30266,159 @@
       "quests:9": {
         "0:10": {
           "sizeX:3": 48,
+          "x:3": 48,
+          "y:3": 48,
+          "id:3": 47,
+          "sizeY:3": 48
+        },
+        "1:10": {
+          "sizeX:3": 24,
+          "x:3": 108,
+          "y:3": 60,
+          "id:3": 60,
+          "sizeY:3": 24
+        },
+        "2:10": {
+          "sizeX:3": 48,
           "x:3": -24,
           "y:3": -24,
           "id:3": 259,
           "sizeY:3": 48
         },
-        "1:10": {
+        "3:10": {
           "sizeX:3": 48,
           "x:3": -24,
           "y:3": 48,
           "id:3": 300,
           "sizeY:3": 48
         },
-        "2:10": {
+        "4:10": {
           "sizeX:3": 24,
           "x:3": -72,
           "y:3": 60,
           "id:3": 314,
           "sizeY:3": 24
         },
-        "3:10": {
+        "5:10": {
           "sizeX:3": 24,
           "x:3": -84,
           "y:3": -72,
           "id:3": 315,
           "sizeY:3": 24
         },
-        "4:10": {
+        "6:10": {
           "sizeX:3": 24,
           "x:3": -36,
           "y:3": -72,
           "id:3": 316,
           "sizeY:3": 24
         },
-        "5:10": {
+        "7:10": {
           "sizeX:3": 24,
           "x:3": 12,
           "y:3": -72,
           "id:3": 317,
           "sizeY:3": 24
         },
-        "6:10": {
+        "8:10": {
           "sizeX:3": 24,
           "x:3": 60,
           "y:3": -72,
           "id:3": 318,
           "sizeY:3": 24
         },
-        "7:10": {
+        "9:10": {
           "sizeX:3": 24,
           "x:3": -108,
           "y:3": 84,
           "id:3": 324,
           "sizeY:3": 24
         },
-        "8:10": {
+        "10:10": {
           "sizeX:3": 24,
           "x:3": -108,
           "y:3": 36,
           "id:3": 325,
           "sizeY:3": 24
         },
-        "9:10": {
+        "11:10": {
           "sizeX:3": 24,
           "x:3": -144,
           "y:3": 60,
           "id:3": 326,
           "sizeY:3": 24
         },
-        "10:10": {
+        "12:10": {
           "sizeX:3": 24,
           "x:3": -12,
           "y:3": 204,
           "id:3": 327,
           "sizeY:3": 24
         },
-        "11:10": {
+        "13:10": {
           "sizeX:3": 24,
           "x:3": -12,
           "y:3": 252,
           "id:3": 328,
           "sizeY:3": 24
         },
-        "12:10": {
+        "14:10": {
           "sizeX:3": 48,
           "x:3": -24,
           "y:3": 132,
           "id:3": 329,
           "sizeY:3": 48
         },
-        "13:10": {
+        "15:10": {
           "sizeX:3": 24,
           "x:3": 48,
           "y:3": 252,
           "id:3": 330,
           "sizeY:3": 24
         },
-        "14:10": {
+        "16:10": {
           "sizeX:3": 24,
           "x:3": 108,
           "y:3": 252,
           "id:3": 331,
           "sizeY:3": 24
         },
-        "15:10": {
+        "17:10": {
           "sizeX:3": 24,
           "x:3": -192,
           "y:3": 60,
           "id:3": 332,
           "sizeY:3": 24
         },
-        "16:10": {
+        "18:10": {
           "sizeX:3": 24,
           "x:3": -12,
           "y:3": 300,
           "id:3": 333,
           "sizeY:3": 24
         },
-        "17:10": {
+        "19:10": {
           "sizeX:3": 24,
           "x:3": -36,
           "y:3": 348,
           "id:3": 334,
           "sizeY:3": 24
         },
-        "18:10": {
+        "20:10": {
           "sizeX:3": 24,
           "x:3": 12,
           "y:3": 348,
           "id:3": 335,
           "sizeY:3": 24
         },
-        "19:10": {
+        "21:10": {
           "sizeX:3": 24,
           "x:3": -12,
           "y:3": 396,
           "id:3": 336,
           "sizeY:3": 24
         },
-        "20:10": {
+        "22:10": {
           "sizeX:3": 24,
           "x:3": -72,
           "y:3": 108,
@@ -30315,357 +30777,322 @@
         "0:10": {
           "sizeX:3": 24,
           "x:3": -312,
-          "y:3": -168,
-          "id:3": 117,
-          "sizeY:3": 24
-        },
-        "1:10": {
-          "sizeX:3": 24,
-          "x:3": -252,
-          "y:3": -168,
-          "id:3": 118,
-          "sizeY:3": 24
-        },
-        "2:10": {
-          "sizeX:3": 24,
-          "x:3": -312,
           "y:3": -288,
           "id:3": 119,
           "sizeY:3": 24
         },
-        "3:10": {
+        "1:10": {
           "sizeX:3": 24,
           "x:3": -192,
           "y:3": -348,
           "id:3": 120,
           "sizeY:3": 24
         },
-        "4:10": {
+        "2:10": {
           "sizeX:3": 24,
           "x:3": -252,
           "y:3": -348,
           "id:3": 121,
           "sizeY:3": 24
         },
-        "5:10": {
+        "3:10": {
           "sizeX:3": 24,
           "x:3": -312,
           "y:3": -348,
           "id:3": 122,
           "sizeY:3": 24
         },
-        "6:10": {
-          "sizeX:3": 24,
-          "x:3": -192,
-          "y:3": -168,
-          "id:3": 125,
-          "sizeY:3": 24
-        },
-        "7:10": {
+        "4:10": {
           "sizeX:3": 24,
           "x:3": -252,
           "y:3": -288,
           "id:3": 126,
           "sizeY:3": 24
         },
-        "8:10": {
+        "5:10": {
           "sizeX:3": 24,
           "x:3": -192,
           "y:3": -288,
           "id:3": 127,
           "sizeY:3": 24
         },
-        "9:10": {
+        "6:10": {
           "sizeX:3": 24,
           "x:3": -192,
           "y:3": -228,
           "id:3": 128,
           "sizeY:3": 24
         },
-        "10:10": {
-          "sizeX:3": 24,
-          "x:3": -132,
-          "y:3": -168,
-          "id:3": 129,
-          "sizeY:3": 24
-        },
-        "11:10": {
-          "sizeX:3": 24,
-          "x:3": -72,
-          "y:3": -168,
-          "id:3": 130,
-          "sizeY:3": 24
-        },
-        "12:10": {
+        "7:10": {
           "sizeX:3": 24,
           "x:3": -72,
           "y:3": -348,
           "id:3": 131,
           "sizeY:3": 24
         },
-        "13:10": {
+        "8:10": {
           "sizeX:3": 24,
           "x:3": -132,
           "y:3": -348,
           "id:3": 132,
           "sizeY:3": 24
         },
-        "14:10": {
+        "9:10": {
           "sizeX:3": 24,
           "x:3": -312,
-          "y:3": -120,
+          "y:3": -168,
           "id:3": 138,
           "sizeY:3": 24
         },
-        "15:10": {
+        "10:10": {
           "sizeX:3": 24,
           "x:3": -252,
-          "y:3": -120,
+          "y:3": -168,
           "id:3": 139,
           "sizeY:3": 24
         },
-        "16:10": {
+        "11:10": {
           "sizeX:3": 24,
           "x:3": -192,
-          "y:3": -120,
+          "y:3": -168,
           "id:3": 140,
           "sizeY:3": 24
         },
-        "17:10": {
+        "12:10": {
           "sizeX:3": 24,
           "x:3": -132,
-          "y:3": -120,
+          "y:3": -168,
           "id:3": 141,
           "sizeY:3": 24
         },
-        "18:10": {
+        "13:10": {
           "sizeX:3": 24,
           "x:3": -12,
           "y:3": -348,
           "id:3": 144,
           "sizeY:3": 24
         },
-        "19:10": {
+        "14:10": {
           "sizeX:3": 24,
           "x:3": -12,
           "y:3": -288,
           "id:3": 145,
           "sizeY:3": 24
         },
-        "20:10": {
+        "15:10": {
           "sizeX:3": 24,
           "x:3": 168,
           "y:3": -348,
           "id:3": 148,
           "sizeY:3": 24
         },
-        "21:10": {
+        "16:10": {
           "sizeX:3": 24,
           "x:3": -132,
           "y:3": -288,
           "id:3": 167,
           "sizeY:3": 24
         },
-        "22:10": {
+        "17:10": {
           "sizeX:3": 24,
           "x:3": 168,
           "y:3": -288,
           "id:3": 169,
           "sizeY:3": 24
         },
-        "23:10": {
+        "18:10": {
           "sizeX:3": 24,
           "x:3": 48,
           "y:3": -288,
           "id:3": 170,
           "sizeY:3": 24
         },
-        "24:10": {
+        "19:10": {
           "sizeX:3": 24,
           "x:3": 48,
           "y:3": -228,
           "id:3": 171,
           "sizeY:3": 24
         },
-        "25:10": {
+        "20:10": {
           "sizeX:3": 24,
           "x:3": 108,
           "y:3": -228,
           "id:3": 175,
           "sizeY:3": 24
         },
-        "26:10": {
+        "21:10": {
           "sizeX:3": 24,
           "x:3": -312,
-          "y:3": -72,
+          "y:3": -108,
           "id:3": 212,
+          "sizeY:3": 24
+        },
+        "22:10": {
+          "sizeX:3": 24,
+          "x:3": -312,
+          "y:3": -60,
+          "id:3": 213,
+          "sizeY:3": 24
+        },
+        "23:10": {
+          "sizeX:3": 24,
+          "x:3": -276,
+          "y:3": -12,
+          "id:3": 214,
+          "sizeY:3": 24
+        },
+        "24:10": {
+          "sizeX:3": 24,
+          "x:3": -228,
+          "y:3": -12,
+          "id:3": 215,
+          "sizeY:3": 24
+        },
+        "25:10": {
+          "sizeX:3": 24,
+          "x:3": -252,
+          "y:3": -60,
+          "id:3": 217,
+          "sizeY:3": 24
+        },
+        "26:10": {
+          "sizeX:3": 24,
+          "x:3": -252,
+          "y:3": -108,
+          "id:3": 218,
           "sizeY:3": 24
         },
         "27:10": {
           "sizeX:3": 24,
-          "x:3": -312,
-          "y:3": -24,
-          "id:3": 213,
-          "sizeY:3": 24
-        },
-        "28:10": {
-          "sizeX:3": 24,
-          "x:3": -276,
-          "y:3": 24,
-          "id:3": 214,
-          "sizeY:3": 24
-        },
-        "29:10": {
-          "sizeX:3": 24,
-          "x:3": -228,
-          "y:3": 24,
-          "id:3": 215,
-          "sizeY:3": 24
-        },
-        "30:10": {
-          "sizeX:3": 24,
-          "x:3": -252,
-          "y:3": -24,
-          "id:3": 217,
-          "sizeY:3": 24
-        },
-        "31:10": {
-          "sizeX:3": 24,
-          "x:3": -252,
-          "y:3": -72,
-          "id:3": 218,
-          "sizeY:3": 24
-        },
-        "32:10": {
-          "sizeX:3": 24,
           "x:3": -192,
-          "y:3": -72,
+          "y:3": -108,
           "id:3": 219,
           "sizeY:3": 24
         },
-        "33:10": {
+        "28:10": {
           "sizeX:3": 24,
           "x:3": -12,
           "y:3": -228,
           "id:3": 229,
           "sizeY:3": 24
         },
-        "34:10": {
+        "29:10": {
           "sizeX:3": 24,
           "x:3": 48,
           "y:3": -348,
           "id:3": 230,
           "sizeY:3": 24
         },
-        "35:10": {
+        "30:10": {
           "sizeX:3": 24,
           "x:3": 108,
           "y:3": -348,
           "id:3": 231,
           "sizeY:3": 24
         },
-        "36:10": {
+        "31:10": {
           "sizeX:3": 24,
           "x:3": 108,
           "y:3": -288,
           "id:3": 232,
           "sizeY:3": 24
         },
-        "37:10": {
+        "32:10": {
           "sizeX:3": 24,
           "x:3": -312,
           "y:3": -228,
           "id:3": 237,
           "sizeY:3": 24
         },
-        "38:10": {
+        "33:10": {
           "sizeX:3": 24,
           "x:3": 168,
           "y:3": -228,
           "id:3": 264,
           "sizeY:3": 24
         },
-        "39:10": {
+        "34:10": {
           "sizeX:3": 24,
           "x:3": -252,
           "y:3": -228,
           "id:3": 272,
           "sizeY:3": 24
         },
-        "40:10": {
+        "35:10": {
           "sizeX:3": 24,
           "x:3": -12,
           "y:3": -168,
           "id:3": 290,
           "sizeY:3": 24
         },
-        "41:10": {
+        "36:10": {
           "sizeX:3": 24,
           "x:3": 48,
           "y:3": -168,
           "id:3": 294,
           "sizeY:3": 24
         },
-        "42:10": {
+        "37:10": {
           "sizeX:3": 24,
           "x:3": 168,
           "y:3": -168,
           "id:3": 296,
           "sizeY:3": 24
         },
-        "43:10": {
+        "38:10": {
           "sizeX:3": 24,
           "x:3": 108,
           "y:3": -168,
           "id:3": 297,
           "sizeY:3": 24
         },
-        "44:10": {
+        "39:10": {
           "sizeX:3": 24,
           "x:3": -132,
           "y:3": -228,
           "id:3": 313,
           "sizeY:3": 24
         },
-        "45:10": {
+        "40:10": {
           "sizeX:3": 24,
           "x:3": 228,
           "y:3": -348,
           "id:3": 323,
           "sizeY:3": 24
         },
-        "46:10": {
+        "41:10": {
           "sizeX:3": 24,
           "x:3": -12,
-          "y:3": -120,
+          "y:3": -108,
           "id:3": 327,
           "sizeY:3": 24
         },
-        "47:10": {
+        "42:10": {
           "sizeX:3": 24,
           "x:3": 48,
-          "y:3": -120,
+          "y:3": -108,
           "id:3": 330,
           "sizeY:3": 24
         },
-        "48:10": {
+        "43:10": {
           "sizeX:3": 24,
           "x:3": -72,
-          "y:3": -72,
+          "y:3": -108,
           "id:3": 334,
           "sizeY:3": 24
         },
-        "49:10": {
+        "44:10": {
           "sizeX:3": 24,
           "x:3": -132,
-          "y:3": -72,
+          "y:3": -108,
           "id:3": 335,
           "sizeY:3": 24
         },
-        "50:10": {
+        "45:10": {
           "sizeX:3": 24,
           "x:3": -102,
-          "y:3": -24,
+          "y:3": -60,
           "id:3": 336,
           "sizeY:3": 24
         }
@@ -30751,7 +31178,7 @@
           "desc:8": "A quest line to list all the dimensions in the game."
         }
       },
-      "order:3": 20
+      "order:3": 19
     },
     "18:10": {
       "quests:9": {
@@ -30975,7 +31402,7 @@
           "desc:8": "This questline contains all of the quests for the multiblocks."
         }
       },
-      "order:3": 21
+      "order:3": 20
     },
     "19:10": {
       "quests:9": {
@@ -31069,35 +31496,6 @@
       "order:3": 17
     },
     "20:10": {
-      "quests:9": {},
-      "lineID:3": 20,
-      "properties:10": {
-        "betterquesting:10": {
-          "visibility:8": "ALWAYS",
-          "name:8": "Periodic Table",
-          "icon:10": {
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "skinType:8": "STEVE",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "id:8": "questbook:itemquestbook",
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": ""
-          },
-          "bg_image:8": "",
-          "bg_size:3": 256,
-          "desc:8": "-- GregTech(TM) EXTENDED PERIODIC TABLE --\n\nA guide to all elements, from 1 to 118 and beyond."
-        }
-      },
-      "order:3": 18
-    },
-    "21:10": {
       "quests:9": {
         "0:10": {
           "sizeX:3": 24,
@@ -31174,9 +31572,9 @@
           "desc:8": "No Description"
         }
       },
-      "order:3": 19
+      "order:3": 18
     },
-    "22:10": {
+    "21:10": {
       "quests:9": {},
       "lineID:3": 22,
       "properties:10": {
@@ -31203,7 +31601,7 @@
           "desc:8": "No Description"
         }
       },
-      "order:3": 22
+      "order:3": 21
     }
   },
   "questSettings:10": {
