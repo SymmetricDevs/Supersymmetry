@@ -1,6 +1,0 @@
-
-{
-  "Name": "Villager",
-  "Registry ID": "minecraft:villager",
-  "Class": "net.minecraft.entity.passive.EntityVillager"
-}

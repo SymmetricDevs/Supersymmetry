@@ -1,6 +1,0 @@
-
-{
-  "Name": "player_ghost",
-  "Registry ID": "gravestone:player_ghost",
-  "Class": "de.maxhenkel.gravestone.entity.EntityGhostPlayer"
-}

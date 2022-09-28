@@ -1,6 +1,0 @@
-
-{
-  "Name": "PigZombie",
-  "Registry ID": "minecraft:zombie_pigman",
-  "Class": "net.minecraft.entity.monster.EntityPigZombie"
-}

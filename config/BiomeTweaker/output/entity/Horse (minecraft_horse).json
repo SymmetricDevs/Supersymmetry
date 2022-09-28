@@ -1,6 +1,0 @@
-
-{
-  "Name": "Horse",
-  "Registry ID": "minecraft:horse",
-  "Class": "net.minecraft.entity.passive.EntityHorse"
-}

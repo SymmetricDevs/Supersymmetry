@@ -1,6 +1,0 @@
-
-{
-  "Name": "Enderman",
-  "Registry ID": "minecraft:enderman",
-  "Class": "net.minecraft.entity.monster.EntityEnderman"
-}

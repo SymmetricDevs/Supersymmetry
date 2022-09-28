@@ -1,6 +1,0 @@
-
-{
-  "Name": "companion",
-  "Registry ID": "tardis:companion",
-  "Class": "net.tardis.mod.common.entities.EntityCompanion"
-}

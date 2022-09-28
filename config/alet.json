@@ -1,7 +1,0 @@
-{
-  "universal": {
-    "allowURL": true,
-    "maxPixelAmount": 9604,
-    "maxPixelText": 250000
-  }
-}

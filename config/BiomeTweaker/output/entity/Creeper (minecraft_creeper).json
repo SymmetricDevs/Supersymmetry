@@ -1,6 +1,0 @@
-
-{
-  "Name": "Creeper",
-  "Registry ID": "minecraft:creeper",
-  "Class": "net.minecraft.entity.monster.EntityCreeper"
-}

@@ -1,6 +1,0 @@
-
-{
-  "Name": "WitherBoss",
-  "Registry ID": "minecraft:wither",
-  "Class": "net.minecraft.entity.boss.EntityWither"
-}
