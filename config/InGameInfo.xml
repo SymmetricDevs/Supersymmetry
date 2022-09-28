@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <config>
    <lines at="topleft">
       <line>
@@ -203,12 +203,103 @@
          <str>%$f)</str>
          <str> (Score: $b{score}$r)</str>
       </line>
-      <line>
-	  	     <icon>
-                <str>minecraft:diamond_sword</str>
-            </icon>
-      </line>
-	  </lines>
+	          <line>
+            <if>
+                <and>
+                    <or>
+                        <equal>
+                            <modi>
+                                <var>chunkx</var>
+                                <num>3</num>
+                            </modi>
+                            <num>-2</num>
+                        </equal>
+                        <equal>
+                            <modi>
+                                <var>chunkx</var>
+                                <num>3</num>
+                            </modi>
+                            <num>1</num>
+                        </equal>
+                    </or>
+                    <or>
+                        <equal>
+                            <modi>
+                                <var>chunkz</var>
+                                <num>3</num>
+                            </modi>
+                            <num>-2</num>
+                        </equal>
+                        <equal>
+                            <modi>
+                                <var>chunkz</var>
+                                <num>3</num>
+                            </modi>
+                            <num>1</num>
+                        </equal>
+                    </or>
+                </and>
+                <concat>
+                    <icon>
+                        <str>textures/items/diamond_pickaxe.png</str>
+                        <num>0</num>
+                        <num>0</num>
+                        <num>16</num>
+                        <num>16</num>
+                    </icon>
+                    <str>  This is an $2{underline}ore$f chunk.</str>
+                </concat>
+            </if>
+        </line>
+        <line>
+            <if>
+                <and>
+                    <equal>
+                        <var>chunkoffsetx</var>
+                        <num>8</num>
+                    </equal>
+                    <equal>
+                        <var>chunkoffsetz</var>
+                        <num>8</num>
+                    </equal>
+					<or>
+						<equal>
+							<modi>
+								<var>chunkx</var>
+								<num>3</num>
+							</modi>
+							<num>-2</num>
+						</equal>
+						<equal>
+							<modi>
+								<var>chunkx</var>
+								<num>3</num>
+							</modi>
+							<num>1</num>
+						</equal>
+					</or>
+					<or>
+						<equal>
+							<modi>
+								<var>chunkz</var>
+								<num>3</num>
+							</modi>
+							<num>-2</num>
+						</equal>
+						<equal>
+							<modi>
+								<var>chunkz</var>
+								<num>3</num>
+							</modi>
+							<num>1</num>
+						</equal>
+					</or>
+				</and>
+				<str>        You are at the $4center$f of the chunk.</str>
+            </if>
+        </line>
+    </lines>
+	
    <lines at="bottomleft">
       <line>
          <var>mainhandicon</var>
