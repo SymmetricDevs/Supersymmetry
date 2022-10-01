@@ -1,0 +1,105 @@
+{
+  "beachBiomeLocation": "minecraft:beaches",
+  "generators": {
+    "glowshrooms": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "glowshroom"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 1.5,
+      "enable": true
+    },
+    "miners_delight": {
+      "with": {
+        "block": "biomesoplenty:flower_1",
+        "properties": {
+          "variant": "miners_delight"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 0.25,
+      "enable": true
+    },
+    "blue_milk_caps": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "blue_milk_cap"
+        }
+      },
+      "generationAttempts": 16,
+      "amountPerChunk": 0.2,
+      "enable": true
+    },
+    "glowshrooms_surface": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "glowshroom"
+        }
+      },
+      "generationAttempts": 16,
+      "amountPerChunk": 0.1,
+      "enable": true
+    },
+    "roots": {
+      "with": {
+        "block": "biomesoplenty:plant_1",
+        "properties": {
+          "variant": "root"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 4.0,
+      "enable": true
+    },
+    "portobellos": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "portobello"
+        }
+      },
+      "generationAttempts": 16,
+      "amountPerChunk": 0.3,
+      "enable": true
+    },
+    "flat_mushroom": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "flat_mushroom"
+        }
+      },
+      "generationAttempts": 16,
+      "amountPerChunk": 0.4,
+      "enable": true
+    },
+    "toadstools": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "toadstool"
+        }
+      },
+      "generationAttempts": 16,
+      "amountPerChunk": 0.5,
+      "enable": true
+    },
+    "sapphire": {
+      "minHeight": 4,
+      "with": {
+        "block": "biomesoplenty:gem_ore",
+        "properties": {
+          "variant": "sapphire"
+        }
+      },
+      "amountPerChunk": 12.0,
+      "maxHeight": 32,
+      "enable": true
+    }
+  }
+}

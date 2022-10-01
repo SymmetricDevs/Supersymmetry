@@ -1,0 +1,103 @@
+{
+  "wallBlock": {
+    "block": "minecraft:netherrack",
+    "properties": {}
+  },
+  "fillerBlock": {
+    "block": "minecraft:netherrack",
+    "properties": {}
+  },
+  "skyColor": -1,
+  "topBlock": {
+    "block": "minecraft:netherrack",
+    "properties": {}
+  },
+  "fogColor": -1,
+  "fogDensity": 1.0,
+  "roofTopBlock": {
+    "block": "minecraft:netherrack",
+    "properties": {}
+  },
+  "hasBiomeEssence": false,
+  "roofFillerBlock": {
+    "block": "minecraft:netherrack",
+    "properties": {}
+  },
+  "generators": {
+    "hive": {
+      "maxRadius": 9,
+      "bottomExtra": 4,
+      "amountPerChunk": 0.2,
+      "enable": true,
+      "halfHeight": 7,
+      "emptyChance": 0.25,
+      "layerSize": 3
+    },
+    "big_brown_mushroom": {
+      "minHeight": 5,
+      "maxHeight": 8,
+      "amountPerChunk": 2.0,
+      "enable": true
+    },
+    "glowshroom": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "glowshroom"
+        }
+      },
+      "generationAttempts": 16,
+      "amountPerChunk": 1.5,
+      "enable": true
+    },
+    "brown_mushrooms": {
+      "with": {
+        "block": "minecraft:brown_mushroom",
+        "properties": {}
+      },
+      "generationAttempts": 16,
+      "amountPerChunk": 2.0,
+      "enable": true
+    },
+    "big_red_mushroom": {
+      "minHeight": 5,
+      "maxHeight": 10,
+      "amountPerChunk": 30.0,
+      "enable": true
+    },
+    "red_mushrooms": {
+      "with": {
+        "block": "minecraft:red_mushroom",
+        "properties": {}
+      },
+      "generationAttempts": 16,
+      "amountPerChunk": 5.0,
+      "enable": true
+    },
+    "flat_mushroom": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "flat_mushroom"
+        }
+      },
+      "generationAttempts": 16,
+      "amountPerChunk": 1.0,
+      "enable": true
+    },
+    "toadstools": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "toadstool"
+        }
+      },
+      "generationAttempts": 16,
+      "amountPerChunk": 1.0,
+      "enable": true
+    }
+  },
+  "weights": {
+    "hell": 5
+  }
+}

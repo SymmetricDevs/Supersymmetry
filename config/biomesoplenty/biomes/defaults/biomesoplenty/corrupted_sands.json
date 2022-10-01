@@ -1,0 +1,81 @@
+{
+  "wallBlock": {
+    "block": "minecraft:soul_sand",
+    "properties": {}
+  },
+  "fillerBlock": {
+    "block": "minecraft:soul_sand",
+    "properties": {}
+  },
+  "skyColor": -1,
+  "topBlock": {
+    "block": "minecraft:soul_sand",
+    "properties": {}
+  },
+  "fogColor": -1,
+  "fogDensity": 1.0,
+  "roofTopBlock": {
+    "block": "minecraft:netherrack",
+    "properties": {}
+  },
+  "hasBiomeEssence": false,
+  "roofFillerBlock": {
+    "block": "minecraft:netherrack",
+    "properties": {}
+  },
+  "generators": {
+    "hive": {
+      "maxRadius": 9,
+      "bottomExtra": 4,
+      "amountPerChunk": 0.2,
+      "enable": true,
+      "halfHeight": 7,
+      "emptyChance": 0.25,
+      "layerSize": 3
+    },
+    "thorns": {
+      "with": {
+        "block": "biomesoplenty:plant_1",
+        "properties": {
+          "variant": "thorn"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 3.0,
+      "enable": true
+    },
+    "dead_grass": {
+      "with": {
+        "block": "biomesoplenty:plant_0",
+        "properties": {
+          "variant": "deadgrass"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 5.0,
+      "enable": true
+    },
+    "bramble": {
+      "with": {
+        "block": "biomesoplenty:bramble_plant",
+        "properties": {
+          "down": "false",
+          "east": "false",
+          "north": "false",
+          "south": "false",
+          "up": "false",
+          "west": "false"
+        }
+      },
+      "generationAttempts": 128,
+      "amountPerChunk": 40.0,
+      "maxHeight": 6,
+      "enable": true,
+      "minLength": 15,
+      "maxLength": 30
+    }
+  },
+  "weights": {
+    "hell": 5
+  }
+}

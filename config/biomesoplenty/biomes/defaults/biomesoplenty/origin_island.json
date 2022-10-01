@@ -1,0 +1,98 @@
+{
+  "canGenerateRivers": false,
+  "beachBiomeLocation": "biomesoplenty:origin_beach",
+  "skyColor": 8441086,
+  "fogDensity": 1.0,
+  "hasBiomeEssence": true,
+  "variationBelow": 6.0,
+  "variationAbove": 25.0,
+  "seaFloorBlock": {
+    "block": "minecraft:dirt",
+    "properties": {
+      "snowy": "false",
+      "variant": "dirt"
+    }
+  },
+  "fillerBlock": {
+    "block": "minecraft:dirt",
+    "properties": {
+      "snowy": "false",
+      "variant": "dirt"
+    }
+  },
+  "averageHeight": 64.0,
+  "topBlock": {
+    "block": "biomesoplenty:grass",
+    "properties": {
+      "snowy": "false",
+      "variant": "origin"
+    }
+  },
+  "fogColor": -1,
+  "canGenerateVillages": false,
+  "canSpawnInBiome": true,
+  "generators": {
+    "glowshrooms": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "glowshroom"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 1.5,
+      "enable": true
+    },
+    "flowers": {
+      "amountPerChunk": 0.4,
+      "enable": true,
+      "generators": {}
+    },
+    "miners_delight": {
+      "with": {
+        "block": "biomesoplenty:flower_1",
+        "properties": {
+          "variant": "miners_delight"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 0.25,
+      "enable": true
+    },
+    "roots": {
+      "with": {
+        "block": "biomesoplenty:plant_1",
+        "properties": {
+          "variant": "root"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 4.0,
+      "enable": true
+    },
+    "trees": {
+      "minHeight": 5,
+      "logState": {
+        "block": "minecraft:log",
+        "properties": {
+          "axis": "y",
+          "variant": "oak"
+        }
+      },
+      "amountPerChunk": 5.0,
+      "maxHeight": 8,
+      "enable": true,
+      "updateNeighbours": false,
+      "hangingChance": 0.0,
+      "leavesState": {
+        "block": "biomesoplenty:leaves_2",
+        "properties": {
+          "check_decay": "false",
+          "decayable": "true",
+          "variant": "origin"
+        }
+      }
+    }
+  },
+  "weights": {}
+}
