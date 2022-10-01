@@ -62,7 +62,7 @@
       },
       "generationAttempts": 64,
       "amountPerChunk": 0.25,
-      "enable": false
+      "enable": true
     },
     "medium_lily": {
       "with": {
@@ -119,7 +119,7 @@
       },
       "amountPerChunk": 12.0,
       "maxHeight": 32,
-      "enable": false
+      "enable": true
     },
     "trees": {
       "amountPerChunk": 40.0,

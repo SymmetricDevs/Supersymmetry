@@ -56,7 +56,7 @@
       },
       "generationAttempts": 64,
       "amountPerChunk": 0.25,
-      "enable": false
+      "enable": true
     },
     "dead_leaf_piles": {
       "with": {
@@ -95,7 +95,7 @@
       },
       "amountPerChunk": 12.0,
       "maxHeight": 32,
-      "enable": false
+      "enable": true
     },
     "roots": {
       "with": {
