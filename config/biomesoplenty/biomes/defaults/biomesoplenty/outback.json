@@ -1,0 +1,149 @@
+{
+  "canGenerateRivers": true,
+  "beachBiomeLocation": "minecraft:beaches",
+  "skyColor": -1,
+  "fogDensity": 1.0,
+  "hasBiomeEssence": true,
+  "variationBelow": 8.0,
+  "variationAbove": 10.0,
+  "seaFloorBlock": {
+    "block": "minecraft:dirt",
+    "properties": {
+      "snowy": "false",
+      "variant": "dirt"
+    }
+  },
+  "fillerBlock": {
+    "block": "minecraft:sand",
+    "properties": {
+      "variant": "red_sand"
+    }
+  },
+  "averageHeight": 72.0,
+  "topBlock": {
+    "block": "minecraft:sand",
+    "properties": {
+      "variant": "red_sand"
+    }
+  },
+  "fogColor": -1,
+  "canGenerateVillages": true,
+  "canSpawnInBiome": true,
+  "generators": {
+    "glowshrooms": {
+      "with": {
+        "block": "biomesoplenty:mushroom",
+        "properties": {
+          "variant": "glowshroom"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 1.5,
+      "enable": true
+    },
+    "tiny_cacti": {
+      "with": {
+        "block": "biomesoplenty:plant_1",
+        "properties": {
+          "variant": "tinycactus"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 0.5,
+      "enable": true
+    },
+    "miners_delight": {
+      "with": {
+        "block": "biomesoplenty:flower_1",
+        "properties": {
+          "variant": "miners_delight"
+        }
+      },
+      "generationAttempts": 64,
+      "amountPerChunk": 0.25,
+      "enable": true
+    },
+    "grass_splatter": {
+      "with": {
+        "block": "biomesoplenty:grass",
+        "properties": {
+          "snowy": "false",
+          "variant": "sandy"
+        }
+      },
+      "generationAttempts": 128,
+      "amountPerChunk": 4.0,
+      "enable": true
+    },
+    "dead_bushes": {
+      "with": {
+        "block": "minecraft:deadbush",
+        "properties": {}
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 1.5,
+      "enable": true
+    },
+    "grass": {
+      "amountPerChunk": 16.0,
+      "enable": true,
+      "generators": {}
+    },
+    "cacti": {
+      "minHeight": 1,
+      "with": {
+        "block": "minecraft:cactus",
+        "properties": {
+          "age": "0"
+        }
+      },
+      "generationAttempts": 24,
+      "amountPerChunk": 0.2,
+      "maxHeight": 2,
+      "enable": true,
+      "randomDirection": false
+    },
+    "roots": {
+      "with": {
+        "block": "biomesoplenty:plant_1",
+        "properties": {
+          "variant": "root"
+        }
+      },
+      "generationAttempts": 32,
+      "amountPerChunk": 4.0,
+      "enable": true
+    },
+    "desertgrass": {
+      "with": {
+        "block": "biomesoplenty:plant_0",
+        "properties": {
+          "variant": "desertgrass"
+        }
+      },
+      "generationAttempts": 8,
+      "amountPerChunk": 10.0,
+      "enable": true
+    },
+    "trees": {
+      "amountPerChunk": 3.0,
+      "enable": true,
+      "generators": {}
+    },
+    "ruby": {
+      "minHeight": 4,
+      "with": {
+        "block": "biomesoplenty:gem_ore",
+        "properties": {
+          "variant": "ruby"
+        }
+      },
+      "amountPerChunk": 12.0,
+      "maxHeight": 32,
+      "enable": true
+    }
+  },
+  "weights": {
+    "hot_desert": 7
+  }
+}
