@@ -39,7 +39,7 @@
       "parent": "working"
     }
   },
-  "recipeMap": "test recipe",
+  "recipeMap": "",
   "basePattern": {
     "structureDir": [
       "FRONT",
