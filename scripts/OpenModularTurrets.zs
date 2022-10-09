@@ -2,32 +2,14 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
+import mods.gregtech.recipe.RecipeMaps;
 
 val name_removals as string[] = [
 	"openmodularturrets:disposable_item_turret_vanilla",
 	"openmodularturrets:potato_cannon_turret_vanilla",
-	"openmodularturrets:machine_gun_turret_enderio",
-	"openmodularturrets:incendiary_turret_enderio",
-	"openmodularturrets:grenade_turret_enderio",
-	"openmodularturrets:relativistic_turret_enderio",
-	"openmodularturrets:teleporter_turret_enderio",
-	"openmodularturrets:rocket_turret_enderio",
 	"openmodularturrets:turret_base_0_vanilla",
-	"openmodularturrets:turret_base_1_enderio",
-	"openmodularturrets:turret_base_2_enderio",
-	"openmodularturrets:turret_base_3_enderio",
-	"openmodularturrets:turret_base_4_enderio",
 	"openmodularturrets:ammo_meta_0_vanilla",
-	"openmodularturrets:ammo_meta_1_enderio",
-	"openmodularturrets:ammo_meta_3_enderio",
-	"openmodularturrets:ammo_meta_4_enderio",
 	"openmodularturrets:intermediate_regular_0_vanilla",
-	"openmodularturrets:intermediate_tiered_6_enderio",
-	"openmodularturrets:intermediate_tiered_7_enderio",
-	"openmodularturrets:intermediate_tiered_8_enderio",
-	"openmodularturrets:intermediate_tiered_11_enderio",
-	"openmodularturrets:intermediate_tiered_12_enderio",
-	"openmodularturrets:intermediate_tiered_13_enderio"
 ];
 
 for item in name_removals {

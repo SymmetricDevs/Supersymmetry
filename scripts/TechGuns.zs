@@ -4,7 +4,7 @@ import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.techguns.GunStats;
 import mods.techguns.ArmorStats;
-
+import mods.gregtech.recipe.RecipeMaps;
 
 
 val name_removals as string[] = [
