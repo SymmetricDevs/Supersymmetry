@@ -52,6 +52,7 @@ global vacuum_freezer as RecipeMap =                <recipemap:vacuum_freezer>;
 global wiremill as RecipeMap =                      <recipemap:wiremill>;
 global primitive_blast_furnace as RecipeMap = 	    <recipemap:primitive_blast_furnace>;
 global weapons_factory as RecipeMap =               <recipemap:weapons_factory>;
+global ore_sorter  as RecipeMap =                   <recipemap:ore_sorter>;
 
 // Tiered Components
 
