@@ -1,131 +1,212 @@
 #loader gregtech
 #priority 1000
 
-import mods.gtadditions.recipe.Utils;
-import mods.contenttweaker.Fluid;
-import mods.contenttweaker.VanillaFactory;
-import mods.gregtech.material.MaterialRegistry;
+import mods.gregtech.material.MaterialBuilder;
+import mods.gregtech.material.Material;
+import mods.gregtech.material.Elements;
+import mods.gregtech.recipe.Utils;
+
+//----------------------------------ELEMENTS---------------------------------
+
+
+
 
 //-----------------------------------DUSTS-----------------------------------
 
-Utils.registerDust("zircon.mold.base", 1200, 15441471, "DULL");
-Utils.registerDust("ammonium_nitrate", 1201, 0xDEDEDE, "ROUGH");
+MaterialBuilder(1200, "zirconmoldbase")
+.dust()
+.color(0xbaa56a).iconSet("dull")
+.build();
+
+MaterialBuilder(1201, "zircon")
+.dust()
+.components([<material:zirconium> * 1, <material:silicon> * 1, <material:oxygen> * 4])
+.flags(["disable_decomposition"])
+.iconSet("shiny")
+.build();
 
 //-----------------------------------INGOTS-----------------------------------
 
-val vacuum_steel = MaterialRegistry.createIngotMaterial(600, "vacuumsteel", 0xC8C8DC, "SHINY", 7, null, 7, 0, 500, 1800);
-vacuum_steel.addFlags([
-	"GENERATE_PLATE",
-	"NO_WORKING", 
-	"NO_SMASHING", 
-	"NO_SMELTING",
-	"GENERATE_GEAR",
-	"GENERATE_SMALL_GEAR",
-	"GENERATE_ROD",
-	"GENERATE_LONG_ROD",
-	"GENERATE_BOLT_SCREW",
-	"GENERATE_FRAME",
-	"EXCLUDE_BLOCK_CRAFTING_RECIPES",
-	"EXCLUDE_PLATE_COMPRESSOR_RECIPE",
-	"EXCLUDE_BLOCK_CRAFTING_BY_HAND_RECIPES"
-]);
+MaterialBuilder(600, "vacuumsteel")
+.ingot()
+.color(0xC8C8DC).iconSet("shiny")
+.flags(["generate_plate", "generate_gear", "generate_small_gear", "generate_rod", "generate_long_rod", "generate_bolt_screw", "generate_frame", "exclude_block_crafting_recipes", "exclude_plate_compressor_recipe", "exclude_block_crafting_by_hand_recipes"])
+.build();
 
 //-----------------------------------FLUIDS-----------------------------------
 
-Utils.registerFluid("low_vacuum", 16777215);
-Utils.registerFluid("medium_vacuum", 16777215);
-Utils.registerFluid("high_vacuum", 16777215);
-Utils.registerFluid("ultra_high_vacuum", 16777215);
-Utils.registerFluid("extremely_high_vacuum", 16777215);
+function generateHighPressureGases(material as string, id as int){
+    var color = Utils.material(material).materialRGB;
 
-//Thermo Gases
-Utils.registerFluid("hot_hp_hydrogen", 181);
-Utils.registerFluid("hp_hydrogen", 181);
-Utils.registerFluid("cold_hp_hydrogen", 181);
+    MaterialBuilder(id, "hot_hp_" + material)
+    .fluid("gas")
+    .fluidTemp(323)
+    .color(color)
+    .components([Utils.material(material) * 1])
+    .flags(["disable_decomposition"])
+    .build();
 
-Utils.registerFluid("hot_hp_oxygen", 9480942);
-Utils.registerFluid("hp_oxygen", 9480942);
-Utils.registerFluid("cold_hp_oxygen", 9480942);
+    MaterialBuilder(id + 1, "hp_" + material)
+    .fluid("gas")
+    .color(color)
+    .components([Utils.material(material) * 1])
+    .flags(["disable_decomposition"])
+    .build();
 
-Utils.registerFluid("hot_hp_helium", 14540032);
-Utils.registerFluid("hp_helium", 14540032);
-Utils.registerFluid("cold_hp_helium", 14540032);
+    MaterialBuilder(id + 2, "cold_hp_" + material)
+    .fluid("gas")
+    .fluidTemp(223)
+    .color(color)
+    .components([Utils.material(material) * 1])
+    .flags(["disable_decomposition"])
+    .build();
+}
 
-Utils.registerFluid("hot_hp_neon", 16430260);
-Utils.registerFluid("hp_neon", 16430260);
-Utils.registerFluid("cold_hp_neon", 16430260);
+generateHighPressureGases("hydrogen", 10000);
 
-Utils.registerFluid("hot_hp_argon", 65280);
-Utils.registerFluid("hp_argon", 65280);
-Utils.registerFluid("cold_hp_argon", 65280);
+generateHighPressureGases("oxygen", 10003);
 
-Utils.registerFluid("liquid_krypton", 8454016);
-Utils.registerFluid("hot_hp_krypton", 8454016);
-Utils.registerFluid("hp_krypton", 8454016);
-Utils.registerFluid("cold_hp_krypton", 8454016);
+generateHighPressureGases("helium", 10006);
 
-Utils.registerFluid("liquid_xenon", 65535);
-Utils.registerFluid("hot_hp_xenon", 65535);
-Utils.registerFluid("hp_xenon", 65535);
-Utils.registerFluid("cold_hp_xenon", 65535);
+generateHighPressureGases("neon", 10009);
 
-Utils.registerFluid("hot_hp_air", 11129077);
-Utils.registerFluid("hp_air", 11129077);
-Utils.registerFluid("cold_hp_air", 11129077);
+generateHighPressureGases("argon", 10012);
 
-Utils.registerFluid("hot_hp_nitrogen", 11129077);
-Utils.registerFluid("hp_nitrogen", 11129077);
-Utils.registerFluid("cold_hp_nitrogen", 11129077);
+generateHighPressureGases("krypton", 10015);
 
-//Thermo Coolants
-Utils.registerFluid("warm_water", 255);
-Utils.registerFluid("warm_ethylene_glycol", 8421626);
+generateHighPressureGases("xenon", 10018);
+
+generateHighPressureGases("air", 10021);
+
+generateHighPressureGases("nitrogen", 10024);
+
+function generateLiquidFromGas(material as string, id as int, boilingTemperature as int){
+    var color = Utils.material(material).materialRGB;
+
+    MaterialBuilder(id, "liquid_" + material)
+    .fluid()
+    .fluidTemp(boilingTemperature)
+    .color(color)
+    .components([Utils.material(material) * 1])
+    .flags(["disable_decomposition"])
+    .build();
+}
+
+generateLiquidFromGas("hydrogen", 11000, 21);
+
+generateLiquidFromGas("helium", 11001, 5);
+
+generateLiquidFromGas("neon", 11002, 27);
+
+generateLiquidFromGas("argon", 11003, 88);
+
+generateLiquidFromGas("krypton", 11004, 120);
+
+generateLiquidFromGas("xenon", 11005, 165);
+
+generateLiquidFromGas("nitrogen", 11006, 77);
+
+function generateHotLiquid(material as string, id as int){
+    var color = Utils.material(material).materialRGB;
+
+    MaterialBuilder(id, "hot_" + material)
+    .fluid()
+    .fluidTemp(323)
+    .color(color)
+    .components([Utils.material(material) * 1])
+    .flags(["disable_decomposition"])
+    .build();
+}
+
+generateHotLiquid("air", 12000);
+
+generateHotLiquid("brine", 12001);
 
 //Thermo Refrigerants
-Utils.registerFluid("hot_compressed_ammonia", 4142208);
-Utils.registerFluid("compressed_ammonia", 4142208);
-Utils.registerFluid("cold_ammonia", 4142208);
 
-Utils.registerFluid("hot_compressed_propane", 16441936);
-Utils.registerFluid("compressed_propane", 16441936);
-Utils.registerFluid("cold_propane", 16441936);
+function generateThermoRefrigerant(material as string, id as int){
+    var color = Utils.material(material).materialRGB;
 
-Utils.registerFluid("hot_compressed_carbon_dioxide", 11129077);
-Utils.registerFluid("compressed_carbon_dioxide", 11129077);
-Utils.registerFluid("cold_carbon_dioxide", 11129077);
+    MaterialBuilder(id, "hot_compressed_" + material)
+    .fluid("gas")
+    .fluidTemp(323)
+    .color(color)
+    .components([Utils.material(material) * 1])
+    .flags(["disable_decomposition"])
+    .build();
+
+    MaterialBuilder(id + 1, "compressed_" + material)
+    .fluid("gas")
+    .color(color)
+    .components([Utils.material(material) * 1])
+    .flags(["disable_decomposition"])
+    .build();
+
+    MaterialBuilder(id + 2, "cold_" + material)
+    .fluid("gas")
+    .fluidTemp(223)
+    .color(color)
+    .components([Utils.material(material) * 1])
+    .flags(["disable_decomposition"])
+    .build();
+}
+
+generateThermoRefrigerant("ammonia", 13000);
+
+generateThermoRefrigerant("propane", 13003);
+
+generateThermoRefrigerant("carbon_dioxide", 13006);
 
 //Sulfurous water
-Utils.registerFluid("sulfurous_water", 15592893);
+MaterialBuilder(14000, "sulfurous_water")
+.fluid()
+.color(0x592893)
+.build();
 
 //Oxide water
-Utils.registerFluid("oxide_water", 15380270);
+MaterialBuilder(14001, "oxide_water")
+.fluid()
+.color(0x538020)
+.build();
 
-//Sedimentary water
-Utils.registerFluid("mineralized_water", 11129077);
+//Mineralized water
+MaterialBuilder(14002, "mineralized_water")
+.fluid()
+.color(0x129077)
+.build();
 
 //Silicate water
-Utils.registerFluid("silicate_water", 11651526);
+MaterialBuilder(14003, "silicate_water")
+.fluid()
+.color(0x651526)
+.build();
 
 //Graphite water
-Utils.registerFluid("graphite_water", 6579300);
+MaterialBuilder(14004, "graphite_water")
+.fluid()
+.color(0x793000)
+.build();
 
 //Phosphate water
-Utils.registerFluid("phosphate_water", 14540032);
+MaterialBuilder(14005, "phosphate_water")
+.fluid()
+.color(0x540032)
+.build();
 
 //Precious water
-Utils.registerFluid("precious_runoff", 11129077);
+MaterialBuilder(14006, "precious_runoff")
+.fluid()
+.color(0x129077)
+.build();
 
 //Radioactive water
-Utils.registerFluid("radioactive_runoff", 11129077);
-
-//Hot Air
-Utils.registerFluid("hot_air", 11129077);
-
-//Hot Brine
-Utils.registerFluid("hot_brine", 15592833);
+MaterialBuilder(14007, "radioactive_runoff")
+.fluid()
+.color(0x129077)
+.build();
 
 //-----------------------------------OTHER TWEAKS-----------------------------------
 
-<material:steel>.addFlags(["GENERATE_SPRING", "GENERATE_SPRING_SMALL"]);
-<material:titanium>.addFlags(["GENERATE_SPRING_SMALL"]);
-<material:lead>.addFlags(["GENERATE_ROUND"]);
+<material:steel>.addFlags(["generate_spring", "generate_spring_small"]);
+<material:titanium>.addFlags(["generate_spring", "generate_spring_small"]);
+<material:lead>.addFlags(["generate_round"]);
