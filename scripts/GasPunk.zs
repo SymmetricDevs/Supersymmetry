@@ -2,6 +2,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
+import mods.gregtech.recipe.RecipeMaps;
 
 val name_removals as string[] = [
 	"gaspunk:diffuser"

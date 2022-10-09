@@ -92,6 +92,7 @@ vacuum_casing.register();
 var titandust = VanillaFactory.createBlock("titandust", <blockmaterial:ground>);
 var titaniadust = VanillaFactory.createBlock("titaniadust", <blockmaterial:ground>);
 var titaniastone = VanillaFactory.createBlock("titaniastone", <blockmaterial:rock>);
+
 titandust.register();
 titaniadust.register();
 titaniastone.register();

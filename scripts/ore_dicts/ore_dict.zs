@@ -43,7 +43,7 @@ function unify (ore as IOreDictEntry, p as int) {
         for item in ore.itemArray {
             if (item.definition.owner != mods[pos]) {
                 ore.remove(item);
-                //JEI.hide(item);
+                JEI.hide(item);
             }
         }
     } else if (pos < size) {
@@ -70,14 +70,6 @@ function unify (ore as IOreDictEntry, p as int) {
 
 // Remove LazyAE2 Coal Dust
 <ore:dustCoal>.remove(<threng:material:3>);
-
-// EnderIO Dusts
-<ore:dustCopper>.remove(<enderio:item_material:26>);
-JEI.hide(<enderio:item_material:26>);
-<ore:dustTin>.remove(<enderio:item_material:27>);
-JEI.hide(<enderio:item_material:27>);
-<ore:dustCobalt>.remove(<enderio:item_material:31>);
-JEI.hide(<enderio:item_material:31>);
 
 // Nuclearcraft Ores
 <ore:oreCopper>.remove(<nuclearcraft:ore>);

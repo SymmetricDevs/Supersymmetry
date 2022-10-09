@@ -10,12 +10,6 @@ recipes.addShaped("rubber_rod_manual", <metaitem:stickRubber>, [
 	[null, null, null]
 ]);
 
-recipes.addShaped("gt_concrete_conversion", <gregtech:concrete:0>, [
-	[null, null, null],
-	[null, <immersiveengineering:stone_decoration:5>, null],
-	[null, null, null]
-]);
-
 //Manual chad for early paper
 val water_ingredient as IIngredient = <liquid:water> * 1000;
 recipes.addShapeless("manual_chad", <metaitem:dustPaper>, [
@@ -48,8 +42,5 @@ ebf.recipeBuilder()
 	.EUt(60)
 	.buildAndRegister();
 
-//Primitive blast furnace disassembling removal
-disassembler.findRecipe(32, [<gregtech:machine:510>], null).remove();
-
 //TechGuns carbon plate removal
-fluid_solidifier.findRecipe(8, [<metaitem:shape.mold.plate>], [<liquid:carbon> * 144]).remove();
+fluid_solidifier.findRecipe(7, [<metaitem:shape.mold.plate>], [<liquid:carbon> * 144]).remove();

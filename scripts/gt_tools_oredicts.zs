@@ -49,10 +49,6 @@
 	<gregtech:meta_tool:19>.withEmptyTag()
 ]);
 
-<ore:gregBendingCylinders>.addItems([
-	<gtadditions:ga_meta_tool:0>.withEmptyTag()
-]);
-
 <ore:gregMortars>.addItems([
 	<gregtech:meta_tool:12>.withEmptyTag()
 ]);
