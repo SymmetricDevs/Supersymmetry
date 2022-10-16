@@ -2,6 +2,9 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
+
+import mods.gregtech.recipe.RecipeMapBuilder;
+import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.recipe.RecipeMaps;
 
 val name_removals as string[] = [
@@ -25,7 +28,7 @@ for solder in soldering_alloys {
 			circuits[1],
 			<openmodularturrets:intermediate_regular:0>*2
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:turret_base:1>)
 		.duration(200)
 		.EUt(32)
@@ -38,7 +41,7 @@ for solder in soldering_alloys {
 			circuits[2],
 			<openmodularturrets:intermediate_regular:0>*2
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:turret_base:2>)
 		.duration(200)
 		.EUt(128)
@@ -51,7 +54,7 @@ for solder in soldering_alloys {
 			circuits[3],
 			<openmodularturrets:intermediate_regular:0>*2
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:turret_base:3>)
 		.duration(200)
 		.EUt(512)
@@ -64,7 +67,7 @@ for solder in soldering_alloys {
 			circuits[8],
 			<openmodularturrets:intermediate_regular:0>*2
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:turret_base:4>)
 		.duration(200)
 		.EUt(500000)
@@ -79,7 +82,7 @@ for solder in soldering_alloys {
 			motors[1]*2,
 			<techguns:pistol>
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:machine_gun_turret>)
 		.duration(200)
 		.EUt(20)
@@ -94,7 +97,7 @@ for solder in soldering_alloys {
 			motors[1]*2,
 			pumps[1]
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:incendiary_turret>)
 		.duration(200)
 		.EUt(20)
@@ -109,7 +112,7 @@ for solder in soldering_alloys {
 			circuits[2],
 			motors[2]*2
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:grenade_turret>)
 		.duration(200)
 		.EUt(60)
@@ -124,7 +127,7 @@ for solder in soldering_alloys {
 			circuits[3],
 			motors[3]*2
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:rocket_turret>)
 		.duration(200)
 		.EUt(300)
@@ -175,7 +178,7 @@ for solder in soldering_alloys {
 			<ore:springSteel>,
 			<ore:gearSteel>
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:intermediate_tiered:6>)
 		.duration(200)
 		.EUt(20)
@@ -189,7 +192,7 @@ for solder in soldering_alloys {
 			<ore:springSteel>,
 			<ore:gearAluminium>
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:intermediate_tiered:7>)
 		.duration(200)
 		.EUt(60)
@@ -203,7 +206,7 @@ for solder in soldering_alloys {
 			<ore:springSteel>,
 			<ore:gearStainlessSteel>
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:intermediate_tiered:8>)
 		.duration(200)
 		.EUt(300)
@@ -214,7 +217,7 @@ for solder in soldering_alloys {
 			<ore:plateSteel>*6,
 			<techguns:itemshared:39>
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:intermediate_tiered:11>)
 		.duration(200)
 		.EUt(20)
@@ -225,7 +228,7 @@ for solder in soldering_alloys {
 			<ore:plateAluminium>*6,
 			<techguns:itemshared:39>
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:intermediate_tiered:12>)
 		.duration(200)
 		.EUt(60)
@@ -236,7 +239,7 @@ for solder in soldering_alloys {
 			<ore:plateStainlessSteel>*6,
 			<techguns:itemshared:39>
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<openmodularturrets:intermediate_tiered:13>)
 		.duration(200)
 		.EUt(300)

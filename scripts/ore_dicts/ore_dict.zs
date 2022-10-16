@@ -8,8 +8,29 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemDefinition;
 import mods.jei.JEI;
 
-static mods as string[] = ["minecraft", "gregtech", "gtadditions", "immersiveengineering", "enderio", "nuclearcraft", "advancedrocketry", "libvulpes", "biomesoplenty"];
+static mods as string[] = ["minecraft", "gregtech", "nuclearcraft", "advancedrocketry", "libvulpes", "biomesoplenty"];
 static size as int = mods.length - 1;
+
+<ore:dustRadium>.add(<metaitem:dustRadium225>);
+<ore:dustPolonium>.add(<metaitem:dustPolonium210>);
+
+<ore:ingotUranium238Carbide>.add(<metaitem:ingotUraniumCarbide>);
+<ore:ingotUranium238Oxide>.add(<metaitem:ingotUraniumOxide>);
+<ore:ingotUranium238Nitride>.add(<metaitem:ingotUraniumNitride>);
+<ore:ingotUranium238All>.add(<metaitem:ingotUraniumZA>);
+<ore:ingotPlutonium239Carbide>.add(<metaitem:ingotPlutoniumCarbide>);
+<ore:ingotPlutonium239Oxide>.add(<metaitem:ingotPlutoniumOxide>);
+<ore:ingotPlutonium239Nitride>.add(<metaitem:ingotPlutoniumNitride>);
+<ore:ingotPlutonium239All>.add(<metaitem:ingotPlutoniumZA>);
+
+<ore:blockUranium238>.add(<gregtech:meta_block_compressed_7:4>);
+
+<ore:sheetTitaniumAluminide>.add(<metaitem:foilTitaniumAluminide>);
+<ore:sheetTitaniumIridium>.add(<metaitem:foilTitaniumIridium>);
+<ore:sheetIron>.add(<metaitem:plateIron>);
+<ore:sheetCopper>.add(<metaitem:foilCopper>);
+<ore:sheetTitanium>.add(<metaitem:foilTitanium>);
+<ore:sheetSteel>.add(<metaitem:foilSteel>);
 
 function unify_oredicts (oredict as [IOreDictEntry]) {
     for ore in oredict {
@@ -109,14 +130,15 @@ JEI.hide(<nuclearcraft:ore:7>);
 unify_oredicts(<ore:ingot*>);
 unify_oredicts(<ore:ore*>);
 unify_oredicts(<ore:plate*>);
-//unify_oredicts(<ore:block*>);
+unify_oredicts(<ore:block*>);
 unify_oredicts(<ore:dust*>);
 unify_oredicts(<ore:gear*>);
 unify_oredicts(<ore:stick*>);
 unify_oredicts(<ore:crystal*>);
 unify_oredicts(<ore:nugget*>);
 unify_oredicts(<ore:egg*>);
-
+unify_oredicts(<ore:sheet*>);
 
 unify(<ore:bioplastic>, 0);
 unify(<ore:itemSilicon>, 0);
+

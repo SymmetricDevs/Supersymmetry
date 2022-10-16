@@ -76,16 +76,59 @@ unfinished_vacuum_tube.register();
 var engine_block_cast = VanillaFactory.createItem("engine_block_cast");
 var full_engine_block_cast = VanillaFactory.createItem("full_engine_block_cast");
 var engine_block = VanillaFactory.createItem("engine_block");
+var silicon_dioxide_wafer = VanillaFactory.createItem("silicon_dioxide_wafer");
+var photocoated_wafer = VanillaFactory.createItem("photocoated_wafer");
+var engraved_wafer = VanillaFactory.createItem("engraved_wafer");
+var etched_wafer = VanillaFactory.createItem("etched_wafer");
+var lithography_mask = VanillaFactory.createItem("lithography_mask");
+var photocoated_board = VanillaFactory.createItem("photocoated_board");
+var engraved_board = VanillaFactory.createItem("engraved_board");
+
 engine_block_cast.register();
 full_engine_block_cast.register();
 engine_block.register();
+silicon_dioxide_wafer.register();
+photocoated_wafer.register();
+engraved_wafer.register();
+etched_wafer.register();
+lithography_mask.register();
+photocoated_board.register();
+engraved_board.register();
 
 //-----------------------------------HV AGE-----------------------------------
+
+var coated_logic_circuit = VanillaFactory.createItem("coated_logic_circuit");
+var engraved_logic_circuit = VanillaFactory.createItem("engraved_logic_circuit");
+
+coated_logic_circuit.register();
+engraved_logic_circuit.register();
 
 //-----------------------------------EV AGE-----------------------------------
 
 var vacuum_casing = VanillaFactory.createBlock("vacuum_casing", <blockmaterial:iron>);
 vacuum_casing.register();
+
+var doped_logic_circuit = VanillaFactory.createItem("doped_logic_circuit");
+var tungsten_logic_circuit = VanillaFactory.createItem("tungsten_logic_circuit");
+var platinum_logic_circuit = VanillaFactory.createItem("platinum_logic_circuit");
+var unprepared_heat_shield = VanillaFactory.createItem("unprepared_heat_shield");
+var heat_shield = VanillaFactory.createItem("heat_shield");
+
+doped_logic_circuit.register();
+tungsten_logic_circuit.register();
+platinum_logic_circuit.register();
+unprepared_heat_shield.register();
+heat_shield.register();
+
+//----------------------------------IV AGE-------------------------------------
+
+var polycrystalline_silicon_wafer = VanillaFactory.createItem("polycrystalline_silicon_wafer");
+var engraved_polycrystalline_wafer = VanillaFactory.createItem("engraved_polycrystalline_wafer");
+var evaporation_mask = VanillaFactory.createItem("evaporation_mask");
+
+polycrystalline_silicon_wafer.register();
+engraved_polycrystalline_wafer.register();
+evaporation_mask.register();
 
 //-----------------------------------PLANET BLOCKS-----------------------------------
 
