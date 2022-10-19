@@ -17,14 +17,19 @@ global autoclave as RecipeMap =                     <recipemap:autoclave>;
 global alloy_blast_smelter as RecipeMap =           <recipemap:alloy_blast_smelter>;
 global brewery as RecipeMap =                       <recipemap:brewery>;
 global canner as RecipeMap =                        <recipemap:canner>;
+global catalytic_reformer as RecipeMap =            <recipemap:catalytic_reformer_recipes>;
 global centrifuge as RecipeMap =                    <recipemap:centrifuge>;
 global chemical_bath as RecipeMap =                 <recipemap:chemical_bath>;
 global chemical_reactor as RecipeMap =              <recipemap:chemical_reactor>;
 global circuit_assembler as RecipeMap =             <recipemap:circuit_assembler>;
 global compressor as RecipeMap =                    <recipemap:compressor>;
 global cracker as RecipeMap =                       <recipemap:cracker>;
-global cutting_saw as RecipeMap =                   <recipemap:cutting_saw>;
+global cutting_saw as RecipeMap =                   <recipemap:cutter>;
+global cvd as RecipeMap =                           <recipemap:cvd_recipes>;
+global cryogenic_reactor as RecipeMap =             <recipemap:cryogenic_reactor_recipes>;
 global distillery as RecipeMap =                    <recipemap:distillery>;
+global distillation_tower as RecipeMap =            <recipemap:distillation_tower>;
+global dryer as RecipeMap =                         <recipemap:dryer_recipes>;
 global ebf as RecipeMap =                           <recipemap:electric_blast_furnace>;
 global efurnace as RecipeMap =                      <recipemap:furnace>;
 global electrolyzer as RecipeMap =                  <recipemap:electrolyzer>;
@@ -161,4 +166,4 @@ global superconductors as IIngredient[] = [null, <ore:wireGtSingleMvSuperconduct
     <ore:wireGtSingleLuvSuperconductor>, <ore:wireGtSingleZpmSuperconductor>, <ore:wireGtSingleUvSuperconductor>, <ore:wireGtSingleUhvSuperconductor>, <ore:wireGtSingleUevSuperconductor>, <ore:wireGtSingleUivSuperconductor>,
     <ore:wireGtSingleUmvSuperconductor>, <ore:wireGtSingleUxvSuperconductor>, <ore:wireGtSingleSuperconductor>];
 
-global soldering_alloys as ILiquidStack[] = [<liquid:tin>, <liquid:soldering_alloy>];
+global soldering_alloys as ILiquidStack[] = [<liquid:tin> * 144, <liquid:soldering_alloy> * 72];

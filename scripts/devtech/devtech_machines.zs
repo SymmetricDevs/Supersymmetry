@@ -12,7 +12,6 @@ import crafttweaker.item.IIngredient;
 //val tiers as string[] = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv"];
 
 /*
-
 var fluid_de_compressor = IRecipeMap.recipeMapBuilder("fluid_de_compressor")
     .minInputs(0)
     .maxInputs(0)
@@ -26,8 +25,8 @@ var fluid_de_compressor = IRecipeMap.recipeMapBuilder("fluid_de_compressor")
 					OverlaySlot.newOverlaySlot(true, true, true, GUITextures.get("canister_overlay")))
     .setProgressBar(TextureArea.fullImage("gregtech:textures/gui/progress_bar/progress_bar_fluid_de_compressor.png"), MoveType.HORIZONTAL)
     .build();
-	
-	
+
+
 var weapons_factory = IRecipeMap.recipeMapBuilder("weapons_factory")
     .minInputs(1)
     .maxInputs(9)
@@ -44,8 +43,6 @@ var weapons_factory = IRecipeMap.recipeMapBuilder("weapons_factory")
 					OverlaySlot.newOverlaySlot(true, false, true, GUITextures.get("out_slot_overlay")))
     .setProgressBar(TextureArea.fullImage("gregtech:textures/gui/progress_bar/progress_bar_weapons_factory.png"), MoveType.HORIZONTAL)
     .build();
-
-
 for i in 1 to 9 {
 	RegisterMachine.CreateSimpleMachine((15999 + i), "fluid_de_compressor." + tiers[i], fluid_de_compressor, Overlays.get("electromagnetic_separator"), i);
 	RegisterMachine.CreateSimpleMachine((16008 + i), "weapons_factory." + tiers[i], weapons_factory, Overlays.get("assembler"), i);
@@ -60,6 +57,7 @@ val weapons_factory as RecipeMap = RecipeMapBuilder.create("weapons_factory")
     .setHidden(false)
     .setDurationBar("textures/gui/progress_bar/progress_bar_weapons_factory.png", MoveType.RIGHT)
     .build();
+
 
 MachineBuilder.create(32000, "weapons_factory")
     .setRecipeMap(weapons_factory)

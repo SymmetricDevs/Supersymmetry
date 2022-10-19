@@ -9,3 +9,23 @@ item.contenttweaker.unfinished_vacuum_tube.name=Unfinished Vacuum Tube
 item.contenttweaker.engine_block_cast.name=Engine Block Cast
 item.contenttweaker.full_engine_block_cast.name=Full Engine Block Cast
 item.contenttweaker.engine_block.name=Engine Block
+
+item.contenttweaker.silicon_dioxide_wafer.name=Silicon Dioxide Wafer
+item.contenttweaker.photocoated_wafer.name=Photocoated Silicon Wafer
+item.contenttweaker.engraved_wafer.name=Engraved Silicon Wafer
+item.contenttweaker.etched_wafer.name=Etched Silicon Wafer
+item.contenttweaker.lithography_mask.name=Lithography Mask
+item.contenttweaker.photocoated_board.name=Photocoated Plastic Circuit Board
+item.contenttweaker.engraved_board.name=Engraved Plastic Circuit Board
+
+item.contenttweaker.coated_logic_circuit.name=Insulated Logic Circuit
+item.contenttweaker.engraved_logic_circuit.name=Engraved Logic Circuit
+item.contenttweaker.doped_logic_circuit.name=Doped Logic Circuit
+item.contenttweaker.tungsten_logic_circuit.name=Tungsten-Plated Logic Circuit
+item.contenttweaker.platinum_logic_circuit.name=Platinum-Plated Logic Circuit
+item.contenttweaker.polycrystalline_silicon_wafer.name=Polycrystalline Silicon Wafer
+item.contenttweaker.engraved_polycrystalline_wafer.name=Engraved Polycrystalline Silicon Wafer
+item.contenttweaker.evaporation_mask.name=Evaporation Mask
+
+item.contenttweaker.unprepared_heat_shield.name=Unprepared Heat Shield
+item.contenttweaker.heat_shield.name=Heat Shield
