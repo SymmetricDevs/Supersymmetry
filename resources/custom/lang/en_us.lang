@@ -800,6 +800,10 @@ material.mesityl_oxide=Mesityl Oxide
 material.methyl_isobutyl_ketone=Methyl Isobutyl Ketone
 material.tributyl_phosphate=Tributyl Phosphate
 
+material.calcium_sieve=Calcium Sieve
+material.dibenzocrown=Dibenzo-18-crown-6 Ether
+material.bischloroethyl=Bis(chloroethyl) Ether
+
 # GregTech RecipeMaps
 
 recipemap.fluid_de_compressor.name=Fluid (De)Compression
