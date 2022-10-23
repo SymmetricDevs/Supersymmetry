@@ -132,7 +132,7 @@
 			"texture": "supersymmetry:mainmenu/button.png",
 			"action": {
 				"type": "openLink",
-				"link": "https://github.com/Zalgo239/Supersymmetry/issues"
+				"link": "https://github.com/SymmetricDevs/Supersymmetry/issues"
 			}
 		},
 		"open_folder": {
