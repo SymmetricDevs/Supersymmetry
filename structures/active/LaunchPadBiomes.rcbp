@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "biomes": "$PLAINS"
+    },
+    {
+      "biomes": "$SWAMP"
+    },
+    {
+      "biomes": "$WASTELAND"
+    }
+  ],
+  "metadata": {
+    "title": "LaunchPads",
+    "description": [
+      "Biomes suitable for launch pads"
+    ]
+  }
+}
