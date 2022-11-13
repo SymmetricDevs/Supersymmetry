@@ -61,6 +61,7 @@
 			"height": 20,
 			"imageWidth": 200,
 			"imageHeight": 20,
+			"tooltip": "§a#modsactive#§r/§e#modsloaded#§7 mods loaded.§r",
 			"texture": "supersymmetry:mainmenu/button.png",
 			"hoverTextColor": 65484,
 			"clickSound": "block.lever.click",
@@ -180,6 +181,18 @@
 			"action": {
 				"type": "refresh"
 			}
+		},
+		"language": {
+			"text": "",
+			"posX": -225,
+			"posY": -23,
+			"alignment": "bottom_right",
+			"width": 20,
+			"height": 20,
+			"action": {
+				"type": "openGui",
+				"gui": "languages"
+			}
 		}
 	},
 	"labels": {
@@ -242,4 +255,3 @@
 		}
 	}
 }
-
