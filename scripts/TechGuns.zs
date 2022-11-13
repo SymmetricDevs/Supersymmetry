@@ -348,16 +348,16 @@ weapons_factory.recipeBuilder()
 //--------------------GregTech machines only recipes--------------------
 
 forming_press.recipeBuilder()
-	.inputs([<ore:itemLeather>,
-			<ore:fabricHemp>
+	.inputs([<minecraft:leather>,
+			<minecraft:carpet> * 2
 	])
 	.outputs(<techguns:itemshared:60>)
 	.duration(40)
 	.EUt(16)
 	.buildAndRegister();
 
-lathe.recipeBuilder()
-	.inputs(<ore:stickSteel>)
+forming_press.recipeBuilder()
+	.inputs([<metaitem:foilSteel>, <techguns:itemshared:38>])
 	.outputs(<techguns:itemshared:39>)
 	.duration(30)
 	.EUt(30)

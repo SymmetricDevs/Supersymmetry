@@ -1,5 +1,11 @@
-#norun
 #priority 10
+
+import crafttweaker.item.IIngredient;
+import crafttweaker.item.IItemStack;
+import crafttweaker.liquid.ILiquidStack;
+import crafttweaker.oredict.IOreDictEntry;
+
+/*
 import mods.gregtech.multiblock.Builder;
 import mods.gregtech.multiblock.FactoryBlockPattern;
 import mods.gregtech.multiblock.RelativeDirection;
@@ -10,10 +16,7 @@ import mods.gregtech.multiblock.IBlockInfo;
 import mods.gregtech.MetaTileEntities;
 import mods.gregtech.recipe.FactoryRecipeMap;
 import crafttweaker.world.IFacing;
-import crafttweaker.item.IIngredient;
-import crafttweaker.item.IItemStack;
-import crafttweaker.liquid.ILiquidStack;
-import crafttweaker.oredict.IOreDictEntry;
+
 import crafttweaker.block.IBlock;
 
 var loc = "ore_sorter";
@@ -195,3 +198,5 @@ recipes.addShaped(
         [robotArms[1], circuits[2], robotArms[1]]
     ]	
 );
+
+*/

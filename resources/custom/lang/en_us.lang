@@ -29,61 +29,98 @@ material.vacuumsteel=Vacuum Steel
 material.hot_hp_hydrogen=Hot High-Pressure Hydrogen
 material.hp_hydrogen=High-Pressure Hydrogen
 material.cold_hp_hydrogen=Cold High-Pressure Hydrogen
+material.hot_hydrogen=Hot Hydrogen
 
 material.hot_hp_helium=Hot High-Pressure Helium
 material.hp_helium=High-Pressure Helium
 material.cold_hp_helium=Cold High-Pressure Helium
+material.hot_helium=Hot Helium
 
 material.hot_hp_neon=Hot High-Pressure Neon
 material.hp_neon=High-Pressure Neon
 material.cold_hp_neon=Cold High-Pressure Neon
+material.hot_neon=Hot Neon
 
 material.hot_hp_argon=Hot High-Pressure Argon
 material.hp_argon=High-Pressure Argon
 material.cold_hp_argon=Cold High-Pressure Argon
+material.hot_argon=Hot Argon
 
 material.hot_hp_krypton=Hot High-Pressure Krypton
 material.hp_krypton=High-Pressure Krypton
 material.cold_hp_krypton=Cold High-Pressure Krypton
+material.hot_krypton=Hot Krypton
 
 material.hot_hp_xenon=Hot High-Pressure Xenon
 material.hp_xenon=High-Pressure Xenon
 material.cold_hp_xenon=Cold High-Pressure Xenon
+material.hot_xenon=Hot Xenon
 
 material.hot_hp_oxygen=Hot High-Pressure Oxygen
 material.hp_oxygen=High-Pressure Oxygen
 material.cold_hp_oxygen=Cold High-Pressure Oxygen
+material.hot_oxygen=Hot Oxygen
 
 material.hot_hp_air=Hot High-Pressure Air
 material.hp_air=High-Pressure Air
 material.cold_hp_air=Cold High-Pressure Air
+material.hot_air=Hot Air
 
 material.hot_hp_nitrogen=Hot High-Pressure Nitrogen
 material.hp_nitrogen=High-Pressure Nitrogen
 material.cold_hp_nitrogen=Cold High-Pressure Nitrogen
+material.hot_nitrogen=Hot Nitrogen
 
-material.liquid_hydrogen=Liquid Hydrogen
-material.liquid_helium=Liquid Helium
-material.liquid_neon=Liquid Neon
-material.liquid_argon=Liquid Argon
+material.hot_hp_filtered_air=Hot High-Pressure Filtered Air
+material.hp_filtered_air=High-Pressure Filtered Air
+material.cold_hp_filtered_air=Cold High-Pressure Filtered Air
+material.hot_filtered_air=Hot Filtered Air
+
+material.hot_hp_nether_air=Hot High-Pressure Nether Air
+material.hp_nether_air=High-Pressure Nether Air
+material.cold_hp_nether_air=Cold High-Pressure Nether Air
+material.hot_nether_air=Hot Nether Air
+
+material.hot_hp_ender_air=Hot High-Pressure Ender Air
+material.hp_ender_air=High-Pressure Ender Air
+material.cold_hp_ender_air=Cold High-Pressure Ender Air
+material.hot_ender_air=Hot Ender Air
+
+material.liquid_gt_hydrogen=Liquid Hydrogen
+material.liquid_gt_helium=Liquid Helium
+material.liquid_gt_neon=Liquid Neon
+material.liquid_gt_argon=Liquid Argon
 material.liquid_krypton=Liquid Krypton
 material.liquid_xenon=Liquid Xenon
-material.liquid_nitrogen=Liquid Nitrogen
-
-material.hot_air=Hot Air
-material.hot_brine=Hot Brine
+material.liquid_gt_nitrogen=Liquid Nitrogen
+material.liquid_filtered_air=Liquid Filtered Air
 
 material.hot_compressed_ammonia=Hot Compressed Ammonia
 material.compressed_ammonia=Compressed Ammonia
 material.cold_compressed_ammonia=Cold Compressed Ammonia
+material.cold_ammonia=Cold Ammonia
 
 material.hot_compressed_propane=Hot Compressed Propane
 material.compressed_propane=Compressed Propane
 material.cold_compressed_propane=Cold Compressed Propane
+material.cold_propane=Cold Propane
 
 material.hot_compressed_carbon_dioxide=Hot Compressed Carbon Dioxide
 material.compressed_carbon_dioxide=Compressed Carbon Dioxide
 material.cold_compressed_carbon_dioxide=Cold Compressed Carbon Dioxide
+material.cold_carbon_dioxide=Cold Carbon Dioxide
+
+material.warm_water=Warm Water
+material.warm_ethylene_glycol=Warm Ethylene Glycol
+material.warm_brine=Warm Brine
+
+material.enargite=Enargite
+material.tenorite=Tenorite
+material.dolomite=Dolomite
+material.fluorapatite=Fluorapatite
+material.precious_metal=Precious Metal
+material.kaolinite=Kaolinite
+material.cuprite=Cuprite
 
 material.sulfurous_water=Sulfurous Water
 material.oxide_water=Oxide Water
@@ -93,10 +130,15 @@ material.graphite_water=Graphite Water
 material.phosphate_water=Phosphate Water
 material.precious_runoff=Precious Runoff
 material.radioactive_runoff=Radioactive Runoff
+material.bentonite_clay_solution=Bentonite Clay Solution
+material.calcium_carbonate_solution=Calcium Carbonate Solution
 
 material.silicon_solution=Silicon Solution
 material.novolacs=Novolacs Photopolymer
 material.copper_sulfate=Copper (II) Sulfate
+
+material.flue_gas=Flue Gas
+material.exhauststeam=Exhaust Steam
 
 material.sulfuric_light_fuel=Sulfuric Kerosene
 material.light_fuel=Kerosene
@@ -800,6 +842,13 @@ material.mesityl_oxide=Mesityl Oxide
 material.methyl_isobutyl_ketone=Methyl Isobutyl Ketone
 material.tributyl_phosphate=Tributyl Phosphate
 
+material.calcium_sieve=Calcium Sieve
+material.dibenzocrown=Dibenzo-18-crown-6 Ether
+material.bischloroethyl=Bis(chloroethyl) Ether
+
+material.smoke_bomb_mix=Smoke Bomb Mix
+material.exhaust_steam=Exhaust Steam
+
 # GregTech RecipeMaps
 
 recipemap.fluid_de_compressor.name=Fluid (De)Compression
@@ -807,3 +856,21 @@ recipemap.weapons_factory.name=Weapons Factory
 recipemap.large_weapons_factory.name=Large Weapons Factory
 recipemap.ore_sorter.name=Ore Sorting
 recipemap.railroad_engineering_station.name=Railroad Engineering Station
+
+# QMD Particles
+
+# Gaspunk Gases
+
+gas.gaspunk.chlorine=Chlorine
+gas.gaspunk.radon=Radon
+gas.gaspunk.hydrogen_cyanide=Hydrogen Cyanide
+gas.gaspunk.vx=VX Nerve Agent
+gas.gaspunk.diborane=Diborane
+gas.gaspunk.phosphine=Phosphine
+gas.gaspunk.fluorine=Fluorine
+gas.gaspunk.hydrogen_sulfide=Hydrogen Sulfide
+gas.gaspunk.chloroform=Chloroform
+gas.gaspunk.ammonia=Ammonia
+gas.gaspunk.carbon_monoxide=Carbon Monoxide
+gas.gaspunk.hydrochloric_acid=Hydrochloric Acid
+gas.gaspunk.hydrofluoric_acid=Hydrofluoric Acid

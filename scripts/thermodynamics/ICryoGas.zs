@@ -1,4 +1,3 @@
-#norun
 #priority 498
 
 import crafttweaker.item.IIngredient;
@@ -8,14 +7,9 @@ import crafttweaker.liquid.ILiquidStack;
 
 import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.recipe.RecipeMaps;
-import mods.gtadditions.recipe.Utils;
-import mods.gtadditions.recipe.LargeRecipeMap;
-import mods.gtadditions.recipe.GARecipeMaps;
 
 import scripts.thermodynamics.ICoolant.ICoolant;
 import scripts.thermodynamics.IRefrigerant.IRefrigerant;
-
-import mods.immersivetechnology.HeatExchanger;
 
 zenClass ICryoGas {
 	val normal_gas as ILiquidStack;
@@ -35,8 +29,6 @@ zenClass ICryoGas {
 	var DurationRadiator as int = 100;
 	
 	var temperature as int = 300;
-	
-	static fluid_de_compressor as RecipeMap = RecipeMap.getByName("fluid_de_compressor");
 	
 	zenConstructor(gas_normal as ILiquidStack, gas_hot_hp as ILiquidStack, gas_hp as ILiquidStack, gas_cold_hp as ILiquidStack, gas_liquid as ILiquidStack) {
 		normal_gas = gas_normal;
@@ -103,17 +95,27 @@ zenClass ICryoGas {
 	}
 	
 	function GenerateHXCooling(coolant as ICoolant) as void{
-		mods.immersivetechnology.HeatExchanger.addRecipe(this.getHPGas(this.amount_to_use), coolant.getWarmCoolant(), this.getHotHPGas(this.amount_to_use), coolant.getCoolant(), PowerHeatExchanger, DurationHeatExchanger + coolant.getTimeFactor());
+	    heat_exchanger_recipes.recipeBuilder()
+        .fluidInputs([this.getHotHPGas(this.amount_to_use), coolant.getCoolant()])
+        .fluidOutputs([coolant.getWarmCoolant(), this.getHPGas(this.amount_to_use)])
+        .duration(DurationHeatExchanger + coolant.getTimeFactor())
+        .EUt(PowerHeatExchanger)
+        .buildAndRegister();
 	}
 	
 	function GenerateHXRefrigeration(refrigerant as IRefrigerant) as void{
-		mods.immersivetechnology.HeatExchanger.addRecipe(this.getColdHPGas(this.amount_to_use), refrigerant.getRefrigerant(), this.getHPGas(this.amount_to_use), refrigerant.getColdRefrigerant(), PowerHeatExchanger, DurationHeatExchanger + refrigerant.getTimeFactor());
+	    heat_exchanger_recipes.recipeBuilder()
+        .fluidInputs([this.getHPGas(this.amount_to_use), refrigerant.getColdRefrigerant()])
+        .fluidOutputs([refrigerant.getRefrigerant(), this.getColdHPGas(this.amount_to_use)])
+        .duration(DurationHeatExchanger + refrigerant.getTimeFactor())
+        .EUt(PowerHeatExchanger)
+        .buildAndRegister();
 	}
 	
 	function GenerateRecipes() as void {
-	
+
 		//Compression
-		fluid_de_compressor.recipeBuilder()
+		fluid_compressor.recipeBuilder()
 			.fluidInputs(this.getGas(1280))
 			.fluidOutputs(this.getHotHPGas(1280))
 			.duration(this.duration)
@@ -123,7 +125,7 @@ zenClass ICryoGas {
 		//Radiator Cooling
 		
 		//Decompression
-		fluid_de_compressor.recipeBuilder()
+		fluid_decompressor.recipeBuilder()
 			.fluidInputs(this.getColdHPGas(1280))
 			.fluidOutputs(this.getLiquidGas(20))
 			.duration(20)
@@ -131,6 +133,11 @@ zenClass ICryoGas {
 			.buildAndRegister();
 			
 		//Radiative Cooling
-		mods.immersivetechnology.Radiator.addRecipe(this.getHPGas(this.amount_to_use), this.getHotHPGas(this.amount_to_use), this.DurationHeatExchanger*5);
+	    radiator.recipeBuilder()
+            .fluidInputs([this.getHotHPGas(this.amount_to_use)])
+            .fluidOutputs([this.getHPGas(this.amount_to_use)])
+            .duration(this.DurationHeatExchanger*5)
+            .EUt(8)
+            .buildAndRegister();
 	}
 }

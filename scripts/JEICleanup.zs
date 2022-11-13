@@ -393,7 +393,14 @@ val fluidRemovals as ILiquidStack[] = [
     <liquid:depleted_mix_239_fluoride>,
     <liquid:depleted_mix_239_fluoride_flibe>,
     <liquid:depleted_mix_241_fluoride>,
-    <liquid:depleted_mix_241_fluoride_flibe>
+    <liquid:depleted_mix_241_fluoride_flibe>,
+    <liquid:liquid_nitrogen>,
+    <liquid:liquid_argon>,
+    <liquid:liquid_neon>,
+    <liquid:liquid_helium>,
+    <liquid:liquid_hydrogen>,
+    <liquid:liquid_oxygen>,
+    <liquid:exhaust_steam>
 ];
 
 for a in fluidRemovals {
@@ -407,3 +414,17 @@ for a in fluidRemovals {
 <nuclearcraft:fission_heater_port2:6>.displayName = "Aluminium Fission Cooler Heater Port";
 <nuclearcraft:solid_fission_sink2:6>.displayName = "Aluminium Fission Heat Sink";
 <nuclearcraft:salt_fission_heater2:6>.displayName = "Aluminium Fission Cooler Heater";
+
+//"Remove" techguns recipes. Since the machines to carry out techguns recipes do not have recipes themselves,
+//all that is left to do is hide the JEI categories for the machines. This is because techguns has no .removeAll() function for crafttweaker
+mods.jei.JEI.hideCategory("techguns.ammopress");
+mods.jei.JEI.hideCategory("techguns.metalpress");
+mods.jei.JEI.hideCategory("techguns.chemlab");
+mods.jei.JEI.hideCategory("techguns.fabricator");
+mods.jei.JEI.hideCategory("techguns.reactionchamber");
+mods.jei.JEI.hideCategory("techguns.oredrill");
+mods.jei.JEI.hideCategory("techguns.blastfurnace");
+mods.jei.JEI.hideCategory("techguns.grinder");
+
+//Same for brewing
+mods.jei.JEI.hideCategory("minecraft.brewing");

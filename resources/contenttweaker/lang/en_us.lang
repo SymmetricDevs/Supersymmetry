@@ -29,3 +29,14 @@ item.contenttweaker.evaporation_mask.name=Evaporation Mask
 
 item.contenttweaker.unprepared_heat_shield.name=Unprepared Heat Shield
 item.contenttweaker.heat_shield.name=Heat Shield
+
+item.contenttweaker.rock_carbon.name=Carbon Rock
+item.contenttweaker.rock_carbonate.name=Carbonate Rock
+item.contenttweaker.rock_clay.name=Clay Rock
+item.contenttweaker.rock_oxide.name=Oxide Rock
+item.contenttweaker.rock_phosphate.name=Phosphate Rock
+item.contenttweaker.rock_precious.name=Precious Rock
+item.contenttweaker.rock_radioactive.name=Radioactive Rock
+item.contenttweaker.rock_sedimentary.name=Sedimentary Rock
+item.contenttweaker.rock_silicate.name=Silicate Rock
+item.contenttweaker.rock_sulfur.name=Sulfur Rock

@@ -1,4 +1,3 @@
-#norun
 #priority 500
 
 import crafttweaker.item.IIngredient;
@@ -8,13 +7,6 @@ import crafttweaker.liquid.ILiquidStack;
 
 import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.recipe.RecipeMaps;
-import mods.gtadditions.recipe.Utils;
-import mods.gtadditions.recipe.LargeRecipeMap;
-import mods.gtadditions.recipe.GARecipeMaps;
-
-import mods.immersivetechnology.Boiler;
-import mods.immersivetechnology.GasTurbine;
-import mods.immersiveengineering.DieselHandler;
 
 zenClass IFluidFuel {
 	val liquid_fuel as ILiquidStack;
@@ -24,7 +16,7 @@ zenClass IFluidFuel {
 	var amount_to_burn as int;
 	
 	var byproduct_amount as int = 1000;
-	
+
 	var diesel as bool = false;
 	var gas_turbine as bool = true;
 	
@@ -52,26 +44,19 @@ zenClass IFluidFuel {
 	function setIsGasTurbineFuel(b as bool){
 		this.gas_turbine = b;
 	}
-
-	function GenerateBoilerRecipe() as void {
-		mods.immersivetechnology.Boiler.addFuel(this.liquid_fuel * this.amount_to_burn, this.duration, 10);
-	}
 	
 	function GenerateGasTurbineRecipe() as void {
 		if(this.gas_turbine){
-			mods.immersivetechnology.GasTurbine.addFuel(this.byproduct * this.byproduct_amount, this.liquid_fuel * this.amount_to_burn, this.duration);
-		}
-	}
-	
-	function GenerateDieselGeneratorRecipe() as void {
-		if(this.diesel){
-			mods.immersiveengineering.DieselHandler.addFuel(this.liquid_fuel, this.duration);
+		    gas_turbine_recipes.recipeBuilder()
+            .fluidInputs([this.liquid_fuel * this.amount_to_burn])
+            .fluidOutputs([this.byproduct * this.byproduct_amount])
+            .duration(this.duration)
+            .EUt(32)
+            .buildAndRegister();
 		}
 	}
 	
 	function GenerateRecipes() as void {
-		this.GenerateBoilerRecipe();
 		this.GenerateGasTurbineRecipe();
-		this.GenerateDieselGeneratorRecipe();
 	}
 }

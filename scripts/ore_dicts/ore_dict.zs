@@ -8,7 +8,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemDefinition;
 import mods.jei.JEI;
 
-static mods as string[] = ["minecraft", "gregtech", "nuclearcraft", "advancedrocketry", "libvulpes", "biomesoplenty"];
+static mods as string[] = ["minecraft", "gregtech", "nuclearcraft", "gcys", "advancedrocketry", "libvulpes", "biomesoplenty"];
 static size as int = mods.length - 1;
 
 <ore:dustRadium>.add(<metaitem:dustRadium225>);

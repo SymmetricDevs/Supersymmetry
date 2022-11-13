@@ -1,4 +1,4 @@
-#norun
+/*
 import mods.gregtech.multiblock.Builder;
 import mods.gregtech.multiblock.FactoryBlockPattern;
 import mods.gregtech.multiblock.RelativeDirection;
@@ -101,8 +101,9 @@ recipes.addShaped(
     ]
 );
 
+*/
 
-<multiblock:multiblocktweaker:railroad_engineering_station>.recipeMap.recipeBuilder()
+railroad_engineering_station.recipeBuilder()
     .duration(5)
     .EUt(60)
     .circuit(0)
@@ -110,7 +111,7 @@ recipes.addShaped(
     .outputs(<immersiverailroading:item_rail_part>*16)
     .buildAndRegister();
 	
-<multiblock:multiblocktweaker:railroad_engineering_station>.recipeMap.recipeBuilder()
+railroad_engineering_station.recipeBuilder()
     .duration(5)
     .EUt(60)
     .inputs(<ore:stickWood>)
@@ -118,7 +119,7 @@ recipes.addShaped(
     .outputs(<minecraft:rail>)
     .buildAndRegister();
 	
-<multiblock:multiblocktweaker:railroad_engineering_station>.recipeMap.recipeBuilder()
+railroad_engineering_station.recipeBuilder()
     .duration(5)
     .EUt(60)
     .inputs(<ore:wireFineRedAlloy>)
@@ -127,7 +128,7 @@ recipes.addShaped(
     .outputs(<minecraft:golden_rail>)
     .buildAndRegister();
 	
-<multiblock:multiblocktweaker:railroad_engineering_station>.recipeMap.recipeBuilder()
+railroad_engineering_station.recipeBuilder()
     .duration(5)
     .EUt(60)
     .inputs(<ore:wireFineRedAlloy>)
@@ -136,7 +137,7 @@ recipes.addShaped(
     .outputs(<minecraft:detector_rail>)
     .buildAndRegister();
 	
-<multiblock:multiblocktweaker:railroad_engineering_station>.recipeMap.recipeBuilder()
+railroad_engineering_station.recipeBuilder()
     .duration(5)
     .EUt(60)
     .inputs(<ore:stickWood> * 2)
@@ -145,16 +146,7 @@ recipes.addShaped(
     .outputs(<minecraft:activator_rail>)
     .buildAndRegister();
 	
-<multiblock:multiblocktweaker:railroad_engineering_station>.recipeMap.recipeBuilder()
-    .duration(5)
-    .EUt(60)
-    .inputs(<ore:wireFineRedAlloy>)
-	.inputs(<minecraft:piston>)
-    .fluidInputs(<liquid:iron> * 144)
-    .outputs(<enderio:block_exit_rail>)
-    .buildAndRegister();
-	
-<multiblock:multiblocktweaker:railroad_engineering_station>.recipeMap.recipeBuilder()
+railroad_engineering_station.recipeBuilder()
     .duration(5)
     .EUt(60)
     .inputs(<ore:ringIron>*4)

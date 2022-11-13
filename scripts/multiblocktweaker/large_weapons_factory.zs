@@ -1,5 +1,11 @@
-#norun
 #priority 10
+
+import crafttweaker.item.IIngredient;
+import crafttweaker.item.IItemStack;
+import crafttweaker.liquid.ILiquidStack;
+import crafttweaker.oredict.IOreDictEntry;
+
+/*
 import mods.gregtech.multiblock.Builder;
 import mods.gregtech.multiblock.FactoryBlockPattern;
 import mods.gregtech.multiblock.RelativeDirection;
@@ -10,10 +16,7 @@ import mods.gregtech.multiblock.IBlockInfo;
 import mods.gregtech.MetaTileEntities;
 import mods.gregtech.recipe.FactoryRecipeMap;
 import crafttweaker.world.IFacing;
-import crafttweaker.item.IIngredient;
-import crafttweaker.item.IItemStack;
-import crafttweaker.liquid.ILiquidStack;
-import crafttweaker.oredict.IOreDictEntry;
+
 
 var loc = "large_weapons_factory";
 var meta = 20001; // Choose something that won't conflict. You'll get a warning in the crafttweaker logs if something goes wrong.
@@ -133,26 +136,24 @@ recipes.addShaped(
     ]
 );
 
+*/
+
 val solidfuels as IOreDictEntry[] = [
 	<ore:dustSugar>,
 	<ore:dustGunpowder>,
 	<ore:dustAluminium>,
-	<ore:dustBeryllium>,
-	<ore:dustHexanitrohexaaxaisowurtzitane>
+	<ore:dustBeryllium>
 ];
 
 val solidoxys as IOreDictEntry[] = [
 	<ore:dustSaltpeter>,
-	<ore:dustNiter>, // this will be merged into saltpeter in CEu
 	<ore:dustAmmoniumNitrate>
 ];
 
 val liquidfuels as ILiquidStack[] = [
-	<liquid:liquid_hydrogen>,
+	<liquid:liquid_gt_hydrogen>,
 	<liquid:ethane>,
-	<liquid:ethanol>,
-	<liquid:rp>,
-	<liquid:monomethylhydrazine>
+	<liquid:ethanol>
 ];
 
 val liquidoxys as ILiquidStack[] = [
@@ -166,16 +167,16 @@ for solder in soldering_alloys {
 	for s_fuel in solidfuels {
 		for s_oxy in solidoxys {
 			for i in 0 to 8 {
-				<multiblock:multiblocktweaker:large_weapons_factory>.recipeMap.recipeBuilder()
+				large_weapons_factory.recipeBuilder()
 					.inputs([<ore:stickAluminium>*4, 
 							<ore:ringAluminium>*2,
 							<ore:plateAluminium>*2,
-							<ore:plateCurvedAluminium>*4,
+							<ore:foilAluminium>*4,
 							s_oxy*16,
 							s_fuel*16,
 							<icbmclassic:explosives>.definition.makeStack(i)
 						])
-					.fluidInputs(solder*576)
+					.fluidInputs(solder)
 					.outputs(<icbmclassic:missile>.definition.makeStack(i))
 					.duration(2000)
 					.EUt(30)
@@ -189,7 +190,7 @@ for solder in soldering_alloys {
 					s_oxy,
 					s_fuel
 				])
-				.fluidInputs(solder*36)
+				.fluidInputs(solder)
 				.outputs(<openmodularturrets:ammo_meta:4>*8)
 				.duration(20)
 				.EUt(200)
@@ -197,15 +198,15 @@ for solder in soldering_alloys {
 		}
 		for l_oxy in liquidoxys {
 			for j in 8 to 14 {
-				<multiblock:multiblocktweaker:large_weapons_factory>.recipeMap.recipeBuilder()
+				large_weapons_factory.recipeBuilder()
 					.inputs([<ore:stickStainlessSteel>*4, 
 							<ore:ringStainlessSteel>*2,
 							<ore:plateStainlessSteel>*2,
-							<ore:plateCurvedStainlessSteel>*4,
+							<ore:foilStainlessSteel>*4,
 							s_fuel*16,
 							<icbmclassic:explosives>.definition.makeStack(j)
 						])
-					.fluidInputs([solder*576, l_oxy*2000])
+					.fluidInputs([solder, l_oxy*2000])
 					.outputs(<icbmclassic:missile>.definition.makeStack(j))
 					.duration(200)
 					.EUt(120)
@@ -216,14 +217,14 @@ for solder in soldering_alloys {
 	for l_fuel in liquidfuels {
 		for l_oxy_1 in liquidoxys {
 			for k in 16 to 24 {
-				<multiblock:multiblocktweaker:large_weapons_factory>.recipeMap.recipeBuilder()
+				large_weapons_factory.recipeBuilder()
 					.inputs([<ore:stickTitanium>*4, 
 							<ore:ringTitanium>*2,
 							<ore:plateTitanium>*2,
-							<ore:plateCurvedTitanium>*4,
+							<ore:foilTitanium>*4,
 							<icbmclassic:explosives>.definition.makeStack(k)
 						])
-					.fluidInputs([solder*576, l_oxy_1*2000, l_fuel*2000])
+					.fluidInputs([solder, l_oxy_1*2000, l_fuel*2000])
 					.outputs(<icbmclassic:missile>.definition.makeStack(k))
 					.duration(200)
 					.EUt(500)

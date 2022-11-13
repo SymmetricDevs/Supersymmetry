@@ -13,6 +13,22 @@ val name_removals as string[] = [
 	"openmodularturrets:turret_base_0_vanilla",
 	"openmodularturrets:ammo_meta_0_vanilla",
 	"openmodularturrets:intermediate_regular_0_vanilla",
+	"openmodularturrets:machine_gun_turret_vanilla",
+	"openmodularturrets:incendiary_turret_vanilla",
+	"openmodularturrets:grenade_turret_vanilla",
+	"openmodularturrets:rocket_turret_vanilla",
+	"openmodularturrets:intermediate_tiered_11_vanilla",
+	"openmodularturrets:intermediate_tiered_12_vanilla",
+	"openmodularturrets:intermediate_tiered_13_vanilla",
+	"openmodularturrets:ammo_meta_1_vanilla",
+	"openmodularturrets:ammo_meta_3_vanilla",
+	"openmodularturrets:ammo_meta_4_vanilla",
+	"openmodularturrets:turret_base_1_vanilla",
+	"openmodularturrets:turret_base_2_vanilla",
+	"openmodularturrets:turret_base_3_vanilla",
+	"openmodularturrets:turret_base_4_vanilla",
+    "openmodularturrets:intermediate_tiered_7_vanilla",
+    "openmodularturrets:intermediate_tiered_8_vanilla"
 ];
 
 for item in name_removals {
