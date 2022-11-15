@@ -9,88 +9,88 @@ import mods.gregtech.recipe.Utils;
 
 //MATERIALS 8000-10000 RESERVED FOR NUCLEAR-RELATED ITEMS
 //MATERIALS 10000-20000 RESERVED FOR FLUIDS
-//MATERIALS 20000-29000 RESERVED FOR SOLIDS
-//MATERIALS 29000-30000 RESERVED FOR ORES
-//MATERIALS 30000-31000 RESERVED FOR ELEMENTS
-//MATERIALS 31000-32727 RESERVED FOR ISOTOPES
+//MATERIALS 20000-30000 RESERVED FOR SOLIDS
+//MATERIALS 30000-31000 RESERVED FOR ORES
+//MATERIALS 31000-32000 RESERVED FOR ISOTOPES
+//MATERIALS 32000+ RESERVED FOR ELEMENTS
 
 //----------------------------------ELEMENTS---------------------------------
 
-MaterialBuilder(30000, "iodine")
-.element("Iodine")
-.dust()
-.color(0x390b6e)
-.build();
-
-MaterialBuilder(30001, "hafnium")
-.element("Hafnium")
-.dust()
-.ingot()
-.color(0x1c1b18)
-.build();
-
-MaterialBuilder(30002, "chromium")
-.element("Chromium")
-.dust()
-.ingot()
-.color(0xccb8c7)
-.build();
-
-MaterialBuilder(30003, "strontium")
-.element("Strontium")
-.dust()
-.ingot()
-.color(0xdbdaab)
-.build();
-
-MaterialBuilder(30004, "mystery")
+MaterialBuilder(32000, "mystery")
 .dust()
 .color(0x141414)
 .build();
 
 <material:mystery>.setFormula("?", false);
 
+MaterialBuilder(32001, "iodine")
+.element("Iodine")
+.dust()
+.color(0x390b6e)
+.build();
+
+MaterialBuilder(32002, "hafnium")
+.element("Hafnium")
+.dust()
+.ingot()
+.color(0x1c1b18)
+.build();
+
+MaterialBuilder(32003, "chromium")
+.element("Chromium")
+.dust()
+.ingot()
+.color(0xccb8c7)
+.build();
+
+MaterialBuilder(32004, "strontium")
+.element("Strontium")
+.dust()
+.ingot()
+.color(0xdbdaab)
+.build();
+
 //-------------------------------------------------ORES--------------------------------------------------
 
-MaterialBuilder(29000, "enargite")
+MaterialBuilder(30000, "enargite")
 .ore()
 .addOreByproducts([<material:pyrite>, <material:sphalerite>])
 .components([<material:copper> * 3, <material:arsenic> * 1, <material:sulfur> * 4])
 .colorAverage()
 .build();
 
-MaterialBuilder(29002, "tenorite")
+MaterialBuilder(30002, "tenorite")
 .ore()
 .addOreByproducts([<material:malachite>, <material:manganese>])
 .components([<material:copper> * 1, <material:oxygen> * 1])
 .colorAverage()
 .build();
 
-MaterialBuilder(29003, "dolomite")
+MaterialBuilder(30003, "dolomite")
 .ore()
 .components([<material:calcium> * 1, <material:magnesium> * 1, <material:carbon> * 3, <material:oxygen> * 6])
 .colorAverage()
 .build();
 
-MaterialBuilder(29004, "fluorapatite")
+MaterialBuilder(30004, "fluorapatite")
 .ore()
 .addOreByproducts([<material:tricalcium_phosphate>])
 .components([<material:calcium> * 5, <material:phosphorus> * 3, <material:oxygen> * 12, <material:fluorine> * 1])
 .colorAverage()
 .build();
 
-MaterialBuilder(29005, "precious_metal")
+MaterialBuilder(30005, "precious_metal")
 .ore()
 .color(0xdbd821)
 .build();
 
-MaterialBuilder(29006, "kaolinite")
+MaterialBuilder(30006, "kaolinite")
 .ore()
 .components([<material:aluminium> * 2, <material:silicon> * 2, <material:oxygen> * 9, <material:hydrogen> * 4])
 .colorAverage()
 .build();
 
-MaterialBuilder(29008, "cuprite")
+MaterialBuilder(30008, "cuprite")
 .ore()
 .components([<material:copper> * 2, <material:oxygen> * 1])
 .colorAverage()
@@ -910,7 +910,7 @@ MaterialBuilder(11057, "exhauststeam")
 
 MaterialBuilder(11058, "calcium_carbonate_solution")
 .fluid()
-.color(0xc4bf8d)
+.color(0x8c8981)
 .build();
 
 MaterialBuilder(11059, "bentonite_clay_solution")

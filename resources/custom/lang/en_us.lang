@@ -137,9 +137,6 @@ material.silicon_solution=Silicon Solution
 material.novolacs=Novolacs Photopolymer
 material.copper_sulfate=Copper (II) Sulfate
 
-material.flue_gas=Flue Gas
-material.exhauststeam=Exhaust Steam
-
 material.sulfuric_light_fuel=Sulfuric Kerosene
 material.light_fuel=Kerosene
 material.lightly_hydrocracked_light_fuel=Lightly Hydro-Cracked Kerosene
@@ -847,7 +844,9 @@ material.dibenzocrown=Dibenzo-18-crown-6 Ether
 material.bischloroethyl=Bis(chloroethyl) Ether
 
 material.smoke_bomb_mix=Smoke Bomb Mix
-material.exhaust_steam=Exhaust Steam
+
+material.exhauststeam=Exhaust Steam
+material.flue_gas=Flue Gas
 
 # GregTech RecipeMaps
 

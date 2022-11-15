@@ -171,7 +171,7 @@ for solder in soldering_alloys {
 					.inputs([<ore:stickAluminium>*4, 
 							<ore:ringAluminium>*2,
 							<ore:plateAluminium>*2,
-							<ore:foilAluminium>*4,
+							<ore:foilAluminium>*16,
 							s_oxy*16,
 							s_fuel*16,
 							<icbmclassic:explosives>.definition.makeStack(i)
@@ -202,7 +202,7 @@ for solder in soldering_alloys {
 					.inputs([<ore:stickStainlessSteel>*4, 
 							<ore:ringStainlessSteel>*2,
 							<ore:plateStainlessSteel>*2,
-							<ore:foilStainlessSteel>*4,
+							<ore:foilStainlessSteel>*16,
 							s_fuel*16,
 							<icbmclassic:explosives>.definition.makeStack(j)
 						])
@@ -221,7 +221,7 @@ for solder in soldering_alloys {
 					.inputs([<ore:stickTitanium>*4, 
 							<ore:ringTitanium>*2,
 							<ore:plateTitanium>*2,
-							<ore:foilTitanium>*4,
+							<ore:foilTitanium>*16,
 							<icbmclassic:explosives>.definition.makeStack(k)
 						])
 					.fluidInputs([solder, l_oxy_1*2000, l_fuel*2000])
