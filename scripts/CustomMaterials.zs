@@ -23,33 +23,6 @@ MaterialBuilder(32000, "mystery")
 
 <material:mystery>.setFormula("?", false);
 
-MaterialBuilder(32001, "iodine")
-.element("Iodine")
-.dust()
-.color(0x390b6e)
-.build();
-
-MaterialBuilder(32002, "hafnium")
-.element("Hafnium")
-.dust()
-.ingot()
-.color(0x1c1b18)
-.build();
-
-MaterialBuilder(32003, "chromium")
-.element("Chromium")
-.dust()
-.ingot()
-.color(0xccb8c7)
-.build();
-
-MaterialBuilder(32004, "strontium")
-.element("Strontium")
-.dust()
-.ingot()
-.color(0xdbdaab)
-.build();
-
 //-------------------------------------------------ORES--------------------------------------------------
 
 MaterialBuilder(30000, "enargite")
@@ -1889,3 +1862,9 @@ MaterialBuilder(8910, "t_b_u_carbide")
 <material:lead>.addFlags(["generate_round"]);
 <material:aluminium>.addFlags(["generate_round"]);
 <material:refinedsilicon>.addFlags(["generate_gem", "GENERATE_BOULE"]);
+
+<material:iodine>.addDust();
+<material:hafnium>.addDust();
+<material:hafnium>.addIngot();
+<material:strontium>.addDust();
+<material:strontium>.addIngot();
