@@ -1,4 +1,3 @@
-#norun
 #priority 500
 
 import crafttweaker.item.IIngredient;
@@ -8,11 +7,6 @@ import crafttweaker.liquid.ILiquidStack;
 
 import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.recipe.RecipeMaps;
-import mods.gtadditions.recipe.Utils;
-import mods.gtadditions.recipe.LargeRecipeMap;
-import mods.gtadditions.recipe.GARecipeMaps;
-
-import mods.immersivetechnology.HeatExchanger;
 
 zenClass IRefrigerant {
 	val refrigerant as ILiquidStack;
@@ -27,8 +21,6 @@ zenClass IRefrigerant {
 	var amount_to_use as int = 1000;
 	
 	var HX_time_factor as int = 10;
-	
-	static fluid_de_compressor as RecipeMap = RecipeMap.getByName("fluid_de_compressor");
 	
 	zenConstructor(refrigerant_normal as ILiquidStack, refrigerant_hot as ILiquidStack, refrigerant_comp as ILiquidStack ,refrigerant_cold as ILiquidStack) {
 		refrigerant = refrigerant_normal;
@@ -78,19 +70,17 @@ zenClass IRefrigerant {
 	}
 	
 	function GenerateRecipes() as void {
-	
+
 		//Compression
-		fluid_de_compressor.recipeBuilder()
+		fluid_compressor.recipeBuilder()
 			.fluidInputs(this.getRefrigerant())
 			.fluidOutputs(this.getHotRefrigerant())
 			.EUt(this.EUt)
 			.duration(this.duration)
 			.buildAndRegister();
-			
-		//Cooling
 		
 		//Decompression
-		fluid_de_compressor.recipeBuilder()
+		fluid_decompressor.recipeBuilder()
 			.fluidInputs(this.getCompRefrigerant())
 			.fluidOutputs(this.getColdRefrigerant())
 			.EUt(8)
@@ -98,6 +88,11 @@ zenClass IRefrigerant {
 			.buildAndRegister();
 			
 		//Radiative Cooling
-		mods.immersivetechnology.Radiator.addRecipe(this.getCompRefrigerant(), this.getHotRefrigerant(), this.DurationRadiator);
+	    radiator.recipeBuilder()
+            .fluidInputs([this.getHotRefrigerant()])
+            .fluidOutputs([this.getCompRefrigerant()])
+            .duration(this.DurationRadiator)
+            .EUt(8)
+            .buildAndRegister();
 	}
 }

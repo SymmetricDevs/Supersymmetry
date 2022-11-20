@@ -1,4 +1,3 @@
-#norun
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
@@ -22,6 +21,7 @@ val name_removals as string[] = [
 	"icbmclassic:missile/ex/missile.anvil",
 	"icbmclassic:missile/ex/missile.repulsive",
 	"icbmclassic:missile/ex/missile.attractive",
+	"icbmclassic:missile/ex/missile.debilitationl",
 	"icbmclassic:missile/ex/missile.sonic",
 	"icbmclassic:missile/ex/missile.antimatter",
 	"icbmclassic:missile/ex/missile.incendiary",
@@ -66,24 +66,6 @@ val name_removals as string[] = [
 for item in name_removals {
 	recipes.removeByRecipeName(item);
 }
-
-recipes.addShaped("icbm_frame_1", <icbmclassic:launcherframe:0>, [
-	[null, <ore:frameGtSteel>, null],
-	[null, <ore:frameGtSteel>, null],
-	[null, <ore:frameGtSteel>, null]
-]);
-
-recipes.addShaped("icbm_frame_2", <icbmclassic:launcherframe:1>, [
-	[null, <ore:frameGtAluminium>, null],
-	[null, <ore:frameGtAluminium>, null],
-	[null, <ore:frameGtAluminium>, null]
-]);
-
-recipes.addShaped("icbm_frame_3", <icbmclassic:launcherframe:2>, [
-	[null, <ore:frameGtStainlessSteel>, null],
-	[null, <ore:frameGtStainlessSteel>, null],
-	[null, <ore:frameGtStainlessSteel>, null]
-]);
 
 //Explosives tier 1
 recipes.addShaped("icbm_exp_1_0", <icbmclassic:explosives:0>, [
@@ -155,7 +137,7 @@ for solder in soldering_alloys {
 				<ore:plateSteel>*8,
 				<ore:plateSteel>*8
 			])
-			.fluidInputs(solder*72)
+			.fluidInputs(solder)
 			.outputs(<icbmclassic:explosives:11>)
 			.duration(400)
 			.EUt(60)
@@ -200,15 +182,15 @@ for solder in soldering_alloys {
 	for CryoGas in thermo.CryoGases {
 		if(HV_SC_CriticalTemp > CryoGas.getTemperature()){
 			//EMP
-			weapons_factory.recipeBuilder()
+			large_weapons_factory.recipeBuilder()
 				.inputs([
 					<gregtech:metal_casing:3>,
 					<ore:plateStainlessSteel>*2,
-					<ore:wireGtSingleHvSuperconductor>*8,
+					<metaitem:wireGtSingleMercuryBariumCalciumCuprate>*8,
 					<metaitem:fluid_cell>*2
 				])
 				.fluidInputs([
-					solder*72,
+					solder,
 					CryoGas.getLiquidGas(2)
 				])
 				.outputs(<icbmclassic:explosives:16>)
@@ -217,14 +199,15 @@ for solder in soldering_alloys {
 				.buildAndRegister();
 		}
 		//Endothermic
-		weapons_factory.recipeBuilder()
+		large_weapons_factory.recipeBuilder()
 			.inputs([
 				<metaitem:fluid_cell>*8,
 				<icbmclassic:explosives:6>*8,
-				<ore:plateStainlessSteel>*4
+				<ore:plateStainlessSteel>*2,
+				<ore:plateStainlessSteel>*2
 			])
 			.fluidInputs([
-				solder*72,
+				solder,
 				CryoGas.getLiquidGas(32)
 			])
 			.outputs(<icbmclassic:explosives:18>)
@@ -233,14 +216,15 @@ for solder in soldering_alloys {
 			.buildAndRegister();
 	}
 	for fuel in thermobaric_fuels {
-		weapons_factory.recipeBuilder()
+		large_weapons_factory.recipeBuilder()
 			.inputs([
 				<metaitem:fluid_cell>*8,
 				<icbmclassic:explosives:6>*8,
-				<ore:plateStainlessSteel>*4
+				<ore:plateStainlessSteel>*2,
+				<ore:plateStainlessSteel>*2
 			])
 			.fluidInputs([
-				solder*72,
+				solder,
 				fuel
 			])
 			.outputs(<icbmclassic:explosives:17>)
@@ -259,7 +243,7 @@ for solder in soldering_alloys {
 			<ore:stickLongSteel>*2,
 			circuits[2]
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<icbmclassic:launcherbase:0>)
 		.duration(400)
 		.EUt(30)
@@ -272,7 +256,7 @@ for solder in soldering_alloys {
 			<ore:paneGlassColorless>,
 			circuits[2]
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<icbmclassic:launcherscreen:0>)
 		.duration(400)
 		.EUt(30)
@@ -285,7 +269,7 @@ for solder in soldering_alloys {
 			<ore:stickLongAluminium>*2,
 			circuits[3]
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<icbmclassic:launcherbase:1>)
 		.duration(400)
 		.EUt(60)
@@ -298,7 +282,7 @@ for solder in soldering_alloys {
 			<ore:paneGlassColorless>,
 			circuits[3]
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<icbmclassic:launcherscreen:1>)
 		.duration(400)
 		.EUt(60)
@@ -311,7 +295,7 @@ for solder in soldering_alloys {
 			<ore:stickLongStainlessSteel>*2,
 			circuits[4]
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<icbmclassic:launcherbase:2>)
 		.duration(400)
 		.EUt(260)
@@ -324,7 +308,7 @@ for solder in soldering_alloys {
 			<ore:paneGlassColorless>,
 			circuits[4]
 		])
-		.fluidInputs(solder*72)
+		.fluidInputs(solder)
 		.outputs(<icbmclassic:launcherscreen:2>)
 		.duration(400)
 		.EUt(260)

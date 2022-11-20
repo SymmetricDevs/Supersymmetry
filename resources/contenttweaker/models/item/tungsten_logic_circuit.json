@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "contenttweaker:items/tungsten_logic_circuit"
+  }
+}

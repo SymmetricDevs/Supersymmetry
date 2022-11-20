@@ -120,7 +120,8 @@ val name_removals as string[] = [
 	"minecraft:brown_concrete_powder",
 	"minecraft:green_concrete_powder",
 	"minecraft:red_concrete_powder",
-	"minecraft:black_concrete_powder"
+	"minecraft:black_concrete_powder",
+	"gregtech:facade_iron"
 ];
 
 for item in name_removals {
@@ -438,3 +439,24 @@ for solder in soldering_alloys {
 		.EUt(300)
 		.buildAndRegister();
 }
+
+//Troll vanilla players
+
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <quark:glowshroom>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <quark:golden_frog_leg>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:ghast_tear>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <quark:biotite>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:prismarine_crystals>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:speckled_melon>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:nether_wart>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:blaze_powder>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:redstone>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:rabbit_foot>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:gunpowder>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:spider_eye>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:thick"}), <minecraft:glowstone_dust>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:sugar>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <quark:crab_shell>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:magma_cream>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <minecraft:fermented_spider_eye>);
+brewing.removeRecipe(<minecraft:potion>.withTag({Potion: "minecraft:water"}), <gaspunk:smoke_powder>);

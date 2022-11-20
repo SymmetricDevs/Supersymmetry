@@ -1,4 +1,3 @@
-#norun
 #priority 500
 
 import crafttweaker.item.IIngredient;
@@ -8,14 +7,6 @@ import crafttweaker.liquid.ILiquidStack;
 
 import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.recipe.RecipeMaps;
-import mods.gtadditions.recipe.Utils;
-import mods.gtadditions.recipe.LargeRecipeMap;
-import mods.gtadditions.recipe.GARecipeMaps;
-
-import mods.immersivetechnology.Boiler;
-import mods.immersivetechnology.SteamTurbine;
-import mods.immersivetechnology.HeatExchanger;
-import mods.immersivetechnology.CoolingTower;
 
 zenClass IWorkingFluid {
 	val fluid_normal as ILiquidStack;
@@ -52,10 +43,6 @@ zenClass IWorkingFluid {
 	function setConversionFactor(conversion_factor as int) as void {
 		this.conversion_factor = conversion_factor;
 	}
-
-	function GenerateBoilerRecipe() as void {
-		mods.immersivetechnology.Boiler.addRecipe(this.fluid_heated*(this.amount_to_use*this.conversion_factor), this.fluid_normal*this.amount_to_use, this.duration);
-	}
 	
 	function getHeatedFluid(n as int) as ILiquidStack{
 		return this.fluid_heated * n;
@@ -70,23 +57,42 @@ zenClass IWorkingFluid {
 	}
 	
 	function GenerateHXRecipe() as void {
-		mods.immersivetechnology.HeatExchanger.addRecipe(this.getHeatedFluid(this.amount_to_use*this.conversion_factor), null, this.getNormalFluid(this.amount_to_use), <liquid:fluegas>*1000, 64, this.duration);
+	    heat_exchanger_recipes.recipeBuilder()
+        .fluidInputs([this.getNormalFluid(this.amount_to_use), <liquid:flue_gas>*1000])
+        .fluidOutputs([this.getHeatedFluid(this.amount_to_use*this.conversion_factor)])
+        .duration(this.duration)
+        .EUt(8)
+        .buildAndRegister();
 	}
 	
 	function GenerateTurbineRecipe() as void {
-		mods.immersivetechnology.SteamTurbine.addFuel(this.leftover*(this.amount_to_use*this.conversion_factor), this.fluid_heated*(this.amount_to_use*this.conversion_factor), this.duration*this.efficiency);
+	    steam_turbine.recipeBuilder()
+        .fluidInputs([this.fluid_heated*(this.amount_to_use*this.conversion_factor)])
+        .fluidOutputs([this.leftover*(this.amount_to_use*this.conversion_factor)])
+        .duration(this.duration*this.efficiency)
+        .EUt(32)
+        .buildAndRegister();
 	}
 	
 	function GenerateCoolingTowerRecipe() as void {
-		mods.immersivetechnology.CoolingTower.addRecipe(this.fluid_normal*this.amount_to_use, <liquid:water>*750, null, this.leftover*(this.amount_to_use*this.conversion_factor), <liquid:water>*1000, this.duration);
+	    cooling_tower.recipeBuilder()
+        .fluidInputs([this.leftover*(this.amount_to_use*this.conversion_factor), <liquid:water>*1000])
+        .fluidOutputs([this.fluid_normal*this.amount_to_use, <liquid:water>*750])
+        .duration(this.duration)
+        .EUt(8)
+        .buildAndRegister();
 	}
 	
 	function GenerateRadiatorRecipe() as void {
-		mods.immersivetechnology.Radiator.addRecipe(this.fluid_normal*this.amount_to_use, this.leftover*(this.amount_to_use*this.conversion_factor), this.duration*8);
+	    radiator.recipeBuilder()
+            .fluidInputs([this.leftover*(this.amount_to_use*this.conversion_factor)])
+            .fluidOutputs([this.fluid_normal*this.amount_to_use])
+            .duration(this.duration*8)
+            .EUt(8)
+            .buildAndRegister();
 	}
 	
 	function GenerateRecipes() as void {
-		this.GenerateBoilerRecipe();
 		this.GenerateHXRecipe();
 		this.GenerateTurbineRecipe();
 		this.GenerateCoolingTowerRecipe();

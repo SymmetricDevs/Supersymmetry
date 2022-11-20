@@ -38,7 +38,9 @@ mixer.recipeBuilder()
 	.duration(200)
 	.EUt(30)
 	.buildAndRegister();
-	
+
+/*
+
 //Blasted Stone Ore Sorting
 
 ore_sorter.recipeBuilder()
@@ -60,3 +62,5 @@ ore_sorter.recipeBuilder()
 	.duration(20)
 	.EUt(60)
 	.buildAndRegister();
+
+*/

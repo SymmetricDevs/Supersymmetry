@@ -1,4 +1,3 @@
-#norun
 #priority 499
 
 import crafttweaker.item.IIngredient;
@@ -8,11 +7,6 @@ import crafttweaker.liquid.ILiquidStack;
 
 import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.recipe.RecipeMaps;
-import mods.gtadditions.recipe.Utils;
-import mods.gtadditions.recipe.LargeRecipeMap;
-import mods.gtadditions.recipe.GARecipeMaps;
-
-import mods.immersivetechnology.HeatExchanger;
 
 zenClass ICoolant {
 	val coolant as ILiquidStack;
@@ -53,6 +47,11 @@ zenClass ICoolant {
 	}
 	
 	function GenerateRecipes() as void {
-		mods.immersivetechnology.Radiator.addRecipe(this.getCoolant(), this.getWarmCoolant(), this.DurationRadiator);
+	    radiator.recipeBuilder()
+        .fluidInputs([this.getWarmCoolant()])
+        .fluidOutputs([this.getCoolant()])
+        .duration(this.DurationRadiator)
+        .EUt(8)
+        .buildAndRegister();
 	}
 }

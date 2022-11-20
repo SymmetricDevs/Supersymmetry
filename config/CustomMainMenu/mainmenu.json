@@ -2,26 +2,34 @@
 	"images": {
 		"title": {
 			"image": "supersymmetry:mainmenu/banner.png",
-			"posX": -300,
-			"posY": 1,
-			"width": 600,
-			"height": 60,
+			"posX": -980,
+			"posY": -5,
+			"width": 1960,
+			"height": 85,
 			"alignment": "top_center"
+		},
+		"frame": {
+			"image": "supersymmetry:mainmenu/frame.png",
+			"posX": -152,
+			"posY": -27,
+			"width": 304,
+			"height": 104,
+			"alignment": "center"
 		}
 	},
 	"buttons": {
 		"singleplayer": {
 			"text": "menu.singleplayer",
-			"alignment": "bottom_left",
-			"posX": 0,
-			"posY": -23,
-			"width": 200,
+			"alignment": "center",
+			"posX": -150,
+			"posY": -25,
+			"width": 150,
 			"height": 20,
 			"imageWidth": 200,
 			"imageHeight": 20,
 			"hoverTextColor": 65484,
 			"clickSound": "block.lever.click",
-			"texture": "supersymmetry:mainmenu/button_long.png",
+			"texture": "supersymmetry:mainmenu/button.png",
 			"action": {
 				"type": "openGui",
 				"gui": "singleplayer"
@@ -29,15 +37,14 @@
 		},
 		"multiplayer": {
 			"text": "menu.multiplayer",
-			"hoverText": "Join us",
-			"alignment": "bottom_left",
-			"posX": 202,
-			"posY": -23,
-			"width": 200,
+			"alignment": "center",
+			"posX": -150,
+			"posY": -5,
+			"width": 150,
 			"height": 20,
 			"imageWidth": 200,
 			"imageHeight": 20,
-			"texture": "supersymmetry:mainmenu/button_long.png",
+			"texture": "supersymmetry:mainmenu/button.png",
 			"hoverTextColor": 65484,
 			"clickSound": "block.lever.click",
 			"action": {
@@ -47,36 +54,34 @@
 		},
 		"mods": {
 			"text": "fml.menu.mods",
-			"posX": -101,
-			"posY": 95,
-			"width": 98,
+			"alignment": "center",
+			"posX": -150,
+			"posY": 15,
+			"width": 150,
 			"height": 20,
-			"alignment": "top_right",
-			"normalTextColor": 16755200,
-			"hoverTextColor": 65484,
-			"clickSound": "block.lever.click",
-			"imageWidth": 100,
+			"imageWidth": 200,
 			"imageHeight": 20,
 			"tooltip": "§a#modsactive#§r/§e#modsloaded#§7 mods loaded.§r",
 			"texture": "supersymmetry:mainmenu/button.png",
+			"hoverTextColor": 65484,
+			"clickSound": "block.lever.click",
 			"action": {
 				"type": "openGui",
 				"gui": "mods"
 			}
 		},
 		"options": {
-			"text": "menu.options",
-			"posX": -101,
-			"posY": 118,
-			"width": 98,
+			"text": "Options",
+			"alignment": "center",
+			"posX": -150,
+			"posY": 35,
+			"width": 150,
 			"height": 20,
-			"alignment": "top_right",
-			"normalTextColor": 16733695,
-			"hoverTextColor": 65484,
-			"clickSound": "block.lever.click",
-			"imageWidth": 100,
+			"imageWidth": 200,
 			"imageHeight": 20,
 			"texture": "supersymmetry:mainmenu/button.png",
+			"hoverTextColor": 65484,
+			"clickSound": "block.lever.click",
 			"action": {
 				"type": "openGui",
 				"gui": "options"
@@ -85,70 +90,77 @@
 		"quit": {
 			"text": "menu.quit",
 			"hoverText": "You can never escape Greg.",
-			"posX": -200,
-			"posY": -23,
-			"alignment": "bottom_right",
-			"width": 200,
+			"alignment": "center",
+			"posX": -150,
+			"posY": 55,
+			"width": 300,
 			"height": 20,
-			"hoverTextColor": 11141120,
-			"clickSound": "block.lever.click",
 			"imageWidth": 200,
 			"imageHeight": 20,
-			"texture": "supersymmetry:mainmenu/button_long.png",
+			"texture": "supersymmetry:mainmenu/button.png",
+			"hoverTextColor": 11141120,
+			"clickSound": "block.lever.click",
 			"action": {
 				"type": "quit"
 			}
 		},
+		"language": {
+			"text": "",
+			"posX": -175,
+			"posY": 55,
+			"alignment": "center",
+			"width": 20,
+			"height": 20,
+			"action": {
+				"type": "openGui",
+				"gui": "languages"
+			}
+		},
 		"discord": {
 			"text": "Discord Server",
-			"posX": -101,
-			"posY": 26,
-			"alignment": "top_right",
-			"width": 98,
+			"alignment": "center",
+			"posX": 0,
+			"posY": -25,
+			"width": 150,
 			"height": 20,
-			"normalTextColor": 5636095,
-			"clickSound": "block.lever.click",
-			"imageWidth": 100,
+			"imageWidth": 200,
 			"imageHeight": 20,
-			"tooltip": "§7Join the §9§lDiscord§r§7 to talk with other players!§r",
 			"texture": "supersymmetry:mainmenu/button.png",
+			"hoverTextColor": 65484,
+			"clickSound": "block.lever.click",
 			"action": {
 				"type": "openLink",
 				"link": "https://discord.gg/BNbbK98rh6"
 			}
 		},
 		"github": {
-			"text": "Report a bug",
-			"posX": -101,
-			"posY": 49,
-			"alignment": "top_right",
-			"width": 98,
+			"text": "Report A Bug",
+			"alignment": "center",
+			"posX": 0,
+			"posY": -5,
+			"width": 150,
 			"height": 20,
-			"normalTextColor": 5635925,
-			"clickSound": "block.lever.click",
-			"imageWidth": 100,
+			"imageWidth": 200,
 			"imageHeight": 20,
-			"tooltip": "§7Join §a§lGitHub§r§7 to report bugs and to contribute to the project!§r",
 			"texture": "supersymmetry:mainmenu/button.png",
+			"hoverTextColor": 65484,
+			"clickSound": "block.lever.click",
 			"action": {
 				"type": "openLink",
-				"link": "https://github.com/SymmetricDevs/Supersymmetry/issues"
+				"link": "https://github.com/Zalgo239/Supersymmetry/issues"
 			}
 		},
 		"open_folder": {
 			"text": "Open MC Folder",
-			"posX": -101,
-			"posY": 3,
-			"width": 98,
+			"alignment": "center",
+			"posX": 0,
+			"posY": 15,
+			"width": 150,
 			"height": 20,
-			"alignment": "top_right",
-			"clickSound": "block.lever.click",
-			"imageWidth": 100,
+			"imageWidth": 200,
 			"imageHeight": 20,
-			"normalTextColor": 16777045,
-			"hoverTextColor": 65484,
 			"texture": "supersymmetry:mainmenu/button.png",
-			"tooltip": "§7Click here to open the §eMinecraft folder§7.§r",
+			"hoverTextColor": 65484,
 			"action": {
 				"type": "openFolder",
 				"folderName": "/"
@@ -156,18 +168,16 @@
 		},
 		"refresh": {
 			"text": "Refresh Menu",
-			"posX": -101,
-			"posY": 72,
-			"width": 98,
+			"alignment": "center",
+			"posX": 0,
+			"posY": 35,
+			"width": 150,
 			"height": 20,
-			"alignment": "top_right",
-			"imageWidth": 100,
+			"imageWidth": 200,
 			"imageHeight": 20,
-			"normalTextColor": 16733525,
-			"hoverTextColor": 65484,
 			"texture": "supersymmetry:mainmenu/button.png",
+			"hoverTextColor": 65484,
 			"clickSound": "block.lever.click",
-			"tooltip": "§7Click here to §erefresh§7 the menu.§r",
 			"action": {
 				"type": "refresh"
 			}
@@ -187,47 +197,33 @@
 	},
 	"labels": {
 		"minecraft_version": {
-			"text": "§aMinecraft §2#mcversion#",
-			"hoverText": "§aMinecraft Coder Pack §2#mcpversion#",
+			"text": "Minecraft #mcversion#",
+			"hoverText": "Minecraft Coder Pack #mcpversion#",
 			"color": -1,
 			"posX": 2,
-			"posY": -52,
+			"posY": -32,
 			"alignment": "bottom_left"
 		},
 		"modinfo": {
 			"alignment": "bottom_left",
-			"text": "Forge Version: §6#forgeversion#§r | §6#modsactive#§r mods active out of §e#modsloaded#§r",
-			"hoverText": "FML Version: §6#fmlversion# §r| §6#modsactive#§r mods active out of §e#modsloaded#§r",
+			"text": "Forge Version: #forgeversion# | #modsactive# mods active out of #modsloaded#",
+			"hoverText": "FML Version: #fmlversion# | #modsactive# mods active out of #modsloaded#",
 			"color": -1,
 			"posX": 2,
-			"posY": -32
+			"posY": -12
 		},
 		"credits": {
 			"text": "Copyright Mojang AB. Do not distribute!",
 			"color": -1,
 			"alignment": "bottom_left",
 			"posX": 198,
-			"posY": -42,
+			"posY": -22,
 			"anchor": "end",
-			"hoverText": "§6Click here to see the Minecraft credits§r",
+			"hoverText": "Click here to see the Minecraft credits",
 			"action": {
 				"type": "openGui",
 				"gui": "credits"
 			}
-		},
-		"accounts": {
-			"text": "Welcome, #username#!",
-			"posX": 3,
-			"posY": 3,
-			"color": 16755200,
-			"alignment": "top_left"
-		},
-		"time": {
-			"text": "It is #time#, #date#",
-			"posX": 3,
-			"posY": 26,
-			"color": 16755200,
-			"alignment": "top_left"
 		}
 	},
 	"other": {

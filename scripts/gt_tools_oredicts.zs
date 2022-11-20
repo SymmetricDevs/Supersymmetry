@@ -3,19 +3,19 @@
 // Written by Zook#3724 on Discord
 
 <ore:gregWrenches>.addItems([
-	<gregtech:meta_tool:8>.withEmptyTag(), 
+	<gregtech:meta_tool:8>.withEmptyTag(),
+	<gregtech:meta_tool:28>.withEmptyTag(),
 	<gregtech:meta_tool:29>.withEmptyTag(), 
-	<gregtech:meta_tool:30>.withEmptyTag(), 
-	<gregtech:meta_tool:31>.withEmptyTag()
+	<gregtech:meta_tool:30>.withEmptyTag()
 ]);
 
 <ore:gregSaws>.addItems([
 	<gregtech:meta_tool:5>.withEmptyTag(),
 	<gregtech:meta_tool:16>.withEmptyTag(), 
-	<gregtech:meta_tool:26>.withEmptyTag(), 
-	<gregtech:meta_tool:27>.withEmptyTag(), 
-	<gregtech:meta_tool:28>.withEmptyTag(), 
-	<gregtech:meta_tool:33>.withEmptyTag(),
+	<gregtech:meta_tool:25>.withEmptyTag(),
+	<gregtech:meta_tool:26>.withEmptyTag(),
+	<gregtech:meta_tool:27>.withEmptyTag(),
+	<gregtech:meta_tool:32>.withEmptyTag(),
 ]);
 
 <ore:gregHoes>.addItems([
@@ -35,18 +35,18 @@
 ]);
 
 <ore:gregScoops>.addItems([
-	<gregtech:meta_tool:14>.withEmptyTag()
+	<gregtech:meta_tool:12>.withEmptyTag()
 ]);
 
 <ore:gregKnives>.addItems([
-	<gregtech:meta_tool:17>.withEmptyTag()
+	<gregtech:meta_tool:15>.withEmptyTag()
 ]);
 
 <ore:gregBlades>.addItems([
+	<gregtech:meta_tool:14>.withEmptyTag(),
+	<gregtech:meta_tool:15>.withEmptyTag(),
 	<gregtech:meta_tool:16>.withEmptyTag(),
-	<gregtech:meta_tool:17>.withEmptyTag(),
-	<gregtech:meta_tool:18>.withEmptyTag(),
-	<gregtech:meta_tool:19>.withEmptyTag()
+	<gregtech:meta_tool:17>.withEmptyTag()
 ]);
 
 <ore:gregMortars>.addItems([
@@ -54,17 +54,15 @@
 ]);
 
 <ore:gregShovels>.addItems([
-	<gregtech:meta_tool:2>.withEmptyTag(),
-	<gregtech:meta_tool:16>.withEmptyTag(),
+	<gregtech:meta_tool:2>.withEmptyTag()
 ]);
 
 <ore:gregPlungers>.addItems([
-	<gregtech:meta_tool:37>.withEmptyTag()
+	<gregtech:meta_tool:18>.withEmptyTag()
 ]);
 
 <ore:gregCrowbars>.addItems([
-	<gregtech:meta_tool:10>.withEmptyTag(),
-	<gregtech:meta_tool:16>.withEmptyTag()
+	<gregtech:meta_tool:10>.withEmptyTag()
 ]);
 
 <ore:gregPickaxes>.addItems([
@@ -97,9 +95,11 @@
 ]);
 
 <ore:gregMiningDrills>.addItems([
+	<gregtech:meta_tool:20>.withEmptyTag(),
+	<gregtech:meta_tool:21>.withEmptyTag(),
+	<gregtech:meta_tool:22>.withEmptyTag(),
 	<gregtech:meta_tool:23>.withEmptyTag(),
-	<gregtech:meta_tool:24>.withEmptyTag(),
-	<gregtech:meta_tool:25>.withEmptyTag()
+	<gregtech:meta_tool:24>.withEmptyTag()
 ]);
 
 <ore:gregJackHammers>.addItems([

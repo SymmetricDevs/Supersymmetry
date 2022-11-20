@@ -5,9 +5,9 @@
     "offset_pos": "CENTER",
     "position": {
         "x": "0",
-        "y": "screen_height * -0.3",
-        "width": "screen_width * 0.7",
-        "height": "screen_height * 0.14"
+        "y": "screen_height * -0.2",
+        "width": "screen_width * 1",
+        "height": "screen_height * 0.31"
     },
     "texture": {
         "x": "0",
