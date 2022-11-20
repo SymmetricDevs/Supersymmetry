@@ -76,3 +76,7 @@ config/littletiles-client.json
 config/littletiles.json
 
 screenshots/
+
+backups/
+
+resourcepacks/
