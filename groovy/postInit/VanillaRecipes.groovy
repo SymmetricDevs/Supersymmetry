@@ -13,7 +13,50 @@ def recipesToRemove = [
     'quark:gravisand',
     'quark:ender_watcher',
     'quark:redstone_inductor',
-    'quark:redstone_randomizer'
+    'quark:redstone_randomizer',
+    'minecraft:fermented_spider_eye',
+    'minecraft:speckled_melon',
+    'minecraft:magma_cream',
+    'minecraft:brewing_stand',
+    'minecraft:golden_carrot',
+    'quark:golden_frog_leg',
+    'minecraft:white_bed',
+	'minecraft:orange_bed',
+	'minecraft:magenta_bed',
+	'minecraft:light_blue_bed',
+	'minecraft:yellow_bed',
+	'minecraft:lime_bed',
+	'minecraft:pink_bed',
+	'minecraft:gray_bed',
+	'minecraft:light_gray_bed',
+	'minecraft:cyan_bed',
+	'minecraft:purple_bed',
+	'minecraft:blue_bed',
+	'minecraft:brown_bed',
+	'minecraft:green_bed',
+	'minecraft:red_bed',
+	'minecraft:black_bed',
+    'minecraft:enchanting_table',
+    'minecraft:ender_chest',
+    'minecraft:end_rod',
+    'minecraft:end_crystal',
+    'quark:glass',
+    'quark:stained_glass',
+    'quark:stained_glass_1',
+    'quark:stained_glass_2',
+    'quark:stained_glass_3',
+    'quark:stained_glass_4',
+    'quark:stained_glass_5',
+    'quark:stained_glass_6',
+    'quark:stained_glass_7',
+    'quark:stained_glass_8',
+    'quark:stained_glass_9',
+    'quark:stained_glass_10',
+    'quark:stained_glass_11',
+    'quark:stained_glass_12',
+    'quark:stained_glass_13',
+    'quark:stained_glass_14',
+    'quark:stained_glass_15'
     ] as String[]
 
 for(name in recipesToRemove) {
@@ -185,6 +228,30 @@ crafting.replaceShaped('quark:rain_detector', item('quark:rain_detector'), [
     [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')]
 ])
 
+crafting.replaceShaped('quark:iron_ladder', item('quark:iron_ladder') * 16, [
+    [ore('stickIron'), ore('gregHardHammers'), ore('stickIron')],
+    [ore('stickIron'), ore('stickIron'), ore('stickIron')],
+    [ore('stickIron'), ore('gregFiles'), ore('stickIron')]
+])
+
+crafting.replaceShaped('quark:paper_lantern', item('quark:paper_lantern'), [
+    [ore('paper'), ore('stickWood'), ore('paper')],
+    [ore('paper'), item('minecraft:torch'), ore('paper')],
+    [ore('paper'), ore('stickWood'), ore('paper')]
+])
+
+crafting.replaceShaped('quark:framed_glass', item('quark:framed_glass') * 4, [
+    [ore('blockGlassColorless'), ore('stickIron'), ore('blockGlassColorless')],
+    [ore('stickIron'), ore('blockGlassColorless'), ore('stickIron')],
+    [ore('blockGlassColorless'), ore('stickIron'), ore('blockGlassColorless')]
+])
+
+//Vanilla Furnace recipes
+
+
+//GT Machines recipes
+//Assembler
+
 // Redstone Repeater * 1
 mods.gregtech.assembler.removeByInput(10, [item('minecraft:redstone_torch') * 2, item('minecraft:redstone')], [fluid('concrete') * 144])
 mods.gregtech.assembler.recipeBuilder()
@@ -235,3 +302,41 @@ mods.gregtech.assembler.recipeBuilder()
     .duration(20)
     .EUt(16)
     .buildAndRegister()
+
+// Enchantment Table * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:obsidian') * 4, item('minecraft:diamond') * 2, item('minecraft:book')], null)
+// Ender Chest * 1
+mods.gregtech.assembler.removeByInput(4, [item('minecraft:obsidian') * 8, item('minecraft:ender_eye')], null)
+// End Rod * 4
+mods.gregtech.assembler.removeByInput(4, [item('minecraft:chorus_fruit_popped'), item('minecraft:blaze_rod')], null)
+// End Crystal * 1
+mods.gregtech.assembler.removeByInput(16, [item('minecraft:ghast_tear'), item('minecraft:ender_eye')], [fluid('glass') * 1008])
+
+//Centrifuge
+// Blaze Powder * 1
+mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:magma_cream')], null)
+
+//Chemical reactor
+// Blaze Powder * 1
+mods.gregtech.chemical_reactor.removeByInput(480, [metaitem('dustCarbon'), metaitem('dustSulfur')], null)
+// Blaze Powder * 1
+mods.gregtech.large_chemical_reactor.removeByInput(480, [metaitem('dustCarbon'), metaitem('dustSulfur')], null)
+// Magma Cream * 1
+mods.gregtech.chemical_reactor.removeByInput(30, [item('minecraft:blaze_powder'), item('minecraft:slime_ball')], null)
+// Magma Cream * 1
+mods.gregtech.large_chemical_reactor.removeByInput(30, [item('minecraft:blaze_powder'), item('minecraft:slime_ball')], null)
+
+//Extractor
+mods.gregtech.extractor.recipeBuilder()
+    .inputs(item('quark:glass_shards:0'))
+    .fluidOutputs(fluid('glass') * 36)
+    .duration(20)
+    .EUt(8)
+    .buildAndRegister()
+
+//Mixer
+// Fermented Spider Eye * 1
+mods.gregtech.mixer.removeByInput(7, [item('minecraft:sugar'), item('minecraft:red_mushroom'), item('minecraft:spider_eye')], null)
+// Fermented Spider Eye * 1
+mods.gregtech.mixer.removeByInput(7, [item('minecraft:sugar'), item('minecraft:brown_mushroom'), item('minecraft:spider_eye')], null)
+
