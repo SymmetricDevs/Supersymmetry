@@ -56,7 +56,16 @@ def recipesToRemove = [
     'quark:stained_glass_12',
     'quark:stained_glass_13',
     'quark:stained_glass_14',
-    'quark:stained_glass_15'
+    'quark:stained_glass_15',
+    'rsgauges:misc/switchlinkperl_to_enderpearl',
+    'minecraft:ender_eye',
+    'minecraft:fire_charge',
+    'minecraft:writable_book',
+    'agricraft:combine_nugget_diamond',
+    'agricraft:combine_nugget_emerald',
+    'agricraft:combine_nugget_quartz',
+    'minecraft:purple_shulker_box',
+    'quark:purple_shulker_box'
     ] as String[]
 
 for(name in recipesToRemove) {
@@ -311,10 +320,17 @@ mods.gregtech.assembler.removeByInput(4, [item('minecraft:obsidian') * 8, item('
 mods.gregtech.assembler.removeByInput(4, [item('minecraft:chorus_fruit_popped'), item('minecraft:blaze_rod')], null)
 // End Crystal * 1
 mods.gregtech.assembler.removeByInput(16, [item('minecraft:ghast_tear'), item('minecraft:ender_eye')], [fluid('glass') * 1008])
+// Purple Shulker Box * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:chest'), item('minecraft:shulker_shell') * 2], null)
+
 
 //Centrifuge
 // Blaze Powder * 1
 mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:magma_cream')], null)
+
+//Chemical bath
+// Eye of Ender * 1
+mods.gregtech.chemical_bath.removeByInput(480, [item('minecraft:ender_pearl')], [fluid('blaze') * 144])
 
 //Chemical reactor
 // Blaze Powder * 1
@@ -339,4 +355,13 @@ mods.gregtech.extractor.recipeBuilder()
 mods.gregtech.mixer.removeByInput(7, [item('minecraft:sugar'), item('minecraft:red_mushroom'), item('minecraft:spider_eye')], null)
 // Fermented Spider Eye * 1
 mods.gregtech.mixer.removeByInput(7, [item('minecraft:sugar'), item('minecraft:brown_mushroom'), item('minecraft:spider_eye')], null)
-
+// Fire Charge * 3
+mods.gregtech.mixer.removeByInput(30, [metaitem('dustCoal'), item('minecraft:gunpowder'), item('minecraft:blaze_powder')], null)
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('dustCoal'))
+    .inputs(ore('dustGunpowder'))
+    .inputs(ore('dustMagnesium'))
+    .outputs(item('minecraft:fire_charge') * 3)
+    .duration(20)
+    .EUt(8)
+    .buildAndRegister()
