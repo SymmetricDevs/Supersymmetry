@@ -255,6 +255,30 @@ crafting.replaceShaped('quark:framed_glass', item('quark:framed_glass') * 4, [
     [ore('blockGlassColorless'), ore('stickIron'), ore('blockGlassColorless')]
 ])
 
+crafting.replaceShaped('minecraft:golden_rail', item('minecraft:golden_rail') * 6, [
+    [ore('stickGold'), ore('stickSteelMagnetic'), ore('stickGold')],
+    [ore('stickGold'), ore('stickWood'), ore('stickGold')],
+    [ore('stickGold'), ore('wireFineRedAlloy'), ore('stickGold')]
+])
+
+crafting.replaceShaped('minecraft:detector_rail', item('minecraft:detector_rail') * 6, [
+    [ore('stickSteel'), null, ore('stickSteel')],
+    [ore('stickSteel'), item('minecraft:stone_pressure_plate'), ore('stickSteel')],
+    [ore('stickSteel'), null, ore('stickSteel')]
+])
+
+crafting.replaceShaped('minecraft:rail', item('minecraft:rail') * 16, [
+    [ore('stickSteel'), null, ore('stickSteel')],
+    [ore('stickSteel'), ore('stickWood'), ore('stickSteel')],
+    [ore('stickSteel'), null, ore('stickSteel')]
+])
+
+crafting.replaceShaped('minecraft:activator_rail', item('minecraft:activator_rail') * 6, [
+    [ore('stickSteel'), ore('stickWood'), ore('stickSteel')],
+    [ore('stickSteel'), item('minecraft:redstone_torch'), ore('stickSteel')],
+    [ore('stickSteel'), ore('stickWood'), ore('stickSteel')]
+])
+
 //Vanilla Furnace recipes
 
 
@@ -322,6 +346,20 @@ mods.gregtech.assembler.removeByInput(4, [item('minecraft:chorus_fruit_popped'),
 mods.gregtech.assembler.removeByInput(16, [item('minecraft:ghast_tear'), item('minecraft:ender_eye')], [fluid('glass') * 1008])
 // Purple Shulker Box * 1
 mods.gregtech.assembler.removeByInput(7, [item('minecraft:chest'), item('minecraft:shulker_shell') * 2], null)
+// Powered Rail * 12
+mods.gregtech.assembler.removeByInput(30, [metaitem('stickGold') * 12, item('minecraft:stick'), item('minecraft:redstone'), circuit(1)], null)
+// Detector Rail * 1
+mods.gregtech.assembler.removeByInput(60, [metaitem('wireFineRedAlloy'), item('minecraft:stone_pressure_plate')], [fluid('iron') * 144])
+// Detector Rail * 12
+mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick'), item('minecraft:redstone'), circuit(4)], null)
+// Rail * 1
+mods.gregtech.assembler.removeByInput(60, [item('minecraft:stick')], [fluid('iron') * 144])
+// Rail * 32
+mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick'), circuit(1)], null)
+// Activator Rail * 1
+mods.gregtech.assembler.removeByInput(60, [item('minecraft:stick') * 2, item('minecraft:redstone_torch')], [fluid('iron') * 144])
+// Activator Rail * 12
+mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick') * 2, item('minecraft:redstone_torch'), circuit(4)], null)
 
 
 //Centrifuge
