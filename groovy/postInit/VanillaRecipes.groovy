@@ -279,6 +279,18 @@ crafting.replaceShaped('minecraft:activator_rail', item('minecraft:activator_rai
     [ore('stickSteel'), ore('stickWood'), ore('stickSteel')]
 ])
 
+crafting.replaceShaped('quark:chain', item('quark:chain') * 3, [
+    [ore('ringIron'), null, null],
+    [null, ore('ringIron'), null],
+    [null, null, ore('ringIron')]
+])
+
+crafting.replaceShaped('minecraft:compass', item('minecraft:compass'), [
+    [null, ore('plateIron'), null],
+    [ore('plateIron'), ore('stickIronMagnetic'), ore('plateIron')],
+    [null, ore('plateIron'), null]
+])
+
 //Vanilla Furnace recipes
 
 
@@ -356,10 +368,19 @@ mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('min
 mods.gregtech.assembler.removeByInput(60, [item('minecraft:stick')], [fluid('iron') * 144])
 // Rail * 32
 mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick'), circuit(1)], null)
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(ore('stickWood'))
+    .fluidInputs(fluid('steel') * 144)
+    .outputs(item('minecraft:rail') * 16)
+    .duration(20)
+    .EUt(10)
+    .buildAndRegister()
 // Activator Rail * 1
 mods.gregtech.assembler.removeByInput(60, [item('minecraft:stick') * 2, item('minecraft:redstone_torch')], [fluid('iron') * 144])
 // Activator Rail * 12
 mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick') * 2, item('minecraft:redstone_torch'), circuit(4)], null)
+// Compass * 1
+mods.gregtech.assembler.removeByInput(4, [item('minecraft:redstone'), metaitem('plateIron') * 4, circuit(1)], null)
 
 
 //Centrifuge
