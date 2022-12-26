@@ -1,3 +1,4 @@
+#norun
 #priority 1000
 
 // Written by Zook#3724 on Discord

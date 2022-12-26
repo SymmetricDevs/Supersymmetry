@@ -1,3 +1,4 @@
+#norun
 #priority 1000
 
 //Script based on the ore_dict.zs script from the Gregicality Community Pack

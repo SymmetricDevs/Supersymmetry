@@ -1,3 +1,4 @@
+#norun
 #loader gregtech
 #priority 2000
 

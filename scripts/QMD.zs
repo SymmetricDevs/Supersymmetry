@@ -1,3 +1,4 @@
+#norun
 import mods.gregtech.recipe.RecipeMap;
 
 //-------------------------REMOVE OLD RECIPES----------------

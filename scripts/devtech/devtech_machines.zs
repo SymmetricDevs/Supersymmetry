@@ -1,3 +1,4 @@
+#norun
 #priority 10001
 
 import mods.gregtech.machine.MachineBuilder;

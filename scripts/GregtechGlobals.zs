@@ -1,3 +1,4 @@
+#norun
 #priority 10000
 
 //Script based on the gregtech_globals.zs script from the Gregicality Community Pack

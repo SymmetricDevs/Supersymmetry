@@ -1,3 +1,4 @@
+#norun
 #priority 500
 
 import crafttweaker.item.IIngredient;

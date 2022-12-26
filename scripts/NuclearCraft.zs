@@ -1,3 +1,4 @@
+#norun
 import mods.gregtech.recipe.Utils;
 import mods.nuclearcraft.Radiation as radiation;
 
