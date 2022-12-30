@@ -1,4 +1,6 @@
+import gregtech.api.GregTechAPI
+
 eventManager.listen {
     GregTechAPI.PostMaterialEvent event ->
-    print("Groovy finished modifying materials")
+    println("Groovy finished modifying materials")
 }
