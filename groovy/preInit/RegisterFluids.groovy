@@ -111,6 +111,8 @@ private void generateCoolant(Material materialName, int id){
 eventManager.listen {
     GregTechAPI.MaterialEvent event ->
 
+        println("Groovy starting modifying fluids")
+
         new Material.Builder(11000, "sulfurous_water")
                 .fluid()
                 .color(0x592893)

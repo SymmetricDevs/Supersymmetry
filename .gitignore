@@ -25,7 +25,6 @@ config/jei/worldSettings.cfg
 config/jei/bookmarks.ini
 config/splash.properties
 config/jei/bookmark.ini
-config/jei/worldSettings.cfg
 config/BiomeTweaker/output/*
 config/AppliedEnergistics2/CustomRecipes.cfg
 config/AppliedEnergistics2/items.csv

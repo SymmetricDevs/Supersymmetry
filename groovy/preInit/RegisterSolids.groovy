@@ -11,6 +11,8 @@ import static gregtech.api.unification.material.Materials.*;
 eventManager.listen {
     GregTechAPI.MaterialEvent event ->
 
+        println("Groovy starting modifying solids")
+
         new Material.Builder(20000, "zircon")
                 .dust()
                 .components(Zirconium, 1, Silicon, 1, Oxygen, 4)

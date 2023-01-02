@@ -9,6 +9,8 @@ import gregtech.api.unification.material.properties.*;
 eventManager.listen {
     GregTechAPI.MaterialEvent event ->
 
+        println("Groovy starting modifying flags")
+
         Steel.addFlags("generate_spring", "generate_spring_small");
         Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");
         Lead.addFlags("generate_round");

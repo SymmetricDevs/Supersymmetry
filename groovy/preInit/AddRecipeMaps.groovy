@@ -18,6 +18,8 @@ import gregtech.api.GregTechAPI;
 eventManager.listen {
     GregTechAPI.PostMaterialEvent event ->
 
+        println("Groovy starting adding recipemaps")
+
         def ore_sorter = new RecipeMap<>("ore_sorter", 1, 2, 0, 16, 1, 1, 1, 1, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, MoveType.HORIZONTAL);
 
@@ -58,4 +60,6 @@ eventManager.listen {
         MetaTileEntities.registerSimpleMetaTileEntity(WEAPONS_FACTORY, 32000, "weapons_factory", weapons_factory, (ICubeRenderer) Textures.ASSEMBLER_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
         MetaTileEntities.registerSimpleMetaTileEntity(FLUID_DECOMPRESSOR, 32020, "fluid_decompressor", fluid_decompressor, (ICubeRenderer) Textures.ELECTROMAGNETIC_SEPARATOR_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
         MetaTileEntities.registerSimpleMetaTileEntity(FLUID_COMPRESSOR, 32040, "fluid_compressor", fluid_compressor, (ICubeRenderer) Textures.ELECTROMAGNETIC_SEPARATOR_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
+
+        println("Groovy finishing adding recipemaps")
 }

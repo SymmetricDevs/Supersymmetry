@@ -9,6 +9,8 @@ import static gregtech.api.unification.material.Materials.*;
 eventManager.listen {
     GregTechAPI.MaterialEvent event ->
 
+        println("Groovy starting modifying isotopes")
+
         def mystery = new Material.Builder(32000, "mystery")
                 .dust()
                 .color(0x141414)
