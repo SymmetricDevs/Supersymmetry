@@ -2,7 +2,6 @@ def circuit(x) {
     return metaitem('circuit.integrated').withNbt([Configuration: x])
 }
 
-
 def recipesToRemove = [
     'minecraft:dispenser',
     'gregtech:piston_bronze',
@@ -65,8 +64,13 @@ def recipesToRemove = [
     'agricraft:combine_nugget_emerald',
     'agricraft:combine_nugget_quartz',
     'minecraft:purple_shulker_box',
-    'quark:purple_shulker_box'
-    ] as String[]
+    'quark:purple_shulker_box',
+	'agricraft:combine_nugget_iron',
+	'chisel:uncraft_blockiron',
+	'chisel:diamond',
+	'chisel:uncraft_blockgold',
+	'appliedenergistics2:decorative/quartz_block_pure'
+]
 
 for(name in recipesToRemove) {
     crafting.remove(name)
@@ -184,7 +188,6 @@ crafting.replaceShaped('minecraft:dropper', item('minecraft:dropper'), [
 ])
 
 crafting.replaceShaped('minecraft:repeater', item('minecraft:repeater'), [
-    [null, null, null],
     [item('minecraft:redstone_torch'), ore('wireFineRedAlloy'), item('minecraft:redstone_torch')],
     [ore('plateStone'), ore('plateStone'), ore('plateStone')]
 ])
@@ -291,9 +294,6 @@ crafting.replaceShaped('minecraft:compass', item('minecraft:compass'), [
     [null, ore('plateIron'), null]
 ])
 
-//Vanilla Furnace recipes
-
-
 //GT Machines recipes
 //Assembler
 
@@ -360,12 +360,8 @@ mods.gregtech.assembler.removeByInput(16, [item('minecraft:ghast_tear'), item('m
 mods.gregtech.assembler.removeByInput(7, [item('minecraft:chest'), item('minecraft:shulker_shell') * 2], null)
 // Powered Rail * 12
 mods.gregtech.assembler.removeByInput(30, [metaitem('stickGold') * 12, item('minecraft:stick'), item('minecraft:redstone'), circuit(1)], null)
-// Detector Rail * 1
-mods.gregtech.assembler.removeByInput(60, [metaitem('wireFineRedAlloy'), item('minecraft:stone_pressure_plate')], [fluid('iron') * 144])
 // Detector Rail * 12
 mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick'), item('minecraft:redstone'), circuit(4)], null)
-// Rail * 1
-mods.gregtech.assembler.removeByInput(60, [item('minecraft:stick')], [fluid('iron') * 144])
 // Rail * 32
 mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick'), circuit(1)], null)
 mods.gregtech.assembler.recipeBuilder()
@@ -375,12 +371,8 @@ mods.gregtech.assembler.recipeBuilder()
     .duration(20)
     .EUt(10)
     .buildAndRegister()
-// Activator Rail * 1
-mods.gregtech.assembler.removeByInput(60, [item('minecraft:stick') * 2, item('minecraft:redstone_torch')], [fluid('iron') * 144])
 // Activator Rail * 12
 mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick') * 2, item('minecraft:redstone_torch'), circuit(4)], null)
-// Compass * 1
-mods.gregtech.assembler.removeByInput(4, [item('minecraft:redstone'), metaitem('plateIron') * 4, circuit(1)], null)
 
 
 //Centrifuge

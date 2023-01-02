@@ -1,6 +1,4 @@
-
-
-def smeltingRemovals = [
+def oreDictSmeltingRemovals = [
     ore('ingotIron'),
 	ore('chunkIron'),
     ore('oreIron'),
@@ -26,8 +24,18 @@ def smeltingRemovals = [
 	ore('ingotTitanium')
 ]
 
-for (entry in smeltingRemovals) {
+for (entry in oreDictSmeltingRemovals) {
     for(item in entry.getMatchingStacks()) {
         //furnace.removeByInput(item)
     }
+}
+
+def itemSmeltingRemovals = [
+		item('minecraft:bread'),
+		metaitem('compressed.clay'),
+		item('minecraft:clay_ball')
+]
+
+for (item in itemSmeltingRemovals) {
+	//furnace.removeByInput(item);
 }

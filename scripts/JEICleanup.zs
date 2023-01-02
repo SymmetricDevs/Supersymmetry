@@ -1,4 +1,3 @@
-#norun
 #priority 999
 
 //Removes fluids from other mods from showing up in JEI. This is so that all fluids in JEI will be be GregTech fluids,
