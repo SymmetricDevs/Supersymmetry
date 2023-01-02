@@ -31,6 +31,8 @@ config/AppliedEnergistics2/CustomRecipes.cfg
 config/AppliedEnergistics2/items.csv
 config/AppliedEnergistics2/VersionChecker.cfg
 
+hei_bookmarks.ini
+
 config/acronym/saved/
 
 config/beneath/blockdeco.json
@@ -76,3 +78,9 @@ config/littletiles-client.json
 config/littletiles.json
 
 screenshots/
+
+backups/
+
+resourcepacks/
+
+local/
