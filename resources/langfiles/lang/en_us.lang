@@ -1,0 +1,422 @@
+# Solids
+
+material.zircon=Zircon
+
+material.fluorite=Fluorite
+material.villiaumite=Villiaumite
+material.carobbiite=Carobbiite
+material.sea_water=Sea Water
+
+material.manganese_oxide=Manganese Oxide
+material.manganese_dioxide=Manganese Dioxide
+material.ferroboron=Ferroboron
+material.tough=Tough Alloy
+material.hard_carbon=Hard Carbon
+material.lithium_manganese_dioxide=Lithium Manganese Dioxide
+material.shibuichi=Shibuichi
+material.tin_silver=Tin-Silver Alloy
+material.lead_platinum=Lead-Platinum Alloy
+material.thermoconducting=Thermoconductor
+material.carbon_manganese=Carbon-Manganese
+material.alugentum=Alugentum
+material.hafnium_carbide=Hafnium Carbide
+material.extreme=Extreme Alloy
+material.zircaloy=Zircaloy
+material.calcium_sulfate=Calcium Sulfate
+material.energetic=Energetic
+material.sodium_fluoride=Sodium Fluoride
+material.potassium_fluoride=Potassium Fluoride
+material.dimensional=Dimensional Blend
+material.niobium_tin=Niobium-Tin Alloy
+material.super_alloy=Superalloy
+material.bscco=BSCCO
+material.copper_oxide=Copper Oxide
+material.hafnium_oxide=Hafnium Oxide
+material.strontium_chloride=Strontium Chloride
+material.dilithium=Dilithium
+material.witherite=Witherite
+material.barium_nitrate=Barium Nitrate
+material.barium_oxide=Barium Oxide
+material.lithium_6_deuteride=Lithium Deuteride
+material.zirconium_molybdenum=Zirconium-Molybdenum Alloy
+material.titanium_aluminide=Titanium Aluminide
+material.titanium_iridium=Titanium-Iridium Alloy
+
+material.vacuumsteel=Vacuum Steel
+
+# Fluids
+
+material.hot_hp_hydrogen=Hot High-Pressure Hydrogen
+material.hp_hydrogen=High-Pressure Hydrogen
+material.cold_hp_hydrogen=Cold High-Pressure Hydrogen
+material.hot_hydrogen=Hot Hydrogen
+
+material.hot_hp_helium=Hot High-Pressure Helium
+material.hp_helium=High-Pressure Helium
+material.cold_hp_helium=Cold High-Pressure Helium
+material.hot_helium=Hot Helium
+
+material.hot_hp_neon=Hot High-Pressure Neon
+material.hp_neon=High-Pressure Neon
+material.cold_hp_neon=Cold High-Pressure Neon
+material.hot_neon=Hot Neon
+
+material.hot_hp_argon=Hot High-Pressure Argon
+material.hp_argon=High-Pressure Argon
+material.cold_hp_argon=Cold High-Pressure Argon
+material.hot_argon=Hot Argon
+
+material.hot_hp_krypton=Hot High-Pressure Krypton
+material.hp_krypton=High-Pressure Krypton
+material.cold_hp_krypton=Cold High-Pressure Krypton
+material.hot_krypton=Hot Krypton
+
+material.hot_hp_xenon=Hot High-Pressure Xenon
+material.hp_xenon=High-Pressure Xenon
+material.cold_hp_xenon=Cold High-Pressure Xenon
+material.hot_xenon=Hot Xenon
+
+material.hot_hp_oxygen=Hot High-Pressure Oxygen
+material.hp_oxygen=High-Pressure Oxygen
+material.cold_hp_oxygen=Cold High-Pressure Oxygen
+material.hot_oxygen=Hot Oxygen
+
+material.hot_hp_air=Hot High-Pressure Air
+material.hp_air=High-Pressure Air
+material.cold_hp_air=Cold High-Pressure Air
+material.hot_air=Hot Air
+
+material.hot_hp_nitrogen=Hot High-Pressure Nitrogen
+material.hp_nitrogen=High-Pressure Nitrogen
+material.cold_hp_nitrogen=Cold High-Pressure Nitrogen
+material.hot_nitrogen=Hot Nitrogen
+
+material.filtered_air=Filtered Air
+material.hot_hp_filtered_air=Hot High-Pressure Filtered Air
+material.hp_filtered_air=High-Pressure Filtered Air
+material.cold_hp_filtered_air=Cold High-Pressure Filtered Air
+material.hot_filtered_air=Hot Filtered Air
+
+material.hot_hp_nether_air=Hot High-Pressure Nether Air
+material.hp_nether_air=High-Pressure Nether Air
+material.cold_hp_nether_air=Cold High-Pressure Nether Air
+material.hot_nether_air=Hot Nether Air
+
+material.hot_hp_ender_air=Hot High-Pressure Ender Air
+material.hp_ender_air=High-Pressure Ender Air
+material.cold_hp_ender_air=Cold High-Pressure Ender Air
+material.hot_ender_air=Hot Ender Air
+
+material.liquid_gt_hydrogen=Liquid Hydrogen
+material.liquid_gt_helium=Liquid Helium
+material.liquid_gt_neon=Liquid Neon
+material.liquid_gt_argon=Liquid Argon
+material.liquid_krypton=Liquid Krypton
+material.liquid_xenon=Liquid Xenon
+material.liquid_gt_nitrogen=Liquid Nitrogen
+material.liquid_filtered_air=Liquid Filtered Air
+
+material.hot_compressed_ammonia=Hot Compressed Ammonia
+material.compressed_ammonia=Compressed Ammonia
+material.cold_compressed_ammonia=Cold Compressed Ammonia
+material.cold_ammonia=Cold Ammonia
+
+material.hot_compressed_propane=Hot Compressed Propane
+material.compressed_propane=Compressed Propane
+material.cold_compressed_propane=Cold Compressed Propane
+material.cold_propane=Cold Propane
+
+material.hot_compressed_carbon_dioxide=Hot Compressed Carbon Dioxide
+material.compressed_carbon_dioxide=Compressed Carbon Dioxide
+material.cold_compressed_carbon_dioxide=Cold Compressed Carbon Dioxide
+material.cold_carbon_dioxide=Cold Carbon Dioxide
+
+material.warm_water=Warm Water
+material.warm_ethylene_glycol=Warm Ethylene Glycol
+material.warm_brine=Warm Brine
+
+material.smoke_bomb_mix=Smoke Bomb Mix
+material.exhauststeam=Exhaust Steam
+material.flue_gas=Flue Gas
+
+# Ores
+
+material.enargite=Enargite
+material.tenorite=Tenorite
+material.dolomite=Dolomite
+material.fluorapatite=Fluorapatite
+material.precious_metal=Precious Metal
+material.kaolinite=Kaolinite
+material.cuprite=Cuprite
+
+material.sulfurous_water=Sulfurous Water
+material.oxide_water=Oxide Water
+material.mineralized_water=Mineralized Water
+material.silicate_water=Silicate Water
+material.graphite_water=Graphite Water
+material.phosphate_water=Phosphate Water
+material.precious_runoff=Precious Runoff
+material.radioactive_runoff=Radioactive Runoff
+material.bentonite_clay_solution=Bentonite Clay Solution
+material.calcium_carbonate_solution=Calcium Carbonate Solution
+
+material.Dilithium.name=Dilithium
+
+material.chromium=Chromium
+
+# Isotopes
+
+material.technetium_99=Technetium-99
+material.polonium_210=Polonium-210
+material.astatine_209=Astatine-209
+material.astatine_210=Astatine-210
+material.astatine_211=Astatine-211
+material.francium_212=Francium-212
+material.francium_221=Francium-221
+material.francium_222=Francium-222
+material.francium_223=Francium-223
+material.radium_223=Radium-223
+
+material.radium_224=Radium-224
+material.radium_225=Radium-225
+material.radium_226=Radium-226
+material.radium_228=Radium-228
+material.actinium_225=Actinium-225
+material.actinium_226=Actinium-226
+material.actinium_227=Actinium-227
+material.protactinium_231=Protactinium-231
+material.protactinium_233=Protactinium-233
+
+material.uranium_233=Uranium-233
+material.uranium_233_carbide=Uranium-233 Carbide
+material.uranium_233_oxide=Uranium-233 Oxide
+material.uranium_233_nitride=Uranium-233 Nitride
+material.uranium_233_z_a=Uranium-233 Zirconium Alloy
+material.uranium_235_carbide=Uranium-235 Carbide
+material.uranium_235_oxide=Uranium-235 Oxide
+material.uranium_235_nitride=Uranium-235 Nitride
+material.uranium_235_z_a=Uranium-235 Zirconium Alloy
+material.uranium_carbide=Uranium-238 Carbide
+material.uranium_oxide=Uranium-238 Oxide
+material.uranium_nitride=Uranium-238 Nitride
+material.uranium_z_a=Uranium-238 Zirconium Alloy
+
+material.neptunium_236=Neptunium_236
+material.neptunium_236_carbide=Neptunium-236 Carbide
+material.neptunium_236_oxide=Neptunium-236 Oxide
+material.neptunium_236_nitride=Neptunium-236 Nitride
+material.neptunium_236_z_a=Neptunium-236 Zirconium Alloy
+material.neptunium_237=Neptunium_237
+material.neptunium_237_carbide=Neptunium-237 Carbide
+material.neptunium_237_oxide=Neptunium-237 Oxide
+material.neptunium_237_nitride=Neptunium-237 Nitride
+material.neptunium_237_z_a=Neptunium-237 Zirconium Alloy
+
+material.plutonium_238=Plutonium-238
+material.plutonium_238_carbide=Plutonium-238 Carbide
+material.plutonium_238_oxide=Plutonium-238 Oxide
+material.plutonium_238_nitride=Plutonium-238 Nitride
+material.plutonium_238_z_a=Plutonium-238 Zirconium Alloy
+material.plutonium_242=Plutonium-242
+material.plutonium_242_carbide=Plutonium-242 Carbide
+material.plutonium_242_oxide=Plutonium-242 Oxide
+material.plutonium_242_nitride=Plutonium-242 Nitride
+material.plutonium_242_z_a=Plutonium-242 Zirconium Alloy
+material.plutonium_241_carbide=Plutonium-241 Carbide
+material.plutonium_241_oxide=Plutonium-241 Oxide
+material.plutonium_241_nitride=Plutonium-241 Nitride
+material.plutonium_241_z_a=Plutonium-241 Zirconium Alloy
+material.plutonium_carbide=Plutonium-239 Carbide
+material.plutonium_oxide=Plutonium-239 Oxide
+material.plutonium_nitride=Plutonium-239 Nitride
+material.plutonium_z_a=Plutonium-239 Zirconium Alloy
+
+material.americium_241=Americium-241
+material.americium_241_carbide=Americium-241 Carbide
+material.americium_241_oxide=Americium-241 Oxide
+material.americium_241_nitride=Americium-241 Nitride
+material.americium_241_z_a=Americium-241 Zirconium Alloy
+material.americium_242=Americium-242
+material.americium_242_carbide=Americium-242 Carbide
+material.americium_242_oxide=Americium-242 Oxide
+material.americium_242_nitride=Americium-242 Nitride
+material.americium_242_z_a=Americium-242 Zirconium Alloy
+material.americium_243=Americium-243
+material.americium_243_carbide=Americium-243 Carbide
+material.americium_243_oxide=Americium-243 Oxide
+material.americium_243_nitride=Americium-243 Nitride
+material.americium_243_z_a=Americium-243 Zirconium Alloy
+
+material.curium_243=Curium-243
+material.curium_243_carbide=Curium-243 Carbide
+material.curium_243_oxide=Curium-243 Oxide
+material.curium_243_nitride=Curium-243 Nitride
+material.curium_243_z_a=Curium-243 Zirconium Alloy
+material.curium_245=Curium-245
+material.curium_245_carbide=Curium-245 Carbide
+material.curium_245_oxide=Curium-245 Oxide
+material.curium_245_nitride=Curium-245 Nitride
+material.curium_245_z_a=Curium-245 Zirconium Alloy
+material.curium_246=Curium-246
+material.curium_246_carbide=Curium-246 Carbide
+material.curium_246_oxide=Curium-246 Oxide
+material.curium_246_nitride=Curium-246 Nitride
+material.curium_246_z_a=Curium-246 Zirconium Alloy
+material.curium_247=Curium-247
+material.curium_247_carbide=Curium-247 Carbide
+material.curium_247_oxide=Curium-247 Oxide
+material.curium_247_nitride=Curium-247 Nitride
+material.curium_247_z_a=Curium-247 Zirconium Alloy
+
+material.berkelium_247=Berkelium-247
+material.berkelium_247_carbide=Berkelium-247 Carbide
+material.berkelium_247_oxide=Berkelium-247 Oxide
+material.berkelium_247_nitride=Berkelium-247 Nitride
+material.berkelium_247_z_a=Berkelium-247 Zirconium Alloy
+material.berkelium_248=Berkelium-248
+material.berkelium_248_carbide=Berkelium-248 Carbide
+material.berkelium_248_oxide=Berkelium-248 Oxide
+material.berkelium_248_nitride=Berkelium-248 Nitride
+material.berkelium_248_z_a=Berkelium-248 Zirconium Alloy
+
+material.californium_249=Californium-249
+material.californium_249_carbide=Californium-249 Carbide
+material.californium_249_oxide=Californium-249 Oxide
+material.californium_249_nitride=Californium-249 Nitride
+material.californium_249_z_a=Californium-249 Zirconium Alloy
+material.californium_250=Californium-250
+material.californium_250_carbide=Californium-250 Carbide
+material.californium_250_oxide=Californium-250 Oxide
+material.californium_250_nitride=Californium-250 Nitride
+material.californium_250_z_a=Californium-250 Zirconium Alloy
+material.californium_251=Californium-251
+material.californium_251_carbide=Californium-251 Carbide
+material.californium_251_oxide=Californium-251 Oxide
+material.californium_251_nitride=Californium-251 Nitride
+material.californium_251_z_a=Californium-251 Zirconium Alloy
+material.californium_252=Californium-252
+material.californium_252_carbide=Californium-252 Carbide
+material.californium_252_oxide=Californium-252 Oxide
+material.californium_252_nitride=Californium-252 Nitride
+material.californium_252_z_a=Californium-252 Zirconium Alloy
+
+material.thorium_232=Thorium-232
+material.thorium_232_carbide=Thorium-232 Carbide
+material.thorium_232_oxide=Thorium-232 Oxide
+material.thorium_232_nitride=Thorium-232 Nitride
+material.thorium_232_z_a=Thorium-232 Zirconium Alloy
+
+material.copernicium_291=Copernicium-291
+material.copernicium_291_carbide=Copernicium-291 Carbide
+material.copernicium_291_oxide=Copernicium-291 Oxide
+material.copernicium_291_nitride=Copernicium-291 Nitride
+material.copernicium_291_z_a=Copernicium-291 Zirconium Alloy
+
+material.boron_10=Boron-10
+material.boron_11=Boron-11
+material.sodium_22=Sodium-22
+material.magnesium_24=Magnesium-24
+material.magnesium_26=Magnesium-26
+material.uranium_234=Uranium-234
+material.cobalt_60=Cobalt-60
+material.iridium_192=Iridium-192
+material.calcium_48=Calcium-48
+material.strontium_90=Strontium-90
+material.ruthenium_106=Ruthenium-106
+material.caesium_137=Caesium-137
+material.promethium_147=Promethium-147
+material.europium_155=Europium-155
+material.gold_198=Gold-198
+material.flibe_gt=FLiBe Salt Mix
+
+# GregTech RecipeMaps
+
+recipemap.fluid_decompressor.name=Fluid (De)Compression
+recipemap.fluid_compressor.name=Fluid Compression
+recipemap.weapons_factory.name=Weapons Factory
+recipemap.heat_exchanger.name=Heat Exchanger
+recipemap.radiator.name=Radiator
+recipemap.large_weapons_factory.name=Large Weapons Factory
+recipemap.ore_sorter.name=Ore Sorting
+recipemap.cooling_tower.name=Cooling Tower
+recipemap.gas_turbine_new.name=Gas Turbine
+recipemap.quencher.name=Quencher
+recipemap.steam_turbine_new.name=Steam Turbine
+recipemap.railroad_engineering_station.name=Railroad Engineering Station
+
+# QMD Particles
+
+# Gaspunk Gases
+
+gas.gaspunk.chlorine=Chlorine
+gas.gaspunk.radon=Radon
+gas.gaspunk.hydrogen_cyanide=Hydrogen Cyanide
+gas.gaspunk.vx=VX Nerve Agent
+gas.gaspunk.diborane=Diborane
+gas.gaspunk.phosphine=Phosphine
+gas.gaspunk.fluorine=Fluorine
+gas.gaspunk.hydrogen_sulfide=Hydrogen Sulfide
+gas.gaspunk.chloroform=Chloroform
+gas.gaspunk.ammonia=Ammonia
+gas.gaspunk.carbon_monoxide=Carbon Monoxide
+gas.gaspunk.hydrochloric_acid=Hydrochloric Acid
+gas.gaspunk.hydrofluoric_acid=Hydrofluoric Acid
+
+# Gregtech Machines
+
+gregtech.machine.fluid_compressor.lv.name=Basic Fluid Compressor
+gregtech.machine.fluid_compressor.mv.name=Advanced Fluid Compressor
+gregtech.machine.fluid_compressor.hv.name=Advanced Fluid Compressor II
+gregtech.machine.fluid_compressor.ev.name=Advanced Fluid Compressor III
+gregtech.machine.fluid_compressor.iv.name=Elite Fluid Compressor
+gregtech.machine.fluid_compressor.luv.name=Elite Fluid Compressor II
+gregtech.machine.fluid_compressor.zpm.name=Elite Fluid Compressor III
+gregtech.machine.fluid_compressor.uv.name=Ultimate Fluid Compressor
+
+gregtech.machine.fluid_decompressor.lv.name=Basic Fluid Decompressor
+gregtech.machine.fluid_decompressor.mv.name=Advanced Fluid Decompressor
+gregtech.machine.fluid_decompressor.hv.name=Advanced Fluid Decompressor II
+gregtech.machine.fluid_decompressor.ev.name=Advanced Fluid Decompressor III
+gregtech.machine.fluid_decompressor.iv.name=Elite Fluid Decompressor
+gregtech.machine.fluid_decompressor.luv.name=Elite Fluid Decompressor II
+gregtech.machine.fluid_decompressor.zpm.name=Elite Fluid Decompressor III
+gregtech.machine.fluid_decompressor.uv.name=Ultimate Fluid Decompressor
+
+gregtech.machine.weapons_factory.lv.name=Basic Weapon Factory
+gregtech.machine.weapons_factory.mv.name=Advanced Weapon Factory
+gregtech.machine.weapons_factory.hv.name=Advanced Weapon Factory II
+gregtech.machine.weapons_factory.ev.name=Advanced Weapon Factory III
+gregtech.machine.weapons_factory.iv.name=Elite Weapon Factory
+gregtech.machine.weapons_factory.luv.name=Elite Weapon Factory II
+gregtech.machine.weapons_factory.zpm.name=Elite Weapon Factory III
+gregtech.machine.weapons_factory.uv.name=Ultimate Weapon Factory
+
+# Metaitems
+
+metaitem.rock.sedimentary.name=Sedimentary Rock
+metaitem.rock.carbon.name=Carbon Rock
+metaitem.rock.carbonate.name=Carbonate Rock
+metaitem.rock.clay.name=Clay Rock
+metaitem.rock.oxide.name=Oxide Rock
+metaitem.rock.phosphate.name=Phosphate Rock
+metaitem.rock.precious.name=Precious Rock
+metaitem.rock.radioactive.name=Radioactive Rock
+metaitem.rock.sedimentary.name=Sedimentary Rock
+metaitem.rock.silicate.name=Silicate Rock
+metaitem.rock.sulfur.name=Sulfuric Rock
+
+# Multiblocked
+
+tile.multiblocked.item_input.name=Small Input Bus
+tile.multiblocked.item_output.name=Small Output Bus
+tile.multiblocked.fluid_input.name=Small Input Hatch
+tile.multiblocked.fluid_output.name=Small Output Hatch
+
+tile.multiblocked.item_input.description=Item Input for Multiblocked Multiblocks
+tile.multiblocked.item_output.description=Item Output Multiblocked Multiblocks
+tile.multiblocked.fluid_input.description=Fluid Input for Multiblocked Multiblocks
+tile.multiblocked.fluid_output.description=Fluid Output for Multiblocked Multiblocks
+
+tile.multiblocked.ore_sorter.name=Ore Sorter
+multiblocked.ore_sorter.name=Ore Sorter
+multiblocked.ore_sorter.description=Sorts Ores.
