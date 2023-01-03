@@ -21,7 +21,6 @@ eventManager.listen {
         println("Running AddRecipemaps.groovy...")
         println("> Groovy starting adding recipemaps")
 
-        /*
         def ore_sorter = new RecipeMap<>("ore_sorter", 1, 2, 0, 16, 1, 1, 1, 1, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, MoveType.HORIZONTAL);
 
@@ -78,8 +77,6 @@ eventManager.listen {
         println("> Done: Large Weapons Factory")
 
         println("Groovy finishing adding recipemaps")
-
-        */
 
         println("> Groovy adding the new simple machines...")
 
