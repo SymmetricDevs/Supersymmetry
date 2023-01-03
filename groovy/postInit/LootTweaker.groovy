@@ -6,6 +6,8 @@ import leviathan143.loottweaker.common.zenscript.wrapper.ZenLootTableWrapper;
 import leviathan143.loottweaker.common.zenscript.LootTweakerContext;
 import leviathan143.loottweaker.common.CTLoggingErrorHandler;
 
+println("Running LootTweaker.groovy...")
+
 def context = new LootTweakerContext(new CTLoggingErrorHandler());
 def tweak_manager = context.createLootTableTweakManager()
 

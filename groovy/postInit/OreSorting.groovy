@@ -1,5 +1,7 @@
 import classes.*;
 
+println("Running OreSorting.groovy...")
+
 int fluid_amount = 100;
 
 def circuit(x) {

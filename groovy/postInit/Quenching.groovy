@@ -6,6 +6,7 @@ import gregtech.api.unification.material.properties.PropertyKey;
 import gregtech.api.unification.material.properties.IngotProperty;
 import gregtech.api.unification.ore.OrePrefix;
 
+println("Running Quenching.groovy...")
 
 //IQuenchingFluid(cold fluid, hot fluid, amount, duration, isInert, generateHeatRadiatorRecipes)
 

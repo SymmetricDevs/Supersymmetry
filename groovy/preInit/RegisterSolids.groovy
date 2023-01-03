@@ -11,6 +11,8 @@ import static gregtech.api.unification.material.Materials.*;
 eventManager.listen {
     GregTechAPI.MaterialEvent event ->
 
+        println("Running RegisterSolids.groovy...")
+
         println("Groovy starting modifying solids")
 
         new Material.Builder(20000, "zircon")

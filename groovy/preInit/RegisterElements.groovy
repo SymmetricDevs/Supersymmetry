@@ -9,6 +9,7 @@ import static gregtech.api.unification.material.Materials.*;
 eventManager.listen {
     GregTechAPI.MaterialEvent event ->
 
+        println("Running RegisterElements.groovy...")
         println("Groovy starting modifying isotopes")
 
         def mystery = new Material.Builder(32000, "mystery")

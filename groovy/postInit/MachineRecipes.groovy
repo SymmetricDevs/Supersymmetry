@@ -1,3 +1,5 @@
+println("Running MachineRecipes.groovy...")
+
 def circuits = [ore('circuitUlv'), ore('circuitLv'), ore('circuitMv'),
 									ore('circuitHv'), ore('circuitEv'), ore('circuitIv'),
 									ore('circuitLuv'), ore('circuitZpm'), ore('circuitUv'),

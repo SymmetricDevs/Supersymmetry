@@ -18,48 +18,82 @@ import gregtech.api.GregTechAPI;
 eventManager.listen {
     GregTechAPI.PostMaterialEvent event ->
 
-        println("Groovy starting adding recipemaps")
+        println("Running AddRecipemaps.groovy...")
+        println("> Groovy starting adding recipemaps")
 
+        /*
         def ore_sorter = new RecipeMap<>("ore_sorter", 1, 2, 0, 16, 1, 1, 1, 1, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, MoveType.HORIZONTAL);
+
+        println("> Done: Ore Sorter")
 
         def cooling_tower = new RecipeMap<>("cooling_tower", 0, 0, 0, 0, 2, 2, 2, 2, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_GAS_COLLECTOR, MoveType.HORIZONTAL);
 
+        println("> Done: Cooling Tower")
+
         def fluid_decompressor = new RecipeMap<>("fluid_decompressor", 0, 0, 0, 0, 1, 1, 1, 1, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, MoveType.HORIZONTAL);
+
+        println("> Done: Fluid Decompressor")
 
         def fluid_compressor = new RecipeMap<>("fluid_compressor", 0, 0, 0, 0, 1, 1, 1, 1, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_COMPRESS, MoveType.HORIZONTAL);
 
+        println("> Done: Fluid Compressor")
+
         def heat_exchanger = new RecipeMap<>("heat_exchanger", 0, 0, 0, 0, 1, 2, 1, 2, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, MoveType.HORIZONTAL);
+
+        println("> Done: Heat Exchanger")
 
         def radiator = new RecipeMap<>("radiator", 0, 0, 0, 0, 1, 1, 1, 1, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_COMPRESS, MoveType.HORIZONTAL);
 
+        println("> Done: Radiator")
+
         def gas_turbine_new = new RecipeMap<>("gas_turbine_new", 0, 0, 0, 0, 1, 2, 1, 1, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_GAS_COLLECTOR, MoveType.HORIZONTAL);
+
+        println("> Done: Gas Turbine")
 
         def steam_turbine_new = new RecipeMap<>("steam_turbine_new", 0, 0, 0, 0, 1, 1, 1, 1, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_GAS_COLLECTOR, MoveType.HORIZONTAL);
 
+        println("> Done: Steam Turbine")
+
         def quencher = new RecipeMap<>("quencher", 1, 1, 1, 1, 1, 1, 1, 1, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, MoveType.HORIZONTAL);
+
+        println("> Done: Quencher")
 
         def weapons_factory = new RecipeMap<>("weapons_factory", 0, 9, 1, 1, 0, 2, 0, 0, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_CIRCUIT, MoveType.HORIZONTAL);
 
+        println("> Done: Weapons Factory")
+
         def large_weapons_factory = (RecipeMapAssemblyLine<SimpleRecipeBuilder>) new RecipeMapAssemblyLine<>("large_weapons_factory", 4, 16, 1, 1, 0, 4, 0, 0, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_CIRCUIT, MoveType.HORIZONTAL);
+
+        println("> Done: Large Weapons Factory")
+
+        println("Groovy finishing adding recipemaps")
+
+        */
+
+        println("> Groovy adding the new simple machines...")
 
         def WEAPONS_FACTORY = new SimpleMachineMetaTileEntity[9]
         def FLUID_DECOMPRESSOR = new SimpleMachineMetaTileEntity[9]
         def FLUID_COMPRESSOR = new SimpleMachineMetaTileEntity[9]
 
+        println("> Groovy done adding the new simple machines...")
+
+        println("> Groovy registering new simple meta tile entities...")
+
         MetaTileEntities.registerSimpleMetaTileEntity(WEAPONS_FACTORY, 32000, "weapons_factory", weapons_factory, (ICubeRenderer) Textures.ASSEMBLER_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
         MetaTileEntities.registerSimpleMetaTileEntity(FLUID_DECOMPRESSOR, 32020, "fluid_decompressor", fluid_decompressor, (ICubeRenderer) Textures.ELECTROMAGNETIC_SEPARATOR_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
         MetaTileEntities.registerSimpleMetaTileEntity(FLUID_COMPRESSOR, 32040, "fluid_compressor", fluid_compressor, (ICubeRenderer) Textures.ELECTROMAGNETIC_SEPARATOR_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
-
-        println("Groovy finishing adding recipemaps")
+        
+        println("> Groovy registering new simple meta tile entities...")
 }

@@ -1,6 +1,8 @@
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;
 
+println("Running GregTech.groovy...")
+
 def name_removals = [
     'gregtech:iron_magnetic_stick',
 ]

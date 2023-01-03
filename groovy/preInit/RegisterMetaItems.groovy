@@ -5,6 +5,8 @@ import gregtech.api.GregTechAPI;
 eventManager.listen {
     GregTechAPI.PostMaterialEvent event ->
 
+        println("Running RegisterMetaItems.groovy...")
+
         println("Groovy starting modifying meta items")
 
         StandardMetaItem customMetaItems = new StandardMetaItem((short)2);

@@ -5,6 +5,8 @@ def circuit(x) {
 	return metaitem('circuit.integrated').withNbt([Configuration: x])
 }
 
+println("Running TechGuns.groovy...")
+
 ArrayList<String> name_removals = [
 		"techguns:itemshared_38_ironbarrel",
 		"techguns:revolver",

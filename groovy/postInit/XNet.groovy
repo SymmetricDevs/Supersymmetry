@@ -1,3 +1,5 @@
+println("Running XNet.groovy...")
+
 def name_removals = [
         "xnet:netcable_0",
         "xnet:netcable_routing",

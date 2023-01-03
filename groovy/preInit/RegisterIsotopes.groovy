@@ -39,6 +39,8 @@ private void addNuclearFuelMaterials (Material materialName, int startingInt) {
 eventManager.listen {
     GregTechAPI.MaterialEvent event ->
 
+        println("Running RegisterIsotopes.groovy...")
+
         println("Groovy starting modifying elements")
 
         def Tc_99 = new Element(43, 55, -1, null, "Technetium-99", "Tc-99", true);

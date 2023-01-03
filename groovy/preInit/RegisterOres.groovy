@@ -9,6 +9,8 @@ import static gregtech.api.unification.material.Materials.*;
 eventManager.listen {
     GregTechAPI.MaterialEvent event ->
 
+        println("Running RegisterOres.groovy...")
+
         println("Groovy starting modifying ores")
 
         new Material.Builder(30000, "enargite")

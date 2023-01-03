@@ -1,5 +1,7 @@
 import classes.*;
 
+println("Running ICBM.groovy...")
+
 def soldering_alloys = [
         liquid('tin') * 144,
         liquid('soldering_alloy') * 72

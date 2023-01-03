@@ -1,3 +1,5 @@
+println("Running AppliedEnergistics.groovy...")
+
 def name_removals = [
         'appliedenergistics2:misc/grindstone_woodengear'
 ]

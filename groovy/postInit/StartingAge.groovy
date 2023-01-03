@@ -1,5 +1,7 @@
 import crafttweaker.api.item.IItemStack;
 
+println("Running StartingAge.groovy...")
+
 def name_removals = [
         "gregtech:iron_magnetic_stick",
         "appliedenergistics2:misc/grindstone_woodengear",

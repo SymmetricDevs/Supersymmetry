@@ -1,5 +1,7 @@
 import classes.*;
 
+println("Running Thermodynamics.groovy...")
+
 //REMOVALS
 
 mods.gregtech.vacuum_freezer.removeByInput(1920, null, [fluid('nether_air') * 4000])
