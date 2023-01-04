@@ -1,3 +1,5 @@
+/*
+
 import crafttweaker.api.item.IItemStack;
 
 println("Running StartingAge.groovy...")
@@ -246,7 +248,7 @@ for (fuel in fuels) {
             .buildAndRegister();
 
 }
-
+*/
 /*
 def OreMap = [
 	item('gregtech:ore_Iron_0') : metaitem('dustIron')*2,
@@ -310,6 +312,7 @@ item('notreepunching:hoe/flint').setMaxDamage(200);
 item('notreepunching:knife/flint').setMaxDamage(200);
 */
 
+/*
 def WoodMap = [
     'minecraft:log:0': 'minecraft:planks:0',
     'minecraft:log:1': 'minecraft:planks:1',
@@ -343,6 +346,7 @@ for (log in WoodMap) {
     ]);
     i+=1;
 }
+*/
 
 //Furnace Recipes
 

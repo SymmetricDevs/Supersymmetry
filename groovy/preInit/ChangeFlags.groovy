@@ -17,9 +17,9 @@ eventManager.listen {
         Lead.addFlags("generate_round");
         Aluminium.addFlags("generate_round");
 
-        Iodine.dust().build();
-        Hafnium.ingot().build();
-        Strontium.ingot().build();
+        //Iodine.dust().build();
+        //Hafnium.ingot().build();
+        //Strontium.ingot().build();
 
         println("Groovy finished modifying flags")
 }

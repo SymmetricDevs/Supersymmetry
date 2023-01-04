@@ -1,5 +1,6 @@
 import classes.*;
 
+/*
 println("Running OreSorting.groovy...")
 
 int fluid_amount = 100;
@@ -196,3 +197,5 @@ for (rock in rocks) {
         a += 1;
     }
 }
+
+*/

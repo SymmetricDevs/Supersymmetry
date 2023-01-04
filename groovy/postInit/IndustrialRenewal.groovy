@@ -1,4 +1,5 @@
 println("Running IndustrialRenewal.groovy...")
+/*
 
 def weapons_factory = recipemap('assembler') // REPLACE WITH WEAPONS FACTORY AFTER RECIPE MAPS ARE FIXED
 
@@ -81,6 +82,7 @@ crafting.addShaped("irw_saw", item('industrialrenewal:steel_saw'), [
 	[ore('stickWood'), ore('stickWood'), null]
 ]);
 */
+/*
 crafting.addShaped("irw_linker", item('industrialrenewal:cart_linkable'), [
 		[null, ore('plateSteel'), ore('plateSteel')],
 		[null, null, ore('plateSteel')],
@@ -340,3 +342,4 @@ for (solder in soldering_alloys) {
 			.outputs(item('industrialrenewal:entity_detector'))
 			.buildAndRegister();
 }
+*/

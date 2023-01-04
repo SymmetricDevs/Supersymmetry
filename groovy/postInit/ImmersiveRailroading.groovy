@@ -1,3 +1,4 @@
+/*
 println("Running ImmersiveRailroading.groovy...")
 
 def weapons_factory = recipemap('assembler') // REPLACE WITH WEAPONS FACTORY AFTER RECIPE MAPS ARE FIXED
@@ -52,3 +53,4 @@ crafting.addShaped("ir_track_exchanger", item('immersiverailroading:item_track_e
 		[item('immersiverailroading:item_large_wrench'), ore('plateSteel'), item('immersiverailroading:item_rail')],
 		[ore('paneGlass'), ore('wireFineRedAlloy'), ore('paneGlass')]
 ]);
+*/

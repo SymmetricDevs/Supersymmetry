@@ -7,7 +7,7 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
 //IDs 20000-30000+ RESERVED FOR SOLIDS
-
+/*
 eventManager.listen {
     GregTechAPI.MaterialEvent event ->
 
@@ -267,3 +267,4 @@ eventManager.listen {
 
         println("Groovy finished modifying solids")
 }
+*/
