@@ -9,6 +9,7 @@ import static gregtech.api.unification.material.Materials.*;
 
 //IDs 32000+ RESERVED FOR ELEMENTS
 
+/*
 private void addNuclearFuelMaterials (Material materialName, int startingInt) {
     new Material.Builder(startingInt + 1, materialName.toString() + "_carbide")
             .ingot()
@@ -544,3 +545,4 @@ eventManager.listen {
 
         println("Groovy finished modifying elements")
 }
+*/

@@ -1,3 +1,5 @@
+import com.cleanroommc.groovyscript.api.GroovyLog
+
 println("Running AppliedEnergistics.groovy...")
 
 def name_removals = [

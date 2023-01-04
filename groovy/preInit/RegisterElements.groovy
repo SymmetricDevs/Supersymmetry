@@ -12,12 +12,14 @@ eventManager.listen {
         println("Running RegisterElements.groovy...")
         println("Groovy starting modifying isotopes")
 
+        /*
         def mystery = new Material.Builder(32000, "mystery")
                 .dust()
                 .color(0x141414)
                 .build();
 
         mystery.setFormula("?", false);
+        */
 
         println("Groovy finished modifying isotopes")
 }

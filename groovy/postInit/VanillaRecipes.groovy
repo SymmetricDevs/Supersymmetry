@@ -290,11 +290,13 @@ crafting.replaceShaped('quark:chain', item('quark:chain') * 3, [
     [null, null, ore('ringIron')]
 ])
 
+/*
 crafting.replaceShaped('minecraft:compass', item('minecraft:compass'), [
     [null, ore('plateIron'), null],
     [ore('plateIron'), ore('stickIronMagnetic'), ore('plateIron')],
     [null, ore('plateIron'), null]
 ])
+*/
 
 //GT Machines recipes
 //Assembler

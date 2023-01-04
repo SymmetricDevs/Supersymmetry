@@ -2,6 +2,7 @@ import classes.*;
 
 println("Running Thermodynamics.groovy...")
 
+
 //REMOVALS
 
 mods.gregtech.vacuum_freezer.removeByInput(1920, null, [fluid('nether_air') * 4000])
@@ -415,7 +416,7 @@ def FluidFuels = [
         Diesel
 ];
 
-def WaterWF = new IWorkingFluid('water', 'steam', 'exhauststeam');
+def WaterWF = new IWorkingFluid('water', 'steam', 'exhaust_steam');
 WaterWF.setDuration(10);
 WaterWF.setAmountToUse(6);
 WaterWF.setEfficiency(1);

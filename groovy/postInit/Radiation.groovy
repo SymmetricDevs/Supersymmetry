@@ -1,3 +1,4 @@
+/*
 import nc.radiation.RadSources;
 
 println("Running Radiation.groovy...")
@@ -78,3 +79,4 @@ addIsotopeRadiation("Californium250", 0.076);
 addIsotopeRadiation("Californium251", 0.001);
 addIsotopeRadiation("Californium252", 0.38);
 addIsotopeRadiation("Copernicium291", 0.000833);
+*/

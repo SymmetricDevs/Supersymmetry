@@ -186,7 +186,7 @@ eventManager.listen {
                 .color(0x3e3f40)
                 .build();
 
-        new Material.Builder(16001, "exhauststeam")
+        new Material.Builder(16001, "exhaust_steam")
                 .fluid(FluidTypes.GAS)
                 .fluidTemp(523)
                 .color(0x7a7a7a)
