@@ -4,6 +4,10 @@ class Globals {
 
     }
 
+    public static circuit(x) {
+        return metaitem('circuit.integrated').withNbt([Configuration: x])
+    }
+
     public static voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
 
     public static voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
