@@ -1,5 +1,6 @@
 println("Running XNet.groovy...")
 
+/*
 def name_removals = [
         "xnet:netcable_0",
         "xnet:netcable_routing",
@@ -19,7 +20,7 @@ def name_removals = [
 ]
 
 for (item in name_removals) {
-    crafting.remove(item);
+    //crafting.remove(item);
 }
 
 crafting.addShapeless("xnet_redstone_proxy_1", item('xnet:redstone_proxy'), [item('xnet:redstone_proxy_upd')]);
@@ -78,3 +79,4 @@ crafting.addShaped("xnet_connector_upgrade", item('xnet:connector_upgrade'), [
         [metaitem('robot.arm.mv'), ore('circuitMv'), metaitem('pump.mv')],
         [ore('plateAluminium'), ore('plateAluminium'), ore('plateAluminium')]
 ]);
+*/

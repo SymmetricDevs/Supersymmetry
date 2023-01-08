@@ -1,5 +1,7 @@
 println("Running MachineRecipes.groovy...")
 
+
+/*
 def circuits = [ore('circuitUlv'), ore('circuitLv'), ore('circuitMv'),
 									ore('circuitHv'), ore('circuitEv'), ore('circuitIv'),
 									ore('circuitLuv'), ore('circuitZpm'), ore('circuitUv'),
@@ -126,4 +128,4 @@ crafting.addShaped("multiblocked_ore_sorter", item('multiblocked:ore_sorter'), [
 		[pumps[1], hulls[1], pumps[1]],
 		[robotArms[1], circuits[2], robotArms[1]]
 ]);
-
+*/

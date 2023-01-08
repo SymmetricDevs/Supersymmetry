@@ -8,6 +8,7 @@
     ],
     "postInit": [
       "prePostInit",
+      "globals/",
       "postInit/"
     ]
   }

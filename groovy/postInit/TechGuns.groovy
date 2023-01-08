@@ -1,6 +1,6 @@
 import techguns.items.guns.GenericGun;
 import techguns.plugins.crafttweaker.GunStatTweaker;
-
+/*
 def circuit(x) {
 	return metaitem('circuit.integrated').withNbt([Configuration: x])
 }
@@ -394,3 +394,4 @@ GunStatTweaker.setWeaponStat("thompson","DAMAGE_MIN",40.0);
 //AK47
 GunStatTweaker.setWeaponStat("thompson","DAMAGE",40.0);
 GunStatTweaker.setWeaponStat("thompson","DAMAGE_MIN",36.0);
+*/

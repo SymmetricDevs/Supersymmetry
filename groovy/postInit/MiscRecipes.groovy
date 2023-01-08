@@ -2,6 +2,7 @@
 
 println("Running MiscRecipes.groovy...")
 
+/*
 def name_removals = [
         "scannable:scanner",
         "regeneration:fob_watch",
@@ -27,3 +28,5 @@ crafting.replaceShaped('cd4017be_lib:dimstack/dim_pipe', item('dimstack:dim_pipe
         [ore('frameGtSteel'), metaitem('crate.wood'), ore('frameGtSteel')],
         [ore('frameGtSteel'), ore('gemNetherQuartz'), ore('frameGtSteel')]
 ])
+
+*/

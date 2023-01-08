@@ -2,6 +2,7 @@ import classes.*;
 
 println("Running ICBM.groovy...")
 
+/*
 def soldering_alloys = [
         liquid('tin') * 144,
         liquid('soldering_alloy') * 72
@@ -70,7 +71,7 @@ def name_removals = [
 ]
 
 for (item in name_removals) {
-    crafting.remove(item);
+    //crafting.remove(item);
 }
 
 
@@ -431,3 +432,4 @@ for (solder in soldering_alloys) {
         }
     }
 }
+*/

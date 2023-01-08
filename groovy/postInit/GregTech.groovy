@@ -1,6 +1,7 @@
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;
 
+/*
 println("Running GregTech.groovy...")
 
 def name_removals = [
@@ -8,7 +9,7 @@ def name_removals = [
 ]
 
 for (name in name_removals) {
-    crafting.remove(name)
+    //crafting.remove(name)
 }
 
 crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bronze'), [
@@ -70,3 +71,4 @@ mods.gregtech.electric_blast_furnace.recipeBuilder()
 //TechGuns carbon plate removal
 // Carbon Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('carbon') * 144])
+*/

@@ -1,5 +1,6 @@
 println("Running RFTools.groovy...")
 
+/*
 def name_removals = [
         "rftools:machine_frame",
         "rftools:machine_base",
@@ -24,22 +25,24 @@ crafting.addShaped("rftools_crafter_1", item('rftools:crafter1')*2, [
         [metaitem('robot.arm.lv'), ore('circuitLv'), metaitem('robot.arm.lv')],
         [ore('workbench'), metaitem('hull.lv'), ore('workbench')],
         [metaitem('robot.arm.lv'), ore('circuitLv'), metaitem('robot.arm.lv')]
-]);
+])
 
 crafting.addShaped("rftools_crafter_2", item('rftools:crafter2')*2, [
         [metaitem('robot.arm.lv'), ore('plateSteel'), metaitem('robot.arm.lv')],
         [item('rftools:crafter1'), metaitem('hull.lv'), item('rftools:crafter1')],
         [metaitem('robot.arm.lv'), ore('plateSteel'), metaitem('robot.arm.lv')]
-]);
+])
 
 crafting.addShaped("rftools_crafter_3", item('rftools:crafter3')*2, [
         [metaitem('robot.arm.lv'), ore('plateSteel'), metaitem('robot.arm.lv')],
         [item('rftools:crafter2'), metaitem('hull.lv'), item('rftools:crafter2')],
         [metaitem('robot.arm.lv'), ore('plateSteel'), metaitem('robot.arm.lv')]
-]);
+])
 
 crafting.addShaped("rftools_modular_storage", item('rftools:modular_storage'), [
         [metaitem('robot.arm.lv'), ore('circuitLv'), metaitem('robot.arm.lv')],
         [metaitem('crate.steel'), metaitem('hull.lv'), metaitem('crate.steel')],
         [metaitem('robot.arm.lv'), ore('circuitLv'), metaitem('robot.arm.lv')]
-]);
+])
+
+*/
