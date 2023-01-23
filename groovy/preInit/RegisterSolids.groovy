@@ -1,8 +1,10 @@
+import net.minecraftforge.fml.common.eventhandler.EventPriority
+
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
 import gregtech.api.fluids.fluidType.FluidTypes;
-import static gregtech.api.unification.material.info.MaterialIconSet.*;
 
+import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
@@ -15,6 +17,13 @@ eventManager.listen {
 
         println("Groovy starting modifying solids")
 
+        new Material.Builder(20000, 'fluix_crystal')
+                .dust().gem().iconSet(RUBY)
+                .components(Quartz, 1, Naquadah, 1)
+                .color(0xA70FA1)
+                .build()
+
+        /*
         new Material.Builder(20000, "zircon")
                 .dust()
                 .components(Zirconium, 1, Silicon, 1, Oxygen, 4)
@@ -264,6 +273,8 @@ eventManager.listen {
                 .iconSet(SHINY)
                 .flags(GENERATE_PLATE, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_BOLT_SCREW, GENERATE_FRAME, EXCLUDE_BLOCK_CRAFTING_RECIPES, EXCLUSE_PLATE_COMPRESSOR_RECIPES, EXCLUSE_BLOCK_CRAFTING_BY_HAND_RECIPES)
                 .build();
+
+                
 
         println("Groovy finished modifying solids")
 }

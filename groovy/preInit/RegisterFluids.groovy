@@ -252,9 +252,16 @@ eventManager.listen {
 
         generateCoolant(Water, 10300);
 
-        generateCoolant(EthyleneGlycol, 10305);
+        //generateCoolant(EthyleneGlycol, 10305);
 
-        generateCoolant(Brine, 10310);
+        //generateCoolant(Brine, 10310);
+
+        new Material.Builder(32000, 'fluix')
+                .gem().iconSet(RUBY)
+                .components(Quartzite, 4, Naquadah, 1)
+                //.flags("disable_decomposition")
+                .color(0x6503b6)
+                .build();
 
         println("Groovy finished modifying fluids")
 }

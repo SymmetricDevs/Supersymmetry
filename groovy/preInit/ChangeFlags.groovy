@@ -1,3 +1,5 @@
+import net.minecraftforge.fml.common.eventhandler.EventPriority
+
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
 
@@ -6,7 +8,7 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.info.MaterialFlag;
 import gregtech.api.unification.material.properties.*;
 
-eventManager.listen {
+eventManager.listen(EventPriority.LOWEST) {
     GregTechAPI.MaterialEvent event ->
 
         println("Running ChangeFlags.groovy...")
