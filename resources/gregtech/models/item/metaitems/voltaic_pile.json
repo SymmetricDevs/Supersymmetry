@@ -1,6 +1,7 @@
+
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "gregtech:items/metaitems/pattern.processor"
+      "layer0": "gregtech:items/metaitems/voltaic_pile"
     }
   }
