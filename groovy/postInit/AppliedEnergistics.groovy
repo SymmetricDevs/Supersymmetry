@@ -104,7 +104,24 @@ def name_removals = [
         'threng:aggregator',
         'threng:centrifuge',
         'threng:etcher',
-        'threng:energizer'
+        'threng:energizer',
+        'appliedenergistics2:network/parts/tunnels_me',
+        'threng:ma_vent',
+        'threng:ma_frame',
+        'threng:ma_controller',
+        'threng:ma_mod_pattern',
+        'threng:ma_mod_cpu',
+        'threng:ma_io_port',
+        'appliedenergistics2:network/blocks/energy_energy_cell',
+        'appliedenergistics2:network/blocks/energy_dense_energy_cell',
+        'appliedenergistics2:network/cables/covered_fluix',
+        'appliedenergistics2:network/cables/smart_fluix',
+        'appliedenergistics2:network/wireless_part',
+        'appliedenergistics2:network/parts/toggle_bus',
+        'appliedenergistics2:network/cables/glass_fluix',
+        'appliedenergistics2:network/parts/quartz_fiber_part',
+        'threng:pau',
+        'threng:level_maintainer'
 ]
 
 for (name in name_removals) {
@@ -189,7 +206,7 @@ crafting.replaceShaped('appliedenergistics2:network/blocks/energy_energy_accepto
         [ore('plateTitanium'), item('appliedenergistics2:part:16'), ore('plateTitanium')]
 ])
 
-/*
+
 crafting.replaceShaped('appliedenergistics2:network/parts/export_bus', item('appliedenergistics2:part:260'), [
         [null, null, null],
         [ore('plateTitanium'), item('appliedenergistics2:material:43'), ore('plateTitanium')],
@@ -201,7 +218,7 @@ crafting.replaceShaped('appliedenergistics2:network/parts/export_bus_fluid', ite
         [ore('plateTitanium'), item('appliedenergistics2:material:43'), ore('plateTitanium')],
         [ore('plateTitanium'), metaitem('electric.pump.ev'), ore('plateTitanium')]
 ])
-*/
+
 
 crafting.replaceShaped('appliedenergistics2:network/parts/panels_semi_dark_monitor', item('appliedenergistics2:part:180'), [
         [null, null, null],
@@ -244,6 +261,27 @@ crafting.replaceShapeless('wct:magnet_card', item('wct:magnet_card'), [item('app
 
 crafting.replaceShapeless('appliedenergistics2:network/cells/view_cell_storage', item('appliedenergistics2:view_cell'), [item('appliedenergistics2:material', 39), metaitem('cover.screen')])
 
+crafting.replaceShapeless('appliedenergistics2:network/parts/terminals_pattern', item('appliedenergistics2:part', 340), [item('appliedenergistics2:part', 360), item('appliedenergistics2:interface')])
+crafting.replaceShapeless('appliedenergistics2:network/parts/terminals_fluid', item('appliedenergistics2:part', 520), [item('appliedenergistics2:part', 380), ore('bucket')])
+
+crafting.replaceShaped('appliedenergistics2:network/parts/terminal_expanded_processing', item('appliedenergistics2:part', 341), [
+        [null, null, null],
+        [item('appliedenergistics2:part', 340), item('appliedenergistics2:part', 16), item('appliedenergistics2:part', 340)],
+        [null, null, null]
+])
+
+crafting.replaceShaped('appliedenergistics2:network/cables/dense_smart_fluix', item('appliedenergistics2:part', 76), [
+        [item('appliedenergistics2:part', 56), item('appliedenergistics2:part', 56), null],
+        [item('appliedenergistics2:part', 56), item('appliedenergistics2:part', 56), null],
+        [null, null, null]
+])
+
+crafting.replaceShaped('appliedenergistics2:network/parts/cable_anchor', item('appliedenergistics2:part', 120) * 4, [
+        [ore('boltSteel'), ore('boltSteel'), null],
+        [null, null, null],
+        [null, null, null]
+])
+
 //GT Machines Recipes
 
 Globals.solders.each { key, val ->
@@ -283,6 +321,160 @@ Globals.solders.each { key, val ->
                 .EUt(Globals.voltAmps[5])
                 .buildAndRegister()
 
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(ore('circuitEv'))
+                .inputs(ore('gemExquisiteFluix'))
+                .inputs(ore('wireFineSilver'))
+                .inputs(ore('plateTitanium'))
+                .inputs(ore('plateCertusQuartz'))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('appliedenergistics2:part', 460))
+                .duration(80)
+                .EUt(Globals.voltAmps[4])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(ore('frameGtTitanium'))
+                .inputs(ore('plateTitanium'))
+                .inputs(ore('plateCertusQuartz'))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('threng:big_assembler'))
+                .duration(100)
+                .EUt(Globals.voltAmps[4])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(item('gregtech:multiblock_casing', 2))
+                .inputs(ore('plateTitanium'))
+                .inputs(ore('plateCertusQuartz'))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('threng:big_assembler', 1))
+                .duration(100)
+                .EUt(Globals.voltAmps[4])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(item('threng:big_assembler'))
+                .inputs(ore('plateTitanium'))
+                .inputs(item('appliedenergistics2:molecular_assembler'))
+                .inputs(item('appliedenergistics2:part', 16) * 2)
+                .inputs(item('appliedenergistics2:interface'))
+                .inputs(ore('circuitEv'))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('threng:big_assembler', 2))
+                .duration(100)
+                .EUt(Globals.voltAmps[4])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(item('threng:big_assembler'))
+                .inputs(ore('plateTitanium'))
+                .inputs(item('appliedenergistics2:part', 16) * 2)
+                .inputs(item('appliedenergistics2:interface'))
+                .inputs(metaitem('pattern.memory'))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('threng:big_assembler', 3))
+                .duration(100)
+                .EUt(Globals.voltAmps[4])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(item('threng:big_assembler'))
+                .inputs(ore('plateTitanium'))
+                .inputs(item('appliedenergistics2:part', 16) * 2)
+                .inputs(item('appliedenergistics2:interface'))
+                .inputs(item('appliedenergistics2:crafting_accelerator'))
+                .inputs(metaitem('pattern.processor'))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('threng:big_assembler', 4))
+                .duration(100)
+                .EUt(Globals.voltAmps[4])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(item('threng:big_assembler'))
+                .inputs(ore('plateTitanium'))
+                .inputs(item('appliedenergistics2:part', 16) * 2)
+                .inputs(item('appliedenergistics2:interface'))
+                .inputs(item('appliedenergistics2:io_port'))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('threng:big_assembler', 5))
+                .duration(100)
+                .EUt(Globals.voltAmps[4])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(ore('plateTitanium'))
+                .inputs(metaitem('plate.power_integrated_circuit'))
+                .inputs(metaitem('storage.segment'))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('appliedenergistics2:energy_cell'))
+                .duration(100)
+                .EUt(Globals.voltAmps[4])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(ore('plateTitanium'))
+                .inputs(metaitem('plate.high_power_integrated_circuit'))
+                .inputs(metaitem('storage.segment') * 8)
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('appliedenergistics2:dense_energy_cell'))
+                .duration(100)
+                .EUt(Globals.voltAmps[5])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(item('rs_ctr:edge_trigger'))
+                .inputs(item('appliedenergistics2:part', 280) * 2)
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('appliedenergistics2:part', 80))
+                .duration(20)
+                .EUt(Globals.voltAmps[1])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(metaitem('hull.iv'))
+                .inputs(ore('circuitIv'))
+                .inputs(item('appliedenergistics2:interface'))
+                .inputs(item('appliedenergistics2:crafting_accelerator') * 2)
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('threng:machine', 3))
+                .duration(100)
+                .EUt(Globals.voltAmps[5])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(metaitem('hull.iv'))
+                .inputs(ore('circuitIv'))
+                .inputs(item('appliedenergistics2:material', 53))
+                .inputs(item('appliedenergistics2:part', 280) * 3)
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('threng:machine', 4))
+                .duration(100)
+                .EUt(Globals.voltAmps[5])
+                .buildAndRegister()
+
+}
+
+Globals.wireCoatings.each { key, val ->
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(item('appliedenergistics2:part', 16))
+                .notConsumable(Globals.circuit(1))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('appliedenergistics2:part', 36))
+                .duration(40)
+                .EUt(Globals.voltAmps[2])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(item('appliedenergistics2:part', 16))
+                .inputs(ore('wireFineBorosilicateGlass'))
+                .notConsumable(Globals.circuit(2))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('appliedenergistics2:part', 56))
+                .duration(40)
+                .EUt(Globals.voltAmps[2])
+                .buildAndRegister()
 }
 
 mods.gregtech.assembler.recipeBuilder()
@@ -702,5 +894,45 @@ Globals.solders.each { key, val ->
                 .outputs(item('appliedenergistics2:material:28'))
                 .duration(80)
                 .EUt(1920)
+                .buildAndRegister()
+}
+
+for (int n = 20; n < 36; n++) {
+        mods.gregtech.chemical_bath.recipeBuilder()
+                .inputs(item('appliedenergistics2:part', n))
+                .outputs(item('appliedenergistics2:part', 36))
+                .fluidInputs(fluid('water') * 100)
+                .duration(20)
+                .EUt(Globals.voltAmps[0])
+                .buildAndRegister()
+}
+
+for (int n = 40; n < 56; n++) {
+        mods.gregtech.chemical_bath.recipeBuilder()
+                .inputs(item('appliedenergistics2:part', n))
+                .outputs(item('appliedenergistics2:part', 56))
+                .fluidInputs(fluid('water') * 100)
+                .duration(20)
+                .EUt(Globals.voltAmps[0])
+                .buildAndRegister()
+}
+
+for (int n = 60; n < 76; n++) {
+        mods.gregtech.chemical_bath.recipeBuilder()
+                .inputs(item('appliedenergistics2:part', n))
+                .outputs(item('appliedenergistics2:part', 76))
+                .fluidInputs(fluid('water') * 100)
+                .duration(20)
+                .EUt(Globals.voltAmps[0])
+                .buildAndRegister()
+}
+
+for (int n = 500; n < 516; n++) {
+        mods.gregtech.chemical_bath.recipeBuilder()
+                .inputs(item('appliedenergistics2:part', n))
+                .outputs(item('appliedenergistics2:part', 516))
+                .fluidInputs(fluid('water') * 100)
+                .duration(20)
+                .EUt(Globals.voltAmps[0])
                 .buildAndRegister()
 }

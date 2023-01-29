@@ -259,7 +259,7 @@ eventManager.listen {
         new Material.Builder(32000, 'fluix')
                 .gem().iconSet(RUBY)
                 .components(Quartzite, 4, Naquadah, 1)
-                //.flags("disable_decomposition")
+                //.flags(MaterialFlags.DISABLE_DECOMPOSITION, MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_LENS])
                 .color(0x6503b6)
                 .build();
 
