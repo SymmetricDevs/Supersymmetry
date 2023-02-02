@@ -1,3 +1,4 @@
+/*
 import net.minecraftforge.fml.common.eventhandler.EventPriority
 
 import gregtech.api.unification.material.Material;
@@ -9,7 +10,7 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
 //IDs 20000-30000+ RESERVED FOR SOLIDS
-/*
+
 eventManager.listen {
     GregTechAPI.MaterialEvent event ->
 
