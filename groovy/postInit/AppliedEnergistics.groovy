@@ -121,7 +121,16 @@ def name_removals = [
         'appliedenergistics2:network/cables/glass_fluix',
         'appliedenergistics2:network/parts/quartz_fiber_part',
         'threng:pau',
-        'threng:level_maintainer'
+        'threng:level_maintainer',
+        'appliedenergistics2:misc/seeds_certus',
+        'appliedenergistics2:misc/seeds_nether',
+        'appliedenergistics2:misc/seeds_fluix',
+        'appliedenergistics2:network/blocks/controller',
+        'appliedenergistics2:network/blocks/io_condenser',
+        'appliedenergistics2:network/blocks/spatial_io_pylon',
+        'appliedenergistics2:tools/network_biometric_card',
+        'appliedenergistics2:tools/network_memory_card',
+        'appliedenergistics2:network/wireless_booster'
 ]
 
 for (name in name_removals) {
@@ -279,6 +288,18 @@ crafting.replaceShaped('appliedenergistics2:network/cables/dense_smart_fluix', i
 crafting.replaceShaped('appliedenergistics2:network/parts/cable_anchor', item('appliedenergistics2:part', 120) * 4, [
         [ore('boltSteel'), ore('boltSteel'), null],
         [null, null, null],
+        [null, null, null]
+])
+
+crafting.replaceShaped('appliedenergistics2:network/wireless_terminal', item('appliedenergistics2:wireless_terminal'), [
+        [null, item('appliedenergistics2:wireless_access_point'), null],
+        [null, item('appliedenergistics2:part', 380), null],
+        [null, item('appliedenergistics2:dense_energy_cell'), null]
+])
+
+crafting.replaceShaped('appliedenergistics2:tools/network_tool', item('appliedenergistics2:network_tool'), [
+        [ore('itemIlluminatedPanel'), ore('chestWood'), null],
+        [ore('itemQuartzWrench'), ore('circuitEv'), null],
         [null, null, null]
 ])
 
@@ -454,6 +475,65 @@ Globals.solders.each { key, val ->
                 .EUt(Globals.voltAmps[5])
                 .buildAndRegister()
 
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(metaitem('hull.ev'))
+                .inputs(ore('circuitEv'))
+                .inputs(ore('plateTitanium') * 2)
+                .inputs(ore('wireFineGold') * 2)
+                .inputs(ore('gemExquisiteFluix') * 4)
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('appliedenergistics2:controller'))
+                .duration(200)
+                .EUt(Globals.voltAmps[4])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(ore('plateTitanium') * 4)
+                .inputs(ore('stickTitanium') * 4)
+                .inputs(ore('gemExquisiteFluix'))
+                .inputs(item('appliedenergistics2:material', 43))
+                .inputs(item('appliedenergistics2:material', 44))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('appliedenergistics2:spatial_pylon'))
+                .duration(140)
+                .EUt(Globals.voltAmps[4])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(ore('plateStainlessSteel'))
+                .inputs(ore('wireFineGold'))
+                .inputs(ore('wireFineRedAlloy'))
+                .inputs(ore('circuitHv'))
+                .inputs(Globals.circuit(1))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('appliedenergistics2:memory_card'))
+                .duration(80)
+                .EUt(Globals.voltAmps[3])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(ore('plateStainlessSteel'))
+                .inputs(ore('wireFineGold'))
+                .inputs(ore('wireFineRedAlloy'))
+                .inputs(ore('circuitHv'))
+                .inputs(Globals.circuit(2))
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('appliedenergistics2:biometric_card'))
+                .duration(80)
+                .EUt(Globals.voltAmps[3])
+                .buildAndRegister()
+
+        mods.gregtech.assembler.recipeBuilder()
+                .inputs(ore('plateRhodiumPlatedPalladium'))
+                .inputs(metaitem('emitter.luv'))
+                .inputs(metaitem('sensor.luv'))
+                .inputs(ore('circuitLuv'))
+                .inputs(item('appliedenergistics2:part', 16) * 4)
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('appliedenergistics2:material', 42))
+                .duration(80)
+                .EUt(Globals.voltAmps[5])
+                .buildAndRegister()
 }
 
 Globals.wireCoatings.each { key, val ->
