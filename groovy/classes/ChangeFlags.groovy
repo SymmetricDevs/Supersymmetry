@@ -8,11 +8,12 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.info.MaterialFlag;
 import gregtech.api.unification.material.properties.*;
 
-eventManager.listen(EventPriority.LOWEST) {
-    GregTechAPI.MaterialEvent event ->
+//eventManager.listen(EventPriority.LOWEST) 
+class ChangeFlags {
+    public static void init() {
+    //GregTechAPI.MaterialEvent event ->
 
-        println("Running ChangeFlags.groovy...")
-        println("Groovy starting modifying flags")
+        log.infoMC("Modifying flags...")
 
         Steel.addFlags("generate_spring", "generate_spring_small");
         Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");
@@ -25,5 +26,6 @@ eventManager.listen(EventPriority.LOWEST) {
         //Hafnium.ingot().build();
         //Strontium.ingot().build();
 
-        println("Groovy finished modifying flags")
+        log.infoMC("Finished modifying flags")
+    }
 }

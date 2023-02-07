@@ -8,7 +8,7 @@ import static gregtech.api.unification.material.Materials.*;
 
 //IDs 10000-20000 RESERVED FOR FLUIDS
 
-//class RegisterFluids{
+class RegisterFluids{
 
         private static void generateHighPressureGases(Material materialName, int id){
                 var color = materialName.getMaterialRGB();
@@ -45,7 +45,7 @@ import static gregtech.api.unification.material.Materials.*;
                         .build();
         }
 
-        private void generateLiquidFromGas(Material materialName, int id, int boilingTemperature, boolean useGtPrefix){
+        private static void generateLiquidFromGas(Material materialName, int id, int boilingTemperature, boolean useGtPrefix){
                 var color = materialName.getMaterialRGB();
                 var prefix = "liquid_";
 
@@ -111,10 +111,9 @@ import static gregtech.api.unification.material.Materials.*;
 
         }
 
-        eventManager.listen() {
-                GregTechAPI.MaterialEvent event ->
+        public static void init() {
 
-                log.infoMC("Starting new material registration")
+                log.infoMC("Registering fluids...")
 
                 new Material.Builder(11000, "sulfurous_water")
                         .fluid()
@@ -264,8 +263,8 @@ import static gregtech.api.unification.material.Materials.*;
                         .color(0x6503b6)
                         .build();
 
-                log.infoMC("Finished new material registration")
+                log.infoMC("Finished fluid registration")
         }
 
 
-//}
+}
