@@ -303,6 +303,11 @@ crafting.replaceShaped('appliedenergistics2:tools/network_tool', item('applieden
         [null, null, null]
 ])
 
+crafting.replaceShapeless('wct:wct', item('wct:wct'), [item('appliedenergistics2:part', 360), item('appliedenergistics2:wireless_terminal')])
+crafting.replaceShapeless('wft:wft', item('wft:wft'), [item('appliedenergistics2:part', 520), item('appliedenergistics2:wireless_terminal')])
+crafting.replaceShapeless('wit:wit', item('wit:wit'), [item('appliedenergistics2:part', 440), item('appliedenergistics2:wireless_terminal')])
+crafting.replaceShapeless('wpt:wpt', item('wpt:wpt'), [item('appliedenergistics2:part', 340), item('appliedenergistics2:wireless_terminal')])
+
 //GT Machines Recipes
 
 Globals.solders.each { key, val ->

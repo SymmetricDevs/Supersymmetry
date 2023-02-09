@@ -75,7 +75,7 @@ def recipesToRemove = [
 ]
 
 for(name in recipesToRemove) {
-    //crafting.remove(name)
+    crafting.remove(name)
 }
 
 def pressurePlateOreMap = [
