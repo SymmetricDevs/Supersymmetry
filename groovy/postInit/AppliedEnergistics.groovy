@@ -303,6 +303,30 @@ crafting.replaceShaped('appliedenergistics2:tools/network_tool', item('applieden
         [null, null, null]
 ])
 
+crafting.replaceShaped('appliedenergistics2:tools/network_color_applicator', item('appliedenergistics2:color_applicator'), [
+        [item('appliedenergistics2:material', 43), ore('plateTitanium'), null],
+        [ore('plateTitanium'), item('appliedenergistics2:material', 36), null],
+        [null, null, item('appliedenergistics2:energy_cell')]
+])
+
+crafting.replaceShaped('appliedenergistics2:tools/matter_cannon', item('appliedenergistics2:matter_cannon'), [
+        [ore('plateTitanium'), ore('plateTitanium'), item('appliedenergistics2:material', 43)],
+        [item('appliedenergistics2:material', 36), item('appliedenergistics2:energy_cell'), null],
+        [ore('plateTitanium'), null, null]
+])
+
+crafting.replaceShaped('appliedenergistics2:tools/misctools_charged_staff', item('appliedenergistics2:charged_staff'), [
+        [metaitem('emitter.ev'), null, null],
+        [null, ore('stickTitanium'), null],
+        [null, null, item('appliedenergistics2:energy_cell')]
+])
+
+crafting.replaceShaped('appliedenergistics2:tools/misctools_entropy_manipulator', item('appliedenergistics2:entropy_manipulator'), [
+        [metaitem('emitter.ev'), item('appliedenergistics2:material', 43), null],
+        [item('appliedenergistics2:material', 44), ore('stickTitanium'), null],
+        [null, null, item('appliedenergistics2:energy_cell')]
+])
+
 crafting.replaceShapeless('wct:wct', item('wct:wct'), [item('appliedenergistics2:part', 360), item('appliedenergistics2:wireless_terminal')])
 crafting.replaceShapeless('wft:wft', item('wft:wft'), [item('appliedenergistics2:part', 520), item('appliedenergistics2:wireless_terminal')])
 crafting.replaceShapeless('wit:wit', item('wit:wit'), [item('appliedenergistics2:part', 440), item('appliedenergistics2:wireless_terminal')])
