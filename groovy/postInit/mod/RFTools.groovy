@@ -1,5 +1,3 @@
-println("Running RFTools.groovy...")
-
 /*
 def name_removals = [
         "rftools:machine_frame",

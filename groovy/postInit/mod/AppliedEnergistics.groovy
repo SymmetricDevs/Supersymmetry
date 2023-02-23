@@ -14,8 +14,6 @@ def solders = [
 ]
 */
 
-println("Running AppliedEnergistics.groovy...")
-
 def name_removals = [
         'appliedenergistics2:misc/grindstone_woodengear',
         'appliedenergistics2:decorative/quartz_glass',

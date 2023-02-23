@@ -1,4 +1,3 @@
-println("Running IndustrialRenewal.groovy...")
 /*
 
 def weapons_factory = recipemap('assembler') // REPLACE WITH WEAPONS FACTORY AFTER RECIPE MAPS ARE FIXED

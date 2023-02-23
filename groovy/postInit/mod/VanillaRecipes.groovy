@@ -2,8 +2,6 @@ def circuit(x) {
     return metaitem('circuit.integrated').withNbt([Configuration: x])
 }
 
-println('Running VanillaRecipes.groovy')
-
 def recipesToRemove = [
     'minecraft:dispenser',
     'gregtech:piston_bronze',

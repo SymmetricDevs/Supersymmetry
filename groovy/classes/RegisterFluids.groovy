@@ -263,7 +263,7 @@ class RegisterFluids{
                         .color(0x6503b6)
                         .build();
 
-                log.infoMC("Finished fluid registration")
+                log.infoMC("Finished adding fluids")
         }
 
 

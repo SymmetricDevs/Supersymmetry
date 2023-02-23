@@ -7,9 +7,7 @@ import gregtech.api.unification.ore.OrePrefix;
 eventManager.listen {
     GregTechAPI.PostMaterialEvent event ->
 
-        println("Running RegisterMetaItems.groovy...")
-
-        println("Groovy starting modifying meta items")
+        log.infoMC("Adding metaitems...")
 
         StandardMetaItem customMetaItems = new StandardMetaItem((short)2);
         customMetaItems.setRegistryName("meta_item_2")
@@ -84,5 +82,5 @@ eventManager.listen {
         customMetaItems.addItem(3035, "wafer.advanced_random_access_memory")
         customMetaItems.addItem(3036, "plate.advanced_random_access_memory")
 
-        println("Groovy finished modifying meta items")
+        log.infoMC("Finished adding metaitems")
 }

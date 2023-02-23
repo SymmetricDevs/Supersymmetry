@@ -1,7 +1,5 @@
 //For mods with so few recipes they don't need a dedicated file
 
-println("Running MiscRecipes.groovy...")
-
 /*
 def name_removals = [
         "scannable:scanner",

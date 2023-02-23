@@ -1,5 +1,3 @@
-println("Running Smelting.groovy...")
-
 def oreDictSmeltingRemovals = [
     ore('ingotIron'),
 	ore('chunkIron'),
