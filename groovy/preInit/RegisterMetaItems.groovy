@@ -23,6 +23,11 @@ eventManager.listen {
         customMetaItems.addItem(9, "rock.silicate")
         customMetaItems.addItem(10, "rock.sulfur")
 
+        customMetaItems.addItem(100, "cement.clinker")
+        customMetaItems.addItem(101, "hot.cement.clinker")
+        customMetaItems.addItem(102, "cement.dust")
+        customMetaItems.addItem(103, "limestone.dust")
+
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);
