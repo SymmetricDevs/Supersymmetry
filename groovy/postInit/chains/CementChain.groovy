@@ -28,6 +28,20 @@ class Comburent {
     }
 }
 
+class CoolantGases {
+    String name
+    String byproduct
+    int amount
+    int duration
+
+    CoolantGases(name, byproduct, amount, duration) {
+        this.name = name
+        this.byproduct = byproduct
+        this.amount = amount
+        this.duration = duration
+    }
+}
+
 
 def SINTERING_RECIPES = recipemap("sintering_oven")
 
@@ -72,4 +86,19 @@ for (fuel in fuels) {
         }
     }
 
+}
+
+def gases = [
+    new CoolantGases('air', 'hot_air', 100, 40)
+]
+
+for (gas in gases) {
+    mods.gregtech.mixer.recipeBuilder()
+        .inputs(metaitem('hot.cement.clinker'))
+        .fluidInputs(fluid(gas.name) * gas.amount)
+        .outputs(metaitem('cement.clinker'))
+        .fluidOutputs(fluid(gas.byproduct) * gas.amount)
+        .duration(gas.duration)
+        .EUt(6)
+        .buildAndRegister()
 }

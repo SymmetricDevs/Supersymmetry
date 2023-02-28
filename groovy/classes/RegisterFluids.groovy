@@ -1,8 +1,9 @@
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
 import gregtech.api.fluids.fluidType.FluidTypes;
-import static gregtech.api.unification.material.info.MaterialIconSet.*;
+import gregtech.api.unification.material.properties.*;
 
+import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
@@ -109,6 +110,18 @@ class RegisterFluids{
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
+        }
+
+        private static void generateHotGas(Material material, int id) {
+                var color = material.materialRGB;
+
+                new Material.Builder(id, "hot_" + material.toString())
+                        .fluid(FluidTypes.GAS)
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() + 100)
+                        .color(color)
+                        .components(material, 1)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .build();
         }
 
         public static void init() {
@@ -255,6 +268,8 @@ class RegisterFluids{
                 //generateCoolant(EthyleneGlycol, 10305);
 
                 //generateCoolant(Brine, 10310);
+
+                generateHotGas(Air, 10311);
 
                 new Material.Builder(32000, 'fluix')
                         .gem().iconSet(RUBY)
