@@ -404,6 +404,23 @@ metaitem.rock.radioactive.name=Radioactive Rock
 metaitem.rock.sedimentary.name=Sedimentary Rock
 metaitem.rock.silicate.name=Silicate Rock
 metaitem.rock.sulfur.name=Sulfuric Rock
+metaitem.cement.clinker.name=Cement Clinker
+metaitem.hot.cement.clinker.name=Hot Cement Clinker
+metaitem.cement.dust.name=Cement Dust
+metaitem.limestone.dust.name=Limestone Dust
+metaitem.chunk.magnetite.name=Magnetite Chunk
+metaitem.hot_iron_rod.name=Hot Iron Rod
+metaitem.voltaic_pile.name=Voltaic Pile
+metaitem.electrolyte_paper.name=Electrolyte Paper
+
+metaitem.spaceship.me.scrap.name=Orbital Scrap
+metaitem.wafer.pattern.processor.name=Pattern CPU Wafer
+metaitem.wafer.pattern.memory.name=Pattern RAM Wafer
+metaitem.plate.pattern.processor.name=Pattern CPU Chip
+metaitem.plate.pattern.memory.name=Pattern RAM Chip
+metaitem.pattern.processor.name=Pattern CPU
+metaitem.pattern.memory.name=Pattern RAM
+metaitem.storage.segment.name=Storage Segment
 
 # Multiblocked
 
