@@ -12,6 +12,10 @@ def magnetic_rod_ingredients = [
     [null, null, null]
 ]
 
+oreDict.add('electrolyteFruit', metaitem('food.lime'))
+oreDict.add('electrolyteFruit', metaitem('food.lemon'))
+oreDict.add('electrolyteFruit', metaitem('food.orange'))
+
 crafting.removeByOutput(metaitem('stickIronMagnetic')) 
 
 furnace.add(metaitem('stickIron'), metaitem('hot_iron_rod'))
@@ -21,12 +25,7 @@ crafting.addShapeless(metaitem('electrolyte_paper'), [
     item('minecraft:paper')
 ]) 
 crafting.addShapeless(metaitem('electrolyte_paper'), [
-    metaitem('food.lime'),
-    item('minecraft:paper'),
-    ore('craftingToolMortar')
-]) 
-crafting.addShapeless(metaitem('electrolyte_paper'), [
-    metaitem('food.lemon'),
+    ore('electrolyteFruit'),
     item('minecraft:paper'),
     ore('craftingToolMortar')
 ]) 
