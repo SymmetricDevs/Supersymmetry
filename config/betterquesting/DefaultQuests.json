@@ -1881,7 +1881,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Gregification",
@@ -2105,12 +2105,12 @@
     },
     "22:10": {
       "preRequisites:11": [
-        16
+        107
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A furnace is not really good for smelting items. Its maximum temperature is only 1000 K (730°C), which is not hot enough for iron.\n\nA Primitive Blast Furnace is made out of 32 §cFirebricks§r and 1 §4Primitive Blast Furnace Controller§r. It\u0027s a  §a3x4x3 structure§r§r of firebricks that is hollowed out in the middle. For more help, look at the §cStructure Preview§r in the JEI database.\n\nThe Primitive Blast Furnace can smelt iron, wrought iron and §bsteel§r. It has a maximum temperature of about 1400 K (1,127°C).\n\nLike many other structures, it is possible to share the walls of multiple Primitive Blast Furnaces and they will still work.\n\n§l§e§lNOTE: Making the Primitive Blast Furnace requires a steam compressor and a steam macerator. Please check the Industrial Age chapter to continue.",
+          "desc:8": "A furnace is not really good for smelting items. Its maximum temperature is only 1000 K (730°C), which is not hot enough for iron.\n\nA Primitive Blast Furnace is made out of 32 §cFirebricks§r and 1 §4Primitive Blast Furnace Controller§r. It\u0027s a  §a3x4x3 structure§r§r of firebricks that is hollowed out in the middle. For more help, look at the §cStructure Preview§r in the JEI database.\n\nThe Primitive Blast Furnace can smelt iron, wrought iron and §bsteel§r. It has a maximum temperature of about 1400 K (1,127°C).\n\nLike many other structures, it is possible to share the walls of multiple Primitive Blast Furnaces and they will still work.\n\n§l§e§lNOTE: Making the Primitive Blast Furnace requires a steam macerator. Please check the Industrial Age chapter to continue.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2262,7 +2262,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "To make magnets, you must have a §bVoltaic Pile§r. §c\n§r\nA Voltaic Pile is made of three components: a §6Copper Plate§r, a §7Zinc Plate§r, and Electrolyte Paper.\n\nA common electrolyte is §6citric acid§r (found in lemons and limes).",
+          "desc:8": "To make magnets, you must have a §bVoltaic Pile§r. §c\n§r\nA Voltaic Pile is made of three components: a §6Copper Plate§r, a §7Zinc Plate§r, and Electrolyte Paper.\n\nA common electrolyte is §6citric acid§r. Putting lemons, limes, or oranges with paper will create electrolyte paper. Limes can be found in jungles, lemons can be found in jungle edges and forests, while oranges can be found in savannah biomes. \n\nIf you can\u0027t get a hold of a voltaic pile, you can use another method for magnetizing an iron rod, using §6magnetite§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2418,15 +2418,6 @@
             "0:10": {
               "Count:3": 8,
               "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
@@ -2560,7 +2551,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§7Magnetite §rores can be broken up into §7magnetite chunks§r by using a Crafting Table.\n\n",
+          "desc:8": "§7Magnetite §rores can be broken up into §7magnetite chunks§r by using a Crafting Table. They can be used to magnetize an §6iron rod§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2604,8 +2595,8 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
+              "Count:3": 1,
+              "Damage:2": 1002,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -2616,11 +2607,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "contenttweaker:magnetite_chunk",
-                "orig_meta:3": 0
-              }
+              "id:8": "gregtech:meta_item_2"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -3661,15 +3648,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 260,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "toolHeadSwordBronze",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
@@ -6640,6 +6618,76 @@
     },
     "74:10": {
       "preRequisites:11": [
+        87
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Quicklime§r, or calcium oxide, can be obtained by smelting limestone in a Furnace. Limestone can be found by mining underground. \n\n§6Quicklime §rcan be turned into §6Slaked Lime §rusing a water bucket. It will be used for the construction of firebricks.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 153,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Limestone",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 74,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 153,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "75:10": {
+      "preRequisites:11": [
         50
       ],
       "properties:10": {
@@ -6726,7 +6774,7 @@
         }
       }
     },
-    "75:10": {
+    "76:10": {
       "preRequisites:11": [
         49
       ],
@@ -6792,7 +6840,7 @@
         }
       }
     },
-    "76:10": {
+    "77:10": {
       "preRequisites:11": [
         75
       ],
@@ -6927,7 +6975,7 @@
         }
       }
     },
-    "77:10": {
+    "78:10": {
       "preRequisites:11": [
         75
       ],
@@ -7037,7 +7085,7 @@
         }
       }
     },
-    "78:10": {
+    "79:10": {
       "preRequisites:11": [
         78
       ],
@@ -7143,7 +7191,7 @@
         }
       }
     },
-    "79:10": {
+    "80:10": {
       "preRequisites:11": [
         39
       ],
@@ -7253,7 +7301,7 @@
         }
       }
     },
-    "80:10": {
+    "81:10": {
       "preRequisites:11": [
         80
       ],
@@ -7355,7 +7403,7 @@
         }
       }
     },
-    "81:10": {
+    "82:10": {
       "preRequisites:11": [
         80
       ],
@@ -7441,7 +7489,7 @@
         }
       }
     },
-    "82:10": {
+    "83:10": {
       "preRequisites:11": [
         80
       ],
@@ -7538,7 +7586,7 @@
         }
       }
     },
-    "83:10": {
+    "84:10": {
       "preRequisites:11": [
         83
       ],
@@ -7616,7 +7664,7 @@
         }
       }
     },
-    "84:10": {
+    "85:10": {
       "preRequisites:11": [
         80
       ],
@@ -7706,7 +7754,7 @@
         }
       }
     },
-    "85:10": {
+    "86:10": {
       "preRequisites:11": [
         80
       ],
@@ -7793,7 +7841,7 @@
         }
       }
     },
-    "86:10": {
+    "87:10": {
       "preRequisites:11": [
         7
       ],
@@ -7845,7 +7893,7 @@
         }
       }
     },
-    "87:10": {
+    "88:10": {
       "preRequisites:11": [
         5
       ],
@@ -7937,7 +7985,7 @@
         }
       }
     },
-    "88:10": {
+    "89:10": {
       "preRequisites:11": [
         20
       ],
@@ -8007,7 +8055,7 @@
         }
       }
     },
-    "89:10": {
+    "90:10": {
       "preRequisites:11": [
         12
       ],
@@ -8077,7 +8125,7 @@
         }
       }
     },
-    "90:10": {
+    "91:10": {
       "preRequisites:11": [
         149
       ],
@@ -8141,7 +8189,7 @@
         }
       }
     },
-    "91:10": {
+    "92:10": {
       "preRequisites:11": [
         31
       ],
@@ -8215,7 +8263,7 @@
         }
       }
     },
-    "92:10": {
+    "93:10": {
       "preRequisites:11": [
         12
       ],
@@ -8300,7 +8348,7 @@
         }
       }
     },
-    "93:10": {
+    "94:10": {
       "preRequisites:11": [
         31
       ],
@@ -8365,7 +8413,7 @@
         }
       }
     },
-    "94:10": {
+    "95:10": {
       "preRequisites:11": [
         94
       ],
@@ -8457,7 +8505,7 @@
         }
       }
     },
-    "95:10": {
+    "96:10": {
       "preRequisites:11": [
         95
       ],
@@ -8564,7 +8612,7 @@
         }
       }
     },
-    "96:10": {
+    "97:10": {
       "preRequisites:11": [
         96
       ],
@@ -8683,7 +8731,7 @@
         }
       }
     },
-    "97:10": {
+    "98:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -8732,7 +8780,7 @@
         }
       }
     },
-    "98:10": {
+    "99:10": {
       "preRequisites:11": [
         66
       ],
@@ -8806,7 +8854,7 @@
         }
       }
     },
-    "99:10": {
+    "100:10": {
       "preRequisites:11": [
         99
       ],
@@ -8913,7 +8961,7 @@
         }
       }
     },
-    "100:10": {
+    "101:10": {
       "preRequisites:11": [
         99
       ],
@@ -9005,7 +9053,7 @@
         }
       }
     },
-    "101:10": {
+    "102:10": {
       "preRequisites:11": [
         99
       ],
@@ -9118,7 +9166,7 @@
         }
       }
     },
-    "102:10": {
+    "103:10": {
       "preRequisites:11": [
         99
       ],
@@ -9210,7 +9258,7 @@
         }
       }
     },
-    "103:10": {
+    "104:10": {
       "preRequisites:11": [
         99
       ],
@@ -9310,7 +9358,7 @@
         }
       }
     },
-    "104:10": {
+    "105:10": {
       "preRequisites:11": [
         104
       ],
@@ -9349,7 +9397,159 @@
         }
       }
     },
-    "105:10": {
+    "106:10": {
+      "preRequisites:11": [
+        74
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Combining §6Slaked Lime§r, §7Flint Dust§r, §6Sand Dust§r and §7Clay Dust§r (dusts can be made using a Mortar) will create §6Fireclay Mix§r.\n\nFireclay Mix can be turned into Compressed Fireclay by using a brick form. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 352,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Firebricks Pt. 1",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 106,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2525,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 351,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 348,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "107:10": {
+      "preRequisites:11": [
+        106
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Compressed Fireclay §rmust be smelted in a Furnace to turn it into §6Firebricks§r.\n\nFirebricks need to be crafted into blocks to be used in the construction of a Blast Furnace. 32 Firebricks are required for a Primitive Blast Furnace.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "gregtech:metal_casing"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Firebricks Pt. 2",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 107,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "108:10": {
       "preRequisites:11": [
         105
       ],
@@ -9423,7 +9623,7 @@
         }
       }
     },
-    "106:10": {
+    "109:10": {
       "preRequisites:11": [
         105
       ],
@@ -9497,7 +9697,7 @@
         }
       }
     },
-    "107:10": {
+    "110:10": {
       "preRequisites:11": [
         105
       ],
@@ -9562,7 +9762,7 @@
         }
       }
     },
-    "108:10": {
+    "111:10": {
       "preRequisites:11": [
         105
       ],
@@ -9636,7 +9836,7 @@
         }
       }
     },
-    "109:10": {
+    "112:10": {
       "preRequisites:11": [
         105
       ],
@@ -9714,7 +9914,7 @@
         }
       }
     },
-    "110:10": {
+    "113:10": {
       "preRequisites:11": [
         105
       ],
@@ -9803,7 +10003,7 @@
         }
       }
     },
-    "111:10": {
+    "114:10": {
       "preRequisites:11": [
         105
       ],
@@ -9868,7 +10068,7 @@
         }
       }
     },
-    "112:10": {
+    "115:10": {
       "preRequisites:11": [
         105
       ],
@@ -9937,7 +10137,7 @@
         }
       }
     },
-    "113:10": {
+    "116:10": {
       "preRequisites:11": [
         105
       ],
@@ -10011,7 +10211,129 @@
         }
       }
     },
-    "114:10": {
+    "117:10": {
+      "preRequisites:11": [
+        74
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Combining §6Mud Balls§r, a §6Pile of Sand§r, §6Clay Dust §rand §aStraw§r (obtained from Plant Fibers) will create §6Mudbrick Mix§\n.\n\nMudbricks are §6not required §rfor progressing to the Industrial Age, however they can be used for constructing a §6Primitive Baking Oven§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 152,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Mud Bricks",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 117,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 4,
+              "Damage:2": 152,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "118:10": {
+      "preRequisites:11": [
+        117
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Compressing §5§6Mudbrick Mix§r using a Brick Form creates Mud Bricks. Smelting them in a Furnace creates §6Adobe Bricks§r.\n\nAdobe Bricks need to be combined into blocks to be used in construction.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "gregtechfoodoption:gtfo_casing"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Adobe Bricks",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 118,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtechfoodoption:gtfo_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "119:10": {
       "preRequisites:11": [
         110
       ],
@@ -10090,7 +10412,7 @@
         }
       }
     },
-    "115:10": {
+    "120:10": {
       "preRequisites:11": [
         123
       ],
@@ -10152,7 +10474,7 @@
         }
       }
     },
-    "116:10": {
+    "121:10": {
       "preRequisites:11": [
         110
       ],
@@ -10245,7 +10567,7 @@
         }
       }
     },
-    "117:10": {
+    "122:10": {
       "preRequisites:11": [
         159
       ],
@@ -10332,7 +10654,7 @@
         }
       }
     },
-    "118:10": {
+    "123:10": {
       "preRequisites:11": [
         105
       ],
@@ -10410,7 +10732,7 @@
         }
       }
     },
-    "119:10": {
+    "124:10": {
       "preRequisites:11": [
         105
       ],
@@ -10484,7 +10806,71 @@
         }
       }
     },
-    "120:10": {
+    "125:10": {
+      "preRequisites:11": [
+        118
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The§c Primitive Baking Oven§r is a 3x2x3 structure that is used for cooking food. \n\nA Furnace, for example, can\u0027t make toast. It would completely pulverize the bread, as it gets too hot too quickly.\n\nThe Primitive Baking Oven requires:\n§6\n15x Adobe Bricks\n1x Primitive Baking Oven Controller\n1x Iron Frame Box§r\n\nYes, §ciron§r. The oven is only available after getting iron from a §cBlast Furnace§r, so you can save it for later on.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8516,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Primitive Baking Oven",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 125,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8516,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtechfoodoption:gtfo_casing"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_frame_3"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "126:10": {
       "preRequisites:11": [
         121
       ],
@@ -10546,7 +10932,7 @@
         }
       }
     },
-    "121:10": {
+    "127:10": {
       "preRequisites:11": [
         120
       ],
@@ -10608,7 +10994,7 @@
         }
       }
     },
-    "122:10": {
+    "128:10": {
       "preRequisites:11": [
         127
       ],
@@ -10692,7 +11078,7 @@
         }
       }
     },
-    "123:10": {
+    "129:10": {
       "preRequisites:11": [
         110
       ],
@@ -10775,7 +11161,7 @@
         }
       }
     },
-    "124:10": {
+    "130:10": {
       "preRequisites:11": [
         110
       ],
@@ -10858,7 +11244,7 @@
         }
       }
     },
-    "125:10": {
+    "131:10": {
       "preRequisites:11": [
         113,
         137,
@@ -10925,7 +11311,7 @@
         }
       }
     },
-    "126:10": {
+    "132:10": {
       "preRequisites:11": [
         66
       ],
@@ -11020,7 +11406,7 @@
         }
       }
     },
-    "127:10": {
+    "133:10": {
       "preRequisites:11": [
         0
       ],
@@ -11068,7 +11454,7 @@
         }
       }
     },
-    "128:10": {
+    "134:10": {
       "preRequisites:11": [
         99
       ],
@@ -11138,7 +11524,7 @@
         }
       }
     },
-    "129:10": {
+    "135:10": {
       "preRequisites:11": [
         136
       ],
@@ -11305,7 +11691,7 @@
         }
       }
     },
-    "130:10": {
+    "136:10": {
       "preRequisites:11": [
         133
       ],
@@ -11389,7 +11775,7 @@
         }
       }
     },
-    "131:10": {
+    "137:10": {
       "preRequisites:11": [
         138
       ],
@@ -11464,7 +11850,7 @@
         }
       }
     },
-    "132:10": {
+    "138:10": {
       "preRequisites:11": [
         139
       ],
@@ -11539,7 +11925,7 @@
         }
       }
     },
-    "133:10": {
+    "139:10": {
       "preRequisites:11": [
         140
       ],
@@ -11649,7 +12035,7 @@
         }
       }
     },
-    "134:10": {
+    "140:10": {
       "preRequisites:11": [
         105
       ],
@@ -11714,7 +12100,7 @@
         }
       }
     },
-    "135:10": {
+    "141:10": {
       "preRequisites:11": [
         105
       ],
@@ -11788,7 +12174,7 @@
         }
       }
     },
-    "136:10": {
+    "142:10": {
       "preRequisites:11": [
         112
       ],
@@ -11863,7 +12249,7 @@
         }
       }
     },
-    "137:10": {
+    "143:10": {
       "preRequisites:11": [
         144
       ],
@@ -11925,7 +12311,7 @@
         }
       }
     },
-    "138:10": {
+    "144:10": {
       "preRequisites:11": [
         148
       ],
@@ -11977,7 +12363,7 @@
         }
       }
     },
-    "139:10": {
+    "145:10": {
       "preRequisites:11": [
         122
       ],
@@ -12086,7 +12472,7 @@
         }
       }
     },
-    "140:10": {
+    "146:10": {
       "preRequisites:11": [
         110
       ],
@@ -12178,7 +12564,7 @@
         }
       }
     },
-    "141:10": {
+    "147:10": {
       "preRequisites:11": [
         12
       ],
@@ -12248,7 +12634,7 @@
         }
       }
     },
-    "142:10": {
+    "148:10": {
       "preRequisites:11": [
         133
       ],
@@ -12332,7 +12718,7 @@
         }
       }
     },
-    "143:10": {
+    "149:10": {
       "preRequisites:11": [
         150
       ],
@@ -12416,7 +12802,7 @@
         }
       }
     },
-    "144:10": {
+    "150:10": {
       "preRequisites:11": [
         133
       ],
@@ -12491,7 +12877,7 @@
         }
       }
     },
-    "145:10": {
+    "151:10": {
       "preRequisites:11": [
         152
       ],
@@ -12575,7 +12961,7 @@
         }
       }
     },
-    "146:10": {
+    "152:10": {
       "preRequisites:11": [
         153,
         151,
@@ -12661,7 +13047,7 @@
         }
       }
     },
-    "147:10": {
+    "153:10": {
       "preRequisites:11": [
         105
       ],
@@ -12726,7 +13112,7 @@
         }
       }
     },
-    "148:10": {
+    "154:10": {
       "preRequisites:11": [
         151
       ],
@@ -12804,7 +13190,7 @@
         }
       }
     },
-    "149:10": {
+    "155:10": {
       "preRequisites:11": [
         141
       ],
@@ -12886,7 +13272,7 @@
         }
       }
     },
-    "150:10": {
+    "156:10": {
       "preRequisites:11": [
         105
       ],
@@ -12960,7 +13346,7 @@
         }
       }
     },
-    "151:10": {
+    "157:10": {
       "preRequisites:11": [
         148
       ],
@@ -13034,7 +13420,7 @@
         }
       }
     },
-    "152:10": {
+    "158:10": {
       "preRequisites:11": [
         119
       ],
@@ -13099,7 +13485,7 @@
         }
       }
     },
-    "153:10": {
+    "159:10": {
       "preRequisites:11": [
         162
       ],
@@ -13191,7 +13577,7 @@
         }
       }
     },
-    "154:10": {
+    "160:10": {
       "preRequisites:11": [
         105
       ],
@@ -13256,7 +13642,7 @@
         }
       }
     },
-    "155:10": {
+    "161:10": {
       "preRequisites:11": [
         105
       ],
@@ -13440,7 +13826,7 @@
         }
       }
     },
-    "156:10": {
+    "162:10": {
       "preRequisites:11": [
         110
       ],
@@ -13510,7 +13896,7 @@
         }
       }
     },
-    "157:10": {
+    "163:10": {
       "preRequisites:11": [
         166
       ],
@@ -13612,7 +13998,7 @@
         }
       }
     },
-    "158:10": {
+    "164:10": {
       "preRequisites:11": [
         166,
         174
@@ -13696,7 +14082,7 @@
         }
       }
     },
-    "159:10": {
+    "165:10": {
       "preRequisites:11": [
         123
       ],
@@ -13788,7 +14174,7 @@
         }
       }
     },
-    "160:10": {
+    "166:10": {
       "preRequisites:11": [
         123
       ],
@@ -13871,7 +14257,7 @@
         }
       }
     },
-    "161:10": {
+    "167:10": {
       "preRequisites:11": [
         171,
         170
@@ -13955,7 +14341,7 @@
         }
       }
     },
-    "162:10": {
+    "168:10": {
       "preRequisites:11": [
         172,
         170
@@ -14048,7 +14434,7 @@
         }
       }
     },
-    "163:10": {
+    "169:10": {
       "preRequisites:11": [
         173
       ],
@@ -14140,7 +14526,7 @@
         }
       }
     },
-    "164:10": {
+    "170:10": {
       "preRequisites:11": [
         200
       ],
@@ -14223,7 +14609,7 @@
         }
       }
     },
-    "165:10": {
+    "171:10": {
       "preRequisites:11": [
         31
       ],
@@ -14327,7 +14713,7 @@
         }
       }
     },
-    "166:10": {
+    "172:10": {
       "preRequisites:11": [
         31
       ],
@@ -14420,7 +14806,7 @@
         }
       }
     },
-    "167:10": {
+    "173:10": {
       "preRequisites:11": [
         113
       ],
@@ -14495,7 +14881,7 @@
         }
       }
     },
-    "168:10": {
+    "174:10": {
       "preRequisites:11": [
         178
       ],
@@ -14579,7 +14965,7 @@
         }
       }
     },
-    "169:10": {
+    "175:10": {
       "preRequisites:11": [
         179
       ],
@@ -14644,7 +15030,7 @@
         }
       }
     },
-    "170:10": {
+    "176:10": {
       "preRequisites:11": [
         124
       ],
@@ -14718,7 +15104,7 @@
         }
       }
     },
-    "171:10": {
+    "177:10": {
       "preRequisites:11": [
         181
       ],
@@ -14802,7 +15188,7 @@
         }
       }
     },
-    "172:10": {
+    "178:10": {
       "preRequisites:11": [
         182
       ],
@@ -14938,7 +15324,7 @@
         }
       }
     },
-    "173:10": {
+    "179:10": {
       "preRequisites:11": [
         183
       ],
@@ -15037,7 +15423,7 @@
         }
       }
     },
-    "174:10": {
+    "180:10": {
       "preRequisites:11": [
         182
       ],
@@ -15147,7 +15533,7 @@
         }
       }
     },
-    "175:10": {
+    "181:10": {
       "preRequisites:11": [
         185
       ],
@@ -15209,7 +15595,7 @@
         }
       }
     },
-    "176:10": {
+    "182:10": {
       "preRequisites:11": [
         186
       ],
@@ -15267,7 +15653,7 @@
         }
       }
     },
-    "177:10": {
+    "183:10": {
       "preRequisites:11": [
         184
       ],
@@ -15351,7 +15737,7 @@
         }
       }
     },
-    "178:10": {
+    "184:10": {
       "preRequisites:11": [
         188
       ],
@@ -15441,7 +15827,7 @@
         }
       }
     },
-    "179:10": {
+    "185:10": {
       "preRequisites:11": [
         189
       ],
@@ -15540,7 +15926,7 @@
         }
       }
     },
-    "180:10": {
+    "186:10": {
       "preRequisites:11": [
         103
       ],
@@ -15629,7 +16015,7 @@
         }
       }
     },
-    "181:10": {
+    "187:10": {
       "preRequisites:11": [
         191
       ],
@@ -15703,7 +16089,7 @@
         }
       }
     },
-    "182:10": {
+    "188:10": {
       "preRequisites:11": [
         192
       ],
@@ -15825,7 +16211,7 @@
         }
       }
     },
-    "183:10": {
+    "189:10": {
       "preRequisites:11": [
         193
       ],
@@ -15914,7 +16300,7 @@
         }
       }
     },
-    "184:10": {
+    "190:10": {
       "preRequisites:11": [
         193
       ],
@@ -16003,7 +16389,7 @@
         }
       }
     },
-    "185:10": {
+    "191:10": {
       "preRequisites:11": [
         191
       ],
@@ -16120,7 +16506,7 @@
         }
       }
     },
-    "186:10": {
+    "192:10": {
       "preRequisites:11": [
         191
       ],
@@ -16237,7 +16623,7 @@
         }
       }
     },
-    "187:10": {
+    "193:10": {
       "preRequisites:11": [
         136
       ],
@@ -16393,7 +16779,7 @@
         }
       }
     },
-    "188:10": {
+    "194:10": {
       "preRequisites:11": [
         198
       ],
@@ -16542,7 +16928,7 @@
         }
       }
     },
-    "189:10": {
+    "195:10": {
       "preRequisites:11": [
         174
       ],
@@ -16607,7 +16993,7 @@
         }
       }
     },
-    "190:10": {
+    "196:10": {
       "preRequisites:11": [
         168
       ],
@@ -16699,7 +17085,7 @@
         }
       }
     },
-    "191:10": {
+    "197:10": {
       "preRequisites:11": [
         174
       ],
@@ -16791,7 +17177,7 @@
         }
       }
     },
-    "192:10": {
+    "198:10": {
       "preRequisites:11": [
         174
       ],
@@ -16883,7 +17269,7 @@
         }
       }
     },
-    "193:10": {
+    "199:10": {
       "preRequisites:11": [
         174
       ],
@@ -16975,7 +17361,7 @@
         }
       }
     },
-    "194:10": {
+    "200:10": {
       "preRequisites:11": [
         174
       ],
@@ -17067,7 +17453,7 @@
         }
       }
     },
-    "195:10": {
+    "201:10": {
       "preRequisites:11": [
         205
       ],
@@ -17212,7 +17598,7 @@
         }
       }
     },
-    "196:10": {
+    "202:10": {
       "preRequisites:11": [
         206
       ],
@@ -17276,7 +17662,7 @@
         }
       }
     },
-    "197:10": {
+    "203:10": {
       "preRequisites:11": [
         204
       ],
@@ -17425,7 +17811,7 @@
         }
       }
     },
-    "198:10": {
+    "204:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -17539,7 +17925,7 @@
         }
       }
     },
-    "199:10": {
+    "205:10": {
       "preRequisites:11": [
         209,
         211
@@ -17656,7 +18042,7 @@
         }
       }
     },
-    "200:10": {
+    "206:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -17770,7 +18156,7 @@
         }
       }
     },
-    "201:10": {
+    "207:10": {
       "preRequisites:11": [
         200
       ],
@@ -17845,7 +18231,7 @@
         }
       }
     },
-    "202:10": {
+    "208:10": {
       "preRequisites:11": [
         200
       ],
@@ -17929,7 +18315,7 @@
         }
       }
     },
-    "203:10": {
+    "209:10": {
       "preRequisites:11": [
         216
       ],
@@ -18013,7 +18399,7 @@
         }
       }
     },
-    "204:10": {
+    "210:10": {
       "preRequisites:11": [
         216
       ],
@@ -18097,7 +18483,7 @@
         }
       }
     },
-    "205:10": {
+    "211:10": {
       "preRequisites:11": [
         102
       ],
@@ -18171,7 +18557,7 @@
         }
       }
     },
-    "206:10": {
+    "212:10": {
       "preRequisites:11": [
         214,
         215,
@@ -18249,7 +18635,7 @@
         }
       }
     },
-    "207:10": {
+    "213:10": {
       "preRequisites:11": [
         217,
         212
@@ -18325,7 +18711,7 @@
         }
       }
     },
-    "208:10": {
+    "214:10": {
       "preRequisites:11": [
         218
       ],
@@ -18408,7 +18794,7 @@
         }
       }
     },
-    "209:10": {
+    "215:10": {
       "preRequisites:11": [
         200
       ],
@@ -18477,7 +18863,7 @@
         }
       }
     },
-    "210:10": {
+    "216:10": {
       "preRequisites:11": [
         200
       ],
@@ -18557,7 +18943,7 @@
         }
       }
     },
-    "211:10": {
+    "217:10": {
       "preRequisites:11": [
         221
       ],
@@ -18685,7 +19071,7 @@
         }
       }
     },
-    "212:10": {
+    "218:10": {
       "preRequisites:11": [
         206
       ],
@@ -18743,7 +19129,7 @@
         }
       }
     },
-    "213:10": {
+    "219:10": {
       "preRequisites:11": [
         223
       ],
@@ -18801,7 +19187,7 @@
         }
       }
     },
-    "214:10": {
+    "220:10": {
       "preRequisites:11": [
         223
       ],
@@ -18859,7 +19245,7 @@
         }
       }
     },
-    "215:10": {
+    "221:10": {
       "preRequisites:11": [
         223
       ],
@@ -18917,7 +19303,7 @@
         }
       }
     },
-    "216:10": {
+    "222:10": {
       "preRequisites:11": [
         223
       ],
@@ -18975,7 +19361,7 @@
         }
       }
     },
-    "217:10": {
+    "223:10": {
       "preRequisites:11": [
         223
       ],
@@ -19033,7 +19419,7 @@
         }
       }
     },
-    "218:10": {
+    "224:10": {
       "preRequisites:11": [
         112
       ],
@@ -19103,7 +19489,7 @@
         }
       }
     },
-    "219:10": {
+    "225:10": {
       "preRequisites:11": [
         112
       ],
@@ -19195,7 +19581,7 @@
         }
       }
     },
-    "220:10": {
+    "226:10": {
       "preRequisites:11": [
         221
       ],
@@ -19278,7 +19664,7 @@
         }
       }
     },
-    "221:10": {
+    "227:10": {
       "preRequisites:11": [
         110,
         221
@@ -19349,7 +19735,7 @@
         }
       }
     },
-    "222:10": {
+    "228:10": {
       "preRequisites:11": [
         112
       ],
@@ -19419,7 +19805,7 @@
         }
       }
     },
-    "223:10": {
+    "229:10": {
       "preRequisites:11": [
         231,
         232
@@ -19512,7 +19898,7 @@
         }
       }
     },
-    "224:10": {
+    "230:10": {
       "preRequisites:11": [
         112
       ],
@@ -19591,7 +19977,7 @@
         }
       }
     },
-    "225:10": {
+    "231:10": {
       "preRequisites:11": [
         104
       ],
@@ -19656,7 +20042,7 @@
         }
       }
     },
-    "226:10": {
+    "232:10": {
       "preRequisites:11": [
         241,
         254,
@@ -19732,7 +20118,7 @@
         }
       }
     },
-    "227:10": {
+    "233:10": {
       "preRequisites:11": [
         244,
         269
@@ -19825,7 +20211,7 @@
         }
       }
     },
-    "228:10": {
+    "234:10": {
       "preRequisites:11": [
         252
       ],
@@ -19895,7 +20281,7 @@
         }
       }
     },
-    "229:10": {
+    "235:10": {
       "preRequisites:11": [
         169
       ],
@@ -19987,7 +20373,7 @@
         }
       }
     },
-    "230:10": {
+    "236:10": {
       "preRequisites:11": [
         242
       ],
@@ -20074,7 +20460,7 @@
         }
       }
     },
-    "231:10": {
+    "237:10": {
       "preRequisites:11": [
         243
       ],
@@ -20148,7 +20534,7 @@
         }
       }
     },
-    "232:10": {
+    "238:10": {
       "preRequisites:11": [
         174
       ],
@@ -20240,7 +20626,7 @@
         }
       }
     },
-    "233:10": {
+    "239:10": {
       "preRequisites:11": [
         166
       ],
@@ -20279,7 +20665,7 @@
         }
       }
     },
-    "234:10": {
+    "240:10": {
       "preRequisites:11": [
         166
       ],
@@ -20362,7 +20748,7 @@
         }
       }
     },
-    "235:10": {
+    "241:10": {
       "preRequisites:11": [
         245
       ],
@@ -20446,7 +20832,7 @@
         }
       }
     },
-    "236:10": {
+    "242:10": {
       "preRequisites:11": [
         248
       ],
@@ -20520,7 +20906,7 @@
         }
       }
     },
-    "237:10": {
+    "243:10": {
       "preRequisites:11": [
         249,
         248
@@ -20605,7 +20991,7 @@
         }
       }
     },
-    "238:10": {
+    "244:10": {
       "preRequisites:11": [
         250
       ],
@@ -20704,7 +21090,7 @@
         }
       }
     },
-    "239:10": {
+    "245:10": {
       "preRequisites:11": [
         251
       ],
@@ -20779,7 +21165,7 @@
         }
       }
     },
-    "240:10": {
+    "246:10": {
       "preRequisites:11": [
         252
       ],
@@ -20886,7 +21272,7 @@
         }
       }
     },
-    "241:10": {
+    "247:10": {
       "preRequisites:11": [
         252
       ],
@@ -20982,7 +21368,7 @@
         }
       }
     },
-    "242:10": {
+    "248:10": {
       "preRequisites:11": [
         239
       ],
@@ -21074,7 +21460,7 @@
         }
       }
     },
-    "243:10": {
+    "249:10": {
       "preRequisites:11": [
         255
       ],
@@ -21192,7 +21578,7 @@
         }
       }
     },
-    "244:10": {
+    "250:10": {
       "preRequisites:11": [
         256
       ],
@@ -21284,7 +21670,7 @@
         }
       }
     },
-    "245:10": {
+    "251:10": {
       "preRequisites:11": [
         257
       ],
@@ -21376,7 +21762,7 @@
         }
       }
     },
-    "246:10": {
+    "252:10": {
       "preRequisites:11": [
         258
       ],
@@ -21498,7 +21884,7 @@
         }
       }
     },
-    "247:10": {
+    "253:10": {
       "preRequisites:11": [
         252
       ],
@@ -21590,7 +21976,7 @@
         }
       }
     },
-    "248:10": {
+    "254:10": {
       "preRequisites:11": [
         252
       ],
@@ -21682,7 +22068,7 @@
         }
       }
     },
-    "249:10": {
+    "255:10": {
       "preRequisites:11": [
         259
       ],
@@ -21756,7 +22142,7 @@
         }
       }
     },
-    "250:10": {
+    "256:10": {
       "preRequisites:11": [
         262
       ],
@@ -21848,7 +22234,7 @@
         }
       }
     },
-    "251:10": {
+    "257:10": {
       "preRequisites:11": [
         263
       ],
@@ -21932,7 +22318,7 @@
         }
       }
     },
-    "252:10": {
+    "258:10": {
       "preRequisites:11": [
         264
       ],
@@ -22015,7 +22401,7 @@
         }
       }
     },
-    "253:10": {
+    "259:10": {
       "preRequisites:11": [
         243
       ],
@@ -22089,7 +22475,7 @@
         }
       }
     },
-    "254:10": {
+    "260:10": {
       "preRequisites:11": [
         123
       ],
@@ -22173,7 +22559,7 @@
         }
       }
     },
-    "255:10": {
+    "261:10": {
       "preRequisites:11": [
         236
       ],
@@ -22256,7 +22642,7 @@
         }
       }
     },
-    "256:10": {
+    "262:10": {
       "preRequisites:11": [
         252
       ],
@@ -22308,7 +22694,7 @@
         }
       }
     },
-    "257:10": {
+    "263:10": {
       "preRequisites:11": [
         236
       ],
@@ -22372,7 +22758,7 @@
         }
       }
     },
-    "258:10": {
+    "264:10": {
       "preRequisites:11": [
         275
       ],
@@ -22431,7 +22817,7 @@
         }
       }
     },
-    "259:10": {
+    "265:10": {
       "preRequisites:11": [
         275
       ],
@@ -22490,7 +22876,7 @@
         }
       }
     },
-    "260:10": {
+    "266:10": {
       "preRequisites:11": [
         275
       ],
@@ -22549,7 +22935,7 @@
         }
       }
     },
-    "261:10": {
+    "267:10": {
       "preRequisites:11": [
         275
       ],
@@ -22608,7 +22994,7 @@
         }
       }
     },
-    "262:10": {
+    "268:10": {
       "preRequisites:11": [
         275
       ],
@@ -22667,7 +23053,7 @@
         }
       }
     },
-    "263:10": {
+    "269:10": {
       "preRequisites:11": [
         200
       ],
@@ -22719,7 +23105,7 @@
         }
       }
     },
-    "264:10": {
+    "270:10": {
       "preRequisites:11": [
         200
       ],
@@ -22793,7 +23179,7 @@
         }
       }
     },
-    "265:10": {
+    "271:10": {
       "preRequisites:11": [
         281
       ],
@@ -22910,7 +23296,7 @@
         }
       }
     },
-    "266:10": {
+    "272:10": {
       "preRequisites:11": [
         281
       ],
@@ -23027,7 +23413,7 @@
         }
       }
     },
-    "267:10": {
+    "273:10": {
       "preRequisites:11": [
         281
       ],
@@ -23144,7 +23530,7 @@
         }
       }
     },
-    "268:10": {
+    "274:10": {
       "preRequisites:11": [
         281
       ],
@@ -23261,7 +23647,7 @@
         }
       }
     },
-    "269:10": {
+    "275:10": {
       "preRequisites:11": [
         281
       ],
@@ -23365,7 +23751,7 @@
         }
       }
     },
-    "270:10": {
+    "276:10": {
       "preRequisites:11": [
         287
       ],
@@ -23454,7 +23840,7 @@
         }
       }
     },
-    "271:10": {
+    "277:10": {
       "preRequisites:11": [
         287
       ],
@@ -23528,7 +23914,7 @@
         }
       }
     },
-    "272:10": {
+    "278:10": {
       "preRequisites:11": [
         245
       ],
@@ -23603,7 +23989,7 @@
         }
       }
     },
-    "273:10": {
+    "279:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -23649,7 +24035,7 @@
         }
       }
     },
-    "274:10": {
+    "280:10": {
       "preRequisites:11": [
         251
       ],
@@ -23711,7 +24097,7 @@
         }
       }
     },
-    "275:10": {
+    "281:10": {
       "preRequisites:11": [
         292
       ],
@@ -23773,7 +24159,7 @@
         }
       }
     },
-    "276:10": {
+    "282:10": {
       "preRequisites:11": [
         290
       ],
@@ -23848,7 +24234,7 @@
         }
       }
     },
-    "277:10": {
+    "283:10": {
       "preRequisites:11": [
         236
       ],
@@ -23934,7 +24320,7 @@
         }
       }
     },
-    "278:10": {
+    "284:10": {
       "preRequisites:11": [
         295
       ],
@@ -23996,7 +24382,7 @@
         }
       }
     },
-    "279:10": {
+    "285:10": {
       "preRequisites:11": [
         295
       ],
@@ -24058,7 +24444,7 @@
         }
       }
     },
-    "280:10": {
+    "286:10": {
       "preRequisites:11": [
         236
       ],
@@ -24129,7 +24515,7 @@
         }
       }
     },
-    "281:10": {
+    "287:10": {
       "preRequisites:11": [
         200
       ],
@@ -24203,7 +24589,7 @@
         }
       }
     },
-    "282:10": {
+    "288:10": {
       "preRequisites:11": [
         259
       ],
@@ -24255,7 +24641,7 @@
         }
       }
     },
-    "283:10": {
+    "289:10": {
       "preRequisites:11": [
         174
       ],
@@ -24325,7 +24711,7 @@
         }
       }
     },
-    "284:10": {
+    "290:10": {
       "preRequisites:11": [
         301
       ],
@@ -24377,7 +24763,7 @@
         }
       }
     },
-    "285:10": {
+    "291:10": {
       "preRequisites:11": [
         302
       ],
@@ -24437,7 +24823,7 @@
         }
       }
     },
-    "286:10": {
+    "292:10": {
       "preRequisites:11": [
         303
       ],
@@ -24499,7 +24885,7 @@
         }
       }
     },
-    "287:10": {
+    "293:10": {
       "preRequisites:11": [
         304
       ],
@@ -24559,7 +24945,7 @@
         }
       }
     },
-    "288:10": {
+    "294:10": {
       "preRequisites:11": [
         112
       ],
@@ -24643,7 +25029,7 @@
         }
       }
     },
-    "289:10": {
+    "295:10": {
       "preRequisites:11": [
         300
       ],
@@ -24695,7 +25081,7 @@
         }
       }
     },
-    "290:10": {
+    "296:10": {
       "preRequisites:11": [
         259
       ],
@@ -24787,7 +25173,7 @@
         }
       }
     },
-    "291:10": {
+    "297:10": {
       "preRequisites:11": [
         259
       ],
@@ -24879,7 +25265,7 @@
         }
       }
     },
-    "292:10": {
+    "298:10": {
       "preRequisites:11": [
         259
       ],
@@ -24971,7 +25357,7 @@
         }
       }
     },
-    "293:10": {
+    "299:10": {
       "preRequisites:11": [
         259
       ],
@@ -25063,7 +25449,7 @@
         }
       }
     },
-    "294:10": {
+    "300:10": {
       "preRequisites:11": [
         104
       ],
@@ -25155,7 +25541,7 @@
         }
       }
     },
-    "295:10": {
+    "301:10": {
       "preRequisites:11": [
         104
       ],
@@ -25247,7 +25633,7 @@
         }
       }
     },
-    "296:10": {
+    "302:10": {
       "preRequisites:11": [
         174
       ],
@@ -25339,7 +25725,7 @@
         }
       }
     },
-    "297:10": {
+    "303:10": {
       "preRequisites:11": [
         174
       ],
@@ -25431,7 +25817,7 @@
         }
       }
     },
-    "298:10": {
+    "304:10": {
       "preRequisites:11": [
         112
       ],
@@ -25493,7 +25879,7 @@
         }
       }
     },
-    "299:10": {
+    "305:10": {
       "preRequisites:11": [
         314
       ],
@@ -25577,7 +25963,7 @@
         }
       }
     },
-    "300:10": {
+    "306:10": {
       "preRequisites:11": [
         314
       ],
@@ -25661,7 +26047,7 @@
         }
       }
     },
-    "301:10": {
+    "307:10": {
       "preRequisites:11": [
         324,
         325
@@ -25746,7 +26132,7 @@
         }
       }
     },
-    "302:10": {
+    "308:10": {
       "preRequisites:11": [
         329
       ],
@@ -25838,7 +26224,7 @@
         }
       }
     },
-    "303:10": {
+    "309:10": {
       "preRequisites:11": [
         327,
         166
@@ -25913,7 +26299,7 @@
         }
       }
     },
-    "304:10": {
+    "310:10": {
       "preRequisites:11": [
         300
       ],
@@ -25987,7 +26373,7 @@
         }
       }
     },
-    "305:10": {
+    "311:10": {
       "preRequisites:11": [
         328
       ],
@@ -26079,7 +26465,7 @@
         }
       }
     },
-    "306:10": {
+    "312:10": {
       "preRequisites:11": [
         330,
         328
@@ -26154,7 +26540,7 @@
         }
       }
     },
-    "307:10": {
+    "313:10": {
       "preRequisites:11": [
         326
       ],
@@ -26225,7 +26611,7 @@
         }
       }
     },
-    "308:10": {
+    "314:10": {
       "preRequisites:11": [
         328
       ],
@@ -26327,7 +26713,7 @@
         }
       }
     },
-    "309:10": {
+    "315:10": {
       "preRequisites:11": [
         333
       ],
@@ -26410,7 +26796,7 @@
         }
       }
     },
-    "310:10": {
+    "316:10": {
       "preRequisites:11": [
         333
       ],
@@ -26485,7 +26871,7 @@
         }
       }
     },
-    "311:10": {
+    "317:10": {
       "preRequisites:11": [
         335,
         334
@@ -26569,7 +26955,7 @@
         }
       }
     },
-    "312:10": {
+    "318:10": {
       "preRequisites:11": [
         300
       ],
@@ -26711,7 +27097,7 @@
           "id:3": 8,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
+          "x:3": -72,
           "y:3": 264
         },
         "9:10": {
@@ -26781,8 +27167,8 @@
           "id:3": 18,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 552
+          "x:3": -12,
+          "y:3": 594
         },
         "19:10": {
           "id:3": 19,
@@ -26800,17 +27186,17 @@
         },
         "21:10": {
           "id:3": 21,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 552
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -18,
+          "y:3": 546
         },
         "22:10": {
           "id:3": 22,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": 564
+          "x:3": 210,
+          "y:3": 252
         },
         "23:10": {
           "id:3": 23,
@@ -26828,10 +27214,10 @@
         },
         "25:10": {
           "id:3": 25,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 114,
-          "y:3": 576
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 210,
+          "y:3": 312
         },
         "26:10": {
           "id:3": 26,
@@ -26865,73 +27251,115 @@
           "id:3": 30,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": 630
+          "x:3": 288,
+          "y:3": 252
         },
         "31:10": {
           "id:3": 61,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": 642
+          "x:3": 300,
+          "y:3": 318
         },
         "32:10": {
           "id:3": 62,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": 642
+          "x:3": 300,
+          "y:3": 210
         },
         "33:10": {
+          "id:3": 74,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 264
+        },
+        "34:10": {
           "id:3": 87,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 252
         },
-        "34:10": {
+        "35:10": {
           "id:3": 88,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 144
         },
-        "35:10": {
+        "36:10": {
           "id:3": 89,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -192,
           "y:3": 492
         },
-        "36:10": {
+        "37:10": {
           "id:3": 90,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 360
         },
-        "37:10": {
+        "38:10": {
           "id:3": 91,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -192,
           "y:3": 300
         },
-        "38:10": {
+        "39:10": {
           "id:3": 93,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 384
         },
-        "39:10": {
+        "40:10": {
+          "id:3": 106,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 264
+        },
+        "41:10": {
+          "id:3": 107,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
+          "y:3": 264
+        },
+        "42:10": {
+          "id:3": 117,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 216
+        },
+        "43:10": {
+          "id:3": 118,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 216
+        },
+        "44:10": {
+          "id:3": 125,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
+          "y:3": 216
+        },
+        "45:10": {
           "id:3": 135,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 36
         },
-        "40:10": {
+        "46:10": {
           "id:3": 149,
           "sizeX:3": 24,
           "sizeY:3": 24,
