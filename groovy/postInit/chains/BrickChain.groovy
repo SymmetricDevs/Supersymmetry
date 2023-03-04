@@ -15,8 +15,8 @@ for (name in name_removals) {
 
 // Creates Compressed brick recipes
 def CompressBrickRecipes(brick_mix, compressed_brick) {
-    crafting.addShapeless(metaitem(compressed_brick), [metaitem('wooden_form.brick'), metaitem(brick_mix)]) 
-    crafting.addShaped(metaitem(compressed_brick) * 8, [
+    crafting.addShapeless('Compress' + brick_mix + '_1',metaitem(compressed_brick), [metaitem('wooden_form.brick'), metaitem(brick_mix)]) 
+    crafting.addShaped('Compress' + brick_mix + '_8',metaitem(compressed_brick) * 8, [
         [metaitem(brick_mix),metaitem(brick_mix),metaitem(brick_mix)],
         [metaitem(brick_mix),metaitem('wooden_form.brick'), metaitem(brick_mix)],
         [metaitem(brick_mix),metaitem(brick_mix),metaitem(brick_mix)]
@@ -39,9 +39,9 @@ def compressed_fireclay_ingredients = [
 ]
 
 furnace.add(ore('stoneLimestone'), item('gregtech:meta_dust', 360))
-crafting.addShapeless(metaitem('sand.dust') * 4, [item('minecraft:sand')]) 
-crafting.addShapeless(metaitem('slaked_lime'), [item('minecraft:water_bucket'), item('gregtech:meta_dust', 360)]) 
-crafting.addShapeless(metaitem('dustFireclay') * 2, fireclay_ingredients) 
+crafting.addShapeless('ManualFineSandPile',metaitem('sand.dust') * 4, [item('minecraft:sand')]) 
+crafting.addShapeless('ManualSlakedLime',metaitem('slaked_lime'), [fluid('minecraft:water'), item('gregtech:meta_dust', 360)]) 
+crafting.addShapeless('ManualFireclay',metaitem('dustFireclay') * 2, fireclay_ingredients) 
 
 CompressBrickRecipes('dustFireclay', 'compressed.fireclay')
 
@@ -54,7 +54,7 @@ def mudbrick_mix_ingredients = [
     item('minecraft:clay_ball')
 ]
 
-crafting.addShapeless(metaitem('mudbrick_mix') * 2, mudbrick_mix_ingredients) 
-crafting.addShapeless(metaitem('straw') * 2, [ore('craftingToolKnife'), item('notreepunching:grass_fiber')]) 
+crafting.addShapeless('ManualMudbrickMix',metaitem('mudbrick_mix') * 2, mudbrick_mix_ingredients) 
+crafting.addShapeless('StrawCutting',metaitem('straw') * 2, [ore('craftingToolKnife'), item('notreepunching:grass_fiber')]) 
 
 CompressBrickRecipes('mudbrick_mix', 'brick.adobe')

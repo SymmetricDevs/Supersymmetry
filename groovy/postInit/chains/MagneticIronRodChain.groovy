@@ -20,22 +20,22 @@ crafting.removeByOutput(metaitem('stickIronMagnetic'))
 
 furnace.add(metaitem('stickIron'), metaitem('hot_iron_rod'))
 
-crafting.addShapeless(metaitem('electrolyte_paper'), [
+crafting.addShapeless('ElectrolytePaperSalt',metaitem('electrolyte_paper'), [
     item('forge:bucketfilled').withNbt([FluidName: "salt_water", Amount: 1000]),
     item('minecraft:paper')
 ]) 
-crafting.addShapeless(metaitem('electrolyte_paper'), [
+crafting.addShapeless('ElectrolytePaperFruit',metaitem('electrolyte_paper'), [
     ore('electrolyteFruit'),
     item('minecraft:paper'),
     ore('craftingToolMortar')
 ]) 
-crafting.addShapeless(metaitem('stickIronMagnetic') * 2, [
+crafting.addShapeless('MagneticIronDuplication',metaitem('stickIronMagnetic') * 2, [
     metaitem('hot_iron_rod'), 
     metaitem('stickIronMagnetic')
 ])
-crafting.addShapeless(metaitem('stickIronMagnetic'), [
+crafting.addShapeless('MagneticIronMagentite',metaitem('stickIronMagnetic'), [
     metaitem('hot_iron_rod'), 
     metaitem('chunk.magnetite')
 ])
-crafting.addShaped(metaitem('stickIronMagnetic'), magnetic_rod_ingredients)
-crafting.addShaped(metaitem('voltaic_pile'), voltaic_pile_ingredients)
+crafting.addShaped('MagneticRodVoltaic',metaitem('stickIronMagnetic'), magnetic_rod_ingredients)
+crafting.addShaped('VoltaicPileCrafting',metaitem('voltaic_pile'), voltaic_pile_ingredients)

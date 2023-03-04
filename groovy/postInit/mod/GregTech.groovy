@@ -1,7 +1,6 @@
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;
 
-/*
 println("Running GregTech.groovy...")
 
 def name_removals = [
@@ -17,6 +16,7 @@ crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bron
     [ore('plateBronze'), item('gregtech:metal_casing:1'), ore('stickBronze')],
     [ore('craftingToolScrewdriver'), ore('stickBronze'), ore('screwBronze')]
 ])
+
 
 crafting.addShaped('gregtech:co_bronze', metaitem('coke_oven'), [
     [item('gregtech:metal_casing:8'), ore('plateBronze'), item('gregtech:metal_casing:8')],
@@ -44,13 +44,13 @@ crafting.addShapeless("manual_chad", metaitem('dustPaper'), [
         fluid('water')
 ]);
 
-mods.gregtech.alloy_smelter.recipeBuilder()
-        .inputs(ore('dustRawRubber') * 6)
-        .inputs(ore('dustSulfur'))
-        .outputs(metaitem('dustRubber'))
-        .duration(400)
-        .EUt(8)
-        .buildAndRegister();
+// mods.gregtech.alloy_smelter.recipeBuilder()
+//         .inputs(ore('dustRawRubber') * 6)
+//         .inputs(ore('dustSulfur'))
+//         .outputs(metaitem('dustRubber'))
+//         .duration(400)
+//         .EUt(8)
+//         .buildAndRegister();
 
 mods.gregtech.electric_blast_furnace.recipeBuilder()
         .inputs(ore('dustIron'))
@@ -71,4 +71,3 @@ mods.gregtech.electric_blast_furnace.recipeBuilder()
 //TechGuns carbon plate removal
 // Carbon Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('carbon') * 144])
-*/
