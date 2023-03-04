@@ -40,9 +40,7 @@ def compressed_fireclay_ingredients = [
 
 furnace.add(ore('stoneLimestone'), item('gregtech:meta_dust', 360))
 crafting.addShapeless(metaitem('sand.dust') * 4, [item('minecraft:sand')]) 
-
 crafting.addShapeless(metaitem('slaked_lime'), [item('minecraft:water_bucket'), item('gregtech:meta_dust', 360)]) 
-
 crafting.addShapeless(metaitem('dustFireclay') * 2, fireclay_ingredients) 
 
 CompressBrickRecipes('dustFireclay', 'compressed.fireclay')
@@ -57,5 +55,6 @@ def mudbrick_mix_ingredients = [
 ]
 
 crafting.addShapeless(metaitem('mudbrick_mix') * 2, mudbrick_mix_ingredients) 
+crafting.addShapeless(metaitem('straw') * 2, [ore('craftingToolKnife'), item('notreepunching:grass_fiber')]) 
 
 CompressBrickRecipes('mudbrick_mix', 'brick.adobe')

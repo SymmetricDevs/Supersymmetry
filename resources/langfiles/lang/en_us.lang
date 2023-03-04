@@ -414,7 +414,8 @@ metaitem.voltaic_pile.name=Voltaic Pile
 metaitem.electrolyte_paper.name=Electrolyte Paper
 metaitem.sand.dust.name=Fine Pile of Sand
 metaitem.straw.name=Straw
-metaitem.mudbrick_mix=Mudbrick Mix
+metaitem.mudbrick_mix.name=Mudbrick Mix
+metaitem.slaked_lime.name=Slaked Lime
 
 metaitem.spaceship.me.scrap.name=Orbital Scrap
 metaitem.wafer.pattern.processor.name=Pattern CPU Wafer
