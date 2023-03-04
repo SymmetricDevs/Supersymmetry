@@ -278,6 +278,14 @@ class RegisterFluids{
                         .color(0x6503b6)
                         .build();
 
+
+                new Material.Builder(32001, 'pig_iron')
+                        .ingot().dust()
+                        //.components(Iron, 1)
+                        .flags(GENERATE_PLATE)
+                        .color(0x99918A)
+                        .build();
+
                 log.infoMC("Finished adding fluids")
         }
 
