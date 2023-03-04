@@ -28,6 +28,12 @@ eventManager.listen {
         customMetaItems.addItem(102, "cement.dust")
         customMetaItems.addItem(103, "limestone.dust")
 
+        customMetaItems.addItem(150, "mudbrick_mix")
+        customMetaItems.addItem(151, "slaked_lime")
+        customMetaItems.addItem(152, "sand.dust")
+        customMetaItems.addItem(153, "straw")
+
+
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);
