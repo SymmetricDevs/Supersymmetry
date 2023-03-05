@@ -46,30 +46,6 @@
           "index:3": 0,
           "isLevels:1": 1,
           "rewardID:8": "bq_standard:xp"
-        },
-        "1:10": {
-          "index:3": 1,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 8,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:potion",
-              "tag:10": {
-                "Potion:8": "minecraft:water"
-              }
-            }
-          }
         }
       },
       "tasks:9": {
@@ -606,29 +582,7 @@
         }
       },
       "questID:3": 5,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 3,
-              "Damage:2": 72,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -698,29 +652,7 @@
         }
       },
       "questID:3": 6,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "notreepunching:knife/flint"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -1012,7 +944,7 @@
             "id:8": "gregtech:ore_magnetite_0"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Magnetite",
@@ -1717,29 +1649,7 @@
         }
       },
       "questID:3": 19,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 67,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -1801,20 +1711,7 @@
         }
       },
       "questID:3": 20,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:ore_diamond_0"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -1896,29 +1793,7 @@
         }
       },
       "questID:3": 21,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 15,
-              "Damage:2": 263,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -2134,29 +2009,7 @@
         }
       },
       "questID:3": 22,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 64,
-              "Damage:2": 306,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -2372,12 +2225,12 @@
     },
     "25:10": {
       "preRequisites:11": [
-        22
+        129
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§7Iron §ris the most common element on planet Earth. It is used for refining it into §6steel§r [see Chapter 1] and for basic tools. It is one of the most important metals of the Industrial Age.\n\nExtracting usable metal from iron ores requires kilns or furnaces (such as a §cBlast Furnace§r) capable of reaching 1,500 °C (1,773K) or higher, about 500 °C higher than that required to smelt copper. \n\nIron ore is found in §6Magnetite, Pyrite§r§6, Hematite, Yellow Limonite, Brown Limonite, §6Basaltic Mineral Sand, Granitic Mineral Sand or Iron ores.§r\n\nWe can start by getting 32 ingots of iron. ",
+          "desc:8": "§7Iron §ris the most common element on planet Earth. It is used for refining it into §6steel§r [see Chapter 1] and for basic tools. It is one of the most important metals of the Industrial Age.\n\nExtracting usable metal from iron ores requires kilns or furnaces (such as a §cBlast Furnace§r) capable of reaching 1,500 °C (1,773K) or higher, about 500 °C higher than that required to smelt copper. \n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2410,39 +2263,7 @@
         }
       },
       "questID:3": 25,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 8,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "contenttweaker:magnetite_chunk",
-                "orig_meta:3": 0
-              }
-            },
-            "1:10": {
-              "Count:3": 16,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:iron_ingot"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -2569,7 +2390,7 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Magnetite Chunks",
@@ -2817,12 +2638,12 @@
     },
     "30:10": {
       "preRequisites:11": [
-        22
+        25
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A Primitive Blast Furnace can turn iron ingots into §l§esteel§r, by smelting them with coal coke. \n\nMaking steel is one of the top priorities of the Industrial Age. Make sure to have your Primitive Blast Furnace running at all times, or try to make 4 Primitive Blast Furnaces sharing their walls.",
+          "desc:8": "§6Steel§r is an alloy of iron and carbon with §6improved strength§r and fracture resistance compared to other forms of iron.\n\nA §cPrimitive Blast Furnace §rcan turn iron ingots into §l§esteel§r, by smelting them with coal coke. \n\nMaking steel is one of the top priorities of the Industrial Age. Make sure to have your Primitive Blast Furnace running at all times, or try to make 4 Primitive Blast Furnaces sharing their walls.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2850,65 +2671,7 @@
         }
       },
       "questID:3": 30,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "gregtech:warning_sign_1"
-            },
-            "1:10": {
-              "Count:3": 4,
-              "Damage:2": 350,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            },
-            "2:10": {
-              "Count:3": 3,
-              "Damage:2": 67,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            },
-            "3:10": {
-              "Count:3": 2,
-              "Damage:2": 93,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -3947,166 +3710,6 @@
     },
     "44:10": {
       "preRequisites:11": [
-        45
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "It\u0027s time to start constructing the first piece of circuitry, the §aVacuum Tube§r. To make the components we will need §6Gold§r (or §eGlowstone§r, if you\u0027ve been to the Nether), some steel and some copper. ",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 51,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gcys:meta_item_1",
-              "orig_meta:3": 51
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Vacuum Tube Components",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 44,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 40,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:glass"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 51,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "gcys:meta_item_1",
-                "orig_meta:3": 51
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "45:10": {
-      "preRequisites:11": [
-        32,
-        38
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "To make vacuum tubes, we must obviously get vacuum. The easiest way to make it in the Steam Age is by using §6vacuum ejectors§r.\n\nVacuum ejectors are a clever machine that makes vacuum only by §6using steam§r. The Steam Ejector requires §6steel§r, so make sure to build a Blast Furnace before continuing.\n\nThe Steam Ejector will consume steam and lower its pressure down to §6130uPa§r (0.00013Pa) over time. Vacuum Tubes will require the §6Vacuum Chamber§r to be produced. You have to hook up the §6Output Side §rof the Steam Ejector to the Vacuum Chamber to make it work.\n\nThe Steam Ejector will not blow things up. However c§6onnecting a pressurized container§r to something that cannot handle that pressure will cause and §cimplosion§r (if it\u0027s under the required pressure) or §cexplosion§r (if it\u0027s over), so be careful!",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 2100,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Under Pressure",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 45,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 32,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:glass"
-            },
-            "1:10": {
-              "Count:3": 16,
-              "Damage:2": 255,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 2100,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 2101,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "46:10": {
-      "preRequisites:11": [
         41
       ],
       "properties:10": {
@@ -4188,7 +3791,7 @@
         }
       }
     },
-    "47:10": {
+    "45:10": {
       "preRequisites:11": [
         300
       ],
@@ -4331,174 +3934,14 @@
         }
       }
     },
-    "48:10": {
-      "preRequisites:11": [
-        75
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §bBottling Machine§r is a 3x2x3 multi-block. It is used to fill liquid containers.\n\nThe Bottling Machine requires:\n\n3 Steel Scaffolding\n2 Iron Sheetmetal\n1 Redstone Engineering Block\n2 Light Engineering Blocks\n3 Conveyor Belts\n1 Fluid Pump\n1 Glass\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the bottling machine is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack the middle conveyor with the §6Engineer\u0027s Hammer §rto form the multiblock.\nIf the bottling machine doesn\u0027t form, you may try switching the order of the conveyors. \n\nThe Bottling Machine has no GUI. Redstone Flux is supplied on the §6top-right§r block of the multi-block (where the Light Engineering Block was).\nIf you cannot get fluid to go in the machine, try putting a tank near it and using a §7LV Pump §rand fluid pipes to transfer the fluid.\n\nFluids are added through the bottom-middle block of the backside. Items are added by dropping them on the Bottling Machine\u0027s Conveyor Belts. When a liquid storing item (such as a Bucket or Jerrycan) is introduced to the Bottling Machine, the Bottling Machine will fill and output it, consuming some RF.\n\n{ResourceLocation:supersymmetry:guides/ie-bottler.png}\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 6,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersiveengineering:metal_multiblock",
-              "orig_meta:3": 6
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§c§lDEPRECATED Bottling Machine",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 48,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 8,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:glass_bottle"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "extremely_high_vacuum"
-              }
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 3,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration1",
-                "orig_meta:3": 1
-              }
-            },
-            "1:10": {
-              "Count:3": 2,
-              "Damage:2": 9,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:sheetmetal",
-                "orig_meta:3": 9
-              }
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 3
-              }
-            },
-            "3:10": {
-              "Count:3": 2,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 4
-              }
-            },
-            "4:10": {
-              "Count:3": 3,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:conveyor",
-                "orig_meta:3": 0,
-                "orig_tag:10": {
-                  "conveyorType:8": "immersiveengineering:conveyor"
-                }
-              }
-            },
-            "5:10": {
-              "Count:3": 1,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_device0",
-                "orig_meta:3": 5
-              }
-            },
-            "6:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:glass"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "49:10": {
+    "46:10": {
       "preRequisites:11": [
         26
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "We\u0027ll need a §amotor §rto generate electricity. Let\u0027s make one.\n\n§cNOTE: In later stages of the pack, you will need to make a LOT of motors. You should start crafting a batch of motors instead of just one, to reduce the pain.\n\n",
+          "desc:8": "§aMotors §rare required to generate electricity. In later stages, you will need to build hundreds if not thousands of Motors at once for mass-producing machinery. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4531,44 +3974,7 @@
         }
       },
       "questID:3": 49,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 32,
-              "Damage:2": 274,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotCupronickel",
-              "id:8": "gregtech:meta_ingot"
-            },
-            "1:10": {
-              "Count:3": 32,
-              "Damage:2": 259,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotBrass",
-              "id:8": "gregtech:meta_ingot"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -4598,337 +4004,8 @@
         }
       }
     },
-    "50:10": {
+    "47:10": {
       "preRequisites:11": [
-        49
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Our first option for electricity right now is §6kinetic energy§r. You can make it with a §6kinetic dynamo§r.\n\nYou can attach a §ewindmill §ror a §bwaterwheel §rto your kinetic dynamo. We\u0027ll explain those in a later quest.\n\n\n\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 2,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersiveengineering:metal_device1",
-              "orig_meta:3": 2
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Pain Engine",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 50,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 1,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:golden_apple"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 2,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_device1",
-                "orig_meta:3": 2
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "51:10": {
-      "preRequisites:11": [
-        50
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §bWater Wheel§r must be connected to a §3flowing water stream§r in order to work, and the amount of power produced scales directly with the number of flowing water blocks adjacent to the wheel. \n\nThe maximum amount of power that a Water Wheel can produce is §c30 RF/t§r, which arises from a water source flowing \"in a semi-circle from the top down one side and along the bottom.\"\n\nYou can put up to three Water Wheels on one dynamo to maximize energy output.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersiveengineering:wooden_device1",
-              "orig_meta:3": 0
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Haha, water go swoosh",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 51,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 32,
-              "Damage:2": 260,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotBronze",
-              "id:8": "gregtech:meta_ingot"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:wooden_device1",
-                "orig_meta:3": 0
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "52:10": {
-      "preRequisites:11": [
-        50
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §eWindmill§r generates §cRF§r using the power of the wind. The power output can be improved by using a §eWindmill Sail§r on the hub to cover a single blade in fabric. The Windmill reaches maximum output (§c35 RF/t§r) once all 8 blades are improved this way. The Windmill also generates more power when it\u0027s raining or thundering.\n\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersiveengineering:wooden_device1",
-              "orig_meta:3": 1
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Spinny-Go-Fast",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 52,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:seed",
-                "orig_meta:3": 0
-              }
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:wooden_device1",
-                "orig_meta:3": 1
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "53:10": {
-      "preRequisites:11": [
-        49,
-        75
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §d§cThermoelectric Generator§r generates §cRF§r based on the temperature difference of the blocks surrounding it.\n\nThe §chigh-temperature§r and §blow-temperature§r blocks need to be across from each other. For example, you can put a block of water and a block of lava right next to the generator,",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 3,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersiveengineering:metal_device1",
-              "orig_meta:3": 3
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Thermoelectric Engine",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 53,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 5,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "purified_water"
-              }
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_device1",
-                "orig_meta:3": 3
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "54:10": {
-      "preRequisites:11": [
-        44,
         43,
         46
       ],
@@ -5020,7 +4097,7 @@
         }
       }
     },
-    "55:10": {
+    "48:10": {
       "preRequisites:11": [
         33
       ],
@@ -5068,7 +4145,7 @@
         }
       }
     },
-    "56:10": {
+    "49:10": {
       "preRequisites:11": [
         31
       ],
@@ -5133,7 +4210,7 @@
         }
       }
     },
-    "57:10": {
+    "50:10": {
       "preRequisites:11": [
         31
       ],
@@ -5185,7 +4262,7 @@
         }
       }
     },
-    "58:10": {
+    "51:10": {
       "preRequisites:11": [
         31
       ],
@@ -5237,14 +4314,14 @@
         }
       }
     },
-    "59:10": {
+    "52:10": {
       "preRequisites:11": [
         31
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "There are two different options for fluid storage\n\n- §6Drums§o§r: they can be made of various materials, but only occupy 1 m^3 of space\n\n- §6Industrial Renewal tanks§r: they are harder to build, but they can contain more fluid.\n\n",
+          "desc:8": "There are two different options for fluid storage at this stage.\n\n- §6Drums§o§r: they can be made of various materials, but don\u0027t occupy much space\n\n- §6Industrial Renewal tanks§r: they are harder to build, but they can contain more fluid.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5289,7 +4366,7 @@
         }
       }
     },
-    "60:10": {
+    "53:10": {
       "preRequisites:11": [
         47
       ],
@@ -5341,7 +4418,7 @@
         }
       }
     },
-    "61:10": {
+    "54:10": {
       "preRequisites:11": [
         30
       ],
@@ -5386,29 +4463,7 @@
         }
       },
       "questID:3": 61,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "biomesoplenty:ricebowl"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -5458,7 +4513,7 @@
         }
       }
     },
-    "62:10": {
+    "55:10": {
       "preRequisites:11": [
         30
       ],
@@ -5503,29 +4558,7 @@
         }
       },
       "questID:3": 62,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 2,
-              "Damage:2": 68,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -5575,7 +4608,7 @@
         }
       }
     },
-    "63:10": {
+    "56:10": {
       "preRequisites:11": [
         31
       ],
@@ -5692,7 +4725,7 @@
         }
       }
     },
-    "64:10": {
+    "57:10": {
       "preRequisites:11": [
         54
       ],
@@ -5784,7 +4817,7 @@
         }
       }
     },
-    "65:10": {
+    "58:10": {
       "preRequisites:11": [
         54
       ],
@@ -5933,7 +4966,7 @@
         }
       }
     },
-    "66:10": {
+    "59:10": {
       "preRequisites:11": [
         54,
         64,
@@ -6057,7 +5090,7 @@
         }
       }
     },
-    "67:10": {
+    "60:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -6106,7 +5139,7 @@
         }
       }
     },
-    "68:10": {
+    "61:10": {
       "preRequisites:11": [
         67
       ],
@@ -6157,7 +5190,7 @@
         }
       }
     },
-    "69:10": {
+    "62:10": {
       "preRequisites:11": [
         68
       ],
@@ -6208,7 +5241,7 @@
         }
       }
     },
-    "70:10": {
+    "63:10": {
       "preRequisites:11": [
         67
       ],
@@ -6259,364 +5292,7 @@
         }
       }
     },
-    "71:10": {
-      "preRequisites:11": [
-        75
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §bMetal Press§r is a 3x1x3 multi-block. It is used to mold metals, and it makes plates at a higher efficiency.\n\nThe Metal Press requires:\n\n2 Steel Scaffoldings\n1 Redstone Engineering Block\n1 Piston\n1 Heavy Engineering Block\n2 Conveyor Belts\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the metal press is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack the middle conveyor with the §6Engineer\u0027s Hammer §rto form the multiblock.\nItems are added by dropping them onto the structure. Right-clicking (a Metal Press with a Mold will attach the Mold to the Metal Press. The mold can be detached by shift right-clicking with an Engineer\u0027s Hammer.\n\n{ResourceLocation:supersymmetry:guides/ie-metalpress.png}\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersiveengineering:metal_multiblock",
-              "orig_meta:3": 0
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§c§lDEPRECATED Metal Press",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 71,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 32,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:torch"
-            },
-            "1:10": {
-              "Count:3": 32,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:iron_ingot"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 2,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration1",
-                "orig_meta:3": 1
-              }
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 3
-              }
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:piston"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 5
-              }
-            },
-            "4:10": {
-              "Count:3": 2,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:conveyor",
-                "orig_meta:3": 0,
-                "orig_tag:10": {
-                  "conveyorType:8": "immersiveengineering:conveyor"
-                }
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "72:10": {
-      "preRequisites:11": [
-        75
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Tesla Coil§r protects a 13x13x13 area by shocking mobs that enter the area. \nIn order to protect the area, the Tesla Coil needs to consume §c256 RF/t§r, and needs to consume 512 RF each time it shocks a mob.\n\nThe Tesla Coil must be powered by §cRedstone§r in order to function. This can be inverted by right-clicking the Tesla Coil with an Engineer\u0027s Hammer.\nThe Tesla Coil\u0027s §6electricity damage§r will cook animal meat, but it will not create charged creepers.\n\nBy default, the Tesla Coil is in high-power mode. §2Shift-clicking §rthe coil will turn it into low-power mode, which consumes half the power but with only half the range. If you change the mode of the coil while it\u0027s active, you will §c§ndie instantly.§r\n\nWearing a §bFaraday suit§r near a low-power Tesla Coil will prevent any damage being caused to the user, but wearing a Faraday suit near a high-power Tesla Coil will increase the damage.\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 8,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersiveengineering:metal_device1",
-              "orig_meta:3": 8
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Electric Defenses",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 72,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:earmuffs",
-                "orig_meta:3": 0,
-                "orig_tag:10": {
-                  "RepairCost:3": 0,
-                  "display:10": {
-                    "Name:8": "Regian-Approved Gaming Headset"
-                  }
-                }
-              }
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:faraday_suit_head",
-                "orig_meta:3": 0,
-                "orig_tag:10": {
-                  "RepairCost:3": 0,
-                  "display:10": {
-                    "Name:8": "Gaming Hat"
-                  }
-                }
-              }
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:faraday_suit_chest",
-                "orig_meta:3": 0,
-                "orig_tag:10": {
-                  "RepairCost:3": 0,
-                  "display:10": {
-                    "Name:8": "Gaming Shirt"
-                  }
-                }
-              }
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:faraday_suit_legs",
-                "orig_meta:3": 0,
-                "orig_tag:10": {
-                  "RepairCost:3": 0,
-                  "display:10": {
-                    "Name:8": "Gaming Pants"
-                  }
-                }
-              }
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:faraday_suit_feet",
-                "orig_meta:3": 0,
-                "orig_tag:10": {
-                  "RepairCost:3": 0,
-                  "display:10": {
-                    "Name:8": "Gaming Shoes"
-                  }
-                }
-              }
-            },
-            "5:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "tardis:br_chair",
-              "tag:10": {
-                "RepairCost:3": 0,
-                "display:10": {
-                  "Name:8": "Gaming Chair"
-                }
-              }
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 8,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_device1",
-                "orig_meta:3": 8
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "73:10": {
-      "preRequisites:11": [
-        75
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Don\u0027t like your enemies? We have a solution for you!\n\nThe Industrial Renewal(TM) §6Electric Fence §rwill roast any player or mob that comes into contact with it. ",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "industrialrenewal:electric_fence"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Electric Fences",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 73,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 3,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "industrialrenewal:electric_fence"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "industrialrenewal:electric_gate"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "industrialrenewal:electric_fence"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "74:10": {
+    "64:10": {
       "preRequisites:11": [
         87
       ],
@@ -6641,7 +5317,7 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Limestone",
@@ -6686,512 +5362,7 @@
         }
       }
     },
-    "75:10": {
-      "preRequisites:11": [
-        50
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "This pack has two different types of electricity: §cRF (Redstone Flux) §rand §bEU (Energy Units)§r§r. What we are going to use in the Industrial Age is RF. \n\nIn the next tier, we will unlock EU and GregTech machines, and we will explain the EU system in more detail there.\n\nRemember that 16 RF equals 1 EU, and if GregTech machines get a higher voltage that they can handle, they will explode. To convert between RF and EU you will need to use energy converters. \n\n------------------\nTo store RF, you need to make a §cLow Voltage Capacitor. §r\nTo transfer RF, you need to use §cLow Voltage RF wire§r. Make a LV Wire Coil, and connect it to a LV Wire Connector to transfer the energy.\n\nDon\u0027t get confused between Immersive Engineering electricity and GregTech electricity. Immersive Engineering LV and GregTech LV are two completely different things, so don\u0027t mix them up.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 5,
-            "OreDict:8": "",
-            "id:8": "gregtech:warning_sign"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "How Electricity Works",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 75,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 32,
-              "Damage:2": 274,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_device0",
-                "orig_meta:3": 0
-              }
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:wirecoil",
-                "orig_meta:3": 0
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "76:10": {
-      "preRequisites:11": [
-        49
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Immersive Engineering\u0027s §6conveyors §rcan be used for moving things around in your base. You can change the orientation of a Conveyor using the §6Engineer\u0027s Hammer§r.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersiveengineering:conveyor",
-              "orig_meta:3": 0,
-              "orig_tag:10": {
-                "conveyorType:8": "immersiveengineering:conveyor"
-              }
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Moving Stuff",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 76,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:conveyor",
-                "orig_meta:3": 0,
-                "orig_tag:10": {
-                  "conveyorType:8": "immersiveengineering:conveyor"
-                }
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "77:10": {
-      "preRequisites:11": [
-        75
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The IE §bAssembler§r is a 3x3x3 multi-block. It is used to assemble things together (duh)\n\nIt requires:\n\n9 Iron Sheetmetal, \n6 Steel Scaffoldings,\n6 Iron Sheetmetal Slabs, \n2 Redstone Engineering Blocks, \n2 Light Engineering Blocks and 2 Conveyor Belts\n\nYou can check the §6Engineer\u0027s Manual§r for help. The guide on the metal press is in the §7§6Simple Machinery §rchapter.\n\nAfter putting together the structure, whack it with the §6Engineer\u0027s Hammer §rto form the multiblock.\n\nRecipes can be set inside of the Assembler, as seen to the right. The fluid tanks in the Assembler will automatically fill liquid containers used in recipes, such as Water Buckets. It will automatically craft the recipes if it has the correct materials.\n\n{ResourceLocation:supersymmetry:guides/ie-assembler.png}",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 4,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersiveengineering:metal_multiblock",
-              "orig_meta:3": 4
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§c§lDEPRECATED Assembler",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 77,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 32,
-              "Damage:2": 324,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotSteel",
-              "id:8": "gregtech:meta_ingot"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 9,
-              "Damage:2": 9,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:sheetmetal",
-                "orig_meta:3": 9
-              }
-            },
-            "1:10": {
-              "Count:3": 6,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration1",
-                "orig_meta:3": 1
-              }
-            },
-            "2:10": {
-              "Count:3": 6,
-              "Damage:2": 9,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:sheetmetal_slab",
-                "orig_meta:3": 9
-              }
-            },
-            "3:10": {
-              "Count:3": 2,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:conveyor",
-                "orig_meta:3": 0,
-                "orig_tag:10": {
-                  "conveyorType:8": "immersiveengineering:conveyor"
-                }
-              }
-            },
-            "4:10": {
-              "Count:3": 2,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 3
-              }
-            },
-            "5:10": {
-              "Count:3": 2,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 4
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "78:10": {
-      "preRequisites:11": [
-        75
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §3Distillation Tower§r is a large 4x16x4 multiblock used to process fluids into other fluids. \n\nIt can be used to process oil into other things. In the LV age you can do this in one machine (the Distillery), but we can\u0027t do that now.\n\nRemember that we also have another distillation tower, but that is unlocked at MV. That one can extract up to 12 things out of one fluid.\n\nThe Distillation Tower requires:\n\n25 Steel Scaffolding\n33 Steel Scaffolding Slab\n17 Fluid Pipes\n60 Iron Sheetmetal\n4 Heavy Engineering Blocks\n1 Redstone Engineering Block\n\nIf you want to know how to build it, look at the schematic in the §6Engineer\u0027s Manual§r. After completing the structure, whack it with an §6Engineer\u0027s Hammer §rto form the multiblock.\n\nThe port on the back of the Distillation Tower is used to input the fluids. §cRedstone Flux (RF)§r is inputted from the top of the furnace located on the back of the multiblock. Bitumen is output through the port on the front of the machine, and the outputs on the bottom side. The multiblock\u0027s processes can be halted via Redstone through the control panel with the red dot.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersivepetroleum:metal_multiblock",
-              "orig_meta:3": 0
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§c§lDEPRECATED Distillation Tower",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 78,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 25,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration1",
-                "orig_meta:3": 1
-              }
-            },
-            "1:10": {
-              "Count:3": 33,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration1_slab",
-                "orig_meta:3": 1
-              }
-            },
-            "2:10": {
-              "Count:3": 17,
-              "Damage:2": 6,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_device1",
-                "orig_meta:3": 6
-              }
-            },
-            "3:10": {
-              "Count:3": 60,
-              "Damage:2": 9,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:sheetmetal",
-                "orig_meta:3": 9
-              }
-            },
-            "4:10": {
-              "Count:3": 4,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 5
-              }
-            },
-            "5:10": {
-              "Count:3": 1,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 3
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "79:10": {
-      "preRequisites:11": [
-        78
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §3IE Boiler§r is a 5x3x3 multiblock used to boil water using oil products, to get steam.\n\nThe Boiler requires:\n\n10 Steel Scaffolding\n10 Fluid Pipes\n18 Iron Sheetmetal\n4 Heavy Engineering Blocks\n1 Redstone Engineering Block\n\nIf you want to know how to build it, look at the schematic in the §6Engineer\u0027s Manual§r. After completing the structure, whack it with an §6Engineer\u0027s Hammer §rto form the multiblock.\n\nYou can use many different fluids to boil water and get steam. Look up the Boiler on JEI and press U to see which fluids you can use. They are mostly made using the distillation tower.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 9,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersivetech:metal_multiblock",
-              "orig_meta:3": 9
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§c§lDEPRECATED Better Boiling ",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 79,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {}
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 10,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration1",
-                "orig_meta:3": 1
-              }
-            },
-            "1:10": {
-              "Count:3": 10,
-              "Damage:2": 6,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_device1",
-                "orig_meta:3": 6
-              }
-            },
-            "2:10": {
-              "Count:3": 18,
-              "Damage:2": 9,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:sheetmetal",
-                "orig_meta:3": 9
-              }
-            },
-            "3:10": {
-              "Count:3": 4,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 5
-              }
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 3
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "80:10": {
+    "65:10": {
       "preRequisites:11": [
         39
       ],
@@ -7301,7 +5472,7 @@
         }
       }
     },
-    "81:10": {
+    "66:10": {
       "preRequisites:11": [
         80
       ],
@@ -7403,7 +5574,7 @@
         }
       }
     },
-    "82:10": {
+    "67:10": {
       "preRequisites:11": [
         80
       ],
@@ -7489,7 +5660,7 @@
         }
       }
     },
-    "83:10": {
+    "68:10": {
       "preRequisites:11": [
         80
       ],
@@ -7586,7 +5757,7 @@
         }
       }
     },
-    "84:10": {
+    "69:10": {
       "preRequisites:11": [
         83
       ],
@@ -7664,7 +5835,7 @@
         }
       }
     },
-    "85:10": {
+    "70:10": {
       "preRequisites:11": [
         80
       ],
@@ -7754,7 +5925,7 @@
         }
       }
     },
-    "86:10": {
+    "71:10": {
       "preRequisites:11": [
         80
       ],
@@ -7841,7 +6012,7 @@
         }
       }
     },
-    "87:10": {
+    "72:10": {
       "preRequisites:11": [
         7
       ],
@@ -7893,7 +6064,7 @@
         }
       }
     },
-    "88:10": {
+    "73:10": {
       "preRequisites:11": [
         5
       ],
@@ -7933,29 +6104,7 @@
         }
       },
       "questID:3": 88,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:flint"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -7985,7 +6134,7 @@
         }
       }
     },
-    "89:10": {
+    "74:10": {
       "preRequisites:11": [
         20
       ],
@@ -8055,7 +6204,7 @@
         }
       }
     },
-    "90:10": {
+    "75:10": {
       "preRequisites:11": [
         12
       ],
@@ -8125,7 +6274,7 @@
         }
       }
     },
-    "91:10": {
+    "76:10": {
       "preRequisites:11": [
         149
       ],
@@ -8189,7 +6338,7 @@
         }
       }
     },
-    "92:10": {
+    "77:10": {
       "preRequisites:11": [
         31
       ],
@@ -8263,7 +6412,7 @@
         }
       }
     },
-    "93:10": {
+    "78:10": {
       "preRequisites:11": [
         12
       ],
@@ -8288,7 +6437,7 @@
             "id:8": "notreepunching:ceramic_bucket"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Balanced Bucket",
@@ -8348,7 +6497,7 @@
         }
       }
     },
-    "94:10": {
+    "79:10": {
       "preRequisites:11": [
         31
       ],
@@ -8413,7 +6562,7 @@
         }
       }
     },
-    "95:10": {
+    "80:10": {
       "preRequisites:11": [
         94
       ],
@@ -8505,7 +6654,7 @@
         }
       }
     },
-    "96:10": {
+    "81:10": {
       "preRequisites:11": [
         95
       ],
@@ -8612,7 +6761,7 @@
         }
       }
     },
-    "97:10": {
+    "82:10": {
       "preRequisites:11": [
         96
       ],
@@ -8731,7 +6880,7 @@
         }
       }
     },
-    "98:10": {
+    "83:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -8780,7 +6929,7 @@
         }
       }
     },
-    "99:10": {
+    "84:10": {
       "preRequisites:11": [
         66
       ],
@@ -8854,7 +7003,7 @@
         }
       }
     },
-    "100:10": {
+    "85:10": {
       "preRequisites:11": [
         99
       ],
@@ -8961,7 +7110,7 @@
         }
       }
     },
-    "101:10": {
+    "86:10": {
       "preRequisites:11": [
         99
       ],
@@ -9053,7 +7202,7 @@
         }
       }
     },
-    "102:10": {
+    "87:10": {
       "preRequisites:11": [
         99
       ],
@@ -9166,7 +7315,7 @@
         }
       }
     },
-    "103:10": {
+    "88:10": {
       "preRequisites:11": [
         99
       ],
@@ -9258,7 +7407,7 @@
         }
       }
     },
-    "104:10": {
+    "89:10": {
       "preRequisites:11": [
         99
       ],
@@ -9358,7 +7507,7 @@
         }
       }
     },
-    "105:10": {
+    "90:10": {
       "preRequisites:11": [
         104
       ],
@@ -9397,7 +7546,7 @@
         }
       }
     },
-    "106:10": {
+    "91:10": {
       "preRequisites:11": [
         74
       ],
@@ -9422,7 +7571,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Firebricks Pt. 1",
@@ -9497,7 +7646,7 @@
         }
       }
     },
-    "107:10": {
+    "92:10": {
       "preRequisites:11": [
         106
       ],
@@ -9513,7 +7662,7 @@
             "id:8": "gregtech:metal_casing"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Firebricks Pt. 2",
@@ -9549,7 +7698,7 @@
         }
       }
     },
-    "108:10": {
+    "93:10": {
       "preRequisites:11": [
         105
       ],
@@ -9623,7 +7772,7 @@
         }
       }
     },
-    "109:10": {
+    "94:10": {
       "preRequisites:11": [
         105
       ],
@@ -9697,7 +7846,7 @@
         }
       }
     },
-    "110:10": {
+    "95:10": {
       "preRequisites:11": [
         105
       ],
@@ -9762,7 +7911,7 @@
         }
       }
     },
-    "111:10": {
+    "96:10": {
       "preRequisites:11": [
         105
       ],
@@ -9836,7 +7985,7 @@
         }
       }
     },
-    "112:10": {
+    "97:10": {
       "preRequisites:11": [
         105
       ],
@@ -9914,7 +8063,7 @@
         }
       }
     },
-    "113:10": {
+    "98:10": {
       "preRequisites:11": [
         105
       ],
@@ -10003,7 +8152,7 @@
         }
       }
     },
-    "114:10": {
+    "99:10": {
       "preRequisites:11": [
         105
       ],
@@ -10068,7 +8217,7 @@
         }
       }
     },
-    "115:10": {
+    "100:10": {
       "preRequisites:11": [
         105
       ],
@@ -10137,7 +8286,7 @@
         }
       }
     },
-    "116:10": {
+    "101:10": {
       "preRequisites:11": [
         105
       ],
@@ -10211,9 +8360,9 @@
         }
       }
     },
-    "117:10": {
+    "102:10": {
       "preRequisites:11": [
-        74
+        87
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -10281,7 +8430,7 @@
         }
       }
     },
-    "118:10": {
+    "103:10": {
       "preRequisites:11": [
         117
       ],
@@ -10333,7 +8482,7 @@
         }
       }
     },
-    "119:10": {
+    "104:10": {
       "preRequisites:11": [
         110
       ],
@@ -10412,7 +8561,7 @@
         }
       }
     },
-    "120:10": {
+    "105:10": {
       "preRequisites:11": [
         123
       ],
@@ -10474,7 +8623,7 @@
         }
       }
     },
-    "121:10": {
+    "106:10": {
       "preRequisites:11": [
         110
       ],
@@ -10567,7 +8716,7 @@
         }
       }
     },
-    "122:10": {
+    "107:10": {
       "preRequisites:11": [
         159
       ],
@@ -10654,7 +8803,7 @@
         }
       }
     },
-    "123:10": {
+    "108:10": {
       "preRequisites:11": [
         105
       ],
@@ -10732,7 +8881,7 @@
         }
       }
     },
-    "124:10": {
+    "109:10": {
       "preRequisites:11": [
         105
       ],
@@ -10806,7 +8955,7 @@
         }
       }
     },
-    "125:10": {
+    "110:10": {
       "preRequisites:11": [
         118
       ],
@@ -10870,7 +9019,7 @@
         }
       }
     },
-    "126:10": {
+    "111:10": {
       "preRequisites:11": [
         121
       ],
@@ -10932,7 +9081,7 @@
         }
       }
     },
-    "127:10": {
+    "112:10": {
       "preRequisites:11": [
         120
       ],
@@ -10994,7 +9143,7 @@
         }
       }
     },
-    "128:10": {
+    "113:10": {
       "preRequisites:11": [
         127
       ],
@@ -11078,7 +9227,77 @@
         }
       }
     },
-    "129:10": {
+    "114:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Pig iron§r is the product of smelting iron ore (such as §6Banded Iron§r and §6Magnetite§o§r) with a high-carbon fuel like §6Coal§r, Charcoal or Coal Coke in a Blast Furnace.\n\n§6Limonite §rcan also be used as an ore, but it has to be smelted in a normal Furnace first, or dried by using a Dryer.\n\nExtracting usable metal from iron ores requires kilns or furnaces (such as a §cBlast Furnace§r) capable of reaching 1,500 °C (1,773K) or higher, about 500 °C higher than that required to smelt copper. \n\n§6Pig iron §rmust be smelted in a normal Furnace to get §8§7Iron§r. \n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 32001,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Pig Iron Ingot",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 129,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 32001,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "115:10": {
       "preRequisites:11": [
         110
       ],
@@ -11161,7 +9380,7 @@
         }
       }
     },
-    "130:10": {
+    "116:10": {
       "preRequisites:11": [
         110
       ],
@@ -11244,7 +9463,7 @@
         }
       }
     },
-    "131:10": {
+    "117:10": {
       "preRequisites:11": [
         113,
         137,
@@ -11311,7 +9530,7 @@
         }
       }
     },
-    "132:10": {
+    "118:10": {
       "preRequisites:11": [
         66
       ],
@@ -11406,7 +9625,7 @@
         }
       }
     },
-    "133:10": {
+    "119:10": {
       "preRequisites:11": [
         0
       ],
@@ -11454,7 +9673,7 @@
         }
       }
     },
-    "134:10": {
+    "120:10": {
       "preRequisites:11": [
         99
       ],
@@ -11524,7 +9743,7 @@
         }
       }
     },
-    "135:10": {
+    "121:10": {
       "preRequisites:11": [
         136
       ],
@@ -11691,7 +9910,7 @@
         }
       }
     },
-    "136:10": {
+    "122:10": {
       "preRequisites:11": [
         133
       ],
@@ -11775,7 +9994,7 @@
         }
       }
     },
-    "137:10": {
+    "123:10": {
       "preRequisites:11": [
         138
       ],
@@ -11850,7 +10069,7 @@
         }
       }
     },
-    "138:10": {
+    "124:10": {
       "preRequisites:11": [
         139
       ],
@@ -11925,7 +10144,7 @@
         }
       }
     },
-    "139:10": {
+    "125:10": {
       "preRequisites:11": [
         140
       ],
@@ -12035,7 +10254,7 @@
         }
       }
     },
-    "140:10": {
+    "126:10": {
       "preRequisites:11": [
         105
       ],
@@ -12100,7 +10319,7 @@
         }
       }
     },
-    "141:10": {
+    "127:10": {
       "preRequisites:11": [
         105
       ],
@@ -12174,7 +10393,7 @@
         }
       }
     },
-    "142:10": {
+    "128:10": {
       "preRequisites:11": [
         112
       ],
@@ -12249,7 +10468,7 @@
         }
       }
     },
-    "143:10": {
+    "129:10": {
       "preRequisites:11": [
         144
       ],
@@ -12311,7 +10530,7 @@
         }
       }
     },
-    "144:10": {
+    "130:10": {
       "preRequisites:11": [
         148
       ],
@@ -12363,7 +10582,7 @@
         }
       }
     },
-    "145:10": {
+    "131:10": {
       "preRequisites:11": [
         122
       ],
@@ -12472,7 +10691,7 @@
         }
       }
     },
-    "146:10": {
+    "132:10": {
       "preRequisites:11": [
         110
       ],
@@ -12564,7 +10783,7 @@
         }
       }
     },
-    "147:10": {
+    "133:10": {
       "preRequisites:11": [
         12
       ],
@@ -12634,7 +10853,7 @@
         }
       }
     },
-    "148:10": {
+    "134:10": {
       "preRequisites:11": [
         133
       ],
@@ -12718,7 +10937,7 @@
         }
       }
     },
-    "149:10": {
+    "135:10": {
       "preRequisites:11": [
         150
       ],
@@ -12802,7 +11021,7 @@
         }
       }
     },
-    "150:10": {
+    "136:10": {
       "preRequisites:11": [
         133
       ],
@@ -12877,7 +11096,7 @@
         }
       }
     },
-    "151:10": {
+    "137:10": {
       "preRequisites:11": [
         152
       ],
@@ -12961,7 +11180,7 @@
         }
       }
     },
-    "152:10": {
+    "138:10": {
       "preRequisites:11": [
         153,
         151,
@@ -13047,7 +11266,7 @@
         }
       }
     },
-    "153:10": {
+    "139:10": {
       "preRequisites:11": [
         105
       ],
@@ -13112,7 +11331,7 @@
         }
       }
     },
-    "154:10": {
+    "140:10": {
       "preRequisites:11": [
         151
       ],
@@ -13190,7 +11409,7 @@
         }
       }
     },
-    "155:10": {
+    "141:10": {
       "preRequisites:11": [
         141
       ],
@@ -13272,7 +11491,7 @@
         }
       }
     },
-    "156:10": {
+    "142:10": {
       "preRequisites:11": [
         105
       ],
@@ -13346,7 +11565,7 @@
         }
       }
     },
-    "157:10": {
+    "143:10": {
       "preRequisites:11": [
         148
       ],
@@ -13420,7 +11639,7 @@
         }
       }
     },
-    "158:10": {
+    "144:10": {
       "preRequisites:11": [
         119
       ],
@@ -13485,7 +11704,7 @@
         }
       }
     },
-    "159:10": {
+    "145:10": {
       "preRequisites:11": [
         162
       ],
@@ -13577,7 +11796,7 @@
         }
       }
     },
-    "160:10": {
+    "146:10": {
       "preRequisites:11": [
         105
       ],
@@ -13642,7 +11861,7 @@
         }
       }
     },
-    "161:10": {
+    "147:10": {
       "preRequisites:11": [
         105
       ],
@@ -13826,7 +12045,7 @@
         }
       }
     },
-    "162:10": {
+    "148:10": {
       "preRequisites:11": [
         110
       ],
@@ -13896,7 +12115,7 @@
         }
       }
     },
-    "163:10": {
+    "149:10": {
       "preRequisites:11": [
         166
       ],
@@ -13998,7 +12217,7 @@
         }
       }
     },
-    "164:10": {
+    "150:10": {
       "preRequisites:11": [
         166,
         174
@@ -14082,7 +12301,7 @@
         }
       }
     },
-    "165:10": {
+    "151:10": {
       "preRequisites:11": [
         123
       ],
@@ -14174,7 +12393,7 @@
         }
       }
     },
-    "166:10": {
+    "152:10": {
       "preRequisites:11": [
         123
       ],
@@ -14257,7 +12476,7 @@
         }
       }
     },
-    "167:10": {
+    "153:10": {
       "preRequisites:11": [
         171,
         170
@@ -14341,7 +12560,7 @@
         }
       }
     },
-    "168:10": {
+    "154:10": {
       "preRequisites:11": [
         172,
         170
@@ -14434,7 +12653,7 @@
         }
       }
     },
-    "169:10": {
+    "155:10": {
       "preRequisites:11": [
         173
       ],
@@ -14526,7 +12745,7 @@
         }
       }
     },
-    "170:10": {
+    "156:10": {
       "preRequisites:11": [
         200
       ],
@@ -14609,7 +12828,7 @@
         }
       }
     },
-    "171:10": {
+    "157:10": {
       "preRequisites:11": [
         31
       ],
@@ -14713,7 +12932,7 @@
         }
       }
     },
-    "172:10": {
+    "158:10": {
       "preRequisites:11": [
         31
       ],
@@ -14806,7 +13025,7 @@
         }
       }
     },
-    "173:10": {
+    "159:10": {
       "preRequisites:11": [
         113
       ],
@@ -14881,7 +13100,7 @@
         }
       }
     },
-    "174:10": {
+    "160:10": {
       "preRequisites:11": [
         178
       ],
@@ -14965,7 +13184,7 @@
         }
       }
     },
-    "175:10": {
+    "161:10": {
       "preRequisites:11": [
         179
       ],
@@ -15030,7 +13249,7 @@
         }
       }
     },
-    "176:10": {
+    "162:10": {
       "preRequisites:11": [
         124
       ],
@@ -15104,7 +13323,7 @@
         }
       }
     },
-    "177:10": {
+    "163:10": {
       "preRequisites:11": [
         181
       ],
@@ -15188,146 +13407,8 @@
         }
       }
     },
-    "178:10": {
-      "preRequisites:11": [
-        182
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The Radiator is a multiblock that cools hot fluids and hot gasses down. \n\nIt requires \n\n54 Radiator Block\n7 Fluid Pipe\n2 Light Engineering Block\n\nIf you want to know how to build it, look at the schematic in the §6Engineer\u0027s Manual§r. \nAfter completing the structure, whack the Light Engineering Block with an §6Engineer\u0027s Hammer §rto form the multiblock.\nThe radiator can also be built horizontally.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 10,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersivetech:metal_multiblock1",
-              "orig_meta:3": 10
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§c§lDEPRECATED Radiator",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 183,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 10,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "scalinghealth:healingitem"
-            },
-            "1:10": {
-              "Count:3": 64,
-              "Damage:2": 347,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            },
-            "2:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "oxygen"
-              }
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 54,
-              "Damage:2": 7,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 7
-              }
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 6,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_device1",
-                "orig_meta:3": 6
-              }
-            },
-            "2:10": {
-              "Count:3": 2,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 4
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "179:10": {
-      "preRequisites:11": [
-        183
-      ],
+    "164:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -15423,120 +13504,8 @@
         }
       }
     },
-    "180:10": {
-      "preRequisites:11": [
-        182
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The Heat Exchanger is a multiblock structure that quickly moves heat from one fluid to another.\n\nIt requires:\n18 Iron Sheetmetal\n10 Fluid Pipe\n9 Steel Scaffolding\n5 Radiator Block\n2 Light Engineering Block\n1 Redstone Engineering Block\n\nIf you want to know how to build it, look at the schematic in the §6Engineer\u0027s Manual§r. \nAfter completing the structure, whack it with an §6Engineer\u0027s Hammer §rto form the multiblock.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 3,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersivetech:metal_multiblock1",
-              "orig_meta:3": 3
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§c§lDEPRECATED Heat Exchanger",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 185,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 18,
-              "Damage:2": 9,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:sheetmetal",
-                "orig_meta:3": 9
-              }
-            },
-            "1:10": {
-              "Count:3": 10,
-              "Damage:2": 6,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_device1",
-                "orig_meta:3": 6
-              }
-            },
-            "2:10": {
-              "Count:3": 9,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration1",
-                "orig_meta:3": 1
-              }
-            },
-            "3:10": {
-              "Count:3": 5,
-              "Damage:2": 7,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 7
-              }
-            },
-            "4:10": {
-              "Count:3": 2,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 4
-              }
-            },
-            "5:10": {
-              "Count:3": 1,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 3
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "181:10": {
-      "preRequisites:11": [
-        185
-      ],
+    "165:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -15595,7 +13564,7 @@
         }
       }
     },
-    "182:10": {
+    "166:10": {
       "preRequisites:11": [
         186
       ],
@@ -15653,7 +13622,7 @@
         }
       }
     },
-    "183:10": {
+    "167:10": {
       "preRequisites:11": [
         184
       ],
@@ -15737,7 +13706,7 @@
         }
       }
     },
-    "184:10": {
+    "168:10": {
       "preRequisites:11": [
         188
       ],
@@ -15827,7 +13796,7 @@
         }
       }
     },
-    "185:10": {
+    "169:10": {
       "preRequisites:11": [
         189
       ],
@@ -15926,7 +13895,7 @@
         }
       }
     },
-    "186:10": {
+    "170:10": {
       "preRequisites:11": [
         103
       ],
@@ -16015,7 +13984,7 @@
         }
       }
     },
-    "187:10": {
+    "171:10": {
       "preRequisites:11": [
         191
       ],
@@ -16089,7 +14058,7 @@
         }
       }
     },
-    "188:10": {
+    "172:10": {
       "preRequisites:11": [
         192
       ],
@@ -16211,7 +14180,7 @@
         }
       }
     },
-    "189:10": {
+    "173:10": {
       "preRequisites:11": [
         193
       ],
@@ -16300,7 +14269,7 @@
         }
       }
     },
-    "190:10": {
+    "174:10": {
       "preRequisites:11": [
         193
       ],
@@ -16389,7 +14358,7 @@
         }
       }
     },
-    "191:10": {
+    "175:10": {
       "preRequisites:11": [
         191
       ],
@@ -16506,7 +14475,7 @@
         }
       }
     },
-    "192:10": {
+    "176:10": {
       "preRequisites:11": [
         191
       ],
@@ -16623,7 +14592,7 @@
         }
       }
     },
-    "193:10": {
+    "177:10": {
       "preRequisites:11": [
         136
       ],
@@ -16779,7 +14748,7 @@
         }
       }
     },
-    "194:10": {
+    "178:10": {
       "preRequisites:11": [
         198
       ],
@@ -16928,7 +14897,7 @@
         }
       }
     },
-    "195:10": {
+    "179:10": {
       "preRequisites:11": [
         174
       ],
@@ -16993,7 +14962,7 @@
         }
       }
     },
-    "196:10": {
+    "180:10": {
       "preRequisites:11": [
         168
       ],
@@ -17085,7 +15054,7 @@
         }
       }
     },
-    "197:10": {
+    "181:10": {
       "preRequisites:11": [
         174
       ],
@@ -17177,7 +15146,7 @@
         }
       }
     },
-    "198:10": {
+    "182:10": {
       "preRequisites:11": [
         174
       ],
@@ -17269,7 +15238,7 @@
         }
       }
     },
-    "199:10": {
+    "183:10": {
       "preRequisites:11": [
         174
       ],
@@ -17361,7 +15330,7 @@
         }
       }
     },
-    "200:10": {
+    "184:10": {
       "preRequisites:11": [
         174
       ],
@@ -17453,155 +15422,8 @@
         }
       }
     },
-    "201:10": {
-      "preRequisites:11": [
-        205
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Large Weapons Factory §ris a multiblock that makes more advanced weapons like ICBMs. This allows you to do an extremely high amount of trolling on your enemies.\n\nThe Large Weapons Factory requires:\n\n1 Large Weapons Factory controller\n8 Input Bus\n3 Input Hatch\n1 Output Bus\n1 Energy Input Hatch\n68 Lead Metal Casing\n67 Steel Frame\n8 Factory Blocks (Rusty Scaffold)\n\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 20001,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Large Trolling Machine V2",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 206,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:cookie",
-              "tag:10": {
-                "RepairCost:3": 0,
-                "display:10": {
-                  "Name:8": "cookie :)"
-                }
-              }
-            },
-            "1:10": {
-              "Count:3": 48,
-              "Damage:2": 274,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 20001,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 8,
-              "Damage:2": 1151,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "2:10": {
-              "Count:3": 3,
-              "Damage:2": 1181,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 1166,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 1211,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "5:10": {
-              "Count:3": 68,
-              "Damage:2": 0,
-              "OreDict:8": "gtMetalCasingLead",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "gregtech:metal_casing_lead",
-                "orig_meta:3": 0
-              }
-            },
-            "6:10": {
-              "Count:3": 67,
-              "Damage:2": 3,
-              "OreDict:8": "frameGtSteel",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "gregtech:frame_steel",
-                "orig_meta:3": 3
-              }
-            },
-            "7:10": {
-              "Count:3": 8,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "chisel:technical"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "202:10": {
-      "preRequisites:11": [
-        206
-      ],
+    "185:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -17662,501 +15484,7 @@
         }
       }
     },
-    "203:10": {
-      "preRequisites:11": [
-        204
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Railroad Engineering Station §ris a multiblock that makes equipment for Immersive Railroading. The IR multiblocks are huge and clunky, so this is a pretty good alternative.\n\nThe Railroad Engineering Station requires:\n\n1 Railroad Engineering Station controller\n8 Input Bus\n3 Input Hatch\n1 Output Bus\n1 Energy Input Hatch\n55 Steel Metal Casing\n14 Steel Frame\n\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 20000,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§6§lREWORK NEEDED§6§l Railroad Assembler",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 208,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "immersiverailroading:item_rail",
-              "tag:10": {}
-            },
-            "1:10": {
-              "Count:3": 8,
-              "Damage:2": 2,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            },
-            "2:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:cake"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 20000,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 8,
-              "Damage:2": 1151,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "2:10": {
-              "Count:3": 3,
-              "Damage:2": 1181,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 1166,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 1211,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "5:10": {
-              "Count:3": 55,
-              "Damage:2": 0,
-              "OreDict:8": "gtMetalCasingSteel",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "gregtech:metal_casing_steel",
-                "orig_meta:3": 0
-              }
-            },
-            "6:10": {
-              "Count:3": 14,
-              "Damage:2": 3,
-              "OreDict:8": "frameGtSteel",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "gregtech:frame_steel",
-                "orig_meta:3": 3
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "204:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The Immersive Engineering §6gas turbine§r is a multiblock that produces §4kinetic energy §r(not normal energy) from fluids and gases. It needs an alternator to work.\n(Not to be confused with the GregTech gas turbine, which is just a single block generator)\n\nThe Gas Turbine requires:\n\n20 Steel Sheetmetal\n16 Heavy Engineering Block\n8 High-Voltage Coil Block\n8 Steel Block (If the structure doesn\u0027t form, try using an Immersive Engineering steel block. Use a Chisel to change between types)\n3 Steel Sheetmetal Slab\n3 Steel Scaffolding\n2 Fluid Pipes\n1 Redstone Engineering Block\n\nYou can check the §6Engineer\u0027s Manual§r for help on how to build the structure.\n\nAfter putting together the structure, whack the Steel Block (the one on the short side) with the §6Engineer\u0027s Hammer §rto form the multiblock.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersivetech:metal_multiblock1",
-              "orig_meta:3": 0
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§c§lDEPRECATED Gas Turbine",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 209,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 20,
-              "Damage:2": 8,
-              "OreDict:8": "blockSheetmetalSteel",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:sheetmetal",
-                "orig_meta:3": 8
-              }
-            },
-            "1:10": {
-              "Count:3": 16,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 5
-              }
-            },
-            "2:10": {
-              "Count:3": 8,
-              "Damage:2": 2,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 2
-              }
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 6,
-              "OreDict:8": "blockSteel",
-              "id:8": "libvulpes:metal0"
-            },
-            "4:10": {
-              "Count:3": 3,
-              "Damage:2": 8,
-              "OreDict:8": "slabSheetmetalSteel",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:sheetmetal_slab",
-                "orig_meta:3": 8
-              }
-            },
-            "5:10": {
-              "Count:3": 1,
-              "Damage:2": 6,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_device1",
-                "orig_meta:3": 6
-              }
-            },
-            "6:10": {
-              "Count:3": 1,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 3
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "205:10": {
-      "preRequisites:11": [
-        209,
-        211
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The Alternator is a multiblock structure that turns §6kinetic energy§r into electricity.\nIt needs to have a Kinetic Energy generator connected to it to work (like the Gas Turbine).\n\nThe Alternator requires:\n\n9 Light Engineering Block\n8 Generator Block\n4 High Voltage Coil Block\n4 Radiator Block\n4 Steel Sheetmetal\n2 Steel Blocks\n2 Heavy Engineering Block\n\nThe Alternator can store up to 1.200.000 RF, outputting §c2048 RF/t§r (64 EU/t)\n\nYou can check the §6Engineer\u0027s Manual§r for help on how to build the structure.\n§r\nAfter putting together the structure, whack the Heavy Engineering Block with the §6Engineer\u0027s Hammer §rto form the multiblock.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 5,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersivetech:metal_multiblock",
-              "orig_meta:3": 5
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§c§lDEPRECATED Alternator",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 210,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 9,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 4
-              }
-            },
-            "1:10": {
-              "Count:3": 8,
-              "Damage:2": 6,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 6
-              }
-            },
-            "2:10": {
-              "Count:3": 4,
-              "Damage:2": 2,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 2
-              }
-            },
-            "3:10": {
-              "Count:3": 4,
-              "Damage:2": 7,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 7
-              }
-            },
-            "4:10": {
-              "Count:3": 4,
-              "Damage:2": 8,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:sheetmetal",
-                "orig_meta:3": 8
-              }
-            },
-            "5:10": {
-              "Count:3": 2,
-              "Damage:2": 6,
-              "OreDict:8": "blockSteel",
-              "id:8": "libvulpes:metal0"
-            },
-            "6:10": {
-              "Count:3": 2,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 5
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "206:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Steam Turbine§r is a multiblock that uses Steam to produce §ckinetic energy§r (it needs an alternator to be turned into RF)\n.\nNot to be confused with the GT steam turbine, which is a singleblock generator.\n\nThe Steam Turbine requires:\n27 Steel Sheetmetal\n24 Heavy Engineering Block\n10 Steel Block\n6 Fluid Pipes\n4 Radiator Block\n3 Steel Scaffolding\n1 Redstone Engineering Block.\n\nYou can check the §6Engineer\u0027s Manual§r for help on how to build the structure.\n\nAfter putting together the structure, whack the Steel Block (the one on the short side) with the §6Engineer\u0027s Hammer §rto form the multiblock.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 3,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersivetech:metal_multiblock",
-              "orig_meta:3": 3
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§c§lDEPRECATED Steam Turbine",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 211,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 27,
-              "Damage:2": 8,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:sheetmetal",
-                "orig_meta:3": 8
-              }
-            },
-            "1:10": {
-              "Count:3": 24,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 5
-              }
-            },
-            "2:10": {
-              "Count:3": 10,
-              "Damage:2": 6,
-              "OreDict:8": "blockSteel",
-              "id:8": "libvulpes:metal0"
-            },
-            "3:10": {
-              "Count:3": 6,
-              "Damage:2": 6,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_device1",
-                "orig_meta:3": 6
-              }
-            },
-            "4:10": {
-              "Count:3": 4,
-              "Damage:2": 7,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 7
-              }
-            },
-            "5:10": {
-              "Count:3": 3,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration1",
-                "orig_meta:3": 1
-              }
-            },
-            "6:10": {
-              "Count:3": 1,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 3
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "207:10": {
+    "186:10": {
       "preRequisites:11": [
         200
       ],
@@ -18231,7 +15559,7 @@
         }
       }
     },
-    "208:10": {
+    "187:10": {
       "preRequisites:11": [
         200
       ],
@@ -18315,7 +15643,7 @@
         }
       }
     },
-    "209:10": {
+    "188:10": {
       "preRequisites:11": [
         216
       ],
@@ -18399,7 +15727,7 @@
         }
       }
     },
-    "210:10": {
+    "189:10": {
       "preRequisites:11": [
         216
       ],
@@ -18483,7 +15811,7 @@
         }
       }
     },
-    "211:10": {
+    "190:10": {
       "preRequisites:11": [
         102
       ],
@@ -18557,7 +15885,7 @@
         }
       }
     },
-    "212:10": {
+    "191:10": {
       "preRequisites:11": [
         214,
         215,
@@ -18635,7 +15963,7 @@
         }
       }
     },
-    "213:10": {
+    "192:10": {
       "preRequisites:11": [
         217,
         212
@@ -18711,7 +16039,7 @@
         }
       }
     },
-    "214:10": {
+    "193:10": {
       "preRequisites:11": [
         218
       ],
@@ -18794,7 +16122,7 @@
         }
       }
     },
-    "215:10": {
+    "194:10": {
       "preRequisites:11": [
         200
       ],
@@ -18863,7 +16191,7 @@
         }
       }
     },
-    "216:10": {
+    "195:10": {
       "preRequisites:11": [
         200
       ],
@@ -18943,7 +16271,7 @@
         }
       }
     },
-    "217:10": {
+    "196:10": {
       "preRequisites:11": [
         221
       ],
@@ -19071,10 +16399,8 @@
         }
       }
     },
-    "218:10": {
-      "preRequisites:11": [
-        206
-      ],
+    "197:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -19129,7 +16455,7 @@
         }
       }
     },
-    "219:10": {
+    "198:10": {
       "preRequisites:11": [
         223
       ],
@@ -19187,7 +16513,7 @@
         }
       }
     },
-    "220:10": {
+    "199:10": {
       "preRequisites:11": [
         223
       ],
@@ -19245,7 +16571,7 @@
         }
       }
     },
-    "221:10": {
+    "200:10": {
       "preRequisites:11": [
         223
       ],
@@ -19303,7 +16629,7 @@
         }
       }
     },
-    "222:10": {
+    "201:10": {
       "preRequisites:11": [
         223
       ],
@@ -19361,7 +16687,7 @@
         }
       }
     },
-    "223:10": {
+    "202:10": {
       "preRequisites:11": [
         223
       ],
@@ -19419,7 +16745,7 @@
         }
       }
     },
-    "224:10": {
+    "203:10": {
       "preRequisites:11": [
         112
       ],
@@ -19489,7 +16815,7 @@
         }
       }
     },
-    "225:10": {
+    "204:10": {
       "preRequisites:11": [
         112
       ],
@@ -19581,7 +16907,7 @@
         }
       }
     },
-    "226:10": {
+    "205:10": {
       "preRequisites:11": [
         221
       ],
@@ -19664,7 +16990,7 @@
         }
       }
     },
-    "227:10": {
+    "206:10": {
       "preRequisites:11": [
         110,
         221
@@ -19735,7 +17061,7 @@
         }
       }
     },
-    "228:10": {
+    "207:10": {
       "preRequisites:11": [
         112
       ],
@@ -19805,7 +17131,7 @@
         }
       }
     },
-    "229:10": {
+    "208:10": {
       "preRequisites:11": [
         231,
         232
@@ -19898,7 +17224,7 @@
         }
       }
     },
-    "230:10": {
+    "209:10": {
       "preRequisites:11": [
         112
       ],
@@ -19977,7 +17303,7 @@
         }
       }
     },
-    "231:10": {
+    "210:10": {
       "preRequisites:11": [
         104
       ],
@@ -20042,7 +17368,7 @@
         }
       }
     },
-    "232:10": {
+    "211:10": {
       "preRequisites:11": [
         241,
         254,
@@ -20118,7 +17444,7 @@
         }
       }
     },
-    "233:10": {
+    "212:10": {
       "preRequisites:11": [
         244,
         269
@@ -20211,7 +17537,7 @@
         }
       }
     },
-    "234:10": {
+    "213:10": {
       "preRequisites:11": [
         252
       ],
@@ -20281,7 +17607,7 @@
         }
       }
     },
-    "235:10": {
+    "214:10": {
       "preRequisites:11": [
         169
       ],
@@ -20373,7 +17699,7 @@
         }
       }
     },
-    "236:10": {
+    "215:10": {
       "preRequisites:11": [
         242
       ],
@@ -20460,7 +17786,7 @@
         }
       }
     },
-    "237:10": {
+    "216:10": {
       "preRequisites:11": [
         243
       ],
@@ -20534,7 +17860,7 @@
         }
       }
     },
-    "238:10": {
+    "217:10": {
       "preRequisites:11": [
         174
       ],
@@ -20626,7 +17952,7 @@
         }
       }
     },
-    "239:10": {
+    "218:10": {
       "preRequisites:11": [
         166
       ],
@@ -20665,7 +17991,7 @@
         }
       }
     },
-    "240:10": {
+    "219:10": {
       "preRequisites:11": [
         166
       ],
@@ -20748,7 +18074,7 @@
         }
       }
     },
-    "241:10": {
+    "220:10": {
       "preRequisites:11": [
         245
       ],
@@ -20832,7 +18158,7 @@
         }
       }
     },
-    "242:10": {
+    "221:10": {
       "preRequisites:11": [
         248
       ],
@@ -20906,7 +18232,7 @@
         }
       }
     },
-    "243:10": {
+    "222:10": {
       "preRequisites:11": [
         249,
         248
@@ -20991,7 +18317,7 @@
         }
       }
     },
-    "244:10": {
+    "223:10": {
       "preRequisites:11": [
         250
       ],
@@ -21090,7 +18416,7 @@
         }
       }
     },
-    "245:10": {
+    "224:10": {
       "preRequisites:11": [
         251
       ],
@@ -21165,7 +18491,7 @@
         }
       }
     },
-    "246:10": {
+    "225:10": {
       "preRequisites:11": [
         252
       ],
@@ -21272,7 +18598,7 @@
         }
       }
     },
-    "247:10": {
+    "226:10": {
       "preRequisites:11": [
         252
       ],
@@ -21368,7 +18694,7 @@
         }
       }
     },
-    "248:10": {
+    "227:10": {
       "preRequisites:11": [
         239
       ],
@@ -21460,7 +18786,7 @@
         }
       }
     },
-    "249:10": {
+    "228:10": {
       "preRequisites:11": [
         255
       ],
@@ -21578,7 +18904,7 @@
         }
       }
     },
-    "250:10": {
+    "229:10": {
       "preRequisites:11": [
         256
       ],
@@ -21670,7 +18996,7 @@
         }
       }
     },
-    "251:10": {
+    "230:10": {
       "preRequisites:11": [
         257
       ],
@@ -21762,7 +19088,7 @@
         }
       }
     },
-    "252:10": {
+    "231:10": {
       "preRequisites:11": [
         258
       ],
@@ -21884,7 +19210,7 @@
         }
       }
     },
-    "253:10": {
+    "232:10": {
       "preRequisites:11": [
         252
       ],
@@ -21976,7 +19302,7 @@
         }
       }
     },
-    "254:10": {
+    "233:10": {
       "preRequisites:11": [
         252
       ],
@@ -22068,7 +19394,7 @@
         }
       }
     },
-    "255:10": {
+    "234:10": {
       "preRequisites:11": [
         259
       ],
@@ -22142,7 +19468,7 @@
         }
       }
     },
-    "256:10": {
+    "235:10": {
       "preRequisites:11": [
         262
       ],
@@ -22234,7 +19560,7 @@
         }
       }
     },
-    "257:10": {
+    "236:10": {
       "preRequisites:11": [
         263
       ],
@@ -22318,7 +19644,7 @@
         }
       }
     },
-    "258:10": {
+    "237:10": {
       "preRequisites:11": [
         264
       ],
@@ -22401,7 +19727,7 @@
         }
       }
     },
-    "259:10": {
+    "238:10": {
       "preRequisites:11": [
         243
       ],
@@ -22475,7 +19801,7 @@
         }
       }
     },
-    "260:10": {
+    "239:10": {
       "preRequisites:11": [
         123
       ],
@@ -22559,7 +19885,7 @@
         }
       }
     },
-    "261:10": {
+    "240:10": {
       "preRequisites:11": [
         236
       ],
@@ -22642,7 +19968,7 @@
         }
       }
     },
-    "262:10": {
+    "241:10": {
       "preRequisites:11": [
         252
       ],
@@ -22694,7 +20020,7 @@
         }
       }
     },
-    "263:10": {
+    "242:10": {
       "preRequisites:11": [
         236
       ],
@@ -22758,7 +20084,7 @@
         }
       }
     },
-    "264:10": {
+    "243:10": {
       "preRequisites:11": [
         275
       ],
@@ -22817,7 +20143,7 @@
         }
       }
     },
-    "265:10": {
+    "244:10": {
       "preRequisites:11": [
         275
       ],
@@ -22876,7 +20202,7 @@
         }
       }
     },
-    "266:10": {
+    "245:10": {
       "preRequisites:11": [
         275
       ],
@@ -22935,7 +20261,7 @@
         }
       }
     },
-    "267:10": {
+    "246:10": {
       "preRequisites:11": [
         275
       ],
@@ -22994,7 +20320,7 @@
         }
       }
     },
-    "268:10": {
+    "247:10": {
       "preRequisites:11": [
         275
       ],
@@ -23053,7 +20379,7 @@
         }
       }
     },
-    "269:10": {
+    "248:10": {
       "preRequisites:11": [
         200
       ],
@@ -23105,7 +20431,7 @@
         }
       }
     },
-    "270:10": {
+    "249:10": {
       "preRequisites:11": [
         200
       ],
@@ -23179,7 +20505,7 @@
         }
       }
     },
-    "271:10": {
+    "250:10": {
       "preRequisites:11": [
         281
       ],
@@ -23296,7 +20622,7 @@
         }
       }
     },
-    "272:10": {
+    "251:10": {
       "preRequisites:11": [
         281
       ],
@@ -23413,7 +20739,7 @@
         }
       }
     },
-    "273:10": {
+    "252:10": {
       "preRequisites:11": [
         281
       ],
@@ -23530,7 +20856,7 @@
         }
       }
     },
-    "274:10": {
+    "253:10": {
       "preRequisites:11": [
         281
       ],
@@ -23647,7 +20973,7 @@
         }
       }
     },
-    "275:10": {
+    "254:10": {
       "preRequisites:11": [
         281
       ],
@@ -23751,7 +21077,7 @@
         }
       }
     },
-    "276:10": {
+    "255:10": {
       "preRequisites:11": [
         287
       ],
@@ -23840,7 +21166,7 @@
         }
       }
     },
-    "277:10": {
+    "256:10": {
       "preRequisites:11": [
         287
       ],
@@ -23914,7 +21240,7 @@
         }
       }
     },
-    "278:10": {
+    "257:10": {
       "preRequisites:11": [
         245
       ],
@@ -23989,7 +21315,7 @@
         }
       }
     },
-    "279:10": {
+    "258:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24035,7 +21361,7 @@
         }
       }
     },
-    "280:10": {
+    "259:10": {
       "preRequisites:11": [
         251
       ],
@@ -24097,7 +21423,7 @@
         }
       }
     },
-    "281:10": {
+    "260:10": {
       "preRequisites:11": [
         292
       ],
@@ -24159,7 +21485,7 @@
         }
       }
     },
-    "282:10": {
+    "261:10": {
       "preRequisites:11": [
         290
       ],
@@ -24234,7 +21560,7 @@
         }
       }
     },
-    "283:10": {
+    "262:10": {
       "preRequisites:11": [
         236
       ],
@@ -24320,7 +21646,7 @@
         }
       }
     },
-    "284:10": {
+    "263:10": {
       "preRequisites:11": [
         295
       ],
@@ -24382,7 +21708,7 @@
         }
       }
     },
-    "285:10": {
+    "264:10": {
       "preRequisites:11": [
         295
       ],
@@ -24444,7 +21770,7 @@
         }
       }
     },
-    "286:10": {
+    "265:10": {
       "preRequisites:11": [
         236
       ],
@@ -24515,7 +21841,7 @@
         }
       }
     },
-    "287:10": {
+    "266:10": {
       "preRequisites:11": [
         200
       ],
@@ -24589,7 +21915,7 @@
         }
       }
     },
-    "288:10": {
+    "267:10": {
       "preRequisites:11": [
         259
       ],
@@ -24641,7 +21967,7 @@
         }
       }
     },
-    "289:10": {
+    "268:10": {
       "preRequisites:11": [
         174
       ],
@@ -24711,7 +22037,7 @@
         }
       }
     },
-    "290:10": {
+    "269:10": {
       "preRequisites:11": [
         301
       ],
@@ -24763,7 +22089,7 @@
         }
       }
     },
-    "291:10": {
+    "270:10": {
       "preRequisites:11": [
         302
       ],
@@ -24823,7 +22149,7 @@
         }
       }
     },
-    "292:10": {
+    "271:10": {
       "preRequisites:11": [
         303
       ],
@@ -24885,7 +22211,7 @@
         }
       }
     },
-    "293:10": {
+    "272:10": {
       "preRequisites:11": [
         304
       ],
@@ -24945,7 +22271,7 @@
         }
       }
     },
-    "294:10": {
+    "273:10": {
       "preRequisites:11": [
         112
       ],
@@ -25029,7 +22355,7 @@
         }
       }
     },
-    "295:10": {
+    "274:10": {
       "preRequisites:11": [
         300
       ],
@@ -25081,7 +22407,7 @@
         }
       }
     },
-    "296:10": {
+    "275:10": {
       "preRequisites:11": [
         259
       ],
@@ -25173,7 +22499,7 @@
         }
       }
     },
-    "297:10": {
+    "276:10": {
       "preRequisites:11": [
         259
       ],
@@ -25265,7 +22591,7 @@
         }
       }
     },
-    "298:10": {
+    "277:10": {
       "preRequisites:11": [
         259
       ],
@@ -25357,7 +22683,7 @@
         }
       }
     },
-    "299:10": {
+    "278:10": {
       "preRequisites:11": [
         259
       ],
@@ -25449,7 +22775,7 @@
         }
       }
     },
-    "300:10": {
+    "279:10": {
       "preRequisites:11": [
         104
       ],
@@ -25541,7 +22867,7 @@
         }
       }
     },
-    "301:10": {
+    "280:10": {
       "preRequisites:11": [
         104
       ],
@@ -25633,7 +22959,7 @@
         }
       }
     },
-    "302:10": {
+    "281:10": {
       "preRequisites:11": [
         174
       ],
@@ -25725,7 +23051,7 @@
         }
       }
     },
-    "303:10": {
+    "282:10": {
       "preRequisites:11": [
         174
       ],
@@ -25817,7 +23143,7 @@
         }
       }
     },
-    "304:10": {
+    "283:10": {
       "preRequisites:11": [
         112
       ],
@@ -25879,7 +23205,7 @@
         }
       }
     },
-    "305:10": {
+    "284:10": {
       "preRequisites:11": [
         314
       ],
@@ -25963,7 +23289,7 @@
         }
       }
     },
-    "306:10": {
+    "285:10": {
       "preRequisites:11": [
         314
       ],
@@ -26047,7 +23373,7 @@
         }
       }
     },
-    "307:10": {
+    "286:10": {
       "preRequisites:11": [
         324,
         325
@@ -26132,10 +23458,8 @@
         }
       }
     },
-    "308:10": {
-      "preRequisites:11": [
-        329
-      ],
+    "287:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -26224,7 +23548,7 @@
         }
       }
     },
-    "309:10": {
+    "288:10": {
       "preRequisites:11": [
         327,
         166
@@ -26299,81 +23623,7 @@
         }
       }
     },
-    "310:10": {
-      "preRequisites:11": [
-        300
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Now that we\u0027re getting to make hotter materials, we will need to cool them to use them. You can\u0027t just touch an ingot of titanium at 2300°C.\n\nIntroduce: the Quenching Machine. You may think that this extremely advanced, Tier 4 machine just puts ingots in water, but there are actually multiple quenching fluids for better and faster cooling.\n\nThese quenching fluids are:\n\nWater:\n    +Very easy to get\n    +Moderately fast\n\nAir:\n    +Very easy to get\n    -Very slow\n\nCompressed Air:\n    +Easy to get\n    -Slow\n\nInert gases (Nitrogen):\n    +Easy to get\n    +Can be used to avoid reaction with water/oxygen\n    -Very Slow\n\nCompressed inert gases:\n    +Moderately easy to get\n    +Can be used to avoid reaction with water/oxygen\n    -Slow\n\nQuenching oil:\n    +Fast\n    +Can be used to avoid reaction with water/oxygen\n    -Hard to make\n\nBrine:\n    +Very fast\n    +Very easy to get\n    -Some metals do not like the salt and need washing \n\n-----------------\nThe Quenching machine requires:\n\n1 Quenching Machine Controller\n2 Input Hatch (LV or higher)\n2 Output Hatch (LV or higher)\n1 Input Bus\n2 Output Bus\n1 Energy Hatch (LV or higher)\n10 Steel Frames\n28 Solid Steel Metal Casings\n6 Factory Blocks (fast fan)\n\n\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 20003,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Quenching Machine ",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questID:3": 329,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 20003,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 10,
-              "Damage:2": 9,
-              "OreDict:8": "frameGtSteel",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "gregtech:frame_steel",
-                "orig_meta:3": 9
-              }
-            },
-            "2:10": {
-              "Count:3": 28,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "gregtech:metal_casing"
-            },
-            "3:10": {
-              "Count:3": 6,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "chisel:technical"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "311:10": {
+    "289:10": {
       "preRequisites:11": [
         328
       ],
@@ -26465,7 +23715,7 @@
         }
       }
     },
-    "312:10": {
+    "290:10": {
       "preRequisites:11": [
         330,
         328
@@ -26540,7 +23790,7 @@
         }
       }
     },
-    "313:10": {
+    "291:10": {
       "preRequisites:11": [
         326
       ],
@@ -26611,7 +23861,7 @@
         }
       }
     },
-    "314:10": {
+    "292:10": {
       "preRequisites:11": [
         328
       ],
@@ -26713,7 +23963,7 @@
         }
       }
     },
-    "315:10": {
+    "293:10": {
       "preRequisites:11": [
         333
       ],
@@ -26796,7 +24046,7 @@
         }
       }
     },
-    "316:10": {
+    "294:10": {
       "preRequisites:11": [
         333
       ],
@@ -26871,7 +24121,7 @@
         }
       }
     },
-    "317:10": {
+    "295:10": {
       "preRequisites:11": [
         335,
         334
@@ -26955,7 +24205,7 @@
         }
       }
     },
-    "318:10": {
+    "296:10": {
       "preRequisites:11": [
         300
       ],
@@ -27217,7 +24467,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 210,
-          "y:3": 312
+          "y:3": 348
         },
         "26:10": {
           "id:3": 26,
@@ -27251,22 +24501,22 @@
           "id:3": 30,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 288,
-          "y:3": 252
+          "x:3": 282,
+          "y:3": 348
         },
         "31:10": {
           "id:3": 61,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 300,
-          "y:3": 318
+          "x:3": 294,
+          "y:3": 312
         },
         "32:10": {
           "id:3": 62,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 300,
-          "y:3": 210
+          "x:3": 348,
+          "y:3": 360
         },
         "33:10": {
           "id:3": 74,
@@ -27335,31 +24585,38 @@
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
+          "x:3": -72,
           "y:3": 216
         },
         "43:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
+          "x:3": -132,
           "y:3": 216
         },
         "44:10": {
           "id:3": 125,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 144,
+          "x:3": -192,
           "y:3": 216
         },
         "45:10": {
+          "id:3": 129,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 222,
+          "y:3": 312
+        },
+        "46:10": {
           "id:3": 135,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 36
         },
-        "46:10": {
+        "47:10": {
           "id:3": 149,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -27488,272 +24745,167 @@
           "y:3": 192
         },
         "13:10": {
-          "id:3": 44,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": 192
-        },
-        "14:10": {
-          "id:3": 45,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": 96
-        },
-        "15:10": {
           "id:3": 46,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 192
         },
-        "16:10": {
-          "id:3": 48,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -300,
-          "y:3": 252
-        },
-        "17:10": {
+        "14:10": {
           "id:3": 49,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -324,
           "y:3": 72
         },
-        "18:10": {
-          "id:3": 50,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -348,
-          "y:3": 144
-        },
-        "19:10": {
-          "id:3": 51,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -372,
-          "y:3": 180
-        },
-        "20:10": {
-          "id:3": 52,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -324,
-          "y:3": 180
-        },
-        "21:10": {
-          "id:3": 53,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 144
-        },
-        "22:10": {
+        "15:10": {
           "id:3": 54,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -144,
           "y:3": 252
         },
-        "23:10": {
+        "16:10": {
           "id:3": 55,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 96
         },
-        "24:10": {
+        "17:10": {
           "id:3": 56,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": -72
         },
-        "25:10": {
+        "18:10": {
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": -72
         },
-        "26:10": {
+        "19:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -72
         },
-        "27:10": {
+        "20:10": {
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -96,
           "y:3": -72
         },
-        "28:10": {
+        "21:10": {
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": -108
         },
-        "29:10": {
+        "22:10": {
           "id:3": 64,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 336
         },
-        "30:10": {
+        "23:10": {
           "id:3": 65,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 336
         },
-        "31:10": {
+        "24:10": {
           "id:3": 66,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -144,
           "y:3": 372
         },
-        "32:10": {
-          "id:3": 71,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -408,
-          "y:3": 216
-        },
-        "33:10": {
-          "id:3": 72,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 180
-        },
-        "34:10": {
-          "id:3": 73,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 240
-        },
-        "35:10": {
-          "id:3": 75,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 216
-        },
-        "36:10": {
-          "id:3": 76,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -372,
-          "y:3": 84
-        },
-        "37:10": {
-          "id:3": 77,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -360,
-          "y:3": 288
-        },
-        "38:10": {
-          "id:3": 78,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -396,
-          "y:3": 252
-        },
-        "39:10": {
-          "id:3": 79,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -432,
-          "y:3": 252
-        },
-        "40:10": {
+        "25:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 96
         },
-        "41:10": {
+        "26:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 144
         },
-        "42:10": {
+        "27:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 192
         },
-        "43:10": {
+        "28:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 192
         },
-        "44:10": {
+        "29:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 240
         },
-        "45:10": {
+        "30:10": {
           "id:3": 85,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 144
         },
-        "46:10": {
+        "31:10": {
           "id:3": 86,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 192
         },
-        "47:10": {
+        "32:10": {
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": -108
         },
-        "48:10": {
+        "33:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": 48
         },
-        "49:10": {
+        "34:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": 96
         },
-        "50:10": {
+        "35:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": 192
         },
-        "51:10": {
+        "36:10": {
           "id:3": 97,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -28211,174 +25363,160 @@
           "y:3": 300
         },
         "60:10": {
-          "id:3": 183,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 300
-        },
-        "61:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 360
         },
-        "62:10": {
-          "id:3": 185,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 348
-        },
-        "63:10": {
+        "61:10": {
           "id:3": 186,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 396
         },
-        "64:10": {
+        "62:10": {
           "id:3": 187,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 396
         },
-        "65:10": {
+        "63:10": {
           "id:3": 188,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 420
         },
-        "66:10": {
+        "64:10": {
           "id:3": 189,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 480
         },
-        "67:10": {
+        "65:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 480
         },
-        "68:10": {
+        "66:10": {
           "id:3": 191,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 120
         },
-        "69:10": {
+        "67:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 120
         },
-        "70:10": {
+        "68:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 120
         },
-        "71:10": {
+        "69:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 96
         },
-        "72:10": {
+        "70:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 144
         },
-        "73:10": {
+        "71:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 156
         },
-        "74:10": {
+        "72:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 156
         },
-        "75:10": {
+        "73:10": {
           "id:3": 198,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 36,
           "y:3": -24
         },
-        "76:10": {
+        "74:10": {
           "id:3": 199,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 108,
           "y:3": -24
         },
-        "77:10": {
+        "75:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 648
         },
-        "78:10": {
+        "76:10": {
           "id:3": 216,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 36
         },
-        "79:10": {
+        "77:10": {
           "id:3": 233,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 444
         },
-        "80:10": {
+        "78:10": {
           "id:3": 238,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 132
         },
-        "81:10": {
+        "79:10": {
           "id:3": 246,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 522
         },
-        "82:10": {
+        "80:10": {
           "id:3": 247,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 492
         },
-        "83:10": {
+        "81:10": {
           "id:3": 319,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 168
         },
-        "84:10": {
+        "82:10": {
           "id:3": 320,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -28472,517 +25610,503 @@
           "y:3": 42
         },
         "8:10": {
-          "id:3": 206,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -138,
-          "y:3": 36
-        },
-        "9:10": {
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 42
         },
-        "10:10": {
-          "id:3": 208,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -138,
-          "y:3": 0
-        },
-        "11:10": {
+        "9:10": {
           "id:3": 220,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 78
         },
-        "12:10": {
+        "10:10": {
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 168
         },
-        "13:10": {
+        "11:10": {
           "id:3": 222,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 168
         },
-        "14:10": {
+        "12:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 84
         },
-        "15:10": {
+        "13:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -96,
           "y:3": 84
         },
-        "16:10": {
+        "14:10": {
           "id:3": 225,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -96,
           "y:3": 120
         },
-        "17:10": {
+        "15:10": {
           "id:3": 226,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 120
         },
-        "18:10": {
+        "16:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -168,
           "y:3": 120
         },
-        "19:10": {
+        "17:10": {
           "id:3": 228,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -168,
           "y:3": 84
         },
-        "20:10": {
+        "18:10": {
           "id:3": 231,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 204
         },
-        "21:10": {
+        "19:10": {
           "id:3": 232,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": 204
         },
-        "22:10": {
+        "20:10": {
           "id:3": 236,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 252
         },
-        "23:10": {
+        "21:10": {
           "id:3": 239,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 288,
           "y:3": 72
         },
-        "24:10": {
+        "22:10": {
           "id:3": 240,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 246,
           "y:3": 30
         },
-        "25:10": {
+        "23:10": {
           "id:3": 241,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 342,
           "y:3": 30
         },
-        "26:10": {
+        "24:10": {
           "id:3": 242,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 102,
           "y:3": 30
         },
-        "27:10": {
+        "25:10": {
           "id:3": 243,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 150,
           "y:3": 30
         },
-        "28:10": {
+        "26:10": {
           "id:3": 244,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 198,
           "y:3": 30
         },
-        "29:10": {
+        "27:10": {
           "id:3": 245,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 48,
           "y:3": -18
         },
-        "30:10": {
+        "28:10": {
           "id:3": 248,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 102,
           "y:3": -12
         },
-        "31:10": {
+        "29:10": {
           "id:3": 249,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 150,
           "y:3": -12
         },
-        "32:10": {
+        "30:10": {
           "id:3": 250,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 198,
           "y:3": -12
         },
-        "33:10": {
+        "31:10": {
           "id:3": 251,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 246,
           "y:3": -12
         },
-        "34:10": {
+        "32:10": {
           "id:3": 252,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 294,
           "y:3": -12
         },
-        "35:10": {
+        "33:10": {
           "id:3": 253,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 294,
           "y:3": -78
         },
-        "36:10": {
+        "34:10": {
           "id:3": 254,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 294,
           "y:3": 30
         },
-        "37:10": {
+        "35:10": {
           "id:3": 255,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 294,
           "y:3": 120
         },
-        "38:10": {
+        "36:10": {
           "id:3": 256,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 294,
           "y:3": 156
         },
-        "39:10": {
+        "37:10": {
           "id:3": 257,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 294,
           "y:3": 192
         },
-        "40:10": {
+        "38:10": {
           "id:3": 258,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 294,
           "y:3": 228
         },
-        "41:10": {
+        "39:10": {
           "id:3": 259,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 288,
           "y:3": 258
         },
-        "42:10": {
+        "40:10": {
           "id:3": 260,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 270,
           "y:3": -48
         },
-        "43:10": {
+        "41:10": {
           "id:3": 261,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 318,
           "y:3": -48
         },
-        "44:10": {
+        "42:10": {
           "id:3": 262,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 282,
           "y:3": 306
         },
-        "45:10": {
+        "43:10": {
           "id:3": 263,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 318
         },
-        "46:10": {
+        "44:10": {
           "id:3": 264,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 414,
           "y:3": 318
         },
-        "47:10": {
+        "45:10": {
           "id:3": 265,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 468,
           "y:3": 318
         },
-        "48:10": {
+        "46:10": {
           "id:3": 269,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 198,
           "y:3": 78
         },
-        "49:10": {
+        "47:10": {
           "id:3": 273,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 264
         },
-        "50:10": {
+        "48:10": {
           "id:3": 274,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 342,
           "y:3": -12
         },
-        "51:10": {
+        "49:10": {
           "id:3": 275,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 246
         },
-        "52:10": {
+        "50:10": {
           "id:3": 276,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -168,
           "y:3": 246
         },
-        "53:10": {
+        "51:10": {
           "id:3": 277,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -168,
           "y:3": 282
         },
-        "54:10": {
+        "52:10": {
           "id:3": 278,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 282
         },
-        "55:10": {
+        "53:10": {
           "id:3": 279,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -96,
           "y:3": 282
         },
-        "56:10": {
+        "54:10": {
           "id:3": 280,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -96,
           "y:3": 246
         },
-        "57:10": {
+        "55:10": {
           "id:3": 281,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 126
         },
-        "58:10": {
+        "56:10": {
           "id:3": 282,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 78
         },
-        "59:10": {
+        "57:10": {
           "id:3": 283,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 144
         },
-        "60:10": {
+        "58:10": {
           "id:3": 284,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 144
         },
-        "61:10": {
+        "59:10": {
           "id:3": 285,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 114
         },
-        "62:10": {
+        "60:10": {
           "id:3": 286,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 114
         },
-        "63:10": {
+        "61:10": {
           "id:3": 287,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 126
         },
-        "64:10": {
+        "62:10": {
           "id:3": 288,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 198,
           "y:3": 114
         },
-        "65:10": {
+        "63:10": {
           "id:3": 289,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 198,
           "y:3": 156
         },
-        "66:10": {
+        "64:10": {
           "id:3": 290,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 54,
           "y:3": -54
         },
-        "67:10": {
+        "65:10": {
           "id:3": 292,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 246,
           "y:3": -78
         },
-        "68:10": {
+        "66:10": {
           "id:3": 293,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 198,
           "y:3": -78
         },
-        "69:10": {
+        "67:10": {
           "id:3": 294,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 54,
           "y:3": -90
         },
-        "70:10": {
+        "68:10": {
           "id:3": 295,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 24,
           "y:3": 318
         },
-        "71:10": {
+        "69:10": {
           "id:3": 296,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
           "y:3": 366
         },
-        "72:10": {
+        "70:10": {
           "id:3": 297,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 324
         },
-        "73:10": {
+        "71:10": {
           "id:3": 298,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -60,
           "y:3": 318
         },
-        "74:10": {
+        "72:10": {
           "id:3": 299,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 168
         },
-        "75:10": {
+        "73:10": {
           "id:3": 301,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -90
         },
-        "76:10": {
+        "74:10": {
           "id:3": 302,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -150
         },
-        "77:10": {
+        "75:10": {
           "id:3": 303,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 54,
           "y:3": -150
         },
-        "78:10": {
+        "76:10": {
           "id:3": 304,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 102,
           "y:3": -150
         },
-        "79:10": {
+        "77:10": {
           "id:3": 305,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 150,
           "y:3": -150
         },
-        "80:10": {
+        "78:10": {
           "id:3": 321,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": -60
         },
-        "81:10": {
+        "79:10": {
           "id:3": 322,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -29118,62 +26242,55 @@
           "y:3": 252
         },
         "14:10": {
-          "id:3": 329,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": 132
-        },
-        "15:10": {
           "id:3": 330,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 252
         },
-        "16:10": {
+        "15:10": {
           "id:3": 331,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 252
         },
-        "17:10": {
+        "16:10": {
           "id:3": 332,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 60
         },
-        "18:10": {
+        "17:10": {
           "id:3": 333,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 300
         },
-        "19:10": {
+        "18:10": {
           "id:3": 334,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": 348
         },
-        "20:10": {
+        "19:10": {
           "id:3": 335,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 348
         },
-        "21:10": {
+        "20:10": {
           "id:3": 336,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 396
         },
-        "22:10": {
+        "21:10": {
           "id:3": 337,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -29908,188 +27025,97 @@
           "y:3": 0
         },
         "2:10": {
-          "id:3": 48,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 0
-        },
-        "3:10": {
-          "id:3": 71,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 96,
-          "y:3": 0
-        },
-        "4:10": {
-          "id:3": 77,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 48
-        },
-        "5:10": {
-          "id:3": 78,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": 0
-        },
-        "6:10": {
-          "id:3": 79,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": 48
-        },
-        "7:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 0
         },
-        "8:10": {
+        "3:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 48
         },
-        "9:10": {
+        "4:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 48
         },
-        "10:10": {
+        "5:10": {
           "id:3": 85,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 336,
           "y:3": 0
         },
-        "11:10": {
+        "6:10": {
           "id:3": 86,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 0
         },
-        "12:10": {
+        "7:10": {
           "id:3": 137,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 384,
           "y:3": 0
         },
-        "13:10": {
+        "8:10": {
           "id:3": 166,
           "sizeX:3": 60,
           "sizeY:3": 60,
           "x:3": 0,
           "y:3": 96
         },
-        "14:10": {
+        "9:10": {
           "id:3": 176,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 0,
           "y:3": 48
         },
-        "15:10": {
+        "10:10": {
           "id:3": 177,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 48
         },
-        "16:10": {
-          "id:3": 183,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 96
-        },
-        "17:10": {
-          "id:3": 185,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": 96
-        },
-        "18:10": {
-          "id:3": 206,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 384,
-          "y:3": 48
-        },
-        "19:10": {
-          "id:3": 208,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 336,
-          "y:3": 48
-        },
-        "20:10": {
-          "id:3": 209,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": 96
-        },
-        "21:10": {
-          "id:3": 210,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": 96
-        },
-        "22:10": {
-          "id:3": 211,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 336,
-          "y:3": 96
-        },
-        "23:10": {
+        "11:10": {
           "id:3": 245,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 48
         },
-        "24:10": {
+        "12:10": {
           "id:3": 295,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 192,
           "y:3": 138
         },
-        "25:10": {
+        "13:10": {
           "id:3": 298,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 138
         },
-        "26:10": {
+        "14:10": {
           "id:3": 328,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -42,
           "y:3": 114
         },
-        "27:10": {
-          "id:3": 329,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 96,
-          "y:3": 96
-        },
-        "28:10": {
+        "15:10": {
           "id:3": 331,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -30132,55 +27158,41 @@
           "y:3": -12
         },
         "2:10": {
-          "id:3": 183,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": 48
-        },
-        "3:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 108
         },
-        "4:10": {
-          "id:3": 185,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": -12
-        },
-        "5:10": {
+        "3:10": {
           "id:3": 186,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -12
         },
-        "6:10": {
+        "4:10": {
           "id:3": 187,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -72
         },
-        "7:10": {
+        "5:10": {
           "id:3": 188,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 108
         },
-        "8:10": {
+        "6:10": {
           "id:3": 189,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 108
         },
-        "9:10": {
+        "7:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
