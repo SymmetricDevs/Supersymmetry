@@ -1,12 +1,17 @@
 import static globals.Globals.*
 
+import gregtech.api.recipes.ModHandler;
+import gregtech.api.unification.material.Materials;
+import gregtech.api.unification.ore.OrePrefix;
+import gregtech.api.unification.stack.UnificationEntry;
+
 def name_removals = [
     'gregtech:fireclay_dust',
     'gregtechfoodoption:mud_bricks1',
     'gregtechfoodoption:mud_bricks2',
     'gregtechfoodoption:mud_bricks3',
     'gregtechfoodoption:mud_bricks4',
-
+    'gregtech:casing_primitive_bricks'
 ]
 
 for (name in name_removals) {
@@ -40,8 +45,18 @@ def compressed_fireclay_ingredients = [
 
 furnace.add(ore('stoneLimestone'), item('gregtech:meta_dust', 360))
 crafting.addShapeless('ManualFineSandPile',metaitem('sand.dust') * 4, [item('minecraft:sand')]) 
-crafting.addShapeless('ManualSlakedLime',metaitem('slaked_lime'), [fluid('minecraft:water'), item('gregtech:meta_dust', 360)]) 
+
 crafting.addShapeless('ManualFireclay',metaitem('dustFireclay') * 2, fireclay_ingredients) 
+
+crafting.addShaped('pfb_casing_firebricks', item('gregtech:metal_casing', 1), [
+    [metaitem('brick.fireclay'),metaitem('brick.fireclay')],
+    [metaitem('brick.fireclay'),metaitem('brick.fireclay')]
+]) 
+
+ModHandler.addShapelessRecipe("ManualSlakedLime", metaitem('slaked_lime'), 
+    new UnificationEntry(OrePrefix.dust, Materials.Quicklime),
+    item('minecraft:water_bucket')
+);
 
 CompressBrickRecipes('dustFireclay', 'compressed.fireclay')
 

@@ -1,6 +1,12 @@
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;
 
+import gregtech.api.recipes.ModHandler;
+import gregtech.api.unification.material.Materials;
+import gregtech.api.unification.ore.OrePrefix;
+import gregtech.api.unification.stack.UnificationEntry;
+
+
 println("Running GregTech.groovy...")
 
 def name_removals = [
@@ -38,11 +44,11 @@ crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
 
 //Manual chad for early paper
 
-crafting.addShapeless("manual_chad", metaitem('dustPaper'), [
-        ore('dustWood'),
-        ore('dustWood'),
-        fluid('water')
-]);
+// ModHandler.addShapedRecipe("manual_chad", metaitem('dustPaper'), 
+//     new UnificationEntry(OrePrefix.dust, Materials.Wood), 
+//     new UnificationEntry(OrePrefix.dust, Materials.Wood),
+//     item('minecraft:water_bucket')
+// );
 
 // mods.gregtech.alloy_smelter.recipeBuilder()
 //         .inputs(ore('dustRawRubber') * 6)

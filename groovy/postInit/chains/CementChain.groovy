@@ -191,7 +191,8 @@ def name_removals = [
     'minecraft:brown_concrete_powder',
     'minecraft:green_concrete_powder',
     'minecraft:red_concrete_powder',
-    'minecraft:black_concrete_powder'
+    'minecraft:black_concrete_powder',
+    'gregtech:bucket_of_concrete'
 ]
 
 for (name in name_removals) {
