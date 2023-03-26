@@ -1,9 +1,9 @@
-/*
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
 
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
+import static gregtech.api.unification.material.info.MaterialIconSet.*;
 
 //IDs 30000-30500 RESERVED FOR ORES
 
@@ -28,12 +28,13 @@ eventManager.listen {
                 .colorAverage()
                 .build();
 
-        new Material.Builder(30003, "dolomite")
+/*        new Material.Builder(30003, "dolomite")
                 .ore()
                 .components(Calcium, 1, Magnesium, 1, Carbon, 3, Oxygen, 6)
                 .colorAverage()
                 .build();
-
+*/ 
+// Dolomite will be a normal stone, not this 
         new Material.Builder(30004, "fluorapatite")
                 .ore()
                 .addOreByproducts(TricalciumPhosphate)
@@ -63,9 +64,80 @@ eventManager.listen {
                 .components(Lithium, 2)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
-                .iconSet(SHINY)
+                .build();
+
+        new Material.Builder(30010, "lignite")
+                .gem(1, 1200).ore(2, 1)
+				.color(0x644646).iconSet(LIGNITE)
+                .components(Carbon, 1)
+                .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
+                .build();
+
+        new Material.Builder(30011, "anthracite")
+                .gem(1, 2000).ore(2, 1)
+				.color(0x241212).iconSet(LIGNITE)
+                .components(Carbon, 1)
+                .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
+                .build();
+
+        new Material.Builder(30012, "anglesite")
+                .ore()
+                .addOreByproducts(Galena)
+                .components(Lead, 1, Sulfur, 1, Oxygen, 4)
+                .colorAverage()
+                .build();
+				
+        new Material.Builder(30013, "celestine")
+                .ore()
+                .components(Strontium, 1, Sulfur, 1, Oxygen, 4)
+                .color(0xC8D4D4)
+                .build();
+
+        new Material.Builder(30014, "azurite")
+                .ore()
+                .components(Copper, 3, Carbon, 2, Oxygen, 8, Hydrogen, 2)
+                .color(0x161446)
+                .build()
+				.setFormula("Cu3(CO3)2(OH)2", true);
+
+        new Material.Builder(30015, "hydrozincite")
+                .ore()
+                .components(Zinc, 5, Carbon, 2, Oxygen, 12, Hydrogen, 6)
+                .colorAverage()
+                .build()
+				.setFormula("Zn5(CO3)2(OH)6", true);
+
+        new Material.Builder(30016, "cerussite")
+                .ore()
+                .components(Lead, 1, Carbon, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        new Material.Builder(30017, "proustite")
+                .ore()
+                .components(Silver, 3, Arsenic, 1, Sulfur, 3)
+                .colorAverage()
+                .build();
+
+        new Material.Builder(30018, "stephanite")
+                .ore()
+                .components(Silver, 5, Antimony, 1, Sulfur, 4)
+                .colorAverage()
+                .build();
+
+        new Material.Builder(30019, "arsenopyrite")
+                .ore()
+                .addOreByproducts(Pyrite)
+                .components(Iron, 1, Arsenic, 1, Sulfur, 1)
+                .colorAverage()
+                .build();
+
+        new Material.Builder(30020, "sperrylite")
+                .ore()
+                .components(Platinum, 1, Arsenic, 2)
+                .colorAverage()
                 .build();
 
         println("Groovy finished modifying ores")
 }
-*/
+
