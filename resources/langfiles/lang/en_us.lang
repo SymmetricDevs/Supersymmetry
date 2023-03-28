@@ -151,6 +151,23 @@ material.precious_metal=Precious Metal
 material.kaolinite=Kaolinite
 material.cuprite=Cuprite
 
+material.lignite=Lignite
+material.anthracite=Anthracite
+material.anglesite=Anglesite
+material.celestine=Celestine
+material.azurite=Azurite
+material.hydrozincite=Hydrozincite
+material.cerussite=Cerussite
+material.proustite=Proustite
+material.stephanite=Stephanite
+material.arsenopyrite=Arsenopyrite
+material.sperrylite=Sperrylite
+material.smithsonite=Smithsonite
+
+
+
+
+
 material.sulfurous_water=Sulfurous Water
 material.oxide_water=Oxide Water
 material.mineralized_water=Mineralized Water

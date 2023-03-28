@@ -1,0 +1,30 @@
+{
+  "weight": 40,
+  "density": 0.75,
+  "max_height": 40,
+  "min_height": 0,
+  "generator": {
+    "type": "layered",
+    "radius": [
+      20,
+      20
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:chromite"
+      },
+      {
+        "secondary": "ore:olivine"
+      },
+      {
+        "between": "ore:magnetite"
+      },
+      {
+        "sporadic": "ore:ruby"
+      }
+    ]
+  }
+}

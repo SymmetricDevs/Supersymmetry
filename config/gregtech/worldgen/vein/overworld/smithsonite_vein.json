@@ -1,0 +1,30 @@
+{
+  "weight": 40,
+  "density": 0.75,
+  "max_height": 80,
+  "min_height": 40,
+  "generator": {
+    "type": "layered",
+    "radius": [
+      20,
+      20
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:smithsonite"
+      },
+      {
+        "secondary": "ore:hydrozincite"
+      },
+      {
+        "between": "ore:cerussite"
+      },
+      {
+        "sporadic": "ore:anglesite"
+      }
+    ]
+  }
+}

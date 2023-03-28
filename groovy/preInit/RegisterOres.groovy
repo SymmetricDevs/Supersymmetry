@@ -138,6 +138,12 @@ eventManager.listen {
                 .colorAverage()
                 .build();
 
+        new Material.Builder(30021, "smithsonite")
+                .ore()
+                .components(Zinc, 1, Carbon, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
         println("Groovy finished modifying ores")
 }
 

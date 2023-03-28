@@ -1,0 +1,31 @@
+{
+  "weight": 120,
+  "density": 0.75,
+  "max_height": 255,
+  "min_height": 0,
+  "dimension_filter": ["dimension_id:10"],
+  "generator": {
+    "type": "layered",
+    "radius": [
+      20,
+      20
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:chalcopyrite"
+      },
+      {
+        "secondary": "ore:chalcocite"
+      },
+      {
+        "between": "ore:malachite"
+      },
+      {
+        "sporadic": "ore:bornite"
+      }
+    ]
+  }
+}
