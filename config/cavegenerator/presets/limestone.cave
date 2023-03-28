@@ -10,6 +10,7 @@
       states: susy:susy_stone_smooth:3
       height: [ 0, 255 ]
     } ]
+  dimensions: [ 0 ]
   tunnels: [
     {
       seed: 9999
@@ -51,7 +52,7 @@
         randFactor: 0.001
         exponent: 1
       }
-      originHeight: [ 55, 100 ]
+      originHeight: [ 40, 80 ]
       chance: 0.8
       count: 6
       #Higher scale on the Y axis for taller 'caverns'.

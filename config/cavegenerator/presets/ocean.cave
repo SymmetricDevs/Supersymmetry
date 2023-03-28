@@ -9,6 +9,7 @@
   biomes: {
     types: WATER
   }
+  dimensions: [ 0 ]
   layers: [ {
       state: gregtech:stone_smooth:3
       height: [ 0, 60 ]

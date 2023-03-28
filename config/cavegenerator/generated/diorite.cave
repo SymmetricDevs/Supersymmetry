@@ -10,6 +10,7 @@
       states: minecraft:stone:3
       height: [ 0, 255 ]
     } ]
+  dimensions: [ 0 ]
   tunnels: [
     {
       seed: 9999

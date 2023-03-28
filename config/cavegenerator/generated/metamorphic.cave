@@ -1,14 +1,37 @@
 {
   enabled: true
   replaceableBlocks: [ "stone" ]
-  replaceDecorators: false
+  replaceDecorators: true
   rooms: {
     scale: 1
     stretch: 0
   }
-  caveBlocks: [ {
-      states: gregtech:stone_smooth:2
-      height: [ 0, 255 ]
+  biomes: {
+    names: [
+      beneath:the_beneath
+    ]
+  }
+  layers: [ {
+      state: susy:susy_stone_smooth:1
+      height: [ 225, 255 ]
+    }, {
+      state: susy:susy_stone_smooth:2
+      height: [ 180, 225 ]
+    }, {
+      state: susy:susy_stone_smooth:4
+      height: [ 150, 180 ]
+    }, {
+      state: susy:susy_stone_smooth:5
+      height: [ 110, 150 ]
+    }, {
+      state: susy:susy_stone_smooth:6
+      height: [ 70, 110 ]
+    }, {
+      state: susy:susy_stone_smooth:8
+      height: [ 30, 70 ]
+    }, {
+      state: susy:susy_stone_smooth:9
+      height: [ 0, 29 ]
     } ]
   tunnels: [
     {
@@ -51,7 +74,7 @@
         randFactor: 0.001
         exponent: 1
       }
-      originHeight: [ 0, 55 ]
+      originHeight: [ 55, 100 ]
       chance: 0.8
       count: 6
       #Higher scale on the Y axis for taller 'caverns'.
