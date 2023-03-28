@@ -52,7 +52,7 @@
         randFactor: 0.005
         exponent: 1
       }
-      originHeight: [ 0, 30 ]
+      originHeight: [ 0, 40 ]
       chance: 1
       count: 7
       #Higher scale on the Y axis for taller 'caverns'.
