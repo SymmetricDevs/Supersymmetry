@@ -35,6 +35,7 @@ eventManager.listen {
                 .build();
 */ 
 // Dolomite will be a normal stone, not this 
+
         new Material.Builder(30004, "fluorapatite")
                 .ore()
                 .addOreByproducts(TricalciumPhosphate)
@@ -143,6 +144,20 @@ eventManager.listen {
                 .components(Zinc, 1, Carbon, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
+
+        new Material.Builder(30022, "acanthite")
+                .ore()
+                .components(Silver, 2, Sulfur, 1)
+                .colorAverage()
+                .build();
+
+        new Material.Builder(30023, "thortveitite")
+                .ore()
+                .components(Scandium, 1, Yttrium, 1, Silicon, 2, Oxygen, 7)
+                .colorAverage()
+                .build()
+				.setFormula("ScY2Si2O7", true);
+
 
         println("Groovy finished modifying ores")
 }
