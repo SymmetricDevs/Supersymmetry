@@ -1,4 +1,4 @@
-import gregtech.integration.GroovyScriptCompat
+import gregtech.integration.groovy.GroovyScriptCompat
 
 import com.cleanroommc.groovyscript.api.IIngredient
 
