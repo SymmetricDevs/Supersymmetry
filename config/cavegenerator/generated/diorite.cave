@@ -1,0 +1,67 @@
+{
+  enabled: true
+  replaceableBlocks: [ "stone" ]
+  replaceDecorators: false
+  rooms: {
+    scale: 1
+    stretch: 0
+  }
+  caveBlocks: [ {
+      states: minecraft:stone:3
+      height: [ 0, 255 ]
+    } ]
+  dimensions: [ 0 ]
+  tunnels: [
+    {
+      seed: 9999
+      systemChance: 0
+      systemDensity: 0
+      noiseYReduction: false
+      #Very short tunnels.
+      distance: 64
+      resizeBranches: false
+      #Tunnels are much bigger than vanilla.
+      scale: {
+        startVal: 11
+        startValRandFactor: 0.01
+        factor: 1
+        randFactor: 0
+        exponent: 1
+      }
+      yaw: {
+        startVal: 0
+        startValRandFactor: 1
+      }
+      #The starting pitch of the tunnel.
+      #Starts at 0 with a very, very low randomness so the tunnels start flat.
+      pitch: {
+        startVal: 0
+        startValRandFactor: 0.001
+      }
+      #Yaw is relatively the same as vanilla.
+      dYaw: {
+        startVal: 0
+        factor: 0.75
+        randFactor: 4
+        exponent: 1
+      }
+      #Low factor and randFactor for pitch to keep tunnels especially flat.
+      dPitch: {
+        startVal: 0
+        factor: 0.1
+        randFactor: 0.001
+        exponent: 1
+      }
+      originHeight: [ 0, 40 ]
+      chance: 0.75
+      count: 6
+      #Higher scale on the Y axis for taller 'caverns'.
+      stretch: {
+        startVal: 1
+        factor: 1
+        randFactor: 0
+        exponent: 1
+      }
+    }
+  ]
+}

@@ -1,12 +1,8 @@
 {
-  "weight": 40,
+  "weight": 180,
   "density": 0.75,
-  "max_height": 64,
+  "max_height": 40,
   "min_height": 0,
-  "vein_populator": {
-    "type": "surface_rock",
-    "material": "tin"
-  },
   "generator": {
     "type": "layered",
     "radius": [
@@ -21,13 +17,13 @@
         "primary": "ore:cassiterite"
       },
       {
-        "secondary": "ore:garnet_sand"
+        "secondary": "ore:fluorite"
       },
       {
-        "between": "ore:diatomite"
+        "between": "ore:molybdenite"
       },
       {
-        "sporadic": "ore:asbestos"
+        "sporadic": "ore:arsenopyrite"
       }
     ]
   }

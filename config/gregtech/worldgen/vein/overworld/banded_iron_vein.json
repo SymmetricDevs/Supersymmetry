@@ -1,0 +1,34 @@
+{
+  "weight": 180,
+  "density": 0.75,
+  "max_height": 255,
+  "min_height": 0,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "iron"
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      32,
+      32
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:banded_iron"
+      },
+      {
+        "secondary": "ore:banded_iron"
+      },
+      {
+        "between": "ore:magnetite"
+      },
+      {
+        "sporadic": "ore:magnetite"
+      }
+    ]
+  }
+}

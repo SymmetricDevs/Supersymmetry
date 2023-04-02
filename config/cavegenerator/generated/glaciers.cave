@@ -1,0 +1,44 @@
+{
+  enabled: true
+  replaceableBlocks: [ "air", "water" ]
+  biomes: {
+    names: deep_ocean
+  }
+  caveBlocks: [ {
+      states: packed_ice
+      height: [ 0, 255 ]
+    } ]
+  caverns: [ {
+      height: [ 30, 110 ]
+      ceiling: {
+        frequency: 0.01
+        cache: true
+        range: [ 0, 50 ]
+      }
+      floor: {
+        frequency: 0.02
+        range: [ 0, 10 ]
+      }
+      generators: {
+        type: Cellular
+        fractal: FBM
+        interp: Hermite
+        distFunc: Manhattan
+        returnType: Distance3Add
+        threshold: 0.8
+        frequency: 0.006
+        octaves: 1
+        lacunarity: 1
+        gain: 0.1
+        offset: -30
+        stretch: 2.1
+        perturb: true
+        perturbAmp: 8
+        perturbFreq: 0.07
+        jitterY: 0.2
+        jitterX: 1.5
+        jitterZ: 1.5
+        invert: false
+      }
+    } ]
+}

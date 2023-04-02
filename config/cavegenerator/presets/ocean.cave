@@ -1,0 +1,17 @@
+{
+  enabled: true
+  replaceableBlocks: [ "stone" ]
+  replaceDecorators: true
+  rooms: {
+    scale: 1
+    stretch: 0
+  }
+  biomes: {
+    types: WATER
+  }
+  dimensions: [ 0 ]
+  layers: [ {
+      state: gregtech:stone_smooth:3
+      height: [ 0, 60 ]
+    } ]
+}
