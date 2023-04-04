@@ -27,5 +27,12 @@ class Globals {
         'silicone_rubber': 72,
         'styrene_butadiene_rubber': 36
     ]
+
+    public static mod_priority = [
+        "minecraft",
+        "gregtech",
+        "libvulpes",
+        "advancedrocketry"
+    ]
              
 }
