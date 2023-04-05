@@ -34,7 +34,8 @@ def unify_oredicts(ore_list) {
 }
 
 def dicts_ingots = [
-    ore('ingotCopper')
+    ore('ingotCopper'),
+    ore('ingotTin')
 ]
 
 unify_oredicts(dicts_ingots)

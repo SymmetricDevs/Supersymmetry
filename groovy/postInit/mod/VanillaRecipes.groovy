@@ -363,7 +363,7 @@ mods.gregtech.assembler.removeByInput(7, [item('minecraft:chest'), item('minecra
 // Powered Rail * 12
 mods.gregtech.assembler.removeByInput(30, [metaitem('stickGold') * 12, item('minecraft:stick'), item('minecraft:redstone'), circuit(1)], null)
 // Detector Rail * 12
-mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick'), item('minecraft:redstone'), circuit(4)], null)
+//mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick'), item('minecraft:redstone'), circuit(4)], null)
 // Rail * 32
 mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick'), circuit(1)], null)
 mods.gregtech.assembler.recipeBuilder()
@@ -374,7 +374,7 @@ mods.gregtech.assembler.recipeBuilder()
     .EUt(10)
     .buildAndRegister()
 // Activator Rail * 12
-mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick') * 2, item('minecraft:redstone_torch'), circuit(4)], null)
+//mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick') * 2, item('minecraft:redstone_torch'), circuit(4)], null)
 
 
 //Centrifuge
