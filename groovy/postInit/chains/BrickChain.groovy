@@ -53,7 +53,7 @@ crafting.addShaped('pfb_casing_firebricks', item('gregtech:metal_casing', 1), [
     [metaitem('brick.fireclay'),metaitem('brick.fireclay')]
 ]) 
 
-ModHandler.addShapelessRecipe("ManualSlakedLime", metaitem('slaked_lime'), 
+ModHandler.addShapelessRecipe("manual_slaked_lime", metaitem('slaked_lime'), 
     new UnificationEntry(OrePrefix.dust, Materials.Quicklime),
     item('minecraft:water_bucket')
 );
