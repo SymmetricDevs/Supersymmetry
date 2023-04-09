@@ -58,3 +58,4 @@ You can bind the quests menu to a key, instead of using the book
 Make sure you have backups!
 Industrial Renewal tanks can have up to 1,000,000mB of storage
 The Electrolyzer separates substances into their basic chemicals
+Don't forget your daily offering to Flop
