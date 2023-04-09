@@ -3986,7 +3986,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§6 Coagulation Tank§r is a hollow, 3x3x3 cubic structure that coagulates fluids into solids.\n\nThe Coagulation Tank requires:\n§6- 1 Coagulation Tank Controller\n- 24 Wooden Coagulation Tank Wall\n§r\nThe tank can coagulate liquid Latex into a solid hunk of Latex. \n\nWhile this isn\u0027t strictly required, it makes the next step of the Rubber processing chain about §c8x more efficient§r.",
+          "desc:8": "The§6 Coagulation Tank§r is a hollow, 3x3x3 cubic structure that coagulates fluids into solids.\n\nThe Coagulation Tank requires:\n§6- 1 Coagulation Tank Controller\n- 24 Wooden Coagulation Tank Wall\n§r\nThe tank can coagulate liquid Latex into a solid hunk of Latex. \nSome fluid §6Catalysts§r can be used to make the process faster, but it requires that Circuits are supplied to the machine, so this isn\u0027t available right now. \n\nWhile this isn\u0027t strictly required, it makes the next step of the Rubber processing chain about §c8x more efficient§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

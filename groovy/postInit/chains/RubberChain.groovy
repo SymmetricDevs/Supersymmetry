@@ -85,7 +85,7 @@ def CoagulationRecipe(amount, duration, circ){
 
     COAGULATION_RECIPES.recipeBuilder()
     .fluidInputs(fluid('latex') * (1000 * amount))
-    .notConsumable(Globals.circuit(circ))
+    .notConsumable(metaitem('stickIron'))
     .outputs(metaitem('dustLatex') * amount)
     .duration(duration)
     .buildAndRegister()
@@ -123,7 +123,7 @@ for (latexSource in latexSources) {
                 .inputs(metaitem(sulfurSource.name) * sulfurSource.amount_required)
                 .outputs(metaitem('plateRubber') * latexSource.yield)
                 .duration(latexSource.duration.intdiv(catalyser.speed_bonus))
-                .EUt(30)
+                .EUt(7)
                 .buildAndRegister()
             } 
             else {
@@ -133,7 +133,7 @@ for (latexSource in latexSources) {
                 .notConsumable(metaitem(catalyser.name))
                 .outputs(metaitem('plateRubber') * latexSource.yield)
                 .duration(latexSource.duration.intdiv(catalyser.speed_bonus))
-                .EUt(30)
+                .EUt(7)
                 .buildAndRegister()
             }
         }
@@ -144,7 +144,7 @@ for (latexSource in latexSources) {
             .notConsumable(Globals.circuit(0))
             .outputs(metaitem('plateRubber') * latexSource.yield)
             .duration(latexSource.duration)
-            .EUt(30)
+            .EUt(7)
             .buildAndRegister()
         } 
         else {
@@ -154,7 +154,7 @@ for (latexSource in latexSources) {
             .notConsumable(Globals.circuit(0))
             .outputs(metaitem('plateRubber') * latexSource.yield)
             .duration(latexSource.duration)
-            .EUt(30)
+            .EUt(7)
             .buildAndRegister()
         }
     }
