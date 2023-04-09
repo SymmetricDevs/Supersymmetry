@@ -1985,7 +1985,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A furnace is not really good for smelting items. Its maximum temperature is only 1000 K (730°C), which is not hot enough for iron.\n\nA Primitive Blast Furnace is made out of 32 §cFirebricks§r and 1 §4Primitive Blast Furnace Controller§r. It\u0027s a  §a3x4x3 structure§r§r of firebricks that is hollowed out in the middle. For more help, look at the §cStructure Preview§r in the JEI database.\n\nThe Primitive Blast Furnace can smelt iron, wrought iron and §bsteel§r. It has a maximum temperature of about 1400 K (1,127°C).\n\nLike many other structures, it is possible to share the walls of multiple Primitive Blast Furnaces and they will still work.\n\n§l§e§lNOTE: Making the Primitive Blast Furnace requires a steam macerator. Please check the Industrial Age chapter to continue.",
+          "desc:8": "A furnace is not really good for smelting items. Its maximum temperature is only 1000 K (730°C), which is not hot enough for iron.\n\nA Primitive Blast Furnace is made out of 32 §cFirebricks§r and 1 §4Primitive Blast Furnace Controller§r. It\u0027s a  §a3x4x3 structure§r§r of firebricks that is hollowed out in the middle. For more help, look at the §cStructure Preview§r in the JEI database.\n\nThe Primitive Blast Furnace can smelt iron, wrought iron and §bsteel§r. It has a maximum temperature of about 1400 K (1,127°C).\n\nLike many other structures, it is possible to share the walls of multiple Primitive Blast Furnaces and they will still work.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2760,7 +2760,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §l§rSteam Alloy Smelter §rdirectly combines dusts or ingots into §c§lnew alloys.\n\n§rThis machine requires a fair amount of steam to work. If you ever run out of steam, turn this machine off with a §aSoft Hammer§r and let steam build up again.\n\nThe §6Alloy Smelter§r can make bronze directly, using §dingots§o§o§r, dusts, or even nuggets.§r You can make a nugget mold as well to turn ingots into nuggets. This machine might also come in handy when processing raw rubber.\n\nNOTE: Like all steam machines, the output port doubles as a steam outlet when recipes complete. §cIt must not be blocked§r. Also, steam is hot and can damage you if touched. Change the output side by whacking the Alloy Smelter with a wrench.\n   ",
+          "desc:8": "The §l§rSteam Alloy Smelter §rdirectly combines dusts or ingots into §c§lnew alloys.\n\n§rThis machine requires a fair amount of steam to work. If it ever runs out of steam, the machine can be turned off with a §aSoft Hammer§r.\n\nThe §6Alloy Smelter§r can make bronze directly, using §dingots§o§o§r, dusts, or even nuggets.§r You can make a nugget mold as well to turn ingots into nuggets. \n\nNOTE: Like all steam machines, the output port doubles as a steam outlet when recipes complete. §cIt must not be blocked§r. Also, steam is hot and can damage you if touched. Change the output side by whacking the Alloy Smelter with a wrench.\n   ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2996,34 +2996,24 @@
     },
     "35:10": {
       "preRequisites:11": [
-        32,
-        37
+        31
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Cupronickel §ris required to advance to the next section of the Industrial Age. \n\nThis alloy can only be made in an alloy smelter. Its composition is 50% Copper and 50% Nickel. Cupronickel has high electrical resistivity.",
+          "desc:8": "The creation of §6Rubber §ris a very important step for any aspiring technician. Later on, rubber allows you to create circuitry.\nRubber is made from §5§6Latex§r, a fluid which is collected by putting a §6Steam Latex Collector §rnear a Rubber Tree. \n\nMake sure that the Collector is touching a Rubber Log on the §6white §rside of the machine.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 274,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "ingotCupronickel",
-            "id:8": "gregtech:meta_ingot"
+            "Damage:2": 14510,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Cupronickel",
+          "name:8": "Steam Latex Collector",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3031,33 +3021,11 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "NORMAL"
         }
       },
       "questID:3": 35,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 89,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -3068,19 +3036,10 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 16,
-              "Damage:2": 274,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotCupronickel",
-              "id:8": "gregtech:meta_ingot"
+              "Count:3": 1,
+              "Damage:2": 14510,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -3229,34 +3188,24 @@
     },
     "38:10": {
       "preRequisites:11": [
-        31,
-        32
+        31
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§7Tin Alloy§r§r pipes are needed for making Vacuum in Gregicality: Science. Gregicality changes normal progression so that vacuums are required to make vacuum tubes.   ",
+          "desc:8": "The §6Steam Roaster §rburns chemicals using steam. This machine will be used for the production of §6sulfur§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 328,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
+            "Damage:2": 14522,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Tin Alloy",
+          "name:8": "Steam Roaster",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3264,61 +3213,12 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "NORMAL"
         }
       },
       "questID:3": 38,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 5,
-              "Damage:2": 68,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 8,
-              "Damage:2": 328,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
+      "rewards:9": {},
+      "tasks:9": {}
     },
     "39:10": {
       "preRequisites:11": [
@@ -3443,33 +3343,24 @@
     },
     "41:10": {
       "preRequisites:11": [
-        42
+        49
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "To make vacuum tubes, we will need §a§9Cobalt§r. Cobaltite is found in Nickel veins in the Beneath, at Y levels 0 to 250.\n\nSmelting 1 Cobaltite Ore will give you 3 nuggets of Cobalt.",
+          "desc:8": "The §6Vulcanizing Press§r turns Latex into Rubber plates. It requires §6Sulfur§r. The reaction may take a long time but it can be sped up by using §6Magnesia §ror §6Zincite§r as a catalyst.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 23,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
+            "Damage:2": 14520,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Cobalt",
+          "name:8": "Vulcanizing Press",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3481,29 +3372,7 @@
         }
       },
       "questID:3": 41,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 39,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -3514,10 +3383,10 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 16,
-              "Damage:2": 0,
+              "Count:3": 1,
+              "Damage:2": 14520,
               "OreDict:8": "",
-              "id:8": "gregtech:ore_cobaltite_0"
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -3710,16 +3579,16 @@
     },
     "44:10": {
       "preRequisites:11": [
-        41
+        38
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Kovar §ris an alloy of §1Cobalt§r, §7Iron §rand §8Nickel §rthat is required for making the Vacuum Tubes. It can be smelted in a furnace.",
+          "desc:8": "§6Pyrite §rcan be obtained by digging in §6Galena §ror §6Sphalerite §rdeposits, found in the first two layers of the crust.\n\nPyrite §6dust §rcan be roasted to obtain Banded Iron dust and elemental §6Sulfur§r, which will be used in processing rubber.\nBanded Iron can be roasted again to obtain §6Sulfur Trioxide§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 3623,
+            "Damage:2": 103,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -3730,13 +3599,154 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Kovar Rings",
+          "name:8": "Pyrite and Sulfur",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 44,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 103,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 306,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "45:10": {
+      "preRequisites:11": [
+        44
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §7§6Steam Mixer §rmixes several dusts or fluids together. It will be required for mixing Sulfur Trioxide and Water to create H2SO4. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14536,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Steam Mixer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 45,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14536,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "46:10": {
+      "preRequisites:11": [
+        45
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Sulfur Trioxide and Water can be mixed together to create §6Sulfuric Acid§r.\n\nSO3 + H2O -\u003e H2SO4",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sulfuric_acid"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "H2SO4",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3748,50 +3758,15 @@
         }
       },
       "questID:3": 46,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 2,
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_sapling_0"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 3623,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
-    "45:10": {
+    "47:10": {
       "preRequisites:11": [
         300
       ],
@@ -3934,18 +3909,18 @@
         }
       }
     },
-    "46:10": {
+    "48:10": {
       "preRequisites:11": [
-        26
+        41
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aMotors §rare required to generate electricity. In later stages, you will need to build hundreds if not thousands of Motors at once for mass-producing machinery. ",
+          "desc:8": "Use the Vulcanizing Press to create §6Rubber Sheets.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 127,
+            "Damage:2": 1068,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -3956,13 +3931,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
+            "id:8": "gregtech:meta_plate"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "LV Electric Motor",
+          "name:8": "Rubber Plates",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3970,7 +3945,68 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 48,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1068,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_plate"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "49:10": {
+      "preRequisites:11": [
+        35
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The§6 Coagulation Tank§r is a hollow, 3x3x3 cubic structure that coagulates fluids into solids.\n\nThe Coagulation Tank requires:\n§6- 1 Coagulation Tank Controller\n- 24 Wooden Coagulation Tank Wall\n§r\nThe tank can coagulate liquid Latex into a solid hunk of Latex. \n\nWhile this isn\u0027t strictly required, it makes the next step of the Rubber processing chain about §c8x more efficient§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14501,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Coagulation Tank",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
         }
       },
       "questID:3": 49,
@@ -3985,29 +4021,77 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 127,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
+              "Count:3": 24,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
+              "id:8": "susy:coagulation_tank_wall"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 14501,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
         }
       }
     },
-    "47:10": {
+    "50:10": {
       "preRequisites:11": [
-        43,
-        46
+        48
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Wires §rcan be insulated with §6Rubber §sto create Cables. Cables don\u0027t have a lot of §6Energy Loss§r, and, unlike wires, you won\u0027t get damaged if you touch them.\nThese will be required in the creation of circuits. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 4,
+            "Damage:2": 112,
+            "OreDict:8": "",
+            "id:8": "gregtech:cable_single"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Cable Insulation",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 50,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 4,
+              "Damage:2": 112,
+              "OreDict:8": "",
+              "id:8": "gregtech:cable_single"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "51:10": {
+      "preRequisites:11": [
+        43
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -4097,7 +4181,7 @@
         }
       }
     },
-    "48:10": {
+    "52:10": {
       "preRequisites:11": [
         33
       ],
@@ -4145,7 +4229,7 @@
         }
       }
     },
-    "49:10": {
+    "53:10": {
       "preRequisites:11": [
         31
       ],
@@ -4210,7 +4294,7 @@
         }
       }
     },
-    "50:10": {
+    "54:10": {
       "preRequisites:11": [
         31
       ],
@@ -4262,7 +4346,7 @@
         }
       }
     },
-    "51:10": {
+    "55:10": {
       "preRequisites:11": [
         31
       ],
@@ -4314,7 +4398,7 @@
         }
       }
     },
-    "52:10": {
+    "56:10": {
       "preRequisites:11": [
         31
       ],
@@ -4366,7 +4450,7 @@
         }
       }
     },
-    "53:10": {
+    "57:10": {
       "preRequisites:11": [
         47
       ],
@@ -4418,7 +4502,7 @@
         }
       }
     },
-    "54:10": {
+    "58:10": {
       "preRequisites:11": [
         30
       ],
@@ -4513,7 +4597,7 @@
         }
       }
     },
-    "55:10": {
+    "59:10": {
       "preRequisites:11": [
         30
       ],
@@ -4608,7 +4692,7 @@
         }
       }
     },
-    "56:10": {
+    "60:10": {
       "preRequisites:11": [
         31
       ],
@@ -4725,7 +4809,7 @@
         }
       }
     },
-    "57:10": {
+    "61:10": {
       "preRequisites:11": [
         54
       ],
@@ -4817,7 +4901,7 @@
         }
       }
     },
-    "58:10": {
+    "62:10": {
       "preRequisites:11": [
         54
       ],
@@ -4966,7 +5050,7 @@
         }
       }
     },
-    "59:10": {
+    "63:10": {
       "preRequisites:11": [
         54,
         64,
@@ -5090,7 +5174,7 @@
         }
       }
     },
-    "60:10": {
+    "64:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -5139,7 +5223,7 @@
         }
       }
     },
-    "61:10": {
+    "65:10": {
       "preRequisites:11": [
         67
       ],
@@ -5190,7 +5274,7 @@
         }
       }
     },
-    "62:10": {
+    "66:10": {
       "preRequisites:11": [
         68
       ],
@@ -5241,7 +5325,7 @@
         }
       }
     },
-    "63:10": {
+    "67:10": {
       "preRequisites:11": [
         67
       ],
@@ -5292,7 +5376,7 @@
         }
       }
     },
-    "64:10": {
+    "68:10": {
       "preRequisites:11": [
         87
       ],
@@ -5362,14 +5446,14 @@
         }
       }
     },
-    "65:10": {
+    "69:10": {
       "preRequisites:11": [
         39
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3This is a side quest. It\u0027s not necessary for progression!§r\n\nBefore establishing a railroad empire, it\u0027s a good idea to ensure a robust supply of Steel, Treated Wood, and electrical power.\n\nCreate a §b§bLarge Wrench§r, and a §bTrack Blueprint§r. These tools are essential to progress and construction through Immersive Railroading.\n\n",
+          "desc:8": "Before establishing a railroad empire, it\u0027s a good idea to ensure a robust supply of Steel, Treated Wood, and electrical power.\n\nCreate a §b§bLarge Wrench§r, and a §bTrack Blueprint§r. These tools are essential to progress and construct trains.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5472,14 +5556,14 @@
         }
       }
     },
-    "66:10": {
+    "70:10": {
       "preRequisites:11": [
         80
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §bCasting Basin§r creates different parts for rolling stock, specifically wheels and frames, as well as the Rail Cast for use with the Track Roller. The Gauge selector changes between gauges.\n\n§bImmersive Railroading multiblocks are HUGE, so we can\u0027t show an image preview.\n\n§rThe Casting Basin requires:\n\n114 Stone Bricks\n15 Heavy Engineering Block\n126 Sand\n86 Blast Brick\n63 Steel Scaffolding\n1 Block of Steel (If the multiblock doesn\u0027t form, try using an Immersive Engineering block of steel. You can change between the different types using a Chisel.)\n\nUse the §6Immersive Railroading manual §rto see how to form the structure.\n\nPower is input through the top of the machine, on the color-coded yellow/orange block.\n\nTo create a selected part, drop Steel Blocks or Steel Ingots into the Basin and make sure it has power. The part will be created in short order - right-click on the Basin to retrieve the part.\n\nParts made in the casting basin can be recycled by dropping them back into the basin.\n",
+          "desc:8": "The §bCasting Basin§r creates different parts for rolling stock, specifically wheels and frames, as well as the Rail Cast for use with the Track Roller. The Gauge selector changes between gauges.\n\n§rThe Casting Basin requires:\n\n114 Stone Bricks\n15 Heavy Engineering Block\n126 Sand\n86 Blast Brick\n63 Steel Scaffolding\n1 Block of Steel\n\nUse the §6Immersive Railroading manual §rto see how to form the structure.\n\nPower is input through the top of the machine, on the color-coded yellow/orange block.\n\nTo create a selected part, drop Steel Blocks or Steel Ingots into the Basin and make sure it has power. The part will be created in short order - right-click on the Basin to retrieve the part.\n\nParts made in the casting basin can be recycled by dropping them back into the basin.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5526,6 +5610,15 @@
             "1:10": {
               "Count:3": 15,
               "Damage:2": 5,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
@@ -5542,6 +5635,15 @@
             "3:10": {
               "Count:3": 86,
               "Damage:2": 1,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
@@ -5552,6 +5654,15 @@
             "4:10": {
               "Count:3": 63,
               "Damage:2": 1,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
@@ -5562,6 +5673,15 @@
             "5:10": {
               "Count:3": 1,
               "Damage:2": 8,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "blockSteel",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
@@ -5574,7 +5694,7 @@
         }
       }
     },
-    "67:10": {
+    "71:10": {
       "preRequisites:11": [
         80
       ],
@@ -5660,7 +5780,7 @@
         }
       }
     },
-    "68:10": {
+    "72:10": {
       "preRequisites:11": [
         80
       ],
@@ -5757,14 +5877,14 @@
         }
       }
     },
-    "69:10": {
+    "73:10": {
       "preRequisites:11": [
         83
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Place down at least 20 blocks of track end-to-end to have enough space to place a Frame on the rails, which is created in the §6Casting Basin. §r\n\nWith the Frame in hand, right-click the rail to place it. Then, with the Large Wrench in hand, right-click the Frame. I\nt will list the parts needed to complete the piece of stock and which machines are needed in order to make those parts. \n\nFor example, a newly placed A1 Peppercorn Frame will list out that it needs 2 §6Cylinders§r, which are made in the Casting Basin and then processed in the Steam Hammer.\n\nContinuing on with the creation of an A1 Peppercorn, we don\u0027t need another machine until we get to the point of creating the engine\u0027s firebox and boiler, using the §6Boiler Roller§r and §6Plate Rolling Machine§r.\n\nA word of warning: Steam Engines require a constant water supply when fueled, and if they boil off 75% or more of their water, there is a chance that they will §4explode. ",
+          "desc:8": "Place down at least 20 meters of track end-to-end to have enough space to place a Frame on the rails, which is created in the §6Casting Basin. §r\n\nWith the Frame in hand, right-click the rail to place it. Then, with the Large Wrench in hand, right-click the Frame. I\nt will list the parts needed to complete the piece of stock and which machines are needed in order to make those parts. \n\nFor example, a newly placed A1 Peppercorn Frame will list out that it needs 2 §6Cylinders§r, which are made in the Casting Basin and then processed in the Steam Hammer.\n\nContinuing on with the creation of an A1 Peppercorn, we don\u0027t need another machine until we get to the point of creating the engine\u0027s firebox and boiler, using the §6Boiler Roller§r and §6Plate Rolling Machine§r.\n\nA word of warning: Steam Engines require a constant water supply when fueled, and if they boil off 75% or more of their water, there is a chance that they will §4explode. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5835,7 +5955,7 @@
         }
       }
     },
-    "70:10": {
+    "74:10": {
       "preRequisites:11": [
         80
       ],
@@ -5925,7 +6045,7 @@
         }
       }
     },
-    "71:10": {
+    "75:10": {
       "preRequisites:11": [
         80
       ],
@@ -6012,7 +6132,7 @@
         }
       }
     },
-    "72:10": {
+    "76:10": {
       "preRequisites:11": [
         7
       ],
@@ -6064,7 +6184,7 @@
         }
       }
     },
-    "73:10": {
+    "77:10": {
       "preRequisites:11": [
         5
       ],
@@ -6134,7 +6254,7 @@
         }
       }
     },
-    "74:10": {
+    "78:10": {
       "preRequisites:11": [
         20
       ],
@@ -6204,7 +6324,7 @@
         }
       }
     },
-    "75:10": {
+    "79:10": {
       "preRequisites:11": [
         12
       ],
@@ -6274,7 +6394,7 @@
         }
       }
     },
-    "76:10": {
+    "80:10": {
       "preRequisites:11": [
         149
       ],
@@ -6338,7 +6458,7 @@
         }
       }
     },
-    "77:10": {
+    "81:10": {
       "preRequisites:11": [
         31
       ],
@@ -6412,7 +6532,7 @@
         }
       }
     },
-    "78:10": {
+    "82:10": {
       "preRequisites:11": [
         12
       ],
@@ -6491,389 +6611,6 @@
               },
               "OreDict:8": "",
               "id:8": "notreepunching:ceramic_bucket"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "79:10": {
-      "preRequisites:11": [
-        31
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Steam Extractor §.extracts things. Its main use in the Industrial Age is the production of rubber pulp, which is used in rubber processing and §ccable insulation§r.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 7,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Steam Extractor",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 94,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 8,
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_sapling_0"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 7,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "80:10": {
-      "preRequisites:11": [
-        94
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "To start getting §brubber§r, we will need sticky resin. It\u0027s found in §brubber trees §rthat are scattered around the world.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 438,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Sticky Resin",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 95,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:diamond"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 438,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "81:10": {
-      "preRequisites:11": [
-        95
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The next step of the chain is §7rubber pulp.§r You get it by putting sticky resin in an §6Extractor§r.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1002,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "dustRawRubber",
-            "id:8": "gregtech:meta_dust"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Rubber Pulp",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 96,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 1,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 1002,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            },
-            "1:10": {
-              "Count:3": 4,
-              "Damage:2": 335,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_screw"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 1002,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "dustRawRubber",
-              "id:8": "gregtech:meta_dust"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "82:10": {
-      "preRequisites:11": [
-        96
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The final step of the chain is combining 6 rubber pulp with 1 §bsulfur §rin an Alloy Smelter, to get 6§6 rubber bars§r.\n\nSulfur is found in §7sphalerite §rveins in the Overworld and §4the nether§r. For more information, check JEI.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1068,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Rubber and Sulfur",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 97,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_sapling_0"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:cactus"
-            },
-            "2:10": {
-              "Count:3": 32,
-              "Damage:2": 260,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 103,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "dustSulfur",
-              "id:8": "gregtech:meta_dust"
-            },
-            "1:10": {
-              "Count:3": 12,
-              "Damage:2": 1068,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20132,11 +19869,7 @@
               "Count:3": 1,
               "Damage:2": 8,
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "icbmclassic:missile",
-                "orig_meta:3": 8
-              }
+              "id:8": "icbmclassic:missile"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20191,11 +19924,7 @@
               "Count:3": 1,
               "Damage:2": 13,
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "icbmclassic:missile",
-                "orig_meta:3": 13
-              }
+              "id:8": "icbmclassic:missile"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20250,11 +19979,7 @@
               "Count:3": 1,
               "Damage:2": 11,
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "icbmclassic:missile",
-                "orig_meta:3": 11
-              }
+              "id:8": "icbmclassic:missile"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20309,11 +20034,7 @@
               "Count:3": 1,
               "Damage:2": 9,
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "icbmclassic:missile",
-                "orig_meta:3": 9
-              }
+              "id:8": "icbmclassic:missile"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20368,11 +20089,7 @@
               "Count:3": 1,
               "Damage:2": 10,
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "icbmclassic:missile",
-                "orig_meta:3": 10
-              }
+              "id:8": "icbmclassic:missile"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -24678,14 +24395,14 @@
           "id:3": 34,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
+          "x:3": -132,
           "y:3": 96
         },
         "4:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -84,
           "y:3": 48
         },
         "5:10": {
@@ -24699,14 +24416,14 @@
           "id:3": 37,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -132,
           "y:3": -12
         },
         "7:10": {
           "id:3": 38,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
+          "x:3": -36,
           "y:3": 48
         },
         "8:10": {
@@ -24727,190 +24444,190 @@
           "id:3": 41,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
+          "x:3": -84,
           "y:3": 144
         },
         "11:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 96
+          "x:3": -180,
+          "y:3": 48
         },
         "12:10": {
           "id:3": 43,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": 192
+          "x:3": -132,
+          "y:3": 144
         },
         "13:10": {
+          "id:3": 44,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 96
+        },
+        "14:10": {
+          "id:3": 45,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 144
+        },
+        "15:10": {
           "id:3": 46,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -42,
+          "y:3": 186
+        },
+        "16:10": {
+          "id:3": 48,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -90,
+          "y:3": 186
+        },
+        "17:10": {
+          "id:3": 49,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": 96
+        },
+        "18:10": {
+          "id:3": 50,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 192
         },
-        "14:10": {
-          "id:3": 49,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -324,
-          "y:3": 72
-        },
-        "15:10": {
+        "19:10": {
           "id:3": 54,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -144,
-          "y:3": 252
+          "x:3": -216,
+          "y:3": 132
         },
-        "16:10": {
+        "20:10": {
           "id:3": 55,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 96
         },
-        "17:10": {
+        "21:10": {
           "id:3": 56,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": -72
         },
-        "18:10": {
+        "22:10": {
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": -72
         },
-        "19:10": {
+        "23:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -72
         },
-        "20:10": {
+        "24:10": {
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -96,
           "y:3": -72
         },
-        "21:10": {
+        "25:10": {
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": -108
         },
-        "22:10": {
+        "26:10": {
           "id:3": 64,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": 336
+          "x:3": -204,
+          "y:3": 84
         },
-        "23:10": {
+        "27:10": {
           "id:3": 65,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": 336
+          "x:3": -204,
+          "y:3": 204
         },
-        "24:10": {
+        "28:10": {
           "id:3": 66,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -144,
-          "y:3": 372
+          "x:3": -300,
+          "y:3": 132
         },
-        "25:10": {
+        "29:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 96
         },
-        "26:10": {
+        "30:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 144
+          "x:3": 168,
+          "y:3": 60
         },
-        "27:10": {
+        "31:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 192
+          "x:3": 168,
+          "y:3": 168
         },
-        "28:10": {
+        "32:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 192
+          "x:3": 168,
+          "y:3": 96
         },
-        "29:10": {
+        "33:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 240
+          "x:3": 216,
+          "y:3": 96
         },
-        "30:10": {
+        "34:10": {
           "id:3": 85,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 144
+          "x:3": 168,
+          "y:3": 132
         },
-        "31:10": {
+        "35:10": {
           "id:3": 86,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 192
+          "x:3": 168,
+          "y:3": 24
         },
-        "32:10": {
+        "36:10": {
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": -108
-        },
-        "33:10": {
-          "id:3": 94,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": 48
-        },
-        "34:10": {
-          "id:3": 95,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": 96
-        },
-        "35:10": {
-          "id:3": 96,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": 192
-        },
-        "36:10": {
-          "id:3": 97,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": 264
         }
       }
     },
