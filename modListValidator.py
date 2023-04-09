@@ -1,10 +1,13 @@
 import os
 import argparse
+import pickle
 from os.path import isfile, isdir
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-export", action="store_true")
-parser.add_argument("-validate", action="store_true")
+parser.add_argument("--export", action="store_true")
+parser.add_argument("--validate", action="store_true")
+parser.add_argument("--print-list", action="store_true")
+parser.add_argument("--print-pickle", action="store_true")
 
 args = parser.parse_args()
 
@@ -21,15 +24,28 @@ def getFilesRecursive(directory):
     
 getFilesRecursive(path)
 
+for file in file_list:
+    file = file.strip()
+
+if args.print_list:
+    print("Listed", len(file_list), "files from directories")
+    for file in file_list:
+        print(">: ", file)
+
+if args.print_pickle:
+    with open('modValidationFile.pickle', 'rb') as picklefile:
+        debuglist = pickle.load(picklefile)
+        print("Listed", len(debuglist), "files from pickle")
+        for file in debuglist:
+            print(">: ", file)
+            
 if args.validate and args.export:
     print("Use export to make a new validation file, validate to check against an existing one")
     quit()
 
 if args.export:
-    outfile = open("modValidationFile.dat", 'wt', encoding='utf-8')
-    for mod_file in file_list:
-        outfile.write(mod_file + '\n')
-    outfile.close()
+    with open('modValidationFile.pickle', 'wb') as outfile:
+        pickle.dump(file_list, outfile)
     print("Written list to file")
     quit()
 
@@ -40,15 +56,15 @@ if args.validate:
 
     all_good = True
     
-    validation_file = open("modValidationFile.dat", 'rt', encoding='utf-8')
-    validation_list = validation_file.readlines()
+    validation_file = open('modValidationFile.pickle', 'rb')
+    validation_list = pickle.load(validation_file)
     
     for file in file_list:
-        if file + '\n' not in validation_list:
+        if file not in validation_list:
             extras.append(file)
             
     for file in validation_list:
-        if file.strip() not in file_list:
+        if file not in file_list:
             not_found.append(file)
 
     if len(not_found) > 0:
