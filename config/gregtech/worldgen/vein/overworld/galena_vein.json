@@ -1,5 +1,5 @@
 {
-  "weight": 60,
+  "weight": 100,
   "density": 0.75,
   "max_height": 80,
   "min_height": 0,
@@ -27,7 +27,7 @@
         "between": "ore:galena"
       },
       {
-        "sporadic": "ore:sphalerite"
+        "sporadic": "ore:pyrite"
       }
     ]
   }
