@@ -361,7 +361,7 @@ mods.gregtech.assembler.removeByInput(16, [item('minecraft:ghast_tear'), item('m
 // Purple Shulker Box * 1
 mods.gregtech.assembler.removeByInput(7, [item('minecraft:chest'), item('minecraft:shulker_shell') * 2], null)
 // Powered Rail * 12
-mods.gregtech.assembler.removeByInput(30, [metaitem('stickGold') * 12, item('minecraft:stick'), item('minecraft:redstone'), circuit(1)], null)
+mods.gregtech.assembler.removeByInput(30, [metaitem('stickGold') * 12, item('minecraft:stick'), item('minecraft:redstone'), circuit(2)], null)
 // Detector Rail * 12
 //mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick'), item('minecraft:redstone'), circuit(4)], null)
 // Rail * 32

@@ -286,6 +286,14 @@ class RegisterFluids{
                         .color(0x99918A)
                         .build();
 
+                new Material.Builder(32002, 'iron_iii_sulfate')
+                        .dust()
+                        .color(0xb09d99)
+                        .components(Iron, 2, Sulfur, 3, Oxygen, 12)
+                        .flags(DECOMPOSITION_BY_ELECTROLYZING)
+                        .build()
+                        .setFormula("Fe2(SO4)3", true);
+
                 log.infoMC("Finished adding fluids")
         }
 

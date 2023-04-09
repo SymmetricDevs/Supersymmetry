@@ -70,7 +70,7 @@ eventManager.listen {
 
         log.infoMC("Added weapons factory")
 
-        def large_weapons_factory = (RecipeMapAssemblyLine<SimpleRecipeBuilder>) new RecipeMapAssemblyLine<>("large_weapons_factory", 4, 16, 1, 1, 0, 4, 0, 0, new SimpleRecipeBuilder(), false)
+        def large_weapons_factory = (RecipeMapAssemblyLine<SimpleRecipeBuilder>) new RecipeMapAssemblyLine<>("large_weapons_factory", 16, false, 1, false, 4, false, 0, false, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_CIRCUIT, MoveType.HORIZONTAL);
 
         log.infoMC("Added large weapons factory")
