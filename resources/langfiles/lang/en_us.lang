@@ -3,6 +3,7 @@
 material.zircon=Zircon
 
 material.pig_iron=Pig Iron
+material.iron_iii_sulfate=Iron III Sulfate
 
 material.fluorite=Fluorite
 material.villiaumite=Villiaumite
@@ -43,6 +44,7 @@ material.lithium_6_deuteride=Lithium Deuteride
 material.zirconium_molybdenum=Zirconium-Molybdenum Alloy
 material.titanium_aluminide=Titanium Aluminide
 material.titanium_iridium=Titanium-Iridium Alloy
+
 
 material.vacuumsteel=Vacuum Steel
 

@@ -1,6 +1,6 @@
 You can never escape Greg
 If a machine catches fire, it can explode
-The Factory Must Grow.
+The factory must grow.
 There are 15 tiers: from LV (32 EU/t) to MAX (2147483647 EU/t)
 Join our Discord to talk with other players!
 Join our GitHub to contribute and report bugs!
@@ -10,51 +10,39 @@ Sometimes it's better to flee than fight some mobs
 If a machines receives a higher voltage than it can handle, it might explode
 Always separate your LV and MV machinery!
 Gregification of the world!
-Make sure to claim the rewards from the questbook, they're helpful!
 Going one Voltage tier up, means having 4 times more EU/t
-Don't build multiblocks on chunk borders!
+Don't build multiblocks on chunk borders
 You cannot make a Nether Portal, you need to dig down
 Dig down to bedrock to get to the Beneath!
-Use Shift+Right Click to drink from the ocean
 Don't forget to pray to Gregorius Techneticies every morning
-Do NOT give ideas to Zalgo.
-Tinker's Construct is not in this modpack
-Pam's Harvestcraft is not in this modpack
 The Small Coal Boiler will release 4,000mB of steam when it gets full
 SUPERSYMMETRY is not for magic.
-Ore deposits spawn in the center of the chunk
+Check JEI for info on ore deposits
 SUPERSYMMETRY is a modpack by Zalgo
 Playing with friends is more fun
 Want more FPS? Try decreasing render distance.
-Don't try any chemical reactions shown here in real life!
+Don't try any chemical reactions shown here in real life
 Allocate more than 6 GB of RAM, if you don't want to crash every ten minutes
 If you're playing with other people, make sure to invite them to your Questing Party!
 Now with 69% more Grzegorz Techszyszczykiewicz
-Your EBF won't work if the muffler doesn't point to the sky!
+Your EBF won't work if the muffler doesn't point to the sky
 Abandon all vanilla knowledge all ye who enter here
-Multiblocks can share walls!
-An EBF needs 4 LV generators!
+Multiblocks can share walls
+An EBF needs 4 LV generators
 Lost your questbook? You can access it instantly by pressing the GRAVE key
 Recipes so realistic you'll get put on a watchlist!
 Don't stick your head into the particle accelerator
-Do not pet the zombie
 A chemist's dream!
-help I'm trapped in a loading screen
-Do NOT try the thermonuclear core under any circumstance!
 Gregicality: now with more realistic particle physics!
-Approximately 28% of loading tips are memes
-Supracausal Mainframe only takes 6,000 hours instead of 20,000!
-Look for sulfur in the Nether
+You can extract Sulfur for Pyrite
 You need a Pyrolyse Oven for Polyethylene
 If it's too tedious you're doing it wrong
-Do you also watch your oven while baking food?
-There's always something else you can do while waiting
+More Complexity, Less Waiting
 With the power of Duct Tape, I solved all of your maintenance problems!
-Using a Circuit Assembler will make circuits cheaper!
+Using a Circuit Assembler will make circuits cheaper
 The Bending Machine makes plates more efficiently
 The Wiremill makes wires more efficiently
-The end goal is [DATA REDACTED]
-Yes, beds are unlocked at Tier 5. And yes, this is not a joke.
+Yes, beds are unlocked at EV.
 Cables are lossy.
 You need Cryogenic machinery if you want superconductors 
 You can change InGame Info XML scale in ingame configs
@@ -62,7 +50,6 @@ Mobs will increase their HP the longer you play. Good luck!
 Use F9 to see chunk borders!
 It's aluminIum, not aluminum
 Use JEI to see information about ore deposits
-Don't forget your daily offering to Flop
 Steam is hot! It will burn Wooden Fluid Pipes
 A machine draws electricity from its internal buffer first
 Loss on uninsulated cables is twice as big as on insulated ones
@@ -71,3 +58,4 @@ You can bind the quests menu to a key, instead of using the book
 Make sure you have backups!
 Industrial Renewal tanks can have up to 1,000,000mB of storage
 The Electrolyzer separates substances into their basic chemicals
+Don't forget your daily offering to Flop
