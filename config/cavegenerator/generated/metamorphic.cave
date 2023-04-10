@@ -13,13 +13,10 @@
   }
   layers: [ {
       state: susy:susy_stone_smooth:1
-      height: [ 225, 255 ]
-    }, {
-      state: susy:susy_stone_smooth:2
-      height: [ 180, 225 ]
+      height: [ 205, 255 ]
     }, {
       state: susy:susy_stone_smooth:4
-      height: [ 150, 180 ]
+      height: [ 150, 205 ]
     }, {
       state: susy:susy_stone_smooth:5
       height: [ 110, 150 ]
