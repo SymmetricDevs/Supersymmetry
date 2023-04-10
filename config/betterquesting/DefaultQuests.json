@@ -180,7 +180,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Flint shards§r are needed to get yourself some tools. \n\nGravel can be mined without a tool, and enables you to acquire flint.\n\nFlint can be knapped [§aRight Click while looking at stone§r] on an exposed stone surface, obtaining flint shards.",
+          "desc:8": "Flint shards§r are needed to get yourself some tools. \n\nGravel can be mined without a tool, and enables you to acquire flint.\n\nFlint can be knapped [§aRight Click while looking at the top side of stone§r] on an exposed stone surface, obtaining flint shards.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1106,7 +1106,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The furnace §ris a very primitive smelting device that allows you to cook things up to a temperature of §c1,000 §rK (727° C), just enough to smelt copper, lead §rand §7tin§.§r.\n\n§rMore information on finding these ores is on the next page.\nFor now you can just make the furnace.",
+          "desc:8": "The furnace §ris a very primitive smelting device that allows you to cook things up to a temperature that is just enough to smelt copper, lead §rand §7tin§.§r.\n\n§rMore information on finding these ores is on the next page.\nFor now you can just make the furnace.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5610,15 +5610,6 @@
             "1:10": {
               "Count:3": 15,
               "Damage:2": 5,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
@@ -5635,15 +5626,6 @@
             "3:10": {
               "Count:3": 86,
               "Damage:2": 1,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
@@ -5654,15 +5636,6 @@
             "4:10": {
               "Count:3": 63,
               "Damage:2": 1,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
@@ -5673,15 +5646,6 @@
             "5:10": {
               "Count:3": 1,
               "Damage:2": 8,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "blockSteel",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
@@ -6191,7 +6155,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Kill cows to get §6leather§r. This can be used not only for armor, but also for §6canteens §rso you can store your water.",
+          "desc:8": "Kill cows to get §6leather§r. This can be used to get primitive armor. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24451,7 +24415,7 @@
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
+          "x:3": -204,
           "y:3": 48
         },
         "12:10": {
@@ -26142,13 +26106,18 @@
           "desc:8": "§2-- UV AGE --\nWhat do you mean this isn\u0027t the last tier?\n\n- Use the fundamental forces against your enemies\n- Unleash the horrors of the universe\n- Travel even faster with teleporters\n\n--\nTier: 9\nEU/t: 524,288\n--",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1,
+            "Damage:2": 3002,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gcys:meta_item_1",
-              "orig_meta:3": 1
-            }
+            "id:8": "gregtech:meta_item_2"
           },
           "name:8": "§29 - This isn\u0027t the last tier?",
           "visibility:8": "ALWAYS"
