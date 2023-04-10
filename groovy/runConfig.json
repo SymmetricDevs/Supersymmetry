@@ -19,7 +19,7 @@
       "preInit/"
     ],
     "postInit": [
-      "prePostInit",
+      "prePostInit/",
       "globals/",
       "postInit/"
     ]
