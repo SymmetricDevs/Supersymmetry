@@ -28,6 +28,7 @@ def oreDictSmeltingRemovals = [
 	ore('crushedCentrifugedPyrite'),
 	ore('dustImpurePyrite'),
 	ore('dustPurePyrite'),
+	ore('dustPyrite'),
 
 	ore('oreYellowLimonite'),
 	ore('oreNetherrackYellowLimonite'),
@@ -37,6 +38,7 @@ def oreDictSmeltingRemovals = [
 	ore('crushedCentrifugedYellowLimonite'),
 	ore('dustImpureYellowLimonite'),
 	ore('dustPureYellowLimonite'),
+	ore('dustYellowLimonite'),
 
 	ore('oreBrownLimonite'),
 	ore('oreNetherrackBrownLimonite'),
@@ -46,6 +48,7 @@ def oreDictSmeltingRemovals = [
 	ore('crushedCentrifugedBrownLimonite'),
 	ore('dustImpureBrownLimonite'),
 	ore('dustPureBrownLimonite'),
+	ore('dustBrownLimonite'),
 
 	ore('oreMagnetite'),
 	ore('oreNetherrackMagnetite'),
@@ -55,6 +58,7 @@ def oreDictSmeltingRemovals = [
 	ore('crushedCentrifugedMagnetite'),
 	ore('dustImpureMagnetite'),
 	ore('dustPureMagnetite'),
+	ore('dustMagnetite'),
 
 	ore('oreGraniticMineralSand'),
 	ore('oreNetherrackGraniticMineralSand'),
@@ -64,6 +68,7 @@ def oreDictSmeltingRemovals = [
 	ore('crushedCentrifugedGraniticMineralSand'),
 	ore('dustImpureGraniticMineralSand'),
 	ore('dustPureGraniticMineralSand'),
+	ore('dustGraniticMineralSand'),
 
 	ore('oreBasalticMineralSand'),
 	ore('oreNetherrackBasalticMineralSand'),
@@ -73,7 +78,7 @@ def oreDictSmeltingRemovals = [
 	ore('crushedCentrifugedBasalticMineralSand'),
 	ore('dustImpureBasalticMineralSand'),
 	ore('dustPureBasalticMineralSand'),
-	ore('dustBasalticMineralSand')
+	ore('dustBasalticMineralSand'),
 ]
 
 for (entry in oreDictSmeltingRemovals) {
