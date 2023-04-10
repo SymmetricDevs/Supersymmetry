@@ -1,5 +1,12 @@
 import static globals.Globals.*
 
+import supersymmetry.common.blocks.SuSyBlocks
+import supersymmetry.common.blocks.SusyStoneVariantBlock
+import gregtech.common.blocks.MetaBlocks
+import gregtech.common.blocks.StoneVariantBlock
+
+import net.minecraftforge.oredict.OreDictionary
+
 //Ore dict changes and unification
 
 def unify (ore, p) {
@@ -39,3 +46,19 @@ def dicts_ingots = [
 ]
 
 unify_oredicts(dicts_ingots)
+
+susycobble = SuSyBlocks.SUSY_STONE_BLOCKS.get(SusyStoneVariantBlock.StoneVariant.COBBLE)
+
+for (type in SusyStoneVariantBlock.StoneType.values()) {
+    variant = susycobble.getItemVariant(type)
+
+    OreDictionary.registerOre('cobblestone', variant)
+}
+
+gtcobble = MetaBlocks.STONE_BLOCKS.get(StoneVariantBlock.StoneVariant.COBBLE)
+
+for (type in StoneVariantBlock.StoneType.values()) {
+    variant = gtcobble.getItemVariant(type)
+
+    OreDictionary.registerOre('cobblestone', variant)
+}
