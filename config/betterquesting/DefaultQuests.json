@@ -2302,7 +2302,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "To start, you will need a §chot iron rod§r - smelt a normal iron ingot in a furnace, then make it into a rod (with the file).\n\nThere are two ways of making magnets:\n\n- Putting a hot iron rod with a §cmagnetite chunk§r in a crafting table, \n- or using the §cvoltaic pile §ralong with some §ccopper fine wire§r (you need special equipment though).§ \n\nThis process is only done once§r. A newly-formed §cmagnetic iron rod § can be used to magnetise other hot iron rodsm so don\u0027t throw it out!\n\n§3This will unlock the Industrial Age.",
+          "desc:8": "To start, you will need an §ciron rod§r - make an ingot of iron into a rod (with the file), then put it in a furnace.\n\nThere are two ways of making magnets:\n\n- Putting a hot iron rod with a §cmagnetite chunk§r in a crafting table, \n- or using the §cvoltaic pile §ralong with some §ccopper fine wire§r (you need special equipment though).§ \n\nThis process is only done once§r. A newly-formed §cmagnetic iron rod § can be used to magnetise other hot iron rods so don\u0027t throw it out!\n\n§3This will unlock the Industrial Age.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3218,7 +3218,25 @@
       },
       "questID:3": 38,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14522,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "39:10": {
       "preRequisites:11": [
@@ -5383,7 +5401,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Quicklime§r, or calcium oxide, can be obtained by smelting limestone in a Furnace. Limestone can be found by mining underground. \n\n§6Quicklime §rcan be turned into §6Slaked Lime §rusing a water bucket. It will be used for the construction of firebricks.",
+          "desc:8": "§6Quicklime§r, or calcium oxide, can be obtained by smelting limestone in a Furnace. Limestone can be found by mining underground. \n\n§6Quicklime §rcan be turned into §6Slaked Lime §rusing a water bucket. Since iron buckets aren\u0027t available now, you can check the Clay Buckets page for more info. It will be used for the construction of firebricks.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6498,7 +6516,7 @@
     },
     "82:10": {
       "preRequisites:11": [
-        12
+        87
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -24243,10 +24261,10 @@
         },
         "39:10": {
           "id:3": 93,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": 384
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 42,
+          "y:3": 216
         },
         "40:10": {
           "id:3": 106,

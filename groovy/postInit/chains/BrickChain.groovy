@@ -53,10 +53,16 @@ crafting.addShaped('pfb_casing_firebricks', item('gregtech:metal_casing', 1), [
     [metaitem('brick.fireclay'),metaitem('brick.fireclay')]
 ]) 
 
-ModHandler.addShapelessRecipe("manual_slaked_lime", metaitem('slaked_lime'), 
-    new UnificationEntry(OrePrefix.dust, Materials.Quicklime),
-    item('minecraft:water_bucket')
-);
+crafting.addShaped('slaked_lime_manual', metaitem('slaked_lime') * 8, [
+    [metaitem('dustQuicklime'),metaitem('dustQuicklime'),metaitem('dustQuicklime')],
+    [metaitem('dustQuicklime'),item('minecraft:water_bucket'),metaitem('dustQuicklime')],
+    [metaitem('dustQuicklime'),metaitem('dustQuicklime'),metaitem('dustQuicklime')]])
+
+
+crafting.addShaped('slaked_lime_manual', metaitem('slaked_lime') * 8, [
+    [metaitem('dustQuicklime'),metaitem('dustQuicklime'),metaitem('dustQuicklime')],
+    [metaitem('dustQuicklime'),item('notreepunching:ceramic_bucket').withNbt(["Fluid":["FluidName": "water", "Amount": 1000]]),metaitem('dustQuicklime')],
+    [metaitem('dustQuicklime'),metaitem('dustQuicklime'),metaitem('dustQuicklime')]])
 
 CompressBrickRecipes('dustFireclay', 'compressed.fireclay')
 
