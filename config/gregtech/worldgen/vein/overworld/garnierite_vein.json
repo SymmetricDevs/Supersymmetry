@@ -1,8 +1,12 @@
 {
   "weight": 60,
   "density": 0.75,
-  "max_height": 40,
+  "max_height": 80,
   "min_height": 0,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "garnierite"
+  },
   "generator": {
     "type": "layered",
     "radius": [
