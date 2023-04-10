@@ -62,3 +62,19 @@ for (type in StoneVariantBlock.StoneType.values()) {
 
     OreDictionary.registerOre('cobblestone', variant)
 }
+
+susysmooth = SuSyBlocks.SUSY_STONE_BLOCKS.get(SusyStoneVariantBlock.StoneVariant.SMOOTH)
+
+for (type in SusyStoneVariantBlock.StoneType.values()) {
+    variant = susysmooth.getItemVariant(type)
+
+    OreDictionary.registerOre('stone', variant)
+}
+
+gtsmooth = MetaBlocks.STONE_BLOCKS.get(StoneVariantBlock.StoneVariant.SMOOTH)
+
+for (type in StoneVariantBlock.StoneType.values()) {
+    variant = gtsmooth.getItemVariant(type)
+
+    OreDictionary.registerOre('stone', variant)
+}
