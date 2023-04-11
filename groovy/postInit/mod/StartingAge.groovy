@@ -20,8 +20,8 @@ crafting.replaceShapeless("gregtech:clay_ball_to_dust", metaitem('dustClay'), [
 ])
 
 //Magnetite Chunk Crafting
-//crafting.addShapeless("magnetite_chunk", metaitem('chunk.magnetite'), [ore('oreMagnetite')]);
-//crafting.addShapeless("magnetite_chunk_1", metaitem('magnetite_chunk'), [ore('oreVanadiumMagnetite')]);
+crafting.addShapeless("magnetite_chunk", metaitem('chunk.magnetite'), [ore('oreMagnetite'), ore('rock')]);
+crafting.addShapeless("magnetite_chunk_1", metaitem('chunk.magnetite'), [ore('oreVanadiumMagnetite'), ore('rock')]);
 
 
 def fuels = [
