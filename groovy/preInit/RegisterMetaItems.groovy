@@ -1,6 +1,6 @@
-import gregtech.api.items.metaitem.StandardMetaItem
-import gregtech.api.items.metaitem.MetaItem
-import gregtech.api.GregTechAPI
+import gregtech.api.GTValues;
+import gregtech.api.GregTechAPI;
+import gregtech.api.items.metaitem.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.ore.OrePrefix;
 
@@ -90,8 +90,13 @@ eventManager.listen {
         customMetaItems.addItem(3033, "circuit.suprachronal.opv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.OpV);
         customMetaItems.addItem(3034, "circuit.suprachronal.max").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.MAX);
 
-        customMetaItems.addItem(3035, "wafer.advanced_random_access_memory")
-        customMetaItems.addItem(3036, "plate.advanced_random_access_memory")
+        customMetaItems.addItem(3035, "wafer.advanced_random_access_memory");
+        customMetaItems.addItem(3036, "plate.advanced_random_access_memory");
+
+        //Batteries 4000-4100
+        customMetaItems.addItem(4000, "battery.lead_acid").addComponents(ElectricStats.createRechargeableBattery(120000, GTValues.LV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);;
+        customMetaItems.addItem(4001, "cathode.lead");
+        customMetaItems.addItem(4002, "anode.lead");
 
         log.infoMC("Finished adding metaitems")
 }
