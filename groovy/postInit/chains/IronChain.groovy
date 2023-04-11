@@ -113,6 +113,6 @@ FORGE_HAMMER.recipeBuilder()
 .buildAndRegister()
 
 crafting.addShapeless('HammerPigIron',metaitem('ingotWroughtIron'), [
-    ore('craftingToolHardHammer'),
+    ore('craftingToolHardHammer').transform(damageTool),
     metaitem('ingotPigIron')
 ])

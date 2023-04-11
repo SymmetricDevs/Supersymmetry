@@ -1,3 +1,5 @@
+import static globals.Globals.*
+
 import techguns.items.guns.GenericGun;
 import techguns.plugins.crafttweaker.GunStatTweaker;
 /*
@@ -69,13 +71,13 @@ for (item in name_removals) {
 }
 
 crafting.addShaped("stone_barrel", item('techguns:itemshared:37'), [
-		[null, ore('craftingToolFile'), null],
-		[ore('craftingToolScrewdriver'), ore('stone'), ore('craftingToolHardHammer')]
+		[null, ore('craftingToolFile').transform(damageTool), null],
+		[ore('craftingToolScrewdriver').transform(damageTool), ore('stone'), ore('craftingToolHardHammer').transform(damageTool)]
 ]);
 
 crafting.addShaped("wood_stock", item('techguns:itemshared:42'), [
 		[ore('plankWood'), ore('plankWood'), null],
-		[ore('craftingToolSaw'), ore('plankWood'), ore('craftingToolFile')]
+		[ore('craftingToolSaw').transform(damageTool), ore('plankWood'), ore('craftingToolFile').transform(damageTool)]
 ]);
 
 crafting.addShaped("stone_bullets", item('techguns:itemshared:0')*16, [
@@ -84,18 +86,18 @@ crafting.addShaped("stone_bullets", item('techguns:itemshared:0')*16, [
 ]);
 
 crafting.addShaped("iron_barrel", item('techguns:itemshared:38'), [
-		[null, ore('craftingToolFile'), null],
-		[ore('craftingToolScrewdriver'), ore('stickIron'), ore('craftingToolHardHammer')]
+		[null, ore('craftingToolFile').transform(damageTool), null],
+		[ore('craftingToolScrewdriver').transform(damageTool), ore('stickIron'), ore('craftingToolHardHammer').transform(damageTool)]
 ]);
 
 crafting.addShaped("techguns_revolver", item('techguns:revolver'), [
-		[ore('craftingToolScrewdriver'), ore('craftingToolWrench'), ore('craftingToolFile')],
+		[ore('craftingToolScrewdriver').transform(damageTool), ore('craftingToolWrench'), ore('craftingToolFile').transform(damageTool)],
 		[item('techguns:itemshared:37'), ore('plateSteel'), ore('boltSteel')],
 		[null, ore('plateSteel'), item('techguns:itemshared:42')]
 ]);
 
 crafting.addShaped("techguns_boltaction", item('techguns:boltaction'), [
-		[ore('craftingToolScrewdriver'), ore('craftingToolWrench'), ore('craftingToolFile')],
+		[ore('craftingToolScrewdriver').transform(damageTool), ore('craftingToolWrench').transform(damageTool), ore('craftingToolFile').transform(damageTool)],
 		[ore('blockGlassColorless'), ore('plateIron'), null],
 		[item('techguns:itemshared:39'), item('techguns:itemshared:33'), item('techguns:itemshared:42')]
 ]);
@@ -107,62 +109,62 @@ crafting.addShaped("heavy_cloth", item('techguns:itemshared:60')*3, [
 ]);
 
 crafting.addShaped("steel_barrel", item('techguns:itemshared:39'), [
-		[null, ore('craftingToolFile'), null],
-		[ore('craftingToolScrewdriver'), ore('stickLongSteel'), ore('craftingToolHardHammer')]
+		[null, ore('craftingToolFile').transform(damageTool), null],
+		[ore('craftingToolScrewdriver').transform(damageTool), ore('stickLongSteel'), ore('craftingToolHardHammer').transform(damageTool)]
 ]);
 
 crafting.addShaped("techguns_iron_receiver", item('techguns:itemshared:33'), [
 		[ore('plateIron'), ore('plateIron'), ore('plateIron')],
-		[ore('craftingToolScrewdriver'), ore('boltIron'), ore('stickIron')],
+		[ore('craftingToolScrewdriver').transform(damageTool), ore('boltIron'), ore('stickIron')],
 		[null, ore('screwIron'), ore('screwIron')]
 ]);
 
 crafting.addShaped("tg_soldier_helmet", item('techguns:t1_combat_helmet'), [
 		[ore('plateIron'), ore('plateIron'), ore('plateIron')],
-		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')]
+		[item('techguns:itemshared:60'), ore('craftingToolHardHammer').transform(damageTool), item('techguns:itemshared:60')]
 ]);
 
 crafting.addShaped("tg_soldier_chestplate", item('techguns:t1_combat_chestplate'), [
-		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
+		[item('techguns:itemshared:60'), ore('craftingToolHardHammer').transform(damageTool), item('techguns:itemshared:60')],
 		[ore('plateIron'), ore('plateIron'), ore('plateIron')],
 		[item('techguns:itemshared:60'), item('techguns:itemshared:60'), item('techguns:itemshared:60')]
 ]);
 
 crafting.addShaped("tg_soldier_leggings", item('techguns:t1_combat_leggings'), [
 		[ore('plateIron'), ore('plateIron'), ore('plateIron')],
-		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
+		[item('techguns:itemshared:60'), ore('craftingToolHardHammer').transform(damageTool), item('techguns:itemshared:60')],
 		[item('techguns:itemshared:60'), null, item('techguns:itemshared:60')]
 ]);
 
 crafting.addShaped("tg_soldier_boots", item('techguns:t1_combat_boots'), [
 		[item('techguns:itemshared:60'), null, item('techguns:itemshared:60')],
-		[ore('plateIron'), ore('craftingToolHardHammer'), ore('plateIron')]
+		[ore('plateIron'), ore('craftingToolHardHammer').transform(damageTool), ore('plateIron')]
 ]);
 
 crafting.addShaped("tg_combat_helmet", item('techguns:t2_combat_helmet'), [
 		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
-		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')]
+		[item('techguns:itemshared:60'), ore('craftingToolHardHammer').transform(damageTool), item('techguns:itemshared:60')]
 ]);
 
 crafting.addShaped("tg_combat_chestplate", item('techguns:t2_combat_chestplate'), [
-		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
+		[item('techguns:itemshared:60'), ore('craftingToolHardHammer').transform(damageTool), item('techguns:itemshared:60')],
 		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
 		[item('techguns:itemshared:60'), item('techguns:itemshared:60'), item('techguns:itemshared:60')]
 ]);
 
 crafting.addShaped("tg_combat_leggings", item('techguns:t2_combat_leggings'), [
 		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
-		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
+		[item('techguns:itemshared:60'), ore('craftingToolHardHammer').transform(damageTool), item('techguns:itemshared:60')],
 		[item('techguns:itemshared:60'), null, item('techguns:itemshared:60')]
 ]);
 
 crafting.addShaped("tg_combat_boots", item('techguns:t2_combat_boots'), [
 		[item('techguns:itemshared:60'), null, item('techguns:itemshared:60')],
-		[ore('plateSteel'), ore('craftingToolHardHammer'), ore('plateSteel')]
+		[ore('plateSteel'), ore('craftingToolHardHammer').transform(damageTool), ore('plateSteel')]
 ]);
 
 crafting.addShaped("tg_pistol_rounds", item('techguns:itemshared:1')*12, [
-		[null, ore('craftingToolHardHammer'), null],
+		[null, ore('craftingToolHardHammer').transform(damageTool), null],
 		[null, ore('roundLead'), null],
 		[ore('plateBrass'), ore('dustGunpowder'), ore('plateBrass')]
 ]);

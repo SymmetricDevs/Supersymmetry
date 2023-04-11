@@ -1,3 +1,5 @@
+import static globals.Globals.*
+
 import crafttweaker.api.item.IItemStack;
 
 println("Running StartingAge.groovy...")
@@ -15,7 +17,7 @@ for (item in name_removals) {
 }
 
 crafting.replaceShapeless("gregtech:clay_ball_to_dust", metaitem('dustClay'), [
-        ore('craftingToolMortar'),
+        ore('craftingToolMortar').transform(damageTool),
         ore('ingotClay')
 ])
 
@@ -171,7 +173,7 @@ var i = 0 as int;
 
 for (log in WoodMap) {
     crafting.addShaped("wood_" + i, item(WoodMap[log.getKey()]) * 4, [
-            [ore('craftingToolSaw'), item(log.getKey()), null]
+            [ore('craftingToolSaw').transform(damageTool), item(log.getKey()), null]
     ]);
     i+=1;
 }

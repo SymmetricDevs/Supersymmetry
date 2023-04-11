@@ -1,3 +1,5 @@
+import static globals.Globals.*
+
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;
 
@@ -5,6 +7,7 @@ import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.api.items.toolitem.ToolHelper
 
 
 println("Running GregTech.groovy...")
@@ -18,26 +21,26 @@ for (name in name_removals) {
 }
 
 crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bronze'), [
-    [ore('craftingToolHardHammer'), ore('stickBronze'), ore('screwBronze')],
+    [ore('craftingToolHardHammer').transform(damageTool), ore('stickBronze'), ore('screwBronze')],
     [ore('plateBronze'), item('gregtech:metal_casing:1'), ore('stickBronze')],
-    [ore('craftingToolScrewdriver'), ore('stickBronze'), ore('screwBronze')]
+    [ore('craftingToolScrewdriver').transform(damageTool), ore('stickBronze'), ore('screwBronze')]
 ])
 
 
 crafting.addShaped('gregtech:co_bronze', metaitem('coke_oven'), [
     [item('gregtech:metal_casing:8'), ore('plateBronze'), item('gregtech:metal_casing:8')],
-    [ore('plateBronze'), ore('craftingToolWrench'), ore('plateBronze')],
+    [ore('plateBronze'), ore('craftingToolWrench').transform(damageTool), ore('plateBronze')],
     [item('gregtech:metal_casing:8'), ore('plateBronze'), item('gregtech:metal_casing:8')]
 ])
 
 crafting.addShaped('gregtech:drum_bronze', metaitem('drum.wood'), [
-    [ore('craftingToolSoftHammer'), metaitem('rubber_drop'), ore('craftingToolSaw')],
+    [ore('craftingToolSoftHammer').transform(damageTool), metaitem('rubber_drop'), ore('craftingToolSaw').transform(damageTool)],
     [ore('plankWood'), ore('stickLongBronze'), ore('plankWood')],
     [ore('plankWood'), ore('stickLongBronze'), ore('plankWood')]
 ])
 
 crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
-        [ore('craftingToolFile'), null, null],
+        [ore('craftingToolFile').transform(damageTool), null, null],
         [null, ore('ingotRubber'), null],
         [null, null, null]
 ]);

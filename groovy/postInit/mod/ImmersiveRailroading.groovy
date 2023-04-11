@@ -1,6 +1,8 @@
 /*
 println("Running ImmersiveRailroading.groovy...")
 
+import static globals.Globals.*
+
 def weapons_factory = recipemap('assembler') // REPLACE WITH WEAPONS FACTORY AFTER RECIPE MAPS ARE FIXED
 
 ArrayList<String> name_removals = [
@@ -33,7 +35,7 @@ crafting.addShaped("ir_paint_brush", item('immersiverailroading:item_paint_brush
 crafting.addShaped("ir_large_wrench", item('immersiverailroading:item_large_wrench'), [
 		[null, ore('plateSteel'), null],
 		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
-		[ore('plateSteel'), ore('craftingToolHardHammer'), ore('plateSteel')]
+		[ore('plateSteel'), ore('craftingToolHardHammer').transform(damageTool), ore('plateSteel')]
 ]);
 
 crafting.addShaped("ir_gold_spike", item('immersiverailroading:item_golden_spike'), [
@@ -44,7 +46,7 @@ crafting.addShaped("ir_gold_spike", item('immersiverailroading:item_golden_spike
 
 crafting.addShaped("ir_switch_key", item('immersiverailroading:item_switch_key'), [
 		[null, ore('stickSteel'), null],
-		[ore('craftingToolFile'), ore('stickSteel'), null],
+		[ore('craftingToolFile').transform(damageTool), ore('stickSteel'), null],
 		[null, ore('ringSteel')]
 ]);
 

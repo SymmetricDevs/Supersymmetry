@@ -27,7 +27,7 @@ crafting.addShapeless('ElectrolytePaperSalt',metaitem('electrolyte_paper'), [
 crafting.addShapeless('ElectrolytePaperFruit',metaitem('electrolyte_paper'), [
     ore('electrolyteFruit'),
     item('minecraft:paper'),
-    ore('craftingToolMortar')
+    ore('craftingToolMortar').transform(damageTool)
 ]) 
 crafting.addShapeless('MagneticIronDuplication',metaitem('stickIronMagnetic') * 2, [
     metaitem('hot_iron_rod'), 

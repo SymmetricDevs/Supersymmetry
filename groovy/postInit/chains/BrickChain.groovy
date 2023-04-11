@@ -76,6 +76,6 @@ def mudbrick_mix_ingredients = [
 ]
 
 crafting.addShapeless('ManualMudbrickMix',metaitem('mudbrick_mix') * 2, mudbrick_mix_ingredients) 
-crafting.addShapeless('StrawCutting',metaitem('straw') * 2, [ore('craftingToolKnife'), item('notreepunching:grass_fiber')]) 
+crafting.addShapeless('StrawCutting',metaitem('straw') * 2, [ore('craftingToolKnife').transform(damageTool), item('notreepunching:grass_fiber')]) 
 
 CompressBrickRecipes('mudbrick_mix', 'brick.adobe')

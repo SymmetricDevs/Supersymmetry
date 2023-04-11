@@ -1,6 +1,8 @@
 import gregtech.integration.groovy.GroovyScriptCompat
 
 import com.cleanroommc.groovyscript.api.IIngredient
+import gregtech.api.items.toolitem.ToolHelper
+
 
 class Globals {
 
@@ -34,5 +36,11 @@ class Globals {
         "libvulpes",
         "advancedrocketry"
     ]
-             
+          
+	public static damageTool = { stack ->
+    ToolHelper.damageItemWhenCrafting(stack, null)
+    return stack
+	}
+
 }
+

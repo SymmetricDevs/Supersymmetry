@@ -1,3 +1,5 @@
+import static globals.Globals.*
+
 def circuit(x) {
     return metaitem('circuit.integrated').withNbt([Configuration: x])
 }
@@ -158,9 +160,9 @@ crafting.replaceShaped('minecraft:piston', item('minecraft:piston'),  [
 ])
 
 crafting.replaceShaped('minecraft:lever', item('minecraft:lever'), [
-    [null, ore('stickWood'), ore('craftingToolHardHammer')],
+    [null, ore('stickWood'), ore('craftingToolHardHammer').transform(damageTool)],
     [ore('ringIron'), ore('cobblestone'), ore('screwIron')],
-    [null, ore('dustRedstone'), ore('craftingToolScrewdriver')]
+    [null, ore('dustRedstone'), ore('craftingToolScrewdriver').transform(damageTool)]
 ])
 
 crafting.replaceShaped('minecraft:tripwire_hook', item('minecraft:tripwire_hook') * 2, [
@@ -241,9 +243,9 @@ crafting.replaceShaped('quark:rain_detector', item('quark:rain_detector'), [
 ])
 
 crafting.replaceShaped('quark:iron_ladder', item('quark:iron_ladder') * 16, [
-    [ore('stickIron'), ore('craftingToolHardHammer'), ore('stickIron')],
+    [ore('stickIron'), ore('craftingToolHardHammer').transform(damageTool), ore('stickIron')],
     [ore('stickIron'), ore('stickIron'), ore('stickIron')],
-    [ore('stickIron'), ore('craftingToolFile'), ore('stickIron')]
+    [ore('stickIron'), ore('craftingToolFile').transform(damageTool), ore('stickIron')]
 ])
 
 crafting.replaceShaped('quark:paper_lantern', item('quark:paper_lantern'), [
