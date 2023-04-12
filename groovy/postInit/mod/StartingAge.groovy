@@ -7,7 +7,10 @@ def name_removals = [
         "notreepunching:tools/gold_saw",
         "notreepunching:tools/diamond_saw",
         "notreepunching:misc/clay_tool_clay_brick_2",
-        "notreepunching:misc/clay_tool_clay_brick"
+        "notreepunching:misc/clay_tool_clay_brick",
+        "notreepunching:tools/iron_knife",
+        "notreepunching:tools/gold_knife",
+        "notreepunching:tools/diamond_knife"
 ]
 
 for (item in name_removals) {
