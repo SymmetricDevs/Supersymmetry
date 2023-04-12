@@ -23,6 +23,11 @@ crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bron
     [ore('craftingToolScrewdriver'), ore('stickBronze'), ore('screwBronze')]
 ])
 
+crafting.addShaped('gregtech:steam_macerator', metaitem('steam_macerator_bronze'), [
+    [metaitem('toolHeadBuzzSawSteel'), metaitem('pipeSmallFluidBronze'), metaitem('toolHeadBuzzSawSteel')],
+    [metaitem('pipeSmallFluidBronze'), item('gregtech:steam_casing'), metaitem('pipeSmallFluidBronze')],
+    [ore('craftingPiston'), metaitem('pipeSmallFluidBronze'), ore('craftingPiston')]
+])
 
 crafting.addShaped('gregtech:co_bronze', metaitem('coke_oven'), [
     [item('gregtech:metal_casing:8'), ore('plateBronze'), item('gregtech:metal_casing:8')],
