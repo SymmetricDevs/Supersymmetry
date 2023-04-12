@@ -78,3 +78,9 @@ for (type in StoneVariantBlock.StoneType.values()) {
 
     OreDictionary.registerOre('stone', variant)
 }
+
+//No tree punching knife fixes
+
+ore('toolKnife').remove(item('notreepunching:knife/iron'))
+ore('toolKnife').remove(item('notreepunching:knife/gold'))
+ore('toolKnife').remove(item('notreepunching:knife/diamond'))
