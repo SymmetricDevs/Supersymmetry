@@ -549,7 +549,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your new Flint Knife can be used for cutting things, making things into shards, or getting §aplant fibers§r§.. \n\nYou can also use the flint knife as a weapon.\n",
+          "desc:8": "Your new Flint Knife can be used for cutting things, making things into shards, or getting §aplant fibers§r§..\n\nTo cut items other than blocks, you need to have the item you want to cut in your §0§aoffhand,§r and the knife in your §amain hand.§r This works vice versa.\n\nYou can also use the flint knife as a weapon.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
