@@ -455,6 +455,10 @@ metaitem.pattern.processor.name=Pattern CPU
 metaitem.pattern.memory.name=Pattern RAM
 metaitem.storage.segment.name=Storage Segment
 
+metaitem.cathode.lead.name=Lead Cathode
+metaitem.anode.lead.name=Lead Anode
+metaitem.battery.lead_acid.name=Lead Acid Battery
+
 # Multiblocked
 
 tile.multiblocked.item_input.name=Small Input Bus

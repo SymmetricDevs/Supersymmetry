@@ -549,7 +549,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your new Flint Knife can be used for cutting things, making things into shards, or getting §aplant fibers§r§..\n\nTo cut items other than blocks, you need to have the item you want to cut in your §0§aoffhand,§r and the knife in your §amain hand.§r This works vice versa.\n\nYou can also use the flint knife as a weapon.\n",
+          "desc:8": "Your new Flint Knife can be used for cutting things, making things into shards, or getting §aplant fibers§r§.. \n\nYou can also use the flint knife as a weapon.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -684,7 +684,7 @@
     },
     "7:10": {
       "preRequisites:11": [
-        6
+        5
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -2920,29 +2920,7 @@
         }
       },
       "questID:3": 34,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 324,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "plateSteel",
-              "id:8": "gregtech:meta_plate"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -2953,51 +2931,6 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 16,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 12,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 13,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            },
-            "3:10": {
               "Count:3": 1,
               "Damage:2": 17,
               "ForgeCaps:10": {
@@ -3533,7 +3466,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Congratulations, [INSERT PLAYER NAME HERE]! You made it past the easy part. Now it\u0027s time for the hard part.  \n\nAs I said in the beginning quest, the main objective of the Industrial Age is §evacuum tubes§r, which are kind of complicated and confusing to set up.\nOur first step is making §aglass tubes§r, with a ball mold and glass dust. \n",
+          "desc:8": "As I said in the beginning, the main objective of the Industrial Age is §evacuum tubes§r, which require an extremely §6low pressure §r(vacuum) to function.\nOur first step is making §aglass tubes§r, with a ball mold and glass dust. \n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4132,6 +4065,220 @@
     },
     "51:10": {
       "preRequisites:11": [
+        50
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Combining a plate of §6Lead §rwith some wiring creates §6Lead Anodes and Cathodes§r. If they are combined with §6Sulfuric Acid§r, they can make a Lead Acid Battery. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4003,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Anodes and Cathodes",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 51,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4003,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 4004,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "52:10": {
+      "preRequisites:11": [
+        51,
+        46
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The§6 lead–acid battery§r is a type of rechargeable battery. It is the first type of rechargeable battery ever created. \n\nCompared to higher-tier rechargeable batteries, lead–acid batteries have relatively low energy density.\n\nThis battery can hold about 3 minutes worth of energy at §6Low Voltage§r. This is good information to know, because you will soon be able to set up §6power§r. More information on electricity and the power system can be found in later pages.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4002,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2",
+            "tag:10": {
+              "Charge:4": 120000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Lead Acid Battery",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 52,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4002,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2",
+              "tag:10": {
+                "Charge:4": 120000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "53:10": {
+      "preRequisites:11": [
+        50
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Machine Casings §rare required to build the first Low Voltage electric machines.\n\nSteam §rmachines are clunky, don\u0027t auto-output, and need pumps to be automated. With the use of Circuits, Low Voltage machinery can be automated. It\u0027s also much easier to use, and many chemical processes are only available with electric machinery. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine_casing"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Low Voltage Casings",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 53,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "54:10": {
+      "preRequisites:11": [
         43
       ],
       "properties:10": {
@@ -4222,7 +4369,7 @@
         }
       }
     },
-    "52:10": {
+    "55:10": {
       "preRequisites:11": [
         33
       ],
@@ -4270,7 +4417,7 @@
         }
       }
     },
-    "53:10": {
+    "56:10": {
       "preRequisites:11": [
         31
       ],
@@ -4335,7 +4482,7 @@
         }
       }
     },
-    "54:10": {
+    "57:10": {
       "preRequisites:11": [
         31
       ],
@@ -4387,7 +4534,7 @@
         }
       }
     },
-    "55:10": {
+    "58:10": {
       "preRequisites:11": [
         31
       ],
@@ -4439,7 +4586,7 @@
         }
       }
     },
-    "56:10": {
+    "59:10": {
       "preRequisites:11": [
         31
       ],
@@ -4491,7 +4638,7 @@
         }
       }
     },
-    "57:10": {
+    "60:10": {
       "preRequisites:11": [
         47
       ],
@@ -4543,7 +4690,7 @@
         }
       }
     },
-    "58:10": {
+    "61:10": {
       "preRequisites:11": [
         30
       ],
@@ -4638,7 +4785,7 @@
         }
       }
     },
-    "59:10": {
+    "62:10": {
       "preRequisites:11": [
         30
       ],
@@ -4733,7 +4880,7 @@
         }
       }
     },
-    "60:10": {
+    "63:10": {
       "preRequisites:11": [
         31
       ],
@@ -4850,14 +4997,14 @@
         }
       }
     },
-    "61:10": {
+    "64:10": {
       "preRequisites:11": [
         54
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Resistors are another major component of §bLV circuits§r. They are made with sticky resin, which can be found on §2rubber trees§r, or you can get it by smelting slimeballs.",
+          "desc:8": "Resistors are another major component of §bLV circuits§r. They are made with sticky resin, which can be found on §2rubber trees§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4890,29 +5037,7 @@
         }
       },
       "questID:3": 64,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 12,
-              "Damage:2": 335,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotWroughtIron",
-              "id:8": "gregtech:meta_ingot"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -4942,14 +5067,14 @@
         }
       }
     },
-    "62:10": {
+    "65:10": {
       "preRequisites:11": [
         54
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Coated circuit boards§r are another component of LV circuits. They are made with sticky resin, and wood planks.\n\nYou have to coat the board with wires to make it usable, turning it into a §6Basic Circuit Board§r.",
+          "desc:8": "§6Coated circuit boards§r are another component of LV circuits. They are made with sticky resin, and wood planks.\n\nThe board has to be coated with wires to make it usable, turning it into a §6Basic Circuit Board§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4982,71 +5107,7 @@
         }
       },
       "questID:3": 65,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 6,
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_sapling_0"
-            },
-            "1:10": {
-              "Count:3": 4,
-              "Damage:2": 3,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:dye"
-            },
-            "2:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:bread"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "gregtech:warning_sign_1"
-            },
-            "4:10": {
-              "Count:3": 64,
-              "Damage:2": 51,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -5091,7 +5152,7 @@
         }
       }
     },
-    "63:10": {
+    "66:10": {
       "preRequisites:11": [
         54,
         64,
@@ -5100,7 +5161,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Assembling the circuit parts (§6resistors§r, §bvacuum tubes§r, §cwiring§r, and the §2board§r) gets you one Primitive Circuit. \n\nCircuits are the brain of all GregTech machines - they\u0027re needed for the machine to work. This modpack has over 10 different tiers of circuits, ranging all the way from a simple tube on a wood plank all the way to a 200 step reality bending supracausal circuit. \n\nCongratulations! We are proud of you, and you can officially say that you finished the first tier. To progress further, we will need to generate EU electricity, but we\u0027ll explain that in a later quest.\n\n§l§3This quest will unlock Tier 2.",
+          "desc:8": "Assembling the circuit parts (§6resistors§r, §bvacuum tubes§r, §cwiring§r, and the §2board§r) gets you one Primitive Circuit. \n\nCircuits are the brain of all machines - they\u0027re needed for the machine to work. There are over 10 different types of circuits, ranging all the way from a simple tube on a wood plank all the way to a circuit powered by §kAMOGUS ENERGY§r \n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5215,7 +5276,7 @@
         }
       }
     },
-    "64:10": {
+    "67:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -5264,7 +5325,7 @@
         }
       }
     },
-    "65:10": {
+    "68:10": {
       "preRequisites:11": [
         67
       ],
@@ -5315,7 +5376,7 @@
         }
       }
     },
-    "66:10": {
+    "69:10": {
       "preRequisites:11": [
         68
       ],
@@ -5366,7 +5427,7 @@
         }
       }
     },
-    "67:10": {
+    "70:10": {
       "preRequisites:11": [
         67
       ],
@@ -5417,7 +5478,59 @@
         }
       }
     },
-    "68:10": {
+    "71:10": {
+      "preRequisites:11": [
+        53
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Machine Hull§rs are the basis of every Electric Machine. \n\nThese are simply Machine Casings with proper wiring inside so that they are ready for people to install various electrical components. \n\nA Machine Hull has a space for items and fluids. Item Pipes, for example, can insert items into a Machine Hull. This will be required when you will have to transport items into enclosed spaces where piping can\u0027t go, for example, in a sterilized Cleanroom [See CHAPTER 4]",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 986,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Machine Hull",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 71,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 986,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "72:10": {
       "preRequisites:11": [
         87
       ],
@@ -5487,7 +5600,7 @@
         }
       }
     },
-    "69:10": {
+    "73:10": {
       "preRequisites:11": [
         39
       ],
@@ -5597,7 +5710,7 @@
         }
       }
     },
-    "70:10": {
+    "74:10": {
       "preRequisites:11": [
         80
       ],
@@ -5699,7 +5812,7 @@
         }
       }
     },
-    "71:10": {
+    "75:10": {
       "preRequisites:11": [
         80
       ],
@@ -5785,7 +5898,7 @@
         }
       }
     },
-    "72:10": {
+    "76:10": {
       "preRequisites:11": [
         80
       ],
@@ -5882,7 +5995,7 @@
         }
       }
     },
-    "73:10": {
+    "77:10": {
       "preRequisites:11": [
         83
       ],
@@ -5960,7 +6073,7 @@
         }
       }
     },
-    "74:10": {
+    "78:10": {
       "preRequisites:11": [
         80
       ],
@@ -6050,7 +6163,7 @@
         }
       }
     },
-    "75:10": {
+    "79:10": {
       "preRequisites:11": [
         80
       ],
@@ -6137,7 +6250,7 @@
         }
       }
     },
-    "76:10": {
+    "80:10": {
       "preRequisites:11": [
         7
       ],
@@ -6189,7 +6302,7 @@
         }
       }
     },
-    "77:10": {
+    "81:10": {
       "preRequisites:11": [
         5
       ],
@@ -6259,7 +6372,7 @@
         }
       }
     },
-    "78:10": {
+    "82:10": {
       "preRequisites:11": [
         20
       ],
@@ -6329,7 +6442,7 @@
         }
       }
     },
-    "79:10": {
+    "83:10": {
       "preRequisites:11": [
         12
       ],
@@ -6399,7 +6512,7 @@
         }
       }
     },
-    "80:10": {
+    "84:10": {
       "preRequisites:11": [
         149
       ],
@@ -6463,7 +6576,7 @@
         }
       }
     },
-    "81:10": {
+    "85:10": {
       "preRequisites:11": [
         31
       ],
@@ -6537,7 +6650,7 @@
         }
       }
     },
-    "82:10": {
+    "86:10": {
       "preRequisites:11": [
         87
       ],
@@ -6622,7 +6735,7 @@
         }
       }
     },
-    "83:10": {
+    "87:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -6671,14 +6784,14 @@
         }
       }
     },
-    "84:10": {
+    "88:10": {
       "preRequisites:11": [
         66
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Congratulations, you got your first circuit! That wasn\u0027t easy, and I\u0027m proud of you for doing that. :)\n\nNow it\u0027s time to move forward and create even better machines. Your §6Steam §rmachines are clunky, don\u0027t auto-output, and need pumps to be automated.\nOur first step is making a §8§8§7LV Machine Hull.§r Pretty simple, it\u0027s just 8 steel and some cables.\n\n----------------------------------------\n§b§3STAGE 2 HAS BEEN UNLOCKED! GOOD LUCK.\n§r----------------------------------------\n- Setup basic automatic defenses\n- Dig down to the nether and face its horrors\n- Find new and better materials\n- Rain fire on your enemies with rockets\n\nTier: 2\nEU/t: 32\n-------------",
+          "desc:8": "Now it\u0027s time to move forward and create even better machines. Your §6Steam §rmachines are clunky, don\u0027t auto-output, and need pumps to be automated.\nOur first step is making a §8§8§7LV Machine Hull.§r Pretty simple, it\u0027s just 8 steel and some cables.\n\n----------------------------------------\n§b§3CHAPTER 2 - LOCKED AND LOADED\n§r----------------------------------------\n- Setup basic automatic defenses\n- Dig down to the nether and face its horrors\n- Find new and better materials\n- Rain fire on your enemies with rockets\n\nTier: 2\nEU/t: 32\n-------------",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6745,7 +6858,7 @@
         }
       }
     },
-    "85:10": {
+    "89:10": {
       "preRequisites:11": [
         99
       ],
@@ -6852,7 +6965,7 @@
         }
       }
     },
-    "86:10": {
+    "90:10": {
       "preRequisites:11": [
         99
       ],
@@ -6944,7 +7057,7 @@
         }
       }
     },
-    "87:10": {
+    "91:10": {
       "preRequisites:11": [
         99
       ],
@@ -7057,7 +7170,7 @@
         }
       }
     },
-    "88:10": {
+    "92:10": {
       "preRequisites:11": [
         99
       ],
@@ -7149,7 +7262,7 @@
         }
       }
     },
-    "89:10": {
+    "93:10": {
       "preRequisites:11": [
         99
       ],
@@ -7249,7 +7362,7 @@
         }
       }
     },
-    "90:10": {
+    "94:10": {
       "preRequisites:11": [
         104
       ],
@@ -7288,7 +7401,7 @@
         }
       }
     },
-    "91:10": {
+    "95:10": {
       "preRequisites:11": [
         74
       ],
@@ -7388,7 +7501,7 @@
         }
       }
     },
-    "92:10": {
+    "96:10": {
       "preRequisites:11": [
         106
       ],
@@ -7440,7 +7553,7 @@
         }
       }
     },
-    "93:10": {
+    "97:10": {
       "preRequisites:11": [
         105
       ],
@@ -7514,7 +7627,7 @@
         }
       }
     },
-    "94:10": {
+    "98:10": {
       "preRequisites:11": [
         105
       ],
@@ -7588,7 +7701,7 @@
         }
       }
     },
-    "95:10": {
+    "99:10": {
       "preRequisites:11": [
         105
       ],
@@ -7653,7 +7766,7 @@
         }
       }
     },
-    "96:10": {
+    "100:10": {
       "preRequisites:11": [
         105
       ],
@@ -7727,7 +7840,7 @@
         }
       }
     },
-    "97:10": {
+    "101:10": {
       "preRequisites:11": [
         105
       ],
@@ -7805,7 +7918,7 @@
         }
       }
     },
-    "98:10": {
+    "102:10": {
       "preRequisites:11": [
         105
       ],
@@ -7894,7 +8007,7 @@
         }
       }
     },
-    "99:10": {
+    "103:10": {
       "preRequisites:11": [
         105
       ],
@@ -7959,7 +8072,7 @@
         }
       }
     },
-    "100:10": {
+    "104:10": {
       "preRequisites:11": [
         105
       ],
@@ -8028,7 +8141,7 @@
         }
       }
     },
-    "101:10": {
+    "105:10": {
       "preRequisites:11": [
         105
       ],
@@ -8102,7 +8215,7 @@
         }
       }
     },
-    "102:10": {
+    "106:10": {
       "preRequisites:11": [
         87
       ],
@@ -8172,7 +8285,7 @@
         }
       }
     },
-    "103:10": {
+    "107:10": {
       "preRequisites:11": [
         117
       ],
@@ -8224,7 +8337,7 @@
         }
       }
     },
-    "104:10": {
+    "108:10": {
       "preRequisites:11": [
         110
       ],
@@ -8303,7 +8416,7 @@
         }
       }
     },
-    "105:10": {
+    "109:10": {
       "preRequisites:11": [
         123
       ],
@@ -8365,7 +8478,7 @@
         }
       }
     },
-    "106:10": {
+    "110:10": {
       "preRequisites:11": [
         110
       ],
@@ -8458,7 +8571,7 @@
         }
       }
     },
-    "107:10": {
+    "111:10": {
       "preRequisites:11": [
         159
       ],
@@ -8545,7 +8658,7 @@
         }
       }
     },
-    "108:10": {
+    "112:10": {
       "preRequisites:11": [
         105
       ],
@@ -8623,7 +8736,7 @@
         }
       }
     },
-    "109:10": {
+    "113:10": {
       "preRequisites:11": [
         105
       ],
@@ -8697,7 +8810,7 @@
         }
       }
     },
-    "110:10": {
+    "114:10": {
       "preRequisites:11": [
         118
       ],
@@ -8761,7 +8874,7 @@
         }
       }
     },
-    "111:10": {
+    "115:10": {
       "preRequisites:11": [
         121
       ],
@@ -8823,7 +8936,7 @@
         }
       }
     },
-    "112:10": {
+    "116:10": {
       "preRequisites:11": [
         120
       ],
@@ -8885,7 +8998,7 @@
         }
       }
     },
-    "113:10": {
+    "117:10": {
       "preRequisites:11": [
         127
       ],
@@ -8969,7 +9082,7 @@
         }
       }
     },
-    "114:10": {
+    "118:10": {
       "preRequisites:11": [
         22
       ],
@@ -9039,7 +9152,7 @@
         }
       }
     },
-    "115:10": {
+    "119:10": {
       "preRequisites:11": [
         110
       ],
@@ -9122,7 +9235,7 @@
         }
       }
     },
-    "116:10": {
+    "120:10": {
       "preRequisites:11": [
         110
       ],
@@ -9205,7 +9318,7 @@
         }
       }
     },
-    "117:10": {
+    "121:10": {
       "preRequisites:11": [
         113,
         137,
@@ -9272,7 +9385,7 @@
         }
       }
     },
-    "118:10": {
+    "122:10": {
       "preRequisites:11": [
         66
       ],
@@ -9367,7 +9480,7 @@
         }
       }
     },
-    "119:10": {
+    "123:10": {
       "preRequisites:11": [
         0
       ],
@@ -9415,7 +9528,7 @@
         }
       }
     },
-    "120:10": {
+    "124:10": {
       "preRequisites:11": [
         99
       ],
@@ -9485,7 +9598,7 @@
         }
       }
     },
-    "121:10": {
+    "125:10": {
       "preRequisites:11": [
         136
       ],
@@ -9652,7 +9765,7 @@
         }
       }
     },
-    "122:10": {
+    "126:10": {
       "preRequisites:11": [
         133
       ],
@@ -9736,7 +9849,7 @@
         }
       }
     },
-    "123:10": {
+    "127:10": {
       "preRequisites:11": [
         138
       ],
@@ -9811,7 +9924,7 @@
         }
       }
     },
-    "124:10": {
+    "128:10": {
       "preRequisites:11": [
         139
       ],
@@ -9886,7 +9999,7 @@
         }
       }
     },
-    "125:10": {
+    "129:10": {
       "preRequisites:11": [
         140
       ],
@@ -9996,7 +10109,7 @@
         }
       }
     },
-    "126:10": {
+    "130:10": {
       "preRequisites:11": [
         105
       ],
@@ -10061,7 +10174,7 @@
         }
       }
     },
-    "127:10": {
+    "131:10": {
       "preRequisites:11": [
         105
       ],
@@ -10135,7 +10248,7 @@
         }
       }
     },
-    "128:10": {
+    "132:10": {
       "preRequisites:11": [
         112
       ],
@@ -10210,7 +10323,7 @@
         }
       }
     },
-    "129:10": {
+    "133:10": {
       "preRequisites:11": [
         144
       ],
@@ -10272,7 +10385,7 @@
         }
       }
     },
-    "130:10": {
+    "134:10": {
       "preRequisites:11": [
         148
       ],
@@ -10324,116 +10437,7 @@
         }
       }
     },
-    "131:10": {
-      "preRequisites:11": [
-        122
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Now that you have lithium, it\u0027s time to make §2batteries§r!\n\nThere are 4 types of batteries available at LV: \n§6Acid Battery §r(18,000 EU)§6\nMercury Battery §r(32,000 EU)§7§6\nSodium Battery §r(80,000 EU)§6\nLithium Battery §r(100,000 EU)§6\nCadmium Battery §r(120,000 EU)\n\nThe acid and mercury batteries aren\u0027t really that good. They only hold about a minute of energy each.\nThe Cadmium battery is the best, but cadmium is pretty hard to get at this stage, so you\u0027ll have to go with lithium, or sodium.\n\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 735,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Batteries",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 147,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:ore_lepidolite_0"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 735,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 732,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "132:10": {
+    "135:10": {
       "preRequisites:11": [
         110
       ],
@@ -10525,7 +10529,7 @@
         }
       }
     },
-    "133:10": {
+    "136:10": {
       "preRequisites:11": [
         12
       ],
@@ -10595,7 +10599,7 @@
         }
       }
     },
-    "134:10": {
+    "137:10": {
       "preRequisites:11": [
         133
       ],
@@ -10679,7 +10683,7 @@
         }
       }
     },
-    "135:10": {
+    "138:10": {
       "preRequisites:11": [
         150
       ],
@@ -10763,7 +10767,7 @@
         }
       }
     },
-    "136:10": {
+    "139:10": {
       "preRequisites:11": [
         133
       ],
@@ -10838,7 +10842,7 @@
         }
       }
     },
-    "137:10": {
+    "140:10": {
       "preRequisites:11": [
         152
       ],
@@ -10922,7 +10926,7 @@
         }
       }
     },
-    "138:10": {
+    "141:10": {
       "preRequisites:11": [
         153,
         151,
@@ -11008,7 +11012,7 @@
         }
       }
     },
-    "139:10": {
+    "142:10": {
       "preRequisites:11": [
         105
       ],
@@ -11073,7 +11077,7 @@
         }
       }
     },
-    "140:10": {
+    "143:10": {
       "preRequisites:11": [
         151
       ],
@@ -11151,7 +11155,7 @@
         }
       }
     },
-    "141:10": {
+    "144:10": {
       "preRequisites:11": [
         141
       ],
@@ -11233,7 +11237,7 @@
         }
       }
     },
-    "142:10": {
+    "145:10": {
       "preRequisites:11": [
         105
       ],
@@ -11307,7 +11311,7 @@
         }
       }
     },
-    "143:10": {
+    "146:10": {
       "preRequisites:11": [
         148
       ],
@@ -11381,7 +11385,7 @@
         }
       }
     },
-    "144:10": {
+    "147:10": {
       "preRequisites:11": [
         119
       ],
@@ -11446,7 +11450,7 @@
         }
       }
     },
-    "145:10": {
+    "148:10": {
       "preRequisites:11": [
         162
       ],
@@ -11538,7 +11542,7 @@
         }
       }
     },
-    "146:10": {
+    "149:10": {
       "preRequisites:11": [
         105
       ],
@@ -11603,7 +11607,7 @@
         }
       }
     },
-    "147:10": {
+    "150:10": {
       "preRequisites:11": [
         105
       ],
@@ -11787,7 +11791,7 @@
         }
       }
     },
-    "148:10": {
+    "151:10": {
       "preRequisites:11": [
         110
       ],
@@ -11857,7 +11861,7 @@
         }
       }
     },
-    "149:10": {
+    "152:10": {
       "preRequisites:11": [
         166
       ],
@@ -11959,7 +11963,7 @@
         }
       }
     },
-    "150:10": {
+    "153:10": {
       "preRequisites:11": [
         166,
         174
@@ -12043,7 +12047,7 @@
         }
       }
     },
-    "151:10": {
+    "154:10": {
       "preRequisites:11": [
         123
       ],
@@ -12135,7 +12139,7 @@
         }
       }
     },
-    "152:10": {
+    "155:10": {
       "preRequisites:11": [
         123
       ],
@@ -12218,7 +12222,7 @@
         }
       }
     },
-    "153:10": {
+    "156:10": {
       "preRequisites:11": [
         171,
         170
@@ -12302,7 +12306,7 @@
         }
       }
     },
-    "154:10": {
+    "157:10": {
       "preRequisites:11": [
         172,
         170
@@ -12395,7 +12399,7 @@
         }
       }
     },
-    "155:10": {
+    "158:10": {
       "preRequisites:11": [
         173
       ],
@@ -12487,7 +12491,7 @@
         }
       }
     },
-    "156:10": {
+    "159:10": {
       "preRequisites:11": [
         200
       ],
@@ -12570,7 +12574,7 @@
         }
       }
     },
-    "157:10": {
+    "160:10": {
       "preRequisites:11": [
         31
       ],
@@ -12674,7 +12678,7 @@
         }
       }
     },
-    "158:10": {
+    "161:10": {
       "preRequisites:11": [
         31
       ],
@@ -12767,7 +12771,7 @@
         }
       }
     },
-    "159:10": {
+    "162:10": {
       "preRequisites:11": [
         113
       ],
@@ -12842,7 +12846,7 @@
         }
       }
     },
-    "160:10": {
+    "163:10": {
       "preRequisites:11": [
         178
       ],
@@ -12926,7 +12930,7 @@
         }
       }
     },
-    "161:10": {
+    "164:10": {
       "preRequisites:11": [
         179
       ],
@@ -12991,7 +12995,7 @@
         }
       }
     },
-    "162:10": {
+    "165:10": {
       "preRequisites:11": [
         124
       ],
@@ -13065,7 +13069,7 @@
         }
       }
     },
-    "163:10": {
+    "166:10": {
       "preRequisites:11": [
         181
       ],
@@ -13149,7 +13153,7 @@
         }
       }
     },
-    "164:10": {
+    "167:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -13246,7 +13250,7 @@
         }
       }
     },
-    "165:10": {
+    "168:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -13306,7 +13310,7 @@
         }
       }
     },
-    "166:10": {
+    "169:10": {
       "preRequisites:11": [
         186
       ],
@@ -13364,7 +13368,7 @@
         }
       }
     },
-    "167:10": {
+    "170:10": {
       "preRequisites:11": [
         184
       ],
@@ -13448,7 +13452,7 @@
         }
       }
     },
-    "168:10": {
+    "171:10": {
       "preRequisites:11": [
         188
       ],
@@ -13538,7 +13542,7 @@
         }
       }
     },
-    "169:10": {
+    "172:10": {
       "preRequisites:11": [
         189
       ],
@@ -13637,7 +13641,7 @@
         }
       }
     },
-    "170:10": {
+    "173:10": {
       "preRequisites:11": [
         103
       ],
@@ -13726,7 +13730,7 @@
         }
       }
     },
-    "171:10": {
+    "174:10": {
       "preRequisites:11": [
         191
       ],
@@ -13800,7 +13804,7 @@
         }
       }
     },
-    "172:10": {
+    "175:10": {
       "preRequisites:11": [
         192
       ],
@@ -13922,7 +13926,7 @@
         }
       }
     },
-    "173:10": {
+    "176:10": {
       "preRequisites:11": [
         193
       ],
@@ -14011,7 +14015,7 @@
         }
       }
     },
-    "174:10": {
+    "177:10": {
       "preRequisites:11": [
         193
       ],
@@ -14100,7 +14104,7 @@
         }
       }
     },
-    "175:10": {
+    "178:10": {
       "preRequisites:11": [
         191
       ],
@@ -14217,7 +14221,7 @@
         }
       }
     },
-    "176:10": {
+    "179:10": {
       "preRequisites:11": [
         191
       ],
@@ -14334,7 +14338,7 @@
         }
       }
     },
-    "177:10": {
+    "180:10": {
       "preRequisites:11": [
         136
       ],
@@ -14490,7 +14494,7 @@
         }
       }
     },
-    "178:10": {
+    "181:10": {
       "preRequisites:11": [
         198
       ],
@@ -14639,7 +14643,7 @@
         }
       }
     },
-    "179:10": {
+    "182:10": {
       "preRequisites:11": [
         174
       ],
@@ -14704,7 +14708,7 @@
         }
       }
     },
-    "180:10": {
+    "183:10": {
       "preRequisites:11": [
         168
       ],
@@ -14796,7 +14800,7 @@
         }
       }
     },
-    "181:10": {
+    "184:10": {
       "preRequisites:11": [
         174
       ],
@@ -14888,7 +14892,7 @@
         }
       }
     },
-    "182:10": {
+    "185:10": {
       "preRequisites:11": [
         174
       ],
@@ -14980,7 +14984,7 @@
         }
       }
     },
-    "183:10": {
+    "186:10": {
       "preRequisites:11": [
         174
       ],
@@ -15072,7 +15076,7 @@
         }
       }
     },
-    "184:10": {
+    "187:10": {
       "preRequisites:11": [
         174
       ],
@@ -15164,7 +15168,7 @@
         }
       }
     },
-    "185:10": {
+    "188:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -15226,7 +15230,7 @@
         }
       }
     },
-    "186:10": {
+    "189:10": {
       "preRequisites:11": [
         200
       ],
@@ -15301,7 +15305,7 @@
         }
       }
     },
-    "187:10": {
+    "190:10": {
       "preRequisites:11": [
         200
       ],
@@ -15385,7 +15389,7 @@
         }
       }
     },
-    "188:10": {
+    "191:10": {
       "preRequisites:11": [
         216
       ],
@@ -15469,7 +15473,7 @@
         }
       }
     },
-    "189:10": {
+    "192:10": {
       "preRequisites:11": [
         216
       ],
@@ -15553,7 +15557,7 @@
         }
       }
     },
-    "190:10": {
+    "193:10": {
       "preRequisites:11": [
         102
       ],
@@ -15627,7 +15631,7 @@
         }
       }
     },
-    "191:10": {
+    "194:10": {
       "preRequisites:11": [
         214,
         215,
@@ -15705,7 +15709,7 @@
         }
       }
     },
-    "192:10": {
+    "195:10": {
       "preRequisites:11": [
         217,
         212
@@ -15781,7 +15785,7 @@
         }
       }
     },
-    "193:10": {
+    "196:10": {
       "preRequisites:11": [
         218
       ],
@@ -15864,7 +15868,7 @@
         }
       }
     },
-    "194:10": {
+    "197:10": {
       "preRequisites:11": [
         200
       ],
@@ -15933,7 +15937,7 @@
         }
       }
     },
-    "195:10": {
+    "198:10": {
       "preRequisites:11": [
         200
       ],
@@ -16013,7 +16017,7 @@
         }
       }
     },
-    "196:10": {
+    "199:10": {
       "preRequisites:11": [
         221
       ],
@@ -16141,7 +16145,7 @@
         }
       }
     },
-    "197:10": {
+    "200:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -16197,7 +16201,7 @@
         }
       }
     },
-    "198:10": {
+    "201:10": {
       "preRequisites:11": [
         223
       ],
@@ -16255,7 +16259,7 @@
         }
       }
     },
-    "199:10": {
+    "202:10": {
       "preRequisites:11": [
         223
       ],
@@ -16313,7 +16317,7 @@
         }
       }
     },
-    "200:10": {
+    "203:10": {
       "preRequisites:11": [
         223
       ],
@@ -16371,7 +16375,7 @@
         }
       }
     },
-    "201:10": {
+    "204:10": {
       "preRequisites:11": [
         223
       ],
@@ -16429,7 +16433,7 @@
         }
       }
     },
-    "202:10": {
+    "205:10": {
       "preRequisites:11": [
         223
       ],
@@ -16487,7 +16491,7 @@
         }
       }
     },
-    "203:10": {
+    "206:10": {
       "preRequisites:11": [
         112
       ],
@@ -16557,7 +16561,7 @@
         }
       }
     },
-    "204:10": {
+    "207:10": {
       "preRequisites:11": [
         112
       ],
@@ -16649,7 +16653,7 @@
         }
       }
     },
-    "205:10": {
+    "208:10": {
       "preRequisites:11": [
         221
       ],
@@ -16732,7 +16736,7 @@
         }
       }
     },
-    "206:10": {
+    "209:10": {
       "preRequisites:11": [
         110,
         221
@@ -16803,7 +16807,7 @@
         }
       }
     },
-    "207:10": {
+    "210:10": {
       "preRequisites:11": [
         112
       ],
@@ -16873,7 +16877,7 @@
         }
       }
     },
-    "208:10": {
+    "211:10": {
       "preRequisites:11": [
         231,
         232
@@ -16966,7 +16970,7 @@
         }
       }
     },
-    "209:10": {
+    "212:10": {
       "preRequisites:11": [
         112
       ],
@@ -17045,7 +17049,7 @@
         }
       }
     },
-    "210:10": {
+    "213:10": {
       "preRequisites:11": [
         104
       ],
@@ -17110,7 +17114,7 @@
         }
       }
     },
-    "211:10": {
+    "214:10": {
       "preRequisites:11": [
         241,
         254,
@@ -17186,7 +17190,7 @@
         }
       }
     },
-    "212:10": {
+    "215:10": {
       "preRequisites:11": [
         244,
         269
@@ -17279,7 +17283,7 @@
         }
       }
     },
-    "213:10": {
+    "216:10": {
       "preRequisites:11": [
         252
       ],
@@ -17349,7 +17353,7 @@
         }
       }
     },
-    "214:10": {
+    "217:10": {
       "preRequisites:11": [
         169
       ],
@@ -17441,7 +17445,7 @@
         }
       }
     },
-    "215:10": {
+    "218:10": {
       "preRequisites:11": [
         242
       ],
@@ -17528,7 +17532,7 @@
         }
       }
     },
-    "216:10": {
+    "219:10": {
       "preRequisites:11": [
         243
       ],
@@ -17602,7 +17606,7 @@
         }
       }
     },
-    "217:10": {
+    "220:10": {
       "preRequisites:11": [
         174
       ],
@@ -17694,7 +17698,7 @@
         }
       }
     },
-    "218:10": {
+    "221:10": {
       "preRequisites:11": [
         166
       ],
@@ -17733,7 +17737,7 @@
         }
       }
     },
-    "219:10": {
+    "222:10": {
       "preRequisites:11": [
         166
       ],
@@ -17816,7 +17820,7 @@
         }
       }
     },
-    "220:10": {
+    "223:10": {
       "preRequisites:11": [
         245
       ],
@@ -17900,7 +17904,7 @@
         }
       }
     },
-    "221:10": {
+    "224:10": {
       "preRequisites:11": [
         248
       ],
@@ -17974,7 +17978,7 @@
         }
       }
     },
-    "222:10": {
+    "225:10": {
       "preRequisites:11": [
         249,
         248
@@ -18059,7 +18063,7 @@
         }
       }
     },
-    "223:10": {
+    "226:10": {
       "preRequisites:11": [
         250
       ],
@@ -18158,7 +18162,7 @@
         }
       }
     },
-    "224:10": {
+    "227:10": {
       "preRequisites:11": [
         251
       ],
@@ -18233,7 +18237,7 @@
         }
       }
     },
-    "225:10": {
+    "228:10": {
       "preRequisites:11": [
         252
       ],
@@ -18340,7 +18344,7 @@
         }
       }
     },
-    "226:10": {
+    "229:10": {
       "preRequisites:11": [
         252
       ],
@@ -18436,7 +18440,7 @@
         }
       }
     },
-    "227:10": {
+    "230:10": {
       "preRequisites:11": [
         239
       ],
@@ -18528,7 +18532,7 @@
         }
       }
     },
-    "228:10": {
+    "231:10": {
       "preRequisites:11": [
         255
       ],
@@ -18646,7 +18650,7 @@
         }
       }
     },
-    "229:10": {
+    "232:10": {
       "preRequisites:11": [
         256
       ],
@@ -18738,7 +18742,7 @@
         }
       }
     },
-    "230:10": {
+    "233:10": {
       "preRequisites:11": [
         257
       ],
@@ -18830,7 +18834,7 @@
         }
       }
     },
-    "231:10": {
+    "234:10": {
       "preRequisites:11": [
         258
       ],
@@ -18952,7 +18956,7 @@
         }
       }
     },
-    "232:10": {
+    "235:10": {
       "preRequisites:11": [
         252
       ],
@@ -19044,7 +19048,7 @@
         }
       }
     },
-    "233:10": {
+    "236:10": {
       "preRequisites:11": [
         252
       ],
@@ -19136,7 +19140,7 @@
         }
       }
     },
-    "234:10": {
+    "237:10": {
       "preRequisites:11": [
         259
       ],
@@ -19210,7 +19214,7 @@
         }
       }
     },
-    "235:10": {
+    "238:10": {
       "preRequisites:11": [
         262
       ],
@@ -19302,7 +19306,7 @@
         }
       }
     },
-    "236:10": {
+    "239:10": {
       "preRequisites:11": [
         263
       ],
@@ -19386,7 +19390,7 @@
         }
       }
     },
-    "237:10": {
+    "240:10": {
       "preRequisites:11": [
         264
       ],
@@ -19469,7 +19473,7 @@
         }
       }
     },
-    "238:10": {
+    "241:10": {
       "preRequisites:11": [
         243
       ],
@@ -19543,7 +19547,7 @@
         }
       }
     },
-    "239:10": {
+    "242:10": {
       "preRequisites:11": [
         123
       ],
@@ -19627,7 +19631,7 @@
         }
       }
     },
-    "240:10": {
+    "243:10": {
       "preRequisites:11": [
         236
       ],
@@ -19710,7 +19714,7 @@
         }
       }
     },
-    "241:10": {
+    "244:10": {
       "preRequisites:11": [
         252
       ],
@@ -19762,7 +19766,7 @@
         }
       }
     },
-    "242:10": {
+    "245:10": {
       "preRequisites:11": [
         236
       ],
@@ -19826,7 +19830,7 @@
         }
       }
     },
-    "243:10": {
+    "246:10": {
       "preRequisites:11": [
         275
       ],
@@ -19881,7 +19885,7 @@
         }
       }
     },
-    "244:10": {
+    "247:10": {
       "preRequisites:11": [
         275
       ],
@@ -19936,7 +19940,7 @@
         }
       }
     },
-    "245:10": {
+    "248:10": {
       "preRequisites:11": [
         275
       ],
@@ -19991,7 +19995,7 @@
         }
       }
     },
-    "246:10": {
+    "249:10": {
       "preRequisites:11": [
         275
       ],
@@ -20046,7 +20050,7 @@
         }
       }
     },
-    "247:10": {
+    "250:10": {
       "preRequisites:11": [
         275
       ],
@@ -20101,7 +20105,7 @@
         }
       }
     },
-    "248:10": {
+    "251:10": {
       "preRequisites:11": [
         200
       ],
@@ -20153,7 +20157,7 @@
         }
       }
     },
-    "249:10": {
+    "252:10": {
       "preRequisites:11": [
         200
       ],
@@ -20227,7 +20231,7 @@
         }
       }
     },
-    "250:10": {
+    "253:10": {
       "preRequisites:11": [
         281
       ],
@@ -20344,7 +20348,7 @@
         }
       }
     },
-    "251:10": {
+    "254:10": {
       "preRequisites:11": [
         281
       ],
@@ -20461,7 +20465,7 @@
         }
       }
     },
-    "252:10": {
+    "255:10": {
       "preRequisites:11": [
         281
       ],
@@ -20578,7 +20582,7 @@
         }
       }
     },
-    "253:10": {
+    "256:10": {
       "preRequisites:11": [
         281
       ],
@@ -20695,7 +20699,7 @@
         }
       }
     },
-    "254:10": {
+    "257:10": {
       "preRequisites:11": [
         281
       ],
@@ -20799,7 +20803,7 @@
         }
       }
     },
-    "255:10": {
+    "258:10": {
       "preRequisites:11": [
         287
       ],
@@ -20888,7 +20892,7 @@
         }
       }
     },
-    "256:10": {
+    "259:10": {
       "preRequisites:11": [
         287
       ],
@@ -20962,7 +20966,7 @@
         }
       }
     },
-    "257:10": {
+    "260:10": {
       "preRequisites:11": [
         245
       ],
@@ -21037,7 +21041,7 @@
         }
       }
     },
-    "258:10": {
+    "261:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -21083,7 +21087,7 @@
         }
       }
     },
-    "259:10": {
+    "262:10": {
       "preRequisites:11": [
         251
       ],
@@ -21145,7 +21149,7 @@
         }
       }
     },
-    "260:10": {
+    "263:10": {
       "preRequisites:11": [
         292
       ],
@@ -21207,7 +21211,7 @@
         }
       }
     },
-    "261:10": {
+    "264:10": {
       "preRequisites:11": [
         290
       ],
@@ -21282,7 +21286,7 @@
         }
       }
     },
-    "262:10": {
+    "265:10": {
       "preRequisites:11": [
         236
       ],
@@ -21368,7 +21372,7 @@
         }
       }
     },
-    "263:10": {
+    "266:10": {
       "preRequisites:11": [
         295
       ],
@@ -21430,7 +21434,7 @@
         }
       }
     },
-    "264:10": {
+    "267:10": {
       "preRequisites:11": [
         295
       ],
@@ -21492,7 +21496,7 @@
         }
       }
     },
-    "265:10": {
+    "268:10": {
       "preRequisites:11": [
         236
       ],
@@ -21563,7 +21567,7 @@
         }
       }
     },
-    "266:10": {
+    "269:10": {
       "preRequisites:11": [
         200
       ],
@@ -21637,7 +21641,7 @@
         }
       }
     },
-    "267:10": {
+    "270:10": {
       "preRequisites:11": [
         259
       ],
@@ -21689,7 +21693,7 @@
         }
       }
     },
-    "268:10": {
+    "271:10": {
       "preRequisites:11": [
         174
       ],
@@ -21759,7 +21763,7 @@
         }
       }
     },
-    "269:10": {
+    "272:10": {
       "preRequisites:11": [
         301
       ],
@@ -21811,7 +21815,7 @@
         }
       }
     },
-    "270:10": {
+    "273:10": {
       "preRequisites:11": [
         302
       ],
@@ -21871,7 +21875,7 @@
         }
       }
     },
-    "271:10": {
+    "274:10": {
       "preRequisites:11": [
         303
       ],
@@ -21933,7 +21937,7 @@
         }
       }
     },
-    "272:10": {
+    "275:10": {
       "preRequisites:11": [
         304
       ],
@@ -21993,7 +21997,7 @@
         }
       }
     },
-    "273:10": {
+    "276:10": {
       "preRequisites:11": [
         112
       ],
@@ -22077,7 +22081,7 @@
         }
       }
     },
-    "274:10": {
+    "277:10": {
       "preRequisites:11": [
         300
       ],
@@ -22129,7 +22133,7 @@
         }
       }
     },
-    "275:10": {
+    "278:10": {
       "preRequisites:11": [
         259
       ],
@@ -22221,7 +22225,7 @@
         }
       }
     },
-    "276:10": {
+    "279:10": {
       "preRequisites:11": [
         259
       ],
@@ -22313,7 +22317,7 @@
         }
       }
     },
-    "277:10": {
+    "280:10": {
       "preRequisites:11": [
         259
       ],
@@ -22405,7 +22409,7 @@
         }
       }
     },
-    "278:10": {
+    "281:10": {
       "preRequisites:11": [
         259
       ],
@@ -22497,7 +22501,7 @@
         }
       }
     },
-    "279:10": {
+    "282:10": {
       "preRequisites:11": [
         104
       ],
@@ -22589,7 +22593,7 @@
         }
       }
     },
-    "280:10": {
+    "283:10": {
       "preRequisites:11": [
         104
       ],
@@ -22681,7 +22685,7 @@
         }
       }
     },
-    "281:10": {
+    "284:10": {
       "preRequisites:11": [
         174
       ],
@@ -22773,7 +22777,7 @@
         }
       }
     },
-    "282:10": {
+    "285:10": {
       "preRequisites:11": [
         174
       ],
@@ -22865,7 +22869,7 @@
         }
       }
     },
-    "283:10": {
+    "286:10": {
       "preRequisites:11": [
         112
       ],
@@ -22927,7 +22931,7 @@
         }
       }
     },
-    "284:10": {
+    "287:10": {
       "preRequisites:11": [
         314
       ],
@@ -23011,7 +23015,7 @@
         }
       }
     },
-    "285:10": {
+    "288:10": {
       "preRequisites:11": [
         314
       ],
@@ -23095,7 +23099,7 @@
         }
       }
     },
-    "286:10": {
+    "289:10": {
       "preRequisites:11": [
         324,
         325
@@ -23180,7 +23184,7 @@
         }
       }
     },
-    "287:10": {
+    "290:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -23270,7 +23274,7 @@
         }
       }
     },
-    "288:10": {
+    "291:10": {
       "preRequisites:11": [
         327,
         166
@@ -23345,7 +23349,7 @@
         }
       }
     },
-    "289:10": {
+    "292:10": {
       "preRequisites:11": [
         328
       ],
@@ -23437,7 +23441,7 @@
         }
       }
     },
-    "290:10": {
+    "293:10": {
       "preRequisites:11": [
         330,
         328
@@ -23512,7 +23516,7 @@
         }
       }
     },
-    "291:10": {
+    "294:10": {
       "preRequisites:11": [
         326
       ],
@@ -23583,7 +23587,7 @@
         }
       }
     },
-    "292:10": {
+    "295:10": {
       "preRequisites:11": [
         328
       ],
@@ -23685,7 +23689,7 @@
         }
       }
     },
-    "293:10": {
+    "296:10": {
       "preRequisites:11": [
         333
       ],
@@ -23768,7 +23772,7 @@
         }
       }
     },
-    "294:10": {
+    "297:10": {
       "preRequisites:11": [
         333
       ],
@@ -23843,7 +23847,7 @@
         }
       }
     },
-    "295:10": {
+    "298:10": {
       "preRequisites:11": [
         335,
         334
@@ -23927,7 +23931,7 @@
         }
       }
     },
-    "296:10": {
+    "299:10": {
       "preRequisites:11": [
         300
       ],
@@ -24509,125 +24513,153 @@
           "y:3": 192
         },
         "24:10": {
+          "id:3": 51,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": 240
+        },
+        "25:10": {
+          "id:3": 52,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -42,
+          "y:3": 234
+        },
+        "26:10": {
+          "id:3": 53,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -132,
+          "y:3": 240
+        },
+        "27:10": {
           "id:3": 54,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -216,
           "y:3": 132
         },
-        "25:10": {
+        "28:10": {
           "id:3": 55,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 96
         },
-        "26:10": {
+        "29:10": {
           "id:3": 56,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": -72
         },
-        "27:10": {
+        "30:10": {
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": -72
         },
-        "28:10": {
+        "31:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -72
         },
-        "29:10": {
+        "32:10": {
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -96,
           "y:3": -72
         },
-        "30:10": {
+        "33:10": {
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": -108
         },
-        "31:10": {
+        "34:10": {
           "id:3": 64,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 84
         },
-        "32:10": {
+        "35:10": {
           "id:3": 65,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 204
         },
-        "33:10": {
+        "36:10": {
           "id:3": 66,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -300,
           "y:3": 132
         },
-        "34:10": {
+        "37:10": {
+          "id:3": 71,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -138,
+          "y:3": 282
+        },
+        "38:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 96
         },
-        "35:10": {
+        "39:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 60
         },
-        "36:10": {
+        "40:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 168
         },
-        "37:10": {
+        "41:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 96
         },
-        "38:10": {
+        "42:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 96
         },
-        "39:10": {
+        "43:10": {
           "id:3": 85,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 132
         },
-        "40:10": {
+        "44:10": {
           "id:3": 86,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 24
         },
-        "41:10": {
+        "45:10": {
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -24896,349 +24928,342 @@
           "y:3": 408
         },
         "33:10": {
-          "id:3": 147,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 216,
-          "y:3": 408
-        },
-        "34:10": {
           "id:3": 148,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 372
         },
-        "35:10": {
+        "34:10": {
           "id:3": 150,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 156
         },
-        "36:10": {
+        "35:10": {
           "id:3": 151,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 156
         },
-        "37:10": {
+        "36:10": {
           "id:3": 152,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 120
         },
-        "38:10": {
+        "37:10": {
           "id:3": 153,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 120
         },
-        "39:10": {
+        "38:10": {
           "id:3": 154,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": 120
         },
-        "40:10": {
+        "39:10": {
           "id:3": 155,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 336
         },
-        "41:10": {
+        "40:10": {
           "id:3": 156,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": 156
         },
-        "42:10": {
+        "41:10": {
           "id:3": 157,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 348,
           "y:3": 192
         },
-        "43:10": {
+        "42:10": {
           "id:3": 158,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 372
         },
-        "44:10": {
+        "43:10": {
           "id:3": 159,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 372
         },
-        "45:10": {
+        "44:10": {
           "id:3": 162,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 444
         },
-        "46:10": {
+        "45:10": {
           "id:3": 164,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 480
         },
-        "47:10": {
+        "46:10": {
           "id:3": 165,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 300
         },
-        "48:10": {
+        "47:10": {
           "id:3": 166,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 498
         },
-        "49:10": {
+        "48:10": {
           "id:3": 168,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 576
         },
-        "50:10": {
+        "49:10": {
           "id:3": 170,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 300
         },
-        "51:10": {
+        "50:10": {
           "id:3": 171,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 264
         },
-        "52:10": {
+        "51:10": {
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 264
         },
-        "53:10": {
+        "52:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 300
         },
-        "54:10": {
+        "53:10": {
           "id:3": 174,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 204,
           "y:3": 288
         },
-        "55:10": {
+        "54:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 228
         },
-        "56:10": {
+        "55:10": {
           "id:3": 179,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 228
         },
-        "57:10": {
+        "56:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 228
         },
-        "58:10": {
+        "57:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 300
         },
-        "59:10": {
+        "58:10": {
           "id:3": 182,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 300
         },
-        "60:10": {
+        "59:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 360
         },
-        "61:10": {
+        "60:10": {
           "id:3": 186,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 396
         },
-        "62:10": {
+        "61:10": {
           "id:3": 187,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 396
         },
-        "63:10": {
+        "62:10": {
           "id:3": 188,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 420
         },
-        "64:10": {
+        "63:10": {
           "id:3": 189,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 480
         },
-        "65:10": {
+        "64:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 480
         },
-        "66:10": {
+        "65:10": {
           "id:3": 191,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 120
         },
-        "67:10": {
+        "66:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 120
         },
-        "68:10": {
+        "67:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 120
         },
-        "69:10": {
+        "68:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 96
         },
-        "70:10": {
+        "69:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 144
         },
-        "71:10": {
+        "70:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 156
         },
-        "72:10": {
+        "71:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 156
         },
-        "73:10": {
+        "72:10": {
           "id:3": 198,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 36,
           "y:3": -24
         },
-        "74:10": {
+        "73:10": {
           "id:3": 199,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 108,
           "y:3": -24
         },
-        "75:10": {
+        "74:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 648
         },
-        "76:10": {
+        "75:10": {
           "id:3": 216,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 36
         },
-        "77:10": {
+        "76:10": {
           "id:3": 233,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 444
         },
-        "78:10": {
+        "77:10": {
           "id:3": 238,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 132
         },
-        "79:10": {
+        "78:10": {
           "id:3": 246,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 522
         },
-        "80:10": {
+        "79:10": {
           "id:3": 247,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 492
         },
-        "81:10": {
+        "80:10": {
           "id:3": 319,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 168
         },
-        "82:10": {
+        "81:10": {
           "id:3": 320,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -27039,7 +27064,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
