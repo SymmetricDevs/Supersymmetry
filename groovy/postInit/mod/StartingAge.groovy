@@ -1,173 +1,31 @@
-/*
-
 import crafttweaker.api.item.IItemStack;
 
 println("Running StartingAge.groovy...")
 
 def name_removals = [
-        "gregtech:iron_magnetic_stick",
-        "appliedenergistics2:misc/grindstone_woodengear",
-        "machinemod:woodengear",
-        "gtadditions:clay_brick",
-        "gtadditions:eight_clay_brick",
-        "notreepunching:misc/clay_tool_clay_brick",
-        "notreepunching:misc/clay_tool_clay_brick_2",
-        "gregtech:bronze_primitive_blast_furnace",
-        "gregtech:coke_oven",
-        "appliedenergistics2:misc/grindstone",
         "notreepunching:tools/iron_saw",
         "notreepunching:tools/gold_saw",
         "notreepunching:tools/diamond_saw",
-        "minecraft:oak_planks",
-        "minecraft:spruce_planks",
-        "minecraft:birch_planks",
-        "minecraft:jungle_planks",
-        "minecraft:acacia_planks",
-        "minecraft:dark_oak_planks",
-        "gregtech:oak_planks_saw",
-        "gregtech:spruce_planks_saw",
-        "gregtech:birch_planks_saw",
-        "gregtech:jungle_planks_saw",
-        "gregtech:acacia_planks_saw",
-        "gregtech:dark_oak_planks_saw",
-        "biomesoplenty:sacred_oak_planks",
-        "biomesoplenty:cherry_planks",
-        "biomesoplenty:umbran_planks",
-        "biomesoplenty:fir_planks",
-        "biomesoplenty:ethereal_planks",
-        "biomesoplenty:magic_planks",
-        "biomesoplenty:mangrove_planks",
-        "biomesoplenty:palm_planks",
-        "biomesoplenty:redwood_planks",
-        "biomesoplenty:willow_planks",
-        "biomesoplenty:pine_planks",
-        "biomesoplenty:hellbark_planks",
-        "biomesoplenty:jacaranda_planks",
-        "biomesoplenty:mahogany_planks",
-        "biomesoplenty:ebony_planks",
-        "biomesoplenty:eucalyptus_planks",
-        "gregtech:sacred_oak_planks_saw",
-        "gregtech:cherry_planks_saw",
-        "gregtech:umbran_planks_saw",
-        "gregtech:fir_planks_saw",
-        "gregtech:ethereal_planks_saw",
-        "gregtech:magic_planks_saw",
-        "gregtech:mangrove_planks_saw",
-        "gregtech:palm_planks_saw",
-        "gregtech:redwood_planks_saw",
-        "gregtech:willow_planks_saw",
-        "gregtech:pine_planks_saw",
-        "gregtech:hellbark_planks_saw",
-        "gregtech:jacaranda_planks_saw",
-        "gregtech:mahogany_planks_saw",
-        "gregtech:ebony_planks_saw",
-        "gregtech:eucalyptus_planks_saw",
-        "minecraft:stick",
-        "notreepunching:misc/saw_plank_sticks",
-        "notreepunching:misc/saw_log_sticks",
-        "notreepunching:saw_planks_1",
-        "notreepunching:saw_planks_2",
-        "notreepunching:saw_planks_3",
-        "notreepunching:saw_planks_4",
-        "notreepunching:saw_planks_5",
-        "notreepunching:saw_planks_6",
-        "notreepunching:saw_planks_7",
-        "notreepunching:saw_planks_8",
-        "notreepunching:saw_planks_9",
-        "notreepunching:saw_planks_10",
-        "notreepunching:saw_planks_11",
-        "notreepunching:saw_planks_12",
-        "notreepunching:saw_planks_13",
-        "notreepunching:saw_planks_14",
-        "notreepunching:saw_planks_15",
-        "notreepunching:saw_planks_16",
-        "notreepunching:saw_planks_17",
-        "notreepunching:saw_planks_18",
-        "notreepunching:saw_planks_19",
-        "notreepunching:saw_planks_20",
-        "notreepunching:saw_planks_21",
-        "notreepunching:saw_planks_22",
-        "notreepunching:saw_planks_23",
-        "notreepunching:saw_planks_24",
-        "cd4017be_lib:dimstack/dim_pipe"
+        "notreepunching:misc/clay_tool_clay_brick_2",
+        "notreepunching:misc/clay_tool_clay_brick",
+        "notreepunching:tools/iron_knife",
+        "notreepunching:tools/gold_knife",
+        "notreepunching:tools/diamond_knife"
 ]
 
 for (item in name_removals) {
     crafting.remove(item);
 }
 
-//Vanilla Brick Crafting
-crafting.addShaped("brick_x1", item('notreepunching:clay_brick')*1, [
-        [ore('ingotClay'), metaitem('wooden_form.brick'), null],
-]);
-crafting.addShaped("brick_x8", item('notreepunching:clay_brick')*8, [
-        [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')],
-        [ore('ingotClay'), metaitem('wooden_form.brick'), ore('ingotClay')],
-        [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')],
-]);
-
-//Wooden Gear Crafting
-crafting.addShaped("woodgear", metaitem('gearWood'), [
-        [ore('stickWood'), ore('plankWood'), ore('stickWood')],
-        [ore('plankWood'), ore('gregScrewDrivers'), ore('plankWood')],
-        [ore('stickWood'), ore('plankWood'), ore('stickWood')]
-]);
-
-//AE2 Grindstone Crafting
-crafting.addShaped("ae2_grindstone", item('appliedenergistics2:grindstone'), [
-        [ore('stone'), ore('gearWood'), ore('stone')],
-        [ore('gemFlint'), ore('stone'), ore('gemFlint')],
-        [ore('cobblestone'), ore('gemFlint'), ore('cobblestone')]
-]);
+crafting.replaceShapeless("gregtech:clay_ball_to_dust", metaitem('dustClay'), [
+        ore('craftingToolMortar'),
+        ore('ingotClay')
+])
 
 //Magnetite Chunk Crafting
-crafting.addShapeless("magnetite_chunk", metaitem('chunk.magnetite'), [ore('oreMagnetite')]);
-crafting.addShapeless("magnetite_chunk_1", metaitem('magnetite_chunk'), [ore('oreVanadiumMagnetite')]);
+crafting.addShapeless("magnetite_chunk", metaitem('chunk.magnetite'), [ore('oreMagnetite'), ore('rock')]);
+crafting.addShapeless("magnetite_chunk_1", metaitem('chunk.magnetite'), [ore('oreVanadiumMagnetite'), ore('rock')]);
 
-//Electrolyte Paper Crafting
-crafting.addShaped("electrolyte_paper", metaitem('electrolyte_paper'), [
-        [null, ore('paperEmpty'), null],
-        [null, metaitem('food.lime'), null],
-        [null, ore('gregMortars'), null]
-]);
-crafting.addShaped("electrolyte_paper_1", metaitem('electrolyte_paper'), [
-        [null, ore('paperEmpty'), null],
-        [null, metaitem('food.lemon'), null],
-        [null, ore('gregMortars'), null]
-]);
-
-//Primitive Blast Furnace
-crafting.addShaped("ga_pbf", item('gregtech:machine:1000'), [
-        [ore('gregHardHammers'), ore('stickBronze'), ore('screwBronze')],
-        [ore('plateBronze'), item('gregtech:metal_casing:1'), ore('stickBronze')],
-        [ore('gregScrewDrivers'), ore('stickBronze'), ore('screwBronze')]
-]);
-
-//Coke Oven
-crafting.addShaped("gt_co", item('gregtech:machine:1017'), [
-        [item('gregtech:metal_casing:8'), ore('plateBronze'), item('gregtech:metal_casing:8')],
-        [ore('plateBronze'), ore('gregWrenches'), ore('plateBronze')],
-        [item('gregtech:metal_casing:8'), ore('plateBronze'), item('gregtech:metal_casing:8')]
-]);
-
-//Voltaic Pile Crafting
-crafting.addShapeless("voltaic_pile", metaitem('voltaic_pile'), [ore('plateCopper'), ore('plateSilver'), metaitem('electrolyte_paper')]);
-crafting.addShapeless("voltaic_pile_1", metaitem('voltaic_pile'), [ore('plateCopper'), ore('plateZinc'), metaitem('electrolyte_paper')]);
-
-//Magnetic Rod Crafting
-crafting.addShapeless("magnetic_iron_stick", metaitem('stickIronMagnetic'), [metaitem('hot_iron_rod'), metaitem('voltaic_pile'), ore('wireFineCopper')]);
-crafting.addShapeless("magnetic_iron_stick_1", metaitem('stickIronMagnetic'), [metaitem('hot_iron_rod'), metaitem('magnetite_chunk')]);
-crafting.addShapeless("magnetic_iron_stick_2", metaitem('stickIronMagnetic') * 2, [metaitem('hot_iron_rod'), ore('stickIronMagnetic')]);
-
-crafting.addShaped("wood_stick", item('minecraft:stick')*2, [
-        [ore('craftingToolSaw'), ore('plankWood'), null],
-]);
-
-crafting.addShaped("interdimensional_pipe", item('dimstack:dim_pipe'), [
-        [ore('frameGtSteel'), ore('gemNetherQuartz'), ore('frameGtSteel')],
-        [ore('frameGtSteel'), metaitem('crate.wood'), ore('frameGtSteel')],
-        [ore('frameGtSteel'), ore('gemNetherQuartz'), ore('frameGtSteel')]
-]);
 
 def fuels = [
         ore('coal')
@@ -176,55 +34,6 @@ def fuels = [
 //----------Recipes using GT machines----------
 
 for (fuel in fuels) {
-
-    mods.gregtech.primitive_blast_furnace.recipeBuilder()
-            .inputs(ore('dustIron') * 1)
-            .outputs(item('minecraft:iron_ingot'))
-            .duration(1000)
-            .inputs(fuel * 1)
-            .buildAndRegister();
-
-    mods.gregtech.primitive_blast_furnace.recipeBuilder()
-            .inputs(ore('dustMagnetite') * 7)
-            .outputs(item('minecraft:iron_ingot') * 3)
-            .duration(1000)
-            .inputs(fuel * 1)
-            .buildAndRegister();
-
-    mods.gregtech.primitive_blast_furnace.recipeBuilder()
-            .inputs(ore('dustVanadiumMagnetite') * 8)
-            .outputs(item('minecraft:iron_ingot') * 3)
-            .duration(1000)
-            .inputs(fuel * 1)
-            .buildAndRegister();
-
-    mods.gregtech.primitive_blast_furnace.recipeBuilder()
-            .inputs(ore('dustHematite') * 5)
-            .outputs(item('minecraft:iron_ingot') * 2)
-            .duration(1000)
-            .inputs(fuel * 1)
-            .buildAndRegister();
-
-    mods.gregtech.primitive_blast_furnace.recipeBuilder()
-            .inputs(ore('dustBrownLimonite') * 4)
-            .outputs(item('minecraft:iron_ingot') * 1)
-            .duration(1000)
-            .inputs(fuel * 1)
-            .buildAndRegister();
-
-    mods.gregtech.primitive_blast_furnace.recipeBuilder()
-            .inputs(ore('dustYellowLimonite') * 4)
-            .outputs(item('minecraft:iron_ingot') * 1)
-            .duration(1000)
-            .inputs(fuel * 1)
-            .buildAndRegister();
-
-    mods.gregtech.primitive_blast_furnace.recipeBuilder()
-            .inputs(ore('dustPyrite') * 2)
-            .outputs(item('minecraft:iron_ingot') * 1)
-            .duration(1000)
-            .inputs(fuel * 1)
-            .buildAndRegister();
 
     mods.gregtech.primitive_blast_furnace.recipeBuilder()
             .inputs(ore('dustNickel') * 1)
@@ -248,7 +57,8 @@ for (fuel in fuels) {
             .buildAndRegister();
 
 }
-*/
+
+
 /*
 def OreMap = [
 	item('gregtech:ore_Iron_0') : metaitem('dustIron')*2,
@@ -302,6 +112,28 @@ for (key in OreMap) {
 }
 */
 
+def ore_prefixes = ['ore']
+def material_names = [
+        'Iron',
+        'Gold',
+        'Copper',
+        'Tin',
+        'Silver',
+        'Lead',
+        'Zinc'
+]
+
+/*
+for (prefix in ore_prefixes) {
+        for (material in material_names) {
+                mods.appliedenergistics.Grinder.recipeBuilder()
+                        .input(ore(prefix + material))
+                        .output(metaitem('ingot' + material))
+                        .register()
+        }
+}
+*/
+
 //NoTreePunching tool stats tweak
 
 /*
@@ -347,7 +179,3 @@ for (log in WoodMap) {
     i+=1;
 }
 */
-
-//Furnace Recipes
-
-//furnace.add(ore('stickIron'), metaitem('hot_iron_rod'));
