@@ -1,73 +1,163 @@
 import techguns.items.guns.GenericGun;
 import techguns.plugins.crafttweaker.GunStatTweaker;
+import static globals.Globals.*
+
+def name_removals = [
+	"techguns:basicmachine_0_ammo_press",
+	"techguns:basicmachine_1_metal_press_alt",
+	"techguns:basicmachine_1_metal_press",
+	"techguns:basicmachine_2_chem_lab",
+	"techguns:basicmachine_3_turret",
+	"techguns:simplemachine_11_blast_furnace",
+	"techguns:simplemachine2_8_grinder",
+	"techguns:multiblockmachine_0_fabricator_housing",
+	"techguns:multiblockmachine_1_fabricator_glass",
+	"techguns:multiblockmachine_2_fabricator_controller",
+	"techguns:multiblockmachine_3_reactionchamber_housing",
+	"techguns:multiblockmachine_4_reactionchamber_glass",
+	"techguns:multiblockmachine_5_reactionchamber_controller",
+	"techguns:oredrill_0_frame",
+	"techguns:oredrill_1_scaffold",
+	"techguns:oredrill_2_rod",
+	"techguns:oredrill_3_engine",
+	"techguns:oredrill_4_controller",
+	"techguns:itemshared_61_biomass",
+	"techguns:itemshared_62_copperwire",
+	"techguns:itemshared_65_circuitboard",
+	"techguns:itemshared_66_circuitboardelite",
+	"techguns:itemshared_68_coil",
+	"techguns:itemshared_70_electricengine",
+	"techguns:itemshared_103_quartzrod",
+	"techguns:itemshared_103_quartzrod_alt",
+	"techguns:itemshared_104_rcheatray",
+	"techguns:itemshared_118_tacticalnukewarhead",
+	"techguns:itemshared_134_oredrillsmall_steel",
+	"techguns:itemshared_135_oredrillsmall_obsidiansteel",
+	"techguns:itemshared_136_oredrillsmall_carbon",
+	"techguns:itemshared_137_oredrillmedium_steel",
+	"techguns:itemshared_138_oredrillmedium_obsidiansteel",
+	"techguns:itemshared_139_oredrillmedium_carbon",
+	"techguns:itemshared_140_oredrilllarge_steel",
+	"techguns:itemshared_141_oredrilllarge_obsidiansteel",
+	"techguns:itemshared_142_oredrilllarge_carbon",
+	"techguns:itemshared_146_infusionbag"
+]
+
+for (name in name_removals) {
+	crafting.remove(name);
+}
+
+crafting.addShaped("techguns:netherdoor", item('techguns:item_door3x3', 3), [
+	[item('techguns:nethermetal'), item('techguns:nethermetal'), item('techguns:nethermetal')],
+	[item('minecraft:piston'), item('techguns:nethermetal'), item('minecraft:piston')],
+	[item('techguns:nethermetal'), item('techguns:nethermetal'), item('techguns:nethermetal')]
+])
+
+crafting.replaceShaped("techguns:simplemachine_8_camo_bench", item('techguns:simplemachine', 8), [
+	[ore('dye'), ore('dye'), ore('dye')],
+	[ore('plateIron'), ore('workbench'), ore('plateIron')],
+	[ore('plateIron'), ore('plateIron'), ore('plateIron')]
+])
+
+crafting.replaceShaped("techguns:simplemachine_9_repair_bench", item('techguns:simplemachine', 9), [
+	[ore('plateIron'), ore('gearSteel'), ore('plateIron')],
+	[ore('plateIron'), ore('workbench'), ore('plateIron')],
+	[ore('plateIron'), ore('plateIron'), ore('plateIron')]
+])
+
+crafting.replaceShaped("techguns:explosive_charge_0_tnt", item('techguns:explosive_charge') * 8, [
+	[ore('plateRubber'), ore('dustGunpowder'), ore('plateRubber')],
+	[ore('dustGunpowder'), ore('circuitLv'), ore('dustGunpowder')],
+	[ore('plateRubber'), ore('dustGunpowder'), ore('plateRubber')]
+])
+
+crafting.replaceShaped("techguns:explosive_charge_1_advanced", item('techguns:explosive_charge', 1) * 4, [
+	[ore('platePlastic'), item('minecraft:tnt'), ore('platePlastic')],
+	[item('minecraft:tnt'), ore('circuitMv'), item('minecraft:tnt')],
+	[ore('platePlastic'), item('minecraft:tnt'), ore('platePlastic')]
+])
+
+crafting.replaceShaped("techguns:lamp0_0", item('techguns:lamp0') * 32, [
+	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
+	[ore('plateGlass'), ore('dustGlowstone'), ore('plateGlass')],
+	[ore('plateGlass'), ore('plateGlass'), ore('plateGlass')]
+])
+
+crafting.replaceShaped("techguns:lamp0_12", item('techguns:lamp0', 12) * 32, [
+	[ore('plateGlass'), ore('plateIron'), ore('plateGlass')],
+	[ore('plateGlass'), ore('dustGlowstone'), ore('plateGlass')],
+	[ore('plateGlass'), ore('plateIron'), ore('plateGlass')]
+])
+
+crafting.replaceShaped("techguns:neonlights_0", item('techguns:neonlights') * 32, [
+	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
+	[ore('plateGlass'), ore('dustGlowstone'), ore('plateGlass')],
+	[ore('plateIron'), ore('plateIron'), ore('plateIron')]
+])
+
+crafting.replaceShaped("techguns:ladder0_8", item('techguns:ladder0', 8) * 16, [
+	[ore('stickIron'), ore('stickIron'), ore('stickIron')],
+	[null, ore('stickIron'), null],
+	[ore('stickIron'), ore('stickIron'), ore('stickIron')]
+])
+
+crafting.replaceShaped("techguns:ladder0_8_alt", item('techguns:ladder0', 8) * 16, [
+	[ore('stickTin'), ore('stickTin'), ore('stickTin')],
+	[null, ore('stickTin'), null],
+	[ore('stickTin'), ore('stickTin'), ore('stickTin')]
+])
+
+crafting.replaceShaped("techguns:camonet_0", item('techguns:camonet') * 8, [
+	[null, null, null],
+	[ore('stickWood'), ore('treeLeaves'), ore('stickWood')],
+	[ore('stickWood'), ore('treeLeaves'), ore('stickWood')]
+])
+
+crafting.replaceShaped("techguns:camonet_top_0", item('techguns:camonet_top') * 16, [
+	[ore('stickWood'), ore('treeLeaves'), ore('stickWood')],
+	[ore('treeLeaves'), ore('string'), ore('treeLeaves')],
+	[ore('stickWood'), ore('treeLeaves'), ore('stickWood')]
+])
+
+crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
+	ore('plateRubber'), 
+	ore('sand'),
+	ore('sand'),
+	ore('sand'),
+	ore('sand'),
+	ore('sand'),
+	ore('sand'),
+	ore('sand'),
+	ore('sand')
+])
+
+Globals.solders.each { key, val ->
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('hull.lv'))
+		.inputs(metaitem('electric.motor.lv'))
+		.inputs(ore('circuitLv'))
+		.inputs(ore('WireFineRedAlloy'))
+		.inputs(ore('plateSteel') * 4)
+		.fluidInputs(fluid(key) * val)
+		.outputs(item('techguns:basicmachine', 3))
+		.duration(100)
+		.EUt(Globals.voltAmps[1])
+		.buildAndRegister()
+}
+
+mods.gregtech.forming_press.recipeBuilder()
+	.inputs(ore('plateBronze'))
+	.inputs(ore('plateSteel'))
+	.inputs(ore('plateBrass'))
+	.inputs(ore('boltBronze'))
+	.inputs(ore('boltSteel'))
+	.inputs(ore('boltBrass'))
+	.outputs(item('techguns:itemshared', 45))
+	.duration(60)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
+
 /*
-def circuit(x) {
-	return metaitem('circuit.integrated').withNbt([Configuration: x])
-}
-
-println("Running TechGuns.groovy...")
-
-ArrayList<String> name_removals = [
-		"techguns:itemshared_38_ironbarrel",
-		"techguns:revolver",
-		"techguns:goldenrevolver",
-		"techguns:boltaction",
-		"techguns:itemshared_39_obsidiansteelbarrel",
-		"techguns:itemshared_33_ironreceiver",
-		"techguns:itemshared_37_stonebarrel",
-		"techguns:itemshared_42_woodstock",
-		"techguns:itemshared_0_stonebullets",
-		"techguns:itemshared_34_steelreceiver",
-		"techguns:pistol_alt",
-		"techguns:pistol",
-		"techguns:itemshared_10_smgmagazineempty",
-		"techguns:itemshared_12_pistolmagazineempty",
-		"techguns:itemshared_14_assaultriflemagazineempty",
-		"techguns:itemshared_1_pistolrounds",
-		"techguns:combatshotgun",
-		"techguns:itemshared_2_shotgunrounds",
-		"techguns:itemshared_65_circuitboard",
-		"techguns:itemshared_66_circuitboardelite",
-		"techguns:itemshared_90_gliderbackpack",
-		"techguns:itemshared_91_gliderwing",
-		"techguns:basicmachine_0_ammo_press",
-		"techguns:basicmachine_1_metal_press",
-		"techguns:basicmachine_1_metal_press_alt",
-		"techguns:basicmachine_2_chem_lab",
-		"techguns:basicmachine_3_turret",
-		"techguns:simplemachine_10_charging_station",
-		"techguns:simplemachine_11_blast_furnace",
-		"techguns:simplemachine2_8_grinder",
-		"techguns:simplemachine2_9_armor_bench",
-		"techguns:multiblockmachine_0_fabricator_housing",
-		"techguns:multiblockmachine_1_fabricator_glass",
-		"techguns:multiblockmachine_2_fabricator_controller",
-		"techguns:multiblockmachine_3_reactionchamber_housing",
-		"techguns:multiblockmachine_4_reactionchamber_glass",
-		"techguns:multiblockmachine_5_fabricator_controller",
-		"techguns:itemshared_60_heavycloth",
-		"techguns:t1_combat_helmet",
-		"techguns:t1_combat_chestplate",
-		"techguns:t1_combat_leggings",
-		"techguns:t1_combat_boots",
-		"techguns:t2_combat_helmet",
-		"techguns:t2_combat_chestplate",
-		"techguns:t2_combat_leggings",
-		"techguns:t2_combat_boots",
-		"techguns:thompson_alt",
-		"techguns:thompson",
-		"techguns:ak47_alt",
-		"techguns:ak47",
-		"techguns:m4_alt",
-		"techguns:m4",
-		"techguns:mac10_alt",
-		"techguns:mac10"
-];
-
-for (item in name_removals) {
-	crafting.remove(item);
-}
-
 crafting.addShaped("stone_barrel", item('techguns:itemshared:37'), [
 		[null, ore('craftingToolFile'), null],
 		[ore('craftingToolScrewdriver'), ore('stone'), ore('craftingToolHardHammer')]
