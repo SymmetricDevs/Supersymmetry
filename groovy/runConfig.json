@@ -1,5 +1,6 @@
 {
   "packName": "supersymmetry",
+  "packId": "supersymmetry",
   "version": "1.0.0",
   "debug": false,
   "classes": [
