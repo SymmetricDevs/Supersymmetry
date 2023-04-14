@@ -5,7 +5,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        # Thank you for reporting! Please enter information on these fields to help us triage and fix this issue.
+        # Thank you for reporting! 
+        Please enter information on these fields to help us triage and fix this issue.
   - type: textarea
     id: bugdesc
     attributes:
