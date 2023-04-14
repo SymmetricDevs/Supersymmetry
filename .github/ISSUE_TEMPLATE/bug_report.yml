@@ -14,7 +14,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: bugdesc
+    id: reproduction
     attributes:
       label: Reproduction
       description: Explain your issue in detail, including the steps to reproduce it.
