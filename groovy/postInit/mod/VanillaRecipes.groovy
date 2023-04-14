@@ -70,6 +70,7 @@ def recipesToRemove = [
 	'chisel:diamond',
 	'chisel:uncraft_blockgold',
 	'appliedenergistics2:decorative/quartz_block_pure'
+	'gregtech:meta_item_2:155'
 ]
 
 for(name in recipesToRemove) {
