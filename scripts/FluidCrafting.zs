@@ -1,0 +1,1 @@
+recipes.addShaped("slakedlime2", <gregtech:meta_item_2:153>*8,[[<gregtech:meta_dust:360>,<gregtech:meta_dust:360>,<gregtech:meta_dust:360>],[<gregtech:meta_dust:360>,<liquid:water> * 1000,<gregtech:meta_dust:360>],[<gregtech:meta_dust:360>,<gregtech:meta_dust:360>,<gregtech:meta_dust:360>]]);
