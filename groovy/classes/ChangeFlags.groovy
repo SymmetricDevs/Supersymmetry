@@ -20,6 +20,12 @@ class ChangeFlags {
         Lead.addFlags("generate_round");
         Aluminium.addFlags("generate_round");
 
+        GregTechAPI.MaterialRegistry.get("fluix").addFlags("disable_decomposition", "generate_plate", "generate_lens")
+
+        //Iodine.dust().build();
+        //Hafnium.ingot().build();
+        //Strontium.ingot().build();
+
         log.infoMC("Finished modifying flags")
     }
 }

@@ -1,5 +1,6 @@
 {
   "packName": "supersymmetry",
+  "packId": "supersymmetry",
   "version": "1.0.0",
   "debug": false,
   "classes": [
@@ -11,7 +12,7 @@
     "classes/IQuenchingFluid.groovy",
     "classes/IRefrigerant.groovy",
     "classes/IWorkingFluid.groovy",
-    "classes/SUSYMaterials.groovy",
+    "classes/RegisterFluids.groovy",
     "globals/Globals.groovy"
   ],
   "loaders": {
