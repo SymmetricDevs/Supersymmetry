@@ -9427,12 +9427,12 @@
           "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
-          "index:3": 0,
+          "index:3": 1,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32001,
+              "Damage:2": 20001,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -15586,7 +15586,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "icbmclassic:launcherscreen"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:launcherscreen",
+              "orig_meta:3": 0
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -15618,19 +15622,31 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "icbmclassic:launcherbase"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:launcherbase",
+                "orig_meta:3": 0
+              }
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "icbmclassic:launcherscreen"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:launcherscreen",
+                "orig_meta:3": 0
+              }
             },
             "2:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "icbmclassic:launcherframe"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:launcherframe",
+                "orig_meta:3": 0
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -16562,11 +16578,12 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
-            "ForgeCaps:10": {
-              "Parent:10": {}
-            },
             "OreDict:8": "",
-            "id:8": "icbmclassic:explosives"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:explosives",
+              "orig_meta:3": 0
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -16597,11 +16614,12 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
-              "ForgeCaps:10": {
-                "Parent:10": {}
-              },
               "OreDict:8": "",
-              "id:8": "icbmclassic:explosives"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:explosives",
+                "orig_meta:3": 0
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -16620,11 +16638,12 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 4,
-            "ForgeCaps:10": {
-              "Parent:10": {}
-            },
             "OreDict:8": "",
-            "id:8": "icbmclassic:explosives"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:explosives",
+              "orig_meta:3": 4
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -16655,11 +16674,12 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 4,
-              "ForgeCaps:10": {
-                "Parent:10": {}
-              },
               "OreDict:8": "",
-              "id:8": "icbmclassic:explosives"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:explosives",
+                "orig_meta:3": 4
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -16678,11 +16698,12 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2,
-            "ForgeCaps:10": {
-              "Parent:10": {}
-            },
             "OreDict:8": "",
-            "id:8": "icbmclassic:explosives"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:explosives",
+              "orig_meta:3": 2
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -16713,11 +16734,12 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 2,
-              "ForgeCaps:10": {
-                "Parent:10": {}
-              },
               "OreDict:8": "",
-              "id:8": "icbmclassic:explosives"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:explosives",
+                "orig_meta:3": 2
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -16736,11 +16758,12 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1,
-            "ForgeCaps:10": {
-              "Parent:10": {}
-            },
             "OreDict:8": "",
-            "id:8": "icbmclassic:explosives"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:explosives",
+              "orig_meta:3": 1
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -16771,11 +16794,12 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1,
-              "ForgeCaps:10": {
-                "Parent:10": {}
-              },
               "OreDict:8": "",
-              "id:8": "icbmclassic:explosives"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:explosives",
+                "orig_meta:3": 1
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -16794,11 +16818,12 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3,
-            "ForgeCaps:10": {
-              "Parent:10": {}
-            },
             "OreDict:8": "",
-            "id:8": "icbmclassic:explosives"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:explosives",
+              "orig_meta:3": 3
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -16829,11 +16854,12 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 3,
-              "ForgeCaps:10": {
-                "Parent:10": {}
-              },
               "OreDict:8": "",
-              "id:8": "icbmclassic:explosives"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:explosives",
+                "orig_meta:3": 3
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -16852,11 +16878,12 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 5,
-            "ForgeCaps:10": {
-              "Parent:10": {}
-            },
             "OreDict:8": "",
-            "id:8": "icbmclassic:explosives"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:explosives",
+              "orig_meta:3": 5
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -16887,11 +16914,12 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 5,
-              "ForgeCaps:10": {
-                "Parent:10": {}
-              },
               "OreDict:8": "",
-              "id:8": "icbmclassic:explosives"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:explosives",
+                "orig_meta:3": 5
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20186,7 +20214,11 @@
             "Count:3": 1,
             "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "icbmclassic:launcherscreen"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:launcherscreen",
+              "orig_meta:3": 1
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -20218,19 +20250,31 @@
               "Count:3": 1,
               "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "icbmclassic:launcherscreen"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:launcherscreen",
+                "orig_meta:3": 1
+              }
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "icbmclassic:launcherbase"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:launcherbase",
+                "orig_meta:3": 1
+              }
             },
             "2:10": {
               "Count:3": 1,
               "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "icbmclassic:launcherframe"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:launcherframe",
+                "orig_meta:3": 1
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20249,11 +20293,12 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 8,
-            "ForgeCaps:10": {
-              "Parent:10": {}
-            },
             "OreDict:8": "",
-            "id:8": "icbmclassic:explosives"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:explosives",
+              "orig_meta:3": 8
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -20285,7 +20330,11 @@
               "Count:3": 1,
               "Damage:2": 8,
               "OreDict:8": "",
-              "id:8": "icbmclassic:missile"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:missile",
+                "orig_meta:3": 8
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20304,11 +20353,12 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 13,
-            "ForgeCaps:10": {
-              "Parent:10": {}
-            },
             "OreDict:8": "",
-            "id:8": "icbmclassic:explosives"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:explosives",
+              "orig_meta:3": 13
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -20340,7 +20390,11 @@
               "Count:3": 1,
               "Damage:2": 13,
               "OreDict:8": "",
-              "id:8": "icbmclassic:missile"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:missile",
+                "orig_meta:3": 13
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20359,11 +20413,12 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 11,
-            "ForgeCaps:10": {
-              "Parent:10": {}
-            },
             "OreDict:8": "",
-            "id:8": "icbmclassic:explosives"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:explosives",
+              "orig_meta:3": 11
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -20395,7 +20450,11 @@
               "Count:3": 1,
               "Damage:2": 11,
               "OreDict:8": "",
-              "id:8": "icbmclassic:missile"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:missile",
+                "orig_meta:3": 11
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20414,11 +20473,12 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 9,
-            "ForgeCaps:10": {
-              "Parent:10": {}
-            },
             "OreDict:8": "",
-            "id:8": "icbmclassic:explosives"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:explosives",
+              "orig_meta:3": 9
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -20450,7 +20510,11 @@
               "Count:3": 1,
               "Damage:2": 9,
               "OreDict:8": "",
-              "id:8": "icbmclassic:missile"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:missile",
+                "orig_meta:3": 9
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20469,11 +20533,12 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 10,
-            "ForgeCaps:10": {
-              "Parent:10": {}
-            },
             "OreDict:8": "",
-            "id:8": "icbmclassic:explosives"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "icbmclassic:explosives",
+              "orig_meta:3": 10
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -20505,7 +20570,11 @@
               "Count:3": 1,
               "Damage:2": 10,
               "OreDict:8": "",
-              "id:8": "icbmclassic:missile"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "icbmclassic:missile",
+                "orig_meta:3": 10
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
