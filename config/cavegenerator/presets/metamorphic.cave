@@ -13,22 +13,19 @@
   }
   layers: [ {
       state: susy:susy_stone_smooth:1
-      height: [ 205, 255 ]
+      height: [ 200, 255 ]
+    }, {
+      state: susy:susy_stone_smooth:3
+      height: [ 150, 200 ]
     }, {
       state: susy:susy_stone_smooth:4
-      height: [ 150, 205 ]
-    }, {
-      state: susy:susy_stone_smooth:5
-      height: [ 110, 150 ]
+      height: [ 100, 150 ]
     }, {
       state: susy:susy_stone_smooth:6
-      height: [ 70, 110 ]
+      height: [ 50, 100 ]
     }, {
-      state: susy:susy_stone_smooth:8
-      height: [ 30, 70 ]
-    }, {
-      state: susy:susy_stone_smooth:9
-      height: [ 0, 29 ]
+      state: susy:susy_stone_smooth:7
+      height: [ 0, 49 ]
     } ]
   tunnels: [
     {

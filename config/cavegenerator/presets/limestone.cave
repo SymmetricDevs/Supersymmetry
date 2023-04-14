@@ -7,7 +7,7 @@
     stretch: 0
   }
   caveBlocks: [ {
-      states: susy:susy_stone_smooth:3
+      states: susy:susy_stone_smooth:2
       height: [ 0, 255 ]
     } ]
   dimensions: [ 0 ]
