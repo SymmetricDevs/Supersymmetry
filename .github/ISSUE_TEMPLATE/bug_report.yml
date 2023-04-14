@@ -12,7 +12,9 @@ body:
     attributes:
       label: Description of the Bug
       description: Short description of what the bug does and the expected outcome.
-      placeholder: It breaks the EBF! I should be able to smelt {thing} on the EBF but it doesnt work!
+      placeholder: |
+        {thing} doesnt smelt in the EBF even if i had the right voltage tier!
+        I should be able to smelt {thing} on the EBF but it doesnt work!
     validations:
       required: true
   - type: textarea
@@ -26,23 +28,14 @@ body:
         3. It fails
     validations:
       required: true
-  - type: dropdown
+  - type: input
     id: version
     attributes:
       label: Version
-      description: What version of supersymetry are you using?
-      options:
-        - Beta
-        - Github (Specify Commit)
+      description: Supersymmetry version (type 'Beta' if its on beta)
+      placeholder: 1.0.0
     validations:
       required: true
-  - type: input
-    id: commit
-    attributes:
-      label: Github (specify commit)
-      description: If you selected 'Github', please specify the commit
-    validations:
-      required: false
   - type: textarea
     id: logs
     attributes:
