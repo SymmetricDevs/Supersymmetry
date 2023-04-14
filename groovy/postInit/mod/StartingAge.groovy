@@ -58,12 +58,6 @@ for (fuel in fuels) {
 
 }
 
-crafting.replaceShaped("appliedenergistics2:misc/grindstone", item('appliedenergistics2:grindstone'),[
-        [item('minecraft:stone'),null ,item('minecraft:stone')],
-        [metaitem('gearBronze'),ore('craftingToolFile').reuse(),metaitem('gearBronze')],
-        [item('minecraft:cobblestone'),item('minecraft:cobblestone'),item('minecraft:cobblestone')]
-])
-
 
 /*
 def OreMap = [
