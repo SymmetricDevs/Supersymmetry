@@ -226,7 +226,7 @@ class RegisterFluids {
                         .colorAverage()
                         .build();
 
-                CaprolactamOxime = new Material.Builder(32021, 'cyclohexanone_oxime')
+                CaprolactamOxime = new Material.Builder(32021, 'caprolactam_oxime')
                         .dust()
                         .components(Carbon, 6, Hydrogen, 11, Nitrogen, 1, Oxygen, 1)
                         .colorAverage()
