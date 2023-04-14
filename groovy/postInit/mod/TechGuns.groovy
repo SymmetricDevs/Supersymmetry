@@ -21,6 +21,8 @@ def name_removals = [
 	"techguns:oredrill_2_rod",
 	"techguns:oredrill_3_engine",
 	"techguns:oredrill_4_controller",
+	"techguns:itemshared_33_ironreceiver",
+	"techguns:itemshared_38_ironbarrel",
 	"techguns:itemshared_61_biomass",
 	"techguns:itemshared_62_copperwire",
 	"techguns:itemshared_65_circuitboard",
@@ -119,6 +121,18 @@ crafting.replaceShaped("techguns:camonet_top_0", item('techguns:camonet_top') * 
 	[ore('stickWood'), ore('treeLeaves'), ore('stickWood')]
 ])
 
+crafting.replaceShaped("techguns:itemshared_37_stonebarrel", item('techguns:itemshared', 37), [
+	[null, ore('craftingToolHardHammer'), null],
+	[null, ore('craftingToolFile'), null],
+	[null, ore('stone'), null]
+])
+
+crafting.replaceShaped("techguns:itemshared_42_woodstock", item('techguns:itemshared', 42), [
+	[null, null, null],
+	[ore('craftingToolFile'), ore('logWood'), ore('craftingToolSaw')],
+	[null, null, null]
+])
+
 crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
 	ore('plateRubber'), 
 	ore('sand'),
@@ -143,6 +157,18 @@ Globals.solders.each { key, val ->
 		.duration(100)
 		.EUt(Globals.voltAmps[1])
 		.buildAndRegister()
+
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('plateIron') * 3)
+		.inputs(ore('stickIron') * 2)
+		.inputs(ore('gearSmallIron'))
+		.inputs(ore('springSmallIron'))
+		.inputs(ore('boltIron') * 2)
+		.inputs(ore('screwIron') * 2)
+		.outputs(item('techguns:itemshared', 33))
+		.duration(100)
+		.EUt(Globals.voltAmps[1])
+		.buildAndRegister()
 }
 
 mods.gregtech.forming_press.recipeBuilder()
@@ -154,6 +180,13 @@ mods.gregtech.forming_press.recipeBuilder()
 	.inputs(ore('boltBrass'))
 	.outputs(item('techguns:itemshared', 45))
 	.duration(60)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
+
+mods.gregtech.lathe.recipeBuilder()
+	.inputs(ore('stickIron'))
+	.outputs(item('techguns:itemshared', 38))
+	.duration(80)
 	.EUt(Globals.voltAmps[1])
 	.buildAndRegister()
 
