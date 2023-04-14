@@ -13,6 +13,8 @@
     "classes/IRefrigerant.groovy",
     "classes/IWorkingFluid.groovy",
     "classes/RegisterFluids.groovy",
+    "classes/RegisterSolids.groovy",
+    "classes/RegisterOres.groovy",
     "globals/Globals.groovy"
   ],
   "loaders": {

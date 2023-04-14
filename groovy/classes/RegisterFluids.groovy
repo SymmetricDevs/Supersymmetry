@@ -126,7 +126,7 @@ class RegisterFluids{
 
         public static void init() {
 
-                log.infoMC("Registering fluids...")
+                log.infoMC("Registering fluids")
 
                 new Material.Builder(11000, "sulfurous_water")
                         .fluid()
@@ -271,30 +271,7 @@ class RegisterFluids{
 
                 generateHotGas(Air, 10311);
 
-                new Material.Builder(32000, 'fluix')
-                        .gem().iconSet(RUBY)
-                        .components(Quartzite, 4, Naquadah, 1)
-                        //.flags(MaterialFlags.DISABLE_DECOMPOSITION, MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_LENS])
-                        .color(0x6503b6)
-                        .build();
-
-
-                new Material.Builder(32001, 'pig_iron')
-                        .ingot().dust()
-                        //.components(Iron, 1)
-                        .flags(GENERATE_PLATE)
-                        .color(0x99918A)
-                        .build();
-
-                new Material.Builder(32002, 'iron_iii_sulfate')
-                        .dust()
-                        .color(0xb09d99)
-                        .components(Iron, 2, Sulfur, 3, Oxygen, 12)
-                        .flags(DECOMPOSITION_BY_ELECTROLYZING)
-                        .build()
-                        .setFormula("Fe2(SO4)3", true);
-
-                log.infoMC("Finished adding fluids")
+                log.infoMC("Finished registering fluids")
         }
 
 
