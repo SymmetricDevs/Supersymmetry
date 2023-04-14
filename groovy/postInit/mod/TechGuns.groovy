@@ -21,7 +21,11 @@ def name_removals = [
 	"techguns:oredrill_2_rod",
 	"techguns:oredrill_3_engine",
 	"techguns:oredrill_4_controller",
+	"techguns:itemshared_10_smgmagazineempty",
+	"techguns:itemshared_12_pistolmagazineempty",
+	"techguns:itemshared_14_assaultriflemagazineempty",
 	"techguns:itemshared_33_ironreceiver",
+	"techguns:itemshared_34_steelreceiver",
 	"techguns:itemshared_38_ironbarrel",
 	"techguns:itemshared_61_biomass",
 	"techguns:itemshared_62_copperwire",
@@ -157,6 +161,60 @@ crafting.replaceShaped("techguns:t1_combat_boots", item('techguns:t1_combat_boot
 	[item('techguns:itemshared', 60), null, item('techguns:itemshared', 60)]
 ])
 
+crafting.replaceShaped("techguns:t1_miner_helmet", item('techguns:t1_miner_helmet'), [
+	[null, null, null],
+	[ore('plateIron'), ore('dyeYellow'), ore('plateIron')],
+	[item('techguns:itemshared', 60), ore('craftingToolHardHammer'), item('techguns:itemshared', 60)]
+])
+
+crafting.replaceShaped("techguns:t1_miner_chestplate", item('techguns:t1_miner_chestplate'), [
+	[item('techguns:itemshared', 60), ore('craftingToolHardHammer'), item('techguns:itemshared', 60)],
+	[item('techguns:itemshared', 60), item('techguns:itemshared', 60), item('techguns:itemshared', 60)],
+	[ore('plateIron'), item('techguns:itemshared', 60), ore('plateIron')]
+])
+
+crafting.replaceShaped("techguns:t1_miner_leggings", item('techguns:t1_miner_leggings'), [
+	[ore('plateIron'), item('techguns:itemshared', 60), ore('plateIron')],
+	[item('techguns:itemshared', 60), ore('craftingToolHardHammer'), item('techguns:itemshared', 60)],
+	[item('techguns:itemshared', 60), null, item('techguns:itemshared', 60)]
+])
+
+crafting.replaceShaped("techguns:t1_miner_boots", item('techguns:t1_miner_boots'), [
+	[null, null, null],
+	[item('techguns:itemshared', 60), null, item('techguns:itemshared', 60)],
+	[ore('plateIron'), ore('craftingToolHardHammer'), ore('plateIron')]
+])
+
+crafting.replaceShaped("techguns:steam_helmet", item('techguns:steam_helmet'), [
+	[null, null, null],
+	[item('techguns:itemshared', 45), item('techguns:itemshared', 45), item('techguns:itemshared', 45)],
+	[item('techguns:itemshared', 45), ore('craftingToolWrench'), item('techguns:itemshared', 45)]
+])
+
+crafting.replaceShaped("techguns:steam_chestplate", item('techguns:steam_chestplate'), [
+	[item('techguns:itemshared', 45), ore('craftingToolWrench'), item('techguns:itemshared', 45)],
+	[item('techguns:itemshared', 45), item('techguns:itemshared', 45), item('techguns:itemshared', 45)],
+	[item('techguns:itemshared', 45), item('techguns:itemshared', 45), item('techguns:itemshared', 45)]
+])
+
+crafting.replaceShaped("techguns:steam_leggings", item('techguns:steam_leggings'), [
+	[item('techguns:itemshared', 45), item('techguns:itemshared', 45), item('techguns:itemshared', 45)],
+	[item('techguns:itemshared', 45), ore('craftingToolWrench'), item('techguns:itemshared', 45)],
+	[item('techguns:itemshared', 45), null, item('techguns:itemshared', 45)]
+])
+
+crafting.replaceShaped("techguns:steam_boots", item('techguns:steam_boots'), [
+	[null, null, null],
+	[item('techguns:itemshared', 45), ore('craftingToolWrench'), item('techguns:itemshared', 45)],
+	[item('techguns:itemshared', 45), null, item('techguns:itemshared', 45)]
+])
+
+crafting.replaceShaped("techguns:item_bunkerdoor", item('techguns:item_bunkerdoor'), [
+	[null, ore('craftingToolHardHammer'), ore('screwIron')],
+	[null, ore('plateIron'), item('minecraft:iron_door')],
+	[null, ore('craftingToolScrewdriver'), ore('screwIron')]
+])
+
 crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
 	ore('plateRubber'), 
 	ore('sand'),
@@ -174,7 +232,7 @@ Globals.solders.each { key, val ->
 		.inputs(metaitem('hull.lv'))
 		.inputs(metaitem('electric.motor.lv'))
 		.inputs(ore('circuitLv'))
-		.inputs(ore('WireFineRedAlloy'))
+		.inputs(ore('wireFineRedAlloy'))
 		.inputs(ore('plateSteel') * 4)
 		.fluidInputs(fluid(key) * val)
 		.outputs(item('techguns:basicmachine', 3))
@@ -182,17 +240,80 @@ Globals.solders.each { key, val ->
 		.EUt(Globals.voltAmps[1])
 		.buildAndRegister()
 
-	mods.gregtech.assembler.recipeBuilder()
+	recipemap('weapons_factory').recipeBuilder()
 		.inputs(ore('plateIron') * 3)
 		.inputs(ore('stickIron') * 2)
 		.inputs(ore('gearSmallIron'))
 		.inputs(ore('springSmallIron'))
 		.inputs(ore('boltIron') * 2)
 		.inputs(ore('screwIron') * 2)
+		.fluidInputs(fluid(key) * val)
 		.outputs(item('techguns:itemshared', 33))
 		.duration(100)
 		.EUt(Globals.voltAmps[1])
 		.buildAndRegister()
+
+	recipemap('weapons_factory').recipeBuilder()
+		.inputs(ore('plateSteel') * 3)
+		.inputs(ore('stickSteel') * 2)
+		.inputs(ore('gearSmallSteel'))
+		.inputs(ore('springSmallSteel'))
+		.inputs(ore('boltSteel') * 2)
+		.inputs(ore('screwSteel') * 2)
+		.fluidInputs(fluid(key) * val)
+		.outputs(item('techguns:itemshared:34'))
+		.duration(80)
+		.EUt(Globals.voltAmps[1])
+		.buildAndRegister();
+
+	recipemap('weapons_factory').recipeBuilder()
+		.inputs([ore('plateSteel'),
+				 ore('springSmallSteel'),
+				 ore('gearSmallSteel'),
+				 //item('techguns:itemshared:39'), Replace with steel barrel
+				 ore('plateRubber')*2,
+				 item('techguns:itemshared:11')
+		])
+		.fluidInputs(fluid(key) * val)
+		.outputs(item('techguns:pistol'))
+		.duration(300)
+		.EUt(Globals.voltAmps[1])
+		.buildAndRegister();
+
+	recipemap('weapons_factory').recipeBuilder()
+		.inputs([ore('plateSteel'),
+				 ore('springSmallSteel')*4
+		])
+		.fluidInputs(fluid(key) * val)
+		.notConsumable(circuit(1))
+		.outputs(item('techguns:itemshared:12')*4)
+		.duration(10)
+		.EUt(Globals.voltAmps[1])
+		.buildAndRegister();
+
+	recipemap('weapons_factory').recipeBuilder()
+		.inputs([
+				ore('springSmallSteel')*4,
+				ore('plateSteel')
+		])
+		.fluidInputs(fluid(key) * val)
+		.notConsumable(circuit(2))
+		.outputs(item('techguns:itemshared:10')*4)
+		.duration(20)
+		.EUt(Globals.voltAmps[2])
+		.buildAndRegister();
+
+	recipemap('weapons_factory').recipeBuilder()
+		.inputs([
+				ore('springSmallSteel')*4,
+				ore('plateSteel')
+		])
+		.fluidInputs(fluid(key) * val)
+		.notConsumable(circuit(3))
+		.outputs(item('techguns:itemshared:14')*4)
+		.duration(20)
+		.EUt(Globals.voltAmps[2])
+		.buildAndRegister();
 }
 
 mods.gregtech.forming_press.recipeBuilder()
@@ -326,42 +447,9 @@ crafting.addShaped("tg_glider_wing", item('techguns:itemshared:91'), [
 		[ore('platePlastic'), ore('platePlastic'), ore('platePlastic')]
 ]);
 
+*/
 
 //--------------------Weapons Factory recipes--------------------
-recipemap('weapons_factory').recipeBuilder()
-		.inputs([ore('plateSteel')*3,
-				 ore('stickSteel'),
-				 ore('screwSteel'),
-				 ore('boltSteel')
-		])
-		.outputs(item('techguns:itemshared:34'))
-		.duration(80)
-		.EUt(20)
-		.buildAndRegister();
-
-recipemap('weapons_factory').recipeBuilder()
-		.inputs([ore('plateSteel'),
-				 ore('springSmallSteel'),
-				 ore('gearSmallSteel'),
-				 item('techguns:itemshared:39'),
-				 ore('plateRubber')*2,
-				 item('techguns:itemshared:11')
-		])
-		.outputs(item('techguns:pistol'))
-		.duration(300)
-		.EUt(30)
-		.buildAndRegister();
-
-recipemap('weapons_factory').recipeBuilder()
-		.inputs([ore('plateSteel'),
-				 ore('springSmallSteel')*4
-		])
-		.notConsumable(circuit(1))
-		.outputs(item('techguns:itemshared:12')*4)
-		.duration(10)
-		.EUt(16)
-		.buildAndRegister();
-
 recipemap('weapons_factory').recipeBuilder()
 		.inputs([ore('plateBrass'),
 				 ore('gunpowder'),
@@ -408,28 +496,6 @@ recipemap('weapons_factory').recipeBuilder()
 		.outputs(item('techguns:itemshared:3')*8)
 		.duration(10)
 		.EUt(16)
-		.buildAndRegister();
-
-recipemap('weapons_factory').recipeBuilder()
-		.inputs([
-				ore('springSmallSteel')*4,
-				ore('plateSteel')
-		])
-		.notConsumable(circuit(2))
-		.outputs(item('techguns:itemshared:10')*4)
-		.duration(20)
-		.EUt(60)
-		.buildAndRegister();
-
-recipemap('weapons_factory').recipeBuilder()
-		.inputs([
-				ore('springSmallSteel')*4,
-				ore('plateSteel')
-		])
-		.notConsumable(circuit(3))
-		.outputs(item('techguns:itemshared:14')*4)
-		.duration(20)
-		.EUt(60)
 		.buildAndRegister();
 
 recipemap('weapons_factory').recipeBuilder()
@@ -482,6 +548,8 @@ recipemap('weapons_factory').recipeBuilder()
 		.duration(200)
 		.EUt(60)
 		.buildAndRegister();
+
+/*
 
 //--------------------GregTech machines only recipes--------------------
 
