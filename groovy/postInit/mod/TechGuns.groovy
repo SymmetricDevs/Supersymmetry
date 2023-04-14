@@ -133,6 +133,30 @@ crafting.replaceShaped("techguns:itemshared_42_woodstock", item('techguns:itemsh
 	[null, null, null]
 ])
 
+crafting.replaceShaped("techguns:t1_combat_helmet", item('techguns:t1_combat_helmet'), [
+	[null, null, null],
+	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
+	[item('techguns:itemshared', 60), ore('craftingToolHardHammer'), item('techguns:itemshared', 60)]
+])
+
+crafting.replaceShaped("techguns:t1_combat_chestplate", item('techguns:t1_combat_chestplate'), [
+	[item('techguns:itemshared', 60), ore('craftingToolHardHammer'), item('techguns:itemshared', 60)],
+	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
+	[item('techguns:itemshared', 60), item('techguns:itemshared', 60), item('techguns:itemshared', 60)]
+])
+
+crafting.replaceShaped("techguns:t1_combat_leggings", item('techguns:t1_combat_leggings'), [
+	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
+	[item('techguns:itemshared', 60), ore('craftingToolHardHammer'), item('techguns:itemshared', 60)],
+	[item('techguns:itemshared', 60), null, item('techguns:itemshared', 60)]
+])
+
+crafting.replaceShaped("techguns:t1_combat_boots", item('techguns:t1_combat_boots'), [
+	[null, null, null],
+	[ore('plateIron'), ore('craftingToolHardHammer'), ore('plateIron')],
+	[item('techguns:itemshared', 60), null, item('techguns:itemshared', 60)]
+])
+
 crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
 	ore('plateRubber'), 
 	ore('sand'),
