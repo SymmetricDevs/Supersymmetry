@@ -45,13 +45,13 @@ crafting.addShaped("pig_iron_tiny_pile_manual", metaitem('dustTinyPigIron'), [
         [ore('craftingToolHardHammer'), null, null],
         [null, metaitem('nuggetPigIron'), null],
         [null, null, null]
-])
-
-crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
-        [ore('craftingToolFile'), null, null],
-        [null, ore('ingotRubber'), null],
-        [null, null, null]
 ]);
+
+// crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
+//     [ore('craftingToolFile'), null, null],
+//     [null, ore('ingotRubber'), null],
+//     [null, null, null]
+// ]);
 
 //Manual chad for early paper
 
