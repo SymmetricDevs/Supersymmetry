@@ -42,9 +42,8 @@ crafting.addShaped('gregtech:drum_bronze', metaitem('drum.wood'), [
 ])
 
 crafting.addShaped("pig_iron_tiny_pile_manual", metaitem('dustTinyPigIron'), [
-        [ore('craftingToolHardHammer'), null, null],
-        [null, metaitem('nuggetPigIron'), null],
-        [null, null, null]
+        [ore('craftingToolHardHammer'), null],
+        [null, metaitem('nuggetPigIron')]
 ]);
 
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
