@@ -60,6 +60,7 @@ def recipesToRemove = [
     'minecraft:ender_eye',
     'minecraft:fire_charge',
     'minecraft:writable_book',
+    'minecraft:bread',
     'agricraft:combine_nugget_diamond',
     'agricraft:combine_nugget_emerald',
     'agricraft:combine_nugget_quartz',
