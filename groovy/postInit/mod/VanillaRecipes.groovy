@@ -299,6 +299,16 @@ crafting.replaceShaped('minecraft:torchLigDust', item('minecraft:torch') *2, [
     [ore('stickWood')]
 ])
 
+crafting.replaceShaped('minecraft:torchAnth', item('minecraft:torch') *8, [
+    [metaitem('gemAnthracite')],
+    [ore('stickWood')]
+])
+
+crafting.replaceShaped('minecraft:torchAnthDust', item('minecraft:torch') *8, [
+    [metaitem('dustAnthracite')],
+    [ore('stickWood')]
+])
+
 /*
 crafting.replaceShaped('minecraft:compass', item('minecraft:compass'), [
     [null, ore('plateIron'), null],
