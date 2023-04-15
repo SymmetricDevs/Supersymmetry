@@ -289,6 +289,16 @@ crafting.replaceShaped('quark:chain', item('quark:chain') * 3, [
     [null, null, ore('ringIron')]
 ])
 
+crafting.replaceShaped('minecraft:torchLig', item('minecraft:torch') *2, [
+    [metaitem('gemLignite')],
+    [ore('stickWood')]
+])
+
+crafting.replaceShaped('minecraft:torchLigDust', item('minecraft:torch') *2, [
+    [metaitem('dustLignite')],
+    [ore('stickWood')]
+])
+
 /*
 crafting.replaceShaped('minecraft:compass', item('minecraft:compass'), [
     [null, ore('plateIron'), null],
