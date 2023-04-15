@@ -38,6 +38,8 @@ eventManager.listen {
         customMetaItems.addItem(1001, "hot_iron_rod")
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);
         customMetaItems.addItem(1003, "electrolyte_paper")
+        
+        customMetaItems.addItem(1100, "steam.piston")
 
         customMetaItems.addItem(2000, "spaceship.me.scrap")
         customMetaItems.addItem(2001, "wafer.pattern.processor")

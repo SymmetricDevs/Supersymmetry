@@ -459,6 +459,8 @@ metaitem.cathode.lead.name=Lead Cathode
 metaitem.anode.lead.name=Lead Anode
 metaitem.battery.lead_acid.name=Lead Acid Battery
 
+metaitem.steam.piston.name=Steam Piston
+
 # Multiblocked
 
 tile.multiblocked.item_input.name=Small Input Bus
