@@ -15,7 +15,8 @@ def unify (ore, p) {
 
     for (def item : ore) {
     	def modNS = Item.REGISTRY.getNameForObject(item.getItem()).getNamespace()
-        foundMod =  ( modNS == Globals.mod_priority[pos] && modNS != 'xtones' )
+        foundMod = ( modNS == Globals.mod_priority[pos] && modNS != 'xtones' )
+        if (foundMod) break;
     }
 
     if (foundMod) {
