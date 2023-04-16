@@ -203,14 +203,21 @@ material.hp_benzene=High-Pressure Benzene
 material.hot_hp_carbon_monoxide=Hot High-Pressure Carbon Monoxide
 material.hp_carbon_monoxide=High-Pressure Carbon Monoxide
 
-material.liquid_gt_hydrogen=Liquid Hydrogen
-material.liquid_gt_helium=Liquid Helium
-material.liquid_gt_neon=Liquid Neon
-material.liquid_gt_argon=Liquid Argon
+material.liquid_hydrogen=Liquid Hydrogen
+material.liquid_helium=Liquid Helium
+material.liquid_neon=Liquid Neon
+material.liquid_argon=Liquid Argon
 material.liquid_krypton=Liquid Krypton
 material.liquid_xenon=Liquid Xenon
-material.liquid_gt_nitrogen=Liquid Nitrogen
-material.liquid_filtered_air=Liquid Filtered Air
+material.liquid_nitrogen=Liquid Nitrogen
+
+material.hot_hp_air=Hot High-Pressure Air
+material.hp_air=High-Pressure Air
+material.cold_hp_air=Cold High-Pressure Air
+
+material.hot_hp_nether_air=Hot High-Pressure Nether Air
+material.hp_nether_air=High-Pressure Nether Air
+material.cold_hp_nether_air=Cold High-Pressure Nether Air
 
 material.hot_compressed_ammonia=Hot Compressed Ammonia
 material.compressed_ammonia=Compressed Ammonia
