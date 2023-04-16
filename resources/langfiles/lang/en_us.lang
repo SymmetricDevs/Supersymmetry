@@ -374,6 +374,10 @@ metaitem.anode.lead.name=Lead Anode
 metaitem.battery.lead_acid.name=Lead Acid Battery
 
 metaitem.steam.piston.name=Steam Piston
+metaitem.steam.motor.name=Steam Motor
+metaitem.steam.pump.name=Steam Pump
+
+
 metaitem.vacuum_tube_components.name=Vacuum Tube Components
 
 # Multiblocked
