@@ -52,9 +52,28 @@ crafting.addShaped("gregtech:steam_piston", metaitem('steam.piston'), [
     [ore('pipeTinyFluidBronze'), ore('craftingToolHardHammer'), ore('gearSmallBronze')]
 ])
 
+crafting.addShaped("gregtech:steam_motor", metaitem('steam.motor'), [
+    [ore('plateBronze'), ore('stickBronze'), ore('plateBronze')],
+    [metaitem('gearSmallBronze'), ore('stickBronze'), metaitem('gearSmallBronze')],
+    [metaitem('steam.piston'), ore('stickBronze'), metaitem('steam.piston')]
+]);
+
+crafting.addShaped("gregtech:steam_pump", metaitem('steam.pump'), [
+    [ore('screwBronze'), ore('rotorBronze'), ore('ringIron')],
+    [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
+    [ore('ringIron'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
+])
+
+
 crafting.replaceShaped("gregtech:steam_extractor_bronze", metaitem('steam_extractor_bronze'), [
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
     [metaitem('steam.piston'), item('gregtech:steam_casing'), ore('blockGlass')],
+    [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
+])
+
+crafting.replaceShaped("gregtech:steam_vacuum_chamber", metaitem('vacuum_chamber.steam'), [
+    [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
+    [metaitem('steam.pump'), item('gregtech:steam_casing'), ore('blockGlass')],
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
 ])
 
