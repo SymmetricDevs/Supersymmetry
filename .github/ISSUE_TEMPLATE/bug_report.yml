@@ -1,0 +1,44 @@
+name: Bug Report
+description: Create a report to help reproduce and fix the issue
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Thank you for reporting! 
+        Please enter information on these fields to help us triage and fix this issue.
+  - type: textarea
+    id: bugdesc
+    attributes:
+      label: Description of the Bug
+      description: Short description of what the bug does and the expected outcome.
+      placeholder: |
+        {thing} doesnt smelt in the EBF even if i had the right voltage tier!
+        I should be able to smelt {thing} on the EBF but it doesnt work!
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Explain your issue in detail, including the steps to reproduce it.
+      placeholder: |
+        1. Build the EBF
+        2. Try the {thing} recipe
+        3. It fails
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Supersymmetry version (type 'Beta' if its on beta)
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
