@@ -2721,7 +2721,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Tier 1 - Starting a Revolution",
+          "name:8": "CHAPTER 1 // Starting a Revolution",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3142,7 +3142,7 @@
             "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Nickel",
@@ -4331,12 +4331,12 @@
     },
     "54:10": {
       "preRequisites:11": [
-        43
+        78
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combine all the items to make a Vacuum Tube. ",
+          "desc:8": "A §6Vacuum Tube §o§ris a device that controls electric current flow in a high vacuum between electrodes. It\u0027s basically one of the components for the §6Primitive Circuit.§r\n\nCombine all the items to make a Vacuum Tube. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5034,7 +5034,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Resistors are another major component of §bLV circuits§r. They are made with sticky resin, which can be found on §2rubber trees§.. Use a §6Treetap §rto extract the resin. ",
+          "desc:8": "A §6Resistor§r is an electrical component that limits the flow of electrical current in an electronic circuit.\n\nResistors are another major component of §bLV circuits§r. They are made with sticky resin, which can be found on §2rubber trees§.. Use a §6Treetap §rto extract the resin. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5067,29 +5067,7 @@
         }
       },
       "questID:3": 64,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 12,
-              "Damage:2": 335,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotWroughtIron",
-              "id:8": "gregtech:meta_ingot"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -5126,7 +5104,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Coated circuit boards§r are another component of LV circuits. They are made with sticky resin, and wood planks.\n\nYou have to coat the board with wires to make it usable, turning it into a §6Basic Circuit Board§r.",
+          "desc:8": "§6Coated circuit boards§r are another component of LV circuits. They are made with sticky resin, and wood planks. A circuit board is used in electronic engineering to connect electronic components to one another.\n\nYou have to coat the board with wires to make it usable, turning it into a §6Basic Circuit Board§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5213,7 +5191,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Assembling the circuit parts (§6resistors§r, §bvacuum tubes§r, §cwiring§r, and the §2board§r) gets you one Primitive Circuit. \n\nCircuits are the brain of all electric machines - they\u0027re needed for the machine to work. There are over 10 different types of circuits - ranging from Primitive to extremely powerful bio-processors.\n\n\n§l§3This quest will unlock CHAPTER 2.",
+          "desc:8": "Assembling the circuit parts (§6resistors§r, §bvacuum tubes§r, §cwiring§r, and the §2board§r) gets you one Primitive Circuit. \n\nCircuits are the brain of all electric machines - they\u0027re needed for the machine to work. There are over 10 different types of circuits - ranging from Primitive to extremely powerful bio-processors.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5281,7 +5259,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "-- §aIMPORTANT INFORMATION§r --\n\n- Surface gravity: 1g\n\n- Day length: 24 hours \n\n- Atmosphere: Breathable (1 atm)\n    1. 78.084% Nitrogen\n    2. 20.946% Oxygen\n    3. 0.9340% Argon\n    4. 0.0417% Carbon Dioxide\n    5. 0.001818% Neon\n    6. 0.000524% Helium\n    7. 0.000187% Methane\n    8. 0.000114% Krypton\n\n- Orbital period: 360 Earth Days \n\n- Satellites:\n    1. Moon\n\n-------------------------\n",
+          "desc:8": "-- §aIMPORTANT INFORMATION§r --\n- Surface gravity: 1g\n- Day length: 24 hours \n- Atmosphere: Breathable (1 atm)\n    1. 78.084% Nitrogen\n    2. 20.946% Oxygen\n    3. 0.9340% Argon\n    4. 0.0417% Carbon Dioxide\n    5. 0.001818% Neon\n    6. 0.000524% Helium\n    7. 0.000187% Methane\n    8. 0.000114% Krypton\n- Orbital period: 360 Days \n- Satellites:\n    1. Moon\n-------------------------\n\n\n§aEarth§r is a terrestrial planet that orbits a star called §6the Sun§r. It has a rocky surface that is divided into various landforms known as continents. It includes vast oceans, towering mountains, lush forests, arid deserts, and polar ice caps.\n\nFrom a distance, Earth appears to be a blue and green orb due to the presence of water and vegetation on its surface. The oceans cover approximately 70% of the planet\u0027s surface, while the remaining 30% is made up of land.\n\nThe mountains on Earth are towering structures that rise up from the planet\u0027s surface and can reach incredible heights. Forests on Earth are abundant and provide a home for many different species of plants and animals. These forests are a vital component of the planet\u0027s ecosystem and play an essential role in regulating the Earth\u0027s climate. Deserts are dry and arid regions where very little rainfall occurs. Large §6salt flats §rcan be found in the desert.\n\n§cBy digging down from the Earth\u0027s surface, one can encounter three types of rocks: Sedimentary, Igneous and Metamorphic. Sedimentary rocks, like limestone, can be found at altitude levels up to 40, while igneous rocks, like gabbro or granite, can be found between 0 and 40.\n\nUnder the Earth there is a cave system called The Beneath. This cave system is a complex network of underground tunnels, chambers, and passageways that stretches over a significant distance. You can get to it by digging down to Y level 0.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5332,13 +5310,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "-- §aIMPORTANT INFORMATION§r --\n\nPlanet: §aEarth§r\nID: §a10§r\nDepth: §c64m§r\n-------------------------\n§4Dig 64 meters from sea level to access the second layer. Please be aware while traversing The Beneath, as it is very dangerous.\n\n",
+          "desc:8": "-- §aIMPORTANT INFORMATION§r --\n\nPlanet: §aEarth§r\nID: §a10§r\nDepth: §c64m§r\n-------------------------\n§4Dig 64 meters from sea level to access the second layer. Please be aware while traversing The Beneath, as it is very dangerous.\n\n§rThe Beneath refers to the deep, subterranean layers of the Earth\u0027s crust. These layers are composed of metamorphic rock. \n\nThe rocks found in The Beneath are formed from the intense pressure and heat that are present deep within the Earth\u0027s crust. Within The Beneath, you can find ores that have been hidden for millions of years. For example: §6anthracite§r, a rare type of coal.\n\nExploring The Beneath requires specialized equipment and expertise. Several §b§kWeeping Angels §r can also be found in the Beneath. They are extremely dangerous entities, so be extremely careful while exploring.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "advancedrocketry:basalt"
+            "id:8": "susy:susy_stone_cobble"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -5415,7 +5393,7 @@
           "hideInfo:1": 0,
           "index:3": 0,
           "invert:1": 0,
-          "name:8": "The Beneath",
+          "name:8": "The Nether",
           "posX:3": 0,
           "posY:3": 0,
           "posZ:3": 0,
@@ -5833,7 +5811,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§cThese should be your priorities for the first day:\n\n§r- Get gravel\n- Get sticky resin\n- Get an axe\n- Chop a ton of wood\n- Make a shelter over a Copper or Tin vein\n- Get seeds from grass \n- Set up an indoor crop breeding setup\n\nIf you don\u0027t get rubber trees or gravel, just make a new world. This is all doable by the first night.\n",
+          "desc:8": "§cThese should be your priorities for the first few days:\n\n§r- Get gravel\n- Get sticky resin\n- Get an axe\n- Chop a ton of wood\n- Make a shelter over a Copper or Tin vein\n- Get seeds from grass \n- Set up an indoor crop breeding setup\n\nThere should also be some food rations which came in the drop pod. These should be enough to last a few days.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5875,6 +5853,205 @@
       }
     },
     "77:10": {
+      "preRequisites:11": [
+        42
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Combining a bunch of §6wires §rand a §6steel ring §rcreates the components for a §6Vacuum Tube§r. These will be put into a glass tube and sealed shut at an extremely low pressure using a §6Vacuum Chamber§r. For now, just make the components.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4103,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Vacuum Tube Components",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 77,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4103,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "78:10": {
+      "preRequisites:11": [
+        77,
+        43
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §6vacuum chamber§r is a rigid enclosure from which air and other gases are removed by a vacuum pump.\n\nThis results in extremely low pressures, for example, the Vacuum Tube requires less than 130 §6§lmicro§l§r§6Pascals §rto function.\n\nThis is required to make the Vacuum Tube.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14537,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Vacuum Chamber",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 78,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14537,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "79:10": {
+      "preRequisites:11": [
+        42
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Wires §rcan be cut from a plate of metal using a §6Wire Cutter§r.\n\nIf you have to make §6Fine Wires§r instead, you have to first turn a Plate of metal into a §6Foil§r, and then use the wire cutter. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2517,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_wire_fine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Wiring 101",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 79,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2517,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_single"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 2517,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_wire_fine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "80:10": {
       "preRequisites:11": [
         39
       ],
@@ -5984,7 +6161,7 @@
         }
       }
     },
-    "78:10": {
+    "81:10": {
       "preRequisites:11": [
         80
       ],
@@ -6086,7 +6263,7 @@
         }
       }
     },
-    "79:10": {
+    "82:10": {
       "preRequisites:11": [
         80
       ],
@@ -6172,7 +6349,7 @@
         }
       }
     },
-    "80:10": {
+    "83:10": {
       "preRequisites:11": [
         80
       ],
@@ -6269,7 +6446,7 @@
         }
       }
     },
-    "81:10": {
+    "84:10": {
       "preRequisites:11": [
         83
       ],
@@ -6347,7 +6524,7 @@
         }
       }
     },
-    "82:10": {
+    "85:10": {
       "preRequisites:11": [
         80
       ],
@@ -6437,7 +6614,7 @@
         }
       }
     },
-    "83:10": {
+    "86:10": {
       "preRequisites:11": [
         80
       ],
@@ -6524,7 +6701,7 @@
         }
       }
     },
-    "84:10": {
+    "87:10": {
       "preRequisites:11": [
         7
       ],
@@ -6576,7 +6753,7 @@
         }
       }
     },
-    "85:10": {
+    "88:10": {
       "preRequisites:11": [
         5
       ],
@@ -6646,7 +6823,7 @@
         }
       }
     },
-    "86:10": {
+    "89:10": {
       "preRequisites:11": [
         20
       ],
@@ -6716,7 +6893,7 @@
         }
       }
     },
-    "87:10": {
+    "90:10": {
       "preRequisites:11": [
         12
       ],
@@ -6786,7 +6963,7 @@
         }
       }
     },
-    "88:10": {
+    "91:10": {
       "preRequisites:11": [
         149
       ],
@@ -6850,7 +7027,7 @@
         }
       }
     },
-    "89:10": {
+    "92:10": {
       "preRequisites:11": [
         31
       ],
@@ -6924,7 +7101,7 @@
         }
       }
     },
-    "90:10": {
+    "93:10": {
       "preRequisites:11": [
         87
       ],
@@ -7009,7 +7186,7 @@
         }
       }
     },
-    "91:10": {
+    "94:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -7058,14 +7235,14 @@
         }
       }
     },
-    "92:10": {
+    "95:10": {
       "preRequisites:11": [
         66
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Congratulations, you got your first circuit! That wasn\u0027t easy, and I\u0027m proud of you for doing that. :)\n\nNow it\u0027s time to move forward and create even better machines. Your §6Steam §rmachines are clunky, don\u0027t auto-output, and need pumps to be automated.\nOur first step is making a §8§8§7LV Machine Hull.§r Pretty simple, it\u0027s just 8 steel and some cables.\n\n----------------------------------------\n§b§3STAGE 2 HAS BEEN UNLOCKED! GOOD LUCK.\n§r----------------------------------------\n- Setup basic automatic defenses\n- Dig down to the nether and face its horrors\n- Find new and better materials\n- Rain fire on your enemies with rockets\n\nTier: 2\nEU/t: 32\n-------------",
+          "desc:8": "\n\nNow it\u0027s time to move forward and create even better machines. Your §6Steam §rmachines are clunky, don\u0027t auto-output, and need pumps to be automated.\nOur first step is making a §8§8§7LV Machine Hull.§r Pretty simple, it\u0027s just 8 steel and some cables.\n\n----------------------------------------\n§b§3STAGE 2 HAS BEEN UNLOCKED! GOOD LUCK.\n§r----------------------------------------\n- Setup basic automatic defenses\n- Dig down to the nether and face its horrors\n- Find new and better materials\n- Rain fire on your enemies with rockets\n\nTier: 2\nEU/t: 32\n-------------",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7132,7 +7309,7 @@
         }
       }
     },
-    "93:10": {
+    "96:10": {
       "preRequisites:11": [
         99
       ],
@@ -7239,7 +7416,7 @@
         }
       }
     },
-    "94:10": {
+    "97:10": {
       "preRequisites:11": [
         99
       ],
@@ -7331,7 +7508,7 @@
         }
       }
     },
-    "95:10": {
+    "98:10": {
       "preRequisites:11": [
         99
       ],
@@ -7444,7 +7621,7 @@
         }
       }
     },
-    "96:10": {
+    "99:10": {
       "preRequisites:11": [
         99
       ],
@@ -7536,7 +7713,7 @@
         }
       }
     },
-    "97:10": {
+    "100:10": {
       "preRequisites:11": [
         99
       ],
@@ -7636,7 +7813,7 @@
         }
       }
     },
-    "98:10": {
+    "101:10": {
       "preRequisites:11": [
         104
       ],
@@ -7675,7 +7852,7 @@
         }
       }
     },
-    "99:10": {
+    "102:10": {
       "preRequisites:11": [
         74
       ],
@@ -7775,7 +7952,7 @@
         }
       }
     },
-    "100:10": {
+    "103:10": {
       "preRequisites:11": [
         106
       ],
@@ -7827,7 +8004,7 @@
         }
       }
     },
-    "101:10": {
+    "104:10": {
       "preRequisites:11": [
         105
       ],
@@ -7901,7 +8078,7 @@
         }
       }
     },
-    "102:10": {
+    "105:10": {
       "preRequisites:11": [
         105
       ],
@@ -7975,7 +8152,7 @@
         }
       }
     },
-    "103:10": {
+    "106:10": {
       "preRequisites:11": [
         105
       ],
@@ -8040,7 +8217,7 @@
         }
       }
     },
-    "104:10": {
+    "107:10": {
       "preRequisites:11": [
         105
       ],
@@ -8114,7 +8291,7 @@
         }
       }
     },
-    "105:10": {
+    "108:10": {
       "preRequisites:11": [
         105
       ],
@@ -8192,7 +8369,7 @@
         }
       }
     },
-    "106:10": {
+    "109:10": {
       "preRequisites:11": [
         105
       ],
@@ -8281,7 +8458,7 @@
         }
       }
     },
-    "107:10": {
+    "110:10": {
       "preRequisites:11": [
         105
       ],
@@ -8346,7 +8523,7 @@
         }
       }
     },
-    "108:10": {
+    "111:10": {
       "preRequisites:11": [
         105
       ],
@@ -8415,7 +8592,7 @@
         }
       }
     },
-    "109:10": {
+    "112:10": {
       "preRequisites:11": [
         105
       ],
@@ -8489,7 +8666,7 @@
         }
       }
     },
-    "110:10": {
+    "113:10": {
       "preRequisites:11": [
         87
       ],
@@ -8559,7 +8736,7 @@
         }
       }
     },
-    "111:10": {
+    "114:10": {
       "preRequisites:11": [
         117
       ],
@@ -8611,7 +8788,7 @@
         }
       }
     },
-    "112:10": {
+    "115:10": {
       "preRequisites:11": [
         110
       ],
@@ -8690,7 +8867,7 @@
         }
       }
     },
-    "113:10": {
+    "116:10": {
       "preRequisites:11": [
         123
       ],
@@ -8752,7 +8929,7 @@
         }
       }
     },
-    "114:10": {
+    "117:10": {
       "preRequisites:11": [
         110
       ],
@@ -8845,7 +9022,7 @@
         }
       }
     },
-    "115:10": {
+    "118:10": {
       "preRequisites:11": [
         159
       ],
@@ -8932,7 +9109,7 @@
         }
       }
     },
-    "116:10": {
+    "119:10": {
       "preRequisites:11": [
         105
       ],
@@ -9010,7 +9187,7 @@
         }
       }
     },
-    "117:10": {
+    "120:10": {
       "preRequisites:11": [
         105
       ],
@@ -9084,7 +9261,7 @@
         }
       }
     },
-    "118:10": {
+    "121:10": {
       "preRequisites:11": [
         118
       ],
@@ -9148,7 +9325,7 @@
         }
       }
     },
-    "119:10": {
+    "122:10": {
       "preRequisites:11": [
         121
       ],
@@ -9210,7 +9387,7 @@
         }
       }
     },
-    "120:10": {
+    "123:10": {
       "preRequisites:11": [
         120
       ],
@@ -9272,7 +9449,7 @@
         }
       }
     },
-    "121:10": {
+    "124:10": {
       "preRequisites:11": [
         127
       ],
@@ -9356,7 +9533,7 @@
         }
       }
     },
-    "122:10": {
+    "125:10": {
       "preRequisites:11": [
         22
       ],
@@ -9426,7 +9603,7 @@
         }
       }
     },
-    "123:10": {
+    "126:10": {
       "preRequisites:11": [
         110
       ],
@@ -9509,7 +9686,7 @@
         }
       }
     },
-    "124:10": {
+    "127:10": {
       "preRequisites:11": [
         110
       ],
@@ -9592,7 +9769,7 @@
         }
       }
     },
-    "125:10": {
+    "128:10": {
       "preRequisites:11": [
         113,
         137,
@@ -9659,7 +9836,7 @@
         }
       }
     },
-    "126:10": {
+    "129:10": {
       "preRequisites:11": [
         66
       ],
@@ -9754,7 +9931,7 @@
         }
       }
     },
-    "127:10": {
+    "130:10": {
       "preRequisites:11": [
         0
       ],
@@ -9802,7 +9979,7 @@
         }
       }
     },
-    "128:10": {
+    "131:10": {
       "preRequisites:11": [
         99
       ],
@@ -9872,7 +10049,7 @@
         }
       }
     },
-    "129:10": {
+    "132:10": {
       "preRequisites:11": [
         136
       ],
@@ -10039,7 +10216,7 @@
         }
       }
     },
-    "130:10": {
+    "133:10": {
       "preRequisites:11": [
         133
       ],
@@ -10123,7 +10300,7 @@
         }
       }
     },
-    "131:10": {
+    "134:10": {
       "preRequisites:11": [
         138
       ],
@@ -10198,7 +10375,7 @@
         }
       }
     },
-    "132:10": {
+    "135:10": {
       "preRequisites:11": [
         139
       ],
@@ -10273,7 +10450,7 @@
         }
       }
     },
-    "133:10": {
+    "136:10": {
       "preRequisites:11": [
         140
       ],
@@ -10383,7 +10560,7 @@
         }
       }
     },
-    "134:10": {
+    "137:10": {
       "preRequisites:11": [
         105
       ],
@@ -10448,7 +10625,7 @@
         }
       }
     },
-    "135:10": {
+    "138:10": {
       "preRequisites:11": [
         105
       ],
@@ -10522,7 +10699,7 @@
         }
       }
     },
-    "136:10": {
+    "139:10": {
       "preRequisites:11": [
         112
       ],
@@ -10597,7 +10774,7 @@
         }
       }
     },
-    "137:10": {
+    "140:10": {
       "preRequisites:11": [
         144
       ],
@@ -10659,7 +10836,7 @@
         }
       }
     },
-    "138:10": {
+    "141:10": {
       "preRequisites:11": [
         148
       ],
@@ -10711,7 +10888,7 @@
         }
       }
     },
-    "139:10": {
+    "142:10": {
       "preRequisites:11": [
         122
       ],
@@ -10820,7 +10997,7 @@
         }
       }
     },
-    "140:10": {
+    "143:10": {
       "preRequisites:11": [
         110
       ],
@@ -10912,7 +11089,7 @@
         }
       }
     },
-    "141:10": {
+    "144:10": {
       "preRequisites:11": [
         12
       ],
@@ -10982,7 +11159,7 @@
         }
       }
     },
-    "142:10": {
+    "145:10": {
       "preRequisites:11": [
         133
       ],
@@ -11066,7 +11243,7 @@
         }
       }
     },
-    "143:10": {
+    "146:10": {
       "preRequisites:11": [
         150
       ],
@@ -11150,7 +11327,7 @@
         }
       }
     },
-    "144:10": {
+    "147:10": {
       "preRequisites:11": [
         133
       ],
@@ -11225,7 +11402,7 @@
         }
       }
     },
-    "145:10": {
+    "148:10": {
       "preRequisites:11": [
         152
       ],
@@ -11309,7 +11486,7 @@
         }
       }
     },
-    "146:10": {
+    "149:10": {
       "preRequisites:11": [
         153,
         151,
@@ -11395,7 +11572,7 @@
         }
       }
     },
-    "147:10": {
+    "150:10": {
       "preRequisites:11": [
         105
       ],
@@ -11460,7 +11637,7 @@
         }
       }
     },
-    "148:10": {
+    "151:10": {
       "preRequisites:11": [
         151
       ],
@@ -11538,7 +11715,7 @@
         }
       }
     },
-    "149:10": {
+    "152:10": {
       "preRequisites:11": [
         141
       ],
@@ -11620,7 +11797,7 @@
         }
       }
     },
-    "150:10": {
+    "153:10": {
       "preRequisites:11": [
         105
       ],
@@ -11694,7 +11871,7 @@
         }
       }
     },
-    "151:10": {
+    "154:10": {
       "preRequisites:11": [
         148
       ],
@@ -11768,7 +11945,7 @@
         }
       }
     },
-    "152:10": {
+    "155:10": {
       "preRequisites:11": [
         119
       ],
@@ -11833,7 +12010,7 @@
         }
       }
     },
-    "153:10": {
+    "156:10": {
       "preRequisites:11": [
         162
       ],
@@ -11925,7 +12102,7 @@
         }
       }
     },
-    "154:10": {
+    "157:10": {
       "preRequisites:11": [
         105
       ],
@@ -11990,7 +12167,7 @@
         }
       }
     },
-    "155:10": {
+    "158:10": {
       "preRequisites:11": [
         105
       ],
@@ -12174,7 +12351,7 @@
         }
       }
     },
-    "156:10": {
+    "159:10": {
       "preRequisites:11": [
         110
       ],
@@ -12244,7 +12421,7 @@
         }
       }
     },
-    "157:10": {
+    "160:10": {
       "preRequisites:11": [
         166
       ],
@@ -12346,7 +12523,7 @@
         }
       }
     },
-    "158:10": {
+    "161:10": {
       "preRequisites:11": [
         166,
         174
@@ -12430,7 +12607,7 @@
         }
       }
     },
-    "159:10": {
+    "162:10": {
       "preRequisites:11": [
         123
       ],
@@ -12522,7 +12699,7 @@
         }
       }
     },
-    "160:10": {
+    "163:10": {
       "preRequisites:11": [
         123
       ],
@@ -12605,7 +12782,7 @@
         }
       }
     },
-    "161:10": {
+    "164:10": {
       "preRequisites:11": [
         171,
         170
@@ -12689,7 +12866,7 @@
         }
       }
     },
-    "162:10": {
+    "165:10": {
       "preRequisites:11": [
         172,
         170
@@ -12782,7 +12959,7 @@
         }
       }
     },
-    "163:10": {
+    "166:10": {
       "preRequisites:11": [
         173
       ],
@@ -12874,7 +13051,7 @@
         }
       }
     },
-    "164:10": {
+    "167:10": {
       "preRequisites:11": [
         200
       ],
@@ -12957,7 +13134,7 @@
         }
       }
     },
-    "165:10": {
+    "168:10": {
       "preRequisites:11": [
         31
       ],
@@ -13061,7 +13238,7 @@
         }
       }
     },
-    "166:10": {
+    "169:10": {
       "preRequisites:11": [
         31
       ],
@@ -13154,7 +13331,7 @@
         }
       }
     },
-    "167:10": {
+    "170:10": {
       "preRequisites:11": [
         113
       ],
@@ -13229,7 +13406,7 @@
         }
       }
     },
-    "168:10": {
+    "171:10": {
       "preRequisites:11": [
         178
       ],
@@ -13313,7 +13490,7 @@
         }
       }
     },
-    "169:10": {
+    "172:10": {
       "preRequisites:11": [
         179
       ],
@@ -13378,7 +13555,7 @@
         }
       }
     },
-    "170:10": {
+    "173:10": {
       "preRequisites:11": [
         124
       ],
@@ -13452,7 +13629,7 @@
         }
       }
     },
-    "171:10": {
+    "174:10": {
       "preRequisites:11": [
         181
       ],
@@ -13536,7 +13713,7 @@
         }
       }
     },
-    "172:10": {
+    "175:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -13633,7 +13810,7 @@
         }
       }
     },
-    "173:10": {
+    "176:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -13693,7 +13870,7 @@
         }
       }
     },
-    "174:10": {
+    "177:10": {
       "preRequisites:11": [
         186
       ],
@@ -13751,7 +13928,7 @@
         }
       }
     },
-    "175:10": {
+    "178:10": {
       "preRequisites:11": [
         184
       ],
@@ -13835,7 +14012,7 @@
         }
       }
     },
-    "176:10": {
+    "179:10": {
       "preRequisites:11": [
         188
       ],
@@ -13925,7 +14102,7 @@
         }
       }
     },
-    "177:10": {
+    "180:10": {
       "preRequisites:11": [
         189
       ],
@@ -14024,7 +14201,7 @@
         }
       }
     },
-    "178:10": {
+    "181:10": {
       "preRequisites:11": [
         103
       ],
@@ -14113,7 +14290,7 @@
         }
       }
     },
-    "179:10": {
+    "182:10": {
       "preRequisites:11": [
         191
       ],
@@ -14187,7 +14364,7 @@
         }
       }
     },
-    "180:10": {
+    "183:10": {
       "preRequisites:11": [
         192
       ],
@@ -14309,7 +14486,7 @@
         }
       }
     },
-    "181:10": {
+    "184:10": {
       "preRequisites:11": [
         193
       ],
@@ -14398,7 +14575,7 @@
         }
       }
     },
-    "182:10": {
+    "185:10": {
       "preRequisites:11": [
         193
       ],
@@ -14487,7 +14664,7 @@
         }
       }
     },
-    "183:10": {
+    "186:10": {
       "preRequisites:11": [
         191
       ],
@@ -14604,7 +14781,7 @@
         }
       }
     },
-    "184:10": {
+    "187:10": {
       "preRequisites:11": [
         191
       ],
@@ -14721,7 +14898,7 @@
         }
       }
     },
-    "185:10": {
+    "188:10": {
       "preRequisites:11": [
         136
       ],
@@ -14877,7 +15054,7 @@
         }
       }
     },
-    "186:10": {
+    "189:10": {
       "preRequisites:11": [
         198
       ],
@@ -15026,7 +15203,7 @@
         }
       }
     },
-    "187:10": {
+    "190:10": {
       "preRequisites:11": [
         174
       ],
@@ -15091,7 +15268,7 @@
         }
       }
     },
-    "188:10": {
+    "191:10": {
       "preRequisites:11": [
         168
       ],
@@ -15183,7 +15360,7 @@
         }
       }
     },
-    "189:10": {
+    "192:10": {
       "preRequisites:11": [
         174
       ],
@@ -15275,7 +15452,7 @@
         }
       }
     },
-    "190:10": {
+    "193:10": {
       "preRequisites:11": [
         174
       ],
@@ -15367,7 +15544,7 @@
         }
       }
     },
-    "191:10": {
+    "194:10": {
       "preRequisites:11": [
         174
       ],
@@ -15459,7 +15636,7 @@
         }
       }
     },
-    "192:10": {
+    "195:10": {
       "preRequisites:11": [
         174
       ],
@@ -15551,7 +15728,7 @@
         }
       }
     },
-    "193:10": {
+    "196:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -15613,7 +15790,7 @@
         }
       }
     },
-    "194:10": {
+    "197:10": {
       "preRequisites:11": [
         200
       ],
@@ -15688,7 +15865,7 @@
         }
       }
     },
-    "195:10": {
+    "198:10": {
       "preRequisites:11": [
         200
       ],
@@ -15772,7 +15949,7 @@
         }
       }
     },
-    "196:10": {
+    "199:10": {
       "preRequisites:11": [
         216
       ],
@@ -15856,7 +16033,7 @@
         }
       }
     },
-    "197:10": {
+    "200:10": {
       "preRequisites:11": [
         216
       ],
@@ -15940,7 +16117,7 @@
         }
       }
     },
-    "198:10": {
+    "201:10": {
       "preRequisites:11": [
         102
       ],
@@ -16014,7 +16191,7 @@
         }
       }
     },
-    "199:10": {
+    "202:10": {
       "preRequisites:11": [
         214,
         215,
@@ -16092,7 +16269,7 @@
         }
       }
     },
-    "200:10": {
+    "203:10": {
       "preRequisites:11": [
         217,
         212
@@ -16168,7 +16345,7 @@
         }
       }
     },
-    "201:10": {
+    "204:10": {
       "preRequisites:11": [
         218
       ],
@@ -16251,7 +16428,7 @@
         }
       }
     },
-    "202:10": {
+    "205:10": {
       "preRequisites:11": [
         200
       ],
@@ -16320,7 +16497,7 @@
         }
       }
     },
-    "203:10": {
+    "206:10": {
       "preRequisites:11": [
         200
       ],
@@ -16400,7 +16577,7 @@
         }
       }
     },
-    "204:10": {
+    "207:10": {
       "preRequisites:11": [
         221
       ],
@@ -16528,7 +16705,7 @@
         }
       }
     },
-    "205:10": {
+    "208:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -16578,7 +16755,7 @@
         }
       }
     },
-    "206:10": {
+    "209:10": {
       "preRequisites:11": [
         223
       ],
@@ -16630,7 +16807,7 @@
         }
       }
     },
-    "207:10": {
+    "210:10": {
       "preRequisites:11": [
         223
       ],
@@ -16682,7 +16859,7 @@
         }
       }
     },
-    "208:10": {
+    "211:10": {
       "preRequisites:11": [
         223
       ],
@@ -16734,7 +16911,7 @@
         }
       }
     },
-    "209:10": {
+    "212:10": {
       "preRequisites:11": [
         223
       ],
@@ -16786,7 +16963,7 @@
         }
       }
     },
-    "210:10": {
+    "213:10": {
       "preRequisites:11": [
         223
       ],
@@ -16838,7 +17015,7 @@
         }
       }
     },
-    "211:10": {
+    "214:10": {
       "preRequisites:11": [
         112
       ],
@@ -16908,7 +17085,7 @@
         }
       }
     },
-    "212:10": {
+    "215:10": {
       "preRequisites:11": [
         112
       ],
@@ -17000,7 +17177,7 @@
         }
       }
     },
-    "213:10": {
+    "216:10": {
       "preRequisites:11": [
         221
       ],
@@ -17083,7 +17260,7 @@
         }
       }
     },
-    "214:10": {
+    "217:10": {
       "preRequisites:11": [
         110,
         221
@@ -17154,7 +17331,7 @@
         }
       }
     },
-    "215:10": {
+    "218:10": {
       "preRequisites:11": [
         112
       ],
@@ -17224,7 +17401,7 @@
         }
       }
     },
-    "216:10": {
+    "219:10": {
       "preRequisites:11": [
         231,
         232
@@ -17317,7 +17494,7 @@
         }
       }
     },
-    "217:10": {
+    "220:10": {
       "preRequisites:11": [
         112
       ],
@@ -17396,7 +17573,7 @@
         }
       }
     },
-    "218:10": {
+    "221:10": {
       "preRequisites:11": [
         104
       ],
@@ -17461,7 +17638,7 @@
         }
       }
     },
-    "219:10": {
+    "222:10": {
       "preRequisites:11": [
         241,
         254,
@@ -17537,7 +17714,7 @@
         }
       }
     },
-    "220:10": {
+    "223:10": {
       "preRequisites:11": [
         244,
         269
@@ -17630,7 +17807,7 @@
         }
       }
     },
-    "221:10": {
+    "224:10": {
       "preRequisites:11": [
         252
       ],
@@ -17700,7 +17877,7 @@
         }
       }
     },
-    "222:10": {
+    "225:10": {
       "preRequisites:11": [
         169
       ],
@@ -17792,7 +17969,7 @@
         }
       }
     },
-    "223:10": {
+    "226:10": {
       "preRequisites:11": [
         242
       ],
@@ -17840,6 +18017,15 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
@@ -17879,7 +18065,7 @@
         }
       }
     },
-    "224:10": {
+    "227:10": {
       "preRequisites:11": [
         243
       ],
@@ -17953,7 +18139,7 @@
         }
       }
     },
-    "225:10": {
+    "228:10": {
       "preRequisites:11": [
         174
       ],
@@ -18045,7 +18231,7 @@
         }
       }
     },
-    "226:10": {
+    "229:10": {
       "preRequisites:11": [
         166
       ],
@@ -18084,7 +18270,7 @@
         }
       }
     },
-    "227:10": {
+    "230:10": {
       "preRequisites:11": [
         166
       ],
@@ -18167,7 +18353,7 @@
         }
       }
     },
-    "228:10": {
+    "231:10": {
       "preRequisites:11": [
         245
       ],
@@ -18251,7 +18437,7 @@
         }
       }
     },
-    "229:10": {
+    "232:10": {
       "preRequisites:11": [
         248
       ],
@@ -18325,7 +18511,7 @@
         }
       }
     },
-    "230:10": {
+    "233:10": {
       "preRequisites:11": [
         249,
         248
@@ -18410,7 +18596,7 @@
         }
       }
     },
-    "231:10": {
+    "234:10": {
       "preRequisites:11": [
         250
       ],
@@ -18509,7 +18695,7 @@
         }
       }
     },
-    "232:10": {
+    "235:10": {
       "preRequisites:11": [
         251
       ],
@@ -18584,7 +18770,7 @@
         }
       }
     },
-    "233:10": {
+    "236:10": {
       "preRequisites:11": [
         252
       ],
@@ -18691,7 +18877,7 @@
         }
       }
     },
-    "234:10": {
+    "237:10": {
       "preRequisites:11": [
         252
       ],
@@ -18787,7 +18973,7 @@
         }
       }
     },
-    "235:10": {
+    "238:10": {
       "preRequisites:11": [
         239
       ],
@@ -18879,7 +19065,7 @@
         }
       }
     },
-    "236:10": {
+    "239:10": {
       "preRequisites:11": [
         255
       ],
@@ -18997,7 +19183,7 @@
         }
       }
     },
-    "237:10": {
+    "240:10": {
       "preRequisites:11": [
         256
       ],
@@ -19089,7 +19275,7 @@
         }
       }
     },
-    "238:10": {
+    "241:10": {
       "preRequisites:11": [
         257
       ],
@@ -19181,7 +19367,7 @@
         }
       }
     },
-    "239:10": {
+    "242:10": {
       "preRequisites:11": [
         258
       ],
@@ -19303,7 +19489,7 @@
         }
       }
     },
-    "240:10": {
+    "243:10": {
       "preRequisites:11": [
         252
       ],
@@ -19395,7 +19581,7 @@
         }
       }
     },
-    "241:10": {
+    "244:10": {
       "preRequisites:11": [
         252
       ],
@@ -19487,7 +19673,7 @@
         }
       }
     },
-    "242:10": {
+    "245:10": {
       "preRequisites:11": [
         259
       ],
@@ -19561,7 +19747,7 @@
         }
       }
     },
-    "243:10": {
+    "246:10": {
       "preRequisites:11": [
         262
       ],
@@ -19653,7 +19839,7 @@
         }
       }
     },
-    "244:10": {
+    "247:10": {
       "preRequisites:11": [
         263
       ],
@@ -19737,7 +19923,7 @@
         }
       }
     },
-    "245:10": {
+    "248:10": {
       "preRequisites:11": [
         264
       ],
@@ -19820,7 +20006,7 @@
         }
       }
     },
-    "246:10": {
+    "249:10": {
       "preRequisites:11": [
         243
       ],
@@ -19894,7 +20080,7 @@
         }
       }
     },
-    "247:10": {
+    "250:10": {
       "preRequisites:11": [
         123
       ],
@@ -19978,7 +20164,7 @@
         }
       }
     },
-    "248:10": {
+    "251:10": {
       "preRequisites:11": [
         236
       ],
@@ -20061,7 +20247,7 @@
         }
       }
     },
-    "249:10": {
+    "252:10": {
       "preRequisites:11": [
         252
       ],
@@ -20113,7 +20299,7 @@
         }
       }
     },
-    "250:10": {
+    "253:10": {
       "preRequisites:11": [
         236
       ],
@@ -20177,7 +20363,7 @@
         }
       }
     },
-    "251:10": {
+    "254:10": {
       "preRequisites:11": [
         275
       ],
@@ -20229,7 +20415,7 @@
         }
       }
     },
-    "252:10": {
+    "255:10": {
       "preRequisites:11": [
         275
       ],
@@ -20281,7 +20467,7 @@
         }
       }
     },
-    "253:10": {
+    "256:10": {
       "preRequisites:11": [
         275
       ],
@@ -20333,7 +20519,7 @@
         }
       }
     },
-    "254:10": {
+    "257:10": {
       "preRequisites:11": [
         275
       ],
@@ -20385,7 +20571,7 @@
         }
       }
     },
-    "255:10": {
+    "258:10": {
       "preRequisites:11": [
         275
       ],
@@ -20437,7 +20623,7 @@
         }
       }
     },
-    "256:10": {
+    "259:10": {
       "preRequisites:11": [
         200
       ],
@@ -20489,7 +20675,7 @@
         }
       }
     },
-    "257:10": {
+    "260:10": {
       "preRequisites:11": [
         200
       ],
@@ -20563,7 +20749,7 @@
         }
       }
     },
-    "258:10": {
+    "261:10": {
       "preRequisites:11": [
         281
       ],
@@ -20680,7 +20866,7 @@
         }
       }
     },
-    "259:10": {
+    "262:10": {
       "preRequisites:11": [
         281
       ],
@@ -20797,7 +20983,7 @@
         }
       }
     },
-    "260:10": {
+    "263:10": {
       "preRequisites:11": [
         281
       ],
@@ -20914,7 +21100,7 @@
         }
       }
     },
-    "261:10": {
+    "264:10": {
       "preRequisites:11": [
         281
       ],
@@ -21031,7 +21217,7 @@
         }
       }
     },
-    "262:10": {
+    "265:10": {
       "preRequisites:11": [
         281
       ],
@@ -21135,7 +21321,7 @@
         }
       }
     },
-    "263:10": {
+    "266:10": {
       "preRequisites:11": [
         287
       ],
@@ -21224,7 +21410,7 @@
         }
       }
     },
-    "264:10": {
+    "267:10": {
       "preRequisites:11": [
         287
       ],
@@ -21298,7 +21484,7 @@
         }
       }
     },
-    "265:10": {
+    "268:10": {
       "preRequisites:11": [
         245
       ],
@@ -21373,7 +21559,7 @@
         }
       }
     },
-    "266:10": {
+    "269:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -21419,7 +21605,7 @@
         }
       }
     },
-    "267:10": {
+    "270:10": {
       "preRequisites:11": [
         251
       ],
@@ -21481,7 +21667,7 @@
         }
       }
     },
-    "268:10": {
+    "271:10": {
       "preRequisites:11": [
         292
       ],
@@ -21543,7 +21729,7 @@
         }
       }
     },
-    "269:10": {
+    "272:10": {
       "preRequisites:11": [
         290
       ],
@@ -21618,7 +21804,7 @@
         }
       }
     },
-    "270:10": {
+    "273:10": {
       "preRequisites:11": [
         236
       ],
@@ -21704,7 +21890,7 @@
         }
       }
     },
-    "271:10": {
+    "274:10": {
       "preRequisites:11": [
         295
       ],
@@ -21766,7 +21952,7 @@
         }
       }
     },
-    "272:10": {
+    "275:10": {
       "preRequisites:11": [
         295
       ],
@@ -21828,7 +22014,7 @@
         }
       }
     },
-    "273:10": {
+    "276:10": {
       "preRequisites:11": [
         236
       ],
@@ -21899,7 +22085,7 @@
         }
       }
     },
-    "274:10": {
+    "277:10": {
       "preRequisites:11": [
         200
       ],
@@ -21973,7 +22159,7 @@
         }
       }
     },
-    "275:10": {
+    "278:10": {
       "preRequisites:11": [
         259
       ],
@@ -22025,7 +22211,7 @@
         }
       }
     },
-    "276:10": {
+    "279:10": {
       "preRequisites:11": [
         174
       ],
@@ -22095,7 +22281,7 @@
         }
       }
     },
-    "277:10": {
+    "280:10": {
       "preRequisites:11": [
         301
       ],
@@ -22147,7 +22333,7 @@
         }
       }
     },
-    "278:10": {
+    "281:10": {
       "preRequisites:11": [
         302
       ],
@@ -22207,7 +22393,7 @@
         }
       }
     },
-    "279:10": {
+    "282:10": {
       "preRequisites:11": [
         303
       ],
@@ -22269,7 +22455,7 @@
         }
       }
     },
-    "280:10": {
+    "283:10": {
       "preRequisites:11": [
         304
       ],
@@ -22329,7 +22515,7 @@
         }
       }
     },
-    "281:10": {
+    "284:10": {
       "preRequisites:11": [
         112
       ],
@@ -22413,7 +22599,7 @@
         }
       }
     },
-    "282:10": {
+    "285:10": {
       "preRequisites:11": [
         300
       ],
@@ -22465,7 +22651,7 @@
         }
       }
     },
-    "283:10": {
+    "286:10": {
       "preRequisites:11": [
         259
       ],
@@ -22557,7 +22743,7 @@
         }
       }
     },
-    "284:10": {
+    "287:10": {
       "preRequisites:11": [
         259
       ],
@@ -22649,7 +22835,7 @@
         }
       }
     },
-    "285:10": {
+    "288:10": {
       "preRequisites:11": [
         259
       ],
@@ -22741,7 +22927,7 @@
         }
       }
     },
-    "286:10": {
+    "289:10": {
       "preRequisites:11": [
         259
       ],
@@ -22833,7 +23019,7 @@
         }
       }
     },
-    "287:10": {
+    "290:10": {
       "preRequisites:11": [
         104
       ],
@@ -22925,7 +23111,7 @@
         }
       }
     },
-    "288:10": {
+    "291:10": {
       "preRequisites:11": [
         104
       ],
@@ -23017,7 +23203,7 @@
         }
       }
     },
-    "289:10": {
+    "292:10": {
       "preRequisites:11": [
         174
       ],
@@ -23109,7 +23295,7 @@
         }
       }
     },
-    "290:10": {
+    "293:10": {
       "preRequisites:11": [
         174
       ],
@@ -23201,7 +23387,7 @@
         }
       }
     },
-    "291:10": {
+    "294:10": {
       "preRequisites:11": [
         112
       ],
@@ -23263,7 +23449,7 @@
         }
       }
     },
-    "292:10": {
+    "295:10": {
       "preRequisites:11": [
         314
       ],
@@ -23347,7 +23533,7 @@
         }
       }
     },
-    "293:10": {
+    "296:10": {
       "preRequisites:11": [
         314
       ],
@@ -23431,7 +23617,7 @@
         }
       }
     },
-    "294:10": {
+    "297:10": {
       "preRequisites:11": [
         324,
         325
@@ -23516,7 +23702,7 @@
         }
       }
     },
-    "295:10": {
+    "298:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -23606,7 +23792,7 @@
         }
       }
     },
-    "296:10": {
+    "299:10": {
       "preRequisites:11": [
         327,
         166
@@ -23681,7 +23867,7 @@
         }
       }
     },
-    "297:10": {
+    "300:10": {
       "preRequisites:11": [
         328
       ],
@@ -23773,7 +23959,7 @@
         }
       }
     },
-    "298:10": {
+    "301:10": {
       "preRequisites:11": [
         330,
         328
@@ -23848,7 +24034,7 @@
         }
       }
     },
-    "299:10": {
+    "302:10": {
       "preRequisites:11": [
         326
       ],
@@ -23919,7 +24105,7 @@
         }
       }
     },
-    "300:10": {
+    "303:10": {
       "preRequisites:11": [
         328
       ],
@@ -24021,7 +24207,7 @@
         }
       }
     },
-    "301:10": {
+    "304:10": {
       "preRequisites:11": [
         333
       ],
@@ -24104,7 +24290,7 @@
         }
       }
     },
-    "302:10": {
+    "305:10": {
       "preRequisites:11": [
         333
       ],
@@ -24179,7 +24365,7 @@
         }
       }
     },
-    "303:10": {
+    "306:10": {
       "preRequisites:11": [
         335,
         334
@@ -24263,7 +24449,7 @@
         }
       }
     },
-    "304:10": {
+    "307:10": {
       "preRequisites:11": [
         300
       ],
@@ -24862,7 +25048,7 @@
           "id:3": 54,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -216,
+          "x:3": -300,
           "y:3": 132
         },
         "26:10": {
@@ -24911,14 +25097,14 @@
           "id:3": 64,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 84
+          "x:3": -324,
+          "y:3": 204
         },
         "33:10": {
           "id:3": 65,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
+          "x:3": -252,
           "y:3": 204
         },
         "34:10": {
@@ -24926,7 +25112,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -300,
-          "y:3": 132
+          "y:3": 264
         },
         "35:10": {
           "id:3": 71,
@@ -24957,55 +25143,76 @@
           "y:3": 36
         },
         "39:10": {
+          "id:3": 77,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": 84
+        },
+        "40:10": {
+          "id:3": 78,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -216,
+          "y:3": 132
+        },
+        "41:10": {
+          "id:3": 79,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": -12
+        },
+        "42:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 96
         },
-        "40:10": {
+        "43:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 60
         },
-        "41:10": {
+        "44:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 168
         },
-        "42:10": {
+        "45:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 96
         },
-        "43:10": {
+        "46:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 96
         },
-        "44:10": {
+        "47:10": {
           "id:3": 85,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 132
         },
-        "45:10": {
+        "48:10": {
           "id:3": 86,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 24
         },
-        "46:10": {
+        "49:10": {
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -25043,580 +25250,573 @@
       },
       "quests:9": {
         "0:10": {
-          "id:3": 66,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": -24
-        },
-        "1:10": {
           "id:3": 99,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 48
         },
-        "2:10": {
+        "1:10": {
           "id:3": 100,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 0
         },
-        "3:10": {
+        "2:10": {
           "id:3": 101,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 84
         },
-        "4:10": {
+        "3:10": {
           "id:3": 102,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 36
         },
-        "5:10": {
+        "4:10": {
           "id:3": 103,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 120
         },
-        "6:10": {
+        "5:10": {
           "id:3": 104,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 120
         },
-        "7:10": {
+        "6:10": {
           "id:3": 105,
           "sizeX:3": 60,
           "sizeY:3": 60,
           "x:3": -30,
           "y:3": 300
         },
-        "8:10": {
+        "7:10": {
           "id:3": 108,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -66,
           "y:3": 414
         },
-        "9:10": {
+        "8:10": {
           "id:3": 109,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 24,
           "y:3": 414
         },
-        "10:10": {
+        "9:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 372
         },
-        "11:10": {
+        "10:10": {
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 240
         },
-        "12:10": {
+        "11:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 408
         },
-        "13:10": {
+        "12:10": {
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 228
         },
-        "14:10": {
+        "13:10": {
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 264
         },
-        "15:10": {
+        "14:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 408
         },
-        "16:10": {
+        "15:10": {
           "id:3": 116,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 240
         },
-        "17:10": {
+        "16:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 408
         },
-        "18:10": {
+        "17:10": {
           "id:3": 121,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 336
         },
-        "19:10": {
+        "18:10": {
           "id:3": 122,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 372
         },
-        "20:10": {
+        "19:10": {
           "id:3": 123,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 264
         },
-        "21:10": {
+        "20:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 300
         },
-        "22:10": {
+        "21:10": {
           "id:3": 133,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 168
         },
-        "23:10": {
+        "22:10": {
           "id:3": 134,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -72
         },
-        "24:10": {
+        "23:10": {
           "id:3": 136,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 60
         },
-        "25:10": {
+        "24:10": {
           "id:3": 137,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 108,
           "y:3": 48
         },
-        "26:10": {
+        "25:10": {
           "id:3": 138,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 192
         },
-        "27:10": {
+        "26:10": {
           "id:3": 139,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 192
         },
-        "28:10": {
+        "27:10": {
           "id:3": 140,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": 192
         },
-        "29:10": {
+        "28:10": {
           "id:3": 141,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 300,
           "y:3": 192
         },
-        "30:10": {
+        "29:10": {
           "id:3": 142,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 336
         },
-        "31:10": {
+        "30:10": {
           "id:3": 143,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 228
         },
-        "32:10": {
+        "31:10": {
           "id:3": 146,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 162,
           "y:3": 408
         },
-        "33:10": {
+        "32:10": {
           "id:3": 147,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 408
         },
-        "34:10": {
+        "33:10": {
           "id:3": 148,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 372
         },
-        "35:10": {
+        "34:10": {
           "id:3": 150,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 156
         },
-        "36:10": {
+        "35:10": {
           "id:3": 151,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 156
         },
-        "37:10": {
+        "36:10": {
           "id:3": 152,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 120
         },
-        "38:10": {
+        "37:10": {
           "id:3": 153,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 120
         },
-        "39:10": {
+        "38:10": {
           "id:3": 154,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": 120
         },
-        "40:10": {
+        "39:10": {
           "id:3": 155,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 336
         },
-        "41:10": {
+        "40:10": {
           "id:3": 156,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": 156
         },
-        "42:10": {
+        "41:10": {
           "id:3": 157,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 348,
           "y:3": 192
         },
-        "43:10": {
+        "42:10": {
           "id:3": 158,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 372
         },
-        "44:10": {
+        "43:10": {
           "id:3": 159,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 372
         },
-        "45:10": {
+        "44:10": {
           "id:3": 162,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 444
         },
-        "46:10": {
+        "45:10": {
           "id:3": 164,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 480
         },
-        "47:10": {
+        "46:10": {
           "id:3": 165,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 300
         },
-        "48:10": {
+        "47:10": {
           "id:3": 166,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 498
         },
-        "49:10": {
+        "48:10": {
           "id:3": 168,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 576
         },
-        "50:10": {
+        "49:10": {
           "id:3": 170,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 300
         },
-        "51:10": {
+        "50:10": {
           "id:3": 171,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 264
         },
-        "52:10": {
+        "51:10": {
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 264
         },
-        "53:10": {
+        "52:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 300
         },
-        "54:10": {
+        "53:10": {
           "id:3": 174,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 204,
           "y:3": 288
         },
-        "55:10": {
+        "54:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 228
         },
-        "56:10": {
+        "55:10": {
           "id:3": 179,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 228
         },
-        "57:10": {
+        "56:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 228
         },
-        "58:10": {
+        "57:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 300
         },
-        "59:10": {
+        "58:10": {
           "id:3": 182,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 300
         },
-        "60:10": {
+        "59:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 360
         },
-        "61:10": {
+        "60:10": {
           "id:3": 186,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 396
         },
-        "62:10": {
+        "61:10": {
           "id:3": 187,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 396
         },
-        "63:10": {
+        "62:10": {
           "id:3": 188,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 420
         },
-        "64:10": {
+        "63:10": {
           "id:3": 189,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 480
         },
-        "65:10": {
+        "64:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 480
         },
-        "66:10": {
+        "65:10": {
           "id:3": 191,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 120
         },
-        "67:10": {
+        "66:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 120
         },
-        "68:10": {
+        "67:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 120
         },
-        "69:10": {
+        "68:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 96
         },
-        "70:10": {
+        "69:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 144
         },
-        "71:10": {
+        "70:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 156
         },
-        "72:10": {
+        "71:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 156
         },
-        "73:10": {
+        "72:10": {
           "id:3": 198,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 36,
           "y:3": -24
         },
-        "74:10": {
+        "73:10": {
           "id:3": 199,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 108,
           "y:3": -24
         },
-        "75:10": {
+        "74:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 648
         },
-        "76:10": {
+        "75:10": {
           "id:3": 216,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 36
         },
-        "77:10": {
+        "76:10": {
           "id:3": 233,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 444
         },
-        "78:10": {
+        "77:10": {
           "id:3": 238,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 132
         },
-        "79:10": {
+        "78:10": {
           "id:3": 246,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 522
         },
-        "80:10": {
+        "79:10": {
           "id:3": 247,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 492
         },
-        "81:10": {
+        "80:10": {
           "id:3": 319,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 168
         },
-        "82:10": {
+        "81:10": {
           "id:3": 320,
           "sizeX:3": 24,
           "sizeY:3": 24,
