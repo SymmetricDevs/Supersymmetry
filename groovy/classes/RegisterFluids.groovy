@@ -291,6 +291,10 @@ class RegisterFluids {
 
                 generateHighPressureGases(CarbonMonoxide, 10030, false);
 
+                generateHighPressureGases(Air, 10021, true);
+
+                generateHighPressureGases(NetherAir, 10021, true);
+
                 generateLiquidFromGas(Hydrogen, 10100, 21);
 
                 generateLiquidFromGas(Helium, 10101, 5);
