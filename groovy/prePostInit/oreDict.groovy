@@ -14,12 +14,13 @@ def unify (ore, p) {
     def foundMod = false
 
     for (def item : ore) {
-        foundMod = ( item.getItem().getRegistryName().getNamespace() == Globals.mod_priority[pos] && item.getItem().getRegistryName().getNamespace() != 'xtones' )
+    	def modNS = Item.REGISTRY.getNameForObject(item.getItem()).getNamespace()
+        foundMod =  ( modNS == Globals.mod_priority[pos] && modNS != 'xtones' )
     }
 
     if (foundMod) {
         for (def item : ore) {
-            if (item.getItem().getRegistryName().getNamespace() != Globals.mod_priority[pos]) {
+            if (Item.REGISTRY.getNameForObject(item.getItem()).getNamespace() != Globals.mod_priority[pos]) {
                 ore.remove(item)
                 //mods.jei.hide(item)
             }
