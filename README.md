@@ -11,7 +11,13 @@ Thanks to the [Gregicality Community Pack](https://github.com/Gregicality/Gregic
 
 Epic build script by [htmlcsjs](https://github.com/htmlcsjs).
 
-Quests and textures by [Regian24](https://github.com/Regian24).
+Based off of ideas by [Zalgo](https://github.com/Zalgo239) and [Gaming](https://github.com/swagxdragonslayer46yt).
+
+Core mod work by [MTBO](https://github.com/loxoDev), [beanie](https://github.com/BestMod) and [bruberu](https://github.com/bruberu).
+
+Quests by [Regian](https://github.com/Regian24).
+
+Textures by [GDCM05](https://github.com/gdcm05) and more.
 
 ## Building
 You'll need python3 and python requests installed. To build run the main.py script.
