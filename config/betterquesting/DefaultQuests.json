@@ -2208,7 +2208,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§7Iron §ris the most common element on planet Earth. It is used for refining it into §6steel§r [see Chapter 1] and for basic tools. It is one of the most important metals of the Industrial Age.\n\nExtracting usable metal from iron ores requires kilns or furnaces (such as a §cBlast Furnace§r) capable of reaching 1,500 °C (1,773K) or higher, about 500 °C higher than that required to smelt copper. \n\n",
+          "desc:8": "§7Iron §ris the most common element on planet Earth. It is used for refining it into §6steel§r [see the next page] and for basic tools. It is one of the most important metals of the Industrial Age.\n\nExtracting usable metal from iron ores requires kilns or furnaces (such as a §cBlast Furnace§r) capable of reaching 1,500 °C (1,773K) or higher, about 500 °C higher than that required to smelt copper. \n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4246,7 +4246,8 @@
     },
     "53:10": {
       "preRequisites:11": [
-        46
+        46,
+        50
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5028,8 +5029,11 @@
       }
     },
     "64:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        54
+        31
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5098,8 +5102,11 @@
       }
     },
     "65:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        54
+        31
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6965,7 +6972,8 @@
     },
     "91:10": {
       "preRequisites:11": [
-        149
+        149,
+        20
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -7188,7 +7196,7 @@
     },
     "94:10": {
       "preRequisites:11": [
-        77
+        75
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -7258,7 +7266,7 @@
     },
     "95:10": {
       "preRequisites:11": [
-        94
+        75
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -25040,7 +25048,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -192,
-          "y:3": 300
+          "y:3": 390
         },
         "35:10": {
           "id:3": 93,
@@ -25496,15 +25504,15 @@
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 96
+          "x:3": -36,
+          "y:3": 48
         },
         "51:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -300,
-          "y:3": 96
+          "x:3": 60,
+          "y:3": 48
         }
       }
     },
@@ -27525,7 +27533,7 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "",
+          "desc:8": "A list of all locations in the known universe.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
@@ -27584,6 +27592,36 @@
       }
     },
     "18:10": {
+      "lineID:3": 18,
+      "order:3": 21,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "A guide to build better looking and more efficient bases.",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "littletiles:hammer",
+            "tag:10": {}
+          },
+          "name:8": "Better Building",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "quests:9": {}
+    },
+    "19:10": {
       "lineID:3": 19,
       "order:3": 17,
       "properties:10": {
@@ -27593,9 +27631,9 @@
           "desc:8": "No Description",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 3910,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "minecraft:ice"
           },
           "name:8": "Cryogenics",
           "visibility:8": "ALWAYS"
@@ -27660,7 +27698,42 @@
         }
       }
     },
-    "19:10": {
+    "20:10": {
+      "lineID:3": 20,
+      "order:3": 22,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "Getting from Point A to Point B in the fastest time.",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "immersiverailroading:item_rolling_stock_component",
+            "tag:10": {
+              "componentType:3": 7,
+              "defID:8": "rolling_stock/locomotives/br01.json",
+              "gauge:6": 1.435,
+              "raw_cast:1": 0
+            }
+          },
+          "name:8": "Transportation",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "quests:9": {}
+    },
+    "21:10": {
       "lineID:3": 21,
       "order:3": 18,
       "properties:10": {
@@ -27739,14 +27812,48 @@
         }
       }
     },
-    "20:10": {
+    "22:10": {
       "lineID:3": 22,
       "order:3": 20,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "No Description",
+          "desc:8": "A list of all §k???§r elements.",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 465,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "terminal:10": {
+                "_creative:1": 1
+              }
+            }
+          },
+          "name:8": "Periodic Table",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "quests:9": {}
+    },
+    "23:10": {
+      "lineID:3": 23,
+      "order:3": 23,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "A guide on how to get better food. By the end of this chapter, you won\u0027t even need food at all!",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
@@ -27760,10 +27867,46 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "minecraft:book"
+            "id:8": "minecraft:apple"
           },
-          "name:8": "New Quest Line",
-          "visibility:8": "NORMAL"
+          "name:8": "Food Options",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "quests:9": {}
+    },
+    "24:10": {
+      "lineID:3": 24,
+      "order:3": 24,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "A guide to Open Computers.",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "opencomputers:storage",
+            "tag:10": {
+              "oc:color:3": 4,
+              "oc:data:10": {
+                "oc:fs.label:8": "wavefront objects"
+              },
+              "oc:lootFactory:8": "openglasses:wavefront objects"
+            }
+          },
+          "name:8": "Programming",
+          "visibility:8": "ALWAYS"
         }
       },
       "quests:9": {}
