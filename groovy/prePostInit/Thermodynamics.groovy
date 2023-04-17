@@ -426,11 +426,11 @@ for (WorkingFluid in WorkingFluids) {
             .EUt(8)
             .buildAndRegister();
 
-    recipemap('steam_turbine_new').recipeBuilder()
+    recipemap('steam_turbine').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .duration(WorkingFluid.duration * WorkingFluid.efficiency)
-            .EUt(-32)
+            .EUt(32)
             .buildAndRegister();
 
     recipemap('cooling_tower').recipeBuilder()
