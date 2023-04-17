@@ -14,7 +14,11 @@ def unify (ore, p) {
     def foundMod = false
 
     for (def item : ore) {
-        foundMod = ( item.getItem().getRegistryName().getNamespace() == Globals.mod_priority[pos] && item.getItem().getRegistryName().getNamespace() != 'xtones' )
+        def myNamespace = item.getItem().getRegistryName().getNamespace()
+        foundMod = (myNamespace == Globals.mod_priority[pos] && myNamespace != 'xtones' )
+        if (foundMod) {
+        	break
+        }
     }
 
     if (foundMod) {
@@ -32,14 +36,15 @@ def unify (ore, p) {
 
 def unify_oredicts(ore_list) {
     for ( def ore : ore_list) {
-        if (ore) {
-            if (ore.size() > 1) {
-                unify(ore, 0)
-            }
+        if (ore && ore.size() > 1) {
+            unify(ore, 0)
         }
     }
 }
 
+// THIS MUST GO BEFORE UNIFY OREDICTS
+ore('ingotCopper').remove(item('techguns:itemshared', 79))
+ore('ingotTin').remove(item('techguns:itemshared', 80))
 def dicts_ingots = [
     ore('ingotCopper'),
     ore('ingotTin')
