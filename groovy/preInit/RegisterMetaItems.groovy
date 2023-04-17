@@ -48,6 +48,8 @@ eventManager.listen {
         customMetaItems.addItem(2006, "pattern.memory")
         customMetaItems.addItem(2007, "storage.segment")
 
+        customMetaItems.addItem(2500, "gun.barrel.steel")
+
         //Placeholders until GCYS is available
         customMetaItems.addItem(3000, "circuit.gooware_processor").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.ZPM);
         customMetaItems.addItem(3001, "circuit.gooware_assembly").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UV);

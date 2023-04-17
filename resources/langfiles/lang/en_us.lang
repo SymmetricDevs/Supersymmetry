@@ -455,6 +455,8 @@ metaitem.pattern.processor.name=Pattern CPU
 metaitem.pattern.memory.name=Pattern RAM
 metaitem.storage.segment.name=Storage Segment
 
+metaitem.gun.barrel.steel.name=Steel Barrel
+
 # Multiblocked
 
 tile.multiblocked.item_input.name=Small Input Bus

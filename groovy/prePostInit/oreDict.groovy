@@ -49,8 +49,14 @@ def unify_oredicts(ore_list) {
 }
 
 def dicts_ingots = get_ore_dicts(ore('ingot*').getMatchingOreDictionaries())
+def dicts_plates = get_ore_dicts(ore('plate*').getMatchingOreDictionaries())
+def dicts_sticks = get_ore_dicts(ore('stick*').getMatchingOreDictionaries())
+def dicts_blocks = get_ore_dicts(ore('block*').getMatchingOreDictionaries())
 
 unify_oredicts(dicts_ingots)
+unify_oredicts(dicts_plates)
+unify_oredicts(dicts_sticks)
+unify_oredicts(dicts_blocks)
 
 susycobble = SuSyBlocks.SUSY_STONE_BLOCKS.get(SusyStoneVariantBlock.StoneVariant.COBBLE)
 
