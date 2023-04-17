@@ -1,18 +1,18 @@
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
+import gregtech.api.fluids.fluidType.FluidTypes;
+import gregtech.api.unification.material.properties.*;
 
+import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.material.info.MaterialIconSet.*;
 
-//IDs 30000-30500 RESERVED FOR ORES
+//ID 30000 - 30500 for ores
+class RegisterOres{
 
-eventManager.listen {
-    GregTechAPI.MaterialEvent event ->
+    public static void init() {
 
-        println("Running RegisterOres.groovy...")
-
-        println("Groovy starting modifying ores")
+        log.infoMC('Registering ores')
 
         new Material.Builder(30000, "enargite")
                 .ore()
@@ -158,7 +158,8 @@ eventManager.listen {
                 .build()
 				.setFormula("ScY2Si2O7", true);
 
+        log.infoMC('Finished registering ores')
 
-        println("Groovy finished modifying ores")
+    }
+
 }
-

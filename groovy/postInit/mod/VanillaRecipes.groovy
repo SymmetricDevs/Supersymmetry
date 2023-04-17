@@ -60,6 +60,7 @@ def recipesToRemove = [
     'minecraft:ender_eye',
     'minecraft:fire_charge',
     'minecraft:writable_book',
+    'minecraft:bread',
     'agricraft:combine_nugget_diamond',
     'agricraft:combine_nugget_emerald',
     'agricraft:combine_nugget_quartz',
@@ -286,6 +287,26 @@ crafting.replaceShaped('quark:chain', item('quark:chain') * 3, [
     [ore('ringIron'), null, null],
     [null, ore('ringIron'), null],
     [null, null, ore('ringIron')]
+])
+
+crafting.replaceShaped('minecraft:torchLig', item('minecraft:torch') *2, [
+    [metaitem('gemLignite')],
+    [ore('stickWood')]
+])
+
+crafting.replaceShaped('minecraft:torchLigDust', item('minecraft:torch') *2, [
+    [metaitem('dustLignite')],
+    [ore('stickWood')]
+])
+
+crafting.replaceShaped('minecraft:torchAnth', item('minecraft:torch') *8, [
+    [metaitem('gemAnthracite')],
+    [ore('stickWood')]
+])
+
+crafting.replaceShaped('minecraft:torchAnthDust', item('minecraft:torch') *8, [
+    [metaitem('dustAnthracite')],
+    [ore('stickWood')]
 ])
 
 /*

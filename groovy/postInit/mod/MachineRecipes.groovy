@@ -1,4 +1,3 @@
-/*
 def circuits = [ore('circuitUlv'), ore('circuitLv'), ore('circuitMv'),
 									ore('circuitHv'), ore('circuitEv'), ore('circuitIv'),
 									ore('circuitLuv'), ore('circuitZpm'), ore('circuitUv'),
@@ -17,11 +16,11 @@ def pumps = [null, metaitem('electric.pump.lv'), metaitem('electric.pump.mv'), m
 								 metaitem('electric.pump.uev'), metaitem('electric.pump.uiv'), metaitem('electric.pump.uxv'),
 								 metaitem('electric.pump.opv')];
 
-def regulators = [null, metaitem('fluid.regulator.lv'), metaitem('fluid.regulator.mv'), metaitem('fluid.regulator.hv'),
+/*def regulators = [null, metaitem('fluid.regulator.lv'), metaitem('fluid.regulator.mv'), metaitem('fluid.regulator.hv'),
 		 metaitem('fluid.regulator.ev'), metaitem('fluid.regulator.iv'), metaitem('fluid.regulator.luv'),
 		 metaitem('fluid.regulator.zpm'), metaitem('fluid.regulator.uv'), metaitem('fluid.regulator.uhv'),
 		 metaitem('fluid.regulator.uev'), metaitem('fluid.regulator.uiv'), metaitem('fluid.regulator.uxv'),
-		 metaitem('fluid.regulator.opv')];
+		 metaitem('fluid.regulator.opv')];*/
 
 def field_generators = [null, metaitem('field.generator.lv'), metaitem('field.generator.mv'), metaitem('field.generator.hv'),
 										   metaitem('field.generator.ev'), metaitem('field.generator.iv'), metaitem('field.generator.luv'),
@@ -77,15 +76,27 @@ def tieredSticks = [ore('stickWroughtIron'), ore('stickIron'), ore('stickSteel')
 										ore('stickNeodymium'), ore('stickVanadiumGallium'), ore('stickVanadiumGallium'),
 										ore('stickVanadiumGallium'), ore('stickVanadiumGallium')];
 
-def tieredGlass = [ore('blockGlass'), ore('blockGlass'), ore('blockGlass'), item('gregtech:transparent_casing:0'),
+/*def tieredGlass = [ore('blockGlass'), ore('blockGlass'), ore('blockGlass'), item('gregtech:transparent_casing:0'),
 				   item('gregtech:transparent_casing:0'), item('gregtech:transparent_casing:2'), item('gregtech:transparent_casing:2'),
-				   item('gregtech:transparent_casing:1'), item('gregtech:transparent_casing:1')];
+				   item('gregtech:transparent_casing:1'), item('gregtech:transparent_casing:1')];*/
 
 def tieredCables = [ore('cableGtSingleRedAlloy'), ore('cableGtSingleTin'), ore('cableGtSingleCopper'), ore('cableGtSingleGold'),
 										ore('cableGtSingleAluminium'), ore('cableGtSinglePlatinum'), ore('cableGtSingleNiobiumTitanium'),
 										ore('cableGtSingleVanadiumGallium'), ore('cableGtSingleYttriumBariumCuprate')]
 
+def rotors = [
+	ore('rotorBronze'),
+	ore('rotorTin'), 
+	ore('rotorBronze'), 
+	ore('rotorSteel'),
+	ore('rotorStainlessSteel'),
+	ore('rotorTungstenSteel'),
+	ore('rotorRhodiumPlatedPalladium'),
+	ore('rotorNaquadahAlloy'),
+	ore('rotorDarmstadtium')
+]
 
+/*
 for (def i = 1; i < 10; i++) {
 	crafting.addShaped("weapons_factory_" + i, item('gregtech:machine:' + (31999 + i)), [
 			[robotArms[i], circuits[i], robotArms[i]],
@@ -125,7 +136,6 @@ crafting.addShaped("multiblocked_ore_sorter", item('multiblocked:ore_sorter'), [
 		[pumps[1], hulls[1], pumps[1]],
 		[robotArms[1], circuits[2], robotArms[1]]
 ]);
-*/
 
 import gregtech.loaders.recipe.MetaTileEntityLoader
 import static gregtech.loaders.recipe.CraftingComponent.*
@@ -140,14 +150,92 @@ import gregtech.api.items.OreDictNames
 import supersymmetry.common.blocks.SuSyBlocks
 import supersymmetry.common.blocks.BlockCoagulationTankWall.CoagulationTankWallType
 import gregtech.common.blocks.wood.*
+*/
 
-MetaTileEntityLoader.registerMachineRecipe(true, SuSyMetaTileEntities.VULCANIZING_PRESS, "WPW", "CHC", "WEW", 'H' as char, HULL, 'E' as char, CIRCUIT, 'W' as char, CABLE, 'C' as char, COIL_HEATING_DOUBLE, 'P' as char, PISTON)
-MetaTileEntityLoader.registerMachineRecipe(true, SuSyMetaTileEntities.ROASTER, "ERE", "CHC", "WCW", 'H' as char, HULL, 'E' as char, CIRCUIT, 'W' as char, CABLE, 'C' as char, COIL_HEATING_DOUBLE, 'R' as char, ROTOR)
-MetaTileEntityLoader.registerMachineRecipe(true, SuSyMetaTileEntities.LATEX_COLLECTOR, "ETE", "GPG", "WHW", 'H' as char, HULL, 'E' as char, CIRCUIT, 'W' as char, CABLE, 'T' as char, new UnificationEntry(OrePrefix.toolHeadDrill, Materials.Steel), 'P' as char, PUMP, 'G' as char, GLASS)
 
-ModHandler.addShapedRecipe(true, "roaster_bronze", SuSyMetaTileEntities.ROASTER_BRONZE.getStackForm(), "XRX", "XMX", "XFX", 'M' as char, MetaBlocks.STEAM_CASING.getItemVariant(SteamCasingType.BRONZE_BRICKS_HULL), 'X' as char, new UnificationEntry(OrePrefix.pipeSmallFluid, Materials.Bronze), 'F' as char, OreDictNames.craftingFurnace, 'R' as char, new UnificationEntry(OrePrefix.rotor, Materials.Bronze))
-ModHandler.addShapedRecipe(true, "vulcanizing_press_bronze", SuSyMetaTileEntities.VULCANIZING_PRESS_BRONZE.getStackForm(), "SRS", "XPX", "XMX", 'M' as char, MetaBlocks.STEAM_CASING.getItemVariant(SteamCasingType.BRONZE_BRICKS_HULL), 'X' as char, new UnificationEntry(OrePrefix.pipeSmallFluid, Materials.Bronze), 'P' as char, new UnificationEntry(OrePrefix.plate, Materials.Steel), 'S' as char, new UnificationEntry(OrePrefix.springSmall, Materials.Steel), 'R' as char, new UnificationEntry(OrePrefix.stick, Materials.Steel))
-ModHandler.addShapedRecipe(true, "latex_collector_bronze", SuSyMetaTileEntities.LATEX_COLLECTOR_BRONZE.getStackForm(), " T ", "GPG", "XMX", 'M' as char, MetaBlocks.STEAM_CASING.getItemVariant(SteamCasingType.BRONZE_HULL), 'X' as char, new UnificationEntry(OrePrefix.pipeSmallFluid, Materials.Bronze), 'G' as char, new UnificationEntry(OrePrefix.blockGlass), 'P' as char, new UnificationEntry(OrePrefix.rotor, Materials.Steel), 'T' as char, new UnificationEntry(OrePrefix.toolHeadDrill, Materials.Steel))
-ModHandler.addShapedRecipe(true, "mixer_bronze", SuSyMetaTileEntities.MIXER_BRONZE.getStackForm(), "GPG", "GRG", "XMX", 'M' as char, MetaBlocks.STEAM_CASING.getItemVariant(SteamCasingType.BRONZE_HULL), 'X' as char, new UnificationEntry(OrePrefix.pipeSmallFluid, Materials.Bronze), 'G' as char, new UnificationEntry(OrePrefix.blockGlass), 'P' as char, new UnificationEntry(OrePrefix.rotor, Materials.Bronze), 'R' as char, new UnificationEntry(OrePrefix.stick, Materials.Bronze))
-ModHandler.addShapedRecipe(true, "coagulation_tank_wall", SuSyBlocks.COAGULATION_TANK_WALL.getItemVariant(CoagulationTankWallType.WOODEN_COAGULATION_TANK_WALL), "WBW", "sPh", "WBW", 'W' as char, MetaBlocks.PLANKS.getItemVariant(BlockGregPlanks.BlockType.TREATED_PLANK), 'P' as char, new UnificationEntry(OrePrefix.frameGt, Materials.TreatedWood), 'B' as char, new UnificationEntry(OrePrefix.bolt, Materials.Steel));
-ModHandler.addShapedRecipe(true, "coagulation_tank", SuSyMetaTileEntities.COAGULATION_TANK.getStackForm(), "WRW", "sPh", "WBW", 'W' as char, MetaBlocks.PLANKS.getItemVariant(BlockGregPlanks.BlockType.TREATED_PLANK), 'P' as char, new UnificationEntry(OrePrefix.pipeLargeFluid, Materials.TreatedWood), 'B' as char, new UnificationEntry(OrePrefix.bolt, Materials.Steel), 'R' as char, new UnificationEntry(OrePrefix.rotor, Materials.Steel));
+//Vulcanizing Press
+crafting.addShaped("gregtech:vulcanizing_press.ulv", metaitem('vulcanizing_press.steam'), [
+	[ore('springSmallSteel'), ore('stickSteel'), ore('springSmallSteel')],
+	[ore('pipeSmallFluidBronze'), ore('plateSteel'), ore('pipeSmallFluidBronze')],
+	[ore('pipeSmallFluidBronze'), item('gregtech:steam_casing', 1), ore('pipeSmallFluidBronze')]
+])
+crafting.addShaped("gregtech:vulcanizing_press.lv", metaitem('vulcanizing_press.lv'), [
+	[ore('cableGtSingleTin'), metaitem('electric.piston.lv'), ore('cableGtSingleTin')],
+	[ore('wireGtQuadrupleCopper'), metaitem('hull.lv'), ore('wireGtQuadrupleCopper')],
+	[ore('cableGtSingleTin'), ore('circuitLv'), ore('cableGtSingleTin')]
+])
+crafting.addShaped("gregtech:vulcanizing_press.mv", metaitem('vulcanizing_press.mv'), [
+	[ore('cableGtSingleCopper'), metaitem('electric.piston.mv'), ore('cableGtSingleCopper')],
+	[ore('wireGtQuadrupleCupronickel'), metaitem('hull.mv'), ore('wireGtQuadrupleCupronickel')],
+	[ore('cableGtSingleCopper'), ore('circuitMv'), ore('cableGtSingleCopper')]
+])
+crafting.addShaped("gregtech:vulcanizing_press.hv", metaitem('vulcanizing_press.hv'), [
+	[ore('cableGtSingleGold'), metaitem('electric.piston.hv'), ore('cableGtSingleGold')],
+	[ore('wireGtQuadrupleKanthal'), metaitem('hull.hv'), ore('wireGtQuadrupleKanthal')],
+	[ore('cableGtSingleGold'), ore('circuitHv'), ore('cableGtSingleGold')]
+])
+crafting.addShaped("gregtech:vulcanizing_press.ev", metaitem('vulcanizing_press.ev'), [
+	[ore('cableGtSingleAluminium'), metaitem('electric.piston.ev'), ore('cableGtSingleAluminium')],
+	[ore('wireGtQuadrupleNichrome'), metaitem('hull.ev'), ore('wireGtQuadrupleNichrome')],
+	[ore('cableGtSingleAluminium'), ore('circuitEv'), ore('cableGtSingleAluminium')]
+])
+
+//Roaster
+crafting.addShaped("gregtech:roaster.ulv", metaitem('roaster.steam'), [
+	[ore('pipeSmallFluidBronze'), ore('rotorBronze'), ore('pipeSmallFluidBronze')],
+	[ore('pipeSmallFluidBronze'), item('gregtech:steam_casing', 1), ore('pipeSmallFluidBronze')],
+	[ore('pipeSmallFluidBronze'), ore('craftingFurnace'), ore('pipeSmallFluidBronze')]
+])
+
+for (i = 1; i <= 8; i++) {
+	crafting.addShaped("gregtech:roaster." + Globals.voltageTiers[i], metaitem('roaster.' + Globals.voltageTiers[i]), [
+		[circuits[i], rotors[i], circuits[i]],
+		[tieredWires[i], hulls[i], tieredWires[i]],
+		[tieredCables[i], tieredWires[i], tieredCables[i]]
+	])
+}
+
+//Latex Collector
+crafting.addShaped("gregtech:latex_collector.ulv", metaitem('latex_collector.bronze'), [
+	[null, ore('toolHeadDrillSteel'), null],
+	[ore('blockGlass'), ore('rotorSteel'), ore('blockGlass')],
+	[ore('pipeSmallFluidBronze'), item('gregtech:steam_casing'), ore('pipeSmallFluidBronze')]
+])
+
+for (i = 1; i <= 4; i++) {
+	crafting.addShaped("gregtech:latex_collector." + Globals.voltageTiers[i], metaitem('latex_collector.' + Globals.voltageTiers[i]), [
+		[circuits[i], ore('toolHeadDrillSteel'), circuits[i]],
+		[ore('blockGlass'), pumps[i], ore('blockGlass')],
+		[tieredCables[i], hulls[i], tieredCables[i]]
+	])
+}
+
+//Mixer
+crafting.addShaped("gregtech:mixer.ulv", metaitem('mixer.steam'), [
+	[ore('blockGlass'), ore('rotorBronze'), ore('blockGlass')],
+	[ore('blockGlass'), ore('stickBronze'), ore('blockGlass')],
+	[ore('pipeSmallFluidBronze'), item('gregtech:steam_casing'), ore('pipeSmallFluidBronze')]
+])
+
+//Coagulation Tank
+crafting.addShaped("gregtech:coagulation_tank", metaitem('coagulation_tank'), [
+	[ore('plankTreatedWood'), ore('rotorSteel'), ore('plankTreatedWood')],
+	[ore('craftingToolSaw'), ore('pipeLargeFluidTreatedWood'), ore('craftingToolHardHammer')],
+	[ore('plankTreatedWood'), ore('boltSteel'), ore('plankTreatedWood')]
+])
+crafting.addShaped("gregtech:coagulation_tank_wall", item('susy:coagulation_tank_wall'), [
+	[ore('plankTreatedWood'), ore('boltSteel'), ore('plankTreatedWood')],
+	[ore('craftingToolSaw'), ore('frameGtTreatedWood'), ore('craftingToolHardHammer')],
+	[ore('plankTreatedWood'), ore('boltSteel'), ore('plankTreatedWood')]
+])
+
+//MetaTileEntityLoader.registerMachineRecipe(true, SuSyMetaTileEntities.VULCANIZING_PRESS, "WPW", "CHC", "WEW", 'H' as char, HULL, 'E' as char, CIRCUIT, 'W' as char, CABLE, 'C' as char, COIL_HEATING_DOUBLE, 'P' as char, PISTON)
+//MetaTileEntityLoader.registerMachineRecipe(true, SuSyMetaTileEntities.ROASTER, "ERE", "CHC", "WCW", 'H' as char, HULL, 'E' as char, CIRCUIT, 'W' as char, CABLE, 'C' as char, COIL_HEATING_DOUBLE, 'R' as char, ROTOR)
+//MetaTileEntityLoader.registerMachineRecipe(true, SuSyMetaTileEntities.LATEX_COLLECTOR, "ETE", "GPG", "WHW", 'H' as char, HULL, 'E' as char, CIRCUIT, 'W' as char, CABLE, 'T' as char, new UnificationEntry(OrePrefix.toolHeadDrill, Materials.Steel), 'P' as char, PUMP, 'G' as char, GLASS)
+
+//ModHandler.addShapedRecipe(true, "roaster_bronze", SuSyMetaTileEntities.ROASTER_BRONZE.getStackForm(), "XRX", "XMX", "XFX", 'M' as char, MetaBlocks.STEAM_CASING.getItemVariant(SteamCasingType.BRONZE_BRICKS_HULL), 'X' as char, new UnificationEntry(OrePrefix.pipeSmallFluid, Materials.Bronze), 'F' as char, OreDictNames.craftingFurnace, 'R' as char, new UnificationEntry(OrePrefix.rotor, Materials.Bronze))
+//ModHandler.addShapedRecipe(true, "vulcanizing_press_bronze", SuSyMetaTileEntities.VULCANIZING_PRESS_BRONZE.getStackForm(), "SRS", "XPX", "XMX", 'M' as char, MetaBlocks.STEAM_CASING.getItemVariant(SteamCasingType.BRONZE_BRICKS_HULL), 'X' as char, new UnificationEntry(OrePrefix.pipeSmallFluid, Materials.Bronze), 'P' as char, new UnificationEntry(OrePrefix.plate, Materials.Steel), 'S' as char, new UnificationEntry(OrePrefix.springSmall, Materials.Steel), 'R' as char, new UnificationEntry(OrePrefix.stick, Materials.Steel))
+//ModHandler.addShapedRecipe(true, "latex_collector_bronze", SuSyMetaTileEntities.LATEX_COLLECTOR_BRONZE.getStackForm(), " T ", "GPG", "XMX", 'M' as char, MetaBlocks.STEAM_CASING.getItemVariant(SteamCasingType.BRONZE_HULL), 'X' as char, new UnificationEntry(OrePrefix.pipeSmallFluid, Materials.Bronze), 'G' as char, new UnificationEntry(OrePrefix.blockGlass), 'P' as char, new UnificationEntry(OrePrefix.rotor, Materials.Steel), 'T' as char, new UnificationEntry(OrePrefix.toolHeadDrill, Materials.Steel))
+//ModHandler.addShapedRecipe(true, "mixer_bronze", SuSyMetaTileEntities.MIXER_BRONZE.getStackForm(), "GPG", "GRG", "XMX", 'M' as char, MetaBlocks.STEAM_CASING.getItemVariant(SteamCasingType.BRONZE_HULL), 'X' as char, new UnificationEntry(OrePrefix.pipeSmallFluid, Materials.Bronze), 'G' as char, new UnificationEntry(OrePrefix.blockGlass), 'P' as char, new UnificationEntry(OrePrefix.rotor, Materials.Bronze), 'R' as char, new UnificationEntry(OrePrefix.stick, Materials.Bronze))
+//ModHandler.addShapedRecipe(true, "coagulation_tank_wall", SuSyBlocks.COAGULATION_TANK_WALL.getItemVariant(CoagulationTankWallType.WOODEN_COAGULATION_TANK_WALL), "WBW", "sPh", "WBW", 'W' as char, MetaBlocks.PLANKS.getItemVariant(BlockGregPlanks.BlockType.TREATED_PLANK), 'P' as char, new UnificationEntry(OrePrefix.frameGt, Materials.TreatedWood), 'B' as char, new UnificationEntry(OrePrefix.bolt, Materials.Steel));
+//ModHandler.addShapedRecipe(true, "coagulation_tank", SuSyMetaTileEntities.COAGULATION_TANK.getStackForm(), "WRW", "sPh", "WBW", 'W' as char, MetaBlocks.PLANKS.getItemVariant(BlockGregPlanks.BlockType.TREATED_PLANK), 'P' as char, new UnificationEntry(OrePrefix.pipeLargeFluid, Materials.TreatedWood), 'B' as char, new UnificationEntry(OrePrefix.bolt, Materials.Steel), 'R' as char, new UnificationEntry(OrePrefix.rotor, Materials.Steel));

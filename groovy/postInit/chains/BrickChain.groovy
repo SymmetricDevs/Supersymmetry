@@ -61,7 +61,7 @@ crafting.addShaped('slaked_lime_manual', metaitem('slaked_lime') * 8, [
 
 crafting.addShaped('slaked_lime_manual', metaitem('slaked_lime') * 8, [
     [metaitem('dustQuicklime'),metaitem('dustQuicklime'),metaitem('dustQuicklime')],
-    [metaitem('dustQuicklime'),item('notreepunching:ceramic_bucket').withNbt(["Fluid":["FluidName": "water", "Amount": 1000]]),metaitem('dustQuicklime')],
+    [metaitem('dustQuicklime'),fluid('water') * 1000, metaitem('dustQuicklime')],
     [metaitem('dustQuicklime'),metaitem('dustQuicklime'),metaitem('dustQuicklime')]])
 
 CompressBrickRecipes('dustFireclay', 'compressed.fireclay')
@@ -77,5 +77,6 @@ def mudbrick_mix_ingredients = [
 
 crafting.addShapeless('ManualMudbrickMix',metaitem('mudbrick_mix') * 2, mudbrick_mix_ingredients) 
 crafting.addShapeless('StrawCutting',metaitem('straw') * 2, [ore('craftingToolKnife'), item('notreepunching:grass_fiber')]) 
+crafting.addShapeless('StrawCuttingNTP',metaitem('straw') * 2, [ore('toolWeakKnife').reuse(), item('notreepunching:grass_fiber')]) 
 
 CompressBrickRecipes('mudbrick_mix', 'brick.adobe')

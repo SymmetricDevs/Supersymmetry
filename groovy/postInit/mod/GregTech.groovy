@@ -23,6 +23,11 @@ crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bron
     [ore('craftingToolScrewdriver'), ore('stickBronze'), ore('screwBronze')]
 ])
 
+crafting.addShaped('gregtech:steam_macerator', metaitem('steam_macerator_bronze'), [
+    [metaitem('toolHeadBuzzSawSteel'), metaitem('pipeSmallFluidBronze'), metaitem('toolHeadBuzzSawSteel')],
+    [metaitem('pipeSmallFluidBronze'), item('gregtech:steam_casing'), metaitem('pipeSmallFluidBronze')],
+    [metaitem('steam.piston'), metaitem('pipeSmallFluidBronze'), metaitem('steam.piston')]
+])
 
 crafting.addShaped('gregtech:co_bronze', metaitem('coke_oven'), [
     [item('gregtech:metal_casing:8'), ore('plateBronze'), item('gregtech:metal_casing:8')],
@@ -36,11 +41,71 @@ crafting.addShaped('gregtech:drum_bronze', metaitem('drum.wood'), [
     [ore('plankWood'), ore('stickLongBronze'), ore('plankWood')]
 ])
 
-crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
-        [ore('craftingToolFile'), null, null],
-        [null, ore('ingotRubber'), null],
-        [null, null, null]
+crafting.addShaped("pig_iron_tiny_pile_manual", metaitem('dustTinyPigIron'), [
+        [ore('craftingToolHardHammer'), null],
+        [null, metaitem('nuggetPigIron')]
 ]);
+
+crafting.addShaped("gregtech:steam_piston", metaitem('steam.piston'), [
+    [ore('plateBronze'), ore('plateBronze'), ore('plateBronze')],
+    [ore('pipeTinyFluidBronze'), ore('stickBronze'), ore('stickBronze')],
+    [ore('pipeTinyFluidBronze'), ore('craftingToolHardHammer'), ore('gearSmallBronze')]
+])
+
+crafting.addShaped("gregtech:steam_motor", metaitem('steam.motor'), [
+    [ore('plateBronze'), ore('stickBronze'), ore('plateBronze')],
+    [metaitem('gearSmallBronze'), ore('stickBronze'), metaitem('gearSmallBronze')],
+    [metaitem('steam.piston'), ore('stickBronze'), metaitem('steam.piston')]
+]);
+
+crafting.addShaped("gregtech:steam_pump", metaitem('steam.pump'), [
+    [ore('screwBronze'), ore('rotorBronze'), ore('ringIron')],
+    [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
+    [ore('ringIron'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
+])
+
+
+crafting.replaceShaped("gregtech:steam_extractor_bronze", metaitem('steam_extractor_bronze'), [
+    [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
+    [metaitem('steam.piston'), item('gregtech:steam_casing'), ore('blockGlass')],
+    [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
+])
+
+crafting.replaceShaped("gregtech:steam_vacuum_chamber", metaitem('vacuum_chamber.steam'), [
+    [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
+    [metaitem('steam.pump'), item('gregtech:steam_casing'), ore('blockGlass')],
+    [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
+])
+
+crafting.replaceShaped('gregtech:steam_macerator_bronze', metaitem('steam_macerator_bronze'), [
+    [ore('gemDiamond'), metaitem('pipeSmallFluidBronze'), ore('gemDiamond')],
+    [metaitem('pipeSmallFluidBronze'), item('gregtech:steam_casing'), metaitem('pipeSmallFluidBronze')],
+    [metaitem('steam.piston'), metaitem('pipeSmallFluidBronze'), metaitem('steam.piston')]
+])
+
+crafting.replaceShaped("gregtech:steam_compressor_bronze", metaitem('steam_compressor_bronze'), [
+    [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
+    [metaitem('steam.piston'), item('gregtech:steam_casing'), metaitem('steam.piston')],
+    [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
+])
+
+crafting.replaceShaped("gregtech:steam_hammer_bronze", metaitem('steam_hammer_bronze'), [
+    [ore('pipeSmallFluidBronze'), metaitem('steam.piston'), ore('pipeSmallFluidBronze')],
+    [ore('pipeSmallFluidBronze'), item('gregtech:steam_casing'), ore('pipeSmallFluidBronze')],
+    [ore('pipeSmallFluidBronze'), ore('craftingAnvil'), ore('pipeSmallFluidBronze')]
+])
+
+crafting.replaceShaped("gregtech:steam_rock_breaker_bronze", metaitem('steam_rock_breaker_bronze'), [
+    [metaitem('steam.piston'), ore('pipeSmallFluidBronze'), metaitem('steam.piston')],
+    [ore('pipeSmallFluidBronze'), item('gregtech:steam_casing'), ore('pipeSmallFluidBronze')],
+    [ore('gemDiamond'), ore('pipeSmallFluidBronze'), ore('gemDiamond')]
+])
+
+// crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
+//     [ore('craftingToolFile'), null, null],
+//     [null, ore('ingotRubber'), null],
+//     [null, null, null]
+// ]);
 
 //Manual chad for early paper
 
