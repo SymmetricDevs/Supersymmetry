@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "location": "multiblocked:ore_sorter",
+  "version": 2,
+  "location": "multiblocked:quencher",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -23,14 +23,14 @@
     },
     "idle": {
       "renderer": {
-        "modelName": "ore_sorter",
+        "modelName": "quencher",
         "type": "geo"
       },
       "parent": "unformed"
     },
     "working": {
       "renderer": {
-        "modelName": "ore_sorter",
+        "modelName": "quencher",
         "type": "geo"
       },
       "parent": "idle"
@@ -41,38 +41,33 @@
   },
   "basePattern": {
     "structureDir": [
-      "FRONT",
+      "RIGHT",
       "UP",
-      "LEFT"
+      "FRONT"
     ],
     "pattern": [
       [
+        "GGBBF",
+        "GG   ",
+        "     "
+      ],
+      [
+        "GABC ",
+        "GD D ",
+        " CDD "
+      ],
+      [
+        "GGB F",
+        "GG   ",
+        "     "
+      ],
+      [
         "  AAA",
-        "  ABA",
         "  AAA",
         "     "
       ],
       [
-        "C BBB",
-        "C B B",
-        "C BBB",
-        "DDDDD"
-      ],
-      [
-        "  BB@",
-        "  B B",
-        "  BBB",
-        "     "
-      ],
-      [
-        "C BBB",
-        "C B B",
-        "C BBB",
-        "DDDDD"
-      ],
-      [
-        "  AAA",
-        "  ABA",
+        "  A@A",
         "  AAA",
         "     "
       ]
@@ -103,67 +98,46 @@
       "A": {
         "states": [
           {
-            "id": "gregtech:meta_block_frame_20",
+            "id": "gregtech:metal_casing",
             "meta": 4
           }
         ],
         "type": "states",
-        "disableRenderFormed": true
+	"disableRenderFormed": true
       },
       "controller": {
-        "location": "multiblocked:ore_sorter",
+        "location": "multiblocked:quencher",
         "type": "component"
       },
       "B": {
         "states": [
           {
-            "id": "gregtech:metal_casing",
-            "meta": 4
+            "id": "gregtech:boiler_casing",
+            "meta": 1
           }
         ],
         "type": "states",
-        "disableRenderFormed": true
+	"disableRenderFormed": true
       },
       "C": {
         "states": [
           {
-            "id": "gregtech:metal_casing",
-            "meta": 3
+            "id": "gregtech:turbine_casing",
+            "meta": 1
           }
         ],
         "type": "states",
-        "disableRenderFormed": true
-      },
-      "e_port": {
-        "capability": "gtce_energy",
-        "type": "capability",
-        "disableRenderFormed": true,
-        "minCount": 1,
-        "maxCount": 2
+	"disableRenderFormed": true
       },
       "D": {
         "states": [
           {
-            "id": "gregtech:meta_block_frame_0",
-            "meta": 2
+            "id": "gregtech:meta_block_frame_20",
+            "meta": 4
           }
         ],
         "type": "states",
-        "disableRenderFormed": true
-      },
-      "f_port": {
-        "blocks": [
-          {
-            "id": "multiblocked:fluid_input"
-          },
-          {
-            "id": "multiblocked:fluid_output"
-          }
-        ],
-        "type": "blocks",
-        "disableRenderFormed": true,
-        "minCount": 0,
-        "maxCount": 4
+	"disableRenderFormed": true
       },
       "i_port": {
         "blocks": [
@@ -177,7 +151,28 @@
         "type": "blocks",
         "disableRenderFormed": true,
         "minCount": 2,
-        "maxCount": 4
+        "maxCount": 2
+      },
+      "e_port": {
+        "capability": "gtce_energy",
+        "type": "capability",
+        "disableRenderFormed": true,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      "f_port": {
+        "blocks": [
+          {
+            "id": "multiblocked:fluid_input"
+          },
+          {
+            "id": "multiblocked:fluid_output"
+          }
+        ],
+        "type": "blocks",
+        "disableRenderFormed": true,
+        "minCount": 2,
+        "maxCount": 2
       },
       "any": {
         "type": "any"
@@ -194,16 +189,21 @@
         "A"
       ],
       "B": [
-        "B",
-        "e_port",
-        "i_port"
+        "B"
       ],
       "C": [
-        "C",
-        "f_port"
+        "C"
       ],
       "D": [
         "D"
+      ],
+      "F": [
+        "f_port"
+      ],
+      "G": [
+        "A",
+	"i_port",
+	"e_port"
       ]
     }
   }

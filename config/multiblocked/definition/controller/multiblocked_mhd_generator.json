@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "location": "multiblocked:ore_sorter",
+  "version": 2,
+  "location": "multiblocked:mhd_generator",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -23,16 +23,12 @@
     },
     "idle": {
       "renderer": {
-        "modelName": "ore_sorter",
+        "modelName": "mhd_generator",
         "type": "geo"
       },
       "parent": "unformed"
     },
     "working": {
-      "renderer": {
-        "modelName": "ore_sorter",
-        "type": "geo"
-      },
       "parent": "idle"
     },
     "suspend": {
@@ -47,45 +43,28 @@
     ],
     "pattern": [
       [
-        "  AAA",
-        "  ABA",
-        "  AAA",
-        "     "
+        "       ",
+        "  AAA  ",
+        "  AEA  ",
+        "  AAA  ",
+        "       "
       ],
       [
-        "C BBB",
-        "C B B",
-        "C BBB",
-        "DDDDD"
+        "A BBB A",
+        "CBAAAB@",
+        "DBAAABA",
+        " BAAAB ",
+        "  BBB  "
       ],
       [
-        "  BB@",
-        "  B B",
-        "  BBB",
-        "     "
-      ],
-      [
-        "C BBB",
-        "C B B",
-        "C BBB",
-        "DDDDD"
-      ],
-      [
-        "  AAA",
-        "  ABA",
-        "  AAA",
-        "     "
+        "       ",
+        "  AAA  ",
+        "  AEA  ",
+        "  AAA  ",
+        "       "
       ]
     ],
     "aisleRepetitions": [
-      [
-        1,
-        1
-      ],
-      [
-        1,
-        1
-      ],
       [
         1,
         1
@@ -103,32 +82,22 @@
       "A": {
         "states": [
           {
-            "id": "gregtech:meta_block_frame_20",
-            "meta": 4
+            "id": "gregtech:metal_casing",
+            "meta": 7
           }
         ],
         "type": "states",
         "disableRenderFormed": true
       },
       "controller": {
-        "location": "multiblocked:ore_sorter",
+        "location": "multiblocked:mhd_generator",
         "type": "component"
       },
       "B": {
         "states": [
           {
-            "id": "gregtech:metal_casing",
-            "meta": 4
-          }
-        ],
-        "type": "states",
-        "disableRenderFormed": true
-      },
-      "C": {
-        "states": [
-          {
-            "id": "gregtech:metal_casing",
-            "meta": 3
+            "id": "gregtech:fusion_casing",
+            "meta": 2
           }
         ],
         "type": "states",
@@ -139,45 +108,29 @@
         "type": "capability",
         "disableRenderFormed": true,
         "minCount": 1,
-        "maxCount": 2
+        "maxCount": 1
       },
-      "D": {
-        "states": [
-          {
-            "id": "gregtech:meta_block_frame_0",
-            "meta": 2
-          }
-        ],
-        "type": "states",
-        "disableRenderFormed": true
-      },
-      "f_port": {
+      "f_input": {
         "blocks": [
           {
             "id": "multiblocked:fluid_input"
-          },
+          }
+        ],
+        "type": "blocks",
+        "disableRenderFormed": true,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      "f_output": {
+        "blocks": [
           {
             "id": "multiblocked:fluid_output"
           }
         ],
         "type": "blocks",
         "disableRenderFormed": true,
-        "minCount": 0,
-        "maxCount": 4
-      },
-      "i_port": {
-        "blocks": [
-          {
-            "id": "multiblocked:item_input"
-          },
-          {
-            "id": "multiblocked:item_output"
-          }
-        ],
-        "type": "blocks",
-        "disableRenderFormed": true,
-        "minCount": 2,
-        "maxCount": 4
+        "minCount": 1,
+        "maxCount": 1
       },
       "any": {
         "type": "any"
@@ -194,16 +147,17 @@
         "A"
       ],
       "B": [
-        "B",
-        "e_port",
-        "i_port"
+        "B"
       ],
       "C": [
-        "C",
-        "f_port"
+        "e_port"
       ],
       "D": [
-        "D"
+        "f_output"
+      ],
+      "E": [
+        "f_input",
+	"A"
       ]
     }
   }
