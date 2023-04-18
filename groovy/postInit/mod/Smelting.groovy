@@ -91,7 +91,9 @@ def itemSmeltingRemovals = [
 		//item('minecraft:clay_ball'),
 		item('techguns:itemshared', 38),
 		item('techguns:itemshared', 99),
-		item('techguns:itemshared', 46)
+		item('techguns:itemshared', 46),
+		item('techguns:itemshared', 95),
+		item('techguns:itemshared', 96)
 ]
 
 for (item in itemSmeltingRemovals) {

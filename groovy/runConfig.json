@@ -1,5 +1,5 @@
 {
-  "packName": "supersymmetry",
+  "packName": "Supersymmetry",
   "packId": "supersymmetry",
   "version": "1.0.0",
   "debug": false,
@@ -22,7 +22,7 @@
       "preInit/"
     ],
     "postInit": [
-      "prePostInit",
+      "prePostInit/",
       "globals/",
       "postInit/"
     ]
