@@ -152,6 +152,7 @@ import supersymmetry.common.blocks.BlockCoagulationTankWall.CoagulationTankWallT
 import gregtech.common.blocks.wood.*
 */
 
+log.infoMC("Adding Vulcanizing Press Craft")
 
 //Vulcanizing Press
 crafting.addShaped("gregtech:vulcanizing_press.ulv", metaitem('vulcanizing_press.steam'), [
@@ -180,6 +181,8 @@ crafting.addShaped("gregtech:vulcanizing_press.ev", metaitem('vulcanizing_press.
 	[ore('cableGtSingleAluminium'), ore('circuitEv'), ore('cableGtSingleAluminium')]
 ])
 
+log.infoMC("Adding Roaster Craft")
+
 //Roaster
 crafting.addShaped("gregtech:roaster.ulv", metaitem('roaster.steam'), [
 	[ore('pipeSmallFluidBronze'), ore('rotorBronze'), ore('pipeSmallFluidBronze')],
@@ -194,6 +197,8 @@ for (i = 1; i <= 8; i++) {
 		[tieredCables[i], tieredWires[i], tieredCables[i]]
 	])
 }
+
+log.infoMC("Adding Latex Collector Craft")
 
 //Latex Collector
 crafting.addShaped("gregtech:latex_collector.ulv", metaitem('latex_collector.bronze'), [
@@ -210,12 +215,16 @@ for (i = 1; i <= 4; i++) {
 	])
 }
 
+log.infoMC("Adding Steam Mixer Craft")
+
 //Mixer
 crafting.addShaped("gregtech:mixer.ulv", metaitem('mixer.steam'), [
 	[ore('blockGlass'), ore('rotorBronze'), ore('blockGlass')],
 	[ore('blockGlass'), ore('stickBronze'), ore('blockGlass')],
 	[ore('pipeSmallFluidBronze'), item('gregtech:steam_casing'), ore('pipeSmallFluidBronze')]
 ])
+
+log.infoMC("Adding Coagulation Tank Craft")
 
 //Coagulation Tank
 crafting.addShaped("gregtech:coagulation_tank", metaitem('coagulation_tank'), [
