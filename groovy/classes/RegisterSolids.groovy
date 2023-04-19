@@ -134,6 +134,12 @@ class RegisterSolids {
                 .colorAverage()
                 .build();
 
+        new Material.Builder(32039, 'iron_ii_chloride')
+                .dust()
+                .components(Iron, 1, Chlorine, 2)
+                .color(0x9dad37)
+                .build()
+
         log.infoMC('Finished registering solids')
     }
 }
