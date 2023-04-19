@@ -19,6 +19,7 @@ MIXER = recipemap('mixer')
 DRYER = recipemap('dryer')
 SIFTER = recipemap('sifter')
 CENTRIFUGE = recipemap('centrifuge')
+PYROLYSE = recipemap('pyrolyse_oven')
 
 def COAL_SOURCES = [
     "dustCarbon",
@@ -542,3 +543,59 @@ for (int i = 0; i < CHEMICAL_DYES.length; i++) {
     .EUt(24)
     .buildAndRegister()
 }
+
+// Tetrafluoroethylene
+
+BCR.recipeBuilder()
+.fluidInputs(fluid('chloroform') * 50)
+.fluidInputs(fluid('hydrogen_fluoride') * 100)
+.fluidOutputs(fluid('acidic_chlorodifluoromethane') * 150)
+.duration(5)
+.EUt(30)
+.buildAndRegister()
+
+PYROLYSE.recipeBuilder()
+.fluidInputs(fluid('acidic_chlorodifluoromethane') * 6000)
+.fluidOutputs(fluid('acidic_tetrafluoroethylene') * 5000)
+.duration(200)
+.EUt(30)
+.buildAndRegister()
+//TODO: IDFK Think of a fucking solution lol
+// MIXER.recipeBuilder()
+// .fluidInputs(fluid('acidic_tetrafluoroethylene') * 5000)
+// .fluidInputs(fluid('water') * 4000)
+// .fluidOutputs(fluid('tetrafluoroethylene') * 1000)
+// .fluidOutputs(fluid('hydrochloric_acid') * 4000)
+// .duration(200)
+// .EUt(30)
+// .buildAndRegister()
+
+// Tetranitromethane
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('nitric_acid') * 150)
+.fluidInputs(fluid('acetylene') * 50)
+.fluidOutputs(fluid('trinitromethane_solution') * 150)
+.fluidOutputs(fluid('carbon_monoxide') * 50)
+.duration(5)
+.EUt(30)
+.buildAndRegister()
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('trinitromethane_solution') * 150)
+.fluidInputs(fluid('nitration_mixture') * 100)
+.fluidOutputs(fluid('tetranitromethane_solution') * 250)
+.duration(5)
+.EUt(30)
+.buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+.fluidInputs(fluid('tetranitromethane_solution') * 5000)
+.fluidOutputs(fluid('tetranitromethane') * 1000)
+.fluidOutputs(fluid('water') * 3000)
+.fluidOutputs(fluid('sulfuric_acid') * 1000)
+.duration(160)
+.EUt(30)
+.buildAndRegister()
+
+// Polydimethylsiloxane
