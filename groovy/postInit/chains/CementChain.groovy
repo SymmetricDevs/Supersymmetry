@@ -62,7 +62,7 @@ for (fuel in fuels) {
 
         SINTERING_RECIPES.recipeBuilder()
         .inputs(ore('dustClay'))
-        .inputs(metaitem('limestone.dust'))
+        .inputs(metaitem('dustLimestone'))
         .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
         .outputs(metaitem('hot.cement.clinker'))
         .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
@@ -76,7 +76,7 @@ for (fuel in fuels) {
 
             SINTERING_RECIPES.recipeBuilder()
             .inputs(ore('dustClay'))
-            .inputs(metaitem('limestone.dust'))
+            .inputs(metaitem('dustLimestone'))
             .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
             .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
             .outputs(metaitem('hot.cement.clinker'))
