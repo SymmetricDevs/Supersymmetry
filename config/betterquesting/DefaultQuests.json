@@ -3049,6 +3049,76 @@
     },
     "36:10": {
       "preRequisites:11": [
+        105
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §7LV Conveyor Module §ris the fourth machine component you will need. \n\nIt can be also used as a cover to move items around. \n\nThe Conveyor Module, when placed on a machine, will transfer items to the block adjacent to the face it’s on. You can configure it to import or export items from the machine or item pipe you place it on.\n\nVoltages are irrelevant when placing covers on machines, so, for example, you can safely put an LV conveyor module on HV machines and vice versa.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 157,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Conveyor Module",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 36,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 157,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "37:10": {
+      "preRequisites:11": [
         31
       ],
       "properties:10": {
@@ -3117,7 +3187,7 @@
         }
       }
     },
-    "37:10": {
+    "38:10": {
       "preRequisites:11": [
         31
       ],
@@ -3169,7 +3239,7 @@
         }
       }
     },
-    "38:10": {
+    "39:10": {
       "preRequisites:11": [
         75
       ],
@@ -3221,7 +3291,7 @@
         }
       }
     },
-    "39:10": {
+    "40:10": {
       "preRequisites:11": [
         75
       ],
@@ -3273,7 +3343,7 @@
         }
       }
     },
-    "40:10": {
+    "41:10": {
       "preRequisites:11": [
         49
       ],
@@ -3325,7 +3395,7 @@
         }
       }
     },
-    "41:10": {
+    "42:10": {
       "preRequisites:11": [
         32
       ],
@@ -3417,7 +3487,7 @@
         }
       }
     },
-    "42:10": {
+    "43:10": {
       "preRequisites:11": [
         34
       ],
@@ -3509,7 +3579,7 @@
         }
       }
     },
-    "43:10": {
+    "44:10": {
       "preRequisites:11": [
         38
       ],
@@ -3594,7 +3664,7 @@
         }
       }
     },
-    "44:10": {
+    "45:10": {
       "preRequisites:11": [
         44
       ],
@@ -3646,7 +3716,7 @@
         }
       }
     },
-    "45:10": {
+    "46:10": {
       "preRequisites:11": [
         45
       ],
@@ -3711,7 +3781,59 @@
         }
       }
     },
-    "46:10": {
+    "47:10": {
+      "preRequisites:11": [
+        100
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §7LV Bending Machine §ris a better method for making Plates and Foils. It processes §61 Ingot into 1 Plate§r, unlike the Steam Forge Hammer which processed 3 Ingots into 2 Plates. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 140,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Bending Machine",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 47,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 140,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "48:10": {
       "preRequisites:11": [
         41
       ],
@@ -3781,7 +3903,7 @@
         }
       }
     },
-    "47:10": {
+    "49:10": {
       "preRequisites:11": [
         35
       ],
@@ -3839,7 +3961,7 @@
         }
       }
     },
-    "48:10": {
+    "50:10": {
       "preRequisites:11": [
         48
       ],
@@ -3891,7 +4013,7 @@
         }
       }
     },
-    "49:10": {
+    "51:10": {
       "preRequisites:11": [
         26,
         50
@@ -3962,7 +4084,7 @@
         }
       }
     },
-    "50:10": {
+    "52:10": {
       "preRequisites:11": [
         51
       ],
@@ -4032,7 +4154,7 @@
         }
       }
     },
-    "51:10": {
+    "53:10": {
       "preRequisites:11": [
         46,
         50
@@ -4118,7 +4240,7 @@
         }
       }
     },
-    "52:10": {
+    "54:10": {
       "preRequisites:11": [
         78
       ],
@@ -4188,7 +4310,7 @@
         }
       }
     },
-    "53:10": {
+    "55:10": {
       "preRequisites:11": [
         33
       ],
@@ -4236,7 +4358,7 @@
         }
       }
     },
-    "54:10": {
+    "56:10": {
       "preRequisites:11": [
         31
       ],
@@ -4301,7 +4423,7 @@
         }
       }
     },
-    "55:10": {
+    "57:10": {
       "preRequisites:11": [
         31
       ],
@@ -4353,7 +4475,7 @@
         }
       }
     },
-    "56:10": {
+    "58:10": {
       "preRequisites:11": [
         31
       ],
@@ -4405,7 +4527,7 @@
         }
       }
     },
-    "57:10": {
+    "59:10": {
       "preRequisites:11": [
         31
       ],
@@ -4457,7 +4579,59 @@
         }
       }
     },
-    "58:10": {
+    "60:10": {
+      "preRequisites:11": [
+        105
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §7LV Wiremill §ris a machine that processes §61 Ingot §rinto §62 Wires§r automatically. It can also process a Wire into §64 Fine Wires§r. It is §cmuch more efficient §rthan making wires manually.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 620,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Wiremill",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 60,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 620,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "61:10": {
       "preRequisites:11": [
         30
       ],
@@ -4552,7 +4726,7 @@
         }
       }
     },
-    "59:10": {
+    "62:10": {
       "preRequisites:11": [
         30
       ],
@@ -4647,7 +4821,7 @@
         }
       }
     },
-    "60:10": {
+    "63:10": {
       "preRequisites:11": [
         31
       ],
@@ -4692,29 +4866,7 @@
         }
       },
       "questID:3": 63,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 2,
-              "Damage:2": 109,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "techguns:itemshared"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -4764,7 +4916,7 @@
         }
       }
     },
-    "61:10": {
+    "64:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -4837,7 +4989,7 @@
         }
       }
     },
-    "62:10": {
+    "65:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -4925,7 +5077,7 @@
         }
       }
     },
-    "63:10": {
+    "66:10": {
       "preRequisites:11": [
         54,
         64,
@@ -4997,7 +5149,7 @@
         }
       }
     },
-    "64:10": {
+    "67:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -5046,7 +5198,7 @@
         }
       }
     },
-    "65:10": {
+    "68:10": {
       "preRequisites:11": [
         67
       ],
@@ -5097,7 +5249,7 @@
         }
       }
     },
-    "66:10": {
+    "69:10": {
       "preRequisites:11": [
         68
       ],
@@ -5148,7 +5300,7 @@
         }
       }
     },
-    "67:10": {
+    "70:10": {
       "preRequisites:11": [
         67
       ],
@@ -5199,7 +5351,7 @@
         }
       }
     },
-    "68:10": {
+    "71:10": {
       "preRequisites:11": [
         53,
         73
@@ -5276,7 +5428,7 @@
         }
       }
     },
-    "69:10": {
+    "72:10": {
       "preRequisites:11": [
         45
       ],
@@ -5337,7 +5489,7 @@
         }
       }
     },
-    "70:10": {
+    "73:10": {
       "preRequisites:11": [
         72
       ],
@@ -5407,7 +5559,7 @@
         }
       }
     },
-    "71:10": {
+    "74:10": {
       "preRequisites:11": [
         87
       ],
@@ -5477,7 +5629,7 @@
         }
       }
     },
-    "72:10": {
+    "75:10": {
       "preRequisites:11": [
         31
       ],
@@ -5547,7 +5699,7 @@
         }
       }
     },
-    "73:10": {
+    "76:10": {
       "preRequisites:11": [
         0
       ],
@@ -5595,7 +5747,7 @@
         }
       }
     },
-    "74:10": {
+    "77:10": {
       "preRequisites:11": [
         79
       ],
@@ -5665,7 +5817,7 @@
         }
       }
     },
-    "75:10": {
+    "78:10": {
       "preRequisites:11": [
         77,
         43
@@ -5718,7 +5870,7 @@
         }
       }
     },
-    "76:10": {
+    "79:10": {
       "preRequisites:11": [
         42
       ],
@@ -5794,7 +5946,7 @@
         }
       }
     },
-    "77:10": {
+    "80:10": {
       "preRequisites:11": [
         39
       ],
@@ -5904,7 +6056,7 @@
         }
       }
     },
-    "78:10": {
+    "81:10": {
       "preRequisites:11": [
         80
       ],
@@ -6006,7 +6158,7 @@
         }
       }
     },
-    "79:10": {
+    "82:10": {
       "preRequisites:11": [
         80
       ],
@@ -6092,7 +6244,7 @@
         }
       }
     },
-    "80:10": {
+    "83:10": {
       "preRequisites:11": [
         80
       ],
@@ -6189,7 +6341,7 @@
         }
       }
     },
-    "81:10": {
+    "84:10": {
       "preRequisites:11": [
         83
       ],
@@ -6267,7 +6419,7 @@
         }
       }
     },
-    "82:10": {
+    "85:10": {
       "preRequisites:11": [
         80
       ],
@@ -6357,7 +6509,7 @@
         }
       }
     },
-    "83:10": {
+    "86:10": {
       "preRequisites:11": [
         80
       ],
@@ -6444,7 +6596,7 @@
         }
       }
     },
-    "84:10": {
+    "87:10": {
       "preRequisites:11": [
         7
       ],
@@ -6496,7 +6648,7 @@
         }
       }
     },
-    "85:10": {
+    "88:10": {
       "preRequisites:11": [
         5
       ],
@@ -6566,7 +6718,7 @@
         }
       }
     },
-    "86:10": {
+    "89:10": {
       "preRequisites:11": [
         20
       ],
@@ -6636,7 +6788,7 @@
         }
       }
     },
-    "87:10": {
+    "90:10": {
       "preRequisites:11": [
         12
       ],
@@ -6706,7 +6858,7 @@
         }
       }
     },
-    "88:10": {
+    "91:10": {
       "preRequisites:11": [
         149,
         20
@@ -6771,7 +6923,7 @@
         }
       }
     },
-    "89:10": {
+    "92:10": {
       "preRequisites:11": [
         31
       ],
@@ -6845,7 +6997,7 @@
         }
       }
     },
-    "90:10": {
+    "93:10": {
       "preRequisites:11": [
         87
       ],
@@ -6930,7 +7082,7 @@
         }
       }
     },
-    "91:10": {
+    "94:10": {
       "preRequisites:11": [
         75
       ],
@@ -7000,7 +7152,7 @@
         }
       }
     },
-    "92:10": {
+    "95:10": {
       "preRequisites:11": [
         94
       ],
@@ -7070,7 +7222,7 @@
         }
       }
     },
-    "93:10": {
+    "96:10": {
       "preRequisites:11": [
         12
       ],
@@ -7205,7 +7357,7 @@
         }
       }
     },
-    "94:10": {
+    "97:10": {
       "preRequisites:11": [
         50
       ],
@@ -7257,7 +7409,7 @@
         }
       }
     },
-    "95:10": {
+    "98:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -7306,14 +7458,66 @@
         }
       }
     },
-    "96:10": {
+    "99:10": {
       "preRequisites:11": [
-        104
+        36
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §7LV Electric Piston §ris a very important machine component. You will need A LOT of these, so try to craft like 16 of them at once, to save the pain.",
+          "desc:8": "The §6Assembler§r is maybe the most important electric machine of them all. It is required for assembling advanced parts that just aren\u0027t possible to do by hand. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 110,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Assembler",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 99,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 110,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "100:10": {
+      "preRequisites:11": [
+        105
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §7LV Electric Piston §ris a very important machine component. \n\nYou will need a lot of machine components while making LV machines. You should batch craft several Pistons at the same time to reduce the pain.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7331,10 +7535,10 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "You are going to hate this #1",
+          "name:8": "LV Electric Piston",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -7346,44 +7550,7 @@
         }
       },
       "questID:3": 100,
-      "rewards:9": {
-        "0:10": {
-          "choices:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 100,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotSilver",
-              "id:8": "gregtech:meta_ingot"
-            },
-            "1:10": {
-              "Count:3": 48,
-              "Damage:2": 55,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotLead",
-              "id:8": "gregtech:meta_ingot"
-            }
-          },
-          "index:3": 0,
-          "rewardID:8": "bq_standard:choice"
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -7413,14 +7580,14 @@
         }
       }
     },
-    "97:10": {
+    "101:10": {
       "preRequisites:11": [
-        104
+        100
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Another component you will need is the §7LV Robot Arm§r. It\u0027s used in the assembler. It\u0027s also extreme pain, and it\u0027s arguably the most painful one out of the four.\n\nIt\u0027s kind of like a conveyor but it can work with selected item slots, ",
+          "desc:8": "Another component you will need is the §7LV Robot Arm§r. It\u0027s used in the assembler. \n\nThe Robot Arm is a more advanced Conveyor Module. It lets you transfer items in specific batches, at specific rates, or keep a certain amount of items stocked in an inventory. \n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7438,10 +7605,10 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "You are going to hate this #3",
+          "name:8": "LV Robot Arm",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -7453,29 +7620,7 @@
         }
       },
       "questID:3": 101,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 85,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -7505,14 +7650,14 @@
         }
       }
     },
-    "98:10": {
+    "102:10": {
       "preRequisites:11": [
-        104
+        105
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §7LV Electric Pump §ris another important component that you will need to make for LV machines. \n\nIt also acts as a cover and it extracts fluids from tanks or things that don\u0027t auto output (like steam machines)",
+          "desc:8": "The §7LV Electric Pump §ris another important component used in LV machines. \n\nIt also acts as a cover and it extracts fluids from tanks or things that don\u0027t auto output (like steam machines).\n\n§6Covers §rare ways to give your machines extra behavior without using any extra block space. Covers are placed by §aright-click§ring the item on a face of a machine, and they can be removed by using a §6Crowbar§r. \n\n§6Pumps, Robot Arms and Conveyor Modules are all Covers§r.\n\nIf you are confused about covers, watch this video: §9https://www.youtube.com/watch?v\u003d0RsPoXjUags §r(Link doesn\u0027t work)",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7530,10 +7675,10 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "You are going to hate this #2",
+          "name:8": "LV Electric Pump",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -7545,50 +7690,7 @@
         }
       },
       "questID:3": 102,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 98,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            }
-          }
-        },
-        "1:10": {
-          "index:3": 1,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "minecraft:brick"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -7618,99 +7720,7 @@
         }
       }
     },
-    "99:10": {
-      "preRequisites:11": [
-        104
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §7LV Conveyor Module §ris the 4th and final basic component that you will need to make for machines. \n\nIt moves things in and out of machines, it\u0027s basically a conveyor.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 157,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "You are going to hate this #4",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 103,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 12,
-              "Damage:2": 70,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 157,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "100:10": {
+    "103:10": {
       "preRequisites:11": [
         130,
         66,
@@ -7764,7 +7774,7 @@
         }
       }
     },
-    "101:10": {
+    "104:10": {
       "preRequisites:11": [
         104
       ],
@@ -7803,7 +7813,7 @@
         }
       }
     },
-    "102:10": {
+    "105:10": {
       "preRequisites:11": [
         74
       ],
@@ -7903,7 +7913,7 @@
         }
       }
     },
-    "103:10": {
+    "106:10": {
       "preRequisites:11": [
         106
       ],
@@ -7955,7 +7965,7 @@
         }
       }
     },
-    "104:10": {
+    "107:10": {
       "preRequisites:11": [
         87
       ],
@@ -8025,7 +8035,7 @@
         }
       }
     },
-    "105:10": {
+    "108:10": {
       "preRequisites:11": [
         117
       ],
@@ -8077,7 +8087,7 @@
         }
       }
     },
-    "106:10": {
+    "109:10": {
       "preRequisites:11": [
         118
       ],
@@ -8141,7 +8151,7 @@
         }
       }
     },
-    "107:10": {
+    "110:10": {
       "preRequisites:11": [
         22
       ],
@@ -8211,7 +8221,7 @@
         }
       }
     },
-    "108:10": {
+    "111:10": {
       "preRequisites:11": [
         97
       ],
@@ -8263,7 +8273,7 @@
         }
       }
     },
-    "109:10": {
+    "112:10": {
       "preRequisites:11": [
         0
       ],
@@ -8311,7 +8321,7 @@
         }
       }
     },
-    "110:10": {
+    "113:10": {
       "preRequisites:11": [
         12
       ],
@@ -8381,293 +8391,7 @@
         }
       }
     },
-    "111:10": {
-      "preRequisites:11": [
-        105
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "In order to get aluminium ingots, you need an §6electric blast furnace§r. It\u0027s THE most important step to get to tier 3, so let\u0027s get started.\n\nFirst of all, the Electric Blast Furnace requires §6120 EU/t§r. That\u0027s 4 Amperes of LV, so you\u0027ll need 4 generators connected to the 2 energy hatches.\n\nThe Electric Blast Furnace is a Multiblock structure. It is §63x4x3§r blocks (3 long, 3 wide, and 4 high)\n\nWhen building your first EBF, you will need:\n\n1 Electric Blast Furnace\n16 Cupronickel Coil Blocks\n1 LV input bus (For inputting items and the control circuits)\n1 LV input hatch (For inputting fluids- any tier will work)\n1 LV output bus (For outputting items- you\u0027ll need at least an LV one)\n1 Maintenance Hatch (For doing maintenance. We\u0027ll explain how that works later, but if you have maintenance problems, your recipes will take longer) \n2 LV Energy Hatches (Each hatch accepts 2 amps)\n9-12 Heat Proof Machine Casings\n\n§\nYour cupronickel coil blocks can only reach a temperature of §71700 K§r, so you will need higher tier coils to do more advanced recipes. \n\nNow let\u0027s build it.\n\nStart by placing down your controller. It goes in the front middle of the bottom layer. After that, your input hatch, input bus, output bus, your maintenance hatch, and your energy hatches can go anywhere on the bottom layer. Finally, fill in any gaps with heat proof machine casings.\n\nThe second and third layers of the EBF are for your 16 cupronickel coils. The inside of the 3x3 should be hollow.\n\n§fFinally, fill in the rest of the top layer with heat proof machine casings.\n\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1001,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Electric Blast Furnace",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 166,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 64,
-              "Damage:2": 281,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "dustGreenSapphire",
-              "id:8": "gregtech:meta_dust"
-            },
-            "1:10": {
-              "Count:3": 16,
-              "Damage:2": 324,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            },
-            "2:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "oxygen"
-              }
-            },
-            "3:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "nitrogen"
-              }
-            },
-            "4:10": {
-              "Count:3": 64,
-              "Damage:2": 314,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 1001,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 16,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:wire_coil"
-            },
-            "2:10": {
-              "Count:3": 11,
-              "Damage:2": 2,
-              "OreDict:8": "",
-              "id:8": "gregtech:metal_casing"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 1151,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 1166,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "5:10": {
-              "Count:3": 1,
-              "Damage:2": 1181,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "6:10": {
-              "Count:3": 1,
-              "Damage:2": 1654,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "7:10": {
-              "Count:3": 2,
-              "Damage:2": 1211,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "112:10": {
-      "preRequisites:11": [
-        166
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "We\u0027ll want to smelt some §3aluminium§r now to get ready for Tier 3. \n\nThere isn\u0027t pure aluminium ore in the world, so you\u0027ll have to do with some alternatives.\n\nYou can electrolyze aluminum dust out of §a§3§agreen sapphire§r or §9sapphire§r. When you hit MV, you can extract aluminum out of clay, but we can\u0027t do that yet.\n\nLet\u0027s get 3 aluminium ingots to complete this quest.\n\nAnd by the way, it\u0027s aluminIum, not aluminum.\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 3,
-            "Damage:2": 2,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "ingotAluminium",
-            "id:8": "gregtech:meta_ingot"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "It only gets worse from here...",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 168,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 69,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            },
-            "1:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "nuclearcraft:smore",
-                "orig_meta:3": 0
-              }
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 3,
-              "Damage:2": 2,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotAluminium",
-              "id:8": "gregtech:meta_ingot"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "113:10": {
+    "114:10": {
       "preRequisites:11": [
         31
       ],
@@ -8771,7 +8495,7 @@
         }
       }
     },
-    "114:10": {
+    "115:10": {
       "preRequisites:11": [
         31
       ],
@@ -8864,18 +8588,18 @@
         }
       }
     },
-    "115:10": {
+    "116:10": {
       "preRequisites:11": [
-        103
+        105
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Weapons Factory §rmakes guns, turrets, ammo, and other weapon-related items. If you want to defend yourself, you\u0027ll need it.",
+          "desc:8": "The §6Weapons Factory §rmakes guns, turrets, ammo, and other weapon-related items. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 16009,
+            "Damage:2": 32020,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -8944,7 +8668,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 16009,
+              "Damage:2": 32020,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -8953,7 +8677,7 @@
         }
       }
     },
-    "116:10": {
+    "117:10": {
       "preRequisites:11": [
         191
       ],
@@ -9027,7 +8751,7 @@
         }
       }
     },
-    "117:10": {
+    "118:10": {
       "preRequisites:11": [
         192
       ],
@@ -9149,7 +8873,7 @@
         }
       }
     },
-    "118:10": {
+    "119:10": {
       "preRequisites:11": [
         193
       ],
@@ -9238,7 +8962,7 @@
         }
       }
     },
-    "119:10": {
+    "120:10": {
       "preRequisites:11": [
         193
       ],
@@ -9327,7 +9051,7 @@
         }
       }
     },
-    "120:10": {
+    "121:10": {
       "preRequisites:11": [
         191
       ],
@@ -9444,7 +9168,7 @@
         }
       }
     },
-    "121:10": {
+    "122:10": {
       "preRequisites:11": [
         191
       ],
@@ -9561,295 +9285,7 @@
         }
       }
     },
-    "122:10": {
-      "preRequisites:11": [
-        168
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Make an MV Electric Motor.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 128,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "You know what to do ",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 201,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 1,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 8,
-              "Damage:2": 127,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 128,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
     "123:10": {
-      "preRequisites:11": [
-        102
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The Extractor§r extracts fluids out of other materials. For example, you can extract §aseed oil §rout of plants, or extract liquid metal from ingots.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 305,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Fluid Extractor",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 216,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 172,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 305,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "124:10": {
-      "preRequisites:11": [
-        166
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Here\u0027s which tools you need to fix the maintenance problems in your multiblocks:\n\n------------------------------------------\nPossible problems                  Tool to fix\n------------------------------------------\n\"Pipe is loose.\"                        Wrench\n\"Screws are missing.\"             Screwdriver \n\"Something is stuck.\"               Soft mallet \n\"Platings are dented.\"              Hammer \n\"Circuitry burned out.\"           Wire Cutter \n\"That doesn\u0027t belong there.\"       Crowbar\n\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1654,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Maintenance",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questID:3": 246,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
-        }
-      }
-    },
-    "125:10": {
-      "preRequisites:11": [
-        166
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The Greg-Tech(TM) §6BrainTech Aerospace Advanced Reinforced Duct Tape FAL-84 §rwill fix all maintenance problem with just one click! Try it!\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 502,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Enough power to sustain any Aperture Science™ personality constructs.",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questID:3": 247,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:ore_rock_salt_0"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 502,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "126:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -9892,190 +9328,6 @@
         "0:10": {
           "index:3": 0,
           "taskID:8": "bq_standard:checkbox"
-        }
-      }
-    },
-    "127:10": {
-      "preRequisites:11": [
-        104
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Make an LV Emitter, you\u0027ll need it for some more advanced machines. \n\nNote that this requires §9quartzite§r, which is found in Quartzite veins in the Beneath and in Nether Quartz veins in the Nether.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 217,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "You\u0027re gonna hate this #6",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questID:3": 319,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 519,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 217,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "128:10": {
-      "preRequisites:11": [
-        104
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Make an LV Emitter, you\u0027ll need it for some more advanced machines. \n\nNote that this requires §9quartzite§r, which is found in Quartzite veins in the Beneath and in Nether Quartz veins in the Nether.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 232,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "You\u0027re gonna hate this #5",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questID:3": 320,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 401,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 232,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
         }
       }
     }
@@ -10870,151 +10122,116 @@
       },
       "quests:9": {
         "0:10": {
-          "id:3": 100,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": 0
+          "id:3": 36,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 60,
+          "y:3": 228
         },
         "1:10": {
-          "id:3": 101,
+          "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": 84
+          "x:3": -96,
+          "y:3": 216
         },
         "2:10": {
-          "id:3": 102,
+          "id:3": 60,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": 36
+          "x:3": -12,
+          "y:3": 216
         },
         "3:10": {
-          "id:3": 103,
+          "id:3": 99,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": 120
+          "x:3": 132,
+          "y:3": 240
         },
         "4:10": {
+          "id:3": 100,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -108,
+          "y:3": 144
+        },
+        "5:10": {
+          "id:3": 101,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -192,
+          "y:3": 144
+        },
+        "6:10": {
+          "id:3": 102,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 60,
+          "y:3": 144
+        },
+        "7:10": {
           "id:3": 104,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 48
         },
-        "5:10": {
-          "id:3": 105,
-          "sizeX:3": 60,
-          "sizeY:3": 60,
-          "x:3": -30,
-          "y:3": 300
-        },
-        "6:10": {
-          "id:3": 166,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": 498
-        },
-        "7:10": {
-          "id:3": 168,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": 576
-        },
         "8:10": {
+          "id:3": 105,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -24,
+          "y:3": 144
+        },
+        "9:10": {
           "id:3": 191,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 120
+          "x:3": -228,
+          "y:3": 36
         },
-        "9:10": {
+        "10:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": 120
+          "x:3": -276,
+          "y:3": 36
         },
-        "10:10": {
+        "11:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
-          "y:3": 120
+          "x:3": -324,
+          "y:3": 36
         },
-        "11:10": {
+        "12:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -264,
-          "y:3": 96
+          "x:3": -360,
+          "y:3": 12
         },
-        "12:10": {
+        "13:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -264,
-          "y:3": 144
+          "x:3": -360,
+          "y:3": 60
         },
-        "13:10": {
+        "14:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 156
+          "x:3": -204,
+          "y:3": 72
         },
-        "14:10": {
+        "15:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 156
-        },
-        "15:10": {
-          "id:3": 201,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 648
-        },
-        "16:10": {
-          "id:3": 216,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 36
-        },
-        "17:10": {
-          "id:3": 246,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": 522
-        },
-        "18:10": {
-          "id:3": 247,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": 492
-        },
-        "19:10": {
-          "id:3": 319,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 168
-        },
-        "20:10": {
-          "id:3": 320,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 168
+          "x:3": -252,
+          "y:3": 72
         }
       }
     },
