@@ -97,7 +97,7 @@ def latexSources = [
 ]
 
 def sulfurSources = [
-    new SulfurSource('dustSulfur', 8)
+    new SulfurSource('dustSulfur', 1)
 ]
 
 def catalysers = [
