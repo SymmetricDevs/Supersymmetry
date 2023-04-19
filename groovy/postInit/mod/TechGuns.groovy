@@ -243,6 +243,10 @@ crafting.replaceShaped("techguns:boltaction", item('techguns:boltaction'), [
 	[item('techguns:itemshared', 38), item('techguns:itemshared', 33), item('techguns:itemshared', 42)]
 ])
 
+crafting.replaceShaped("techguns:pistolrounds", item('techguns:itemshared', 1) * 4, [
+	[ore('plateBrass'), ore('gunpowder'), ore('roundLead')],
+])
+
 crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
 	ore('plateRubber'), 
 	ore('sand'),

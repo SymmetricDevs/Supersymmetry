@@ -139,6 +139,12 @@ mods.gregtech.electric_blast_furnace.recipeBuilder()
         .EUt(60)
         .buildAndRegister();
 
+crafting.addShaped('gregtech:compressed_coke_clay', metaitem('compressed.coke_clay') * 8, [
+    [ore('itemClay'), ore('itemClay'), ore('itemClay')],
+    [ore('sand'), metaitem('wooden_form.brick'), ore('sand')],
+    [ore('sand'), ore('sand'), ore('sand')]
+])
+
 //TechGuns carbon plate removal
 // Carbon Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('carbon') * 144])
