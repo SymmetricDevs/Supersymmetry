@@ -27,11 +27,17 @@ crafting.addShaped("anode_lead", metaitem('anode.lead'), [
         [null,metaitem('plateLead'),metaitem('cableGtSingleTin')],
         [null,null,null]
 ]);
+
 crafting.addShaped("drum_lead", metaitem('drum.lead'), [
-        [null,null,null],
+        [null,ore('craftingToolHardHammer'),null],
         [metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')],
         [metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')]
 ]);
+
+crafting.addShapeless("drum_nbt_lead", metaitem('drum.lead'), [
+        metaitem('drum.lead').noreturn()
+]);
+
 MIXER_RECIPES.recipeBuilder()
 .fluidInputs(Materials.SulfurTrioxide.getFluid(1000))
 .fluidInputs(Materials.Water.getFluid(1000))
