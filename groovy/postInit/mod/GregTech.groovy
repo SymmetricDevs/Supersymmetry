@@ -140,7 +140,7 @@ mods.gregtech.electric_blast_furnace.recipeBuilder()
         .buildAndRegister();
 
 crafting.addShaped('gregtech:compressed_coke_clay', metaitem('compressed.coke_clay') * 8, [
-    [ore('itemClay'), ore('itemClay'), ore('itemClay')],
+    [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')],
     [ore('sand'), metaitem('wooden_form.brick'), ore('sand')],
     [ore('sand'), ore('sand'), ore('sand')]
 ])
