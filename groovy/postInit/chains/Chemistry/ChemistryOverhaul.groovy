@@ -599,3 +599,21 @@ DISTILLATION_TOWER.recipeBuilder()
 .buildAndRegister()
 
 // Polydimethylsiloxane
+
+//Polycaprolactam
+PYROLYSE_RECIPES.recipeBuilder()
+.inputs(Material.Caprolactam.getStackForm(8))
+.fluidInputs(Material.Nitrogen.getFluid(4000))
+.outputs(Material.Polycaprolactam.getStackForm(8))
+.EUt(60)
+.duration(200)
+.buildAndRegister()
+
+//Polyethylene
+POLYMERIZATION_RECIPES.recipeBuilder()
+.fluidInputs(Material.Ethylene.getFluid(144))
+.fluidInputs(Material.Oxygen.getFluid(1000))
+.fluidOutputs(Material.Polyethylene.getFluid(216))
+.EUt(30)
+.duration(160)
+.buildAndRegister()
