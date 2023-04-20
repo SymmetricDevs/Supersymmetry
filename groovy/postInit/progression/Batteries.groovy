@@ -38,6 +38,14 @@ crafting.addShapeless("drum_nbt_lead", metaitem('drum.lead'), [
         metaitem('drum.lead').noreturn()
 ]);
 
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(ore('stickLongLead') * 2)
+        .inputs(ore('plateLead') * 4)
+        .outputs(metaitem('drum.lead'))
+        .duration(200)
+        .EUt(16)
+        .buildAndRegister()
+
 MIXER_RECIPES.recipeBuilder()
 .fluidInputs(Materials.SulfurTrioxide.getFluid(1000))
 .fluidInputs(Materials.Water.getFluid(1000))
