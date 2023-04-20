@@ -20,4 +20,4 @@ Quests by [Regian](https://github.com/Regian24).
 Textures by [GDCM05](https://github.com/gdcm05) and more.
 
 ## Building
-You'll need python3 and python requests installed. To build run the main.py script.
+You'll need python3 and the python requests library installed. To build run the main.py script.
