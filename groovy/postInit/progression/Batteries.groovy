@@ -44,6 +44,7 @@ mods.gregtech.assembler.recipeBuilder()
         .outputs(metaitem('drum.lead'))
         .duration(200)
         .EUt(16)
+        .notConsumable(Globals.circuit(2))
         .buildAndRegister()
 
 MIXER_RECIPES.recipeBuilder()
