@@ -560,15 +560,15 @@ PYROLYSE.recipeBuilder()
 .duration(200)
 .EUt(30)
 .buildAndRegister()
-//TODO: IDFK Think of a fucking solution lol
-// MIXER.recipeBuilder()
-// .fluidInputs(fluid('acidic_tetrafluoroethylene') * 5000)
-// .fluidInputs(fluid('water') * 4000)
-// .fluidOutputs(fluid('tetrafluoroethylene') * 1000)
-// .fluidOutputs(fluid('hydrochloric_acid') * 4000)
-// .duration(200)
-// .EUt(30)
-// .buildAndRegister()
+//TODO: Uncomment once centrifuge recipemap has been changed
+CENTRIFUGE.recipeBuilder()
+.fluidInputs(fluid('acidic_tetrafluoroethylene') * 5000)
+.fluidInputs(fluid('water') * 4000)
+.fluidOutputs(fluid('tetrafluoroethylene') * 1000)
+.fluidOutputs(fluid('hydrochloric_acid') * 4000)
+.duration(200)
+.EUt(30)
+.buildAndRegister()
 
 // Tetranitromethane
 
@@ -600,20 +600,173 @@ DISTILLATION_TOWER.recipeBuilder()
 
 // Polydimethylsiloxane
 
+FLUIDIZEDBR.recipeBuilder()
+.fluidInputs(fluid('chloromethane') * 2000)
+.inputs(ore('dustCuprousOxide'))
+.inputs(ore('dustSilicon'))
+.fluidOutputs(fluid('impure_dimethyldichlorosilane') * 1000)
+.duration(160)
+.EUt(30)
+.buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+.fluidInputs(fluid('impure_dimethyldichlorosilane') * 1000)
+.fluidOutputs(fluid('dimethyldichlorosilane') * 1000)
+.outputs(ore('dustCuprousOxide').first())
+.duration(120)
+.EUt(30)
+.buildAndRegister()
+
+MIXER.recipeBuilder()
+.fluidInputs(fluid('dimethyldichlorosilane') * 1000)
+.fluidInputs(fluid('water') * 2000)
+.fluidInputs(fluid('gtfo_sodium_stearate') * 100)
+.fluidOutputs(fluid('dimethyldichlorosilane_emulsion') * 3000)
+.duration(120)
+.EUt(30)
+.buildAndRegister()
+
+POLYMERIZATION.recipeBuilder()
+.fluidInputs(fluid('dimethyldichlorosilane_emulsion') * 3000)
+.inputs(ore('dustPotassiumPersulfate'))
+.outputs(ore('dustPolydimethylsiloxane').first() * 3)
+.fluidOutputs(fluid('hydrogen_chloride') * 2000)
+.EUt(30)
+.duration(160)
+.buildAndRegister()
+//Vulcanisation in Rubber Recipes 
+
+// Ammonia
+
+MIXER.recipeBuilder()
+.fluidInputs(fluid('water') * 1000)
+.inputs(ore('dustAmmoniumChloride'))
+.fluidOutputs(fluid('ammonium_chloride_solution'))
+.EUt(30)
+.duration(160)
+.buildAndRegister()
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('ammonium_chloride_solution') * 50)
+.fluidInputs(fluid('sodium_hydroxide_solution') * 50)
+.fluidOutputs(fluid('ammonia') * 50)
+.fluidOutputs(fluid('salt_water') * 50)
+.duration(1)
+.EUt(7)
+.buildAndRegister()
+
+// Dinitrogen Tetroxide
+//TODO: Add cold nitrogen dioxide
+// CSTR.recipeBuilder()
+// .fluidInputs(fluid('cold_nitrogen_dioxide') * 100)
+// .fluidOutputs(fluid('dinitrogen_tetroxide') * 50)
+// .duration(10)
+// .EUt(30)
+// .buildAndRegister()
+
+// 1,1-dimethylhydrazine
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('monochloramine') * 50)
+.fluidInputs(fluid('dimethylamine') * 50)
+.fluidOutputs(fluid('dimethylhydrazine') * 50)
+.fluidOutputs(fluid('hydrogen_chloride') * 50)
+.duration(10)
+.EUt(30)
+.buildAndRegister()
+
+// Vinyl acetate
+//TODO: Replace palladium with palladium catalyst bed
+FBR.recipeBuilder()
+.fluidInputs(fluid('acetic_acid') * 50)
+.fluidInputs(fluid('ethylene') * 50)
+.notConsumable(ore('dustPalladium'))
+.fluidOutputs(fluid('vinyl_acetate') * 50)
+.duration(10)
+.EUt(30)
+.buildAndRegister()
+
+// Hypochloric Acid
+//TODO: stoichiometry needs to be done
+
+// Epichlorohydrin
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('glycerol') * 50)
+.fluidInputs(fluid('hydrogen_chloride') * 100)
+.fluidInputs(fluid('acetic_acid') * 50)
+.fluidOutputs(fluid('chlorinated_glycerol') * 50)
+.duration(5)
+.EUt(30)
+.buildAndRegister()
+
+MIXER.recipeBuilder()
+.fluidInputs(fluid('chlorinated_glycerol') * 4000)
+.inputs(ore('dustSodiumHydroxide') * 3)
+.fluidOutputs(fluid('epichlorohydrin_solution') * 5000)
+.duration(120)
+.EUt(30)
+.buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+.fluidInputs(fluid('epichlorohydrin_solution') * 5000)
+.fluidOutputs(fluid('acetic_acid') * 1000)
+.fluidOutputs(fluid('water') * 3000)
+.fluidOutputs(fluid('epichlorohydrin') * 1000)
+.outputs(ore('dustSalt').first() * 2)
+.duration(120)
+.EUt(30)
+.buildAndRegister()
+
+BCR.recipeBuilder()
+.fluidInputs(fluid('allyl_chloride') * 50)
+.fluidInputs(fluid('hypochlorous_acid') * 50)
+.fluidOutputs(fluid('allyl_alcohol_mix') * 50)
+.duration(5)
+.EUt(30)
+.buildAndRegister()
+
+MIXER.recipeBuilder()
+.fluidInputs(fluid('allyl_alcohol_mix') * 1000)
+.inputs(ore('dustSodiumHydroxide') * 3)
+.fluidOutputs(fluid('dilute_epichlorohydrin') * 2000)
+.duration(5)
+.EUt(30)
+.buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+.fluidInputs(fluid('dilute_epichlorohydrin') * 2000)
+.fluidOutputs(fluid('epichlorohydrin') * 1000)
+.fluidOutputs(fluid('water') * 1000)
+.outputs(ore('dustSalt').first() * 2)
+.duration(160)
+.EUt(30)
+.buildAndRegister()
+
+MIXER.recipeBuilder()
+.fluidInputs(fluid('polyvinyl_acetate') * 144)
+.fluidInputs(fluid('butyraldehyde') * 250)
+.fluidOutputs(fluid('polyvinyl_butyral') * 250)
+.duration(400)
+.EUt(480)
+.buildAndRegister()
+
 //Polycaprolactam
-PYROLYSE_RECIPES.recipeBuilder()
-.inputs(Material.Caprolactam.getStackForm(8))
-.fluidInputs(Material.Nitrogen.getFluid(4000))
-.outputs(Material.Polycaprolactam.getStackForm(8))
+
+PYROLYSE.recipeBuilder()
+.fluidInputs(fluid('nitrogen') * 4000)
+.inputs(ore('dustCaprolactam') * 8)
+.outputs(ore('dustPolycaprolactam').first() * 8)
 .EUt(60)
 .duration(200)
 .buildAndRegister()
 
 //Polyethylene
-POLYMERIZATION_RECIPES.recipeBuilder()
-.fluidInputs(Material.Ethylene.getFluid(144))
-.fluidInputs(Material.Oxygen.getFluid(1000))
-.fluidOutputs(Material.Polyethylene.getFluid(216))
+
+POLYMERIZATION.recipeBuilder()
+.fluidInputs(fluid('ethylene') * 144)
+.fluidInputs(fluid('oxygen') * 1000)
+.fluidOutputs(fluid('plastic') * 216)
 .EUt(30)
 .duration(160)
 .buildAndRegister()

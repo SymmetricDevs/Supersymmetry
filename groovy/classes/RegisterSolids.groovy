@@ -140,6 +140,12 @@ class RegisterSolids {
                 .color(0x9dad37)
                 .build()
 
+        new Material.Builder(32040, 'cuprous_oxide')
+                .dust()
+                .components(Copper, 2, Oxygen, 1)
+                .color(0x822635)
+                .build()
+
         log.infoMC('Finished registering solids')
     }
 }
