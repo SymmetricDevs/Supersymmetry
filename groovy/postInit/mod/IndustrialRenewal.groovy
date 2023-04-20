@@ -1,3 +1,5 @@
+import static globals.Globals.*
+
 def name_removals = [
 	"industrialrenewal:prospecting_pan",
 	"industrialrenewal:ingot_steel",
@@ -6,7 +8,22 @@ def name_removals = [
 	"industrialrenewal:sensor_rain",
 	"industrialrenewal:brace",
 	"industrialrenewal:small_slabs",
-	"industrialrenewal:coil_hv"
+	"industrialrenewal:coil_hv",
+	"industrialrenewal:energy_cable_lv",
+	"industrialrenewal:energy_cable",
+	"industrialrenewal:energy_cable2",
+	"industrialrenewal:energy_cable_hv",
+	"industrialrenewal:energy_cable_hv2",
+	"industrialrenewal:fluid_pipe",
+	"industrialrenewal:cable_tray",
+	"industrialrenewal:isolator_hv",
+	"industrialrenewal:alarm",
+	"industrialrenewal:entity_detector",
+	"industrialrenewal:transformer_hv",
+	"industrialrenewal:trash",
+	"industrialrenewal:electric_pump",
+	"industrialrenewal:record_royal_entrance",
+	"industrialrenewal:motor"
 ]
 
 for (name in name_removals) {
@@ -79,46 +96,124 @@ crafting.replaceShaped("industrialrenewal:locker", item('industrialrenewal:locke
 	[ore('plateSteel'), ore('plateSteel'), ore('boltSteel')]
 ])
 
-crafting.replaceShaped("industrialrenewal:hazard_block", item('industrialrenewal:block_hazard'), [
+crafting.replaceShaped("industrialrenewal:hazard_block", item('industrialrenewal:block_hazard') * 32, [
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
 	[ore('dyeYellow'), null, ore('dyeBlack')],
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')]
 ])
 
-crafting.replaceShaped("industrialrenewal:aisle_hazard", item('industrialrenewal:aisle_hazard'), [
+crafting.replaceShaped("industrialrenewal:aisle_hazard", item('industrialrenewal:aisle_hazard') * 32, [
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
 	[ore('dyeBlack'), null, ore('dyeWhite')],
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')]
 ])
 
-crafting.replaceShaped("industrialrenewal:caution_hazard", item('industrialrenewal:caution_hazard'), [
+crafting.replaceShaped("industrialrenewal:caution_hazard", item('industrialrenewal:caution_hazard') * 32, [
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
 	[ore('dyeOrange'), null, ore('dyeWhite')],
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')]
 ])
 
-crafting.replaceShaped("industrialrenewal:defective_hazard", item('industrialrenewal:defective_hazard'), [
+crafting.replaceShaped("industrialrenewal:defective_hazard", item('industrialrenewal:defective_hazard') * 32, [
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
 	[ore('dyeBlue'), null, ore('dyeWhite')],
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')]
 ])
 
-crafting.replaceShaped("industrialrenewal:fire_hazard", item('industrialrenewal:fire_hazard'), [
+crafting.replaceShaped("industrialrenewal:fire_hazard", item('industrialrenewal:fire_hazard') * 32, [
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
 	[ore('dyeRed'), null, ore('dyeWhite')],
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')]
 ])
 
-crafting.replaceShaped("industrialrenewal:radiation_hazard", item('industrialrenewal:radiation_hazard'), [
+crafting.replaceShaped("industrialrenewal:radiation_hazard", item('industrialrenewal:radiation_hazard') * 32, [
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
 	[ore('dyeMagenta'), null, ore('dyeYellow')],
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')]
 ])
 
-crafting.replaceShaped("industrialrenewal:safety_hazard", item('industrialrenewal:safety_hazard'), [
+crafting.replaceShaped("industrialrenewal:safety_hazard", item('industrialrenewal:safety_hazard') * 32, [
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
 	[ore('dyeLime'), null, ore('dyeWhite')],
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')]
+])
+
+crafting.replaceShaped("industrialrenewal:fuse_box", item('industrialrenewal:fuse_box'), [
+	[ore('plateSteel'), ore('wireFineRedAlloy'), ore('plateSteel')],
+	[ore('plateSteel'), ore('chest'), item('minecraft:lever')],
+	[ore('plateSteel'), ore('wireFineRedAlloy'), ore('plateSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:flame_detector", item('industrialrenewal:flame_detector'), [
+	[null, ore('plateSteel'), null],
+	[ore('stickSteel'), ore('frameGtSteel'), null],
+	[null, item('minecraft:daylight_detector'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:bunker_hatch", item('industrialrenewal:bunker_hatch'), [
+	[item('minecraft:stone_slab'), item('minecraft:stone_slab'), item('minecraft:stone_slab')],
+	[item('techguns:item_bunkerdoor'), null, item('techguns:item_bunkerdoor')],
+	[item('minecraft:stone_slab'), item('minecraft:stone_slab'), item('minecraft:stone_slab')]
+])
+
+crafting.replaceShaped("industrialrenewal:sign_hv", item('industrialrenewal:sign_hv') * 5, [
+	[null, item('minecraft:sign'), null],
+	[null, ore('stickSteel'), null],
+	[ore('plateSteel'), ore('stickSteel'), ore('plateSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:fence_big_column", item('industrialrenewal:fence_big_column')*16, [
+		[ore('stickSteel'), ore('wireGtSingleSteel'), ore('stickSteel')],
+		[ore('stickSteel'), ore('wireGtSingleSteel'), ore('stickSteel')],
+		[ore('stickSteel'), ore('wireGtSingleSteel'), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:fence_big_wire", item('industrialrenewal:fence_big_wire')*16, [
+		[null, ore('wireGtSingleSteel'), null],
+		[null, ore('wireGtSingleSteel'), null],
+		[ore('wireGtSingleSteel'), ore('stickSteel'), ore('wireGtSingleSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:razor_wire", item('industrialrenewal:razor_wire') * 4, [
+	[null, null, null],
+	[ore('wireFineSteel'), ore('wireFineSteel'), ore('wireFineSteel')],
+	[ore('stickSteel'), null, ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:barrel_item", item('industrialrenewal:barrel_item'), [
+	[null, ore('craftingToolWrench'), null],
+	[ore('plateSteel'), ore('stickLongSteel'), ore('plateSteel')],
+	[ore('plateSteel'), ore('stickLongSteel'), ore('plateSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:small_wind_turbine", item('industrialrenewal:small_wind_turbine'), [
+	[ore('plateAluminium'), ore('plateAluminium'), ore('craftingToolHardHammer')],
+	[ore('plateAluminium'), metaitem('electric.motor.mv'), ore('boltAluminium')],
+	[ore('plateAluminium'), ore('plateAluminium'), ore('craftingToolWrench')]
+])
+
+crafting.replaceShaped("industrialrenewal:small_wind_turbine_pillar", item('industrialrenewal:small_wind_turbine_pillar') * 6, [
+	[ore('plateAluminium'), ore('stickLongAluminium'), ore('craftingToolHardHammer')],
+	[ore('plateAluminium'), ore('stickLongAluminium'), item('industrialrenewal:energy_level')],
+	[ore('plateAluminium'), ore('stickLongAluminium'), ore('craftingToolWrench')]
+])
+
+crafting.replaceShaped("industrialrenewal:small_wind_blade", item('industrialrenewal:small_wind_blade'), [
+	[null, ore('turbineBladeAluminium'), null],
+	[ore('turbineBladeAluminium'), ore('gearAluminium'), ore('turbineBladeAluminium')],
+	[null, ore('turbineBladeAluminium'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:wall_concrete", item('industrialrenewal:wall_concrete') * 8, [
+	[null, null, null],
+	[ore('blockConcrete'), ore('blockConcrete'), ore('blockConcrete')],
+	[ore('blockConcrete'), ore('blockConcrete'), ore('blockConcrete')]
+])
+
+crafting.replaceShaped("industrialrenewal:cartridge_plus", item('industrialrenewal:cartridge_plus') * 6, [
+	[null, ore('stickIron'), null],
+	[ore('wireFineRedAlloy'), ore('plateIron'), ore('wireFineRedAlloy')],
+	[null, ore('stickIron'), null]
 ])
 
 crafting.addShaped("industrialrenewal:brace_greg", item('industrialrenewal:brace') * 32, [
@@ -132,6 +227,24 @@ crafting.addShaped("industrialrenewal:column_to_pillar", item('industrialrenewal
 	[null, null, null],
 	[null, null, null]
 ])
+
+crafting.addShaped("industrialrenewal:alarm_custom", item('industrialrenewal:alarm'), [
+	[null, ore('stickSteel'), null],
+	[ore('stickSteel'), item('industrialrenewal:alarm'), ore('stickSteel')],
+	[null, ore('stickSteel'), null]
+])
+
+
+Globals.solders.each { key, val ->
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('sensor.lv'))
+			.inputs(ore('wireFineRedAlloy')*4)
+			.inputs(ore('stickSteel') * 2)
+			.fluidInputs(fluid(key) * val)
+			.outputs(item('industrialrenewal:entity_detector'))
+			.EUt(30).duration(20)
+			.buildAndRegister()
+}
 
 /*
 
