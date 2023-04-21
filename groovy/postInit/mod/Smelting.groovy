@@ -93,7 +93,28 @@ def itemSmeltingRemovals = [
 		item('techguns:itemshared', 99),
 		item('techguns:itemshared', 46),
 		item('techguns:itemshared', 95),
-		item('techguns:itemshared', 96)
+		item('techguns:itemshared', 96),
+		item('biomesoplenty:white_sand'),
+		item('gregtechfoodoption:gtfo_log_0'),
+		item('gregtechfoodoption:gtfo_log_1'),
+		item('gregtechfoodoption:gtfo_log_2'),
+		item('biomesoplenty:log_0', 4),
+		item('biomesoplenty:log_0', 5),
+		item('biomesoplenty:log_0', 6),
+		item('biomesoplenty:log_0', 7),
+		item('biomesoplenty:log_1', 4),
+		item('biomesoplenty:log_1', 5),
+		item('biomesoplenty:log_1', 6),
+		item('biomesoplenty:log_1', 7),
+		item('biomesoplenty:log_2', 4),
+		item('biomesoplenty:log_2', 5),
+		item('biomesoplenty:log_2', 6),
+		item('biomesoplenty:log_2', 7),
+		item('biomesoplenty:log_3', 4),
+		item('biomesoplenty:log_3', 5),
+		item('biomesoplenty:log_3', 6),
+		item('biomesoplenty:log_3', 7),
+		item('biomesoplenty:log_4', 5)
 ]
 
 for (item in itemSmeltingRemovals) {
