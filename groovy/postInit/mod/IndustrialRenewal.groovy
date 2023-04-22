@@ -23,7 +23,14 @@ def name_removals = [
 	"industrialrenewal:trash",
 	"industrialrenewal:electric_pump",
 	"industrialrenewal:record_royal_entrance",
-	"industrialrenewal:motor"
+	"industrialrenewal:motor",
+	"industrialrenewal:dam_turbine",
+	"industrialrenewal:dam_axis",
+	"industrialrenewal:dam_generator",
+	"industrialrenewal:high_pressure_pipe",
+	"industrialrenewal:fluid_tank",
+	"industrialrenewal:fire_extinguisher",
+	"industrialrenewal:conveyor_bulk"
 ]
 
 for (name in name_removals) {
@@ -216,6 +223,90 @@ crafting.replaceShaped("industrialrenewal:cartridge_plus", item('industrialrenew
 	[null, ore('stickIron'), null]
 ])
 
+crafting.replaceShaped("industrialrenewal:dam_intake", item('industrialrenewal:dam_intake'), [
+	[ore('blockConcrete'), ore('blockConcrete'), ore('blockConcrete')],
+	[ore('barsIron'), null, null],
+	[ore('blockConcrete'), ore('blockConcrete'), ore('blockConcrete')]
+])
+
+crafting.replaceShaped("industrialrenewal:dam_outflow", item('industrialrenewal:dam_outflow'), [
+	[ore('blockConcrete'), ore('blockConcrete'), ore('blockConcrete')],
+	[null, null, ore('barsIron')],
+	[ore('blockConcrete'), ore('blockConcrete'), ore('blockConcrete')]
+])
+
+crafting.replaceShaped("industrialrenewal:catwalk_ladder", item('industrialrenewal:catwalk_ladder') * 6, [
+	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')],
+	[ore('dyeYellow'), item('techguns:ladder0', 8), ore('dyeBlack')],
+	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:catwalk_ladder_steel", item('industrialrenewal:catwalk_ladder_steel') * 6, [
+	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')],
+	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')],
+	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:catwalk_hatch", item('industrialrenewal:catwalk_hatch'), [
+	[ore('boltSteel'), ore('plateSteel'), ore('boltSteel')],
+	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')],
+	[ore('stickSteel'), ore('stickSteel'), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:safety_helmet", item('industrialrenewal:safety_helmet'), [
+	[null, ore('dyeYellow'), null],
+	[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
+	[ore('plateSteel'), item('minecraft:leather_helmet'), ore('plateSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:gutter", item('industrialrenewal:gutter') * 6, [
+	[null, null, null],
+	[ore('plateStainlessSteel'), ore('plateStainlessSteel'), ore('plateStainlessSteel')],
+	[ore('pipeTinyFluidStainlessSteel'), ore('pipeTinyFluidStainlessSteel'), ore('pipeTinyFluidStainlessSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:firebox_solid", item('industrialrenewal:firebox_solid'), [
+	[null, ore('wireFineRedAlloy'), null],
+	[ore('chest'), ore('pipeSmallItemTin'), metaitem('steam_boiler_coal_steel')],
+	[null, ore('wireFineRedAlloy'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:firebox_fluid", item('industrialrenewal:firebox_fluid'), [
+	[null, ore('wireFineRedAlloy'), null],
+	[metaitem('drum.steel'), metaitem('pipeSmallFluidSteel'), metaitem('steam_boiler_lava_steel')],
+	[null, ore('wireFineRedAlloy'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:roof", item('industrialrenewal:roof') * 6, [
+	[ore('plateStainlessSteel'), ore('plateStainlessSteel'), null],
+	[null, ore('plateStainlessSteel'), ore('plateStainlessSteel')],
+	[ore('stickStainlessSteel'), ore('stickStainlessSteel'), ore('stickStainlessSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:frame", item('industrialrenewal:frame') * 6, [
+	[ore('stickSteel'), ore('stickSteel'), ore('stickSteel')],
+	[null, ore('frameGtSteel'), null],
+	[ore('stickSteel'), ore('stickSteel'), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:conduit_connector", item('industrialrenewal:conduit_connector'), [
+	[null, ore('stickSteel'), null],
+	[null, ore('wireFineRedAlloy'), null],
+	[ore('stickSteel'), ore('wireFineRedAlloy'), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:conduit_extension", item('industrialrenewal:conduit_extension') * 6, [
+	[null, ore('stickSteel'), null],
+	[null, ore('wireFineRedAlloy'), null],
+	[null, ore('stickSteel'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:button_red", item('industrialrenewal:button_red'), [
+	[null, ore('dyeRed'), null],
+	[null, item('minecraft:stone_button'), null],
+	[ore('dyeYellow'), ore('plateSteel'), ore('dyeYellow')]
+])
+
 crafting.addShaped("industrialrenewal:brace_greg", item('industrialrenewal:brace') * 32, [
 	[ore('stickSteel'), ore('stickLongSteel'), null],
 	[ore('stickLongSteel'), ore('stickSteel'), ore('stickLongSteel')],
@@ -234,16 +325,80 @@ crafting.addShaped("industrialrenewal:alarm_custom", item('industrialrenewal:ala
 	[null, ore('stickSteel'), null]
 ])
 
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(metaitem('large_fluid_cell.steel'))
+	.inputs(metaitem('electric.pump.lv'))
+	.inputs(ore('ringRubber'))
+	.fluidInputs(fluid('compressed_carbon_dioxide') * 8000)
+	.outputs(item('industrialrenewal:item_fire_extinguisher'))
+	.duration(20)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
 
 Globals.solders.each { key, val ->
 	mods.gregtech.assembler.recipeBuilder()
-			.inputs(metaitem('sensor.lv'))
-			.inputs(ore('wireFineRedAlloy')*4)
-			.inputs(ore('stickSteel') * 2)
-			.fluidInputs(fluid(key) * val)
-			.outputs(item('industrialrenewal:entity_detector'))
-			.EUt(30).duration(20)
-			.buildAndRegister()
+		.inputs(metaitem('sensor.lv'))
+		.inputs(ore('wireFineRedAlloy')*4)
+		.inputs(ore('stickSteel') * 2)
+		.fluidInputs(fluid(key) * val)
+		.outputs(item('industrialrenewal:entity_detector'))
+		.duration(20)
+		.EUt(Globals.voltAmps[1])
+		.buildAndRegister()
+
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(item('gregtech:turbine_casing', 5) * 8)
+		.inputs(ore('stickLongSteel') * 4)
+		.inputs(item('industrialrenewal:high_pressure_pipe') * 2)
+		.inputs(ore('plateSteel') * 6)
+		.inputs(ore('turbineBladeSteel') * 8)
+		.fluidInputs(fluid(key) * val)
+		.outputs(item('industrialrenewal:dam_turbine'))
+		.duration(400)
+		.EUt(Globals.voltAmps[2])
+		.buildAndRegister()
+
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(item('gregtech:turbine_casing', 5) * 8)
+		.inputs(ore('stickLongSteel') * 4)
+		.inputs(ore('circuitHv') * 2)
+		.inputs(ore('plateSteel') * 6)
+		.inputs(metaitem('electric.motor.hv'))
+		.fluidInputs(fluid(key) * val)
+		.outputs(item('industrialrenewal:dam_generator'))
+		.duration(400)
+		.EUt(Globals.voltAmps[2])
+		.buildAndRegister()
+
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('stickLongMagnalium') * 6)
+		.inputs(ore('ringSteel'))
+		.fluidInputs(fluid(key) * val)
+		.outputs(item('industrialrenewal:dam_axis'))
+		.duration(200)
+		.EUt(Globals.voltAmps[2])
+		.buildAndRegister()
+
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('pipeLargeFluidStainlessSteel'))
+		.inputs(ore('boltSteel') * 8)
+		.inputs(ore('ringSteel'))
+		.fluidInputs(fluid(key) * val)
+		.outputs(item('industrialrenewal:high_pressure_pipe'))
+		.duration(100)
+		.EUt(Globals.voltAmps[1])
+		.buildAndRegister()
+
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('drum.steel') * 8)
+		.inputs(ore('plateSteel') * 6)
+		.inputs(item('industrialrenewal:catwalk_pillar') * 4)
+		.inputs(item('industrialrenewal:fluid_gauge'))
+		.fluidInputs(fluid(key) * val)
+		.outputs(item('industrialrenewal:fluid_tank'))
+		.duration(100)
+		.EUt(Globals.voltAmps[1])
+		.buildAndRegister()
 }
 
 /*
