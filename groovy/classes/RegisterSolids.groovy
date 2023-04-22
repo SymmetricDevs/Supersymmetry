@@ -146,6 +146,37 @@ class RegisterSolids {
                 .color(0x822635)
                 .build()
 
+        new Material.Builder(32041, 'lithium_bromide')
+                .dust()
+                .components(Lithium, 1, Bromine, 1)
+                .color(0xC5C5C5)
+                .build()
+
+        new Material.Builder(32042, 'iron_iii_oxide')
+                .dust()
+                .components(Iron, 2, Oxygen, 3)
+                .color(0x8F0C03)
+                .build()
+
+        new Material.Builder(32043, 'copper_ii_chloride')
+                .dust()
+                .components(Copper, 1, Oxygen, 1)
+                .color(0x12112c)
+                .build()
+
+        new Material.Builder(32044, 'silicon_carbide')
+                .dust()
+                .components(Silicon, 1, Carbon, 1)
+                .color(0x404040)
+                .build()
+
+        new Material.Builder(32045, 'tungsten_trioxide')
+                .dust()
+                .components(Tungsten, 1, Oxygen, 3)
+                .color(0x8a9734)
+                .build()
+
+
         log.infoMC('Finished registering solids')
     }
 }
