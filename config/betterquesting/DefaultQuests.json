@@ -1497,7 +1497,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Nights are dark and extremely dangerous on most planets known to support life, seek shelter as soon as possible.\n\nIf you go outside, you may notice that there are several entities around you. At this stage you are nowhere near ready for killing any of them, so§cyou must hide. §r",
+          "desc:8": "Nights are dark and extremely dangerous on most planets known to support life, seek shelter as soon as possible.\n\nIf you go outside, you may notice that there are several entities around you. At this stage you are nowhere near ready for killing any of them, so §cyou must hide. §r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9290,7 +9290,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Circuits are defined by two characteristics: their §6technological level§r (electronic, quantum, optical, etc,) and their \"rank\" in a given §6technology tier§r (assembly, mainframe, etc.)\n\nThese two characteristics give a circuit its name and voltage tier (e.g. the Micro Computer, an EV circuit and the 3rd micro circuit.)\n\nThe first technological tier of circuits, primitive circuits, is crafted by hand. The following tiers are fabricated in Circuit Assemblers, or the Assembly Line for high-end assemblies, computers and mainframes. \n\nHigher technological tiers demand more complex processing chains for their respective components, but generally follow similar patterns in terms of what components they require (SMDs, circuit boards, metal frames for mainframes, etc.) \n\nTechnological advancement will also allow you to make previous circuits more efficiently (e.g. using SoCs to craft Refined Processors without through-hole/SMD components.)\n\n",
+          "desc:8": "Circuits are defined by two characteristics: their §6technological level§r (electronic, quantum, optical, etc,) and their \"rank\" in a given §6technology tier§r (assembly, mainframe, etc.)\n\nThese two characteristics give a circuit its name and voltage tier (e.g. the Micro Computer, an EV circuit and the 3rd micro circuit.)\n\nThe first technological tier of circuits, primitive circuits, are crafted by hand. The following tiers are fabricated in Circuit Assemblers, or the Assembly Line for high-end assemblies, computers and mainframes. \n\nHigher technological tiers demand more complex processing chains for their respective components, but generally follow similar patterns in terms of what components they require (SMDs, circuit boards, metal frames for mainframes, etc.) \n\nTechnological advancement will also allow you to make previous circuits more efficiently (e.g. using SoCs to craft Refined Processors without through-hole/SMD components.)\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10905,7 +10905,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
