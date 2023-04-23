@@ -31,8 +31,11 @@ class Globals {
     public static mod_priority = [
         "minecraft",
         "gregtech",
+        "gcym",
         "libvulpes",
-        "advancedrocketry"
+        "advancedrocketry",
+        "industrialrenewal",
+        "biomesoplenty"
     ]
              
 }
