@@ -1,5 +1,7 @@
 import static globals.Globals.*
 
+//TODO: Replace glowstone with lights
+
 def name_removals = [
 	"industrialrenewal:prospecting_pan",
 	"industrialrenewal:ingot_steel",
@@ -30,7 +32,27 @@ def name_removals = [
 	"industrialrenewal:high_pressure_pipe",
 	"industrialrenewal:fluid_tank",
 	"industrialrenewal:fire_extinguisher",
-	"industrialrenewal:conveyor_bulk"
+	"industrialrenewal:conveyor_bulk",
+	"industrialrenewal:firebox_solid",
+	"industrialrenewal:firebox_fluid",
+	"industrialrenewal:battery",
+	"industrialrenewal:battery_lithium",
+	"industrialrenewal:battery_bank",
+	"industrialrenewal:ind_battery_bank",
+	"industrialrenewal:steam_boiler",
+	"industrialrenewal:steam_turbine",
+	"industrialrenewal:solar_panel_frame",
+	"industrialrenewal:solar_panel",
+	"industrialrenewal:portable_generator",
+	"industrialrenewal:chunk_loader",
+	"industrialrenewal:mining",
+	"industrialrenewal:drill_steel",
+	"industrialrenewal:drill_diamond",
+	"industrialrenewal:drill_deep",
+	"industrialrenewal:block_steel",
+	"industrialrenewal:concrete",
+	"industrialrenewal:manual",
+	"industrialrenewal:medkit"
 ]
 
 for (name in name_removals) {
@@ -265,18 +287,6 @@ crafting.replaceShaped("industrialrenewal:gutter", item('industrialrenewal:gutte
 	[ore('pipeTinyFluidStainlessSteel'), ore('pipeTinyFluidStainlessSteel'), ore('pipeTinyFluidStainlessSteel')]
 ])
 
-crafting.replaceShaped("industrialrenewal:firebox_solid", item('industrialrenewal:firebox_solid'), [
-	[null, ore('wireFineRedAlloy'), null],
-	[ore('chest'), ore('pipeSmallItemTin'), metaitem('steam_boiler_coal_steel')],
-	[null, ore('wireFineRedAlloy'), null]
-])
-
-crafting.replaceShaped("industrialrenewal:firebox_fluid", item('industrialrenewal:firebox_fluid'), [
-	[null, ore('wireFineRedAlloy'), null],
-	[metaitem('drum.steel'), metaitem('pipeSmallFluidSteel'), metaitem('steam_boiler_lava_steel')],
-	[null, ore('wireFineRedAlloy'), null]
-])
-
 crafting.replaceShaped("industrialrenewal:roof", item('industrialrenewal:roof') * 6, [
 	[ore('plateStainlessSteel'), ore('plateStainlessSteel'), null],
 	[null, ore('plateStainlessSteel'), ore('plateStainlessSteel')],
@@ -307,6 +317,174 @@ crafting.replaceShaped("industrialrenewal:button_red", item('industrialrenewal:b
 	[ore('dyeYellow'), ore('plateSteel'), ore('dyeYellow')]
 ])
 
+crafting.replaceShaped("industrialrenewal:fluid_loader", item('industrialrenewal:fluid_loader'), [
+	[item('minecraft:hopper'), ore('frameGtSteel'), ore('stickSteel')],
+	[metaitem('electric.pump.lv'), ore('frameGtSteel'), item('industrialrenewal:fluid_gauge')],
+	[metaitem('drum.steel'), ore('frameGtSteel'), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:cargo_loader", item('industrialrenewal:cargo_loader'), [
+	[item('minecraft:hopper'), ore('frameGtSteel'), ore('stickSteel')],
+	[null, ore('frameGtSteel'), item('industrialrenewal:fluid_gauge')],
+	[metaitem('electric.motor.lv'), item('minecraft:hopper'), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:fluid_container", item('industrialrenewal:fluid_container'), [
+	[null, null, null],
+	[ore('stickSteel'), metaitem('drum.steel'), ore('stickSteel')],
+	[ore('stickSteel'), item('industrialrenewal:minecart_flat'), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:cart_hopper", item('industrialrenewal:cart_hopper'), [
+	[null, null, null],
+	[ore('stickSteel'), ore('chest'), ore('stickSteel')],
+	[ore('stickSteel'), item('industrialrenewal:minecart_flat'), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:cargo_container", item('industrialrenewal:cargo_container'), [
+	[null, null, null],
+	[ore('plateSteel'), ore('chest'), ore('plateSteel')],
+	[ore('plateSteel'), item('industrialrenewal:minecart_flat'), ore('plateSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:minecart_flat", item('industrialrenewal:minecart_flat'), [
+	[null, null, null],
+	[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
+	[item('minecraft:minecart'), null, item('minecraft:minecart')]
+])
+
+crafting.replaceShaped("industrialrenewal:buffer_stop_rail", item('industrialrenewal:buffer_stop_rail') * 4, [
+	[null, ore('stickSteel'), ore('springSteel')],
+	[ore('stickSteel'), null, ore('springSteel')],
+	[item('industrialrenewal:normal_rail'), item('industrialrenewal:normal_rail'), item('industrialrenewal:normal_rail')]
+])
+
+crafting.replaceShaped("industrialrenewal:rail_gate", item('industrialrenewal:rail_gate'), [
+	[null, null, null],
+	[item('minecraft:iron_door'), ore('stickSteel'), item('minecraft:iron_door')],
+	[ore('stickSteel'), item('industrialrenewal:normal_rail'), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:rail_loader", item('industrialrenewal:rail_loader'), [
+	[null, ore('plateSteel'), null],
+	[null, item('industrialrenewal:booster_rail'), null],
+	[null, ore('wireFineRedAlloy'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:plow_iron", item('industrialrenewal:plow_iron'), [
+	[ore('boltSteel'), ore('stickSteel'), ore('boltSteel')],
+	[ore('barsIron'), ore('barsIron'), ore('barsIron')],
+	[null, null, null]
+])
+
+crafting.replaceShaped("industrialrenewal:energy_level", item('industrialrenewal:energy_level'), [
+	[null, ore('plateSteel'), null],
+	[item('minecraft:comparator'), ore('stickIron'), ore('wireFineRedAlloy')],
+	[null, ore('plateSteel'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:fluid_gauge", item('industrialrenewal:fluid_gauge'), [
+	[null, ore('plateSteel'), null],
+	[ore('wireFineRedAlloy'), ore('stickIron'), item('minecraft:comparator')],
+	[null, ore('plateSteel'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:industrial_floor", item('industrialrenewal:industrial_floor') * 6, [
+	[ore('barsIron'), ore('barsIron'), ore('barsIron')],
+	[null, null, null],
+	[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:scaffold", item('industrialrenewal:scaffold') * 16, [
+	[null, null, null],
+	[null, ore('plateWood'), null],
+	[null, ore('frameGtSteel'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:platform", item('industrialrenewal:platform') * 8, [
+	[ore('stickWood'), null, ore('stickWood')],
+	[ore('stickSteel'), ore('plateWood'), ore('stickSteel')],
+	[null, item('industrialrenewal:catwalk_pillar'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:handrail_steel", item('industrialrenewal:handrail_steel') * 16, [
+	[ore('stickSteel'), ore('stickSteel'), ore('stickSteel')],
+	[ore('stickSteel'), null, ore('stickSteel')],
+	[ore('stickSteel'), ore('plateSteel'), ore('stickSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:catwalk_steel", item('industrialrenewal:catwalk_steel') * 4, [
+	[null, item('industrialrenewal:handrail_steel'), null],
+	[item('industrialrenewal:handrail_steel'), ore('barsIron'), item('industrialrenewal:handrail_steel')],
+	[null, item('industrialrenewal:handrail_steel'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:catwalk_stair_steel", item('industrialrenewal:catwalk_stair_steel') * 4, [
+	[ore('plateSteel'), item('industrialrenewal:handrail_steel'), null],
+	[item('industrialrenewal:handrail_steel'), ore('plateSteel'), item('industrialrenewal:handrail_steel')],
+	[null, item('industrialrenewal:handrail_steel'), ore('plateSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:handrail", item('industrialrenewal:handrail') * 7, [
+	[ore('dyeYellow'), ore('dyeBlack'), item('industrialrenewal:handrail_steel')],
+	[item('industrialrenewal:handrail_steel'), item('industrialrenewal:handrail_steel'), item('industrialrenewal:handrail_steel')],
+	[item('industrialrenewal:handrail_steel'), item('industrialrenewal:handrail_steel'), item('industrialrenewal:handrail_steel')]
+])
+
+crafting.replaceShaped("industrialrenewal:catwalk", item('industrialrenewal:catwalk') * 7, [
+	[ore('dyeYellow'), ore('dyeBlack'), item('industrialrenewal:catwalk_steel')],
+	[item('industrialrenewal:catwalk_steel'), item('industrialrenewal:catwalk_steel'), item('industrialrenewal:catwalk_steel')],
+	[item('industrialrenewal:catwalk_steel'), item('industrialrenewal:catwalk_steel'), item('industrialrenewal:catwalk_steel')]
+])
+
+crafting.replaceShaped("industrialrenewal:catwalk_stair", item('industrialrenewal:catwalk_stair') * 7, [
+	[ore('dyeYellow'), ore('dyeBlack'), item('industrialrenewal:catwalk_stair_steel')],
+	[item('industrialrenewal:catwalk_stair_steel'), item('industrialrenewal:catwalk_stair_steel'), item('industrialrenewal:catwalk_stair_steel')],
+	[item('industrialrenewal:catwalk_stair_steel'), item('industrialrenewal:catwalk_stair_steel'), item('industrialrenewal:catwalk_stair_steel')]
+])
+
+crafting.replaceShaped("industrialrenewal:catwalk_gate", item('industrialrenewal:catwalk_gate'), [
+	[null, null, null],
+	[item('industrialrenewal:handrail'), item('industrialrenewal:handrail'), null],
+	[ore('boltSteel'), ore('boltSteel'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:chimney_block", item('industrialrenewal:block_chimney'), [
+	[ore('plateSteel'), null, ore('plateSteel')],
+	[ore('plateSteel'), ore('pipeNormalFluidSteel'), ore('plateSteel')],
+	[ore('plateSteel'), ore('pipeNormalFluidSteel'), ore('plateSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:storage_chest", item('industrialrenewal:storage_chest'), [
+	[null, ore('chest'), null],
+	[ore('frameGtSteel'), ore('frameGtSteel'), ore('frameGtSteel')],
+	[ore('frameGtSteel'), ore('chest'), ore('frameGtSteel')]
+])
+
+crafting.replaceShaped("industrialrenewal:signal_indicator", item('industrialrenewal:signal_indicator'), [
+	[null, ore('dustGlowstone'), null],
+	[ore('plateSteel'), ore('stickSteel'), null],
+	[null, null, null]
+])
+
+crafting.replaceShaped("industrialrenewal:lamp", item('industrialrenewal:light') * 32, [
+	[null, ore('stickSteel'), null],
+	[ore('plateSteel'), ore('dustGlowstone'), ore('stickSteel')],
+	[null, ore('stickSteel'), null]
+])
+
+crafting.replaceShaped("industrialrenewal:fluorescent", item('industrialrenewal:fluorescent') * 32, [
+	[ore('plateSteel'), ore('stickSteel'), ore('plateSteel')],
+	[ore('dustGlowstone'), ore('dustGlowstone'), ore('dustGlowstone')],
+	[ore('plateGlass'), ore('plateGlass'), ore('plateGlass')]
+])
+
+crafting.replaceShaped("industrialrenewal:traffic_light", item('industrialrenewal:traffic_light') * 2, [
+	[ore('plateSteel'), ore('dustGlowstone'), ore('dyeRed')],
+	[ore('wireFineRedAlloy'), ore('dustGlowstone'), ore('dyeYellow')],
+	[ore('plateSteel'), ore('dustGlowstone'), ore('dyeGreen')]
+])
+
 crafting.addShaped("industrialrenewal:brace_greg", item('industrialrenewal:brace') * 32, [
 	[ore('stickSteel'), ore('stickLongSteel'), null],
 	[ore('stickLongSteel'), ore('stickSteel'), ore('stickLongSteel')],
@@ -322,6 +500,12 @@ crafting.addShaped("industrialrenewal:column_to_pillar", item('industrialrenewal
 crafting.addShaped("industrialrenewal:alarm_custom", item('industrialrenewal:alarm'), [
 	[null, ore('stickSteel'), null],
 	[ore('stickSteel'), item('industrialrenewal:alarm'), ore('stickSteel')],
+	[null, ore('stickSteel'), null]
+])
+
+crafting.addShaped("industrialrenewal:wrench_custom", item('industrialrenewal:cart_linkable'), [
+	[null, ore('craftingToolWrench'), ore('stickSteel')],
+	[ore('craftingToolHardHammer'), ore('stickSteel'), ore('dyeRed')],
 	[null, ore('stickSteel'), null]
 ])
 

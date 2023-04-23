@@ -95,3 +95,6 @@ for (type in StoneVariantBlock.StoneType.values()) {
 ore('toolKnife').remove(item('notreepunching:knife/iron'))
 ore('toolKnife').remove(item('notreepunching:knife/gold'))
 ore('toolKnife').remove(item('notreepunching:knife/diamond'))
+
+//IR concrete block
+ore('blockConcrete').add(item('industrialrenewal:concrete'))
