@@ -238,6 +238,14 @@ crafting.addShaped("gregtech:coagulation_tank_wall", item('susy:coagulation_tank
 	[ore('plankTreatedWood'), ore('boltSteel'), ore('plankTreatedWood')]
 ])
 
+log.infoMC("Adding New Arc Furnace Craft")
+
+//Add secondary LV arc furnace recipe, since an arc furnace is needed for graphite
+crafting.addShaped("gregtech:coke_arc_furnace.lv", metaitem('arc_furnace.lv'), [
+		[ore('cableGtQuadrupleTin'), ore('dustCoke'), ore('cableGtQuadrupleTin')],
+		[ore('circuitLv'), metaitem('hull.lv'), ore('circuitLv')],
+		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')]])
+
 //MetaTileEntityLoader.registerMachineRecipe(true, SuSyMetaTileEntities.VULCANIZING_PRESS, "WPW", "CHC", "WEW", 'H' as char, HULL, 'E' as char, CIRCUIT, 'W' as char, CABLE, 'C' as char, COIL_HEATING_DOUBLE, 'P' as char, PISTON)
 //MetaTileEntityLoader.registerMachineRecipe(true, SuSyMetaTileEntities.ROASTER, "ERE", "CHC", "WCW", 'H' as char, HULL, 'E' as char, CIRCUIT, 'W' as char, CABLE, 'C' as char, COIL_HEATING_DOUBLE, 'R' as char, ROTOR)
 //MetaTileEntityLoader.registerMachineRecipe(true, SuSyMetaTileEntities.LATEX_COLLECTOR, "ETE", "GPG", "WHW", 'H' as char, HULL, 'E' as char, CIRCUIT, 'W' as char, CABLE, 'T' as char, new UnificationEntry(OrePrefix.toolHeadDrill, Materials.Steel), 'P' as char, PUMP, 'G' as char, GLASS)
