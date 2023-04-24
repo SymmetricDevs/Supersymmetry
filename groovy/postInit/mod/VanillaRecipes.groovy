@@ -70,7 +70,9 @@ def recipesToRemove = [
 	'chisel:uncraft_blockiron',
 	'chisel:diamond',
 	'chisel:uncraft_blockgold',
-	'appliedenergistics2:decorative/quartz_block_pure'
+	'appliedenergistics2:decorative/quartz_block_pure',
+	'endercore:shapeless_paper',
+	'gregtech:paper_dust'
 ]
 
 for(name in recipesToRemove) {
@@ -399,6 +401,23 @@ mods.gregtech.assembler.recipeBuilder()
 // Activator Rail * 12
 //mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick') * 2, item('minecraft:redstone_torch'), circuit(4)], null)
 
+//Autoclave
+
+mods.gregtech.autoclave.recipeBuilder()
+		.inputs(metaitem('dustWood'))
+		.fluidInputs(fluid('distilled_water') * 100)
+		.outputs(metaitem('dustPaper'))
+		.duration(200)
+		.EUt(4)
+		.buildAndRegister()
+
+mods.gregtech.autoclave.recipeBuilder()
+		.inputs(metaitem('dustWood'))
+		.fluidInputs(fluid('water') * 100)
+		.outputs(metaitem('dustPaper'))
+		.duration(200)
+		.EUt(4)
+		.buildAndRegister()
 
 //Centrifuge
 // Blaze Powder * 1
@@ -407,6 +426,16 @@ mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:magma_cream')], null)
 //Chemical bath
 // Eye of Ender * 1
 mods.gregtech.chemical_bath.removeByInput(480, [item('minecraft:ender_pearl')], [fluid('blaze') * 144])
+
+//Easy paper recipes (Paper can be made from sugar cane via Bagasse)
+// Paper * 1
+mods.gregtech.chemical_bath.removeByInput(7, [item('minecraft:reeds')], [fluid('water') * 100])
+// Paper * 1
+mods.gregtech.chemical_bath.removeByInput(7, [item('minecraft:reeds')], [fluid('distilled_water') * 100])
+// Paper * 1
+mods.gregtech.chemical_bath.removeByInput(4, [metaitem('dustWood')], [fluid('water') * 100])
+// Paper * 1
+mods.gregtech.chemical_bath.removeByInput(4, [metaitem('dustWood')], [fluid('distilled_water') * 100])
 
 //Chemical reactor
 // Blaze Powder * 1
