@@ -1497,7 +1497,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Nights are dark and extremely dangerous on most planets known to support life, seek shelter as soon as possible.\n\nIf you go outside, you may notice that there are several entities around you. At this stage you are nowhere near ready for killing any of them, so §cyou must hide. §r",
+          "desc:8": "Nights are dark and extremely dangerous on most planets known to support life, seek shelter as soon as possible.\n\nIf you go outside, you may notice that there are several entities around you. At this stage you are nowhere near ready for killing any of them, so§cyou must hide. §r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7460,7 +7460,7 @@
     },
     "99:10": {
       "preRequisites:11": [
-        36
+        101
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -7474,7 +7474,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Assembler",
@@ -7722,6 +7722,58 @@
     },
     "103:10": {
       "preRequisites:11": [
+        100
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The§6 Lathe §ris a machine that takes an §6Ingot §rof metal and turn it into 2 §6Rods§r. It can be also used to turn 1 §6Bolt §rinto a §6Screw§r, effectively making the process 2 times more efficient.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 440,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Lathe",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 103,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 440,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "104:10": {
+      "preRequisites:11": [
         130,
         66,
         51
@@ -7774,7 +7826,7 @@
         }
       }
     },
-    "104:10": {
+    "105:10": {
       "preRequisites:11": [
         104
       ],
@@ -7813,7 +7865,7 @@
         }
       }
     },
-    "105:10": {
+    "106:10": {
       "preRequisites:11": [
         74
       ],
@@ -7913,7 +7965,7 @@
         }
       }
     },
-    "106:10": {
+    "107:10": {
       "preRequisites:11": [
         106
       ],
@@ -7965,7 +8017,197 @@
         }
       }
     },
-    "107:10": {
+    "108:10": {
+      "preRequisites:11": [
+        105
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6LV Polarizer §rmagnetizes substances without the use of a Voltaic Pile. For example, it can turn a normal Iron Rod into a Magnetic Iron Rod.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 545,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Polarizer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 108,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 545,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "109:10": {
+      "preRequisites:11": [
+        105
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Mixer §rcombines different fluids, and it also combines different dusts that can\u0027t be combined by hand. The §6Mixer§r is required in creating most alloys and in some chemical chains. It is also used to make §6concrete§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 470,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Mixer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 109,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 470,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "110:10": {
+      "preRequisites:11": [
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Continuous Stirred Tank Reactor §ris a type of chemical reactor. There are several types of chemical reactors, and each one will be used for a different type of reaction.\n\nThe §6CSTR §rdoes continuous reactions between §6fluids §rand §6gases§r. Continuous processes involve two fluids or gases slowly reacting with each other. This is why it reacts only 10L of fluid every half a second or so instead of doing 1,000 L at once. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14554,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "C.S.T.R.",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 110,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14554,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "111:10": {
+      "preRequisites:11": [
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "WIP",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 111,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "112:10": {
       "preRequisites:11": [
         87
       ],
@@ -8035,7 +8277,7 @@
         }
       }
     },
-    "108:10": {
+    "113:10": {
       "preRequisites:11": [
         117
       ],
@@ -8087,7 +8329,7 @@
         }
       }
     },
-    "109:10": {
+    "114:10": {
       "preRequisites:11": [
         118
       ],
@@ -8151,7 +8393,7 @@
         }
       }
     },
-    "110:10": {
+    "115:10": {
       "preRequisites:11": [
         22
       ],
@@ -8221,7 +8463,7 @@
         }
       }
     },
-    "111:10": {
+    "116:10": {
       "preRequisites:11": [
         97
       ],
@@ -8273,7 +8515,7 @@
         }
       }
     },
-    "112:10": {
+    "117:10": {
       "preRequisites:11": [
         0
       ],
@@ -8321,7 +8563,7 @@
         }
       }
     },
-    "113:10": {
+    "118:10": {
       "preRequisites:11": [
         12
       ],
@@ -8391,7 +8633,7 @@
         }
       }
     },
-    "114:10": {
+    "119:10": {
       "preRequisites:11": [
         31
       ],
@@ -8495,7 +8737,7 @@
         }
       }
     },
-    "115:10": {
+    "120:10": {
       "preRequisites:11": [
         31
       ],
@@ -8588,7 +8830,7 @@
         }
       }
     },
-    "116:10": {
+    "121:10": {
       "preRequisites:11": [
         105
       ],
@@ -8619,44 +8861,7 @@
         }
       },
       "questID:3": 191,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 395,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_stick"
-            },
-            "1:10": {
-              "Count:3": 16,
-              "Damage:2": 55,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -8677,7 +8882,7 @@
         }
       }
     },
-    "117:10": {
+    "122:10": {
       "preRequisites:11": [
         191
       ],
@@ -8751,7 +8956,7 @@
         }
       }
     },
-    "118:10": {
+    "123:10": {
       "preRequisites:11": [
         192
       ],
@@ -8873,7 +9078,7 @@
         }
       }
     },
-    "119:10": {
+    "124:10": {
       "preRequisites:11": [
         193
       ],
@@ -8962,7 +9167,7 @@
         }
       }
     },
-    "120:10": {
+    "125:10": {
       "preRequisites:11": [
         193
       ],
@@ -9051,7 +9256,7 @@
         }
       }
     },
-    "121:10": {
+    "126:10": {
       "preRequisites:11": [
         191
       ],
@@ -9168,7 +9373,7 @@
         }
       }
     },
-    "122:10": {
+    "127:10": {
       "preRequisites:11": [
         191
       ],
@@ -9285,12 +9490,12 @@
         }
       }
     },
-    "123:10": {
+    "128:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Circuits are defined by two characteristics: their §6technological level§r (electronic, quantum, optical, etc,) and their \"rank\" in a given §6technology tier§r (assembly, mainframe, etc.)\n\nThese two characteristics give a circuit its name and voltage tier (e.g. the Micro Computer, an EV circuit and the 3rd micro circuit.)\n\nThe first technological tier of circuits, primitive circuits, are crafted by hand. The following tiers are fabricated in Circuit Assemblers, or the Assembly Line for high-end assemblies, computers and mainframes. \n\nHigher technological tiers demand more complex processing chains for their respective components, but generally follow similar patterns in terms of what components they require (SMDs, circuit boards, metal frames for mainframes, etc.) \n\nTechnological advancement will also allow you to make previous circuits more efficiently (e.g. using SoCs to craft Refined Processors without through-hole/SMD components.)\n\n",
+          "desc:8": "Circuits are defined by two characteristics: their §6technological level§r (electronic, quantum, optical, etc,) and their \"rank\" in a given §6technology tier§r (assembly, mainframe, etc.)\n\nThese two characteristics give a circuit its name and voltage tier (e.g. the Micro Computer, an EV circuit and the 3rd micro circuit.)\n\nThe first technological tier of circuits, primitive circuits, is crafted by hand. The following tiers are fabricated in Circuit Assemblers, or the Assembly Line for high-end assemblies, computers and mainframes. \n\nHigher technological tiers demand more complex processing chains for their respective components, but generally follow similar patterns in terms of what components they require (SMDs, circuit boards, metal frames for mainframes, etc.) \n\nTechnological advancement will also allow you to make previous circuits more efficiently (e.g. using SoCs to craft Refined Processors without through-hole/SMD components.)\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10132,22 +10337,22 @@
           "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -96,
+          "x:3": -72,
           "y:3": 216
         },
         "2:10": {
           "id:3": 60,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
+          "x:3": -36,
           "y:3": 216
         },
         "3:10": {
           "id:3": 99,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": 240
+          "x:3": -180,
+          "y:3": 216
         },
         "4:10": {
           "id:3": 100,
@@ -10171,62 +10376,97 @@
           "y:3": 144
         },
         "7:10": {
+          "id:3": 103,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -120,
+          "y:3": 216
+        },
+        "8:10": {
           "id:3": 104,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 48
         },
-        "8:10": {
+        "9:10": {
           "id:3": 105,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 144
         },
-        "9:10": {
+        "10:10": {
+          "id:3": 108,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": 216
+        },
+        "11:10": {
+          "id:3": 109,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 252
+        },
+        "12:10": {
+          "id:3": 110,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 126,
+          "y:3": 126
+        },
+        "13:10": {
+          "id:3": 111,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": 180
+        },
+        "14:10": {
           "id:3": 191,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 36
         },
-        "10:10": {
+        "15:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,
           "y:3": 36
         },
-        "11:10": {
+        "16:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 36
         },
-        "12:10": {
+        "17:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 12
         },
-        "13:10": {
+        "18:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 60
         },
-        "14:10": {
+        "19:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 72
         },
-        "15:10": {
+        "20:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -10905,7 +11145,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
