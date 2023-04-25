@@ -145,6 +145,12 @@ crafting.addShaped('gregtech:compressed_coke_clay', metaitem('compressed.coke_cl
     [ore('sand'), ore('sand'), ore('sand')]
 ])
 
+furnace.add(metaitem('dustLimestone'), metaitem('dustQuicklime'))
+
 //TechGuns carbon plate removal
 // Carbon Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('carbon') * 144])
+
+//Remove old rubber recipes
+// Rubber Bar * 1
+mods.gregtech.alloy_smelter.removeByInput(7, [metaitem('dustSulfur'), metaitem('dustRawRubber') * 3], null)

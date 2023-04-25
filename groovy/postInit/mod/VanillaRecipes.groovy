@@ -72,7 +72,8 @@ def recipesToRemove = [
 	'chisel:uncraft_blockgold',
 	'appliedenergistics2:decorative/quartz_block_pure',
 	'endercore:shapeless_paper',
-	'gregtech:paper_dust'
+	'gregtech:paper_dust',
+	'gregtech:sugar'
 ]
 
 for(name in recipesToRemove) {
@@ -311,6 +312,24 @@ crafting.replaceShaped('minecraft:torchAnthDust', item('minecraft:torch') *8, [
     [ore('stickWood')]
 ])
 
+crafting.addShaped('gregtech:chad_from_wood', metaitem('dustPaper') * 4, [
+		[ore('dustWood'), ore('dustWood'), ore('dustWood')],
+		[ore('dustWood'), ore('dustWood'), ore('dustWood')],
+		[null, fluid('water') * 1000, null]
+])
+
+crafting.addShaped('gregtech:washing_rotten_flesh', metaitem('washed_rotten_flesh') * 8, [
+		[item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh')],
+		[item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh')],
+		[item('minecraft:rotten_flesh'), fluid('water') * 1000, item('minecraft:rotten_flesh')]
+])
+
+crafting.addShaped('gregtech:curing_rotten_flesh', item('minecraft:leather') * 6, [
+		[metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh')],
+		[metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh')],
+		[metaitem('washed_rotten_flesh'), fluid('creosote') * 1000, metaitem('washed_rotten_flesh')]
+])
+
 /*
 crafting.replaceShaped('minecraft:compass', item('minecraft:compass'), [
     [null, ore('plateIron'), null],
@@ -339,6 +358,7 @@ mods.gregtech.assembler.removeByInput(16, [metaitem('plateSteel'), item('minecra
 mods.gregtech.assembler.removeByInput(16, [metaitem('plateAluminium'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
 mods.gregtech.assembler.removeByInput(16, [metaitem('plateBronze'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
 mods.gregtech.assembler.removeByInput(16, [metaitem('plateTitanium'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+
 mods.gregtech.assembler.recipeBuilder()
     .inputs(ore('cobblestone') * 4)
     .inputs(ore('plankWood') * 3)
@@ -423,6 +443,15 @@ mods.gregtech.autoclave.recipeBuilder()
 // Blaze Powder * 1
 mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:magma_cream')], null)
 
+mods.gregtech.centrifuge.recipeBuilder()
+		.inputs(metaitem('sugar_cane_dust') * 1)
+		.fluidInputs(fluid('water') * 250)
+		.outputs(metaitem('dustWood') * 1)
+		.fluidOutputs(fluid('sugary_water') * 250)
+		.duration(100)
+		.EUt(8)
+		.buildAndRegister()
+
 //Chemical bath
 // Eye of Ender * 1
 mods.gregtech.chemical_bath.removeByInput(480, [item('minecraft:ender_pearl')], [fluid('blaze') * 144])
@@ -437,6 +466,30 @@ mods.gregtech.chemical_bath.removeByInput(4, [metaitem('dustWood')], [fluid('wat
 // Paper * 1
 mods.gregtech.chemical_bath.removeByInput(4, [metaitem('dustWood')], [fluid('distilled_water') * 100])
 
+mods.gregtech.chemical_bath.recipeBuilder()
+		.inputs(item('minecraft:rotten_flesh'))
+		.fluidInputs(fluid('water') * 100)
+		.outputs(metaitem('washed_rotten_flesh'))
+		.duration(200)
+		.EUt(4)
+		.buildAndRegister()
+
+mods.gregtech.chemical_bath.recipeBuilder()
+		.inputs(item('minecraft:rotten_flesh'))
+		.fluidInputs(fluid('distilled_water') * 100)
+		.outputs(metaitem('washed_rotten_flesh'))
+		.duration(200)
+		.EUt(4)
+		.buildAndRegister()
+
+mods.gregtech.chemical_bath.recipeBuilder()
+		.inputs(metaitem('washed_rotten_flesh'))
+		.fluidInputs(fluid('creosote') * 50)
+		.outputs(item('minecraft:leather'))
+		.duration(200)
+		.EUt(4)
+		.buildAndRegister()
+
 //Chemical reactor
 // Blaze Powder * 1
 mods.gregtech.chemical_reactor.removeByInput(480, [metaitem('dustCarbon'), metaitem('dustSulfur')], null)
@@ -447,6 +500,15 @@ mods.gregtech.chemical_reactor.removeByInput(30, [item('minecraft:blaze_powder')
 // Magma Cream * 1
 mods.gregtech.large_chemical_reactor.removeByInput(30, [item('minecraft:blaze_powder'), item('minecraft:slime_ball')], null)
 
+//Crystallizer
+
+recipemap('crystallizer').recipeBuilder()
+		.fluidInputs(fluid('clarified_sugary_water') * 1000)
+		.outputs(item('minecraft:sugar') * 4)
+		.duration(200)
+		.EUt(8)
+		.buildAndRegister()
+
 //Extractor
 mods.gregtech.extractor.recipeBuilder()
     .inputs(item('quark:glass_shards:0'))
@@ -454,6 +516,18 @@ mods.gregtech.extractor.recipeBuilder()
     .duration(20)
     .EUt(8)
     .buildAndRegister()
+
+//Macerator
+
+// Sugar * 1
+mods.gregtech.macerator.removeByInput(2, [item('minecraft:reeds')], null)
+
+mods.gregtech.macerator.recipeBuilder()
+		.inputs(item('minecraft:reeds'))
+		.outputs(metaitem('sugar_cane_dust'))
+		.duration(400)
+		.EUt(2)
+		.buildAndRegister()
 
 //Mixer
 // Fermented Spider Eye * 1
@@ -470,3 +544,11 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(20)
     .EUt(8)
     .buildAndRegister()
+
+mods.gregtech.mixer.recipeBuilder()
+		.inputs(metaitem('dustQuicklime'))
+		.fluidInputs(fluid('sugary_water') * 10000)
+		.fluidOutputs(fluid('clarified_sugary_water') * 10000)
+		.duration(400)
+		.EUt(8)
+		.buildAndRegister()
