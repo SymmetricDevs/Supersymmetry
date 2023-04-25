@@ -7,6 +7,8 @@ import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
+import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
+
 
 //ID 20000 - 30000 for solids
 class RegisterSolids {
@@ -155,12 +157,14 @@ class RegisterSolids {
         new Material.Builder(32042, 'iron_iii_oxide')
                 .dust()
                 .components(Iron, 2, Oxygen, 3)
+                .flags(GENERATE_CATALYST_BED)
                 .color(0x8F0C03)
                 .build()
 
         new Material.Builder(32043, 'copper_ii_chloride')
                 .dust()
-                .components(Copper, 1, Oxygen, 1)
+                .components(Copper, 1, Chlorine, 2)
+                .flags(GENERATE_CATALYST_BED)
                 .color(0x12112c)
                 .build()
 
@@ -175,7 +179,6 @@ class RegisterSolids {
                 .components(Tungsten, 1, Oxygen, 3)
                 .color(0x8a9734)
                 .build()
-
 
         log.infoMC('Finished registering solids')
     }

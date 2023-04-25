@@ -56,11 +56,11 @@ DISTILLERY.recipeBuilder()
 .buildAndRegister()
 
 // Styrene 
-// TODO: catalyst
+
 FBR.recipeBuilder()
 .fluidInputs(fluid('ethylbenzene') * 50)
 .fluidInputs(fluid('steam') * 50)
-.notConsumable(ore('dustBandedIron'))
+.notConsumable(ore('catalystBedIronIiiOxide'))
 .fluidOutputs(fluid('crude_styrene') * 50)
 .fluidOutputs(fluid('hydrogen') * 100)
 .duration(2)
@@ -481,18 +481,20 @@ ROASTER.recipeBuilder()
 .buildAndRegister()
 
 // Acetic Acid
-//TODO: Replace with platinum catalyst bed
+
 FBR.recipeBuilder()
 .fluidInputs(fluid('ethylene') * 100)
 .fluidInputs(fluid('oxygen') * 100)
+.notConsumable(ore('catalystBedPlatinum'))
 .fluidOutputs(fluid('gtfo_acetaldehyde') * 100)
 .duration(5)
 .EUt(30)
 .buildAndRegister()
-//TODO: Replace with cobalt catalyst bed
+
 FBR.recipeBuilder()
 .fluidInputs(fluid('gtfo_acetaldehyde') * 100)
 .fluidInputs(fluid('oxygen') * 100)
+.notConsumable(ore('catalystBedCobalt'))
 .fluidOutputs(fluid('acetic_acid') * 100)
 .duration(5)
 .EUt(30)
@@ -518,7 +520,7 @@ CSTR.recipeBuilder()
 .buildAndRegister()
 
 // Cumene
-//TODO: Solid Phosphoric Acid Catalyst Tray
+
 FBR.recipeBuilder()
 .fluidInputs(fluid('hp_propene') * 50)
 .fluidInputs(fluid('hp_benzene') * 50)
@@ -662,13 +664,13 @@ CSTR.recipeBuilder()
 .buildAndRegister()
 
 // Dinitrogen Tetroxide
-//TODO: Add cold nitrogen dioxide
-// CSTR.recipeBuilder()
-// .fluidInputs(fluid('cold_nitrogen_dioxide') * 100)
-// .fluidOutputs(fluid('dinitrogen_tetroxide') * 50)
-// .duration(10)
-// .EUt(30)
-// .buildAndRegister()
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('nitrogen_dioxide') * 100)
+.fluidOutputs(fluid('dinitrogen_tetroxide') * 50)
+.duration(10)
+.EUt(30)
+.buildAndRegister()
 
 // 1,1-dimethylhydrazine
 
@@ -682,18 +684,27 @@ CSTR.recipeBuilder()
 .buildAndRegister()
 
 // Vinyl acetate
-//TODO: Replace palladium with palladium catalyst bed
+
 FBR.recipeBuilder()
 .fluidInputs(fluid('acetic_acid') * 50)
 .fluidInputs(fluid('ethylene') * 50)
-.notConsumable(ore('dustPalladium'))
+.notConsumable(ore('catalystBedPalladium'))
 .fluidOutputs(fluid('vinyl_acetate') * 50)
 .duration(10)
 .EUt(30)
 .buildAndRegister()
 
 // Hypochloric Acid
-//TODO: stoichiometry needs to be done
+
+BCR.recipeBuilder()
+.fluidInputs(fluid('water') * 50)
+.fluidInputs(fluid('chlorine') * 100)
+.fluidOutputs(fluid('hydrogen_chloride') * 50)
+.fluidOutputs(fluid('hypochlorous_acid') * 50)
+.duration(6)
+.EUt(30)
+.buildAndRegister()
+
 
 // Epichlorohydrin
 
@@ -814,12 +825,11 @@ MIXER.recipeBuilder()
 .buildAndRegister()
 
 // Methanol
-//TODO: Make fluidized bed reactor have continuous recipe logic
-//TODO: Catalysts
+
 FLUIDIZEDBR.recipeBuilder()
 .fluidInputs(fluid('hp_carbon_monoxide') * 50)
 .fluidInputs(fluid('hp_hydrogen') * 100)
-.notConsumable(ore('cupric_oxide'))
+.notConsumable(ore('dustCuprousOxide'))
 .fluidOutputs(fluid('methanol') * 50)
 .duration(5)
 .EUt(30)
@@ -1016,11 +1026,11 @@ DISTILLATION_TOWER.recipeBuilder()
 .buildAndRegister()
 
 // 3,3'-Dichlorobenzidine
-// TODO: replace with catalyst bed
+
 FBR.recipeBuilder()
 .fluidInputs(fluid('two_nitrochlorobenzene_solution') * 100)
 .fluidInputs(fluid('hp_hydrogen') * 100)
-.notConsumable(ore('dustPalladium'))
+.notConsumable(ore('catalystBedPalladium'))
 .fluidOutputs(fluid('two_two_dichlorohydrazobenzene_solution') * 50)
 .duration(15)
 .EUt(120)
@@ -1181,21 +1191,20 @@ DISTILLATION_TOWER.recipeBuilder()
 // Molybdenum from Molybdenum Trioxide (TODO: Molybdenum Trioxide is not a thing for some reason)
 
 // Caprolactam
-// TODO: Platinum Catalyst Bed
+
 FBR.recipeBuilder()
 .fluidInputs(fluid('nitric_oxide') * 50)
 .fluidInputs(fluid('hydrogen') * 150)
-.notConsumable(ore('dustPlatinum'))
+.notConsumable(ore('catalystBedPlatinum'))
 .fluidOutputs(fluid('hydroxylamine') * 50)
 .duration(5)    
 .EUt(30)
 .buildAndRegister()
 
-// TODO: Cobalt Catalyst Bed
 FBR.recipeBuilder()
 .fluidInputs(fluid('cyclohexane') * 50)
 .fluidInputs(fluid('oxygen') * 100)
-.notConsumable(ore('dustCobalt'))
+.notConsumable(ore('catalystBedCobalt'))
 .fluidOutputs(fluid('diluted_cyclohexanone') * 100)
 .duration(5)    
 .EUt(30)
@@ -1253,12 +1262,12 @@ PYROLYSE.recipeBuilder()
 .buildAndRegister()
 
 // Butyraldehyde
-// TODO: Rhodium Catalyst Bed
+
 FBR.recipeBuilder()
 .fluidInputs(fluid('propene') * 50)
 .fluidInputs(fluid('hp_carbon_monoxide') * 50)
 .fluidInputs(fluid('hp_hydrogen') * 100)
-.notConsumable(ore('dustRhodium'))
+.notConsumable(ore('catalystBedRhodium'))
 .fluidOutputs(fluid('butyraldehyde') * 50)
 .duration(5)
 .EUt(30)
@@ -1585,6 +1594,7 @@ CSTR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 //TODO: Doesnt work for some goddamn reason, it just doesnt register
+// Now that I think of it, it may just be conflicting with an earlier recipe (maybe someone can try giving this one a circ)
 CSTR.recipeBuilder()
 .fluidInputs(fluid('ethane') * 100)
 .fluidInputs(fluid('chlorine') * 100)
@@ -1662,14 +1672,14 @@ POLYMERIZATION.recipeBuilder()
 .duration(300)
 .EUt(60)
 .buildAndRegister()
-// TODO: Uncomment once susycore updated
-// DRYER.recipeBuilder()
-// .fluidInputs(fluid('polyvinyl_acetate_solution') * 2000)
-// .outputs(ore('dustPolyvinylAcetate').first() * 7)
-// .fluidOutputs(fluid('methanol') * 1000)
-// .duration(260)
-// .EUt(30)
-// .buildAndRegister()
+
+DRYER.recipeBuilder()
+.fluidInputs(fluid('polyvinyl_acetate_solution') * 2000)
+.outputs(ore('dustPolyvinylAcetate').first() * 7)
+.fluidOutputs(fluid('methanol') * 1000)
+.duration(260)
+.EUt(30)
+.buildAndRegister()
 
 // Polyethylene
 
@@ -1762,9 +1772,9 @@ DISTILLERY.recipeBuilder()
 
 SIFTER.recipeBuilder()
 .fluidInputs(fluid('ethanol') * 1000)
-.inputs(metaitem('dustMolecularSieve')* 4)
+.inputs(ore('dustMolecularSieve')* 4)
 .fluidOutputs(fluid('dry_ethanol') * 1000)
-.outputs(metaitem('dustWetMolecularSieve') * 4) //im not too sure about this recipe?
+.outputs(ore('dustWetMolecularSieve').first() * 4) //im not too sure about this recipe?
 .EUt(30)
 .duration(450)
 .buildAndRegister()
@@ -1789,7 +1799,7 @@ POLYMERIZATION.recipeBuilder()
 DRYER.recipeBuilder()
 .fluidInputs(fluid('polymerized_styrene_butadiene_solution') * 3000)
 .fluidOutputs(fluid('ethanol') * 1000)
-.outputs(metaitem('dustRawStyreneButadieneRubber') * 16)
+.outputs(ore('dustRawStyreneButadieneRubber').first() * 16)
 .EUt(120)
 .duration(600)
 .buildAndRegister()
@@ -1798,18 +1808,18 @@ DRYER.recipeBuilder()
 //acetylene
 
 EBF.recipeBuilder()
-.inputs(metaitem('dustQuicklime') * 2)
-.inputs(metaitem('dustCarbon') * 3)
-.outputs(metaitem('dustCalciumCarbide') * 3)
+.inputs(ore('dustQuicklime') * 2)
+.inputs(ore('dustCarbon') * 3)
+.outputs(ore('dustCalciumCarbide').first() * 3)
 .fluidOutputs(fluid('carbon_monoxide') * 1000)
 .EUt(120)
 .duration(600)
 .buildAndRegister()
 
 MIXER.recipeBuilder()
-.inputs(metaitem('dustCalciumCarbide') * 3)
+.inputs(ore('dustCalciumCarbide') * 3)
 .fluidInputs(fluid('water') * 2000)
-.outputs(metaitem('dustCalciumHydroxide') * 5)
+.outputs(ore('dustCalciumHydroxide').first() * 5)
 .fluidOutputs(fluid('acetylene') * 1000)
 .EUt(30)
 .duration(120)
@@ -1827,7 +1837,7 @@ BCR.recipeBuilder()
 
 DISTILLATION_TOWER.recipeBuilder()
 .fluidInputs(fluid('ammonium_nitrate_solution') * 1000)
-.outputs(metaitem('dustAmmoniumNitrate') * 2)
+.outputs(ore('dustAmmoniumNitrate').first() * 2)
 .fluidOutputs(fluid('water') * 1000)
 .EUt(90)
 .duration(300)
@@ -1838,7 +1848,7 @@ DISTILLATION_TOWER.recipeBuilder()
 FBR.recipeBuilder()
 .fluidInputs(fluid('chlorine') * 100)
 .fluidInputs(fluid('ethylene') * 50)
-.notConsumable(metaitem('dustIronIiiOxide')) //replace with catalyst
+.notConsumable(ore('catalystBedIronIiiOxide'))
 .fluidOutputs(fluid('dichloroethane') * 50)
 .EUt(30)
 .duration(10)
@@ -1848,7 +1858,7 @@ FBR.recipeBuilder()
 .fluidInputs(fluid('ethylene') * 50)
 .fluidInputs(fluid('hydrochloric_acid') * 100)
 .fluidInputs(fluid('oxygen') * 50)
-.notConsumable(metaitem('dustCopperIiChloride')) //replace with catalyst
+.notConsumable(ore('catalystBedCopperIiChloride'))
 .fluidOutputs(fluid('diluted_dichloroethane') * 200)
 .EUt(30)
 .duration(10)
@@ -1867,7 +1877,7 @@ DISTILLATION_TOWER.recipeBuilder()
 FLUIDIZEDBR.recipeBuilder()
 .fluidInputs(fluid('methanol') * 300)
 .fluidInputs(fluid('ammonia') * 150)
-.notConsumable(metaitem('dustAluminium')) //replace with pregnant catalyst
+.notConsumable(ore('dustAluminium')) //replace with pregnant catalyst
 .fluidOutputs(fluid('methylamine_mix') * 450)
 .EUt(120)
 .duration(8)
@@ -1888,7 +1898,7 @@ DISTILLATION_TOWER.recipeBuilder()
 FBR.recipeBuilder()
 .fluidInputs(fluid('formaldehyde') * 100)
 .fluidInputs(fluid('acetylene') * 50)
-.notConsumable(metaitem('dustBismuthBronze')) //replace with bismuth-copper catalyst bed
+.notConsumable(ore('dustBismuthBronze')) //replace with bismuth-copper catalyst bed
 .fluidOutputs(fluid('butynediol') * 50)
 .EUt(30)
 .duration(10)
@@ -1897,19 +1907,18 @@ FBR.recipeBuilder()
 TBR.recipeBuilder()
 .fluidInputs(fluid('butynediol') * 50)
 .fluidInputs(fluid('hydrogen') * 200)
-.notConsumable(metaitem('dustNickel')) //replace with raney nickel catalyst
+.notConsumable(ore('dustNickel')) //replace with raney nickel catalyst
 .fluidOutputs(fluid('butanediol') * 50)
 .EUt(30)
 .duration(10)
 .buildAndRegister()
-
 
 //formaldehyde
 
 FBR.recipeBuilder()
 .fluidInputs(fluid('methanol') * 100)
 .fluidInputs(fluid('oxygen') * 100)
-.notConsumable(metaitem('dustIronIiiOxide')) //replace with catalyst bed
+.notConsumable(ore('catalystBedIronIiiOxide'))
 .fluidOutputs(fluid('formaldehyde') * 100)
 .fluidOutputs(fluid('water') * 100)
 .EUt(30)
@@ -1920,7 +1929,7 @@ FBR.recipeBuilder()
 
 FBR.recipeBuilder()
 .fluidInputs(fluid('butanediol') * 50)
-.notConsumable(metaitem('dustCopper') * 1) //TODO: change this to copper catalyst bed
+.notConsumable(ore('catalystBedCopper') * 1)
 .fluidOutputs(fluid('gamma_butyrolactone') * 50)
 .fluidOutputs(fluid('hydrogen') * 200)
 .EUt(30)
@@ -1958,7 +1967,7 @@ CSTR.recipeBuilder()
 //n-butyllithium
 
 MIXER.recipeBuilder()
-.inputs(metaitem('dustLithium') * 2)
+.inputs(ore('dustLithium') * 2)
 .fluidInputs(fluid('diethyl_ether') * 1000)
 .fluidOutputs(fluid('lithium_solution') * 1000)
 .EUt(30)
@@ -1969,7 +1978,7 @@ MIXER.recipeBuilder()
 .fluidInputs(fluid('lithium_solution') * 1000)
 .fluidInputs(fluid('bromobutane') * 1000)
 .fluidOutputs(fluid('diluted_butyllithium') * 2000)
-.outputs(metaitem('dustLithiumBromide') * 2)
+.outputs(ore('dustLithiumBromide').first() * 2)
 .EUt(30)
 .duration(300)
 .buildAndRegister()
@@ -2009,13 +2018,13 @@ MIXER.recipeBuilder()
 .fluidInputs(fluid('calcium_hydroxide_solution') * 1000)
 .inputs(ore('dustPotassiumCarbonate') * 6)
 .fluidOutputs(fluid('potassium_hydroxide_solution') * 1000)
-.outputs(metaitem('dustCalcite') *  5)
+.outputs(ore('dustCalcite').first() *  5)
 .EUt(30)
 .duration(200)
 .buildAndRegister()
 
 MIXER.recipeBuilder()
-.inputs(metaitem('dustPotassiumHydroxide') * 3)
+.inputs(ore('dustPotassiumHydroxide') * 3)
 .fluidInputs(fluid('hydrochloric_acid')* 1000)
 .fluidOutputs(fluid('dilute_rock_salt_solution') * 2000)
 .EUt(30)
@@ -2025,7 +2034,7 @@ MIXER.recipeBuilder()
 DISTILLERY.recipeBuilder()
 .fluidInputs(fluid('dilute_rock_salt_solution') * 2000)
 .fluidOutputs(fluid('water') * 2000)
-.outputs(metaitem('dustRockSalt') * 1)
+.outputs(ore('dustRockSalt').first() * 1)
 .EUt(30)
 .duration(200)
 .buildAndRegister()
@@ -2040,7 +2049,7 @@ CSTR.recipeBuilder()
 
 DISTILLERY.recipeBuilder()
 .fluidInputs(fluid('dilute_potassium_carbonate_solution') * 3000)
-.outputs(metaitem('dustPotassiumCarbonate') * 6)
+.outputs(ore('dustPotassiumCarbonate').first() * 6)
 .fluidOutputs(fluid('water') * 3000)
 .EUt(30)
 .duration(400)
@@ -2048,7 +2057,7 @@ DISTILLERY.recipeBuilder()
 
 MIXER.recipeBuilder()
 .fluidInputs(fluid('ammonium_chloride_solution') * 2000)
-.inputs(metaitem('dustCalciumHydroxide') * 5)
+.inputs(ore('dustCalciumHydroxide') * 5)
 .fluidOutputs(fluid('ammonia') * 2000)
 .fluidOutputs(fluid('dilute_calcium_chloride_solution') * 2000)
 .EUt(30)
@@ -2058,18 +2067,18 @@ MIXER.recipeBuilder()
 //Graphite
 
 ARC_FURNACE.recipeBuilder()
-.inputs(metaitem('dustSiliconDioxide') * 3)
-.inputs(metaitem('dustCoke') * 3)
-.outputs(metaitem('dustSiliconCarbide') * 2)
+.inputs(ore('dustSiliconDioxide') * 3)
+.inputs(ore('dustCoke') * 3)
+.outputs(ore('dustSiliconCarbide').first() * 2)
 .fluidOutputs(fluid('carbon_monoxide') * 2000)
 .EUt(45)
 .duration(300)
 .buildAndRegister()
 
 ARC_FURNACE.recipeBuilder()
-.inputs(metaitem('dustSiliconCarbide') * 2)
-.outputs(metaitem('dustSilicon') * 1)
-.outputs(metaitem('dustGraphite') * 1)
+.inputs(ore('dustSiliconCarbide') * 2)
+.outputs(ore('dustSilicon').first())
+.outputs(ore('dustGraphite').first())
 .EUt(45)
 .duration(270)
 .buildAndRegister()

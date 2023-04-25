@@ -961,11 +961,6 @@ class RegisterFluids {
                         .color(0x3b2e38)
                         .build();
 
-                new Material.Builder(11108, 'tetrafluoroethylene_emulsion')
-                        .fluid()
-                        .color(0x3b2e38)
-                        .build();
-
                 new Material.Builder(11109, 'dichloromethane')
                         .fluid()
                         .components(Carbon, 1, Hydrogen, 2, Chlorine, 2)
