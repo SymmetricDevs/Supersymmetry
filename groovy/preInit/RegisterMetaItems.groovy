@@ -33,6 +33,9 @@ eventManager.listen {
         customMetaItems.addItem(152, "sand.dust")
         customMetaItems.addItem(153, "straw")
 
+        customMetaItems.addItem(154, "washed_rotten_flesh");
+
+        customMetaItems.addItem(155, "sugar_cane_dust");
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
