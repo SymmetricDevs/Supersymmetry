@@ -111,7 +111,7 @@ def rubbers = [
     new Rubber('dustRawStyreneButadieneRubber', 'StyreneButadieneRubber', 4, 30 * 20, 4, false)
 ]
 def sulfurSources = [
-    new SulfurSource('dustSulfur', 8)
+    new SulfurSource('dustSulfur', 1)
 ]
 
 def catalysers = [

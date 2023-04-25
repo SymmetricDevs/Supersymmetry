@@ -1085,6 +1085,16 @@ class RegisterFluids {
                         .color(0xa2bdb5)
                         .build();
 
+                new Material.Builder(12014, "sugary_water")
+                        .fluid()
+                        .color(0x8fbf9b)
+                        .build();
+
+                new Material.Builder(12015, "clarified_sugary_water")
+                        .fluid()
+                        .color(0xa7d6b3)
+                        .build();
+
                 log.infoMC("Finished registering fluids")
         }
 }

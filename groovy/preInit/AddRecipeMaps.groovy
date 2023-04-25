@@ -79,17 +79,17 @@ eventManager.listen {
 
         log.infoMC("Registering simple machines...")
 
-        def WEAPONS_FACTORY = new SimpleMachineMetaTileEntity[9]
-        def FLUID_DECOMPRESSOR = new SimpleMachineMetaTileEntity[9]
-        def FLUID_COMPRESSOR = new SimpleMachineMetaTileEntity[9]
+        def WEAPONS_FACTORY = new SimpleMachineMetaTileEntity[15]
+        def FLUID_DECOMPRESSOR = new SimpleMachineMetaTileEntity[15]
+        def FLUID_COMPRESSOR = new SimpleMachineMetaTileEntity[15]
 
         log.infoMC("Finished adding simple machines")
 
         log.infoMC("Adding simple MTEs")
 
-        MetaTileEntities.registerSimpleMetaTileEntity(WEAPONS_FACTORY, 32000, "weapons_factory", weapons_factory, (ICubeRenderer) Textures.ASSEMBLER_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
-        MetaTileEntities.registerSimpleMetaTileEntity(FLUID_DECOMPRESSOR, 32020, "fluid_decompressor", fluid_decompressor, (ICubeRenderer) Textures.ELECTROMAGNETIC_SEPARATOR_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
-        MetaTileEntities.registerSimpleMetaTileEntity(FLUID_COMPRESSOR, 32040, "fluid_compressor", fluid_compressor, (ICubeRenderer) Textures.ELECTROMAGNETIC_SEPARATOR_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
+        MetaTileEntities.registerSimpleMetaTileEntity(WEAPONS_FACTORY, 32020, "weapons_factory", weapons_factory, (ICubeRenderer) Textures.ASSEMBLER_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
+        MetaTileEntities.registerSimpleMetaTileEntity(FLUID_DECOMPRESSOR, 32040, "fluid_decompressor", fluid_decompressor, (ICubeRenderer) Textures.ELECTROMAGNETIC_SEPARATOR_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
+        MetaTileEntities.registerSimpleMetaTileEntity(FLUID_COMPRESSOR, 32060, "fluid_compressor", fluid_compressor, (ICubeRenderer) Textures.ELECTROMAGNETIC_SEPARATOR_OVERLAY, true, GTUtility.hvCappedTankSizeFunction)
         
         log.infoMC("Finished adding simple MTEs")
 }

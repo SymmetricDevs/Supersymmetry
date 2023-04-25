@@ -178,6 +178,8 @@ material.iron_iii_sulfate=Iron III Sulfate
 # Fluids
 
 material.smoke_bomb_mix=Smoke Bomb Mix
+material.sugary_water=Sugary Water
+material.clarified_sugary_water=Clarified Sugary Water
 
 # Thermodynamics
 
@@ -388,11 +390,96 @@ metaitem.pattern.processor.name=Pattern CPU
 metaitem.pattern.memory.name=Pattern RAM
 metaitem.storage.segment.name=Storage Segment
 
+metaitem.gun.barrel.steel.name=Steel Barrel
+
 metaitem.cathode.lead.name=Lead Cathode
 metaitem.anode.lead.name=Lead Anode
 metaitem.battery.lead_acid.name=Lead Acid Battery
 
 metaitem.steam.piston.name=Steam Piston
+metaitem.steam.motor.name=Steam Motor
+metaitem.steam.pump.name=Steam Pump
+
+metaitem.vacuum_tube_components.name=Vacuum Tube Components
+
+metaitem.circuit.gooware_processor.name=Gooware Processor
+metaitem.circuit.gooware_processor.tooltip=Reaction-Diffusion Computation/n§2ZPM-tier Circuit
+metaitem.circuit.gooware_assembly.name=Gooware Assembly
+metaitem.circuit.gooware_assembly.tooltip=Cyclic Concentration/n§2UV-tier Circuit
+metaitem.circuit.gooware_computer.name=Gooware Supercomputer
+metaitem.circuit.gooware_computer.tooltip=Complex Wave Phenomena!/n§2UHV-tier Circuit
+metaitem.circuit.gooware_mainframe.name=Gooware Mainframe
+metaitem.circuit.gooware_mainframe.tooltip=Spiraling Colored Waves!/n§2UEV-tier Circuit
+
+metaitem.circuit.optical_processor.name=Optical Processor
+metaitem.circuit.optical_processor.tooltip=Lightspeed Computing/n§6UV-tier Circuit
+metaitem.circuit.optical_assembly.name=Optical Assembly
+metaitem.circuit.optical_assembly.tooltip=With the Power of Lasers!/n§6UHV-tier Circuit
+metaitem.circuit.optical_computer.name=Optical Supercomputer
+metaitem.circuit.optical_computer.tooltip=In the Blink of an Eye/n§6UEV-tier Circuit
+metaitem.circuit.optical_mainframe.name=Optical Mainframe
+metaitem.circuit.optical_mainframe.tooltip=Could Anything be faster?/n§6UIV-tier Circuit
+
+metaitem.circuit.spintronic_processor.name=Spintronic Processor
+metaitem.circuit.spintronic_processor.tooltip=Spinning Electrons/n§5UHV-tier Circuit
+metaitem.circuit.spintronic_assembly.name=Spintronic Assembly
+metaitem.circuit.spintronic_assembly.tooltip=Discrete Quantum Walks/n§5UEV-tier Circuit
+metaitem.circuit.spintronic_computer.name=Spintronic Supercomputer
+metaitem.circuit.spintronic_computer.tooltip=Ballistic Spin Filtration/n§5UIV-tier Circuit
+metaitem.circuit.spintronic_mainframe.name=Spintronic Mainframe
+metaitem.circuit.spintronic_mainframe.tooltip=Spin-Wave Logic!/n§5UXV-tier Circuit
+
+metaitem.circuit.cosmic_processor.name=Cosmic Processor
+metaitem.circuit.cosmic_processor.tooltip=Phenomenal cosmic powers!/n§8UEV-tier Circuit
+metaitem.circuit.cosmic_assembly.name=Cosmic Assembly
+metaitem.circuit.cosmic_assembly.tooltip=Phenomenal cosmic powers!/n§8UIV-tier Circuit
+metaitem.circuit.cosmic_computer.name=Cosmic Supercomputer
+metaitem.circuit.cosmic_computer.tooltip=Phenomenal cosmic powers!/n§8UXV-tier Circuit
+metaitem.circuit.cosmic_mainframe.name=Cosmic Mainframe
+metaitem.circuit.cosmic_mainframe.tooltip=Phenomenal cosmic powers!/n§8OpV-tier Circuit
+
+metaitem.circuit.supracausal_processor.name=Supra-Causal Processor
+metaitem.circuit.supracausal_processor.tooltip=With the Power of Black Holes/n§fUIV-tier Circuit
+metaitem.circuit.supracausal_assembly.name=Supra-Causal Assembly
+metaitem.circuit.supracausal_assembly.tooltip=Singularities on an Epic scale/n§fUXV-tier Circuit
+metaitem.circuit.supracausal_computer.name=Supra-Causal Supercomputer
+metaitem.circuit.supracausal_computer.tooltip=Using Wormholes to our Advantage/n§fOpV-tier Circuit
+metaitem.circuit.supracausal_mainframe.name=Supra-Causal Mainframe
+metaitem.circuit.supracausal_mainframe.tooltip=Answers before questions/n§fMAX-tier Circuit
+
+metaitem.circuit.suprachronal.ulv.name=Supra-Chronal Primitive Circuit
+metaitem.circuit.suprachronal.ulv.tooltip=§fULV-tier Circuit/n
+metaitem.circuit.suprachronal.lv.name=Supra-Chronal Basic Circuit
+metaitem.circuit.suprachronal.lv.tooltip=§fLV-tier Circuit/n
+metaitem.circuit.suprachronal.mv.name=Supra-Chronal Good Circuit
+metaitem.circuit.suprachronal.mv.tooltip=§fMV-tier Circuit/n
+metaitem.circuit.suprachronal.hv.name=Supra-Chronal Advanced Circuit
+metaitem.circuit.suprachronal.hv.tooltip=§fHV-tier Circuit/n
+metaitem.circuit.suprachronal.ev.name=Supra-Chronal Extreme Circuit
+metaitem.circuit.suprachronal.ev.tooltip=§fEV-tier Circuit/n
+metaitem.circuit.suprachronal.iv.name=Supra-Chronal Elite Circuit
+metaitem.circuit.suprachronal.iv.tooltip=§fIV-tier Circuit/n
+metaitem.circuit.suprachronal.luv.name=Supra-Chronal Master Circuit
+metaitem.circuit.suprachronal.luv.tooltip=§fLuV-tier Circuit/n
+metaitem.circuit.suprachronal.zpm.name=Supra-Chronal Ultimate Circuit
+metaitem.circuit.suprachronal.zpm.tooltip=§fZPM-tier Circuit/n
+metaitem.circuit.suprachronal.uv.name=Supra-Chronal Super Circuit
+metaitem.circuit.suprachronal.uv.tooltip=§fUV-tier Circuit/n
+metaitem.circuit.suprachronal.uhv.name=Supra-Chronal Infinite Circuit
+metaitem.circuit.suprachronal.uhv.tooltip=§fUHV-tier Circuit/n
+metaitem.circuit.suprachronal.uev.name=Supra-Chronal Epic Circuit
+metaitem.circuit.suprachronal.uev.tooltip=§fUEV-tier Circuit/n
+metaitem.circuit.suprachronal.uiv.name=Supra-Chronal Insane Circuit
+metaitem.circuit.suprachronal.uiv.tooltip=§fUIV-tier Circuit/n
+metaitem.circuit.suprachronal.uxv.name=Supra-Chronal Legendary Circuit
+metaitem.circuit.suprachronal.uxv.tooltip=§fUXV-tier Circuit/n
+metaitem.circuit.suprachronal.opv.name=Supra-Chronal Overpowered Circuit
+metaitem.circuit.suprachronal.opv.tooltip=§fOpV-tier Circuit/n
+metaitem.circuit.suprachronal.max.name=Supra-Chronal Maximum Circuit
+metaitem.circuit.suprachronal.max.tooltip=§fMAX-tier Circuit/n
+
+metaitem.sugar_cane_dust.name=Sugar Cane Dust
+metaitem.washed_rotten_flesh.name=Washed Rotten Flesh
 
 # Multiblocked
 
@@ -409,3 +496,7 @@ tile.multiblocked.fluid_output.description=Fluid Output for Multiblocked Multibl
 tile.multiblocked.ore_sorter.name=Ore Sorter
 multiblocked.ore_sorter.name=Ore Sorter
 multiblocked.ore_sorter.description=Sorts Ores.
+
+# Nether
+tile.hellsand.name=Mineral-Rich Sand
+tile.magma.name=Magma-Infused Netherrack

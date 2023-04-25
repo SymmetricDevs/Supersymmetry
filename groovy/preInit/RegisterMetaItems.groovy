@@ -33,6 +33,9 @@ eventManager.listen {
         customMetaItems.addItem(152, "sand.dust")
         customMetaItems.addItem(153, "straw")
 
+        customMetaItems.addItem(154, "washed_rotten_flesh");
+
+        customMetaItems.addItem(155, "sugar_cane_dust");
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
@@ -40,6 +43,8 @@ eventManager.listen {
         customMetaItems.addItem(1003, "electrolyte_paper")
         
         customMetaItems.addItem(1100, "steam.piston")
+        customMetaItems.addItem(1101, "steam.motor")
+        customMetaItems.addItem(1102, "steam.pump")
 
         customMetaItems.addItem(2000, "spaceship.me.scrap")
         customMetaItems.addItem(2001, "wafer.pattern.processor")
@@ -49,6 +54,8 @@ eventManager.listen {
         customMetaItems.addItem(2005, "pattern.processor")
         customMetaItems.addItem(2006, "pattern.memory")
         customMetaItems.addItem(2007, "storage.segment")
+
+        customMetaItems.addItem(2500, "gun.barrel.steel")
 
         //Placeholders until GCYS is available
         customMetaItems.addItem(3000, "circuit.gooware_processor").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.ZPM);

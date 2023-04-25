@@ -76,13 +76,17 @@ def tieredSticks = [ore('stickWroughtIron'), ore('stickIron'), ore('stickSteel')
 										ore('stickNeodymium'), ore('stickVanadiumGallium'), ore('stickVanadiumGallium'),
 										ore('stickVanadiumGallium'), ore('stickVanadiumGallium')];
 
-/*def tieredGlass = [ore('blockGlass'), ore('blockGlass'), ore('blockGlass'), item('gregtech:transparent_casing:0'),
+def tieredGlass = [ore('blockGlass'), ore('blockGlass'), ore('blockGlass'), item('gregtech:transparent_casing:0'),
 				   item('gregtech:transparent_casing:0'), item('gregtech:transparent_casing:2'), item('gregtech:transparent_casing:2'),
-				   item('gregtech:transparent_casing:1'), item('gregtech:transparent_casing:1')];*/
+				   item('gregtech:transparent_casing:1'), item('gregtech:transparent_casing:1')];
 
 def tieredCables = [ore('cableGtSingleRedAlloy'), ore('cableGtSingleTin'), ore('cableGtSingleCopper'), ore('cableGtSingleGold'),
 										ore('cableGtSingleAluminium'), ore('cableGtSinglePlatinum'), ore('cableGtSingleNiobiumTitanium'),
 										ore('cableGtSingleVanadiumGallium'), ore('cableGtSingleYttriumBariumCuprate')]
+
+def tieredSprings = [metaitem('springIron'), metaitem('springCopper'), metaitem('springCupronickel'), metaitem('springKanthal'),
+					 metaitem('springNichrome'), metaitem('springTungstenSteel'), metaitem('springHssg'),
+					 metaitem('springNaquadah'), metaitem('springNaquadahAlloy')]
 
 def rotors = [
 	ore('rotorBronze'),
@@ -96,62 +100,19 @@ def rotors = [
 	ore('rotorDarmstadtium')
 ]
 
-/*
-for (def i = 1; i < 10; i++) {
-	crafting.addShaped("weapons_factory_" + i, item('gregtech:machine:' + (31999 + i)), [
-			[robotArms[i], circuits[i], robotArms[i]],
-			[conveyors[i], hulls[i], conveyors[i]],
-			[robotArms[i], circuits[i], robotArms[i]]
-	]);
+def chemicalReactorParts = [ore('blockGlass'), ore('blockGlass'), ore('blockGlass'), metaitem('pipeNormalFluidPlastic'), metaitem('pipeLargeFluidPlastic'),
+							metaitem('pipeHugeFluidPlastic'), metaitem('pipeNormalFluidPolytetrafluoroethylene'), metaitem('pipeLargeFluidPolytetrafluoroethylene'),
+							metaitem('pipeHugeFluidPolytetrafluoroethylene')]
 
-	crafting.addShaped("fluid_decompressor_" + i, item('gregtech:machine:' + (32019 + i)), [
-			[tieredGlass[i], pistons[i], tieredGlass[i]],
-			[regulators[i], hulls[i], pumps[i]],
-			[circuits[i], tieredWires[i], circuits[i]]
-	]);
+def tieredPipes = [metaitem('pipeLargeFluidSteel'), metaitem('pipeLargeFluidSteel'), metaitem('pipeLargeFluidAluminium'), metaitem('pipeLargeFluidStainlessSteel'),
+				   metaitem('pipeLargeFluidTitanium'), metaitem('pipeLargeFluidTungstenCarbide'), metaitem('pipeLargeFluidNiobiumTitanium'),
+				   metaitem('pipeLargeFluidNaquadah'), metaitem('pipeLargeFluidDuranium')]
 
-	crafting.addShaped("fluid_compressor_" + i, item('gregtech:machine:' + (32039 + i)), [
-			[tieredGlass[i], pistons[i], tieredGlass[i]],
-			[pumps[i], hulls[i], pumps[i]],
-			[circuits[i], tieredWires[i], circuits[i]]
-	]);
-}
+def tieredMagnets = [metaitem('stickIronMagnetic'), metaitem('stickIronMagnetic'), metaitem('stickSteelMagnetic'), metaitem('stickSteelMagnetic'),
+					 metaitem('stickNeodymiumMagnetic'), metaitem('stickNeodymiumMagnetic'), metaitem('stickSamariumMagnetic'),
+					 metaitem('stickSamariumMagnetic'), metaitem('stickSamariumMagnetic')];
 
-// conversion recipes from greg ports
-crafting.addShapeless("lv input bus -> mbd input bus", item('multiblocked:item_input'), [item('gregtech:machine:1151')]);
-crafting.addShapeless("lv output bus -> mbd output bus", item('multiblocked:item_output'), [item('gregtech:machine:1166')]);
-crafting.addShapeless("lv input hatch -> mbd input hatch", item('multiblocked:fluid_input'), [item('gregtech:machine:1181')]);
-crafting.addShapeless("lv output hatch -> mbd output hatch", item('multiblocked:fluid_output'), [item('gregtech:machine:1196')]);
-
-// conversion recipes to greg ports
-crafting.addShapeless("mbd input bus -> lv input bus", item('gregtech:machine:1151'), [item('multiblocked:item_input')]);
-crafting.addShapeless("mbd output bus -> lv output bus", item('gregtech:machine:1166'), [item('multiblocked:item_output')]);
-crafting.addShapeless("mbd input hatch -> lv input hatch", item('gregtech:machine:1181'), [item('multiblocked:fluid_input')]);
-crafting.addShapeless("mbd output hatch -> lv output hatch", item('gregtech:machine:1196'), [item('multiblocked:fluid_output')]);
-
-//multiblocked controllers
-
-crafting.addShaped("multiblocked_ore_sorter", item('multiblocked:ore_sorter'), [
-		[robotArms[1], circuits[2], robotArms[1]],
-		[pumps[1], hulls[1], pumps[1]],
-		[robotArms[1], circuits[2], robotArms[1]]
-]);
-
-import gregtech.loaders.recipe.MetaTileEntityLoader
-import static gregtech.loaders.recipe.CraftingComponent.*
-import supersymmetry.common.metatileentities.SuSyMetaTileEntities
-import gregtech.api.unification.stack.UnificationEntry
-import gregtech.api.recipes.ModHandler
-import gregtech.common.blocks.MetaBlocks
-import gregtech.common.blocks.BlockSteamCasing.SteamCasingType
-import gregtech.api.unification.ore.OrePrefix
-import gregtech.api.unification.material.Materials
-import gregtech.api.items.OreDictNames
-import supersymmetry.common.blocks.SuSyBlocks
-import supersymmetry.common.blocks.BlockCoagulationTankWall.CoagulationTankWallType
-import gregtech.common.blocks.wood.*
-*/
-
+log.infoMC("Adding Vulcanizing Press Craft")
 
 //Vulcanizing Press
 crafting.addShaped("gregtech:vulcanizing_press.ulv", metaitem('vulcanizing_press.bronze'), [
@@ -180,6 +141,8 @@ crafting.addShaped("gregtech:vulcanizing_press.ev", metaitem('vulcanizing_press.
 	[ore('cableGtSingleAluminium'), ore('circuitEv'), ore('cableGtSingleAluminium')]
 ])
 
+log.infoMC("Adding Roaster Craft")
+
 //Roaster
 crafting.addShaped("gregtech:roaster.ulv", metaitem('roaster.bronze'), [
 	[ore('pipeSmallFluidBronze'), ore('rotorBronze'), ore('pipeSmallFluidBronze')],
@@ -194,6 +157,8 @@ for (i = 1; i <= 8; i++) {
 		[tieredCables[i], tieredWires[i], tieredCables[i]]
 	])
 }
+
+log.infoMC("Adding Latex Collector Craft")
 
 //Latex Collector
 crafting.addShaped("gregtech:latex_collector.ulv", metaitem('latex_collector.bronze'), [
@@ -210,12 +175,16 @@ for (i = 1; i <= 4; i++) {
 	])
 }
 
+log.infoMC("Adding Steam Mixer Craft")
+
 //Mixer
 crafting.addShaped("gregtech:mixer.ulv", metaitem('mixer.bronze'), [
 	[ore('blockGlass'), ore('rotorBronze'), ore('blockGlass')],
 	[ore('blockGlass'), ore('stickBronze'), ore('blockGlass')],
 	[ore('pipeSmallFluidBronze'), item('gregtech:steam_casing'), ore('pipeSmallFluidBronze')]
 ])
+
+log.infoMC("Adding Coagulation Tank Craft")
 
 //Coagulation Tank
 crafting.addShaped("gregtech:coagulation_tank", metaitem('coagulation_tank'), [
@@ -228,6 +197,172 @@ crafting.addShaped("gregtech:coagulation_tank_wall", item('susy:coagulation_tank
 	[ore('craftingToolSaw'), ore('frameGtTreatedWood'), ore('craftingToolHardHammer')],
 	[ore('plankTreatedWood'), ore('boltSteel'), ore('plankTreatedWood')]
 ])
+
+log.infoMC("Adding New Arc Furnace Craft")
+
+//Add secondary LV arc furnace recipe, since an arc furnace is needed for graphite
+crafting.addShaped("gregtech:coke_arc_furnace.lv", metaitem('arc_furnace.lv'), [
+		[ore('cableGtQuadrupleTin'), ore('dustCoke'), ore('cableGtQuadrupleTin')],
+		[ore('circuitLv'), metaitem('hull.lv'), ore('circuitLv')],
+		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')]])
+
+//Add recipes for new chemical reactors, and remove old chemical reactor recipes
+
+for (i = 1; i <= 8; i++) {
+	crafting.remove('gregtech:gregtech.machine.chemical_reactor.' + Globals.voltageTiers[i])
+
+	crafting.addShaped("gregtech:continuous_stirred_tank_reactor." + Globals.voltageTiers[i], metaitem('continuous_stirred_tank_reactor.' + Globals.voltageTiers[i]), [
+			[chemicalReactorParts[i], rotors[i], chemicalReactorParts[i]],
+			[tieredCables[i], motors[i], tieredCables[i]],
+			[circuits[i], hulls[i], circuits[i]]
+	])
+
+	crafting.addShaped("gregtech:bubble_column_reactor." + Globals.voltageTiers[i], metaitem('bubble_column_reactor.' + Globals.voltageTiers[i]), [
+			[chemicalReactorParts[i], tieredPipes[i], chemicalReactorParts[i]],
+			[tieredCables[i], pumps[i], tieredCables[i]],
+			[circuits[i], hulls[i], circuits[i]]
+	])
+
+	crafting.addShaped("gregtech:fixed_bed_reactor." + Globals.voltageTiers[i], metaitem('fixed_bed_reactor.' + Globals.voltageTiers[i]), [
+			[null, circuits[i], null],
+			[tieredPipes[i], pumps[i], tieredPipes[i]],
+			[tieredCables[i], hulls[i], tieredCables[i]]
+	])
+
+	crafting.addShaped("gregtech:crystallizer." + Globals.voltageTiers[i], metaitem('crystallizer.' + Globals.voltageTiers[i]), [
+			[tieredPlates[i], tieredGlass[i], tieredPlates[i]],
+			[chemicalReactorParts[i], hulls[i], chemicalReactorParts[i]],
+			[circuits[i], pumps[i], circuits[i]]
+	])
+
+	crafting.addShaped("gregtech:trickle_bed_reactor." + Globals.voltageTiers[i], metaitem('trickle_bed_reactor.' + Globals.voltageTiers[i]), [
+			[tieredCables[i], pumps[i], tieredCables[i]],
+			[tieredPipes[i], hulls[i], tieredPipes[i]],
+			[circuits[i], pumps[i], circuits[i]]
+	])
+}
+
+//Polymerization tank and fluidized bed reactor
+
+crafting.addShaped("gregtech:polymerization_tank", metaitem('polymerization_tank'), [
+		[tieredCables[2], motors[2], tieredCables[2]],
+		[pumps[2], rotors[2], pumps[2]],
+		[circuits[2], hulls[2], circuits[2]]
+])
+
+crafting.addShaped("gregtech:fluidized_bed_reactor", metaitem('fluidized_bed_reactor'), [
+		[tieredCables[3], pumps[3], tieredCables[3]],
+		[metaitem('pipeLargeFluidPolytetrafluoroethylene'), hulls[3], metaitem('pipeLargeFluidPolytetrafluoroethylene')],
+		[circuits[3], motors[3], circuits[3]]
+])
+
+//Dryer
+
+for (i = 1; i <= 8; i++) {
+	crafting.addShaped("gregtech:dryer." + Globals.voltageTiers[i], metaitem('dryer.' + Globals.voltageTiers[i]), [
+			[tieredCables[i], circuits[i], tieredCables[i]],
+			[tieredSprings[i], hulls[i], tieredSprings[i]],
+			[tieredCables[i], circuits[i], tieredCables[i]]
+	])
+}
+
+//Weapons Factory
+
+for (def i = 1; i < 8; i++) {
+	crafting.addShaped("gregtech:weapons_factory." + i, metaitem('weapons_factory.' + Globals.voltageTiers[i]), [
+			[robotArms[i], circuits[i], robotArms[i]],
+			[conveyors[i], hulls[i], conveyors[i]],
+			[robotArms[i], circuits[i], robotArms[i]]
+	])
+}
+
+//Fluid compressors and decompressors
+
+for (def i = 1; i < 8; i++) {
+	crafting.addShaped("gregtech:fluid_decompressor." + i, metaitem('fluid_decompressor.' + Globals.voltageTiers[i]), [
+			[tieredGlass[i], pistons[i], tieredGlass[i]],
+			[pumps[i], hulls[i], tieredPipes[i]],
+			[circuits[i], tieredCables[i], circuits[i]]
+	])
+
+	crafting.addShaped("gregtech:fluid_compressor." + i, metaitem('fluid_compressor.' + Globals.voltageTiers[i]), [
+			[tieredGlass[i], pistons[i], tieredGlass[i]],
+			[tieredPipes[i], hulls[i], pumps[i]],
+			[circuits[i], tieredCables[i], circuits[i]]
+	])
+}
+
+//Nerf polarizer and electromagnetic separator
+
+for (i = 1; i <= 8; i++) {
+	crafting.replaceShaped("gregtech:gregtech.machine.polarizer." + Globals.voltageTiers[i], metaitem('polarizer.' + Globals.voltageTiers[i]), [
+			[tieredWires[i], tieredMagnets[i], tieredWires[i]],
+			[tieredCables[i], hulls[i], tieredCables[i]],
+			[tieredWires[i], tieredMagnets[i], tieredWires[i]]
+	])
+
+	crafting.replaceShaped("gregtech:gregtech.machine.electromagnetic_separator." + Globals.voltageTiers[i], metaitem('electromagnetic_separator.' + Globals.voltageTiers[i]), [
+			[conveyors[i], tieredCables[i], tieredWires[i]],
+			[tieredCables[i], hulls[i], tieredMagnets[i]],
+			[circuits[i], tieredCables[i], tieredWires[i]]
+	])
+}
+
+//Add recipes for high pressure steam machines
+
+crafting.addShaped("gregtech:vulcanizing_press.steel", metaitem('vulcanizing_press_steel'), [
+		[metaitem('plateSteel'), metaitem('plateSteel'), metaitem('plateSteel')],
+		[metaitem('pipeSmallFluidTinAlloy'), metaitem('vulcanizing_press_bronze'), metaitem('pipeSmallFluidTinAlloy')],
+		[metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')]
+])
+
+crafting.addShaped("gregtech:mixer.steel", metaitem('mixer_steel'), [
+		[metaitem('pipeSmallFluidTinAlloy'), metaitem('plateSteel'), metaitem('pipeSmallFluidTinAlloy')],
+		[metaitem('plateWroughtIron'), metaitem('mixer_bronze'), metaitem('plateWroughtIron')],
+		[metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy')]
+])
+
+crafting.addShaped("gregtech:vacuum_chamber.steel", metaitem('vacuum_chamber_steel'), [
+		[metaitem('plateSteel'), metaitem('pipeSmallFluidTinAlloy'), metaitem('plateSteel')],
+		[metaitem('pipeSmallFluidTinAlloy'), metaitem('vacuum_chamber_bronze'), metaitem('pipeSmallFluidTinAlloy')],
+		[metaitem('plateWroughtIron'), metaitem('pipeSmallFluidTinAlloy'), metaitem('plateWroughtIron')]
+])
+
+crafting.addShaped("gregtech:roaster.steel", metaitem('roaster_steel'), [
+		[metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],
+		[metaitem('plateSteel'), metaitem('roaster_bronze'), metaitem('plateSteel')],
+		[metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy')]
+])
+
+//Add the rest of the vacuum chambers
+
+for (def i = 1; i < 8; i++) {
+	crafting.addShaped("gregtech:vacuum_chamber." + i, metaitem('vacuum_chamber.' + Globals.voltageTiers[i]), [
+			[tieredPlates[i], tieredPlates[i], tieredPlates[i]],
+			[pumps[i], hulls[i], pumps[i]],
+			[tieredCables[i], circuits[i], tieredCables[i]]
+	])
+}
+
+//Multiblocked Machines
+
+crafting.addShaped("multiblocked:ore_sorter", item('multiblocked:ore_sorter'), [
+		[robotArms[1], circuits[2], robotArms[1]],
+		[pumps[1], hulls[1], pumps[1]],
+		[robotArms[1], circuits[2], robotArms[1]]
+]);
+
+// conversion recipes from greg ports
+crafting.addShapeless("lv input bus -> mbd input bus", item('multiblocked:item_input'), [metaitem('item_bus.import.lv')]);
+crafting.addShapeless("lv output bus -> mbd output bus", item('multiblocked:item_output'), [metaitem('item_bus.export.lv')]);
+crafting.addShapeless("lv input hatch -> mbd input hatch", item('multiblocked:fluid_input'), [metaitem('fluid_hatch.import.lv')]);
+crafting.addShapeless("lv output hatch -> mbd output hatch", item('multiblocked:fluid_output'), [metaitem('fluid_hatch.export.lv')]);
+
+// conversion recipes to greg ports
+crafting.addShapeless("mbd input bus -> lv input bus", metaitem('item_bus.import.lv'), [item('multiblocked:item_input')]);
+crafting.addShapeless("mbd output bus -> lv output bus", metaitem('item_bus.export.lv'), [item('multiblocked:item_output')]);
+crafting.addShapeless("mbd input hatch -> lv input hatch", metaitem('fluid_hatch.import.lv'), [item('multiblocked:fluid_input')]);
+crafting.addShapeless("mbd output hatch -> lv output hatch", metaitem('fluid_hatch.export.lv'), [item('multiblocked:fluid_output')]);
 
 //MetaTileEntityLoader.registerMachineRecipe(true, SuSyMetaTileEntities.VULCANIZING_PRESS, "WPW", "CHC", "WEW", 'H' as char, HULL, 'E' as char, CIRCUIT, 'W' as char, CABLE, 'C' as char, COIL_HEATING_DOUBLE, 'P' as char, PISTON)
 //MetaTileEntityLoader.registerMachineRecipe(true, SuSyMetaTileEntities.ROASTER, "ERE", "CHC", "WCW", 'H' as char, HULL, 'E' as char, CIRCUIT, 'W' as char, CABLE, 'C' as char, COIL_HEATING_DOUBLE, 'R' as char, ROTOR)

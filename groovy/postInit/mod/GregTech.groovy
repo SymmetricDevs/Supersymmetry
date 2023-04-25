@@ -52,9 +52,28 @@ crafting.addShaped("gregtech:steam_piston", metaitem('steam.piston'), [
     [ore('pipeTinyFluidBronze'), ore('craftingToolHardHammer'), ore('gearSmallBronze')]
 ])
 
+crafting.addShaped("gregtech:steam_motor", metaitem('steam.motor'), [
+    [ore('plateBronze'), ore('stickBronze'), ore('plateBronze')],
+    [metaitem('gearSmallBronze'), ore('stickBronze'), metaitem('gearSmallBronze')],
+    [metaitem('steam.piston'), ore('stickBronze'), metaitem('steam.piston')]
+]);
+
+crafting.addShaped("gregtech:steam_pump", metaitem('steam.pump'), [
+    [ore('screwBronze'), ore('rotorBronze'), ore('ringIron')],
+    [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
+    [ore('ringIron'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
+])
+
+
 crafting.replaceShaped("gregtech:steam_extractor_bronze", metaitem('steam_extractor_bronze'), [
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
     [metaitem('steam.piston'), item('gregtech:steam_casing'), ore('blockGlass')],
+    [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
+])
+
+crafting.replaceShaped("gregtech:steam_vacuum_chamber", metaitem('vacuum_chamber_bronze'), [
+    [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
+    [metaitem('steam.pump'), item('gregtech:steam_casing'), ore('blockGlass')],
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
 ])
 
@@ -120,6 +139,18 @@ mods.gregtech.electric_blast_furnace.recipeBuilder()
         .EUt(60)
         .buildAndRegister();
 
+crafting.addShaped('gregtech:compressed_coke_clay', metaitem('compressed.coke_clay') * 8, [
+    [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')],
+    [ore('sand'), metaitem('wooden_form.brick'), ore('sand')],
+    [ore('sand'), ore('sand'), ore('sand')]
+])
+
+furnace.add(metaitem('dustLimestone'), metaitem('dustQuicklime'))
+
 //TechGuns carbon plate removal
 // Carbon Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('carbon') * 144])
+
+//Remove old rubber recipes
+// Rubber Bar * 1
+mods.gregtech.alloy_smelter.removeByInput(7, [metaitem('dustSulfur'), metaitem('dustRawRubber') * 3], null)

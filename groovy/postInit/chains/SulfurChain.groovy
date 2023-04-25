@@ -11,7 +11,7 @@ ROASTER_RECIPES.recipeBuilder()
 .inputs(metaitem('dustPyrite') * 2)
 .outputs(metaitem('dustIronIiiSulfate'))
 .outputs(metaitem('dustSulfur'))
-.duration(320)
+.duration(80)
 .EUt(7)
 .buildAndRegister()
 
