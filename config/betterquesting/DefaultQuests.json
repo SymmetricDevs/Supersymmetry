@@ -3198,7 +3198,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 14522,
+            "Damage:2": 14722,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -3230,7 +3230,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 14522,
+              "Damage:2": 14722,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -3354,7 +3354,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 14520,
+            "Damage:2": 14515,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -3386,7 +3386,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 14520,
+              "Damage:2": 14515,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -5401,7 +5401,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -5829,7 +5829,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 14537,
+            "Damage:2": 14538,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -5861,7 +5861,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 14537,
+              "Damage:2": 14538,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -8123,7 +8123,7 @@
     },
     "110:10": {
       "preRequisites:11": [
-        102
+        105
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -8180,19 +8180,19 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "",
+          "desc:8": "The §6Trickle Bed Reactor §ris a type of chemical reactor. \n\nThe §6Trickle Bed Reactor §rdoes continuous reactions between §6fluids §rinvolving a §6catalyst§r that can only be in dust form. It does §6continuous §rprocesses, just like the CSTR.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 14580,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "WIP",
+          "name:8": "Trickle Bed Reactor",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -8205,9 +8205,183 @@
       },
       "questID:3": 111,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14580,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "112:10": {
+      "preRequisites:11": [
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The § §6Bubble Column Reactor §ris a type of chemical reactor. \n\nThe §6Bubble Column Reactor §rdoes reactions that involve bubbling a §6gas §rinto another fluid. It does §6continuous §rprocesses, just like the CSTR.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14606,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Bubble Column Reactor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 112,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14606,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "113:10": {
+      "preRequisites:11": [
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Fixed Bed Reactor §ris another type of chemical reactor.\n\nIt does reactions that involve §6a catalyst tray§r. Unlike the Trickle Bed Reactor, the catalyst has to be put in a tray instead of just using a dust. The FBR does continuous processes.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14567,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Fixed Bed Reactor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 113,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14567,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "114:10": {
+      "preRequisites:11": [
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Crystallizer §ris a machine that is required to crystallize large quantities of §bFluids §rinto solids.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14593,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Crystallizer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 114,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14593,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "115:10": {
       "preRequisites:11": [
         87
       ],
@@ -8277,7 +8451,7 @@
         }
       }
     },
-    "113:10": {
+    "116:10": {
       "preRequisites:11": [
         117
       ],
@@ -8329,7 +8503,7 @@
         }
       }
     },
-    "114:10": {
+    "117:10": {
       "preRequisites:11": [
         118
       ],
@@ -8393,7 +8567,7 @@
         }
       }
     },
-    "115:10": {
+    "118:10": {
       "preRequisites:11": [
         22
       ],
@@ -8463,7 +8637,7 @@
         }
       }
     },
-    "116:10": {
+    "119:10": {
       "preRequisites:11": [
         97
       ],
@@ -8515,7 +8689,7 @@
         }
       }
     },
-    "117:10": {
+    "120:10": {
       "preRequisites:11": [
         0
       ],
@@ -8563,7 +8737,7 @@
         }
       }
     },
-    "118:10": {
+    "121:10": {
       "preRequisites:11": [
         12
       ],
@@ -8633,7 +8807,7 @@
         }
       }
     },
-    "119:10": {
+    "122:10": {
       "preRequisites:11": [
         31
       ],
@@ -8737,7 +8911,7 @@
         }
       }
     },
-    "120:10": {
+    "123:10": {
       "preRequisites:11": [
         31
       ],
@@ -8830,7 +9004,7 @@
         }
       }
     },
-    "121:10": {
+    "124:10": {
       "preRequisites:11": [
         105
       ],
@@ -8882,7 +9056,7 @@
         }
       }
     },
-    "122:10": {
+    "125:10": {
       "preRequisites:11": [
         191
       ],
@@ -8956,7 +9130,7 @@
         }
       }
     },
-    "123:10": {
+    "126:10": {
       "preRequisites:11": [
         192
       ],
@@ -9078,7 +9252,7 @@
         }
       }
     },
-    "124:10": {
+    "127:10": {
       "preRequisites:11": [
         193
       ],
@@ -9167,7 +9341,7 @@
         }
       }
     },
-    "125:10": {
+    "128:10": {
       "preRequisites:11": [
         193
       ],
@@ -9256,7 +9430,7 @@
         }
       }
     },
-    "126:10": {
+    "129:10": {
       "preRequisites:11": [
         191
       ],
@@ -9373,7 +9547,7 @@
         }
       }
     },
-    "127:10": {
+    "130:10": {
       "preRequisites:11": [
         191
       ],
@@ -9490,7 +9664,7 @@
         }
       }
     },
-    "128:10": {
+    "131:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -10331,7 +10505,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 60,
-          "y:3": 228
+          "y:3": 60
         },
         "1:10": {
           "id:3": 47,
@@ -10414,59 +10588,52 @@
           "id:3": 110,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 126,
-          "y:3": 126
+          "x:3": 66,
+          "y:3": 210
         },
         "13:10": {
-          "id:3": 111,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": 180
-        },
-        "14:10": {
           "id:3": 191,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 36
         },
-        "15:10": {
+        "14:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,
           "y:3": 36
         },
-        "16:10": {
+        "15:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 36
         },
-        "17:10": {
+        "16:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 12
         },
-        "18:10": {
+        "17:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 60
         },
-        "19:10": {
+        "18:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 72
         },
-        "20:10": {
+        "19:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -10659,7 +10826,7 @@
           "desc:8": "§2-- UV AGE --\nWhat do you mean this isn\u0027t the last tier?\n\n- Use the fundamental forces against your enemies\n- Unleash the horrors of the universe\n- Travel even faster with teleporters\n\n--\nTier: 9\nEU/t: 524,288\n--",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 3002,
+            "Damage:2": 3003,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -10688,13 +10855,18 @@
           "desc:8": "§d-- UHV AGE --\nThe Power of the Light\n\n- Make your base more efficient with interplanetary resource teleportation\n- Exploit the power of taranium\n- Build even more powerful energy weapons\n- Powersuit Galore\n\n--\nTier: 10\nEU/t: 2,097,152\n--",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 5,
+            "Damage:2": 3007,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gcys:meta_item_1",
-              "orig_meta:3": 5
-            }
+            "id:8": "gregtech:meta_item_2"
           },
           "name:8": "§d10 - Power of the Light",
           "visibility:8": "ALWAYS"
@@ -10712,13 +10884,18 @@
           "desc:8": "§9-- UEV AGE --\nGatebuilder\n\n- Build stargates to instantly travel between planets\n\n--\nTier: 11\nEU/t: 8,388,608\n--",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 9,
+            "Damage:2": 3011,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gcys:meta_item_1",
-              "orig_meta:3": 9
-            }
+            "id:8": "gregtech:meta_item_2"
           },
           "name:8": "§911 - Gatebuilder",
           "visibility:8": "ALWAYS"
@@ -10736,13 +10913,18 @@
           "desc:8": "§d-- UIV AGE --\n???\n\n--\nTier: 12\nEU/t: 33,554,432\n--",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 13,
+            "Damage:2": 3015,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gcys:meta_item_1",
-              "orig_meta:3": 13
-            }
+            "id:8": "gregtech:meta_item_2"
           },
           "name:8": "§a12 - Starbuilder",
           "visibility:8": "ALWAYS"
@@ -10760,13 +10942,18 @@
           "desc:8": "§a--§5 UXV AGE --\n???\n\n--\nTier: 13\nEU/t: 134,217,728\n--",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 17,
+            "Damage:2": 3019,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gcys:meta_item_1",
-              "orig_meta:3": 17
-            }
+            "id:8": "gregtech:meta_item_2"
           },
           "name:8": "§513 - Master of Space",
           "visibility:8": "ALWAYS"
@@ -10784,13 +10971,18 @@
           "desc:8": "§4-- OpV AGE --\n???\n\n--\nTier: 14\nEU/t: 536,870,912\n--",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 19,
+            "Damage:2": 3021,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gcys:meta_item_1",
-              "orig_meta:3": 19
-            }
+            "id:8": "gregtech:meta_item_2"
           },
           "name:8": "§414 - Lord of Time",
           "visibility:8": "ALWAYS"
@@ -10808,13 +11000,18 @@
           "desc:8": "§l§n-- §lMAX AGE --\n\nLet\u0027s remove the training wheels. The real game starts now.\n\n\nTier: 15\n\nEU/t: 2,147,483,647\n\n",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 34,
+            "Damage:2": 3036,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gcys:meta_item_1",
-              "orig_meta:3": 34
-            }
+            "id:8": "gregtech:meta_item_2"
           },
           "name:8": "§l§n15 - Ruler of Eternity",
           "visibility:8": "ALWAYS"
@@ -10832,7 +11029,7 @@
           "desc:8": "No Description",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 215,
+            "Damage:2": 14554,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -10840,7 +11037,43 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "quests:9": {}
+      "quests:9": {
+        "0:10": {
+          "id:3": 110,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 0,
+          "y:3": -24
+        },
+        "1:10": {
+          "id:3": 111,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 144,
+          "y:3": -24
+        },
+        "2:10": {
+          "id:3": 112,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 216,
+          "y:3": -24
+        },
+        "3:10": {
+          "id:3": 113,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 276,
+          "y:3": -24
+        },
+        "4:10": {
+          "id:3": 114,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 72,
+          "y:3": -24
+        }
+      }
     },
     "17:10": {
       "lineID:3": 17,
