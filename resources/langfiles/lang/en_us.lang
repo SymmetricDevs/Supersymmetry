@@ -110,19 +110,6 @@ material.butynediol=1,4-Butynediol
 material.butanediol=1,4-Butanediol
 material.gamma_butyrolactone=gamma-Butyrolactone
 material.diluted_methyl_ii_pyrrolidone=Diluted N-Methyl-2-pyrrolidone
-material.dimethyldichlorosilane_emulsion=Dimethyldichlorosilane Emulsion
-material.tetrafluoroethylene_emulsion=Tetrafluoroethylene Emulsion
-material.dichloromethane=Dichloromethane
-material.carbon_tetrachloride=Carbon Tetrachloride 
-material.phthalic_acid_solution=Phthalic Acid Solution
-material.butanol=Butanol 
-material.saltpeter_solution=Saltpeter Solution
-material.salty_saltpeter_solution=Salty Saltpeter Solution
-material.dilute_saltpeter_solution=Dilute Saltpeter Solution
-material.polytetrafluoroethylene_solution=Polytetrafluoroethylene (PTFE) Solution
-material.mixed_nitrochlorobenzene_solution=Mixed Nitrochlorobenzene Solution
-material.mixed_dichlorobenzene_solution=Mixed Dichlorobenzene Solution
-material.two_two_dichlorohydrazobenzene_solution=2,2'-Dichlorohydrazobenzene Solution
 
 material.calcium_sulfate=Calcium Sulfate
 material.iron_ii_sulfide=Iron II Sulfide
@@ -160,15 +147,9 @@ material.potassium_carbonate=Potassium Carbonate
 material.sodium_silicate=Sodium Silicate
 material.sodium_aluminate=Sodium Aluminate
 material.calcium_carbide=Calcium Carbide
-material.iron_ii_chloride=Iron II Chloride
-material.cuprous_oxide=Cuprous Oxide
-material.lithium_bromide=Lithium Bromide
-material.iron_iii_oxide=Iron III oxide
-material.copper_ii_chloride=Copper II Chloride
-material.silicon_carbide=Silicon Carbide
-material.tungsten_trioxide=Tungsten Trioxide
-material.two_two_dichlorohydrazobenzene=2,2'-Dichlorohydrazobenzene
 
+material.dimethyldichlorosilane_emulsion=Dimethyldichlorosilane Emulsion
+material.tetrafluoroethylene_emulsion=Tetrafluoroethylene Emulsion
 
 # Solids
 

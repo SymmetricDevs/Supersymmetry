@@ -17,7 +17,7 @@ class RegisterFluids {
         public static Material NMethylIIPyrrolidone;
         public static Material FourNitrochlorobenzene;
         public static Material FourNitroaniline;
-        public static Material TwoTwoDichlorohydrazobenzene;
+        public static Material FourDichlorohydrazobenzene;
         public static Material ParaPhenylenediamine;
         public static Material SodiumPhenoxide;
         public static Material PhthaloylDichloride;
@@ -208,7 +208,7 @@ class RegisterFluids {
                         .colorAverage()
                         .build();
 
-                TwoTwoDichlorohydrazobenzene = new Material.Builder(32016, 'two_two_dichlorohydrazobenzene')
+                FourDichlorohydrazobenzene = new Material.Builder(32016, 'four_dichlorohydrazobenzene')
                         .dust()
                         .components(Carbon, 12, Hydrogen, 10, Chlorine, 2, Nitrogen, 2)
                         .colorAverage()
@@ -530,9 +530,9 @@ class RegisterFluids {
                         .colorAverage()
                         .build();
 
-                new Material.Builder(11036, 'two_two_dichlorohydrazobenzene_solution')
+                new Material.Builder(11036, 'four_dichlorohydrazobenzene_solution')
                         .fluid()
-                        .components(Toluene, 1, TwoTwoDichlorohydrazobenzene, 1)
+                        .components(Toluene, 1, FourDichlorohydrazobenzene, 1)
                         .colorAverage()
                         .build();
 
@@ -685,7 +685,7 @@ class RegisterFluids {
                         .colorAverage()
                         .build();
 
-                new Material.Builder(11062, 'dilute_saltpeter_solution')
+                new Material.Builder(11062, 'saltpeter_solution')
                         .fluid()
                         .components(Water, 2, Saltpeter, 1)
                         .colorAverage()
@@ -959,58 +959,6 @@ class RegisterFluids {
                 new Material.Builder(11107, 'tetrafluoroethylene_emulsion')
                         .fluid()
                         .color(0x3b2e38)
-                        .build();
-
-                new Material.Builder(11109, 'dichloromethane')
-                        .fluid()
-                        .components(Carbon, 1, Hydrogen, 2, Chlorine, 2)
-                        .colorAverage()
-                        .build();
-
-                new Material.Builder(11110, 'carbon_tetrachloride')
-                        .fluid()
-                        .components(Carbon, 1, Chlorine, 4)
-                        .colorAverage()
-                        .build();
-
-                new Material.Builder(11111, 'phthalic_acid_solution')
-                        .fluid()
-                        .components(Dichloroethane, 1, PhthalicAcid, 1)
-                        .color(0xdbbbbd)
-                        .build();
-
-                new Material.Builder(11112, 'butanol')
-                        .fluid()
-                        .components(Carbon, 4, Hydrogen, 7, Oxygen, 1)
-                        .colorAverage()
-                        .build();
-
-                new Material.Builder(11113, 'saltpeter_solution')
-                        .fluid()
-                        .components(Water, 1, Saltpeter, 1)
-                        .colorAverage()
-                        .build();
-
-                new Material.Builder(11114, 'salty_saltpeter_solution')
-                        .fluid()
-                        .components(SaltWater, 1, Saltpeter, 1)
-                        .colorAverage()
-                        .build();
-
-                new Material.Builder(11115, 'polytetrafluoroethylene_solution')
-                        .fluid()
-                        .components(Water, 1, Polytetrafluoroethylene, 1)
-                        .colorAverage()
-                        .build();
-
-                new Material.Builder(11116, 'mixed_nitrochlorobenzene_solution')
-                        .fluid()
-                        .color(0xc18c18)
-                        .build();
-
-                new Material.Builder(11117, 'mixed_dichlorobenzene_solution')
-                        .fluid()
-                        .color(0xFF7F7F)
                         .build();
 
                 new Material.Builder(12000, 'flue_gas')
