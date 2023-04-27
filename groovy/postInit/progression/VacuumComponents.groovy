@@ -7,6 +7,9 @@ import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.*
+
+crafting.remove("gregtech:vacuum_tube")
 
 // Vacuum Tube * 4
 mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel'), metaitem('wireGtSingleAnnealedCopper') * 2], [fluid('red_alloy') * 18])
@@ -15,7 +18,6 @@ mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), meta
 // Vacuum Tube * 2
 mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel'), metaitem('wireGtSingleCopper') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
-crafting.remove("gregtech:vacuum_tube")
 
 crafting.addShaped("vacuum_tube_components", metaitem('vacuum_tube_components') * 4, [
     [null, metaitem('wireFineRedAlloy'), null],
