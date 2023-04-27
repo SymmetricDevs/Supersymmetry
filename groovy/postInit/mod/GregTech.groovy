@@ -71,7 +71,7 @@ crafting.replaceShaped("gregtech:steam_extractor_bronze", metaitem('steam_extrac
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
 ])
 
-crafting.replaceShaped("gregtech:steam_vacuum_chamber", metaitem('vacuum_chamber_bronze'), [
+crafting.replaceShaped("gregtech:steam_vacuum_chamber", metaitem('vacuum_chamber.bronze'), [
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
     [metaitem('steam.pump'), item('gregtech:steam_casing'), ore('blockGlass')],
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
