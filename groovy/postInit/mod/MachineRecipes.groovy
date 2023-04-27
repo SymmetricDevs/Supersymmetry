@@ -115,7 +115,7 @@ def tieredMagnets = [metaitem('stickIronMagnetic'), metaitem('stickIronMagnetic'
 log.infoMC("Adding Vulcanizing Press Craft")
 
 //Vulcanizing Press
-crafting.addShaped("gregtech:vulcanizing_press.ulv", metaitem('vulcanizing_press_bronze'), [
+crafting.addShaped("gregtech:vulcanizing_press.ulv", metaitem('vulcanizing_press.bronze'), [
 	[ore('springSmallSteel'), ore('stickSteel'), ore('springSmallSteel')],
 	[ore('pipeSmallFluidBronze'), ore('plateSteel'), ore('pipeSmallFluidBronze')],
 	[ore('pipeSmallFluidBronze'), item('gregtech:steam_casing', 1), ore('pipeSmallFluidBronze')]
@@ -144,7 +144,7 @@ crafting.addShaped("gregtech:vulcanizing_press.ev", metaitem('vulcanizing_press.
 log.infoMC("Adding Roaster Craft")
 
 //Roaster
-crafting.addShaped("gregtech:roaster.ulv", metaitem('roaster_bronze'), [
+crafting.addShaped("gregtech:roaster.ulv", metaitem('roaster.bronze'), [
 	[ore('pipeSmallFluidBronze'), ore('rotorBronze'), ore('pipeSmallFluidBronze')],
 	[ore('pipeSmallFluidBronze'), item('gregtech:steam_casing', 1), ore('pipeSmallFluidBronze')],
 	[ore('pipeSmallFluidBronze'), ore('craftingFurnace'), ore('pipeSmallFluidBronze')]
@@ -178,7 +178,7 @@ for (i = 1; i <= 4; i++) {
 log.infoMC("Adding Steam Mixer Craft")
 
 //Mixer
-crafting.addShaped("gregtech:mixer.ulv", metaitem('mixer_bronze'), [
+crafting.addShaped("gregtech:mixer.ulv", metaitem('mixer.bronze'), [
 	[ore('blockGlass'), ore('rotorBronze'), ore('blockGlass')],
 	[ore('blockGlass'), ore('stickBronze'), ore('blockGlass')],
 	[ore('pipeSmallFluidBronze'), item('gregtech:steam_casing'), ore('pipeSmallFluidBronze')]
