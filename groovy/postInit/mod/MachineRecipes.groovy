@@ -84,6 +84,10 @@ def tieredCables = [ore('cableGtSingleRedAlloy'), ore('cableGtSingleTin'), ore('
 										ore('cableGtSingleAluminium'), ore('cableGtSinglePlatinum'), ore('cableGtSingleNiobiumTitanium'),
 										ore('cableGtSingleVanadiumGallium'), ore('cableGtSingleYttriumBariumCuprate')]
 
+def tieredQuadCables = [ore('cableGtQuadrupleRedAlloy'), ore('cableGtQuadrupleTin'), ore('cableGtQuadrupleCopper'), ore('cableGtQuadrupleGold'),
+					ore('cableGtQuadrupleAluminium'), ore('cableGtQuadruplePlatinum'), ore('cableGtQuadrupleNiobiumTitanium'),
+					ore('cableGtQuadrupleVanadiumGallium'), ore('cableGtQuadrupleYttriumBariumCuprate')]
+
 def tieredSprings = [metaitem('springIron'), metaitem('springCopper'), metaitem('springCupronickel'), metaitem('springKanthal'),
 					 metaitem('springNichrome'), metaitem('springTungstenSteel'), metaitem('springHssg'),
 					 metaitem('springNaquadah'), metaitem('springNaquadahAlloy')]
@@ -198,13 +202,52 @@ crafting.addShaped("gregtech:coagulation_tank_wall", item('susy:coagulation_tank
 	[ore('plankTreatedWood'), ore('boltSteel'), ore('plankTreatedWood')]
 ])
 
-log.infoMC("Adding New Arc Furnace Craft")
+//Nerf arc furnaces, add graphite rod chain
+recipemap('mixer').recipeBuilder()
+		.fluidInputs(fluid('coal_tar') * 1000)
+		.inputs(metaitem('dustCoke') * 4)
+		.outputs(metaitem('pitch_binder') * 4)
+		.EUt(30)
+		.duration(200)
+		.buildAndRegister()
 
-//Add secondary LV arc furnace recipe, since an arc furnace is needed for graphite
-crafting.addShaped("gregtech:coke_arc_furnace.lv", metaitem('arc_furnace.lv'), [
-		[ore('cableGtQuadrupleTin'), ore('dustCoke'), ore('cableGtQuadrupleTin')],
-		[ore('circuitLv'), metaitem('hull.lv'), ore('circuitLv')],
-		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')]])
+recipemap('extruder').recipeBuilder()
+		.notConsumable(metaitem('shape.extruder.rod'))
+		.inputs(metaitem('pitch_binder') * 4)
+		.outputs(metaitem('raw_electrode'))
+		.EUt(30)
+		.duration(200)
+		.buildAndRegister()
+
+recipemap('sintering_oven').recipeBuilder()
+		.inputs(metaitem('raw_electrode'))
+		.fluidInputs(fluid('syngas') * 100)
+		.fluidInputs(fluid('air') * 100)
+		.outputs(metaitem('graphite_electrode'))
+		.fluidOutputs(fluid('carbon_dioxide') * 50)
+		.EUt(30)
+		.duration(150)
+		.buildAndRegister()
+
+recipemap('sintering_oven').recipeBuilder()
+		.inputs(metaitem('raw_electrode'))
+		.fluidInputs(fluid('methane') * 100)
+		.fluidInputs(fluid('air') * 100)
+		.outputs(metaitem('graphite_electrode'))
+		.fluidOutputs(fluid('carbon_dioxide') * 50)
+		.EUt(30)
+		.duration(150)
+		.buildAndRegister()
+
+for (i = 1; i <= 8; i++) {
+	crafting.remove('gregtech:gregtech.machine.arc_furnace.' + Globals.voltageTiers[i])
+
+	crafting.addShaped("gregtech:arc_furnace." + Globals.voltageTiers[i], metaitem('arc_furnace.' + Globals.voltageTiers[i]), [
+			[tieredQuadCables[i], metaitem('graphite_electrode'), tieredQuadCables[i]],
+			[circuits[i], hulls[i], circuits[i]],
+			[tieredPlates[i], tieredPlates[i], tieredPlates[i]]
+	])
+}
 
 //Add recipes for new chemical reactors, and remove old chemical reactor recipes
 
@@ -343,6 +386,28 @@ for (def i = 1; i < 8; i++) {
 			[tieredCables[i], circuits[i], tieredCables[i]]
 	])
 }
+
+//Sintering oven stuff
+
+crafting.addShaped("gregtech:brick_sintering_block", item('susy:sintering_brick'), [
+		[null, ore('craftingToolHardHammer'), null],
+		[metaitem('foilSteel'), item('gregtech:metal_casing', 1), metaitem('foilSteel')],
+		[null, null, null]
+])
+
+crafting.replaceShaped("gregtech:sintering_oven", metaitem('sintering_oven'), [
+		[motors[1], rotors[1], metaitem('wireGtQuadrupleCupronickel')],
+		[circuits[1], item('gregtech:metal_casing', 1), circuits[1]],
+		[pumps[1], metaitem('wireGtQuadrupleCupronickel'), pumps[1]]
+])
+
+//Regate pyrolysis oven
+
+crafting.replaceShaped("gregtech:pyrolyse_oven", metaitem('pyrolyse_oven'), [
+		[pistons[1], circuits[1], metaitem('wireGtQuadrupleCupronickel')],
+		[circuits[1], hulls[1], circuits[1]],
+		[pistons[1], pumps[1], metaitem('wireGtQuadrupleCupronickel')]
+])
 
 //Multiblocked Machines
 

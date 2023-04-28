@@ -90,7 +90,7 @@ material.butyllithium=n-Butyllithium
 material.diluted_butyllithium=Diluted n-Butyllithium
 material.polymerized_styrene_butadiene_solution=Polymerized Styrene Butadiene Solution
 material.dilute_calcium_chloride_solution=Dilute Calcium Chloride Solution
-material.dilute_rock_salt_solution=Dilute Rock Salt Solution
+material.dilute_rock_salt_solution=Diluted Rock Salt Solution
 material.dilute_potassium_carbonate_solution=Dilute Potassium Carbonate Solution
 material.potassium_hydroxide_solution=Potassium Hydroxide Solution
 material.calcium_hydroxide_solution=Calcium Hydroxide Solution
@@ -113,9 +113,9 @@ material.diluted_methyl_ii_pyrrolidone=Diluted N-Methyl-2-pyrrolidone
 material.dimethyldichlorosilane_emulsion=Dimethyldichlorosilane Emulsion
 material.tetrafluoroethylene_emulsion=Tetrafluoroethylene Emulsion
 material.dichloromethane=Dichloromethane
-material.carbon_tetrachloride=Carbon Tetrachloride 
+material.carbon_tetrachloride=Carbon Tetrachloride
 material.phthalic_acid_solution=Phthalic Acid Solution
-material.butanol=Butanol 
+material.butanol=Butanol
 material.saltpeter_solution=Saltpeter Solution
 material.salty_saltpeter_solution=Salty Saltpeter Solution
 material.dilute_saltpeter_solution=Dilute Saltpeter Solution
@@ -163,7 +163,7 @@ material.calcium_carbide=Calcium Carbide
 material.iron_ii_chloride=Iron II Chloride
 material.cuprous_oxide=Cuprous Oxide
 material.lithium_bromide=Lithium Bromide
-material.iron_iii_oxide=Iron III oxide
+material.iron_iii_oxide=Iron III Oxide
 material.copper_ii_chloride=Copper II Chloride
 material.silicon_carbide=Silicon Carbide
 material.tungsten_trioxide=Tungsten Trioxide
@@ -175,11 +175,97 @@ material.two_two_dichlorohydrazobenzene=2,2'-Dichlorohydrazobenzene
 material.pig_iron=Pig Iron
 material.iron_iii_sulfate=Iron III Sulfate
 
+material.aluminium_hydroxide=Aluminium Hydroxide
+material.aluminium_trifluoride=Aluminium Trifluoride
+material.sodium_fluoride=Sodium Fluoride
+
 # Fluids
 
 material.smoke_bomb_mix=Smoke Bomb Mix
 material.sugary_water=Sugary Water
 material.clarified_sugary_water=Clarified Sugary Water
+
+material.diluted_light_oil=Diluted Light Oil
+material.diluted_oil=Diluted Oil
+material.diluted_heavy_oil=Diluted Heavy Oil
+material.desalted_light_oil=Desalted Light Oil
+material.desalted_oil=Desalted Oil
+material.desalted_heavy_oil=Desalted Heavy Oil
+material.brine=Brine
+material.oily_brine=Oily Brine
+material.sulfuric_oil_residue=Sulfuric Oil Residue
+material.high_pressure_water=High Pressure Water
+material.dissolved_bitumen=Dissolved Bitumen
+material.sulfuric_fuel_oil=Sulfuric Fuel Oil
+material.treated_sulfuric_fuel_oil=Treated Sulfuric Fuel Oil
+material.crude_natural_gas=Crude Natural Gas
+material.sulfuric_natural_gas=Sulfuric Natural Gas
+material.treated_sulfuric_natural_gas=Treated Sulfuric Natural Gas
+material.treated_sulfuric_refinery_gas=Treated Sulfuric Refinery Gas
+material.sour_gas=Sour Gas
+material.sulfuric_diesel=Sulfuric Diesel
+material.treated_sulfuric_diesel=Treated Sulfuric Diesel
+material.sulfuric_kerosene=Sulfuric Kerosene
+material.treated_sulfuric_kerosene=Treated Sulfuric Kerosene
+material.kerosene=Kerosene
+material.sulfuric_gasoline=Sulfuric Gasoline
+material.treated_sulfuric_gasoline=Treated Sulfuric Gasoline
+material.fuel_oil=Fuel Oil
+material.lubricating_oil=Lubricating Oil
+material.slack_wax=Slack Wax
+material.resin=Resin
+material.ethylene_oxide=Ethylene Oxide
+material.ethanolamine_mix=Ethanolamine Mix
+material.rich_amine=Rich Amine
+material.uncatalyzed_sulfurous_gases=Uncatalyzed Sulfurous Gases
+material.pentane=Pentane
+material.hexane=Hexane
+material.naphtha_reformate=Naphtha Reformate
+material.furfural=Furfural
+material.btex_extract=B.T.E.X. Extract
+material.btex=B.T.E.X.
+material.xylene=Xylene
+material.lightly_steam_cracked_kerosene=Lightly Steam Cracked Kerosene
+material.severely_steam_cracked_kerosene=Severely Steam Cracked Kerosene
+material.lightly_hydro_cracked_kerosene=Lightly Hydro Cracked Kerosene
+material.severely_hydro_cracked_kerosene=Severely Hydro Cracked Kerosene
+material.lightly_steam_cracked_gasoline=Lightly Steam Cracked Gasoline
+material.severely_steam_cracked_gasoline=Severely Steam Cracked Gasoline
+material.lightly_hydro_cracked_gasoline=Lightly Hydro Cracked Gasoline
+material.severely_hydro_cracked_gasoline=Severely Hydro Cracked Gasoline
+material.lightly_steam_cracked_kerosene_mix=Lightly Steam Cracked Kerosene Mix
+material.severely_steam_cracked_kerosene_mix=Severely Steam Cracked Kerosene Mix
+material.lightly_hydro_cracked_kerosene_mix=Lightly Hydro Cracked Kerosene Mix
+material.severely_hydro_cracked_kerosene_mix=Severely Hydro Cracked Kerosene Mix
+material.lightly_steam_cracked_gasoline_mix=Lightly Steam Cracked Gasoline Mix
+material.severely_steam_cracked_gasoline_mix=Severely Steam Cracked Gasoline Mix
+material.lightly_hydro_cracked_gasoline_mix=Lightly Hydro Cracked Gasoline Mix
+material.severely_hydro_cracked_gasoline_mix=Severely Hydro Cracked Gasoline Mix
+material.lightly_steam_cracked_naphtha_mix=Lightly Steam Cracked Naphtha Mix
+material.severely_steam_cracked_naphtha_mix=Severely Steam Cracked Naphtha Mix
+material.lightly_hydro_cracked_naphtha_mix=Lightly Hydro Cracked Naphtha Mix
+material.severely_hydro_cracked_naphtha_mix=Severely Hydro Cracked Naphtha Mix
+material.upgraded_lubricating_oil_mix=Upgraded Lubricating Oil Mix
+material.upgraded_fuel_oil_mix=Upgraded Fuel Oil Mix
+material.upgraded_diesel_mix=Upgraded Diesel Mix
+material.upgraded_kerosene_mix=Upgraded Kerosene Mix
+material.upgraded_naphtha_mix=Upgraded Naphtha Mix
+material.alkylated_natural_gas=Alkylated Natural Gas
+material.alkylated_refinery_gas=Alkylated Refinery Gas
+material.impure_sodium_aluminate_solution=Impure Sodium Aluminate Solution
+material.sodium_aluminate_solution=Sodium Aluminate Solution
+material.red_mud=Red Mud
+material.impure_soda_ash_solution=Impure Soda Ash Solution
+material.impure_sodium_hydroxide_solution=Impure Sodium Hydroxide Solution
+material.cryolite=Cryolite
+material.sodium_fluoride_solution=Sodium Fluoride Solution
+material.concentrated_red_mud=Concentrated Red Mud
+material.furfural_solution=Furfural Solution
+material.syngas=Syngas
+material.ammonia_reaction_mix=Ammonia Reaction Mix
+material.ammonia_rich_gas=Ammonia-Rich Gas
+material.ethanol_solution=Ethanol Solution
+material.reformed_syngas=Reformed Syngas
 
 # Thermodynamics
 
@@ -231,6 +317,7 @@ material.liquid_argon=Liquid Argon
 material.liquid_krypton=Liquid Krypton
 material.liquid_xenon=Liquid Xenon
 material.liquid_nitrogen=Liquid Nitrogen
+material.liquid_refinery_gas=Liquid Refinery Gas
 
 material.hot_hp_air=Hot High-Pressure Air
 material.hp_air=High-Pressure Air
@@ -239,6 +326,10 @@ material.cold_hp_air=Cold High-Pressure Air
 material.hot_hp_nether_air=Hot High-Pressure Nether Air
 material.hp_nether_air=High-Pressure Nether Air
 material.cold_hp_nether_air=Cold High-Pressure Nether Air
+
+material.hot_hp_refinery_gas=Hot High-Pressure Refinery Gas
+material.hp_refinery_gas=High-Pressure Refinery Gas
+material.cold_hp_refinery_gas=Cold High-Pressure Refinery Gas
 
 material.hot_compressed_ammonia=Hot Compressed Ammonia
 material.compressed_ammonia=Compressed Ammonia
@@ -307,6 +398,9 @@ recipemap.gas_turbine_new.name=Gas Turbine
 recipemap.quencher.name=Quencher
 recipemap.steam_turbine_new.name=Steam Turbine
 recipemap.railroad_engineering_station.name=Railroad Engineering Station
+recipemap.dryer.name=Drying
+recipemap.sintering_oven.name=Sintering
+recipemap.electrolytic_cell.name=Advanced Electrolysis
 
 # QMD Particles
 
@@ -480,6 +574,16 @@ metaitem.circuit.suprachronal.max.tooltip=§fMAX-tier Circuit/n
 
 metaitem.sugar_cane_dust.name=Sugar Cane Dust
 metaitem.washed_rotten_flesh.name=Washed Rotten Flesh
+
+metaitem.bitumen.name=Bitumen
+metaitem.bituminous_residue.name=Bituminous Residue
+metaitem.paraffin_wax.name=Paraffin Wax
+metaitem.spent_cracking_catalyst.name=Spent Cracking Catalyst
+metaitem.red_mud_slag.name=Red Mud Slag
+metaitem.leached_red_mud_slag.name=Leached Red Mud Slag
+metaitem.pitch_binder.name=Pitch Binder
+metaitem.raw_electrode.name=Raw Electrode
+metaitem.graphite_electrode.name=Graphite Electrode
 
 # Multiblocked
 

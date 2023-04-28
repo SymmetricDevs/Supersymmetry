@@ -30,6 +30,17 @@ class RegisterSolids {
             .color(0x99918A)
             .build();
 
+        new Material.Builder(20003, "green_coke")
+                .gem(1, 2000).ore(2, 1)
+                .color(0x424a34).iconSet(LIGNITE)
+                .components(Carbon, 1)
+                .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
+                .build();
+
+        new Material.Builder(20004, "asphalt")
+                .dust()
+                .color(0x000000)
+                .build();
 
         new Material.Builder(20002, 'iron_iii_sulfate')
             .dust()
@@ -38,6 +49,20 @@ class RegisterSolids {
             .flags(DECOMPOSITION_BY_ELECTROLYZING)
             .build()
             .setFormula("Fe2(SO4)3", true);
+
+        Material AluminiumHydroxide = new Material.Builder(20005, 'aluminium_hydroxide')
+                .dust()
+                .components(Aluminium, 1, Oxygen, 3, Hydrogen, 3)
+                .colorAverage()
+                .build()
+
+        AluminiumHydroxide.setFormula("Al(OH)3", true);
+
+        new Material.Builder(20006, 'aluminium_trifluoride')
+                .dust()
+                .components(Aluminium, 1, Fluorine, 3)
+                .color(0x3d98bf)
+                .build()
 
         new Material.Builder(32003, 'calcium_sulfate')
                 .dust()

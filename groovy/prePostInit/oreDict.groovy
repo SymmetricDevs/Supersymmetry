@@ -29,7 +29,7 @@ def unify (ore, p) {
         for (item in ore) {
             if (item.getItem().getRegistryName().getNamespace() != Globals.mod_priority[pos]) {
                 ore.remove(item)
-                //mods.jei.hide(item)
+                mods.jei.hide(item)
             }
         }
     } else if (pos < Globals.mod_priority.size() - 1) {
@@ -52,11 +52,15 @@ def dicts_ingots = get_ore_dicts(ore('ingot*').getMatchingOreDictionaries())
 def dicts_plates = get_ore_dicts(ore('plate*').getMatchingOreDictionaries())
 def dicts_sticks = get_ore_dicts(ore('stick*').getMatchingOreDictionaries())
 def dicts_blocks = get_ore_dicts(ore('block*').getMatchingOreDictionaries())
+def dicts_dusts = get_ore_dicts(ore('dust*').getMatchingOreDictionaries())
+def dicts_gears = get_ore_dicts(ore('gear*').getMatchingOreDictionaries())
 
 unify_oredicts(dicts_ingots)
 unify_oredicts(dicts_plates)
 unify_oredicts(dicts_sticks)
 unify_oredicts(dicts_blocks)
+unify_oredicts(dicts_dusts)
+unify_oredicts(dicts_gears)
 
 susycobble = SuSyBlocks.SUSY_STONE_BLOCKS.get(SusyStoneVariantBlock.StoneVariant.COBBLE)
 
@@ -96,5 +100,16 @@ ore('toolKnife').remove(item('notreepunching:knife/iron'))
 ore('toolKnife').remove(item('notreepunching:knife/gold'))
 ore('toolKnife').remove(item('notreepunching:knife/diamond'))
 
-//IR concrete block
+//Manual Fixes
+
 ore('blockConcrete').add(item('industrialrenewal:concrete'))
+
+ore('stickIron').remove(item('industrialrenewal:stick_iron'))
+ore('stickSteel').remove(item('industrialrenewal:stick_steel'))
+ore('ingotSteel').remove(item('industrialrenewal:ingot_steel'))
+
+//Misc Fixes
+
+ore('dustCoal').remove(item('threng:material', 3))
+ore('dustCinnabar').remove(item('tardis:cinnabar'))
+ore('dustSaltpeter').remove(item('icbmclassic:saltpeter'))

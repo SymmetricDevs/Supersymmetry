@@ -33,8 +33,8 @@ class Globals {
         "gregtech",
         "gcym",
         "libvulpes",
+        "techguns",
         "advancedrocketry",
-        "industrialrenewal",
         "biomesoplenty"
     ]
              

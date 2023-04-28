@@ -353,11 +353,12 @@ mods.gregtech.assembler.recipeBuilder()
     .buildAndRegister()
 
 // Piston
-mods.gregtech.assembler.removeByInput(16, [metaitem('plateIron'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
-mods.gregtech.assembler.removeByInput(16, [metaitem('plateSteel'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
-mods.gregtech.assembler.removeByInput(16, [metaitem('plateAluminium'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
-mods.gregtech.assembler.removeByInput(16, [metaitem('plateBronze'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
-mods.gregtech.assembler.removeByInput(16, [metaitem('plateTitanium'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+//TODO: FIGURE OUT WHY THIS WONT WORK
+//mods.gregtech.assembler.removeByInput(16, [item('gregtech:meta_plate', 51), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+//mods.gregtech.assembler.removeByInput(16, [item('gregtech:meta_plate', 324), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+//mods.gregtech.assembler.removeByInput(16, [item('gregtech:meta_plate', 2), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+//mods.gregtech.assembler.removeByInput(16, [item('gregtech:meta_plate', 260), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+//mods.gregtech.assembler.removeByInput(16, [item('gregtech:meta_plate', 113), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
 
 mods.gregtech.assembler.recipeBuilder()
     .inputs(ore('cobblestone') * 4)
@@ -489,16 +490,6 @@ mods.gregtech.chemical_bath.recipeBuilder()
 		.duration(200)
 		.EUt(4)
 		.buildAndRegister()
-
-//Chemical reactor
-// Blaze Powder * 1
-mods.gregtech.chemical_reactor.removeByInput(480, [metaitem('dustCarbon'), metaitem('dustSulfur')], null)
-// Blaze Powder * 1
-mods.gregtech.large_chemical_reactor.removeByInput(480, [metaitem('dustCarbon'), metaitem('dustSulfur')], null)
-// Magma Cream * 1
-mods.gregtech.chemical_reactor.removeByInput(30, [item('minecraft:blaze_powder'), item('minecraft:slime_ball')], null)
-// Magma Cream * 1
-mods.gregtech.large_chemical_reactor.removeByInput(30, [item('minecraft:blaze_powder'), item('minecraft:slime_ball')], null)
 
 //Crystallizer
 

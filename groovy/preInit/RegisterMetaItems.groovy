@@ -37,6 +37,24 @@ eventManager.listen {
 
         customMetaItems.addItem(155, "sugar_cane_dust");
 
+        customMetaItems.addItem(156, "bitumen");
+
+        customMetaItems.addItem(157, "bituminous_residue");
+
+        customMetaItems.addItem(158, "paraffin_wax");
+
+        customMetaItems.addItem(159, "spent_cracking_catalyst");
+
+        customMetaItems.addItem(160, "red_mud_slag");
+
+        customMetaItems.addItem(161, "leached_red_mud_slag");
+
+        customMetaItems.addItem(162, "pitch_binder");
+
+        customMetaItems.addItem(163, "raw_electrode");
+
+        customMetaItems.addItem(164, "graphite_electrode");
+
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);

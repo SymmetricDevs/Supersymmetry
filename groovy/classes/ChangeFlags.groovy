@@ -19,6 +19,7 @@ class ChangeFlags {
         Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");
         Lead.addFlags("generate_round");
         Aluminium.addFlags("generate_round");
+        Nickel.addFlags("generate_rod");
 
         GregTechAPI.MaterialRegistry.get("fluix").addFlags("disable_decomposition", "generate_plate", "generate_lens")
 
