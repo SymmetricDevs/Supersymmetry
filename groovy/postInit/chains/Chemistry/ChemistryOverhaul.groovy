@@ -57,6 +57,14 @@ DISTILLERY.recipeBuilder()
 
 // Styrene 
 
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('ammonium_chloride_solution') * 1000)
+        .outputs(ore('dustAmmoniumChloride').first() * 6)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(120)
+        .EUt(30)
+        .buildAndRegister()
+
 FBR.recipeBuilder()
 .fluidInputs(fluid('ethylbenzene') * 50)
 .fluidInputs(fluid('steam') * 50)
@@ -157,6 +165,14 @@ MIXER.recipeBuilder()
 .fluidOutputs(fluid('hydrogen_fluoride') * 2000)
 .outputs(ore('dustCalciumSulfate').first() * 6)
 .duration(30)
+.EUt(7)
+.buildAndRegister()
+
+BCR.recipeBuilder()
+.fluidInputs(fluid('hydrogen_fluoride') * 50)
+.fluidInputs(fluid('water') * 50)
+.fluidOutputs(fluid('hydrofluoric_acid') * 50)
+.duration(1)
 .EUt(7)
 .buildAndRegister()
 
@@ -262,8 +278,6 @@ MIXER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-//TODO: molten potassium bisulfate
-
 // Sodium Sulfide
 
 ROASTER.recipeBuilder()
@@ -286,13 +300,12 @@ MIXER.recipeBuilder()
 .buildAndRegister()
 
 DRYER.recipeBuilder()
-.inputs(ore('dustWetAntimonyTrifluoride'))
-.fluidOutputs(fluid('steam') * 3000)
-.outputs(ore('dustAntimonyTrifluoride').first())
+.inputs(ore('dustWetAntimonyTrifluoride') * 4)
+.fluidOutputs(fluid('water') * 4500)
+.outputs(ore('dustAntimonyTrifluoride').first() * 4)
 .duration(200)
 .EUt(30)
 .buildAndRegister()
-
 
 // Chloroform
 
@@ -378,7 +391,8 @@ DISTILLATION_TOWER.recipeBuilder()
 .buildAndRegister()
 
 // Calcium Chloride
-//TODO: Remove EBF Recipe
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCalcite') * 5, metaitem('dustSalt') * 4], null)
+
 CENTRIFUGE.recipeBuilder()
 .fluidInputs(fluid('hydrochloric_acid') * 2000)
 .inputs(ore('dustCalciumSulfide') * 2)
@@ -395,11 +409,10 @@ DISTILLERY.recipeBuilder()
 .duration(160)
 .EUt(30)
 .buildAndRegister()
-//TODO: molten calcium chloride can be electrolyzed in a Downs cell (gaming[gaming]) 
 
 // Soda Ash 
     
-    // Leblanc process
+// Leblanc process
 
 ROASTER.recipeBuilder()
 .inputs(ore('dustSodiumSulfide') * 3)
@@ -522,11 +535,20 @@ CSTR.recipeBuilder()
 // Cumene
 
 FBR.recipeBuilder()
-.fluidInputs(fluid('hp_propene') * 50)
-.fluidInputs(fluid('hp_benzene') * 50)
+.fluidInputs(fluid('hot_hp_propene') * 50)
+.fluidInputs(fluid('hot_hp_benzene') * 50)
 .notConsumable(fluid('phosphoric_acid'))
 .fluidOutputs(fluid('cumene') * 50)
 .duration(5)
+.EUt(30)
+.buildAndRegister()
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('cumene') * 50)
+.fluidInputs(fluid('oxygen') * 100)
+.fluidOutputs(fluid('phenol') * 50)
+.fluidOutputs(fluid('acetone') * 50)
+.duration(8)
 .EUt(30)
 .buildAndRegister()
 
@@ -827,8 +849,8 @@ MIXER.recipeBuilder()
 // Methanol
 
 FLUIDIZEDBR.recipeBuilder()
-.fluidInputs(fluid('hp_carbon_monoxide') * 50)
-.fluidInputs(fluid('hp_hydrogen') * 100)
+.fluidInputs(fluid('hot_hp_carbon_monoxide') * 50)
+.fluidInputs(fluid('hot_hp_hydrogen') * 100)
 .notConsumable(ore('dustCuprousOxide'))
 .fluidOutputs(fluid('methanol') * 50)
 .duration(5)
@@ -913,7 +935,6 @@ CSTR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-//TODO: Talk to gaming if we want to implement the Ostwald Process
 CSTR.recipeBuilder()
 .fluidInputs(fluid('water') * 50)
 .fluidInputs(fluid('nitrogen_dioxide') * 150)
@@ -1029,7 +1050,7 @@ DISTILLATION_TOWER.recipeBuilder()
 
 FBR.recipeBuilder()
 .fluidInputs(fluid('two_nitrochlorobenzene_solution') * 100)
-.fluidInputs(fluid('hp_hydrogen') * 100)
+.fluidInputs(fluid('hot_hp_hydrogen') * 100)
 .notConsumable(ore('catalystBedPalladium'))
 .fluidOutputs(fluid('two_two_dichlorohydrazobenzene_solution') * 50)
 .duration(15)
@@ -1188,8 +1209,6 @@ DISTILLATION_TOWER.recipeBuilder()
 .EUt(240)
 .buildAndRegister()
 
-// Molybdenum from Molybdenum Trioxide (TODO: Molybdenum Trioxide is not a thing for some reason)
-
 // Caprolactam
 
 FBR.recipeBuilder()
@@ -1229,7 +1248,7 @@ MIXER.recipeBuilder()
 
 MIXER.recipeBuilder()
 .fluidInputs(fluid('sulfuric_acid') * 1000)
-.inputs(ore('dustCyclohexanoneOxime') * 19)
+.inputs(ore('dustCyclohexanoneOxime') * 34)
 .fluidOutputs(fluid('caprolactam_oxime_solution') * 1000)
 .duration(160)
 .EUt(30)
@@ -1265,8 +1284,8 @@ PYROLYSE.recipeBuilder()
 
 FBR.recipeBuilder()
 .fluidInputs(fluid('propene') * 50)
-.fluidInputs(fluid('hp_carbon_monoxide') * 50)
-.fluidInputs(fluid('hp_hydrogen') * 100)
+.fluidInputs(fluid('hot_hp_carbon_monoxide') * 50)
+.fluidInputs(fluid('hot_hp_hydrogen') * 100)
 .notConsumable(ore('catalystBedRhodium'))
 .fluidOutputs(fluid('butyraldehyde') * 50)
 .duration(5)
@@ -1593,8 +1612,7 @@ CSTR.recipeBuilder()
 .duration(10)
 .EUt(30)
 .buildAndRegister()
-//TODO: Doesnt work for some goddamn reason, it just doesnt register
-// Now that I think of it, it may just be conflicting with an earlier recipe (maybe someone can try giving this one a circ)
+//TODO: Add item slot to CSTR so that an integrated circuit can be used, so that this recipe wont conflict
 CSTR.recipeBuilder()
 .fluidInputs(fluid('ethane') * 100)
 .fluidInputs(fluid('chlorine') * 100)
@@ -2031,12 +2049,20 @@ MIXER.recipeBuilder()
 .duration(160)
 .buildAndRegister()
 
-DISTILLERY.recipeBuilder()
+DISTILLATION_TOWER.recipeBuilder()
 .fluidInputs(fluid('dilute_rock_salt_solution') * 2000)
-.fluidOutputs(fluid('water') * 2000)
-.outputs(ore('dustRockSalt').first() * 1)
-.EUt(30)
-.duration(200)
+.fluidOutputs(fluid('water') * 1000)
+.fluidOutputs(fluid('potassium_chloride_solution') * 1000)
+.EUt(16)
+.duration(60)
+.buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+.fluidInputs(fluid('potassium_chloride_solution') * 1000)
+.fluidOutputs(fluid('water') * 1000)
+.outputs(ore('dustRockSalt').first() * 2)
+.EUt(16)
+.duration(60)
 .buildAndRegister()
 
 CSTR.recipeBuilder()
@@ -2062,6 +2088,14 @@ MIXER.recipeBuilder()
 .fluidOutputs(fluid('dilute_calcium_chloride_solution') * 2000)
 .EUt(30)
 .duration(360)
+.buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+.fluidInputs(fluid('dilute_calcium_chloride_solution') * 2000)
+.fluidOutputs(fluid('water') * 2000)
+.outputs(ore('dustCalciumChloride').first() * 3)
+.EUt(30)
+.duration(100)
 .buildAndRegister()
 
 //Graphite

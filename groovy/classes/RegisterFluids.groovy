@@ -35,6 +35,7 @@ class RegisterFluids {
         public static Material SodiumSilicate;
         public static Material SodiumAluminate;
         public static Material AmmoniumSulfate;
+        public static Material SodiumFluoride;
 
         private static void generateHighPressureGases(Material materialName, int id, boolean generateCold){
                 var color = materialName.getMaterialRGB();
@@ -171,7 +172,7 @@ class RegisterFluids {
                         .build();
 
                 PotassiumBisulfate = new Material.Builder(32005, 'potassium_bisulfate')
-                        .dust()
+                        .dust().fluid()
                         .components(Potassium, 1, Hydrogen, 1, Sulfur, 1, Oxygen, 4)
                         .colorAverage()
                         .build();
@@ -261,6 +262,12 @@ class RegisterFluids {
                         .components(Carbon, 6, Hydrogen, 4, Chlorine, 2)
                         .colorAverage()
                         .build();
+
+                SodiumFluoride = new Material.Builder(32046, 'sodium_fluoride')
+                        .dust()
+                        .components(Sodium, 1, Fluorine, 1)
+                        .colorAverage()
+                        .build();
         }
 
         public static void init() {
@@ -295,6 +302,10 @@ class RegisterFluids {
 
                 generateHighPressureGases(NetherAir, 10036, true);
 
+                generateHighPressureGases(RefineryGas, 10039, true);
+
+                generateHighPressureGases(Methane, 10042, true);
+
                 generateLiquidFromGas(Hydrogen, 10100, 21);
 
                 generateLiquidFromGas(Helium, 10101, 5);
@@ -308,6 +319,10 @@ class RegisterFluids {
                 generateLiquidFromGas(Xenon, 10105, 165);
 
                 generateLiquidFromGas(Nitrogen, 10106, 77);
+
+                generateLiquidFromGas(RefineryGas, 10107, 112);
+
+                generateLiquidFromGas(Methane, 10108, 112);
 
                 generateThermoRefrigerant(Ammonia, 10200);
 
@@ -665,6 +680,7 @@ class RegisterFluids {
                         .fluid()
                         .components(Epoxy, 1)
                         .colorAverage()
+                        .flags(DISABLE_DECOMPOSITION)
                         .build();
 
                 new Material.Builder(11059, 'tnt_solution')
@@ -1093,6 +1109,456 @@ class RegisterFluids {
                 new Material.Builder(12015, "clarified_sugary_water")
                         .fluid()
                         .color(0xa7d6b3)
+                        .build();
+
+                new Material.Builder(12016, "diluted_light_oil")
+                        .fluid()
+                        .color(0x2d2f3b)
+                        .build();
+
+                new Material.Builder(12017, "diluted_oil")
+                        .fluid()
+                        .color(0x2d2f3b)
+                        .build();
+
+                new Material.Builder(12018, "diluted_heavy_oil")
+                        .fluid()
+                        .color(0x2d2f3b)
+                        .build();
+
+                new Material.Builder(12019, "desalted_light_oil")
+                        .fluid()
+                        .color(0x000000)
+                        .build();
+
+                new Material.Builder(12020, "desalted_oil")
+                        .fluid()
+                        .color(0x000000)
+                        .build();
+
+                new Material.Builder(12021, "desalted_heavy_oil")
+                        .fluid()
+                        .color(0x000000)
+                        .build();
+
+                new Material.Builder(12022, "brine")
+                        .fluid()
+                        .color(0xd1d08e)
+                        .build();
+
+                new Material.Builder(12023, "oily_brine")
+                        .fluid()
+                        .color(0x69684e)
+                        .build();
+
+                new Material.Builder(12024, "sulfuric_oil_residue")
+                        .fluid()
+                        .color(0x59572b)
+                        .build();
+
+                new Material.Builder(12026, "high_pressure_water")
+                        .fluid()
+                        .colorAverage()
+                        .components(Water, 1)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .build();
+
+                new Material.Builder(12027, "dissolved_bitumen")
+                        .fluid()
+                        .color(0x1e2021)
+                        .build();
+
+                new Material.Builder(12028, "sulfuric_fuel_oil")
+                        .fluid()
+                        .color(0x858135)
+                        .build();
+
+                new Material.Builder(12029, "treated_sulfuric_fuel_oil")
+                        .fluid()
+                        .color(0x9e9a4f)
+                        .build();
+
+                new Material.Builder(12030, "crude_natural_gas")
+                        .fluid(FluidTypes.GAS)
+                        .color(0xc9c9b9)
+                        .build();
+
+                new Material.Builder(12031, "sulfuric_natural_gas")
+                        .fluid(FluidTypes.GAS)
+                        .color(0xe3e3d1)
+                        .build();
+
+                new Material.Builder(12032, "treated_sulfuric_natural_gas")
+                        .fluid(FluidTypes.GAS)
+                        .color(0xf7f7eb)
+                        .build();
+
+                new Material.Builder(12033, "treated_sulfuric_refinery_gas")
+                        .fluid(FluidTypes.GAS)
+                        .color(0xe3e3d8)
+                        .build();
+
+                new Material.Builder(12034, "sour_gas")
+                        .fluid(FluidTypes.GAS)
+                        .color(0xebeba4)
+                        .build();
+
+                new Material.Builder(12035, "sulfuric_diesel")
+                        .fluid()
+                        .color(0xa8a232)
+                        .build();
+
+                new Material.Builder(12036, "treated_sulfuric_diesel")
+                        .fluid()
+                        .color(0xc2bb42)
+                        .build();
+
+                new Material.Builder(12037, "sulfuric_kerosene")
+                        .fluid()
+                        .color(0xbfb82a)
+                        .build();
+
+                new Material.Builder(12038, "treated_sulfuric_kerosene")
+                        .fluid()
+                        .color(0xd6cf3a)
+                        .build();
+
+                new Material.Builder(12039, "kerosene")
+                        .fluid()
+                        .color(0xd6cf3a)
+                        .build();
+
+                new Material.Builder(12040, "sulfuric_gasoline")
+                        .fluid()
+                        .color(0xe8df23)
+                        .build();
+
+                new Material.Builder(12041, "treated_sulfuric_gasoline")
+                        .fluid()
+                        .color(0xf7ef40)
+                        .build();
+
+                new Material.Builder(12042, "fuel_oil")
+                        .fluid()
+                        .color(0x9e9a4f)
+                        .build();
+
+                new Material.Builder(12043, "lubricating_oil")
+                        .fluid()
+                        .color(0x858146)
+                        .build();
+
+                new Material.Builder(12044, "slack_wax")
+                        .fluid()
+                        .color(0x7d7b59)
+                        .build();
+
+                new Material.Builder(12045, "resin")
+                        .fluid()
+                        .color(0xb5803a)
+                        .build();
+
+                new Material.Builder(12046, 'ethylene_oxide')
+                        .fluid(FluidTypes.GAS)
+                        .components(Carbon, 2, Hydrogen, 4, Oxygen, 1)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12047, 'ethanolamine_mix')
+                        .fluid()
+                        .color(0x3e86bd)
+                        .build();
+
+                new Material.Builder(12048, 'rich_amine')
+                        .fluid()
+                        .color(0x3ea8bd)
+                        .build();
+
+                new Material.Builder(12049, 'uncatalyzed_sulfurous_gases')
+                        .fluid(FluidTypes.GAS)
+                        .color(0xd6d372)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12050, 'pentane')
+                        .fluid()
+                        .components(Carbon, 5, Hydrogen, 12)
+                        .color(0xe8e7be)
+                        .build();
+
+                new Material.Builder(12051, 'hexane')
+                        .fluid()
+                        .components(Carbon, 6, Hydrogen, 14)
+                        .color(0xcfceb6)
+                        .build();
+
+                new Material.Builder(12052, 'naphtha_reformate')
+                        .fluid()
+                        .color(0xf2f2a0)
+                        .fluidTemp(773)
+                        .build();
+
+                Material Furfural = new Material.Builder(12053, 'furfural')
+                        .fluid()
+                        .components(Carbon, 5, Hydrogen, 4, Oxygen, 2)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12054, 'btex_extract')
+                        .fluid()
+                        .color(0xa8a87d)
+                        .build();
+
+                new Material.Builder(12055, 'btex')
+                        .fluid()
+                        .color(0x828267)
+                        .build();
+
+                new Material.Builder(12056, 'xylene')
+                        .fluid()
+                        .components(Carbon, 8, Hydrogen, 10)
+                        .color(0x828271)
+                        .build();
+
+                new Material.Builder(12057, "lightly_steam_cracked_kerosene")
+                        .fluid()
+                        .color(0xe3dd59)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12058, "severely_steam_cracked_kerosene")
+                        .fluid()
+                        .color(0xf2ed83)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12059, "lightly_hydro_cracked_kerosene")
+                        .fluid()
+                        .color(0xc4bf51)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12060, "severely_hydro_cracked_kerosene")
+                        .fluid()
+                        .color(0xbab65f)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12061, "lightly_steam_cracked_gasoline")
+                        .fluid()
+                        .color(0xebe34d)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12062, "severely_steam_cracked_gasoline")
+                        .fluid()
+                        .color(0xf5ed62)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12063, "lightly_hydro_cracked_gasoline")
+                        .fluid()
+                        .color(0xccc43f)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12064, "severely_hydro_cracked_gasoline")
+                        .fluid()
+                        .color(0xbdb648)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12065, "lightly_steam_cracked_kerosene_mix")
+                        .fluid()
+                        .color(0xe3dd59)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12066, "severely_steam_cracked_kerosene_mix")
+                        .fluid()
+                        .color(0xf2ed83)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12067, "lightly_hydro_cracked_kerosene_mix")
+                        .fluid()
+                        .color(0xc4bf51)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12068, "severely_hydro_cracked_kerosene_mix")
+                        .fluid()
+                        .color(0xbab65f)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12069, "lightly_steam_cracked_gasoline_mix")
+                        .fluid()
+                        .color(0xebe34d)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12070, "severely_steam_cracked_gasoline_mix")
+                        .fluid()
+                        .color(0xf5ed62)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12071, "lightly_hydro_cracked_gasoline_mix")
+                        .fluid()
+                        .color(0xccc43f)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12072, "severely_hydro_cracked_gasoline_mix")
+                        .fluid()
+                        .color(0xbdb648)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12073, "lightly_steam_cracked_naphtha_mix")
+                        .fluid()
+                        .color(0xdbd556)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12074, "severely_steam_cracked_naphtha_mix")
+                        .fluid()
+                        .color(0xe3dd68)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12075, "lightly_hydro_cracked_naphtha_mix")
+                        .fluid()
+                        .color(0xc4be49)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12076, "severely_hydro_cracked_naphtha_mix")
+                        .fluid()
+                        .color(0xb5b050)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12077, "upgraded_lubricating_oil_mix")
+                        .fluid()
+                        .color(0x948f43)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12078, "upgraded_fuel_oil_mix")
+                        .fluid()
+                        .color(0x918d33)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12079, "upgraded_diesel_mix")
+                        .fluid()
+                        .color(0xbab32f)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12080, "upgraded_kerosene_mix")
+                        .fluid()
+                        .color(0xe3db30)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12081, "upgraded_naphtha_mix")
+                        .fluid()
+                        .color(0xf0e83e)
+                        .fluidTemp(773)
+                        .build();
+
+                new Material.Builder(12082, "alkylated_natural_gas")
+                        .fluid(FluidTypes.GAS)
+                        .color(0xe6e4c1)
+                        .build();
+
+                new Material.Builder(12083, "alkylated_refinery_gas")
+                        .fluid(FluidTypes.GAS)
+                        .color(0xf7f5cb)
+                        .build();
+
+                new Material.Builder(12084, "impure_sodium_aluminate_solution")
+                        .fluid()
+                        .color(0x5b80ba)
+                        .build();
+
+                new Material.Builder(12085, "sodium_aluminate_solution")
+                        .fluid()
+                        .color(0x3f71bf)
+                        .build();
+
+                new Material.Builder(12086, "red_mud")
+                        .fluid()
+                        .color(0x913f2d)
+                        .build();
+
+                new Material.Builder(12087, "impure_soda_ash_solution")
+                        .fluid()
+                        .color(0xc2bda7)
+                        .build();
+
+                new Material.Builder(12088, "impure_sodium_hydroxide_solution")
+                        .fluid()
+                        .color(0x3a4991)
+                        .build();
+
+                new Material.Builder(12089, "cryolite")
+                        .fluid().dust()
+                        .components(Sodium, 3, Aluminium, 1, Fluorine, 6)
+                        .color(0x2497a6)
+                        .build();
+
+                new Material.Builder(12090, "sodium_fluoride_solution")
+                        .fluid()
+                        .components(SodiumFluoride, 1, Water, 1)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12091, "concentrated_red_mud")
+                        .fluid()
+                        .color(0x824133)
+                        .build();
+
+                new Material.Builder(12092, "furfural_solution")
+                        .fluid()
+                        .components(Water, 3, SulfuricAcid, 1, Furfural, 1)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12093, "syngas")
+                        .fluid(FluidTypes.GAS)
+                        .color(0xf2ecdc)
+                        .build();
+
+                new Material.Builder(12094, "reformed_syngas")
+                        .fluid(FluidTypes.GAS)
+                        .color(0xfcf3d9)
+                        .fluidTemp(800)
+                        .build();
+
+                new Material.Builder(12095, "ammonia_reaction_mix")
+                        .fluid(FluidTypes.GAS)
+                        .color(0x38478a)
+                        .fluidTemp(400)
+                        .build();
+
+                new Material.Builder(12096, "ammonia_rich_gas")
+                        .fluid(FluidTypes.GAS)
+                        .color(0x345691)
+                        .fluidTemp(400)
+                        .build();
+
+                new Material.Builder(12097, "ethanol_solution")
+                        .fluid()
+                        .components(Ethanol, 1, PhosphoricAcid, 1)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12098, "graphite_mix")
+                        .color(0x080808)
                         .build();
 
                 log.infoMC("Finished registering fluids")

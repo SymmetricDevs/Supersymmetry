@@ -49,6 +49,7 @@ def SINTERING_RECIPES = recipemap("sintering_oven")
 
 def fuels = [
     new Combustible('methane', false, 100, 100, 'carbon_dioxide', 50),
+    new Combustible('syngas', false, 100, 100, 'carbon_dioxide', 50),
     new Combustible('plasma.helium', true, 10, 10, 'helium', 10)
 ]
 

@@ -180,3 +180,12 @@ for (combustible in combustibles) {
     .duration(combustible.duration * 120)
     .buildAndRegister()
 }
+
+//MV Electric Arc Furnace Steel Recipes
+
+ARC_FURNACE.recipeBuilder()
+.inputs(metaitem('ingotWroughtIron'))
+.outputs(metaitem('ingotSteel'))
+.EUt(120)
+.duration(240)
+.buildAndRegister()

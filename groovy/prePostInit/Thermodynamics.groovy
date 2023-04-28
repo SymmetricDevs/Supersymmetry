@@ -107,6 +107,14 @@ CryoNetherAir.setDurationHX(5);
 CryoNetherAir.setDurationRadiator(400);
 CryoNetherAir.setTemperature(80);
 
+def CryoRefineryGas = new ICryoGas('refinery_gas', 'hot_hp_refinery_gas', 'hp_refinery_gas', 'cold_hp_refinery_gas', 'liquid_refinery_gas');
+CryoNetherAir.setEUt(60);
+CryoNetherAir.setDuration(100);
+CryoNetherAir.setPowerHX(100);
+CryoNetherAir.setDurationHX(5);
+CryoNetherAir.setDurationRadiator(400);
+CryoNetherAir.setTemperature(80);
+
 def CryoGases = [
         CryoHydrogen,
         CryoOxygen,
@@ -117,7 +125,8 @@ def CryoGases = [
         CryoXenon,
         CryoNitrogen,
         CryoAir,
-        CryoNetherAir
+        CryoNetherAir,
+        CryoRefineryGas
 ];
 
 def AmmoniaRefrigerant = new IRefrigerant("ammonia", 'hot_compressed_ammonia', 'compressed_ammonia', 'cold_ammonia');
