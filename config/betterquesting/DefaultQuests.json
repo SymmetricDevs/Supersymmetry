@@ -7736,7 +7736,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Lathe",
@@ -8033,7 +8033,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Polarizer",
@@ -8383,6 +8383,113 @@
     },
     "115:10": {
       "preRequisites:11": [
+        105
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Electrolysis§r is a stage in the separation of elements from naturally occurring sources, such as ores using an §6Electrolyzer§r.\n\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 275,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Electrolyzer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 115,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 275,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "116:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Gas Collector §rcollects §bair §rfrom the environment. Air can be used in §6sintering§r and it also can be separated into §bnitrogen §rand §boxygen §rusing §bcryogenic distillation.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 530,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Gas Collector",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 116,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 530,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "117:10": {
+      "preRequisites:11": [
         87
       ],
       "properties:10": {
@@ -8451,7 +8558,7 @@
         }
       }
     },
-    "116:10": {
+    "118:10": {
       "preRequisites:11": [
         117
       ],
@@ -8503,7 +8610,370 @@
         }
       }
     },
-    "117:10": {
+    "119:10": {
+      "preRequisites:11": [
+        116
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Sintering§r§r is the process of compacting and forming a solid mass of material by pressure or §cheat §rwithout melting it to the point of liquefaction. \n\nA §6Sintering Oven §ris required for making things like §6cement§r, or §7§6electrodes§r.\n\nA Sintering Oven requires:.\n§61x Sintering Oven Controller\n1x Input Bus\n1x Input Hatch\n1x Output Bus\n1x Output Hatch\n1x Energy Hatch (any tier)\n1x Maintenance Hatch\n72x Sintering Brick Block\n43x ULV Machine Casing\n36x Steel Frame \n\n§rCheck JEI for info on how to build the structure. If you are having trouble with the §6Maintenance Hatch§r, you can check the other page linked to the top of this quest. Remember that you have to use §6ULV §rMachine Casings, not LV. These are different.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "susy:sintering_brick"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Sintering Oven",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 119,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14521,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 72,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "susy:sintering_brick"
+            },
+            "2:10": {
+              "Count:3": 43,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "120:10": {
+      "preRequisites:11": [
+        122
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The Maintenance Hatch is where maintenance is performed on multi-block machines.\n\nWhile a Multiblock is running, new maintenance problems can appear. On average, new problems arise every few months. \n\nMaintenance is done by using tools in the Maintenance Hatch. To use a tool in maintenance, move it up to the Hatch\u0027s GUI and [§aLeft Click§r] once. Here is a list of the possible problems you can have in a Multiblock:\n\n§6\"Pipe is loose\" §rcan be fixed with a §6Wrench§r.\n§6\"Screws are missing.\"§r can be fixed with a §6Screwdriver§r.\n§6\"Something is stuck.\"§r can be fixed with a §6Soft Hammer§r.\n§6\"Platings are dented.\"§r can be fixed with a §6Hammer§r.\n§6\"Circuitry burned out.\"§r can be fixed with a §6Soldering Iron§r.\n§6\"That doesn\u0027t belong there.\"§r can be fixed with a §6Crowbar§r.\n\nAll of the problems can be fixed by using §7Duct Tape§r.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1654,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Multi Maintenance",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 120,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "121:10": {
+      "preRequisites:11": [
+        119,
+        122
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Syngas §rcan be obtained by pyrolyzing §6Coke §rin the Pyrolyse Oven.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "syngas"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Synthesis Gas",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 121,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "syngas"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "122:10": {
+      "preRequisites:11": [
+        99
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Pyrolysis§r is the thermal decomposition of materials at elevated temperatures, often in an inert atmosphere. It involves a change of chemical composition. \nThe Pyrolyse Oven is required to process biomass such as §6coal tar§r and §6coke§r.\n\nThe Pyrolyse Oven requires:§7§6\n1x Pyrolyse Oven Controller\n1x Input Bus\n1x Input Hatch\n1x Output Bus\n1x Energy Hatch (any tier)\n1x LV Muffler Hatch\n16x Cupronickel Coil Blocks\n10x ULV Machine Casing\n\n§rRemember that these are ULV machine casing and not LV ones. They\u0027re different. Also, the Muffler Hatch must not be obstructed by any other block, or it won\u0027t work.\n\nCheck JEI for info on how to build the structure.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1004,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Pyrolyse Oven",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 122,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1004,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_coil"
+            },
+            "2:10": {
+              "Count:3": 10,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "123:10": {
+      "preRequisites:11": [
+        122
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Coal Tar §rcan be obtained by using a Pyrolyse Oven. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "coal_tar"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Coal Tar",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 123,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "coal_tar"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "124:10": {
+      "preRequisites:11": [
+        123,
+        127
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Combine §6Coke Dusts §rand §6Coal Tar§r §rto make a Pitch Bender, that can be §6Extruded §rinto a Raw Electrode.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 165,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Raw Electrodes",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 124,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 165,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "125:10": {
       "preRequisites:11": [
         118
       ],
@@ -8567,7 +9037,180 @@
         }
       }
     },
-    "118:10": {
+    "126:10": {
+      "preRequisites:11": [
+        119,
+        124
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Using a §6Sintering Oven§r, Air and §6Syngas§r, a Raw Electrode can be turned into a Graphite Electrode, ready for electrolysis.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 166,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Graphite Electrode",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 126,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 166,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "127:10": {
+      "preRequisites:11": [
+        100
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Extruder §ris an extremely fast, flexible, and expensive semi-universal metal shaping machine. A common use of the§6 Extruder§r is to craft §6tool parts§r, or to make §6electrodes§r. \n\nThe Extruder functions by using §6extruder shapes§r. Look them up in JEI for more info.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 320,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Extruder",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 127,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 320,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 32,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "128:10": {
+      "preRequisites:11": [
+        115,
+        126
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "start cryolite chain here",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 128,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "129:10": {
       "preRequisites:11": [
         22
       ],
@@ -8637,7 +9280,7 @@
         }
       }
     },
-    "119:10": {
+    "130:10": {
       "preRequisites:11": [
         97
       ],
@@ -8689,7 +9332,92 @@
         }
       }
     },
-    "120:10": {
+    "131:10": {
+      "preRequisites:11": [
+        115
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§bWater §rcan be electrolyzed into §bHydrogen §rand §bOxygen §rby using Nickel Rods and Iron Rods as the anode and cathode. This is a prettty slow process, so be patient.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "minecraft:water_bucket"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Hydrogen and Oxygen",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 131,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 69,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_stick"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 51,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_stick"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "132:10": {
       "preRequisites:11": [
         0
       ],
@@ -8737,7 +9465,7 @@
         }
       }
     },
-    "121:10": {
+    "133:10": {
       "preRequisites:11": [
         12
       ],
@@ -8807,7 +9535,7 @@
         }
       }
     },
-    "122:10": {
+    "134:10": {
       "preRequisites:11": [
         31
       ],
@@ -8911,7 +9639,7 @@
         }
       }
     },
-    "123:10": {
+    "135:10": {
       "preRequisites:11": [
         31
       ],
@@ -9004,9 +9732,9 @@
         }
       }
     },
-    "124:10": {
+    "136:10": {
       "preRequisites:11": [
-        105
+        101
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -9056,14 +9784,14 @@
         }
       }
     },
-    "125:10": {
+    "137:10": {
       "preRequisites:11": [
         191
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you want to make turrets, you\u0027ll need turret bases. Let\u0027s make some.\n\nThey are a tiered block that acts as the base for turrets. They use §cRF §renergy. You can put Turrets on all sides of the block, just note that every turret needs a minimum tier of base to be able to be placed. \n\nAll the settings for a modular turret is being stored and set in the base that holds the turrets. In their GUI you should find most descriptions pretty easily (Tooltips are still WIP).\n\n",
+          "desc:8": "If you want to make turrets, you\u0027ll need turret bases. Let\u0027s make some.\n\nThey are a block that acts as the base for turrets. They use §cRF §renergy. You can put Turrets on all sides of the block, just note that every turret needs a minimum tier of base to be able to be placed. \n\nAll the settings for a modular turret is being stored and set in the base that holds the turrets. In their interface, you should find most descriptions pretty easily.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9087,29 +9815,7 @@
         }
       },
       "questID:3": 192,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 172,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -9130,7 +9836,7 @@
         }
       }
     },
-    "126:10": {
+    "138:10": {
       "preRequisites:11": [
         192
       ],
@@ -9170,44 +9876,7 @@
         }
       },
       "questID:3": 193,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 2,
-              "Damage:2": 153,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_meta_item"
-            },
-            "1:10": {
-              "Count:3": 2,
-              "Damage:2": 127,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -9252,14 +9921,14 @@
         }
       }
     },
-    "127:10": {
+    "139:10": {
       "preRequisites:11": [
         193
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Gun Turret shoots at whatever gets into a 18 block radius of it. It needs a Tier 2 or higher turret base. \n\nIt uses §4100 RF§r (6.25 EU) per shot, and it shoots 2.5 times per second.\n\nIt uses bullets as ammo.",
+          "desc:8": "The Gun Turret shoots at whatever gets into a 18m radius of it. It needs a Tier 2 or higher turret base. \n\nIt uses §4100 RF§r (25 EU) per shot, and it shoots 2.5 times per second.\n\nIt uses bullets as ammo.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9341,7 +10010,7 @@
         }
       }
     },
-    "128:10": {
+    "140:10": {
       "preRequisites:11": [
         193
       ],
@@ -9372,29 +10041,7 @@
         }
       },
       "questID:3": 195,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 2,
-              "Damage:2": 157,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -9430,7 +10077,7 @@
         }
       }
     },
-    "129:10": {
+    "141:10": {
       "preRequisites:11": [
         191
       ],
@@ -9475,29 +10122,7 @@
         }
       },
       "questID:3": 196,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 2,
-              "Damage:2": 1,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "openmodularturrets:ammo_meta"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -9547,14 +10172,14 @@
         }
       }
     },
-    "130:10": {
+    "142:10": {
       "preRequisites:11": [
         191
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds. It\u0027s also multishot, this means it will shoot 8 times at once.\n\nFor more info, look at the tooltip.",
+          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds. It\u0027s also multishot, this means it will shoot 8 times at once. \n\nCrafting it requires a §6Steel Receiver§r.\n\nFor more info, look at the tooltip.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9592,29 +10217,7 @@
         }
       },
       "questID:3": 197,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 4,
-              "Damage:2": 106,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "techguns:itemshared"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -9664,7 +10267,7 @@
         }
       }
     },
-    "131:10": {
+    "143:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -10511,35 +11114,35 @@
           "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
+          "x:3": -84,
           "y:3": 216
         },
         "2:10": {
           "id:3": 60,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
+          "x:3": -12,
           "y:3": 216
         },
         "3:10": {
           "id:3": 99,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
+          "x:3": -204,
           "y:3": 216
         },
         "4:10": {
           "id:3": 100,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -108,
+          "x:3": -132,
           "y:3": 144
         },
         "5:10": {
           "id:3": 101,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -192,
+          "x:3": -216,
           "y:3": 144
         },
         "6:10": {
@@ -10553,7 +11156,7 @@
           "id:3": 103,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -156,
           "y:3": 216
         },
         "8:10": {
@@ -10574,15 +11177,15 @@
           "id:3": 108,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 12,
+          "x:3": -48,
           "y:3": 216
         },
         "11:10": {
           "id:3": 109,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 252
+          "x:3": 24,
+          "y:3": 216
         },
         "12:10": {
           "id:3": 110,
@@ -10592,53 +11195,137 @@
           "y:3": 210
         },
         "13:10": {
-          "id:3": 191,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -228,
-          "y:3": 36
+          "id:3": 115,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -24,
+          "y:3": 252
         },
         "14:10": {
-          "id:3": 192,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 36
-        },
-        "15:10": {
-          "id:3": 193,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -324,
-          "y:3": 36
-        },
-        "16:10": {
-          "id:3": 194,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -360,
-          "y:3": 12
-        },
-        "17:10": {
-          "id:3": 195,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -360,
-          "y:3": 60
-        },
-        "18:10": {
-          "id:3": 196,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 72
-        },
-        "19:10": {
-          "id:3": 197,
+          "id:3": 116,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
-          "y:3": 72
+          "y:3": 324
+        },
+        "15:10": {
+          "id:3": 119,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -216,
+          "y:3": 312
+        },
+        "16:10": {
+          "id:3": 120,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -252,
+          "y:3": 264
+        },
+        "17:10": {
+          "id:3": 121,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": 324
+        },
+        "18:10": {
+          "id:3": 122,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -216,
+          "y:3": 252
+        },
+        "19:10": {
+          "id:3": 123,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": 264
+        },
+        "20:10": {
+          "id:3": 124,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -96,
+          "y:3": 264
+        },
+        "21:10": {
+          "id:3": 126,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -96,
+          "y:3": 324
+        },
+        "22:10": {
+          "id:3": 127,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -120,
+          "y:3": 216
+        },
+        "23:10": {
+          "id:3": 128,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -54,
+          "y:3": 324
+        },
+        "24:10": {
+          "id:3": 131,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 324
+        },
+        "25:10": {
+          "id:3": 191,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": 60
+        },
+        "26:10": {
+          "id:3": 192,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -252,
+          "y:3": 60
+        },
+        "27:10": {
+          "id:3": 193,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -300,
+          "y:3": 60
+        },
+        "28:10": {
+          "id:3": 194,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -336,
+          "y:3": 36
+        },
+        "29:10": {
+          "id:3": 195,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -336,
+          "y:3": 84
+        },
+        "30:10": {
+          "id:3": 196,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -180,
+          "y:3": 24
+        },
+        "31:10": {
+          "id:3": 197,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -228,
+          "y:3": 24
         }
       }
     },
@@ -11063,7 +11750,7 @@
           "id:3": 113,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 276,
+          "x:3": 288,
           "y:3": -24
         },
         "4:10": {
