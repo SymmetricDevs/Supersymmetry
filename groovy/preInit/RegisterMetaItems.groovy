@@ -62,7 +62,6 @@ eventManager.listen {
         
         customMetaItems.addItem(1100, "steam.piston")
         customMetaItems.addItem(1101, "steam.motor")
-        customMetaItems.addItem(1102, "steam.pump")
 
         customMetaItems.addItem(2000, "spaceship.me.scrap")
         customMetaItems.addItem(2001, "wafer.pattern.processor")

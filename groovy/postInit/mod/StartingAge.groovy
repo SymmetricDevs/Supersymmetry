@@ -1,4 +1,5 @@
 import crafttweaker.api.item.IItemStack;
+import Globals.*
 
 println("Running StartingAge.groovy...")
 
