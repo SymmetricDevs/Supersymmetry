@@ -22,11 +22,16 @@ def unify (ore, p) {
     def foundMod = false
 
     for (item in ore) {
-        foundMod = ( item.getItem().getRegistryName().getNamespace() == Globals.mod_priority[pos] && item.getItem().getRegistryName().getNamespace() != 'xtones' )
+        String namespace = item.getItem().getRegistryName().getNamespace()
+        if (namespace == Globals.mod_priority[pos]) {
+            foundMod = true
+            break
+        }
     }
 
     if (foundMod) {
-        for (item in ore) {
+        for (int i = 0; i < ore.size(); i++) {
+            ItemStack item = ore.getAt(i)
             if (item.getItem().getRegistryName().getNamespace() != Globals.mod_priority[pos]) {
                 ore.remove(item)
                 mods.jei.hide(item)
