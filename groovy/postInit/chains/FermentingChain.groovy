@@ -8,13 +8,15 @@ import gregtech.api.unification.stack.UnificationEntry;
 def PYROLYSE_OVEN = recipemap('pyrolyse_oven');
 def DISTILLERY = recipemap('distillery');
 def MIXER = recipemap('mixer');
-def FERMENTER = recipemap('vat_fermentation');
+
 def DISTILLATION_TOWER = recipemap('distillation_tower');
 def AUTOCLAVE = recipemap('autoclave');
 //GENERIC BIOMASS CHAIN
 
 //TODO: UNCOMMENT WHEN SUSYCORE 0.0.8 IS OUT
 /*
+//def FERMENTER = recipemap('vat_fermentation');
+
 PYROLYSE_OVEN.recipeBuilder()
         .inputs(metaitem('bio_chaff') * 16)
         .fluidInputs(fluid('water') * 4000)
