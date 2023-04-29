@@ -1,5 +1,6 @@
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.recipes.GTRecipeHandler;
+import gregtechfoodoption.recipe.GTFORecipeMaps;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.recipes.GTRecipeHandler.*;
 
@@ -13,6 +14,8 @@ removeAllRecipes(RecipeMaps.LARGE_CHEMICAL_RECIPES);
 removeAllRecipes(RecipeMaps.FERMENTING_RECIPES);
 removeAllRecipes(RecipeMaps.FLUID_HEATER_RECIPES);
 removeAllRecipes(RecipeMaps.PYROLYSE_RECIPES);
+removeAllRecipes(RecipeMaps.IMPLOSION_RECIPES);
+removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES);
 
 //Removed due to infinite stone being unrealistic
 removeAllRecipes(recipemap('rock_breaker'));

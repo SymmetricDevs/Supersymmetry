@@ -5,6 +5,20 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 
+//REMOVALS
+// Raw Rubber Pulp * 2
+mods.gregtech.extractor.removeByInput(2, [item('minecraft:slime_ball')], null)
+// Raw Rubber Pulp * 3
+mods.gregtech.extractor.removeByInput(2, [metaitem('rubber_drop')], null)
+// Raw Rubber Pulp * 1
+mods.gregtech.extractor.removeByInput(2, [item('gregtech:rubber_sapling')], null)
+// Raw Rubber Pulp * 1
+mods.gregtech.extractor.removeByInput(2, [item('gregtech:rubber_leaves') * 16], null)
+// Raw Rubber Pulp * 1
+mods.gregtech.extractor.removeByInput(2, [item('gregtech:rubber_log')], null)
+
+
+//DEFINITIONS
 class Catalyser {
     String name
     int speed_bonus
