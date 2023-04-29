@@ -3,7 +3,6 @@ import gregtech.api.GregTechAPI;
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.properties.*
 
-import static gregtech.api.unification.material.Materials.SodiumBicarbonate;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -339,6 +338,11 @@ class RegisterFluids {
                 generateHotGas(Air, 10311);
 
                 generateHotGas(Nitrogen, 10312);
+
+                generateLiquidFromGas(NaturalGas, 10313, 110);
+
+                generateHighPressureGases(NaturalGas, 10314, true);
+
 
                 new Material.Builder(11000, "ammonium_chloride_solution")
                         .fluid()
@@ -1111,7 +1115,7 @@ class RegisterFluids {
                         .color(0xa7d6b3)
                         .build();
 
-                new Material.Builder(12016, "diluted_light_oil")
+                new Material.Builder(12016, "diluted_oil_light")
                         .fluid()
                         .color(0x2d2f3b)
                         .build();
@@ -1121,12 +1125,12 @@ class RegisterFluids {
                         .color(0x2d2f3b)
                         .build();
 
-                new Material.Builder(12018, "diluted_heavy_oil")
+                new Material.Builder(12018, "diluted_oil_heavy")
                         .fluid()
                         .color(0x2d2f3b)
                         .build();
 
-                new Material.Builder(12019, "desalted_light_oil")
+                new Material.Builder(12019, "desalted_oil_light")
                         .fluid()
                         .color(0x000000)
                         .build();
@@ -1136,7 +1140,7 @@ class RegisterFluids {
                         .color(0x000000)
                         .build();
 
-                new Material.Builder(12021, "desalted_heavy_oil")
+                new Material.Builder(12021, "desalted_oil_heavy")
                         .fluid()
                         .color(0x000000)
                         .build();
@@ -1320,121 +1324,121 @@ class RegisterFluids {
                         .color(0x828271)
                         .build();
 
-                new Material.Builder(12057, "lightly_steam_cracked_kerosene")
+                new Material.Builder(12057, "lightly_steamcracked_kerosene")
                         .fluid()
                         .color(0xe3dd59)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12058, "severely_steam_cracked_kerosene")
+                new Material.Builder(12058, "severely_steamcracked_kerosene")
                         .fluid()
                         .color(0xf2ed83)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12059, "lightly_hydro_cracked_kerosene")
+                new Material.Builder(12059, "lightly_hydrocracked_kerosene")
                         .fluid()
                         .color(0xc4bf51)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12060, "severely_hydro_cracked_kerosene")
+                new Material.Builder(12060, "severely_hydrocracked_kerosene")
                         .fluid()
                         .color(0xbab65f)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12061, "lightly_steam_cracked_gasoline")
+                new Material.Builder(12061, "lightly_steamcracked_gasoline")
                         .fluid()
                         .color(0xebe34d)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12062, "severely_steam_cracked_gasoline")
+                new Material.Builder(12062, "severely_steamcracked_gasoline")
                         .fluid()
                         .color(0xf5ed62)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12063, "lightly_hydro_cracked_gasoline")
+                new Material.Builder(12063, "lightly_hydrocracked_gasoline")
                         .fluid()
                         .color(0xccc43f)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12064, "severely_hydro_cracked_gasoline")
+                new Material.Builder(12064, "severely_hydrocracked_gasoline")
                         .fluid()
                         .color(0xbdb648)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12065, "lightly_steam_cracked_kerosene_mix")
+                new Material.Builder(12065, "lightly_steamcracked_kerosene_mix")
                         .fluid()
                         .color(0xe3dd59)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12066, "severely_steam_cracked_kerosene_mix")
+                new Material.Builder(12066, "severely_steamcracked_kerosene_mix")
                         .fluid()
                         .color(0xf2ed83)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12067, "lightly_hydro_cracked_kerosene_mix")
+                new Material.Builder(12067, "lightly_hydrocracked_kerosene_mix")
                         .fluid()
                         .color(0xc4bf51)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12068, "severely_hydro_cracked_kerosene_mix")
+                new Material.Builder(12068, "severely_hydrocracked_kerosene_mix")
                         .fluid()
                         .color(0xbab65f)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12069, "lightly_steam_cracked_gasoline_mix")
+                new Material.Builder(12069, "lightly_steamcracked_gasoline_mix")
                         .fluid()
                         .color(0xebe34d)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12070, "severely_steam_cracked_gasoline_mix")
+                new Material.Builder(12070, "severely_steamcracked_gasoline_mix")
                         .fluid()
                         .color(0xf5ed62)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12071, "lightly_hydro_cracked_gasoline_mix")
+                new Material.Builder(12071, "lightly_hydrocracked_gasoline_mix")
                         .fluid()
                         .color(0xccc43f)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12072, "severely_hydro_cracked_gasoline_mix")
+                new Material.Builder(12072, "severely_hydrocracked_gasoline_mix")
                         .fluid()
                         .color(0xbdb648)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12073, "lightly_steam_cracked_naphtha_mix")
+                new Material.Builder(12073, "lightly_steamcracked_naphtha_mix")
                         .fluid()
                         .color(0xdbd556)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12074, "severely_steam_cracked_naphtha_mix")
+                new Material.Builder(12074, "severely_steamcracked_naphtha_mix")
                         .fluid()
                         .color(0xe3dd68)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12075, "lightly_hydro_cracked_naphtha_mix")
+                new Material.Builder(12075, "lightly_hydrocracked_naphtha_mix")
                         .fluid()
                         .color(0xc4be49)
                         .fluidTemp(773)
                         .build();
 
-                new Material.Builder(12076, "severely_hydro_cracked_naphtha_mix")
+                new Material.Builder(12076, "severely_hydrocracked_naphtha_mix")
                         .fluid()
                         .color(0xb5b050)
                         .fluidTemp(773)
@@ -1559,6 +1563,16 @@ class RegisterFluids {
 
                 new Material.Builder(12098, "graphite_mix")
                         .color(0x080808)
+                        .build();
+
+                new Material.Builder(12099, "sulfuric_refinery_gas")
+                        .fluid(FluidTypes.GAS)
+                        .color(0xe3e3d8)
+                        .build();
+
+                new Material.Builder(12100, "treated_sulfuric_naphtha")
+                        .fluid(FluidTypes.GAS)
+                        .color(0xcec929)
                         .build();
 
                 log.infoMC("Finished registering fluids")
