@@ -3772,7 +3772,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 14551,
+              "Damage:2": 14553,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -4529,12 +4529,12 @@
     },
     "59:10": {
       "preRequisites:11": [
-        31
+        16
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "There are two different options for fluid storage at this stage.\n\n- §6Drums§o§r: they can be made of various materials, but don\u0027t occupy much space\n\n- §6Industrial Renewal tanks§r: they are harder to build, but they can contain more fluid.\n\n",
+          "desc:8": "§6Bronze Drums §rdon\u0027t occupy much space, but they can store up to 32,000 L of fluid in a single block.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7159,11 +7159,11 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Steam Pumps §rmove liquid around. They will be required to create a Vacuum Chamber.",
+          "desc:8": "§6Steam Pumps §rmove liquid around. They will be required to create a Vacuum Chamber.\n\nIt also acts as a cover and it extracts fluids from tanks or things that don\u0027t auto output (like steam machines).\n\n§6Covers §rare ways to give your machines extra behavior without using any extra block space. Covers are placed by §aright-click§ring the item on a face of a machine, and they can be removed by using a §6Crowbar§r. \n\n§6Pumps, Robot Arms and Conveyor Modules are all Covers§r.\n\nIf you are confused about covers, watch this video: §9https://www.youtube.com/watch?v\u003d0RsPoXjUags §r(Link doesn\u0027t work)",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1104,
+            "Damage:2": 3,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -7174,7 +7174,7 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtech:meta_item_2"
+            "id:8": "susy:meta_item"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -7204,7 +7204,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 1104,
+              "Damage:2": 3,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -7215,7 +7215,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "gregtech:meta_item_2"
+              "id:8": "susy:meta_item"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -7657,7 +7657,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §7LV Electric Pump §ris another important component used in LV machines. \n\nIt also acts as a cover and it extracts fluids from tanks or things that don\u0027t auto output (like steam machines).\n\n§6Covers §rare ways to give your machines extra behavior without using any extra block space. Covers are placed by §aright-click§ring the item on a face of a machine, and they can be removed by using a §6Crowbar§r. \n\n§6Pumps, Robot Arms and Conveyor Modules are all Covers§r.\n\nIf you are confused about covers, watch this video: §9https://www.youtube.com/watch?v\u003d0RsPoXjUags §r(Link doesn\u0027t work)",
+          "desc:8": "The §7LV Electric Pump §ris another important component used in LV machines. It also acts as a cover, like steam pumps.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10665,6 +10665,544 @@
     },
     "150:10": {
       "preRequisites:11": [
+        87
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Make a §6chest§r. It can hold 27 different stacks of items. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:chest"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The simplest form of storage",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 150,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:chest"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "151:10": {
+      "preRequisites:11": [
+        16
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §6Bronze Crate §rcan store up to 54 stacks of items instead of the 27 you can store in a chest. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1626,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Bronze Crate",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 151,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1626,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "152:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §7Steel Crate §rcan store 72 stacks of items instead of 54. \n\nYou have probably figured out that there are §bAluminum Crates§r, §7Stainless Steel Crates §rand so on for the later chapters. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1627,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Steel Crate",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 152,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1627,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "153:10": {
+      "preRequisites:11": [
+        38
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Lead Drums can handle §6acids§r, which is not something that the other drums can do. Acid is corrosive and would destroy the bronze and steel used in normal drums.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14553,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Lead Drums",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 153,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14553,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "154:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Steel Drums are obviously better than Bronze Drums. They can store twice as much fluid.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1612,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Steel Drums",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 154,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1612,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "155:10": {
+      "preRequisites:11": [
+        99
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Industrial Fluid Tank §rcan store up to 1,000,000 liters of fluid, but it takes a 3m x 3m x 3m space.\nIndustrial Fluid Tanks can be stacked vertically if you ever need more capacity.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "industrialrenewal:fluid_tank"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Industrial Tank",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 155,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:fluid_tank"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "156:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
+      "preRequisites:11": [
+        150
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Wooden §rand §6Metal §rbarrels can hold thousands of a single item if they are upgraded with enough §6Storage Capacity Upgrades§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "Parent:10": {
+                "count:3": 0,
+                "locked:1": 0,
+                "maxCap:3": 1024,
+                "objColors:11": [
+                  -1,
+                  -1,
+                  -1,
+                  -1
+                ],
+                "oreDict:1": 0,
+                "overflow:1": 0,
+                "refFluid:10": {},
+                "refStack:10": {
+                  "Count:3": 1,
+                  "Damage:2": 0,
+                  "id:8": "minecraft:air",
+                  "tag:10": {
+                    "context0:3": 4,
+                    "index:3": 0
+                  }
+                },
+                "stackCap:3": 64
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "bdsandm:wood_barrel",
+            "tag:10": {
+              "barrelCap:10": {
+                "count:3": 0,
+                "locked:1": 0,
+                "maxCap:3": 1024,
+                "objColors:11": [
+                  -1,
+                  -1,
+                  -1,
+                  -1
+                ],
+                "oreDict:1": 0,
+                "overflow:1": 0,
+                "refFluid:10": {},
+                "refStack:10": {
+                  "Count:3": 1,
+                  "Damage:2": 0,
+                  "id:8": "minecraft:air",
+                  "tag:10": {
+                    "context0:3": 4,
+                    "index:3": 0
+                  }
+                },
+                "stackCap:3": 64
+              }
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Barrels, Drums, Storage and More",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 156,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "Parent:10": {
+                  "count:3": 0,
+                  "locked:1": 0,
+                  "maxCap:3": 1024,
+                  "objColors:11": [
+                    -1,
+                    -1,
+                    -1,
+                    -1
+                  ],
+                  "oreDict:1": 0,
+                  "overflow:1": 0,
+                  "refFluid:10": {},
+                  "refStack:10": {
+                    "Count:3": 1,
+                    "Damage:2": 0,
+                    "id:8": "minecraft:air",
+                    "tag:10": {
+                      "context0:3": 4,
+                      "index:3": 0
+                    }
+                  },
+                  "stackCap:3": 64
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "bdsandm:wood_barrel",
+              "tag:10": {
+                "barrelCap:10": {
+                  "count:3": 0,
+                  "locked:1": 0,
+                  "maxCap:3": 1024,
+                  "objColors:11": [
+                    -1,
+                    -1,
+                    -1,
+                    -1
+                  ],
+                  "oreDict:1": 0,
+                  "overflow:1": 0,
+                  "refFluid:10": {},
+                  "refStack:10": {
+                    "Count:3": 1,
+                    "Damage:2": 0,
+                    "id:8": "minecraft:air",
+                    "tag:10": {
+                      "context0:3": 4,
+                      "index:3": 0
+                    }
+                  },
+                  "stackCap:3": 64
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "bdsandm:upgrade"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "157:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Shipping Container §rcan condense up to §627 §rdifferent item and fluid containers into a single 2x2x2 structure.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "bdsandm:shipping_container"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Shipping Container",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 157,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "bdsandm:shipping_container"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "158:10": {
+      "preRequisites:11": [
         31
       ],
       "properties:10": {
@@ -10767,7 +11305,7 @@
         }
       }
     },
-    "151:10": {
+    "159:10": {
       "preRequisites:11": [
         31
       ],
@@ -10860,7 +11398,7 @@
         }
       }
     },
-    "152:10": {
+    "160:10": {
       "preRequisites:11": [
         101
       ],
@@ -10912,7 +11450,7 @@
         }
       }
     },
-    "153:10": {
+    "161:10": {
       "preRequisites:11": [
         191
       ],
@@ -10964,7 +11502,7 @@
         }
       }
     },
-    "154:10": {
+    "162:10": {
       "preRequisites:11": [
         192
       ],
@@ -11049,7 +11587,7 @@
         }
       }
     },
-    "155:10": {
+    "163:10": {
       "preRequisites:11": [
         193
       ],
@@ -11138,7 +11676,7 @@
         }
       }
     },
-    "156:10": {
+    "164:10": {
       "preRequisites:11": [
         193
       ],
@@ -11205,7 +11743,7 @@
         }
       }
     },
-    "157:10": {
+    "165:10": {
       "preRequisites:11": [
         191
       ],
@@ -11300,7 +11838,7 @@
         }
       }
     },
-    "158:10": {
+    "166:10": {
       "preRequisites:11": [
         191
       ],
@@ -11395,7 +11933,7 @@
         }
       }
     },
-    "159:10": {
+    "167:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -12850,7 +13388,7 @@
     },
     "16:10": {
       "lineID:3": 16,
-      "order:3": 16,
+      "order:3": 22,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -12906,7 +13444,7 @@
     },
     "17:10": {
       "lineID:3": 17,
-      "order:3": 19,
+      "order:3": 16,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -12971,7 +13509,7 @@
     },
     "18:10": {
       "lineID:3": 18,
-      "order:3": 21,
+      "order:3": 19,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -13001,7 +13539,7 @@
     },
     "19:10": {
       "lineID:3": 19,
-      "order:3": 17,
+      "order:3": 23,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -13021,7 +13559,7 @@
     },
     "20:10": {
       "lineID:3": 20,
-      "order:3": 22,
+      "order:3": 20,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -13056,7 +13594,7 @@
     },
     "21:10": {
       "lineID:3": 21,
-      "order:3": 18,
+      "order:3": 21,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -13107,7 +13645,7 @@
     },
     "22:10": {
       "lineID:3": 22,
-      "order:3": 20,
+      "order:3": 24,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -13141,7 +13679,7 @@
     },
     "23:10": {
       "lineID:3": 23,
-      "order:3": 23,
+      "order:3": 17,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -13269,7 +13807,7 @@
     },
     "24:10": {
       "lineID:3": 24,
-      "order:3": 24,
+      "order:3": 25,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -13302,11 +13840,95 @@
         }
       },
       "quests:9": {}
+    },
+    "25:10": {
+      "lineID:3": 25,
+      "order:3": 18,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "No Description",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1610,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "name:8": "Storage",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "quests:9": {
+        "0:10": {
+          "id:3": 59,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 36
+        },
+        "1:10": {
+          "id:3": 150,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": -12
+        },
+        "2:10": {
+          "id:3": 151,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": -12
+        },
+        "3:10": {
+          "id:3": 152,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": -12
+        },
+        "4:10": {
+          "id:3": 153,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 36
+        },
+        "5:10": {
+          "id:3": 154,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 36
+        },
+        "6:10": {
+          "id:3": 155,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 156,
+          "y:3": 24
+        },
+        "7:10": {
+          "id:3": 156,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 168,
+          "y:3": -12
+        },
+        "8:10": {
+          "id:3": 157,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 228,
+          "y:3": -12
+        }
+      }
     }
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
