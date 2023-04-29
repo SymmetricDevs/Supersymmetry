@@ -288,9 +288,9 @@ for (i = 1; i <= 8; i++) {
 //Polymerization tank and fluidized bed reactor
 
 crafting.addShaped("gregtech:polymerization_tank", metaitem('polymerization_tank'), [
-		[tieredCables[2], motors[2], tieredCables[2]],
-		[pumps[2], rotors[2], pumps[2]],
-		[circuits[2], hulls[2], circuits[2]]
+		[tieredCables[1], motors[1], tieredCables[1]],
+		[pumps[1], rotors[1], pumps[1]],
+		[circuits[1], hulls[1], circuits[1]]
 ])
 
 crafting.addShaped("gregtech:fluidized_bed_reactor", metaitem('fluidized_bed_reactor'), [
