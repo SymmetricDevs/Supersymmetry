@@ -7,6 +7,9 @@ import gregtech.common.blocks.StoneVariantBlock
 
 import net.minecraftforge.oredict.OreDictionary
 
+//Force stick to exist
+ore('stickWood').add(item('minecraft:stick'))
+
 //Ore dict changes and unification
 
 def get_ore_dicts(List<String> list) {
@@ -106,6 +109,7 @@ ore('toolKnife').remove(item('notreepunching:knife/gold'))
 ore('toolKnife').remove(item('notreepunching:knife/diamond'))
 
 //Manual Fixes
+ore('stickWood').add(item('minecraft:stick'))
 ore('blockConcrete').add(item('industrialrenewal:concrete'))
 ore('stickIron').remove(item('industrialrenewal:stick_iron'))
 ore('stickSteel').remove(item('industrialrenewal:stick_steel'))
