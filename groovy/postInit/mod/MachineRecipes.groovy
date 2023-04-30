@@ -239,6 +239,7 @@ recipemap('sintering_oven').recipeBuilder()
 		.duration(150)
 		.buildAndRegister()
 
+
 for (i = 1; i <= 8; i++) {
 	crafting.remove('gregtech:gregtech.machine.arc_furnace.' + Globals.voltageTiers[i])
 
@@ -439,3 +440,18 @@ crafting.addShapeless("mbd output hatch -> lv output hatch", metaitem('fluid_hat
 //ModHandler.addShapedRecipe(true, "mixer.bronze", SuSyMetaTileEntities.mixer.bronze.getStackForm(), "GPG", "GRG", "XMX", 'M' as char, MetaBlocks.STEAM_CASING.getItemVariant(SteamCasingType.BRONZE_HULL), 'X' as char, new UnificationEntry(OrePrefix.pipeSmallFluid, Materials.Bronze), 'G' as char, new UnificationEntry(OrePrefix.blockGlass), 'P' as char, new UnificationEntry(OrePrefix.rotor, Materials.Bronze), 'R' as char, new UnificationEntry(OrePrefix.stick, Materials.Bronze))
 //ModHandler.addShapedRecipe(true, "coagulation_tank_wall", SuSyBlocks.COAGULATION_TANK_WALL.getItemVariant(CoagulationTankWallType.WOODEN_COAGULATION_TANK_WALL), "WBW", "sPh", "WBW", 'W' as char, MetaBlocks.PLANKS.getItemVariant(BlockGregPlanks.BlockType.TREATED_PLANK), 'P' as char, new UnificationEntry(OrePrefix.frameGt, Materials.TreatedWood), 'B' as char, new UnificationEntry(OrePrefix.bolt, Materials.Steel));
 //ModHandler.addShapedRecipe(true, "coagulation_tank", SuSyMetaTileEntities.COAGULATION_TANK.getStackForm(), "WRW", "sPh", "WBW", 'W' as char, MetaBlocks.PLANKS.getItemVariant(BlockGregPlanks.BlockType.TREATED_PLANK), 'P' as char, new UnificationEntry(OrePrefix.pipeLargeFluid, Materials.TreatedWood), 'B' as char, new UnificationEntry(OrePrefix.bolt, Materials.Steel), 'R' as char, new UnificationEntry(OrePrefix.rotor, Materials.Steel));
+
+//Fluid Drilling Rig
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('hull.mv'))
+		.inputs(metaitem('frameSteel' * 4))
+		.inputs(ore('circuitLv' * 4))
+		.inputs(metaitem('electric.pump.lv' * 4))
+		.inputs(metaitem('electric.motor.lv' * 4))
+		.inputs(metaitem('gearSteel' * 4))
+		.notConsumable(circuit(2))
+		.outputs(metaitem('fluid_drilling_rig.mv'))
+		.EUt(30)
+		.duration(600)
+		.buildAndRegister()
+
