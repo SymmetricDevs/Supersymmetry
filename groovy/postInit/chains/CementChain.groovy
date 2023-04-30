@@ -1,34 +1,5 @@
 import static globals.Globals.*
-
-class Combustible {
-    String name
-    boolean isPlasma
-    int amountRequired
-    int duration
-    String byproduct
-    int byproductAmount
-
-    Combustible(name, isPlasma, amountRequired, duration, byproduct, byproductAmount) {
-        this.name = name
-        this.isPlasma = isPlasma
-        this.amountRequired = amountRequired
-        this.duration = duration
-        this.byproduct = byproduct
-        this.byproductAmount = byproductAmount
-    }
-}
-
-class Comburent {
-    String name
-    int amountRequired
-    int duration
-
-    Comburent(name, amountRequired, duration) {
-        this.name = name
-        this.amountRequired = amountRequired
-        this.duration = duration
-    }
-}
+import static globals.SinteringGlobals.*
 
 class CoolantGases {
     String name
@@ -46,18 +17,7 @@ class CoolantGases {
 
 
 def SINTERING_RECIPES = recipemap("sintering_oven")
-
-def fuels = [
-    new Combustible('methane', false, 100, 100, 'carbon_dioxide', 50),
-    new Combustible('syngas', false, 100, 100, 'carbon_dioxide', 50),
-    new Combustible('plasma.helium', true, 10, 10, 'helium', 10)
-]
-
-def comburents = [
-    new Comburent('air', 100, 50)
-]
-
-for (fuel in fuels) {
+for (fuel in sintering_fuels) {
 
     if (fuel.isPlasma) {
 
@@ -73,7 +33,7 @@ for (fuel in fuels) {
 
     } else {
 
-        for (comburent in comburents) {
+        for (comburent in sintering_comburents) {
 
             SINTERING_RECIPES.recipeBuilder()
             .inputs(ore('dustClay'))

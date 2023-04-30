@@ -15,6 +15,7 @@
     "classes/RegisterFluids.groovy",
     "classes/RegisterSolids.groovy",
     "classes/RegisterOres.groovy",
+    "globals/SinteringGlobals.groovy",
     "globals/Globals.groovy"
   ],
   "loaders": {
