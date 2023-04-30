@@ -1,6 +1,6 @@
 //Change transistor to use silicon wafer instead of silicon plate
-//TODO: FIGURE OUT WHY THIS WONT WORK
-//mods.gregtech.assembler.removeByInput(120, [item('gregtech:meta_item_1', 371), item('gregtech:meta_wire_fine', 112)], [fluid('plastic') * 144])
+// Transistor * 8
+mods.gregtech.assembler.removeByInput(120, [metaitem('plateSilicon'), metaitem('wireFineTin') * 6], [fluid('plastic') * 144])
 
 mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('wireFineTin') * 6)

@@ -73,7 +73,8 @@ def recipesToRemove = [
 	'appliedenergistics2:decorative/quartz_block_pure',
 	'endercore:shapeless_paper',
 	'gregtech:paper_dust',
-	'gregtech:sugar'
+	'gregtech:sugar',
+	'minecraft:bone_meal_from_bone'
 ]
 
 for(name in recipesToRemove) {

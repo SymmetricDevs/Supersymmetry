@@ -380,11 +380,28 @@ BioDiesel.setAmountToBurn(2 * 40);
 BioDiesel.setByproductAmount(1000);
 BioDiesel.setIsDiesel(true);
 
+def Kerosene = new IFluidFuel('kerosene', 'flue_gas');
+Kerosene.setDuration(16);
+Kerosene.setAmountToBurn(1 * 40);
+Kerosene.setByproductAmount(1000);
+Kerosene.setIsDiesel(true);
+
 def Diesel = new IFluidFuel('diesel', 'flue_gas');
-Diesel.setDuration(16);
+Diesel.setDuration(18);
 Diesel.setAmountToBurn(1 * 40);
 Diesel.setByproductAmount(1000);
 Diesel.setIsDiesel(true);
+
+def FuelOil = new IFluidFuel('fuel_oil', 'flue_gas');
+FuelOil.setDuration(20);
+FuelOil.setAmountToBurn(1 * 40);
+FuelOil.setByproductAmount(1000);
+FuelOil.setIsDiesel(true);
+
+def Syngas = new IFluidFuel('syngas', 'flue_gas');
+Syngas.setDuration(10);
+Syngas.setAmountToBurn(4 * 40);
+Syngas.setByproductAmount(1000);
 
 def FluidFuels = [
         Gasoline,
@@ -410,7 +427,10 @@ def FluidFuels = [
         Benzene,
         NitroDiesel,
         BioDiesel,
-        Diesel
+        Diesel,
+        Syngas,
+        FuelOil,
+        Kerosene
 ];
 
 def WaterWF = new IWorkingFluid('water', 'steam', 'exhaust_steam');

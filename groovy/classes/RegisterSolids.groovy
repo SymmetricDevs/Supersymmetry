@@ -64,6 +64,32 @@ class RegisterSolids {
                 .color(0x3d98bf)
                 .build()
 
+        new Material.Builder(20007, 'gallium_phosphate')
+                .gem().iconSet(RUBY)
+                .components(Gallium, 1, Phosphorus, 1, Oxygen, 4)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(20008, 'lithium_niobate')
+                .gem().iconSet(RUBY)
+                .components(Lithium, 1, Niobium, 1, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(20009, 'lead_zirconate_titanate')
+                .gem().iconSet(RUBY)
+                .components(Lead, 2, Zirconium, 1, Titanium, 1, Oxygen, 6)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(20010, 'polyvinylidene_fluoride')
+                .polymer(1)
+                .color(0xfde3ff)
+                .flags(GENERATE_FOIL)
+                .components(Carbon, 2, Hydrogen, 2, Fluorine, 2)
+                .fluidTemp(468)
+                .build()
+
         new Material.Builder(32003, 'calcium_sulfate')
                 .dust()
                 .components(Calcium, 1, Sulfur, 1, Oxygen, 4)

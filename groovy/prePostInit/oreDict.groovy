@@ -7,6 +7,9 @@ import gregtech.common.blocks.StoneVariantBlock
 
 import net.minecraftforge.oredict.OreDictionary
 
+//Force stick to exist
+ore('stickWood').add(item('minecraft:stick'))
+
 //Ore dict changes and unification
 
 def get_ore_dicts(List<String> list) {
@@ -22,11 +25,16 @@ def unify (ore, p) {
     def foundMod = false
 
     for (item in ore) {
-        foundMod = ( item.getItem().getRegistryName().getNamespace() == Globals.mod_priority[pos] && item.getItem().getRegistryName().getNamespace() != 'xtones' )
+        String namespace = item.getItem().getRegistryName().getNamespace()
+        if (namespace == Globals.mod_priority[pos]) {
+            foundMod = true
+            break
+        }
     }
 
     if (foundMod) {
-        for (item in ore) {
+        for (int i = 0; i < ore.size(); i++) {
+            ItemStack item = ore.getAt(i)
             if (item.getItem().getRegistryName().getNamespace() != Globals.mod_priority[pos]) {
                 ore.remove(item)
                 mods.jei.hide(item)
@@ -101,9 +109,8 @@ ore('toolKnife').remove(item('notreepunching:knife/gold'))
 ore('toolKnife').remove(item('notreepunching:knife/diamond'))
 
 //Manual Fixes
-
+ore('stickWood').add(item('minecraft:stick'))
 ore('blockConcrete').add(item('industrialrenewal:concrete'))
-
 ore('stickIron').remove(item('industrialrenewal:stick_iron'))
 ore('stickSteel').remove(item('industrialrenewal:stick_steel'))
 ore('ingotSteel').remove(item('industrialrenewal:ingot_steel'))

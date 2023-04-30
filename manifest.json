@@ -13,6 +13,7 @@
   "name": "Supersymmetry",
   "version": "0.0.2",
   "author": "SymmetricDevs",
+  "externalDeps": [],
   "files": [
     {
       "projectID": 304024,

@@ -137,6 +137,74 @@ class RegisterFluids {
                         .build();
         }
 
+        private static void generateGreenhouseGases(Material material, int id) {
+                var color = material.materialRGB;
+
+                new Material.Builder(id, "warm_dry_" + material.toString())
+                        .fluid(FluidTypes.GAS)
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() + 20)
+                        .color(color)
+                        .components(material, 1)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .build();
+
+                new Material.Builder(id + 1, "warm_" + material.toString())
+                        .fluid(FluidTypes.GAS)
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() + 20)
+                        .color(color)
+                        .components(material, 1)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .build();
+
+                new Material.Builder(id + 2, "warm_humid_" + material.toString())
+                        .fluid(FluidTypes.GAS)
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() + 20)
+                        .color(color)
+                        .components(material, 1)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .build();
+
+                new Material.Builder(id + 3, "dry_" + material.toString())
+                        .fluid(FluidTypes.GAS)
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                        .color(color)
+                        .components(material, 1)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .build();
+
+                new Material.Builder(id + 4, "humid_" + material.toString())
+                        .fluid(FluidTypes.GAS)
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                        .color(color)
+                        .components(material, 1)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .build();
+
+                new Material.Builder(id + 5, "cool_dry_" + material.toString())
+                        .fluid(FluidTypes.GAS)
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() - 20)
+                        .color(color)
+                        .components(material, 1)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .build();
+
+                new Material.Builder(id + 6, "cool_" + material.toString())
+                        .fluid(FluidTypes.GAS)
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() - 20)
+                        .color(color)
+                        .components(material, 1)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .build();
+
+                new Material.Builder(id + 7, "cool_humid_" + material.toString())
+                        .fluid(FluidTypes.GAS)
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() - 20)
+                        .color(color)
+                        .components(material, 1)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .build();
+        }
+
         public static void registerSolubles() {
                 CalciumHydroxide = new Material.Builder(32033, 'calcium_hydroxide')
                         .dust()
@@ -343,6 +411,12 @@ class RegisterFluids {
 
                 generateHighPressureGases(NaturalGas, 10314, true);
 
+                Material EarthGreenhouseGas = new Material.Builder(10400, "greenhouse_gases")
+                        .fluid(FluidTypes.GAS)
+                        .color(0x95cade)
+                        .build();
+
+                generateGreenhouseGases(EarthGreenhouseGas, 10401)
 
                 new Material.Builder(11000, "ammonium_chloride_solution")
                         .fluid()
@@ -1565,15 +1639,79 @@ class RegisterFluids {
                         .color(0x080808)
                         .build();
 
-                new Material.Builder(12099, "sulfuric_refinery_gas")
+                new Material.Builder(12099, "cresol")
+                        .fluid()
+                        .components(Carbon, 7, Hydrogen, 8, Oxygen, 1)
+                        .color(0x827863)
+                        .build();
+
+                new Material.Builder(12100, "guaiacol")
+                        .fluid()
+                        .components(Carbon, 7, Hydrogen, 8, Oxygen, 2)
+                        .color(0x693834)
+                        .build();
+
+                new Material.Builder(12101, "xylenol")
+                        .fluid()
+                        .components(Carbon, 8, Hydrogen, 10, Oxygen, 1)
+                        .color(0x693834)
+                        .build();
+
+                new Material.Builder(12102, "creosol")
+                        .fluid()
+                        .components(Carbon, 8, Hydrogen, 10, Oxygen, 2)
+                        .color(0x473339)
+                        .build();
+
+                new Material.Builder(12103, "anthracene")
+                        .fluid()
+                        .components(Carbon, 14, Hydrogen, 10)
+                        .color(0x000000)
+                        .build();
+
+                new Material.Builder(12104, "mash")
+                        .fluid()
+                        .color(0x9e8660)
+                        .build();
+
+                new Material.Builder(12105, "weed_killer")
+                        .fluid()
+                        .color(0xade677)
+                        .build();
+
+                new Material.Builder(12106, "pesticide")
+                        .fluid()
+                        .color(0xc0c77d)
+                        .build();
+
+                new Material.Builder(12107, "earth_like_air")
+                        .fluid(FluidTypes.GAS)
+                        .color(0x8fbfe3)
+                        .build();
+
+                new Material.Builder(12108, "grain_solution")
+                        .fluid()
+                        .color(0xc2cc9d)
+                        .build();
+
+                new Material.Builder(12109, "yeast_solution")
+                        .fluid()
+                        .color(0xe6e3aa)
+                        .build();
+
+                new Material.Builder(12110, "impure_ethanol")
+                        .fluid()
+                        .color(0xbf9c77)
+                        .build();
+                        
+                new Material.Builder(12111, "sulfuric_refinery_gas")
                         .fluid(FluidTypes.GAS)
                         .color(0xe3e3d8)
                         .build();
 
-                new Material.Builder(12100, "treated_sulfuric_naphtha")
+                new Material.Builder(12112, "treated_sulfuric_naphtha")
                         .fluid(FluidTypes.GAS)
                         .color(0xcec929)
-                        .build();
 
                 log.infoMC("Finished registering fluids")
         }
