@@ -1,5 +1,5 @@
 {
-  "weight": 100,
+  "weight": 0,
   "density": 0.75,
   "max_height": 80,
   "min_height": 55,
@@ -9,22 +9,8 @@
   },
   "biome_modifier": {
     "type": "biome_dictionary",
-    "ocean": -999,
-	"plains": -999,
-	"snowy": -999,
-	"beach": -999,
-	"mountain": -999,
-	"swamp": -999,
-	"hills": -999,
-	"coniferous": -999,
-	"jungle": -999,
-	"wet": -999,
-	"mushroom": -999,
-	"river": -999,
-	"spooky": -999,
-	"lush": -999,
-	"sandy": 240,
-	"dry": 150
+	"sandy": 200,
+	"dry": 200
 	},	
   "generator": {
     "type": "layered",

@@ -1,0 +1,14 @@
+{
+  "weight": 35,
+  "name": "Overworld Brine Deposit",
+  "yield": {
+    "min": 250,
+    "max": 500
+  },
+  "depletion": {
+    "amount": 1,
+    "chance": 100,
+    "depleted_yield": 15
+  },
+  "fluid": "brine"
+}
