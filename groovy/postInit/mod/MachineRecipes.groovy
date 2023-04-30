@@ -1,3 +1,7 @@
+import static globals.Globals.*
+import static gregtech.api.unification.material.Materials.*;
+import gregtech.api.unification.material.MarkerMaterials;
+
 def circuits = [ore('circuitUlv'), ore('circuitLv'), ore('circuitMv'),
 									ore('circuitHv'), ore('circuitEv'), ore('circuitIv'),
 									ore('circuitLuv'), ore('circuitZpm'), ore('circuitUv'),
@@ -443,15 +447,68 @@ crafting.addShapeless("mbd output hatch -> lv output hatch", metaitem('fluid_hat
 
 //Fluid Drilling Rig
 recipemap('assembler').recipeBuilder()
-		.inputs(metaitem('hull.mv'))
-		.inputs(metaitem('frameSteel' * 4))
-		.inputs(ore('circuitLv' * 4))
-		.inputs(metaitem('electric.pump.lv' * 4))
-		.inputs(metaitem('electric.motor.lv' * 4))
-		.inputs(metaitem('gearSteel' * 4))
+		.inputs(metaitem('hull.lv'))
+		.inputs(metaitem('frameSteel') * 4)
+		.inputs(ore('circuitLv') * 4)
+		.inputs(metaitem('electric.pump.lv') * 4)
+		.inputs(metaitem('electric.motor.lv') * 4)
+		.inputs(metaitem('gearSteel') * 4)
 		.notConsumable(circuit(2))
 		.outputs(metaitem('fluid_drilling_rig.mv'))
 		.EUt(30)
 		.duration(600)
 		.buildAndRegister()
+
+//Power Units
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('gearSmallSteel') * 2)
+		.inputs(metaitem('boltSteel') * 2)
+		.inputs(metaitem('electric.motor.lv') * 2)
+		.inputs(ore('batteryLv'))
+		.outputs(metaitem('power_unit.lv'))
+		.EUt(30)
+		.duration(150)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('gearSmallAluminium') * 2)
+		.inputs(metaitem('boltAluminium') * 2)
+		.inputs(metaitem('electric.motor.mv') * 2)
+		.inputs(ore('batteryMv'))
+		.outputs(metaitem('power_unit.mv'))
+		.EUt(120)
+		.duration(150)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('gearSmallStainlessSteel') * 2)
+		.inputs(metaitem('boltStainlessSteel') * 2)
+		.inputs(metaitem('electric.motor.hv') * 2)
+		.inputs(ore('batteryHv'))
+		.outputs(metaitem('power_unit.hv'))
+		.EUt(480)
+		.duration(150)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('gearSmallTitanium') * 2)
+		.inputs(metaitem('boltTitanium') * 2)
+		.inputs(metaitem('electric.motor.ev') * 2)
+		.inputs(ore('batteryEv'))
+		.outputs(metaitem('power_unit.ev'))
+		.EUt(1920)
+		.duration(150)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('gearSmallTungstenSteel') * 2)
+		.inputs(metaitem('boltTungstenSteel') * 2)
+		.inputs(metaitem('electric.motor.iv') * 2)
+		.inputs(ore('batteryIv'))
+		.outputs(metaitem('power_unit.iv'))
+		.EUt(7680)
+		.duration(150)
+		.buildAndRegister()
+
+
 
