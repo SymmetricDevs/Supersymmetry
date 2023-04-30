@@ -1714,6 +1714,11 @@ class RegisterFluids {
                         .color(0xcec929)
                         .build();
 
+                new Material.Builder(12113, "impure_sodium_hydroxide_solution")
+                        .fluid()
+                        .color(0x91919b)
+                        .build();
+
                 log.infoMC("Finished registering fluids")
         }
 }
