@@ -446,6 +446,9 @@ crafting.addShapeless("mbd output hatch -> lv output hatch", metaitem('fluid_hat
 //ModHandler.addShapedRecipe(true, "coagulation_tank", SuSyMetaTileEntities.COAGULATION_TANK.getStackForm(), "WRW", "sPh", "WBW", 'W' as char, MetaBlocks.PLANKS.getItemVariant(BlockGregPlanks.BlockType.TREATED_PLANK), 'P' as char, new UnificationEntry(OrePrefix.pipeLargeFluid, Materials.TreatedWood), 'B' as char, new UnificationEntry(OrePrefix.bolt, Materials.Steel), 'R' as char, new UnificationEntry(OrePrefix.rotor, Materials.Steel));
 
 //Fluid Drilling Rig
+
+mods.gregtech.assembler.removeByInput(120, [metaitem('hull.mv'), metaitem('frameSteel') * 4, metaitem('circuit.suprachronal.mv') * 4, metaitem('electric.motor.mv') * 4, metaitem('electric.pump.mv') * 4, metaitem('gearVanadiumSteel') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
+
 recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('hull.lv'))
 		.inputs(metaitem('frameSteel') * 4)
