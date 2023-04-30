@@ -37,6 +37,66 @@ def COAL_SOURCES = [
     "dustCharcoal"
 ]
 
+// Biodiesel and Glycerol
+
+
+
+// Soap
+
+CENTRIFUGE.recipeBuilder()
+.fluidInputs(fluid('methanol') * 250)
+.fluidInputs(fluid('fish_oil') * 6000)
+.fluidOutputs(fluid('bio_diesel') * 6000)
+.fluidOutputs(fluid('glycerol') * 1000)
+.duration(200)
+.EUt(30)
+.buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+.fluidInputs(fluid('ethanol') * 250)
+.fluidInputs(fluid('fish_oil') * 6000)
+.fluidOutputs(fluid('bio_diesel') * 6000)
+.fluidOutputs(fluid('glycerol') * 1000)
+.duration(200)
+.EUt(30)
+.buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+        .fluidInputs(fluid('methanol') * 250)
+        .fluidInputs(fluid('seed_oil') * 6000)
+        .fluidOutputs(fluid('bio_diesel') * 6000)
+        .fluidOutputs(fluid('glycerol') * 1000)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+        .fluidInputs(fluid('ethanol') * 250)
+        .fluidInputs(fluid('seed_oil') * 6000)
+        .fluidOutputs(fluid('bio_diesel') * 6000)
+        .fluidOutputs(fluid('glycerol') * 1000)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+        .fluidInputs(fluid('methanol') * 250)
+        .fluidInputs(fluid('gtfo_stearin') * 6000)
+        .fluidOutputs(fluid('bio_diesel') * 6000)
+        .fluidOutputs(fluid('glycerol') * 1000)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+        .fluidInputs(fluid('ethanol') * 250)
+        .fluidInputs(fluid('gtfo_stearin') * 6000)
+        .fluidOutputs(fluid('bio_diesel') * 6000)
+        .fluidOutputs(fluid('glycerol') * 1000)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
 // Ammonium Chloride
 
 BCR.recipeBuilder()
@@ -671,7 +731,7 @@ POLYMERIZATION.recipeBuilder()
 MIXER.recipeBuilder()
 .fluidInputs(fluid('water') * 1000)
 .inputs(ore('dustAmmoniumChloride'))
-.fluidOutputs(fluid('ammonium_chloride_solution'))
+.fluidOutputs(fluid('ammonium_chloride_solution') * 1000)
 .EUt(30)
 .duration(160)
 .buildAndRegister()

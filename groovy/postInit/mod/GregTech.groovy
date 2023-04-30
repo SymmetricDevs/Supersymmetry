@@ -154,3 +154,9 @@ mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], 
 //Remove old rubber recipes
 // Rubber Bar * 1
 mods.gregtech.alloy_smelter.removeByInput(7, [metaitem('dustSulfur'), metaitem('dustRawRubber') * 3], null)
+
+//Remove Magic
+// Item Voiding Cover * 1
+mods.gregtech.assembler.removeByInput(30, [metaitem('screwSteel') * 2, metaitem('cover.item.detector'), metaitem('pipeNormalItemBrass'), item('minecraft:ender_pearl')], null)
+// Fluid Voiding Cover * 1
+mods.gregtech.assembler.removeByInput(30, [metaitem('screwSteel') * 2, metaitem('cover.fluid.detector'), metaitem('pipeNormalFluidBronze'), item('minecraft:ender_pearl')], null)

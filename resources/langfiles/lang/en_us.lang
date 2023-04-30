@@ -113,9 +113,9 @@ material.diluted_methyl_ii_pyrrolidone=Diluted N-Methyl-2-pyrrolidone
 material.dimethyldichlorosilane_emulsion=Dimethyldichlorosilane Emulsion
 material.tetrafluoroethylene_emulsion=Tetrafluoroethylene Emulsion
 material.dichloromethane=Dichloromethane
-material.carbon_tetrachloride=Carbon Tetrachloride
+material.carbon_tetrachloride=Carbon Tetrachloride 
 material.phthalic_acid_solution=Phthalic Acid Solution
-material.butanol=Butanol
+material.butanol=Butanol 
 material.saltpeter_solution=Saltpeter Solution
 material.salty_saltpeter_solution=Salty Saltpeter Solution
 material.dilute_saltpeter_solution=Dilute Saltpeter Solution
@@ -175,9 +175,16 @@ material.two_two_dichlorohydrazobenzene=2,2'-Dichlorohydrazobenzene
 material.pig_iron=Pig Iron
 material.iron_iii_sulfate=Iron III Sulfate
 
+material.green_coke=Green Coke
+
 material.aluminium_hydroxide=Aluminium Hydroxide
 material.aluminium_trifluoride=Aluminium Trifluoride
 material.sodium_fluoride=Sodium Fluoride
+
+material.gallium_phosphate=Gallium Phosphate
+material.lithium_niobate=Lithium Niobate
+material.lead_zirconate_titanate=Lead Zirconate Titanate
+material.polyvinylidene_fluoride=Polyvinylidene Fluoride
 
 # Fluids
 
@@ -266,6 +273,31 @@ material.ammonia_reaction_mix=Ammonia Reaction Mix
 material.ammonia_rich_gas=Ammonia-Rich Gas
 material.ethanol_solution=Ethanol Solution
 material.reformed_syngas=Reformed Syngas
+
+material.cresol=Cresol
+material.guaiacol=Guaiacol
+material.xylenol=Xylenol
+material.creosol=Creosol
+material.anthracene=Anthracene
+material.yeast_solution=Yeast Solution
+material.weed_killer=Weed Killer
+material.pesticide=Pesticide
+
+material.greenhouse_gases=Greenhouse Gas
+material.warm_greenhouse_gases=Warm Greenhouse Gas
+material.cool_greenhouse_gases=Cool Greenhouse Gas
+material.dry_greenhouse_gases=Dry Greenhouse Gas
+material.warm_dry_greenhouse_gases=Warm Dry Greenhouse Gas
+material.cool_dry_greenhouse_gases=Cool Dry Greenhouse Gas
+material.humid_greenhouse_gases=Humid Greenhouse Gas
+material.warm_humid_greenhouse_gases=Warm Humid Greenhouse Gas
+material.cool_humid_greenhouse_gases=Cool Humid Greenhouse Gas
+material.earth_like_air=Earth Like Air
+
+material.impure_ethanol=Impure Ethanol
+material.yeast_solution=Yeast Solution
+material.grain_solution=Grain Solution
+material.mash=Mash
 
 # Thermodynamics
 
@@ -401,6 +433,7 @@ recipemap.railroad_engineering_station.name=Railroad Engineering Station
 recipemap.dryer.name=Drying
 recipemap.sintering_oven.name=Sintering
 recipemap.electrolytic_cell.name=Advanced Electrolysis
+recipemap.vat_fermentation.name=Fermentation Vat
 
 # QMD Particles
 
@@ -584,6 +617,9 @@ metaitem.leached_red_mud_slag.name=Leached Red Mud Slag
 metaitem.pitch_binder.name=Pitch Binder
 metaitem.raw_electrode.name=Raw Electrode
 metaitem.graphite_electrode.name=Graphite Electrode
+
+metaitem.rydberg_atom_array.name=Rydberg Atom Array
+metaitem.malted_grain.name=Malted Grain
 
 # Multiblocked
 

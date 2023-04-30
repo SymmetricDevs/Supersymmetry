@@ -34,7 +34,7 @@ def name_removals = [
 ]
 
 for (item in name_removals) {
-    //crafting.remove(item);
+    crafting.remove(item);
 }
 
 for (solder in soldering_alloys) {
