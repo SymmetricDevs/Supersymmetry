@@ -1,3 +1,7 @@
+import static globals.Globals.*
+import static gregtech.api.unification.material.Materials.*;
+import gregtech.api.unification.material.MarkerMaterials;
+
 def circuits = [ore('circuitUlv'), ore('circuitLv'), ore('circuitMv'),
 									ore('circuitHv'), ore('circuitEv'), ore('circuitIv'),
 									ore('circuitLuv'), ore('circuitZpm'), ore('circuitUv'),
@@ -239,6 +243,7 @@ recipemap('sintering_oven').recipeBuilder()
 		.duration(150)
 		.buildAndRegister()
 
+
 for (i = 1; i <= 8; i++) {
 	crafting.remove('gregtech:gregtech.machine.arc_furnace.' + Globals.voltageTiers[i])
 
@@ -439,3 +444,74 @@ crafting.addShapeless("mbd output hatch -> lv output hatch", metaitem('fluid_hat
 //ModHandler.addShapedRecipe(true, "mixer.bronze", SuSyMetaTileEntities.mixer.bronze.getStackForm(), "GPG", "GRG", "XMX", 'M' as char, MetaBlocks.STEAM_CASING.getItemVariant(SteamCasingType.BRONZE_HULL), 'X' as char, new UnificationEntry(OrePrefix.pipeSmallFluid, Materials.Bronze), 'G' as char, new UnificationEntry(OrePrefix.blockGlass), 'P' as char, new UnificationEntry(OrePrefix.rotor, Materials.Bronze), 'R' as char, new UnificationEntry(OrePrefix.stick, Materials.Bronze))
 //ModHandler.addShapedRecipe(true, "coagulation_tank_wall", SuSyBlocks.COAGULATION_TANK_WALL.getItemVariant(CoagulationTankWallType.WOODEN_COAGULATION_TANK_WALL), "WBW", "sPh", "WBW", 'W' as char, MetaBlocks.PLANKS.getItemVariant(BlockGregPlanks.BlockType.TREATED_PLANK), 'P' as char, new UnificationEntry(OrePrefix.frameGt, Materials.TreatedWood), 'B' as char, new UnificationEntry(OrePrefix.bolt, Materials.Steel));
 //ModHandler.addShapedRecipe(true, "coagulation_tank", SuSyMetaTileEntities.COAGULATION_TANK.getStackForm(), "WRW", "sPh", "WBW", 'W' as char, MetaBlocks.PLANKS.getItemVariant(BlockGregPlanks.BlockType.TREATED_PLANK), 'P' as char, new UnificationEntry(OrePrefix.pipeLargeFluid, Materials.TreatedWood), 'B' as char, new UnificationEntry(OrePrefix.bolt, Materials.Steel), 'R' as char, new UnificationEntry(OrePrefix.rotor, Materials.Steel));
+
+//Fluid Drilling Rig
+
+mods.gregtech.assembler.removeByInput(120, [metaitem('hull.mv'), metaitem('frameSteel') * 4, metaitem('circuit.suprachronal.mv') * 4, metaitem('electric.motor.mv') * 4, metaitem('electric.pump.mv') * 4, metaitem('gearVanadiumSteel') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('hull.lv'))
+		.inputs(metaitem('frameSteel') * 4)
+		.inputs(ore('circuitLv') * 4)
+		.inputs(metaitem('electric.pump.lv') * 4)
+		.inputs(metaitem('electric.motor.lv') * 4)
+		.inputs(metaitem('gearSteel') * 4)
+		.notConsumable(circuit(2))
+		.outputs(metaitem('fluid_drilling_rig.mv'))
+		.EUt(30)
+		.duration(600)
+		.buildAndRegister()
+
+//Power Units
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('gearSmallSteel') * 2)
+		.inputs(metaitem('boltSteel') * 2)
+		.inputs(metaitem('electric.motor.lv') * 2)
+		.inputs(ore('batteryLv'))
+		.outputs(metaitem('power_unit.lv'))
+		.EUt(30)
+		.duration(150)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('gearSmallAluminium') * 2)
+		.inputs(metaitem('boltAluminium') * 2)
+		.inputs(metaitem('electric.motor.mv') * 2)
+		.inputs(ore('batteryMv'))
+		.outputs(metaitem('power_unit.mv'))
+		.EUt(120)
+		.duration(150)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('gearSmallStainlessSteel') * 2)
+		.inputs(metaitem('boltStainlessSteel') * 2)
+		.inputs(metaitem('electric.motor.hv') * 2)
+		.inputs(ore('batteryHv'))
+		.outputs(metaitem('power_unit.hv'))
+		.EUt(480)
+		.duration(150)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('gearSmallTitanium') * 2)
+		.inputs(metaitem('boltTitanium') * 2)
+		.inputs(metaitem('electric.motor.ev') * 2)
+		.inputs(ore('batteryEv'))
+		.outputs(metaitem('power_unit.ev'))
+		.EUt(1920)
+		.duration(150)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('gearSmallTungstenSteel') * 2)
+		.inputs(metaitem('boltTungstenSteel') * 2)
+		.inputs(metaitem('electric.motor.iv') * 2)
+		.inputs(ore('batteryIv'))
+		.outputs(metaitem('power_unit.iv'))
+		.EUt(7680)
+		.duration(150)
+		.buildAndRegister()
+
+
+
