@@ -53,6 +53,7 @@ def blastables = [
     new Blastable('dustMagnetite', 7 , 3, 4, 80),
     new Blastable('dustBandedIron', 5 , 2, 3, 80),
     new Blastable('dustGraniticMineralSand', 14 , 3, 4, 80),
+    new Blastable('oreIron', 3, 2, 2, 60, true),
     new Blastable('oreMagnetite', 7 , 3, 4, 60, true),
     new Blastable('oreBandedIron', 5 , 2, 3, 60, true),
     new Blastable('oreNetherrackMagnetite', 7 , 6, 4, 60, true),
