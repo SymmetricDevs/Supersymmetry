@@ -1712,6 +1712,7 @@ class RegisterFluids {
                 new Material.Builder(12112, "treated_sulfuric_naphtha")
                         .fluid(FluidTypes.GAS)
                         .color(0xcec929)
+                        .build();
 
                 log.infoMC("Finished registering fluids")
         }
