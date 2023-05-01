@@ -1,5 +1,5 @@
 {
-  "weight": 15,
+  "weight": -1,
   "name": "Heavy Oil Deposit",
   "yield": {
     "min": 100,
@@ -13,7 +13,7 @@
   "fluid": "oil_heavy",
   "biome_modifier": {
     "type": "biome_dictionary",
-    "ocean": 5,
-    "sandy": 10
+    "ocean": 30,
+    "sandy": 50
   }
 }

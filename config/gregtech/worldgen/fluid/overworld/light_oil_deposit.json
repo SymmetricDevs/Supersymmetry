@@ -1,5 +1,5 @@
 {
-  "weight": 25,
+  "weight": -1,
   "name": "Overworld Light Oil Deposit",
   "yield": {
     "min": 175,
@@ -10,5 +10,11 @@
     "chance": 100,
     "depleted_yield": 25
   },
-  "fluid": "oil_light"
+  "fluid": "oil_light",
+    "biome_modifier": {
+    "type": "biome_dictionary",
+    "ocean": 20,
+    "sandy": 30
+  }
+
 }
