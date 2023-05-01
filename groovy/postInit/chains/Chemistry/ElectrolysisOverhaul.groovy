@@ -29,7 +29,7 @@ ELECTROLYZER.recipeBuilder()
         .buildAndRegister()
 
 //TODO: UNCOMMENT THIS SECTION ONLY WHEN SUSYCORE IS UPDATED TO 0.0.8, THIS IS BECAUSE THE MOLTEN VERSIONS OF ROCK SALT AND SALT ARE ONLY ON 0.0.8. YOU HAVE BEEN WARNED.
-/*
+
 //CHLOROALKALI PROCESS
 ELECTROLYTIC_CELL.recipeBuilder()
         .notConsumable(metaitem('stickNickel'))
@@ -114,4 +114,3 @@ ELECTROLYZER.recipeBuilder()
         .duration(300)
         .buildAndRegister()
 
- */

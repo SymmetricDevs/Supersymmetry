@@ -11,17 +11,15 @@ CENTRIFUGE = recipemap('centrifuge')
 DT = recipemap('distillation_tower')
 TBR = recipemap('trickle_bed_reactor')
 ROASTER = recipemap('roaster')
-//VACUUM_DT = recipemap('vacuum_distillation')
+VACUUM_DT = recipemap('vacuum_distillation')
 CRYSTALLIZER = recipemap('crystallizer')
 EXTRACTOR = recipemap('extractor')
 SINTERING = recipemap('sintering_oven')
-//COKING = recipemap('coking_tower')
+COKING = recipemap('coking_tower')
 CSTR = recipemap('continuous_stirred_tank_reactor')
 CRACKER = recipemap('cracker')
 EBF = recipemap('electric_blast_furnace')
-//REFORMER = recipemap('catalytic_reformer_recipes')
-
-// TODO: Fluid drills
+REFORMER = recipemap('catalytic_reformer_recipes')
 
 class Oil {
     String name
@@ -149,14 +147,14 @@ oils.each { _, oil -> {
         .duration(200)
         .EUt(30)
         .buildAndRegister()
-        // TODO: Uncomment when susycore 0.0.8
-        // EMSEPARATOR.recipeBuilder()
-        // .fluidInputs(oil.getDiluted(1000))
-        // .fluidOutputs(fluid('oily_brine') * 100)
-        // .fluidOutputs(oil.getDesalted(1000))
-        // .duration(160)
-        // .EUt(30)
-        // .buildAndRegister() 
+
+        EMSEPARATOR.recipeBuilder()
+        .fluidInputs(oil.getDiluted(1000))
+        .fluidOutputs(fluid('oily_brine') * 100)
+        .fluidOutputs(oil.getDesalted(1000))
+        .duration(160)
+        .EUt(30)
+        .buildAndRegister() 
     }
 }
 
@@ -285,16 +283,16 @@ CENTRIFUGE.recipeBuilder()
 .buildAndRegister()
 
 // Sulfuric Oil Residue Processing
-//TODO: uncomment when susycore 0.0.8
-// VACUUM_DT.recipeBuilder()
-// .fluidInputs(fluid('sulfuric_oil_residue') * 1000)
-// .fluidOutputs(fractions.fuel_oil.getSulfuric(200))
-// .fluidOutputs(fractions.diesel.getSulfuric(200))
-// .fluidOutputs(fractions.kerosene.getSulfuric(150))
-// .fluidOutputs(fractions.naphtha.getSulfuric(100))
-// .fluidOutputs(fluid('lubricating_oil') * 500)
-// .fluidOutputs(fluid('slack_wax') * 350)
-// .outputs(metaitem('bituminous_residue'))
+
+VACUUM_DT.recipeBuilder()
+.fluidInputs(fluid('sulfuric_oil_residue') * 1000)
+.fluidOutputs(fractions.fuel_oil.getSulfuric(200))
+.fluidOutputs(fractions.diesel.getSulfuric(200))
+.fluidOutputs(fractions.kerosene.getSulfuric(150))
+.fluidOutputs(fractions.naphtha.getSulfuric(100))
+.fluidOutputs(fluid('lubricating_oil') * 500)
+.fluidOutputs(fluid('slack_wax') * 350)
+.outputs(metaitem('bituminous_residue'))
 
 // Lubricating Oil processing
 
@@ -416,14 +414,15 @@ CENTRIFUGE.recipeBuilder()
 
 // Bituminous Residue -> Coke
 
-// COKING.recipeBuilder()
-// .fluidInputs(fluid('steam') * 1000)
-// .fluidInputs(fluid('high_pressure_water') * 1000)
-// .fluidOutputs(fluid('desalted_oil') * 150)
-// .outputs(ore('dustGreenCoke').first())
-// .duration(600)
-// .EUt(Globals.voltAmps[1] * 2)
-// .buildAndRegister()
+COKING.recipeBuilder()
+.fluidInputs(fluid('steam') * 1000)
+.fluidInputs(fluid('high_pressure_water') * 1000)
+.inputs(metaitem('bituminous_residue'))
+.fluidOutputs(fluid('desalted_oil') * 150)
+.outputs(ore('dustGreenCoke').first())
+.duration(600)
+.EUt(Globals.voltAmps[1] * 2)
+.buildAndRegister()
 
 for (fuel in sintering_fuels) {
 
@@ -563,14 +562,14 @@ DT.recipeBuilder()
 .buildAndRegister()
 
 DT.recipeBuilder()
-.fluidInputs(fluid('liquid_natural_gas') * 1000)
-.fluidOutputs(fluid('butane') * 100)
-.fluidOutputs(fluid('propane') * 100)
-.fluidOutputs(fluid('ethane') * 100)
-.fluidOutputs(fluid('methane') * 750)
-.fluidOutputs(fluid('helium') * 20)
+.fluidInputs(fluid('liquid_natural_gas') * 20)
+.fluidOutputs(fluid('butane') * 128)
+.fluidOutputs(fluid('propane') * 128)
+.fluidOutputs(fluid('ethane') * 128)
+.fluidOutputs(fluid('methane') * 96)
+.fluidOutputs(fluid('helium') * 25)
 .duration(600)
-.EUt(Globals.voltAmps[1] * 2)
+.EUt(Globals.voltAmps[2] * 2)
 .buildAndRegister()
 
 // Refinery Gas Distillation
@@ -597,7 +596,7 @@ fractions.each { _, fraction -> {
 
             CRACKER.recipeBuilder()
             .fluidInputs(fraction.get(1000))
-            .fluidInputs(fluid('hot_hp_hydrogen') * 1000)
+            .fluidInputs(fluid('hydrogen') * 1000)
             .notConsumable(circuit(0))
             //.inputs(ore('dustCrackingCatalyst'))
             .fluidOutputs(fraction.getLightlyHydroMix(1000))
@@ -886,16 +885,16 @@ fractions.each { _, fraction -> {
 }
 
 // BTEX
-//TODO: Susycore 0.0.8
-// REFORMER.recipeBuilder()
-// .fluidInputs(fluid('naphtha') * 1000)
-// .fluidInputs(fluid('hot_hp_hydrogen') * 1000)
-// .notConsumable(ore('catalystBedPlatinum'))
-// .fluidOutputs(fluid('naphtha_reformate') * 1000)
-// .duration(300)
-// .EUt(Globals.voltAmps[1] * 2)
-// .buildAndRegister()
-//TODO: gaming look here please
+
+REFORMER.recipeBuilder()
+.fluidInputs(fluid('naphtha') * 1000)
+//.fluidInputs(fluid('hot_hp_hydrogen') * 1000)
+.notConsumable(ore('catalystBedPlatinum'))
+.fluidOutputs(fluid('naphtha_reformate') * 1000)
+.duration(300)
+.EUt(Globals.voltAmps[1] * 2)
+.buildAndRegister()
+
 CENTRIFUGE.recipeBuilder()
 .fluidInputs(fluid('naphtha_reformate') * 1000)
 .fluidInputs(fluid('furfural') * 50)
@@ -908,7 +907,7 @@ CENTRIFUGE.recipeBuilder()
 CENTRIFUGE.recipeBuilder()
 .fluidInputs(fluid('btex_extract') * 1000)
 .fluidInputs(fluid('steam') * 1000)
-.fluidOutputs(fluid('furfural') * 50)
+.fluidOutputs(fluid('furfural') * 100)
 .fluidOutputs(fluid('btex') * 1000)
 .duration(200)
 .EUt(Globals.voltAmps[1])
