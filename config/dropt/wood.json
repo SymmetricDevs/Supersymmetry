@@ -10,7 +10,8 @@
 			"biomesoplenty:log_2:*",
 			"biomesoplenty:log_3:*",
 			"biomesoplenty:log_4:*",
-			"gregtech:log:0"
+			"gregtech:log:0",
+      "gregtech:rubber_log:*"
           ]
         },
         "harvester": {

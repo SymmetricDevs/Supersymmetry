@@ -14,7 +14,8 @@
 			"biomesoplenty:leaves_5:*",
 			"gregtech:leaves:*",
 			"quark:variant_leaves:*",
-			"gregtech:leaves:0"
+			"gregtech:leaves:0",
+			"gregtech:rubber_leaves:*"
           ]
         },
         "harvester": {
@@ -50,7 +51,8 @@
 			"biomesoplenty:leaves_5:*",
 			"gregtech:leaves:*",
 			"quark:variant_leaves:*",
-			"gregtech:leaves:0"
+			"gregtech:leaves:0",
+			"gregtech:rubber_leaves:*"
           ]
         },
         "harvester": {
