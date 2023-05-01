@@ -15,7 +15,10 @@
 			"gregtech:leaves:*",
 			"quark:variant_leaves:*",
 			"gregtech:leaves:0",
-			"gregtech:rubber_leaves:*"
+			"gregtech:rubber_leaves:*",
+			"gregtechfoodoption:gtfo_leaves_0:*",
+      		"gregtechfoodoption:gtfo_leaves_1:*",
+      		"gregtechfoodoption:gtfo_leaves_2:*"
           ]
         },
         "harvester": {
