@@ -304,6 +304,16 @@ material.yeast_solution=Yeast Solution
 material.grain_solution=Grain Solution
 material.mash=Mash
 
+material.heavy_water=Heavy Water
+material.heavy_hydrogen_sulfide=Heavy Hydrogen Sulfide
+material.semiheavy_hydrogen_sulfide=Semi-Heavy Hydrogen Sulfide
+material.semiheavy_water=Semi-Heavy Water
+material.impure_semiheavy_water=Impure Semi-Heavy Water
+material.isotopically_pure_hydrogen_sulfide=Isotopically Pure Hydrogen Sulfide
+material.impure_semiheavy_hydrogen_sulfide=Impure Semi-Heavy Hydrogen Sulfide
+material.impure_heavy_hydrogen_sulfide=Impure Heavy Hydrogen Sulfide
+material.sea_water=Sea Water
+
 # Thermodynamics
 
 material.hot_hp_hydrogen=Hot High-Pressure Hydrogen

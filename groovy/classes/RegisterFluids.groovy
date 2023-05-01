@@ -1714,6 +1714,60 @@ class RegisterFluids {
                         .color(0xcec929)
                         .build();
 
+                Material HeavyWater = new Material.Builder(12200, "heavy_water")
+                        .fluid()
+                        .components(Deuterium, 2, Oxygen, 1)
+                        .color(0x2c37b0)
+                        .build();
+
+                Material HeavyHydrogenSulfide = new Material.Builder(12201, "heavy_hydrogen_sulfide")
+                        .fluid()
+                        .components(Deuterium, 2, Sulfur, 1)
+                        .color(0xb09a2c)
+                        .build();
+
+                Material SemiHeavyHydrogenSulfide = new Material.Builder(12202, "semiheavy_hydrogen_sulfide")
+                        .fluid(FluidTypes.GAS)
+                        .components(Hydrogen, 1, Deuterium, 1, Sulfur, 1)
+                        .color(0xc29836)
+                        .build();
+
+                Material SemiHeavyWater = new Material.Builder(12203, "semiheavy_water")
+                        .fluid()
+                        .components(Hydrogen, 1, Deuterium, 1, Oxygen, 1)
+                        .color(0x364ec2)
+                        .build();
+
+                new Material.Builder(12204, "impure_semiheavy_water")
+                        .fluid()
+                        .components(Water, 1, SemiHeavyWater, 1)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12205, "isotopically_pure_hydrogen_sulfide")
+                        .fluid(FluidTypes.GAS)
+                        .components(HydrogenSulfide, 1)
+                        .color(0xffab66)
+                        .build();
+
+                new Material.Builder(12206, "impure_semiheavy_hydrogen_sulfide")
+                        .fluid(FluidTypes.GAS)
+                        .components(HydrogenSulfide, 1, SemiHeavyHydrogenSulfide, 1)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12207, "impure_heavy_hydrogen_sulfide")
+                        .fluid(FluidTypes.GAS)
+                        .components(HydrogenSulfide, 1, HeavyHydrogenSulfide, 1)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12208, "sea_water")
+                        .fluid()
+                        .components(Water, 98, Salt, 2)
+                        .color(0x3c5bc2)
+                        .build();
+
                 log.infoMC("Finished registering fluids")
         }
 }
