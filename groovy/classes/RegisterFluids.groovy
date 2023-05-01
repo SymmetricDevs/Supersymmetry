@@ -1714,6 +1714,11 @@ class RegisterFluids {
                         .color(0xcec929)
                         .build();
 
+                new Material.Builder(12113, "impure_sodium_carbonate_solution")
+                        .fluid()
+                        .color(0x91919b)
+                        .build();
+
                 Material HeavyWater = new Material.Builder(12200, "heavy_water")
                         .fluid()
                         .components(Deuterium, 2, Oxygen, 1)

@@ -231,6 +231,12 @@ class RegisterSolids {
                 .color(0x8a9734)
                 .build()
 
+        new Material.Builder(32047, 'alumina')
+                .dust()
+                .components(Aluminium, 2, Oxygen, 3)
+                .color(0xd0cff7)
+                .build()
+        
         log.infoMC('Finished registering solids')
     }
 }
