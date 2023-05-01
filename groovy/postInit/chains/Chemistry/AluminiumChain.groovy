@@ -52,13 +52,13 @@ CENTRIFUGE.recipeBuilder()
 
 // TODO: Electrodes for electroplating
 
-// ELECTROLYZER.recipeBuilder()
-// .fluidInputs(fluid('impure_sodium_carbonate_solution') * 1000)
-// .fluidOutputs(fluid('sodium_carbonate_solution') * 1000)
-// .outputs(ore('dustTinyGallium').first())
-// .duration(300)
-// .EUt(Globals.voltAmps[1])
-// .buildAndRegister()
+ELECTROLYZER.recipeBuilder()
+.fluidInputs(fluid('impure_sodium_carbonate_solution') * 1000)
+.fluidOutputs(fluid('gtfo_sodium_carbonate_solution') * 1000)
+.outputs(ore('dustTinyGallium').first())
+.duration(300)
+.EUt(Globals.voltAmps[1])
+.buildAndRegister()
 
 ELECTROLYZER.recipeBuilder()
 .fluidInputs(fluid('impure_sodium_hydroxide_solution') * 1000)
