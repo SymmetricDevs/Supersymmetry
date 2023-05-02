@@ -1575,7 +1575,7 @@ class RegisterFluids {
 
                 new Material.Builder(12087, "impure_soda_ash_solution")
                         .fluid()
-                        .color(0xc2bda7)
+                        .color(0x91919b)
                         .build();
 
                 new Material.Builder(12088, "impure_sodium_hydroxide_solution")
@@ -1712,11 +1712,6 @@ class RegisterFluids {
                 new Material.Builder(12112, "treated_sulfuric_naphtha")
                         .fluid(FluidTypes.GAS)
                         .color(0xcec929)
-                        .build();
-
-                new Material.Builder(12113, "impure_sodium_carbonate_solution")
-                        .fluid()
-                        .color(0x91919b)
                         .build();
 
                 Material HeavyWater = new Material.Builder(12200, "heavy_water")
