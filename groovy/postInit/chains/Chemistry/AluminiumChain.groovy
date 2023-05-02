@@ -9,6 +9,7 @@ BCR = recipemap('bubble_column_reactor')
 DISTILLERY = recipemap('distillery')
 EMSEPARATOR = recipemap('electromagnetic_separator')
 ELECTROLYZER = recipemap('electrolyzer')
+CRYSTALLIZER = recipemap('crystallizer')
 
 // Bauxite -> Red Mud
 
@@ -28,33 +29,33 @@ CENTRIFUGE.recipeBuilder()
 .EUt(Globals.voltAmps[1])
 .buildAndRegister()
 
-// Carbon dioxide bubbling !!! requires susycore 0.0.8 !!!
+// Carbon dioxide bubbling
 
-// CRYSTALLIZER.recipeBuilder()
-// .fluidInputs(fluid('sodium_aluminate_solution') * 3000)
-// .fluidInputs(fluid('water') * 1000)
-// .fluidInputs(fluid('carbon_dioxide') * 1000)
-// .fluidOutputs(fluid('impure_sodium_carbonate_solution') * 1000)
-// .outputs(ore('dustAluminiumHydroxide').first() * 14)
-// .duration(300)
-// .EUt(Globals.voltAmps[1])
-// .buildAndRegister()
+CRYSTALLIZER.recipeBuilder()
+.fluidInputs(fluid('sodium_aluminate_solution') * 3000)
+.fluidInputs(fluid('water') * 1000)
+.fluidInputs(fluid('carbon_dioxide') * 1000)
+.fluidOutputs(fluid('impure_soda_ash_solution') * 1000)
+.outputs(ore('dustAluminiumHydroxide').first() * 14)
+.duration(300)
+.EUt(Globals.voltAmps[1])
+.buildAndRegister()
 
-// CRYSTALLIZER.recipeBuilder()
-// .fluidInputs(fluid('sodium_aluminate_solution') * 1500)
-// .fluidInputs(fluid('water') * 1500)
-// .notConsumable(ore('dustAluminiumHydroxide'))
-// .fluidOutputs(fluid('impure_sodium_hydroxide_solution') * 1000)
-// .outputs(ore('dustAluminiumHydroxide').first() * 7)
-// .duration(300)
-// .EUt(Globals.voltAmps[1])
-// .buildAndRegister()
-
-// TODO: Electrodes for electroplating
+CRYSTALLIZER.recipeBuilder()
+.fluidInputs(fluid('sodium_aluminate_solution') * 1500)
+.fluidInputs(fluid('water') * 1500)
+.notConsumable(ore('dustAluminiumHydroxide'))
+.fluidOutputs(fluid('impure_sodium_hydroxide_solution') * 1000)
+.outputs(ore('dustAluminiumHydroxide').first() * 7)
+.duration(300)
+.EUt(Globals.voltAmps[1])
+.buildAndRegister()
 
 ELECTROLYZER.recipeBuilder()
-.fluidInputs(fluid('impure_sodium_carbonate_solution') * 1000)
-.fluidOutputs(fluid('gtfo_sodium_carbonate_solution') * 1000)
+.fluidInputs(fluid('impure_soda_ash_solution') * 1000)
+.notConsumable(ore('stickSteel'))
+.notConsumable(metaitem('graphite_electrode'))
+.fluidOutputs(fluid('soda_ash_solution') * 1000)
 .outputs(ore('dustTinyGallium').first())
 .duration(300)
 .EUt(Globals.voltAmps[1])
@@ -62,12 +63,13 @@ ELECTROLYZER.recipeBuilder()
 
 ELECTROLYZER.recipeBuilder()
 .fluidInputs(fluid('impure_sodium_hydroxide_solution') * 1000)
+.notConsumable(ore('stickSteel'))
+.notConsumable(metaitem('graphite_electrode'))
 .fluidOutputs(fluid('sodium_hydroxide_solution') * 1000)
 .outputs(ore('dustTinyGallium').first())
 .duration(300)
 .EUt(Globals.voltAmps[1])
 .buildAndRegister()
-
 
 // Alumina from Al(OH)3
 
@@ -116,9 +118,9 @@ EBF.recipeBuilder()
 // Production of cryolite
 
 ROASTER.recipeBuilder()
-.fluidInputs(fluid('hydrochloric_acid') * 6000)
+.fluidInputs(fluid('hydrofluoric_acid') * 6000)
 .inputs(ore('dustAlumina') * 5)
-.fluidOutputs(fluid('steam') * 3000)
+.fluidOutputs(fluid('steam') * 9000)
 .outputs(ore('dustAluminiumTrifluoride').first() * 8)
 .duration(300)
 .EUt(Globals.voltAmps[1])
@@ -150,13 +152,13 @@ ROASTER.recipeBuilder()
 
 // Red mud processing
 
-// EMSEPARATOR.recipeBuilder()
-// .fluidInputs(fluid('red_mud') * 2000)
-// .outputs(ore('dustSmallIronIiiOxide').first() * 2)
-// .fluidOutputs(fluid('concentrated_red_mud') * 1000)
-// .duration(200)
-// .EUt(Globals.voltAmps[2])
-// .buildAndRegister()
+EMSEPARATOR.recipeBuilder()
+.fluidInputs(fluid('red_mud') * 2000)
+.outputs(ore('dustSmallIronIiiOxide').first() * 2)
+.fluidOutputs(fluid('concentrated_red_mud') * 1000)
+.duration(200)
+.EUt(Globals.voltAmps[2])
+.buildAndRegister()
 
 EBF.recipeBuilder()
 .fluidInputs(fluid('concentrated_red_mud') * 2000)
