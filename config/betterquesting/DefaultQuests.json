@@ -13940,7 +13940,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds. It\u0027s also multishot, this means it will shoot 8 times at once. \n\nCrafting it requires a §6Steel Receiver§r.\n\nFor more info, look at the tooltip.",
+          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds. It\u0027s also multishot, which means that it will shoot 8 times at once. \n\nCrafting it requires a §6Steel Receiver§r.\n\nFor more info, look at the tooltip.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
