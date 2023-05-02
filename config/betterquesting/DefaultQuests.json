@@ -3252,7 +3252,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Steam Roaster §rburns chemicals using steam. It\u0027s a reaction furnace. This machine will be used for the production of §6sulfur§r. The Roaster will be used in many chemical processes in LV and onwards.",
+          "desc:8": "The §6Steam Roaster §rburns chemicals using steam. The Roaster will also be used as a reaction furnace. This machine will be used for the production of §6sulfur§r. The Roaster will be used in many chemical processes in LV and onwards.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
