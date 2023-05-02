@@ -3252,7 +3252,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Steam Roaster §rburns chemicals using steam. This machine will be used for the production of §6sulfur§r.",
+          "desc:8": "The §6Steam Roaster §rburns chemicals using steam. The Roaster will also be used as a reaction furnace. This machine will be used for the production of §6sulfur§r. The Roaster will be used in many chemical processes in LV and onwards.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8284,6 +8284,9 @@
       }
     },
     "112:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
         102
       ],
@@ -8299,7 +8302,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Bubble Column Reactor",
@@ -8388,6 +8391,9 @@
       }
     },
     "114:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
         102
       ],
@@ -8403,7 +8409,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Crystallizer",
@@ -8773,7 +8779,6 @@
     },
     "121:10": {
       "preRequisites:11": [
-        119,
         122
       ],
       "properties:10": {
@@ -8841,7 +8846,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Pyrolysis§r is the thermal decomposition of materials at elevated temperatures, often in an inert atmosphere. It involves a change of chemical composition. \nThe Pyrolyse Oven is required to process biomass such as §6coal tar§r and §6coke§r.\n\nThe Pyrolyse Oven requires:§7§6\n1x Pyrolyse Oven Controller\n1x Input Bus\n1x Input Hatch\n1x Output Bus\n1x Energy Hatch (any tier)\n1x LV Muffler Hatch\n16x Cupronickel Coil Blocks\n10x ULV Machine Casing\n\n§rRemember that these are ULV machine casing and not LV ones. They\u0027re different. Also, the Muffler Hatch must not be obstructed by any other block, or it won\u0027t work.\n\nCheck JEI for info on how to build the structure.",
+          "desc:8": "§6Pyrolysis§r is the thermal decomposition of materials at elevated temperatures, often in an inert atmosphere. It involves a change of chemical composition. \nThe Pyrolyse Oven is required to process biomass such as §6coal tar§r and §6coke§r.\n\nThe Pyrolyse Oven requires:§7§6\n1x Pyrolyse Oven Controller\n1x Input Bus for inputting Items\n1x Input Hatch for inputting Fluids\n1x Output Bus for outputting Items\n1x Energy Hatch (any tier)\n1x LV Muffler Hatch\n16x Cupronickel Coil Blocks\n10x ULV Machine Casing\n\n§rRemember that these are ULV machine casing and not LV ones. They\u0027re different. Also, the Muffler Hatch must not be obstructed by any other block, or it won\u0027t work.\n\nCheck JEI for info on how to build the structure.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8927,7 +8932,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Coal Tar",
@@ -8986,7 +8991,7 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Raw Electrodes",
@@ -9121,7 +9126,7 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Graphite Electrode",
@@ -9235,25 +9240,24 @@
     },
     "128:10": {
       "preRequisites:11": [
-        115,
-        126
+        115
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "The §6Electrolytic Cell §ris a multiblock machine that is required for making advanced electrolysis reactions, such as making §bAluminum§r or §7Chlorine §rwith the chloroalkali process.\n\nThe Electrolytic Cell requires:\n§6- 1 Electrolytic Cell controller\n- 1 Output Bus\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Output Hatch\n- Between 1 and 3 Energy Hatches\n- 41 Solid Steel Machine Casings\n- 12 Steel Pipe Casings§r\n\nEach §cLV Energy Hatch §rtakes 2 Amperes of LV energy. So the final step of aluminium requires 60 EU/t, which is 2 amps of LV voltage, which shouldn\u0027t be a problem.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 14634,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "start cryolite chain here",
+          "name:8": "Advanced Electrolysis",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -9266,7 +9270,37 @@
       },
       "questID:3": 128,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14634,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 41,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
+              "Count:3": 12,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "129:10": {
       "preRequisites:11": [
@@ -13018,6 +13052,449 @@
     },
     "183:10": {
       "preRequisites:11": [
+        128,
+        126
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Putting Water and Salt Water in an Electrolytic Cell with a Nickel Rod and a Graphite Electrode as the anode and cathode will yield §3Chlorine§r, Hydrogen and §3Sodium Hydroxide§r solution. \n\nIf the quest does not work, you can just click the §6checkbox§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "chlorine"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Chloroalkali process",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 183,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "chlorine"
+            },
+            "1:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sodium_hydroxide_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "184:10": {
+      "preRequisites:11": [
+        183
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Distilling §rthe Sodium Hydroxide solution will give §6Sodium Hydroxide §rdust.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 377,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": ":alkaline:",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 184,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 377,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "185:10": {
+      "preRequisites:11": [
+        184
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You are about to start a long chemical process for obtaining §baluminium§r, a material needed for MV tier. This is the first page.\nIf you ever feel confused, take a look at the §6Chemistry §rtab.\nIt is recommended that you set this up to be an automatic process, with each machine feeding onto the next one. \n\nFirst of all, you will need to get §6bauxite§r. Bauxite is found in ore deposits from height level 0 to 80.\n\nThe Bauxite Ore must be §6smelted §rinto Bauxite Dust, which is then reacted with §6Sodium Hydroxide §rin an §6LV Roaster §rto get Impure Sodium Aluminate solution.\n\nThe solution is then §ccentrifuged§r with an LV centrifuge to remove the impurities and get Sodium Aluminate solution.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sodium_aluminate_solution"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Sodium Aluminate",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 185,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sodium_aluminate_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "186:10": {
+      "preRequisites:11": [
+        105
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §cCentrifuge §r§rcentrifuges impurities out of solids, and it is also used to get §arare materials§r out of ore dusts.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 185,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Centrifuge",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 186,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 185,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "187:10": {
+      "preRequisites:11": [
+        189
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "In order to get aluminium ingots, you need an §6electric blast furnace§r. Some recipes in the Electric Blast Furnace require §6120 EU/t§r, so you\u0027ll need two energy hatches. \n\nThe Electric Blast Furnace is a multi structure. It is §63x4x3§r in size. \n\nWhen building your first EBF, you will need:\n\n§61 Electric Blast Furnace\n16 Cupronickel Coil Blocks\n1 Input Bus (For inputting items and the control circuits)\n1 Input Hatch (Any tier will work)\n1 LV output bus (At least an LV one)\n1 Maintenance Hatch \n2 LV Energy Hatches 9-12 Heat Proof Machine Casings§r\n\nYour cupronickel coil blocks can only reach a temperature of §71700 K§r, so you will need higher tier coils to do more advanced recipes. \n\nIf you are confused, check JEI for the machine structure.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1001,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Electric Blast Furnace",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 188,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1001,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_coil"
+            },
+            "2:10": {
+              "Count:3": 10,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "3:10": {
+              "Count:3": 2,
+              "Damage:2": 1211,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "188:10": {
+      "preRequisites:11": [
+        185,
+        114
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Crystallize §rthe Sodium Aluminate solution in aa §6Crystallizer §rwith water to get§5§6 Aluminium Hydroxide§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 20005,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Aluminium Hydroxide",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 189,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 20005,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "189:10": {
+      "preRequisites:11": [
+        188
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Aluminum Hydroxide §r§rcan be reduced to Alumina in an Electric Blast Furnace. Later on, Alumina can ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 32047,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Alumina Dust",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 190,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "190:10": {
+      "preRequisites:11": [
         101
       ],
       "properties:10": {
@@ -13068,7 +13545,7 @@
         }
       }
     },
-    "184:10": {
+    "191:10": {
       "preRequisites:11": [
         191
       ],
@@ -13120,7 +13597,7 @@
         }
       }
     },
-    "185:10": {
+    "192:10": {
       "preRequisites:11": [
         192
       ],
@@ -13205,7 +13682,7 @@
         }
       }
     },
-    "186:10": {
+    "193:10": {
       "preRequisites:11": [
         193
       ],
@@ -13294,7 +13771,7 @@
         }
       }
     },
-    "187:10": {
+    "194:10": {
       "preRequisites:11": [
         193
       ],
@@ -13361,7 +13838,7 @@
         }
       }
     },
-    "188:10": {
+    "195:10": {
       "preRequisites:11": [
         191
       ],
@@ -13456,14 +13933,14 @@
         }
       }
     },
-    "189:10": {
+    "196:10": {
       "preRequisites:11": [
         191
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds. It\u0027s also multishot, this means it will shoot 8 times at once. \n\nCrafting it requires a §6Steel Receiver§r.\n\nFor more info, look at the tooltip.",
+          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds. It\u0027s also multishot, which means that it will shoot 8 times at once. \n\nCrafting it requires a §6Steel Receiver§r.\n\nFor more info, look at the tooltip.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13551,7 +14028,543 @@
         }
       }
     },
-    "190:10": {
+    "197:10": {
+      "preRequisites:11": [
+        109
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Fluorite §rcan be found in fluorite and cassiterite deposits, at Y level 0 to 80.\n\nThe ore has to be §6smelted §rand then §6combined with sulfuric acid §rto get §6Hydrogen Fluoride.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hydrogen_fluoride"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Hydrogen Fluoride",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 198,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hydrogen_fluoride"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "198:10": {
+      "preRequisites:11": [
+        198,
+        112
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Water can be §6bubbled §rinto Hydrogen Fluoride to create §2Hydrofluoric Acid§r, an extremely strong acid.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hydrofluoric_acid"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Hydrofluoric Acid",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 199,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hydrofluoric_acid"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "199:10": {
+      "preRequisites:11": [
+        184
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Sodium Hydroxide solution§r can be combined with §6Hydrogen Fluoride§r to get §6Sodium Fluoride Solution§r.\n\nThis has to be§b §cdistilled §rto get Sodium Fluoride.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 32046,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Sodium Fluoride",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 200,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 32046,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "200:10": {
+      "preRequisites:11": [
+        190
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Alumina §rneeds to be roasted with §6Hydrofluoric Acid§r to make §bAluminium Trifluoride.§r\n\n§rNote: you will need Aluminium Trifluoride as well as Cryolite for the final process. So don\u0027t convert all of it into Cryolite right away.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 20006,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Aluminium Trifluoride",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 201,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 20006,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "201:10": {
+      "preRequisites:11": [
+        201,
+        200
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "React §bAluminium Trifluoride §rand §5Sodium Fluoride §rin an §cLV Roaster §rto get Cryolite.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 12089,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Cryolite",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 202,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 12089,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "202:10": {
+      "preRequisites:11": [
+        202
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "In an Electrolytic Cell, react §610 Alumina Dust§r, 1 §6Aluminium Trifluoride§r, 3 §6§6Carbon Dust§r and§6 Cryolite fluid §rto get §64 Aluminium Ingots§r.\n\nYou can extract the fluid out of Cryolite using an §cLV Extractor§r. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Hall-Hèroult",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 203,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "203:10": {
+      "preRequisites:11": [
+        186
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You can §ccentrifuge §6Carbon §rout of coal dusts.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 18,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Building Block of Life",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 204,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 18,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "204:10": {
+      "preRequisites:11": [
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §cExtractor §rextracts §cfluid §rout of solid materials. For example, you can get §6liquid rubber§o§o§r by putting rubber in.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 305,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Extractor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 205,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 305,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "205:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -14500,256 +15513,375 @@
           "y:3": 120
         },
         "14:10": {
+          "id:3": 112,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": 252
+        },
+        "15:10": {
           "id:3": 113,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 156,
           "y:3": 180
         },
-        "15:10": {
-          "id:3": 115,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": 276
-        },
         "16:10": {
+          "id:3": 114,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 444
+        },
+        "17:10": {
+          "id:3": 115,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 252
+        },
+        "18:10": {
           "id:3": 116,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 348
         },
-        "17:10": {
+        "19:10": {
           "id:3": 119,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -216,
           "y:3": 336
         },
-        "18:10": {
+        "20:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 288
         },
-        "19:10": {
+        "21:10": {
           "id:3": 121,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
-          "y:3": 348
+          "y:3": 324
         },
-        "20:10": {
+        "22:10": {
           "id:3": 122,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -216,
           "y:3": 276
         },
-        "21:10": {
+        "23:10": {
           "id:3": 123,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
           "y:3": 288
         },
-        "22:10": {
+        "24:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -96,
           "y:3": 288
         },
-        "23:10": {
+        "25:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -96,
           "y:3": 348
         },
-        "24:10": {
+        "26:10": {
           "id:3": 127,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 216
         },
-        "25:10": {
+        "27:10": {
           "id:3": 128,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 348
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -24,
+          "y:3": 288
         },
-        "26:10": {
+        "28:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 348
+          "x:3": -60,
+          "y:3": 252
         },
-        "27:10": {
+        "29:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 192
         },
-        "28:10": {
+        "30:10": {
           "id:3": 158,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 96
         },
-        "29:10": {
+        "31:10": {
           "id:3": 159,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 48
         },
-        "30:10": {
+        "32:10": {
           "id:3": 160,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 108
         },
-        "31:10": {
+        "33:10": {
           "id:3": 161,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 108
         },
-        "32:10": {
+        "34:10": {
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 60
         },
-        "33:10": {
+        "35:10": {
           "id:3": 169,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -312,
           "y:3": 204
         },
-        "34:10": {
+        "36:10": {
           "id:3": 171,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 240
         },
-        "35:10": {
+        "37:10": {
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -354,
           "y:3": 216
         },
-        "36:10": {
+        "38:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -354,
           "y:3": 264
         },
-        "37:10": {
+        "39:10": {
           "id:3": 174,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -306,
-          "y:3": 312
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -312,
+          "y:3": 300
         },
-        "38:10": {
+        "40:10": {
           "id:3": 175,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -354,
           "y:3": 312
         },
-        "39:10": {
+        "41:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -330,
           "y:3": 354
         },
-        "40:10": {
+        "42:10": {
           "id:3": 179,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -306,
           "y:3": 264
         },
-        "41:10": {
+        "43:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -330,
           "y:3": 402
         },
-        "42:10": {
+        "44:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -330,
           "y:3": 450
         },
-        "43:10": {
+        "45:10": {
+          "id:3": 183,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 348
+        },
+        "46:10": {
+          "id:3": 184,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 348
+        },
+        "47:10": {
+          "id:3": 185,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 396
+        },
+        "48:10": {
+          "id:3": 186,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 120
+        },
+        "49:10": {
+          "id:3": 188,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 24,
+          "y:3": 432
+        },
+        "50:10": {
+          "id:3": 189,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 444
+        },
+        "51:10": {
+          "id:3": 190,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 444
+        },
+        "52:10": {
           "id:3": 191,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 48
         },
-        "44:10": {
+        "53:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 48
         },
-        "45:10": {
+        "54:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 48
         },
-        "46:10": {
+        "55:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 24
         },
-        "47:10": {
+        "56:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 72
         },
-        "48:10": {
+        "57:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 12
         },
-        "49:10": {
+        "58:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 12
+        },
+        "59:10": {
+          "id:3": 198,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 24,
+          "y:3": 252
+        },
+        "60:10": {
+          "id:3": 199,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 300
+        },
+        "61:10": {
+          "id:3": 200,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 348
+        },
+        "62:10": {
+          "id:3": 201,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 396
+        },
+        "63:10": {
+          "id:3": 202,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 348
+        },
+        "64:10": {
+          "id:3": 203,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 144,
+          "y:3": 336
+        },
+        "65:10": {
+          "id:3": 204,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 72
+        },
+        "66:10": {
+          "id:3": 205,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 204,
+          "y:3": 156
         }
       }
     },
@@ -15150,39 +16282,165 @@
       },
       "quests:9": {
         "0:10": {
+          "id:3": 38,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 16,
+          "y:3": -72
+        },
+        "1:10": {
+          "id:3": 46,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 64,
+          "y:3": -72
+        },
+        "2:10": {
           "id:3": 110,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 0,
           "y:3": -24
         },
-        "1:10": {
+        "3:10": {
           "id:3": 111,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 144,
           "y:3": -24
         },
-        "2:10": {
+        "4:10": {
           "id:3": 112,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 216,
           "y:3": -24
         },
-        "3:10": {
+        "5:10": {
           "id:3": 113,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 288,
           "y:3": -24
         },
-        "4:10": {
+        "6:10": {
           "id:3": 114,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 72,
           "y:3": -24
+        },
+        "7:10": {
+          "id:3": 128,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 360,
+          "y:3": -24
+        },
+        "8:10": {
+          "id:3": 172,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": 48
+        },
+        "9:10": {
+          "id:3": 173,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 48
+        },
+        "10:10": {
+          "id:3": 175,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 48
+        },
+        "11:10": {
+          "id:3": 178,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 156,
+          "y:3": 48
+        },
+        "12:10": {
+          "id:3": 180,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 204,
+          "y:3": 48
+        },
+        "13:10": {
+          "id:3": 181,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 252,
+          "y:3": 48
+        },
+        "14:10": {
+          "id:3": 183,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 372,
+          "y:3": 48
+        },
+        "15:10": {
+          "id:3": 184,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 372,
+          "y:3": 96
+        },
+        "16:10": {
+          "id:3": 185,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 372,
+          "y:3": 144
+        },
+        "17:10": {
+          "id:3": 198,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 228,
+          "y:3": -120
+        },
+        "18:10": {
+          "id:3": 199,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 228,
+          "y:3": -72
+        },
+        "19:10": {
+          "id:3": 200,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 420,
+          "y:3": 96
+        },
+        "20:10": {
+          "id:3": 201,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 468,
+          "y:3": 144
+        },
+        "21:10": {
+          "id:3": 202,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 468,
+          "y:3": 96
+        },
+        "22:10": {
+          "id:3": 204,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 312,
+          "y:3": 48
         }
       }
     },
