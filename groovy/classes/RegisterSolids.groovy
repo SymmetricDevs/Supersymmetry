@@ -83,14 +83,14 @@ class RegisterSolids {
                 .build()
 
         new Material.Builder(20010, 'polyvinylidene_fluoride')
-                .polymer()
+                .polymer(1)
                 .color(0xfde3ff)
                 .flags(GENERATE_FOIL)
                 .components(Carbon, 2, Hydrogen, 2, Fluorine, 2)
                 .fluidTemp(468)
                 .build()
 				
-		Material BoricAcid = new Material.Builder(20011, 'boric_acid')
+	Material BoricAcid = new Material.Builder(20011, 'boric_acid')
                 .dust()
                 .color(0xedece8)
                 .components(Hydrogen, 3, Boron, 1, Oxygen, 3)
@@ -98,24 +98,24 @@ class RegisterSolids {
 		
 		BoricAcid.setFormula("(H3BO3)", true);
 		
-		new Material.Builder(20012, 'amorphous_boron')
-            .dust()
-            .color(0x47464b)
-            .build()
+	new Material.Builder(20012, 'amorphous_boron')
+                .dust()
+                .color(0x47464b)
+                .build()
 			
-		new Material.Builder(20013, 'magnesium_oxide')
-            .dust()
-            .color(0xf5f5f5)
-			.components(Magnesium, 1, Oxygen, 1)
-            .build()
+	new Material.Builder(20013, 'magnesium_oxide')
+                .dust()
+                .color(0xf5f5f5)
+	        .components(Magnesium, 1, Oxygen, 1)
+                .build()
 		
-		Material BoronTrioxide = new Material.Builder(20014, 'boron_trioxide')
+	Material BoronTrioxide = new Material.Builder(20014, 'boron_trioxide')
                 .dust()
                 .color(0xdfcfc2)
                 .components(Boron, 2, Oxygen, 3)
                 .build()
 		
-		BoronTrioxide.setFormula("(B2O3)", true);
+	BoronTrioxide.setFormula("(B2O3)", true);
 
         new Material.Builder(32003, 'calcium_sulfate')
                 .dust()
