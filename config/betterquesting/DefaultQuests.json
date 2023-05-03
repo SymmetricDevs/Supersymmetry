@@ -3252,7 +3252,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Steam Roaster §rburns chemicals using steam. The Roaster will also be used as a reaction furnace. This machine will be used for the production of §6sulfur§r. The Roaster will be used in many chemical processes in LV and onwards.",
+          "desc:8": "The §6Steam Roaster §rburns chemicals using steam. It\u0027s a reaction furnace. This machine will be used for the production of §6sulfur§r. The Roaster will be used in many chemical processes in LV and onwards.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7930,7 +7930,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining §6Slaked Lime§r, §7Flint Dust§r, §6Sand Dust§r and §7Clay Dust§r (dusts can be made using a Mortar) will create §6Fireclay Mix§r.\n\nFireclay Mix can be turned into Compressed Fireclay by using a brick form. ",
+          "desc:8": "Combining §6Slaked Lime§r, §7Flint Dust§r, §6Sand Dust§r and §7Clay Balls (dusts can be made using a Mortar) will create §6Fireclay Mix§r.\n\nFireclay Mix can be turned into Compressed Fireclay by using a brick form. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8942,7 +8942,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -8951,7 +8951,7 @@
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -8962,6 +8962,10 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -13311,6 +13315,58 @@
     },
     "187:10": {
       "preRequisites:11": [
+        21
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Crafting Station§r is a highly advanced Crafting Table§r, with inventory slots for item and tools.\n\nPut the recipes in the table either by dropping ghost items, or using the §a+§r in §2JEI§r. \n\nCrafting the items will use the items and tools in the inventory of the table. The 9 slots on the right are saved up recipes so you can re-use them without re-opening §2JEI§r.\n\nThe §3Crafting Station§r can use §6adjacent inventories§r in addition to its own inventory. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1647,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Workbench V2",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 187,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1647,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "188:10": {
+      "preRequisites:11": [
         189
       ],
       "properties:10": {
@@ -13379,7 +13435,7 @@
         }
       }
     },
-    "188:10": {
+    "189:10": {
       "preRequisites:11": [
         185,
         114
@@ -13450,7 +13506,7 @@
         }
       }
     },
-    "189:10": {
+    "190:10": {
       "preRequisites:11": [
         188
       ],
@@ -13493,7 +13549,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "190:10": {
+    "191:10": {
       "preRequisites:11": [
         101
       ],
@@ -13545,7 +13601,7 @@
         }
       }
     },
-    "191:10": {
+    "192:10": {
       "preRequisites:11": [
         191
       ],
@@ -13597,7 +13653,7 @@
         }
       }
     },
-    "192:10": {
+    "193:10": {
       "preRequisites:11": [
         192
       ],
@@ -13682,7 +13738,7 @@
         }
       }
     },
-    "193:10": {
+    "194:10": {
       "preRequisites:11": [
         193
       ],
@@ -13771,7 +13827,7 @@
         }
       }
     },
-    "194:10": {
+    "195:10": {
       "preRequisites:11": [
         193
       ],
@@ -13838,7 +13894,7 @@
         }
       }
     },
-    "195:10": {
+    "196:10": {
       "preRequisites:11": [
         191
       ],
@@ -13933,14 +13989,14 @@
         }
       }
     },
-    "196:10": {
+    "197:10": {
       "preRequisites:11": [
         191
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds. It\u0027s also multishot, which means that it will shoot 8 times at once. \n\nCrafting it requires a §6Steel Receiver§r.\n\nFor more info, look at the tooltip.",
+          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds. It\u0027s also multishot, this means it will shoot 8 times at once. \n\nCrafting it requires a §6Steel Receiver§r.\n\nFor more info, look at the tooltip.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14028,7 +14084,7 @@
         }
       }
     },
-    "197:10": {
+    "198:10": {
       "preRequisites:11": [
         109
       ],
@@ -14094,7 +14150,7 @@
         }
       }
     },
-    "198:10": {
+    "199:10": {
       "preRequisites:11": [
         198,
         112
@@ -14143,7 +14199,7 @@
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -14161,7 +14217,7 @@
         }
       }
     },
-    "199:10": {
+    "200:10": {
       "preRequisites:11": [
         184
       ],
@@ -14231,7 +14287,7 @@
         }
       }
     },
-    "200:10": {
+    "201:10": {
       "preRequisites:11": [
         190
       ],
@@ -14301,7 +14357,7 @@
         }
       }
     },
-    "201:10": {
+    "202:10": {
       "preRequisites:11": [
         201,
         200
@@ -14372,7 +14428,7 @@
         }
       }
     },
-    "202:10": {
+    "203:10": {
       "preRequisites:11": [
         202
       ],
@@ -14442,7 +14498,7 @@
         }
       }
     },
-    "203:10": {
+    "204:10": {
       "preRequisites:11": [
         186
       ],
@@ -14512,7 +14568,7 @@
         }
       }
     },
-    "204:10": {
+    "205:10": {
       "preRequisites:11": [
         102
       ],
@@ -14564,7 +14620,135 @@
         }
       }
     },
-    "205:10": {
+    "206:10": {
+      "preRequisites:11": [
+        128
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Using an alternate version of the §6chloroalkali process§r, using a §crock salt §rsolution instead of normal salt water.§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 83,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Insanely High pH",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 206,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "potassium_hydroxide_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "207:10": {
+      "preRequisites:11": [
+        185
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You can electrolyze §6§cIMPURE §rSodium Hydroxide Solution in an Electrolyzer to get §6Gallium§r, an important element required for circuits. \n\nThe process gives §6tiny piles of gallium§r which have to be packed in a crafting table to get a full Gallium dust.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 39,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Gallium",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 207,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 39,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust_tiny"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "208:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -14954,6 +15138,13 @@
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 312
+        },
+        "45:10": {
+          "id:3": 187,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 552
         }
       }
     },
@@ -15882,6 +16073,13 @@
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 156
+        },
+        "67:10": {
+          "id:3": 207,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 396
         }
       }
     },
@@ -16441,6 +16639,13 @@
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 48
+        },
+        "23:10": {
+          "id:3": 206,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 432,
+          "y:3": -12
         }
       }
     },
@@ -16972,7 +17177,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
