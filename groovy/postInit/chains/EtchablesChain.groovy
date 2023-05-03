@@ -2,14 +2,14 @@ import static globals.Globals.*
 
 ASSEMBLER = recipemap('assembler')
 FORMING_PRESS = recipemap('forming_press')
-UV_LIGHT_BOX = recipemap('uv_light_box')
 CHEMICAL_BATH = recipemap('chemical_bath')
 MIXER = recipemap('mixer')
 LASER_ENGRAVER = recipemap('laser_engraver')
-ION_IMPLANTER = recipemap('ion_implantation')
 ELECTROLYZER = recipemap('electrolyzer')
 
-//TODO: ENABLE THIS WHEN SUSYCORE 0.0.9 RELEASES
+//TODO: ENABLE ALL THE COMMENTED CODE WHEN SUSYCORE 0.0.9 RELEASES
+//ION_IMPLANTER = recipemap('ion_implantation')
+//UV_LIGHT_BOX = recipemap('uv_light_box')
 
 //TODO: ADD PLASMA ETCHANTS (CHLORINE PLASMA, FLUORINE PLASMA, CARBON TETRACHLORIDE PLASMA)
 /*
