@@ -171,6 +171,8 @@ material.two_two_dichlorohydrazobenzene=2,2'-Dichlorohydrazobenzene
 material.green_coke=Green Coke
 material.asphalt=Asphalt
 material.alumina=Alumina
+
+material.potassium_fluoride=Potassium Fluoride
 material.boric_acid=Boric Acid
 
 # Solids
@@ -352,6 +354,7 @@ material.impure_soda_ash_solution=Impure Soda Ash Solution
 material.impure_sodium_hydroxide_solution=Impure Sodium Hydroxide Solution
 material.cryolite=Cryolite
 material.sodium_fluoride_solution=Sodium Fluoride Solution
+material.potassium_fluoride_solution=Potassium Fluoride Solution
 material.concentrated_red_mud=Concentrated Red Mud
 material.furfural_solution=Furfural Solution
 material.syngas=Syngas

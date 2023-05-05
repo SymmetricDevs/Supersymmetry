@@ -35,6 +35,7 @@ class RegisterFluids {
         public static Material SodiumAluminate;
         public static Material AmmoniumSulfate;
         public static Material SodiumFluoride;
+        public static Material PotassiumFluoride;
 
         private static void generateHighPressureGases(Material materialName, int id, boolean generateCold){
                 var color = materialName.getMaterialRGB();
@@ -355,6 +356,12 @@ class RegisterFluids {
                 SodiumFluoride = new Material.Builder(32046, 'sodium_fluoride')
                         .dust()
                         .components(Sodium, 1, Fluorine, 1)
+                        .colorAverage()
+                        .build();
+
+                PotassiumFluoride = new Material.Builder(32048, 'potassium_fluoride')
+                        .fluid().dust()
+                        .components(Potassium, 1, Fluorine, 1)
                         .colorAverage()
                         .build();
         }
@@ -1837,6 +1844,12 @@ class RegisterFluids {
                         .fluid()
                         .components(Water, 98, Salt, 2)
                         .color(0x3c5bc2)
+                        .build();
+                
+                new Material.Builder(12209, "potassium_fluoride_solution")
+                        .fluid()
+                        .components(Water, 1, PotassiumFluoride, 1)
+                        .colorAverage()
                         .build();
 
                 log.infoMC("Finished registering fluids")
