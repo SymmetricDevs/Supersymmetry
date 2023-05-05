@@ -205,6 +205,28 @@ class RegisterFluids {
                         .build();
         }
 
+        private static void generatePurifiedGas(Material material, int id) {
+                var color = material.materialRGB;
+
+                new Material.Builder(id, "high_purity_" + material.toString())
+                        .fluid(FluidTypes.GAS)
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                        .color(color)
+                        .components(material, 1)
+                        .build();
+        }
+
+        private static void generatePurifiedLiquid(Material material, int id) {
+                var color = material.materialRGB;
+
+                new Material.Builder(id, "high_purity_" + material.toString())
+                        .fluid()
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                        .color(color)
+                        .components(material, 1)
+                        .build();
+        }
+
         public static void registerSolubles() {
                 CalciumHydroxide = new Material.Builder(32033, 'calcium_hydroxide')
                         .dust()
@@ -417,6 +439,32 @@ class RegisterFluids {
                         .build();
 
                 generateGreenhouseGases(EarthGreenhouseGas, 10401)
+
+                generatePurifiedGas(Hydrogen, 10500)
+
+                generatePurifiedGas(Helium, 10501)
+
+                generatePurifiedGas(Nitrogen, 10502)
+
+                generatePurifiedGas(Oxygen, 10503)
+
+                generatePurifiedGas(Fluorine, 10504)
+
+                generatePurifiedGas(Neon, 10505)
+
+                generatePurifiedGas(Chlorine, 10506)
+
+                generatePurifiedGas(Argon, 10507)
+
+                generatePurifiedGas(Krypton, 10508)
+
+                generatePurifiedGas(Xenon, 10509)
+
+                generatePurifiedLiquid(Bromine, 10510)
+
+                generatePurifiedLiquid(Mercury, 10511)
+
+                generatePurifiedLiquid(Water, 10512)
 
                 new Material.Builder(11000, "ammonium_chloride_solution")
                         .fluid()
@@ -1061,7 +1109,7 @@ class RegisterFluids {
                         .colorAverage()
                         .build();
 
-                new Material.Builder(11110, 'carbon_tetrachloride')
+                Material CarbonTetrachloride = new Material.Builder(11110, 'carbon_tetrachloride')
                         .fluid()
                         .components(Carbon, 1, Chlorine, 4)
                         .colorAverage()
@@ -1105,6 +1153,23 @@ class RegisterFluids {
                 new Material.Builder(11117, 'mixed_dichlorobenzene_solution')
                         .fluid()
                         .color(0xFF7F7F)
+                        .build();
+
+                new Material.Builder(11118, 'novolacs')
+                        .fluid()
+                        .color(0xbfa26f)
+                        .build();
+
+                new Material.Builder(11119, 'silicon_tetrachloride')
+                        .fluid()
+                        .components(Silicon, 1, Chlorine, 4)
+                        .color(0x63827f)
+                        .build();
+
+                new Material.Builder(11120, 'purified_silicon_tetrachloride')
+                        .fluid()
+                        .components(Silicon, 1, Chlorine, 4)
+                        .color(0x7fa3a0)
                         .build();
 
                 new Material.Builder(12000, 'flue_gas')

@@ -414,6 +414,40 @@ crafting.replaceShaped("gregtech:pyrolyse_oven", metaitem('pyrolyse_oven'), [
 		[pistons[1], pumps[1], metaitem('wireGtQuadrupleCupronickel')]
 ])
 
+//Laser Engraver -> Electron Beam Lithographer
+
+for (i = 1; i <= 8; i++) {
+	crafting.replaceShaped("gregtech:gregtech.machine.laser_engraver." + Globals.voltageTiers[i], metaitem('laser_engraver.' + Globals.voltageTiers[i]), [
+			[pistons[i], metaitem('wireFineTungsten'), pistons[i]],
+			[circuits[i], hulls[i], circuits[i]],
+			[tieredCables[i], circuits[i], tieredCables[i]]
+	])
+}
+
+//TODO: ENABLE THIS WHEN SUSYCORE 0.0.9 RELEASES
+/*
+//UV Light Box
+
+for (i = 1; i <= 8; i++) {
+	crafting.addShaped("gregtech:uv_light_box." + Globals.voltageTiers[i], metaitem('uv_light_box.'  + Globals.voltageTiers[i]), [
+			[tieredCables[i], metaitem('carbon_arc_lamp'), tieredCables[i]],
+			[circuits[i], hulls[i], circuits[i]],
+			[tieredPlates[i], tieredPlates[i], tieredPlates[i]]
+	])
+}
+
+//Ion Implanter
+
+for (i = 1; i <= 8; i++) {
+	crafting.addShaped("gregtech:ion_implanter." + Globals.voltageTiers[i], metaitem('ion_implanter.'  + Globals.voltageTiers[i]), [
+			[circuits[i], tieredGlass[i], circuits[i]],
+			[tieredMagnets[i], hulls[i], tieredMagnets[i]],
+			[tieredCables[i], tieredSprings[i], tieredCables[i]]
+	])
+}
+
+ */
+
 //Multiblocked Machines
 
 crafting.addShaped("multiblocked:ore_sorter", item('multiblocked:ore_sorter'), [
