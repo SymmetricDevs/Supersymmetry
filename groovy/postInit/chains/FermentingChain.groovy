@@ -11,12 +11,9 @@ def MIXER = recipemap('mixer');
 
 def DISTILLATION_TOWER = recipemap('distillation_tower');
 def AUTOCLAVE = recipemap('autoclave');
+def FERMENTER = recipemap('vat_fermentation');
+
 //GENERIC BIOMASS CHAIN
-
-//TODO: UNCOMMENT WHEN SUSYCORE 0.0.8 IS OUT
-/*
-//def FERMENTER = recipemap('vat_fermentation');
-
 PYROLYSE_OVEN.recipeBuilder()
         .inputs(metaitem('bio_chaff') * 16)
         .fluidInputs(fluid('water') * 4000)
@@ -116,5 +113,3 @@ DISTILLERY.recipeBuilder()
         .duration(100)
         .EUt(30)
         .buildAndRegister()
-
- */

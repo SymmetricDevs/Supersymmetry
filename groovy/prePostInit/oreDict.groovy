@@ -10,6 +10,13 @@ import net.minecraftforge.oredict.OreDictionary
 //Force stick to exist
 ore('stickWood').add(item('minecraft:stick'))
 
+//Light oredict
+ore('gtLight').add(metaitem('incandescent_light'))
+ore('gtLight').add(metaitem('halogen_light'))
+ore('gtLight').add(metaitem('fluorescent_light'))
+ore('gtLight').add(metaitem('led_light'))
+ore('gtLight').add(metaitem('carbon_arc_lamp'))
+
 //Ore dict changes and unification
 
 def get_ore_dicts(List<String> list) {

@@ -15,6 +15,7 @@ removeAllRecipes(RecipeMaps.FERMENTING_RECIPES);
 removeAllRecipes(RecipeMaps.FLUID_HEATER_RECIPES);
 removeAllRecipes(RecipeMaps.PYROLYSE_RECIPES);
 removeAllRecipes(RecipeMaps.IMPLOSION_RECIPES);
+removeAllRecipes(RecipeMaps.LASER_ENGRAVER_RECIPES);
 removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES);
 
 //Removed due to infinite stone being unrealistic
