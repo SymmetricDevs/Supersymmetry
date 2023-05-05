@@ -244,8 +244,7 @@
 					"supersymmetry:backgrounds/03.png",
 					"supersymmetry:backgrounds/04.png",
 					"supersymmetry:backgrounds/05.png",
-					"supersymmetry:backgrounds/06.png",
-					"supersymmetry:backgrounds/07.png"
+					"supersymmetry:backgrounds/06.png"
 				],
 				"shuffle": true,
 				"displayDuration": 100,
