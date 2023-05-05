@@ -8,8 +8,6 @@ import gregtech.api.unification.stack.UnificationEntry;
 def PYROLYSE_OVEN = recipemap('pyrolyse_oven');
 def DISTILLATION_TOWER = recipemap('distillation_tower');
 
-//TODO: UNCOMMENT WHEN SUSYCORE 0.0.8 IS OUT
-/*
 PYROLYSE_OVEN.recipeBuilder()
         .inputs(ore('logWood') * 16)
         .outputs(item('minecraft:coal', 1) * 8)
@@ -41,5 +39,3 @@ DISTILLATION_TOWER.recipeBuilder()
         .duration(200)
         .EUt(24)
         .buildAndRegister()
-
- */

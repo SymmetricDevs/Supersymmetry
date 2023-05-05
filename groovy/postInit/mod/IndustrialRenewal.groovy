@@ -1,7 +1,5 @@
 import static globals.Globals.*
 
-//TODO: Replace glowstone with lights
-
 def name_removals = [
 	"industrialrenewal:prospecting_pan",
 	"industrialrenewal:ingot_steel",
@@ -462,27 +460,27 @@ crafting.replaceShaped("industrialrenewal:storage_chest", item('industrialrenewa
 ])
 
 crafting.replaceShaped("industrialrenewal:signal_indicator", item('industrialrenewal:signal_indicator'), [
-	[null, ore('dustGlowstone'), null],
+	[null, ore('gtLight'), null],
 	[ore('plateSteel'), ore('stickSteel'), null],
 	[null, null, null]
 ])
 
 crafting.replaceShaped("industrialrenewal:lamp", item('industrialrenewal:light') * 32, [
 	[null, ore('stickSteel'), null],
-	[ore('plateSteel'), ore('dustGlowstone'), ore('stickSteel')],
+	[ore('plateSteel'), ore('gtLight'), ore('stickSteel')],
 	[null, ore('stickSteel'), null]
 ])
 
 crafting.replaceShaped("industrialrenewal:fluorescent", item('industrialrenewal:fluorescent') * 32, [
 	[ore('plateSteel'), ore('stickSteel'), ore('plateSteel')],
-	[ore('dustGlowstone'), ore('dustGlowstone'), ore('dustGlowstone')],
+	[ore('gtLight'), ore('gtLight'), ore('gtLight')],
 	[ore('plateGlass'), ore('plateGlass'), ore('plateGlass')]
 ])
 
 crafting.replaceShaped("industrialrenewal:traffic_light", item('industrialrenewal:traffic_light') * 2, [
-	[ore('plateSteel'), ore('dustGlowstone'), ore('dyeRed')],
-	[ore('wireFineRedAlloy'), ore('dustGlowstone'), ore('dyeYellow')],
-	[ore('plateSteel'), ore('dustGlowstone'), ore('dyeGreen')]
+	[ore('plateSteel'), ore('gtLight'), ore('dyeRed')],
+	[ore('wireFineRedAlloy'), ore('gtLight'), ore('dyeYellow')],
+	[ore('plateSteel'), ore('gtLight'), ore('dyeGreen')]
 ])
 
 crafting.addShaped("industrialrenewal:brace_greg", item('industrialrenewal:brace') * 32, [
