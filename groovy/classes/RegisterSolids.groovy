@@ -138,7 +138,7 @@ class RegisterSolids {
 		
 	BoronTrioxide.setFormula("(B2O3)", true);
 
-        new Material.Builder(20011, 'pmma')
+        new Material.Builder(20200, 'pmma')
                 .polymer(1)
                 .color(0x72e0c9)
                 .flags(GENERATE_FOIL)
@@ -146,13 +146,13 @@ class RegisterSolids {
                 .fluidTemp(438)
                 .build()
 
-        new Material.Builder(20012, 'zinc_chloride')
+        new Material.Builder(20201, 'zinc_chloride')
                 .dust().fluid()
                 .components(Zinc, 1, Chlorine, 2)
                 .colorAverage()
                 .build()
 
-        new Material.Builder(20013, 'polypropylene')
+        new Material.Builder(20202, 'polypropylene')
                 .polymer(1)
                 .color(0xf7f2c6)
                 .flags(GENERATE_FOIL)
