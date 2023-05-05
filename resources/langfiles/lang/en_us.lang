@@ -546,11 +546,6 @@ metaitem.pattern.memory.name=Pattern RAM
 metaitem.storage.segment.name=Storage Segment
 
 metaitem.gun.barrel.steel.name=Steel Barrel
-
-metaitem.cathode.lead.name=Lead Cathode
-metaitem.anode.lead.name=Lead Anode
-metaitem.battery.lead_acid.name=Lead Acid Battery
-
 metaitem.steam.piston.name=Steam Piston
 metaitem.steam.motor.name=Steam Motor
 metaitem.steam.pump.name=Steam Pump

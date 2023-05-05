@@ -124,16 +124,67 @@ eventManager.listen {
         customMetaItems.addItem(3036, "plate.advanced_random_access_memory");
 
         //Batteries 4000-4100
-        customMetaItems.addItem(4000, "battery.lead_acid").addComponents(ElectricStats.createRechargeableBattery(120000, GTValues.LV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4001, "cathode.lead");
-        customMetaItems.addItem(4002, "anode.lead");
+        // customMetaItems.addItem(4000, "battery.lead_acid").addComponents(ElectricStats.createRechargeableBattery(120000, GTValues.LV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
 
-        customMetaItems.addItem(4003, "battery.mv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(480000, GTValues.MV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4004, "battery.hv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(1440000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4000, "battery.lv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(120000, GTValues.LV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4001, "battery.mv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(480000, GTValues.MV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4002, "battery.hv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(1440000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
 
-        customMetaItems.addItem(4005, "battery.mv.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(600000, GTValues.MV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4006, "battery.hv.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4007, "battery.ev.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        // Lithium ion battery (MV)
+        customMetaItems.addItem(4003, "battery.mv.lithium").addComponents(ElectricStats.createRechargeableBattery(600000, GTValues.MV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4004, "battery.hv.lithium").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4005, "battery.ev.lithium").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+
+        // Vanadium flow battery (HV)
+        customMetaItems.addItem(4006, "battery.hv.vanadium").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4007, "battery.ev.vanadium").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4008, "battery.iv.vanadium").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.IV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.IV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+
+        // Nickel-cadmium battery (EV)
+        customMetaItems.addItem(4009, "battery.ev.nicad").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4010, "battery.iv.nicad").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.IV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.IV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4011, "battery.luv.nicad").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.LuV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LuV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+
+        // Nickel metal hydride battery (IV)
+        customMetaItems.addItem(4012, "battery.iv.nimet").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.IV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.IV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4013, "battery.luv.nimet").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.LuV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LuV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4014, "battery.zpm.nimet").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.ZPM)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.ZPM).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+
+        // Nanoparticle enhanced lithium ion battery (LuV?)
+        // reserved for now
+        customMetaItems.addItem(4015, "battery.luv.magic").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.LuV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LuV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4016, "battery.zpm.magic").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.ZPM)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.ZPM).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4017, "battery.uv.magic").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.UV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.UV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+
+
+        // components [30-60]
+        customMetaItems.addItem(4030, "battery.hull.lithium.mv");
+        customMetaItems.addItem(4031, "battery.hull.lithium.hv");
+        customMetaItems.addItem(4032, "battery.hull.lithium.ev");
+        
+        customMetaItems.addItem(4033, "battery.hull.vanadium.hv");
+        customMetaItems.addItem(4034, "battery.hull.vanadium.ev");
+        customMetaItems.addItem(4035, "battery.hull.vanadium.iv");
+
+        customMetaItems.addItem(4036, "battery.hull.nicad.ev");
+        customMetaItems.addItem(4037, "battery.hull.nicad.iv");
+        customMetaItems.addItem(4038, "battery.hull.nicad.luv");
+
+        customMetaItems.addItem(4039, "battery.hull.nimet.iv");
+        customMetaItems.addItem(4040, "battery.hull.nimet.luv");
+        customMetaItems.addItem(4041, "battery.hull.nimet.zpm");
+        
+        // reserved
+        // customMetaItems.addItem(4062, "battery.hull.magic.luv");
+        // customMetaItems.addItem(4063, "battery.hull.magic.zpm");
+        // customMetaItems.addItem(4064, "battery.hull.magic.uv");
+
+        // cathodes 
+        customMetaItems.addItem(4060, "cathode.lead");
+        customMetaItems.addItem(4061, "anode.lead");
+
+        customMetaItems.addItem(4062, "cathode.lithium_cobalt_oxide");
+        customMetaItems.addItem(4063, "anode.graphite");
 
 
         customMetaItems.addItem(4101, "vacuum_tube_components");

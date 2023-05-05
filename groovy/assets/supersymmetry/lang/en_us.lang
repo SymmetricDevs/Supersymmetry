@@ -1,0 +1,63 @@
+# Place lang here so it can be reloaded with /gs reload rather than reloading the resourcepack (slow)
+
+# Battery
+metaitem.battery.lv.lead_acid.name=Small Lead Acid Battery
+metaitem.battery.mv.lead_acid.name=Medium Lead Acid Battery
+metaitem.battery.hv.lead_acid.name=Large Lead Acid Battery
+
+metaitem.battery.mv.lithium.name=Small Lithium-Ion Battery
+metaitem.battery.hv.lithium.name=Medium Lithium-Ion Battery
+metaitem.battery.ev.lithium.name=Large Lithium-Ion Battery
+
+metaitem.battery.hv.vanadium.name=Small Vanadium Battery
+metaitem.battery.ev.vanadium.name=Medium Vanadium Battery
+metaitem.battery.iv.vanadium.name=Large Vanadium Battery
+
+metaitem.battery.ev.nicad.name=Small Nickel-Cadmium Battery
+metaitem.battery.iv.nicad.name=Medium Nickel-Cadmium Battery
+metaitem.battery.luv.nicad.name=Large Nickel-Cadmium Battery
+
+metaitem.battery.iv.nimet.name=Small Nickel-Metal-Hydride Battery
+metaitem.battery.luv.nimet.name=Medium Nickel-Metal-Hydride Battery
+metaitem.battery.zpm.nimet.name=Large Nickel-Metal-Hydride Battery
+
+metaitem.battery.luv.magic.name=Small NE Lithium-Ion Battery
+metaitem.battery.zpm.magic.name=Medium NE Lithium-Ion Battery
+metaitem.battery.uv.magic.name=Large NE Lithium-Ion Battery
+
+# Battery Hulls
+metaitem.battery.hull.lithium.mv.name=Small Lithium-Ion Battery Hull
+metaitem.battery.hull.lithium.mv.tooltip=An empty §bMV§r Battery Hull
+metaitem.battery.hull.lithium.hv.name=Medium Lithium-Ion Battery Hull
+metaitem.battery.hull.lithium.hv.tooltip=An empty §6HV§r Battery Hull
+metaitem.battery.hull.lithium.ev.name=Large Lithium-Ion Battery Hull
+metaitem.battery.hull.lithium.ev.tooltip=An empty §5EV§r Battery Hull
+
+metaitem.battery.hull.vanadium.hv.name=Small Vanadium Battery Hull
+metaitem.battery.hull.vanadium.hv.tooltip=An empty §6HV§r Battery Hull
+metaitem.battery.hull.vanadium.ev.name=Medium Vanadium Battery Hull
+metaitem.battery.hull.vanadium.ev.tooltip=An empty §5EV§r Battery Hull
+metaitem.battery.hull.vanadium.iv.name=Large Vanadium Battery Hull
+metaitem.battery.hull.vanadium.iv.tooltip=An empty §1IV§r Battery Hull
+
+metaitem.battery.hull.nicad.ev.name=Small Nickel-Cadmium Battery Hull
+metaitem.battery.hull.nicad.ev.tooltip=An empty §5EV§r Battery Hull
+metaitem.battery.hull.nicad.iv.name=Medium Nickel-Cadmium Battery Hull
+metaitem.battery.hull.nicad.iv.tooltip=An empty §1IV§r Battery Hull
+metaitem.battery.hull.nicad.luv.name=Large Nickel-Cadmium Battery Hull
+metaitem.battery.hull.nicad.luv.tooltip=An empty §dLuV§r Battery Hull
+
+metaitem.battery.hull.nimet.iv.name=Small Nickel-Metal-Hydride Battery Hull
+metaitem.battery.hull.nimet.iv.tooltip=An empty §1IV§r Battery Hull
+metaitem.battery.hull.nimet.luv.name=Medium Nickel-Metal-Hydride Battery Hull
+metaitem.battery.hull.nimet.luv.tooltip=An empty §dLuV§r Battery Hull
+metaitem.battery.hull.nimet.zpm.name=Large Nickel-Metal-Hydride Battery Hull
+metaitem.battery.hull.nimet.zpm.tooltip=An empty §fZPM§r Battery Hull
+
+
+# Battery Components
+metaitem.cathode.lead.name=Lead Cathode
+metaitem.anode.lead.name=Lead Anode
+
+metaitem.cathode.lithium_cobalt_oxide.name=Lithium Cobalt Oxide Cathode
+metaitem.anode.graphite.name=Graphite Anode
