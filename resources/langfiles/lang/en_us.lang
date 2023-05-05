@@ -171,6 +171,7 @@ material.two_two_dichlorohydrazobenzene=2,2'-Dichlorohydrazobenzene
 material.green_coke=Green Coke
 material.asphalt=Asphalt
 material.alumina=Alumina
+material.boric_acid=Boric Acid
 
 # Solids
 
@@ -187,6 +188,7 @@ material.gallium_phosphate=Gallium Phosphate
 material.lithium_niobate=Lithium Niobate
 material.lead_zirconate_titanate=Lead Zirconate Titanate
 material.polyvinylidene_fluoride=Polyvinylidene Fluoride
+
 
 material.pmma=Polymethyl Methacrylate (PMMA)
 material.zinc_chloride=Zinc Chloride
@@ -263,6 +265,10 @@ material.high_purity_thulium=High Purity Thulium
 material.high_purity_ytterbium=High Purity Ytterbium
 material.high_purity_lutetium=High Purity Lutetium
 material.high_purity_thorium=High Purity Thorium
+
+material.amorphous_boron=Amorphous Boron
+material.magnesium_oxide=Magnesium Oxide
+material.boron_trioxide=Boron Trioxide
 
 # Fluids
 

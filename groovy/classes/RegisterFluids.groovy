@@ -1778,6 +1778,12 @@ class RegisterFluids {
                         .fluid(FluidTypes.GAS)
                         .color(0xcec929)
                         .build();
+						
+				new Material.Builder(12113, "boric_acid")
+                        .fluid()
+                        .color(0xedece8)
+						.components(Hydrogen, 3, Boron, 1, Oxygen, 3)
+                        .build();
 
                 Material HeavyWater = new Material.Builder(12200, "heavy_water")
                         .fluid()
