@@ -803,6 +803,36 @@ tile.multiblocked.ore_sorter.name=Ore Sorter
 multiblocked.ore_sorter.name=Ore Sorter
 multiblocked.ore_sorter.description=Sorts Ores.
 
+tile.multiblocked.condenser.name=Condenser
+multiblocked.condenser.name=Condenser
+
+tile.multiblocked.cooling_unit.name=Cooling Unit
+multiblocked.cooling_unit.name=Cooling Unit
+
+tile.multiblocked.gas_turbine.name=Gas Turbine
+multiblocked.gas_turbine.name=Gas Turbine
+
+tile.multiblocked.heat_exchanger.name=Heat Exchanger
+multiblocked.heat_exchanger.name=Heat Exchanger
+
+tile.multiblocked.heat_radiator.name=Heat Radiator
+multiblocked.heat_radiator.name=Heat Radiator
+
+tile.multiblocked.large_weapons_factory.name=Large Weapons Factory
+multiblocked.large_weapons_factory.name=Large Weapons Factory
+
+tile.multiblocked.mhd_generator.name=Magnetohydrodynamic Generator
+multiblocked.mhd_generator.name=Magnetohydrodynamic Generator
+
+tile.multiblocked.mining_drill.name=Mining Drill
+multiblocked.mining_drill.name=Mining Drill
+
+tile.multiblocked.quencher.name=Quencher
+multiblocked.quencher.name=Quencher
+
+tile.multiblocked.railroad_engineering_station.name=Railroad Engineering Station
+multiblocked.railroad_engineering_station.name=Railroad Engineering Station
+
 # Nether
 tile.hellsand.name=Mineral-Rich Sand
 tile.magma.name=Magma-Infused Netherrack

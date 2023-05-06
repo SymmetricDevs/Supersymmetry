@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "location": "multiblocked:ore_sorter",
+  "version": 2,
+  "location": "multiblocked:gas_turbine",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -23,69 +23,43 @@
     },
     "idle": {
       "renderer": {
-        "modelName": "ore_sorter",
-        "type": "geo"
+        "modelLocation": "multiblocked:obj/gas_turbine.obj",
+        "type": "obj"
       },
       "parent": "unformed"
     },
     "working": {
-      "renderer": {
-        "modelName": "ore_sorter",
-        "type": "geo"
-      },
       "parent": "idle"
     },
     "suspend": {
       "parent": "working"
     }
   },
+  "recipeMap": "gas_turbine_new",
   "basePattern": {
     "structureDir": [
-      "FRONT",
+      "BACK",
       "UP",
-      "LEFT"
+      "RIGHT"
     ],
     "pattern": [
       [
-        "  AAA",
-        "  ABA",
-        "  AAA",
-        "     "
+        "AAAAAAAAAAA",
+        "ADDDDDDDDDA",
+        "AA         "
       ],
       [
-        "C BBB",
-        "C B B",
-        "C BBB",
-        "DDDDD"
+        "AAAAAAAAAAA",
+        "@BBBBBBBBBB",
+        "AA         "
       ],
       [
-        "  BB@",
-        "  B B",
-        "  BBB",
-        "     "
-      ],
-      [
-        "C BBB",
-        "C B B",
-        "C BBB",
-        "DDDDD"
-      ],
-      [
-        "  AAA",
-        "  ABA",
-        "  AAA",
-        "     "
+        "AAAAAAAAAAA",
+        "ADDDDDDDDDA",
+        "AA         "
       ]
     ],
     "aisleRepetitions": [
-      [
-        1,
-        1
-      ],
-      [
-        1,
-        1
-      ],
       [
         1,
         1
@@ -103,36 +77,36 @@
       "A": {
         "states": [
           {
-            "id": "gregtech:meta_block_frame_20",
+            "id": "gregtech:metal_casing",
             "meta": 4
           }
         ],
         "type": "states",
-        "disableRenderFormed": true
+	"disableRenderFormed": true
       },
       "controller": {
-        "location": "multiblocked:ore_sorter",
+        "location": "multiblocked:gas_turbine",
         "type": "component"
       },
       "B": {
         "states": [
           {
-            "id": "gregtech:metal_casing",
-            "meta": 4
+            "id": "gregtech:boiler_casing",
+            "meta": 1
           }
         ],
         "type": "states",
-        "disableRenderFormed": true
+	"disableRenderFormed": true
       },
       "C": {
         "states": [
           {
-            "id": "gregtech:metal_casing",
-            "meta": 3
+            "id": "gregtech:meta_block_frame_20",
+            "meta": 4
           }
         ],
         "type": "states",
-        "disableRenderFormed": true
+	"disableRenderFormed": true
       },
       "e_port": {
         "capability": "gtce_energy",
@@ -140,16 +114,6 @@
         "disableRenderFormed": true,
         "minCount": 1,
         "maxCount": 2
-      },
-      "D": {
-        "states": [
-          {
-            "id": "gregtech:meta_block_frame_0",
-            "meta": 2
-          }
-        ],
-        "type": "states",
-        "disableRenderFormed": true
       },
       "f_port": {
         "blocks": [
@@ -162,22 +126,8 @@
         ],
         "type": "blocks",
         "disableRenderFormed": true,
-        "minCount": 0,
-        "maxCount": 4
-      },
-      "i_port": {
-        "blocks": [
-          {
-            "id": "multiblocked:item_input"
-          },
-          {
-            "id": "multiblocked:item_output"
-          }
-        ],
-        "type": "blocks",
-        "disableRenderFormed": true,
-        "minCount": 2,
-        "maxCount": 4
+        "minCount": 1,
+        "maxCount": 2
       },
       "any": {
         "type": "any"
@@ -194,16 +144,15 @@
         "A"
       ],
       "B": [
-        "B",
-        "e_port",
-        "i_port"
+        "B"
       ],
       "C": [
-        "C",
-        "f_port"
+        "C"
       ],
       "D": [
-        "D"
+        "A",
+	"e_port",
+	"f_port"
       ]
     }
   }
