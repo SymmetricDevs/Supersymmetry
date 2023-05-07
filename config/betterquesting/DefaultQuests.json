@@ -1536,7 +1536,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A grindstone can be used for extracting more dust out of your ores. It\u0027s not that good... but it\u0027s a start. It\u0027s also §cmanual§r, so you have to power it using your hands.\n\nPut a §6Wooden Crank §ron the grindstone and §aright click §ron it to rotate it. After a few seconds, the ore will have turned into dust.\n\nPutting 1 ore in results in an output of 2 dusts.",
+          "desc:8": "A grindstone can be used for extracting more dust out of your ores. It\u0027s not that good... but it\u0027s a start. It\u0027s also §cmanual§r, so you have to power it using your hands.\n\nPut a §6Wooden Crank §ron the grindstone and §aright click §ron it to rotate it. After a few seconds, the ore will have turned into dust.\n\nPutting 1 ore in results in an output of 2 dusts. \n\n§cThe quartz grindstone at the moment does not have compatibility. This will be patched (eventually)",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
