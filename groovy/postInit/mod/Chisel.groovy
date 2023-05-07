@@ -5,9 +5,9 @@ crafting.replaceShaped('chisel:chisel_iron', item('chisel:chisel_iron'), [
 ])
 
 crafting.replaceShaped('chisel:chisel_diamond', item('chisel:chisel_diamond'), [
-    [null, ore('plateDiamond'), null],
-    [null, ore('plateDiamond'), null],
-    [null, ore('stickSteel'), null]
+    [null, ore('plateSteel'), null],
+    [null, ore('plateSteel'), null],
+    [null, ore('stickWood'), null]
 ])
 
 crafting.replaceShaped('chisel:chisel_hitech', item('chisel:chisel_hitech'), [
