@@ -15239,7 +15239,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Chisel§r is well known for being the miraculous tool that can turn entire warehouses full of worthless cobble into decent looking building material. Every vanilla block, a few common metal blocks, and the blocks added by this specific mod can all be chiseled. §eSamples are shown in the following quests. §r\n\nThe normal §6Chisel§r can:\n- Chisel directly through the chisel GUI \n- Cycle chisel by §aleft-clicking§r eligible block when the chisel inventory is empty\n- Set block to chisel by §aleft-clicking§r when block of same type and particular chisel is in the chisel inventory\n\nThe §e§r§6Diamond Chisel§r can also do chisel in-world blocks in an area\n\nThe §6iChisel§r has 2 more area options than the Diamond Chisel, more versatile inventory chiseling, and the ability to preview the selected chisel pattern in different patterns. \n\nFor now, making a normal §6Chisel§r shall suffice.\n",
+          "desc:8": "§2Chisel§r is well known for being the miraculous tool that can turn entire warehouses full of worthless cobble into decent looking building material. Every vanilla block, a few common metal blocks, and the blocks added by this specific mod can all be chiseled. §eSamples are shown in the following quests. §r\n\nThe normal §6Chisel§r can:\n- Chisel directly through the chisel GUI \n- Cycle chisel by §aleft-clicking§r eligible block when the chisel inventory is empty\n- Set block to chisel by §aleft-clicking§r when block of same type and particular chisel is in the chisel inventory\n\nThe §e§r§6Steel Chisel§r can also do chisel in-world blocks in an area.\n\nThe §6iChisel§r has 2 more area options than the Steel Chisel, more versatile inventory chiseling, and the ability to preview the selected chisel pattern in different patterns. \n\nFor now, making a normal §6Chisel§r shall suffice.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16047,6 +16047,54 @@
       "tasks:9": {}
     },
     "227:10": {
+      "preRequisites:11": [
+        87
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Building Wands §rare wands that build surfaces for you. There are 4 main types of wands:\n\nThe §7Stone Building Wand§r can only place 5 blocks at a time, can only place blocks vertically, and can place ~130 blocks before it breaks.\n\nThe Iron Building Wand can place 9 blocks at a time, can place vertically or horizontally, and can place ~250 blocks.\n\nThe §bDiamond Building Wand §rcan place as many blocks that it can, which is ~1562 blocks before it breaks.\n\nThe §dUnbreakable Building Wand §rcan place an inventory\u0027s worth of blocks at a time, and never breaks.\n\nYou can change the mode of the Building Wand by pressing §6M§..",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 32767,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "betterbuilderswands:wanddiamond"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Building Wands",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 227,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "228:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -18166,6 +18214,13 @@
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": -60
+        },
+        "15:10": {
+          "id:3": 227,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -132,
+          "y:3": -12
         }
       }
     },
