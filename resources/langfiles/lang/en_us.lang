@@ -832,3 +832,6 @@ gregtech.machine.laser_engraver.uxv.name=Epic Electron Beam Lithographer IV
 gregtech.machine.laser_engraver.opv.name=Legendary Electron Beam Lithographer
 
 recipemap.laser_engraver.name=Electron Beam Lithography
+
+# Generic Renaming
+item.chisel.chisel_diamond.name=Steel Chisel
