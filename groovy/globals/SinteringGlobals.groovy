@@ -34,6 +34,18 @@ class SinteringGlobals {
         }
     }
 
+    public static class Blanket {
+        String name
+        int amountRequired
+        int duration
+
+        Blanket(name, amountRequired, duration) {
+            this.name = name
+            this.amountRequired = amountRequired
+            this.duration = duration
+        }
+    }
+
     public static sintering_fuels = [
         new Combustible('methane', false, 100, 100, 'carbon_dioxide', 50),
         new Combustible('syngas', false, 100, 100, 'carbon_dioxide', 50),
@@ -42,5 +54,9 @@ class SinteringGlobals {
 
     public static sintering_comburents = [
         new Comburent('air', 100, 50)
+    ]
+
+    public static sintering_blankets = [
+        new Blanket('argon', 100, 300)
     ]
 }

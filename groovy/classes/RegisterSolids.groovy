@@ -111,13 +111,11 @@ class RegisterSolids {
                 .fluidTemp(468)
                 .build()
 				
-	Material BoricAcid = new Material.Builder(20011, 'boric_acid')
+        new Material.Builder(20011, 'boric_acid')
                 .dust()
                 .color(0xedece8)
                 .components(Hydrogen, 3, Boron, 1, Oxygen, 3)
                 .build()
-		
-		BoricAcid.setFormula("(H3BO3)", true);
 		
 	new Material.Builder(20012, 'amorphous_boron')
                 .dust()
@@ -135,8 +133,6 @@ class RegisterSolids {
                 .color(0xdfcfc2)
                 .components(Boron, 2, Oxygen, 3)
                 .build()
-		
-	BoronTrioxide.setFormula("(B2O3)", true);
 
         new Material.Builder(20200, 'pmma')
                 .polymer(1)
@@ -158,6 +154,18 @@ class RegisterSolids {
                 .flags(GENERATE_FOIL)
                 .components(Carbon, 3, Hydrogen, 6)
                 .fluidTemp(468)
+                .build()
+
+        new Material.Builder(20203, 'sodium_tetraborate')
+                .dust()
+                .components(Sodium, 2, Boron, 4, Oxygen, 7)
+                .color(0xdbe7db)
+                .build()
+        
+        new Material.Builder(20204, 'electrolytic_boron')
+                .dust()
+                .components(Boron, 1)
+                .color(0x9bd4af)
                 .build()
 
         generatePurifiedElement(Lithium, 22000, false)
@@ -377,6 +385,13 @@ class RegisterSolids {
                 .dust()
                 .components(Aluminium, 2, Oxygen, 3)
                 .color(0xd0cff7)
+                .build()
+
+        new Material.Builder(32049, 'boron_carbide')
+                .dust()
+                .components(Boron, 4, Carbon, 1)
+                .flags(GENERATE_ROD)
+                .colorAverage()
                 .build()
         
         log.infoMC('Finished registering solids')

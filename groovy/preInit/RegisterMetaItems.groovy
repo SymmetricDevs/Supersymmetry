@@ -27,6 +27,7 @@ eventManager.listen {
         customMetaItems.addItem(101, "hot.cement.clinker")
         customMetaItems.addItem(102, "cement.dust")
         customMetaItems.addItem(103, "limestone.dust")
+        customMetaItems.addItem(104, "shape.mold.rod")
 
         customMetaItems.addItem(150, "mudbrick_mix")
         customMetaItems.addItem(151, "slaked_lime")
