@@ -36,6 +36,7 @@ class RegisterFluids {
         public static Material AmmoniumSulfate;
         public static Material SodiumFluoride;
         public static Material PotassiumFluoride;
+        public static Material PotassiumTetrafluoroborate;
 
         private static void generateHighPressureGases(Material materialName, int id, boolean generateCold){
                 var color = materialName.getMaterialRGB();
@@ -354,7 +355,7 @@ class RegisterFluids {
                         .build();
 
                 SodiumFluoride = new Material.Builder(32046, 'sodium_fluoride')
-                        .dust()
+                        .fluid().dust()
                         .components(Sodium, 1, Fluorine, 1)
                         .colorAverage()
                         .build();
@@ -363,6 +364,12 @@ class RegisterFluids {
                         .fluid().dust()
                         .components(Potassium, 1, Fluorine, 1)
                         .colorAverage()
+                        .build();
+                        
+                PotassiumTetrafluoroborate = new Material.Builder(32050, 'potassium_tetrafluoroborate')
+                        .fluid().dust()
+                        .components(Potassium, 1, Boron, 1, Fluorine, 4)
+                        .color(0x8fb5a3)
                         .build();
         }
 
@@ -1785,11 +1792,10 @@ class RegisterFluids {
                         .fluid(FluidTypes.GAS)
                         .color(0xcec929)
                         .build();
-						
-				new Material.Builder(12113, "boric_acid")
+
+                new Material.Builder(12113, "borate_liquor")
                         .fluid()
-                        .color(0xedece8)
-						.components(Hydrogen, 3, Boron, 1, Oxygen, 3)
+                        .color(0xacbbac)
                         .build();
 
                 Material HeavyWater = new Material.Builder(12200, "heavy_water")
@@ -1849,6 +1855,24 @@ class RegisterFluids {
                 new Material.Builder(12209, "potassium_fluoride_solution")
                         .fluid()
                         .components(Water, 1, PotassiumFluoride, 1)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12210, "tetrafluoroboric_acid")
+                        .fluid()
+                        .components(Water, 3, Hydrogen, 1, Boron, 1, Fluorine, 4)
+                        .color(0xa4ab91)
+                        .build();
+
+                new Material.Builder(12211, "potassium_tetrafluoroborate_solution")
+                        .fluid()
+                        .components(Water, 7, PotassiumTetrafluoroborate, 2)
+                        .color(0x8fb5a3)
+                        .build();
+
+                new Material.Builder(12212, "boron_trichloride")
+                        .fluid(FluidTypes.GAS)
+                        .components(Boron, 1, Chlorine, 3)
                         .colorAverage()
                         .build();
 

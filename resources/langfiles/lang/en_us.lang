@@ -171,9 +171,7 @@ material.two_two_dichlorohydrazobenzene=2,2'-Dichlorohydrazobenzene
 material.green_coke=Green Coke
 material.asphalt=Asphalt
 material.alumina=Alumina
-
 material.potassium_fluoride=Potassium Fluoride
-material.boric_acid=Boric Acid
 
 # Solids
 
@@ -271,6 +269,11 @@ material.high_purity_thorium=High Purity Thorium
 material.amorphous_boron=Amorphous Boron
 material.magnesium_oxide=Magnesium Oxide
 material.boron_trioxide=Boron Trioxide
+material.boric_acid=Boric Acid
+material.sodium_tetraborate=Sodium Tetraborate
+material.boron_carbide=Boron Carbide
+material.potassium_tetrafluoroborate=Potassium Tetrafluoroborate
+material.electrolytic_boron=Electrolytic Boron
 
 # Fluids
 
@@ -364,6 +367,10 @@ material.ethanol_solution=Ethanol Solution
 material.reformed_syngas=Reformed Syngas
 material.flue_gas=Flue Gas
 material.exhaust_steam=Exhaust Steam
+material.borate_liquor=Borate Liquor
+material.tetrafluoroboric_acid=Tetrafluoroboric Acid
+material.potassium_tetrafluoroborate_solution=Potassium Tetrafluoroborate Solution
+material.boron_trichloride=Boron Trichloride
 
 material.cresol=Cresol
 material.guaiacol=Guaiacol
@@ -787,6 +794,8 @@ metaitem.led_light.name=L.E.D. Lights
 metaitem.mineral_wool.name=Mineral Wool Sheet
 metaitem.hepa_filter.name=H.E.P.A. Filter
 
+metaitem.shape.mold.rod=Mold (Rod)
+
 # Multiblocked
 
 tile.multiblocked.item_input.name=Small Input Bus
@@ -802,36 +811,6 @@ tile.multiblocked.fluid_output.description=Fluid Output for Multiblocked Multibl
 tile.multiblocked.ore_sorter.name=Ore Sorter
 multiblocked.ore_sorter.name=Ore Sorter
 multiblocked.ore_sorter.description=Sorts Ores.
-
-tile.multiblocked.condenser.name=Condenser
-multiblocked.condenser.name=Condenser
-
-tile.multiblocked.cooling_unit.name=Cooling Unit
-multiblocked.cooling_unit.name=Cooling Unit
-
-tile.multiblocked.gas_turbine.name=Gas Turbine
-multiblocked.gas_turbine.name=Gas Turbine
-
-tile.multiblocked.heat_exchanger.name=Heat Exchanger
-multiblocked.heat_exchanger.name=Heat Exchanger
-
-tile.multiblocked.heat_radiator.name=Heat Radiator
-multiblocked.heat_radiator.name=Heat Radiator
-
-tile.multiblocked.large_weapons_factory.name=Large Weapons Factory
-multiblocked.large_weapons_factory.name=Large Weapons Factory
-
-tile.multiblocked.mhd_generator.name=Magnetohydrodynamic Generator
-multiblocked.mhd_generator.name=Magnetohydrodynamic Generator
-
-tile.multiblocked.mining_drill.name=Mining Drill
-multiblocked.mining_drill.name=Mining Drill
-
-tile.multiblocked.quencher.name=Quencher
-multiblocked.quencher.name=Quencher
-
-tile.multiblocked.railroad_engineering_station.name=Railroad Engineering Station
-multiblocked.railroad_engineering_station.name=Railroad Engineering Station
 
 # Nether
 tile.hellsand.name=Mineral-Rich Sand
