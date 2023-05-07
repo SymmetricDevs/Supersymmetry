@@ -1,0 +1,6 @@
+{
+  "parent": "items",
+  "textures": {
+    "layer0": "chisel:items/chisel_diamond"
+  }
+}
