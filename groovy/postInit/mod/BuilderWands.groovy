@@ -12,16 +12,16 @@ crafting.addShaped('betterbuilderswands:wandiron', item('betterbuilderswands:wan
     [ore('stickIron'), null, null]
 ])
 
-// Diamond Wand
+ // Diamond Wand
 crafting.addShaped('betterbuilderswands:wanddiamond', item('betterbuilderswands:wanddiamond'), [
-    [null, null, ore('plateDiamond')],
-    [null, ore('stickSteel'), null],
-    [ore('stickSteel'), null, null]
+[null, ore('string'), ore('plateDiamond')],
+[null, ore('stickSteel'), ore('string')],
+[ore('stickSteel'), null, null]
 ])
 
 // Unbreakable Wand
 crafting.replaceShaped('betterbuilderswands:wandunbreakable', item('betterbuilderswands:wandunbreakable'), [
-    [null, null, ore('blockObsidian')],
-    [null, ore('stickSteel'), null],
-    [ore('stickSteel'), null, null]
+[null, metaitem('duct_tape'), ore('blockObsidian')],
+[null, ore('stickSteel'), metaitem('duct_tape')],
+[ore('stickSteel'), null, null]
 ])
