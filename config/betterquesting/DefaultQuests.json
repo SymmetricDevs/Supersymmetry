@@ -3729,7 +3729,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §7§6Steam Mixer §rmixes several dusts or fluids together. It will be required for mixing Sulfur Trioxide and Water to create H2SO4. ",
+          "desc:8": "The §7§6Steam Mixer §rmixes several dusts or fluids together. It will be required for mixing Sulfur Trioxide and Water to create H2SO4. \n\nIf some mixer recipes require a §6programmed circuit§r, you can §aclick §ron the \"G\" in the bottom right of the Mixer to change the configuration.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4447,20 +4447,7 @@
         }
       },
       "questID:3": 56,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 64,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:torch"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -4474,7 +4461,7 @@
               "Count:3": 1,
               "Damage:2": 2,
               "OreDict:8": "",
-              "id:8": "gregtech:steam_casing"
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -4691,7 +4678,7 @@
     },
     "61:10": {
       "preRequisites:11": [
-        30
+        228
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -4786,7 +4773,7 @@
     },
     "62:10": {
       "preRequisites:11": [
-        30
+        228
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5511,7 +5498,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Stibnite and Antimony",
@@ -5572,7 +5559,7 @@
             "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Battery Alloy",
@@ -12084,7 +12071,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Battery Buffer",
@@ -16095,6 +16082,323 @@
       }
     },
     "228:10": {
+      "preRequisites:11": [
+        45
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Gunpowder §rcan be obtained by mixing §6saltpeter §r(found in salt deposits in deserts), §6sulfur §rand§7§6 coal.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "minecraft:gunpowder"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Gunpowder",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 228,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "minecraft:gunpowder"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "229:10": {
+      "preRequisites:11": [
+        12
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "All §6stones §rcan be turned into beautiful bricks. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "susy:susy_stone_bricks"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Stone Bricks",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 229,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "susy:susy_stone_bricks"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "230:10": {
+      "preRequisites:11": [
+        51
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Sometimes building large structures can be a little tedious, and take a lot of effort. §6Building Gadgets §raims to make building a little bit easier.\n\nThe §6Building Gadget §rallows you to build structures using a set of different Building Modes. It allows you to build structures at range. Simply§a right click§r to place the blocks, and §asneak-right click§r to set the block type to place.\n\nThe §6Exchanging Gadget §rwill swap the block you are looking at with the block the tool is set to. Simply §aright click§r to swap the blocks, and §asneak-right click §rto set the block type to place.\n\nThe §6Copy Paste Gadget §rwill allow you to copy an area of a large area of blocks and paste it in a different location. You can view the required materials on the tooltip.\n\nThe §cDestruction Gadget§r allows you to void large areas. The Gadget will void the blocks instead of dropping them. There is a single §cUndo§r if you accidentally use the tool, which can be activated via the GUI.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "buildinggadgets:buildingtool",
+            "tag:10": {
+              "blockstate:10": {
+                "Name:8": "minecraft:air"
+              }
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Building Gadgets",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 230,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "buildinggadgets:buildingtool",
+              "tag:10": {
+                "blockstate:10": {
+                  "Name:8": "minecraft:air"
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "buildinggadgets:exchangertool",
+              "tag:10": {
+                "blockstate:10": {
+                  "Name:8": "minecraft:air"
+                }
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "buildinggadgets:copypastetool",
+              "tag:10": {
+                "mode:8": "Copy"
+              }
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "buildinggadgets:destructiontool",
+              "tag:10": {
+                "fuzzy:1": 1,
+                "overlay:1": 1
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "231:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6§rIron §6stairs §rand §7§6catwalks §rcan be used to supplement the §4§r§cG§6r§ce§6g§ci§6c§r aesthetic. §rThe factory must grow.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "industrialrenewal:catwalk_stair"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Factory Must Grow",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 231,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk_stair"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "232:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -16353,139 +16657,125 @@
           "y:3": 420
         },
         "26:10": {
-          "id:3": 61,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 162,
-          "y:3": 432
-        },
-        "27:10": {
-          "id:3": 62,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 282,
-          "y:3": 432
-        },
-        "28:10": {
           "id:3": 74,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 264
         },
-        "29:10": {
+        "27:10": {
           "id:3": 76,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": -84
         },
-        "30:10": {
+        "28:10": {
           "id:3": 87,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 252
         },
-        "31:10": {
+        "29:10": {
           "id:3": 88,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 144
         },
-        "32:10": {
+        "30:10": {
           "id:3": 89,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -192,
           "y:3": 492
         },
-        "33:10": {
+        "31:10": {
           "id:3": 90,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 360
         },
-        "34:10": {
+        "32:10": {
           "id:3": 91,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -192,
           "y:3": 390
         },
-        "35:10": {
+        "33:10": {
           "id:3": 93,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 42,
           "y:3": 216
         },
-        "36:10": {
+        "34:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 360
         },
-        "37:10": {
+        "35:10": {
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 264
         },
-        "38:10": {
+        "36:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 264
         },
-        "39:10": {
+        "37:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 216
         },
-        "40:10": {
+        "38:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 216
         },
-        "41:10": {
+        "39:10": {
           "id:3": 125,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 216
         },
-        "42:10": {
+        "40:10": {
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 222,
           "y:3": 312
         },
-        "43:10": {
+        "41:10": {
           "id:3": 135,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 36
         },
-        "44:10": {
+        "42:10": {
           "id:3": 149,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 312
         },
-        "45:10": {
+        "43:10": {
           "id:3": 187,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -16733,193 +17023,214 @@
           "y:3": -72
         },
         "30:10": {
+          "id:3": 61,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 192
+        },
+        "31:10": {
+          "id:3": 62,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 144
+        },
+        "32:10": {
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": -108
         },
-        "31:10": {
+        "33:10": {
           "id:3": 64,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 192
         },
-        "32:10": {
+        "34:10": {
           "id:3": 65,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 192
         },
-        "33:10": {
+        "35:10": {
           "id:3": 66,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -312,
           "y:3": 276
         },
-        "34:10": {
+        "36:10": {
           "id:3": 71,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 6,
           "y:3": 228
         },
-        "35:10": {
+        "37:10": {
           "id:3": 72,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 144
         },
-        "36:10": {
+        "38:10": {
           "id:3": 73,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 192
         },
-        "37:10": {
+        "39:10": {
           "id:3": 75,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 48,
           "y:3": -24
         },
-        "38:10": {
+        "40:10": {
           "id:3": 77,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 96
         },
-        "39:10": {
+        "41:10": {
           "id:3": 78,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -216,
           "y:3": 132
         },
-        "40:10": {
+        "42:10": {
           "id:3": 79,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 48
         },
-        "41:10": {
+        "43:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 96
         },
-        "42:10": {
+        "44:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 60
         },
-        "43:10": {
+        "45:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 168
         },
-        "44:10": {
+        "46:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 96
         },
-        "45:10": {
+        "47:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 96
         },
-        "46:10": {
+        "48:10": {
           "id:3": 85,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 132
         },
-        "47:10": {
+        "49:10": {
           "id:3": 86,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 24
         },
-        "48:10": {
+        "50:10": {
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": -108
         },
-        "49:10": {
+        "51:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": -12
         },
-        "50:10": {
+        "52:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -12
         },
-        "51:10": {
+        "53:10": {
           "id:3": 97,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 240
         },
-        "52:10": {
+        "54:10": {
           "id:3": 104,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -204,
           "y:3": 312
         },
-        "53:10": {
+        "55:10": {
           "id:3": 130,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -204,
           "y:3": 228
         },
-        "54:10": {
+        "56:10": {
           "id:3": 147,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 96
         },
-        "55:10": {
+        "57:10": {
           "id:3": 148,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -144
         },
-        "56:10": {
+        "58:10": {
           "id:3": 170,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 60,
           "y:3": 228
+        },
+        "59:10": {
+          "id:3": 228,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 144
         }
       }
     },
@@ -18221,6 +18532,27 @@
           "sizeY:3": 48,
           "x:3": -132,
           "y:3": -12
+        },
+        "16:10": {
+          "id:3": 229,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": -96
+        },
+        "17:10": {
+          "id:3": 230,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 372,
+          "y:3": -12
+        },
+        "18:10": {
+          "id:3": 231,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 156,
+          "y:3": -96
         }
       }
     },
@@ -18671,7 +19003,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
