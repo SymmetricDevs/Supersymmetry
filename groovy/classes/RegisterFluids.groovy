@@ -1186,6 +1186,36 @@ class RegisterFluids {
                         .color(0x7fa3a0)
                         .build();
 
+                new Material.Builder(11121, 'ethanolamine')
+                        .fluid()
+                        .components(Carbon, 2, Hydrogen, 7, Nitrogen, 1, Oxygen, 1)
+                        .color(0x56a6e3)
+                        .build();
+
+                new Material.Builder(11122, 'diethanolamine')
+                        .fluid()
+                        .components(Carbon, 4, Hydrogen, 11, Nitrogen, 1, Oxygen, 2)
+                        .color(0x4296d6)
+                        .build();
+
+                new Material.Builder(11123, 'triethanolamine')
+                        .fluid()
+                        .components(Carbon, 6, Hydrogen, 15, Nitrogen, 1, Oxygen, 3)
+                        .color(0x2e86c9)
+                        .build();
+
+                new Material.Builder(11124, 'ethylene_glycol')
+                        .fluid()
+                        .components(Carbon, 2, Hydrogen, 6, Oxygen, 2)
+                        .color(0x2e86c9)
+                        .build();
+
+                new Material.Builder(11125, 'carbon_disulfide')
+                        .fluid()
+                        .components(Carbon, 1, Sulfur, 2)
+                        .colorAverage()
+                        .build();
+
                 new Material.Builder(12000, 'flue_gas')
                         .fluid(FluidTypes.GAS)
                         .color(0x484a48)

@@ -275,6 +275,15 @@ material.boron_carbide=Boron Carbide
 material.potassium_tetrafluoroborate=Potassium Tetrafluoroborate
 material.electrolytic_boron=Electrolytic Boron
 
+material.methylenedianiline=Methylenedianiline
+material.methylene_diphenyl_diisocyanate=Methylene Diphenyl Diisocyanate
+material.triethylenediamine=Triethylenediamine
+material.polyurethane=Polyurethane
+material.memory_foam=Memory Foam
+material.rayon=Rayon
+material.alkali_cellulose=Alkali Cellulose
+material.sodium_cellulose_xanthate=Sodium Cellulose Xanthate
+
 # Fluids
 
 material.smoke_bomb_mix=Smoke Bomb Mix
@@ -426,6 +435,10 @@ material.high_purity_bromine=High Purity Bromine
 material.high_purity_mercury=High Purity Mercury
 material.high_purity_water=High Purity Water
 
+material.ethanolamine=Ethanolamine
+material.diethanolamine=Diethanolamine
+material.triethanolamine=Triethanolamine
+
 # Thermodynamics
 
 material.hot_hp_hydrogen=Hot High-Pressure Hydrogen
@@ -521,6 +534,9 @@ material.warm_brine=Warm Brine
 
 material.hot_air=Hot Air
 material.hot_nitrogen=Hot Nitrogen
+
+material.ethylene_glycol=Ethylene Glycol
+material.carbon_disulfide=Carbon Disulfide
 
 # Ores
 

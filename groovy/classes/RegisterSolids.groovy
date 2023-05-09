@@ -134,6 +134,63 @@ class RegisterSolids {
                 .components(Boron, 2, Oxygen, 3)
                 .build()
 
+        new Material.Builder(20015, 'methylenedianiline')
+                .dust()
+                .components(Carbon, 13, Hydrogen, 14, Nitrogen, 2)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(20016, 'methylene_diphenyl_diisocyanate')
+                .dust()
+                .components(Carbon, 15, Hydrogen, 10, Nitrogen, 2, Oxygen, 2)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(20017, 'triethylenediamine')
+                .dust()
+                .components(Carbon, 6, Hydrogen, 12, Nitrogen, 2)
+                .colorAverage()
+                .build()
+
+        Material Polyurethane = new Material.Builder(20018, 'polyurethane')
+                .polymer(1)
+                .components(Carbon, 17, Hydrogen, 16, Nitrogen, 2, Oxygen, 4)
+                .color(0xd1d1d1)
+                .flags(GENERATE_FINE_WIRE)
+                .fluidTemp(438)
+                .build()
+
+        Polyurethane.setFormula("(C15H10N2O2)(C2H6O2)", true);
+
+        new Material.Builder(20019, 'memory_foam')
+                .polymer(1)
+                .flags(GENERATE_PLATE)
+                .color(0xFFFFFF)
+                .fluidTemp(438)
+                .build()
+
+        Material Rayon = new Material.Builder(20020, 'rayon')
+                .polymer(1)
+                .components(Carbon, 6, Hydrogen, 10, Oxygen, 5)
+                .flags(GENERATE_FINE_WIRE)
+                .color(0xaee8d9)
+                .fluidTemp(438)
+                .build()
+
+        Rayon.setFormula("C6H5(OH)4OH", true);
+
+        new Material.Builder(20021, 'alkali_cellulose')
+                .dust()
+                .components(Carbon, 6, Hydrogen, 9, Oxygen, 5, Sodium, 1)
+                .color(0x7d6547)
+                .build()
+
+        new Material.Builder(20022, 'sodium_cellulose_xanthate')
+                .dust()
+                .components(Carbon, 6, Hydrogen, 9, Oxygen, 5, Carbon, 1, Sulfur, 2, Sodium, 1)
+                .color(0x7d6057)
+                .build()
+
         new Material.Builder(20200, 'pmma')
                 .polymer(1)
                 .color(0x72e0c9)
