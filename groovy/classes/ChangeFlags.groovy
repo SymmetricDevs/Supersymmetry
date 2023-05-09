@@ -28,7 +28,8 @@ class ChangeFlags {
         //Iodine.dust().build();
         //Hafnium.ingot().build();
         //Strontium.ingot().build();
-
+		Borax.setProperty(PropertyKey.ORE, new OreProperty());
+		
         log.infoMC("Finished modifying flags")
     }
 }
