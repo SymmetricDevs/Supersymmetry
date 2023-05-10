@@ -6,8 +6,9 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 
-
 println("Running GregTech.groovy...")
+
+//REMOVALS
 
 def name_removals = [
     'gregtech:iron_magnetic_stick',
@@ -16,6 +17,19 @@ def name_removals = [
 for (name in name_removals) {
     //crafting.remove(name)
 }
+
+// Polycaprolactam Bar * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCaprolactam')], [fluid('nitrogen') * 1000])
+// Monocrystalline Silicon Boule * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSilicon') * 32, metaitem('dustSmallGalliumArsenide')], null)
+// Cupronickel Coil Block * 1
+mods.gregtech.assembler.removeByInput(30, [metaitem('wireGtDoubleCupronickel') * 8, metaitem('foilBronze') * 8], [fluid('tin_alloy') * 144])
+// Kanthal Coil Block * 1
+mods.gregtech.assembler.removeByInput(120, [metaitem('wireGtDoubleKanthal') * 8, metaitem('foilAluminium') * 8], [fluid('copper') * 144])
+// Nichrome Coil Block * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('wireGtDoubleNichrome') * 8, metaitem('foilStainlessSteel') * 8], [fluid('aluminium') * 144])
+
+//ADDITIONS
 
 crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bronze'), [
     [ore('craftingToolHardHammer'), ore('stickBronze'), ore('screwBronze')],
@@ -160,3 +174,83 @@ mods.gregtech.alloy_smelter.removeByInput(7, [metaitem('dustSulfur'), metaitem('
 mods.gregtech.assembler.removeByInput(30, [metaitem('screwSteel') * 2, metaitem('cover.item.detector'), metaitem('pipeNormalItemBrass'), item('minecraft:ender_pearl')], null)
 // Fluid Voiding Cover * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('screwSteel') * 2, metaitem('cover.fluid.detector'), metaitem('pipeNormalFluidBronze'), item('minecraft:ender_pearl')], null)
+
+//Coils
+
+mods.gregtech.centrifuge.recipeBuilder()
+        .fluidInputs(fluid('lava') * 1000)
+        .outputs(metaitem('mineral_wool'))
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .fluidInputs(fluid('tin_alloy') * 144)
+        .inputs(metaitem('wireGtDoubleCupronickel') * 8)
+        .inputs(metaitem('mineral_wool') * 8)
+        .inputs(metaitem('foilBronze') * 8)
+        .outputs(item('gregtech:wire_coil'))
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .fluidInputs(fluid('copper') * 144)
+        .inputs(metaitem('wireGtDoubleKanthal') * 8)
+        .inputs(metaitem('mineral_wool') * 8)
+        .inputs(metaitem('foilAluminium') * 8)
+        .outputs(item('gregtech:wire_coil', 1))
+        .duration(300)
+        .EUt(120)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .fluidInputs(fluid('aluminium') * 144)
+        .inputs(metaitem('wireGtDoubleNichrome') * 8)
+        .inputs(metaitem('mineral_wool') * 8)
+        .inputs(metaitem('foilStainlessSteel') * 8)
+        .outputs(item('gregtech:wire_coil', 2))
+        .duration(400)
+        .EUt(480)
+        .buildAndRegister();
+
+//Cleanroom Filter Casings
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(metaitem('plateSteel') * 4)
+        .inputs(metaitem('foilAluminium') * 8)
+        .inputs(metaitem('foilPolypropylene') * 16)
+        .outputs(metaitem('hepa_filter'))
+        .duration(80)
+        .EUt(120)
+        .buildAndRegister();
+
+crafting.replaceShaped('gregtech:filter_casing', item('gregtech:cleanroom_casing', 1) * 2, [
+        [item('minecraft:iron_bars'), item('minecraft:iron_bars'), item('minecraft:iron_bars')],
+        [metaitem('electric.motor.mv'), metaitem('rotorSteel'), metaitem('electric.pump.mv')],
+        [metaitem('frameSteel'), metaitem('hepa_filter'), metaitem('frameSteel')]
+])
+
+//Beds
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(metaitem('stickLongWood') * 4)
+        .inputs(metaitem('plateWood') * 8)
+        .inputs(metaitem('plateMemoryFoam') * 16)
+        .inputs(metaitem('wireFineRayon') * 64)
+        .inputs(metaitem('springSmallSteel') * 8)
+        .outputs(item('minecraft:bed'))
+        .duration(400)
+        .EUt(960)
+        .buildAndRegister();
+
+//Lights
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(metaitem('cableGtSingleTin') * 2)
+        .inputs(metaitem('graphite_electrode'))
+        .inputs(metaitem('component.glass.tube') * 8)
+        .outputs(metaitem('carbon_arc_lamp') * 8)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();

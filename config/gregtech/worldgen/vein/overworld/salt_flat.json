@@ -29,7 +29,7 @@
         "secondary": "ore:rock_salt"
       },
       {
-        "between": "ore:rock_salt"
+        "between": "ore:saltpeter"
       },
       {
         "sporadic": "ore:trona"

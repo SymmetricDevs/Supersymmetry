@@ -20,6 +20,8 @@ class ChangeFlags {
         Lead.addFlags("generate_round");
         Aluminium.addFlags("generate_round");
         Nickel.addFlags("generate_rod");
+        Tungsten.addFlags("generate_fine_wire");
+        Tantalum.addFlags("generate_rod");
 
         GregTechAPI.MaterialRegistry.get("fluix").addFlags("disable_decomposition", "generate_plate", "generate_lens")
 

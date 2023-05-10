@@ -9,8 +9,6 @@ def PYROLYSE_OVEN = recipemap('pyrolyse_oven');
 def DISTILLATION_TOWER = recipemap('distillation_tower');
 def CENTRIFUGE = recipemap('centrifuge');
 
-//TODO: UNCOMMENT WHEN SUSYCORE 0.0.8 IS OUT
-/*
 PYROLYSE_OVEN.recipeBuilder()
         .inputs(item('minecraft:coal', 1) * 16)
         .outputs(metaitem('gemCoke') * 12)
@@ -30,7 +28,7 @@ PYROLYSE_OVEN.recipeBuilder()
         .buildAndRegister()
         
 PYROLYSE_OVEN.recipeBuilder()
-        .inputs(metaitem('gemAnthracite')) * 16)
+        .inputs(metaitem('gemAnthracite') * 16)
         .outputs(metaitem('gemCoke') * 14)
         .fluidOutputs(fluid('coal_gas') * 3200)
         .fluidOutputs(fluid('coal_tar') * 3200)
@@ -86,5 +84,3 @@ DISTILLATION_TOWER.recipeBuilder()
         .duration(320)
         .EUt(48)
         .buildAndRegister()
-
- */

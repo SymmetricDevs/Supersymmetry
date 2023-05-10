@@ -171,6 +171,7 @@ material.two_two_dichlorohydrazobenzene=2,2'-Dichlorohydrazobenzene
 material.green_coke=Green Coke
 material.asphalt=Asphalt
 material.alumina=Alumina
+material.potassium_fluoride=Potassium Fluoride
 
 # Solids
 
@@ -187,6 +188,101 @@ material.gallium_phosphate=Gallium Phosphate
 material.lithium_niobate=Lithium Niobate
 material.lead_zirconate_titanate=Lead Zirconate Titanate
 material.polyvinylidene_fluoride=Polyvinylidene Fluoride
+
+
+material.pmma=Polymethyl Methacrylate (PMMA)
+material.zinc_chloride=Zinc Chloride
+material.polypropylene=Polypropylene
+
+material.high_purity_lithium=High Purity Lithium
+material.high_purity_beryllium=High Purity Beryllium
+material.high_purity_boron=High Purity Boron
+material.high_purity_carbon=High Purity Carbon
+material.high_purity_sodium=High Purity Sodium
+material.high_purity_magnesium=High Purity Magnesium
+material.high_purity_aluminium=High Purity Aluminium
+material.high_purity_silicon=High Purity Silicon
+material.high_purity_phosphorus=High Purity Phosphorus
+material.high_purity_sulfur=High Purity Sulfur
+material.high_purity_potassium=High Purity Potassium
+material.high_purity_calcium=High Purity Calcium
+material.high_purity_scandium=High Purity Scandium
+material.high_purity_titanium=High Purity Titanium
+material.high_purity_vanadium=High Purity Vanadium
+material.high_purity_chrome=High Purity Chrome
+material.high_purity_manganese=High Purity Manganese
+material.high_purity_iron=High Purity Iron
+material.high_purity_cobalt=High Purity Cobalt
+material.high_purity_nickel=High Purity Nickel
+material.high_purity_copper=High Purity Copper
+material.high_purity_zinc=High Purity Zinc
+material.high_purity_gallium=High Purity Gallium
+material.high_purity_germanium=High Purity Germanium
+material.high_purity_arsenic=High Purity Arsenic
+material.high_purity_selenium=High Purity Selenium
+material.high_purity_rubidium=High Purity Rubidium
+material.high_purity_strontium=High Purity Strontium
+material.high_purity_yttrium=High Purity Yttrium
+material.high_purity_zirconium=High Purity Zirconium
+material.high_purity_niobium=High Purity Niobium
+material.high_purity_molybdenum=High Purity Molybdenum
+material.high_purity_technetium=High Purity Technetium
+material.high_purity_ruthenium=High Purity Ruthenium
+material.high_purity_rhodium=High Purity Rhodium
+material.high_purity_palladium=High Purity Palladium
+material.high_purity_silver=High Purity Silver
+material.high_purity_cadmium=High Purity Cadmium
+material.high_purity_indium=High Purity Indium
+material.high_purity_tin=High Purity Tin
+material.high_purity_antimony=High Purity Antimony
+material.high_purity_tellurium=High Purity Tellurium
+material.high_purity_iodine=High Purity Iodine
+material.high_purity_caesium=High Purity Caesium
+material.high_purity_barium=High Purity Barium
+material.high_purity_lanthanum=High Purity Lanthanum
+material.high_purity_hafnium=High Purity Hafnium
+material.high_purity_tantalum=High Purity Tantalum
+material.high_purity_tungsten=High Purity Tungsten
+material.high_purity_rhenium=High Purity Rhenium
+material.high_purity_osmium=High Purity Osmium
+material.high_purity_iridium=High Purity Iridium
+material.high_purity_platinum=High Purity Platinum
+material.high_purity_gold=High Purity Gold
+material.high_purity_thallium=High Purity Thallium
+material.high_purity_lead=High Purity Lead
+material.high_purity_bismuth=High Purity Bismuth
+material.high_purity_cerium=High Purity Cerium
+material.high_purity_praseodymium=High Purity Praseodymium
+material.high_purity_neodymium=High Purity Neodymium
+material.high_purity_samarium=High Purity Samarium
+material.high_purity_europium=High Purity Europium
+material.high_purity_gadolinium=High Purity Gadolinium
+material.high_purity_terbium=High Purity Terbium
+material.high_purity_dysprosium=High Purity Dysprosium
+material.high_purity_holmium=High Purity Holmium
+material.high_purity_erbium=High Purity Erbium
+material.high_purity_thulium=High Purity Thulium
+material.high_purity_ytterbium=High Purity Ytterbium
+material.high_purity_lutetium=High Purity Lutetium
+material.high_purity_thorium=High Purity Thorium
+
+material.amorphous_boron=Amorphous Boron
+material.magnesium_oxide=Magnesium Oxide
+material.boron_trioxide=Boron Trioxide
+material.boric_acid=Boric Acid
+material.sodium_tetraborate=Sodium Tetraborate
+material.boron_carbide=Boron Carbide
+material.potassium_tetrafluoroborate=Potassium Tetrafluoroborate
+material.electrolytic_boron=Electrolytic Boron
+
+material.methylenedianiline=Methylenedianiline
+material.methylene_diphenyl_diisocyanate=Methylene Diphenyl Diisocyanate
+material.triethylenediamine=Triethylenediamine
+material.polyurethane=Polyurethane
+material.memory_foam=Memory Foam
+material.rayon=Rayon
+material.alkali_cellulose=Alkali Cellulose
+material.sodium_cellulose_xanthate=Sodium Cellulose Xanthate
 
 # Fluids
 
@@ -270,6 +366,7 @@ material.impure_soda_ash_solution=Impure Soda Ash Solution
 material.impure_sodium_hydroxide_solution=Impure Sodium Hydroxide Solution
 material.cryolite=Cryolite
 material.sodium_fluoride_solution=Sodium Fluoride Solution
+material.potassium_fluoride_solution=Potassium Fluoride Solution
 material.concentrated_red_mud=Concentrated Red Mud
 material.furfural_solution=Furfural Solution
 material.syngas=Syngas
@@ -279,6 +376,10 @@ material.ethanol_solution=Ethanol Solution
 material.reformed_syngas=Reformed Syngas
 material.flue_gas=Flue Gas
 material.exhaust_steam=Exhaust Steam
+material.borate_liquor=Borate Liquor
+material.tetrafluoroboric_acid=Tetrafluoroboric Acid
+material.potassium_tetrafluoroborate_solution=Potassium Tetrafluoroborate Solution
+material.boron_trichloride=Boron Trichloride
 
 material.cresol=Cresol
 material.guaiacol=Guaiacol
@@ -314,6 +415,29 @@ material.isotopically_pure_hydrogen_sulfide=Isotopically Pure Hydrogen Sulfide
 material.impure_semiheavy_hydrogen_sulfide=Impure Semi-Heavy Hydrogen Sulfide
 material.impure_heavy_hydrogen_sulfide=Impure Heavy Hydrogen Sulfide
 material.sea_water=Sea Water
+
+material.novolacs=Novolacs Photoresist
+material.silicon_tetrachloride=Silicon Tetrachloride
+material.purified_silicon_tetrachloride=Purified Silicon Tetrachloride
+material.sea_water=Sea Water
+
+material.high_purity_hydrogen=High Purity Hydrogen
+material.high_purity_helium=High Purity Helium
+material.high_purity_nitrogen=High Purity Nitrogen
+material.high_purity_oxygen=High Purity Oxygen
+material.high_purity_fluorine=High Purity Fluorine
+material.high_purity_neon=High Purity Neon
+material.high_purity_chlorine=High Purity Chlorine
+material.high_purity_argon=High Purity Argon
+material.high_purity_krypton=High Purity Krypton
+material.high_purity_xenon=High Purity Xenon
+material.high_purity_bromine=High Purity Bromine
+material.high_purity_mercury=High Purity Mercury
+material.high_purity_water=High Purity Water
+
+material.ethanolamine=Ethanolamine
+material.diethanolamine=Diethanolamine
+material.triethanolamine=Triethanolamine
 
 # Thermodynamics
 
@@ -410,6 +534,9 @@ material.warm_brine=Warm Brine
 
 material.hot_air=Hot Air
 material.hot_nitrogen=Hot Nitrogen
+
+material.ethylene_glycol=Ethylene Glycol
+material.carbon_disulfide=Carbon Disulfide
 
 # Ores
 
@@ -649,6 +776,42 @@ metaitem.graphite_electrode.name=Graphite Electrode
 metaitem.rydberg_atom_array.name=Rydberg Atom Array
 metaitem.malted_grain.name=Malted Grain
 
+metaitem.mask.ic.name=Photolithography Mask (IC)
+metaitem.mask.cpu.name=Photolithography Mask (CPU)
+metaitem.mask.ram.name=Photolithography Mask (RAM)
+metaitem.mask.pcb.name=Photolithography Mask (PCB)
+metaitem.mask.ulpic.name=Photolithography Mask (ULPIC)
+
+metaitem.wafer.doped.silicon.name=Doped Silicon Wafer
+metaitem.patterned.ic.name=Silicon Wafer (IC Pattern)
+metaitem.patterned.cpu.name=Silicon Wafer (CPU Pattern)
+metaitem.patterned.ram.name=Silicon Wafer (RAM Pattern)
+metaitem.patterned.ulpic.name=Silicon Wafer (ULPIC Pattern)
+
+metaitem.patterned.board.coated.name=Patterned Coated Circuit Board
+metaitem.patterned.board.phenolic.name=Patterned Phenolic Circuit Board
+metaitem.patterned.board.plastic.name=Patterned Plastic Circuit Board
+
+metaitem.laminated.board.phenolic.name=Laminated Phenolic Circuit Board
+
+metaitem.etched.ic.name=Etched Integrated Logic Circuit Wafer
+metaitem.etched.cpu.name=Etched CPU Wafer
+metaitem.etched.ram.name=Etched RAM Wafer
+metaitem.etched.ulpic.name=Etched ULPIC Wafer
+
+metaitem.seed_crystal.silicon.name=Silicon Seed Crystal
+
+metaitem.carbon_arc_lamp.name=Carbon Arc Lamp
+metaitem.incandescent_light.name=Incandescent Lightbulb
+metaitem.halogen_light.name=Halogen Lightbulb
+metaitem.fluorescent_light.name=Fluorescent Lightbulb
+metaitem.led_light.name=L.E.D. Lights
+
+metaitem.mineral_wool.name=Mineral Wool Sheet
+metaitem.hepa_filter.name=H.E.P.A. Filter
+
+metaitem.shape.mold.rod=Mold (Rod)
+
 # Multiblocked
 
 tile.multiblocked.item_input.name=Small Input Bus
@@ -668,3 +831,23 @@ multiblocked.ore_sorter.description=Sorts Ores.
 # Nether
 tile.hellsand.name=Mineral-Rich Sand
 tile.magma.name=Magma-Infused Netherrack
+
+# Laser Engraver Renaming
+gregtech.machine.laser_engraver.lv.name=Basic Electron Beam Lithographer
+gregtech.machine.laser_engraver.mv.name=Advanced Electron Beam Lithographer
+gregtech.machine.laser_engraver.hv.name=Advanced Electron Beam Lithographer II
+gregtech.machine.laser_engraver.ev.name=Advanced Electron Beam Lithographer III
+gregtech.machine.laser_engraver.iv.name=Elite Electron Beam Lithographer
+gregtech.machine.laser_engraver.luv.name=Elite Electron Beam Lithographer II
+gregtech.machine.laser_engraver.zpm.name=Elite Electron Beam Lithographer III
+gregtech.machine.laser_engraver.uv.name=Ultimate Electron Beam Lithographer
+gregtech.machine.laser_engraver.uhv.name=Epic Electron Beam Lithographer
+gregtech.machine.laser_engraver.uev.name=Epic Electron Beam Lithographer II
+gregtech.machine.laser_engraver.uiv.name=Epic Electron Beam Lithographer III
+gregtech.machine.laser_engraver.uxv.name=Epic Electron Beam Lithographer IV
+gregtech.machine.laser_engraver.opv.name=Legendary Electron Beam Lithographer
+
+recipemap.laser_engraver.name=Electron Beam Lithography
+
+# Generic Renaming
+item.chisel.chisel_diamond.name=Steel Chisel

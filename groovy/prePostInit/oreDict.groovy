@@ -7,8 +7,19 @@ import gregtech.common.blocks.StoneVariantBlock
 
 import net.minecraftforge.oredict.OreDictionary
 
+//Prevent TechGuns from crashing servers
+ore('ingotCopper').remove(item('techguns:itemshared', 79))
+ore('ingotTin').remove(item('techguns:itemshared', 80))
+
 //Force stick to exist
 ore('stickWood').add(item('minecraft:stick'))
+
+//Light oredict
+ore('gtLight').add(metaitem('incandescent_light'))
+ore('gtLight').add(metaitem('halogen_light'))
+ore('gtLight').add(metaitem('fluorescent_light'))
+ore('gtLight').add(metaitem('led_light'))
+ore('gtLight').add(metaitem('carbon_arc_lamp'))
 
 //Ore dict changes and unification
 

@@ -1536,7 +1536,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A grindstone can be used for extracting more dust out of your ores. It\u0027s not that good... but it\u0027s a start. It\u0027s also §cmanual§r, so you have to power it using your hands.\n\nPut a §6Wooden Crank §ron the grindstone and §aright click §ron it to rotate it. After a few seconds, the ore will have turned into dust.\n\nPutting 1 ore in results in an output of 2 dusts.",
+          "desc:8": "A grindstone can be used for extracting more dust out of your ores. It\u0027s not that good... but it\u0027s a start. It\u0027s also §cmanual§r, so you have to power it using your hands.\n\nPut a §6Wooden Crank §ron the grindstone and §aright click §ron it to rotate it. After a few seconds, the ore will have turned into dust.\n\nPutting 1 ore in results in an output of 2 dusts. \n\n§cThe quartz grindstone at the moment does not have compatibility. This will be patched (eventually)",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1548,7 +1548,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Macerator V0.2 Beta ",
+          "name:8": "Macerator V0.2 Beta §c§l(WORK IN PROGRESS)",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -2021,7 +2021,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§7Sphalerite §rveins contain §7sphalerite ore§r, an important source of zinc. It\u0027s found on Earth at altitude 0 to 60, but also in the deepest part of the crust.\n\nZinc is a slightly brittle metal at room temperature and has a shiny-greyish appearance.\n\nZincwill be used to create magnets, but if you can\u0027t find zinc, §amagnetite ore §rcan be used instead.",
+          "desc:8": "§7Sphalerite §rveins contain §7sphalerite ore§r, an important source of zinc. It\u0027s found on Earth at altitude 0 to 60, but also in the deepest part of the crust.\n\nZinc is a slightly brittle metal at room temperature and has a shiny-greyish appearance.\n\nZinc will be used to create magnets, but if you can\u0027t find zinc, §amagnetite ore §rcan be used instead.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3252,7 +3252,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Steam Roaster §rburns chemicals using steam. The Roaster will also be used as a reaction furnace. This machine will be used for the production of §6sulfur§r. The Roaster will be used in many chemical processes in LV and onwards.",
+          "desc:8": "The §6Steam Roaster §rburns chemicals using steam. It\u0027s a reaction furnace. This machine will be used for the production of §6sulfur§r. The Roaster will be used in many chemical processes in LV and onwards.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3729,7 +3729,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §7§6Steam Mixer §rmixes several dusts or fluids together. It will be required for mixing Sulfur Trioxide and Water to create H2SO4. ",
+          "desc:8": "The §7§6Steam Mixer §rmixes several dusts or fluids together. It will be required for mixing Sulfur Trioxide and Water to create H2SO4. \n\nIf some mixer recipes require a §6programmed circuit§r, you can §aclick §ron the \"G\" in the bottom right of the Mixer to change the configuration.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4447,20 +4447,7 @@
         }
       },
       "questID:3": 56,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 64,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:torch"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -4474,7 +4461,7 @@
               "Count:3": 1,
               "Damage:2": 2,
               "OreDict:8": "",
-              "id:8": "gregtech:steam_casing"
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -4691,7 +4678,7 @@
     },
     "61:10": {
       "preRequisites:11": [
-        30
+        228
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -4786,7 +4773,7 @@
     },
     "62:10": {
       "preRequisites:11": [
-        30
+        228
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5511,7 +5498,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Stibnite and Antimony",
@@ -5572,7 +5559,7 @@
             "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Battery Alloy",
@@ -5764,7 +5751,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§cThese should be your priorities for the first few days:\n\n§r- Get gravel\n- Get sticky resin\n- Get an axe\n- Chop a ton of wood\n- Make a shelter over a Copper or Tin vein\n- Get seeds from grass \n- Set up an indoor crop breeding setup\n\nThere should also be some food rations which came in the drop pod. These should be enough to last a few days.\n",
+          "desc:8": "§cThese should be your priorities for the first few days:\n\n§r- Get gravel\n- Get sticky resin\n- Get an axe\n- Chop a ton of wood\n- Make a shelter over a Copper or Tin vein\n- Get seeds from grass \n- Set up an indoor crop farm\n\nThere should also be some food rations which came in the drop pod. These should be enough to last a few days.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7930,7 +7917,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining §6Slaked Lime§r, §7Flint Dust§r, §6Sand Dust§r and §7Clay Dust§r (dusts can be made using a Mortar) will create §6Fireclay Mix§r.\n\nFireclay Mix can be turned into Compressed Fireclay by using a brick form. ",
+          "desc:8": "Combining §6Slaked Lime§r, §7Flint Dust§r, §6Sand Dust§r and §7Clay Balls (dusts can be made using a Mortar) will create §6Fireclay Mix§r.\n\nFireclay Mix can be turned into Compressed Fireclay by using a brick form. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8841,7 +8828,7 @@
     },
     "122:10": {
       "preRequisites:11": [
-        99
+        224
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -8942,7 +8929,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -8951,7 +8938,7 @@
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -8962,6 +8949,10 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -10244,10 +10235,10 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 16,
+              "Count:3": 1,
               "Damage:2": 0,
-              "OreDict:8": "oreRockSalt",
-              "id:8": "gregtech:ore_rock_salt_0"
+              "OreDict:8": "",
+              "id:8": "gregtech:ore_salt_0"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -10518,7 +10509,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§6 LV Slicing Machine§r can be used to slice bread, cheese, meat and vegetables into§b standard slices§r.\n\nYou can\u0027t slice things by hand because machines are just more precise and efficient.",
+          "desc:8": "The§6 LV Slicing Machine§r can be used to slice bread, cheese, meat and vegetables into§b standard slices§r.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12080,7 +12071,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Battery Buffer",
@@ -13311,6 +13302,58 @@
     },
     "187:10": {
       "preRequisites:11": [
+        21
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Crafting Station§r is a highly advanced Crafting Table§r, with inventory slots for item and tools.\n\nPut the recipes in the table either by dropping ghost items, or using the §a+§r in §2JEI§r. \n\nCrafting the items will use the items and tools in the inventory of the table. The 9 slots on the right are saved up recipes so you can re-use them without re-opening §2JEI§r.\n\nThe §3Crafting Station§r can use §6adjacent inventories§r in addition to its own inventory. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1647,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Workbench V2",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 187,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1647,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "188:10": {
+      "preRequisites:11": [
         189
       ],
       "properties:10": {
@@ -13379,7 +13422,7 @@
         }
       }
     },
-    "188:10": {
+    "189:10": {
       "preRequisites:11": [
         185,
         114
@@ -13450,7 +13493,7 @@
         }
       }
     },
-    "189:10": {
+    "190:10": {
       "preRequisites:11": [
         188
       ],
@@ -13493,7 +13536,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "190:10": {
+    "191:10": {
       "preRequisites:11": [
         101
       ],
@@ -13545,7 +13588,7 @@
         }
       }
     },
-    "191:10": {
+    "192:10": {
       "preRequisites:11": [
         191
       ],
@@ -13597,7 +13640,7 @@
         }
       }
     },
-    "192:10": {
+    "193:10": {
       "preRequisites:11": [
         192
       ],
@@ -13682,7 +13725,7 @@
         }
       }
     },
-    "193:10": {
+    "194:10": {
       "preRequisites:11": [
         193
       ],
@@ -13771,7 +13814,7 @@
         }
       }
     },
-    "194:10": {
+    "195:10": {
       "preRequisites:11": [
         193
       ],
@@ -13838,7 +13881,7 @@
         }
       }
     },
-    "195:10": {
+    "196:10": {
       "preRequisites:11": [
         191
       ],
@@ -13933,14 +13976,14 @@
         }
       }
     },
-    "196:10": {
+    "197:10": {
       "preRequisites:11": [
         191
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds. It\u0027s also multishot, which means that it will shoot 8 times at once. \n\nCrafting it requires a §6Steel Receiver§r.\n\nFor more info, look at the tooltip.",
+          "desc:8": "The §6Combat Shotgun §ris one of the guns you can make at LV tier. It uses shotgun magazines as ammo, and has a reload time of 2.5 seconds. It\u0027s also multishot, this means it will shoot 8 times at once. \n\nCrafting it requires a §6Steel Receiver§r.\n\nFor more info, look at the tooltip.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14028,7 +14071,7 @@
         }
       }
     },
-    "197:10": {
+    "198:10": {
       "preRequisites:11": [
         109
       ],
@@ -14094,7 +14137,7 @@
         }
       }
     },
-    "198:10": {
+    "199:10": {
       "preRequisites:11": [
         198,
         112
@@ -14143,7 +14186,7 @@
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -14161,7 +14204,7 @@
         }
       }
     },
-    "199:10": {
+    "200:10": {
       "preRequisites:11": [
         184
       ],
@@ -14231,7 +14274,7 @@
         }
       }
     },
-    "200:10": {
+    "201:10": {
       "preRequisites:11": [
         190
       ],
@@ -14301,7 +14344,7 @@
         }
       }
     },
-    "201:10": {
+    "202:10": {
       "preRequisites:11": [
         201,
         200
@@ -14372,7 +14415,7 @@
         }
       }
     },
-    "202:10": {
+    "203:10": {
       "preRequisites:11": [
         202
       ],
@@ -14442,7 +14485,7 @@
         }
       }
     },
-    "203:10": {
+    "204:10": {
       "preRequisites:11": [
         186
       ],
@@ -14512,7 +14555,7 @@
         }
       }
     },
-    "204:10": {
+    "205:10": {
       "preRequisites:11": [
         102
       ],
@@ -14564,7 +14607,1991 @@
         }
       }
     },
-    "205:10": {
+    "206:10": {
+      "preRequisites:11": [
+        128
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Using an alternate version of the §6chloroalkali process§r, using a §crock salt §rsolution instead of normal salt water.§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 83,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Insanely High pH",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 206,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "potassium_hydroxide_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "207:10": {
+      "preRequisites:11": [
+        185
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You can electrolyze §6§cIMPURE §rSodium Hydroxide Solution in an Electrolyzer to get §6Gallium§r, an important element required for circuits. \n\nThe process gives §6tiny piles of gallium§r which have to be packed in a crafting table to get a full Gallium dust.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 39,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Gallium",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 207,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 39,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust_tiny"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "208:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §7§6Architect\u0027s Sawmill §fallows you to create many different set shapes from any cubic non-tile entity (the §acrafting table§f is the only known exception).  These include 45 degree angle slopes. \n\nTile entities are blocks that are capable of additional operations like machines, or provide effects (like a note block). ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "architecturecraft:sawbench"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Architect\u0027s Best Friend",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 208,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "architecturecraft:sawbench"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "209:10": {
+      "preRequisites:11": [
+        208
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Architect\u0027s Hammer§r allows you to rotate blocks along the vertical axis by right clicking. §aShift right-clicking§r allows you to cycle through every possible rotation.\n\nThe §6Architect\u0027s Chisel§r has a few niche uses. One use is to connect or unconnect blocks together, such as fences. Another use is to harvest glass without breaking it by§b§a right-clicking§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "architecturecraft:hammer"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Architecturecraft Tools",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 209,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "architecturecraft:hammer"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "architecturecraft:chisel"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "210:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Littletiles §fis an incredibly powerful mod that allows you to manipulate blocks by their 16x16x16 subcomponents, known as §bpixels§r.\n\nThe §6Little Bag §rtakes in blocks and converts them to a form with a finite pixel quantity for use with §2Littletiles§r. It also takes in any dyes, and converts them to a quantity in the bag corresponding with the §bC§dM§d§eY§8K§r subtractive color model. (§bCyan, §dMagenta, §eYellow,§r and §8Key (black))\n\n§rThe §6Little Chisel, Little Hammer,§r §6Little Saw§r, and §6Little Glove§r can have their menus accessed by §a\u0027C\u0027§r by default, where you can set the draw shape, as well as setting a color, which will consume the color in the bag. §eYou may need to rebind this to something else, due to existing key conflicts in Supersymmetry. This bind is named \"Configure Tool\".§r You can see other options by looking at the text that shows up in the lower left corner when you hold the tool in your hand.  §e\n\n§fThe §6Little Chisel§r can be used for additive changes to §bpixels§r, and is used by §aright-clicking§r. \n\nThe §6Little Hammer§r can be used for subtractive changes to §bpixels§r, and is used by §aleft-clicking§r. \n\nThe §6Little Saw§r can be used for extrusive changes to §bfaces§r, and is used by §aright-clicking and shift right-clicking§r (The lower left corner is §4§c§lLYING§r to you)!\n\nThe §6Little Glove§r has multiple modes\n- Placing rectangles of pixels of defined dimensions\n- Copying placed structures to the hand (Recipe Mode)\n- Replacing pixels on the face you are looking at with other pixels\nAll of which are accessible by §aright-clicking§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "littletiles:container"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Little Basic Tools",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 210,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "littletiles:container"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "littletiles:chisel",
+              "tag:10": {
+                "preview:10": {
+                  "bBox:11": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "tile:10": {
+                    "block:8": "minecraft:stone"
+                  }
+                }
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "littletiles:hammer",
+              "tag:10": {}
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "littletiles:saw"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "littletiles:grabber",
+              "tag:10": {
+                "preview:10": {
+                  "bBox:11": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "tile:10": {
+                    "block:8": "minecraft:stone"
+                  }
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "211:10": {
+      "preRequisites:11": [
+        210
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Little Blueprints§r can be used by §aleft-clicking§r and §aright-clicking§r the boundaries of your creations, similar to Worldedit, hitting the binded menu key (§a\u0027C\u0027§r by default), and saving it after changing a few parameters if you wish. You can §aright-click§r with this blueprint later to \"paste\" this creation somewhere else, given enough resources. Effectively, Blueprints are a ctrl + c, ctrl + v tool.\n\nThe aforementioned parameters in the menu can be used to paste your creation with different behaviors, such as it becoming a §b§ddoor, storage, a ladder, or other various things.§r This is part of the reason why §2Littletiles§r is considered to be incredibly powerful.\n\nYou can use a §6Little Workbench§r to craft your copied structure and produce it as an inventory item.\n\n§8§mSpamming Among Us everywhere has never been this easy!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "littletiles:premade",
+            "tag:10": {
+              "structure:10": {
+                "id:8": "workbench"
+              }
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "We do a Little Workbenching",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 211,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "littletiles:premade",
+              "tag:10": {
+                "structure:10": {
+                  "id:8": "workbench"
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "littletiles:recipeadvanced"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "212:10": {
+      "preRequisites:11": [
+        210
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "These are some of the §2Littletiles§r tools which you will be using less commonly. \n\nThe §6Little Paint Brush§r is used for using the aformentioned paint in your §6Little Bag§r to paint your structures. Like other tools, you can access the menu to change the shape, as well as color.\n§6§r\nThe §6Little Wrench§r is used for updating §2Littletiles§r blocks experiencing graphical issues, such as unconnected corners/edges, or unrendered sides.\n\nThe§6 Little Screwdriver§r §eis a creative exclusive item, and will not be included as a task§r, but it allows you to replace§b pixels§r with other §bpixels§r from other blocks given a draw shape from the menu.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "littletiles:colortube",
+            "tag:10": {
+              "color:3": -1
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "A Little Bit More Tools",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 212,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "littletiles:colortube",
+              "tag:10": {
+                "color:3": -1
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "littletiles:wrench"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "213:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Chisel§r is well known for being the miraculous tool that can turn entire warehouses full of worthless cobble into decent looking building material. Every vanilla block, a few common metal blocks, and the blocks added by this specific mod can all be chiseled. §eSamples are shown in the following quests. §r\n\nThe normal §6Chisel§r can:\n- Chisel directly through the chisel GUI \n- Cycle chisel by §aleft-clicking§r eligible block when the chisel inventory is empty\n- Set block to chisel by §aleft-clicking§r when block of same type and particular chisel is in the chisel inventory\n\nThe §e§r§6Steel Chisel§r can also do chisel in-world blocks in an area.\n\nThe §6iChisel§r has 2 more area options than the Steel Chisel, more versatile inventory chiseling, and the ability to preview the selected chisel pattern in different patterns. \n\nFor now, making a normal §6Chisel§r shall suffice.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "chisel:chisel_iron"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Millions Must Chisel",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 213,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "chisel:chisel_iron"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "214:10": {
+      "preRequisites:11": [
+        213
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Antiblocks are brightly colored blocks which completely ignore any lighting effects they are exposed to. §e§rThey can be seen from kilometers away in pitch black darkness as a result. §eKeep in mind that they do not actually emit light themselves.§r \n\nThey could potentially be used as §aChroma Keys§r, for any video editors.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "chisel:antiblock"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Antiblocks",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 214,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "chisel:antiblock"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "215:10": {
+      "preRequisites:11": [
+        213
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§8§oWhat is this, and how can I get rid of it?\n\n§r§d§r§5Voidstones§r are \"mystical\" and \"eldritch\" blocks that come in incomprehensible glyphs or glimpses into the ever-shifting tides of the unknown. If you are into magic, you probably think they\u0027re nice.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 6,
+            "OreDict:8": "",
+            "id:8": "chisel:energizedvoidstone"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Voidstones",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 215,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "chisel:voidstone"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "216:10": {
+      "preRequisites:11": [
+        213
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§9Futura Blocks§r, despite the small set of available textures in the block set, are probably many people\u0027s favorite. They depict flashy screens, rainbows, and even fake ME controllers. They supplement the §4§r§cG§6r§ce§6g§ci§6c §raesthetic well.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 3,
+            "OreDict:8": "",
+            "id:8": "chisel:futura"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Futura Blocks",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 216,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "chisel:futura"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "217:10": {
+      "preRequisites:11": [
+        213
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§9Factory blocks§r, along with §9Laboratory blocks§r, are critical for the §4§r§cG§6r§ce§6g§ci§6c §raesthetic. They depict heavy machinery, metal plating, circuitry, pipes, and vents. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4,
+            "OreDict:8": "",
+            "id:8": "chisel:technical"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Factory Blocks",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 217,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "chisel:factory"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "218:10": {
+      "preRequisites:11": [
+        213
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§9Laboratory blocks§r, along with §9Factory blocks§r, are critical for the §4§r§cG§6r§ce§6g§ci§6c §raesthetic. They depict sterile tiles, vents, interfaces, and a few steel blocks.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 15,
+            "OreDict:8": "",
+            "id:8": "chisel:laboratory"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Laboratory Blocks",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 218,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "chisel:laboratory"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "219:10": {
+      "preRequisites:11": [
+        87
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Xtones§r adds in dozens of different blocks. You can change the texture/color of these blocks by holding down §aSHIFT + scrolling§r while an §6Xtone block§r is in your hand. In essence, §2Xtones§r is §2Chisel§r without any chisels, and only the ability to change the textures of blocks it adds. \n\nThe foundation for every §2Xtones§r block recipe is the §6Xtone Tile§r. You will need to craft a few if you want to work with §2Xtones§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 3,
+            "OreDict:8": "",
+            "id:8": "xtones:zome"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nice and Toned",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 219,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "xtones:base"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "220:10": {
+      "preRequisites:11": [
+        87
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Any starting civilization must have a §cbase§r. A base is §c§lNOT §ra random assortment of machines put on the ground. \n\nYou must build and §6organize §ra factory, otherwise it will be extremely difficult to progress in the later tiers. It\u0027s recommended that you build several buildings for different parts of your factory.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5,
+            "OreDict:8": "",
+            "id:8": "gregtech:warning_sign_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "How to Build Gregically",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 220,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "221:10": {
+      "preRequisites:11": [
+        119
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Cement is one of the key components for making §6concrete§r.\n\nCement Clinker is made in a Sintering Oven by combining §6Clay§r and §6Limestone §r§rand sintering them with Air and Syngas.\n\nIt must then be cooled in a Mixer with air, and pulverized to make cement dust. \n\nConcrete is critical for the §4§r§cG§6r§ce§6g§ci§6c §raesthetic. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 103,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Cement",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 221,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 104,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "222:10": {
+      "preRequisites:11": [
+        221
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Concrete §rcan be made by mixing Water, Cement Dust and any of Gravel, Sand and Clay.\n\nThe concrete must then be solidified into blocks in an §6LV Fluid Solidifier§r.\n\nYou can make §8Dark Concrete §rby adding even more water to the concrete in a §cChemical Bath§r.\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4,
+            "OreDict:8": "",
+            "id:8": "gregtech:stone_smooth"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Concrete",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 222,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 64,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:stone_smooth"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "223:10": {
+      "preRequisites:11": [
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The§6 LV Fluid Solidifier §ris a machine that solidifies fluid into nuggets, ingots, blocks, or whatever you want, if you use a §6Mold§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 395,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Fluid Solidifier",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 223,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 395,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "224:10": {
+      "preRequisites:11": [
+        99
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Machines like the §6Pyrolyse Oven §rand §5§6Electric Blast Furnace §rrequire coils to work. Coils require §6mineral wool sheets §rfor insulation, which are obtained by centrifuging §d§clava§r.\n\nYou can find lava at Y levels below 15 and in the Beneath and the Nether. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 169,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Coil Insulation",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 224,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 169,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "225:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Fruits and vegetables §rcan be sliced§r using a knife. Sliced vegetables are slightly better than normal ones.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:knife",
+            "tag:10": {
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
+                "AttackDamage:5": 2.0,
+                "AttackSpeed:5": 3.0,
+                "Durability:3": 0,
+                "Material:8": "iron",
+                "MaxDurability:3": 256
+              },
+              "HideFlags:3": 2,
+              "ench:9": {
+                "0:10": {
+                  "id:2": 21,
+                  "lvl:2": 5
+                }
+              }
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Food Slicing",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 225,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:knife",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 2.0,
+                  "AttackSpeed:5": 3.0,
+                  "Durability:3": 0,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2,
+                "ench:9": {
+                  "0:10": {
+                    "id:2": 21,
+                    "lvl:2": 5
+                  }
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "226:10": {
+      "preRequisites:11": [
+        142
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Using sliced bread, you can make §6sandwiches§r. \n\nThere are several different types:\n\n§aVeggie Sandwich§r - with cucumber, tomato and onion slices\n§cBacon Sandwich §r- with bacon, which you can obtain by slicing porkchop\n§4Meat Sandwich §r- with steak and cheddar\n§6Toast Sandwich§r - with bread inside\n\nLarge Sandwiches can be made in a Cuisine Assembler.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 65,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtechfoodoption:gtfo_meta_item"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Sandwiches",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 226,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "227:10": {
+      "preRequisites:11": [
+        87
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Building Wands §rare wands that build surfaces for you. There are 4 main types of wands:\n\nThe §7Stone Building Wand§r can only place 5 blocks at a time, can only place blocks vertically, and can place ~130 blocks before it breaks.\n\nThe Iron Building Wand can place 9 blocks at a time, can place vertically or horizontally, and can place ~250 blocks.\n\nThe §bDiamond Building Wand §rcan place as many blocks that it can, which is ~1562 blocks before it breaks.\n\nThe §dUnbreakable Building Wand §rcan place an inventory\u0027s worth of blocks at a time, and never breaks.\n\nYou can change the mode of the Building Wand by pressing §6M§..",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 32767,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "betterbuilderswands:wanddiamond"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Building Wands",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 227,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "228:10": {
+      "preRequisites:11": [
+        45
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Gunpowder §rcan be obtained by mixing §6saltpeter §r(found in salt deposits in deserts), §6sulfur §rand§7§6 coal.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "minecraft:gunpowder"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Gunpowder",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 228,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "minecraft:gunpowder"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "229:10": {
+      "preRequisites:11": [
+        12
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "All §6stones §rcan be turned into beautiful bricks. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "susy:susy_stone_bricks"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Stone Bricks",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 229,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "susy:susy_stone_bricks"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "230:10": {
+      "preRequisites:11": [
+        51
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Sometimes building large structures can be a little tedious, and take a lot of effort. §6Building Gadgets §raims to make building a little bit easier.\n\nThe §6Building Gadget §rallows you to build structures using a set of different Building Modes. It allows you to build structures at range. Simply§a right click§r to place the blocks, and §asneak-right click§r to set the block type to place.\n\nThe §6Exchanging Gadget §rwill swap the block you are looking at with the block the tool is set to. Simply §aright click§r to swap the blocks, and §asneak-right click §rto set the block type to place.\n\nThe §6Copy Paste Gadget §rwill allow you to copy an area of a large area of blocks and paste it in a different location. You can view the required materials on the tooltip.\n\nThe §cDestruction Gadget§r allows you to void large areas. The Gadget will void the blocks instead of dropping them. There is a single §cUndo§r if you accidentally use the tool, which can be activated via the GUI.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "buildinggadgets:buildingtool",
+            "tag:10": {
+              "blockstate:10": {
+                "Name:8": "minecraft:air"
+              }
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Building Gadgets",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 230,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "buildinggadgets:buildingtool",
+              "tag:10": {
+                "blockstate:10": {
+                  "Name:8": "minecraft:air"
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "buildinggadgets:exchangertool",
+              "tag:10": {
+                "blockstate:10": {
+                  "Name:8": "minecraft:air"
+                }
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "buildinggadgets:copypastetool",
+              "tag:10": {
+                "mode:8": "Copy"
+              }
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "buildinggadgets:destructiontool",
+              "tag:10": {
+                "fuzzy:1": 1,
+                "overlay:1": 1
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "231:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6§rIron §6stairs §rand §7§6catwalks §rcan be used to supplement the §4§r§cG§6r§ce§6g§ci§6c§r aesthetic. §rThe factory must grow.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "industrialrenewal:catwalk_stair"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Factory Must Grow",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 231,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk_stair"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "232:10": {
+      "preRequisites:11": [
+        46,
+        109
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "\n§6Sulfuric Acid §rcan be mixed with §6Saltpeter §r(found in Salt deposits) in an LV Mixer to create§6 Nitric Acid§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "nitric_acid"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nitric Acid",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 232,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "nitric_acid"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "233:10": {
+      "preRequisites:11": [
+        232
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Sulfuric Acid §rand §6Nitric Acid §rcan be mixed to create a §6nitration mixture§r, used in explosives.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "nitration_mixture"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nitration Mixture ",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 233,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "nitration_mixture"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "234:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Toluene",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 234,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "235:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "New Quest",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 235,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "236:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -14823,137 +16850,130 @@
           "y:3": 420
         },
         "26:10": {
-          "id:3": 61,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 162,
-          "y:3": 432
-        },
-        "27:10": {
-          "id:3": 62,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 282,
-          "y:3": 432
-        },
-        "28:10": {
           "id:3": 74,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 264
         },
-        "29:10": {
+        "27:10": {
           "id:3": 76,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": -84
         },
-        "30:10": {
+        "28:10": {
           "id:3": 87,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 252
         },
-        "31:10": {
+        "29:10": {
           "id:3": 88,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 144
         },
-        "32:10": {
+        "30:10": {
           "id:3": 89,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -192,
           "y:3": 492
         },
-        "33:10": {
+        "31:10": {
           "id:3": 90,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 360
         },
-        "34:10": {
+        "32:10": {
           "id:3": 91,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -192,
           "y:3": 390
         },
-        "35:10": {
+        "33:10": {
           "id:3": 93,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 42,
           "y:3": 216
         },
-        "36:10": {
+        "34:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 360
         },
-        "37:10": {
+        "35:10": {
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 264
         },
-        "38:10": {
+        "36:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 264
         },
-        "39:10": {
+        "37:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 216
         },
-        "40:10": {
+        "38:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 216
         },
-        "41:10": {
+        "39:10": {
           "id:3": 125,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 216
         },
-        "42:10": {
+        "40:10": {
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 222,
           "y:3": 312
         },
-        "43:10": {
+        "41:10": {
           "id:3": 135,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 36
         },
-        "44:10": {
+        "42:10": {
           "id:3": 149,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 312
+        },
+        "43:10": {
+          "id:3": 187,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 552
         }
       }
     },
@@ -15196,193 +17216,214 @@
           "y:3": -72
         },
         "30:10": {
+          "id:3": 61,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 192
+        },
+        "31:10": {
+          "id:3": 62,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 144
+        },
+        "32:10": {
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": -108
         },
-        "31:10": {
+        "33:10": {
           "id:3": 64,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 192
         },
-        "32:10": {
+        "34:10": {
           "id:3": 65,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 192
         },
-        "33:10": {
+        "35:10": {
           "id:3": 66,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -312,
           "y:3": 276
         },
-        "34:10": {
+        "36:10": {
           "id:3": 71,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 6,
           "y:3": 228
         },
-        "35:10": {
+        "37:10": {
           "id:3": 72,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 144
         },
-        "36:10": {
+        "38:10": {
           "id:3": 73,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 192
         },
-        "37:10": {
+        "39:10": {
           "id:3": 75,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 48,
           "y:3": -24
         },
-        "38:10": {
+        "40:10": {
           "id:3": 77,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 96
         },
-        "39:10": {
+        "41:10": {
           "id:3": 78,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -216,
           "y:3": 132
         },
-        "40:10": {
+        "42:10": {
           "id:3": 79,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 48
         },
-        "41:10": {
+        "43:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 96
         },
-        "42:10": {
+        "44:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 60
         },
-        "43:10": {
+        "45:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 168
         },
-        "44:10": {
+        "46:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 96
         },
-        "45:10": {
+        "47:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 96
         },
-        "46:10": {
+        "48:10": {
           "id:3": 85,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 132
         },
-        "47:10": {
+        "49:10": {
           "id:3": 86,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 24
         },
-        "48:10": {
+        "50:10": {
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": -108
         },
-        "49:10": {
+        "51:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": -12
         },
-        "50:10": {
+        "52:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -12
         },
-        "51:10": {
+        "53:10": {
           "id:3": 97,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 240
         },
-        "52:10": {
+        "54:10": {
           "id:3": 104,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -204,
           "y:3": 312
         },
-        "53:10": {
+        "55:10": {
           "id:3": 130,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -204,
           "y:3": 228
         },
-        "54:10": {
+        "56:10": {
           "id:3": 147,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 96
         },
-        "55:10": {
+        "57:10": {
           "id:3": 148,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -144
         },
-        "56:10": {
+        "58:10": {
           "id:3": 170,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 60,
           "y:3": 228
+        },
+        "59:10": {
+          "id:3": 228,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 144
         }
       }
     },
@@ -15507,10 +17548,10 @@
         },
         "13:10": {
           "id:3": 111,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": 156,
-          "y:3": 120
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": 144
         },
         "14:10": {
           "id:3": 112,
@@ -15521,9 +17562,9 @@
         },
         "15:10": {
           "id:3": 113,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": 156,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
           "y:3": 180
         },
         "16:10": {
@@ -15559,35 +17600,35 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
-          "y:3": 288
+          "y:3": 294
         },
         "21:10": {
           "id:3": 121,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
-          "y:3": 324
+          "y:3": 258
         },
         "22:10": {
           "id:3": 122,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -216,
-          "y:3": 276
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -210,
+          "y:3": 288
         },
         "23:10": {
           "id:3": 123,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
-          "y:3": 288
+          "y:3": 294
         },
         "24:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -96,
-          "y:3": 288
+          "y:3": 294
         },
         "25:10": {
           "id:3": 126,
@@ -15642,22 +17683,22 @@
           "id:3": 160,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
+          "x:3": 132,
           "y:3": 108
         },
         "33:10": {
           "id:3": 161,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
+          "x:3": 180,
           "y:3": 108
         },
         "34:10": {
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 60
+          "x:3": 228,
+          "y:3": 108
         },
         "35:10": {
           "id:3": 169,
@@ -15880,8 +17921,29 @@
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
-          "y:3": 156
+          "x:3": 72,
+          "y:3": 108
+        },
+        "67:10": {
+          "id:3": 207,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 396
+        },
+        "68:10": {
+          "id:3": 223,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": 216
+        },
+        "69:10": {
+          "id:3": 224,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": 252
         }
       }
     },
@@ -16285,15 +18347,15 @@
           "id:3": 38,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 16,
-          "y:3": -72
+          "x:3": 12,
+          "y:3": 96
         },
         "1:10": {
           "id:3": 46,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 64,
-          "y:3": -72
+          "x:3": 60,
+          "y:3": 96
         },
         "2:10": {
           "id:3": 110,
@@ -16441,6 +18503,48 @@
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 48
+        },
+        "23:10": {
+          "id:3": 206,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 432,
+          "y:3": -12
+        },
+        "24:10": {
+          "id:3": 207,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 420,
+          "y:3": 144
+        },
+        "25:10": {
+          "id:3": 232,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 96
+        },
+        "26:10": {
+          "id:3": 233,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 156,
+          "y:3": 96
+        },
+        "27:10": {
+          "id:3": 234,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 252,
+          "y:3": 96
+        },
+        "28:10": {
+          "id:3": 235,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 204,
+          "y:3": 96
         }
       }
     },
@@ -16537,7 +18641,141 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "quests:9": {}
+      "quests:9": {
+        "0:10": {
+          "id:3": 208,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -48,
+          "y:3": -12
+        },
+        "1:10": {
+          "id:3": 209,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 48
+        },
+        "2:10": {
+          "id:3": 210,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 36,
+          "y:3": -12
+        },
+        "3:10": {
+          "id:3": 211,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 48
+        },
+        "4:10": {
+          "id:3": 212,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": -48
+        },
+        "5:10": {
+          "id:3": 213,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 288,
+          "y:3": -12
+        },
+        "6:10": {
+          "id:3": 214,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 264,
+          "y:3": -60
+        },
+        "7:10": {
+          "id:3": 215,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 300,
+          "y:3": -60
+        },
+        "8:10": {
+          "id:3": 216,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 336,
+          "y:3": -60
+        },
+        "9:10": {
+          "id:3": 217,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 276,
+          "y:3": 60
+        },
+        "10:10": {
+          "id:3": 218,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 324,
+          "y:3": 60
+        },
+        "11:10": {
+          "id:3": 219,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 204,
+          "y:3": -12
+        },
+        "12:10": {
+          "id:3": 220,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 120,
+          "y:3": -12
+        },
+        "13:10": {
+          "id:3": 221,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": -60
+        },
+        "14:10": {
+          "id:3": 222,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 156,
+          "y:3": -60
+        },
+        "15:10": {
+          "id:3": 227,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -132,
+          "y:3": -12
+        },
+        "16:10": {
+          "id:3": 229,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": -96
+        },
+        "17:10": {
+          "id:3": 230,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 372,
+          "y:3": -12
+        },
+        "18:10": {
+          "id:3": 231,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 156,
+          "y:3": -96
+        }
+      }
     },
     "19:10": {
       "lineID:3": 19,
@@ -16781,71 +19019,85 @@
           "id:3": 143,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 216,
+          "x:3": 228,
           "y:3": -12
         },
         "11:10": {
           "id:3": 144,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
+          "x:3": 276,
           "y:3": -12
         },
         "12:10": {
           "id:3": 145,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 216,
+          "x:3": 228,
           "y:3": 84
         },
         "13:10": {
           "id:3": 146,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
+          "x:3": 324,
           "y:3": -12
         },
         "14:10": {
           "id:3": 162,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 360,
+          "x:3": 372,
           "y:3": -12
         },
         "15:10": {
           "id:3": 163,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 408,
+          "x:3": 420,
           "y:3": -12
         },
         "16:10": {
           "id:3": 164,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 216,
+          "x:3": 228,
           "y:3": 36
         },
         "17:10": {
           "id:3": 165,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
+          "x:3": 276,
           "y:3": 36
         },
         "18:10": {
           "id:3": 166,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
+          "x:3": 324,
           "y:3": 36
         },
         "19:10": {
           "id:3": 167,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 360,
+          "x:3": 372,
           "y:3": 36
+        },
+        "20:10": {
+          "id:3": 225,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 180,
+          "y:3": -12
+        },
+        "21:10": {
+          "id:3": 226,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 120,
+          "y:3": 192
         }
       }
     },

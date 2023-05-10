@@ -89,6 +89,8 @@
 			}
 		},
 		"working-idle": {
+		},
+		"idle-working": {
 		}
 	}
 }

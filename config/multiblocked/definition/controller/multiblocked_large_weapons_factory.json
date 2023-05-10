@@ -29,13 +29,16 @@
       "parent": "unformed"
     },
     "working": {
+      "renderer": {
+        "modelName": "large_weapons_factory",
+        "type": "geo"
+      },
       "parent": "idle"
     },
     "suspend": {
       "parent": "working"
     }
   },
-  "recipeMap": "test recipe",
   "basePattern": {
     "structureDir": [
       "RIGHT",

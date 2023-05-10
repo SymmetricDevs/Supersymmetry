@@ -27,6 +27,7 @@ eventManager.listen {
         customMetaItems.addItem(101, "hot.cement.clinker")
         customMetaItems.addItem(102, "cement.dust")
         customMetaItems.addItem(103, "limestone.dust")
+        customMetaItems.addItem(104, "shape.mold.rod")
 
         customMetaItems.addItem(150, "mudbrick_mix")
         customMetaItems.addItem(151, "slaked_lime")
@@ -58,6 +59,10 @@ eventManager.listen {
         customMetaItems.addItem(165, "rydberg_atom_array");
 
         customMetaItems.addItem(166, "malted_grain");
+
+        customMetaItems.addItem(167, "mineral_wool");
+
+        customMetaItems.addItem(168, "hepa_filter");
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
@@ -137,6 +142,39 @@ eventManager.listen {
 
 
         customMetaItems.addItem(4101, "vacuum_tube_components");
-        
+
+        //Circuit Stuff 5000-6000
+
+        customMetaItems.addItem(5000, "mask.ic");
+        customMetaItems.addItem(5001, "mask.cpu");
+        customMetaItems.addItem(5002, "mask.ram");
+        customMetaItems.addItem(5003, "mask.pcb");
+        customMetaItems.addItem(5004, "mask.ulpic");
+
+        customMetaItems.addItem(5100, "patterned.ic");
+        customMetaItems.addItem(5101, "patterned.cpu");
+        customMetaItems.addItem(5102, "patterned.ram");
+        customMetaItems.addItem(5103, "patterned.ulpic");
+        customMetaItems.addItem(5150, "patterned.board.phenolic");
+        customMetaItems.addItem(5151, "patterned.board.plastic");
+
+        customMetaItems.addItem(5200, "laminated.board.phenolic");
+
+        customMetaItems.addItem(5300, "wafer.doped.silicon");
+
+        customMetaItems.addItem(5400, "etched.ic");
+        customMetaItems.addItem(5401, "etched.cpu");
+        customMetaItems.addItem(5402, "etched.ram");
+        customMetaItems.addItem(5403, "etched.ulpic");
+
+        customMetaItems.addItem(5500, "seed_crystal.silicon");
+
+        //Light Sources 6000-7000
+        customMetaItems.addItem(6000, "carbon_arc_lamp");
+        customMetaItems.addItem(6001, "incandescent_light");
+        customMetaItems.addItem(6002, "halogen_light");
+        customMetaItems.addItem(6003, "fluorescent_light");
+        customMetaItems.addItem(6004, "led_light");
+
         log.infoMC("Finished adding metaitems")
 }

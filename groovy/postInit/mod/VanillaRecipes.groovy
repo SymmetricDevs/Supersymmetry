@@ -353,13 +353,17 @@ mods.gregtech.assembler.recipeBuilder()
     .EUt(16)
     .buildAndRegister()
 
-// Piston
-//TODO: FIGURE OUT WHY THIS WONT WORK
-//mods.gregtech.assembler.removeByInput(16, [item('gregtech:meta_plate', 51), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
-//mods.gregtech.assembler.removeByInput(16, [item('gregtech:meta_plate', 324), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
-//mods.gregtech.assembler.removeByInput(16, [item('gregtech:meta_plate', 2), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
-//mods.gregtech.assembler.removeByInput(16, [item('gregtech:meta_plate', 260), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
-//mods.gregtech.assembler.removeByInput(16, [item('gregtech:meta_plate', 113), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+// Piston Removals
+// Piston * 1
+mods.gregtech.assembler.removeByInput(16, [metaitem('plateBronze'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+// Piston * 1
+mods.gregtech.assembler.removeByInput(16, [metaitem('plateIron'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+// Piston * 2
+mods.gregtech.assembler.removeByInput(16, [metaitem('plateSteel'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+// Piston * 4
+mods.gregtech.assembler.removeByInput(16, [metaitem('plateAluminium'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+// Piston * 8
+mods.gregtech.assembler.removeByInput(16, [metaitem('plateTitanium'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
 
 mods.gregtech.assembler.recipeBuilder()
     .inputs(ore('cobblestone') * 4)
