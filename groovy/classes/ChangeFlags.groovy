@@ -24,6 +24,11 @@ class ChangeFlags {
         Tantalum.addFlags("generate_rod");
 
         GregTechAPI.MaterialRegistry.get("fluix").addFlags("disable_decomposition", "generate_plate", "generate_lens")
+        //Iodine.dust().build();
+        //Hafnium.ingot().build();
+        //Strontium.ingot().build();
+      
+		    Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
         ManganesePhosphide.addFlags("generate_fine_wire");
         UraniumTriplatinum.addFlags("generate_fine_wire");
