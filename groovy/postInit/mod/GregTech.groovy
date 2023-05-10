@@ -31,6 +31,9 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('wireGtDoubleNichrome') * 8
 
 //ADDITIONS
 
+//CONSUMES IRON BUCKET ONLY BECAUSE THE OUTPUT IS IN AN IRON BUCKET
+crafting.addShapeless('gregtech:salt_water_bucket', item('forge:bucketfilled').withNbt(["FluidName": "salt_water", "Amount": 1000]), [item('minecraft:water_bucket').noreturn(), metaitem('dustSalt'), metaitem('dustSalt')])
+
 crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bronze'), [
     [ore('craftingToolHardHammer'), ore('stickBronze'), ore('screwBronze')],
     [ore('plateBronze'), item('gregtech:metal_casing:1'), ore('stickBronze')],
