@@ -186,6 +186,14 @@ eventManager.listen {
         customMetaItems.addItem(4062, "cathode.lithium_cobalt_oxide");
         customMetaItems.addItem(4063, "anode.graphite");
 
+        customMetaItems.addItem(4064, "cathode.graphine_in_graphine");
+        customMetaItems.addItem(4065, "anode.graphine_in_graphine");
+
+        customMetaItems.addItem(4066, "cathode.nickel_oxide_hydroxide");
+        customMetaItems.addItem(4067, "anode.met_cadnium");
+
+        // customMetaItems.addItem(4068, "cathode.nickel_oxide_hydroxide");
+        customMetaItems.addItem(4068, "anode.lanthanum_nickel_oxide");
 
         customMetaItems.addItem(4101, "vacuum_tube_components");
         

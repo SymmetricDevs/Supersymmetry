@@ -18,11 +18,14 @@ class Globals {
     public static voltAmps =        [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
 
     public static cableTiers = [
-        "lv": metaitem('cableGtSingleTin'),
-        "mv": metaitem("cableGtSingleCopper"),
-        "hv": metaitem("cableGtSingleGold"),
-        "ev": metaitem("cableGtSingleAluminium"),
-        "iv": metaitem("cableGtSinglePlatinum"),
+        "lv": 'cableGtSingleTin',
+        "mv": "cableGtSingleCopper",
+        "hv": "cableGtSingleGold",
+        "ev": "cableGtSingleAluminium",
+        "iv": "cableGtSinglePlatinum",
+        "luv": "cableGtSingleNiobiumTitanium",
+        "zpm": "cableGtSingleNaquadah",
+        "uv": "cableGtSingleYttriumBariumCuprate"
     ]
 
     public static solders = [

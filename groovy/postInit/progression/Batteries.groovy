@@ -63,10 +63,10 @@ def makeBattery(cathode, annode, seperator, electrolyte, outputMaterial, tierRan
     def myRecipie = mods.gregtech.assembler.recipeBuilder()
       .inputs(cathode * Math.min(Math.max(tierToKeyOffset, 1), 4))
       .inputs(annode * Math.min(Math.max(tierToKeyOffset, 1), 4))
-      .inputs(Globals.cableTiers[tier] * Math.min(Math.max(tierToKeyOffset * 2, 1), 4)) // 1, 2, 4
+      .inputs(metaitem(Globals.cableTiers[tier]) * Math.min(Math.max(tierToKeyOffset * 2, 1), 4)) // too lazy didnt add the other copper variant
       .outputs(metaitem("battery.hull.${outputMaterial}.${tier}"))
-      .duration(20 * Math.max(tierToKeyOffset, 1)) // start incrementing at MV (2)
-      .EUt(Globals.voltageTiersInt[tierToKeyOffset])
+      .duration(20 * Math.max(tierToKeyOffset, 1))
+      .EUt(Globals.voltageTiersInt[tierToKey - 1])
 
     if (tierToKey > 2) {
       myRecipie.fluidInputs(fluid('polyvinyl_chloride') * (144 * Math.min(Math.max(tierToKeyOffset * 3, 1), 9)))
@@ -86,7 +86,7 @@ def makeBattery(cathode, annode, seperator, electrolyte, outputMaterial, tierRan
       .inputs(electrolyte * Math.min(Math.max(tierToKeyOffset, 1), 4))
       .outputs(metaitem("battery.${tier}.${outputMaterial}"))
       .duration(10 * Math.max(tierToKeyOffset, 1)) // start incrementing at MV (2)
-      .EUt(Globals.voltageTiersInt[tierToKeyOffset])
+      .EUt(Globals.voltageTiersInt[tierToKey - 1])
       .buildAndRegister()
   }
   println("[INFO]: Built battery ${outputMaterial} at tier range of ${tierRanges}")
@@ -104,8 +104,8 @@ makeBattery(
 )
 
 makeBattery(
-  metaitem("cathode.lithium_cobalt_oxide"), 
-  metaitem("anode.graphite"), 
+  metaitem("cathode.graphine_in_graphine"), 
+  metaitem("anode.graphine_in_graphine"), 
   null, //ore("seperator.mv"), 
   metaitem("lipf6"), 
   "vanadium",
@@ -113,24 +113,43 @@ makeBattery(
   2
 )
 
+makeBattery(
+  metaitem("cathode.nickel_oxide_hydroxide"), 
+  metaitem("anode.met_cadnium"), 
+  null, //ore("seperator.mv"), 
+  metaitem("lipf6"), 
+  "nicad",
+  ["ev", "iv", "luv"],
+  3
+)
+
+makeBattery(
+  metaitem("cathode.nickel_oxide_hydroxide"), 
+  metaitem("anode.lanthanum_nickel_oxide"), 
+  null, //ore("seperator.mv"), 
+  metaitem("lipf6"), 
+  "nimet",
+  ["ev", "iv", "luv"],
+  4
+)
 
 // Remove Batteries
-// mods.hei.removeAndHide(metaitem('battery.hull.lv'));
-// mods.hei.removeAndHide(metaitem('battery.hull.mv'));
-// mods.hei.removeAndHide(metaitem('battery.hull.hv'));
-// mods.hei.removeAndHide(metaitem('battery.hull.ev'));
-// mods.hei.removeAndHide(metaitem('battery.hull.iv'));
-// mods.hei.removeAndHide(metaitem('battery.hull.luv'));
-// mods.hei.removeAndHide(metaitem('battery.hull.zpm'));
-// mods.hei.removeAndHide(metaitem('battery.hull.uv'));
+mods.hei.removeAndHide(metaitem('battery.hull.lv'));
+mods.hei.removeAndHide(metaitem('battery.hull.mv'));
+mods.hei.removeAndHide(metaitem('battery.hull.hv'));
+mods.hei.removeAndHide(metaitem('battery.hull.ev'));
+mods.hei.removeAndHide(metaitem('battery.hull.iv'));
+mods.hei.removeAndHide(metaitem('battery.hull.luv'));
+mods.hei.removeAndHide(metaitem('battery.hull.zpm'));
+mods.hei.removeAndHide(metaitem('battery.hull.uv'));
 
 mods.hei.removeAndHide(metaitem('battery.re.lv.sodium'));
 mods.hei.removeAndHide(metaitem('battery.re.mv.sodium'));
 mods.hei.removeAndHide(metaitem('battery.re.hv.sodium'));
 
-// mods.hei.removeAndHide(metaitem('battery.re.lv.lithium'));
-// mods.hei.removeAndHide(metaitem('battery.re.mv.lithium'));
-// mods.hei.removeAndHide(metaitem('battery.re.hv.lithium'));
+mods.hei.removeAndHide(metaitem('battery.re.lv.lithium'));
+mods.hei.removeAndHide(metaitem('battery.re.mv.lithium'));
+mods.hei.removeAndHide(metaitem('battery.re.hv.lithium'));
 
 mods.hei.removeAndHide(metaitem('battery.re.lv.cadmium'));
 mods.hei.removeAndHide(metaitem('battery.re.mv.cadmium'));
