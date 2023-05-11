@@ -104,23 +104,16 @@ for (a in arsenicOres) {
     def arsenicAmount = getComponentAmount(material(a.toLowerCase()), Arsenic)
     def sulfurAmount = getComponentAmount(material(a.toLowerCase()), Sulfur)
 
-    newRecipe = MIXER.recipeBuilder()
+    MIXER.recipeBuilder()
             .inputs(metaitem('dust' + a) * oreSize)
+            .inputs(metaitem('dustSodiumHydroxide') * Math.max(sulfurAmount, 1))
+            .inputs(metaitem('dustSodiumSulfide') * Math.max(arsenicAmount * 3 - sulfurAmount, 1))
             .fluidInputs(fluid('distilled_water') * (1000 * arsenicAmount))
             .outputs(metaitem('dust' + a + 'Residue') * Math.max((oreSize - arsenicAmount - sulfurAmount), 1))
             .fluidOutputs(fluid('thioarsenite_solution') * (1000 * arsenicAmount))
             .duration(720)
             .EUt(Globals.voltAmps[3])
-
-    if (sulfurAmount > 0) {
-        newRecipe.inputs(metaitem('dustSodiumHydroxide') * sulfurAmount)
-    }
-
-    if (((arsenicAmount * 3) - sulfurAmount) > 0) {
-        newRecipe.inputs(metaitem('dustSodiumSulfide') * ((arsenicAmount * 3) - sulfurAmount))
-    }
-
-    newRecipe.buildAndRegister();
+            .buildAndRegister();
 }
 
 //PROUSTITE
