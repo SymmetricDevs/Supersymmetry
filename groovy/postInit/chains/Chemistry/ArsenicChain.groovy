@@ -71,7 +71,7 @@ ARC_FURNACE.recipeBuilder()
     .inputs(ore('dustArsenicTrioxide') * 5)
     .outputs(ore('dustSmallArsenic').first() * 6)
     .fluidOutputs(fluid('carbon_monoxide') * 3000)
-    .duration(120)
+    .duration(30)
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
