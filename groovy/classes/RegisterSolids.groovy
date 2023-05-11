@@ -506,7 +506,7 @@ class RegisterSolids {
 
         //ORE LEACH RESIDUE ID: 32600-32700
 
-        SperryliteResidue = new Material.Builder(32600, 'sperrylite_residue')
+        new Material.Builder(32600, 'sperrylite_residue')
                 .dust()
                 .components(Platinum, 1)
                 .color(0x3b1754)
@@ -514,7 +514,7 @@ class RegisterSolids {
                 .iconSet(BRIGHT)
                 .build();
 
-        CobaltiteResidue = new Material.Builder(32601, 'cobaltite_residue')
+        new Material.Builder(32601, 'cobaltite_residue')
                 .dust()
                 .components(Cobalt, 1)
                 .color(0x1f2863)
@@ -522,7 +522,7 @@ class RegisterSolids {
                 .iconSet(BRIGHT)
                 .build();
 
-        ArsenopyriteResidue = new Material.Builder(32602, 'arsenopyrite_residue')
+        new Material.Builder(32602, 'arsenopyrite_residue')
                 .dust()
                 .components(Iron, 1)
                 .color(0x31194d)
@@ -530,7 +530,7 @@ class RegisterSolids {
                 .iconSet(BRIGHT)
                 .build();
 
-        EnargiteResidue = new Material.Builder(32603, 'enargite_residue')
+        new Material.Builder(32603, 'enargite_residue')
                 .dust()
                 .components(Copper, 1)
                 .color(0x59183c)
@@ -538,7 +538,7 @@ class RegisterSolids {
                 .iconSet(BRIGHT)
                 .build();
 
-        RealgarResidue = new Material.Builder(32604, 'realgar_residue')
+        new Material.Builder(32604, 'realgar_residue')
                 .dust()
                 .components()
                 .color(0x4d151f)
@@ -547,7 +547,7 @@ class RegisterSolids {
                 .build()
                 .setFormula("?", true);
 
-        ProustiteResidue = new Material.Builder(32605, 'proustite_residue')
+        new Material.Builder(32605, 'proustite_residue')
                 .dust()
                 .components(Silver, 1)
                 .color(0x4d151f)

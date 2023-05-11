@@ -76,8 +76,7 @@ ARC_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 //ORE ARRAY
-def arsenicOres = [Cobaltite]
-def arsenicResidues = [RegisterSolids.CobaltiteResidue, RegisterSolids.SperryliteResidue, RegisterSolids.RealgarResidue, RegisterSolids.ArsenopyriteResidue, RegisterSolids.EnargiteResidue]
+def arsenicOres = ["Cobaltite", "Sperrylite", "Realgar", "Arsenopyrite", "Enargite"]
 
 //ORE UTIL FUNCTIONS
 int getComponentAmount(Material material, Material component) {
@@ -100,21 +99,28 @@ int getNumberOfComponents(Material material) {
 int
 
 //ALKALINE SULFIDE LEACHING
-for (ore in arsenicOres) {
-    def oreSize = getNumberOfComponents(ore)
-    def arsenicAmount = getComponentAmount(ore, Arsenic)
-    def sulfurAmount = getComponentAmount(ore, Sulfur)
+for (a in arsenicOres) {
+    def oreSize = getNumberOfComponents(material(a.toLowerCase()))
+    def arsenicAmount = getComponentAmount(material(a.toLowerCase()), Arsenic)
+    def sulfurAmount = getComponentAmount(material(a.toLowerCase()), Sulfur)
 
-    MIXER.recipeBuilder()
-        .inputs(OreDictUnifier.get(OrePrefix.dust, ore, oreSize))
-        .inputs(OreDictUnifier.get(OrePrefix.dust, SodiumHydroxide, sulfurAmount))
-        .inputs(OreDictUnifier.get(OrePrefix.dust, SodiumSulfide, ((arsenicAmount * 3) - sulfurAmount)))
-        .fluidInputs(fluid('distilled_water') * (1000 * arsenicAmount))
-        .outputs(OreDictUnifier.get(OrePrefix.dust, arsenicResidues[(arsenicOres.indexOf(ore))], Math.max( (oreSize - arsenicAmount - sulfurAmount), 1) ) )
-        .fluidOutputs(fluid('thioarsenite_solution') * (1000 * arsenicAmount))
-        .duration(720)
-        .EUt(Globals.voltAmps[3])
-        .buildAndRegister()
+    newRecipe = MIXER.recipeBuilder()
+            .inputs(metaitem('dust' + a) * oreSize)
+            .fluidInputs(fluid('distilled_water') * (1000 * arsenicAmount))
+            .outputs(metaitem('dust' + a + 'Residue') * Math.max((oreSize - arsenicAmount - sulfurAmount), 1))
+            .fluidOutputs(fluid('thioarsenite_solution') * (1000 * arsenicAmount))
+            .duration(720)
+            .EUt(Globals.voltAmps[3])
+
+    if (sulfurAmount > 0) {
+        newRecipe.inputs(metaitem('dustSodiumHydroxide') * sulfurAmount)
+    }
+
+    if (((arsenicAmount * 3) - sulfurAmount) > 0) {
+        newRecipe.inputs(metaitem('dustSodiumSulfide') * ((arsenicAmount * 3) - sulfurAmount))
+    }
+
+    newRecipe.buildAndRegister();
 }
 
 //PROUSTITE
