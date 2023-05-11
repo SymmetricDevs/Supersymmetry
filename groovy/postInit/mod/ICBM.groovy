@@ -1,10 +1,5 @@
 import classes.*;
-
-/*
-def soldering_alloys = [
-        liquid('tin') * 144,
-        liquid('soldering_alloy') * 72
-]
+import static globals.Globals.*
 
 def name_removals = [
         "icbmclassic:missile/vanilla/missile.module",
@@ -20,7 +15,7 @@ def name_removals = [
         "icbmclassic:missile/ex/missile.anvil",
         "icbmclassic:missile/ex/missile.replusive", //This mispelling is intentional since the ICBM creator mispelled it
         "icbmclassic:missile/ex/missile.attractive",
-        "icbmclassic:missile/ex/missile.debilitationl",
+        "icbmclassic:missile/ex/missile.deblitationl", //This mispelling is intentional since the ICBM creator mispelled it
         "icbmclassic:missile/ex/missile.sonic",
         "icbmclassic:missile/ex/missile.antimatter",
         "icbmclassic:missile/ex/missile.incendiary",
@@ -69,7 +64,7 @@ def name_removals = [
 ]
 
 for (item in name_removals) {
-    //crafting.remove(item);
+    crafting.remove(item);
 }
 
 
@@ -136,14 +131,13 @@ for (poison in poisons) {
 }
 
 //Explosives tier 2
-for (solder in soldering_alloys) {
+Globals.solders.each { key, val ->
     recipemap('weapons_factory').recipeBuilder()
             .inputs([
                     item('icbmclassic:explosives:0'),
-                    ore('plateSteel')*8,
-                    ore('plateSteel')*8
+                    metaitem('plateSteel') * 16
             ])
-            .fluidInputs(solder)
+            .fluidInputs(fluid(key) * val)
             .outputs(item('icbmclassic:explosives:11'))
             .duration(400)
             .EUt(60)
@@ -151,7 +145,7 @@ for (solder in soldering_alloys) {
 }
 
 def thermobaric_fuels = [
-        //liquid('ethylene_oxide') * 8000
+        liquid('ethylene_oxide') * 8000
 ];
 
 for (fuel in thermobaric_fuels) {
@@ -185,7 +179,7 @@ recipemap('weapons_factory').recipeBuilder()
 
 def HV_SC_CriticalTemp = 80;
 
-for (solder in soldering_alloys) {
+Globals.solders.each { key, val ->
     for (CryoGas in ICryoGas.cryo_gases) {
         if(HV_SC_CriticalTemp > CryoGas.fluid_temperature){
             //EMP
@@ -195,7 +189,7 @@ for (solder in soldering_alloys) {
                             metaitem('wireGtSingleMercuryBariumCalciumCuprate')*8,
                             metaitem('fluid_cell')*2
                     ])
-                    .fluidInputs(solder)
+                    .fluidInputs(fluid(key) * val)
                     .fluidInputs(liquid(CryoGas.liquid_gas) * 2)
                     .outputs(item('icbmclassic:explosives:16'))
                     .duration(200)
@@ -209,7 +203,7 @@ for (solder in soldering_alloys) {
                         item('icbmclassic:explosives:6')*8,
                         ore('plateStainlessSteel')*4
                 ])
-                .fluidInputs(solder)
+                .fluidInputs(fluid(key) * val)
                 .fluidInputs(liquid(CryoGas.liquid_gas) * 32)
                 .outputs(item('icbmclassic:explosives:18'))
                 .duration(60)
@@ -224,10 +218,8 @@ for (solder in soldering_alloys) {
                         ore('plateStainlessSteel')*2,
                         ore('plateStainlessSteel')*2
                 ])
-                .fluidInputs([
-                        solder,
-                        fuel
-                ])
+                .fluidInputs(fluid(key) * val)
+                .fluidInputs(fuel)
                 .outputs(item('icbmclassic:explosives:17'))
                 .duration(60)
                 .EUt(300)
@@ -236,7 +228,7 @@ for (solder in soldering_alloys) {
 }
 
 //Launchers
-for (solder in soldering_alloys) {
+Globals.solders.each { key, val ->
     mods.gregtech.assembler.recipeBuilder()
             .inputs([
                     ore('plateSteel')*3,
@@ -244,7 +236,7 @@ for (solder in soldering_alloys) {
                     ore('stickLongSteel')*2,
                     ore('circuitMv')
             ])
-            .fluidInputs(solder)
+            .fluidInputs(fluid(key) * val)
             .outputs(item('icbmclassic:launcherbase:0'))
             .duration(400)
             .EUt(30)
@@ -257,7 +249,7 @@ for (solder in soldering_alloys) {
                     ore('paneGlassColorless'),
                     ore('circuitMv')
             ])
-            .fluidInputs(solder)
+            .fluidInputs(fluid(key) * val)
             .outputs(item('icbmclassic:launcherscreen:0'))
             .duration(400)
             .EUt(30)
@@ -270,7 +262,7 @@ for (solder in soldering_alloys) {
                     ore('stickLongAluminium')*2,
                     ore('circuitHv')
             ])
-            .fluidInputs(solder)
+            .fluidInputs(fluid(key) * val)
             .outputs(item('icbmclassic:launcherbase:1'))
             .duration(400)
             .EUt(60)
@@ -283,7 +275,7 @@ for (solder in soldering_alloys) {
                     ore('paneGlassColorless'),
                     ore('circuitHv')
             ])
-            .fluidInputs(solder)
+            .fluidInputs(fluid(key) * val)
             .outputs(item('icbmclassic:launcherscreen:1'))
             .duration(400)
             .EUt(60)
@@ -296,7 +288,7 @@ for (solder in soldering_alloys) {
                     ore('stickLongStainlessSteel')*2,
                     ore('circuitEv')
             ])
-            .fluidInputs(solder)
+            .fluidInputs(fluid(key) * val)
             .outputs(item('icbmclassic:launcherbase:2'))
             .duration(400)
             .EUt(260)
@@ -309,7 +301,7 @@ for (solder in soldering_alloys) {
                     ore('paneGlassColorless'),
                     ore('circuitEv')
             ])
-            .fluidInputs(solder)
+            .fluidInputs(fluid(key) * val)
             .outputs(item('icbmclassic:launcherscreen:2'))
             .duration(400)
             .EUt(260)
@@ -330,7 +322,7 @@ def solidoxys = [
 ];
 
 def liquidfuels = [
-        liquid('liquid_gt_hydrogen'),
+        liquid('liquid_hydrogen'),
         liquid('ethane'),
         liquid('ethanol')
 ];
@@ -342,7 +334,7 @@ def liquidoxys = [
         liquid('dinitrogen_tetroxide')
 ];
 
-for (solder in soldering_alloys) {
+Globals.solders.each { key, val ->
     for (s_fuel in solidfuels) {
         for (s_oxy in solidoxys) {
             for (var i = 0; i < 8; i++) {
@@ -355,9 +347,9 @@ for (solder in soldering_alloys) {
                                  s_fuel*16,
                                  item('icbmclassic:explosives:' + i)
                         ])
-                        .fluidInputs(solder)
+                        .fluidInputs(fluid(key) * val)
                         .outputs(item('icbmclassic:missile:' + i))
-                        .duration(2000)
+                        .duration(200)
                         .EUt(30)
                         .buildAndRegister();
             }
@@ -369,7 +361,7 @@ for (solder in soldering_alloys) {
                             s_oxy,
                             s_fuel
                     ])
-                    .fluidInputs(solder)
+                    .fluidInputs(fluid(key) * val)
                     .outputs(item('openmodularturrets:ammo_meta:4')*8)
                     .duration(20)
                     .EUt(200)
@@ -385,7 +377,8 @@ for (solder in soldering_alloys) {
                                  s_fuel*16,
                                  item('icbmclassic:explosives:' + j)
                         ])
-                        .fluidInputs(solder, l_oxy*2000)
+                        .fluidInputs(fluid(key) * val)
+                        .fluidInputs(l_oxy*2000)
                         .outputs(item('icbmclassic:missile:' + j))
                         .duration(200)
                         .EUt(120)
@@ -403,7 +396,9 @@ for (solder in soldering_alloys) {
                                  ore('foilTitanium')*16,
                                  item('icbmclassic:explosives:' + k)
                         ])
-                        .fluidInputs(solder, l_oxy_1*2000, l_fuel*2000)
+                        .fluidInputs(fluid(key) * val)
+                        .fluidInputs(l_oxy_1*2000)
+                        .fluidInputs(l_fuel*2000)
                         .outputs(item('icbmclassic:missile:' + k))
                         .duration(200)
                         .EUt(500)
@@ -421,7 +416,9 @@ for (solder in soldering_alloys) {
                                  ore('foilTungstenSteel')*16,
                                  item('icbmclassic:explosives:' + l)
                         ])
-                        .fluidInputs(solder, l_oxy_1*4000, liquid('rocket_fuel')*2000)
+                        .fluidInputs(fluid(key) * val)
+                        .fluidInputs(l_oxy_1*2000)
+                        .fluidInputs(fluid('rocket_fuel') * 2000)
                         .outputs(item('icbmclassic:missile:' + l))
                         .duration(200)
                         .EUt(1920)
@@ -430,4 +427,3 @@ for (solder in soldering_alloys) {
         }
     }
 }
-*/

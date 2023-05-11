@@ -424,6 +424,18 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+//Fermentation Vat (and also remove old fermenters)
+
+for (i = 1; i <= 8; i++) {
+	crafting.remove("gregtech:gregtech.machine.fermenter." + Globals.voltageTiers[i])
+}
+
+crafting.addShaped("gregtech:fermentation_vat", metaitem('fermentation_vat'), [
+		[tieredCables[1], pumps[1], tieredCables[1]],
+		[ore('blockGlass'), hulls[1], ore('blockGlass')],
+		[tieredCables[1], circuits[1], tieredCables[1]]
+])
+
 //TODO: ENABLE THIS WHEN SUSYCORE 0.0.9 RELEASES
 /*
 //UV Light Box

@@ -18,6 +18,10 @@ for (name in name_removals) {
     //crafting.remove(name)
 }
 
+// Polycaprolactam Bar * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCaprolactam')], [fluid('nitrogen') * 1000])
+// Monocrystalline Silicon Boule * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSilicon') * 32, metaitem('dustSmallGalliumArsenide')], null)
 // Cupronickel Coil Block * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('wireGtDoubleCupronickel') * 8, metaitem('foilBronze') * 8], [fluid('tin_alloy') * 144])
 // Kanthal Coil Block * 1
@@ -26,6 +30,9 @@ mods.gregtech.assembler.removeByInput(120, [metaitem('wireGtDoubleKanthal') * 8,
 mods.gregtech.assembler.removeByInput(480, [metaitem('wireGtDoubleNichrome') * 8, metaitem('foilStainlessSteel') * 8], [fluid('aluminium') * 144])
 
 //ADDITIONS
+
+//CONSUMES IRON BUCKET ONLY BECAUSE THE OUTPUT IS IN AN IRON BUCKET
+crafting.addShapeless('gregtech:salt_water_bucket', item('forge:bucketfilled').withNbt(["FluidName": "salt_water", "Amount": 1000]), [item('minecraft:water_bucket').noreturn(), metaitem('dustSalt'), metaitem('dustSalt')])
 
 crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bronze'), [
     [ore('craftingToolHardHammer'), ore('stickBronze'), ore('screwBronze')],
@@ -226,6 +233,19 @@ crafting.replaceShaped('gregtech:filter_casing', item('gregtech:cleanroom_casing
         [metaitem('electric.motor.mv'), metaitem('rotorSteel'), metaitem('electric.pump.mv')],
         [metaitem('frameSteel'), metaitem('hepa_filter'), metaitem('frameSteel')]
 ])
+
+//Beds
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(metaitem('stickLongWood') * 4)
+        .inputs(metaitem('plateWood') * 8)
+        .inputs(metaitem('plateMemoryFoam') * 16)
+        .inputs(metaitem('wireFineRayon') * 64)
+        .inputs(metaitem('springSmallSteel') * 8)
+        .outputs(item('minecraft:bed'))
+        .duration(400)
+        .EUt(960)
+        .buildAndRegister();
 
 //Lights
 
