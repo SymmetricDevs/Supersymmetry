@@ -318,9 +318,9 @@ for (i = 1; i <= 8; i++) {
 
 for (def i = 1; i < 8; i++) {
 	crafting.addShaped("gregtech:weapons_factory." + i, metaitem('weapons_factory.' + Globals.voltageTiers[i]), [
-			[robotArms[i], circuits[i], robotArms[i]],
+			[circuits[i], robotArms[i], circuits[i]],
 			[conveyors[i], hulls[i], conveyors[i]],
-			[robotArms[i], circuits[i], robotArms[i]]
+			[tieredCables[i], circuits[i], tieredCables[i]]
 	])
 }
 
@@ -460,13 +460,82 @@ for (i = 1; i <= 8; i++) {
 
  */
 
+crafting.addShaped("gregtech:ore_sorter", metaitem('ore_sorter'), [
+		[robotArms[1], circuits[2], robotArms[1]],
+		[pumps[1], hulls[1], pumps[1]],
+		[robotArms[1], circuits[2], robotArms[1]]
+]);
+
+crafting.addShaped("gregtech:primitive_mud_pump", metaitem('primitive_mud_pump'), [
+		[metaitem('ringBronze'), metaitem('pipeNormalFluidTreatedWood'), metaitem('screwBronze')],
+		[metaitem('rotorBronze'), item('gregtech:steam_casing'), ore('craftingToolScrewdriver')],
+		[item('minecraft:stone_slab', 4), metaitem('pipeLargeFluidWood'), item('minecraft:stone_slab', 4)]
+]);
+
+crafting.addShaped("gregtech:railroad_engineering_station", metaitem('railroad_engineering_station'), [
+		[item('minecraft:rail'), item('minecraft:rail'), item('minecraft:rail')],
+		[item('minecraft:rail'), hulls[1], item('minecraft:rail')],
+		[item('minecraft:rail'), item('minecraft:rail'), item('minecraft:rail')]
+]);
+
+crafting.addShaped("gregtech:condenser", metaitem('condenser'), [
+		[null, metaitem('electric.pump.lv'), null],
+		[metaitem('frameSteel'), item('gregtech:boiler_casing', 1), metaitem('frameSteel')],
+		[null, metaitem('electric.pump.lv'), null]
+]);
+
+crafting.addShaped("gregtech:condenser", metaitem('condenser'), [
+		[null, metaitem('electric.pump.lv'), null],
+		[metaitem('frameSteel'), item('gregtech:boiler_casing', 1), metaitem('frameSteel')],
+		[null, metaitem('electric.pump.lv'), null]
+]);
+
+crafting.addShaped("gregtech:heat_exchanger", metaitem('heat_exchanger'), [
+		[null, metaitem('frameSteel'), null],
+		[metaitem('electric.pump.lv'), item('gregtech:boiler_casing', 1), metaitem('electric.pump.lv')],
+		[null, metaitem('frameSteel'), null]
+]);
+
+crafting.addShaped("gregtech:mining_drill", metaitem('mining_drill'), [
+		[circuits[1], motors[1], circuits[1]],
+		[conveyors[1], hulls[1], conveyors[1]],
+		[tieredCables[1], motors[1], tieredCables[1]]
+]);
+
+crafting.addShaped("gregtech:steel_drill_head", item('susy:drill_head'), [
+		[pumps[1], conveyors[1], pumps[1]],
+		[metaitem('component.grinder.diamond'), item('gregtech:metal_casing', 4), metaitem('component.grinder.diamond')],
+		[null, metaitem('component.grinder.diamond'), null]
+]);
+
+crafting.addShaped("gregtech:gas_turbine_multiblock", metaitem('gas_turbine'), [
+		[circuits[1], metaitem('gearSteel'), circuits[1]],
+		[metaitem('gearSteel'), hulls[1], metaitem('gearSteel')],
+		[metaitem('pipeLargeFluidSteel'), metaitem('gearSteel'), metaitem('pipeLargeFluidSteel')]
+]);
+
+crafting.addShaped("gregtech:heat_radiator", metaitem('heat_radiator'), [
+		[metaitem('frameSteel'), metaitem('pipeLargeFluidSteel'), metaitem('frameSteel')],
+		[metaitem('electric.pump.lv'), hulls[1], metaitem('electric.pump.lv')],
+		[metaitem('frameSteel'), metaitem('pipeLargeFluidSteel'), metaitem('frameSteel')]
+]);
+
+crafting.addShaped("gregtech:large_weapons_factory", metaitem('large_weapons_factory'), [
+		[sensors[1], robotArms[1], emitters[1]],
+		[conveyors[1], hulls[1], conveyors[1]],
+		[circuits[1], robotArms[1], circuits[1]]
+]);
+
 //Multiblocked Machines
 
+/*
 crafting.addShaped("multiblocked:ore_sorter", item('multiblocked:ore_sorter'), [
 		[robotArms[1], circuits[2], robotArms[1]],
 		[pumps[1], hulls[1], pumps[1]],
 		[robotArms[1], circuits[2], robotArms[1]]
 ]);
+
+ */
 
 // conversion recipes from greg ports
 crafting.addShapeless("lv input bus -> mbd input bus", item('multiblocked:item_input'), [metaitem('item_bus.import.lv')]);

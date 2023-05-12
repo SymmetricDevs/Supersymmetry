@@ -257,3 +257,15 @@ mods.gregtech.assembler.recipeBuilder()
         .duration(100)
         .EUt(30)
         .buildAndRegister();
+
+//Mud
+
+mods.gregtech.centrifuge.recipeBuilder()
+        .fluidInputs(fluid('mud') * 1000)
+        .chancedOutput(item('minecraft:clay'), 2500, 250)
+        .chancedOutput(item('minecraft:sand'), 2500, 250)
+        .chancedOutput(item('minecraft:gravel'), 2500, 250)
+        .chancedOutput(metaitem('dustLimestone'), 1000, 250)
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister();
