@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gregtech:items/metaitems/battery.hull/mv.lead_acid",
+    "layer1": "gregtech:items/metaitems/battery.re.mv.lead_acid/6"
+  }
+}

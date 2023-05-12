@@ -129,7 +129,7 @@ makeBattery(
   null, //ore("seperator.mv"), 
   metaitem("lipf6"), 
   "nimet",
-  ["ev", "iv", "luv"],
+  ["iv", "luv", "zpm"],
   4
 )
 
