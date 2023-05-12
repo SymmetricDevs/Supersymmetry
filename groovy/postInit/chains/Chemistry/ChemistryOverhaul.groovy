@@ -37,9 +37,8 @@ def COAL_SOURCES = [
     "dustCharcoal"
 ]
 
-// Biodiesel and Glycerol
-
-
+//TODO: ADD ETHYLENE OXIDE CHAIN AFTER NEW CATALYSTS ARE IMPLEMENTED
+//TODO: MAKE ANILINE RECIPE AFTER CATALYSTS ARE DONE
 
 // Soap
 
@@ -169,6 +168,19 @@ for (coal_source in COAL_SOURCES) {
     .buildAndRegister()
 }
 
+//CARBON DISULFIDE
+
+for (coal_source in COAL_SOURCES) {
+    ROASTER.recipeBuilder()
+            .inputs(ore(coal_source))
+            .inputs(metaitem('dustSulfur') * 2)
+            .fluidOutputs(fluid('carbon_disulfide') * 1000)
+            .duration(100)
+            .EUt(60)
+            .buildAndRegister()
+}
+
+
 // Phosphorous Pentoxide roaster
 
 ROASTER.recipeBuilder()
@@ -227,6 +239,14 @@ MIXER.recipeBuilder()
 .duration(30)
 .EUt(7)
 .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('hydrogen') * 50)
+        .fluidInputs(fluid('fluorine') * 50)
+        .fluidOutputs(fluid('hydrogen_fluoride') * 50)
+        .duration(1)
+        .EUt(7)
+        .buildAndRegister()
 
 BCR.recipeBuilder()
 .fluidInputs(fluid('hydrogen_fluoride') * 50)

@@ -228,8 +228,6 @@ MIXER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-//TODO: UNCOMMENT THIS WHEN SUSYCORE 0.0.8 IS RELEASED
-/*
 //TREES
 GREENHOUSE.recipeBuilder()
         .notConsumable(item('minecraft:sapling'))
@@ -1823,5 +1821,4 @@ GREENHOUSE.recipeBuilder()
         .duration(1200)
         .buildAndRegister()
 
-        //TODO: ADD RECIPES FOR GROWING MUSHROOMS
-*/
+//TODO: ADD RECIPES FOR GROWING MUSHROOMS

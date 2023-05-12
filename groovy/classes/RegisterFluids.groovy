@@ -35,6 +35,8 @@ class RegisterFluids {
         public static Material SodiumAluminate;
         public static Material AmmoniumSulfate;
         public static Material SodiumFluoride;
+        public static Material PotassiumFluoride;
+        public static Material PotassiumTetrafluoroborate;
 
         private static void generateHighPressureGases(Material materialName, int id, boolean generateCold){
                 var color = materialName.getMaterialRGB();
@@ -205,6 +207,28 @@ class RegisterFluids {
                         .build();
         }
 
+        private static void generatePurifiedGas(Material material, int id) {
+                var color = material.materialRGB;
+
+                new Material.Builder(id, "high_purity_" + material.toString())
+                        .fluid(FluidTypes.GAS)
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                        .color(color)
+                        .components(material, 1)
+                        .build();
+        }
+
+        private static void generatePurifiedLiquid(Material material, int id) {
+                var color = material.materialRGB;
+
+                new Material.Builder(id, "high_purity_" + material.toString())
+                        .fluid()
+                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                        .color(color)
+                        .components(material, 1)
+                        .build();
+        }
+
         public static void registerSolubles() {
                 CalciumHydroxide = new Material.Builder(32033, 'calcium_hydroxide')
                         .dust()
@@ -331,9 +355,21 @@ class RegisterFluids {
                         .build();
 
                 SodiumFluoride = new Material.Builder(32046, 'sodium_fluoride')
-                        .dust()
+                        .fluid().dust()
                         .components(Sodium, 1, Fluorine, 1)
                         .colorAverage()
+                        .build();
+
+                PotassiumFluoride = new Material.Builder(32048, 'potassium_fluoride')
+                        .fluid().dust()
+                        .components(Potassium, 1, Fluorine, 1)
+                        .colorAverage()
+                        .build();
+                        
+                PotassiumTetrafluoroborate = new Material.Builder(32050, 'potassium_tetrafluoroborate')
+                        .fluid().dust()
+                        .components(Potassium, 1, Boron, 1, Fluorine, 4)
+                        .color(0x8fb5a3)
                         .build();
         }
 
@@ -417,6 +453,32 @@ class RegisterFluids {
                         .build();
 
                 generateGreenhouseGases(EarthGreenhouseGas, 10401)
+
+                generatePurifiedGas(Hydrogen, 10500)
+
+                generatePurifiedGas(Helium, 10501)
+
+                generatePurifiedGas(Nitrogen, 10502)
+
+                generatePurifiedGas(Oxygen, 10503)
+
+                generatePurifiedGas(Fluorine, 10504)
+
+                generatePurifiedGas(Neon, 10505)
+
+                generatePurifiedGas(Chlorine, 10506)
+
+                generatePurifiedGas(Argon, 10507)
+
+                generatePurifiedGas(Krypton, 10508)
+
+                generatePurifiedGas(Xenon, 10509)
+
+                generatePurifiedLiquid(Bromine, 10510)
+
+                generatePurifiedLiquid(Mercury, 10511)
+
+                generatePurifiedLiquid(Water, 10512)
 
                 new Material.Builder(11000, "ammonium_chloride_solution")
                         .fluid()
@@ -1061,7 +1123,7 @@ class RegisterFluids {
                         .colorAverage()
                         .build();
 
-                new Material.Builder(11110, 'carbon_tetrachloride')
+                Material CarbonTetrachloride = new Material.Builder(11110, 'carbon_tetrachloride')
                         .fluid()
                         .components(Carbon, 1, Chlorine, 4)
                         .colorAverage()
@@ -1105,6 +1167,53 @@ class RegisterFluids {
                 new Material.Builder(11117, 'mixed_dichlorobenzene_solution')
                         .fluid()
                         .color(0xFF7F7F)
+                        .build();
+
+                new Material.Builder(11118, 'novolacs')
+                        .fluid()
+                        .color(0xbfa26f)
+                        .build();
+
+                new Material.Builder(11119, 'silicon_tetrachloride')
+                        .fluid()
+                        .components(Silicon, 1, Chlorine, 4)
+                        .color(0x63827f)
+                        .build();
+
+                new Material.Builder(11120, 'purified_silicon_tetrachloride')
+                        .fluid()
+                        .components(Silicon, 1, Chlorine, 4)
+                        .color(0x7fa3a0)
+                        .build();
+
+                new Material.Builder(11121, 'ethanolamine')
+                        .fluid()
+                        .components(Carbon, 2, Hydrogen, 7, Nitrogen, 1, Oxygen, 1)
+                        .color(0x56a6e3)
+                        .build();
+
+                new Material.Builder(11122, 'diethanolamine')
+                        .fluid()
+                        .components(Carbon, 4, Hydrogen, 11, Nitrogen, 1, Oxygen, 2)
+                        .color(0x4296d6)
+                        .build();
+
+                new Material.Builder(11123, 'triethanolamine')
+                        .fluid()
+                        .components(Carbon, 6, Hydrogen, 15, Nitrogen, 1, Oxygen, 3)
+                        .color(0x2e86c9)
+                        .build();
+
+                new Material.Builder(11124, 'ethylene_glycol')
+                        .fluid()
+                        .components(Carbon, 2, Hydrogen, 6, Oxygen, 2)
+                        .color(0x2e86c9)
+                        .build();
+
+                new Material.Builder(11125, 'carbon_disulfide')
+                        .fluid()
+                        .components(Carbon, 1, Sulfur, 2)
+                        .colorAverage()
                         .build();
 
                 new Material.Builder(12000, 'flue_gas')
@@ -1714,6 +1823,11 @@ class RegisterFluids {
                         .color(0xcec929)
                         .build();
 
+                new Material.Builder(12113, "borate_liquor")
+                        .fluid()
+                        .color(0xacbbac)
+                        .build();
+
                 Material HeavyWater = new Material.Builder(12200, "heavy_water")
                         .fluid()
                         .components(Deuterium, 2, Oxygen, 1)
@@ -1766,6 +1880,30 @@ class RegisterFluids {
                         .fluid()
                         .components(Water, 98, Salt, 2)
                         .color(0x3c5bc2)
+                        .build();
+                
+                new Material.Builder(12209, "potassium_fluoride_solution")
+                        .fluid()
+                        .components(Water, 1, PotassiumFluoride, 1)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12210, "tetrafluoroboric_acid")
+                        .fluid()
+                        .components(Water, 3, Hydrogen, 1, Boron, 1, Fluorine, 4)
+                        .color(0xa4ab91)
+                        .build();
+
+                new Material.Builder(12211, "potassium_tetrafluoroborate_solution")
+                        .fluid()
+                        .components(Water, 7, PotassiumTetrafluoroborate, 2)
+                        .color(0x8fb5a3)
+                        .build();
+
+                new Material.Builder(12212, "boron_trichloride")
+                        .fluid(FluidTypes.GAS)
+                        .components(Boron, 1, Chlorine, 3)
+                        .colorAverage()
                         .build();
 
                 log.infoMC("Finished registering fluids")
