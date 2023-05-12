@@ -88,6 +88,7 @@ def makeBattery(cathode, annode, seperator, electrolyte, outputMaterial, tierRan
       .duration(10 * Math.max(tierToKeyOffset, 1)) // start incrementing at MV (2)
       .EUt(Globals.voltageTiersInt[tierToKey - 1])
       .buildAndRegister()
+    println("[INFO]: Magic Numbers@${tier} => CA: ${Math.min(Math.max(tierToKeyOffset, 1), 4)} | C: ${Math.min(Math.max(tierToKeyOffset * 2, 1), 4)} | D: ${Math.max(tierToKeyOffset, 1)} | V: ${Globals.voltageTiersInt[tierToKey - 1]}")
   }
   println("[INFO]: Built battery ${outputMaterial} at tier range of ${tierRanges}")
 }
@@ -108,7 +109,7 @@ makeBattery(
   metaitem("anode.graphine_in_graphine"), 
   null, //ore("seperator.mv"), 
   metaitem("lipf6"), 
-  "vanadium",
+  "vanadiumSUSY",
   ["hv", "ev", "iv"],
   2
 )

@@ -129,8 +129,6 @@ eventManager.listen {
         customMetaItems.addItem(3036, "plate.advanced_random_access_memory");
 
         //Batteries 4000-4100
-        // customMetaItems.addItem(4000, "battery.lead_acid").addComponents(ElectricStats.createRechargeableBattery(120000, GTValues.LV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-
         customMetaItems.addItem(4000, "battery.lv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(120000, GTValues.LV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
         customMetaItems.addItem(4001, "battery.mv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(480000, GTValues.MV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
         customMetaItems.addItem(4002, "battery.hv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(1440000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
@@ -141,9 +139,9 @@ eventManager.listen {
         customMetaItems.addItem(4005, "battery.ev.lithium").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
 
         // Vanadium flow battery (HV)
-        customMetaItems.addItem(4006, "battery.hv.vanadium").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4007, "battery.ev.vanadium").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4008, "battery.iv.vanadium").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.IV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.IV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4006, "battery.hv.vanadiumSUSY").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4007, "battery.ev.vanadiumSUSY").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4008, "battery.iv.vanadiumSUSY").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.IV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.IV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
 
         // Nickel-cadmium battery (EV)
         customMetaItems.addItem(4009, "battery.ev.nicad").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
@@ -167,9 +165,9 @@ eventManager.listen {
         customMetaItems.addItem(4031, "battery.hull.lithium.hv");
         customMetaItems.addItem(4032, "battery.hull.lithium.ev");
         
-        customMetaItems.addItem(4033, "battery.hull.vanadium.hv");
-        customMetaItems.addItem(4034, "battery.hull.vanadium.ev");
-        customMetaItems.addItem(4035, "battery.hull.vanadium.iv");
+        customMetaItems.addItem(4033, "battery.hull.vanadiumSUSY.hv");
+        customMetaItems.addItem(4034, "battery.hull.vanadiumSUSY.ev");
+        customMetaItems.addItem(4035, "battery.hull.vanadiumSUSY.iv");
 
         customMetaItems.addItem(4036, "battery.hull.nicad.ev");
         customMetaItems.addItem(4037, "battery.hull.nicad.iv");
