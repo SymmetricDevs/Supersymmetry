@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "gregtech:items/metaitems/battery.hull.hv",
-	"layer1": "gregtech:items/metaitems/battery.re.hv.lithium/5"
+	"layer1": "gregtech:items/metaitems/battery.re.ev.lithium/5"
   }
 }
