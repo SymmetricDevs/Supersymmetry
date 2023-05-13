@@ -284,6 +284,20 @@ material.rayon=Rayon
 material.alkali_cellulose=Alkali Cellulose
 material.sodium_cellulose_xanthate=Sodium Cellulose Xanthate
 
+material.sodium_bromide=Sodium Bromide
+
+material.roasted_sperrylite=Roasted Sperrylite
+material.roasted_cobaltite=Roasted Cobaltite
+material.roasted_arsenopyrite=Roasted Arsenopyrite
+material.roasted_realgar=Roasted Realgar
+
+material.sperrylite_residue=Sperrylite Residue
+material.cobaltite_residue=Cobaltite Residue
+material.arsenopyrite_residue=Arsenopyrite Residue
+material.enargite_residue=Enargite Residue
+material.realgar_residue=Realgar Residue
+material.proustite_residue=Proustite Residue
+
 # Fluids
 
 material.smoke_bomb_mix=Smoke Bomb Mix
@@ -438,6 +452,11 @@ material.high_purity_water=High Purity Water
 material.ethanolamine=Ethanolamine
 material.diethanolamine=Diethanolamine
 material.triethanolamine=Triethanolamine
+
+material.thioarsenite_solution=Thioarsenite Solution
+material.tetrachloroantimonate_solution=Tetrachloroantimonate Solution
+material.arsine=Arsine
+material.sodium_bromide_solution=Sodium Bromide Solution
 
 # Thermodynamics
 

@@ -37,6 +37,7 @@ class RegisterFluids {
         public static Material SodiumFluoride;
         public static Material PotassiumFluoride;
         public static Material PotassiumTetrafluoroborate;
+        public static Material SodiumBromide;
 
         private static void generateHighPressureGases(Material materialName, int id, boolean generateCold){
                 var color = materialName.getMaterialRGB();
@@ -371,6 +372,12 @@ class RegisterFluids {
                         .components(Potassium, 1, Boron, 1, Fluorine, 4)
                         .color(0x8fb5a3)
                         .build();
+
+                SodiumBromide = new Material.Builder(32053, 'sodium_bromide')
+                        .dust()
+                        .components(Sodium, 1, Bromine, 1)
+                        .colorAverage()
+                        .build()
         }
 
         public static void init() {
@@ -1903,6 +1910,33 @@ class RegisterFluids {
                 new Material.Builder(12212, "boron_trichloride")
                         .fluid(FluidTypes.GAS)
                         .components(Boron, 1, Chlorine, 3)
+                        .colorAverage()
+                        .build();
+
+                
+                new Material.Builder(12213, "thioarsenite_solution")
+                        .fluid()
+                        .components(Sodium, 3, Arsenic, 1, Sulfur, 3, Water, 1)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .colorAverage()
+                        .build()
+                        .setFormula("(?)(Na3AsS3)(H2O)", true);
+
+                new Material.Builder(12214, "tetrachloroantimonate_solution")
+                        .fluid()
+                        .components(Hydrogen, 1, Antimony, 1, Chlorine, 4, HydrochloricAcid, 2)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12215, "arsine")
+                        .fluid(FluidTypes.GAS)
+                        .components(Arsenic, 1, Hydrogen, 3)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12216, "sodium_bromide_solution")
+                        .fluid()
+                        .components(SodiumBromide, 1, Water, 1)
                         .colorAverage()
                         .build();
 

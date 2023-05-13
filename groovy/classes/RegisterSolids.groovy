@@ -451,6 +451,110 @@ class RegisterSolids {
                 .colorAverage()
                 .build()
         
+        new Material.Builder(32054, 'silver_chloride')
+                .dust()
+                .components(Silver, 1, Chlorine, 1)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(32055, 'arsenic_iii_sulfide')
+                .dust()
+                .components(Arsenic, 2, Sulfur, 3)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(32056, 'sodium_arsenide')
+                .dust()
+                .components(Sodium, 3, Arsenic, 1)
+                .colorAverage()
+                .build()
+                
+        //ROASTED ORES ID: 32500-32600
+
+        new Material.Builder(32500, 'roasted_sperrylite')
+                .dust()
+                .components(Platinum, 1)
+                .color(0x3b1754)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(SAND)
+                .build();
+
+        new Material.Builder(32501, 'roasted_cobaltite')
+                .dust()
+                .components(Cobalt, 1)
+                .color(0x1f2863)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(SAND)
+                .build();
+
+        new Material.Builder(32502, 'roasted_arsenopyrite')
+                .dust()
+                .components(Iron, 1)
+                .color(0x31194d)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(SAND)
+                .build();
+
+        new Material.Builder(32504, 'roasted_realgar')
+                .dust()
+                .components()
+                .color(0x4d151f)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(SAND)
+                .build()
+                .setFormula("?", true);
+
+        //ORE LEACH RESIDUE ID: 32600-32700
+
+        new Material.Builder(32600, 'sperrylite_residue')
+                .dust()
+                .components(Platinum, 1)
+                .color(0x3b1754)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(BRIGHT)
+                .build();
+
+        new Material.Builder(32601, 'cobaltite_residue')
+                .dust()
+                .components(Cobalt, 1)
+                .color(0x1f2863)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(BRIGHT)
+                .build();
+
+        new Material.Builder(32602, 'arsenopyrite_residue')
+                .dust()
+                .components(Iron, 1)
+                .color(0x31194d)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(BRIGHT)
+                .build();
+
+        new Material.Builder(32603, 'enargite_residue')
+                .dust()
+                .components(Copper, 1)
+                .color(0x59183c)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(BRIGHT)
+                .build();
+
+        new Material.Builder(32604, 'realgar_residue')
+                .dust()
+                .components()
+                .color(0x4d151f)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(BRIGHT)
+                .build()
+                .setFormula("?", true);
+
+        new Material.Builder(32605, 'proustite_residue')
+                .dust()
+                .components(Silver, 1)
+                .color(0x4d151f)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(BRIGHT)
+                .build();
+        
         log.infoMC('Finished registering solids')
     }
 }
