@@ -33,12 +33,12 @@ metaitem.battery.hull.lithium.hv.tooltip=An empty §6HV§r Battery Hull
 metaitem.battery.hull.lithium.ev.name=Large Lithium-Ion Battery Hull
 metaitem.battery.hull.lithium.ev.tooltip=An empty §5EV§r Battery Hull
 
-metaitem.battery.hull.vanadium.hv.name=Small Vanadium Battery Hull
-metaitem.battery.hull.vanadium.hv.tooltip=An empty §6HV§r Battery Hull
-metaitem.battery.hull.vanadium.ev.name=Medium Vanadium Battery Hull
-metaitem.battery.hull.vanadium.ev.tooltip=An empty §5EV§r Battery Hull
-metaitem.battery.hull.vanadium.iv.name=Large Vanadium Battery Hull
-metaitem.battery.hull.vanadium.iv.tooltip=An empty §1IV§r Battery Hull
+metaitem.battery.hull.vanadiumSUSY.hv.name=Small Vanadium Battery Hull
+metaitem.battery.hull.vanadiumSUSY.hv.tooltip=An empty §6HV§r Battery Hull
+metaitem.battery.hull.vanadiumSUSY.ev.name=Medium Vanadium Battery Hull
+metaitem.battery.hull.vanadiumSUSY.ev.tooltip=An empty §5EV§r Battery Hull
+metaitem.battery.hull.vanadiumSUSY.iv.name=Large Vanadium Battery Hull
+metaitem.battery.hull.vanadiumSUSY.iv.tooltip=An empty §1IV§r Battery Hull
 
 metaitem.battery.hull.nicad.ev.name=Small Nickel-Cadmium Battery Hull
 metaitem.battery.hull.nicad.ev.tooltip=An empty §5EV§r Battery Hull
