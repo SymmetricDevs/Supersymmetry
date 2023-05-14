@@ -287,16 +287,15 @@ material.sodium_cellulose_xanthate=Sodium Cellulose Xanthate
 material.sodium_bromide=Sodium Bromide
 
 material.roasted_sperrylite=Roasted Sperrylite
-material.roasted_cobaltite=Roasted Cobaltite
-material.roasted_arsenopyrite=Roasted Arsenopyrite
-material.roasted_realgar=Roasted Realgar
-
-material.sperrylite_residue=Sperrylite Residue
-material.cobaltite_residue=Cobaltite Residue
-material.arsenopyrite_residue=Arsenopyrite Residue
 material.enargite_residue=Enargite Residue
-material.realgar_residue=Realgar Residue
-material.proustite_residue=Proustite Residue
+
+material.cobaltite_leach_solution=Cobaltite Leach Solution
+material.arsenopyrite_leach_solution=Arsenopyrite Leach Solution
+
+material.arsenic_iii_sulfide=Arsenic III Sulfide
+material.arsenic_v_sulfide=Arsenic V Sulfide
+material.silver_chloride=Silver Chloride
+material.copper_sulfate=Copper Sulfate
 
 # Fluids
 
@@ -454,9 +453,15 @@ material.diethanolamine=Diethanolamine
 material.triethanolamine=Triethanolamine
 
 material.thioarsenite_solution=Thioarsenite Solution
+material.alkaline_arsenite_solution=Alkaline Arsenite Solution
+material.salty_arsenous_acid=Arsenous Acid Brine
+material.thioarsenate_solution=Thioarsenate Solution
+material.arsenous_acid=Arsenous Acid
 material.tetrachloroantimonate_solution=Tetrachloroantimonate Solution
+material.acidic_copper_solution=Acidic Copper Solution
 material.arsine=Arsine
 material.sodium_bromide_solution=Sodium Bromide Solution
+material.sperrylite_waste=Sperrylite Waste
 
 # Thermodynamics
 
