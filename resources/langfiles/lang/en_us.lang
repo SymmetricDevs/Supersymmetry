@@ -858,6 +858,9 @@ metaitem.baseEnrichedNaquadahTriniumEuropiumDuranide.name=Base Enriched Naquadah
 metaitem.assemblyRutheniumTriniumAmericiumNeutronate.name=Ruthenium Trinium Americium Neutronate Assembly
 metaitem.baseRutheniumTriniumAmericiumNeutronate.name=Base Ruthenium Trinium Americium Neutronate Superconductor
 
+metaitem.alternator.stator.name=Alternator Stator
+metaitem.alternator.rotor.name=Alternator Rotor
+
 # Multiblocked
 
 tile.multiblocked.item_input.name=Small Input Bus

@@ -11,7 +11,7 @@ println("Running GregTech.groovy...")
 //REMOVALS
 
 def name_removals = [
-    'gregtech:iron_magnetic_stick',
+        'gregtech:iron_magnetic_stick',
 ]
 
 for (name in name_removals) {
@@ -256,4 +256,17 @@ mods.gregtech.assembler.recipeBuilder()
         .outputs(metaitem('carbon_arc_lamp') * 8)
         .duration(100)
         .EUt(30)
+        .buildAndRegister();
+
+//Ore Recipes
+
+crafting.addShapeless('susy:decompress_lignite_block', metaitem('gemLignite') * 9, [item('susy:resource_block', 3)])
+crafting.addShapeless('susy:decompress_anthracite_block', metaitem('gemAnthracite') * 9, [item('susy:resource_block', 2)])
+
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('susy:resource_block'))
+        .outputs(metaitem('crushedBauxite') * 4)
+        .chancedOutput(metaitem('dustStone'), 6700, 800)
+        .duration(400)
+        .EUt(2)
         .buildAndRegister();

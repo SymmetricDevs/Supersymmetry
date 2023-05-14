@@ -1,5 +1,5 @@
 import classes.*;
-
+//TODO: CHANGE GAS TURBINE RECIPES TO OUTPUT AN AMOUNT OF FLUE GAS THAT IS PROPORTIONAL TO THE DURATION OF THE RECIPE
 //REMOVALS
 
 mods.gregtech.vacuum_freezer.removeByInput(1920, null, [fluid('nether_air') * 4000])
