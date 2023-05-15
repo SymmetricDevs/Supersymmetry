@@ -55,32 +55,33 @@ MIXER_RECIPES.recipeBuilder()
   .duration(40)
   .buildAndRegister()
 
-def makeBattery(cathode, annode, seperator, electrolyte, outputMaterial, tierRanges, tierOffset) {
+
+def makeBattery(cathode, anode, seperator, electrolyte, outputMaterial, tierRanges, tierOffset) {
   for(tier in tierRanges) {
     // Can recipie
     def tierToKey = Globals.voltageTiers.indexOf(tier)
     def tierToKeyOffset = tierToKey - tierOffset
-    def myRecipie = mods.gregtech.assembler.recipeBuilder()
+    def canRecipe = mods.gregtech.assembler.recipeBuilder()
       .inputs(cathode * Math.min(Math.max(tierToKeyOffset, 1), 4))
-      .inputs(annode * Math.min(Math.max(tierToKeyOffset, 1), 4))
+      .inputs(anode * Math.min(Math.max(tierToKeyOffset, 1), 4))
       .inputs(metaitem(Globals.cableTiers[tier]) * Math.min(Math.max(tierToKeyOffset * 2, 1), 4)) // too lazy didnt add the other copper variant
       .outputs(metaitem("battery.hull.${outputMaterial}.${tier}"))
       .duration(20 * Math.max(tierToKeyOffset, 1))
       .EUt(Globals.voltageTiersInt[tierToKey - 1])
 
     if (tierToKey > 2) {
-      myRecipie.fluidInputs(fluid('polyvinyl_chloride') * (144 * Math.min(Math.max(tierToKeyOffset * 3, 1), 9)))
+      canRecipe.fluidInputs(fluid('polyvinyl_chloride') * (144 * Math.min(Math.max(tierToKeyOffset * 3, 1), 9)))
     } else {
-      myRecipie.fluidInputs(fluid('plastic') * 144)
+      canRecipe.fluidInputs(fluid('plastic') * 144)
     }
 
     if (seperator != null) {
-      myRecipie.inputs(seperator)
+      canRecipe.inputs(seperator)
     }
 
-    myRecipie.buildAndRegister()
+    canRecipe.buildAndRegister()
 
-    // Canning recipie
+    // Canning recipe
     mods.gregtech.canner.recipeBuilder()
       .inputs(metaitem("battery.hull.${outputMaterial}.${tier}"))
       .inputs(electrolyte * Math.min(Math.max(tierToKeyOffset, 1), 4))
@@ -88,9 +89,8 @@ def makeBattery(cathode, annode, seperator, electrolyte, outputMaterial, tierRan
       .duration(10 * Math.max(tierToKeyOffset, 1)) // start incrementing at MV (2)
       .EUt(Globals.voltageTiersInt[tierToKey - 1])
       .buildAndRegister()
-    println("[INFO]: Magic Numbers@${tier} => CA: ${Math.min(Math.max(tierToKeyOffset, 1), 4)} | C: ${Math.min(Math.max(tierToKeyOffset * 2, 1), 4)} | D: ${Math.max(tierToKeyOffset, 1)} | V: ${Globals.voltageTiersInt[tierToKey - 1]}")
   }
-  println("[INFO]: Built battery ${outputMaterial} at tier range of ${tierRanges}")
+  log.infoMC("Built battery ${outputMaterial} at tier range of ${tierRanges}")
 }
 
 // lipf6 missing add
@@ -98,7 +98,7 @@ makeBattery(
   metaitem("cathode.lithium_cobalt_oxide"), 
   metaitem("anode.graphite"), 
   null, //ore("seperator.mv"), 
-  metaitem("lipf6"), 
+  metaitem("dustLithiumHexafluorophosphate"), 
   "lithium",
   ["mv", "hv", "ev"],
   1
@@ -109,7 +109,7 @@ makeBattery(
   metaitem("anode.graphine_in_graphine"), 
   null, //ore("seperator.mv"), 
   metaitem("lipf6"), 
-  "vanadiumSUSY",
+  "dustVanadiumPenoxide",
   ["hv", "ev", "iv"],
   2
 )
@@ -118,7 +118,7 @@ makeBattery(
   metaitem("cathode.nickel_oxide_hydroxide"), 
   metaitem("anode.met_cadnium"), 
   null, //ore("seperator.mv"), 
-  metaitem("lipf6"), 
+  metaitem("dustPotassiumHydroxide"), 
   "nicad",
   ["ev", "iv", "luv"],
   3
@@ -128,11 +128,22 @@ makeBattery(
   metaitem("cathode.nickel_oxide_hydroxide"), 
   metaitem("anode.lanthanum_nickel_oxide"), 
   null, //ore("seperator.mv"), 
-  metaitem("lipf6"), 
+  metaitem("dustPotassiumHydroxide"), 
   "nimet",
   ["iv", "luv", "zpm"],
   4
 )
+
+// not yet finished designwise
+// makeBattery(
+//   metaitem("cathode.nickel_oxide_hydroxide"), 
+//   metaitem("anode.lanthanum_nickel_oxide"), 
+//   null, //ore("seperator.mv"), 
+//   metaitem("dustLithiumHexafluorophosphate"), 
+//   "nelithium",
+//   ["iv", "luv", "zpm"],
+//   4
+// )
 
 // Remove Batteries
 mods.hei.removeAndHide(metaitem('battery.hull.lv'));

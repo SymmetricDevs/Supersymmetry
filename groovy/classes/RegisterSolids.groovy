@@ -450,7 +450,25 @@ class RegisterSolids {
                 .flags(GENERATE_ROD)
                 .colorAverage()
                 .build()
-        
+
+        Material.Builder(32051, 'lithium_hexafluorophosphate')
+                .dust()
+                .components(Lithium, 1, Phosphorus, 1, Fluorine, 6)
+                .colorAverage()
+                .build()
+
+        Material.Builder(32053, 'vanadium_penoxide')
+                .dust()
+                .components(Vanadium, 2, Oxygen, 5)
+                .colorAverage()
+                .build()
+
+        Material.Builder(32053, 'potassium_hydroxide')
+                .dust()
+                .components(Potassium, 1, Oxygen, 1, Hydrogen 1)
+                .colorAverage()
+                .build()
+
         log.infoMC('Finished registering solids')
     }
 }

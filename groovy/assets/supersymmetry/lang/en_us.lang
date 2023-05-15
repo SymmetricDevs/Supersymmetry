@@ -21,9 +21,12 @@ metaitem.battery.iv.nimet.name=Small Nickel-Metal-Hydride Battery
 metaitem.battery.luv.nimet.name=Medium Nickel-Metal-Hydride Battery
 metaitem.battery.zpm.nimet.name=Large Nickel-Metal-Hydride Battery
 
-metaitem.battery.luv.magic.name=Small NE Lithium-Ion Battery
-metaitem.battery.zpm.magic.name=Medium NE Lithium-Ion Battery
-metaitem.battery.uv.magic.name=Large NE Lithium-Ion Battery
+metaitem.battery.luv.nelithium.name=Small Advanced Lithium-Ion Battery
+metaitem.battery.luv.nelithium.tooltip=A §5Nanoparticle enhanced§r Lithium-Ion battery.
+metaitem.battery.zpm.nelithium.name=Medium Advanced Lithium-Ion Battery
+metaitem.battery.zpm.nelithium.tooltip=A §5Nanoparticle enhanced§r Lithium-Ion battery.
+metaitem.battery.uv.nelithium.name=Large Advanced Lithium-Ion Battery
+metaitem.battery.uv.nelithium.tooltip=A §5Nanoparticle enhanced§r Lithium-Ion battery.
 
 # Battery Hulls
 metaitem.battery.hull.lithium.mv.name=Small Lithium-Ion Battery Hull
@@ -53,6 +56,14 @@ metaitem.battery.hull.nimet.luv.name=Medium Nickel-Metal-Hydride Battery Hull
 metaitem.battery.hull.nimet.luv.tooltip=An empty §dLuV§r Battery Hull
 metaitem.battery.hull.nimet.zpm.name=Large Nickel-Metal-Hydride Battery Hull
 metaitem.battery.hull.nimet.zpm.tooltip=An empty §fZPM§r Battery Hull
+
+# Nanoparticle enhanced Lithium-Ion. name too long
+metaitem.battery.hull.nelithium.iv.name=Small Advanced Lithium-Ion Battery Hull
+metaitem.battery.hull.nelithium.iv.tooltip=An empty §1IV§r Battery Hull
+metaitem.battery.hull.nelithium.luv.name=Medium Advanced Lithium-Ion Battery Hull
+metaitem.battery.hull.nelithium.luv.tooltip=An empty §dLuV§r Battery Hull
+metaitem.battery.hull.nelithium.zpm.name=Large Advanced Lithium-Ion Battery Hull
+metaitem.battery.hull.nelithium.zpm.tooltip=An empty §fZPM§r Battery Hull
 
 
 # Battery Components

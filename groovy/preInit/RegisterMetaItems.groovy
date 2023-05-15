@@ -154,10 +154,9 @@ eventManager.listen {
         customMetaItems.addItem(4014, "battery.zpm.nimet").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.ZPM)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.ZPM).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
 
         // Nanoparticle enhanced lithium ion battery (LuV?)
-        // reserved for now
-        customMetaItems.addItem(4015, "battery.luv.magic").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.LuV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LuV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4016, "battery.zpm.magic").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.ZPM)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.ZPM).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4017, "battery.uv.magic").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.UV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.UV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4015, "battery.luv.nelithium").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.LuV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LuV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4016, "battery.zpm.nelithium").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.ZPM)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.ZPM).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4017, "battery.uv.nelithium").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.UV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.UV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
 
 
         // components [30-60]
@@ -178,9 +177,9 @@ eventManager.listen {
         customMetaItems.addItem(4041, "battery.hull.nimet.zpm");
         
         // reserved
-        // customMetaItems.addItem(4062, "battery.hull.magic.luv");
-        // customMetaItems.addItem(4063, "battery.hull.magic.zpm");
-        // customMetaItems.addItem(4064, "battery.hull.magic.uv");
+        customMetaItems.addItem(4042, "battery.hull.nelithium.luv");
+        customMetaItems.addItem(4043, "battery.hull.nelithium.zpm");
+        customMetaItems.addItem(4044, "battery.hull.nelithium.uv");
 
         // cathodes 
         customMetaItems.addItem(4060, "cathode.lead");
