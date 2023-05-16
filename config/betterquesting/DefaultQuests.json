@@ -22574,7 +22574,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can no longer make §6glass§r by simply chucking sand in a furnace. You will need to macerate the sand (either machine or mortar) to get §6quartz dust§r, combine this with §6tiny flint dust§r to get §6glass dust§r, and then put this into an §6Alloy Smelter§r with a §6block mold§r to get glass blocks.",
+          "desc:8": "To make §6glass§r, you will need to macerate sand (either via machine or mortar) to get §6quartz dust§r, combine this with §6tiny flint dust§r to get §6glass dust§r, and then put this into an §6Alloy Smelter§r with a §6block mold§r to get glass blocks.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
