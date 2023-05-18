@@ -508,7 +508,7 @@ crafting.addShaped("gregtech:steel_drill_head", item('susy:drill_head'), [
 		[null, metaitem('component.grinder.diamond'), null]
 ]);
 
-crafting.addShaped("gregtech:gas_turbine_multiblock", metaitem('gas_turbine'), [
+crafting.addShaped("gregtech:gas_turbine_multiblock", metaitem('basic_gas_turbine'), [
 		[circuits[1], metaitem('gearSteel'), circuits[1]],
 		[metaitem('gearSteel'), hulls[1], metaitem('gearSteel')],
 		[metaitem('pipeLargeFluidSteel'), metaitem('gearSteel'), metaitem('pipeLargeFluidSteel')]
