@@ -284,6 +284,19 @@ material.rayon=Rayon
 material.alkali_cellulose=Alkali Cellulose
 material.sodium_cellulose_xanthate=Sodium Cellulose Xanthate
 
+material.sodium_bromide=Sodium Bromide
+
+material.roasted_sperrylite=Roasted Sperrylite
+material.enargite_residue=Enargite Residue
+
+material.cobaltite_leach_solution=Cobaltite Leach Solution
+material.arsenopyrite_leach_solution=Arsenopyrite Leach Solution
+
+material.arsenic_iii_sulfide=Arsenic III Sulfide
+material.arsenic_v_sulfide=Arsenic V Sulfide
+material.silver_chloride=Silver Chloride
+material.copper_sulfate=Copper Sulfate
+
 # Fluids
 
 material.smoke_bomb_mix=Smoke Bomb Mix
@@ -449,6 +462,17 @@ material.graphite_water=Graphite Water
 material.phosphate_water=Phosphate Water
 material.precious_runoff=Precious Runoff
 material.radioactive_runoff=Radioactive Runoff
+
+material.thioarsenite_solution=Thioarsenite Solution
+material.alkaline_arsenite_solution=Alkaline Arsenite Solution
+material.salty_arsenous_acid=Arsenous Acid Brine
+material.thioarsenate_solution=Thioarsenate Solution
+material.arsenous_acid=Arsenous Acid
+material.tetrachloroantimonate_solution=Tetrachloroantimonate Solution
+material.acidic_copper_solution=Acidic Copper Solution
+material.arsine=Arsine
+material.sodium_bromide_solution=Sodium Bromide Solution
+material.sperrylite_waste=Sperrylite Waste
 
 # Thermodynamics
 

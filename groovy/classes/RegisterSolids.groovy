@@ -451,6 +451,57 @@ class RegisterSolids {
                 .colorAverage()
                 .build()
         
+        new Material.Builder(32054, 'silver_chloride')
+                .dust()
+                .components(Silver, 1, Chlorine, 1)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(32055, 'arsenic_iii_sulfide')
+                .dust()
+                .components(Arsenic, 2, Sulfur, 3)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(32056, 'sodium_arsenide')
+                .dust()
+                .components(Sodium, 3, Arsenic, 1)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(32057, 'arsenic_v_sulfide')
+                .dust()
+                .components(Arsenic, 2, Sulfur, 5)
+                .colorAverage()
+                .build()
+                
+        new Material.Builder(32058, 'copper_sulfate')
+                .dust()
+                .components(Copper, 1, Sulfur, 1, Oxygen, 4)
+                .colorAverage()
+                .build()
+
+        //ROASTED ORES ID: 32500-32600
+
+        new Material.Builder(32500, 'roasted_sperrylite')
+                .dust()
+                .components(Platinum, 1)
+                .color(0x3b1754)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(SAND)
+                .build();
+
+        //ORE LEACH RESIDUE ID: 32600-32700
+
+        new Material.Builder(32600, 'enargite_residue')
+                .dust()
+                .components(Copper, 2, Sulfur, 1)
+                .color(0x59183c)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(BRIGHT)
+                .build()
+                .setFormula("(?)Cu2S", true);
+        
         log.infoMC('Finished registering solids')
     }
 }
