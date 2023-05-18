@@ -7,7 +7,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Welcome to §9§9§9§b§b§b§b§b§b§l§l§l§l§l§lSupersymmetry§r§r§r§r§r§r! \n\nYou have just landed on an unfamiliar planet. This book will teach you how to rebuild civilization from scratch in only §k4200§r pages.\n\nStart by getting a rock§r. This book is interactive.\n\nWhen you pick up a rock from the ground, press the §l§l§l§l§l§l§a§a§a§a§a§aSUBMIT§r button to complete the quest and continue.\n\nIf you lose this book, you can check the quests by pressing the §2§aGRAVE §rkey.\n\nPages that have a normal icon aren\u0027t required for progression. \nPages that have a framed icon, like this one are §crequired §rand contain critical information for your survival.\n\nYou have been given a §6home block§r. It allows you to set your spawn if you ever die. You cannot skip the night, as beds are not available before EV.\n\n",
+          "desc:8": "Welcome to §9§9§9§b§b§b§b§b§b§l§l§l§l§l§lSupersymmetry§r§r§r§r§r§r! \n\nYou have just landed on an unfamiliar planet. This book will teach you how to rebuild civilization from scratch in only §k4200§r pages.\n\nStart by getting a rock§r. This book is interactive.\n\nWhen you pick up a rock from the ground, press the §l§l§l§l§l§l§a§a§a§a§a§aSUBMIT§r button to complete the quest and continue.\n\nIf you lose this book, you can check the quests by pressing the §2§aGRAVE §rkey.\n\nPages that have a normal icon aren\u0027t required for progression. \nPages that have a framed icon, like this one are §crequired §rand contain critical information for your survival.\n\n\n----------------------------------------\n§3WELCOME TO SUPERSYMMETRY!\n§r----------------------------------------\n- Explore your surroundings\n§r- Find shelter\n- Prepare for the winter\n- Acquire basic resources\n- Try not to die\n------------------------------------",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42,16 +42,10 @@
       "questID:3": 0,
       "rewards:9": {
         "0:10": {
+          "amount:3": 1,
           "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "susy:home_block"
-            }
-          }
+          "isLevels:1": 1,
+          "rewardID:8": "bq_standard:xp"
         }
       },
       "tasks:9": {
@@ -5256,7 +5250,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "-- §aIMPORTANT INFORMATION§r --\n\nPlanet: §aEarth§r\nID: §a10§r\nDepth: §c64m§r\n-------------------------\n§4Dig 64 meters from sea level to access the second layer. Please be aware while traversing The Beneath, as it is very dangerous.\n\n§rThe Beneath refers to the deep, subterranean layers of the Earth\u0027s crust. These layers are composed of metamorphic rock. \n\nThe rocks found in The Beneath are formed from the intense pressure and heat that are present deep within the Earth\u0027s crust. Within The Beneath, you can find ores that have been hidden for millions of years. For example: §6anthracite§r, a rare type of coal.\n\nExploring The Beneath requires specialized equipment and expertise. Several §b§kWeeping Angels §r can also be found in the Beneath. They are extremely dangerous entities, so be extremely careful while exploring.\n\n",
+          "desc:8": "-- §aIMPORTANT INFORMATION§r --\n\nPlanet: §aEarth§r\nID: §a10§r\nDepth: §c64m§r\n-------------------------\n§4Dig 64 meters from sea level to access the second layer. Please be aware while traversing The Beneath, as it is very dangerous.\n\n§rThe Beneath refers to the deep, subterranean layers of the Earth\u0027s crust. These layers are composed of metamorphic rock. \n\nThe rocks found in The Beneath are formed from the intense pressure and heat that are present deep within the Earth\u0027s crust. Within The Beneath, you can find ores that have been hidden for millions of years. For example: §6anthracite§r, a rare type of coal.\n\nExploring The Beneath requires specialized equipment and expertise. Several §b§kWeeping Angels §r can also be found in the Beneath. They are extremely dangerous entities, so be extremely careful while exploring.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6655,7 +6649,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Convert 1 log into 4 §6planks§r. \n\nYou can then craft those planks into a §acrafting table§f.\n\n----------------------------------------\n§3WELCOME TO SUPERSYMMETRY!\n§r----------------------------------------\n- Explore your surroundings\n§r- Find shelter\n- Prepare for the winter\n- Acquire basic resources\n- Try not to die\n------------------------------------",
+          "desc:8": "Convert 1 log into 4 §6planks§r. \n\nYou can then craft those planks into a §acrafting table§f.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9778,7 +9772,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "First of all, let\u0027s do a little setup before starting on your journey.\n\n- Make sure you have the latest version of Supersymmetry\n\n- Make sure your download did not get corrupted\n\n- Make sure you downloaded Supersymmetry from a trusted source (our Discord server, GitHub or CurseForge). If you got the pack from sketchy sites like 9minecraft.net your computer isn\u0027t safe.\n\n- Make sure you are using the latest version of Java 8. (Java 9 or later won\u0027t work.)\n\n- Make sure you haven\u0027t modified the pack, added new mods or changed recipes. \n\n§3§3§3Press the checkbox to continue.\n§r\n",
+          "desc:8": "First of all, let\u0027s do a little setup before starting on your journey.\n\n- Make sure you have the latest version of Supersymmetry\n\n- Make sure your download did not get corrupted\n\n- Make sure you downloaded Supersymmetry from a trusted source (our Discord server, GitHub or CurseForge). If you got the pack from sketchy sites like 9minecraft.net your computer isn\u0027t safe.\n\n- Make sure you are using the latest version of Java 8. (Java 9 or later won\u0027t work.)\n\n- Make sure you haven\u0027t modified the pack, added new mods or changed recipes. \n\n§3§3§3Press the checkbox to continue.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22177,58 +22171,6 @@
       "questID:3": 365,
       "rewards:9": {},
       "tasks:9": {}
-    },
-    "366:10": {
-      "preRequisites:11": [
-        21
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "You can craft §6home blocks §rusing a block of smooth stone and a file.\n \nThe home block has 4 variants, you can cycle through them by putting them in a crafting table.\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "susy:home_block"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Home Block",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 366,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "susy:home_block"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
     }
   },
   "questLines:9": {
@@ -22433,7 +22375,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 468
+          "y:3": 552
         },
         "25:10": {
           "id:3": 30,
@@ -22566,13 +22508,6 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 552
-        },
-        "44:10": {
-          "id:3": 366,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 36,
           "y:3": 552
         }
       }
@@ -25736,7 +25671,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
