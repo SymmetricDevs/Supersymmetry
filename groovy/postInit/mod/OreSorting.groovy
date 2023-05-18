@@ -1,156 +1,143 @@
 import classes.*;
 
-/*
 println("Running OreSorting.groovy...")
 
 int fluid_amount = 100;
 
-def circuit(x) {
-    return metaitem('circuit.integrated').withNbt([Configuration: x])
-}
-
 //FORMAT: ORE NAME : CHANCE (out of 10000)
 
 def sulfur_tier_1 = [
-    'gregtech:ore_Sulfur_0' : 10000,
-    'gregtech:ore_Bornite_0' : 10000,
-    'gregtech:ore_Chalcocite_0' : 10000,
-    'gregtech:ore_Enargite_0' : 10000,
-    'gregtech:ore_Pyrite_0' : 10000,
-    'gregtech:ore_Chalcopyrite_0' : 10000,
-    'gregtech:ore_Cinnabar_0' : 10000,
-    'gregtech:ore_Sphalerite_0' : 10000,
-    'gregtech:ore_Gypsum_0' : 10000,
-    'gregtech:ore_Alunite_0' : 10000,
-    'gregtech:ore_Tetrahedrite_0' : 10000
+    'gregtech:ore_Sulfur_0' : 1000,
+    'gregtech:ore_Bornite_0' : 1000,
+    'gregtech:ore_Chalcocite_0' : 1000,
+    'gregtech:ore_Enargite_0' : 1000,
+    'gregtech:ore_Pyrite_0' : 1000,
+    'gregtech:ore_Chalcopyrite_0' : 1000,
+    'gregtech:ore_Cinnabar_0' : 1000,
+    'gregtech:ore_Sphalerite_0' : 1000,
+    'gregtech:ore_Gypsum_0' : 1000,
+    'gregtech:ore_Alunite_0' : 1000,
+    'gregtech:ore_Tetrahedrite_0' : 1000
 ];
 
 def sulfur_tier_2 = [
-    'gregtech:ore_Sulfur_0' : 10000,
-    'gregtech:ore_Bornite_0' : 10000,
-    'gregtech:ore_Chalcocite_0' : 10000,
-    'gregtech:ore_Enargite_0' : 10000,
-    'gregtech:ore_Pyrite_0' : 10000,
-    'gregtech:ore_Chalcopyrite_0' : 10000,
-    'gregtech:ore_Cinnabar_0' : 10000,
-    'gregtech:ore_Sphalerite_0' : 10000,
-    'gregtech:ore_Gypsum_0' : 10000,
-    'gregtech:ore_Alunite_0' : 10000,
-    'gregtech:ore_Tetrahedrite_0' : 10000,
+    'gregtech:ore_Sulfur_0' : 1000,
+    'gregtech:ore_Bornite_0' : 1000,
+    'gregtech:ore_Chalcocite_0' : 1000,
+    'gregtech:ore_Enargite_0' : 1000,
+    'gregtech:ore_Pyrite_0' : 1000,
+    'gregtech:ore_Chalcopyrite_0' : 1000,
+    'gregtech:ore_Cinnabar_0' : 1000,
+    'gregtech:ore_Sphalerite_0' : 1000,
+    'gregtech:ore_Gypsum_0' : 1000,
+    'gregtech:ore_Alunite_0' : 1000,
+    'gregtech:ore_Tetrahedrite_0' : 1000,
 
-    'gregtech:ore_Galena_0' : 10000,
-    'gregtech:ore_Silver_0' : 10000,
-    'gregtech:ore_Gold_0' : 10000,
-    'gregtech:ore_Lazurite_0' : 10000,
-    'gregtech:ore_Cobaltite_0' : 10000
+    'gregtech:ore_Galena_0' : 1000,
+    'gregtech:ore_Silver_0' : 1000,
+    'gregtech:ore_Gold_0' : 1000,
+    'gregtech:ore_Lazurite_0' : 1000,
+    'gregtech:ore_Cobaltite_0' : 1000
 ];
 
 def oxide_tier_1 = [
-    'gregtech:ore_Cassiterite_0' : 10000,
-    'gregtech:ore_Magnetite_0' : 10000,
-    'gregtech:ore_Yellow_Limonite_0' : 10000,
-    'gregtech:ore_Brown_Limonite_0' : 10000,
-    'gregtech:ore_Hematite_0' : 10000,
-    'gregtech:ore_Ruby_0' : 10000,
-    'gregtech:ore_Tenorite_0' : 10000,
-    'gregtech:ore_Cuprite_0' : 10000
+    'gregtech:ore_Cassiterite_0' : 1000,
+    'gregtech:ore_Magnetite_0' : 1000,
+    'gregtech:ore_Yellow_Limonite_0' : 1000,
+    'gregtech:ore_Brown_Limonite_0' : 1000,
+    'gregtech:ore_Ruby_0' : 1000,
+    'gregtech:ore_Tenorite_0' : 1000,
+    'gregtech:ore_Cuprite_0' : 1000
 ];
 
 def oxide_tier_2 = [
-    'gregtech:ore_Cassiterite_0' : 10000,
-    'gregtech:ore_Magnetite_0' : 10000,
-    'gregtech:ore_Yellow_Limonite_0' : 10000,
-    'gregtech:ore_Brown_Limonite_0' : 10000,
-    'gregtech:ore_Hematite_0' : 10000,
-    'gregtech:ore_Ruby_0' : 10000,
-    'gregtech:ore_Tenorite_0' : 10000,
-    'gregtech:ore_Cuprite_0' : 10000,
+    'gregtech:ore_Cassiterite_0' : 1000,
+    'gregtech:ore_Magnetite_0' : 1000,
+    'gregtech:ore_Yellow_Limonite_0' : 1000,
+    'gregtech:ore_Brown_Limonite_0' : 1000,
+    'gregtech:ore_Ruby_0' : 1000,
+    'gregtech:ore_Tenorite_0' : 1000,
+    'gregtech:ore_Cuprite_0' : 1000,
 
-    'gregtech:ore_Tantalite_0' : 10000,
-    'gregtech:ore_Pyrolusite_0' : 10000,
-    'gregtech:ore_Garnierite_0' : 10000,
-    'gregtech:ore_Sapphire_0' : 10000,
-    'gregtech:ore_Bastnasite_0' : 10000
+    'gregtech:ore_Tantalite_0' : 1000,
+    'gregtech:ore_Pyrolusite_0' : 1000,
+    'gregtech:ore_Garnierite_0' : 1000,
+    'gregtech:ore_Sapphire_0' : 1000,
+    'gregtech:ore_Bastnasite_0' : 1000
 ];
 
 def sedimentary_tier_1 = [
-    'gregtech:ore_Diatomite_0' : 10000,
-    'gregtech:ore_Trona_0' : 10000,
-    'gregtech:ore_Salt_0' : 10000,
-    'gregtech:ore_Rock_Salt_0' : 10000,
-    'gregtech:ore_Saltpeter_0' : 10000
+    'gregtech:ore_Diatomite_0' : 1000,
+    'gregtech:ore_Trona_0' : 1000,
+    'gregtech:ore_Salt_0' : 1000,
+    'gregtech:ore_Rock_Salt_0' : 1000,
+    'gregtech:ore_Saltpeter_0' : 1000
 ];
 
 def silicate_tier_1 = [
-    'gregtech:ore_Asbestos_0' : 10000,
-    'gregtech:ore_Garnet_Sand_0' : 10000,
-    'gregtech:ore_Garnet_Yellow_0' : 10000,
-    'gregtech:ore_Garnet_Red_0' : 10000,
-    'gregtech:ore_Mica_0' : 10000,
-    'gregtech:ore_Redstone_0' : 10000,
-    'gregtech:ore_Lepidolite_0' : 10000,
-    'gregtech:ore_Spodumene_0' : 10000
+    'gregtech:ore_Asbestos_0' : 1000,
+    'gregtech:ore_Garnet_Sand_0' : 1000,
+    'gregtech:ore_Garnet_Yellow_0' : 1000,
+    'gregtech:ore_Garnet_Red_0' : 1000,
+    'gregtech:ore_Redstone_0' : 1000,
+    'gregtech:ore_Lepidolite_0' : 1000,
+    'gregtech:ore_Spodumene_0' : 1000
 ];
 
 def silicate_tier_2 = [
-    'gregtech:ore_Asbestos_0' : 10000,
-    'gregtech:ore_Garnet_Sand_0' : 10000,
-    'gregtech:ore_Garnet_Yellow_0' : 10000,
-    'gregtech:ore_Garnet_Red_0' : 10000,
-    'gregtech:ore_Mica_0' : 10000,
-    'gregtech:ore_Redstone_0' : 10000,
-    'gregtech:ore_Lepidolite_0' : 10000,
-    'gregtech:ore_Spodumene_0' : 10000,
+    'gregtech:ore_Asbestos_0' : 1000,
+    'gregtech:ore_Garnet_Sand_0' : 1000,
+    'gregtech:ore_Garnet_Yellow_0' : 1000,
+    'gregtech:ore_Garnet_Red_0' : 1000,
+    'gregtech:ore_Redstone_0' : 1000,
+    'gregtech:ore_Lepidolite_0' : 1000,
+    'gregtech:ore_Spodumene_0' : 1000,
 
-    'gregtech:ore_Almandine_0' : 10000,
-    'gregtech:ore_Pyrope_0' : 10000,
-    'gregtech:ore_Beryllium_0' : 10000,
-    'minecraft:emerald_ore' : 10000,
-    'gregtech:ore_Spessartine_0' : 10000,
-    'gregtech:ore_Grossular_0' : 10000,
-    'gregtech:ore_Zeolite_0' : 10000,
-    'gregtech:ore_Glauconite_Sand_0' : 10000,
-    'gregtech:ore_Sodalite_0' : 10000,
-    'gregtech:ore_Olivine_0' : 10000,
-    'gregtech:ore_Quartzite_0' : 10000,
-    'gregtech:ore_Topaz_0' : 10000
+    'gregtech:ore_Almandine_0' : 1000,
+    'gregtech:ore_Pyrope_0' : 1000,
+    'gregtech:ore_Beryllium_0' : 1000,
+    'minecraft:emerald_ore' : 1000,
+    'gregtech:ore_Spessartine_0' : 1000,
+    'gregtech:ore_Grossular_0' : 1000,
+    'gregtech:ore_Zeolite_0' : 1000,
+    'gregtech:ore_Glauconite_Sand_0' : 1000,
+    'gregtech:ore_Sodalite_0' : 1000,
+    'gregtech:ore_Olivine_0' : 1000,
+    'gregtech:ore_Topaz_0' : 1000
 ];
 
 def carbonate_tier_1 = [
-    'gregtech:ore_Dolomite_0' : 10000,
-    'gregtech:ore_Malachite_0' : 10000,
-    'gregtech:ore_Calcite_0' : 10000
+    'gregtech:ore_Malachite_0' : 1000,
+    'gregtech:ore_Calcite_0' : 1000
 ];
 
 def clay_tier_1 = [
-    'gregtech:ore_Kaolinite_0' : 10000,
-    'gregtech:ore_Soapstone_0' : 10000,
-    'gregtech:ore_Talc_0' : 10000,
-    'gregtech:ore_Fullers_Earth_0' : 10000,
-    'gregtech:ore_Bentonite_0' : 10000
+    'gregtech:ore_Kaolinite_0' : 1000,
+    'gregtech:ore_Talc_0' : 1000,
+    'gregtech:ore_Fullers_Earth_0' : 1000,
+    'gregtech:ore_Bentonite_0' : 1000
 ];
 
 def carbon_tier_1 = [
-    'gregtech:ore_Graphite_0' : 10000,
+    'gregtech:ore_Graphite_0' : 1000,
     'gregtech:ore_Diamond_0' : 500
 ];
 
 def phosphate_tier_1 = [
-    'gregtech:ore_Apatite_0' : 10000,
-    'gregtech:ore_Fluorapatite_0' : 10000,
-    'gregtech:ore_Tricalcium_Phosphate_0' : 10000
+    'gregtech:ore_Apatite_0' : 1000,
+    'gregtech:ore_Fluorapatite_0' : 1000,
+    'gregtech:ore_Tricalcium_Phosphate_0' : 1000
 ];
 
 def precious_tier_1 = [
-    'gregtech:ore_Precious_Metal_0' : 5000,
-    'gregtech:ore_Gold_0' : 10000,
-    'gregtech:ore_Silver_0' : 10000
+    'gregtech:ore_Gold_0' : 1000,
+    'gregtech:ore_Silver_0' : 1000
 ];
 
 def radioactive_tier_1 = [
-    'gregtech:ore_Pitchblende_0' : 10000,
-    'gregtech:ore_Uraninite_0' : 10000,
-    'gregtech:ore_Monazite_0' : 10000
+    'gregtech:ore_Pitchblende_0' : 1000,
+    'gregtech:ore_Uraninite_0' : 1000,
+    'gregtech:ore_Monazite_0' : 1000
 ];
 
 
@@ -184,7 +171,7 @@ for (rock in rocks) {
     int a = 0;
     for (oreList in rock.oreLists) {
         def recipe = recipemap('ore_sorter').recipeBuilder();
-        recipe.notConsumable(circuit(a));
+        recipe.circuitMeta(a)
         recipe.inputs(metaitem(rock.input_rock) * (oreList.size()));
         for (ore in oreList) {
             recipe.chancedOutput(item(ore.getKey()), oreList[ore.getKey()], 0);
@@ -197,5 +184,3 @@ for (rock in rocks) {
         a += 1;
     }
 }
-
-*/
