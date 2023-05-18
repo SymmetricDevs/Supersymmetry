@@ -48,3 +48,39 @@ crafting.replaceShaped('engineersdecor:alternative/thin_steel_pole_recipe_standa
     [null, ore('stickSteel'), null],
     [null, ore('stickSteel'), null]
 ])
+
+crafting.replaceShaped('engineersdecor:independent/clinker_brick_stairs_recipe', item('engineersdecor:clinker_brick_stairs') * 8, [
+    [item('engineersdecor:clinker_brick_block'), null, null],
+    [item('engineersdecor:clinker_brick_block'), item('engineersdecor:clinker_brick_block'), null],
+    [item('engineersdecor:clinker_brick_block'), item('engineersdecor:clinker_brick_block'), item('engineersdecor:clinker_brick_block')]
+])
+
+crafting.replaceShaped('engineersdecor:independent/clinker_brick_stained_stairs_recipe', item('engineersdecor:clinker_brick_stained_stairs') * 8, [
+    [item('engineersdecor:clinker_brick_stained_block'), null, null],
+    [item('engineersdecor:clinker_brick_stained_block'), item('engineersdecor:clinker_brick_stained_block'), null],
+    [item('engineersdecor:clinker_brick_stained_block'), item('engineersdecor:clinker_brick_stained_block'), item('engineersdecor:clinker_brick_stained_block')]
+])
+
+crafting.replaceShaped('engineersdecor:independent/slag_brick_stairs_recipe', item('engineersdecor:slag_brick_stairs') * 8, [
+    [item('engineersdecor:slag_brick_block'), null, null],
+    [item('engineersdecor:slag_brick_block'), item('engineersdecor:slag_brick_block'), null],
+    [item('engineersdecor:slag_brick_block'), item('engineersdecor:slag_brick_block'), item('engineersdecor:slag_brick_block')]
+])
+
+crafting.replaceShaped('engineersdecor:independent/rebar_concrete_stairs_recipe', item('engineersdecor:rebar_concrete_stairs') * 8, [
+    [item('engineersdecor:rebar_concrete'), null, null],
+    [item('engineersdecor:rebar_concrete'), item('engineersdecor:rebar_concrete'), null],
+    [item('engineersdecor:rebar_concrete'), item('engineersdecor:rebar_concrete'), item('engineersdecor:rebar_concrete')]
+])
+
+crafting.replaceShaped('engineersdecor:independent/rebar_concrete_tile_stairs_recipe', item('engineersdecor:rebar_concrete_tile_stairs') * 8, [
+    [item('engineersdecor:rebar_concrete_tile'), null, null],
+    [item('engineersdecor:rebar_concrete_tile'), item('engineersdecor:rebar_concrete_tile'), null],
+    [item('engineersdecor:rebar_concrete_tile'), item('engineersdecor:rebar_concrete_tile'), item('engineersdecor:rebar_concrete_tile')]
+])
+
+crafting.replaceShaped('engineersdecor:independent/gas_concrete_stairs_recipe', item('engineersdecor:gas_concrete_stairs') * 8, [
+    [item('engineersdecor:gas_concrete'), null, null],
+    [item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete'), null],
+    [item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete')]
+])
