@@ -2,6 +2,19 @@ import static globals.Globals.*
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 
+def name_removals = [
+		'gregtech:steam_turbine_mv',
+		'gregtech:steam_turbine_hv',
+		'gregtech:gas_turbine_lv',
+		'gregtech:gas_turbine_mv',
+		'gregtech:gas_turbine_hv',
+		'gcym:steam_engine'
+]
+
+for (name in name_removals) {
+	crafting.remove(name)
+}
+
 def circuits = [ore('circuitUlv'), ore('circuitLv'), ore('circuitMv'),
 									ore('circuitHv'), ore('circuitEv'), ore('circuitIv'),
 									ore('circuitLuv'), ore('circuitZpm'), ore('circuitUv'),
@@ -459,6 +472,133 @@ for (i = 1; i <= 8; i++) {
 }
 
  */
+
+//Turbine Recipes
+
+crafting.addShaped("alternator_rotor", metaitem('alternator.rotor'), [
+		[metaitem('wireFineAnnealedCopper'), metaitem('plateSteel'),             metaitem('wireFineAnnealedCopper')],
+		[metaitem('plateSteel'),             metaitem('stickLongSteel'),         metaitem('plateSteel')],
+		[metaitem('wireGtSingleCopper'),     metaitem('wireFineAnnealedCopper'), ore('craftingToolHardHammer')]
+])
+
+crafting.addShaped("alternator_stator", metaitem('alternator.stator'), [
+		[metaitem('wireFineAnnealedCopper'), metaitem('wireGtSingleCopper'),     metaitem('wireFineAnnealedCopper')],
+		[metaitem('plateSteel'),             ore('craftingToolHardHammer'),      metaitem('plateSteel')],
+		[metaitem('wireGtSingleCopper'),     metaitem('wireFineAnnealedCopper'), metaitem('wireGtSingleCopper')]
+])
+
+crafting.addShaped("alternator_coil_custom", item('susy:alternator_coil'), [
+		[metaitem('plateSteel'),       metaitem('cableGtSingleTin'),  metaitem('plateSteel')],
+		[metaitem('cableGtSingleTin'), metaitem('alternator.rotor'),  metaitem('cableGtSingleTin')],
+		[metaitem('plateSteel'),       metaitem('alternator.stator'), metaitem('plateSteel')]
+])
+
+crafting.addShaped("alternator_coil", item('susy:alternator_coil'), [
+		[ore('craftingToolHardHammer'), metaitem('electric.motor.lv'), ore('craftingToolScrewdriver')],
+		[metaitem('electric.motor.lv'), ore('plateSteel'),             metaitem('electric.motor.lv')],
+		[ore('circuitLv'),              metaitem('cableGtSingleTin'),  ore('circuitLv')]
+])
+
+crafting.addShaped("steel_turbine_rotor", item('susy:turbine_rotor'), [
+		[ore('plateSteel'),             ore('screwSteel'),     ore('plateSteel')],
+		[ore('craftingToolHardHammer'), ore('stickLongSteel'), ore('craftingToolScrewdriver')],
+		[ore('plateSteel'),             ore('rotorSteel'),     ore('plateSteel')]
+])
+
+crafting.addShaped("steel_turbine_controller", metaitem('basic_steam_turbine'), [
+		[ore('plateSteel'),            metaitem('cableGtSingleTin'),       ore('plateSteel')],
+		[ore('circuitLv'),             item('gregtech:machine_casing', 1), ore('circuitLv')],
+		[metaitem('cableGtSingleTin'), ore('circuitLv'),                   metaitem('cableGtSingleTin')]
+])
+
+crafting.replaceShaped("gregtech:casing_steel_turbine_casing", item('gregtech:turbine_casing', 5) * 4, [
+		[metaitem('plateSteel'), ore('craftingToolHardHammer'), metaitem('plateSteel')],
+		[metaitem('stickLongSteel'), item('gregtech:stone_smooth', 4), metaitem('stickLongSteel')],
+		[metaitem('plateSteel'), ore('craftingToolWrench'), metaitem('plateSteel')]
+])
+
+crafting.addShaped("gas_turbine_controller", metaitem('basic_gas_turbine'), [
+		[ore('plateSteel'),            metaitem('cableGtSingleCopper'),       ore('plateSteel')],
+		[ore('circuitMv'),             item('gregtech:machine_casing', 1), ore('circuitMv')],
+		[metaitem('cableGtSingleCopper'), ore('circuitMv'),                   metaitem('cableGtSingleCopper')]
+])
+
+//New Dynamo Hatches
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.lv'))
+		.inputs(metaitem('energy_hatch.output.lv'))
+		.inputs(metaitem('voltage_coil.lv'))
+		.inputs(metaitem('wireGtQuadrupleTin') * 2)
+		.outputs(metaitem('energy_hatch.output_4a.lv'))
+		.EUt(7)
+		.duration(100)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.adjustable.lv'))
+		.inputs(metaitem('energy_hatch.output_4a.lv'))
+		.inputs(metaitem('voltage_coil.lv'))
+		.inputs(metaitem('wireGtOctalTin') * 2)
+		.outputs(metaitem('energy_hatch.output_16a.lv'))
+		.EUt(7)
+		.duration(200)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.mv'))
+		.inputs(metaitem('energy_hatch.output.mv'))
+		.inputs(metaitem('plate.ultra_low_power_integrated_circuit'))
+		.inputs(metaitem('voltage_coil.mv'))
+		.inputs(metaitem('wireGtQuadrupleCopper') * 2)
+		.outputs(metaitem('energy_hatch.output_4a.mv'))
+		.EUt(30)
+		.duration(100)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.adjustable.mv'))
+		.inputs(metaitem('energy_hatch.output_4a.mv'))
+		.inputs(metaitem('plate.ultra_low_power_integrated_circuit') * 2)
+		.inputs(metaitem('voltage_coil.mv'))
+		.inputs(metaitem('wireGtOctalCopper') * 2)
+		.outputs(metaitem('energy_hatch.output_16a.mv'))
+		.EUt(30)
+		.duration(200)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.hv'))
+		.inputs(metaitem('energy_hatch.output.hv'))
+		.inputs(metaitem('plate.low_power_integrated_circuit'))
+		.inputs(metaitem('voltage_coil.hv'))
+		.inputs(metaitem('wireGtQuadrupleGold') * 2)
+		.outputs(metaitem('energy_hatch.output_4a.hv'))
+		.EUt(120)
+		.duration(100)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.adjustable.hv'))
+		.inputs(metaitem('energy_hatch.output_4a.hv'))
+		.inputs(metaitem('plate.low_power_integrated_circuit') * 2)
+		.inputs(metaitem('voltage_coil.hv'))
+		.inputs(metaitem('wireGtOctalGold') * 2)
+		.outputs(metaitem('energy_hatch.output_16a.hv'))
+		.EUt(120)
+		.duration(200)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.adjustable.ev'))
+		.inputs(metaitem('energy_hatch.output_4a.ev'))
+		.inputs(metaitem('plate.power_integrated_circuit') * 2)
+		.inputs(metaitem('voltage_coil.ev'))
+		.inputs(metaitem('wireGtOctalAluminium') * 2)
+		.outputs(metaitem('energy_hatch.output_16a.ev'))
+		.EUt(480)
+		.duration(200)
+		.buildAndRegister()
 
 crafting.addShaped("gregtech:ore_sorter", metaitem('ore_sorter'), [
 		[robotArms[1], circuits[2], robotArms[1]],
