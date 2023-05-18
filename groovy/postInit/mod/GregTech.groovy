@@ -257,3 +257,17 @@ mods.gregtech.assembler.recipeBuilder()
         .duration(100)
         .EUt(30)
         .buildAndRegister();
+
+//home block
+crafting.replaceShaped('susy:home_block', item('susy:home_block'), [
+        [null, ore('craftingToolFile'), null],
+        [null, ore('stoneSmooth'), null],
+        [null, null, null]
+])
+
+crafting.addShapeless('susy:home_block_1', item('susy:home_block', 1), [item('susy:home_block')])
+crafting.addShapeless('susy:home_block_2', item('susy:home_block', 2), [item('susy:home_block', 1)])
+crafting.addShapeless('susy:home_block_3', item('susy:home_block', 3), [item('susy:home_block', 2)])
+crafting.addShapeless('susy:home_block_4', item('susy:home_block',), [item('susy:home_block', 3)])
+
+

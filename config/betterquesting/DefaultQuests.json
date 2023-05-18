@@ -7,7 +7,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Welcome to §9§9§9§b§b§b§b§b§b§l§l§l§l§l§lSupersymmetry§r§r§r§r§r§r! \n\nYou have just landed on an unfamiliar planet. This book will teach you how to rebuild civilization from scratch in only §k4200§r pages.\n\nStart by getting a rock§r. This book is interactive.\n\nWhen you pick up a rock from the ground, press the §l§l§l§l§l§l§a§a§a§a§a§aSUBMIT§r button to complete the quest and continue.\n\nIf you lose this book, you can check the quests by pressing the §2§aGRAVE §rkey.\n\nPages that have a normal icon aren\u0027t required for progression. \nPages that have a framed icon, like this one are §crequired §rand contain critical information for your survival.\n\n\n----------------------------------------\n§3WELCOME TO SUPERSYMMETRY!\n§r----------------------------------------\n- Explore your surroundings\n§r- Find shelter\n- Prepare for the winter\n- Acquire basic resources\n- Try not to die\n------------------------------------",
+          "desc:8": "Welcome to §9§9§9§b§b§b§b§b§b§l§l§l§l§l§lSupersymmetry§r§r§r§r§r§r! \n\nYou have just landed on an unfamiliar planet. This book will teach you how to rebuild civilization from scratch in only §k4200§r pages.\n\nStart by getting a rock§r. This book is interactive.\n\nWhen you pick up a rock from the ground, press the §l§l§l§l§l§l§a§a§a§a§a§aSUBMIT§r button to complete the quest and continue.\n\nIf you lose this book, you can check the quests by pressing the §2§aGRAVE §rkey.\n\nPages that have a normal icon aren\u0027t required for progression. \nPages that have a framed icon, like this one are §crequired §rand contain critical information for your survival.\n\nYou have been given a §6home block§r. It allows you to set your spawn if you ever die. You cannot skip the night, as beds are not available before EV.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42,10 +42,16 @@
       "questID:3": 0,
       "rewards:9": {
         "0:10": {
-          "amount:3": 1,
           "index:3": 0,
-          "isLevels:1": 1,
-          "rewardID:8": "bq_standard:xp"
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "susy:home_block"
+            }
+          }
         }
       },
       "tasks:9": {
@@ -1382,7 +1388,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Bronze§r is an alloy consisting of 75% copper combined with about 25% tin.\n\nMix the dusts in a §acrafting table§r in a 3 to 1 ratio to make §6bronze dust§r. Then you must smelt it in a furnace to get bronze ingots.\n\nCrafting the dusts by hand will only yield 3 §6bronze dust§r per batch. However, you can craft 4 with the same amount later on using a §6Mixer§f. You can even skip the step where you grind the ingots to dusts using an §6Alloy Smelter§r.\n\n§3This will unlock Tier 1.",
+          "desc:8": "§6Bronze§r is an alloy consisting of 75% copper combined with about 25% tin.\n\nMix the dusts in a §acrafting table§r in a 3 to 1 ratio to make §6bronze dust§r. Then you must smelt it in a furnace to get bronze ingots.\n\nCrafting the dusts by hand will only yield 3 §6bronze dust§r per batch. However, you can craft 4 with the same amount later on using a §6Mixer§f.\n\n§3This will unlock Tier 1.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2962,7 +2968,7 @@
           "rewardID:8": "bq_standard:item",
           "rewards:9": {
             "0:10": {
-              "Count:3": 20,
+              "Count:3": 16,
               "Damage:2": 324,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
@@ -3036,21 +3042,6 @@
             "3:10": {
               "Count:3": 1,
               "Damage:2": 17,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 18,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -3371,7 +3362,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §l§r§6Steam Forge Hammer §ris an extremely useful machine that will do pretty much anything that requires a hammer.\n\n§r§r§r§l§rIt can make §6plates §r§l§rat a better ratio, only requiring 1.5 ingots instead of 2 per plate. This can allow you to save a substantial amount of ingots until you acquire the §6bender§r, which requires only 1 ingot per plate.",
+          "desc:8": "The §l§r§6Steam Forge Hammer §ris an extremely useful machine that will do pretty much anything that requires a hammer.\n\n§r§r§r§l§rIt can make §6plates §r§l§rat a better ratio, only requiring 1.5 ingots instead of 2 per plate.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3380,7 +3371,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Steam Forge Hammer",
@@ -3739,7 +3730,7 @@
     },
     "45:10": {
       "preRequisites:11": [
-        371
+        44
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -3791,8 +3782,7 @@
     },
     "46:10": {
       "preRequisites:11": [
-        45,
-        44
+        45
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5266,7 +5256,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "-- §aIMPORTANT INFORMATION§r --\n\nPlanet: §aEarth§r\nID: §a10§r\nDepth: §c64m§r\n-------------------------\n§4Dig 64 meters from sea level to access the second layer. Please be aware while traversing The Beneath, as it is very dangerous.\n\n§rThe Beneath refers to the deep, subterranean layers of the Earth\u0027s crust. These layers are composed of metamorphic rock. \n\nThe rocks found in The Beneath are formed from the intense pressure and heat that are present deep within the Earth\u0027s crust. Within The Beneath, you can find ores that have been hidden for millions of years. For example: §6anthracite§r, a rare type of coal.\n\nExploring The Beneath requires specialized equipment and expertise. Several §b§kWeeping Angels §r can also be found in the Beneath. They are extremely dangerous entities, so be extremely careful while exploring.",
+          "desc:8": "-- §aIMPORTANT INFORMATION§r --\n\nPlanet: §aEarth§r\nID: §a10§r\nDepth: §c64m§r\n-------------------------\n§4Dig 64 meters from sea level to access the second layer. Please be aware while traversing The Beneath, as it is very dangerous.\n\n§rThe Beneath refers to the deep, subterranean layers of the Earth\u0027s crust. These layers are composed of metamorphic rock. \n\nThe rocks found in The Beneath are formed from the intense pressure and heat that are present deep within the Earth\u0027s crust. Within The Beneath, you can find ores that have been hidden for millions of years. For example: §6anthracite§r, a rare type of coal.\n\nExploring The Beneath requires specialized equipment and expertise. Several §b§kWeeping Angels §r can also be found in the Beneath. They are extremely dangerous entities, so be extremely careful while exploring.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6665,7 +6655,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Convert 1 log into 4 §6planks§r. \n\nYou can then craft those planks into a §acrafting table§f.",
+          "desc:8": "Convert 1 log into 4 §6planks§r. \n\nYou can then craft those planks into a §acrafting table§f.\n\n----------------------------------------\n§3WELCOME TO SUPERSYMMETRY!\n§r----------------------------------------\n- Explore your surroundings\n§r- Find shelter\n- Prepare for the winter\n- Acquire basic resources\n- Try not to die\n------------------------------------",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6787,7 +6777,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Primitive Water Pump§r is the first way to get large quantities of water for steam. Pumping water into a boiler manually has been widely regarded as a bad idea.\n\nCheck the JEI database for more info on the structure. Structures can be previewed by §ashift right click§ring the main block.\n\nThe Output Hatch§r is where water will be pumped out, you may have it face up or down to auto-output water into your pipes. Use a §6Wrench§r to rotate GregTech blocks (sneak right-click).\n\nThe Primitive Water Pump requires:\n§610 Pump Deck \n10 Treated Wood Frame\n1 Pump Output Hatch\n1 Primitive Water Pump controller\n\n§rCreosote is needed for making the treated wood frames, so make sure to get a Coke Oven first.\n\nKeep in mind that this fortunately does not require external water in the world to function. This is essentially an §einfinite water source§r.",
+          "desc:8": "The §3Primitive Water Pump§r is the first way to get large quantities of water for steam. Pumping water into a boiler manually has been widely regarded as a bad idea.\n\nCheck the JEI database for more info on the structure. Structures can be previewed by §ashift right click§ring the main block.\n\nThe Output Hatch§r is where water will be pumped out, you may have it face up or down to auto-output water into your pipes. Use a §6Wrench§r to rotate GregTech blocks (sneak right-click).\n\nThe Primitive Water Pump requires:\n§610 Pump Deck \n10 Treated Wood Frame\n1 Pump Output Hatch\n1 Primitive Water Pump controller\n\n§rCreosote is needed for making the treated wood frames, so make sure to get a Coke Oven first.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6963,22 +6953,22 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 26,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "gregtech:steam_casing"
-            },
-            "1:10": {
               "Count:3": 2,
               "Damage:2": 1596,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "2:10": {
+            "1:10": {
               "Count:3": 1,
               "Damage:2": 1597,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "2:10": {
+              "Count:3": 23,
+              "Damage:2": 5,
+              "OreDict:8": "",
+              "id:8": "gregtech:steam_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -9788,7 +9778,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "First of all, let\u0027s do a little setup before starting on your journey.\n\n- Make sure you have the latest version of Supersymmetry\n\n- Make sure your download did not get corrupted\n\n- Make sure you downloaded Supersymmetry from a trusted source (our Discord server, GitHub or CurseForge). If you got the pack from sketchy sites like 9minecraft.net your computer isn\u0027t safe.\n\n- Make sure you are using the latest version of Java 8. (Java 9 or later won\u0027t work.)\n\n- Make sure you haven\u0027t modified the pack, added new mods or changed recipes. \n\n§3§3§3Press the checkbox to continue.",
+          "desc:8": "First of all, let\u0027s do a little setup before starting on your journey.\n\n- Make sure you have the latest version of Supersymmetry\n\n- Make sure your download did not get corrupted\n\n- Make sure you downloaded Supersymmetry from a trusted source (our Discord server, GitHub or CurseForge). If you got the pack from sketchy sites like 9minecraft.net your computer isn\u0027t safe.\n\n- Make sure you are using the latest version of Java 8. (Java 9 or later won\u0027t work.)\n\n- Make sure you haven\u0027t modified the pack, added new mods or changed recipes. \n\n§3§3§3Press the checkbox to continue.\n§r\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10613,34 +10603,16 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 28,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:metal_casing"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 1652,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 1651,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 1653,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "4:10": {
               "Count:3": 1,
               "Damage:2": 1025,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 22,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -14909,8 +14881,7 @@
     },
     "210:10": {
       "preRequisites:11": [
-        22,
-        366
+        22
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -15922,7 +15893,7 @@
     },
     "225:10": {
       "preRequisites:11": [
-        16
+        22
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -15984,7 +15955,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
+          "ignoreNBT:1": 0,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -16067,12 +16038,7 @@
       },
       "questID:3": 226,
       "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
-        }
-      }
+      "tasks:9": {}
     },
     "227:10": {
       "preRequisites:11": [
@@ -22214,33 +22180,24 @@
     },
     "366:10": {
       "preRequisites:11": [
-        12
+        21
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Lapis Lazuli§r is a deep blue metamorphic rock, and is considered to be a semi-precious stone.\n\nYou will need this in order to craft the Gregtech §6Crowbar§r, as well as Littletiles tools.",
+          "desc:8": "You can craft §6home blocks §rusing a block of smooth stone and a file.\n \nThe home block has 4 variants, you can cycle through them by putting them in a crafting table.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 4,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:dye"
+            "id:8": "susy:home_block"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Lapis Lazuli",
+          "name:8": "Home Block",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -22266,353 +22223,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "minecraft:lapis_ore"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "367:10": {
-      "preRequisites:11": [
-        366,
-        15
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Crowbar§r is a neat tool used mainly for removing §6Covers§r without the need to destroy the block it has been placed on. Covers are critical for the more advanced automation you will need in Gregtech.\n\nThis is also used for important recipes such as the §6Maintenance Hatch§r, as well as being involved in the maintenance process.\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:crowbar",
-            "tag:10": {
-              "DisallowContainerItem:1": 0,
-              "GT.Behaviours:10": {},
-              "GT.Tool:10": {
-                "AttackDamage:5": 4.0,
-                "AttackSpeed:5": -2.4,
-                "Durability:3": 0,
-                "HarvestLevel:3": 2,
-                "Material:8": "iron",
-                "MaxDurability:3": 256,
-                "ToolSpeed:5": 6.0
-              },
-              "HideFlags:3": 2
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Mr. Freeman",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 367,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:crowbar",
-              "tag:10": {
-                "DisallowContainerItem:1": 0,
-                "GT.Behaviours:10": {},
-                "GT.Tool:10": {
-                  "AttackDamage:5": 4.0,
-                  "AttackSpeed:5": -2.4,
-                  "Durability:3": 0,
-                  "HarvestLevel:3": 2,
-                  "Material:8": "iron",
-                  "MaxDurability:3": 256,
-                  "ToolSpeed:5": 6.0
-                },
-                "HideFlags:3": 2
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "368:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "New Quest",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 368,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "369:10": {
-      "preRequisites:11": [
-        104
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "If you want to automate properly in Gregtech, you will need to learn how to use §6Covers§r.\n\nCovers are attachments that can be physically placed on the side of machines, or with Gregtech pipes. They are important for finely-tuned control over the input or output of items and fluids.\n\nYou can interact with all covers by §ashift-right clicking§r on the face the cover is sitting on. Or, if you have a §6Screwdriver§r, you can simply right click the face directly and can even access the cover from a neighboring face.\n\n§6Pumps, Robot Arms,§r and §6Conveyors§r are all machine components that can be used as covers. For information on their operation, you may refer to their quests.\n\nThe simplest way to explain §6Fluid Regulators§r is that they are §6Robot Arms§r, but for fluids. They can monitor the state of the current inventory, as well as the neighboring inventory, and act on this information, as well as supplying in specific batches.\n\n\n\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 301,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "PSA: Covers",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 369,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
-        }
-      }
-    },
-    "370:10": {
-      "preRequisites:11": [
-        369
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "§6Filters§r, when used as §6Covers§r, passively impose restrictions on the items or fluids that may pass in-between them through manual outputs. However, some of their more powerful uses is in-conjunction with other covers, which have a dedicated slot for a filter. All filters may be toggled to only function with input, output, or both at once.\n\nBoth §6Item filters§r and §6Fluid filters§r are self-explanatory. When combined with a robot arm/fluid regulator, you may use the fluid interface to determine the batch size that the robot arm will consider.\n\nAn §6Ore Dictionary filter§r will filter items based on their ore dictionary entries (an ore-dictionary entry set to §6plankWood§r will be able to accept all wood planks, etc.). You can even supply Regex expressions for a substantially expanded field of options. For example, you can supply §cingotHot*§r for the filter to act on all hot ingots§r. You can see https://en.wikipedia.org/wiki/Regular_expression for more information.\n\nA §6Smart Filter§r can be automatically set to consider the recipes of either an electrolyzer, sifter, or centrifuge, and will filter items based on the quantities present in the recipe.\n\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 291,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Filters",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 370,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 291,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 290,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 292,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 293,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "371:10": {
-      "preRequisites:11": [
-        34
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "To make §6glass§r, you will need to macerate sand (either via machine or mortar) to get §6quartz dust§r, combine this with §6tiny flint dust§r to get §6glass dust§r, and then put this into an §6Alloy Smelter§r with a §6block mold§r to get glass blocks.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:glass"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Glass",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 371,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:glass"
+              "id:8": "susy:home_block"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -22752,7 +22363,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 456
+          "y:3": 448
         },
         "15:10": {
           "id:3": 16,
@@ -22822,7 +22433,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 552
+          "y:3": 468
         },
         "25:10": {
           "id:3": 30,
@@ -22956,6 +22567,13 @@
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 552
+        },
+        "44:10": {
+          "id:3": 366,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 552
         }
       }
     },
@@ -22991,36 +22609,36 @@
           "id:3": 10,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 348
+          "x:3": 60,
+          "y:3": 306
         },
         "1:10": {
           "id:3": 23,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 318
+          "x:3": 60,
+          "y:3": 276
         },
         "2:10": {
           "id:3": 24,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 318
+          "x:3": 12,
+          "y:3": 276
         },
         "3:10": {
           "id:3": 26,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 330
+          "x:3": -36,
+          "y:3": 288
         },
         "4:10": {
           "id:3": 27,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 348
+          "x:3": 12,
+          "y:3": 306
         },
         "5:10": {
           "id:3": 31,
@@ -23033,7 +22651,7 @@
           "id:3": 32,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -186,
+          "x:3": -132,
           "y:3": -12
         },
         "7:10": {
@@ -23041,133 +22659,133 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": 60
+          "y:3": 48
         },
         "8:10": {
           "id:3": 34,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -186,
-          "y:3": 60
+          "x:3": -132,
+          "y:3": 96
         },
         "9:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 60
+          "x:3": -84,
+          "y:3": 48
         },
         "10:10": {
           "id:3": 38,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 24
+          "x:3": -36,
+          "y:3": 48
         },
         "11:10": {
           "id:3": 39,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 114,
-          "y:3": 60
+          "x:3": 108,
+          "y:3": 48
         },
         "12:10": {
           "id:3": 40,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": -72
+          "x:3": 12,
+          "y:3": 48
         },
         "13:10": {
           "id:3": 41,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 132
+          "x:3": -84,
+          "y:3": 144
         },
         "14:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -234,
+          "x:3": -204,
           "y:3": -12
         },
         "15:10": {
           "id:3": 43,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -186,
-          "y:3": 126
+          "x:3": -132,
+          "y:3": 144
         },
         "16:10": {
           "id:3": 44,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 60
+          "x:3": -36,
+          "y:3": 96
         },
         "17:10": {
           "id:3": 45,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -144,
-          "y:3": 90
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 144
         },
         "18:10": {
           "id:3": 46,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -96,
-          "y:3": 132
+          "x:3": -42,
+          "y:3": 186
         },
         "19:10": {
           "id:3": 48,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -18,
-          "y:3": 264
+          "x:3": -90,
+          "y:3": 186
         },
         "20:10": {
           "id:3": 49,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
+          "x:3": -84,
           "y:3": 96
         },
         "21:10": {
           "id:3": 50,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 270
+          "x:3": -84,
+          "y:3": 240
         },
         "22:10": {
           "id:3": 51,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -102,
-          "y:3": 318
+          "x:3": -96,
+          "y:3": 276
         },
         "23:10": {
           "id:3": 53,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 216
+          "x:3": -36,
+          "y:3": 240
         },
         "24:10": {
           "id:3": 54,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -300,
-          "y:3": 180
+          "x:3": -312,
+          "y:3": 132
         },
         "25:10": {
           "id:3": 55,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
-          "y:3": 60
+          "x:3": 12,
+          "y:3": 96
         },
         "26:10": {
           "id:3": 56,
@@ -23180,8 +22798,8 @@
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": -36
+          "x:3": 72,
+          "y:3": -72
         },
         "28:10": {
           "id:3": 58,
@@ -23201,15 +22819,15 @@
           "id:3": 61,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 132
+          "x:3": 60,
+          "y:3": 192
         },
         "31:10": {
           "id:3": 62,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 60
+          "x:3": 108,
+          "y:3": 144
         },
         "32:10": {
           "id:3": 63,
@@ -23222,43 +22840,43 @@
           "id:3": 64,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -246,
-          "y:3": 246
+          "x:3": -336,
+          "y:3": 192
         },
         "34:10": {
           "id:3": 65,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -330,
-          "y:3": 246
+          "x:3": -264,
+          "y:3": 192
         },
         "35:10": {
           "id:3": 66,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -300,
-          "y:3": 288
+          "x:3": -312,
+          "y:3": 276
         },
         "36:10": {
           "id:3": 71,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -144,
-          "y:3": 210
+          "x:3": 6,
+          "y:3": 228
         },
         "37:10": {
           "id:3": 72,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
-          "y:3": 138
+          "x:3": 12,
+          "y:3": 144
         },
         "38:10": {
           "id:3": 73,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
-          "y:3": 174
+          "x:3": 12,
+          "y:3": 192
         },
         "39:10": {
           "id:3": 75,
@@ -23271,70 +22889,70 @@
           "id:3": 77,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -234,
-          "y:3": 60
+          "x:3": -204,
+          "y:3": 96
         },
         "41:10": {
           "id:3": 78,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -246,
-          "y:3": 114
+          "x:3": -216,
+          "y:3": 132
         },
         "42:10": {
           "id:3": 79,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -234,
-          "y:3": 24
+          "x:3": -204,
+          "y:3": 48
         },
         "43:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 114,
+          "x:3": 108,
           "y:3": 96
         },
         "44:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 162,
+          "x:3": 168,
           "y:3": 60
         },
         "45:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 162,
+          "x:3": 168,
           "y:3": 168
         },
         "46:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 162,
+          "x:3": 168,
           "y:3": 96
         },
         "47:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 210,
+          "x:3": 216,
           "y:3": 96
         },
         "48:10": {
           "id:3": 85,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 162,
+          "x:3": 168,
           "y:3": 132
         },
         "49:10": {
           "id:3": 86,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 162,
+          "x:3": 168,
           "y:3": 24
         },
         "50:10": {
@@ -23348,36 +22966,36 @@
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 114,
+          "x:3": 120,
           "y:3": -12
         },
         "52:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 162,
+          "x:3": 168,
           "y:3": -12
         },
         "53:10": {
           "id:3": 97,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
-          "y:3": 270
+          "x:3": -132,
+          "y:3": 240
         },
         "54:10": {
           "id:3": 104,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -204,
-          "y:3": 318
+          "y:3": 312
         },
         "55:10": {
           "id:3": 130,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -204,
-          "y:3": 258
+          "y:3": 228
         },
         "56:10": {
           "id:3": 147,
@@ -23397,29 +23015,22 @@
           "id:3": 170,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -198,
-          "y:3": 210
+          "x:3": 60,
+          "y:3": 228
         },
         "59:10": {
           "id:3": 228,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 96
+          "x:3": 60,
+          "y:3": 144
         },
         "60:10": {
           "id:3": 244,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -354,
-          "y:3": 300
-        },
-        "61:10": {
-          "id:3": 371,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -138,
-          "y:3": 60
+          "x:3": -360,
+          "y:3": 288
         }
       }
     },
@@ -23512,7 +23123,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
-          "y:3": 60
+          "y:3": 48
         },
         "9:10": {
           "id:3": 105,
@@ -23693,8 +23304,8 @@
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 180,
-          "y:3": 144
+          "x:3": 228,
+          "y:3": 108
         },
         "35:10": {
           "id:3": 169,
@@ -23996,34 +23607,6 @@
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": 576
-        },
-        "78:10": {
-          "id:3": 366,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 12
-        },
-        "79:10": {
-          "id:3": 367,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -120,
-          "y:3": 12
-        },
-        "80:10": {
-          "id:3": 369,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": -48
-        },
-        "81:10": {
-          "id:3": 370,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -120,
-          "y:3": -48
         }
       }
     },
@@ -24755,15 +24338,15 @@
           "id:3": 211,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
+          "x:3": 48,
           "y:3": 60
         },
         "4:10": {
           "id:3": 212,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 60
+          "x:3": 48,
+          "y:3": -60
         },
         "5:10": {
           "id:3": 213,
@@ -24876,13 +24459,6 @@
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 60
-        },
-        "21:10": {
-          "id:3": 366,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": -60
         }
       }
     },
@@ -26160,7 +25736,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
