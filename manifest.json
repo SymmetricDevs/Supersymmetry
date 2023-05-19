@@ -11,18 +11,13 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Supersymmetry",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "SymmetricDevs",
   "externalDeps": [],
   "files": [
     {
       "projectID": 304024,
       "fileID": 2830114,
-      "required": true
-    },
-    {
-      "projectID": 227657,
-      "fileID": 2654852,
       "required": true
     },
     {
@@ -98,11 +93,6 @@
     {
       "projectID": 477021,
       "fileID": 4496053,
-      "required": true
-    },
-    {
-      "projectID": 313866,
-      "fileID": 3783239,
       "required": true
     },
     {
@@ -232,7 +222,12 @@
     },
     {
       "projectID": 604054,
-      "fileID": 4124451,
+      "fileID": 4529655,
+      "required": true
+    },
+    {
+      "projectID": 313866,
+      "fileID": 3783239,
       "required": true
     },
     {
@@ -392,12 +387,12 @@
     },
     {
       "projectID": 460609,
-      "fileID": 4140230,
+      "fileID": 4541751,
       "required": true
     },
     {
       "projectID": 705000,
-      "fileID": 4473327,
+      "fileID": 4526887,
       "required": true
     },
     {
@@ -432,7 +427,7 @@
     },
     {
       "projectID": 557242,
-      "fileID": 4483462,
+      "fileID": 4527757,
       "required": true
     },
     {
@@ -452,12 +447,17 @@
     },
     {
       "projectID": 623955,
-      "fileID": 4474353,
+      "fileID": 4531034,
       "required": true
     },
     {
       "projectID": 321117,
       "fileID": 3150850,
+      "required": true
+    },
+    {
+      "projectID": 485654,
+      "fileID": 4430381,
       "required": true
     },
     {
@@ -667,7 +667,7 @@
     },
     {
       "projectID": 564858,
-      "fileID": 4483468,
+      "fileID": 4529101,
       "required": true
     },
     {
@@ -737,7 +737,7 @@
     },
     {
       "projectID": 557549,
-      "fileID": 4506796,
+      "fileID": 4543375,
       "required": true
     },
     {
@@ -877,7 +877,7 @@
     },
     {
       "projectID": 223008,
-      "fileID": 3966135,
+      "fileID": 4526246,
       "required": true
     }
   ],
