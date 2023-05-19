@@ -93,48 +93,47 @@ def makeBattery(cathode, anode, seperator, electrolyte, outputMaterial, tierRang
   log.infoMC("Built battery ${outputMaterial} at tier range of ${tierRanges}")
 }
 
-// lipf6 missing add
-makeBattery(
-  metaitem("cathode.lithium_cobalt_oxide"), 
-  metaitem("anode.graphite"), 
-  null, //ore("seperator.mv"), 
-  metaitem("dustLithiumHexafluorophosphate"), 
-  "lithium",
-  ["mv", "hv", "ev"],
-  1
-)
 
-makeBattery(
-  metaitem("cathode.graphine_in_graphine"), 
-  metaitem("anode.graphine_in_graphine"), 
-  null, //ore("seperator.mv"), 
-  metaitem("lipf6"), 
-  "dustVanadiumPenoxide",
-  ["hv", "ev", "iv"],
-  2
-)
+// makeBattery(
+//   metaitem("cathode.lithium_cobalt_oxide"), 
+//   metaitem("anode.graphite"), 
+//   null, //ore("seperator.mv"), 
+//   metaitem("dustLithiumHexafluorophosphate"), 
+//   "lithium",
+//   ["mv", "hv", "ev"],
+//   1
+// )
 
-makeBattery(
-  metaitem("cathode.nickel_oxide_hydroxide"), 
-  metaitem("anode.met_cadnium"), 
-  null, //ore("seperator.mv"), 
-  metaitem("dustPotassiumHydroxide"), 
-  "nicad",
-  ["ev", "iv", "luv"],
-  3
-)
+// makeBattery(
+//   metaitem("cathode.graphine_in_graphine"), 
+//   metaitem("anode.graphine_in_graphine"), 
+//   null, //ore("seperator.mv"), 
+//   metaitem("lipf6"), 
+//   "dustVanadiumPenoxide",
+//   ["hv", "ev", "iv"],
+//   2
+// )
 
-makeBattery(
-  metaitem("cathode.nickel_oxide_hydroxide"), 
-  metaitem("anode.lanthanum_nickel_oxide"), 
-  null, //ore("seperator.mv"), 
-  metaitem("dustPotassiumHydroxide"), 
-  "nimet",
-  ["iv", "luv", "zpm"],
-  4
-)
+// makeBattery(
+//   metaitem("cathode.nickel_oxide_hydroxide"), 
+//   metaitem("anode.met_cadnium"), 
+//   null, //ore("seperator.mv"), 
+//   metaitem("dustPotassiumHydroxide"), 
+//   "nicad",
+//   ["ev", "iv", "luv"],
+//   3
+// )
 
-// not yet finished designwise
+// makeBattery(
+//   metaitem("cathode.nickel_oxide_hydroxide"), 
+//   metaitem("anode.lanthanum_nickel_oxide"), 
+//   null, //ore("seperator.mv"), 
+//   metaitem("dustPotassiumHydroxide"), 
+//   "nimet",
+//   ["iv", "luv", "zpm"],
+//   4
+// )
+
 // makeBattery(
 //   metaitem("cathode.nickel_oxide_hydroxide"), 
 //   metaitem("anode.lanthanum_nickel_oxide"), 
