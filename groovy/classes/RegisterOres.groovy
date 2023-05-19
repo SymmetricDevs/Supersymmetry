@@ -74,14 +74,14 @@ class RegisterOres{
 
         new Material.Builder(30010, "lignite")
                 .gem(1, 1200).ore(2, 1)
-				.color(0x644646).iconSet(LIGNITE)
+                .color(0x644646).iconSet(LIGNITE)
                 .components(Carbon, 1)
                 .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
                 .build();
 
         new Material.Builder(30011, "anthracite")
                 .gem(1, 2000).ore(2, 1)
-				.color(0x241212).iconSet(LIGNITE)
+                .color(0x241212).iconSet(LIGNITE)
                 .components(Carbon, 1)
                 .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
                 .build();
@@ -104,14 +104,14 @@ class RegisterOres{
                 .components(Copper, 3, Carbon, 2, Oxygen, 8, Hydrogen, 2)
                 .color(0x161446)
                 .build()
-				.setFormula("Cu3(CO3)2(OH)2", true);
+                .setFormula("Cu3(CO3)2(OH)2", true);
 
         new Material.Builder(30015, "hydrozincite")
                 .ore()
                 .components(Zinc, 5, Carbon, 2, Oxygen, 12, Hydrogen, 6)
                 .colorAverage()
                 .build()
-				.setFormula("Zn5(CO3)2(OH)6", true);
+                .setFormula("Zn5(CO3)2(OH)6", true);
 
         new Material.Builder(30016, "cerussite")
                 .ore()
@@ -161,7 +161,7 @@ class RegisterOres{
                 .components(Scandium, 1, Yttrium, 1, Silicon, 2, Oxygen, 7)
                 .colorAverage()
                 .build()
-				.setFormula("ScY2Si2O7", true);
+                .setFormula("ScY2Si2O7", true);
 
         log.infoMC('Finished registering ores')
 
