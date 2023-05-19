@@ -1,5 +1,5 @@
 {
-  "weight": 60,
+  "weight": 180,
   "density": 1,
   "max_height": 255,
   "min_height": 60,
@@ -18,28 +18,16 @@
     "type": "layered",
     "values": [
       {
-        "primary": {
-          "block":"susy:resource_block",
-          "variant":"resource_block_lignite"
-	    }
+        "primary": "ore:lignite"
       },
       {
-        "secondary": {
-          "block":"susy:resource_block",
-          "variant":"resource_block_lignite"
-        }
+        "secondary": "ore:lignite"
       },
       {
-        "between": {
-          "block":"susy:resource_block",
-          "variant":"resource_block_lignite"
-	    }
+        "between": "ore:lignite"
       },
       {
-        "sporadic": {
-          "block":"susy:resource_block",
-          "variant":"resource_block_lignite"
-	    }
+        "sporadic": "ore:lignite"
       }
     ]
   }

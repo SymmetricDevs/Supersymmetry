@@ -18,16 +18,16 @@
     "type": "layered",
     "values": [
       {
-        "primary": "block:minecraft:coal_block"
+        "primary": "ore:coal"
       },
       {
-        "secondary": "block:minecraft:coal_block"
+        "secondary": "ore:coal"
       },
       {
-        "between": "block:minecraft:coal_block"
+        "between": "ore:coal"
       },
       {
-        "sporadic": "block:minecraft:coal_block"
+        "sporadic": "ore:coal"
       }
     ]
   }
