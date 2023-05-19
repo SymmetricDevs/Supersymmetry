@@ -284,6 +284,19 @@ material.rayon=Rayon
 material.alkali_cellulose=Alkali Cellulose
 material.sodium_cellulose_xanthate=Sodium Cellulose Xanthate
 
+material.sodium_bromide=Sodium Bromide
+
+material.roasted_sperrylite=Roasted Sperrylite
+material.enargite_residue=Enargite Residue
+
+material.cobaltite_leach_solution=Cobaltite Leach Solution
+material.arsenopyrite_leach_solution=Arsenopyrite Leach Solution
+
+material.arsenic_iii_sulfide=Arsenic III Sulfide
+material.arsenic_v_sulfide=Arsenic V Sulfide
+material.silver_chloride=Silver Chloride
+material.copper_sulfate=Copper Sulfate
+
 # Fluids
 
 material.smoke_bomb_mix=Smoke Bomb Mix
@@ -438,6 +451,28 @@ material.high_purity_water=High Purity Water
 material.ethanolamine=Ethanolamine
 material.diethanolamine=Diethanolamine
 material.triethanolamine=Triethanolamine
+
+material.calcium_carbonate_solution=Calcium Carbonate Solution
+material.bentonite_clay_solution=Bentonite Clay Solution
+material.mineralized_water=Mineralized Water
+material.oxide_water=Oxide Water
+material.silicate_water=Silicate Water
+material.sulfurous_water=Sulfurous Water
+material.graphite_water=Graphite Water
+material.phosphate_water=Phosphate Water
+material.precious_runoff=Precious Runoff
+material.radioactive_runoff=Radioactive Runoff
+
+material.thioarsenite_solution=Thioarsenite Solution
+material.alkaline_arsenite_solution=Alkaline Arsenite Solution
+material.salty_arsenous_acid=Arsenous Acid Brine
+material.thioarsenate_solution=Thioarsenate Solution
+material.arsenous_acid=Arsenous Acid
+material.tetrachloroantimonate_solution=Tetrachloroantimonate Solution
+material.acidic_copper_solution=Acidic Copper Solution
+material.arsine=Arsine
+material.sodium_bromide_solution=Sodium Bromide Solution
+material.sperrylite_waste=Sperrylite Waste
 
 # Thermodynamics
 
@@ -607,35 +642,6 @@ gas.gaspunk.ammonia=Ammonia
 gas.gaspunk.carbon_monoxide=Carbon Monoxide
 gas.gaspunk.hydrochloric_acid=Hydrochloric Acid
 gas.gaspunk.hydrofluoric_acid=Hydrofluoric Acid
-
-# Gregtech Machines
-
-gregtech.machine.fluid_compressor.lv.name=Basic Fluid Compressor
-gregtech.machine.fluid_compressor.mv.name=Advanced Fluid Compressor
-gregtech.machine.fluid_compressor.hv.name=Advanced Fluid Compressor II
-gregtech.machine.fluid_compressor.ev.name=Advanced Fluid Compressor III
-gregtech.machine.fluid_compressor.iv.name=Elite Fluid Compressor
-gregtech.machine.fluid_compressor.luv.name=Elite Fluid Compressor II
-gregtech.machine.fluid_compressor.zpm.name=Elite Fluid Compressor III
-gregtech.machine.fluid_compressor.uv.name=Ultimate Fluid Compressor
-
-gregtech.machine.fluid_decompressor.lv.name=Basic Fluid Decompressor
-gregtech.machine.fluid_decompressor.mv.name=Advanced Fluid Decompressor
-gregtech.machine.fluid_decompressor.hv.name=Advanced Fluid Decompressor II
-gregtech.machine.fluid_decompressor.ev.name=Advanced Fluid Decompressor III
-gregtech.machine.fluid_decompressor.iv.name=Elite Fluid Decompressor
-gregtech.machine.fluid_decompressor.luv.name=Elite Fluid Decompressor II
-gregtech.machine.fluid_decompressor.zpm.name=Elite Fluid Decompressor III
-gregtech.machine.fluid_decompressor.uv.name=Ultimate Fluid Decompressor
-
-gregtech.machine.weapons_factory.lv.name=Basic Weapon Factory
-gregtech.machine.weapons_factory.mv.name=Advanced Weapon Factory
-gregtech.machine.weapons_factory.hv.name=Advanced Weapon Factory II
-gregtech.machine.weapons_factory.ev.name=Advanced Weapon Factory III
-gregtech.machine.weapons_factory.iv.name=Elite Weapon Factory
-gregtech.machine.weapons_factory.luv.name=Elite Weapon Factory II
-gregtech.machine.weapons_factory.zpm.name=Elite Weapon Factory III
-gregtech.machine.weapons_factory.uv.name=Ultimate Weapon Factory
 
 # Metaitems
 
@@ -828,6 +834,9 @@ metaitem.assemblyEnrichedNaquadahTriniumEuropiumDuranide.name=Enriched Naquadah 
 metaitem.baseEnrichedNaquadahTriniumEuropiumDuranide.name=Base Enriched Naquadah Trinium Europium Duranide Superconductor
 metaitem.assemblyRutheniumTriniumAmericiumNeutronate.name=Ruthenium Trinium Americium Neutronate Assembly
 metaitem.baseRutheniumTriniumAmericiumNeutronate.name=Base Ruthenium Trinium Americium Neutronate Superconductor
+
+metaitem.alternator.stator.name=Alternator Stator
+metaitem.alternator.rotor.name=Alternator Rotor
 
 # Multiblocked
 

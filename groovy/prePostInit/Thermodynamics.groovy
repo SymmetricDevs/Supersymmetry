@@ -1,5 +1,5 @@
 import classes.*;
-
+//TODO: CHANGE GAS TURBINE RECIPES TO OUTPUT AN AMOUNT OF FLUE GAS THAT IS PROPORTIONAL TO THE DURATION OF THE RECIPE
 //REMOVALS
 
 mods.gregtech.vacuum_freezer.removeByInput(1920, null, [fluid('nether_air') * 4000])
@@ -9,6 +9,24 @@ mods.gregtech.vacuum_freezer.removeByInput(30, null, [fluid('water') * 1000])
 mods.gregtech.vacuum_freezer.removeByInput(1920, null, [fluid('oxygen') * 1000])
 
 mods.gregtech.steam_turbine.removeByInput(-32, null, [fluid('steam') * 640])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('coal_gas')])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('ethylene')])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('natural_gas') * 8])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('refinery_gas')])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('sulfuric_naphtha') * 4])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('propene')])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('wood_gas') * 8])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('methane') * 2])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('butene')])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('phenol')])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('lpg')])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('benzene')])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('ethane') * 4])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('sulfuric_gas') * 32])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('propane') * 4])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('butane') * 4])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('nitrobenzene')])
+mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('butadiene') * 16])
 
 def WaterCoolant = new ICoolant("water", "warm_water");
 WaterCoolant.setDurationRadiator(100);
@@ -188,7 +206,6 @@ for (refrigerant in Refrigerants) {
             .fluidInputs(liquid(refrigerant.hot_refrigerant) * refrigerant.amount_to_use)
             .fluidOutputs(liquid(refrigerant.comp_refrigerant) * refrigerant.amount_to_use)
             .duration(refrigerant.duration_radiator)
-            .EUt(8)
             .buildAndRegister();
 
 }
@@ -199,7 +216,6 @@ for (coolant in Coolants) {
             .fluidInputs(liquid(coolant.warm_coolant) * coolant.amount_to_use)
             .fluidOutputs(liquid(coolant.cold_coolant) * coolant.amount_to_use)
             .duration(coolant.duration_radiator)
-            .EUt(8)
             .buildAndRegister();
 }
 
@@ -212,7 +228,6 @@ for (cryogas in CryoGases) {
                 .fluidOutputs(liquid(coolant.warm_coolant) * coolant.amount_to_use)
                 .fluidOutputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
                 .duration(cryogas.duration_heat_exchanger + coolant.hx_time_factor)
-                .EUt(cryogas.power_heat_exchanger)
                 .buildAndRegister();
     }
     for (refrigerant in Refrigerants) {
@@ -222,7 +237,6 @@ for (cryogas in CryoGases) {
                 .fluidOutputs(liquid(refrigerant.normal_refrigerant) * refrigerant.amount_to_use)
                 .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * cryogas.amount_to_use)
                 .duration(cryogas.duration_heat_exchanger + refrigerant.hx_time_factor)
-                .EUt(cryogas.power_heat_exchanger)
                 .buildAndRegister();
     }
     recipemap('fluid_compressor').recipeBuilder()
@@ -247,7 +261,6 @@ for (cryogas in CryoGases) {
             .fluidInputs(liquid(cryogas.hot_high_pressure_gas) * cryogas.amount_to_use)
             .fluidOutputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
             .duration(cryogas.duration_heat_exchanger*5)
-            .EUt(8)
             .buildAndRegister();
 }
 
@@ -259,7 +272,6 @@ for (refrigerant in Refrigerants) {
             .fluidOutputs(liquid('ice') * 1000)
             .fluidOutputs(liquid(refrigerant.normal_refrigerant) * refrigerant.amount_to_use)
             .duration(60)
-            .EUt(8)
             .buildAndRegister();
 }
 
@@ -445,9 +457,17 @@ def WorkingFluids = [
 
 for (FluidFuel in FluidFuels) {
     if(FluidFuel.gas_turbine){
-        recipemap('gas_turbine_new').recipeBuilder()
+        recipemap('gas_turbine').recipeBuilder()
                 .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                 .fluidInputs(liquid('air') * 1000)
+                .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                .duration(FluidFuel.duration)
+                .EUt(-32)
+                .buildAndRegister();
+
+        recipemap('gas_turbine').recipeBuilder()
+                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                .fluidInputs(liquid('oxygen') * 250)
                 .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
                 .duration(FluidFuel.duration)
                 .EUt(-32)
@@ -461,7 +481,6 @@ for (WorkingFluid in WorkingFluids) {
             .fluidInputs(liquid('flue_gas')*1000)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .duration(WorkingFluid.duration)
-            .EUt(8)
             .buildAndRegister();
 
     recipemap('steam_turbine').recipeBuilder()

@@ -8,15 +8,13 @@ class Blastable {
     //In liters
     int reductant_required
     int duration
-    boolean isNugget
 
-    Blastable(name, amount_required, amount_produced, reductant_required, duration, isNugget = false) {
+    Blastable(name, amount_required, amount_produced, reductant_required, duration) {
         this.name = name
         this.amount_required = amount_required
         this.amount_produced = amount_produced
         this.reductant_required = reductant_required
         this.duration = duration
-        this.isNugget = isNugget
     }
 }
 
@@ -50,17 +48,17 @@ def PBF_RECIPES = recipemap("primitive_blast_furnace")
 def EBF_RECIPES = recipemap("electric_blast_furnace")
 
 def blastables = [
-    new Blastable('dustMagnetite', 7 , 3, 4, 80),
-    new Blastable('dustBandedIron', 5 , 2, 3, 80),
-    new Blastable('dustIronIiiOxide', 5 , 2, 3, 80),
-    new Blastable('dustGraniticMineralSand', 14 , 3, 4, 80),
-    new Blastable('oreIron', 3, 2, 2, 60, true),
-    new Blastable('oreMagnetite', 7 , 3, 4, 60, true),
-    new Blastable('oreBandedIron', 5 , 2, 3, 60, true),
-    new Blastable('oreNetherrackMagnetite', 7 , 6, 4, 60, true),
-    new Blastable('oreNetherrackBandedIron', 5 , 4, 3, 60, true),
-    new Blastable('oreEndstoneRackMagnetite', 7 , 6, 4, 60, true),
-    new Blastable('oreEndstoneBandedIron', 5 , 4, 3, 60, true),
+    new Blastable('dustMagnetite', 7 , 6, 4, 80),
+    new Blastable('dustBandedIron', 5 , 4, 3, 80),
+    new Blastable('dustIronIiiOxide', 5 , 4, 3, 80),
+    new Blastable('dustGraniticMineralSand', 14 , 6, 4, 80),
+    new Blastable('oreIron', 3, 2, 2, 60),
+    new Blastable('oreMagnetite', 7 , 3, 4, 60),
+    new Blastable('oreBandedIron', 5 , 2, 3, 60),
+    new Blastable('oreNetherrackMagnetite', 7 , 6, 4, 60),
+    new Blastable('oreNetherrackBandedIron', 5 , 4, 3, 60),
+    new Blastable('oreEndstoneRackMagnetite', 7 , 6, 4, 60),
+    new Blastable('oreEndstoneBandedIron', 5 , 4, 3, 60)
 ]
 
 def reductants = [
@@ -80,23 +78,13 @@ def combustibles = [
 
 for (blastable in blastables) {
     for (combustible in combustibles) { 
-        if(blastable.isNugget){
-            PBF_RECIPES.recipeBuilder()
-            .inputs(ore(blastable.name) * blastable.amount_required)
-            .inputs(ore(combustible.name) * (combustible.amount_required * blastable.reductant_required))
-            .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
-            .outputs(metaitem(combustible.byproduct) * (combustible.amount_required * blastable.reductant_required))
-            .duration(combustible.duration * blastable.amount_produced * blastable.duration)
-            .buildAndRegister()
-        } else {
-            PBF_RECIPES.recipeBuilder()
-            .inputs(ore(blastable.name) * blastable.amount_required)
-            .inputs(ore(combustible.name) * (combustible.amount_required * blastable.reductant_required))
-            .outputs(metaitem('ingotPigIron') * (blastable.amount_produced * 2))
-            .outputs(metaitem(combustible.byproduct) * (combustible.amount_required * blastable.reductant_required))
-            .duration(combustible.duration * blastable.amount_produced * blastable.duration)
-            .buildAndRegister()
-        }
+        PBF_RECIPES.recipeBuilder()
+        .inputs(ore(blastable.name) * blastable.amount_required)
+        .inputs(ore(combustible.name) * (combustible.amount_required * blastable.reductant_required))
+        .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
+        .outputs(metaitem(combustible.byproduct) * (combustible.amount_required * blastable.reductant_required))
+        .duration(combustible.duration * blastable.amount_produced * blastable.duration)
+        .buildAndRegister()
     }
 
     for (reductant in reductants) {

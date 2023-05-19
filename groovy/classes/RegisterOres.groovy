@@ -10,11 +10,16 @@ import static gregtech.api.unification.material.Materials.*;
 //ID 30000 - 30500 for ores
 class RegisterOres{
 
+    public static Material Sperrylite;
+    public static Material Enargite;
+    public static Material Proustite;
+    public static Material Arsenopyrite;
+
     public static void init() {
 
         log.infoMC('Registering ores')
 
-        new Material.Builder(30000, "enargite")
+        Enargite = new Material.Builder(30000, "enargite")
                 .ore()
                 .addOreByproducts(Pyrite, Sphalerite)
                 .components(Copper, 3, Arsenic, 1, Sulfur, 4)
@@ -114,7 +119,7 @@ class RegisterOres{
                 .colorAverage()
                 .build();
 
-        new Material.Builder(30017, "proustite")
+        Proustite = new Material.Builder(30017, "proustite")
                 .ore()
                 .components(Silver, 3, Arsenic, 1, Sulfur, 3)
                 .colorAverage()
@@ -126,14 +131,14 @@ class RegisterOres{
                 .colorAverage()
                 .build();
 
-        new Material.Builder(30019, "arsenopyrite")
+        Arsenopyrite = new Material.Builder(30019, "arsenopyrite")
                 .ore()
                 .addOreByproducts(Pyrite)
                 .components(Iron, 1, Arsenic, 1, Sulfur, 1)
                 .colorAverage()
                 .build();
 
-        new Material.Builder(30020, "sperrylite")
+        Sperrylite = new Material.Builder(30020, "sperrylite")
                 .ore()
                 .components(Platinum, 1, Arsenic, 2)
                 .colorAverage()
