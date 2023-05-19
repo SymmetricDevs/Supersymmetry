@@ -6847,7 +6847,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§7Coal §fcan be turned into §b§7Coal Coke§f, a fuel, §rand §btorches§,, sources of light. §rCoal deposits are found in every biome.\n\n",
+          "desc:8": "§7Coal §fcan be turned into §b§7Coal Coke§f, a fuel, §rand §btorches§,, sources of light. §rCoal block deposits are found in every biome.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13554,7 +13554,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32020,
+            "Damage:2": 15026,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -13586,7 +13586,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32020,
+              "Damage:2": 15026,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -15846,7 +15846,7 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Coil Insulation",
@@ -22353,7 +22353,7 @@
     },
     "369:10": {
       "preRequisites:11": [
-        368
+        104
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -22367,7 +22367,7 @@
             "id:8": "susy:alternator_coil"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Large Steam Turbine",
@@ -22443,7 +22443,7 @@
             "id:8": "gregtech:boiler_casing"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Radiator",
@@ -22632,12 +22632,7 @@
       }
     },
     "373:10": {
-      "preRequisiteTypes:7": [
-        1,
-        0
-      ],
       "preRequisites:11": [
-        368,
         181
       ],
       "properties:10": {
@@ -23123,6 +23118,77 @@
               },
               "OreDict:8": "",
               "id:8": "minecraft:diamond"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "380:10": {
+      "preRequisites:11": [
+        36,
+        161
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The§6 Large Weapons Factory§r is a machine that assembles large weapons, such as §bmissiles§r.\n\nBuilding a Large Weapons Factory requires:\n§6\n- 1 Large Weapons Factory Controller\n- 1 Maintenance Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Output Bus\n- 1 Output Hatch\n- 1 Energy Hatch\n- 11 Steel Frame Box\n- 7 Steel Gearbox Casing\n- 16 Solid Steel Machine Casing§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 15046,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Large Weapons Factory",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 380,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 15046,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 11,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_frame_20"
+            },
+            "2:10": {
+              "Count:3": 7,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:turbine_casing"
+            },
+            "3:10": {
+              "Count:3": 16,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -24530,17 +24596,17 @@
         },
         "79:10": {
           "id:3": 369,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -162,
-          "y:3": 432
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": -20,
+          "y:3": 0
         },
         "80:10": {
           "id:3": 370,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -234,
-          "y:3": 432
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 44,
+          "y:3": 8
         },
         "81:10": {
           "id:3": 371,
@@ -24590,6 +24656,13 @@
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 348
+        },
+        "88:10": {
+          "id:3": 380,
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": 172,
+          "y:3": 52
         }
       }
     },
@@ -26726,7 +26799,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
