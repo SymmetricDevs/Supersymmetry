@@ -278,6 +278,12 @@ for (i = 1; i <= 8; i++) {
 			[circuits[i], hulls[i], circuits[i]]
 	])
 
+	crafting.addShaped("gregtech:batch_reactor." + Globals.voltageTiers[i], metaitem('batch_reactor.' + Globals.voltageTiers[i]), [
+			[tieredCables[i], pumps[i], tieredCables[i]],
+			[chemicalReactorParts[i], hulls[i], chemicalReactorParts[i]],
+			[circuits[i], tieredCables[i], circuits[i]]
+	])
+
 	crafting.addShaped("gregtech:bubble_column_reactor." + Globals.voltageTiers[i], metaitem('bubble_column_reactor.' + Globals.voltageTiers[i]), [
 			[chemicalReactorParts[i], tieredPipes[i], chemicalReactorParts[i]],
 			[tieredCables[i], pumps[i], tieredCables[i]],
@@ -449,8 +455,6 @@ crafting.addShaped("gregtech:fermentation_vat", metaitem('fermentation_vat'), [
 		[tieredCables[1], circuits[1], tieredCables[1]]
 ])
 
-//TODO: ENABLE THIS WHEN SUSYCORE 0.0.9 RELEASES
-/*
 //UV Light Box
 
 for (i = 1; i <= 8; i++) {
@@ -471,27 +475,7 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
- */
-
 //Turbine Recipes
-
-crafting.addShaped("alternator_rotor", metaitem('alternator.rotor'), [
-		[metaitem('wireFineAnnealedCopper'), metaitem('plateSteel'),             metaitem('wireFineAnnealedCopper')],
-		[metaitem('plateSteel'),             metaitem('stickLongSteel'),         metaitem('plateSteel')],
-		[metaitem('wireGtSingleCopper'),     metaitem('wireFineAnnealedCopper'), ore('craftingToolHardHammer')]
-])
-
-crafting.addShaped("alternator_stator", metaitem('alternator.stator'), [
-		[metaitem('wireFineAnnealedCopper'), metaitem('wireGtSingleCopper'),     metaitem('wireFineAnnealedCopper')],
-		[metaitem('plateSteel'),             ore('craftingToolHardHammer'),      metaitem('plateSteel')],
-		[metaitem('wireGtSingleCopper'),     metaitem('wireFineAnnealedCopper'), metaitem('wireGtSingleCopper')]
-])
-
-crafting.addShaped("alternator_coil_custom", item('susy:alternator_coil'), [
-		[metaitem('plateSteel'),       metaitem('cableGtSingleTin'),  metaitem('plateSteel')],
-		[metaitem('cableGtSingleTin'), metaitem('alternator.rotor'),  metaitem('cableGtSingleTin')],
-		[metaitem('plateSteel'),       metaitem('alternator.stator'), metaitem('plateSteel')]
-])
 
 crafting.addShaped("alternator_coil", item('susy:alternator_coil'), [
 		[ore('craftingToolHardHammer'), metaitem('electric.motor.lv'), ore('craftingToolScrewdriver')],
