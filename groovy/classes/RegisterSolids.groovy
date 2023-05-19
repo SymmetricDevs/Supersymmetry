@@ -457,7 +457,7 @@ class RegisterSolids {
                 .colorAverage()
                 .build()
 
-        new Material.Builder(32053, 'vanadium_penoxide')
+        new Material.Builder(32052, 'vanadium_penoxide')
                 .dust()
                 .components(Vanadium, 2, Oxygen, 5)
                 .colorAverage()
