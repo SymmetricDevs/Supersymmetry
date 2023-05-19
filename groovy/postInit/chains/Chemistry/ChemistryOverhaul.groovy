@@ -9,7 +9,7 @@ CSTR = recipemap('continuous_stirred_tank_reactor')
 TBR = recipemap('trickle_bed_reactor')
 FBR = recipemap('fixed_bed_reactor')
 BCR = recipemap('bubble_column_reactor')
-CRYSTALLIZER = recipemap('crystallizer')
+BR = recipemap('batch_reactor')
 POLYMERIZATION = recipemap('polymerization_tank')
 FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
 DISTILLATION_TOWER = recipemap('distillation_tower')
@@ -23,9 +23,9 @@ PYROLYSE = recipemap('pyrolyse_oven')
 LCR = recipemap('large_chemical_reactor')
 EBF = recipemap('electric_blast_furnace')
 VULCANIZER = recipemap('vulcanizing_press')
-SINTERING = recipemap('sintering_oven')
+ALLOY_SMELTER = recipemap('alloy_smelter')
 ARC_FURNACE = recipemap('arc_furnace')
-
+AUTOCLAVE = recipemap('autoclave')
 
 def COAL_SOURCES = [
     "dustCarbon",
@@ -36,9 +36,6 @@ def COAL_SOURCES = [
     "gemCoke",
     "dustCharcoal"
 ]
-
-//TODO: ADD ETHYLENE OXIDE CHAIN AFTER NEW CATALYSTS ARE IMPLEMENTED
-//TODO: MAKE ANILINE RECIPE AFTER CATALYSTS ARE DONE
 
 // Soap
 
@@ -203,7 +200,7 @@ ROASTER.recipeBuilder()
 
 //Phosphoric Acid mixer
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .inputs(ore('dustPhosphorusPentoxide'))
 .fluidInputs(fluid('water') * 6000)
 .fluidOutputs(fluid('phosphoric_acid') * 4000)
@@ -231,7 +228,7 @@ BCR.recipeBuilder()
 
 // Hydrofluoric acid
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .inputs(ore('dustFluorite') * 3)
 .fluidInputs(fluid('sulfuric_acid') * 1000)
 .fluidOutputs(fluid('hydrogen_fluoride') * 2000)
@@ -267,7 +264,7 @@ ROASTER.recipeBuilder()
 
 // Hydrogen Sulfide 
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .inputs(ore('dustIronIiSulfide') * 2)
 .fluidInputs(fluid('hydrochloric_acid') * 2000)
 .outputs(ore('dustIronIiChloride').first() * 3)
@@ -349,7 +346,7 @@ ROASTER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('sulfuric_acid') * 1000)
 .inputs(ore('dustSaltpeter') * 5)
 .fluidOutputs(fluid('nitric_acid') * 1000)
@@ -371,7 +368,7 @@ ROASTER.recipeBuilder()
 
 // Antimony trifluoride
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('hydrofluoric_acid') * 6000)
 .inputs(ore('dustAntimonyTrioxide') * 5)
 .outputs(ore('dustWetAntimonyTrifluoride').first() * 8)
@@ -748,7 +745,7 @@ POLYMERIZATION.recipeBuilder()
 
 // Ammonia
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('water') * 1000)
 .inputs(ore('dustAmmoniumChloride'))
 .fluidOutputs(fluid('ammonium_chloride_solution') * 1000)
@@ -819,7 +816,7 @@ CSTR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('chlorinated_glycerol') * 4000)
 .inputs(ore('dustSodiumHydroxide') * 3)
 .fluidOutputs(fluid('epichlorohydrin_solution') * 5000)
@@ -845,7 +842,7 @@ BCR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('allyl_alcohol_mix') * 1000)
 .inputs(ore('dustSodiumHydroxide') * 3)
 .fluidOutputs(fluid('dilute_epichlorohydrin') * 2000)
@@ -862,7 +859,7 @@ DISTILLATION_TOWER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('polyvinyl_acetate') * 144)
 .fluidInputs(fluid('butyraldehyde') * 250)
 .fluidOutputs(fluid('polyvinyl_butyral') * 250)
@@ -941,7 +938,7 @@ FLUIDIZEDBR.recipeBuilder()
 
     // Fluoroapatite route
 
-    MIXER.recipeBuilder()
+BR.recipeBuilder()
     .fluidInputs(fluid('sulfuric_acid') * 5000)
     .inputs(ore('dustFluorapatite') * 21)
     .fluidOutputs(fluid('phosphoric_acid') * 3000)
@@ -953,7 +950,7 @@ FLUIDIZEDBR.recipeBuilder()
 
     // Apatite route
 
-    MIXER.recipeBuilder()
+BR.recipeBuilder()
     .fluidInputs(fluid('sulfuric_acid') * 5000)
     .inputs(ore('dustApatite') * 21)
     .fluidOutputs(fluid('phosphoric_acid') * 3000)
@@ -1078,7 +1075,7 @@ EBF.recipeBuilder()
 
 // Nitrochlorobenzenes
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('chlorobenzene') * 1000)
 .fluidInputs(fluid('nitric_acid') * 1000)
 .fluidInputs(fluid('toluene') * 1000)
@@ -1098,7 +1095,7 @@ DISTILLATION_TOWER.recipeBuilder()
  
 // 4-nitroaniline
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('four_nitrochlorobenzene_solution') * 1000)
 .fluidInputs(fluid('ammonia') * 2000)
 .fluidOutputs(fluid('four_nitroaniline_solution') * 1000)
@@ -1157,7 +1154,7 @@ FLUIDIZEDBR.recipeBuilder()
 .EUt(240)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('water') * 1000)
 .inputs(ore('dustPhthalicAnhydride') * 15)
 .outputs(ore('dustPhthalicAcid').first() * 18)
@@ -1176,7 +1173,7 @@ TBR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('dichloroethane') * 1000)
 .inputs(ore('dustPhthalicAcid') * 18)
 .fluidOutputs(fluid('phthalic_acid_solution') * 1000)
@@ -1193,7 +1190,7 @@ CSTR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('phenol') * 1000)
 .inputs(ore('dustSodiumHydroxide') * 3)
 .fluidOutputs(fluid('sodium_phenoxide_solution') * 1000)
@@ -1223,7 +1220,7 @@ FLUIDIZEDBR.recipeBuilder()
 
 // PBI
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('diaminobenzidine_solution') * 2000)
 .fluidInputs(fluid('diphenyl_isophthalate_solution') * 3000)
 .fluidOutputs(fluid('pbi_polymerization_mix') * 5000)
@@ -1317,7 +1314,7 @@ DISTILLATION_TOWER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('cyclohexanone') * 1000)
 .fluidInputs(fluid('hydroxylamine') * 1000)
 .fluidOutputs(fluid('water') * 1000)
@@ -1326,7 +1323,7 @@ MIXER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('sulfuric_acid') * 1000)
 .inputs(ore('dustCyclohexanoneOxime') * 34)
 .fluidOutputs(fluid('caprolactam_oxime_solution') * 1000)
@@ -1334,7 +1331,7 @@ MIXER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('caprolactam_oxime_solution') * 1000)
 .fluidInputs(fluid('ammonia') * 2000)
 .outputs(ore('dustImpureCaprolactam').first() * 34)
@@ -1382,7 +1379,7 @@ CSTR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('bisphenola_diglycidyl_ether') * 1000)
 .inputs(ore('dustSodiumHydroxide') * 3)
 .fluidOutputs(fluid('impure_epoxy_resin') * 2000)
@@ -1429,7 +1426,7 @@ ROASTER.recipeBuilder()
 
 // TNT
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('toluene') * 1000)
 .fluidInputs(fluid('nitration_mixture') * 6000)
 .fluidOutputs(fluid('tnt_solution') * 3000)
@@ -1549,7 +1546,7 @@ DISTILLERY.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('nitric_acid') *  1000)
 .inputs(ore('dustSodiumHydroxide') * 3)
 .fluidOutputs(fluid('sodium_nitrate_solution') * 1000)
@@ -1572,7 +1569,7 @@ DISTILLERY.recipeBuilder()
 
 // Molecular Sieves
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
 .fluidInputs(fluid('steam') * 1000)
 .inputs(ore('dustSiliconDioxide') * 3)
@@ -1581,7 +1578,7 @@ MIXER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
 .inputs(ore('dustAluminium') * 2)
 .fluidOutputs(fluid('hydrogen') * 6000)
@@ -1590,7 +1587,7 @@ MIXER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+AUTOCLAVE.recipeBuilder()
 .fluidInputs(fluid('sodium_silicate_solution') * 4000)
 .inputs(ore('dustSodiumAluminate') * 4)
 .fluidOutputs(fluid('raw_molecular_sieve') * 4000)
@@ -1598,25 +1595,32 @@ MIXER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-SINTERING.recipeBuilder()
+ROASTER.recipeBuilder()
 .fluidInputs(fluid('raw_molecular_sieve') * 4000)
 .outputs(ore('dustMolecularSieve').first() * 10)
 .duration(400)
 .EUt(30)
 .buildAndRegister()
 
+ALLOY_SMELTER.recipeBuilder()
+        .inputs(ore('dustMolecularSieve').first() * 1)
+        .inputs(metaitem('dustClay') * 1)
+        .outputs(metaitem('cracking_catalyst') * 1)
+        .duration(100)
+        .EUt(60)
+        .buildAndRegister()
+
 // Nitrobenzene
 
 CSTR.recipeBuilder()
-.fluidInputs(fluid('distilled_water') * 100)
+.fluidInputs(fluid('distilled_water') * 50)
 .fluidInputs(fluid('nitration_mixture') * 100)
 .fluidInputs(fluid('benzene') * 250)
-.fluidOutputs(fluid('nitrobenzene') * 8000)
-.fluidOutputs(fluid('diluted_sulfuric_acid') * 1000)
+.fluidOutputs(fluid('nitrobenzene') * 250)
+.fluidOutputs(fluid('diluted_sulfuric_acid') * 100)
 .duration(8)
 .EUt(480)
 .buildAndRegister()
-
 
 // Ethenone
 
@@ -1819,7 +1823,7 @@ DISTILLATION_TOWER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('bleach') * 1000)
 .fluidInputs(fluid('ammonia') * 1000)
 .fluidOutputs(fluid('monochloramine') * 1000)
@@ -1914,7 +1918,7 @@ EBF.recipeBuilder()
 .duration(600)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .inputs(ore('dustCalciumCarbide') * 3)
 .fluidInputs(fluid('water') * 2000)
 .outputs(ore('dustCalciumHydroxide').first() * 5)
@@ -2072,7 +2076,7 @@ MIXER.recipeBuilder()
 .duration(320)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('lithium_solution') * 1000)
 .fluidInputs(fluid('bromobutane') * 1000)
 .fluidOutputs(fluid('diluted_butyllithium') * 2000)
@@ -2112,7 +2116,7 @@ DISTILLATION_TOWER.recipeBuilder()
 
 //useful reactions
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('calcium_hydroxide_solution') * 1000)
 .inputs(ore('dustPotassiumCarbonate') * 6)
 .fluidOutputs(fluid('potassium_hydroxide_solution') * 1000)
@@ -2121,7 +2125,7 @@ MIXER.recipeBuilder()
 .duration(200)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .inputs(ore('dustPotassiumHydroxide') * 3)
 .fluidInputs(fluid('hydrochloric_acid')* 1000)
 .fluidOutputs(fluid('dilute_rock_salt_solution') * 2000)
@@ -2161,7 +2165,7 @@ DISTILLERY.recipeBuilder()
 .duration(400)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('ammonium_chloride_solution') * 2000)
 .inputs(ore('dustCalciumHydroxide') * 5)
 .fluidOutputs(fluid('ammonia') * 2000)

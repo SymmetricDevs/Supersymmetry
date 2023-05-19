@@ -773,6 +773,7 @@ metaitem.bitumen.name=Bitumen
 metaitem.bituminous_residue.name=Bituminous Residue
 metaitem.paraffin_wax.name=Paraffin Wax
 metaitem.spent_cracking_catalyst.name=Spent Cracking Catalyst
+metaitem.cracking_catalyst.name=Cracking Catalyst
 metaitem.red_mud_slag.name=Red Mud Slag
 metaitem.leached_red_mud_slag.name=Leached Red Mud Slag
 metaitem.pitch_binder.name=Pitch Binder
@@ -879,6 +880,7 @@ gregtech.machine.laser_engraver.uxv.name=Epic Electron Beam Lithographer IV
 gregtech.machine.laser_engraver.opv.name=Legendary Electron Beam Lithographer
 
 recipemap.laser_engraver.name=Electron Beam Lithography
+recipemap.batch_reactor.name=Batch Reactor
 
 # Generic Renaming
 item.chisel.chisel_diamond.name=Steel Chisel

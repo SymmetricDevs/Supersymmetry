@@ -6,12 +6,12 @@ CHEMICAL_BATH = recipemap('chemical_bath')
 MIXER = recipemap('mixer')
 LASER_ENGRAVER = recipemap('laser_engraver')
 ELECTROLYZER = recipemap('electrolyzer')
-
-//TODO: ENABLE ALL THE COMMENTED CODE WHEN SUSYCORE 0.0.9 RELEASES
-//ION_IMPLANTER = recipemap('ion_implantation')
-//UV_LIGHT_BOX = recipemap('uv_light_box')
+CUTTER = recipemap('cutter')
+ION_IMPLANTER = recipemap('ion_implantation')
+UV_LIGHT_BOX = recipemap('uv_light_box')
 
 //TODO: ADD PLASMA ETCHANTS (CHLORINE PLASMA, FLUORINE PLASMA, CARBON TETRACHLORIDE PLASMA)
+
 /*
 Etchants used:
 - Aluminum: Phosphoric Acid, chlorine plasma
@@ -28,7 +28,6 @@ Etchants used:
 - Copper: Iron III chloride or Sodium bisulfite, fluorine plasma
  */
 
-/*
 //REMOVALS
 
 // Silicon Wafer * 16
@@ -390,5 +389,3 @@ FORMING_PRESS.recipeBuilder()
 
 generatePatterningRecipes('board.plastic', 'patterned.board.plastic', 'mask.pcb', 2, 1, 0)
 generateEtchingRecipes('patterned.board.plastic', 'circuit_board.plastic', 'copper', 2, 1)
-
- */

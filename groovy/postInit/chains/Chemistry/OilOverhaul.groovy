@@ -263,14 +263,14 @@ ROASTER.recipeBuilder()
 .duration(300)
 .EUt(30)
 .buildAndRegister()
-//TODO: fbr doesnt accept item output
-// FBR.recipeBuilder()
-// .fluidInputs(fluid('uncatalyzed_sulfurous_gases') * 3000)
-// .fluidOutputs(fluid('steam') * 2000)
-// .outputs(ore('dustSulfur').first() * 2)
-// .duration(300)
-// .EUt(30)
-// .buildAndRegister()
+
+FBR.recipeBuilder()
+.fluidInputs(fluid('uncatalyzed_sulfurous_gases') * 3000)
+.fluidOutputs(fluid('steam') * 2000)
+.outputs(ore('dustSulfur').first() * 2)
+.duration(300)
+.EUt(30)
+.buildAndRegister()
 
 // Natural Gas Processing
 
@@ -634,7 +634,7 @@ DT.recipeBuilder()
 
 // Kerosene, naphtha and gasoline cracking
 
-//TODO: Cracking Catalyst
+//TODO: Enable cracking catalyst input when susycore 0.0.10 is out
 
 // Cracking
 
@@ -646,7 +646,7 @@ fractions.each { _, fraction -> {
             .fluidInputs(fraction.get(1000))
             .fluidInputs(fluid('hydrogen') * 1000)
             .notConsumable(circuit(0))
-            //.inputs(ore('dustCrackingCatalyst'))
+            //.inputs(metaitem('cracking_catalyst))
             .fluidOutputs(fraction.getLightlyHydroMix(1000))
             .duration(260)
             .EUt(Globals.voltAmps[1] * 2)
@@ -656,7 +656,7 @@ fractions.each { _, fraction -> {
             .fluidInputs(fraction.get(1000))
             .fluidInputs(fluid('hot_hp_hydrogen') * 1000)
             .notConsumable(circuit(1))
-            //.inputs(ore('dustCrackingCatalyst'))
+            //.inputs(metaitem('cracking_catalyst))
             .fluidOutputs(fraction.getSeverelyHydroMix(1000))
             .duration(260)
             .EUt(Globals.voltAmps[1] * 2)
@@ -666,7 +666,7 @@ fractions.each { _, fraction -> {
             .fluidInputs(fraction.get(1000))
             .fluidInputs(fluid('steam') * 1000)
             .notConsumable(circuit(0))
-            //.inputs(ore('dustCrackingCatalyst'))
+            //.inputs(metaitem('cracking_catalyst))
             .fluidOutputs(fraction.getLightlySteamMix(1000))
             .duration(260)
             .EUt(Globals.voltAmps[1] * 2)
@@ -676,7 +676,7 @@ fractions.each { _, fraction -> {
             .fluidInputs(fraction.get(1000))
             .fluidInputs(fluid('steam') * 1000)
             .notConsumable(circuit(1))
-            //.inputs(ore('dustCrackingCatalyst'))
+            //.inputs(metaitem('cracking_catalyst))
             .fluidOutputs(fraction.getSeverelySteamMix(1000))
             .duration(260)
             .EUt(Globals.voltAmps[1] * 2)
@@ -724,7 +724,7 @@ EBF.recipeBuilder()
 .fluidInputs(fluid('oxygen') * 1000)
 .inputs(metaitem('spent_cracking_catalyst'))
 .fluidOutputs(fluid('flue_gas') * 1000)
-//.outputs(ore('dustCrackingCatalyst').first())
+//.outputs(metaitem('cracking_catalyst).first())
 .duration(200)
 .EUt(Globals.voltAmps[1] * 2)
 .buildAndRegister()
@@ -912,7 +912,7 @@ fractions.each { _, fraction -> {
             CRACKER.recipeBuilder()
             .fluidInputs(fraction.get(1000))
             .notConsumable(circuit(2))
-            //.inputs(ore('dustCrackingCatalyst'))
+            //.inputs(metaitem('cracking_catalyst))
             .fluidOutputs(fraction.getUpgradedMix(1000))
             .duration(260)
             .EUt(Globals.voltAmps[1] * 2)
@@ -945,9 +945,8 @@ REFORMER.recipeBuilder()
 
 CENTRIFUGE.recipeBuilder()
 .fluidInputs(fluid('naphtha_reformate') * 1000)
-.fluidInputs(fluid('furfural') * 50)
-//.fluidOutputs(fluid('naphtha') * 500) Do we really want naphtha back? You could convert all your naphtha into btex, while in reality
-.fluidOutputs(fluid('btex_extract') * 500)
+.fluidInputs(fluid('furfural') * 100)
+.fluidOutputs(fluid('btex_extract') * 1000)
 .duration(200)
 .EUt(Globals.voltAmps[1])
 .buildAndRegister()
