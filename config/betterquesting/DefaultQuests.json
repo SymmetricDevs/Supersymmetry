@@ -3262,7 +3262,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 14722,
+            "Damage:2": 14679,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -3294,7 +3294,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 14722,
+              "Damage:2": 14679,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -3558,7 +3558,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Congratulations, [INSERT PLAYER NAME HERE]! You made it past the easy part. Now it\u0027s time for the hard part.  \n\nAs I said in the beginning quest, the main objective of the Industrial Age is §evacuum tubes§r, which are kind of complicated and confusing to set up.\nOur first step is making §aglass tubes§r, with a ball mold and glass dust. \n",
+          "desc:8": "The main objective of the Industrial Age is §evacuum tubes§r. Our first step is making §aglass tubes§r, with a ball mold and glass dust. \n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3591,29 +3591,7 @@
         }
       },
       "questID:3": 43,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 32,
-              "Damage:2": 260,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotBronze",
-              "id:8": "gregtech:meta_ingot"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -8840,7 +8818,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Pyrolysis§r is the thermal decomposition of materials at elevated temperatures, often in an inert atmosphere. It involves a change of chemical composition. \nThe Pyrolyse Oven is required to process biomass such as §6coal tar§r and §6coke§r.\n\nThe Pyrolyse Oven requires:§7§6\n1x Pyrolyse Oven Controller\n1x Input Bus for inputting Items\n1x Input Hatch for inputting Fluids\n1x Output Bus for outputting Items\n1x Energy Hatch (any tier)\n1x LV Muffler Hatch\n16x Cupronickel Coil Blocks\n10x ULV Machine Casing\n\n§rRemember that these are ULV machine casing and not LV ones. They\u0027re different. Also, the Muffler Hatch must not be obstructed by any other block, or it won\u0027t work.\n\nCheck JEI for info on how to build the structure.",
+          "desc:8": "§6Pyrolysis§r is the thermal decomposition of materials at elevated temperatures, often in an inert atmosphere. It involves a change of chemical composition. \nThe Pyrolyse Oven is required to process biomass such as §6coal tar§r and §6coke§r.\n\nThe Pyrolyse Oven requires:§7§6\n1x Pyrolyse Oven Controller\n1x Input Bus for inputting Items\n1x Input Hatch for inputting Fluids\n1x Output Bus for outputting Items\n1x Energy Hatch (any tier)\n1x LV Muffler Hatch\n16x Cupronickel Coil Blocks\n10x ULV Machine Casing\n\n§rRemember that these are ULV machine casing and not LV ones. They\u0027re different. Also, the Muffler Hatch must not be obstructed by any other block, or it won\u0027t work.\n\nIt is recommended to use 2 LV energy hatches while building the Pyrolyse Oven as processing Coal Tar requires 64 EU/t.\n\nCheck JEI for info on how to build the structure.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8899,44 +8877,31 @@
     },
     "123:10": {
       "preRequisites:11": [
-        122
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Coal Tar §rcan be obtained by using a Pyrolyse Oven. ",
+          "desc:8": "The§6 LV Batch Reactor§r is a special type of container used in chemical processes to §6dissolve substances§r§r, create solid§6 precipitates§r, and perform §6liquid-liquid extraction§r. It is particularly useful for mixing different chemicals together during reactions.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
+            "Damage:2": 14681,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "coal_tar"
-            }
+            "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Coal Tar",
+          "name:8": "Batch Reactor",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
+          "tasklogic:8": "AND",
           "visibility:8": "ALWAYS"
         }
       },
@@ -8949,24 +8914,23 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
             "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "coal_tar"
+              "Count:3": 1,
+              "Damage:2": 14681,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
-          "taskID:8": "bq_standard:fluid"
-        },
-        "1:10": {
-          "index:3": 1,
-          "taskID:8": "bq_standard:checkbox"
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
     "124:10": {
       "preRequisites:11": [
-        123,
-        127
+        127,
+        381
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16535,17 +16499,32 @@
       }
     },
     "234:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        381
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Toluene §rcan be distilled from Coal Tar using an §cLV Distillery§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "toluene"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -16558,45 +16537,107 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 234,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "toluene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     },
     "235:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        234,
+        233
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Combine the §6Nitration Mixture §rand the§6 Toluene §o§rto make §7§6Trinitrotoluene Solution§r in a §cBatch Reactor§r.\n\nThen, §cdistill §rit to make §6TNT Dust§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "tnt_solution"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "New Quest",
+          "name:8": "T.N.T.",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 235,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 32024,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "236:10": {
       "preRequisites:11": [
@@ -22429,12 +22470,13 @@
     },
     "370:10": {
       "preRequisites:11": [
-        369
+        369,
+        388
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6radiator§o§o§r is a device that transfers heat from a fluid or object to the surrounding environment.\n\nIt can cool down exhaust steam into water or §6hot compressed fluids §rinto a more manageable temperature.\n\nThe Radiator requires:\n\n§6- 1 Heat Radiator Controller\n- 1 Maintenance Hatch\n- 1 Output Hatch\n- 1 Input Hatch\n- 48 Solid Steel Machine Casing\n- 135 Steel Pipe Casing\n\n§rDue to the high cost of steel, it is recommended that you use an EBF and Arc Furnace to process iron into steel instead of just using a PBF setup.",
+          "desc:8": "A §6radiator§o§o§r is a device that transfers heat from a fluid or object to the surrounding environment.\n\nIt can cool down exhaust steam into water or §6§chot compressed fluids into a more manageable temperature.\n§rFor example, you can cool down Hot High Pressure Hydrogen into normal High Pressure Hydrogen.\n§r\nThe Radiator requires:\n\n§6- 1 Heat Radiator Controller\n- 1 Maintenance Hatch\n- 1 Output Hatch\n- 1 Input Hatch\n- 48 Solid Steel Machine Casing\n- 135 Steel Pipe Casing\n\n§rDue to the high cost of steel, it is recommended that you use an EBF and Arc Furnace to process iron into steel instead of just using a PBF setup.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22708,13 +22750,18 @@
       }
     },
     "374:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        373
+        373,
+        370
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6heat exchanger §ris a device that transfers heat between two or more fluids, without them mixing.\n\nFor example, the Heat Exchanger can transfer heat between §chot§o§r compressed hydrogen and §bwater§r, to turn them into §cwarm water §rand §anormal-temperature compressed hydrogen§r§r.\n\n§6The Heat Exchanger requires:\n- 1 Heat Exchanger Controller\n- 2 Output Hatch\n- 2 Input Hatch\n- 1 Maintenance Hatch\n- 20 Steel Frame Box\n- 56 Solid Steel Machine Casing\n- 8 Steel Pipe Casing\n\n",
+          "desc:8": "A §6heat exchanger §ris a device that transfers heat between two or more fluids, without them mixing.\n\nFor example, the Heat Exchanger can transfer heat between §chot§o§r compressed hydrogen and §bwater§r, to turn them into §cwarm water §rand §anormal-temperature compressed hydrogen§r§r.\n\n§rYou can cool down High Pressure Hydrogen into Cold High Pressure Hydrogen.\n§r\n§6The Heat Exchanger requires:\n- 1 Heat Exchanger Controller\n- 2 Output Hatch\n- 2 Input Hatch\n- 1 Maintenance Hatch\n- 20 Steel Frame Box\n- 56 Solid Steel Machine Casing\n- 8 Steel Pipe Casing\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -23192,6 +23239,672 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "381:10": {
+      "preRequisites:11": [
+        122
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Coal Tar §rcan be distilled from §6coal§r, charcoal and anthracite and it can be used as a fuel in the §6Large LV Gas Turbine§r. It can also be distilled to produce toluene, for explosives.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "coal_tar"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Coal Tar",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 381,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "coal_tar"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 12,
+              "Damage:2": 319,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_gem"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "382:10": {
+      "preRequisites:11": [
+        235
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Combine §6Paper§r, String and §6TNT §rin a Forming Press to create §cdynamite§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 460,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Trolling Plan, Phase One",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 382,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 460,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "383:10": {
+      "preRequisites:11": [
+        380
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§cMissiles§r are made in a §cLarge Weapons Factory§r using several§6 Aluminium §o§o§rparts, any type of §7§6explosive§r, either §6Saltpeter or Ammonium Nitrate §rdust, and either §6Aluminium, Beryllium, Sugar or Gunpowder§r. \n\nTo complete this quest, make the §6Conventional Missile§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "Parent:10": {
+                "explosive:10": {}
+              },
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "icbmclassic:missile"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Trolling Plan, Phase Three",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 383,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "Parent:10": {
+                  "explosive:10": {}
+                },
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:missile"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "384:10": {
+      "preRequisites:11": [
+        191
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Condensed Explosives §rare made simply in a Crafting Table with 8 Dynamite. However, we will require a §cWeapons Factory §rto create better and more dangerous explosives, like §cincendiary §ror §bchemical §rexplosives.\n\nCheck the Chemistry chapter to see how to make TNT and dynamite.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "Parent:10": {}
+            },
+            "OreDict:8": "",
+            "id:8": "icbmclassic:explosives"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Condensed Explosives",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 384,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "Parent:10": {}
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:explosives"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "385:10": {
+      "preRequisites:11": [
+        384
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Incendiary explosives§r start fires upon detonation. They use flammable substances like §cgasoline or naphtha §ras their fuel sources. When ignited, these volatile liquids rapidly vaporize and create a combustible mixture with the air, causing fires to spread quickl§yy.§6\n\nChemical explosives§r rely on specific compounds like §ccarbon monoxide, hydrogen sulfide, fluorine, or chlorine gas§r. These highly reactive substances undergo fast oxidation or combustion reactions, releasing large volumes of gas and heat.\n\n§6Debilitation explosives§r have a different objective — they aim to incapacitate rather than cause destruction. They often contain §csulfur dioxide§r, a toxic gas that causes respiratory distress and eye irritation. Debilitation explosives are used for temporary incapacitation or crowd control.\n\n§6Shrapnel explosives§r are a type of explosive device that incorporates lead rounds as shrapnel. These devices are designed to cause damage and injury through the release of high-velocity projectiles upon detonation.\n\nMost of these chemicals are obtainable in LV. Check the Chemistry tab for more info.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "ForgeCaps:10": {
+              "Parent:10": {}
+            },
+            "OreDict:8": "",
+            "id:8": "icbmclassic:explosives"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Trolling Plan, Phase Two",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 385,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "ForgeCaps:10": {
+                "Parent:10": {}
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:explosives"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 4,
+              "ForgeCaps:10": {
+                "Parent:10": {}
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:explosives"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 3,
+              "ForgeCaps:10": {
+                "Parent:10": {}
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:explosives"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "386:10": {
+      "preRequisites:11": [
+        384
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §6grenade §rcan be useful if you have to clear out hordes of enemies at the same time.\n\nGrenades can even be made with§c special types of explosives§r: there are Chemical Grenades, Debilitating Grenades and Incendiary Grenades.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4,
+            "ForgeCaps:10": {
+              "Parent:10": {},
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "icbmclassic:grenade"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Surprise Attack",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 386,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "Parent:10": {},
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:grenade"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "387:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
+      "preRequisites:11": [
+        380,
+        242
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A Tier 1 §6missile launcher §rconsists of §6three primary components§r: a control panel, a base, and a frame.\n\nWhile the base and screen are essential for a basic launch, the inclusion of the frame component can improve the accuracy of the missile. \n\nMissile launchers require MV circuits, so make sure to complete that quest first.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "icbmclassic:launcherscreen"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Missile Launcher",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 387,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "icbmclassic:launcherbase"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "icbmclassic:launcherscreen"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "icbmclassic:launcherframe"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "388:10": {
+      "preRequisites:11": [
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Fluid Compressor §rcompresses fluids into §chot high pressure fluids§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 15000,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Fluid Compressor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 388,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 15000,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "389:10": {
+      "preRequisites:11": [
+        370
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Fluid De-Compressor §rdecompresses §acompressed fluids§r into §c§3cold fluids§r, which can be used in a Heat Exchanger. \n\nThis can be done with Ammonia, Propane or Carbon Dioxide ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 15013,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Fluid Decompression",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 389,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 15013,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "390:10": {
+      "preRequisites:11": [
+        374,
+        389
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Decompress §rCold High Pressure Hydrogen into Liquid Hydrogen§r, §cwhich has a temperature of 21 K or -252°C.§r This is required for making superconductors.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "liquid_hydrogen"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Liquid Hydrogen",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 390,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
@@ -24185,8 +24898,8 @@
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 294
+          "x:3": -144,
+          "y:3": 330
         },
         "21:10": {
           "id:3": 121,
@@ -24203,466 +24916,501 @@
           "y:3": 288
         },
         "23:10": {
-          "id:3": 123,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": 294
-        },
-        "24:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 294
         },
-        "25:10": {
+        "24:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 348
         },
-        "26:10": {
+        "25:10": {
           "id:3": 127,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 216
         },
-        "27:10": {
+        "26:10": {
           "id:3": 128,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 288
         },
-        "28:10": {
+        "27:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 252
         },
-        "29:10": {
+        "28:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 192
         },
-        "30:10": {
+        "29:10": {
           "id:3": 158,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 96
         },
-        "31:10": {
+        "30:10": {
           "id:3": 159,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 48
         },
-        "32:10": {
+        "31:10": {
           "id:3": 160,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 108
         },
-        "33:10": {
+        "32:10": {
           "id:3": 161,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 108
         },
-        "34:10": {
+        "33:10": {
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 108
         },
-        "35:10": {
+        "34:10": {
           "id:3": 169,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -312,
           "y:3": 204
         },
-        "36:10": {
+        "35:10": {
           "id:3": 171,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 240
         },
-        "37:10": {
+        "36:10": {
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -354,
           "y:3": 216
         },
-        "38:10": {
+        "37:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -354,
           "y:3": 264
         },
-        "39:10": {
+        "38:10": {
           "id:3": 174,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -312,
           "y:3": 300
         },
-        "40:10": {
+        "39:10": {
           "id:3": 175,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -354,
           "y:3": 312
         },
-        "41:10": {
+        "40:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -330,
           "y:3": 354
         },
-        "42:10": {
+        "41:10": {
           "id:3": 179,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -306,
           "y:3": 264
         },
-        "43:10": {
+        "42:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -330,
           "y:3": 402
         },
-        "44:10": {
+        "43:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -330,
           "y:3": 450
         },
-        "45:10": {
+        "44:10": {
           "id:3": 183,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 348
         },
-        "46:10": {
+        "45:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 348
         },
-        "47:10": {
+        "46:10": {
           "id:3": 185,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 396
         },
-        "48:10": {
+        "47:10": {
           "id:3": 186,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 120
         },
-        "49:10": {
+        "48:10": {
           "id:3": 188,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 24,
           "y:3": 432
         },
-        "50:10": {
+        "49:10": {
           "id:3": 189,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 444
         },
-        "51:10": {
+        "50:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 444
         },
-        "52:10": {
+        "51:10": {
           "id:3": 191,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 48
         },
-        "53:10": {
+        "52:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 48
         },
-        "54:10": {
+        "53:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 48
         },
-        "55:10": {
+        "54:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 24
         },
-        "56:10": {
+        "55:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 72
         },
-        "57:10": {
+        "56:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 12
         },
-        "58:10": {
+        "57:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 12
         },
-        "59:10": {
+        "58:10": {
           "id:3": 198,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 252
         },
-        "60:10": {
+        "59:10": {
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 300
         },
-        "61:10": {
+        "60:10": {
           "id:3": 200,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 348
         },
-        "62:10": {
+        "61:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 396
         },
-        "63:10": {
+        "62:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 348
         },
-        "64:10": {
+        "63:10": {
           "id:3": 203,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 144,
           "y:3": 336
         },
-        "65:10": {
+        "64:10": {
           "id:3": 204,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 72
         },
-        "66:10": {
+        "65:10": {
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 108
         },
-        "67:10": {
+        "66:10": {
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 396
         },
-        "68:10": {
+        "67:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 216
         },
-        "69:10": {
+        "68:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 252
         },
-        "70:10": {
+        "69:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 396
         },
-        "71:10": {
+        "70:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 444
         },
-        "72:10": {
+        "71:10": {
           "id:3": 238,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 516
         },
-        "73:10": {
+        "72:10": {
           "id:3": 239,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 516
         },
-        "74:10": {
+        "73:10": {
           "id:3": 240,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 516
         },
-        "75:10": {
+        "74:10": {
           "id:3": 241,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 54,
           "y:3": 516
         },
-        "76:10": {
+        "75:10": {
           "id:3": 242,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": 516
         },
-        "77:10": {
+        "76:10": {
           "id:3": 243,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": 576
         },
-        "78:10": {
+        "77:10": {
           "id:3": 368,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 396
         },
-        "79:10": {
+        "78:10": {
           "id:3": 369,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -20,
           "y:3": 0
         },
-        "80:10": {
+        "79:10": {
           "id:3": 370,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 44,
           "y:3": 8
         },
-        "81:10": {
+        "80:10": {
           "id:3": 371,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 396
         },
-        "82:10": {
+        "81:10": {
           "id:3": 372,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 396
         },
-        "83:10": {
+        "82:10": {
           "id:3": 373,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -336,
           "y:3": 492
         },
-        "84:10": {
+        "83:10": {
           "id:3": 374,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -336,
           "y:3": 552
         },
-        "85:10": {
+        "84:10": {
           "id:3": 377,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 210,
           "y:3": 336
         },
-        "86:10": {
+        "85:10": {
           "id:3": 378,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 318,
           "y:3": 336
         },
-        "87:10": {
+        "86:10": {
           "id:3": 379,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 348
         },
-        "88:10": {
+        "87:10": {
           "id:3": 380,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 172,
           "y:3": 52
+        },
+        "88:10": {
+          "id:3": 381,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": 294
+        },
+        "89:10": {
+          "id:3": 383,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 228,
+          "y:3": 60
+        },
+        "90:10": {
+          "id:3": 384,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": -24
+        },
+        "91:10": {
+          "id:3": 385,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": -66
+        },
+        "92:10": {
+          "id:3": 386,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -156,
+          "y:3": -24
+        },
+        "93:10": {
+          "id:3": 387,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 180,
+          "y:3": 12
         }
       }
     },
@@ -25120,165 +25868,179 @@
           "y:3": -24
         },
         "7:10": {
-          "id:3": 128,
+          "id:3": 123,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 360,
           "y:3": -24
         },
         "8:10": {
+          "id:3": 128,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 432,
+          "y:3": -24
+        },
+        "9:10": {
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 48
         },
-        "9:10": {
+        "10:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 48
         },
-        "10:10": {
+        "11:10": {
           "id:3": 175,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 48
         },
-        "11:10": {
+        "12:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 48
         },
-        "12:10": {
+        "13:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 48
         },
-        "13:10": {
+        "14:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": 48
         },
-        "14:10": {
+        "15:10": {
           "id:3": 183,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 372,
+          "x:3": 444,
           "y:3": 48
         },
-        "15:10": {
+        "16:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 372,
+          "x:3": 444,
           "y:3": 96
         },
-        "16:10": {
+        "17:10": {
           "id:3": 185,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 372,
+          "x:3": 444,
           "y:3": 144
         },
-        "17:10": {
+        "18:10": {
           "id:3": 198,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": -120
         },
-        "18:10": {
+        "19:10": {
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": -72
         },
-        "19:10": {
+        "20:10": {
           "id:3": 200,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 420,
+          "x:3": 492,
           "y:3": 96
         },
-        "20:10": {
+        "21:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 468,
+          "x:3": 540,
           "y:3": 144
         },
-        "21:10": {
+        "22:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 468,
+          "x:3": 540,
           "y:3": 96
         },
-        "22:10": {
+        "23:10": {
           "id:3": 204,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 48
         },
-        "23:10": {
+        "24:10": {
           "id:3": 206,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 432,
+          "x:3": 504,
           "y:3": -12
         },
-        "24:10": {
+        "25:10": {
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 420,
+          "x:3": 492,
           "y:3": 144
         },
-        "25:10": {
+        "26:10": {
           "id:3": 232,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 96
         },
-        "26:10": {
+        "27:10": {
           "id:3": 233,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 96
         },
-        "27:10": {
+        "28:10": {
           "id:3": 234,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": 96
         },
-        "28:10": {
+        "29:10": {
           "id:3": 235,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 96
         },
-        "29:10": {
+        "30:10": {
           "id:3": 367,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -72,
           "y:3": -24
+        },
+        "31:10": {
+          "id:3": 382,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 204,
+          "y:3": 144
         }
       }
     },
@@ -25543,7 +26305,43 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "quests:9": {}
+      "quests:9": {
+        "0:10": {
+          "id:3": 370,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": -12
+        },
+        "1:10": {
+          "id:3": 374,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 36
+        },
+        "2:10": {
+          "id:3": 388,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": -12
+        },
+        "3:10": {
+          "id:3": 389,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": -12
+        },
+        "4:10": {
+          "id:3": 390,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": 36
+        }
+      }
     },
     "20:10": {
       "lineID:3": 20,
