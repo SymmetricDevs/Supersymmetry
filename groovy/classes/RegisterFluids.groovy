@@ -1492,6 +1492,7 @@ class RegisterFluids {
 
                 new Material.Builder(12085, "sodium_aluminate_solution")
                         .fluid()
+                        .components(SodiumAluminate, 1, Water, 1)
                         .color(0x3f71bf)
                         .build();
 
