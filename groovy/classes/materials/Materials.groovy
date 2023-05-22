@@ -10,38 +10,53 @@ import static gregtech.api.unification.material.Materials.*;
 class Materials {
         // @gaming I already asked tech if it would be possible to make a handler for solutions built into materials
         // IE a new material property which you would give the solvent(s) and that outgens the fluid for you
-        // TODO: Sort the materials.
 
         // Element Materials
-
-
 
         // Isotope Materials
 
         // Ore Materials
 
+        public static Material Petalite;
+        public static Material Amblygonite;
+        public static Material Fluorite;
+        public static Material Thortveitite;
+        public static Material Perovskite;
+        public static Material Titanomagnetite;
+        public static Material Fluorapatite;
+        public static Material Chalcopyrite;
+        public static Material VanadiferousTitanomagnetite;
+        public static Material Armstrongite;
+        public static Material Vanadinite;
+        public static Material Cerussite;
+        public static Material Anglesite;
+        public static Material Wulfenite;
         public static Material Sperrylite;
         public static Material Enargite;
-        public static Material Proustite;
+        public static Material Smithsonite;
         public static Material Arsenopyrite;
-        public static Material Tenorite;
-        public static Material Fluorapatite;
-        public static Material PreciousMetal;
-        public static Material Kaolinite;
-        public static Material Cuprite;
+        public static Material Ancanthite;
+        public static Material Pyrargyrite;
+        public static Material Stephanite;
+        public static Material Proustite;
+        public static Material Celestine;
+        public static Material Strontianite;
+        public static Material Pyrochlore;
+        public static Material Witherite;
+        public static Material Wolframite;
+        public static Material Rhodplumsite;
+        public static Material Bowietite;
+        public static Material Polarite;
+        public static Material Livingstonite;
+        public static Material Bismuthinite;
+        public static Material Lorandite;
+        public static Material Hutchinsonite;
+        public static Material Crookesite;
+        public static Material KimberliteOne;
+        public static Material KimberliteTwo;
         public static Material Dilithium;
         public static Material Lignite;
         public static Material Anthracite;
-        public static Material Anglesite;
-        public static Material Celestine;
-        public static Material Azurite;
-        public static Material Hydrozincite;
-        public static Material Cerussite;
-        public static Material Proustite;
-        public static Material Stephanite;
-        public static Material Smithsonite;
-        public static Material Acanthite;
-        public static Material Thortveitite;
 
         // Roasted Ores
 
@@ -61,22 +76,12 @@ class Materials {
         public static Material FlueGas;
         public static Material ExhaustSteam;
         public static Material SmokeBombMix;
-        public static Material SulfurousWater;
-        public static Material OxideWater;
-        public static Material MineralizedWater;
-        public static Material SilicateWater;
-        public static Material GraphiteWater;
-        public static Material PhosphateWater;
-        public static Material PreciousRunoff;
-        public static Material RadioactiveRunoff;
-        public static Material SiliconSolution;
-        public static Material CalciumCarbonateSolution;        // TODO: Maybe give those components? 
-        public static Material BentoniteClaySolution;
         public static Material SugaryWater;
         public static Material ClarifiedSugaryWater;
         public static Material Brine;
         public static Material ImpureSodiumAluminateSolution;
         public static Material ImpureSodaAshSolution;
+        public static Material ImpureSodiumHydroxideSolution;
         public static Material RedMud;
         public static Material ConcentratedRedMud;
         public static Material AmmoniaReactionMix;
@@ -194,8 +199,7 @@ class Materials {
         public static Material DilutedSaltwater;
         public static Material SodiumHydroxideSolution;
         public static Material IronIIIChlorideSolution;
-        public static Material DiluteSaltpeterSolution;               
-        public static Material LithiumSolution;
+        public static Material DiluteSaltpeterSolution;
         public static Material HydrogenBromide;
         public static Material DiluteCalciumChlorideSolution;
         public static Material DiluteRockSaltSolution;
@@ -250,7 +254,6 @@ class Materials {
         public static Material PotassiumSulfate;
         public static Material WetAntimonyTrifluoride;        
         public static Material CalciumSulfide;
-        public static Material CalciumSulfate;
         public static Material VanadiumPentoxide;
         public static Material PotassiumPersulfate;
         public static Material LithiumHydroxide;
@@ -272,6 +275,8 @@ class Materials {
         
         // Second Degree Materials
 
+        public static Material LithiumSolution;
+        public static Material NitrateSaltMix;
         public static Material AmmoniumChlorideSolution;
         public static Material PotassiumChlorideSolution;
         public static Material PotassiumBisulfateSolution;
@@ -291,7 +296,6 @@ class Materials {
         public static Material PotassiumFluorideSolution;
         public static Material PotassiumTetrafluoroborateSolution;
         public static Material SodiumBromideSolution;
-        public static Material NitrateSaltMix;
         
         // Organic Chemistry Materials
 
@@ -323,7 +327,7 @@ class Materials {
         public static Material AllylAlcoholMix;
         public static Material DiluteEpichlorohydrin;
         public static Material Isobutane;
-        public static Material Isobutyle;
+        public static Material Isobutylene;
         public static Material Cyclohexane;
         public static Material SaltyNMethylIIPyrrolidone;
         public static Material MethylAcetateSolution;
@@ -347,6 +351,7 @@ class Materials {
         public static Material PBIWaste;
         public static Material Hydroxylamine;
         public static Material DilutedCyclohexanone;
+        public static Material Cyclohexanone;
         public static Material CaprolactamOximeSolution;
         public static Material BisphenolADiglycidylEther;
         public static Material ImpureEpoxyResin;
@@ -405,7 +410,6 @@ class Materials {
         public static Material Pentane;
         public static Material Hexane;
         public static Material Furfural;
-        public static Material Xylene;
         public static Material Cresol;
         public static Material Guaiacol;
         public static Material Xylenol;

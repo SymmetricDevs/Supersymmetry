@@ -10,7 +10,7 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
 public class IsotopeMaterials{
-    public static void() {
+    public static void init() {
 
     }
 }

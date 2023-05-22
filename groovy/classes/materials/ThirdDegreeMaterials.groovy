@@ -11,6 +11,11 @@ import static gregtech.api.unification.material.Materials.*;
 
 public class ThirdDegreeMaterials {
     public static void init() {
+        FurfuralSolution = new Material.Builder(12092, "furfural_solution")
+                .fluid()
+                .components(Water, 3, SulfuricAcid, 1, Furfural, 1)
+                .colorAverage()
+                .build();
 
     }
 }

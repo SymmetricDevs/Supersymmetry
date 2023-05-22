@@ -262,9 +262,9 @@ class ThermodynamicsMaterials {
 
                 generateCoolant(Water, 10300);
 
-                //generateCoolant(EthyleneGlycol, 10305);
+                generateCoolant(EthyleneGlycol, 10305);
 
-                //generateCoolant(Brine, 10310);
+                generateCoolant(Brine, 10310);
 
                 generateHotGas(Air, 10311);
 
@@ -301,6 +301,11 @@ class ThermodynamicsMaterials {
                 generatePurifiedLiquid(Mercury, 10511)
 
                 generatePurifiedLiquid(Water, 10512)
+
+        new Material.Builder(12107, "earth_like_air")
+                .fluid(FluidTypes.GAS)
+                .color(0x8fbfe3)
+                .build();
 
     }
 }
