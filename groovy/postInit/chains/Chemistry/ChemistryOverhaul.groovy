@@ -1622,15 +1622,6 @@ CSTR.recipeBuilder()
 .EUt(480)
 .buildAndRegister()
 
-// Ethenone
-
-DISTILLERY.recipeBuilder()
-.fluidInputs(fluid('acetone') * 1000)
-.fluidOutputs(fluid('ethenone') * 950)
-.duration(300)
-.EUt(30)
-.buildAndRegister()
-
 // PTFE
 
 MIXER.recipeBuilder()
