@@ -12,7 +12,6 @@ removeAllRecipes(RecipeMaps.BREWING_RECIPES);
 removeAllRecipes(RecipeMaps.CHEMICAL_RECIPES);
 removeAllRecipes(RecipeMaps.LARGE_CHEMICAL_RECIPES);
 removeAllRecipes(RecipeMaps.FERMENTING_RECIPES);
-removeAllRecipes(RecipeMaps.FLUID_HEATER_RECIPES);
 removeAllRecipes(RecipeMaps.PYROLYSE_RECIPES);
 removeAllRecipes(RecipeMaps.IMPLOSION_RECIPES);
 removeAllRecipes(RecipeMaps.LASER_ENGRAVER_RECIPES);
