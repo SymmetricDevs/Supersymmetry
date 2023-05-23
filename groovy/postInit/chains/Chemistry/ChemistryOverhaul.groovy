@@ -2191,3 +2191,13 @@ ARC_FURNACE.recipeBuilder()
 .EUt(45)
 .duration(270)
 .buildAndRegister()
+
+// Distilled Water
+
+DISTILLERY.recipeBuilder()
+.fluidInputs(fluid('water') * 288)
+.notConsumable(circuit(1))
+.fluidOutputs(fluid('distilled_water') * 260)
+.duration(160)
+.EUt(Globals.voltAmps[1])
+.buildAndRegister()
