@@ -2,6 +2,19 @@ import static globals.Globals.*
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 
+def name_removals = [
+		'gregtech:steam_turbine_mv',
+		'gregtech:steam_turbine_hv',
+		'gregtech:gas_turbine_lv',
+		'gregtech:gas_turbine_mv',
+		'gregtech:gas_turbine_hv',
+		'gcym:steam_engine'
+]
+
+for (name in name_removals) {
+	crafting.remove(name)
+}
+
 def circuits = [ore('circuitUlv'), ore('circuitLv'), ore('circuitMv'),
 									ore('circuitHv'), ore('circuitEv'), ore('circuitIv'),
 									ore('circuitLuv'), ore('circuitZpm'), ore('circuitUv'),
@@ -217,7 +230,7 @@ recipemap('mixer').recipeBuilder()
 
 recipemap('extruder').recipeBuilder()
 		.notConsumable(metaitem('shape.extruder.rod'))
-		.inputs(metaitem('pitch_binder') * 4)
+		.inputs(metaitem('pitch_binder'))
 		.outputs(metaitem('raw_electrode'))
 		.EUt(30)
 		.duration(200)
@@ -263,6 +276,12 @@ for (i = 1; i <= 8; i++) {
 			[chemicalReactorParts[i], rotors[i], chemicalReactorParts[i]],
 			[tieredCables[i], motors[i], tieredCables[i]],
 			[circuits[i], hulls[i], circuits[i]]
+	])
+
+	crafting.addShaped("gregtech:batch_reactor." + Globals.voltageTiers[i], metaitem('batch_reactor.' + Globals.voltageTiers[i]), [
+			[tieredCables[i], pumps[i], tieredCables[i]],
+			[chemicalReactorParts[i], hulls[i], chemicalReactorParts[i]],
+			[circuits[i], tieredCables[i], circuits[i]]
 	])
 
 	crafting.addShaped("gregtech:bubble_column_reactor." + Globals.voltageTiers[i], metaitem('bubble_column_reactor.' + Globals.voltageTiers[i]), [
@@ -318,9 +337,9 @@ for (i = 1; i <= 8; i++) {
 
 for (def i = 1; i < 8; i++) {
 	crafting.addShaped("gregtech:weapons_factory." + i, metaitem('weapons_factory.' + Globals.voltageTiers[i]), [
-			[robotArms[i], circuits[i], robotArms[i]],
+			[circuits[i], robotArms[i], circuits[i]],
 			[conveyors[i], hulls[i], conveyors[i]],
-			[robotArms[i], circuits[i], robotArms[i]]
+			[tieredCables[i], circuits[i], tieredCables[i]]
 	])
 }
 
@@ -436,8 +455,6 @@ crafting.addShaped("gregtech:fermentation_vat", metaitem('fermentation_vat'), [
 		[tieredCables[1], circuits[1], tieredCables[1]]
 ])
 
-//TODO: ENABLE THIS WHEN SUSYCORE 0.0.9 RELEASES
-/*
 //UV Light Box
 
 for (i = 1; i <= 8; i++) {
@@ -458,15 +475,191 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
- */
+//Turbine Recipes
+
+crafting.addShaped("alternator_coil", item('susy:alternator_coil'), [
+		[ore('craftingToolHardHammer'), metaitem('electric.motor.lv'), ore('craftingToolScrewdriver')],
+		[metaitem('electric.motor.lv'), ore('plateSteel'),             metaitem('electric.motor.lv')],
+		[ore('circuitLv'),              metaitem('cableGtSingleTin'),  ore('circuitLv')]
+])
+
+crafting.addShaped("steel_turbine_rotor", item('susy:turbine_rotor'), [
+		[ore('plateSteel'),             ore('screwSteel'),     ore('plateSteel')],
+		[ore('craftingToolHardHammer'), ore('stickLongSteel'), ore('craftingToolScrewdriver')],
+		[ore('plateSteel'),             ore('rotorSteel'),     ore('plateSteel')]
+])
+
+crafting.addShaped("steel_turbine_controller", metaitem('basic_steam_turbine'), [
+		[ore('plateSteel'),            metaitem('cableGtSingleTin'),       ore('plateSteel')],
+		[ore('circuitLv'),             item('gregtech:machine_casing', 1), ore('circuitLv')],
+		[metaitem('cableGtSingleTin'), ore('circuitLv'),                   metaitem('cableGtSingleTin')]
+])
+
+crafting.replaceShaped("gregtech:casing_steel_turbine_casing", item('gregtech:turbine_casing', 5) * 4, [
+		[metaitem('plateSteel'), ore('craftingToolHardHammer'), metaitem('plateSteel')],
+		[metaitem('stickLongSteel'), item('gregtech:stone_smooth', 4), metaitem('stickLongSteel')],
+		[metaitem('plateSteel'), ore('craftingToolWrench'), metaitem('plateSteel')]
+])
+
+crafting.addShaped("gas_turbine_controller", metaitem('basic_gas_turbine'), [
+		[ore('plateSteel'),            metaitem('cableGtSingleCopper'),       ore('plateSteel')],
+		[ore('circuitMv'),             item('gregtech:machine_casing', 1), ore('circuitMv')],
+		[metaitem('cableGtSingleCopper'), ore('circuitMv'),                   metaitem('cableGtSingleCopper')]
+])
+
+//New Dynamo Hatches
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.lv'))
+		.inputs(metaitem('energy_hatch.output.lv'))
+		.inputs(metaitem('voltage_coil.lv'))
+		.inputs(metaitem('wireGtQuadrupleTin') * 2)
+		.outputs(metaitem('energy_hatch.output_4a.lv'))
+		.EUt(7)
+		.duration(100)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.adjustable.lv'))
+		.inputs(metaitem('energy_hatch.output_4a.lv'))
+		.inputs(metaitem('voltage_coil.lv'))
+		.inputs(metaitem('wireGtOctalTin') * 2)
+		.outputs(metaitem('energy_hatch.output_16a.lv'))
+		.EUt(7)
+		.duration(200)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.mv'))
+		.inputs(metaitem('energy_hatch.output.mv'))
+		.inputs(metaitem('plate.ultra_low_power_integrated_circuit'))
+		.inputs(metaitem('voltage_coil.mv'))
+		.inputs(metaitem('wireGtQuadrupleCopper') * 2)
+		.outputs(metaitem('energy_hatch.output_4a.mv'))
+		.EUt(30)
+		.duration(100)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.adjustable.mv'))
+		.inputs(metaitem('energy_hatch.output_4a.mv'))
+		.inputs(metaitem('plate.ultra_low_power_integrated_circuit') * 2)
+		.inputs(metaitem('voltage_coil.mv'))
+		.inputs(metaitem('wireGtOctalCopper') * 2)
+		.outputs(metaitem('energy_hatch.output_16a.mv'))
+		.EUt(30)
+		.duration(200)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.hv'))
+		.inputs(metaitem('energy_hatch.output.hv'))
+		.inputs(metaitem('plate.low_power_integrated_circuit'))
+		.inputs(metaitem('voltage_coil.hv'))
+		.inputs(metaitem('wireGtQuadrupleGold') * 2)
+		.outputs(metaitem('energy_hatch.output_4a.hv'))
+		.EUt(120)
+		.duration(100)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.adjustable.hv'))
+		.inputs(metaitem('energy_hatch.output_4a.hv'))
+		.inputs(metaitem('plate.low_power_integrated_circuit') * 2)
+		.inputs(metaitem('voltage_coil.hv'))
+		.inputs(metaitem('wireGtOctalGold') * 2)
+		.outputs(metaitem('energy_hatch.output_16a.hv'))
+		.EUt(120)
+		.duration(200)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('transformer.adjustable.ev'))
+		.inputs(metaitem('energy_hatch.output_4a.ev'))
+		.inputs(metaitem('plate.power_integrated_circuit') * 2)
+		.inputs(metaitem('voltage_coil.ev'))
+		.inputs(metaitem('wireGtOctalAluminium') * 2)
+		.outputs(metaitem('energy_hatch.output_16a.ev'))
+		.EUt(480)
+		.duration(200)
+		.buildAndRegister()
+
+crafting.addShaped("gregtech:ore_sorter", metaitem('ore_sorter'), [
+		[robotArms[1], circuits[2], robotArms[1]],
+		[pumps[1], hulls[1], pumps[1]],
+		[robotArms[1], circuits[2], robotArms[1]]
+]);
+
+crafting.addShaped("gregtech:primitive_mud_pump", metaitem('primitive_mud_pump'), [
+		[metaitem('ringBronze'), metaitem('pipeNormalFluidTreatedWood'), metaitem('screwBronze')],
+		[metaitem('rotorBronze'), item('gregtech:steam_casing'), ore('craftingToolScrewdriver')],
+		[item('minecraft:stone_slab', 4), metaitem('pipeLargeFluidWood'), item('minecraft:stone_slab', 4)]
+]);
+
+crafting.addShaped("gregtech:railroad_engineering_station", metaitem('railroad_engineering_station'), [
+		[item('minecraft:rail'), item('minecraft:rail'), item('minecraft:rail')],
+		[item('minecraft:rail'), hulls[1], item('minecraft:rail')],
+		[item('minecraft:rail'), item('minecraft:rail'), item('minecraft:rail')]
+]);
+
+crafting.addShaped("gregtech:condenser", metaitem('condenser'), [
+		[null, metaitem('electric.pump.lv'), null],
+		[metaitem('frameSteel'), item('gregtech:boiler_casing', 1), metaitem('frameSteel')],
+		[null, metaitem('electric.pump.lv'), null]
+]);
+
+crafting.addShaped("gregtech:condenser", metaitem('condenser'), [
+		[null, metaitem('electric.pump.lv'), null],
+		[metaitem('frameSteel'), item('gregtech:boiler_casing', 1), metaitem('frameSteel')],
+		[null, metaitem('electric.pump.lv'), null]
+]);
+
+crafting.addShaped("gregtech:heat_exchanger", metaitem('heat_exchanger'), [
+		[null, metaitem('frameSteel'), null],
+		[metaitem('electric.pump.lv'), item('gregtech:boiler_casing', 1), metaitem('electric.pump.lv')],
+		[null, metaitem('frameSteel'), null]
+]);
+
+crafting.addShaped("gregtech:mining_drill", metaitem('mining_drill'), [
+		[circuits[1], motors[1], circuits[1]],
+		[conveyors[1], hulls[1], conveyors[1]],
+		[tieredCables[1], motors[1], tieredCables[1]]
+]);
+
+crafting.addShaped("gregtech:steel_drill_head", item('susy:drill_head'), [
+		[pumps[1], conveyors[1], pumps[1]],
+		[metaitem('component.grinder.diamond'), item('gregtech:metal_casing', 4), metaitem('component.grinder.diamond')],
+		[null, metaitem('component.grinder.diamond'), null]
+]);
+
+crafting.addShaped("gregtech:gas_turbine_multiblock", metaitem('basic_gas_turbine'), [
+		[circuits[1], metaitem('gearSteel'), circuits[1]],
+		[metaitem('gearSteel'), hulls[1], metaitem('gearSteel')],
+		[metaitem('pipeLargeFluidSteel'), metaitem('gearSteel'), metaitem('pipeLargeFluidSteel')]
+]);
+
+crafting.addShaped("gregtech:heat_radiator", metaitem('heat_radiator'), [
+		[metaitem('frameSteel'), metaitem('pipeLargeFluidSteel'), metaitem('frameSteel')],
+		[metaitem('electric.pump.lv'), hulls[1], metaitem('electric.pump.lv')],
+		[metaitem('frameSteel'), metaitem('pipeLargeFluidSteel'), metaitem('frameSteel')]
+]);
+
+crafting.addShaped("gregtech:large_weapons_factory", metaitem('large_weapons_factory'), [
+		[sensors[1], robotArms[1], emitters[1]],
+		[conveyors[1], hulls[1], conveyors[1]],
+		[circuits[1], robotArms[1], circuits[1]]
+]);
 
 //Multiblocked Machines
 
+/*
 crafting.addShaped("multiblocked:ore_sorter", item('multiblocked:ore_sorter'), [
 		[robotArms[1], circuits[2], robotArms[1]],
 		[pumps[1], hulls[1], pumps[1]],
 		[robotArms[1], circuits[2], robotArms[1]]
 ]);
+
+ */
 
 // conversion recipes from greg ports
 crafting.addShapeless("lv input bus -> mbd input bus", item('multiblocked:item_input'), [metaitem('item_bus.import.lv')]);

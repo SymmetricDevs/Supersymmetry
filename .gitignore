@@ -13,6 +13,7 @@ saves/
 usercache.json
 usernamecache.json
 minecraftinstance.json
+instance.json
 
 *.log
 *.txt

@@ -10,6 +10,8 @@ import net.minecraftforge.oredict.OreDictionary
 //Prevent TechGuns from crashing servers
 ore('ingotCopper').remove(item('techguns:itemshared', 79))
 ore('ingotTin').remove(item('techguns:itemshared', 80))
+ore('ingotSteel').remove(item('techguns:itemshared', 83))
+ore('ingotTitanium').remove(item('techguns:itemshared', 85))
 
 //Force stick to exist
 ore('stickWood').add(item('minecraft:stick'))

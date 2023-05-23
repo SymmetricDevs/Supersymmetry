@@ -40,6 +40,7 @@ class RegisterSolids {
 
         new Material.Builder(20000, 'fluix')
             .gem().iconSet(RUBY)
+            .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE, GENERATE_LENS)
             .components(Quartzite, 4, Naquadah, 1)
             .color(0x6503b6)
             .build();

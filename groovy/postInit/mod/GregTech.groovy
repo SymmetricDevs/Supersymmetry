@@ -11,7 +11,7 @@ println("Running GregTech.groovy...")
 //REMOVALS
 
 def name_removals = [
-    'gregtech:iron_magnetic_stick',
+        'gregtech:iron_magnetic_stick',
 ]
 
 for (name in name_removals) {
@@ -257,3 +257,53 @@ mods.gregtech.assembler.recipeBuilder()
         .duration(100)
         .EUt(30)
         .buildAndRegister();
+
+//Ore Recipes
+
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('susy:resource_block'))
+        .outputs(metaitem('crushedBauxite') * 4)
+        .chancedOutput(metaitem('dustStone'), 6700, 800)
+        .duration(400)
+        .EUt(2)
+        .buildAndRegister();
+
+//Mud
+
+mods.gregtech.centrifuge.recipeBuilder()
+        .fluidInputs(fluid('mud') * 1000)
+        .chancedOutput(item('minecraft:clay'), 2500, 250)
+        .chancedOutput(item('minecraft:sand'), 2500, 250)
+        .chancedOutput(item('minecraft:gravel'), 2500, 250)
+        .chancedOutput(metaitem('dustLimestone'), 2500, 250)
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.fluid_solidifier.recipeBuilder()
+        .fluidInputs(fluid('mud') * 250)
+        .notConsumable(metaitem('shape.mold.ball'))
+        .outputs(item('biomesoplenty:mudball') * 1)
+        .duration(40)
+        .EUt(4)
+        .buildAndRegister();
+
+crafting.replaceShaped('susy:home_block', item('susy:home_block'), [
+        [null, ore('craftingToolFile'), null],
+        [null, ore('stoneSmooth'), null],
+        [null, null, null]
+])
+
+crafting.addShapeless('susy:home_block_1', item('susy:home_block', 1), [item('susy:home_block')])
+crafting.addShapeless('susy:home_block_2', item('susy:home_block', 2), [item('susy:home_block', 1)])
+crafting.addShapeless('susy:home_block_3', item('susy:home_block', 3), [item('susy:home_block', 2)])
+crafting.addShapeless('susy:home_block_4', item('susy:home_block',), [item('susy:home_block', 3)])
+
+// Steam * 960
+mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('water') * 6])
+
+// Steam * 960
+mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('distilled_water') * 6])
+
+// Acetone * 200
+mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('dissolved_calcium_acetate') * 200])
