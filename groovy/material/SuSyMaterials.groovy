@@ -1,4 +1,7 @@
+package material;
+
 import gregtech.api.unification.material.Material;
+
 import gregtech.api.GregTechAPI;
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.properties.*
@@ -7,7 +10,18 @@ import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
-class Materials {
+import static material.ElementMaterials.*;
+import static material.FirstDegreeMaterials.*;
+import static material.IsotopeMaterials.*;
+import static material.OreMaterials.*;
+import static material.OrganicChemistryMaterials.*;
+import static material.PetrochemistryMaterials.*;
+import static material.SecondDegreeMaterials.*;
+import static material.ThermodynamicsMaterials.*;
+import static material.ThirdDegreeMaterials.*;
+import static material.UnknownCompositionMaterials.*;
+
+class SuSyMaterials {
         // @gaming I already asked tech if it would be possible to make a handler for solutions built into materials
         // IE a new material property which you would give the solvent(s) and that outgens the fluid for you
 
@@ -35,7 +49,6 @@ class Materials {
         public static Material Enargite;
         public static Material Smithsonite;
         public static Material Arsenopyrite;
-        public static Material Ancanthite;
         public static Material Pyrargyrite;
         public static Material Stephanite;
         public static Material Proustite;
@@ -45,7 +58,7 @@ class Materials {
         public static Material Witherite;
         public static Material Wolframite;
         public static Material Rhodplumsite;
-        public static Material Bowietite;
+        public static Material Bowieite;
         public static Material Polarite;
         public static Material Livingstonite;
         public static Material Bismuthinite;
@@ -57,6 +70,7 @@ class Materials {
         public static Material Dilithium;
         public static Material Lignite;
         public static Material Anthracite;
+        public static Material Acanthite;
 
         // Roasted Ores
 
@@ -172,7 +186,6 @@ class Materials {
         public static Material SlackWax;
         public static Material Resin;
         public static Material UncatalyzedSulfurousGases;
-        public static Material NaphthaReformate;
         public static Material BtexExtract;
         public static Material BTEX;
         public static Material Syngas;
@@ -437,5 +450,16 @@ class Materials {
         
         public static Material EarthlikeAir;
         
-
+        public static void init() {                
+                ElementMaterials.register();
+                IsotopeMaterials.register();
+                UnknownCompositionMaterials.register();
+                OreMaterials.register();
+                FirstDegreeMaterials.register();
+                SecondDegreeMaterials.register();
+                OrganicChemistryMaterials.register();
+                PetrochemistryMaterials.register();
+                ThirdDegreeMaterials.register();
+                ThermodynamicsMaterials.register();
+        }
 }

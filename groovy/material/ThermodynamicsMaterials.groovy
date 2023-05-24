@@ -1,4 +1,6 @@
-import static classes.materials.Materials.*;
+package material;
+
+import static material.SuSyMaterials.*;
 
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
@@ -204,108 +206,111 @@ class ThermodynamicsMaterials {
         }
     
     
-    public static void init() {
+    public static void register() {
 
-                generateHighPressureGases(Hydrogen, 10000, true);
+                log.infoMC("Registering Thermodynamics Materials!");
 
-                generateHighPressureGases(Oxygen, 10003, true);
 
-                generateHighPressureGases(Helium, 10006, true);
+                generateHighPressureGases(Hydrogen, 22000, true);
 
-                generateHighPressureGases(Neon, 10009, true);
+                generateHighPressureGases(Oxygen, 22001, true);
 
-                generateHighPressureGases(Argon, 10012, true);
+                generateHighPressureGases(Helium, 22002, true);
 
-                generateHighPressureGases(Krypton, 10015, true);
+                generateHighPressureGases(Neon, 22003, true);
 
-                generateHighPressureGases(Xenon, 10018, true);
+                generateHighPressureGases(Argon, 22004, true);
 
-                generateHighPressureGases(Nitrogen, 10021, true);
+                generateHighPressureGases(Krypton, 22005, true);
 
-                generateHighPressureGases(Propene, 10024, false);
+                generateHighPressureGases(Xenon, 22006, true);
 
-                generateHighPressureGases(Benzene, 10027, false);
+                generateHighPressureGases(Nitrogen, 22007, true);
 
-                generateHighPressureGases(CarbonMonoxide, 10030, false);
+                generateHighPressureGases(Propene, 22008, false);
 
-                generateHighPressureGases(Air, 10033, true);
+                generateHighPressureGases(Benzene, 22009, false);
 
-                generateHighPressureGases(NetherAir, 10036, true);
+                generateHighPressureGases(CarbonMonoxide, 22010, false);
 
-                generateHighPressureGases(RefineryGas, 10039, true);
+                generateHighPressureGases(Air, 22011, true);
 
-                generateHighPressureGases(Methane, 10042, true);
+                generateHighPressureGases(NetherAir, 22012, true);
 
-                generateLiquidFromGas(Hydrogen, 10100, 21);
+                generateHighPressureGases(RefineryGas, 22013, true);
 
-                generateLiquidFromGas(Helium, 10101, 5);
+                generateHighPressureGases(Methane, 22014, true);
 
-                generateLiquidFromGas(Neon, 10102, 27);
+                generateLiquidFromGas(Hydrogen, 22015, 21);
 
-                generateLiquidFromGas(Argon, 10103, 88);
+                generateLiquidFromGas(Helium, 22016, 5);
 
-                generateLiquidFromGas(Krypton, 10104, 120);
+                generateLiquidFromGas(Neon, 22017, 27);
 
-                generateLiquidFromGas(Xenon, 10105, 165);
+                generateLiquidFromGas(Argon, 22018, 88);
 
-                generateLiquidFromGas(Nitrogen, 10106, 77);
+                generateLiquidFromGas(Krypton, 22019, 120);
 
-                generateLiquidFromGas(RefineryGas, 10107, 112);
+                generateLiquidFromGas(Xenon, 22020, 165);
 
-                generateLiquidFromGas(Methane, 10108, 112);
+                generateLiquidFromGas(Nitrogen, 22021, 77);
 
-                generateThermoRefrigerant(Ammonia, 10200);
+                generateLiquidFromGas(RefineryGas, 22022, 112);
 
-                generateThermoRefrigerant(Propane, 10204);
+                generateLiquidFromGas(Methane, 22023, 112);
 
-                generateThermoRefrigerant(CarbonDioxide, 10208);
+                generateThermoRefrigerant(Ammonia, 22024);
 
-                generateCoolant(Water, 10300);
+                generateThermoRefrigerant(Propane, 22025);
 
-                generateCoolant(EthyleneGlycol, 10305);
+                generateThermoRefrigerant(CarbonDioxide, 22026);
 
-                generateCoolant(Brine, 10310);
+                generateCoolant(Water, 22027);
 
-                generateHotGas(Air, 10311);
+                generateCoolant(EthyleneGlycol, 22028);
 
-                generateHotGas(Nitrogen, 10312);
+                generateCoolant(Brine, 22029);
 
-                generateLiquidFromGas(NaturalGas, 10313, 110);
+                generateHotGas(Air, 22030);
 
-                generateHighPressureGases(NaturalGas, 10314, true);
+                generateHotGas(Nitrogen, 22031);
 
-                generateGreenhouseGases(EarthGreenhouseGas, 10401)
+                generateLiquidFromGas(NaturalGas, 22032, 110);
 
-                generatePurifiedGas(Hydrogen, 10500)
+                generateHighPressureGases(NaturalGas, 22033, true);
 
-                generatePurifiedGas(Helium, 10501)
+                generateGreenhouseGases(EarthGreenhouseGas, 22034)
 
-                generatePurifiedGas(Nitrogen, 10502)
+                generatePurifiedGas(Hydrogen, 22035)
 
-                generatePurifiedGas(Oxygen, 10503)
+                generatePurifiedGas(Helium, 22036)
 
-                generatePurifiedGas(Fluorine, 10504)
+                generatePurifiedGas(Nitrogen, 22037)
 
-                generatePurifiedGas(Neon, 10505)
+                generatePurifiedGas(Oxygen, 22038)
 
-                generatePurifiedGas(Chlorine, 10506)
+                generatePurifiedGas(Fluorine, 22039)
 
-                generatePurifiedGas(Argon, 10507)
+                generatePurifiedGas(Neon, 22040)
 
-                generatePurifiedGas(Krypton, 10508)
+                generatePurifiedGas(Chlorine, 22041)
 
-                generatePurifiedGas(Xenon, 10509)
+                generatePurifiedGas(Argon, 22042)
 
-                generatePurifiedLiquid(Bromine, 10510)
+                generatePurifiedGas(Krypton, 22043)
 
-                generatePurifiedLiquid(Mercury, 10511)
+                generatePurifiedGas(Xenon, 22044)
 
-                generatePurifiedLiquid(Water, 10512)
+                generatePurifiedLiquid(Bromine, 22045)
 
-        new Material.Builder(12107, "earth_like_air")
-                .fluid(FluidTypes.GAS)
-                .color(0x8fbfe3)
-                .build();
+                generatePurifiedLiquid(Mercury, 22046)
+
+                generatePurifiedLiquid(Water, 22047)
+
+                EarthlikeAir = new Material.Builder(22048, "earth_like_air")
+                        .fluid(FluidTypes.GAS)
+                        .color(0x8fbfe3)
+                        .build();
 
     }
 }

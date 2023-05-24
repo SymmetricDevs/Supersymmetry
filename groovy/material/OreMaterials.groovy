@@ -1,4 +1,6 @@
-import static classes.materials.Materials.*;
+package material;
+
+import static material.SuSyMaterials.*;
 
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
@@ -10,15 +12,19 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
 public class OreMaterials{
-    public static void init() {
-        Petalite = new Material.Builder(22000, "petalite")
+    public static void register() {
+
+        log.infoMC("Registering Ore Materials!");
+
+
+        Petalite = new Material.Builder(7000, "petalite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0xd2f7f6)
                 .components(Lithium, 1, Aluminium, 1, Silicon, 4, Oxygen, 10)
                 .build();
 
-        Amblygonite = new Material.Builder(22001, "amblygonite")
+        Amblygonite = new Material.Builder(7001, "amblygonite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0xf7f5d2)
@@ -26,7 +32,7 @@ public class OreMaterials{
                 .build()
                 .setFormula("(Li,Na)AlPO4(F,OH)", true);
 
-        Fluorite = new Material.Builder(22002, "amblygonite")
+        Fluorite = new Material.Builder(7002, "amblygonite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0xf7f5d2)
@@ -34,7 +40,7 @@ public class OreMaterials{
                 .build()
                 .setFormula("(Li,Na)AlPO4(F,OH)", true);
 
-        Thortveitite = new Material.Builder(22012, "thortveitite")
+        Thortveitite = new Material.Builder(7003, "thortveitite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0xb38969)
@@ -42,7 +48,7 @@ public class OreMaterials{
                 .build()
                 .setFormula("(Sc,Y)2Si2O7", true);
 
-        Perovskite = new Material.Builder(22014, "perovskite")
+        Perovskite = new Material.Builder(7004, "perovskite")
                 .gem().ore()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
@@ -50,7 +56,7 @@ public class OreMaterials{
                 .components(Calcium, 1, Titanium, 1, Oxygen, 3)
                 .build();
 
-        Titanomagnetite = new Material.Builder(22016, "titanomagnetite")
+        Titanomagnetite = new Material.Builder(7005, "titanomagnetite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x555c45)
@@ -58,16 +64,16 @@ public class OreMaterials{
                 .build()
                 .setFormula("Fe(Fe,Ti)2O4", true);
 
-        Fluorapatite = new Material.Builder(22018, "fluorapatite")
+        Fluorapatite = new Material.Builder(7006, "fluorapatite")
                 .gem().ore()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
                 .color(0xcc9681)
-                .components(Calcium, 5, Phophorus, 3, Oxygen, 12, Fluorine, 1)
+                .components(Calcium, 5, Phosphorus, 3, Oxygen, 12, Fluorine, 1)
                 .build()
                 .setFormula("Ca5(PO4)3F", true);
 
-        VanadiferousTitanomagnetite = new Material.Builder(22019, "vanadiferous_titanomagnetite")
+        VanadiferousTitanomagnetite = new Material.Builder(7007, "vanadiferous_titanomagnetite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x87685c)
@@ -75,7 +81,7 @@ public class OreMaterials{
                 .build()
                 .setFormula("(V,Fe,Ti)2O4", true);
 
-        Armstrongite = new Material.Builder(22020, "armstrongite")
+        Armstrongite = new Material.Builder(7008, "armstrongite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x3a4f43)
@@ -83,7 +89,7 @@ public class OreMaterials{
                 .build()
                 .setFormula("CaZr[Si6O15] • (H2O)3", true);
 
-        Vanadinite = new Material.Builder(22021, "vanadinite")
+        Vanadinite = new Material.Builder(7009, "vanadinite")
                 .gem().ore()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
@@ -92,21 +98,21 @@ public class OreMaterials{
                 .build()
                 .setFormula("Pb5(VO4)3Cl", true);
 
-        Cerussite = new Material.Builder(22022, "cerussite")
+        Cerussite = new Material.Builder(7010, "cerussite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0xe0d9ba)
                 .components(Lead, 1, Carbon, 1, Oxygen, 3)
                 .build();
 
-        Anglesite = new Material.Builder(22023, "anglesite")
+        Anglesite = new Material.Builder(7011, "anglesite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0xe0ded5)
                 .components(Lead, 1, Sulfur, 1, Oxygen, 4)
                 .build();
 
-        Enargite = new Material.Builder(22033, "enargite")
+        Enargite = new Material.Builder(7012, "enargite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
@@ -114,14 +120,14 @@ public class OreMaterials{
                 .components(Copper, 3, Arsenic, 1, Sulfur, 4)
                 .build();
 
-        Smithsonite = new Material.Builder(22037, "smithsonite")
+        Smithsonite = new Material.Builder(7013, "smithsonite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x6aadab)
                 .components(Zinc, 1, Carbon, 1, Oxygen, 3)
                 .build();
 
-        Arsenopyrite = new Material.Builder(22038, "arsenopyrite")
+        Arsenopyrite = new Material.Builder(7014, "arsenopyrite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
@@ -129,7 +135,7 @@ public class OreMaterials{
                 .components(Iron, 1, Arsenic, 1, Sulfur, 1)
                 .build();
 
-        Acanthite = new Material.Builder(22039, "acanthite")
+        Acanthite = new Material.Builder(7015, "acanthite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
@@ -137,7 +143,7 @@ public class OreMaterials{
                 .components(Silver, 2, Sulfur, 1)
                 .build();
 
-        Pyrargyrite = new Material.Builder(22040, "pyrargyirte")
+        Pyrargyrite = new Material.Builder(7016, "pyrargyirte")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
@@ -145,7 +151,7 @@ public class OreMaterials{
                 .components(Silver, 3, Antimony, 1, Sulfur, 3)
                 .build();
 
-        Stephanite = new Material.Builder(22041, "stephanite")
+        Stephanite = new Material.Builder(7017, "stephanite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
@@ -153,7 +159,7 @@ public class OreMaterials{
                 .components(Silver, 5, Antimony, 1, Sulfur, 4)
                 .build();
 
-        Proustite = new Material.Builder(22042, "proustite")
+        Proustite = new Material.Builder(7018, "proustite")
                 .dust().gem().ore()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
@@ -161,7 +167,7 @@ public class OreMaterials{
                 .components(Silver, 3, Arsenic, 1, Sulfur, 3)
                 .build();
 
-        Celestine = new Material.Builder(22044, "celestine")
+        Celestine = new Material.Builder(7019, "celestine")
                 .dust().gem().ore()
                 .flags(NO_SMELTING)
                 .color(0xafe3e0)
@@ -169,7 +175,7 @@ public class OreMaterials{
                 .components(Strontium, 1, Sulfur, 1, Oxygen, 4)
                 .build();
 
-        Strontianite = new Material.Builder(22045, "strontianite")
+        Strontianite = new Material.Builder(7020, "strontianite")
                 .dust().gem().ore()
                 .flags(NO_SMELTING)
                 .color(0xe3d3af)
@@ -177,14 +183,14 @@ public class OreMaterials{
                 .components(Strontium, 1, Carbon, 1, Oxygen, 3)
                 .build();
 
-        Witherite = new Material.Builder(22050, "witherite")
+        Witherite = new Material.Builder(7021, "witherite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0xd1d0bc)
                 .components(Barium, 1, Carbon, 1, Oxygen, 3)
                 .build();
 
-        Wolframite = new Material.Builder(22051, "wolframite")
+        Wolframite = new Material.Builder(7022, "wolframite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x1e1c36)
@@ -192,14 +198,14 @@ public class OreMaterials{
                 .build()
                 .setFormula("(Fe,Mn)WO4", true);
 
-        Rhodplumsite = new Material.Builder(22053, "rhodplumsite")
+        Rhodplumsite = new Material.Builder(7023, "rhodplumsite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x292726)
                 .components(Rhodium, 3, Lead, 2, Sulfur, 2)
                 .build();
 
-        Bowieite = new Material.Builder(22054, "bowieite")
+        Bowieite = new Material.Builder(7024, "bowieite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x323325)
@@ -207,7 +213,7 @@ public class OreMaterials{
                 .build()
                 .setFormula("(Rh,Ir,Pt)2S3", true);
 
-        Polarite = new Material.Builder(22055, "polarite")
+        Polarite = new Material.Builder(7025, "polarite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x2e360a)
@@ -215,28 +221,28 @@ public class OreMaterials{
                 .build()
                 .setFormula("Pd(Bi,Pb)", true);
 
-        Livingstonite = new Material.Builder(22057, "livingstonite")
+        Livingstonite = new Material.Builder(7026, "livingstonite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x5e5654)
                 .components(Mercury, 1, Antimony, 4, Sulfur, 8)
                 .build();
 
-        Bismuthinite = new Material.Builder(22058, "bismuthinite")
+        Bismuthinite = new Material.Builder(7027, "bismuthinite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x85795b)
                 .components(Bismuth, 2, Sulfur, 3)
                 .build();
 
-        Lorandite = new Material.Builder(22060, "lorandite")
+        Lorandite = new Material.Builder(7028, "lorandite")
                 .dust().gem().ore()
                 .flags(NO_SMELTING)
                 .color(0x913111)
                 .components(Thallium, 1, Arsenic, 1, Sulfur, 2)
                 .build();
 
-        Hutchinsonite = new Material.Builder(22061, "hutchinsonite")
+        Hutchinsonite = new Material.Builder(7029, "hutchinsonite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
@@ -245,7 +251,7 @@ public class OreMaterials{
                 .build()
                 .setFormula("(Tl,Pb)2As5S9", true);
 
-        Crookesite = new Material.Builder(22062, "crookesite")
+        Crookesite = new Material.Builder(7030, "crookesite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x3e4a3f)
@@ -253,35 +259,35 @@ public class OreMaterials{
                 .build()
                 .setFormula("Cu7(Tl,Ag)Se4", true);
 
-        KimberliteOne = new Material.Builder(22066, "kimberlite_one")
+        KimberliteOne = new Material.Builder(7031, "kimberlite_one")
                 .dust()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
                 .color(0x2e2323)
                 .build();
 
-        KimberliteTwo = new Material.Builder(22067, "kimberlite_two")
+        KimberliteTwo = new Material.Builder(7032, "kimberlite_two")
                 .dust()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
                 .color(0x272933)
                 .build();
 
-        Dilithium = new Material.Builder(30009, "dilithium")
+        Dilithium = new Material.Builder(7033, "dilithium")
                 .gem().ore()
                 .components(Lithium, 2)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build();
 
-        Lignite = new Material.Builder(30010, "lignite")
+        Lignite = new Material.Builder(7034, "lignite")
                 .gem(1, 1200).ore(2, 1)
                 .color(0x644646).iconSet(LIGNITE)
                 .components(Carbon, 1)
                 .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
                 .build();
 
-        Anthracite = new Material.Builder(30011, "anthracite")
+        Anthracite = new Material.Builder(7035, "anthracite")
                 .gem(1, 2000).ore(2, 1)
                 .color(0x241212).iconSet(LIGNITE)
                 .components(Carbon, 1)

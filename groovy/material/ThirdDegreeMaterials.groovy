@@ -1,4 +1,6 @@
-import static classes.materials.Materials.*;
+package material;
+
+import static material.SuSyMaterials.*;
 
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
@@ -10,8 +12,11 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
 public class ThirdDegreeMaterials {
-    public static void init() {
-        FurfuralSolution = new Material.Builder(12092, "furfural_solution")
+    public static void register() {
+
+        log.infoMC("Registering Third Degree Materials!");
+
+        FurfuralSolution = new Material.Builder(21000, "furfural_solution")
                 .fluid()
                 .components(Water, 3, SulfuricAcid, 1, Furfural, 1)
                 .colorAverage()
