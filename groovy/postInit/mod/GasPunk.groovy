@@ -17,12 +17,11 @@ def name_removals = [
 ]
 
 for (item in name_removals) {
-    //crafting.remove(item);
+    crafting.remove(item);
 }
 
 
-/*
-//Brewing removals
+
 brewing.remove(item('minecraft:potion').withTag({Potion: "minecraft:water"}), ore('dustSulfur').firstItem);
 brewing.removeRecipe(item('gaspunk:gas_tube').withTag({"gaspunk:contained_gas": "gaspunk:smoke"}), item('minecraft:sugar'));
 brewing.removeRecipe(item('gaspunk:gas_tube').withTag({"gaspunk:contained_gas": "gaspunk:smoke"}), item('gaspunk:ash'));
@@ -30,7 +29,7 @@ brewing.removeRecipe(item('gaspunk:gas_tube').withTag({"gaspunk:contained_gas": 
 brewing.removeRecipe(item('gaspunk:gas_tube').withTag({"gaspunk:contained_gas": "gaspunk:smoke"}), item('minecraft:fermented_spider_eye'));
 brewing.removeRecipe(item('minecraft:potion').withTag({Potion: "minecraft:water"}), ore('dustSulfur').firstItem);
 brewing.removeRecipe(item('minecraft:potion').withTag({Potion: "minecraft:water"}), item('minecraft:poisonous_potato'));
-*/
+
 
 for (solder in soldering_alloys) {
     recipemap('weapons_factory').recipeBuilder()
@@ -46,7 +45,7 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 }
 
-/*
+
 mods.gregtech.mixer.recipeBuilder()
         .inputs([metaitem('dustWhitePhosphorus')])
         .fluidInputs([liquid('oxygen') * 1000])
@@ -55,16 +54,16 @@ mods.gregtech.mixer.recipeBuilder()
         .EUt(60)
         .buildAndRegister();
 
-*/
+
 
 def GasMapMV = [
     'fluorine': "gaspunk:fluorine",
     'carbon_monoxide': "gaspunk:carbon_monoxide",
     'chlorine': "gaspunk:chlorine",
-    //'diborane': "gaspunk:diborane",
-    //'hydrogen_cyanide': "gaspunk:hydrogen_cyanide",
+    'diborane': "gaspunk:diborane",
+    'hydrogen_cyanide': "gaspunk:hydrogen_cyanide",
     'radon': "gaspunk:radon",
-    //'phosphine': "gaspunk:phosphine",
+    'phosphine': "gaspunk:phosphine",
     'smoke_bomb_mix': "gaspunk:smoke",
     'chloroform': "gaspunk:chloroform",
     'hydrogen_sulfide': "gaspunk:hydrogen_sulfide",
