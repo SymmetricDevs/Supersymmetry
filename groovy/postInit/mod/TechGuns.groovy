@@ -10,6 +10,7 @@ def name_removals = [
 	"techguns:basicmachine_3_turret",
 	"techguns:simplemachine2_8_grinder",
 	"techguns:simplemachine_11_blast_furnace",
+	"techguns:simplemachine_10_charging_station",
 	"techguns:multiblockmachine_0_fabricator_housing",
 	"techguns:multiblockmachine_1_fabricator_glass",
 	"techguns:multiblockmachine_2_fabricator_controller",
@@ -247,6 +248,11 @@ crafting.replaceShaped("techguns:pistolrounds", item('techguns:itemshared', 1) *
 	[ore('plateBrass'), ore('gunpowder'), ore('roundLead')],
 ])
 
+crafting.replaceShaped("techguns:shotgunrounds", item('techguns:itemshared', 2) * 8, [
+		[ore('plateSteel'), ore('gunpowder'), ore('roundLead')],
+])
+
+
 crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
 	ore('plateRubber'), 
 	ore('sand'),
@@ -437,6 +443,20 @@ Globals.solders.each { key, val ->
 		.duration(400)
 		.EUt(Globals.voltAmps[1])
 		.buildAndRegister();
+
+	recipemap('weapons_factory').recipeBuilder()
+			.inputs([
+					metaitem('gun.barrel.steel') * 2,
+					item('techguns:itemshared', 34),
+					item('techguns:itemshared', 43),
+					ore('springSmallSteel'),
+					item('techguns:itemshared', 2)
+			])
+			.fluidInputs(fluid(key) * val)
+			.outputs(item('techguns:sawedoff'))
+			.duration(400)
+			.EUt(Globals.voltAmps[1])
+			.buildAndRegister();
 
 	recipemap('weapons_factory').recipeBuilder()
 		.inputs([

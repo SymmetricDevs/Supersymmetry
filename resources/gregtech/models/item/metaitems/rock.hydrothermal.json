@@ -2,6 +2,6 @@
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "gregtech:items/metaitems/rock.radioactive"
+      "layer0": "gregtech:items/metaitems/rock.hydrothermal"
     }
   }
