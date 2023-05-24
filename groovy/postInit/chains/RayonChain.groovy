@@ -36,7 +36,7 @@ POLYMERIZATION.recipeBuilder()
         .EUt(240)
         .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+COMPRESSOR.recipeBuilder()
         .inputs(metaitem('wireFineRayon') * 8)
         .outputs(item('minecraft:wool'))
         .duration(100)

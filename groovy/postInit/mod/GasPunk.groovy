@@ -1,8 +1,3 @@
-def soldering_alloys = [
-        liquid('tin') * 144,
-        liquid('soldering_alloy') * 72
-]
-
 def name_removals = [
         "gaspunk:diffuser",
         "gaspunk:grenade",
@@ -17,35 +12,36 @@ def name_removals = [
 ]
 
 for (item in name_removals) {
-    //crafting.remove(item);
+    crafting.remove(item);
 }
 
-
-/*
-//Brewing removals
-brewing.remove(item('minecraft:potion').withTag({Potion: "minecraft:water"}), ore('dustSulfur').firstItem);
-brewing.removeRecipe(item('gaspunk:gas_tube').withTag({"gaspunk:contained_gas": "gaspunk:smoke"}), item('minecraft:sugar'));
-brewing.removeRecipe(item('gaspunk:gas_tube').withTag({"gaspunk:contained_gas": "gaspunk:smoke"}), item('gaspunk:ash'));
-brewing.removeRecipe(item('gaspunk:gas_tube').withTag({"gaspunk:contained_gas": "gaspunk:smoke"}), item('minecraft:ghast_tear'));
-brewing.removeRecipe(item('gaspunk:gas_tube').withTag({"gaspunk:contained_gas": "gaspunk:smoke"}), item('minecraft:fermented_spider_eye'));
-brewing.removeRecipe(item('minecraft:potion').withTag({Potion: "minecraft:water"}), ore('dustSulfur').firstItem);
-brewing.removeRecipe(item('minecraft:potion').withTag({Potion: "minecraft:water"}), item('minecraft:poisonous_potato'));
-*/
-
-for (solder in soldering_alloys) {
+Globals.solders.each { key, val ->
     recipemap('weapons_factory').recipeBuilder()
             .inputs([
                     ore('ringRubber')*4,
                     ore('platePlastic'),
                     ore('plateSteel')
             ])
-            .fluidInputs(solder)
+            .fluidInputs(fluid(key) * val)
             .outputs(item('gaspunk:diffuser'))
+            .duration(200)
+            .EUt(60)
+            .buildAndRegister();
+
+    recipemap('weapons_factory').recipeBuilder()
+            .inputs([
+                    ore('ringRubber')*4,
+                    metaitem('component.glass.tube'),
+                    ore('plateSteel')
+            ])
+            .fluidInputs(fluid(key) * val)
+            .outputs(item('gp_inhaler:empty_inhaler'))
             .duration(200)
             .EUt(60)
             .buildAndRegister();
 }
 
+//TODO: ADD METHOD TO CREATE WHITE PHOSPHORUS
 /*
 mods.gregtech.mixer.recipeBuilder()
         .inputs([metaitem('dustWhitePhosphorus')])
@@ -57,12 +53,13 @@ mods.gregtech.mixer.recipeBuilder()
 
 */
 
+//TODO: UNCOMMENT THESE AFTER THE CHEMISTRY OVERHAUL^3
 def GasMapMV = [
     'fluorine': "gaspunk:fluorine",
     'carbon_monoxide': "gaspunk:carbon_monoxide",
     'chlorine': "gaspunk:chlorine",
     //'diborane': "gaspunk:diborane",
-    //'hydrogen_cyanide': "gaspunk:hydrogen_cyanide",
+    'gtfo_hydrogen_cyanide': "gaspunk:hydrogen_cyanide",
     'radon': "gaspunk:radon",
     //'phosphine': "gaspunk:phosphine",
     'smoke_bomb_mix': "gaspunk:smoke",
