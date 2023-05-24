@@ -230,7 +230,7 @@ recipemap('mixer').recipeBuilder()
 
 recipemap('extruder').recipeBuilder()
 		.notConsumable(metaitem('shape.extruder.rod'))
-		.inputs(metaitem('pitch_binder') * 4)
+		.inputs(metaitem('pitch_binder'))
 		.outputs(metaitem('raw_electrode'))
 		.EUt(30)
 		.duration(200)

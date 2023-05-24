@@ -1665,13 +1665,12 @@
     },
     "20:10": {
       "preRequisites:11": [
-        16,
-        90
+        16
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §7Coke Oven §ris a hollow 3x3x3 structure made of Coke Bricks with a Coke Oven Controller in the center.\nIt turns §7Coal §rinto §7Coal Coke§r, and Logs into Charcoal.\n\nCoal Coke burns longer in furnaces, and in small coal boilers. \n\n§3",
+          "desc:8": "The §7Coke Oven §ris a hollow 3x3x3 structure made of Coke Bricks with a Coke Oven Controller in the center.\nIt turns §7Coal §rinto §7Coal Coke§r, and Logs into Charcoal.\n\nCoal Coke burns longer in furnaces, and in small coal boilers. \n\nThe Coke Oven also produces Creosote Oil, which can be used either as furnace fuel or for creating§6 Treated Wood §rblcoks.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2659,7 +2658,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -3262,7 +3261,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 14722,
+            "Damage:2": 14679,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -3294,7 +3293,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 14722,
+              "Damage:2": 14679,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -3558,7 +3557,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Congratulations, [INSERT PLAYER NAME HERE]! You made it past the easy part. Now it\u0027s time for the hard part.  \n\nAs I said in the beginning quest, the main objective of the Industrial Age is §evacuum tubes§r, which are kind of complicated and confusing to set up.\nOur first step is making §aglass tubes§r, with a ball mold and glass dust. \n",
+          "desc:8": "The main objective of the Industrial Age is §evacuum tubes§r. Our first step is making §aglass tubes§r, with a ball mold and glass dust. \n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3591,29 +3590,7 @@
         }
       },
       "questID:3": 43,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 32,
-              "Damage:2": 260,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "ingotBronze",
-              "id:8": "gregtech:meta_ingot"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -6000,16 +5977,16 @@
     },
     "80:10": {
       "preRequisites:11": [
-        39
+        22
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Before establishing a railroad empire, it\u0027s a good idea to ensure a robust supply of Steel, Treated Wood, and electrical power.\n\nCreate a §b§bLarge Wrench§r, and a §bTrack Blueprint§r. These tools are essential to progress and construct trains.\n\n",
+          "desc:8": "§6Steel §rcells can hold up to 8 liters of fluid and gases§r. They are tiered, so you can make fluid cells with anything from Steel to Tungstensteel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 80,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -6020,14 +5997,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "immersiverailroading:item_manual",
-            "tag:10": {}
+            "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Railroad Empire",
+          "name:8": "Fluid Cells",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -6039,30 +6015,7 @@
         }
       },
       "questID:3": 80,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "immersiverailroading:item_manual",
-              "tag:10": {}
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -6074,7 +6027,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 80,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -6085,23 +6038,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "immersiverailroading:item_rail",
-              "tag:10": {}
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "immersiverailroading:item_large_wrench"
+              "id:8": "gregtech:meta_item_1"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -6110,28 +6047,33 @@
     },
     "81:10": {
       "preRequisites:11": [
-        80
+        82
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §bCasting Basin§r creates different parts for rolling stock, specifically wheels and frames, as well as the Rail Cast for use with the Track Roller. The Gauge selector changes between gauges.\n\n§rThe Casting Basin requires:\n\n114 Stone Bricks\n15 Heavy Engineering Block\n126 Sand\n86 Blast Brick\n63 Steel Scaffolding\n1 Block of Steel\n\nUse the §6Immersive Railroading manual §rto see how to form the structure.\n\nPower is input through the top of the machine, on the color-coded yellow/orange block.\n\nTo create a selected part, drop Steel Blocks or Steel Ingots into the Basin and make sure it has power. The part will be created in short order - right-click on the Basin to retrieve the part.\n\nParts made in the casting basin can be recycled by dropping them back into the basin.\n",
+          "desc:8": "Make the 4 most important §6MV components§r: an MV piston, an MV robot arm, an MV pump, and an MV conveyor module.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1,
+            "Damage:2": 173,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "immersiveengineering:stone_decoration",
-              "orig_meta:3": 1
-            }
+            "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§6§lREWORK NEEDED§6§l Casting Basin",
+          "name:8": "You know what to do.",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -6154,56 +6096,64 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 114,
-              "Damage:2": 0,
+              "Count:3": 1,
+              "Damage:2": 173,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
-              "id:8": "minecraft:stonebrick"
+              "id:8": "gregtech:meta_item_1"
             },
             "1:10": {
-              "Count:3": 15,
-              "Damage:2": 5,
+              "Count:3": 1,
+              "Damage:2": 143,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 5
-              }
+              "id:8": "gregtech:meta_item_1"
             },
             "2:10": {
-              "Count:3": 126,
-              "Damage:2": 0,
+              "Count:3": 1,
+              "Damage:2": 188,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
-              "id:8": "minecraft:sand"
+              "id:8": "gregtech:meta_item_1"
             },
             "3:10": {
-              "Count:3": 86,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:stone_decoration",
-                "orig_meta:3": 1
-              }
-            },
-            "4:10": {
-              "Count:3": 63,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration1",
-                "orig_meta:3": 1
-              }
-            },
-            "5:10": {
               "Count:3": 1,
-              "Damage:2": 8,
-              "OreDict:8": "blockSteel",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "gregtech:meta_block_compressed_11",
-                "orig_meta:3": 8
-              }
+              "Damage:2": 158,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -6212,16 +6162,16 @@
     },
     "82:10": {
       "preRequisites:11": [
-        80
+        243
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Track Roller§r is used to create track pieces for use with Track Blueprints.\n\nThe Track Roller requires a clear, level space that is 30 blocks deep, 2 blocks wide, and 3 blocks tall. When placed, the short side will be facing the player, and offset 1 block to the right. After placing, right-click with a Large Wrench anywhere on the arrangement of blocks to assemble the machine.\n\nIt is built from:\n\n44 Steel Scaffolding\n16 Heavy Engineering Block\n32 Light Engineering Block\n\n\nThe Track Roller requires power to operate, which can be input at the top of the multiblock (it must be §cRF§r, not EU)\nTo make tracks, you need to make a §6Rail Casting§r first from the §6Casting Basin§r.",
+          "desc:8": "Make an §6MV electric motor§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 128,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -6232,14 +6182,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "immersiverailroading:item_rail",
-            "tag:10": {}
+            "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§6§lREWORK NEEDED§6§l Track Roller",
+          "name:8": "Harder, Better, Faster, Stronger",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -6262,34 +6211,19 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 44,
-              "Damage:2": 1,
+              "Count:3": 1,
+              "Damage:2": 128,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration1",
-                "orig_meta:3": 1
-              }
-            },
-            "1:10": {
-              "Count:3": 16,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 5
-              }
-            },
-            "2:10": {
-              "Count:3": 32,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 4
-              }
+              "id:8": "gregtech:meta_item_1"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -6298,16 +6232,16 @@
     },
     "83:10": {
       "preRequisites:11": [
-        80
+        225
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Steam Hammer§r is used to process some parts before they are placed onto a Frame. It is the smallest machine in Immersive Railroading, it\u0027s 5 blocks in width, 1 in depth, and 6 in height.\n\nIt is built from:\n\n3 x Heavy Engineering Block\n1 x Block of Steel (If the multiblock doesn\u0027t form, try using an Immersive Engineering block of steel. You can change the types using a chisel)\n1 x Piston\n10 x Light Engineering Block\n\nOperating the Steam Hammer requires power, which is input through the top block. \nTo operate the hammer, right-click the central block to open the GUI. \n\n{ResourceLocation:supersymmetry:guides/steamhammer.jpg}",
+          "desc:8": "You know what\u0027s better than normal food? Sliced food. Sliced tomatoes and grapes offer a bit more saturation than normal ones.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 79,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -6318,19 +6252,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "immersiverailroading:item_rolling_stock_component",
-            "tag:10": {
-              "componentType:3": 28,
-              "defID:8": "rolling_stock/locomotives/a1_peppercorn.json",
-              "gauge:6": 1.435,
-              "raw_cast:1": 0
-            }
+            "id:8": "gregtechfoodoption:gtfo_meta_item"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§6§lREWORK NEEDED§6§l Steam Hammer",
+          "name:8": "Primitive Food",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -6353,40 +6281,19 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 3,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 5
-              }
-            },
-            "1:10": {
               "Count:3": 1,
-              "Damage:2": 8,
+              "Damage:2": 79,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:storage",
-                "orig_meta:3": 8
-              }
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:piston"
-            },
-            "3:10": {
-              "Count:3": 10,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 4
-              }
+              "id:8": "gregtechfoodoption:gtfo_meta_item"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -6395,16 +6302,16 @@
     },
     "84:10": {
       "preRequisites:11": [
-        83
+        0
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Place down at least 20 meters of track end-to-end to have enough space to place a Frame on the rails, which is created in the §6Casting Basin. §r\n\nWith the Frame in hand, right-click the rail to place it. Then, with the Large Wrench in hand, right-click the Frame. I\nt will list the parts needed to complete the piece of stock and which machines are needed in order to make those parts. \n\nFor example, a newly placed A1 Peppercorn Frame will list out that it needs 2 §6Cylinders§r, which are made in the Casting Basin and then processed in the Steam Hammer.\n\nContinuing on with the creation of an A1 Peppercorn, we don\u0027t need another machine until we get to the point of creating the engine\u0027s firebox and boiler, using the §6Boiler Roller§r and §6Plate Rolling Machine§r.\n\nA word of warning: Steam Engines require a constant water supply when fueled, and if they boil off 75% or more of their water, there is a chance that they will §4explode. ",
+          "desc:8": "You can get §6Undetermined Seed §rby breaking random patches of grass. These seeds can be crafted into any type of seed by using the§6 Crafting Table§r.\n\nTry making a §afarm §rnext to your base - but always be aware of zombies! §cTomatoes and grapes§r can be great starting food for your aspiring civilization.\n\nFor more info, press the§a U§r key while hovering over the quest item.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 158,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -6415,17 +6322,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "immersiverailroading:item_rolling_stock",
-            "tag:10": {
-              "defID:8": "rolling_stock/locomotives/a1_peppercorn.json",
-              "gauge:6": 1.435
-            }
+            "id:8": "gregtechfoodoption:gtfo_meta_item"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Making our First Train",
+          "name:8": "Undetermined Seeds",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -6444,12 +6347,12 @@
           "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
-          "index:3": 0,
+          "index:3": 1,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 158,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -6460,11 +6363,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "immersiverailroading:item_rolling_stock",
-              "tag:10": {
-                "defID:8": "rolling_stock/locomotives/a1_peppercorn.json",
-                "gauge:6": 1.435
-              }
+              "id:8": "gregtechfoodoption:gtfo_meta_item"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -6473,38 +6372,24 @@
     },
     "85:10": {
       "preRequisites:11": [
-        80
+        0
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Plate Rolling Machine§r creates Steel Plates and Boiler Plates from Steel Blocks, which are used in the crafting of Locomotives.\n\nIt is built from:\n\n41 x Heavy Engineering Block\n90 x Steel Scaffolding\n88 x Light Engineering Block\n\nThe machine uses §cRF power§r.\n\nSteel Blocks are input by right-clicking the machine with the blocks in hand, and Steel Blocks can be placed while a plate is being made, which makes the process a bit more efficient.\n\n",
+          "desc:8": "You can find many §6fruit trees §rin the world. Some examples are banana trees, orange trees, mango trees, apricot trees, lemon trees and lime trees. \n\nYou can plant their§a §2saplings §rfor a stable source of food.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
+            "Damage:2": 4,
             "OreDict:8": "",
-            "id:8": "immersiverailroading:item_plate",
-            "tag:10": {
-              "defID:8": "rolling_stock/locomotives/a1_peppercorn.json",
-              "gauge:6": 1.435,
-              "plate:3": 3
-            }
+            "id:8": "gregtechfoodoption:gtfo_sapling_0"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§6§lREWORK NEEDED§6§l Plate Rolling Machine",
+          "name:8": "Fruit Trees",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -6519,60 +6404,23 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 90,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration1",
-                "orig_meta:3": 1
-              }
-            },
-            "1:10": {
-              "Count:3": 88,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 4
-              }
-            },
-            "2:10": {
-              "Count:3": 44,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 5
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
     "86:10": {
       "preRequisites:11": [
-        80
+        125
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Boiler Roller§r turns Boiler Plates created in the Plate Rolling Machine into the needed boiler pieces for a given steam locomotive.\n\nIt is built from:\n\n24 x Stone Slab\n4 x Heavy Engineering Block\n8 x Light Engineering Block\n\n§r\nTo operate, the machine needs §cRF power§r, which is input through the orange-yellow colored block on the left front of the machine. \nThe roller creates the appropriate part automatically - just have a boilerplate in hand and right-click the machine. \n\n{ResourceLocation:supersymmetry:guides/boilerroller.png}",
+          "desc:8": "§6Kebabs §rcan be made by using a Skewer. There are several types of Kebabs:\n\n§cKubide kebab§r - made with mince meat, tomato, animal fat (extracted using a Macerator) and oni§c§rons\n§cBarg kebab§r - made with onions, lemon zest (made with a Mortar), olives and mince meat\n§cNailed Onion Kebab§r - made with onions and a skewer\n§cNailed Tomato Kebab §r- made with tomatoes and a skewer\n§cCarrot on a Skewer§r - just skewer and carrots\n\n§cRemember that before eating, these must be roasted in a Primitive Baking Oven.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 142,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -6583,19 +6431,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "immersiverailroading:item_rolling_stock_component",
-            "tag:10": {
-              "componentType:3": 28,
-              "defID:8": "rolling_stock/locomotives/a1_peppercorn.json",
-              "gauge:6": 1.435,
-              "raw_cast:1": 0
-            }
+            "id:8": "gregtechfoodoption:gtfo_meta_item"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§6§lREWORK NEEDED§6§l Boiler Roller",
+          "name:8": "Kebab",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -6618,30 +6460,49 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 24,
-              "Damage:2": 0,
+              "Count:3": 1,
+              "Damage:2": 135,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
-              "id:8": "minecraft:stone_slab"
+              "id:8": "gregtechfoodoption:gtfo_meta_item"
             },
             "1:10": {
-              "Count:3": 4,
-              "Damage:2": 5,
+              "Count:3": 6,
+              "Damage:2": 141,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 5
-              }
+              "id:8": "gregtechfoodoption:gtfo_meta_item"
             },
             "2:10": {
-              "Count:3": 8,
-              "Damage:2": 4,
+              "Count:3": 6,
+              "Damage:2": 142,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "immersiveengineering:metal_decoration0",
-                "orig_meta:3": 4
-              }
+              "id:8": "gregtechfoodoption:gtfo_meta_item"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -8840,7 +8701,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Pyrolysis§r is the thermal decomposition of materials at elevated temperatures, often in an inert atmosphere. It involves a change of chemical composition. \nThe Pyrolyse Oven is required to process biomass such as §6coal tar§r and §6coke§r.\n\nThe Pyrolyse Oven requires:§7§6\n1x Pyrolyse Oven Controller\n1x Input Bus for inputting Items\n1x Input Hatch for inputting Fluids\n1x Output Bus for outputting Items\n1x Energy Hatch (any tier)\n1x LV Muffler Hatch\n16x Cupronickel Coil Blocks\n10x ULV Machine Casing\n\n§rRemember that these are ULV machine casing and not LV ones. They\u0027re different. Also, the Muffler Hatch must not be obstructed by any other block, or it won\u0027t work.\n\nCheck JEI for info on how to build the structure.",
+          "desc:8": "§6Pyrolysis§r is the thermal decomposition of materials at elevated temperatures, often in an inert atmosphere. It involves a change of chemical composition. \nThe Pyrolyse Oven is required to process biomass such as §6coal tar§r and §6coke§r.\n\nThe Pyrolyse Oven requires:§7§6\n1x Pyrolyse Oven Controller\n1x Input Bus for inputting Items\n1x Input Hatch for inputting Fluids\n1x Output Bus for outputting Items\n1x Energy Hatch (any tier)\n1x LV Muffler Hatch\n16x Cupronickel Coil Blocks\n10x ULV Machine Casing\n\n§rRemember that these are ULV machine casing and not LV ones. They\u0027re different. Also, the Muffler Hatch must not be obstructed by any other block, or it won\u0027t work.\n\nIt is recommended to use 2 LV energy hatches while building the Pyrolyse Oven as processing Coal Tar requires 64 EU/t.\n\nCheck JEI for info on how to build the structure.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8899,44 +8760,31 @@
     },
     "123:10": {
       "preRequisites:11": [
-        122
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Coal Tar §rcan be obtained by using a Pyrolyse Oven. ",
+          "desc:8": "The§6 LV Batch Reactor§r is a special type of container used in chemical processes to §6dissolve substances§r§r, create solid§6 precipitates§r, and perform §6liquid-liquid extraction§r. It is particularly useful for mixing different chemicals together during reactions.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
+            "Damage:2": 14681,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "coal_tar"
-            }
+            "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Coal Tar",
+          "name:8": "Batch Reactor",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
+          "tasklogic:8": "AND",
           "visibility:8": "ALWAYS"
         }
       },
@@ -8949,24 +8797,23 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
             "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "coal_tar"
+              "Count:3": 1,
+              "Damage:2": 14681,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
-          "taskID:8": "bq_standard:fluid"
-        },
-        "1:10": {
-          "index:3": 1,
-          "taskID:8": "bq_standard:checkbox"
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
     "124:10": {
       "preRequisites:11": [
-        123,
-        127
+        127,
+        381
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -13366,7 +13213,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "In order to get aluminium ingots, you need an §6electric blast furnace§r. Some recipes in the Electric Blast Furnace require §6120 EU/t§r, so you\u0027ll need two energy hatches. \n\nThe Electric Blast Furnace is a multi structure. It is §63x4x3§r in size. \n\nWhen building your first EBF, you will need:\n\n§61 Electric Blast Furnace\n16 Cupronickel Coil Blocks\n1 Input Bus (For inputting items and the control circuits)\n1 Input Hatch (Any tier will work)\n1 LV output bus (At least an LV one)\n1 Maintenance Hatch \n2 LV Energy Hatches 9-12 Heat Proof Machine Casings§r\n\nYour cupronickel coil blocks can only reach a temperature of §71700 K§r, so you will need higher tier coils to do more advanced recipes. \n\nIf you are confused, check JEI for the machine structure.",
+          "desc:8": "In order to get aluminium ingots, you need an §6electric blast furnace§r. Some recipes in the Electric Blast Furnace require §6120 EU/t§r, so you\u0027ll need two energy hatches. \n\nThe Electric Blast Furnace is a multi structure. It is §63x4x3§r in size. \n\nWhen building your first EBF, you will need:\n\n§61 Electric Blast Furnace\n16 Cupronickel Coil Blocks\n1 Input Bus (For inputting items and the control circuits)\n1 Input Hatch (Any tier will work)\n1 LV output bus (At least an LV one)\n1 Maintenance Hatch \n2 LV Energy Hatches\n9-12 Heat Proof Machine Casings§r\n\nYour cupronickel coil blocks can only reach a temperature of §71700 K§r, so you will need higher tier coils to do more advanced recipes. \n\nIf you are confused, check JEI for the machine structure.\n\n§cThe Electric Blast Furnace and the Electrolytic Cell require a lot of power. You can\u0027t just run them on the same power grid! You should try investing in one (or even multiple) Large Turbines.\n\nAt MV tier, you will be able to use a Combined Cycle fuel setup for even more energy efficiency.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16038,7 +15885,34 @@
       },
       "questID:3": 226,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 65,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtechfoodoption:gtfo_meta_item"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "227:10": {
       "preRequisites:11": [
@@ -16535,17 +16409,32 @@
       }
     },
     "234:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        381
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Toluene §rcan be distilled from Coal Tar using an §cLV Distillery§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "toluene"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -16558,45 +16447,107 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 234,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "toluene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     },
     "235:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        234,
+        233
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Combine the §6Nitration Mixture §rand the§6 Toluene §o§rto make §7§6Trinitrotoluene Solution§r in a §cBatch Reactor§r.\n\nThen, §cdistill §rit to make §6TNT Dust§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "tnt_solution"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "New Quest",
+          "name:8": "T.N.T.",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 235,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 32024,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "236:10": {
       "preRequisites:11": [
@@ -17499,7 +17450,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Hydrogen (H)\n§bAtomic Number§r: 1\n§aAtomic Mass§r: 1.008 amu\n§cMelting Point§r: 13.81 K\n§5Boiling Point§r: 20.28 K\n§6Properties§r: Hydrogen is the lightest §6Element§r, commonly found in the universe. It is used as a fuel, in industrial processes, and is a key component of water and many organic compounds.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17544,7 +17495,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "\n§6Element§r: Helium (He)\n§bAtomic Number§r: 2\n§aAtomic Mass§r: 4.0026 amu\n§cMelting Point§r: 0.95 K\n§5Boiling Point§r: 4.22 K\n§6Properties§r: Helium is a noble gas known for its low density and low reactivity. It is used in cryogenics, as a coolant in various applications, and for filling balloons.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17589,7 +17540,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Lithium (Li)\n§bAtomic Number§r: 3\n§aAtomic Mass§r: 6.94 amu\n§cMelting Point§r: 453.65 K\n§5Boiling Point§r: 1603 K\n§6Properties§r: Lithium is an alkali metal that is highly reactive and flammable. It is used in rechargeable batteries, ceramics, and in some psychiatric medication.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17630,7 +17581,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Beryllium (Be)\n§bAtomic Number§r: 4\n§aAtomic Mass§r: 9.0122 amu\n§cMelting Point§r: 1560 K\n§5Boiling Point§r: 2742 K\n§6Properties§r: Beryllium is a lightweight and strong alkaline earth metal. It is used in aerospace applications, X-ray windows, and as a moderator in nuclear reactors.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17671,7 +17622,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Boron (B)\n§bAtomic Number§r: 5\n§aAtomic Mass§r: 10.81 amu\n§cMelting Point§r: 2349 K\n§5Boiling Point§r: 4200 K\n§6Properties§r: Boron is a metalloid with strong chemical resistance. It is used in various industries, including agriculture (as a micronutrient), ceramics, and semiconductors.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17712,7 +17663,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Carbon (C)\n§bAtomic Number§r: 6\n§aAtomic Mass§r: 12.01 amu\n§cMelting Point§r: 3825 K\n§5Boiling Point§r: 4300 K\n§6Properties§r: Carbon is a versatile nonmetal known for its ability to form a wide range of compounds. It is the basis of organic chemistry and found in all known life forms.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17753,7 +17704,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Nitrogen (N)\n§bAtomic Number§r: 7\n§aAtomic Mass§r: 14.01 amu\n§cMelting Point§r: 63.15 K\n§5Boiling Point§r: 77.36 K\n§6Properties§r: Nitrogen is a diatomic nonmetal and makes up the majority of Earth\u0027s atmosphere. It is used in various industrial processes and as a coolant in certain applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17798,7 +17749,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Oxygen (O)\n§bAtomic Number§r: 8\n§aAtomic Mass§r: 16.00 amu\n§cMelting Point§r: 54.36 K\n§5Boiling Point§r: 90.20 K\n§6Properties§r: Oxygen is a highly reactive nonmetal and a vital §6Element§r for sustaining life. It is used in various industries, including medical applications and combustion processes.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17843,7 +17794,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Fluorine (F)\n§bAtomic Number§r: 9\n§aAtomic Mass§r: 19.00 amu\n§cMelting Point§r: 53.53 K\n§5Boiling Point§r: 85.03 K\n§6Properties§r: Fluorine is a highly reactive halogen known for its strong oxidizing §6Properties§r. It is used in various industries, including the production of fluoropolymers and pharmaceuticals.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17888,7 +17839,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Neon (Ne)\n§bAtomic Number§r: 10\n§aAtomic Mass§r: 20.18 amu\n§cMelting Point§r: 24.56 K\n§5Boiling Point§r: 27.07 K\n§6Properties§r: Neon is a noble gas known for its bright, colorful light emissions. It is used in advertising signs, as a coolant in cryogenics, and in some specialized lighting.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17933,7 +17884,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Potassium (K)\n§bAtomic Number§r: 19\n§aAtomic Mass§r: 39.10 amu\n§cMelting Point§r: 336.53 K\n§5Boiling Point§r: 1032 K\n§6Properties§r: Potassium is an alkali metal highly reactive with water. It is used in fertilizers, soaps, and in the production of some medications and chemicals.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17974,7 +17925,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Magnesium (Mg)\n§bAtomic Number§r: 12\n§aAtomic Mass§r: 24.31 amu\n§cMelting Point§r: 923 K\n§5Boiling Point§r: 1380 K\n§6Properties§r: Magnesium is an alkaline earth metal known for its lightness and high strength-to-weight ratio. It is used in alloys, pyrotechnics, and as a component in some medications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18015,7 +17966,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§b§6Element§r: Sodium (Na)\n§bAtomic Number§r: 11\n§aAtomic Mass§r: 22.99 amu\n§cMelting Point§r: 370.87 K\n§5Boiling Point§r: 1156 K\n§6Properties§r: Sodium is an alkali metal known for its high reactivity. It is used in various industries, including the production of chemicals, as a coolant, and in the manufacture of batteries.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18056,7 +18007,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Aluminum (Al)\n§bAtomic Number§r: 13\n§aAtomic Mass§r: 26.98 amu\n§cMelting Point§r: 933.47 K\n§5Boiling Point§r: 2792 K\n§6Properties§r: Aluminum is a lightweight and corrosion-resistant metal. It is widely used in construction, packaging, transportation, and various industrial applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18097,7 +18048,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Silicon (Si)\n§bAtomic Number§r: 14\n§aAtomic Mass§r: 28.09 amu\n§cMelting Point§r: 1687 K\n§5Boiling Point§r: 3538 K\n§6Properties§r: Silicon is a metalloid known for its semiconducting §6Properties§r. It is used extensively in the electronics industry for integrated circuits and solar cell production.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18138,7 +18089,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Phosphorus (P)\n§bAtomic Number§r: 15\n§aAtomic Mass§r: 30.97 amu\n§cMelting Point§r: 317.30 K\n§5Boiling Point§r: 553 K\n§6Properties§r: Phosphorus is a nonmetal essential for life and found in DNA, RNA, and ATP. It is used in fertilizers, detergents, and in the production of matches and fireworks.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18179,7 +18130,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Sulfur (S)\n§bAtomic Number§r: 16\n§aAtomic Mass§r: 32.07 amu\n§cMelting Point§r: 388.36 K\n§5Boiling Point§r: 717.82 K\n§6Properties§r: Sulfur is a multivalent nonmetal known for its yellow color and distinct odor. It is used in the production of sulfuric acid, vulcanization of rubber, and in fertilizers.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18220,7 +18171,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Chlorine (Cl)\n§bAtomic Number§r: 17\n§aAtomic Mass§r: 35.45 amu\n§cMelting Point§r: 171.65 K\n§5Boiling Point§r: 239.11 K\n§6Properties§r: Chlorine is a highly reactive halogen used as a disinfectant, in the production of PVC, and in various industrial processes, including water treatment and bleaching.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18265,7 +18216,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Argon (Ar)\n§bAtomic Number§r: 18\n§aAtomic Mass§r: 39.95 amu\n§cMelting Point§r: 83.80 K\n§5Boiling Point§r: 87.30 K\n§6Properties§r: Argon is a noble gas known for its inertness. It is used in various applications, including welding, lighting, and as a protective gas in industrial processes.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18310,7 +18261,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Calcium (Ca)\n§bAtomic Number§r: 20\n§aAtomic Mass§r: 40.08 amu\n§cMelting Point§r: 1115 K\n§5Boiling Point§r: 1757 K\n§6Properties§r: Calcium is an alkaline earth metal essential for the human body and found in bones and teeth. It is used in construction, as a dietary supplement, and in the production of steel.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18351,7 +18302,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Scandium (Sc)\n§bAtomic Number§r: 21\n§aAtomic Mass§r: 44.96 amu\n§cMelting Point§r: 1814 K\n§5Boiling Point§r: 3109 K\n§6Properties§r: Scandium is a transition metal with high strength and heat resistance. It is used in aerospace components, high-intensity lamps, and in some sports equipment.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18392,7 +18343,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Titanium (Ti)\n§bAtomic Number§r: 22\n§aAtomic Mass§r: 47.87 amu\n§cMelting Point§r: 1941 K\n§5Boiling Point§r: 3560 K\n§6Properties§r: Titanium is a transition metal known for its high strength, low density, and corrosion resistance. It is used in aerospace applications, medical implants, and in the production of durable goods.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18433,7 +18384,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Vanadium (V)\n§bAtomic Number§r: 23\n§aAtomic Mass§r: 50.94 amu\n§cMelting Point§r: 2183 K\n§5Boiling Point§r: 3680 K\n§6Properties§r: Vanadium is a transition metal with excellent structural §6Properties§r. It is used in the production of steel, as a catalyst, and in energy storage systems.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18474,7 +18425,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Chromium (Cr)\n§bAtomic Number§r: 24\n§aAtomic Mass§r: 52.00 amu\n§cMelting Point§r: 2180 K\n§5Boiling Point§r: 2944 K\n§6Properties§r: Chromium is a transition metal known for its corrosion resistance. It is used in stainless steel production, as a decorative coating, and in the manufacturing of alloys.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18515,7 +18466,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Manganese (Mn)\n§bAtomic Number§r: 25\n§aAtomic Mass§r: 54.94 amu\n§cMelting Point§r: 1519 K\n§5Boiling Point§r: 2334 K\n§6Properties§r: Manganese is a transition metal used in steel production, batteries, and as a catalyst. It is also a necessary nutrient for humans and plays a role in various biological processes.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18556,7 +18507,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Iron (Fe)\n§bAtomic Number§r: 26\n§aAtomic Mass§r: 55.85 amu\n§cMelting Point§r: 1811 K\n§5Boiling Point§r: 3134 K\n§6Properties§r: Iron is a transition metal with excellent strength and magnetism. It is used in construction, manufacturing, and as a core component in many alloys.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18597,7 +18548,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Cobalt (Co)\n§bAtomic Number§r: 27\n§aAtomic Mass§r: 58.93 amu\n§cMelting Point§r: 1768 K\n§5Boiling Point§r: 3200 K\n§6Properties§r: Cobalt is a transition metal used in the production of magnetic materials, rechargeable batteries, and as a catalyst in the chemical industry.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18638,7 +18589,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Nickel (Ni)\n§bAtomic Number§r: 28\n§aAtomic Mass§r: 58.69 amu\n§cMelting Point§r: 1728 K\n§5Boiling Point§r: 3186 K\n§6Properties§r: Nickel is a transition metal known for its corrosion resistance and high electrical conductivity. It is used in alloys, batteries, and in the production of stainless steel.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18679,7 +18630,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Copper (Cu)\n§bAtomic Number§r: 29\n§aAtomic Mass§r: 63.55 amu\n§cMelting Point§r: 1357.77 K\n§5Boiling Point§r: 2835 K\n§6Properties§r: Copper is a transition metal with excellent thermal and electrical conductivity. It is used in electrical wiring, plumbing, and as a component in various alloys.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18720,7 +18671,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Zinc (Zn)\n§bAtomic Number§r: 30\n§aAtomic Mass§r: 65.38 amu\n§cMelting Point§r: 692.68 K\n§5Boiling Point§r: 1180 K\n§6Properties§r: Zinc is a transition metal known for its corrosion resistance. It is used in galvanizing processes, as a dietary supplement, and in the production of alloys.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18761,7 +18712,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Gallium (Ga)\n§bAtomic Number§r: 31\n§aAtomic Mass§r: 69.72 amu\n§cMelting Point§r: 302.91 K\n§5Boiling Point§r: 2477 K\n§6Properties§r: Gallium is a post-transition metal with a low §cMelting Point§r. It is used in semiconductors, LEDs, and as a component in some medical imaging devices.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18802,7 +18753,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Germanium (Ge)\n§bAtomic Number§r: 32\n§aAtomic Mass§r: 72.63 amu\n§cMelting Point§r: 1211.40 K\n§5Boiling Point§r: 3106 K\n§6Properties§r: Germanium is a metalloid used in semiconductors and fiber-optic systems. It has applications in infrared optics, solar cells, and in some chemotherapy drugs.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18843,7 +18794,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Arsenic (As)\n§bAtomic Number§r: 33\n§aAtomic Mass§r: 74.92 amu\n§cMelting Point§r: 1090 K\n§5Boiling Point§r: 887 K\n§6Properties§r: Arsenic is a metalloid with both metallic and nonmetallic properties. It is used in certain pesticides, wood preservatives, and in the production of semiconductors.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18884,7 +18835,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Selenium (Se)\n§bAtomic Number§r: 34\n§aAtomic Mass§r: 78.97 amu\n§cMelting Point§r: 494 K\n§5Boiling Point§r: 958 K\n§6Properties§r: Selenium is a nonmetal with important biological functions. It is used in photocopiers, solar cells, and in some nutritional supplements.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18925,7 +18876,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Bromine (Br)\n§bAtomic Number§r: 35\n§aAtomic Mass§r: 79.90 amu\n§cMelting Point§r: 265.95 K\n§5Boiling Point§r: 332 K\n§6Properties§r: Bromine is a halogen known as a red-brown volatile liquid. It is used in flame retardants, water disinfection, and in the production of pharmaceuticals.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18970,7 +18921,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Krypton (Kr)\n§bAtomic Number§r: 36\n§aAtomic Mass§r: 83.80 amu\n§cMelting Point§r: 115.79 K\n§5Boiling Point§r: 119.93 K\n§6Properties§r: Krypton is a noble gas known for its low reactivity and luminescent properties. It is used in lighting, lasers, and in certain photographic processes.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19015,7 +18966,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "\n§6Element§r: Rubidium (Rb)\n§bAtomic Number§r: 37\n§aAtomic Mass§r: 85.47 amu\n§cMelting Point§r: 312.46 K\n§5Boiling Point§r: 961 K\n§6Properties§r: Rubidium is an alkali metal with a silvery-white appearance. It is used in research applications, in the production of specialty glasses, and in some medical imaging devices.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19056,7 +19007,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Strontium (Sr)\n§bAtomic Number§r: 38\n§aAtomic Mass§r: 87.62 amu\n§cMelting Point§r: 1050 K\n§5Boiling Point§r: 1655 K\n§6Properties§r: Strontium is an alkaline earth metal used in pyrotechnics to produce red-colored flames. It is also used in the production of cathode ray tubes and in certain medical applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19097,7 +19048,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Yttrium (Y)\n§bAtomic Number§r: 39\n§aAtomic Mass§r: 88.91 amu\n§cMelting Point§r: 1795 K\n§5Boiling Point§r: 3609 K\n§6Properties§r: Yttrium is a transition metal used in various applications, including lasers, superconductors, and as a component in alloys used in jet engines and turbines.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19138,7 +19089,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Zirconium (Zr)\n§bAtomic Number§r: 40\n§aAtomic Mass§r: 91.22 amu\n§cMelting Point§r: 2128 K\n§5Boiling Point§r: 4682 K\n§6Properties§r: Zirconium is a transition metal known for its high resistance to corrosion. It is used in nuclear reactors, as a structural material in the aerospace industry, and in the production of ceramics.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19179,7 +19130,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Niobium (Nb)\n§bAtomic Number§r: 41\n§aAtomic Mass§r: 92.91 amu\n§cMelting Point§r: 2750 K\n§5Boiling Point§r: 5017 K\n§6Properties§r: Niobium is a transition metal with excellent superconducting properties§r. It is used in superconducting magnets, alloys for jet engines, and in the production of electronic components.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19220,7 +19171,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Molybdenum (Mo)\n§bAtomic Number§r: 42\n§aAtomic Mass§r: 95.96 amu\n§cMelting Point§r: 2896 K\n§5Boiling Point§r: 4912 K\n§6Properties§r: Molybdenum is a transition metal with a high §cMelting Point§r and excellent strength. It is used in high-temperature applications, such as in the production of steel, catalysts, and electronic devices.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19261,7 +19212,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Technetium (Tc)\n§bAtomic Number§r: 43\n§aAtomic Mass§r: 98 amu\n§cMelting Point§r: 2430 K\n§5Boiling Point§r: 4538 K\n§6Properties§r: Technetium is a radioactive transition metal with no stable isotopes. It has limited applications, mainly in nuclear medicine for imaging and in research.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19302,7 +19253,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Ruthenium (Ru)\n§bAtomic Number§r: 44\n§aAtomic Mass§r: 101.07 amu\n§cMelting Point§r: 2607 K\n§5Boiling Point§r: 4423 K\n§6Properties§r: Ruthenium is a transition metal known for its corrosion resistance and catalytic Properties. It is used in the production of electrical contacts, catalytic converters, and in some jewelry.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19389,7 +19340,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Rhodium (Rh)\n§bAtomic Number§r: 45\n§aAtomic Mass§r: 102.91 amu\n§cMelting Point§r: 2237 K\n§5Boiling Point§r: 3968 K\n§6Properties§r: Rhodium is a transition metal with high reflectivity and resistance to corrosion. It is used in catalytic converters, as a coating for optical instruments, and in jewelry.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19430,7 +19381,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Palladium (Pd)\n§bAtomic Number§r: 46\n§aAtomic Mass§r: 106.42 amu\n§cMelting Point§r: 1828.05 K\n§5Boiling Point§r: 3236 K\n§6Properties§r: Palladium is a transition metal known for its catalytic Properties§r and ability to absorb hydrogen. It is used in catalytic converters, electronics, and in the production of jewelry.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19471,7 +19422,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Silver (Ag)\n§bAtomic Number§r: 47\n§aAtomic Mass§r: 107.87 amu\n§cMelting Point§r: 1234.93 K\n§5Boiling Point§r: 2435 K\n§6Properties§r: Silver is a transition metal with high electrical conductivity and a distinctive luster. It is used in jewelry, coins, electrical contacts, and in various industrial applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19512,7 +19463,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Cadmium (Cd)\n§bAtomic Number§r: 48\n§aAtomic Mass§r: 112.41 amu\n§cMelting Point§r: 594.22 K\n§5Boiling Point§r: 1040 K\n§6Properties§r: Cadmium is a transition metal with low toxicity. It is used in rechargeable batteries, pigments, and as a protective coating in some applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19553,7 +19504,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Indium (In)\n§bAtomic Number§r: 49\n§aAtomic Mass§r: 114.82 amu\n§cMelting Point§r: 429.75 K\n§5Boiling Point§r: 2345 K\n§6Properties§r: Indium is a post-transition metal used in the production of low-melting-point alloys, transparent conductive coatings, and in some electronic devices.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19594,7 +19545,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Tin (Sn)\n§bAtomic Number§r: 50\n§aAtomic Mass§r: 118.71 amu\n§cMelting Point§r: 505.08 K\n§5Boiling Point§r: 2875 K\n§6Properties§r: Tin is a post-transition metal known for its low §cMelting Point§r. It is used in the production of solder, as a protective coating, and in the manufacture of tin cans.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19635,7 +19586,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "\n§6Element§r: Antimony (Sb)\n§bAtomic Number§r: 51\n§aAtomic Mass§r: 121.76 amu\n§cMelting Point§r: 903.78 K\n§5Boiling Point§r: 1860 K\n§6Properties§r: Antimony is a metalloid with various industrial applications, including flame retardants, alloys, and as a dopant in semiconductor materials.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19676,7 +19627,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Tellurium (Te)\n§bAtomic Number§r: 52\n§aAtomic Mass§r: 127.60 amu\n§cMelting Point§r: 722.66 K\n§5Boiling Point§r: 1261 K\n§6Properties§r: Tellurium is a metalloid with semiconducting §6Properties§r. It is used in solar panels, thermoelectric devices, and in some specialty glasses.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19717,7 +19668,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Iodine (I)\n§bAtomic Number§r: 53\n§aAtomic Mass§r: 126.90 amu\n§cMelting Point§r: 386.85 K\n§5Boiling Point§r: 457.4 K\n§6Properties§r: Iodine is a nonmetal known for its purple-black solid form and characteristic odor. It is used in pharmaceuticals, disinfectants, and in iodized salt.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19758,7 +19709,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Xenon (Xe)\n§bAtomic Number§r: 54\n§aAtomic Mass§r: 131.29 amu\n§cMelting Point§r: 161.36 K\n§5Boiling Point§r: 165.03 K\n§6Properties§r: Xenon is a noble gas known for its unreactive nature and use in lighting applications. It is also used in certain medical imaging procedures.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19803,7 +19754,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Cesium (Cs)\n§bAtomic Number§r: 55\n§aAtomic Mass§r: 132.91 amu\n§cMelting Point§r: 301.59 K\n§5Boiling Point§r: 944 K\n§6Properties§r: Cesium is an alkali metal known for its low ionization energy and reactivity with water. It is used in atomic clocks, catalysts, and in some medical applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19844,7 +19795,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Barium (Ba)\n§bAtomic Number§r: 56\n§aAtomic Mass§r: 137.33 amu\n§cMelting Point§r: 1000 K\n§5Boiling Point§r: 2170 K\n§6Properties§r: Barium is an alkaline earth metal used in various applications, including in drilling fluids, X-ray imaging, and in the production of some ceramics and glass.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19885,7 +19836,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Francium (Fr)\n§bAtomic Number§r: 87\n§aAtomic Mass§r: 223 amu\n§cMelting Point§r: 300 K\n§5Boiling Point§r: 950 K\n§6Properties§r: Francium is an alkali metal with highly radioactive isotopes. It has limited practical applications, mainly in research.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19917,7 +19868,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Hafnium (Hf)\n§bAtomic Number§r: 72\n§aAtomic Mass§r: 178.49 amu\n§cMelting Point§r: 2506 K\n§5Boiling Point§r: 4876 K\n§6Properties§r: Hafnium is a transition metal known for its high §cMelting Point§r and corrosion resistance. It is used in nuclear reactors, as a superalloy component, and in some electrical applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19958,7 +19909,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Tantalum (Ta)\n§bAtomic Number§r: 73\n§aAtomic Mass§r: 180.95 amu\n§cMelting Point§r: 3290 K\n§5Boiling Point§r: 5731 K\n§6Properties§r: Tantalum is a transition metal known for its high §cMelting Point§r and resistance to corrosion. It is used in capacitors, surgical implants, and in certain electronic devices.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19999,7 +19950,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Tungsten (W)\n§bAtomic Number§r: 74\n§aAtomic Mass§r: 183.84 amu\n§cMelting Point§r: 3695 K\n§5Boiling Point§r: 5828 K\n§6Properties§r: Tungsten is a transition metal with the highest §cMelting Point§r of all §6Element§rs. It is used in incandescent light bulbs, electrical contacts, and in some alloys for high-temperature applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20040,7 +19991,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Rhenium (Re)\n§bAtomic Number§r: 75\n§aAtomic Mass§r: 186.21 amu\n§cMelting Point§r: 3459 K\n§5Boiling Point§r: 5869 K\n§6Properties§r: Rhenium is a transition metal known for its high §cMelting Point§r and resistance to corrosion. It is used in catalysts, in the production of superalloys, and in some electrical components.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20081,7 +20032,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Osmium (Os)\n§bAtomic Number§r: 76\n§aAtomic Mass§r: 190.23 amu\n§cMelting Point§r: 3306 K\n§5Boiling Point§r: 5285 K\n§6Properties§r: Osmium is a transition metal known for its high density and extreme hardness. It is used in certain alloys, in the production of fountain pen tips, and in some electrical contacts.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20122,7 +20073,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Iridium (Ir)\n§bAtomic Number§r: 77\n§aAtomic Mass§r: 192.22 amu\n§cMelting Point§r: 2716 K\n§5Boiling Point§r: 4701 K\n§6Properties§r: Iridium is a transition metal known for its high resistance to corrosion and its use in spark plugs and certain electrical contacts. It is also used in some jewelry and in the aerospace industry.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20163,7 +20114,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Platinum (Pt)\n§bAtomic Number§r: 78\n§aAtomic Mass§r: 195.08 amu\n§cMelting Point§r: 2041.4 K\n§5Boiling Point§r: 4098 K\n§6Properties§r: Platinum is a transition metal known for its resistance to corrosion and its use in jewelry, catalytic converters, and in certain electronic devices.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20204,7 +20155,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Gold (Au)\n§bAtomic Number§r: 79\n§aAtomic Mass§r: 196.97 amu\n§cMelting Point§r: 1337.33 K\n§5Boiling Point§r: 3129 K\n§6Properties§r: Gold is a transition metal known for its attractive appearance and resistance to corrosion. It is used in jewelry, electronics, and in various decorative applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20245,7 +20196,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Mercury (Hg)\n§bAtomic Number§r: 80\n§aAtomic Mass§r: 200.59 amu\n§cMelting Point§r: 234.32 K\n§5Boiling Point§r: 630.15 K\n§6Properties§r: Mercury is a transition metal known for its liquid form at room temperature. It is used in thermometers, dental amalgams, and in some electronic applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20290,7 +20241,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Thallium (Tl)\n§bAtomic Number§r: 81\n§aAtomic Mass§r: 204.38 amu\n§cMelting Point§r: 577 K\n§5Boiling Point§r: 1746 K\n§6Properties§r: Thallium is a post-transition metal used in some electronic devices, as a component in certain high-temperature superconductors, and in the production of optical lenses.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20331,7 +20282,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Lead (Pb)\n§bAtomic Number§r: 82\n§aAtomic Mass§r: 207.2 amu\n§cMelting Point§r: 600.61 K\n§5Boiling Point§r: 2022 K\n§6Properties§r: Lead is a post-transition metal used in batteries, soldering materials, and as a radiation shielding material. It is also found in certain building materials.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20372,7 +20323,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Bismuth (Bi)\n§bAtomic Number§r: 83\n§aAtomic Mass§r: 208.98 amu\n§cMelting Point§r: 544.67 K\n§5Boiling Point§r: 1837 K\n§6Properties§r: Bismuth is a post-transition metal with a low §cMelting Point§r. It is used in pharmaceuticals, cosmetics, and as an additive in some alloys.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20413,7 +20364,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Polonium (Po)\n§bAtomic Number§r: 84\n§aAtomic Mass§r: 209 amu\n§cMelting Point§r: 527 K\n§5Boiling Point§r: 1235 K\n§6Properties§r: Polonium is a radioactive post-transition metal with no stable isotopes. It has limited applications, mainly in research and as a heat source in some space missions.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20445,7 +20396,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Astatine (At)\n§bAtomic Number§r: 85\n§aAtomic Mass§r: 210 amu\n§cMelting Point§r: 575 K\n§5Boiling Point§r: 610 K\n§6Properties§r: Astatine is a radioactive halogen with no stable isotopes. It has limited applications, mainly in research and as a tracer in studies of chemical reactions.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20477,7 +20428,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Radon (Rn)\n§bAtomic Number§r: 86\n§aAtomic Mass§r: 222 amu\n§cMelting Point§r: 202 K\n§5Boiling Point§r: 211.4 K\n§6Properties§r: Radon is a noble gas known for its radioactive nature. It is used in some medical applications and as a tracer in studies of air flow.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20522,7 +20473,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Lanthanum (La)\n§bAtomic Number§r: 57\n§aAtomic Mass§r: 138.91 amu\n§cMelting Point§r: 1193 K\n§5Boiling Point§r: 3737 K\n§6Properties§r: Lanthanum is a rare-earth metal used in various applications, such as in the production of high-intensity lamps, catalysts, and in some specialty glasses.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20563,7 +20514,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Cerium (Ce)\n§bAtomic Number§r: 58\n§aAtomic Mass§r: 140.12 amu\n§cMelting Point§r: 1068 K\n§5Boiling Point§r: 3716 K\n§6Properties§r: Cerium is a rare-earth metal known for its oxidation-reduction §6Properties§r. It is used in catalytic converters, glass polishing, and in some alloys.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20604,7 +20555,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Praseodymium (Pr)\n§bAtomic Number§r: 59\n§aAtomic Mass§r: 140.91 amu\n§cMelting Point§r: 1208 K\n§5Boiling Point§r: 3793 K\n§6Properties§r: Praseodymium is a rare-earth metal used in certain magnets, lasers, and as a component in alloys for aircraft engines.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20645,7 +20596,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Neodymium (Nd)\n§bAtomic Number§r: 60\n§aAtomic Mass§r: 144.24 amu\n§cMelting Point§r: 1297 K\n§5Boiling Point§r: 3347 K\n§6Properties§r: Neodymium is a rare-earth metal used in powerful magnets, lasers, and in some glass and ceramic compositions.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20686,7 +20637,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Promethium (Pm)\n§bAtomic Number§r: 61\n§aAtomic Mass§r: 145 amu\n§cMelting Point§r: 1315 K\n§5Boiling Point§r: 3273 K\n§6Properties§r: Promethium is a radioactive rare-earth metal with no stable isotopes. It has limited practical applications, mainly in research and nuclear batteries.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20727,7 +20678,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Samarium (Sm)\n§bAtomic Number§r: 62\n§aAtomic Mass§r: 150.36 amu\n§cMelting Point§r: 1347 K\n§5Boiling Point§r: 2067 K\n§6Properties§r: Samarium is a rare-earth metal used in magnets, nuclear reactors, and in some optical devices.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20768,7 +20719,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Europium (Eu)\n§bAtomic Number§r: 63\n§aAtomic Mass§r: 152.00 amu\n§cMelting Point§r: 1095 K\n§5Boiling Point§r: 1800 K\n§6Properties§r: Europium is a rare-earth metal with unique luminescent Properties§r. It is used in phosphors, lasers, and in some security features for banknotes.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20809,7 +20760,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Gadolinium (Gd)\n§bAtomic Number§r: 64\n§aAtomic Mass§r: 157.25 amu\n§cMelting Point§r: 1585 K\n§5Boiling Point§r: 3546 K\n§6Properties§r: Gadolinium is a rare-earth metal used in MRI contrast agents, neutron capture therapy, and in some electronic components.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20850,7 +20801,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Terbium (Tb)\n§bAtomic Number§r: 65\n§aAtomic Mass§r: 158.93 amu\n§cMelting Point§r: 1629 K\n§5Boiling Point§r: 3503 K\n§6Properties§r: Terbium is a rare-earth metal used in green phosphors, lasers, and in some electronic devices.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20891,7 +20842,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Dysprosium (Dy)\n§bAtomic Number§r: 66\n§aAtomic Mass§r: 162.50 amu\n§cMelting Point§r: 1685 K\n§5Boiling Point§r: 2840 K\n§6Properties§r: Dysprosium is a rare-earth metal used in magnets, lasers, and in some control rods for nuclear reactors.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20932,7 +20883,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Holmium (Ho)\n§bAtomic Number§r: 67\n§aAtomic Mass§r: 164.93 amu\n§cMelting Point§r: 1747 K\n§5Boiling Point§r: 2968 K\n§6Properties§r: Holmium is a rare-earth metal used in magnets, lasers, and as a dopant in some glass materials.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20973,7 +20924,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Erbium (Er)\n§bAtomic Number§r: 68\n§aAtomic Mass§r: 167.26 amu\n§cMelting Point§r: 1802 K\n§5Boiling Point§r: 3141 K\n§6Properties§r: Erbium is a rare-earth metal used in lasers, fiber-optic communication systems, and in some photographic filters.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21014,7 +20965,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Thulium (Tm)\n§bAtomic Number§r: 69\n§aAtomic Mass§r: 168.93 amu\n§cMelting Point§r: 1818 K\n§5Boiling Point§r: 2223 K\n§6Properties§r: Thulium is a rare-earth metal used in portable X-ray machines, lasers, and in some high-temperature superconductors.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21055,7 +21006,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Ytterbium (Yb)\n§bAtomic Number§r: 70\n§aAtomic Mass§r: 173.05 amu\n§cMelting Point§r: 1097 K\n§5Boiling Point§r: 1469 K\n§6Properties§r: Ytterbium is a rare-earth metal used in lasers, certain cancer treatments, and as a dopant in some types of glass and crystals.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21096,7 +21047,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Lutetium (Lu)\n§bAtomic Number§r: 71\n§aAtomic Mass§r: 174.97 amu\n§cMelting Point§r: 1936 K\n§5Boiling Point§r: 3675 K\n§6Properties§r: Lutetium is a rare-earth metal used in some catalysts, certain medical imaging systems, and in the production of certain types of glass.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21137,7 +21088,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Radium (Ra)\n§bAtomic Number§r: 88\n§aAtomic Mass§r: 226 amu\n§cMelting Point§r: 973 K\n§5Boiling Point§r: 2010 K\n§6Properties§r: Radium is a radioactive alkaline earth metal. It has limited applications, mainly in research and in some cancer treatments.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21169,7 +21120,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Actinium (Ac)\n§bAtomic Number§r: 89\n§aAtomic Mass§r: 227 amu\n§cMelting Point§r: 1324 K\n§5Boiling Point§r: 3471 K\n§6Properties§r: Actinium is a radioactive transition metal. It has limited applications, mainly in research and in some medical imaging procedures.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21242,7 +21193,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Protactinium (Pa)\n§bAtomic Number§r: 91\n§aAtomic Mass§r: 231.04 amu\n§cMelting Point§r: 1845 K\n§5Boiling Point§r: 4273 K\n§6Properties§r: Protactinium is a radioactive actinide metal. It has limited applications, mainly in research and in some nuclear reactors.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21283,7 +21234,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Thorium (Th)\n§bAtomic Number§r: 90\n§aAtomic Mass§r: 232.04 amu\n§cMelting Point§r: 2023 K\n§5Boiling Point§r: 5061 K\n§6Properties§r: Thorium is a radioactive actinide metal. It is used in certain nuclear reactors, as a fuel in some research reactors, and in certain alloys.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21324,7 +21275,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Uranium (U)\n§bAtomic Number§r: 92\n§aAtomic Mass§r: 238.03 amu\n§cMelting Point§r: 1408 K\n§5Boiling Point§r: 4131 K\n§6Properties§r: Uranium is a radioactive actinide metal known for its use as a fuel in nuclear reactors and in the production of nuclear weapons. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21365,7 +21316,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Neptunium (Np)\n§bAtomic Number§r: 93\n§aAtomic Mass§r: 237 amu\n§cMelting Point§r: 917 K\n§5Boiling Point§r: 4273 K\n§6Properties§r: Neptunium is a radioactive actinide metal. It has limited applications, mainly in research and in some nuclear reactors.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21397,7 +21348,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Plutonium (Pu)\n§bAtomic Number§r: 94\n§aAtomic Mass§r: 244 amu\n§cMelting Point§r: 912.5 K\n§5Boiling Point§r: 3501 K\n§6Properties§r: Plutonium is a radioactive actinide metal known for its use as a fuel in nuclear reactors and in the production of nuclear weapons. It is also used in certain scientific research.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21438,7 +21389,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Americium (Am)\n§bAtomic Number§r: 95\n§aAtomic Mass§r: 243 amu\n§cMelting Point§r: 1449 K\n§5Boiling Point§r: 2880 K\n§6Properties§r: Americium is a radioactive actinide metal. It has limited applications, mainly in research and in some smoke detectors.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21479,7 +21430,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Curium (Cm)\n§bAtomic Number§r: 96\n§aAtomic Mass§r: 247 amu\n§cMelting Point§r: 1618 K\n§5Boiling Point§r: 3383 K\n§6Properties§r: Curium is a radioactive actinide metal. It has limited applications, mainly in research and in some portable neutron sources.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22429,12 +22380,13 @@
     },
     "370:10": {
       "preRequisites:11": [
-        369
+        369,
+        388
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6radiator§o§o§r is a device that transfers heat from a fluid or object to the surrounding environment.\n\nIt can cool down exhaust steam into water or §6hot compressed fluids §rinto a more manageable temperature.\n\nThe Radiator requires:\n\n§6- 1 Heat Radiator Controller\n- 1 Maintenance Hatch\n- 1 Output Hatch\n- 1 Input Hatch\n- 48 Solid Steel Machine Casing\n- 135 Steel Pipe Casing\n\n§rDue to the high cost of steel, it is recommended that you use an EBF and Arc Furnace to process iron into steel instead of just using a PBF setup.",
+          "desc:8": "A §6radiator§o§o§r is a device that transfers heat from a fluid or object to the surrounding environment.\n\nIt can cool down exhaust steam into water or §6§chot compressed fluids into a more manageable temperature.\n§rFor example, you can cool down Hot High Pressure Hydrogen into normal High Pressure Hydrogen.\n§r\nThe Radiator requires:\n\n§6- 1 Heat Radiator Controller\n- 1 Maintenance Hatch\n- 1 Output Hatch\n- 1 Input Hatch\n- 48 Solid Steel Machine Casing\n- 135 Steel Pipe Casing\n\n§rDue to the high cost of steel, it is recommended that you use an EBF and Arc Furnace to process iron into steel instead of just using a PBF setup.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22708,13 +22660,18 @@
       }
     },
     "374:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        373
+        373,
+        370
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6heat exchanger §ris a device that transfers heat between two or more fluids, without them mixing.\n\nFor example, the Heat Exchanger can transfer heat between §chot§o§r compressed hydrogen and §bwater§r, to turn them into §cwarm water §rand §anormal-temperature compressed hydrogen§r§r.\n\n§6The Heat Exchanger requires:\n- 1 Heat Exchanger Controller\n- 2 Output Hatch\n- 2 Input Hatch\n- 1 Maintenance Hatch\n- 20 Steel Frame Box\n- 56 Solid Steel Machine Casing\n- 8 Steel Pipe Casing\n\n",
+          "desc:8": "A §6heat exchanger §ris a device that transfers heat between two or more fluids, without them mixing.\n\nFor example, the Heat Exchanger can transfer heat between §chot§o§r compressed hydrogen and §bwater§r, to turn them into §cwarm water §rand §anormal-temperature compressed hydrogen§r§r.\n\n§rYou can cool down High Pressure Hydrogen into Cold High Pressure Hydrogen.\n§r\n§6The Heat Exchanger requires:\n- 1 Heat Exchanger Controller\n- 2 Output Hatch\n- 2 Input Hatch\n- 1 Maintenance Hatch\n- 20 Steel Frame Box\n- 56 Solid Steel Machine Casing\n- 8 Steel Pipe Casing\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22854,7 +22811,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can separate the mud into §6clay§r, §6gravel§r, §6sand §rand §6limestone§r using a§c Centrifuge§r.",
+          "desc:8": "You can separate the mud into §6clay§r, §6gravel§r, §6sand §rand §6limestone§r using a§n§r§c LV Centrifuge§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -23194,6 +23151,1715 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "381:10": {
+      "preRequisites:11": [
+        122
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Coal Tar §rcan be distilled from §6coal§r, charcoal and anthracite and it can be used as a fuel in the §6Large LV Gas Turbine§r. It can also be distilled to produce toluene, for explosives.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "coal_tar"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Coal Tar",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 381,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "coal_tar"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 12,
+              "Damage:2": 319,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_gem"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "382:10": {
+      "preRequisites:11": [
+        235
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Combine §6Paper§r, String and §6TNT §rin a Forming Press to create §cdynamite§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 460,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Trolling Plan, Phase One",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 382,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 460,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "383:10": {
+      "preRequisites:11": [
+        380
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§cMissiles§r are made in a §cLarge Weapons Factory§r using several§6 Aluminium §o§o§rparts, any type of §7§6explosive§r, either §6Saltpeter or Ammonium Nitrate §rdust, and either §6Aluminium, Beryllium, Sugar or Gunpowder§r. \n\nTo complete this quest, make the §6Conventional Missile§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "Parent:10": {
+                "explosive:10": {}
+              },
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "icbmclassic:missile"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Trolling Plan, Phase Three",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 383,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "Parent:10": {
+                  "explosive:10": {}
+                },
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:missile"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "384:10": {
+      "preRequisites:11": [
+        191
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Condensed Explosives §rare made simply in a Crafting Table with 8 Dynamite. However, we will require a §cWeapons Factory §rto create better and more dangerous explosives, like §cincendiary §ror §bchemical §rexplosives.\n\nCheck the Chemistry chapter to see how to make TNT and dynamite.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "Parent:10": {}
+            },
+            "OreDict:8": "",
+            "id:8": "icbmclassic:explosives"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Condensed Explosives",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 384,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "Parent:10": {}
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:explosives"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "385:10": {
+      "preRequisites:11": [
+        384
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Incendiary explosives§r start fires upon detonation. They use flammable substances like §cgasoline or naphtha §ras their fuel sources. When ignited, these volatile liquids rapidly vaporize and create a combustible mixture with the air, causing fires to spread quickl§yy.§6\n\nChemical explosives§r rely on specific compounds like §ccarbon monoxide, hydrogen sulfide, fluorine, or chlorine gas§r. These highly reactive substances undergo fast oxidation or combustion reactions, releasing large volumes of gas and heat.\n\n§6Debilitation explosives§r have a different objective — they aim to incapacitate rather than cause destruction. They often contain §csulfur dioxide§r, a toxic gas that causes respiratory distress and eye irritation. Debilitation explosives are used for temporary incapacitation or crowd control.\n\n§6Shrapnel explosives§r are a type of explosive device that incorporates lead rounds as shrapnel. These devices are designed to cause damage and injury through the release of high-velocity projectiles upon detonation.\n\nMost of these chemicals are obtainable in LV. Check the Chemistry tab for more info.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "ForgeCaps:10": {
+              "Parent:10": {}
+            },
+            "OreDict:8": "",
+            "id:8": "icbmclassic:explosives"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Trolling Plan, Phase Two",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 385,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "ForgeCaps:10": {
+                "Parent:10": {}
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:explosives"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 4,
+              "ForgeCaps:10": {
+                "Parent:10": {}
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:explosives"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 3,
+              "ForgeCaps:10": {
+                "Parent:10": {}
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:explosives"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "386:10": {
+      "preRequisites:11": [
+        384
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §6grenade §rcan be useful if you have to clear out hordes of enemies at the same time.\n\nGrenades can even be made with§c special types of explosives§r: there are Chemical Grenades, Debilitating Grenades and Incendiary Grenades.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4,
+            "ForgeCaps:10": {
+              "Parent:10": {},
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "icbmclassic:grenade"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Surprise Attack",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 386,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "Parent:10": {},
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "icbmclassic:grenade"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "387:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
+      "preRequisites:11": [
+        380,
+        242
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A Tier 1 §6missile launcher §rconsists of §6three primary components§r: a control panel, a base, and a frame.\n\nWhile the base and screen are essential for a basic launch, the inclusion of the frame component can improve the accuracy of the missile. \n\nMissile launchers require MV circuits, so make sure to complete that quest first.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "icbmclassic:launcherscreen"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Missile Launcher",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 387,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "icbmclassic:launcherbase"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "icbmclassic:launcherscreen"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "icbmclassic:launcherframe"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "388:10": {
+      "preRequisites:11": [
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Fluid Compressor §rcompresses fluids into §chot high pressure fluids§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 15000,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Fluid Compressor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 388,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 15000,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "389:10": {
+      "preRequisites:11": [
+        370
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Fluid De-Compressor §rdecompresses §acompressed fluids§r into §c§3cold fluids§r, which can be used in a Heat Exchanger. \n\nThis can be done with Ammonia, Propane or Carbon Dioxide ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 15013,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Fluid Decompression",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 389,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 15013,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "390:10": {
+      "preRequisites:11": [
+        374,
+        389
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Decompress §rCold High Pressure Hydrogen into Liquid Hydrogen§r, §cwhich has a temperature of 21 K or -252°C.§r This is required for making superconductors.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "liquid_hydrogen"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Liquid Hydrogen",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 390,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "391:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §6polymerization tank §ris a multi machine where monomers undergo a chemical reaction to form long chains called polymers.\n\nA Polymerization Tank can, for example, polymerize Ethylene into §cPoly§rethylene§r.\n\nThe Polymerization Tank requires:§6\n- 1 Polymerization Tank\n- 1 Output Bus\n- 1 Output Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Maintenance Hatch\n- 4 Steel Frame Box\n- 25 Solid Steel Machine Casing\n- 4 Steel Pipe Casing§r\n\nAs always, check the structure in JEI.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14620,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Polymerization Tank",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 391,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14620,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 25,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
+              "Count:3": 4,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "392:10": {
+      "preRequisites:11": [
+        16
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Rolling Pin §rcan be used to roll dough into any shape you want - including §cpizza§r!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtechfoodoption:rolling_pin",
+            "tag:10": {
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
+                "AttackDamage:5": 2.0,
+                "AttackSpeed:5": 0.0,
+                "Durability:3": 0,
+                "Material:8": "iron",
+                "MaxDurability:3": 256
+              },
+              "HideFlags:3": 2
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Rolling Pin",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 392,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "craftingToolRollingPin",
+              "id:8": "gregtechfoodoption:rolling_pin",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 2.0,
+                  "AttackSpeed:5": 0.0,
+                  "Durability:3": 0,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "393:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §6Fermenting Vat§r is a multi machine used as a vessel for fermentation. It can be used to turn grain solution into §6ethylene§r, which is required for making §cpolyethylene § (PE)\n\n§rThe Fermentation Vat requires:\n§7§6\n- 1 Fermentation Vat Controller\n- 1 Output Bus\n- 1 Output Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Maintenance Hatch\n- 1 Muffler Hatch\n- 1 Energy Hatch\n- 4 Steel Frame Box\n- 46 ULV Machine Casing\n- 4 Steel Frame Box",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14639,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Fermentation Vat",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 393,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14639,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 46,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine_casing"
+            },
+            "2:10": {
+              "Count:3": 4,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_frame_20"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "394:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Since Medium Voltage machinery requires 4 times the energy of LV machines, it is recommended that you make a new power setup. \nYou can probably just slap a new MV dynamo hatch on that Turbine, but it would be very inefficient.\n\nThe §6Combined Cycle §rprocess requires that you make a§a Heat Exchanger§r to turn a gas into its§5 Hot High Pressure §rvariant.\n\nAfter putting it into a Turbine, it will release §epower§r and a§c hot normal pressure fluid§r, which can be cooled with another §aHeat Exchanger §rto start the process all over again.\n\nIf you\u0027re confused, here\u0027s a flowchart: https://media.discordapp.net/attachments/1029723495577419859/1110649444388581406/gtthermo.png?width\u003d1170\u0026height\u003d676\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 11,
+            "OreDict:8": "",
+            "id:8": "gregtech:warning_sign"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Combined Cycle",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 394,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "395:10": {
+      "preRequisites:11": [
+        393
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Mix §6Water §rwith Flour to make a Grain Solution.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "grain_solution"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Grain Solution",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 395,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "grain_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "396:10": {
+      "preRequisites:11": [
+        395
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Ethanol §ris a versatile, flammable alcohol produced through fermentation, commonly used as a fuel and solvent. It is also used to produce§6 polyethylene§r.\n\n§6Impure Ethanol §r§rcan be manufactured in a Fermentation Vat with sugar, grain solution and water. The impurities can then be filtered out using a §cdistillery§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ethanol"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Ethanol",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 396,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ethanol"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "397:10": {
+      "preRequisites:11": [
+        396
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§bEthylene §rcan be obtained by reacting H2SO4 with Ethanol in a §cCSTR§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ethylene"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Ethylene",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 397,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "398:10": {
+      "preRequisites:11": [
+        397,
+        391
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Polyethylene §ris the first type of plastic polymer you can make, being possible as early as MV. Ethylene needs to be §bpolymerized §rwith oxygen to produce PE.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1012,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Polyethylene",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 398,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 16,
+              "Damage:2": 1012,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "399:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Silicon Dioxide §rcan be centrifuged from sand or flint.\n\nWhen silicon dioxide is §croasted§r with coke it undergoes a chemical reaction to produce§6 silicon carbide§r. \n\nSilicon carbide can then be §carc furnaced§r to obtain§6 silicon.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 99,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Silicon Valley",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 399,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 99,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "400:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Now that you are in §6Medium Voltage§r, you should create a new MV machinery line, which is separate from your LV machinery. \n\nAccidentally inputting MV voltage into an LV machine can make it §cexplode§r.\n\nSince you already know most of the machines, we are going to skip introducing them with a new quest. To complete this quest, make an MV Assembler.\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 111,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Path of Advancement",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 400,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 110,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "401:10": {
+      "preRequisites:11": [
+        399
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Silicon §rreacts with §3chlorine §rto produce §6silicon tetrachloride §rin a roaster.\n\nThe resulting SiCl4 undergoes §cpurification in a distillery§r, yielding purified SiCl4.\n\nHigh purity silicon is obtained by reacting Zinc dusts with the purified SiCl4 in a§c roaster§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 22007,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "99.1% Pure",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 401,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 22007,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "402:10": {
+      "preRequisites:11": [
+        401
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6High Purity Silicon §rcan be turned into a Seed Crystal in an §cLV Autoclave§r.\n\nThe crystal must be combined with a further amount of liquid §6high purity silicon§r in an §cMV Crystallizer §rfor a long amount of time (07:30), so remember to have a stable power setup near your silicon processing line.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 361,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Monocrystalline",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 402,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 361,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "403:10": {
+      "preRequisites:11": [
+        174
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§bDistilled Water §rcan be obtained by §cdistilling §rWater.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "distilled_water"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Distilled Water",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 403,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "distilled_water"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "404:10": {
+      "preRequisites:11": [
+        405
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Monocrystalline Silicon Boules§r need to be cut into §6Wafers §rbefore being able to be processed.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 371,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Silicon Boule",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 404,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 371,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "405:10": {
+      "preRequisites:11": [
+        402
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §6Cutting Saw §rcan use Water or Lubricant to cut items. It\u0027s required for making silicon wafers out of boules.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 246,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "MV Cutting Saw",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 405,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 246,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "406:10": {
+      "preRequisites:11": [
+        394
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Now that you are at MV, you can make more advanced types of §cexplosives §rand §cmissiles §rby putting MV power on a Weapons Factory.\n\nThere are 3 new types of explosives:\n§7Breaching explosives§r, made with steel\n§3Thermobaric explosives§r, made with ethylene oxide\n§aContagious explosives§r, made with biomass\n\nYou can get most of the ingredients for these at MV.\nRemember that these are Tier 2 missiles, so you will need a T2 missile launching station for them to work.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "icbmclassic:launcherscreen"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Trolling Plan: Phase Four",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 406,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "icbmclassic:launcherbase"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "icbmclassic:launcherframe"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "icbmclassic:launcherscreen"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -23349,7 +25015,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
-          "y:3": 594
+          "y:3": 612
         },
         "18:10": {
           "id:3": 19,
@@ -23370,7 +25036,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
-          "y:3": 546
+          "y:3": 558
         },
         "21:10": {
           "id:3": 22,
@@ -23390,15 +25056,15 @@
           "id:3": 28,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 504
+          "x:3": 36,
+          "y:3": 528
         },
         "24:10": {
           "id:3": 29,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 468
+          "y:3": 480
         },
         "25:10": {
           "id:3": 30,
@@ -23408,137 +25074,144 @@
           "y:3": 420
         },
         "26:10": {
+          "id:3": 59,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": 504
+        },
+        "27:10": {
           "id:3": 74,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 264
         },
-        "27:10": {
+        "28:10": {
           "id:3": 76,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": -84
         },
-        "28:10": {
+        "29:10": {
           "id:3": 87,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 252
         },
-        "29:10": {
+        "30:10": {
           "id:3": 88,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 144
         },
-        "30:10": {
+        "31:10": {
           "id:3": 89,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -192,
           "y:3": 492
         },
-        "31:10": {
+        "32:10": {
           "id:3": 90,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 360
+          "x:3": 36,
+          "y:3": 312
         },
-        "32:10": {
+        "33:10": {
           "id:3": 91,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -192,
-          "y:3": 390
+          "x:3": -120,
+          "y:3": 408
         },
-        "33:10": {
+        "34:10": {
           "id:3": 93,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 42,
           "y:3": 216
         },
-        "34:10": {
+        "35:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 360
         },
-        "35:10": {
+        "36:10": {
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 264
         },
-        "36:10": {
+        "37:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 264
         },
-        "37:10": {
+        "38:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 216
         },
-        "38:10": {
+        "39:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 216
         },
-        "39:10": {
+        "40:10": {
           "id:3": 125,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 216
         },
-        "40:10": {
+        "41:10": {
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 222,
           "y:3": 312
         },
-        "41:10": {
+        "42:10": {
           "id:3": 135,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 36
         },
-        "42:10": {
+        "43:10": {
           "id:3": 149,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
-          "y:3": 312
+          "y:3": 360
         },
-        "43:10": {
+        "44:10": {
           "id:3": 187,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 552
+          "y:3": 564
         },
-        "44:10": {
+        "45:10": {
           "id:3": 366,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 552
+          "y:3": 564
         }
       }
     },
@@ -23872,139 +25545,90 @@
           "y:3": 48
         },
         "43:10": {
-          "id:3": 80,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 96
-        },
-        "44:10": {
-          "id:3": 81,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 60
-        },
-        "45:10": {
-          "id:3": 82,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 168
-        },
-        "46:10": {
-          "id:3": 83,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 96
-        },
-        "47:10": {
-          "id:3": 84,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 216,
-          "y:3": 96
-        },
-        "48:10": {
-          "id:3": 85,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 132
-        },
-        "49:10": {
-          "id:3": 86,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 24
-        },
-        "50:10": {
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": -108
         },
-        "51:10": {
+        "44:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": -12
         },
-        "52:10": {
+        "45:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -12
         },
-        "53:10": {
+        "46:10": {
           "id:3": 97,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 240
         },
-        "54:10": {
+        "47:10": {
           "id:3": 104,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -204,
           "y:3": 312
         },
-        "55:10": {
+        "48:10": {
           "id:3": 130,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -204,
           "y:3": 228
         },
-        "56:10": {
+        "49:10": {
           "id:3": 147,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 96
         },
-        "57:10": {
+        "50:10": {
           "id:3": 148,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -144
         },
-        "58:10": {
+        "51:10": {
           "id:3": 170,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 60,
           "y:3": 228
         },
-        "59:10": {
+        "52:10": {
           "id:3": 228,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 144
         },
-        "60:10": {
+        "53:10": {
           "id:3": 244,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 288
         },
-        "61:10": {
+        "54:10": {
           "id:3": 375,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": -72
         },
-        "62:10": {
+        "55:10": {
           "id:3": 376,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -24185,8 +25809,8 @@
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 294
+          "x:3": -144,
+          "y:3": 330
         },
         "21:10": {
           "id:3": 121,
@@ -24203,466 +25827,501 @@
           "y:3": 288
         },
         "23:10": {
-          "id:3": 123,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": 294
-        },
-        "24:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 294
         },
-        "25:10": {
+        "24:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 348
         },
-        "26:10": {
+        "25:10": {
           "id:3": 127,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 216
         },
-        "27:10": {
+        "26:10": {
           "id:3": 128,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 288
         },
-        "28:10": {
+        "27:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 252
         },
-        "29:10": {
+        "28:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 192
         },
-        "30:10": {
+        "29:10": {
           "id:3": 158,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 96
         },
-        "31:10": {
+        "30:10": {
           "id:3": 159,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 48
         },
-        "32:10": {
+        "31:10": {
           "id:3": 160,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 108
         },
-        "33:10": {
+        "32:10": {
           "id:3": 161,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 108
         },
-        "34:10": {
+        "33:10": {
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 108
         },
-        "35:10": {
+        "34:10": {
           "id:3": 169,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -312,
           "y:3": 204
         },
-        "36:10": {
+        "35:10": {
           "id:3": 171,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 240
         },
-        "37:10": {
+        "36:10": {
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -354,
           "y:3": 216
         },
-        "38:10": {
+        "37:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -354,
           "y:3": 264
         },
-        "39:10": {
+        "38:10": {
           "id:3": 174,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -312,
           "y:3": 300
         },
-        "40:10": {
+        "39:10": {
           "id:3": 175,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -354,
           "y:3": 312
         },
-        "41:10": {
+        "40:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -330,
           "y:3": 354
         },
-        "42:10": {
+        "41:10": {
           "id:3": 179,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -306,
           "y:3": 264
         },
-        "43:10": {
+        "42:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -330,
           "y:3": 402
         },
-        "44:10": {
+        "43:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -330,
           "y:3": 450
         },
-        "45:10": {
+        "44:10": {
           "id:3": 183,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 348
         },
-        "46:10": {
+        "45:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 348
         },
-        "47:10": {
+        "46:10": {
           "id:3": 185,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 396
         },
-        "48:10": {
+        "47:10": {
           "id:3": 186,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 120
         },
-        "49:10": {
+        "48:10": {
           "id:3": 188,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 24,
           "y:3": 432
         },
-        "50:10": {
+        "49:10": {
           "id:3": 189,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 444
         },
-        "51:10": {
+        "50:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 444
         },
-        "52:10": {
+        "51:10": {
           "id:3": 191,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 48
         },
-        "53:10": {
+        "52:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 48
         },
-        "54:10": {
+        "53:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 48
         },
-        "55:10": {
+        "54:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 24
         },
-        "56:10": {
+        "55:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 72
         },
-        "57:10": {
+        "56:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 12
         },
-        "58:10": {
+        "57:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 12
         },
-        "59:10": {
+        "58:10": {
           "id:3": 198,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 252
         },
-        "60:10": {
+        "59:10": {
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 300
         },
-        "61:10": {
+        "60:10": {
           "id:3": 200,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 348
         },
-        "62:10": {
+        "61:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 396
         },
-        "63:10": {
+        "62:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 348
         },
-        "64:10": {
+        "63:10": {
           "id:3": 203,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 144,
           "y:3": 336
         },
-        "65:10": {
+        "64:10": {
           "id:3": 204,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 72
         },
-        "66:10": {
+        "65:10": {
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 108
         },
-        "67:10": {
+        "66:10": {
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 396
         },
-        "68:10": {
+        "67:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 216
         },
-        "69:10": {
+        "68:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 252
         },
-        "70:10": {
+        "69:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 396
         },
-        "71:10": {
+        "70:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 444
         },
-        "72:10": {
+        "71:10": {
           "id:3": 238,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 516
         },
-        "73:10": {
+        "72:10": {
           "id:3": 239,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 516
         },
-        "74:10": {
+        "73:10": {
           "id:3": 240,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 516
         },
-        "75:10": {
+        "74:10": {
           "id:3": 241,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 54,
           "y:3": 516
         },
-        "76:10": {
+        "75:10": {
           "id:3": 242,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": 516
         },
-        "77:10": {
+        "76:10": {
           "id:3": 243,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": 576
         },
-        "78:10": {
+        "77:10": {
           "id:3": 368,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 396
         },
-        "79:10": {
+        "78:10": {
           "id:3": 369,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -20,
           "y:3": 0
         },
-        "80:10": {
+        "79:10": {
           "id:3": 370,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 44,
           "y:3": 8
         },
-        "81:10": {
+        "80:10": {
           "id:3": 371,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 396
         },
-        "82:10": {
+        "81:10": {
           "id:3": 372,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 396
         },
-        "83:10": {
+        "82:10": {
           "id:3": 373,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -336,
           "y:3": 492
         },
-        "84:10": {
+        "83:10": {
           "id:3": 374,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -336,
           "y:3": 552
         },
-        "85:10": {
+        "84:10": {
           "id:3": 377,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 210,
           "y:3": 336
         },
-        "86:10": {
+        "85:10": {
           "id:3": 378,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 318,
           "y:3": 336
         },
-        "87:10": {
+        "86:10": {
           "id:3": 379,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 348
         },
-        "88:10": {
+        "87:10": {
           "id:3": 380,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 172,
           "y:3": 52
+        },
+        "88:10": {
+          "id:3": 381,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": 294
+        },
+        "89:10": {
+          "id:3": 383,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 228,
+          "y:3": 60
+        },
+        "90:10": {
+          "id:3": 384,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": -24
+        },
+        "91:10": {
+          "id:3": 385,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": -66
+        },
+        "92:10": {
+          "id:3": 386,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -156,
+          "y:3": -24
+        },
+        "93:10": {
+          "id:3": 387,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 180,
+          "y:3": 12
         }
       }
     },
@@ -24695,11 +26354,123 @@
       },
       "quests:9": {
         "0:10": {
-          "id:3": 243,
+          "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 12
+        },
+        "1:10": {
+          "id:3": 82,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": 12
+        },
+        "2:10": {
+          "id:3": 243,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
           "x:3": 0,
           "y:3": 0
+        },
+        "3:10": {
+          "id:3": 391,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -234,
+          "y:3": -66
+        },
+        "4:10": {
+          "id:3": 393,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -72,
+          "y:3": 0
+        },
+        "5:10": {
+          "id:3": 394,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 0,
+          "y:3": -72
+        },
+        "6:10": {
+          "id:3": 395,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -108,
+          "y:3": 12
+        },
+        "7:10": {
+          "id:3": 396,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": 12
+        },
+        "8:10": {
+          "id:3": 397,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -180,
+          "y:3": 12
+        },
+        "9:10": {
+          "id:3": 398,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -228,
+          "y:3": 6
+        },
+        "10:10": {
+          "id:3": 399,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 72
+        },
+        "11:10": {
+          "id:3": 400,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 72
+        },
+        "12:10": {
+          "id:3": 401,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": 72
+        },
+        "13:10": {
+          "id:3": 402,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 72
+        },
+        "14:10": {
+          "id:3": 404,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 192,
+          "y:3": 72
+        },
+        "15:10": {
+          "id:3": 405,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 144,
+          "y:3": 66
+        },
+        "16:10": {
+          "id:3": 406,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": -60
         }
       }
     },
@@ -25120,165 +26891,228 @@
           "y:3": -24
         },
         "7:10": {
-          "id:3": 128,
+          "id:3": 123,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 360,
           "y:3": -24
         },
         "8:10": {
+          "id:3": 128,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 432,
+          "y:3": -24
+        },
+        "9:10": {
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 48
         },
-        "9:10": {
+        "10:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 48
         },
-        "10:10": {
+        "11:10": {
           "id:3": 175,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 48
         },
-        "11:10": {
+        "12:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 48
         },
-        "12:10": {
+        "13:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 48
         },
-        "13:10": {
+        "14:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": 48
         },
-        "14:10": {
+        "15:10": {
           "id:3": 183,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 372,
+          "x:3": 444,
           "y:3": 48
         },
-        "15:10": {
+        "16:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 372,
+          "x:3": 444,
           "y:3": 96
         },
-        "16:10": {
+        "17:10": {
           "id:3": 185,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 372,
+          "x:3": 444,
           "y:3": 144
         },
-        "17:10": {
+        "18:10": {
           "id:3": 198,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": -120
         },
-        "18:10": {
+        "19:10": {
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": -72
         },
-        "19:10": {
+        "20:10": {
           "id:3": 200,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 420,
+          "x:3": 492,
           "y:3": 96
         },
-        "20:10": {
+        "21:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 468,
+          "x:3": 540,
           "y:3": 144
         },
-        "21:10": {
+        "22:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 468,
+          "x:3": 540,
           "y:3": 96
         },
-        "22:10": {
+        "23:10": {
           "id:3": 204,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
+          "x:3": 300,
           "y:3": 48
         },
-        "23:10": {
+        "24:10": {
           "id:3": 206,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 432,
+          "x:3": 504,
           "y:3": -12
         },
-        "24:10": {
+        "25:10": {
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 420,
+          "x:3": 492,
           "y:3": 144
         },
-        "25:10": {
+        "26:10": {
           "id:3": 232,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 96
         },
-        "26:10": {
+        "27:10": {
           "id:3": 233,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 96
         },
-        "27:10": {
+        "28:10": {
           "id:3": 234,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": 96
         },
-        "28:10": {
+        "29:10": {
           "id:3": 235,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 96
         },
-        "29:10": {
+        "30:10": {
           "id:3": 367,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -72,
           "y:3": -24
+        },
+        "31:10": {
+          "id:3": 382,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 204,
+          "y:3": 144
+        },
+        "32:10": {
+          "id:3": 391,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -72,
+          "y:3": -96
+        },
+        "33:10": {
+          "id:3": 393,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 0,
+          "y:3": -96
+        },
+        "34:10": {
+          "id:3": 395,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": -84
+        },
+        "35:10": {
+          "id:3": 396,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": -144
+        },
+        "36:10": {
+          "id:3": 397,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": -144
+        },
+        "37:10": {
+          "id:3": 398,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": -144
+        },
+        "38:10": {
+          "id:3": 403,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 348,
+          "y:3": 48
         }
       }
     },
@@ -25543,7 +27377,43 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "quests:9": {}
+      "quests:9": {
+        "0:10": {
+          "id:3": 370,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": -12
+        },
+        "1:10": {
+          "id:3": 374,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 36
+        },
+        "2:10": {
+          "id:3": 388,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": -12
+        },
+        "3:10": {
+          "id:3": 389,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": -12
+        },
+        "4:10": {
+          "id:3": 390,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": 36
+        }
+      }
     },
     "20:10": {
       "lineID:3": 20,
@@ -25623,6 +27493,13 @@
           "y:3": 0
         },
         "2:10": {
+          "id:3": 242,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 0
+        },
+        "3:10": {
           "id:3": 291,
           "sizeX:3": 36,
           "sizeY:3": 36,
@@ -26521,158 +28398,193 @@
       },
       "quests:9": {
         "0:10": {
+          "id:3": 83,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 180,
+          "y:3": 36
+        },
+        "1:10": {
+          "id:3": 84,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 36
+        },
+        "2:10": {
+          "id:3": 85,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 36
+        },
+        "3:10": {
+          "id:3": 86,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 180,
+          "y:3": 144
+        },
+        "4:10": {
           "id:3": 125,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 144,
           "y:3": 72
         },
-        "1:10": {
+        "5:10": {
           "id:3": 133,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": -12
         },
-        "2:10": {
+        "6:10": {
           "id:3": 134,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
-          "y:3": -12
+          "y:3": 36
         },
-        "3:10": {
+        "7:10": {
           "id:3": 136,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -12
         },
-        "4:10": {
+        "8:10": {
           "id:3": 137,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": -12
         },
-        "5:10": {
+        "9:10": {
           "id:3": 138,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 84
         },
-        "6:10": {
+        "10:10": {
           "id:3": 139,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 84
         },
-        "7:10": {
+        "11:10": {
           "id:3": 140,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 84
         },
-        "8:10": {
+        "12:10": {
           "id:3": 141,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 36
         },
-        "9:10": {
+        "13:10": {
           "id:3": 142,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 144
         },
-        "10:10": {
+        "14:10": {
           "id:3": 143,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": -12
         },
-        "11:10": {
+        "15:10": {
           "id:3": 144,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": -12
         },
-        "12:10": {
+        "16:10": {
           "id:3": 145,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 84
         },
-        "13:10": {
+        "17:10": {
           "id:3": 146,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -12
         },
-        "14:10": {
+        "18:10": {
           "id:3": 162,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 372,
           "y:3": -12
         },
-        "15:10": {
+        "19:10": {
           "id:3": 163,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 420,
           "y:3": -12
         },
-        "16:10": {
+        "20:10": {
           "id:3": 164,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 36
         },
-        "17:10": {
+        "21:10": {
           "id:3": 165,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 36
         },
-        "18:10": {
+        "22:10": {
           "id:3": 166,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": 36
         },
-        "19:10": {
+        "23:10": {
           "id:3": 167,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 372,
           "y:3": 36
         },
-        "20:10": {
+        "24:10": {
           "id:3": 225,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": -12
         },
-        "21:10": {
+        "25:10": {
           "id:3": 226,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 192
+        },
+        "26:10": {
+          "id:3": 392,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": -12
         }
       }
     },
@@ -26739,55 +28651,62 @@
           "y:3": 36
         },
         "1:10": {
+          "id:3": 80,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 84
+        },
+        "2:10": {
           "id:3": 150,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -12
         },
-        "2:10": {
+        "3:10": {
           "id:3": 151,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": -12
         },
-        "3:10": {
+        "4:10": {
           "id:3": 152,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": -12
         },
-        "4:10": {
+        "5:10": {
           "id:3": 153,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 36
         },
-        "5:10": {
+        "6:10": {
           "id:3": 154,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 36
         },
-        "6:10": {
+        "7:10": {
           "id:3": 155,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 156,
           "y:3": 24
         },
-        "7:10": {
+        "8:10": {
           "id:3": 156,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -12
         },
-        "8:10": {
+        "9:10": {
           "id:3": 157,
           "sizeX:3": 24,
           "sizeY:3": 24,

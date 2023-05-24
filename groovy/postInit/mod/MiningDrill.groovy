@@ -1,3 +1,6 @@
+//TODO: replace these with new deposits from susycore 0.0.10
+
+/*
 import classes.*;
 import net.minecraft.init.Blocks;
 
@@ -72,3 +75,5 @@ MINING_DRILL.recipeBuilder()
         .duration(20)
         .EUt(30)
         .buildAndRegister()
+
+ */

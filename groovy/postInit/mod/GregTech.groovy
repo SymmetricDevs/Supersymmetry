@@ -260,9 +260,6 @@ mods.gregtech.assembler.recipeBuilder()
 
 //Ore Recipes
 
-crafting.addShapeless('susy:decompress_lignite_block', metaitem('gemLignite') * 9, [item('susy:resource_block', 3)])
-crafting.addShapeless('susy:decompress_anthracite_block', metaitem('gemAnthracite') * 9, [item('susy:resource_block', 2)])
-
 mods.gregtech.macerator.recipeBuilder()
         .inputs(item('susy:resource_block'))
         .outputs(metaitem('crushedBauxite') * 4)
@@ -278,10 +275,19 @@ mods.gregtech.centrifuge.recipeBuilder()
         .chancedOutput(item('minecraft:clay'), 2500, 250)
         .chancedOutput(item('minecraft:sand'), 2500, 250)
         .chancedOutput(item('minecraft:gravel'), 2500, 250)
-        .chancedOutput(metaitem('dustLimestone'), 1000, 250)
+        .chancedOutput(metaitem('dustLimestone'), 2500, 250)
         .duration(20)
         .EUt(30)
         .buildAndRegister();
+
+mods.gregtech.fluid_solidifier.recipeBuilder()
+        .fluidInputs(fluid('mud') * 250)
+        .notConsumable(metaitem('shape.mold.ball'))
+        .outputs(item('biomesoplenty:mudball') * 1)
+        .duration(40)
+        .EUt(4)
+        .buildAndRegister();
+
 crafting.replaceShaped('susy:home_block', item('susy:home_block'), [
         [null, ore('craftingToolFile'), null],
         [null, ore('stoneSmooth'), null],
@@ -293,3 +299,11 @@ crafting.addShapeless('susy:home_block_2', item('susy:home_block', 2), [item('su
 crafting.addShapeless('susy:home_block_3', item('susy:home_block', 3), [item('susy:home_block', 2)])
 crafting.addShapeless('susy:home_block_4', item('susy:home_block',), [item('susy:home_block', 3)])
 
+// Steam * 960
+mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('water') * 6])
+
+// Steam * 960
+mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('distilled_water') * 6])
+
+// Acetone * 200
+mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('dissolved_calcium_acetate') * 200])

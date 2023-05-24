@@ -1,5 +1,4 @@
 import classes.*;
-//TODO: CHANGE GAS TURBINE RECIPES TO OUTPUT AN AMOUNT OF FLUE GAS THAT IS PROPORTIONAL TO THE DURATION OF THE RECIPE
 //REMOVALS
 
 mods.gregtech.vacuum_freezer.removeByInput(1920, null, [fluid('nether_air') * 4000])
@@ -46,7 +45,7 @@ def Coolants = [
 ];
 
 def CryoHydrogen = new ICryoGas('hydrogen', 'hot_hp_hydrogen', 'hp_hydrogen', 'cold_hp_hydrogen', 'liquid_hydrogen');
-CryoHydrogen.setEUt(200);
+CryoHydrogen.setEUt(30);
 CryoHydrogen.setDuration(100);
 CryoHydrogen.setPowerHX(100);
 CryoHydrogen.setDurationHX(5);
@@ -459,7 +458,7 @@ for (FluidFuel in FluidFuels) {
     if(FluidFuel.gas_turbine){
         recipemap('gas_turbine').recipeBuilder()
                 .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                .fluidInputs(liquid('air') * 1000)
+                .fluidInputs(liquid('air') * 100)
                 .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
                 .duration(FluidFuel.duration)
                 .EUt(-32)
@@ -467,7 +466,7 @@ for (FluidFuel in FluidFuels) {
 
         recipemap('gas_turbine').recipeBuilder()
                 .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                .fluidInputs(liquid('oxygen') * 250)
+                .fluidInputs(liquid('oxygen') * 25)
                 .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
                 .duration(FluidFuel.duration)
                 .EUt(-32)
