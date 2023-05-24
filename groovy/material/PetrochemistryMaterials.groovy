@@ -289,63 +289,88 @@ public class PetrochemistryMaterials {
                 .fluidTemp(773)
                 .build();
 
-        UpgradedLubricatingOilMix = new Material.Builder(20050, "upgraded_lubricating_oil_mix")
+        LightlySteamcrackedKeroseneMix = new Material.Builder(20050, "lightly_steamcracked_kerosene_mix")
+                .fluid()
+                .color(0xebe34d)
+                .fluidTemp(773)
+                .build();
+
+        SeverelySteamcrackedKeroseneMix = new Material.Builder(20051, "severely_steamcracked_kerosene_mix")
+                .fluid()
+                .color(0xf5ed62)
+                .fluidTemp(773)
+                .build();
+
+        LightlyHydrocrackedKeroseneMix = new Material.Builder(20052, "lightly_hydrocracked_kerosene_mix")
+                .fluid()
+                .color(0xccc43f)
+                .fluidTemp(773)
+                .build();
+
+        SeverelyHydrocrackedKeroseneMix = new Material.Builder(20053, "severely_hydrocracked_kerosene_mix")
+                .fluid()
+                .color(0xbdb648)
+                .fluidTemp(773)
+                .build();
+
+
+        UpgradedLubricatingOilMix = new Material.Builder(20054, "upgraded_lubricating_oil_mix")
                 .fluid()
                 .color(0x948f43)
                 .fluidTemp(773)
                 .build();
 
-        UpgradedFuelOilMix = new Material.Builder(20051, "upgraded_fuel_oil_mix")
+        UpgradedFuelOilMix = new Material.Builder(20055, "upgraded_fuel_oil_mix")
                 .fluid()
                 .color(0x918d33)
                 .fluidTemp(773)
                 .build();
 
-        UpgradedDieselMix = new Material.Builder(20052, "upgraded_diesel_mix")
+        UpgradedDieselMix = new Material.Builder(20056, "upgraded_diesel_mix")
                 .fluid()
                 .color(0xbab32f)
                 .fluidTemp(773)
                 .build();
 
-        UpgradedKeroseneMix = new Material.Builder(20053, "upgraded_kerosene_mix")
+        UpgradedKeroseneMix = new Material.Builder(20057, "upgraded_kerosene_mix")
                 .fluid()
                 .color(0xe3db30)
                 .fluidTemp(773)
                 .build();
 
-        UpgradedNaphthaMix = new Material.Builder(20054, "upgraded_naphtha_mix")
+        UpgradedNaphthaMix = new Material.Builder(20058, "upgraded_naphtha_mix")
                 .fluid()
                 .color(0xf0e83e)
                 .fluidTemp(773)
                 .build();
 
-        AlkylatedNaturalGas = new Material.Builder(20055, "alkylated_natural_gas")
+        AlkylatedNaturalGas = new Material.Builder(20059, "alkylated_natural_gas")
                 .fluid(FluidTypes.GAS)
                 .color(0xe6e4c1)
                 .build();
 
-        AlkylatedRefineryGas = new Material.Builder(20056, "alkylated_refinery_gas")
+        AlkylatedRefineryGas = new Material.Builder(20060, "alkylated_refinery_gas")
                 .fluid(FluidTypes.GAS)
                 .color(0xf7f5cb)
                 .build();
 
-        Syngas = new Material.Builder(20057, "syngas")
+        Syngas = new Material.Builder(20061, "syngas")
                 .fluid(FluidTypes.GAS)
                 .color(0xf2ecdc)
                 .build();
 
-        ReformedSyngas = new Material.Builder(20058, "reformed_syngas")
+        ReformedSyngas = new Material.Builder(20062, "reformed_syngas")
                 .fluid(FluidTypes.GAS)
                 .color(0xfcf3d9)
                 .fluidTemp(800)
                 .build();
 
-        SulfuricRefineryGas = new Material.Builder(20059, "sulfuric_refinery_gas")
+        SulfuricRefineryGas = new Material.Builder(20063, "sulfuric_refinery_gas")
                 .fluid(FluidTypes.GAS)
                 .color(0xe3e3d8)
                 .build();
 
-        TreatedSulfuricNaphtha = new Material.Builder(20060, "treated_sulfuric_naphtha")
+        TreatedSulfuricNaphtha = new Material.Builder(20064, "treated_sulfuric_naphtha")
                 .fluid(FluidTypes.GAS)
                 .color(0xcec929)
                 .build();

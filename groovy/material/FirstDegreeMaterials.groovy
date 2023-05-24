@@ -38,7 +38,7 @@ public class FirstDegreeMaterials{
 
     public static void register() {
 
-        log.infoMC("Registering First Materials!");
+        log.infoMC("Registering First Degree Materials!");
 
 
         // IDs 8000-8100: Pure Elements
@@ -285,7 +285,7 @@ public class FirstDegreeMaterials{
                 .components(Boron, 2, Oxygen, 3)
                 .build()
 
-        ZincChloride = enew Material.Builder(8127, 'zinc_chloride')
+        ZincChloride = new Material.Builder(8127, 'zinc_chloride')
                 .dust().fluid()
                 .components(Zinc, 1, Chlorine, 2)
                 .colorAverage()
@@ -503,153 +503,140 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        DiethylEther = new Material.Builder(8162, 'diethyl_ether')
-                .fluid()
-                .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
-                .colorAverage()
-                .build()
-                .setFormula("(C2H5)2O", true);
-
-        DiethylEtherSolution = new Material.Builder(8163, 'diethyl_ether_solution')
-                .fluid()
-                .components(Water, 1, SulfuricAcid, 1, DiethylEther, 1)
-                .colorAverage()
-                .build();
-
-        HydrogenBromide = new Material.Builder(8164, 'hydrogen_bromide')
+        HydrogenBromide = new Material.Builder(8162, 'hydrogen_bromide')
                 .fluid()
                 .components(Hydrogen, 1, Bromine, 1)
                 .colorAverage()
                 .build();
 
-        DiluteCalciumChlorideSolution = new Material.Builder(8165, "dilute_calcium_chloride_solution")
+        DiluteCalciumChlorideSolution = new Material.Builder(8163, "dilute_calcium_chloride_solution")
                 .fluid()
                 .components(Water, 2, CalciumChloride, 1)
                 .colorAverage()
                 .build();
 
-        DiluteRockSaltSolution = new Material.Builder(8166, "dilute_rock_salt_solution")
+        DiluteRockSaltSolution = new Material.Builder(8164, "dilute_rock_salt_solution")
                 .fluid()
                 .components(Water, 2, RockSalt, 1)
                 .colorAverage()
                 .build();
 
-        DryCarbonMonoxide = new Material.Builder(8167, "dry_carbon_monoxide")
+        DryCarbonMonoxide = new Material.Builder(8165, "dry_carbon_monoxide")
                 .fluid(FluidTypes.GAS)
                 .components(CarbonMonoxide, 1)
                 .color(0x202329)
                 .build();
 
-        AmmoniaSolution = new Material.Builder(8168, "ammonia_solution")
+        AmmoniaSolution = new Material.Builder(8166, "ammonia_solution")
                 .fluid()
                 .components(Water, 1, Ammonia, 1)
                 .colorAverage()
                 .build();
 
-        SaltpeterSolution = new Material.Builder(8169, 'saltpeter_solution')
+        SaltpeterSolution = new Material.Builder(8167, 'saltpeter_solution')
                 .fluid()
                 .components(Water, 1, Saltpeter, 1)
                 .colorAverage()
                 .build();
 
-        SaltySaltpeterSolution = new Material.Builder(8170, 'salty_saltpeter_solution')
+        SaltySaltpeterSolution = new Material.Builder(8168, 'salty_saltpeter_solution')
                 .fluid()
                 .components(SaltWater, 1, Saltpeter, 1)
                 .colorAverage()
                 .build();
 
-        CarbonDisulfide = new Material.Builder(8171, 'carbon_disulfide')
+        CarbonDisulfide = new Material.Builder(8169, 'carbon_disulfide')
                 .fluid()
                 .components(Carbon, 1, Sulfur, 2)
                 .colorAverage()
                 .build();
 
-        HighPressureWater = new Material.Builder(8172, "high_pressure_water")
+        HighPressureWater = new Material.Builder(8170, "high_pressure_water")
                 .fluid()
                 .colorAverage()
                 .components(Water, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
 
-        Cryolite = new Material.Builder(8173, "cryolite")
+        Cryolite = new Material.Builder(8171, "cryolite")
                 .fluid().dust()
                 .components(Sodium, 3, Aluminium, 1, Fluorine, 6)
                 .color(0x2497a6)
                 .build();
 
-        EthanolSolution = new Material.Builder(8174, "ethanol_solution")
+        EthanolSolution = new Material.Builder(8172, "ethanol_solution")
                 .fluid()
                 .components(Ethanol, 1, PhosphoricAcid, 1)
                 .colorAverage()
                 .build();
 
-        HeavyWater = new Material.Builder(8175, "heavy_water")
+        HeavyWater = new Material.Builder(8173, "heavy_water")
                 .fluid()
                 .components(Deuterium, 2, Oxygen, 1)
                 .color(0x2c37b0)
                 .build();
 
-        HeavyHydrogenSulfide = new Material.Builder(8176, "heavy_hydrogen_sulfide")
+        HeavyHydrogenSulfide = new Material.Builder(8174, "heavy_hydrogen_sulfide")
                 .fluid()
                 .components(Deuterium, 2, Sulfur, 1)
                 .color(0xb09a2c)
                 .build();
 
-        SemiHeavyHydrogenSulfide = new Material.Builder(8177, "semiheavy_hydrogen_sulfide")
+        SemiHeavyHydrogenSulfide = new Material.Builder(8175, "semiheavy_hydrogen_sulfide")
                 .fluid(FluidTypes.GAS)
                 .components(Hydrogen, 1, Deuterium, 1, Sulfur, 1)
                 .color(0xc29836)
                 .build();
 
-        SemiHeavyWater = new Material.Builder(8178, "semiheavy_water")
+        SemiHeavyWater = new Material.Builder(8176, "semiheavy_water")
                 .fluid()
                 .components(Hydrogen, 1, Deuterium, 1, Oxygen, 1)
                 .color(0x364ec2)
                 .build();
 
-        ImpureSemiheavyWater = new Material.Builder(8179, "impure_semiheavy_water")
+        ImpureSemiheavyWater = new Material.Builder(8177, "impure_semiheavy_water")
                 .fluid()
                 .components(Water, 1, SemiHeavyWater, 1)
                 .colorAverage()
                 .build();
 
-        IsotopicallyPureHydrogenSulfide = new Material.Builder(8180, "isotopically_pure_hydrogen_sulfide")
+        IsotopicallyPureHydrogenSulfide = new Material.Builder(8178, "isotopically_pure_hydrogen_sulfide")
                 .fluid(FluidTypes.GAS)
                 .components(HydrogenSulfide, 1)
                 .color(0xffab66)
                 .build();
 
-        ImpureSemiheavyHydrogenSulfide = new Material.Builder(8181, "impure_semiheavy_hydrogen_sulfide")
+        ImpureSemiheavyHydrogenSulfide = new Material.Builder(8179, "impure_semiheavy_hydrogen_sulfide")
                 .fluid(FluidTypes.GAS)
                 .components(HydrogenSulfide, 1, SemiHeavyHydrogenSulfide, 1)
                 .colorAverage()
                 .build();
 
-        ImpureHeavyHydrogenSulfide = new Material.Builder(8182, "impure_heavy_hydrogen_sulfide")
+        ImpureHeavyHydrogenSulfide = new Material.Builder(8180, "impure_heavy_hydrogen_sulfide")
                 .fluid(FluidTypes.GAS)
                 .components(HydrogenSulfide, 1, HeavyHydrogenSulfide, 1)
                 .colorAverage()
                 .build();
 
-        SeaWater = new Material.Builder(8183, "sea_water")
+        SeaWater = new Material.Builder(8181, "sea_water")
                 .fluid()
                 .components(Water, 98, Salt, 2)
                 .color(0x3c5bc2)
                 .build();
 
-        TetrafluoroboricAcid = new Material.Builder(8184, "tetrafluoroboric_acid")
+        TetrafluoroboricAcid = new Material.Builder(8182, "tetrafluoroboric_acid")
                 .fluid()
                 .components(Water, 3, Hydrogen, 1, Boron, 1, Fluorine, 4)
                 .color(0xa4ab91)
                 .build();
 
-        BoronTrichloride = new Material.Builder(8185, "boron_trichloride")
+        BoronTrichloride = new Material.Builder(8183, "boron_trichloride")
                 .fluid(FluidTypes.GAS)
                 .components(Boron, 1, Chlorine, 3)
                 .colorAverage()
                 .build();
 
-        ThioarseniteSolution = new Material.Builder(8186, "thioarsenite_solution")
+        ThioarseniteSolution = new Material.Builder(8184, "thioarsenite_solution")
                 .fluid()
                 .components(Sodium, 3, Arsenic, 1, Sulfur, 3, Water, 1)
                 .flags(DISABLE_DECOMPOSITION)
@@ -657,7 +644,7 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula("(?)(Na3AsS3)(H2O)", true);
 
-        TetrachloroantimonateSolution = new Material.Builder(8187, "tetrachloroantimonate_solution")
+        TetrachloroantimonateSolution = new Material.Builder(8185, "tetrachloroantimonate_solution")
                 .fluid()
                 .components(Hydrogen, 1, Antimony, 1, Chlorine, 4, Salt, 2, Water, 14)
                 .flags(DISABLE_DECOMPOSITION)
@@ -665,13 +652,13 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula("(NaCl)14(NaSbCl4)(H2O)22", true);
 
-        Arsine = new Material.Builder(8188, "arsine")
+        Arsine = new Material.Builder(8186, "arsine")
                 .fluid(FluidTypes.GAS)
                 .components(Arsenic, 1, Hydrogen, 3)
                 .colorAverage()
                 .build();
 
-        ThioarsenateSolution = new Material.Builder(8189, "thioarsenate_solution")
+        ThioarsenateSolution = new Material.Builder(8187, "thioarsenate_solution")
                 .fluid()
                 .components(Sodium, 3, Arsenic, 1, Sulfur, 4, Water, 1)
                 .flags(DISABLE_DECOMPOSITION)
@@ -680,7 +667,7 @@ public class FirstDegreeMaterials{
                 .setFormula("(?)(Na3AsS4)(H2O)", true);
 
 
-        CobaltiteLeachSolution = new Material.Builder(8190, "cobaltite_leach_solution")
+        CobaltiteLeachSolution = new Material.Builder(8188, "cobaltite_leach_solution")
                 .fluid()
                 .components(Cobalt, 3, Nitrogen, 6, Oxygen, 32, Hydrogen, 13, Arsenic, 3)
                 .flags(DISABLE_DECOMPOSITION)
@@ -688,7 +675,7 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula("(Co(NO3)2)3(H3AsO4)3(H2O)2", true);
 
-        ArsenopyriteLeachSolution = new Material.Builder(8191, "arsenopyrite_leach_solution")
+        ArsenopyriteLeachSolution = new Material.Builder(8189, "arsenopyrite_leach_solution")
                 .fluid()
                 .components(Iron, 3, Nitrogen, 6, Oxygen, 32, Hydrogen, 13, Arsenic, 3)
                 .flags(DISABLE_DECOMPOSITION)
@@ -696,14 +683,14 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula("(Fe(NO3)2)3(H3AsO4)3(H2O)2", true);
 
-        ArsenousAcid = new Material.Builder(8192, "arsenous_acid")
+        ArsenousAcid = new Material.Builder(8190, "arsenous_acid")
                 .fluid()
                 .components(Hydrogen, 3, Arsenic, 1, Oxygen, 3)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build();
 
-        AlkalineArseniteSolution = new Material.Builder(8193, "alkaline_arsenite_solution")
+        AlkalineArseniteSolution = new Material.Builder(8191, "alkaline_arsenite_solution")
                 .fluid()
                 .components(Sodium, 3, Arsenic, 2, Oxygen, 3, Sulfur, 3)
                 .flags(DISABLE_DECOMPOSITION)
@@ -711,7 +698,7 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula("(Na3AsO3)(Na3AsS3)(H2O)9", true);
 
-        SaltyArsenousAcid = new Material.Builder(8194, "salty_arsenous_acid")
+        SaltyArsenousAcid = new Material.Builder(8192, "salty_arsenous_acid")
                 .fluid()
                 .components(Salt, 12, Hydrogen, 6, Arsenic, 2, Oxygen, 6)
                 .flags(DISABLE_DECOMPOSITION)
@@ -719,7 +706,7 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula("(NaCl)12(H3AsO3)2(H2O)21", true);
 
-        SperryliteWaste = new Material.Builder(8195, "sperrylite_waste")
+        SperryliteWaste = new Material.Builder(8193, "sperrylite_waste")
                 .fluid()
                 .components(Water, 3, Chlorine, 2, Cobalt, 1, Nickel, 1)
                 .flags(DISABLE_DECOMPOSITION)
@@ -727,7 +714,7 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula("(H2O)3(Ni,Co)Cl2", true);
 
-        AcidicCopperSolution = new Material.Builder(8196, "acidic_copper_solution")
+        AcidicCopperSolution = new Material.Builder(8194, "acidic_copper_solution")
                 .fluid()
                 .components(Water, 4, Copper, 2, Sulfur, 2, Oxygen, 8, NitricAcid, 2)
                 .flags(DISABLE_DECOMPOSITION)

@@ -22,5 +22,24 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
+
+        DiethylEtherSolution = new Material.Builder(21001, 'diethyl_ether_solution')
+                .fluid()
+                .components(Water, 1, SulfuricAcid, 1, material('diethyl_ether'), 1)
+                .colorAverage()
+                .build();
+
+        LithiumSolution = new Material.Builder(21002, 'lithium_solution')
+                .fluid()
+                .components(Lithium, 2, material('diethyl_ether'), 1)
+                .colorAverage()
+                .build();
+
+        DimethylacetamideSolution = new Material.Builder(21003, 'dimethylacetamide_solution')
+                .fluid()
+                .components(Water, 1, Dimethylacetamide, 1)
+                .colorAverage()
+                .build();
+
     }
 }

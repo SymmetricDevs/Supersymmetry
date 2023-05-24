@@ -96,7 +96,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        MemoryFoam = Material.Builder(15013, 'memory_foam')
+        MemoryFoam = new Material.Builder(15013, 'memory_foam')
                 .polymer(1)
                 .flags(GENERATE_PLATE)
                 .color(0xFFFFFF)
@@ -347,415 +347,409 @@ public class OrganicChemistryMaterials {
                 .fluidTemp(450)
                 .build();
 
-        DimethylacetamideSolution = new Material.Builder(15056, 'dimethylacetamide_solution')
-                .fluid()
-                .components(Water, 1, Dimethylacetamide, 1)
-                .colorAverage()
-                .build();
-
-        Dimethylacetamide = new Material.Builder(15057, 'dimethylacetamide')
+        Dimethylacetamide = new Material.Builder(15056, 'dimethylacetamide')
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 9, Nitrogen, 1, Oxygen, 1)
                 .colorAverage()
                 .build();
 
-        PBISolution = new Material.Builder(15058, 'pbi_solution')
+        PBISolution = new Material.Builder(15057, 'pbi_solution')
                 .fluid()
                 .components(Dimethylacetamide, 1, Polybenzimidazole, 7)
                 .color(0x171410)
                 .build();
 
-        PBIWaste = new Material.Builder(15059, 'pbi_waste')
+        PBIWaste = new Material.Builder(15058, 'pbi_waste')
                 .fluid()
                 .color(0x202226)
                 .build();
 
-        Hydroxylamine = new Material.Builder(15060, 'hydroxylamine')
+        Hydroxylamine = new Material.Builder(15059, 'hydroxylamine')
                 .fluid()
                 .components(Hydrogen, 3, Nitrogen, 1, Oxygen, 1)
                 .colorAverage()
                 .build();
 
-        Cyclohexanone = new Material.Builder(15061, 'cyclohexanone')
+        Cyclohexanone = new Material.Builder(15060, 'cyclohexanone')
                 .fluid()
                 .components(Hydrogen, 3, Nitrogen, 1, Oxygen, 1)
                 .color(0x2b1e11)
                 .build();
 
-        DilutedCyclohexanone = new Material.Builder(15062, 'diluted_cyclohexanone')
+        DilutedCyclohexanone = new Material.Builder(15061, 'diluted_cyclohexanone')
                 .fluid()
                 .components(Water, 1, Cyclohexanone, 1)
                 .colorAverage()
                 .build();
 
-        CaprolactamOximeSolution = new Material.Builder(15063, 'caprolactam_oxime_solution')
+        CaprolactamOximeSolution = new Material.Builder(15062, 'caprolactam_oxime_solution')
                 .fluid()
                 .components(SulfuricAcid, 1, CaprolactamOxime, 1)
                 .colorAverage()
                 .build();
 
-        BisphenolADiglycidylEther = new Material.Builder(15064, 'bisphenola_diglycidyl_ether')
+        BisphenolADiglycidylEther = new Material.Builder(15063, 'bisphenola_diglycidyl_ether')
                 .fluid()
                 .components(Carbon, 21, Hydrogen, 24, Oxygen, 4)
                 .colorAverage()
                 .build();
 
-        ImpureEpoxyResin = new Material.Builder(15065, 'impure_epoxy_resin')
+        ImpureEpoxyResin = new Material.Builder(15064, 'impure_epoxy_resin')
                 .fluid()
                 .components(SaltWater, 1, Epoxy, 1)
                 .colorAverage()
                 .build();
 
-        UncuredEpoxyResin = new Material.Builder(15066, 'uncured_epoxy_resin')
+        UncuredEpoxyResin = new Material.Builder(15065, 'uncured_epoxy_resin')
                 .fluid()
                 .components(Epoxy, 1)
                 .colorAverage()
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
 
-        TNTSolution = new Material.Builder(15067, 'tnt_solution')
+        TNTSolution = new Material.Builder(15066, 'tnt_solution')
                 .fluid()
                 .components(TNT, 1, DilutedSulfuricAcid, 1)
                 .colorAverage()
                 .build();
 
-        VinylChlorideSolution = new Material.Builder(15068, 'vinyl_chloride_solution')
+        VinylChlorideSolution = new Material.Builder(15067, 'vinyl_chloride_solution')
                 .fluid()
                 .components(Water, 1, VinylChloride, 1)
                 .colorAverage()
                 .build();
 
-        PolyvinylChlorideSolution = new Material.Builder(15069, 'polyvinyl_chloride_solution')
+        PolyvinylChlorideSolution = new Material.Builder(15068, 'polyvinyl_chloride_solution')
                 .fluid()
                 .components(Water, 1, PolyvinylChloride, 1)
                 .colorAverage()
                 .build();
 
-        StyreneSolution = new Material.Builder(15070, 'styrene_solution')
+        StyreneSolution = new Material.Builder(15069, 'styrene_solution')
                 .fluid()
                 .components(Water, 1, Styrene, 1)
                 .colorAverage()
                 .build();
 
-        PolystyreneSolution = new Material.Builder(15071, 'polystyrene_solution')
+        PolystyreneSolution = new Material.Builder(15070, 'polystyrene_solution')
                 .fluid()
                 .components(Water, 1, Polystyrene, 1)
                 .colorAverage()
                 .build();
 
-        VinylAcetateSolution = new Material.Builder(15072, 'vinyl_acetate_solution')
+        VinylAcetateSolution = new Material.Builder(15071, 'vinyl_acetate_solution')
                 .fluid()
                 .components(Water, 1, VinylAcetate, 1)
                 .colorAverage()
                 .build();
 
-        PolyvinylAcetateSolution = new Material.Builder(15073, 'polyvinyl_acetate_solution')
+        PolyvinylAcetateSolution = new Material.Builder(15072, 'polyvinyl_acetate_solution')
                 .fluid()
                 .components(Water, 1, PolyvinylAcetate, 1)
                 .colorAverage()
                 .build();
 
-        Bleach = new Material.Builder(15074, 'bleach')
+        Bleach = new Material.Builder(15073, 'bleach')
                 .fluid()
                 .components(Sodium, 1, Chlorine, 1, Oxygen, 1)
                 .colorAverage()
                 .build();
 
-        ImpureBleach = new Material.Builder(15075, 'impure_bleach')
+        ImpureBleach = new Material.Builder(15074, 'impure_bleach')
                 .fluid()
                 .components(Water, 3, Bleach, 1, Salt, 1)
                 .colorAverage()
                 .build();
 
-        OneFourDichlorobenzeneSolution = new Material.Builder(15076, 'one_four_dichlorobenzene_solution')
+        OneFourDichlorobenzeneSolution = new Material.Builder(15075, 'one_four_dichlorobenzene_solution')
                 .fluid()
                 .components(Toluene, 1, Dichlorobenzene, 1)
                 .colorAverage()
                 .build();
 
-        OneTwoDichlorobenzeneSolution = new Material.Builder(15077, 'one_two_dichlorobenzene_solution')
+        OneTwoDichlorobenzeneSolution = new Material.Builder(15076, 'one_two_dichlorobenzene_solution')
                 .fluid()
                 .components(Toluene, 1, OneTwoDichlorobenzene, 1)
                 .colorAverage()
                 .build();
 
-        DryEthanol = new Material.Builder(15078, 'dry_ethanol')
+        DryEthanol = new Material.Builder(15077, 'dry_ethanol')
                 .fluid()
                 .components(Ethanol, 1)
                 .color(0xeb6b34)
                 .build();
 
-        StyreneButadieneSolution = new Material.Builder(15079, 'styrene_butadiene_solution')
+        StyreneButadieneSolution = new Material.Builder(15078, 'styrene_butadiene_solution')
                 .fluid()
                 .components(Styrene, 1, Butadiene, 1, Ethanol, 1)
                 .colorAverage()
                 .build();
 
-        Bromobutane = new Material.Builder(15080, 'bromobutane')
+        Bromobutane = new Material.Builder(15079, 'bromobutane')
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 9, Bromine, 1)
                 .colorAverage()
                 .build();
 
-        DilutedBromobutane = new Material.Builder(15081, 'diluted_bromobutane')
+        DilutedBromobutane = new Material.Builder(15080, 'diluted_bromobutane')
                 .fluid()
                 .components(Water, 1, Bromobutane, 1)
                 .colorAverage()
                 .build();
 
-        Butyllithium = new Material.Builder(15082, 'butyllithium')
+        Butyllithium = new Material.Builder(15081, 'butyllithium')
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 9, Lithium, 1)
                 .colorAverage()
                 .build();
 
-        DilutedButyllithium = new Material.Builder(15083, 'diluted_butyllithium')
+        DilutedButyllithium = new Material.Builder(15082, 'diluted_butyllithium')
                 .fluid()
                 .components(Water, 1, Butyllithium, 1)
                 .colorAverage()
                 .build();
 
-        PolymerizedStyreneButadieneSolution = new Material.Builder(15084, 'polymerized_styrene_butadiene_solution')
+        PolymerizedStyreneButadieneSolution = new Material.Builder(15083, 'polymerized_styrene_butadiene_solution')
                 .fluid()
                 .color(0x332e2c)
                 .color(0x3d2509)
                 .build();
 
-        MethylFormate = new Material.Builder(15085, "methyl_formate")
+        MethylFormate = new Material.Builder(15084, "methyl_formate")
                 .fluid()
                 .components(Carbon, 2, Hydrogen, 4, Oxygen, 2)
                 .colorAverage()
                 .build();
 
-        MethylFormateSolution = new Material.Builder(15086, "methyl_formate_solution")
+        MethylFormateSolution = new Material.Builder(15085, "methyl_formate_solution")
                 .fluid(FluidTypes.GAS)
                 .components(Water, 1, MethylFormate, 1, SodiumHydroxide, 1)
                 .colorAverage()
                 .build();
 
-        Acetylene = new Material.Builder(15087, "acetylene")
+        Acetylene = new Material.Builder(15086, "acetylene")
                 .fluid(FluidTypes.GAS)
                 .components(Carbon, 2, Hydrogen, 2)
                 .colorAverage()
                 .build();
 
-        DilutedDichloroethane = new Material.Builder(15088, 'diluted_dichloroethane')
+        DilutedDichloroethane = new Material.Builder(15087, 'diluted_dichloroethane')
                 .fluid()
                 .components(Water, 3, Dichloroethane, 1)
                 .colorAverage()
                 .build();
 
-        Formaldehyde = new Material.Builder(15089, "formaldehyde")
+        Formaldehyde = new Material.Builder(15088, "formaldehyde")
                 .fluid(FluidTypes.GAS)
                 .components(Carbon, 1, Hydrogen, 2, Oxygen, 1)
                 .colorAverage()
                 .build();
 
-        MethylamineMix = new Material.Builder(15090, 'methylamine_mix')
+        MethylamineMix = new Material.Builder(15089, 'methylamine_mix')
                 .fluid()
                 .color(0x6b4ea6)
                 .build();
 
-        Methylamine = new Material.Builder(15091, 'methylamine')
+        Methylamine = new Material.Builder(15090, 'methylamine')
                 .fluid()
                 .components(Carbon, 1, Hydrogen, 5, Nitrogen, 1)
                 .color(0x794c91)
                 .build()
                 .setFormula("CH3NH2", true);
 
-        Trimethylamine = new Material.Builder(15092, 'trimethylamine')
+        Trimethylamine = new Material.Builder(15091, 'trimethylamine')
                 .fluid()
                 .components(Carbon, 3, Hydrogen, 9, Nitrogen, 1)
                 .color(0x4c2461)
                 .build();
 
-        Butynediol = new Material.Builder(15093, 'butynediol')
+        Butynediol = new Material.Builder(15092, 'butynediol')
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 6, Oxygen, 2)
                 .colorAverage()
                 .build();
 
-        Butanediol = new Material.Builder(15094, 'butanediol')
+        Butanediol = new Material.Builder(15093, 'butanediol')
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 10, Oxygen, 2)
                 .colorAverage()
                 .build();
 
-        GammaButyrolactone = new Material.Builder(15095, 'gamma_butyrolactone')
+        GammaButyrolactone = new Material.Builder(15094, 'gamma_butyrolactone')
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 6, Oxygen, 2)
                 .color(0x4242f5)
                 .build();
 
-        DilutedMethylIIPyrrolidone = new Material.Builder(15096, 'diluted_methyl_ii_pyrrolidone')
+        DilutedMethylIIPyrrolidone = new Material.Builder(15095, 'diluted_methyl_ii_pyrrolidone')
                 .fluid()
                 .components(Water, 1, NMethylIIPyrrolidone, 1)
                 .colorAverage()
                 .build();
 
-        DimethyldichlorosilaneEmulsion = new Material.Builder(15097, 'dimethyldichlorosilane_emulsion')
+        DimethyldichlorosilaneEmulsion = new Material.Builder(15096, 'dimethyldichlorosilane_emulsion')
                 .fluid()
                 .color(0x542a4c)
                 .build();
 
-        TetrafluoroethyleneEmulsion = new Material.Builder(15098, 'tetrafluoroethylene_emulsion')
+        TetrafluoroethyleneEmulsion = new Material.Builder(15097, 'tetrafluoroethylene_emulsion')
                 .fluid()
                 .color(0x3b2e38)
                 .build();
 
-        Dichloromethane = new Material.Builder(15099, 'dichloromethane')
+        Dichloromethane = new Material.Builder(15098, 'dichloromethane')
                 .fluid()
                 .components(Carbon, 1, Hydrogen, 2, Chlorine, 2)
                 .colorAverage()
                 .build();
 
-        CarbonTetrachloride = new Material.Builder(15100, 'carbon_tetrachloride')
+        CarbonTetrachloride = new Material.Builder(15099, 'carbon_tetrachloride')
                 .fluid()
                 .components(Carbon, 1, Chlorine, 4)
                 .colorAverage()
                 .build();
 
-        PhthalicAcidSolution = new Material.Builder(15101, 'phthalic_acid_solution')
+        PhthalicAcidSolution = new Material.Builder(15100, 'phthalic_acid_solution')
                 .fluid()
                 .components(Dichloroethane, 1, PhthalicAcid, 1)
                 .color(0xdbbbbd)
                 .build();
 
-        Butanol = new Material.Builder(15102, 'butanol')
+        Butanol = new Material.Builder(15101, 'butanol')
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 7, Oxygen, 1)
                 .colorAverage()
                 .build();
 
-        PolytetrafluoroethyleneSolution = new Material.Builder(15103, 'polytetrafluoroethylene_solution')
+        PolytetrafluoroethyleneSolution = new Material.Builder(15102, 'polytetrafluoroethylene_solution')
                 .fluid()
                 .components(Water, 1, Polytetrafluoroethylene, 1)
                 .colorAverage()
                 .build();
 
-        MixedNitrochlorobenzeneSolution = new Material.Builder(15104, 'mixed_nitrochlorobenzene_solution')
+        MixedNitrochlorobenzeneSolution = new Material.Builder(15103, 'mixed_nitrochlorobenzene_solution')
                 .fluid()
                 .color(0xc18c18)
                 .build();
 
-        MixedDichlorobenzeneSolution = new Material.Builder(15105, 'mixed_dichlorobenzene_solution')
+        MixedDichlorobenzeneSolution = new Material.Builder(15104, 'mixed_dichlorobenzene_solution')
                 .fluid()
                 .color(0xFF7F7F)
                 .build();
 
-        Novolacs = new Material.Builder(15106, 'novolacs')
+        Novolacs = new Material.Builder(15105, 'novolacs')
                 .fluid()
                 .color(0xbfa26f)
                 .build();
 
-        SiliconTetrachloride = new Material.Builder(15107, 'silicon_tetrachloride')
+        SiliconTetrachloride = new Material.Builder(15106, 'silicon_tetrachloride')
                 .fluid()
                 .components(Silicon, 1, Chlorine, 4)
                 .color(0x63827f)
                 .build();
 
-        PurifiedSiliconTetrachloride = new Material.Builder(15108, 'purified_silicon_tetrachloride')
+        PurifiedSiliconTetrachloride = new Material.Builder(15107, 'purified_silicon_tetrachloride')
                 .fluid()
                 .components(Silicon, 1, Chlorine, 4)
                 .color(0x7fa3a0)
                 .build();
 
-        Ethanolamine = new Material.Builder(15109, 'ethanolamine')
+        Ethanolamine = new Material.Builder(15108, 'ethanolamine')
                 .fluid()
                 .components(Carbon, 2, Hydrogen, 7, Nitrogen, 1, Oxygen, 1)
                 .color(0x56a6e3)
                 .build();
 
-        Diethanolamine = new Material.Builder(15110, 'diethanolamine')
+        Diethanolamine = new Material.Builder(15109, 'diethanolamine')
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 11, Nitrogen, 1, Oxygen, 2)
                 .color(0x4296d6)
                 .build();
 
-        Triethanolamine = new Material.Builder(15111, 'triethanolamine')
+        Triethanolamine = new Material.Builder(15110, 'triethanolamine')
                 .fluid()
                 .components(Carbon, 6, Hydrogen, 15, Nitrogen, 1, Oxygen, 3)
                 .color(0x2e86c9)
                 .build();
 
-        EthyleneGlycol = new Material.Builder(15112, 'ethylene_glycol')
+        EthyleneGlycol = new Material.Builder(15111, 'ethylene_glycol')
                 .fluid()
                 .components(Carbon, 2, Hydrogen, 6, Oxygen, 2)
                 .color(0x2e86c9)
                 .build();
 
-        EthyleneOxide = new Material.Builder(15113, 'ethylene_oxide')
+        EthyleneOxide = new Material.Builder(15112, 'ethylene_oxide')
                 .fluid(FluidTypes.GAS)
                 .components(Carbon, 2, Hydrogen, 4, Oxygen, 1)
                 .colorAverage()
                 .build();
 
-        EthanolamineMix = new Material.Builder(15114, 'ethanolamine_mix')
+        EthanolamineMix = new Material.Builder(15113, 'ethanolamine_mix')
                 .fluid()
                 .color(0x3e86bd)
                 .build();
 
-        RichAmine = new Material.Builder(15115, 'rich_amine')
+        RichAmine = new Material.Builder(15114, 'rich_amine')
                 .fluid()
                 .color(0x3ea8bd)
                 .build();
 
-        Pentane = new Material.Builder(15116, 'pentane')
+        Pentane = new Material.Builder(15115, 'pentane')
                 .fluid()
                 .components(Carbon, 5, Hydrogen, 12)
                 .color(0xe8e7be)
                 .build();
 
-        Hexane = new Material.Builder(15117, 'hexane')
+        Hexane = new Material.Builder(15116, 'hexane')
                 .fluid()
                 .components(Carbon, 6, Hydrogen, 14)
                 .color(0xcfceb6)
                 .build();
 
-        Furfural = new Material.Builder(15118, 'furfural')
+        Furfural = new Material.Builder(15117, 'furfural')
                 .fluid()
                 .components(Carbon, 5, Hydrogen, 4, Oxygen, 2)
                 .colorAverage()
                 .build();
 
-        Cresol = new Material.Builder(15119, "cresol")
+        Cresol = new Material.Builder(15118, "cresol")
                 .fluid()
                 .components(Carbon, 7, Hydrogen, 8, Oxygen, 1)
                 .color(0x827863)
                 .build();
 
-        Guaiacol = new Material.Builder(15120, "guaiacol")
+        Guaiacol = new Material.Builder(15119, "guaiacol")
                 .fluid()
                 .components(Carbon, 7, Hydrogen, 8, Oxygen, 2)
                 .color(0x693834)
                 .build();
 
-        Xylenol = new Material.Builder(15121, "xylenol")
+        Xylenol = new Material.Builder(15120, "xylenol")
                 .fluid()
                 .components(Carbon, 8, Hydrogen, 10, Oxygen, 1)
                 .color(0x693834)
                 .build();
 
-        Creosol = new Material.Builder(15122, "creosol")
+        Creosol = new Material.Builder(15121, "creosol")
                 .fluid()
                 .components(Carbon, 8, Hydrogen, 10, Oxygen, 2)
                 .color(0x473339)
                 .build();
 
-        Anthracene = new Material.Builder(15123, "anthracene")
+        Anthracene = new Material.Builder(15122, "anthracene")
                 .fluid()
                 .components(Carbon, 14, Hydrogen, 10)
                 .color(0x000000)
                 .build();
 
-        Triethylenediamine = new Material.Builder(15124, 'triethylenediamine')
+        Triethylenediamine = new Material.Builder(15123, 'triethylenediamine')
                 .dust()
                 .components(Carbon, 6, Hydrogen, 12, Nitrogen, 2)
                 .colorAverage()
                 .build()
 
                 
-        Polyurethane = new Material.Builder(15125, 'polyurethane')
+        Polyurethane = new Material.Builder(15124, 'polyurethane')
                 .polymer(1)
                 .components(Carbon, 17, Hydrogen, 16, Nitrogen, 2, Oxygen, 4)
                 .color(0xd1d1d1)
@@ -764,7 +758,12 @@ public class OrganicChemistryMaterials {
                 .build()
                 .setFormula("(C15H10N2O2)(C2H6O2)", true);
 
-
+        DiethylEther = new Material.Builder(15125, 'diethyl_ether')
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
+                .colorAverage()
+                .build()
+                .setFormula("(C2H5)2O", true);
 
     }
 }

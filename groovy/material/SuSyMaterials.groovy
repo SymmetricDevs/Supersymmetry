@@ -288,7 +288,6 @@ class SuSyMaterials {
         
         // Second Degree Materials
 
-        public static Material LithiumSolution;
         public static Material NitrateSaltMix;
         public static Material AmmoniumChlorideSolution;
         public static Material PotassiumChlorideSolution;
@@ -359,7 +358,6 @@ class SuSyMaterials {
         public static Material PBIPolymerizationMix;
         public static Material PBIPrePolymerFoam;
         public static Material ImpurePBISolution;
-        public static Material DimethylacetamideSolution;
         public static Material PBISolution;
         public static Material PBIWaste;
         public static Material Hydroxylamine;
@@ -383,7 +381,6 @@ class SuSyMaterials {
         public static Material DryEthanol;
         public static Material StyreneButadieneSolution;
         public static Material DiethylEther;
-        public static Material DiethylEtherSolution;
         public static Material Bromobutane;
         public static Material DilutedBromobutane;
         public static Material Butyllithium;
@@ -445,6 +442,9 @@ class SuSyMaterials {
         // Third Degree Materials
 
         public static Material FurfuralSolution;
+        public static Material DiethylEtherSolution;
+        public static Material LithiumSolution;
+        public static Material DimethylacetamideSolution;
 
         // Thermodynamics/Greenhouse Materials     
         
