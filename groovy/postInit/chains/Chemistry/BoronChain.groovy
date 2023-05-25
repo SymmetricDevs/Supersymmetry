@@ -16,7 +16,7 @@ ROASTER.recipeBuilder()
 	.outputs(ore('dustSodiumTetraborate').first() * 13)
 	.fluidOutputs(fluid('steam') * 10000)
 	.duration(200)
-	.EUt(Globals.voltAmps[1])
+	.EUt(60)
 	.buildAndRegister()	
 
 //DISSOLUTION OF TETRABORATE
