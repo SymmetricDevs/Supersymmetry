@@ -22,11 +22,9 @@ class ChangeFlags {
         Nickel.addFlags("generate_rod");
         Tungsten.addFlags("generate_fine_wire");
         Tantalum.addFlags("generate_rod");
-
-        //GregTechAPI.MaterialRegistry.get("fluix").addFlags("disable_decomposition", "generate_plate", "generate_lens"*/)
-        //Iodine.dust().build();
-        //Hafnium.ingot().build();
-        //Strontium.ingot().build();
+        Tantalum.addFlags("generate_catalyst_bed");
+        ChromiumTrioxide.addFlags("generate_catalyst_bed");
+        Iron3Chloride.addFlags("generate_catalyst_bed");
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
 

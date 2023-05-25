@@ -12,19 +12,18 @@
     "classes/IQuenchingFluid.groovy",
     "classes/IRefrigerant.groovy",
     "classes/IWorkingFluid.groovy",
-    "classes/RegisterFluids.groovy",
-    "classes/RegisterSolids.groovy",
-    "classes/RegisterOres.groovy",
     "globals/SinteringGlobals.groovy",
-    "globals/Globals.groovy"
+    "globals/Globals.groovy",
+    "material/"
   ],
   "loaders": {
     "preInit": [
+      "material/",
       "preInit/"
     ],
     "postInit": [
-      "prePostInit/",
       "globals/",
+      "prePostInit/",
       "postInit/"
     ]
   }
