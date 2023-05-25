@@ -10325,9 +10325,9 @@
             },
             "2:10": {
               "Count:3": 8,
-              "Damage:2": 9,
+              "Damage:2": 4,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_block_frame_187"
+              "id:8": "gregtech:meta_block_frame_20"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -29346,7 +29346,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§a High Pressure Hydrogen §r§r§ris then cooled to make §bCold High Pressure Hydrogen§r. \nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Monoxide or Cold Propane§r.",
+          "desc:8": "The§a High Pressure Hydrogen §r§r§ris then cooled to make §bCold High Pressure Hydrogen§r. \nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Monoxide or Cold Propane§r.\n\n§bCold Carbon Dioxide §rcan be made by first compressing Carbon Dioxide into Hot Compressed CO2, then radiating out the heat using a Radiator, and then decompressing it to make §bCold CO2§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33518,7 +33518,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
