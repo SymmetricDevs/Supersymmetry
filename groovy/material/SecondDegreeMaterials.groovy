@@ -61,9 +61,9 @@ public class SecondDegreeMaterials {
 
         SodiumBicarbonateSolution = new Material.Builder(13007, "sodium_bicarbonate_solution")
                 .fluid()
-                .components(Water, 1, SodiumBicarbonate, 1)
-                .colorAverage()
-                .build();
+                .color(0x252747)
+                .build()
+                .setFormula("(H2O)(NaHCO3)", true)
 
         AmmoniumNitrateSolution = new Material.Builder(13008, 'ammonium_nitrate_solution')
                 .fluid()
@@ -137,5 +137,82 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
+        WackerCatalyst = new Material.Builder(13020, "wacker_catalyst")
+                .dust()
+                .components(PalladiumChloride, 1, CopperIIChloride, 1)
+                .colorAverage()
+                .build();
+
+        PotassiumIodideSolution = new Material.Builder(13021, "potassium_iodide_solution")
+                .fluid()
+                .components(Water, 1, PotassiumIodide, 1)
+                .colorAverage()
+                .build();
+
+        SodiumSulfateSolution = new Material.Builder(13022, "sodium_sulfate_solution")
+                .fluid()
+                .color(0xb0b0bf)
+                .build()
+                .setFormula("(H2O)(Na2SO4)", true);
+
+        ImpregnatedCopperOxideCatalyst = new Material.Builder(13023, "impregnated_copper_oxide_catalyst")
+                .dust()
+                .components(CopperIIOxide, 1, Alumina, 1)
+                .colorAverage()
+                .build()
+
+        PhilipsCatalyst = new Material.Builder(13024, "philips_catalyst")
+                .dust()
+                .components(SiliconDioxide, 1, ChromiumTrioxide, 1)
+                .colorAverage()
+                .build()
+
+        ZieglerNattaCatalyst = new Material.Builder(13025, "ziegler_natta_catalyst")
+                .dust()
+                .components(Triethylaluminium, 1, TitaniumTetrachloride, 1)
+                .colorAverage()
+                .build()
+
+        HydrogenPeroxideSolution = new Material.Builder(13026, "hydrogen_peroxide_solution")
+                .fluid()
+                .components(Water, 1, HydrogenPeroxide, 1)
+                .colorAverage()
+                .build()
+
+        AmmoniumAcetateSolution = new Material.Builder(13027, 'ammonium_acetate_solution')
+                .fluid()
+                .components(Water, 1, Carbon, 2, Hydrogen, 7, Nitrogen, 1, Oxygen, 2)
+                .colorAverage()
+                .build()
+
+        TetramethylammoniumHydroxideSolution = new Material.Builder(13028, 'tetramethylammonium_hydroxide_solution')
+                .fluid()
+                .components(Methanol, 1, TetramethylammoniumHydroxide, 1)
+                .colorAverage()
+                .build()
+
+        BoronTrioxideSolution = new Material.Builder(13029, 'boron_trioxide_solution')
+                .fluid()
+                .components(Water, 1, BoronTrioxide, 1)
+                .colorAverage()
+                .build()
+
+        PhosphorusSolution = new Material.Builder(13030, 'phosphorus_solution')
+                .fluid()
+                .components(PhosphorusTrichloride, 1, Phosphorus, 1)
+                .colorAverage()
+                .build()
+
+        SodiumCyanideSolution = new Material.Builder(13031, 'sodium_cyanide_solution')
+                .fluid()
+                .components(Water, 2, SodiumCyanide, 1)
+                .colorAverage()
+                .build()
+
+        BrominatedSulfurDioxide = new Material.Builder(13032, 'brominated_sulfur_dioxide')
+                .fluid()
+                .components(SulfuricAcid, 1, HydrobromicAcid, 2)
+                .colorAverage()
+                .build()
     }
 }

@@ -251,20 +251,6 @@ public class OreMaterials{
                 .build()
                 .setFormula("Cu7(Tl,Ag)Se4", true);
 
-        KimberliteOne = new Material.Builder(7030, "kimberlite_one")
-                .dust()
-                .flags(NO_SMELTING)
-                .iconSet(SHINY)
-                .color(0x2e2323)
-                .build();
-
-        KimberliteTwo = new Material.Builder(7031, "kimberlite_two")
-                .dust()
-                .flags(NO_SMELTING)
-                .iconSet(SHINY)
-                .color(0x272933)
-                .build();
-
         Dilithium = new Material.Builder(7032, "dilithium")
                 .gem().ore()
                 .components(Lithium, 2)
@@ -284,6 +270,12 @@ public class OreMaterials{
                 .color(0x241212).iconSet(LIGNITE)
                 .components(Carbon, 1)
                 .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
+                .build();
+
+        Phosphorite = new Material.Builder(7035, "phosphorite")
+                .gem().ore()
+                .iconSet(SHINY)
+                .color(0x8a6e42)
                 .build();
 
     }

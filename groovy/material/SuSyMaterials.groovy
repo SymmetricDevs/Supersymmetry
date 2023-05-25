@@ -65,12 +65,11 @@ class SuSyMaterials {
         public static Material Lorandite;
         public static Material Hutchinsonite;
         public static Material Crookesite;
-        public static Material KimberliteOne;
-        public static Material KimberliteTwo;
         public static Material Dilithium;
         public static Material Lignite;
         public static Material Anthracite;
         public static Material Acanthite;
+        public static Material Phosphorite;
 
         // Roasted Ores
 
@@ -110,6 +109,18 @@ class SuSyMaterials {
         public static Material BorateLiquor;  
         public static Material Asphalt;
         public static Material BlackAsh;
+        public static Material ImpureAcetaldehyde;
+        public static Material CativaProcessPreparation;
+        public static Material CativaProcessSolution;
+        public static Material AcidicCumene;
+        public static Material RearrangedCumene;
+        public static Material AlkylatedButane;
+        public static Material ImpureKaptonK;
+        public static Material KaptonEPreparation;
+        public static Material ImpureKaptonE;
+        public static Material ImpureDiiodobenzene;
+        public static Material ImpureEthyleneOxide;
+        public static Material AmocoProcessCatalyst;
         
         // Petrochem Materials
 
@@ -194,7 +205,6 @@ class SuSyMaterials {
         // First Degree Materials
 
         public static Material PotassiumBisulfate;
-        public static Material SodiumBicarbonate;
         public static Material AmmoniumNitrate;
         public static Material SodiumNitrate;
         public static Material CalciumHydroxide;
@@ -285,7 +295,52 @@ class SuSyMaterials {
         public static Material SodiumArsenide;
         public static Material ArsenicVSulfide;
         public static Material CopperSulfate;
-        
+        public static Material WustiteCatalyst;
+        public static Material PalladiumChloride;
+        public static Material HexachloroiridicAcid;
+        public static Material PotassiumIodide;
+        public static Material IridiumIodide;
+        public static Material PhosphorusTrichloride;
+        public static Material TriphenylPhosphine;
+        public static Material TriphenylPhosphineDichloride;
+        public static Material BistriphenylphosphineiminiumChloride;
+        public static Material TriphenylphosphineOxide;
+        public static Material SodiumDichromate;
+        public static Material RaneyNickel;
+        public static Material ActivatedRaneyNickel;
+        public static Material CopperIIOxide;
+        public static Material DicobaltOctacarbonyl;
+        public static Material ImpregnatedAluminaCatalyst;
+        public static Material BismuthCopper;
+        public static Material Bromobenzene;
+        public static Material AluminiumTrichloride;
+        public static Material Triethylaluminium;
+        public static Material HydrogenPeroxide;
+        public static Material Tetrabromomethane;
+        public static Material Bromomethane;
+        public static Material VeryDilutedSulfuricAcid;
+        public static Material SulfurDichloride;
+        public static Material ThionylChloride;
+        public static Material LithiumHydride;
+        public static Material BoronTrifluoride;
+        public static Material Diborane;
+        public static Material LithiumFluoride;
+        public static Material LithiumTetrafluoroborate;
+        public static Material TetramethylammoniumChloride;
+        public static Material TetramethylammoniumHydroxide;
+        public static Material MethacrylamideSulfate;
+        public static Material AmmoniumBisulfate;
+        public static Material Phosphine;
+        public static Material PotassiumHypophosphite;
+        public static Material SodiumHypophosphite;
+        public static Material DisodiumPhosphate;
+        public static Material DipotassiumPhosphate;
+        public static Material SodiumCyanide;
+        public static Material PhosphorylChloride;
+        public static Material PhosphorusPentachloride;
+        public static Material AmmoniumIodide;
+        public static Material HydrobromicAcid;
+
         // Second Degree Materials
 
         public static Material NitrateSaltMix;
@@ -308,7 +363,20 @@ class SuSyMaterials {
         public static Material PotassiumFluorideSolution;
         public static Material PotassiumTetrafluoroborateSolution;
         public static Material SodiumBromideSolution;
-        
+        public static Material WackerCatalyst;
+        public static Material PotassiumIodideSolution;
+        public static Material SodiumSulfateSolution;
+        public static Material ImpregnatedCopperOxideCatalyst;
+        public static Material PhilipsCatalyst;
+        public static Material ZieglerNattaCatalyst;
+        public static Material HydrogenPeroxideSolution;
+        public static Material AmmoniumAcetateSolution;
+        public static Material TetramethylammoniumHydroxideSolution;
+        public static Material BoronTrioxideSolution;
+        public static Material PhosphorusSolution;
+        public static Material SodiumCyanideSolution;
+        public static Material BrominatedSulfurDioxide;
+
         // Organic Chemistry Materials
 
         public static Material NMethylIIPyrrolidone;
@@ -438,6 +506,35 @@ class SuSyMaterials {
         public static Material Polypropylene;  
         public static Material PhthalicAnhydride;
         public static Material ImpureCaprolactam;
+        public static Material Dimethylformamide;
+        public static Material CativaProcessCatalyst;
+        public static Material TwoEthylanthraquinone;
+        public static Material TwoEthylanthrahydroquinone;
+        public static Material Butanone;
+        public static Material Durene;
+        public static Material PyromelliticDianhydride;
+        public static Material FourFourOxydianiline;
+        public static Material KaptonK;
+        public static Material KaptonE;
+        public static Material BiphenylTetracarboxylicAcidDianhydride;
+        public static Material TwoButanol;
+        public static Material Acetamide;
+        public static Material Hydrazine;
+        public static Material Ethylenediamine;
+        public static Material Pyrocatechol;
+        public static Material AcetoneCyanohydrin;
+        public static Material MethylMethacrylate;
+        public static Material MethylMethacrylateEmulsion;
+        public static Material PolymethylMethacrylateSolution;
+        public static Material PolystyreneSulfonate;
+        public static Material EthylenediaminetetraaceticAcid;
+        public static Material TetrasodiumEthylenediaminetetraaceticAcid;
+        public static Material Urea;
+        public static Material Diiodobenzene;
+        public static Material TerephthalicAcid;
+        public static Material Bistrichloromethylbenzene;
+        public static Material TerephthaloylChloride;
+        public static Material Kevlar;
         
         // Third Degree Materials
 
@@ -445,6 +542,19 @@ class SuSyMaterials {
         public static Material DiethylEtherSolution;
         public static Material LithiumSolution;
         public static Material DimethylacetamideSolution;
+        public static Material WackerCatalystSolution;
+        public static Material TwoEthylanthraquinoneSolution;
+        public static Material AcetamideSolution;
+        public static Material HydrazineSolution;
+        public static Material EthylenediamineSolution;
+        public static Material DeacidifiedEthylenediamine;
+        public static Material EthylenediaminetetraaceticAcidSolution;
+        public static Material TetrasodiumEthylenediaminetetraaceticAcidSolution;
+        public static Material UreaSolution;
+        public static Material DiiodobenzeneSolution;
+        public static Material ImpureFourFourOxydianiline;
+        public static Material EthyleneGlycolSolution;
+        public static Material TerephthalicAcidSolution;
 
         // Thermodynamics/Greenhouse Materials     
         

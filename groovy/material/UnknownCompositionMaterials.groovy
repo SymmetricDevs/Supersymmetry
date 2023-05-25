@@ -161,6 +161,67 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xacbbac)
                 .build();
+
+        ImpureAcetaldehyde = new Material.Builder(4027, "impure_acetaldehyde")
+                .fluid()
+                .color(0x6e6e6e)
+                .build();
+
+        CativaProcessPreparation = new Material.Builder(4028, "cativa_process_preparation")
+                .fluid()
+                .color(0x9c8275)
+                .build();
+
+        CativaProcessSolution = new Material.Builder(4029, "cativa_process_solution")
+                .fluid()
+                .color(0x75665e)
+                .build();
+
+        AcidicCumene = new Material.Builder(4030, "acidic_cumene")
+                .fluid()
+                .color(0x571a0b)
+                .build()
+
+        RearrangedCumene = new Material.Builder(4031, "rearranged_cumene")
+                .fluid()
+                .color(0x4f2f27)
+                .build();
+
+        AlkylatedButane = new Material.Builder(4032, "alkylated_butane")
+                .fluid()
+                .color(0x6e4c2c)
+                .build();
+
+        ImpureKaptonK = new Material.Builder(4033, "impure_kapton_k")
+                .fluid()
+                .color(0xe0b53f)
+                .build();
+
+        ImpureKaptonE = new Material.Builder(4034, "impure_kapton_e")
+                .fluid()
+                .color(0xcad96f)
+                .build();
+
+        KaptonEPreparation = new Material.Builder(4035, "kapton_e_preparation")
+                .fluid()
+                .color(0x899444)
+                .build();
+
+        ImpureDiiodobenzene = new Material.Builder(4036, "impure_diiodobenzene")
+                .fluid()
+                .color(0x736c63)
+                .build();
+
+        ImpureEthyleneOxide = new Material.Builder(4037, "impure_ethylene_oxide")
+                .fluid(FluidTypes.GAS)
+                .color(0x52755c)
+                .build();
+
+        AmocoProcessCatalyst = new Material.Builder(4038, "amoco_process_catalyst")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xdea68c)
+                .build();
     }
 
 }           

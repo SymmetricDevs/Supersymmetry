@@ -357,7 +357,8 @@ public class PetrochemistryMaterials {
         Syngas = new Material.Builder(20061, "syngas")
                 .fluid(FluidTypes.GAS)
                 .color(0xf2ecdc)
-                .build();
+                .build()
+                .setFormula("(H)6(CO)", true);
 
         ReformedSyngas = new Material.Builder(20062, "reformed_syngas")
                 .fluid(FluidTypes.GAS)

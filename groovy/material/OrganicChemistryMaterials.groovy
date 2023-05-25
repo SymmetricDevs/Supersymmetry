@@ -748,7 +748,6 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-                
         Polyurethane = new Material.Builder(15124, 'polyurethane')
                 .polymer(1)
                 .components(Carbon, 17, Hydrogen, 16, Nitrogen, 2, Oxygen, 4)
@@ -765,5 +764,188 @@ public class OrganicChemistryMaterials {
                 .build()
                 .setFormula("(C2H5)2O", true);
 
+        Polypropylene = new Material.Builder(15126, 'polypropylene')
+                .polymer(1)
+                .components(Carbon, 3, Hydrogen, 6)
+                .color(0xdfe39a)
+                .flags(GENERATE_FOIL)
+                .build();
+
+        Dimethylformamide = new Material.Builder(15127, 'dimethylformamide')
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 7, Nitrogen, 1)
+                .colorAverage()
+                .build()
+                .setFormula("(CH3)2NCH", true);
+
+        CativaProcessCatalyst = new Material.Builder(15128, 'cativa_process_catalyst')
+                .dust()
+                .color(0x695449)
+                .build()
+                .setFormula("[PPN][IrI2(CO)2]", true);
+
+        TwoEthylanthraquinone = new Material.Builder(15129, 'two_ethylanthraquinone')
+                .fluid()
+                .components(Carbon, 16, Hydrogen, 12, Oxygen, 2)
+                .colorAverage()
+                .build()
+
+        TwoEthylanthrahydroquinone = new Material.Builder(15130, 'two_ethylanthrahydroquinone')
+                .fluid()
+                .components(Carbon, 16, Hydrogen, 14, Oxygen, 2)
+                .colorAverage()
+                .build()
+
+        Butanone = new Material.Builder(15131, 'butanone')
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 8, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        Durene = new Material.Builder(15132, 'durene')
+                .dust()
+                .components(Carbon, 10, Hydrogen, 14)
+                .colorAverage()
+                .build()
+
+        PyromelliticDianhydride = new Material.Builder(15133, 'pyromellitic_dianhydride')
+                .dust()
+                .components(Carbon, 10, Hydrogen, 2, Oxygen, 6)
+                .colorAverage()
+                .build()
+
+        FourFourOxydianiline = new Material.Builder(15134, 'four_four_oxydianiline')
+                .dust()
+                .components(Carbon, 12, Hydrogen, 12, Nitrogen, 2, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        KaptonK = new Material.Builder(15135, 'kapton_k')
+                .polymer(1)
+                .components(Carbon, 22, Hydrogen, 10, Nitrogen, 2, Oxygen, 5)
+                .color(0xfabe19)
+                .build()
+
+        KaptonE = new Material.Builder(15136, 'kapton_e')
+                .polymer(1)
+                .components(Carbon, 22, Hydrogen, 10, Nitrogen, 2, Oxygen, 5)
+                .color(0xdcfa19)
+                .build()
+
+        TwoButanol = new Material.Builder(15137, 'two_butanol')
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        Acetamide = new Material.Builder(15138, 'acetamide')
+                .dust()
+                .components(Carbon, 2, Hydrogen, 5, Nitrogen, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        Hydrazine = new Material.Builder(15139, 'hydrazine')
+                .fluid()
+                .components(Nitrogen, 2, Hydrogen, 4)
+                .colorAverage()
+                .build()
+
+        Ethylenediamine = new Material.Builder(15140, 'ethylenediamine')
+                .fluid()
+                .components(Carbon, 2, Hydrogen, 8, Nitrogen, 2)
+                .colorAverage()
+                .build()
+
+        Pyrocatechol = new Material.Builder(15141, 'pyrocatechol')
+                .dust()
+                .components(Carbon, 6, Hydrogen, 6, Oxygen, 2)
+                .colorAverage()
+                .build()
+
+        AcetoneCyanohydrin = new Material.Builder(15142, 'acetone_cyanohydrin')
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 7, Nitrogen, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        MethylMethacrylate = new Material.Builder(15143, 'methyl_methacrylate')
+                .fluid()
+                .components(Carbon, 5, Hydrogen, 8, Oxygen, 2)
+                .colorAverage()
+                .build()
+
+        MethylMethacrylateEmulsion = new Material.Builder(15144, 'methyl_methacrylate_emulsion')
+                .fluid()
+                .color(0x789c94)
+                .build()
+
+        PolymethylMethacrylateSolution = new Material.Builder(15145, 'polymethyl_methacrylate_solution')
+                .fluid()
+                .color(0x79baad)
+                .build()
+
+        PolystyreneSulfonate = new Material.Builder(15146, 'polystyrene_sulfonate')
+                .polymer(1)
+                .color(0x8f795e)
+                .build()
+                .setFormula("(CH2CHC6H4SO3H)", true)
+
+        EthylenediaminetetraaceticAcid = new Material.Builder(15147, 'ethylenediaminetetraacetic_acid')
+                .dust()
+                .components(Carbon, 10, Hydrogen, 16, Nitrogen, 2, Oxygen, 8)
+                .colorAverage()
+                .build()
+
+        TetrasodiumEthylenediaminetetraaceticAcid = new Material.Builder(15148, 'tetrasodium_ethylenediaminetetraacetic_acid')
+                .dust()
+                .components(Carbon, 10, Hydrogen, 12, Nitrogen, 2, Sodium, 4, Oxygen, 8)
+                .colorAverage()
+                .build()
+
+        Urea = new Material.Builder(15149, 'urea')
+                .dust()
+                .components(Carbon, 1, Oxygen, 1, Nitrogen, 2, Hydrogen, 4)
+                .colorAverage()
+                .build()
+
+        Urea.setFormula("CO(NH2)2", true)
+
+        Diiodobenzene = new Material.Builder(15150, 'diiodobenzene')
+                .dust()
+                .components(Carbon, 6, Hydrogen, 4, Iodine, 2)
+                .colorAverage()
+                .build()
+
+        TerephthalicAcid = new Material.Builder(15151, 'terephthalic_acid')
+                .dust()
+                .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
+                .colorAverage()
+                .build()
+
+        Bistrichloromethylbenzene = new Material.Builder(15152, 'bistrichloromethylbenzene')
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 4, Carbon, 2, Chlorine, 6)
+                .colorAverage()
+                .build()
+                .setFormula("C6H4(CCl3)2", true)
+
+        TerephthaloylChloride = new Material.Builder(15153, 'terephthaloyl_chloride')
+                .dust()
+                .components(Carbon, 8, Hydrogen, 4, Chlorine, 2, Oxygen, 2)
+                .colorAverage()
+                .build()
+
+        Kevlar = new Material.Builder(15154, 'kevlar')
+                .polymer(1)
+                .color(0x4d443e)
+                .build()
+
+        Kevlar.setFormula("COC6H4CONHC6H4NH", true)
+
+        BiphenylTetracarboxylicAcidDianhydride = new Material.Builder(15155, 'biphenyl_tetracarboxylic_acid_dianhydride')
+                .dust()
+                .components(Carbon, 16, Hydrogen, 16, Oxygen, 6)
+                .colorAverage()
+                .build()
     }
 }
