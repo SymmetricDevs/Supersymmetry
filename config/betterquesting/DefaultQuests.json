@@ -2784,7 +2784,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "CHAPTER 1 // Starting a Revolution",
+          "name:8": "§6CHAPTER 1 // Starting a Revolution",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3465,7 +3465,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§cRed Alloy§r is a highly conductive alloy made out of redstone and §ecopper§r. It can only be made in the alloy smelter.\n\nYou can find §4Redstone Ore §rin the overworld, at Y levels 15 to 35. If you find redstone rocks on the surface, this means that there will be a deposit underground. Let\u0027s get digging!",
+          "desc:8": "§cRed Alloy§r is a highly conductive alloy made out of redstone and §ecopper§r. It can only be made in the alloy smelter.\n\nYou can find §4Redstone Ore §rin at altitude levels 15 to 35. If you find redstone rocks on the surface, this means that there will be a deposit underground.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3498,29 +3498,7 @@
         }
       },
       "questID:3": 42,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 10,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "cookedMeat",
-              "id:8": "minecraft:cooked_beef"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -3952,7 +3930,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§6 Coagulation Tank§r is a hollow, 3x3x3 cubic structure that coagulates fluids into solids.\n\nThe Coagulation Tank requires:\n§6- 1 Coagulation Tank Controller\n- 24 Wooden Coagulation Tank Wall\n§r\nThe tank can coagulate liquid Latex into a solid hunk of Latex. \nSome fluid §6Catalysts§r can be used to make the process faster, but it requires that Circuits are supplied to the machine, so this isn\u0027t available right now. \n\nWhile this isn\u0027t strictly required, it makes the next step of the Rubber processing chain about §c8x more efficient§r.",
+          "desc:8": "The§6 Coagulation Tank§r is a hollow, 3x3x3 cubic structure that coagulates fluids into solids.\n\nThe Coagulation Tank requires:\n§6- 1 Coagulation Tank Controller\n- 24 Wooden Coagulation Tank Wall\n§r\nThe tank can coagulate liquid Latex into a solid hunk of Latex. \nSome fluid §6Catalysts§r can be used to make the process faster, but it requires that Circuits are supplied to the machine, so this isn\u0027t available right now. \n\nInput and Output §6buses §rare required to transport items in and out of a multiblock machine.\nInput and Output §6hatches §rcan transport fluids in and out of a machine.\n\nWhile this machine isn\u0027t strictly required, it makes the next step of the Rubber processing chain about §c8x more efficient§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7707,7 +7685,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "CHAPTER 2 // Locked and Loaded",
+          "name:8": "§7CHAPTER 2 // Locked and Loaded",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -9159,7 +9137,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 20001,
+            "Damage:2": 8115,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -9200,7 +9178,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 20001,
+              "Damage:2": 8115,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -9210,7 +9188,7 @@
                   "trait:8": "regeneration:boring"
                 }
               },
-              "OreDict:8": "",
+              "OreDict:8": "ingotPigIron",
               "id:8": "gregtech:meta_ingot"
             }
           },
@@ -10347,9 +10325,9 @@
             },
             "2:10": {
               "Count:3": 8,
-              "Damage:2": 9,
+              "Damage:2": 4,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_block_frame_187"
+              "id:8": "gregtech:meta_block_frame_20"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -13288,7 +13266,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 20005,
+            "Damage:2": 8118,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -13329,7 +13307,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 20005,
+              "Damage:2": 8118,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -13358,7 +13336,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32047,
+            "Damage:2": 8147,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -13388,7 +13366,34 @@
       },
       "questID:3": 190,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8147,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "191:10": {
       "preRequisites:11": [
@@ -14069,7 +14074,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32046,
+            "Damage:2": 8110,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -14110,7 +14115,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32046,
+              "Damage:2": 8110,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -14139,7 +14144,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 20006,
+            "Damage:2": 8119,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -14180,7 +14185,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 20006,
+              "Damage:2": 8119,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -14210,7 +14215,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 12089,
+            "Damage:2": 8171,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -14220,7 +14225,7 @@
                 "trait:8": "regeneration:boring"
               }
             },
-            "OreDict:8": "",
+            "OreDict:8": "dustCryolite",
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
@@ -14251,7 +14256,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 12089,
+              "Damage:2": 8171,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -17051,7 +17056,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "CHAPTER 3 // MOVING MOUNTAINS",
+          "name:8": "§6CHAPTER 3 // MOVING MOUNTAINS",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -21866,7 +21871,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 22054,
+            "Damage:2": 110,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -24761,8 +24766,7 @@
     },
     "370:10": {
       "preRequisites:11": [
-        369,
-        388
+        369
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -25041,13 +25045,8 @@
       }
     },
     "374:10": {
-      "preRequisiteTypes:7": [
-        0,
-        1
-      ],
       "preRequisites:11": [
-        373,
-        370
+        373
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26095,8 +26094,11 @@
       }
     },
     "389:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
       "preRequisites:11": [
-        370
+        388
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26148,8 +26150,7 @@
     },
     "390:10": {
       "preRequisites:11": [
-        374,
-        389
+        436
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26866,7 +26867,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 22007,
+            "Damage:2": 8007,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -26907,7 +26908,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 22007,
+              "Damage:2": 8007,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -29027,8 +29028,7 @@
     },
     "431:10": {
       "preRequisites:11": [
-        430,
-        432
+        430
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29098,16 +29098,16 @@
     },
     "432:10": {
       "preRequisites:11": [
-        104
+        388
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "By using the forbidden techniques of \"enabling cheats\", you can magically spawn §6Vanillin§r into your inventory. §c[RECIPE NOT YET IMPLEMENTED]§r",
+          "desc:8": "This page will describe the process on how to make§b liquid hydrogen§r, but it\u0027s the same for most gases.\n\n§9Hydrogen §rcan be compressed to make §cHot High-Pressure Hydrogen §rusing a fluid compressor. This only takes 30 EU/t for hydrogen, but it\u0027s 200 EU/t or higher for most fluids.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1125,
+            "Damage:2": 0,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -29118,13 +29118,17 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtechfoodoption:gtfo_oredict_item"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hot_hp_hydrogen"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Vanillin §c[WORK IN PROGRESS]§r",
+          "name:8": "Hot High Pressure Hydrogen",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -29139,30 +29143,8 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 1125,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtechfoodoption:gtfo_oredict_item"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -29307,6 +29289,144 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "435:10": {
+      "preRequisites:11": [
+        432
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §cHot High Pressure Hydrogen §rmust be then cooled down to make§a High Pressure Hydrogen§r. \n\nThis can either be done with a §cRadiator §ror with a §cHeat Exchanger, but the Heat Exchanger requires water to work.\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hot_hp_hydrogen"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "High Pressure Hydrogen",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 435,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "436:10": {
+      "preRequisites:11": [
+        435
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The§a High Pressure Hydrogen §r§r§ris then cooled to make §bCold High Pressure Hydrogen§r. \nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Monoxide or Cold Propane§r.\n\n§bCold Carbon Dioxide §rcan be made by first compressing Carbon Dioxide into Hot Compressed CO2, then radiating out the heat using a Radiator, and then decompressing it to make §bCold CO2§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "cold_hp_hydrogen"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Cold High Pressure Hydrogen",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 436,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "437:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Many complicated machines that you\u0027re going to make are going to be §6multiblocks§r.\n\nMost multiblock machines can share walls. If you set up 2 Blast Furnaces close to each other, you can share their walls, saving 12 Firebricks in the process. Here\u0027s how it looks like: §9§nhttps://tinyurl.com/gt-wallsharing§r\n\nInput and Output §6buses §rare required to transport items in and out of a multiblock machine.\nInput and Output §6hatches §rcan transport fluids in and out of a machine.\n§6Energy Hatches §rcan transport energy into a machine.\n§6Energy Output Hatches and Dynamo Hatches §rcan transport energy out of a machine, and they are required for energy generating machines\n\nMost multiblocks can share input buses, but they can\u0027t share §aenergy hatches§r.\n\n§6",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1151,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Multiblock Help",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 437,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
@@ -29491,14 +29611,14 @@
           "id:3": 22,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 210,
+          "x:3": 192,
           "y:3": 252
         },
         "22:10": {
           "id:3": 25,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 210,
+          "x:3": 192,
           "y:3": 348
         },
         "23:10": {
@@ -29519,7 +29639,7 @@
           "id:3": 30,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 210,
+          "x:3": 192,
           "y:3": 420
         },
         "26:10": {
@@ -29631,7 +29751,7 @@
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 222,
+          "x:3": 204,
           "y:3": 312
         },
         "42:10": {
@@ -29661,6 +29781,13 @@
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 564
+        },
+        "46:10": {
+          "id:3": 437,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 264,
+          "y:3": 264
         }
       }
     },
@@ -30685,8 +30812,8 @@
           "id:3": 371,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
-          "y:3": 396
+          "x:3": -156,
+          "y:3": 444
         },
         "81:10": {
           "id:3": 372,
@@ -31950,7 +32077,7 @@
           "id:3": 370,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
+          "x:3": 132,
           "y:3": -12
         },
         "1:10": {
@@ -31958,7 +32085,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 36
+          "y:3": -12
         },
         "2:10": {
           "id:3": 388,
@@ -31976,6 +32103,27 @@
         },
         "4:10": {
           "id:3": 390,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": 36
+        },
+        "5:10": {
+          "id:3": 432,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 36
+        },
+        "6:10": {
+          "id:3": 435,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 36
+        },
+        "7:10": {
+          "id:3": 436,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
@@ -33225,20 +33373,13 @@
           "y:3": 168
         },
         "37:10": {
-          "id:3": 432,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": 210
-        },
-        "38:10": {
           "id:3": 433,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 330,
           "y:3": 126
         },
-        "39:10": {
+        "38:10": {
           "id:3": 434,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -33377,7 +33518,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
