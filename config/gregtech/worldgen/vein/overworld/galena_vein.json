@@ -1,11 +1,11 @@
 {
-  "weight": 100,
+  "weight": 60,
   "density": 0.75,
   "max_height": 80,
   "min_height": 0,
   "vein_populator": {
     "type": "surface_rock",
-    "material": "pyrite"
+    "material": "galena"
   },
   "generator": {
     "type": "layered",
@@ -21,13 +21,13 @@
         "primary": "ore:galena"
       },
       {
-        "secondary": "ore:sphalerite"
+        "secondary": "ore:galena"
       },
       {
         "between": "ore:galena"
       },
       {
-        "sporadic": "ore:pyrite"
+        "sporadic": "ore:sphalerite"
       }
     ]
   }

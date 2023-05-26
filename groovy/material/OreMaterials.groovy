@@ -30,7 +30,8 @@ public class OreMaterials{
                 .color(0xf7f5d2)
                 .components(Lithium, 1, Sodium, 1, Aluminium, 1, Phosphorus, 1, Oxygen, 4, Fluorine, 1)
                 .build()
-                .setFormula("(Li,Na)AlPO4(F,OH)", true);
+
+        Amblygonite.setFormula("(Li,Na)AlPO4(F,OH)", true);
 
         Thortveitite = new Material.Builder(7002, "thortveitite")
                 .dust().ore()
@@ -38,7 +39,8 @@ public class OreMaterials{
                 .color(0xb38969)
                 .components(Scandium, 1, Yttrium, 1, Silicon, 2, Oxygen, 7)
                 .build()
-                .setFormula("(Sc,Y)2Si2O7", true);
+
+        Thortveitite.setFormula("(Sc,Y)2Si2O7", true);
 
         Perovskite = new Material.Builder(7003, "perovskite")
                 .gem().ore()
@@ -54,7 +56,8 @@ public class OreMaterials{
                 .color(0x555c45)
                 .components(Iron, 1, Titanium, 1, Oxygen, 4)
                 .build()
-                .setFormula("Fe(Fe,Ti)2O4", true);
+
+        Titanomagnetite.setFormula("Fe(Fe,Ti)2O4", true);
 
         Fluorapatite = new Material.Builder(7005, "fluorapatite")
                 .gem().ore()
@@ -63,7 +66,8 @@ public class OreMaterials{
                 .color(0xcc9681)
                 .components(Calcium, 5, Phosphorus, 3, Oxygen, 12, Fluorine, 1)
                 .build()
-                .setFormula("Ca5(PO4)3F", true);
+
+        Fluorapatite.setFormula("Ca5(PO4)3F", true);
 
         VanadiferousTitanomagnetite = new Material.Builder(7006, "vanadiferous_titanomagnetite")
                 .dust().ore()
@@ -71,7 +75,8 @@ public class OreMaterials{
                 .color(0x87685c)
                 .components(Vanadium, 1, Iron, 1, Titanium, 1, Oxygen, 4)
                 .build()
-                .setFormula("(V,Fe,Ti)2O4", true);
+
+        VanadiferousTitanomagnetite.setFormula("(V,Fe,Ti)2O4", true);
 
         Armstrongite = new Material.Builder(7007, "armstrongite")
                 .dust().ore()
@@ -79,7 +84,8 @@ public class OreMaterials{
                 .color(0x3a4f43)
                 .components(Calcium, 1, Zirconium, 1, Silicon, 6, Oxygen, 15, Water, 3)
                 .build()
-                .setFormula("CaZr[Si6O15] • (H2O)3", true);
+
+        Armstrongite.setFormula("CaZr[Si6O15] • (H2O)3", true);
 
         Vanadinite = new Material.Builder(7008, "vanadinite")
                 .gem().ore()
@@ -88,7 +94,8 @@ public class OreMaterials{
                 .color(0xbf5915)
                 .components(Lead, 5, Vanadium, 3, Oxygen, 12, Chlorine, 1)
                 .build()
-                .setFormula("Pb5(VO4)3Cl", true);
+
+        Vanadinite.setFormula("Pb5(VO4)3Cl", true);
 
         Cerussite = new Material.Builder(7009, "cerussite")
                 .dust().ore()
@@ -135,7 +142,7 @@ public class OreMaterials{
                 .components(Silver, 2, Sulfur, 1)
                 .build();
 
-        Pyrargyrite = new Material.Builder(7015, "pyrargyirte")
+        Pyrargyrite = new Material.Builder(7015, "pyrargyrite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
@@ -188,7 +195,8 @@ public class OreMaterials{
                 .color(0x1e1c36)
                 .components(Iron, 1, Manganese, 1, Tungsten, 1, Oxygen, 4)
                 .build()
-                .setFormula("(Fe,Mn)WO4", true);
+
+        Wolframite.setFormula("(Fe,Mn)WO4", true);
 
         Rhodplumsite = new Material.Builder(7022, "rhodplumsite")
                 .dust().ore()
@@ -203,7 +211,8 @@ public class OreMaterials{
                 .color(0x323325)
                 .components(Rhodium, 2, Sulfur, 3)
                 .build()
-                .setFormula("(Rh,Ir,Pt)2S3", true);
+
+        Bowieite.setFormula("(Rh,Ir,Pt)2S3", true);
 
         Polarite = new Material.Builder(7024, "polarite")
                 .dust().ore()
@@ -241,7 +250,8 @@ public class OreMaterials{
                 .color(0x332f2e)
                 .components(Thallium, 1, Lead, 1, Arsenic, 5, Sulfur, 9)
                 .build()
-                .setFormula("(Tl,Pb)2As5S9", true);
+
+        Hutchinsonite.setFormula("(Tl,Pb)2As5S9", true);
 
         Crookesite = new Material.Builder(7029, "crookesite")
                 .dust().ore()
@@ -249,7 +259,8 @@ public class OreMaterials{
                 .color(0x3e4a3f)
                 .components(Copper, 7, Thallium, 1, Silver, 1, Selenium, 4)
                 .build()
-                .setFormula("Cu7(Tl,Ag)Se4", true);
+
+        Crookesite.setFormula("Cu7(Tl,Ag)Se4", true);
 
         Dilithium = new Material.Builder(7032, "dilithium")
                 .gem().ore()
@@ -276,6 +287,13 @@ public class OreMaterials{
                 .gem().ore()
                 .iconSet(SHINY)
                 .color(0x8a6e42)
+                .build();
+
+        Sperrylite = new Material.Builder(7036, "sperrylite")
+                .gem().ore()
+                .components(Platinum, 1, Arsenic, 2)
+                .iconSet(SHINY)
+                .color(0xb3af86)
                 .build();
 
     }

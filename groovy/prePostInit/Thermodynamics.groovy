@@ -32,16 +32,14 @@ WaterCoolant.setDurationRadiator(100);
 WaterCoolant.setAmountToUse(1000);
 WaterCoolant.setTimeFactor(10);
 
-/*
-def EthyleneGlycolCoolant = ICoolant("ethylene_glycol", "warm_ethylene_glycol");
+def EthyleneGlycolCoolant = new ICoolant("ethylene_glycol", "warm_ethylene_glycol");
 EthyleneGlycolCoolant.setDurationRadiator(50);
 EthyleneGlycolCoolant.setAmountToUse(2000);
 EthyleneGlycolCoolant.setTimeFactor(5);
- */
 
 def Coolants = [
-        WaterCoolant
-        //EthyleneGlycolCoolant
+        WaterCoolant,
+        EthyleneGlycolCoolant
 ];
 
 def CryoHydrogen = new ICryoGas('hydrogen', 'hot_hp_hydrogen', 'hp_hydrogen', 'cold_hp_hydrogen', 'liquid_hydrogen');

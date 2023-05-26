@@ -1,5 +1,5 @@
 {
-  "weight": 180,
+  "weight": 120,
   "density": 0.75,
   "max_height": 80,
   "min_height": 0,
@@ -10,8 +10,8 @@
   "generator": {
     "type": "layered",
     "radius": [
-      20,
-      20
+      30,
+      30
     ]
   },
   "filler": {
@@ -21,13 +21,13 @@
         "primary": "ore:cassiterite"
       },
       {
-        "secondary": "ore:fluorite"
+        "secondary": "ore:cassiterite"
       },
       {
-        "between": "ore:molybdenite"
+        "between": "ore:cassiterite"
       },
       {
-        "sporadic": "ore:arsenopyrite"
+        "sporadic": "ore:cassiterite"
       }
     ]
   }

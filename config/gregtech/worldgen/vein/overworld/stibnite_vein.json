@@ -1,0 +1,34 @@
+{
+  "weight": 50,
+  "density": 0.75,
+  "max_height": 80,
+  "min_height": 0,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "stibnite"
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      20,
+      20
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:stibnite"
+      },
+      {
+        "secondary": "ore:stibnite"
+      },
+      {
+        "between": "ore:stibnite"
+      },
+      {
+        "sporadic": "ore:realgar"
+      }
+    ]
+  }
+}

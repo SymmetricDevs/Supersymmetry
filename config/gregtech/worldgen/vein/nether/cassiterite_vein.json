@@ -1,0 +1,33 @@
+{
+  "weight": 120,
+  "density": 0.75,
+   "max_height":120,
+   "min_height":0,
+   "dimension_filter":[
+      "dimension_id:-1"
+   ],
+  "generator": {
+    "type": "layered",
+    "radius": [
+      25,
+      25
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:cassiterite"
+      },
+      {
+        "secondary": "ore:cassiterite"
+      },
+      {
+        "between": "ore:cassiterite"
+      },
+      {
+        "sporadic": "ore:cassiterite"
+      }
+    ]
+  }
+}

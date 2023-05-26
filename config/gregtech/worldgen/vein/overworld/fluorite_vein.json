@@ -1,0 +1,34 @@
+{
+  "weight": 80,
+  "density": 0.75,
+  "max_height": 80,
+  "min_height": 0,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "fluorite"
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      20,
+      20
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:fluorite"
+      },
+      {
+        "secondary": "ore:fluorite"
+      },
+      {
+        "between": "ore:fluorite"
+      },
+      {
+        "sporadic": "ore:sphalerite"
+      }
+    ]
+  }
+}

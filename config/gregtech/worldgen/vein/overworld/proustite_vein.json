@@ -1,11 +1,11 @@
 {
-  "weight": 60,
+  "weight": 80,
   "density": 0.75,
   "max_height": 80,
   "min_height": 0,
   "vein_populator": {
     "type": "surface_rock",
-    "material": "chalcopyrite"
+    "material": "galena"
   },
   "generator": {
     "type": "layered",
@@ -21,13 +21,13 @@
         "primary": "ore:proustite"
       },
       {
-        "secondary": "ore:stephanite"
+        "secondary": "ore:proustite"
       },
       {
-        "between": "ore:galena"
+        "between": "ore:proustite"
       },
       {
-        "sporadic": "ore:chalcopyrite"
+        "sporadic": "ore:galena"
       }
     ]
   }

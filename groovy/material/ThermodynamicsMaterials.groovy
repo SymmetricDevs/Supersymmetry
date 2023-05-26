@@ -271,9 +271,9 @@ class ThermodynamicsMaterials {
 
                 generateCoolant(Water, 22300);
 
-                // generateCoolant(EthyleneGlycol, 22305);
+                generateCoolant(EthyleneGlycol, 22305);
 
-                // generateCoolant(Brine, 22310);
+                generateCoolant(Brine, 22310);
 
                 generateHotGas(Air, 22400);
 

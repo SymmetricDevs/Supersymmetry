@@ -764,11 +764,11 @@ CSTR.recipeBuilder()
 
 // Dinitrogen Tetroxide
 
-CSTR.recipeBuilder()
-.fluidInputs(fluid('nitrogen_dioxide') * 100)
-.fluidOutputs(fluid('dinitrogen_tetroxide') * 50)
-.duration(10)
-.EUt(30)
+BR.recipeBuilder()
+.fluidInputs(fluid('nitrogen_dioxide') * 2000)
+.fluidOutputs(fluid('dinitrogen_tetroxide') * 1000)
+.duration(200)
+.EUt(60)
 .buildAndRegister()
 
 // 1,1-dimethylhydrazine
@@ -1623,7 +1623,6 @@ CSTR.recipeBuilder()
 .buildAndRegister()
 
 //Glyceryl Trinitrate
-//TODO: MOVE THIS TO CSTR, REGISTER IMPURE GLYCERYL TRINITRATE SOLUTION AND HAVE IT BE DISTILLED
 
 BR.recipeBuilder()
         .fluidInputs(fluid('glycerol') * 1000)
@@ -2175,6 +2174,47 @@ DISTILLERY.recipeBuilder()
 .duration(100)
 .buildAndRegister()
 
+//Silicon
+
+ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustSiliconDioxide') * 3)
+        .inputs(ore('dustCoke') * 1)
+        .outputs(ore('dustSilicon').first() * 1)
+        .fluidOutputs(fluid('carbon_monoxide') * 2000)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustQuartzite') * 3)
+        .inputs(ore('dustCoke') * 1)
+        .outputs(ore('dustSilicon').first() * 1)
+        .fluidOutputs(fluid('carbon_monoxide') * 2000)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustCertusQuartz') * 3)
+        .inputs(ore('dustCoke') * 1)
+        .outputs(ore('dustSilicon').first() * 1)
+        .fluidOutputs(fluid('carbon_monoxide') * 2000)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustNetherQuartz') * 3)
+        .inputs(ore('dustCoke') * 1)
+        .outputs(ore('dustSilicon').first() * 1)
+        .fluidOutputs(fluid('carbon_monoxide') * 2000)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+/*
+//TODO: Make it so that integrated circuit can be used to choose between silicon or silicon carbide. increase arc furnace slots to 4
+
 //Graphite
 
 ARC_FURNACE.recipeBuilder()
@@ -2193,6 +2233,8 @@ ARC_FURNACE.recipeBuilder()
 .EUt(45)
 .duration(270)
 .buildAndRegister()
+
+ */
 
 // Distilled Water
 
