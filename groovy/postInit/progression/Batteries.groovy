@@ -56,34 +56,6 @@ MIXER_RECIPES.recipeBuilder()
 .buildAndRegister()
 
 // Remove Batteries
-mods.hei.removeAndHide(metaitem('battery.hull.lv'));
-mods.hei.removeAndHide(metaitem('battery.hull.mv'));
-mods.hei.removeAndHide(metaitem('battery.hull.hv'));
-mods.hei.removeAndHide(metaitem('battery.hull.ev'));
-mods.hei.removeAndHide(metaitem('battery.hull.iv'));
-mods.hei.removeAndHide(metaitem('battery.hull.luv'));
-mods.hei.removeAndHide(metaitem('battery.hull.zpm'));
-mods.hei.removeAndHide(metaitem('battery.hull.uv'));
-
-mods.hei.removeAndHide(metaitem('battery.re.lv.sodium'));
-mods.hei.removeAndHide(metaitem('battery.re.mv.sodium'));
-mods.hei.removeAndHide(metaitem('battery.re.hv.sodium'));
-
-mods.hei.removeAndHide(metaitem('battery.re.lv.lithium'));
-mods.hei.removeAndHide(metaitem('battery.re.mv.lithium'));
-mods.hei.removeAndHide(metaitem('battery.re.hv.lithium'));
-
-mods.hei.removeAndHide(metaitem('battery.re.lv.cadmium'));
-mods.hei.removeAndHide(metaitem('battery.re.mv.cadmium'));
-mods.hei.removeAndHide(metaitem('battery.re.hv.cadmium'));
-
-mods.hei.removeAndHide(metaitem('battery.ev.vanadium'));
-mods.hei.removeAndHide(metaitem('battery.iv.vanadium'));
-mods.hei.removeAndHide(metaitem('battery.luv.vanadium'));
-
-mods.hei.removeAndHide(metaitem('battery.zpm.naquadria'));
-mods.hei.removeAndHide(metaitem('battery.uv.naquadria'));
-
 mods.hei.removeAndHide(metaitem('energy_crystal'));
 mods.hei.removeAndHide(metaitem('lapotron_crystal'));
 
