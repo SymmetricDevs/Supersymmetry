@@ -162,6 +162,12 @@ crafting.replaceShaped("gregtech:steam_rock_breaker_bronze", metaitem('steam_roc
     [ore('gemDiamond'), ore('pipeSmallFluidBronze'), ore('gemDiamond')]
 ])
 
+crafting.replaceShaped("gregtech:gregtech.machine.lathe.lv", metaitem('gregtech:lathe.lv'), [
+    [metaitem('cableGtSingleTin'),  ore('circuitLv'), metaitem('cableGtSingleTin')],
+    [metaitem('electric.motor.lv'), metaitem('gregtech:hull.lv'), metaitem('toolHeadDrillSteel')],
+    [ore('circuitLv'), metaitem('cableGtSingleTin'), metaitem('electric.piston.lv')]
+])
+
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
 //     [ore('craftingToolFile'), null, null],
 //     [null, ore('ingotRubber'), null],
