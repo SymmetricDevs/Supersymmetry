@@ -284,15 +284,19 @@ CENTRIFUGE.recipeBuilder()
 
 // Sulfuric Oil Residue Processing
 
+
 VACUUM_DT.recipeBuilder()
-.fluidInputs(fluid('sulfuric_oil_residue') * 1000)
-.fluidOutputs(fractions.fuel_oil.getSulfuric(200))
-.fluidOutputs(fractions.diesel.getSulfuric(200))
-.fluidOutputs(fractions.kerosene.getSulfuric(150))
-.fluidOutputs(fractions.naphtha.getSulfuric(100))
-.fluidOutputs(fluid('lubricating_oil') * 500)
-.fluidOutputs(fluid('slack_wax') * 350)
-.outputs(metaitem('bituminous_residue'))
+        .fluidInputs(fluid('sulfuric_oil_residue') * 1000)
+        .fluidOutputs(fractions.fuel_oil.getSulfuric(200))
+        .fluidOutputs(fractions.diesel.getSulfuric(200))
+        .fluidOutputs(fractions.kerosene.getSulfuric(150))
+        .fluidOutputs(fractions.naphtha.getSulfuric(100))
+        .fluidOutputs(fluid('lubricating_oil') * 500)
+        .fluidOutputs(fluid('slack_wax') * 350)
+        .outputs(metaitem('bituminous_residue'))
+        .duration(600)
+        .EUt(30)
+        .buildAndRegister()
 
 // Lubricating Oil processing
 
@@ -464,10 +468,9 @@ CENTRIFUGE.recipeBuilder()
 
 COKING.recipeBuilder()
 .fluidInputs(fluid('steam') * 1000)
-.fluidInputs(fluid('high_pressure_water') * 1000)
 .inputs(metaitem('bituminous_residue'))
 .fluidOutputs(fluid('desalted_oil') * 150)
-.outputs(ore('dustGreenCoke').first())
+.outputs(ore('dustGreenCoke').first() * 3)
 .duration(600)
 .EUt(Globals.voltAmps[1] * 2)
 .buildAndRegister()
@@ -634,8 +637,6 @@ DT.recipeBuilder()
 
 // Kerosene, naphtha and gasoline cracking
 
-//TODO: Enable cracking catalyst input when susycore 0.0.10 is out
-
 // Cracking
 
 fractions.each { _, fraction -> {
@@ -645,8 +646,7 @@ fractions.each { _, fraction -> {
             CRACKER.recipeBuilder()
             .fluidInputs(fraction.get(1000))
             .fluidInputs(fluid('hydrogen') * 1000)
-            .notConsumable(circuit(0))
-            //.inputs(metaitem('cracking_catalyst))
+            .inputs(metaitem('cracking_catalyst'))
             .fluidOutputs(fraction.getLightlyHydroMix(1000))
             .duration(260)
             .EUt(Globals.voltAmps[1] * 2)
@@ -655,8 +655,7 @@ fractions.each { _, fraction -> {
             CRACKER.recipeBuilder()
             .fluidInputs(fraction.get(1000))
             .fluidInputs(fluid('hot_hp_hydrogen') * 1000)
-            .notConsumable(circuit(1))
-            //.inputs(metaitem('cracking_catalyst))
+            .inputs(metaitem('cracking_catalyst'))
             .fluidOutputs(fraction.getSeverelyHydroMix(1000))
             .duration(260)
             .EUt(Globals.voltAmps[1] * 2)
@@ -665,8 +664,7 @@ fractions.each { _, fraction -> {
             CRACKER.recipeBuilder()
             .fluidInputs(fraction.get(1000))
             .fluidInputs(fluid('steam') * 1000)
-            .notConsumable(circuit(0))
-            //.inputs(metaitem('cracking_catalyst))
+            .inputs(metaitem('cracking_catalyst'))
             .fluidOutputs(fraction.getLightlySteamMix(1000))
             .duration(260)
             .EUt(Globals.voltAmps[1] * 2)
@@ -674,9 +672,8 @@ fractions.each { _, fraction -> {
             
             CRACKER.recipeBuilder()
             .fluidInputs(fraction.get(1000))
-            .fluidInputs(fluid('steam') * 1000)
-            .notConsumable(circuit(1))
-            //.inputs(metaitem('cracking_catalyst))
+            .fluidInputs(fluid('hot_hp_steam') * 1000)
+            .inputs(metaitem('cracking_catalyst'))
             .fluidOutputs(fraction.getSeverelySteamMix(1000))
             .duration(260)
             .EUt(Globals.voltAmps[1] * 2)

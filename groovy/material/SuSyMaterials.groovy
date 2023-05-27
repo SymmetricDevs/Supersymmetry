@@ -603,6 +603,7 @@ class SuSyMaterials {
         // Thermodynamics/Greenhouse Materials     
         
         public static Material EarthlikeAir;
+        public static Material HotHighPressureSteam;
         
         public static void init() {                
                 ElementMaterials.register();

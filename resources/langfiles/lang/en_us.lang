@@ -631,6 +631,7 @@ material.lauterite=Lauterite
 material.sodium_perchlorate_solution=Sodium Perchlorate Solution
 material.sodium_chlorate_solution=Sodium Chlorate Solution
 material.diluted_aniline=Diluted Aniline
+material.hot_hp_steam=Hot High Pressure Steam
 
 # Thermodynamics
 
@@ -800,6 +801,9 @@ recipemap.dryer.name=Drying
 recipemap.sintering_oven.name=Sintering
 recipemap.electrolytic_cell.name=Advanced Electrolysis
 recipemap.vat_fermentation.name=Fermentation Vat
+recipemap.vacuum_distillation.name=Vacuum Distillation
+recipemap.catalytic_reformer.name=Catalytic Reforming
+recipemap.coking_tower.name=Coking Tower
 
 # QMD Particles
 
