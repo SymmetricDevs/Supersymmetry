@@ -296,6 +296,31 @@ material.arsenic_iii_sulfide=Arsenic III Sulfide
 material.arsenic_v_sulfide=Arsenic V Sulfide
 material.silver_chloride=Silver Chloride
 material.copper_sulfate=Copper Sulfate
+material.antimony_iii_sulfide=Antimony III Sulfide
+
+material.sodium_cyanide=Sodium Cyanide
+material.sodium_cyanide_solution=Sodium Cyanide Solution
+material.sodium_thiosulfate=Sodium Thiosulfate
+material.sodium_thiosulfate_solution=Sodium Thiosulfate Solution
+material.sodium_sulfite_solution=Sodium Sulfite Solution
+material.sodium_carbonate=Sodium Carbonate Solution
+
+material.silver_oxide=Silver Oxide
+material.sulfidic_silver_cyanide_solution=Sulfidic Silver Cyanide Solution
+material.silver_cyanide_solution=Silver Cyanide Solution
+material.sulfidic_pyrargyrite_cyanide_leach_solution=Sulfidic Pyrargyrite Cyanide Leach Solution
+material.pyrargyrite_cyanide_leach_solution=Pyrargyrite Cyanide Leach Solution
+material.sulfidic_stephanite_cyanide_leach_solution=Sulfidic Stephanite Cyanide Leach Solution
+material.stephanite_cyanide_leach_solution=Stephanite Cyanide Leach Solution
+material.pyrargyrite_thiosulfate_leach_solution=Pyrargyrite Thiosulfate Leach Solution
+material.silver_sulfide=Silver Sulfide
+material.thiosulfate_thioantimonite_solution=Thiosulfate Thioantimonite Solution
+material.iron_thioantimonite=Iron Thioantimonite
+material.iron_thioarsenite=Iron Arsenite
+material.diluted_iron_iii_chloride_solution
+material.proustite_thiosulfate_leach_solution=Proustite Thiosulfate Leach Solution
+material.thiosulfate_thioarsenite_solution=Thiosulfate Thioarsenite Solution
+material.diluted_iron_iii_chloride_solution=Diluted Iron III Chloride Solution
 
 # Fluids
 
@@ -595,6 +620,7 @@ material.stephanite=Stephanite
 material.arsenopyrite=Arsenopyrite
 material.sperrylite=Sperrylite
 material.smithsonite=Smithsonite
+material.pyrargyrite=Pyrargyrite
 
 material.heavy_mineral_sand=Heavy Mineral Sand
 material.alluvial_gold=Alluvial Gold

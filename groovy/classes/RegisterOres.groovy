@@ -161,7 +161,13 @@ class RegisterOres{
                 .components(Scandium, 1, Yttrium, 1, Silicon, 2, Oxygen, 7)
                 .colorAverage()
                 .build()
-				.setFormula("ScY2Si2O7", true);
+		.setFormula("ScY2Si2O7", true);
+
+        new Material.Builder(30024, "pyrargyrite")
+                .ore()
+                .components(Silver, 3, Antimony, 1, Sulfur, 3)
+                .color(0xc23a38)
+                .build()
 
         log.infoMC('Finished registering ores')
 

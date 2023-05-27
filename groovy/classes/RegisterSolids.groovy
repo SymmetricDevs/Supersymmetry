@@ -40,7 +40,6 @@ class RegisterSolids {
 
         new Material.Builder(20000, 'fluix')
             .gem().iconSet(RUBY)
-            .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE, GENERATE_LENS)
             .components(Quartzite, 4, Naquadah, 1)
             .color(0x6503b6)
             .build();
@@ -482,7 +481,43 @@ class RegisterSolids {
                 .colorAverage()
                 .build()
 
-        //ROASTED ORES ID: 32500-32600
+        new Material.Builder(32059, 'silver_oxide')
+                .dust()
+                .components(Silver, 2, Oxygen, 1)
+                .color(0x00272b)
+                .build()
+        
+        new Material.Builder(32060, 'arsenic_v_oxide')
+                .dust()
+                .components(Arsenic, 2, Oxygen, 5)
+                .color(0xd8e3e3)
+                .build()
+        
+        new Material.Builder(32065, "silver_sulfide")
+                .dust()
+                .components(Silver, 2, Sulfur, 1)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(32066, "antimony_iii_sulfide")
+                .dust()
+                .components(Antimony, 2, Sulfur, 3)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(32067, "iron_thioarsenite")
+                .dust()
+                .components(Iron, 1, Arsenic, 1, Sulfur, 3)
+                .colorAverage()
+                .build()
+
+        new Material.Builder(32068, "iron_thioantimonite")
+                .dust()
+                .components(Iron, 1, Antimony, 1, Sulfur, 3)
+                .colorAverage()
+                .build()
+
+        //ROASTED ORES ID: 32500-32750
 
         new Material.Builder(32500, 'roasted_sperrylite')
                 .dust()
@@ -492,9 +527,9 @@ class RegisterSolids {
                 .iconSet(SAND)
                 .build();
 
-        //ORE LEACH RESIDUE ID: 32600-32700
+        //ORE LEACH RESIDUE ID: 32751-32999
 
-        new Material.Builder(32600, 'enargite_residue')
+        new Material.Builder(32751, 'enargite_residue')
                 .dust()
                 .components(Copper, 2, Sulfur, 1)
                 .color(0x59183c)

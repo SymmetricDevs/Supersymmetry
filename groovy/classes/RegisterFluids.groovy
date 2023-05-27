@@ -38,6 +38,10 @@ class RegisterFluids {
         public static Material PotassiumFluoride;
         public static Material PotassiumTetrafluoroborate;
         public static Material SodiumBromide;
+        public static Material SodiumCyanide;
+        public static Material SodiumSulfite;
+        public static Material SodiumThiosulfate;
+        public static Material SodiumCarbonate;
 
         private static void generateHighPressureGases(Material materialName, int id, boolean generateCold){
                 var color = materialName.getMaterialRGB();
@@ -377,7 +381,31 @@ class RegisterFluids {
                         .dust()
                         .components(Sodium, 1, Bromine, 1)
                         .colorAverage()
-                        .build()
+                        .build();
+
+                SodiumCyanide = new Material.Builder(32061, 'sodium_cyanide')
+                        .dust()
+                        .components(Sodium, 1, Carbon, 1, Nitrogen, 1)
+                        .color(0x077d44)
+                        .build();
+
+                SodiumSulfite = new Material.Builder(32062, 'sodium_sulfite')
+                        .dust()
+                        .components(Sodium, 2, Sulfur, 1, Oxygen, 3)
+                        .colorAverage()
+                        .build();
+
+                SodiumThiosulfate = new Material.Builder(32063, 'sodium_thiosulfate')
+                        .dust()
+                        .components(Sodium, 2, Sulfur, 2, Oxygen, 3)
+                        .color(0x879e21)
+                        .build();
+
+                SodiumCarbonate = new Material.Builder(32064, 'sodium_carbonate')
+                        .dust()
+                        .components(Sodium, 2, Carbon,1, Oxygen, 3)
+                        .colorAverage()
+                        .build();
         }
 
         public static void init() {
@@ -1913,21 +1941,20 @@ class RegisterFluids {
                         .colorAverage()
                         .build();
 
-                new Material.Builder(12213, "thioarsenite_solution")
+                new Material.Builder(12213, "proustite_alkaline_leach_solution")
                         .fluid()
                         .components(Sodium, 3, Arsenic, 1, Sulfur, 3, Water, 1)
                         .flags(DISABLE_DECOMPOSITION)
                         .colorAverage()
                         .build()
-                        .setFormula("(?)(Na3AsS3)(H2O)", true);
+                        .setFormula("(Na3AsS3)(H2O)", true);
 
-                new Material.Builder(12214, "tetrachloroantimonate_solution")
+                new Material.Builder(12214, "crude_arsenic_trichloride")
                         .fluid()
-                        .components(Hydrogen, 1, Antimony, 1, Chlorine, 4, Salt, 2, Water, 14)
-                        .flags(DISABLE_DECOMPOSITION)
+                        .components(Arsenic, 1, Chlorine, 3)
                         .colorAverage()
                         .build()
-                        .setFormula("(NaCl)14(NaSbCl4)(H2O)22", true);
+                        .setFormula("(?)(AsCl3)", true);
 
                 new Material.Builder(12215, "arsine")
                         .fluid(FluidTypes.GAS)
@@ -1941,7 +1968,7 @@ class RegisterFluids {
                         .colorAverage()
                         .build();
                 
-                new Material.Builder(12217, "thioarsenate_solution")
+                new Material.Builder(12217, "enargite_sulfide_leach_solution")
                         .fluid()
                         .components(Sodium, 3, Arsenic, 1, Sulfur, 4, Water, 1)
                         .flags(DISABLE_DECOMPOSITION)
@@ -1951,19 +1978,19 @@ class RegisterFluids {
 
                 new Material.Builder(12218, "cobaltite_leach_solution")
                         .fluid()
-                        .components(Cobalt, 3, Nitrogen, 6, Oxygen, 32, Hydrogen, 13, Arsenic, 3)
+                        .components(Cobalt, 3, Nitrogen, 6, Oxygen, 30, Hydrogen, 9, Arsenic, 3, Water, 11)
                         .flags(DISABLE_DECOMPOSITION)
                         .colorAverage()
                         .build()
-                        .setFormula("(Co(NO3)2)3(H3AsO4)3(H2O)2", true);
+                        .setFormula("(Co(NO3)2)3(H3AsO4)3(H2O)10.5", true);
                 
                 new Material.Builder(12219, "arsenopyrite_leach_solution")
                         .fluid()
-                        .components(Iron, 3, Nitrogen, 6, Oxygen, 32, Hydrogen, 13, Arsenic, 3)
+                        .components(Iron, 3, Nitrogen, 6, Oxygen, 30, Hydrogen, 9, Arsenic, 3, Water, 11)
                         .flags(DISABLE_DECOMPOSITION)
                         .colorAverage()
                         .build()
-                        .setFormula("(Fe(NO3)2)3(H3AsO4)3(H2O)2", true);
+                        .setFormula("(Fe(NO3)2)3(H3AsO4)3(H2O)10.5", true);
 
                 new Material.Builder(12220, "arsenous_acid")
                         .fluid()
@@ -1972,23 +1999,7 @@ class RegisterFluids {
                         .colorAverage()
                         .build();  
                 
-                new Material.Builder(12221, "alkaline_arsenite_solution")
-                        .fluid()
-                        .components(Sodium, 3, Arsenic, 2, Oxygen, 3, Sulfur, 3)
-                        .flags(DISABLE_DECOMPOSITION)
-                        .colorAverage()
-                        .build()
-                        .setFormula("(Na3AsO3)(Na3AsS3)(H2O)9", true);
-                
-                new Material.Builder(12222, "salty_arsenous_acid")
-                        .fluid()
-                        .components(Salt, 12, Hydrogen, 6, Arsenic, 2, Oxygen, 6)
-                        .flags(DISABLE_DECOMPOSITION)
-                        .colorAverage()
-                        .build()
-                        .setFormula("(NaCl)12(H3AsO3)2(H2O)21", true);
-
-                new Material.Builder(12223, "sperrylite_waste")
+                new Material.Builder(12221, "sperrylite_waste")
                         .fluid()
                         .components(Water, 3, Chlorine, 2, Cobalt, 1, Nickel, 1)
                         .flags(DISABLE_DECOMPOSITION)
@@ -1996,13 +2007,148 @@ class RegisterFluids {
                         .build()
                         .setFormula("(H2O)3(Ni,Co)Cl2", true);
                 
-                new Material.Builder(12224, "acidic_copper_solution")
+                new Material.Builder(12222, "acidic_copper_solution")
                         .fluid()
                         .components(Water, 4, Copper, 2, Sulfur, 2, Oxygen, 8, NitricAcid, 2)
                         .flags(DISABLE_DECOMPOSITION)
                         .colorAverage()
                         .build()
                         .setFormula("(H2O)4(CuSO4)2(HNO3)2", true);
+
+                new Material.Builder(12223, "hydrogen_cyanide")
+                        .fluid()
+                        .components(Hydrogen, 1, Carbon, 1, Nitrogen, 1)
+                        .color(0x0b8542)
+                        .build();
+                
+                new Material.Builder(12224, "sodium_cyanide_solution")
+                        .fluid()
+                        .components(SodiumCyanide, 1, Water, 2)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12225, "sulfidic_silver_cyanide_solution")
+                        .fluid()
+                        .components(Silver, 2, Carbon, 4, Nitrogen, 4, Sodium, 4, Sulfur, 1, Water, 4)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .colorAverage()
+                        .build()
+                        .setFormula('(Na[Ag(CN)2])2(Na2S)(H2O)4');
+
+                new Material.Builder(12226, "silver_cyanide_solution")
+                        .fluid()
+                        .components(Silver, 2, Carbon, 4, Nitrogen, 4, Sodium, 4, Chlorine, 2)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .colorAverage()
+                        .build()
+                        .setFormula('(Na[Ag(CN)2])2(NaCl)2(H2O)4');
+
+                new Material.Builder(12227, "sodium_sulfite_solution")
+                        .fluid()
+                        .components(SodiumSulfite, 1, Water, 1)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12228, "sodium_thiosulfate_solution")
+                        .fluid()
+                        .components(SodiumThiosulfate, 1, Water, 1)
+                        .colorAverage()
+                        .build();
+                        
+                new Material.Builder(12229, 'sulfidic_pyrargyrite_cyanide_leach_solution')
+                        .fluid()
+                        .components(Sodium, 6, Silver, 3, Carbon, 6, Nitrogen, 6, Antimony, 1, Sulfur, 3, Water, 6)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .colorAverage()
+                        .build()
+                        .setFormula('(Na[Ag(CN)2])3(Na3SbS3)(H2O)6');
+                
+                new Material.Builder(12230, 'pyrargyrite_cyanide_leach_solution')
+                        .fluid()
+                        .components(Sodium, 6, Silver, 3, Carbon, 6, Nitrogen, 6, Antimony, 1, Chlorine, 6, Water, 12)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .colorAverage()
+                        .build()
+                        .setFormula('(Na[Ag(CN)2])3(NaCl)2(NaSbCl4)(H2O)6');
+
+                new Material.Builder(12231, 'pyrargyrite_thiosulfate_leach_solution')
+                        .fluid()
+                        .components(Sodium, 12, Silver, 3, Sulfur, 15, Oxygen, 18, Antimony, 1, Water, 5)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .colorAverage()
+                        .build()
+                        .setFormula('(Na3[Ag(S2O3)2])3(Na3SbS3)(H2O)5');
+
+                new Material.Builder(12232, "thiosulfate_thioarsenite_solution")
+                        .fluid()
+                        .components(Sodium, 15, Sulfur, 15, Oxygen, 18, Arsenic, 1, Water, 5)
+                        .colorAverage()
+                        .build()
+                        .setFormula('(Na2S2O3)6(Na3AsS3)(H2O)5');
+
+                new Material.Builder(12233, 'sodium_carbonate_solution')
+                        .fluid()
+                        .components(SodiumCarbonate, 1, Water, 1)
+                        .flags()
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12234, 'sulfidic_stephanite_cyanide_leach_solution')
+                        .fluid()
+                        .components(Sodium, 10, Silver, 5, Carbon, 10, Nitrogen, 10, Antimony, 1, Sulfur, 4, Water, 12)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .colorAverage()
+                        .build()
+                        .setFormula('(Na[Ag(CN)2])5(Na3SbS3)(Na2S)(H2O)12');
+                
+                new Material.Builder(12235, 'stephanite_cyanide_leach_solution')
+                        .fluid()
+                        .components(Sodium, 10, Silver, 5, Carbon, 10, Nitrogen, 10, Antimony, 1, Chlorine, 8, Water, 20)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .colorAverage()
+                        .build()
+                        .setFormula('(Na[Ag(CN)2])5(NaCl)2(NaSbCl6)(H2O)20');
+
+                new Material.Builder(12236, 'proustite_thiosulfate_leach_solution')
+                        .fluid()
+                        .components(Sodium, 12, Silver, 3, Sulfur, 15, Oxygen, 18, Arsenic, 1, Water, 5)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .colorAverage()
+                        .build()
+                        .setFormula('(Na3[Ag(S2O3)2])3(Na3AsS3)(H2O)5');
+
+                new Material.Builder(12237, 'acidic_arsenate_v_solution')
+                        .fluid()
+                        .components(NitricAcid, 6, Hydrogen, 9, Arsenic, 3, Oxygen, 12)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .colorAverage()
+                        .build()
+                        .setFormula('(HNO3)6(H3AsO4)3');
+
+                new Material.Builder(12238, 'sulfur_dichloride')
+                        .fluid()
+                        .components(Sulfur, 1, Chlorine, 2)
+                        .color(0xd2042d)
+                        .build();
+
+                new Material.Builder(12239, "arsenic_trichloride")
+                        .fluid()
+                        .components(Arsenic, 1, Chlorine, 3)
+                        .colorAverage()
+                        .build();
+
+                new Material.Builder(12240, "thiosulfate_thioantimonite_solution")
+                        .fluid()
+                        .components(Sodium, 15, Sulfur, 15, Oxygen, 18, Antimony, 1, Water, 5)
+                        .colorAverage()
+                        .build()
+                        .setFormula('(Na2S2O3)6(Na3SbS3)(H2O)5');
+
+                new Material.Builder(12241, "diluted_iron_iii_chloride_solution")
+                        .fluid()
+                        .components(Iron3Chloride, 1, Water, 3)
+                        .colorAverage()
+                        .build();
 
                 log.infoMC("Finished registering fluids")
         }
