@@ -20,68 +20,16 @@ instance.json
 *.dll
 
 build/modlist.*
-config/InvTweaks.cfg
-config/jei/jei.cfg
-config/jei/worldSettings.cfg
-config/jei/bookmarks.ini
-config/splash.properties
-config/jei/bookmark.ini
-config/BiomeTweaker/output/*
-config/AppliedEnergistics2/CustomRecipes.cfg
-config/AppliedEnergistics2/items.csv
-config/AppliedEnergistics2/VersionChecker.cfg
 
 hei_bookmarks.ini
-
-config/acronym/saved/
-
-config/beneath/blockdeco.json
-
-#config/biomesoplenty/biomes/defaults/
-
-#config/biomesoplenty/biome_ids.json
-
-config/BiomeTweaker/output/
-
-config/cavegenerator/REFERENCE.cave
-
-config/cavegenerator/TUTORIAL.cave
-
-config/cd4017be/compiled.dat
-
-config/icbmclassic/explosive_reg.json
-
-config/opencomputers/gregtech.recipes
-
-config/opencomputers/hardmode.recipes
-
-config/opencomputers/peaceful.recipes
-
-config/JustEnoughCalculation/record.json
-
-config/worldedit/worldedit.properties
-
-config/ichunutil.cfg
-
-config/alet-client.json
-
-config/alet.json
-
-config/creativecore-client.json
-
-config/creativecore.json
-
-config/customloadingscreen_timings.nbt
-
-config/littletiles-client.json
-
-config/littletiles.json
 
 screenshots/
 
 backups/
 
 resourcepacks/
+
+config/
 
 local/
 instance.json
