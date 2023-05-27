@@ -1622,6 +1622,18 @@ CSTR.recipeBuilder()
 .EUt(480)
 .buildAndRegister()
 
+//Glyceryl Trinitrate
+//TODO: MOVE THIS TO CSTR, REGISTER IMPURE GLYCERYL TRINITRATE SOLUTION AND HAVE IT BE DISTILLED
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('glycerol') * 1000)
+        .fluidInputs(fluid('nitration_mixture') * 6000)
+        .fluidOutputs(fluid('glyceryl_trinitrate') * 1000)
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 6000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
 // PTFE
 
 MIXER.recipeBuilder()
@@ -1684,16 +1696,6 @@ CSTR.recipeBuilder()
 .fluidInputs(fluid('oxygen') * 100)
 .fluidOutputs(fluid('vinyl_chloride') * 50)
 .fluidOutputs(fluid('water') * 100)
-.duration(10)
-.EUt(30)
-.buildAndRegister()
-//TODO: Add item slot to CSTR so that an integrated circuit can be used, so that this recipe wont conflict
-CSTR.recipeBuilder()
-.fluidInputs(fluid('ethane') * 100)
-.fluidInputs(fluid('chlorine') * 100)
-.fluidInputs(fluid('oxygen') * 150)
-.fluidOutputs(fluid('vinyl_chloride') * 100)
-.fluidOutputs(fluid('water') * 150)
 .duration(10)
 .EUt(30)
 .buildAndRegister()
@@ -2190,4 +2192,14 @@ ARC_FURNACE.recipeBuilder()
 .outputs(ore('dustGraphite').first())
 .EUt(45)
 .duration(270)
+.buildAndRegister()
+
+// Distilled Water
+
+DISTILLERY.recipeBuilder()
+.fluidInputs(fluid('water') * 288)
+.notConsumable(circuit(1))
+.fluidOutputs(fluid('distilled_water') * 260)
+.duration(160)
+.EUt(Globals.voltAmps[1])
 .buildAndRegister()

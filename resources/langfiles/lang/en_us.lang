@@ -671,17 +671,12 @@ gas.gaspunk.hydrofluoric_acid=Hydrofluoric Acid
 
 # Metaitems
 
+metaitem.rock.orthomagmatic.name=Orthomagmatic Rock
+metaitem.rock.metamorphic.name=Metamorphic Rock
+metaitem.rock.magmatic_hydrothermal.name=Magmatic Hydrothermal Rock
 metaitem.rock.sedimentary.name=Sedimentary Rock
-metaitem.rock.carbon.name=Carbon Rock
-metaitem.rock.carbonate.name=Carbonate Rock
-metaitem.rock.clay.name=Clay Rock
-metaitem.rock.oxide.name=Oxide Rock
-metaitem.rock.phosphate.name=Phosphate Rock
-metaitem.rock.precious.name=Precious Rock
-metaitem.rock.radioactive.name=Radioactive Rock
-metaitem.rock.sedimentary.name=Sedimentary Rock
-metaitem.rock.silicate.name=Silicate Rock
-metaitem.rock.sulfur.name=Sulfuric Rock
+metaitem.rock.hydrothermal.name=Hydrothermal Rock
+metaitem.rock.alluvial.name=Alluvial Rock
 metaitem.cement.clinker.name=Cement Clinker
 metaitem.hot.cement.clinker.name=Hot Cement Clinker
 metaitem.cement.dust.name=Cement Dust

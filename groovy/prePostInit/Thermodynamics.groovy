@@ -454,12 +454,6 @@ def WorkingFluids = [
         WaterWF
 ];
 
-//FLUE GAS PRODUCTION RATE: 2,000 L PER SECOND
-//.fluidOutputs(liquid(FluidFuel.byproduct) * (FluidFuel.byproduct_amount / 10 * FluidFuel.duration))
-//.fluidInputs(liquid('air') * (FluidFuel.duration * 30))
-//.fluidInputs(liquid('oxygen') * (FluidFuel.duration * 10))
-//TODO: ask if it is a good idea to make flue gas production scale with time taken per recipe
-
 for (FluidFuel in FluidFuels) {
     if(FluidFuel.gas_turbine){
         recipemap('gas_turbine').recipeBuilder()

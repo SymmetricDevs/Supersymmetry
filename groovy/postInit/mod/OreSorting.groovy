@@ -1,3 +1,6 @@
+//TODO: replace these with new categories and ores mentioned in element production datasheet
+
+/*
 import classes.*;
 
 println("Running OreSorting.groovy...")
@@ -184,3 +187,5 @@ for (rock in rocks) {
         a += 1;
     }
 }
+
+ */

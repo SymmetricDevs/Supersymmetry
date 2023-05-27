@@ -12,16 +12,12 @@ eventManager.listen {
         StandardMetaItem customMetaItems = new StandardMetaItem((short)2);
         customMetaItems.setRegistryName("meta_item_2")
 
-        customMetaItems.addItem(1, "rock.carbon")
-        customMetaItems.addItem(2, "rock.carbonate")
-        customMetaItems.addItem(3, "rock.clay")
-        customMetaItems.addItem(4, "rock.oxide")
-        customMetaItems.addItem(5, "rock.phosphate")
-        customMetaItems.addItem(6, "rock.precious")
-        customMetaItems.addItem(7, "rock.radioactive")
-        customMetaItems.addItem(8, "rock.sedimentary")
-        customMetaItems.addItem(9, "rock.silicate")
-        customMetaItems.addItem(10, "rock.sulfur")
+        customMetaItems.addItem(1, "rock.orthomagmatic")
+        customMetaItems.addItem(2, "rock.metamorphic")
+        customMetaItems.addItem(3, "rock.magmatic_hydrothermal")
+        customMetaItems.addItem(4, "rock.sedimentary")
+        customMetaItems.addItem(5, "rock.hydrothermal")
+        customMetaItems.addItem(6, "rock.alluvial")
 
         customMetaItems.addItem(100, "cement.clinker")
         customMetaItems.addItem(101, "hot.cement.clinker")
