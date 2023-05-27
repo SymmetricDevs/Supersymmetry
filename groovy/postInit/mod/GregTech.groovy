@@ -124,6 +124,12 @@ crafting.replaceShaped("gregtech:gregtech.machine.lathe.lv", metaitem('gregtech:
     [ore('circuitLv'), metaitem('cableGtSingleTin'), metaitem('electric.piston.lv')]
 ])
 
+crafting.replaceShaped("gregtech:gregtech.machine.macerator.lv", metaitem('gregtech:macerator.lv'), [
+    [metaitem('electric.piston.lv'), metaitem('electric.motor.lv') , metaitem('toolHeadBuzzSawSteel')],
+    [metaitem('cableGtSingleTin'), metaitem('cableGtSingleTin'), metaitem('gregtech:hull.lv')],
+    [ore('circuitLv'), ore('circuitLv'), metaitem('cableGtSingleTin')]
+])
+
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
 //     [ore('craftingToolFile'), null, null],
 //     [null, ore('ingotRubber'), null],
