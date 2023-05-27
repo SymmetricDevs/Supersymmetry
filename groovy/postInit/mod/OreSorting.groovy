@@ -361,7 +361,7 @@ for (rock in rocks) {
             recipe.chancedOutput(item(ore.getKey()), oreList[ore.getKey()], 0);
         }
         recipe.duration(20);
-        recipe.EUt(Globals.voltAmps[rock.starting_tier + a] * 2);
+        recipe.EUt(Globals.voltAmps[rock.starting_tier + a]);
         recipe.buildAndRegister();
         a += 1;
     }
