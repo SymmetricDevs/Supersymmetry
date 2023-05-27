@@ -1,0 +1,31 @@
+{
+  "weight": 80,
+  "density": 0.5,
+  "dimension_filter": ["dimension_id:10"],
+  "max_height": 255,
+  "min_height": 0,
+  "generator": {
+    "type": "layered",
+    "radius": [
+      25,
+      25
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:tetrahedrite"
+      },
+      {
+        "secondary": "ore:tetrahedrite"
+      },
+      {
+        "between": "ore:tetrahedrite"
+      },
+      {
+        "sporadic": "ore:pyrite"
+      }
+    ]
+  }
+}

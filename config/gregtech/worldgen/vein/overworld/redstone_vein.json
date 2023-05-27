@@ -1,7 +1,7 @@
 {
-  "weight": 180,
+  "weight": 80,
   "density": 0.75,
-  "max_height": 255,
+  "max_height": 80,
   "min_height": 0,
   "vein_populator": {
     "type": "surface_rock",
@@ -21,13 +21,13 @@
         "primary": "ore:redstone"
       },
       {
-        "secondary": "ore:cinnabar"
+        "secondary": "ore:redstone"
       },
       {
-        "between": "ore:stibnite"
+        "between": "ore:redstone"
       },
       {
-        "sporadic": "ore:realgar"
+        "sporadic": "ore:cinnabar"
       }
     ]
   }

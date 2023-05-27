@@ -10,6 +10,7 @@ import gregtech.api.unification.material.properties.*
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
+import static gregtechfoodoption.GTFOMaterialHandler.*;
 
 public class SecondDegreeMaterials {
     public static void register() {
@@ -214,5 +215,26 @@ public class SecondDegreeMaterials {
                 .components(SulfuricAcid, 1, HydrobromicAcid, 2)
                 .colorAverage()
                 .build()
+
+        SodiumPerchlorateSolution = new Material.Builder(13033, 'sodium_perchlorate_solution')
+                .fluid()
+                .color(0x5880c7)
+                .build()
+
+        SodiumPerchlorateSolution.setFormula("(H2O)(NaClO4)", true);
+
+        SodiumChlorateSolution = new Material.Builder(13034, 'sodium_chlorate_solution')
+                .fluid()
+                .color(0x315fe8)
+                .build()
+
+        SodiumChlorateSolution.setFormula("(H2O)(NaClO3)", true);
+
+        DilutedAniline = new Material.Builder(13035, 'diluted_aniline')
+                .fluid()
+                .color(0x5fb36e)
+                .build()
+
+        DilutedAniline.setFormula("(H2O)2(C6H5NH2)", true);
     }
 }

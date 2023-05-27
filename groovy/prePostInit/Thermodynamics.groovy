@@ -26,22 +26,35 @@ mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('propane') * 4])
 mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('butane') * 4])
 mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('nitrobenzene')])
 mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('butadiene') * 16])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('octane') * 2])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('oil_light') * 32])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('sulfuric_light_fuel') * 4])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('ethanol')])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('bio_diesel')])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('methanol') * 4])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('light_fuel')])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('toluene')])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('naphtha')])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('diesel')])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('oil_medium') * 64])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('nitro_fuel') * 2])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('gasoline')])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('gasoline_premium')])
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('rocket_fuel') * 16])
 
 def WaterCoolant = new ICoolant("water", "warm_water");
 WaterCoolant.setDurationRadiator(100);
 WaterCoolant.setAmountToUse(1000);
 WaterCoolant.setTimeFactor(10);
 
-/*
-def EthyleneGlycolCoolant = ICoolant("ethylene_glycol", "warm_ethylene_glycol");
+def EthyleneGlycolCoolant = new ICoolant("ethylene_glycol", "warm_ethylene_glycol");
 EthyleneGlycolCoolant.setDurationRadiator(50);
 EthyleneGlycolCoolant.setAmountToUse(2000);
 EthyleneGlycolCoolant.setTimeFactor(5);
- */
 
 def Coolants = [
-        WaterCoolant
-        //EthyleneGlycolCoolant
+        WaterCoolant,
+        EthyleneGlycolCoolant
 ];
 
 def CryoHydrogen = new ICryoGas('hydrogen', 'hot_hp_hydrogen', 'hp_hydrogen', 'cold_hp_hydrogen', 'liquid_hydrogen');
@@ -505,3 +518,10 @@ for (WorkingFluid in WorkingFluids) {
             .EUt(8)
             .buildAndRegister();
 }
+
+recipemap('fluid_compressor').recipeBuilder()
+        .fluidInputs(liquid('steam') * 1000)
+        .fluidOutputs(liquid('hot_hp_steam') * 400)
+        .duration(80)
+        .EUt(120)
+        .buildAndRegister();

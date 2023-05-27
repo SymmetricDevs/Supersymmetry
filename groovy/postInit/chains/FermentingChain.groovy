@@ -101,19 +101,3 @@ DISTILLATION_TOWER.recipeBuilder()
         .duration(50)
         .EUt(30)
         .buildAndRegister()
-
-//GTFO STUFF
-
-FERMENTER.recipeBuilder()
-        .fluidInputs(fluid('gtfo_red_grapes_must') * 16000)
-        .fluidOutputs(fluid('gtfo_fermented_red_grapes_must') * 16000)
-        .duration(2400)
-        .EUt(16)
-        .buildAndRegister()
-
-DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('gtfo_alcoholic_red_grape_juice') * 1000)
-        .fluidOutputs(fluid('gtfo_red_wine') * 800)
-        .duration(100)
-        .EUt(30)
-        .buildAndRegister()

@@ -33,12 +33,10 @@ class SuSyMaterials {
 
         public static Material Petalite;
         public static Material Amblygonite;
-        public static Material Fluorite;
         public static Material Thortveitite;
         public static Material Perovskite;
         public static Material Titanomagnetite;
         public static Material Fluorapatite;
-        public static Material Chalcopyrite;
         public static Material VanadiferousTitanomagnetite;
         public static Material Armstrongite;
         public static Material Vanadinite;
@@ -121,7 +119,17 @@ class SuSyMaterials {
         public static Material ImpureDiiodobenzene;
         public static Material ImpureEthyleneOxide;
         public static Material AmocoProcessCatalyst;
-        
+        public static Material PegmatiteTailings;
+        public static Material GraniteTailings;
+        public static Material LimestoneTailings;
+        public static Material UltramaficTailings;
+        public static Material Corundum;
+        public static Material Tourmaline;
+        public static Material NonMarineEvaporite;
+        public static Material HalideEvaporite;
+        public static Material CarbonateEvaporite;
+        public static Material SulfateEvaporite;
+
         // Petrochem Materials
 
         public static Material DilutedOil;
@@ -340,6 +348,40 @@ class SuSyMaterials {
         public static Material PhosphorusPentachloride;
         public static Material AmmoniumIodide;
         public static Material HydrobromicAcid;
+        public static Material Kernite;
+        public static Material Colemanite;
+        public static Material Ulexite;
+        public static Material Carnallite;
+        public static Material Kainite;
+        public static Material Kieserite;
+        public static Material Langbeinite;
+        public static Material Polyhalite;
+        public static Material Dolomite;
+        public static Material Titanite;
+        public static Material Leucoxene;
+        public static Material Zircon;
+        public static Material Mimetite;
+        public static Material Pyromorphite;
+        public static Material Descloizite;
+        public static Material Mottramite;
+        public static Material Chlorapatite;
+        public static Material Hematite;
+        public static Material Skutterudite;
+        public static Material Allanite;
+        public static Material Azurite;
+        public static Material Goethite;
+        public static Material Hydrozincite;
+        public static Material Chlorargyrite;
+        public static Material Columbite;
+        public static Material Ferrimolybdite;
+        public static Material Aguilarite;
+        public static Material Orpiment;
+        public static Material Braggite;
+        public static Material Stannite;
+        public static Material Euxenite;
+        public static Material Xenotime;
+        public static Material Caliche;
+        public static Material Lauterite;
 
         // Second Degree Materials
 
@@ -376,6 +418,9 @@ class SuSyMaterials {
         public static Material PhosphorusSolution;
         public static Material SodiumCyanideSolution;
         public static Material BrominatedSulfurDioxide;
+        public static Material SodiumPerchlorateSolution;
+        public static Material SodiumChlorateSolution;
+        public static Material DilutedAniline;
 
         // Organic Chemistry Materials
 
@@ -489,7 +534,6 @@ class SuSyMaterials {
         public static Material Hexane;
         public static Material Furfural;
         public static Material Cresol;
-        public static Material Guaiacol;
         public static Material Xylenol;
         public static Material Creosol;
         public static Material Anthracene;
@@ -559,6 +603,7 @@ class SuSyMaterials {
         // Thermodynamics/Greenhouse Materials     
         
         public static Material EarthlikeAir;
+        public static Material HotHighPressureSteam;
         
         public static void init() {                
                 ElementMaterials.register();

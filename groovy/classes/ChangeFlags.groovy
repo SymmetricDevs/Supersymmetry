@@ -7,6 +7,9 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.info.MaterialFlag;
 import gregtech.api.unification.material.properties.*;
+import gregtech.api.unification.material.properties.OreProperty;
+import gregtech.api.unification.material.properties.PropertyKey;
+import static material.SuSyMaterials.*
 
 //eventManager.listen(EventPriority.LOWEST) 
 class ChangeFlags {
@@ -33,6 +36,126 @@ class ChangeFlags {
         RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
+
+        OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Thortveitite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Titanomagnetite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = VanadiferousTitanomagnetite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Phosphorite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Perovskite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Arsenopyrite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Smithsonite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Enargite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Proustite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Celestine.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Strontianite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Acanthite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Stephanite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Pyrargyrite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Barite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Witherite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Wolframite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Sperrylite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Cerussite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Anglesite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Bismuthinite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Amblygonite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Cerussite.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(Lead);
+
+        oreProp = Anglesite.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(Lead);
+
+        oreProp = Pyrolusite.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Platinum.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Molybdenum.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Molybdenite.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Beryllium.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Cobaltite.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Cobalt.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Thorium.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Nickel.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Pentlandite.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Garnierite.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Ilmenite.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Powellite.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Uraninite.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
+
+        oreProp = Magnesite.getProperty(PropertyKey.ORE);
+        oreProp.setDirectSmeltResult(null);
 
         log.infoMC("Finished modifying flags")
     }

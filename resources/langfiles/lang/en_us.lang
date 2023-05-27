@@ -593,6 +593,46 @@ material.impure_diiodobenzene=Impure 1,4-Diiodobenzene
 material.impure_ethylene_oxide=Impure Ethylene Oxide
 material.amoco_process_catalyst=Amoco Process Catalyst
 
+material.kernite=Kernite
+material.colemanite=Colemanite
+material.ulexite=Ulexite
+material.carnallite=Carnallite
+material.kainite=Kainite
+material.kieserite=Kieserite
+material.langbeinite=Langbeinite
+material.polyhalite=Polyhalite
+material.dolomite=Dolomite
+material.titanite=Titanite
+material.leucoxene=Leucoxene
+material.zircon=Zircon
+material.mimetite=Mimetite
+material.descloizite=Descloizite
+material.pyromorphite=Pyromorphite
+material.mottramite=Mottramite
+material.chlorapatite=Chlorapatite
+material.hematite=Hematite
+material.skutterudite=Skutterudite
+material.allanite=Allanite
+material.azurite=Azurite
+material.goethite=Goethite
+material.hydrozincite=Hydrozincite
+material.chlorargyrite=Chlorargyrite
+material.columbite=Columbite
+material.ferrimolybdite=Ferrimolybdite
+material.aguilarite=Aguilarite
+material.orpiment=Orpiment
+material.braggite=Braggite
+material.stannite=Stannite
+material.euxenite=Euxenite
+material.xenotime=Xenotime
+material.caliche=Caliche
+material.lauterite=Lauterite
+
+material.sodium_perchlorate_solution=Sodium Perchlorate Solution
+material.sodium_chlorate_solution=Sodium Chlorate Solution
+material.diluted_aniline=Diluted Aniline
+material.hot_hp_steam=Hot High Pressure Steam
+
 # Thermodynamics
 
 material.hot_hp_hydrogen=Hot High-Pressure Hydrogen
@@ -709,7 +749,7 @@ material.enargite=Enargite
 material.smithsonite=Smithsonite
 material.arsenopyrite=Arsenopyrite
 material.acanthite=Acanthite
-material.pyrargyirte=Pyrargyirte
+material.pyrargyrite=Pyrargyrite
 material.stephanite=Stephanite
 material.proustite=Proustite
 material.celestine=Celestine
@@ -728,6 +768,18 @@ material.dilithium=Dilithium
 material.lignite=Lignite
 material.anthracite=Anthracite
 material.phosphorite=Phosphorite
+material.sperrylite=Sperrylite
+
+material.corundum=Corundum
+material.tourmaline=Tourmaline
+material.non_marine_evaporite=Non Marine Evaporite
+material.halide_evaporite=Halide Evaporite
+material.carbonate_evaporite=Carbonate Evaporite
+material.sulfate_evaporite=Sulfate Evaporite
+material.granite_tailings=Granite Tailing
+material.limestone_tailings=Limestone Tailing
+material.pegmatite_tailings=Pegmatite Tailing
+material.ultramafic_tailings=Ultramafic Tailing
 
 # Isotopes
 
@@ -749,6 +801,9 @@ recipemap.dryer.name=Drying
 recipemap.sintering_oven.name=Sintering
 recipemap.electrolytic_cell.name=Advanced Electrolysis
 recipemap.vat_fermentation.name=Fermentation Vat
+recipemap.vacuum_distillation.name=Vacuum Distillation
+recipemap.catalytic_reformer.name=Catalytic Reforming
+recipemap.coking_tower.name=Coking Tower
 
 # QMD Particles
 

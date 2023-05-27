@@ -222,6 +222,58 @@ public class UnknownCompositionMaterials {
                 .iconSet(SHINY)
                 .color(0xdea68c)
                 .build();
+
+        GraniteTailings = new Material.Builder(4039, "granite_tailings")
+                .dust()
+                .color(0x302323)
+                .build();
+
+        LimestoneTailings = new Material.Builder(4040, "limestone_tailings")
+                .dust()
+                .color(0x68695d)
+                .build();
+
+        PegmatiteTailings = new Material.Builder(4041, "pegmatite_tailings")
+                .dust()
+                .color(0x1f1c1c)
+                .build();
+
+        UltramaficTailings = new Material.Builder(4042, "ultramafic_tailings")
+                .dust()
+                .color(0x141414)
+                .build();
+
+        Corundum = new Material.Builder(4043, "corundum")
+                .dust()
+                .iconSet(SHINY)
+                .color(0x7a4261)
+                .build();
+
+        Tourmaline = new Material.Builder(4044, "tourmaline")
+                .dust().gem()
+                .iconSet(SHINY)
+                .color(0x8c613f)
+                .build();
+
+        NonMarineEvaporite = new Material.Builder(4045, "non_marine_evaporite")
+                .dust()
+                .color(0x78756d)
+                .build();
+
+        HalideEvaporite = new Material.Builder(4046, "halide_evaporite")
+                .dust()
+                .color(0x99867c)
+                .build();
+
+        CarbonateEvaporite = new Material.Builder(4047, "carbonate_evaporite")
+                .dust()
+                .color(0xe3e3e3)
+                .build();
+
+        SulfateEvaporite = new Material.Builder(4048, "sulfate_evaporite")
+                .dust()
+                .color(0xc7c0b1)
+                .build();
     }
 
 }           
