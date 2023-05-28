@@ -264,9 +264,9 @@ crafting.replaceShaped('quark:framed_glass', item('quark:framed_glass') * 4, [
 ])
 
 crafting.replaceShaped('minecraft:golden_rail', item('minecraft:golden_rail') * 6, [
-    [ore('stickGold'), ore('stickSteelMagnetic'), ore('stickGold')],
-    [ore('stickGold'), ore('stickWood'), ore('stickGold')],
-    [ore('stickGold'), ore('wireFineRedAlloy'), ore('stickGold')]
+    [ore('stickBrass'), ore('stickSteelMagnetic'), ore('stickBrass')],
+    [ore('stickBrass'), ore('stickWood'), ore('stickBrass')],
+    [ore('stickBrass'), ore('wireFineRedAlloy'), ore('stickBrass')]
 ])
 
 crafting.replaceShaped('minecraft:detector_rail', item('minecraft:detector_rail') * 6, [

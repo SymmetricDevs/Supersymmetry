@@ -9069,7 +9069,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Electrolytic Cell §ris a multiblock machine that is required for making advanced electrolysis reactions, such as making §bAluminum§r or §7Chlorine §rwith the chloroalkali process.\n\nThe Electrolytic Cell requires:\n§6- 1 Electrolytic Cell controller\n- 1 Output Bus\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Output Hatch\n- Between 1 and 3 Energy Hatches\n- 41 Solid Steel Machine Casings\n- 12 Steel Pipe Casings§r\n\nEach §cLV Energy Hatch §rtakes 2 Amperes of LV energy. So the final step of aluminium requires 60 EU/t, which is 2 amps of LV voltage, which shouldn\u0027t be a problem.",
+          "desc:8": "The §6Electrolytic Cell §ris a multiblock machine that is required for making advanced electrolysis reactions, such as making §bAluminum§r or §7Chlorine §rwith the chloroalkali process.\n\nThe Electrolytic Cell requires:\n§6- 1 Electrolytic Cell controller\n- 1 Output Bus\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Output Hatch\n- Between 1 and 3 Energy Hatches\n- 41 Solid Steel Machine Casings\n- 12 Steel Pipe Casings§r\n\nEach §cLV Energy Hatch §rtakes 2 Amperes of LV energy. So the final step of aluminium requires 60 EU/t, which is 2 amps of LV voltage, which shouldn\u0027t be a problem.\n\n§l§cThe Electrolytic Cell requires a lot of power! Make sure to build a Large Steam or Gas Turbine.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9273,7 +9273,7 @@
             "id:8": "minecraft:water_bucket"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Hydrogen and Oxygen",
@@ -16234,7 +16234,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6§rIron §6stairs §rand §7§6catwalks §rcan be used to supplement the §4§r§cG§6r§ce§6g§ci§6c§r aesthetic. §rThe factory must grow.",
+          "desc:8": "§6§rIron §6stairs §rand §7§6catwalks §rcan be used to supplement the §4§r§cG§6r§ce§6g§ci§6c§r aesthetic. §rThe factory must grow.\n\nThere are also §belectric fences§r, a cheap way to defend your base. To pass, you must go through an §6Electric Gate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16279,6 +16279,18 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "industrialrenewal:catwalk"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:electric_fence"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:electric_gate"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -16893,7 +16905,8 @@
     },
     "241:10": {
       "preRequisites:11": [
-        240
+        240,
+        446
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -17716,7 +17729,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Boron (B)\n§bAtomic Number§r: 5\n§aAtomic Mass§r: 10.81 amu\n§cMelting Point§r: 2349 K\n§5Boiling Point§r: 4200 K\n§6Properties§r: Boron is a metalloid with strong chemical resistance. It is used in various industries, including agriculture (as a micronutrient), ceramics, and semiconductors.\n",
+          "desc:8": "§6Element§r: Boron (B)\n§bAtomic Number§r: 5\n§aAtomic Mass§r: 10.81 amu\n§cMelting Point§r: 2349 K\n§5Boiling Point§r: 4200 K\n§6Properties§r: Boron is a metalloid with strong chemical resistance. It is used in various industries, including agriculture (as a micronutrient), ceramics, and semiconductors.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24695,7 +24708,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§6 Large Steam Turbine §rcan generate power using§6 steam§r. It is a larger version of the small LV steam turbine.\n\nIt generates §616 amps §rof LV power and turns 960 L of steam into 960 L of exhaust steam every 0.5 seconds.\n§6\nThe structure requires:\n- 1 Large Steam Turbine Controller\n- 1 LV Dynamo Hatch (can emit up to 16 amps)\n- 1 Maintenance Hatch\n- 1 LV Output Hatch\n- 1 LV Input Hatch\n- 4 Steel Turbine Block\n- 3 Copper Alternator Block\n- 57 Steel Turbine Casing\n§r\nThe Exhaust Steam can be cooled back into 4 L of Water using a §cRadiator (LV) §ror 960 L of Water using a §cCooling Unit (MV)§r",
+          "desc:8": "The§6 Large Steam Turbine §rcan generate power using§6 steam§r. It is a larger version of the small LV steam turbine.\n\nIt generates §616 amps §rof LV power and turns 960 L of steam into 960 L of exhaust steam every 0.5 seconds.\n§6\nThe structure requires:\n- 1 Large Steam Turbine Controller\n- 1 LV Dynamo Hatch (can emit up to 16 amps)\n- 1 Maintenance Hatch\n- 1 LV Output Hatch\n- 1 LV Input Hatch\n- 4 Steel Turbine Block\n- 3 Copper Alternator Block\n- 57 Steel Turbine Casing\n§r\n§c§lWARNING: The preview shows that a ULV Dynamo Hatch must be used. This is a bug. Any Dynamo Hatch can be used. You should use a 16A LV Dynamo Hatch.§r\n\nThe Exhaust Steam can be cooled back into 4 L of Water using a §cRadiator (LV) §ror 960 L of Water using a §cCooling Unit (MV)§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29641,6 +29654,80 @@
     },
     "442:10": {
       "preRequisites:11": [
+        87
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Boat §ris the simplest form of transportation on water, as it requires only a few pieces of Wood.\n\nThis quest requires an oak boat. If you can\u0027t find oak, just click on the §2checkbox§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "minecraft:boat"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Boat",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 442,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "minecraft:boat"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "443:10": {
+      "preRequisites:11": [
         122
       ],
       "properties:10": {
@@ -29706,6 +29793,374 @@
         "1:10": {
           "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "444:10": {
+      "preRequisites:11": [
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§cCarts§r require §6Rails §rand §6Powered Rails §rto work. Powered Rails use redstone power to speed up the movement of the cart.\n\n§6Detector Rails §o§rproduce a redstone signal when a minecart is on it.\n\n§6Transfer Rails §rcan transfer a Cargo Cart to another line.\n\nThese carts are not as fast as big §ctrains§r, which can reach speeds of 100km/h.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "industrialrenewal:normal_rail"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Rails",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 444,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:normal_rail"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:booster_rail"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "445:10": {
+      "preRequisites:11": [
+        444
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "There are several types of carts.\n\n§6Passenger Carts §rcan transport a passenger.\n§6Log Carts §rcan only transport wood.\n§6Cargo Carts §rcan transport the same amount of inventory space as a chest.\n§6Fluid Tank Carts §rcan transport fluids.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "industrialrenewal:fluid_container"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Carts",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 445,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:passenger_car"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:cart_hopper"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:fluid_container"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:log_cart"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "446:10": {
+      "preRequisites:11": [
+        447
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Silver Oxide §rmust then be roasted with Carbon to make §6Silver§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 100,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Silver",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 446,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 100,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "447:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        131
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Acanthite §rcan be §croasted §rwith Oxygen to create §6Silver Oxide§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8259,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Silver Oxide",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 447,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8259,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "448:10": {
+      "preRequisites:11": [
+        444
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §6Rail Gate §rcan be used to block certain carts from passing.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 2,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "industrialrenewal:rail_gate"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Gate",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 448,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:rail_gate"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     }
@@ -31240,6 +31695,20 @@
           "sizeY:3": 24,
           "x:3": 126,
           "y:3": -42
+        },
+        "102:10": {
+          "id:3": 446,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 54,
+          "y:3": 486
+        },
+        "103:10": {
+          "id:3": 447,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 486
         }
       }
     },
@@ -32115,6 +32584,20 @@
           "sizeY:3": 24,
           "x:3": 420,
           "y:3": -240
+        },
+        "50:10": {
+          "id:3": 446,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 90
+        },
+        "51:10": {
+          "id:3": 447,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": 90
         }
       }
     },
@@ -32478,7 +32961,36 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "quests:9": {}
+      "quests:9": {
+        "0:10": {
+          "id:3": 442,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": -12
+        },
+        "1:10": {
+          "id:3": 444,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": -12
+        },
+        "2:10": {
+          "id:3": 445,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": -12
+        },
+        "3:10": {
+          "id:3": 448,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 36
+        }
+      }
     },
     "21:10": {
       "lineID:3": 21,
@@ -33832,7 +34344,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
