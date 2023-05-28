@@ -267,6 +267,12 @@ public class FirstDegreeMaterials{
                 .color(0x47464b)
                 .build()
 
+        SulfurDichloride = new Material.Builder(8125, 'sulfur_dichloride')
+                .fluid()
+                .components(Sulfur, 1, Chlorine, 2)
+                .color(0xd2042d)
+                .build()
+
         BoronTrioxide = new Material.Builder(8126, 'boron_trioxide')
                 .dust()
                 .color(0xdfcfc2)
@@ -624,75 +630,73 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        ThioarseniteSolution = new Material.Builder(8184, "thioarsenite_solution")
+        ProustiteAlkalineLeachSolution = new Material.Builder(8184, "proustite_alkaline_leach_solution")
                 .fluid()
                 .components(Sodium, 3, Arsenic, 1, Sulfur, 3, Water, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(?)(Na3AsS3)(H2O)", true);
+                .setFormula("(Na3AsS3)(H2O)", true)
 
-        TetrachloroantimonateSolution = new Material.Builder(8185, "tetrachloroantimonate_solution")
+        CrudeArsenicTrichloride = new Material.Builder(8185, "crude_arsenic_trichloride")
                 .fluid()
-                .components(Hydrogen, 1, Antimony, 1, Chlorine, 4, Salt, 2, Water, 14)
+                .components(Arsenic, 1, Chlorine, 3)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(NaCl)14(NaSbCl4)(H2O)22", true);
+                .setFormula("(?)(AsCl3)", true)
 
         Arsine = new Material.Builder(8186, "arsine")
                 .fluid(FluidTypes.GAS)
                 .components(Arsenic, 1, Hydrogen, 3)
                 .colorAverage()
-                .build();
+                .build()
 
-        ThioarsenateSolution = new Material.Builder(8187, "thioarsenate_solution")
+        EnargiteSulfideLeachSolution = new Material.Builder(8187, "enargite_sulfide_leach_solution")
                 .fluid()
                 .components(Sodium, 3, Arsenic, 1, Sulfur, 4, Water, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(?)(Na3AsS4)(H2O)", true);
-
+                .setFormula("(Na3AsS4)(H2O)", true)
 
         CobaltiteLeachSolution = new Material.Builder(8188, "cobaltite_leach_solution")
                 .fluid()
-                .components(Cobalt, 3, Nitrogen, 6, Oxygen, 32, Hydrogen, 13, Arsenic, 3)
+                .components(Cobalt, 3, Nitrogen, 6, Oxygen, 30, Hydrogen, 9, Arsenic, 3, Water, 3)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(Co(NO3)2)3(H3AsO4)3(H2O)2", true);
+                .setFormula("(Co(NO3)2)3(H3AsO4)3(H2O)3", true)
 
         ArsenopyriteLeachSolution = new Material.Builder(8189, "arsenopyrite_leach_solution")
                 .fluid()
-                .components(Iron, 3, Nitrogen, 6, Oxygen, 32, Hydrogen, 13, Arsenic, 3)
+                .components(Iron, 3, Nitrogen, 6, Oxygen, 32, Hydrogen, 13, Arsenic, 3, Water, 3)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(Fe(NO3)2)3(H3AsO4)3(H2O)2", true);
+                .setFormula("(Fe(NO3)2)3(H3AsO4)3(H2O)3", true)
 
         ArsenousAcid = new Material.Builder(8190, "arsenous_acid")
                 .fluid()
                 .components(Hydrogen, 3, Arsenic, 1, Oxygen, 3)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
-                .build();
+                .build()
 
-        AlkalineArseniteSolution = new Material.Builder(8191, "alkaline_arsenite_solution")
+        ArsenicTrichloride = new Material.Builder(8191, "arsenic_trichloride")
                 .fluid()
-                .components(Sodium, 3, Arsenic, 2, Oxygen, 3, Sulfur, 3)
+                .components(Arsenic, 1, Chlorine, 3)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(Na3AsO3)(Na3AsS3)(H2O)9", true);
 
-        SaltyArsenousAcid = new Material.Builder(8192, "salty_arsenous_acid")
+        SaltyArsenousAcid = new Material.Builder(8192, "acidic_copper_solution")
                 .fluid()
-                .components(Salt, 12, Hydrogen, 6, Arsenic, 2, Oxygen, 6)
+                .components(Water, 4, Copper, 2, Sulfur, 2, Oxygen, 8, NitricAcid, 2)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(NaCl)12(H3AsO3)2(H2O)21", true);
+                .setFormula("(H2O)4(CuSO4)2(HNO3)2", true)
 
         SperryliteWaste = new Material.Builder(8193, "sperrylite_waste")
                 .fluid()
@@ -700,7 +704,7 @@ public class FirstDegreeMaterials{
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(H2O)3(Ni,Co)Cl2", true);
+                .setFormula("(H2O)3(Ni,Co)Cl2", true)
 
         AcidicCopperSolution = new Material.Builder(8194, "acidic_copper_solution")
                 .fluid()
@@ -708,7 +712,7 @@ public class FirstDegreeMaterials{
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(H2O)4(CuSO4)2(HNO3)2", true);
+                .setFormula("(H2O)4(CuSO4)2(HNO3)2", true)
 
         WustiteCatalyst = new Material.Builder(8195, "wustite_catalyst")
                 .dust()
@@ -986,247 +990,155 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        Kernite = new Material.Builder(8242, "kernite")
+        SodiumCyanide = new Material.Builder(8242, 'sodium_cyanide')
                 .dust()
-                .color(0xd9c1a0)
-                .components(Sodium, 2, Boron, 4, Oxygen, 8, Hydrogen, 2, Water, 3)
+                .components(Sodium, 1, Carbon, 1, Nitrogen, 1)
+                .color(0x077d44)
                 .build()
-                .setFormula("Na2B4O6(OH)2 • (H2O)3", true);
 
-        Colemanite = new Material.Builder(8243, "colemanite")
+        SodiumSulfite = new Material.Builder(8243, 'sodium_sulfite')
                 .dust()
-                .color(0xdbcd8f)
-                .components(Calcium, 2, Boron, 6, Oxygen, 11, Water, 5)
-                .build()
-                .setFormula("Ca2B6O11 • (H2O)5", true);
-
-        Ulexite = new Material.Builder(8244, "ulexite")
-                .dust()
-                .color(0xc2aba1)
-                .components(Sodium, 1, Calcium, 1, Boron, 5, Oxygen, 12, Hydrogen, 6, Water, 5)
-                .build()
-                .setFormula("NaCaB5O6(OH)6 • (H2O)5", true);
-
-        Carnallite = new Material.Builder(8245, "carnallite")
-                .dust()
-                .iconSet(SHINY)
-                .color(0xffffff)
-                .components(Potassium, 1, Magnesium, 1, Chlorine, 3, Water, 6)
-                .build()
-                .setFormula("KCl.MgCl2 • (H2O)6", true);
-
-        Kainite = new Material.Builder(8246, "kainite")
-                .dust()
-                .iconSet(SHINY)
-                .color(0xfff7c4)
-                .components(Potassium, 1, Magnesium, 1, Sulfur, 1, Oxygen, 4, Chlorine, 1, Water, 3)
-                .build()
-                .setFormula("KMg(SO4)Cl • (H2O)3", true);
-
-        Kieserite = new Material.Builder(8247, "kieserite")
-                .dust()
-                .color(0xdccade)
-                .components(Magnesium, 1, Sulfur, 1, Oxygen, 4, Water, 1)
-                .build()
-                .setFormula("MgSO4 • H2O", true);
-
-        Langbeinite = new Material.Builder(8248, "langbeinite")
-                .dust()
-                .color(0x9e6f59)
-                .components(Potassium, 2, Magnesium, 2, Sulfur, 3, Oxygen, 12)
-                .build()
-                .setFormula("K2Mg2(SO4)3", true);
-
-        Polyhalite = new Material.Builder(8249, "polyhalite")
-                .dust()
-                .color(0xe0b2a4)
-                .components(Potassium, 2, Calcium, 2, Magnesium, 1, Sulfur, 4, Oxygen, 16, Water, 2)
-                .build()
-                .setFormula("K2Ca2Mg(SO4)4 • (H2O)2", true);
-
-        Dolomite = new Material.Builder(8250, "dolomite")
-                .dust()
-                .color(0xadaa8e)
-                .components(Calcium, 1, Magnesium, 1, Carbon, 2, Oxygen, 6)
-                .build()
-                .setFormula("CaMg(CO3)2", true);
-
-        Titanite = new Material.Builder(8251, "titanite")
-                .gem()
-                .iconSet(SHINY)
-                .color(0x967051)
-                .components(Calcium, 1, Titanium, 1, Silicon, 1, Oxygen, 5)
-                .build();
-
-        Leucoxene = new Material.Builder(8252, "leucoxene")
-                .dust()
-                .iconSet(SHINY)
-                .color(0xb987c4)
-                .components(Titanium, 1, Oxygen, 2)
-                .build();
-
-        Zircon = new Material.Builder(8253, "zircon")
-                .gem()
-                .iconSet(SHINY)
-                .color(0xf05c51)
-                .components(Zirconium, 1, Silicon, 1, Oxygen, 4)
-                .build();
-
-        Mimetite = new Material.Builder(8254, "mimetite")
-                .dust()
-                .iconSet(SHINY)
-                .color(0xe8aa2e)
-                .components(Lead, 5, Arsenic, 3, Oxygen, 12, Chlorine, 1)
-                .build()
-                .setFormula("Pb5(AsO4)3Cl", true);
-
-        Pyromorphite = new Material.Builder(8255, "pyromorphite")
-                .dust()
-                .iconSet(SHINY)
-                .color(0xd7e632)
-                .components(Lead, 5, Phosphorus, 4, Oxygen, 12, Chlorine, 1)
-                .build()
-                .setFormula("Pb5(PO4)3Cl", true);
-
-        Descloizite = new Material.Builder(8256, "descloizite")
-                .dust()
-                .iconSet(SHINY)
-                .color(0x5e5d41)
-                .components(Lead, 1, Zinc, 1, Vanadium, 1, Oxygen, 5, Hydrogen, 1)
-                .build()
-                .setFormula("(Pb,Zn)2VO4OH", true);
-
-        Mottramite = new Material.Builder(8257, "mottramite")
-                .dust()
-                .color(0x53730a)
-                .components(Lead, 1, Copper, 1, Vanadium, 1, Oxygen, 5, Hydrogen, 1)
-                .build()
-                .setFormula("PbCu(VO4)(OH)", true);
-
-        Chlorapatite = new Material.Builder(8258, "chlorapatite")
-                .dust().gem()
-                .iconSet(SHINY)
-                .color(0xc7af85)
-                .components(Calcium, 5, Phosphorus, 3, Oxygen, 12, Chlorine, 1)
-                .build()
-                .setFormula("Ca5(PO4)3Cl", true);
-
-        Hematite = new Material.Builder(8259, "hematite")
-                .dust()
-                .color(0x240f0f)
-                .components(Iron, 2, Oxygen, 3)
-                .build();
-
-        Skutterudite = new Material.Builder(8260, "skutterudite")
-                .dust()
-                .iconSet(SHINY)
-                .color(0xabbec2)
-                .components(Cobalt, 1, Arsenic, 3)
-                .build();
-
-        Allanite = new Material.Builder(8261, "allanite")
-                .dust()
-                .iconSet(SHINY)
-                .color(0x6b7a7d)
-                .components(Cerium, 1, Calcium, 1, Yttrium, 1, Lanthanum, 1, Aluminium, 1, Iron, 1, Silicon, 3, Oxygen, 13, Hydrogen, 1)
-                .build()
-                .setFormula("(Ce,Ca,Y,La)2(Al,Fe)3(SiO4)3(OH)", true);
-
-        Azurite = new Material.Builder(8263, "azurite")
-                .dust().gem()
-                .iconSet(SHINY)
-                .color(0x2216c9)
-                .components(Copper, 3, Carbon, 2, Oxygen, 8, Hydrogen, 2)
-                .build()
-                .setFormula("Cu3(CO3)2(OH)2", true);
-
-        Goethite = new Material.Builder(8264, "goethite")
-                .dust()
-                .color(0x30251f)
-                .components(Iron, 1, Oxygen, 2, Hydrogen, 1)
-                .build()
-                .setFormula("α-FeO(OH)", true);
-
-        Hydrozincite = new Material.Builder(8265, "hydrozincite")
-                .dust()
-                .color(0xebd5ca)
-                .components(Zinc, 5, Carbon, 2, Oxygen, 12, Hydrogen, 6)
-                .build()
-                .setFormula("Zn5(CO3)2(OH)6", true);
-
-        Chlorargyrite = new Material.Builder(8266, "chlorargyrite")
-                .dust()
-                .color(0x524728)
-                .components(Silver, 1, Chlorine, 1)
-                .build();
-
-        Columbite = new Material.Builder(8267, "columbite")
-                .dust()
-                .color(0x574f2f)
-                .iconSet(SHINY)
-                .components(Iron, 1, Manganese, 1, Niobium, 2, Oxygen, 6)
-                .build()
-                .setFormula("(Fe,Mn)Nb2O6)", true);
-
-        Ferrimolybdite = new Material.Builder(8268, "ferrimolybdite")
-                .dust()
-                .color(0xc1c71c)
-                .components(Iron, 2, Molybdenum, 3, Oxygen, 12, Water, 8)
-                .build()
-                .setFormula("Fe2(MoO4)3 • (H2O)8", true);
-
-        Aguilarite = new Material.Builder(8269, "aguilarite")
-                .dust().gem()
-                .color(0x303030)
-                .iconSet(SHINY)
-                .components(Silver, 4, Selenium, 1, Sulfur, 1)
-                .build();
-
-        Orpiment = new Material.Builder(8270, "orpiment")
-                .dust().gem()
-                .color(0xc28034)
-                .iconSet(SHINY)
-                .components(Arsenic, 2, Sulfur, 3)
-                .build();
-
-        Braggite = new Material.Builder(8272, "braggite")
-                .dust()
-                .color(0x686b5f)
-                .components(Platinum, 1, Palladium, 1, Nickel, 1, Sulfur, 1)
-                .build()
-                .setFormula("(Pt,Pd,Ni)S", true);
-
-        Stannite = new Material.Builder(8273, "stannite")
-                .dust()
-                .color(0x474f3e)
-                .components(Copper, 2, Iron, 1, Tin, 1, Sulfur, 4)
-                .build();
-
-        Euxenite = new Material.Builder(8274, "euxenite")
-                .dust()
-                .color(0x9c973e)
-                .components(Yttrium, 1, Calcium, 1, Cerium, 1, Thorium, 1, Niobium, 1, Tantalum, 1, Titanium, 1, Oxygen, 6)
-                .build()
-                .setFormula("(Y,Ca,Ce,U,Th)(Nb,Ta,Ti)2O6", true);
-
-        Xenotime = new Material.Builder(8275, "xenotime")
-                .dust()
-                .iconSet(SHINY)
-                .color(0x6e572e)
-                .components(Yttrium, 1, Phosphorus, 1, Oxygen, 4)
-                .build();
-
-        Caliche = new Material.Builder(8276, "caliche")
-                .dust()
-                .color(0xb3ae98)
-                .components(Calcium, 1, Carbon, 1, Oxygen, 3)
-                .build();
-
-        Lauterite = new Material.Builder(8277, "lauterite")
-                .dust()
-                .components(Calcium, 1, Iodine, 2, Oxygen, 6)
+                .components(Sodium, 2, Sulfur, 1, Oxygen, 3)
                 .colorAverage()
                 .build()
-                .setFormula("Ca(IO3)2", true);
+
+        SodiumThiosulfate = new Material.Builder(8244, 'sodium_thiosulfate')
+                .dust()
+                .components(Sodium, 2, Sulfur, 2, Oxygen, 3)
+                .color(0x879e21)
+                .build()
+
+        SodiumCarbonate = new Material.Builder(8245, 'sodium_carbonate')
+                .dust()
+                .components(Sodium, 2, Carbon,1, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        HydrogenCyanide = new Material.Builder(8246, "hydrogen_cyanide")
+                .fluid()
+                .components(Hydrogen, 1, Carbon, 1, Nitrogen, 1)
+                .color(0x0b8542)
+                .build()
+
+        SulfidicSilverCyanideSolution = new Material.Builder(8247, "sulfidic_silver_cyanide_solution")
+                .fluid()
+                .components(Silver, 2, Carbon, 4, Nitrogen, 4, Sodium, 4, Sulfur, 1, Water, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+
+        SilverCyanideSolution = new Material.Builder(8248, "silver_cyanide_solution")
+                .fluid()
+                .components(Silver, 2, Carbon, 4, Nitrogen, 4, Sodium, 4, Chlorine, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+                .setFormula('(Na[Ag(CN)2])2(NaCl)2(H2O)4')
+
+        SulfidicPyrargyriteCyanideLeachSolution = new Material.Builder(8249, 'sulfidic_pyrargyrite_cyanide_leach_solution')
+                .fluid()
+                .components(Sodium, 6, Silver, 3, Carbon, 6, Nitrogen, 6, Antimony, 1, Sulfur, 3, Water, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+                .setFormula('(Na[Ag(CN)2])3(Na3SbS3)(H2O)6')
+
+        PyrargyriteCyanideLeachSolution = new Material.Builder(8250, 'pyrargyrite_cyanide_leach_solution')
+                .fluid()
+                .components(Sodium, 6, Silver, 3, Carbon, 6, Nitrogen, 6, Antimony, 1, Chlorine, 6, Water, 12)
+                .flags(DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+                .setFormula('(Na[Ag(CN)2])3(NaCl)2(NaSbCl4)(H2O)6')
+
+        PyrargyriteThiosulfateLeachSolution = new Material.Builder(8251, 'pyrargyrite_thiosulfate_leach_solution')
+                .fluid()
+                .components(Sodium, 12, Silver, 3, Sulfur, 15, Oxygen, 18, Antimony, 1, Water, 5)
+                .flags(DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+                .setFormula('(Na3[Ag(S2O3)2])3(Na3SbS3)(H2O)5')
+
+        ThiosulfateThioantimoniteSolution = new Material.Builder(8252, "thiosulfate_thioantimonite_solution")
+                .fluid()
+                .components(Sodium, 15, Sulfur, 15, Oxygen, 18, Antimony, 1, Water, 5)
+                .colorAverage()
+                .build()
+                .setFormula('(Na2S2O3)6(Na3SbS3)(H2O)5')
+
+        ThiosulfateThioarseniteSolution = new Material.Builder(8253, "thiosulfate_thioarsenite_solution")
+                .fluid()
+                .components(Sodium, 15, Sulfur, 15, Oxygen, 18, Arsenic, 1, Water, 5)
+                .colorAverage()
+                .build()
+                .setFormula('(Na2S2O3)6(Na3AsS3)(H2O)5')
+
+        SulfidicStephaniteCyanideLeachSolution = new Material.Builder(8254, 'sulfidic_stephanite_cyanide_leach_solution')
+                .fluid()
+                .components(Sodium, 10, Silver, 5, Carbon, 10, Nitrogen, 10, Antimony, 1, Sulfur, 4, Water, 12)
+                .flags(DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+                .setFormula('(Na[Ag(CN)2])5(Na3SbS3)(Na2S)(H2O)12')
+        
+        StephaniteCyanideLeachSolution = new Material.Builder(8255, 'stephanite_cyanide_leach_solution')
+                .fluid()
+                .components(Sodium, 10, Silver, 5, Carbon, 10, Nitrogen, 10, Antimony, 1, Chlorine, 8, Water, 20)
+                .flags(DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+                .setFormula('(Na[Ag(CN)2])5(NaCl)2(NaSbCl6)(H2O)20')
+
+        ProustiteThiosulfateLeachSolution = new Material.Builder(8256, 'proustite_thiosulfate_leach_solution')
+                .fluid()
+                .components(Sodium, 12, Silver, 3, Sulfur, 15, Oxygen, 18, Arsenic, 1, Water, 5)
+                .flags(DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+                .setFormula('(Na3[Ag(S2O3)2])3(Na3AsS3)(H2O)5')
+                
+        AcidicArsenateVSolution = new Material.Builder(8257, 'acidic_arsenate_v_solution')
+                .fluid()
+                .components(NitricAcid, 6, Hydrogen, 9, Arsenic, 3, Oxygen, 12)
+                .flags(DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+                .setFormula('(HNO3)6(H3AsO4)3')
+
+        ArsenicVOxide = new Material.Builder(8258, 'arsenic_v_oxide')
+                .dust()
+                .components(Arsenic, 2, Oxygen, 5)
+                .colorAverage()
+                .build()
+
+        SilverOxide = new Material.Builder(8259, 'silver_oxide')
+                .dust()
+                .components(Silver, 2, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        SilverSulfide = new Material.Builder(8260, 'silver_sulfide')
+                .dust()
+                .components(Silver, 2, Sulfur, 1)
+                .colorAverage()
+                .build()
+
+        IronThioantimonite = new Material.Builder(8261, 'iron_thioantimonite')
+                .dust()
+                .components(Iron, 1, Antimony, 1, Sulfur, 3)
+                .colorAverage()
+                .build()
+        
+        AntimonyIiiSulfide = new Material.Builder(8262, 'antimony_iii_sulfide')
+                .dust()
+                .components(Antimony, 2, Sulfur, 3)
+                .colorAverage()
+                .build()
+
+        IronThioarsenite = new Material.Builder(8263, 'iron_thioarsenite')
+                .dust()
+                .components(Iron, 1, Arsenic, 1, Sulfur, 3)
+                .colorAverage()
+                .build()  
     }
 }

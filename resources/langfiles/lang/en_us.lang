@@ -296,6 +296,14 @@ material.arsenic_iii_sulfide=Arsenic III Sulfide
 material.arsenic_v_sulfide=Arsenic V Sulfide
 material.silver_chloride=Silver Chloride
 material.copper_sulfate=Copper Sulfate
+material.antimony_iii_sulfide=Antimony III Sulfide
+material.arsenic_v_oxide=Arsenic V Oxide
+material.sodium_cyanide=Sodium Cyanide
+material.sodium_thiosulfate=Sodium Thiosulfate
+material.silver_oxide=Silver Oxide
+material.silver_sulfide=Silver Sulfide
+material.iron_thioantimonite=Iron Thioantimonite
+material.iron_thioarsenite=Iron Arsenite
 
 # Fluids
 
@@ -463,17 +471,6 @@ material.phosphate_water=Phosphate Water
 material.precious_runoff=Precious Runoff
 material.radioactive_runoff=Radioactive Runoff
 
-material.thioarsenite_solution=Thioarsenite Solution
-material.alkaline_arsenite_solution=Alkaline Arsenite Solution
-material.salty_arsenous_acid=Arsenous Acid Brine
-material.thioarsenate_solution=Thioarsenate Solution
-material.arsenous_acid=Arsenous Acid
-material.tetrachloroantimonate_solution=Tetrachloroantimonate Solution
-material.acidic_copper_solution=Acidic Copper Solution
-material.arsine=Arsine
-material.sodium_bromide_solution=Sodium Bromide Solution
-material.sperrylite_waste=Sperrylite Waste
-
 material.wustite_catalyst=Wustite Catalyst
 material.palladium_chloride=Palladium Chloride
 material.hexachloroiridic_acid=Hexachloroiridic Acid
@@ -519,6 +516,7 @@ material.phosphoryl_chloride=Phosphoryl Chloride
 material.phosphorus_pentachloride=Phosphorus Pentachloride
 material.ammonium_iodide=Ammonium Iodide
 material.hydrobromic_acid=Hydrobromic Acid
+material.hydrogen_cyanide=Hydrogen Cyanide
 
 material.polypropylene=Polypropylene
 material.dimethylformamide=Dimethylformamide
@@ -632,6 +630,34 @@ material.sodium_perchlorate_solution=Sodium Perchlorate Solution
 material.sodium_chlorate_solution=Sodium Chlorate Solution
 material.diluted_aniline=Diluted Aniline
 material.hot_hp_steam=Hot High Pressure Steam
+
+material.sodium_thiosulfate_solution=Sodium Thiosulfate Solution
+material.sodium_sulfite_solution=Sodium Sulfite Solution
+material.sodium_carbonate=Sodium Carbonate Solution
+material.sodium_cyanide_solution=Sodium Cyanide Solution
+material.sulfidic_silver_cyanide_solution=Sulfidic Silver Cyanide Solution
+material.silver_cyanide_solution=Silver Cyanide Solution
+material.sulfidic_pyrargyrite_cyanide_leach_solution=Sulfidic Pyrargyrite Cyanide Leach Solution
+material.pyrargyrite_cyanide_leach_solution=Pyrargyrite Cyanide Leach Solution
+material.sulfidic_stephanite_cyanide_leach_solution=Sulfidic Stephanite Cyanide Leach Solution
+material.stephanite_cyanide_leach_solution=Stephanite Cyanide Leach Solution
+material.pyrargyrite_thiosulfate_leach_solution=Pyrargyrite Thiosulfate Leach Solution
+material.thiosulfate_thioantimonite_solution=Thiosulfate Thioantimonite Solution
+material.proustite_thiosulfate_leach_solution=Proustite Thiosulfate Leach Solution
+material.thiosulfate_thioarsenite_solution=Thiosulfate Thioarsenite Solution
+material.diluted_iron_iii_chloride_solution=Diluted Iron III Chloride Solution
+material.acidic_arsenate_v_solution=Acidic Arsenate Solution
+material.proustite_alkaline_leach_solution=Proustite Alkaline Leach Solution
+material.crude_arsenic_trichloride=Crude Arsenic Trichloride
+material.enargite_sulfide_leach_solution=Enargite Sulfide Leach Solution
+material.arsenic_trichloride=Arsenic Trichloride
+material.sodium_carbonate_solution=Sodium Carbonate Solution
+material.arsenous_acid=Arsenous Acid
+material.acidic_copper_solution=Acidic Copper Solution
+material.arsine=Arsine
+material.sodium_bromide_solution=Sodium Bromide Solution
+material.sperrylite_waste=Sperrylite Waste
+material.diluted_iron_iii_chloride_solution=Diluted Iron III Chloride Solution
 
 # Thermodynamics
 

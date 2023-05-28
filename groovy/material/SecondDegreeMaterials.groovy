@@ -192,9 +192,9 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        BoronTrioxideSolution = new Material.Builder(13029, 'boron_trioxide_solution')
+        SodiumSulfiteSolution = new Material.Builder(13029, "sodium_sulfite_solution")
                 .fluid()
-                .components(Water, 1, BoronTrioxide, 1)
+                .components(SodiumSulfite, 1, Water, 1)
                 .colorAverage()
                 .build()
 
@@ -216,25 +216,43 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        SodiumPerchlorateSolution = new Material.Builder(13033, 'sodium_perchlorate_solution')
+        SodiumThiosulfateSolution = new Material.Builder(13033, "sodium_thiosulfate_solution")
+                .fluid()
+                .components(SodiumThiosulfate, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        SodiumCarbonateSolution = new Material.Builder(13034, 'sodium_carbonate_solution')
+                .fluid()
+                .components(SodiumCarbonate, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        SodiumPerchlorateSolution = new Material.Builder(13035, 'sodium_perchlorate_solution')
                 .fluid()
                 .color(0x5880c7)
                 .build()
 
         SodiumPerchlorateSolution.setFormula("(H2O)(NaClO4)", true);
 
-        SodiumChlorateSolution = new Material.Builder(13034, 'sodium_chlorate_solution')
+        SodiumChlorateSolution = new Material.Builder(13036, 'sodium_chlorate_solution')
                 .fluid()
                 .color(0x315fe8)
                 .build()
 
         SodiumChlorateSolution.setFormula("(H2O)(NaClO3)", true);
 
-        DilutedAniline = new Material.Builder(13035, 'diluted_aniline')
+        DilutedAniline = new Material.Builder(13037, 'diluted_aniline')
                 .fluid()
                 .color(0x5fb36e)
                 .build()
 
         DilutedAniline.setFormula("(H2O)2(C6H5NH2)", true);
+
+        DilutedIron3ChlorideSolution = new Material.Builder(13038, "diluted_iron_iii_chloride_solution")
+                .fluid()
+                .components(Iron3Chloride, 1, Water, 3)
+                .colorAverage()
+                .build()
     }
 }
