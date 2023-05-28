@@ -238,7 +238,7 @@ mods.gregtech.assembler.removeByInput(30, [metaitem('screwSteel') * 2, metaitem(
 
 mods.gregtech.centrifuge.recipeBuilder()
         .fluidInputs(fluid('lava') * 1000)
-        .outputs(metaitem('mineral_wool'))
+        .outputs(metaitem('mineral_wool') * 16)
         .duration(100)
         .EUt(30)
         .buildAndRegister();
