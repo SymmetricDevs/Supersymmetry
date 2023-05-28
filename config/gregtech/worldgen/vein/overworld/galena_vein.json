@@ -24,7 +24,7 @@
         "secondary": "ore:sphalerite"
       },
       {
-        "between": "ore:galena"
+        "between": "ore:acanthite"
       },
       {
         "sporadic": "ore:pyrite"
