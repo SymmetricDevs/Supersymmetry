@@ -106,11 +106,11 @@ for (ore in tab_MAsS) {
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('acidic_arsenate_v_solution') * 2000)
         .outputs(metaitem('dustArsenicVOxide') * 21)
-        .fluidOutputs(fluid('steam') * (3000 + 4500) * 2)
-        .fluidOutputs(fluid('nitrogen_dioxide') * 6000 * 2)
-        .fluidOutputs(fluid('oxygen') * 3000 * 2)
+        .fluidOutputs(fluid('steam') * 15000)
+        .fluidOutputs(fluid('nitrogen_dioxide') * 12000)
+        .fluidOutputs(fluid('oxygen') * 6000)
         .duration(120)
-        .EUt(Globals.voltAmps[1])
+        .EUt(Globals.voltAmps[3])
         .buildAndRegister();
 
 //ARSENIC OXIDES REDUCTION
@@ -144,7 +144,7 @@ BATCH_REACTOR.recipeBuilder()
         .buildAndRegister()
 
 //ENARGITE ALKALINE SULFIDE LEACHING
-        BATCH_REACTOR.recipeBuilder()
+BATCH_REACTOR.recipeBuilder()
         .inputs(ore('dustEnargite') * 14)
         .inputs(ore('dustSodiumSulfide') * 9)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)

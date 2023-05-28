@@ -531,5 +531,12 @@ public class OreMaterials{
                 .colorAverage()
                 .build()
                 .setFormula("Ca(IO3)2", true);
+
+        Langbeinite = new Material.Builder(7070, "langbeinite")
+                .dust()
+                .components(Potassium, 2, Magnesium, 2, Sulfur, 3, Oxygen, 12)
+                .colorAverage()
+                .build()
+                .setFormula("K2Mg2(SO4)3", true);
     }
 }

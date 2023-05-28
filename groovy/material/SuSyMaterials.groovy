@@ -102,16 +102,6 @@ class SuSyMaterials {
         public static Material Xenotime;
         public static Material Caliche;
         public static Material Lauterite;
-        public static Material PegmatiteTailings;
-        public static Material GraniteTailings;
-        public static Material LimestoneTailings;
-        public static Material UltramaficTailings;
-        public static Material Corundum;
-        public static Material Tourmaline;
-        public static Material NonMarineEvaporite;
-        public static Material HalideEvaporite;
-        public static Material CarbonateEvaporite;
-        public static Material SulfateEvaporite;
 
         // Roasted Ores
 
@@ -391,7 +381,6 @@ class SuSyMaterials {
         public static Material PhosphorusPentachloride;
         public static Material AmmoniumIodide;
         public static Material HydrobromicAcid;
-        public static Material SodiumCyanide;
         public static Material SodiumSulfite;
         public static Material SodiumThiosulfate;
         public static Material SodiumCarbonate;
@@ -407,10 +396,13 @@ class SuSyMaterials {
         public static Material StephaniteCyanideLeachSolution;
         public static Material ProustiteThiosulfateLeachSolution;
         public static Material AcidicArsenateVSolution;
-        public static Material SulfurDichloride;
-        public static Material SodiumPerchlorateSolution;
-        public static Material SodiumChlorateSolution;
-        public static Material DilutedAniline;
+        public static Material EnargiteSulfideLeachSolution;
+        public static Material ArsenicVOxide;
+        public static Material SilverOxide;
+        public static Material SilverSulfide;
+        public static Material IronThioantimonite;
+        public static Material AntimonyIiiSulfide;
+        public static Material IronThioarsenite;
 
         // Second Degree Materials
 
@@ -449,6 +441,10 @@ class SuSyMaterials {
         public static Material BrominatedSulfurDioxide;
         public static Material SodiumThiosulfateSolution;
         public static Material SodiumCarbonateSolution;
+        public static Material DilutedIron3ChlorideSolution;
+        public static Material SodiumPerchlorateSolution;
+        public static Material SodiumChlorateSolution;
+        public static Material DilutedAniline;
 
         // Organic Chemistry Materials
 

@@ -248,5 +248,11 @@ public class SecondDegreeMaterials {
                 .build()
 
         DilutedAniline.setFormula("(H2O)2(C6H5NH2)", true);
+
+        DilutedIron3ChlorideSolution = new Material.Builder(13038, "diluted_iron_iii_chloride_solution")
+                .fluid()
+                .components(Iron3Chloride, 1, Water, 3)
+                .colorAverage()
+                .build()
     }
 }

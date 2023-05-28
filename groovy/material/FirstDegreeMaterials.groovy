@@ -267,10 +267,10 @@ public class FirstDegreeMaterials{
                 .color(0x47464b)
                 .build()
 
-        DilutedIron3ChlorideSolution = new Material.Builder(8125, "diluted_iron_iii_chloride_solution")
+        SulfurDichloride = new Material.Builder(8125, 'sulfur_dichloride')
                 .fluid()
-                .components(Iron3Chloride, 1, Water, 3)
-                .colorAverage()
+                .components(Sulfur, 1, Chlorine, 2)
+                .color(0xd2042d)
                 .build()
 
         BoronTrioxide = new Material.Builder(8126, 'boron_trioxide')
@@ -1105,10 +1105,40 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula('(HNO3)6(H3AsO4)3')
 
-        SulfurDichloride = new Material.Builder(8258, 'sulfur_dichloride')
-                .fluid()
-                .components(Sulfur, 1, Chlorine, 2)
-                .color(0xd2042d)
+        ArsenicVOxide = new Material.Builder(8258, 'arsenic_v_oxide')
+                .dust()
+                .components(Arsenic, 2, Oxygen, 5)
+                .colorAverage()
                 .build()
+
+        SilverOxide = new Material.Builder(8259, 'silver_oxide')
+                .dust()
+                .components(Silver, 2, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        SilverSulfide = new Material.Builder(8260, 'silver_sulfide')
+                .dust()
+                .components(Silver, 2, Sulfur, 1)
+                .colorAverage()
+                .build()
+
+        IronThioantimonite = new Material.Builder(8261, 'iron_thioantimonite')
+                .dust()
+                .components(Iron, 1, Antimony, 1, Sulfur, 3)
+                .colorAverage()
+                .build()
+        
+        AntimonyIiiSulfide = new Material.Builder(8262, 'antimony_iii_sulfide')
+                .dust()
+                .components(Antimony, 2, Sulfur, 3)
+                .colorAverage()
+                .build()
+
+        IronThioarsenite = new Material.Builder(8263, 'iron_thioarsenite')
+                .dust()
+                .components(Iron, 1, Arsenic, 1, Sulfur, 3)
+                .colorAverage()
+                .build()  
     }
 }

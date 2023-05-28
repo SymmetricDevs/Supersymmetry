@@ -1,7 +1,7 @@
 FBR = recipemap('fixed_bed_reactor')
 BCR = recipemap('bubble_column_reactor')
 DISTILLERY = recipemap('distillery')
-MIXER = recipemap('mixer')
+BATCH_REACTOR = recipemap('batch_reactor')
 
 //SODIUM CYANIDE
 FBR.recipeBuilder()
@@ -41,7 +41,7 @@ BCR.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-MIXER.recipeBuilder()
+BATCH_REACTOR.recipeBuilder()
     .inputs(ore('dustSulfur'))
     .fluidInputs(fluid('sodium_sulfite_solution') * 1000)
     .fluidOutputs(fluid('sodium_thiosulfate_solution') * 1000)
