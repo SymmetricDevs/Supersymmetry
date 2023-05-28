@@ -296,5 +296,240 @@ public class OreMaterials{
                 .color(0xb3af86)
                 .build();
 
+        Kernite = new Material.Builder(7037, "kernite")
+                .dust()
+                .color(0xd9c1a0)
+                .components(Sodium, 2, Boron, 4, Oxygen, 8, Hydrogen, 2, Water, 3)
+                .build()
+                .setFormula("Na2B4O6(OH)2 • (H2O)3", true);
+
+        Colemanite = new Material.Builder(7038, "colemanite")
+                .dust()
+                .color(0xdbcd8f)
+                .components(Calcium, 2, Boron, 6, Oxygen, 11, Water, 5)
+                .build()
+                .setFormula("Ca2B6O11 • (H2O)5", true);
+
+        Ulexite = new Material.Builder(7039, "ulexite")
+                .dust()
+                .color(0xc2aba1)
+                .components(Sodium, 1, Calcium, 1, Boron, 5, Oxygen, 12, Hydrogen, 6, Water, 5)
+                .build()
+                .setFormula("NaCaB5O6(OH)6 • (H2O)5", true);
+
+        Carnallite = new Material.Builder(7040, "carnallite")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xffffff)
+                .components(Potassium, 1, Magnesium, 1, Chlorine, 3, Water, 6)
+                .build()
+                .setFormula("KCl.MgCl2 • (H2O)6", true);
+
+        Kainite = new Material.Builder(7041, "kainite")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xfff7c4)
+                .components(Potassium, 1, Magnesium, 1, Sulfur, 1, Oxygen, 4, Chlorine, 1, Water, 3)
+                .build()
+                .setFormula("KMg(SO4)Cl • (H2O)3", true);
+
+        Kieserite = new Material.Builder(7042, "kieserite")
+                .dust()
+                .color(0xdccade)
+                .components(Magnesium, 1, Sulfur, 1, Oxygen, 4, Water, 1)
+                .build()
+                .setFormula("K2Mg2(SO4)3", true);
+
+        Polyhalite = new Material.Builder(7043, "polyhalite")
+                .dust()
+                .color(0xe0b2a4)
+                .components(Potassium, 2, Calcium, 2, Magnesium, 1, Sulfur, 4, Oxygen, 16, Water, 2)
+                .build()
+                .setFormula("K2Ca2Mg(SO4)4 • (H2O)2", true);
+
+        Dolomite = new Material.Builder(7044, "dolomite")
+                .dust()
+                .color(0xadaa8e)
+                .components(Calcium, 1, Magnesium, 1, Carbon, 2, Oxygen, 6)
+                .build()
+                .setFormula("CaMg(CO3)2", true);
+
+        Titanite = new Material.Builder(7045, "titanite")
+                .gem()
+                .iconSet(SHINY)
+                .color(0x967051)
+                .components(Calcium, 1, Titanium, 1, Silicon, 1, Oxygen, 5)
+                .build();
+
+        Leucoxene = new Material.Builder(7046, "leucoxene")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xb987c4)
+                .components(Titanium, 1, Oxygen, 2)
+                .build();
+
+        Zircon = new Material.Builder(7047, "zircon")
+                .gem()
+                .iconSet(SHINY)
+                .color(0xf05c51)
+                .components(Zirconium, 1, Silicon, 1, Oxygen, 4)
+                .build();
+
+        Mimetite = new Material.Builder(7048, "mimetite")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xe8aa2e)
+                .components(Lead, 5, Arsenic, 3, Oxygen, 12, Chlorine, 1)
+                .build()
+                .setFormula("Pb5(AsO4)3Cl", true);
+
+        Pyromorphite = new Material.Builder(7049, "pyromorphite")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xd7e632)
+                .components(Lead, 5, Phosphorus, 4, Oxygen, 12, Chlorine, 1)
+                .build()
+                .setFormula("Pb5(PO4)3Cl", true);
+
+        Descloizite = new Material.Builder(7050, "descloizite")
+                .dust()
+                .iconSet(SHINY)
+                .color(0x5e5d41)
+                .components(Lead, 1, Zinc, 1, Vanadium, 1, Oxygen, 5, Hydrogen, 1)
+                .build()
+                .setFormula("(Pb,Zn)2VO4OH", true);
+
+        Mottramite = new Material.Builder(7051, "mottramite")
+                .dust()
+                .color(0x53730a)
+                .components(Lead, 1, Copper, 1, Vanadium, 1, Oxygen, 5, Hydrogen, 1)
+                .build()
+                .setFormula("PbCu(VO4)(OH)", true);
+
+        Chlorapatite = new Material.Builder(7052, "chlorapatite")
+                .dust().gem()
+                .iconSet(SHINY)
+                .color(0xc7af85)
+                .components(Calcium, 5, Phosphorus, 3, Oxygen, 12, Chlorine, 1)
+                .build()
+                .setFormula("Ca5(PO4)3Cl", true);
+
+        Hematite = new Material.Builder(7053, "hematite")
+                .dust()
+                .color(0x240f0f)
+                .components(Iron, 2, Oxygen, 3)
+                .build();
+
+        Skutterudite = new Material.Builder(7054, "skutterudite")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xabbec2)
+                .components(Cobalt, 1, Arsenic, 3)
+                .build();
+
+        Allanite = new Material.Builder(7055, "allanite")
+                .dust()
+                .iconSet(SHINY)
+                .color(0x6b7a7d)
+                .components(Cerium, 1, Calcium, 1, Yttrium, 1, Lanthanum, 1, Aluminium, 1, Iron, 1, Silicon, 3, Oxygen, 13, Hydrogen, 1)
+                .build()
+                .setFormula("(Ce,Ca,Y,La)2(Al,Fe)3(SiO4)3(OH)", true);
+
+        Azurite = new Material.Builder(7056, "azurite")
+                .dust().gem()
+                .iconSet(SHINY)
+                .color(0x2216c9)
+                .components(Copper, 3, Carbon, 2, Oxygen, 8, Hydrogen, 2)
+                .build()
+                .setFormula("Cu3(CO3)2(OH)2", true);
+
+        Goethite = new Material.Builder(7057, "goethite")
+                .dust()
+                .color(0x30251f)
+                .components(Iron, 1, Oxygen, 2, Hydrogen, 1)
+                .build()
+                .setFormula("α-FeO(OH)", true);
+
+        Hydrozincite = new Material.Builder(7058, "hydrozincite")
+                .dust()
+                .color(0xebd5ca)
+                .components(Zinc, 5, Carbon, 2, Oxygen, 12, Hydrogen, 6)
+                .build()
+                .setFormula("Zn5(CO3)2(OH)6", true);
+
+        Chlorargyrite = new Material.Builder(7059, "chlorargyrite")
+                .dust()
+                .color(0x524728)
+                .components(Silver, 1, Chlorine, 1)
+                .build();
+
+        Columbite = new Material.Builder(7060, "columbite")
+                .dust()
+                .color(0x574f2f)
+                .iconSet(SHINY)
+                .components(Iron, 1, Manganese, 1, Niobium, 2, Oxygen, 6)
+                .build()
+                .setFormula("(Fe,Mn)Nb2O6)", true);
+
+        Ferrimolybdite = new Material.Builder(7061, "ferrimolybdite")
+                .dust()
+                .color(0xc1c71c)
+                .components(Iron, 2, Molybdenum, 3, Oxygen, 12, Water, 8)
+                .build()
+                .setFormula("Fe2(MoO4)3 • (H2O)8", true);
+
+        Aguilarite = new Material.Builder(7062, "aguilarite")
+                .dust().gem()
+                .color(0x303030)
+                .iconSet(SHINY)
+                .components(Silver, 4, Selenium, 1, Sulfur, 1)
+                .build();
+
+        Orpiment = new Material.Builder(7063, "orpiment")
+                .dust().gem()
+                .color(0xc28034)
+                .iconSet(SHINY)
+                .components(Arsenic, 2, Sulfur, 3)
+                .build();
+
+        Braggite = new Material.Builder(7064, "braggite")
+                .dust()
+                .color(0x686b5f)
+                .components(Platinum, 1, Palladium, 1, Nickel, 1, Sulfur, 1)
+                .build()
+                .setFormula("(Pt,Pd,Ni)S", true);
+
+        Stannite = new Material.Builder(7065, "stannite")
+                .dust()
+                .color(0x474f3e)
+                .components(Copper, 2, Iron, 1, Tin, 1, Sulfur, 4)
+                .build();
+
+        Euxenite = new Material.Builder(7066, "euxenite")
+                .dust()
+                .color(0x9c973e)
+                .components(Yttrium, 1, Calcium, 1, Cerium, 1, Thorium, 1, Niobium, 1, Tantalum, 1, Titanium, 1, Oxygen, 6)
+                .build()
+                .setFormula("(Y,Ca,Ce,U,Th)(Nb,Ta,Ti)2O6", true);
+
+        Xenotime = new Material.Builder(7067, "xenotime")
+                .dust()
+                .iconSet(SHINY)
+                .color(0x6e572e)
+                .components(Yttrium, 1, Phosphorus, 1, Oxygen, 4)
+                .build();
+
+        Caliche = new Material.Builder(7068, "caliche")
+                .dust()
+                .color(0xb3ae98)
+                .components(Calcium, 1, Carbon, 1, Oxygen, 3)
+                .build();
+
+        Lauterite = new Material.Builder(7069, "lauterite")
+                .dust()
+                .components(Calcium, 1, Iodine, 2, Oxygen, 6)
+                .colorAverage()
+                .build()
+                .setFormula("Ca(IO3)2", true);
     }
 }

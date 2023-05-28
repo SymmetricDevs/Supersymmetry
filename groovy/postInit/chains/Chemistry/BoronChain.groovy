@@ -1,7 +1,7 @@
 import static globals.Globals.*
 import static globals.SinteringGlobals.*
 
-MIXER = recipemap('mixer')
+BATCH_REACTOR = recipemap('batch_reactor')
 ROASTER = recipemap('roaster')
 MACERATOR = recipemap('macerator')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
@@ -16,11 +16,11 @@ ROASTER.recipeBuilder()
 	.outputs(ore('dustSodiumTetraborate').first() * 13)
 	.fluidOutputs(fluid('steam') * 10000)
 	.duration(200)
-	.EUt(Globals.voltAmps[1])
+	.EUt(Globals.voltAmps[2])
 	.buildAndRegister()	
 
 //DISSOLUTION OF TETRABORATE
-MIXER.recipeBuilder()
+BATCH_REACTOR.recipeBuilder()
 	.inputs(ore('dustSodiumTetraborate') * 13)
 	.fluidInputs(fluid('distilled_water') * 2000)
 	.outputs(ore('dustTinyClay').first())
@@ -30,7 +30,7 @@ MIXER.recipeBuilder()
 	.buildAndRegister()
 
 //PRECIPITATION OF BORIC ACID
-MIXER.recipeBuilder()
+BATCH_REACTOR.recipeBuilder()
 	.fluidInputs(fluid('borate_liquor') * 2000)
 	.fluidInputs(fluid('hydrochloric_acid') * 2000)
 	.outputs(ore('dustBoricAcid').first() * 28)
@@ -79,7 +79,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 	.buildAndRegister()
 
 //PRODUCTION OF KBF4
-MIXER.recipeBuilder()
+BATCH_REACTOR.recipeBuilder()
 	.inputs(ore('dustBoricAcid') * 7)
     .fluidInputs(fluid('hydrofluoric_acid') * 4000)
 	.fluidOutputs(fluid('tetrafluoroboric_acid') * 1000)
@@ -87,7 +87,7 @@ MIXER.recipeBuilder()
 	.EUt(Globals.voltAmps[1])
 	.buildAndRegister()
 
-MIXER.recipeBuilder()
+BATCH_REACTOR.recipeBuilder()
 	.inputs(ore('dustPotassiumCarbonate') * 6)
 	.fluidInputs(fluid('tetrafluoroboric_acid') * 1000)
 	.fluidOutputs(fluid('potassium_tetrafluoroborate_solution') * 1000)
@@ -165,7 +165,7 @@ FLUIDIZEDBR.recipeBuilder()
 	.EUt(120)
 	.buildAndRegister()
 
-MIXER.recipeBuilder()
+BATCH_REACTOR.recipeBuilder()
 	.fluidInputs(fluid('boron_trichloride') * 1000)
 	.fluidInputs(fluid('hydrogen') * 3000)
 	.outputs(ore('dustHighPurityBoron').first())
