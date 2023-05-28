@@ -5161,7 +5161,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "-- §aIMPORTANT INFORMATION§r --\n- Surface gravity: 1g\n- Day length: 24 hours \n- Atmosphere: Breathable (1 atm)\n    1. 78.084% Nitrogen\n    2. 20.946% Oxygen\n    3. 0.9340% Argon\n    4. 0.0417% Carbon Dioxide\n    5. 0.001818% Neon\n    6. 0.000524% Helium\n    7. 0.000187% Methane\n    8. 0.000114% Krypton\n- Orbital period: 360 Days \n- Satellites:\n    1. Moon\n-------------------------\n\n\n§aEarth§r is a terrestrial planet that orbits a star called §6the Sun§r. It has a rocky surface that is divided into various landforms known as continents. It includes vast oceans, towering mountains, lush forests, arid deserts, and polar ice caps.\n\nFrom a distance, Earth appears to be a blue and green orb due to the presence of water and vegetation on its surface. The oceans cover approximately 70% of the planet\u0027s surface, while the remaining 30% is made up of land.\n\nThe mountains on Earth are towering structures that rise up from the planet\u0027s surface and can reach incredible heights. Forests on Earth are abundant and provide a home for many different species of plants and animals. These forests are a vital component of the planet\u0027s ecosystem and play an essential role in regulating the Earth\u0027s climate. Deserts are dry and arid regions where very little rainfall occurs. Large §6salt flats §rcan be found in the desert.\n\n§cBy digging down from the Earth\u0027s surface, one can encounter three types of rocks: Sedimentary, Igneous and Metamorphic. Sedimentary rocks, like limestone, can be found at altitude levels up to 40, while igneous rocks, like gabbro or granite, can be found between 0 and 40.\n\nUnder the Earth there is a cave system called The Beneath. This cave system is a complex network of underground tunnels, chambers, and passageways that stretches over a significant distance. You can get to it by digging down to Y level 0.\n\n",
+          "desc:8": "-- §aIMPORTANT INFORMATION§r --\n- Surface gravity: 1g\n- Day length: 24 hours \n- Atmosphere: Breathable (1 atm)\n    1. 78.084% Nitrogen\n    2. 20.946% Oxygen\n    3. 0.9340% Argon\n    4. 0.0417% Carbon Dioxide\n    5. 0.001818% Neon\n    6. 0.000524% Helium\n    7. 0.000187% Methane\n    8. 0.000114% Krypton\n- Orbital period: 360 Days \n- Satellites:\n    1. Moon\n-------------------------\n\n§aEarth§r is a terrestrial planet that orbits a star called §6the Sun§r. It has a rocky surface that is divided into various landforms known as continents. It includes vast oceans, towering mountains, lush forests, arid deserts, and polar ice caps. The oceans cover approximately 70% of the planet\u0027s surface, while the remaining 30% is made up of land.\n\nThe mountains on Earth can reach incredible heights. Forests on Earth are abundant and provide a home for many different species of plants and animals. These forests are a vital component of the planet\u0027s ecosystem and play an essential role in regulating the Earth\u0027s climate. \n\n§cBy digging down from the Earth\u0027s surface, one can encounter three types of rocks: Sedimentary, Igneous and Metamorphic. Sedimentary rocks, like limestone, can be found at altitude levels up to 40, while igneous rocks, like gabbro or granite, can be found between 0 and 40.\n\nUnder the Earth there is a cave system called The Beneath. This cave system is a complex network of underground tunnels, chambers, and passageways that stretches over a significant distance. You can get to it by digging down to Y level 0.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25323,7 +25323,7 @@
     },
     "378:10": {
       "preRequisites:11": [
-        379
+        203
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -25393,12 +25393,12 @@
     },
     "379:10": {
       "preRequisites:11": [
-        377
+        440
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Explore the §cnether §rto get kimberlite, which needs to be §d§csorted §rbefore getting diamonds.\n\n§bDiamonds §rare required for making the drill tip for the mining drill, which unlocks infinite ores.\n",
+          "desc:8": "Explore the §cnether §rto get §c§lkimberlite§r, which needs to be §d§csifted §rbefore getting diamonds.\nFor more info, check the §lExploration §rtab.\n\n§bDiamonds §rare required for making the drill tip for the mining drill, which unlocks infinite ores.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31126,15 +31126,15 @@
           "id:3": 378,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 318,
-          "y:3": 336
+          "x:3": 144,
+          "y:3": 402
         },
         "86:10": {
           "id:3": 379,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 276,
-          "y:3": 348
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 60,
+          "y:3": -102
         },
         "87:10": {
           "id:3": 380,
@@ -31194,17 +31194,17 @@
         },
         "95:10": {
           "id:3": 419,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": -16,
-          "y:3": -4
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -18,
+          "y:3": -6
         },
         "96:10": {
           "id:3": 420,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": 60,
-          "y:3": -4
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 66,
+          "y:3": -6
         },
         "97:10": {
           "id:3": 421,
@@ -31231,15 +31231,15 @@
           "id:3": 440,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
-          "y:3": 0
+          "x:3": 72,
+          "y:3": -42
         },
         "101:10": {
           "id:3": 441,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 138,
-          "y:3": 0
+          "x:3": 126,
+          "y:3": -42
         }
       }
     },
