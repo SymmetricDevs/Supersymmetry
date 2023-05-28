@@ -1,6 +1,6 @@
 {
   "weight": 0,
-  "name": "Earth Sea Water Deposit",
+  "name": "Earth Lava Deposit",
   "yield": {
     "min": 50,
     "max": 100
@@ -10,14 +10,12 @@
     "chance": 0,
     "depleted_yield": 15
   },
-  "fluid": "sea_water",
+  "fluid": "lava",
   "dimension_filter": [
     "name:overworld"
   ],
   "biome_modifier": {
     "type": "biome_map",
-    "ocean": 150,
-    "frozen_ocean": 150,
-    "deep_ocean": 200
+    "biomesoplenty:volcanic_island": 150
   }
 }

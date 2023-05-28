@@ -431,3 +431,13 @@ LCR.recipeBuilder()
         .duration(240)
         .EUt(120)
         .buildAndRegister()
+		
+// Force GTFO skewers to be made with only long rods
+// Skewer * 16
+mods.gregtech.lathe.removeByInput(200, [metaitem('stickTitanium')], null)
+
+// Skewer * 4
+mods.gregtech.lathe.removeByInput(30, [metaitem('stickSteel')], null)
+
+// Skewer * 8
+mods.gregtech.lathe.removeByInput(40, [metaitem('stickStainlessSteel')], null)

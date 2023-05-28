@@ -807,6 +807,8 @@ material.limestone_tailings=Limestone Tailing
 material.pegmatite_tailings=Pegmatite Tailing
 material.ultramafic_tailings=Ultramafic Tailing
 
+material.vinegar=Vinegar
+
 # Isotopes
 
 # GregTech RecipeMaps
@@ -828,7 +830,7 @@ recipemap.sintering_oven.name=Sintering
 recipemap.electrolytic_cell.name=Advanced Electrolysis
 recipemap.vat_fermentation.name=Fermentation Vat
 recipemap.vacuum_distillation.name=Vacuum Distillation
-recipemap.catalytic_reformer.name=Catalytic Reforming
+recipemap.catalytic_reformer_recipes.name=Catalytic Reforming
 recipemap.coking_tower.name=Coking Tower
 
 # QMD Particles
