@@ -9,6 +9,17 @@ def HEAT_EXCHANGER = recipemap('heat_exchanger');
 def SIFTER = recipemap('sifter');
 def DRYER = recipemap('dryer');
 
+// Salt * 2
+mods.gregtech.centrifuge.removeByInput(30, null, [fluid('salt_water') * 1000])
+
+DRYER.recipeBuilder()
+        .fluidInputs(fluid('salt_water') * 1000)
+        .outputs(metaitem('dustSalt') * 2)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(240)
+        .EUt(30)
+        .buildAndRegister()
+
 //MULTI STAGE FLASH DISTILLATION MODELLED BY HEAT EXCHANGER
 HEAT_EXCHANGER.recipeBuilder()
         .fluidInputs(fluid('sea_water') * 9000)

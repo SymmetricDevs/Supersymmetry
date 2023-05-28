@@ -6,8 +6,8 @@
     "max": 100
   },
   "depletion": {
-    "amount": 1,
-    "chance": 100,
+    "amount": 0,
+    "chance": 0,
     "depleted_yield": 15
   },
   "fluid": "sea_water",

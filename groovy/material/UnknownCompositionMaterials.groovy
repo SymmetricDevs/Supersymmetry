@@ -274,6 +274,11 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0xc7c0b1)
                 .build();
+
+        Vinegar = new Material.Builder(4049, "vinegar")
+                .fluid()
+                .color(0xc3c4b3)
+                .build();
     }
 
 }           

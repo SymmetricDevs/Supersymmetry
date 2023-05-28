@@ -129,6 +129,7 @@ class SuSyMaterials {
         public static Material HalideEvaporite;
         public static Material CarbonateEvaporite;
         public static Material SulfateEvaporite;
+        public static Material Vinegar;
 
         // Petrochem Materials
 
@@ -163,35 +164,23 @@ class SuSyMaterials {
         public static Material SulfuricKerosene;
         public static Material TreatedSulfuricKerosene;
         public static Material LightlySteamcrackedKerosene;
-        public static Material LightlySteamcrackedKeroseneMix;
         public static Material SeverelySteamcrackedKerosene;
-        public static Material SeverelySteamcrackedKeroseneMix;
         public static Material LightlyHydrocrackedKerosene;
-        public static Material LightlyHydrocrackedKeroseneMix;
         public static Material SeverelyHydrocrackedKerosene;
-        public static Material SeverelyHydrocrackedKeroseneMix;
         public static Material UpgradedKeroseneMix;
         
         public static Material SulfuricGasoline;
         public static Material TreatedSulfuricGasoline;
         public static Material LightlySteamcrackedGasoline;
-        public static Material LightlySteamcrackedGasolineMix;
         public static Material SeverelySteamcrackedGasoline;
-        public static Material SeverelySteamcrackedGasolineMix;
         public static Material LightlyHydrocrackedGasoline;
-        public static Material LightlyHydrocrackedGasolineMix;
         public static Material SeverelyHydrocrackedGasoline;
-        public static Material SeverelyHydrocrackedGasolineMix;
 
         public static Material TreatedSulfuricNaphtha;
         public static Material LightlySteamcrackedNaphtha;
-        public static Material LightlySteamcrackedNaphthaMix;
         public static Material SeverelySteamcrackedNaphtha;
-        public static Material SeverelySteamcrackedNaphthaMix;
         public static Material LightlyHydrocrackedNaphtha;
-        public static Material LightlyHydrocrackedNaphthaMix;
         public static Material SeverelyHydrocrackedNaphtha;
-        public static Material SeverelyHydrocrackedNaphthaMix;
         public static Material NaphthaReformate; 
         public static Material UpgradedNaphthaMix;
 

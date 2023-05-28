@@ -28,6 +28,7 @@ class ChangeFlags {
         Tantalum.addFlags("generate_catalyst_bed");
         ChromiumTrioxide.addFlags("generate_catalyst_bed");
         Iron3Chloride.addFlags("generate_catalyst_bed");
+        Alumina.addFlags("generate_catalyst_bed");
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
