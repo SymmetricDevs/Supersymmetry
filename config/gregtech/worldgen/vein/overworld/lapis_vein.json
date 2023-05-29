@@ -1,0 +1,34 @@
+{
+  "weight": 180,
+  "density": 1,
+  "max_height": 255,
+  "min_height": 60,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "lapis"
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      20,
+      20
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:lapis"
+      },
+      {
+        "secondary": "ore:lapis"
+      },
+      {
+        "between": "ore:lazurite"
+      },
+      {
+        "sporadic": "ore:sodalite"
+      }
+    ]
+  }
+}
