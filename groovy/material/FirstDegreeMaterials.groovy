@@ -1129,7 +1129,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
         
-        AntimonyIiiSulfide = new Material.Builder(8262, 'antimony_iii_sulfide')
+        AntimonyIIISulfide = new Material.Builder(8262, 'antimony_iii_sulfide')
                 .dust()
                 .components(Antimony, 2, Sulfur, 3)
                 .colorAverage()
@@ -1139,6 +1139,35 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Iron, 1, Arsenic, 1, Sulfur, 3)
                 .colorAverage()
-                .build()  
+                .build()
+
+        ManganeseIIOxide = new Material.Builder(8265, "manganese_ii_oxide")
+                .dust()
+                .components(Manganese, 1, Oxygen, 1)
+                .color(0x472400)
+                .iconSet(SAND)
+                .build()
+
+        CrudeManganeseIISulfateSolution = new Material.Builder(8266, "crude_manganese_ii_sulfate_solution")
+                .fluid()
+                .components(Manganese, 1, Sulfur, 1, Oxygen, 4, Water, 1)
+                .colorAverage()
+                .build()
+                .setFormula('(?)(MnSO4)(H2O)')
+
+        CrudeManganeseIISulfateSolution = new Material.Builder(8267, "manganese_ii_sulfate_solution")
+                .fluid()
+                .components(Manganese, 1, Sulfur, 1, Oxygen, 4, Water, 1)
+                .colorAverage()
+                .build()
+                .setFormula('(MnSO4)(H2O)')
+
+        IronIIIHydroxide = new Material.Builder(8268, "iron_iii_hydroxide")
+                .dust()
+                .components(Iron, 1, Oxygen, 3, Hydrogen, 3)
+                .color(0xcc7e35)
+                .iconSet(SAND)
+                .build()
+                .setFormula('Fe(OH)3')
     }
 }

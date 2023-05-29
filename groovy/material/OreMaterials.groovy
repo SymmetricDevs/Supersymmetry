@@ -538,5 +538,12 @@ public class OreMaterials{
                 .colorAverage()
                 .build()
                 .setFormula("K2Mg2(SO4)3", true);
+
+        Rhodochrosite = new Material.Builder(7071, "rhodochrosite")
+                .ore()
+                .iconSet(SHINY)
+                .components(Manganese, 1, Carbon, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
     }
 }
