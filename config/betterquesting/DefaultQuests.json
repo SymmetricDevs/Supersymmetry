@@ -16631,7 +16631,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§cSperrylite, Cobaltite and Arsenopyrite §rcan be put through an Electric Blast Furnace with oxygen to create §6Arsenic Trioxide§r.\nRealgar can be used, but it requires 240 EU/t, so it can only be done in a higher-tier EBF.\n\nThis can be then §6arc furnaced §rwith some §6Carbon §rto create pure Arsenic.",
+          "desc:8": "§cSperrylite, Cobaltite and Arsenopyrite and Realgar §rcan be put through an Electric Blast Furnace with oxygen to create §6small piles of Arsenic Trioxide.\n\nThis can be then §6arc furnaced §rwith some §6Carbon §rto create pure Arsenic.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17729,7 +17729,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Boron (B)\n§bAtomic Number§r: 5\n§aAtomic Mass§r: 10.81 amu\n§cMelting Point§r: 2349 K\n§5Boiling Point§r: 4200 K\n§6Properties§r: Boron is a metalloid with strong chemical resistance. It is used in various industries, including agriculture (as a micronutrient), ceramics, and semiconductors.\n\n",
+          "desc:8": "§6Element§r: Boron (B)\n§bAtomic Number§r: 5\n§aAtomic Mass§r: 10.81 amu\n§cMelting Point§r: 2349 K\n§5Boiling Point§r: 4200 K\n§6Properties§r: Boron is a metalloid with strong chemical resistance. It is used in various industries, including agriculture (as a micronutrient), ceramics, and semiconductors.\n\n§lPrimitive:§r §6Roast ores to form Sodium Tetraborate.\n\n§613 Sodium Tetraborate Dust + 2,000 L Distilled Water → 2,000 L Borate Liquor + 1 tiny pile of clay (Mixer)\n\n2,000 L Borate Liquor + 2,000 L Hydrochloric Acid → 28 Boric Acid + 2,000 L Salt Water (CSTR)\n\n14 Boric Acid → 3,000 L Steam + 5 Boron Trioxide (Roaster)\n\n5 Boron Trioxide + 3 Magnesium -\u003e 2 Amorphous Boron + 6 Magnesium Oxide (Roaster)\n\n2 Amorphous Boron → 1 Boron Dust (Centrifuge)\n\n§l§r§lUniversal: §rDirect electrolysis of B2O3 to form elemental boron.\n\n§67 Boric Acid + 4,000 L Hydrofluoric acid → 1,000 L Tetrafluoroboric Acid (Mixer)\n\n1,000 L Tetrafluoroborate Solution + 6 Potassium Carbonate → 1,000 L Potassium Tetrafluoroborate Solution +  1,000 L Carbon Dioxide\n\n14,000 L Potassium Tetrafluoroborate Solution → 12 Potassium tetrafluoroborate + 15,000 L Steam (Roaster)\n\n144 mB molten salt (NC) + 1 Sodium Fluoride (NC) + 1 Potassium tetrafluoroborate (NC) + 5 Boron Trioxide + Iron Rod (NC) + Graphite Anode (NC) -\u003e 2 Crude Boron Dust (Electrolytic cell)\n\n§l§r§lSpecialized: §rProduces ultrapure boron for semiconductor applications. \n\n§62 Crude Boron + 6,000 L Chlorine -\u003e 2,000 L Boron Chloride + 1 tiny MgCl and CaCl dust (Fluidized Bed Reactor) \n\n2,000 L Boron Chloride + 6,000 L Hydrogen -\u003e 6,000 L Gaseous Hydrogen Chloride + 2 High Purity Boron\n\n1 High Purity Boron -\u003e 1 Boron Dust (Centrifuge) \n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17985,7 +17985,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Fluorine (F)\n§bAtomic Number§r: 9\n§aAtomic Mass§r: 19.00 amu\n§cMelting Point§r: 53.53 K\n§5Boiling Point§r: 85.03 K\n§6Properties§r: Fluorine is a highly reactive halogen known for its strong oxidizing §6Properties§r. It is used in various industries, including the production of fluoropolymers and pharmaceuticals.\n",
+          "desc:8": "§6Element§r: Fluorine (F)\n§bAtomic Number§r: 9\n§aAtomic Mass§r: 19.00 amu\n§cMelting Point§r: 53.53 K\n§5Boiling Point§r: 85.03 K\n§6Properties§r: Fluorine is a highly reactive halogen known for its strong oxidizing properties§r. It is used in various industries, including the production of fluoropolymers and pharmaceuticals.\n\n§lPrimitive: §r\n\n§lUniversal: §r3 Fluorite Dust + 1,000 L Sulfuric Acid → 1 Gypsum Dust  + 2,000 L Hydrofluoric Acid (Mixer)\n2,000 L Hydrofluoric Acid + 4 Potassium Fluoride Dust (NC) + 1 Platinum Rod (NC) + 1 Nickel Rod (NC) → 1,000L Hydrogen + 1,000L Fluorine (Electrolytic Cell)\n\n ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18309,7 +18309,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Aluminum (Al)\n§bAtomic Number§r: 13\n§aAtomic Mass§r: 26.98 amu\n§cMelting Point§r: 933.47 K\n§5Boiling Point§r: 2792 K\n§6Properties§r: Aluminum is a lightweight and corrosion-resistant metal. It is widely used in construction, packaging, transportation, and various industrial applications.\n",
+          "desc:8": "§6Element§r: Aluminum (Al)\n§bAtomic Number§r: 13\n§aAtomic Mass§r: 26.98 amu\n§cMelting Point§r: 933.47 K\n§5Boiling Point§r: 2792 K\n§6Properties§r: Aluminum is a lightweight and corrosion-resistant metal. It is widely used in construction, packaging, transportation, and various industrial applications.\n\n§lPrimitive: §o§cN/A\n\n§l§r§lUniversal: §rBauxite is dissolved in hot alkali to form sodium aluminate. Gallium is also dissolved in this process, and various metal hydroxides and oxides remain behind as §cred mud§r. Red mud can be further processed to yield base metal oxides such as Fe2O3 or TiO2. \n\nNext, the liquor is returned to neutral pH by bubbling carbon dioxide to precipitate aluminum hydroxide.\n\n§lSpecialized:§r Modern aluminum purification can be accomplished with the Hall-Heroult process. This uses an electrolytic cell with a steel cathode and graphite anode in a solution of alumina in molten cryolite. Check Chapter 2 for more info.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19585,7 +19585,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Arsenic (As)\n§bAtomic Number§r: 33\n§aAtomic Mass§r: 74.92 amu\n§cMelting Point§r: 1090 K\n§5Boiling Point§r: 887 K\n§6Properties§r: Arsenic is a metalloid with both metallic and nonmetallic properties. It is used in certain pesticides, wood preservatives, and in the production of semiconductors.\n",
+          "desc:8": "§6Element§r: Arsenic (As)\n§bAtomic Number§r: 33\n§aAtomic Mass§r: 74.92 amu\n§cMelting Point§r: 1090 K\n§5Boiling Point§r: 887 K\n§6Properties§r: Arsenic is a metalloid with both metallic and nonmetallic properties. It is used in certain pesticides, wood preservatives, and in the production of semiconductors.\n\n§c§r§lPrimitive§r: Sperrylite, Cobaltite and Arsenopyrite and Realgar §rcan be put through an Electric Blast Furnace with oxygen to create §6small piles of Arsenic Trioxide.\n\nThis can be then §6arc furnaced §rwith some §6Carbon §rto create pure Arsenic.\n\n§lUniversal: §r\n§6Proustite§r can allow for arsenic separation using an alkaline leach to create Arsenic III Sulfide.\n\n§6Arsenopyrite/Cobaltit§r§6e§r may also be leached with acid to create Arsenic V Oxide.\n\nProustite can be leached with Sodium Thiosulfate to create a leach, which can be reacted with Sodium Sulfate to make Thiosulfate Thioarsenite.\nThis can then be reacted with Iron III Chloride to make Iron Arsenite.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34344,7 +34344,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
