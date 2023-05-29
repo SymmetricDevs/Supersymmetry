@@ -279,6 +279,31 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xc3c4b3)
                 .build();
+
+        RawCellulose = new Material.Builder(4050, "raw_cellulose")
+                .dust()
+                .color(0x302b1a)
+                .build();
+
+        WhiteLiquor = new Material.Builder(4051, "white_liquor")
+                .fluid()
+                .color(0xd9d3c1)
+                .build();
+
+        BlackLiquor = new Material.Builder(4052, "black_liquor")
+                .fluid()
+                .color(0x2e2a1f)
+                .build();
+
+        ConcentratedBlackLiquor = new Material.Builder(4053, "concentrated_black_liquor")
+                .fluid()
+                .color(0x1f1d18)
+                .build();
+
+        GreenLiquor = new Material.Builder(4054, "green_liquor")
+                .fluid()
+                .color(0x2b4536)
+                .build();
     }
 
 }           

@@ -1139,6 +1139,12 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Iron, 1, Arsenic, 1, Sulfur, 3)
                 .colorAverage()
-                .build()  
+                .build()
+
+        Cellulose = new Material.Builder(8264, 'cellulose')
+                .dust()
+                .components(Carbon, 6, Hydrogen, 10, Oxygen, 5)
+                .color(0x4a432f)
+                .build()
     }
 }
