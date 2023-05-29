@@ -11,11 +11,15 @@ println("Running GregTech.groovy...")
 //REMOVALS
 
 def name_removals = [
-        'gregtech:iron_magnetic_stick',
+        'gregtech:cover_fluid_voiding',
+        'gregtech:cover_item_voiding',
+        'gregtech:fluid_filter_lapis',
+        'gregtech:fluid_filter_sodalite',
+        'gregtech:fluid_filter_lazurite'
 ]
 
 for (name in name_removals) {
-    //crafting.remove(name)
+    crafting.remove(name)
 }
 
 furnace.removeByInput(item('minecraft:iron_nugget'))
