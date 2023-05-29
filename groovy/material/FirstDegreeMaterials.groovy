@@ -748,7 +748,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        PhosphorusTrichloride = new Material.Builder(8200, "potassium_trichloride")
+        PhosphorusTrichloride = new Material.Builder(8200, "phosphorus_trichloride")
                 .fluid()
                 .components(Phosphorus, 1, Chlorine, 3)
                 .colorAverage()
@@ -806,6 +806,7 @@ public class FirstDegreeMaterials{
         DicobaltOctacarbonyl = new Material.Builder(8210, "dicobalt_octacarbonyl")
                 .dust()
                 .components(Cobalt, 2, Cobalt, 8, Oxygen, 8)
+                .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build()
                 .setFormula("Co2(CO)8", true)
