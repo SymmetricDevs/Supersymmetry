@@ -12,7 +12,6 @@ println("Running GregTech.groovy...")
 
 def name_removals = [
         'gregtech:cover_fluid_voiding',
-        'gregtech:cover_item_voiding'
         'gregtech:cover_item_voiding',
         'gregtech:fluid_filter_lapis',
         'gregtech:fluid_filter_sodalite',
