@@ -173,6 +173,13 @@ material.asphalt=Asphalt
 material.alumina=Alumina
 material.potassium_fluoride=Potassium Fluoride
 
+material.cellulose=Cellulose
+material.raw_cellulose=Raw Cellulose
+material.white_liquor=White Liquor
+material.black_liquor=Black Liquor
+material.concentrated_black_liquor=Concentrated Black Liquor
+material.green_liquor=Green Liquor
+
 # Solids
 
 material.pig_iron=Pig Iron
@@ -1046,6 +1053,7 @@ metaitem.baseRutheniumTriniumAmericiumNeutronate.name=Base Ruthenium Trinium Ame
 
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
+metaitem.raw_diamond.name=Raw Diamond
 
 # Multiblocked
 

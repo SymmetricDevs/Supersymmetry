@@ -11,11 +11,15 @@ println("Running GregTech.groovy...")
 //REMOVALS
 
 def name_removals = [
-        'gregtech:iron_magnetic_stick',
+        'gregtech:cover_fluid_voiding',
+        'gregtech:cover_item_voiding',
+        'gregtech:fluid_filter_lapis',
+        'gregtech:fluid_filter_sodalite',
+        'gregtech:fluid_filter_lazurite'
 ]
 
 for (name in name_removals) {
-    //crafting.remove(name)
+    crafting.remove(name)
 }
 
 furnace.removeByInput(item('minecraft:iron_nugget'))
@@ -229,10 +233,29 @@ mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], 
 mods.gregtech.alloy_smelter.removeByInput(7, [metaitem('dustSulfur'), metaitem('dustRawRubber') * 3], null)
 
 //Remove Magic
+
 // Item Voiding Cover * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('screwSteel') * 2, metaitem('cover.item.detector'), metaitem('pipeNormalItemBrass'), item('minecraft:ender_pearl')], null)
 // Fluid Voiding Cover * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('screwSteel') * 2, metaitem('cover.fluid.detector'), metaitem('pipeNormalFluidBronze'), item('minecraft:ender_pearl')], null)
+// Infinite Water Cover * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('electric.pump.hv') * 2, item('minecraft:cauldron'), metaitem('circuit.assembly')], null)
+// Advanced Fluid Voiding Cover * 1
+mods.gregtech.assembler.removeByInput(30, [metaitem('cover.fluid.voiding'), metaitem('circuit.processor')], null)
+// Advanced Item Voiding Cover * 1
+mods.gregtech.assembler.removeByInput(30, [metaitem('cover.item.voiding'), metaitem('circuit.processor')], null)
+// Ender Fluid Link Cover * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('plateEnderPearl') * 9, metaitem('plateDoubleStainlessSteel'), metaitem('sensor.hv'), metaitem('emitter.hv'), metaitem('electric.pump.hv')], [fluid('plastic') * 288])
+
+//Slaked Lime
+
+mods.gregtech.chemical_bath.recipeBuilder()
+        .inputs(metaitem('dustQuicklime'))
+        .fluidInputs(fluid('water') * 100)
+        .outputs(metaitem('slaked_lime'))
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister();
 
 //Coils
 
@@ -354,12 +377,6 @@ crafting.addShapeless('susy:home_block_1', item('susy:home_block', 1), [item('su
 crafting.addShapeless('susy:home_block_2', item('susy:home_block', 2), [item('susy:home_block', 1)])
 crafting.addShapeless('susy:home_block_3', item('susy:home_block', 3), [item('susy:home_block', 2)])
 crafting.addShapeless('susy:home_block_4', item('susy:home_block',), [item('susy:home_block', 3)])
-
-// Steam * 960
-mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('water') * 6])
-
-// Steam * 960
-mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('distilled_water') * 6])
 
 // Acetone * 200
 mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('dissolved_calcium_acetate') * 200])
@@ -500,3 +517,17 @@ mods.gregtech.sifter.recipeBuilder()
         .duration(60)
         .EUt(30)
         .buildAndRegister();
+		
+
+crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [
+        [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')],
+        [ore('foilZinc'), ore('plateBrass'), ore('foilZinc')],
+        [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')]
+])
+
+// Electrolytic Cell
+crafting.addShaped('gregtech:electrolytic_cell', metaitem('electrolytic_cell'), [
+        [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')],
+        [ore('wireGtQuadrupleTin'), metaitem('hull.lv'), ore('wireGtQuadrupleTin')],
+        [ore('circuitLv'), ore('cableGtSingleTin'), ore('circuitLv')]
+])

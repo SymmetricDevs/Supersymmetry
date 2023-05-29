@@ -1169,5 +1169,11 @@ public class FirstDegreeMaterials{
                 .iconSet(SAND)
                 .build()
                 .setFormula('Fe(OH)3')
+
+        Cellulose = new Material.Builder(8269, 'cellulose')
+                .dust()
+                .components(Carbon, 6, Hydrogen, 10, Oxygen, 5)
+                .color(0x4a432f)
+                .build()
     }
 }

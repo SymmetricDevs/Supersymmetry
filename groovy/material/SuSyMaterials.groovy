@@ -165,6 +165,11 @@ class SuSyMaterials {
         public static Material CarbonateEvaporite;
         public static Material SulfateEvaporite;
         public static Material Vinegar;
+        public static Material WhiteLiquor;
+        public static Material BlackLiquor;
+        public static Material ConcentratedBlackLiquor;
+        public static Material GreenLiquor;
+        public static Material RawCellulose;
 
         // Petrochem Materials
 
@@ -397,6 +402,7 @@ class SuSyMaterials {
         public static Material CrudeManganeseIISulfateSolution;
         public static Material ManganeseIISulfateSolution;
         public static Material IronIIIHydroxide;
+        public static Material Cellulose;
 
         // Second Degree Materials
 
