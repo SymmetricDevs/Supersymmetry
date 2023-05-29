@@ -524,3 +524,10 @@ crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [
         [ore('foilZinc'), ore('plateBrass'), ore('foilZinc')],
         [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')]
 ])
+
+// Electrolytic Cell
+crafting.addShaped('gregtech:electrolytic_cell', metaitem('electrolytic_cell'), [
+        [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')],
+        [ore('wireGtQuadrupleTin'), metaitem('hull.lv'), ore('wireGtQuadrupleTin')],
+        [ore('circuitLv'), ore('cableGtSingleTin'), ore('circuitLv')]
+])
