@@ -13,6 +13,10 @@ println("Running GregTech.groovy...")
 def name_removals = [
         'gregtech:cover_fluid_voiding',
         'gregtech:cover_item_voiding'
+        'gregtech:cover_item_voiding',
+        'gregtech:fluid_filter_lapis',
+        'gregtech:fluid_filter_sodalite',
+        'gregtech:fluid_filter_lazurite'
 ]
 
 for (name in name_removals) {
@@ -514,3 +518,10 @@ mods.gregtech.sifter.recipeBuilder()
         .duration(60)
         .EUt(30)
         .buildAndRegister();
+		
+
+crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [
+        [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')],
+        [ore('foilZinc'), ore('plateBrass'), ore('foilZinc')],
+        [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')]
+])
