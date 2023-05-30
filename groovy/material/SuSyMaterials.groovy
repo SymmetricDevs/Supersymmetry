@@ -398,6 +398,8 @@ class SuSyMaterials {
         public static Material AntimonyIiiSulfide;
         public static Material IronThioarsenite;
         public static Material Cellulose;
+        public static Material HighPurityIron;
+        public static Material IronPentacarbonyl;
 
         // Second Degree Materials
 

@@ -1146,5 +1146,11 @@ public class FirstDegreeMaterials{
                 .components(Carbon, 6, Hydrogen, 10, Oxygen, 5)
                 .color(0x4a432f)
                 .build()
+        IronPentacarbonyl = new Material.Builder(8265, 'iron_pentacarbonyl')
+                .dust()
+                .components(Iron, 1, Carbon, 5, Oxygen, 5)
+                .color(0x8c180d)
+                .build()
+                .setFormula('Fe(CO)5')
     }
 }
