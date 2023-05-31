@@ -2091,9 +2091,9 @@ DISTILLATION_TOWER.recipeBuilder()
 
 
     
-//diethyl ether
+//Diethyl Ether
 
-CSTR.recipeBuilder()
+BCR.recipeBuilder()
 .fluidInputs(fluid('ethanol') * 100)
 .fluidInputs(fluid('sulfuric_acid') * 50)
 .fluidOutputs(fluid('diethyl_ether_solution') * 150)
