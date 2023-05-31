@@ -1,5 +1,5 @@
 {
-  "weight": 80,
+  "weight": 120,
   "density": 1,
   "max_height": 255,
   "min_height": 0,
@@ -20,20 +20,20 @@
       {
         "primary": {
           "block":"susy:resource_block",
-          "variant":"resource_block_bauxite"
-	    }
+          "variant":"bauxite"
+	}
       },
       {
         "secondary": {
           "block":"susy:resource_block",
-          "variant":"resource_block_bauxite"
+          "variant":"bauxite"
         }
       },
       {
         "between": {
           "block":"susy:resource_block",
-          "variant":"resource_block_bauxite"
-	    }
+          "variant":"bauxite"
+	}
       },
       {
         "sporadic": "ore:ilmenite"

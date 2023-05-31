@@ -53,15 +53,14 @@ mods.gregtech.mixer.recipeBuilder()
 
 */
 
-//TODO: UNCOMMENT THESE AFTER THE CHEMISTRY OVERHAUL^3
 def GasMapMV = [
     'fluorine': "gaspunk:fluorine",
     'carbon_monoxide': "gaspunk:carbon_monoxide",
     'chlorine': "gaspunk:chlorine",
-    //'diborane': "gaspunk:diborane",
+    'diborane': "gaspunk:diborane",
     'gtfo_hydrogen_cyanide': "gaspunk:hydrogen_cyanide",
     'radon': "gaspunk:radon",
-    //'phosphine': "gaspunk:phosphine",
+    'phosphine': "gaspunk:phosphine",
     'smoke_bomb_mix': "gaspunk:smoke",
     'chloroform': "gaspunk:chloroform",
     'hydrogen_sulfide': "gaspunk:hydrogen_sulfide",

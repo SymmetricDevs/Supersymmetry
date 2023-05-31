@@ -222,6 +222,88 @@ public class UnknownCompositionMaterials {
                 .iconSet(SHINY)
                 .color(0xdea68c)
                 .build();
+
+        GraniteTailings = new Material.Builder(4039, "granite_tailings")
+                .dust()
+                .color(0x302323)
+                .build();
+
+        LimestoneTailings = new Material.Builder(4040, "limestone_tailings")
+                .dust()
+                .color(0x68695d)
+                .build();
+
+        PegmatiteTailings = new Material.Builder(4041, "pegmatite_tailings")
+                .dust()
+                .color(0x1f1c1c)
+                .build();
+
+        UltramaficTailings = new Material.Builder(4042, "ultramafic_tailings")
+                .dust()
+                .color(0x141414)
+                .build();
+
+        Corundum = new Material.Builder(4043, "corundum")
+                .dust()
+                .iconSet(SHINY)
+                .color(0x7a4261)
+                .build();
+
+        Tourmaline = new Material.Builder(4044, "tourmaline")
+                .dust().gem()
+                .iconSet(SHINY)
+                .color(0x8c613f)
+                .build();
+
+        NonMarineEvaporite = new Material.Builder(4045, "non_marine_evaporite")
+                .dust()
+                .color(0x78756d)
+                .build();
+
+        HalideEvaporite = new Material.Builder(4046, "halide_evaporite")
+                .dust()
+                .color(0x99867c)
+                .build();
+
+        CarbonateEvaporite = new Material.Builder(4047, "carbonate_evaporite")
+                .dust()
+                .color(0xe3e3e3)
+                .build();
+
+        SulfateEvaporite = new Material.Builder(4048, "sulfate_evaporite")
+                .dust()
+                .color(0xc7c0b1)
+                .build();
+
+        Vinegar = new Material.Builder(4049, "vinegar")
+                .fluid()
+                .color(0xc3c4b3)
+                .build();
+
+        RawCellulose = new Material.Builder(4050, "raw_cellulose")
+                .dust()
+                .color(0x302b1a)
+                .build();
+
+        WhiteLiquor = new Material.Builder(4051, "white_liquor")
+                .fluid()
+                .color(0xd9d3c1)
+                .build();
+
+        BlackLiquor = new Material.Builder(4052, "black_liquor")
+                .fluid()
+                .color(0x2e2a1f)
+                .build();
+
+        ConcentratedBlackLiquor = new Material.Builder(4053, "concentrated_black_liquor")
+                .fluid()
+                .color(0x1f1d18)
+                .build();
+
+        GreenLiquor = new Material.Builder(4054, "green_liquor")
+                .fluid()
+                .color(0x2b4536)
+                .build();
     }
 
 }           

@@ -210,7 +210,6 @@ class ThermodynamicsMaterials {
 
                 log.infoMC("Registering Thermodynamics Materials!");
 
-
                 generateHighPressureGases(Hydrogen, 22000, true);
 
                 generateHighPressureGases(Oxygen, 22003, true);
@@ -271,9 +270,9 @@ class ThermodynamicsMaterials {
 
                 generateCoolant(Water, 22300);
 
-                // generateCoolant(EthyleneGlycol, 22305);
+                generateCoolant(EthyleneGlycol, 22305);
 
-                // generateCoolant(Brine, 22310);
+                generateCoolant(Brine, 22310);
 
                 generateHotGas(Air, 22400);
 
@@ -311,6 +310,12 @@ class ThermodynamicsMaterials {
                         .fluid(FluidTypes.GAS)
                         .color(0x8fbfe3)
                         .build();
+
+        HotHighPressureSteam = new Material.Builder(22801, "hot_hp_steam")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(1200)
+                .color(0xffffff)
+                .build();
 
     }
 }

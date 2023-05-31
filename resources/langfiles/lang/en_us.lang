@@ -173,6 +173,13 @@ material.asphalt=Asphalt
 material.alumina=Alumina
 material.potassium_fluoride=Potassium Fluoride
 
+material.cellulose=Cellulose
+material.raw_cellulose=Raw Cellulose
+material.white_liquor=White Liquor
+material.black_liquor=Black Liquor
+material.concentrated_black_liquor=Concentrated Black Liquor
+material.green_liquor=Green Liquor
+
 # Solids
 
 material.pig_iron=Pig Iron
@@ -296,6 +303,15 @@ material.arsenic_iii_sulfide=Arsenic III Sulfide
 material.arsenic_v_sulfide=Arsenic V Sulfide
 material.silver_chloride=Silver Chloride
 material.copper_sulfate=Copper Sulfate
+material.antimony_iii_sulfide=Antimony III Sulfide
+material.arsenic_v_oxide=Arsenic V Oxide
+material.sodium_cyanide=Sodium Cyanide
+material.sodium_thiosulfate=Sodium Thiosulfate
+material.silver_oxide=Silver Oxide
+material.silver_sulfide=Silver Sulfide
+material.iron_thioantimonite=Iron Thioantimonite
+material.iron_thioarsenite=Iron Arsenite
+material.iron_pentacarbonyl=Iron Pentacarbonyl
 
 # Fluids
 
@@ -463,17 +479,6 @@ material.phosphate_water=Phosphate Water
 material.precious_runoff=Precious Runoff
 material.radioactive_runoff=Radioactive Runoff
 
-material.thioarsenite_solution=Thioarsenite Solution
-material.alkaline_arsenite_solution=Alkaline Arsenite Solution
-material.salty_arsenous_acid=Arsenous Acid Brine
-material.thioarsenate_solution=Thioarsenate Solution
-material.arsenous_acid=Arsenous Acid
-material.tetrachloroantimonate_solution=Tetrachloroantimonate Solution
-material.acidic_copper_solution=Acidic Copper Solution
-material.arsine=Arsine
-material.sodium_bromide_solution=Sodium Bromide Solution
-material.sperrylite_waste=Sperrylite Waste
-
 material.wustite_catalyst=Wustite Catalyst
 material.palladium_chloride=Palladium Chloride
 material.hexachloroiridic_acid=Hexachloroiridic Acid
@@ -519,6 +524,7 @@ material.phosphoryl_chloride=Phosphoryl Chloride
 material.phosphorus_pentachloride=Phosphorus Pentachloride
 material.ammonium_iodide=Ammonium Iodide
 material.hydrobromic_acid=Hydrobromic Acid
+material.hydrogen_cyanide=Hydrogen Cyanide
 
 material.polypropylene=Polypropylene
 material.dimethylformamide=Dimethylformamide
@@ -592,6 +598,74 @@ material.kapton_e_preparation=Kapton E Preparation Solution
 material.impure_diiodobenzene=Impure 1,4-Diiodobenzene
 material.impure_ethylene_oxide=Impure Ethylene Oxide
 material.amoco_process_catalyst=Amoco Process Catalyst
+
+material.kernite=Kernite
+material.colemanite=Colemanite
+material.ulexite=Ulexite
+material.carnallite=Carnallite
+material.kainite=Kainite
+material.kieserite=Kieserite
+material.langbeinite=Langbeinite
+material.polyhalite=Polyhalite
+material.dolomite=Dolomite
+material.titanite=Titanite
+material.leucoxene=Leucoxene
+material.zircon=Zircon
+material.mimetite=Mimetite
+material.descloizite=Descloizite
+material.pyromorphite=Pyromorphite
+material.mottramite=Mottramite
+material.chlorapatite=Chlorapatite
+material.hematite=Hematite
+material.skutterudite=Skutterudite
+material.allanite=Allanite
+material.azurite=Azurite
+material.goethite=Goethite
+material.hydrozincite=Hydrozincite
+material.chlorargyrite=Chlorargyrite
+material.columbite=Columbite
+material.ferrimolybdite=Ferrimolybdite
+material.aguilarite=Aguilarite
+material.orpiment=Orpiment
+material.braggite=Braggite
+material.stannite=Stannite
+material.euxenite=Euxenite
+material.xenotime=Xenotime
+material.caliche=Caliche
+material.lauterite=Lauterite
+
+material.sodium_perchlorate_solution=Sodium Perchlorate Solution
+material.sodium_chlorate_solution=Sodium Chlorate Solution
+material.diluted_aniline=Diluted Aniline
+material.hot_hp_steam=Hot High Pressure Steam
+
+material.sodium_thiosulfate_solution=Sodium Thiosulfate Solution
+material.sodium_sulfite_solution=Sodium Sulfite Solution
+material.sodium_carbonate=Sodium Carbonate Solution
+material.sodium_cyanide_solution=Sodium Cyanide Solution
+material.sulfidic_silver_cyanide_solution=Sulfidic Silver Cyanide Solution
+material.silver_cyanide_solution=Silver Cyanide Solution
+material.sulfidic_pyrargyrite_cyanide_leach_solution=Sulfidic Pyrargyrite Cyanide Leach Solution
+material.pyrargyrite_cyanide_leach_solution=Pyrargyrite Cyanide Leach Solution
+material.sulfidic_stephanite_cyanide_leach_solution=Sulfidic Stephanite Cyanide Leach Solution
+material.stephanite_cyanide_leach_solution=Stephanite Cyanide Leach Solution
+material.pyrargyrite_thiosulfate_leach_solution=Pyrargyrite Thiosulfate Leach Solution
+material.thiosulfate_thioantimonite_solution=Thiosulfate Thioantimonite Solution
+material.proustite_thiosulfate_leach_solution=Proustite Thiosulfate Leach Solution
+material.thiosulfate_thioarsenite_solution=Thiosulfate Thioarsenite Solution
+material.diluted_iron_iii_chloride_solution=Diluted Iron III Chloride Solution
+material.acidic_arsenate_v_solution=Acidic Arsenate Solution
+material.proustite_alkaline_leach_solution=Proustite Alkaline Leach Solution
+material.crude_arsenic_trichloride=Crude Arsenic Trichloride
+material.enargite_sulfide_leach_solution=Enargite Sulfide Leach Solution
+material.arsenic_trichloride=Arsenic Trichloride
+material.sodium_carbonate_solution=Sodium Carbonate Solution
+material.arsenous_acid=Arsenous Acid
+material.acidic_copper_solution=Acidic Copper Solution
+material.arsine=Arsine
+material.sodium_bromide_solution=Sodium Bromide Solution
+material.sperrylite_waste=Sperrylite Waste
+material.diluted_iron_iii_chloride_solution=Diluted Iron III Chloride Solution
 
 # Thermodynamics
 
@@ -709,7 +783,7 @@ material.enargite=Enargite
 material.smithsonite=Smithsonite
 material.arsenopyrite=Arsenopyrite
 material.acanthite=Acanthite
-material.pyrargyirte=Pyrargyirte
+material.pyrargyrite=Pyrargyrite
 material.stephanite=Stephanite
 material.proustite=Proustite
 material.celestine=Celestine
@@ -728,6 +802,20 @@ material.dilithium=Dilithium
 material.lignite=Lignite
 material.anthracite=Anthracite
 material.phosphorite=Phosphorite
+material.sperrylite=Sperrylite
+
+material.corundum=Corundum
+material.tourmaline=Tourmaline
+material.non_marine_evaporite=Non Marine Evaporite
+material.halide_evaporite=Halide Evaporite
+material.carbonate_evaporite=Carbonate Evaporite
+material.sulfate_evaporite=Sulfate Evaporite
+material.granite_tailings=Granite Tailing
+material.limestone_tailings=Limestone Tailing
+material.pegmatite_tailings=Pegmatite Tailing
+material.ultramafic_tailings=Ultramafic Tailing
+
+material.vinegar=Vinegar
 
 # Isotopes
 
@@ -749,6 +837,9 @@ recipemap.dryer.name=Drying
 recipemap.sintering_oven.name=Sintering
 recipemap.electrolytic_cell.name=Advanced Electrolysis
 recipemap.vat_fermentation.name=Fermentation Vat
+recipemap.vacuum_distillation.name=Vacuum Distillation
+recipemap.catalytic_reformer_recipes.name=Catalytic Reforming
+recipemap.coking_tower.name=Coking Tower
 
 # QMD Particles
 
@@ -963,6 +1054,7 @@ metaitem.baseRutheniumTriniumAmericiumNeutronate.name=Base Ruthenium Trinium Ame
 
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
+metaitem.raw_diamond.name=Raw Diamond
 
 # Multiblocked
 

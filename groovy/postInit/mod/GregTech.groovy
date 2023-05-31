@@ -11,11 +11,59 @@ println("Running GregTech.groovy...")
 //REMOVALS
 
 def name_removals = [
-        'gregtech:iron_magnetic_stick',
+        'gregtech:cover_fluid_voiding',
+        'gregtech:cover_item_voiding',
+        'gregtech:fluid_filter_lapis',
+        'gregtech:fluid_filter_sodalite',
+        'gregtech:fluid_filter_lazurite'
 ]
 
 for (name in name_removals) {
-    //crafting.remove(name)
+    crafting.remove(name)
+}
+
+furnace.removeByInput(item('minecraft:iron_nugget'))
+
+def ore_smelting_removals = [
+        'lapis',
+        'emerald',
+        'almandine',
+        'lazurite',
+        'pyrope',
+        'spessartine',
+        'sodalite',
+        'grossular',
+        'garnet_red',
+        'apatite',
+        'blue_topaz',
+        'certus_quartz',
+        'garnet_yellow',
+        'olivine',
+        'monazite',
+        'vanadinite',
+        'celestine',
+        'green_sapphire',
+        'sperrylite',
+        'sapphire',
+        'ruby',
+        'proustite',
+        'topaz',
+        'lorandite',
+        'fluorite',
+        'phosphorite',
+        'realgar',
+        'amethyst',
+        'opal',
+        'perovskite',
+        'cinnabar',
+        'fluorapatite',
+        'diamond'
+]
+
+for (name in ore_smelting_removals) {
+    furnace.removeByInput(item('gregtech:ore_' + name + '_0', 0))
+    furnace.removeByInput(item('gregtech:ore_' + name + '_0', 1))
+    furnace.removeByInput(item('gregtech:ore_' + name + '_0', 2))
 }
 
 // Polycaprolactam Bar * 1
@@ -124,6 +172,12 @@ crafting.replaceShaped("gregtech:gregtech.machine.lathe.lv", metaitem('gregtech:
     [ore('circuitLv'), metaitem('cableGtSingleTin'), metaitem('electric.piston.lv')]
 ])
 
+crafting.replaceShaped("gregtech:gregtech.machine.macerator.lv", metaitem('gregtech:macerator.lv'), [
+    [metaitem('electric.piston.lv'), metaitem('electric.motor.lv') , metaitem('toolHeadBuzzSawSteel')],
+    [metaitem('cableGtSingleTin'), metaitem('cableGtSingleTin'), metaitem('gregtech:hull.lv')],
+    [ore('circuitLv'), ore('circuitLv'), metaitem('cableGtSingleTin')]
+])
+
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
 //     [ore('craftingToolFile'), null, null],
 //     [null, ore('ingotRubber'), null],
@@ -179,10 +233,29 @@ mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], 
 mods.gregtech.alloy_smelter.removeByInput(7, [metaitem('dustSulfur'), metaitem('dustRawRubber') * 3], null)
 
 //Remove Magic
+
 // Item Voiding Cover * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('screwSteel') * 2, metaitem('cover.item.detector'), metaitem('pipeNormalItemBrass'), item('minecraft:ender_pearl')], null)
 // Fluid Voiding Cover * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('screwSteel') * 2, metaitem('cover.fluid.detector'), metaitem('pipeNormalFluidBronze'), item('minecraft:ender_pearl')], null)
+// Infinite Water Cover * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('electric.pump.hv') * 2, item('minecraft:cauldron'), metaitem('circuit.assembly')], null)
+// Advanced Fluid Voiding Cover * 1
+mods.gregtech.assembler.removeByInput(30, [metaitem('cover.fluid.voiding'), metaitem('circuit.processor')], null)
+// Advanced Item Voiding Cover * 1
+mods.gregtech.assembler.removeByInput(30, [metaitem('cover.item.voiding'), metaitem('circuit.processor')], null)
+// Ender Fluid Link Cover * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('plateEnderPearl') * 9, metaitem('plateDoubleStainlessSteel'), metaitem('sensor.hv'), metaitem('emitter.hv'), metaitem('electric.pump.hv')], [fluid('plastic') * 288])
+
+//Slaked Lime
+
+mods.gregtech.chemical_bath.recipeBuilder()
+        .inputs(metaitem('dustQuicklime'))
+        .fluidInputs(fluid('water') * 100)
+        .outputs(metaitem('slaked_lime'))
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister();
 
 //Coils
 
@@ -305,11 +378,156 @@ crafting.addShapeless('susy:home_block_2', item('susy:home_block', 2), [item('su
 crafting.addShapeless('susy:home_block_3', item('susy:home_block', 3), [item('susy:home_block', 2)])
 crafting.addShapeless('susy:home_block_4', item('susy:home_block',), [item('susy:home_block', 3)])
 
-// Steam * 960
-mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('water') * 6])
-
-// Steam * 960
-mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('distilled_water') * 6])
-
 // Acetone * 200
 mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('dissolved_calcium_acetate') * 200])
+
+mods.gregtech.sifter.recipeBuilder()
+        .inputs(metaitem('dustPegmatiteTailings') * 3)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .chancedOutput(item('minecraft:emerald'), 1000, 250)
+        .chancedOutput(metaitem('gemTourmaline'), 1000, 250)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.sifter.recipeBuilder()
+        .inputs(metaitem('dustGraniteTailings') * 3)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.sifter.recipeBuilder()
+        .inputs(metaitem('dustLimestoneTailings') * 3)
+        .chancedOutput(metaitem('dustLimestone'), 5000, 500)
+        .chancedOutput(metaitem('dustLimestone'), 5000, 500)
+        .chancedOutput(metaitem('dustLimestone'), 5000, 500)
+        .chancedOutput(metaitem('dustLimestone'), 5000, 500)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.sifter.recipeBuilder()
+        .inputs(metaitem('dustUltramaficTailings') * 3)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
+        .chancedOutput(metaitem('dustMagnesia'), 2000, 500)
+        .chancedOutput(metaitem('dustMagnetite'), 1000, 500)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.sifter.recipeBuilder()
+        .inputs(metaitem('dustKimberlite'))
+        .chancedOutput(metaitem('dustUltramaficTailings'), 7500, 500)
+        .chancedOutput(item('minecraft:diamond'), 1000, 500)
+        .chancedOutput(metaitem('gemPyrope'), 500, 250)
+        .chancedOutput(metaitem('gemAlmandine'), 500, 250)
+        .chancedOutput(item('minecraft:dye', 4), 500, 250)
+        .chancedOutput(metaitem('dustChromite'), 500, 250)
+        .duration(60)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.sifter.recipeBuilder()
+        .inputs(metaitem('dustCorundum'))
+        .chancedOutput(metaitem('dustUltramaficTailings'), 7500, 500)
+        .chancedOutput(metaitem('gemRuby'), 1000, 250)
+        .chancedOutput(metaitem('gemSapphire'), 1000, 250)
+        .duration(60)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('susy:resource_block', 2))
+        .outputs(metaitem('dustNonMarineEvaporite') * 4)
+        .duration(240)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('susy:resource_block', 4))
+        .outputs(metaitem('dustSulfateEvaporite') * 4)
+        .duration(240)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('susy:resource_block', 5))
+        .outputs(metaitem('dustCarbonateEvaporite') * 4)
+        .duration(240)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('susy:resource_block', 3))
+        .outputs(metaitem('dustHalideEvaporite') * 4)
+        .duration(240)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.sifter.recipeBuilder()
+        .inputs(metaitem('dustNonMarineEvaporite'))
+        .chancedOutput(metaitem('dustSalt'), 8000, 500)
+        .chancedOutput(metaitem('dustBorax'), 5000, 250)
+        .chancedOutput(metaitem('dustKernite'), 5000, 250)
+        .chancedOutput(metaitem('dustColemanite'), 5000, 250)
+        .chancedOutput(metaitem('dustUlexite'), 5000, 250)
+        .duration(60)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.sifter.recipeBuilder()
+        .inputs(metaitem('dustSulfateEvaporite'))
+        .chancedOutput(metaitem('dustSalt'), 8000, 500)
+        .chancedOutput(metaitem('dustGypsum'), 5000, 250)
+        .chancedOutput(metaitem('dustKieserite'), 5000, 250)
+        .chancedOutput(metaitem('dustLangbeinite'), 5000, 250)
+        .chancedOutput(metaitem('dustPolyhalite'), 5000, 250)
+        .duration(60)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.sifter.recipeBuilder()
+        .inputs(metaitem('dustCarbonateEvaporite'))
+        .chancedOutput(metaitem('dustSalt'), 8000, 500)
+        .chancedOutput(metaitem('dustDolomite'), 5000, 250)
+        .chancedOutput(metaitem('dustCalcite'), 5000, 250)
+        .chancedOutput(metaitem('dustMagnesite'), 5000, 250)
+        .chancedOutput(metaitem('dustTrona'), 5000, 250)
+        .duration(60)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.sifter.recipeBuilder()
+        .inputs(metaitem('dustHalideEvaporite'))
+        .chancedOutput(metaitem('dustSalt'), 8000, 500)
+        .chancedOutput(metaitem('dustSalt'), 8000, 500)
+        .chancedOutput(metaitem('dustRockSalt'), 5000, 250)
+        .chancedOutput(metaitem('dustCarnallite'), 5000, 250)
+        .chancedOutput(metaitem('dustKainite'), 5000, 250)
+        .duration(60)
+        .EUt(30)
+        .buildAndRegister();
+		
+
+crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [
+        [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')],
+        [ore('foilZinc'), ore('plateBrass'), ore('foilZinc')],
+        [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')]
+])
+
+// Electrolytic Cell
+crafting.addShaped('gregtech:electrolytic_cell', metaitem('electrolytic_cell'), [
+        [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')],
+        [ore('wireGtQuadrupleTin'), metaitem('hull.lv'), ore('wireGtQuadrupleTin')],
+        [ore('circuitLv'), ore('cableGtSingleTin'), ore('circuitLv')]
+])

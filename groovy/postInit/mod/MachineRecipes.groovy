@@ -8,6 +8,9 @@ def name_removals = [
 		'gregtech:gas_turbine_lv',
 		'gregtech:gas_turbine_mv',
 		'gregtech:gas_turbine_hv',
+		'gregtech:diesel_generator_lv',
+		'gregtech:diesel_generator_mv',
+		'gregtech:diesel_generator_hv',
 		'gcym:steam_engine'
 ]
 

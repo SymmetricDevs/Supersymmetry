@@ -329,9 +329,8 @@ DISTILLERY.recipeBuilder()
 ROASTER.recipeBuilder()
 .fluidInputs(fluid('sodium_bisulfate_solution') * 1000)
 .inputs(ore('dustSalt') * 2)
-.fluidOutputs(fluid('hydrogen_chloride') * 1000)
-.fluidOutputs(fluid('steam') * 1000)
-.outputs(ore('dustSodiumSulfate').first())
+.fluidOutputs(fluid('hydrochloric_acid') * 1000)
+.outputs(ore('dustSodiumSulfate').first() * 7)
 .duration(60)
 .EUt(30)
 .buildAndRegister()
@@ -360,7 +359,7 @@ BR.recipeBuilder()
 ROASTER.recipeBuilder()
 .inputs(ore('dustSodiumSulfate') * 7)
 .inputs(ore('dustCarbon') * 2)
-.fluidOutputs(fluid('carbon_dioxide') * 4000)
+.fluidOutputs(fluid('carbon_dioxide') * 2000)
 .outputs(ore('dustSodiumSulfide').first() * 3)
 .duration(60)
 .EUt(30)
@@ -492,6 +491,15 @@ DISTILLERY.recipeBuilder()
 // Leblanc process
 
 ROASTER.recipeBuilder()
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .inputs(ore('dustSalt') * 4)
+        .fluidOutputs(fluid('hydrochloric_acid') * 1000)
+        .outputs(ore('dustSodiumSulfate').first() * 7)
+        .duration(60)
+        .EUt(30)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
 .inputs(ore('dustSodiumSulfide') * 3)
 .inputs(ore('dustLimestone') * 5)
 .outputs(ore('dustBlackAsh').first() * 8)
@@ -503,7 +511,7 @@ MIXER.recipeBuilder()
 .fluidInputs(fluid('water') * 1000)
 .inputs(ore('dustBlackAsh') * 8)
 .fluidOutputs(fluid('soda_ash_solution') * 1000)
-.outputs(ore('dustSodiumSulfide').first() * 2)
+.outputs(ore('dustCalciumSulfide').first() * 2)
 .duration(80)
 .EUt(30)
 .buildAndRegister()
@@ -551,6 +559,15 @@ ROASTER.recipeBuilder()
 .duration(80)
 .EUt(30)
 .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustLimestone') * 5)
+        .notConsumable(circuit(0))
+        .fluidOutputs(fluid('carbon_dioxide') * 3000)
+        .outputs(ore('dustQuicklime').first() * 2)
+        .duration(80)
+        .EUt(30)
+        .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder()
 .fluidInputs(fluid('ammonium_chloride_solution') * 2000)
@@ -635,10 +652,18 @@ CSTR.recipeBuilder()
 .fluidInputs(fluid('sulfuric_acid') * 100)
 .fluidInputs(fluid('ethanol') * 100)
 .fluidOutputs(fluid('ethylene') * 100)
-.fluidOutputs(fluid('diluted_sulfuric_acid') * 150)
+.fluidOutputs(fluid('diluted_sulfuric_acid') * 200)
 .duration(5)
 .EUt(30)
 .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('diluted_sulfuric_acid') * 500)
+        .fluidOutputs(fluid('water') * 250)
+        .fluidOutputs(fluid('sulfuric_acid') * 250)
+        .duration(50)
+        .EUt(30)
+        .buildAndRegister()
 
 for (int i = 0; i < CHEMICAL_DYES.length; i++) {
     MIXER.recipeBuilder()
@@ -650,6 +675,14 @@ for (int i = 0; i < CHEMICAL_DYES.length; i++) {
     .EUt(24)
     .buildAndRegister()
 }
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('hydrochloric_acid') * 500)
+        .fluidOutputs(fluid('water') * 500)
+        .fluidOutputs(fluid('hydrogen_chloride') * 500)
+        .duration(50)
+        .EUt(30)
+        .buildAndRegister()
 
 // Tetrafluoroethylene
 
@@ -764,11 +797,11 @@ CSTR.recipeBuilder()
 
 // Dinitrogen Tetroxide
 
-CSTR.recipeBuilder()
-.fluidInputs(fluid('nitrogen_dioxide') * 100)
-.fluidOutputs(fluid('dinitrogen_tetroxide') * 50)
-.duration(10)
-.EUt(30)
+BR.recipeBuilder()
+.fluidInputs(fluid('nitrogen_dioxide') * 2000)
+.fluidOutputs(fluid('dinitrogen_tetroxide') * 1000)
+.duration(200)
+.EUt(60)
 .buildAndRegister()
 
 // 1,1-dimethylhydrazine
@@ -1318,7 +1351,7 @@ BR.recipeBuilder()
 .fluidInputs(fluid('cyclohexanone') * 1000)
 .fluidInputs(fluid('hydroxylamine') * 1000)
 .fluidOutputs(fluid('water') * 1000)
-.outputs(ore('dustCyclohexanoneOxime').first())
+.outputs(ore('dustCyclohexanoneOxime').first() * 34)
 .duration(180)
 .EUt(30)
 .buildAndRegister()
@@ -1623,7 +1656,6 @@ CSTR.recipeBuilder()
 .buildAndRegister()
 
 //Glyceryl Trinitrate
-//TODO: MOVE THIS TO CSTR, REGISTER IMPURE GLYCERYL TRINITRATE SOLUTION AND HAVE IT BE DISTILLED
 
 BR.recipeBuilder()
         .fluidInputs(fluid('glycerol') * 1000)
@@ -2061,6 +2093,14 @@ CSTR.recipeBuilder()
 .duration(10)
 .buildAndRegister()
 
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('diluted_bromobutane') * 2000)
+        .fluidOutputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('bromobutane') * 1000)
+        .EUt(30)
+        .duration(100)
+        .buildAndRegister()
+
 //n-butyllithium
 
 MIXER.recipeBuilder()
@@ -2177,6 +2217,47 @@ DISTILLERY.recipeBuilder()
 .duration(100)
 .buildAndRegister()
 
+//Silicon
+
+ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustSiliconDioxide') * 3)
+        .inputs(ore('dustCoke') * 1)
+        .outputs(ore('dustSilicon').first() * 1)
+        .fluidOutputs(fluid('carbon_monoxide') * 2000)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustQuartzite') * 3)
+        .inputs(ore('dustCoke') * 1)
+        .outputs(ore('dustSilicon').first() * 1)
+        .fluidOutputs(fluid('carbon_monoxide') * 2000)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustCertusQuartz') * 3)
+        .inputs(ore('dustCoke') * 1)
+        .outputs(ore('dustSilicon').first() * 1)
+        .fluidOutputs(fluid('carbon_monoxide') * 2000)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustNetherQuartz') * 3)
+        .inputs(ore('dustCoke') * 1)
+        .outputs(ore('dustSilicon').first() * 1)
+        .fluidOutputs(fluid('carbon_monoxide') * 2000)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+/*
+//TODO: Make it so that integrated circuit can be used to choose between silicon or silicon carbide. increase arc furnace slots to 4
+
 //Graphite
 
 ARC_FURNACE.recipeBuilder()
@@ -2195,6 +2276,8 @@ ARC_FURNACE.recipeBuilder()
 .EUt(45)
 .duration(270)
 .buildAndRegister()
+
+ */
 
 // Distilled Water
 

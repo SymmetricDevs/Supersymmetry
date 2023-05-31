@@ -1,0 +1,23 @@
+{
+  "weight": 0,
+  "name": "Earth Sea Water Deposit",
+  "yield": {
+    "min": 50,
+    "max": 100
+  },
+  "depletion": {
+    "amount": 0,
+    "chance": 0,
+    "depleted_yield": 15
+  },
+  "fluid": "sea_water",
+  "dimension_filter": [
+    "name:overworld"
+  ],
+  "biome_modifier": {
+    "type": "biome_map",
+    "ocean": 150,
+    "frozen_ocean": 150,
+    "deep_ocean": 200
+  }
+}

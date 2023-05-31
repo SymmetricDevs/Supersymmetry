@@ -1,0 +1,21 @@
+{
+  "weight": 0,
+  "name": "Earth Lava Deposit",
+  "yield": {
+    "min": 50,
+    "max": 100
+  },
+  "depletion": {
+    "amount": 0,
+    "chance": 0,
+    "depleted_yield": 15
+  },
+  "fluid": "lava",
+  "dimension_filter": [
+    "name:overworld"
+  ],
+  "biome_modifier": {
+    "type": "biome_map",
+    "biomesoplenty:volcanic_island": 150
+  }
+}

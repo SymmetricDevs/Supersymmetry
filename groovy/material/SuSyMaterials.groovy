@@ -33,12 +33,10 @@ class SuSyMaterials {
 
         public static Material Petalite;
         public static Material Amblygonite;
-        public static Material Fluorite;
         public static Material Thortveitite;
         public static Material Perovskite;
         public static Material Titanomagnetite;
         public static Material Fluorapatite;
-        public static Material Chalcopyrite;
         public static Material VanadiferousTitanomagnetite;
         public static Material Armstrongite;
         public static Material Vanadinite;
@@ -70,6 +68,40 @@ class SuSyMaterials {
         public static Material Anthracite;
         public static Material Acanthite;
         public static Material Phosphorite;
+        public static Material Kernite;
+        public static Material Colemanite;
+        public static Material Ulexite;
+        public static Material Carnallite;
+        public static Material Kainite;
+        public static Material Kieserite;
+        public static Material Langbeinite;
+        public static Material Polyhalite;
+        public static Material Dolomite;
+        public static Material Titanite;
+        public static Material Leucoxene;
+        public static Material Zircon;
+        public static Material Mimetite;
+        public static Material Pyromorphite;
+        public static Material Descloizite;
+        public static Material Mottramite;
+        public static Material Chlorapatite;
+        public static Material Hematite;
+        public static Material Skutterudite;
+        public static Material Allanite;
+        public static Material Azurite;
+        public static Material Goethite;
+        public static Material Hydrozincite;
+        public static Material Chlorargyrite;
+        public static Material Columbite;
+        public static Material Ferrimolybdite;
+        public static Material Aguilarite;
+        public static Material Orpiment;
+        public static Material Braggite;
+        public static Material Stannite;
+        public static Material Euxenite;
+        public static Material Xenotime;
+        public static Material Caliche;
+        public static Material Lauterite;
 
         // Roasted Ores
 
@@ -121,7 +153,23 @@ class SuSyMaterials {
         public static Material ImpureDiiodobenzene;
         public static Material ImpureEthyleneOxide;
         public static Material AmocoProcessCatalyst;
-        
+        public static Material PegmatiteTailings;
+        public static Material GraniteTailings;
+        public static Material LimestoneTailings;
+        public static Material UltramaficTailings;
+        public static Material Corundum;
+        public static Material Tourmaline;
+        public static Material NonMarineEvaporite;
+        public static Material HalideEvaporite;
+        public static Material CarbonateEvaporite;
+        public static Material SulfateEvaporite;
+        public static Material Vinegar;
+        public static Material WhiteLiquor;
+        public static Material BlackLiquor;
+        public static Material ConcentratedBlackLiquor;
+        public static Material GreenLiquor;
+        public static Material RawCellulose;
+
         // Petrochem Materials
 
         public static Material DilutedOil;
@@ -155,35 +203,23 @@ class SuSyMaterials {
         public static Material SulfuricKerosene;
         public static Material TreatedSulfuricKerosene;
         public static Material LightlySteamcrackedKerosene;
-        public static Material LightlySteamcrackedKeroseneMix;
         public static Material SeverelySteamcrackedKerosene;
-        public static Material SeverelySteamcrackedKeroseneMix;
         public static Material LightlyHydrocrackedKerosene;
-        public static Material LightlyHydrocrackedKeroseneMix;
         public static Material SeverelyHydrocrackedKerosene;
-        public static Material SeverelyHydrocrackedKeroseneMix;
         public static Material UpgradedKeroseneMix;
         
         public static Material SulfuricGasoline;
         public static Material TreatedSulfuricGasoline;
         public static Material LightlySteamcrackedGasoline;
-        public static Material LightlySteamcrackedGasolineMix;
         public static Material SeverelySteamcrackedGasoline;
-        public static Material SeverelySteamcrackedGasolineMix;
         public static Material LightlyHydrocrackedGasoline;
-        public static Material LightlyHydrocrackedGasolineMix;
         public static Material SeverelyHydrocrackedGasoline;
-        public static Material SeverelyHydrocrackedGasolineMix;
 
         public static Material TreatedSulfuricNaphtha;
         public static Material LightlySteamcrackedNaphtha;
-        public static Material LightlySteamcrackedNaphthaMix;
         public static Material SeverelySteamcrackedNaphtha;
-        public static Material SeverelySteamcrackedNaphthaMix;
         public static Material LightlyHydrocrackedNaphtha;
-        public static Material LightlyHydrocrackedNaphthaMix;
         public static Material SeverelyHydrocrackedNaphtha;
-        public static Material SeverelyHydrocrackedNaphthaMix;
         public static Material NaphthaReformate; 
         public static Material UpgradedNaphthaMix;
 
@@ -245,14 +281,14 @@ class SuSyMaterials {
         public static Material SeaWater;
         public static Material TetrafluoroboricAcid;    
         public static Material BoronTrichloride;    
-        public static Material ThioarseniteSolution;
+        public static Material ProustiteAlkalineLeachSolution;
         public static Material TetrachloroantimonateSolution;
         public static Material Arsine;
-        public static Material ThioarsenateSolution;
+        public static Material CrudeArsenicTrichloride;
         public static Material CobaltiteLeachSolution;
         public static Material ArsenopyriteLeachSolution;
         public static Material ArsenousAcid;
-        public static Material AlkalineArseniteSolution;
+        public static Material ArsenicTrichloride;
         public static Material SaltyArsenousAcid;
         public static Material SperryliteWaste;
         public static Material AcidicCopperSolution;
@@ -267,7 +303,6 @@ class SuSyMaterials {
         public static Material LeadZirconateTitanite;
         public static Material BoricAcid;
         public static Material AmorphousBoron;
-        public static Material MagnesiumOxide;
         public static Material BoronTrioxide;
         public static Material ZincChloride;
         public static Material SodiumTetraborate;
@@ -340,6 +375,31 @@ class SuSyMaterials {
         public static Material PhosphorusPentachloride;
         public static Material AmmoniumIodide;
         public static Material HydrobromicAcid;
+        public static Material SodiumSulfite;
+        public static Material SodiumThiosulfate;
+        public static Material SodiumCarbonate;
+        public static Material HydrogenCyanide;
+        public static Material SulfidicSilverCyanideSolution;
+        public static Material SilverCyanideSolution;
+        public static Material SulfidicPyrargyriteCyanideLeachSolution;
+        public static Material PyrargyriteCyanideLeachSolution;
+        public static Material PyrargyriteThiosulfateLeachSolution;
+        public static Material ThiosulfateThioantimoniteSolution;
+        public static Material ThiosulfateThioarseniteSolution;
+        public static Material SulfidicStephaniteCyanideLeachSolution;
+        public static Material StephaniteCyanideLeachSolution;
+        public static Material ProustiteThiosulfateLeachSolution;
+        public static Material AcidicArsenateVSolution;
+        public static Material EnargiteSulfideLeachSolution;
+        public static Material ArsenicVOxide;
+        public static Material SilverOxide;
+        public static Material SilverSulfide;
+        public static Material IronThioantimonite;
+        public static Material AntimonyIiiSulfide;
+        public static Material IronThioarsenite;
+        public static Material Cellulose;
+        public static Material HighPurityIron;
+        public static Material IronPentacarbonyl;
 
         // Second Degree Materials
 
@@ -372,10 +432,16 @@ class SuSyMaterials {
         public static Material HydrogenPeroxideSolution;
         public static Material AmmoniumAcetateSolution;
         public static Material TetramethylammoniumHydroxideSolution;
-        public static Material BoronTrioxideSolution;
+        public static Material SodiumSulfiteSolution;
         public static Material PhosphorusSolution;
         public static Material SodiumCyanideSolution;
         public static Material BrominatedSulfurDioxide;
+        public static Material SodiumThiosulfateSolution;
+        public static Material SodiumCarbonateSolution;
+        public static Material DilutedIron3ChlorideSolution;
+        public static Material SodiumPerchlorateSolution;
+        public static Material SodiumChlorateSolution;
+        public static Material DilutedAniline;
 
         // Organic Chemistry Materials
 
@@ -489,7 +555,6 @@ class SuSyMaterials {
         public static Material Hexane;
         public static Material Furfural;
         public static Material Cresol;
-        public static Material Guaiacol;
         public static Material Xylenol;
         public static Material Creosol;
         public static Material Anthracene;
@@ -559,6 +624,7 @@ class SuSyMaterials {
         // Thermodynamics/Greenhouse Materials     
         
         public static Material EarthlikeAir;
+        public static Material HotHighPressureSteam;
         
         public static void init() {                
                 ElementMaterials.register();

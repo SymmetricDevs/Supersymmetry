@@ -718,12 +718,6 @@ public class OrganicChemistryMaterials {
                 .color(0x827863)
                 .build();
 
-        Guaiacol = new Material.Builder(15119, "guaiacol")
-                .fluid()
-                .components(Carbon, 7, Hydrogen, 8, Oxygen, 2)
-                .color(0x693834)
-                .build();
-
         Xylenol = new Material.Builder(15120, "xylenol")
                 .fluid()
                 .components(Carbon, 8, Hydrogen, 10, Oxygen, 1)
