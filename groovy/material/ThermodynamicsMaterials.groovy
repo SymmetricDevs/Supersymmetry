@@ -302,8 +302,6 @@ class ThermodynamicsMaterials {
 
                 generatePurifiedLiquid(Mercury, 22601)
 
-                generatePurifiedLiquid(Water, 22602)
-
                 generateGreenhouseGases(EarthGreenhouseGas, 22700)
 
                 EarthlikeAir = new Material.Builder(22800, "earth_like_air")

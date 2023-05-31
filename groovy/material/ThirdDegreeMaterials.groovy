@@ -117,5 +117,11 @@ public class ThirdDegreeMaterials {
                 .components(AceticAcid, 1, Water, 1, TerephthalicAcid, 1)
                 .colorAverage()
                 .build()
+
+        CelluloseAcetateSolution = new Material.Builder(24017, 'cellulose_acetate_solution')
+                .fluid()
+                .components(Acetone, 1, CelluloseAcetate, 1)
+                .colorAverage()
+                .build()
     }
 }

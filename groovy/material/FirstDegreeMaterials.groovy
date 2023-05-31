@@ -1146,11 +1146,49 @@ public class FirstDegreeMaterials{
                 .components(Carbon, 6, Hydrogen, 10, Oxygen, 5)
                 .color(0x4a432f)
                 .build()
+
         IronPentacarbonyl = new Material.Builder(8265, 'iron_pentacarbonyl')
                 .dust()
                 .components(Iron, 1, Carbon, 5, Oxygen, 5)
                 .color(0x8c180d)
                 .build()
-                .setFormula('Fe(CO)5')
+                .setFormula('Fe(CO)5', true)
+
+        AluminiumSulfate = new Material.Builder(8266, 'aluminium_sulfate')
+                .dust()
+                .components(Aluminium, 2, Sulfur, 3, Oxygen, 12)
+                .colorAverage()
+                .build()
+                .setFormula('Al2(SO4)3', true)
+
+        DemineralizedWater = new Material.Builder(8267, 'demineralized_water')
+                .fluid()
+                .components(Hydrogen, 2, Oxygen, 1)
+                .color(0x4761a8)
+                .build()
+
+        DeaeratedWater = new Material.Builder(8268, 'deaerated_water')
+                .fluid()
+                .components(Hydrogen, 2, Oxygen, 1)
+                .color(0x5681b3)
+                .build()
+
+        FilteredWater = new Material.Builder(8269, 'filtered_water')
+                .fluid()
+                .components(Hydrogen, 2, Oxygen, 1)
+                .color(0x62a0bd)
+                .build()
+
+        SterilizedWater = new Material.Builder(8270, 'sterilized_water')
+                .fluid()
+                .components(Hydrogen, 2, Oxygen, 1)
+                .color(0x6cb3c4)
+                .build()
+
+        UltrapureWater = new Material.Builder(8271, 'ultrapure_water')
+                .fluid()
+                .components(Hydrogen, 2, Oxygen, 1)
+                .color(0x7acacf)
+                .build()
     }
 }
