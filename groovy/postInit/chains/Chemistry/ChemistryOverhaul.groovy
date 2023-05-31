@@ -899,13 +899,13 @@ CSTR.recipeBuilder()
 // Cyclohexane
 
 TBR.recipeBuilder()
-.fluidInputs(fluid('hydrogen') * 300)
-.fluidInputs(fluid('benzene') * 50)
-.notConsumable(ore('dustNickel'))
-.fluidOutputs(fluid('cyclohexane') * 50)
-.duration(5)
-.EUt(30)
-.buildAndRegister()
+    .fluidInputs(fluid('hydrogen') * 300)
+    .fluidInputs(fluid('benzene') * 50)
+    .notConsumable(ore('dustActivatedRaneyNickel') * 1)
+    .fluidOutputs(fluid('cyclohexane') * 50)
+    .duration(20)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
 
 // Iron(III)-chloride
 
@@ -2595,15 +2595,6 @@ ROASTER.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-TBR.recipeBuilder()
-    .fluidInputs(fluid('hydrogen') * 300)
-    .fluidInputs(fluid('benzene') * 50)
-    .notConsumable(ore('dustActivatedRaneyNickel') * 1)
-    .fluidOutputs(fluid('cyclohexane') * 50)
-    .duration(20)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
 ALLOY_SMELTER.recipeBuilder()
     .inputs(ore('dustCopperOxide') * 2)
     .inputs(ore('dustAlumina') * 5)
@@ -2660,6 +2651,186 @@ MIXER.recipeBuilder()
     .duration(100)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
+
+// 2-EAQ
+
+BR.recipeBuilder()
+    .inputs(ore("dustPhthalicAnhydride") * 13)
+    .fluidInputs(fluid("ethylbenzene") * 1000)
+    .fluidOutputs(fluid("two_ethylanthraquinone") * 1000)
+    .fluidOutputs(fluid("water") * 1000)
+    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// 2-EAHQ
+
+FBR.recipeBuilder()
+    .fluidInputs(fluid('two_ethylanthraquinone') * 50)
+    .fluidInputs(fluid('hydrogen') * 100)
+    .notConsumable(ore('catalystBedPalladium') * 1)
+    .fluidOutputs(fluid('two_ethylanthrahydroquinone') * 50)
+    .duration(20)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+// Hydrogen Peroxide
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid("two_ethylanthrahydroquinone") * 50)
+    .fluidInputs(fluid("hot_hp_oxygen") * 100)
+    .fluidOutputs(fluid("two_ethylanthraquinone_solution") * 200)
+    .duration(100) // Adjust the duration as needed
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid("two_ethylanthraquinone_solution") * 200)
+    .fluidInputs(fluid("water") * 150)
+    .fluidOutputs(fluid("two_ethylanthraquinone") * 50)
+    .fluidOutputs(fluid("hydrogen_peroxide_solution") * 300)
+    .duration(10) 
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+
+// Butanone
+
+FBR.recipeBuilder()
+    .fluidInputs(fluid('two_butanol') * 50)
+    .notConsumable(ore('catalystBedChromiumIiioxide') * 1)
+    .fluidOutputs(fluid('butanone') * 50)
+    .fluidOutputs(fluid('hydrogen') * 100)
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+// Aluminium Trichloride
+
+TBR.recipeBuilder()
+    .fluidInputs(fluid("benzene") * 50)
+    .fluidInputs(fluid("bromine") * 50)
+    .notConsumable(ore("dustAluminiumTrichloride"))
+    .fluidOutputs(fluid("bromobenzene") * 50)
+    .fluidOutputs(fluid("hydrogen") * 50)
+    .duration(10) 
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// Philips catalyst
+
+ALLOY_SMELTER.recipeBuilder()
+    .inputs(ore("dustSiliconDioxide") * 3)
+    .inputs(ore("dustChromiumTrioxide") * 4)
+    .outputs(ore("dustPhilipsCatalyst").first() * 7)
+    .duration(200) 
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// Ziegler-Natta
+
+ROASTER.recipeBuilder()
+    .inputs(ore("dustAluminium"))
+    .fluidInputs(fluid("chlorine") * 3000)
+    .outputs(ore("dustAluminiumTrichloride").first() * 4)
+    .duration(100) // Adjust the duration as needed
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+BR.recipeBuilder()
+    .inputs(ore("dustAluminium") * 2)
+    .fluidInputs(fluid("hydrogen") * 6000)
+    .fluidInputs(fluid("ethylene") * 6000)
+    .outputs(ore("dustTriethylaluminium").last() * 44)
+    .duration(200) 
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+MIXER.recipeBuilder()
+    .inputs(ore("dustTriethylaluminium") * 44)
+    .fluidInputs(fluid("titanium_tetrachloride") * 1000)
+    .outputs(ore("dustZieglerNattaCatalyst").last() * 10)
+    .duration(160)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// Pyromellitic Dianhydride
+
+ROASTER.recipeBuilder()
+    .inputs(ore("dustDurene") * 4)
+    .fluidInputs(fluid("oxygen") * 2000)
+    .outputs(ore("dustPyromelliticDianhydride").last() * 3)
+    .fluidOutputs(fluid("steam") * 1000)
+    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// Kapton K 
+
+POLYMERIZATION.recipeBuilder()
+    .inputs(ore("dustPyromelliticDianhydride") * 2)
+    .inputs(ore("dustFourFourOxydianiline") * 3)
+    .fluidInputs(fluid("acetone") * 1000)
+    .fluidOutputs(fluid("impure_kapton_k") * 1000)
+    .duration(260) 
+    .EUt(Globals.voltAmps[3] * 2)
+    .buildAndRegister();
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid("impure_kapton_k") * 1000)
+    .fluidOutputs(fluid("acetone") * 1000)
+    .outputs(ore("dustKaptonK").last() * 4)
+    .duration(200) // Adjust the duration as needed
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister();
+
+// Kapton E
+
+MIXER.recipeBuilder()
+    .inputs(ore("dustPyromelliticDianhydride") * 2)
+    .inputs(ore("dustFourFourOxydianiline") * 3)
+    .inputs(ore("dustBiphenyltetracarboxylicAcidDianhydride") * 2)
+    .inputs(ore("dustParaPhenylenediamine") * 1)
+    .fluidInputs(fluid("acetone") * 1000)
+    .fluidOutputs(fluid("kapton_e_preparation") * 1000)
+    .duration(160) // Adjust the duration as needed
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+POLYMERIZATION.recipeBuilder()
+    .fluidInputs(fluid("kapton_e_preparation") * 1000)
+    .fluidOutputs(fluid("impure_kapton_e") * 1000)
+    .duration(200) 
+    .EUt(Globals.voltAmps[2] * 2)
+    .buildAndRegister();
+
+DRYER.recipeBuilder()
+    .fluidInputs(fluid("impure_kapton_e") * 1000)
+    .fluidOutputs(fluid("acetone") * 1000)
+    .fluidOutputs(fluid("kapton_e") * 4)
+    .duration(240)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// Bromomethane
+
+BR.recipeBuilder()
+    .fluidInputs(fluid("methanol") * 6000)
+    .fluidInputs(fluid("bromine") * 3000)
+    .inputs(dust("dustSulfur"))
+    .fluidOutputs(fluid("bromomethane") * 6000)
+    .fluidOutputs(fluid("very_diluted_sulfuric_acid") * 3000)
+    .duration(60) // Adjust the duration as needed
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid("very_diluted_sulfuric_acid") * 3000)
+    .fluidOutputs(fluid("water") * 2000)
+    .fluidOutputs(fluid("sulfuric_acid") * 1000)
+    .duration(60)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
 
 // Hydrazine
 CSTR.recipeBuilder()
