@@ -26,6 +26,8 @@ VULCANIZER = recipemap('vulcanizing_press')
 ALLOY_SMELTER = recipemap('alloy_smelter')
 ARC_FURNACE = recipemap('arc_furnace')
 AUTOCLAVE = recipemap('autoclave')
+ELECTROLYZER = recipemap('electrolyzer')
+ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 def COAL_SOURCES = [
     "dustCarbon",
@@ -930,13 +932,13 @@ CSTR.recipeBuilder()
 // Cyclohexane
 
 TBR.recipeBuilder()
-.fluidInputs(fluid('hydrogen') * 300)
-.fluidInputs(fluid('benzene') * 50)
-.notConsumable(ore('dustNickel'))
-.fluidOutputs(fluid('cyclohexane') * 50)
-.duration(5)
-.EUt(30)
-.buildAndRegister()
+    .fluidInputs(fluid('hydrogen') * 300)
+    .fluidInputs(fluid('benzene') * 50)
+    .notConsumable(ore('dustActivatedRaneyNickel') * 1)
+    .fluidOutputs(fluid('cyclohexane') * 50)
+    .duration(20)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
 
 // Iron(III)-chloride
 
@@ -1396,7 +1398,7 @@ FBR.recipeBuilder()
 .fluidInputs(fluid('propene') * 50)
 .fluidInputs(fluid('hot_hp_carbon_monoxide') * 50)
 .fluidInputs(fluid('hot_hp_hydrogen') * 100)
-//.notConsumable(ore('catalystBedDicobaltOctacarbonyl') * 1) TODO: Catalyst Bed
+.notConsumable(ore('catalystBedDicobaltOctacarbonyl') * 1)
 .fluidOutputs(fluid('butyraldehyde') * 50)
 .duration(5)
 .EUt(30)
@@ -2130,9 +2132,9 @@ DISTILLATION_TOWER.recipeBuilder()
 
 
     
-//diethyl ether
+//Diethyl Ether
 
-CSTR.recipeBuilder()
+BCR.recipeBuilder()
 .fluidInputs(fluid('ethanol') * 100)
 .fluidInputs(fluid('sulfuric_acid') * 50)
 .fluidOutputs(fluid('diethyl_ether_solution') * 150)
@@ -2330,6 +2332,7 @@ ROASTER.recipeBuilder()
 .EUt(Globals.voltAmps[2])
 .buildAndRegister()
 
+//TODO: MOVE TO REACTION FURNACE
 ROASTER.recipeBuilder()
 .fluidInputs(fluid('syngas') * 7000)
 .fluidInputs(fluid('steam') * 1000)
@@ -2365,6 +2368,7 @@ MIXER.recipeBuilder()
 .EUt(Globals.voltAmps[1])
 .buildAndRegister()
 
+//TODO: MOVE TO REACTION FURNACE
 EBF.recipeBuilder()
 .fluidInputs(fluid('ammonia_reaction_mix') * 4000)
 .notConsumable(ore('dustWustiteCatalyst'))
@@ -2503,7 +2507,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 BR.recipeBuilder() 
-    //.fluidInputs(fluid('phosphorus_trichloride') * 1000)  TODO: phosphorous trichloride
+    .fluidInputs(fluid('phosphorus_trichloride') * 1000)
     .fluidInputs(fluid('chlorobenzene') * 3000)
     .inputs(ore('dustSodium') * 6)
     .outputs(ore('dustTriphenylPhosphine').first() * 34)
@@ -2513,7 +2517,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
-    .inputs(ore('dustTriphenylphosphine') * 36)
+    .inputs(ore('dustTriphenylphosphine') * 34)
     .fluidInputs(fluid('chlorine') * 2000)
     .outputs(ore('dustTriphenylPhosphineDichloride').first() * 36)
     .duration(100)
@@ -2675,15 +2679,6 @@ ROASTER.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-TBR.recipeBuilder()
-    .fluidInputs(fluid('hydrogen') * 300)
-    .fluidInputs(fluid('benzene') * 50)
-    .notConsumable(ore('dustActivatedRaneyNickel') * 1)
-    .fluidOutputs(fluid('cyclohexane') * 50)
-    .duration(20)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
 ALLOY_SMELTER.recipeBuilder()
     .inputs(ore('dustCopperOxide') * 2)
     .inputs(ore('dustAlumina') * 5)
@@ -2692,10 +2687,10 @@ ALLOY_SMELTER.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-FBR.recipeBuilder()
+FLUIDIZEDBR.recipeBuilder()
     .fluidInputs(fluid('hp_carbon_monoxide') * 50)
     .fluidInputs(fluid('hp_hydrogen') * 100)
-    //.notConsumable(ore('catalystBedImpregnatedCopperOxide') * 1) TODO: Copper oxide impregnated catalyst bed
+    .notConsumable(ore('catalystBedImpregnatedCopperOxide') * 1)
     .fluidOutputs(fluid('methanol') * 50)
     .duration(10)
     .EUt(Globals.voltAmps[1])
@@ -2740,3 +2735,806 @@ MIXER.recipeBuilder()
     .duration(100)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
+
+// 2-EAQ
+
+BR.recipeBuilder()
+    .inputs(ore("dustPhthalicAnhydride") * 13)
+    .fluidInputs(fluid("ethylbenzene") * 1000)
+    .fluidOutputs(fluid("two_ethylanthraquinone") * 1000)
+    .fluidOutputs(fluid("water") * 1000)
+    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// 2-EAHQ
+
+FBR.recipeBuilder()
+    .fluidInputs(fluid('two_ethylanthraquinone') * 50)
+    .fluidInputs(fluid('hydrogen') * 100)
+    .notConsumable(ore('catalystBedPalladium') * 1)
+    .fluidOutputs(fluid('two_ethylanthrahydroquinone') * 50)
+    .duration(20)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+// Hydrogen Peroxide
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid("two_ethylanthrahydroquinone") * 50)
+    .fluidInputs(fluid("hot_hp_oxygen") * 100)
+    .fluidOutputs(fluid("two_ethylanthraquinone_solution") * 200)
+    .duration(100) // Adjust the duration as needed
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid("two_ethylanthraquinone_solution") * 200)
+    .fluidInputs(fluid("water") * 150)
+    .fluidOutputs(fluid("two_ethylanthraquinone") * 50)
+    .fluidOutputs(fluid("hydrogen_peroxide_solution") * 300)
+    .duration(10) 
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+
+// Butanone
+
+FBR.recipeBuilder()
+    .fluidInputs(fluid('two_butanol') * 50)
+    .notConsumable(ore('catalystBedChromiumIiioxide') * 1)
+    .fluidOutputs(fluid('butanone') * 50)
+    .fluidOutputs(fluid('hydrogen') * 100)
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+// Aluminium Trichloride
+
+TBR.recipeBuilder()
+    .fluidInputs(fluid("benzene") * 50)
+    .fluidInputs(fluid("bromine") * 50)
+    .notConsumable(ore("dustAluminiumTrichloride"))
+    .fluidOutputs(fluid("bromobenzene") * 50)
+    .fluidOutputs(fluid("hydrogen") * 50)
+    .duration(10) 
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// Philips catalyst
+
+ALLOY_SMELTER.recipeBuilder()
+    .inputs(ore("dustSiliconDioxide") * 3)
+    .inputs(ore("dustChromiumTrioxide") * 4)
+    .outputs(ore("dustPhilipsCatalyst").first() * 7)
+    .duration(200) 
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// Ziegler-Natta
+
+ROASTER.recipeBuilder()
+    .inputs(ore("dustAluminium"))
+    .fluidInputs(fluid("chlorine") * 3000)
+    .outputs(ore("dustAluminiumTrichloride").first() * 4)
+    .duration(100) // Adjust the duration as needed
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+BR.recipeBuilder()
+    .inputs(ore("dustAluminium") * 2)
+    .fluidInputs(fluid("hydrogen") * 6000)
+    .fluidInputs(fluid("ethylene") * 6000)
+    .outputs(ore("dustTriethylaluminium").last() * 44)
+    .duration(200) 
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+MIXER.recipeBuilder()
+    .inputs(ore("dustTriethylaluminium") * 44)
+    .fluidInputs(fluid("titanium_tetrachloride") * 1000)
+    .outputs(ore("dustZieglerNattaCatalyst").last() * 10)
+    .duration(160)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// Pyromellitic Dianhydride
+
+ROASTER.recipeBuilder()
+    .inputs(ore("dustDurene") * 4)
+    .fluidInputs(fluid("oxygen") * 2000)
+    .outputs(ore("dustPyromelliticDianhydride").last() * 3)
+    .fluidOutputs(fluid("steam") * 1000)
+    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// Kapton K 
+
+POLYMERIZATION.recipeBuilder()
+    .inputs(ore("dustPyromelliticDianhydride") * 2)
+    .inputs(ore("dustFourFourOxydianiline") * 3)
+    .fluidInputs(fluid("acetone") * 1000)
+    .fluidOutputs(fluid("impure_kapton_k") * 1000)
+    .duration(260) 
+    .EUt(Globals.voltAmps[3] * 2)
+    .buildAndRegister();
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid("impure_kapton_k") * 1000)
+    .fluidOutputs(fluid("acetone") * 1000)
+    .outputs(ore("dustKaptonK").last() * 4)
+    .duration(200) // Adjust the duration as needed
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister();
+
+// Kapton E
+
+MIXER.recipeBuilder()
+    .inputs(ore("dustPyromelliticDianhydride") * 2)
+    .inputs(ore("dustFourFourOxydianiline") * 3)
+    .inputs(ore("dustBiphenyltetracarboxylicAcidDianhydride") * 2)
+    .inputs(ore("dustParaPhenylenediamine") * 1)
+    .fluidInputs(fluid("acetone") * 1000)
+    .fluidOutputs(fluid("kapton_e_preparation") * 1000)
+    .duration(160) // Adjust the duration as needed
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+POLYMERIZATION.recipeBuilder()
+    .fluidInputs(fluid("kapton_e_preparation") * 1000)
+    .fluidOutputs(fluid("impure_kapton_e") * 1000)
+    .duration(200) 
+    .EUt(Globals.voltAmps[2] * 2)
+    .buildAndRegister();
+
+DRYER.recipeBuilder()
+    .fluidInputs(fluid("impure_kapton_e") * 1000)
+    .fluidOutputs(fluid("acetone") * 1000)
+    .outputs(ore("dustKaptonE").first() * 4)
+    .duration(240)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// Bromomethane
+
+BR.recipeBuilder()
+    .fluidInputs(fluid("methanol") * 6000)
+    .fluidInputs(fluid("bromine") * 3000)
+    .inputs(ore("dustSulfur"))
+    .fluidOutputs(fluid("bromomethane") * 6000)
+    .fluidOutputs(fluid("very_diluted_sulfuric_acid") * 3000)
+    .duration(60) // Adjust the duration as needed
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+DISTILLATION_TOWER.recipeBuilder()
+    .fluidInputs(fluid("very_diluted_sulfuric_acid") * 3000)
+    .fluidOutputs(fluid("water") * 2000)
+    .fluidOutputs(fluid("sulfuric_acid") * 1000)
+    .duration(60)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister();
+
+// Hydrazine
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('sulfuric_acid') * 50)
+        .fluidInputs(fluid('butene') * 50)
+        .fluidInputs(fluid('water') * 50)
+        .fluidOutputs(fluid('two_butanol_solution') * 100)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('two_butanol_solution') * 2000)
+        .fluidOutputs(fluid('butanol') * 1000)
+        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('ammonia_solution') * 50)
+        .fluidInputs(fluid('acetic_acid') * 50)
+        .fluidOutputs(fluid('ammonium_acetate_solution') * 50)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('ammonium_acetate_solution') * 1000)
+        .outputs(metaitem('dustAcetamide') * 9)
+        .fluidOutputs(fluid('water') * 2000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .inputs(metaitem('dustAcetamide') * 18)
+        .fluidInputs(fluid('butanone') * 1000)
+        .fluidOutputs(fluid('acetamide_solution') * 1000)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('acetamide_solution') * 50)
+        .fluidInputs(fluid('hydrogen_peroxide') * 50)
+        .fluidInputs(fluid('ammonia') * 200)
+        .fluidOutputs(fluid('hydrazine_solution') * 250)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('hydrazine_solution') * 5000)
+        .fluidOutputs(fluid('hydrazine') * 1000)
+        .fluidOutputs(fluid('water') * 4000)
+        .fluidOutputs(fluid('ammonia') * 2000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Ethylenediamine
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('dichloroethane') * 50)
+        .fluidInputs(fluid('ammonia') * 100)
+        .fluidOutputs(fluid('ethylenediamine_solution') * 50)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('ethylenediamine_solution') * 1000)
+        .inputs(metaitem('dustSodiumHydroxide') * 6)
+        .fluidOutputs(fluid('deacidified_ethylenediamine') * 3000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('deacidified_ethylenediamine') * 3000)
+        .outputs(metaitem('dustSalt') * 2)
+        .fluidOutputs(fluid('water') * 2000)
+        .fluidOutputs(fluid('ethylenediamine') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Nitrosyl Chloride
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('chlorine') * 50)
+        .fluidInputs(fluid('nitric_oxide') * 50)
+        .fluidOutputs(fluid('nitrosyl_chloride') * 50)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dustSulfur') * 1)
+        .fluidInputs(fluid('chlorine') * 2000)
+        .fluidOutputs(fluid('sulfur_dichloride') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Thionyl chloride
+BCR.recipeBuilder()
+        .fluidInputs(fluid('sulfur_trioxide') * 50)
+        .fluidInputs(fluid('sulfur_dichloride') * 50)
+        .fluidOutputs(fluid('thionyl_chloride') * 50)
+        .fluidOutputs(fluid('sulfur_dioxide') * 50)
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister()
+
+// Diborane
+BR.recipeBuilder()
+        .inputs(metaitem('dustLithiumHydride') * 12)
+        .fluidInputs(fluid('boron_trifluoride') * 8000)
+        .outputs(metaitem('dustLithiumTetrafluoroborate') * 36)
+        .fluidOutputs(fluid('diborane') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dustLithiumTetrafluoroborate') * 6)
+        .outputs(metaitem('dustLithiumFluoride') * 2)
+        .fluidOutputs(fluid('boron_trifluoride') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Lithium Hydride
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dustLithium') * 1)
+        .fluidInputs(fluid('hydrogen') * 1000)
+        .outputs(metaitem('dustLithiumHydride') * 2)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+// Tetramethylammonium hydroxide
+BR.recipeBuilder()
+        .inputs(metaitem('dustTetramethylammoniumChloride') * 6)
+        .inputs(metaitem('dustSodiumHydroxide') * 3)
+        .fluidInputs(fluid('methanol') * 1000)
+        .fluidOutputs(fluid('tetramethylammonium_hydroxide_solution') * 1000)
+        .outputs(metaitem('dustRockSalt') * 2)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Pyrocatechol
+BR.recipeBuilder()
+        .fluidInputs(fluid('phenol') * 1000)
+        .fluidInputs(fluid('hydrogen_peroxide') * 1000)
+        .outputs(metaitem('dustPyrocatechol') * 12)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Tetramethylammonium chloride
+LCR.recipeBuilder()
+        .fluidInputs(fluid('trimethylamine') * 1000)
+        .fluidInputs(fluid('chloromethane') * 1000)
+        .fluidInputs(fluid('ethanol') * 4000)
+        .outputs(metaitem('dustTetramethylammoniumChloride') * 6)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+// 1,4-Bis(trichloromethyl)benzene
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('xylene') * 50)
+        .fluidInputs(fluid('chlorine') * 300)
+        .fluidOutputs(fluid('bistrichloromethylbenzene') * 50)
+        .fluidOutputs(fluid('hydrogen') * 300)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+// Acetone Cyanohydrin
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('gtfo_hydrogen_cyanide') * 50)
+        .fluidInputs(fluid('acetone') * 50)
+        .fluidOutputs(fluid('acetone_cyanohydrin') * 50)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+// Methacrylamide Sulfate
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('acetone_cyanohydrin') * 50)
+        .fluidInputs(fluid('sulfuric_acid') * 50)
+        .fluidOutputs(fluid('methacrylamide_sulfate') * 50)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+// Methyl Methacrylate
+BR.recipeBuilder()
+        .fluidInputs(fluid('methacrylamide_sulfate') * 1000)
+        .fluidInputs(fluid('methanol') * 1000)
+        .fluidOutputs(fluid('methyl_methacrylate') * 1000)
+        .outputs(metaitem('dustAmmoniumBisulfate') * 11)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Ammonium Bisulfate
+ELECTROLYZER.recipeBuilder()
+        .fluidInputs(fluid('ammonium_bisulfate') * 144)
+        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('ammonia') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Methyl Methacrylate Emulsion Solution
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('methyl_methacrylate') * 1000)
+        .fluidInputs(fluid('water') * 1000)
+        .fluidInputs(fluid('gtfo_sodium_stearate') * 100)
+        .fluidOutputs(fluid('methyl_methacrylate_emulsion') * 2000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// PMMA Solution
+POLYMERIZATION.recipeBuilder()
+        .fluidInputs(fluid('methyl_methacrylate_emulsion') * 2000)
+        .inputs(metaitem('dustPotassiumPersulfate'))
+        .fluidOutputs(fluid('polymethyl_methacrylate_solution') * 2000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// PMMA Dust
+DRYER.recipeBuilder()
+        .fluidInputs(fluid('polymethyl_methacrylate_solution') * 2000)
+        .outputs(metaitem('dustPmma') * 7)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Phosphine
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 3000)
+        .inputs(metaitem('dustPhosphorus') * 4)
+        .fluidOutputs(fluid('phosphine') * 1000)
+        .outputs(metaitem('dustPotassiumHypophosphite') * 18)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
+        .inputs(metaitem('dustPhosphorus') * 4)
+        .fluidOutputs(fluid('phosphine') * 1000)
+        .outputs(metaitem('dustSodiumHypophosphite') * 18)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dustSodiumHypophosphite') * 12)
+        .fluidOutputs(fluid('phosphine') * 1000)
+        .outputs(metaitem('dustDisodiumPhosphate') * 8)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dustPotassiumHypophosphite') * 12)
+        .fluidOutputs(fluid('phosphine') * 1000)
+        .outputs(metaitem('dustDipotassiumPhosphate') * 8)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+// Boron Trifluoride
+MIXER.recipeBuilder()
+        .inputs(metaitem('dustBoronTrioxide') * 5)
+        .fluidInputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('boron_trioxide_solution') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('boron_trioxide_solution') * 50)
+        .fluidInputs(fluid('hydrogen_fluoride') * 300)
+        .fluidOutputs(fluid('boron_trifluoride') * 100)
+        .fluidOutputs(fluid('water') * 200)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+// Polystyrene Sulfonate
+POLYMERIZATION.recipeBuilder()
+        .fluidInputs(fluid('polystyrene') * 2304)
+        .fluidInputs(fluid('sulfur_trioxide') * 1000)
+        .fluidOutputs(fluid('polystyrene_sulfonate') * 2880)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Tetrasodium EDTA
+LCR.recipeBuilder()
+        .fluidInputs(fluid('ethylenediamine') * 1000)
+        .fluidInputs(fluid('formaldehyde') * 4000)
+        .inputs(metaitem('dustSodiumCyanide') * 12)
+        .fluidInputs(fluid('diluted_hydrochloric_acid') * 8000)
+        .fluidOutputs(fluid('ammonia') * 4000)
+        .fluidOutputs(fluid('ethylenediaminetetraacetic_acid_solution') * 4000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('ethylenediaminetetraacetic_acid_solution') * 1000)
+        .inputs(metaitem('dustSodiumHydroxide') * 3)
+        .fluidOutputs(fluid('tetrasodium_ethylenediaminetetraacetic_acid_solution') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('tetrasodium_ethylenediaminetetraacetic_acid_solution') * 4000)
+        .fluidOutputs(fluid('salt_water') * 4000)
+        .outputs(metaitem('dustTetrasodiumEthylenediaminetetraaceticAcid') * 44)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Phosphoryl chloride
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('phosphorus_trichloride') * 50)
+        .fluidInputs(fluid('oxygen') * 50)
+        .fluidOutputs(fluid('phosphoryl_chloride') * 50)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+// Phosphorus trichloride
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dustPhosphorus') * 4)
+        .fluidInputs(fluid('chlorine') * 12000)
+        .fluidOutputs(fluid('phosphorus_trichloride') * 2000)
+        .outputs(metaitem('dustPhosphorusPentachloride') * 12)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('phosphorus_trichloride') * 1000)
+        .inputs(metaitem('dustPhosphorus') * 4)
+        .fluidOutputs(fluid('phosphorus_solution') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('phosphorus_solution') * 50)
+        .fluidInputs(fluid('chlorine') * 600)
+        .fluidOutputs(fluid('phosphorus_trichloride') * 250)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+// Durene
+BR.recipeBuilder()
+        .fluidInputs(fluid('xylene') * 1000)
+        .fluidInputs(fluid('chloromethane') * 2000)
+        .outputs(metaitem('dustDurene') * 24)
+        .fluidOutputs(fluid('hydrogen_chloride') * 2000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Sodium cyanide
+BCR.recipeBuilder()
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 50)
+        .fluidInputs(fluid('gtfo_hydrogen_cyanide') * 50)
+        .fluidOutputs(fluid('sodium_cyanide_solution') * 100)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('sodium_cyanide_solution') * 2000)
+        .outputs(metaitem('dustSodiumCyanide') * 3)
+        .fluidOutputs(fluid('water') * 2000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Creating diiodobenzene
+
+// Step 1: Producing urea solution
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('ammonia') * 100)
+        .fluidInputs(fluid('carbon_dioxide') * 50)
+        .fluidOutputs(fluid('urea_solution') * 50)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('urea_solution') * 1000)
+        .outputs(metaitem('dustUrea') * 8)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Step 2: Creating impure 1,4-diiodobenzene
+LCR.recipeBuilder()
+        .inputs(metaitem('dustSodiumNitrate') * 5)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidInputs(fluid('phosphoric_acid') * 1000)
+        .fluidInputs(fluid('urea_solution') * 1000)
+        .inputs(metaitem('dustParaPhenylenediamine') * 16)
+        .inputs(metaitem('dustPotassiumIodide') * 4)
+        .fluidOutputs(fluid('impure_diiodobenzene') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Step 3: Purifying 1,4-diiodobenzene
+CENTRIFUGE.recipeBuilder()
+        .fluidInputs(fluid('impure_diiodobenzene') * 1000)
+        .fluidInputs(fluid('water') * 1000)
+        .outputs(metaitem('dustDiiodobenzene') * 12)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Turning diiodobenzene into oxydianiline
+
+MIXER.recipeBuilder()
+        .inputs(metaitem('dustDiiodobenzene') * 12)
+        .fluidInputs(fluid('ethanol') * 1000)
+        .fluidOutputs(fluid('diiodobenzene_solution') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+FBR.recipeBuilder()
+        .fluidInputs(fluid('diiodobenzene_solution') * 50)
+        .fluidInputs(fluid('ammonia_solution') * 150)
+        .fluidOutputs(fluid('impure_four_four_oxydianiline') * 200)
+        .notConsumable(metaitem('catalystBedCopper'))
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('water') * 1000)
+        .fluidInputs(fluid('ammonia') * 1000)
+        .fluidOutputs(fluid('ammonia_solution') * 1000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('impure_four_four_oxydianiline') * 8000)
+        .fluidOutputs(fluid('ethanol') * 2000)
+        .fluidOutputs(fluid('four_four_oxydianiline_solution') * 5000)
+        .outputs(metaitem('dustAmmoniumIodide') * 24)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('four_four_oxydianiline_solution') * 5000)
+        .fluidOutputs(fluid('water') * 5000)
+        .outputs(metaitem('dustFourFourOxydianiline') * 27)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+ELECTROLYTIC_CELL.recipeBuilder()
+        .fluidInputs(fluid('ammonium_iodide') * 1728)
+        .fluidOutputs(fluid('ammonia') * 2000)
+        .fluidOutputs(fluid('hydrogen') * 2000)
+        .outputs(metaitem('dustIodine') * 2)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Terephthaloyl chloride
+BR.recipeBuilder()
+        .inputs(metaitem('dustTerephthalicAcid') * 3)
+        .fluidInputs(fluid('bistrichloromethylbenzene') * 1000)
+        .outputs(metaitem('dustTerephthaloylChloride') * 6)
+        .fluidOutputs(fluid('hydrogen_chloride') * 2000)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Ethylene glycol
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('ethylene_oxide') * 50)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 150)
+        .fluidOutputs(fluid('ethylene_glycol_solution') * 150)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('ethylene_glycol_solution') * 3000)
+        .fluidOutputs(fluid('ethylene_glycol') * 1000)
+        .fluidOutputs(fluid('water') * 2000)
+        .outputs(metaitem('dustSodiumHydroxide') * 9)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Hydrobromic acid
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('bromine') * 100)
+        .fluidInputs(fluid('sulfur_dioxide') * 50)
+        .fluidInputs(fluid('water') * 100)
+        .fluidOutputs(fluid('brominated_sulfur_dioxide') * 150)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('brominated_sulfur_dioxide') * 3000)
+        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('hydrobromic_acid') * 2000)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+// Kevlar
+LCR.recipeBuilder()
+        .inputs(metaitem('dustCalciumChloride') * 1)
+        .inputs(metaitem('dustParaPhenylenediamine') * 8)
+        .inputs(metaitem('dustTerephthaloylChloride') * 3)
+        .fluidInputs(fluid('n_methyl_ii_pyrrolidone') * 100)
+        .fluidInputs(fluid('sulfuric_acid') * 500)
+        .outputs(metaitem('dustKevlar') * 4)
+        .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+// Hydrogen cyanide
+FBR.recipeBuilder()
+        .fluidInputs(fluid('methane') * 50)
+        .fluidInputs(fluid('ammonia') * 50)
+        .fluidInputs(fluid('oxygen') * 150)
+        .fluidOutputs(fluid('gtfo_hydrogen_cyanide') * 50)
+        .fluidOutputs(fluid('water') * 150)
+        .EUt(30)
+        .duration(10)
+        .buildAndRegister()
+
+// Ethylene oxide
+// TODO: ADD OXIDATION CATALYST
+FBR.recipeBuilder()
+        .fluidInputs(fluid('ethylene') * 50)
+        .fluidInputs(fluid('oxygen') * 50)
+        .fluidOutputs(fluid('carbon_dioxide') * 5)
+        .fluidOutputs(fluid('impure_ethylene_oxide') * 45)
+        .EUt(30)
+        .duration(10)
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('impure_ethylene_oxide') * 45)
+        .fluidOutputs(fluid('water') * 5)
+        .fluidOutputs(fluid('ethylene_oxide') * 40)
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()
+
+// Terephthalic Acid
+
+MIXER.recipeBuilder()
+        .inputs(metaitem('dustCobalt'))
+        .inputs(metaitem('dustManganese'))
+        .fluidInputs(fluid('tetrabromomethane') * 1000)
+        .outputs(metaitem('dustAmocoProcessCatalyst') * 2)
+        .EUt(120)
+        .duration(120)
+        .buildAndRegister()
+
+LCR.recipeBuilder()
+        .fluidInputs(fluid('xylene') * 1000)
+        .fluidInputs(fluid('hot_hp_air') * 8000)
+        .fluidInputs(fluid('acetic_acid') * 1000)
+        .notConsumable(metaitem('dustAmocoProcessCatalyst'))
+        .fluidOutputs(fluid('terephthalic_acid_solution') * 2000)
+        .EUt(1920)
+        .duration(200)
+        .buildAndRegister()
+
+LCR.recipeBuilder()
+        .fluidInputs(fluid('xylene') * 1000)
+        .fluidInputs(fluid('hot_hp_oxygen') * 2000)
+        .fluidInputs(fluid('carbon_dioxide') * 6000)
+        .fluidInputs(fluid('acetic_acid') * 1000)
+        .notConsumable(metaitem('dustAmocoProcessCatalyst'))
+        .fluidOutputs(fluid('terephthalic_acid_solution') * 2000)
+        .EUt(1920)
+        .duration(200)
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('terephthalic_acid_solution') * 2000)
+        .fluidOutputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('acetic_acid') * 1000)
+        .outputs(metaitem('dustTerephthalicAcid') * 18)
+        .EUt(120)
+        .duration(100)
+        .buildAndRegister()

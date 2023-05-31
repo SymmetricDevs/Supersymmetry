@@ -620,6 +620,8 @@ class SuSyMaterials {
         public static Material ImpureFourFourOxydianiline;
         public static Material EthyleneGlycolSolution;
         public static Material TerephthalicAcidSolution;
+        public static Material TwoButanolSolution;
+        public static Material FourFourOxydianilineSolution;
 
         // Thermodynamics/Greenhouse Materials     
         

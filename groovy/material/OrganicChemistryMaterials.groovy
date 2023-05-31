@@ -65,7 +65,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         Polystyrene = new Material.Builder(15008, 'polystyrene')
-                .dust()
+                .polymer(1)
                 .components(Carbon, 8, Hydrogen, 8)
                 .color(0xa2a389)
                 .build();
