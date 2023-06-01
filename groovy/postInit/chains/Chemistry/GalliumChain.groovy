@@ -81,13 +81,13 @@ ELECTROLYZER.recipeBuilder()
 .buildAndRegister()
 
 //VACUUM ROUTE
-/*VACUUM_DT.recipeBuilder()
+VACUUM_DT.recipeBuilder()
 .inputs(ore('dustGallium'))
 .outputs(metaitem('dustHighPurityGallium'))
 .fluidOutputs(fluid('mercury') * 250)
 .duration(120)
 .EUt(Globals.voltAmps[2])
-.buildAndRegister()*/
+.buildAndRegister()
 
 //GALLIUM ARSENIDE PRODUCTION (LIQUID ENCAPSULATED CZOCHIRALSKI PROCESS)
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustGallium'), metaitem('dustArsenic'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
@@ -104,14 +104,14 @@ CRYSTALLIZER.recipeBuilder()
 .buildAndRegister()
 
 //PBN CRUCIBLE
-/*CVD.recipeBuilder()
+CVD.recipeBuilder()
 .fluidInputs(fluid('boron_trichloride') * 1000)
 .fluidInputs(fluid('ammonia') * 1000)
 .outputs(metaitem('dustBoronNitride') * 2)
 .fluidOutputs(fluid('hydrogen_chloride') * 3000)
 .duration(120)
 .EUt(Globals.voltAmps[1])
-.buildAndRegister()*/
+.buildAndRegister()
 
 FORMINGPRESS.recipeBuilder()
 .inputs(ore('dustBoronNitride') * 14)
@@ -126,7 +126,7 @@ CRYSTALLIZER.recipeBuilder()
 .fluidInputs(fluid('high_purity_gallium') * 144)
 .fluidInputs(fluid('high_purity_arsenic') * 144)
 .notConsumable(fluid('boron_trioxide') * 720)
-//.notConsumable(metaitem('nuggetGalliumArsenide'))
+.notConsumable(metaitem('nuggetGalliumArsenide'))
 .notConsumable(metaitem('boron.nitride.crucible'))
 .outputs(metaitem('ingotCrudeGalliumArsenide'))
 .duration(240)
