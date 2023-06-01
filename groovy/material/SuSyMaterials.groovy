@@ -403,6 +403,8 @@ class SuSyMaterials {
         public static Material MercuryIIChloride;
         public static Material BoronNitride;
         public static Material CrudeGalliumArsenide;
+        public static Material HighPurityIron;
+        public static Material IronPentacarbonyl;
 
         // Second Degree Materials
 
@@ -623,6 +625,8 @@ class SuSyMaterials {
         public static Material ImpureFourFourOxydianiline;
         public static Material EthyleneGlycolSolution;
         public static Material TerephthalicAcidSolution;
+        public static Material TwoButanolSolution;
+        public static Material FourFourOxydianilineSolution;
 
         // Thermodynamics/Greenhouse Materials     
         
