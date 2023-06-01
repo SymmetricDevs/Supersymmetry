@@ -14,3 +14,18 @@ FORMINGPRESS.recipeBuilder()
 	.duration(120)
 	.EUt(22)
 	.buildAndRegister()	
+
+//CRUCIBLE MOLD
+crafting.addShaped("mold_crucible", metaitem('shape.mold.crucible'), [
+    [metaitem('shape.empty'), null, item('gregtech:hammer')],
+    [null, null, null],
+    [null, null, null]
+])
+
+FORMINGPRESS.recipeBuilder()
+	.inputs(metaitem('shape.empty'))
+	.notConsumable(metaitem('shape.mold.crucible'))
+    .outputs(metaitem('shape.mold.crucible'))
+	.duration(120)
+	.EUt(22)
+	.buildAndRegister()	

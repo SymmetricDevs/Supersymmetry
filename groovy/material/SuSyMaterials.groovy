@@ -398,6 +398,11 @@ class SuSyMaterials {
         public static Material AntimonyIiiSulfide;
         public static Material IronThioarsenite;
         public static Material Cellulose;
+        public static Material CrudeGalliumTrichloride;
+        public static Material GalliumTrichloride;
+        public static Material MercuryIIChloride;
+        public static Material BoronNitride;
+        public static Material CrudeGalliumArsenide;
 
         // Second Degree Materials
 
