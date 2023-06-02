@@ -1194,13 +1194,13 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula('Fe(CO)5')
 
-        Ferrochromium = new Material.Builder(8266, 'ferrochromium')
+        Ferrochromium = new Material.Builder(8272, 'ferrochromium')
                 .dust()
                 .components(Iron, 1, Chrome, 2)
                 .color(0x6b6552)
                 .build()
 
-        Ferrosilicon = new Material.Builder(8267, 'ferrosilicon')
+        Ferrosilicon = new Material.Builder(8273, 'ferrosilicon')
                 .dust()
                 .components(Iron, 1, Silicon, 3)
                 .iconSet(SHINY)

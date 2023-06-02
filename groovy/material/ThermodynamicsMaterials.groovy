@@ -262,11 +262,11 @@ class ThermodynamicsMaterials {
 
                 generateLiquidFromGas(NaturalGas, 22109, 110);
                 
-                generateThermoRefrigerant(Ammonia, 22200);
+                generateThermoRefrigerant(Ammonia, 22150);
 
-                generateThermoRefrigerant(Propane, 22204);
+                generateThermoRefrigerant(Propane, 22155);
 
-                generateThermoRefrigerant(CarbonDioxide, 22208);
+                generateThermoRefrigerant(CarbonDioxide, 22160);
 
                 generateCoolant(Water, 22300);
 
