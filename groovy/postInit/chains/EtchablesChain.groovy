@@ -148,13 +148,13 @@ new PDopant("dustHighPurityAntimony", 1)
 new PDopant("dustHighPurityPhosphorus", 2)
 new PDopant("dustHighPurityArsenic", 3)
 
-def generatePatterningRecipes(input, product, mask, voltageTier, timeMultiplier, int circ) {
+def generatePatterningRecipes(input, product, mask, voltageTier, timeMultiplier, int outputMultiplier, int circ) {
     for (photoresist in Photoresist.photoresists) {
         UV_LIGHT_BOX.recipeBuilder()
                 .inputs(metaitem(input))
                 .notConsumable(metaitem(mask))
                 .fluidInputs(fluid(photoresist.fluidName) * photoresist.amountUsed)
-                .outputs(metaitem(product))
+                .outputs(metaitem(product) * outputMultiplier)
                 .duration(photoresist.timeUsed * timeMultiplier)
                 .EUt(Globals.voltAmps[voltageTier])
                 .buildAndRegister()
@@ -163,7 +163,7 @@ def generatePatterningRecipes(input, product, mask, voltageTier, timeMultiplier,
                 .inputs(metaitem(input))
                 .notConsumable(Globals.circuit(circ))
                 .fluidInputs(fluid(photoresist.fluidName) * (photoresist.amountUsed / 4))
-                .outputs(metaitem(product))
+                .outputs(metaitem(product) * outputMultiplier)
                 .duration((int) (photoresist.timeUsed * timeMultiplier / 10))
                 .EUt(Globals.voltAmps[voltageTier])
                 .buildAndRegister()
@@ -262,10 +262,12 @@ for (pdopant in PDopant.pdopants) {
 
 //WAFERS
 
-generatePatterningRecipes('wafer.doped.silicon', 'patterned.ic', 'mask.ic', 2, 4, 0)
-generatePatterningRecipes('wafer.doped.silicon', 'patterned.cpu', 'mask.cpu', 2, 4, 1)
-generatePatterningRecipes('wafer.doped.silicon', 'patterned.ram', 'mask.ram', 2, 4, 2)
-generatePatterningRecipes('wafer.doped.silicon', 'patterned.ulpic', 'mask.ulpic', 2, 4, 3)
+generatePatterningRecipes('wafer.silicon', 'patterned.ic', 'mask.ic', 2, 4, 1, 0)
+generatePatterningRecipes('wafer.silicon', 'patterned.ram', 'mask.ram', 2, 4, 1, 1)
+generatePatterningRecipes('wafer.doped.silicon', 'patterned.ic', 'mask.ic', 2, 4, 2, 0)
+generatePatterningRecipes('wafer.doped.silicon', 'patterned.ram', 'mask.ram', 2, 4, 2, 1)
+generatePatterningRecipes('wafer.doped.silicon', 'patterned.cpu', 'mask.cpu', 2, 4, 1, 2)
+generatePatterningRecipes('wafer.doped.silicon', 'patterned.ulpic', 'mask.ulpic', 2, 4, 1, 3)
 
 generateEtchingRecipes('patterned.ic', 'etched.ic', 'silicon', 1, 1)
 generateEtchingRecipes('patterned.cpu', 'etched.cpu', 'silicon', 1, 1)
@@ -309,7 +311,7 @@ ELECTROLYZER.recipeBuilder()
         .buildAndRegister()
 
 CUTTER.recipeBuilder()
-        .fluidInputs(fluid('high_purity_water') * 100)
+        .fluidInputs(fluid('ultrapure_water') * 100)
         .inputs(metaitem('wafer.central_processing_unit'))
         .outputs(metaitem('plate.central_processing_unit') * 8)
         .duration(900)
@@ -317,7 +319,7 @@ CUTTER.recipeBuilder()
         .buildAndRegister()
 
 CUTTER.recipeBuilder()
-        .fluidInputs(fluid('high_purity_water') * 100)
+        .fluidInputs(fluid('ultrapure_water') * 100)
         .inputs(metaitem('wafer.ultra_low_power_integrated_circuit'))
         .outputs(metaitem('plate.ultra_low_power_integrated_circuit') * 6)
         .duration(900)
@@ -325,7 +327,7 @@ CUTTER.recipeBuilder()
         .buildAndRegister()
 
 CUTTER.recipeBuilder()
-        .fluidInputs(fluid('high_purity_water') * 100)
+        .fluidInputs(fluid('ultrapure_water') * 100)
         .inputs(metaitem('wafer.integrated_logic_circuit'))
         .outputs(metaitem('plate.integrated_logic_circuit') * 8)
         .duration(900)
@@ -334,7 +336,7 @@ CUTTER.recipeBuilder()
 
 
 CUTTER.recipeBuilder()
-        .fluidInputs(fluid('high_purity_water') * 100)
+        .fluidInputs(fluid('ultrapure_water') * 100)
         .inputs(metaitem('wafer.random_access_memory'))
         .outputs(metaitem('plate.random_access_memory') * 32)
         .duration(900)
@@ -351,7 +353,7 @@ FORMING_PRESS.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-generatePatterningRecipes('laminated.board.phenolic', 'patterned.board.phenolic', 'mask.pcb', 1, 1, 0)
+generatePatterningRecipes('laminated.board.phenolic', 'patterned.board.phenolic', 'mask.pcb', 1, 1, 1, 0)
 generateEtchingRecipes('patterned.board.phenolic', 'circuit_board.good', 'copper', 1, 1)
 
 //PLASTIC CIRCUIT BOARD (TIER 3)
@@ -388,5 +390,5 @@ FORMING_PRESS.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-generatePatterningRecipes('board.plastic', 'patterned.board.plastic', 'mask.pcb', 2, 1, 0)
+generatePatterningRecipes('board.plastic', 'patterned.board.plastic', 'mask.pcb', 2, 1, 1, 0)
 generateEtchingRecipes('patterned.board.plastic', 'circuit_board.plastic', 'copper', 2, 1)

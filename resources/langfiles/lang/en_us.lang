@@ -646,7 +646,7 @@ material.hot_hp_steam=Hot High Pressure Steam
 
 material.sodium_thiosulfate_solution=Sodium Thiosulfate Solution
 material.sodium_sulfite_solution=Sodium Sulfite Solution
-material.sodium_carbonate=Sodium Carbonate Solution
+material.sodium_carbonate=Sodium Carbonate
 material.sodium_cyanide_solution=Sodium Cyanide Solution
 material.sulfidic_silver_cyanide_solution=Sulfidic Silver Cyanide Solution
 material.silver_cyanide_solution=Silver Cyanide Solution
@@ -829,6 +829,22 @@ material.ultramafic_tailings=Ultramafic Tailing
 
 material.vinegar=Vinegar
 
+material.wastewater=Wastewater
+material.acidic_cellulose_solution=Acidic Cellulose Solution
+material.heated_wastewater=Heated Wastewater
+material.flocculated_wastewater=Flocculated Wastewater
+material.filtered_wastewater=Filtered Wastewater
+material.wastewater_sludge=Wastewater Sludge
+material.aluminium_sulfate=Aluminium Sulfate
+material.acetic_anhydride=Acetic Anhydride
+material.cellulose_acetate=Cellulose Acetate
+material.cellulose_acetate_solution=Cellulose Acetate Solution
+material.demineralized_water=Demineralized Water
+material.deaerated_water=Deaerated Water
+material.filtered_water=Filtered Water
+material.sterilized_water=Sterilized Water
+material.ultrapure_water=Ultrapure Water
+
 # Isotopes
 
 # GregTech RecipeMaps
@@ -852,6 +868,8 @@ recipemap.vat_fermentation.name=Fermentation Vat
 recipemap.vacuum_distillation.name=Vacuum Distillation
 recipemap.catalytic_reformer_recipes.name=Catalytic Reforming
 recipemap.coking_tower.name=Coking Tower
+recipemap.ion_exchange_column.name=Ion Exchange
+recipemap.smoke_stack.name=Smoke Stack (Chimney)
 
 # QMD Particles
 
@@ -1067,6 +1085,7 @@ metaitem.baseRutheniumTriniumAmericiumNeutronate.name=Base Ruthenium Trinium Ame
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
 metaitem.raw_diamond.name=Raw Diamond
+metaitem.cellulose_acetate_mesh.name=Cellulose Acetate Mesh
 
 # Multiblocked
 

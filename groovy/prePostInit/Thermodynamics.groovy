@@ -485,6 +485,12 @@ for (FluidFuel in FluidFuels) {
                 .EUt(-32)
                 .buildAndRegister();
     }
+
+    recipemap('flare_stack').recipeBuilder()
+            .fluidInputs(liquid(FluidFuel.liquid_fuel) * 100)
+            .duration(30)
+            .EUt(7)
+            .buildAndRegister();
 }
 
 for (WorkingFluid in WorkingFluids) {
@@ -518,6 +524,9 @@ for (WorkingFluid in WorkingFluids) {
             .EUt(8)
             .buildAndRegister();
 }
+
+//TODO: USE HEATED BRINE FROM FLUID DRILLING TO GENERATE STEAM
+//TODO: GEOTHERMAL ENERGY FROM LAVA DEPOSIT IN NETHER
 
 recipemap('fluid_compressor').recipeBuilder()
         .fluidInputs(liquid('steam') * 1000)

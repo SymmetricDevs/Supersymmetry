@@ -26,6 +26,8 @@ VULCANIZER = recipemap('vulcanizing_press')
 ALLOY_SMELTER = recipemap('alloy_smelter')
 ARC_FURNACE = recipemap('arc_furnace')
 AUTOCLAVE = recipemap('autoclave')
+COMPRESSOR = recipemap('compressor')
+ASSEMBLER = recipemap('assembler')
 ELECTROLYZER = recipemap('electrolyzer')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
@@ -38,6 +40,15 @@ def COAL_SOURCES = [
     "gemCoke",
     "dustCharcoal"
 ]
+
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('stickIron') * 4)
+        .inputs(metaitem('pipeTinyFluidSteel') * 4)
+        .outputs(metaitem('catalyst_bed_support_grid'))
+        .EUt(30)
+        .duration(160)
+        .buildAndRegister()
 
 // Soap
 
@@ -2225,6 +2236,7 @@ ARC_FURNACE.recipeBuilder()
         .inputs(ore('dustSiliconDioxide') * 3)
         .inputs(ore('dustCoke') * 1)
         .outputs(ore('dustSilicon').first() * 1)
+        .circuitMeta(1)
         .fluidOutputs(fluid('carbon_monoxide') * 2000)
         .EUt(30)
         .duration(300)
@@ -2257,17 +2269,58 @@ ARC_FURNACE.recipeBuilder()
         .duration(300)
         .buildAndRegister()
 
-/*
-//TODO: Make it so that integrated circuit can be used to choose between silicon or silicon carbide. increase arc furnace slots to 4
+//CELLULOSE ACETATE
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('methyl_acetate') * 50)
+        .fluidInputs(fluid('carbon_monoxide') * 50)
+        .fluidOutputs(fluid('acetic_anhydride') * 50)
+        .EUt(480)
+        .duration(1)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .inputs(ore('dustCellulose') * 4)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidInputs(fluid('acetic_anhydride') * 1000)
+        .fluidOutputs(fluid('acidic_cellulose_solution') * 1000)
+        .EUt(480)
+        .duration(160)
+        .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('acidic_cellulose_solution') * 50)
+        .fluidInputs(fluid('acetic_acid') * 50)
+        .fluidInputs(fluid('water') * 50)
+        .fluidOutputs(fluid('cellulose_acetate_solution') * 100)
+        .EUt(480)
+        .duration(1)
+        .buildAndRegister()
+
+COMPRESSOR.recipeBuilder()
+        .fluidInputs(fluid('cellulose_acetate_solution') * 1000)
+        .notConsumable(metaitem('shape.extruder.rod'))
+        .outputs(metaitem('wireFineCelluloseAcetate') * 8)
+        .EUt(480)
+        .duration(100)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('wireFineCelluloseAcetate') * 16)
+        .outputs(metaitem('cellulose_acetate_mesh'))
+        .EUt(120)
+        .duration(160)
+        .buildAndRegister()
 
 //Graphite
 
 ARC_FURNACE.recipeBuilder()
 .inputs(ore('dustSiliconDioxide') * 3)
 .inputs(ore('dustCoke') * 3)
+.circuitMeta(2)
 .outputs(ore('dustSiliconCarbide').first() * 2)
 .fluidOutputs(fluid('carbon_monoxide') * 2000)
-.EUt(45)
+.EUt(60)
 .duration(300)
 .buildAndRegister()
 
@@ -2275,11 +2328,10 @@ ARC_FURNACE.recipeBuilder()
 .inputs(ore('dustSiliconCarbide') * 2)
 .outputs(ore('dustSilicon').first())
 .outputs(ore('dustGraphite').first())
-.EUt(45)
+.EUt(60)
 .duration(270)
 .buildAndRegister()
 
- */
 
 // Distilled Water
 

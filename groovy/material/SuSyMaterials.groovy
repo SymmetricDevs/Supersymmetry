@@ -170,6 +170,12 @@ class SuSyMaterials {
         public static Material ConcentratedBlackLiquor;
         public static Material GreenLiquor;
         public static Material RawCellulose;
+        public static Material Wastewater;
+        public static Material AcidicCelluloseSolution;
+        public static Material HeatedWastewater;
+        public static Material FlocculatedWastewater;
+        public static Material FilteredWastewater;
+        public static Material WastewaterSludge;
         public static Material CarburizedStainlessSteel;
 
         // Petrochem Materials
@@ -406,6 +412,12 @@ class SuSyMaterials {
         public static Material Cellulose;
         public static Material HighPurityIron;
         public static Material IronPentacarbonyl;
+        public static Material AluminiumSulfate;
+        public static Material DemineralizedWater;
+        public static Material DeaeratedWater;
+        public static Material FilteredWater;
+        public static Material SterilizedWater;
+        public static Material UltrapureWater;
         public static Material Ferrochromium;
         public static Material Ferrosilicon;
         
@@ -609,6 +621,8 @@ class SuSyMaterials {
         public static Material Bistrichloromethylbenzene;
         public static Material TerephthaloylChloride;
         public static Material Kevlar;
+        public static Material AceticAnhydride;
+        public static Material CelluloseAcetate;
         
         // Third Degree Materials
 
@@ -629,6 +643,7 @@ class SuSyMaterials {
         public static Material ImpureFourFourOxydianiline;
         public static Material EthyleneGlycolSolution;
         public static Material TerephthalicAcidSolution;
+        public static Material CelluloseAcetateSolution;
         public static Material TwoButanolSolution;
         public static Material FourFourOxydianilineSolution;
 
