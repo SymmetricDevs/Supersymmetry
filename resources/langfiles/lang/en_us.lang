@@ -173,6 +173,9 @@ material.green_coke=Green Coke
 material.asphalt=Asphalt
 material.alumina=Alumina
 material.potassium_fluoride=Potassium Fluoride
+material.carburized_stainless_steel=Carburized Stainless Steel
+material.ferrochromium=Ferrochromium
+material.ferrosilicon=Ferrosilicon
 
 material.cellulose=Cellulose
 material.raw_cellulose=Raw Cellulose
@@ -648,7 +651,7 @@ material.hot_hp_steam=Hot High Pressure Steam
 
 material.sodium_thiosulfate_solution=Sodium Thiosulfate Solution
 material.sodium_sulfite_solution=Sodium Sulfite Solution
-material.sodium_carbonate=Sodium Carbonate Solution
+material.sodium_carbonate=Sodium Carbonate
 material.sodium_cyanide_solution=Sodium Cyanide Solution
 material.sulfidic_silver_cyanide_solution=Sulfidic Silver Cyanide Solution
 material.silver_cyanide_solution=Silver Cyanide Solution
@@ -673,8 +676,13 @@ material.arsine=Arsine
 material.sodium_bromide_solution=Sodium Bromide Solution
 material.sperrylite_waste=Sperrylite Waste
 material.diluted_iron_iii_chloride_solution=Diluted Iron III Chloride Solution
-
 material.gallium_trichloride=Gallium Trichloride
+material.manganese_ii_oxide=Manganese II Oxide
+material.crude_manganese_ii_sulfate_solution=Crude Manganese II Sulfate Solution
+material.manganese_ii_sulfate_solution=Manganese II Sulfate Solution
+material.iron_iii_hydroxide=Iron III Hydroxide
+material.rhodochrosite=Rhodochrosite
+
 
 # Thermodynamics
 
@@ -826,6 +834,22 @@ material.ultramafic_tailings=Ultramafic Tailing
 
 material.vinegar=Vinegar
 
+material.wastewater=Wastewater
+material.acidic_cellulose_solution=Acidic Cellulose Solution
+material.heated_wastewater=Heated Wastewater
+material.flocculated_wastewater=Flocculated Wastewater
+material.filtered_wastewater=Filtered Wastewater
+material.wastewater_sludge=Wastewater Sludge
+material.aluminium_sulfate=Aluminium Sulfate
+material.acetic_anhydride=Acetic Anhydride
+material.cellulose_acetate=Cellulose Acetate
+material.cellulose_acetate_solution=Cellulose Acetate Solution
+material.demineralized_water=Demineralized Water
+material.deaerated_water=Deaerated Water
+material.filtered_water=Filtered Water
+material.sterilized_water=Sterilized Water
+material.ultrapure_water=Ultrapure Water
+
 # Isotopes
 
 # GregTech RecipeMaps
@@ -849,6 +873,8 @@ recipemap.vat_fermentation.name=Fermentation Vat
 recipemap.vacuum_distillation.name=Vacuum Distillation
 recipemap.catalytic_reformer_recipes.name=Catalytic Reforming
 recipemap.coking_tower.name=Coking Tower
+recipemap.ion_exchange_column.name=Ion Exchange
+recipemap.smoke_stack.name=Smoke Stack (Chimney)
 
 # QMD Particles
 
@@ -1064,6 +1090,7 @@ metaitem.baseRutheniumTriniumAmericiumNeutronate.name=Base Ruthenium Trinium Ame
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
 metaitem.raw_diamond.name=Raw Diamond
+metaitem.cellulose_acetate_mesh.name=Cellulose Acetate Mesh
 
 # Multiblocked
 

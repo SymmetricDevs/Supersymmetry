@@ -1,1 +1,13 @@
-[]
+[   
+    {
+        "$or":[
+            {"mob":"weeping-angels:angel_0"},
+            {"mob":"weeping-angels:angel_1"},
+            {"mob":"weeping-angels:angel_2"},
+            {"mob":"weeping-angels:angel_3"},
+            {"mob":"weeping-angels:angel_4"},
+            {"mob":"weeping-angels:angel_child"}
+        ],
+        "remove":"minecraft:ender_pearl"
+    }
+]

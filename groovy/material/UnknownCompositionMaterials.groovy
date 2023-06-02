@@ -304,6 +304,43 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x2b4536)
                 .build();
+
+        AcidicCelluloseSolution = new Material.Builder(4055, "acidic_cellulose_solution")
+                .fluid()
+                .color(0xb7bd60)
+                .build();
+
+        Wastewater = new Material.Builder(4056, "wastewater")
+                .fluid()
+                .color(0x2d402f)
+                .build();
+
+        HeatedWastewater = new Material.Builder(4057, "heated_wastewater")
+                .fluid()
+                .fluidTemp(340)
+                .color(0x435e46)
+                .build();
+
+        FlocculatedWastewater = new Material.Builder(4058, "flocculated_wastewater")
+                .fluid()
+                .color(0x435e46)
+                .build();
+
+        FilteredWastewater = new Material.Builder(4059, "filtered_wastewater")
+                .fluid()
+                .color(0x457568)
+                .build();
+
+        WastewaterSludge = new Material.Builder(4060, "wastewater_sludge")
+                .fluid()
+                .color(0x2b1e1e)
+                .build();
+        CarburizedStainlessSteel = new Material.Builder(4061, 'carburized_stainless_steel')
+                .dust().fluid()
+                .fluidTemp(1500)
+                .color(0x6b6552)
+                .build()
+
     }
 
 }           
