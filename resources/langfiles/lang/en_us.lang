@@ -683,6 +683,9 @@ material.manganese_ii_sulfate_solution=Manganese II Sulfate Solution
 material.iron_iii_hydroxide=Iron III Hydroxide
 material.rhodochrosite=Rhodochrosite
 
+material.monocalcium_phosphate=Monocalcium Phosphate
+material.calcium_phosphite=Calcium Phosphite
+material.phosphorus=White Phosphorus
 
 # Thermodynamics
 

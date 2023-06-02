@@ -428,8 +428,7 @@ class SuSyMaterials {
         public static Material UltrapureWater;
         public static Material Ferrochromium;
         public static Material Ferrosilicon;
-        public static Material WhitePhosphorus;
-
+        
         // Second Degree Materials
 
         public static Material NitrateSaltMix;

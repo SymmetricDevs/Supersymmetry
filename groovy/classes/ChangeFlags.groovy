@@ -30,6 +30,9 @@ class ChangeFlags {
         Iron3Chloride.addFlags("generate_catalyst_bed");
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
+
+        Phosphorus.setMaterialRGB(0xfffed6)
+        Phosphorus.setFormula(Phosphorus, 4)
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
 

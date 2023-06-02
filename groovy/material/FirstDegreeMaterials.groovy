@@ -1305,12 +1305,5 @@ public class FirstDegreeMaterials{
                 .color(0xa2a832)
                 .iconSet(CERTUS)
                 .build()
-
-        WhitePhosphorus = new Material.Builder(8287, 'white_phosphorus')
-                .dust()
-                .components(Phosphorus, 4)
-                .color(0xfffed6)
-                .iconSet(FINE)
-                .build()
     }
 }
