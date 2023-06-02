@@ -1205,5 +1205,32 @@ public class FirstDegreeMaterials{
                 .color(0x8c180d)
                 .build()
                 .setFormula('Fe(CO)5')
+
+        DilutedPhosphoricAcid = new Material.Builder(8275, 'diluted_phosphoric_acid')
+                .fluid()
+                .components(PhosphoricAcid, 3, Water, 1)
+                .colorAverage()
+                .build()
+
+        MonocalciumPhosphate = new Material.Builder(8276, 'monocalcium_phosphate')
+                .dust()
+                .components(Calcium, 1, Hydrogen, 4, Phosphorus, 2, Oxygen, 8)
+                .color(0xc2bc13)
+                .iconSet(SAND)
+                .build()
+
+        CalciumPhosphite = new Material.Builder(8277, 'calcium_phosphite')
+                .dust()
+                .components(Calcium, 3, Phosphorus, 2, Oxygen, 6)
+                .color(0xa2a832)
+                .iconSet(CERTUS)
+                .build()
+
+        WhitePhosphorus = new Material.Builder(8278, 'white_phosphorus')
+                .dust()
+                .components(Phosphorus, 4)
+                .color(0xfffed6)
+                .iconSet(FINE)
+                .build()
     }
 }

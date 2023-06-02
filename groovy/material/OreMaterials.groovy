@@ -538,5 +538,13 @@ public class OreMaterials{
                 .colorAverage()
                 .build()
                 .setFormula("K2Mg2(SO4)3", true);
+
+        Hydroxyapatite = new Material.Builder(7071, "chlorapatite")
+                .dust().gem()
+                .iconSet(SHINY)
+                .color(0xc7af85)
+                .components(Calcium, 5, Phosphorus, 3, Oxygen, 13, Hydrogen, 1)
+                .build()
+                .setFormula("Ca5(PO4)3OH", true);
     }
 }

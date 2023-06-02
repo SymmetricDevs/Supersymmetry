@@ -102,6 +102,7 @@ class SuSyMaterials {
         public static Material Xenotime;
         public static Material Caliche;
         public static Material Lauterite;
+        public static Material Hydroxyapatite;
 
         // Roasted Ores
 
@@ -405,6 +406,9 @@ class SuSyMaterials {
         public static Material CrudeGalliumArsenide;
         public static Material HighPurityIron;
         public static Material IronPentacarbonyl;
+        public static Material DilutedPhosphoricAcid;
+        public static Material MonocalciumPhosphate;
+        public static Material CalciumPhosphite;
 
         // Second Degree Materials
 
