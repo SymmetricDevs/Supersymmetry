@@ -169,6 +169,7 @@ class SuSyMaterials {
         public static Material ConcentratedBlackLiquor;
         public static Material GreenLiquor;
         public static Material RawCellulose;
+        public static Material CarburizedStainlessSteel;
 
         // Petrochem Materials
 
@@ -400,6 +401,9 @@ class SuSyMaterials {
         public static Material Cellulose;
         public static Material HighPurityIron;
         public static Material IronPentacarbonyl;
+        public static Material Ferrochromium;
+        public static Material Ferrosilicon;
+        
 
         // Second Degree Materials
 

@@ -173,6 +173,9 @@ material.green_coke=Green Coke
 material.asphalt=Asphalt
 material.alumina=Alumina
 material.potassium_fluoride=Potassium Fluoride
+material.carburized_stainless_steel=Carburized Stainless Steel
+material.ferrochromium=Ferrochromium
+material.ferrosilicon=Ferrosilicon
 
 material.cellulose=Cellulose
 material.raw_cellulose=Raw Cellulose

@@ -304,6 +304,13 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x2b4536)
                 .build();
+
+        CarburizedStainlessSteel = new Material.Builder(4055, 'carburized_stainless_steel')
+                .dust().fluid()
+                .fluidTemp(1500)
+                .color(0x6b6552)
+                .build()
+
     }
 
 }           

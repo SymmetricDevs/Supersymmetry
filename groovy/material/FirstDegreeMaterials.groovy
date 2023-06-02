@@ -1147,11 +1147,26 @@ public class FirstDegreeMaterials{
                 .components(Carbon, 6, Hydrogen, 10, Oxygen, 5)
                 .color(0x4a432f)
                 .build()
+
         IronPentacarbonyl = new Material.Builder(8265, 'iron_pentacarbonyl')
                 .dust()
                 .components(Iron, 1, Carbon, 5, Oxygen, 5)
+                .flags(GENERATE_CATALYST_BED)
                 .color(0x8c180d)
                 .build()
                 .setFormula('Fe(CO)5')
+
+        Ferrochromium = new Material.Builder(8266, 'ferrochromium')
+                .dust()
+                .components(Iron, 1, Chrome, 2)
+                .color(0x6b6552)
+                .build()
+
+        Ferrosilicon = new Material.Builder(8267, 'ferrosilicon')
+                .dust()
+                .components(Iron, 1, Silicon, 3)
+                .iconSet(SHINY)
+                .color(0x999a99)
+                .build()
     }
 }

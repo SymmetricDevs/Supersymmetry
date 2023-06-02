@@ -2864,7 +2864,7 @@ DISTILLERY.recipeBuilder()
     .fluidInputs(fluid("impure_kapton_k") * 1000)
     .fluidOutputs(fluid("acetone") * 1000)
     .outputs(ore("dustKaptonK").last() * 4)
-    .duration(200) // Adjust the duration as needed
+    .duration(200)
     .EUt(Globals.voltAmps[2])
     .buildAndRegister();
 
@@ -2873,11 +2873,11 @@ DISTILLERY.recipeBuilder()
 MIXER.recipeBuilder()
     .inputs(ore("dustPyromelliticDianhydride") * 2)
     .inputs(ore("dustFourFourOxydianiline") * 3)
-    .inputs(ore("dustBiphenyltetracarboxylicAcidDianhydride") * 2)
+    .inputs(ore("dustBiphenylTetracarboxylicAcidDianhydride") * 2)
     .inputs(ore("dustParaPhenylenediamine") * 1)
     .fluidInputs(fluid("acetone") * 1000)
     .fluidOutputs(fluid("kapton_e_preparation") * 1000)
-    .duration(160) // Adjust the duration as needed
+    .duration(160)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister();
 
@@ -3199,20 +3199,13 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 // Boron Trifluoride
-MIXER.recipeBuilder()
-        .inputs(metaitem('dustBoronTrioxide') * 5)
-        .fluidInputs(fluid('water') * 1000)
-        .fluidOutputs(fluid('boron_trioxide_solution') * 1000)
-        .duration(300)
-        .EUt(30)
-        .buildAndRegister()
 
-CSTR.recipeBuilder()
-        .fluidInputs(fluid('boron_trioxide_solution') * 50)
-        .fluidInputs(fluid('hydrogen_fluoride') * 300)
-        .fluidOutputs(fluid('boron_trifluoride') * 100)
-        .fluidOutputs(fluid('water') * 200)
-        .duration(10)
+BR.recipeBuilder()
+        .inputs(ore('dustBoronTrioxide') * 5)
+        .fluidInputs(fluid('hydrogen_fluoride') * 6000)
+        .fluidOutputs(fluid('boron_trifluoride') * 2000)
+        .fluidOutputs(fluid('water') * 3000)
+        .duration(200)
         .EUt(30)
         .buildAndRegister()
 
