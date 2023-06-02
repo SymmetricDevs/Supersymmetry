@@ -118,13 +118,19 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        TwoButanolSolution = new Material.Builder(24017, 'two_butanol_solution')
+        CelluloseAcetateSolution = new Material.Builder(24017, 'cellulose_acetate_solution')
+                .fluid()
+                .components(Acetone, 1, CelluloseAcetate, 1)
+                .colorAverage()
+                .build()
+
+      TwoButanolSolution = new Material.Builder(24018, 'two_butanol_solution')
                 .fluid()
                 .components(SulfuricAcid, 1, TwoButanol, 1)
                 .colorAverage()
                 .build()
 
-        FourFourOxydianilineSolution = new Material.Builder(24018, 'four_four_oxydianiline_solution')
+        FourFourOxydianilineSolution = new Material.Builder(24019, 'four_four_oxydianiline_solution')
                 .fluid()
                 .components(Water, 5, FourFourOxydianiline, 1)
                 .colorAverage()

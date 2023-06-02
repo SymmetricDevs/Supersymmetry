@@ -546,5 +546,12 @@ public class OreMaterials{
                 .components(Calcium, 5, Phosphorus, 3, Oxygen, 13, Hydrogen, 1)
                 .build()
                 .setFormula("Ca5(PO4)3OH", true);
+        
+        Rhodochrosite = new Material.Builder(7072, "rhodochrosite")
+                .ore()
+                .iconSet(SHINY)
+                .components(Manganese, 1, Carbon, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
     }
 }

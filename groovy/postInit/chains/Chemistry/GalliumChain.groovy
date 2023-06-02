@@ -91,9 +91,6 @@ VACUUM_DT.recipeBuilder()
 
 //GALLIUM ARSENIDE PRODUCTION (LIQUID ENCAPSULATED CZOCHIRALSKI PROCESS)
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustGallium'), metaitem('dustArsenic'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
-mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustArsenic'), metaitem('dustGallium'), metaitem('circuit.integrated').withNbt(["Configuration": 12])], [fluid('nitrogen') * 2000])
-mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustArsenic'), metaitem('dustGallium'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
-
 //SEED CRYSTAL
 CRYSTALLIZER.recipeBuilder()
 .inputs(ore('dustSmallHighPurityArsenic'))
