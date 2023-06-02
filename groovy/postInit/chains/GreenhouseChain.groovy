@@ -37,7 +37,8 @@ CHEMICAL_BATH.recipeBuilder()
 def nitrogenNutrients = [
         metaitem('dustAmmoniumChloride'),
         metaitem('dustAmmoniumNitrate'),
-        metaitem('dustAmmoniumSulfate')
+        metaitem('dustAmmoniumSulfate'),
+        metaitem('dustUrea')
 ];
 
 def potassiumNutrients = [

@@ -746,7 +746,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        PhosphorusTrichloride = new Material.Builder(8200, "potassium_trichloride")
+        PhosphorusTrichloride = new Material.Builder(8200, "phosphorus_trichloride")
                 .fluid()
                 .components(Phosphorus, 1, Chlorine, 3)
                 .colorAverage()
@@ -804,6 +804,7 @@ public class FirstDegreeMaterials{
         DicobaltOctacarbonyl = new Material.Builder(8210, "dicobalt_octacarbonyl")
                 .dust()
                 .components(Cobalt, 2, Cobalt, 8, Oxygen, 8)
+                .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build()
                 .setFormula("Co2(CO)8", true)
@@ -1150,6 +1151,7 @@ public class FirstDegreeMaterials{
         IronPentacarbonyl = new Material.Builder(8265, 'iron_pentacarbonyl')
                 .dust()
                 .components(Iron, 1, Carbon, 5, Oxygen, 5)
+                .flags(GENERATE_CATALYST_BED)
                 .color(0x8c180d)
                 .build()
                 .setFormula('Fe(CO)5', true)
@@ -1189,6 +1191,20 @@ public class FirstDegreeMaterials{
                 .fluid()
                 .components(Hydrogen, 2, Oxygen, 1)
                 .color(0x7acacf)
+                .build()
+                .setFormula('Fe(CO)5')
+
+        Ferrochromium = new Material.Builder(8266, 'ferrochromium')
+                .dust()
+                .components(Iron, 1, Chrome, 2)
+                .color(0x6b6552)
+                .build()
+
+        Ferrosilicon = new Material.Builder(8267, 'ferrosilicon')
+                .dust()
+                .components(Iron, 1, Silicon, 3)
+                .iconSet(SHINY)
+                .color(0x999a99)
                 .build()
     }
 }

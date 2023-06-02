@@ -175,6 +175,7 @@ class SuSyMaterials {
         public static Material FlocculatedWastewater;
         public static Material FilteredWastewater;
         public static Material WastewaterSludge;
+        public static Material CarburizedStainlessSteel;
 
         // Petrochem Materials
 
@@ -412,6 +413,9 @@ class SuSyMaterials {
         public static Material FilteredWater;
         public static Material SterilizedWater;
         public static Material UltrapureWater;
+        public static Material Ferrochromium;
+        public static Material Ferrosilicon;
+        
 
         // Second Degree Materials
 
@@ -635,6 +639,8 @@ class SuSyMaterials {
         public static Material EthyleneGlycolSolution;
         public static Material TerephthalicAcidSolution;
         public static Material CelluloseAcetateSolution;
+        public static Material TwoButanolSolution;
+        public static Material FourFourOxydianilineSolution;
 
         // Thermodynamics/Greenhouse Materials     
         
