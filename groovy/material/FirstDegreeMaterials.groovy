@@ -1199,7 +1199,7 @@ public class FirstDegreeMaterials{
                 .fluidTemp(351)
                 .colorAverage()
                 .build()
-                .setFormula('(?)GaCl3')
+                .setFormula('(?)GaCl3', true)
 
         GalliumTrichloride = new Material.Builder(8271, 'gallium_trichloride')
                 .fluid()
@@ -1207,7 +1207,7 @@ public class FirstDegreeMaterials{
                 .fluidTemp(351)
                 .colorAverage()
                 .build()
-                .setFormula('GaCl3')
+                .setFormula('GaCl3', true)
         
         MercuryIIChloride = new Material.Builder(8272, 'mercury_ii_chloride')
                 .dust()
@@ -1272,7 +1272,6 @@ public class FirstDegreeMaterials{
                 .components(Hydrogen, 2, Oxygen, 1)
                 .color(0x7acacf)
                 .build()
-                .setFormula('Fe(CO)5')
 
         Ferrochromium = new Material.Builder(8282, 'ferrochromium')
                 .dust()
