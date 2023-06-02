@@ -643,6 +643,7 @@ material.euxenite=Euxenite
 material.xenotime=Xenotime
 material.caliche=Caliche
 material.lauterite=Lauterite
+material.sodium_arsenide=Sodium Arsenide
 
 material.sodium_perchlorate_solution=Sodium Perchlorate Solution
 material.sodium_chlorate_solution=Sodium Chlorate Solution
@@ -683,6 +684,22 @@ material.manganese_ii_sulfate_solution=Manganese II Sulfate Solution
 material.iron_iii_hydroxide=Iron III Hydroxide
 material.rhodochrosite=Rhodochrosite
 
+material.unscrubbed_wood_gas=Unscrubbed Wood Gas
+material.light_oil=Light Oil
+material.impure_creosote=Impure Creosote
+material.naphthalene_oil=Naphthalene Oil
+material.anthracene_oil=Anthracene Oil
+material.alkaline_naphthalene_oil=Alkaline Naphthalene Oil
+material.purified_naphthalene_oil=Purified Naphthalene Oil
+material.acidic_light_oil=Acidic Light Oil
+material.crude_pyridinium_sulfate=Crude Pyridinium Sulfate
+material.impure_pyridine=Impure Pyridine
+material.acidic_anthracene_oil=Acidic Anthracene Oil
+material.anthracene_extract=Anthracene Extract
+material.crude_quinolinium_sulfate=Crude Quinolinium Sulfate
+material.rhodochrosite=Impure Quinoline
+material.pyridine=Pyridine
+material.quinoline=Quinoline
 
 # Thermodynamics
 
@@ -1091,6 +1108,10 @@ metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
 metaitem.raw_diamond.name=Raw Diamond
 metaitem.cellulose_acetate_mesh.name=Cellulose Acetate Mesh
+
+metaitem.shape.mold.crucible.name=Mold (Crucible)
+metaitem.shape.mold.rod.name=Mold (Rod)
+metaitem.boron.nitride.crucible.name=Boron Nitride Crucible
 
 # Multiblocked
 

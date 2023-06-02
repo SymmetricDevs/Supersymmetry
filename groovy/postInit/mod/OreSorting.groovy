@@ -1,5 +1,3 @@
-//TODO: set ore sorter output slots to 20, uncomment stuff when susycore 0.0.11 is out
-
 import classes.*;
 
 println("Running OreSorting.groovy...")

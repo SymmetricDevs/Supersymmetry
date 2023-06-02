@@ -13,7 +13,7 @@ mods.gregtech.mixer.removeByInput(120, [metaitem('dustIron') * 4, metaitem('dust
 
 EBF = recipemap('electric_blast_furnace')
 MIXER = recipemap('mixer')
-
+ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
 EBF.recipeBuilder()
     .inputs(ore('dustIron') * 6)
     .inputs(ore('dustNickel'))
@@ -83,11 +83,10 @@ EBF.recipeBuilder()
 
 
 // AOD Process
-
-//TODO: Move to large arc furnace
-MIXER.recipeBuilder()
-    .fluidInputs(fluid('oxygen') * 2000)
-    .fluidInputs(fluid('argon') * 500)
+// TODO: ENABLE FLUID INPUTS AFTER ADDING 2 MORE FLUID SLOTS TO THIS
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    //.fluidInputs(fluid('oxygen') * 2000)
+    //.fluidInputs(fluid('argon') * 500)
     .fluidInputs(fluid('carburized_stainless_steel') * 1440)    
     .inputs(ore('dustSmallFerrosilicon') * 2)
     .inputs(ore('dustFerrochromium') * 3)
@@ -98,10 +97,10 @@ MIXER.recipeBuilder()
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
-//TODO: Move to large arc furnace
-MIXER.recipeBuilder()
-    .fluidInputs(fluid('oxygen') * 2000)
-    .fluidInputs(fluid('nitrogen') * 1000)
+/*
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    //.fluidInputs(fluid('oxygen') * 2000)
+    //.fluidInputs(fluid('nitrogen') * 1000)
     .fluidInputs(fluid('carburized_stainless_steel') * 1440)    
     .inputs(ore('dustSmallFerrosilicon') * 2)
     .inputs(ore('dustFerrochromium') * 3)
@@ -111,3 +110,5 @@ MIXER.recipeBuilder()
     .duration(600)
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
+
+ */

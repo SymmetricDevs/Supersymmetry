@@ -335,12 +335,76 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x2b1e1e)
                 .build();
+
         CarburizedStainlessSteel = new Material.Builder(4061, 'carburized_stainless_steel')
                 .dust().fluid()
                 .fluidTemp(1500)
                 .color(0x6b6552)
                 .build()
 
-    }
+        UnscrubbedWoodGas = new Material.Builder(4062, "unscrubbed_wood_gas")
+                .fluid(FluidTypes.GAS)
+                .color(0x85806f)
+                .build();
 
+        LightOil = new Material.Builder(4063, "light_oil")
+                .fluid()
+                .color(0x5e5e4d)
+                .build();
+
+        NaphthaleneOil = new Material.Builder(4065, "naphthalene_oil")
+                .fluid()
+                .color(0x2e2926)
+                .build();
+
+        AnthraceneOil = new Material.Builder(4066, "anthracene_oil")
+                .fluid()
+                .color(0x211f1e)
+                .build();
+
+        AlkalineNaphthaleneOil = new Material.Builder(4067, "alkaline_naphthalene_oil")
+                .fluid()
+                .color(0x403833)
+                .build();
+
+        PurifiedNaphthaleneOil = new Material.Builder(4068, "purified_naphthalene_oil")
+                .fluid()
+                .color(0x595542)
+                .build();
+
+        AcidicLightOil = new Material.Builder(4069, "acidic_light_oil")
+                .fluid()
+                .color(0x87816c)
+                .build();
+
+        CrudePyridiniumSulfate = new Material.Builder(4070, "crude_pyridinium_sulfate")
+                .fluid()
+                .color(0x48523b)
+                .build();
+
+        ImpurePyridine = new Material.Builder(4071, "impure_pyridine")
+                .fluid()
+                .color(0x233326)
+                .build();
+
+        AcidicAnthraceneOil = new Material.Builder(4072, "acidic_anthracene_oil")
+                .fluid()
+                .color(0x87816c)
+                .build();
+
+        AnthraceneExtract = new Material.Builder(4073, "anthracene_extract")
+                .fluid()
+                .color(0x211c1c)
+                .build();
+
+        CrudeQuinoliniumSulfate = new Material.Builder(4074, "crude_quinolinium_sulfate")
+                .fluid()
+                .color(0x1b1c0a)
+                .build();
+
+        ImpureQuinoline = new Material.Builder(4075, "impure_quinoline")
+                .fluid()
+                .color(0x222418)
+                .build();
+    }
 }           

@@ -954,5 +954,17 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 76, Hydrogen, 114, Oxygen, 49)
                 .color(0xd4c9ab)
                 .build()
+
+        Pyridine = new Material.Builder(15158, 'pyridine')
+                .fluid()
+                .components(Carbon, 5, Hydrogen, 5, Nitrogen, 1)
+                .color(0x202836)
+                .build()
+
+        Quinoline = new Material.Builder(15159, 'quinoline')
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 7, Nitrogen, 1)
+                .color(0x2e3620)
+                .build()
     }
 }
