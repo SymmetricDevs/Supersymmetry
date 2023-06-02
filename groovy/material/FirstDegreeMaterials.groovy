@@ -1311,6 +1311,6 @@ public class FirstDegreeMaterials{
                 .components(Phosphorus, 4)
                 .color(0xfffed6)
                 .iconSet(FINE)
-                .setFormula('Fe(CO)5', true)
+                .build()
     }
 }

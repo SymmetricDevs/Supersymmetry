@@ -84,5 +84,7 @@ DISTILLERY.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
+//SPECIALIZED (HV) (FOR PHOSPHORITE, DEPENDENCY ON FROTH FLOTATION, WILL NOT IMPLEMENT YET)
+
 
 
