@@ -531,3 +531,10 @@ crafting.addShaped('gregtech:electrolytic_cell', metaitem('electrolytic_cell'), 
         [ore('wireGtQuadrupleTin'), metaitem('hull.lv'), ore('wireGtQuadrupleTin')],
         [ore('circuitLv'), ore('cableGtSingleTin'), ore('circuitLv')]
 ])
+
+// Prospector
+crafting.addShaped('gregtech:prospector_lead_acid', metaitem('prospector.lv'), [
+        [metaitem('emitter.lv'), ore('plateSteel'), metaitem('sensor.lv')],
+        [ore('circuitLv'), ore('plateGlass'), ore('circuitLv')],
+        [ore('plateSteel'), metaitem('battery.lead_acid'), ore('plateSteel')]
+])
