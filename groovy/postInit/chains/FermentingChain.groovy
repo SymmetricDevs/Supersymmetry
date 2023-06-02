@@ -8,12 +8,19 @@ import gregtech.api.unification.stack.UnificationEntry;
 def PYROLYSE_OVEN = recipemap('pyrolyse_oven');
 def DISTILLERY = recipemap('distillery');
 def MIXER = recipemap('mixer');
-
+def COMPRESSOR = recipemap('compressor');
 def DISTILLATION_TOWER = recipemap('distillation_tower');
 def AUTOCLAVE = recipemap('autoclave');
 def FERMENTER = recipemap('vat_fermentation');
 
 //GENERIC BIOMASS CHAIN
+COMPRESSOR.recipeBuilder()
+        .inputs(item('minecraft:melon') * 12)
+        .outputs(metaitem('plant_ball'))
+        .duration(300)
+        .EUt(2)
+        .buildAndRegister()
+
 PYROLYSE_OVEN.recipeBuilder()
         .inputs(metaitem('bio_chaff') * 16)
         .fluidInputs(fluid('water') * 4000)
