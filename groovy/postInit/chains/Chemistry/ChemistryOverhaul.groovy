@@ -200,7 +200,7 @@ ROASTER.recipeBuilder()
 .EUt(7)
 .buildAndRegister()
 
-//Phosphoric Acid mixer
+//Phosphoric Acid batch
 
 BR.recipeBuilder()
 .inputs(ore('dustPhosphorusPentoxide'))
@@ -759,7 +759,7 @@ DISTILLERY.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('dimethyldichlorosilane') * 1000)
 .fluidInputs(fluid('water') * 2000)
 .fluidInputs(fluid('gtfo_sodium_stearate') * 100)
@@ -1670,7 +1670,7 @@ BR.recipeBuilder()
 
 // PTFE
 
-MIXER.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('tetrafluoroethylene') * 1000)
 .fluidInputs(fluid('water') * 1000)
 .fluidInputs(fluid('gtfo_sodium_stearate') * 100)
