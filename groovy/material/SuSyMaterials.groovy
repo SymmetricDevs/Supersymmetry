@@ -410,6 +410,11 @@ class SuSyMaterials {
         public static Material ManganeseIISulfateSolution;
         public static Material IronIIIHydroxide;
         public static Material Cellulose;
+        public static Material CrudeGalliumTrichloride;
+        public static Material GalliumTrichloride;
+        public static Material MercuryIIChloride;
+        public static Material BoronNitride;
+        public static Material CrudeGalliumArsenide;
         public static Material HighPurityIron;
         public static Material IronPentacarbonyl;
         public static Material AluminiumSulfate;

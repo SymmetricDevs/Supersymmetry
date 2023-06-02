@@ -317,6 +317,11 @@ material.iron_thioantimonite=Iron Thioantimonite
 material.iron_thioarsenite=Iron Arsenite
 material.iron_pentacarbonyl=Iron Pentacarbonyl
 
+material.crude_gallium_trichloride=Crude Gallium Trichloride
+material.mercury_ii_chloride=Mercury II Chloride
+material.boron_nitride=Boron Nitride
+material.crude_gallium_arsenide=Crude Gallium Arsenide
+
 # Fluids
 
 material.smoke_bomb_mix=Smoke Bomb Mix
@@ -671,7 +676,7 @@ material.arsine=Arsine
 material.sodium_bromide_solution=Sodium Bromide Solution
 material.sperrylite_waste=Sperrylite Waste
 material.diluted_iron_iii_chloride_solution=Diluted Iron III Chloride Solution
-
+material.gallium_trichloride=Gallium Trichloride
 material.manganese_ii_oxide=Manganese II Oxide
 material.crude_manganese_ii_sulfate_solution=Crude Manganese II Sulfate Solution
 material.manganese_ii_sulfate_solution=Manganese II Sulfate Solution
