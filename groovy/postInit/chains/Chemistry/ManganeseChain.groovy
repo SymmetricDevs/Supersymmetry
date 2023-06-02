@@ -11,7 +11,7 @@ EBF = recipemap('electric_blast_furnace')
 ROASTER = recipemap('roaster')
 BATCH_REACTOR = recipemap('batch_reactor')
 REACTION_FURNACE = recipemap('reaction_furnace')
-ELECTROLYTIC_CELL = recipemap('reaction_furnace')
+ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 //PYROMETALLUGRICAL METHODS (75%)
 EBF.recipeBuilder()
@@ -34,7 +34,7 @@ ROASTER.recipeBuilder()
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
-    .inputs(ore('dustManganeseOxide') * 2)
+    .inputs(ore('dustMagnesia') * 2)
     .inputs(ore('dustCoke') * 1)
     .outputs(metaitem('dustSmallManganese') * 3)
     .fluidOutputs(fluid('carbon_monoxide') * 1000)
@@ -58,12 +58,12 @@ class Reductant {
 }
 
 def hydrocarbonReductants = [
-    new Reductant('fuel_oil', 'carbon_dioxide', 67, 288)
+    new Reductant('fuel_oil', 'carbon_dioxide', 67, 288),
     new Reductant('natural_gas', 'carbon_dioxide', 167, 234)
 ]
 
 def reductants = [
-    new Reductant('carbon_monoxide', 'carbon_dioxide', 1000, 1000)
+    new Reductant('carbon_monoxide', 'carbon_dioxide', 1000, 1000),
     new Reductant('hydrogen', 'steam', 2000, 1000)
 ]
 
@@ -76,7 +76,7 @@ for (reductant in hydrocarbonReductants) {
     REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustPyrolusite') * 3)
         .fluidInputs(fluid(reductant.name) * reductant.amount_required)
-        .outputs(metaitem('dustManganeseOxide') * 2)
+        .outputs(metaitem('dustMagnesia') * 2)
         .fluidOutputs(fluid(reductant.byproduct) * reductant.byproduct_amount)
         .fluidOutputs(fluid('steam') * (1000 - reductant.byproduct_amount))
         .duration(120)
@@ -88,7 +88,7 @@ for (reductant in reductants) {
     REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustPyrolusite') * 3)
         .fluidInputs(fluid(reductant.name) * reductant.amount_required)
-        .outputs(metaitem('dustManganeseOxide') * 2)
+        .outputs(metaitem('dustMagnesia') * 2)
         .fluidOutputs(fluid(reductant.byproduct) * reductant.byproduct_amount)
         .duration(120)
         .EUt(Globals.voltAmps[3])
@@ -97,7 +97,7 @@ for (reductant in reductants) {
 
 //HYDROMETALLURGICAL MANGANESE PROCESSING
 BATCH_REACTOR.recipeBuilder()
-    .inputs(ore('dustManganeseOxide'))
+    .inputs(ore('dustMagnesia'))
     .fluidInputs(fluid('sulfuric_acid') * 1375)
     .fluidOutputs(fluid('crude_manganese_ii_sulfate_solution') * 1000)
     .duration(120)

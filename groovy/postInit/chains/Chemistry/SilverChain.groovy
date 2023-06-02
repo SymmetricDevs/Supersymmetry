@@ -163,7 +163,7 @@ BATCH_REACTOR.recipeBuilder()
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
-    .fluidInputs(fluid('diluted_iron_iii_chloride_solution') * 1000)
+    .fluidInputs(fluid('diluted_iron_iii_chloride_solution') * 3000)
     .outputs(ore('dustIronIiiChloride').first() * 4)
     .fluidOutputs(fluid('water') * 3000)
     .duration(120)

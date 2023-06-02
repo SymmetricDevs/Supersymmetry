@@ -1033,7 +1033,7 @@ public class FirstDegreeMaterials{
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula('(Na[Ag(CN)2])2(NaCl)2(H2O)4')
+                .setFormula('(Na[Ag(CN)2])2(NaCl)2(H2O)4', true)
 
         SulfidicPyrargyriteCyanideLeachSolution = new Material.Builder(8249, 'sulfidic_pyrargyrite_cyanide_leach_solution')
                 .fluid()
@@ -1041,7 +1041,7 @@ public class FirstDegreeMaterials{
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula('(Na[Ag(CN)2])3(Na3SbS3)(H2O)6')
+                .setFormula('(Na[Ag(CN)2])3(Na3SbS3)(H2O)6', true)
 
         PyrargyriteCyanideLeachSolution = new Material.Builder(8250, 'pyrargyrite_cyanide_leach_solution')
                 .fluid()
@@ -1049,7 +1049,7 @@ public class FirstDegreeMaterials{
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula('(Na[Ag(CN)2])3(NaCl)2(NaSbCl4)(H2O)6')
+                .setFormula('(Na[Ag(CN)2])3(NaCl)2(NaSbCl4)(H2O)6', true)
 
         PyrargyriteThiosulfateLeachSolution = new Material.Builder(8251, 'pyrargyrite_thiosulfate_leach_solution')
                 .fluid()
@@ -1057,21 +1057,21 @@ public class FirstDegreeMaterials{
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula('(Na3[Ag(S2O3)2])3(Na3SbS3)(H2O)5')
+                .setFormula('(Na3[Ag(S2O3)2])3(Na3SbS3)(H2O)5', true)
 
         ThiosulfateThioantimoniteSolution = new Material.Builder(8252, "thiosulfate_thioantimonite_solution")
                 .fluid()
                 .components(Sodium, 15, Sulfur, 15, Oxygen, 18, Antimony, 1, Water, 5)
                 .colorAverage()
                 .build()
-                .setFormula('(Na2S2O3)6(Na3SbS3)(H2O)5')
+                .setFormula('(Na2S2O3)6(Na3SbS3)(H2O)5', true)
 
         ThiosulfateThioarseniteSolution = new Material.Builder(8253, "thiosulfate_thioarsenite_solution")
                 .fluid()
                 .components(Sodium, 15, Sulfur, 15, Oxygen, 18, Arsenic, 1, Water, 5)
                 .colorAverage()
                 .build()
-                .setFormula('(Na2S2O3)6(Na3AsS3)(H2O)5')
+                .setFormula('(Na2S2O3)6(Na3AsS3)(H2O)5', true)
 
         SulfidicStephaniteCyanideLeachSolution = new Material.Builder(8254, 'sulfidic_stephanite_cyanide_leach_solution')
                 .fluid()
@@ -1079,7 +1079,7 @@ public class FirstDegreeMaterials{
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula('(Na[Ag(CN)2])5(Na3SbS3)(Na2S)(H2O)12')
+                .setFormula('(Na[Ag(CN)2])5(Na3SbS3)(Na2S)(H2O)12', true)
         
         StephaniteCyanideLeachSolution = new Material.Builder(8255, 'stephanite_cyanide_leach_solution')
                 .fluid()
@@ -1087,7 +1087,7 @@ public class FirstDegreeMaterials{
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula('(Na[Ag(CN)2])5(NaCl)2(NaSbCl6)(H2O)20')
+                .setFormula('(Na[Ag(CN)2])5(NaCl)2(NaSbCl6)(H2O)20', true)
 
         ProustiteThiosulfateLeachSolution = new Material.Builder(8256, 'proustite_thiosulfate_leach_solution')
                 .fluid()
@@ -1095,7 +1095,7 @@ public class FirstDegreeMaterials{
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula('(Na3[Ag(S2O3)2])3(Na3AsS3)(H2O)5')
+                .setFormula('(Na3[Ag(S2O3)2])3(Na3AsS3)(H2O)5', true)
                 
         AcidicArsenateVSolution = new Material.Builder(8257, 'acidic_arsenate_v_solution')
                 .fluid()
@@ -1103,7 +1103,7 @@ public class FirstDegreeMaterials{
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula('(HNO3)6(H3AsO4)3')
+                .setFormula('(HNO3)6(H3AsO4)3', true)
 
         ArsenicVOxide = new Material.Builder(8258, 'arsenic_v_oxide')
                 .dust()
@@ -1153,14 +1153,14 @@ public class FirstDegreeMaterials{
                 .components(Manganese, 1, Sulfur, 1, Oxygen, 4, Water, 1)
                 .colorAverage()
                 .build()
-                .setFormula('(?)(MnSO4)(H2O)')
+                .setFormula('(?)(MnSO4)(H2O)', true)
 
         CrudeManganeseIISulfateSolution = new Material.Builder(8267, "manganese_ii_sulfate_solution")
                 .fluid()
                 .components(Manganese, 1, Sulfur, 1, Oxygen, 4, Water, 1)
                 .colorAverage()
                 .build()
-                .setFormula('(MnSO4)(H2O)')
+                .setFormula('(MnSO4)(H2O)', true)
 
         IronIIIHydroxide = new Material.Builder(8268, "iron_iii_hydroxide")
                 .dust()
@@ -1168,7 +1168,7 @@ public class FirstDegreeMaterials{
                 .color(0xcc7e35)
                 .iconSet(SAND)
                 .build()
-                .setFormula('Fe(OH)3')
+                .setFormula('Fe(OH)3', true)
 
         Cellulose = new Material.Builder(8269, 'cellulose')
                 .dust()
