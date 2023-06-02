@@ -4,9 +4,13 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import static gregtech.api.unification.ore.OrePrefix.dye;
 
+//REMOVE OLD RECIPES
+// Stainless Steel Dust * 9
+mods.gregtech.mixer.removeByInput(120, [metaitem('dustIron') * 6, metaitem('dustNickel'), metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 3])], null)
+// Stainless Steel Dust * 9
+mods.gregtech.mixer.removeByInput(120, [metaitem('dustIron') * 4, metaitem('dustInvar') * 3, metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
-ABS = recipemap('alloy_blast_smelter')
-VACUUM = recipemap('vacuum_chamber')
+
 EBF = recipemap('electric_blast_furnace')
 MIXER = recipemap('mixer')
 
@@ -80,6 +84,7 @@ EBF.recipeBuilder()
 
 // AOD Process
 
+//TODO: Move to large arc furnace
 MIXER.recipeBuilder()
     .fluidInputs(fluid('oxygen') * 2000)
     .fluidInputs(fluid('argon') * 500)
@@ -93,6 +98,7 @@ MIXER.recipeBuilder()
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
+//TODO: Move to large arc furnace
 MIXER.recipeBuilder()
     .fluidInputs(fluid('oxygen') * 2000)
     .fluidInputs(fluid('nitrogen') * 1000)
