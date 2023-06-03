@@ -191,6 +191,12 @@ class SuSyMaterials {
         public static Material AnthraceneExtract;
         public static Material CrudeQuinoliniumSulfate;
         public static Material ImpureQuinoline;
+        public static Material ConcentratedBrine;
+        public static Material BrineEvaporite;
+        public static Material BoronFreeBrine;
+        public static Material LithiumFreeBrine;
+        public static Material ChlorinatedBrine;
+        public static Material ImpureBromine;
 
         // Petrochem Materials
 
@@ -439,6 +445,9 @@ class SuSyMaterials {
         public static Material UltrapureWater;
         public static Material Ferrochromium;
         public static Material Ferrosilicon;
+        public static Material ConcentratedSaltWater;
+        public static Material HypersalineWater;
+        public static Material LithiumCarbonate;
 
         // Second Degree Materials
 

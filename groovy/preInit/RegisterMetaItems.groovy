@@ -68,6 +68,12 @@ eventManager.listen {
 
         customMetaItems.addItem(171, "cellulose_acetate_mesh");
 
+        customMetaItems.addItem(172, "unrefined_boule.silicon");
+
+        customMetaItems.addItem(173, "boule.gallium_arsenide");
+
+        customMetaItems.addItem(174, "unrefined_boule.gallium_arsenide");
+
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);
@@ -172,6 +178,7 @@ eventManager.listen {
         customMetaItems.addItem(5403, "etched.ulpic");
 
         customMetaItems.addItem(5500, "seed_crystal.silicon");
+        customMetaItems.addItem(5501, "seed_crystal.gallium_arsenide");
 
         //Light Sources 6000-6100
         customMetaItems.addItem(6000, "carbon_arc_lamp");

@@ -777,6 +777,16 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+// Zone Refiner
+
+for (i = 1; i <= 8; i++) {
+	crafting.addShaped("gregtech:zone_refiner." + Globals.voltageTiers[i], metaitem('zone_refiner.'  + Globals.voltageTiers[i]), [
+			[tieredSprings[i], tieredPipes[i], tieredSprings[i]],
+			[tieredQuadCables[i], hulls[i], tieredQuadCables[i]],
+			[circuits[i], conveyors[i], circuits[i]]
+	])
+}
+
 //Multiblocked Machines
 
 /*

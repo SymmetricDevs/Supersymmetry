@@ -406,5 +406,35 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x222418)
                 .build();
+
+        ConcentratedBrine = new Material.Builder(4076, "concentrated_brine")
+                .fluid()
+                .color(0xa6a444)
+                .build();
+
+        BrineEvaporite = new Material.Builder(4077, "brine_evaporite")
+                .dust()
+                .color(0xa3a38c)
+                .build();
+
+        BoronFreeBrine = new Material.Builder(4078, "boron_free_brine")
+                .fluid()
+                .color(0xa68a44)
+                .build();
+
+        LithiumFreeBrine = new Material.Builder(4079, "lithium_free_brine")
+                .fluid()
+                .color(0xa17a4c)
+                .build();
+
+        ChlorinatedBrine = new Material.Builder(4080, "chlorinated_brine")
+                .fluid()
+                .color(0xa3b560)
+                .build();
+
+        ImpureBromine = new Material.Builder(4081, "impure_bromine")
+                .fluid(FluidTypes.GAS)
+                .color(0x572d2b)
+                .build();
     }
 }           
