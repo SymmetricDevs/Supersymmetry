@@ -155,7 +155,7 @@ material.one_two_dichlorobenzene=1,2-Dichlorobenzene
 material.lithium_hydroxide=Lithium Hydroxide
 material.molecular_sieve=Molecular Sieve
 material.wet_molecular_sieve=Wet Molecular Sieve
-material.calcium_hydroxide=Calcium Hydroxide
+material.calcium_hydroxide=Slaked Lime (Calcium Hydroxide)
 material.potassium_hydroxide=Potassium Hydroxide
 material.potassium_carbonate=Potassium Carbonate
 material.sodium_silicate=Sodium Silicate
@@ -321,6 +321,7 @@ material.crude_gallium_trichloride=Crude Gallium Trichloride
 material.mercury_ii_chloride=Mercury II Chloride
 material.boron_nitride=Boron Nitride
 material.crude_gallium_arsenide=Crude Gallium Arsenide
+material.gallium_arsenide=Pure Gallium Arsenide
 
 # Fluids
 
@@ -643,6 +644,7 @@ material.euxenite=Euxenite
 material.xenotime=Xenotime
 material.caliche=Caliche
 material.lauterite=Lauterite
+material.sodium_arsenide=Sodium Arsenide
 
 material.sodium_perchlorate_solution=Sodium Perchlorate Solution
 material.sodium_chlorate_solution=Sodium Chlorate Solution
@@ -683,6 +685,34 @@ material.manganese_ii_sulfate_solution=Manganese II Sulfate Solution
 material.iron_iii_hydroxide=Iron III Hydroxide
 material.rhodochrosite=Rhodochrosite
 
+material.unscrubbed_wood_gas=Unscrubbed Wood Gas
+material.light_oil=Light Oil
+material.impure_creosote=Impure Creosote
+material.naphthalene_oil=Naphthalene Oil
+material.anthracene_oil=Anthracene Oil
+material.alkaline_naphthalene_oil=Alkaline Naphthalene Oil
+material.purified_naphthalene_oil=Purified Naphthalene Oil
+material.acidic_light_oil=Acidic Light Oil
+material.crude_pyridinium_sulfate=Crude Pyridinium Sulfate
+material.impure_pyridine=Impure Pyridine
+material.acidic_anthracene_oil=Acidic Anthracene Oil
+material.anthracene_extract=Anthracene Extract
+material.crude_quinolinium_sulfate=Crude Quinolinium Sulfate
+material.impure_quinoline=Impure Quinoline
+material.pyridine=Pyridine
+material.quinoline=Quinoline
+
+material.soda_ash=Soda Ash (Sodium Carbonate)
+
+material.concentrated_brine=Concentrated Brine
+material.brine_evaporite=Brine Evaporite
+material.boron_free_brine=Boron-Free Brine
+material.lithium_free_brine=Lithium-Free Brine
+material.chlorinated_brine=Chlorinated Brine
+material.impure_bromine=Impure Bromine
+material.concentrated_salt_water=Concentrated Salt Water
+material.hypersaline_water=Hypersaline Water
+material.lithium_carbonate=Lithium Carbonate
 
 # Thermodynamics
 
@@ -1053,6 +1083,7 @@ metaitem.etched.ram.name=Etched RAM Wafer
 metaitem.etched.ulpic.name=Etched ULPIC Wafer
 
 metaitem.seed_crystal.silicon.name=Silicon Seed Crystal
+metaitem.seed_crystal.gallium_arsenide.name=Gallium Arsenide Seed Crystal
 
 metaitem.carbon_arc_lamp.name=Carbon Arc Lamp
 metaitem.incandescent_light.name=Incandescent Lightbulb
@@ -1092,6 +1123,14 @@ metaitem.alternator.rotor.name=Alternator Rotor
 metaitem.raw_diamond.name=Raw Diamond
 metaitem.cellulose_acetate_mesh.name=Cellulose Acetate Mesh
 
+metaitem.shape.mold.crucible.name=Mold (Crucible)
+metaitem.shape.mold.rod.name=Mold (Rod)
+metaitem.boron.nitride.crucible.name=Boron Nitride Crucible
+
+metaitem.unrefined_boule.silicon.name=Unrefined Silicon Boule
+metaitem.boule.gallium_arsenide.name=Gallium Arsenide Boule
+metaitem.unrefined_boule.gallium_arsenide.name=Unrefined Gallium Arsenide Boule
+
 # Multiblocked
 
 tile.multiblocked.item_input.name=Small Input Bus
@@ -1129,6 +1168,7 @@ gregtech.machine.laser_engraver.opv.name=Legendary Electron Beam Lithographer
 
 recipemap.laser_engraver.name=Electron Beam Lithography
 recipemap.batch_reactor.name=Batch Reactor
+recipemap.zone_refiner.name=Zone Refiner
 
 # Generic Renaming
 item.chisel.chisel_diamond.name=Steel Chisel

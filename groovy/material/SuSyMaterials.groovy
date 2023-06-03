@@ -177,6 +177,26 @@ class SuSyMaterials {
         public static Material FilteredWastewater;
         public static Material WastewaterSludge;
         public static Material CarburizedStainlessSteel;
+        public static Material UnscrubbedWoodGas;
+        public static Material LightOil;
+        public static Material ImpureCreosote;
+        public static Material NaphthaleneOil;
+        public static Material AnthraceneOil;
+        public static Material AlkalineNaphthaleneOil;
+        public static Material PurifiedNaphthaleneOil;
+        public static Material AcidicLightOil;
+        public static Material CrudePyridiniumSulfate;
+        public static Material ImpurePyridine;
+        public static Material AcidicAnthraceneOil;
+        public static Material AnthraceneExtract;
+        public static Material CrudeQuinoliniumSulfate;
+        public static Material ImpureQuinoline;
+        public static Material ConcentratedBrine;
+        public static Material BrineEvaporite;
+        public static Material BoronFreeBrine;
+        public static Material LithiumFreeBrine;
+        public static Material ChlorinatedBrine;
+        public static Material ImpureBromine;
 
         // Petrochem Materials
 
@@ -425,7 +445,9 @@ class SuSyMaterials {
         public static Material UltrapureWater;
         public static Material Ferrochromium;
         public static Material Ferrosilicon;
-        
+        public static Material ConcentratedSaltWater;
+        public static Material HypersalineWater;
+        public static Material LithiumCarbonate;
 
         // Second Degree Materials
 
@@ -628,7 +650,9 @@ class SuSyMaterials {
         public static Material Kevlar;
         public static Material AceticAnhydride;
         public static Material CelluloseAcetate;
-        
+        public static Material Pyridine;
+        public static Material Quinoline;
+
         // Third Degree Materials
 
         public static Material FurfuralSolution;

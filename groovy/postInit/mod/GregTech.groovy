@@ -249,10 +249,12 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('plateEnderPearl') * 9, met
 
 //Slaked Lime
 
+crafting.addShapeless('convert_old_slaked_lime', metaitem('dustCalciumHydroxide'), [metaitem('slaked_lime')])
+
 mods.gregtech.chemical_bath.recipeBuilder()
         .inputs(metaitem('dustQuicklime'))
         .fluidInputs(fluid('water') * 100)
-        .outputs(metaitem('slaked_lime'))
+        .outputs(metaitem('dustCalciumHydroxide'))
         .duration(20)
         .EUt(30)
         .buildAndRegister();
@@ -517,7 +519,13 @@ mods.gregtech.sifter.recipeBuilder()
         .duration(60)
         .EUt(30)
         .buildAndRegister();
-		
+
+mods.gregtech.centrifuge.recipeBuilder()
+        .inputs(metaitem('dustLimestone'))
+        .outputs(metaitem('dustCalcite'))
+        .duration(40)
+        .EUt(30)
+        .buildAndRegister();
 
 crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [
         [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')],

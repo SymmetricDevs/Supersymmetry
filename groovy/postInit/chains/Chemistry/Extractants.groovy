@@ -33,7 +33,7 @@ DISTILLERY.recipeBuilder()
 
 //SODIUM THIOSULFATE
 BCR.recipeBuilder()
-    .fluidInputs(fluid('sodium_carbonate_solution') * 50)
+    .fluidInputs(fluid('soda_ash_solution') * 50)
     .fluidInputs(fluid('sulfur_dioxide') * 50)
     .fluidOutputs(fluid('sodium_sulfite_solution') * 50)
     .fluidOutputs(fluid('carbon_dioxide') * 50)
