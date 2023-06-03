@@ -222,12 +222,6 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        SodiumCarbonateSolution = new Material.Builder(13034, 'sodium_carbonate_solution')
-                .fluid()
-                .components(SodiumCarbonate, 1, Water, 1)
-                .colorAverage()
-                .build()
-
         SodiumPerchlorateSolution = new Material.Builder(13035, 'sodium_perchlorate_solution')
                 .fluid()
                 .color(0x5880c7)

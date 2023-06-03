@@ -630,7 +630,7 @@ public class FirstDegreeMaterials{
 
         SeaWater = new Material.Builder(8181, "sea_water")
                 .fluid()
-                .components(Water, 98, Salt, 2)
+                .components(Water, 2, Salt, 1)
                 .color(0x3c5bc2)
                 .build();
 
@@ -1025,12 +1025,6 @@ public class FirstDegreeMaterials{
                 .color(0x879e21)
                 .build()
 
-        SodiumCarbonate = new Material.Builder(8245, 'sodium_carbonate')
-                .dust()
-                .components(Sodium, 2, Carbon,1, Oxygen, 3)
-                .colorAverage()
-                .build()
-
         HydrogenCyanide = new Material.Builder(8246, "hydrogen_cyanide")
                 .fluid()
                 .components(Hydrogen, 1, Carbon, 1, Nitrogen, 1)
@@ -1221,13 +1215,6 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        CrudeGalliumArsenide = new Material.Builder(8274, 'crude_gallium_arsenide')
-                .ingot()
-                .components(Gallium, 1, Arsenic, 1)
-                .color(0xa0a0a0)
-                .iconSet(METALLIC)
-                .build()
-
         IronPentacarbonyl = new Material.Builder(8275, 'iron_pentacarbonyl')
                 .dust()
                 .components(Iron, 1, Carbon, 5, Oxygen, 5)
@@ -1285,5 +1272,23 @@ public class FirstDegreeMaterials{
                 .iconSet(SHINY)
                 .color(0x999a99)
                 .build()
+
+        ConcentratedSaltWater = new Material.Builder(8284, "concentrated_salt_water")
+                .fluid()
+                .components(Water, 1, Salt, 2)
+                .colorAverage()
+                .build();
+
+        HypersalineWater = new Material.Builder(8285, "hypersaline_water")
+                .fluid()
+                .components(Water, 1, Salt, 4)
+                .colorAverage()
+                .build();
+
+        LithiumCarbonate = new Material.Builder(8286, "lithium_carbonate")
+                .dust()
+                .components(Lithium, 2, Carbon, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
     }
 }

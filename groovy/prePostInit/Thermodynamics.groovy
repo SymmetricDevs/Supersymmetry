@@ -66,7 +66,7 @@ CryoHydrogen.setDurationRadiator(400);
 CryoHydrogen.setTemperature(20);
 
 def CryoOxygen = new ICryoGas('oxygen', 'hot_hp_oxygen', 'hp_oxygen', 'cold_hp_oxygen', 'liquid_oxygen');
-CryoOxygen.setEUt(200);
+CryoOxygen.setEUt(90);
 CryoOxygen.setDuration(100);
 CryoOxygen.setPowerHX(100);
 CryoOxygen.setDurationHX(5);
