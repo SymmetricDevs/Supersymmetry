@@ -1290,5 +1290,45 @@ public class FirstDegreeMaterials{
                 .components(Lithium, 2, Carbon, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
+
+        LithiumCobaltOxide = new Material.Builder(8287, "lithium_cobalt_oxide")
+                .dust()
+                .components(Lithium, 1, Cobalt, 1, Oxygen, 2)
+                .colorAverage()
+                .build();
+
+        SodiumCathodeAlloy = new Material.Builder(8288, "sodium_cathode_alloy")
+                .dust()
+                .components(Sodium, 4, Iron, 3, Manganese, 3, Oxygen, 12)
+                .colorAverage()
+                .build();
+
+        LithiumHexafluorophosphate = new Material.Builder(8289, "lithium_hexafluorophosphate")
+                .fluid()
+                .components(Lithium, 1, Phosphorus, 1, Fluorine, 6)
+                .colorAverage()
+                .build();
+
+        NickelChloride = new Material.Builder(8290, "nickel_chloride")
+                .dust()
+                .components(Nickel, 1, Chlorine, 2)
+                .colorAverage()
+                .build();
+
+        NickelHydroxide = new Material.Builder(8291, "nickel_hydroxide")
+                .dust()
+                .components(Nickel, 1, Oxygen, 2, Hydrogen, 2)
+                .colorAverage()
+                .build();
+
+        NickelHydroxide.setFormula("Ni(OH)2", true)
+
+        NickelOxideHydroxide = new Material.Builder(8292, "nickel_oxide_hydroxide")
+                .dust()
+                .components(Nickel, 1, Oxygen, 3, Hydrogen, 2)
+                .colorAverage()
+                .build();
+
+        NickelOxideHydroxide.setFormula("NiO(OH)2", true)
     }
 }

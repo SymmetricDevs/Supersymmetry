@@ -69,6 +69,8 @@ def reductants = [
 def combustibles = [
     new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
     new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
+    new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
+    new Combustible('dustAnthracite', 1, 2, 'dustTinyAsh'),
     new Combustible('gemCoal', 2, 4),
     new Combustible('dustCoal', 2, 4),
     new Combustible('gemCharcoal', 2, 4),
@@ -94,6 +96,7 @@ for (blastable in blastables) {
         .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
         .fluidOutputs(fluid(reductant.byproduct) * (blastable.reductant_required * reductant.byproduct_amount))
         .duration(blastable.amount_produced * blastable.duration)
+        .blastFurnaceTemp(1750)
         .EUt(Globals.voltAmps[1])
         .notConsumable(Globals.circuit(1))
         .buildAndRegister()
@@ -104,6 +107,7 @@ for (blastable in blastables) {
         .outputs(item('minecraft:iron_ingot') * blastable.amount_produced)
         .fluidOutputs(fluid(reductant.byproduct) * (blastable.reductant_required * reductant.byproduct_amount))
         .duration(blastable.amount_produced * blastable.duration)
+        .blastFurnaceTemp(1750)
         .EUt(Globals.voltAmps[1])
         .notConsumable(Globals.circuit(0))
         .buildAndRegister()

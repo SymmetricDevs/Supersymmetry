@@ -34,31 +34,6 @@ def fuels = [
 
 //----------Recipes using GT machines----------
 
-for (fuel in fuels) {
-
-    mods.gregtech.primitive_blast_furnace.recipeBuilder()
-            .inputs(ore('dustNickel') * 1)
-            .outputs(metaitem('ingotNickel') * 1)
-            .duration(1000)
-            .inputs(fuel * 1)
-            .buildAndRegister();
-
-    mods.gregtech.primitive_blast_furnace.recipeBuilder()
-            .inputs(ore('dustGarnierite') * 2)
-            .outputs(metaitem('ingotNickel') * 1)
-            .duration(1000)
-            .inputs(fuel * 1)
-            .buildAndRegister();
-
-    mods.gregtech.primitive_blast_furnace.recipeBuilder()
-            .inputs(ore('dustPentlandite') * 17)
-            .outputs(metaitem('ingotNickel') * 9)
-            .duration(1000)
-            .inputs(fuel * 1)
-            .buildAndRegister();
-
-}
-
 crafting.replaceShaped("appliedenergistics2:misc/grindstone", item('appliedenergistics2:grindstone'),[
         [item('minecraft:stone'),null ,item('minecraft:stone')],
         [metaitem('gearBronze'),ore('craftingToolFile').reuse(),metaitem('gearBronze')],

@@ -5619,7 +5619,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 153,
+              "Damage:2": 8100,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -5630,7 +5630,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "gregtech:meta_item_2"
+              "id:8": "gregtech:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"

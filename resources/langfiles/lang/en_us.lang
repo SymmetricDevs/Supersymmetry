@@ -414,6 +414,8 @@ material.ammonia_rich_gas=Ammonia-Rich Gas
 material.ethanol_solution=Ethanol Solution
 material.reformed_syngas=Reformed Syngas
 material.flue_gas=Flue Gas
+material.chilled_flue_gas=Chilled Flue Gas
+material.chilled_lava=Chilled Lava
 material.exhaust_steam=Exhaust Steam
 material.borate_liquor=Borate Liquor
 material.tetrafluoroboric_acid=Tetrafluoroboric Acid
@@ -713,6 +715,13 @@ material.impure_bromine=Impure Bromine
 material.concentrated_salt_water=Concentrated Salt Water
 material.hypersaline_water=Hypersaline Water
 material.lithium_carbonate=Lithium Carbonate
+material.lithium_cobalt_oxide=Lithium Cobalt Oxide
+material.sodium_cathode_alloy=Sodium Battery Cathode Alloy
+material.lithium_hexafluorophosphate=Lithium Hexafluorophosphate
+material.nickel_chloride=Nickel Chloride
+material.nickel_hydroxide=Nickel Hydroxide
+material.dimethyl_carbonate=Dimethyl Carbonate
+material.nickel_oxide_hydroxide=Nickel Oxide Hydroxide
 
 # Thermodynamics
 
