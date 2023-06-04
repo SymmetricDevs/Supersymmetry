@@ -436,5 +436,16 @@ public class UnknownCompositionMaterials {
                 .fluid(FluidTypes.GAS)
                 .color(0x572d2b)
                 .build();
+
+        ChilledLava = new Material.Builder(4082, "chilled_lava")
+                .color(0x4d2d25)
+                .fluidTemp(400)
+                .build();
+
+        ChilledFlueGas = new Material.Builder(4083, "chilled_flue_gas")
+                .fluid(FluidTypes.GAS)
+                .color(0x171717)
+                .fluidTemp(400)
+                .build();
     }
 }           

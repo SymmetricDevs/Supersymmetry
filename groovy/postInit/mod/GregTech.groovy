@@ -10,6 +10,9 @@ println("Running GregTech.groovy...")
 
 //REMOVALS
 
+// Graphene Dust * 1
+mods.gregtech.mixer.removeByInput(480, [metaitem('dustGraphite'), metaitem('dustSilicon'), metaitem('dustCarbon') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+
 def name_removals = [
         'gregtech:cover_fluid_voiding',
         'gregtech:cover_item_voiding',
@@ -66,6 +69,17 @@ for (name in ore_smelting_removals) {
     furnace.removeByInput(item('gregtech:ore_' + name + '_0', 2))
 }
 
+def dust_smelting_removals = [
+        'Platinum',
+        'Molybdenum',
+        'Beryllium',
+        'Cobalt',
+        'Nickel'
+]
+
+for (name in dust_smelting_removals) {
+    furnace.removeByInput(metaitem('dust' + name))
+}
 // Polycaprolactam Bar * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCaprolactam')], [fluid('nitrogen') * 1000])
 // Monocrystalline Silicon Boule * 1
@@ -259,12 +273,29 @@ mods.gregtech.chemical_bath.recipeBuilder()
         .EUt(30)
         .buildAndRegister();
 
+//Lava
+
+mods.gregtech.fluid_solidifier.recipeBuilder()
+        .fluidInputs(fluid('chilled_lava') * 1000)
+        .notConsumable(metaitem('shape.mold.block'))
+        .outputs(item('minecraft:obsidian') * 1)
+        .duration(210)
+        .EUt(16)
+        .buildAndRegister();
+
 //Coils
 
 mods.gregtech.centrifuge.recipeBuilder()
         .fluidInputs(fluid('lava') * 1000)
         .outputs(metaitem('mineral_wool'))
         .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.centrifuge.recipeBuilder()
+        .fluidInputs(fluid('chilled_lava') * 1000)
+        .outputs(metaitem('mineral_wool'))
+        .duration(80)
         .EUt(30)
         .buildAndRegister();
 

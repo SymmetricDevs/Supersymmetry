@@ -966,5 +966,11 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 9, Hydrogen, 7, Nitrogen, 1)
                 .color(0x2e3620)
                 .build()
+
+        DimethylCarbonate = new Material.Builder(15160, 'dimethyl_carbonate')
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 6, Oxygen, 3)
+                .colorAverage()
+                .build()
     }
 }

@@ -5366,7 +5366,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6lead–acid battery§r is the first type of rechargeable battery ever created. Compared to more powerful batteries, lead–acid batteries have relatively low energy density. But it\u0027s a start.\n\nCombining Cathodes, Anodes, and a Mogus\n",
+          "desc:8": "The §6lead–acid battery§r is the first type of rechargeable battery ever created. Compared to more powerful batteries, lead–acid batteries have relatively low energy density. But it\u0027s a start.\n\nCombining Cathodes and Anodes makes a Battery.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5619,7 +5619,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 153,
+              "Damage:2": 8100,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -5630,7 +5630,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "gregtech:meta_item_2"
+              "id:8": "gregtech:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -8675,6 +8675,7 @@
     },
     "122:10": {
       "preRequisites:11": [
+        472,
         224
       ],
       "properties:10": {
@@ -27220,7 +27221,7 @@
     },
     "406:10": {
       "preRequisites:11": [
-        394
+        243
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29545,7 +29546,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "There are 7 types of ore deposits: §6Orthomagmatic, Metamorphic, Sedimentary, Magmatic Hydrothermal, Hydrothermal, Residual and Alluvial§r.\n\nThe Ore Sorter offers §64 recipes for each power tier§r.\nFor instance, using the HV recipe in the Ore Sorter results in a greater variety of ores being generated compared to the LV recipe.\n\n§\n",
+          "desc:8": "There are 7 types of ore deposits: §6Orthomagmatic, Metamorphic, Sedimentary, Magmatic Hydrothermal, Hydrothermal, Residual and Alluvial§r.\n\nThe Ore Sorter offers §64 recipes for each power tier§r.\nFor instance, using the HV recipe in the Ore Sorter results in a greater variety of ores being generated compared to the LV recipe.\n\nOrthomagmatic deposits are found in mountains.\nPlacer and Alluvial deposits are found in beaches, deserts and rivers.\nMagmatic Hydrothermal deposits are found in mountains.\nHydrothermal deposits are found in areas near water.\nSedimentary deposits are found in swamps, bogs, and mesa biomes.\nMetamorphic deposits are found close to mountains, but sometimes in plains and forest biomes too.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31458,6 +31459,478 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "468:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Medium Voltage §rbatteries are required to proceed from now on. For now, make an MV battery hull.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 718,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Medium Voltage Battery Hull",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 468,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 718,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "469:10": {
+      "preRequisites:11": [
+        468
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Any of the §63 MV batteries§r can be used to store MV energy.\n\nThere are 3 types of MV batteries:\n- Medium Sodium Battery\n- Medium Cadmium Battery\n- Medium Lithium Battery\n\nThe §6Medium Sodium Battery§r is made with Carbon, Sodium Cathode Alloy, and Dimethyl Carbonate.\n\nThe §6§9Sodium Cathode Alloy§r is made by combining Sodium, Iron and§6 Manganese §rin an EBF.\n\nThe §3Dimethyl Carbonate §ris made by combining §6Methanol and Phosgene§r in a CSTR.\n \n[Methanol can be obtained from §6Wood Vinegar§r, and Phosgene can be obtained by §6reacting Chlorine and Carbon Monoxide§r with a Carbon catalyst.]",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 733,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "Charge:4": 360000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Medium Sodium Battery",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 469,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 733,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "Charge:4": 360000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "470:10": {
+      "preRequisites:11": [
+        468
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Any of the 3 MV batteries can be used to store MV energy.\n\nThere are 3 types of MV batteries:\n- Medium Sodium Battery\n- Medium Cadmium Battery\n- Medium Lithium Battery\n\nThe §bMedium Lithium Battery§r requires §8Graphite§r, §2Lithium Cobalt Oxide§r and §5Lithium Hexafluorophosphate§r.\n\nThe Lithium battery is §csubstantially harder§r to produce than all the other batteries, but if you want to... you can check JEI.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 736,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "Charge:4": 420000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Medium Lithium Battery",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 470,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 736,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "Charge:4": 420000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "471:10": {
+      "preRequisites:11": [
+        468
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Any of the §63 MV batteries§r can be used to store MV energy.\n\nThere are 3 types of MV batteries:\n- Medium Sodium Battery\n- Medium Cadmium Battery\n- Medium Lithium Battery\n\nThe §6Medium Cadmium Battery §rrequires §6Cadmium§r, §2Nickel Oxide Hydroxide§r, and §3Potassium Hydroxide§r.\n\n§7Cadmium§r can be obtained as a byproduct of macerating §6Chalcopyrite §rin an LV+ Macerator.\n\n§bPotassium Hydroxide solution§r can be obtained via an§b Electrolytic Cell§r.\n\nThe§a Nickel Oxide Hydroxide §ris made by:\n\n- Roasting Nickel with Chlorine to make Nickel Chloride\n- Batch Reacting Nickel Chloride with Potassium Hydroxide to make Nickel Hydroxide\n- Reacting it with even more Chlorine and Potassium Hydroxide to make Nickel Oxide Hydroxide",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 739,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "Charge:4": 400000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Medium Cadmium Battery",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 471,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 739,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "Charge:4": 400000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "472:10": {
+      "preRequisites:11": [
+        99
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§5Nickel §rcan be obtained by smelting either §aGarnierite §ror §6Pentlandite §rin a §cPrimitive Blast Furnace§r.\n\nNickel then needs to be alloyed to §6Copper §o§rto make the material required for §ccoils.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 69,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nickel and Cupronickel",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 472,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 16,
+              "Damage:2": 69,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "473:10": {
+      "preRequisites:11": [
+        104
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Smoke Stack §ris a small multi machine that can §cdelete § §rfluids like steam, carbon dioxide, sulfur dioxide, and other stuff that builds up. Check JEI to see what it can remove.\n\n§rThe Smoke Stack requires:\n\n- 1 LV Muffler Hatch\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 1 Smoke Stack",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14637,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Smoke Stack",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 473,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14637,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "474:10": {
+      "preRequisites:11": [
+        174
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Flare Stack §ris a small multi machine that can §cdelete § §roil byproducts. It\u0027s useful if you want to get rid of something annoying in an oil processing setup.\n\n§rThe Flare stack requires:\n- 1 LV Muffler Hatch\n- 1 ULV Energy Hatch\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 1 Flare Stack",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 17007,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Flare Stack",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 474,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 17007,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -32380,7 +32853,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": 252
+          "y:3": 282
         },
         "15:10": {
           "id:3": 113,
@@ -32394,63 +32867,63 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 480
+          "y:3": 510
         },
         "17:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 252
+          "y:3": 282
         },
         "18:10": {
           "id:3": 116,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
-          "y:3": 348
+          "y:3": 378
         },
         "19:10": {
           "id:3": 119,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -216,
-          "y:3": 336
+          "y:3": 366
         },
         "20:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
-          "y:3": 330
+          "y:3": 360
         },
         "21:10": {
           "id:3": 121,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
-          "y:3": 258
+          "y:3": 288
         },
         "22:10": {
           "id:3": 122,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -210,
-          "y:3": 288
+          "y:3": 318
         },
         "23:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": 294
+          "y:3": 324
         },
         "24:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": 348
+          "y:3": 378
         },
         "25:10": {
           "id:3": 127,
@@ -32464,14 +32937,14 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
-          "y:3": 288
+          "y:3": 318
         },
         "27:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 252
+          "y:3": 282
         },
         "28:10": {
           "id:3": 132,
@@ -32590,21 +33063,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 348
+          "y:3": 378
         },
         "45:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 348
+          "y:3": 378
         },
         "46:10": {
           "id:3": 185,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 396
+          "y:3": 426
         },
         "47:10": {
           "id:3": 186,
@@ -32618,21 +33091,21 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 30,
-          "y:3": 432
+          "y:3": 462
         },
         "49:10": {
           "id:3": 189,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 444
+          "y:3": 474
         },
         "50:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": 444
+          "y:3": 474
         },
         "51:10": {
           "id:3": 191,
@@ -32688,42 +33161,42 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
-          "y:3": 252
+          "y:3": 282
         },
         "59:10": {
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
-          "y:3": 300
+          "y:3": 330
         },
         "60:10": {
           "id:3": 200,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 42,
-          "y:3": 348
+          "y:3": 378
         },
         "61:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": 396
+          "y:3": 426
         },
         "62:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": 348
+          "y:3": 378
         },
         "63:10": {
           "id:3": 203,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 144,
-          "y:3": 336
+          "y:3": 366
         },
         "64:10": {
           "id:3": 204,
@@ -32750,43 +33223,43 @@
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 252
+          "x:3": -186,
+          "y:3": 270
         },
         "68:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": 396
+          "y:3": 426
         },
         "69:10": {
           "id:3": 239,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 516
+          "y:3": 546
         },
         "70:10": {
           "id:3": 240,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": 516
+          "y:3": 546
         },
         "71:10": {
           "id:3": 241,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 54,
-          "y:3": 516
+          "y:3": 546
         },
         "72:10": {
           "id:3": 242,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
-          "y:3": 516
+          "y:3": 546
         },
         "73:10": {
           "id:3": 243,
@@ -32800,7 +33273,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
-          "y:3": 396
+          "y:3": 426
         },
         "75:10": {
           "id:3": 369,
@@ -32821,14 +33294,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 396
+          "y:3": 426
         },
         "78:10": {
           "id:3": 372,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 42,
-          "y:3": 396
+          "y:3": 426
         },
         "79:10": {
           "id:3": 373,
@@ -32849,14 +33322,14 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 210,
-          "y:3": 336
+          "y:3": 366
         },
         "82:10": {
           "id:3": 378,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 144,
-          "y:3": 402
+          "y:3": 432
         },
         "83:10": {
           "id:3": 379,
@@ -32877,7 +33350,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
-          "y:3": 294
+          "y:3": 324
         },
         "86:10": {
           "id:3": 383,
@@ -32954,7 +33427,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 222,
-          "y:3": 300
+          "y:3": 330
         },
         "97:10": {
           "id:3": 440,
@@ -32975,14 +33448,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 54,
-          "y:3": 486
+          "y:3": 516
         },
         "100:10": {
           "id:3": 447,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": 486
+          "y:3": 516
+        },
+        "101:10": {
+          "id:3": 472,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -222,
+          "y:3": 270
         }
       }
     },
@@ -33018,15 +33498,15 @@
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -96,
-          "y:3": -30
+          "x:3": -84,
+          "y:3": -36
         },
         "1:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": -30
+          "x:3": -36,
+          "y:3": -36
         },
         "2:10": {
           "id:3": 207,
@@ -33137,8 +33617,8 @@
           "id:3": 406,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": -60
+          "x:3": 60,
+          "y:3": -36
         },
         "18:10": {
           "id:3": 412,
@@ -33279,6 +33759,34 @@
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 162
+        },
+        "38:10": {
+          "id:3": 468,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": -120
+        },
+        "39:10": {
+          "id:3": 469,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": -180
+        },
+        "40:10": {
+          "id:3": 470,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -24,
+          "y:3": -168
+        },
+        "41:10": {
+          "id:3": 471,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": -168
         }
       }
     },
@@ -34040,6 +34548,20 @@
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -282
+        },
+        "56:10": {
+          "id:3": 473,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 360,
+          "y:3": -96
+        },
+        "57:10": {
+          "id:3": 474,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 432,
+          "y:3": -96
         }
       }
     },

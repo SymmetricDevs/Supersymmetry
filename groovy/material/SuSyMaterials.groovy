@@ -197,6 +197,8 @@ class SuSyMaterials {
         public static Material LithiumFreeBrine;
         public static Material ChlorinatedBrine;
         public static Material ImpureBromine;
+        public static Material ChilledLava;
+        public static Material ChilledFlueGas;
 
         // Petrochem Materials
 
@@ -448,6 +450,12 @@ class SuSyMaterials {
         public static Material ConcentratedSaltWater;
         public static Material HypersalineWater;
         public static Material LithiumCarbonate;
+        public static Material LithiumCobaltOxide;
+        public static Material SodiumCathodeAlloy;
+        public static Material LithiumHexafluorophosphate;
+        public static Material NickelHydroxide;
+        public static Material NickelChloride;
+        public static Material NickelOxideHydroxide;
 
         // Second Degree Materials
 
@@ -652,6 +660,7 @@ class SuSyMaterials {
         public static Material CelluloseAcetate;
         public static Material Pyridine;
         public static Material Quinoline;
+        public static Material DimethylCarbonate;
 
         // Third Degree Materials
 

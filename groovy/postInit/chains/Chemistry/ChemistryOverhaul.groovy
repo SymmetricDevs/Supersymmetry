@@ -1649,6 +1649,14 @@ BR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('sodium_aluminate_solution') * 1500)
+        .fluidOutputs(fluid('water') * 1500)
+        .outputs(ore('dustSodiumAluminate').first() * 4)
+        .duration(160)
+        .EUt(30)
+        .buildAndRegister()
+
 BR.recipeBuilder()
 .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
 .inputs(ore('dustAluminium') * 2)
@@ -2197,8 +2205,6 @@ DISTILLATION_TOWER.recipeBuilder()
 .duration(360)
 .buildAndRegister()
 
-
-    
 //Diethyl Ether
 
 BCR.recipeBuilder()
@@ -2387,7 +2393,6 @@ ARC_FURNACE.recipeBuilder()
 .EUt(60)
 .duration(270)
 .buildAndRegister()
-
 
 // Distilled Water
 
@@ -3415,6 +3420,14 @@ CSTR.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 600)
         .fluidOutputs(fluid('phosphorus_trichloride') * 250)
         .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('phosphorus_trichloride') * 1000)
+        .fluidInputs(fluid('chlorine') * 2000)
+        .outputs(metaitem('dustPhosphorusPentachloride') * 6)
+        .duration(100)
         .EUt(30)
         .buildAndRegister()
 
