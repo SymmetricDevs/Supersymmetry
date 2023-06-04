@@ -163,7 +163,7 @@ for (combustible in combustibles) {
     .inputs(ore(combustible.name) * combustible.amount_required)
     .outputs(metaitem('ingotSteel'))
     .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
-    .duration(combustible.duration * 160)
+    .duration(combustible.duration * 120)
     .buildAndRegister()
 
     PBF_RECIPES.recipeBuilder()
@@ -171,7 +171,7 @@ for (combustible in combustibles) {
     .inputs(ore(combustible.name) * combustible.amount_required)
     .outputs(metaitem('ingotSteel'))
     .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
-    .duration(combustible.duration * 120)
+    .duration(combustible.duration * 60)
     .buildAndRegister()
 }
 
