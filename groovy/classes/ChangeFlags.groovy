@@ -159,6 +159,16 @@ class ChangeFlags {
         oreProp = Magnesite.getProperty(PropertyKey.ORE);
         oreProp.setDirectSmeltResult(null);
 
+        Proustite.getProperty(PropertyKey.ORE).setEmissive(false);
+        Lignite.getProperty(PropertyKey.ORE).setEmissive(false);
+        Cerussite.getProperty(PropertyKey.ORE).setEmissive(false);
+        Arsenopyrite.getProperty(PropertyKey.ORE).setEmissive(false);
+        Anglesite.getProperty(PropertyKey.ORE).setEmissive(false);
+        Acanthite.getProperty(PropertyKey.ORE).setEmissive(false);
+        Smithsonite.getProperty(PropertyKey.ORE).setEmissive(false);
+        Anthracite.getProperty(PropertyKey.ORE).setEmissive(false);
+        Enargite.getProperty(PropertyKey.ORE).setEmissive(false);
+
         log.infoMC("Finished modifying flags")
     }
 }
