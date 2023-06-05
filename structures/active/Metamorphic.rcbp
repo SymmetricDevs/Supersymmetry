@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "biomes": "$FOREST"
+    },
+    {
+      "biomes": "$MOUNTAIN"
+    },
+    {
+      "biomes": "$HILLS"
+    }
+  ],
+  "metadata": {
+    "title": "Metamorphic",
+    "description": [
+      ""
+    ]
+  }
+}
