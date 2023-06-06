@@ -1862,7 +1862,7 @@ POLYMERIZATION.recipeBuilder()
 .fluidInputs(fluid('oxygen') * 1000)
 .fluidOutputs(fluid('plastic') * 216)
 .EUt(30)
-.duration(160)
+.duration(75)
 .buildAndRegister()
 
 POLYMERIZATION.recipeBuilder()
@@ -1871,8 +1871,17 @@ POLYMERIZATION.recipeBuilder()
         .fluidInputs(fluid('oxygen') * 1000)
         .fluidOutputs(fluid('plastic') * 288)
         .EUt(30)
-        .duration(100)
+        .duration(30)
         .buildAndRegister()
+
+POLYMERIZATION.recipeBuilder()
+.circuitMeta(1)
+.fluidInputs(fluid('ethylene') * 144)
+.fluidInputs(fluid('oxygen') * 1000)
+.fluidOutputs(fluid('plastic') * 216)
+.EUt(30)
+.duration(300)
+.buildAndRegister()
 
 // Allyl Chloride
 
