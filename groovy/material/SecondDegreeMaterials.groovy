@@ -248,5 +248,17 @@ public class SecondDegreeMaterials {
                 .components(Iron3Chloride, 1, Water, 3)
                 .colorAverage()
                 .build()
+
+        PotashSolution = new Material.Builder(13039, "potash_solution")
+                .fluid()
+                .components(PotassiumCarbonate, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        PotassiumSulfateSolution = new Material.Builder(13040, "potassium_sulfate_solution")
+                .fluid()
+                .components(PotassiumSulfate, 1, Water, 1)
+                .colorAverage()
+                .build()
     }
 }
