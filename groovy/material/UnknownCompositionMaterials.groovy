@@ -412,11 +412,6 @@ public class UnknownCompositionMaterials {
                 .color(0xa6a444)
                 .build();
 
-        BrineEvaporite = new Material.Builder(4077, "brine_evaporite")
-                .dust()
-                .color(0xa3a38c)
-                .build();
-
         BoronFreeBrine = new Material.Builder(4078, "boron_free_brine")
                 .fluid()
                 .color(0xa68a44)
@@ -446,6 +441,36 @@ public class UnknownCompositionMaterials {
                 .fluid(FluidTypes.GAS)
                 .color(0x171717)
                 .fluidTemp(400)
+                .build();
+
+        WoodAsh = new Material.Builder(4084, "wood_ash")
+                .dust()
+                .color(0x242221)
+                .build();
+
+        VeryConcentratedBrine = new Material.Builder(4085, "very_concentrated_brine")
+                .fluid()
+                .color(0xb5b226)
+                .build();
+
+        LangbeiniteLeach = new Material.Builder(4086, "langbeinite_leach")
+                .fluid()
+                .color(0x9c9a87)
+                .build();
+
+        PolyhaliteLeach = new Material.Builder(4087, "polyhalite_leach")
+                .fluid()
+                .color(0xb3a094)
+                .build();
+
+        CarnalliteLeach = new Material.Builder(4089, "carnallite_leach")
+                .fluid()
+                .color(0xc1c499)
+                .build();
+
+        KainiteLeach = new Material.Builder(4090, "kainite_leach")
+                .fluid()
+                .color(0xadb07f)
                 .build();
     }
 }           

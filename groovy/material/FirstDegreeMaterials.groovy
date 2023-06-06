@@ -1330,5 +1330,31 @@ public class FirstDegreeMaterials{
                 .build();
 
         NickelOxideHydroxide.setFormula("NiO(OH)2", true)
+
+        CalciumSilicate = new Material.Builder(8293, "calcium_silicate")
+                .dust()
+                .components(Calcium, 2, Silicon, 1, Oxygen, 4)
+                .colorAverage()
+                .build();
+
+        MagnesiumChlorideSolution = new Material.Builder(8294, "magnesium_chloride_solution")
+                .fluid()
+                .components(MagnesiumChloride, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        MagnesiumHydroxide = new Material.Builder(8295, "magnesium_hydroxide")
+                .dust()
+                .components(Magnesium, 1, Oxygen, 2, Hydrogen, 2)
+                .colorAverage()
+                .build();
+
+        MagnesiumHydroxide.setFormula("Mg(OH)2", true)
+
+        MagnesiumSulfate = new Material.Builder(8296, "magnesium_sulfate")
+                .dust()
+                .components(Magnesium, 1, Sulfur, 1, Oxygen, 4)
+                .colorAverage()
+                .build();
     }
 }

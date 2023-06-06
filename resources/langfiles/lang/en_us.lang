@@ -722,6 +722,19 @@ material.nickel_chloride=Nickel Chloride
 material.nickel_hydroxide=Nickel Hydroxide
 material.dimethyl_carbonate=Dimethyl Carbonate
 material.nickel_oxide_hydroxide=Nickel Oxide Hydroxide
+material.calcium_silicate=Calcium Silicate
+material.magnesium_hydroxide=Magnesium Hydroxide
+material.magnesium_chloride_solution=Magnesium Chloride Solution
+material.wood_ash=Wood Ash
+material.potash_solution=Potassium Carbonate Solution
+material.magnesium_sulfate=Magnesium Sulfate
+material.very_concentrated_brine=Very Concentrated Brine
+material.langbeinite_leach=Langbeinite Leach
+material.polyhalite_leach=Polyhalite Leach
+material.concentrated_polyhalite_leach=Concentrated Polyhalite Leach
+material.carnallite_leach=Carnallite Leach
+material.kainite_leach=Kainite Leach
+material.potassium_sulfate_solution=Potassium Sulfate Solution
 
 # Thermodynamics
 
