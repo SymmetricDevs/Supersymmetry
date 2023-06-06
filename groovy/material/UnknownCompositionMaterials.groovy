@@ -11,6 +11,7 @@ import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
+import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
 public class UnknownCompositionMaterials {
  
@@ -471,6 +472,33 @@ public class UnknownCompositionMaterials {
         KainiteLeach = new Material.Builder(4090, "kainite_leach")
                 .fluid()
                 .color(0xadb07f)
+                .build();
+
+        ZeoliteX = new Material.Builder(4091, "zeolite_x")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xe4e8bc)
+                .build();
+
+        ZeoliteXSolution = new Material.Builder(4092, "zeolite_x_solution")
+                .fluid()
+                .color(0xe4e8bc)
+                .build();
+
+        LTSCatalyst = new Material.Builder(4093, "lts_catalyst")
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .color(0x756857)
+                .build();
+
+        HTSCatalyst = new Material.Builder(4094, "hts_catalyst")
+                .dust()
+                .color(0x5e4f4f)
+                .build();
+
+        SpentBismuthCatalyst = new Material.Builder(4095, "spent_bismuth_catalyst")
+                .dust()
+                .color(0x31403f)
                 .build();
     }
 }           

@@ -1356,5 +1356,23 @@ public class FirstDegreeMaterials{
                 .components(Magnesium, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
+
+        CeriumIVOxide = new Material.Builder(8297, "cerium_iv_oxide")
+                .dust()
+                .components(Cerium, 1, Oxygen, 2)
+                .colorAverage()
+                .build();
+
+        CeriumIIIOxide = new Material.Builder(8298, "cerium_iii_oxide")
+                .dust()
+                .components(Cerium, 2, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        IronSulfate = new Material.Builder(8299, "iron_sulfate")
+                .dust()
+                .components(Iron, 1, Sulfur, 1, Oxygen, 4)
+                .colorAverage()
+                .build();
     }
 }

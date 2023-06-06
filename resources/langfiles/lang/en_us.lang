@@ -735,6 +735,13 @@ material.concentrated_polyhalite_leach=Concentrated Polyhalite Leach
 material.carnallite_leach=Carnallite Leach
 material.kainite_leach=Kainite Leach
 material.potassium_sulfate_solution=Potassium Sulfate Solution
+material.zeolite_x=Zeolite 13X
+material.zeolite_x_solution=Zeolite 13X Solution
+material.lts_catalyst=LTS Catalyst
+material.hts_catalyst=HTS Catalyst
+material.spent_bismuth_catalyst=Spent Bismuth Catalyst
+material.cerium_iv_oxide=Cerium IV Oxide
+material.cerium_iii_oxide=Cerium III Oxide
 
 # Thermodynamics
 
@@ -834,6 +841,7 @@ material.hot_nitrogen=Hot Nitrogen
 
 material.ethylene_glycol=Ethylene Glycol
 material.carbon_disulfide=Carbon Disulfide
+material.iron_sulfate=Iron Sulfate
 
 # Ores
 
@@ -1152,6 +1160,9 @@ metaitem.boron.nitride.crucible.name=Boron Nitride Crucible
 metaitem.unrefined_boule.silicon.name=Unrefined Silicon Boule
 metaitem.boule.gallium_arsenide.name=Gallium Arsenide Boule
 metaitem.unrefined_boule.gallium_arsenide.name=Unrefined Gallium Arsenide Boule
+
+metaitem.zeolite_membrane_support.name=Zeolite Membrane Support
+metaitem.zeolite_membrane.name=Zeolite Membrane
 
 # Multiblocked
 

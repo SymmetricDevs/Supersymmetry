@@ -49,7 +49,7 @@ SMOKE_STACK.recipeBuilder()
         .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
-        .fluidInputs(fluid('nitrogen') * 500)
+        .fluidInputs(fluid('nitrogen') * 1000)
         .duration(20)
         .buildAndRegister()
 

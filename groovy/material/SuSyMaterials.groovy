@@ -204,6 +204,11 @@ class SuSyMaterials {
         public static Material PolyhaliteLeach;
         public static Material CarnalliteLeach;
         public static Material KainiteLeach;
+        public static Material ZeoliteXSolution;
+        public static Material ZeoliteX;
+        public static Material LTSCatalyst;
+        public static Material HTSCatalyst;
+        public static Material SpentBismuthCatalyst;
 
         // Petrochem Materials
 
@@ -465,6 +470,9 @@ class SuSyMaterials {
         public static Material MagnesiumChlorideSolution;
         public static Material MagnesiumHydroxide;
         public static Material MagnesiumSulfate;
+        public static Material CeriumIVOxide;
+        public static Material CeriumIIIOxide;
+        public static Material IronSulfate;
 
         // Second Degree Materials
 
