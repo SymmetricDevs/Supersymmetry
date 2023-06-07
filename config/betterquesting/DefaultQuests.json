@@ -17482,7 +17482,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Hydrogen (H)\n§bAtomic Number§r: 1\n§aAtomic Mass§r: 1.008 amu\n§cMelting Point§r: 13.81 K\n§5Boiling Point§r: 20.28 K\n§6Properties§r: Hydrogen is the lightest §6Element§r, commonly found in the universe. It is used as a fuel, in industrial processes, and is a key component of water and many organic compounds.\n\n§lPrimitive:§9 §r§9Water§r can be electrolyzed to get Hydrogen and Oxygen.\n\n§lUniversal:§r\n§6Steam and Syngas§r can be reformed using an LTS or HTS §6catalyst§r to create §6Reformed Syngas§r, which is then passed through a §bPressure Swing Absorbe§rr to make Hydrogen.\n\n§dMethane §rcan be pyrolyzed under a§7 Bismuth catalyst§r at §cEV§r to make Hydrogen.\n\n§lSpecialized:§r\nCerium III Oxide + Water -\u003e Cerium IV Oxide + Hydrogen\nCerium IV Oxide -\u003e Cerium III Oxide + Oxygen ",
+          "desc:8": "§6Element§r: Hydrogen (H)\n§bAtomic Number§r: 1\n§aAtomic Mass§r: 1.008 amu\n§cMelting Point§r: 13.81 K\n§5Boiling Point§r: 20.28 K\n§6Properties§r: Hydrogen is the lightest §6Element§r, commonly found in the universe. It is used as a fuel, in industrial processes, and is a key component of water and many organic compounds.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17934,7 +17934,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Oxygen (O)\n§bAtomic Number§r: 8\n§aAtomic Mass§r: 16.00 amu\n§cMelting Point§r: 54.36 K\n§5Boiling Point§r: 90.20 K\n§6Properties§r: Oxygen is a highly reactive nonmetal and a vital §6Element§r for sustaining life. It is used in various industries, including medical applications and combustion processes.\n\n§lPrimitive:§r\nElectrolyze Water to get Hydrogen and Oxygen.\n\n§lUniversal:§r\n§7Clay§r can be passed through a §aliquid Molecular Sieve §rto make §7Zeolite 13X§r, which can be solidified and then autoclaved to make a §7Zeolite Membrane§r.\nPressure Swing Absorption of Air through this catalyst can be used to make industrial quantities of §bNitrogen and Oxygen§r.\n\n§lSpecialized:\n§rCryogenic distillation [§cWIP§r]",
+          "desc:8": "§6Element§r: Oxygen (O)\n§bAtomic Number§r: 8\n§aAtomic Mass§r: 16.00 amu\n§cMelting Point§r: 54.36 K\n§5Boiling Point§r: 90.20 K\n§6Properties§r: Oxygen is a highly reactive nonmetal and a vital §6Element§r for sustaining life. It is used in various industries, including medical applications and combustion processes.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18114,7 +18114,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Potassium (K)\n§bAtomic Number§r: 19\n§aAtomic Mass§r: 39.10 amu\n§cMelting Point§r: 336.53 K\n§5Boiling Point§r: 1032 K\n§6Properties§r: Potassium is an alkali metal highly reactive with water. It is used in fertilizers, soaps, and in the production of some medications and chemical§ls.\n\nPrimitive:§r\nElectrolyzing molten§7 Rock Salt§r under a§7 graphite electrode§r makes§9 Potassium §rand §2Chlorine§r§r.\n\n§lUniversal: §r§cN/A§r\n§lSpecialized: §r§cN/A\n§r§c\n",
+          "desc:8": "§6Element§r: Potassium (K)\n§bAtomic Number§r: 19\n§aAtomic Mass§r: 39.10 amu\n§cMelting Point§r: 336.53 K\n§5Boiling Point§r: 1032 K\n§6Properties§r: Potassium is an alkali metal highly reactive with water. It is used in fertilizers, soaps, and in the production of some medications and chemicals.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18182,7 +18182,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Magnesium (Mg)\n§bAtomic Number§r: 12\n§aAtomic Mass§r: 24.31 amu\n§cMelting Point§r: 923 K\n§5Boiling Point§r: 1380 K\n§6Properties§r: Magnesium is an alkaline earth metal known for its lightness and high strength-to-weight ratio. It is used in alloys, pyrotechnics, and as a component in some medications.\n\nCarnallite can be obtained by sifting a Halide Evaporite deposit. Evaporite deposits can be found in deserts, mostly.\n\nCarnallite can be leached in a Mixer to make Carnallite Leach.\nCarnallite Leach can be crystallized to make Magnesium Chloride.\nMolten Magnesium Chloride can be electrolyzed to make Magnesium.\n\n",
+          "desc:8": "§6Element§r: Magnesium (Mg)\n§bAtomic Number§r: 12\n§aAtomic Mass§r: 24.31 amu\n§cMelting Point§r: 923 K\n§5Boiling Point§r: 1380 K\n§6Properties§r: Magnesium is an alkaline earth metal known for its lightness and high strength-to-weight ratio. It is used in alloys, pyrotechnics, and as a component in some medications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18250,7 +18250,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§b§6Element§r: Sodium (Na)\n§bAtomic Number§r: 11\n§aAtomic Mass§r: 22.99 amu\n§cMelting Point§r: 370.87 K\n§5Boiling Point§r: 1156 K\n§6Properties§r: Sodium is an alkali metal known for its high reactivity. It is used in various industries, including the production of chemicals, as a coolant, and in the manufacture of batteries.\n\n§lPrimitive:§r\nElectrolyzing molten§7 Salt§r under a§7 graphite electrode§r makes§9 Sodium §rand §2Chlorine§r\n\n§lUniversal: §r§cN/A§r\n§lSpecialized: §r§cN/A\n§r§c",
+          "desc:8": "§b§6Element§r: Sodium (Na)\n§bAtomic Number§r: 11\n§aAtomic Mass§r: 22.99 amu\n§cMelting Point§r: 370.87 K\n§5Boiling Point§r: 1156 K\n§6Properties§r: Sodium is an alkali metal known for its high reactivity. It is used in various industries, including the production of chemicals, as a coolant, and in the manufacture of batteries.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

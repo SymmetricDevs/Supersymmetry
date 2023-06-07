@@ -21,16 +21,9 @@ PYROLYSE_OVEN.recipeBuilder()
 
 PYROLYSE_OVEN.recipeBuilder()
         .inputs(ore('dustWood') * 24)
-        .outputs(metaitem('dustWoodAsh') * 20)
+        .outputs(metaitem('dustDarkAsh') * 8)
         .fluidOutputs(fluid('unscrubbed_wood_gas') * 3000)
         .duration(320)
-        .EUt(64)
-        .buildAndRegister()
-
-PYROLYSE_OVEN.recipeBuilder()
-        .inputs(ore('treeLeaves') * 24)
-        .outputs(metaitem('dustWoodAsh') * 10)
-        .duration(240)
         .EUt(64)
         .buildAndRegister()
 

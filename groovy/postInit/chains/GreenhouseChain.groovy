@@ -44,9 +44,7 @@ def nitrogenNutrients = [
 def potassiumNutrients = [
         metaitem('dustAsh'),
         metaitem('dustCharcoal'),
-        metaitem('dustRockSalt'),
-        metaitem('dustPotassiumCarbonate'),
-        metaitem('dustPotash')
+        metaitem('dustRockSalt')
 ];
 
 def phosphorusNutrients = [
