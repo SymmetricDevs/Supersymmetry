@@ -209,6 +209,18 @@ class SuSyMaterials {
         public static Material LTSCatalyst;
         public static Material HTSCatalyst;
         public static Material SpentBismuthCatalyst;
+        public static Material AlkalineSodiumOleateSolution;
+        public static Material FattyAcidSolution;
+        public static Material OleicAcidSolution;
+        public static Material AluminiumSilicateLeach;
+        public static Material AlkaliAlumMix;
+        public static Material AmblygoniteLeach;
+        public static Material RoastedLepidolite;
+        public static Material LepidoliteLeach;
+        public static Material NeutralizedLepidoliteLeach;
+        public static Material AluminiumFreeLepidoliteLeach;
+        public static Material AlkalineLepidoliteLeach;
+        public static Material FusedBeryl;
 
         // Petrochem Materials
 
@@ -473,6 +485,27 @@ class SuSyMaterials {
         public static Material CeriumIVOxide;
         public static Material CeriumIIIOxide;
         public static Material IronSulfate;
+        public static Material CopperChloride;
+        public static Material RutheniumIVOxide;
+        public static Material Trichlorosilane;
+        public static Material PurifiedTrichlorosilane;
+        public static Material HexafluorosilicicAcid;
+        public static Material CrudeLead;
+        public static Material SilverFreeLead;
+        public static Material BismuthDross;
+        public static Material AntimonyDross;
+        public static Material ZincDross;
+        public static Material PurifiedTinIIOxide;
+        public static Material RoastedPetalite;
+        public static Material BetaSpodumene;
+        public static Material LithiumSulfate;
+        public static Material AluminiumPhosphate;
+        public static Material LithiumChloride;
+        public static Material AluminiumSilicate;
+        public static Material SodiumFluorosilicate;
+        public static Material BerylliumHydroxide;
+        public static Material BerylliumOxide;
+        public static Material BerylliumChloride;
 
         // Second Degree Materials
 
@@ -517,6 +550,10 @@ class SuSyMaterials {
         public static Material DilutedAniline;
         public static Material PotashSolution;
         public static Material PotassiumSulfateSolution;
+        public static Material DiluteHexafluorosilicicAcid;
+        public static Material LithiumSulfateSolution;
+        public static Material DiluteSodiumSulfateSolution;
+        public static Material DiluteHydrofluoricAcid;
 
         // Organic Chemistry Materials
 
@@ -680,6 +717,9 @@ class SuSyMaterials {
         public static Material Pyridine;
         public static Material Quinoline;
         public static Material DimethylCarbonate;
+        public static Material OleicAcid;
+        public static Material LinoleicAcid;
+        public static Material PalmiticAcid;
 
         // Third Degree Materials
 

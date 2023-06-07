@@ -500,5 +500,61 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0x31403f)
                 .build();
+
+        AlkalineSodiumOleateSolution = new Material.Builder(4096, "alkaline_sodium_oleate_solution")
+                .fluid()
+                .color(0xa6b584)
+                .build();
+
+        FattyAcidSolution = new Material.Builder(4097, "fatty_acid_solution")
+                .fluid()
+                .color(0xa1ad5c)
+                .build();
+
+        OleicAcidSolution = new Material.Builder(4098, "oleic_acid_solution")
+                .fluid()
+                .color(0x8dbf67)
+                .build();
+
+        AluminiumSilicateLeach = new Material.Builder(4099, "aluminium_silicate_leach")
+                .fluid()
+                .color(0x587682)
+                .build();
+
+        AlkaliAlumMix = new Material.Builder(4100, "alkali_alum_mix")
+                .iconSet(SHINY)
+                .dust()
+                .color(0xe34949)
+                .build();
+
+        AmblygoniteLeach = new Material.Builder(4101, "amblygonite_leach")
+                .fluid()
+                .color(0xbaced6)
+                .build();
+
+        RoastedLepidolite = new Material.Builder(4102, "roasted_lepidolite")
+                .dust()
+                .color(0x443b45)
+                .build();
+
+        LepidoliteLeach = new Material.Builder(4103, "lepidolite_leach")
+                .fluid()
+                .color(0x805066)
+                .build();
+
+        NeutralizedLepidoliteLeach = new Material.Builder(4104, "neutralized_lepidolite_leach")
+                .fluid()
+                .color(0x675d85)
+                .build();
+
+        AluminiumFreeLepidoliteLeach = new Material.Builder(4105, "aluminium_free_lepidolite_leach")
+                .fluid()
+                .color(0x557365)
+                .build();
+
+        FusedBeryl = new Material.Builder(4106, "fused_beryl")
+                .dust()
+                .color(0x424f3e)
+                .build();
     }
 }           

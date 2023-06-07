@@ -242,6 +242,46 @@ BCR.recipeBuilder()
 .EUt(7)
 .buildAndRegister()
 
+//Chlorine
+
+FLUIDIZEDBR.recipeBuilder()
+        .notConsumable(metaitem('dustCopperChloride'))
+        .fluidInputs(fluid('hydrogen_chloride') * 1000)
+        .fluidInputs(fluid('oxygen') * 500)
+        .fluidOutputs(fluid('chlorine') * 1000)
+        .fluidOutputs(fluid('steam') * 500)
+        .duration(40)
+        .EUt(120)
+        .buildAndRegister()
+
+FLUIDIZEDBR.recipeBuilder()
+        .notConsumable(metaitem('dustRutheniumIvOxide'))
+        .fluidInputs(fluid('hydrogen_chloride') * 1000)
+        .fluidInputs(fluid('oxygen') * 500)
+        .fluidOutputs(fluid('chlorine') * 1000)
+        .fluidOutputs(fluid('steam') * 500)
+        .duration(10)
+        .EUt(120)
+        .buildAndRegister()
+
+// Hexafluorosilicic Acid
+
+BR.recipeBuilder()
+        .inputs(metaitem('dustSiliconDioxide') * 3)
+        .fluidInputs(fluid('hydrofluoric_acid') * 6000)
+        .fluidOutputs(fluid('dilute_hexafluorosilicic_acid') * 9000)
+        .duration(160)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('dilute_hexafluorosilicic_acid') * 9000)
+        .fluidOutputs(fluid('water') * 8000)
+        .fluidOutputs(fluid('hexafluorosilicic_acid') * 1000)
+        .duration(160)
+        .EUt(30)
+        .buildAndRegister()
+
 // Hydrofluoric acid
 
 BR.recipeBuilder()
@@ -336,6 +376,22 @@ ROASTER.recipeBuilder()
 .buildAndRegister()
 
 // Sodium bisulfate and related
+
+BR.recipeBuilder()
+        .inputs(metaitem('dustSodiumSulfate') * 7)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .outputs(metaitem('dustSodiumBisulfate') * 14)
+        .duration(120)
+        .EUt(30)
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .inputs(metaitem('dustSodiumBisulfate') * 7)
+        .fluidInputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('sodium_bisulfate_solution') * 1000)
+        .duration(120)
+        .EUt(30)
+        .buildAndRegister()
 
 CSTR.recipeBuilder()
 .fluidInputs(fluid('salt_water') * 50)

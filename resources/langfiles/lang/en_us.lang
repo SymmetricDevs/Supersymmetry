@@ -742,6 +742,42 @@ material.hts_catalyst=HTS Catalyst
 material.spent_bismuth_catalyst=Spent Bismuth Catalyst
 material.cerium_iv_oxide=Cerium IV Oxide
 material.cerium_iii_oxide=Cerium III Oxide
+material.hexafluorosilicic_acid=Hexafluorosilicic Acid
+material.crude_lead=Crude Lead
+material.silver_free_lead=Silver-Free Lead
+material.bismuth_dross=Bismuth Dross
+material.antimony_dross=Antimony Dross
+material.zinc_dross=Zinc Dross
+material.purified_tin_ii_oxide=Purified Tin II Oxide
+material.roasted_petalite=Roasted Petalite
+material.beta_spodumene=β-Spodumene
+material.lithium_sulfate=Lithium Sulfate
+material.aluminium_phosphate=Aluminium Phosphate
+material.lithium_chloride=Lithium Chloride
+material.aluminium_silicate=Aluminium Silicate
+material.sodium_fluorosilicate=Sodium Fluorosilicate
+material.beryllium_hydroxide=Beryllium Hydroxide
+material.beryllium_oxide=Beryllium Oxide
+material.beryllium_chloride=Beryllium Chloride
+material.dilute_hexafluorosilicic_acid=Dilute Hexafluorosilicic Acid
+material.lithium_sulfate_solution=Lithium Sulfate Solution
+material.dilute_sodium_sulfate_solution=Dilute Sodium Sulfate Solution
+material.alkaline_sodium_oleate_solution=Alkaline Sodium Oleate Solution
+material.fatty_acid_solution=Fatty Acid Solution
+material.oleic_acid_solution=Oleic Acid Solution
+material.aluminium_silicate_leach=Aluminium Silicate Leach
+material.alkali_alum_mix=Alkali Alum Mix
+material.oleic_acid=Oleic Acid
+material.linoleic_acid=Linoleic Acid
+material.palmitic_acid=Palmitic Acid
+material.amblygonite_leach=Amblygonite Leach
+material.roasted_lepidolite=Roasted Lepidolite
+material.lepidolite_leach=Lepidolite Leach
+material.neutralized_lepidolite_leach=Neutralized Lepidolite Leach
+material.aluminium_free_lepidolite_leach=Aluminium-Free Lepidolite Leach
+material.alkaline_lepidolite_leach=Alkaline Lepidolite Leach
+material.dilute_hydrofluoric_acid=Dilute Hydrofluoric Acid
+material.fused_beryl=Fused Beryl
 
 # Thermodynamics
 
@@ -842,6 +878,10 @@ material.hot_nitrogen=Hot Nitrogen
 material.ethylene_glycol=Ethylene Glycol
 material.carbon_disulfide=Carbon Disulfide
 material.iron_sulfate=Iron Sulfate
+material.copper_chloride=Copper Chloride
+material.ruthenium_iv_oxide=Ruthenium IV Oxide
+material.trichlorosilane=Trichlorosilane
+material.purified_trichlorosilane=Purified Trichlorosilane
 
 # Ores
 

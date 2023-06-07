@@ -1374,5 +1374,132 @@ public class FirstDegreeMaterials{
                 .components(Iron, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
+
+        CopperChloride = new Material.Builder(8300, "copper_chloride")
+                .dust()
+                .components(Copper, 1, Chlorine, 2)
+                .colorAverage()
+                .build();
+
+        RutheniumIVOxide = new Material.Builder(8301, "ruthenium_iv_oxide")
+                .dust()
+                .components(Ruthenium, 1, Oxygen, 2)
+                .colorAverage()
+                .build();
+
+        Trichlorosilane = new Material.Builder(8302, "trichlorosilane")
+                .fluid()
+                .components(Hydrogen, 1, Chlorine, 3, Silicon, 1)
+                .color(0x77979e)
+                .build();
+
+        PurifiedTrichlorosilane = new Material.Builder(8303, "purified_trichlorosilane")
+                .fluid()
+                .components(Hydrogen, 1, Chlorine, 3, Silicon, 1)
+                .color(0x93b9c2)
+                .build();
+
+        HexafluorosilicicAcid = new Material.Builder(8304, "hexafluorosilicic_acid")
+                .fluid()
+                .components(Hydrogen, 2, Silicon, 1, Fluorine, 6)
+                .colorAverage()
+                .build();
+
+        CrudeLead = new Material.Builder(8305, "crude_lead")
+                .dust().fluid()
+                .fluidTemp(600)
+                .components(Lead, 1)
+                .color(0x1f1926)
+                .build();
+
+        SilverFreeLead = new Material.Builder(8306, "silver_free_lead")
+                .dust().fluid()
+                .fluidTemp(600)
+                .components(Lead, 1)
+                .color(0x26202e)
+                .build();
+
+        BismuthDross = new Material.Builder(8307, "bismuth_dross")
+                .dust().fluid()
+                .fluidTemp(600)
+                .components(Calcium, 1, Magnesium, 2, Bismuth, 2)
+                .color(0x292b45)
+                .build();
+
+        AntimonyDross = new Material.Builder(8308, "antimony_dross")
+                .dust().fluid()
+                .fluidTemp(600)
+                .components(Calcium, 1, Magnesium, 2, Antimony, 2)
+                .color(0x3c3a45)
+                .build();
+
+        ZincDross = new Material.Builder(8309, "zinc_dross")
+                .dust().fluid()
+                .fluidTemp(600)
+                .color(0xb7baa8)
+                .build();
+
+        PurifiedTinIIOxide = new Material.Builder(8310, "purified_tin_ii_oxide")
+                .dust()
+                .iconSet(SHINY)
+                .components(Tin, 1, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        RoastedPetalite = new Material.Builder(8311, "roasted_petalite")
+                .dust()
+                .color(0xabc9c9)
+                .components(Lithium, 1, Aluminium, 1, Silicon, 4, Oxygen, 10)
+                .build()
+                .setFormula("(LiAlSi2O6)(SiO2)2", true)
+
+        BetaSpodumene = new Material.Builder(8312, "beta_spodumene")
+                .dust()
+                .color(0xab7676)
+                .components(Lithium, 1, Aluminium, 1, Silicon, 2, Oxygen, 6)
+                .build();
+
+        LithiumSulfate = new Material.Builder(8313, "lithium_sulfate")
+                .dust()
+                .components(Lithium, 2, Sulfur, 1, Oxygen, 4)
+                .colorAverage()
+                .build();
+
+        AluminiumPhosphate = new Material.Builder(8314, "aluminium_phosphate")
+                .dust()
+                .components(Aluminium, 1, Phosphorus, 1, Oxygen, 4)
+                .colorAverage()
+                .build();
+
+        AluminiumSilicate = new Material.Builder(8316, "aluminium_silicate")
+                .dust()
+                .components(Aluminium, 2, Silicon, 1, Oxygen, 5)
+                .colorAverage()
+                .build();
+
+        SodiumFluorosilicate = new Material.Builder(8317, "sodium_fluorosilicate")
+                .dust()
+                .components(Sodium, 2, Silicon, 1, Fluorine, 6)
+                .colorAverage()
+                .build();
+
+        BerylliumHydroxide = new Material.Builder(8318, "beryllium_hydroxide")
+                .dust()
+                .components(Beryllium, 1, Oxygen, 2, Hydrogen, 2)
+                .colorAverage()
+                .build()
+                .setFormula("Be(OH)2", true)
+
+        BerylliumOxide = new Material.Builder(8319, "beryllium_oxide")
+                .dust()
+                .components(Beryllium, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        BerylliumChloride = new Material.Builder(8320, "beryllium_chloride")
+                .dust().fluid()
+                .components(Beryllium, 1, Chlorine, 2)
+                .colorAverage()
+                .build()
     }
 }

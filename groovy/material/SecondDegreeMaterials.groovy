@@ -260,5 +260,29 @@ public class SecondDegreeMaterials {
                 .components(PotassiumSulfate, 1, Water, 1)
                 .colorAverage()
                 .build()
+
+        DiluteHexafluorosilicicAcid = new Material.Builder(13041, "dilute_hexafluorosilicic_acid")
+                .fluid()
+                .components(Water, 8, HexafluorosilicicAcid, 1)
+                .colorAverage()
+                .build()
+
+        LithiumSulfateSolution = new Material.Builder(13042, "lithium_sulfate_solution")
+                .fluid()
+                .components(Water, 1, LithiumSulfate, 1)
+                .colorAverage()
+                .build()
+
+        DiluteSodiumSulfateSolution = new Material.Builder(13043, "dilute_sodium_sulfate_solution")
+                .fluid()
+                .color(0x9191b3)
+                .build()
+                .setFormula("(H2O)2(Na2SO4)", true);
+
+        DiluteHydrofluoricAcid = new Material.Builder(13044, "dilute_hydrofluoric_acid")
+                .fluid()
+                .components(Water, 2, HydrogenFluoride, 1)
+                .colorAverage()
+                .build()
     }
 }

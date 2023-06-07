@@ -972,5 +972,23 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 3, Hydrogen, 6, Oxygen, 3)
                 .colorAverage()
                 .build()
+
+        OleicAcid = new Material.Builder(15161, 'oleic_acid')
+                .dust().fluid()
+                .components(Carbon, 18, Hydrogen, 34, Oxygen, 2)
+                .color(0xb1d1ae)
+                .build()
+
+        LinoleicAcid = new Material.Builder(15162, 'linoleic_acid')
+                .dust().fluid()
+                .components(Carbon, 18, Hydrogen, 32, Oxygen, 2)
+                .color(0xbfd1a3)
+                .build()
+
+        PalmiticAcid = new Material.Builder(15163, 'palmitic_acid')
+                .dust().fluid()
+                .components(Carbon, 16, Hydrogen, 32, Oxygen, 2)
+                .color(0xd4d392)
+                .build()
     }
 }
