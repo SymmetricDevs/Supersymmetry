@@ -116,8 +116,9 @@ public class FirstDegreeMaterials{
         new Material.Builder(8053, "high_purity_gold")
                     .dust().plate().foil()
                     .iconSet(SHINY)
+                    .flags(DISABLE_DECOMPOSITION)
                     .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
-                    .color(color)
+                    .color(Gold.materialRGB)
                     .components(material, 1)
                     .build();
 
