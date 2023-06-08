@@ -112,7 +112,15 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Osmium, 8050, false, false)
         generatePurifiedElement(Iridium, 8051, false, false)
         generatePurifiedElement(Platinum, 8052, false, false)
-        generatePurifiedElement(Gold, 8053, false, false)
+
+        new Material.Builder(8053, "high_purity_gold")
+                    .dust().plate().foil()
+                    .iconSet(SHINY)
+                    .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                    .color(color)
+                    .components(material, 1)
+                    .build();
+
         generatePurifiedElement(Thallium, 8054, false, false)
         generatePurifiedElement(Lead, 8055, false, false)
         generatePurifiedElement(Bismuth, 8056, false, false)
@@ -1330,5 +1338,85 @@ public class FirstDegreeMaterials{
                 .build();
 
         NickelOxideHydroxide.setFormula("NiO(OH)2", true)
+
+        SilverNitrateSolution = new Material.Builder(8293, "silver_hydroxide_solution")
+                .fluid()
+                .components(Silver, 1, Nitrogen, 1 Oxygen, 3, Water, 1)
+                .colorAverage()
+                .build();
+
+        SilverNitrateSolution.setFormula("(AgNO3)(H2O)", true)
+
+        ChloroauricAcid = new Material.Builder(8294, "chloroauric_acid")
+                .dust()
+                .components(Hydrogen, 1, Gold, 1, Chlorine, 4)
+                .color(0xcc8821)
+                .build();
+
+        ChloroauricAcid.setFormula("H[AuCl4]", true)
+
+        SpentMoebiusElectrolyte = new Material.Builder(8295, "spent_moebius_electrolyte")
+                .fluid()
+                .components(Silver, 1, Nitrogen, 1, Oxygen, 3, Water, 1)
+                .colorAverage()
+                .build();
+
+        SpentMoebiusElectrolyte.setFormula("(?)(AgNO3)(H2O)")
+
+        ActivatedCarbon = new Material.Builder(8296, "activated_carbon")
+                .dust()
+                .components(Carbon, 1)
+                .color(0x38393b)
+                .build();
+
+        SulfuricPGMSolution = new Material.Builder(8297, "sulfuric_pgm_solution")
+                .fluid()
+                .components(SulfuricAcid, 3, HydrochloricAcid, 12, Water, 8)
+                .colorAverage()
+                .build();
+
+        SulfuricPGMSolution.setFormula("(?)(H2SO4)3(HCl)12(H2O)8", true)
+
+        PGMSolution = new Material.Builder(8298, "pgm_solution")
+                .fluid()
+                .components(HydrochloricAcid, 12, Water, 12)
+                .colorAverage()
+                .build();
+
+        PGMSolution.setFormula("(?)(HCl)12(H2O)12", true)
+
+        GoldPlatedSteel = new Material.Builder(8299, "gold_plated_steel")
+                .ingot()
+                .components(Gold, 1, Steel, 1)
+                .colorAverage()
+                .flags(GENERATE_FINE_WIRE)
+                .build();
+
+        GoldConcentrate = new Material.Builder(8300, "gold_concentrate")
+                .dust()
+                .components(SiliconDioxide, 4, Gold, 1)
+                .colorAverage()
+                .iconSet(SAND)
+                .build();
+
+        LoadedCarbon = new Material.Builder(8301, "loaded_carbon")
+                .dust()
+                .components(Sodium, 1, Gold, 1, Carbon, 3, Nitrogen, 2)
+                .color(0x44453b)
+                .build();
+
+        LoadedCarbon.setFormula("(Na[Au(CN)2])C")
+
+        SpentActivatedCarbon = new Material.Builder(8302, "spent_activated_carbon")
+                .dust()
+                .components(Carbon, 1)
+                .color(0x262729)
+                .build();
+
+        WashedActivatedCarbon = new Material.Builder(8303, "washed_activated_carbon")
+                .dust()
+                .components(Carbon, 1)
+                .color(0x2d302b)
+                .build();
     }
 }

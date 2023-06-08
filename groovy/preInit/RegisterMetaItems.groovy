@@ -74,6 +74,10 @@ eventManager.listen {
 
         customMetaItems.addItem(174, "unrefined_boule.gallium_arsenide");
 
+        customMetaItems.addItem(175, "gold_anode_slime")
+        
+        customMetaItems.addItem(176, "silver_anode_slime")
+
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);
