@@ -202,9 +202,9 @@ crafting.replaceShaped("gregtech:gregtech.machine.cutter.mv", metaitem('gregtech
 ])
 
 crafting.replaceShaped("gregtech:gregtech.machine.cutter.hv", metaitem('gregtech:cutter.hv'), [
-    [metaitem('cableGtSingleCopper'), ore('circuitHv'), item('gregtech:transparent_casing')],
+    [metaitem('cableGtSingleGold'), ore('circuitHv'), item('gregtech:transparent_casing')],
 	[metaitem('conveyor.module.hv'), metaitem('gregtech:hull.hv'), metaitem('toolHeadBuzzSawVanadiumSteel')],
-	[ore('circuitHv'), metaitem('cableGtSingleCopper'), metaitem('electric.motor.hv')]
+	[ore('circuitHv'), metaitem('cableGtSingleGold'), metaitem('electric.motor.hv')]
 ])
 
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
