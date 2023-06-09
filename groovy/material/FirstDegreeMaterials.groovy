@@ -1419,5 +1419,49 @@ public class FirstDegreeMaterials{
                 .components(Carbon, 1)
                 .color(0x2d302b)
                 .build();
+
+        CalciumSilicate = new Material.Builder(8304, "calcium_silicate")
+                .dust()
+                .components(Calcium, 2, Silicon, 1, Oxygen, 4)
+                .colorAverage()
+                .build();
+
+        MagnesiumChlorideSolution = new Material.Builder(8305, "magnesium_chloride_solution")
+                .fluid()
+                .components(MagnesiumChloride, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        MagnesiumHydroxide = new Material.Builder(8306, "magnesium_hydroxide")
+                .dust()
+                .components(Magnesium, 1, Oxygen, 2, Hydrogen, 2)
+                .colorAverage()
+                .build();
+
+        MagnesiumHydroxide.setFormula("Mg(OH)2", true)
+
+        MagnesiumSulfate = new Material.Builder(8307, "magnesium_sulfate")
+                .dust()
+                .components(Magnesium, 1, Sulfur, 1, Oxygen, 4)
+                .colorAverage()
+                .build();
+
+        CeriumIVOxide = new Material.Builder(8308, "cerium_iv_oxide")
+                .dust()
+                .components(Cerium, 1, Oxygen, 2)
+                .colorAverage()
+                .build();
+
+        CeriumIIIOxide = new Material.Builder(8309, "cerium_iii_oxide")
+                .dust()
+                .components(Cerium, 2, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        IronSulfate = new Material.Builder(8310, "iron_sulfate")
+                .dust()
+                .components(Iron, 1, Sulfur, 1, Oxygen, 4)
+                .colorAverage()
+                .build();
     }
 }

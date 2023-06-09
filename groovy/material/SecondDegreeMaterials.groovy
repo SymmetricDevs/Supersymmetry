@@ -294,5 +294,17 @@ public class SecondDegreeMaterials {
                 .build();
 
         GoldEluteSolution.setFormula("(NaCN)(NaOH)(Na[Au(CN)2])27(H2O)27", true)
+
+        PotashSolution = new Material.Builder(13045, "potash_solution")
+                .fluid()
+                .components(PotassiumCarbonate, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        PotassiumSulfateSolution = new Material.Builder(13046, "potassium_sulfate_solution")
+                .fluid()
+                .components(PotassiumSulfate, 1, Water, 1)
+                .colorAverage()
+                .build()
     }
 }

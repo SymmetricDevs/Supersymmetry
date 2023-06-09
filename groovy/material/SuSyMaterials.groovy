@@ -76,7 +76,6 @@ class SuSyMaterials {
         public static Material Kieserite;
         public static Material Langbeinite;
         public static Material Polyhalite;
-        public static Material Dolomite;
         public static Material Titanite;
         public static Material Leucoxene;
         public static Material Zircon;
@@ -199,6 +198,17 @@ class SuSyMaterials {
         public static Material ImpureBromine;
         public static Material ChilledLava;
         public static Material ChilledFlueGas;
+        public static Material WoodAsh;
+        public static Material VeryConcentratedBrine;
+        public static Material LangbeiniteLeach;
+        public static Material PolyhaliteLeach;
+        public static Material CarnalliteLeach;
+        public static Material KainiteLeach;
+        public static Material ZeoliteXSolution;
+        public static Material ZeoliteX;
+        public static Material LTSCatalyst;
+        public static Material HTSCatalyst;
+        public static Material SpentBismuthCatalyst;
 
         // Petrochem Materials
 
@@ -465,6 +475,13 @@ class SuSyMaterials {
         public static Material LoadedCarbon;
         public static Material SpentActivatedCarbon;
         public static Material WashedActivatedCarbon;
+        public static Material CalciumSilicate;
+        public static Material MagnesiumChlorideSolution;
+        public static Material MagnesiumHydroxide;
+        public static Material MagnesiumSulfate;
+        public static Material CeriumIVOxide;
+        public static Material CeriumIIIOxide;
+        public static Material IronSulfate;
 
         // Second Degree Materials
 
@@ -514,6 +531,8 @@ class SuSyMaterials {
         public static Material GoldOreSlurry;
         public static Material GoldEluent;
         public static Material GoldEluteSolution;
+        public static Material PotashSolution;
+        public static Material PotassiumSulfateSolution;
 
         // Organic Chemistry Materials
 
