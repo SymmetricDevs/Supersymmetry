@@ -68,7 +68,7 @@ EBF.recipeBuilder()
 //    .inputs(ore('dustSmallFluorite'))
 //     .fluidOutputs(fluid('stainless_steel') * 1440)
 //     .duration(400)
-//     .EUt(Globals.voltAmps[2])
+//     .EUt(Globals.voltAmps[3])
 //     .buildAndRegister()
 
 EBF.recipeBuilder()
@@ -94,7 +94,7 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
     .inputs(ore('dustSmallFluorite'))
     .fluidOutputs(fluid('stainless_steel') * 1440)
     .duration(400)
-    .EUt(Globals.voltAmps[2])
+    .EUt(Globals.voltAmps[3])
     .buildAndRegister()
 
 /*
