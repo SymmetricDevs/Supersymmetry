@@ -10,6 +10,9 @@ println("Running GregTech.groovy...")
 
 //REMOVALS
 
+// Carbon Dust * 2
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustCoal')], null)
+
 // Graphene Dust * 1
 mods.gregtech.mixer.removeByInput(480, [metaitem('dustGraphite'), metaitem('dustSilicon'), metaitem('dustCarbon') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
@@ -553,6 +556,13 @@ mods.gregtech.centrifuge.recipeBuilder()
         .outputs(metaitem('dustCalcite'))
         .duration(40)
         .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.packer.recipeBuilder()
+        .inputs(item('minecraft:sand'))
+        .outputs(metaitem('sand.dust') * 4)
+        .duration(20)
+        .EUt(7)
         .buildAndRegister();
 
 crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [

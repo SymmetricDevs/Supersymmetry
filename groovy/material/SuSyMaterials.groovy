@@ -209,6 +209,7 @@ class SuSyMaterials {
         public static Material LTSCatalyst;
         public static Material HTSCatalyst;
         public static Material SpentBismuthCatalyst;
+        public static Material GoldLeachSolution;
 
         // Petrochem Materials
 
@@ -466,6 +467,15 @@ class SuSyMaterials {
         public static Material NickelHydroxide;
         public static Material NickelChloride;
         public static Material NickelOxideHydroxide;
+        public static Material SilverNitrateSolution;
+        public static Material ChloroauricAcid;
+        public static Material SpentMoebiusElectrolyte;
+        public static Material ActivatedCarbon;
+        public static Material GoldPlatedSteel;
+        public static Material GoldConcentrate;
+        public static Material LoadedCarbon;
+        public static Material SpentActivatedCarbon;
+        public static Material WashedActivatedCarbon;
         public static Material CalciumSilicate;
         public static Material MagnesiumChlorideSolution;
         public static Material MagnesiumHydroxide;
@@ -473,6 +483,8 @@ class SuSyMaterials {
         public static Material CeriumIVOxide;
         public static Material CeriumIIIOxide;
         public static Material IronSulfate;
+        public static Material SulfuricPGMSolution;
+        public static Material PGMSolution;
 
         // Second Degree Materials
 
@@ -515,6 +527,13 @@ class SuSyMaterials {
         public static Material SodiumPerchlorateSolution;
         public static Material SodiumChlorateSolution;
         public static Material DilutedAniline;
+        public static Material ChloroauricAcidSolution;
+        public static Material ZincChlorideSolution;
+        public static Material WohlwillElectrolyte;
+        public static Material SpentWohlwilElectrolyte;
+        public static Material GoldOreSlurry;
+        public static Material GoldEluent;
+        public static Material GoldEluteSolution;
         public static Material PotashSolution;
         public static Material PotassiumSulfateSolution;
 

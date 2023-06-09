@@ -742,6 +742,18 @@ material.hts_catalyst=HTS Catalyst
 material.spent_bismuth_catalyst=Spent Bismuth Catalyst
 material.cerium_iv_oxide=Cerium IV Oxide
 material.cerium_iii_oxide=Cerium III Oxide
+material.gold_leach_solution = Gold Leach Solution
+material.pgm_solution = PGM Solution
+material.sulfuric_pgm_solution = Sulfuric PGM Solution
+material.activated_carbon = Activated Carbon
+material.spent_moebius_electrolyte = Spent Moebius Electrolyte
+material.chloroauric_acid = Chloroauric Acid
+material.silver_nitrate_solution = Silver Nitrate Solution
+material.gold_plated_steel = Gold-Plated Steel
+material.gold_concentrate=Gold Concentrate
+material.loaded_carbon=Loaded Carbon
+material.spent_activated_carbon=Spent Activated Carbon
+material.washed_activated_carbon=Washed Activated Carbon
 
 # Thermodynamics
 
@@ -1163,6 +1175,8 @@ metaitem.unrefined_boule.gallium_arsenide.name=Unrefined Gallium Arsenide Boule
 
 metaitem.zeolite_membrane_support.name=Zeolite Membrane Support
 metaitem.zeolite_membrane.name=Zeolite Membrane
+metaitem.silver_anode_slime.name=Silver Anode Slime
+metaitem.gold_anode_slime.name=Gold Anode Slime
 
 # Multiblocked
 

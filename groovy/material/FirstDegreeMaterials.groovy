@@ -112,7 +112,16 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Osmium, 8050, false, false)
         generatePurifiedElement(Iridium, 8051, false, false)
         generatePurifiedElement(Platinum, 8052, false, false)
-        generatePurifiedElement(Gold, 8053, false, false)
+
+        new Material.Builder(8053, "high_purity_gold")
+                    .ingot()
+                    .iconSet(SHINY)
+                    .flags(GENERATE_FOIL, GENERATE_PLATE, DISABLE_DECOMPOSITION)
+                    .fluidTemp(Gold.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                    .color(Gold.materialRGB)
+                    .components(Gold, 1)
+                    .build();
+
         generatePurifiedElement(Thallium, 8054, false, false)
         generatePurifiedElement(Lead, 8055, false, false)
         generatePurifiedElement(Bismuth, 8056, false, false)
@@ -1331,19 +1340,99 @@ public class FirstDegreeMaterials{
 
         NickelOxideHydroxide.setFormula("NiO(OH)2", true)
 
-        CalciumSilicate = new Material.Builder(8293, "calcium_silicate")
+        SilverNitrateSolution = new Material.Builder(8293, "silver_nitrate_solution")
+                .fluid()
+                .components(Silver, 1, Nitrogen, 1, Oxygen, 3, Water, 1)
+                .colorAverage()
+                .build();
+
+        SilverNitrateSolution.setFormula("(AgNO3)(H2O)", true)
+
+        ChloroauricAcid = new Material.Builder(8294, "chloroauric_acid")
+                .dust()
+                .components(Hydrogen, 1, Gold, 1, Chlorine, 4)
+                .color(0xcc8821)
+                .build();
+
+        ChloroauricAcid.setFormula("H[AuCl4]", true)
+
+        SpentMoebiusElectrolyte = new Material.Builder(8295, "spent_moebius_electrolyte")
+                .fluid()
+                .components(Silver, 1, Nitrogen, 1, Oxygen, 3, Water, 1)
+                .colorAverage()
+                .build();
+
+        SpentMoebiusElectrolyte.setFormula("(?)(AgNO3)(H2O)")
+
+        ActivatedCarbon = new Material.Builder(8296, "activated_carbon")
+                .dust()
+                .components(Carbon, 1)
+                .color(0x38393b)
+                .build();
+
+        SulfuricPGMSolution = new Material.Builder(8297, "sulfuric_pgm_solution")
+                .fluid()
+                .components(SulfuricAcid, 3, HydrochloricAcid, 12, Water, 8)
+                .colorAverage()
+                .build();
+
+        SulfuricPGMSolution.setFormula("(?)(H2SO4)3(HCl)12(H2O)8", true)
+
+        PGMSolution = new Material.Builder(8298, "pgm_solution")
+                .fluid()
+                .components(HydrochloricAcid, 12, Water, 12)
+                .colorAverage()
+                .build();
+
+        PGMSolution.setFormula("(?)(HCl)12(H2O)12", true)
+
+        GoldPlatedSteel = new Material.Builder(8299, "gold_plated_steel")
+                .ingot()
+                .components(Gold, 1, Steel, 1)
+                .colorAverage()
+                .flags(GENERATE_FINE_WIRE)
+                .build();
+
+        GoldConcentrate = new Material.Builder(8300, "gold_concentrate")
+                .dust()
+                .components(SiliconDioxide, 4, Gold, 1)
+                .colorAverage()
+                .iconSet(SAND)
+                .build();
+
+        LoadedCarbon = new Material.Builder(8301, "loaded_carbon")
+                .dust()
+                .components(Sodium, 1, Gold, 1, Carbon, 3, Nitrogen, 2)
+                .color(0x44453b)
+                .build();
+
+        LoadedCarbon.setFormula("(Na[Au(CN)2])C")
+
+        SpentActivatedCarbon = new Material.Builder(8302, "spent_activated_carbon")
+                .dust()
+                .components(Carbon, 1)
+                .color(0x262729)
+                .build();
+
+        WashedActivatedCarbon = new Material.Builder(8303, "washed_activated_carbon")
+                .dust()
+                .components(Carbon, 1)
+                .color(0x2d302b)
+                .build();
+
+        CalciumSilicate = new Material.Builder(8304, "calcium_silicate")
                 .dust()
                 .components(Calcium, 2, Silicon, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
 
-        MagnesiumChlorideSolution = new Material.Builder(8294, "magnesium_chloride_solution")
+        MagnesiumChlorideSolution = new Material.Builder(8305, "magnesium_chloride_solution")
                 .fluid()
                 .components(MagnesiumChloride, 1, Water, 2)
                 .colorAverage()
                 .build();
 
-        MagnesiumHydroxide = new Material.Builder(8295, "magnesium_hydroxide")
+        MagnesiumHydroxide = new Material.Builder(8306, "magnesium_hydroxide")
                 .dust()
                 .components(Magnesium, 1, Oxygen, 2, Hydrogen, 2)
                 .colorAverage()
@@ -1351,25 +1440,25 @@ public class FirstDegreeMaterials{
 
         MagnesiumHydroxide.setFormula("Mg(OH)2", true)
 
-        MagnesiumSulfate = new Material.Builder(8296, "magnesium_sulfate")
+        MagnesiumSulfate = new Material.Builder(8307, "magnesium_sulfate")
                 .dust()
                 .components(Magnesium, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
 
-        CeriumIVOxide = new Material.Builder(8297, "cerium_iv_oxide")
+        CeriumIVOxide = new Material.Builder(8308, "cerium_iv_oxide")
                 .dust()
                 .components(Cerium, 1, Oxygen, 2)
                 .colorAverage()
                 .build();
 
-        CeriumIIIOxide = new Material.Builder(8298, "cerium_iii_oxide")
+        CeriumIIIOxide = new Material.Builder(8309, "cerium_iii_oxide")
                 .dust()
                 .components(Cerium, 2, Oxygen, 3)
                 .colorAverage()
                 .build();
 
-        IronSulfate = new Material.Builder(8299, "iron_sulfate")
+        IronSulfate = new Material.Builder(8310, "iron_sulfate")
                 .dust()
                 .components(Iron, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
