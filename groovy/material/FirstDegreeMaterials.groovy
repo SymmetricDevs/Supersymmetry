@@ -114,12 +114,12 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Platinum, 8052, false, false)
 
         new Material.Builder(8053, "high_purity_gold")
-                    .dust().plate().foil()
+                    .ingot()
                     .iconSet(SHINY)
-                    .flags(DISABLE_DECOMPOSITION)
-                    .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                    .flags(GENERATE_FOIL, GENERATE_PLATE, DISABLE_DECOMPOSITION)
+                    .fluidTemp(Gold.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
                     .color(Gold.materialRGB)
-                    .components(material, 1)
+                    .components(Gold, 1)
                     .build();
 
         generatePurifiedElement(Thallium, 8054, false, false)
@@ -1340,9 +1340,9 @@ public class FirstDegreeMaterials{
 
         NickelOxideHydroxide.setFormula("NiO(OH)2", true)
 
-        SilverNitrateSolution = new Material.Builder(8293, "silver_hydroxide_solution")
+        SilverNitrateSolution = new Material.Builder(8293, "silver_nitrate_solution")
                 .fluid()
-                .components(Silver, 1, Nitrogen, 1 Oxygen, 3, Water, 1)
+                .components(Silver, 1, Nitrogen, 1, Oxygen, 3, Water, 1)
                 .colorAverage()
                 .build();
 

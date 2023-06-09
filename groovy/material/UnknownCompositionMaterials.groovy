@@ -500,5 +500,10 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0x31403f)
                 .build();
+
+        GoldLeachSolution = new Material.Builder(4096, "gold_leach_solution")
+                .fluid()
+                .color(0x9c8a46)
+                .build();
     }
 }           

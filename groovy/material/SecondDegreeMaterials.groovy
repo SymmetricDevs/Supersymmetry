@@ -281,13 +281,13 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        GoldEluent = new Material.Builder(13043, "gold_eluent")
+        GoldEluent = new Material.Builder(13044, "gold_eluent")
                 .fluid()
                 .components(SodiumCyanide, 1, SodiumHydroxide, 1, Water, 27)
                 .colorAverage()
                 .build();
 
-        GoldEluteSolution = new Material.Builder(13044, "gold_elute_solution")
+        GoldEluteSolution = new Material.Builder(13045, "gold_elute_solution")
                 .fluid()
                 .components(SodiumCyanide, 1, SodiumHydroxide, 1, Sodium, 27, Gold, 27, Carbon, 54, Nitrogen, 54, Water, 27)
                 .color(0xbbcc64)
@@ -295,13 +295,13 @@ public class SecondDegreeMaterials {
 
         GoldEluteSolution.setFormula("(NaCN)(NaOH)(Na[Au(CN)2])27(H2O)27", true)
 
-        PotashSolution = new Material.Builder(13045, "potash_solution")
+        PotashSolution = new Material.Builder(13046, "potash_solution")
                 .fluid()
                 .components(PotassiumCarbonate, 1, Water, 1)
                 .colorAverage()
                 .build()
 
-        PotassiumSulfateSolution = new Material.Builder(13046, "potassium_sulfate_solution")
+        PotassiumSulfateSolution = new Material.Builder(13047, "potassium_sulfate_solution")
                 .fluid()
                 .components(PotassiumSulfate, 1, Water, 1)
                 .colorAverage()

@@ -248,7 +248,7 @@ DT.recipeBuilder()
         .buildAndRegister()
 
 BATCH_REACTOR.recipeBuilder()
-        .fluidInputs(fluid('sulfur_dichloride'))
+        .fluidInputs(fluid('sulfur_dichloride') * 1000)
         .fluidInputs(fluid('hydrogen') * 2000)
         .outputs(metaitem('dustSulfur'))
         .fluidOutputs(fluid('hydrogen_chloride') * 2000)

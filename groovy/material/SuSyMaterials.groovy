@@ -209,6 +209,7 @@ class SuSyMaterials {
         public static Material LTSCatalyst;
         public static Material HTSCatalyst;
         public static Material SpentBismuthCatalyst;
+        public static Material GoldLeachSolution;
 
         // Petrochem Materials
 
@@ -482,6 +483,8 @@ class SuSyMaterials {
         public static Material CeriumIVOxide;
         public static Material CeriumIIIOxide;
         public static Material IronSulfate;
+        public static Material SulfuricPGMSolution;
+        public static Material PGMSolution;
 
         // Second Degree Materials
 

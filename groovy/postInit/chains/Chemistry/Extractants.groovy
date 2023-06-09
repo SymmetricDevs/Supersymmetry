@@ -5,7 +5,7 @@ BATCH_REACTOR = recipemap('batch_reactor')
 
 //SODIUM CYANIDE
 FBR.recipeBuilder()
-    .notConsumable(metaitem('catalystBedOxidation'))
+    .notConsumable(metaitem('lv_catalyst_bed_oxidation'))
     .fluidInputs(fluid('methane') * 100)
     .fluidInputs(fluid('ammonia') * 100)
     .fluidInputs(fluid('oxygen') * 150)
