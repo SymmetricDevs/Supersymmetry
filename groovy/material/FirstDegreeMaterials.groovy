@@ -637,12 +637,6 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        SeaWater = new Material.Builder(8181, "sea_water")
-                .fluid()
-                .components(Water, 2, Salt, 1)
-                .color(0x3c5bc2)
-                .build();
-
         TetrafluoroboricAcid = new Material.Builder(8182, "tetrafluoroboric_acid")
                 .fluid()
                 .components(Water, 3, Hydrogen, 1, Boron, 1, Fluorine, 4)
