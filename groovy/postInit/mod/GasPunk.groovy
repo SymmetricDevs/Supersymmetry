@@ -41,17 +41,13 @@ Globals.solders.each { key, val ->
             .buildAndRegister();
 }
 
-//TODO: ADD METHOD TO CREATE WHITE PHOSPHORUS
-/*
 mods.gregtech.mixer.recipeBuilder()
-        .inputs([metaitem('dustWhitePhosphorus')])
-        .fluidInputs([liquid('oxygen') * 1000])
-        .fluidInputs([liquid('smoke_bomb_mix') * 1000])
+        .inputs(metaitem('dustPhosphorus') * 4)
+        .fluidInputs(liquid('oxygen') * 1000)
+        .fluidOutputs(liquid('smoke_bomb_mix') * 1000)
         .duration(200)
         .EUt(60)
         .buildAndRegister();
-
-*/
 
 def GasMapMV = [
     'fluorine': "gaspunk:fluorine",

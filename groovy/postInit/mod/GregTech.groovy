@@ -56,7 +56,6 @@ def ore_smelting_removals = [
         'topaz',
         'lorandite',
         'fluorite',
-        'phosphorite',
         'realgar',
         'amethyst',
         'opal',
@@ -498,28 +497,35 @@ mods.gregtech.macerator.recipeBuilder()
         .inputs(item('susy:resource_block', 2))
         .outputs(metaitem('dustNonMarineEvaporite') * 4)
         .duration(240)
-        .EUt(30)
+        .EUt(7)
         .buildAndRegister();
 
 mods.gregtech.macerator.recipeBuilder()
         .inputs(item('susy:resource_block', 4))
         .outputs(metaitem('dustSulfateEvaporite') * 4)
         .duration(240)
-        .EUt(30)
+        .EUt(7)
         .buildAndRegister();
 
 mods.gregtech.macerator.recipeBuilder()
         .inputs(item('susy:resource_block', 5))
         .outputs(metaitem('dustCarbonateEvaporite') * 4)
         .duration(240)
-        .EUt(30)
+        .EUt(7)
         .buildAndRegister();
 
 mods.gregtech.macerator.recipeBuilder()
         .inputs(item('susy:resource_block', 3))
         .outputs(metaitem('dustHalideEvaporite') * 4)
         .duration(240)
-        .EUt(30)
+        .EUt(7)
+        .buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('susy:resource_block', 12))
+        .outputs(metaitem('dustPhosphorite') * 8)
+        .duration(240)
+        .EUt(7)
         .buildAndRegister();
 
 mods.gregtech.sifter.recipeBuilder()
