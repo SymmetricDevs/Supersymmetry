@@ -10,6 +10,9 @@ println("Running GregTech.groovy...")
 
 //REMOVALS
 
+// Carbon Dust * 2
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustCoal')], null)
+
 // Graphene Dust * 1
 mods.gregtech.mixer.removeByInput(480, [metaitem('dustGraphite'), metaitem('dustSilicon'), metaitem('dustCarbon') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
@@ -190,6 +193,18 @@ crafting.replaceShaped("gregtech:gregtech.machine.macerator.lv", metaitem('gregt
     [metaitem('electric.piston.lv'), metaitem('electric.motor.lv') , metaitem('toolHeadBuzzSawSteel')],
     [metaitem('cableGtSingleTin'), metaitem('cableGtSingleTin'), metaitem('gregtech:hull.lv')],
     [ore('circuitLv'), ore('circuitLv'), metaitem('cableGtSingleTin')]
+])
+
+crafting.replaceShaped("gregtech:gregtech.machine.cutter.mv", metaitem('gregtech:cutter.mv'), [
+    [metaitem('cableGtSingleCopper'), ore('circuitMv'), item('minecraft:glass')],
+	[metaitem('conveyor.module.mv'), metaitem('gregtech:hull.mv'), metaitem('toolHeadBuzzSawAluminium')],
+	[ore('circuitMv'), metaitem('cableGtSingleCopper'), metaitem('electric.motor.mv')]
+])
+
+crafting.replaceShaped("gregtech:gregtech.machine.cutter.hv", metaitem('gregtech:cutter.hv'), [
+    [metaitem('cableGtSingleGold'), ore('circuitHv'), item('gregtech:transparent_casing')],
+	[metaitem('conveyor.module.hv'), metaitem('gregtech:hull.hv'), metaitem('toolHeadBuzzSawVanadiumSteel')],
+	[ore('circuitHv'), metaitem('cableGtSingleGold'), metaitem('electric.motor.hv')]
 ])
 
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
@@ -553,6 +568,13 @@ mods.gregtech.centrifuge.recipeBuilder()
         .outputs(metaitem('dustCalcite'))
         .duration(40)
         .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.packer.recipeBuilder()
+        .inputs(item('minecraft:sand'))
+        .outputs(metaitem('sand.dust') * 4)
+        .duration(20)
+        .EUt(7)
         .buildAndRegister();
 
 crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [

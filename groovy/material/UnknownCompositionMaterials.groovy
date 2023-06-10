@@ -550,6 +550,10 @@ public class UnknownCompositionMaterials {
         AluminiumFreeLepidoliteLeach = new Material.Builder(4105, "aluminium_free_lepidolite_leach")
                 .fluid()
                 .color(0x557365)
+
+        GoldLeachSolution = new Material.Builder(4106, "gold_leach_solution")
+                .fluid()
+                .color(0x9c8a46)
                 .build();
     }
 }           

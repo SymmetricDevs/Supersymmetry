@@ -249,13 +249,59 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        PotashSolution = new Material.Builder(13039, "potash_solution")
+        ChloroauricAcidSolution = new Material.Builder(13039, "chloroauric_acid_solution")
+                .fluid()
+                .components(ChloroauricAcid, 3, NitricAcid, 1, Water, 6)
+                .color(0xd69129)
+                .build();
+
+        ZincChlorideSolution = new Material.Builder(13040, "zinc_chloride_solution")
+                .fluid()
+                .components(ZincChloride, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        WohlwillElectrolyte = new Material.Builder(13041, "wohlwill_electrolyte")
+                .fluid()
+                .components(ChloroauricAcid, 1, Water, 1, HydrogenChloride, 2)
+                .color(0xe8b833)
+                .build();
+
+        SpentWohlwilElectrolyte = new Material.Builder(13042, "spent_wohlwill_electrolyte")
+                .fluid()
+                .components(ChloroauricAcid, 1, Water, 1, HydrogenChloride, 2)
+                .color(0xfacd50)
+                .build();
+
+        SpentWohlwilElectrolyte.setFormula("(?)(H[AuCl4])(H2O)(HCl)2", true)
+
+        GoldOreSlurry = new Material.Builder(13043, "gold_ore_slurry")
+                .fluid()
+                .components(GoldConcentrate, 4, Water, 6)
+                .colorAverage()
+                .build();
+
+        GoldEluent = new Material.Builder(13044, "gold_eluent")
+                .fluid()
+                .components(SodiumCyanide, 1, SodiumHydroxide, 1, Water, 27)
+                .colorAverage()
+                .build();
+
+        GoldEluteSolution = new Material.Builder(13045, "gold_elute_solution")
+                .fluid()
+                .components(SodiumCyanide, 1, SodiumHydroxide, 1, Sodium, 27, Gold, 27, Carbon, 54, Nitrogen, 54, Water, 27)
+                .color(0xbbcc64)
+                .build();
+
+        GoldEluteSolution.setFormula("(NaCN)(NaOH)(Na[Au(CN)2])27(H2O)27", true)
+
+        PotashSolution = new Material.Builder(13046, "potash_solution")
                 .fluid()
                 .components(PotassiumCarbonate, 1, Water, 1)
                 .colorAverage()
                 .build()
 
-        PotassiumSulfateSolution = new Material.Builder(13040, "potassium_sulfate_solution")
+        PotassiumSulfateSolution = new Material.Builder(13047, "potassium_sulfate_solution")
                 .fluid()
                 .components(PotassiumSulfate, 1, Water, 1)
                 .colorAverage()
