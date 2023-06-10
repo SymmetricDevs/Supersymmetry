@@ -551,10 +551,5 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x557365)
                 .build();
-
-        FusedBeryl = new Material.Builder(4106, "fused_beryl")
-                .dust()
-                .color(0x424f3e)
-                .build();
     }
 }           

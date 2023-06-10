@@ -284,5 +284,17 @@ public class SecondDegreeMaterials {
                 .components(Water, 2, HydrogenFluoride, 1)
                 .colorAverage()
                 .build()
+
+        FusedBeryl = new Material.Builder(13045, "fused_beryl")
+                .dust()
+                .components(SodiumFluoroberyllate, 6, Alumina, 2, SiliconDioxide, 15)
+                .color(0x424f3e)
+                .build();
+
+        SodiumFluoroberyllateSolution = new Material.Builder(13046, "sodium_fluoroberyllate_solution")
+                .fluid()
+                .components(SodiumFluoroberyllate, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }
