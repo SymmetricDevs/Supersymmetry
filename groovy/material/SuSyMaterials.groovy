@@ -210,6 +210,11 @@ class SuSyMaterials {
         public static Material HTSCatalyst;
         public static Material SpentBismuthCatalyst;
         public static Material GoldLeachSolution;
+        public static Material EthylenediaminePyrocatechol;
+        public static Material CeramicThickFilmPaste;
+        public static Material BoraxElectrolyte;
+        public static Material FerroelectricCeramicBinding;
+        public static Material ConfiguredCircuitOne;
 
         // Petrochem Materials
 
@@ -485,6 +490,36 @@ class SuSyMaterials {
         public static Material IronSulfate;
         public static Material SulfuricPGMSolution;
         public static Material PGMSolution;
+        public static Material CrudeIronPentacarbonyl;
+        public static Material ChlorinePlasma;
+        public static Material IronTwoThreeOxide;
+        public static Material PurifiedIronTwoThreeOxide;
+        public static Material PurifiedIronIIIOxide;
+        public static Material NickelIIOxide;
+        public static Material CarbonTetrafluoride;
+        public static Material NitrogenTrifluoride;
+        public static Material CobaltFerrite;
+        public static Material StrontiumFerrite;
+        public static Material BariumFerrite;
+        public static Material ManganeseZincFerrite;
+        public static Material StrontiumCarbonate;
+        public static Material BariumCarbonate;
+        public static Material LeadOxide;
+        public static Material TantalumNitride;
+        public static Material RutheniumIVOxide;
+        public static Material BismuthIridate;
+        public static Material IridiumTrichloride;
+        public static Material SodiumBismuthate;
+        public static Material BismuthIIIOxide;
+        public static Material Polydimethylsiloxane;
+        public static Material ManganeseIINitrate;
+        public static Material PurifiedManganeseDioxide;
+        public static Material BariumTitanate;
+        public static Material HafniumTetrachloride;
+        public static Material ZirconiumTetrachloride;
+        public static Material Bismanol;
+        public static Material NeodymiumAlloy;
+        public static Material SamariumAlloy;
 
         // Second Degree Materials
 
@@ -536,6 +571,9 @@ class SuSyMaterials {
         public static Material GoldEluteSolution;
         public static Material PotashSolution;
         public static Material PotassiumSulfateSolution;
+        public static Material BismanolMagnetic;
+        public static Material NeodymiumAlloyMagnetic;
+        public static Material SamariumAlloyMagnetic;
 
         // Organic Chemistry Materials
 

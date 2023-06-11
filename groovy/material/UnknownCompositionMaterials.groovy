@@ -505,5 +505,25 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x9c8a46)
                 .build();
+
+        EthylenediaminePyrocatechol = new Material.Builder(4097, "ethylenediamine_pyrocatechol")
+                .fluid()
+                .color(0x42392f)
+                .build();
+
+        CeramicThickFilmPaste = new Material.Builder(4098, "ceramic_thick_film_paste")
+                .fluid()
+                .color(0x000000)
+                .build();
+
+        BoraxElectrolyte = new Material.Builder(4099, "borax_electrolyte")
+                .fluid()
+                .color(0x85806b)
+                .build();
+
+        FerroelectricCeramicBinding = new Material.Builder(4100, "ferroelectric_ceramic_binding")
+                .fluid()
+                .color(0xede772)
+                .build();
     }
-}           
+}
