@@ -29,6 +29,7 @@ class ChangeFlags {
         ChromiumTrioxide.addFlags("generate_catalyst_bed");
         Iron3Chloride.addFlags("generate_catalyst_bed");
         Alumina.addFlags("generate_catalyst_bed");
+        Silver.addFlags("generate_catalyst_bed");
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
@@ -49,9 +50,6 @@ class ChangeFlags {
 
         oreProp = VanadiferousTitanomagnetite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
-
-        oreProp = Phosphorite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
 
         oreProp = Perovskite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);

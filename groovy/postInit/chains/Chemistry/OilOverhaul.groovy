@@ -20,6 +20,7 @@ CSTR = recipemap('continuous_stirred_tank_reactor')
 CRACKER = recipemap('cracker')
 EBF = recipemap('electric_blast_furnace')
 REFORMER = recipemap('catalytic_reformer_recipes')
+REACTION_FURNACE = recipemap('reaction_furnace')
 
 class Oil {
     String name
@@ -246,9 +247,7 @@ CENTRIFUGE.recipeBuilder()
 .EUt(120)
 .buildAndRegister()
 
-//TODO: MOVE TO REACTION FURNACE
-
-ROASTER.recipeBuilder()
+REACTION_FURNACE.recipeBuilder()
 .fluidInputs(fluid('hydrogen_sulfide') * 3000)
 .fluidInputs(fluid('oxygen') * 3000)
 .fluidOutputs(fluid('uncatalyzed_sulfurous_gases') * 3000)
@@ -257,7 +256,7 @@ ROASTER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-ROASTER.recipeBuilder()
+REACTION_FURNACE.recipeBuilder()
 .fluidInputs(fluid('hydrogen_sulfide') * 3000)
 .fluidInputs(fluid('air') * 9000)
 .fluidOutputs(fluid('uncatalyzed_sulfurous_gases') * 3000)

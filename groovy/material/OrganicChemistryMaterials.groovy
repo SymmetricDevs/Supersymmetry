@@ -941,5 +941,36 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 16, Hydrogen, 16, Oxygen, 6)
                 .colorAverage()
                 .build()
+
+        AceticAnhydride = new Material.Builder(15156, 'acetic_anhydride')
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 3)
+                .color(0x8d939e)
+                .build()
+
+        CelluloseAcetate = new Material.Builder(15157, 'cellulose_acetate')
+                .polymer()
+                .flags(GENERATE_FINE_WIRE)
+                .components(Carbon, 76, Hydrogen, 114, Oxygen, 49)
+                .color(0xd4c9ab)
+                .build()
+
+        Pyridine = new Material.Builder(15158, 'pyridine')
+                .fluid()
+                .components(Carbon, 5, Hydrogen, 5, Nitrogen, 1)
+                .color(0x202836)
+                .build()
+
+        Quinoline = new Material.Builder(15159, 'quinoline')
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 7, Nitrogen, 1)
+                .color(0x2e3620)
+                .build()
+
+        DimethylCarbonate = new Material.Builder(15160, 'dimethyl_carbonate')
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 6, Oxygen, 3)
+                .colorAverage()
+                .build()
     }
 }

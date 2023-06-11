@@ -5366,7 +5366,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6lead–acid battery§r is the first type of rechargeable battery ever created. Compared to more powerful batteries, lead–acid batteries have relatively low energy density. But it\u0027s a start.\n\nCombining Cathodes, Anodes, and a Mogus\n",
+          "desc:8": "The §6lead–acid battery§r is the first type of rechargeable battery ever created. Compared to more powerful batteries, lead–acid batteries have relatively low energy density. But it\u0027s a start.\n\nCombining Cathodes and Anodes makes a Battery.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5619,7 +5619,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 153,
+              "Damage:2": 8100,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -5630,7 +5630,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "gregtech:meta_item_2"
+              "id:8": "gregtech:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -6049,7 +6049,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "You know what to do.",
@@ -6164,7 +6164,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Harder, Better, Faster, Stronger",
@@ -8675,6 +8675,7 @@
     },
     "122:10": {
       "preRequisites:11": [
+        472,
         224
       ],
       "properties:10": {
@@ -14064,8 +14065,13 @@
       }
     },
     "200:10": {
+      "preRequisiteTypes:7": [
+        1,
+        1
+      ],
       "preRequisites:11": [
-        184
+        184,
+        198
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16765,8 +16771,11 @@
       }
     },
     "239:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
       "preRequisites:11": [
-        238
+        99
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -17473,7 +17482,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Hydrogen (H)\n§bAtomic Number§r: 1\n§aAtomic Mass§r: 1.008 amu\n§cMelting Point§r: 13.81 K\n§5Boiling Point§r: 20.28 K\n§6Properties§r: Hydrogen is the lightest §6Element§r, commonly found in the universe. It is used as a fuel, in industrial processes, and is a key component of water and many organic compounds.\n",
+          "desc:8": "§6Element§r: Hydrogen (H)\n§bAtomic Number§r: 1\n§aAtomic Mass§r: 1.008 amu\n§cMelting Point§r: 13.81 K\n§5Boiling Point§r: 20.28 K\n§6Properties§r: Hydrogen is the lightest §6Element§r, commonly found in the universe. It is used as a fuel, in industrial processes, and is a key component of water and many organic compounds.\n\n§lPrimitive:§9 §r§9Water§r can be electrolyzed to get Hydrogen and Oxygen.\n\n§lUniversal:§r\n§6Steam and Syngas§r can be reformed using an LTS or HTS §6catalyst§r to create §6Reformed Syngas§r, which is then passed through a §bPressure Swing Absorbe§rr to make Hydrogen.\n\n§dMethane §rcan be pyrolyzed under a§7 Bismuth catalyst§r at §cEV§r to make Hydrogen.\n\n§lSpecialized:§r\nCerium III Oxide + Water -\u003e Cerium IV Oxide + Hydrogen\nCerium IV Oxide -\u003e Cerium III Oxide + Oxygen ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17925,7 +17934,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Oxygen (O)\n§bAtomic Number§r: 8\n§aAtomic Mass§r: 16.00 amu\n§cMelting Point§r: 54.36 K\n§5Boiling Point§r: 90.20 K\n§6Properties§r: Oxygen is a highly reactive nonmetal and a vital §6Element§r for sustaining life. It is used in various industries, including medical applications and combustion processes.\n",
+          "desc:8": "§6Element§r: Oxygen (O)\n§bAtomic Number§r: 8\n§aAtomic Mass§r: 16.00 amu\n§cMelting Point§r: 54.36 K\n§5Boiling Point§r: 90.20 K\n§6Properties§r: Oxygen is a highly reactive nonmetal and a vital §6Element§r for sustaining life. It is used in various industries, including medical applications and combustion processes.\n\n§lPrimitive:§r\nElectrolyze Water to get Hydrogen and Oxygen.\n\n§lUniversal:§r\n§7Clay§r can be passed through a §aliquid Molecular Sieve §rto make §7Zeolite 13X§r, which can be solidified and then autoclaved to make a §7Zeolite Membrane§r.\nPressure Swing Absorption of Air through this catalyst can be used to make industrial quantities of §bNitrogen and Oxygen§r.\n\n§lSpecialized:\n§rCryogenic distillation [§cWIP§r]",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18105,7 +18114,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Potassium (K)\n§bAtomic Number§r: 19\n§aAtomic Mass§r: 39.10 amu\n§cMelting Point§r: 336.53 K\n§5Boiling Point§r: 1032 K\n§6Properties§r: Potassium is an alkali metal highly reactive with water. It is used in fertilizers, soaps, and in the production of some medications and chemicals.\n",
+          "desc:8": "§6Element§r: Potassium (K)\n§bAtomic Number§r: 19\n§aAtomic Mass§r: 39.10 amu\n§cMelting Point§r: 336.53 K\n§5Boiling Point§r: 1032 K\n§6Properties§r: Potassium is an alkali metal highly reactive with water. It is used in fertilizers, soaps, and in the production of some medications and chemical§ls.\n\nPrimitive:§r\nElectrolyzing molten§7 Rock Salt§r under a§7 graphite electrode§r makes§9 Potassium §rand §2Chlorine§r§r.\n\n§lUniversal: §r§c§r§6Wood Ash§r can be centrifuged to make §aPotash Solution§r, which is then distilled to make Potassium Carbonate.\nPotassium Carbonate can be roasted in Hydrochloric Acid to make §7Rock Salt solution§r, which is electrolyzed to make potassium hydroxide.\n\n§lSpecialized: §r§cN/A\n§r§c\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18173,7 +18182,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Magnesium (Mg)\n§bAtomic Number§r: 12\n§aAtomic Mass§r: 24.31 amu\n§cMelting Point§r: 923 K\n§5Boiling Point§r: 1380 K\n§6Properties§r: Magnesium is an alkaline earth metal known for its lightness and high strength-to-weight ratio. It is used in alloys, pyrotechnics, and as a component in some medications.\n",
+          "desc:8": "§6Element§r: Magnesium (Mg)\n§bAtomic Number§r: 12\n§aAtomic Mass§r: 24.31 amu\n§cMelting Point§r: 923 K\n§5Boiling Point§r: 1380 K\n§6Properties§r: Magnesium is an alkaline earth metal known for its lightness and high strength-to-weight ratio. It is used in alloys, pyrotechnics, and as a component in some medications.\n\nCarnallite can be obtained by sifting a Halide Evaporite deposit. Evaporite deposits can be found in deserts, mostly.\n\nCarnallite can be leached in a Mixer to make Carnallite Leach.\nCarnallite Leach can be crystallized to make Magnesium Chloride.\nMolten Magnesium Chloride can be electrolyzed to make Magnesium.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18241,7 +18250,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§b§6Element§r: Sodium (Na)\n§bAtomic Number§r: 11\n§aAtomic Mass§r: 22.99 amu\n§cMelting Point§r: 370.87 K\n§5Boiling Point§r: 1156 K\n§6Properties§r: Sodium is an alkali metal known for its high reactivity. It is used in various industries, including the production of chemicals, as a coolant, and in the manufacture of batteries.\n",
+          "desc:8": "§b§6Element§r: Sodium (Na)\n§bAtomic Number§r: 11\n§aAtomic Mass§r: 22.99 amu\n§cMelting Point§r: 370.87 K\n§5Boiling Point§r: 1156 K\n§6Properties§r: Sodium is an alkali metal known for its high reactivity. It is used in various industries, including the production of chemicals, as a coolant, and in the manufacture of batteries.\n\n§lPrimitive:§r\nElectrolyzing molten§7 Salt§r under a§7 graphite electrode§r makes§9 Sodium §rand §2Chlorine§r\n\n§lUniversal: §r§cN/A§r\n§lSpecialized: §r§cN/A\n§r§c",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19041,7 +19050,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Manganese (Mn)\n§bAtomic Number§r: 25\n§aAtomic Mass§r: 54.94 amu\n§cMelting Point§r: 1519 K\n§5Boiling Point§r: 2334 K\n§6Properties§r: Manganese is a transition metal used in steel production, batteries, and as a catalyst. It is also a necessary nutrient for humans and plays a role in various biological processes.\n",
+          "desc:8": "§6Element§r: Manganese (Mn)\n§bAtomic Number§r: 25\n§aAtomic Mass§r: 54.94 amu\n§cMelting Point§r: 1519 K\n§5Boiling Point§r: 2334 K\n§6Properties§r: Manganese is a transition metal used for superconductors and as a catalyst. It is also a necessary nutrient for humans and plays a role in various biological processes.\n\n§lPrimitive§r: \nPyrolusite can be smelted with Coke and tiny piles of calcite to create small piles of Manganese.\n\n§lUniversal§r:\nRhodochrosite can be roasted to create Manganese Oxide dust, which can be roasted with Coke to create small piles of Manganese dust.\n\n§lSpecialized§r:\nPyrolusite can be reduced with Natural Gas, CO, Hydrogen or Fuel Oil to create Manganese Oxide in a Reaction Furnace.\nManganese Oxide is leached with Sulfuric Acid to create Crude Manganese II Sulfate solution, which needs to be reacted with Sodium Hydroxide and then put through an Electrolytic Cell to get Manganese.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19449,7 +19458,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Gallium (Ga)\n§bAtomic Number§r: 31\n§aAtomic Mass§r: 69.72 amu\n§cMelting Point§r: 302.91 K\n§5Boiling Point§r: 2477 K\n§6Properties§r: Gallium is a post-transition metal with a low §cMelting Point§r. It is used in semiconductors, LEDs, and as a component in some medical imaging devices.\n",
+          "desc:8": "§6Element§r: Gallium (Ga)\n§bAtomic Number§r: 31\n§aAtomic Mass§r: 69.72 amu\n§cMelting Point§r: 302.91 K\n§5Boiling Point§r: 2477 K\n§6Properties§r: Gallium is a post-transition metal with a low §cMelting Point§r. It is used in semiconductors, LEDs, and as a component in some medical imaging devices.\n\n§lPrimitive: §rGallium can be centrifuged from sphalerite.\n\n§lUniversal: §r§cWIP\n\n§l§r§lSpecialized: §rGallium can be reacted with Chlorine to form Crude Gallium Trichloride.\nCrude Gallium Trichloride needs to be distilled into Gallium Trichloride.\nGallium Trichloride can be reacted with Hydrogen to form High Purity Gallium.\n\nOr, if you don\u0027t want to do the whole process, you can use a Vacuum Distillation Tower.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19585,7 +19594,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Arsenic (As)\n§bAtomic Number§r: 33\n§aAtomic Mass§r: 74.92 amu\n§cMelting Point§r: 1090 K\n§5Boiling Point§r: 887 K\n§6Properties§r: Arsenic is a metalloid with both metallic and nonmetallic properties. It is used in certain pesticides, wood preservatives, and in the production of semiconductors.\n\n§c§r§lPrimitive§r: Sperrylite, Cobaltite and Arsenopyrite and Realgar §rcan be put through an Electric Blast Furnace with oxygen to create §6small piles of Arsenic Trioxide.\n\nThis can be then §6arc furnaced §rwith some §6Carbon §rto create pure Arsenic.\n\n§lUniversal: §r\n§6Proustite§r can allow for arsenic separation using an alkaline leach to create Arsenic III Sulfide.\n\n§6Arsenopyrite/Cobaltit§r§6e§r may also be leached with acid to create Arsenic V Oxide.\n\nProustite can be leached with Sodium Thiosulfate to create a leach, which can be reacted with Sodium Sulfate to make Thiosulfate Thioarsenite.\nThis can then be reacted with Iron III Chloride to make Iron Arsenite.",
+          "desc:8": "§6Element§r: Arsenic (As)\n§bAtomic Number§r: 33\n§aAtomic Mass§r: 74.92 amu\n§cMelting Point§r: 1090 K\n§5Boiling Point§r: 887 K\n§6Properties§r: Arsenic is a metalloid with both metallic and nonmetallic properties. It is used in certain pesticides, wood preservatives, and in the production of semiconductors.\n\n§c§r§lPrimitive§r: Sperrylite, Cobaltite and Arsenopyrite and Realgar §rcan be put through an Electric Blast Furnace with oxygen to create §6small piles of Arsenic Trioxide.\n\nThis can be then §6arc furnaced §rwith some §6Carbon §rto create pure Arsenic.\n\n§lUniversal: §r\n§6Proustite§r can allow for arsenic separation using an alkaline leach to create Arsenic III Sulfide.\n\n§6Arsenopyrite/Cobaltit§r§6e§r may also be leached with acid to create Arsenic V Oxide.\n\nProustite can be leached with Sodium Thiosulfate to create a leach, which can be reacted with Sodium Sulfate to make Thiosulfate Thioarsenite.\nThis can then be reacted with Iron III Chloride to make Iron Arsenite.\n\n§lSpecialized:\n§r§65 Arsenic Trichloride + 6,500 mB Hydrogen Chloride -\u003e 2,000 L Crude Arsenic Trichloride + 3,000 L Water (roaster)\n\nCrude Arsenic Trichloride -\u003e Arsenic Trichloride (distillery)\n\n3,000 L Hydrogen + 1,000 L Arsenic Trichloride -\u003e 1 High Purity Arsenic + 3,000 Hydrogen Chloride",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20567,7 +20576,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Silver (Ag)\n§bAtomic Number§r: 47\n§aAtomic Mass§r: 107.87 amu\n§cMelting Point§r: 1234.93 K\n§5Boiling Point§r: 2435 K\n§6Properties§r: Silver is a transition metal with high electrical conductivity and a distinctive luster. It is used in jewelry, coins, electrical contacts, and in various industrial applications.\n",
+          "desc:8": "Element§r: Silver (Ag)\n§bAtomic Number§r: 47\n§aAtomic Mass§r: 107.87 amu\n§cMelting Point§r: 1234.93 K\n§5Boiling Point§r: 2435 K\n§6Properties§r: Silver is a transition metal with high electrical conductivity and a distinctive luster. It is used in jewelry, coins, electrical contacts, and in various industrial applications.\n\n§lPrimitive§r: Ores such as§6 acanthite (Ag2S)§r are roasted in oxygen or air to form §6silver oxide§r, which may then be reduced with carbon to form §6elemental silver §r(with impurities).§6\n\n§r§lUniversal: §rOres like §6pyrargyrite, proustite or stephanite§r can be leached with §aSodium Cyanide§r in a Batch Reactor to create a Sulfidic Cyanide Leach Solution, which is then reacted with Hydrochloric Acid to make a Cyanide Leach Solution.\n\nThis solution has to be electrolyzed to yield Silver and Arsenic or Antimony.\n\n§lSpecialized: §rTo produce §7high purity silver§r, the Morbius process can be used, in which gold plates are immersed into a Moebius electrolyte.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21752,7 +21761,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Gold (Au)\n§bAtomic Number§r: 79\n§aAtomic Mass§r: 196.97 amu\n§cMelting Point§r: 1337.33 K\n§5Boiling Point§r: 3129 K\n§6Properties§r: Gold is a transition metal known for its attractive appearance and resistance to corrosion. It is used in jewelry, electronics, and in various decorative applications.\n",
+          "desc:8": "§6Element§r: Gold (Au)\n§bAtomic Number§r: 79\n§aAtomic Mass§r: 196.97 amu\n§cMelting Point§r: 1337.33 K\n§5Boiling Point§r: 3129 K\n§6Properties§r: Gold is a transition metal known for its attractive appearance and resistance to corrosion. It is used in jewelry, electronics, and in various decorative applications.\n\n§lPrimitive§r: Natural nuggets of gold and §6electrum§r may be found in nature. Electrum needs to be treated with §bdistilled water§r§r and nitric acid to produce §6Gold §rand Silver Nitrat§le.\n\nUniversal: §r§7Alluvial gold deposits§r are macerated to get §6gold concentrate§r, which is leached in water to get §3Gold Ore Slurry§r.\nIt\u0027s then treated with Sodium Cyanide, Quicklime and Air to get a §6Gold Leach Solution§r, which is reacted with Activated Carbon to get §3Loaded Carbon§r.\nLoaded Carbon is bathed in a Gold Eluent to get a §7§6Gold Elute Solution§r.\nGold Elute is electrolysed with steel wires and a Stainless Steel plate to get §6Gold-Plated Steel Wires§r, which are treated in Nitric Acid to get §6Gold§r.\n§r\n§lSpecialized: §rTo produce high purity gold, the§6 Wohlwill process§r can be used, in which gold plates are immersed into a §6Wohlwill electrolyte§r.\n§l\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25341,7 +25350,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §bMining Drill§r mines§6 nearly infinite rocks§r from a §6deposit block§r. It mines one rock per second while running at LV.\n\nThese rocks are not like normal ores because they have to be §csorted first using an Ore Sorter§r.\n\nWhile building the Mining Drill, the Steel Drill Head must be exactly on top of the deposit block.\n\nThere are 7 different types of deposits: orthomagmatic, magmatic-hydrothermal, hydrothermal, sedimentary, alluvial, metamorphic and residual.\n\n§6\nThe Mining Drill requires:\n- 1 Mining Drill controller\n- 1 Maintenance Hatch\n- 1 Output Hatch\n- 1 Input Hatch\n- 1 Output Bus\n- 1 Input Bus\n- 1 Steel Drill Head\n- 78 Steel Frame Box\n- 3 Steel Gearbox Casing\n- 121 Solid Steel Machine Casing\n\n§rDue to the over 1,000 steel required to build this machine, you should set up an arc furnace and EBF setup for smelting steel more quickly.",
+          "desc:8": "The §bMining Drill§r mines§6 nearly infinite rocks§r from a §6deposit block§r. It mines one rock per second while running at LV.\n\nThese rocks are not like normal ores because they have to be §csorted first using an Ore Sorter§r.\n\nWhile building the Mining Drill, the Steel Drill Head must be exactly on top of the deposit block.\n\nThere are 7 different types of deposits: orthomagmatic, magmatic-hydrothermal, hydrothermal, sedimentary, alluvial, metamorphic and residual. For more info, check JEI.\n\n§6\nThe Mining Drill requires:\n- 1 Mining Drill\n- 1 Maintenance Hatch\n- 1 Output Bus\n- 1 Output Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Energy Hatch\n- 1 Steel Drill Head\n- 278 Steel Frame Box\n- 312 Light Concrete\n- 35 Grate Machine Casing\n- 52 Steel Gearbox Casing\n- 92 Solid Steel Machine Casing\n- 28 Steel Pipe Casing\n\n§rDue to the over 1,000 steel required to build this machine, you should set up an arc furnace and EBF setup for smelting steel more quickly. Also check the §6Better Building §rchapter for info on making concrete.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25382,22 +25391,34 @@
               "id:8": "gregtech:machine"
             },
             "1:10": {
-              "Count:3": 78,
+              "Count:3": 278,
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "gregtech:meta_block_frame_20"
             },
             "2:10": {
-              "Count:3": 3,
+              "Count:3": 52,
               "Damage:2": 1,
               "OreDict:8": "",
               "id:8": "gregtech:turbine_casing"
             },
             "3:10": {
-              "Count:3": 121,
+              "Count:3": 92,
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "gregtech:metal_casing"
+            },
+            "4:10": {
+              "Count:3": 35,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:multiblock_casing"
+            },
+            "5:10": {
+              "Count:3": 312,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:stone_smooth"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -26676,6 +26697,11 @@
       }
     },
     "398:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        1
+      ],
       "preRequisites:11": [
         397,
         391,
@@ -27195,7 +27221,7 @@
     },
     "406:10": {
       "preRequisites:11": [
-        394
+        502
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29520,7 +29546,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "There are 7 types of ore deposits: §6Orthomagmatic, Metamorphic, Sedimentary, Magmatic Hydrothermal, Hydrothermal, Residual and Alluvial§r.\n\nThe Ore Sorter offers §64 recipes for each power tier§r.\nFor instance, using the HV recipe in the Ore Sorter results in a greater variety of ores being generated compared to the LV recipe.\n\n§\n",
+          "desc:8": "There are 7 types of ore deposits: §6Orthomagmatic, Metamorphic, Sedimentary, Magmatic Hydrothermal, Hydrothermal, Residual and Alluvial§r.\n\nThe Ore Sorter offers §64 recipes for each power tier§r.\nFor instance, using the HV recipe in the Ore Sorter results in a greater variety of ores being generated compared to the LV recipe.\n\nOrthomagmatic deposits are found in mountains.\nPlacer and Alluvial deposits are found in beaches, deserts and rivers.\nMagmatic Hydrothermal deposits are found in mountains.\nHydrothermal deposits are found in areas near water.\nSedimentary deposits are found in swamps, bogs, and mesa biomes.\nMetamorphic deposits are found close to mountains, but sometimes in plains and forest biomes too.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29727,8 +29753,13 @@
       }
     },
     "443:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        122
+        122,
+        243
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29755,7 +29786,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Wood Vinegar and Acetic Acid",
@@ -30158,6 +30189,3854 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "industrialrenewal:rail_gate"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "449:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Welcome to the §aPeriodic Table§r. This chapter will list all 118 elements and how to obtain them in several different ways.\n\nEach element has 3 ways to obtain:\n\n§lPrimitive:§r the first way in which an element is produced, not very efficient and limited byproducts.\n\n§lUniversal:§r a more modern way to produce a thing, more efficient and can produce byproducts.\n\n§lSpecialized:§r either for producing §6very high purities §ror further increasing production efficiency and byproducts, typically unlocked later on.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5,
+            "OreDict:8": "",
+            "id:8": "gregtech:warning_sign_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Periodic Table Info",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 449,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "450:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        181
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Oil fractions like §6ethane §rand propane can be roasted with §7steam §rto create Steam Cracked fractions, which can be distilled down to §6ethylene§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "plastic"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Better Polyethylene",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 450,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "451:10": {
+      "preRequisites:11": [
+        404,
+        463,
+        464
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "To turn §6Wafers §rinto §6Doped Wafers§r, Ion Implantation is required.\n\nEach Wafer needs both§6 an N and P dopant§r to be doped. \nN dopants are: §cHigh-Purity§r Arsenic, Antimony, Phosphorus\nP dopants are:§c High-Purity §rAluminium, Gallium, Boron and Indium\n\nSince there are so many possible ways to make a doped wafer, I suggest going to the §cPeriodic Table §rand looking at the Specialized section of each element to figure out how to make its high-purity version. I suggest using Arsenic as an N dopant and either Gallium or Boron as a P dopant.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14666,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Ion Implantation",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 451,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14666,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 5302,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "452:10": {
+      "preRequisites:11": [
+        451,
+        453
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A§6 UV light box §ris used in photolithography to §aexpose and pattern photoresist §ron a substrate using ultraviolet light.\n\nYou can §6etch §ra pattern on the wafer by using photoresist and a photolithography mask.\n\nFor now, etch an §5IC and a RAM pattern §ron the wafer. You will need more of them later.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14640,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "UV Light Box",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 452,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14640,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 5002,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 5102,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "453:10": {
+      "preRequisites:11": [
+        454,
+        455
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §7photoresist §rs a light-sensitive material used in photoengraving, to form a patterned coating on a surface. This process is crucial in the electronics industry.\n\n§6Novolacs Photoresist §o§ris made by mixing phenol and formaldehyde.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "formaldehyde"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Photoresist",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 453,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "novolacs"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "454:10": {
+      "preRequisites:11": [
+        174
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Creosote §rcan be distilled from Coal Tar. §6Creosote §rcan also be distilled into §cPhenol§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "phenol"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Phenol",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 454,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "phenol"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "455:10": {
+      "preRequisites:11": [
+        443
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Wood Vinegar §rcan be distilled to §6Methanol§r, which has to be reacted with Oxygen under a §7Silver catalyst bed §o§rto make Formaldehyde.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "formaldehyde"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Formaldehyde",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 455,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "formaldehyde"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "456:10": {
+      "preRequisites:11": [
+        452
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Pattern Wafers can be §6etched§o§r with Hydrofluoric Acid or Nitric Acid. I suggest using the first.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5403,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Wafer Etching",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 456,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5403,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "457:10": {
+      "preRequisites:11": [
+        456
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Etched wafers need to be§6 electrolyzed with a copper foil and sulfuric acid §rto create a fully-functioning §cWafer§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 566,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "IC Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 457,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5402,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 5404,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "458:10": {
+      "preRequisites:11": [
+        457,
+        459
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Wafers §rneed to be cut in an MV Cutting Saw using Ultrapure Water to make §6Plates§r. §rFor now, make an IC and a RAM plate, as we\u0027ll need it later.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 591,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Wafer Plates",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 458,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 246,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 593,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 592,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "459:10": {
+      "preRequisites:11": [
+        462
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "100 mB§b Demineralized Water §rcan be distilled into§b 5 mB of Ultrapure Water§r. \n\nSince this is a very inefficient process, there are §cseveral things you can do to increase the yield§r:\n\n- Eject the Demineralized Water in a §cVacuum Chamber §rwith §7Steam and turn it into §bDeareated Water§r, then distill it for §l15 mB§r of Ultra Pure Water\n\n- Filter the Deareated Water with §aCellulose Acetate Mesh§r in a §cCompressor§r, turning it into §3Filtered Water§r, then distill it for§l 30 mB §rof Ultra Pure Water. §c§lThis step requires High Voltage and a 9 step chain.§r\n\n- Sterilize the Filtered Water in an§c UV Light Box§r, making §3Sterilized Water§r, then distill it for the highest yield of §l90 mB §rof Ultra Pure Water\n\n§c§lThese last three steps are optional. For more info, look at the Chemistry tab.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ultrapure_water"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Ultrapure Water",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 459,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ultrapure_water"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "460:10": {
+      "preRequisites:11": [
+        399
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Silicon Dioxide §rcan be reacted with Steam and §9Sodium Hydroxide Solution §rto create Sodium Silicate.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8103,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Sodium Silicate",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 460,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sodium_silicate_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "461:10": {
+      "preRequisites:11": [
+        460
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Aluminium can be reacted with the Sodium Hydroxide solution to form §9Sodium Aluminate§r.\n\nThen, Sodium Aluminate and Sodium Silicate can be combined to create §aRaw Molecular Sieve§r.\n\nThe §bRaw Molecular Sieve needs to be autoclaved §rto finish processing.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4003,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Molecular Sieve",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 461,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4003,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "462:10": {
+      "preRequisites:11": [
+        461
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "An §6Ion Exchange Column§r is a cylindrical structure that selectively §6remove or exchange ions from a solution§r passing through it.\n\nIn an ion exchange column, §bWater §rpasses through beads that attract and exchange mineral ions, resulting in §bdemineralized water§r. This is needed for making ultra-pure water.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14694,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Ion Exchange Column",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 462,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14694,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "demineralized_water"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "463:10": {
+      "preRequisites:11": [
+        466,
+        207
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Gallium can be§c reacted§r with Chlorine to form §6Crude Gallium Trichloride§r.\nCrude Gallium Trichloride needs to be §cdistilled§r into §6Gallium Trichloride§r.\nGallium Trichloride can be §creacted §rwith Hydrogen to form §6High Purity Gallium§r.\n\nOr, if you don\u0027t want to do the whole process, you can use a §aVacuum Distillation Tower§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8022,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "High Purity Gallium",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 463,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8022,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "464:10": {
+      "preRequisites:11": [
+        238
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Arsenic Trioxide §rcan be§c roasted§r with Hydrogen Chloride resulting in the formation of§6 Crude Arsenic Trichloride §rand Water. \n\nThe §6Crude Arsenic Trichloride§r can then be §cdistilled§r to obtain Arsenic Trichloride. \n\nLastly, when 3,000 liters of Hydrogen §creact§r with 1,000 liters of Arsenic Trichloride, it yields §6High Purity Arsenic§r and 3,000 liters of Hydrogen Chloride.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8024,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "High Purity Arsenic",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 464,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8024,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "465:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Glass §rcan be §ctempered §rin an Arc Furnace.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "gregtech:transparent_casing"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tempered Glass",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 465,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:transparent_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "466:10": {
+      "preRequisites:11": [
+        465
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Vacuum distillation §ris a process that involves distilling substances under §6reduced pressure§r, typically below atmospheric pressure. \n\nBy lowering the pressure in the distillation system, the boiling points of the components being distilled are reduced. \n\nThis allows for the§6 separation of substances that have high boiling points or are thermally sensitive§r, like gallium or chlorine.\n\n§6The Vacuum Distillation Tower requires:\n- 1 Vacuum Distillation Tower\n- 1 Energy Hatch (I suggest MV)\n- 1 Output Hatch\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 15 Steel Frame Box\n- 79 Solid Steel Machine Casing\n- 1 Steel Pipe Casing",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14636,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Vacuum Distillation Tower",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 466,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14636,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:transparent_casing"
+            },
+            "2:10": {
+              "Count:3": 15,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_frame_20"
+            },
+            "3:10": {
+              "Count:3": 79,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "467:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6LV Circuit Assembler §ris a required machine in making higher-tier circuits. Note that it is an §6LV§r machine and it requires §6MV §rcircuits. It\u0027s the only machine that does that.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 635,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Circuit Assembler",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 467,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 635,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "468:10": {
+      "preRequisites:11": [
+        394
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Medium Voltage §rbatteries are required to proceed from now on. For now, make an MV battery hull.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 718,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Medium Voltage Battery Hull",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 468,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 718,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "469:10": {
+      "preRequisites:11": [
+        468
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Any of the §63 MV batteries§r can be used to store MV energy.\n\nThere are 3 types of MV batteries:\n- Medium Sodium Battery\n- Medium Cadmium Battery\n- Medium Lithium Battery\n\nThe §6Medium Sodium Battery§r is made with Carbon, Sodium Cathode Alloy, and Dimethyl Carbonate.\n\nThe §6§9Sodium Cathode Alloy§r is made by combining Sodium, Iron and§6 Manganese §rin an EBF.\n\nThe §3Dimethyl Carbonate §ris made by combining §6Methanol and Phosgene§r in a CSTR.\n \n[Methanol can be obtained from §6Wood Vinegar§r, and Phosgene can be obtained by §6reacting Chlorine and Carbon Monoxide§r with a Carbon catalyst.]",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 733,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "Charge:4": 360000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Medium Sodium Battery",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 469,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 733,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "Charge:4": 360000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "470:10": {
+      "preRequisites:11": [
+        468
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Any of the 3 MV batteries can be used to store MV energy.\n\nThere are 3 types of MV batteries:\n- Medium Sodium Battery\n- Medium Cadmium Battery\n- Medium Lithium Battery\n\nThe §bMedium Lithium Battery§r requires §8Graphite§r, §2Lithium Cobalt Oxide§r and §5Lithium Hexafluorophosphate§r.\n\nThe Lithium battery is §csubstantially harder§r to produce than all the other batteries, but if you want to... you can check JEI.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 736,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "Charge:4": 420000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Medium Lithium Battery",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 470,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 736,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "Charge:4": 420000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "471:10": {
+      "preRequisites:11": [
+        468
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Any of the §63 MV batteries§r can be used to store MV energy.\n\nThere are 3 types of MV batteries:\n- Medium Sodium Battery\n- Medium Cadmium Battery\n- Medium Lithium Battery\n\nThe §6Medium Cadmium Battery §rrequires §6Cadmium§r, §2Nickel Oxide Hydroxide§r, and §3Potassium Hydroxide§r.\n\n§7Cadmium§r can be obtained as a byproduct of macerating §6Chalcopyrite §rin an LV+ Macerator.\n\n§bPotassium Hydroxide solution§r can be obtained via an§b Electrolytic Cell§r.\n\nThe§a Nickel Oxide Hydroxide §ris made by:\n\n- Roasting Nickel with Chlorine to make Nickel Chloride\n- Batch Reacting Nickel Chloride with Potassium Hydroxide to make Nickel Hydroxide\n- Reacting it with even more Chlorine and Potassium Hydroxide to make Nickel Oxide Hydroxide",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 739,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "Charge:4": 400000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Medium Cadmium Battery",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 471,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 739,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "Charge:4": 400000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "472:10": {
+      "preRequisites:11": [
+        99
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§5Nickel §rcan be obtained by smelting either §aGarnierite §ror §6Pentlandite §rin a §cPrimitive Blast Furnace§r.\n\nNickel then needs to be alloyed to §6Copper §o§rto make the material required for §ccoils.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 69,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nickel and Cupronickel",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 472,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 16,
+              "Damage:2": 69,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "473:10": {
+      "preRequisites:11": [
+        104
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Smoke Stack §ris a small multi machine that can §cdelete § §rfluids like steam, carbon dioxide, sulfur dioxide, and other stuff that builds up. Check JEI to see what it can remove.\n\n§rThe Smoke Stack requires:\n\n- 1 LV Muffler Hatch\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 1 Smoke Stack",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14637,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Smoke Stack",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 473,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14637,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "474:10": {
+      "preRequisites:11": [
+        174
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Flare Stack §ris a small multi machine that can §cdelete § §roil byproducts. It\u0027s useful if you want to get rid of something annoying in an oil processing setup.\n\n§rThe Flare stack requires:\n- 1 LV Muffler Hatch\n- 1 ULV Energy Hatch\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 1 Flare Stack",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 17007,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Flare Stack",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 474,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 17007,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "475:10": {
+      "preRequisiteTypes:7": [
+        1,
+        1
+      ],
+      "preRequisites:11": [
+        398,
+        404
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §6transistor§r is a miniature semiconductor that regulates or controls current. They are used in §cHV circuits§r.\n\nTransistors are made of §7tin§r, §6polyethylene §rand §8silicon wafers.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 518,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Transistor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 475,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 518,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "476:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Electrum §rdeposits can be found naturally. They contain a source of §7Silver §rand §6Gold§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 277,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Raw Electrum",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 476,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 277,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "477:10": {
+      "preRequisites:11": [
+        476
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Electrum §rcan be treated with Distilled Water and Nitric Acid to create§7§6 Gold§r§r.\n\nFor more info on gold processing, check the Periodic Table.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 41,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Auric Metallurgy",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 477,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 16,
+              "Damage:2": 41,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "478:10": {
+      "preRequisites:11": [
+        458,
+        476,
+        467,
+        475
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§cAdvanced Integrated Circuits §rare the first type of §cHV§r circuits you can make. §rThey\u0027re made from §6MV circuits§r, §7IC and RAM chips§r, §atransistors§r, §b§6and electrum foils§r.\n\nSince this is a very complicated process, requiring a lot of LV circuits for a single HV circuits, you can use the §cMV Circuit Assembler §rto make microprocessors, a better way of making MV and HV circuits.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 625,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§cAdvanced Integrated Circuit",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 478,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 625,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "479:10": {
+      "preRequisites:11": [
+        478
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Well, the process is pretty \"simple\"...\n\nLet\u0027s start with an §6HV machine hull§r. HV cables are made out of §6gold§r. As you know, you should differentiate all LV, MV and HV machinery.\n\n§r---------------------------------------\n§bHIGH VOLTAGE HAS BEEN UNLOCKED! GOOD LUCK.§r\n---------------------------------------\n- Reach the maximum potential range of your missiles\n- Find new metallurgic processes to obtain titanium\n- Unlock flying vehicles to conquer the skies",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 988,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§eCHAPTER 4 // HOW DO I GET TITANIUM?",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 479,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 988,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "480:10": {
+      "preRequisites:11": [
+        478
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6MV circuit assembler §rcan help you make MV and HV circuits more efficiently, making §6Microprocessors§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 636,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "MV Circuit Assembler",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 480,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 636,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "481:10": {
+      "preRequisites:11": [
+        486
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "PVC can be formed in a forming press to make a §6Plastic Circuit Board§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 383,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Plastic Circuit Boards",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 481,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 383,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "482:10": {
+      "preRequisites:11": [
+        485
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Liquid Potassium Bisulfate §r§rcan be electrolyzed under an Iron Rod and a Graphite Rod to obtain §7Potassium Persulfate§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8137,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Potassium Persulfate",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 482,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8137,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "483:10": {
+      "preRequisiteTypes:7": [
+        1,
+        1
+      ],
+      "preRequisites:11": [
+        243,
+        397
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§3Chlorine §rand §7Ethylene §rcan be reacted in a CSTR to form §6Vinyl Chloride§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "vinyl_chloride"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Vinyl Chloride",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 483,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "vinyl_chloride"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "484:10": {
+      "preRequisites:11": [
+        483
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§7Vinyl Chloride §rcan be diluted with §9Water §rto make a §7Vinyl Chloride Solution§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "vinyl_chloride_solution"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Vinyl Chloride Solution",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 484,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "vinyl_chloride_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "485:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§r§7Saltpeter §rcan be reacted with §6Sulfuric Acid §rto make §9Potassium Bisulfate§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "potassium_bisulfate"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Potassium Bisulfate",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 485,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "vinyl_chloride_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "486:10": {
+      "preRequisites:11": [
+        482,
+        484
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Polyvinyl Chloride (§6PVC§r) is a high-strength thermoplastic material. PVC can be used to make §chigh throughput pipes §rand §c§lcircuit boards§r.\n\nFirst,§b polymerize §rthe Vinyl Chloride to make PVC Solution, then §cdry §rit to make PVC pulps.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1007,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Poly Vinyl Chloride (PVC)",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 486,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1007,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "487:10": {
+      "preRequisites:11": [
+        486
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6PVC pipes §rare the highest throughput §6item pipes §rthat are obtainable at MV.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1007,
+            "OreDict:8": "",
+            "id:8": "gregtech:item_pipe_huge"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "PVC Pipes",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 487,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1007,
+              "OreDict:8": "",
+              "id:8": "gregtech:item_pipe_normal"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "488:10": {
+      "preRequisites:11": [
+        481,
+        452
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Add a §6pattern §rto the Plastic Circuit Board using a photoresist and an §cUV light box§r. This is required to make the second tier of HV circuits.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5153,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Patterned Circuit Board",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 488,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5153,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "489:10": {
+      "preRequisites:11": [
+        488
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§7Iron §rcan be §croasted §rwith §3chlorine §rto get §6Iron (III) Chloride§r, an etching agent for circuit boards.\n\nEither Sodium Bisulfate or Iron (III) Chloride can be used to etch Plastic Circuit Boards.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "iron_iii_chloride"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Iron (III) Chloride",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 489,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "iron_iii_chloride"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "490:10": {
+      "preRequisites:11": [
+        488
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Sodium Bisulfate §rcan be used as an §cetching agent §rto make plastic circuit boards.\nIt\u0027s made by reacting §1Saltwater §rand §6Sulfuric Acid §rin a CSTR.\n\nEither Sodium Bisulfate or Iron III Chloride can be used to etch Plastic Circuit Boards.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sodium_bisulfate_solution"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Sodium Bisulfate",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 490,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sodium_bisulfate_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "491:10": {
+      "preRequisites:11": [
+        489,
+        490
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Plastic Circuit Boards §o§rcan be etched with any of the two materials above.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 403,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Good Circuits",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 491,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 403,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "492:10": {
+      "preRequisites:11": [
+        480
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Assemble a §6Capacitor §rwith Polyethylene and Aluminum foils.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 520,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Capacitor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 492,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 520,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "493:10": {
+      "preRequisites:11": [
+        480
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Make a §6CPU §rby etching a silicon wafer with a CPU mask, and then going through the whole process again.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 591,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "CPU Board",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 493,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 591,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "494:10": {
+      "preRequisites:11": [
+        480,
+        492,
+        493,
+        491
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§7Integrated Processors §rare the second type of §cMV§r circuits you can make. §rThey\u0027re made from §6CPU chips§r, §atransistors§r, §b§6§r§6capacitors§r, §cresistors§r, and red alloy wires. \n\nThis is a faster and more efficient way to make MV circuits. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 628,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Integrated Processors",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 494,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 628,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "495:10": {
+      "preRequisites:11": [
+        494
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Microprocessors §rare the second type of §cLV §rcircuit that you make. They are made in the same way as Integrated Processors, but using less materials and a copper foil. \n\nMaking these is faster than making LV circuits manually using the traditional process.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 627,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Microprocessor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 495,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 627,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "496:10": {
+      "preRequisites:11": [
+        494
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "An §6inductor§r is a passive electronic component that temporarily stores energy in a magnetic field. It\u0027s used in making §cHV processors§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 522,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Inductor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 496,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 522,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "497:10": {
+      "preRequisites:11": [
+        496
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Processor Assembly §ris the second type of §cHV Circuit §ryou can make, and it is much faster to make than the §cAdvanced Integrated Circuit§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 629,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Processor Assembly",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 497,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 629,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "498:10": {
+      "preRequisites:11": [
+        394
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Upgrading your EBF with §62 MV energy hatches §rwill make it possible to smelt stuff at 480 EU/t.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1212,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "MV Energy Hatch",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 498,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1212,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "499:10": {
+      "preRequisites:11": [
+        498
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Iron, Silicon and Coke §rcan be combined to get ferrosilicon, a material needed for stainless steel.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8283,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Ferrosilicon",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 499,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8283,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "500:10": {
+      "preRequisites:11": [
+        498
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Fluorite Dust §ris also needed to get Stainless Steel, so let\u0027s get some.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 27113,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Fluorite Dust",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 500,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 27113,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "501:10": {
+      "preRequisites:11": [
+        498
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§cChromite §rcan be roasted to create §6Ferrochrome§r, an impure form of §cchrome§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8282,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Ferrochromium",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 501,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8282,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "502:10": {
+      "preRequisites:11": [
+        499,
+        500,
+        501,
+        503
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Combine §6Ferrosilicon§r, §cFerrochromium§r, §7Carburized Stainless Steel§r, §aFluorite§r §rand §6Quicklime §rto get Stainless Steel. This process is done in an EBF at 480 EU/t and it produces §cmolten §rstainless steel. \n\nIt has to be run through a §6Fluid Solidifier §rbefore actually using it.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 323,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Stainless Steel",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 502,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 323,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "503:10": {
+      "preRequisites:11": [
+        498,
+        504
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Iron, Nickel and Manganese can be combined in an §6HV EBF §rto create molten §cCarburized Stainless Steel§o§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "carburized_stainless_steel"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Carburized Stainless Steel",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 503,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "carburized_stainless_steel"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "504:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Pyrolusite §rcan be smelted in an EBF with Coke to make §6Small Piles of Manganese§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 61,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Manganese",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 504,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 61,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust_small"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "505:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Evaporation Pool §ris a multi machine that can evaporate §9Salt Water, Brine and Concentrated Brine§r to produce industrial amounts of§c Salt§r.\n\nThe Evaporation Pool requires:\n- 1 Evaporation Pool Controller\n- 1 Maintenance Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Output Bus\n- 1 Output Hatch\n- 1 MV energy hatch\n- 784 Evaporation Bed (The Evaporation Bed should be 28x28 in size)\n- 117 Light Concrete\n- 232 Dirt\n\n§cBecause of the extreme amounts of material required, this quest does not require that you hold all the materials at once, but only 64 of each.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 17006,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Evaporation Pool",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 505,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 17006,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 64,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "susy:evaporation_bed"
+            },
+            "2:10": {
+              "Count:3": 64,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:stone_smooth"
+            },
+            "3:10": {
+              "Count:3": 64,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:dirt"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31085,7 +34964,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": 252
+          "y:3": 282
         },
         "15:10": {
           "id:3": 113,
@@ -31099,63 +34978,63 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 480
+          "y:3": 510
         },
         "17:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 252
+          "y:3": 282
         },
         "18:10": {
           "id:3": 116,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
-          "y:3": 348
+          "y:3": 378
         },
         "19:10": {
           "id:3": 119,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -216,
-          "y:3": 336
+          "y:3": 366
         },
         "20:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
-          "y:3": 330
+          "y:3": 360
         },
         "21:10": {
           "id:3": 121,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
-          "y:3": 258
+          "y:3": 288
         },
         "22:10": {
           "id:3": 122,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -210,
-          "y:3": 288
+          "y:3": 318
         },
         "23:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": 294
+          "y:3": 324
         },
         "24:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": 348
+          "y:3": 378
         },
         "25:10": {
           "id:3": 127,
@@ -31169,14 +35048,14 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
-          "y:3": 288
+          "y:3": 318
         },
         "27:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 252
+          "y:3": 282
         },
         "28:10": {
           "id:3": 132,
@@ -31295,21 +35174,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 348
+          "y:3": 378
         },
         "45:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 348
+          "y:3": 378
         },
         "46:10": {
           "id:3": 185,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 396
+          "y:3": 426
         },
         "47:10": {
           "id:3": 186,
@@ -31322,22 +35201,22 @@
           "id:3": 188,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 24,
-          "y:3": 432
+          "x:3": 30,
+          "y:3": 462
         },
         "49:10": {
           "id:3": 189,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 444
+          "y:3": 474
         },
         "50:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": 444
+          "y:3": 474
         },
         "51:10": {
           "id:3": 191,
@@ -31393,42 +35272,42 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
-          "y:3": 252
+          "y:3": 282
         },
         "59:10": {
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
-          "y:3": 300
+          "y:3": 330
         },
         "60:10": {
           "id:3": 200,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 348
+          "x:3": 42,
+          "y:3": 378
         },
         "61:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": 396
+          "y:3": 426
         },
         "62:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": 348
+          "y:3": 378
         },
         "63:10": {
           "id:3": 203,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 144,
-          "y:3": 336
+          "y:3": 366
         },
         "64:10": {
           "id:3": 204,
@@ -31445,270 +35324,270 @@
           "y:3": 108
         },
         "66:10": {
-          "id:3": 207,
+          "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 396
+          "x:3": -204,
+          "y:3": 432
         },
         "67:10": {
+          "id:3": 222,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": 468
+        },
+        "68:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 216
         },
-        "68:10": {
+        "69:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 252
+          "x:3": -186,
+          "y:3": 270
         },
-        "69:10": {
+        "70:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": 396
-        },
-        "70:10": {
-          "id:3": 237,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -102,
-          "y:3": 444
+          "y:3": 426
         },
         "71:10": {
-          "id:3": 238,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -102,
-          "y:3": 516
-        },
-        "72:10": {
           "id:3": 239,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 516
+          "y:3": 546
         },
-        "73:10": {
+        "72:10": {
           "id:3": 240,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": 516
+          "y:3": 546
         },
-        "74:10": {
+        "73:10": {
           "id:3": 241,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 54,
-          "y:3": 516
+          "y:3": 546
         },
-        "75:10": {
+        "74:10": {
           "id:3": 242,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
-          "y:3": 516
+          "y:3": 546
         },
-        "76:10": {
+        "75:10": {
           "id:3": 243,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": 576
         },
-        "77:10": {
+        "76:10": {
           "id:3": 368,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
-          "y:3": 396
+          "y:3": 426
         },
-        "78:10": {
+        "77:10": {
           "id:3": 369,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -78,
           "y:3": 54
         },
-        "79:10": {
+        "78:10": {
           "id:3": 370,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 12
         },
-        "80:10": {
+        "79:10": {
           "id:3": 371,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 444
+          "x:3": -60,
+          "y:3": 426
         },
-        "81:10": {
+        "80:10": {
           "id:3": 372,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 396
+          "x:3": 42,
+          "y:3": 426
         },
-        "82:10": {
+        "81:10": {
           "id:3": 373,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -336,
           "y:3": 492
         },
-        "83:10": {
+        "82:10": {
           "id:3": 374,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -336,
           "y:3": 552
         },
-        "84:10": {
+        "83:10": {
           "id:3": 377,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 210,
-          "y:3": 336
+          "y:3": 366
         },
-        "85:10": {
+        "84:10": {
           "id:3": 378,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 144,
-          "y:3": 402
+          "y:3": 432
         },
-        "86:10": {
+        "85:10": {
           "id:3": 379,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 60,
           "y:3": -102
         },
-        "87:10": {
+        "86:10": {
           "id:3": 380,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 172,
           "y:3": 52
         },
-        "88:10": {
+        "87:10": {
           "id:3": 381,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
-          "y:3": 294
+          "y:3": 324
         },
-        "89:10": {
+        "88:10": {
           "id:3": 383,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 60
         },
-        "90:10": {
+        "89:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": -24
         },
-        "91:10": {
+        "90:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": -66
         },
-        "92:10": {
+        "91:10": {
           "id:3": 386,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": -24
         },
-        "93:10": {
+        "92:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 12
         },
-        "94:10": {
+        "93:10": {
           "id:3": 418,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -40
         },
-        "95:10": {
+        "94:10": {
           "id:3": 419,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
           "y:3": -6
         },
-        "96:10": {
+        "95:10": {
           "id:3": 420,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 66,
           "y:3": -6
         },
-        "97:10": {
+        "96:10": {
           "id:3": 421,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 28,
           "y:3": -40
         },
-        "98:10": {
+        "97:10": {
           "id:3": 438,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -78,
           "y:3": 6
         },
-        "99:10": {
+        "98:10": {
           "id:3": 439,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 222,
-          "y:3": 300
+          "y:3": 330
         },
-        "100:10": {
+        "99:10": {
           "id:3": 440,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": -42
         },
-        "101:10": {
+        "100:10": {
           "id:3": 441,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 126,
           "y:3": -42
         },
-        "102:10": {
+        "101:10": {
           "id:3": 446,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 54,
-          "y:3": 486
+          "y:3": 516
         },
-        "103:10": {
+        "102:10": {
           "id:3": 447,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": 486
+          "y:3": 516
+        },
+        "103:10": {
+          "id:3": 472,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -222,
+          "y:3": 270
         }
       }
     },
@@ -31744,127 +35623,505 @@
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 12
+          "x:3": -84,
+          "y:3": -36
         },
         "1:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 12
+          "x:3": -36,
+          "y:3": -36
         },
         "2:10": {
+          "id:3": 207,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 204,
+          "y:3": -12
+        },
+        "3:10": {
+          "id:3": 238,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 246,
+          "y:3": -12
+        },
+        "4:10": {
           "id:3": 243,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 0,
           "y:3": 0
         },
-        "3:10": {
+        "5:10": {
           "id:3": 391,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -174,
-          "y:3": -66
+          "x:3": -126,
+          "y:3": 150
         },
-        "4:10": {
+        "6:10": {
           "id:3": 394,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 0,
           "y:3": -72
         },
-        "5:10": {
+        "7:10": {
           "id:3": 395,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 12
         },
-        "6:10": {
+        "8:10": {
           "id:3": 396,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": 12
+          "x:3": -48,
+          "y:3": 60
         },
-        "7:10": {
+        "9:10": {
           "id:3": 397,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
-          "y:3": 12
+          "x:3": -48,
+          "y:3": 108
         },
-        "8:10": {
+        "10:10": {
           "id:3": 398,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -168,
-          "y:3": 6
+          "x:3": -54,
+          "y:3": 156
         },
-        "9:10": {
+        "11:10": {
           "id:3": 399,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 72
         },
-        "10:10": {
+        "12:10": {
           "id:3": 400,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 72
         },
-        "11:10": {
+        "13:10": {
           "id:3": 401,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 72
         },
-        "12:10": {
+        "14:10": {
           "id:3": 402,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 72
         },
-        "13:10": {
+        "15:10": {
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
+          "x:3": 180,
           "y:3": 72
         },
-        "14:10": {
+        "16:10": {
           "id:3": 405,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 144,
+          "x:3": 138,
           "y:3": 66
         },
-        "15:10": {
+        "17:10": {
           "id:3": 406,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": -60
+          "x:3": 168,
+          "y:3": -120
         },
-        "16:10": {
+        "18:10": {
           "id:3": 412,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 12
+          "x:3": -48,
+          "y:3": 204
         },
-        "17:10": {
+        "19:10": {
           "id:3": 413,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -252,
+          "x:3": -114,
+          "y:3": 204
+        },
+        "20:10": {
+          "id:3": 443,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 354,
+          "y:3": -12
+        },
+        "21:10": {
+          "id:3": 451,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 222,
+          "y:3": 66
+        },
+        "22:10": {
+          "id:3": 452,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 312,
+          "y:3": 72
+        },
+        "23:10": {
+          "id:3": 453,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 312,
+          "y:3": 24
+        },
+        "24:10": {
+          "id:3": 454,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 354,
+          "y:3": 24
+        },
+        "25:10": {
+          "id:3": 455,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 312,
+          "y:3": -12
+        },
+        "26:10": {
+          "id:3": 456,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 312,
+          "y:3": 120
+        },
+        "27:10": {
+          "id:3": 457,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 264,
+          "y:3": 120
+        },
+        "28:10": {
+          "id:3": 458,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 216,
+          "y:3": 114
+        },
+        "29:10": {
+          "id:3": 459,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 180,
+          "y:3": 120
+        },
+        "30:10": {
+          "id:3": 460,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": 120
+        },
+        "31:10": {
+          "id:3": 461,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 120
+        },
+        "32:10": {
+          "id:3": 462,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 138,
+          "y:3": 114
+        },
+        "33:10": {
+          "id:3": 463,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 204,
+          "y:3": 24
+        },
+        "34:10": {
+          "id:3": 464,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 246,
+          "y:3": 24
+        },
+        "35:10": {
+          "id:3": 465,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 78,
           "y:3": 12
+        },
+        "36:10": {
+          "id:3": 466,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 132,
+          "y:3": 0
+        },
+        "37:10": {
+          "id:3": 467,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 162,
+          "y:3": 168
+        },
+        "38:10": {
+          "id:3": 468,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": -66
+        },
+        "39:10": {
+          "id:3": 469,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": -114
+        },
+        "40:10": {
+          "id:3": 470,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": -66
+        },
+        "41:10": {
+          "id:3": 471,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": -114
+        },
+        "42:10": {
+          "id:3": 475,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 168,
+          "y:3": 222
+        },
+        "43:10": {
+          "id:3": 476,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 270,
+          "y:3": 174
+        },
+        "44:10": {
+          "id:3": 477,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 306,
+          "y:3": 174
+        },
+        "45:10": {
+          "id:3": 478,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 216,
+          "y:3": 168
+        },
+        "46:10": {
+          "id:3": 480,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 216,
+          "y:3": 216
+        },
+        "47:10": {
+          "id:3": 481,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 420,
+          "y:3": 72
+        },
+        "48:10": {
+          "id:3": 482,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 444,
+          "y:3": -42
+        },
+        "49:10": {
+          "id:3": 483,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 396,
+          "y:3": -96
+        },
+        "50:10": {
+          "id:3": 484,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 396,
+          "y:3": -42
+        },
+        "51:10": {
+          "id:3": 485,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 444,
+          "y:3": -96
+        },
+        "52:10": {
+          "id:3": 486,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 414,
+          "y:3": 18
+        },
+        "53:10": {
+          "id:3": 487,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 474,
+          "y:3": 24
+        },
+        "54:10": {
+          "id:3": 488,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 366,
+          "y:3": 72
+        },
+        "55:10": {
+          "id:3": 489,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 348,
+          "y:3": 150
+        },
+        "56:10": {
+          "id:3": 490,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 384,
+          "y:3": 150
+        },
+        "57:10": {
+          "id:3": 491,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 360,
+          "y:3": 216
+        },
+        "58:10": {
+          "id:3": 492,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 270,
+          "y:3": 222
+        },
+        "59:10": {
+          "id:3": 493,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 318,
+          "y:3": 222
+        },
+        "60:10": {
+          "id:3": 494,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 282,
+          "y:3": 282
+        },
+        "61:10": {
+          "id:3": 495,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 348,
+          "y:3": 294
+        },
+        "62:10": {
+          "id:3": 496,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 240,
+          "y:3": 294
+        },
+        "63:10": {
+          "id:3": 497,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 174,
+          "y:3": 282
+        },
+        "64:10": {
+          "id:3": 498,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 6,
+          "y:3": -126
+        },
+        "65:10": {
+          "id:3": 499,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": -168
+        },
+        "66:10": {
+          "id:3": 500,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": -138
+        },
+        "67:10": {
+          "id:3": 501,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": -108
+        },
+        "68:10": {
+          "id:3": 502,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 102,
+          "y:3": -132
+        },
+        "69:10": {
+          "id:3": 503,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": -78
+        },
+        "70:10": {
+          "id:3": 504,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": -36
+        },
+        "71:10": {
+          "id:3": 505,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 6,
+          "y:3": 108
         }
       }
     },
@@ -31895,7 +36152,15 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "quests:9": {}
+      "quests:9": {
+        "0:10": {
+          "id:3": 479,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -12,
+          "y:3": -12
+        }
+      }
     },
     "5:10": {
       "lineID:3": 5,
@@ -32582,8 +36847,8 @@
           "id:3": 443,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 420,
-          "y:3": -240
+          "x:3": 372,
+          "y:3": -282
         },
         "50:10": {
           "id:3": 446,
@@ -32598,6 +36863,83 @@
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 90
+        },
+        "52:10": {
+          "id:3": 450,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": -192
+        },
+        "53:10": {
+          "id:3": 453,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 276,
+          "y:3": -282
+        },
+        "54:10": {
+          "id:3": 454,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 228,
+          "y:3": -282
+        },
+        "55:10": {
+          "id:3": 455,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 324,
+          "y:3": -282
+        },
+        "56:10": {
+          "id:3": 473,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 360,
+          "y:3": -96
+        },
+        "57:10": {
+          "id:3": 474,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 432,
+          "y:3": -96
+        },
+        "58:10": {
+          "id:3": 482,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -192,
+          "y:3": -96
+        },
+        "59:10": {
+          "id:3": 483,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": -144
+        },
+        "60:10": {
+          "id:3": 484,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": -96
+        },
+        "61:10": {
+          "id:3": 485,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -192,
+          "y:3": -144
+        },
+        "62:10": {
+          "id:3": 486,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -168,
+          "y:3": -54
         }
       }
     },
@@ -33908,6 +38250,13 @@
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 204
+        },
+        "118:10": {
+          "id:3": 449,
+          "sizeX:3": 84,
+          "sizeY:3": 84,
+          "x:3": 180,
+          "y:3": -12
         }
       }
     },
@@ -34216,7 +38565,7 @@
     },
     "24:10": {
       "lineID:3": 24,
-      "order:3": 25,
+      "order:3": 26,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -34340,6 +38689,40 @@
           "y:3": -12
         }
       }
+    },
+    "26:10": {
+      "lineID:3": 26,
+      "order:3": 25,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "No Description",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "minecraft:spawn_egg",
+            "tag:10": {
+              "EntityTag:10": {
+                "id:8": "minecraft:pig"
+              }
+            }
+          },
+          "name:8": "Bestiary",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "quests:9": {}
     }
   },
   "questSettings:10": {

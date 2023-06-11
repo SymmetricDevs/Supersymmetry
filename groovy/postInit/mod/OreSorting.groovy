@@ -1,5 +1,3 @@
-//TODO: set ore sorter output slots to 20, uncomment stuff when susycore 0.0.11 is out
-
 import classes.*;
 
 println("Running OreSorting.groovy...")
@@ -12,7 +10,7 @@ int fluid_amount = 100;
 def orthomagmatic_tier_1 = [
     'gregtech:ore_spodumene_0' : 10000,
     'gregtech:ore_lepidolite_0' : 10000,
-    'gregtech:ore_phosphorite_0' : 10000,
+    'susy:resource_block:12' : 10000,
     'gregtech:ore_magnetite_0' : 10000,
     'gregtech:ore_chalcopyrite_0' : 10000,
     'gregtech:ore_sphalerite_0' : 10000,
@@ -24,7 +22,7 @@ def orthomagmatic_tier_2 = [
     'gregtech:ore_lepidolite_0' : 10000,
     'gregtech:ore_perovskite_0' : 10000,
     'gregtech:ore_chromite_0' : 10000,
-    'gregtech:ore_phosphorite_0' : 10000,
+    'susy:resource_block:12' : 10000,
     'gregtech:ore_magnetite_0' : 10000,
     'gregtech:ore_chalcopyrite_0' : 10000,
     'gregtech:ore_sphalerite_0' : 10000,
@@ -40,7 +38,7 @@ def orthomagmatic_tier_3 = [
     'gregtech:ore_perovskite_0' : 10000,
     'minecraft:soul_sand' : 10000,
     'gregtech:ore_chromite_0' : 10000,
-    'gregtech:ore_phosphorite_0' : 10000,
+    'susy:resource_block:12' : 10000,
     'gregtech:ore_magnetite_0' : 10000,
     'gregtech:ore_pentlandite_0' : 10000,
     'gregtech:ore_chalcopyrite_0' : 10000,
@@ -63,7 +61,7 @@ def orthomagmatic_tier_4 = [
     'minecraft:soul_sand' : 10000,
     'gregtech:ore_armstrongite_0' : 10000,
     'gregtech:ore_chromite_0' : 10000,
-    'gregtech:ore_phosphorite_0' : 10000,
+    'susy:resource_block:12' : 10000,
     'gregtech:ore_magnetite_0' : 10000,
     'gregtech:ore_pentlandite_0' : 10000,
     'gregtech:ore_chalcopyrite_0' : 10000,
@@ -121,7 +119,7 @@ def metamorphic_tier_3 = [
 def sedimentary_tier_1 = [
     'gregtech:ore_coal_0' : 10000,
     'gregtech:ore_saltpeter_0' : 10000,
-    'gregtech:ore_phosphorite_0' : 10000,
+    'susy:resource_block:12' : 10000,
     'gregtech:ore_banded_iron_0' : 10000,
     'gregtech:ore_pyrite_0' : 10000,
     'gregtech:ore_malachite_0' : 10000,
@@ -134,7 +132,7 @@ def sedimentary_tier_1 = [
 def sedimentary_tier_2 = [
     'gregtech:ore_coal_0' : 10000,
     'gregtech:ore_saltpeter_0' : 10000,
-    'gregtech:ore_phosphorite_0' : 10000,
+    'susy:resource_block:12' : 10000,
     'gregtech:ore_banded_iron_0' : 10000,
     'gregtech:ore_pyrite_0' : 10000,
     'gregtech:ore_malachite_0' : 10000,
@@ -148,7 +146,7 @@ def sedimentary_tier_2 = [
 def sedimentary_tier_3 = [
     'gregtech:ore_coal_0' : 10000,
     'gregtech:ore_saltpeter_0' : 10000,
-    'gregtech:ore_phosphorite_0' : 10000,
+    'susy:resource_block:12' : 10000,
     'gregtech:ore_banded_iron_0' : 10000,
     'gregtech:ore_pyrite_0' : 10000,
     'gregtech:ore_malachite_0' : 10000,
@@ -166,7 +164,7 @@ def sedimentary_tier_3 = [
 def sedimentary_tier_4 = [
     'gregtech:ore_coal_0' : 10000,
     'gregtech:ore_saltpeter_0' : 10000,
-    'gregtech:ore_phosphorite_0' : 10000,
+    'susy:resource_block:12' : 10000,
     'gregtech:ore_banded_iron_0' : 10000,
     'gregtech:ore_pyrite_0' : 10000,
     'gregtech:ore_malachite_0' : 10000,

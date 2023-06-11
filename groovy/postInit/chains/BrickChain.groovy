@@ -31,7 +31,7 @@ def CompressBrickRecipes(brick_mix, compressed_brick) {
 //Fireclay bricks
 
 def fireclay_ingredients = [
-    metaitem('slaked_lime'),
+    metaitem('dustCalciumHydroxide'),
     metaitem("sand.dust"),
     metaitem('dustFlint'),
     metaitem('dustClay')
@@ -51,15 +51,9 @@ crafting.addShapeless('ManualFireclay',metaitem('dustFireclay') * 2, fireclay_in
 crafting.addShaped('pfb_casing_firebricks', item('gregtech:metal_casing', 1), [
     [metaitem('brick.fireclay'),metaitem('brick.fireclay')],
     [metaitem('brick.fireclay'),metaitem('brick.fireclay')]
-]) 
+])
 
-crafting.addShaped('slaked_lime_manual', metaitem('slaked_lime') * 8, [
-    [metaitem('dustQuicklime'),metaitem('dustQuicklime'),metaitem('dustQuicklime')],
-    [metaitem('dustQuicklime'),item('minecraft:water_bucket'),metaitem('dustQuicklime')],
-    [metaitem('dustQuicklime'),metaitem('dustQuicklime'),metaitem('dustQuicklime')]])
-
-
-crafting.addShaped('slaked_lime_manual', metaitem('slaked_lime') * 8, [
+crafting.addShaped('slaked_lime_manual', metaitem('dustCalciumHydroxide') * 8, [
     [metaitem('dustQuicklime'),metaitem('dustQuicklime'),metaitem('dustQuicklime')],
     [metaitem('dustQuicklime'),fluid('water') * 1000, metaitem('dustQuicklime')],
     [metaitem('dustQuicklime'),metaitem('dustQuicklime'),metaitem('dustQuicklime')]])

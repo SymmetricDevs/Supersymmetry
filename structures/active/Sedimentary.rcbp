@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "biomes": "$PLAINS"
+    },
+    {
+      "biomes": "$SWAMP"
+    },
+    {
+      "biomes": "$SANDY"
+    },
+    {
+      "biomes": "$SAVANNA"
+    },
+    {
+      "biomes": "$MESA"
+    }
+  ],
+  "metadata": {
+    "title": "Sedimentary",
+    "description": [
+      ""
+    ]
+  }
+}

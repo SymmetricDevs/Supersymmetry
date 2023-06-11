@@ -5,7 +5,7 @@ BATCH_REACTOR = recipemap('batch_reactor')
 
 //SODIUM CYANIDE
 FBR.recipeBuilder()
-    .notConsumable(metaitem('catalystBedPlatinum'))
+    .notConsumable(metaitem('lv_catalyst_bed_oxidation'))
     .fluidInputs(fluid('methane') * 100)
     .fluidInputs(fluid('ammonia') * 100)
     .fluidInputs(fluid('oxygen') * 150)
@@ -33,7 +33,7 @@ DISTILLERY.recipeBuilder()
 
 //SODIUM THIOSULFATE
 BCR.recipeBuilder()
-    .fluidInputs(fluid('sodium_carbonate_solution') * 50)
+    .fluidInputs(fluid('soda_ash_solution') * 50)
     .fluidInputs(fluid('sulfur_dioxide') * 50)
     .fluidOutputs(fluid('sodium_sulfite_solution') * 50)
     .fluidOutputs(fluid('carbon_dioxide') * 50)

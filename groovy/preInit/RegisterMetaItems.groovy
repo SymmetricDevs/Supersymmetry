@@ -24,6 +24,8 @@ eventManager.listen {
         customMetaItems.addItem(102, "cement.dust")
         customMetaItems.addItem(103, "limestone.dust")
         customMetaItems.addItem(104, "shape.mold.rod")
+        customMetaItems.addItem(105, "shape.mold.crucible")
+        customMetaItems.addItem(106, "boron.nitride.crucible")
 
         customMetaItems.addItem(150, "mudbrick_mix")
         customMetaItems.addItem(151, "slaked_lime")
@@ -63,6 +65,22 @@ eventManager.listen {
         customMetaItems.addItem(169, "cracking_catalyst");
 
         customMetaItems.addItem(170, "raw_diamond");
+
+        customMetaItems.addItem(171, "cellulose_acetate_mesh");
+
+        customMetaItems.addItem(172, "unrefined_boule.silicon");
+
+        customMetaItems.addItem(173, "boule.gallium_arsenide");
+
+        customMetaItems.addItem(174, "unrefined_boule.gallium_arsenide");
+
+        customMetaItems.addItem(175, "gold_anode_slime")
+        
+        customMetaItems.addItem(176, "silver_anode_slime")
+
+        customMetaItems.addItem(177, "zeolite_membrane_support");
+
+        customMetaItems.addItem(178, "zeolite_membrane");
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
@@ -133,12 +151,12 @@ eventManager.listen {
         customMetaItems.addItem(4001, "cathode.lead");
         customMetaItems.addItem(4002, "anode.lead");
 
-        customMetaItems.addItem(4003, "battery.mv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(480000, GTValues.MV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4004, "battery.hv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(1440000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        //customMetaItems.addItem(4003, "battery.mv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(480000, GTValues.MV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        //customMetaItems.addItem(4004, "battery.hv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(1440000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
 
-        customMetaItems.addItem(4005, "battery.mv.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(600000, GTValues.MV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4006, "battery.hv.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4007, "battery.ev.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        //customMetaItems.addItem(4005, "battery.mv.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(600000, GTValues.MV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        //customMetaItems.addItem(4006, "battery.hv.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        //customMetaItems.addItem(4007, "battery.ev.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
 
 
         customMetaItems.addItem(4101, "vacuum_tube_components");
@@ -168,6 +186,7 @@ eventManager.listen {
         customMetaItems.addItem(5403, "etched.ulpic");
 
         customMetaItems.addItem(5500, "seed_crystal.silicon");
+        customMetaItems.addItem(5501, "seed_crystal.gallium_arsenide");
 
         //Light Sources 6000-6100
         customMetaItems.addItem(6000, "carbon_arc_lamp");
