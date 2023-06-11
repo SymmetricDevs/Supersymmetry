@@ -12,6 +12,8 @@ def name_removals = [
 "opencomputers:case35",
 "opencomputers:case26",
 "opencomputers:chameliumblock7",
+"opencomputers:material157",
+"opencomputers:chameliumblock158",
 "opencomputers:charger8",
 "opencomputers:disassembler9",
 "opencomputers:diskdrive10",
@@ -44,7 +46,6 @@ def name_removals = [
 "opencomputers:material38",
 "opencomputers:material39", //ALU
 "opencomputers:material40",
-"opencomputers:material41", //disc platter (might need GT process and glorious igblon chain)
 "opencomputers:material42", //interweb !! WARNING !! REDDIT REFERENCE !! ACIDIC !!
 "opencomputers:material46", //tablet case 1
 "opencomputers:material47", //tablet case 2
@@ -55,9 +56,83 @@ def name_removals = [
 "opencomputers:material52", //ink cartridges	
 "opencomputers:material53", 
 "opencomputers:material54", //chamelium
-"opencomputers:material55", //diamond chip
-
-
+"opencomputers:material132", //diamond chip
+"opencomputers:tool55", //analyzer
+"opencomputers:tool56", //remote control
+"opencomputers:tool57", //texture picker
+"opencomputers:tool58", //manual
+"opencomputers:tool61", //nanomachines
+"opencomputers:wrench59", //scrench
+"opencomputers:hoverboots60",
+"opencomputers:component62", //CPUs
+"opencomputers:component63",
+"opencomputers:component64",
+"opencomputers:component65", //Component Buses
+"opencomputers:component66",
+"opencomputers:component67",
+"opencomputers:component68", //RAMs
+"opencomputers:component69",
+"opencomputers:component70",
+"opencomputers:component71",
+"opencomputers:component72",
+"opencomputers:component73",
+"opencomputers:component74", //Servers
+"opencomputers:component75",
+"opencomputers:component76",
+"opencomputers:component77", //APUs
+"opencomputers:component78",
+"opencomputers:component79",
+"opencomputers:component80",
+"opencomputers:card81", //GPUs
+"opencomputers:card82",
+"opencomputers:card83",
+"opencomputers:card84", //Redstone cards
+"opencomputers:card85",
+"opencomputers:card86", //Network cards
+"opencomputers:card87",
+"opencomputers:card88",
+"opencomputers:card89", //Linked cards (interdimensional transfer is too OP i guess)
+"opencomputers:card90", //Data cards
+"opencomputers:card91",
+"opencomputers:card92",
+"opencomputers:upgrade93", //TODO: Angel ring upgrade(might need flight?)
+"opencomputers:upgrade94", //Battery upgrades
+"opencomputers:upgrade95",
+"opencomputers:upgrade96",
+"opencomputers:upgrade97", //TODO: Chunkloader upgrade
+"opencomputers:upgrade98", //Card containers
+"opencomputers:upgrade99",
+"opencomputers:upgrade100",
+"opencomputers:upgrade101", //Upgrade containers
+"opencomputers:upgrade102",
+"opencomputers:upgrade103",
+"opencomputers:upgrade104", //Crafting table upgrade
+"opencomputers:upgrade105", //Storage upgrades
+"opencomputers:upgrade106",
+"opencomputers:upgrade107",
+"opencomputers:upgrade108", //XP upgrades
+"opencomputers:upgrade109", //Generator upgrade (might be unrealistic) TODO
+"opencomputers:upgrade110", //Inventory upgrade
+"opencomputers:upgrade111", //Inventory control upgrade
+"opencomputers:upgrade112", //Navigation upgrade
+"opencomputers:upgrade113", //Piston upgrade
+"opencomputers:upgrade114", //Sign upgrade
+"opencomputers:upgrade115", //Solar generator upgrade (might be unrealistic) TODO
+"opencomputers:upgrade116", //Tank upgrade
+"opencomputers:upgrade117", //Tank control upgrade
+"opencomputers:upgrade118", //Magnet upgrade
+"opencomputers:upgrade119", //Lead upgrade
+"opencomputers:upgrade120", //Hover upgrade
+"opencomputers:upgrade121", //Hover upgrade
+"opencomputers:upgrade122", //Trading upgrade
+"opencomputers:upgrade123", //MFU
+"opencomputers:upgrade124", //Redstone Wireless Card
+"opencomputers:upgrade125", //Sticky Piston Upgrade
+"opencomputers:storage126", //EEPROM
+"opencomputers:storage127", //Floppy
+"opencomputers:storage128", //HDDs
+"opencomputers:storage129",
+"opencomputers:storage130"
 
 ]
 
@@ -70,7 +145,7 @@ for (item in name_removals) {
 for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('oc:cable') * 4)
+			.inputs(ore('cableGtSingleCopper') * 4)
 			.inputs(metaitem('hull.mv'))
 			.inputs(ore('circuitMv'))
             .fluidInputs(solder)
@@ -80,7 +155,7 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('oc:cable') * 4)
+			.inputs(ore('cableGtSingleCopper') * 4)
 			.inputs(metaitem('hull.mv'))
 			.inputs(metaitem('robot.arm.mv'))
 			.inputs(metaitem('conveyor.module.mv') * 2)
@@ -92,7 +167,7 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('oc:cable') * 4)
+			.inputs(ore('cableGtSingleCopper') * 4)
 			.inputs(metaitem('hull.mv'))
 			.inputs(metaitem('screwAluminium') * 4)
 			.inputs(metaitem('rotorSteel') * 2)
@@ -105,7 +180,7 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('oc:cable') * 4)
+			.inputs(ore('cableGtSingleGold') * 4)
 			.inputs(metaitem('hull.hv'))
 			.inputs(metaitem('screwStainlessSteel') * 4)
 			.inputs(metaitem('rotorStainlessSteel') * 2)
@@ -118,7 +193,7 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 			
 	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('oc:cable') * 4)
+			.inputs(ore('cableGtSingleAluminium') * 4)
 			.inputs(metaitem('hull.ev'))
 			.inputs(metaitem('screwTitanium') * 4)
 			.inputs(metaitem('rotorTitanium') * 2)
@@ -133,6 +208,7 @@ for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
 			.inputs(ore('cableGtSingleCopper') * 4)
+			.circuitMeta([1])
             .fluidInputs(solder)
             .outputs(item('opencomputers:charger'))
             .duration(200)
@@ -416,7 +492,7 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('platePolyethylene') * 4)
+			.inputs(ore('platePlastic') * 4)
             .fluidInputs(solder)
             .outputs(item('opencomputers:material', 26))
 			.circuitMeta([15])
@@ -435,7 +511,699 @@ for (solder in soldering_alloys) {
             .EUt(120)
             .buildAndRegister();
 
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('power_unit.mv'))
+			.inputs(ore('cableGtSingleCopper') * 1)
+			.inputs(ore('plateAluminium') * 2)
+			.inputs(metaitem('sensor.mv'))
+			.inputs(ore('circuitMv'))
+            .fluidInputs(solder)
+			.circuitMeta([3])
+            .outputs(item('opencomputers:tool'))
+            .duration(200)
+            .EUt(120)
+            .buildAndRegister();
 
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('power_unit.mv'))
+			.inputs(item('opencomputers:card', 7))
+			.inputs(ore('plateAluminium') * 2)
+			.inputs(metaitem('monitor_screen'))
+			.inputs(ore('circuitMv'))
+            .fluidInputs(solder)
+			.circuitMeta([3])
+            .outputs(item('opencomputers:tool', 2))
+            .duration(200)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(ore('plateAluminium') * 2)
+			.inputs(ore('sensorLv'))
+			.inputs(ore('circuitMv'))
+            .fluidInputs(solder)
+			.circuitMeta([4])
+            .outputs(item('opencomputers:tool', 3))
+            .duration(200)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.central_processing_unit'))
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:component'))
+            .duration(200)
+            .EUt(30)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.central_processing_unit') * 2)
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:component', 1))
+            .duration(200)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.central_processing_unit') * 4)
+			.inputs(metaitem('circuit_board.advanced'))
+            .fluidInputs(solder)
+			.circuitMeta([3])
+            .outputs(item('opencomputers:component', 2))
+            .duration(200)
+            .EUt(480)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.integrated_logic_circuit'))
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:component', 3))
+            .duration(200)
+            .EUt(30)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.integrated_logic_circuit') * 2)
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:component', 4))
+            .duration(200)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.integrated_logic_circuit') * 4)
+			.inputs(metaitem('circuit_board.advanced'))
+            .fluidInputs(solder)
+			.circuitMeta([3])
+            .outputs(item('opencomputers:component', 5))
+            .duration(200)
+            .EUt(480)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.random_access_memory'))
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:component', 6))
+            .duration(200)
+            .EUt(30)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.random_access_memory') * 2)
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:component', 7))
+            .duration(400)
+            .EUt(30)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.random_access_memory') * 4)
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([3])
+            .outputs(item('opencomputers:component', 8))
+            .duration(200)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.random_access_memory') * 6)
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([4])
+            .outputs(item('opencomputers:component', 9))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.random_access_memory') * 8)
+			.inputs(metaitem('circuit_board.advanced'))
+            .fluidInputs(solder)
+			.circuitMeta([5])
+            .outputs(item('opencomputers:component', 10))
+            .duration(200)
+            .EUt(480)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('plate.random_access_memory') * 12)
+			.inputs(metaitem('circuit_board.advanced'))
+            .fluidInputs(solder)
+			.circuitMeta([6])
+            .outputs(item('opencomputers:component', 11))
+            .duration(400)
+            .EUt(480)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component', 7))
+			.inputs(item('opencomputers:component'))
+			.inputs(ore('wireFineCopper') * 4)
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([10])
+            .outputs(item('opencomputers:component', 13))
+            .duration(400)
+            .EUt(30)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component', 9))
+			.inputs(item('opencomputers:component', 1))
+			.inputs(ore('wireFineGold') * 8)
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([11])
+            .outputs(item('opencomputers:component', 14))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component', 11))
+			.inputs(item('opencomputers:component', 2))
+			.inputs(ore('wireFineAluminium') * 16)
+			.inputs(metaitem('circuit_board.advanced'))
+            .fluidInputs(solder)
+			.circuitMeta([12])
+            .outputs(item('opencomputers:component', 15))
+            .duration(400)
+            .EUt(480)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:card', 1))
+			.inputs(item('opencomputers:component', 3))
+			.inputs(item('opencomputers:component'))
+			.inputs(ore('wireFineCopper') * 16)
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:component', 16))
+            .duration(400)
+            .EUt(30)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:card', 2))
+			.inputs(item('opencomputers:component', 4))
+			.inputs(item('opencomputers:component', 2))
+			.inputs(ore('wireFineCopper') * 16)
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:component', 17))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component', 9))
+			.inputs(item('opencomputers:component', 1))
+			.inputs(item('opencomputers:card', 7))
+			.inputs(ore('wireFineGold') * 4)
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([11])
+            .outputs(item('opencomputers:component', 18))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('circuit_board.plastic'))
+			.inputs(ore('circuitMv'))
+			.inputs(metaitem('sensor.mv'))
+			.inputs(metaitem('emitter.mv'))
+			.inputs(ore('lensGlass'))
+            .fluidInputs(solder)
+            .outputs(item('opencomputers:diskdrive'))
+            .duration(200)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component', 6))
+			.inputs(item('opencomputers:component'))
+			.inputs(ore('wireFineCopper') * 4)
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:card', 1))
+            .duration(400)
+            .EUt(30)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component', 8))
+			.inputs(item('opencomputers:component', 1))
+			.inputs(ore('wireFineGold') * 4)
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:card', 2))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+			
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component', 9))
+			.inputs(item('opencomputers:component', 2))
+			.inputs(ore('wireFineAluminium') * 4)
+			.inputs(metaitem('circuit_board.advanced'))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:card', 3))
+            .duration(400)
+            .EUt(480)
+            .buildAndRegister();
+		
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component'))
+			.inputs(ore('wireFineRedAlloy') * 4)
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:card', 4))
+            .duration(400)
+            .EUt(30)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component', 1))
+			.inputs(ore('wireFineRedAlloy') * 16)
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:card', 5))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(ore('gtWireSingleCopper'))
+			.inputs(ore('wireFineCopper') * 4)
+			.inputs(ore('sensorMv'))
+			.inputs(ore('emitterMv'))
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:card', 6))
+            .duration(400)
+            .EUt(30)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(ore('wireFineGold') * 8)
+			.inputs(ore('sensorHv'))
+			.inputs(ore('emitterHv'))
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:card', 7))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(ore('wireFineAluminium') * 8)
+			.inputs(ore('sensorEv'))
+			.inputs(ore('emitterEv'))
+			.inputs(metaitem('circuit_board.advanced'))
+            .fluidInputs(solder)
+			.circuitMeta([3])
+            .outputs(item('opencomputers:card', 8))
+            .duration(400)
+            .EUt(480)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component'))
+			.inputs(ore('wireFineCopper') * 4)
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([10])
+            .outputs(item('opencomputers:card', 10))
+            .duration(400)
+            .EUt(30)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component', 1))
+			.inputs(ore('wireFineGold') * 4)
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([11])
+            .outputs(item('opencomputers:card', 11))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('opencomputers:component', 2))
+			.inputs(ore('wireFineAluminium') * 4)
+			.inputs(metaitem('circuit_board.advanced'))
+            .fluidInputs(solder)
+			.circuitMeta([12])
+            .outputs(item('opencomputers:card', 12))
+            .duration(400)
+            .EUt(480)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('power_unit.mv'))
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 1))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('power_unit.hv'))
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:upgrade', 2))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('power_unit.ev'))
+			.inputs(metaitem('circuit_board.advanced'))
+            .fluidInputs(solder)
+			.circuitMeta([3])
+            .outputs(item('opencomputers:upgrade', 3))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(item('opencomputers:material', 5))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 5))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateStainlessSteel') * 4)
+			.inputs(item('opencomputers:material', 5))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:upgrade', 6))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+			
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateTitanium') * 4)
+			.inputs(item('opencomputers:material', 5))
+            .fluidInputs(solder)
+			.circuitMeta([3])
+            .outputs(item('opencomputers:upgrade', 7))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(metaitem('screwAluminium') * 4)
+            .fluidInputs(solder)
+			.circuitMeta([11])
+            .outputs(item('opencomputers:upgrade', 8))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateStainlessSteel') * 4)
+			.inputs(metaitem('screwStainlessSteel') * 4)
+            .fluidInputs(solder)
+			.circuitMeta([12])
+            .outputs(item('opencomputers:upgrade', 9))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+			
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateTitanium') * 4)
+			.inputs(metaitem('screwTitanium') * 4)
+            .fluidInputs(solder)
+			.circuitMeta([13])
+            .outputs(item('opencomputers:upgrade', 10))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(item('minecraft:crafting_table'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 11))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(ore('oc:hdd1'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 12))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateStainlessSteel') * 4)
+			.inputs(ore('oc:hdd2'))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:upgrade', 13))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+			
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateTitanium') * 4)
+			.inputs(ore('oc:hdd3'))
+            .fluidInputs(solder)
+			.circuitMeta([3])
+            .outputs(item('opencomputers:upgrade', 14))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(metaitem('crate.steel'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 17))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateStainlessSteel') * 4)
+			.inputs(metaitem('robot.arm.hv'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 18))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateStainlessSteel') * 4)
+			.inputs(item('minecraft:compass'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 19))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(metaitem('electric.piston.mv'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 20))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(ore('dyeBlack') * 2)
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 21))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(metaitem('drum.aluminium'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 23))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateStainlessSteel') * 4)
+			.inputs(metaitem('electric.pump.hv'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 24))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateTitanium') * 4)
+			.inputs(ore('stickNeodymiumMagnetic'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 25))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(item('minecraft:lead'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:upgrade', 26))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateTitanium') * 4)
+			.inputs(metaitem('sensor.ev'))
+			.inputs(metaitem('emitter.ev'))
+            .fluidInputs(solder)
+			.circuitMeta([10])
+            .outputs(item('opencomputers:upgrade', 30))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(metaitem('wireFineRedAlloy') * 4)
+			.inputs(metaitem('sensor.mv'))
+			.inputs(metaitem('emitter.mv'))
+            .fluidInputs(solder)
+			.circuitMeta([10])
+            .outputs(item('opencomputers:upgrade', 31))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(metaitem('electric.piston.lv'))
+			.fluidInputs(fluid('glue') * 36)
+			.circuitMeta([10])
+            .outputs(item('opencomputers:upgrade', 32))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(metaitem('component.transistor') * 16)
+			.inputs(metaitem('circuit_board.good'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:storage'))
+            .duration(400)
+            .EUt(30)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(item('opencomputers:material', 12))
+			.inputs(metaitem('platePlastic') * 1)
+			.inputs(ore('dyeBlack'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:storage', 1))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+			
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(item('opencomputers:material', 12))
+			.inputs(metaitem('plateAluminium') * 4)
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:storage', 2))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+			
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(item('opencomputers:material', 12) * 2)
+			.inputs(metaitem('plateStainlessSteel') * 4)
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:storage', 3))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(item('opencomputers:material', 12) * 4)
+			.inputs(metaitem('plateTitanium') * 4)
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:storage', 4))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+
+
+//TODO: Disk Platter
 }
 
+crafting.addShaped('opencomputers:scrench', item('opencomputers:wrench'), [
+    [ore('ingotAluminium'), ore('craftingToolHardHammer'), ore('ingotAluminium')],
+    [ore('ingotSteel'), ore('ingotSteel'), ore('ingotSteel')],
+    [null, ore('ingotSteel'), null]
+])
 
+
+//disk platter
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(ore('lensGlass') * 4)
+			.inputs(ore('dustSmallCobalt'))
+            .outputs(item('opencomputers:material', 12))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
