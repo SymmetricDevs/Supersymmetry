@@ -4,8 +4,6 @@ MIXER = recipemap('mixer')
 DISTILLERY = recipemap('distillery')
 CRYSTALLIZER = recipemap('crystallizer')
 
-//TODO: ADD ELECTROLYSIS OF MOLTEN SODIUM HYDROXIDE
-
 CENTRIFUGE.recipeBuilder()
         .inputs(metaitem('dustWoodAsh') * 10)
         .outputs(metaitem('dustDarkAsh') * 9)

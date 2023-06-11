@@ -1,9 +1,5 @@
 ROASTER = recipemap('roaster')
-EBF = recipemap('electric_blast_furnace')
-BR = recipemap('batch_reactor')
-DISTILLERY = recipemap('distillery')
-
-//TODO: ADD ELECTROLYSIS OF MOLTEN SODIUM HYDROXIDE
+ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 ROASTER.recipeBuilder()
         .inputs(metaitem('dustTrona') * 28)
@@ -21,4 +17,15 @@ ROASTER.recipeBuilder()
         .fluidOutputs(fluid('carbon_monoxide') * 3000)
         .EUt(30)
         .duration(120)
+        .buildAndRegister()
+
+ELECTROLYTIC_CELL.recipeBuilder()
+        .fluidInputs(fluid('sodium_hydroxide') * 432)
+        .notConsumable(metaitem('stickNickel'))
+        .notConsumable(metaitem('stickIron'))
+        .outputs(metaitem('dustSodium'))
+        .fluidOutputs(fluid('oxygen') * 1000)
+        .fluidOutputs(fluid('hydrogen') * 1000)
+        .duration(200)
+        .EUt(Globals.voltAmps[1] * 2)
         .buildAndRegister()

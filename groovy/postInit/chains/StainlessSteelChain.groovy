@@ -9,11 +9,16 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustIron') * 6, metaitem('dustNickel'), metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 3])], null)
 // Stainless Steel Dust * 9
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustIron') * 4, metaitem('dustInvar') * 3, metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+// Stainless Steel * 1296
+mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustIron') * 6, metaitem('dustChrome'), metaitem('dustManganese'), metaitem('dustNickel'), metaitem('circuit.integrated').withNbt(["Configuration": 14])], [fluid('nitrogen') * 9000])
+// Stainless Steel * 1296
+mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustIron') * 6, metaitem('dustChrome'), metaitem('dustManganese'), metaitem('dustNickel'), metaitem('circuit.integrated').withNbt(["Configuration": 4])], null)
 
 
 EBF = recipemap('electric_blast_furnace')
 MIXER = recipemap('mixer')
 ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
+
 EBF.recipeBuilder()
     .inputs(ore('dustIron') * 6)
     .inputs(ore('dustNickel'))
@@ -83,32 +88,28 @@ EBF.recipeBuilder()
 
 
 // AOD Process
-// TODO: ENABLE FLUID INPUTS AFTER ADDING 2 MORE FLUID SLOTS TO THIS
 ADVANCED_ARC_FURNACE.recipeBuilder()
-    //.fluidInputs(fluid('oxygen') * 2000)
-    //.fluidInputs(fluid('argon') * 500)
-    .fluidInputs(fluid('carburized_stainless_steel') * 1440)    
-    .inputs(ore('dustSmallFerrosilicon') * 2)
-    .inputs(ore('dustFerrochromium') * 3)
-    .inputs(ore('dustSmallQuicklime'))
-    .inputs(ore('dustSmallFluorite'))
-    .fluidOutputs(fluid('stainless_steel') * 1440)
-    .duration(400)
-    .EUt(Globals.voltAmps[3])
-    .buildAndRegister()
+        .fluidInputs(fluid('oxygen') * 2000)
+        .fluidInputs(fluid('nitrogen') * 1000)
+        .fluidInputs(fluid('carburized_stainless_steel') * 1440)
+        .inputs(ore('dustSmallFerrosilicon') * 2)
+        .inputs(ore('dustFerrochromium') * 3)
+        .inputs(ore('dustSmallQuicklime'))
+        .inputs(ore('dustSmallFluorite'))
+        .fluidOutputs(fluid('stainless_steel') * 1440)
+        .duration(600)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
 
-/*
 ADVANCED_ARC_FURNACE.recipeBuilder()
-    //.fluidInputs(fluid('oxygen') * 2000)
-    //.fluidInputs(fluid('nitrogen') * 1000)
-    .fluidInputs(fluid('carburized_stainless_steel') * 1440)    
-    .inputs(ore('dustSmallFerrosilicon') * 2)
-    .inputs(ore('dustFerrochromium') * 3)
-    .inputs(ore('dustSmallQuicklime'))
-    .inputs(ore('dustSmallFluorite'))
-    .fluidOutputs(fluid('stainless_steel') * 1440)
-    .duration(600)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
-
- */
+        .fluidInputs(fluid('oxygen') * 2000)
+        .fluidInputs(fluid('argon') * 500)
+        .fluidInputs(fluid('carburized_stainless_steel') * 1440)
+        .inputs(ore('dustSmallFerrosilicon') * 2)
+        .inputs(ore('dustFerrochromium') * 3)
+        .inputs(ore('dustSmallQuicklime'))
+        .inputs(ore('dustSmallFluorite'))
+        .fluidOutputs(fluid('stainless_steel') * 1440)
+        .duration(400)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
