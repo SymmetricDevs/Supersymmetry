@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import gregtech.api.metatileentity.multiblock.CleanroomType
 
 ASSEMBLER = recipemap('assembler')
 FORMING_PRESS = recipemap('forming_press')
@@ -129,29 +130,6 @@ class NDopant {
 new Photoresist("novolacs", 50, 300)
 new Photoresist("pmma", 16, 150)
 
-new Etchant("iron_iii_chloride_solution", "copper", 100, 100)
-new Etchant("sodium_bisulfate_solution", "copper", 100, 100)
-
-new Etchant("nitric_acid", "silicon", 80, 500)
-new Etchant("hydrofluoric_acid", "silicon", 40, 400)
-new Etchant("ethylenediamine_pyrocatechol", "silicon", 40, 80)
-new Etchant("tetramethylammonium_hydroxide_solution", "silicon", 40, 80)
-new Etchant("ethylenediamine_pyrocatechol", "silicon_advanced", 40, 80)
-new Etchant("tetramethylammonium_hydroxide_solution", "silicon_advanced", 40, 80)
-new Etchant("phosphoric_acid", "aluminium", 50, 500)
-new Etchant("nitration_mixture", "indium_tin_oxide", 50, 500)
-new Etchant("hydrochloric_acid", "chrome", 50, 500)
-new Etchant("hydrogen_peroxide", "gallium_arsenide", 50, 500)
-new Etchant("aqua_regia", "gold", 50, 500)
-new Etchant("aqua_regia", "platinum", 50, 500)
-new Etchant("hydrogen_peroxide", "photoresist", 50, 400)
-new Etchant("hydrofluoric_acid", "silicon_dioxide", 40, 400)
-new Etchant("phosphoric_acid", "silicon_nitride", 40, 400)
-new Etchant("hydrofluoric_acid", "titanium", 50, 500)
-new Etchant("hydrogen_peroxide", "tungsten", 50, 500)
-new Etchant("nitric_acid", "titanium_nitride", 50, 500)
-new Etchant("hydrofluoric_acid", "titanium_nitride", 50, 500)
-
 new Etchant("plasma.chlorine", "aluminium", 10, 80)
 new Etchant("plasma.carbon_tetrafluoride", "aluminium", 10, 60)
 new Etchant("plasma.boron_trichloride", "aluminium", 10, 60)
@@ -168,6 +146,29 @@ new Etchant("plasma.nitrogen_trifluoride", "silicon_nitride", 10, 60)
 new Etchant("plasma.boron_trichloride", "titanium", 10, 60)
 new Etchant("plasma.carbon_tetrafluoride", "tungsten", 10, 60)
 
+new Etchant("iron_iii_chloride_solution", "copper", 100, 100)
+new Etchant("sodium_bisulfate_solution", "copper", 100, 100)
+
+new Etchant("ethylenediamine_pyrocatechol", "silicon", 40, 80)
+new Etchant("tetramethylammonium_hydroxide_solution", "silicon", 40, 80)
+new Etchant("ethylenediamine_pyrocatechol", "silicon_advanced", 40, 80)
+new Etchant("tetramethylammonium_hydroxide_solution", "silicon_advanced", 40, 80)
+new Etchant("phosphoric_acid", "aluminium", 50, 700)
+new Etchant("nitration_mixture", "indium_tin_oxide", 50, 700)
+new Etchant("hydrochloric_acid", "chrome", 50, 700)
+new Etchant("hydrogen_peroxide", "gallium_arsenide", 50, 700)
+new Etchant("aqua_regia", "gold", 50, 700)
+new Etchant("aqua_regia", "platinum", 50, 700)
+new Etchant("hydrogen_peroxide", "photoresist", 50, 500)
+new Etchant("hydrofluoric_acid", "silicon_dioxide", 40, 600)
+new Etchant("phosphoric_acid", "silicon_nitride", 40, 600)
+new Etchant("hydrofluoric_acid", "titanium", 50, 700)
+new Etchant("hydrogen_peroxide", "tungsten", 50, 700)
+new Etchant("nitric_acid", "titanium_nitride", 50, 700)
+new Etchant("hydrofluoric_acid", "titanium_nitride", 50, 700)
+new Etchant("nitric_acid", "silicon", 80, 700)
+new Etchant("hydrofluoric_acid", "silicon", 40, 500)
+
 new NDopant("dustHighPurityBoron", 1)
 new NDopant("dustHighPurityGallium", 2)
 new NDopant("dustHighPurityAluminium", 2)
@@ -177,59 +178,111 @@ new PDopant("dustHighPurityAntimony", 1)
 new PDopant("dustHighPurityPhosphorus", 2)
 new PDopant("dustHighPurityArsenic", 3)
 
-def generatePatterningRecipes(input, product, mask, voltageTier, timeMultiplier, int outputMultiplier, int circ) {
+def generatePatterningRecipes(input, product, mask, voltageTier, timeMultiplier, int outputMultiplier, int circ, boolean cleanroom) {
     for (photoresist in Photoresist.photoresists) {
-        UV_LIGHT_BOX.recipeBuilder()
-                .inputs(metaitem(input))
-                .notConsumable(metaitem(mask))
-                .fluidInputs(fluid(photoresist.fluidName) * photoresist.amountUsed)
-                .outputs(metaitem(product) * outputMultiplier)
-                .duration(photoresist.timeUsed * timeMultiplier)
-                .EUt(Globals.voltAmps[voltageTier])
-                .buildAndRegister()
-
-        LASER_ENGRAVER.recipeBuilder()
-                .inputs(metaitem(input))
-                .notConsumable(Globals.circuit(circ))
-                .fluidInputs(fluid(photoresist.fluidName) * (photoresist.amountUsed / 4))
-                .outputs(metaitem(product) * outputMultiplier)
-                .duration((int) (photoresist.timeUsed * timeMultiplier / 10))
-                .EUt(Globals.voltAmps[voltageTier])
-                .buildAndRegister()
-    }
-}
-
-def generateEtchingRecipes(input, product, materialEtched, voltageTier, timeMultiplier) {
-    float ok = 0.5f;
-
-    for (etchant in Etchant.etchants) {
-        if (etchant.materialEtched == materialEtched) {
-            CHEMICAL_BATH.recipeBuilder()
+        if (cleanroom) {
+            UV_LIGHT_BOX.recipeBuilder()
                     .inputs(metaitem(input))
-                    .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
-                    .outputs(metaitem(product))
-                    .duration(etchant.timeUsed * timeMultiplier)
+                    .notConsumable(metaitem(mask))
+                    .fluidInputs(fluid(photoresist.fluidName) * photoresist.amountUsed)
+                    .outputs(metaitem(product) * outputMultiplier)
+                    .duration(photoresist.timeUsed * timeMultiplier)
+                    .cleanroom(CleanroomType.CLEANROOM)
+                    .EUt(Globals.voltAmps[voltageTier])
+                    .buildAndRegister()
+
+            LASER_ENGRAVER.recipeBuilder()
+                    .inputs(metaitem(input))
+                    .notConsumable(Globals.circuit(circ))
+                    .fluidInputs(fluid(photoresist.fluidName) * (photoresist.amountUsed / 4))
+                    .outputs(metaitem(product) * outputMultiplier)
+                    .duration((int) (photoresist.timeUsed * timeMultiplier / 10))
+                    .cleanroom(CleanroomType.CLEANROOM)
+                    .EUt(Globals.voltAmps[voltageTier])
+                    .buildAndRegister()
+        } else {
+            UV_LIGHT_BOX.recipeBuilder()
+                    .inputs(metaitem(input))
+                    .notConsumable(metaitem(mask))
+                    .fluidInputs(fluid(photoresist.fluidName) * photoresist.amountUsed)
+                    .outputs(metaitem(product) * outputMultiplier)
+                    .duration(photoresist.timeUsed * timeMultiplier)
+                    .EUt(Globals.voltAmps[voltageTier])
+                    .buildAndRegister()
+
+            LASER_ENGRAVER.recipeBuilder()
+                    .inputs(metaitem(input))
+                    .notConsumable(Globals.circuit(circ))
+                    .fluidInputs(fluid(photoresist.fluidName) * (photoresist.amountUsed / 4))
+                    .outputs(metaitem(product) * outputMultiplier)
+                    .duration((int) (photoresist.timeUsed * timeMultiplier / 10))
                     .EUt(Globals.voltAmps[voltageTier])
                     .buildAndRegister()
         }
     }
 }
 
-def generateCuttingRecipes(input, product, productMultiplier, voltageTier) {
-    CUTTER.recipeBuilder()
-            .fluidInputs(fluid('ultrapure_water') * 100)
-            .inputs(metaitem(input))
-            .outputs(metaitem(product) * productMultiplier)
-            .duration(900)
-            .EUt(Globals.voltAmps[voltageTier])
-            .buildAndRegister()
+def generateEtchingRecipes(input, product, materialEtched, voltageTier, timeMultiplier, boolean cleanroom) {
+    float ok = 0.5f;
 
-    LASER_ENGRAVER.recipeBuilder()
-            .inputs(metaitem(input))
-            .outputs(metaitem(product) * productMultiplier)
-            .duration(60)
-            .EUt(Globals.voltAmps[voltageTier])
-            .buildAndRegister()
+    for (etchant in Etchant.etchants) {
+        if (etchant.materialEtched == materialEtched) {
+            if (cleanroom) {
+                CHEMICAL_BATH.recipeBuilder()
+                        .inputs(metaitem(input))
+                        .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
+                        .outputs(metaitem(product))
+                        .duration(etchant.timeUsed * timeMultiplier)
+                        .cleanroom(CleanroomType.CLEANROOM)
+                        .EUt(Globals.voltAmps[voltageTier])
+                        .buildAndRegister()
+            } else {
+                CHEMICAL_BATH.recipeBuilder()
+                        .inputs(metaitem(input))
+                        .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
+                        .outputs(metaitem(product))
+                        .duration(etchant.timeUsed * timeMultiplier)
+                        .EUt(Globals.voltAmps[voltageTier])
+                        .buildAndRegister()
+            }
+        }
+    }
+}
+
+def generateCuttingRecipes(input, product, productMultiplier, voltageTier, boolean cleanroom) {
+    if (cleanroom) {
+        CUTTER.recipeBuilder()
+                .fluidInputs(fluid('ultrapure_water') * 100)
+                .inputs(metaitem(input))
+                .outputs(metaitem(product) * productMultiplier)
+                .duration(900)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .EUt(Globals.voltAmps[voltageTier])
+                .buildAndRegister()
+
+        LASER_ENGRAVER.recipeBuilder()
+                .inputs(metaitem(input))
+                .outputs(metaitem(product) * productMultiplier)
+                .duration(60)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .EUt(Globals.voltAmps[voltageTier])
+                .buildAndRegister()
+    } else {
+        CUTTER.recipeBuilder()
+                .fluidInputs(fluid('ultrapure_water') * 100)
+                .inputs(metaitem(input))
+                .outputs(metaitem(product) * productMultiplier)
+                .duration(900)
+                .EUt(Globals.voltAmps[voltageTier])
+                .buildAndRegister()
+
+        LASER_ENGRAVER.recipeBuilder()
+                .inputs(metaitem(input))
+                .outputs(metaitem(product) * productMultiplier)
+                .duration(60)
+                .EUt(Globals.voltAmps[voltageTier])
+                .buildAndRegister()
+    }
 }
 
 //LITHOGRAPHY MASKS
@@ -306,6 +359,7 @@ for (ndopant in NDopant.ndopants) {
             .circuitMeta(1)
             .inputs(metaitem(ndopant.metaItemName))
             .outputs(metaitem('wafer.n_doped.silicon') * ndopant.efficiency)
+            .cleanroom(CleanroomType.CLEANROOM)
             .duration(300)
             .EUt(60)
             .buildAndRegister()
@@ -318,6 +372,7 @@ for (ndopant in NDopant.ndopants) {
                 .inputs(metaitem(pdopant.metaItemName))
                 .inputs(metaitem(ndopant.metaItemName))
                 .outputs(metaitem('wafer.doped.silicon') * batchSize)
+                .cleanroom(CleanroomType.CLEANROOM)
                 .duration(400)
                 .EUt(60)
                 .buildAndRegister()
@@ -326,19 +381,20 @@ for (ndopant in NDopant.ndopants) {
 
 //WAFERS
 
-generatePatterningRecipes('wafer.silicon', 'patterned.ic', 'mask.ic', 2, 4, 1, 0)
-generatePatterningRecipes('wafer.silicon', 'patterned.ram', 'mask.ram', 2, 4, 1, 1)
-generatePatterningRecipes('wafer.doped.silicon', 'patterned.ic', 'mask.ic', 2, 4, 2, 0)
-generatePatterningRecipes('wafer.doped.silicon', 'patterned.ram', 'mask.ram', 2, 4, 2, 1)
-generatePatterningRecipes('wafer.doped.silicon', 'patterned.cpu', 'mask.cpu', 2, 4, 1, 2)
-generatePatterningRecipes('wafer.doped.silicon', 'patterned.ulpic', 'mask.ulpic', 2, 4, 1, 3)
-generatePatterningRecipes('wafer.doped.silicon', 'patterned.lpic', 'mask.lpic', 3, 4, 1, 4)
+generatePatterningRecipes('wafer.silicon', 'patterned.ic', 'mask.ic', 2, 4, 1, 0, false)
+generatePatterningRecipes('wafer.silicon', 'patterned.ram', 'mask.ram', 2, 4, 1, 1, false)
+generatePatterningRecipes('wafer.silicon', 'patterned.ulpic', 'mask.ulpic', 2, 4, 1, 2, false)
+generatePatterningRecipes('wafer.doped.silicon', 'patterned.ic', 'mask.ic', 2, 4, 2, 0, true)
+generatePatterningRecipes('wafer.doped.silicon', 'patterned.ram', 'mask.ram', 2, 4, 2, 1, true)
+generatePatterningRecipes('wafer.doped.silicon', 'patterned.cpu', 'mask.cpu', 2, 4, 1, 2, true)
+generatePatterningRecipes('wafer.doped.silicon', 'patterned.ulpic', 'mask.ulpic', 2, 4, 2, 3, true)
+generatePatterningRecipes('wafer.doped.silicon', 'patterned.lpic', 'mask.lpic', 3, 4, 1, 4, true)
 
-generateEtchingRecipes('patterned.ic', 'etched.ic', 'silicon', 1, 1)
-generateEtchingRecipes('patterned.cpu', 'etched.cpu', 'silicon', 1, 1)
-generateEtchingRecipes('patterned.ram', 'etched.ram', 'silicon', 1, 1)
-generateEtchingRecipes('patterned.ulpic', 'etched.ulpic', 'silicon', 1, 1)
-generateEtchingRecipes('patterned.lpic', 'etched.lpic', 'silicon', 1, 1)
+generateEtchingRecipes('patterned.ic', 'etched.ic', 'silicon', 1, 1, false)
+generateEtchingRecipes('patterned.cpu', 'etched.cpu', 'silicon', 1, 1,true)
+generateEtchingRecipes('patterned.ram', 'etched.ram', 'silicon', 1, 1, false)
+generateEtchingRecipes('patterned.ulpic', 'etched.ulpic', 'silicon', 1, 1, false)
+generateEtchingRecipes('patterned.lpic', 'etched.lpic', 'silicon', 1, 1, true)
 
 ELECTROLYZER.recipeBuilder()
         .inputs(metaitem('etched.ic'))
@@ -385,11 +441,11 @@ ELECTROLYZER.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-generateCuttingRecipes('wafer.central_processing_unit', 'plate.central_processing_unit', 8, 2)
-generateCuttingRecipes('wafer.ultra_low_power_integrated_circuit', 'plate.ultra_low_power_integrated_circuit', 6, 2)
-generateCuttingRecipes('wafer.integrated_logic_circuit', 'plate.integrated_logic_circuit', 8, 2)
-generateCuttingRecipes('wafer.random_access_memory', 'plate.random_access_memory', 32, 2)
-generateCuttingRecipes('wafer.low_power_integrated_circuit', 'plate.low_power_integrated_circuit', 4, 3)
+generateCuttingRecipes('wafer.central_processing_unit', 'plate.central_processing_unit', 8, 2, true)
+generateCuttingRecipes('wafer.ultra_low_power_integrated_circuit', 'plate.ultra_low_power_integrated_circuit', 6, 2, false)
+generateCuttingRecipes('wafer.integrated_logic_circuit', 'plate.integrated_logic_circuit', 8, 2, false)
+generateCuttingRecipes('wafer.random_access_memory', 'plate.random_access_memory', 32, 2, false)
+generateCuttingRecipes('wafer.low_power_integrated_circuit', 'plate.low_power_integrated_circuit', 4, 3, true)
 
 //PHENOLIC BOARD (TIER 2)
 
@@ -401,8 +457,8 @@ FORMING_PRESS.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-generatePatterningRecipes('laminated.board.phenolic', 'patterned.board.phenolic', 'mask.pcb', 1, 1, 1, 0)
-generateEtchingRecipes('patterned.board.phenolic', 'circuit_board.good', 'copper', 1, 1)
+generatePatterningRecipes('laminated.board.phenolic', 'patterned.board.phenolic', 'mask.pcb', 1, 1, 1, 0, false)
+generateEtchingRecipes('patterned.board.phenolic', 'circuit_board.good', 'copper', 1, 1, false)
 
 //PLASTIC CIRCUIT BOARD (TIER 3)
 
@@ -438,5 +494,5 @@ FORMING_PRESS.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-generatePatterningRecipes('board.plastic', 'patterned.board.plastic', 'mask.pcb', 2, 1, 1, 0)
-generateEtchingRecipes('patterned.board.plastic', 'circuit_board.plastic', 'copper', 2, 1)
+generatePatterningRecipes('board.plastic', 'patterned.board.plastic', 'mask.pcb', 2, 1, 1, 0, false)
+generateEtchingRecipes('patterned.board.plastic', 'circuit_board.plastic', 'copper', 2, 1, false)

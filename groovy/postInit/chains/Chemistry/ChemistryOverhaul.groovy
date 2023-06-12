@@ -1976,6 +1976,24 @@ POLYMERIZATION.recipeBuilder()
 .duration(300)
 .buildAndRegister()
 
+// POLYPROPYLENE
+
+POLYMERIZATION.recipeBuilder()
+        .notConsumable(metaitem('dustPhilipsCatalyst'))
+        .fluidInputs(fluid('propene') * 144)
+        .fluidOutputs(fluid('polypropylene') * 216)
+        .EUt(30)
+        .duration(500)
+        .buildAndRegister()
+
+POLYMERIZATION.recipeBuilder()
+        .notConsumable(metaitem('dustZieglerNattaCatalyst'))
+        .fluidInputs(fluid('propene') * 144)
+        .fluidOutputs(fluid('polypropylene') * 288)
+        .EUt(30)
+        .duration(200)
+        .buildAndRegister()
+
 // Allyl Chloride
 
 CSTR.recipeBuilder()
