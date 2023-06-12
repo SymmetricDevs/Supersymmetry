@@ -1668,5 +1668,12 @@ public class FirstDegreeMaterials{
                 .components(Tin, 1, Oxygen, 1)
                 .colorAverage()
                 .build();
+
+        AluminiumSilicate = new Material.Builder(8343, "aluminium_silicate")
+                .dust()
+                .components(Aluminium, 2, Silicon, 1, Oxygen, 5)
+                .components(Sodium, 2, Beryllium, 1, Fluorine, 4)
+                .colorAverage()
+                .build();
         }
 }

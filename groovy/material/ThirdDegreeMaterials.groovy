@@ -135,5 +135,12 @@ public class ThirdDegreeMaterials {
                 .components(Water, 5, FourFourOxydianiline, 1)
                 .colorAverage()
                 .build()
+
+        ChlorinatedBeryl = new Material.Builder(24020, "chlorinated_beryl")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(1100)
+                .components(BerylliumChloride, 3, AluminiumChloride, 2, SiliconTetrachloride, 6, CarbonMonoxide, 18)
+                .colorAverage()
+                .build();
     }
 }

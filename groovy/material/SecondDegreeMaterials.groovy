@@ -362,12 +362,5 @@ public class SecondDegreeMaterials {
                 .components(Emerald, 1, SodaAsh, 1)
                 .colorAverage()
                 .build();
-
-        ChlorinatedBeryl = new Material.Builder(13057, "chlorinated_beryl")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(1100)
-                .components(BerylliumChloride, 3, AluminiumChloride, 2, SiliconTetrachloride, 6, CarbonMonoxide, 18)
-                .colorAverage()
-                .build();
     }
 }

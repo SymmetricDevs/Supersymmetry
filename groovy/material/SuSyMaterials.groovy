@@ -590,7 +590,6 @@ class SuSyMaterials {
         public static Material AmmoniumFluoroberyllateSolution;
         public static Material AlkaliFusedBeryl;
         public static Material BerylResidue;
-        public static Material ChlorinatedBeryl;
         public static Material AmmoniumFluorideSolution;
 
         // Organic Chemistry Materials
@@ -781,6 +780,7 @@ class SuSyMaterials {
         public static Material CelluloseAcetateSolution;
         public static Material TwoButanolSolution;
         public static Material FourFourOxydianilineSolution;
+        public static Material ChlorinatedBeryl;
 
         // Thermodynamics/Greenhouse Materials     
         

@@ -76,7 +76,7 @@ ELECTROLYZER.recipeBuilder()
         .buildAndRegister()
 
 VACUUMCHAMBER.recipeBuilder()
-        .fluidInputs(fluid("quartz") * 1008)
+        .fluidInputs(fluid("silicon_dioxide") * 1008)
         .notConsumable(metaitem('shape.mold.crucible'))
         .outputs(metaitem('crucible.quartz'))
         .duration(1440)

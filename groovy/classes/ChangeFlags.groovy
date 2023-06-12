@@ -38,7 +38,9 @@ class ChangeFlags {
         RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
+
         LithiumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
+        SiliconDioxide.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
