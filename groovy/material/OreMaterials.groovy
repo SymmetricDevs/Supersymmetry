@@ -284,7 +284,7 @@ public class OreMaterials{
                 .build();
 
         Phosphorite = new Material.Builder(7035, "phosphorite")
-                .gem().ore()
+                .dust()
                 .iconSet(SHINY)
                 .color(0x8a6e42)
                 .build();

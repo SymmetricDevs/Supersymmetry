@@ -52,9 +52,6 @@ class ChangeFlags {
         oreProp = VanadiferousTitanomagnetite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
 
-        oreProp = Phosphorite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
-
         oreProp = Perovskite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
 
