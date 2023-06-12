@@ -3610,7 +3610,7 @@ BR.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-// Sodium cyanide
+/*// Sodium cyanide
 BCR.recipeBuilder()
         .fluidInputs(fluid('sodium_hydroxide_solution') * 50)
         .fluidInputs(fluid('gtfo_hydrogen_cyanide') * 50)
@@ -3625,7 +3625,7 @@ DISTILLERY.recipeBuilder()
         .fluidOutputs(fluid('water') * 2000)
         .duration(300)
         .EUt(30)
-        .buildAndRegister()
+        .buildAndRegister()*/
 
 // Creating diiodobenzene
 

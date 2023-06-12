@@ -735,8 +735,8 @@ material.concentrated_polyhalite_leach=Concentrated Polyhalite Leach
 material.carnallite_leach=Carnallite Leach
 material.kainite_leach=Kainite Leach
 material.potassium_sulfate_solution=Potassium Sulfate Solution
-material.zeolite_x=Zeolite 13X
-material.zeolite_x_solution=Zeolite 13X Solution
+material.zeolite_13x=Zeolite 13X
+material.zeolite_13x_solution=Zeolite 13X Solution
 material.lts_catalyst=LTS Catalyst
 material.hts_catalyst=HTS Catalyst
 material.spent_bismuth_catalyst=Spent Bismuth Catalyst
@@ -759,6 +759,11 @@ material.sodium_fluorosilicate=Sodium Fluorosilicate
 material.beryllium_hydroxide=Beryllium Hydroxide
 material.beryllium_oxide=Beryllium Oxide
 material.beryllium_chloride=Beryllium Chloride
+material.sodium_fluoroberyllate=Sodium Fluoroberyllate
+material.ammonium_fluoride=Ammonium Fluoride
+material.ammonium_bifluoride=Ammonium Bifluoride
+material.ammonium_fluoroberyllate=Ammonium Fluoroberyllate
+material.chromium_iii_hydroxide=Chromium III Hydroxide
 material.dilute_hexafluorosilicic_acid=Dilute Hexafluorosilicic Acid
 material.lithium_sulfate_solution=Lithium Sulfate Solution
 material.dilute_sodium_sulfate_solution=Dilute Sodium Sulfate Solution
@@ -777,7 +782,7 @@ material.neutralized_lepidolite_leach=Neutralized Lepidolite Leach
 material.aluminium_free_lepidolite_leach=Aluminium-Free Lepidolite Leach
 material.alkaline_lepidolite_leach=Alkaline Lepidolite Leach
 material.dilute_hydrofluoric_acid=Dilute Hydrofluoric Acid
-material.fused_beryl=Fused Beryl
+material.fluoride_fused_beryl=Fluoride Fused Beryl
 material.gold_leach_solution=Gold Leach Solution
 material.pgm_solution=PGM Solution
 material.sulfuric_pgm_solution=Sulfuric PGM Solution
@@ -798,9 +803,21 @@ material.gold_eluent=Gold Eluent
 material.gold_elute_solution=Gold Elute Solution
 material.potash_solution=Potash Solution
 material.potassium_sulfate_solution=Potassium Sulfate Solution
-
-
-
+material.impure_ammonium_fluoroberyllate_solution=Impure Ammonium Fluoroberyllate Solution
+material.silicon_tetrafluoride=Silicon Tetrafluoride
+material.ammonium_fluoroberyllate_solution=Ammonium Fluoroberyllate Solution
+material.sodium_fluoroberyllate_solution=Sodium Fluorosilicate Solution
+material.disassociated_ammonium_fluoride=Disassociated Ammonium Fluoride
+material.beryllium_fluoride=Beryllium Fluoride
+material.ammonium_fluoride_solution=Ammonium Fluoride Solution
+material.magnesium_fluoride=Magnesium Fluoride
+material.dissolved_magnesium_fluoride=Dissolved Magnesium Fluoride
+material.alkali_fused_beryl=Alkali Fused Beryl
+material.dissolved_alkali_beryl=Dissolved Alkali Beryl
+material.impure_beryllium_sulfate_solution=Impure Beryllium Sulfate Solution
+material.beryllium_sulfate_solution=Beryllium Sulfate Solution
+material.aluminium_chloride=Aluminium Chloride
+material.chlorinated_beryl=Chlorinated Beryl
 
 # Thermodynamics
 

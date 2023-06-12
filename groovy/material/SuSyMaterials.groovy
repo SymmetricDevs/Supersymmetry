@@ -111,7 +111,6 @@ class SuSyMaterials {
 
         public static Material EnargiteResidue;
         
-
         // Unknown Composition Materials
 
         public static Material EarthGreenhouseGas;
@@ -204,8 +203,8 @@ class SuSyMaterials {
         public static Material PolyhaliteLeach;
         public static Material CarnalliteLeach;
         public static Material KainiteLeach;
-        public static Material ZeoliteXSolution;
-        public static Material ZeoliteX;
+        public static Material Zeolite13XSolution;
+        public static Material Zeolite13X;
         public static Material LTSCatalyst;
         public static Material HTSCatalyst;
         public static Material SpentBismuthCatalyst;
@@ -220,8 +219,9 @@ class SuSyMaterials {
         public static Material NeutralizedLepidoliteLeach;
         public static Material AluminiumFreeLepidoliteLeach;
         public static Material AlkalineLepidoliteLeach;
-        public static Material FusedBeryl;
         public static Material GoldLeachSolution;
+        public static Material ImpureAmmoniumFluoroberyllateSolution;
+        public static Material ImpureBerylliumSulfateSolution;
 
         // Petrochem Materials
 
@@ -518,6 +518,21 @@ class SuSyMaterials {
         public static Material BerylliumChloride;
         public static Material SulfuricPGMSolution;
         public static Material PGMSolution;
+        public static Material SiliconTetrafluoride;
+        public static Material SodiumFluoroberyllate;
+        public static Material SodiumFluorosilicate;
+        public static Material AmmoniumFluoride;
+        public static Material AmmoniumBifluoride;
+        public static Material AmmoniumFluoroberyllate;
+        public static Material ChromiumIIIHydroxide;
+        public static Material DisassociatedAmmoniumFluoride;
+        public static Material BerylliumFluoride;
+        public static Material MagnesiumFluoride;
+        public static Material DissolvedMagnesiumFluoride;
+        public static Material DissolvedAlkaliBeryl;
+        public static Material BerylliumSulfateSolution;
+        public static Material AluminiumChloride;
+        public static Material PotassiumAlum;
 
         // Second Degree Materials
 
@@ -573,6 +588,12 @@ class SuSyMaterials {
         public static Material LithiumSulfateSolution;
         public static Material DiluteSodiumSulfateSolution;
         public static Material DiluteHydrofluoricAcid;
+        public static Material FluorideFusedBeryl;
+        public static Material SodiumFluoroberyllateSolution;
+        public static Material AmmoniumFluoroberyllateSolution;
+        public static Material AlkaliFusedBeryl;
+        public static Material BerylResidue;
+        public static Material ChlorinatedBeryl;
 
         // Organic Chemistry Materials
 

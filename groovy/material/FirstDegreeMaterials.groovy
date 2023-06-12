@@ -1016,10 +1016,11 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        SodiumCyanide = new Material.Builder(8242, 'sodium_cyanide')
-                .dust()
-                .components(Sodium, 1, Carbon, 1, Nitrogen, 1)
-                .color(0x077d44)
+        AluminiumChloride = new Material.Builder(8242, "aluminium_chloride")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(460)
+                .components(Aluminium, 1, Chlorine, 3)
+                .colorAverage()
                 .build()
 
         SodiumSulfite = new Material.Builder(8243, 'sodium_sulfite')
@@ -1562,7 +1563,7 @@ public class FirstDegreeMaterials{
 
         SiliconTetrafluoride = new Material.Builder(8315, "silicon_tetrafluoride")
                 .fluid(FluidTypes.GAS)
-                .components(Silicon, 1 Fluorine, 4)
+                .components(Silicon, 1, Fluorine, 4)
                 .colorAverage()
                 .build()
 
@@ -1598,8 +1599,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         AmmoniumFluoride = new Material.Builder(8321, "ammonium_fluoride")
-                .dust().fluid(FluidTypes.GAS)
-                .fluidTemp(1200)
+                .dust()
                 .components(Nitrogen, 1, Hydrogen, 4, Fluorine, 1)
                 .colorAverage()
                 .build()
@@ -1612,26 +1612,67 @@ public class FirstDegreeMaterials{
 
         AmmoniumBifluoride.setFormula("[NH4][HF2]", true)
 
-        ImpureAmmoniumFluoroberyllateSolution = new Material.Builder(8323, "ammonium_fluoroberyllate_solution")
-                .fluid()
-                .components(Chromium, 1, Nitrogen, 2, Hydrogen, 8, Beryllium, 1, Fluorine, 4, Water, 3)
+        AmmoniumFluoroberyllate = new Material.Builder(8323, "ammonium_fluoroberyllate")
+                .dust()
+                .components(Nitrogen, 2, Hydrogen, 8, Beryllium, 1, Fluorine, 4)
                 .colorAverage()
                 .build()
 
-        ImpureAmmoniumFluoroberyllateSolution.setFormula("(?)(NH4)2(BeF4)", true)
+        AmmoniumFluoroberyllate.setFormula("(NH4)2BeF4", true)
 
-        AmmoniumFluoroberyllateSolution = new Material.Builder(8324, "ammonium_fluoroberyllate_solution")
-                .fluid()
-                .components(Nitrogen, 2, Hydrogen, 8, Beryllium, 1, Fluorine, 4, Water, 3)
-                .colorAverage()
-                .build()
-
-        ImpureAmmoniumFluoroberyllateSolution.setFormula("(NH4)2(BeF4)", true)
-
-        ChromiumIIIHydroxide = new Material.Builder(8325, "chromium_iii_hydroxide")
+        ChromiumIIIHydroxide = new Material.Builder(8324, "chromium_iii_hydroxide")
                 .dust()
                 .components(Chromium, 1, Oxygen, 3, Hydrogen, 3)
                 .color(0x2e5207)
+                .build()
+
+        ChromiumIIIHydroxide.setFormula("Cr(OH)3")
+
+        DisassociatedAmmoniumFluoride = new Material.Builder(8325, "disassociated_ammonium_fluoride")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(1200)
+                .components(Ammonia, 1, HydrogenFluoride, 1)
+                .colorAverage()
+                .build()
+
+        BerylliumFluoride = new Material.Builder(8326, "beryllium_fluoride")
+                .dust()
+                .components(Beryllium, 1, Fluorine, 2)
+                .colorAverage()
+                .build()
+
+        MagnesiumFluoride = new Material.Builder(8327, "magnesium_fluoride")
+                .dust()
+                .components(Magnesium, 1, Fluorine, 2)
+                .colorAverage()
+                .build()
+
+        DissolvedMagnesiumFluoride = new Material.Builder(8328, "dissolved_magnesium_fluoride")
+                .fluid()
+                .components(Magnesium, 1, Chlorine, 2, HydrofluoricAcid, 2)
+                .colorAverage()
+                .build()
+
+        DissolvedAlkaliBeryl = new Material.Builder(8329, "dissolved_beryl")
+                .fluid()
+                .components(Beryllium, 3, Aluminum, 2, Sodium, 2, Sulfur, 7, Oxygen, 28, Water, 7)
+                .colorAverage()
+                .build()
+
+        DissolvedAlkaliBeryl.setFormula("(BeSO4)3(Al2(SO4)3)(Na2SO4)(H2O)7", true)
+                
+        PotassiumAlum = new Material.Builder(8330, "potassium_alum")
+                .dust()
+                .components(Potassium, 1, Aluminium, 1, Sulfur, 2, Oxygen, 8)
+                .colorAverage()
+                .build()
+
+        PotassiumAlum.setFormula("KAl(SO4)2", true)
+
+        BerylliumSulfateSolution = new Material.Builder(8331, "beryllium_sulfate_solution")
+                .fluid()
+                .components(Beryllium, 3, Sodium, 2, Sulfur, 4, Oxygen, 16, Water, 8)
+                .colorAverage()
                 .build()
         }
 }

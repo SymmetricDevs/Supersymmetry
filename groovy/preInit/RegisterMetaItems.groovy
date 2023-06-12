@@ -25,7 +25,9 @@ eventManager.listen {
         customMetaItems.addItem(103, "limestone.dust")
         customMetaItems.addItem(104, "shape.mold.rod")
         customMetaItems.addItem(105, "shape.mold.crucible")
-        customMetaItems.addItem(106, "boron.nitride.crucible")
+        customMetaItems.addItem(106, "crucible.boron.nitride")
+        customMetaItems.addItem(107, "crucible.quartz")
+        customMetaItems.addItem(108, "crucible.graphite")
 
         customMetaItems.addItem(150, "mudbrick_mix")
         customMetaItems.addItem(151, "slaked_lime")

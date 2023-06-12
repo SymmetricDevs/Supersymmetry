@@ -12,7 +12,8 @@ def ELECTROLYZER = recipemap('electrolyzer');
 def CRYSTALLIZER = recipemap('crystallizer');
 def CUTTER = recipemap('cutter');
 def AUTOCLAVE = recipemap('autoclave');
-def ZONEREFINER = recipemap('zone_refiner')
+def ZONEREFINER = recipemap('zone_refiner');
+def VACUUMCHAMBER = recipemap('vacuum_chamber')
 
 ROASTER.recipeBuilder()
         .inputs(metaitem('dustSilicon'))
@@ -74,10 +75,19 @@ ELECTROLYZER.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+VACUUMCHAMBER.recipeBuilder()
+        .fluidInputs(fluid("quartz") * 1008)
+        .notConsumable(metaitem('shape.mold.crucible'))
+        .outputs(metaitem('crucible.quartz'))
+        .duration(1440)
+        .EUt(30)
+        .buildAndRegister()
+
 CRYSTALLIZER.recipeBuilder()
         .fluidInputs(fluid('high_purity_silicon') * 4608)
         .inputs(metaitem('seed_crystal.silicon'))
         .inputs(metaitem('dustSmallGalliumArsenide'))
+        .notConsumable(metaitem('crucible.quartz'))
         .outputs(metaitem('unrefined_boule.silicon'))
         .duration(9000)
         .EUt(120)
