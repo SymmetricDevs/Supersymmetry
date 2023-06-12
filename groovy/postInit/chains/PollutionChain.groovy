@@ -47,3 +47,18 @@ SMOKE_STACK.recipeBuilder()
         .fluidInputs(fluid('hydrogen_sulfide') * 500)
         .duration(20)
         .buildAndRegister()
+
+SMOKE_STACK.recipeBuilder()
+        .fluidInputs(fluid('nitrogen') * 1000)
+        .duration(20)
+        .buildAndRegister()
+
+SMOKE_STACK.recipeBuilder()
+        .fluidInputs(fluid('unscrubbed_wood_gas') * 500)
+        .duration(20)
+        .buildAndRegister()
+
+SMOKE_STACK.recipeBuilder()
+        .fluidInputs(fluid('chilled_flue_gas') * 1000)
+        .duration(10)
+        .buildAndRegister()

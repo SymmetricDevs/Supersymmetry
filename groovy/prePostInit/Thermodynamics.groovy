@@ -66,7 +66,7 @@ CryoHydrogen.setDurationRadiator(400);
 CryoHydrogen.setTemperature(20);
 
 def CryoOxygen = new ICryoGas('oxygen', 'hot_hp_oxygen', 'hp_oxygen', 'cold_hp_oxygen', 'liquid_oxygen');
-CryoOxygen.setEUt(200);
+CryoOxygen.setEUt(90);
 CryoOxygen.setDuration(100);
 CryoOxygen.setPowerHX(100);
 CryoOxygen.setDurationHX(5);
@@ -498,6 +498,7 @@ for (WorkingFluid in WorkingFluids) {
             .fluidInputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
             .fluidInputs(liquid('flue_gas')*1000)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+            .fluidOutputs(liquid('chilled_flue_gas') * 1000)
             .duration(WorkingFluid.duration)
             .buildAndRegister();
 
@@ -525,12 +526,17 @@ for (WorkingFluid in WorkingFluids) {
             .buildAndRegister();
 }
 
-//TODO: USE HEATED BRINE FROM FLUID DRILLING TO GENERATE STEAM
-//TODO: GEOTHERMAL ENERGY FROM LAVA DEPOSIT IN NETHER
-
 recipemap('fluid_compressor').recipeBuilder()
         .fluidInputs(liquid('steam') * 1000)
         .fluidOutputs(liquid('hot_hp_steam') * 400)
         .duration(80)
         .EUt(120)
+        .buildAndRegister();
+
+recipemap('heat_exchanger').recipeBuilder()
+        .fluidInputs(liquid('water') * 6)
+        .fluidInputs(liquid('lava') * 250)
+        .fluidOutputs(liquid('steam') * 960)
+        .fluidOutputs(liquid('chilled_lava') * 250)
+        .duration(10)
         .buildAndRegister();

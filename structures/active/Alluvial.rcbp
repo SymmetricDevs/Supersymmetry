@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "biomes": "$SANDY"
+    },
+    {
+      "biomes": "$MESA"
+    }
+  ],
+  "metadata": {
+    "title": "Alluvial",
+    "description": [
+      ""
+    ]
+  }
+}

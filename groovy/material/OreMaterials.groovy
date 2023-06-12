@@ -85,7 +85,7 @@ public class OreMaterials{
                 .components(Calcium, 1, Zirconium, 1, Silicon, 6, Oxygen, 15, Water, 3)
                 .build()
 
-        Armstrongite.setFormula("CaZr[Si6O15] • (H2O)3", true);
+        Armstrongite.setFormula("CaZr[Si6O15] * (H2O)3", true);
 
         Vanadinite = new Material.Builder(7008, "vanadinite")
                 .gem().ore()
@@ -284,7 +284,7 @@ public class OreMaterials{
                 .build();
 
         Phosphorite = new Material.Builder(7035, "phosphorite")
-                .gem().ore()
+                .dust()
                 .iconSet(SHINY)
                 .color(0x8a6e42)
                 .build();
@@ -301,21 +301,21 @@ public class OreMaterials{
                 .color(0xd9c1a0)
                 .components(Sodium, 2, Boron, 4, Oxygen, 8, Hydrogen, 2, Water, 3)
                 .build()
-                .setFormula("Na2B4O6(OH)2 • (H2O)3", true);
+                .setFormula("Na2B4O6(OH)2 * (H2O)3", true);
 
         Colemanite = new Material.Builder(7038, "colemanite")
                 .dust()
                 .color(0xdbcd8f)
                 .components(Calcium, 2, Boron, 6, Oxygen, 11, Water, 5)
                 .build()
-                .setFormula("Ca2B6O11 • (H2O)5", true);
+                .setFormula("Ca2B6O11 * (H2O)5", true);
 
         Ulexite = new Material.Builder(7039, "ulexite")
                 .dust()
                 .color(0xc2aba1)
                 .components(Sodium, 1, Calcium, 1, Boron, 5, Oxygen, 12, Hydrogen, 6, Water, 5)
                 .build()
-                .setFormula("NaCaB5O6(OH)6 • (H2O)5", true);
+                .setFormula("NaCaB5O6(OH)6 * (H2O)5", true);
 
         Carnallite = new Material.Builder(7040, "carnallite")
                 .dust()
@@ -323,7 +323,7 @@ public class OreMaterials{
                 .color(0xffffff)
                 .components(Potassium, 1, Magnesium, 1, Chlorine, 3, Water, 6)
                 .build()
-                .setFormula("KCl.MgCl2 • (H2O)6", true);
+                .setFormula("KCl.MgCl2 * (H2O)6", true);
 
         Kainite = new Material.Builder(7041, "kainite")
                 .dust()
@@ -331,28 +331,21 @@ public class OreMaterials{
                 .color(0xfff7c4)
                 .components(Potassium, 1, Magnesium, 1, Sulfur, 1, Oxygen, 4, Chlorine, 1, Water, 3)
                 .build()
-                .setFormula("KMg(SO4)Cl • (H2O)3", true);
+                .setFormula("KMg(SO4)Cl * (H2O)3", true);
 
         Kieserite = new Material.Builder(7042, "kieserite")
                 .dust()
                 .color(0xdccade)
                 .components(Magnesium, 1, Sulfur, 1, Oxygen, 4, Water, 1)
                 .build()
-                .setFormula("K2Mg2(SO4)3", true);
+                .setFormula("MgSO4 * H2O", true);
 
         Polyhalite = new Material.Builder(7043, "polyhalite")
                 .dust()
                 .color(0xe0b2a4)
                 .components(Potassium, 2, Calcium, 2, Magnesium, 1, Sulfur, 4, Oxygen, 16, Water, 2)
                 .build()
-                .setFormula("K2Ca2Mg(SO4)4 • (H2O)2", true);
-
-        Dolomite = new Material.Builder(7044, "dolomite")
-                .dust()
-                .color(0xadaa8e)
-                .components(Calcium, 1, Magnesium, 1, Carbon, 2, Oxygen, 6)
-                .build()
-                .setFormula("CaMg(CO3)2", true);
+                .setFormula("K2Ca2Mg(SO4)4 * (H2O)2", true);
 
         Titanite = new Material.Builder(7045, "titanite")
                 .gem()
@@ -476,7 +469,7 @@ public class OreMaterials{
                 .color(0xc1c71c)
                 .components(Iron, 2, Molybdenum, 3, Oxygen, 12, Water, 8)
                 .build()
-                .setFormula("Fe2(MoO4)3 • (H2O)8", true);
+                .setFormula("Fe2(MoO4)3 * (H2O)8", true);
 
         Aguilarite = new Material.Builder(7062, "aguilarite")
                 .dust().gem()

@@ -11,6 +11,7 @@ import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
+import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
 public class UnknownCompositionMaterials {
  
@@ -335,12 +336,174 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x2b1e1e)
                 .build();
+
         CarburizedStainlessSteel = new Material.Builder(4061, 'carburized_stainless_steel')
                 .dust().fluid()
                 .fluidTemp(1500)
                 .color(0x6b6552)
                 .build()
 
-    }
+        UnscrubbedWoodGas = new Material.Builder(4062, "unscrubbed_wood_gas")
+                .fluid(FluidTypes.GAS)
+                .color(0x85806f)
+                .build();
 
+        LightOil = new Material.Builder(4063, "light_oil")
+                .fluid()
+                .color(0x5e5e4d)
+                .build();
+
+        NaphthaleneOil = new Material.Builder(4065, "naphthalene_oil")
+                .fluid()
+                .color(0x2e2926)
+                .build();
+
+        AnthraceneOil = new Material.Builder(4066, "anthracene_oil")
+                .fluid()
+                .color(0x211f1e)
+                .build();
+
+        AlkalineNaphthaleneOil = new Material.Builder(4067, "alkaline_naphthalene_oil")
+                .fluid()
+                .color(0x403833)
+                .build();
+
+        PurifiedNaphthaleneOil = new Material.Builder(4068, "purified_naphthalene_oil")
+                .fluid()
+                .color(0x595542)
+                .build();
+
+        AcidicLightOil = new Material.Builder(4069, "acidic_light_oil")
+                .fluid()
+                .color(0x87816c)
+                .build();
+
+        CrudePyridiniumSulfate = new Material.Builder(4070, "crude_pyridinium_sulfate")
+                .fluid()
+                .color(0x48523b)
+                .build();
+
+        ImpurePyridine = new Material.Builder(4071, "impure_pyridine")
+                .fluid()
+                .color(0x233326)
+                .build();
+
+        AcidicAnthraceneOil = new Material.Builder(4072, "acidic_anthracene_oil")
+                .fluid()
+                .color(0x87816c)
+                .build();
+
+        AnthraceneExtract = new Material.Builder(4073, "anthracene_extract")
+                .fluid()
+                .color(0x211c1c)
+                .build();
+
+        CrudeQuinoliniumSulfate = new Material.Builder(4074, "crude_quinolinium_sulfate")
+                .fluid()
+                .color(0x1b1c0a)
+                .build();
+
+        ImpureQuinoline = new Material.Builder(4075, "impure_quinoline")
+                .fluid()
+                .color(0x222418)
+                .build();
+
+        ConcentratedBrine = new Material.Builder(4076, "concentrated_brine")
+                .fluid()
+                .color(0xa6a444)
+                .build();
+
+        BoronFreeBrine = new Material.Builder(4078, "boron_free_brine")
+                .fluid()
+                .color(0xa68a44)
+                .build();
+
+        LithiumFreeBrine = new Material.Builder(4079, "lithium_free_brine")
+                .fluid()
+                .color(0xa17a4c)
+                .build();
+
+        ChlorinatedBrine = new Material.Builder(4080, "chlorinated_brine")
+                .fluid()
+                .color(0xa3b560)
+                .build();
+
+        ImpureBromine = new Material.Builder(4081, "impure_bromine")
+                .fluid(FluidTypes.GAS)
+                .color(0x572d2b)
+                .build();
+
+        ChilledLava = new Material.Builder(4082, "chilled_lava")
+                .color(0x4d2d25)
+                .fluidTemp(400)
+                .build();
+
+        ChilledFlueGas = new Material.Builder(4083, "chilled_flue_gas")
+                .fluid(FluidTypes.GAS)
+                .color(0x171717)
+                .fluidTemp(400)
+                .build();
+
+        WoodAsh = new Material.Builder(4084, "wood_ash")
+                .dust()
+                .color(0x242221)
+                .build();
+
+        VeryConcentratedBrine = new Material.Builder(4085, "very_concentrated_brine")
+                .fluid()
+                .color(0xb5b226)
+                .build();
+
+        LangbeiniteLeach = new Material.Builder(4086, "langbeinite_leach")
+                .fluid()
+                .color(0x9c9a87)
+                .build();
+
+        PolyhaliteLeach = new Material.Builder(4087, "polyhalite_leach")
+                .fluid()
+                .color(0xb3a094)
+                .build();
+
+        CarnalliteLeach = new Material.Builder(4089, "carnallite_leach")
+                .fluid()
+                .color(0xc1c499)
+                .build();
+
+        KainiteLeach = new Material.Builder(4090, "kainite_leach")
+                .fluid()
+                .color(0xadb07f)
+                .build();
+
+        ZeoliteX = new Material.Builder(4091, "zeolite_x")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xe4e8bc)
+                .build();
+
+        ZeoliteXSolution = new Material.Builder(4092, "zeolite_x_solution")
+                .fluid()
+                .color(0xe4e8bc)
+                .build();
+
+        LTSCatalyst = new Material.Builder(4093, "lts_catalyst")
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .color(0x756857)
+                .build();
+
+        HTSCatalyst = new Material.Builder(4094, "hts_catalyst")
+                .dust()
+                .color(0x5e4f4f)
+                .build();
+
+        SpentBismuthCatalyst = new Material.Builder(4095, "spent_bismuth_catalyst")
+                .dust()
+                .color(0x31403f)
+                .build();
+
+        GoldLeachSolution = new Material.Builder(4096, "gold_leach_solution")
+                .fluid()
+                .color(0x9c8a46)
+                .build();
+    }
 }           
