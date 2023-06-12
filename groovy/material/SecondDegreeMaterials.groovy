@@ -307,67 +307,67 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        DiluteHexafluorosilicicAcid = new Material.Builder(13041, "dilute_hexafluorosilicic_acid")
+        DiluteHexafluorosilicicAcid = new Material.Builder(13048, "dilute_hexafluorosilicic_acid")
                 .fluid()
                 .components(Water, 8, HexafluorosilicicAcid, 1)
                 .colorAverage()
                 .build()
 
-        LithiumSulfateSolution = new Material.Builder(13042, "lithium_sulfate_solution")
+        LithiumSulfateSolution = new Material.Builder(13049, "lithium_sulfate_solution")
                 .fluid()
                 .components(Water, 1, LithiumSulfate, 1)
                 .colorAverage()
                 .build()
 
-        DiluteSodiumSulfateSolution = new Material.Builder(13043, "dilute_sodium_sulfate_solution")
+        DiluteSodiumSulfateSolution = new Material.Builder(13050, "dilute_sodium_sulfate_solution")
                 .fluid()
                 .color(0x9191b3)
                 .build()
                 .setFormula("(H2O)2(Na2SO4)", true);
 
-        DiluteHydrofluoricAcid = new Material.Builder(13044, "dilute_hydrofluoric_acid")
+        DiluteHydrofluoricAcid = new Material.Builder(13051, "dilute_hydrofluoric_acid")
                 .fluid()
                 .components(Water, 2, HydrogenFluoride, 1)
                 .colorAverage()
-                .build()
+                .build();
 
-        FluorideFusedBeryl = new Material.Builder(13045, "fluoride_fused_beryl")
+        FluorideFusedBeryl = new Material.Builder(13052, "fluoride_fused_beryl")
                 .dust()
                 .components(SodiumFluoroberyllate, 6, Alumina, 2, SiliconDioxide, 15)
                 .color(0x424f3e)
                 .build();
 
-        SodiumFluoroberyllateSolution = new Material.Builder(13046, "sodium_fluoroberyllate_solution")
+        SodiumFluoroberyllateSolution = new Material.Builder(13053, "sodium_fluoroberyllate_solution")
                 .fluid()
                 .components(SodiumFluoroberyllate, 1, Water, 1)
                 .colorAverage()
                 .build();
 
-        AmmoniumFluoroberyllateSolution = new Material.Builder(13047, "ammonium_fluoroberyllate_solution")
+        AmmoniumFluoroberyllateSolution = new Material.Builder(13054, "ammonium_fluoroberyllate_solution")
                 .fluid()
                 .components(AmmoniumFluoroberyllate, 1, Water, 3)
                 .colorAverage()
-                .build()
+                .build();
 
         AmmoniumFluoroberyllateSolution.setFormula("(NH4)2(BeF4)(H2O)3", true)
 
-        AmmoniumFluorideSolution = new Material.Builder(13048, "ammonium_fluoride_solution")
+        AmmoniumFluorideSolution = new Material.Builder(13055, "ammonium_fluoride_solution")
                 .fluid()
                 .components(AmmoniumFluoride, 1, Water, 1)
                 .colorAverage()
-                .build()
+                .build();
 
-        AlkaliFusedBeryl = new Material.Builder(13049, "alkali_fused_beryl")
+        AlkaliFusedBeryl = new Material.Builder(13056, "alkali_fused_beryl")
                 .dust()
-                .components(Emerald, 1, SodiumCarbonate, 1)
+                .components(Emerald, 1, SodaAsh, 1)
                 .colorAverage()
-                .build()
+                .build();
 
-        ChlorinatedBeryl = new Material.Builder(13050, "chlorinated_beryl")
+        ChlorinatedBeryl = new Material.Builder(13057, "chlorinated_beryl")
                 .fluid(FluidTypes.GAS)
                 .fluidTemp(1100)
                 .components(BerylliumChloride, 3, AluminiumChloride, 2, SiliconTetrachloride, 6, CarbonMonoxide, 18)
                 .colorAverage()
-                .build()
+                .build();
     }
 }

@@ -20,7 +20,7 @@ DT = recipemap('distillation_tower')
 //ALKALI FUSION
 REACTION_FURNACE.recipeBuilder()
         .inputs(metaitem('dustEmerald') * 29)
-        .inputs(metaitem('dustSodiumCarbonate') * 6)
+        .inputs(metaitem('dustSodaAsh') * 6)
         .outputs(metaitem('dustAlkaliFusedBeryl') * 2)
         .EUt(120)
         .duration(100)

@@ -430,7 +430,6 @@ class SuSyMaterials {
         public static Material HydrobromicAcid;
         public static Material SodiumSulfite;
         public static Material SodiumThiosulfate;
-        public static Material SodiumCarbonate;
         public static Material HydrogenCyanide;
         public static Material SulfidicSilverCyanideSolution;
         public static Material SilverCyanideSolution;
@@ -520,7 +519,6 @@ class SuSyMaterials {
         public static Material PGMSolution;
         public static Material SiliconTetrafluoride;
         public static Material SodiumFluoroberyllate;
-        public static Material SodiumFluorosilicate;
         public static Material AmmoniumFluoride;
         public static Material AmmoniumBifluoride;
         public static Material AmmoniumFluoroberyllate;
@@ -570,7 +568,6 @@ class SuSyMaterials {
         public static Material SodiumCyanideSolution;
         public static Material BrominatedSulfurDioxide;
         public static Material SodiumThiosulfateSolution;
-        public static Material SodiumCarbonateSolution;
         public static Material DilutedIron3ChlorideSolution;
         public static Material SodiumPerchlorateSolution;
         public static Material SodiumChlorateSolution;
@@ -594,6 +591,7 @@ class SuSyMaterials {
         public static Material AlkaliFusedBeryl;
         public static Material BerylResidue;
         public static Material ChlorinatedBeryl;
+        public static Material AmmoniumFluorideSolution;
 
         // Organic Chemistry Materials
 

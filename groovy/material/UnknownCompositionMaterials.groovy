@@ -474,13 +474,13 @@ public class UnknownCompositionMaterials {
                 .color(0xadb07f)
                 .build();
 
-        Zeolite13X = new Material.Builder(4091, "zeolite_13x")
+        Zeolite13X = new Material.Builder(4091, "zeolite_13")
                 .dust()
                 .iconSet(SHINY)
                 .color(0xe4e8bc)
                 .build();
 
-        Zeolite13XSolution = new Material.Builder(4092, "zeolite_13x_solution")
+        Zeolite13XSolution = new Material.Builder(4092, "zeolite_13_solution")
                 .fluid()
                 .color(0xe4e8bc)
                 .build();
@@ -550,6 +550,7 @@ public class UnknownCompositionMaterials {
         AluminiumFreeLepidoliteLeach = new Material.Builder(4105, "aluminium_free_lepidolite_leach")
                 .fluid()
                 .color(0x557365)
+                .build();
 
         GoldLeachSolution = new Material.Builder(4106, "gold_leach_solution")
                 .fluid()
@@ -563,7 +564,7 @@ public class UnknownCompositionMaterials {
 
         ImpureAmmoniumFluoroberyllateSolution.setFormula("(?)(NH4)2(BeF4)(H2O)3", true)
 
-        ImpureBerylliumSulfateSolution = new Material.Builder(13050, "impure_beryllium_sulfate_solution")
+        ImpureBerylliumSulfateSolution = new Material.Builder(4108, "impure_beryllium_sulfate_solution")
                 .fluid()
                 .color(0x608726)
                 .build();
