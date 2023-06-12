@@ -67,7 +67,7 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Magnesium, 8005, false, false)
         generatePurifiedElement(Aluminium, 8006, false, false)
         generatePurifiedElement(Silicon, 8007, true, false)
-        generatePurifiedElement(Phosphorus, 8008, false, false)
+        generatePurifiedElement(Phosphorus, 8008, true, true)
         generatePurifiedElement(Sulfur, 8009, false, false)
         generatePurifiedElement(Potassium, 8010, false, false)
         generatePurifiedElement(Calcium, 8011, false, false)
@@ -1477,5 +1477,25 @@ public class FirstDegreeMaterials{
                 .color(0xa2a832)
                 .iconSet(CERTUS)
                 .build()
+
+        SulfurTrioxideReactionMixture = new Material.Builder(8287, 'sulfur_trioxide_reaction_mixture')
+                .fluid()
+                .components(SulfurDioxide, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        CalciumMetasilicate = new Material.Builder(8288, 'calcium_metasilicate')
+                .dust()
+                .components(Calcium, 1, Silicon, 1, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        HighPurityPhosphorusVaporMixture = new Material.Builder(8289, 'high_purity_phosphorus_vapor_mixture')
+                .fluid(FluidTypes.GAS)
+                .components(Phosphorus, 4, Water, 1)
+                .fluidTemp(554)
+                .colorAverage()
+                .build()
+                .setFormula("P4", true);
     }
 }

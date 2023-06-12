@@ -31,8 +31,11 @@ class ChangeFlags {
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
 
+        Phosphorus.setFormula("P4", true)
+        Materials.Phosphorus.setProperty(PropertyKey.INGOT, new IngotProperty())
+        Materials.Phosphorus.setProperty(PropertyKey.FLUID, new IngotProperty())
         Phosphorus.setMaterialRGB(0xfffed6)
-        Phosphorus.setFormula(Phosphorus, 4)
+        Phosphorus.setFluidTemp(317)
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
 

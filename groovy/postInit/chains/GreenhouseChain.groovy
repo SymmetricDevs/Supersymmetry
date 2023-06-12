@@ -51,7 +51,8 @@ def potassiumNutrients = [
 
 def phosphorusNutrients = [
         metaitem('dustCalcite'),
-        metaitem('dustApatite'),
+        metaitem('dustChlorapatite'),
+        metaitem('dustHydroxyapatite'),
         metaitem('dustFluorapatite'),
         metaitem('dustTricalciumPhosphate'),
         metaitem('dustPhosphorus'),

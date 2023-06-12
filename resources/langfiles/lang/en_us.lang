@@ -323,6 +323,12 @@ material.boron_nitride=Boron Nitride
 material.crude_gallium_arsenide=Crude Gallium Arsenide
 material.gallium_arsenide=Pure Gallium Arsenide
 
+material.monocalcium_phosphate=Monocalcium Phosphate
+material.calcium_phosphite=Calcium Phosphite
+material.phosphorus=White Phosphorus
+material.hydroxyapatite=Hydroxyapatite
+material.calcium_metasilicate=Calcium Metasilicate
+
 # Fluids
 
 material.smoke_bomb_mix=Smoke Bomb Mix
@@ -687,9 +693,8 @@ material.manganese_ii_sulfate_solution=Manganese II Sulfate Solution
 material.iron_iii_hydroxide=Iron III Hydroxide
 material.rhodochrosite=Rhodochrosite
 
-material.monocalcium_phosphate=Monocalcium Phosphate
-material.calcium_phosphite=Calcium Phosphite
-material.phosphorus=White Phosphorus
+material.diluted_phosphoric_acid=Diluted Phosphoric Acid
+material.high_purity_phosphorus_vapor_mixture=High Purity Phosphorus Vapor Mixture
 
 material.unscrubbed_wood_gas=Unscrubbed Wood Gas
 material.light_oil=Light Oil

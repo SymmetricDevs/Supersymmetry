@@ -461,6 +461,7 @@ class SuSyMaterials {
         public static Material UltrapureWater;
         public static Material Ferrochromium;
         public static Material Ferrosilicon;
+<<<<<<< Updated upstream
         public static Material ConcentratedSaltWater;
         public static Material HypersalineWater;
         public static Material LithiumCarbonate;
@@ -488,6 +489,11 @@ class SuSyMaterials {
         public static Material IronSulfate;
         public static Material SulfuricPGMSolution;
         public static Material PGMSolution;
+=======
+        public static Material SulfurTrioxideReactionMixture;
+        public static Material CalciumMetasilicate;
+        public static Material HighPurityPhosphorusVaporMixture;
+>>>>>>> Stashed changes
 
         // Second Degree Materials
 

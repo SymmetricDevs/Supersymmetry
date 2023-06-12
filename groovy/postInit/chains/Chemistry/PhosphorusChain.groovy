@@ -4,6 +4,12 @@ BATCH_REACTOR = recipemap('batch_reactor')
 DISTILLERY = recipemap('distillery')
 AUTOCLAVE = recipemap('autoclave')
 ROASTER = recipemap('roaster')
+MIXER = recipemap('mixer')
+EBF = recipemap('electric_blast_furnace')
+FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
+CONDENSER = recipemap('condenser')
+ZONE_REFINER = recipemap('zone_refiner')
+COMPRESSOR = recipemap('compressor')
 
 //PRIMITIVE (LV)
 AUTOCLAVE.recipeBuilder()
@@ -43,7 +49,27 @@ ROASTER.recipeBuilder()
 
 //UNIVERSAL (MV)
 //REMOVE APATITE RECIPES
+mods.gregtech.mixer.removeByInput(8, [item('minecraft:clay_ball'), metaitem('dustStone'), metaitem('dustApatite') * 2], null)
+mods.gregtech.batch_reactor.removeByInput(30, [metaitem('dustApatite') * 21], [fluid('sulfuric_acid') * 5000])
 
+def apatites = [
+        metaitem('dustChlorapatite'),
+        metaitem('dustHydroxyapatite'),
+        metaitem('dustFluorapatite'),
+];
+
+for (apatite in apatites) {
+    MIXER.recipeBuilder()
+        .inputs(apatite * 2)
+        .inputs(item('minecraft:clay_ball'))
+        .inputs(metaitem('dustStone'))
+        .outputs(metaitem('bone_china_clay_dust') * 4)
+        .duration(40)
+        .EUt(8)
+        .buildAndRegister()
+}
+
+//WET PROCESS
 BATCH_REACTOR.recipeBuilder()
     .inputs(ore('dustHydroxyapatite') * 22)
     .fluidInputs(fluid('sulfuric_acid') * 5000)
@@ -80,7 +106,112 @@ DISTILLERY.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
+//SULFURIC ACID REGENERATION
+ROASTER.recipeBuilder()
+    .inputs(ore('dustCalciumSulfate') * 6)
+    .inputs(ore('dustSiliconDioxide') * 3)
+    .outputs(metaitem('dustCalciumMetasilicate') * 5)
+    .fluidOutputs(fluid('sulfur_trioxide_reaction_mixture') * 2000)
+    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .fluidInputs(fluid('sulfur_trioxide_reaction_mixture') * 1000)
+    .notConsumable(ore('dustVanadiumPentoxide'))
+    .fluidOutputs(fluid('sulfur_trioxide') * 1000)
+    .duration(200)
+    .EUt(7)
+    .buildAndRegister()
+
+//THERMAL PROCESS
+EBF.recipeBuilder()
+    .inputs(ore('dustFluorapatite') * 42)
+    .inputs(ore('dustSiliconDioxide') * 27)
+    .inputs(ore('dustCarbon') * 15)
+    .outputs(ore('dustPhosphorus') * 6)
+    .outputs(ore('dustCalciumMetasilicate') * 45)
+    .outputs(ore('dustFluorite') * 3)
+    .fluidOutputs(fluid('carbon_monoxide') * 15000)
+    .fluidOutputs(ore)
+    .property("temperature", 1200)
+    .duration(720)
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister()
+
+EBF.recipeBuilder()
+    .inputs(ore('dustChlorapatite') * 42)
+    .inputs(ore('dustSiliconDioxide') * 27)
+    .inputs(ore('dustCarbon') * 15)
+    .outputs(ore('dustPhosphorus') * 6)
+    .outputs(ore('dustCalciumMetasilicate') * 45)
+    .outputs(ore('dustCalciumChloride') * 3)
+    .fluidOutputs(fluid('carbon_monoxide') * 15000)
+    .property("temperature", 1200)
+    .duration(720)
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister()
+
+EBF.recipeBuilder()
+    .inputs(ore('dustFluorapatite') * 44)
+    .inputs(ore('dustSiliconDioxide') * 27)
+    .inputs(ore('dustCarbon') * 15)
+    .outputs(ore('dustPhosphorus') * 6)
+    .outputs(ore('dustCalciumMetasilicate') * 45)
+    .outputs(ore('dustCalciumHydroxide') * 5)
+    .property("temperature", 1200)
+    .duration(720)
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister()
+
 //SPECIALIZED (HV) (FOR PHOSPHORITE, DEPENDENCY ON FROTH FLOTATION, WILL NOT IMPLEMENT YET)
 
+//HIGH PURITY
+COMPRESSOR.recipeBuilder()
+    .inputs(ore('dustPhosphorus'))
+    .outputs(metaitem('ingotPhosphorus'))
+    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+ZONE_REFINER.recipeBuilder()
+    .inputs(ore('ingotPhosphorus'))
+    .outputs(metaitem('ingotHighPurityPhosphorus'))
+    .duration(400)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+AUTOCLAVE.recipeBuilder()
+    .inputs(ore('dustPhosphorus'))
+    .fluidInputs(fluid('water') * 250)
+    .chancedOutput(metaitem('dustArsenic'), 500, 50)
+    .fluidOutputs(fluid('high_purity_phosphorus_vapor_mixture') * 250)
+    .duration(60)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('high_purity_phosphorus_vapor_mixture') * 1000)
+    .fluidOutputs(fluid('high_purity_phosphorus') * 576)
+    .duration(240)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+FLUID_SOLIDIFIER.recipeBuilder()
+    .fluidInputs(fluid('high_purity_phosphorus') * 144)
+    .outputs(metaitem('dustHighPurityPhosphorus'))
+    .duration(60)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+//CALCIUM METASILICATE-SILICA RECYCLING
+BATCH_REACTOR.recipeBuilder()
+    .inputs(ore('dustCalciumMetasilicate') * 5)
+    .fluidInputs(fluid('carbon_dioxide'))
+    .outputs(metaitem('dustCalcite') * 5)
+    .outputs(metaitem('dustSiliconDioxide'))
+    .duration(120)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
 
 
