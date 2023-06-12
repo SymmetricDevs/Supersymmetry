@@ -35,7 +35,7 @@ for (solder in soldering_alloys) {
 			.inputs(metaitem('hull.ev'))
             .fluidInputs(solder)
 			.circuitMeta([2])
-            .outputs(item('openglasses:openglasses_terminal'))
+            .outputs(item('openglasses:openglassesterminal'))
             .duration(400)
             .EUt(480)
             .buildAndRegister();
