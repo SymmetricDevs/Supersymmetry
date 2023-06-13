@@ -9341,7 +9341,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Soldering Alloy §ris an alloy made out of 6 Tin, 3 Lead and 1 Antimony in a §6Mixer§r. \n\nIt is required to solder things more efficiently. Soldering Alloy is two times more efficient than Tin.",
+          "desc:8": "§6§rSome Assembler recipes may require§6 solder§r§r. While Tin can be used to solder stuff, Soldering Alloy is twice as efficient.\n\nSoldering Alloy §ris an alloy made out of 6 Tin, 3 Lead and 1 Antimony in a §6Mixer§r. \n\nIt is required to solder things more efficiently.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9359,7 +9359,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Soldering Alloy",
@@ -13187,7 +13187,7 @@
     },
     "188:10": {
       "preRequisites:11": [
-        189
+        515
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -19118,7 +19118,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Iron (Fe)\n§bAtomic Number§r: 26\n§aAtomic Mass§r: 55.85 amu\n§cMelting Point§r: 1811 K\n§5Boiling Point§r: 3134 K\n§6Properties§r: Iron is a transition metal with excellent strength and magnetism. It is used in construction, manufacturing, and as a core component in many alloys.\n",
+          "desc:8": "§6Element§r: Iron (Fe)\n§bAtomic Number§r: 26\n§aAtomic Mass§r: 55.85 amu\n§cMelting Point§r: 1811 K\n§5Boiling Point§r: 3134 K\n§6Properties§r: Iron is a transition metal with excellent strength and magnetism. It is used in construction, manufacturing, and as a core component in many alloys.\n\n§lPrimitive: §rWhen iron ores are smelted in a Primitive Blast Furnace with coke, iron with a high carbon content (pig iron) is produced. Pig Iron then needs to be smelted to make iron.\n\n§lUniversal: §rThe same process, but done in an Electric Blast Furnace.\n\n§lSpecialized:§r Steel needs to be reacted with Carbon Monoxide in a Reaction Furnace to produce Crude Iron Pentacarbonyl, that needs to be distilled to make§6 Iron Pentacarbonyl§r.\n\nIron Pentacarbonyl then goes in the batch reactor to make §7High Purity Iron.\n\n\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19434,8 +19434,8 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 16,
-              "Damage:2": 22021,
+              "Count:3": 1,
+              "Damage:2": 122,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -24665,7 +24665,7 @@
             "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Annealed Copper",
@@ -24852,16 +24852,16 @@
     },
     "371:10": {
       "preRequisites:11": [
-        236
+        476
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Iron can be processed into steel quickly using an §cArc Furnace§r. ",
+          "desc:8": "§cMV Sensors §o§rand §cMV Emitters§r are components which are required in machines that work with radio frequencies or lasers, as well as §ccomputers§r.\n\nThe §6piezoelectric crystal§r required this time is §aemerald§r. Emeralds can be obtained by sifting §7pegmatite tailings§r, a byproduct of macerating several ores. Check JEI for more info.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 324,
+            "Damage:2": 233,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -24872,13 +24872,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Steel V2.0 ",
+          "name:8": "MV Sensor and Emitter",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -24901,8 +24901,8 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 128,
-              "Damage:2": 324,
+              "Count:3": 1,
+              "Damage:2": 233,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -24913,7 +24913,22 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "gregtech:meta_item_1"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 218,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -30644,7 +30659,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 5403,
+            "Damage:2": 5302,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -30685,7 +30700,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 5403,
+              "Damage:2": 5302,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -33363,7 +33378,8 @@
     },
     "496:10": {
       "preRequisites:11": [
-        494
+        514,
+        513
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33390,7 +33406,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Inductor",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -33765,10 +33781,7 @@
     },
     "502:10": {
       "preRequisites:11": [
-        499,
-        500,
-        501,
-        503
+        506
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34040,6 +34053,1042 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "506:10": {
+      "preRequisites:11": [
+        499,
+        500,
+        501,
+        503,
+        509
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Advanced Arc Furnace §rutilizes intense heat generated by an §belectric arc §o§rto melt metal, producing §cstainless steel§r.\n\n§6The Advanced Arc Furnace requires:\n- 1 Advanced Arc Furnace controller\n- 1 Maintenance Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Output Bus\n- 1 Output Hatch\n- 11 Carbon Electrode Assemblies\n- 30 Solid Steel Machine Casings\n- 10 Steel Firebox Casings§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 17003,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Forge",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 506,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 17003,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 11,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "susy:electrode_assembly"
+            },
+            "2:10": {
+              "Count:3": 30,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "3:10": {
+              "Count:3": 10,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_firebox_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "507:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§bPressure Swing Absorption§r (PSA) is a gas separation process that uses §6changing pressures §rto purify and separate §6gas mixtures§r, to extract§c nitrogen and oxygen §rfrom ai§br.\n\nThe Pressure Swing Absorber requires:\n- 1 Pressure Swing Absorber controller\n- 1 Maintenance Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Output Bus\n- 1 Output Hatch\n- 27 Frost Proof Aluminium Machine Casings\n- 2 Steel Pipe Casings§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 15060,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Pressure Swing Absorber",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 507,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 15060,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 27,
+              "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
+              "Count:3": 2,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "508:10": {
+      "preRequisites:11": [
+        507
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Clay§r can be passed through a §aliquid Molecular Sieve §rto make §7Zeolite 13X§r, which can be solidified and then autoclaved to make a §7Zeolite Membrane§r.\n\nPressure Swing Absorption of Air through this catalyst can be used to make industrial quantities of §bNitrogen and Oxygen§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 180,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Zeolite 13-X",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 508,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 180,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "509:10": {
+      "preRequisites:11": [
+        508
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§bNitrogen §ris required to power the Advanced Arc Furnace to §8§rmake Stainless Steel.\n\nYou can also use the same method, but with a different §7Circuit §rto produce faster §3Oxygen§r. This process is much more efficient than electrolyzing Water.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "high_purity_nitrogen"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nitrogen and Oxygen",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 509,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "nitrogen"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "510:10": {
+      "preRequisites:11": [
+        494
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §6reaction furnace§r is a §chigh-temperature vessel§r used in chemical processes to facilitate chemical reactions by providing optimal conditions such as temperature, pressure, and residence time for the desired reactions to occur.\n\nThe Reaction Furnace requires:§a\n- 1 Reaction Furnace controller\n- 1 Maintenance Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Output Bus\n- 1 Output Hatch\n- 1 Muffler Hatch\n- 8 Invar Frame Box\n- 17 Heat Proof Machine Casings\n- 9 Steel Firebox Casings\n- 16 Steel Pipe Casings",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 15,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_block_frame_17"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Reaction Furnace",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 510,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 15061,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 8,
+              "Damage:2": 15,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_frame_17"
+            },
+            "2:10": {
+              "Count:3": 16,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            },
+            "3:10": {
+              "Count:3": 9,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_firebox_casing"
+            },
+            "4:10": {
+              "Count:3": 17,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "511:10": {
+      "preRequisites:11": [
+        510
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Steel needs to be reacted with Carbon Monoxide in a §aReaction Furnace§r to produce §7Crude Iron Pentacarbonyl§r, that needs to be distilled to make §7Iron Pentacarbonyl§r.\n\nIron Pentacarbonyl then goes in the batch reactor to make §4High Purity Iron§o§r.\n\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8017,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "High Purity Iron",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 511,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8017,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "512:10": {
+      "preRequisites:11": [
+        511
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§7High Purity Iron§r needs to be roasted twice (once with water, and the second time with oxygen) to make §4Purified Iron (III) Oxide§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8315,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Purified Iron III Oxide",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 512,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8315,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "513:10": {
+      "preRequisites:11": [
+        512
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Zinc §rneeds to be roasted to make §7Zincite§r.\n\n§dRhodochrosite §rneeds to be roasted to make §4Manganese II Oxide§r.\n\nCombine both of them with §4Purified Iron III Oxide §rto make §6Manganese Zinc Ferrite§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8322,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Manganese Zinc Ferrite",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 513,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8322,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "514:10": {
+      "preRequisites:11": [
+        512
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§1Cobaltite §rneeds to be roasted to make §aCobalt Oxide§r.\n\nCombine §aCobalt Oxide §rwith §4Purified Iron III Oxide §r§rto make Nickel Zinc Ferrite.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 355,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nickel Zinc Ferrite",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 514,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 355,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "515:10": {
+      "preRequisites:11": [
+        189
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§aInvar §ris an alloy of iron and §3nickel §rthat is required to make an Electric Blast Furnace.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 287,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Invar",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 515,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 287,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "516:10": {
+      "preRequisites:11": [
+        520
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §6Clarifier§r is a multiblock machine that turns§a Flocculated Waste Water§r back into 75% §bClean Water§r and 25% §8Wastewater Sludge§r.\n\nThe Clarifier requires:\n- 1 Clarifier controller\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Output Bus\n- 1 Output Hatch\n- 1 Maintenane Hatch\n- 1 Energy Hatch\n- 144 Clarifier Vats\n- 12 Steel Frame Boxes\n- 261 Light Concrete\n- 4 Steel Gearbox Casings\n- 13 Solid Steel Machine Casings\n- 2 Steel Pipe Casings",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "susy:multiblock_tank"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Clarifier",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 516,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 17004,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 144,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "susy:multiblock_tank"
+            },
+            "2:10": {
+              "Count:3": 12,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_frame_20"
+            },
+            "3:10": {
+              "Count:3": 261,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:stone_smooth"
+            },
+            "4:10": {
+              "Count:3": 4,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:turbine_casing"
+            },
+            "5:10": {
+              "Count:3": 2,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            },
+            "6:10": {
+              "Count:3": 12,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "517:10": {
+      "preRequisites:11": [
+        516
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A §7Dumper §ris required to eliminate the Wastewater Sludge. \n\nThe Dumper requires:\n- 1 Dumper controller\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 9 Steel Frame Boxes\n- 14 Solid Steel Machine Casings",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 17005,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Dumper",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 517,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 17005,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 12,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
+              "Count:3": 9,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_frame_20"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "518:10": {
+      "preRequisites:11": [
+        32
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Potin §r§ris an alloy of copper, lead and tin that is extremely useful in creating §chigh-throughput pipes§r, if your pipes aren\u0027t good enough.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2037,
+            "OreDict:8": "",
+            "id:8": "gregtech:fluid_pipe_normal"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Vladimir Potin",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 518,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2037,
+              "OreDict:8": "",
+              "id:8": "gregtech:fluid_pipe_normal"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "519:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Wastewater needs to be heated before processing it. Using this process, you can get §aclean water §rback out of §cwaste water§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "heated_wastewater"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Heated Waste Water",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 519,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "heated_wastewater"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "520:10": {
+      "preRequisites:11": [
+        519
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Heated Waste Water can be §6mixed §rwith Aluminium Sulfate to make Flocculated Wastewater.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "flocculated_wastewater"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Flocculated Waste Water",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 520,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 0,
+              "FluidName:8": "water"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
@@ -34830,6 +35879,13 @@
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 96
+        },
+        "57:10": {
+          "id:3": 518,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -174,
+          "y:3": -60
         }
       }
     },
@@ -35201,7 +36257,7 @@
           "id:3": 188,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 30,
+          "x:3": 48,
           "y:3": 462
         },
         "49:10": {
@@ -35215,7 +36271,7 @@
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
+          "x:3": 114,
           "y:3": 474
         },
         "51:10": {
@@ -35292,21 +36348,21 @@
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
+          "x:3": 114,
           "y:3": 426
         },
         "62:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
+          "x:3": 114,
           "y:3": 378
         },
         "63:10": {
           "id:3": 203,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 144,
+          "x:3": 162,
           "y:3": 366
         },
         "64:10": {
@@ -35362,43 +36418,43 @@
           "id:3": 239,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
+          "x:3": -30,
           "y:3": 546
         },
         "72:10": {
           "id:3": 240,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
+          "x:3": 114,
           "y:3": 546
         },
         "73:10": {
           "id:3": 241,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 54,
+          "x:3": 78,
           "y:3": 546
         },
         "74:10": {
           "id:3": 242,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -12,
+          "x:3": 18,
           "y:3": 546
         },
         "75:10": {
           "id:3": 243,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -12,
-          "y:3": 576
+          "x:3": 18,
+          "y:3": 624
         },
         "76:10": {
           "id:3": 368,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 426
+          "x:3": -102,
+          "y:3": 468
         },
         "77:10": {
           "id:3": 369,
@@ -35415,179 +36471,179 @@
           "y:3": 12
         },
         "79:10": {
-          "id:3": 371,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 426
-        },
-        "80:10": {
           "id:3": 372,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 42,
+          "x:3": 60,
           "y:3": 426
         },
-        "81:10": {
+        "80:10": {
           "id:3": 373,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -336,
           "y:3": 492
         },
-        "82:10": {
+        "81:10": {
           "id:3": 374,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -336,
           "y:3": 552
         },
-        "83:10": {
+        "82:10": {
           "id:3": 377,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 210,
+          "x:3": 228,
           "y:3": 366
         },
-        "84:10": {
+        "83:10": {
           "id:3": 378,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 144,
+          "x:3": 162,
           "y:3": 432
         },
-        "85:10": {
+        "84:10": {
           "id:3": 379,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 60,
           "y:3": -102
         },
-        "86:10": {
+        "85:10": {
           "id:3": 380,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 172,
           "y:3": 52
         },
-        "87:10": {
+        "86:10": {
           "id:3": 381,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
           "y:3": 324
         },
-        "88:10": {
+        "87:10": {
           "id:3": 383,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 60
         },
-        "89:10": {
+        "88:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": -24
         },
-        "90:10": {
+        "89:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": -66
         },
-        "91:10": {
+        "90:10": {
           "id:3": 386,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": -24
         },
-        "92:10": {
+        "91:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 12
         },
-        "93:10": {
+        "92:10": {
           "id:3": 418,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -40
         },
-        "94:10": {
+        "93:10": {
           "id:3": 419,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
           "y:3": -6
         },
-        "95:10": {
+        "94:10": {
           "id:3": 420,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 66,
           "y:3": -6
         },
-        "96:10": {
+        "95:10": {
           "id:3": 421,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 28,
           "y:3": -40
         },
-        "97:10": {
+        "96:10": {
           "id:3": 438,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -78,
           "y:3": 6
         },
-        "98:10": {
+        "97:10": {
           "id:3": 439,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 222,
+          "x:3": 240,
           "y:3": 330
         },
-        "99:10": {
+        "98:10": {
           "id:3": 440,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": -42
         },
-        "100:10": {
+        "99:10": {
           "id:3": 441,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 126,
           "y:3": -42
         },
-        "101:10": {
+        "100:10": {
           "id:3": 446,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 54,
+          "x:3": 78,
           "y:3": 516
         },
-        "102:10": {
+        "101:10": {
           "id:3": 447,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
+          "x:3": 114,
           "y:3": 516
         },
-        "103:10": {
+        "102:10": {
           "id:3": 472,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -222,
           "y:3": 270
+        },
+        "103:10": {
+          "id:3": 515,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 18,
+          "y:3": 474
         }
       }
     },
@@ -35655,473 +36711,543 @@
           "y:3": 0
         },
         "5:10": {
+          "id:3": 371,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 270,
+          "y:3": 150
+        },
+        "6:10": {
           "id:3": 391,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -126,
           "y:3": 150
         },
-        "6:10": {
+        "7:10": {
           "id:3": 394,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 0,
           "y:3": -72
         },
-        "7:10": {
+        "8:10": {
           "id:3": 395,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 12
         },
-        "8:10": {
+        "9:10": {
           "id:3": 396,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 60
         },
-        "9:10": {
+        "10:10": {
           "id:3": 397,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 108
         },
-        "10:10": {
+        "11:10": {
           "id:3": 398,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -54,
           "y:3": 156
         },
-        "11:10": {
+        "12:10": {
           "id:3": 399,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 72
         },
-        "12:10": {
+        "13:10": {
           "id:3": 400,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 72
         },
-        "13:10": {
+        "14:10": {
           "id:3": 401,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 72
         },
-        "14:10": {
+        "15:10": {
           "id:3": 402,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 72
         },
-        "15:10": {
+        "16:10": {
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 72
         },
-        "16:10": {
+        "17:10": {
           "id:3": 405,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 138,
           "y:3": 66
         },
-        "17:10": {
+        "18:10": {
           "id:3": 406,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": -120
+          "x:3": 204,
+          "y:3": -162
         },
-        "18:10": {
+        "19:10": {
           "id:3": 412,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 204
         },
-        "19:10": {
+        "20:10": {
           "id:3": 413,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -114,
           "y:3": 204
         },
-        "20:10": {
+        "21:10": {
           "id:3": 443,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 354,
           "y:3": -12
         },
-        "21:10": {
+        "22:10": {
           "id:3": 451,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 222,
           "y:3": 66
         },
-        "22:10": {
+        "23:10": {
           "id:3": 452,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 72
         },
-        "23:10": {
+        "24:10": {
           "id:3": 453,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 24
         },
-        "24:10": {
+        "25:10": {
           "id:3": 454,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 354,
           "y:3": 24
         },
-        "25:10": {
+        "26:10": {
           "id:3": 455,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": -12
         },
-        "26:10": {
+        "27:10": {
           "id:3": 456,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 120
         },
-        "27:10": {
+        "28:10": {
           "id:3": 457,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 264,
           "y:3": 120
         },
-        "28:10": {
+        "29:10": {
           "id:3": 458,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 216,
           "y:3": 114
         },
-        "29:10": {
+        "30:10": {
           "id:3": 459,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 120
         },
-        "30:10": {
+        "31:10": {
           "id:3": 460,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 120
         },
-        "31:10": {
+        "32:10": {
           "id:3": 461,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 120
         },
-        "32:10": {
+        "33:10": {
           "id:3": 462,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 138,
           "y:3": 114
         },
-        "33:10": {
+        "34:10": {
           "id:3": 463,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 24
         },
-        "34:10": {
+        "35:10": {
           "id:3": 464,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 246,
           "y:3": 24
         },
-        "35:10": {
+        "36:10": {
           "id:3": 465,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 12
         },
-        "36:10": {
+        "37:10": {
           "id:3": 466,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 132,
           "y:3": 0
         },
-        "37:10": {
+        "38:10": {
           "id:3": 467,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 162,
-          "y:3": 168
+          "y:3": 180
         },
-        "38:10": {
+        "39:10": {
           "id:3": 468,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": -66
         },
-        "39:10": {
+        "40:10": {
           "id:3": 469,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": -114
         },
-        "40:10": {
+        "41:10": {
           "id:3": 470,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": -66
         },
-        "41:10": {
+        "42:10": {
           "id:3": 471,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": -114
         },
-        "42:10": {
+        "43:10": {
           "id:3": 475,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
-          "y:3": 222
+          "y:3": 234
         },
-        "43:10": {
+        "44:10": {
           "id:3": 476,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 270,
-          "y:3": 174
+          "y:3": 186
         },
-        "44:10": {
+        "45:10": {
           "id:3": 477,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 306,
-          "y:3": 174
+          "y:3": 186
         },
-        "45:10": {
+        "46:10": {
           "id:3": 478,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 216,
-          "y:3": 168
+          "y:3": 180
         },
-        "46:10": {
+        "47:10": {
           "id:3": 480,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 216,
-          "y:3": 216
+          "y:3": 228
         },
-        "47:10": {
+        "48:10": {
           "id:3": 481,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 420,
           "y:3": 72
         },
-        "48:10": {
+        "49:10": {
           "id:3": 482,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
           "y:3": -42
         },
-        "49:10": {
+        "50:10": {
           "id:3": 483,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 396,
           "y:3": -96
         },
-        "50:10": {
+        "51:10": {
           "id:3": 484,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 396,
           "y:3": -42
         },
-        "51:10": {
+        "52:10": {
           "id:3": 485,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
           "y:3": -96
         },
-        "52:10": {
+        "53:10": {
           "id:3": 486,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 414,
           "y:3": 18
         },
-        "53:10": {
+        "54:10": {
           "id:3": 487,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 474,
           "y:3": 24
         },
-        "54:10": {
+        "55:10": {
           "id:3": 488,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 366,
           "y:3": 72
         },
-        "55:10": {
+        "56:10": {
           "id:3": 489,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 348,
-          "y:3": 150
+          "y:3": 162
         },
-        "56:10": {
+        "57:10": {
           "id:3": 490,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 384,
-          "y:3": 150
+          "y:3": 162
         },
-        "57:10": {
+        "58:10": {
           "id:3": 491,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 360,
-          "y:3": 216
+          "y:3": 228
         },
-        "58:10": {
+        "59:10": {
           "id:3": 492,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 270,
-          "y:3": 222
+          "y:3": 234
         },
-        "59:10": {
+        "60:10": {
           "id:3": 493,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 318,
-          "y:3": 222
+          "y:3": 234
         },
-        "60:10": {
+        "61:10": {
           "id:3": 494,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 282,
-          "y:3": 282
+          "y:3": 294
         },
-        "61:10": {
+        "62:10": {
           "id:3": 495,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 348,
-          "y:3": 294
+          "y:3": 306
         },
-        "62:10": {
+        "63:10": {
           "id:3": 496,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": 294
+          "x:3": 60,
+          "y:3": 306
         },
-        "63:10": {
+        "64:10": {
           "id:3": 497,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 174,
-          "y:3": 282
+          "x:3": -6,
+          "y:3": 294
         },
-        "64:10": {
+        "65:10": {
           "id:3": 498,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 6,
-          "y:3": -126
+          "y:3": -168
         },
-        "65:10": {
+        "66:10": {
           "id:3": 499,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": -168
+          "y:3": -216
         },
-        "66:10": {
+        "67:10": {
           "id:3": 500,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": -138
+          "y:3": -186
         },
-        "67:10": {
+        "68:10": {
           "id:3": 501,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": -108
+          "y:3": -144
         },
-        "68:10": {
+        "69:10": {
           "id:3": 502,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 102,
-          "y:3": -132
+          "x:3": 138,
+          "y:3": -174
         },
-        "69:10": {
+        "70:10": {
           "id:3": 503,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": -78
+          "y:3": -102
         },
-        "70:10": {
+        "71:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": -36
+          "y:3": -60
         },
-        "71:10": {
+        "72:10": {
           "id:3": 505,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 6,
           "y:3": 108
+        },
+        "73:10": {
+          "id:3": 506,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 96,
+          "y:3": -168
+        },
+        "74:10": {
+          "id:3": 507,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 96,
+          "y:3": -42
+        },
+        "75:10": {
+          "id:3": 508,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 102,
+          "y:3": -78
+        },
+        "76:10": {
+          "id:3": 509,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 102,
+          "y:3": -114
+        },
+        "77:10": {
+          "id:3": 510,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 234,
+          "y:3": 300
+        },
+        "78:10": {
+          "id:3": 511,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 192,
+          "y:3": 306
+        },
+        "79:10": {
+          "id:3": 512,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 150,
+          "y:3": 306
+        },
+        "80:10": {
+          "id:3": 513,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 282
+        },
+        "81:10": {
+          "id:3": 514,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 330
         }
       }
     },
@@ -36894,17 +38020,17 @@
         },
         "56:10": {
           "id:3": 473,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": 360,
-          "y:3": -96
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 288,
+          "y:3": -72
         },
         "57:10": {
           "id:3": 474,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": 432,
-          "y:3": -96
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 342,
+          "y:3": -72
         },
         "58:10": {
           "id:3": 482,
@@ -36940,6 +38066,34 @@
           "sizeY:3": 24,
           "x:3": -168,
           "y:3": -54
+        },
+        "63:10": {
+          "id:3": 516,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 102,
+          "y:3": 126
+        },
+        "64:10": {
+          "id:3": 517,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 150,
+          "y:3": 126
+        },
+        "65:10": {
+          "id:3": 519,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": 132
+        },
+        "66:10": {
+          "id:3": 520,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 132
         }
       }
     },
@@ -37389,6 +38543,34 @@
           "sizeY:3": 36,
           "x:3": -60,
           "y:3": -12
+        },
+        "4:10": {
+          "id:3": 478,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 138,
+          "y:3": 0
+        },
+        "5:10": {
+          "id:3": 494,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 42
+        },
+        "6:10": {
+          "id:3": 495,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 42
+        },
+        "7:10": {
+          "id:3": 497,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 138,
+          "y:3": 42
         }
       }
     },

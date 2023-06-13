@@ -933,6 +933,45 @@ material.filtered_water=Filtered Water
 material.sterilized_water=Sterilized Water
 material.ultrapure_water=Ultrapure Water
 
+material.crude_iron_pentacarbonyl=Crude Iron Pentacarbonyl
+material.chlorine_plasma=Chlorine Plasma
+material.iron_two_three_oxide=Iron (II,III) Oxide
+material.purified_iron_two_three_oxide=Purified Iron (II,III) Oxide
+material.purified_iron_iii_oxide=Purified Iron III Oxide
+material.nickel_ii_oxide=Nickel II Oxide
+material.ethylenediamine_pyrocatechol=Ethylenediamine Pyrocatechol
+material.carbon_tetrafluoride=Carbon Tetrafluoride
+material.ceramic_thick_film_paste=Ceramic Thick-Film Paste
+
+material.nitrogen_trifluoride=Nitrogen Trifluoride
+material.cobalt_ferrite=Cobalt Ferrite
+material.strontium_ferrite=Strontium Ferrite
+material.barium_ferrite=Barium Ferrite
+material.manganese_zinc_ferrite=Manganese Zinc Ferrite
+material.strontium_carbonate=Strontium Carbonate
+material.barium_carbonate=Barium Carbonate
+material.lead_oxide=Lead Oxide
+material.tantalum_nitride=Tantalum Nitride
+material.ruthenium_iv_oxide=Ruthenium IV Oxide
+material.bismuth_iridate=Bismuth Iridate
+material.sodium_bismuthate=Sodium Bismuthate
+material.bismuth_iii_oxide=Bismuth III Oxide
+material.manganese_ii_nitrate=Manganese II Nitrate
+material.purified_manganese_dioxide=Purified Manganese Dioxide
+material.borax_electrolyte=Borax Electrolyte
+material.ferroelectric_ceramic_binding=Ferroelectric Ceramic Binding
+material.barium_titanate=Barium Titanate
+material.hafnium_tetrachloride=Hafnium Tetrachloride
+material.zirconium_tetrachloride=Zirconium Tetrachloride
+
+material.bismanol=Bismanol
+material.neodymium_alloy=Neodymium Alloy
+material.samarium_alloy=Samarium Alloy
+material.bismanol_magnetic=Magnetic Bismanol
+material.neodymium_alloy_magnetic=Magnetic Neodymium Alloy
+material.samarium_alloy_magnetic=Magnetic Samarium Alloy
+material.configured_circuit_one=Fluidized Configured Circuit (1)
+
 # Isotopes
 
 # GregTech RecipeMaps
@@ -1117,12 +1156,14 @@ metaitem.mask.cpu.name=Photolithography Mask (CPU)
 metaitem.mask.ram.name=Photolithography Mask (RAM)
 metaitem.mask.pcb.name=Photolithography Mask (PCB)
 metaitem.mask.ulpic.name=Photolithography Mask (ULPIC)
+metaitem.mask.lpic.name=Photolithography Mask (LPIC)
 
 metaitem.wafer.doped.silicon.name=Doped Silicon Wafer
 metaitem.patterned.ic.name=Silicon Wafer (IC Pattern)
 metaitem.patterned.cpu.name=Silicon Wafer (CPU Pattern)
 metaitem.patterned.ram.name=Silicon Wafer (RAM Pattern)
 metaitem.patterned.ulpic.name=Silicon Wafer (ULPIC Pattern)
+metaitem.patterned.lpic.name=Silicon Wafer (LPIC Pattern)
 
 metaitem.patterned.board.coated.name=Patterned Coated Circuit Board
 metaitem.patterned.board.phenolic.name=Patterned Phenolic Circuit Board
@@ -1134,6 +1175,7 @@ metaitem.etched.ic.name=Etched Integrated Logic Circuit Wafer
 metaitem.etched.cpu.name=Etched CPU Wafer
 metaitem.etched.ram.name=Etched RAM Wafer
 metaitem.etched.ulpic.name=Etched ULPIC Wafer
+metaitem.etched.lpic.name=Etched LPIC Wafer
 
 metaitem.seed_crystal.silicon.name=Silicon Seed Crystal
 metaitem.seed_crystal.gallium_arsenide.name=Gallium Arsenide Seed Crystal
@@ -1189,6 +1231,45 @@ metaitem.zeolite_membrane.name=Zeolite Membrane
 metaitem.silver_anode_slime.name=Silver Anode Slime
 metaitem.gold_anode_slime.name=Gold Anode Slime
 
+metaitem.wafer.n_doped.silicon.name=n-Doped Silicon Wafer
+metaitem.wafer.alumina.name=Alumina Wafer
+metaitem.wafer.silicon_dioxide.name=Silicon Dioxide Wafer
+metaitem.wafer.beryllium_oxide.name=Beryllium Oxide Wafer
+metaitem.wafer.silicon_germanium.name=Silicon-Germanium Wafer
+
+metaitem.boule.alumina.name=Alumina Boule
+metaitem.boule.beryllium_oxide.name=Beryllium Oxide Boule
+metaitem.boule.emerald.name=Emerald Boule
+metaitem.boule.sapphire.name=Sapphire Boule
+metaitem.boule.ruby.name=Ruby Boule
+metaitem.boule.silicon_germanium.name=Silicon-Germanium Boule
+
+metaitem.seed_crystal.alumina.name=Alumina Seed Crystal
+metaitem.seed_crystal.beryllium_oxide.name=Beryllium Oxide Seed Crystal
+metaitem.seed_crystal.emerald.name=Emerald Seed Crystal
+
+metaitem.thick_film_substrate_wafer.name=Thick-Film Substrate Wafer
+metaitem.patterned_thick_film_substrate_wafer.name=Patterned Thick-Film Substrate Wafer
+metaitem.thick_film_resistor_wafer.name=Thick-Film Resistor Wafer
+
+metaitem.metallized_plastic_film.name=Metallized Plastic Film
+metaitem.metallized_plastic_square.name=Metallized Plastic Square
+metaitem.raw_smd_capacitor.name=Raw Thin-Film Capacitor
+metaitem.raw_capacitor_roll.name=Raw Capacitor Roll
+metaitem.aluminium_electrolytic_capacitor.name=Aluminium Electrolytic Capacitor
+metaitem.tantalum_chip.name=Tantalum Chip
+metaitem.anodized_tantalum_chip.name=Anodized Tantalum Chip
+metaitem.manganized_tantalum_chip.name=Manganized Tantalum Chip
+metaitem.ferroelectric_ceramic_foil.name=Ferroelectric Ceramic Foil
+metaitem.stacked_ceramic_capacitor.name=Stacked Ceramic Capacitor
+metaitem.raw_ceramic_capacitor.name=Raw Ceramic Capacitor
+
+metaitem.wafer.insulated_silicon.name=Insulated Silicon Wafer
+metaitem.wafer.insulated_silicon_germanium.name=Insulated Silicon-Germanium Wafer
+metaitem.chip.insulated_silicon.name=Insulated Silicon Chip
+metaitem.chip.insulated_silicon_germanium.name=Insulated Silicon-Germanium Chip
+metaitem.chip.n_doped_silicon.name=n-Doped Silicon Chip
+metaitem.chip.silicon_dioxide.name=Silicon Dioxide Chip
 # Multiblocked
 
 tile.multiblocked.item_input.name=Small Input Bus
@@ -1230,3 +1311,9 @@ recipemap.zone_refiner.name=Zone Refiner
 
 # Generic Renaming
 item.chisel.chisel_diamond.name=Steel Chisel
+
+# Resin Logs
+gregtech.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log
+gregtech.block_group_members.extractable_logs_2.name=Acacia and Dark Oak
+
+gregtech.block_group_members.latex_logs.name=Rubber Log

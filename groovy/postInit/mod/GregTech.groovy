@@ -5,6 +5,12 @@ import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.blocks.MetaBlocks.*;
+
+import supersymmetry.api.capability.impl.PseudoMultiRecipeLogic;
+import supersymmetry.api.recipes.builders.PseudoMultiRecipeBuilder;
+import net.minecraft.init.Blocks;
 
 println("Running GregTech.groovy...")
 
@@ -602,3 +608,29 @@ crafting.addShaped('gregtech:prospector_lead_acid', metaitem('prospector.lv'), [
         [ore('circuitLv'), ore('plateGlass'), ore('circuitLv')],
         [ore('plateSteel'), metaitem('battery.lead_acid'), ore('plateSteel')]
 ])
+
+LATEX_COLLECTOR = recipemap('latex_collector')
+
+LATEX_COLLECTOR.recipeBuilder()
+        .notConsumable(fluid('water') * 10)
+        .fluidOutputs(fluid('latex') * 100)
+        .blockStates("latex_logs", MetaBlocks.RUBBER_LOG.getBlockState())
+        .duration(20)
+        .EUt(7)
+        .buildAndRegister();
+
+LATEX_COLLECTOR.recipeBuilder()
+        .notConsumable(fluid('distilled_water') * 10)
+        .fluidOutputs(fluid('resin') * 100)
+        .blockStates("extractable_logs_1", Blocks.LOG.getBlockState())
+        .duration(20)
+        .EUt(7)
+        .buildAndRegister();
+
+LATEX_COLLECTOR.recipeBuilder()
+        .notConsumable(fluid('lubricant') * 10)
+        .fluidOutputs(fluid('resin') * 100)
+        .blockStates("extractable_logs_2", Blocks.LOG2.getBlockState())
+        .duration(20)
+        .EUt(7)
+        .buildAndRegister();

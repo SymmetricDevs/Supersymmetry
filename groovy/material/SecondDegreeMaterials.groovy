@@ -306,5 +306,41 @@ public class SecondDegreeMaterials {
                 .components(PotassiumSulfate, 1, Water, 1)
                 .colorAverage()
                 .build()
+
+        BismanolMagnetic = new Material.Builder(13048, "bismanol_magnetic")
+                .ingot()
+                .color(0x52704c).iconSet(MAGNETIC)
+                .flags(GENERATE_ROD, IS_MAGNETIC)
+                .components(Bismanol, 1)
+                .ingotSmeltInto(Bismanol)
+                .arcSmeltInto(Bismanol)
+                .macerateInto(Bismanol)
+                .build();
+
+        Bismanol.getProperty(PropertyKey.INGOT).setMagneticMaterial(BismanolMagnetic);
+
+        NeodymiumAlloyMagnetic = new Material.Builder(13049, "neodymium_alloy_magnetic")
+                .ingot()
+                .color(0x211a1a).iconSet(MAGNETIC)
+                .flags(GENERATE_ROD, IS_MAGNETIC)
+                .components(NeodymiumAlloy, 1)
+                .ingotSmeltInto(NeodymiumAlloy)
+                .arcSmeltInto(NeodymiumAlloy)
+                .macerateInto(NeodymiumAlloy)
+                .build();
+
+        NeodymiumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(NeodymiumAlloyMagnetic);
+
+        SamariumAlloyMagnetic = new Material.Builder(13050, "samarium_alloy_magnetic")
+                .ingot()
+                .color(0xcadea6).iconSet(MAGNETIC)
+                .flags(GENERATE_ROD, IS_MAGNETIC)
+                .components(SamariumAlloy, 1)
+                .ingotSmeltInto(SamariumAlloy)
+                .arcSmeltInto(SamariumAlloy)
+                .macerateInto(SamariumAlloy)
+                .build();
+
+        SamariumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumAlloyMagnetic);
     }
 }

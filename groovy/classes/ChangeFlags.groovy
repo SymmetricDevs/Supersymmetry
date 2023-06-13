@@ -24,7 +24,10 @@ class ChangeFlags {
         Aluminium.addFlags("generate_round");
         Nickel.addFlags("generate_rod");
         Tungsten.addFlags("generate_fine_wire");
+        Molybdenum.addFlags("generate_fine_wire");
         Tantalum.addFlags("generate_rod");
+        Tantalum.addFlags("generate_fine_wire");
+        Titanium.addFlags("generate_fine_wire");
         Tantalum.addFlags("generate_catalyst_bed");
         ChromiumTrioxide.addFlags("generate_catalyst_bed");
         Iron3Chloride.addFlags("generate_catalyst_bed");
@@ -38,6 +41,10 @@ class ChangeFlags {
         RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
+
+        Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());
+
+        Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
