@@ -306,5 +306,11 @@ public class SecondDegreeMaterials {
                 .components(PotassiumSulfate, 1, Water, 1)
                 .colorAverage()
                 .build()
+
+        PhosphoriteSlurry = new Material.Builder(13048, "phosphorite_slurry")
+                .fluid()
+                .components(Phosphorite, 2, Water, 1)
+                .colorAverage()
+                .build()
     }
 }

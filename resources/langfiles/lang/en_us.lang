@@ -213,7 +213,7 @@ material.high_purity_sodium=High Purity Sodium
 material.high_purity_magnesium=High Purity Magnesium
 material.high_purity_aluminium=High Purity Aluminium
 material.high_purity_silicon=High Purity Silicon
-material.high_purity_phosphorus=High Purity Phosphorus
+material.high_purity_phosphorus=High Purity White Phosphorus
 material.high_purity_sulfur=High Purity Sulfur
 material.high_purity_potassium=High Purity Potassium
 material.high_purity_calcium=High Purity Calcium
@@ -771,9 +771,11 @@ material.gold_eluent=Gold Eluent
 material.gold_elute_solution=Gold Elute Solution
 material.potash_solution=Potash Solution
 material.potassium_sulfate_solution=Potassium Sulfate Solution
-
-
-
+material.phosphorite_slurry=Phosphorite Slurry
+material.phosphate_pulp=Phosphate Pulp
+material.filtered_phosphate_pulp=Filtered Phosphate Pulp
+material.phosphate_concentrate=Phosphate Concentrate
+material.phosphogypsum=Phosphogypsum
 
 # Thermodynamics
 

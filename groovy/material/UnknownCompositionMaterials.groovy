@@ -505,5 +505,29 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x9c8a46)
                 .build();
+
+        PhosphatePulp = new Material.Builder(4097, "phosphate_pulp")
+                .dust()
+                .color(0x8c7e2a)
+                .iconSet(SAND)
+                .build();
+
+        FilteredPhosphatePulp = new Material.Builder(4098, "filtered_phosphate_pulp")
+                .dust()
+                .color(0x8c7e2a)
+                .iconSet(SHINY)
+                .build();
+
+        PhosphateConcentrate = new Material.Builder(4099, "phosphate_concentrate")
+                .dust()
+                .color(0xd1b615)
+                .iconSet(SHINY)
+                .build();
+
+        Phosphogypsum = new Material.Builder(4100, "phosphogypsum")
+                .dust()
+                .color(0xd1cba7)
+                .iconSet(DULL)
+                .build();
     }
 }           
