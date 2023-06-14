@@ -38,7 +38,7 @@ def name_removals = [
 "computronics:oc_parts33",
 "computronics:oc_parts34",
 "computronics:oc_parts35",
-"computronics:speech_box6",
+"computronics:speech_box6"
 ]
 
 for (item in name_removals) {
@@ -139,7 +139,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(ore('foilPlastic') * 4)
-			.inputs(ore('dustTinyMagneticIron'))
+			.inputs(metaitem('dustTinyIronMagnetic'))
             .outputs(item('computronics:parts'))
             .duration(400)
             .EUt(30)

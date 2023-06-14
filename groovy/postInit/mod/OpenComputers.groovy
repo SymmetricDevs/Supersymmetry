@@ -1193,7 +1193,7 @@ for (solder in soldering_alloys) {
 			.inputs(ore('wireGtSingleCopper'))
             .fluidInputs(solder)
 			.circuitMeta([2])
-            .outputs(item('opencomputers:oc_cable'))
+            .outputs(item('opencomputers:cable'))
             .duration(400)
             .EUt(120)
             .buildAndRegister();
