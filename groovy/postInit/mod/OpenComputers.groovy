@@ -23,6 +23,7 @@ def name_removals = [
 "opencomputers:motionsensor15",
 "opencomputers:powerconverter16",
 "opencomputers:powerdistributor17",
+"opencomputers:material41",
 "opencomputers:printer18",
 "opencomputers:raid19",
 "opencomputers:redstone20",
@@ -1187,6 +1188,15 @@ for (solder in soldering_alloys) {
             .EUt(120)
             .buildAndRegister();
 
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(ore('plateRubber'))
+			.inputs(ore('wireGtSingleCopper'))
+            .fluidInputs(solder)
+			.circuitMeta([2])
+            .outputs(item('opencomputers:oc_cable'))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
 
 
 //TODO: Disk Platter
