@@ -10,7 +10,7 @@ import gregtech.api.unification.material.properties.*
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
-
+import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
 public class FirstDegreeMaterials{
@@ -1613,25 +1613,69 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        Bismanol = new Material.Builder(8337, "bismanol")
-                .ingot()
-                .color(0x52704c).iconSet(METALLIC)
-                .flags(STD_METAL, GENERATE_ROD)
-                .components(Bismuth, 1, Manganese, 1)
+        RawElectrum = new Material.Builder(8337, "raw_electrum")
+                .ore()
+                .color(0xfcf403).iconSet(SHINY)
+                .components(Silver, 1, Gold, 1)
                 .build();
 
         NeodymiumAlloy = new Material.Builder(8338, "neodymium_alloy")
                 .ingot()
-                .color(0x211a1a).iconSet(METALLIC)
-                .flags(STD_METAL, GENERATE_ROD)
+                .color(0x2b2a2a).iconSet(METALLIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE)
                 .components(Neodymium, 2, Iron, 14, Boron, 1)
+                .blastTemp(1297, GasTier.MID)
                 .build();
 
-        SamariumAlloy = new Material.Builder(8339, "samarium_alloy")
+        TreatedNeodymiumAlloy = new Material.Builder(8339, "treated_neodymium_alloy")
                 .ingot()
-                .color(0xcadea6).iconSet(METALLIC)
-                .flags(STD_METAL, GENERATE_ROD)
+                .color(0x2b2a2a).iconSet(SHINY)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING)
+                .components(NeodymiumAlloy, 1)
+                .ingotSmeltInto(NeodymiumAlloy)
+                .arcSmeltInto(NeodymiumAlloy)
+                .macerateInto(NeodymiumAlloy)
+                .build();
+
+        NeodymiumAlloyMagnetic = new Material.Builder(8340, "neodymium_alloy_magnetic")
+                .ingot()
+                .color(0x2b2a2a).iconSet(MAGNETIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING, IS_MAGNETIC)
+                .components(NeodymiumAlloy, 1)
+                .ingotSmeltInto(NeodymiumAlloy)
+                .arcSmeltInto(NeodymiumAlloy)
+                .macerateInto(NeodymiumAlloy)
+                .build();
+
+        TreatedNeodymiumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(NeodymiumAlloyMagnetic);
+
+        SamariumAlloy = new Material.Builder(8341, "samarium_alloy")
+                .dust().ingot().fluid()
+                .color(0xb3d683).iconSet(METALLIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING)
                 .components(Samarium, 1, Cobalt, 5)
                 .build();
+
+        TreatedSamariumAlloy = new Material.Builder(8342, "treated_samarium_alloy")
+                .ingot()
+                .color(0xb3d683).iconSet(SHINY)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING)
+                .components(SamariumAlloy, 1)
+                .ingotSmeltInto(SamariumAlloy)
+                .arcSmeltInto(SamariumAlloy)
+                .macerateInto(SamariumAlloy)
+                .build();
+
+        SamariumAlloyMagnetic = new Material.Builder(8343, "samarium_alloy_magnetic")
+                .ingot()
+                .color(0xb3d683).iconSet(MAGNETIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING, IS_MAGNETIC)
+                .components(SamariumAlloy, 1)
+                .ingotSmeltInto(SamariumAlloy)
+                .arcSmeltInto(SamariumAlloy)
+                .macerateInto(SamariumAlloy)
+                .build();
+
+        TreatedSamariumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumAlloyMagnetic);
     }
 }

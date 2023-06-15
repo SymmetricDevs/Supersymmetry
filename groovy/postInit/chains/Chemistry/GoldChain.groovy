@@ -8,9 +8,12 @@ MACERATOR = recipemap('macerator')
 MIXER = recipemap('mixer')
 CHEMICAL_BATH = recipemap('chemical_bath')
 
+// Silver Dust * 1
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustRawElectrum') * 2], null)
+
 //NATURAL ELECTRUM PURIFICATION VIA PARTING (PRIMITIVE, 67% EFFICIENCY)
 BATCH_REACTOR.recipeBuilder()
-    .inputs(ore('dustElectrum') * 6) //Change to "natural" electrum
+    .inputs(metaitem('dustRawElectrum') * 6)
     .fluidInputs(fluid('nitric_acid') * 4000)
     .fluidInputs(fluid('distilled_water') * 1000)
     .outputs(metaitem('dustGold') * 2)

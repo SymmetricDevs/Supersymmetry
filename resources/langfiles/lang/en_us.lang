@@ -967,10 +967,11 @@ material.zirconium_tetrachloride=Zirconium Tetrachloride
 material.bismanol=Bismanol
 material.neodymium_alloy=Neodymium Alloy
 material.samarium_alloy=Samarium Alloy
-material.bismanol_magnetic=Magnetic Bismanol
+material.treated_neodymium_alloy=Treated Neodymium Alloy
+material.treated_samarium_alloy=Treated Samarium Alloy
 material.neodymium_alloy_magnetic=Magnetic Neodymium Alloy
 material.samarium_alloy_magnetic=Magnetic Samarium Alloy
-material.configured_circuit_one=Fluidized Configured Circuit (1)
+material.raw_electrum=Raw Electrum
 
 # Isotopes
 
@@ -1189,7 +1190,9 @@ metaitem.led_light.name=L.E.D. Lights
 metaitem.mineral_wool.name=Mineral Wool Sheet
 metaitem.hepa_filter.name=H.E.P.A. Filter
 
-metaitem.shape.mold.rod=Mold (Rod)
+metaitem.shape.mold.rod.name=Mold (Rod)
+metaitem.shape.mold.long_rod.name=Mold (Long Rod)
+metaitem.shape.mold.ring.name=Mold (Ring)
 
 metaitem.assemblyManganesePhosphide.name=Manganese Phosphide Assembly
 metaitem.baseManganesePhosphide.name=Base Manganese Phosphide Superconductor

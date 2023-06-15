@@ -1086,7 +1086,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('plateTitanium') * 4)
-			.inputs(ore('stickNeodymiumMagnetic'))
+			.inputs(metaitem('stickNeodymiumAlloyMagnetic'))
             .fluidInputs(solder)
 			.circuitMeta([1])
             .outputs(item('opencomputers:upgrade', 25))
