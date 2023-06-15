@@ -517,9 +517,13 @@ class SuSyMaterials {
         public static Material BariumTitanate;
         public static Material HafniumTetrachloride;
         public static Material ZirconiumTetrachloride;
-        public static Material Bismanol;
+        public static Material RawElectrum;
         public static Material NeodymiumAlloy;
+        public static Material TreatedNeodymiumAlloy;
+        public static Material NeodymiumAlloyMagnetic;
         public static Material SamariumAlloy;
+        public static Material TreatedSamariumAlloy;
+        public static Material SamariumAlloyMagnetic;
 
         // Second Degree Materials
 
@@ -571,9 +575,6 @@ class SuSyMaterials {
         public static Material GoldEluteSolution;
         public static Material PotashSolution;
         public static Material PotassiumSulfateSolution;
-        public static Material BismanolMagnetic;
-        public static Material NeodymiumAlloyMagnetic;
-        public static Material SamariumAlloyMagnetic;
 
         // Organic Chemistry Materials
 

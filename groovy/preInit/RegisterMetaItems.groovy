@@ -26,6 +26,8 @@ eventManager.listen {
         customMetaItems.addItem(104, "shape.mold.rod")
         customMetaItems.addItem(105, "shape.mold.crucible")
         customMetaItems.addItem(106, "boron.nitride.crucible")
+        customMetaItems.addItem(107, "shape.mold.long_rod")
+        customMetaItems.addItem(108, "shape.mold.ring")
 
         customMetaItems.addItem(150, "mudbrick_mix")
         customMetaItems.addItem(151, "slaked_lime")
