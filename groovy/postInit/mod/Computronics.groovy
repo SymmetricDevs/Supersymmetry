@@ -79,7 +79,7 @@ for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(ore('circuitMv'))
 			.inputs(metaitem('hull.mv'))
-			.inputs(ore('lensGlass'))
+			.inputs(metaitem('camera'))
             .outputs(item('computronics:camera'))
             .duration(400)
             .EUt(30)
