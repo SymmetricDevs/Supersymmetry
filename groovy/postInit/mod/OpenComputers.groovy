@@ -1198,6 +1198,17 @@ for (solder in soldering_alloys) {
             .EUt(120)
             .buildAndRegister();
 
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(ore('circuitHv'))
+			.inputs(ore('oc:wlanCard2'))
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:component', 19))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
 
 //TODO: Disk Platter
 }
