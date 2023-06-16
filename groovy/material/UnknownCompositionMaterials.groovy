@@ -525,5 +525,47 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xede772)
                 .build();
+
+        MetalNitrateSolution = new Material.Builder(4101, "metal_nitrate_solution")
+                .fluid()
+                .color(0x663422)
+                .build();
+
+        NeutralizedMetalNitrateSolution = new Material.Builder(4102, "neutralized_metal_nitrate_solution")
+                .fluid()
+                .color(0x734d3f)
+                .build();
+
+        MetalNitrateCatalyst = new Material.Builder(4103, "metal_nitrate_catalyst")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xb58877)
+                .build();
+
+        TwoEthylhexylPhosphoricAcidMix = new Material.Builder(4104, "two_ethylhexyl_phosphoric_acid_mix")
+                .fluid()
+                .color(0xd1bb75)
+                .build();
+
+        RareEarthCatalystYNd = new Material.Builder(4105, "rare_earth_catalyst_y_nd")
+                .dust()
+                .color(0x2e2a2a)
+                .build();
+
+        DilutedPrimaryAmineN = new Material.Builder(4106, "diluted_primary_amine_n")
+                .fluid()
+                .color(0x704a9e)
+                .build();
+
+        CrosslinkedPolystyrene = new Material.Builder(4107, "crosslinked_polystyrene")
+                .ingot().fluid()
+                .flags(GENERATE_ROUND)
+                .color(0xa7a9d6)
+                .build();
+
+        EthyleneGlycolMix = new Material.Builder(4108, "ethylene_glycol_mix")
+                .fluid()
+                .color(0x2eafc9)
+                .build();
     }
 }

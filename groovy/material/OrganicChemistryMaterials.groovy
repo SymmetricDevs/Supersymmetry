@@ -972,5 +972,127 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 3, Hydrogen, 6, Oxygen, 3)
                 .colorAverage()
                 .build()
+
+        DiethyleneGlycol = new Material.Builder(15161, 'diethylene_glycol')
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 3)
+                .color(0x2ec9c1)
+                .build()
+
+        DiglycolicAcid = new Material.Builder(15162, 'diglycolic_acid')
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 5)
+                .colorAverage()
+                .build()
+
+        NOctanol = new Material.Builder(15163, 'n_octanol')
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 18, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        NOctanol.setFormula("C8H17OH", true)
+
+        NOctylamine = new Material.Builder(15164, 'n_octylamine')
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 19, Nitrogen, 1)
+                .colorAverage()
+                .build()
+
+        Dioctylamine = new Material.Builder(15165, 'dioctylamine')
+                .fluid()
+                .components(Carbon, 16, Hydrogen, 35, Nitrogen, 1)
+                .colorAverage()
+                .build()
+
+        TetraoctylDiglycolamide = new Material.Builder(15166, 'tetraoctyl_diglycolamide')
+                .fluid()
+                .components(Carbon, 36, Hydrogen, 72, Nitrogen, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        TwoEthylTwoHexenal = new Material.Builder(15167, 'two_ethyl_two_hexenal')
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 14, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        TwoEthylhexanol = new Material.Builder(15168, 'two_ethylhexanol')
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 18, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        DiTwoEthylhexylPhosphoricAcid = new Material.Builder(15169, 'di_two_ethylhexyl_phosphoric_acid')
+                .fluid()
+                .components(Carbon, 16, Hydrogen, 35, Oxygen, 4, Phosphorus, 1)
+                .color(0xb5a677)
+                .build()
+
+        DiTwoEthylhexylPhosphoricAcid.setFormula("(C8H17O)2PO(OH)2", true)
+
+        LauricAcid = new Material.Builder(15170, 'lauric_acid')
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 24, Oxygen, 2)
+                .color(0xe39c32)
+                .build()
+
+        CapricAcid = new Material.Builder(15171, 'capric_acid')
+                .fluid()
+                .components(Carbon, 10, Hydrogen, 20, Oxygen, 2)
+                .color(0xe3ba32)
+                .build()
+
+        PrimaryAmineN = new Material.Builder(15172, 'primary_amine_n')
+                .fluid()
+                .components(Carbon, 41, Hydrogen, 87, Nitrogen, 1)
+                .color(0x8533e8)
+                .build()
+
+        NineOctadecene = new Material.Builder(15173, 'nine_octadecene')
+                .fluid()
+                .components(Carbon, 18, Hydrogen, 36)
+                .colorAverage()
+                .build()
+
+        TriOctylDecylAmine = new Material.Builder(15174, 'tri_octyl_decyl_amine')
+                .fluid()
+                .components(Carbon, 54, Hydrogen, 111, Nitrogen, 1)
+                .color(0x6776c9)
+                .build()
+
+        Diethylbenzene = new Material.Builder(15175, 'diethylbenzene')
+                .fluid()
+                .components(Carbon, 10, Hydrogen, 14)
+                .color(0xad9797)
+                .build()
+
+        Divinylbenzene = new Material.Builder(15176, 'divinylbenzene')
+                .fluid()
+                .components(Carbon, 10, Hydrogen, 10)
+                .color(0xad9797)
+                .build()
+
+        NButanol = new Material.Builder(15177, 'n_butanol')
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        DibutylCarbitol = new Material.Builder(15178, 'dibutyl_carbitol')
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 26, Oxygen, 3)
+                .color(0x89db6b)
+                .build()
+
+        DibutylCarbitol.setFormula("(CH3CH2CH2CH2OCH2CH2)2O", true)
+
+        MonoTwoEthylhexylPhosphoricAcid = new Material.Builder(15179, 'mono_two_ethylhexyl_phosphoric_acid')
+                .fluid()
+                .components(Carbon, 16, Hydrogen, 34, Oxygen, 3, Phosphorus, 1)
+                .color(0xb5a677)
+                .build()
+
+        MonoTwoEthylhexylPhosphoricAcid.setFormula("(C8H17O)2PO(OH)", true)
     }
 }

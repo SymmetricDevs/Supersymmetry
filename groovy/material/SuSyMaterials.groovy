@@ -215,6 +215,14 @@ class SuSyMaterials {
         public static Material BoraxElectrolyte;
         public static Material FerroelectricCeramicBinding;
         public static Material ConfiguredCircuitOne;
+        public static Material MetalNitrateSolution;
+        public static Material NeutralizedMetalNitrateSolution;
+        public static Material MetalNitrateCatalyst;
+        public static Material TwoEthylhexylPhosphoricAcidMix;
+        public static Material RareEarthCatalystYNd;
+        public static Material DilutedPrimaryAmineN;
+        public static Material CrosslinkedPolystyrene;
+        public static Material EthyleneGlycolMix;
 
         // Petrochem Materials
 
@@ -524,6 +532,21 @@ class SuSyMaterials {
         public static Material SamariumAlloy;
         public static Material TreatedSamariumAlloy;
         public static Material SamariumAlloyMagnetic;
+        public static Material ChloroaceticAnhydride;
+        public static Material Trialkylaluminium;
+        public static Material CopperIINitrate;
+        public static Material NickelIINitrate;
+        public static Material ZincNitrate;
+        public static Material MagnesiumNitrate;
+        public static Material YttriumOxide;
+        public static Material NeodymiumOxide;
+        public static Material Bromooctane;
+        public static Material GilmanReagent;
+        public static Material DecanoylChloride;
+        public static Material SodiumCyanoborohydride;
+        public static Material AluminiumAlkoxide;
+        public static Material DilutedSodiumHydroxideSolution;
+        public static Material ZirconiumDioxide;
 
         // Second Degree Materials
 
@@ -575,6 +598,7 @@ class SuSyMaterials {
         public static Material GoldEluteSolution;
         public static Material PotashSolution;
         public static Material PotassiumSulfateSolution;
+        public static Material DilutedBromooctane;
 
         // Organic Chemistry Materials
 
@@ -738,6 +762,25 @@ class SuSyMaterials {
         public static Material Pyridine;
         public static Material Quinoline;
         public static Material DimethylCarbonate;
+        public static Material DiethyleneGlycol;
+        public static Material DiglycolicAcid;
+        public static Material NOctanol;
+        public static Material NOctylamine;
+        public static Material Dioctylamine;
+        public static Material TetraoctylDiglycolamide;
+        public static Material TwoEthylTwoHexenal;
+        public static Material TwoEthylhexanol;
+        public static Material DiTwoEthylhexylPhosphoricAcid;
+        public static Material LauricAcid;
+        public static Material CapricAcid;
+        public static Material PrimaryAmineN;
+        public static Material NineOctadecene;
+        public static Material TriOctylDecylAmine;
+        public static Material Diethylbenzene;
+        public static Material Divinylbenzene;
+        public static Material NButanol;
+        public static Material DibutylCarbitol;
+        public static Material MonoTwoEthylhexylPhosphoricAcid;
 
         // Third Degree Materials
 
@@ -761,6 +804,12 @@ class SuSyMaterials {
         public static Material CelluloseAcetateSolution;
         public static Material TwoButanolSolution;
         public static Material FourFourOxydianilineSolution;
+        public static Material DiglycolicAcidSolution;
+        public static Material DiTwoEthylhexylPhosphoricAcidSolution;
+        public static Material DilutedTetraoctylDiglycolamide;
+        public static Material DilutedChloroaceticAnhydride;
+        public static Material DilutedTwoEthylTwoHexenal;
+        public static Material DilutedOctylamine;
 
         // Thermodynamics/Greenhouse Materials     
         

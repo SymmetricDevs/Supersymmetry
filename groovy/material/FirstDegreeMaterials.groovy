@@ -860,6 +860,8 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
+        Triethylaluminium.setFormula("Al2(C2H5)6", true)
+
         HydrogenPeroxide = new Material.Builder(8216, "hydrogen_peroxide")
                 .fluid()
                 .components(Hydrogen, 2, Oxygen, 2)
@@ -1677,5 +1679,113 @@ public class FirstDegreeMaterials{
                 .build();
 
         TreatedSamariumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumAlloyMagnetic);
+
+        ChloroaceticAnhydride = new Material.Builder(8344, 'chloroacetic_anhydride')
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 4, Oxygen, 3, Chlorine, 2)
+                .colorAverage()
+                .build()
+
+        Trialkylaluminium = new Material.Builder(8345, 'trialkylaluminium')
+                .dust()
+                .components(Aluminium, 1, Carbon, 24, Hydrogen, 51)
+                .colorAverage()
+                .build()
+
+        Trialkylaluminium.setFormula("Al(C8H17)3", true)
+
+        CopperIINitrate = new Material.Builder(8346, 'copper_ii_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Copper, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0x292fe3)
+                .build()
+
+        CopperIINitrate.setFormula("Cu(NO3)2", true)
+
+        NickelIINitrate = new Material.Builder(8347, 'nickel_ii_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Nickel, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0x236359)
+                .build()
+
+        NickelIINitrate.setFormula("Ni(NO3)2", true)
+
+        ZincNitrate = new Material.Builder(8348, 'zinc_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Zinc, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0xdfe6cf)
+                .build()
+
+        ZincNitrate.setFormula("Zn(NO3)2", true)
+
+        MagnesiumNitrate = new Material.Builder(8349, 'magnesium_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Magnesium, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0xe8d8e3)
+                .build()
+
+        MagnesiumNitrate.setFormula("Mg(NO3)2", true)
+
+        YttriumOxide = new Material.Builder(8350, 'yttrium_oxide')
+                .dust()
+                .components(Yttrium, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        NeodymiumOxide = new Material.Builder(8351, 'neodymium_oxide')
+                .dust()
+                .components(Neodymium, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        Bromooctane = new Material.Builder(8352, 'bromooctane')
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 17, Bromine, 1)
+                .colorAverage()
+                .build()
+
+        GilmanReagent = new Material.Builder(8353, 'gilman_reagent')
+                .fluid()
+                .components(Carbon, 16, Hydrogen, 34, Copper, 1, Lithium, 1)
+                .colorAverage()
+                .build()
+
+        DecanoylChloride = new Material.Builder(8354, 'decanoyl_chloride')
+                .fluid()
+                .components(Carbon, 10, Hydrogen, 19, Chlorine, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        SodiumCyanoborohydride = new Material.Builder(8355, 'sodium_cyanoborohydride')
+                .dust()
+                .components(Sodium, 1, Boron, 1, Hydrogen, 3, Carbon, 1, Nitrogen, 1)
+                .colorAverage()
+                .build()
+
+        SodiumCyanoborohydride.setFormula("Na[BH3(CN)]", true)
+
+        AluminiumAlkoxide = new Material.Builder(8356, 'aluminium_alkoxide')
+                .dust()
+                .components(Aluminium, 1, Carbon, 24, Hydrogen, 51, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        AluminiumAlkoxide.setFormula("Al(OC8H17)3", true)
+
+        DilutedSodiumHydroxideSolution = new Material.Builder(8357, "diluted_sodium_hydroxide_solution")
+                .fluid()
+                .components(Water, 2, SodiumHydroxide, 1)
+                .colorAverage()
+                .build();
+
+        ZirconiumDioxide = new Material.Builder(8358, 'zirconium_dioxide')
+                .dust()
+                .components(Zirconium, 1, Oxygen, 2)
+                .colorAverage()
+                .build()
     }
 }
