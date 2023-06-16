@@ -826,12 +826,12 @@ material.sodium_ethyl_xanthate_solution=Sodium Ethyl Xanthate Solution
 material.impure_galena_slurry=Impure Galena Slurry
 material.galena_byproducts_slurry=Galena Byproducts Slurry
 material.sintered_lead_concentrate=Sintered Lead Concentrate
-material.cadmium_rich_flue_dust=Cadmium Rich Flue Dust
+material.cadmium_rich_flue_dust=Cadmium Rich Flue
 material.copper_dross=Copper Dross
 material.decoppered_lead=Decoppered Lead
 material.dezinced_lead=Dezinced Lead
 material.black_metal=Black Metal
-material.antimony_arsenic_flue_dust=Antimony-Arsenic Flue Dust
+material.antimony_arsenic_flue_dust=Antimony-Arsenic Flue
 material.litharge_slag=Litharge Slag
 material.betts_crude_lead=Betts Lead Bullion
 material.decoppered_betts_lead=Decoppered Betts Lead
@@ -950,6 +950,7 @@ material.copper_chloride=Copper Chloride
 material.ruthenium_iv_oxide=Ruthenium IV Oxide
 material.trichlorosilane=Trichlorosilane
 material.purified_trichlorosilane=Purified Trichlorosilane
+material.burned_black_metal=Burned Black Metal
 
 # Ores
 

@@ -1741,37 +1741,37 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        SodiumArsenate = new Material.Builder(8353, "sodium_arsenate")
+        SodiumArsenate = new Material.Builder(8354, "sodium_arsenate")
                 .dust().fluid()
                 .components(Sodium, 3, Arsenic, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
 
-        SodiumStannate = new Material.Builder(8353, "sodium_stannate")
+        SodiumStannate = new Material.Builder(8355, "sodium_stannate")
                 .dust()
                 .components(Sodium, 2, Tin, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
 
-        SaltyArsenicAcid = new Material.Builder(8354, "salty_arsenic_acid")
+        SaltyArsenicAcid = new Material.Builder(8356, "salty_arsenic_acid")
                 .fluid()
                 .components(Salt, 3, Hydrogen, 3, Arsenic, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
 
-        SaltyArsenicPentoxide = new Material.Builder(8355, "salty_arsenic_pentoxide")
+        SaltyArsenicPentoxide = new Material.Builder(8357, "salty_arsenic_pentoxide")
                 .dust()
                 .components(Salt, 6, Arsenic, 2, Oxygen, 5)
                 .colorAverage()
                 .build();
         
-        TinIVOxide = new Material.Builder(8356, "tin_iv_oxide")
+        TinIVOxide = new Material.Builder(8358, "tin_iv_oxide")
                 .dust()
                 .components(Tin, 1, Oxygen, 2)
                 .colorAverage()
                 .build();
 
-        AntimonyVOxide = new Material.Builder(8357, "antimony_v_oxide")
+        AntimonyVOxide = new Material.Builder(8359, "antimony_v_oxide")
                 .dust()
                 .components(Antimony, 2, Oxygen, 5)
                 .colorAverage()

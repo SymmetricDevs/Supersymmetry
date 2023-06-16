@@ -229,6 +229,7 @@ class SuSyMaterials {
         public static Material CadmiumRichFlueDust;
         public static Material BlackMetal;
         public static Material AntimonyArsenicFlueDust;
+        public static Material BurnedBlackMetal;
         public static Material LithargeSlag;
         public static Material HarrisSlag;
         public static Material SodiumArsenateStannateSolution;

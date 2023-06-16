@@ -626,7 +626,7 @@ public class UnknownCompositionMaterials {
                 .color(0x5c3a23)
                 .build();
         
-        SodiumArsenateStannateMixture = new Material.Builder(4118, "sodium_arsenate_stannate_mixture")
+        SodiumArsenateStannateMixture = new Material.Builder(4119, "sodium_arsenate_stannate_mixture")
                 .dust()
                 .color(0x784c2f)
                 .build();
