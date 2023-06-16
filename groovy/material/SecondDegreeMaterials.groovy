@@ -104,7 +104,7 @@ public class SecondDegreeMaterials {
 
         SodiumSilicateSolution = new Material.Builder(13014, "sodium_silicate_solution")
                 .fluid()
-                .components(Water, 4, SodiumSilicate, 1)
+                .components(Water, 1, SodiumSilicate, 1)
                 .colorAverage()
                 .build();
 
@@ -361,6 +361,24 @@ public class SecondDegreeMaterials {
                 .dust()
                 .components(Emerald, 1, SodaAsh, 1)
                 .colorAverage()
+                .build();
+
+        AluminiumSulfateSolution = new Material.Builder(13057, "aluminium_sulfate_solution")
+                .fluid()
+                .components(AluminiumSulfate, 1, Water, 6)
+                .colorAverage()
+                .build();
+
+        SodiumEthylXanthateSolution = new Material.Builder(13058, "sodium_ethyl_xanthate_solution")
+                .fluid()
+                .components(SodiumEthylXanthate, 1, Ethanol, 1)
+                .colorAverage()
+                .build();
+
+        CopperSulfateSolution = new Material.Builder(13059, "copper_sulfate_solution")
+                .fluid()
+                .components(CopperSulfate, 1, Water, 1)
+                .color(0x2d3bcf)
                 .build();
     }
 }

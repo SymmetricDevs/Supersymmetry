@@ -124,7 +124,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-      TwoButanolSolution = new Material.Builder(24018, 'two_butanol_solution')
+        TwoButanolSolution = new Material.Builder(24018, 'two_butanol_solution')
                 .fluid()
                 .components(SulfuricAcid, 1, TwoButanol, 1)
                 .colorAverage()

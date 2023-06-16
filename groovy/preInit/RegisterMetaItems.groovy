@@ -84,6 +84,8 @@ eventManager.listen {
 
         customMetaItems.addItem(178, "zeolite_membrane");
 
+        customMetaItems.addItem(179, "lead_anode_slime")
+
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);

@@ -193,7 +193,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         SodiumNitrate = new Material.Builder(8109, 'sodium_nitrate')
-                .dust()
+                .dust().fluid()
                 .components(Sodium, 1, Nitrogen, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
@@ -1232,7 +1232,8 @@ public class FirstDegreeMaterials{
                 .components(Aluminium, 2, Sulfur, 3, Oxygen, 12)
                 .colorAverage()
                 .build()
-                .setFormula('Al2(SO4)3', true)
+        
+        AluminiumSulfate.setFormula('Al2(SO4)3', true)
 
         DemineralizedWater = new Material.Builder(8277, 'demineralized_water')
                 .fluid()
@@ -1463,6 +1464,7 @@ public class FirstDegreeMaterials{
                 .dust()
                 .color(0xabc9c9)
                 .components(Lithium, 1, Aluminium, 1, Silicon, 4, Oxygen, 10)
+                .iconSet(SAND)
                 .build()
                 .setFormula("(LiAlSi2O6)(SiO2)2", true)
 
@@ -1629,10 +1631,11 @@ public class FirstDegreeMaterials{
                 .build();
 
         CrudeLead = new Material.Builder(8337, "crude_lead")
-                .dust().fluid()
+                .fluid().ingot()
                 .fluidTemp(600)
                 .components(Lead, 1)
                 .color(0x1f1926)
+                .flags(GENERATE_PLATE)
                 .build();
 
         SilverFreeLead = new Material.Builder(8338, "silver_free_lead")
@@ -1659,6 +1662,7 @@ public class FirstDegreeMaterials{
         ZincDross = new Material.Builder(8341, "zinc_dross")
                 .dust().fluid()
                 .fluidTemp(600)
+                .components(Zinc, 2, Silver, 1)
                 .color(0xb7baa8)
                 .build();
 
@@ -1672,7 +1676,104 @@ public class FirstDegreeMaterials{
         AluminiumSilicate = new Material.Builder(8343, "aluminium_silicate")
                 .dust()
                 .components(Aluminium, 2, Silicon, 1, Oxygen, 5)
-                .components(Sodium, 2, Beryllium, 1, Fluorine, 4)
+                .colorAverage()
+                .build();
+
+        SodiumEthoxideSolution = new Material.Builder(8344, "sodium_ethoxide_solution")
+                .fluid()
+                .components(Carbon, 2, Hydrogen, 5, Oxygen, 1, Sodium, 1, Ethanol, 1)
+                .color(0xcc5050)
+                .build();
+
+        SodiumEthylXanthate = new Material.Builder(8345, "sodium_ethyl_xanthate")
+                .dust()
+                .components(Carbon, 3, Hydrogen, 5, Oxygen, 1, Sulfur, 2, Sodium, 1)
+                .color(0xfdffbf)
+                .build();
+
+        SodiumEthylXanthate.setFormula("CH3CH2OCS2Na", true)
+
+        ImpureGalenaSlurry = new Material.Builder(8346, "impure_galena_slurry")
+                .fluid()
+                .components(Galena, 2, Water, 1)
+                .colorAverage()
+                .build();
+
+        CopperDross = new Material.Builder(8347, "copper_dross")
+                .dust()
+                .components(Copper, 1, Sulfur, 1)
+                .color(0x000000)
+                .build();
+
+        DecopperedLead = new Material.Builder(8348, "decoppered_lead")
+                .fluid()
+                .components(Lead, 1)
+                .color(0x886b9c)
+                .build();
+
+        DezincedLead = new Material.Builder(8349, "dezinced_lead")
+                .fluid()
+                .components(Lead, 1)
+                .color(0x825d9c)
+                .build();
+
+        BettsCrudeLead = new Material.Builder(8350, "betts_crude_lead")
+                .fluid().ingot()
+                .components(Bismuth, 3, Lead, 6, Copper, 1)
+                .color(0x393673)
+                .build();
+
+        DecopperedBettsLead = new Material.Builder(8351, "decoppered_betts_lead")
+                .fluid()
+                .components(Bismuth, 3, Lead, 6)
+                .color(0x2f2d63)
+                .build();
+
+        SoftenedLead = new Material.Builder(8352, "softened_lead")
+                .fluid()
+                .components(Lead, 1)
+                .color(0x9874b0)
+                .build();
+
+        SodiumAntimonate = new Material.Builder(8353, "sodium_antimonate")
+                .dust()
+                .components(Sodium, 1, Antimony, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        SodiumArsenate = new Material.Builder(8353, "sodium_arsenate")
+                .dust().fluid()
+                .components(Sodium, 3, Arsenic, 1, Oxygen, 4)
+                .colorAverage()
+                .build();
+
+        SodiumStannate = new Material.Builder(8353, "sodium_stannate")
+                .dust()
+                .components(Sodium, 2, Tin, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        SaltyArsenicAcid = new Material.Builder(8354, "salty_arsenic_acid")
+                .fluid()
+                .components(Salt, 3, Hydrogen, 3, Arsenic, 1, Oxygen, 4)
+                .colorAverage()
+                .build();
+
+        SaltyArsenicPentoxide = new Material.Builder(8355, "salty_arsenic_pentoxide")
+                .dust()
+                .components(Salt, 6, Arsenic, 2, Oxygen, 5)
+                .colorAverage()
+                .build();
+        
+        TinIVOxide = new Material.Builder(8356, "tin_iv_oxide")
+                .dust()
+                .components(Tin, 1, Oxygen, 2)
+                .colorAverage()
+                .build();
+
+        AntimonyVOxide = new Material.Builder(8357, "antimony_v_oxide")
+                .dust()
+                .components(Antimony, 2, Oxygen, 5)
                 .colorAverage()
                 .build();
         }

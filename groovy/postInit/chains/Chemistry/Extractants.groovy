@@ -2,9 +2,13 @@ FBR = recipemap('fixed_bed_reactor')
 BCR = recipemap('bubble_column_reactor')
 DISTILLERY = recipemap('distillery')
 BATCH_REACTOR = recipemap('batch_reactor')
+ROASTER = recipemap('roaster')
+CRYSTALLIZER = recipemap('crystallizer')
+MIXER = recipemap('mixer')
+CSTR = recipemap('continuous_stirred_tank_reactor')
 
-//SODIUM CYANIDE
-FBR.recipeBuilder()
+//LIXIVANTS
+FBR.recipeBuilder() //SODIUM CYANIDE
     .notConsumable(metaitem('lv_catalyst_bed_oxidation'))
     .fluidInputs(fluid('methane') * 100)
     .fluidInputs(fluid('ammonia') * 100)
@@ -31,8 +35,8 @@ DISTILLERY.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-//SODIUM THIOSULFATE
-BCR.recipeBuilder()
+
+BCR.recipeBuilder() //SODIUM THIOSULFATE
     .fluidInputs(fluid('soda_ash_solution') * 50)
     .fluidInputs(fluid('sulfur_dioxide') * 50)
     .fluidOutputs(fluid('sodium_sulfite_solution') * 50)
@@ -55,6 +59,68 @@ DISTILLERY.recipeBuilder()
     .fluidOutputs(fluid('water') * 1000)
     .duration(120)
     .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+//FLOTATION AGENTS
+//FATTY ACIDS
+ROASTER.recipeBuilder()
+    .fluidInputs(fluid('steam') * 3000)
+    .fluidInputs(fluid('seed_oil') * 1000)
+    .fluidOutputs(fluid('glycerol') * 1000)
+    .fluidOutputs(fluid('fatty_acid_solution') * 3000)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+    .fluidInputs(fluid('fatty_acid_solution') * 1000)
+    .fluidInputs(fluid('methanol') * 1000)
+    .inputs(metaitem('dustUrea'))
+    .fluidOutputs(fluid('oleic_acid_solution') * 1000)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+    .fluidInputs(fluid('oleic_acid_solution') * 1000)
+    .outputs(metaitem('dustOleicAcid') * 18)
+    .fluidOutputs(fluid('methanol') * 1000)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+    .inputs(metaitem('dustOleicAcid') * 18)
+    .fluidOutputs(fluid('alkaline_sodium_oleate_solution') * 1000)
+    .EUt(30)
+    .duration(80)
+    .buildAndRegister()
+
+//XANTHATES
+BATCH_REACTOR.recipeBuilder()
+    .inputs(metaitem('dustSodium'))
+    .fluidInputs(fluid('ethanol') * 2000)
+    .fluidOutputs(fluid('hydrogen') * 1000)
+    .fluidOutputs(fluid('sodium_ethoxide_solution') * 1000)
+    .EUt(Globals.voltAmps[3])
+    .duration(80)
+    .buildAndRegister()
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('sodium_ethoxide_solution') * 50)
+    .fluidInputs(fluid('carbon_disulfide') * 50)
+    .fluidOutputs(fluid('sodium_ethyl_xanthate_solution') * 50)
+    .EUt(Globals.voltAmps[3])
+    .duration(4)
+    .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('sodium_ethyl_xanthate_solution') * 1000)
+    .outputs(metaitem('dustSodiumEthylXanthate'))
+    .fluidOutputs(fluid('ethanol') * 1000)
+    .EUt(Globals.voltAmps[3])
+    .duration(80)
     .buildAndRegister()
 
     

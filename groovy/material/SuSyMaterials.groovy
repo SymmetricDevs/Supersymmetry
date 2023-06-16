@@ -106,6 +106,8 @@ class SuSyMaterials {
         // Roasted Ores
 
         public static Material RoastedSperrylite;
+        public static Material RoastedLepidolite;
+        public static Material RoastedPetalite;
         
         // Ore Leach Residue
 
@@ -214,7 +216,6 @@ class SuSyMaterials {
         public static Material AluminiumSilicateLeach;
         public static Material AlkaliAlumMix;
         public static Material AmblygoniteLeach;
-        public static Material RoastedLepidolite;
         public static Material LepidoliteLeach;
         public static Material NeutralizedLepidoliteLeach;
         public static Material AluminiumFreeLepidoliteLeach;
@@ -222,6 +223,16 @@ class SuSyMaterials {
         public static Material GoldLeachSolution;
         public static Material ImpureAmmoniumFluoroberyllateSolution;
         public static Material ImpureBerylliumSulfateSolution;
+        public static Material ImpureLithiumSulfateSolution;
+        public static Material GalenaByproductsSlurry;
+        public static Material SinteredLeadConcentrate;
+        public static Material CadmiumRichFlueDust;
+        public static Material BlackMetal;
+        public static Material AntimonyArsenicFlueDust;
+        public static Material LithargeSlag;
+        public static Material HarrisSlag;
+        public static Material SodiumArsenateStannateSolution;
+        public static Material SodiumArsenateStannateMixture;
 
         // Petrochem Materials
 
@@ -505,7 +516,6 @@ class SuSyMaterials {
         public static Material AntimonyDross;
         public static Material ZincDross;
         public static Material PurifiedTinIIOxide;
-        public static Material RoastedPetalite;
         public static Material BetaSpodumene;
         public static Material LithiumSulfate;
         public static Material AluminiumPhosphate;
@@ -531,6 +541,22 @@ class SuSyMaterials {
         public static Material BerylliumSulfateSolution;
         public static Material AluminiumChloride;
         public static Material PotassiumAlum;
+        public static Material SodiumEthoxideSolution;
+        public static Material SodiumEthylXanthate;
+        public static Material ImpureGalenaSlurry;
+        public static Material CopperDross;
+        public static Material DecopperedLead;
+        public static Material DezincedLead;
+        public static Material BettsCrudeLead;
+        public static Material DecopperedBettsLead;
+        public static Material SoftenedLead;
+        public static Material SodiumAntimonate;
+        public static Material SodiumArsenate;
+        public static Material SodiumStannate;
+        public static Material SaltyArsenicAcid;
+        public static Material SaltyArsenicPentoxide;
+        public static Material TinIVOxide;
+        public static Material AntimonyVOxide;
 
         // Second Degree Materials
 
@@ -591,6 +617,9 @@ class SuSyMaterials {
         public static Material AlkaliFusedBeryl;
         public static Material BerylResidue;
         public static Material AmmoniumFluorideSolution;
+        public static Material AluminiumSulfateSolution;
+        public static Material SodiumEthylXanthateSolution;
+        public static Material CopperSulfateSolution;
 
         // Organic Chemistry Materials
 

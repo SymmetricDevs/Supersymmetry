@@ -535,6 +535,7 @@ public class UnknownCompositionMaterials {
         RoastedLepidolite = new Material.Builder(4102, "roasted_lepidolite")
                 .dust()
                 .color(0x443b45)
+                .iconSet(SAND)
                 .build();
 
         LepidoliteLeach = new Material.Builder(4103, "lepidolite_leach")
@@ -567,6 +568,67 @@ public class UnknownCompositionMaterials {
         ImpureBerylliumSulfateSolution = new Material.Builder(4108, "impure_beryllium_sulfate_solution")
                 .fluid()
                 .color(0x608726)
+                .build();
+
+        ImpureLithiumSulfateSolution = new Material.Builder(4109, "impure_lithium_sulfate_solution")
+                .fluid()
+                .color(0xf0bc89)
+                .build();
+
+        GalenaByproductsSlurry = new Material.Builder(4110, "galena_byproducts_slurry")
+                .fluid()
+                .color(0x592880)
+                .build();
+
+        SinteredLeadConcentrate = new Material.Builder(4111, "sintered_lead_concentrate")
+                .dust()
+                .color(0x3a1954)
+                .iconSet(SAND)
+                .build();
+
+        CadmiumRichFlueDust = new Material.Builder(4112, "cadmium_rich_flue_dust")
+                .dust()
+                .color(0x757061)
+                .iconSet(DULL)
+                .build();
+
+        BlackMetal = new Material.Builder(4113, "black_metal")
+                .dust()
+                .color(0x3d3440)
+                .build();
+
+        AntimonyArsenicFlueDust = new Material.Builder(4114, "antimony_arsenic_flue_dust")
+                .dust()
+                .color(0x707063)
+                .iconSet(DULL)
+                .build();
+
+        BurnedBlackMetal = new Material.Builder(4115, "burned_black_metal")
+                .dust()
+                .color(0x3d3440)
+                .iconSet(DULL)
+                .build();
+
+        LithargeSlag = new Material.Builder(4116, "litharge_slag")
+                .dust()
+                .color(0xb5443c)
+                .iconSet(DULL)
+                .build();
+
+        HarrisSlag = new Material.Builder(4117, "harris_slag")
+                .dust()
+                .color(0xabb074)
+                .iconSet(DULL)
+                .build();
+
+        SodiumArsenateStannateSolution = new Material.Builder(4118, "sodium_arsenate_stannate_solution")
+                .fluid()
+                .color(0x5c3a23)
+                .build();
+        
+        SodiumArsenateStannateMixture = new Material.Builder(4118, "sodium_arsenate_stannate_mixture")
+                .dust()
+                .color(0x784c2f)
                 .build();
     }
 }           
