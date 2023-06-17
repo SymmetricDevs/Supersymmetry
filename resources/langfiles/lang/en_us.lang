@@ -849,6 +849,10 @@ material.antimony_v_oxide=Antimony V Oxide
 material.cassiterite_concentrate=Cassiterite Concentrate
 material.crude_tin=Crude Tin
 material.leached_cassiterite_concentrate=Leached Cassiterite Concentrate
+material.tin_dross=Tin Dross
+material.decopperized_tin=Decopperized Tin
+material.copper_monosulfide=Copper Monosulfide
+material.ammonium_tungstate_solution=Ammonium Tungstate Solution
 
 # Thermodynamics
 

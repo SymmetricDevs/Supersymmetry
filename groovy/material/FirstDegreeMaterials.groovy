@@ -114,13 +114,13 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Platinum, 8052, false, false)
 
         new Material.Builder(8053, "high_purity_gold")
-                    .ingot()
-                    .iconSet(SHINY)
-                    .flags(GENERATE_FOIL, GENERATE_PLATE, DISABLE_DECOMPOSITION)
-                    .fluidTemp(Gold.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
-                    .color(Gold.materialRGB)
-                    .components(Gold, 1)
-                    .build();
+                .ingot()
+                .iconSet(SHINY)
+                .flags(GENERATE_FOIL, GENERATE_PLATE, DISABLE_DECOMPOSITION)
+                .fluidTemp(Gold.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                .color(Gold.materialRGB)
+                .components(Gold, 1)
+                .build();
 
         generatePurifiedElement(Thallium, 8054, false, false)
         generatePurifiedElement(Lead, 8055, false, false)
@@ -155,19 +155,19 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        PotassiumCarbonate =  new Material.Builder(8102, 'potassium_carbonate')
+        PotassiumCarbonate = new Material.Builder(8102, 'potassium_carbonate')
                 .dust()
                 .components(Potassium, 2, Carbon, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
 
-        SodiumSilicate =  new Material.Builder(8103, 'sodium_silicate')
+        SodiumSilicate = new Material.Builder(8103, 'sodium_silicate')
                 .dust()
                 .components(Sodium, 2, Silicon, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
 
-        SodiumAluminate =  new Material.Builder(8104, 'sodium_aluminate')
+        SodiumAluminate = new Material.Builder(8104, 'sodium_aluminate')
                 .dust()
                 .components(Sodium, 1, Aluminium, 1, Oxygen, 2)
                 .colorAverage()
@@ -209,7 +209,7 @@ public class FirstDegreeMaterials{
                 .components(Potassium, 1, Fluorine, 1)
                 .colorAverage()
                 .build();
-                
+
         PotassiumTetrafluoroborate = new Material.Builder(8112, 'potassium_tetrafluoroborate')
                 .fluid().dust()
                 .components(Potassium, 1, Boron, 1, Fluorine, 4)
@@ -1095,7 +1095,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
                 .setFormula('(Na[Ag(CN)2])5(Na3SbS3)(Na2S)(H2O)12', true)
-        
+
         StephaniteCyanideLeachSolution = new Material.Builder(8255, 'stephanite_cyanide_leach_solution')
                 .fluid()
                 .components(Sodium, 10, Silver, 5, Carbon, 10, Nitrogen, 10, Antimony, 1, Chlorine, 8, Water, 20)
@@ -1111,7 +1111,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
                 .setFormula('(Na3[Ag(S2O3)2])3(Na3AsS3)(H2O)5', true)
-                
+
         AcidicArsenateVSolution = new Material.Builder(8257, 'acidic_arsenate_v_solution')
                 .fluid()
                 .components(NitricAcid, 6, Hydrogen, 9, Arsenic, 3, Oxygen, 12)
@@ -1143,7 +1143,7 @@ public class FirstDegreeMaterials{
                 .components(Iron, 1, Antimony, 1, Sulfur, 3)
                 .colorAverage()
                 .build()
-        
+
         AntimonyIIISulfide = new Material.Builder(8262, 'antimony_iii_sulfide')
                 .dust()
                 .components(Antimony, 2, Sulfur, 3)
@@ -1206,7 +1206,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
                 .setFormula('GaCl3', true)
-        
+
         MercuryIIChloride = new Material.Builder(8272, 'mercury_ii_chloride')
                 .dust()
                 .components(Mercury, 1, Chlorine, 2)
@@ -1232,7 +1232,7 @@ public class FirstDegreeMaterials{
                 .components(Aluminium, 2, Sulfur, 3, Oxygen, 12)
                 .colorAverage()
                 .build()
-        
+
         AluminiumSulfate.setFormula('Al2(SO4)3', true)
 
         DemineralizedWater = new Material.Builder(8277, 'demineralized_water')
@@ -1585,7 +1585,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         DissolvedAlkaliBeryl.setFormula("(BeSO4)3(Al2(SO4)3)(Na2SO4)(H2O)7", true)
-                
+
         PotassiumAlum = new Material.Builder(8330, "potassium_alum")
                 .dust()
                 .components(Potassium, 1, Aluminium, 1, Sulfur, 2, Oxygen, 8)
@@ -1764,7 +1764,7 @@ public class FirstDegreeMaterials{
                 .components(Salt, 6, Arsenic, 2, Oxygen, 5)
                 .colorAverage()
                 .build();
-        
+
         TinIVOxide = new Material.Builder(8358, "tin_iv_oxide")
                 .dust()
                 .components(Tin, 1, Oxygen, 2)
@@ -1805,5 +1805,11 @@ public class FirstDegreeMaterials{
                 .build();
 
         AmmoniumTungstateSolution.setFormula("[(NH4)2WO4](H2O)2", true)
-        }
+
+        CopperMonosulfide = new Material.Builder(8364, "copper_monosulfide")
+                .dust()
+                .components(Copper, 1, Sulfur, 1)
+                .color(0x1a1817)
+                .build();
+    }
 }

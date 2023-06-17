@@ -234,6 +234,9 @@ class SuSyMaterials {
         public static Material HarrisSlag;
         public static Material SodiumArsenateStannateSolution;
         public static Material SodiumArsenateStannateMixture;
+        public static Material TinDross;
+        public static Material DeferritizedTin;
+        public static Material DecopperizedTin;
 
         // Petrochem Materials
 
@@ -561,6 +564,8 @@ class SuSyMaterials {
         public static Material CassiteriteConcentrate;
         public static Material CrudeTin;
         public static Material LeachedCassiteriteConcentrate;
+        public static Material AmmoniumTungstateSolution;
+        public static Material CopperMonosulfide;
 
         // Second Degree Materials
 

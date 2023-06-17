@@ -630,5 +630,17 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0x784c2f)
                 .build();
+
+        TinDross = new Material.Builder(4120, "tin_dross")
+                .dust().fluid()
+                .fluidTemp(600)
+                .color(0x2a2e2e)
+                .build();
+
+        DecopperizedTin = new Material.Builder(4121, "decopperized_tin")
+                .dust().fluid()
+                .fluidTemp(600)
+                .color(0xb5b7c9)
+                .build();
     }
 }           
