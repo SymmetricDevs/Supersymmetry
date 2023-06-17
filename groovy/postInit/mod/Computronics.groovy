@@ -1,8 +1,3 @@
-def soldering_alloys = [
-        liquid('tin') * 144,
-        liquid('soldering_alloy') * 72
-]
-
 def name_removals = [
 "computronics:iron_note_block0",
 "computronics:audio_cable1",
@@ -45,7 +40,10 @@ for (item in name_removals) {
     crafting.remove(item);
 }
 
-
+def soldering_alloys = [
+        liquid('tin') * 144,
+        liquid('soldering_alloy') * 72
+]
 
 for (solder in soldering_alloys) {
 

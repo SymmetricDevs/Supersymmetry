@@ -38146,12 +38146,12 @@
     },
     "534:10": {
       "preRequisites:11": [
-        533
+        549
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §9RADAR§r allows detection of entities such as players, mobs or dropped items. \n\nhe built in API functions return a table of names and relative distances of entities within the specified range. ",
+          "desc:8": "The §9RADAR§r allows detection of entities such as players, mobs or dropped items. \n\nThe built in §9API functions §rreturn a table of names and relative distances of entities within the specified range. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38198,7 +38198,7 @@
     },
     "535:10": {
       "preRequisites:11": [
-        533
+        546
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -38250,7 +38250,7 @@
     },
     "536:10": {
       "preRequisites:11": [
-        533
+        546
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -39357,7 +39357,7 @@
     },
     "554:10": {
       "preRequisites:11": [
-        533
+        546
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -39466,19 +39466,19 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "The §c§4Redstone I/O §rallows reading and emitting redstone signals around the block. \n\nIt can be controlled by any computer the block is connected to. This is basically like an external redstone card. \n\nMore info about the API can be found here: §9https://ocdoc.cil.li/component:redstone",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "opencomputers:redstone"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Security Doors",
+          "name:8": "Redstone I/O",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -39491,7 +39491,25 @@
       },
       "questID:3": 556,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "opencomputers:redstone"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "557:10": {
       "preRequisites:11": [
@@ -43172,6 +43190,783 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "581:10": {
+      "preRequisites:11": [
+        546
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Geolyzer§r scans its surroundings for the§c hardness §rof blocks. It can scan up to§6 32m §rup and down.\n\nThe returned values are the hardness values of the scanned blocks. \n\nThis is useful for §6detecting ores§r (which are usually harder than stone) and for generating \u0027maps\u0027 that can be displayed on the Hologram Projector. \n\nYou can find more about its API here:§9 https://ocdoc.cil.li/component:geolyzer",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "opencomputers:geolyzer"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Geolyzer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 581,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "opencomputers:geolyzer"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "582:10": {
+      "preRequisites:11": [
+        546
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Motion Sensor§r allows detecting movement of entities, as long as a direct line of sight is given. You can find more about the API here: §9https://ocdoc.cil.li/component:motion_sensor",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "opencomputers:motionsensor"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Motion Sensor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 582,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "opencomputers:motionsensor"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "583:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
+      "preRequisites:11": [
+        575,
+        546
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Waypoint§r provides functionality for robots and drones with a navigation upgrade. \n\nThe position reported is the block directly in front of the waypoint, as indicated by the particle effects. This allows the waypoint block to be placed above a §6chest§r, for instance, to be able to determine the position of the block directly above the chest.\n\nWaypoints can be labeled and provided with a §credstone signal§r. \n\nThe waypoint block can be located using the §7findWaypoints()§r function in the navigation component. This allows the robots or drone to find all waypoints within a certain range; the function returns the label of the waypoint, the position of the waypoint in relative coordinates, as well as the redstone level of the waypoint. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "opencomputers:waypoint"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Navigation",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 583,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "opencomputers:waypoint"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 19,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opencomputers:upgrade"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "584:10": {
+      "preRequisites:11": [
+        544
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Data Block §r§rprovides the functionality of a Data Card but in block form.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "opensecurity:data_block"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Data Block",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 584,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "opensecurity:data_block"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "585:10": {
+      "preRequisites:11": [
+        533
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Transposer §rallows the transfer of §bfluids and items §rto adjacent blocks.\n\nMore info can be found on the Transposer API here: §9https://ocdoc.cil.li/component:transposer",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "opencomputers:transposer"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Transposer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 585,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "opencomputers:transposer"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "586:10": {
+      "preRequisites:11": [
+        533
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Security Doors§r can only be operated using the §6Door Controller§r. \n\nCan only be broken by the person who placed it.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "opensecurity:rolldoor_controller"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Security Doors",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 586,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "opensecurity:door_controller"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opensecurity:secure_door"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opensecurity:mag_secure_door"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
+        }
+      }
+    },
+    "587:10": {
+      "preRequisites:11": [
+        536
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The advanced cipher block uses §6RSA encryption§r by creating a §6public§r and §cprivate §rkey pair. \n\nThe§6 key pair§r can be generated using a pair of prime numbers or randomly. \n\nThe returned value itself will return both key pairs once it is done generating (which will take a few seconds). \n\nThe public key is used to encrypt messages, while the private key is used to decrypt messages. Only devices with access to the private key may decrypt messages.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "computronics:cipher_advanced"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Advanced Cipher Block",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 587,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "computronics:cipher_advanced"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "588:10": {
+      "preRequisites:11": [
+        546
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Hologram Projector§r projects a hologram in the area over it. \n\nThe size of the hologram can be scaled from 1x1x1 to 9x9x6.\n\nThe number of \u0027voxels\u0027 will stay the same, regardless of scale though. It has resolution of 48x32x48 monochrome voxels (they can either be on or off). \n\nThe second tier of the hologram projector is also capable of displaying colored voxels. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "opencomputers:hologram1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Hologram Projector",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 588,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "opencomputers:hologram1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "589:10": {
+      "preRequisites:11": [
+        521
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Rolldoors §rcan be controlled via an OpenComputers system.\n\nHere\u0027s a video on how to set them up: §9https://www.youtube.com/watch?v\u003dab-SApBGlY4",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "opensecurity:rolldoor_controller"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Rolldoors",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 589,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "opensecurity:rolldoor_controller"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "opensecurity:rolldoor"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "590:10": {
+      "preRequisites:11": [
+        549
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Security Terminal §rallows you to protect the blocks in an area from getting mined by unauthorized users.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "opensecurity:security_terminal"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Security Terminal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 590,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "opensecurity:security_terminal"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "591:10": {
+      "preRequisites:11": [
+        540
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§5Upgrades§r can be used to enhance a device\u0027s capabilities.\n\nThe §7Battery Upgrade§r increases a device\u0027s energy capacity.\nThe §7Card Container§r allows you to add more cards.\nThe §7Crafting Upgrade§r allows robots to use the top left of their inventory as a crafting table.\nThe §7Inventory Upgrade§r provides inventory to a robot.\nThe §7Inventory Control§r Upgrade provides the capability to act on other inventories.\nThe §7Database Upgrade§r allows robots to store more information.\nThe §7Navigation Upgrade§r provides information about the machine\u0027s position.\nThe §7Piston Upgrade§r allows machines to move blocks. \nThe §7Tractor Beam Upgrade§r acts as a magnet.\nThe §7Upgrade Container§r allows you to add upgrades to an already assembled device.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 12,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "opencomputers:upgrade"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Open Upgrades",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 591,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opencomputers:upgrade"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 5,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opencomputers:upgrade"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 11,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opencomputers:upgrade"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 12,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opencomputers:upgrade"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 17,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opencomputers:upgrade"
+            },
+            "5:10": {
+              "Count:3": 1,
+              "Damage:2": 18,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opencomputers:upgrade"
+            },
+            "6:10": {
+              "Count:3": 1,
+              "Damage:2": 20,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opencomputers:upgrade"
+            },
+            "7:10": {
+              "Count:3": 1,
+              "Damage:2": 19,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opencomputers:upgrade"
+            },
+            "8:10": {
+              "Count:3": 1,
+              "Damage:2": 8,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "opencomputers:upgrade"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -46447,6 +47242,20 @@
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": -132
+        },
+        "24:10": {
+          "id:3": 586,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 102,
+          "y:3": 102
+        },
+        "25:10": {
+          "id:3": 589,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 162,
+          "y:3": 102
         }
       }
     },
@@ -47985,22 +48794,22 @@
           "id:3": 534,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": -96
+          "x:3": -60,
+          "y:3": 324
         },
         "14:10": {
           "id:3": 535,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
-          "y:3": -132
+          "x:3": 60,
+          "y:3": 192
         },
         "15:10": {
           "id:3": 536,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 300,
-          "y:3": -156
+          "x:3": 102,
+          "y:3": 120
         },
         "16:10": {
           "id:3": 537,
@@ -48063,35 +48872,35 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": 72
+          "y:3": 120
         },
         "25:10": {
           "id:3": 546,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
-          "y:3": 120
+          "y:3": 144
         },
         "26:10": {
           "id:3": 548,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": 108
+          "y:3": 156
         },
         "27:10": {
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
-          "y:3": 240
+          "y:3": 288
         },
         "28:10": {
           "id:3": 551,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 144
+          "x:3": 102,
+          "y:3": 156
         },
         "29:10": {
           "id:3": 552,
@@ -48111,70 +48920,70 @@
           "id:3": 554,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 360,
-          "y:3": -168
+          "x:3": -60,
+          "y:3": 192
         },
         "32:10": {
           "id:3": 555,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 336,
-          "y:3": -204
+          "y:3": -168
         },
         "33:10": {
           "id:3": 556,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 300,
-          "y:3": -228
+          "x:3": 240,
+          "y:3": -96
         },
         "34:10": {
           "id:3": 557,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": -144
+          "x:3": 240,
+          "y:3": -216
         },
         "35:10": {
           "id:3": 558,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": -192
+          "x:3": 288,
+          "y:3": -216
         },
         "36:10": {
           "id:3": 559,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
+          "x:3": 264,
           "y:3": -168
         },
         "37:10": {
           "id:3": 560,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
-          "y:3": -204
+          "x:3": 300,
+          "y:3": -168
         },
         "38:10": {
           "id:3": 561,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": 216
+          "y:3": 276
         },
         "39:10": {
           "id:3": 564,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 72
+          "y:3": 120
         },
         "40:10": {
           "id:3": 565,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 396,
+          "x:3": 384,
           "y:3": -168
         },
         "41:10": {
@@ -48182,14 +48991,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": 252
+          "y:3": 324
         },
         "42:10": {
           "id:3": 567,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 288
+          "x:3": 0,
+          "y:3": 354
         },
         "43:10": {
           "id:3": 568,
@@ -48203,14 +49012,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 108
+          "y:3": 156
         },
         "45:10": {
           "id:3": 570,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 144
+          "x:3": -102,
+          "y:3": 156
         },
         "46:10": {
           "id:3": 571,
@@ -48281,6 +49090,69 @@
           "sizeY:3": 24,
           "x:3": 420,
           "y:3": 132
+        },
+        "56:10": {
+          "id:3": 581,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 102,
+          "y:3": 192
+        },
+        "57:10": {
+          "id:3": 582,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -102,
+          "y:3": 120
+        },
+        "58:10": {
+          "id:3": 583,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 492,
+          "y:3": -84
+        },
+        "59:10": {
+          "id:3": 584,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 432,
+          "y:3": 72
+        },
+        "60:10": {
+          "id:3": 585,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 264,
+          "y:3": -132
+        },
+        "61:10": {
+          "id:3": 587,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
+          "y:3": 120
+        },
+        "62:10": {
+          "id:3": 588,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -102,
+          "y:3": 192
+        },
+        "63:10": {
+          "id:3": 590,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 276
+        },
+        "64:10": {
+          "id:3": 591,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 360,
+          "y:3": -48
         }
       }
     },
