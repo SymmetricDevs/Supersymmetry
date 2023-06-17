@@ -1094,5 +1094,17 @@ public class OrganicChemistryMaterials {
                 .build()
 
         MonoTwoEthylhexylPhosphoricAcid.setFormula("(C8H17O)2PO(OH)", true)
+
+        MethylIsobutylKetone = new Material.Builder(15180, 'methyl_isobutyl_ketone')
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 12, Oxygen, 1)
+                .color(0x86dbb1)
+                .build()
+
+        MethylIsobutylCarbinol = new Material.Builder(15181, 'methyl_isobutyl_carbinol')
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 14, Oxygen, 1)
+                .color(0x79c4c7)
+                .build()
     }
 }

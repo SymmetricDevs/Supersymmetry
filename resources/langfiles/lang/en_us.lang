@@ -1022,6 +1022,10 @@ material.diluted_sodium_hydroxide_solution=Diluted Sodium Hydroxide Solution
 material.diluted_octylamine=Diluted n-Octylamine
 material.zirconium_dioxide=Zirconium Dioxide
 material.mono_two_ethylhexyl_phosphoric_acid=Mono(2-ethylhexyl)phosphoric acid
+material.palladium_doped_crosslinked_polystyrene=Palladium-Doped Crosslinked Polystyrene-Divinylbenzene
+material.methyl_isobutyl_ketone=Methyl Isobutyl Ketone
+material.methyl_isobutyl_carbinol=Methyl Isobutyl Carbinol
+material.diluted_methyl_isobutyl_ketone=Diluted Methyl Isobutyl Ketone
 
 # Isotopes
 
@@ -1325,6 +1329,8 @@ metaitem.chip.n_doped_silicon.name=n-Doped Silicon Chip
 metaitem.chip.silicon_dioxide.name=Silicon Dioxide Chip
 
 metaitem.ag_fifty_w_x_eight_beads.name=AG 50W-X8 Resin Beads
+metaitem.amberlyst_ch_beads.name=Amberlyst CH-43 Beads
+
 # Multiblocked
 
 tile.multiblocked.item_input.name=Small Input Bus

@@ -111,6 +111,8 @@ eventManager.listen {
         customMetaItems.addItem(195, "chip.n_doped_silicon");
         customMetaItems.addItem(196, "chip.silicon_dioxide");
 
+        customMetaItems.addItem(197, "amberlyst_ch_beads");
+
         customMetaItems.addItem(198, "ag_fifty_w_x_eight_beads");
 
         customMetaItems.addItem(1000, "chunk.magnetite")

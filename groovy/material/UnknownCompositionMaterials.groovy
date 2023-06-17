@@ -567,5 +567,11 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x2eafc9)
                 .build();
+
+        PalladiumDopedCrosslinkedPolystyrene = new Material.Builder(4109, "palladium_doped_crosslinked_polystyrene")
+                .ingot().fluid()
+                .flags(GENERATE_ROUND)
+                .color(0xe0e6bc)
+                .build();
     }
 }

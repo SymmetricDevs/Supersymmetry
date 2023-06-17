@@ -223,6 +223,7 @@ class SuSyMaterials {
         public static Material DilutedPrimaryAmineN;
         public static Material CrosslinkedPolystyrene;
         public static Material EthyleneGlycolMix;
+        public static Material PalladiumDopedCrosslinkedPolystyrene;
 
         // Petrochem Materials
 
@@ -781,6 +782,8 @@ class SuSyMaterials {
         public static Material NButanol;
         public static Material DibutylCarbitol;
         public static Material MonoTwoEthylhexylPhosphoricAcid;
+        public static Material MethylIsobutylKetone;
+        public static Material MethylIsobutylCarbinol;
 
         // Third Degree Materials
 
@@ -810,6 +813,7 @@ class SuSyMaterials {
         public static Material DilutedChloroaceticAnhydride;
         public static Material DilutedTwoEthylTwoHexenal;
         public static Material DilutedOctylamine;
+        public static Material DilutedMethylIsobutylKetone;
 
         // Thermodynamics/Greenhouse Materials     
         

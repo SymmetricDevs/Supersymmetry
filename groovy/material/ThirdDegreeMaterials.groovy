@@ -171,5 +171,11 @@ public class ThirdDegreeMaterials {
                 .components(NOctylamine, 1, Water, 1)
                 .colorAverage()
                 .build()
+
+        DilutedMethylIsobutylKetone = new Material.Builder(24026, 'diluted_methyl_isobutyl_ketone')
+                .fluid()
+                .components(MethylIsobutylKetone, 1, Water, 1)
+                .colorAverage()
+                .build()
     }
 }
