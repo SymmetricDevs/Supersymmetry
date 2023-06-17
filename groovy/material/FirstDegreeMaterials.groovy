@@ -1776,5 +1776,34 @@ public class FirstDegreeMaterials{
                 .components(Antimony, 2, Oxygen, 5)
                 .colorAverage()
                 .build();
+
+        CassiteriteConcentrate = new Material.Builder(8360, "cassiterite_concentrate")
+                .dust()
+                .components(Cassiterite, 1)
+                .colorAverage()
+                .iconSet(SHINY)
+                .build();
+
+        CrudeTin = new Material.Builder(8361, "crude_tin")
+                .fluid()
+                .components(Tin, 1)
+                .color(0xbfbfbf)
+                .iconSet(DULL)
+                .build();
+
+        LeachedCassiteriteConcentrate = new Material.Builder(8362, "leached_cassiterite_concentrate")
+                .dust()
+                .components(Cassiterite, 1)
+                .colorAverage()
+                .iconSet(DULL)
+                .build();
+
+        AmmoniumTungstateSolution = new Material.Builder(8363, "ammonium_tungstate_solution")
+                .fluid()
+                .components(Nitrogen, 2, Hydrogen, 8, Tungsten, 1, Oxygen, 8, Water, 2)
+                .colorAverage()
+                .build();
+
+        AmmoniumTungstateSolution.setFormula("[(NH4)2WO4](H2O)2", true)
         }
 }

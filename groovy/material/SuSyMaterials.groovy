@@ -558,6 +558,9 @@ class SuSyMaterials {
         public static Material SaltyArsenicPentoxide;
         public static Material TinIVOxide;
         public static Material AntimonyVOxide;
+        public static Material CassiteriteConcentrate;
+        public static Material CrudeTin;
+        public static Material LeachedCassiteriteConcentrate;
 
         // Second Degree Materials
 

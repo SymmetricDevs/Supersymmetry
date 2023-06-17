@@ -846,6 +846,9 @@ material.salty_arsenic_acid=Salty Arsenic Acid
 material.salty_arsenic_pentoxide=Salty Arsenic Pentoxide
 material.tin_iv_oxide=Tin IV Oxide
 material.antimony_v_oxide=Antimony V Oxide
+material.cassiterite_concentrate=Cassiterite Concentrate
+material.crude_tin=Crude Tin
+material.leached_cassiterite_concentrate=Leached Cassiterite Concentrate
 
 # Thermodynamics
 
