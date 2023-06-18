@@ -436,7 +436,7 @@ Globals.solders.each { key, val ->
 				item('techguns:itemshared', 43),
 				ore('stickSteel'),
 				ore('springSmallSteel'),
-				item('techguns:itemshared', 2)
+				ore('plateSteel') * 4
 		])
 		.fluidInputs(fluid(key) * val)
 		.outputs(item('techguns:combatshotgun'))
@@ -536,7 +536,6 @@ mods.gregtech.lathe.recipeBuilder()
 	.EUt(Globals.voltAmps[1])
 	.buildAndRegister()
 
-/*
 crafting.addShaped("stone_barrel", item('techguns:itemshared:37'), [
 		[null, ore('craftingToolFile'), null],
 		[ore('craftingToolScrewdriver'), ore('stone'), ore('craftingToolHardHammer')]
@@ -668,7 +667,7 @@ recipemap('forming_press').recipeBuilder()
 
 
 //-------------------Change TechGuns damage values to be better suited with SUSy progression----------------
-
+/*
 //Taken from Techguns2 source code for crafttweaker integration
 
 //Double Barrel Shotgun
