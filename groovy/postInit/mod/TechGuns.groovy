@@ -667,7 +667,7 @@ recipemap('forming_press').recipeBuilder()
 
 
 //-------------------Change TechGuns damage values to be better suited with SUSy progression----------------
-/*
+
 //Taken from Techguns2 source code for crafttweaker integration
 
 //Double Barrel Shotgun
@@ -705,4 +705,3 @@ GunStatTweaker.setWeaponStat("thompson","DAMAGE_MIN",40.0);
 //AK47
 GunStatTweaker.setWeaponStat("thompson","DAMAGE",40.0);
 GunStatTweaker.setWeaponStat("thompson","DAMAGE_MIN",36.0);
-*/
