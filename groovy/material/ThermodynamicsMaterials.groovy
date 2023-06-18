@@ -242,7 +242,7 @@ class ThermodynamicsMaterials {
 
                 generateHighPressureGases(NaturalGas, 22045, true);
 
-                generateLiquidFromGas(Hydrogen, 22100, 21);
+                generateLiquidFromGas(Hydrogen, 22100, 14);
 
                 generateLiquidFromGas(Helium, 22101, 5);
 

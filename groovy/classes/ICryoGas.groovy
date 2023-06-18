@@ -21,6 +21,8 @@ class ICryoGas{
 
     public int fluid_temperature = 300;
 
+    public boolean needsAdvancedCooling;
+
     public static void main(String[] args){
         //this is needed for some reason, otherwise it will error
     }
@@ -29,13 +31,16 @@ class ICryoGas{
         //this is needed for some reason, otherwise it will error
     }
 
-    public ICryoGas(String gas_normal, String gas_hot_hp, String gas_hp, String gas_cold_hp, String gas_liquid) {
+    public ICryoGas(String gas_normal, String gas_hot_hp, String gas_hp, String gas_cold_hp, String gas_liquid, boolean addToList) {
         normal_gas = gas_normal;
         hot_high_pressure_gas = gas_hot_hp;
         high_pressure_gas = gas_hp;
         cold_high_pressure_gas = gas_cold_hp;
         liquid_gas = gas_liquid;
-        cryo_gases.add(this);
+
+        if (addToList) {
+            cryo_gases.add(this);
+        }
     }
 
     public void setEUt(int power) {
@@ -92,5 +97,9 @@ class ICryoGas{
 
     public int getTemperature() {
         return this.fluid_temperature;
+    }
+
+    public void setAdvancedCooling(boolean adv){
+        this.needsAdvancedCooling = adv;
     }
 }

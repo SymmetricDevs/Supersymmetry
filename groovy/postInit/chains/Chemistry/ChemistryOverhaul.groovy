@@ -462,6 +462,22 @@ ROASTER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
+// Silicon Dioxide
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(metaitem('dustQuartzite'))
+        .outputs(metaitem('dustSiliconDioxide'))
+        .duration(60)
+        .EUt(8)
+        .buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(metaitem('dustNetherQuartz'))
+        .outputs(metaitem('dustSiliconDioxide'))
+        .duration(60)
+        .EUt(8)
+        .buildAndRegister()
+
 // Antimony trifluoride
 
 BR.recipeBuilder()
