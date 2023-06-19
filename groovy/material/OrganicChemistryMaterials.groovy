@@ -988,7 +988,7 @@ public class OrganicChemistryMaterials {
         NOctanol = new Material.Builder(15163, 'n_octanol')
                 .fluid()
                 .components(Carbon, 8, Hydrogen, 18, Oxygen, 1)
-                .color
+                .color(0xbf8454)
                 .build()
 
         NOctanol.setFormula("C8H17OH", true)
@@ -1107,7 +1107,7 @@ public class OrganicChemistryMaterials {
                 .color(0x79c4c7)
                 .build()
 
-        NHexanol = new Material.Builder(8358, "n_hexanol")
+        NHexanol = new Material.Builder(15182, "n_hexanol")
                 .fluid()
                 .components(Carbon, 6, Hydrogen, 14, Oxygen, 1)
                 .color(0xff9640)
@@ -1115,7 +1115,7 @@ public class OrganicChemistryMaterials {
 
         NHexanol.setFormula("C6H13OH", true)
 
-        NDecanol = new Material.Builder(8359, "n_decanol")
+        NDecanol = new Material.Builder(15183, "n_decanol")
                 .fluid()
                 .components(Carbon, 10, Hydrogen, 22, Oxygen, 1)
                 .color(0xdb8035)
@@ -1123,7 +1123,7 @@ public class OrganicChemistryMaterials {
 
         NDecanol.setFormula("C10H21OH", true)
 
-        NDodecanol = new Material.Builder(8360, "n_dodecanol")
+        NDodecanol = new Material.Builder(15184, "n_dodecanol")
                 .fluid()
                 .components(Carbon, 12, Hydrogen, 26, Oxygen, 1)
                 .color(0xbd6e2d)
@@ -1131,7 +1131,7 @@ public class OrganicChemistryMaterials {
 
         NDodecanol.setFormula("C12H25OH", true)
 
-        NTetradecanol = new Material.Builder(8361, "n_tetradecanol")
+        NTetradecanol = new Material.Builder(15185, "n_tetradecanol")
                 .fluid()
                 .components(Carbon, 14, Hydrogen, 30, Oxygen, 1)
                 .color(0x2177ff)
@@ -1139,7 +1139,7 @@ public class OrganicChemistryMaterials {
 
         NTetradecanol.setFormula("C14H29OH", true)
 
-        NHexadecanol = new Material.Builder(8362, "n_hexadecanol")
+        NHexadecanol = new Material.Builder(15186, "n_hexadecanol")
                 .fluid()
                 .components(Carbon, 16, Hydrogen, 34, Oxygen, 1)
                 .color(0x824b1e)

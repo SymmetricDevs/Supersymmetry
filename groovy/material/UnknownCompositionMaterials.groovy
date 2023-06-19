@@ -589,7 +589,7 @@ public class UnknownCompositionMaterials {
         AluminiumAlkoxideMixture.setFormula("Al(OR)3", true)
 
         ZieglerAlcoholMixture = new Material.Builder(4112, 'ziegler_alcohol_mixture')
-                .dust()
+                .fluid()
                 .color(0xc47631)
                 .build()
 
@@ -598,7 +598,7 @@ public class UnknownCompositionMaterials {
                 .color(0x5e9cff)
                 .build()
 
-        AluminiumAlkoxideSolution = new Material.Builder(4111, 'aluminium_alkoxide_solution')
+        AluminiumAlkoxideSolution = new Material.Builder(4114, 'aluminium_alkoxide_solution')
                 .fluid()
                 .color(0x657780)
                 .build()

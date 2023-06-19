@@ -1686,7 +1686,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        ZirconiumDioxide = new Material.Builder(8358, 'zirconium_dioxide')
+        ZirconiumDioxide = new Material.Builder(8345, 'zirconium_dioxide')
                 .dust()
                 .components(Zirconium, 1, Oxygen, 2)
                 .colorAverage()

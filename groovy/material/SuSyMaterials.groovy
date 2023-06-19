@@ -605,7 +605,6 @@ class SuSyMaterials {
         public static Material PotashSolution;
         public static Material PotassiumSulfateSolution;
         public static Material DilutedBromooctane;
-        public static Material DiethylEther;
 
         // Organic Chemistry Materials
 
@@ -795,6 +794,7 @@ class SuSyMaterials {
         public static Material NDodecanol;
         public static Material NTetradecanol;
         public static Material NHexadecanol;
+        public static Material NineOctadecene;
 
         // Third Degree Materials
 
@@ -824,6 +824,7 @@ class SuSyMaterials {
         public static Material DilutedChloroaceticAnhydride;
         public static Material DilutedOctylamine;
         public static Material DilutedMethylIsobutylKetone;
+        public static Material DilutedTwoEthylTwoHexenal;
 
         // Thermodynamics/Greenhouse Materials     
         
