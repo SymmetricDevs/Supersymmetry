@@ -224,6 +224,11 @@ class SuSyMaterials {
         public static Material CrosslinkedPolystyrene;
         public static Material EthyleneGlycolMix;
         public static Material PalladiumDopedCrosslinkedPolystyrene;
+        public static Material TrialkylaluminiumMixture;
+        public static Material AluminiumAlkoxideMixture;
+        public static Material ZieglerAlcoholMixture;
+        public static Material ImpureDiethylEther;
+        public static Material AluminiumAlkoxideSolution;
 
         // Petrochem Materials
 
@@ -534,7 +539,6 @@ class SuSyMaterials {
         public static Material TreatedSamariumAlloy;
         public static Material SamariumAlloyMagnetic;
         public static Material ChloroaceticAnhydride;
-        public static Material Trialkylaluminium;
         public static Material CopperIINitrate;
         public static Material NickelIINitrate;
         public static Material ZincNitrate;
@@ -542,10 +546,9 @@ class SuSyMaterials {
         public static Material YttriumOxide;
         public static Material NeodymiumOxide;
         public static Material Bromooctane;
-        public static Material GilmanReagent;
+        public static Material LithiumDioctylcopper;
         public static Material DecanoylChloride;
         public static Material SodiumCyanoborohydride;
-        public static Material AluminiumAlkoxide;
         public static Material DilutedSodiumHydroxideSolution;
         public static Material ZirconiumDioxide;
 
@@ -600,6 +603,7 @@ class SuSyMaterials {
         public static Material PotashSolution;
         public static Material PotassiumSulfateSolution;
         public static Material DilutedBromooctane;
+        public static Material DiethylEther;
 
         // Organic Chemistry Materials
 
@@ -775,7 +779,7 @@ class SuSyMaterials {
         public static Material LauricAcid;
         public static Material CapricAcid;
         public static Material PrimaryAmineN;
-        public static Material NineOctadecene;
+        public static Material NineOctadecanone;
         public static Material TriOctylDecylAmine;
         public static Material Diethylbenzene;
         public static Material Divinylbenzene;
@@ -784,6 +788,11 @@ class SuSyMaterials {
         public static Material MonoTwoEthylhexylPhosphoricAcid;
         public static Material MethylIsobutylKetone;
         public static Material MethylIsobutylCarbinol;
+        public static Material NHexanol;
+        public static Material NDecanol;
+        public static Material NDodecanol;
+        public static Material NTetradecanol;
+        public static Material NHexadecanol;
 
         // Third Degree Materials
 
@@ -811,7 +820,6 @@ class SuSyMaterials {
         public static Material DiTwoEthylhexylPhosphoricAcidSolution;
         public static Material DilutedTetraoctylDiglycolamide;
         public static Material DilutedChloroaceticAnhydride;
-        public static Material DilutedTwoEthylTwoHexenal;
         public static Material DilutedOctylamine;
         public static Material DilutedMethylIsobutylKetone;
 

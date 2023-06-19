@@ -988,7 +988,7 @@ public class OrganicChemistryMaterials {
         NOctanol = new Material.Builder(15163, 'n_octanol')
                 .fluid()
                 .components(Carbon, 8, Hydrogen, 18, Oxygen, 1)
-                .colorAverage()
+                .color
                 .build()
 
         NOctanol.setFormula("C8H17OH", true)
@@ -996,7 +996,7 @@ public class OrganicChemistryMaterials {
         NOctylamine = new Material.Builder(15164, 'n_octylamine')
                 .fluid()
                 .components(Carbon, 8, Hydrogen, 19, Nitrogen, 1)
-                .colorAverage()
+                .color(0xeb8634)
                 .build()
 
         Dioctylamine = new Material.Builder(15165, 'dioctylamine')
@@ -1045,13 +1045,13 @@ public class OrganicChemistryMaterials {
 
         PrimaryAmineN = new Material.Builder(15172, 'primary_amine_n')
                 .fluid()
-                .components(Carbon, 41, Hydrogen, 87, Nitrogen, 1)
+                .components(Carbon, 20, Hydrogen, 43, Nitrogen, 1)
                 .color(0x8533e8)
                 .build()
 
-        NineOctadecene = new Material.Builder(15173, 'nine_octadecene')
+        NineOctadecene = new Material.Builder(15173, 'nine_octadecanone')
                 .fluid()
-                .components(Carbon, 18, Hydrogen, 36)
+                .components(Carbon, 18, Hydrogen, 36, Oxygen, 1)
                 .colorAverage()
                 .build()
 
@@ -1106,5 +1106,45 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 6, Hydrogen, 14, Oxygen, 1)
                 .color(0x79c4c7)
                 .build()
+
+        NHexanol = new Material.Builder(8358, "n_hexanol")
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 14, Oxygen, 1)
+                .color(0xff9640)
+                .build();
+
+        NHexanol.setFormula("C6H13OH", true)
+
+        NDecanol = new Material.Builder(8359, "n_decanol")
+                .fluid()
+                .components(Carbon, 10, Hydrogen, 22, Oxygen, 1)
+                .color(0xdb8035)
+                .build();
+
+        NDecanol.setFormula("C10H21OH", true)
+
+        NDodecanol = new Material.Builder(8360, "n_dodecanol")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 26, Oxygen, 1)
+                .color(0xbd6e2d)
+                .build();
+
+        NDodecanol.setFormula("C12H25OH", true)
+
+        NTetradecanol = new Material.Builder(8361, "n_tetradecanol")
+                .fluid()
+                .components(Carbon, 14, Hydrogen, 30, Oxygen, 1)
+                .color(0x2177ff)
+                .build();
+
+        NTetradecanol.setFormula("C14H29OH", true)
+
+        NHexadecanol = new Material.Builder(8362, "n_hexadecanol")
+                .fluid()
+                .components(Carbon, 16, Hydrogen, 34, Oxygen, 1)
+                .color(0x824b1e)
+                .build();
+
+        NHexadecanol.setFormula("C16H33OH", true)
     }
 }

@@ -573,5 +573,36 @@ public class UnknownCompositionMaterials {
                 .flags(GENERATE_ROUND)
                 .color(0xe0e6bc)
                 .build();
+
+        TrialkylaluminiumMixture = new Material.Builder(4110, 'trialkylaluminium_mixture')
+                .fluid()
+                .color(0x6b777d)
+                .build()
+
+        TrialkylaluminiumMixture.setFormula("AlR3", true)
+
+        AluminiumAlkoxideMixture = new Material.Builder(4111, 'aluminium_alkoxide_mixture')
+                .dust()
+                .color(0x657780)
+                .build()
+
+        AluminiumAlkoxideMixture.setFormula("Al(OR)3", true)
+
+        ZieglerAlcoholMixture = new Material.Builder(4112, 'ziegler_alcohol_mixture')
+                .dust()
+                .color(0xc47631)
+                .build()
+
+        ImpureDiethylEther = new Material.Builder(4113, "impure_diethyl_ether")
+                .fluid()
+                .color(0x5e9cff)
+                .build()
+
+        AluminiumAlkoxideSolution = new Material.Builder(4111, 'aluminium_alkoxide_solution')
+                .fluid()
+                .color(0x657780)
+                .build()
+
+        AluminiumAlkoxideSolution.setFormula("[(C2H5)2O]Al(OR)3", true)
     }
 }

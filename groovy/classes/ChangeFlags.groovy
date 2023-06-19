@@ -36,6 +36,7 @@ class ChangeFlags {
         Silver.addFlags("generate_catalyst_bed");
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
+        DilutedHydrochloricAcid.setComponents(Water, 2, HydrogenChloride, 1)
 
         ManganesePhosphide.addFlags("generate_fine_wire");
         UraniumTriplatinum.addFlags("generate_fine_wire");

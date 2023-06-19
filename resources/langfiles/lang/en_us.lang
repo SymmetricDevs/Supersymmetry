@@ -763,9 +763,6 @@ material.gold_elute_solution=Gold Elute Solution
 material.potash_solution=Potash Solution
 material.potassium_sulfate_solution=Potassium Sulfate Solution
 
-
-
-
 # Thermodynamics
 
 material.hot_hp_hydrogen=Hot High-Pressure Hydrogen
@@ -981,7 +978,7 @@ material.rare_earth_catalyst_y_nd=Rare Earth Catalyst (Y-Nd)
 material.diluted_primary_amine_n=Diluted Primary Amine N-1923
 material.crosslinked_polystyrene=Crosslinked Polystyrene-Divinylbenzene
 material.chloroacetic_anhydride=Chloroacetic Anhydride
-material.trialkylaluminium=Trialkylaluminium
+material.trialkylaluminium_mixture=Trialkylaluminium Mixture
 material.copper_ii_nitrate=Copper II Nitrate
 material.nickel_ii_nitrate=Nickel II Nitrate
 material.zinc_nitrate=Zinc Nitrate
@@ -989,7 +986,7 @@ material.magnesium_nitrate=Magnesium Nitrate
 material.yttrium_oxide=Yttrium Oxide
 material.neodymium_oxide=Neodymium Oxide
 material.bromooctane=1-Bromooctane
-material.gilman_reagent=Gilman Reagent
+material.lithium_dioctylcopper=Lithium Dioctylcopper (Gilman Reagent)
 material.decanoyl_chloride=Decanoyl Chloride
 material.sodium_cyanoborohydride=Sodium Cyanoborohydride
 material.diluted_chloroacetic_anhydride=Diluted Chloroacetic Anhydride
@@ -1006,7 +1003,7 @@ material.di_two_ethylhexyl_phosphoric_acid=Di(2-ethylhexyl)phosphoric acid
 material.lauric_acid=Lauric Acid
 material.capric_acid=Capric Acid
 material.primary_amine_n=Primary Amine N-1923
-material.nine_octadecene=9-Octadecene
+material.nine_octadecanone=9-Octadecanone
 material.tri_octyl_decyl_amine=Tri(octyl-decyl)amine
 material.diethylbenzene=Diethylbenzene
 material.divinylbenzene=Divinylbenzene
@@ -1015,9 +1012,9 @@ material.di_two_ethylhexyl_phosphoric_acid_solution=Di(2-ethylhexyl)phosphoric a
 material.dibutyl_carbitol=Dibutyl Carbitol
 material.n_butanol=n-Butanol
 material.ethylene_glycol_mix=Ethylene Glycol Mix
-material.aluminium_alkoxide=Aluminium Alkoxide
+material.aluminium_alkoxide_mixture=Aluminium Alkoxide Mixture
+material.ziegler_alcohol_mixture=Ziegler Alcohol Mixture
 material.diluted_tetraoctyl_diglycolamide=Diluted Tetraoctyl Diglycolamide
-material.diluted_two_ethyl_two_hexenal=Diluted 2-Ethyl-2-Hexenal
 material.diluted_sodium_hydroxide_solution=Diluted Sodium Hydroxide Solution
 material.diluted_octylamine=Diluted n-Octylamine
 material.zirconium_dioxide=Zirconium Dioxide
@@ -1026,6 +1023,13 @@ material.palladium_doped_crosslinked_polystyrene=Palladium-Doped Crosslinked Pol
 material.methyl_isobutyl_ketone=Methyl Isobutyl Ketone
 material.methyl_isobutyl_carbinol=Methyl Isobutyl Carbinol
 material.diluted_methyl_isobutyl_ketone=Diluted Methyl Isobutyl Ketone
+material.impure_diethyl_ether=Impure Diethyl Ether
+material.n_hexanol=n-Hexanol
+material.n_decanol=n-Decanol
+material.n_dodecanol=n-Dodecanol
+material.n_tetradecanol=n-Tetradecanol
+material.n_hexadecanol=n-Hexadecanol
+material.aluminium_alkoxide_solution=Aluminium Alkoxide SOlution
 
 # Isotopes
 

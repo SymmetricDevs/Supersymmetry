@@ -855,7 +855,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         Triethylaluminium = new Material.Builder(8215, "triethylaluminium")
-                .dust()
+                .fluid()
                 .components(Carbon, 12, Hydrogen, 30, Aluminium, 2)
                 .colorAverage()
                 .build()
@@ -1681,18 +1681,16 @@ public class FirstDegreeMaterials{
         TreatedSamariumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumAlloyMagnetic);
 
         ChloroaceticAnhydride = new Material.Builder(8344, 'chloroacetic_anhydride')
-                .fluid()
+                .dust()
                 .components(Carbon, 4, Hydrogen, 4, Oxygen, 3, Chlorine, 2)
                 .colorAverage()
                 .build()
 
-        Trialkylaluminium = new Material.Builder(8345, 'trialkylaluminium')
+        ZirconiumDioxide = new Material.Builder(8358, 'zirconium_dioxide')
                 .dust()
-                .components(Aluminium, 1, Carbon, 24, Hydrogen, 51)
+                .components(Zirconium, 1, Oxygen, 2)
                 .colorAverage()
                 .build()
-
-        Trialkylaluminium.setFormula("Al(C8H17)3", true)
 
         CopperIINitrate = new Material.Builder(8346, 'copper_ii_nitrate')
                 .dust()
@@ -1748,7 +1746,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        GilmanReagent = new Material.Builder(8353, 'gilman_reagent')
+        LithiumDioctylcopper = new Material.Builder(8353, 'lithium_dioctylcopper')
                 .fluid()
                 .components(Carbon, 16, Hydrogen, 34, Copper, 1, Lithium, 1)
                 .colorAverage()
@@ -1768,24 +1766,18 @@ public class FirstDegreeMaterials{
 
         SodiumCyanoborohydride.setFormula("Na[BH3(CN)]", true)
 
-        AluminiumAlkoxide = new Material.Builder(8356, 'aluminium_alkoxide')
-                .dust()
-                .components(Aluminium, 1, Carbon, 24, Hydrogen, 51, Oxygen, 3)
-                .colorAverage()
-                .build()
-
-        AluminiumAlkoxide.setFormula("Al(OC8H17)3", true)
-
-        DilutedSodiumHydroxideSolution = new Material.Builder(8357, "diluted_sodium_hydroxide_solution")
+        DilutedSodiumHydroxideSolution = new Material.Builder(8356, "diluted_sodium_hydroxide_solution")
                 .fluid()
                 .components(Water, 2, SodiumHydroxide, 1)
                 .colorAverage()
                 .build();
 
-        ZirconiumDioxide = new Material.Builder(8358, 'zirconium_dioxide')
-                .dust()
-                .components(Zirconium, 1, Oxygen, 2)
-                .colorAverage()
-                .build()
+        DiethylEther = new Material.Builder(8357, "diethyl_ether")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
+                .color(0x2177ff)
+                .build();
+
+        DiethylEther.setFormula("(C2H5)2O", true)
     }
 }
