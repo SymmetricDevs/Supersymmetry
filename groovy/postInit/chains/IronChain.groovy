@@ -109,7 +109,7 @@ for (blastable in blastables) {
         .duration(blastable.amount_produced * blastable.duration)
         .blastFurnaceTemp(1750)
         .EUt(Globals.voltAmps[1])
-        .notConsumable(Globals.circuit(0))
+        .notConsumable(Globals.circuit(2))
         .buildAndRegister()
     }
 }
@@ -175,15 +175,6 @@ for (combustible in combustibles) {
     .buildAndRegister()
 }
 
-//MV Electric Arc Furnace Steel Recipes
-
-ARC_FURNACE.recipeBuilder()
-.inputs(metaitem('ingotWroughtIron'))
-.outputs(metaitem('ingotSteel'))
-.EUt(120)
-.duration(240)
-.buildAndRegister()
-
 //High Purity Iron Chain
 
 BR = recipemap('batch_reactor')
@@ -191,7 +182,7 @@ RF = recipemap('reaction_furnace')
 DISTILLERY = recipemap('distillery')
 
 RF.recipeBuilder()
-    .inputs(metaitem('dustSteel'))
+    .inputs(metaitem('dustIron'))
     .fluidInputs(fluid('carbon_monoxide') * 5000)
     .fluidOutputs(fluid('crude_iron_pentacarbonyl') * 1000)
     .duration(200)
@@ -212,3 +203,21 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('carbon_monoxide') * 5000)
     .EUt(30)
 	.buildAndRegister()
+
+EBF_RECIPES.recipeBuilder()
+        .notConsumable(Globals.circuit(1))
+        .inputs(metaitem('dustIron'))
+        .outputs(item('minecraft:iron_ingot'))
+        .duration(60)
+        .blastFurnaceTemp(1750)
+        .EUt(60)
+        .buildAndRegister()
+
+EBF_RECIPES.recipeBuilder()
+        .notConsumable(Globals.circuit(1))
+        .inputs(metaitem('ingotPigIron'))
+        .outputs(item('minecraft:iron_ingot'))
+        .duration(80)
+        .blastFurnaceTemp(1200)
+        .EUt(30)
+        .buildAndRegister()

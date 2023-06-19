@@ -215,6 +215,9 @@ class SuSyMaterials {
         public static Material BoraxElectrolyte;
         public static Material FerroelectricCeramicBinding;
         public static Material ConfiguredCircuitOne;
+        public static Material DisproportionatedTrichlorosilane;
+        public static Material DisproportionatedDichlorosilane;
+        public static Material DisproportionatedChlorosilane;
 
         // Petrochem Materials
 
@@ -524,6 +527,11 @@ class SuSyMaterials {
         public static Material SamariumAlloy;
         public static Material TreatedSamariumAlloy;
         public static Material SamariumAlloyMagnetic;
+        public static Material Trichlorosilane;
+        public static Material Dichlorosilane;
+        public static Material Chlorosilane;
+        public static Material Silane;
+        public static Material NickelCarbonyl;
 
         // Second Degree Materials
 

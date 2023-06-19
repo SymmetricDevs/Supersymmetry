@@ -851,6 +851,7 @@ public class FirstDegreeMaterials{
         AluminiumTrichloride = new Material.Builder(8214, "aluminium_trichloride")
                 .dust()
                 .components(Aluminium, 1, Chlorine, 3)
+                .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build()
 
@@ -1677,5 +1678,37 @@ public class FirstDegreeMaterials{
                 .build();
 
         TreatedSamariumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumAlloyMagnetic);
+
+        Trichlorosilane = new Material.Builder(8344, 'trichlorosilane')
+                .fluid()
+                .components(Silicon, 1, Hydrogen, 1, Chlorine, 3)
+                .color(0x769169)
+                .build()
+
+        Dichlorosilane = new Material.Builder(8345, 'dichlorosilane')
+                .fluid()
+                .components(Silicon, 1, Hydrogen, 2, Chlorine, 2)
+                .color(0x90ab84)
+                .build()
+
+        Chlorosilane = new Material.Builder(8346, 'chlorosilane')
+                .fluid()
+                .components(Silicon, 1, Hydrogen, 3, Chlorine, 1)
+                .color(0xa0ba95)
+                .build()
+
+        Silane = new Material.Builder(8347, 'silane')
+                .fluid(FluidTypes.GAS)
+                .components(Silicon, 1, Hydrogen, 4)
+                .color(0xbbd1b2)
+                .build()
+
+        NickelCarbonyl = new Material.Builder(8348, 'nickel_carbonyl')
+                .fluid()
+                .components(Nickel, 1, Carbon, 4, Oxygen, 4)
+                .colorAverage()
+                .build()
+
+        NickelCarbonyl.setFormula("Ni(CO)4", true)
     }
 }

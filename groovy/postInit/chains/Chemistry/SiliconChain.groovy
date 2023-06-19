@@ -7,12 +7,14 @@ import gregtech.api.unification.stack.UnificationEntry;
 
 def ROASTER = recipemap('roaster');
 def DISTILLERY = recipemap('distillery');
+def DT = recipemap('distillation_tower');
 def MIXER = recipemap('mixer');
 def ELECTROLYZER = recipemap('electrolyzer');
 def CRYSTALLIZER = recipemap('crystallizer');
 def CUTTER = recipemap('cutter');
 def AUTOCLAVE = recipemap('autoclave');
 def ZONEREFINER = recipemap('zone_refiner')
+def FBR = recipemap('fixed_bed_reactor')
 
 ROASTER.recipeBuilder()
         .inputs(metaitem('dustSilicon'))
@@ -78,4 +80,61 @@ AUTOCLAVE.recipeBuilder()
         .chancedOutput(metaitem('seed_crystal.silicon'), 1000, 500)
         .duration(1200)
         .EUt(30)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .fluidInputs(fluid('silicon_tetrachloride') * 3000)
+        .fluidInputs(fluid('hydrogen') * 4000)
+        .inputs(metaitem('dustSilicon'))
+        .fluidOutputs(fluid('trichlorosilane') * 4000)
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
+
+FBR.recipeBuilder()
+        .fluidInputs(fluid('trichlorosilane') * 2000)
+        .notConsumable(metaitem('catalystBedAluminiumTrichloride'))
+        .fluidOutputs(fluid('disproportionated_trichlorosilane') * 2000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+DT.recipeBuilder()
+        .fluidInputs(fluid('disproportionated_trichlorosilane') * 2000)
+        .fluidOutputs(fluid('silicon_tetrachloride') * 1000)
+        .fluidOutputs(fluid('dichlorosilane') * 1000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+FBR.recipeBuilder()
+        .fluidInputs(fluid('dichlorosilane') * 2000)
+        .notConsumable(metaitem('catalystBedAluminiumTrichloride'))
+        .fluidOutputs(fluid('disproportionated_dichlorosilane') * 2000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+DT.recipeBuilder()
+        .fluidInputs(fluid('disproportionated_dichlorosilane') * 2000)
+        .fluidOutputs(fluid('trichlorosilane') * 1000)
+        .fluidOutputs(fluid('chlorosilane') * 1000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+FBR.recipeBuilder()
+        .fluidInputs(fluid('chlorosilane') * 2000)
+        .notConsumable(metaitem('catalystBedAluminiumTrichloride'))
+        .fluidOutputs(fluid('disproportionated_chlorosilane') * 2000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+DT.recipeBuilder()
+        .fluidInputs(fluid('disproportionated_chlorosilane') * 2000)
+        .fluidOutputs(fluid('dichlorosilane') * 1000)
+        .fluidOutputs(fluid('silane') * 1000)
+        .duration(100)
+        .EUt(120)
         .buildAndRegister()

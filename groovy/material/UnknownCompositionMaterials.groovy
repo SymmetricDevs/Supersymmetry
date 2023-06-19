@@ -525,5 +525,20 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xede772)
                 .build();
+
+        DisproportionatedTrichlorosilane = new Material.Builder(4101, 'disproportionated_trichlorosilane')
+                .fluid()
+                .color(0x849169)
+                .build()
+
+        DisproportionatedDichlorosilane = new Material.Builder(4102, 'disproportionated_dichlorosilane')
+                .fluid()
+                .color(0xa1ad86)
+                .build()
+
+        DisproportionatedChlorosilane = new Material.Builder(4103, 'disproportionated_chlorosilane')
+                .fluid()
+                .color(0xb5bf9b)
+                .build()
     }
 }
