@@ -150,13 +150,14 @@ public class FirstDegreeMaterials{
                 .setFormula("Ca(OH)2", true);
 
         PotassiumHydroxide = new Material.Builder(8101, 'potassium_hydroxide')
-                .dust()
+                .dust().fluid()
                 .components(Potassium, 1, Oxygen, 1, Hydrogen, 1)
                 .colorAverage()
                 .build();
 
         PotassiumCarbonate = new Material.Builder(8102, 'potassium_carbonate')
-                .dust()
+                .dust().fluid()
+                .fluidTemp(1164)
                 .components(Potassium, 2, Carbon, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
@@ -1810,6 +1811,18 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Copper, 1, Sulfur, 1)
                 .color(0x1a1817)
+                .build();
+
+        PotassiumSaltMixture = new Material.Builder(8365, "potassium_salt_mixture")
+                .fluid()
+                .components(Potassium, 1, Salt, 1)
+                .colorAverage()
+                .build();
+
+        PotassiumSulfide = new Material.Builder(8366, "potassium_sulfide")
+                .dust()
+                .components(Potassium, 2, Sulfur, 1)
+                .color(0xcbcfae)
                 .build();
     }
 }

@@ -566,6 +566,8 @@ class SuSyMaterials {
         public static Material LeachedCassiteriteConcentrate;
         public static Material AmmoniumTungstateSolution;
         public static Material CopperMonosulfide;
+        public static Material PotassiumSaltMixture;
+        public static Material PotassiumSulfide;
 
         // Second Degree Materials
 
@@ -614,7 +616,7 @@ class SuSyMaterials {
         public static Material GoldOreSlurry;
         public static Material GoldEluent;
         public static Material GoldEluteSolution;
-        public static Material PotashSolution;
+        public static Material PotassiumCarbonateSolution;
         public static Material PotassiumSulfateSolution;
         public static Material DiluteHexafluorosilicicAcid;
         public static Material LithiumSulfateSolution;

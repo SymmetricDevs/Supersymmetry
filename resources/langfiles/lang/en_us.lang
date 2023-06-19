@@ -726,7 +726,7 @@ material.calcium_silicate=Calcium Silicate
 material.magnesium_hydroxide=Magnesium Hydroxide
 material.magnesium_chloride_solution=Magnesium Chloride Solution
 material.wood_ash=Wood Ash
-material.potash_solution=Potassium Carbonate Solution
+material.potassium_carbonate_solution=Potassium Carbonate Solution
 material.magnesium_sulfate=Magnesium Sulfate
 material.very_concentrated_brine=Very Concentrated Brine
 material.langbeinite_leach=Langbeinite Leach
@@ -801,7 +801,6 @@ material.spent_wohlwill_electrolyte=Spent Wohlwill Electrolyte
 material.gold_ore_slurry=Gold Ore Slurry
 material.gold_eluent=Gold Eluent
 material.gold_elute_solution=Gold Elute Solution
-material.potash_solution=Potash Solution
 material.potassium_sulfate_solution=Potassium Sulfate Solution
 material.impure_ammonium_fluoroberyllate_solution=Impure Ammonium Fluoroberyllate Solution
 material.silicon_tetrafluoride=Silicon Tetrafluoride
@@ -853,6 +852,7 @@ material.tin_dross=Tin Dross
 material.decopperized_tin=Decopperized Tin
 material.copper_monosulfide=Copper Monosulfide
 material.ammonium_tungstate_solution=Ammonium Tungstate Solution
+material.potassium_salt_mixture=Potassium-Salt Mixture
 
 # Thermodynamics
 
