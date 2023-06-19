@@ -26205,7 +26205,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Decompress §rCold High Pressure Hydrogen into Liquid Hydrogen§r, §cwhich has a temperature of 21 K or -252°C.§r This is required for making superconductors.",
+          "desc:8": "§6Decompress §rCold High Pressure Oxygen into Liquid Oxygen, §cwhich has a temperature of 54 K or -219°C.§r This is required for making superconductors.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26223,14 +26223,14 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "liquid_hydrogen"
+              "FluidName:8": "liquid_oxygen"
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Liquid Hydrogen",
+          "name:8": "Liquid Oxygen",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -29155,7 +29155,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This page will describe the process on how to make§b liquid hydrogen§r, but it\u0027s the same for most gases.\n\n§9Hydrogen §rcan be compressed to make §cHot High-Pressure Hydrogen §rusing a fluid compressor. This only takes 30 EU/t for hydrogen, but it\u0027s 200 EU/t or higher for most fluids.\n\n",
+          "desc:8": "This page will describe the process on how to make§b liquid oxygen§r, but it\u0027s the same for most gases.\n\n§9Oxygen §rcan be compressed to make §cHot High-Pressure oxygen §rusing a fluid compressor. This only takes 30 EU/t for oxygen, but it\u0027s 200 EU/t or higher for most fluids.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29173,14 +29173,14 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "hot_hp_hydrogen"
+              "FluidName:8": "hot_hp_oxygen"
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Hot High Pressure Hydrogen",
+          "name:8": "Hot High Pressure Oxygen",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -29351,7 +29351,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §cHot High Pressure Hydrogen §rmust be then cooled down to make§a High Pressure Hydrogen§r. \n\nThis can either be done with a §cRadiator §ror with a §cHeat Exchanger, but the Heat Exchanger requires water to work.\n\n",
+          "desc:8": "The §cHot High Pressure Oxygen §rmust be then cooled down to make§a High Pressure Oxygen. \n\n§fThis can either be done with a §cRadiator §ror with a §cHeat Exchanger, but the Heat Exchanger requires water to work.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29369,14 +29369,14 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "hot_hp_hydrogen"
+              "FluidName:8": "hp_oxygen"
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "High Pressure Hydrogen",
+          "name:8": "High Pressure Oxygen",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -29398,7 +29398,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§a High Pressure Hydrogen §r§r§ris then cooled to make §bCold High Pressure Hydrogen§r. \nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Monoxide or Cold Propane§r.\n\n§bCold Carbon Dioxide §rcan be made by first compressing Carbon Dioxide into Hot Compressed CO2, then radiating out the heat using a Radiator, and then decompressing it to make §bCold CO2§r.",
+          "desc:8": "The§a High Pressure Oxygen §r§r§ris then cooled to make §bCold High Pressure Oxygen. §f\nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Monoxide or Cold Propane§r.\n\n§bCold Carbon Dioxide §rcan be made by first compressing Carbon Dioxide into Hot Compressed CO2, then radiating out the heat using a Radiator, and then decompressing it to make §bCold CO2§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29416,14 +29416,14 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "cold_hp_hydrogen"
+              "FluidName:8": "cold_hp_oxygen"
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Cold High Pressure Hydrogen",
+          "name:8": "Cold High Pressure Oxygen",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -30297,7 +30297,6 @@
     },
     "451:10": {
       "preRequisites:11": [
-        404,
         463,
         464
       ],
@@ -30366,8 +30365,8 @@
     },
     "452:10": {
       "preRequisites:11": [
-        451,
-        453
+        453,
+        404
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -46139,15 +46138,15 @@
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 234,
-          "y:3": -12
+          "x:3": 204,
+          "y:3": -24
         },
         "3:10": {
           "id:3": 238,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
-          "y:3": -12
+          "x:3": 240,
+          "y:3": -24
         },
         "4:10": {
           "id:3": 243,
@@ -46277,10 +46276,10 @@
         },
         "22:10": {
           "id:3": 451,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": 252,
-          "y:3": 66
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 276,
+          "y:3": 12
         },
         "23:10": {
           "id:3": 452,
@@ -46363,15 +46362,15 @@
           "id:3": 463,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 234,
-          "y:3": 24
+          "x:3": 204,
+          "y:3": 12
         },
         "35:10": {
           "id:3": 464,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
-          "y:3": 24
+          "x:3": 240,
+          "y:3": 12
         },
         "36:10": {
           "id:3": 465,
@@ -49917,7 +49916,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,

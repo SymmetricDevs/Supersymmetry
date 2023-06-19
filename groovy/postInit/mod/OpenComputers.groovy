@@ -141,7 +141,14 @@ for (item in name_removals) {
     crafting.remove(item);
 }
 
-
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('plateRubber'))
+		.inputs(ore('wireGtSingleCopper'))
+		.circuitMeta([2])
+		.outputs(item('opencomputers:cable'))
+		.duration(100)
+		.EUt(120)
+		.buildAndRegister();
 
 for (solder in soldering_alloys) {
 
@@ -273,7 +280,7 @@ for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
 			.inputs(metaitem('plateIron'))
-			.inputs(ore('gtWireSingleCopper') * 2)
+			.inputs(ore('wireGtSingleCopper') * 2)
 			.inputs(ore('cableGtSingleCopper') * 4)
 			.inputs(ore('circuitMv'))
             .fluidInputs(solder)
@@ -1116,6 +1123,18 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateSteel') * 4)
+			.inputs(metaitem('wireFineRedAlloy') * 4)
+			.inputs(metaitem('sensor.lv'))
+			.inputs(metaitem('emitter.lv'))
+			.fluidInputs(solder)
+			.circuitMeta([10])
+			.outputs(item('opencomputers:card', 6))
+			.duration(400)
+			.EUt(120)
+			.buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('plateAluminium') * 4)
 			.inputs(metaitem('wireFineRedAlloy') * 4)
 			.inputs(metaitem('sensor.mv'))
@@ -1188,16 +1207,6 @@ for (solder in soldering_alloys) {
             .EUt(120)
             .buildAndRegister();
 
-	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('plateRubber'))
-			.inputs(ore('wireGtSingleCopper'))
-            .fluidInputs(solder)
-			.circuitMeta([2])
-            .outputs(item('opencomputers:cable'))
-            .duration(400)
-            .EUt(120)
-            .buildAndRegister();
-
 	mods.gregtech.circuit_assembler.recipeBuilder()
 			.inputs(ore('circuitHv'))
 			.inputs(ore('oc:wlanCard2'))
@@ -1208,17 +1217,20 @@ for (solder in soldering_alloys) {
             .duration(400)
             .EUt(120)
             .buildAndRegister();
-
-
-//TODO: Disk Platter
 }
+
+mods.gregtech.forming_press.recipeBuilder()
+		.inputs(metaitem('foilPolycaprolactam') * 4)
+		.outputs(item('opencomputers:material', 28))
+		.duration(160)
+		.EUt(120)
+		.buildAndRegister();
 
 crafting.addShaped('opencomputers:scrench', item('opencomputers:wrench'), [
     [ore('ingotAluminium'), ore('craftingToolHardHammer'), ore('ingotAluminium')],
     [ore('ingotSteel'), ore('ingotSteel'), ore('ingotSteel')],
     [null, ore('ingotSteel'), null]
 ])
-
 
 //disk platter
 	mods.gregtech.assembler.recipeBuilder()

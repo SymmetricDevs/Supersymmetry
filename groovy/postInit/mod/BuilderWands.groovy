@@ -1,3 +1,13 @@
+def name_removals = [
+        'betterbuilderswands:recipewandunbreakable',
+        'betterbuilderswands:wandunbreakable13',
+        'betterbuilderswands:wandunbreakable14'
+]
+
+for (name in name_removals) {
+    crafting.remove(name)
+}
+
 // Stone Wand
 crafting.addShaped('betterbuilderswands:wandstone', item('betterbuilderswands:wandstone'), [
     [null, null, ore('cobblestone')],
