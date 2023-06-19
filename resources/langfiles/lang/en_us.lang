@@ -763,9 +763,6 @@ material.gold_elute_solution=Gold Elute Solution
 material.potash_solution=Potash Solution
 material.potassium_sulfate_solution=Potassium Sulfate Solution
 
-
-
-
 # Thermodynamics
 
 material.hot_hp_hydrogen=Hot High-Pressure Hydrogen
@@ -973,6 +970,68 @@ material.neodymium_alloy_magnetic=Magnetic Neodymium Alloy
 material.samarium_alloy_magnetic=Magnetic Samarium Alloy
 material.raw_electrum=Raw Electrum
 
+material.metal_nitrate_solution=Metal Nitrate Solution
+material.neutralized_metal_nitrate_solution=Neutralized Metal Nitrate Solution
+material.metal_nitrate_catalyst=Metal Nitrate Catalyst
+material.two_ethylhexyl_phosphoric_acid_mix=(2-ethylhexyl)phosphoric acid Mix
+material.rare_earth_catalyst_y_nd=Rare Earth Catalyst (Y-Nd)
+material.diluted_primary_amine_n=Diluted Primary Amine N-1923
+material.crosslinked_polystyrene=Crosslinked Polystyrene-Divinylbenzene
+material.chloroacetic_anhydride=Chloroacetic Anhydride
+material.trialkylaluminium_mixture=Trialkylaluminium Mixture
+material.copper_ii_nitrate=Copper II Nitrate
+material.nickel_ii_nitrate=Nickel II Nitrate
+material.zinc_nitrate=Zinc Nitrate
+material.magnesium_nitrate=Magnesium Nitrate
+material.yttrium_oxide=Yttrium Oxide
+material.neodymium_oxide=Neodymium Oxide
+material.bromooctane=1-Bromooctane
+material.lithium_dioctylcopper=Lithium Dioctylcopper (Gilman Reagent)
+material.decanoyl_chloride=Decanoyl Chloride
+material.sodium_cyanoborohydride=Sodium Cyanoborohydride
+material.diluted_chloroacetic_anhydride=Diluted Chloroacetic Anhydride
+material.diluted_bromooctane=Diluted Bromooctane
+material.diethylene_glycol=Diethylene Glycol
+material.diglycolic_acid=Diglycolic Acid
+material.n_octanol=n-Octanol
+material.n_octylamine=n-Octylamine
+material.dioctylamine=Dioctylamine
+material.tetraoctyl_diglycolamide=Tetraoctyl Diglycolamide
+material.two_ethyl_two_hexenal=2-Ethyl-2-Hexenal
+material.two_ethylhexanol=2-Ethylhexanol
+material.di_two_ethylhexyl_phosphoric_acid=Di(2-ethylhexyl)phosphoric acid
+material.lauric_acid=Lauric Acid
+material.capric_acid=Capric Acid
+material.primary_amine_n=Primary Amine N-1923
+material.nine_octadecanone=9-Octadecanone
+material.tri_octyl_decyl_amine=Tri(octyl-decyl)amine
+material.diethylbenzene=Diethylbenzene
+material.divinylbenzene=Divinylbenzene
+material.diglycolic_acid_solution=Diglycolic Acid Solution
+material.di_two_ethylhexyl_phosphoric_acid_solution=Di(2-ethylhexyl)phosphoric acid Solution
+material.dibutyl_carbitol=Dibutyl Carbitol
+material.n_butanol=n-Butanol
+material.ethylene_glycol_mix=Ethylene Glycol Mix
+material.aluminium_alkoxide_mixture=Aluminium Alkoxide Mixture
+material.ziegler_alcohol_mixture=Ziegler Alcohol Mixture
+material.diluted_tetraoctyl_diglycolamide=Diluted Tetraoctyl Diglycolamide
+material.diluted_sodium_hydroxide_solution=Diluted Sodium Hydroxide Solution
+material.diluted_octylamine=Diluted n-Octylamine
+material.zirconium_dioxide=Zirconium Dioxide
+material.mono_two_ethylhexyl_phosphoric_acid=Mono(2-ethylhexyl)phosphoric acid
+material.palladium_doped_crosslinked_polystyrene=Palladium-Doped Crosslinked Polystyrene-Divinylbenzene
+material.methyl_isobutyl_ketone=Methyl Isobutyl Ketone
+material.methyl_isobutyl_carbinol=Methyl Isobutyl Carbinol
+material.diluted_methyl_isobutyl_ketone=Diluted Methyl Isobutyl Ketone
+material.impure_diethyl_ether=Impure Diethyl Ether
+material.n_hexanol=n-Hexanol
+material.n_decanol=n-Decanol
+material.n_dodecanol=n-Dodecanol
+material.n_tetradecanol=n-Tetradecanol
+material.n_hexadecanol=n-Hexadecanol
+material.aluminium_alkoxide_solution=Aluminium Alkoxide Solution
+material.oleum=Oleum
+material.chromium_sulfate_solution=Chromium Sulfate Solution
 material.trichlorosilane=Trichlorosilane
 material.dichlorosilane=Dichlorosilane
 material.chlorosilane=Chlorosilane
@@ -1308,6 +1367,10 @@ metaitem.chip.insulated_silicon.name=Insulated Silicon Chip
 metaitem.chip.insulated_silicon_germanium.name=Insulated Silicon-Germanium Chip
 metaitem.chip.n_doped_silicon.name=n-Doped Silicon Chip
 metaitem.chip.silicon_dioxide.name=Silicon Dioxide Chip
+
+metaitem.ag_fifty_w_x_eight_beads.name=AG 50W-X8 Resin Beads
+metaitem.amberlyst_ch_beads.name=Amberlyst CH-43 Beads
+
 metaitem.fused_quartz.name=Fused Quartz Plate
 
 # Multiblocked

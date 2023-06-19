@@ -856,10 +856,12 @@ public class FirstDegreeMaterials{
                 .build()
 
         Triethylaluminium = new Material.Builder(8215, "triethylaluminium")
-                .dust()
+                .fluid()
                 .components(Carbon, 12, Hydrogen, 30, Aluminium, 2)
                 .colorAverage()
                 .build()
+
+        Triethylaluminium.setFormula("Al2(C2H5)6", true)
 
         HydrogenPeroxide = new Material.Builder(8216, "hydrogen_peroxide")
                 .fluid()
@@ -1710,5 +1712,117 @@ public class FirstDegreeMaterials{
                 .build()
 
         NickelCarbonyl.setFormula("Ni(CO)4", true)
+
+              ChloroaceticAnhydride = new Material.Builder(8349, 'chloroacetic_anhydride')
+                .dust()
+                .components(Carbon, 4, Hydrogen, 4, Oxygen, 3, Chlorine, 2)
+                .colorAverage()
+                .build()
+
+        ZirconiumDioxide = new Material.Builder(8350, 'zirconium_dioxide')
+                .dust()
+                .components(Zirconium, 1, Oxygen, 2)
+                .colorAverage()
+                .build()
+
+        CopperIINitrate = new Material.Builder(8351, 'copper_ii_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Copper, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0x292fe3)
+                .build()
+
+        CopperIINitrate.setFormula("Cu(NO3)2", true)
+
+        NickelIINitrate = new Material.Builder(8352, 'nickel_ii_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Nickel, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0x236359)
+                .build()
+
+        NickelIINitrate.setFormula("Ni(NO3)2", true)
+
+        ZincNitrate = new Material.Builder(8353, 'zinc_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Zinc, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0xdfe6cf)
+                .build()
+
+        ZincNitrate.setFormula("Zn(NO3)2", true)
+
+        MagnesiumNitrate = new Material.Builder(8354, 'magnesium_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Magnesium, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0xe8d8e3)
+                .build()
+
+        MagnesiumNitrate.setFormula("Mg(NO3)2", true)
+
+        YttriumOxide = new Material.Builder(8355, 'yttrium_oxide')
+                .dust()
+                .components(Yttrium, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        NeodymiumOxide = new Material.Builder(8356, 'neodymium_oxide')
+                .dust()
+                .components(Neodymium, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        Bromooctane = new Material.Builder(8357, 'bromooctane')
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 17, Bromine, 1)
+                .colorAverage()
+                .build()
+
+        LithiumDioctylcopper = new Material.Builder(8358, 'lithium_dioctylcopper')
+                .fluid()
+                .components(Carbon, 16, Hydrogen, 34, Copper, 1, Lithium, 1)
+                .colorAverage()
+                .build()
+
+        DecanoylChloride = new Material.Builder(8359, 'decanoyl_chloride')
+                .fluid()
+                .components(Carbon, 10, Hydrogen, 19, Chlorine, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        SodiumCyanoborohydride = new Material.Builder(8360, 'sodium_cyanoborohydride')
+                .dust()
+                .components(Sodium, 1, Boron, 1, Hydrogen, 3, Carbon, 1, Nitrogen, 1)
+                .colorAverage()
+                .build()
+
+        SodiumCyanoborohydride.setFormula("Na[BH3(CN)]", true)
+
+        DilutedSodiumHydroxideSolution = new Material.Builder(8361, "diluted_sodium_hydroxide_solution")
+                .fluid()
+                .components(Water, 2, SodiumHydroxide, 1)
+                .colorAverage()
+                .build();
+
+        DiethylEther = new Material.Builder(8362, "diethyl_ether")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
+                .color(0x2177ff)
+                .build();
+
+        DiethylEther.setFormula("(C2H5)2O", true)
+
+        Oleum = new Material.Builder(8363, "oleum")
+                .fluid()
+                .components(SulfuricAcid, 10, SulfurTrioxide, 1)
+                .color(0xe8c3a5)
+                .build();
+
+        ChromiumSulfateSolution = new Material.Builder(8364, "chromium_sulfate_solution")
+                .fluid()
+                .components(Chrome, 4, Water, 24, Sulfur, 6, Oxygen, 24, Acetone, 1)
+                .color(0x2c733a)
+                .build();
     }
 }
