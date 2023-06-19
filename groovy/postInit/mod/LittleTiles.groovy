@@ -45,3 +45,16 @@ crafting.replaceShaped('alet:tapemeasure', item('alet:tapemeasure'), [
     [ore('dyeBlue'), ore('paper'), ore('plateIron')],
     [ore('paper'), ore('paper'), ore('plateIron')]
 ])
+
+crafting.replaceShaped('littletiles:structure_builder', item('littletiles:premade').withNbt(["structure": ["id": "structure_builder"]]), [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), item('minecraft:redstone'), ore('stone')],
+        [ore('stone'), item('minecraft:planks'), ore('stone')]
+])
+
+crafting.replaceShaped('littletiles:particle_emitter', item('littletiles:premade').withNbt(["structure": ["id": "particle_emitter"]]), [
+        [ore('stone'), item('minecraft:redstone'), ore('stone')],
+        [item('minecraft:redstone'), item('minecraft:dispenser'), item('minecraft:redstone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])
+

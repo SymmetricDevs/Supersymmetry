@@ -30,7 +30,8 @@ def name_removals = [
         'gregtech:cover_item_voiding',
         'gregtech:fluid_filter_lapis',
         'gregtech:fluid_filter_sodalite',
-        'gregtech:fluid_filter_lazurite'
+        'gregtech:fluid_filter_lazurite',
+        'gregtech:comparator_certus'
 ]
 
 for (name in name_removals) {
@@ -612,3 +613,13 @@ LATEX_COLLECTOR.recipeBuilder()
         .buildAndRegister();
 
 //TODO: ADD GRAVITY SEPARATOR STUFF
+// Construction Foam * 8000
+mods.gregtech.mixer.removeByInput(16, [metaitem('dustRawRubber')], [fluid('concrete') * 576])
+
+MIXER.recipeBuilder()
+        .inputs(metaitem('dustRubber'))
+        .fluidInputs(fluid('concrete') * 576)
+        .fluidOutputs(fluid('construction_foam') * 8000)
+        .duration(20)
+        .EUt(16)
+        .buildAndRegister();

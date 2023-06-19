@@ -1665,7 +1665,8 @@
     },
     "20:10": {
       "preRequisites:11": [
-        16
+        16,
+        21
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -1743,7 +1744,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§rMore advanced tools will be needed to progress towards the Industrial Age. There are six major types of tools.\n\nThe §2hammer §ris used kind of everywhere. It\u0027s used to make all the other tools and it turns ingots into plates\nThe §2file§r turns ingots into rods.\nThe §2saw §rturns wood planks into slabs, and turns logs into 6 planks.\nThe §2screwdriver§r is used in most recipes and in setting up covers. It also makes important parts like gears and rotors.\nThe §2wrench§r is used in cutting pipes and it\u0027s probably the most important tools out of all of them.\nThe §2wire cutter§r cuts wiring.\n\n§l§c§lBoth JEI and the book will show iron tools wherever tools are used. Tools other than iron will not show up in the JEI search. Bronze tools exist and should be made first. Generally, recipes accept all kinds of tools.§r",
+          "desc:8": "§rMore advanced tools will be needed to progress towards the Industrial Age. There are six major types of tools.\n\n§6§lBronze tools should be made first, since you are quite a bit away from iron.§r \n\nThe §2hammer §ris used kind of everywhere. It\u0027s used to make all the other tools and it turns ingots into plates\nThe §2file§r turns ingots into rods.\nThe §2saw §rturns wood planks into slabs, and turns logs into 6 planks.\nThe §2screwdriver§r is used in most recipes and in setting up covers. It also makes important parts like gears and rotors.\nThe §2wrench§r is used in cutting pipes and it\u0027s probably the most important tools out of all of them.\nThe §2wire cutter§r cuts wiring.\n\n§l§c§lBoth JEI and the book will show iron tools wherever tools are used. Tools other than iron will not show up in the JEI search. Bronze tools exist and should be made first. Generally, recipes accept all kinds of tools.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26204,7 +26205,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Decompress §rCold High Pressure Hydrogen into Liquid Hydrogen§r, §cwhich has a temperature of 21 K or -252°C.§r This is required for making superconductors.",
+          "desc:8": "§6Decompress §rCold High Pressure Oxygen into Liquid Oxygen, §cwhich has a temperature of 54 K or -219°C.§r This is required for making superconductors.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26222,14 +26223,14 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "liquid_hydrogen"
+              "FluidName:8": "liquid_oxygen"
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Liquid Hydrogen",
+          "name:8": "Liquid Oxygen",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -26250,16 +26251,13 @@
       }
     },
     "391:10": {
-      "preRequisiteTypes:7": [
-        2
-      ],
       "preRequisites:11": [
         243
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6polymerization tank §ris a multi machine where monomers undergo a chemical reaction to form long chains called polymers.\n\nA Polymerization Tank can, for example, polymerize Ethylene into §cPoly§rethylene§r.\n\nThe Polymerization Tank requires:§6\n- 1 Polymerization Tank\n- 1 Output Bus\n- 1 Output Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Maintenance Hatch\n- 4 Steel Frame Box\n- 25 Solid Steel Machine Casing\n- 4 Steel Pipe Casing§r\n\nAs always, check the structure in JEI.\n",
+          "desc:8": "A §6polymerization tank §ris a multi machine where monomers undergo a chemical reaction to form long chains called polymers.\n\nA Polymerization Tank can, for example, polymerize Ethylene into §cPoly§rethylene§r.\n\nThe Polymerization Tank requires:§6\n- 1 Polymerization Tank\n- 1 Output Bus\n- 1 Output Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Maintenance Hatch\n- 4 Steel Frame Box\n- 25 Solid Steel Machine Casing\n- 4 Steel Pipe Casing§r\n\nAs always, check the structure in JEI. Hatches cannot be placed on the top of the machine.\nIf you need to see which hatches can be placed where, you can [§aShift-Right Click§r] on the preview in JEI.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26938,7 +26936,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "99.1% Pure",
+          "name:8": "99.1% §rPure",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -27005,7 +27003,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Monocrystalline",
@@ -27184,7 +27182,7 @@
     },
     "405:10": {
       "preRequisites:11": [
-        402
+        592
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29157,7 +29155,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This page will describe the process on how to make§b liquid hydrogen§r, but it\u0027s the same for most gases.\n\n§9Hydrogen §rcan be compressed to make §cHot High-Pressure Hydrogen §rusing a fluid compressor. This only takes 30 EU/t for hydrogen, but it\u0027s 200 EU/t or higher for most fluids.\n\n",
+          "desc:8": "This page will describe the process on how to make§b liquid oxygen§r, but it\u0027s the same for most gases.\n\n§9Oxygen §rcan be compressed to make §cHot High-Pressure oxygen §rusing a fluid compressor. This only takes 30 EU/t for oxygen, but it\u0027s 200 EU/t or higher for most fluids.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29175,14 +29173,14 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "hot_hp_hydrogen"
+              "FluidName:8": "hot_hp_oxygen"
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Hot High Pressure Hydrogen",
+          "name:8": "Hot High Pressure Oxygen",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -29353,7 +29351,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §cHot High Pressure Hydrogen §rmust be then cooled down to make§a High Pressure Hydrogen§r. \n\nThis can either be done with a §cRadiator §ror with a §cHeat Exchanger, but the Heat Exchanger requires water to work.\n\n",
+          "desc:8": "The §cHot High Pressure Oxygen §rmust be then cooled down to make§a High Pressure Oxygen. \n\n§fThis can either be done with a §cRadiator §ror with a §cHeat Exchanger, but the Heat Exchanger requires water to work.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29371,14 +29369,14 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "hot_hp_hydrogen"
+              "FluidName:8": "hp_oxygen"
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "High Pressure Hydrogen",
+          "name:8": "High Pressure Oxygen",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -29400,7 +29398,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§a High Pressure Hydrogen §r§r§ris then cooled to make §bCold High Pressure Hydrogen§r. \nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Monoxide or Cold Propane§r.\n\n§bCold Carbon Dioxide §rcan be made by first compressing Carbon Dioxide into Hot Compressed CO2, then radiating out the heat using a Radiator, and then decompressing it to make §bCold CO2§r.",
+          "desc:8": "The§a High Pressure Oxygen §r§r§ris then cooled to make §bCold High Pressure Oxygen. §f\nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Monoxide or Cold Propane§r.\n\n§bCold Carbon Dioxide §rcan be made by first compressing Carbon Dioxide into Hot Compressed CO2, then radiating out the heat using a Radiator, and then decompressing it to make §bCold CO2§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29418,14 +29416,14 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "cold_hp_hydrogen"
+              "FluidName:8": "cold_hp_oxygen"
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Cold High Pressure Hydrogen",
+          "name:8": "Cold High Pressure Oxygen",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -30299,7 +30297,6 @@
     },
     "451:10": {
       "preRequisites:11": [
-        404,
         463,
         464
       ],
@@ -30368,8 +30365,8 @@
     },
     "452:10": {
       "preRequisites:11": [
-        451,
-        453
+        453,
+        404
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -32247,8 +32244,13 @@
       }
     },
     "479:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0
+      ],
       "preRequisites:11": [
-        478
+        478,
+        502
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34002,7 +34004,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Evaporation Pool",
@@ -43967,6 +43969,566 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "592:10": {
+      "preRequisites:11": [
+        402
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Silicon boules need to be §6refined§o§r before being cut into wafers.\n\nThe §cZone Refiner §rpasses a hot coil over the boule and melts off impurities.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 14707,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Zone Refiner",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 592,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14708,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "593:10": {
+      "preRequisites:11": [
+        400
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Make an §6MV Weapons Factory §rto access the MV-tier guns, such as the M4, the Thompson, the AK-47 and the Mac 1§\n0.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 15027,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§c§lWAR",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 593,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 15027,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "594:10": {
+      "preRequisites:11": [
+        593
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6M4 Assault Rifle §r§ris one of the guns you can make at MV. It uses §cAssault Rifle Magazines §ras ammo.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "techguns:m4",
+            "tag:10": {
+              "ammo:2": 30,
+              "ammovariant:8": "default",
+              "camo:1": 0
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Infiltrator",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 594,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "techguns:m4",
+              "tag:10": {
+                "ammo:2": 30,
+                "ammovariant:8": "default",
+                "camo:1": 0
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 13,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "techguns:itemshared"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "595:10": {
+      "preRequisites:11": [
+        593
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6AKM Assault Rifle §r§ris one of the guns you can make at MV. It uses §cAssault Rifle Magazines §ras ammo.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "techguns:ak47",
+            "tag:10": {
+              "ammo:2": 30,
+              "ammovariant:8": "default",
+              "camo:1": 0
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Blya...",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 595,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "techguns:ak47",
+              "tag:10": {
+                "ammo:2": 30,
+                "ammovariant:8": "default",
+                "camo:1": 0
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 13,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "techguns:itemshared"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "596:10": {
+      "preRequisites:11": [
+        593
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Mac 10§r is a sub machine gun you can make at MV. It uses SMG Magazines as ammo. \n\nIt has a damage penalty if it is dual-wield.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "techguns:mac10",
+            "tag:10": {
+              "ammo:2": 32,
+              "ammovariant:8": "default",
+              "camo:1": 0
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Mac 10",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 596,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "techguns:mac10",
+              "tag:10": {
+                "ammo:2": 32,
+                "ammovariant:8": "default",
+                "camo:1": 0
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 10,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "techguns:itemshared"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "597:10": {
+      "preRequisites:11": [
+        593
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Thompson §ris a §ctwo-handed§r sub-machine gun (SMG) you can make at MV. It uses §6SMG Magazines §ras ammo.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "techguns:thompson",
+            "tag:10": {
+              "ammo:2": 20,
+              "ammovariant:8": "default",
+              "camo:1": 0
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Thompson",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 597,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "techguns:thompson",
+              "tag:10": {
+                "ammo:2": 20,
+                "ammovariant:8": "default",
+                "camo:1": 0
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 9,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "techguns:itemshared"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "598:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §bOcean Drill§r is an electric machine that collect§b 8,000 L of seawater per second §rif its§c controller §ris placed between altitude levels §970 and 75 §rin an ocean.\n\nThe Ocean Drill requires:\n§6\n- 1 Ocean Drill Controller\n- 300 Steel Frame Boxes\n- 16 Grate Machine Casings\n- 91 Solid Steel Machine Casings\n- 36 Steel Pipe Casings\n- 1 Maintenance Hatch\n- 1 MV Energy Hatch\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_block_frame_20"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Ocean Drill",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 599,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 17011,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 36,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            },
+            "2:10": {
+              "Count:3": 16,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:multiblock_casing"
+            },
+            "3:10": {
+              "Count:3": 91,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "4:10": {
+              "Count:3": 300,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_frame_20"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -44136,7 +44698,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -120,
-          "y:3": 492
+          "y:3": 552
         },
         "20:10": {
           "id:3": 21,
@@ -44220,7 +44782,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -192,
-          "y:3": 492
+          "y:3": 552
         },
         "32:10": {
           "id:3": 90,
@@ -44311,14 +44873,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 564
+          "y:3": 618
         },
         "45:10": {
           "id:3": 366,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 564
+          "y:3": 618
         },
         "46:10": {
           "id:3": 437,
@@ -45515,6 +46077,13 @@
           "y:3": 270
         },
         "103:10": {
+          "id:3": 479,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 36
+        },
+        "104:10": {
           "id:3": 515,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -45570,14 +46139,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
-          "y:3": -12
+          "y:3": -24
         },
         "3:10": {
           "id:3": 238,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 246,
-          "y:3": -12
+          "x:3": 240,
+          "y:3": -24
         },
         "4:10": {
           "id:3": 243,
@@ -45597,8 +46166,8 @@
           "id:3": 391,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -126,
-          "y:3": 150
+          "x:3": -72,
+          "y:3": 0
         },
         "7:10": {
           "id:3": 394,
@@ -45611,29 +46180,29 @@
           "id:3": 395,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 12
+          "x:3": -144,
+          "y:3": -138
         },
         "9:10": {
           "id:3": 396,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 60
+          "x:3": -144,
+          "y:3": -90
         },
         "10:10": {
           "id:3": 397,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 108
+          "x:3": -144,
+          "y:3": -42
         },
         "11:10": {
           "id:3": 398,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -54,
-          "y:3": 156
+          "x:3": -150,
+          "y:3": 6
         },
         "12:10": {
           "id:3": 399,
@@ -45646,7 +46215,7 @@
           "id:3": 400,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
+          "x:3": -42,
           "y:3": 72
         },
         "14:10": {
@@ -45667,36 +46236,36 @@
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 180,
+          "x:3": 222,
           "y:3": 72
         },
         "17:10": {
           "id:3": 405,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 138,
+          "x:3": 180,
           "y:3": 66
         },
         "18:10": {
           "id:3": 406,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
-          "y:3": -162
+          "x:3": 162,
+          "y:3": -210
         },
         "19:10": {
           "id:3": 412,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 204
+          "x:3": -144,
+          "y:3": 54
         },
         "20:10": {
           "id:3": 413,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -114,
-          "y:3": 204
+          "x:3": -210,
+          "y:3": 54
         },
         "21:10": {
           "id:3": 443,
@@ -45707,10 +46276,10 @@
         },
         "22:10": {
           "id:3": 451,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": 222,
-          "y:3": 66
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 276,
+          "y:3": 12
         },
         "23:10": {
           "id:3": 452,
@@ -45794,14 +46363,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
-          "y:3": 24
+          "y:3": 12
         },
         "35:10": {
           "id:3": 464,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 246,
-          "y:3": 24
+          "x:3": 240,
+          "y:3": 12
         },
         "36:10": {
           "id:3": 465,
@@ -45881,249 +46450,305 @@
           "y:3": 180
         },
         "47:10": {
+          "id:3": 479,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 216,
+          "y:3": -174
+        },
+        "48:10": {
           "id:3": 480,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 216,
           "y:3": 228
         },
-        "48:10": {
+        "49:10": {
           "id:3": 481,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 420,
           "y:3": 72
         },
-        "49:10": {
+        "50:10": {
           "id:3": 482,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
           "y:3": -42
         },
-        "50:10": {
+        "51:10": {
           "id:3": 483,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 396,
           "y:3": -96
         },
-        "51:10": {
+        "52:10": {
           "id:3": 484,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 396,
           "y:3": -42
         },
-        "52:10": {
+        "53:10": {
           "id:3": 485,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
           "y:3": -96
         },
-        "53:10": {
+        "54:10": {
           "id:3": 486,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 414,
           "y:3": 18
         },
-        "54:10": {
+        "55:10": {
           "id:3": 487,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 474,
           "y:3": 24
         },
-        "55:10": {
+        "56:10": {
           "id:3": 488,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 366,
           "y:3": 72
         },
-        "56:10": {
+        "57:10": {
           "id:3": 489,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 348,
           "y:3": 162
         },
-        "57:10": {
+        "58:10": {
           "id:3": 490,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 384,
           "y:3": 162
         },
-        "58:10": {
+        "59:10": {
           "id:3": 491,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 360,
           "y:3": 228
         },
-        "59:10": {
+        "60:10": {
           "id:3": 492,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 270,
           "y:3": 234
         },
-        "60:10": {
+        "61:10": {
           "id:3": 493,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 318,
           "y:3": 234
         },
-        "61:10": {
+        "62:10": {
           "id:3": 494,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 282,
           "y:3": 294
         },
-        "62:10": {
+        "63:10": {
           "id:3": 495,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 348,
           "y:3": 306
         },
-        "63:10": {
+        "64:10": {
           "id:3": 496,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 306
         },
-        "64:10": {
+        "65:10": {
           "id:3": 497,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -6,
           "y:3": 294
         },
-        "65:10": {
+        "66:10": {
           "id:3": 498,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 6,
           "y:3": -168
         },
-        "66:10": {
+        "67:10": {
           "id:3": 499,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -216
         },
-        "67:10": {
+        "68:10": {
           "id:3": 500,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -186
         },
-        "68:10": {
+        "69:10": {
           "id:3": 501,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -144
         },
-        "69:10": {
+        "70:10": {
           "id:3": 502,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 138,
+          "x:3": 150,
           "y:3": -174
         },
-        "70:10": {
+        "71:10": {
           "id:3": 503,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -102
         },
-        "71:10": {
+        "72:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -60
         },
-        "72:10": {
+        "73:10": {
           "id:3": 505,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 6,
+          "x:3": -24,
           "y:3": 108
         },
-        "73:10": {
+        "74:10": {
           "id:3": 506,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 96,
           "y:3": -168
         },
-        "74:10": {
+        "75:10": {
           "id:3": 507,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 96,
           "y:3": -42
         },
-        "75:10": {
+        "76:10": {
           "id:3": 508,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 102,
           "y:3": -78
         },
-        "76:10": {
+        "77:10": {
           "id:3": 509,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 102,
           "y:3": -114
         },
-        "77:10": {
+        "78:10": {
           "id:3": 510,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 234,
           "y:3": 300
         },
-        "78:10": {
+        "79:10": {
           "id:3": 511,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 192,
           "y:3": 306
         },
-        "79:10": {
+        "80:10": {
           "id:3": 512,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 150,
           "y:3": 306
         },
-        "80:10": {
+        "81:10": {
           "id:3": 513,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 282
         },
-        "81:10": {
+        "82:10": {
           "id:3": 514,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 330
+        },
+        "83:10": {
+          "id:3": 592,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
+          "y:3": 72
+        },
+        "84:10": {
+          "id:3": 593,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -90,
+          "y:3": 72
+        },
+        "85:10": {
+          "id:3": 594,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -114,
+          "y:3": 114
+        },
+        "86:10": {
+          "id:3": 595,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -66,
+          "y:3": 114
+        },
+        "87:10": {
+          "id:3": 596,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -114,
+          "y:3": 156
+        },
+        "88:10": {
+          "id:3": 597,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -66,
+          "y:3": 156
+        },
+        "89:10": {
+          "id:3": 599,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 30,
+          "y:3": 108
         }
       }
     },

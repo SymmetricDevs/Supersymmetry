@@ -145,3 +145,16 @@ mods.jei.hideCategory('techguns.reactionchamber')
 mods.jei.hideCategory('techguns.oredrill')
 mods.jei.hideCategory('techguns.blastfurnace')
 mods.jei.hideCategory('techguns.grinder')
+
+//NTP knives
+/* //custom oredicts break with custom transforms, will report this bug today
+def name_knifeNTP = [
+    'notreepunching:knife/flint',
+    'notreepunching:knife/iron',
+    'notreepunching:knife/gold',
+    'notreepunching:knife/diamond',
+]
+for (knife in name_knifeNTP) {
+    ore('knifeNTP').add(item(knife))
+}
+*/
