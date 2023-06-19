@@ -1779,5 +1779,17 @@ public class FirstDegreeMaterials{
                 .build();
 
         DiethylEther.setFormula("(C2H5)2O", true)
+
+        Oleum = new Material.Builder(8358, "oleum")
+                .fluid()
+                .components(SulfuricAcid, 10, SulfurTrioxide, 1)
+                .color(0xe8c3a5)
+                .build();
+
+        ChromiumSulfateSolution = new Material.Builder(8359, "chromium_sulfate_solution")
+                .fluid()
+                .components(Chrome, 4, Water, 24, Sulfur, 6, Oxygen, 24, Acetone, 1)
+                .color(0x2c733a)
+                .build();
     }
 }

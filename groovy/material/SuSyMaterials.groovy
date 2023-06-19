@@ -551,6 +551,8 @@ class SuSyMaterials {
         public static Material SodiumCyanoborohydride;
         public static Material DilutedSodiumHydroxideSolution;
         public static Material ZirconiumDioxide;
+        public static Material Oleum;
+        public static Material ChromiumSulfateSolution;
 
         // Second Degree Materials
 

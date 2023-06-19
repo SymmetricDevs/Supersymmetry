@@ -1029,7 +1029,9 @@ material.n_decanol=n-Decanol
 material.n_dodecanol=n-Dodecanol
 material.n_tetradecanol=n-Tetradecanol
 material.n_hexadecanol=n-Hexadecanol
-material.aluminium_alkoxide_solution=Aluminium Alkoxide SOlution
+material.aluminium_alkoxide_solution=Aluminium Alkoxide Solution
+material.oleum=Oleum
+material.chromium_sulfate_solution=Chromium Sulfate Solution
 
 # Isotopes
 
