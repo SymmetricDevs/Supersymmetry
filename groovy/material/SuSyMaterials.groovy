@@ -229,6 +229,9 @@ class SuSyMaterials {
         public static Material ZieglerAlcoholMixture;
         public static Material ImpureDiethylEther;
         public static Material AluminiumAlkoxideSolution;
+        public static Material DisproportionatedTrichlorosilane;
+        public static Material DisproportionatedDichlorosilane;
+        public static Material DisproportionatedChlorosilane;
 
         // Petrochem Materials
 
@@ -553,6 +556,11 @@ class SuSyMaterials {
         public static Material ZirconiumDioxide;
         public static Material Oleum;
         public static Material ChromiumSulfateSolution;
+        public static Material Trichlorosilane;
+        public static Material Dichlorosilane;
+        public static Material Chlorosilane;
+        public static Material Silane;
+        public static Material NickelCarbonyl;
 
         // Second Degree Materials
 

@@ -18,16 +18,20 @@ println("Running GregTech.groovy...")
 
 // Carbon Dust * 2
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustCoal')], null)
-
+// Small Pile of Rare Earth * 1
+mods.gregtech.extractor.removeByInput(64, [metaitem('dustMonazite')], null)
 // Graphene Dust * 1
 mods.gregtech.mixer.removeByInput(480, [metaitem('dustGraphite'), metaitem('dustSilicon'), metaitem('dustCarbon') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+// Wrought Iron Ingot * 2
+mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustIlmenite') * 10, metaitem('dustCarbon') * 4], null)
 
 def name_removals = [
         'gregtech:cover_fluid_voiding',
         'gregtech:cover_item_voiding',
         'gregtech:fluid_filter_lapis',
         'gregtech:fluid_filter_sodalite',
-        'gregtech:fluid_filter_lazurite'
+        'gregtech:fluid_filter_lazurite',
+        'gregtech:comparator_certus'
 ]
 
 for (name in name_removals) {
@@ -77,17 +81,6 @@ for (name in ore_smelting_removals) {
     furnace.removeByInput(item('gregtech:ore_' + name + '_0', 2))
 }
 
-def dust_smelting_removals = [
-        'Platinum',
-        'Molybdenum',
-        'Beryllium',
-        'Cobalt',
-        'Nickel'
-]
-
-for (name in dust_smelting_removals) {
-    furnace.removeByInput(metaitem('dust' + name))
-}
 // Polycaprolactam Bar * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCaprolactam')], [fluid('nitrogen') * 1000])
 // Monocrystalline Silicon Boule * 1
@@ -233,22 +226,6 @@ crafting.replaceShaped("gregtech:gregtech.machine.cutter.hv", metaitem('gregtech
 //         .duration(400)
 //         .EUt(8)
 //         .buildAndRegister();
-
-mods.gregtech.electric_blast_furnace.recipeBuilder()
-        .inputs(ore('dustIron'))
-        .outputs(item('minecraft:iron_ingot'))
-        .blastFurnaceTemp(1800)
-        .duration(60)
-        .EUt(60)
-        .buildAndRegister();
-
-mods.gregtech.electric_blast_furnace.recipeBuilder()
-        .inputs(ore('dustNickel'))
-        .outputs(metaitem('ingotNickel'))
-        .blastFurnaceTemp(1728)
-        .duration(60)
-        .EUt(60)
-        .buildAndRegister();
 
 crafting.addShaped('gregtech:compressed_coke_clay', metaitem('compressed.coke_clay') * 8, [
     [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')],
@@ -633,4 +610,16 @@ LATEX_COLLECTOR.recipeBuilder()
         .blockStates("extractable_logs_2", Blocks.LOG2.getBlockState())
         .duration(20)
         .EUt(7)
+        .buildAndRegister();
+
+//TODO: ADD GRAVITY SEPARATOR STUFF
+// Construction Foam * 8000
+mods.gregtech.mixer.removeByInput(16, [metaitem('dustRawRubber')], [fluid('concrete') * 576])
+
+MIXER.recipeBuilder()
+        .inputs(metaitem('dustRubber'))
+        .fluidInputs(fluid('concrete') * 576)
+        .fluidOutputs(fluid('construction_foam') * 8000)
+        .duration(20)
+        .EUt(16)
         .buildAndRegister();

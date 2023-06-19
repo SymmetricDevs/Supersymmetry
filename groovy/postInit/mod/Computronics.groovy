@@ -1,51 +1,49 @@
+def name_removals = [
+		"computronics:iron_note_block0",
+		"computronics:audio_cable1",
+		"computronics:speaker5",
+		"computronics:tape_reader7",
+		"computronics:camera3",
+		"computronics:chat_box4",
+		"computronics:cipher8",
+		"computronics:cipher_advanced10",
+		"computronics:colorful_lamp2",
+		"computronics:parts21", //tape track
+		"computronics:tape12", //tapes
+		"computronics:tape13",
+		"computronics:tape14",
+		"computronics:tape15",
+		"computronics:tape16",
+		"computronics:tape17",
+		"computronics:tape18",
+		"computronics:tape19",
+		"computronics:tape20",
+		"computronics:portable_tape_drive11",
+		"computronics:oc_parts22",
+		"computronics:oc_parts23",
+		"computronics:oc_parts24",
+		"computronics:oc_parts25",
+		"computronics:oc_parts26",
+		"computronics:oc_parts27",
+		"computronics:oc_parts28",
+		"computronics:oc_parts29",
+		"computronics:oc_parts30",
+		"computronics:oc_parts31",
+		"computronics:oc_parts32",
+		"computronics:oc_parts33",
+		"computronics:oc_parts34",
+		"computronics:oc_parts35",
+		"computronics:speech_box6"
+]
+
+for (item in name_removals) {
+	crafting.remove(item);
+}
+
 def soldering_alloys = [
         liquid('tin') * 144,
         liquid('soldering_alloy') * 72
 ]
-
-def name_removals = [
-"computronics:iron_note_block0",
-"computronics:audio_cable1",
-"computronics:speaker5",
-"computronics:tape_reader7",
-"computronics:camera3",
-"computronics:chat_box4",
-"computronics:cipher8",
-"computronics:cipher_advanced10",
-"computronics:colorful_lamp2",
-"computronics:parts21", //tape track
-"computronics:tape12", //tapes
-"computronics:tape13",
-"computronics:tape14",
-"computronics:tape15",
-"computronics:tape16",
-"computronics:tape17",
-"computronics:tape18",
-"computronics:tape19",
-"computronics:tape20",
-"computronics:portable_tape_drive11",
-"computronics:oc_parts22",
-"computronics:oc_parts23",
-"computronics:oc_parts24",
-"computronics:oc_parts25",
-"computronics:oc_parts26",
-"computronics:oc_parts27",
-"computronics:oc_parts28",
-"computronics:oc_parts29",
-"computronics:oc_parts30",
-"computronics:oc_parts31",
-"computronics:oc_parts32",
-"computronics:oc_parts33",
-"computronics:oc_parts34",
-"computronics:oc_parts35",
-"computronics:speech_box6"
-]
-
-for (item in name_removals) {
-    crafting.remove(item);
-}
-
-
 
 for (solder in soldering_alloys) {
 
@@ -62,7 +60,7 @@ for (solder in soldering_alloys) {
 			.inputs(ore('circuitMv'))
 			.inputs(metaitem('hull.mv'))
 			.inputs(item('minecraft:noteblock'))
-            .outputs(item('computronics:audio_cable'))
+            .outputs(item('computronics:speaker'))
             .duration(400)
             .EUt(120)
             .buildAndRegister();
@@ -399,19 +397,28 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.circuit_assembler.recipeBuilder()
-			.inputs(ore('batteryMv'))
-			.inputs(item('opencomputers:material', 14))
-			.inputs(metaitem('circuit_board.plastic'))
+			.inputs(item('computronics:speaker'))
+			.inputs(metaitem('plateSteel') * 4)
+			.inputs(item('opencomputers:component', 1))
+			.inputs(item('opencomputers:component', 4))
             .fluidInputs(solder)
 			.circuitMeta([1])
-            .outputs(item('computronics:oc_parts', 13))
+            .outputs(item('computronics:speech_box'))
             .duration(400)
             .EUt(30)
             .buildAndRegister();
 
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(item('computronics:speech_box'))
+			.inputs(metaitem('plateSteel') * 4)
+			.inputs(item('opencomputers:component', 4))
+			.fluidInputs(solder)
+			.circuitMeta([1])
+			.outputs(item('computronics:oc_parts', 14))
+			.duration(400)
+			.EUt(30)
+			.buildAndRegister();
 }
-
-
 
 
 crafting.addShaped('computronics:iron_note_block0', item('computronics:iron_note_block'), [

@@ -111,9 +111,11 @@ eventManager.listen {
         customMetaItems.addItem(195, "chip.n_doped_silicon");
         customMetaItems.addItem(196, "chip.silicon_dioxide");
 
-        customMetaItems.addItem(197, "amberlyst_ch_beads");
+        customMetaItems.addItem(197, "fused_quartz");
 
-        customMetaItems.addItem(198, "ag_fifty_w_x_eight_beads");
+        customMetaItems.addItem(198, "amberlyst_ch_beads");
+
+        customMetaItems.addItem(199, "ag_fifty_w_x_eight_beads");
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
@@ -202,12 +204,20 @@ eventManager.listen {
         customMetaItems.addItem(5003, "mask.pcb");
         customMetaItems.addItem(5004, "mask.ulpic");
         customMetaItems.addItem(5005, "mask.lpic");
+        customMetaItems.addItem(5006, "mask.nand");
+        customMetaItems.addItem(5007, "mask.nor");
+        customMetaItems.addItem(5008, "mask.advanced");
 
         customMetaItems.addItem(5100, "patterned.ic");
         customMetaItems.addItem(5101, "patterned.cpu");
         customMetaItems.addItem(5102, "patterned.ram");
         customMetaItems.addItem(5103, "patterned.ulpic");
         customMetaItems.addItem(5104, "patterned.lpic");
+        customMetaItems.addItem(5105, "patterned.silicon_dioxide");
+        customMetaItems.addItem(5106, "patterned.polysilicon");
+        customMetaItems.addItem(5107, "patterned.silicon_nitride");
+        customMetaItems.addItem(5108, "patterned.nand");
+        customMetaItems.addItem(5109, "patterned.nor");
         customMetaItems.addItem(5150, "patterned.board.phenolic");
         customMetaItems.addItem(5151, "patterned.board.plastic");
 
@@ -218,6 +228,9 @@ eventManager.listen {
         customMetaItems.addItem(5302, "etched.ram");
         customMetaItems.addItem(5303, "etched.ulpic");
         customMetaItems.addItem(5304, "etched.lpic");
+        customMetaItems.addItem(5305, "etched.silicon_dioxide");
+        customMetaItems.addItem(5306, "etched.polysilicon");
+        customMetaItems.addItem(5307, "etched.silicon_nitride");
 
         //Light Sources 6000-6100
         customMetaItems.addItem(6000, "carbon_arc_lamp");
@@ -279,6 +292,11 @@ eventManager.listen {
         customMetaItems.addItem(8005, "wafer.silicon_germanium");
         customMetaItems.addItem(8006, "wafer.insulated_silicon");
         customMetaItems.addItem(8007, "wafer.insulated_silicon_germanium");
+        customMetaItems.addItem(8008, "wafer.doped.silicon_dioxide");
+        customMetaItems.addItem(8009, "wafer.polysilicon");
+        customMetaItems.addItem(8010, "wafer.doped.polysilicon");
+        customMetaItems.addItem(8011, "wafer.silicon_nitride");
+        customMetaItems.addItem(8012, "wafer.nickel");
 
         log.infoMC("Finished adding metaitems")
 }

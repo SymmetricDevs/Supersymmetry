@@ -526,79 +526,94 @@ public class UnknownCompositionMaterials {
                 .color(0xede772)
                 .build();
 
-        MetalNitrateSolution = new Material.Builder(4101, "metal_nitrate_solution")
+        DisproportionatedTrichlorosilane = new Material.Builder(4101, 'disproportionated_trichlorosilane')
+                .fluid()
+                .color(0x849169)
+                .build()
+
+        DisproportionatedDichlorosilane = new Material.Builder(4102, 'disproportionated_dichlorosilane')
+                .fluid()
+                .color(0xa1ad86)
+                .build()
+
+        DisproportionatedChlorosilane = new Material.Builder(4103, 'disproportionated_chlorosilane')
+                .fluid()
+                .color(0xb5bf9b)
+                .build()
+      
+        MetalNitrateSolution = new Material.Builder(4104, "metal_nitrate_solution")
                 .fluid()
                 .color(0x663422)
                 .build();
 
-        NeutralizedMetalNitrateSolution = new Material.Builder(4102, "neutralized_metal_nitrate_solution")
+        NeutralizedMetalNitrateSolution = new Material.Builder(4105, "neutralized_metal_nitrate_solution")
                 .fluid()
                 .color(0x734d3f)
                 .build();
 
-        MetalNitrateCatalyst = new Material.Builder(4103, "metal_nitrate_catalyst")
+        MetalNitrateCatalyst = new Material.Builder(4106, "metal_nitrate_catalyst")
                 .dust()
                 .iconSet(SHINY)
                 .color(0xb58877)
                 .build();
 
-        TwoEthylhexylPhosphoricAcidMix = new Material.Builder(4104, "two_ethylhexyl_phosphoric_acid_mix")
+        TwoEthylhexylPhosphoricAcidMix = new Material.Builder(4107, "two_ethylhexyl_phosphoric_acid_mix")
                 .fluid()
                 .color(0xd1bb75)
                 .build();
 
-        RareEarthCatalystYNd = new Material.Builder(4105, "rare_earth_catalyst_y_nd")
+        RareEarthCatalystYNd = new Material.Builder(4108, "rare_earth_catalyst_y_nd")
                 .dust()
                 .color(0x2e2a2a)
                 .build();
 
-        DilutedPrimaryAmineN = new Material.Builder(4106, "diluted_primary_amine_n")
+        DilutedPrimaryAmineN = new Material.Builder(4109, "diluted_primary_amine_n")
                 .fluid()
                 .color(0x704a9e)
                 .build();
 
-        CrosslinkedPolystyrene = new Material.Builder(4107, "crosslinked_polystyrene")
+        CrosslinkedPolystyrene = new Material.Builder(4110, "crosslinked_polystyrene")
                 .ingot().fluid()
                 .flags(GENERATE_ROUND)
                 .color(0xa7a9d6)
                 .build();
 
-        EthyleneGlycolMix = new Material.Builder(4108, "ethylene_glycol_mix")
+        EthyleneGlycolMix = new Material.Builder(4111, "ethylene_glycol_mix")
                 .fluid()
                 .color(0x2eafc9)
                 .build();
 
-        PalladiumDopedCrosslinkedPolystyrene = new Material.Builder(4109, "palladium_doped_crosslinked_polystyrene")
+        PalladiumDopedCrosslinkedPolystyrene = new Material.Builder(4112, "palladium_doped_crosslinked_polystyrene")
                 .ingot().fluid()
                 .flags(GENERATE_ROUND)
                 .color(0xe0e6bc)
                 .build();
 
-        TrialkylaluminiumMixture = new Material.Builder(4110, 'trialkylaluminium_mixture')
+        TrialkylaluminiumMixture = new Material.Builder(4113, 'trialkylaluminium_mixture')
                 .fluid()
                 .color(0x6b777d)
                 .build()
 
         TrialkylaluminiumMixture.setFormula("AlR3", true)
 
-        AluminiumAlkoxideMixture = new Material.Builder(4111, 'aluminium_alkoxide_mixture')
+        AluminiumAlkoxideMixture = new Material.Builder(4114, 'aluminium_alkoxide_mixture')
                 .dust()
                 .color(0x657780)
                 .build()
 
         AluminiumAlkoxideMixture.setFormula("Al(OR)3", true)
 
-        ZieglerAlcoholMixture = new Material.Builder(4112, 'ziegler_alcohol_mixture')
+        ZieglerAlcoholMixture = new Material.Builder(4115, 'ziegler_alcohol_mixture')
                 .fluid()
                 .color(0xc47631)
                 .build()
 
-        ImpureDiethylEther = new Material.Builder(4113, "impure_diethyl_ether")
+        ImpureDiethylEther = new Material.Builder(4116, "impure_diethyl_ether")
                 .fluid()
                 .color(0x5e9cff)
                 .build()
 
-        AluminiumAlkoxideSolution = new Material.Builder(4114, 'aluminium_alkoxide_solution')
+        AluminiumAlkoxideSolution = new Material.Builder(4117, 'aluminium_alkoxide_solution')
                 .fluid()
                 .color(0x657780)
                 .build()

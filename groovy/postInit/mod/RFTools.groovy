@@ -1,4 +1,3 @@
-/*
 def name_removals = [
         "rftools:machine_frame",
         "rftools:machine_base",
@@ -12,6 +11,7 @@ def name_removals = [
         "rftools:dialing_device",
         "rftools:destination_analyzer",
         "rftools:screen",
+        "rftools:builder",
         "rftools:screen_controller"
 ]
 
@@ -42,5 +42,3 @@ crafting.addShaped("rftools_modular_storage", item('rftools:modular_storage'), [
         [metaitem('crate.steel'), metaitem('hull.lv'), metaitem('crate.steel')],
         [metaitem('robot.arm.lv'), ore('circuitLv'), metaitem('robot.arm.lv')]
 ])
-
-*/
