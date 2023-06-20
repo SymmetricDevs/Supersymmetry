@@ -196,5 +196,11 @@ public class ThirdDegreeMaterials {
                 .components(MagnesiumChloride, 1, EthyleneGlycol, 3)
                 .colorAverage()
                 .build();
+
+        DilutedDiisopropylamine = new Material.Builder(24030, 'diluted_diisopropylamine')
+                .fluid()
+                .components(Diisopropylamine, 1, Water, 2)
+                .colorAverage()
+                .build()
     }
 }

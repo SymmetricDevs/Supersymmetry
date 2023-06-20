@@ -5,10 +5,10 @@
   "agents": [
 	{
       "agent": "gaspunk:nerve",
-      "potency": 1
+      "potency": 2
     }
   ],
   "tooltipLines": [
-    "VX Nerve Agent"
+    "Novichok A-230 Nerve Agent"
   ]
 }

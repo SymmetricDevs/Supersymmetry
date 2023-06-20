@@ -41,9 +41,18 @@ def COAL_SOURCES = [
     "gemCharcoal",
     "dustCoke",
     "gemCoke",
-    "dustCharcoal"
+    "dustCharcoal",
+    "gemAnthracite",
+    "dustAnthracite"
 ]
 
+def CARBON_DUSTS = [
+        "dustCarbon",
+        "dustCoal",
+        "dustCoke",
+        "dustCharcoal",
+        "dustAnthracite"
+]
 
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('stickIron') * 4)
@@ -2484,43 +2493,63 @@ DISTILLERY.recipeBuilder()
 .duration(100)
 .buildAndRegister()
 
-//Silicon
+//Silicon & Graphite
+
+for (carbon in CARBON_DUSTS) {
+    ARC_FURNACE.recipeBuilder()
+            .inputs(ore('dustSiliconDioxide') * 3)
+            .inputs(metaitem(carbon) * 1)
+            .outputs(ore('dustSilicon').first() * 1)
+            .circuitMeta(1)
+            .fluidOutputs(fluid('carbon_monoxide') * 2000)
+            .EUt(30)
+            .duration(300)
+            .buildAndRegister()
+
+    ARC_FURNACE.recipeBuilder()
+            .inputs(ore('dustQuartzite') * 3)
+            .inputs(metaitem(carbon) * 1)
+            .outputs(ore('dustSilicon').first() * 1)
+            .fluidOutputs(fluid('carbon_monoxide') * 2000)
+            .EUt(30)
+            .duration(300)
+            .buildAndRegister()
+
+    ARC_FURNACE.recipeBuilder()
+            .inputs(ore('dustCertusQuartz') * 3)
+            .inputs(metaitem(carbon) * 1)
+            .outputs(ore('dustSilicon').first() * 1)
+            .fluidOutputs(fluid('carbon_monoxide') * 2000)
+            .EUt(30)
+            .duration(300)
+            .buildAndRegister()
+
+    ARC_FURNACE.recipeBuilder()
+            .inputs(ore('dustNetherQuartz') * 3)
+            .inputs(metaitem(carbon) * 1)
+            .outputs(ore('dustSilicon').first() * 1)
+            .fluidOutputs(fluid('carbon_monoxide') * 2000)
+            .EUt(30)
+            .duration(300)
+            .buildAndRegister()
+
+    ARC_FURNACE.recipeBuilder()
+            .inputs(ore('dustSiliconDioxide') * 3)
+            .inputs(metaitem(carbon) * 3)
+            .circuitMeta(2)
+            .outputs(ore('dustSiliconCarbide').first() * 2)
+            .fluidOutputs(fluid('carbon_monoxide') * 2000)
+            .EUt(60)
+            .duration(300)
+            .buildAndRegister()
+}
 
 ARC_FURNACE.recipeBuilder()
-        .inputs(ore('dustSiliconDioxide') * 3)
-        .inputs(ore('dustCoke') * 1)
-        .outputs(ore('dustSilicon').first() * 1)
-        .circuitMeta(1)
-        .fluidOutputs(fluid('carbon_monoxide') * 2000)
-        .EUt(30)
-        .duration(300)
-        .buildAndRegister()
-
-ARC_FURNACE.recipeBuilder()
-        .inputs(ore('dustQuartzite') * 3)
-        .inputs(ore('dustCoke') * 1)
-        .outputs(ore('dustSilicon').first() * 1)
-        .fluidOutputs(fluid('carbon_monoxide') * 2000)
-        .EUt(30)
-        .duration(300)
-        .buildAndRegister()
-
-ARC_FURNACE.recipeBuilder()
-        .inputs(ore('dustCertusQuartz') * 3)
-        .inputs(ore('dustCoke') * 1)
-        .outputs(ore('dustSilicon').first() * 1)
-        .fluidOutputs(fluid('carbon_monoxide') * 2000)
-        .EUt(30)
-        .duration(300)
-        .buildAndRegister()
-
-ARC_FURNACE.recipeBuilder()
-        .inputs(ore('dustNetherQuartz') * 3)
-        .inputs(ore('dustCoke') * 1)
-        .outputs(ore('dustSilicon').first() * 1)
-        .fluidOutputs(fluid('carbon_monoxide') * 2000)
-        .EUt(30)
-        .duration(300)
+        .inputs(ore('dustSiliconCarbide') * 2)
+        .outputs(ore('dustSilicon').first())
+        .outputs(ore('dustGraphite').first())
+        .EUt(60)
+        .duration(270)
         .buildAndRegister()
 
 //CELLULOSE ACETATE
@@ -2565,26 +2594,6 @@ ASSEMBLER.recipeBuilder()
         .EUt(120)
         .duration(160)
         .buildAndRegister()
-
-//Graphite
-
-ARC_FURNACE.recipeBuilder()
-.inputs(ore('dustSiliconDioxide') * 3)
-.inputs(ore('dustCoke') * 3)
-.circuitMeta(2)
-.outputs(ore('dustSiliconCarbide').first() * 2)
-.fluidOutputs(fluid('carbon_monoxide') * 2000)
-.EUt(60)
-.duration(300)
-.buildAndRegister()
-
-ARC_FURNACE.recipeBuilder()
-.inputs(ore('dustSiliconCarbide') * 2)
-.outputs(ore('dustSilicon').first())
-.outputs(ore('dustGraphite').first())
-.EUt(60)
-.duration(270)
-.buildAndRegister()
 
 // Distilled Water
 
@@ -3854,6 +3863,23 @@ DISTILLATION_TOWER.recipeBuilder()
         .buildAndRegister()
 
 // Kevlar
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('acetylene') * 50)
+        .fluidInputs(fluid('formaldehyde') * 100)
+        .fluidOutputs(fluid('butanediol') * 50)
+        .EUt(120)
+        .duration(4)
+        .buildAndRegister()
+
+FBR.recipeBuilder()
+        .fluidInputs(fluid('butanediol') * 50)
+        .notConsumable(metaitem('catalystBedCopper'))
+        .fluidOutputs(fluid('gamma_butyrolactone') * 50)
+        .fluidOutputs(fluid('hydrogen') * 200)
+        .EUt(120)
+        .duration(4)
+        .buildAndRegister()
+
 LCR.recipeBuilder()
         .inputs(metaitem('dustCalciumChloride') * 1)
         .inputs(metaitem('dustParaPhenylenediamine') * 8)
@@ -3862,7 +3888,7 @@ LCR.recipeBuilder()
         .fluidInputs(fluid('sulfuric_acid') * 500)
         .outputs(metaitem('dustKevlar') * 4)
         .fluidOutputs(fluid('hydrogen_chloride') * 1000)
-        .EUt(30)
+        .EUt(480)
         .duration(300)
         .buildAndRegister()
 

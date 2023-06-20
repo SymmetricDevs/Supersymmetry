@@ -930,8 +930,9 @@ public class OrganicChemistryMaterials {
                 .build()
 
         Kevlar = new Material.Builder(15154, 'kevlar')
-                .polymer(1)
+                .polymer(3)
                 .color(0x4d443e)
+                .flags(GENERATE_PLATE)
                 .build()
 
         Kevlar.setFormula("COC6H4CONHC6H4NH", true)
@@ -1164,5 +1165,67 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 16, Hydrogen, 32, Oxygen, 2)
                 .color(0xd4d392)
                 .build()
+
+        Capsaicin = new Material.Builder(15190, "capsaicin")
+                .dust()
+                .components(Carbon, 18, Hydrogen, 27, Nitrogen, 1, Oxygen, 3)
+                .color(0xff1900)
+                .build();
+
+        Diisopropylamine = new Material.Builder(15191, "diisopropylamine")
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 15, Nitrogen, 1)
+                .colorAverage()
+                .build();
+
+        Diisopropylaminoethanol = new Material.Builder(15192, "diisopropylaminoethanol")
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 19, Nitrogen, 1, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        IsopropylAlcohol = new Material.Builder(15193, "isopropyl_alcohol")
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 8, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        IsopropylAlcohol.setFormula("(CH3)2CHOH", true)
+
+        Triethylamine = new Material.Builder(15194, "triethylamine")
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 15, Nitrogen, 1)
+                .color(0xe07d26)
+                .build();
+
+        Diethylamine = new Material.Builder(15195, "diethylamine")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 11, Nitrogen, 1)
+                .color(0xf59542)
+                .build();
+
+        Ethylamine = new Material.Builder(15196, "ethylamine")
+                .fluid()
+                .components(Carbon, 2, Hydrogen, 7, Nitrogen, 1)
+                .color(0xf5a55f)
+                .build();
+
+        Diethylacetamide = new Material.Builder(15197, "diethylacetamide")
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 13, Oxygen, 1, Nitrogen, 1)
+                .colorAverage()
+                .build();
+
+        Diethylacetimidamine = new Material.Builder(15198, "diethylacetimidamine")
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 14, Nitrogen, 2)
+                .colorAverage()
+                .build();
+
+        Novichok = new Material.Builder(15199, "novichok")
+                .fluid()
+                .components(Carbon, 7, Hydrogen, 16, Fluorine, 1, Nitrogen, 2, Oxygen, 1, Phosphorus, 1)
+                .colorAverage()
+                .build();
     }
 }

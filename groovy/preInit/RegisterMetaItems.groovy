@@ -244,27 +244,27 @@ eventManager.listen {
         customMetaItems.addItem(6004, "led_light");
 
         //Superconductors 6100-6200
-        customMetaItems.addItem(6100, "assemblyManganesePhosphide");
-        customMetaItems.addItem(6101, "baseManganesePhosphide");
-        customMetaItems.addItem(6102, "cannedMagnesiumDiboride");
-        customMetaItems.addItem(6103, "tubeMagnesiumDiboride");
-        customMetaItems.addItem(6104, "baseMagnesiumDiboride");
-        customMetaItems.addItem(6105, "cannedMercuryBariumCalciumCuprate");
-        customMetaItems.addItem(6106, "tubeMercuryBariumCalciumCuprate");
-        customMetaItems.addItem(6107, "baseMercuryBariumCalciumCuprate");
-        customMetaItems.addItem(6108, "assemblyUraniumTriplatinum");
-        customMetaItems.addItem(6109, "baseUraniumTriplatinum");
-        customMetaItems.addItem(6110, "cannedSamariumIronArsenicOxide");
-        customMetaItems.addItem(6111, "tubeSamariumIronArsenicOxide");
-        customMetaItems.addItem(6112, "baseSamariumIronArsenicOxide");
-        customMetaItems.addItem(6113, "assemblyIndiumTinBariumTitaniumCuprate");
-        customMetaItems.addItem(6114, "baseIndiumTinBariumTitaniumCuprate");
-        customMetaItems.addItem(6115, "assemblyUraniumRhodiumDinaquadide");
-        customMetaItems.addItem(6116, "baseUraniumRhodiumDinaquadide");
-        customMetaItems.addItem(6117, "assemblyEnrichedNaquadahTriniumEuropiumDuranide");
-        customMetaItems.addItem(6118, "baseEnrichedNaquadahTriniumEuropiumDuranide");
-        customMetaItems.addItem(6119, "assemblyRutheniumTriniumAmericiumNeutronate");
-        customMetaItems.addItem(6120, "baseRutheniumTriniumAmericiumNeutronate");
+        customMetaItems.addItem(6100, "assemblymanganesephosphide");
+        customMetaItems.addItem(6101, "basemanganesephosphide");
+        customMetaItems.addItem(6102, "cannedmagnesiumdiboride");
+        customMetaItems.addItem(6103, "tubemagnesiumdiboride");
+        customMetaItems.addItem(6104, "basemagnesiumdiboride");
+        customMetaItems.addItem(6105, "cannedmercurybariumcalciumcuprate");
+        customMetaItems.addItem(6106, "tubemercurybariumcalciumcuprate");
+        customMetaItems.addItem(6107, "basemercurybariumcalciumcuprate");
+        customMetaItems.addItem(6108, "assemblyuraniumtriplatinum");
+        customMetaItems.addItem(6109, "baseuraniumtriplatinum");
+        customMetaItems.addItem(6110, "cannedsamariumironarsenicoxide");
+        customMetaItems.addItem(6111, "tubesamariumironarsenicoxide");
+        customMetaItems.addItem(6112, "basesamariumironarsenicoxide");
+        customMetaItems.addItem(6113, "assemblyindiumtinbariumtitaniumcuprate");
+        customMetaItems.addItem(6114, "baseindiumtinbariumtitaniumcuprate");
+        customMetaItems.addItem(6115, "assemblyuraniumrhodiumdinaquadide");
+        customMetaItems.addItem(6116, "baseuraniumrhodiumdinaquadide");
+        customMetaItems.addItem(6117, "assemblyenrichednaquadahtriniumeuropiumduranide");
+        customMetaItems.addItem(6118, "baseenrichednaquadahtriniumeuropiumduranide");
+        customMetaItems.addItem(6119, "assemblyrutheniumtriniumamericiumneutronate");
+        customMetaItems.addItem(6120, "baserutheniumtriniumamericiumneutronate");
 
         //Seed crystals 7000-7500
 

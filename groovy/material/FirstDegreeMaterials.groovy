@@ -392,6 +392,7 @@ public class FirstDegreeMaterials{
         CuprousOxide = new Material.Builder(8141, 'cuprous_oxide')
                 .dust()
                 .components(Copper, 2, Oxygen, 1)
+                .flags(GENERATE_CATALYST_BED)
                 .color(0x822635)
                 .build()
 
@@ -2239,6 +2240,66 @@ public class FirstDegreeMaterials{
                 .fluid()
                 .components(Chrome, 4, Water, 24, Sulfur, 6, Oxygen, 24, Acetone, 1)
                 .color(0x2c733a)
+                .build();
+
+        MustardGas = new Material.Builder(8365, "mustard_gas")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 8, Chlorine, 2, Sulfur, 1)
+                .color(0xcf7f3e)
+                .build();
+
+        Methyldichlorophosphine = new Material.Builder(8366, "methyldichlorophosphine")
+                .fluid()
+                .components(Carbon, 1, Hydrogen, 3, Chlorine, 2, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        SulfurylChloride = new Material.Builder(8367, "sulfuryl_chloride")
+                .fluid()
+                .components(Sulfur, 1, Oxygen, 2, Chlorine, 2)
+                .colorAverage()
+                .build();
+
+        MethylphosphonylDichloride = new Material.Builder(8368, "methylphosphonyl_dichloride")
+                .fluid()
+                .components(Carbon, 1, Hydrogen, 3, Chlorine, 2, Oxygen, 1, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        MethylphosphonylDifluoride = new Material.Builder(8369, "methylphosphonyl_difluoride")
+                .fluid()
+                .components(Carbon, 1, Hydrogen, 3, Phosphorus, 1, Oxygen, 1, Fluorine, 2)
+                .colorAverage()
+                .build();
+
+        Sarin = new Material.Builder(8370, "sarin")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 10, Fluorine, 1, Oxygen, 2, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        MethylDiethylphosphinate = new Material.Builder(8371, "methyl_diethylphosphinate")
+                .fluid()
+                .components(Carbon, 5, Hydrogen, 13, Oxygen, 2, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        DiisopropylaminoEthylEthylMethylphosphonite = new Material.Builder(8372, "diisopropylamino_ethyl_ethyl_methylphosphonite")
+                .fluid()
+                .components(Carbon, 11, Hydrogen, 26, Nitrogen, 1, Oxygen, 2, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        VX = new Material.Builder(8373, "vx")
+                .fluid()
+                .components(Carbon, 11, Hydrogen, 26, Nitrogen, 1, Oxygen, 2, Phosphorus, 1, Sulfur, 1)
+                .colorAverage()
+                .build();
+
+        TitaniumEthoxide = new Material.Builder(8374, "titanium_ethoxide")
+                .fluid()
+                .components(Titanium, 4, Carbon, 32, Hydrogen, 80, Oxygen, 16)
+                .colorAverage()
                 .build();
     }
 }

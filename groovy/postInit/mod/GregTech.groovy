@@ -31,7 +31,15 @@ def name_removals = [
         'gregtech:fluid_filter_lapis',
         'gregtech:fluid_filter_sodalite',
         'gregtech:fluid_filter_lazurite',
-        'gregtech:comparator_certus'
+        'gregtech:comparator_certus',
+        'gregtech:gregtech.machine.world_accelerator.lv',
+        'gregtech:gregtech.machine.world_accelerator.mv',
+        'gregtech:gregtech.machine.world_accelerator.hv',
+        'gregtech:gregtech.machine.world_accelerator.ev',
+        'gregtech:gregtech.machine.world_accelerator.iv',
+        'gregtech:gregtech.machine.world_accelerator.luv',
+        'gregtech:gregtech.machine.world_accelerator.zpm',
+        'gregtech:gregtech.machine.world_accelerator.uv'
 ]
 
 for (name in name_removals) {
@@ -572,6 +580,12 @@ crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [
         [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')]
 ])
 
+crafting.addShaped('gregtech:brass_drum', metaitem('drum.brass'), [
+        [null, ore('craftingToolHardHammer'), null],
+        [metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')],
+        [metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')]
+])
+
 // Electrolytic Cell
 crafting.addShaped('gregtech:electrolytic_cell', metaitem('electrolytic_cell'), [
         [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')],
@@ -622,4 +636,46 @@ MIXER.recipeBuilder()
         .fluidOutputs(fluid('construction_foam') * 8000)
         .duration(20)
         .EUt(16)
+        .buildAndRegister();
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(metaitem('dustAnthracite'))
+        .chancedOutput(metaitem('dustCarbon'), 9000, 0)
+        .duration(80)
+        .EUt(30)
+        .buildAndRegister();
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(metaitem('dustCoal'))
+        .chancedOutput(metaitem('dustCarbon'), 7500, 0)
+        .duration(80)
+        .EUt(30)
+        .buildAndRegister();
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(metaitem('dustCharcoal'))
+        .chancedOutput(metaitem('dustCarbon'), 6000, 0)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(metaitem('dustCoke'))
+        .outputs(metaitem('dustCarbon'))
+        .duration(60)
+        .EUt(30)
+        .buildAndRegister();
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(metaitem('dustDiamond'))
+        .outputs(metaitem('dustCarbon'))
+        .duration(40)
+        .EUt(30)
+        .buildAndRegister();
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(metaitem('dustGraphite'))
+        .outputs(metaitem('dustCarbon'))
+        .duration(40)
+        .EUt(30)
         .buildAndRegister();
