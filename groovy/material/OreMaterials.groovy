@@ -28,7 +28,7 @@ public class OreMaterials{
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0xf7f5d2)
-                .components(Lithium, 1, Sodium, 1, Aluminium, 1, Phosphorus, 1, Oxygen, 4, Fluorine, 1)
+                .components(Lithium, 1, Aluminium, 1, Phosphorus, 1, Oxygen, 4, Fluorine, 1)
                 .build()
 
         Amblygonite.setFormula("(Li,Na)AlPO4(F,OH)", true);

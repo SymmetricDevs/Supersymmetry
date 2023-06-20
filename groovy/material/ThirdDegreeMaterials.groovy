@@ -178,7 +178,26 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        DilutedDiisopropylamine = new Material.Builder(24027, 'diluted_diisopropylamine')
+        ChlorinatedBeryl = new Material.Builder(24027, "chlorinated_beryl")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(1100)
+                .components(BerylliumChloride, 3, AluminiumChloride, 2, SiliconTetrachloride, 6, CarbonMonoxide, 18)
+                .colorAverage()
+                .build();
+
+        HydratedMagnesiumChlorideGlycolate = new Material.Builder(24028, "hydrated_magnesium_chloride_glycolate")
+                .fluid()
+                .components(MagnesiumChloride, 1, Water, 2, EthyleneGlycol, 3)
+                .colorAverage()
+                .build();
+
+        MagnesiumChlorideGlycolate = new Material.Builder(24029, "magnesium_chloride_glycolate")
+                .fluid()
+                .components(MagnesiumChloride, 1, EthyleneGlycol, 3)
+                .colorAverage()
+                .build();
+
+        DilutedDiisopropylamine = new Material.Builder(24030, 'diluted_diisopropylamine')
                 .fluid()
                 .components(Diisopropylamine, 1, Water, 2)
                 .colorAverage()

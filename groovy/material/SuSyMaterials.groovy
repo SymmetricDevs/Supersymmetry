@@ -106,11 +106,12 @@ class SuSyMaterials {
         // Roasted Ores
 
         public static Material RoastedSperrylite;
+        public static Material RoastedLepidolite;
+        public static Material RoastedPetalite;
 
         // Ore Leach Residue
 
         public static Material EnargiteResidue;
-
 
         // Unknown Composition Materials
 
@@ -204,12 +205,41 @@ class SuSyMaterials {
         public static Material PolyhaliteLeach;
         public static Material CarnalliteLeach;
         public static Material KainiteLeach;
-        public static Material ZeoliteXSolution;
-        public static Material ZeoliteX;
+        public static Material Zeolite13XSolution;
+        public static Material Zeolite13X;
         public static Material LTSCatalyst;
         public static Material HTSCatalyst;
         public static Material SpentBismuthCatalyst;
+        public static Material AlkalineSodiumOleateSolution;
+        public static Material FattyAcidSolution;
+        public static Material OleicAcidSolution;
+        public static Material AluminiumSilicateLeach;
+        public static Material AlkaliAlumMix;
+        public static Material AmblygoniteLeach;
+        public static Material LepidoliteLeach;
+        public static Material NeutralizedLepidoliteLeach;
+        public static Material AluminiumFreeLepidoliteLeach;
+        public static Material AlkalineLepidoliteLeach;
         public static Material GoldLeachSolution;
+        public static Material ImpureAmmoniumFluoroberyllateSolution;
+        public static Material ImpureBerylliumSulfateSolution;
+        public static Material ImpureLithiumSulfateSolution;
+        public static Material GalenaByproductsSlurry;
+        public static Material SinteredLeadConcentrate;
+        public static Material CadmiumRichFlueDust;
+        public static Material BlackMetal;
+        public static Material AntimonyArsenicFlueDust;
+        public static Material BurnedBlackMetal;
+        public static Material LithargeSlag;
+        public static Material HarrisSlag;
+        public static Material SodiumArsenateStannateSolution;
+        public static Material SodiumArsenateStannateMixture;
+        public static Material TinDross;
+        public static Material DeferritizedTin;
+        public static Material DecopperizedTin;
+        public static Material ImpureEthyleneGlycol;
+        public static Material ImpureSaturatedAmmoniacalMethanol;
+        public static Material HaliteLeach;
         public static Material EthylenediaminePyrocatechol;
         public static Material CeramicThickFilmPaste;
         public static Material BoraxElectrolyte;
@@ -444,7 +474,6 @@ class SuSyMaterials {
         public static Material HydrobromicAcid;
         public static Material SodiumSulfite;
         public static Material SodiumThiosulfate;
-        public static Material SodiumCarbonate;
         public static Material HydrogenCyanide;
         public static Material SulfidicSilverCyanideSolution;
         public static Material SilverCyanideSolution;
@@ -502,15 +531,79 @@ class SuSyMaterials {
         public static Material LoadedCarbon;
         public static Material SpentActivatedCarbon;
         public static Material WashedActivatedCarbon;
-        public static Material CalciumSilicate;
+        public static Material CalciumOrthosilicate;
         public static Material MagnesiumChlorideSolution;
         public static Material MagnesiumHydroxide;
         public static Material MagnesiumSulfate;
         public static Material CeriumIVOxide;
         public static Material CeriumIIIOxide;
         public static Material IronSulfate;
+        public static Material CopperChloride;
+        public static Material RutheniumIVOxide;
+        public static Material Trichlorosilane;
+        public static Material PurifiedTrichlorosilane;
+        public static Material HexafluorosilicicAcid;
+        public static Material CrudeLead;
+        public static Material SilverFreeLead;
+        public static Material BismuthDross;
+        public static Material AntimonyDross;
+        public static Material ZincDross;
+        public static Material PurifiedTinIIOxide;
+        public static Material BetaSpodumene;
+        public static Material LithiumSulfate;
+        public static Material AluminiumPhosphate;
+        public static Material LithiumChloride;
+        public static Material AluminiumSilicate;
+        public static Material SodiumFluorosilicate;
+        public static Material BerylliumHydroxide;
+        public static Material BerylliumOxide;
+        public static Material BerylliumChloride;
         public static Material SulfuricPGMSolution;
         public static Material PGMSolution;
+        public static Material SiliconTetrafluoride;
+        public static Material SodiumFluoroberyllate;
+        public static Material AmmoniumFluoride;
+        public static Material AmmoniumBifluoride;
+        public static Material AmmoniumFluoroberyllate;
+        public static Material ChromiumIIIHydroxide;
+        public static Material DisassociatedAmmoniumFluoride;
+        public static Material BerylliumFluoride;
+        public static Material MagnesiumFluoride;
+        public static Material DissolvedMagnesiumFluoride;
+        public static Material DissolvedAlkaliBeryl;
+        public static Material BerylliumSulfateSolution;
+        public static Material AluminiumChloride;
+        public static Material PotassiumAlum;
+        public static Material SodiumEthoxideSolution;
+        public static Material SodiumEthylXanthate;
+        public static Material ImpureGalenaSlurry;
+        public static Material CopperDross;
+        public static Material DecopperedLead;
+        public static Material DezincedLead;
+        public static Material BettsCrudeLead;
+        public static Material DecopperedBettsLead;
+        public static Material SoftenedLead;
+        public static Material SodiumAntimonate;
+        public static Material SodiumArsenate;
+        public static Material SodiumStannate;
+        public static Material SaltyArsenicAcid;
+        public static Material SaltyArsenicPentoxide;
+        public static Material TinIVOxide;
+        public static Material AntimonyVOxide;
+        public static Material CassiteriteConcentrate;
+        public static Material CrudeTin;
+        public static Material LeachedCassiteriteConcentrate;
+        public static Material AmmoniumTungstateSolution;
+        public static Material CopperMonosulfide;
+        public static Material PotassiumSaltMixture;
+        public static Material PotassiumSulfide;
+        public static Material SaturatedAmmoniacalMethanol;
+        public static Material MagnesiumChlorideAmmoniate;
+        public static Material PurifiedMagnesiumChloride;
+        public static Material WashedMagnesiumChlorideAmmoniate;
+        public static Material BariumSulfide;
+        public static Material BariumChloride;
+        public static Material BariumOxide;
         public static Material CrudeIronPentacarbonyl;
         public static Material ChlorinePlasma;
         public static Material IronTwoThreeOxide;
@@ -527,7 +620,6 @@ class SuSyMaterials {
         public static Material BariumCarbonate;
         public static Material LeadOxide;
         public static Material TantalumNitride;
-        public static Material RutheniumIVOxide;
         public static Material BismuthIridate;
         public static Material IridiumTrichloride;
         public static Material SodiumBismuthate;
@@ -560,7 +652,6 @@ class SuSyMaterials {
         public static Material ZirconiumDioxide;
         public static Material Oleum;
         public static Material ChromiumSulfateSolution;
-        public static Material Trichlorosilane;
         public static Material Dichlorosilane;
         public static Material Chlorosilane;
         public static Material Silane;
@@ -612,7 +703,6 @@ class SuSyMaterials {
         public static Material SodiumCyanideSolution;
         public static Material BrominatedSulfurDioxide;
         public static Material SodiumThiosulfateSolution;
-        public static Material SodiumCarbonateSolution;
         public static Material DilutedIron3ChlorideSolution;
         public static Material SodiumPerchlorateSolution;
         public static Material SodiumChlorateSolution;
@@ -624,8 +714,22 @@ class SuSyMaterials {
         public static Material GoldOreSlurry;
         public static Material GoldEluent;
         public static Material GoldEluteSolution;
-        public static Material PotashSolution;
+        public static Material PotassiumCarbonateSolution;
         public static Material PotassiumSulfateSolution;
+        public static Material DiluteHexafluorosilicicAcid;
+        public static Material LithiumSulfateSolution;
+        public static Material DiluteSodiumSulfateSolution;
+        public static Material DiluteHydrofluoricAcid;
+        public static Material FluorideFusedBeryl;
+        public static Material SodiumFluoroberyllateSolution;
+        public static Material AmmoniumFluoroberyllateSolution;
+        public static Material AlkaliFusedBeryl;
+        public static Material BerylResidue;
+        public static Material AmmoniumFluorideSolution;
+        public static Material AluminiumSulfateSolution;
+        public static Material SodiumEthylXanthateSolution;
+        public static Material CopperSulfateSolution;
+        public static Material BariumChlorideSolution;
         public static Material DilutedBromooctane;
 
         // Organic Chemistry Materials
@@ -790,6 +894,9 @@ class SuSyMaterials {
         public static Material Pyridine;
         public static Material Quinoline;
         public static Material DimethylCarbonate;
+        public static Material OleicAcid;
+        public static Material LinoleicAcid;
+        public static Material PalmiticAcid;
         public static Material DiethyleneGlycol;
         public static Material DiglycolicAcid;
         public static Material NOctanol;
@@ -850,6 +957,9 @@ class SuSyMaterials {
         public static Material CelluloseAcetateSolution;
         public static Material TwoButanolSolution;
         public static Material FourFourOxydianilineSolution;
+        public static Material ChlorinatedBeryl;
+        public static Material HydratedMagnesiumChlorideGlycolate;
+        public static Material MagnesiumChlorideGlycolate;
         public static Material DiglycolicAcidSolution;
         public static Material DiTwoEthylhexylPhosphoricAcidSolution;
         public static Material DilutedTetraoctylDiglycolamide;

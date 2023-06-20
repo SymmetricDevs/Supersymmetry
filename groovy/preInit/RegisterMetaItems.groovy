@@ -25,9 +25,11 @@ eventManager.listen {
         customMetaItems.addItem(103, "limestone.dust")
         customMetaItems.addItem(104, "shape.mold.rod")
         customMetaItems.addItem(105, "shape.mold.crucible")
-        customMetaItems.addItem(106, "boron.nitride.crucible")
-        customMetaItems.addItem(107, "shape.mold.long_rod")
-        customMetaItems.addItem(108, "shape.mold.ring")
+        customMetaItems.addItem(106, "crucible.boron.nitride")
+        customMetaItems.addItem(107, "crucible.quartz")
+        customMetaItems.addItem(108, "crucible.graphite")
+        customMetaItems.addItem(109, "shape.mold.long_rod")
+        customMetaItems.addItem(110, "shape.mold.ring")
 
         customMetaItems.addItem(150, "mudbrick_mix")
         customMetaItems.addItem(151, "slaked_lime")
@@ -78,7 +80,7 @@ eventManager.listen {
 
         customMetaItems.addItem(178, "zeolite_membrane");
 
-        customMetaItems.addItem(179, "thick_film_substrate_wafer");
+        customMetaItems.addItem(179, "lead_anode_slime")
 
         customMetaItems.addItem(180, "patterned_thick_film_substrate_wafer");
 
@@ -116,6 +118,8 @@ eventManager.listen {
         customMetaItems.addItem(198, "amberlyst_ch_beads");
 
         customMetaItems.addItem(199, "ag_fifty_w_x_eight_beads");
+
+        customMetaItems.addItem(200, "thick_film_substrate_wafer");
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")

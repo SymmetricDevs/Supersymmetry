@@ -13,7 +13,8 @@ def ELECTROLYZER = recipemap('electrolyzer');
 def CRYSTALLIZER = recipemap('crystallizer');
 def CUTTER = recipemap('cutter');
 def AUTOCLAVE = recipemap('autoclave');
-def ZONEREFINER = recipemap('zone_refiner')
+def ZONEREFINER = recipemap('zone_refiner');
+def VACUUMCHAMBER = recipemap('vacuum_chamber')
 def FBR = recipemap('fixed_bed_reactor')
 
 ROASTER.recipeBuilder()
@@ -40,6 +41,32 @@ ROASTER.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dustSilicon'))
+        .fluidInputs(fluid('hydrogen_chloride') * 3000)
+        .fluidOutputs(fluid('trichlorosilane') * 1000)
+        .fluidOutputs(fluid('hydrogen') * 2000)
+        .duration(80)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('trichlorosilane') * 1000)
+        .fluidOutputs(fluid('purified_trichlorosilane') * 1000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .fluidInputs(fluid('purified_trichlorosilane') * 1000)
+        .inputs(metaitem('dustZinc') * 1)
+        .outputs(metaitem('dustHighPuritySilicon'))
+        .fluidOutputs(fluid('zinc_chloride') * 432)
+        .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
 ELECTROLYZER.recipeBuilder()
         .fluidInputs(fluid('zinc_chloride') * 432)
         .notConsumable(metaitem('stickIron'))
@@ -50,9 +77,18 @@ ELECTROLYZER.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+VACUUMCHAMBER.recipeBuilder()
+        .fluidInputs(fluid("silicon_dioxide") * 1008)
+        .notConsumable(metaitem('shape.mold.crucible'))
+        .outputs(metaitem('crucible.quartz'))
+        .duration(1440)
+        .EUt(30)
+        .buildAndRegister()
+
 CRYSTALLIZER.recipeBuilder()
         .fluidInputs(fluid('high_purity_silicon') * 4608)
         .inputs(metaitem('seed_crystal.silicon'))
+        .notConsumable(metaitem('crucible.quartz'))
         .outputs(metaitem('unrefined_boule.silicon'))
         .duration(9000)
         .EUt(120)

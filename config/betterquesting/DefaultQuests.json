@@ -18115,7 +18115,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Potassium (K)\n§bAtomic Number§r: 19\n§aAtomic Mass§r: 39.10 amu\n§cMelting Point§r: 336.53 K\n§5Boiling Point§r: 1032 K\n§6Properties§r: Potassium is an alkali metal highly reactive with water. It is used in fertilizers, soaps, and in the production of some medications and chemical§ls.\n\nPrimitive:§r\nElectrolyzing molten§7 Rock Salt§r under a§7 graphite electrode§r makes§9 Potassium §rand §2Chlorine§r§r.\n\n§lUniversal: §r§c§r§6Wood Ash§r can be centrifuged to make §aPotash Solution§r, which is then distilled to make Potassium Carbonate.\nPotassium Carbonate can be roasted in Hydrochloric Acid to make §7Rock Salt solution§r, which is electrolyzed to make potassium hydroxide.\n\n§lSpecialized: §r§cN/A\n§r§c\n",
+          "desc:8": "§6Element§r: Potassium (K)\n§bAtomic Number§r: 19\n§aAtomic Mass§r: 39.10 amu\n§cMelting Point§r: 336.53 K\n§5Boiling Point§r: 1032 K\n§6Properties§r: Potassium is an alkali metal highly reactive with water. It is used in fertilizers, soaps, and in the production of some medications and chemical§ls.\n\nPrimitive:§r\nElectrolyzing molten§7 Rock Salt§r under a§7 graphite electrode§r makes§9 Potassium §rand §2Chlorine§r§r.\n\n§lUniversal: §r§c§r§6Wood Ash§r can be centrifuged to make §aPotassium Carbonate Solution§r, which is then distilled to make Potassium Carbonate.\nPotassium Carbonate can be roasted in Hydrochloric Acid to make §7Rock Salt solution§r, which is electrolyzed to make potassium hydroxide.\n\n§lSpecialized: §r§cN/A\n§r§c\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
