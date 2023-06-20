@@ -1746,7 +1746,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         SodiumArsenate = new Material.Builder(8354, "sodium_arsenate")
-                .dust().fluid()
+                .ingot().fluid()
                 .components(Sodium, 3, Arsenic, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
@@ -2303,13 +2303,13 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
       
-        DilutedPhosphoricAcid = new Material.Builder(8347, 'diluted_phosphoric_acid')
+        DilutedPhosphoricAcid = new Material.Builder(8437, 'diluted_phosphoric_acid')
                 .fluid()
                 .components(PhosphoricAcid, 3, Water, 1)
                 .colorAverage()
                 .build()
 
-        MonocalciumPhosphate = new Material.Builder(8348, 'monocalcium_phosphate')
+        MonocalciumPhosphate = new Material.Builder(8438, 'monocalcium_phosphate')
                 .dust()
                 .components(Calcium, 1, Hydrogen, 4, Phosphorus, 2, Oxygen, 8)
                 .color(0xc2bc13)
@@ -2318,26 +2318,26 @@ public class FirstDegreeMaterials{
 
         MonocalciumPhosphate.setFormula("Ca(H2PO4)2", true)
 
-        CalciumPhosphite = new Material.Builder(8349, 'calcium_phosphite')
+        CalciumPhosphite = new Material.Builder(8439, 'calcium_phosphite')
                 .dust()
                 .components(Calcium, 3, Phosphorus, 2, Oxygen, 6)
                 .color(0xa2a832)
                 .iconSet(CERTUS)
                 .build()
 
-        SulfurTrioxideReactionMixture = new Material.Builder(8350, 'sulfur_trioxide_reaction_mixture')
+        SulfurTrioxideReactionMixture = new Material.Builder(8440, 'sulfur_trioxide_reaction_mixture')
                 .fluid()
                 .components(SulfurDioxide, 1, Oxygen, 1)
                 .colorAverage()
                 .build()
 
-        CalciumMetasilicate = new Material.Builder(8351, 'calcium_metasilicate')
+        CalciumMetasilicate = new Material.Builder(8441, 'calcium_metasilicate')
                 .dust()
                 .components(Calcium, 1, Silicon, 1, Oxygen, 3)
                 .colorAverage()
                 .build()
 
-        HighPurityPhosphorusVaporMixture = new Material.Builder(8352, 'high_purity_phosphorus_vapor_mixture')
+        HighPurityPhosphorusVaporMixture = new Material.Builder(8442, 'high_purity_phosphorus_vapor_mixture')
                 .fluid(FluidTypes.GAS)
                 .components(Phosphorus, 4, Water, 1)
                 .fluidTemp(554)

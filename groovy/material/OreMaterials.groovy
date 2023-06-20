@@ -400,7 +400,7 @@ public class OreMaterials{
                 .setFormula("PbCu(VO4)(OH)", true);
 
         Chlorapatite = new Material.Builder(7052, "chlorapatite")
-                .dust().gem()
+                .dust().gem().ore()
                 .iconSet(SHINY)
                 .color(0xc7af85)
                 .components(Calcium, 5, Phosphorus, 3, Oxygen, 12, Chlorine, 1)

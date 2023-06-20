@@ -310,6 +310,8 @@ public class SecondDegreeMaterials {
         PhosphoriteSlurry = new Material.Builder(13048, "phosphorite_slurry")
                 .fluid()
                 .components(Phosphorite, 2, Water, 1)
+                .colorAverage()
+                .build()
       
         DiluteHexafluorosilicicAcid = new Material.Builder(13049, "dilute_hexafluorosilicic_acid")
                 .fluid()
