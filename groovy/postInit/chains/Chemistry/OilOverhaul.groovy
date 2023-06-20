@@ -151,7 +151,7 @@ oils.each { _, oil -> {
 
         EMSEPARATOR.recipeBuilder()
         .fluidInputs(oil.getDiluted(1000))
-        .fluidOutputs(fluid('oily_brine') * 100)
+        .fluidOutputs(fluid('wastewater_sludge') * 100)
         .fluidOutputs(oil.getDesalted(1000))
         .duration(160)
         .EUt(30)
@@ -265,7 +265,7 @@ REACTION_FURNACE.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-FBR.recipeBuilder()
+REACTION_FURNACE.recipeBuilder()
 .notConsumable(metaitem('catalystBedAlumina'))
 .fluidInputs(fluid('uncatalyzed_sulfurous_gases') * 3000)
 .fluidOutputs(fluid('steam') * 2000)

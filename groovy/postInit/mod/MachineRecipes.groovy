@@ -93,7 +93,7 @@ def tieredPlates = [ore('plateWroughtIron'), ore('plateSteel'), ore('plateAlumin
 										ore('plateNaquadahAlloy'), ore('plateDarmstadtium')];
 
 def tieredSticks = [ore('stickWroughtIron'), ore('stickIron'), ore('stickSteel'), ore('stickSteel'),
-										ore('stickNeodymium'), ore('stickVanadiumGallium'), ore('stickVanadiumGallium'),
+										ore('stickNeodymiumAlloy'), ore('stickVanadiumGallium'), ore('stickVanadiumGallium'),
 										ore('stickVanadiumGallium'), ore('stickVanadiumGallium')];
 
 def tieredGlass = [ore('blockGlass'), ore('blockGlass'), ore('blockGlass'), item('gregtech:transparent_casing:0'),
@@ -133,8 +133,8 @@ def tieredPipes = [metaitem('pipeLargeFluidSteel'), metaitem('pipeLargeFluidStee
 				   metaitem('pipeLargeFluidNaquadah'), metaitem('pipeLargeFluidDuranium')]
 
 def tieredMagnets = [metaitem('stickIronMagnetic'), metaitem('stickIronMagnetic'), metaitem('stickSteelMagnetic'), metaitem('stickSteelMagnetic'),
-					 metaitem('stickNeodymiumMagnetic'), metaitem('stickNeodymiumMagnetic'), metaitem('stickSamariumMagnetic'),
-					 metaitem('stickSamariumMagnetic'), metaitem('stickSamariumMagnetic')];
+					 metaitem('stickNeodymiumAlloyMagnetic'), metaitem('stickNeodymiumAlloyMagnetic'), metaitem('stickSamariumAlloyMagnetic'),
+					 metaitem('stickSamariumAlloyMagnetic'), metaitem('stickSamariumAlloyMagnetic')];
 
 log.infoMC("Adding Vulcanizing Press Craft")
 
@@ -784,6 +784,16 @@ for (i = 1; i <= 8; i++) {
 			[tieredSprings[i], tieredPipes[i], tieredSprings[i]],
 			[tieredQuadCables[i], hulls[i], tieredQuadCables[i]],
 			[circuits[i], conveyors[i], circuits[i]]
+	])
+}
+
+// Tube Furnace
+
+for (i = 1; i <= 8; i++) {
+	crafting.addShaped("gregtech:tube_furnace." + Globals.voltageTiers[i], metaitem('tube_furnace.'  + Globals.voltageTiers[i]), [
+			[circuits[i], tieredGlass[i], tieredGlass[i]],
+			[hulls[i], tieredSprings[i], tieredPipes[i]],
+			[tieredCables[i], conveyors[i], tieredCables[i]]
 	])
 }
 

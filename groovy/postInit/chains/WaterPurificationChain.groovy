@@ -136,7 +136,7 @@ BR.recipeBuilder()
 
 BR.recipeBuilder()
         .fluidInputs(fluid('boron_free_brine') * 1000)
-        .inputs(metaitem('dustSodaAsh'))
+        .inputs(metaitem('dustSodaAsh') * 6)
         .outputs(metaitem('dustLithiumCarbonate') * 6)
         .fluidOutputs(fluid('lithium_free_brine') * 1000)
         .duration(120)

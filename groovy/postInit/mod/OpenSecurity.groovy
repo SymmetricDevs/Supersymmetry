@@ -51,17 +51,6 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(metaitem('sensor.mv'))
-			.inputs(ore('oc:cpu1'))
-			.inputs(ore('oc:ram1'))
-            .fluidInputs(solder)
-            .outputs(item('opensecurity:entity_detector'))
-            .duration(400)
-            .EUt(120)
-            .buildAndRegister();
-
-	mods.gregtech.assembler.recipeBuilder()
-			.inputs(metaitem('hull.mv'))
 			.inputs(ore('oc:cpu1'))
 			.inputs(ore('oc:ram1'))
 			.inputs(item('opensecurity:rfid_reader_card'))

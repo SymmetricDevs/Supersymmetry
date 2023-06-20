@@ -109,7 +109,7 @@ for (blastable in blastables) {
         .duration(blastable.amount_produced * blastable.duration)
         .blastFurnaceTemp(1750)
         .EUt(Globals.voltAmps[1])
-        .notConsumable(Globals.circuit(0))
+        .notConsumable(Globals.circuit(2))
         .buildAndRegister()
     }
 }
@@ -175,30 +175,49 @@ for (combustible in combustibles) {
     .buildAndRegister()
 }
 
-//MV Electric Arc Furnace Steel Recipes
-
-ARC_FURNACE.recipeBuilder()
-.inputs(metaitem('ingotWroughtIron'))
-.outputs(metaitem('ingotSteel'))
-.EUt(120)
-.duration(240)
-.buildAndRegister()
-
 //High Purity Iron Chain
 
 BR = recipemap('batch_reactor')
-BR.recipeBuilder()
-    .inputs(metaitem('dustSteel'))
+RF = recipemap('reaction_furnace')
+DISTILLERY = recipemap('distillery')
+
+RF.recipeBuilder()
+    .inputs(metaitem('dustIron'))
     .fluidInputs(fluid('carbon_monoxide') * 5000)
-    .outputs(metaitem('dustIronPentacarbonyl') * 6)
-    .chancedOutput(metaitem('dustTinyAsh'), 1800, 0)
+    .fluidOutputs(fluid('crude_iron_pentacarbonyl') * 1000)
     .duration(200)
-    .EUt(26)
+    .EUt(60)
 	.buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('crude_iron_pentacarbonyl') * 1000)
+        .fluidOutputs(fluid('iron_pentacarbonyl') * 900)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
 BR.recipeBuilder()
-    .inputs(metaitem('dustIronPentacarbonyl') * 6)
+    .fluidInputs(fluid('iron_pentacarbonyl') * 1000)
     .outputs(metaitem('dustHighPurityIron'))
     .duration(300)
     .fluidOutputs(fluid('carbon_monoxide') * 5000)
     .EUt(30)
 	.buildAndRegister()
+
+EBF_RECIPES.recipeBuilder()
+        .notConsumable(Globals.circuit(1))
+        .inputs(metaitem('dustIron'))
+        .outputs(item('minecraft:iron_ingot'))
+        .duration(60)
+        .blastFurnaceTemp(1750)
+        .EUt(60)
+        .buildAndRegister()
+
+EBF_RECIPES.recipeBuilder()
+        .notConsumable(Globals.circuit(1))
+        .inputs(metaitem('ingotPigIron'))
+        .outputs(item('minecraft:iron_ingot'))
+        .duration(80)
+        .blastFurnaceTemp(1200)
+        .EUt(30)
+        .buildAndRegister()

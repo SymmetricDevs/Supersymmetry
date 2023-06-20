@@ -23,6 +23,7 @@ def name_removals = [
 "opencomputers:motionsensor15",
 "opencomputers:powerconverter16",
 "opencomputers:powerdistributor17",
+"opencomputers:material41",
 "opencomputers:printer18",
 "opencomputers:raid19",
 "opencomputers:redstone20",
@@ -132,7 +133,42 @@ def name_removals = [
 "opencomputers:storage127", //Floppy
 "opencomputers:storage128", //HDDs
 "opencomputers:storage129",
-"opencomputers:storage130"
+"opencomputers:storage130",
+"computronics:iron_note_block0",
+"computronics:audio_cable1",
+"computronics:speaker5",
+"computronics:tape_reader7",
+"computronics:camera3",
+"computronics:chat_box4",
+"computronics:cipher8",
+"computronics:cipher_advanced10",
+"computronics:colorful_lamp2",
+"computronics:parts21", //tape track
+"computronics:tape12", //tapes
+"computronics:tape13",
+"computronics:tape14",
+"computronics:tape15",
+"computronics:tape16",
+"computronics:tape17",
+"computronics:tape18",
+"computronics:tape19",
+"computronics:tape20",
+"computronics:portable_tape_drive11",
+"computronics:oc_parts22",
+"computronics:oc_parts23",
+"computronics:oc_parts24",
+"computronics:oc_parts25",
+"computronics:oc_parts26",
+"computronics:oc_parts27",
+"computronics:oc_parts28",
+"computronics:oc_parts29",
+"computronics:oc_parts30",
+"computronics:oc_parts31",
+"computronics:oc_parts32",
+"computronics:oc_parts33",
+"computronics:oc_parts34",
+"computronics:oc_parts35",
+"computronics:speech_box6"
 
 ]
 
@@ -140,7 +176,14 @@ for (item in name_removals) {
     crafting.remove(item);
 }
 
-
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('plateRubber'))
+		.inputs(ore('wireGtSingleCopper'))
+		.circuitMeta([2])
+		.outputs(item('opencomputers:cable'))
+		.duration(100)
+		.EUt(120)
+		.buildAndRegister();
 
 for (solder in soldering_alloys) {
 
@@ -272,7 +315,7 @@ for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
 			.inputs(metaitem('plateIron'))
-			.inputs(ore('gtWireSingleCopper') * 2)
+			.inputs(ore('wireGtSingleCopper') * 2)
 			.inputs(ore('cableGtSingleCopper') * 4)
 			.inputs(ore('circuitMv'))
             .fluidInputs(solder)
@@ -1085,7 +1128,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('plateTitanium') * 4)
-			.inputs(ore('stickNeodymiumMagnetic'))
+			.inputs(metaitem('stickNeodymiumAlloyMagnetic'))
             .fluidInputs(solder)
 			.circuitMeta([1])
             .outputs(item('opencomputers:upgrade', 25))
@@ -1113,6 +1156,18 @@ for (solder in soldering_alloys) {
             .duration(400)
             .EUt(120)
             .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateSteel') * 4)
+			.inputs(metaitem('wireFineRedAlloy') * 4)
+			.inputs(metaitem('sensor.lv'))
+			.inputs(metaitem('emitter.lv'))
+			.fluidInputs(solder)
+			.circuitMeta([10])
+			.outputs(item('opencomputers:card', 6))
+			.duration(400)
+			.EUt(120)
+			.buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('plateAluminium') * 4)
@@ -1187,17 +1242,30 @@ for (solder in soldering_alloys) {
             .EUt(120)
             .buildAndRegister();
 
-
-
-//TODO: Disk Platter
+	mods.gregtech.circuit_assembler.recipeBuilder()
+			.inputs(ore('circuitHv'))
+			.inputs(ore('oc:wlanCard2'))
+			.inputs(metaitem('circuit_board.plastic'))
+            .fluidInputs(solder)
+			.circuitMeta([1])
+            .outputs(item('opencomputers:component', 19))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
 }
+
+mods.gregtech.forming_press.recipeBuilder()
+		.inputs(metaitem('foilPolycaprolactam') * 4)
+		.outputs(item('opencomputers:material', 28))
+		.duration(160)
+		.EUt(120)
+		.buildAndRegister();
 
 crafting.addShaped('opencomputers:scrench', item('opencomputers:wrench'), [
     [ore('ingotAluminium'), ore('craftingToolHardHammer'), ore('ingotAluminium')],
     [ore('ingotSteel'), ore('ingotSteel'), ore('ingotSteel')],
     [null, ore('ingotSteel'), null]
 ])
-
 
 //disk platter
 	mods.gregtech.assembler.recipeBuilder()

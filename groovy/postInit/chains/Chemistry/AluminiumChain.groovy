@@ -12,6 +12,11 @@ EMSEPARATOR = recipemap('electromagnetic_separator')
 ELECTROLYZER = recipemap('electrolyzer')
 CRYSTALLIZER = recipemap('crystallizer')
 
+// Aluminium Nugget * 3
+mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('dustRuby')], null)
+// Ruby Slurry * 3000
+mods.gregtech.mixer.removeByInput(1920, [metaitem('dustRuby') * 6], [fluid('aqua_regia') * 3000])
+
 // Bauxite -> Red Mud
 
 ROASTER.recipeBuilder()
@@ -161,6 +166,13 @@ CENTRIFUGE.recipeBuilder()
 BR.recipeBuilder()
         .fluidInputs(fluid('sulfuric_acid') * 3000)
         .inputs(metaitem('dustAluminiumHydroxide') * 14)
+        .fluidOutputs(fluid('aluminium_sulfate_solution') * 1000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('aluminium_sulfate_solution') * 1000)
         .outputs(metaitem('dustAluminiumSulfate') * 17)
         .fluidOutputs(fluid('water') * 6000)
         .duration(100)

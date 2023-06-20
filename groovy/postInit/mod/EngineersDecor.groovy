@@ -1,11 +1,22 @@
 def name_removals = [
-        "engineersdecor:small_electrical_furnace",
-		"engineersdecor:small_waste_incinerator",
-		"engineersdecor:small_solar_panel",
-		"engineersdecor:small_mineral_smelter",
-		"engineersdecor:small_fluid_funnel",
-		"engineersdecor:small_milking_machine",
-		"engineersdecor:passive_fluid_accumulator"
+		"engineersdecor:alternative/small_electrical_furnace_recipe_standalone",
+		"engineersdecor:alternative/small_lab_furnace_recipe_standalone",
+		"engineersdecor:alternative/labeled_crate_recipe_standalone",
+		"engineersdecor:alternative/factory_hopper_recipe_standalone",
+		"engineersdecor:alternative/factory_dropper_recipe_standalone",
+		"engineersdecor:alternative/factory_placer_recipe_standalone",
+		"engineersdecor:alternative/small_block_breaker_recipe_standalone",
+		"engineersdecor:alternative/small_tree_cutter_recipe_standalone",
+		"engineersdecor:alternative/small_waste_incinerator_recipe_standalone",
+		"engineersdecor:alternative/small_solar_panel_standalone",
+		"engineersdecor:alternative/small_mineral_smelter_recipe_standalone",
+		"engineersdecor:alternative/straight_pipe_valve_recipe_standalone",
+		"engineersdecor:alternative/straight_pipe_valve_redstone_recipe_standalone",
+		"engineersdecor:alternative/straight_pipe_valve_redstone_recipe_backcycle",
+		"engineersdecor:alternative/straight_pipe_valve_redstone_analog_recipe",
+		"engineersdecor:alternative/small_fluid_funnel_recipe_standalone",
+		"engineersdecor:alternative/passive_fluid_accumulator_recipe_standalone",
+		"engineersdecor:alternative/small_milking_machine_recipe_standalone"
 ];
 
 for (item in name_removals) {

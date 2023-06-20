@@ -10,6 +10,7 @@ import gregtech.api.unification.material.properties.*;
 import gregtech.api.unification.material.properties.OreProperty;
 import gregtech.api.unification.material.properties.PropertyKey;
 import static material.SuSyMaterials.*
+import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 
 //eventManager.listen(EventPriority.LOWEST) 
 class ChangeFlags {
@@ -24,12 +25,18 @@ class ChangeFlags {
         Aluminium.addFlags("generate_round");
         Nickel.addFlags("generate_rod");
         Tungsten.addFlags("generate_fine_wire");
+        Molybdenum.addFlags("generate_fine_wire");
         Tantalum.addFlags("generate_rod");
+        Tantalum.addFlags("generate_fine_wire");
+        Titanium.addFlags("generate_fine_wire");
         Tantalum.addFlags("generate_catalyst_bed");
         ChromiumTrioxide.addFlags("generate_catalyst_bed");
         Iron3Chloride.addFlags("generate_catalyst_bed");
+        Platinum.addFlags("generate_catalyst_bed");
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
+
+        DilutedHydrochloricAcid.setFormula("(H2O)2(HCl)", true);
 
         ManganesePhosphide.addFlags("generate_fine_wire");
         UraniumTriplatinum.addFlags("generate_fine_wire");
@@ -39,12 +46,438 @@ class ChangeFlags {
         Phosphorus.setMaterialRGB(0xfffed6)
         Phosphorus.addFlags("no_smelting")
       
-		Borax.setProperty(PropertyKey.ORE, new OreProperty());
+		    Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
 
+        LithiumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
+        SiliconDioxide.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());
+
+        Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
+
         OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Aluminium.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Beryllium.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Cobalt.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Copper.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Gold.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Iron.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Lead.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Lithium.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Molybdenum.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Neodymium.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Nickel.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Palladium.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Platinum.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Plutonium239.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Silver.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Sulfur.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Thorium.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Tin.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Naquadah.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+
+        oreProp = CertusQuartz.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Almandine.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Asbestos.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = BandedIron.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = BlueTopaz.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = BrownLimonite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = YellowLimonite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Calcite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Cassiterite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = CassiteriteSand.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Chalcopyrite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Chromite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Cinnabar.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Coal.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Cobaltite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Cooperite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Diamond.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Electrum.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Emerald.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Galena.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Garnierite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = GreenSapphire.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Grossular.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Ilmenite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Bauxite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Lapis.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Magnesite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Magnetite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Molybdenite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Powellite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Scheelite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Pyrite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Pyrolusite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Pyrope.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = RockSalt.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Ruby.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Salt.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Saltpeter.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Sapphire.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Sodalite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Tantalite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Spessartine.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Sphalerite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Stibnite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Tetrahedrite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Topaz.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Tungstate.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Uraninite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Wulfenite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = NetherQuartz.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Graphite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Bornite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Chalcocite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Realgar.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Bastnasite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Pentlandite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Spodumene.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Lepidolite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = GlauconiteSand.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Malachite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Alunite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Talc.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Kyanite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Pyrochlore.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Borax.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Olivine.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Opal.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Amethyst.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Apatite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = TricalciumPhosphate.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = GarnetRed.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = GarnetYellow.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = VanadiumMagnetite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Pollucite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Pitchblende.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Bentonite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(Clay, Clay, Clay, Clay);
+
+        oreProp = FullersEarth.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(Clay, Clay, Clay, Clay);
+
+        oreProp = Monazite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+
+        oreProp = Trona.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Gypsum.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Zeolite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Redstone.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Electrotine.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+
+        oreProp = Diatomite.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = GraniticMineralSand.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = GarnetSand.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = BasalticMineralSand.getProperty(PropertyKey.ORE);
+        oreProp.getOreByProducts().clear();
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
 
         oreProp = Thortveitite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
@@ -159,6 +592,14 @@ class ChangeFlags {
 
         oreProp = Magnesite.getProperty(PropertyKey.ORE);
         oreProp.setDirectSmeltResult(null);
+
+        Tantalum.setProperty(PropertyKey.BLAST, new BlastProperty(3293, GasTier.MID, 480, 240));
+        Molybdenum.setProperty(PropertyKey.BLAST, new BlastProperty(2890, GasTier.MID, 480, 240));
+        Platinum.setProperty(PropertyKey.BLAST, new BlastProperty(2045, GasTier.LOW, 480, 240));
+        Thorium.setProperty(PropertyKey.BLAST, new BlastProperty(2028, GasTier.LOW, 480, 240));
+        Cobalt.setProperty(PropertyKey.BLAST, new BlastProperty(1750, GasTier.LOW, 120, 200));
+        Beryllium.setProperty(PropertyKey.BLAST, new BlastProperty(1560, GasTier.LOW, 120, 200));
+        Nickel.setProperty(PropertyKey.BLAST, new BlastProperty(1728, GasTier.LOW, 120, 120));
 
         log.infoMC("Finished modifying flags")
     }
