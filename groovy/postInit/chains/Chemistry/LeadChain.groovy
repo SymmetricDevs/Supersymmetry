@@ -148,14 +148,6 @@ for (combustible in combustibles) {
             .buildAndRegister()
 }
 
-FLUID_SOLIDIFIER.recipeBuilder()
-        .notConsumable(metaitem('shape.mold.ingot'))
-        .fluidInputs(fluid('crude_lead') * 216)
-        .outputs(metaitem('ingotLead'))
-        .EUt(7)
-        .duration(20)
-        .buildAndRegister()
-
 //DECOPPERING
 BR.recipeBuilder()
         .inputs(metaitem('dustSulfur'))
@@ -294,6 +286,11 @@ for (coal_source in COAL_SOURCES) {
             .buildAndRegister()
 }
 
+// Lead Dust * 1
+mods.gregtech.centrifuge.removeByInput(30, null, [fluid('softened_lead') * 1000])
+// Lead Dust * 1
+mods.gregtech.centrifuge.removeByInput(30, null, [fluid('dezinced_lead') * 1000])
+
 //SILVER REMOVAL (PARKES PROCESS)
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('softened_lead') * 3600)
@@ -319,6 +316,14 @@ VACUUM_CHAMBER.recipeBuilder()
         .fluidOutputs(fluid('zinc') * 144)
         .EUt(120)
         .duration(200)
+        .buildAndRegister()
+
+FLUID_SOLIDIFIER.recipeBuilder()
+        .fluidInputs(fluid('dezinced_lead') * 100)
+        .notConsumable(metaitem('shape.mold.ingot'))
+        .outputs(metaitem('ingotLead'))
+        .EUt(7)
+        .duration(20)
         .buildAndRegister()
 
 //DEBISMUTHIZING (KROLL-BETTERTON PROCESS)
@@ -351,14 +356,6 @@ BR.recipeBuilder()
         .outputs(metaitem('dustCalciumChloride') * 3)
         .EUt(120)
         .duration(200)
-        .buildAndRegister()
-
-FLUID_SOLIDIFIER.recipeBuilder()
-        .notConsumable(metaitem('shape.mold.ingot'))
-        .fluidInputs(fluid('silver_free_lead') * 180)
-        .outputs(metaitem('ingotLead'))
-        .EUt(7)
-        .duration(20)
         .buildAndRegister()
 
 //HIGH PURITY LEAD (BETTS PROCESS)

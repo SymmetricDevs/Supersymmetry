@@ -18,7 +18,7 @@ public class FirstDegreeMaterials{
     private static void generatePurifiedElement(Material material, int id, boolean generateLiquid, boolean generateIngot) {
         var color = material.materialRGB;
 
-        if (generateLiquid) {
+        if (generateLiquid & !generateIngot) {
             new Material.Builder(id, "high_purity_" + material.toString())
                     .dust().fluid()
                     .iconSet(SHINY)
@@ -26,7 +26,7 @@ public class FirstDegreeMaterials{
                     .color(color)
                     .components(material, 1)
                     .build();
-        } else if(generateIngot) {
+        } else if(generateIngot & !generateLiquid) {
             new Material.Builder(id, "high_purity_" + material.toString())
                     .dust().ingot()
                     .iconSet(SHINY)
@@ -56,7 +56,6 @@ public class FirstDegreeMaterials{
 
         log.infoMC("Registering First Degree Materials!");
 
-
         // IDs 8000-8100: Pure Elements
 
         generatePurifiedElement(Lithium, 8000, false, false)
@@ -67,7 +66,7 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Magnesium, 8005, false, false)
         generatePurifiedElement(Aluminium, 8006, false, false)
         generatePurifiedElement(Silicon, 8007, true, false)
-        generatePurifiedElement(Phosphorus, 8008, false, false)
+        generatePurifiedElement(Phosphorus, 8008, true, true)
         generatePurifiedElement(Sulfur, 8009, false, false)
         generatePurifiedElement(Potassium, 8010, false, false)
         generatePurifiedElement(Calcium, 8011, false, false)
@@ -1230,7 +1229,7 @@ public class FirstDegreeMaterials{
                 .components(Iron, 1, Carbon, 5, Oxygen, 5)
                 .color(0x362f2b)
                 .build()
-                .setFormula('Fe(CO)5', true)
+                .setFormula('Fe(CO)5')
 
         AluminiumSulfate = new Material.Builder(8276, 'aluminium_sulfate')
                 .dust()
@@ -1747,7 +1746,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         SodiumArsenate = new Material.Builder(8354, "sodium_arsenate")
-                .dust().fluid()
+                .ingot().fluid()
                 .components(Sodium, 3, Arsenic, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
@@ -2303,5 +2302,47 @@ public class FirstDegreeMaterials{
                 .components(Titanium, 4, Carbon, 32, Hydrogen, 80, Oxygen, 16)
                 .colorAverage()
                 .build();
+      
+        DilutedPhosphoricAcid = new Material.Builder(8437, 'diluted_phosphoric_acid')
+                .fluid()
+                .components(PhosphoricAcid, 3, Water, 1)
+                .colorAverage()
+                .build()
+
+        MonocalciumPhosphate = new Material.Builder(8438, 'monocalcium_phosphate')
+                .dust()
+                .components(Calcium, 1, Hydrogen, 4, Phosphorus, 2, Oxygen, 8)
+                .color(0xc2bc13)
+                .iconSet(SAND)
+                .build()
+
+        MonocalciumPhosphate.setFormula("Ca(H2PO4)2", true)
+
+        CalciumPhosphite = new Material.Builder(8439, 'calcium_phosphite')
+                .dust()
+                .components(Calcium, 3, Phosphorus, 2, Oxygen, 6)
+                .color(0xa2a832)
+                .iconSet(CERTUS)
+                .build()
+
+        SulfurTrioxideReactionMixture = new Material.Builder(8440, 'sulfur_trioxide_reaction_mixture')
+                .fluid()
+                .components(SulfurDioxide, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        CalciumMetasilicate = new Material.Builder(8441, 'calcium_metasilicate')
+                .dust()
+                .components(Calcium, 1, Silicon, 1, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        HighPurityPhosphorusVaporMixture = new Material.Builder(8442, 'high_purity_phosphorus_vapor_mixture')
+                .fluid(FluidTypes.GAS)
+                .components(Phosphorus, 4, Water, 1)
+                .fluidTemp(554)
+                .colorAverage()
+                .build()
+                .setFormula("P4", true);
     }
 }

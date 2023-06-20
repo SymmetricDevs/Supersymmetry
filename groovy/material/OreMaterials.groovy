@@ -400,7 +400,7 @@ public class OreMaterials{
                 .setFormula("PbCu(VO4)(OH)", true);
 
         Chlorapatite = new Material.Builder(7052, "chlorapatite")
-                .dust().gem()
+                .dust().gem().ore()
                 .iconSet(SHINY)
                 .color(0xc7af85)
                 .components(Calcium, 5, Phosphorus, 3, Oxygen, 12, Chlorine, 1)
@@ -532,7 +532,15 @@ public class OreMaterials{
                 .build()
                 .setFormula("K2Mg2(SO4)3", true);
 
-        Rhodochrosite = new Material.Builder(7071, "rhodochrosite")
+        Hydroxyapatite = new Material.Builder(7071, "hydroxyapatite")
+                .dust().gem()
+                .iconSet(SHINY)
+                .color(0xc7afaa)
+                .components(Calcium, 5, Phosphorus, 3, Oxygen, 13, Hydrogen, 1)
+                .build()
+                .setFormula("Ca5(PO4)3OH", true);
+        
+        Rhodochrosite = new Material.Builder(7072, "rhodochrosite")
                 .ore()
                 .iconSet(SHINY)
                 .components(Manganese, 1, Carbon, 1, Oxygen, 3)

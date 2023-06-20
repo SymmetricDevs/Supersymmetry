@@ -35,13 +35,18 @@ class ChangeFlags {
         Platinum.addFlags("generate_catalyst_bed");
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
-      
-		Borax.setProperty(PropertyKey.ORE, new OreProperty());
+
         DilutedHydrochloricAcid.setFormula("(H2O)2(HCl)", true);
 
         ManganesePhosphide.addFlags("generate_fine_wire");
         UraniumTriplatinum.addFlags("generate_fine_wire");
         RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
+
+        Phosphorus.setFormula("P4", true)
+        Phosphorus.setMaterialRGB(0xfffed6)
+        Phosphorus.addFlags("no_smelting")
+      
+		    Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
 

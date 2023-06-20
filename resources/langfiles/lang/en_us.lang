@@ -213,7 +213,7 @@ material.high_purity_sodium=High Purity Sodium
 material.high_purity_magnesium=High Purity Magnesium
 material.high_purity_aluminium=High Purity Aluminium
 material.high_purity_silicon=High Purity Silicon
-material.high_purity_phosphorus=High Purity Phosphorus
+material.high_purity_phosphorus=High Purity White Phosphorus
 material.high_purity_sulfur=High Purity Sulfur
 material.high_purity_potassium=High Purity Potassium
 material.high_purity_calcium=High Purity Calcium
@@ -322,6 +322,12 @@ material.mercury_ii_chloride=Mercury II Chloride
 material.boron_nitride=Boron Nitride
 material.crude_gallium_arsenide=Crude Gallium Arsenide
 material.gallium_arsenide=Pure Gallium Arsenide
+
+material.monocalcium_phosphate=Monocalcium Phosphate
+material.calcium_phosphite=Calcium Phosphite
+material.phosphorus=White Phosphorus
+material.hydroxyapatite=Hydroxyapatite
+material.calcium_metasilicate=Calcium Metasilicate
 
 # Fluids
 
@@ -687,6 +693,9 @@ material.manganese_ii_sulfate_solution=Manganese II Sulfate Solution
 material.iron_iii_hydroxide=Iron III Hydroxide
 material.rhodochrosite=Rhodochrosite
 
+material.diluted_phosphoric_acid=Diluted Phosphoric Acid
+material.high_purity_phosphorus_vapor_mixture=High Purity Phosphorus Vapor Mixture
+
 material.unscrubbed_wood_gas=Unscrubbed Wood Gas
 material.light_oil=Light Oil
 material.impure_creosote=Impure Creosote
@@ -801,6 +810,11 @@ material.gold_ore_slurry=Gold Ore Slurry
 material.gold_eluent=Gold Eluent
 material.gold_elute_solution=Gold Elute Solution
 material.potassium_sulfate_solution=Potassium Sulfate Solution
+material.phosphorite_slurry=Phosphorite Slurry
+material.phosphate_pulp=Phosphate Pulp
+material.filtered_phosphate_pulp=Filtered Phosphate Pulp
+material.phosphate_concentrate=Phosphate Concentrate
+material.phosphogypsum=Phosphogypsum
 material.impure_ammonium_fluoroberyllate_solution=Impure Ammonium Fluoroberyllate Solution
 material.silicon_tetrafluoride=Silicon Tetrafluoride
 material.ammonium_fluoroberyllate_solution=Ammonium Fluoroberyllate Solution

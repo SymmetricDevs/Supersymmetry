@@ -101,6 +101,7 @@ class SuSyMaterials {
         public static Material Xenotime;
         public static Material Caliche;
         public static Material Lauterite;
+        public static Material Hydroxyapatite;
         public static Material Rhodochrosite;
 
         // Roasted Ores
@@ -221,6 +222,10 @@ class SuSyMaterials {
         public static Material AluminiumFreeLepidoliteLeach;
         public static Material AlkalineLepidoliteLeach;
         public static Material GoldLeachSolution;
+        public static Material PhosphatePulp;
+        public static Material FilteredPhosphatePulp;
+        public static Material PhosphateConcentrate;
+        public static Material Phosphogypsum;
         public static Material ImpureAmmoniumFluoroberyllateSolution;
         public static Material ImpureBerylliumSulfateSolution;
         public static Material ImpureLithiumSulfateSolution;
@@ -505,6 +510,9 @@ class SuSyMaterials {
         public static Material CrudeGalliumArsenide;
         public static Material HighPurityIron;
         public static Material IronPentacarbonyl;
+        public static Material DilutedPhosphoricAcid;
+        public static Material MonocalciumPhosphate;
+        public static Material CalciumPhosphite;
         public static Material AluminiumSulfate;
         public static Material DemineralizedWater;
         public static Material DeaeratedWater;
@@ -560,6 +568,9 @@ class SuSyMaterials {
         public static Material BerylliumChloride;
         public static Material SulfuricPGMSolution;
         public static Material PGMSolution;
+        public static Material SulfurTrioxideReactionMixture;
+        public static Material CalciumMetasilicate;
+        public static Material HighPurityPhosphorusVaporMixture;
         public static Material SiliconTetrafluoride;
         public static Material SodiumFluoroberyllate;
         public static Material AmmoniumFluoride;
@@ -716,6 +727,7 @@ class SuSyMaterials {
         public static Material GoldEluteSolution;
         public static Material PotassiumCarbonateSolution;
         public static Material PotassiumSulfateSolution;
+        public static Material PhosphoriteSlurry;
         public static Material DiluteHexafluorosilicicAcid;
         public static Material LithiumSulfateSolution;
         public static Material DiluteSodiumSulfateSolution;

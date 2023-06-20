@@ -307,43 +307,49 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        DiluteHexafluorosilicicAcid = new Material.Builder(13048, "dilute_hexafluorosilicic_acid")
+        PhosphoriteSlurry = new Material.Builder(13048, "phosphorite_slurry")
+                .fluid()
+                .components(Phosphorite, 2, Water, 1)
+                .colorAverage()
+                .build()
+      
+        DiluteHexafluorosilicicAcid = new Material.Builder(13049, "dilute_hexafluorosilicic_acid")
                 .fluid()
                 .components(Water, 8, HexafluorosilicicAcid, 1)
                 .colorAverage()
                 .build()
 
-        LithiumSulfateSolution = new Material.Builder(13049, "lithium_sulfate_solution")
+        LithiumSulfateSolution = new Material.Builder(13050, "lithium_sulfate_solution")
                 .fluid()
                 .components(Water, 1, LithiumSulfate, 1)
                 .colorAverage()
                 .build()
 
-        DiluteSodiumSulfateSolution = new Material.Builder(13050, "dilute_sodium_sulfate_solution")
+        DiluteSodiumSulfateSolution = new Material.Builder(13051, "dilute_sodium_sulfate_solution")
                 .fluid()
                 .color(0x9191b3)
                 .build()
                 .setFormula("(H2O)2(Na2SO4)", true);
 
-        DiluteHydrofluoricAcid = new Material.Builder(13051, "dilute_hydrofluoric_acid")
+        DiluteHydrofluoricAcid = new Material.Builder(13052, "dilute_hydrofluoric_acid")
                 .fluid()
                 .components(Water, 2, HydrogenFluoride, 1)
                 .colorAverage()
                 .build();
 
-        FluorideFusedBeryl = new Material.Builder(13052, "fluoride_fused_beryl")
+        FluorideFusedBeryl = new Material.Builder(13053, "fluoride_fused_beryl")
                 .dust()
                 .components(SodiumFluoroberyllate, 6, Alumina, 2, SiliconDioxide, 15)
                 .color(0x424f3e)
                 .build();
 
-        SodiumFluoroberyllateSolution = new Material.Builder(13053, "sodium_fluoroberyllate_solution")
+        SodiumFluoroberyllateSolution = new Material.Builder(13054, "sodium_fluoroberyllate_solution")
                 .fluid()
                 .components(SodiumFluoroberyllate, 1, Water, 1)
                 .colorAverage()
                 .build();
 
-        AmmoniumFluoroberyllateSolution = new Material.Builder(13054, "ammonium_fluoroberyllate_solution")
+        AmmoniumFluoroberyllateSolution = new Material.Builder(13055, "ammonium_fluoroberyllate_solution")
                 .fluid()
                 .components(AmmoniumFluoroberyllate, 1, Water, 3)
                 .colorAverage()
@@ -351,43 +357,43 @@ public class SecondDegreeMaterials {
 
         AmmoniumFluoroberyllateSolution.setFormula("(NH4)2(BeF4)(H2O)3", true)
 
-        AmmoniumFluorideSolution = new Material.Builder(13055, "ammonium_fluoride_solution")
+        AmmoniumFluorideSolution = new Material.Builder(13056, "ammonium_fluoride_solution")
                 .fluid()
                 .components(AmmoniumFluoride, 1, Water, 1)
                 .colorAverage()
                 .build();
 
-        AlkaliFusedBeryl = new Material.Builder(13056, "alkali_fused_beryl")
+        AlkaliFusedBeryl = new Material.Builder(13057, "alkali_fused_beryl")
                 .dust()
                 .components(Emerald, 1, SodaAsh, 1)
                 .colorAverage()
                 .build();
 
-        AluminiumSulfateSolution = new Material.Builder(13057, "aluminium_sulfate_solution")
+        AluminiumSulfateSolution = new Material.Builder(13058, "aluminium_sulfate_solution")
                 .fluid()
                 .components(AluminiumSulfate, 1, Water, 6)
                 .colorAverage()
                 .build();
 
-        SodiumEthylXanthateSolution = new Material.Builder(13058, "sodium_ethyl_xanthate_solution")
+        SodiumEthylXanthateSolution = new Material.Builder(13059, "sodium_ethyl_xanthate_solution")
                 .fluid()
                 .components(SodiumEthylXanthate, 1, Ethanol, 1)
                 .colorAverage()
                 .build();
 
-        CopperSulfateSolution = new Material.Builder(13059, "copper_sulfate_solution")
+        CopperSulfateSolution = new Material.Builder(13060, "copper_sulfate_solution")
                 .fluid()
                 .components(CopperSulfate, 1, Water, 1)
                 .color(0x2d3bcf)
                 .build();
 
-        BariumChlorideSolution = new Material.Builder(13060, "barium_chloride_solution")
+        BariumChlorideSolution = new Material.Builder(13061, "barium_chloride_solution")
                 .fluid()
                 .components(BariumChloride, 1, Water, 2)
                 .colorAverage()
                 .build();
 
-        DilutedBromooctane = new Material.Builder(13061, "diluted_bromooctane")
+        DilutedBromooctane = new Material.Builder(13062, "diluted_bromooctane")
                 .fluid()
                 .components(Bromooctane, 1, Water, 1)
                 .colorAverage()

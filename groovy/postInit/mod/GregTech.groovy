@@ -272,7 +272,7 @@ crafting.addShapeless('convert_old_slaked_lime', metaitem('dustCalciumHydroxide'
 
 mods.gregtech.chemical_bath.recipeBuilder()
         .inputs(metaitem('dustQuicklime'))
-        .fluidInputs(fluid('water') * 100)
+        .fluidInputs(fluid('water') * 500)
         .outputs(metaitem('dustCalciumHydroxide'))
         .duration(20)
         .EUt(30)
