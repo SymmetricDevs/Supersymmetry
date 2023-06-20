@@ -133,7 +133,42 @@ def name_removals = [
 "opencomputers:storage127", //Floppy
 "opencomputers:storage128", //HDDs
 "opencomputers:storage129",
-"opencomputers:storage130"
+"opencomputers:storage130",
+"computronics:iron_note_block0",
+"computronics:audio_cable1",
+"computronics:speaker5",
+"computronics:tape_reader7",
+"computronics:camera3",
+"computronics:chat_box4",
+"computronics:cipher8",
+"computronics:cipher_advanced10",
+"computronics:colorful_lamp2",
+"computronics:parts21", //tape track
+"computronics:tape12", //tapes
+"computronics:tape13",
+"computronics:tape14",
+"computronics:tape15",
+"computronics:tape16",
+"computronics:tape17",
+"computronics:tape18",
+"computronics:tape19",
+"computronics:tape20",
+"computronics:portable_tape_drive11",
+"computronics:oc_parts22",
+"computronics:oc_parts23",
+"computronics:oc_parts24",
+"computronics:oc_parts25",
+"computronics:oc_parts26",
+"computronics:oc_parts27",
+"computronics:oc_parts28",
+"computronics:oc_parts29",
+"computronics:oc_parts30",
+"computronics:oc_parts31",
+"computronics:oc_parts32",
+"computronics:oc_parts33",
+"computronics:oc_parts34",
+"computronics:oc_parts35",
+"computronics:speech_box6"
 
 ]
 

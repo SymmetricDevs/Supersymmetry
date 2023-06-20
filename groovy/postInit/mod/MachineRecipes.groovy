@@ -787,6 +787,16 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+// Tube Furnace
+
+for (i = 1; i <= 8; i++) {
+	crafting.addShaped("gregtech:tube_furnace." + Globals.voltageTiers[i], metaitem('tube_furnace.'  + Globals.voltageTiers[i]), [
+			[circuits[i], tieredGlass[i], tieredGlass[i]],
+			[hulls[i], tieredSprings[i], tieredPipes[i]],
+			[tieredCables[i], conveyors[i], tieredCables[i]]
+	])
+}
+
 //Multiblocked Machines
 
 /*

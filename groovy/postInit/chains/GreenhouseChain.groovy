@@ -113,7 +113,7 @@ COMPRESSOR.recipeBuilder()
 
 PYROLYSE_OVEN.recipeBuilder()
         .inputs(item('minecraft:sugar') * 24)
-        .outputs(metaitem('dustCharcoal') * 6)
+        .outputs(metaitem('dustCarbon') * 6)
         .fluidOutputs(fluid('steam') * 6000)
         .duration(320)
         .EUt(64)

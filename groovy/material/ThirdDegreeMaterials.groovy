@@ -177,5 +177,11 @@ public class ThirdDegreeMaterials {
                 .components(MethylIsobutylKetone, 1, Water, 1)
                 .colorAverage()
                 .build()
+
+        DilutedDiisopropylamine = new Material.Builder(24027, 'diluted_diisopropylamine')
+                .fluid()
+                .components(Diisopropylamine, 1, Water, 2)
+                .colorAverage()
+                .build()
     }
 }
