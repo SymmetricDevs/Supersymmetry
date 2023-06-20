@@ -62,13 +62,15 @@ def combustibles = [
         new Combustible('gemCoal', 2, 4),
         new Combustible('dustCoal', 2, 4),
         new Combustible('gemCharcoal', 2, 4),
-        new Combustible('dustCharcoal', 2, 4)
+        new Combustible('dustCharcoal', 2, 4),
+        new Combustible('dustCarbon', 1, 1)
 ]
 
 for (combustible in combustibles) {
     REACTION_FURNACE.recipeBuilder()
             .inputs(ore('dustCassiteriteConcentrate'))
             .inputs(ore(combustible.name) * (combustible.amount_required))
+            .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_tin') * 190)
             .fluidOutputs(fluid('tin_dross') * 25)
             .fluidOutputs(fluid('carbon_dioxide') * 1000)
@@ -79,6 +81,7 @@ for (combustible in combustibles) {
     REACTION_FURNACE.recipeBuilder()
             .inputs(ore('dustLeachedCassiteriteConcentrate'))
             .inputs(ore(combustible.name) * (combustible.amount_required))
+            .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_tin') * 190)
             .fluidOutputs(fluid('tin_dross') * 25)
             .fluidOutputs(fluid('carbon_dioxide') * 1000)

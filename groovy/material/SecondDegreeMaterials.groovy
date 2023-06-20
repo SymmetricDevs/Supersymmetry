@@ -380,5 +380,11 @@ public class SecondDegreeMaterials {
                 .components(CopperSulfate, 1, Water, 1)
                 .color(0x2d3bcf)
                 .build();
+
+        BariumChlorideSolution = new Material.Builder(13060, "barium_chloride_solution")
+                .fluid()
+                .components(BariumChloride, 1, Water, 2)
+                .colorAverage()
+                .build();
     }
 }

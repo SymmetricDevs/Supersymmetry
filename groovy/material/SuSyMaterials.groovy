@@ -237,6 +237,9 @@ class SuSyMaterials {
         public static Material TinDross;
         public static Material DeferritizedTin;
         public static Material DecopperizedTin;
+        public static Material ImpureEthyleneGlycol;
+        public static Material ImpureSaturatedAmmoniacalMethanol;
+        public static Material HaliteLeach;
 
         // Petrochem Materials
 
@@ -502,7 +505,7 @@ class SuSyMaterials {
         public static Material LoadedCarbon;
         public static Material SpentActivatedCarbon;
         public static Material WashedActivatedCarbon;
-        public static Material CalciumSilicate;
+        public static Material CalciumOrthosilicate;
         public static Material MagnesiumChlorideSolution;
         public static Material MagnesiumHydroxide;
         public static Material MagnesiumSulfate;
@@ -568,6 +571,14 @@ class SuSyMaterials {
         public static Material CopperMonosulfide;
         public static Material PotassiumSaltMixture;
         public static Material PotassiumSulfide;
+        public static Material SaturatedAmmoniacalMethanol;
+        public static Material MagnesiumChlorideAmmoniate;
+        public static Material PurifiedMagnesiumChloride;
+        public static Material WashedMagnesiumChlorideAmmoniate;
+        public static Material BariumSulfide;
+        public static Material BariumChloride;
+        public static Material BariumOxide;
+        public static Material BariumCarbonate;
 
         // Second Degree Materials
 
@@ -631,6 +642,7 @@ class SuSyMaterials {
         public static Material AluminiumSulfateSolution;
         public static Material SodiumEthylXanthateSolution;
         public static Material CopperSulfateSolution;
+        public static Material BariumChlorideSolution;
 
         // Organic Chemistry Materials
 
@@ -821,6 +833,8 @@ class SuSyMaterials {
         public static Material TwoButanolSolution;
         public static Material FourFourOxydianilineSolution;
         public static Material ChlorinatedBeryl;
+        public static Material HydratedMagnesiumChlorideGlycolate;
+        public static Material MagnesiumChlorideGlycolate;
 
         // Thermodynamics/Greenhouse Materials     
         

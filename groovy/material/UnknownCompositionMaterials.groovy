@@ -464,9 +464,16 @@ public class UnknownCompositionMaterials {
                 .color(0xb3a094)
                 .build();
 
-        CarnalliteLeach = new Material.Builder(4089, "carnallite_leach")
-                .fluid()
-                .color(0xc1c499)
+        TinDross = new Material.Builder(4088, "tin_dross")
+                .dust().fluid()
+                .fluidTemp(600)
+                .color(0x2a2e2e)
+                .build();
+
+        DecopperizedTin = new Material.Builder(4089, "decopperized_tin")
+                .dust().fluid()
+                .fluidTemp(600)
+                .color(0xb5b7c9)
                 .build();
 
         KainiteLeach = new Material.Builder(4090, "kainite_leach")
@@ -631,16 +638,24 @@ public class UnknownCompositionMaterials {
                 .color(0x784c2f)
                 .build();
 
-        TinDross = new Material.Builder(4120, "tin_dross")
-                .dust().fluid()
-                .fluidTemp(600)
-                .color(0x2a2e2e)
+        ImpureEthyleneGlycol = new Material.Builder(4120, "impure_ethylene_glycol")
+                .fluid()
+                .color(0xc8c8e0)
                 .build();
 
-        DecopperizedTin = new Material.Builder(4121, "decopperized_tin")
-                .dust().fluid()
-                .fluidTemp(600)
-                .color(0xb5b7c9)
+        ImpureSaturatedAmmoniacalMethanol = new Material.Builder(4121, "impure_saturated_ammoniacal_methanol")
+                .fluid()
+                .color(0xad8653)
+                .build();
+
+        CarnalliteLeach = new Material.Builder(4122, "carnallite_leach")
+                .fluid()
+                .color(0xc1c499)
+                .build();
+
+        HaliteLeach = new Material.Builder(4123, "halite_leach")
+                .fluid()
+                .color(0x9bbdbc)
                 .build();
     }
 }           

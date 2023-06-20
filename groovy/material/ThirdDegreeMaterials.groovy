@@ -142,5 +142,17 @@ public class ThirdDegreeMaterials {
                 .components(BerylliumChloride, 3, AluminiumChloride, 2, SiliconTetrachloride, 6, CarbonMonoxide, 18)
                 .colorAverage()
                 .build();
+
+        HydratedMagnesiumChlorideGlycolate = new Material.Builder(24021, "hydrated_magnesium_chloride_glycolate")
+                .fluid()
+                .components(MagnesiumChloride, 1, Water, 2, EthyleneGlycol, 3)
+                .colorAverage()
+                .build();
+
+        MagnesiumChlorideGlycolate = new Material.Builder(24022, "magnesium_chloride_glycolate")
+                .fluid()
+                .components(MagnesiumChloride, 1, EthyleneGlycol, 3)
+                .colorAverage()
+                .build();
     }
 }

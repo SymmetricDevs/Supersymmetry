@@ -1417,7 +1417,7 @@ public class FirstDegreeMaterials{
                 .color(0x2d302b)
                 .build();
 
-        CalciumSilicate = new Material.Builder(8304, "calcium_silicate")
+        CalciumOrthosilicate = new Material.Builder(8304, "calcium_orthosilicate")
                 .dust()
                 .components(Calcium, 2, Silicon, 1, Oxygen, 4)
                 .colorAverage()
@@ -1823,6 +1823,56 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Potassium, 2, Sulfur, 1)
                 .color(0xcbcfae)
+                .build();
+
+        WashedMagnesiumChlorideAmmoniate = new Material.Builder(8367, "washed_magnesium_chloride_ammoniate")
+                .dust()
+                .components(MagnesiumChloride, 1, Ammonia, 6)
+                .colorAverage()
+                .iconSet(SHINY)
+                .build();
+
+        SaturatedAmmoniacalMethanol = new Material.Builder(8368, "saturated_ammoniacal_methanol")
+                .fluid()
+                .components(Methanol, 2, Ammonia, 1)
+                .colorAverage()
+                .build();
+
+        MagnesiumChlorideAmmoniate = new Material.Builder(8369, "magnesium_chloride_ammoniate")
+                .dust()
+                .components(MagnesiumChloride, 1, Ammonia, 6)
+                .colorAverage()
+                .build();
+
+        PurifiedMagnesiumChloride = new Material.Builder(8370, "purified_magnesium_chloride")
+                .dust().fluid()
+                .components(MagnesiumChloride, 1)
+                .color(0xd40d5c)
+                .iconSet(SHINY)
+                .build();
+                
+        BariumSulfide = new Material.Builder(8371, "barium_sulfide")
+                .dust()
+                .components(Barium, 1, Sulfur, 1)
+                .colorAverage()
+                .build();
+
+        BariumChloride = new Material.Builder(8372, "barium_chloride")
+                .dust()
+                .components(Barium, 1, Chlorine, 2)
+                .colorAverage()
+                .build();
+
+        BariumOxide = new Material.Builder(8373, "barium_oxide")
+                .dust()
+                .components(Barium, 1, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        BariumCarbonate = new Material.Builder(8374, "barium_carbonate")
+                .dust()
+                .components(Barium, 1, Carbon, 1, Oxygen, 3)
+                .colorAverage()
                 .build();
     }
 }

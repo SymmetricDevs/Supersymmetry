@@ -122,6 +122,7 @@ class Combustible {
 }
 
 def combustibles = [
+        new Combustible('dustCarbon', 1, 1),
         new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
         new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
         new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
@@ -139,6 +140,7 @@ for (combustible in combustibles) {
             .inputs(ore('dustCalcite'))
             .outputs(metaitem('dustCadmiumRichFlueDust'))
             .outputs(metaitem('ingotCrudeLead') * 2)
+            .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .EUt(120)
             .blastFurnaceTemp(850)
