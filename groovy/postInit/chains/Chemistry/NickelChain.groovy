@@ -1,5 +1,6 @@
 PRIMITIVEBLASTFURNACE = recipemap('primitive_blast_furnace')
 EBF = recipemap('electric_blast_furnace')
+ROASTER = recipemap('roaster')
 
 class Combustible {
     String name
@@ -68,4 +69,12 @@ EBF.recipeBuilder()
         .EUt(30)
         .blastFurnaceTemp(1728)
         .duration(500)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustNickel'))
+        .fluidInputs(fluid('carbon_monoxide') * 4000)
+        .fluidOutputs(fluid('nickel_carbonyl') * 1000)
+        .EUt(30)
+        .duration(200)
         .buildAndRegister()

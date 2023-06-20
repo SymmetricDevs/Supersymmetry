@@ -657,5 +657,119 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x9bbdbc)
                 .build();
+
+        EthylenediaminePyrocatechol = new Material.Builder(4124, "ethylenediamine_pyrocatechol")
+                .fluid()
+                .color(0x42392f)
+                .build();
+
+        CeramicThickFilmPaste = new Material.Builder(4125, "ceramic_thick_film_paste")
+                .fluid()
+                .color(0x000000)
+                .build();
+
+        BoraxElectrolyte = new Material.Builder(4126, "borax_electrolyte")
+                .fluid()
+                .color(0x85806b)
+                .build();
+
+        FerroelectricCeramicBinding = new Material.Builder(4127, "ferroelectric_ceramic_binding")
+                .fluid()
+                .color(0xede772)
+                .build();
+
+        DisproportionatedTrichlorosilane = new Material.Builder(4128, 'disproportionated_trichlorosilane')
+                .fluid()
+                .color(0x849169)
+                .build()
+
+        DisproportionatedDichlorosilane = new Material.Builder(4129, 'disproportionated_dichlorosilane')
+                .fluid()
+                .color(0xa1ad86)
+                .build()
+
+        DisproportionatedChlorosilane = new Material.Builder(4130, 'disproportionated_chlorosilane')
+                .fluid()
+                .color(0xb5bf9b)
+                .build()
+      
+        MetalNitrateSolution = new Material.Builder(4131, "metal_nitrate_solution")
+                .fluid()
+                .color(0x663422)
+                .build();
+
+        NeutralizedMetalNitrateSolution = new Material.Builder(4132, "neutralized_metal_nitrate_solution")
+                .fluid()
+                .color(0x734d3f)
+                .build();
+
+        MetalNitrateCatalyst = new Material.Builder(4133, "metal_nitrate_catalyst")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xb58877)
+                .build();
+
+        TwoEthylhexylPhosphoricAcidMix = new Material.Builder(4134, "two_ethylhexyl_phosphoric_acid_mix")
+                .fluid()
+                .color(0xd1bb75)
+                .build();
+
+        RareEarthCatalystYNd = new Material.Builder(4135, "rare_earth_catalyst_y_nd")
+                .dust()
+                .color(0x2e2a2a)
+                .build();
+
+        DilutedPrimaryAmineN = new Material.Builder(4136, "diluted_primary_amine_n")
+                .fluid()
+                .color(0x704a9e)
+                .build();
+
+        CrosslinkedPolystyrene = new Material.Builder(4137, "crosslinked_polystyrene")
+                .ingot().fluid()
+                .flags(GENERATE_ROUND)
+                .color(0xa7a9d6)
+                .build();
+
+        EthyleneGlycolMix = new Material.Builder(4138, "ethylene_glycol_mix")
+                .fluid()
+                .color(0x2eafc9)
+                .build();
+
+        PalladiumDopedCrosslinkedPolystyrene = new Material.Builder(4139, "palladium_doped_crosslinked_polystyrene")
+                .ingot().fluid()
+                .flags(GENERATE_ROUND)
+                .color(0xe0e6bc)
+                .build();
+
+        TrialkylaluminiumMixture = new Material.Builder(4140, 'trialkylaluminium_mixture')
+                .fluid()
+                .color(0x6b777d)
+                .build()
+
+        TrialkylaluminiumMixture.setFormula("AlR3", true)
+
+        AluminiumAlkoxideMixture = new Material.Builder(4141, 'aluminium_alkoxide_mixture')
+                .dust()
+                .color(0x657780)
+                .build()
+
+        AluminiumAlkoxideMixture.setFormula("Al(OR)3", true)
+
+        ZieglerAlcoholMixture = new Material.Builder(4142, 'ziegler_alcohol_mixture')
+                .fluid()
+                .color(0xc47631)
+                .build()
+
+        ImpureDiethylEther = new Material.Builder(4143, "impure_diethyl_ether")
+                .fluid()
+                .color(0x5e9cff)
+                .build()
+
+        AluminiumAlkoxideSolution = new Material.Builder(4144, 'aluminium_alkoxide_solution')
+                .fluid()
+                .color(0x657780)
+                .build()
+
+        AluminiumAlkoxideSolution.setFormula("[(C2H5)2O]Al(OR)3", true)
     }
-}           
+}

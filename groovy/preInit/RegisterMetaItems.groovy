@@ -28,6 +28,8 @@ eventManager.listen {
         customMetaItems.addItem(106, "crucible.boron.nitride")
         customMetaItems.addItem(107, "crucible.quartz")
         customMetaItems.addItem(108, "crucible.graphite")
+        customMetaItems.addItem(109, "shape.mold.long_rod")
+        customMetaItems.addItem(110, "shape.mold.ring")
 
         customMetaItems.addItem(150, "mudbrick_mix")
         customMetaItems.addItem(151, "slaked_lime")
@@ -70,12 +72,6 @@ eventManager.listen {
 
         customMetaItems.addItem(171, "cellulose_acetate_mesh");
 
-        customMetaItems.addItem(172, "unrefined_boule.silicon");
-
-        customMetaItems.addItem(173, "boule.gallium_arsenide");
-
-        customMetaItems.addItem(174, "unrefined_boule.gallium_arsenide");
-
         customMetaItems.addItem(175, "gold_anode_slime")
         
         customMetaItems.addItem(176, "silver_anode_slime")
@@ -85,6 +81,45 @@ eventManager.listen {
         customMetaItems.addItem(178, "zeolite_membrane");
 
         customMetaItems.addItem(179, "lead_anode_slime")
+
+        customMetaItems.addItem(180, "patterned_thick_film_substrate_wafer");
+
+        customMetaItems.addItem(181, "thick_film_resistor_wafer");
+
+        customMetaItems.addItem(182, "metallized_plastic_film");
+
+        customMetaItems.addItem(183, "metallized_plastic_square");
+
+        customMetaItems.addItem(184, "raw_smd_capacitor");
+
+        customMetaItems.addItem(185, "raw_capacitor_roll");
+
+        customMetaItems.addItem(186, "aluminium_electrolytic_capacitor");
+
+        customMetaItems.addItem(187, "tantalum_chip");
+
+        customMetaItems.addItem(188, "anodized_tantalum_chip");
+
+        customMetaItems.addItem(189, "manganized_tantalum_chip");
+
+        customMetaItems.addItem(190, "ferroelectric_ceramic_foil");
+
+        customMetaItems.addItem(191, "stacked_ceramic_capacitor");
+
+        customMetaItems.addItem(192, "raw_ceramic_capacitor");
+
+        customMetaItems.addItem(193, "chip.insulated_silicon");
+        customMetaItems.addItem(194, "chip.insulated_silicon_germanium");
+        customMetaItems.addItem(195, "chip.n_doped_silicon");
+        customMetaItems.addItem(196, "chip.silicon_dioxide");
+
+        customMetaItems.addItem(197, "fused_quartz");
+
+        customMetaItems.addItem(198, "amberlyst_ch_beads");
+
+        customMetaItems.addItem(199, "ag_fifty_w_x_eight_beads");
+
+        customMetaItems.addItem(200, "thick_film_substrate_wafer");
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
@@ -172,25 +207,34 @@ eventManager.listen {
         customMetaItems.addItem(5002, "mask.ram");
         customMetaItems.addItem(5003, "mask.pcb");
         customMetaItems.addItem(5004, "mask.ulpic");
+        customMetaItems.addItem(5005, "mask.lpic");
+        customMetaItems.addItem(5006, "mask.nand");
+        customMetaItems.addItem(5007, "mask.nor");
+        customMetaItems.addItem(5008, "mask.advanced");
 
         customMetaItems.addItem(5100, "patterned.ic");
         customMetaItems.addItem(5101, "patterned.cpu");
         customMetaItems.addItem(5102, "patterned.ram");
         customMetaItems.addItem(5103, "patterned.ulpic");
+        customMetaItems.addItem(5104, "patterned.lpic");
+        customMetaItems.addItem(5105, "patterned.silicon_dioxide");
+        customMetaItems.addItem(5106, "patterned.polysilicon");
+        customMetaItems.addItem(5107, "patterned.silicon_nitride");
+        customMetaItems.addItem(5108, "patterned.nand");
+        customMetaItems.addItem(5109, "patterned.nor");
         customMetaItems.addItem(5150, "patterned.board.phenolic");
         customMetaItems.addItem(5151, "patterned.board.plastic");
 
         customMetaItems.addItem(5200, "laminated.board.phenolic");
 
-        customMetaItems.addItem(5300, "wafer.doped.silicon");
-
-        customMetaItems.addItem(5400, "etched.ic");
-        customMetaItems.addItem(5401, "etched.cpu");
-        customMetaItems.addItem(5402, "etched.ram");
-        customMetaItems.addItem(5403, "etched.ulpic");
-
-        customMetaItems.addItem(5500, "seed_crystal.silicon");
-        customMetaItems.addItem(5501, "seed_crystal.gallium_arsenide");
+        customMetaItems.addItem(5300, "etched.ic");
+        customMetaItems.addItem(5301, "etched.cpu");
+        customMetaItems.addItem(5302, "etched.ram");
+        customMetaItems.addItem(5303, "etched.ulpic");
+        customMetaItems.addItem(5304, "etched.lpic");
+        customMetaItems.addItem(5305, "etched.silicon_dioxide");
+        customMetaItems.addItem(5306, "etched.polysilicon");
+        customMetaItems.addItem(5307, "etched.silicon_nitride");
 
         //Light Sources 6000-6100
         customMetaItems.addItem(6000, "carbon_arc_lamp");
@@ -221,6 +265,42 @@ eventManager.listen {
         customMetaItems.addItem(6118, "baseEnrichedNaquadahTriniumEuropiumDuranide");
         customMetaItems.addItem(6119, "assemblyRutheniumTriniumAmericiumNeutronate");
         customMetaItems.addItem(6120, "baseRutheniumTriniumAmericiumNeutronate");
+
+        //Seed crystals 7000-7500
+
+        customMetaItems.addItem(7000, "seed_crystal.silicon");
+        customMetaItems.addItem(7001, "seed_crystal.gallium_arsenide");
+        customMetaItems.addItem(7002, "seed_crystal.alumina");
+        customMetaItems.addItem(7003, "seed_crystal.beryllium_oxide");
+        customMetaItems.addItem(7004, "seed_crystal.emerald");
+
+        //Boules 7500-8000
+
+        customMetaItems.addItem(7500, "unrefined_boule.silicon");
+        customMetaItems.addItem(7501, "boule.gallium_arsenide");
+        customMetaItems.addItem(7502, "unrefined_boule.gallium_arsenide");
+        customMetaItems.addItem(7503, "boule.alumina");
+        customMetaItems.addItem(7504, "boule.beryllium_oxide");
+        customMetaItems.addItem(7505, "boule.emerald");
+        customMetaItems.addItem(7506, "boule.sapphire");
+        customMetaItems.addItem(7507, "boule.ruby");
+        customMetaItems.addItem(7508, "boule.silicon_germanium");
+
+        //Wafers 8000-9000
+
+        customMetaItems.addItem(8000, "wafer.doped.silicon");
+        customMetaItems.addItem(8001, "wafer.n_doped.silicon");
+        customMetaItems.addItem(8002, "wafer.silicon_dioxide");
+        customMetaItems.addItem(8003, "wafer.alumina");
+        customMetaItems.addItem(8004, "wafer.beryllium_oxide");
+        customMetaItems.addItem(8005, "wafer.silicon_germanium");
+        customMetaItems.addItem(8006, "wafer.insulated_silicon");
+        customMetaItems.addItem(8007, "wafer.insulated_silicon_germanium");
+        customMetaItems.addItem(8008, "wafer.doped.silicon_dioxide");
+        customMetaItems.addItem(8009, "wafer.polysilicon");
+        customMetaItems.addItem(8010, "wafer.doped.polysilicon");
+        customMetaItems.addItem(8011, "wafer.silicon_nitride");
+        customMetaItems.addItem(8012, "wafer.nickel");
 
         log.infoMC("Finished adding metaitems")
 }

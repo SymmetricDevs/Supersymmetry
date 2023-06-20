@@ -10,7 +10,7 @@ import gregtech.api.unification.material.properties.*
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
-
+import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
 public class FirstDegreeMaterials{
@@ -22,7 +22,7 @@ public class FirstDegreeMaterials{
             new Material.Builder(id, "high_purity_" + material.toString())
                     .dust().fluid()
                     .iconSet(SHINY)
-                    .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                    //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
                     .color(color)
                     .components(material, 1)
                     .build();
@@ -30,7 +30,7 @@ public class FirstDegreeMaterials{
             new Material.Builder(id, "high_purity_" + material.toString())
                     .dust().ingot()
                     .iconSet(SHINY)
-                    .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                    //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
                     .color(color)
                     .components(material, 1)
                     .build();
@@ -38,7 +38,7 @@ public class FirstDegreeMaterials{
             new Material.Builder(id, "high_purity_" + material.toString())
                     .dust().ingot().fluid()
                     .iconSet(SHINY)
-                    .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                    //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
                     .color(color)
                     .components(material, 1)
                     .build();
@@ -82,7 +82,7 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Copper, 8020, false, false)
         generatePurifiedElement(Zinc, 8021, false, false)
         generatePurifiedElement(Gallium, 8022, true, false)
-        generatePurifiedElement(Germanium, 8023, false, false)
+        generatePurifiedElement(Germanium, 8023, true, false)
         generatePurifiedElement(Arsenic, 8024, true, false)
         generatePurifiedElement(Selenium, 8025, false, false)
         generatePurifiedElement(Rubidium, 8026, false, false)
@@ -428,7 +428,8 @@ public class FirstDegreeMaterials{
                 .build()
 
         Alumina = new Material.Builder(8147, 'alumina')
-                .dust()
+                .dust().fluid()
+                .flags(GENERATE_PLATE)
                 .components(Aluminium, 2, Oxygen, 3)
                 .color(0xd0cff7)
                 .build()
@@ -645,7 +646,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         BoronTrichloride = new Material.Builder(8183, "boron_trichloride")
-                .fluid(FluidTypes.GAS)
+                .fluid(FluidTypes.GAS).plasma()
                 .components(Boron, 1, Chlorine, 3)
                 .colorAverage()
                 .build();
@@ -851,14 +852,17 @@ public class FirstDegreeMaterials{
         AluminiumTrichloride = new Material.Builder(8214, "aluminium_trichloride")
                 .dust()
                 .components(Aluminium, 1, Chlorine, 3)
+                .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build()
 
         Triethylaluminium = new Material.Builder(8215, "triethylaluminium")
-                .dust()
+                .fluid()
                 .components(Carbon, 12, Hydrogen, 30, Aluminium, 2)
                 .colorAverage()
                 .build()
+
+        Triethylaluminium.setFormula("Al2(C2H5)6", true)
 
         HydrogenPeroxide = new Material.Builder(8216, "hydrogen_peroxide")
                 .fluid()
@@ -1220,11 +1224,10 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        IronPentacarbonyl = new Material.Builder(8275, 'iron_pentacarbonyl')
-                .dust()
+        CrudeIronPentacarbonyl = new Material.Builder(8275, 'crude_iron_pentacarbonyl')
+                .fluid()
                 .components(Iron, 1, Carbon, 5, Oxygen, 5)
-                .flags(GENERATE_CATALYST_BED)
-                .color(0x8c180d)
+                .color(0x362f2b)
                 .build()
                 .setFormula('Fe(CO)5', true)
 
@@ -1873,6 +1876,369 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Barium, 1, Carbon, 1, Oxygen, 3)
                 .colorAverage()
+
+        IronPentacarbonyl = new Material.Builder(8375, 'iron_pentacarbonyl')
+                .fluid()
+                .components(Iron, 1, Carbon, 5, Oxygen, 5)
+                .color(0x8c180d)
+                .build()
+                .setFormula('Fe(CO)5', true)
+
+        IronTwoThreeOxide = new Material.Builder(8376, 'iron_two_three_oxide')
+                .dust()
+                .color(0x141313)
+                .components(Iron, 3, Oxygen, 4)
+                .build()
+
+        PurifiedIronTwoThreeOxide = new Material.Builder(8377, 'purified_iron_two_three_oxide')
+                .dust()
+                .iconSet(SHINY)
+                .color(0x141313)
+                .components(Iron, 3, Oxygen, 4)
+                .build()
+
+        PurifiedIronIIIOxide = new Material.Builder(8378, 'purified_iron_iii_oxide')
+                .dust()
+                .iconSet(SHINY)
+                .color(0x8F0C03)
+                .components(Iron, 2, Oxygen, 3)
+                .build()
+
+        NickelIIOxide = new Material.Builder(8379, 'nickel_ii_oxide')
+                .dust()
+                .color(0x92a371)
+                .components(Nickel, 1, Oxygen, 1)
+                .build()
+
+        CarbonTetrafluoride = new Material.Builder(8380, 'carbon_tetrafluoride')
+                .fluid(FluidTypes.GAS).plasma()
+                .components(Carbon, 1, Fluorine, 4)
+                .colorAverage()
+                .build()
+
+        NitrogenTrifluoride = new Material.Builder(8381, 'nitrogen_trifluoride')
+                .fluid(FluidTypes.GAS).plasma()
+                .components(Nitrogen, 1, Chlorine, 3)
+                .colorAverage()
+                .build()
+
+        CobaltFerrite = new Material.Builder(8382, 'cobalt_ferrite')
+                .ingot()
+                .flags(GENERATE_ROD, GENERATE_RING)
+                .components(Cobalt, 1, Iron, 2, Oxygen, 4)
+                .colorAverage()
+                .build()
+
+        StrontiumFerrite = new Material.Builder(8383, 'strontium_ferrite')
+                .ingot()
+                .flags(GENERATE_ROD, GENERATE_RING)
+                .components(Strontium, 1, Iron, 12, Oxygen, 19)
+                .colorAverage()
+                .build()
+
+        BariumFerrite = new Material.Builder(8384, 'barium_ferrite')
+                .ingot()
+                .flags(GENERATE_ROD, GENERATE_RING)
+                .components(Barium, 1, Iron, 12, Oxygen, 19)
+                .colorAverage()
+                .build()
+
+        ManganeseZincFerrite = new Material.Builder(8385, 'manganese_zinc_ferrite')
+                .ingot()
+                .flags(GENERATE_ROD, GENERATE_RING)
+                .components(Manganese, 1, Zinc, 1, Iron, 4, Oxygen, 8)
+                .colorAverage()
+                .build()
+
+        StrontiumCarbonate = new Material.Builder(8386, 'strontium_carbonate')
+                .dust()
+                .components(Strontium, 1, Carbon, 1, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        BariumCarbonate = new Material.Builder(8387, 'barium_carbonate')
+                .dust()
+                .components(Barium, 1, Carbon, 1, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        LeadOxide = new Material.Builder(8388, 'lead_oxide')
+                .dust()
+                .components(Lead, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        TantalumNitride = new Material.Builder(8389, 'tantalum_nitride')
+                .dust()
+                .components(Tantalum, 1, Nitrogen, 1)
+                .colorAverage()
+                .build()
+
+        RutheniumIVOxide = new Material.Builder(8390, 'ruthenium_iv_oxide')
+                .dust()
+                .components(Ruthenium, 1, Oxygen, 2)
+                .colorAverage()
+                .build()
+
+        BismuthIridate = new Material.Builder(8391, 'bismuth_iridate')
+                .dust()
+                .components(Bismuth, 2, Iridium, 2, Oxygen, 7)
+                .colorAverage()
+                .build()
+
+        SodiumBismuthate = new Material.Builder(8392, 'sodium_bismuthate')
+                .dust()
+                .components(Sodium, 1, Bismuth, 1, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        BismuthIIIOxide = new Material.Builder(8393, 'bismuth_iii_oxide')
+                .dust()
+                .components(Bismuth, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        ManganeseIINitrate = new Material.Builder(8394, 'manganese_ii_nitrate')
+                .dust()
+                .components(Manganese, 1, Nitrogen, 2, Oxygen, 6)
+                .colorAverage()
+                .build()
+                .setFormula("Mn(NO3)2", true)
+
+        PurifiedManganeseDioxide = new Material.Builder(8395, 'purified_manganese_dioxide')
+                .dust()
+                .iconSet("SHINY")
+                .components(Manganese, 1, Oxygen, 2)
+                .colorAverage()
+                .build()
+
+        BariumTitanate = new Material.Builder(8396, 'barium_titanate')
+                .gem().iconSet(RUBY)
+                .components(Barium, 1, Titanium, 1, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        HafniumTetrachloride = new Material.Builder(8397, 'hafnium_tetrachloride')
+                .fluid()
+                .fluidTemp(800)
+                .components(Hafnium, 1, Chlorine, 4)
+                .colorAverage()
+                .build()
+
+        ZirconiumTetrachloride = new Material.Builder(8398, 'zirconium_tetrachloride')
+                .fluid()
+                .fluidTemp(800)
+                .components(Zirconium, 1, Chlorine, 4)
+                .colorAverage()
+                .build()
+
+        RawElectrum = new Material.Builder(8399, "raw_electrum")
+                .ore()
+                .color(0xfcf403).iconSet(SHINY)
+                .components(Silver, 1, Gold, 1)
+                .build();
+
+        NeodymiumAlloy = new Material.Builder(8400, "neodymium_alloy")
+                .ingot()
+                .color(0x2b2a2a).iconSet(METALLIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE)
+                .components(Neodymium, 2, Iron, 14, Boron, 1)
+                .blastTemp(1297, GasTier.MID)
+                .build();
+
+        TreatedNeodymiumAlloy = new Material.Builder(8401, "treated_neodymium_alloy")
+                .ingot()
+                .color(0x2b2a2a).iconSet(SHINY)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING)
+                .components(NeodymiumAlloy, 1)
+                .ingotSmeltInto(NeodymiumAlloy)
+                .arcSmeltInto(NeodymiumAlloy)
+                .macerateInto(NeodymiumAlloy)
+                .build();
+
+        NeodymiumAlloyMagnetic = new Material.Builder(8402, "neodymium_alloy_magnetic")
+                .ingot()
+                .color(0x2b2a2a).iconSet(MAGNETIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING, IS_MAGNETIC)
+                .components(NeodymiumAlloy, 1)
+                .ingotSmeltInto(NeodymiumAlloy)
+                .arcSmeltInto(NeodymiumAlloy)
+                .macerateInto(NeodymiumAlloy)
+                .build();
+
+        TreatedNeodymiumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(NeodymiumAlloyMagnetic);
+
+        SamariumAlloy = new Material.Builder(8341, "samarium_alloy")
+                .dust().ingot().fluid()
+                .color(0xb3d683).iconSet(METALLIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING)
+                .components(Samarium, 1, Cobalt, 5)
+                .build();
+
+        TreatedSamariumAlloy = new Material.Builder(8403, "treated_samarium_alloy")
+                .ingot()
+                .color(0xb3d683).iconSet(SHINY)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING)
+                .components(SamariumAlloy, 1)
+                .ingotSmeltInto(SamariumAlloy)
+                .arcSmeltInto(SamariumAlloy)
+                .macerateInto(SamariumAlloy)
+                .build();
+
+        SamariumAlloyMagnetic = new Material.Builder(8404, "samarium_alloy_magnetic")
+                .ingot()
+                .color(0xb3d683).iconSet(MAGNETIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING, IS_MAGNETIC)
+                .components(SamariumAlloy, 1)
+                .ingotSmeltInto(SamariumAlloy)
+                .arcSmeltInto(SamariumAlloy)
+                .macerateInto(SamariumAlloy)
+                .build();
+
+        TreatedSamariumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumAlloyMagnetic);
+
+        Trichlorosilane = new Material.Builder(8405, 'trichlorosilane')
+                .fluid()
+                .components(Silicon, 1, Hydrogen, 1, Chlorine, 3)
+                .color(0x769169)
+                .build()
+
+        Dichlorosilane = new Material.Builder(8406, 'dichlorosilane')
+                .fluid()
+                .components(Silicon, 1, Hydrogen, 2, Chlorine, 2)
+                .color(0x90ab84)
+                .build()
+
+        Chlorosilane = new Material.Builder(8407, 'chlorosilane')
+                .fluid()
+                .components(Silicon, 1, Hydrogen, 3, Chlorine, 1)
+                .color(0xa0ba95)
+                .build()
+
+        Silane = new Material.Builder(8408, 'silane')
+                .fluid(FluidTypes.GAS)
+                .components(Silicon, 1, Hydrogen, 4)
+                .color(0xbbd1b2)
+                .build()
+
+        NickelCarbonyl = new Material.Builder(8409, 'nickel_carbonyl')
+                .fluid()
+                .components(Nickel, 1, Carbon, 4, Oxygen, 4)
+                .colorAverage()
+                .build()
+
+        NickelCarbonyl.setFormula("Ni(CO)4", true)
+
+              ChloroaceticAnhydride = new Material.Builder(8410, 'chloroacetic_anhydride')
+                .dust()
+                .components(Carbon, 4, Hydrogen, 4, Oxygen, 3, Chlorine, 2)
+                .colorAverage()
+                .build()
+
+        ZirconiumDioxide = new Material.Builder(8411, 'zirconium_dioxide')
+                .dust()
+                .components(Zirconium, 1, Oxygen, 2)
+                .colorAverage()
+                .build()
+
+        CopperIINitrate = new Material.Builder(8412, 'copper_ii_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Copper, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0x292fe3)
+                .build()
+
+        CopperIINitrate.setFormula("Cu(NO3)2", true)
+
+        NickelIINitrate = new Material.Builder(8413, 'nickel_ii_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Nickel, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0x236359)
+                .build()
+
+        NickelIINitrate.setFormula("Ni(NO3)2", true)
+
+        ZincNitrate = new Material.Builder(8414, 'zinc_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Zinc, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0xdfe6cf)
+                .build()
+
+        ZincNitrate.setFormula("Zn(NO3)2", true)
+
+        MagnesiumNitrate = new Material.Builder(8415, 'magnesium_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Magnesium, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0xe8d8e3)
+                .build()
+
+        MagnesiumNitrate.setFormula("Mg(NO3)2", true)
+
+        YttriumOxide = new Material.Builder(8416, 'yttrium_oxide')
+                .dust()
+                .components(Yttrium, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        NeodymiumOxide = new Material.Builder(8417, 'neodymium_oxide')
+                .dust()
+                .components(Neodymium, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        Bromooctane = new Material.Builder(8418, 'bromooctane')
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 17, Bromine, 1)
+                .colorAverage()
+                .build()
+
+        LithiumDioctylcopper = new Material.Builder(8419, 'lithium_dioctylcopper')
+                .fluid()
+                .components(Carbon, 16, Hydrogen, 34, Copper, 1, Lithium, 1)
+                .colorAverage()
+                .build()
+
+        DecanoylChloride = new Material.Builder(8420, 'decanoyl_chloride')
+                .fluid()
+                .components(Carbon, 10, Hydrogen, 19, Chlorine, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        SodiumCyanoborohydride = new Material.Builder(8421, 'sodium_cyanoborohydride')
+                .dust()
+                .components(Sodium, 1, Boron, 1, Hydrogen, 3, Carbon, 1, Nitrogen, 1)
+                .colorAverage()
+                .build()
+
+        SodiumCyanoborohydride.setFormula("Na[BH3(CN)]", true)
+
+        DilutedSodiumHydroxideSolution = new Material.Builder(8422, "diluted_sodium_hydroxide_solution")
+                .fluid()
+                .components(Water, 2, SodiumHydroxide, 1)
+                .colorAverage()
+                .build();
+
+        DiethylEther = new Material.Builder(8423, "diethyl_ether")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
+                .color(0x2177ff)
+                .build();
+
+        DiethylEther.setFormula("(C2H5)2O", true)
+
+        Oleum = new Material.Builder(8424, "oleum")
+                .fluid()
+                .components(SulfuricAcid, 10, SulfurTrioxide, 1)
+                .color(0xe8c3a5)
+                .build();
+
+        ChromiumSulfateSolution = new Material.Builder(8425, "chromium_sulfate_solution")
+                .fluid()
+                .components(Chrome, 4, Water, 24, Sulfur, 6, Oxygen, 24, Acetone, 1)
+                .color(0x2c733a)
                 .build();
     }
 }

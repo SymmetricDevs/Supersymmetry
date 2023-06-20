@@ -2,6 +2,9 @@ import static globals.Globals.*
 
 //REMOVALS
 
+// MV Emitter * 1
+mods.gregtech.assembler.removeByInput(30, [metaitem('stickElectrum') * 4, metaitem('cableGtSingleCopper') * 2, metaitem('circuit.good_integrated') * 2, metaitem('gemFlawlessEmerald'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+
 // HV Emitter * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('stickChrome') * 4, metaitem('cableGtSingleGold') * 2, metaitem('circuit.assembly') * 2, item('minecraft:ender_eye'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 // EV Emitter * 1
@@ -16,6 +19,25 @@ mods.gregtech.assembly_line.removeByInput(24000, [metaitem('frameNaquadahAlloy')
 mods.gregtech.assembly_line.removeByInput(100000, [metaitem('frameTritanium'), metaitem('electric.motor.uv'), metaitem('stickLongTritanium') * 4, metaitem('gravistar'), metaitem('circuit.wetware_computer') * 2, metaitem('foilNaquadria') * 64, metaitem('foilNaquadria') * 32, metaitem('cableGtSingleYttriumBariumCuprate') * 4], [fluid('soldering_alloy') * 1152, fluid('naquadria') * 576])
 
 //REPLACEMENTS
+
+//MV EMITTER
+
+crafting.replaceShaped('gregtech:emitter_mv', metaitem('emitter.mv'), [
+        [metaitem('cableGtSingleCopper'), metaitem('stickElectrum'), ore('circuitMv')],
+        [metaitem('stickElectrum'), item('minecraft:emerald'), metaitem('stickElectrum')],
+        [ore('circuitMv'), metaitem('stickElectrum'), metaitem('cableGtSingleCopper')]
+])
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(metaitem('stickElectrum') * 4)
+        .inputs(metaitem('cableGtSingleCopper') * 2)
+        .inputs(ore('circuitMv') * 2)
+        .inputs(item('minecraft:emerald'))
+        .notConsumable(Globals.circuit(1))
+        .outputs(metaitem('emitter.mv'))
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
 
 //HV EMITTER
 

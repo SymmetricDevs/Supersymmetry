@@ -436,7 +436,7 @@ Globals.solders.each { key, val ->
 				item('techguns:itemshared', 43),
 				ore('stickSteel'),
 				ore('springSmallSteel'),
-				item('techguns:itemshared', 2)
+				ore('plateSteel') * 4
 		])
 		.fluidInputs(fluid(key) * val)
 		.outputs(item('techguns:combatshotgun'))
@@ -536,7 +536,6 @@ mods.gregtech.lathe.recipeBuilder()
 	.EUt(Globals.voltAmps[1])
 	.buildAndRegister()
 
-/*
 crafting.addShaped("stone_barrel", item('techguns:itemshared:37'), [
 		[null, ore('craftingToolFile'), null],
 		[ore('craftingToolScrewdriver'), ore('stone'), ore('craftingToolHardHammer')]
@@ -706,4 +705,3 @@ GunStatTweaker.setWeaponStat("thompson","DAMAGE_MIN",40.0);
 //AK47
 GunStatTweaker.setWeaponStat("thompson","DAMAGE",40.0);
 GunStatTweaker.setWeaponStat("thompson","DAMAGE_MIN",36.0);
-*/

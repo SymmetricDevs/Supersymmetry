@@ -2,6 +2,8 @@ import static globals.Globals.*
 
 //REMOVALS
 
+// MV Sensor * 1
+mods.gregtech.assembler.removeByInput(30, [metaitem('stickElectrum'), metaitem('plateAluminium') * 4, metaitem('circuit.good_integrated'), metaitem('gemFlawlessEmerald')], null)
 // HV Sensor * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('stickChrome'), metaitem('plateStainlessSteel') * 4, metaitem('circuit.assembly'), item('minecraft:ender_eye')], null)
 // EV Sensor * 1
@@ -16,6 +18,24 @@ mods.gregtech.assembly_line.removeByInput(24000, [metaitem('frameNaquadahAlloy')
 mods.gregtech.assembly_line.removeByInput(100000, [metaitem('frameTritanium'), metaitem('electric.motor.uv'), metaitem('plateTritanium') * 4, metaitem('gravistar'), metaitem('circuit.wetware_computer') * 2, metaitem('foilNaquadria') * 64, metaitem('foilNaquadria') * 32, metaitem('cableGtSingleYttriumBariumCuprate') * 4], [fluid('soldering_alloy') * 1152, fluid('naquadria') * 576])
 
 //REPLACEMENTS
+
+//MV SENSOR
+
+crafting.replaceShaped('gregtech:sensor_mv', metaitem('sensor.mv'), [
+        [metaitem('plateAluminium'), null, item('minecraft:emerald')],
+        [metaitem('plateAluminium'), metaitem('stickElectrum'), null],
+        [ore('circuitMv'), metaitem('plateAluminium'), metaitem('plateAluminium')]
+])
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(metaitem('stickElectrum'))
+        .inputs(metaitem('plateAluminium') * 4)
+        .inputs(ore('circuitMv'))
+        .inputs(item('minecraft:emerald'))
+        .outputs(metaitem('sensor.mv'))
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
 
 //HV EMITTER
 

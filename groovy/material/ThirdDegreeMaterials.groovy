@@ -136,20 +136,62 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        ChlorinatedBeryl = new Material.Builder(24020, "chlorinated_beryl")
+        DiglycolicAcidSolution = new Material.Builder(24020, 'diglycolic_acid_solution')
+                .fluid()
+                .components(DiglycolicAcid, 1, AmmoniaSolution, 1, Ethanol, 1)
+                .colorAverage()
+                .build()
+
+        DiTwoEthylhexylPhosphoricAcidSolution = new Material.Builder(24021, 'di_two_ethylhexyl_phosphoric_acid_solution')
+                .fluid()
+                .components(DiTwoEthylhexylPhosphoricAcid, 1, Hexane, 1)
+                .colorAverage()
+                .build()
+
+        DilutedChloroaceticAnhydride = new Material.Builder(24022, "diluted_chloroacetic_anhydride")
+                .fluid()
+                .components(ChloroaceticAnhydride, 1, Pyridine, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        DilutedTetraoctylDiglycolamide = new Material.Builder(24023, "diluted_tetraoctyl_diglycolamide")
+                .fluid()
+                .components(TetraoctylDiglycolamide, 1, SaltWater, 2)
+                .colorAverage()
+                .build()
+
+        DilutedTwoEthylTwoHexenal = new Material.Builder(24024, "diluted_two_ethyl_two_hexenal")
+                .fluid()
+                .components(TwoEthylTwoHexenal, 1, DilutedSodiumHydroxideSolution, 1)
+                .colorAverage()
+                .build()
+
+        DilutedOctylamine = new Material.Builder(24025, 'diluted_octylamine')
+                .fluid()
+                .components(NOctylamine, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        DilutedMethylIsobutylKetone = new Material.Builder(24026, 'diluted_methyl_isobutyl_ketone')
+                .fluid()
+                .components(MethylIsobutylKetone, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        ChlorinatedBeryl = new Material.Builder(24027, "chlorinated_beryl")
                 .fluid(FluidTypes.GAS)
                 .fluidTemp(1100)
                 .components(BerylliumChloride, 3, AluminiumChloride, 2, SiliconTetrachloride, 6, CarbonMonoxide, 18)
                 .colorAverage()
                 .build();
 
-        HydratedMagnesiumChlorideGlycolate = new Material.Builder(24021, "hydrated_magnesium_chloride_glycolate")
+        HydratedMagnesiumChlorideGlycolate = new Material.Builder(24028, "hydrated_magnesium_chloride_glycolate")
                 .fluid()
                 .components(MagnesiumChloride, 1, Water, 2, EthyleneGlycol, 3)
                 .colorAverage()
                 .build();
 
-        MagnesiumChlorideGlycolate = new Material.Builder(24022, "magnesium_chloride_glycolate")
+        MagnesiumChlorideGlycolate = new Material.Builder(24029, "magnesium_chloride_glycolate")
                 .fluid()
                 .components(MagnesiumChloride, 1, EthyleneGlycol, 3)
                 .colorAverage()

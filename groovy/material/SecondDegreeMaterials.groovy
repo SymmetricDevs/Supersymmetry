@@ -386,5 +386,11 @@ public class SecondDegreeMaterials {
                 .components(BariumChloride, 1, Water, 2)
                 .colorAverage()
                 .build();
+
+        DilutedBromooctane = new Material.Builder(13061, "diluted_bromooctane")
+                .fluid()
+                .components(Bromooctane, 1, Water, 1)
+                .colorAverage()
+                .build()
     }
 }
