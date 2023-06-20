@@ -601,3 +601,9 @@ crafting.replaceShaped('quark:dark_oak_trapdoor', item('quark:dark_oak_trapdoor'
 		[item('minecraft:planks', 5), item('minecraft:planks', 5), null],
 		[ore('craftingToolSaw'), null, null]
 ])
+
+crafting.replaceShaped('minecraft:stone_slab', item('minecraft:stone_slab') * 6, [
+		[null, null, null],
+		[ore('stone'), ore('stone'), ore('stone')],
+		[null, null, null]
+])

@@ -1,6 +1,7 @@
 def name_removals = [
         'buildinggadgets:exchangingtool',
-        'buildinggadgets:constructionpastepowder'
+        'buildinggadgets:constructionpastepowder',
+        'buildinggadgets:destructiontool'
 ]
 
 for (name in name_removals) {
@@ -26,13 +27,6 @@ crafting.addShaped('buildinggadgets:copypastetool', item('buildinggadgets:copypa
     [null, metaitem('electric.piston.lv'), ore('gearSmallIron')],
     [ore('plateIron'), metaitem('power_unit.lv'), ore('plateIron')],
     [ore('plateIron'), ore('circuitLv'), ore('plateIron')]
-])
-
-// Destruction Gadget
-crafting.addShaped('buildinggadgets:destructiontool', item('buildinggadgets:destructiontool'), [
-    [null, metaitem('toolHeadDrillIron'), null],
-    [ore('plateAluminium'), metaitem('power_unit.mv'), ore('plateAluminium')],
-    [ore('plateAluminium'), ore('circuitMv'), ore('plateAluminium')]
 ])
 
 crafting.replaceShaped('buildinggadgets:templatemanager', item('buildinggadgets:templatemanager'), [

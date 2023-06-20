@@ -265,7 +265,7 @@ REACTION_FURNACE.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-FBR.recipeBuilder()
+REACTION_FURNACE.recipeBuilder()
 .notConsumable(metaitem('catalystBedAlumina'))
 .fluidInputs(fluid('uncatalyzed_sulfurous_gases') * 3000)
 .fluidOutputs(fluid('steam') * 2000)
