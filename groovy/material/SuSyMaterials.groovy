@@ -108,10 +108,6 @@ class SuSyMaterials {
         public static Material RoastedSperrylite;
         public static Material RoastedLepidolite;
         public static Material RoastedPetalite;
-        
-        // Ore Leach Residue
-
-        public static Material EnargiteResidue;
 
         // Ore Leach Residue
 
@@ -608,7 +604,6 @@ class SuSyMaterials {
         public static Material BariumSulfide;
         public static Material BariumChloride;
         public static Material BariumOxide;
-        public static Material BariumCarbonate;
         public static Material CrudeIronPentacarbonyl;
         public static Material ChlorinePlasma;
         public static Material IronTwoThreeOxide;
@@ -625,7 +620,6 @@ class SuSyMaterials {
         public static Material BariumCarbonate;
         public static Material LeadOxide;
         public static Material TantalumNitride;
-        public static Material RutheniumIVOxide;
         public static Material BismuthIridate;
         public static Material IridiumTrichloride;
         public static Material SodiumBismuthate;
@@ -658,7 +652,6 @@ class SuSyMaterials {
         public static Material ZirconiumDioxide;
         public static Material Oleum;
         public static Material ChromiumSulfateSolution;
-        public static Material Trichlorosilane;
         public static Material Dichlorosilane;
         public static Material Chlorosilane;
         public static Material Silane;

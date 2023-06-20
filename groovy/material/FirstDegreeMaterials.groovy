@@ -1877,13 +1877,15 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Barium, 1, Carbon, 1, Oxygen, 3)
                 .colorAverage()
+                .build();
 
         IronPentacarbonyl = new Material.Builder(8375, 'iron_pentacarbonyl')
                 .fluid()
                 .components(Iron, 1, Carbon, 5, Oxygen, 5)
                 .color(0x8c180d)
-                .build()
-                .setFormula('Fe(CO)5', true)
+                .build();
+
+        IronPentacarbonyl.setFormula('Fe(CO)5', true)
 
         IronTwoThreeOxide = new Material.Builder(8376, 'iron_two_three_oxide')
                 .dust()
@@ -2069,14 +2071,14 @@ public class FirstDegreeMaterials{
 
         TreatedNeodymiumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(NeodymiumAlloyMagnetic);
 
-        SamariumAlloy = new Material.Builder(8341, "samarium_alloy")
+        SamariumAlloy = new Material.Builder(8403, "samarium_alloy")
                 .dust().ingot().fluid()
                 .color(0xb3d683).iconSet(METALLIC)
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING)
                 .components(Samarium, 1, Cobalt, 5)
                 .build();
 
-        TreatedSamariumAlloy = new Material.Builder(8403, "treated_samarium_alloy")
+        TreatedSamariumAlloy = new Material.Builder(8404, "treated_samarium_alloy")
                 .ingot()
                 .color(0xb3d683).iconSet(SHINY)
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING)
@@ -2086,7 +2088,7 @@ public class FirstDegreeMaterials{
                 .macerateInto(SamariumAlloy)
                 .build();
 
-        SamariumAlloyMagnetic = new Material.Builder(8404, "samarium_alloy_magnetic")
+        SamariumAlloyMagnetic = new Material.Builder(8405, "samarium_alloy_magnetic")
                 .ingot()
                 .color(0xb3d683).iconSet(MAGNETIC)
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_WORKING, IS_MAGNETIC)
@@ -2098,31 +2100,31 @@ public class FirstDegreeMaterials{
 
         TreatedSamariumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumAlloyMagnetic);
 
-        Trichlorosilane = new Material.Builder(8405, 'trichlorosilane')
+        Trichlorosilane = new Material.Builder(8406, 'trichlorosilane')
                 .fluid()
                 .components(Silicon, 1, Hydrogen, 1, Chlorine, 3)
                 .color(0x769169)
                 .build()
 
-        Dichlorosilane = new Material.Builder(8406, 'dichlorosilane')
+        Dichlorosilane = new Material.Builder(8407, 'dichlorosilane')
                 .fluid()
                 .components(Silicon, 1, Hydrogen, 2, Chlorine, 2)
                 .color(0x90ab84)
                 .build()
 
-        Chlorosilane = new Material.Builder(8407, 'chlorosilane')
+        Chlorosilane = new Material.Builder(8408, 'chlorosilane')
                 .fluid()
                 .components(Silicon, 1, Hydrogen, 3, Chlorine, 1)
                 .color(0xa0ba95)
                 .build()
 
-        Silane = new Material.Builder(8408, 'silane')
+        Silane = new Material.Builder(8409, 'silane')
                 .fluid(FluidTypes.GAS)
                 .components(Silicon, 1, Hydrogen, 4)
                 .color(0xbbd1b2)
                 .build()
 
-        NickelCarbonyl = new Material.Builder(8409, 'nickel_carbonyl')
+        NickelCarbonyl = new Material.Builder(8410, 'nickel_carbonyl')
                 .fluid()
                 .components(Nickel, 1, Carbon, 4, Oxygen, 4)
                 .colorAverage()
@@ -2130,19 +2132,19 @@ public class FirstDegreeMaterials{
 
         NickelCarbonyl.setFormula("Ni(CO)4", true)
 
-              ChloroaceticAnhydride = new Material.Builder(8410, 'chloroacetic_anhydride')
+        ChloroaceticAnhydride = new Material.Builder(8411, 'chloroacetic_anhydride')
                 .dust()
                 .components(Carbon, 4, Hydrogen, 4, Oxygen, 3, Chlorine, 2)
                 .colorAverage()
                 .build()
 
-        ZirconiumDioxide = new Material.Builder(8411, 'zirconium_dioxide')
+        ZirconiumDioxide = new Material.Builder(8412, 'zirconium_dioxide')
                 .dust()
                 .components(Zirconium, 1, Oxygen, 2)
                 .colorAverage()
                 .build()
 
-        CopperIINitrate = new Material.Builder(8412, 'copper_ii_nitrate')
+        CopperIINitrate = new Material.Builder(8413, 'copper_ii_nitrate')
                 .dust()
                 .iconSet(SHINY)
                 .components(Copper, 1, Nitrogen, 2, Oxygen, 6)
@@ -2151,7 +2153,7 @@ public class FirstDegreeMaterials{
 
         CopperIINitrate.setFormula("Cu(NO3)2", true)
 
-        NickelIINitrate = new Material.Builder(8413, 'nickel_ii_nitrate')
+        NickelIINitrate = new Material.Builder(8414, 'nickel_ii_nitrate')
                 .dust()
                 .iconSet(SHINY)
                 .components(Nickel, 1, Nitrogen, 2, Oxygen, 6)
@@ -2160,7 +2162,7 @@ public class FirstDegreeMaterials{
 
         NickelIINitrate.setFormula("Ni(NO3)2", true)
 
-        ZincNitrate = new Material.Builder(8414, 'zinc_nitrate')
+        ZincNitrate = new Material.Builder(8415, 'zinc_nitrate')
                 .dust()
                 .iconSet(SHINY)
                 .components(Zinc, 1, Nitrogen, 2, Oxygen, 6)
@@ -2169,7 +2171,7 @@ public class FirstDegreeMaterials{
 
         ZincNitrate.setFormula("Zn(NO3)2", true)
 
-        MagnesiumNitrate = new Material.Builder(8415, 'magnesium_nitrate')
+        MagnesiumNitrate = new Material.Builder(8416, 'magnesium_nitrate')
                 .dust()
                 .iconSet(SHINY)
                 .components(Magnesium, 1, Nitrogen, 2, Oxygen, 6)
@@ -2178,37 +2180,37 @@ public class FirstDegreeMaterials{
 
         MagnesiumNitrate.setFormula("Mg(NO3)2", true)
 
-        YttriumOxide = new Material.Builder(8416, 'yttrium_oxide')
+        YttriumOxide = new Material.Builder(8417, 'yttrium_oxide')
                 .dust()
                 .components(Yttrium, 2, Oxygen, 3)
                 .colorAverage()
                 .build()
 
-        NeodymiumOxide = new Material.Builder(8417, 'neodymium_oxide')
+        NeodymiumOxide = new Material.Builder(8418, 'neodymium_oxide')
                 .dust()
                 .components(Neodymium, 2, Oxygen, 3)
                 .colorAverage()
                 .build()
 
-        Bromooctane = new Material.Builder(8418, 'bromooctane')
+        Bromooctane = new Material.Builder(8419, 'bromooctane')
                 .fluid()
                 .components(Carbon, 8, Hydrogen, 17, Bromine, 1)
                 .colorAverage()
                 .build()
 
-        LithiumDioctylcopper = new Material.Builder(8419, 'lithium_dioctylcopper')
+        LithiumDioctylcopper = new Material.Builder(8420, 'lithium_dioctylcopper')
                 .fluid()
                 .components(Carbon, 16, Hydrogen, 34, Copper, 1, Lithium, 1)
                 .colorAverage()
                 .build()
 
-        DecanoylChloride = new Material.Builder(8420, 'decanoyl_chloride')
+        DecanoylChloride = new Material.Builder(8421, 'decanoyl_chloride')
                 .fluid()
                 .components(Carbon, 10, Hydrogen, 19, Chlorine, 1, Oxygen, 1)
                 .colorAverage()
                 .build()
 
-        SodiumCyanoborohydride = new Material.Builder(8421, 'sodium_cyanoborohydride')
+        SodiumCyanoborohydride = new Material.Builder(8422, 'sodium_cyanoborohydride')
                 .dust()
                 .components(Sodium, 1, Boron, 1, Hydrogen, 3, Carbon, 1, Nitrogen, 1)
                 .colorAverage()
@@ -2216,13 +2218,13 @@ public class FirstDegreeMaterials{
 
         SodiumCyanoborohydride.setFormula("Na[BH3(CN)]", true)
 
-        DilutedSodiumHydroxideSolution = new Material.Builder(8422, "diluted_sodium_hydroxide_solution")
+        DilutedSodiumHydroxideSolution = new Material.Builder(8423, "diluted_sodium_hydroxide_solution")
                 .fluid()
                 .components(Water, 2, SodiumHydroxide, 1)
                 .colorAverage()
                 .build();
 
-        DiethylEther = new Material.Builder(8423, "diethyl_ether")
+        DiethylEther = new Material.Builder(8424, "diethyl_ether")
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
                 .color(0x2177ff)
@@ -2230,73 +2232,73 @@ public class FirstDegreeMaterials{
 
         DiethylEther.setFormula("(C2H5)2O", true)
 
-        Oleum = new Material.Builder(8424, "oleum")
+        Oleum = new Material.Builder(8425, "oleum")
                 .fluid()
                 .components(SulfuricAcid, 10, SulfurTrioxide, 1)
                 .color(0xe8c3a5)
                 .build();
 
-        ChromiumSulfateSolution = new Material.Builder(8425, "chromium_sulfate_solution")
+        ChromiumSulfateSolution = new Material.Builder(8426, "chromium_sulfate_solution")
                 .fluid()
                 .components(Chrome, 4, Water, 24, Sulfur, 6, Oxygen, 24, Acetone, 1)
                 .color(0x2c733a)
                 .build();
 
-        MustardGas = new Material.Builder(8365, "mustard_gas")
+        MustardGas = new Material.Builder(8427, "mustard_gas")
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 8, Chlorine, 2, Sulfur, 1)
                 .color(0xcf7f3e)
                 .build();
 
-        Methyldichlorophosphine = new Material.Builder(8366, "methyldichlorophosphine")
+        Methyldichlorophosphine = new Material.Builder(8428, "methyldichlorophosphine")
                 .fluid()
                 .components(Carbon, 1, Hydrogen, 3, Chlorine, 2, Phosphorus, 1)
                 .colorAverage()
                 .build();
 
-        SulfurylChloride = new Material.Builder(8367, "sulfuryl_chloride")
+        SulfurylChloride = new Material.Builder(8429, "sulfuryl_chloride")
                 .fluid()
                 .components(Sulfur, 1, Oxygen, 2, Chlorine, 2)
                 .colorAverage()
                 .build();
 
-        MethylphosphonylDichloride = new Material.Builder(8368, "methylphosphonyl_dichloride")
+        MethylphosphonylDichloride = new Material.Builder(8430, "methylphosphonyl_dichloride")
                 .fluid()
                 .components(Carbon, 1, Hydrogen, 3, Chlorine, 2, Oxygen, 1, Phosphorus, 1)
                 .colorAverage()
                 .build();
 
-        MethylphosphonylDifluoride = new Material.Builder(8369, "methylphosphonyl_difluoride")
+        MethylphosphonylDifluoride = new Material.Builder(8431, "methylphosphonyl_difluoride")
                 .fluid()
                 .components(Carbon, 1, Hydrogen, 3, Phosphorus, 1, Oxygen, 1, Fluorine, 2)
                 .colorAverage()
                 .build();
 
-        Sarin = new Material.Builder(8370, "sarin")
+        Sarin = new Material.Builder(8432, "sarin")
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 10, Fluorine, 1, Oxygen, 2, Phosphorus, 1)
                 .colorAverage()
                 .build();
 
-        MethylDiethylphosphinate = new Material.Builder(8371, "methyl_diethylphosphinate")
+        MethylDiethylphosphinate = new Material.Builder(8433, "methyl_diethylphosphinate")
                 .fluid()
                 .components(Carbon, 5, Hydrogen, 13, Oxygen, 2, Phosphorus, 1)
                 .colorAverage()
                 .build();
 
-        DiisopropylaminoEthylEthylMethylphosphonite = new Material.Builder(8372, "diisopropylamino_ethyl_ethyl_methylphosphonite")
+        DiisopropylaminoEthylEthylMethylphosphonite = new Material.Builder(8434, "diisopropylamino_ethyl_ethyl_methylphosphonite")
                 .fluid()
                 .components(Carbon, 11, Hydrogen, 26, Nitrogen, 1, Oxygen, 2, Phosphorus, 1)
                 .colorAverage()
                 .build();
 
-        VX = new Material.Builder(8373, "vx")
+        VX = new Material.Builder(8435, "vx")
                 .fluid()
                 .components(Carbon, 11, Hydrogen, 26, Nitrogen, 1, Oxygen, 2, Phosphorus, 1, Sulfur, 1)
                 .colorAverage()
                 .build();
 
-        TitaniumEthoxide = new Material.Builder(8374, "titanium_ethoxide")
+        TitaniumEthoxide = new Material.Builder(8436, "titanium_ethoxide")
                 .fluid()
                 .components(Titanium, 4, Carbon, 32, Hydrogen, 80, Oxygen, 16)
                 .colorAverage()

@@ -7,6 +7,9 @@ BCR = recipemap('bubble_column_reactor')
 DISTILLERY = recipemap('distillery')
 
 //OPTIONAL FLOTATION
+
+//TODO: ENABLE WHEN 0.0.14 IS RELEASED
+/*
 FLOTATION.recipeBuilder()
     .inputs(metaitem('dustImpureBarite') * 8)
     .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
@@ -16,6 +19,8 @@ FLOTATION.recipeBuilder()
     .EUt(Globals.voltAmps[3])
     .duration(80)
     .buildAndRegister()
+
+ */
 
 ROASTER.recipeBuilder()
     .inputs(metaitem('dustBarite') * 6)
@@ -37,7 +42,7 @@ BR.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
-BCR.recipeBuilder()
+BR.recipeBuilder()
     .inputs(metaitem('dustBariumSulfide') * 2)
     .fluidInputs(fluid('carbon_dioxide') * 1000)
     .fluidInputs(fluid('distilled_water') * 2000)

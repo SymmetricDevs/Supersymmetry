@@ -772,22 +772,22 @@ public class UnknownCompositionMaterials {
 
         AluminiumAlkoxideSolution.setFormula("[(C2H5)2O]Al(OR)3", true)
 
-        CapsaicinSolution = new Material.Builder(4118, 'capsaicin_solution')
+        CapsaicinSolution = new Material.Builder(4145, 'capsaicin_solution')
                 .fluid()
                 .color(0xd43b2a)
                 .build()
 
-        TearGas = new Material.Builder(4119, 'tear_gas')
+        TearGas = new Material.Builder(4146, 'tear_gas')
                 .fluid()
                 .color(0xd1ba5c)
                 .build()
 
-        HydratedPropene = new Material.Builder(4120, 'hydrated_propene')
+        HydratedPropene = new Material.Builder(4147, 'hydrated_propene')
                 .fluid()
                 .color(0xc9997d)
                 .build()
 
-        EthylamineMix = new Material.Builder(4121, 'ethylamine_mix')
+        EthylamineMix = new Material.Builder(4148, 'ethylamine_mix')
                 .fluid()
                 .color(0xdbaf48)
                 .build()
