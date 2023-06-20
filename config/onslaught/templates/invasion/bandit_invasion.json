@@ -28,10 +28,10 @@
             "mobs": [
               {
                 "id": "bandit",
-                "count": [1, 2],
+                "count": [2, 3],
                 "spawn": {
                   "type": "ground",
-                  "light": [0, 7],
+                  "light": [0, 15],
                   "rangeXZ": [16, 32]
                 }
               }

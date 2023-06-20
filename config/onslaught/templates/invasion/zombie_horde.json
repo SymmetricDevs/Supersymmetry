@@ -28,7 +28,7 @@
             "mobs": [
               {
                 "id": "zombie",
-                "count": [4, 8],
+                "count": [8, 12],
                 "spawn": {
                   "type": "ground",
                   "light": [0, 7],
@@ -47,8 +47,8 @@
             "forceSpawn": true,
             "mobs": [
               {
-                "id": "zombie_reinforcement_00",
-                "count": [6, 10],
+                "id": "zombie",
+                "count": [8, 12],
                 "spawn": {
                   "type": "ground",
                   "light": [0, 15],
@@ -62,8 +62,8 @@
             "forceSpawn": true,
             "mobs": [
               {
-                "id": "zombie_reinforcement_01",
-                "count": [6, 10],
+                "id": "zombie",
+                "count": [8, 12],
                 "spawn": {
                   "type": "ground",
                   "light": [0, 15],
