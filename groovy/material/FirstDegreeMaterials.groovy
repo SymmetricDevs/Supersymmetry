@@ -1734,7 +1734,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         SoftenedLead = new Material.Builder(8352, "softened_lead")
-                .fluid()
+                .dust().fluid()
                 .components(Lead, 1)
                 .color(0x9874b0)
                 .build();
@@ -2344,5 +2344,30 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
                 .setFormula("P4", true);
+
+        PotassiumAmylXanthate = new Material.Builder(8443, 'potassium_amyl_xanthate')
+                .dust()
+                .components(Carbon, 6, Hydrogen, 11, Potassium, 1, Oxygen, 1, Sulfur, 2)
+                .colorAverage()
+                .build()
+
+        ZincOxide = new Material.Builder(8444, 'zinc_oxide')
+                .dust()
+                .components(Zinc, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        HotSulfuricAcid = new Material.Builder(8445, 'hot_sulfuric_acid')
+                .fluid()
+                .fluidTemp(353)
+                .components(Hydrogen, 2, Sulfur, 1, Oxygen, 4)
+                .color(0xff570f)
+                .build()
+
+        CadmiumSulfateSolution = new Material.Builder(8446, 'cadmium_sulfate_solution')
+                .fluid()
+                .components(Water, 1, Cadmium, 1, Sulfur, 1, Oxygen, 4)
+                .colorAverage()
+                .build()
     }
 }

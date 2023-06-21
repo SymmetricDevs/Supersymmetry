@@ -42,7 +42,6 @@ def name_removals = [
 	"industrialrenewal:solar_panel_frame",
 	"industrialrenewal:solar_panel",
 	"industrialrenewal:portable_generator",
-	"industrialrenewal:chunk_loader",
 	"industrialrenewal:mining",
 	"industrialrenewal:drill_steel",
 	"industrialrenewal:drill_diamond",
@@ -50,7 +49,8 @@ def name_removals = [
 	"industrialrenewal:block_steel",
 	"industrialrenewal:concrete",
 	"industrialrenewal:manual",
-	"industrialrenewal:medkit"
+	"industrialrenewal:medkit",
+	"industrialrenewal:chunk_loader"
 ]
 
 for (name in name_removals) {

@@ -815,5 +815,122 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xdbaf48)
                 .build()
+
+        ImpureSphaleriteSlurry = new Material.Builder(4153, 'impure_sphalerite_slurry')
+                .fluid()
+                .color(0xa5a690)
+                .build()
+
+        UnprocessedSphaleriteSlurry = new Material.Builder(4154, 'unprocessed_sphalerite_slurry')
+                .fluid()
+                .color(0xc7c991)
+                .build()
+
+        GalenaSlurry = new Material.Builder(4155, 'galena_slurry')
+                .fluid()
+                .color(0x513d59)
+                .build()
+
+        SphaleriteSlurry = new Material.Builder(4156, 'sphalerite_slurry')
+                .fluid()
+                .color(0xb7ba63)
+                .build()
+
+        ThalliumRichFlue = new Material.Builder(4157, 'thallium_rich_flue')
+                .dust()
+                .color(0x26222e)
+                .build()
+
+        CrudeZinc = new Material.Builder(4158, 'crude_zinc')
+                .fluid()
+                .color(0x565863)
+                .build()
+
+        CadmiumRichZinc = new Material.Builder(4159, 'cadmium_rich_zinc')
+                .fluid()
+                .color(0x80849c)
+                .build()
+
+        ImpureSmithsoniteSlurry = new Material.Builder(4160, 'impure_smithsonite_slurry')
+                .fluid()
+                .color(0x83a899)
+                .build()
+
+        SmithsoniteSlurry = new Material.Builder(4161, 'smithsonite_slurry')
+                .fluid()
+                .color(0x89c9af)
+                .build()
+
+        ZincLeach = new Material.Builder(4162, 'zinc_leach')
+                .fluid()
+                .color(0x8c6f58)
+                .build()
+
+        ZincLeachResidue = new Material.Builder(4163, 'zinc_leach_residue')
+                .dust()
+                .color(0x33281f)
+                .build()
+
+        HotZincLeach = new Material.Builder(4164, 'hot_zinc_leach')
+                .fluid()
+                .fluidTemp(353)
+                .color(0xb89e8a)
+                .build()
+
+        HotZincLeachResidue = new Material.Builder(4165, 'hot_zinc_leach_residue')
+                .dust()
+                .color(0x3b332d)
+                .build()
+
+        ZincRichSlag = new Material.Builder(4166, 'zinc_rich_slag')
+                .dust()
+                .color(0x242323)
+                .build()
+
+        ReducedZincLeach = new Material.Builder(4167, 'reduced_zinc_leach')
+                .fluid()
+                .color(0xb38764)
+                .build()
+
+        WaelzOxide = new Material.Builder(4168, 'waelz_oxide')
+                .dust().fluid()
+                .color(0x475453)
+                .build()
+
+        GermaniumRichSlag = new Material.Builder(4169, 'germanium_rich_slag')
+                .dust()
+                .color(0x2d2e27)
+                .build()
+
+        ZincCementationSlurry = new Material.Builder(4170, 'zinc_cementation_slurry')
+                .fluid()
+                .color(0x4f5663)
+                .build()
+
+        PrecipitatedZincLeach = new Material.Builder(4171, 'precipitated_zinc_leach')
+                .fluid()
+                .color(0x756d54)
+                .build()
+
+        CopperCadmiumResidue = new Material.Builder(4172, 'copper_cadmium_residue')
+                .dust()
+                .color(0x47271d)
+                .build()
+
+        HotPrecipitatedZincLeach = new Material.Builder(4173, 'hot_precipitated_zinc_leach')
+                .fluid()
+                .fluidTemp(353)
+                .color(0x918a71)
+                .build()
+
+        ReprecipitatedZincLeach = new Material.Builder(4174, 'reprecipitated_zinc_leach')
+                .fluid()
+                .color(0x756e54)
+                .build()
+
+        CobaltResidue = new Material.Builder(4175, 'cobalt_residue')
+                .dust()
+                .color(0x373b6b)
+                .build()
     }
 }

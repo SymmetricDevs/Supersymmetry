@@ -881,6 +881,16 @@ material.barium_carbonate=Barium Carbonate
 material.barium_oxide=Barium Oxide
 material.barium_chloride_solution=Barium Chloride Solution
 material.halite_leach=Halite Leach
+material.impure_sphalerite_slurry=Impure Sphalerite Slurry
+material.unprocessed_sphalerite_slurry=Unprocessed Sphalerite Slurry
+material.galena_slurry=Galena Slurry
+material.sphalerite_slurry=Sphalerite Slurry
+material.thallium_rich_flue=Thallium Rich Flue
+material.crude_zinc=Crude Zinc
+material.cadmium_rich_zinc=Cadmium Rich Zinc
+material.impure_smithsonite_slurry=Impure Smithsonite Slurry
+material.smithsonite_slurry=Smithsonite Slurry
+material.potassium_amyl_xanthate=Potassium Amyl Xanthate
 
 # Thermodynamics
 
@@ -1189,6 +1199,23 @@ material.diethylacetamide=Diethylacetamide
 material.diethylacetimidamine=Diethylacetimidamine
 material.novichok=Novichok A-230 Nerve Agent
 material.ethylamine_mix=Ethylamine Mix
+material.zinc_leach=Zinc Leach
+material.zinc_leach_residue=Zinc Leach Residue
+material.hot_zinc_leach=Hot Zinc Leach
+material.hot_zinc_leach_residue=Hot Zinc Leach Residue
+material.zinc_rich_slag=Zinc-Rich Slag
+material.reduced_zinc_leach=Reduced Zinc Leach
+material.waelz_oxide=Waelz Oxide
+material.germanium_rich_slag=Germanium-Rich Slag
+material.zinc_cementation_slurry=Zinc Cementation Slurry
+material.precipitated_zinc_leach=Precipitated Zinc Leach
+material.copper_cadmium_residue=Copper Cadmium Residue
+material.hot_precipitated_zinc_leach=Hot Precipitated Zinc Leach
+material.reprecipitated_zinc_leach=Reprecipitated Zinc Leach
+material.cobalt_residue=Cobalt Residue
+material.cadmium_sulfate_solution=Cadmium Sulfate Solution
+material.hot_sulfuric_acid=Hot Sulfuric Acid
+material.zinc_oxide=Zinc Oxide
 
 # Isotopes
 
@@ -1539,9 +1566,11 @@ tile.multiblocked.ore_sorter.name=Ore Sorter
 multiblocked.ore_sorter.name=Ore Sorter
 multiblocked.ore_sorter.description=Sorts Ores.
 
-# Nether
+# Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
 tile.magma.name=Magma-Infused Netherrack
+
+item.fireworks.name=Elytra Rocket
 
 # Laser Engraver Renaming
 gregtech.machine.laser_engraver.lv.name=Basic Electron Beam Lithographer

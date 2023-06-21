@@ -164,7 +164,6 @@ DISTILLATION_TOWER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-
 // Carbon Monoxide roaster
 
 for (coal_source in COAL_SOURCES) {
@@ -903,7 +902,7 @@ PYROLYSE.recipeBuilder()
 .fluidInputs(fluid('acidic_chlorodifluoromethane') * 6000)
 .fluidOutputs(fluid('acidic_tetrafluoroethylene') * 5000)
 .duration(200)
-.EUt(30)
+.EUt(120)
 .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder()
@@ -1598,7 +1597,7 @@ PYROLYSE.recipeBuilder()
 .fluidInputs(fluid('nitrogen') * 4000)
 .inputs(ore('dustCaprolactam') * 8)
 .outputs(ore('dustPolycaprolactam').first() * 8)
-.EUt(60)
+.EUt(240)
 .duration(200)
 .buildAndRegister()
 
@@ -1902,7 +1901,7 @@ POLYMERIZATION.recipeBuilder()
 .inputs(ore('dustPotassiumPersulfate'))
 .fluidOutputs(fluid('polytetrafluoroethylene_solution') * 2000)
 .duration(300)
-.EUt(60)
+.EUt(240)
 .buildAndRegister()
 
 DRYER.recipeBuilder()
@@ -2649,7 +2648,7 @@ REACTION_FURNACE.recipeBuilder()
 ROASTER.recipeBuilder()
         .inputs(metaitem('dustZinc'))
         .fluidInputs(fluid('oxygen') * 1000)
-        .outputs(metaitem('dustZincite') * 2)
+        .outputs(metaitem('dustZincOxide') * 2)
         .duration(300)
         .EUt(30)
         .buildAndRegister()
@@ -2664,7 +2663,7 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 BR.recipeBuilder()
-        .inputs(metaitem('dustZincite') * 1)
+        .inputs(metaitem('dustZincOxide') * 1)
         .inputs(metaitem('dustCopperIiOxide') * 1)
         .inputs(metaitem('dustAlumina') * 1)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
@@ -3924,6 +3923,14 @@ DISTILLATION_TOWER.recipeBuilder()
         .buildAndRegister()
 
 // Terephthalic Acid
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('acetylene') * 50)
+        .fluidInputs(fluid('bromine') * 200)
+        .fluidOutputs(fluid('tetrabromomethane') * 50)
+        .EUt(120)
+        .duration(3)
+        .buildAndRegister()
 
 MIXER.recipeBuilder()
         .inputs(metaitem('dustCobalt'))

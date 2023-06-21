@@ -74,6 +74,7 @@ def name_removals = [
 	"techguns:pistol",
 	"techguns:pistol_alt",
 	"techguns:combatshotgun",
+	"techguns:goldenrevolver",
 	"techguns:mac10",
 	"techguns:mac10_alt",
 	"techguns:flamethrower",
@@ -87,6 +88,7 @@ def name_removals = [
 	"techguns:grenadelauncher",
 	"techguns:aug",
 	"techguns:aug_alt",
+	"techguns:sawedoff",
 	"techguns:netherblaster",
 	"techguns:biogun",
 	"techguns:biogun_alt",
@@ -129,7 +131,11 @@ def name_removals = [
 	"techguns:laserpistol",
 	"techguns:laserpistol_alt",
 	"techguns:compressedairtankempty",
-	"techguns:compressedairtankempty_alt"
+	"techguns:compressedairtankempty_alt",
+	"techguns:simplemachine_8_camo_bench",
+	"techguns:simplemachine_9_upgrade_bench",
+	"techguns:simplemachine2_9_armor_bench",
+	"techguns:itemshared_60_heavycloth"
 ]
 
 for (name in name_removals) {
@@ -976,18 +982,6 @@ crafting.addShaped("iron_barrel", item('techguns:itemshared:38'), [
 		[ore('craftingToolScrewdriver'), ore('stickIron'), ore('craftingToolHardHammer')]
 ]);
 
-crafting.addShaped("techguns_revolver", item('techguns:revolver'), [
-		[ore('craftingToolScrewdriver'), ore('craftingToolWrench'), ore('craftingToolFile')],
-		[item('techguns:itemshared:37'), ore('plateSteel'), ore('boltSteel')],
-		[null, ore('plateSteel'), item('techguns:itemshared:42')]
-]);
-
-crafting.addShaped("techguns_boltaction", item('techguns:boltaction'), [
-		[ore('craftingToolScrewdriver'), ore('craftingToolWrench'), ore('craftingToolFile')],
-		[ore('blockGlassColorless'), ore('plateIron'), null],
-		[item('techguns:itemshared:39'), item('techguns:itemshared:33'), item('techguns:itemshared:42')]
-]);
-
 crafting.addShaped("heavy_cloth", item('techguns:itemshared:60')*3, [
 		[ore('leather'), ore('leather'), ore('leather')],
 		[ore('wireFineSteel'), ore('wireFineSteel'), ore('wireFineSteel')],
@@ -1005,46 +999,24 @@ crafting.addShaped("techguns_iron_receiver", item('techguns:itemshared:33'), [
 		[null, ore('screwIron'), ore('screwIron')]
 ]);
 
-crafting.addShaped("tg_soldier_helmet", item('techguns:t1_combat_helmet'), [
-		[ore('plateIron'), ore('plateIron'), ore('plateIron')],
-		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')]
-]);
-
-crafting.addShaped("tg_soldier_chestplate", item('techguns:t1_combat_chestplate'), [
-		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
-		[ore('plateIron'), ore('plateIron'), ore('plateIron')],
-		[item('techguns:itemshared:60'), item('techguns:itemshared:60'), item('techguns:itemshared:60')]
-]);
-
-crafting.addShaped("tg_soldier_leggings", item('techguns:t1_combat_leggings'), [
-		[ore('plateIron'), ore('plateIron'), ore('plateIron')],
-		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
-		[item('techguns:itemshared:60'), null, item('techguns:itemshared:60')]
-]);
-
-crafting.addShaped("tg_soldier_boots", item('techguns:t1_combat_boots'), [
-		[item('techguns:itemshared:60'), null, item('techguns:itemshared:60')],
-		[ore('plateIron'), ore('craftingToolHardHammer'), ore('plateIron')]
-]);
-
-crafting.addShaped("tg_combat_helmet", item('techguns:t2_combat_helmet'), [
+crafting.replaceShaped("techguns:t2_combat_helmet", item('techguns:t2_combat_helmet'), [
 		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
 		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')]
 ]);
 
-crafting.addShaped("tg_combat_chestplate", item('techguns:t2_combat_chestplate'), [
+crafting.replaceShaped("techguns:t2_combat_chestplate", item('techguns:t2_combat_chestplate'), [
 		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
 		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
 		[item('techguns:itemshared:60'), item('techguns:itemshared:60'), item('techguns:itemshared:60')]
 ]);
 
-crafting.addShaped("tg_combat_leggings", item('techguns:t2_combat_leggings'), [
+crafting.replaceShaped("techguns:t2_combat_leggings", item('techguns:t2_combat_leggings'), [
 		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
 		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
 		[item('techguns:itemshared:60'), null, item('techguns:itemshared:60')]
 ]);
 
-crafting.addShaped("tg_combat_boots", item('techguns:t2_combat_boots'), [
+crafting.replaceShaped("techguns:t2_combat_boots", item('techguns:t2_combat_boots'), [
 		[item('techguns:itemshared:60'), null, item('techguns:itemshared:60')],
 		[ore('plateSteel'), ore('craftingToolHardHammer'), ore('plateSteel')]
 ]);
@@ -1089,42 +1061,76 @@ recipemap('forming_press').recipeBuilder()
 //-------------------Change TechGuns damage values to be better suited with SUSy progression----------------
 
 //Taken from Techguns2 source code for crafttweaker integration
+//Balanced by DPS (damage per second)
+//Steam weapons: 8 DPS
+//LV weapons: 16 DPS
+//MV weapons: 32 DPS
+//HV weapons: 64 DPS
 
-/*
-//Double Barrel Shotgun
-GunStatTweaker.setWeaponStat("sawedoff","DAMAGE",1.5);
-GunStatTweaker.setWeaponStat("sawedoff","DAMAGE_MIN",1.2);
+//Handcannon (1 shot per 1.5 seconds)
+GunStatTweaker.setWeaponStat("handcannon","DAMAGE",13);
+GunStatTweaker.setWeaponStat("handcannon","DAMAGE_MIN",11);
 
-//Handcannon
-GunStatTweaker.setWeaponStat("handcannon","DAMAGE",8.0);
-GunStatTweaker.setWeaponStat("handcannon","DAMAGE_MIN",6.0);
+//Bolt Action (1 shot per second)
+GunStatTweaker.setWeaponStat("boltaction","DAMAGE",10);
+GunStatTweaker.setWeaponStat("boltaction","DAMAGE_MIN",8);
 
-//Revolver
-GunStatTweaker.setWeaponStat("revolver","DAMAGE",10.0);
-GunStatTweaker.setWeaponStat("revolver","DAMAGE_MIN",7.5);
+//Pistol (4 shots per second)
+GunStatTweaker.setWeaponStat("pistol","DAMAGE",5);
+GunStatTweaker.setWeaponStat("pistol","DAMAGE_MIN",4);
 
-//Combat Shotgun
-GunStatTweaker.setWeaponStat("combatshotgun","DAMAGE",3.0);
-GunStatTweaker.setWeaponStat("combatshotgun","DAMAGE_MIN",2.4);
+//Double Barrel Shotgun (8 bullets per shot, 1 shot per second)
+GunStatTweaker.setWeaponStat("sawedoff","DAMAGE",2.4);
+GunStatTweaker.setWeaponStat("sawedoff","DAMAGE_MIN",2);
 
-//Pistol
-GunStatTweaker.setWeaponStat("pistol","DAMAGE",20.0);
-GunStatTweaker.setWeaponStat("pistol","DAMAGE_MIN",16.0);
+//Revolver (2.5 shots per second)
+GunStatTweaker.setWeaponStat("revolver","DAMAGE",6);
+GunStatTweaker.setWeaponStat("revolver","DAMAGE_MIN",4);
 
-//Mac-10
-GunStatTweaker.setWeaponStat("mac10","DAMAGE",32.0);
-GunStatTweaker.setWeaponStat("mac10","DAMAGE_MIN",28.0);
+//Combat Shotgun (8 bullets per shot, 1 shot per second)
+GunStatTweaker.setWeaponStat("combatshotgun","DAMAGE",2.4);
+GunStatTweaker.setWeaponStat("combatshotgun","DAMAGE_MIN",2);
 
-//M4 assault rifle
-GunStatTweaker.setWeaponStat("m4","DAMAGE",36.0);
-GunStatTweaker.setWeaponStat("m4","DAMAGE_MIN",30.0);
+//Thompson SMG (6 shots per second)
+GunStatTweaker.setWeaponStat("thompson","DAMAGE",6);
+GunStatTweaker.setWeaponStat("thompson","DAMAGE_MIN",5);
 
-//Thompson SMG
-GunStatTweaker.setWeaponStat("thompson","DAMAGE",45.0);
-GunStatTweaker.setWeaponStat("thompson","DAMAGE_MIN",40.0);
+//AK47 (6 shots per second)
+GunStatTweaker.setWeaponStat("ak47","DAMAGE",6);
+GunStatTweaker.setWeaponStat("ak47","DAMAGE_MIN",5);
 
-//AK47
-GunStatTweaker.setWeaponStat("ak47","DAMAGE",40.0);
-GunStatTweaker.setWeaponStat("ak47","DAMAGE_MIN",36.0);
+//M4 (6 shots per second)
+GunStatTweaker.setWeaponStat("m4","DAMAGE",6);
+GunStatTweaker.setWeaponStat("m4","DAMAGE_MIN",5);
 
- */
+//Infiltrator (6 shots per second)
+GunStatTweaker.setWeaponStat("m4_infiltrator","DAMAGE",6);
+GunStatTweaker.setWeaponStat("m4_infiltrator","DAMAGE_MIN",5);
+
+//Mac-10 (6 shots per second)
+GunStatTweaker.setWeaponStat("mac10","DAMAGE", 6);
+GunStatTweaker.setWeaponStat("mac10","DAMAGE_MIN", 5);
+
+//AUG (6 shots per second)
+GunStatTweaker.setWeaponStat("aug","DAMAGE", 12);
+GunStatTweaker.setWeaponStat("aug","DAMAGE_MIN", 10);
+
+//LMG (10 shots per second)
+GunStatTweaker.setWeaponStat("lmg","DAMAGE", 7);
+GunStatTweaker.setWeaponStat("lmg","DAMAGE_MIN", 6);
+
+//AS50 (2 shots per second)
+GunStatTweaker.setWeaponStat("as50","DAMAGE", 34);
+GunStatTweaker.setWeaponStat("as50","DAMAGE_MIN", 30);
+
+//Vector (10 shots per second)
+GunStatTweaker.setWeaponStat("vector","DAMAGE", 7);
+GunStatTweaker.setWeaponStat("vector","DAMAGE_MIN", 6);
+
+//Scar (5 shots per second)
+GunStatTweaker.setWeaponStat("scar","DAMAGE", 14);
+GunStatTweaker.setWeaponStat("scar","DAMAGE_MIN", 12);
+
+//Minigun (20 shots per second)
+GunStatTweaker.setWeaponStat("minigun","DAMAGE", 5);
+GunStatTweaker.setWeaponStat("minigun","DAMAGE_MIN", 4);

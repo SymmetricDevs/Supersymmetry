@@ -271,6 +271,29 @@ class SuSyMaterials {
         public static Material TearGas;
         public static Material HydratedPropene;
         public static Material EthylamineMix;
+        public static Material ImpureSphaleriteSlurry;
+        public static Material UnprocessedSphaleriteSlurry;
+        public static Material GalenaSlurry;
+        public static Material SphaleriteSlurry;
+        public static Material ThalliumRichFlue;
+        public static Material CrudeZinc;
+        public static Material CadmiumRichZinc;
+        public static Material ImpureSmithsoniteSlurry;
+        public static Material SmithsoniteSlurry;
+        public static Material ZincLeach;
+        public static Material ZincLeachResidue;
+        public static Material HotZincLeach;
+        public static Material HotZincLeachResidue;
+        public static Material ZincRichSlag;
+        public static Material ReducedZincLeach;
+        public static Material WaelzOxide;
+        public static Material GermaniumRichSlag;
+        public static Material ZincCementationSlurry;
+        public static Material PrecipitatedZincLeach;
+        public static Material CopperCadmiumResidue;
+        public static Material HotPrecipitatedZincLeach;
+        public static Material ReprecipitatedZincLeach;
+        public static Material CobaltResidue;
 
         // Petrochem Materials
 
@@ -677,6 +700,10 @@ class SuSyMaterials {
         public static Material DiisopropylaminoEthylEthylMethylphosphonite;
         public static Material VX;
         public static Material TitaniumEthoxide;
+        public static Material PotassiumAmylXanthate;
+        public static Material ZincOxide;
+        public static Material HotSulfuricAcid;
+        public static Material CadmiumSulfateSolution;
 
         // Second Degree Materials
 

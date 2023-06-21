@@ -11,6 +11,7 @@ import gregtech.api.unification.material.properties.OreProperty;
 import gregtech.api.unification.material.properties.PropertyKey;
 import static material.SuSyMaterials.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
+import supersymmetry.api.recipes.SuSyRecipeMaps;
 
 //eventManager.listen(EventPriority.LOWEST) 
 class ChangeFlags {
@@ -18,6 +19,10 @@ class ChangeFlags {
     //GregTechAPI.MaterialEvent event ->
 
         log.infoMC("Modifying flags...")
+
+        SuSyRecipeMaps.FROTH_FLOTATION.setMaxFluidInputs(3);
+        SuSyRecipeMaps.FLUIDIZED_BED_REACTOR_RECIPES.setMaxOutputs(3);
+        SuSyRecipeMaps.ELECTROLYTIC_CELL_RECIPES.setMaxFluidInputs(3);
 
         Steel.addFlags("generate_spring", "generate_spring_small");
         Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");
@@ -55,6 +60,9 @@ class ChangeFlags {
         Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());
 
         Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
+
+        Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Cadmium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
@@ -496,6 +504,7 @@ class ChangeFlags {
 
         oreProp = Smithsonite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        oreProp.setDirectSmeltResult(Zinc);
 
         oreProp = Enargite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);

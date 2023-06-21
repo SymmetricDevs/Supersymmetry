@@ -287,8 +287,6 @@ for (coal_source in COAL_SOURCES) {
 }
 
 // Lead Dust * 1
-mods.gregtech.centrifuge.removeByInput(30, null, [fluid('softened_lead') * 1000])
-// Lead Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('dezinced_lead') * 1000])
 
 //SILVER REMOVAL (PARKES PROCESS)

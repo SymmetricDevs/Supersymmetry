@@ -417,6 +417,20 @@ Globals.solders.each { key, val ->
                     .duration(20)
                     .EUt(200)
                     .buildAndRegister();
+
+            recipemap('weapons_factory').recipeBuilder()
+                    .inputs([
+                            ore('plateStainlessSteel') * 2,
+                            s_oxy,
+                            s_fuel,
+                            ore('wireFineRedAlloy')
+                    ])
+                    .circuitMeta(4)
+                    .fluidInputs(fluid(key) * val)
+                    .outputs(item('minecraft:fireworks') * 16)
+                    .duration(20)
+                    .EUt(200)
+                    .buildAndRegister();
         }
         for (l_oxy in liquidoxys) {
             for (var j = 8; j < 14; j++) {

@@ -1,3 +1,6 @@
+import classes.*;
+import static globals.Globals.*
+
 def circuit(x) {
     return metaitem('circuit.integrated').withNbt([Configuration: x])
 }
@@ -607,3 +610,17 @@ crafting.replaceShaped('minecraft:stone_slab', item('minecraft:stone_slab') * 6,
 		[ore('stone'), ore('stone'), ore('stone')],
 		[null, null, null]
 ])
+
+Globals.solders.each { key, val ->
+	recipemap('assembler').recipeBuilder()
+			.inputs([
+					metaitem('platePolytetrafluoroethylene') * 2,
+					metaitem('plateStainlessSteel'),
+					metaitem('ringStainlessSteel') * 2
+			])
+			.fluidInputs(fluid(key) * val)
+			.outputs(item('minecraft:elytra'))
+			.duration(200)
+			.EUt(240)
+			.buildAndRegister();
+}
