@@ -815,5 +815,10 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xdbaf48)
                 .build()
+
+        FuselOil = new Material.Builder(4153, 'fusel_oil')
+                .fluid()
+                .color(0xa62403)
+                .build()
     }
 }

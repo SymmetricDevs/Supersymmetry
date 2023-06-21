@@ -23,6 +23,9 @@ def COAL_SOURCES = [
         "dustCharcoal"
 ]
 
+//REMOVAL
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustGalena')], [fluid('oxygen') * 3000])
+
 //OPTIONAL FLOTATION
 //GALENA
 MIXER.recipeBuilder()

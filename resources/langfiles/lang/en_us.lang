@@ -84,8 +84,8 @@ material.diethyl_ether=Diethyl Ether
 material.diethyl_ether_solution=Diethyl Ether Solution
 material.lithium_solution=Lithium Solution
 material.hydrogen_bromide=Hydrogen Bromide
-material.bromobutane=Bromobutane
-material.diluted_bromobutane=Diluted Bromobutane
+material.one_bromobutane=1-Bromobutane
+material.diluted_one_bromobutane=Diluted 1-Bromobutane
 material.butyllithium=n-Butyllithium
 material.diluted_butyllithium=Diluted n-Butyllithium
 material.polymerized_styrene_butadiene_solution=Polymerized Styrene Butadiene Solution
@@ -881,6 +881,12 @@ material.barium_carbonate=Barium Carbonate
 material.barium_oxide=Barium Oxide
 material.barium_chloride_solution=Barium Chloride Solution
 material.halite_leach=Halite Leach
+material.EthanolWaterAzeotrope=Ethanol-Water Azeotrope
+material.isoamyl_alcohol=Isoamyl Alcohol
+material.isobutyl_alcohol=Isobutyl Alcohol
+material.n_propnaol=n-Propanol
+material.copper_sulfate_solution=Copper Sulfate Solution
+material.entrained_ethanol_water_azeotrope=Entrained Ethanol Water Azeotrope
 
 # Thermodynamics
 
