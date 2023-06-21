@@ -886,7 +886,8 @@ material.isoamyl_alcohol=Isoamyl Alcohol
 material.isobutyl_alcohol=Isobutyl Alcohol
 material.n_propnaol=n-Propanol
 material.copper_sulfate_solution=Copper Sulfate Solution
-material.entrained_ethanol_water_azeotrope=Entrained Ethanol Water Azeotrope
+material.entrained_ethanol_water_azeotrope=Entrained Ethanol-Water Azeotrope
+material.fusel_oil=Fusel Oil
 
 # Thermodynamics
 
