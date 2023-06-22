@@ -417,6 +417,7 @@ public class FirstDegreeMaterials{
 
         SiliconCarbide = new Material.Builder(8145, 'silicon_carbide')
                 .dust()
+                .flags(GENERATE_PLATE)
                 .components(Silicon, 1, Carbon, 1)
                 .color(0x404040)
                 .build()
@@ -2367,6 +2368,39 @@ public class FirstDegreeMaterials{
         CadmiumSulfateSolution = new Material.Builder(8446, 'cadmium_sulfate_solution')
                 .fluid()
                 .components(Water, 1, Cadmium, 1, Sulfur, 1, Oxygen, 4)
+                .colorAverage()
+                .build()
+
+        MercuryOxide = new Material.Builder(8447, 'mercury_oxide')
+                .dust()
+                .components(Mercury, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        IndiumChloride = new Material.Builder(8448, 'indium_chloride')
+                .dust()
+                .components(Indium, 1, Chlorine, 3)
+                .colorAverage()
+                .build()
+
+        IndiumHydroxide = new Material.Builder(8449, 'indium_hydroxide')
+                .dust()
+                .components(Indium, 1, Oxygen, 3, Hydrogen, 3)
+                .colorAverage()
+                .build()
+
+        IndiumHydroxide.setFormula("In(OH)3", true)
+
+        TitaniumDioxide = new Material.Builder(8450, 'titanium_dioxide')
+                .dust()
+                .components(Titanium, 1, Oxygen, 2)
+                .color(0xffffff)
+                .iconSet(SHINY)
+                .build()
+
+        IndiumOxide = new Material.Builder(8451, 'indium_oxide')
+                .dust()
+                .components(Indium, 2, Oxygen, 3)
                 .colorAverage()
                 .build()
     }

@@ -1,13 +1,6 @@
 import classes.*;
 //REMOVALS
 
-mods.gregtech.vacuum_freezer.removeByInput(1920, null, [fluid('nether_air') * 4000])
-mods.gregtech.vacuum_freezer.removeByInput(480, null, [fluid('air') * 4000])
-mods.gregtech.vacuum_freezer.removeByInput(7680, null, [fluid('ender_air') * 4000])
-mods.gregtech.vacuum_freezer.removeByInput(30, null, [fluid('water') * 1000])
-mods.gregtech.vacuum_freezer.removeByInput(1920, null, [fluid('oxygen') * 1000])
-mods.gregtech.vacuum_freezer.removeByInput(1920, null, [fluid('helium') * 1000])
-
 mods.gregtech.steam_turbine.removeByInput(-32, null, [fluid('steam') * 640])
 mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('coal_gas')])
 mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('ethylene')])
@@ -318,10 +311,10 @@ for (cryogas in CryoGases) {
     } else {
         for (CryoGas in ICryoGas.cryo_gases) {
             recipemap('heat_exchanger').recipeBuilder()
-                    .fluidInputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
+                    .fluidInputs(liquid(cryogas.high_pressure_gas) * (int) (cryogas.amount_to_use / 4))
                     .fluidInputs(liquid(CryoGas.liquid_gas) * 100)
                     .fluidOutputs(liquid(CryoGas.normal_gas) * 6400)
-                    .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * cryogas.amount_to_use)
+                    .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * (int) (cryogas.amount_to_use / 4))
                     .duration(cryogas.duration_heat_exchanger * 4)
                     .buildAndRegister();
         }

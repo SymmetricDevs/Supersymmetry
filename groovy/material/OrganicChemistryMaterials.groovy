@@ -451,7 +451,7 @@ public class OrganicChemistryMaterials {
 
         Bleach = new Material.Builder(15073, 'bleach')
                 .fluid()
-                .components(Sodium, 1, Chlorine, 1, Oxygen, 1)
+                .components(Water, 1, Sodium, 1, Chlorine, 1, Oxygen, 1)
                 .colorAverage()
                 .build();
 

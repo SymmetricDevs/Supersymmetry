@@ -704,6 +704,11 @@ class SuSyMaterials {
         public static Material ZincOxide;
         public static Material HotSulfuricAcid;
         public static Material CadmiumSulfateSolution;
+        public static Material MercuryOxide;
+        public static Material IndiumChloride;
+        public static Material IndiumHydroxide;
+        public static Material IndiumOxide;
+        public static Material TitaniumDioxide;
 
         // Second Degree Materials
 

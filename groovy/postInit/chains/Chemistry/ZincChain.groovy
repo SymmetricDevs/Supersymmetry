@@ -261,6 +261,7 @@ EBF.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
+//TODO: MOVE THIS TO HIGH TEMPERATURE DISTILLATION
 DISTILLATION_TOWER.recipeBuilder()
         .fluidInputs(fluid('waelz_oxide') * 1440)
         .chancedOutput(metaitem('dustLead'), 500, 300)

@@ -5,6 +5,7 @@ import gregtech.api.GregTechAPI;
 
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
+import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.material.info.MaterialFlag;
 import gregtech.api.unification.material.properties.*;
 import gregtech.api.unification.material.properties.OreProperty;
@@ -23,6 +24,7 @@ class ChangeFlags {
         SuSyRecipeMaps.FROTH_FLOTATION.setMaxFluidInputs(3);
         SuSyRecipeMaps.FLUIDIZED_BED_REACTOR_RECIPES.setMaxOutputs(3);
         SuSyRecipeMaps.ELECTROLYTIC_CELL_RECIPES.setMaxFluidInputs(3);
+        SuSyRecipeMaps.QUENCHER_RECIPES.setMaxFluidInputs(2);
 
         Steel.addFlags("generate_spring", "generate_spring_small");
         Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");

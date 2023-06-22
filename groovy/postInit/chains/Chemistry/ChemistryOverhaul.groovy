@@ -4,7 +4,7 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import static gregtech.api.unification.ore.OrePrefix.dye;
 
-
+VACUUM_FREEZER = recipemap('vacuum_freezer')
 CSTR = recipemap('continuous_stirred_tank_reactor')
 TBR = recipemap('trickle_bed_reactor')
 FBR = recipemap('fixed_bed_reactor')
@@ -993,11 +993,11 @@ CSTR.recipeBuilder()
 
 // Dinitrogen Tetroxide
 
-BR.recipeBuilder()
+VACUUM_FREEZER.recipeBuilder()
 .fluidInputs(fluid('nitrogen_dioxide') * 2000)
 .fluidOutputs(fluid('dinitrogen_tetroxide') * 1000)
 .duration(200)
-.EUt(60)
+.EUt(120)
 .buildAndRegister()
 
 // 1,1-dimethylhydrazine
@@ -2097,7 +2097,7 @@ CSTR.recipeBuilder()
 
 DISTILLATION_TOWER.recipeBuilder()
 .fluidInputs(fluid('impure_bleach') * 4000)
-.fluidOutputs(fluid('water') * 3000)
+.fluidOutputs(fluid('water') * 2000)
 .fluidOutputs(fluid('bleach') * 1000)
 .outputs(ore('dustSalt').first() * 2)
 .duration(300)
@@ -2108,7 +2108,7 @@ BR.recipeBuilder()
 .fluidInputs(fluid('bleach') * 1000)
 .fluidInputs(fluid('ammonia') * 1000)
 .fluidOutputs(fluid('monochloramine') * 1000)
-.outputs(ore('dustSodiumHydroxide').first() * 3)
+.fluidOutputs(fluid('sodium_hydroxide_solution') * 1000)
 .duration(200)
 .EUt(30)
 .buildAndRegister()

@@ -1216,6 +1216,11 @@ material.cobalt_residue=Cobalt Residue
 material.cadmium_sulfate_solution=Cadmium Sulfate Solution
 material.hot_sulfuric_acid=Hot Sulfuric Acid
 material.zinc_oxide=Zinc Oxide
+material.mercury_oxide=Mercury Oxide
+material.indium_chloride=Indium Chloride
+material.indium_hydroxide=Indium Hydroxide
+material.titanium_dioxide=Titanium Dioxide
+material.indium_oxide=Indium Oxide
 
 # Isotopes
 
