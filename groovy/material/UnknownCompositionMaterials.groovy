@@ -820,5 +820,10 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xa62403)
                 .build()
+
+        FluorinatedOctanoylChlorideMixture = new Material.Builder(4154, 'fluorinated_octanoyl_chloride_mixture')
+                .fluid()
+                .color(0x458583)
+                .build()
     }
 }

@@ -202,5 +202,11 @@ public class ThirdDegreeMaterials {
                 .components(Diisopropylamine, 1, Water, 2)
                 .colorAverage()
                 .build()
+
+        PerfluorooctanoicAcidMixture = new Material.Builder(24031, 'perfluorooctanoic_acid_mixture')
+                .fluid()
+                .components(PerfluorooctanoicAcid, 1, HydrofluoricAcid, 1)
+                .colorAverage()
+                .build()
     }
 }

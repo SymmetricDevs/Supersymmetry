@@ -272,6 +272,7 @@ class SuSyMaterials {
         public static Material HydratedPropene;
         public static Material EthylamineMix;
         public static Material FuselOil;
+        public static Material FluorinatedOctanoylChlorideMixture;
 
         // Petrochem Materials
 
@@ -680,6 +681,8 @@ class SuSyMaterials {
         public static Material TitaniumEthoxide;
         public static Material EthanolWaterAzeotrope;
         public static Material EntrainedEthanolWaterAzeotrope;
+        public static Material ChromiumIIIOxide;
+        public static Material SodiumSulfateAcetoneSolution;
 
         // Second Degree Materials
 
@@ -951,6 +954,10 @@ class SuSyMaterials {
         public static Material IsoamylAlcohol;
         public static Material IsobutylAlcohol;
         public static Material NPropanol;
+        public static Material CaprylicAcid;
+        public static Material OctanoylChloride;
+        public static Material PerfluorooctanoylFluoride;
+        public static Material PerfluorooctanoicAcid;
 
         // Third Degree Materials
 
@@ -985,6 +992,8 @@ class SuSyMaterials {
         public static Material DilutedMethylIsobutylKetone;
         public static Material DilutedTwoEthylTwoHexenal;
         public static Material DilutedDiisopropylamine;
+        public static Material PerfluorooctanoicAcidMixture;
+        public static Material FluorinatedDetergentMixture;
 
         // Thermodynamics/Greenhouse Materials
 

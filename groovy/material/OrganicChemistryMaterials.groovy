@@ -1245,5 +1245,35 @@ public class OrganicChemistryMaterials {
                 .build();
 
         IsobutylAlcohol.setFormula("(CH3)2CHCH2OH", true)
+
+        CaprylicAcid = new Material.Builder(15202, "caprylic_acid")
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 16, Oxygen, 2)
+                .color(0x748545)
+                .build();
+
+        OctanoylChloride = new Material.Builder(15203, "octanoyl_chloride")
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 15, Chlorine, 1, Oxygen, 1)
+                .color(0x458548)
+                .build();
+
+        PerfluorooctanoylFluoride = new Material.Builder(15204, "perfluorooctanoyl_fluoride")
+                .fluid()
+                .components(Carbon, 8, Fluorine, 16, Oxygen, 1)
+                .color(0x288a7b)
+                .build();
+
+        PerfluorooctanoicAcid = new Material.Builder(15205, "perfluorooctanoic_acid")
+                .dust()
+                .components(Carbon, 8, Hydrogen, 1, Fluorine, 15, Oxygen, 2)
+                .color(0x24bfa8)
+                .build();
+
+        FluorinatedDetergentMixture = new Material.Builder(15206, "fluorinated_detergent_mixture")
+                .fluid()
+                .components(PerfluorooctanoicAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }

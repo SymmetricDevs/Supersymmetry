@@ -888,6 +888,15 @@ material.n_propnaol=n-Propanol
 material.copper_sulfate_solution=Copper Sulfate Solution
 material.entrained_ethanol_water_azeotrope=Entrained Ethanol-Water Azeotrope
 material.fusel_oil=Fusel Oil
+material.chromium_iii_oxide=Chromium III Oxide
+material.sodium_sulfate_acetone_solution=Sodium Sulfate Acetone Solution
+material.caprylic_acid=Caprylic Acid
+material.octanoyl_chloride=Octanoyl Chloride
+material.fluorinated_octanoyl_chloride_mixture=Fluorinated Octanoyl Chloride Mixture
+material.perfluorooctanoyl_fluoride=Perfluorooctanoyl Fluoride
+material.perfluorooctanoic_acid_mixture=Perfluorooctanoic Acid Mixture
+material.perfluorooctanoic_acid=Perfluorooctanoic Acid
+material.fluorinated_detergent_mixture=Fluorinated Detergent Mixture
 
 # Thermodynamics
 

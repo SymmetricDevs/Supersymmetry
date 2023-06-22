@@ -2239,7 +2239,7 @@ public class FirstDegreeMaterials{
 
         ChromiumSulfateSolution = new Material.Builder(8426, "chromium_sulfate_solution")
                 .fluid()
-                .components(Chrome, 4, Water, 24, Sulfur, 6, Oxygen, 24, Acetone, 1)
+                .components(Chrome, 4, Sulfur, 6, Oxygen, 24, Acetone, 1, Water, 9)
                 .color(0x2c733a)
                 .build();
 
@@ -2355,6 +2355,18 @@ public class FirstDegreeMaterials{
                 .fluid()
                 .components(Ethanol, 91, Water, 9, Toluene, 10)
                 .colorAverage()
+                .build();
+
+        ChromiumIIIOxide = new Material.Builder(8445, "chromium_iii_oxide")
+                .dust()
+                .components(Chromium, 2, Oxygen, 3)
+                .color(0xb3c99)
+                .build();
+
+        SodiumSulfateAcetoneSolution = new Material.Builder(8426, "sodium_sulfate_acetone_solution")
+                .fluid()
+                .components(Sodium, 12, Sulfur, 6, Oxygen, 24, Acetone, 1, Water, 9)
+                .color(0x2c733a)
                 .build();
     }
 }
