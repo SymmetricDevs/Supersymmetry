@@ -272,6 +272,9 @@ class SuSyMaterials {
         public static Material HydratedPropene;
         public static Material EthylamineMix;
         public static Material FuselOil;
+        public static Material FluorinatedOctanoylChlorideMixture;
+        public static Material ButyraldehydeMixture;
+        public static Material PentanalMixture;
 
         // Petrochem Materials
 
@@ -586,8 +589,6 @@ class SuSyMaterials {
         public static Material BerylliumSulfateSolution;
         public static Material AluminiumChloride;
         public static Material PotassiumAlum;
-        public static Material SodiumEthoxideSolution;
-        public static Material SodiumEthylXanthate;
         public static Material ImpureGalenaSlurry;
         public static Material CopperDross;
         public static Material DecopperedLead;
@@ -680,6 +681,8 @@ class SuSyMaterials {
         public static Material TitaniumEthoxide;
         public static Material EthanolWaterAzeotrope;
         public static Material EntrainedEthanolWaterAzeotrope;
+        public static Material ChromiumIIIOxide;
+        public static Material SodiumSulfateAcetoneSolution;
 
         // Second Degree Materials
 
@@ -742,7 +745,6 @@ class SuSyMaterials {
         public static Material BerylResidue;
         public static Material AmmoniumFluorideSolution;
         public static Material AluminiumSulfateSolution;
-        public static Material SodiumEthylXanthateSolution;
         public static Material CopperSulfateSolution;
         public static Material BariumChlorideSolution;
         public static Material DilutedBromooctane;
@@ -951,6 +953,21 @@ class SuSyMaterials {
         public static Material IsoamylAlcohol;
         public static Material IsobutylAlcohol;
         public static Material NPropanol;
+        public static Material CaprylicAcid;
+        public static Material OctanoylChloride;
+        public static Material PerfluorooctanoylFluoride;
+        public static Material PerfluorooctanoicAcid;
+        public static Material OneButene;
+        public static Material TwoButene;
+        public static Material NPentanol;
+        public static Material Valeraldehyde;
+        public static Material SodiumEthoxideSolution;
+        public static Material SodiumEthylXanthate;
+        public static Material PotassiumAmylXanthate;
+        public static Material Isobutyraldehyde;
+        public static Material SodiumIsobutylXanthate;
+        public static Material PotassiumIsopropylXanthate;
+        public static Material PotassiumEthylXanthate;
 
         // Third Degree Materials
 
@@ -985,6 +1002,13 @@ class SuSyMaterials {
         public static Material DilutedMethylIsobutylKetone;
         public static Material DilutedTwoEthylTwoHexenal;
         public static Material DilutedDiisopropylamine;
+        public static Material PerfluorooctanoicAcidMixture;
+        public static Material FluorinatedSurfactantMixture;
+        public static Material SodiumEthylXanthateSolution;
+        public static Material PotassiumAmylXanthateSolution;
+        public static Material SodiumIsobutylXanthateSolution;
+        public static Material PotassiumIsopropylXanthateSolution;
+        public static Material PotassiumEthylXanthateSolution;
 
         // Thermodynamics/Greenhouse Materials
 

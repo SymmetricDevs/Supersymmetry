@@ -820,5 +820,20 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xa62403)
                 .build()
+
+        FluorinatedOctanoylChlorideMixture = new Material.Builder(4154, 'fluorinated_octanoyl_chloride_mixture')
+                .fluid()
+                .color(0x458583)
+                .build()
+
+        ButyraldehydeMixture = new Material.Builder(4155, "butyraldehyde_mixture")
+                .fluid()
+                .color(0x96920e)
+                .build();
+
+        PentanalMixture = new Material.Builder(4156, "pentanal_mixture")
+                .fluid()
+                .color(0x968450)
+                .build();
     }
 }
