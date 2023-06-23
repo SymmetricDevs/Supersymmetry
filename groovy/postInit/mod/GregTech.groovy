@@ -699,3 +699,28 @@ CENTRIFUGE.recipeBuilder()
         .duration(40)
         .EUt(30)
         .buildAndRegister();
+		
+// Fix distillation tower being too difficult (4 EV circuits? Seriously?)
+
+
+crafting.replaceShaped('gregtech:distillation_tower', metaitem('distillation_tower'), [
+        [ore('circuitHv'), metaitem('pipeLargeFluidStainlessSteel'), ore('circuitHv')],
+        [metaitem('electric.pump.hv'), metaitem('hull.mv'), metaitem('electric.pump.hv')],
+        [ore('circuitHv'), metaitem('pipeLargeFluidStainlessSteel'), ore('circuitHv')]
+])
+
+// Item Magnet with Lead Acid battery
+
+crafting.replaceShaped('gregtech:lv_magnet_lead_acid', metaitem('item_magnet.lv'), [
+        [ore('stickSteelMagnetic'), ore('toolWrench'), ore('stickSteelMagnetic')],
+        [ore('stickSteelMagnetic'), metaitem('battery.lead_acid'), ore('stickSteelMagnetic')],
+        [ore('cableGtSingleTin'), ore('plateSteel'), ore('cableGtSingleTin')]
+])
+
+// Power Unit with Lead Acid Battery
+
+crafting.replaceShaped('gregtech:lv_power_unit_lead_acid', metaitem('power_unit.lv'), [
+        [ore('screwSteel'), null, ore('toolScrewdriver')],
+        [ore('gearSmallSteel'), metaitem('electric_motor.lv'), ore('gearSmallSteel')],
+        [ore('plateSteel'), metaitem('battery.lead_acid'), ore('plateSteel')]
+])

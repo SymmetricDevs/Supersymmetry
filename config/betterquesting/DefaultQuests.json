@@ -8667,7 +8667,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "syngas"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "syngas"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12243,7 +12246,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "diluted_oil_light"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "diluted_oil_light"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12257,7 +12263,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "diluted_oil"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "diluted_oil"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12271,7 +12280,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "diluted_oil_heavy"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "diluted_oil_heavy"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12393,7 +12405,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "desalted_oil_light"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "desalted_oil_light"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12407,7 +12422,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "desalted_oil"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "desalted_oil"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12421,7 +12439,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "desalted_oil_heavy"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "desalted_oil_heavy"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12935,7 +12956,10 @@
             },
             "1:10": {
               "Amount:3": 1000,
-              "FluidName:8": "sodium_hydroxide_solution"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "sodium_hydroxide_solution"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -13071,7 +13095,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "sodium_aluminate_solution"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "sodium_aluminate_solution"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -13987,7 +14014,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "hydrogen_fluoride"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "hydrogen_fluoride"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -14524,7 +14554,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "potassium_hydroxide_solution"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "potassium_hydroxide_solution"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -17671,7 +17704,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Beryllium (Be)\n§bAtomic Number§r: 4\n§aAtomic Mass§r: 9.0122 amu\n§cMelting Point§r: 1560 K\n§5Boiling Point§r: 2742 K\n§6Properties§r: Beryllium is a lightweight and strong alkaline earth metal. It is used in aerospace applications, X-ray windows, and as a moderator in nuclear reactors.\n",
+          "desc:8": "§6Element§r: Beryllium (Be)\n§bAtomic Number§r: 4\n§aAtomic Mass§r: 9.0122 amu\n§cMelting Point§r: 1560 K\n§5Boiling Point§r: 2742 K\n§6Properties§r: Beryllium is a lightweight and strong alkaline earth metal. It is used in aerospace applications, X-ray windows, and as a moderator in nuclear reactors.\n\n§lPrimitive: §r§cN/A\n\n§r§lUniversal: §rMelt §2beryl§r (emeralds) with§7 sodium carbonate §rin a reaction furnace in order to obtain §3alkali fused beryl§r.\n\nAlkali fused beryl partially dissolves in §6sulfuric acid§r to release carbon dioxide and leaves behind §6silicon dioxide§r in a batch reactor. (75% yield)\n\nAluminium is separated from the solution with §6potassium sulfate §rto form a§6 beryllium sulfate solution§r and §bpotassium alum (KAl(SO4)2)§r in a batch reactor.\n\nIron and chromium impurities are removed with calcium carbonate (calcite), forming gypsum, iron (III) hydroxide, and chromium (III) hydroxide in a batch reactor.\n\n§2Beryllium hydroxide§r is precipitated with §9sodium hydroxide§rin a batch reactor. Optionally, add EDTA to boost the yield from 75% to 100%.\n\n§lSpecialized: §r\nAt a higher voltage, you can §6directly convert beryl to a chlorinated beryl in a reaction furnace§r using carbon and chlorine.\n\nUsing a distillation tower, this mixture of chlorides is separated into silicon tetrachloride, aluminium trichloride, and§a beryllium chloride§r.\n\nThis process has a total yield of 90%",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30507,7 +30540,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "novolacs"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "novolacs"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -30639,7 +30675,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "formaldehyde"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "formaldehyde"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -30952,7 +30991,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "ultrapure_water"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "ultrapure_water"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -31014,7 +31056,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "sodium_silicate_solution"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "sodium_silicate_solution"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -31154,7 +31199,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "demineralized_water"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "demineralized_water"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -32620,7 +32668,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "vinyl_chloride_solution"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "vinyl_chloride_solution"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -32689,7 +32740,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "vinyl_chloride_solution"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "vinyl_chloride_solution"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -33015,7 +33069,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "sodium_bisulfate_solution"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "sodium_bisulfate_solution"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -47063,7 +47120,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Electron Beam Lithographer",
@@ -47311,6 +47368,477 @@
               },
               "OreDict:8": "",
               "id:8": "gaspunk:gas_mask"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "641:10": {
+      "preRequisites:11": [
+        614
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Distillation Tower§r is a multiblock that can be used to break down all of the fractions of §7Oil§r at the same time, without requiring 10 different Distilleries.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs).\n\nEach level of the tower after the first will output a different fluid from the §6distillation process.§r\n\nAlso, any recipe that has an item output will need an §6Output Bus§r, anywhere on the bottom layer.\nThe §2Input Hatch§r can go anywhere on the bottom layer.§r\n\nThe §6controller§r goes in the middle of an edge of the bottom layer. The §6Energy Input Hatch§r can go anywhere on the bottom layer. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1005,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The \"Real\" Distillation Tower",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 641,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1005,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 20,
+              "Damage:2": 5,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "642:10": {
+      "preRequisites:11": [
+        479,
+        641
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§7Polytetrafluoroethylene§r is an important polymer (plastic) because it cannot react to most chemicals. \n\nIt is required for §6large chemical reactors§r, making it a necessity in later voltages. It is polymerized from §6tetrafluoroethylene§r. To produce tetrafluoroethylene, the following processes are used.\n\n50L Methane + 250L Chlorine in a CSTR will produce a 200L of a §6chlorinated methane mixture§r.\n\nDistilling 4000L of this mixture in a tower will produce:\n250L Carbon Tetrachloride\n250L Chloroform\n250L Dichloromethane\n250L Chloromethane\n2500L Hydrogen Chloride\n\n§6Chloroform (CHCl3) §ris what we want to use to produce §6tetrafluoroethylene§r. In order to convert some of the lesser chlorinated products such as Chloromethane and Dichloromethane, you can react those chemicals with more chlorine and distill the products to get more chloroform.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "chloroform"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Chloroform",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 642,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "chloroform"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "643:10": {
+      "preRequisites:11": [
+        642
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "100L of Hydrogen Fluoride and 50L of Chloroform in a §cCSTR§r produces 150L of §6Acidic Chlorodifluoromethane§r. \n\nPyrolysis of 6000L of Acidic Chlorodifluoromethane produces 5000L of §6Acidic Tetrafluoroethylene§r.\n\nCentrifuging 5000L of Acidic Tetrafluoroethylene with 4000L of water will produce 1000L of §6Tetrafluoroethylene§r and 4000L of Hydrochloric Acid.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "tetrafluoroethylene"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tetrafluoroethylene",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 643,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "tetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "644:10": {
+      "preRequisites:11": [
+        643
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Now it is time to §6polymerize the tetrafluoroethylene§r. \n\nWe produce 2000L of §6Tetrafluoroethylene Emulsion §rfrom 1000L of Tetrafluoroethylene and 1000L of Fluorinated Detergent Mixture. \n\nthen, we take 1000L of this emulsion and 1 Tiny Potassium Persulfate Dust in a §cpolymerization tank §rto produce 2000L of §6Polytetrafluoroethylene Solution§r, which is dried to produce §l§c§l7 PTFE Dust§r and 1000L of Fluorinated Detergent Mixture\n\nThe Fluorinated Detergent Mixture is produced from 26 §6PFOA (perfluorooctanoic acid) dust§r and 1000L of water. To obtain§6 PFOA§r , the following process is used.\n\n\n3000L §6N-octanol §r+ 16 Chromium Trioxide Dust + 6000L Sulfuric Acid --\u003e 3000L §6Caprylic (octanoic) acid§r + 1000L §6Chromium Sulfate Solution§r in a Batch Reactor.\n\n50L §6Caprylic acid§r + 50L §6Thionyl Chloride§r  --\u003e 50L §6Diluted Octanoyl Chloride §r+ 50L Sulfur Dioxide + 50L Hydrogen Chloride\n\n3000L §6Diluted Octanoyl Chloride§r, when distilled, will produce 1000L of §6Octanoyl Chloride§r, 1000L of Water, and 1000L of Pyridine.\n\n50L of§6 Octanoyl Chloride§r + 750L of Hydrofluoric Acid --\u003e 800L of §6Fluorinated Octanoyl Chloride§r + 750L Hydrogen + 750L water\n\nDistillation of 16000L Fluorinated Octanoyl Chloride will produce 2400L of§6 Perfluorooctanoyl Fluoride§r. React 1:1 with water to produce PFOA solution, which is further distilled.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1016,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Polytetrafluoroethylene",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 644,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1016,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "645:10": {
+      "preRequisites:11": [
+        644
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Elytra §ris made with PTFE and is a good alternative to §cjetpack flight.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "minecraft:elytra"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Elytra",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 645,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "minecraft:elytra"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "646:10": {
+      "preRequisites:11": [
+        51
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The§7 Item Magnet§r allows you to pick up items from the ground at a high distance.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 471,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "Charge:4": 100000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV Item Magnet",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 646,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 471,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "Charge:4": 100000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "647:10": {
+      "preRequisites:11": [
+        479
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Oil Cracking Unit§r gives you higher yields from cracking organic substances.\n\nMany organic substances offer the option of being §6Severely§r or §6Lightly§r cracked, as well as §4Hydro§r or §7Steam§r cracked, with each one granting different ratios of distillates.\n\nCheck JEI to see how to build it.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1009,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Cracking Unit",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 647,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1009,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 20,
+              "Damage:2": 5,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_coil"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -48111,6 +48639,13 @@
           "sizeY:3": 24,
           "x:3": -174,
           "y:3": -60
+        },
+        "58:10": {
+          "id:3": 646,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 396
         }
       }
     },
@@ -49769,6 +50304,48 @@
           "sizeY:3": 24,
           "x:3": 210,
           "y:3": -18
+        },
+        "19:10": {
+          "id:3": 641,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 48,
+          "y:3": 108
+        },
+        "20:10": {
+          "id:3": 642,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 0,
+          "y:3": 120
+        },
+        "21:10": {
+          "id:3": 643,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 0,
+          "y:3": 168
+        },
+        "22:10": {
+          "id:3": 644,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -12,
+          "y:3": 216
+        },
+        "23:10": {
+          "id:3": 645,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 228
+        },
+        "24:10": {
+          "id:3": 647,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -84,
+          "y:3": 36
         }
       }
     },
