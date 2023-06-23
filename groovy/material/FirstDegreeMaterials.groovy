@@ -825,7 +825,6 @@ public class FirstDegreeMaterials{
         DicobaltOctacarbonyl = new Material.Builder(8210, "dicobalt_octacarbonyl")
                 .dust()
                 .components(Cobalt, 2, Cobalt, 8, Oxygen, 8)
-                .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build()
                 .setFormula("Co2(CO)8", true)
@@ -1683,19 +1682,17 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        SodiumEthoxideSolution = new Material.Builder(8344, "sodium_ethoxide_solution")
-                .fluid()
-                .components(Carbon, 2, Hydrogen, 5, Oxygen, 1, Sodium, 1, Ethanol, 1)
-                .color(0xcc5050)
-                .build();
-
-        SodiumEthylXanthate = new Material.Builder(8345, "sodium_ethyl_xanthate")
+        ChromiumIIIOxide = new Material.Builder(8344, "chromium_iii_oxide")
                 .dust()
-                .components(Carbon, 3, Hydrogen, 5, Oxygen, 1, Sulfur, 2, Sodium, 1)
-                .color(0xfdffbf)
+                .components(Chrome, 2, Oxygen, 3)
+                .color(0xb3c99)
                 .build();
 
-        SodiumEthylXanthate.setFormula("CH3CH2OCS2Na", true)
+        SodiumSulfateAcetoneSolution = new Material.Builder(8345, "sodium_sulfate_acetone_solution")
+                .fluid()
+                .components(Sodium, 12, Sulfur, 6, Oxygen, 24, Acetone, 1, Water, 9)
+                .color(0x2c733a)
+                .build();
 
         ImpureGalenaSlurry = new Material.Builder(8346, "impure_galena_slurry")
                 .fluid()
@@ -2355,18 +2352,6 @@ public class FirstDegreeMaterials{
                 .fluid()
                 .components(Ethanol, 91, Water, 9, Toluene, 10)
                 .colorAverage()
-                .build();
-
-        ChromiumIIIOxide = new Material.Builder(8445, "chromium_iii_oxide")
-                .dust()
-                .components(Chromium, 2, Oxygen, 3)
-                .color(0xb3c99)
-                .build();
-
-        SodiumSulfateAcetoneSolution = new Material.Builder(8426, "sodium_sulfate_acetone_solution")
-                .fluid()
-                .components(Sodium, 12, Sulfur, 6, Oxygen, 24, Acetone, 1, Water, 9)
-                .color(0x2c733a)
                 .build();
     }
 }

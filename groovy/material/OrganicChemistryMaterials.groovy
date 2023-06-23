@@ -1270,10 +1270,82 @@ public class OrganicChemistryMaterials {
                 .color(0x24bfa8)
                 .build();
 
-        FluorinatedDetergentMixture = new Material.Builder(15206, "fluorinated_detergent_mixture")
+        OneButene = new Material.Builder(15206, "one_butene")
+                .fluid(FluidTypes.GAS)
+                .components(Carbon, 4, Hydrogen, 8)
+                .color(0x965a15)
+                .build();
+
+        TwoButene = new Material.Builder(15207, "two_butene")
+                .fluid(FluidTypes.GAS)
+                .components(Carbon, 4, Hydrogen, 8)
+                .color(0xab6009)
+                .build();
+
+        NPentanol = new Material.Builder(15208, "n_pentanol")
                 .fluid()
-                .components(PerfluorooctanoicAcid, 1, Water, 1)
-                .colorAverage()
+                .components(Carbon, 5, Hydrogen, 12, Oxygen, 1)
+                .color(0xb37834)
+                .build();
+
+        SodiumEthoxideSolution = new Material.Builder(15209, "sodium_ethoxide_solution")
+                .fluid()
+                .components(Carbon, 2, Hydrogen, 5, Oxygen, 1, Sodium, 1, Ethanol, 1)
+                .color(0xcc5050)
+                .build();
+
+        SodiumEthoxideSolution.setFormula("(CH3CH2ONa)(H2O)", true)
+
+        SodiumEthylXanthate = new Material.Builder(15210, "sodium_ethyl_xanthate")
+                .dust()
+                .components(Carbon, 3, Hydrogen, 5, Oxygen, 1, Sulfur, 2, Sodium, 1)
+                .color(0xfdffbf)
+                .build();
+
+        SodiumEthylXanthate.setFormula("CH3CH2OCS2Na", true)
+
+        PotassiumAmylXanthate = new Material.Builder(15211, "potassium_amyl_xanthate")
+                .dust()
+                .components(Carbon, 6, Hydrogen, 11, Oxygen, 1, Sulfur, 2, Potassium, 1)
+                .color(0xe0d582)
+                .build();
+
+        PotassiumAmylXanthate.setFormula("C5H11OCS2K", true)
+
+        Isobutyraldehyde = new Material.Builder(15212, "isobutyraldehyde")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 8, Oxygen, 1)
+                .color(0x9ccf69)
+                .build();
+
+        SodiumIsobutylXanthate = new Material.Builder(15213, "sodium_isobutyl_xanthate")
+                .dust()
+                .components(Carbon, 5, Hydrogen, 9, Oxygen, 1, Sulfur, 2, Sodium, 1)
+                .color(0xb1bf60)
+                .build();
+
+        SodiumIsobutylXanthate.setFormula("(CH3)2CHCH2OCS2Na", true)
+
+        PotassiumIsopropylXanthate = new Material.Builder(15214, "potassium_isopropyl_xanthate")
+                .dust()
+                .components(Carbon, 4, Hydrogen, 7, Oxygen, 1, Sulfur, 2, Potassium, 1)
+                .color(0xcbdb6b)
+                .build();
+
+        PotassiumIsopropylXanthate.setFormula("(CH3)2CHOCS2K", true)
+
+        PotassiumEthylXanthate = new Material.Builder(15215, "potassium_ethyl_xanthate")
+                .dust()
+                .components(Carbon, 3, Hydrogen, 5, Oxygen, 1, Sulfur, 2, Potassium, 1)
+                .color(0xfdffc8)
+                .build();
+
+        PotassiumEthylXanthate.setFormula("CH3CH2OCS2K", true)
+
+        Valeraldehyde = new Material.Builder(15216, "valeraldehyde")
+                .fluid()
+                .components(Carbon, 5, Hydrogen, 10, Oxygen, 1)
+                .color(0xb3af34)
                 .build();
     }
 }

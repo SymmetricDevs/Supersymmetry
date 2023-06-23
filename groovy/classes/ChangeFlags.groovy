@@ -45,7 +45,7 @@ class ChangeFlags {
         Phosphorus.setFormula("P4", true)
         Phosphorus.setMaterialRGB(0xfffed6)
         Phosphorus.addFlags("no_smelting")
-
+        
         DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true)
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
