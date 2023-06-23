@@ -17603,7 +17603,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Lithium (Li)\n§bAtomic Number§r: 3\n§aAtomic Mass§r: 6.94 amu\n§cMelting Point§r: 453.65 K\n§5Boiling Point§r: 1603 K\n§6Properties§r: Lithium is an alkali metal that is highly reactive and flammable. It is used in rechargeable batteries, ceramics, and in some psychiatric medication.\n",
+          "desc:8": "§6Element§r: Lithium (Li)\n§bAtomic Number§r: 3\n§aAtomic Mass§r: 6.94 amu\n§cMelting Point§r: 453.65 K\n§5Boiling Point§r: 1603 K\n§6Properties§r: Lithium is an alkali metal that is highly reactive and flammable. It is used in rechargeable batteries, ceramics, and in some psychiatric medication.\n\n§lPrimitive: §r§6Lithium Carbonate §rcan be obtained by processing brine. For more info, check the §4Bromine§r page. It\u0027s then roasted with Hydrochloric Acid to make §bLithium Chloride§r. Molten Lithium Chloride is electrolyzed into Lithium.\n\n§lUniversal: §r§cN/A§r\n\n§lSpecialized: §r§cN/A",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18183,7 +18183,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Magnesium (Mg)\n§bAtomic Number§r: 12\n§aAtomic Mass§r: 24.31 amu\n§cMelting Point§r: 923 K\n§5Boiling Point§r: 1380 K\n§6Properties§r: Magnesium is an alkaline earth metal known for its lightness and high strength-to-weight ratio. It is used in alloys, pyrotechnics, and as a component in some medications.\n\nCarnallite can be obtained by sifting a Halide Evaporite deposit. Evaporite deposits can be found in deserts, mostly.\n\nCarnallite can be leached in a Mixer to make Carnallite Leach.\nCarnallite Leach can be crystallized to make Magnesium Chloride.\nMolten Magnesium Chloride can be electrolyzed to make Magnesium.\n\n",
+          "desc:8": "§6Element§r: Magnesium (Mg)\n§bAtomic Number§r: 12\n§aAtomic Mass§r: 24.31 amu\n§cMelting Point§r: 923 K\n§5Boiling Point§r: 1380 K\n§6Properties§r: Magnesium is an alkaline earth metal known for its lightness and high strength-to-weight ratio. It is used in alloys, pyrotechnics, and as a component in some medication§s.\n\n§lPrimitive: §r§cN/A§r\n\n§lUniversal: §rCarnallite can be obtained by sifting a Halide Evaporite deposit. Evaporite deposits can be found in deserts, mostly.\n\nCarnallite can be leached in a Mixer to make Carnallite Leach.\nCarnallite Leach can be crystallized to make Magnesium Chloride.\nMolten Magnesium Chloride can be electrolyzed to make Magn§l§resium.\n\n§lSpecialized: §r§cN/A§r\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18251,7 +18251,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§b§6Element§r: Sodium (Na)\n§bAtomic Number§r: 11\n§aAtomic Mass§r: 22.99 amu\n§cMelting Point§r: 370.87 K\n§5Boiling Point§r: 1156 K\n§6Properties§r: Sodium is an alkali metal known for its high reactivity. It is used in various industries, including the production of chemicals, as a coolant, and in the manufacture of batteries.\n\n§lPrimitive:§r\nElectrolyzing molten§7 Salt§r under a§7 graphite electrode§r makes§9 Sodium §rand §2Chlorine§r\n\n§lUniversal: §r§cN/A§r\n§lSpecialized: §r§cN/A\n§r§c",
+          "desc:8": "§b§6Element§r: Sodium (Na)\n§bAtomic Number§r: 11\n§aAtomic Mass§r: 22.99 amu\n§cMelting Point§r: 370.87 K\n§5Boiling Point§r: 1156 K\n§6Properties§r: Sodium is an alkali metal known for its high reactivity. It is used in various industries, including the production of chemicals, as a coolant, and in the manufacture of batteries.\n\n§lPrimitive:§r\nElectrolyzing molten§7 Salt§r under a§7 graphite electrode§r makes§9 Sodium §rand §2Chlorine§r\n\n§lUniversal: §r§c§9Sodium Hydroxide §rcan be electrolyzed for Sodium, Oxygen and Hydrogen.\n\n§lSpecialized: §r§cN/A\n§r§c",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18387,7 +18387,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Silicon (Si)\n§bAtomic Number§r: 14\n§aAtomic Mass§r: 28.09 amu\n§cMelting Point§r: 1687 K\n§5Boiling Point§r: 3538 K\n§6Properties§r: Silicon is a metalloid known for its semiconducting §6Properties§r. It is used extensively in the electronics industry for integrated circuits and solar cell production.\n",
+          "desc:8": "§6Element§r: Silicon (Si)\n§bAtomic Number§r: 14\n§aAtomic Mass§r: 28.09 amu\n§cMelting Point§r: 1687 K\n§5Boiling Point§r: 3538 K\n§6Properties§r: Silicon is a metalloid known for its semiconducting §6Properties§r. It is used extensively in the electronics industry for integrated circuits and solar cell production.\n\n§lPrimitive: §r§cN/A\n§r\n§lUniversal: §r§6Silicon Dioxide §rcan be centrifuged from sand or flint.\n\nWhen silicon dioxide is §croasted§r with coke it undergoes a chemical reaction to produce§6 silicon carbide§r. \n\nSilicon carbide can then be §carc furnaced§r to obtain§6 silicon.\n§r\n§lSpecialized: §6Silicon §rreacts with §3chlorine §rto produce §6silicon tetrachloride §rin a roaster.\n\nThe resulting SiCl4 undergoes §cpurification in a distillery§r, yielding purified SiCl4.\n\nHigh purity silicon is obtained by reacting Zinc dusts with the purified SiCl4 in a§c roaster§r.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18455,7 +18455,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Phosphorus (P)\n§bAtomic Number§r: 15\n§aAtomic Mass§r: 30.97 amu\n§cMelting Point§r: 317.30 K\n§5Boiling Point§r: 553 K\n§6Properties§r: Phosphorus is a nonmetal essential for life and found in DNA, RNA, and ATP. It is used in fertilizers, detergents, and in the production of matches and fireworks.\n",
+          "desc:8": "§6Element§r: Phosphorus (P)\n§bAtomic Number§r: 15\n§aAtomic Mass§r: 30.97 amu\n§cMelting Point§r: 317.30 K\n§5Boiling Point§r: 553 K\n§6Properties§r: Phosphorus is a nonmetal essential for life and found in DNA, RNA, and ATP. It is used in fertilizers, detergents, and in the production of matches and fireworks.\n\n§lPrimitive:§r §7Bone Meal§r can be autoclaved to make §6Tricalcium Phosphate§r. \nIt\u0027s reacted with §6Sulfuric Acid §rto make§6 Monocalcium Phosphate§r, which is then roasted to make §6Calcium Phosphite§r.\nCalcium Phosphite is roasted with Carbon to make §6White Phosphorus§r.\n\n§lUniversal:§r §2Fluorapatite or Chlorapatite §rdusts can be smelted with Sand and Carbon in an EBF to make large amounts of §6White Phosphorus§r.\n§l\nSpecialized: §rPhosphorus can be autoclaved to get a High Purity Phosphorus Vapor, which is distilled and then solidified to get §6High Purity Phosphorus§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18711,7 +18711,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Calcium (Ca)\n§bAtomic Number§r: 20\n§aAtomic Mass§r: 40.08 amu\n§cMelting Point§r: 1115 K\n§5Boiling Point§r: 1757 K\n§6Properties§r: Calcium is an alkaline earth metal essential for the human body and found in bones and teeth. It is used in construction, as a dietary supplement, and in the production of steel.\n",
+          "desc:8": "§6Element§r: Calcium (Ca)\n§bAtomic Number§r: 20\n§aAtomic Mass§r: 40.08 amu\n§cMelting Point§r: 1115 K\n§5Boiling Point§r: 1757 K\n§6Properties§r: Calcium is an alkaline earth metal essential for the human body and found in bones and teeth. It is used in construction, as a dietary supplement, and in the production of steel.\n\n§lPrimitive: §r§cN/A\n\n§r§lUniversal:§r Ammonia can be combined with Hydrochloric Acid to get §6Ammonium Chloride Solution§r, which is distilled to get §bAmmonium Chloride§r.\t\nAmmonium Chloride can be combined with Quicklime to get §7Calcium Chloride§r, which is melted and then electrolyzed to get §bCalcium§r.\n\n§lSpecialized:§r§c N/A",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19731,7 +19731,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Bromine (Br)\n§bAtomic Number§r: 35\n§aAtomic Mass§r: 79.90 amu\n§cMelting Point§r: 265.95 K\n§5Boiling Point§r: 332 K\n§6Properties§r: Bromine is a halogen known as a red-brown volatile liquid. It is used in flame retardants, water disinfection, and in the production of pharmaceuticals.\n",
+          "desc:8": "§6Element§r: Bromine (Br)\n§bAtomic Number§r: 35\n§aAtomic Mass§r: 79.90 amu\n§cMelting Point§r: 265.95 K\n§5Boiling Point§r: 332 K\n§6Properties§r: Bromine is a halogen known as a red-brown volatile liquid. It is used in flame retardants, water disinfection, and in the production of pharmaceuticals.\n\n§lPrimitive:§r §cN/A\n§o§r\n§lUniversal:§r §3Brine§r needs to be evaporated twice in an Evaporation Pool to extract §6Very Concentrated Brine§r.\nVery Concentrated Brine is reacted with §7Hydrochloric Acid §rto make §6Boron-Free Brine§r.\nBoron-Free Brine is reacted with §9Sodium Carbonate§r to make §2Lithium-Free Brine§r.\n§3Chlorine §ris bubbled into Lithium-Free Brine to make §1§2Chlorinated Brine§r, which is then vacuum ejected to make §4Bromine§r.\n\n§lSpecialized:§r§c N/A",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20985,7 +20985,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Iodine (I)\n§bAtomic Number§r: 53\n§aAtomic Mass§r: 126.90 amu\n§cMelting Point§r: 386.85 K\n§5Boiling Point§r: 457.4 K\n§6Properties§r: Iodine is a nonmetal known for its purple-black solid form and characteristic odor. It is used in pharmaceuticals, disinfectants, and in iodized salt.\n",
+          "desc:8": "§6Element§r: Iodine (I)\n§bAtomic Number§r: 53\n§aAtomic Mass§r: 126.90 amu\n§cMelting Point§r: 386.85 K\n§5Boiling Point§r: 457.4 K\n§6Properties§r: Iodine is a nonmetal known for its purple-black solid form and characteristic odor. It is used in pharmaceuticals, disinfectants, and in iodized salt.\n\n§lPrimitive: §r§b§cN/A\n\n§l§r§lUniversal: §rIodine can be precipitated by centrifuging §4Impure Bromine§r. Follow the Bromine page for more info.\n\n§lSpecialized: §cN/A",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34491,7 +34491,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 8315,
+            "Damage:2": 8378,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -34561,7 +34561,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 8322,
+            "Damage:2": 8385,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -34602,7 +34602,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 8322,
+              "Damage:2": 8385,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -44467,7 +44467,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 8337,
+            "Damage:2": 8399,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -44478,7 +44478,7 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtech:meta_dust_impure"
+            "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -44507,8 +44507,8 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 16,
-              "Damage:2": 8337,
+              "Count:3": 1,
+              "Damage:2": 8399,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -47098,6 +47098,224 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "638:10": {
+      "preRequisites:11": [
+        181
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Liquid-Fueled Impeller Jetpack §rprovides a good LV flight option. It uses §6combustion generator fuels (such as oil fractions) §ras fuel. \n\n§aHover Mode §rcan be toggled with a hotkey. Check the controls page for more info.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:gt_armor",
+            "tag:10": {}
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Jetpack",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 638,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:gt_armor",
+              "tag:10": {}
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "639:10": {
+      "preRequisites:11": [
+        468
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §bElectric Jetpack §ris the first option of §belectric §rpowered flight, at MV. It has a §aHover Mode §rwhich can be activated via a hotkey. Check the Controls tab for more info.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 3,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:gt_armor",
+            "tag:10": {
+              "Charge:4": 1000000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Electric Jetpack",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 639,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 3,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:gt_armor",
+              "tag:10": {
+                "Charge:4": 1000000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "640:10": {
+      "preRequisites:11": [
+        413
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "If you wish to survive the possible §6gas attacks§r, a §3gas mask§r is going to be a must have. \n\nIt will allow you to §cgo through gases without having to concern about their toxicity§r. It will as well grant the armor rating of a leather helmet.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gaspunk:gas_mask"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Gas Mask",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 640,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gaspunk:gas_mask"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -48679,6 +48897,13 @@
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 48
+        },
+        "108:10": {
+          "id:3": 638,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -288,
+          "y:3": 444
         }
       }
     },
@@ -49367,6 +49592,20 @@
           "sizeY:3": 24,
           "x:3": -138,
           "y:3": 192
+        },
+        "94:10": {
+          "id:3": 639,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -90,
+          "y:3": -162
+        },
+        "95:10": {
+          "id:3": 640,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -210,
+          "y:3": 108
         }
       }
     },
@@ -52758,7 +52997,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,

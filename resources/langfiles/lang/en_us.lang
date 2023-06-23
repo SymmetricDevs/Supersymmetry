@@ -84,8 +84,8 @@ material.diethyl_ether=Diethyl Ether
 material.diethyl_ether_solution=Diethyl Ether Solution
 material.lithium_solution=Lithium Solution
 material.hydrogen_bromide=Hydrogen Bromide
-material.bromobutane=Bromobutane
-material.diluted_bromobutane=Diluted Bromobutane
+material.one_bromobutane=1-Bromobutane
+material.diluted_one_bromobutane=Diluted 1-Bromobutane
 material.butyllithium=n-Butyllithium
 material.diluted_butyllithium=Diluted n-Butyllithium
 material.polymerized_styrene_butadiene_solution=Polymerized Styrene Butadiene Solution
@@ -891,6 +891,13 @@ material.cadmium_rich_zinc=Cadmium Rich Zinc
 material.impure_smithsonite_slurry=Impure Smithsonite Slurry
 material.smithsonite_slurry=Smithsonite Slurry
 material.potassium_amyl_xanthate=Potassium Amyl Xanthate
+material.ethanol_water_azeotrope=Ethanol-Water Azeotrope
+material.isoamyl_alcohol=Isoamyl Alcohol
+material.isobutyl_alcohol=Isobutyl Alcohol
+material.n_propnaol=n-Propanol
+material.copper_sulfate_solution=Copper Sulfate Solution
+material.entrained_ethanol_water_azeotrope=Entrained Ethanol-Water Azeotrope
+material.fusel_oil=Fusel Oil
 
 # Thermodynamics
 

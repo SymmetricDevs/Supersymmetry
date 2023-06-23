@@ -2403,5 +2403,17 @@ public class FirstDegreeMaterials{
                 .components(Indium, 2, Oxygen, 3)
                 .colorAverage()
                 .build()
+
+        EthanolWaterAzeotrope = new Material.Builder(8452, 'ethanol_water_azeotrope')
+                .fluid()
+                .components(Ethanol, 91, Water, 9)
+                .colorAverage()
+                .build();
+
+        EntrainedEthanolWaterAzeotrope = new Material.Builder(8453, 'entrained_ethanol_water_azeotrope')
+                .fluid()
+                .components(Ethanol, 91, Water, 9, Toluene, 10)
+                .colorAverage()
+                .build();
     }
 }

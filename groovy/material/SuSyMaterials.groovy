@@ -294,6 +294,7 @@ class SuSyMaterials {
         public static Material HotPrecipitatedZincLeach;
         public static Material ReprecipitatedZincLeach;
         public static Material CobaltResidue;
+        public static Material FuselOil;
 
         // Petrochem Materials
 
@@ -709,6 +710,8 @@ class SuSyMaterials {
         public static Material IndiumHydroxide;
         public static Material IndiumOxide;
         public static Material TitaniumDioxide;
+        public static Material EthanolWaterAzeotrope;
+        public static Material EntrainedEthanolWaterAzeotrope;
 
         // Second Degree Materials
 
@@ -848,8 +851,8 @@ class SuSyMaterials {
         public static Material DryEthanol;
         public static Material StyreneButadieneSolution;
         public static Material DiethylEther;
-        public static Material Bromobutane;
-        public static Material DilutedBromobutane;
+        public static Material OneBromobutane;
+        public static Material DilutedOneBromobutane;
         public static Material Butyllithium;
         public static Material DilutedButyllithium;
         public static Material PolymerizedStyreneButadieneSolution;
@@ -870,7 +873,6 @@ class SuSyMaterials {
         public static Material Dichloromethane;
         public static Material CarbonTetrachloride;
         public static Material PhthalicAcidSolution;
-        public static Material Butanol;
         public static Material PolytetrafluoroethyleneSolution;
         public static Material MixedNitrochlorobenzeneSolution;
         public static Material MixedDichlorobenzeneSolution;
@@ -978,6 +980,9 @@ class SuSyMaterials {
         public static Material Diethylacetamide;
         public static Material Diethylacetimidamine;
         public static Material Novichok;
+        public static Material IsoamylAlcohol;
+        public static Material IsobutylAlcohol;
+        public static Material NPropanol;
 
         // Third Degree Materials
 

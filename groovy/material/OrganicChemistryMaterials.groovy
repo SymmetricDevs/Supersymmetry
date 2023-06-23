@@ -485,15 +485,15 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        Bromobutane = new Material.Builder(15079, 'bromobutane')
+        OneBromobutane = new Material.Builder(15079, 'one_bromobutane')
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 9, Bromine, 1)
                 .colorAverage()
                 .build();
 
-        DilutedBromobutane = new Material.Builder(15080, 'diluted_bromobutane')
+        DilutedOneBromobutane = new Material.Builder(15080, 'diluted_one_bromobutane')
                 .fluid()
-                .components(Water, 1, Bromobutane, 1)
+                .components(Water, 1, OneBromobutane, 1)
                 .colorAverage()
                 .build();
 
@@ -615,11 +615,13 @@ public class OrganicChemistryMaterials {
                 .color(0xdbbbbd)
                 .build();
 
-        Butanol = new Material.Builder(15101, 'butanol')
+        NPropanol = new Material.Builder(15101, "n_propanol")
                 .fluid()
-                .components(Carbon, 4, Hydrogen, 7, Oxygen, 1)
-                .colorAverage()
+                .components()
+                .color(0xad9113)
                 .build();
+
+        NPropanol.setFormula("CH3CH2CH2OH", true)
 
         PolytetrafluoroethyleneSolution = new Material.Builder(15102, 'polytetrafluoroethylene_solution')
                 .fluid()
@@ -1227,5 +1229,21 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 7, Hydrogen, 16, Fluorine, 1, Nitrogen, 2, Oxygen, 1, Phosphorus, 1)
                 .colorAverage()
                 .build();
+
+        IsoamylAlcohol = new Material.Builder(15200, "isoamyl_alcohol")
+                .fluid()
+                .components(Carbon, 5, Hydrogen, 12, Oxygen, 1)
+                .color(0x23ad13)
+                .build();
+
+        IsoamylAlcohol.setFormula("(CH3)2CHCH2CH2OH", true)
+
+        IsobutylAlcohol = new Material.Builder(15201, "isobutyl_alcohol")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
+                .color(0xa0ad13)
+                .build();
+
+        IsobutylAlcohol.setFormula("(CH3)2CHCH2OH", true)
     }
 }

@@ -931,6 +931,10 @@ public class UnknownCompositionMaterials {
         CobaltResidue = new Material.Builder(4175, 'cobalt_residue')
                 .dust()
                 .color(0x373b6b)
+      
+        FuselOil = new Material.Builder(4176, 'fusel_oil')
+                .fluid()
+                .color(0xa62403)
                 .build()
     }
 }
