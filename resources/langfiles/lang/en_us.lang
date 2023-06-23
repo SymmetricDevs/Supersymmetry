@@ -898,6 +898,31 @@ material.n_propnaol=n-Propanol
 material.copper_sulfate_solution=Copper Sulfate Solution
 material.entrained_ethanol_water_azeotrope=Entrained Ethanol-Water Azeotrope
 material.fusel_oil=Fusel Oil
+material.chromium_iii_oxide=Chromium III Oxide
+material.sodium_sulfate_acetone_solution=Sodium Sulfate Acetone Solution
+material.caprylic_acid=Caprylic Acid
+material.octanoyl_chloride=Octanoyl Chloride
+material.fluorinated_octanoyl_chloride_mixture=Fluorinated Octanoyl Chloride Mixture
+material.perfluorooctanoyl_fluoride=Perfluorooctanoyl Fluoride
+material.perfluorooctanoic_acid_mixture=Perfluorooctanoic Acid Mixture
+material.perfluorooctanoic_acid=Perfluorooctanoic Acid
+material.fluorinated_surfactant_mixture=Fluorinated Surfactant Mixture
+material.butene=Butene Mixture
+material.one_butene=1-Butene
+material.two_butene=2-Butene
+material.n_pentanol=n-Pentanol
+material.pentanal_mixture=Pentanal Mixture
+material.valeraldehyde=Valeraldehyde
+material.butyraldehyde_mixture=Butyraldehyde Mixture
+material.potassium_amyl_xanthate=Potassium Amyl Xanthate
+material.potassium_amyl_xanthate_solution=Potassium Amyl Xanthate Solution
+material.isobutyraldehyde=Isobutyraldehyde
+material.sodium_isobutyl_xanthate=Sodium Isobutyl Xanthate
+material.sodium_isobutyl_xanthate_solution=Sodium Isobutyl Xanthate Solution
+material.potassium_isopropyl_xanthate=Potassium Isopropyl Xanthate
+material.potassium_isopropyl_xanthate_solution=Potassium Isopropyl Xanthate Solution
+material.potassium_ethyl_xanthate=Potassium Ethyl Xanthate
+material.potassium_ethyl_xanthate_solution=Potassium Ethyl Xanthate Solution
 
 # Thermodynamics
 

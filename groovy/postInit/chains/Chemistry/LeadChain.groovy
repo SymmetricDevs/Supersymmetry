@@ -80,7 +80,7 @@ ROASTER.recipeBuilder()
 //ANGLESITE
 FLOTATION.recipeBuilder()
         .inputs(metaitem('dustImpureAnglesite') * 5)
-        //.notConsumable(metaitem('dustPotassiumAmylXanthate')) Implement when fusel alcohol and froth flotation agents are implemented
+        .notConsumable(metaitem('dustPotassiumAmylXanthate'))
         .notConsumable(fluid('distilled_water') * 1000)
         .outputs(metaitem('dustAnglesite') * 10)
         .outputs(metaitem('dustSiliconDioxide'))

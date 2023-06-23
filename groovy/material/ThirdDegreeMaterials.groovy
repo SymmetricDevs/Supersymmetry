@@ -202,5 +202,47 @@ public class ThirdDegreeMaterials {
                 .components(Diisopropylamine, 1, Water, 2)
                 .colorAverage()
                 .build()
+
+        PerfluorooctanoicAcidMixture = new Material.Builder(24031, 'perfluorooctanoic_acid_mixture')
+                .fluid()
+                .components(PerfluorooctanoicAcid, 1, HydrofluoricAcid, 1)
+                .colorAverage()
+                .build()
+
+        FluorinatedSurfactantMixture = new Material.Builder(24032, "fluorinated_surfactant_mixture")
+                .fluid()
+                .components(PerfluorooctanoicAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        SodiumEthylXanthateSolution = new Material.Builder(24033, "sodium_ethyl_xanthate_solution")
+                .fluid()
+                .components(SodiumEthylXanthate, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        PotassiumAmylXanthateSolution = new Material.Builder(24034, "potassium_amyl_xanthate_solution")
+                .fluid()
+                .components(PotassiumAmylXanthate, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        SodiumIsobutylXanthateSolution = new Material.Builder(24035, "sodium_isobutyl_xanthate_solution")
+                .fluid()
+                .components(SodiumIsobutylXanthate, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        PotassiumIsopropylXanthateSolution = new Material.Builder(24036, "potassium_isopropyl_xanthate_solution")
+                .fluid()
+                .components(PotassiumIsopropylXanthate, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        PotassiumEthylXanthateSolution = new Material.Builder(24037, "potassium_ethyl_xanthate_solution")
+                .fluid()
+                .components(PotassiumEthylXanthate, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }

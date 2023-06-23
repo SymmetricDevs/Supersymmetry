@@ -375,11 +375,11 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        SodiumEthylXanthateSolution = new Material.Builder(13059, "sodium_ethyl_xanthate_solution")
+        DilutedBromooctane = new Material.Builder(13059, "diluted_bromooctane")
                 .fluid()
-                .components(SodiumEthylXanthate, 1, Ethanol, 1)
+                .components(Bromooctane, 1, Water, 1)
                 .colorAverage()
-                .build();
+                .build()
 
         CopperSulfateSolution = new Material.Builder(13060, "copper_sulfate_solution")
                 .fluid()
@@ -392,11 +392,5 @@ public class SecondDegreeMaterials {
                 .components(BariumChloride, 1, Water, 2)
                 .colorAverage()
                 .build();
-
-        DilutedBromooctane = new Material.Builder(13062, "diluted_bromooctane")
-                .fluid()
-                .components(Bromooctane, 1, Water, 1)
-                .colorAverage()
-                .build()
     }
 }
