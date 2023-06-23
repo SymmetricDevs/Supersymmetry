@@ -24,7 +24,7 @@
         "groups": [
           {
             "weight": 1,
-            "forceSpawn": true,
+            "forceSpawn": false,
             "mobs": [
               {
                 "id": "zombie",
@@ -44,7 +44,7 @@
         "groups": [
           {
             "weight": 1,
-            "forceSpawn": true,
+            "forceSpawn": false,
             "mobs": [
               {
                 "id": "zombie",
@@ -59,7 +59,7 @@
           },
           {
             "weight": 1,
-            "forceSpawn": true,
+            "forceSpawn": false,
             "mobs": [
               {
                 "id": "zombie",
