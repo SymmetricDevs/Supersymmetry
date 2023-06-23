@@ -13,7 +13,10 @@ def name_removals = [
         "sync:shell_storage",
         "sync:treadmill",
         "weeping-angels:timey_wimey_dectecterino",
-        "weeping-angels:chronodyne_generator"
+        "weeping-angels:chronodyne_generator",
+        "gravitygun:gravitygun",
+        "gravitygun:supercharged_gravitygun",
+        "portalgun:portalgun"
 ]
 
 for (name in name_removals) {

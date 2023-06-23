@@ -119,6 +119,24 @@ mods.gregtech.assembler.removeByInput(30, [metaitem('wireGtDoubleCupronickel') *
 mods.gregtech.assembler.removeByInput(120, [metaitem('wireGtDoubleKanthal') * 8, metaitem('foilAluminium') * 8], [fluid('copper') * 144])
 // Nichrome Coil Block * 1
 mods.gregtech.assembler.removeByInput(480, [metaitem('wireGtDoubleNichrome') * 8, metaitem('foilStainlessSteel') * 8], [fluid('aluminium') * 144])
+// Aluminium Nugget * 3
+mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('gemRuby')], null)
+// Aluminium Nugget * 3
+mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('gemSapphire')], null)
+// Aluminium Nugget * 3
+mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('gemGreenSapphire')], null)
+// Aluminium Nugget * 3
+mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('dustGreenSapphire')], null)
+// Aluminium Nugget * 3
+mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('dustSapphire')], null)
+// Iron Dust * 1
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustFerrochromium') * 3], null)
+// Iron Dust * 6
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustStainlessSteel') * 9], null)
+// Aluminium Ingot * 21
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('pyrolyse_oven')], [fluid('oxygen') * 2160])
+// Aluminium Dust * 21
+mods.gregtech.macerator.removeByInput(8, [metaitem('pyrolyse_oven')], null)
 
 //ADDITIONS
 
@@ -311,16 +329,16 @@ mods.gregtech.fluid_solidifier.recipeBuilder()
 //Coils
 
 mods.gregtech.centrifuge.recipeBuilder()
-        .fluidInputs(fluid('lava') * 1000)
+        .fluidInputs(fluid('chilled_lava') * 250)
         .outputs(metaitem('mineral_wool'))
-        .duration(100)
+        .duration(80)
         .EUt(30)
         .buildAndRegister();
 
 mods.gregtech.centrifuge.recipeBuilder()
-        .fluidInputs(fluid('chilled_lava') * 1000)
+        .fluidInputs(fluid('lava') * 250)
         .outputs(metaitem('mineral_wool'))
-        .duration(80)
+        .duration(100)
         .EUt(30)
         .buildAndRegister();
 
@@ -721,6 +739,6 @@ crafting.replaceShaped('gregtech:lv_magnet_lead_acid', metaitem('item_magnet.lv'
 
 crafting.replaceShaped('gregtech:lv_power_unit_lead_acid', metaitem('power_unit.lv'), [
         [ore('screwSteel'), null, ore('toolScrewdriver')],
-        [ore('gearSmallSteel'), metaitem('electric_motor.lv'), ore('gearSmallSteel')],
+        [ore('gearSmallSteel'), metaitem('electric.motor.lv'), ore('gearSmallSteel')],
         [ore('plateSteel'), metaitem('battery.lead_acid'), ore('plateSteel')]
 ])

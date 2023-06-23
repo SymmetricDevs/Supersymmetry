@@ -931,10 +931,40 @@ public class UnknownCompositionMaterials {
         CobaltResidue = new Material.Builder(4175, 'cobalt_residue')
                 .dust()
                 .color(0x373b6b)
+                .build()
       
         FuselOil = new Material.Builder(4176, 'fusel_oil')
                 .fluid()
                 .color(0xa62403)
+                .build()
+
+        AshSlurry = new Material.Builder(4177, 'ash_slurry')
+                .fluid()
+                .color(0x252526)
+                .build()
+
+        DesulfurizedFlueGas = new Material.Builder(4178, 'desulfurized_flue_gas')
+                .fluid(FluidTypes.GAS)
+                .color(0x151521)
+                .fluidTemp(1000)
+                .build()
+
+        CadmiumRichFlueGas = new Material.Builder(4179, "cadmium_rich_flue_gas")
+                .fluid(FluidTypes.GAS)
+                .color(0x757061)
+                .fluidTemp(1000)
+                .build();
+
+        AntimonyArsenicFlueGas = new Material.Builder(4180, "antimony_arsenic_flue_gas")
+                .fluid(FluidTypes.GAS)
+                .color(0x707063)
+                .fluidTemp(1000)
+                .build();
+
+        ThalliumRichFlueGas = new Material.Builder(4181, 'thallium_rich_flue_gas')
+                .fluid(FluidTypes.GAS)
+                .color(0x26222e)
+                .fluidTemp(1000)
                 .build()
     }
 }

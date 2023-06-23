@@ -334,142 +334,142 @@ for (refrigerant in Refrigerants) {
 
 def Gasoline = new IFluidFuel('gasoline', 'flue_gas');
 Gasoline.setDuration(136);
-Gasoline.setAmountToBurn(8 * 40);
+Gasoline.setAmountToBurn(8 * 10);
 Gasoline.setByproductAmount(1000);
 
 def SulfuricGas = new IFluidFuel('sulfuric_gas', 'flue_gas');
 SulfuricGas.setDuration(26);
-SulfuricGas.setAmountToBurn(32 * 40);
+SulfuricGas.setAmountToBurn(32 * 10);
 SulfuricGas.setByproductAmount(1000);
 
 def Methane = new IFluidFuel('methane', 'flue_gas');
 Methane.setDuration(14);
-Methane.setAmountToBurn(4 * 40);
+Methane.setAmountToBurn(4 * 10);
 Methane.setByproductAmount(1000);
 
 def Ethane = new IFluidFuel('ethane', 'flue_gas');
 Ethane.setDuration(22);
-Ethane.setAmountToBurn(4 * 40);
+Ethane.setAmountToBurn(4 * 10);
 Ethane.setByproductAmount(1000);
 
 def Butadiene = new IFluidFuel('butadiene', 'flue_gas');
 Butadiene.setDuration(104);
-Butadiene.setAmountToBurn(16 * 40);
+Butadiene.setAmountToBurn(16 * 10);
 Butadiene.setByproductAmount(1000);
 
 def Propane = new IFluidFuel('propane', 'flue_gas');
 Propane.setDuration(30);
-Propane.setAmountToBurn(4 * 40);
+Propane.setAmountToBurn(4 * 10);
 Propane.setByproductAmount(1000);
 
 def Butane = new IFluidFuel('butane', 'flue_gas');
 Butane.setDuration(38);
-Butane.setAmountToBurn(4 * 40);
+Butane.setAmountToBurn(4 * 10);
 Butane.setByproductAmount(1000);
 
 def LPG = new IFluidFuel('lpg', 'flue_gas');
 LPG.setDuration(10);
-LPG.setAmountToBurn(1 * 40);
+LPG.setAmountToBurn(1 * 10);
 LPG.setByproductAmount(1000);
 
 def Naphtha = new IFluidFuel('naphtha', 'flue_gas');
 Naphtha.setDuration(10);
-Naphtha.setAmountToBurn(1 * 40);
+Naphtha.setAmountToBurn(1 * 10);
 Naphtha.setByproductAmount(1000);
 
 def Toluene = new IFluidFuel('toluene', 'flue_gas');
 Toluene.setDuration(42);
-Toluene.setAmountToBurn(4 * 40);
+Toluene.setAmountToBurn(4 * 10);
 Toluene.setByproductAmount(1000);
 
 def NaturalGas = new IFluidFuel('natural_gas', 'flue_gas');
 NaturalGas.setDuration(14);
-NaturalGas.setAmountToBurn(20 * 40);
+NaturalGas.setAmountToBurn(20 * 10);
 NaturalGas.setByproductAmount(1000);
 
 def Hydrogen = new IFluidFuel('hydrogen', 'exhaust_steam');
 Hydrogen.setDuration(2);
-Hydrogen.setAmountToBurn(20 * 40);
+Hydrogen.setAmountToBurn(20 * 10);
 Hydrogen.setByproductAmount(1600);
 
 def CarbonMonoxide = new IFluidFuel('carbon_monoxide', 'flue_gas');
 CarbonMonoxide.setDuration(16);
-CarbonMonoxide.setAmountToBurn(20 * 40);
+CarbonMonoxide.setAmountToBurn(20 * 10);
 CarbonMonoxide.setByproductAmount(1000);
 
 def WoodGas = new IFluidFuel('wood_gas', 'flue_gas');
 WoodGas.setDuration(16);
-WoodGas.setAmountToBurn(20 * 40);
+WoodGas.setAmountToBurn(20 * 10);
 WoodGas.setByproductAmount(1000);
 
 def SulfuricNaphtha = new IFluidFuel('sulfuric_naphtha', 'flue_gas');
 SulfuricNaphtha.setDuration(10);
-SulfuricNaphtha.setAmountToBurn(8 * 40);
+SulfuricNaphtha.setAmountToBurn(8 * 10);
 SulfuricNaphtha.setByproductAmount(1000);
 
 def Ethylene = new IFluidFuel('ethylene', 'flue_gas');
 Ethylene.setDuration(20);
-Ethylene.setAmountToBurn(5 * 40);
+Ethylene.setAmountToBurn(5 * 10);
 Ethylene.setByproductAmount(1000);
 
 def RefineryGas = new IFluidFuel('refinery_gas', 'flue_gas');
 RefineryGas.setDuration(10);
-RefineryGas.setAmountToBurn(2 * 40);
+RefineryGas.setAmountToBurn(2 * 10);
 RefineryGas.setByproductAmount(1000);
 
 def Propene = new IFluidFuel('propene', 'flue_gas');
 Propene.setDuration(60);
-Propene.setAmountToBurn(10 * 40);
+Propene.setAmountToBurn(10 * 10);
 Propene.setByproductAmount(1000);
 
 def Butene = new IFluidFuel('butene', 'flue_gas');
 Butene.setDuration(80);
-Butene.setAmountToBurn(10 * 40);
+Butene.setAmountToBurn(10 * 10);
 Butene.setByproductAmount(1000);
 
 def Phenol = new IFluidFuel('phenol', 'flue_gas');
 Phenol.setDuration(90);
-Phenol.setAmountToBurn(10 * 40);
+Phenol.setAmountToBurn(10 * 10);
 Phenol.setByproductAmount(1000);
 
 def Benzene = new IFluidFuel('benzene', 'flue_gas');
 Benzene.setDuration(90);
-Benzene.setAmountToBurn(10 * 40);
+Benzene.setAmountToBurn(10 * 10);
 Benzene.setByproductAmount(1000);
 
 def NitroDiesel = new IFluidFuel('nitro_fuel', 'flue_gas');
 NitroDiesel.setDuration(46);
-NitroDiesel.setAmountToBurn(2 * 40);
+NitroDiesel.setAmountToBurn(2 * 10);
 NitroDiesel.setByproductAmount(1000);
 NitroDiesel.setIsDiesel(true);
 
 def BioDiesel = new IFluidFuel('bio_diesel', 'flue_gas');
 BioDiesel.setDuration(14);
-BioDiesel.setAmountToBurn(2 * 40);
+BioDiesel.setAmountToBurn(2 * 10);
 BioDiesel.setByproductAmount(1000);
 BioDiesel.setIsDiesel(true);
 
 def Kerosene = new IFluidFuel('kerosene', 'flue_gas');
 Kerosene.setDuration(16);
-Kerosene.setAmountToBurn(1 * 40);
+Kerosene.setAmountToBurn(1 * 10);
 Kerosene.setByproductAmount(1000);
 Kerosene.setIsDiesel(true);
 
 def Diesel = new IFluidFuel('diesel', 'flue_gas');
 Diesel.setDuration(18);
-Diesel.setAmountToBurn(1 * 40);
+Diesel.setAmountToBurn(1 * 10);
 Diesel.setByproductAmount(1000);
 Diesel.setIsDiesel(true);
 
 def FuelOil = new IFluidFuel('fuel_oil', 'flue_gas');
 FuelOil.setDuration(20);
-FuelOil.setAmountToBurn(1 * 40);
+FuelOil.setAmountToBurn(1 * 10);
 FuelOil.setByproductAmount(1000);
 FuelOil.setIsDiesel(true);
 
 def Syngas = new IFluidFuel('syngas', 'flue_gas');
-Syngas.setDuration(10);
-Syngas.setAmountToBurn(4 * 40);
+Syngas.setDuration(20);
+Syngas.setAmountToBurn(1 * 10);
 Syngas.setByproductAmount(1000);
 
 def FluidFuels = [
@@ -550,6 +550,14 @@ for (WorkingFluid in WorkingFluids) {
     recipemap('heat_exchanger').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
             .fluidInputs(liquid('flue_gas')*1000)
+            .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+            .fluidOutputs(liquid('chilled_flue_gas') * 1000)
+            .duration(WorkingFluid.duration)
+            .buildAndRegister();
+
+    recipemap('heat_exchanger').recipeBuilder()
+            .fluidInputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
+            .fluidInputs(liquid('desulfurized_flue_gas')*1000)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid('chilled_flue_gas') * 1000)
             .duration(WorkingFluid.duration)

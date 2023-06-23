@@ -352,12 +352,6 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        CalciumSulfate = new Material.Builder(8135, 'calcium_sulfate')
-                .dust()
-                .components(Calcium, 1, Sulfur, 1, Oxygen, 4)
-                .colorAverage()
-                .build();
-
         VanadiumPentoxide = new Material.Builder(8136, 'vanadium_pentoxide')
                 .dust()
                 .components(Vanadium, 2, Oxygen, 5)
@@ -2413,6 +2407,12 @@ public class FirstDegreeMaterials{
         EntrainedEthanolWaterAzeotrope = new Material.Builder(8453, 'entrained_ethanol_water_azeotrope')
                 .fluid()
                 .components(Ethanol, 91, Water, 9, Toluene, 10)
+                .colorAverage()
+                .build();
+
+        CalciumSulfite = new Material.Builder(8454, 'calcium_sulfite')
+                .dust()
+                .components(Calcium, 1, Sulfur, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
     }

@@ -12,6 +12,7 @@ SINTERING_OVEN = recipemap('sintering_oven')
 VACUUM_CHAMBER = recipemap('vacuum_chamber')
 DISTILLERY = recipemap('distillery')
 FLUID_EXTRACTOR= recipemap('extractor')
+ELECTROLYZER=recipemap('electrolyzer')
 
 def COAL_SOURCES = [
         "dustCarbon",
@@ -25,6 +26,8 @@ def COAL_SOURCES = [
 
 //REMOVAL
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustGalena')], [fluid('oxygen') * 3000])
+// Bismuth Dust * 3
+mods.gregtech.centrifuge.removeByInput(30, null, [fluid('decoppered_betts_lead') * 1000])
 
 //OPTIONAL FLOTATION
 //GALENA
@@ -141,15 +144,23 @@ for (combustible in combustibles) {
             .inputs(ore('dustSinteredLeadConcentrate') * 2)
             .inputs(ore(combustible.name) * (combustible.amount_required))
             .inputs(ore('dustCalcite'))
-            .outputs(metaitem('dustCadmiumRichFlueDust'))
             .outputs(metaitem('ingotCrudeLead') * 2)
             .outputs(metaitem(combustible.byproduct))
-            .fluidOutputs(fluid('carbon_monoxide') * 1000)
+            .fluidOutputs(fluid('cadmium_rich_flue_gas') * 1000)
             .EUt(120)
             .blastFurnaceTemp(850)
             .duration(160)
             .buildAndRegister()
 }
+
+ELECTROLYZER.recipeBuilder()
+        .notConsumable(metaitem('stickIron') * 2)
+        .fluidInputs(fluid('cadmium_rich_flue_gas') * 1000)
+        .outputs(metaitem('dustCadmiumRichFlueDust'))
+        .fluidOutputs(fluid('carbon_monoxide') * 1000)
+        .EUt(120)
+        .duration(160)
+        .buildAndRegister()
 
 //DECOPPERING
 BR.recipeBuilder()
@@ -383,10 +394,19 @@ ROASTER.recipeBuilder()
 ROASTER.recipeBuilder()
         .inputs(metaitem('dustBlackMetal') * 50)
         .fluidInputs(fluid('oxygen') * 9000)
-        .outputs(metaitem('dustAntimonyArsenicFlueDust') * 3)
+        .fluidOutputs(fluid('antimony_arsenic_flue_gas') * 1000)
         .outputs(metaitem('dustBurnedBlackMetal') * 2)
         .EUt(Globals.voltAmps[3])
         .duration(400)
+        .buildAndRegister()
+
+ELECTROLYZER.recipeBuilder()
+        .notConsumable(metaitem('stickIron') * 2)
+        .fluidInputs(fluid('antimony_arsenic_flue_gas') * 1000)
+        .outputs(metaitem('dustCadmiumRichFlueDust') * 3)
+        .fluidOutputs(fluid('flue_gas') * 1000)
+        .EUt(120)
+        .duration(160)
         .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()
@@ -417,9 +437,3 @@ REACTION_FURNACE.recipeBuilder()
         .duration(800)
         .buildAndRegister()
 
-
-
-
-
-
-        

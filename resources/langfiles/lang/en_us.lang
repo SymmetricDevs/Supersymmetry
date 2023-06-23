@@ -1228,6 +1228,14 @@ material.indium_chloride=Indium Chloride
 material.indium_hydroxide=Indium Hydroxide
 material.titanium_dioxide=Titanium Dioxide
 material.indium_oxide=Indium Oxide
+material.ash_slurry=Ash Slurry
+material.desulfurized_flue_gas=Desulfurized Flue Gas
+material.cadmium_rich_flue_gas=Cadmium-Rich Flue Gas
+material.antimony_arsenic_flue_gas=Antimony-Arsenic-Rich Flue Gas
+material.thallium_rich_flue_gas=Thallium-Rich Flue Gas
+material.light_oily_brine=Light Oily Brine
+material.heavy_oily_brine=Heavy Oily Brine
+material.calcium_sulfite=Calcium Sulfite
 
 # Isotopes
 

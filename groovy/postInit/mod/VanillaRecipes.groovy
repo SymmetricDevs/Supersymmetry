@@ -508,8 +508,15 @@ mods.gregtech.chemical_bath.recipeBuilder()
 
 recipemap('crystallizer').recipeBuilder()
 		.fluidInputs(fluid('clarified_sugary_water') * 1000)
-		.outputs(item('minecraft:sugar') * 4)
+		.outputs(item('minecraft:sugar') * 6)
 		.duration(200)
+		.EUt(8)
+		.buildAndRegister()
+
+recipemap('crystallizer').recipeBuilder()
+		.fluidInputs(fluid('sugary_water') * 1000)
+		.outputs(item('minecraft:sugar') * 3)
+		.duration(300)
 		.EUt(8)
 		.buildAndRegister()
 

@@ -513,8 +513,8 @@ crafting.replaceShaped("gregtech:casing_steel_turbine_casing", item('gregtech:tu
 ])
 
 crafting.addShaped("gas_turbine_controller", metaitem('basic_gas_turbine'), [
-		[ore('plateSteel'),            metaitem('cableGtSingleCopper'),       ore('plateSteel')],
-		[ore('circuitMv'),             item('gregtech:machine_casing', 1), ore('circuitMv')],
+		[ore('plateSteel'),               metaitem('cableGtSingleCopper'),    ore('plateSteel')],
+		[ore('circuitMv'),                metaitem('hull.mv'),                ore('circuitMv')],
 		[metaitem('cableGtSingleCopper'), ore('circuitMv'),                   metaitem('cableGtSingleCopper')]
 ])
 

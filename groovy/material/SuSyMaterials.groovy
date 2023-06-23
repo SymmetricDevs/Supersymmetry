@@ -295,6 +295,11 @@ class SuSyMaterials {
         public static Material ReprecipitatedZincLeach;
         public static Material CobaltResidue;
         public static Material FuselOil;
+        public static Material AshSlurry;
+        public static Material DesulfurizedFlueGas;
+        public static Material CadmiumRichFlueGas;
+        public static Material AntimonyArsenicFlueGas;
+        public static Material ThalliumRichFlueGas;
 
         // Petrochem Materials
 
@@ -353,6 +358,8 @@ class SuSyMaterials {
         public static Material UpgradedLubricatingOilMix;
 
         public static Material OilyBrine;
+        public static Material LightOilyBrine;
+        public static Material HeavyOilyBrine;
         public static Material SulfuricOilResidue;
         public static Material DissolvedBitumen;
         public static Material SourGas;
@@ -434,6 +441,7 @@ class SuSyMaterials {
         public static Material SodiumTetraborate;
         public static Material ElectrolyticBoron;
         public static Material CalciumSulfate;
+        public static Material CalciumSulfite;
         public static Material IronIISulfide;
         public static Material PotassiumSulfate;
         public static Material WetAntimonyTrifluoride;

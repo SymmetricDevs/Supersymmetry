@@ -94,6 +94,7 @@ def itemSmeltingRemovals = [
 		item('techguns:itemshared', 46),
 		item('techguns:itemshared', 95),
 		item('techguns:itemshared', 96),
+		item('techguns:itemshared', 39),
 		item('biomesoplenty:white_sand'),
 		item('gregtechfoodoption:gtfo_log_0'),
 		item('gregtechfoodoption:gtfo_log_1'),

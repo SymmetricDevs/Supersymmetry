@@ -192,7 +192,7 @@ for (solder in soldering_alloys) {
             .inputs([
                     ore('wireFineRedAlloy'),
                     metaitem('conveyor.module.lv'),
-                    ore('plateGold'),
+                    ore('plateLead'),
                     ore('plateIron')
             ])
             .fluidInputs(solder)
