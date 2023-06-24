@@ -1265,6 +1265,10 @@ material.thallium_rich_flue_gas=Thallium-Rich Flue Gas
 material.light_oily_brine=Light Oily Brine
 material.heavy_oily_brine=Heavy Oily Brine
 material.calcium_sulfite=Calcium Sulfite
+material.sodium_chromate_mixture=Sodium Chromate Mixture
+material.sodium_chromate_solution=Sodium Chromate Solution
+material.sodium_dichromate_solution=Sodium Dichromate Solution
+material.chromium_soda_mixture=Chromium-Soda Mixture
 
 # Isotopes
 

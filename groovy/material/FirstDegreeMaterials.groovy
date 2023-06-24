@@ -2426,5 +2426,17 @@ public class FirstDegreeMaterials{
                 .components(SilicaGel, 1, PhosphoricAcid, 1)
                 .colorAverage()
                 .build();
+
+        SodiumChromateMixture = new Material.Builder(8458, 'sodium_chromate_mixture')
+                .dust()
+                .components(Sodium, 1, Chrome, 1, Oxygen, 4, SodaAsh, 1)
+                .color(0xfaff7d)
+                .build();
+
+        SodiumChromateSolution = new Material.BUilder(8459, 'sodium_chromate_solution')
+                .fluid()
+                .components(Sodium, 1, Chrome, 1, Oxygen, 4, Water, 1)
+                .color(0xa4a839)
+                .build();
     }
 }

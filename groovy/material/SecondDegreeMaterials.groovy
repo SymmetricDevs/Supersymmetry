@@ -398,5 +398,17 @@ public class SecondDegreeMaterials {
                 .components(Water, 4, SodiumSilicate, 1)
                 .colorAverage()
                 .build();
+
+        SodiumDichromateSolution = new Material.Builder(13063, "sodium_dichromate_solution")
+                .fluid()
+                .components(SodiumDichromate, 1, Water, 1, SulfuricAcid, 1)
+                .color(0xe0912f)
+                .build();
+
+        ChromiumSodaMixture = new Material.Builder(13064, "chromium_soda_mixture")
+                .dust()
+                .components(SodiumDichromate, 1, SodaAsh, 1)
+                .colorAverage()
+                .build();
     }
 }
