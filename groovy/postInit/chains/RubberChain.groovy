@@ -129,7 +129,7 @@ def sulfurSources = [
 ]
 
 def catalysers = [
-    new Catalyser('dustZincite', 2),
+    new Catalyser('dustZincOxide', 2),
     new Catalyser('dustMagnesia', 2)
 ]
 

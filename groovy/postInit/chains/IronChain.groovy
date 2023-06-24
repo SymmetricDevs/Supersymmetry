@@ -69,6 +69,8 @@ def reductants = [
 def combustibles = [
     new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
     new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
+    new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
+    new Combustible('dustAnthracite', 1, 2, 'dustTinyAsh'),
     new Combustible('gemCoal', 2, 4),
     new Combustible('dustCoal', 2, 4),
     new Combustible('gemCharcoal', 2, 4),
@@ -94,6 +96,7 @@ for (blastable in blastables) {
         .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
         .fluidOutputs(fluid(reductant.byproduct) * (blastable.reductant_required * reductant.byproduct_amount))
         .duration(blastable.amount_produced * blastable.duration)
+        .blastFurnaceTemp(1750)
         .EUt(Globals.voltAmps[1])
         .notConsumable(Globals.circuit(1))
         .buildAndRegister()
@@ -104,8 +107,9 @@ for (blastable in blastables) {
         .outputs(item('minecraft:iron_ingot') * blastable.amount_produced)
         .fluidOutputs(fluid(reductant.byproduct) * (blastable.reductant_required * reductant.byproduct_amount))
         .duration(blastable.amount_produced * blastable.duration)
+        .blastFurnaceTemp(1750)
         .EUt(Globals.voltAmps[1])
-        .notConsumable(Globals.circuit(0))
+        .notConsumable(Globals.circuit(2))
         .buildAndRegister()
     }
 }
@@ -159,7 +163,7 @@ for (combustible in combustibles) {
     .inputs(ore(combustible.name) * combustible.amount_required)
     .outputs(metaitem('ingotSteel'))
     .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
-    .duration(combustible.duration * 160)
+    .duration(combustible.duration * 120)
     .buildAndRegister()
 
     PBF_RECIPES.recipeBuilder()
@@ -167,15 +171,53 @@ for (combustible in combustibles) {
     .inputs(ore(combustible.name) * combustible.amount_required)
     .outputs(metaitem('ingotSteel'))
     .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
-    .duration(combustible.duration * 120)
+    .duration(combustible.duration * 60)
     .buildAndRegister()
 }
 
-//MV Electric Arc Furnace Steel Recipes
+//High Purity Iron Chain
 
-ARC_FURNACE.recipeBuilder()
-.inputs(metaitem('ingotWroughtIron'))
-.outputs(metaitem('ingotSteel'))
-.EUt(120)
-.duration(240)
-.buildAndRegister()
+BR = recipemap('batch_reactor')
+RF = recipemap('reaction_furnace')
+DISTILLERY = recipemap('distillery')
+
+RF.recipeBuilder()
+    .inputs(metaitem('dustIron'))
+    .fluidInputs(fluid('carbon_monoxide') * 5000)
+    .fluidOutputs(fluid('crude_iron_pentacarbonyl') * 1000)
+    .duration(200)
+    .EUt(60)
+	.buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('crude_iron_pentacarbonyl') * 1000)
+        .fluidOutputs(fluid('iron_pentacarbonyl') * 900)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('iron_pentacarbonyl') * 1000)
+    .outputs(metaitem('dustHighPurityIron'))
+    .duration(300)
+    .fluidOutputs(fluid('carbon_monoxide') * 5000)
+    .EUt(30)
+	.buildAndRegister()
+
+EBF_RECIPES.recipeBuilder()
+        .notConsumable(Globals.circuit(1))
+        .inputs(metaitem('dustIron'))
+        .outputs(item('minecraft:iron_ingot'))
+        .duration(60)
+        .blastFurnaceTemp(1750)
+        .EUt(60)
+        .buildAndRegister()
+
+EBF_RECIPES.recipeBuilder()
+        .notConsumable(Globals.circuit(1))
+        .inputs(metaitem('ingotPigIron'))
+        .outputs(item('minecraft:iron_ingot'))
+        .duration(80)
+        .blastFurnaceTemp(1200)
+        .EUt(30)
+        .buildAndRegister()

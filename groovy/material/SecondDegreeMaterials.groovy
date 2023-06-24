@@ -104,7 +104,7 @@ public class SecondDegreeMaterials {
 
         SodiumSilicateSolution = new Material.Builder(13014, "sodium_silicate_solution")
                 .fluid()
-                .components(Water, 4, SodiumSilicate, 1)
+                .components(Water, 1, SodiumSilicate, 1)
                 .colorAverage()
                 .build();
 
@@ -222,12 +222,6 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        SodiumCarbonateSolution = new Material.Builder(13034, 'sodium_carbonate_solution')
-                .fluid()
-                .components(SodiumCarbonate, 1, Water, 1)
-                .colorAverage()
-                .build()
-
         SodiumPerchlorateSolution = new Material.Builder(13035, 'sodium_perchlorate_solution')
                 .fluid()
                 .color(0x5880c7)
@@ -254,5 +248,155 @@ public class SecondDegreeMaterials {
                 .components(Iron3Chloride, 1, Water, 3)
                 .colorAverage()
                 .build()
+
+        ChloroauricAcidSolution = new Material.Builder(13039, "chloroauric_acid_solution")
+                .fluid()
+                .components(ChloroauricAcid, 3, NitricAcid, 1, Water, 6)
+                .color(0xd69129)
+                .build();
+
+        ZincChlorideSolution = new Material.Builder(13040, "zinc_chloride_solution")
+                .fluid()
+                .components(ZincChloride, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        WohlwillElectrolyte = new Material.Builder(13041, "wohlwill_electrolyte")
+                .fluid()
+                .components(ChloroauricAcid, 1, Water, 1, HydrogenChloride, 2)
+                .color(0xe8b833)
+                .build();
+
+        SpentWohlwilElectrolyte = new Material.Builder(13042, "spent_wohlwill_electrolyte")
+                .fluid()
+                .components(ChloroauricAcid, 1, Water, 1, HydrogenChloride, 2)
+                .color(0xfacd50)
+                .build();
+
+        SpentWohlwilElectrolyte.setFormula("(?)(H[AuCl4])(H2O)(HCl)2", true)
+
+        GoldOreSlurry = new Material.Builder(13043, "gold_ore_slurry")
+                .fluid()
+                .components(GoldConcentrate, 4, Water, 6)
+                .colorAverage()
+                .build();
+
+        GoldEluent = new Material.Builder(13044, "gold_eluent")
+                .fluid()
+                .components(SodiumCyanide, 1, SodiumHydroxide, 1, Water, 27)
+                .colorAverage()
+                .build();
+
+        GoldEluteSolution = new Material.Builder(13045, "gold_elute_solution")
+                .fluid()
+                .components(SodiumCyanide, 1, SodiumHydroxide, 1, Sodium, 27, Gold, 27, Carbon, 54, Nitrogen, 54, Water, 27)
+                .color(0xbbcc64)
+                .build();
+
+        GoldEluteSolution.setFormula("(NaCN)(NaOH)(Na[Au(CN)2])27(H2O)27", true)
+
+        PotassiumCarbonateSolution = new Material.Builder(13046, "potassium_carbonate_solution")
+                .fluid()
+                .components(PotassiumCarbonate, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        PotassiumSulfateSolution = new Material.Builder(13047, "potassium_sulfate_solution")
+                .fluid()
+                .components(PotassiumSulfate, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        PhosphoriteSlurry = new Material.Builder(13048, "phosphorite_slurry")
+                .fluid()
+                .components(Phosphorite, 2, Water, 1)
+                .colorAverage()
+                .build()
+      
+        DiluteHexafluorosilicicAcid = new Material.Builder(13049, "dilute_hexafluorosilicic_acid")
+                .fluid()
+                .components(Water, 8, HexafluorosilicicAcid, 1)
+                .colorAverage()
+                .build()
+
+        LithiumSulfateSolution = new Material.Builder(13050, "lithium_sulfate_solution")
+                .fluid()
+                .components(Water, 1, LithiumSulfate, 1)
+                .colorAverage()
+                .build()
+
+        DiluteSodiumSulfateSolution = new Material.Builder(13051, "dilute_sodium_sulfate_solution")
+                .fluid()
+                .color(0x9191b3)
+                .build()
+                .setFormula("(H2O)2(Na2SO4)", true);
+
+        DiluteHydrofluoricAcid = new Material.Builder(13052, "dilute_hydrofluoric_acid")
+                .fluid()
+                .components(Water, 2, HydrogenFluoride, 1)
+                .colorAverage()
+                .build();
+
+        FluorideFusedBeryl = new Material.Builder(13053, "fluoride_fused_beryl")
+                .dust()
+                .components(SodiumFluoroberyllate, 6, Alumina, 2, SiliconDioxide, 15)
+                .color(0x424f3e)
+                .build();
+
+        SodiumFluoroberyllateSolution = new Material.Builder(13054, "sodium_fluoroberyllate_solution")
+                .fluid()
+                .components(SodiumFluoroberyllate, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        AmmoniumFluoroberyllateSolution = new Material.Builder(13055, "ammonium_fluoroberyllate_solution")
+                .fluid()
+                .components(AmmoniumFluoroberyllate, 1, Water, 3)
+                .colorAverage()
+                .build();
+
+        AmmoniumFluoroberyllateSolution.setFormula("(NH4)2(BeF4)(H2O)3", true)
+
+        AmmoniumFluorideSolution = new Material.Builder(13056, "ammonium_fluoride_solution")
+                .fluid()
+                .components(AmmoniumFluoride, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        AlkaliFusedBeryl = new Material.Builder(13057, "alkali_fused_beryl")
+                .dust()
+                .components(Emerald, 1, SodaAsh, 1)
+                .colorAverage()
+                .build();
+
+        AluminiumSulfateSolution = new Material.Builder(13058, "aluminium_sulfate_solution")
+                .fluid()
+                .components(AluminiumSulfate, 1, Water, 6)
+                .colorAverage()
+                .build();
+
+        DilutedBromooctane = new Material.Builder(13059, "diluted_bromooctane")
+                .fluid()
+                .components(Bromooctane, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        CopperSulfateSolution = new Material.Builder(13060, "copper_sulfate_solution")
+                .fluid()
+                .components(CopperSulfate, 1, Water, 1)
+                .color(0x2d3bcf)
+                .build();
+
+        BariumChlorideSolution = new Material.Builder(13061, "barium_chloride_solution")
+                .fluid()
+                .components(BariumChloride, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        DilutedSodiumSilicateSolution = new Material.Builder(13062, "diluted_sodium_silicate_solution")
+                .fluid()
+                .components(Water, 4, SodiumSilicate, 1)
+                .colorAverage()
+                .build();
     }
 }

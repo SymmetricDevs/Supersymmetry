@@ -1,0 +1,14 @@
+{
+  "gasType": "GAS",
+  "particleType": "GAS",
+  "color": "00000000",
+  "agents": [
+	{
+      "agent": "gaspunk:nerve",
+      "potency": 2
+    }
+  ],
+  "tooltipLines": [
+    "Novichok A-230 Nerve Agent"
+  ]
+}

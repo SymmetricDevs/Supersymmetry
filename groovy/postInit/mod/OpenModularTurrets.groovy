@@ -21,6 +21,7 @@ def name_removals = [
         "openmodularturrets:intermediate_tiered_11_vanilla",
         "openmodularturrets:intermediate_tiered_12_vanilla",
         "openmodularturrets:intermediate_tiered_13_vanilla",
+        "openmodularturrets:intermediate_tiered_14_vanilla",
         "openmodularturrets:ammo_meta_1_vanilla",
         "openmodularturrets:ammo_meta_3_vanilla",
         "openmodularturrets:ammo_meta_4_vanilla",
@@ -28,9 +29,21 @@ def name_removals = [
         "openmodularturrets:turret_base_2_vanilla",
         "openmodularturrets:turret_base_3_vanilla",
         "openmodularturrets:turret_base_4_vanilla",
+        "openmodularturrets:intermediate_tiered_5_vanilla",
+        "openmodularturrets:intermediate_tiered_6_vanilla",
         "openmodularturrets:intermediate_tiered_7_vanilla",
         "openmodularturrets:intermediate_tiered_8_vanilla",
-        "openmodularturrets:intermediate_tiered_9_vanilla"
+        "openmodularturrets:intermediate_tiered_9_vanilla",
+        "openmodularturrets:intermediate_tiered_10_vanilla",
+        "openmodularturrets:addon_meta_0_vanilla",
+        "openmodularturrets:addon_meta_1_vanilla",
+        "openmodularturrets:addon_meta_3_vanilla",
+        "openmodularturrets:addon_meta_4_vanilla",
+        "openmodularturrets:addon_meta_6_vanilla",
+        "openmodularturrets:addon_meta_7_vanilla",
+        "openmodularturrets:upgrade_meta_1_vanilla",
+        "openmodularturrets:upgrade_meta_4_vanilla",
+        "openmodularturrets:base_addon_meta_0_vanilla"
 ]
 
 for (item in name_removals) {
@@ -179,7 +192,7 @@ for (solder in soldering_alloys) {
             .inputs([
                     ore('wireFineRedAlloy'),
                     metaitem('conveyor.module.lv'),
-                    ore('plateGold'),
+                    ore('plateLead'),
                     ore('plateIron')
             ])
             .fluidInputs(solder)
@@ -190,9 +203,8 @@ for (solder in soldering_alloys) {
 
     recipemap('weapons_factory').recipeBuilder()
             .inputs([
-                    ore('plateDenseSteel'),
+                    ore('plateSteel')*10,
                     ore('wireFineRedAlloy'),
-                    ore('plateSteel'),
                     ore('springSteel'),
                     ore('gearSteel')
             ])
@@ -284,3 +296,117 @@ recipemap('mixer').recipeBuilder()
         .duration(20)
         .EUt(30)
         .buildAndRegister();
+
+crafting.replaceShaped("openmodularturrets:addon_meta_5_vanilla", item('openmodularturrets:addon_meta', 5), [
+        [null, ore('circuitMv'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('plateSteel'), item('openmodularturrets:intermediate_regular')],
+        [null, item('opencomputers:component', 4), null]
+])
+
+crafting.replaceShaped("openmodularturrets:upgrade_meta_0_vanilla", item('openmodularturrets:upgrade_meta'), [
+        [null, ore('craftingLensGlass'), null],
+        [ore('craftingLensGlass'), ore('circuitMv'), ore('craftingLensGlass')],
+        [null, item('openmodularturrets:intermediate_regular'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:upgrade_meta_2_vanilla", item('openmodularturrets:upgrade_meta', 2), [
+        [null, item('techguns:itemshared', 39), null],
+        [item('techguns:itemshared', 39), metaitem('electric.motor.mv'), item('techguns:itemshared', 39)],
+        [null, item('openmodularturrets:intermediate_regular'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:upgrade_meta_3_vanilla", item('openmodularturrets:upgrade_meta', 3), [
+        [null, item('techguns:itemshared', 39), null],
+        [metaitem('electric.piston.mv'), item('techguns:itemshared', 39), metaitem('electric.piston.mv')],
+        [null, item('openmodularturrets:intermediate_regular'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:expander_0_vanilla", item('openmodularturrets:expander'), [
+        [null, metaitem('plateLead'), null],
+        [item('openmodularturrets:intermediate_regular'), item('minecraft:chest'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateLead'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:expander_1_vanilla", item('openmodularturrets:expander', 1), [
+        [null, metaitem('plateSteel'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('crate.steel'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateSteel'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:expander_2_vanilla", item('openmodularturrets:expander', 2), [
+        [null, metaitem('plateAluminium'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('crate.aluminium'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateAluminium'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:expander_3_vanilla", item('openmodularturrets:expander', 3), [
+        [null, metaitem('plateStainlessSteel'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('crate.stainless_steel'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateStainlessSteel'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:expander_4_vanilla", item('openmodularturrets:expander', 4), [
+        [null, metaitem('plateTitanium'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('crate.titanium'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateTitanium'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:expander_5_vanilla", item('openmodularturrets:expander', 5), [
+        [null, metaitem('plateLead'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('energy_hatch.input.ulv'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateLead'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:expander_6_vanilla", item('openmodularturrets:expander', 6), [
+        [null, metaitem('plateSteel'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('energy_hatch.input.lv'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateSteel'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:expander_7_vanilla", item('openmodularturrets:expander', 7), [
+        [null, metaitem('plateAluminium'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('energy_hatch.input.mv'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateAluminium'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:expander_8_vanilla", item('openmodularturrets:expander', 8), [
+        [null, metaitem('plateStainlessSteel'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('energy_hatch.input.hv'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateStainlessSteel'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:expander_9_vanilla", item('openmodularturrets:expander', 9), [
+        [null, metaitem('plateTitanium'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('energy_hatch.input.ev'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateTitanium'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:intermediate_tiered_0_vanilla", item('openmodularturrets:intermediate_tiered'), [
+        [null, metaitem('plateSteel'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('sensor.lv'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateSteel'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:intermediate_tiered_1_vanilla", item('openmodularturrets:intermediate_tiered', 1), [
+        [null, metaitem('plateAluminium'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('sensor.mv'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateAluminium'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:intermediate_tiered_2_vanilla", item('openmodularturrets:intermediate_tiered', 2), [
+        [null, metaitem('plateStainlessSteel'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('sensor.hv'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateStainlessSteel'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:intermediate_tiered_3_vanilla", item('openmodularturrets:intermediate_tiered', 3), [
+        [null, metaitem('plateTitanium'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('sensor.ev'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateTitanium'), null]
+])
+
+crafting.replaceShaped("openmodularturrets:intermediate_tiered_4_vanilla", item('openmodularturrets:intermediate_tiered', 4), [
+        [null, metaitem('plateTungstenSteel'), null],
+        [item('openmodularturrets:intermediate_regular'), metaitem('sensor.iv'), item('openmodularturrets:intermediate_regular')],
+        [null, metaitem('plateTungstenSteel'), null]
+])

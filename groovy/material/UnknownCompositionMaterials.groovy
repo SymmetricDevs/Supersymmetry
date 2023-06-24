@@ -11,6 +11,7 @@ import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
+import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
 public class UnknownCompositionMaterials {
  
@@ -279,6 +280,706 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xc3c4b3)
                 .build();
-    }
 
-}           
+        RawCellulose = new Material.Builder(4050, "raw_cellulose")
+                .dust()
+                .color(0x302b1a)
+                .build();
+
+        WhiteLiquor = new Material.Builder(4051, "white_liquor")
+                .fluid()
+                .color(0xd9d3c1)
+                .build();
+
+        BlackLiquor = new Material.Builder(4052, "black_liquor")
+                .fluid()
+                .color(0x2e2a1f)
+                .build();
+
+        ConcentratedBlackLiquor = new Material.Builder(4053, "concentrated_black_liquor")
+                .fluid()
+                .color(0x1f1d18)
+                .build();
+
+        GreenLiquor = new Material.Builder(4054, "green_liquor")
+                .fluid()
+                .color(0x2b4536)
+                .build();
+
+        AcidicCelluloseSolution = new Material.Builder(4055, "acidic_cellulose_solution")
+                .fluid()
+                .color(0xb7bd60)
+                .build();
+
+        Wastewater = new Material.Builder(4056, "wastewater")
+                .fluid()
+                .color(0x2d402f)
+                .build();
+
+        HeatedWastewater = new Material.Builder(4057, "heated_wastewater")
+                .fluid()
+                .fluidTemp(340)
+                .color(0x435e46)
+                .build();
+
+        FlocculatedWastewater = new Material.Builder(4058, "flocculated_wastewater")
+                .fluid()
+                .color(0x435e46)
+                .build();
+
+        FilteredWastewater = new Material.Builder(4059, "filtered_wastewater")
+                .fluid()
+                .color(0x457568)
+                .build();
+
+        WastewaterSludge = new Material.Builder(4060, "wastewater_sludge")
+                .fluid()
+                .color(0x2b1e1e)
+                .build();
+
+        CarburizedStainlessSteel = new Material.Builder(4061, 'carburized_stainless_steel')
+                .dust().fluid()
+                .fluidTemp(1500)
+                .color(0x6b6552)
+                .build()
+
+        UnscrubbedWoodGas = new Material.Builder(4062, "unscrubbed_wood_gas")
+                .fluid(FluidTypes.GAS)
+                .color(0x85806f)
+                .build();
+
+        LightOil = new Material.Builder(4063, "light_oil")
+                .fluid()
+                .color(0x5e5e4d)
+                .build();
+
+        NaphthaleneOil = new Material.Builder(4065, "naphthalene_oil")
+                .fluid()
+                .color(0x2e2926)
+                .build();
+
+        AnthraceneOil = new Material.Builder(4066, "anthracene_oil")
+                .fluid()
+                .color(0x211f1e)
+                .build();
+
+        AlkalineNaphthaleneOil = new Material.Builder(4067, "alkaline_naphthalene_oil")
+                .fluid()
+                .color(0x403833)
+                .build();
+
+        PurifiedNaphthaleneOil = new Material.Builder(4068, "purified_naphthalene_oil")
+                .fluid()
+                .color(0x595542)
+                .build();
+
+        AcidicLightOil = new Material.Builder(4069, "acidic_light_oil")
+                .fluid()
+                .color(0x87816c)
+                .build();
+
+        CrudePyridiniumSulfate = new Material.Builder(4070, "crude_pyridinium_sulfate")
+                .fluid()
+                .color(0x48523b)
+                .build();
+
+        ImpurePyridine = new Material.Builder(4071, "impure_pyridine")
+                .fluid()
+                .color(0x233326)
+                .build();
+
+        AcidicAnthraceneOil = new Material.Builder(4072, "acidic_anthracene_oil")
+                .fluid()
+                .color(0x87816c)
+                .build();
+
+        AnthraceneExtract = new Material.Builder(4073, "anthracene_extract")
+                .fluid()
+                .color(0x211c1c)
+                .build();
+
+        CrudeQuinoliniumSulfate = new Material.Builder(4074, "crude_quinolinium_sulfate")
+                .fluid()
+                .color(0x1b1c0a)
+                .build();
+
+        ImpureQuinoline = new Material.Builder(4075, "impure_quinoline")
+                .fluid()
+                .color(0x222418)
+                .build();
+
+        ConcentratedBrine = new Material.Builder(4076, "concentrated_brine")
+                .fluid()
+                .color(0xa6a444)
+                .build();
+
+        BoronFreeBrine = new Material.Builder(4078, "boron_free_brine")
+                .fluid()
+                .color(0xa68a44)
+                .build();
+
+        LithiumFreeBrine = new Material.Builder(4079, "lithium_free_brine")
+                .fluid()
+                .color(0xa17a4c)
+                .build();
+
+        ChlorinatedBrine = new Material.Builder(4080, "chlorinated_brine")
+                .fluid()
+                .color(0xa3b560)
+                .build();
+
+        ImpureBromine = new Material.Builder(4081, "impure_bromine")
+                .fluid(FluidTypes.GAS)
+                .color(0x572d2b)
+                .build();
+
+        ChilledLava = new Material.Builder(4082, "chilled_lava")
+                .color(0x4d2d25)
+                .fluidTemp(400)
+                .build();
+
+        ChilledFlueGas = new Material.Builder(4083, "chilled_flue_gas")
+                .fluid(FluidTypes.GAS)
+                .color(0x171717)
+                .fluidTemp(400)
+                .build();
+
+        WoodAsh = new Material.Builder(4084, "wood_ash")
+                .dust()
+                .color(0x242221)
+                .build();
+
+        VeryConcentratedBrine = new Material.Builder(4085, "very_concentrated_brine")
+                .fluid()
+                .color(0xb5b226)
+                .build();
+
+        LangbeiniteLeach = new Material.Builder(4086, "langbeinite_leach")
+                .fluid()
+                .color(0x9c9a87)
+                .build();
+
+        PolyhaliteLeach = new Material.Builder(4087, "polyhalite_leach")
+                .fluid()
+                .color(0xb3a094)
+                .build();
+
+        TinDross = new Material.Builder(4088, "tin_dross")
+                .dust().fluid()
+                .fluidTemp(600)
+                .color(0x2a2e2e)
+                .build();
+
+        DecopperizedTin = new Material.Builder(4089, "decopperized_tin")
+                .dust().fluid()
+                .fluidTemp(600)
+                .color(0xb5b7c9)
+                .build();
+
+        KainiteLeach = new Material.Builder(4090, "kainite_leach")
+                .fluid()
+                .color(0xadb07f)
+                .build();
+
+        Zeolite13X = new Material.Builder(4091, "zeolite_13")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xe4e8bc)
+                .build();
+
+        Zeolite13XSolution = new Material.Builder(4092, "zeolite_13_solution")
+                .fluid()
+                .color(0xe4e8bc)
+                .build();
+
+        LTSCatalyst = new Material.Builder(4093, "lts_catalyst")
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .color(0x756857)
+                .build();
+
+        HTSCatalyst = new Material.Builder(4094, "hts_catalyst")
+                .dust()
+                .color(0x5e4f4f)
+                .build();
+
+        SpentBismuthCatalyst = new Material.Builder(4095, "spent_bismuth_catalyst")
+                .dust()
+                .color(0x31403f)
+                .build();
+
+        AlkalineSodiumOleateSolution = new Material.Builder(4096, "alkaline_sodium_oleate_solution")
+                .fluid()
+                .color(0xa6b584)
+                .build();
+
+        FattyAcidSolution = new Material.Builder(4097, "fatty_acid_solution")
+                .fluid()
+                .color(0xa1ad5c)
+                .build();
+
+        OleicAcidSolution = new Material.Builder(4098, "oleic_acid_solution")
+                .fluid()
+                .color(0x8dbf67)
+                .build();
+
+        AluminiumSilicateLeach = new Material.Builder(4099, "aluminium_silicate_leach")
+                .fluid()
+                .color(0x587682)
+                .build();
+
+        AlkaliAlumMix = new Material.Builder(4100, "alkali_alum_mix")
+                .iconSet(SHINY)
+                .dust()
+                .color(0xe34949)
+                .build();
+
+        AmblygoniteLeach = new Material.Builder(4101, "amblygonite_leach")
+                .fluid()
+                .color(0xbaced6)
+                .build();
+
+        RoastedLepidolite = new Material.Builder(4102, "roasted_lepidolite")
+                .dust()
+                .color(0x443b45)
+                .iconSet(SAND)
+                .build();
+
+        LepidoliteLeach = new Material.Builder(4103, "lepidolite_leach")
+                .fluid()
+                .color(0x805066)
+                .build();
+
+        NeutralizedLepidoliteLeach = new Material.Builder(4104, "neutralized_lepidolite_leach")
+                .fluid()
+                .color(0x675d85)
+                .build();
+
+        AluminiumFreeLepidoliteLeach = new Material.Builder(4105, "aluminium_free_lepidolite_leach")
+                .fluid()
+                .color(0x557365)
+                .build();
+
+        GoldLeachSolution = new Material.Builder(4106, "gold_leach_solution")
+                .fluid()
+                .color(0x9c8a46)
+                .build();
+
+        PhosphatePulp = new Material.Builder(4107, "phosphate_pulp")
+                .dust()
+                .color(0x8c7e2a)
+                .iconSet(SAND)
+                .build();
+
+        FilteredPhosphatePulp = new Material.Builder(4108, "filtered_phosphate_pulp")
+                .dust()
+                .color(0x8c7e2a)
+                .iconSet(SHINY)
+                .build();
+
+        PhosphateConcentrate = new Material.Builder(4109, "phosphate_concentrate")
+                .dust()
+                .color(0xd1b615)
+                .iconSet(SHINY)
+                .build();
+
+        Phosphogypsum = new Material.Builder(4110, "phosphogypsum")
+                .dust()
+                .color(0xd1cba7)
+                .iconSet(DULL)
+                .build();
+      
+        ImpureAmmoniumFluoroberyllateSolution = new Material.Builder(4111, "ammonium_fluoroberyllate_solution")
+                .fluid()
+                .color(0x1b8541)
+                .build();
+
+        ImpureAmmoniumFluoroberyllateSolution.setFormula("(?)(NH4)2(BeF4)(H2O)3", true)
+
+        ImpureBerylliumSulfateSolution = new Material.Builder(4112, "impure_beryllium_sulfate_solution")
+                .fluid()
+                .color(0x608726)
+                .build();
+
+        ImpureLithiumSulfateSolution = new Material.Builder(4113, "impure_lithium_sulfate_solution")
+                .fluid()
+                .color(0xf0bc89)
+                .build();
+
+        GalenaByproductsSlurry = new Material.Builder(4114, "galena_byproducts_slurry")
+                .fluid()
+                .color(0x592880)
+                .build();
+
+        SinteredLeadConcentrate = new Material.Builder(4115, "sintered_lead_concentrate")
+                .dust()
+                .color(0x3a1954)
+                .iconSet(SAND)
+                .build();
+
+        CadmiumRichFlueDust = new Material.Builder(4116, "cadmium_rich_flue_dust")
+                .dust()
+                .color(0x757061)
+                .iconSet(DULL)
+                .build();
+
+        BlackMetal = new Material.Builder(4117, "black_metal")
+                .dust()
+                .color(0x3d3440)
+                .build();
+
+        AntimonyArsenicFlueDust = new Material.Builder(4118, "antimony_arsenic_flue_dust")
+                .dust()
+                .color(0x707063)
+                .iconSet(DULL)
+                .build();
+
+        BurnedBlackMetal = new Material.Builder(4119, "burned_black_metal")
+                .dust()
+                .color(0x3d3440)
+                .iconSet(DULL)
+                .build();
+
+        LithargeSlag = new Material.Builder(4120, "litharge_slag")
+                .dust()
+                .color(0xb5443c)
+                .iconSet(DULL)
+                .build();
+
+        HarrisSlag = new Material.Builder(4121, "harris_slag")
+                .dust()
+                .color(0xabb074)
+                .iconSet(DULL)
+                .build();
+
+        SodiumArsenateStannateSolution = new Material.Builder(4122, "sodium_arsenate_stannate_solution")
+                .fluid()
+                .color(0x5c3a23)
+                .build();
+        
+        SodiumArsenateStannateMixture = new Material.Builder(4123, "sodium_arsenate_stannate_mixture")
+                .dust()
+                .color(0x784c2f)
+                .build();
+
+        ImpureEthyleneGlycol = new Material.Builder(4124, "impure_ethylene_glycol")
+                .fluid()
+                .color(0xc8c8e0)
+                .build();
+
+        ImpureSaturatedAmmoniacalMethanol = new Material.Builder(4125, "impure_saturated_ammoniacal_methanol")
+                .fluid()
+                .color(0xad8653)
+                .build();
+
+        CarnalliteLeach = new Material.Builder(4126, "carnallite_leach")
+                .fluid()
+                .color(0xc1c499)
+                .build();
+
+        HaliteLeach = new Material.Builder(4127, "halite_leach")
+                .fluid()
+                .color(0x9bbdbc)
+                .build();
+
+        EthylenediaminePyrocatechol = new Material.Builder(4128, "ethylenediamine_pyrocatechol")
+                .fluid()
+                .color(0x42392f)
+                .build();
+
+        CeramicThickFilmPaste = new Material.Builder(4129, "ceramic_thick_film_paste")
+                .fluid()
+                .color(0x000000)
+                .build();
+
+        BoraxElectrolyte = new Material.Builder(4130, "borax_electrolyte")
+                .fluid()
+                .color(0x85806b)
+                .build();
+
+        FerroelectricCeramicBinding = new Material.Builder(4131, "ferroelectric_ceramic_binding")
+                .fluid()
+                .color(0xede772)
+                .build();
+
+        DisproportionatedTrichlorosilane = new Material.Builder(4132, 'disproportionated_trichlorosilane')
+                .fluid()
+                .color(0x849169)
+                .build()
+
+        DisproportionatedDichlorosilane = new Material.Builder(4133, 'disproportionated_dichlorosilane')
+                .fluid()
+                .color(0xa1ad86)
+                .build()
+
+        DisproportionatedChlorosilane = new Material.Builder(4134, 'disproportionated_chlorosilane')
+                .fluid()
+                .color(0xb5bf9b)
+                .build()
+      
+        MetalNitrateSolution = new Material.Builder(4135, "metal_nitrate_solution")
+                .fluid()
+                .color(0x663422)
+                .build();
+
+        NeutralizedMetalNitrateSolution = new Material.Builder(4136, "neutralized_metal_nitrate_solution")
+                .fluid()
+                .color(0x734d3f)
+                .build();
+
+        MetalNitrateCatalyst = new Material.Builder(4137, "metal_nitrate_catalyst")
+                .dust()
+                .iconSet(SHINY)
+                .color(0xb58877)
+                .build();
+
+        TwoEthylhexylPhosphoricAcidMix = new Material.Builder(4138, "two_ethylhexyl_phosphoric_acid_mix")
+                .fluid()
+                .color(0xd1bb75)
+                .build();
+
+        RareEarthCatalystYNd = new Material.Builder(4139, "rare_earth_catalyst_y_nd")
+                .dust()
+                .color(0x2e2a2a)
+                .build();
+
+        DilutedPrimaryAmineN = new Material.Builder(4140, "diluted_primary_amine_n")
+                .fluid()
+                .color(0x704a9e)
+                .build();
+
+        CrosslinkedPolystyrene = new Material.Builder(4141, "crosslinked_polystyrene")
+                .ingot().fluid()
+                .flags(GENERATE_ROUND)
+                .color(0xa7a9d6)
+                .build();
+
+        EthyleneGlycolMix = new Material.Builder(4142, "ethylene_glycol_mix")
+                .fluid()
+                .color(0x2eafc9)
+                .build();
+
+        PalladiumDopedCrosslinkedPolystyrene = new Material.Builder(4143, "palladium_doped_crosslinked_polystyrene")
+                .ingot().fluid()
+                .flags(GENERATE_ROUND)
+                .color(0xe0e6bc)
+                .build();
+
+        TrialkylaluminiumMixture = new Material.Builder(4144, 'trialkylaluminium_mixture')
+                .fluid()
+                .color(0x6b777d)
+                .build()
+
+        TrialkylaluminiumMixture.setFormula("AlR3", true)
+
+        AluminiumAlkoxideMixture = new Material.Builder(4145, 'aluminium_alkoxide_mixture')
+                .dust()
+                .color(0x657780)
+                .build()
+
+        AluminiumAlkoxideMixture.setFormula("Al(OR)3", true)
+
+        ZieglerAlcoholMixture = new Material.Builder(4146, 'ziegler_alcohol_mixture')
+                .fluid()
+                .color(0xc47631)
+                .build()
+
+        ImpureDiethylEther = new Material.Builder(4147, "impure_diethyl_ether")
+                .fluid()
+                .color(0x5e9cff)
+                .build()
+
+        AluminiumAlkoxideSolution = new Material.Builder(4148, 'aluminium_alkoxide_solution')
+                .fluid()
+                .color(0x657780)
+                .build()
+
+        AluminiumAlkoxideSolution.setFormula("[(C2H5)2O]Al(OR)3", true)
+
+        CapsaicinSolution = new Material.Builder(4149, 'capsaicin_solution')
+                .fluid()
+                .color(0xd43b2a)
+                .build()
+
+        TearGas = new Material.Builder(4150, 'tear_gas')
+                .fluid()
+                .color(0xd1ba5c)
+                .build()
+
+        HydratedPropene = new Material.Builder(4151, 'hydrated_propene')
+                .fluid()
+                .color(0xc9997d)
+                .build()
+
+        EthylamineMix = new Material.Builder(4152, 'ethylamine_mix')
+                .fluid()
+                .color(0xdbaf48)
+                .build()
+
+        ImpureSphaleriteSlurry = new Material.Builder(4153, 'impure_sphalerite_slurry')
+                .fluid()
+                .color(0xa5a690)
+                .build()
+
+        UnprocessedSphaleriteSlurry = new Material.Builder(4154, 'unprocessed_sphalerite_slurry')
+                .fluid()
+                .color(0xc7c991)
+                .build()
+
+        GalenaSlurry = new Material.Builder(4155, 'galena_slurry')
+                .fluid()
+                .color(0x513d59)
+                .build()
+
+        SphaleriteSlurry = new Material.Builder(4156, 'sphalerite_slurry')
+                .fluid()
+                .color(0xb7ba63)
+                .build()
+
+        ThalliumRichFlue = new Material.Builder(4157, 'thallium_rich_flue')
+                .dust()
+                .color(0x26222e)
+                .build()
+
+        CrudeZinc = new Material.Builder(4158, 'crude_zinc')
+                .fluid()
+                .color(0x565863)
+                .build()
+
+        CadmiumRichZinc = new Material.Builder(4159, 'cadmium_rich_zinc')
+                .fluid()
+                .color(0x80849c)
+                .build()
+
+        ImpureSmithsoniteSlurry = new Material.Builder(4160, 'impure_smithsonite_slurry')
+                .fluid()
+                .color(0x83a899)
+                .build()
+
+        SmithsoniteSlurry = new Material.Builder(4161, 'smithsonite_slurry')
+                .fluid()
+                .color(0x89c9af)
+                .build()
+
+        ZincLeach = new Material.Builder(4162, 'zinc_leach')
+                .fluid()
+                .color(0x8c6f58)
+                .build()
+
+        ZincLeachResidue = new Material.Builder(4163, 'zinc_leach_residue')
+                .dust()
+                .color(0x33281f)
+                .build()
+
+        HotZincLeach = new Material.Builder(4164, 'hot_zinc_leach')
+                .fluid()
+                .fluidTemp(353)
+                .color(0xb89e8a)
+                .build()
+
+        HotZincLeachResidue = new Material.Builder(4165, 'hot_zinc_leach_residue')
+                .dust()
+                .color(0x3b332d)
+                .build()
+
+        ZincRichSlag = new Material.Builder(4166, 'zinc_rich_slag')
+                .dust()
+                .color(0x242323)
+                .build()
+
+        ReducedZincLeach = new Material.Builder(4167, 'reduced_zinc_leach')
+                .fluid()
+                .color(0xb38764)
+                .build()
+
+        WaelzOxide = new Material.Builder(4168, 'waelz_oxide')
+                .dust().fluid()
+                .color(0x475453)
+                .build()
+
+        GermaniumRichSlag = new Material.Builder(4169, 'germanium_rich_slag')
+                .dust()
+                .color(0x2d2e27)
+                .build()
+
+        ZincCementationSlurry = new Material.Builder(4170, 'zinc_cementation_slurry')
+                .fluid()
+                .color(0x4f5663)
+                .build()
+
+        PrecipitatedZincLeach = new Material.Builder(4171, 'precipitated_zinc_leach')
+                .fluid()
+                .color(0x756d54)
+                .build()
+
+        CopperCadmiumResidue = new Material.Builder(4172, 'copper_cadmium_residue')
+                .dust()
+                .color(0x47271d)
+                .build()
+
+        HotPrecipitatedZincLeach = new Material.Builder(4173, 'hot_precipitated_zinc_leach')
+                .fluid()
+                .fluidTemp(353)
+                .color(0x918a71)
+                .build()
+
+        ReprecipitatedZincLeach = new Material.Builder(4174, 'reprecipitated_zinc_leach')
+                .fluid()
+                .color(0x756e54)
+                .build()
+
+        CobaltResidue = new Material.Builder(4175, 'cobalt_residue')
+                .dust()
+                .color(0x373b6b)
+                .build()
+      
+        FuselOil = new Material.Builder(4176, 'fusel_oil')
+                .fluid()
+                .color(0xa62403)
+                .build()
+
+        AshSlurry = new Material.Builder(4177, 'ash_slurry')
+                .fluid()
+                .color(0x252526)
+                .build()
+
+        DesulfurizedFlueGas = new Material.Builder(4178, 'desulfurized_flue_gas')
+                .fluid(FluidTypes.GAS)
+                .color(0x151521)
+                .fluidTemp(1000)
+                .build()
+
+        CadmiumRichFlueGas = new Material.Builder(4179, "cadmium_rich_flue_gas")
+                .fluid(FluidTypes.GAS)
+                .color(0x757061)
+                .fluidTemp(1000)
+                .build();
+
+        AntimonyArsenicFlueGas = new Material.Builder(4180, "antimony_arsenic_flue_gas")
+                .fluid(FluidTypes.GAS)
+                .color(0x707063)
+                .fluidTemp(1000)
+                .build();
+
+        ThalliumRichFlueGas = new Material.Builder(4181, 'thallium_rich_flue_gas')
+                .fluid(FluidTypes.GAS)
+                .color(0x26222e)
+                .fluidTemp(1000)
+                .build()
+
+        FluorinatedOctanoylChlorideMixture = new Material.Builder(4182, 'fluorinated_octanoyl_chloride_mixture')
+                .fluid()
+                .color(0x458583)
+                .build()
+
+        ButyraldehydeMixture = new Material.Builder(4183, "butyraldehyde_mixture")
+                .fluid()
+                .color(0x96920e)
+                .build();
+
+        PentanalMixture = new Material.Builder(4184, "pentanal_mixture")
+                .fluid()
+                .color(0x968450)
+                .build();
+    }
+}

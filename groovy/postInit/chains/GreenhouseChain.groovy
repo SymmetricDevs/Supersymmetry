@@ -37,18 +37,22 @@ CHEMICAL_BATH.recipeBuilder()
 def nitrogenNutrients = [
         metaitem('dustAmmoniumChloride'),
         metaitem('dustAmmoniumNitrate'),
-        metaitem('dustAmmoniumSulfate')
+        metaitem('dustAmmoniumSulfate'),
+        metaitem('dustUrea')
 ];
 
 def potassiumNutrients = [
         metaitem('dustAsh'),
         metaitem('dustCharcoal'),
-        metaitem('dustRockSalt')
+        metaitem('dustRockSalt'),
+        metaitem('dustPotassiumCarbonate'),
+        metaitem('dustPotash')
 ];
 
 def phosphorusNutrients = [
         metaitem('dustCalcite'),
-        metaitem('dustApatite'),
+        metaitem('dustChlorapatite'),
+        metaitem('dustHydroxyapatite'),
         metaitem('dustFluorapatite'),
         metaitem('dustTricalciumPhosphate'),
         metaitem('dustPhosphorus'),
@@ -110,7 +114,7 @@ COMPRESSOR.recipeBuilder()
 
 PYROLYSE_OVEN.recipeBuilder()
         .inputs(item('minecraft:sugar') * 24)
-        .outputs(metaitem('dustCharcoal') * 6)
+        .outputs(metaitem('dustCarbon') * 6)
         .fluidOutputs(fluid('steam') * 6000)
         .duration(320)
         .EUt(64)

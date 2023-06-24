@@ -1,0 +1,34 @@
+{
+  "weight": 30,
+  "density": 1,
+  "max_height": 80,
+  "min_height": 0,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "gold"
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      8,
+      8
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:raw_electrum"
+      },
+      {
+        "secondary": "ore:raw_electrum"
+      },
+      {
+        "between": "ore:raw_electrum"
+      },
+      {
+        "sporadic": "ore:raw_electrum"
+      }
+    ]
+  }
+}

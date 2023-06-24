@@ -1,3 +1,6 @@
+import classes.*;
+import static globals.Globals.*
+
 def circuit(x) {
     return metaitem('circuit.integrated').withNbt([Configuration: x])
 }
@@ -74,7 +77,12 @@ def recipesToRemove = [
 	'endercore:shapeless_paper',
 	'gregtech:paper_dust',
 	'gregtech:sugar',
-	'minecraft:bone_meal_from_bone'
+	'minecraft:bone_meal_from_bone',
+	'minecraft:diorite',
+	'minecraft:granite',
+	'minecraft:andesite',
+	'minecraft:minecart',
+	'quark:trapdoor'
 ]
 
 for(name in recipesToRemove) {
@@ -264,9 +272,9 @@ crafting.replaceShaped('quark:framed_glass', item('quark:framed_glass') * 4, [
 ])
 
 crafting.replaceShaped('minecraft:golden_rail', item('minecraft:golden_rail') * 6, [
-    [ore('stickGold'), ore('stickSteelMagnetic'), ore('stickGold')],
-    [ore('stickGold'), ore('stickWood'), ore('stickGold')],
-    [ore('stickGold'), ore('wireFineRedAlloy'), ore('stickGold')]
+    [ore('stickBrass'), ore('stickSteelMagnetic'), ore('stickBrass')],
+    [ore('stickBrass'), ore('stickWood'), ore('stickBrass')],
+    [ore('stickBrass'), ore('wireFineRedAlloy'), ore('stickBrass')]
 ])
 
 crafting.replaceShaped('minecraft:detector_rail', item('minecraft:detector_rail') * 6, [
@@ -500,8 +508,15 @@ mods.gregtech.chemical_bath.recipeBuilder()
 
 recipemap('crystallizer').recipeBuilder()
 		.fluidInputs(fluid('clarified_sugary_water') * 1000)
-		.outputs(item('minecraft:sugar') * 4)
+		.outputs(item('minecraft:sugar') * 6)
 		.duration(200)
+		.EUt(8)
+		.buildAndRegister()
+
+recipemap('crystallizer').recipeBuilder()
+		.fluidInputs(fluid('sugary_water') * 1000)
+		.outputs(item('minecraft:sugar') * 3)
+		.duration(300)
 		.EUt(8)
 		.buildAndRegister()
 
@@ -548,3 +563,71 @@ mods.gregtech.mixer.recipeBuilder()
 		.duration(400)
 		.EUt(8)
 		.buildAndRegister()
+
+crafting.replaceShaped('minecraft:cobblestone_slab', item('minecraft:stone_slab', 3) * 6, [
+		[null, null, null],
+		[ore('cobblestone'), ore('cobblestone'), ore('cobblestone')],
+		[null, null, null]
+])
+
+crafting.replaceShaped('minecraft:trapdoor', item('minecraft:trapdoor') * 4, [
+		[item('minecraft:planks'), item('minecraft:planks'), ore('craftingToolHardHammer')],
+		[item('minecraft:planks'), item('minecraft:planks'), null],
+		[ore('craftingToolSaw'), null, null]
+])
+
+crafting.replaceShaped('minecraft:iron_trapdoor', item('minecraft:iron_trapdoor'), [
+		[metaitem('plateIron'), metaitem('plateIron'), ore('craftingToolHardHammer')],
+		[metaitem('plateIron'), metaitem('plateIron'), null],
+		[ore('craftingToolSaw'), null, null]
+])
+
+crafting.replaceShaped('quark:spruce_trapdoor', item('quark:spruce_trapdoor') * 4, [
+		[item('minecraft:planks', 1), item('minecraft:planks', 1), ore('craftingToolHardHammer')],
+		[item('minecraft:planks', 1), item('minecraft:planks', 1), null],
+		[ore('craftingToolSaw'), null, null]
+])
+
+crafting.replaceShaped('quark:birch_trapdoor', item('quark:birch_trapdoor') * 4, [
+		[item('minecraft:planks', 2), item('minecraft:planks', 2), ore('craftingToolHardHammer')],
+		[item('minecraft:planks', 2), item('minecraft:planks', 2), null],
+		[ore('craftingToolSaw'), null, null]
+])
+
+crafting.replaceShaped('quark:jungle_trapdoor', item('quark:jungle_trapdoor') * 4, [
+		[item('minecraft:planks', 3), item('minecraft:planks', 3), ore('craftingToolHardHammer')],
+		[item('minecraft:planks', 3), item('minecraft:planks', 3), null],
+		[ore('craftingToolSaw'), null, null]
+])
+
+crafting.replaceShaped('quark:acacia_trapdoor', item('quark:acacia_trapdoor') * 4, [
+		[item('minecraft:planks', 4), item('minecraft:planks', 4), ore('craftingToolHardHammer')],
+		[item('minecraft:planks', 4), item('minecraft:planks', 4), null],
+		[ore('craftingToolSaw'), null, null]
+])
+
+crafting.replaceShaped('quark:dark_oak_trapdoor', item('quark:dark_oak_trapdoor') * 4, [
+		[item('minecraft:planks', 5), item('minecraft:planks', 5), ore('craftingToolHardHammer')],
+		[item('minecraft:planks', 5), item('minecraft:planks', 5), null],
+		[ore('craftingToolSaw'), null, null]
+])
+
+crafting.replaceShaped('minecraft:stone_slab', item('minecraft:stone_slab') * 6, [
+		[null, null, null],
+		[ore('stone'), ore('stone'), ore('stone')],
+		[null, null, null]
+])
+
+Globals.solders.each { key, val ->
+	recipemap('assembler').recipeBuilder()
+			.inputs([
+					metaitem('platePolytetrafluoroethylene') * 2,
+					metaitem('plateStainlessSteel'),
+					metaitem('ringStainlessSteel') * 2
+			])
+			.fluidInputs(fluid(key) * val)
+			.outputs(item('minecraft:elytra'))
+			.duration(200)
+			.EUt(240)
+			.buildAndRegister();
+}

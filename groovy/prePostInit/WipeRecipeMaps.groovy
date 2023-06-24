@@ -16,6 +16,7 @@ removeAllRecipes(RecipeMaps.PYROLYSE_RECIPES);
 removeAllRecipes(RecipeMaps.IMPLOSION_RECIPES);
 removeAllRecipes(RecipeMaps.LASER_ENGRAVER_RECIPES);
 removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES);
+removeAllRecipes(RecipeMaps.VACUUM_RECIPES);
 
 //Removed due to infinite stone being unrealistic
 removeAllRecipes(recipemap('rock_breaker'));
@@ -281,3 +282,17 @@ mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:carrot')], null)
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustYellowLimonite') * 4], null)
 // Iron Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustBrownLimonite') * 4], null)
+
+recipemap('vacuum_freezer').recipeBuilder()
+        .inputs(metaitem('matter_graham_hot_plate'))
+        .outputs(metaitem('cracker_graham_ungraded_plate'))
+        .EUt(60)
+        .duration(20)
+        .buildAndRegister()
+
+recipemap('vacuum_freezer').recipeBuilder()
+        .inputs(metaitem('hot_apple_hard_candy_plate'))
+        .outputs(metaitem('food.apple_hard_candy'))
+        .EUt(5)
+        .duration(200)
+        .buildAndRegister()

@@ -286,6 +286,15 @@ public class PetrochemistryMaterials {
                 .color(0xcec929)
                 .build();
 
+        LightOilyBrine = new Material.Builder(20065, "light_oily_brine")
+                .fluid()
+                .color(0x7d7c61)
+                .build();
+
+        HeavyOilyBrine = new Material.Builder(20066, "heavy_oily_brine")
+                .fluid()
+                .color(0x4f4e37)
+                .build();
     }
 
 }           

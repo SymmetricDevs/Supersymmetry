@@ -37,6 +37,7 @@ def name_removals = [
         "icbmclassic:missile/ex/missile.hypersonic",
         "icbmclassic:tools/defuser",
         "icbmclassic:tools/radargun",
+        "icbmclassic:tools/rpg",
         "icbmclassic:tools/tracker",
         "icbmclassic:tools/remote",
         "icbmclassic:tools/laser",
@@ -60,13 +61,34 @@ def name_removals = [
         "icbmclassic:explosives/endothermic",
         "icbmclassic:explosives/anti_grav",
         "icbmclassic:explosives/ender",
-        "icbmclassic:explosives/hypersonic"
+        "icbmclassic:explosives/hypersonic",
+        "icbmclassic:explosives/grenade",
+        "icbmclassic:explosives/grenade.1",
+        "icbmclassic:explosives/grenade.2",
+        "icbmclassic:explosives/grenade.3",
+        "icbmclassic:explosives/grenade.4",
+        "icbmclassic:explosives/grenade.5",
+        "icbmclassic:explosives/grenade.6",
+        "icbmclassic:explosives/grenade.7"
 ]
 
 for (item in name_removals) {
     crafting.remove(item);
 }
 
+for (var i = 0; i < 8; i++) {
+    recipemap('weapons_factory').recipeBuilder()
+            .inputs([
+                    item('icbmclassic:explosives', i),
+                    metaitem('plateSteel'),
+                    metaitem('ringSteel') * 2,
+                    metaitem('boltSteel')
+            ])
+            .outputs(item('icbmclassic:grenade', i))
+            .duration(80)
+            .EUt(30)
+            .buildAndRegister();
+}
 
 //Explosives tier 1
 crafting.addShaped("icbm_exp_1_0", item('icbmclassic:explosives:0'), [
@@ -353,16 +375,59 @@ Globals.solders.each { key, val ->
                         .EUt(30)
                         .buildAndRegister();
             }
+
             recipemap('weapons_factory').recipeBuilder()
                     .inputs([
-                            ore('plateStainlessSteel'),
-                            item('minecraft:tnt'),
-                            ore('wireFineRedAlloy'),
+                            ore('plateStainlessSteel') * 2,
                             s_oxy,
-                            s_fuel
+                            s_fuel,
+                            ore('wireFineRedAlloy')
                     ])
+                    .circuitMeta(1)
                     .fluidInputs(fluid(key) * val)
                     .outputs(item('openmodularturrets:ammo_meta:4')*8)
+                    .duration(20)
+                    .EUt(200)
+                    .buildAndRegister();
+
+            recipemap('weapons_factory').recipeBuilder()
+                    .inputs([
+                            ore('plateStainlessSteel') * 2,
+                            s_oxy,
+                            s_fuel,
+                            ore('wireFineRedAlloy')
+                    ])
+                    .circuitMeta(2)
+                    .fluidInputs(fluid(key) * val)
+                    .outputs(item('techguns:itemshared', 7)*8)
+                    .duration(20)
+                    .EUt(200)
+                    .buildAndRegister();
+
+            recipemap('weapons_factory').recipeBuilder()
+                    .inputs([
+                            ore('plateStainlessSteel') * 2,
+                            s_oxy * 2,
+                            s_fuel * 2,
+                            ore('wireFineRedAlloy')
+                    ])
+                    .circuitMeta(3)
+                    .fluidInputs(fluid(key) * val)
+                    .outputs(item('techguns:itemshared', 145)*8)
+                    .duration(20)
+                    .EUt(200)
+                    .buildAndRegister();
+
+            recipemap('weapons_factory').recipeBuilder()
+                    .inputs([
+                            ore('plateStainlessSteel') * 2,
+                            s_oxy,
+                            s_fuel,
+                            ore('wireFineRedAlloy')
+                    ])
+                    .circuitMeta(4)
+                    .fluidInputs(fluid(key) * val)
+                    .outputs(item('minecraft:fireworks') * 16)
                     .duration(20)
                     .EUt(200)
                     .buildAndRegister();
