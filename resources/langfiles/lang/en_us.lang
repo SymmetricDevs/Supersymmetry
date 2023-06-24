@@ -932,6 +932,11 @@ material.lead_chloride=Lead Chloride
 material.sodium_vanadate=Sodium Vanadate
 material.ammonium_metavanadate=Ammonium Metavanadate
 material.sodium_vanadate_solution=Sodium Vanadate Solution
+material.salt_roasted_vanadinite=Salt Roasted Vanadinite
+material.soda_ash_roasted_vanadinite=Soda Ash Roasted Vanadinite
+material.leached_salt_roasted_vanadinite=Leached Salt Roasted Vanadinite
+material.leached_soda_ash_roasted_vanadinite=Leached Soda Ash Roasted Vanadinite
+material.lead_chloride_solution=Lead Chloride Solution
 
 # Thermodynamics
 

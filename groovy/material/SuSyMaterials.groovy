@@ -303,6 +303,10 @@ class SuSyMaterials {
         public static Material FluorinatedOctanoylChlorideMixture;
         public static Material ButyraldehydeMixture;
         public static Material PentanalMixture;
+        public static Material SaltRoastedVanadinite;
+        public static Material SodaAshRoastedVanadinite;
+        public static Material LeachedSaltRoastedVanadinite;
+        public static Material LeachedSodaAshRoastedVanadinite;
 
         // Petrochem Materials
 
@@ -795,6 +799,7 @@ class SuSyMaterials {
         public static Material DilutedBromooctane;
         public static Material DilutedSodiumSilicateSolution;
         public static Material SodiumVanadateSolution;
+        public static Material LeadChlorideSolution;
 
         // Organic Chemistry Materials
 
