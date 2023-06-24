@@ -2433,7 +2433,7 @@ public class FirstDegreeMaterials{
                 .color(0xfaff7d)
                 .build();
 
-        SodiumChromateSolution = new Material.BUilder(8459, 'sodium_chromate_solution')
+        SodiumChromateSolution = new Material.Builder(8459, 'sodium_chromate_solution')
                 .fluid()
                 .components(Sodium, 1, Chrome, 1, Oxygen, 4, Water, 1)
                 .color(0xa4a839)

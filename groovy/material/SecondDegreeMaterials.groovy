@@ -407,7 +407,7 @@ public class SecondDegreeMaterials {
 
         ChromiumSodaMixture = new Material.Builder(13064, "chromium_soda_mixture")
                 .dust()
-                .components(SodiumDichromate, 1, SodaAsh, 1)
+                .components(ChromiumIIIOxide, 1, SodaAsh, 1)
                 .colorAverage()
                 .build();
     }
