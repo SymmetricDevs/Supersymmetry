@@ -123,8 +123,8 @@ BATCH_REACTOR.recipeBuilder()
 
 //SULFURIC ACID REGENERATION
 ROASTER.recipeBuilder()
-    .inputs(ore('dustCalciumSulfate') * 6)
-    .inputs(ore('dustSiliconDioxide') * 3)
+    .inputs(metaitem('dustCalciumSulfate') * 6)
+    .inputs(metaitem('dustSiliconDioxide') * 3)
     .outputs(metaitem('dustCalciumMetasilicate') * 5)
     .fluidOutputs(fluid('sulfur_trioxide_reaction_mixture') * 2000)
     .duration(200)

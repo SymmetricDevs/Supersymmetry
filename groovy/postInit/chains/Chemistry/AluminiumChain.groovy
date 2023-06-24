@@ -82,7 +82,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .buildAndRegister()
 
 ELECTROLYTIC_CELL.recipeBuilder()
-        .notConsumable(fluid('cryolite') * 1296)
+        .notConsumable(fluid('cryolite') * 2592)
         .inputs(ore('dustAlumina') * 10)
         .inputs(ore('dustAluminiumTrifluoride'))
         .inputs(ore('dustCarbon') * 3)
