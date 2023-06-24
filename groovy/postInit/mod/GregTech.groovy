@@ -329,16 +329,16 @@ mods.gregtech.fluid_solidifier.recipeBuilder()
 //Coils
 
 mods.gregtech.centrifuge.recipeBuilder()
-        .fluidInputs(fluid('chilled_lava') * 250)
-        .outputs(metaitem('mineral_wool'))
-        .duration(80)
+        .fluidInputs(fluid('lava') * 1000)
+        .outputs(metaitem('mineral_wool') * 16)
+        .duration(500)
         .EUt(30)
         .buildAndRegister();
 
 mods.gregtech.centrifuge.recipeBuilder()
-        .fluidInputs(fluid('lava') * 250)
-        .outputs(metaitem('mineral_wool'))
-        .duration(100)
+        .fluidInputs(fluid('chilled_lava') * 1000)
+        .outputs(metaitem('mineral_wool') * 16)
+        .duration(400)
         .EUt(30)
         .buildAndRegister();
 
