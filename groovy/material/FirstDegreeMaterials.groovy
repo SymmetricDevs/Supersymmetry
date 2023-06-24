@@ -873,7 +873,7 @@ public class FirstDegreeMaterials{
         VeryDilutedSulfuricAcid = new Material.Builder(8219, "very_diluted_sulfuric_acid")
                 .fluid()
                 .components(Water, 2, SulfuricAcid, 1)
-                .colorAverage()
+                .color(0x54362c)
                 .build()
 
         SulfurDichloride = new Material.Builder(8220, "sulfur_dichloride")
@@ -2437,6 +2437,23 @@ public class FirstDegreeMaterials{
                 .fluid()
                 .components(Sodium, 1, Chrome, 1, Oxygen, 4, Water, 1)
                 .color(0xa4a839)
+
+        LeadChloride = new Material.Builder(8460, 'lead_chloride')
+                .dust().fluid()
+                .components(Lead, 1, Chlorine, 2)
+                .colorAverage()
+                .build();
+
+        SodiumVanadate = new Material.Builder(8461, 'sodium_vanadate')
+                .dust()
+                .components(Sodium, 1, Vanadium, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        AmmoniumMetavanadate = new Material.Builder(8462, 'ammonium_metavanadate')
+                .dust()
+                .components(Nitrogen, 1, Hydrogen, 4, Vanadium, 1, Oxygen, 3)
+                .colorAverage()
                 .build();
     }
 }

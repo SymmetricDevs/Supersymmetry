@@ -981,5 +981,25 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x968450)
                 .build();
+
+        SaltRoastedVanadinite = new Material.Builder(4185, "salt_roasted_vanadinite")
+                .dust()
+                .color(0x2e2b28)
+                .build();
+
+        SodaAshRoastedVanadinite = new Material.Builder(4186, "soda_ash_roasted_vanadinite")
+                .dust()
+                .color(0x38342f)
+                .build();
+
+        LeachedSaltRoastedVanadinite = new Material.Builder(4187, "leached_salt_roasted_vanadinite")
+                .dust()
+                .color(0x403c37)
+                .build();
+
+        LeachedSodaAshRoastedVanadinite = new Material.Builder(4188, "leached_soda_ash_roasted_vanadinite")
+                .dust()
+                .color(0x4d463f)
+                .build();
     }
 }

@@ -945,12 +945,6 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        AceticAnhydride = new Material.Builder(15156, 'acetic_anhydride')
-                .fluid()
-                .components(Carbon, 4, Hydrogen, 6, Oxygen, 3)
-                .color(0x8d939e)
-                .build()
-
         CelluloseAcetate = new Material.Builder(15157, 'cellulose_acetate')
                 .polymer()
                 .flags(GENERATE_FINE_WIRE)

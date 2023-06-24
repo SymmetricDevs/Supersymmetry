@@ -518,11 +518,15 @@ crafting.addShaped("gas_turbine_controller", metaitem('basic_gas_turbine'), [
 		[metaitem('cableGtSingleCopper'), ore('circuitMv'),                   metaitem('cableGtSingleCopper')]
 ])
 
+//TODO: ENABLE WHEN 0.0.14 IS OUT
+/*
 crafting.addShaped("silicon_carbide_casing", item('susy:susy_multiblock_casing') * 2, [
 		[metaitem('plateSiliconCarbide'), ore('craftingToolHardHammer'), metaitem('plateSiliconCarbide')],
 		[metaitem('plateSiliconCarbide'), item('gregtech:turbine_casing', 7), metaitem('plateSiliconCarbide')],
 		[metaitem('plateSiliconCarbide'), ore('craftingToolWrench'), metaitem('plateSiliconCarbide')]
 ])
+
+ */
 
 //New Dynamo Hatches
 
