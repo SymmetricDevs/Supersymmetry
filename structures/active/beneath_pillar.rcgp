@@ -9,7 +9,13 @@
             {
               "type": "dynpos",
               "ray": {
-                "type": "world_height"
+                "type": "bedrock"
+              }
+            },
+            {
+              "type": "move",
+              "ray": {
+                "distance": 3
               }
             },
             {

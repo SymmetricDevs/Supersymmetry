@@ -15,7 +15,7 @@
             {
               "type": "move",
               "ray": {
-                "distance": 1
+                "distance": 3
               }
             },
             {
