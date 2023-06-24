@@ -3,15 +3,8 @@
     "id": "techguns:bandit"
   },
   "bandit_reinforcement_00": {
-    "id": "techguns:bandit",
-      "ForgeData": {
-        "Onslaught": {
-          "CustomAI": {
-            "CounterAttack": { "Chance": 0.5 }
-          }
-        }
-      }
-    },
+    "id": "techguns:bandit"
+  },
   "bandit_reinforcement_01": {
     "id": "techguns:bandit",
     "nbt": {
