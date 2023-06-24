@@ -51,7 +51,7 @@
                 "count": [8, 12],
                 "spawn": {
                   "type": "ground",
-                  "light": [0, 15],
+                  "light": [0, 7],
                   "rangeXZ": [16, 32]
                 }
               }
@@ -66,7 +66,7 @@
                 "count": [8, 12],
                 "spawn": {
                   "type": "ground",
-                  "light": [0, 15],
+                  "light": [0, 7],
                   "rangeXZ": [16, 32]
                 }
               }
