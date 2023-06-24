@@ -317,7 +317,7 @@ CSTR.recipeBuilder()
 
 CSTR.recipeBuilder()
         .fluidInputs(fluid('diethylamine') * 50)
-        .fluidInputs(fluid('acetic_anhydride') * 50)
+        .fluidInputs(fluid('gtfo_acetic_anhydride') * 50)
         .fluidOutputs(fluid('diethylacetamide') * 50)
         .fluidOutputs(fluid('acetic_acid') * 50)
         .duration(3)

@@ -725,6 +725,9 @@ class SuSyMaterials {
         public static Material SilicaGel;
         public static Material WetSilicaGel;
         public static Material PhosphoricAcidSilicaGel;
+        public static Material LeadChloride;
+        public static Material SodiumVanadate;
+        public static Material AmmoniumMetavanadate;
 
         // Second Degree Materials
 
@@ -791,6 +794,7 @@ class SuSyMaterials {
         public static Material BariumChlorideSolution;
         public static Material DilutedBromooctane;
         public static Material DilutedSodiumSilicateSolution;
+        public static Material SodiumVanadateSolution;
 
         // Organic Chemistry Materials
 

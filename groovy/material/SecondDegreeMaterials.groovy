@@ -398,5 +398,11 @@ public class SecondDegreeMaterials {
                 .components(Water, 4, SodiumSilicate, 1)
                 .colorAverage()
                 .build();
+
+        SodiumVanadateSolution = new Material.Builder(13063, "sodium_vanadate_solution")
+                .fluid()
+                .components(Water, 1, SodiumVanadate, 1)
+                .colorAverage()
+                .build();
     }
 }

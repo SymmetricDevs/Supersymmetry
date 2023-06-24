@@ -895,7 +895,8 @@ material.ethanol_water_azeotrope=Ethanol-Water Azeotrope
 material.diluted_sodium_silicate_solution=Diluted Sodium Silicate Solution
 material.isoamyl_alcohol=Isoamyl Alcohol
 material.isobutyl_alcohol=Isobutyl Alcohol
-material.n_propnaol=n-Propanol
+material.sulfur_trioxide_reaction_mixture=Sulfur Trioxide Reaction Mixture
+material.n_propanol=n-Propanol
 material.copper_sulfate_solution=Copper Sulfate Solution
 material.entrained_ethanol_water_azeotrope=Entrained Ethanol-Water Azeotrope
 material.fusel_oil=Fusel Oil
@@ -927,6 +928,10 @@ material.potassium_ethyl_xanthate_solution=Potassium Ethyl Xanthate Solution
 material.silica_gel=Silica Gel
 material.wet_silica_gel=Wet Silica Gel
 material.phosphoric_acid_silica_gel=Phosphoric Acid On Silica Gel
+material.lead_chloride=Lead Chloride
+material.sodium_vanadate=Sodium Vanadate
+material.ammonium_metavanadate=Ammonium Metavanadate
+material.sodium_vanadate_solution=Sodium Vanadate Solution
 
 # Thermodynamics
 
