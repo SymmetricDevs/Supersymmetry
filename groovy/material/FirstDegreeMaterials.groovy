@@ -580,12 +580,6 @@ public class FirstDegreeMaterials{
                 .color(0x2497a6)
                 .build();
 
-        EthanolSolution = new Material.Builder(8172, "ethanol_solution")
-                .fluid()
-                .components(Ethanol, 1, PhosphoricAcid, 1)
-                .colorAverage()
-                .build();
-
         HeavyWater = new Material.Builder(8173, "heavy_water")
                 .fluid()
                 .components(Deuterium, 2, Oxygen, 1)
@@ -2398,7 +2392,7 @@ public class FirstDegreeMaterials{
         EthanolWaterAzeotrope = new Material.Builder(8452, 'ethanol_water_azeotrope')
                 .fluid()
                 .components(Ethanol, 91, Water, 9)
-                .colorAverage()
+                .color(0xad552f)
                 .build();
 
         EntrainedEthanolWaterAzeotrope = new Material.Builder(8453, 'entrained_ethanol_water_azeotrope')
@@ -2410,6 +2404,26 @@ public class FirstDegreeMaterials{
         CalciumSulfite = new Material.Builder(8454, 'calcium_sulfite')
                 .dust()
                 .components(Calcium, 1, Sulfur, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        SilicaGel = new Material.Builder(8455, 'silica_gel')
+                .dust()
+                .iconSet(SHINY)
+                .components(Sulfur, 1, Oxygen, 2)
+                .color(0x6d6e63)
+                .build();
+
+        WetSilicaGel = new Material.Builder(8456, 'wet_silica_gel')
+                .dust()
+                .components(Sulfur, 1, Oxygen, 2)
+                .color(0x585950)
+                .build();
+
+        PhosphoricAcidSilicaGel = new Material.Builder(8457, 'phosphoric_acid_silica_gel')
+                .dust()
+                .iconSet(SHINY)
+                .components(SilicaGel, 1, PhosphoricAcid, 1)
                 .colorAverage()
                 .build();
     }

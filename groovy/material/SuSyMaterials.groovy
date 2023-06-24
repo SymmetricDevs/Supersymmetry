@@ -710,7 +710,6 @@ class SuSyMaterials {
         public static Material DiisopropylaminoEthylEthylMethylphosphonite;
         public static Material VX;
         public static Material TitaniumEthoxide;
-        public static Material PotassiumAmylXanthate;
         public static Material ZincOxide;
         public static Material HotSulfuricAcid;
         public static Material CadmiumSulfateSolution;
@@ -723,6 +722,9 @@ class SuSyMaterials {
         public static Material EntrainedEthanolWaterAzeotrope;
         public static Material ChromiumIIIOxide;
         public static Material SodiumSulfateAcetoneSolution;
+        public static Material SilicaGel;
+        public static Material WetSilicaGel;
+        public static Material PhosphoricAcidSilicaGel;
 
         // Second Degree Materials
 
@@ -788,6 +790,7 @@ class SuSyMaterials {
         public static Material CopperSulfateSolution;
         public static Material BariumChlorideSolution;
         public static Material DilutedBromooctane;
+        public static Material DilutedSodiumSilicateSolution;
 
         // Organic Chemistry Materials
 

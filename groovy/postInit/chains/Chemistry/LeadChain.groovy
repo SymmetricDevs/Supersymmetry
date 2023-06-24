@@ -13,7 +13,7 @@ VACUUM_CHAMBER = recipemap('vacuum_chamber')
 DISTILLERY = recipemap('distillery')
 FLUID_EXTRACTOR= recipemap('extractor')
 ELECTROLYZER=recipemap('electrolyzer')
-
+SIFTER=recipemap('sifter')
 def COAL_SOURCES = [
         "dustCarbon",
         "gemCoal",
@@ -153,8 +153,8 @@ for (combustible in combustibles) {
             .buildAndRegister()
 }
 
-ELECTROLYZER.recipeBuilder()
-        .notConsumable(metaitem('stickIron') * 2)
+SIFTER.recipeBuilder()
+        .notConsumable(metaitem('item_filter'))
         .fluidInputs(fluid('cadmium_rich_flue_gas') * 1000)
         .outputs(metaitem('dustCadmiumRichFlueDust'))
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
@@ -400,8 +400,8 @@ ROASTER.recipeBuilder()
         .duration(400)
         .buildAndRegister()
 
-ELECTROLYZER.recipeBuilder()
-        .notConsumable(metaitem('stickIron') * 2)
+SIFTER.recipeBuilder()
+        .notConsumable(metaitem('item_filter'))
         .fluidInputs(fluid('antimony_arsenic_flue_gas') * 1000)
         .outputs(metaitem('dustCadmiumRichFlueDust') * 3)
         .fluidOutputs(fluid('flue_gas') * 1000)

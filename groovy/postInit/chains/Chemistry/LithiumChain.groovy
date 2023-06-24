@@ -13,6 +13,8 @@ ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 FLOTATION = recipemap('froth_flotation')
 CRYSTALLIZER = recipemap('crystallizer')
 SINTERING_RECIPES = recipemap("sintering_oven")
+DRYER = recipemap("dryer")
+MACERATOR = recipemap("macerator")
 
 //UNIVERSAL
 FLOTATION.recipeBuilder()
@@ -82,11 +84,25 @@ AUTOCLAVE.recipeBuilder()
 
 BR.recipeBuilder()
         .fluidInputs(fluid('sodium_silicate_solution') * 1000)
-        .fluidInputs(fluid('hydrochloric_acid') * 1000)
-        .outputs(metaitem('dustSiliconDioxide') * 3)
-        .fluidOutputs(fluid('diluted_saltwater') * 1000)
+        .fluidInputs(fluid('hydrogen_chloride') * 2000)
+        .outputs(metaitem('dustWetSilicaGel') * 3)
+        .fluidOutputs(fluid('salt_water') * 2000)
         .EUt(120)
         .duration(200)
+        .buildAndRegister()
+
+DRYER.recipeBuilder()
+        .inputs(metaitem('dustWetSilicaGel'))
+        .outputs(metaitem('dustSilicaGel'))
+        .EUt(30)
+        .duration(100)
+        .buildAndRegister()
+
+MACERATOR.recipeBuilder()
+        .inputs(metaitem('dustSilicaGel'))
+        .outputs(metaitem('dustSiliconDioxide'))
+        .EUt(30)
+        .duration(80)
         .buildAndRegister()
 
 //IMPURITY PRECIPITATION

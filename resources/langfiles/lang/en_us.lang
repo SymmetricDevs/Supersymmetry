@@ -891,7 +891,8 @@ material.cadmium_rich_zinc=Cadmium Rich Zinc
 material.impure_smithsonite_slurry=Impure Smithsonite Slurry
 material.smithsonite_slurry=Smithsonite Slurry
 material.potassium_amyl_xanthate=Potassium Amyl Xanthate
-material.ethanol_water_azeotrope=Ethanol-Water Azeotrope
+material.ethanol_water_azeotrope=Low Purity Ethanol
+material.diluted_sodium_silicate_solution=Diluted Sodium Silicate Solution
 material.isoamyl_alcohol=Isoamyl Alcohol
 material.isobutyl_alcohol=Isobutyl Alcohol
 material.n_propnaol=n-Propanol
@@ -923,6 +924,9 @@ material.potassium_isopropyl_xanthate=Potassium Isopropyl Xanthate
 material.potassium_isopropyl_xanthate_solution=Potassium Isopropyl Xanthate Solution
 material.potassium_ethyl_xanthate=Potassium Ethyl Xanthate
 material.potassium_ethyl_xanthate_solution=Potassium Ethyl Xanthate Solution
+material.silica_gel=Silica Gel
+material.wet_silica_gel=Wet Silica Gel
+material.phosphoric_acid_silica_gel=Phosphoric Acid On Silica Gel
 
 # Thermodynamics
 
