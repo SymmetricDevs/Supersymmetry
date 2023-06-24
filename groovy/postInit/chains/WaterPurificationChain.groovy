@@ -223,7 +223,7 @@ PSA.recipeBuilder()
         .buildAndRegister()
 
 DUMPER.recipeBuilder()
-        .fluidInputs(fluid('wastewater_sludge') * 100)
+        .fluidInputs(fluid('wastewater_sludge') * 1000)
         .duration(20)
         .buildAndRegister()
 

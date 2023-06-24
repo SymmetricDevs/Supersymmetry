@@ -392,5 +392,11 @@ public class SecondDegreeMaterials {
                 .components(BariumChloride, 1, Water, 2)
                 .colorAverage()
                 .build();
+
+        DilutedSodiumSilicateSolution = new Material.Builder(13062, "diluted_sodium_silicate_solution")
+                .fluid()
+                .components(Water, 4, SodiumSilicate, 1)
+                .colorAverage()
+                .build();
     }
 }

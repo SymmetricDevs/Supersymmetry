@@ -1,3 +1,6 @@
+import classes.*;
+import static globals.Globals.*
+
 def circuit(x) {
     return metaitem('circuit.integrated').withNbt([Configuration: x])
 }
@@ -505,8 +508,15 @@ mods.gregtech.chemical_bath.recipeBuilder()
 
 recipemap('crystallizer').recipeBuilder()
 		.fluidInputs(fluid('clarified_sugary_water') * 1000)
-		.outputs(item('minecraft:sugar') * 4)
+		.outputs(item('minecraft:sugar') * 6)
 		.duration(200)
+		.EUt(8)
+		.buildAndRegister()
+
+recipemap('crystallizer').recipeBuilder()
+		.fluidInputs(fluid('sugary_water') * 1000)
+		.outputs(item('minecraft:sugar') * 3)
+		.duration(300)
 		.EUt(8)
 		.buildAndRegister()
 
@@ -607,3 +617,17 @@ crafting.replaceShaped('minecraft:stone_slab', item('minecraft:stone_slab') * 6,
 		[ore('stone'), ore('stone'), ore('stone')],
 		[null, null, null]
 ])
+
+Globals.solders.each { key, val ->
+	recipemap('assembler').recipeBuilder()
+			.inputs([
+					metaitem('platePolytetrafluoroethylene') * 2,
+					metaitem('plateStainlessSteel'),
+					metaitem('ringStainlessSteel') * 2
+			])
+			.fluidInputs(fluid(key) * val)
+			.outputs(item('minecraft:elytra'))
+			.duration(200)
+			.EUt(240)
+			.buildAndRegister();
+}

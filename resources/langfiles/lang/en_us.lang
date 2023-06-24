@@ -881,7 +881,18 @@ material.barium_carbonate=Barium Carbonate
 material.barium_oxide=Barium Oxide
 material.barium_chloride_solution=Barium Chloride Solution
 material.halite_leach=Halite Leach
+material.impure_sphalerite_slurry=Impure Sphalerite Slurry
+material.unprocessed_sphalerite_slurry=Unprocessed Sphalerite Slurry
+material.galena_slurry=Galena Slurry
+material.sphalerite_slurry=Sphalerite Slurry
+material.thallium_rich_flue=Thallium Rich Flue
+material.crude_zinc=Crude Zinc
+material.cadmium_rich_zinc=Cadmium Rich Zinc
+material.impure_smithsonite_slurry=Impure Smithsonite Slurry
+material.smithsonite_slurry=Smithsonite Slurry
+material.potassium_amyl_xanthate=Potassium Amyl Xanthate
 material.ethanol_water_azeotrope=Ethanol-Water Azeotrope
+material.diluted_sodium_silicate_solution=Diluted Sodium Silicate Solution
 material.isoamyl_alcohol=Isoamyl Alcohol
 material.isobutyl_alcohol=Isobutyl Alcohol
 material.n_propnaol=n-Propanol
@@ -913,6 +924,9 @@ material.potassium_isopropyl_xanthate=Potassium Isopropyl Xanthate
 material.potassium_isopropyl_xanthate_solution=Potassium Isopropyl Xanthate Solution
 material.potassium_ethyl_xanthate=Potassium Ethyl Xanthate
 material.potassium_ethyl_xanthate_solution=Potassium Ethyl Xanthate Solution
+material.silica_gel=Silica Gel
+material.wet_silica_gel=Wet Silica Gel
+material.phosphoric_acid_silica_gel=Phosphoric Acid On Silica Gel
 
 # Thermodynamics
 
@@ -1221,6 +1235,36 @@ material.diethylacetamide=Diethylacetamide
 material.diethylacetimidamine=Diethylacetimidamine
 material.novichok=Novichok A-230 Nerve Agent
 material.ethylamine_mix=Ethylamine Mix
+material.zinc_leach=Zinc Leach
+material.zinc_leach_residue=Zinc Leach Residue
+material.hot_zinc_leach=Hot Zinc Leach
+material.hot_zinc_leach_residue=Hot Zinc Leach Residue
+material.zinc_rich_slag=Zinc-Rich Slag
+material.reduced_zinc_leach=Reduced Zinc Leach
+material.waelz_oxide=Waelz Oxide
+material.germanium_rich_slag=Germanium-Rich Slag
+material.zinc_cementation_slurry=Zinc Cementation Slurry
+material.precipitated_zinc_leach=Precipitated Zinc Leach
+material.copper_cadmium_residue=Copper Cadmium Residue
+material.hot_precipitated_zinc_leach=Hot Precipitated Zinc Leach
+material.reprecipitated_zinc_leach=Reprecipitated Zinc Leach
+material.cobalt_residue=Cobalt Residue
+material.cadmium_sulfate_solution=Cadmium Sulfate Solution
+material.hot_sulfuric_acid=Hot Sulfuric Acid
+material.zinc_oxide=Zinc Oxide
+material.mercury_oxide=Mercury Oxide
+material.indium_chloride=Indium Chloride
+material.indium_hydroxide=Indium Hydroxide
+material.titanium_dioxide=Titanium Dioxide
+material.indium_oxide=Indium Oxide
+material.ash_slurry=Ash Slurry
+material.desulfurized_flue_gas=Desulfurized Flue Gas
+material.cadmium_rich_flue_gas=Cadmium-Rich Flue Gas
+material.antimony_arsenic_flue_gas=Antimony-Arsenic-Rich Flue Gas
+material.thallium_rich_flue_gas=Thallium-Rich Flue Gas
+material.light_oily_brine=Light Oily Brine
+material.heavy_oily_brine=Heavy Oily Brine
+material.calcium_sulfite=Calcium Sulfite
 
 # Isotopes
 
@@ -1571,9 +1615,11 @@ tile.multiblocked.ore_sorter.name=Ore Sorter
 multiblocked.ore_sorter.name=Ore Sorter
 multiblocked.ore_sorter.description=Sorts Ores.
 
-# Nether
+# Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
 tile.magma.name=Magma-Infused Netherrack
+
+item.fireworks.name=Elytra Rocket
 
 # Laser Engraver Renaming
 gregtech.machine.laser_engraver.lv.name=Basic Electron Beam Lithographer

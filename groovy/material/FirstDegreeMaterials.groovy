@@ -352,12 +352,6 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        CalciumSulfate = new Material.Builder(8135, 'calcium_sulfate')
-                .dust()
-                .components(Calcium, 1, Sulfur, 1, Oxygen, 4)
-                .colorAverage()
-                .build();
-
         VanadiumPentoxide = new Material.Builder(8136, 'vanadium_pentoxide')
                 .dust()
                 .components(Vanadium, 2, Oxygen, 5)
@@ -417,6 +411,7 @@ public class FirstDegreeMaterials{
 
         SiliconCarbide = new Material.Builder(8145, 'silicon_carbide')
                 .dust()
+                .flags(GENERATE_PLATE)
                 .components(Silicon, 1, Carbon, 1)
                 .color(0x404040)
                 .build()
@@ -583,12 +578,6 @@ public class FirstDegreeMaterials{
                 .fluid().dust()
                 .components(Sodium, 3, Aluminium, 1, Fluorine, 6)
                 .color(0x2497a6)
-                .build();
-
-        EthanolSolution = new Material.Builder(8172, "ethanol_solution")
-                .fluid()
-                .components(Ethanol, 1, PhosphoricAcid, 1)
-                .colorAverage()
                 .build();
 
         HeavyWater = new Material.Builder(8173, "heavy_water")
@@ -1731,7 +1720,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         SoftenedLead = new Material.Builder(8352, "softened_lead")
-                .fluid()
+                .dust().fluid()
                 .components(Lead, 1)
                 .color(0x9874b0)
                 .build();
@@ -2342,15 +2331,99 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula("P4", true);
 
-        EthanolWaterAzeotrope = new Material.Builder(8443, 'ethanol_water_azeotrope')
+        PotassiumAmylXanthate = new Material.Builder(8443, 'potassium_amyl_xanthate')
+                .dust()
+                .components(Carbon, 6, Hydrogen, 11, Potassium, 1, Oxygen, 1, Sulfur, 2)
+                .colorAverage()
+                .build()
+
+        ZincOxide = new Material.Builder(8444, 'zinc_oxide')
+                .dust()
+                .components(Zinc, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        HotSulfuricAcid = new Material.Builder(8445, 'hot_sulfuric_acid')
+                .fluid()
+                .fluidTemp(353)
+                .components(Hydrogen, 2, Sulfur, 1, Oxygen, 4)
+                .color(0xff570f)
+                .build()
+
+        CadmiumSulfateSolution = new Material.Builder(8446, 'cadmium_sulfate_solution')
+                .fluid()
+                .components(Water, 1, Cadmium, 1, Sulfur, 1, Oxygen, 4)
+                .colorAverage()
+                .build()
+
+        MercuryOxide = new Material.Builder(8447, 'mercury_oxide')
+                .dust()
+                .components(Mercury, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
+
+        IndiumChloride = new Material.Builder(8448, 'indium_chloride')
+                .dust()
+                .components(Indium, 1, Chlorine, 3)
+                .colorAverage()
+                .build()
+
+        IndiumHydroxide = new Material.Builder(8449, 'indium_hydroxide')
+                .dust()
+                .components(Indium, 1, Oxygen, 3, Hydrogen, 3)
+                .colorAverage()
+                .build()
+
+        IndiumHydroxide.setFormula("In(OH)3", true)
+
+        TitaniumDioxide = new Material.Builder(8450, 'titanium_dioxide')
+                .dust()
+                .components(Titanium, 1, Oxygen, 2)
+                .color(0xffffff)
+                .iconSet(SHINY)
+                .build()
+
+        IndiumOxide = new Material.Builder(8451, 'indium_oxide')
+                .dust()
+                .components(Indium, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        EthanolWaterAzeotrope = new Material.Builder(8452, 'ethanol_water_azeotrope')
                 .fluid()
                 .components(Ethanol, 91, Water, 9)
+                .color(0xad552f)
+                .build();
+
+        EntrainedEthanolWaterAzeotrope = new Material.Builder(8453, 'entrained_ethanol_water_azeotrope')
+                .fluid()
+                .components(Ethanol, 91, Water, 9, Toluene, 10)
                 .colorAverage()
                 .build();
 
-        EntrainedEthanolWaterAzeotrope = new Material.Builder(8444, 'entrained_ethanol_water_azeotrope')
-                .fluid()
-                .components(Ethanol, 91, Water, 9, Toluene, 10)
+        CalciumSulfite = new Material.Builder(8454, 'calcium_sulfite')
+                .dust()
+                .components(Calcium, 1, Sulfur, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        SilicaGel = new Material.Builder(8455, 'silica_gel')
+                .dust()
+                .iconSet(SHINY)
+                .components(Sulfur, 1, Oxygen, 2)
+                .color(0x6d6e63)
+                .build();
+
+        WetSilicaGel = new Material.Builder(8456, 'wet_silica_gel')
+                .dust()
+                .components(Sulfur, 1, Oxygen, 2)
+                .color(0x585950)
+                .build();
+
+        PhosphoricAcidSilicaGel = new Material.Builder(8457, 'phosphoric_acid_silica_gel')
+                .dust()
+                .iconSet(SHINY)
+                .components(SilicaGel, 1, PhosphoricAcid, 1)
                 .colorAverage()
                 .build();
     }

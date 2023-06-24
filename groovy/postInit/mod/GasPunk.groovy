@@ -37,7 +37,8 @@ def name_removals = [
         "gp_inhaler:empty_inhaler",
         "gp_inhaler:vapor_inhaler",
         "gp_inhaler:inhaler",
-        "gaspunk:vapor_inhaler"
+        "gaspunk:vapor_inhaler",
+        "gaspunk:gas_mask"
 ]
 
 for (item in name_removals) {
@@ -65,6 +66,20 @@ Globals.solders.each { key, val ->
             ])
             .fluidInputs(fluid(key) * val)
             .outputs(item('gp_inhaler:empty_inhaler'))
+            .duration(200)
+            .EUt(60)
+            .buildAndRegister();
+
+    recipemap('assembler').recipeBuilder()
+            .inputs([
+                    ore('ringRubber') * 2,
+                    ore('platePlastic') * 2,
+                    metaitem('wireFineCopper') * 4,
+                    metaitem('dustCarbon') * 2,
+                    metaitem('plateGlass')
+            ])
+            .fluidInputs(fluid(key) * val)
+            .outputs(item('gaspunk:gas_mask'))
             .duration(200)
             .EUt(60)
             .buildAndRegister();

@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.SinteringGlobals.*
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
@@ -16,6 +17,10 @@ def AUTOCLAVE = recipemap('autoclave');
 def ZONEREFINER = recipemap('zone_refiner');
 def VACUUMCHAMBER = recipemap('vacuum_chamber')
 def FBR = recipemap('fixed_bed_reactor')
+SINTERING_RECIPES = recipemap("sintering_oven")
+
+// Silicon Carbide Plate * 1
+mods.gregtech.compressor.removeByInput(2, [metaitem('dustSiliconCarbide')], null)
 
 ROASTER.recipeBuilder()
         .inputs(metaitem('dustSilicon'))
@@ -174,3 +179,31 @@ DT.recipeBuilder()
         .duration(100)
         .EUt(120)
         .buildAndRegister()
+
+for (fuel in sintering_fuels) {
+    if (fuel.isPlasma) {
+        SINTERING_RECIPES.recipeBuilder()
+                .notConsumable(metaitem('shape.mold.plate'))
+                .inputs(metaitem('dustSiliconCarbide'))
+                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+                .outputs(metaitem('plateSiliconCarbide'))
+                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+                .duration(fuel.duration)
+                .EUt(Globals.voltAmps[3])
+                .buildAndRegister()
+
+    } else {
+        for (comburent in sintering_comburents) {
+            SINTERING_RECIPES.recipeBuilder()
+                    .notConsumable(metaitem('shape.mold.plate'))
+                    .inputs(metaitem('dustSiliconCarbide'))
+                    .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+                    .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+                    .outputs(metaitem('plateSiliconCarbide'))
+                    .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+                    .duration(fuel.duration + comburent.duration)
+                    .EUt(Globals.voltAmps[1])
+                    .buildAndRegister()
+        }
+    }
+}

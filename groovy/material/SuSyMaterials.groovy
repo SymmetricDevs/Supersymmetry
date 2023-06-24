@@ -271,7 +271,35 @@ class SuSyMaterials {
         public static Material TearGas;
         public static Material HydratedPropene;
         public static Material EthylamineMix;
+        public static Material ImpureSphaleriteSlurry;
+        public static Material UnprocessedSphaleriteSlurry;
+        public static Material GalenaSlurry;
+        public static Material SphaleriteSlurry;
+        public static Material ThalliumRichFlue;
+        public static Material CrudeZinc;
+        public static Material CadmiumRichZinc;
+        public static Material ImpureSmithsoniteSlurry;
+        public static Material SmithsoniteSlurry;
+        public static Material ZincLeach;
+        public static Material ZincLeachResidue;
+        public static Material HotZincLeach;
+        public static Material HotZincLeachResidue;
+        public static Material ZincRichSlag;
+        public static Material ReducedZincLeach;
+        public static Material WaelzOxide;
+        public static Material GermaniumRichSlag;
+        public static Material ZincCementationSlurry;
+        public static Material PrecipitatedZincLeach;
+        public static Material CopperCadmiumResidue;
+        public static Material HotPrecipitatedZincLeach;
+        public static Material ReprecipitatedZincLeach;
+        public static Material CobaltResidue;
         public static Material FuselOil;
+        public static Material AshSlurry;
+        public static Material DesulfurizedFlueGas;
+        public static Material CadmiumRichFlueGas;
+        public static Material AntimonyArsenicFlueGas;
+        public static Material ThalliumRichFlueGas;
         public static Material FluorinatedOctanoylChlorideMixture;
         public static Material ButyraldehydeMixture;
         public static Material PentanalMixture;
@@ -333,6 +361,8 @@ class SuSyMaterials {
         public static Material UpgradedLubricatingOilMix;
 
         public static Material OilyBrine;
+        public static Material LightOilyBrine;
+        public static Material HeavyOilyBrine;
         public static Material SulfuricOilResidue;
         public static Material DissolvedBitumen;
         public static Material SourGas;
@@ -414,6 +444,7 @@ class SuSyMaterials {
         public static Material SodiumTetraborate;
         public static Material ElectrolyticBoron;
         public static Material CalciumSulfate;
+        public static Material CalciumSulfite;
         public static Material IronIISulfide;
         public static Material PotassiumSulfate;
         public static Material WetAntimonyTrifluoride;
@@ -679,10 +710,21 @@ class SuSyMaterials {
         public static Material DiisopropylaminoEthylEthylMethylphosphonite;
         public static Material VX;
         public static Material TitaniumEthoxide;
+        public static Material ZincOxide;
+        public static Material HotSulfuricAcid;
+        public static Material CadmiumSulfateSolution;
+        public static Material MercuryOxide;
+        public static Material IndiumChloride;
+        public static Material IndiumHydroxide;
+        public static Material IndiumOxide;
+        public static Material TitaniumDioxide;
         public static Material EthanolWaterAzeotrope;
         public static Material EntrainedEthanolWaterAzeotrope;
         public static Material ChromiumIIIOxide;
         public static Material SodiumSulfateAcetoneSolution;
+        public static Material SilicaGel;
+        public static Material WetSilicaGel;
+        public static Material PhosphoricAcidSilicaGel;
 
         // Second Degree Materials
 
@@ -748,6 +790,7 @@ class SuSyMaterials {
         public static Material CopperSulfateSolution;
         public static Material BariumChlorideSolution;
         public static Material DilutedBromooctane;
+        public static Material DilutedSodiumSilicateSolution;
 
         // Organic Chemistry Materials
 

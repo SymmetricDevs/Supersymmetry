@@ -513,9 +513,15 @@ crafting.replaceShaped("gregtech:casing_steel_turbine_casing", item('gregtech:tu
 ])
 
 crafting.addShaped("gas_turbine_controller", metaitem('basic_gas_turbine'), [
-		[ore('plateSteel'),            metaitem('cableGtSingleCopper'),       ore('plateSteel')],
-		[ore('circuitMv'),             item('gregtech:machine_casing', 1), ore('circuitMv')],
+		[ore('plateSteel'),               metaitem('cableGtSingleCopper'),    ore('plateSteel')],
+		[ore('circuitMv'),                metaitem('hull.mv'),                ore('circuitMv')],
 		[metaitem('cableGtSingleCopper'), ore('circuitMv'),                   metaitem('cableGtSingleCopper')]
+])
+
+crafting.addShaped("silicon_carbide_casing", item('susy:susy_multiblock_casing') * 2, [
+		[metaitem('plateSiliconCarbide'), ore('craftingToolHardHammer'), metaitem('plateSiliconCarbide')],
+		[metaitem('plateSiliconCarbide'), item('gregtech:turbine_casing', 7), metaitem('plateSiliconCarbide')],
+		[metaitem('plateSiliconCarbide'), ore('craftingToolWrench'), metaitem('plateSiliconCarbide')]
 ])
 
 //New Dynamo Hatches
@@ -649,12 +655,6 @@ crafting.addShaped("gregtech:steel_drill_head", item('susy:drill_head'), [
 		[null, metaitem('component.grinder.diamond'), null]
 ]);
 
-crafting.addShaped("gregtech:gas_turbine_multiblock", metaitem('basic_gas_turbine'), [
-		[circuits[1], metaitem('gearSteel'), circuits[1]],
-		[metaitem('gearSteel'), hulls[1], metaitem('gearSteel')],
-		[metaitem('pipeLargeFluidSteel'), metaitem('gearSteel'), metaitem('pipeLargeFluidSteel')]
-]);
-
 crafting.addShaped("gregtech:heat_radiator", metaitem('heat_radiator'), [
 		[metaitem('frameSteel'), metaitem('pipeLargeFluidSteel'), metaitem('frameSteel')],
 		[metaitem('electric.pump.lv'), hulls[1], metaitem('electric.pump.lv')],
@@ -755,6 +755,24 @@ crafting.addShaped("gregtech:vacuum_distillation_tower", metaitem('vacuum_distil
 		[metaitem('rotorSteel'), circuits[2], metaitem('rotorSteel')],
 		[pumps[2], metaitem('hull.mv'), pumps[2]],
 		[metaitem('pipeHugeFluidSteel'), circuits[2], metaitem('pipeHugeFluidSteel')]
+])
+
+crafting.replaceShaped("gregtech:vacuum_freezer", metaitem('vacuum_freezer'), [
+		[pumps[3], pumps[3], pumps[3]],
+		[circuits[3], item('gregtech:metal_casing', 3), circuits[3]],
+		[metaitem('cableGtSingleGold'), circuits[3], metaitem('cableGtSingleGold')]
+])
+
+crafting.addShaped("gregtech:cooling_unit", metaitem('cooling_unit'), [
+		[metaitem('rotorStainlessSteel'), metaitem('rotorStainlessSteel'), metaitem('rotorStainlessSteel')],
+		[motors[3], metaitem('hull.hv'), motors[3]],
+		[pumps[3], circuits[3], pumps[3]]
+])
+
+crafting.addShaped("gregtech:quencher", metaitem('quencher'), [
+		[pumps[3], metaitem('robot.arm.hv'), pumps[3]],
+		[circuits[3], item('gregtech:metal_casing', 5), circuits[3]],
+		[metaitem('pipeLargeFluidStainlessSteel'), circuits[3], metaitem('pipeLargeFluidStainlessSteel')]
 ])
 
 //ION EXCHANGE COLUMN
@@ -897,6 +915,3 @@ recipemap('assembler').recipeBuilder()
 		.EUt(7680)
 		.duration(150)
 		.buildAndRegister()
-
-
-

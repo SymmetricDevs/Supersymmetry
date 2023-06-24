@@ -39,7 +39,27 @@ def name_removals = [
         'gregtech:gregtech.machine.world_accelerator.iv',
         'gregtech:gregtech.machine.world_accelerator.luv',
         'gregtech:gregtech.machine.world_accelerator.zpm',
-        'gregtech:gregtech.machine.world_accelerator.uv'
+        'gregtech:gregtech.machine.world_accelerator.uv',
+        'gregtech:super_chest_lv',
+        'gregtech:super_chest_mv',
+        'gregtech:super_chest_hv',
+        'gregtech:super_chest_ev',
+        'gregtech:super_chest_iv',
+        'gregtech:super_tank_lv',
+        'gregtech:super_tank_mv',
+        'gregtech:super_tank_hv',
+        'gregtech:super_tank_ev',
+        'gregtech:super_tank_iv',
+        'gregtech:quantum_chest_uhv',
+        'gregtech:quantum_chest_luv',
+        'gregtech:quantum_chest_zpm',
+        'gregtech:quantum_chest_uv',
+        'gregtech:quantum_chest_uhv',
+        'gregtech:quantum_tank_uhv',
+        'gregtech:quantum_tank_luv',
+        'gregtech:quantum_tank_zpm',
+        'gregtech:quantum_tank_uv',
+        'gregtech:quantum_tank_uhv'
 ]
 
 for (name in name_removals) {
@@ -99,6 +119,24 @@ mods.gregtech.assembler.removeByInput(30, [metaitem('wireGtDoubleCupronickel') *
 mods.gregtech.assembler.removeByInput(120, [metaitem('wireGtDoubleKanthal') * 8, metaitem('foilAluminium') * 8], [fluid('copper') * 144])
 // Nichrome Coil Block * 1
 mods.gregtech.assembler.removeByInput(480, [metaitem('wireGtDoubleNichrome') * 8, metaitem('foilStainlessSteel') * 8], [fluid('aluminium') * 144])
+// Aluminium Nugget * 3
+mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('gemRuby')], null)
+// Aluminium Nugget * 3
+mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('gemSapphire')], null)
+// Aluminium Nugget * 3
+mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('gemGreenSapphire')], null)
+// Aluminium Nugget * 3
+mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('dustGreenSapphire')], null)
+// Aluminium Nugget * 3
+mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('dustSapphire')], null)
+// Iron Dust * 1
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustFerrochromium') * 3], null)
+// Iron Dust * 6
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustStainlessSteel') * 9], null)
+// Aluminium Ingot * 21
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('pyrolyse_oven')], [fluid('oxygen') * 2160])
+// Aluminium Dust * 21
+mods.gregtech.macerator.removeByInput(8, [metaitem('pyrolyse_oven')], null)
 
 //ADDITIONS
 
@@ -291,16 +329,16 @@ mods.gregtech.fluid_solidifier.recipeBuilder()
 //Coils
 
 mods.gregtech.centrifuge.recipeBuilder()
-        .fluidInputs(fluid('lava') * 1000)
+        .fluidInputs(fluid('chilled_lava') * 250)
         .outputs(metaitem('mineral_wool'))
-        .duration(100)
+        .duration(80)
         .EUt(30)
         .buildAndRegister();
 
 mods.gregtech.centrifuge.recipeBuilder()
-        .fluidInputs(fluid('chilled_lava') * 1000)
+        .fluidInputs(fluid('lava') * 250)
         .outputs(metaitem('mineral_wool'))
-        .duration(80)
+        .duration(100)
         .EUt(30)
         .buildAndRegister();
 
@@ -679,3 +717,28 @@ CENTRIFUGE.recipeBuilder()
         .duration(40)
         .EUt(30)
         .buildAndRegister();
+		
+// Fix distillation tower being too difficult (4 EV circuits? Seriously?)
+
+
+crafting.replaceShaped('gregtech:distillation_tower', metaitem('distillation_tower'), [
+        [ore('circuitHv'), metaitem('pipeLargeFluidStainlessSteel'), ore('circuitHv')],
+        [metaitem('electric.pump.hv'), metaitem('hull.mv'), metaitem('electric.pump.hv')],
+        [ore('circuitHv'), metaitem('pipeLargeFluidStainlessSteel'), ore('circuitHv')]
+])
+
+// Item Magnet with Lead Acid battery
+
+crafting.replaceShaped('gregtech:lv_magnet_lead_acid', metaitem('item_magnet.lv'), [
+        [ore('stickSteelMagnetic'), ore('toolWrench'), ore('stickSteelMagnetic')],
+        [ore('stickSteelMagnetic'), metaitem('battery.lead_acid'), ore('stickSteelMagnetic')],
+        [ore('cableGtSingleTin'), ore('plateSteel'), ore('cableGtSingleTin')]
+])
+
+// Power Unit with Lead Acid Battery
+
+crafting.replaceShaped('gregtech:lv_power_unit_lead_acid', metaitem('power_unit.lv'), [
+        [ore('screwSteel'), null, ore('toolScrewdriver')],
+        [ore('gearSmallSteel'), metaitem('electric.motor.lv'), ore('gearSmallSteel')],
+        [ore('plateSteel'), metaitem('battery.lead_acid'), ore('plateSteel')]
+])
