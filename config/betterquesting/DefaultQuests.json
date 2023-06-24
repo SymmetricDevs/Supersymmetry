@@ -19395,7 +19395,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Zinc (Zn)\n§bAtomic Number§r: 30\n§aAtomic Mass§r: 65.38 amu\n§cMelting Point§r: 692.68 K\n§5Boiling Point§r: 1180 K\n§6Properties§r: Zinc is a transition metal known for its corrosion resistance. It is used in galvanizing processes, as a dietary supplement, and in the production of alloys.\n",
+          "desc:8": "§6Element§r: Zinc (Zn)\n§bAtomic Number§r: 30\n§aAtomic Mass§r: 65.38 amu\n§cMelting Point§r: 692.68 K\n§5Boiling Point§r: 1180 K\n§6Properties§r: Zinc is a transition metal known for its corrosion resistance. It is used in galvanizing processes, as a dietary supplement, and in the production of alloys.\n\n§lPrimitive: §rSmelt §bsphalerite ore §r§rin a furnace to get Zinc.\n\n§lUniversal:§r Sphalerite can be roasted to get Zinc Oxide.\nZinc Oxide is roasted again to get Crude Zinc.\nCrude Zinc goes into the distillation tower to obtain Cadmium Rich Zinc and a variety of other metals. \nCadmium Rich Zinc goes into the tower again to get Zinc and Cadmium.\n\n§lSpecialized: §rUse JEI and the §aAdvanced Electrolyzer §rprocess to get Zinc.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47413,14 +47413,14 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Chloroform",
+          "name:8": "Chloroform [1-3]",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -47479,7 +47479,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Tetrafluoroethylene",
+          "name:8": "Tetrafluoroethylene [4-6]",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -47515,12 +47515,13 @@
     },
     "644:10": {
       "preRequisites:11": [
-        643
+        643,
+        649
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now it is time to §6polymerize the tetrafluoroethylene§r. \n\nWe produce 2000L of §6Tetrafluoroethylene Emulsion §rfrom 1000L of Tetrafluoroethylene and 1000L of Fluorinated Detergent Mixture. \n\nthen, we take 1000L of this emulsion and 1 Tiny Potassium Persulfate Dust in a §cpolymerization tank §rto produce 2000L of §6Polytetrafluoroethylene Solution§r, which is dried to produce §l§c§l7 PTFE Dust§r and 1000L of Fluorinated Detergent Mixture\n\nThe Fluorinated Detergent Mixture is produced from 26 §6PFOA (perfluorooctanoic acid) dust§r and 1000L of water. To obtain§6 PFOA§r , the following process is used.\n\n\n3000L §6N-octanol §r+ 16 Chromium Trioxide Dust + 6000L Sulfuric Acid --\u003e 3000L §6Caprylic (octanoic) acid§r + 1000L §6Chromium Sulfate Solution§r in a Batch Reactor.\n\n50L §6Caprylic acid§r + 50L §6Thionyl Chloride§r  --\u003e 50L §6Diluted Octanoyl Chloride §r+ 50L Sulfur Dioxide + 50L Hydrogen Chloride\n\n3000L §6Diluted Octanoyl Chloride§r, when distilled, will produce 1000L of §6Octanoyl Chloride§r, 1000L of Water, and 1000L of Pyridine.\n\n50L of§6 Octanoyl Chloride§r + 750L of Hydrofluoric Acid --\u003e 800L of §6Fluorinated Octanoyl Chloride§r + 750L Hydrogen + 750L water\n\nDistillation of 16000L Fluorinated Octanoyl Chloride will produce 2400L of§6 Perfluorooctanoyl Fluoride§r. React 1:1 with water to produce PFOA solution, which is further distilled.\n",
+          "desc:8": "Now it is time to §6polymerize the tetrafluoroethylene§r. \n\nThe Fluorinated Detergent Mixture is produced from 26 §6PFOA (perfluorooctanoic acid) dust§r and 1000L of water. \n\nWe produce 2000L of §6Tetrafluoroethylene Emulsion §rfrom 1000L of Tetrafluoroethylene and 1000L of Fluorinated Detergent Mixture. \n\nthen, we take 1000L of this emulsion and 1 Tiny Potassium Persulfate Dust in a §cpolymerization tank §rto produce 2000L of §6Polytetrafluoroethylene Solution§r, which is dried to produce §l§c§l7 PTFE Dust§r and 1000L of Fluorinated Detergent Mixture§r, so you can loop the mixture back into the processing line.\n\n\n\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47541,7 +47542,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Polytetrafluoroethylene",
+          "name:8": "Polytetrafluoroethylene [Steps 21-23]",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -47787,6 +47788,142 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "gregtech:wire_coil"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "648:10": {
+      "preRequisites:11": [
+        479
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Ethanol §rgoes in a§c reaction furnace§r to produce §bImpure Diethyl Ether§r, which is §cdistilled §r§rto make §bDiethyl Ether.\n§r\nDiethyl Ether, Ethylene and Trialkylaluminium are combined in a §cbatch reactor§r and then §cdistilled§r to make§6 Aluminium Alkoxide Mixture§r. This also makes Diethyl Ether again that you can loop back into the line.\n\nAluminium Alkoxide Mixture is §ccombined§r to make a §6Ziegler Alcohol Mixture§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ziegler_alcohol_mixture"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Ziegler Process [Steps 7-12]",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 648,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ziegler_alcohol_mixture"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "649:10": {
+      "preRequisites:11": [
+        648
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "3000L §6N-octanol §r+ 16 Chromium Trioxide Dust + 6000L Sulfuric Acid --\u003e 3000L §6Caprylic (octanoic) acid§r + 1000L §6Chromium Sulfate Solution§r in a §cBatch Reactor§r.\n\n50L §6Caprylic acid§r + 50L §6Thionyl Chloride§r §c--\u003e§r 50L §6Diluted Octanoyl Chloride §r+ 50L Sulfur Dioxide + 50L Hydrogen Chloride\n\n3000L §6Diluted Octanoyl Chloride§r, when §cdistilled§r, will produce 1000L of §6Octanoyl Chloride§r, 1000L of Water, and 1000L of Pyridine.\n\n50L of§6 Octanoyl Chloride§r + 750L of Hydrofluoric Acid§c --\u003e §r800L of §6Fluorinated Octanoyl Chloride§r + 750L Hydrogen + 750L water\n\n§cDistillation§r of 16000L Fluorinated Octanoyl Chloride will produce 2400L of§6 Perfluorooctanoyl Fluoride§r. §cReact 1:1 with water§r to produce §6PFOA solution§r, which is further §cdistilled§r§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 15205,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "PFOA Dust [Steps 13-20]",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 649,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 15205,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -50294,6 +50431,20 @@
           "sizeY:3": 48,
           "x:3": -84,
           "y:3": 36
+        },
+        "25:10": {
+          "id:3": 648,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 120
+        },
+        "26:10": {
+          "id:3": 649,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 168
         }
       }
     },
@@ -53529,7 +53680,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
