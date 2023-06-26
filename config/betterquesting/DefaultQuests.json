@@ -1542,7 +1542,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A grindstone can be used for extracting more dust out of your ores. It\u0027s not that good... but it\u0027s a start. It\u0027s also §cmanual§r, so you have to power it using your hands.\n\nPut a §6Wooden Crank §ron the grindstone and §aright click §ron it to rotate it. After a few seconds, the ore will have turned into dust.\n\nPutting 1 ore in results in an output of 2 dusts. \n\n§cThe quartz grindstone at the moment does not have compatibility. This will be patched (eventually)",
+          "desc:8": "A grindstone can be used for extracting more metal out of your ores. It\u0027s not that good... but it\u0027s a start. It\u0027s also §cmanual§r, so you have to power it using your hands.\n\nPut a §6Wooden Crank §ron top of the grindstone and §aright click §ron it to rotate it. After a few rotations, the ore will have turned into crushed ores.\n\nPutting 2 ore in results in an output of 3 crushed ores. \n\nThese crushed ores can then be smelted into ingots, or processed further to get things such as §bImpure Ore Dusts§f or §bCentrifuged Ores§f to get more value out of your ores.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1554,7 +1554,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Macerator V0.2 Beta §c§l(WORK IN PROGRESS)",
+          "name:8": "Macerator V0.2 Beta",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -48125,8 +48125,8 @@
           "id:3": 28,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 528
+          "x:3": -60,
+          "y:3": 480
         },
         "24:10": {
           "id:3": 29,
@@ -48146,8 +48146,8 @@
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 504
+          "x:3": 36,
+          "y:3": 528
         },
         "27:10": {
           "id:3": 74,
@@ -53680,7 +53680,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,

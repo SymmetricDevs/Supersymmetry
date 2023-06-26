@@ -13,6 +13,12 @@ ore('ingotTin').remove(item('techguns:itemshared', 80))
 ore('ingotSteel').remove(item('techguns:itemshared', 83))
 ore('ingotTitanium').remove(item('techguns:itemshared', 85))
 
+//Saw oredict
+
+ore('toolSaw').remove(item('notreepunching:saw/iron'))
+ore('toolSaw').remove(item('notreepunching:saw/gold'))
+ore('toolSaw').remove(item('notreepunching:saw/diamond'))
+
 //Force stick to exist
 ore('stickWood').add(item('minecraft:stick'))
 

@@ -29,6 +29,17 @@ ELECTROLYZER.recipeBuilder()
         .duration(1500)
         .buildAndRegister()
 
+ELECTROLYTIC_CELL.recipeBuilder()
+        .notConsumable(metaitem('stickNickel'))
+        .notConsumable(metaitem('stickIron'))
+        .notConsumable(fluid('sodium_hydroxide_solution') * 50)
+        .fluidInputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('hydrogen') * 2000)
+        .fluidOutputs(fluid('oxygen') * 1000)
+        .EUt(30)
+        .duration(200)
+        .buildAndRegister()
+
 //CHLOROALKALI PROCESS
 ELECTROLYTIC_CELL.recipeBuilder()
         .notConsumable(metaitem('stickNickel'))

@@ -1275,6 +1275,7 @@ material.thallium_rich_flue_gas=Thallium-Rich Flue Gas
 material.light_oily_brine=Light Oily Brine
 material.heavy_oily_brine=Heavy Oily Brine
 material.calcium_sulfite=Calcium Sulfite
+material.sodium_amide=Sodium Amide
 
 # Isotopes
 
@@ -1630,6 +1631,7 @@ tile.hellsand.name=Mineral-Rich Sand
 tile.magma.name=Magma-Infused Netherrack
 
 item.fireworks.name=Elytra Rocket
+tile.appliedenergistics2.grindstone.name=Primitive Grindstone
 
 # Laser Engraver Renaming
 gregtech.machine.laser_engraver.lv.name=Basic Electron Beam Lithographer

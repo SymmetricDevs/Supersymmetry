@@ -732,6 +732,7 @@ class SuSyMaterials {
         public static Material LeadChloride;
         public static Material SodiumVanadate;
         public static Material AmmoniumMetavanadate;
+        public static Material SodiumAmide;
 
         // Second Degree Materials
 

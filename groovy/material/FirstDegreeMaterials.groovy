@@ -1022,12 +1022,6 @@ public class FirstDegreeMaterials{
                 .color(0x879e21)
                 .build()
 
-        HydrogenCyanide = new Material.Builder(8246, "hydrogen_cyanide")
-                .fluid()
-                .components(Hydrogen, 1, Carbon, 1, Nitrogen, 1)
-                .color(0x0b8542)
-                .build()
-
         SulfidicSilverCyanideSolution = new Material.Builder(8247, "sulfidic_silver_cyanide_solution")
                 .fluid()
                 .components(Silver, 2, Carbon, 4, Nitrogen, 4, Sodium, 4, Sulfur, 1, Water, 4)
@@ -2442,6 +2436,12 @@ public class FirstDegreeMaterials{
         AmmoniumMetavanadate = new Material.Builder(8460, 'ammonium_metavanadate')
                 .dust()
                 .components(Nitrogen, 1, Hydrogen, 4, Vanadium, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        SodiumAmide = new Material.Builder(8461, 'sodium_amide')
+                .dust()
+                .components(Sodium, 1, Nitrogen, 1, Hydrogen, 2)
                 .colorAverage()
                 .build();
     }

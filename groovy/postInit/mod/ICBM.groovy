@@ -62,14 +62,14 @@ def name_removals = [
         "icbmclassic:explosives/anti_grav",
         "icbmclassic:explosives/ender",
         "icbmclassic:explosives/hypersonic",
-        "icbmclassic:explosives/grenade",
-        "icbmclassic:explosives/grenade.1",
-        "icbmclassic:explosives/grenade.2",
-        "icbmclassic:explosives/grenade.3",
-        "icbmclassic:explosives/grenade.4",
-        "icbmclassic:explosives/grenade.5",
-        "icbmclassic:explosives/grenade.6",
-        "icbmclassic:explosives/grenade.7"
+        "icbmclassic:grenades/grenade",
+        "icbmclassic:grenades/grenade.1",
+        "icbmclassic:grenades/grenade.2",
+        "icbmclassic:grenades/grenade.3",
+        "icbmclassic:grenades/grenade.4",
+        "icbmclassic:grenades/grenade.5",
+        "icbmclassic:grenades/grenade.6",
+        "icbmclassic:grenades/grenade.7"
 ]
 
 for (item in name_removals) {
