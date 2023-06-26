@@ -128,7 +128,7 @@ FORGE_HAMMER.recipeBuilder()
 .EUt(Globals.voltAmps[0])
 .buildAndRegister()
 
-crafting.addShapeless('hanmmer_pig_iron',metaitem('ingotWroughtIron'), [
+crafting.addShapeless('hammer_pig_iron',metaitem('ingotWroughtIron'), [
     ore('craftingToolHardHammer'),
     metaitem('ingotPigIron')
 ])
