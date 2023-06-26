@@ -50,15 +50,16 @@ def EBF_RECIPES = recipemap("electric_blast_furnace")
 def blastables = [
     new Blastable('dustMagnetite', 7 , 6, 4, 80),
     new Blastable('dustBandedIron', 5 , 4, 3, 80),
-    new Blastable('dustIronIiiOxide', 5 , 4, 3, 80),
-    new Blastable('dustGraniticMineralSand', 14 , 6, 4, 80),
+    new Blastable('dustIronIiiOxide', 5, 4, 3, 80),
+    new Blastable('dustIronIiOxide', 2, 2, 1, 20),
+    new Blastable('dustGraniticMineralSand', 14, 6, 4, 80),
     new Blastable('oreIron', 3, 2, 2, 60),
-    new Blastable('oreMagnetite', 7 , 3, 4, 60),
-    new Blastable('oreBandedIron', 5 , 2, 3, 60),
-    new Blastable('oreNetherrackMagnetite', 7 , 6, 4, 60),
-    new Blastable('oreNetherrackBandedIron', 5 , 4, 3, 60),
-    new Blastable('oreEndstoneRackMagnetite', 7 , 6, 4, 60),
-    new Blastable('oreEndstoneBandedIron', 5 , 4, 3, 60)
+    new Blastable('oreMagnetite', 7, 3, 4, 60),
+    new Blastable('oreBandedIron', 5, 2, 3, 60),
+    new Blastable('oreNetherrackMagnetite', 7, 6, 4, 60),
+    new Blastable('oreNetherrackBandedIron', 5, 4, 3, 60),
+    new Blastable('oreEndstoneRackMagnetite', 7, 6, 4, 60),
+    new Blastable('oreEndstoneBandedIron', 5, 4, 3, 60)
 ]
 
 def reductants = [

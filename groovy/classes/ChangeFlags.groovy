@@ -49,13 +49,16 @@ class ChangeFlags {
         UraniumTriplatinum.addFlags("generate_fine_wire");
         RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
 
-        Phosphorus.setFormula("P4", true)
-        Phosphorus.setMaterialRGB(0xfffed6)
-        Phosphorus.addFlags("no_smelting")
+        Phosphorus.setFormula("P4", true);
+        Phosphorus.setMaterialRGB(0xfffed6);
+        Phosphorus.addFlags("no_smelting");
         
-        DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true)
+        DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
+
+        Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Asbestos.addFlags("generate_foil");
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
 

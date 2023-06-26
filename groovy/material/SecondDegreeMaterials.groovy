@@ -408,6 +408,7 @@ public class SecondDegreeMaterials {
         ChromiumSodaMixture = new Material.Builder(13064, "chromium_soda_mixture")
                 .dust()
                 .components(ChromiumIIIOxide, 1, SodaAsh, 1)
+                .build();
 
         SodiumVanadateSolution = new Material.Builder(13065, "sodium_vanadate_solution")
                 .fluid()
@@ -419,6 +420,30 @@ public class SecondDegreeMaterials {
                 .fluid()
                 .components(Water, 1, LeadChloride, 1)
                 .colorAverage()
+                .build();
+
+        AmmoniumSulfateSolution = new Material.Builder(13067, "ammonium_sulfate_solution")
+                .fluid()
+                .components(AmmoniumSulfate, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        AmmoniumChromeAlumSolution = new Material.Builder(13068, "ammonium_chrome_alum_solution")
+                .fluid()
+                .components(AmmoniumChromeAlum, 1, Water, 1)
+                .color(0x7643a3)
+                .build();
+
+        AgedAmmoniumChromeAlumSolution = new Material.Builder(13069, "aged_ammonium_chrome_alum_solution")
+                .fluid()
+                .components(AmmoniumChromeAlum, 1, Water, 1)
+                .color(0x7643a3)
+                .build();
+
+        PurifiedAmmoniumChromeAlumSolution = new Material.Builder(13070, "purified_ammonium_chrome_alum_solution")
+                .fluid()
+                .components(AmmoniumChromeAlum, 1, Water, 1)
+                .color(0x7643a3)
                 .build();
     }
 }

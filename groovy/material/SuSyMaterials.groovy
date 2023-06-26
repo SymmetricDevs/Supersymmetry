@@ -307,6 +307,14 @@ class SuSyMaterials {
         public static Material SodaAshRoastedVanadinite;
         public static Material LeachedSaltRoastedVanadinite;
         public static Material LeachedSodaAshRoastedVanadinite;
+        public static Material DissolvedFerrochromium;
+        public static Material CrudeAmmoniumIronIISulfate;
+        public static Material MohrMotherLiquor;
+        public static Material CrudeAmmoniumIronIISulfateSolution;
+        public static Material ChromiumAnolyte;
+        public static Material ReducedChromiumAnolyte;
+        public static Material ChromiumCatholyte;
+        public static Material ChromiumMotherLiquor;
 
         // Petrochem Materials
 
@@ -734,6 +742,12 @@ class SuSyMaterials {
         public static Material LeadChloride;
         public static Material SodiumVanadate;
         public static Material AmmoniumMetavanadate;
+        public static Material AmmoniumChromeAlum;
+        public static Material AmmoniumIronIISulfate;
+        public static Material AmmoniumIronIISulfateSolution;
+        public static Material IronIIHydroxide;
+        public static Material IronIIOxide;
+        public static Material ElectrolyticChromium;
 
         // Second Degree Materials
 
@@ -804,6 +818,10 @@ class SuSyMaterials {
         public static Material ChromiumSodaMixture;
         public static Material SodiumVanadateSolution;
         public static Material LeadChlorideSolution;
+        public static Material AmmoniumSulfateSolution;
+        public static Material AmmoniumChromeAlumSolution;
+        public static Material AgedAmmoniumChromeAlumSolution;
+        public static Material PurifiedAmmoniumChromeAlumSolution;
 
         // Organic Chemistry Materials
 

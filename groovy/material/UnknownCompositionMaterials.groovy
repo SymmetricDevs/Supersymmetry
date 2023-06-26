@@ -1001,5 +1001,45 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0x4d463f)
                 .build();
+
+        DissolvedFerrochromium = new Material.Builder(4189, "dissolved_ferrochromium")
+                .fluid()
+                .color(0xd17979)
+                .build();
+
+        CrudeAmmoniumIronIISulfate = new Material.Builder(4190, "crude_ammonium_iron_ii_sulfate")
+                .dust()
+                .color(0x96cf70)
+                .build();
+
+        MohrMotherLiquor = new Material.Builder(4191, "mohr_mother_liquor")
+                .fluid()
+                .color(0x43a375)
+                .build();
+
+        CrudeAmmoniumIronIISulfateSolution = new Material.Builder(4192, "crude_ammonium_iron_ii_sulfate_solution")
+                .fluid()
+                .color(0x96cf70)
+                .build();
+
+        ChromiumAnolyte = new Material.Builder(4193, "chromium_anolyte")
+                .fluid()
+                .color(0xd97777)
+                .build();
+
+        ChromiumCatholyte = new Material.Builder(4194, "chromium_catholyte")
+                .fluid()
+                .color(0xc45e4f)
+                .build();
+
+        ChromiumMotherLiquor = new Material.Builder(4195, "chromium_mother_liquor")
+                .fluid()
+                .color(0xeb94d1)
+                .build();
+
+        ReducedChromiumAnolyte = new Material.Builder(4196, "reduced_chromium_anolyte")
+                .fluid()
+                .color(0xd9b077)
+                .build();
     }
 }
