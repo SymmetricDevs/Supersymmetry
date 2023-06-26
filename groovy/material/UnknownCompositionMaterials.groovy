@@ -1019,6 +1019,7 @@ public class UnknownCompositionMaterials {
 
         CrudeAmmoniumIronIISulfateSolution = new Material.Builder(4192, "crude_ammonium_iron_ii_sulfate_solution")
                 .fluid()
+                .fluidTemp(343)
                 .color(0x96cf70)
                 .build();
 

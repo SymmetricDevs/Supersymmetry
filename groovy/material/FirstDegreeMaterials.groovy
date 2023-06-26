@@ -2475,13 +2475,12 @@ public class FirstDegreeMaterials{
 
         AmmoniumIronIISulfate.setFormula("Fe(NH4)2(SO4)2", true)
 
-        AmmoniumIronIISulfateSolution = new Material.Builder(8465, "ammonium_iron_ii_sulfate_solution")
-                .fluid()
-                .components(Iron, 1, Nitrogen, 2, Hydrogen, 8, Sulfur, 2, Oxygen, 8, Water, 1)
-                .color(0x70cc6e)
+        ElectrolyticChromium = new Material.Builder(8465, "electrolytic_chromium")
+                .dust().fluid()
+                .components(Chrome, 1)
+                .colorAverage()
+                .iconSet(SAND)
                 .build();
-
-        AmmoniumIronIISulfateSolution.setFormula("Fe(NH4)2(SO4)2(H2O)", true)
 
         IronIIHydroxide = new Material.Builder(8466, "iron_ii_hydroxide")
                 .dust()
@@ -2495,13 +2494,6 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Iron, 1, Oxygen, 1)
                 .color(0x1c1c1c)
-                .build();
-
-        ElectrolyticChromium = new Material.Builder(8468, "electrolytic_chromium")
-                .dust().fluid()
-                .components(Chrome, 1)
-                .colorAverage()
-                .iconSet(SAND)
                 .build();
     }
 }

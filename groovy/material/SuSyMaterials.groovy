@@ -744,7 +744,6 @@ class SuSyMaterials {
         public static Material AmmoniumMetavanadate;
         public static Material AmmoniumChromeAlum;
         public static Material AmmoniumIronIISulfate;
-        public static Material AmmoniumIronIISulfateSolution;
         public static Material IronIIHydroxide;
         public static Material IronIIOxide;
         public static Material ElectrolyticChromium;
@@ -822,6 +821,7 @@ class SuSyMaterials {
         public static Material AmmoniumChromeAlumSolution;
         public static Material AgedAmmoniumChromeAlumSolution;
         public static Material PurifiedAmmoniumChromeAlumSolution;
+        public static Material AmmoniumIronIISulfateSolution;
 
         // Organic Chemistry Materials
 

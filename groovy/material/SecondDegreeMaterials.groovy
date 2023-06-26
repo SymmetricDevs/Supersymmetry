@@ -418,6 +418,7 @@ public class SecondDegreeMaterials {
 
         LeadChlorideSolution = new Material.Builder(13066, "lead_chloride_solution")
                 .fluid()
+                .fluidTemp(343)
                 .components(Water, 1, LeadChloride, 1)
                 .colorAverage()
                 .build();
@@ -444,6 +445,13 @@ public class SecondDegreeMaterials {
                 .fluid()
                 .components(AmmoniumChromeAlum, 1, Water, 1)
                 .color(0x7643a3)
+                .build();
+
+        AmmoniumIronIISulfateSolution = new Material.Builder(13071, "ammonium_iron_ii_sulfate_solution")
+                .fluid()
+                .fluidTemp(343)
+                .components(AmmoniumIronIISulfateSolution, Water, 1)
+                .color(0x70cc6e)
                 .build();
     }
 }
