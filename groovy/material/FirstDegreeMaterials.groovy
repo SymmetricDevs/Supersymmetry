@@ -73,7 +73,7 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Scandium, 8012, false, false)
         generatePurifiedElement(Titanium, 8013, false, false)
         generatePurifiedElement(Vanadium, 8014, false, false)
-        generatePurifiedElement(Chrome, 8015, false, false)
+        generatePurifiedElement(Chrome, 8015, true, false)
         generatePurifiedElement(Manganese, 8016, false, false)
         generatePurifiedElement(Iron, 8017, false, false)
         generatePurifiedElement(Cobalt, 8018, false, false)
@@ -1543,7 +1543,7 @@ public class FirstDegreeMaterials{
                 .color(0x2e5207)
                 .build();
 
-        ChromiumIIIHydroxide.setFormula("Cr(OH)3")
+        ChromiumIIIHydroxide.setFormula("Cr(OH)3", true)
 
         DisassociatedAmmoniumFluoride = new Material.Builder(8325, "disassociated_ammonium_fluoride")
                 .fluid(FluidTypes.GAS)
@@ -2427,22 +2427,73 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        LeadChloride = new Material.Builder(8458, 'lead_chloride')
+        SodiumChromateMixture = new Material.Builder(8458, 'sodium_chromate_mixture')
+                .dust()
+                .components(Sodium, 1, Chrome, 1, Oxygen, 4, SodaAsh, 1)
+                .color(0xfaff7d)
+                .build();
+
+        SodiumChromateSolution = new Material.Builder(8459, 'sodium_chromate_solution')
+                .fluid()
+                .components(Sodium, 1, Chrome, 1, Oxygen, 4, Water, 1)
+                .color(0xa4a839)
+                .build();
+
+        LeadChloride = new Material.Builder(8460, 'lead_chloride')
                 .dust().fluid()
                 .components(Lead, 1, Chlorine, 2)
                 .colorAverage()
                 .build();
 
-        SodiumVanadate = new Material.Builder(8459, 'sodium_vanadate')
+        SodiumVanadate = new Material.Builder(8461, 'sodium_vanadate')
                 .dust()
                 .components(Sodium, 1, Vanadium, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
 
-        AmmoniumMetavanadate = new Material.Builder(8460, 'ammonium_metavanadate')
+        AmmoniumMetavanadate = new Material.Builder(8462, 'ammonium_metavanadate')
                 .dust()
                 .components(Nitrogen, 1, Hydrogen, 4, Vanadium, 1, Oxygen, 3)
                 .colorAverage()
+                .build();
+
+        AmmoniumChromeAlum = new Material.Builder(8463, "ammonium_chrome_alum")
+                .dust()
+                .components(Nitrogen, 1, Hydrogen, 4, Chrome, 1, Sulfur, 2, Oxygen, 8)
+                .color(0x4e1554)
+                .iconSet(SHINY)
+                .build();
+
+        AmmoniumChromeAlum.setFormula("NH4Cr(SO4)2", true)
+
+        AmmoniumIronIISulfate = new Material.Builder(8464, "ammonium_iron_ii_sulfate")
+                .dust()
+                .components(Iron, 1, Nitrogen, 2, Hydrogen, 8, Sulfur, 2, Oxygen, 8)
+                .color(0x70cc6e)
+                .iconSet(SHINY)
+                .build();
+
+        AmmoniumIronIISulfate.setFormula("Fe(NH4)2(SO4)2", true)
+
+        ElectrolyticChromium = new Material.Builder(8465, "electrolytic_chromium")
+                .dust().fluid()
+                .components(Chrome, 1)
+                .colorAverage()
+                .iconSet(SAND)
+                .build();
+
+        IronIIHydroxide = new Material.Builder(8466, "iron_ii_hydroxide")
+                .dust()
+                .components(Iron, 1, Oxygen, 2, Hydrogen, 2)
+                .color(0x072406)
+                .build();
+
+        IronIIHydroxide.setFormula("Fe(OH)2", true)
+
+        IronIIOxide = new Material.Builder(8467, "iron_ii_oxide")
+                .dust()
+                .components(Iron, 1, Oxygen, 1)
+                .color(0x1c1c1c)
                 .build();
     }
 }
