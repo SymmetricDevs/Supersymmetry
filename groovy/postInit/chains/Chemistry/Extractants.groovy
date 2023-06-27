@@ -435,13 +435,31 @@ DISTILLATION_TOWER.recipeBuilder()
         .EUt(120)
         .buildAndRegister()
 
-// D2EHPA
+//TBP
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('n_butanol') * 150)
+        .fluidInputs(fluid('phosphoryl_chloride') * 50)
+        .fluidOutputs(fluid('acidic_tributyl_phosphate') * 200)
+        .duration(3)
+        .EUt(120)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .inputs(metaitem('dustSodiumHydroxide') * 9)
+        .fluidInputs(fluid('acidic_tributyl_phosphate') * 4000)
+        .fluidOutputs(fluid('tributyl_phosphate') * 1000)
+        .fluidOutputs(fluid('salt_water') * 3000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+//D2EHPA
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
         .fluidInputs(fluid('butyraldehyde') * 2000)
         .fluidOutputs(fluid('two_ethyl_two_hexenal') * 3000)
         .fluidOutputs(fluid('diluted_sodium_hydroxide_solution') * 1000)
-        .duration(3)
+        .duration(60)
         .EUt(120)
         .buildAndRegister()
 

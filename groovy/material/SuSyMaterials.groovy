@@ -1042,6 +1042,7 @@ class SuSyMaterials {
         public static Material SodiumIsobutylXanthate;
         public static Material PotassiumIsopropylXanthate;
         public static Material PotassiumEthylXanthate;
+        public static Material TributylPhosphate;
 
         // Third Degree Materials
 
@@ -1083,6 +1084,7 @@ class SuSyMaterials {
         public static Material SodiumIsobutylXanthateSolution;
         public static Material PotassiumIsopropylXanthateSolution;
         public static Material PotassiumEthylXanthateSolution;
+        public static Material AcidicTributylPhosphate;
 
         // Thermodynamics/Greenhouse Materials
 

@@ -1295,6 +1295,8 @@ material.chromium_catholyte=Chromium Catholyte
 material.chromium_anolyte=Chromium Anolyte
 material.reduced_chromium_anolyte=Reduced Chromium Anolyte
 material.chromium_mother_liquor=Chromium Mother Liquor
+material.acidic_tributyl_phosphate=Acidic Tributyl Phosphate
+material.tributyl_phosphate=Tributyl Phosphate
 
 # Isotopes
 
