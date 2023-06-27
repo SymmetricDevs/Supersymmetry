@@ -450,7 +450,7 @@ public class SecondDegreeMaterials {
         AmmoniumIronIISulfateSolution = new Material.Builder(13071, "ammonium_iron_ii_sulfate_solution")
                 .fluid()
                 .fluidTemp(343)
-                .components(AmmoniumIronIISulfateSolution, Water, 1)
+                .components(AmmoniumIronIISulfate, 1, Water, 1)
                 .color(0x70cc6e)
                 .build();
     }

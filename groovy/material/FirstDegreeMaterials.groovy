@@ -1543,7 +1543,7 @@ public class FirstDegreeMaterials{
                 .color(0x2e5207)
                 .build();
 
-        ChromiumIIIHydroxide.setFormula("Cr(OH)3")
+        ChromiumIIIHydroxide.setFormula("Cr(OH)3", true)
 
         DisassociatedAmmoniumFluoride = new Material.Builder(8325, "disassociated_ammonium_fluoride")
                 .fluid(FluidTypes.GAS)

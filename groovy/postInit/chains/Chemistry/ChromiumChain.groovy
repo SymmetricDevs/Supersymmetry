@@ -4,7 +4,7 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import static gregtech.api.unification.ore.OrePrefix.dye;
 
-ROTARY_KILN = recipemap('rotary_kiln')
+//ROTARY_KILN = recipemap('rotary_kiln')
 ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
 BR = recipemap('batch_reactor')
 REACTION_FURNACE = recipemap('reaction_furnace')
@@ -12,20 +12,22 @@ CRYSTALLIZER = recipemap('crystallizer')
 BCR = recipemap('bubble_column_reactor')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 VACUUM_CHAMBER = recipemap('vacuum_chamber')
-CENTRIFUGE = recipemap('centrifuge')
+ROASTER = recipemap('roaster')
 CSTR = recipemap('continuous_stirred_tank_reactor')
 
 ADVANCED_ARC_FURNACE.recipeBuilder()
 .inputs(ore('dustChromite') * 7)
 .inputs(ore('dustCarbon') * 4)
-.inputs(ore('dustTinyQuicklime'))
-.inputs(ore('dustTinyQuicklime'))
+.inputs(ore('dustTinyQuicklime') * 2)
 .outputs(ore('dustFerrochromium').first() * 3)
 .fluidOutputs(fluid('carbon_monoxide') * 4000)
 .duration(200)
 .EUt(Globals.voltAmps[2])
 .buildAndRegister()
 
+//TODO: ENABLE WHEN 0.0.14 IS OUT
+//TODO: MOVE ROTARY KILN RECIPES FROM SINTERER/EBF/ROASTER/WHATEVER TO ROTARY KILN
+/*
 ROTARY_KILN.recipeBuilder()
 .inputs(metaitem('dustChromite') * 14)
 .inputs(metaitem('dustSodaAsh') * 24)
@@ -36,6 +38,8 @@ ROTARY_KILN.recipeBuilder()
 .duration(400)
 .EUt(Globals.voltAmps[2])
 .buildAndRegister()
+
+ */
 
 BR.recipeBuilder()
 .inputs(metaitem('dustSodiumChromateMixture') * 10)
@@ -278,3 +282,11 @@ VACUUM_CHAMBER.recipeBuilder()
 .EUt(Globals.voltAmps[3])
 .duration(200)
 .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dustChromiumTrioxide') * 8)
+        .outputs(metaitem('dustChromiumIiiOxide') * 5)
+        .fluidOutputs(fluid('oxygen') * 3000)
+        .EUt(120)
+        .duration(200)
+        .buildAndRegister()
