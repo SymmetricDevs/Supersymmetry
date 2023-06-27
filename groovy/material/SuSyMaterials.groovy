@@ -307,6 +307,8 @@ class SuSyMaterials {
         public static Material SodaAshRoastedVanadinite;
         public static Material LeachedSaltRoastedVanadinite;
         public static Material LeachedSodaAshRoastedVanadinite;
+        public static Material Sienna;
+        public static Material BurntSienna;
         public static Material DissolvedFerrochromium;
         public static Material CrudeAmmoniumIronIISulfate;
         public static Material MohrMotherLiquor;
@@ -742,6 +744,10 @@ class SuSyMaterials {
         public static Material LeadChloride;
         public static Material SodiumVanadate;
         public static Material AmmoniumMetavanadate;
+        public static Material SodiumAmide;
+        public static Material LeadChromate;
+        public static Material CobaltAluminate;
+        public static Material LeadNitrate;
         public static Material AmmoniumChromeAlum;
         public static Material AmmoniumIronIISulfate;
         public static Material IronIIHydroxide;

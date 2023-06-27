@@ -22,7 +22,7 @@ class ChangeFlags {
         log.infoMC("Modifying flags...")
 
         SuSyRecipeMaps.FROTH_FLOTATION.setMaxFluidInputs(3);
-        SuSyRecipeMaps.FLUIDIZED_BED_REACTOR_RECIPES.setMaxOutputs(3);
+        SuSyRecipeMaps.FLUIDIZED_BED_REACTOR_RECIPES.setMaxOutputs(2);
         SuSyRecipeMaps.ELECTROLYTIC_CELL_RECIPES.setMaxFluidInputs(3);
         SuSyRecipeMaps.QUENCHER_RECIPES.setMaxFluidInputs(2);
 

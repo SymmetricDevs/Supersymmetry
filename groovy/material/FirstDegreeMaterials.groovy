@@ -144,7 +144,7 @@ public class FirstDegreeMaterials{
         CalciumHydroxide = new Material.Builder(8100, 'calcium_hydroxide')
                 .dust()
                 .components(Calcium, 1, Oxygen, 2, Hydrogen, 2)
-                .colorAverage()
+                .color(0xcfcabc)
                 .build()
                 .setFormula("Ca(OH)2", true);
 
@@ -373,7 +373,7 @@ public class FirstDegreeMaterials{
         CalciumCarbide = new Material.Builder(8139, 'calcium_carbide')
                 .dust()
                 .components(Calcium, 1, Carbon, 2)
-                .colorAverage()
+                .color(0x87847c)
                 .build();
 
         IronIIChloride = new Material.Builder(8140, 'iron_ii_chloride')
@@ -1020,12 +1020,6 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Sodium, 2, Sulfur, 2, Oxygen, 3)
                 .color(0x879e21)
-                .build()
-
-        HydrogenCyanide = new Material.Builder(8246, "hydrogen_cyanide")
-                .fluid()
-                .components(Hydrogen, 1, Carbon, 1, Nitrogen, 1)
-                .color(0x0b8542)
                 .build()
 
         SulfidicSilverCyanideSolution = new Material.Builder(8247, "sulfidic_silver_cyanide_solution")
@@ -2457,7 +2451,23 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        AmmoniumChromeAlum = new Material.Builder(8463, "ammonium_chrome_alum")
+        CobaltAluminate = new Material.Builder(8463, 'cobalt_aluminate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Cobalt, 1, Aluminium, 2, Oxygen, 4)
+                .color(0x1605ff)
+                .build();
+
+        LeadNitrate = new Material.Builder(8464, 'lead_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Lead, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0xffffff)
+                .build();
+
+        LeadNitrate.setFormula('Pb(NO3)2', true)
+
+        AmmoniumChromeAlum = new Material.Builder(8465, "ammonium_chrome_alum")
                 .dust()
                 .components(Nitrogen, 1, Hydrogen, 4, Chrome, 1, Sulfur, 2, Oxygen, 8)
                 .color(0x4e1554)
@@ -2466,7 +2476,7 @@ public class FirstDegreeMaterials{
 
         AmmoniumChromeAlum.setFormula("NH4Cr(SO4)2", true)
 
-        AmmoniumIronIISulfate = new Material.Builder(8464, "ammonium_iron_ii_sulfate")
+        AmmoniumIronIISulfate = new Material.Builder(8466, "ammonium_iron_ii_sulfate")
                 .dust()
                 .components(Iron, 1, Nitrogen, 2, Hydrogen, 8, Sulfur, 2, Oxygen, 8)
                 .color(0x70cc6e)
@@ -2475,14 +2485,14 @@ public class FirstDegreeMaterials{
 
         AmmoniumIronIISulfate.setFormula("Fe(NH4)2(SO4)2", true)
 
-        ElectrolyticChromium = new Material.Builder(8465, "electrolytic_chromium")
+        ElectrolyticChromium = new Material.Builder(8467, "electrolytic_chromium")
                 .dust().fluid()
                 .components(Chrome, 1)
                 .colorAverage()
                 .iconSet(SAND)
                 .build();
 
-        IronIIHydroxide = new Material.Builder(8466, "iron_ii_hydroxide")
+        IronIIHydroxide = new Material.Builder(8468, "iron_ii_hydroxide")
                 .dust()
                 .components(Iron, 1, Oxygen, 2, Hydrogen, 2)
                 .color(0x072406)
@@ -2490,7 +2500,20 @@ public class FirstDegreeMaterials{
 
         IronIIHydroxide.setFormula("Fe(OH)2", true)
 
-        IronIIOxide = new Material.Builder(8467, "iron_ii_oxide")
+        SodiumAmide = new Material.Builder(8469, 'sodium_amide')
+                .dust()
+                .components(Sodium, 1, Nitrogen, 1, Hydrogen, 2)
+                .colorAverage()
+                .build();
+
+        LeadChromate = new Material.Builder(8470, 'lead_chromate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Lead, 1, Chrome, 1, Oxygen, 4)
+                .color(0xfffb00)
+                .build();
+
+        IronIIOxide = new Material.Builder(8471, "iron_ii_oxide")
                 .dust()
                 .components(Iron, 1, Oxygen, 1)
                 .color(0x1c1c1c)

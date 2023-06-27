@@ -779,6 +779,18 @@ crafting.addShaped("gregtech:quencher", metaitem('quencher'), [
 		[metaitem('pipeLargeFluidStainlessSteel'), circuits[3], metaitem('pipeLargeFluidStainlessSteel')]
 ])
 
+crafting.addShaped("gregtech:dumper", metaitem('dumper'), [
+		[metaitem('plateSteel'), metaitem('plateSteel'), metaitem('plateSteel')],
+		[metaitem('electric.pump.lv'), metaitem('hull.lv'), metaitem('pipeLargeFluidSteel')],
+		[metaitem('plateSteel'), metaitem('plateSteel'), metaitem('plateSteel')]
+])
+
+crafting.addShaped("gregtech:ocean_pumper", metaitem('ocean_pumper'), [
+		[metaitem('stickLongAluminium'), metaitem('electric.pump.mv'), metaitem('stickLongAluminium')],
+		[ore('circuitMv'), metaitem('hull.mv'), ore('circuitMv')],
+		[metaitem('cableGtSingleCopper'), metaitem('electric.pump.mv'), metaitem('cableGtSingleCopper')]
+])
+
 //ION EXCHANGE COLUMN
 
 for (i = 1; i <= 8; i++) {

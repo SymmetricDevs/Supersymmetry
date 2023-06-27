@@ -23,6 +23,18 @@ ore('gtLight').add(metaitem('fluorescent_light'))
 ore('gtLight').add(metaitem('led_light'))
 ore('gtLight').add(metaitem('carbon_arc_lamp'))
 
+//Dyes
+
+ore('dyeBrown').add(metaitem('dustSienna'))
+ore('dyeRed').add(metaitem('dustBurntSienna'))
+ore('dyeRed').add(metaitem('dustCinnabar'))
+ore('dyeYellow').add(metaitem('dustLeadChromate'))
+ore('dyeGreen').add(metaitem('dustMalachite'))
+ore('dyeBlue').add(metaitem('dustCobaltAluminate'))
+ore('dyeWhite').add(metaitem('dustLeadNitrate'))
+ore('dyeBlack').add(metaitem('dustCarbon'))
+ore('dyeGreen').add(metaitem('cupric_hydrogen_arsenite_dust'))
+
 //Ore dict changes and unification
 
 def get_ore_dicts(List<String> list) {
@@ -114,6 +126,12 @@ for (type in StoneVariantBlock.StoneType.values()) {
 
     OreDictionary.registerOre('stone', variant)
 }
+
+//Saw oredict
+
+ore('toolSaw').remove(item('notreepunching:saw/iron'))
+ore('toolSaw').remove(item('notreepunching:saw/gold'))
+ore('toolSaw').remove(item('notreepunching:saw/diamond'))
 
 //No tree punching knife fixes
 

@@ -11,7 +11,8 @@
   "biome_modifier": {
     "type": "biome_map",
     "desert": 400,
-    "mesa": 400
+    "mesa": 400,
+    "river": 300
   },
   "generator": {
     "type": "layered",
