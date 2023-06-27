@@ -244,5 +244,11 @@ public class ThirdDegreeMaterials {
                 .components(PotassiumEthylXanthate, 1, Water, 1)
                 .colorAverage()
                 .build();
+
+        AcidicTributylPhosphate = new Material.Builder(24038, "acidic_tributyl_phosphate")
+                .fluid()
+                .components(TributylPhosphate, 1, HydrogenChloride, 3)
+                .colorAverage()
+                .build();
     }
 }

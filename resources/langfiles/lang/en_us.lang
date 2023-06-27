@@ -1283,6 +1283,28 @@ material.burnt_sienna=Burnt Sienna
 material.lead_chromate=Lead Chromate
 material.cobalt_aluminate=Cobalt Aluminate
 material.lead_nitrate=Lead Nitrate
+material.acidic_tributyl_phosphate=Acidic Tributyl Phosphate
+material.tributyl_phosphate=Tributyl Phosphate
+material.sodium_chromate_mixture=Sodium Chromate Mixture
+material.sodium_chromate_solution=Sodium Chromate Solution
+material.sodium_dichromate_solution=Sodium Dichromate Solution
+material.chromium_soda_mixture=Chromium-Soda Mixture
+material.dissolved_ferrochromium=Dissolved Ferrochromium
+material.crude_ammonium_iron_ii_sulfate=Crude Ammonium Iron II Sulfate
+material.mohr_mother_liquor=Mohr Mother Liquor
+material.crude_ammonium_iron_ii_sulfate_solution=Crude Ammonium Iron II Sulfate Solution
+material.ammonium_chrome_alum_solution=Ammonium Chrome Alum Solution
+material.ammonium_iron_ii_sulfate=Ammonium Iron II Sulfate (Mohr's Salt)
+material.ammonium_iron_ii_sulfate_solution=Ammonium Iron II Sulfate Solution
+material.iron_ii_hydroxide=Iron II Hydroxide
+material.iron_ii_oxide=Iron II Oxide
+material.ammonium_chrome_alum=Ammonium Chrome Alum
+material.purified_ammonium_chrome_alum_solution=Purified Ammonium Chrome Alum Solution
+material.electrolytic_chromium=Electrolytic Chromium
+material.chromium_catholyte=Chromium Catholyte
+material.chromium_anolyte=Chromium Anolyte
+material.reduced_chromium_anolyte=Reduced Chromium Anolyte
+material.chromium_mother_liquor=Chromium Mother Liquor
 
 # Isotopes
 

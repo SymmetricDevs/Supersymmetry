@@ -1,18 +1,13 @@
 {
-  "zombie": {
-    "id": "minecraft:zombie"
-  },
-  "zombie_reinforcement_00": {
-    "id": "techguns:zombieminer",
-      "ForgeData": {
-        "Onslaught": {
-          "CustomAI": {
-            "CounterAttack": { "Chance": 0.2 }
-          }
-        }
-      }
-  },
-  "zombie_reinforcement_01": {
-    "id": "techguns:zombiesoldier"
-  }
+	"zombie": {
+		"id": "minecraft:zombie",
+		"effects": [
+			{
+				"id": "minecraft:speed",
+				"duration": 2400,
+				"amplifier": 1,
+				"showParticles": false
+			}
+		]
+	}
 }

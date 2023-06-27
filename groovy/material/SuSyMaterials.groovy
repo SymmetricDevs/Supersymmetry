@@ -309,6 +309,14 @@ class SuSyMaterials {
         public static Material LeachedSodaAshRoastedVanadinite;
         public static Material Sienna;
         public static Material BurntSienna;
+        public static Material DissolvedFerrochromium;
+        public static Material CrudeAmmoniumIronIISulfate;
+        public static Material MohrMotherLiquor;
+        public static Material CrudeAmmoniumIronIISulfateSolution;
+        public static Material ChromiumAnolyte;
+        public static Material ReducedChromiumAnolyte;
+        public static Material ChromiumCatholyte;
+        public static Material ChromiumMotherLiquor;
 
         // Petrochem Materials
 
@@ -731,6 +739,8 @@ class SuSyMaterials {
         public static Material SilicaGel;
         public static Material WetSilicaGel;
         public static Material PhosphoricAcidSilicaGel;
+        public static Material SodiumChromateMixture;
+        public static Material SodiumChromateSolution;
         public static Material LeadChloride;
         public static Material SodiumVanadate;
         public static Material AmmoniumMetavanadate;
@@ -738,6 +748,11 @@ class SuSyMaterials {
         public static Material LeadChromate;
         public static Material CobaltAluminate;
         public static Material LeadNitrate;
+        public static Material AmmoniumChromeAlum;
+        public static Material AmmoniumIronIISulfate;
+        public static Material IronIIHydroxide;
+        public static Material IronIIOxide;
+        public static Material ElectrolyticChromium;
 
         // Second Degree Materials
 
@@ -804,8 +819,15 @@ class SuSyMaterials {
         public static Material BariumChlorideSolution;
         public static Material DilutedBromooctane;
         public static Material DilutedSodiumSilicateSolution;
+        public static Material SodiumDichromateSolution;
+        public static Material ChromiumSodaMixture;
         public static Material SodiumVanadateSolution;
         public static Material LeadChlorideSolution;
+        public static Material AmmoniumSulfateSolution;
+        public static Material AmmoniumChromeAlumSolution;
+        public static Material AgedAmmoniumChromeAlumSolution;
+        public static Material PurifiedAmmoniumChromeAlumSolution;
+        public static Material AmmoniumIronIISulfateSolution;
 
         // Organic Chemistry Materials
 
@@ -1026,6 +1048,7 @@ class SuSyMaterials {
         public static Material SodiumIsobutylXanthate;
         public static Material PotassiumIsopropylXanthate;
         public static Material PotassiumEthylXanthate;
+        public static Material TributylPhosphate;
 
         // Third Degree Materials
 
@@ -1067,6 +1090,7 @@ class SuSyMaterials {
         public static Material SodiumIsobutylXanthateSolution;
         public static Material PotassiumIsopropylXanthateSolution;
         public static Material PotassiumEthylXanthateSolution;
+        public static Material AcidicTributylPhosphate;
 
         // Thermodynamics/Greenhouse Materials
 
