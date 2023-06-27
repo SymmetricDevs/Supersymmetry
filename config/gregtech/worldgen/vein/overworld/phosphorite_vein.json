@@ -24,16 +24,10 @@
 	}
       },
       {
-        "secondary": {
-          "block":"susy:resource_block",
-          "variant":"phosphorite"
-	}
+        "secondary": "fluorapatite"
       },
       {
-        "between": {
-          "block":"susy:resource_block",
-          "variant":"phosphorite"
-	}
+        "between": "hydroxyapatite"
       },
       {
         "sporadic": "ore:chlorapatite"
