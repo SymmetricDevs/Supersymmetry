@@ -1739,7 +1739,8 @@
     },
     "21:10": {
       "preRequisites:11": [
-        16
+        16,
+        25
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5569,7 +5570,6 @@
     },
     "74:10": {
       "preRequisites:11": [
-        87,
         93
       ],
       "properties:10": {
@@ -12284,7 +12284,7 @@
     },
     "174:10": {
       "preRequisiteTypes:7": [
-        2
+        1
       ],
       "preRequisites:11": [
         102
@@ -12818,7 +12818,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Desulfurization",
@@ -14362,7 +14362,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can §ccentrifuge §6Carbon §rout of coal dusts.",
+          "desc:8": "You can §ccentrifuge §6Carbon §rout of various carbonaceous sources, such as coal dust or coke dust.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15092,7 +15092,7 @@
     },
     "213:10": {
       "preRequisites:11": [
-        22
+        25
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16707,12 +16707,13 @@
     },
     "238:10": {
       "preRequisites:11": [
-        237
+        464,
+        463
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combine §7§7§6Arsenic §rand §6Gallium §rto create §6Gallium Arsenide§r, which are required for the next tier of circuits.",
+          "desc:8": "Combine §7§7§6Arsenic §rand §6Gallium §rto create §6Gallium Arsenide§r, which will have several uses later on.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16785,7 +16786,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6diode §ris an electronic component that conducts current primarily in one direction. They are required for constructing §7§6Medium Voltage circuits§r.\n\nYou can make a diode by combining fine copper wires with §6§6gallium arsenide §rand §6molten glass§r in an Assembler. Melt the glass using an Extractor. There is a more efficient way to make diodes later on but it requires polyethylene.",
+          "desc:8": "A §6diode §ris an electronic component that conducts current primarily in one direction. They are required for constructing §7§6Medium Voltage circuits§r.\n\nYou can make a diode by combining fine copper wires with §6§6galena §rand §6molten glass§r in an Assembler. Melt the glass using an Extractor. There is a more efficient way to make diodes later on but it requires polyethylene.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24717,7 +24718,8 @@
     },
     "369:10": {
       "preRequisites:11": [
-        222
+        222,
+        438
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -24793,7 +24795,7 @@
     },
     "370:10": {
       "preRequisites:11": [
-        369
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -25088,7 +25090,7 @@
     },
     "374:10": {
       "preRequisites:11": [
-        373
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -25280,7 +25282,7 @@
     },
     "377:10": {
       "preRequisites:11": [
-        203
+        379
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -25365,7 +25367,7 @@
     },
     "378:10": {
       "preRequisites:11": [
-        203
+        379
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26148,9 +26150,6 @@
       }
     },
     "389:10": {
-      "preRequisiteTypes:7": [
-        1
-      ],
       "preRequisites:11": [
         388
       ],
@@ -26256,7 +26255,7 @@
     },
     "391:10": {
       "preRequisites:11": [
-        243
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26478,12 +26477,15 @@
     },
     "394:10": {
       "preRequisites:11": [
-        243
+        374,
+        373,
+        369,
+        370
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Since Medium Voltage machinery requires 4 times the energy of LV machines, it is recommended that you make a new power setup. \nYou can probably just slap a new MV dynamo hatch on that Turbine, but it would be very inefficient.\n\nThe §6Combined Cycle §rprocess requires that you make a§a Heat Exchanger§r to turn a gas into its§5 Hot High Pressure §rvariant.\n\nAfter putting it into a Turbine, it will release §epower§r and a§c hot normal pressure fluid§r, which can be cooled with another §aHeat Exchanger §rto start the process all over again.\n\nIf you\u0027re confused, here\u0027s a flowchart: https://media.discordapp.net/attachments/1029723495577419859/1110649444388581406/gtthermo.png?width\u003d1170\u0026height\u003d676\n\n",
+          "desc:8": "Since Medium Voltage machinery requires 4 times the energy of LV machines, it is recommended that you make a new power setup. \nYou can probably just slap a new MV dynamo hatch on that Turbine, but it would be very inefficient.\n\nThe §6Combined Cycle §rprocess requires that you make a§a Heat Exchanger§r to turn a working fluid (Water) into its§5 Hot High Pressure §rvariant (Steam). §cFlue gas§f from burning fuels in the §aGas Turbine§f is used to provide the heating.\n\nAfter putting the steam into a Turbine, it will release §epower§r and a§c hot normal pressure fluid§r, which can be cooled back into water to start the process all over again.\n\nIf you\u0027re confused, here\u0027s a flowchart: https://media.discordapp.net/attachments/1029723495577419859/1110649444388581406/gtthermo.png?width\u003d1170\u0026height\u003d676\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26649,7 +26651,8 @@
     },
     "397:10": {
       "preRequisites:11": [
-        396
+        396,
+        659
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26680,7 +26683,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Ethylene",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -26714,15 +26717,9 @@
       }
     },
     "398:10": {
-      "preRequisiteTypes:7": [
-        0,
-        0,
-        1
-      ],
       "preRequisites:11": [
         397,
-        391,
-        243
+        391
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26792,7 +26789,7 @@
     },
     "399:10": {
       "preRequisites:11": [
-        243
+        236
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26984,7 +26981,8 @@
     },
     "402:10": {
       "preRequisites:11": [
-        401
+        401,
+        592
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27116,7 +27114,8 @@
     },
     "404:10": {
       "preRequisites:11": [
-        405
+        405,
+        402
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27186,7 +27185,7 @@
     },
     "405:10": {
       "preRequisites:11": [
-        592
+        81
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27237,8 +27236,13 @@
       }
     },
     "406:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        502
+        593,
+        478
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27644,7 +27648,7 @@
     },
     "412:10": {
       "preRequisites:11": [
-        398
+        654
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27713,8 +27717,13 @@
       }
     },
     "413:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        412
+        412,
+        243
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -28274,7 +28283,8 @@
     },
     "421:10": {
       "preRequisites:11": [
-        418
+        418,
+        419
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29207,8 +29217,8 @@
     "433:10": {
       "preRequisites:11": [
         429,
-        236,
-        243
+        243,
+        660
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29217,12 +29227,12 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 8565,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "gregtechfoodoption:gtfo_glass_casing"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Industrialized Agriculture",
@@ -29493,7 +29503,7 @@
     },
     "438:10": {
       "preRequisites:11": [
-        369
+        66
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29662,13 +29672,16 @@
       }
     },
     "441:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
       "preRequisites:11": [
-        440
+        21
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §6evaporite deposit§r refers to a type of sedimentary rock formation that originates from the §6precipitation and subsequent evaporation of saline water§r. These deposits are composed of minerals that are left behind when the water evaporates, §6leaving behind concentrated mineral salts§r. \n\n§6Evaporite deposits §rcan be found in §6deserts §rand §cmesas§r, and they have to be §6Pulverized and Sifted §rto process them into new ore dusts.\n\nThey can be a good source of §bsalt§r. There are 4 types of deposits: §6Carbonate, Sulfate, Halide, and Non-Marine§r.\n\n",
+          "desc:8": "§6Evaporite deposits §rcan be found in §6deserts, §brivers, §rand §cmesas§r, and they have to be §6Pulverized and Sifted §rto process them into new ore dusts.\n\nThey can be a good source of §bsalt§r. There are 4 types of deposits: §6Carbonate, Sulfate, Halide, and Non-Marine§r.\n\nExtra information:\n\nAn §6evaporite deposit§r refers to a type of sedimentary rock formation that originates from the §6precipitation and subsequent evaporation of saline water§r. These deposits are composed of minerals that are left behind when the water evaporates, §6leaving behind concentrated mineral salts§r. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29677,7 +29690,7 @@
             "id:8": "susy:resource_block"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Evaporite Deposits",
@@ -30255,20 +30268,17 @@
       }
     },
     "450:10": {
-      "preRequisiteTypes:7": [
-        1
-      ],
       "preRequisites:11": [
-        181
+        243
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Oil fractions like §6ethane §rand propane can be roasted with §7steam §rto create Steam Cracked fractions, which can be distilled down to §6ethylene§r.",
+          "desc:8": "With access to circuits and decent materials, you can explore §9OpenComputers§f and its addons.\n\nIf you have the know-how to use those mods, they can be §aextremely powerful tools§f to support your ever expanding base.\n\nScroll down to the §b\"Programming\"§f section in the questbook to learn more about OpenComputers.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 1,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -30279,17 +30289,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "plastic"
-            }
+            "id:8": "opencomputers:storage"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Better Polyethylene",
+          "name:8": "Computing",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -30302,7 +30308,12 @@
       },
       "questID:3": 450,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     },
     "451:10": {
       "preRequisites:11": [
@@ -30351,21 +30362,6 @@
               "Damage:2": 14666,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 5302,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_2"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31238,7 +31234,7 @@
     },
     "464:10": {
       "preRequisites:11": [
-        238
+        123
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -31313,19 +31309,29 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Glass §rcan be §ctempered §rin an Arc Furnace.",
+          "desc:8": "No Description",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "gregtech:transparent_casing"
+            "id:8": "immersiverailroading:item_radio_control_card",
+            "tag:10": {}
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Tempered Glass",
+          "name:8": "Railroad Engineering Station",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -31338,29 +31344,11 @@
       },
       "questID:3": 465,
       "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:transparent_casing"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
+      "tasks:9": {}
     },
     "466:10": {
       "preRequisites:11": [
-        465
+        81
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -31435,11 +31423,8 @@
       }
     },
     "467:10": {
-      "preRequisiteTypes:7": [
-        1
-      ],
       "preRequisites:11": [
-        243
+        242
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -31491,7 +31476,7 @@
     },
     "468:10": {
       "preRequisites:11": [
-        394
+        243
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -31859,12 +31844,12 @@
     },
     "473:10": {
       "preRequisites:11": [
-        104
+        661
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Smoke Stack §ris a small multi machine that can §cdelete § §rfluids like steam, carbon dioxide, sulfur dioxide, and other stuff that builds up. Check JEI to see what it can remove.\n\n§rThe Smoke Stack requires:\n\n- 1 LV Muffler Hatch\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 1 Smoke Stack",
+          "desc:8": "The §6Smoke Stack §ris a small multi machine that can §cdelete § §rgases like steam, carbon dioxide, sulfur dioxide, and other stuff that builds up. Check JEI to see what it can remove.\n\n§rThe Smoke Stack requires:\n\n- 1 LV Muffler Hatch\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 1 Smoke Stack",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31911,12 +31896,12 @@
     },
     "474:10": {
       "preRequisites:11": [
-        174
+        661
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Flare Stack §ris a small multi machine that can §cdelete § §roil byproducts. It\u0027s useful if you want to get rid of something annoying in an oil processing setup.\n\n§rThe Flare stack requires:\n- 1 LV Muffler Hatch\n- 1 ULV Energy Hatch\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 1 Flare Stack",
+          "desc:8": "The §6Flare Stack §ris a small multi machine that can §cburn § §rflammable liquids. It\u0027s useful if you want to get rid of something annoying in an oil processing setup. Check JEI to see what it can remove.\n\n§rThe Flare stack requires:\n- 1 LV Muffler Hatch\n- 1 ULV Energy Hatch\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 1 Flare Stack",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32360,7 +32345,7 @@
     },
     "481:10": {
       "preRequisites:11": [
-        486
+        398
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -32501,16 +32486,16 @@
     "483:10": {
       "preRequisiteTypes:7": [
         1,
-        1
+        0
       ],
       "preRequisites:11": [
-        243,
-        397
+        397,
+        652
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Chlorine §rand §7Ethylene §rcan be reacted in a CSTR to form §6Vinyl Chloride§r.",
+          "desc:8": "§3Chlorine §rand §7Ethylene §rcan be reacted in a CSTR to form §6Vinyl Chloride§r.\n\nAlternatively, §cHydrogen Chloride§f and §9Acetylene§f can be reacted with a Mercury Chloride catalyst for §6Vinyl Chloride.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32536,7 +32521,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Vinyl Chloride",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -32707,7 +32692,8 @@
     "486:10": {
       "preRequisites:11": [
         482,
-        484
+        484,
+        391
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -32900,7 +32886,7 @@
     },
     "489:10": {
       "preRequisites:11": [
-        488
+        205
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -32966,7 +32952,7 @@
     },
     "490:10": {
       "preRequisites:11": [
-        488
+        110
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33033,7 +33019,8 @@
     "491:10": {
       "preRequisites:11": [
         489,
-        490
+        490,
+        488
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33457,7 +33444,8 @@
     },
     "497:10": {
       "preRequisites:11": [
-        496
+        496,
+        494
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33527,7 +33515,7 @@
     },
     "498:10": {
       "preRequisites:11": [
-        394
+        653
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33579,7 +33567,7 @@
     },
     "499:10": {
       "preRequisites:11": [
-        498
+        188
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33649,7 +33637,7 @@
     },
     "500:10": {
       "preRequisites:11": [
-        498
+        9
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33719,7 +33707,7 @@
     },
     "501:10": {
       "preRequisites:11": [
-        498
+        378
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33789,7 +33777,11 @@
     },
     "502:10": {
       "preRequisites:11": [
-        506
+        506,
+        501,
+        500,
+        499,
+        503
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33859,7 +33851,6 @@
     },
     "503:10": {
       "preRequisites:11": [
-        498,
         504
       ],
       "properties:10": {
@@ -33926,7 +33917,7 @@
     },
     "504:10": {
       "preRequisites:11": [
-        243
+        188
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33996,7 +33987,7 @@
     },
     "505:10": {
       "preRequisites:11": [
-        243
+        599
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34066,11 +34057,9 @@
     },
     "506:10": {
       "preRequisites:11": [
-        499,
-        500,
-        501,
-        503,
-        509
+        498,
+        509,
+        394
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34140,7 +34129,7 @@
     },
     "507:10": {
       "preRequisites:11": [
-        243
+        81
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34340,7 +34329,7 @@
     },
     "510:10": {
       "preRequisites:11": [
-        494
+        243
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34696,8 +34685,7 @@
     },
     "515:10": {
       "preRequisites:11": [
-        378,
-        46
+        510
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34855,12 +34843,12 @@
     },
     "517:10": {
       "preRequisites:11": [
-        516
+        661
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §7Dumper §ris required to eliminate the Wastewater Sludge. \n\nThe Dumper requires:\n- 1 Dumper controller\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 9 Steel Frame Boxes\n- 14 Solid Steel Machine Casings",
+          "desc:8": "A §7Dumper §ris able to dump several waste liquids, such as §7Ash Slurry§f from mixing ash and water, and §9Wastewater Sludge.§f §fCheck JEI to see what it can remove.\n\nThe Dumper requires:\n- 1 Dumper controller\n- 1 Maintenance Hatch\n- 1 Input Hatch\n- 9 Steel Frame Boxes\n- 14 Solid Steel Machine Casings",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -43979,7 +43967,7 @@
     },
     "592:10": {
       "preRequisites:11": [
-        402
+        81
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -44463,7 +44451,7 @@
     },
     "598:10": {
       "preRequisites:11": [
-        243
+        9
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -44533,7 +44521,7 @@
     },
     "599:10": {
       "preRequisites:11": [
-        243
+        81
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -44841,7 +44829,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Mixing §7Salt§r, §6Sulfuric Acid§r and any dye will create chemical dye.",
+          "desc:8": "Mixing §7Salt§r, §6Sulfuric Acid§r and any dye will create chemical dye fluid. This can be solidified for chemical dye items, which can be cycled back in to create even more dye.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45162,7 +45150,7 @@
     },
     "610:10": {
       "preRequisites:11": [
-        22
+        222
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -45676,7 +45664,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Your first superconductor, §6Manganese Phosphide Wires§f, are made by using a §aChemical Bath§f to immerse base manganese phosphide wires in a very cold coolant. For now, §bLiquid Oxygen§f is the only available coolant that can activate manganese phosphide.\n\nThis process creates 1x wires. As with other wires, you can combine them up to 16x wires for more energy transfer.\n\nEven though these may not shock you and do not need to be insulated by rubber, §cthese superconductors are still susceptible to getting destroyed by overwhelming voltage.§f So, watch out.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45701,7 +45689,25 @@
       },
       "questID:3": 617,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 424,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_single"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "618:10": {
       "preRequisites:11": [
@@ -47254,7 +47260,7 @@
     },
     "640:10": {
       "preRequisites:11": [
-        413
+        654
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -47929,6 +47935,807 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "650:10": {
+      "preRequisites:11": [
+        213
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The chisel is only the first of many tools to assist you in building the perfect base for your needs. Scroll down to the §6\"Better Building\"§f section in the questbook to explore more building tools to consider, from §cdefensive blocks§f to §cbuilding gadgets.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "betterbuilderswands:wanddiamond"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Better Building",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 650,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "651:10": {
+      "preRequisites:11": [
+        510
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Haber Process§f is used to create §9ammonia§f more effectively.\n\nYou react air or nitrogen with hydrogen in a reaction furnace for ammonia-rich gas, which is washed with water to extract a solution of ammonia, which can be distilled to release the ammonia. §6Look in JEI for more details.§f\n\nThe leftover ammonia reaction gases from the washing can be fed into another reaction furnace for even more ammonia.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ammonia"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Even More Ammonia",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 651,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "652:10": {
+      "preRequisites:11": [
+        188
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§9Acetylene§f is one option you could use for creating §bvinyl chloride.§f\n\nAcetylene is made by reacting Calcium Carbide with Water, and Calcium Carbide is made by smelting Quicklime with Carbon in an EBF.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "acetylene"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Acetylene",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 652,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "acetylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "653:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        458
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6ULPIC Wafers (Ultra Low Power Integrated Circuit)§f are made the same way as Integrated Circuit Wafers, with the only difference being the §bphotolithography mask§f used.\n\nThese, along with more advanced power integrated circuits, will be needed in§a MV Energy Hatches§f and above.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 602,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "ULPIC",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 653,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 602,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "654:10": {
+      "preRequisites:11": [
+        398
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 3,
+            "OreDict:8": "",
+            "id:8": "gregtech:warning_sign"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Gaspunk",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 654,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "655:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
+      "preRequisites:11": [
+        413,
+        479
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§cNerve Agents,§f when bottled into a gas grenade, will be some of the deadliest chemical weapons you can use. These include:\n\n- §9Sarin§f\n- §bVX§f\n- §aNovichok A230§f\n\nThese are unlocked at §6HV§f/§5EV§f, and their production methods can be viewed in JEI. §cCaution is advised.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "minecraft:skull"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nerve Agents",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 655,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "656:10": {
+      "preRequisites:11": [
+        441,
+        18
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Salt§f will be used in several industrial processes later in the game, as well as food. It may be a good idea to stock up on this as you go on.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 312,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Not as good as MSG",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 656,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 312,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "657:10": {
+      "preRequisites:11": [
+        388
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§aSuperconductors§f are basically fancier wires. §cThey don\u0027t need to be covered with rubber,§f and more importantly, §cthey don\u0027t have electrical loss.§f\n\nYou can extend these as far as possible and you will not need to worry over whether the electricity in them stays intact.\n\n§aSuperconductors§f are great additions to your ever-complicating base. Scroll down to the §b\"Cryo \u0026 Superconductors\"§f section of the questbook §6for more information on how to make them.§f",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 424,
+            "OreDict:8": "",
+            "id:8": "gregtech:wire_single"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Superconductors",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 657,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "658:10": {
+      "preRequisites:11": [
+        104
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Moving forward, §6chemicals§f will become more and more important in technological progress. Due to the complexity of some of the chemical manufacturing processes, they may not be fully covered in the progression tabs alone.\n\nHowever, luckily for you, we have a §c\"Chemistry\"§f category in the questbook, which you can find by scrolling down. That section will go more into detail on the chemistry lines if you are confused.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 85,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "A Chemist\u0027s Dream",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 658,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "659:10": {
+      "preRequisites:11": [
+        181
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "If you have §7Oil§f and don\u0027t feel like using §6Ethanol§f to create §cEthylene,§f then check this out.\n\nChemicals like §6ethane §rand §6propane§f are obtained from distilling desulfurized oil fractions.\n\nThese chemicals can be roasted with §7steam §rto create Steam Cracked fractions, which can be distilled down to §6ethylene§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "propane"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Steam Cracking Beta V0.1",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 659,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "660:10": {
+      "preRequisites:11": [
+        604
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Getting dyes from natural sources can be pretty annoying. Cactus green may be virtually nonexistant for some of you. Luckily, you can make your own dyes with the magic of chemistry.\n\nBrown\n- Sienna\n\nRed\n- Burned Sienna\n- Cinnabar\n\nYellow\n- Lead Chromate\n\nGreen\n- Malachite\n- Scheele\u0027s Green\n\nBlue\n- Cobalt Aluminate\n\nWhite\n- Lead Nitrate\n\nBlack\n- Carbon",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 285,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Artificial Dyes",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 660,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "661:10": {
+      "preRequisites:11": [
+        188
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Industrialization is not exactly a clean process. Along the way, you\u0027ll generate huge amounts of §ewaste gases, wastewater, ash, and other unpleasant fluids.§f\n\nLuckily however, there are several methods to deal with those things, such as the §bsmoke stack and dumper.§f The quests to the right will go more into detail.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sperrylite_waste"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Waste Management",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 661,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "662:10": {
+      "preRequisites:11": [
+        390,
+        663
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 425,
+            "OreDict:8": "",
+            "id:8": "gregtech:wire_single"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "MV Superconductor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 662,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 425,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_single"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "663:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 425,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "MV Superconductor Material",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 663,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 425,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "664:10": {
+      "preRequisites:11": [
+        125
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Edibles do not just give saturation. They can also give you §6status effects§f to assist you in sticky situations, or just general gaming.\n\nScroll down to the \"Food Options\" category in the questbook to explore more... food options.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "minecraft:apple"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Food Options",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 664,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -48111,15 +48918,15 @@
           "id:3": 22,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 192,
-          "y:3": 252
+          "x:3": 84,
+          "y:3": 456
         },
         "22:10": {
           "id:3": 25,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 192,
-          "y:3": 348
+          "x:3": 84,
+          "y:3": 552
         },
         "23:10": {
           "id:3": 28,
@@ -48139,8 +48946,8 @@
           "id:3": 30,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 192,
-          "y:3": 420
+          "x:3": 84,
+          "y:3": 624
         },
         "26:10": {
           "id:3": 59,
@@ -48153,7 +48960,7 @@
           "id:3": 74,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
+          "x:3": 96,
           "y:3": 264
         },
         "28:10": {
@@ -48181,7 +48988,7 @@
           "id:3": 89,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -192,
+          "x:3": -204,
           "y:3": 552
         },
         "32:10": {
@@ -48203,7 +49010,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 42,
-          "y:3": 216
+          "y:3": 258
         },
         "35:10": {
           "id:3": 96,
@@ -48217,42 +49024,42 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": 264
+          "y:3": 312
         },
         "37:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 264
+          "x:3": 96,
+          "y:3": 360
         },
         "38:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 216
+          "y:3": 312
         },
         "39:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
-          "y:3": 216
+          "y:3": 312
         },
         "40:10": {
           "id:3": 125,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": 216
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -198,
+          "y:3": 306
         },
         "41:10": {
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
-          "y:3": 312
+          "x:3": 96,
+          "y:3": 516
         },
         "42:10": {
           "id:3": 135,
@@ -48276,18 +49083,53 @@
           "y:3": 618
         },
         "45:10": {
+          "id:3": 213,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 156,
+          "y:3": 564
+        },
+        "46:10": {
           "id:3": 366,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
           "y:3": 618
         },
-        "46:10": {
+        "47:10": {
           "id:3": 437,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
-          "y:3": 264
+          "x:3": 156,
+          "y:3": 468
+        },
+        "48:10": {
+          "id:3": 441,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 672
+        },
+        "49:10": {
+          "id:3": 650,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 204,
+          "y:3": 552
+        },
+        "50:10": {
+          "id:3": 656,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -18,
+          "y:3": 666
+        },
+        "51:10": {
+          "id:3": 664,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -204,
+          "y:3": 354
         }
       }
     },
@@ -48857,8 +49699,8 @@
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": 144
+          "x:3": 54,
+          "y:3": 108
         },
         "14:10": {
           "id:3": 112,
@@ -48872,7 +49714,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
-          "y:3": 180
+          "y:3": 138
         },
         "16:10": {
           "id:3": 114,
@@ -49033,7 +49875,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -312,
-          "y:3": 300
+          "y:3": 306
         },
         "39:10": {
           "id:3": 175,
@@ -49221,7 +50063,7 @@
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
+          "x:3": 90,
           "y:3": 108
         },
         "66:10": {
@@ -49243,7 +50085,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
-          "y:3": 216
+          "y:3": 174
         },
         "69:10": {
           "id:3": 224,
@@ -49263,22 +50105,22 @@
           "id:3": 239,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -30,
-          "y:3": 546
+          "x:3": -12,
+          "y:3": 558
         },
         "72:10": {
           "id:3": 240,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 114,
-          "y:3": 546
+          "y:3": 558
         },
         "73:10": {
           "id:3": 241,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
-          "y:3": 546
+          "y:3": 558
         },
         "74:10": {
           "id:3": 242,
@@ -49303,220 +50145,262 @@
         },
         "77:10": {
           "id:3": 369,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -210,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -216,
           "y:3": 504
         },
         "78:10": {
-          "id:3": 370,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -150,
-          "y:3": 510
-        },
-        "79:10": {
           "id:3": 372,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": 427
         },
-        "80:10": {
-          "id:3": 373,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -336,
-          "y:3": 492
-        },
-        "81:10": {
-          "id:3": 374,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -336,
-          "y:3": 552
-        },
-        "82:10": {
+        "79:10": {
           "id:3": 377,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 228,
-          "y:3": 366
+          "x:3": 132,
+          "y:3": -102
         },
-        "83:10": {
+        "80:10": {
           "id:3": 378,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 162,
-          "y:3": 306
+          "x:3": -12,
+          "y:3": -102
         },
-        "84:10": {
+        "81:10": {
           "id:3": 379,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 60,
           "y:3": -102
         },
-        "85:10": {
+        "82:10": {
           "id:3": 380,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 172,
           "y:3": 52
         },
-        "86:10": {
+        "83:10": {
           "id:3": 381,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
           "y:3": 324
         },
-        "87:10": {
+        "84:10": {
           "id:3": 383,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 228,
-          "y:3": 60
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": 229,
+          "y:3": 52
         },
-        "88:10": {
+        "85:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": -24
         },
-        "89:10": {
+        "86:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": -66
         },
-        "90:10": {
+        "87:10": {
           "id:3": 386,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": -24
         },
-        "91:10": {
+        "88:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 12
         },
-        "92:10": {
+        "89:10": {
+          "id:3": 388,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": 204
+        },
+        "90:10": {
           "id:3": 418,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": -40
+          "x:3": -78,
+          "y:3": -42
         },
-        "93:10": {
+        "91:10": {
           "id:3": 419,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
           "y:3": -6
         },
-        "94:10": {
+        "92:10": {
           "id:3": 420,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 66,
           "y:3": -6
         },
-        "95:10": {
+        "93:10": {
           "id:3": 421,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 28,
-          "y:3": -40
+          "x:3": -78,
+          "y:3": 0
         },
-        "96:10": {
+        "94:10": {
           "id:3": 438,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -210,
-          "y:3": 552
+          "x:3": -156,
+          "y:3": 510
         },
-        "97:10": {
+        "95:10": {
           "id:3": 439,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": 330
+          "x:3": 198,
+          "y:3": -90
         },
-        "98:10": {
+        "96:10": {
           "id:3": 440,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": -42
         },
-        "99:10": {
+        "97:10": {
           "id:3": 441,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 126,
           "y:3": -42
         },
-        "100:10": {
+        "98:10": {
           "id:3": 446,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 516
         },
-        "101:10": {
+        "99:10": {
           "id:3": 447,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 114,
           "y:3": 516
         },
-        "102:10": {
+        "100:10": {
           "id:3": 472,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -222,
           "y:3": 270
         },
+        "101:10": {
+          "id:3": 473,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 276,
+          "y:3": 522
+        },
+        "102:10": {
+          "id:3": 474,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 276,
+          "y:3": 426
+        },
         "103:10": {
+          "id:3": 517,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 276,
+          "y:3": 474
+        },
+        "104:10": {
           "id:3": 602,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 324
         },
-        "104:10": {
+        "105:10": {
           "id:3": 603,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 6
         },
-        "105:10": {
+        "106:10": {
           "id:3": 604,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 252
         },
-        "106:10": {
+        "107:10": {
+          "id:3": 610,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -150,
+          "y:3": 468
+        },
+        "108:10": {
           "id:3": 631,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 48
         },
-        "107:10": {
+        "109:10": {
           "id:3": 638,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -288,
-          "y:3": 444
+          "x:3": -336,
+          "y:3": 486
+        },
+        "110:10": {
+          "id:3": 657,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 168,
+          "y:3": 192
+        },
+        "111:10": {
+          "id:3": 658,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -84,
+          "y:3": 54
+        },
+        "112:10": {
+          "id:3": 660,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": 252
+        },
+        "113:10": {
+          "id:3": 661,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 222,
+          "y:3": 462
         }
       }
     },
@@ -49552,680 +50436,764 @@
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": -36
+          "x:3": 144,
+          "y:3": 12
         },
         "1:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": -36
+          "x:3": 96,
+          "y:3": 12
         },
         "2:10": {
-          "id:3": 207,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 204,
-          "y:3": -24
-        },
-        "3:10": {
           "id:3": 238,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": -24
+          "x:3": 234,
+          "y:3": -114
         },
-        "4:10": {
+        "3:10": {
           "id:3": 243,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 0,
+          "x:3": 12,
           "y:3": 0
+        },
+        "4:10": {
+          "id:3": 370,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 210,
+          "y:3": -282
         },
         "5:10": {
           "id:3": 371,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 228
+          "x:3": 114,
+          "y:3": 234
         },
         "6:10": {
+          "id:3": 373,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 132,
+          "y:3": -288
+        },
+        "7:10": {
+          "id:3": 374,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 210,
+          "y:3": -222
+        },
+        "8:10": {
           "id:3": 391,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -72,
-          "y:3": 0
+          "x:3": 498,
+          "y:3": 60
         },
-        "7:10": {
+        "9:10": {
           "id:3": 394,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 0,
-          "y:3": -72
+          "x:3": 132,
+          "y:3": -228
         },
-        "8:10": {
+        "10:10": {
           "id:3": 395,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": -138
+          "x:3": 456,
+          "y:3": 210
         },
-        "9:10": {
+        "11:10": {
           "id:3": 396,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": -90
+          "x:3": 456,
+          "y:3": 168
         },
-        "10:10": {
+        "12:10": {
           "id:3": 397,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": -42
+          "x:3": 456,
+          "y:3": 126
         },
-        "11:10": {
+        "13:10": {
           "id:3": 398,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -150,
-          "y:3": 6
-        },
-        "12:10": {
-          "id:3": 399,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 72
-        },
-        "13:10": {
-          "id:3": 400,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -42,
-          "y:3": 72
+          "x:3": 450,
+          "y:3": 66
         },
         "14:10": {
-          "id:3": 401,
+          "id:3": 399,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 72
         },
         "15:10": {
-          "id:3": 402,
+          "id:3": 400,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -30,
+          "y:3": 72
+        },
+        "16:10": {
+          "id:3": 401,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 72
         },
-        "16:10": {
+        "17:10": {
+          "id:3": 402,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
+          "y:3": 72
+        },
+        "18:10": {
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 222,
+          "x:3": 186,
           "y:3": 72
         },
-        "17:10": {
+        "19:10": {
           "id:3": 405,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": 180,
-          "y:3": 66
-        },
-        "18:10": {
-          "id:3": 406,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 162,
-          "y:3": -210
+          "x:3": 186,
+          "y:3": 42
         },
-        "19:10": {
+        "20:10": {
+          "id:3": 406,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -132,
+          "y:3": 66
+        },
+        "21:10": {
           "id:3": 412,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": 54
+          "x:3": 456,
+          "y:3": -24
         },
-        "20:10": {
+        "22:10": {
           "id:3": 413,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -210,
-          "y:3": 54
+          "x:3": 456,
+          "y:3": -60
         },
-        "21:10": {
-          "id:3": 443,
+        "23:10": {
+          "id:3": 429,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 354,
-          "y:3": -12
+          "x:3": 60,
+          "y:3": -36
         },
-        "22:10": {
-          "id:3": 451,
+        "24:10": {
+          "id:3": 433,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 18,
+          "y:3": -42
+        },
+        "25:10": {
+          "id:3": 434,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 24,
+          "y:3": -78
+        },
+        "26:10": {
+          "id:3": 443,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 12
         },
-        "23:10": {
+        "27:10": {
+          "id:3": 450,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 18,
+          "y:3": 66
+        },
+        "28:10": {
+          "id:3": 451,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 234,
+          "y:3": -36
+        },
+        "29:10": {
           "id:3": 452,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
+          "x:3": 234,
           "y:3": 72
         },
-        "24:10": {
+        "30:10": {
           "id:3": 453,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
-          "y:3": 24
+          "x:3": 234,
+          "y:3": 42
         },
-        "25:10": {
+        "31:10": {
           "id:3": 454,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 354,
-          "y:3": 24
+          "x:3": 276,
+          "y:3": 42
         },
-        "26:10": {
+        "32:10": {
           "id:3": 455,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
-          "y:3": -12
+          "x:3": 234,
+          "y:3": 12
         },
-        "27:10": {
+        "33:10": {
           "id:3": 456,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
-          "y:3": 120
+          "x:3": 276,
+          "y:3": 72
         },
-        "28:10": {
+        "34:10": {
           "id:3": 457,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
+          "x:3": 276,
           "y:3": 120
         },
-        "29:10": {
+        "35:10": {
           "id:3": 458,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 216,
           "y:3": 114
         },
-        "30:10": {
+        "36:10": {
           "id:3": 459,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 180,
+          "x:3": 186,
           "y:3": 120
         },
-        "31:10": {
+        "37:10": {
           "id:3": 460,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 120
         },
-        "32:10": {
+        "38:10": {
           "id:3": 461,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 120
         },
-        "33:10": {
+        "39:10": {
           "id:3": 462,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 138,
           "y:3": 114
         },
-        "34:10": {
+        "40:10": {
           "id:3": 463,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
-          "y:3": 12
+          "x:3": 186,
+          "y:3": -78
         },
-        "35:10": {
+        "41:10": {
           "id:3": 464,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": 12
+          "x:3": 234,
+          "y:3": -78
         },
-        "36:10": {
+        "42:10": {
           "id:3": 465,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -36,
+          "y:3": -42
+        },
+        "43:10": {
+          "id:3": 466,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 78,
-          "y:3": 12
+          "x:3": 186,
+          "y:3": -36
         },
-        "37:10": {
-          "id:3": 466,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": 132,
-          "y:3": 0
-        },
-        "38:10": {
+        "44:10": {
           "id:3": 467,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 276,
           "y:3": 180
         },
-        "39:10": {
+        "45:10": {
           "id:3": 468,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": -66
+          "x:3": -30,
+          "y:3": 12
         },
-        "40:10": {
+        "46:10": {
           "id:3": 469,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": -114
+          "x:3": -78,
+          "y:3": 42
         },
-        "41:10": {
+        "47:10": {
           "id:3": 470,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": -66
+          "x:3": -78,
+          "y:3": -18
         },
-        "42:10": {
+        "48:10": {
           "id:3": 471,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": -114
+          "x:3": -78,
+          "y:3": 12
         },
-        "43:10": {
+        "49:10": {
           "id:3": 475,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 234
         },
-        "44:10": {
+        "50:10": {
           "id:3": 476,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
+          "x:3": 114,
           "y:3": 186
         },
-        "45:10": {
+        "51:10": {
           "id:3": 477,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 66,
+          "x:3": 72,
           "y:3": 186
         },
-        "46:10": {
+        "52:10": {
           "id:3": 478,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 216,
           "y:3": 180
         },
-        "47:10": {
+        "53:10": {
           "id:3": 479,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 216,
+          "x:3": -42,
           "y:3": -174
         },
-        "48:10": {
+        "54:10": {
           "id:3": 480,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 216,
           "y:3": 228
         },
-        "49:10": {
+        "55:10": {
           "id:3": 481,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 420,
+          "x:3": 414,
           "y:3": 72
         },
-        "50:10": {
+        "56:10": {
           "id:3": 482,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 444,
-          "y:3": -42
+          "x:3": 612,
+          "y:3": 126
         },
-        "51:10": {
+        "57:10": {
           "id:3": 483,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 396,
-          "y:3": -96
+          "x:3": 564,
+          "y:3": 168
         },
-        "52:10": {
+        "58:10": {
           "id:3": 484,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 396,
-          "y:3": -42
+          "x:3": 564,
+          "y:3": 126
         },
-        "53:10": {
+        "59:10": {
           "id:3": 485,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 444,
-          "y:3": -96
+          "x:3": 612,
+          "y:3": 168
         },
-        "54:10": {
+        "60:10": {
           "id:3": 486,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 414,
-          "y:3": 18
+          "x:3": 558,
+          "y:3": 66
         },
-        "55:10": {
+        "61:10": {
           "id:3": 487,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 474,
-          "y:3": 24
+          "x:3": 612,
+          "y:3": 72
         },
-        "56:10": {
+        "62:10": {
           "id:3": 488,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 366,
           "y:3": 72
         },
-        "57:10": {
+        "63:10": {
           "id:3": 489,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 348,
-          "y:3": 162
+          "x:3": 414,
+          "y:3": 258
         },
-        "58:10": {
+        "64:10": {
           "id:3": 490,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 384,
-          "y:3": 162
+          "x:3": 414,
+          "y:3": 210
         },
-        "59:10": {
+        "65:10": {
           "id:3": 491,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 360,
           "y:3": 228
         },
-        "60:10": {
+        "66:10": {
           "id:3": 492,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 270,
           "y:3": 234
         },
-        "61:10": {
+        "67:10": {
           "id:3": 493,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 318,
           "y:3": 234
         },
-        "62:10": {
+        "68:10": {
           "id:3": 494,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 282,
           "y:3": 294
         },
-        "63:10": {
+        "69:10": {
           "id:3": 495,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 348,
-          "y:3": 306
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 354,
+          "y:3": 294
         },
-        "64:10": {
+        "70:10": {
           "id:3": 496,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
+          "x:3": 162,
           "y:3": 306
         },
-        "65:10": {
+        "71:10": {
           "id:3": 497,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -6,
+          "x:3": 210,
           "y:3": 294
         },
-        "66:10": {
+        "72:10": {
           "id:3": 498,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 6,
+          "x:3": 186,
           "y:3": -168
         },
-        "67:10": {
+        "73:10": {
           "id:3": 499,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
+          "x:3": 84,
           "y:3": -216
         },
-        "68:10": {
+        "74:10": {
           "id:3": 500,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": -186
+          "x:3": 42,
+          "y:3": -216
         },
-        "69:10": {
+        "75:10": {
           "id:3": 501,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": -144
+          "x:3": 0,
+          "y:3": -216
         },
-        "70:10": {
+        "76:10": {
           "id:3": 502,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 150,
+          "x:3": 30,
           "y:3": -174
         },
-        "71:10": {
+        "77:10": {
           "id:3": 503,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": -102
+          "x:3": 42,
+          "y:3": -258
         },
-        "72:10": {
+        "78:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": -60
+          "x:3": 42,
+          "y:3": -300
         },
-        "73:10": {
+        "79:10": {
           "id:3": 505,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -24,
-          "y:3": 108
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": -78
         },
-        "74:10": {
+        "80:10": {
           "id:3": 506,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 96,
+          "x:3": 138,
           "y:3": -168
         },
-        "75:10": {
+        "81:10": {
           "id:3": 507,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 96,
+          "x:3": 138,
           "y:3": -42
         },
-        "76:10": {
+        "82:10": {
           "id:3": 508,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
+          "x:3": 144,
           "y:3": -78
         },
-        "77:10": {
+        "83:10": {
           "id:3": 509,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
+          "x:3": 144,
           "y:3": -114
         },
-        "78:10": {
+        "84:10": {
           "id:3": 510,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 234,
-          "y:3": 300
+          "x:3": 18,
+          "y:3": 228
         },
-        "79:10": {
+        "85:10": {
           "id:3": 511,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
+          "x:3": 24,
           "y:3": 306
         },
-        "80:10": {
+        "86:10": {
           "id:3": 512,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 150,
+          "x:3": 66,
           "y:3": 306
         },
-        "81:10": {
+        "87:10": {
           "id:3": 513,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
+          "x:3": 114,
           "y:3": 282
         },
-        "82:10": {
+        "88:10": {
           "id:3": 514,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
+          "x:3": 114,
           "y:3": 330
         },
-        "83:10": {
+        "89:10": {
           "id:3": 515,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": -42
+          "x:3": -30,
+          "y:3": 234
         },
-        "84:10": {
+        "90:10": {
           "id:3": 592,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
-          "y:3": 72
+          "y:3": 42
         },
-        "85:10": {
+        "91:10": {
           "id:3": 593,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
+          "x:3": -78,
           "y:3": 72
         },
-        "86:10": {
+        "92:10": {
           "id:3": 594,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -114,
+          "x:3": -102,
           "y:3": 114
         },
-        "87:10": {
+        "93:10": {
           "id:3": 595,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -66,
+          "x:3": -54,
           "y:3": 114
         },
-        "88:10": {
+        "94:10": {
           "id:3": 596,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -114,
+          "x:3": -102,
           "y:3": 156
         },
-        "89:10": {
+        "95:10": {
           "id:3": 597,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -66,
+          "x:3": -54,
           "y:3": 156
         },
-        "90:10": {
+        "96:10": {
           "id:3": 598,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 12,
-          "y:3": 186
+          "x:3": 72,
+          "y:3": 235
         },
-        "91:10": {
+        "97:10": {
           "id:3": 599,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 30,
-          "y:3": 108
+          "x:3": 90,
+          "y:3": -42
         },
-        "92:10": {
+        "98:10": {
           "id:3": 611,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
+          "x:3": -78,
           "y:3": 192
         },
-        "93:10": {
+        "99:10": {
           "id:3": 612,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -42,
+          "x:3": -30,
           "y:3": 192
         },
-        "94:10": {
+        "100:10": {
           "id:3": 613,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
+          "x:3": -126,
           "y:3": 192
         },
-        "95:10": {
+        "101:10": {
           "id:3": 639,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -90,
-          "y:3": -162
+          "x:3": -132,
+          "y:3": 6
         },
-        "96:10": {
+        "102:10": {
           "id:3": 640,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -210,
-          "y:3": 108
+          "x:3": 414,
+          "y:3": 24
+        },
+        "103:10": {
+          "id:3": 651,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -30,
+          "y:3": 276
+        },
+        "104:10": {
+          "id:3": 652,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 564,
+          "y:3": 210
+        },
+        "105:10": {
+          "id:3": 653,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 234,
+          "y:3": -162
+        },
+        "106:10": {
+          "id:3": 654,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 450,
+          "y:3": 18
+        },
+        "107:10": {
+          "id:3": 655,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 456,
+          "y:3": -96
+        },
+        "108:10": {
+          "id:3": 659,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 414,
+          "y:3": 126
         }
       }
     },
@@ -50798,15 +51766,15 @@
           "id:3": 38,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": -240
+          "x:3": 120,
+          "y:3": -287
         },
         "1:10": {
           "id:3": 46,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -24,
-          "y:3": -240
+          "x:3": 12,
+          "y:3": -288
         },
         "2:10": {
           "id:3": 110,
@@ -50861,43 +51829,43 @@
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 12,
-          "y:3": 48
+          "x:3": -204,
+          "y:3": -192
         },
         "10:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 48
+          "x:3": -156,
+          "y:3": -240
         },
         "11:10": {
           "id:3": 175,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 48
+          "x:3": -156,
+          "y:3": -192
         },
         "12:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 48
+          "x:3": -108,
+          "y:3": -240
         },
         "13:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
-          "y:3": 48
+          "x:3": -108,
+          "y:3": -192
         },
         "14:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 252,
-          "y:3": 48
+          "x:3": -60,
+          "y:3": -240
         },
         "15:10": {
           "id:3": 183,
@@ -50980,7 +51948,7 @@
           "id:3": 232,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
+          "x:3": 12,
           "y:3": -240
         },
         "27:10": {
@@ -51022,7 +51990,7 @@
           "id:3": 382,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
+          "x:3": 12,
           "y:3": -192
         },
         "33:10": {
@@ -51159,116 +52127,116 @@
           "y:3": 90
         },
         "52:10": {
-          "id:3": 450,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": -192
-        },
-        "53:10": {
           "id:3": 453,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": -282
         },
-        "54:10": {
+        "53:10": {
           "id:3": 454,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": -282
         },
-        "55:10": {
+        "54:10": {
           "id:3": 455,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -282
         },
-        "56:10": {
+        "55:10": {
           "id:3": 473,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 288,
           "y:3": -72
         },
-        "57:10": {
+        "56:10": {
           "id:3": 474,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 342,
           "y:3": -72
         },
-        "58:10": {
+        "57:10": {
           "id:3": 482,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": -96
+          "x:3": -234,
+          "y:3": -84
         },
-        "59:10": {
+        "58:10": {
           "id:3": 483,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
+          "x:3": -186,
           "y:3": -144
         },
-        "60:10": {
+        "59:10": {
           "id:3": 484,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": -96
+          "x:3": -186,
+          "y:3": -84
         },
-        "61:10": {
+        "60:10": {
           "id:3": 485,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -234,
           "y:3": -144
         },
-        "62:10": {
+        "61:10": {
           "id:3": 486,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -168,
-          "y:3": -54
+          "x:3": -138,
+          "y:3": -84
         },
-        "63:10": {
+        "62:10": {
           "id:3": 515,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -24,
-          "y:3": -277
+          "x:3": 72,
+          "y:3": -288
         },
-        "64:10": {
+        "63:10": {
           "id:3": 516,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 102,
           "y:3": 126
         },
-        "65:10": {
+        "64:10": {
           "id:3": 517,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 150,
           "y:3": 126
         },
-        "66:10": {
+        "65:10": {
           "id:3": 519,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 132
         },
-        "67:10": {
+        "66:10": {
           "id:3": 520,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 132
+        },
+        "67:10": {
+          "id:3": 659,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": -192
         }
       }
     },
@@ -51461,15 +52429,15 @@
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": -60
+          "x:3": -246,
+          "y:3": 54
         },
         "14:10": {
           "id:3": 222,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": -60
+          "x:3": -198,
+          "y:3": 54
         },
         "15:10": {
           "id:3": 227,
@@ -51483,7 +52451,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
-          "y:3": -96
+          "y:3": -60
         },
         "17:10": {
           "id:3": 230,
@@ -51497,7 +52465,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
-          "y:3": -96
+          "y:3": -60
         },
         "19:10": {
           "id:3": 245,
@@ -51525,14 +52493,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
-          "y:3": -132
+          "y:3": -96
         },
         "23:10": {
           "id:3": 562,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
-          "y:3": -132
+          "y:3": -96
         },
         "24:10": {
           "id:3": 586,
@@ -51601,7 +52569,7 @@
           "id:3": 610,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -216,
+          "x:3": -210,
           "y:3": -12
         },
         "34:10": {
@@ -51657,7 +52625,7 @@
           "id:3": 389,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
+          "x:3": -66,
           "y:3": -12
         },
         "4:10": {
@@ -51707,7 +52675,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
-          "y:3": -6
+          "y:3": -12
         },
         "11:10": {
           "id:3": 617,
@@ -51721,6 +52689,20 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
+          "y:3": -90
+        },
+        "13:10": {
+          "id:3": 662,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 228,
+          "y:3": 24
+        },
+        "14:10": {
+          "id:3": 663,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 240,
           "y:3": -90
         }
       }
@@ -52881,7 +53863,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 282,
-          "y:3": -12
+          "y:3": 168
         },
         "15:10": {
           "id:3": 144,
@@ -52943,8 +53925,8 @@
           "id:3": 167,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 426,
-          "y:3": 36
+          "x:3": 282,
+          "y:3": -12
         },
         "24:10": {
           "id:3": 186,

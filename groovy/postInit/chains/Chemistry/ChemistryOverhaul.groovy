@@ -2361,14 +2361,17 @@ DRYER.recipeBuilder()
 
 //acetylene
 
-EBF.recipeBuilder()
-.inputs(ore('dustQuicklime') * 2)
-.inputs(ore('dustCarbon') * 3)
-.outputs(ore('dustCalciumCarbide').first() * 3)
-.fluidOutputs(fluid('carbon_monoxide') * 1000)
-.EUt(120)
-.duration(600)
-.buildAndRegister()
+for (carbon in COAL_SOURCES) {
+    EBF.recipeBuilder()
+            .inputs(ore('dustQuicklime') * 2)
+            .inputs(ore(carbon) * 3)
+            .outputs(ore('dustCalciumCarbide').first() * 3)
+            .fluidOutputs(fluid('carbon_monoxide') * 1000)
+            .EUt(120)
+            .duration(600)
+            .buildAndRegister()
+}
+
 
 BR.recipeBuilder()
 .inputs(ore('dustCalciumCarbide') * 3)

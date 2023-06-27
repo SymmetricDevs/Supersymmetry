@@ -1276,6 +1276,13 @@ material.light_oily_brine=Light Oily Brine
 material.heavy_oily_brine=Heavy Oily Brine
 material.calcium_sulfite=Calcium Sulfite
 material.sodium_amide=Sodium Amide
+material.zeolite_13=Zeolite 13X
+material.zeolite_13_solution=Zeolite 13X Solution
+material.sienna=Sienna
+material.burnt_sienna=Burnt Sienna
+material.lead_chromate=Lead Chromate
+material.cobalt_aluminate=Cobalt Aluminate
+material.lead_nitrate=Lead Nitrate
 
 # Isotopes
 
@@ -1609,6 +1616,10 @@ metaitem.ag_fifty_w_x_eight_beads.name=AG 50W-X8 Resin Beads
 metaitem.amberlyst_ch_beads.name=Amberlyst CH-43 Beads
 
 metaitem.fused_quartz.name=Fused Quartz Plate
+metaitem.crucible.quartz.name=Quartz Crucible
+
+metaitem.seed.cotton.name=Cotton Seed
+metaitem.crop.cotton.name=Cotton
 
 # Multiblocked
 

@@ -307,6 +307,8 @@ class SuSyMaterials {
         public static Material SodaAshRoastedVanadinite;
         public static Material LeachedSaltRoastedVanadinite;
         public static Material LeachedSodaAshRoastedVanadinite;
+        public static Material Sienna;
+        public static Material BurntSienna;
 
         // Petrochem Materials
 
@@ -733,6 +735,9 @@ class SuSyMaterials {
         public static Material SodiumVanadate;
         public static Material AmmoniumMetavanadate;
         public static Material SodiumAmide;
+        public static Material LeadChromate;
+        public static Material CobaltAluminate;
+        public static Material LeadNitrate;
 
         // Second Degree Materials
 

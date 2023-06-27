@@ -302,5 +302,10 @@ eventManager.listen {
         customMetaItems.addItem(8011, "wafer.silicon_nitride");
         customMetaItems.addItem(8012, "wafer.nickel");
 
+        //Crops 9000-10000
+
+        customMetaItems.addItem(9000, "seed.cotton");
+        customMetaItems.addItem(9001, "crop.cotton");
+
         log.infoMC("Finished adding metaitems")
 }

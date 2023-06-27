@@ -784,11 +784,6 @@ public class UnknownCompositionMaterials {
                 .color(0xc47631)
                 .build()
 
-        ImpureDiethylEther = new Material.Builder(4147, "impure_diethyl_ether")
-                .fluid()
-                .color(0x5e9cff)
-                .build()
-
         AluminiumAlkoxideSolution = new Material.Builder(4148, 'aluminium_alkoxide_solution')
                 .fluid()
                 .color(0x657780)
@@ -1000,6 +995,16 @@ public class UnknownCompositionMaterials {
         LeachedSodaAshRoastedVanadinite = new Material.Builder(4188, "leached_soda_ash_roasted_vanadinite")
                 .dust()
                 .color(0x4d463f)
+                .build();
+
+        Sienna = new Material.Builder(4189, "sienna")
+                .dust()
+                .color(0x4a3724)
+                .build();
+
+        BurntSienna = new Material.Builder(4190, "burnt_sienna")
+                .dust()
+                .color(0x662e2e)
                 .build();
     }
 }

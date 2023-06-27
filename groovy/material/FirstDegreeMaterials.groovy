@@ -144,7 +144,7 @@ public class FirstDegreeMaterials{
         CalciumHydroxide = new Material.Builder(8100, 'calcium_hydroxide')
                 .dust()
                 .components(Calcium, 1, Oxygen, 2, Hydrogen, 2)
-                .colorAverage()
+                .color(0xcfcabc)
                 .build()
                 .setFormula("Ca(OH)2", true);
 
@@ -373,7 +373,7 @@ public class FirstDegreeMaterials{
         CalciumCarbide = new Material.Builder(8139, 'calcium_carbide')
                 .dust()
                 .components(Calcium, 1, Carbon, 2)
-                .colorAverage()
+                .color(0x87847c)
                 .build();
 
         IronIIChloride = new Material.Builder(8140, 'iron_ii_chloride')
@@ -2444,5 +2444,28 @@ public class FirstDegreeMaterials{
                 .components(Sodium, 1, Nitrogen, 1, Hydrogen, 2)
                 .colorAverage()
                 .build();
+
+        LeadChromate = new Material.Builder(8462, 'lead_chromate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Lead, 1, Chrome, 1, Oxygen, 4)
+                .color(0xfffb00)
+                .build();
+
+        CobaltAluminate = new Material.Builder(8463, 'cobalt_aluminate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Cobalt, 1, Aluminium, 2, Oxygen, 4)
+                .color(0x1605ff)
+                .build();
+
+        LeadNitrate = new Material.Builder(8464, 'lead_nitrate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Lead, 1, Nitrogen, 2, Oxygen, 6)
+                .color(0xffffff)
+                .build();
+
+        LeadNitrate.setFormula('Pb(NO3)2', true)
     }
 }

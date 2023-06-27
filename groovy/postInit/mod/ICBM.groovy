@@ -328,6 +328,42 @@ Globals.solders.each { key, val ->
             .duration(400)
             .EUt(260)
             .buildAndRegister();
+
+    mods.gregtech.assembler.recipeBuilder()
+            .inputs([
+                    ore('frameGtSteel')*3,
+                    ore('stickLongSteel')*3,
+                    metaitem('sensor.lv')
+            ])
+            .fluidInputs(fluid(key) * val)
+            .outputs(item('icbmclassic:launcherframe:0'))
+            .duration(400)
+            .EUt(30)
+            .buildAndRegister();
+
+    mods.gregtech.assembler.recipeBuilder()
+            .inputs([
+                    ore('frameGtAluminium')*3,
+                    ore('stickLongAluminium')*3,
+                    metaitem('sensor.mv')
+            ])
+            .fluidInputs(fluid(key) * val)
+            .outputs(item('icbmclassic:launcherframe:1'))
+            .duration(400)
+            .EUt(60)
+            .buildAndRegister();
+
+    mods.gregtech.assembler.recipeBuilder()
+            .inputs([
+                    ore('frameGtStainlessSteel')*3,
+                    ore('stickLongStainlessSteel')*3,
+                    metaitem('sensor.hv')
+            ])
+            .fluidInputs(fluid(key) * val)
+            .outputs(item('icbmclassic:launcherframe:2'))
+            .duration(400)
+            .EUt(260)
+            .buildAndRegister();
 }
 
 //Missiles
