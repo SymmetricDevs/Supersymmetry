@@ -2451,19 +2451,6 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        SodiumAmide = new Material.Builder(8461, 'sodium_amide')
-                .dust()
-                .components(Sodium, 1, Nitrogen, 1, Hydrogen, 2)
-                .colorAverage()
-                .build();
-
-        LeadChromate = new Material.Builder(8462, 'lead_chromate')
-                .dust()
-                .iconSet(SHINY)
-                .components(Lead, 1, Chrome, 1, Oxygen, 4)
-                .color(0xfffb00)
-                .build();
-
         CobaltAluminate = new Material.Builder(8463, 'cobalt_aluminate')
                 .dust()
                 .iconSet(SHINY)
@@ -2513,7 +2500,20 @@ public class FirstDegreeMaterials{
 
         IronIIHydroxide.setFormula("Fe(OH)2", true)
 
-        IronIIOxide = new Material.Builder(8479, "iron_ii_oxide")
+        SodiumAmide = new Material.Builder(8469, 'sodium_amide')
+                .dust()
+                .components(Sodium, 1, Nitrogen, 1, Hydrogen, 2)
+                .colorAverage()
+                .build();
+
+        LeadChromate = new Material.Builder(8470, 'lead_chromate')
+                .dust()
+                .iconSet(SHINY)
+                .components(Lead, 1, Chrome, 1, Oxygen, 4)
+                .color(0xfffb00)
+                .build();
+
+        IronIIOxide = new Material.Builder(8471, "iron_ii_oxide")
                 .dust()
                 .components(Iron, 1, Oxygen, 1)
                 .color(0x1c1c1c)

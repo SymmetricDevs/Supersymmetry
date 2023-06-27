@@ -1046,5 +1046,6 @@ public class UnknownCompositionMaterials {
         BurntSienna = new Material.Builder(4198, "burnt_sienna")
                 .dust()
                 .color(0x662e2e)
+                .build();
     }
 }
