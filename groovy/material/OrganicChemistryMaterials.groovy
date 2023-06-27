@@ -1341,5 +1341,11 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 5, Hydrogen, 10, Oxygen, 1)
                 .color(0xb3af34)
                 .build();
+
+        TributylPhosphate = new Material.Builder(15217, "tributyl_phosphate")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 27, Oxygen, 4, Phosphorus, 1)
+                .color(0xf5e3b3)
+                .build();
     }
 }
