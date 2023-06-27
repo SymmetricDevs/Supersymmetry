@@ -4,7 +4,7 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import static gregtech.api.unification.ore.OrePrefix.dye;
 
-SINTERING_OVEN = recipemap('sintering_oven')
+ROTARY_KILN = recipemap('rotary_kiln')
 ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
 BR = recipemap('batch_reactor')
 REACTION_FURNACE = recipemap('reaction_furnace')
@@ -26,10 +26,11 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
 .EUt(Globals.voltAmps[2])
 .buildAndRegister()
 
-SINTERING_OVEN.recipeBuilder() //MOVE TO ROT-KILN
+ROTARY_KILN.recipeBuilder()
 .inputs(metaitem('dustChromite') * 14)
 .inputs(metaitem('dustSodaAsh') * 24)
-.fluidInputs(fluid('oxygen') * 7000)
+.fluidInputs(fluid('natural_gas') * 100)
+.fluidInputs(fluid('oxygen') * 7050)
 .outputs(metaitem('dustSodiumChromateMixture') * 5)
 .fluidOutputs(fluid('carbon_dioxide') * 4000)
 .duration(400)
