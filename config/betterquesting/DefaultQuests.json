@@ -4691,7 +4691,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -4786,7 +4786,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -4881,7 +4881,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -7178,7 +7178,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -9478,7 +9478,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -9765,7 +9765,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -13797,7 +13797,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -13892,7 +13892,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -17488,7 +17488,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Hydrogen (H)\n§bAtomic Number§r: 1\n§aAtomic Mass§r: 1.008 amu\n§cMelting Point§r: 13.81 K\n§5Boiling Point§r: 20.28 K\n§6Properties§r: Hydrogen is the lightest §6Element§r, commonly found in the universe. It is used as a fuel, in industrial processes, and is a key component of water and many organic compounds.\n\n§lPrimitive:§9 §r§9Water§r can be electrolyzed to get Hydrogen and Oxygen.\n\n§lUniversal:§r\n§6Steam and Syngas§r can be reformed using an LTS or HTS §6catalyst§r to create §6Reformed Syngas§r, which is then passed through a §bPressure Swing Absorbe§rr to make Hydrogen.\n\n§dMethane §rcan be pyrolyzed under a§7 Bismuth catalyst§r at §cEV§r to make Hydrogen.\n\n§lSpecialized:§r\nCerium III Oxide + Water -\u003e Cerium IV Oxide + Hydrogen\nCerium IV Oxide -\u003e Cerium III Oxide + Oxygen ",
+          "desc:8": "§6Element§r: Hydrogen (H)\n§bAtomic Number§r: 1\n§aAtomic Mass§r: 1.008 amu\n§cMelting Point§r: 13.81 K\n§5Boiling Point§r: 20.28 K\n§6Properties§r: Hydrogen is the lightest §6Element§r, commonly found in the universe. It is used as a fuel, in industrial processes, and is a key component of water and many organic compounds.\n\n§lPrimitive:§9 §r§9Water§r can be electrolyzed to get Hydrogen and Oxygen.\n\n§lUniversal:§r\n§6Steam and Syngas§r can be reformed using an LTS or HTS §6catalyst§r to create §6Reformed Syngas§r, which is then passed through a §bPressure Swing Absorbe§r§9§r§br §rto make Hydrogen.\n\n§dMethane §rcan be pyrolyzed under a§7 Bismuth catalyst§r at §cEV§r to make Hydrogen.\n\n§lSpecialized:§r\nCerium III Oxide + Water -\u003e Cerium IV Oxide + Hydrogen\nCerium IV Oxide -\u003e Cerium III Oxide + Oxygen ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25441,6 +25441,12 @@
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "gregtech:stone_smooth"
+            },
+            "6:10": {
+              "Count:3": 28,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -26375,7 +26381,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 1,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -44120,7 +44126,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -44215,7 +44221,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -44310,7 +44316,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -44405,7 +44411,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -46167,7 +46173,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -46329,7 +46335,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 1,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -46424,7 +46430,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -46519,7 +46525,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -54662,7 +54668,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
