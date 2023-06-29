@@ -472,7 +472,7 @@ Syngas.setDuration(20);
 Syngas.setAmountToBurn(1 * 10);
 Syngas.setByproductAmount(1000);
 
-def MidtierGasoline = new IFluidFuel('midrange_gasoline', 'flue_gas');
+def MidtierGasoline = new IFluidFuel('midgrade_gasoline', 'flue_gas');
 MidtierGasoline.setDuration(42);
 MidtierGasoline.setAmountToBurn(2 * 10);
 MidtierGasoline.setByproductAmount(1000);
