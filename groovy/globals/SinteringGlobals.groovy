@@ -49,11 +49,13 @@ class SinteringGlobals {
     public static sintering_fuels = [
         new Combustible('methane', false, 100, 100, 'carbon_dioxide', 50),
         new Combustible('syngas', false, 100, 100, 'carbon_dioxide', 50),
+        new Combustible('natural_gas', false, 100, 100, 'carbon_dioxide', 50),
         new Combustible('plasma.helium', true, 10, 10, 'helium', 10)
     ]
 
     public static sintering_comburents = [
-        new Comburent('air', 100, 50)
+        new Comburent('air', 100, 50),
+        new Comburent('oxygen', 75, 50)
     ]
 
     public static sintering_blankets = [

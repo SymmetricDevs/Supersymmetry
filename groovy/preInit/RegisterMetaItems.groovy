@@ -121,6 +121,12 @@ eventManager.listen {
 
         customMetaItems.addItem(200, "thick_film_substrate_wafer");
 
+        customMetaItems.addItem(201, "vti_rich_pig_iron");
+
+        customMetaItems.addItem(202, "vt_slag");
+
+        customMetaItems.addItem(203, "titanium_sponge");
+
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);

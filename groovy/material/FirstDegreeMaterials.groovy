@@ -231,7 +231,6 @@ public class FirstDegreeMaterials{
 
         PigIron = new Material.Builder(8115, 'pig_iron')
                 .ingot().dust()
-                .flags(GENERATE_PLATE)
                 .color(0x99918A)
                 .build();
 
@@ -265,9 +264,12 @@ public class FirstDegreeMaterials{
 
         GalliumPhosphate = new Material.Builder(8120, 'gallium_phosphate')
                 .gem().iconSet(RUBY)
+                .flags(CRYSTALLIZABLE)
                 .components(Gallium, 1, Phosphorus, 1, Oxygen, 4)
                 .colorAverage()
                 .build()
+
+        GalliumPhosphate.setFormula("GaPO4", true)
 
         LithiumNiobate = new Material.Builder(8121, 'lithium_niobate')
                 .gem().iconSet(RUBY)
@@ -1498,7 +1500,8 @@ public class FirstDegreeMaterials{
                 .setFormula("Be(OH)2", true);
 
         BerylliumOxide = new Material.Builder(8319, "beryllium_oxide")
-                .dust()
+                .dust().fluid()
+                .flags(GENERATE_PLATE)
                 .components(Beryllium, 1, Oxygen, 1)
                 .colorAverage()
                 .build();
@@ -2517,6 +2520,91 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Iron, 1, Oxygen, 1)
                 .color(0x1c1c1c)
+                .build();
+
+        GalliumTrioxide = new Material.Builder(8472, "gallium_trioxide")
+                .dust()
+                .components(Gallium, 2, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        AmmoniumDihydrogenPhosphate = new Material.Builder(8473, "ammonium_dihydrogen_phosphate")
+                .dust()
+                .components(Hydrogen, 6, Nitrogen, 1, Oxygen, 4, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        AmmoniumDihydrogenPhosphate.setFormula("NH4H2PO4", true)
+
+        AluminiumCarbonate = new Material.Builder(8474, "aluminium_carbonate")
+                .dust()
+                .components(Aluminium, 2, Carbon, 3, Oxygen, 9)
+                .colorAverage()
+                .build();
+
+        AluminiumCarbonate.setFormula("Al2(CO3)3", true)
+
+        IronCarbonate = new Material.Builder(8475, "iron_carbonate")
+                .dust()
+                .components(Iron, 1, Carbon, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        AmmoniumDiuranate = new Material.Builder(8477, "ammonium_diuranate")
+                .dust()
+                .iconSet(SHINY)
+                .components(Nitrogen, 2, Hydrogen, 8, Uranium235, 2, Oxygen, 7)
+                .color(0xe6be22)
+                .build();
+
+        AmmoniumDiuranate.setFormula("(NH4)2U2O7", true)
+
+        MagnesiumCarbonate = new Material.Builder(8478, "magnesium_carbonate")
+                .dust()
+                .components(Magnesium, 1, Carbon, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        SodiumLeadAlloy = new Material.Builder(8479, "sodium_lead_alloy")
+                .ingot()
+                .components(Sodium, 1, Lead, 1)
+                .colorAverage()
+                .build();
+
+        Tetraethyllead = new Material.Builder(8480, "tetraethyllead")
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 20, Lead, 1)
+                .colorAverage()
+                .build();
+
+        Tetraethyllead.setFormula("Pb(CH3CH2)4", true)
+
+        TertButylHydroperoxide = new Material.Builder(8481, "tert_butyl_hydroperoxide")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 2)
+                .colorAverage()
+                .build();
+
+        TertButylHydroperoxide.setFormula("(CH3)3COOH", true)
+
+        DiTertButylPeroxide = new Material.Builder(8482, "di_tert_butyl_peroxide")
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 18, Oxygen, 2)
+                .colorAverage()
+                .build();
+
+        DiTertButylPeroxide.setFormula("(CH3)3COOC(CH3)3", true)
+
+        TwoEthylhexylNitrate = new Material.Builder(8483, "two_ethylhexyl_nitrate")
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 17, Nitrogen, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        Nitromethane = new Material.Builder(8484, "nitromethane")
+                .fluid()
+                .components(Carbon, 1, Hydrogen, 3, Nitrogen, 1, Oxygen, 2)
+                .colorAverage()
                 .build();
     }
 }

@@ -57,6 +57,11 @@ SMOKE_STACK.recipeBuilder()
         .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
+        .fluidInputs(fluid('exhaust_steam') * 3000)
+        .duration(20)
+        .buildAndRegister()
+
+SMOKE_STACK.recipeBuilder()
         .fluidInputs(fluid('flue_gas') * 1000)
         .duration(20)
         .buildAndRegister()
@@ -119,12 +124,22 @@ DUMPER.recipeBuilder()
         .buildAndRegister()
 
 DUMPER.recipeBuilder()
+        .fluidInputs(fluid('water') * 1000)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
         .fluidInputs(fluid('red_mud') * 1000)
         .duration(20)
         .buildAndRegister()
 
 DUMPER.recipeBuilder()
         .fluidInputs(fluid('concentrated_red_mud') * 1000)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('chilled_lava') * 1000)
         .duration(20)
         .buildAndRegister()
 

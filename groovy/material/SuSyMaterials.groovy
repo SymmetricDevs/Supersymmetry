@@ -103,6 +103,7 @@ class SuSyMaterials {
         public static Material Lauterite;
         public static Material Hydroxyapatite;
         public static Material Rhodochrosite;
+        public static Material Carnotite;
 
         // Roasted Ores
 
@@ -317,6 +318,36 @@ class SuSyMaterials {
         public static Material ReducedChromiumAnolyte;
         public static Material ChromiumCatholyte;
         public static Material ChromiumMotherLiquor;
+        public static Material ImpureVTMSlurry;
+        public static Material VTMSlurry;
+        public static Material SiliconDioxideSlurry;
+        public static Material VTMConcentrate;
+        public static Material VTSlag;
+        public static Material AlkaliVTSlag;
+        public static Material TitaniaSlag;
+        public static Material TitanylSulfateSolution;
+        public static Material RutileSlurry;
+        public static Material CarnotiteLeach;
+        public static Material ReducedCarnotiteLeach;
+        public static Material UraniumVanadiumExtractionMixture;
+        public static Material UraniumVanadiumExtract;
+        public static Material UraniumExtract;
+        public static Material AcidicVanadylSolution;
+        public static Material ImpureUranylCarbonateSolution;
+        public static Material UranylCarbonateSolution;
+        public static Material UranylSulfateSolution;
+        public static Material TetraethylleadSludge;
+        public static Material GasolineOxygenates;
+        public static Material GasolineAntioxidants;
+        public static Material GasolineAntiknock;
+        public static Material GasolineGeneralAdditives;
+        public static Material MidgradeGasoline;
+        public static Material PremiumGasoline;
+        public static Material SupremeGasoline;
+        public static Material PotassiumMolecularSieve;
+        public static Material CesiumMolecularSieve;
+        public static Material SaturatedPotassiumMolecularSieve;
+        public static Material SaturatedCesiumMolecularSieve;
 
         // Petrochem Materials
 
@@ -753,6 +784,21 @@ class SuSyMaterials {
         public static Material IronIIHydroxide;
         public static Material IronIIOxide;
         public static Material ElectrolyticChromium;
+        public static Material GalliumTrioxide;
+        public static Material AmmoniumDihydrogenPhosphate;
+        public static Material AluminiumCarbonate;
+        public static Material IronCarbonate;
+        public static Material AmmoniumDiuranate;
+        public static Material VanadiumOxydichloride;
+        public static Material VanadiumOxytrichloride;
+        public static Material TinTetrachloride;
+        public static Material MagnesiumCarbonate;
+        public static Material SodiumLeadAlloy;
+        public static Material Tetraethyllead;
+        public static Material TertButylHydroperoxide;
+        public static Material DiTertButylPeroxide;
+        public static Material TwoEthylhexylNitrate;
+        public static Material Nitromethane;
 
         // Second Degree Materials
 
@@ -828,6 +874,9 @@ class SuSyMaterials {
         public static Material AgedAmmoniumChromeAlumSolution;
         public static Material PurifiedAmmoniumChromeAlumSolution;
         public static Material AmmoniumIronIISulfateSolution;
+        public static Material DilutedDiTertButylPeroxide;
+        public static Material DilutedTwoEthylhexylNitrate;
+        public static Material DilutedNitromethane;
 
         // Organic Chemistry Materials
 
@@ -1049,6 +1098,18 @@ class SuSyMaterials {
         public static Material PotassiumIsopropylXanthate;
         public static Material PotassiumEthylXanthate;
         public static Material TributylPhosphate;
+        public static Material TertButylAlcohol;
+        public static Material ButylatedHydroxytoluene;
+        public static Material DimethylTertButylphenol;
+        public static Material AluminiumPhenolate;
+        public static Material DiTertButylphenol;
+        public static Material IsoOctane;
+        public static Material PurifiedIsoprene;
+        public static Material Cyclopentadiene;
+        public static Material CyclopentadieneSolution;
+        public static Material Ferrocene;
+        public static Material Polyisoprene;
+        public static Material Chloroethane;
 
         // Third Degree Materials
 
@@ -1096,6 +1157,41 @@ class SuSyMaterials {
 
         public static Material EarthlikeAir;
         public static Material HotHighPressureSteam;
+        public static Material CompressedAir;
+        public static Material ChilledAir;
+        public static Material PurifiedAir;
+        public static Material BoostedAir;
+        public static Material ColdWater;
+        public static Material WasteGaseousNitrogen;
+        public static Material PurfiedWasteGaseousNitrogen;
+        public static Material ChilledBoostedAir;
+        public static Material PartiallyLiquifiedAir;
+        public static Material GaseousAirFeedstock;
+        public static Material LiquidAirFeedstock;
+        public static Material ChillyWasteGaseousNitrogen;
+        public static Material SubcooledLiquidNitrogen;
+        public static Material ColdWasteGaseousNitrogen;
+        public static Material UntreatedLiquidOxygen;
+        public static Material UntreatedLiquidNitrogen;
+        public static Material OxygenRichLiquid;
+        public static Material OxygenRichGas;
+        public static Material NitrogenRichGas;
+        public static Material ArgonRichGas;
+        public static Material OxygenRichVapor;
+        public static Material CrudeArgonVapor;
+        public static Material LiquidCrudeArgon;
+        public static Material SubcooledOxygenRichLiquid;
+        public static Material CrudeLiquidKrypton;
+        public static Material RareGasRichFraction;
+        public static Material CondensedRareGasRichFraction;
+        public static Material CrudeNeonVapor;
+        public static Material GaseousCrudeKrypton;
+        public static Material ColdLiquidOxygen;
+        public static Material CompressedCrudeNeon;
+        public static Material PartiallyLiquefiedCrudeNeon;
+        public static Material GaseousCrudeNeon;
+        public static Material LiquidCrudeNeon;
+        public static Material ColdGaseousNitrogen;
 
         public static void init() {
                 ElementMaterials.register();

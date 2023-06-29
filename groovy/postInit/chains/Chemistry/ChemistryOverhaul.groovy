@@ -1639,16 +1639,27 @@ PYROLYSE.recipeBuilder()
 .duration(200)
 .buildAndRegister()
 
+// Rutile
+
+REACTION_FURNACE.recipeBuilder()
+        .fluidInputs(fluid('titanium_tetrachloride') * 1000)
+        .fluidInputs(fluid('oxygen') * 2000)
+        .fluidOutputs(fluid('chlorine') * 4000)
+        .outputs(metaitem('dustTitaniumDioxide') * 3)
+        .duration(200)
+        .EUt(480)
+        .buildAndRegister()
+
 // Butyraldehyde
 
-BR.recipeBuilder()
+REACTION_FURNACE.recipeBuilder()
 .inputs(metaitem('dustDicobaltOctacarbonyl') * 18)
 .fluidInputs(fluid('propene') * 1000)
-.fluidInputs(fluid('hot_hp_carbon_monoxide') * 1000)
+.fluidInputs(fluid('carbon_monoxide') * 1000)
 .fluidInputs(fluid('hot_hp_hydrogen') * 2000)
 .fluidOutputs(fluid('butyraldehyde_mixture') * 1000)
 .duration(100)
-.EUt(30)
+.EUt(240)
 .buildAndRegister()
 
 DISTILLATION_TOWER.recipeBuilder()
@@ -2344,7 +2355,7 @@ MIXER.recipeBuilder()
 
 POLYMERIZATION.recipeBuilder()
 .fluidInputs(fluid('styrene_butadiene_solution') * 3000)
-.fluidInputs(fluid('butyllithium') * 100)
+.notConsumable(fluid('butyllithium') * 100)
 .fluidOutputs(fluid('polymerized_styrene_butadiene_solution') * 3000)
 .EUt(120)
 .duration(1200)
@@ -2368,7 +2379,7 @@ for (carbon in COAL_SOURCES) {
             .outputs(ore('dustCalciumCarbide').first() * 3)
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .EUt(120)
-            .duration(600)
+            .duration(400)
             .buildAndRegister()
 }
 
@@ -3406,9 +3417,9 @@ BR.recipeBuilder()
     .inputs(ore("dustAluminium") * 2)
     .fluidInputs(fluid("hydrogen") * 6000)
     .fluidInputs(fluid("ethylene") * 6000)
-    .fluidInputs(fluid("triethylaluminium") * 1000)
+    .fluidOutputs(fluid("triethylaluminium") * 1000)
     .duration(200) 
-    .EUt(Globals.voltAmps[1])
+    .EUt(120)
     .buildAndRegister();
 
 MIXER.recipeBuilder()
@@ -3908,6 +3919,23 @@ DISTILLERY.recipeBuilder()
         .buildAndRegister()
 
 // Step 2: Creating impure 1,4-diiodobenzene
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('sodium_nitrate_solution') * 1000)
+        .outputs(metaitem('dustSodiumNitrate') * 5)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(140)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('hydrochloric_acid') * 1000)
+        .inputs(metaitem('dustSodiumNitrate') * 5)
+        .fluidOutputs(fluid('salt_water') * 1000)
+        .fluidOutputs(fluid('nitric_acid') * 1000)
+        .duration(160)
+        .EUt(30)
+        .buildAndRegister()
+
 LCR.recipeBuilder()
         .inputs(metaitem('dustSodiumNitrate') * 5)
         .fluidInputs(fluid('sulfuric_acid') * 1000)
@@ -4166,7 +4194,9 @@ DISTILLATION_TOWER.recipeBuilder()
         .buildAndRegister()
 
 //DISTILLATION REORDERING
+
 mods.gregtech.distillation_tower.removeByInput(30, null, [fluid('diluted_sulfuric_acid') * 500])
+
 DISTILLATION_TOWER.recipeBuilder()
         .fluidInputs(fluid('diluted_sulfuric_acid') * 500)
         .fluidOutputs(fluid('sulfuric_acid') * 250)
@@ -4175,3 +4205,10 @@ DISTILLATION_TOWER.recipeBuilder()
         .duration(50)
         .buildAndRegister()
 
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('water') * 1000)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
+        .EUt(30)
+        .duration(120)
+        .buildAndRegister()

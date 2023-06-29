@@ -445,7 +445,7 @@ NitroDiesel.setIsDiesel(true);
 
 def BioDiesel = new IFluidFuel('bio_diesel', 'flue_gas');
 BioDiesel.setDuration(14);
-BioDiesel.setAmountToBurn(2 * 10);
+BioDiesel.setAmountToBurn(2 * 8);
 BioDiesel.setByproductAmount(1000);
 BioDiesel.setIsDiesel(true);
 
@@ -472,6 +472,21 @@ Syngas.setDuration(20);
 Syngas.setAmountToBurn(1 * 10);
 Syngas.setByproductAmount(1000);
 
+def MidtierGasoline = new IFluidFuel('midrange_gasoline', 'flue_gas');
+MidtierGasoline.setDuration(42);
+MidtierGasoline.setAmountToBurn(2 * 10);
+MidtierGasoline.setByproductAmount(1000);
+
+def PremiumGasoline = new IFluidFuel('premium_gasoline', 'flue_gas');
+PremiumGasoline.setDuration(55);
+PremiumGasoline.setAmountToBurn(2 * 10);
+PremiumGasoline.setByproductAmount(1000);
+
+def SupremeGasoline = new IFluidFuel('supreme_gasoline', 'flue_gas');
+SupremeGasoline.setDuration(70);
+SupremeGasoline.setAmountToBurn(2 * 10);
+SupremeGasoline.setByproductAmount(1000);
+
 def FluidFuels = [
         Gasoline,
         SulfuricGas,
@@ -480,7 +495,6 @@ def FluidFuels = [
         Butadiene,
         Propane,
         Butane,
-        LPG,
         Naphtha,
         Toluene,
         NaturalGas,
@@ -499,7 +513,10 @@ def FluidFuels = [
         Diesel,
         Syngas,
         FuelOil,
-        Kerosene
+        Kerosene,
+        MidtierGasoline,
+        PremiumGasoline,
+        SupremeGasoline
 ];
 
 def WaterWF = new IWorkingFluid('water', 'steam', 'exhaust_steam');
@@ -582,14 +599,14 @@ for (WorkingFluid in WorkingFluids) {
     recipemap('radiator').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
-            .duration(WorkingFluid.duration*8)
+            .duration(WorkingFluid.duration*4)
             .EUt(8)
             .buildAndRegister();
 
     recipemap('cooling_unit').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
-            .duration(WorkingFluid.duration*3)
+            .duration(WorkingFluid.duration*2)
             .EUt(8)
             .buildAndRegister();
 }
@@ -603,8 +620,8 @@ recipemap('fluid_compressor').recipeBuilder()
 
 recipemap('heat_exchanger').recipeBuilder()
         .fluidInputs(liquid('water') * 6)
-        .fluidInputs(liquid('lava') * 250)
+        .fluidInputs(liquid('lava') * 20)
         .fluidOutputs(liquid('steam') * 960)
-        .fluidOutputs(liquid('chilled_lava') * 250)
+        .fluidOutputs(liquid('chilled_lava') * 20)
         .duration(10)
         .buildAndRegister();

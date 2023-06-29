@@ -373,7 +373,7 @@ AUTOCLAVE.recipeBuilder()
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
 
-SINTERING_OVEN.recipeBuilder()
+ROASTER.recipeBuilder()
         .inputs(metaitem('dustZirconiumDioxide') * 3)
         .fluidInputs(fluid('neutralized_metal_nitrate_solution') * 1000)
         .outputs(metaitem('dustMetalNitrateCatalyst') * 4)
