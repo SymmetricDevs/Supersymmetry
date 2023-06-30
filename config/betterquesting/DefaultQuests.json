@@ -26257,8 +26257,13 @@
       }
     },
     "391:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        102
+        102,
+        243
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34749,7 +34754,8 @@
     },
     "516:10": {
       "preRequisites:11": [
-        243
+        243,
+        519
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34837,7 +34843,8 @@
     },
     "517:10": {
       "preRequisites:11": [
-        661
+        661,
+        516
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -35019,7 +35026,8 @@
     },
     "520:10": {
       "preRequisites:11": [
-        519
+        519,
+        637
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -47060,7 +47068,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Using some fancy chemicals you\u0027ve unlocked recently, you can concentrate impure ore dusts using §6Froth Flotation.§f §cClarifiers§f may also be needed for some concentration processes.\n\nThis will be needed to process certain rare ore dusts, but you can use froth flotation to get §cdouble§f the ores out of other impure ore dusts. Chemicals used will vary by ore. Use JEI.",
+          "desc:8": "Using some fancy chemicals you\u0027ve unlocked recently, you can concentrate impure ore dusts using §6Froth Flotation.§f §cClarifiers§f may also be needed for some concentration processes.\n\nThis will be needed to process certain rare ore dusts, but you can use froth flotation to get §cdouble§f the ores out of other impure ore dusts. Chemicals used will vary by ore. Use JEI.\n\nFroth Flotation involves taking impure ore and turning it into a slurry. This slurry is then placed in a§6 froth flotation machine§r. Inside the machine, bubbles are created with the help of a substance called§b frother§r. These bubbles have collector molecules on their surfaces, which attract and bind to the ore particles.\n\nAs a result, the ore particles rise to the top of the machine along with the bubbles. If needed, §cactivators§r are used to enhance the binding of the ore particles with the collectors. On the other hand, §edepressants§r are used to deactivate unwanted gangue particles and prevent them from binding to the collectors on the bubbles.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47099,6 +47107,41 @@
               "Damage:2": 17008,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 8,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "susy:multiblock_tank"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 17008,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "2:10": {
+              "Count:3": 30,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            },
+            "3:10": {
+              "Count:3": 63,
+              "Damage:2": 5,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -47795,8 +47838,13 @@
       }
     },
     "648:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
       "preRequisites:11": [
-        243
+        243,
+        479
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -51602,7 +51650,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Large Chemical Reactor will be needed to carry out some more advanced chemical processes later on.",
+          "desc:8": "The §6Large Chemical Reactor§r will be needed to carry out some more §cadvanced chemical processes §r§rlater on. It can handle as much as 6 inputs and outputs at the same time.\n\nAll §dOverclocks§r in the §3LCR§r are §6100% efficient§r; each overclock will §5quadruple the speed§r, as opposed to doubling it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51641,6 +51689,12 @@
               "Damage:2": 1023,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 10,
+              "Damage:2": 9,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -51767,38 +51821,24 @@
     },
     "683:10": {
       "preRequisites:11": [
-        637,
-        516
+        688
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "A §6coking tower§r is a specialized structure used in the process of §6converting bituminous residue into coke.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
+            "Damage:2": 4,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "filtered_wastewater"
-            }
+            "id:8": "gregtech:meta_block_frame_20"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Wastewater Treatment",
+          "name:8": "Coking Tower",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -51811,7 +51851,43 @@
       },
       "questID:3": 683,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14635,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 39,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_frame_20"
+            },
+            "2:10": {
+              "Count:3": 21,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "3:10": {
+              "Count:3": 30,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "684:10": {
       "preRequisites:11": [
@@ -51985,7 +52061,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Silicon dioxide wafers are the base of many complex semiconductor-based technologies, such as NAND wafers for EV-tier circuits.\n\nThis is only the beginning. :trolllaugh:",
+          "desc:8": "Silicon dioxide wafers are the base of many complex semiconductor-based technologies, such as NAND wafers for EV-tier circuits.\n\nThis is only the beginning. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52056,7 +52132,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Putting the sulfuric oil residue in a vacuum distillation tower gives 3 new oil fractions: Bituminous Residue, Slack Wax, and Lubricating Oil.\n\nLubricating Oil can be upgraded into lighter fractions, or mixed with additives to create lubricant.\n\nSlack Wax can be treated to create paraffin wax, which has several uses including making treated wood.\n\nBituminous residue will be explored in the quests to the left.",
+          "desc:8": "Putting the sulfuric oil residue in a vacuum distillation tower gives 3 new oil fractions: Bituminous Residue, Slack Wax, and Lubricating Oil.\n\n§6Lubricating Oil §rcan be upgraded into lighter fractions, or mixed with additives to create lubricant.\n\n§6Slack Wax§r can be treated to create paraffin wax, which has several uses including making treated wood.\n\n§2Bituminous residue§r will be explored in the page to the left.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52243,7 +52319,7 @@
     },
     "691:10": {
       "preRequisites:11": [
-        688
+        683
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -52383,13 +52459,18 @@
       }
     },
     "693:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        207
+        207,
+        479
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "At this point you should have enough knowledge of JEI to figure out how to make gallium phosphate crystals.",
+          "desc:8": "To make Gallium Phosphide crystals, you need to make Ammonium Dihydrogen Phosphate using the Batch Reactor, and Gallium Trioxide by roasting Gallium.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52821,7 +52902,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This wafer is a stepping stone to create the NAND wafer, which you will need for making your first EV circuits.\n\nAre you tired yet?",
+          "desc:8": "This wafer is a stepping stone to create the NAND wafer, which you will need for making your first EV circuits.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52891,7 +52972,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Chemical Vapor Deposition, or CVD for short, is a way to deposit chemicals onto wafers to create microscopic structures.\n\nThis will be especially useful in our quest to make increasingly powerful electronics.",
+          "desc:8": "Chemical Vapor Deposition, or CVD for short, is a way to deposit chemicals onto wafers to create microscopic structures.\n\nThis will be especially useful in your quest to make increasingly powerful electronics.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52946,7 +53027,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Silane will be needed in several CVD processes in semiconductor fabrication. This can be made from several steps of disproportionation and distillation. Use JEI.",
+          "desc:8": "Silane will be needed in several CVD processes in semiconductor fabrication. This can be made from several steps of disproportionation and distillation. Use JEI. The process will require §63 Distilleries and 3 Fixed Bed Reactors§r to turn Trichlorosilane into Silane.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52971,8 +53052,8 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "SiH4",
-          "questlogic:8": "AND",
+          "name:8": "Silane",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -52998,6 +53079,10 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -53478,6 +53563,30 @@
               "Damage:2": 15049,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 3,
+              "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_frame_20"
+            },
+            "2:10": {
+              "Count:3": 19,
+              "Damage:2": 5,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "3:10": {
+              "Count:3": 4,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            },
+            "4:10": {
+              "Count:3": 2,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:turbine_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -53491,7 +53600,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Fluidized Bed Reactor will also be needed to carry out some more advanced chemical processes later on.",
+          "desc:8": "The Fluidized Bed Reactor will also be needed to carry out some more advanced §ccatalyzed §rchemical processes later on.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53714,7 +53823,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Steam cracking oil fractions and distilling it gives you §aButadiene.§f This, along with styrene made from §aEthylbenzene,§f will allow you to make §9Styrene-Butadiene Rubber.§f\n\nIt can do all the things that Rubber can in recipes, but at a lower cost in assembling recipes.\n\nIn case you missed it, §6Silicone Rubber§f is the other higher tier rubber available at HV.\n\nYou will need §3n-Butyllithium§f in the first place as a catalyst to make this.",
+          "desc:8": "Steam cracking oil fractions and distilling it gives you §aButadiene.§f This, along with styrene made from §aEthylbenzene,§f will allow you to make §9Styrene-Butadiene Rubber.§f\n\nIt can do all the things that Rubber can in recipes, but at a lower cost in assembling recipes.\n\nIn case you missed it, §6Silicone Rubber§f is the other higher tier rubber available at HV.\n\nYou will need §3n-Butyllithium§f in the first place as a catalyst to make this.\n\nn-Butyllithium requires a solution of Lithium and Diethyl Ether, and also Bromobutane, which is made by combining Hydrobromic Acid and n-Butanol from the Ziegler Process. \n\nHydrobromic Acid is made in a CSTR by combining Sulfur Dioxide, Water and Bromine.\nuu",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53854,7 +53963,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A Fluidized Bed Reactor allows you to create §dPolydimethylsiloxane,§f which can be vulcanized to create §cSilicone Rubber.§f\n\nIt can do all the things that Rubber can in recipes, but at a lower cost in assembling recipes.\n\nIn case you missed it, §6Styrene-Butadiene Rubber§f is the other higher tier rubber available at HV.",
+          "desc:8": "A Fluidized Bed Reactor allows you to create §dPolydimethylsiloxane,§f which can be vulcanized to create §cSilicone Rubber.§f\n\nIt can do all the things that Rubber can in recipes, but at a lower cost in assembling recipes.\n\nIn case you missed it, §6Styrene-Butadiene Rubber§f is the other higher tier rubber available at HV.\n\nThe items required are §6Chloromethane §r(you should already have this), Copper Oxide and Silicon, as well as Potassium Persulfate. Since we\u0027re now in HV, the quests will no longer list every single step in a chemical process. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53888,7 +53997,34 @@
       },
       "questID:3": 716,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1000,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "717:10": {
       "preRequisites:11": [
@@ -53967,7 +54103,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "As you may have noticed, moving up in tiers causes your energy consumption to increase exponentially.\n\nTo deal with this, it may be time to start adding §cfuel additives§f to the gasoline/diesel you\u0027ve been using to power your base.\n\nThere will be 3 tiers of gasolines beyond the normal gasoline. The first tier can be made by mixing gasoline with any 2 of the following. The second tier will require 3 of the following. The final, highest tier of gasoline will require all 4:\n\n- Oxygenates\n- Antioxidants\n- Antiknock Agents\n- General Fuel Additive\n\nEach of these are their own fluid. They are made from any two chemicals from their respective categories:\n\nList of oxygenates:\n\n- Ethanol\n- Methanol\n- n-butanol\n- tert-Butyl Alcohol\n- Isopropyl alcohol\n- Ethyl tert butyl ether\n\nList of antioxidants:\n\n- Butylated hydroxytoluene\n- 2,4-Dimethyl-6-tert-butylphenol\n- 2,6-Di-tert-butylphenol\n- p-Phenylenediamine\n- Ethylenediamine\n\nList of antiknock agents:\n\n- Toluene\n- Isooctane\n- Tetraethyllead\n- Ferrocene\n\nList of general fuel additives:\n\n- Acetone\n- Diethyl ether\n- Nitromethane\n\nCetane-boosted diesel can be made by mixing diesel or biodiesel with any 2 of the following:\n\n- Tetranitromethane\n- 2-ethylhexyl nitrate\n- di-tert-butyl peroxide",
+          "desc:8": "As you may have noticed, moving up in tiers causes your energy consumption to increase exponentially.\n\nTo deal with this, it may be time to start adding §cfuel additives§f to the gasoline/diesel you\u0027ve been using to power your base.\n\nThere will be §63 tiers of gasolines §rbeyond the normal gasoline. The first tier can be made by mixing gasoline with §6any 2 §rof the following. The second tier will require §63§r of the following. The final, highest tier of gasoline will require all§6 4§r:\n\n- Oxygenates\n- Antioxidants\n- Antiknock Agents\n- General Fuel Additive\n\nEach of these are their own fluid. They are made from any two chemicals from their respective categories:\n\nList of §3oxygenates§r:\n\n- Ethanol\n- Methanol\n- n-butanol\n- tert-Butyl Alcohol\n- Isopropyl alcohol\n- Ethyl tert butyl ether\n\nList of §bantioxidants§r:\n\n- Butylated hydroxytoluene\n- 2,4-Dimethyl-6-tert-butylphenol\n- 2,6-Di-tert-butylphenol\n- p-Phenylenediamine\n- Ethylenediamine\n\nList of §cantiknock agents§r:\n\n- Toluene\n- Isooctane\n- Tetraethyllead\n- Ferrocene\n\nList of §dgeneral fuel additives§r:\n\n- Acetone\n- Diethyl ether\n- Nitromethane\n\n§6Cetane-boosted diesel§r can be made by mixing diesel or biodiesel with any 2 of the following:\n\n- Tetranitromethane\n- 2-ethylhexyl nitrate\n- di-tert-butyl peroxide",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54009,6 +54145,76 @@
         "0:10": {
           "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "719:10": {
+      "preRequisites:11": [
+        691
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A rotary kiln is a large, cylindrical, rotating furnace-like structure that applies heat to materials by constantly §crotating them§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 17013,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Rotary Kiln",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 719,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 17013,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_frame_20"
+            },
+            "2:10": {
+              "Count:3": 32,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:stone_smooth"
+            },
+            "3:10": {
+              "Count:3": 13,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     }
@@ -56630,428 +56836,456 @@
           "id:3": 516,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": -192
+          "x:3": -252,
+          "y:3": -180
         },
         "2:10": {
+          "id:3": 517,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -288,
+          "y:3": -180
+        },
+        "3:10": {
+          "id:3": 519,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -216,
+          "y:3": -180
+        },
+        "4:10": {
+          "id:3": 520,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -180,
+          "y:3": -180
+        },
+        "5:10": {
           "id:3": 614,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 0
         },
-        "3:10": {
+        "6:10": {
           "id:3": 620,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 48,
           "y:3": -96
         },
-        "4:10": {
+        "7:10": {
           "id:3": 621,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": -84
         },
-        "5:10": {
+        "8:10": {
           "id:3": 622,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 0
         },
-        "6:10": {
+        "9:10": {
           "id:3": 623,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 48
         },
-        "7:10": {
+        "10:10": {
           "id:3": 624,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 222,
           "y:3": 0
         },
-        "8:10": {
+        "11:10": {
           "id:3": 625,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": -30
         },
-        "9:10": {
+        "12:10": {
           "id:3": 626,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 258,
           "y:3": 0
         },
-        "10:10": {
+        "13:10": {
           "id:3": 627,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 258,
           "y:3": -30
         },
-        "11:10": {
+        "14:10": {
           "id:3": 628,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 258,
           "y:3": 30
         },
-        "12:10": {
+        "15:10": {
           "id:3": 629,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 30
         },
-        "13:10": {
+        "16:10": {
           "id:3": 630,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 0
         },
-        "14:10": {
+        "17:10": {
           "id:3": 632,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -120
         },
-        "15:10": {
+        "18:10": {
           "id:3": 633,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 138,
           "y:3": -48
         },
-        "16:10": {
+        "19:10": {
           "id:3": 634,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -48
         },
-        "17:10": {
+        "20:10": {
           "id:3": 635,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -84
         },
-        "18:10": {
+        "21:10": {
           "id:3": 636,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 198,
           "y:3": -48
         },
-        "19:10": {
+        "22:10": {
           "id:3": 637,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -186,
           "y:3": -144
         },
-        "20:10": {
+        "23:10": {
           "id:3": 641,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -30,
           "y:3": -12
         },
-        "21:10": {
+        "24:10": {
           "id:3": 642,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -18,
           "y:3": -84
         },
-        "22:10": {
+        "25:10": {
           "id:3": 643,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": -84
         },
-        "23:10": {
+        "26:10": {
           "id:3": 644,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -84,
           "y:3": -150
         },
-        "24:10": {
+        "27:10": {
           "id:3": 645,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -18,
           "y:3": -138
         },
-        "25:10": {
+        "28:10": {
           "id:3": 647,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -24,
           "y:3": 54
         },
-        "26:10": {
+        "29:10": {
           "id:3": 648,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -138,
           "y:3": -144
         },
-        "27:10": {
+        "30:10": {
           "id:3": 649,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": -84
         },
-        "28:10": {
+        "31:10": {
           "id:3": 679,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": -84
         },
-        "29:10": {
+        "32:10": {
           "id:3": 680,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -78,
           "y:3": -198
         },
-        "30:10": {
+        "33:10": {
           "id:3": 681,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -18,
           "y:3": -168
         },
-        "31:10": {
+        "34:10": {
           "id:3": 683,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": -192
+          "x:3": -114,
+          "y:3": -18
         },
-        "32:10": {
+        "35:10": {
           "id:3": 687,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 114,
           "y:3": -120
         },
-        "33:10": {
+        "36:10": {
           "id:3": 688,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": -30
+          "y:3": -18
         },
-        "34:10": {
+        "37:10": {
           "id:3": 689,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 0
+          "y:3": 12
         },
-        "35:10": {
+        "38:10": {
           "id:3": 690,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 60
         },
-        "36:10": {
+        "39:10": {
           "id:3": 691,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": -30
+          "x:3": -156,
+          "y:3": -18
         },
-        "37:10": {
+        "40:10": {
           "id:3": 692,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 48
         },
-        "38:10": {
+        "41:10": {
           "id:3": 693,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 84
         },
-        "39:10": {
+        "42:10": {
           "id:3": 694,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 138,
           "y:3": 48
         },
-        "40:10": {
+        "43:10": {
           "id:3": 695,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 138,
           "y:3": 114
         },
-        "41:10": {
+        "44:10": {
           "id:3": 696,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 48
         },
-        "42:10": {
+        "45:10": {
           "id:3": 697,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": -54
         },
-        "43:10": {
+        "46:10": {
           "id:3": 698,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 114,
           "y:3": -84
         },
-        "44:10": {
+        "47:10": {
           "id:3": 699,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 114,
           "y:3": -156
         },
-        "45:10": {
+        "48:10": {
           "id:3": 700,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -156
         },
-        "46:10": {
+        "49:10": {
           "id:3": 701,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -156
         },
-        "47:10": {
+        "50:10": {
           "id:3": 702,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 108,
           "y:3": -216
         },
-        "48:10": {
+        "51:10": {
           "id:3": 703,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 156,
           "y:3": -222
         },
-        "49:10": {
+        "52:10": {
           "id:3": 704,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": -210
         },
-        "50:10": {
+        "53:10": {
           "id:3": 705,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 162,
           "y:3": -270
         },
-        "51:10": {
+        "54:10": {
           "id:3": 706,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -186,
           "y:3": 108
         },
-        "52:10": {
+        "55:10": {
           "id:3": 707,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -18,
           "y:3": 162
         },
-        "53:10": {
+        "56:10": {
           "id:3": 708,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -18,
           "y:3": 114
         },
-        "54:10": {
+        "57:10": {
           "id:3": 709,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -78,
           "y:3": 108
         },
-        "55:10": {
+        "58:10": {
           "id:3": 710,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -78,
           "y:3": -246
         },
-        "56:10": {
+        "59:10": {
           "id:3": 713,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
-          "y:3": 0
+          "y:3": 12
         },
-        "57:10": {
+        "60:10": {
           "id:3": 714,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 42
         },
-        "58:10": {
+        "61:10": {
           "id:3": 715,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 78
         },
-        "59:10": {
+        "62:10": {
           "id:3": 716,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": -240
         },
-        "60:10": {
+        "63:10": {
           "id:3": 717,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": -84
         },
-        "61:10": {
+        "64:10": {
           "id:3": 718,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 162
+        },
+        "65:10": {
+          "id:3": 719,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -156,
+          "y:3": -48
         }
       }
     },
@@ -60350,7 +60584,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
