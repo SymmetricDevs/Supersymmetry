@@ -2606,5 +2606,90 @@ public class FirstDegreeMaterials{
                 .components(Carbon, 1, Hydrogen, 3, Nitrogen, 1, Oxygen, 2)
                 .colorAverage()
                 .build();
+
+        RutileConcentrate = new Material.Builder(8485, "rutile_concentrate")
+                .dust()
+                .components(Rutile, 1)
+                .color(0x503f3e)
+                .build();
+
+        RutileConcentrate.setFormula("(TiO2)(?)", true);
+
+        UltramaficTailingSlurry = new Material.Builder(8486, "ultramafic_tailing_slurry")
+                .fluid()
+                .components(Water, 1, UltramaficTailings, 1)
+                .color(0x878170)
+                .build();
+
+        RutileSlurry = new Material.Builder(8487, "rutile_slurry")
+                .fluid()
+                .components(Rutile, 1, Water, 1)
+                .color(0xe8e6e2)
+                .build();
+
+        RutileSlurry.setFormula("(H2O)(TiO2)(?)", true);
+
+        ImpureTitaniumTetrachloride = new Material.Builder(8488, "impure_titanium_tetrachloride")
+                .fluid()
+                .components(TitaniumTetrachloride, 1)
+                .color(0x54474a)
+                .build();
+
+        ImpureTitaniumTetrachloride.setFormula("(TiCl4)(?)", true);
+
+        DistilledTitaniumTetrachloride = new Material.Builder(8489, "distilled_titanium_tetrachloride")
+                .fluid()
+                .components(TitaniumTetrachloride, 1)
+                .color(0x8c6c73)
+                .build();
+
+        DistilledTitaniumTetrachloride.setFormula("(TiCl4)(?)", true);
+
+        VanadiumFreeTitaniumTetrachloride = new Material.Builder(8490, "vanadium_free_titanium_tetrachloride")
+                .fluid()
+                .components(TitaniumTetrachloride, 1)
+                .color(0xa16270)
+                .build();
+
+        VanadiumFreeTitaniumTetrachloride.setFormula("(TiCl4)(?)", true);
+
+        VanadiumOxydichloride = new Material.Builder(8491, "vanadium_oxydichloride")
+                .dust()
+                .components(Vanadium, 1, Oxygen, 1, Chlorine, 2)
+                .color(0x1c1294)
+                .build();
+
+        VanadiumOxytrichloride = new Material.Builder(8492, "vanadium_oxytrichloride")
+                .fluid()
+                .components(Vanadium, 1, Oxygen, 1, Chlorine, 3)
+                .color(0xbda51b)
+                .build();
+
+        GaseousIronIIIChloride = new Material.Builder(8493, "gaseous_iron_iii_chloride")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(590)
+                .components(Iron3Chloride, 1)
+                .color(0xba8f49)
+                .build();
+
+        GaseousTitaniumTetrachloride = new Material.Builder(8494, "gaseous_titanium_tetrachloride")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(1180)
+                .components(TitaniumTetrachloride, 1)
+                .color(0x8f4064)
+                .build();
+
+        TinTetrachloride = new Material.Builder(8495, "tin_tetrachloride")
+                .fluid()
+                .components(Tin, 1, Chlorine, 4)
+                .color(0x887866)
+                .build();
+
+        GaseousAluminiumTrichloride = new Material.Builder(8496, "gaseous_aluminium_trichloride")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(460)
+                .components(AluminiumTrichloride, 1)
+                .colorAverage()
+                .build();
     }
 }

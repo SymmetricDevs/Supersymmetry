@@ -1083,11 +1083,6 @@ public class UnknownCompositionMaterials {
                 .color(0x4f2b3f)
                 .build();
 
-        TitanylSulfateSolution = new Material.Builder(4206, "titanyl_sulfate_solution")
-                .fluid()
-                .color(0x544639)
-                .build();
-
         RutileSlurry = new Material.Builder(4207, "rutile_slurry")
                 .fluid()
                 .color(0x575544)
@@ -1203,5 +1198,40 @@ public class UnknownCompositionMaterials {
                 .color(0x9c7f73)
                 .colorAverage()
                 .build();
+
+        ImpureIlmeniteSlurry = new Material.Builder(4229, "impure_ilmenite_slurry")
+                .fluid()
+                .color(0x4a474c)
+                .build();
+
+        ImpureIlmeniteSlurry.setFormula("(H2O)(FeTiO3)(?)", true);
+
+        ImpureIlmeniteConcentrate = new Material.Builder(4230, "impure_ilmenite_concentrate")
+                .dust()
+                .color(0x4a474c).iconSet(ROUGH)
+                .build();
+
+        ImpureIlmeniteConcentrate.setFormula("(FeTiO3)(?)", true);
+
+        IlmeniteSlurry = new Material.Builder(4231, "ilmenite_slurry")
+                .fluid()
+                .color(0x6c7078)
+                .build();
+
+        IlmeniteSlurry.setFormula("(H2O)(FeTiO3)(?)", true);
+
+        TitanylSulfateSolution = new Material.Builder(4232, "titanyl_sulfate_solution")
+                .fluid()
+                .color(0x74561d)
+                .build();
+
+        TitanylSulfateSolution.setFormula("(H20)(TiO[SO4])(?)", true);
+
+        AcidicWastewater = new Material.Builder(4233, "acidic_wastewater")
+                .fluid()
+                .color(0xc88a41)
+                .build();
+
+        AcidicWastewater.setFormula("(H20)(?)", true);
     }
 }

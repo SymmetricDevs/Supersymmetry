@@ -34,8 +34,6 @@ mods.gregtech.cutter.removeByInput(7, [item('minecraft:cobblestone')], [fluid('l
 mods.gregtech.cutter.removeByInput(7, [item('minecraft:cobblestone')], [fluid('distilled_water') * 3])
 // Hot Titanium Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustTitaniumTrifluoride') * 4], [fluid('hydrogen') * 3000])
-// Hot Titanium Ingot * 1
-mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustMagnesium') * 2], [fluid('titanium_tetrachloride') * 1000])
 // Heated Water * 1000
 mods.gregtech.fluid_heater.removeByInput(2048, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('water') * 1000])
 // Beryllium Oxide Plate * 1

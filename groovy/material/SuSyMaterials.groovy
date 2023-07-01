@@ -348,6 +348,18 @@ class SuSyMaterials {
         public static Material CesiumMolecularSieve;
         public static Material SaturatedPotassiumMolecularSieve;
         public static Material SaturatedCesiumMolecularSieve;
+        public static Material ImpureIlmeniteSlurry;
+        public static Material ImpureIlmeniteConcentrate;
+        public static Material IlmeniteSlurry;
+        public static Material AcidicWastewater;
+        public static Material ImpureTitaniumTetrachloride;
+        public static Material DistilledTitaniumTetrachloride;
+        public static Material VanadiumFreeTitaniumTetrachloride;
+        public static Material RutileConcentrate;
+        public static Material UltramaficTailingSlurry;
+        public static Material GaseousIronIIIChloride;
+        public static Material GaseousTitaniumTetrachloride;
+        public static Material GaseousAluminiumTrichloride;
 
         // Petrochem Materials
 

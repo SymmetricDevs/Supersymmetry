@@ -1400,6 +1400,23 @@ material.potassium_molecular_sieve=Potassium-Loaded Molecular Sieve
 material.cesium_molecular_sieve=Cesium-Loaded Molecular Sieve
 material.saturated_potassium_molecular_sieve=Saturated Potassium-Loaded Molecular Sieve
 material.saturated_cesium_molecular_sieve=Saturated Cesium-Loaded Molecular Sieve
+material.impure_ilmenite_slurry=Impure Ilmenite Slurry
+material.impure_ilmenite_concentrate=Impure Ilmenite Concentrate
+material.ilmenite_slurry=Ilmenite Slurry
+material.titanyl_sulfate_solution=Titanyl Sulfate Solution
+material.acidic_wastewater=Acidic Wastewater
+material.rutile_concentrate=Rutile Concentrate
+material.ultramafic_tailing_slurry=Ultramafic Tailing Slurry
+material.rutile_slurry=Rutile Slurry
+material.impure_titanium_tetrachloride=Impure Titanium Tetrachloride
+material.distilled_titanium_tetrachloride=Distilled Titanium Tetrachloride
+material.vanadium_free_titanium_tetrachloride=Vanadium-Free Titanium Tetrachloride
+material.vanadium_oxydichloride=Vanadium Oxydichloride
+material.vanadium_oxytrichloride=Vanadium Oxytrichloride
+material.gaseous_iron_iii_chloride=Gaseous Iron III Chloride
+material.gaseous_titanium_tetrachloride=Gaseous Titanium Tetrachloride
+material.tin_tetrachloride=Tin Tetrachloride
+material.gaseous_aluminium_trichloride=Gaseous Aluminium Trichloride
 
 # Isotopes
 
@@ -1742,6 +1759,7 @@ metaitem.crop.cotton.name=Cotton
 metaitem.vti_rich_pig_iron.name=Vanadium/Titanium-Rich Pig Iron
 metaitem.vt_slag.name=Vanadium/Titanium-Rich Slag
 metaitem.titanium_sponge.name=Titanium Sponge
+metaitem.sponge.titanium.crude.name=Crude Titanium Sponge
 
 # Multiblocked
 
