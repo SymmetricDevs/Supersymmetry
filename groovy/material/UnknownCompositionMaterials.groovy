@@ -1150,7 +1150,7 @@ public class UnknownCompositionMaterials {
 
         GasolineAntioxidants = new Material.Builder(4219, "gasoline_antioxidants")
                 .fluid()
-                .color(0x48485e)
+                .color(0x380b0d)
                 .build();
 
         GasolineAntiknock = new Material.Builder(4220, "gasoline_antiknock")
