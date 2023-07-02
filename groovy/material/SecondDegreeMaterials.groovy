@@ -453,5 +453,11 @@ public class SecondDegreeMaterials {
                 .components(AmmoniumIronIISulfate, 1, Water, 1)
                 .color(0x70cc6e)
                 .build();
+
+        DiluteAmmoniumSulfateSolution = new Material.Builder(13072, "dilute_ammonium_sulfate_solution")
+                .fluid()
+                .components(AmmoniumSulfate, 1, Water, 2)
+                .colorAverage()
+                .build();
     }
 }

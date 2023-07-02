@@ -57,7 +57,7 @@ material.pbi_waste=Polybenzimidazole Waste
 material.hydroxylamine=Hydroxylamine
 material.cyclohexanone=Cyclohexanone
 material.diluted_cyclohexanone=Diluted Cyclohexanone
-material.caprolactam_oxime_solution=Caprolactam Oxime Solution
+material.caprolactam_solution=Caprolactam Solution
 material.bisphenola_diglycidyl_ether=Bisphenol A Diglycidyl Ether
 material.impure_epoxy_resin=Impure Epoxy Resin
 material.uncured_epoxy_resin=Uncured Epoxy Resin
@@ -937,6 +937,7 @@ material.soda_ash_roasted_vanadinite=Soda Ash Roasted Vanadinite
 material.leached_salt_roasted_vanadinite=Leached Salt Roasted Vanadinite
 material.leached_soda_ash_roasted_vanadinite=Leached Soda Ash Roasted Vanadinite
 material.lead_chloride_solution=Lead Chloride Solution
+material.polycaprolactam=Polycaprolactam (Nylon)
 
 # Thermodynamics
 
@@ -1305,6 +1306,9 @@ material.chromium_catholyte=Chromium Catholyte
 material.chromium_anolyte=Chromium Anolyte
 material.reduced_chromium_anolyte=Reduced Chromium Anolyte
 material.chromium_mother_liquor=Chromium Mother Liquor
+material.neutralized_caprolactam_solution=Neutralized Caprolactam Solution
+material.extracted_caprolactam_solution=Extracted Caprolactam Solution
+material.dilute_ammonium_sulfate_solution=Dilute Ammonium Sulfate Solution
 
 # Isotopes
 

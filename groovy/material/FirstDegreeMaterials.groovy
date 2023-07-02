@@ -192,6 +192,8 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
+        AmmoniumSulfate.setFormula("(NH4)2SO4", true)
+
         SodiumNitrate = new Material.Builder(8109, 'sodium_nitrate')
                 .dust().fluid()
                 .components(Sodium, 1, Nitrogen, 1, Oxygen, 3)

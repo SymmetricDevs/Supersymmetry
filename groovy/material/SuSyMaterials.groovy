@@ -828,6 +828,7 @@ class SuSyMaterials {
         public static Material AgedAmmoniumChromeAlumSolution;
         public static Material PurifiedAmmoniumChromeAlumSolution;
         public static Material AmmoniumIronIISulfateSolution;
+        public static Material DiluteAmmoniumSulfateSolution;
 
         // Organic Chemistry Materials
 
@@ -883,7 +884,7 @@ class SuSyMaterials {
         public static Material Hydroxylamine;
         public static Material DilutedCyclohexanone;
         public static Material Cyclohexanone;
-        public static Material CaprolactamOximeSolution;
+        public static Material CaprolactamSolution;
         public static Material BisphenolADiglycidylEther;
         public static Material ImpureEpoxyResin;
         public static Material UncuredEpoxyResin;
@@ -1049,6 +1050,8 @@ class SuSyMaterials {
         public static Material PotassiumIsopropylXanthate;
         public static Material PotassiumEthylXanthate;
         public static Material TributylPhosphate;
+        public static Material NeutralizedCaprolactamSolution;
+        public static Material ExtractedCaprolactamSolution;
 
         // Third Degree Materials
 
