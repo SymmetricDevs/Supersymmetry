@@ -1195,12 +1195,6 @@ public class UnknownCompositionMaterials {
                 .color(0x9c7f73)
                 .build();
 
-        DirtyMolecularSieve = new Material.Builder(4228, 'dirty_molecular_sieve')
-                .dust()
-                .color(0x737373)
-                .iconSet(DULL)
-                .build();
-
         ImpureIlmeniteSlurry = new Material.Builder(4229, "impure_ilmenite_slurry")
                 .fluid()
                 .color(0x4a474c)
@@ -1235,5 +1229,12 @@ public class UnknownCompositionMaterials {
                 .build();
 
         AcidicWastewater.setFormula("(H20)(?)", true);
+
+        DirtyMolecularSieve = new Material.Builder(4234, 'dirty_molecular_sieve')
+                .dust()
+                .color(0x737373)
+                .iconSet(DULL)
+                .build();
+
     }
 }
