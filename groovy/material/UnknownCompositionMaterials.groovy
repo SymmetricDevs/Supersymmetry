@@ -1177,26 +1177,28 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .iconSet(SHINY)
                 .color(0x7c8e94)
-                .colorAverage()
                 .build();
 
         CesiumMolecularSieve = new Material.Builder(4226, 'cesium_molecular_sieve')
                 .dust()
                 .iconSet(SHINY)
                 .color(0x9c7f73)
-                .colorAverage()
                 .build();
 
         SaturatedPotassiumMolecularSieve = new Material.Builder(4227, 'saturated_potassium_molecular_sieve')
                 .dust()
                 .color(0x7c8e94)
-                .colorAverage()
                 .build();
 
         SaturatedCesiumMolecularSieve = new Material.Builder(4228, 'saturated_cesium_molecular_sieve')
                 .dust()
                 .color(0x9c7f73)
-                .colorAverage()
+                .build();
+
+        DirtyMolecularSieve = new Material.Builder(4228, 'dirty_molecular_sieve')
+                .dust()
+                .color(0x737373)
+                .iconSet(DULL)
                 .build();
 
         ImpureIlmeniteSlurry = new Material.Builder(4229, "impure_ilmenite_slurry")

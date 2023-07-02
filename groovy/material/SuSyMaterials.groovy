@@ -360,6 +360,7 @@ class SuSyMaterials {
         public static Material GaseousIronIIIChloride;
         public static Material GaseousTitaniumTetrachloride;
         public static Material GaseousAluminiumTrichloride;
+        public static Material DirtyMolecularSieve;
 
         // Petrochem Materials
 
