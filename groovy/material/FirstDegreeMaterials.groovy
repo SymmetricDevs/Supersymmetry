@@ -796,6 +796,7 @@ public class FirstDegreeMaterials{
 
         RaneyNickel = new Material.Builder(8206, "raney_nickel")
                 .dust()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Nickel, 1, Aluminium, 1)
                 .color(0x858aa1)
                 .build()
@@ -803,7 +804,8 @@ public class FirstDegreeMaterials{
         ActivatedRaneyNickel = new Material.Builder(8207, "activated_raney_nickel")
                 .dust()
                 .iconSet(SHINY)
-                .components(Nickel, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Nickel, 1, Aluminium, 1)
                 .color(0xa9aec4)
                 .build()
 

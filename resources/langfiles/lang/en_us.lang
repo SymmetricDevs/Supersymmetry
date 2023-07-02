@@ -1580,6 +1580,9 @@ metaitem.baseenrichednaquadahtriniumeuropiumduranide.name=Base Enriched Naquadah
 metaitem.assemblyrutheniumtriniumamericiumneutronate.name=Ruthenium Trinium Americium Neutronate Assembly
 metaitem.baserutheniumtriniumamericiumneutronate.name=Base Ruthenium Trinium Americium Neutronate Superconductor
 
+metaitem.crucible.boron.nitride=Pyrolytic Boron Nitride Crucible
+material.crucible.graphite=Graphite Crucible
+
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
 metaitem.raw_diamond.name=Raw Diamond
