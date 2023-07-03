@@ -563,6 +563,12 @@ for (FluidFuel in FluidFuels) {
             .buildAndRegister();
 }
 
+recipemap('flare_stack').recipeBuilder()
+        .fluidInputs(liquid('creosote') * 100)
+        .duration(30)
+        .EUt(7)
+        .buildAndRegister();
+
 for (WorkingFluid in WorkingFluids) {
     recipemap('heat_exchanger').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
