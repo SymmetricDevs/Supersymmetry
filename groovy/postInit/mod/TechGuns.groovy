@@ -135,7 +135,28 @@ def name_removals = [
 	"techguns:simplemachine_8_camo_bench",
 	"techguns:simplemachine_9_upgrade_bench",
 	"techguns:simplemachine2_9_armor_bench",
-	"techguns:itemshared_60_heavycloth"
+	"techguns:itemshared_60_heavycloth",
+	"techguns:t2_commando_helmet"
+	"techguns:t2_commando_chestplate"
+	"techguns:t2_commando_leggings"
+	"techguns:t2_commando_boots"
+	"techguns:t3_exo_helmet"
+	"techguns:t3_exo_chestplate"
+	"techguns:t3_exo_leggings"
+	"techguns:t3_exo_boots"
+	"techguns:t3_miner_helmet"
+	"techguns:t3_miner_chestplate"
+	"techguns:t3_miner_leggings"
+	"techguns:t3_miner_boots"
+	"techguns:t4_praetor_helmet"
+	"techguns:t4_praetor_chestplate"
+	"techguns:t4_praetor_leggings"
+	"techguns:t4_praetor_boots"
+
+	"techguns:hazmat_helmet"
+	"techguns:hazmat_chestplate"
+	"techguns:hazmat_leggings"
+	"techguns:hazmat_boots"
 ]
 
 for (name in name_removals) {
@@ -230,30 +251,6 @@ crafting.replaceShaped("techguns:itemshared_42_woodstock", item('techguns:itemsh
 	[null, null, null],
 	[ore('craftingToolFile'), ore('logWood'), ore('craftingToolSaw')],
 	[null, null, null]
-])
-
-crafting.replaceShaped("techguns:t1_combat_helmet", item('techguns:t1_combat_helmet'), [
-	[null, null, null],
-	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
-	[item('techguns:itemshared', 60), ore('craftingToolHardHammer'), item('techguns:itemshared', 60)]
-])
-
-crafting.replaceShaped("techguns:t1_combat_chestplate", item('techguns:t1_combat_chestplate'), [
-	[item('techguns:itemshared', 60), ore('craftingToolHardHammer'), item('techguns:itemshared', 60)],
-	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
-	[item('techguns:itemshared', 60), item('techguns:itemshared', 60), item('techguns:itemshared', 60)]
-])
-
-crafting.replaceShaped("techguns:t1_combat_leggings", item('techguns:t1_combat_leggings'), [
-	[ore('plateIron'), ore('plateIron'), ore('plateIron')],
-	[item('techguns:itemshared', 60), ore('craftingToolHardHammer'), item('techguns:itemshared', 60)],
-	[item('techguns:itemshared', 60), null, item('techguns:itemshared', 60)]
-])
-
-crafting.replaceShaped("techguns:t1_combat_boots", item('techguns:t1_combat_boots'), [
-	[null, null, null],
-	[ore('plateIron'), ore('craftingToolHardHammer'), ore('plateIron')],
-	[item('techguns:itemshared', 60), null, item('techguns:itemshared', 60)]
 ])
 
 crafting.replaceShaped("techguns:t1_miner_helmet", item('techguns:t1_miner_helmet'), [
@@ -982,10 +979,10 @@ crafting.addShaped("iron_barrel", item('techguns:itemshared:38'), [
 		[ore('craftingToolScrewdriver'), ore('stickIron'), ore('craftingToolHardHammer')]
 ]);
 
-crafting.addShaped("heavy_cloth", item('techguns:itemshared:60')*3, [
-		[ore('leather'), ore('leather'), ore('leather')],
+crafting.addShaped("heavy_cloth", item('techguns:itemshared:60')*6, [
+		[ore('platePolycaprolactam'), ore('platePolycaprolactam'), ore('platePolycaprolactam')],
 		[ore('wireFineSteel'), ore('wireFineSteel'), ore('wireFineSteel')],
-		[ore('leather'), ore('leather'), ore('leather')]
+		[ore('platePolycaprolactam'), ore('platePolycaprolactam'), ore('platePolycaprolactam')]
 ]);
 
 crafting.addShaped("steel_barrel", item('techguns:itemshared:39'), [
@@ -999,24 +996,24 @@ crafting.addShaped("techguns_iron_receiver", item('techguns:itemshared:33'), [
 		[null, ore('screwIron'), ore('screwIron')]
 ]);
 
-crafting.replaceShaped("techguns:t2_combat_helmet", item('techguns:t2_combat_helmet'), [
+crafting.replaceShaped("techguns:t1_combat_helmet", item('techguns:t1_combat_helmet'), [
 		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
 		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')]
 ]);
 
-crafting.replaceShaped("techguns:t2_combat_chestplate", item('techguns:t2_combat_chestplate'), [
+crafting.replaceShaped("techguns:t1_combat_chestplate", item('techguns:t1_combat_chestplate'), [
 		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
 		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
 		[item('techguns:itemshared:60'), item('techguns:itemshared:60'), item('techguns:itemshared:60')]
 ]);
 
-crafting.replaceShaped("techguns:t2_combat_leggings", item('techguns:t2_combat_leggings'), [
+crafting.replaceShaped("techguns:t1_combat_leggings", item('techguns:t1_combat_leggings'), [
 		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
 		[item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
 		[item('techguns:itemshared:60'), null, item('techguns:itemshared:60')]
 ]);
 
-crafting.replaceShaped("techguns:t2_combat_boots", item('techguns:t2_combat_boots'), [
+crafting.replaceShaped("techguns:t1_combat_boots", item('techguns:t1_combat_boots'), [
 		[item('techguns:itemshared:60'), null, item('techguns:itemshared:60')],
 		[ore('plateSteel'), ore('craftingToolHardHammer'), ore('plateSteel')]
 ]);
@@ -1056,6 +1053,63 @@ recipemap('forming_press').recipeBuilder()
 		.duration(30)
 		.EUt(30)
 		.buildAndRegister();
+
+recipemap('roaster').recipeBuilder()
+		.inputs(item('minecraft:leather'))
+		.fluidInputs(fluid('water') * 1000)
+		.outputs(item('techguns:itemshared:77'))
+		.duration(85)
+		.EUt(7)
+		.buildAndRegister();
+
+crafting.addShaped("bound_leather", metaitem('bound_leather'), [
+		[item('techguns:itemshared:77'), item('techguns:itemshared:77'), item('techguns:itemshared:77')],
+		[item('techguns:itemshared:77'), item('minecraft:string'), item('techguns:itemshared:77')],
+		[item('techguns:itemshared:77'), item('techguns:itemshared:77'), item('techguns:itemshared:77')]
+]);
+
+item('techguns:itemshared', 77)
+
+recipemap('canner').recipeBuilder()
+		.inputs(item('techguns:itemshared', 3) * 4)
+		.inputs(metaitem('dustPhosphorus'))
+		.outputs(item('techguns:itemshared', 110) * 4)
+		.duration(100)
+		.EUt(30)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.inputs(ore('plateKevlar') * 5)
+		.inputs(ore('plateBoronNitride') * 2)
+		.outputs(item('techguns:t2_combat_helmet'))
+		.duration(100)
+		.EUt(960)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.inputs(ore('plateKevlar') * 8)
+		.inputs(ore('plateBoronNitride') * 4)
+		.outputs(item('techguns:t2_combat_chestplate'))
+		.duration(100)
+		.EUt(960)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.inputs(ore('plateKevlar') * 7)
+		.inputs(ore('plateBoronNitride') * 3)
+		.outputs(item('techguns:t2_combat_leggings'))
+		.duration(100)
+		.EUt(960)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.inputs(ore('plateKevlar') * 4)
+		.inputs(ore('plateBoronNitride') * 2)
+		.outputs(item('techguns:t2_combat_boots'))
+		.duration(100)
+		.EUt(960)
+		.buildAndRegister();
+
 
 
 //-------------------Change TechGuns damage values to be better suited with SUSy progression----------------
