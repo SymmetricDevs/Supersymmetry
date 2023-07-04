@@ -1349,12 +1349,6 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        ExtractedCaprolactamSolution = new Material.Builder(15218, "extracted_caprolactam_solution")
-                .fluid()
-                .components(Caprolactam, 1, Toluene, 1)
-                .colorAverage()
-                .build();
-
         TertButylAlcohol = new Material.Builder(15218, "tert_butyl_alcohol")
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
@@ -1439,6 +1433,12 @@ public class OrganicChemistryMaterials {
         Chloroethane = new Material.Builder(15229, "chloroethane")
                 .fluid(FluidTypes.GAS)
                 .components(Carbon, 2, Hydrogen, 5, Chlorine, 1)
+                .colorAverage()
+                .build();
+
+        ExtractedCaprolactamSolution = new Material.Builder(15230, "extracted_caprolactam_solution")
+                .fluid()
+                .components(Caprolactam, 1, Toluene, 1)
                 .colorAverage()
                 .build();
     }
