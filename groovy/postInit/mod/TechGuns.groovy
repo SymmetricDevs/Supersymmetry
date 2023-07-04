@@ -140,6 +140,10 @@ def name_removals = [
 	"techguns:t2_commando_chestplate",
 	"techguns:t2_commando_leggings",
 	"techguns:t2_commando_boots",
+	"techguns:t2_combat_helmet",
+	"techguns:t2_combat_chestplate",
+	"techguns:t2_combat_leggings",
+	"techguns:t2_combat_boots",
 	"techguns:t3_exo_helmet",
 	"techguns:t3_exo_chestplate",
 	"techguns:t3_exo_leggings",
@@ -1078,6 +1082,7 @@ recipemap('canner').recipeBuilder()
 		.buildAndRegister();
 
 recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(1)
 		.inputs(ore('plateKevlar') * 5)
 		.inputs(ore('plateBoronNitride') * 2)
 		.outputs(item('techguns:t2_combat_helmet'))
@@ -1086,6 +1091,7 @@ recipemap('weapons_factory').recipeBuilder()
 		.buildAndRegister();
 
 recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(2)
 		.inputs(ore('plateKevlar') * 8)
 		.inputs(ore('plateBoronNitride') * 4)
 		.outputs(item('techguns:t2_combat_chestplate'))
@@ -1094,6 +1100,7 @@ recipemap('weapons_factory').recipeBuilder()
 		.buildAndRegister();
 
 recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(3)
 		.inputs(ore('plateKevlar') * 7)
 		.inputs(ore('plateBoronNitride') * 3)
 		.outputs(item('techguns:t2_combat_leggings'))
@@ -1102,6 +1109,7 @@ recipemap('weapons_factory').recipeBuilder()
 		.buildAndRegister();
 
 recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(4)
 		.inputs(ore('plateKevlar') * 4)
 		.inputs(ore('plateBoronNitride') * 2)
 		.outputs(item('techguns:t2_combat_boots'))

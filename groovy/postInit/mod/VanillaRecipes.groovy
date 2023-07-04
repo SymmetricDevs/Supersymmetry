@@ -679,7 +679,7 @@ crafting.replaceShaped('gregtech:iron_chestplate', item('minecraft:iron_chestpla
 		[ore('plateIron'), ore('leather'), ore('plateIron')],
 		[ore('plateIron'), ore('plateIron'), ore('plateIron')]])
 
-crafting.replaceShaped('gregtech:iron_leggings', item('minecraft:iron_chestplate'), [
-		[ore('screwIron'), null, ore('screwIron')],
+crafting.replaceShaped('gregtech:iron_leggings', item('minecraft:iron_leggings'), [
+		[ore('screwIron'), ore('plateIron'), ore('screwIron')],
 		[ore('plateIron'), ore('leather'), ore('plateIron')],
-		[ore('plateIron'), ore('plateIron'), ore('plateIron')]])
+		[ore('plateIron'), null, ore('plateIron')]])
