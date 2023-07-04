@@ -136,26 +136,25 @@ def name_removals = [
 	"techguns:simplemachine_9_upgrade_bench",
 	"techguns:simplemachine2_9_armor_bench",
 	"techguns:itemshared_60_heavycloth",
-	"techguns:t2_commando_helmet"
-	"techguns:t2_commando_chestplate"
-	"techguns:t2_commando_leggings"
-	"techguns:t2_commando_boots"
-	"techguns:t3_exo_helmet"
-	"techguns:t3_exo_chestplate"
-	"techguns:t3_exo_leggings"
-	"techguns:t3_exo_boots"
-	"techguns:t3_miner_helmet"
-	"techguns:t3_miner_chestplate"
-	"techguns:t3_miner_leggings"
-	"techguns:t3_miner_boots"
-	"techguns:t4_praetor_helmet"
-	"techguns:t4_praetor_chestplate"
-	"techguns:t4_praetor_leggings"
-	"techguns:t4_praetor_boots"
-
-	"techguns:hazmat_helmet"
-	"techguns:hazmat_chestplate"
-	"techguns:hazmat_leggings"
+	"techguns:t2_commando_helmet",
+	"techguns:t2_commando_chestplate",
+	"techguns:t2_commando_leggings",
+	"techguns:t2_commando_boots",
+	"techguns:t3_exo_helmet",
+	"techguns:t3_exo_chestplate",
+	"techguns:t3_exo_leggings",
+	"techguns:t3_exo_boots",
+	"techguns:t3_miner_helmet",
+	"techguns:t3_miner_chestplate",
+	"techguns:t3_miner_leggings",
+	"techguns:t3_miner_boots",
+	"techguns:t4_praetor_helmet",
+	"techguns:t4_praetor_chestplate",
+	"techguns:t4_praetor_leggings",
+	"techguns:t4_praetor_boots",
+	"techguns:hazmat_helmet",
+	"techguns:hazmat_chestplate",
+	"techguns:hazmat_leggings",
 	"techguns:hazmat_boots"
 ]
 
