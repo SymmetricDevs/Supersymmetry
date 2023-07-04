@@ -57,7 +57,7 @@ material.pbi_waste=Polybenzimidazole Waste
 material.hydroxylamine=Hydroxylamine
 material.cyclohexanone=Cyclohexanone
 material.diluted_cyclohexanone=Diluted Cyclohexanone
-material.caprolactam_oxime_solution=Caprolactam Oxime Solution
+material.caprolactam_solution=Caprolactam Solution
 material.bisphenola_diglycidyl_ether=Bisphenol A Diglycidyl Ether
 material.impure_epoxy_resin=Impure Epoxy Resin
 material.uncured_epoxy_resin=Uncured Epoxy Resin
@@ -937,6 +937,7 @@ material.soda_ash_roasted_vanadinite=Soda Ash Roasted Vanadinite
 material.leached_salt_roasted_vanadinite=Leached Salt Roasted Vanadinite
 material.leached_soda_ash_roasted_vanadinite=Leached Soda Ash Roasted Vanadinite
 material.lead_chloride_solution=Lead Chloride Solution
+material.polycaprolactam=Polycaprolactam (Nylon)
 
 # Thermodynamics
 
@@ -1417,6 +1418,9 @@ material.gaseous_iron_iii_chloride=Gaseous Iron III Chloride
 material.gaseous_titanium_tetrachloride=Gaseous Titanium Tetrachloride
 material.tin_tetrachloride=Tin Tetrachloride
 material.gaseous_aluminium_trichloride=Gaseous Aluminium Trichloride
+material.neutralized_caprolactam_solution=Neutralized Caprolactam Solution
+material.extracted_caprolactam_solution=Extracted Caprolactam Solution
+material.dilute_ammonium_sulfate_solution=Dilute Ammonium Sulfate Solution
 
 # Isotopes
 
@@ -1687,6 +1691,9 @@ metaitem.assemblyenrichednaquadahtriniumeuropiumduranide.name=Enriched Naquadah 
 metaitem.baseenrichednaquadahtriniumeuropiumduranide.name=Base Enriched Naquadah Trinium Europium Duranide Superconductor
 metaitem.assemblyrutheniumtriniumamericiumneutronate.name=Ruthenium Trinium Americium Neutronate Assembly
 metaitem.baserutheniumtriniumamericiumneutronate.name=Base Ruthenium Trinium Americium Neutronate Superconductor
+
+metaitem.crucible.boron.nitride=Pyrolytic Boron Nitride Crucible
+material.crucible.graphite=Graphite Crucible
 
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor

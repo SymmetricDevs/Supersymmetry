@@ -192,6 +192,8 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
+        AmmoniumSulfate.setFormula("(NH4)2SO4", true)
+
         SodiumNitrate = new Material.Builder(8109, 'sodium_nitrate')
                 .dust().fluid()
                 .components(Sodium, 1, Nitrogen, 1, Oxygen, 3)
@@ -796,6 +798,7 @@ public class FirstDegreeMaterials{
 
         RaneyNickel = new Material.Builder(8206, "raney_nickel")
                 .dust()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Nickel, 1, Aluminium, 1)
                 .color(0x858aa1)
                 .build()
@@ -803,7 +806,8 @@ public class FirstDegreeMaterials{
         ActivatedRaneyNickel = new Material.Builder(8207, "activated_raney_nickel")
                 .dust()
                 .iconSet(SHINY)
-                .components(Nickel, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Nickel, 1, Aluminium, 1)
                 .color(0xa9aec4)
                 .build()
 

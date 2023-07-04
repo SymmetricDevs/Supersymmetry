@@ -471,5 +471,11 @@ public class SecondDegreeMaterials {
                 .components(Nitromethane, 3, Water, 1)
                 .colorAverage()
                 .build();
+
+        DiluteAmmoniumSulfateSolution = new Material.Builder(13075, "dilute_ammonium_sulfate_solution")
+                .fluid()
+                .components(AmmoniumSulfate, 1, Water, 2)
+                .colorAverage()
+                .build();
     }
 }

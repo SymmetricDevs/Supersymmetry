@@ -138,9 +138,10 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        ImpureCaprolactam = new Material.Builder(15019, 'impure_caprolactam')
-                .dust()
-                .color(0x242119)
+        TributylPhosphate = new Material.Builder(15019, "tributyl_phosphate")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 27, Oxygen, 4, Phosphorus, 1)
+                .color(0xf5e3b3)
                 .build();
 
         CrudeStyrene = new Material.Builder(15020, "crude_styrene")
@@ -382,9 +383,9 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        CaprolactamOximeSolution = new Material.Builder(15062, 'caprolactam_oxime_solution')
+        CaprolactamSolution = new Material.Builder(15062, 'caprolactam_solution')
                 .fluid()
-                .components(SulfuricAcid, 1, CaprolactamOxime, 1)
+                .components(SulfuricAcid, 1, Caprolactam, 1)
                 .colorAverage()
                 .build();
 
@@ -1342,10 +1343,16 @@ public class OrganicChemistryMaterials {
                 .color(0xb3af34)
                 .build();
 
-        TributylPhosphate = new Material.Builder(15217, "tributyl_phosphate")
+        NeutralizedCaprolactamSolution = new Material.Builder(15217, "neutralized_caprolactam_solution")
                 .fluid()
-                .components(Carbon, 12, Hydrogen, 27, Oxygen, 4, Phosphorus, 1)
-                .color(0xf5e3b3)
+                .components(AmmoniumSulfate, 1, Caprolactam, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        ExtractedCaprolactamSolution = new Material.Builder(15218, "extracted_caprolactam_solution")
+                .fluid()
+                .components(Caprolactam, 1, Toluene, 1)
+                .colorAverage()
                 .build();
 
         TertButylAlcohol = new Material.Builder(15218, "tert_butyl_alcohol")
