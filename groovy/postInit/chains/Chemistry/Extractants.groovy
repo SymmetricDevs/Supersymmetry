@@ -257,6 +257,25 @@ DISTILLERY.recipeBuilder()
         .duration(80)
         .buildAndRegister()
 
+//HEXYLAMMONIUM ACETATE
+BR.recipeBuilder()
+        .notConsumable(metaitem('dustActivatedRaneyNickel'))
+        .fluidInputs(fluid('n_hexadecanol') * 1000)
+        .fluidInputs(fluid('ammonia') * 1000)
+        .outputs(metaitem('dustNHexadecylamine'))
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(60)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .inputs(metaitem('dustNHexadecylamine'))
+        .fluidInputs(fluid('acetic_acid') * 1000)
+        .outputs(metaitem('dustNHexadecylammoniumAcetate'))
+        .duration(3)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
 //LIQUID-LIQUID EXTRACTANTS
 //TODGA
 CSTR.recipeBuilder()
@@ -346,8 +365,8 @@ DISTILLATION_TOWER.recipeBuilder()
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
 
-FBR.recipeBuilder()
-        .notConsumable(metaitem('catalystBedAlumina'))
+TBR.recipeBuilder()
+        .notConsumable(metaitem('dustActivatedRaneyNickel'))
         .fluidInputs(fluid('n_octanol') * 50)
         .fluidInputs(fluid('ammonia') * 50)
         .fluidOutputs(fluid('diluted_octylamine') * 100)
