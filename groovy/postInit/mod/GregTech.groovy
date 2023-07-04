@@ -573,6 +573,13 @@ mods.gregtech.macerator.recipeBuilder()
         .EUt(7)
         .buildAndRegister();
 
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('susy:resource_block', 13))
+        .outputs(metaitem('dustPotashConcentrate') * 8)
+        .duration(240)
+        .EUt(7)
+        .buildAndRegister();
+
 mods.gregtech.sifter.recipeBuilder()
         .inputs(metaitem('dustNonMarineEvaporite'))
         .chancedOutput(metaitem('dustSalt'), 8000, 500)

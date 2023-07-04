@@ -1123,6 +1123,7 @@ public class OrganicChemistryMaterials {
 
         NDodecanol = new Material.Builder(15184, "n_dodecanol")
                 .fluid()
+                .fluidTemp(298)
                 .components(Carbon, 12, Hydrogen, 26, Oxygen, 1)
                 .color(0xbd6e2d)
                 .build();
@@ -1131,6 +1132,7 @@ public class OrganicChemistryMaterials {
 
         NTetradecanol = new Material.Builder(15185, "n_tetradecanol")
                 .fluid()
+                .fluidTemp(311)
                 .components(Carbon, 14, Hydrogen, 30, Oxygen, 1)
                 .color(0x2177ff)
                 .build();
@@ -1139,6 +1141,7 @@ public class OrganicChemistryMaterials {
 
         NHexadecanol = new Material.Builder(15186, "n_hexadecanol")
                 .fluid()
+                .fluidTemp(323)
                 .components(Carbon, 16, Hydrogen, 34, Oxygen, 1)
                 .color(0x824b1e)
                 .build();
@@ -1440,6 +1443,18 @@ public class OrganicChemistryMaterials {
                 .fluid()
                 .components(Caprolactam, 1, Toluene, 1)
                 .colorAverage()
+                .build();
+
+        NHexadecylamine = new Material.Builder(15218, "n_hexadecylamine")
+                .dust()
+                .components(Carbon, 16, Hydrogen, 35, Nitrogen, 1)
+                .color(0xcff5ff)
+                .build();
+
+        NHexadecylammoniumAcetate = new Material.Builder(15219, "n_hexadecylammonium_acetate")
+                .dust()
+                .components(Carbon, 16, Hydrogen, 39, Nitrogen, 1, Oxygen, 2)
+                .color(0xffd4d4)
                 .build();
     }
 }
