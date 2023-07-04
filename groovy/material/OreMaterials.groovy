@@ -546,5 +546,13 @@ public class OreMaterials{
                 .components(Manganese, 1, Carbon, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
+
+        Carnotite = new Material.Builder(7073, "carnotite")
+                .ore()
+                .components(Potassium, 2, Uranium235, 2, Oxygen, 12, Vanadium, 2, Water, 3)
+                .colorAverage()
+                .build();
+
+        Carnotite.setFormula("K2(UO2)2(VO4)2 * 3H2O", true)
     }
 }

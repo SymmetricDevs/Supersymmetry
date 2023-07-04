@@ -12,7 +12,7 @@ AUTOCLAVE = recipemap('autoclave')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 FLOTATION = recipemap('froth_flotation')
 CRYSTALLIZER = recipemap('crystallizer')
-SINTERING_RECIPES = recipemap("sintering_oven")
+ROTARY_KILN = recipemap("rotary_kiln")
 DRYER = recipemap("dryer")
 MACERATOR = recipemap("macerator")
 
@@ -201,28 +201,17 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 for (fuel in sintering_fuels) {
-    if (fuel.isPlasma) {
-        SINTERING_RECIPES.recipeBuilder()
-                .inputs(metaitem('dustLepidolite') * 20)
-                .inputs(metaitem('dustQuicklime') * 4)
-                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                .outputs(metaitem('dustRoastedLepidolite') * 20)
-                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                .duration(fuel.duration)
-                .EUt(Globals.voltAmps[3])
-                .buildAndRegister()
-
-    } else {
+    if (!fuel.isPlasma) {
         for (comburent in sintering_comburents) {
-            SINTERING_RECIPES.recipeBuilder()
+            ROTARY_KILN.recipeBuilder()
                     .inputs(metaitem('dustLepidolite') * 20)
                     .inputs(metaitem('dustQuicklime') * 4)
+                    .outputs(metaitem('dustRoastedLepidolite') * 20)
                     .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
                     .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-                    .outputs(metaitem('dustRoastedLepidolite') * 20)
                     .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
                     .duration(fuel.duration + comburent.duration)
-                    .EUt(Globals.voltAmps[1])
+                    .EUt(120)
                     .buildAndRegister()
         }
     }

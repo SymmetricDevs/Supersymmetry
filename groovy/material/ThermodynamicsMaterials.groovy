@@ -315,6 +315,221 @@ class ThermodynamicsMaterials {
                 .color(0xffffff)
                 .build();
 
+        CompressedAir = new Material.Builder(22802, "compressed_air")
+                .fluid(FluidTypes.GAS)
+                .color(0x95bee6)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
+                .build();
+
+        ChilledAir = new Material.Builder(22803, "chilled_air")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(273)
+                .color(0x7ea7cf)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
+                .build();
+
+        PurifiedAir = new Material.Builder(22804, "purified_air")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(273)
+                .color(0x6b97c2)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
+                .build();
+
+        BoostedAir = new Material.Builder(22805, "boosted_air")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(273)
+                .color(0x598ec2)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
+                .build();
+
+        ColdWater = new Material.Builder(22806, "cold_water")
+                .fluid()
+                .fluidTemp(273)
+                .color(0x6293e3)
+                .components(Hydrogen, 2, Oxygen, 1)
+                .build();
+
+        WasteGaseousNitrogen = new Material.Builder(22807, "waste_gaseous_nitrogen")
+                .fluid(FluidTypes.GAS)
+                .color(0x29a4a6)
+                .build();
+
+        PurfiedWasteGaseousNitrogen = new Material.Builder(22808, "purified_waste_gaseous_nitrogen")
+                .fluid(FluidTypes.GAS)
+                .color(0x37b1b3)
+                .build();
+
+        ChilledBoostedAir = new Material.Builder(22809, "chilled_boosted_air")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(203)
+                .color(0x4679ab)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
+                .build();
+
+        PartiallyLiquifiedAir = new Material.Builder(22810, "partially_liquified_air")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(100)
+                .color(0x4679ab)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
+                .build();
+
+        GaseousAirFeedstock = new Material.Builder(22811, "gaseous_air_feedstock")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(150)
+                .color(0x3b72a8)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
+                .build();
+
+        LiquidAirFeedstock = new Material.Builder(22812, "liquid_air_feedstock")
+                .fluid()
+                .fluidTemp(80)
+                .color(0x3b72a8)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
+                .build();
+
+        ChillyWasteGaseousNitrogen = new Material.Builder(22813, "chilly_waste_gaseous_nitrogen")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(243)
+                .color(0x3f9d9e)
+                .build();
+
+        SubcooledLiquidNitrogen = new Material.Builder(22814, "subcooled_liquid_nitrogen")
+                .fluid()
+                .fluidTemp(60)
+                .color(0x009a9c)
+                .build();
+
+        ColdWasteGaseousNitrogen = new Material.Builder(22815, "cold_waste_gaseous_nitrogen")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(223)
+                .color(0x367f80)
+                .build();
+
+        UntreatedLiquidOxygen = new Material.Builder(22816, "untreated_liquid_oxygen")
+                .fluid()
+                .fluidTemp(55)
+                .color(0x49a4d1)
+                .build();
+
+        UntreatedLiquidNitrogen = new Material.Builder(22817, "untreated_liquid_nitrogen")
+                .fluid()
+                .fluidTemp(60)
+                .color(0x029799)
+                .build();
+
+        OxygenRichLiquid = new Material.Builder(22818, "oxygen_rich_liquid")
+                .fluid()
+                .fluidTemp(55)
+                .color(0x67c6e0)
+                .build();
+
+        OxygenRichGas = new Material.Builder(22819, "oxygen_rich_gas")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(90)
+                .color(0x78d2eb)
+                .build();
+
+        NitrogenRichGas = new Material.Builder(22820, "nitrogen_rich_gas")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(120)
+                .color(0x7ee0dd)
+                .build();
+
+        ArgonRichGas = new Material.Builder(22821, "argon_rich_gas")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(140)
+                .color(0x6bc9aa)
+                .build();
+
+        OxygenRichVapor = new Material.Builder(22822, "oxygen_rich_vapor")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(170)
+                .color(0x92e1f7)
+                .build();
+
+        CrudeArgonVapor = new Material.Builder(22823, "crude_argon_vapor")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(160)
+                .color(0x78e3c0)
+                .build();
+
+        SubcooledOxygenRichLiquid = new Material.Builder(22824, "subcooled_oxygen_rich_liquid")
+                .fluid()
+                .fluidTemp(90)
+                .color(0x0dba0d)
+                .build();
+
+        CrudeLiquidKrypton = new Material.Builder(22825, "crude_liquid_krypton")
+                .fluid()
+                .fluidTemp(120)
+                .color(0x579e57)
+                .build();
+
+        RareGasRichFraction = new Material.Builder(22826, "rare_gas_rich_fraction")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(80)
+                .color(0xd3eb94)
+                .build();
+
+        CondensedRareGasRichFraction = new Material.Builder(22827, "condensed_rare_gas_rich_fraction")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(60)
+                .color(0xe3a56b)
+                .build();
+
+        CrudeNeonVapor = new Material.Builder(22828, "crude_neon_vapor")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(40)
+                .color(0xc77b7b)
+                .build();
+
+        GaseousCrudeKrypton = new Material.Builder(22829, "gaseous_crude_krypton")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(160)
+                .color(0x579e57)
+                .build();
+
+        ColdLiquidOxygen = new Material.Builder(22830, "cold_liquid_oxygen")
+                .fluid()
+                .fluidTemp(40)
+                .color(0x1f729c)
+                .build();
+
+        CompressedCrudeNeon = new Material.Builder(22831, "compressed_crude_neon")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(40)
+                .color(0xa65e5e)
+                .build();
+
+        PartiallyLiquefiedCrudeNeon = new Material.Builder(22832, "partially_liquefied_crude_neon")
+                .fluid()
+                .fluidTemp(30)
+                .color(0xb35959)
+                .build();
+
+        GaseousCrudeNeon = new Material.Builder(22833, "gaseous_crude_neon")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(35)
+                .color(0xbd5757)
+                .build();
+
+        LiquidCrudeNeon = new Material.Builder(22834, "liquid_crude_neon")
+                .fluid()
+                .fluidTemp(25)
+                .color(0x944444)
+                .build();
+
+        LiquidCrudeArgon = new Material.Builder(22835, "liquid_crude_argon")
+                .fluid()
+                .fluidTemp(90)
+                .color(0x0dba0d)
+                .build();
+
+        ColdGaseousNitrogen = new Material.Builder(22836, "cold_gaseous_nitrogen")
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(140)
+                .color(0x23b9ba)
+                .build();
     }
 }
 

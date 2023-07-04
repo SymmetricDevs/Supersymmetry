@@ -32,6 +32,14 @@ mods.gregtech.cutter.removeByInput(7, [item('minecraft:stone')], [fluid('distill
 mods.gregtech.cutter.removeByInput(7, [item('minecraft:cobblestone')], [fluid('lubricant')])
 // Cobblestone Slab * 2
 mods.gregtech.cutter.removeByInput(7, [item('minecraft:cobblestone')], [fluid('distilled_water') * 3])
+// Hot Titanium Ingot * 1
+mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustTitaniumTrifluoride') * 4], [fluid('hydrogen') * 3000])
+// Heated Water * 1000
+mods.gregtech.fluid_heater.removeByInput(2048, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('water') * 1000])
+// Beryllium Oxide Plate * 1
+mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('beryllium_oxide') * 144])
+// Beryllium Oxide Plate * 1
+mods.gregtech.compressor.removeByInput(2, [metaitem('dustBerylliumOxide')], null)
 
 def name_removals = [
         'gregtech:cover_fluid_voiding',
@@ -788,4 +796,20 @@ mods.gregtech.cutter.recipeBuilder()
         .outputs(item('minecraft:stone_slab', 3) * 2)
         .duration(25)
         .EUt(7)
+        .buildAndRegister();
+
+mods.gregtech.gas_collector.recipeBuilder()
+        .circuitMeta(4)
+        .fluidOutputs(fluid('air') * 10000)
+        .dimension(10)
+        .duration(200)
+        .EUt(16)
+        .buildAndRegister();
+
+mods.gregtech.fluid_heater.recipeBuilder()
+        .circuitMeta(2)
+        .fluidInputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('gtfo_heated_water') * 1000)
+        .duration(40)
+        .EUt(16)
         .buildAndRegister();

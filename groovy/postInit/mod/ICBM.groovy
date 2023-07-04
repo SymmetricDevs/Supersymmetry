@@ -237,8 +237,7 @@ Globals.solders.each { key, val ->
                 .inputs([
                         metaitem('fluid_cell')*8,
                         item('icbmclassic:explosives:6')*8,
-                        ore('plateStainlessSteel')*2,
-                        ore('plateStainlessSteel')*2
+                        ore('plateStainlessSteel')*4
                 ])
                 .fluidInputs(fluid(key) * val)
                 .fluidInputs(fuel)

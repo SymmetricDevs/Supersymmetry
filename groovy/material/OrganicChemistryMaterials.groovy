@@ -138,9 +138,10 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        ImpureCaprolactam = new Material.Builder(15019, 'impure_caprolactam')
-                .dust()
-                .color(0x242119)
+        TributylPhosphate = new Material.Builder(15019, "tributyl_phosphate")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 27, Oxygen, 4, Phosphorus, 1)
+                .color(0xf5e3b3)
                 .build();
 
         CrudeStyrene = new Material.Builder(15020, "crude_styrene")
@@ -382,9 +383,9 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        CaprolactamOximeSolution = new Material.Builder(15062, 'caprolactam_oxime_solution')
+        CaprolactamSolution = new Material.Builder(15062, 'caprolactam_solution')
                 .fluid()
-                .components(SulfuricAcid, 1, CaprolactamOxime, 1)
+                .components(SulfuricAcid, 1, Caprolactam, 1)
                 .colorAverage()
                 .build();
 
@@ -1345,10 +1346,103 @@ public class OrganicChemistryMaterials {
                 .color(0xb3af34)
                 .build();
 
-        TributylPhosphate = new Material.Builder(15217, "tributyl_phosphate")
+        NeutralizedCaprolactamSolution = new Material.Builder(15217, "neutralized_caprolactam_solution")
                 .fluid()
-                .components(Carbon, 12, Hydrogen, 27, Oxygen, 4, Phosphorus, 1)
-                .color(0xf5e3b3)
+                .components(AmmoniumSulfate, 1, Caprolactam, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        TertButylAlcohol = new Material.Builder(15218, "tert_butyl_alcohol")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        TertButylAlcohol.setFormula("(CH3)3COH", true)
+
+        ButylatedHydroxytoluene = new Material.Builder(15219, "butylated_hydroxytoluene")
+                .fluid()
+                .components(Carbon, 15, Hydrogen, 25, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        ButylatedHydroxytoluene.setFormula("((CH3)3C)2CH3C6H2OH", true)
+
+        DimethylTertButylphenol = new Material.Builder(15220, "dimethyl_tert_butylphenol")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 18, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        DimethylTertButylphenol.setFormula("(CH3)2(CH3)3C7H2OH", true)
+
+        AluminiumPhenolate = new Material.Builder(15221, "aluminium_phenolate")
+                .fluid()
+                .components(Carbon, 18, Hydrogen, 15, Aluminium, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        AluminiumPhenolate.setFormula("Al(OC6H5)3", true)
+
+        DiTertButylphenol = new Material.Builder(15222, "di_tert_butylphenol")
+                .fluid()
+                .components(Carbon, 14, Hydrogen, 22, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        DiTertButylphenol.setFormula("((CH3)3C)2C6H3OH", true)
+
+        IsoOctane = new Material.Builder(15223, "isooctane")
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 18)
+                .colorAverage()
+                .build();
+
+        IsoOctane.setFormula("(CH3)3CCH2CH(CH3)2", true)
+
+        PurifiedIsoprene = new Material.Builder(15224, "purified_isoprene")
+                .fluid()
+                .components(Carbon, 5, Hydrogen, 8)
+                .color(0x000000)
+                .build();
+
+        Cyclopentadiene = new Material.Builder(15225, "cyclopentadiene")
+                .fluid()
+                .components(Carbon, 5, Hydrogen, 6)
+                .color(0x403c32)
+                .build();
+
+        CyclopentadieneSolution = new Material.Builder(15226, "cyclopentadiene_solution")
+                .fluid()
+                .components(Cyclopentadiene, 1, Benzene, 1)
+                .colorAverage()
+                .build();
+
+        Ferrocene = new Material.Builder(15227, "ferrocene")
+                .dust()
+                .components(Carbon, 10, Hydrogen, 10, Iron, 1)
+                .color(0x403c32)
+                .build();
+
+        Ferrocene.setFormula("Fe(C5H5)2", true)
+
+        Polyisoprene = new Material.Builder(15228, "polyisoprene")
+                .dust()
+                .iconSet(SHINY)
+                .components(Carbon, 5, Hydrogen, 8)
+                .color(0x1f1f1f)
+                .build();
+
+        Chloroethane = new Material.Builder(15229, "chloroethane")
+                .fluid(FluidTypes.GAS)
+                .components(Carbon, 2, Hydrogen, 5, Chlorine, 1)
+                .colorAverage()
+                .build();
+
+        ExtractedCaprolactamSolution = new Material.Builder(15230, "extracted_caprolactam_solution")
+                .fluid()
+                .components(Caprolactam, 1, Toluene, 1)
+                .colorAverage()
                 .build();
 
         NHexadecylamine = new Material.Builder(15218, "n_hexadecylamine")

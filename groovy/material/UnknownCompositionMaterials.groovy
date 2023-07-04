@@ -63,7 +63,7 @@ public class UnknownCompositionMaterials {
         ExhaustSteam = new Material.Builder(4007, 'exhaust_steam')
                 .fluid(FluidTypes.GAS)
                 .color(0xc4c4c4)
-                .fluidTemp(1000)
+                .fluidTemp(400)
                 .build();
 
         SmokeBombMix = new Material.Builder(4008, 'smoke_bomb_mix')
@@ -1048,22 +1048,210 @@ public class UnknownCompositionMaterials {
                 .color(0x662e2e)
                 .build();
 
-        PotashConcentrate = new Material.Builder(4199, "potash_concentrate")
+        ImpureVTMSlurry = new Material.Builder(4199, "impure_vtm_slurry")
+                .fluid()
+                .color(0x2e1213)
+                .build();
+
+        VTMSlurry = new Material.Builder(4200, "vtm_slurry")
+                .fluid()
+                .color(0x52191b)
+                .build();
+
+        SiliconDioxideSlurry = new Material.Builder(4201, "silicon_dioxide_slurry")
+                .fluid()
+                .color(0x69675b)
+                .build();
+
+        VTMConcentrate = new Material.Builder(4202, "vtm_concentrate")
+                .dust()
+                .color(0x691e21)
+                .build();
+
+        VTSlag = new Material.Builder(4203, "vt_slag")
+                .dust()
+                .color(0x302222)
+                .build();
+
+        AlkaliVTSlag = new Material.Builder(4204, "alkali_vt_slag")
+                .dust()
+                .color(0x3b2531)
+                .build();
+
+        TitaniaSlag = new Material.Builder(4205, "titania_slag")
+                .dust()
+                .color(0x4f2b3f)
+                .build();
+
+        RutileSlurry = new Material.Builder(4207, "rutile_slurry")
+                .fluid()
+                .color(0x575544)
+                .build();
+
+        CarnotiteLeach = new Material.Builder(4208, "carnotite_leach")
+                .fluid()
+                .color(0x929c5c)
+                .build();
+
+        ReducedCarnotiteLeach = new Material.Builder(4209, "reduced_carnotite_leach")
+                .fluid()
+                .color(0x696840)
+                .build();
+
+        UraniumVanadiumExtractionMixture = new Material.Builder(4210, "uranium_vanadium_extraction_mixture")
+                .fluid()
+                .color(0xd4d03f)
+                .build();
+
+        UraniumVanadiumExtract = new Material.Builder(4211, "uranium_vanadium_extract")
+                .fluid()
+                .color(0x505e3a)
+                .build();
+
+        UraniumExtract = new Material.Builder(4212, "uranium_extract")
+                .fluid()
+                .color(0x4a6e3b)
+                .build();
+
+        AcidicVanadylSolution = new Material.Builder(4213, "acidic_vanadyl_solution")
+                .fluid()
+                .color(0x804221)
+                .build();
+
+        ImpureUranylCarbonateSolution = new Material.Builder(4214, "impure_uranyl_carbonate_solution")
+                .fluid()
+                .color(0x9cad37)
+                .build();
+
+        UranylCarbonateSolution = new Material.Builder(4215, "uranyl_carbonate_solution")
+                .fluid()
+                .color(0xbed14d)
+                .build();
+
+        UranylSulfateSolution = new Material.Builder(4216, "uranyl_sulfate_solution")
+                .fluid()
+                .color(0xb5a638)
+                .build();
+
+        TetraethylleadSludge = new Material.Builder(4217, "tetraethyllead_sludge")
+                .fluid()
+                .color(0x2b1e1e)
+                .build();
+
+        GasolineOxygenates = new Material.Builder(4218, "gasoline_oxygenates")
+                .fluid()
+                .color(0xb4c5e0)
+                .build();
+
+        GasolineAntioxidants = new Material.Builder(4219, "gasoline_antioxidants")
+                .fluid()
+                .color(0x380b0d)
+                .build();
+
+        GasolineAntiknock = new Material.Builder(4220, "gasoline_antiknock")
+                .fluid()
+                .color(0x48485e)
+                .build();
+
+        GasolineGeneralAdditives = new Material.Builder(4221, "gasoline_general_additives")
+                .fluid()
+                .color(0x718072)
+                .build();
+
+        MidgradeGasoline = new Material.Builder(4222, "midgrade_gasoline")
+                .fluid()
+                .color(0xc49735)
+                .build();
+
+        PremiumGasoline = new Material.Builder(4223, "premium_gasoline")
+                .fluid()
+                .color(0xdb8427)
+                .build();
+
+        SupremeGasoline = new Material.Builder(4224, "supreme_gasoline")
+                .fluid()
+                .color(0xf26d1b)
+                .build();
+
+        PotassiumMolecularSieve = new Material.Builder(4225, 'potassium_molecular_sieve')
+                .dust()
+                .iconSet(SHINY)
+                .color(0x7c8e94)
+                .build();
+
+        CesiumMolecularSieve = new Material.Builder(4226, 'cesium_molecular_sieve')
+                .dust()
+                .iconSet(SHINY)
+                .color(0x9c7f73)
+                .build();
+
+        SaturatedPotassiumMolecularSieve = new Material.Builder(4227, 'saturated_potassium_molecular_sieve')
+                .dust()
+                .color(0x7c8e94)
+                .build();
+
+        SaturatedCesiumMolecularSieve = new Material.Builder(4228, 'saturated_cesium_molecular_sieve')
+                .dust()
+                .color(0x9c7f73)
+                .build();
+
+        ImpureIlmeniteSlurry = new Material.Builder(4229, "impure_ilmenite_slurry")
+                .fluid()
+                .color(0x4a474c)
+                .build();
+
+        ImpureIlmeniteSlurry.setFormula("(H2O)(FeTiO3)(?)", true);
+
+        ImpureIlmeniteConcentrate = new Material.Builder(4230, "impure_ilmenite_concentrate")
+                .dust()
+                .color(0x4a474c).iconSet(ROUGH)
+                .build();
+
+        ImpureIlmeniteConcentrate.setFormula("(FeTiO3)(?)", true);
+
+        IlmeniteSlurry = new Material.Builder(4231, "ilmenite_slurry")
+                .fluid()
+                .color(0x6c7078)
+                .build();
+
+        IlmeniteSlurry.setFormula("(H2O)(FeTiO3)(?)", true);
+
+        TitanylSulfateSolution = new Material.Builder(4232, "titanyl_sulfate_solution")
+                .fluid()
+                .color(0x74561d)
+                .build();
+
+        TitanylSulfateSolution.setFormula("(H20)(TiO[SO4])(?)", true);
+
+        AcidicWastewater = new Material.Builder(4233, "acidic_wastewater")
+                .fluid()
+                .color(0xc88a41)
+                .build();
+
+        AcidicWastewater.setFormula("(H20)(?)", true);
+
+        DirtyMolecularSieve = new Material.Builder(4234, 'dirty_molecular_sieve')
+                .dust()
+                .color(0x737373)
+                .iconSet(DULL)
+                .build();
+      
+        PotashConcentrate = new Material.Builder(4235, "potash_concentrate")
                 .dust()
                 .color(0xb39a9a)
                 .build();
 
-        ImpurePotashSlurry = new Material.Builder(4200, "impure_potash_slurry")
+        ImpurePotashSlurry = new Material.Builder(4236, "impure_potash_slurry")
                 .fluid()
                 .color(0xb39a9a)
                 .build();
 
-        PotashSlurry = new Material.Builder(4201, "potash_slurry")
+        PotashSlurry = new Material.Builder(4237, "potash_slurry")
                 .fluid()
                 .color(0xd4b2b2)
                 .build();
 
-        SupersaturatedBrine = new Material.Builder(4202, "supersaturated_brine")
+        SupersaturatedBrine = new Material.Builder(4238, "supersaturated_brine")
                 .fluid()
                 .color(0xdbb56e)
                 .build();

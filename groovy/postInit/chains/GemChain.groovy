@@ -75,9 +75,6 @@ FORGE_HAMMER.recipeBuilder()
         .EUt(120)
         .buildAndRegister()
 
-//TODO: ENABLE WHEN BERYLLIUM CHAIN IS MERGED
-
-/*
 CRYSTALLIZER.recipeBuilder()
         .inputs(metaitem('seed_crystal.emerald'))
         .inputs(metaitem('dustSiliconDioxide') * 18)
@@ -95,8 +92,6 @@ CUTTER.recipeBuilder()
         .duration(400)
         .EUt(120)
         .buildAndRegister()
-
- */
 
 AUTOCLAVE.recipeBuilder()
         .inputs(metaitem('dustBariumCarbonate') * 5)
