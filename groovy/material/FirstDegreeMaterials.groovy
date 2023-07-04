@@ -2711,5 +2711,17 @@ public class FirstDegreeMaterials{
                 .build();
 
         Polycarbonate.setFormula("C16H14O3", true)
+
+        SodiumNitrite = new Material.Builder(8499, "sodium_nitrite")
+                .dust()
+                .components(Sodium, 1, Nitrogen, 1, Oxygen, 2)
+                .color(0xe7e899)
+                .build();
+
+        SodiumOxide = new Material.Builder(8500, "sodium_oxide")
+                .dust()
+                .components(Sodium, 2, Oxygen, 1)
+                .colorAverage()
+                .build();
     }
 }

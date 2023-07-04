@@ -365,6 +365,7 @@ class SuSyMaterials {
         public static Material GaseousTitaniumTetrachloride;
         public static Material GaseousAluminiumTrichloride;
         public static Material DirtyMolecularSieve;
+        public static Material OligomericBisphenolSolution;
 
         // Petrochem Materials
 
@@ -816,7 +817,10 @@ class SuSyMaterials {
         public static Material DiTertButylPeroxide;
         public static Material TwoEthylhexylNitrate;
         public static Material Nitromethane;
-        public static Material OligomericBisphenolSolution;
+        public static Material SodiumBisphenolateSolution;
+        public static Material Polycarbonate;
+        public static Material SodiumNitrite;
+        public static Material SodiumOxide;
 
         // Second Degree Materials
 
@@ -931,8 +935,8 @@ class SuSyMaterials {
         public static Material Cyclohexane;
         public static Material SaltyNMethylIIPyrrolidone;
         public static Material MethylAcetateSolution;
-        public static Material TwoNitrochlorobenzeneSolution;
-        public static Material FourNitrochlorobenzeneSolution;
+        public static Material TwoNitrochlorobenzene;
+        public static Material MixedNitrochlorobenzene;
         public static Material FourNitroanilineSolution;
         public static Material ParaPhenylenediamineSolution;
         public static Material TwoTwoDichlorohydrazobenzeneSolution;
@@ -1133,8 +1137,6 @@ class SuSyMaterials {
         public static Material Chloroethane;
         public static Material NeutralizedCaprolactamSolution;
         public static Material ExtractedCaprolactamSolution;
-        public static Material SodiumBisphenolateSolution;
-        public static Material Polycarbonate;
 
         // Third Degree Materials
 

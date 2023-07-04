@@ -34,8 +34,8 @@ material.iron_iii_chloride_solution=Iron III Chloride Solution
 material.n_methyl_ii_pyrrolidone=N-methyl-2-pyrrolidone
 material.salty_n_methyl_ii_pyrrolidone=Salty N-methyl-2-pyrrolidone
 material.methyl_acetate_solution=Methyl Acetate Solution
-material.two_nitrochlorobenzene_solution=2-Nitrochlorobenzene Solution
-material.four_nitrochlorobenzene_solution=4-Nitrochlorobenzene Solution
+material.two_nitrochlorobenzene=2-Nitrochlorobenzene
+material.mixed_nitrochlorobenzene=Mixed Nitrochlorobenzene
 material.four_nitroaniline_solution=4-Nitroaniline Solution
 material.para_phenylenediamine_solution=p-Phenylenediamine Solution
 material.four_dichlorohydrazobenzene_solution=4-Dichlorohydrazobenzene Solution
@@ -938,6 +938,9 @@ material.leached_salt_roasted_vanadinite=Leached Salt Roasted Vanadinite
 material.leached_soda_ash_roasted_vanadinite=Leached Soda Ash Roasted Vanadinite
 material.lead_chloride_solution=Lead Chloride Solution
 material.polycaprolactam=Polycaprolactam (Nylon)
+material.chloroauric_acid_solution=Chloroauric Acid Solution
+material.sodium_nitrite=Sodium Nitrate
+material.sodium_oxide=Sodium Oxide
 
 # Thermodynamics
 

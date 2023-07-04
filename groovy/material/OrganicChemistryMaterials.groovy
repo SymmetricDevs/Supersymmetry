@@ -252,16 +252,15 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        TwoNitrochlorobenzeneSolution = new Material.Builder(15040, 'two_nitrochlorobenzene_solution')
-                .fluid()
-                .components(Toluene, 1, Nitrochlorobenzene, 1)
-                .colorAverage()
+        TwoNitrochlorobenzene = new Material.Builder(15040, 'two_nitrochlorobenzene')
+                .dust().fluid()
+                .components(Carbon, 6, Hydrogen, 4, Chlorine, 1, Nitrogen, 1, Oxygen, 2)
+                .color(0xc7c944)
                 .build();
 
-        FourNitrochlorobenzeneSolution = new Material.Builder(15041, 'four_nitrochlorobenzene_solution')
-                .fluid()
-                .components(Toluene, 1, FourNitrochlorobenzene, 1)
-                .colorAverage()
+        MixedNitrochlorobenzene = new Material.Builder(15041, 'mixed_nitrochlorobenzene')
+                .dust().fluid()
+                .color(0xa4a644)
                 .build();
 
         FourNitroanilineSolution = new Material.Builder(15042, 'four_nitroaniline_solution')
