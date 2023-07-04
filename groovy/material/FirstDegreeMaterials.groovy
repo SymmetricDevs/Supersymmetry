@@ -1208,6 +1208,7 @@ public class FirstDegreeMaterials{
 
         BoronNitride = new Material.Builder(8273, 'boron_nitride')
                 .dust()
+                .flags(GENERATE_PLATE)
                 .components(Boron, 1, Nitrogen, 1)
                 .colorAverage()
                 .build()

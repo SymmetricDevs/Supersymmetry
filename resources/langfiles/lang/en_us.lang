@@ -1507,6 +1507,8 @@ metaitem.steam.piston.name=Steam Piston
 metaitem.steam.motor.name=Steam Motor
 metaitem.steam.pump.name=Steam Pump
 
+metaitem.bound_leather.name=Bound Leather
+
 metaitem.vacuum_tube_components.name=Vacuum Tube Components
 
 metaitem.circuit.gooware_processor.name=Gooware Processor

@@ -631,3 +631,55 @@ Globals.solders.each { key, val ->
 			.EUt(240)
 			.buildAndRegister();
 }
+
+crafting.replaceShaped('minecraft:leather_helmet', item('minecraft:leather_helmet'), [
+		[metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],
+		[metaitem('bound_leather'), null, metaitem('bound_leather')],
+		[null, null, null]])
+		
+		
+crafting.replaceShaped('minecraft:leather_chestplate', item('minecraft:leather_chestplate'), [
+		[metaitem('bound_leather'), null, metaitem('bound_leather')],
+		[metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],
+		[metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')]])
+
+crafting.replaceShaped('minecraft:leather_leggings', item('minecraft:leather_leggings'), [
+		[metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],
+		[metaitem('bound_leather'), null, metaitem('bound_leather')],
+		[metaitem('bound_leather'), null, metaitem('bound_leather')]])
+
+crafting.replaceShaped('minecraft:leather_boots', item('minecraft:leather_boots'), [
+		[null, null, null],
+		[metaitem('bound_leather'), null, metaitem('bound_leather')],
+		[metaitem('bound_leather'), null, metaitem('bound_leather')]])
+
+
+crafting.remove("quark:chainmail_helmet");
+crafting.remove("quark:chainmail_chestplate");
+crafting.remove("quark:chainmail_leggings");
+crafting.remove("quark:chainmail_boots");
+
+crafting.remove("gregtech:golden_helmet");
+crafting.remove("gregtech:golden_chestplate");
+crafting.remove("gregtech:golden_leggings");
+crafting.remove("gregtech:golden_boots");
+
+crafting.remove("gregtech:diamond_helmet");
+crafting.remove("gregtech:diamond_chestplate");
+crafting.remove("gregtech:diamond_leggings");
+crafting.remove("gregtech:diamond_boots");
+
+crafting.replaceShaped('gregtech:iron_helmet', item('minecraft:iron_helmet'), [
+		[ore('screwIron'), ore('plateIron'), ore('screwIron')],
+		[ore('plateIron'), ore('leather'), ore('plateIron')],
+		[null, null, null]])
+
+crafting.replaceShaped('gregtech:iron_chestplate', item('minecraft:iron_chestplate'), [
+		[ore('screwIron'), null, ore('screwIron')],
+		[ore('plateIron'), ore('leather'), ore('plateIron')],
+		[ore('plateIron'), ore('plateIron'), ore('plateIron')]])
+
+crafting.replaceShaped('gregtech:iron_leggings', item('minecraft:iron_leggings'), [
+		[ore('screwIron'), ore('plateIron'), ore('screwIron')],
+		[ore('plateIron'), ore('leather'), ore('plateIron')],
+		[ore('plateIron'), null, ore('plateIron')]])
