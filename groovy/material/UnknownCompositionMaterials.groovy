@@ -1047,5 +1047,25 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0x662e2e)
                 .build();
+
+        PotashConcentrate = new Material.Builder(4199, "potash_concentrate")
+                .dust()
+                .color(0xb39a9a)
+                .build();
+
+        ImpurePotashSlurry = new Material.Builder(4200, "impure_potash_slurry")
+                .fluid()
+                .color(0xb39a9a)
+                .build();
+
+        PotashSlurry = new Material.Builder(4201, "potash_slurry")
+                .fluid()
+                .color(0xd4b2b2)
+                .build();
+
+        SupersaturatedBrine = new Material.Builder(4202, "supersaturated_brine")
+                .fluid()
+                .color(0xdbb56e)
+                .build();
     }
 }

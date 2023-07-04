@@ -317,6 +317,10 @@ class SuSyMaterials {
         public static Material ReducedChromiumAnolyte;
         public static Material ChromiumCatholyte;
         public static Material ChromiumMotherLiquor;
+        public static Material PotashConcentrate;
+        public static Material ImpurePotashSlurry;
+        public static Material PotashSlurry;
+        public static Material SupersaturatedBrine;
 
         // Petrochem Materials
 
@@ -1049,6 +1053,8 @@ class SuSyMaterials {
         public static Material PotassiumIsopropylXanthate;
         public static Material PotassiumEthylXanthate;
         public static Material TributylPhosphate;
+        public static Material NHexadecylamine;
+        public static Material NHexadecylammoniumAcetate;
 
         // Third Degree Materials
 
