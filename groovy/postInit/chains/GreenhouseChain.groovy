@@ -90,6 +90,14 @@ for (p in phosphorusNutrients) {
         }
     }
     MIXER.recipeBuilder()
+            .inputs(metaitem('dustAmmoniumDihydrogenPhosphate') * 2)
+            .inputs(p)
+            .outputs(metaitem('fertilizer') * 5)
+            .EUt(30)
+            .duration(100)
+            .buildAndRegister()
+
+    MIXER.recipeBuilder()
             .inputs(metaitem('dustSaltpeter') * 2)
             .inputs(p)
             .outputs(metaitem('fertilizer') * 5)

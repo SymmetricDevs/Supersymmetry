@@ -90,21 +90,21 @@ crafting.replaceShaped('rftools:smartwrench', item('rftools:smartwrench'), [
 ])
 
 crafting.replaceShaped('rftools:storage_module_0', item('rftools:storage_module'), [
+        [null, metaitem('frameSteel'), null],
+        [metaitem('crate.steel'), metaitem('plateSteel'), metaitem('crate.steel')],
+        [null, metaitem('frameSteel'), null]
+])
+
+crafting.replaceShaped('rftools:storage_module_1', item('rftools:storage_module', 1), [
         [null, metaitem('frameAluminium'), null],
         [metaitem('crate.aluminium'), metaitem('plateAluminium'), metaitem('crate.aluminium')],
         [null, metaitem('frameAluminium'), null]
 ])
 
-crafting.replaceShaped('rftools:storage_module_1', item('rftools:storage_module', 1), [
+crafting.replaceShaped('rftools:storage_module_2', item('rftools:storage_module', 2), [
         [null, metaitem('frameStainlessSteel'), null],
         [metaitem('crate.stainless_steel'), metaitem('plateStainlessSteel'), metaitem('crate.stainless_steel')],
         [null, metaitem('frameStainlessSteel'), null]
-])
-
-crafting.replaceShaped('rftools:storage_module_2', item('rftools:storage_module', 2), [
-        [null, metaitem('frameTitanium'), null],
-        [metaitem('crate.titanium'), metaitem('plateTitanium'), metaitem('crate.titanium')],
-        [null, metaitem('frameTitanium'), null]
 ])
 
 crafting.replaceShaped('rftools:redstone_transmitter_block', item('rftools:redstone_transmitter_block'), [

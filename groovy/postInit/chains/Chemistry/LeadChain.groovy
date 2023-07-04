@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.SinteringGlobals.*
 
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 EBF = recipemap('electric_blast_furnace')
@@ -14,6 +15,8 @@ DISTILLERY = recipemap('distillery')
 FLUID_EXTRACTOR= recipemap('extractor')
 ELECTROLYZER=recipemap('electrolyzer')
 SIFTER=recipemap('sifter')
+ROTARY_KILN=recipemap('rotary_kiln')
+
 def COAL_SOURCES = [
         "dustCarbon",
         "gemCoal",
@@ -50,7 +53,7 @@ FLOTATION.recipeBuilder()
         .buildAndRegister()
 
 FLOTATION.recipeBuilder()
-        .fluidInputs(fluid('galena_byproducts_slurry'))
+        .fluidInputs(fluid('galena_byproducts_slurry') * 1000)
         .notConsumable(metaitem('dustSodiumEthylXanthate'))
         .outputs(metaitem('dustSphalerite'))
         .fluidOutputs(fluid('wastewater') * 1000)
@@ -90,28 +93,49 @@ FLOTATION.recipeBuilder()
 
 //CONCENTRATE SINTERING
 SINTERING_OVEN.recipeBuilder()
-        .inputs(metaitem('dustMassicot') * 2)
-        .outputs(metaitem('dustSinteredLeadConcentrate') * 2)
-        .EUt(120)
-        .duration(200)
-        .buildAndRegister()
-
-SINTERING_OVEN.recipeBuilder()
-        .inputs(metaitem('dustGalena') * 1)
-        .fluidInputs(fluid('oxygen') * 3000)
-        .outputs(metaitem('dustSinteredLeadConcentrate') * 2)
-        .fluidOutputs(fluid('sulfur_dioxide') * 1000)
-        .EUt(120)
-        .duration(200)
-        .buildAndRegister()
-
-SINTERING_OVEN.recipeBuilder()
         .inputs(metaitem('dustAnglesite') * 1)
         .outputs(metaitem('dustSinteredLeadConcentrate') * 2)
         .fluidOutputs(fluid('sulfur_trioxide') * 1000)
         .EUt(120)
         .duration(200)
         .buildAndRegister()
+
+for (fuel in sintering_fuels) {
+    if (!fuel.isPlasma) {
+        for (comburent in sintering_comburents) {
+            ROTARY_KILN.recipeBuilder()
+                    .inputs(metaitem('dustMassicot') * 2)
+                    .outputs(metaitem('dustSinteredLeadConcentrate') * 2)
+                    .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+                    .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+                    .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+                    .duration(fuel.duration + comburent.duration)
+                    .EUt(120)
+                    .buildAndRegister()
+
+            ROTARY_KILN.recipeBuilder()
+                    .inputs(metaitem('dustGalena') * 1)
+                    .outputs(metaitem('dustSinteredLeadConcentrate') * 2)
+                    .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+                    .fluidInputs(fluid(comburent.name) * (comburent.amountRequired * 40))
+                    .outputs(metaitem('vti_rich_pig_iron') * 4)
+                    .fluidOutputs(fluid('sulfur_dioxide') * 1000)
+                    .duration(fuel.duration + comburent.duration)
+                    .EUt(120)
+                    .buildAndRegister()
+
+            ROTARY_KILN.recipeBuilder()
+                    .inputs(metaitem('dustAnglesite') * 1)
+                    .outputs(metaitem('dustSinteredLeadConcentrate') * 2)
+                    .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+                    .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+                    .fluidOutputs(fluid('sulfur_trioxide') * 1000)
+                    .duration(fuel.duration + comburent.duration)
+                    .EUt(120)
+                    .buildAndRegister()
+        }
+    }
+}
 
 //SINTER-ROAST PROCESS (UNIVERSAL, 200%)
 class Combustible {
