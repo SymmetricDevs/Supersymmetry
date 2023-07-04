@@ -816,6 +816,7 @@ class SuSyMaterials {
         public static Material DiTertButylPeroxide;
         public static Material TwoEthylhexylNitrate;
         public static Material Nitromethane;
+        public static Material OligomericBisphenolSolution;
 
         // Second Degree Materials
 
@@ -1132,6 +1133,8 @@ class SuSyMaterials {
         public static Material Chloroethane;
         public static Material NeutralizedCaprolactamSolution;
         public static Material ExtractedCaprolactamSolution;
+        public static Material SodiumBisphenolateSolution;
+        public static Material Polycarbonate;
 
         // Third Degree Materials
 
@@ -1174,6 +1177,8 @@ class SuSyMaterials {
         public static Material PotassiumIsopropylXanthateSolution;
         public static Material PotassiumEthylXanthateSolution;
         public static Material AcidicTributylPhosphate;
+        public static Material PhosgeneSolution;
+        public static Material TriethylamineSolution;
 
         // Thermodynamics/Greenhouse Materials
 

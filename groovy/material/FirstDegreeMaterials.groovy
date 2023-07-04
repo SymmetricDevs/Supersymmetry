@@ -2696,5 +2696,20 @@ public class FirstDegreeMaterials{
                 .components(AluminiumTrichloride, 1)
                 .colorAverage()
                 .build();
+
+        SodiumBisphenolateSolution = new Material.Builder(8497, "sodium_bisphenolate_solution")
+                .fluid()
+                .components(SodiumHydroxide, 2, BisphenolA, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        Polycarbonate = new Material.Builder(8498, "polycarbonate")
+                .dust()
+                .components(Carbon, 16, Hydrogen, 14, Oxygen, 3)
+                .color(0xa1cacf)
+                .iconSet(SHINY)
+                .build();
+
+        Polycarbonate.setFormula("C16H14O3", true)
     }
 }

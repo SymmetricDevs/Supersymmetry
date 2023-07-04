@@ -34,6 +34,8 @@ REACTION_FURNACE = recipemap('reaction_furnace')
 ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
 PSA = recipemap('pressure_swing_adsorption')
 CHEMICAL_BATH = recipemap('chemical_bath')
+ION_EXCHANGE = recipemap('ion_exchange_column')
+FLUID_EXTRACTOR = recipemap('extractor')
 
 def COAL_SOURCES = [
     "dustCarbon",
@@ -4217,6 +4219,70 @@ DISTILLATION_TOWER.recipeBuilder()
         .EUt(120)
         .duration(100)
         .buildAndRegister()
+
+//BPA
+
+ION_EXCHANGE.recipeBuilder()
+        .fluidInputs(fluid('phenol') * 2000)
+        .fluidInputs(fluid('acetone') * 1000)
+        .notConsumable(metaitem('ag_fifty_w_x_eight_beads'))
+        .fluidOutputs(fluid('water') * 1000)
+        .outputs(metaitem('dustBisphenolA'))
+        .EUt(480)
+        .duration(100)
+        .buildAndRegister()
+
+FLUID_EXTRACTOR.recipeBuilder()
+        .inputs(metaitem('dustBisphenolA'))
+        .fluidOutputs(fluid('bisphenol_a') * 1000)
+        .EUt(30)
+        .duration(100)
+        .buildAndRegister()
+
+//POLYCARBONATE
+
+BCR.recipeBuilder()
+        .fluidInputs(fluid('phosgene') * 50)
+        .fluidInputs(fluid('dichloromethane') * 50)
+        .fluidOutputs(fluid('phosgene_solution') * 100)
+        .EUt(480)
+        .duration(3)
+        .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 100)
+        .fluidInputs(fluid('bisphenol_a') * 50)
+        .fluidOutputs(fluid('sodium_bisphenolate_solution') * 100)
+        .EUt(480)
+        .duration(3)
+        .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('phosgene_solution') * 100)
+        .fluidInputs(fluid('sodium_bisphenolate_solution') * 100)
+        .fluidOutputs(fluid('oligomeric_bisphenol_solution') * 50)
+        .fluidOutputs(fluid('salt_water') * 100)
+        .EUt(480)
+        .duration(3)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('oligomeric_bisphenol_solution') * 4000)
+        .fluidInputs(fluid('triethylamine') * 1000)
+        .outputs(metaitem('dustPolycarbonate'))
+        .fluidOutputs(fluid('triethylamine_solution') * 5000)
+        .EUt(480)
+        .duration(60)
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('triethylamine_solution') * 5000)
+        .fluidOutputs(fluid('triethylamine') * 1000)
+        .fluidOutputs(fluid('dichloromethane') * 4000)
+        .EUt(480)
+        .duration(60)
+        .buildAndRegister()
+
 
 //DISTILLATION REORDERING
 

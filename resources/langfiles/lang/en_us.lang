@@ -1427,6 +1427,11 @@ material.gaseous_aluminium_trichloride=Gaseous Aluminium Trichloride
 material.neutralized_caprolactam_solution=Neutralized Caprolactam Solution
 material.extracted_caprolactam_solution=Extracted Caprolactam Solution
 material.dilute_ammonium_sulfate_solution=Dilute Ammonium Sulfate Solution
+material.phosgene_solution=Phosgene Solution
+material.sodium_bisphenolate_solution=Sodium Bisphenolate Solution
+material.oligomeric_bisphenol_solution=Oligomeric Bisphenol Solution
+material.polycarbonate=Polycarbonate
+material.triethylamine_solution=Triethylamine Solution
 
 # Isotopes
 

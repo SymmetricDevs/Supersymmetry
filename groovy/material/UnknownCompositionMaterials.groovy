@@ -1255,5 +1255,10 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xdbb56e)
                 .build();
+        
+        OligomericBisphenolSolution = new Material.Builder(4239, "oligomeric_bisphenol_solution")
+                .fluid()
+                .color(0xcfa532)
+                .build();
     }
 }

@@ -250,5 +250,17 @@ public class ThirdDegreeMaterials {
                 .components(TributylPhosphate, 1, HydrogenChloride, 3)
                 .colorAverage()
                 .build();
+
+        PhosgeneSolution = new Material.Builder(24039, "phosgene_solution")
+                .fluid()
+                .components(Phosgene, 1, Dichloromethane, 1)
+                .colorAverage()
+                .build();
+
+        TriethylamineSolution = new Material.Builder(24040, "triethylamine_solution")
+                .fluid()
+                .components(Triethylamine, 1, Dichloromethane, 4)
+                .colorAverage()
+                .build();
     }
 }
