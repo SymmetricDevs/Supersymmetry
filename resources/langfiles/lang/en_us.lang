@@ -1427,7 +1427,6 @@ material.gaseous_iron_iii_chloride=Gaseous Iron III Chloride
 material.gaseous_titanium_tetrachloride=Gaseous Titanium Tetrachloride
 material.tin_tetrachloride=Tin Tetrachloride
 material.gaseous_aluminium_trichloride=Gaseous Aluminium Trichloride
-material.neutralized_caprolactam_solution=Neutralized Caprolactam Solution
 material.extracted_caprolactam_solution=Extracted Caprolactam Solution
 material.dilute_ammonium_sulfate_solution=Dilute Ammonium Sulfate Solution
 material.phosgene_solution=Phosgene Solution
@@ -1435,6 +1434,23 @@ material.sodium_bisphenolate_solution=Sodium Bisphenolate Solution
 material.oligomeric_bisphenol_solution=Oligomeric Bisphenol Solution
 material.polycarbonate=Polycarbonate
 material.triethylamine_solution=Triethylamine Solution
+material.impure_barite_slurry=Impure Barite Slurry
+material.barite_slurry=Barite Slurry
+material.granite_tailing_slurry=Granite Tailing Slurry
+material.galena_slurry=Galena Slurry
+material.byproduct_sphalerite_slurry=Byproduct Sphalerite Slurry
+material.impure_cerussite_slurry=Impure Cerussite Slurry
+material.cerussite_slurry=Cerussite Slurry
+material.impure_anglesite_slurry=Impure Anglesite Slurry
+material.anglesite_slurry=Anglesite Slurry
+material.impure_spodumene_slurry=Impure Spodumene Slurry
+material.spodumene_slurry=Spodumene Slurry
+material.pegmatite_tailing_slurry=Pegmatite Tailing Slurry
+material.filtered_phosphate_slurry=Filtered Phosphate Slurry
+material.phosphate_concentrate_slurry=Phosphate Concentrate Slurry
+material.impure_cassiterite_slurry=Impure Cassiterite Slurry
+material.cassiterite_slurry=Cassiterite Slurry
+material.limestone_tailing_slurry=Limestone Tailing Slurry
 
 # Isotopes
 

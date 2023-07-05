@@ -1260,5 +1260,90 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xcfa532)
                 .build();
+
+        ImpureBariteSlurry = new Material.Builder(4240, "impure_barite_slurry")
+                .fluid()
+                .color(0x87a2ab)
+                .build();
+
+        BariteSlurry = new Material.Builder(4241, "barite_slurry")
+                .fluid()
+                .color(0x8fb3bf)
+                .build();
+
+        GraniteTailingSlurry = new Material.Builder(4242, "granite_tailing_slurry")
+                .fluid()
+                .color(0xc48072)
+                .build();
+
+        GalenaSlurry = new Material.Builder(4243, "galena_slurry")
+                .fluid()
+                .color(0x6a3678)
+                .build();
+
+        ByproductSphaleriteSlurry = new Material.Builder(4244, "byproduct_sphalerite_slurry")
+                .fluid()
+                .color(0x9f97a1)
+                .build();
+
+        ImpureCerussiteSlurry = new Material.Builder(4245, "impure_cerussite_slurry")
+                .fluid()
+                .color(0xe5a6f5)
+                .build();
+
+        CerussiteSlurry = new Material.Builder(4246, "cerussite_slurry")
+                .fluid()
+                .color(0xdf8cf5)
+                .build();
+
+        ImpureAnglesiteSlurry = new Material.Builder(4247, "impure_anglesite_slurry")
+                .fluid()
+                .color(0x8f60d1)
+                .build();
+
+        AnglesiteSlurry = new Material.Builder(4248, "anglesite_slurry")
+                .fluid()
+                .color(0x854ad9)
+                .build();
+
+        ImpureSpodumeneSlurry = new Material.Builder(4249, "impure_spodumene_slurry")
+                .fluid()
+                .color(0xde9eb6)
+                .build();
+
+        SpodumeneSlurry = new Material.Builder(4250, "spodumene_slurry")
+                .fluid()
+                .color(0xffb5d1)
+                .build();
+                
+        PegmatiteTailingSlurry = new Material.Builder(4251, "pegmatite_tailing_slurry")
+                .fluid()
+                .color(0x2c4a2d)
+                .build();
+
+        FilteredPhosphateSlurry = new Material.Builder(4252, "filtered_phosphate_slurry")
+                .fluid()
+                .color(0x918e27)
+                .build();
+
+        PhosphateConcentrateSlurry = new Material.Builder(4253, "phosphate_concentrate_slurry")
+                .fluid()
+                .color(0xadaa32)
+                .build();
+
+        ImpureCassiteriteSlurry = new Material.Builder(4254, "impure_cassiterite_slurry")
+                .fluid()
+                .color(0xbdbdbd)
+                .build();
+
+        CassiteriteSlurry = new Material.Builder(4255, "cassiterite_slurry")
+                .fluid()
+                .color(0xdcdcdc)
+                .build();
+
+        LimestoneTailingSlurry = new Material.Builder(4256, "limestone_tailing_slurry")
+                .fluid()
+                .color(0x68695d)
+                .build();
     }
 }

@@ -366,6 +366,23 @@ class SuSyMaterials {
         public static Material GaseousAluminiumTrichloride;
         public static Material DirtyMolecularSieve;
         public static Material OligomericBisphenolSolution;
+        public static Material ImpureBariteSlurry;
+        public static Material BariteSlurry;
+        public static Material GraniteTailingSlurry;
+        public static Material GalenaSlurry;
+        public static Material ByproductSphaleriteSlurry;
+        public static Material ImpureCerussiteSlurry;
+        public static Material CerussiteSlurry;
+        public static Material ImpureAnglesiteSlurry;
+        public static Material AnglesiteSlurry;
+        public static Material ImpureSpodumeneSlurry;
+        public static Material SpodumeneSlurry;
+        public static Material PegmatiteTailingSlurry;
+        public static Material FilteredPhosphateSlurry;
+        public static Material PhosphateConcentrateSlurry;
+        public static Material ImpureCassiteriteSlurry;
+        public static Material CassiteriteSlurry;
+        public static Material LimestoneTailingSlurry;
 
         // Petrochem Materials
 
@@ -953,7 +970,6 @@ class SuSyMaterials {
         public static Material PBISolution;
         public static Material PBIWaste;
         public static Material Hydroxylamine;
-        public static Material DilutedCyclohexanone;
         public static Material Cyclohexanone;
         public static Material CaprolactamSolution;
         public static Material BisphenolADiglycidylEther;
@@ -1135,7 +1151,6 @@ class SuSyMaterials {
         public static Material Ferrocene;
         public static Material Polyisoprene;
         public static Material Chloroethane;
-        public static Material NeutralizedCaprolactamSolution;
         public static Material ExtractedCaprolactamSolution;
 
         // Third Degree Materials

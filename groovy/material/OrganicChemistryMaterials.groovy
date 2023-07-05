@@ -376,15 +376,15 @@ public class OrganicChemistryMaterials {
                 .color(0x2b1e11)
                 .build();
 
-        DilutedCyclohexanone = new Material.Builder(15061, 'diluted_cyclohexanone')
-                .fluid()
-                .components(Water, 1, Cyclohexanone, 1)
-                .colorAverage()
+        NHexadecylammoniumAcetate = new Material.Builder(15061, "n_hexadecylammonium_acetate")
+                .dust()
+                .components(Carbon, 16, Hydrogen, 39, Nitrogen, 1, Oxygen, 2)
+                .color(0xffd4d4)
                 .build();
 
         CaprolactamSolution = new Material.Builder(15062, 'caprolactam_solution')
                 .fluid()
-                .components(SulfuricAcid, 1, Caprolactam, 1)
+                .components(AmmoniumSulfate, 1, Caprolactam, 1, Water, 2)
                 .colorAverage()
                 .build();
 
@@ -1345,10 +1345,10 @@ public class OrganicChemistryMaterials {
                 .color(0xb3af34)
                 .build();
 
-        NeutralizedCaprolactamSolution = new Material.Builder(15217, "neutralized_caprolactam_solution")
-                .fluid()
-                .components(AmmoniumSulfate, 1, Caprolactam, 1, Water, 2)
-                .colorAverage()
+        NHexadecylamine = new Material.Builder(15217, "n_hexadecylamine")
+                .dust()
+                .components(Carbon, 16, Hydrogen, 35, Nitrogen, 1)
+                .color(0xcff5ff)
                 .build();
 
         TertButylAlcohol = new Material.Builder(15218, "tert_butyl_alcohol")
@@ -1444,16 +1444,5 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        NHexadecylamine = new Material.Builder(15218, "n_hexadecylamine")
-                .dust()
-                .components(Carbon, 16, Hydrogen, 35, Nitrogen, 1)
-                .color(0xcff5ff)
-                .build();
-
-        NHexadecylammoniumAcetate = new Material.Builder(15219, "n_hexadecylammonium_acetate")
-                .dust()
-                .components(Carbon, 16, Hydrogen, 39, Nitrogen, 1, Oxygen, 2)
-                .color(0xffd4d4)
-                .build();
     }
 }
