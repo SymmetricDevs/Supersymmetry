@@ -159,7 +159,18 @@ def name_removals = [
 	"techguns:hazmat_helmet",
 	"techguns:hazmat_chestplate",
 	"techguns:hazmat_leggings",
-	"techguns:hazmat_boots"
+	"techguns:hazmat_boots",
+	"techguns:itemshared_147_upgrade_protection_1",
+	"techguns:itemshared_150_upgrade_protection_2",
+	"techguns:itemshared_153_upgrade_protection_3",
+	"techguns:itemshared_148_upgrade_projectile_protection_1",
+	"techguns:itemshared_151_upgrade_projectile_protection_2",
+	"techguns:itemshared_154_upgrade_projectile_protection_3",
+	"techguns:itemshared_149_upgrade_blast_protection_1",
+	"techguns:itemshared_152_upgrade_blast_protection_2",
+	"techguns:itemshared_155_upgrade_blast_protection_3",
+
+
 ]
 
 for (name in name_removals) {
@@ -188,6 +199,12 @@ crafting.replaceShaped("techguns:simplemachine_9_repair_bench", item('techguns:s
 	[ore('plateIron'), ore('gearSteel'), ore('plateIron')],
 	[ore('plateIron'), ore('workbench'), ore('plateIron')],
 	[ore('plateIron'), ore('plateIron'), ore('plateIron')]
+])
+
+crafting.replaceShaped("techguns:simplemachine2_9_armor_bench", item('techguns:simplemachine2', 9), [
+	[ore('plateIron'), ore('rodSteel'), ore('plateIron')],
+	[ore('gearSteel'), ore('workbench'), ore('gearSteel')],
+	[null, ore('circuitLv'), null]
 ])
 
 crafting.replaceShaped("techguns:explosive_charge_0_tnt", item('techguns:explosive_charge') * 8, [
@@ -1065,7 +1082,7 @@ recipemap('roaster').recipeBuilder()
 		.EUt(7)
 		.buildAndRegister();
 
-crafting.addShaped("bound_leather", metaitem('bound_leather'), [
+crafting.addShaped("bound_leather", metaitem('bound_leather')*8, [
 		[item('techguns:itemshared:77'), item('techguns:itemshared:77'), item('techguns:itemshared:77')],
 		[item('techguns:itemshared:77'), item('minecraft:string'), item('techguns:itemshared:77')],
 		[item('techguns:itemshared:77'), item('techguns:itemshared:77'), item('techguns:itemshared:77')]
@@ -1085,7 +1102,7 @@ recipemap('weapons_factory').recipeBuilder()
 		.circuitMeta(1)
 		.inputs(ore('plateKevlar') * 5)
 		.inputs(ore('plateBoronNitride') * 2)
-		.outputs(item('techguns:t2_combat_helmet'))
+		.outputs(item('techguns:t2_commando_helmet'))
 		.duration(100)
 		.EUt(960)
 		.buildAndRegister();
@@ -1094,7 +1111,7 @@ recipemap('weapons_factory').recipeBuilder()
 		.circuitMeta(2)
 		.inputs(ore('plateKevlar') * 8)
 		.inputs(ore('plateBoronNitride') * 4)
-		.outputs(item('techguns:t2_combat_chestplate'))
+		.outputs(item('techguns:t2_commando_chestplate'))
 		.duration(100)
 		.EUt(960)
 		.buildAndRegister();
@@ -1103,7 +1120,7 @@ recipemap('weapons_factory').recipeBuilder()
 		.circuitMeta(3)
 		.inputs(ore('plateKevlar') * 7)
 		.inputs(ore('plateBoronNitride') * 3)
-		.outputs(item('techguns:t2_combat_leggings'))
+		.outputs(item('techguns:t2_commando_leggings'))
 		.duration(100)
 		.EUt(960)
 		.buildAndRegister();
@@ -1112,11 +1129,90 @@ recipemap('weapons_factory').recipeBuilder()
 		.circuitMeta(4)
 		.inputs(ore('plateKevlar') * 4)
 		.inputs(ore('plateBoronNitride') * 2)
-		.outputs(item('techguns:t2_combat_boots'))
+		.outputs(item('techguns:t2_commando_boots'))
 		.duration(100)
 		.EUt(960)
 		.buildAndRegister();
+		
+//Armor upgrades
 
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(10)
+		.inputs(ore('plateSteel') * 4)
+		.outputs(item('techguns:itemshared:147'))
+		.duration(100)
+		.EUt(30)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(11)
+		.inputs(ore('plateSteel') * 2)
+		.inputs(ore('platePolycaprolactam') * 2)
+		.outputs(item('techguns:itemshared:150'))
+		.duration(100)
+		.EUt(120)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(12)
+		.inputs(ore('plateBoronNitride') * 2)
+		.inputs(ore('plateKevlar') * 2)
+		.outputs(item('techguns:itemshared:153'))
+		.duration(100)
+		.EUt(480)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(13)
+		.inputs(ore('plateSteel') * 4)
+		.outputs(item('techguns:itemshared:148'))
+		.duration(100)
+		.EUt(30)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(14)
+		.inputs(ore('plateSteel') * 2)
+		.inputs(ore('platePolycaprolactam') * 2)
+		.outputs(item('techguns:itemshared:151'))
+		.duration(100)
+		.EUt(120)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(15)
+		.inputs(ore('plateBoronNitride') * 2)
+		.inputs(ore('plateKevlar') * 2)
+		.outputs(item('techguns:itemshared:154'))
+		.duration(100)
+		.EUt(480)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(16)
+		.inputs(ore('plateSteel') * 4)
+		.outputs(item('techguns:itemshared:149'))
+		.duration(100)
+		.EUt(30)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(17)
+		.inputs(ore('plateSteel') * 2)
+		.inputs(ore('platePolycaprolactam') * 2)
+		.outputs(item('techguns:itemshared:152'))
+		.duration(100)
+		.EUt(120)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(18)
+		.inputs(ore('plateBoronNitride') * 2)
+		.inputs(ore('plateKevlar') * 2)
+		.outputs(item('techguns:itemshared:155'))
+		.duration(100)
+		.EUt(480)
+		.buildAndRegister();
 
 
 //-------------------Change TechGuns damage values to be better suited with SUSy progression----------------
