@@ -1445,13 +1445,13 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        NHexadecylamine = new Material.Builder(15218, "n_hexadecylamine")
+        NHexadecylamine = new Material.Builder(15231, "n_hexadecylamine")
                 .dust()
                 .components(Carbon, 16, Hydrogen, 35, Nitrogen, 1)
                 .color(0xcff5ff)
                 .build();
 
-        NHexadecylammoniumAcetate = new Material.Builder(15219, "n_hexadecylammonium_acetate")
+        NHexadecylammoniumAcetate = new Material.Builder(15232, "n_hexadecylammonium_acetate")
                 .dust()
                 .components(Carbon, 16, Hydrogen, 39, Nitrogen, 1, Oxygen, 2)
                 .color(0xffd4d4)
