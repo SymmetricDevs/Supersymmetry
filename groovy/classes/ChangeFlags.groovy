@@ -53,6 +53,7 @@ class ChangeFlags {
         Phosphorus.addFlags("no_smelting");
         
         DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
+        AquaRegia.setFormula("(HNO3)(HCl)3", true);
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
@@ -69,6 +70,10 @@ class ChangeFlags {
 
         Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Cadmium.setProperty(PropertyKey.FLUID, new FluidProperty());
+
+        BisphenolA.setProperty(PropertyKey.DUST, new DustProperty());
+        BisphenolA.addFlags("no_unification")
+        BisphenolA.getProperty(PropertyKey.FLUID).setFluidTemperature(428)
 
         OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);

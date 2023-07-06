@@ -1,3 +1,5 @@
+import static globals.Globals.*
+
 AUTOCLAVE = recipemap('autoclave')
 ROASTER = recipemap('roaster')
 FLOTATION = recipemap('froth_flotation')
@@ -7,20 +9,46 @@ FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 REACTION_FURNACE = recipemap('reaction_furnace')
 CENTRIFUGE = recipemap('centrifuge')
 CRYSTALLIZER = recipemap('crystallizer')
+MIXER = recipemap('mixer')
+CLARIFIER = recipemap('clarifier')
 
 // Tin Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('crude_tin') * 1000])
 
 //CASSITERITE BENEFICIATION
+MIXER.recipeBuilder()
+        .inputs(metaitem('dustImpureCassiterite') * 8)
+        .fluidInputs(fluid('distilled_water') * 2000)
+        .fluidOutputs(fluid('impure_cassiterite_slurry') * 2000)
+        .EUt(Globals.voltAmps[3])
+        .duration(80)
+        .buildAndRegister()
+
 FLOTATION.recipeBuilder()
-        .inputs(metaitem('dustImpureCassiterite') * 30)
+        .fluidInputs(fluid('impure_cassiterite_slurry') * 2000)
         .notConsumable(metaitem('dustSodiumFluorosilicate'))
         .notConsumable(fluid('oleic_acid') * 144)
         .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
-        .notConsumable(fluid('distilled_water') * 1000)
-        .outputs(metaitem('dustCassiterite') * 60)
-        .EUt(480)
-        .duration(800)
+        .fluidOutputs(fluid('cassiterite_slurry') * 1000)
+        .fluidOutputs(fluid('limestone_tailing_slurry'))
+        .EUt(Globals.voltAmps[3])
+        .duration(80)
+        .buildAndRegister()
+
+CLARIFIER.recipeBuilder()
+        .fluidInputs(fluid('cassiterite_slurry') * 1000)
+        .outputs(metaitem('dustCassiterite') * 16)
+        .fluidOutputs(fluid('wastewater') * 1000)
+        .EUt(Globals.voltAmps[1])
+        .duration(20)
+        .buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+        .fluidInputs(fluid('limestone_tailing_slurry') * 1000)
+        .outputs(metaitem('dustLimestoneTailings') * 2)
+        .fluidOutputs(fluid('wastewater') * 1000)
+        .EUt(Globals.voltAmps[1])
+        .duration(20)
         .buildAndRegister()
 
 EM_SEPARATOR.recipeBuilder()
