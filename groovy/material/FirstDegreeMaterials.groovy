@@ -517,7 +517,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        DiluteSaltpeterSolution = new Material.Builder(8161, 'dilute_saltpeter_solution')
+        DilutedSaltpeterSolution = new Material.Builder(8161, 'diluted_saltpeter_solution')
                 .fluid()
                 .components(Water, 2, Saltpeter, 1)
                 .colorAverage()
@@ -529,13 +529,13 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        DiluteCalciumChlorideSolution = new Material.Builder(8163, "dilute_calcium_chloride_solution")
+        DilutedCalciumChlorideSolution = new Material.Builder(8163, "diluted_calcium_chloride_solution")
                 .fluid()
                 .components(Water, 2, CalciumChloride, 1)
                 .colorAverage()
                 .build();
 
-        DiluteRockSaltSolution = new Material.Builder(8164, "dilute_rock_salt_solution")
+        DilutedRockSaltSolution = new Material.Builder(8164, "diluted_rock_salt_solution")
                 .fluid()
                 .components(Water, 2, RockSalt, 1)
                 .colorAverage()

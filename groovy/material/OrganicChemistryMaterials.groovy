@@ -211,7 +211,7 @@ public class OrganicChemistryMaterials {
                 .color(0xbede9b)
                 .build();
 
-        DiluteEpichlorohydrin = new Material.Builder(15033, "dilute_epichlorohydrin")
+        DilutedEpichlorohydrin = new Material.Builder(15033, "diluted_epichlorohydrin")
                 .fluid()
                 .color(0x91664d)
                 .build();

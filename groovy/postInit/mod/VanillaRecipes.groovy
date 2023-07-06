@@ -683,3 +683,18 @@ crafting.replaceShaped('gregtech:iron_leggings', item('minecraft:iron_leggings')
 		[ore('screwIron'), ore('plateIron'), ore('screwIron')],
 		[ore('plateIron'), ore('leather'), ore('plateIron')],
 		[ore('plateIron'), null, ore('plateIron')]])
+
+for (int i = 0; i < 16; i++) {
+	recipemap('autoclave').recipeBuilder()
+			.fluidInputs(fluid('water') * 100)
+			.inputs(item('minecraft:concrete_powder', i))
+			.outputs(item('minecraft:concrete', i))
+			.duration(40)
+			.EUt(16)
+			.buildAndRegister()
+}
+
+crafting.addShaped('minecraft:arrow_from_paper', item('minecraft:arrow') * 8, [
+		[null, item('minecraft:flint'), null],
+		[null, ore('stickWood'), null],
+		[null, item('minecraft:paper'), null]])
