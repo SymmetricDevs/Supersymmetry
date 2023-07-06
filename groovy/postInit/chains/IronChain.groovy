@@ -46,7 +46,6 @@ class Combustible {
 
 def PBF_RECIPES = recipemap("primitive_blast_furnace")
 def EBF_RECIPES = recipemap("electric_blast_furnace")
-def REVERBERATORY_FURNACE = recipemap("reverberatory_furnace")
 
 def blastables = [
     new Blastable('dustMagnetite', 7 , 6, 4, 80),
@@ -97,7 +96,7 @@ for (blastable in blastables) {
         .inputs(ore(combustible.name) * (combustible.amount_required * blastable.reductant_required))
         .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
         .outputs(metaitem(combustible.byproduct) * (combustible.amount_required * blastable.reductant_required))
-        .duration(combustible.duration * blastable.amount_produced * blastable.duration * 0.5)
+        .duration(intValue(combustible.duration * blastable.amount_produced * blastable.duration / 2))
         .blastFurnaceTemp(1750)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
@@ -109,9 +108,22 @@ for (blastable in blastables) {
         .inputs(ore(blastable.name) * blastable.amount_required)
         .fluidInputs(fluid(reductant.name) * (blastable.reductant_required * reductant.amount_required))
         .outputs(metaitem('ingotIron') * blastable.amount_produced)
+        .chancedOutput(metaitem('dustSiliconDioxide'), 5000, 0)
         .fluidOutputs(fluid(reductant.byproduct) * (blastable.reductant_required * reductant.byproduct_amount))
-        .duration(blastable.amount_produced * blastable.duration)
+        .duration((int) (blastable.amount_produced * blastable.duration / 4))
+        .notConsumable(Globals.circuit(1))
         .blastFurnaceTemp(1750)
+        .EUt(Globals.voltAmps[3])
+        .buildAndRegister()
+
+        EBF_RECIPES.recipeBuilder()
+        .inputs(ore(blastable.name) * blastable.amount_required)
+        .fluidInputs(fluid(reductant.name) * (blastable.reductant_required * reductant.amount_required))
+        .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
+        .fluidOutputs(fluid(reductant.byproduct) * (blastable.reductant_required * reductant.byproduct_amount))
+        .duration((int)(blastable.amount_produced * blastable.duration / 4))
+        .blastFurnaceTemp(1750)
+        .notConsumable(Globals.circuit(2))
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
     }
@@ -121,26 +133,17 @@ furnace.add(metaitem('dustBrownLimonite'), metaitem('dustBandedIron'))
 furnace.add(metaitem('dustYellowLimonite'), metaitem('dustBandedIron'))
 furnace.add(metaitem('ingotWroughtIron'), item('minecraft:iron_ingot'))
 
-//PUDDLE FINING
-/*REVERBERATORY_FURNACE.recipeBuilder()
-.inputs(metaitem('ingotPigIron'))
-.outputs(metaitem('ingotWroughtIron'))
-.duration(20)
-.buildAndRegister()*/
-
 //SLAG REMOVAL BY HAMMER
 crafting.addShapeless('hammer_pig_iron',metaitem('ingotWroughtIron'), [
     ore('craftingToolHardHammer'),
     metaitem('ingotPigIron'),
-    metaitem('ingotPigIron')
 ])
 
 def FORGE_HAMMER = recipemap('forge_hammer')
 
 FORGE_HAMMER.recipeBuilder()
-REVERBERATORY_FURNACE.recipeBuilder()
-.inputs(metaitem('ingotPigIron') * 3)
-.outputs(metaitem('ingotWroughtIron') * 2)
+.inputs(metaitem('ingotPigIron'))
+.outputs(metaitem('ingotWroughtIron'))
 .duration(20)
 .EUt(Globals.voltAmps[0])
 .buildAndRegister()
