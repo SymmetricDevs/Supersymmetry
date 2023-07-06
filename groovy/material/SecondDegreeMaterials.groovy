@@ -453,5 +453,29 @@ public class SecondDegreeMaterials {
                 .components(AmmoniumIronIISulfate, 1, Water, 1)
                 .color(0x70cc6e)
                 .build();
+
+        DilutedDiTertButylPeroxide = new Material.Builder(13072, "diluted_di_tert_butyl_peroxide")
+                .fluid()
+                .components(DiTertButylPeroxide, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        DilutedTwoEthylhexylNitrate = new Material.Builder(13073, "diluted_two_ethylhexyl_nitrate")
+                .fluid()
+                .components(TwoEthylhexylNitrate, 1, Water, 1, SulfuricAcid, 1)
+                .colorAverage()
+                .build();
+
+        DilutedNitromethane = new Material.Builder(13074, "diluted_nitromethane")
+                .fluid()
+                .components(Nitromethane, 3, Water, 1)
+                .colorAverage()
+                .build();
+
+        DiluteAmmoniumSulfateSolution = new Material.Builder(13075, "dilute_ammonium_sulfate_solution")
+                .fluid()
+                .components(AmmoniumSulfate, 1, Water, 2)
+                .colorAverage()
+                .build();
     }
 }

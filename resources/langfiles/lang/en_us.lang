@@ -57,7 +57,7 @@ material.pbi_waste=Polybenzimidazole Waste
 material.hydroxylamine=Hydroxylamine
 material.cyclohexanone=Cyclohexanone
 material.diluted_cyclohexanone=Diluted Cyclohexanone
-material.caprolactam_oxime_solution=Caprolactam Oxime Solution
+material.caprolactam_solution=Caprolactam Solution
 material.bisphenola_diglycidyl_ether=Bisphenol A Diglycidyl Ether
 material.impure_epoxy_resin=Impure Epoxy Resin
 material.uncured_epoxy_resin=Uncured Epoxy Resin
@@ -937,6 +937,7 @@ material.soda_ash_roasted_vanadinite=Soda Ash Roasted Vanadinite
 material.leached_salt_roasted_vanadinite=Leached Salt Roasted Vanadinite
 material.leached_soda_ash_roasted_vanadinite=Leached Soda Ash Roasted Vanadinite
 material.lead_chloride_solution=Lead Chloride Solution
+material.polycaprolactam=Polycaprolactam (Nylon)
 
 # Thermodynamics
 
@@ -1275,6 +1276,14 @@ material.thallium_rich_flue_gas=Thallium-Rich Flue Gas
 material.light_oily_brine=Light Oily Brine
 material.heavy_oily_brine=Heavy Oily Brine
 material.calcium_sulfite=Calcium Sulfite
+material.sodium_amide=Sodium Amide
+material.zeolite_13=Zeolite 13X
+material.zeolite_13_solution=Zeolite 13X Solution
+material.sienna=Sienna
+material.burnt_sienna=Burnt Sienna
+material.lead_chromate=Lead Chromate
+material.cobalt_aluminate=Cobalt Aluminate
+material.lead_nitrate=Lead Nitrate
 material.acidic_tributyl_phosphate=Acidic Tributyl Phosphate
 material.tributyl_phosphate=Tributyl Phosphate
 material.sodium_chromate_mixture=Sodium Chromate Mixture
@@ -1297,6 +1306,127 @@ material.chromium_catholyte=Chromium Catholyte
 material.chromium_anolyte=Chromium Anolyte
 material.reduced_chromium_anolyte=Reduced Chromium Anolyte
 material.chromium_mother_liquor=Chromium Mother Liquor
+material.n_hexadecylamine=n-Hexadecylamine
+material.n_hexadecylammonium_acetate=n-Hexadecylammonium Acetate
+material.potash_concentrate=Potash Concentrate
+material.impure_potash_slurry=Impure Potash Slurry
+material.potash_slurry=Potash Slurry
+material.supersaturated_brine=Supersaturated Brine
+material.gallium_trioxide=Gallium Trioxide
+material.ammonium_dihydrogen_phosphate=Ammonium Dihydrogen Phosphate
+material.aluminium_carbonate=Aluminium Carbonate
+material.iron_carbonate=Iron Carbonate
+material.ammonium_diuranate=Ammonium Diuranate
+material.magnesium_carbonate=Magnesium Carbonate
+material.impure_vtm_slurry=Impure Vanadiferous Titanomagnetite Slurry
+material.vtm_slurry=Vanadiferous Titanomagnetite Slurry
+material.silicon_dioxide_slurry=Silicon Dioxide Slurry
+material.vtm_concentrate=Vanadiferous Titanomagnetite Concentrate
+material.vt_slag=Vanadium-Titania Slag
+material.alkali_vt_slag=Alkaline Vanadium-Titania Slag
+material.titania_slag=Titania Slag
+material.titanyl_sulfate_solution=Titanyl Sulfate Solution
+material.rutile_slurry=Rutile Slurry
+material.carnotite_leach=Carnotite Leach
+material.reduced_carnotite_leach=Reduced Carnotite Leach
+material.uranium_vanadium_extraction_mixture=Uranium-Vanadium Extraction Mixture
+material.uranium_vanadium_extract=Uranium-Vanadium Extract
+material.uranium_extract=Uranium Extract
+material.acidic_vanadyl_solution=Acidic Vanadyl Solution
+material.impure_uranyl_carbonate_solution=Impure Uranyl Carbonate Solution
+material.uranyl_carbonate_solution=Uranyl Carbonate Solution
+material.uranyl_sulfate_solution=Uranyl Sulfate Solution
+material.ammonium_sulfate_solution=Ammonium Sulfate Solution
+material.carnotite=Carnotite
+material.compressed_air=Compressed Air
+material.chilled_air=Chilled Air
+material.purified_air=Purified Air
+material.boosted_air=Boosted Air
+material.cold_water=Cold Water
+material.waste_gaseous_nitrogen=Waste Gaseous Nitrogen
+material.purified_waste_gaseous_nitrogen=Purfied Waste Gaseous Nitrogen
+material.chilled_boosted_air=Chilled Boosted Air
+material.partially_liquified_air=Partially Liquified Air
+material.gaseous_air_feedstock=Gaseous Air Feedstock
+material.liquid_air_feedstock=Liquid Air Feedstock
+material.chilly_waste_gaseous_nitrogen=Chilly Waste Gaseous Nitrogen
+material.subcooled_liquid_nitrogen=Subcooled Liquid Nitrogen
+material.cold_waste_gaseous_nitrogen=Cold Waste Gaseous Nitrogen
+material.untreated_liquid_oxygen=Untreated Liquid Oxygen
+material.untreated_liquid_nitrogen=Untreated Liquid Nitrogen
+material.oxygen_rich_liquid=Oxygen Rich Liquid
+material.oxygen_rich_gas=Oxygen Rich Gas
+material.nitrogen_rich_gas=Nitrogen Rich Gas
+material.argon_rich_gas=Argon Rich Gas
+material.oxygen_rich_vapor=Oxygen Rich Vapor
+material.crude_argon_vapor=Crude Argon Vapor
+material.liquid_crude_argon=Liquid Crude Argon
+material.subcooled_oxygen_rich_liquid=Subcooled Oxygen-Rich Liquid
+material.crude_liquid_krypton=Crude Liquid Krypton
+material.rare_gas_rich_fraction=Rare Gas-Rich Fraction
+material.condensed_rare_gas_rich_fraction=Condensed Rare Gas-Rich Fraction
+material.crude_neon_vapor=Crude Neon Vapor
+material.gaseous_crude_krypton=Gaseous Crude Krypton
+material.cold_liquid_oxygen=Cold Liquid Oxygen
+material.compressed_crude_neon=Compressed Crude Neon
+material.partially_liquefied_crude_neon=Partially Liquefied Crude Neon
+material.gaseous_crude_neon=Gaseous Crude Neon
+material.liquid_crude_neon=Liquid Crude Neon
+material.dirty_molecular_sieve=Dirty Molecular Sieve
+material.cold_gaseous_nitrogen=Cold Gaseous Nitrogen
+material.tert_butyl_alcohol=tert-Butyl Alcohol
+material.butylated_hydroxytoluene=Butylated Hydroxytoluene
+material.dimethyl_tert_butylphenol=2,4-Dimethyl-6-tert-butylphenol
+material.aluminium_phenolate=Aluminium Phenolate
+material.di_tert_butylphenol=2,6-Di-tert-butylphenol
+material.isooctane=iso-Octane
+material.purified_isoprene=Purified Isoprene
+material.cyclopentadiene=Cyclopentadiene
+material.cyclopentadiene_solution=Cyclopentadiene Solution
+material.ferrocene=Ferrocene
+material.polyisoprene=Polyisoprene
+material.chloroethane=Chloroethane
+material.sodium_lead_alloy=Sodium-Lead Alloy
+material.tetraethyllead=Tetraethyl Lead
+material.tetraethyllead_sludge=Tetraethyl Lead Sludge
+material.tert_butyl_hydroperoxide=tert-Butyl Hydroperoxide
+material.di_tert_butyl_peroxide=Di-tert-butyl Peroxide
+material.two_ethylhexyl_nitrate=2-Ethylhexyl Nitrate
+material.nitromethane=Nitromethane
+material.diluted_di_tert_butyl_peroxide=Diluted Di-tert-butyl Peroxide
+material.diluted_two_ethylhexyl_nitrate=Diluted 2-Ethylhexyl Nitrate
+material.diluted_nitromethane=Diluted Nitromethane
+material.gasoline_oxygenates=Gasoline Oxygenates
+material.gasoline_antioxidants=Gasoline Antioxidants
+material.gasoline_antiknock=Gasoline Antiknock
+material.gasoline_general_additives=Gasoline General Additives
+material.midgrade_gasoline=Midgrade Gasoline
+material.premium_gasoline=Premium Gasoline
+material.supreme_gasoline=Supreme Gasoline
+material.potassium_molecular_sieve=Potassium-Loaded Molecular Sieve
+material.cesium_molecular_sieve=Cesium-Loaded Molecular Sieve
+material.saturated_potassium_molecular_sieve=Saturated Potassium-Loaded Molecular Sieve
+material.saturated_cesium_molecular_sieve=Saturated Cesium-Loaded Molecular Sieve
+material.impure_ilmenite_slurry=Impure Ilmenite Slurry
+material.impure_ilmenite_concentrate=Impure Ilmenite Concentrate
+material.ilmenite_slurry=Ilmenite Slurry
+material.titanyl_sulfate_solution=Titanyl Sulfate Solution
+material.acidic_wastewater=Acidic Wastewater
+material.rutile_concentrate=Rutile Concentrate
+material.ultramafic_tailing_slurry=Ultramafic Tailing Slurry
+material.rutile_slurry=Rutile Slurry
+material.impure_titanium_tetrachloride=Impure Titanium Tetrachloride
+material.distilled_titanium_tetrachloride=Distilled Titanium Tetrachloride
+material.vanadium_free_titanium_tetrachloride=Vanadium-Free Titanium Tetrachloride
+material.vanadium_oxydichloride=Vanadium Oxydichloride
+material.vanadium_oxytrichloride=Vanadium Oxytrichloride
+material.gaseous_iron_iii_chloride=Gaseous Iron III Chloride
+material.gaseous_titanium_tetrachloride=Gaseous Titanium Tetrachloride
+material.tin_tetrachloride=Tin Tetrachloride
+material.gaseous_aluminium_trichloride=Gaseous Aluminium Trichloride
+material.neutralized_caprolactam_solution=Neutralized Caprolactam Solution
+material.extracted_caprolactam_solution=Extracted Caprolactam Solution
+material.dilute_ammonium_sulfate_solution=Dilute Ammonium Sulfate Solution
 
 # Isotopes
 
@@ -1382,6 +1512,8 @@ metaitem.battery.lead_acid.name=Lead Acid Battery
 metaitem.steam.piston.name=Steam Piston
 metaitem.steam.motor.name=Steam Motor
 metaitem.steam.pump.name=Steam Pump
+
+metaitem.bound_leather.name=Bound Leather
 
 metaitem.vacuum_tube_components.name=Vacuum Tube Components
 
@@ -1568,6 +1700,9 @@ metaitem.baseenrichednaquadahtriniumeuropiumduranide.name=Base Enriched Naquadah
 metaitem.assemblyrutheniumtriniumamericiumneutronate.name=Ruthenium Trinium Americium Neutronate Assembly
 metaitem.baserutheniumtriniumamericiumneutronate.name=Base Ruthenium Trinium Americium Neutronate Superconductor
 
+metaitem.crucible.boron.nitride=Pyrolytic Boron Nitride Crucible
+material.crucible.graphite=Graphite Crucible
+
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
 metaitem.raw_diamond.name=Raw Diamond
@@ -1630,6 +1765,16 @@ metaitem.ag_fifty_w_x_eight_beads.name=AG 50W-X8 Resin Beads
 metaitem.amberlyst_ch_beads.name=Amberlyst CH-43 Beads
 
 metaitem.fused_quartz.name=Fused Quartz Plate
+metaitem.crucible.quartz.name=Quartz Crucible
+metaitem.crucible.graphite.name=Graphite Crucible
+
+metaitem.seed.cotton.name=Cotton Seed
+metaitem.crop.cotton.name=Cotton
+
+metaitem.vti_rich_pig_iron.name=Vanadium/Titanium-Rich Pig Iron
+metaitem.vt_slag.name=Vanadium/Titanium-Rich Slag
+metaitem.titanium_sponge.name=Titanium Sponge
+metaitem.sponge.titanium.crude.name=Crude Titanium Sponge
 
 # Multiblocked
 
@@ -1652,6 +1797,7 @@ tile.hellsand.name=Mineral-Rich Sand
 tile.magma.name=Magma-Infused Netherrack
 
 item.fireworks.name=Elytra Rocket
+tile.appliedenergistics2.grindstone.name=Primitive Grindstone
 
 # Laser Engraver Renaming
 gregtech.machine.laser_engraver.lv.name=Basic Electron Beam Lithographer

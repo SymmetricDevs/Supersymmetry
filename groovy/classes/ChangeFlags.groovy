@@ -13,6 +13,8 @@ import gregtech.api.unification.material.properties.PropertyKey;
 import static material.SuSyMaterials.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import supersymmetry.api.recipes.SuSyRecipeMaps;
+import gregtech.api.recipes.RecipeMap;
+import gregtech.api.recipes.RecipeMaps;
 
 //eventManager.listen(EventPriority.LOWEST) 
 class ChangeFlags {
@@ -21,10 +23,7 @@ class ChangeFlags {
 
         log.infoMC("Modifying flags...")
 
-        SuSyRecipeMaps.FROTH_FLOTATION.setMaxFluidInputs(3);
-        SuSyRecipeMaps.FLUIDIZED_BED_REACTOR_RECIPES.setMaxOutputs(3);
-        SuSyRecipeMaps.ELECTROLYTIC_CELL_RECIPES.setMaxFluidInputs(3);
-        SuSyRecipeMaps.QUENCHER_RECIPES.setMaxFluidInputs(2);
+        RecipeMaps.BLAST_RECIPES.setMaxFluidInputs(2);
 
         Steel.addFlags("generate_spring", "generate_spring_small");
         Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");

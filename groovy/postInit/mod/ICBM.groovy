@@ -62,14 +62,14 @@ def name_removals = [
         "icbmclassic:explosives/anti_grav",
         "icbmclassic:explosives/ender",
         "icbmclassic:explosives/hypersonic",
-        "icbmclassic:explosives/grenade",
-        "icbmclassic:explosives/grenade.1",
-        "icbmclassic:explosives/grenade.2",
-        "icbmclassic:explosives/grenade.3",
-        "icbmclassic:explosives/grenade.4",
-        "icbmclassic:explosives/grenade.5",
-        "icbmclassic:explosives/grenade.6",
-        "icbmclassic:explosives/grenade.7"
+        "icbmclassic:grenades/grenade",
+        "icbmclassic:grenades/grenade.1",
+        "icbmclassic:grenades/grenade.2",
+        "icbmclassic:grenades/grenade.3",
+        "icbmclassic:grenades/grenade.4",
+        "icbmclassic:grenades/grenade.5",
+        "icbmclassic:grenades/grenade.6",
+        "icbmclassic:grenades/grenade.7"
 ]
 
 for (item in name_removals) {
@@ -237,8 +237,7 @@ Globals.solders.each { key, val ->
                 .inputs([
                         metaitem('fluid_cell')*8,
                         item('icbmclassic:explosives:6')*8,
-                        ore('plateStainlessSteel')*2,
-                        ore('plateStainlessSteel')*2
+                        ore('plateStainlessSteel')*4
                 ])
                 .fluidInputs(fluid(key) * val)
                 .fluidInputs(fuel)
@@ -325,6 +324,42 @@ Globals.solders.each { key, val ->
             ])
             .fluidInputs(fluid(key) * val)
             .outputs(item('icbmclassic:launcherscreen:2'))
+            .duration(400)
+            .EUt(260)
+            .buildAndRegister();
+
+    mods.gregtech.assembler.recipeBuilder()
+            .inputs([
+                    ore('frameGtSteel')*3,
+                    ore('stickLongSteel')*3,
+                    metaitem('sensor.lv')
+            ])
+            .fluidInputs(fluid(key) * val)
+            .outputs(item('icbmclassic:launcherframe:0'))
+            .duration(400)
+            .EUt(30)
+            .buildAndRegister();
+
+    mods.gregtech.assembler.recipeBuilder()
+            .inputs([
+                    ore('frameGtAluminium')*3,
+                    ore('stickLongAluminium')*3,
+                    metaitem('sensor.mv')
+            ])
+            .fluidInputs(fluid(key) * val)
+            .outputs(item('icbmclassic:launcherframe:1'))
+            .duration(400)
+            .EUt(60)
+            .buildAndRegister();
+
+    mods.gregtech.assembler.recipeBuilder()
+            .inputs([
+                    ore('frameGtStainlessSteel')*3,
+                    ore('stickLongStainlessSteel')*3,
+                    metaitem('sensor.hv')
+            ])
+            .fluidInputs(fluid(key) * val)
+            .outputs(item('icbmclassic:launcherframe:2'))
             .duration(400)
             .EUt(260)
             .buildAndRegister();

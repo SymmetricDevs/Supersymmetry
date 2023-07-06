@@ -178,7 +178,7 @@ EBF.recipeBuilder()
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
-//SPECIALIZED (HV) (FOR PHOSPHORITE, DEPENDENCY ON FROTH FLOTATION, WILL NOT IMPLEMENT YET)
+//SPECIALIZED (HV)
 MIXER.recipeBuilder()
     .inputs(ore('dustPhosphorite') * 2)
     .fluidInputs(fluid('distilled_water') * 1000)

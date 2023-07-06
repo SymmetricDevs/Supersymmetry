@@ -25,5 +25,52 @@ crafting.replaceShaped('chisel:offsettool', item('chisel:offsettool'), [
 crafting.replaceShaped('chisel:autochisel', item('chisel:auto_chisel'), [
     [ore('blockGlass'), ore('blockGlass'), ore('blockGlass')],
     [metaitem('electric.motor.lv'), metaitem('hull.lv'), metaitem('circuit.electronic')],
-    [ore('plateIron'), metaitem('toolHeadDrillSteel'), ore('plateIron')]
+    [ore('plateIron'), ore('plateIron'), ore('plateIron')]
 ])
+
+crafting.replaceShaped('chisel:factory', item('chisel:factory') * 32, [
+        [item('minecraft:iron_ingot'), ore('stone'), item('minecraft:iron_ingot')],
+        [ore('stone'), null, ore('stone')],
+        [item('minecraft:iron_ingot'), ore('stone'), item('minecraft:iron_ingot')]
+])
+
+crafting.replaceShaped('chisel:tyrian', item('chisel:tyrian') * 32, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), item('minecraft:iron_ingot'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])
+
+crafting.replaceShaped('chisel:temple', item('chisel:temple') * 32, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), ore('dyeCyan'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])
+
+ASSEMBLER = recipemap('assembler')
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stone') * 4)
+        .inputs(item('minecraft:iron_ingot') * 4)
+        .outputs(item('chisel:factory') * 32)
+        .circuitMeta(1)
+        .duration(20)
+        .EUt(7)
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stone') * 8)
+        .inputs(item('minecraft:iron_ingot'))
+        .outputs(item('chisel:tyrian') * 32)
+        .circuitMeta(2)
+        .duration(20)
+        .EUt(7)
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stone') * 8)
+        .inputs(ore('dyeCyan'))
+        .outputs(item('chisel:temple') * 32)
+        .circuitMeta(3)
+        .duration(20)
+        .EUt(7)
+        .buildAndRegister();

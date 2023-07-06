@@ -1,5 +1,10 @@
 import crafttweaker.api.item.IItemStack;
 import Globals.*
+import appeng.api.AEApi;
+import appeng.api.features.IGrinderRegistry;
+import appeng.api.features.IGrinderRecipeBuilder;
+
+final IGrinderRegistry reg = AEApi.instance().registries().grinder();
 
 println("Running StartingAge.groovy...")
 
@@ -11,153 +16,135 @@ def name_removals = [
         "notreepunching:misc/clay_tool_clay_brick",
         "notreepunching:tools/iron_knife",
         "notreepunching:tools/gold_knife",
-        "notreepunching:tools/diamond_knife"
+        "notreepunching:tools/diamond_knife",
+        "biomesoplenty:mud_from_dirt"
 ]
 
 for (item in name_removals) {
     crafting.remove(item);
 }
 
+crafting.addShapeless("fiber_from_cane", item('notreepunching:grass_fiber') * 2, [
+        item('minecraft:reeds'),
+        ore('toolknife')
+])
+
+crafting.addShapeless("fiber_from_wheat", item('notreepunching:grass_fiber') * 2, [
+        item('minecraft:wheat'),
+        ore('toolknife')
+])
+
+crafting.addShapeless("fiber_from_grass", item('notreepunching:grass_fiber'), [
+        item('minecraft:tallgrass', 1),
+        ore('toolknife')
+])
+
+crafting.addShapeless("fiber_from_leaves", item('notreepunching:grass_fiber'), [
+        ore('treeLeaves'),
+        ore('toolknife')
+])
+
 crafting.replaceShapeless("gregtech:clay_ball_to_dust", metaitem('dustClay'), [
         ore('craftingToolMortar'),
         ore('ingotClay')
+])
+
+crafting.addShapeless("gregtech:mud_block_to_ball", item('biomesoplenty:mudball') * 4, [
+        item('biomesoplenty:mud')
+])
+
+crafting.addShapeless("gregtech:mud_from_dirt", item('biomesoplenty:mud'), [
+        fluid('water') * 1000,
+        ore('dirt')
 ])
 
 //Magnetite Chunk Crafting
 crafting.addShapeless("magnetite_chunk", metaitem('chunk.magnetite'), [ore('oreMagnetite'), ore('rock')]);
 crafting.addShapeless("magnetite_chunk_1", metaitem('chunk.magnetite'), [ore('oreVanadiumMagnetite'), ore('rock')]);
 
-
-def fuels = [
-        ore('coal')
-];
-
-//----------Recipes using GT machines----------
-
 crafting.replaceShaped("appliedenergistics2:misc/grindstone", item('appliedenergistics2:grindstone'),[
-        [item('minecraft:stone'),null ,item('minecraft:stone')],
-        [metaitem('gearBronze'),ore('craftingToolFile').reuse(),metaitem('gearBronze')],
-        [item('minecraft:cobblestone'),item('minecraft:cobblestone'),item('minecraft:cobblestone')]
+        [ore('stone'), null, ore('stone')],
+        [metaitem('gearBronze'), ore('craftingToolFile'), metaitem('gearBronze')],
+        [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')]
 ])
 
-
-/*
-def OreMap = [
-	item('gregtech:ore_Iron_0') : metaitem('dustIron')*2,
-	item('gregtech:ore_Gold_0') : metaitem('dustGold')*2,
-	item('gregtech:ore_Copper_0') : metaitem('dustCopper')*2,
-	item('gregtech:ore_Tin_0') : metaitem('dustTin')*2,
-	item('gregtech:ore_Silver_0') : metaitem('dustSilver')*2,
-	item('gregtech:ore_Lead_0') : metaitem('dustLead')*2,
-	item('gregtech:ore_Zinc_0') : metaitem('dustZinc')*2,
-	item('gregtech:ore_Sphalerite_0') : metaitem('dustSphalerite')*4,
-	item('gregtech:ore_Magnetite_0') : metaitem('dustMagnetite')*4,
-	item('gregtech:ore_Vanadium_Magnetite_0') : metaitem('dustVanadiumMagnetite')*4,
-	item('gregtech:ore_Hematite_0') : metaitem('dustHematite')*4,
-	item('gregtech:ore_Brown_Limonite_0') : metaitem('dustBrownLimonite')*4,
-	item('gregtech:ore_Yellow_Limonite_0') : metaitem('dustYellowLimonite')*4,
-	item('gregtech:ore_Tenorite_0') : metaitem('dustTenorite')*4,
-	item('gregtech:ore_Tetrahedrite_0') : metaitem('dustTetrahedrite')*4,
-	item('gregtech:ore_Bornite_0') : metaitem('dustBornite')*4,
-	item('gregtech:ore_Chalcopyrite_0') : metaitem('dustChalcopyrite')*4,
-	item('gregtech:ore_Malachite_0') : metaitem('dustMalachite')*4,
-	item('gregtech:ore_Enargite_0') : metaitem('dustEnargite')*4,
-	item('gregtech:ore_Cassiterite_0') : metaitem('dustCassiterite')*4,
-	item('gregtech:ore_Galena_0') : metaitem('dustGalena')*4,
-	item('gregtech:ore_Pyrite_0') : metaitem('dustPyrite')*4,
-
-	metaitem('ingotTin') : metaitem('dustTin'),
-	metaitem('ingotCopper') : metaitem('dustCopper'),
-	metaitem('ingotBronze') : metaitem('dustBronze'),
-	metaitem('ingotIron') : metaitem('dustIron'),
-	metaitem('ingotLead') : metaitem('dustLead'),
-	metaitem('ingotZinc') : metaitem('dustZinc'),
-	metaitem('ingotBrass') : metaitem('dustBrass'),
-	metaitem('ingotNickel') : metaitem('dustNickel'),
-
-	metaitem('nuggetTin') : metaitem('dustTinyTin'),
-	metaitem('nuggetCopper') : metaitem('dustTinyCopper'),
-	metaitem('nuggetBronze') : metaitem('dustTinyBronze'),
-	metaitem('nuggetIron') : metaitem('dustTinyIron'),
-	metaitem('nuggetLead') : metaitem('dustTinyLead'),
-	metaitem('nuggetZinc') : metaitem('dustTinyZinc'),
-	metaitem('nuggetBrass') : metaitem('dustTinyBrass'),
-	metaitem('nuggetNickel') : metaitem('dustTinyNickel')
-
+def GrindstoneMap = [
+        'gregtech:ore_acanthite_0': "crushedAcanthite",
+        'gregtech:ore_anglesite_0': "crushedAnglesite",
+        'gregtech:ore_sphalerite_0': "crushedSphalerite",
+        'gregtech:ore_chlorapatite_0': "crushedChlorapatite",
+        'gregtech:ore_fluorapatite_0': "crushedFluorapatite",
+        'gregtech:ore_arsenopyrite_0': "crushedArsenopyrite",
+        'gregtech:ore_pyrite_0': "crushedPyrite",
+        'gregtech:ore_banded_iron_0': "crushedBandedIron",
+        'gregtech:ore_magnetite_0': "crushedMagnetite",
+        'gregtech:ore_bornite_0': "crushedBornite",
+        'gregtech:ore_chalcopyrite_0': "crushedChalcopyrite",
+        'susy:resource_block:2': "dustSalt",
+        'susy:resource_block:3': "dustSalt",
+        'susy:resource_block:4': "dustSalt",
+        'susy:resource_block:5': "dustSalt",
+        'gregtech:ore_cassiterite_0': "crushedCassiterite",
+        'gregtech:ore_cerussite_0': "crushedCerussite",
+        'gregtech:ore_cinnabar_0': "crushedCinnabar",
+        'gregtech:ore_stibnite_0': "crushedStibnite",
+        'gregtech:ore_coal_0': "crushedCoal",
+        'gregtech:ore_fluorite_0': "crushedFluorite",
+        'gregtech:ore_galena_0': "crushedGalena",
+        'gregtech:ore_lapis_0': "crushedLapis",
+        'gregtech:ore_lazurite_0': "crushedLazurite",
+        'gregtech:ore_sodalite_0': "crushedSodalite",
+        'gregtech:ore_lignite_0': "crushedLignite",
+        'gregtech:ore_malachite_0': "crushedMalachite",
+        'gregtech:ore_proustite_0': "crushedProustite",
+        'gregtech:ore_pyrolusite_0': "crushedPyrolusite",
+        'gregtech:ore_realgar_0': "crushedRealgar",
+        'gregtech:ore_redstone_0': "crushedRedstone",
+        'gregtech:ore_saltpeter_0': "crushedSaltpeter",
+        'gregtech:ore_chalcocite_0': "crushedChalcocite",
+        'gregtech:ore_enargite_0': "crushedEnargite",
+        'gregtech:ore_tetrahedrite_0': "crushedTetrahedrite",
+        'gregtech:ore_anthracite_0': "crushedAnthracite"
 ]
 
-for (key in OreMap) {
-	mods.appliedenergistics.Grinder.recipeBuilder()
-	.input(key.getKey())
-	.output(OreMap[key.getKey()])
-	.register()
+for (key in GrindstoneMap) {
+    final IGrinderRecipeBuilder builder = reg.builder();
+
+    builder.withInput(item(key.getKey()) * 2)
+    builder.withOutput(metaitem(key.getValue()) * 3)
+    builder.withTurns(5)
+
+    reg.addRecipe(builder.build())
 }
-*/
 
-def ore_prefixes = ['ore']
-def material_names = [
-        'Iron',
-        'Gold',
-        'Copper',
-        'Tin',
-        'Silver',
-        'Lead',
-        'Zinc'
-]
+for (int i = 0; i < 16; i++) {
+    crafting.addShaped("biomesoplenty:wood_cutting_" + i, item('biomesoplenty:planks_0', i) * 6, [
+            [null, ore('toolSaw'), null],
+            [null, item('biomesoplenty:log_0', i), null],
+            [null, null, null]
+    ])
 
-/*
-for (prefix in ore_prefixes) {
-        for (material in material_names) {
-                mods.appliedenergistics.Grinder.recipeBuilder()
-                        .input(ore(prefix + material))
-                        .output(metaitem('ingot' + material))
-                        .register()
-        }
+    mods.gregtech.cutter.recipeBuilder()
+            .inputs(item('biomesoplenty:log_0', i))
+            .outputs(item('biomesoplenty:planks_0', i) * 6)
+            .outputs(metaitem('dustWood') * 2)
+            .duration(200)
+            .EUt(7)
+            .buildAndRegister();
 }
-*/
 
-//NoTreePunching tool stats tweak
+for (int i = 0; i < 9; i++) {
+    crafting.addShaped("gtfo:wood_cutting_" + i, item('gregtechfoodoption:gtfo_planks_0', i) * 6, [
+            [null, ore('toolSaw'), null],
+            [null, item('gregtechfoodoption:gtfo_log_0', i), null],
+            [null, null, null]
+    ])
 
-/*
-item('notreepunching:pickaxe/flint').setMaxDamage(200);
-item('notreepunching:axe/flint').setMaxDamage(200);
-item('notreepunching:shovel/flint').setMaxDamage(200);
-item('notreepunching:hoe/flint').setMaxDamage(200);
-item('notreepunching:knife/flint').setMaxDamage(200);
-*/
-
-/*
-def WoodMap = [
-    'minecraft:log:0': 'minecraft:planks:0',
-    'minecraft:log:1': 'minecraft:planks:1',
-    'minecraft:log:2': 'minecraft:planks:2',
-    'minecraft:log:3': 'minecraft:planks:3',
-    'minecraft:log2:0': 'minecraft:planks:4',
-    'minecraft:log2:1': 'minecraft:planks:5',
-    'biomesoplenty:log_0:4': 'biomesoplenty:planks_0:0',
-    'biomesoplenty:log_0:5': 'biomesoplenty:planks_0:1',
-    'biomesoplenty:log_0:6': 'biomesoplenty:planks_0:2',
-    'biomesoplenty:log_0:7': 'biomesoplenty:planks_0:3',
-    'biomesoplenty:log_1:4': 'biomesoplenty:planks_0:4',
-    'biomesoplenty:log_1:5': 'biomesoplenty:planks_0:5',
-    'biomesoplenty:log_1:6': 'biomesoplenty:planks_0:6',
-    'biomesoplenty:log_1:7': 'biomesoplenty:planks_0:7',
-    'biomesoplenty:log_2:4': 'biomesoplenty:planks_0:8',
-    'biomesoplenty:log_2:5': 'biomesoplenty:planks_0:9',
-    'biomesoplenty:log_2:6': 'biomesoplenty:planks_0:10',
-    'biomesoplenty:log_2:7': 'biomesoplenty:planks_0:11',
-    'biomesoplenty:log_3:4': 'biomesoplenty:planks_0:12',
-    'biomesoplenty:log_3:5': 'biomesoplenty:planks_0:13',
-    'biomesoplenty:log_3:6': 'biomesoplenty:planks_0:14',
-    'biomesoplenty:log_3:7': 'biomesoplenty:planks_0:15'
-]
-
-var i = 0 as int;
-
-for (log in WoodMap) {
-    crafting.addShaped("wood_" + i, item(WoodMap[log.getKey()]) * 4, [
-            [ore('craftingToolSaw'), item(log.getKey()), null]
-    ]);
-    i+=1;
+    mods.gregtech.cutter.recipeBuilder()
+            .inputs(item('gregtechfoodoption:gtfo_log_0', i))
+            .outputs(item('gregtechfoodoption:gtfo_planks_0', i) * 6)
+            .outputs(metaitem('dustWood') * 2)
+            .duration(200)
+            .EUt(7)
+            .buildAndRegister();
 }
-*/

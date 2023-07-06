@@ -147,3 +147,29 @@ mods.gregtech.assembly_line.recipeBuilder()
         .duration(600)
         .EUt(100000)
         .buildAndRegister();
+
+recipemap("roaster").recipeBuilder()
+        .inputs(metaitem('dustGallium') * 2)
+        .fluidInputs(fluid('oxygen') * 3000)
+        .outputs(metaitem('dustGalliumTrioxide') * 5)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister();
+
+recipemap("batch_reactor").recipeBuilder()
+        .fluidInputs(fluid('phosphoric_acid') * 1000)
+        .fluidInputs(fluid('ammonia') * 1000)
+        .outputs(metaitem('dustAmmoniumDihydrogenPhosphate') * 12)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister();
+
+recipemap("batch_reactor").recipeBuilder()
+        .inputs(metaitem('dustGalliumTrioxide') * 5)
+        .inputs(metaitem('dustAmmoniumDihydrogenPhosphate') * 24)
+        .fluidOutputs(fluid('water') * 3000)
+        .fluidOutputs(fluid('ammonia') * 2000)
+        .outputs(metaitem('dustGalliumPhosphate') * 12)
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister();

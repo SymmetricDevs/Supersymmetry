@@ -1,0 +1,48 @@
+{
+  "data": {
+    "factors": [
+      {
+        "type": "limit",
+        "factor": {
+          "priority": 1.0,
+          "rays": [
+            {
+              "type": "dynpos",
+              "ray": {
+                "type": "bedrock"
+              }
+            },
+            {
+              "type": "move",
+              "ray": {
+                "distance": 3
+              }
+            },
+            {
+              "type": "move",
+              "ray": {
+                "distance": 0,
+                "weight": 1000.0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "match",
+        "factor": {
+          "priority": 1.0,
+          "sourceExpression": "",
+          "destExpression": "",
+          "requiredConformity": 0.5
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "title": "BeneathPillarFixed",
+    "description": [
+      ""
+    ]
+  }
+}

@@ -173,7 +173,8 @@ def sedimentary_tier_4 = [
     'gregtech:ore_bauxite_0' : 10000,
     'gregtech:ore_ilmenite_0' : 10000,
     'susy:resource_block:1' : 10000,
-    'gregtech:ore_pyrolusite_0' : 10000
+    'gregtech:ore_pyrolusite_0' : 10000,
+    'gregtech:ore_carnotite_0' : 10000
 ];
 
 def magmatic_hydrothermal_tier_1 = [

@@ -3,6 +3,8 @@ import gregtech.api.GregTechAPI;
 import gregtech.api.items.metaitem.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.ore.OrePrefix;
+import net.minecraft.util.text.TextFormatting;
+import gregtech.common.items.behaviors.TooltipBehavior;
 
 eventManager.listen {
     GregTechAPI.PostMaterialEvent event ->
@@ -120,6 +122,23 @@ eventManager.listen {
         customMetaItems.addItem(199, "ag_fifty_w_x_eight_beads");
 
         customMetaItems.addItem(200, "thick_film_substrate_wafer");
+		
+
+
+        customMetaItems.addItem(201, "vti_rich_pig_iron");
+
+        customMetaItems.addItem(202, "vt_slag");
+
+        customMetaItems.addItem(203, "sponge.titanium").addComponents(new TooltipBehavior((lines) -> {
+            lines.add(TextFormatting.YELLOW + "Ti");
+        }));
+
+        customMetaItems.addItem(204, "sponge.titanium.crude").addComponents(new TooltipBehavior((lines) -> {
+            lines.add(TextFormatting.YELLOW + "(Ti)(?)");
+        }));
+		
+		customMetaItems.addItem(210, "bound_leather");
+
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
@@ -301,6 +320,11 @@ eventManager.listen {
         customMetaItems.addItem(8010, "wafer.doped.polysilicon");
         customMetaItems.addItem(8011, "wafer.silicon_nitride");
         customMetaItems.addItem(8012, "wafer.nickel");
+
+        //Crops 9000-10000
+
+        customMetaItems.addItem(9000, "seed.cotton");
+        customMetaItems.addItem(9001, "crop.cotton");
 
         log.infoMC("Finished adding metaitems")
 }

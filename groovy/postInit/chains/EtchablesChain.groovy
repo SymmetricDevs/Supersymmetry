@@ -418,6 +418,7 @@ for (ndopant in NDopant.ndopants) {
             .circuitMeta(1)
             .inputs(metaitem(ndopant.metaItemName))
             .outputs(metaitem('wafer.n_doped.silicon') * ndopant.efficiency)
+            .cleanroom(CleanroomType.CLEANROOM)
             .duration(300)
             .EUt(60)
             .buildAndRegister()

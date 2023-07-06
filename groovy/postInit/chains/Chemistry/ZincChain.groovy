@@ -7,7 +7,7 @@ BCR = recipemap('bubble_column_reactor')
 BR = recipemap('batch_reactor')
 POLYMERIZATION = recipemap('polymerization_tank')
 FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
+HT_DISTILLATION_TOWER = recipemap('high_temperature_distillation')
 DISTILLERY = recipemap('distillery')
 ROASTER = recipemap('roaster')
 MIXER = recipemap('mixer')
@@ -176,8 +176,7 @@ FLUID_SOLIDIFIER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-//TODO: MOVE THIS TO HIGH TEMPERATURE DISTILLATION
-DISTILLATION_TOWER.recipeBuilder()
+HT_DISTILLATION_TOWER.recipeBuilder()
         .fluidInputs(fluid('crude_zinc') * 2160)
         .chancedOutput(metaitem('dustIron'), 200, 100)
         .fluidOutputs(fluid('cadmium_rich_zinc') * 2160)
@@ -188,27 +187,13 @@ DISTILLATION_TOWER.recipeBuilder()
         .duration(300)
         .buildAndRegister()
 
-//TODO: MOVE THIS TO HIGH TEMPERATURE DISTILLATION
-DISTILLATION_TOWER.recipeBuilder()
+HT_DISTILLATION_TOWER.recipeBuilder()
         .fluidInputs(fluid('cadmium_rich_zinc') * 2160)
         .fluidOutputs(fluid('zinc') * 2160)
         .fluidOutputs(fluid('cadmium') * 144)
         .EUt(480)
         .duration(300)
         .buildAndRegister()
-
-// Cadmium Rich Zinc * 216
-mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('crude_zinc') * 216])
-// Lead * 36
-mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 3])], [fluid('crude_zinc') * 1080])
-// Tin * 36
-mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('crude_zinc') * 2160])
-// Copper * 36
-mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('crude_zinc') * 2160])
-// Zinc * 216
-mods.gregtech.distillery.removeByInput(120, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('cadmium_rich_zinc') * 216])
-// Cadmium * 72
-mods.gregtech.distillery.removeByInput(120, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('cadmium_rich_zinc') * 1080])
 
 CHEMICAL_BATH.recipeBuilder()
         .inputs(metaitem('dustZincite') * 2)
@@ -270,8 +255,7 @@ EBF.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-//TODO: MOVE THIS TO HIGH TEMPERATURE DISTILLATION
-DISTILLATION_TOWER.recipeBuilder()
+HT_DISTILLATION_TOWER.recipeBuilder()
         .fluidInputs(fluid('waelz_oxide') * 1440)
         .chancedOutput(metaitem('dustLead'), 500, 300)
         .fluidOutputs(fluid('cadmium_rich_zinc') * 1440)
@@ -362,8 +346,3 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .EUt(120)
         .duration(200)
         .buildAndRegister()
-
-// Cadmium Rich Zinc * 144
-mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('waelz_oxide') * 144])
-// Cadmium * 36
-mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('waelz_oxide') * 720])

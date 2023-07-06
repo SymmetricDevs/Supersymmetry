@@ -518,15 +518,11 @@ crafting.addShaped("gas_turbine_controller", metaitem('basic_gas_turbine'), [
 		[metaitem('cableGtSingleCopper'), ore('circuitMv'),                   metaitem('cableGtSingleCopper')]
 ])
 
-//TODO: ENABLE WHEN 0.0.14 IS OUT
-/*
 crafting.addShaped("silicon_carbide_casing", item('susy:susy_multiblock_casing') * 2, [
 		[metaitem('plateSiliconCarbide'), ore('craftingToolHardHammer'), metaitem('plateSiliconCarbide')],
 		[metaitem('plateSiliconCarbide'), item('gregtech:turbine_casing', 7), metaitem('plateSiliconCarbide')],
 		[metaitem('plateSiliconCarbide'), ore('craftingToolWrench'), metaitem('plateSiliconCarbide')]
 ])
-
- */
 
 //New Dynamo Hatches
 
@@ -778,6 +774,36 @@ crafting.addShaped("gregtech:quencher", metaitem('quencher'), [
 		[circuits[3], item('gregtech:metal_casing', 5), circuits[3]],
 		[metaitem('pipeLargeFluidStainlessSteel'), circuits[3], metaitem('pipeLargeFluidStainlessSteel')]
 ])
+
+crafting.addShaped("gregtech:dumper", metaitem('dumper'), [
+		[metaitem('plateSteel'), metaitem('plateSteel'), metaitem('plateSteel')],
+		[metaitem('electric.pump.lv'), metaitem('hull.lv'), metaitem('pipeLargeFluidSteel')],
+		[metaitem('plateSteel'), metaitem('plateSteel'), metaitem('plateSteel')]
+])
+
+crafting.addShaped("gregtech:ocean_pumper", metaitem('ocean_pumper'), [
+		[metaitem('stickLongAluminium'), metaitem('electric.pump.mv'), metaitem('stickLongAluminium')],
+		[ore('circuitMv'), metaitem('hull.mv'), ore('circuitMv')],
+		[metaitem('cableGtSingleCopper'), metaitem('electric.pump.mv'), metaitem('cableGtSingleCopper')]
+])
+
+crafting.addShaped("gregtech:coking_tower", metaitem('coking_tower'), [
+		[metaitem('pipeHugeFluidSteel'), pumps[3], metaitem('pipeHugeFluidSteel')],
+		[circuits[3], hulls[3], circuits[3]],
+		[metaitem('pipeHugeFluidSteel'), pumps[3], metaitem('pipeHugeFluidSteel')]
+]);
+
+crafting.addShaped("gregtech:rotary_kiln", metaitem('rotary_kiln'), [
+		[circuits[2], null, tieredCables[2]],
+		[metaitem('pipeHugeFluidSteel'), hulls[2], metaitem('pipeHugeFluidSteel')],
+		[circuits[2], motors[2], tieredCables[2]]
+]);
+
+crafting.addShaped("gregtech:high_temperature_distillation_tower", metaitem('high_temperature_distillation_tower'), [
+		[circuits[3], item('gregtech:wire_coil'), circuits[3]],
+		[pumps[3], hulls[3], pumps[3]],
+		[circuits[3], item('gregtech:wire_coil'), circuits[3]]
+]);
 
 //ION EXCHANGE COLUMN
 
