@@ -1804,7 +1804,7 @@ metaitem.vti_rich_pig_iron.name=Vanadium/Titanium-Rich Pig Iron
 metaitem.vt_slag.name=Vanadium/Titanium-Rich Slag
 metaitem.titanium_sponge.name=Titanium Sponge
 metaitem.sponge.titanium.crude.name=Crude Titanium Sponge
-material.sponge.platinum=Platinum Sponge
+metaitem.sponge.platinum.name=Platinum Sponge
 
 # Multiblocked
 

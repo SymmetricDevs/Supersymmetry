@@ -18,16 +18,28 @@
       "type": "layered",
       "values": [
         {
-          "primary": "ore:alluvial_platinum"
+          "primary": {
+            "block":"susy:resource_block",
+            "variant":"platinum_placer"
+          }
         },
         {
-          "secondary": "ore:alluvial_platinum"
+          "secondary": {
+            "block":"susy:resource_block",
+            "variant":"platinum_placer"
+          }
         },
         {
-          "between": "ore:alluvial_platinum"
+          "between": {
+            "block":"susy:resource_block",
+            "variant":"platinum_placer"
+          }
         },
         {
-          "sporadic": "ore:alluvial_platinum"
+          "sporadic": {
+            "block":"susy:resource_block",
+            "variant":"platinum_placer"
+          }
         }
       ]
     }

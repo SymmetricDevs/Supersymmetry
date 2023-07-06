@@ -7,7 +7,17 @@ DISTILLATION_TOWER = recipemap('distillation_tower')
 ROASTER = recipemap('roaster')
 MACERATOR = recipemap('macerator')
 
+// Platinum Dust * 1
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustAlluvialPlatinum')], null)
+
 //LOW EFFICIENCY CHAIN (66%)
+MACERATOR.recipeBuilder()
+        .inputs(item('susy:resource_block', 10))
+        .outputs(metaitem('dustAlluvialPlatinum') * 4)
+        .duration(160)
+        .EUt(30)
+        .buildAndRegister()
+
 BR.recipeBuilder()
     .inputs(metaitem('dustAlluvialPlatinum'))
     .fluidInputs(fluid('aqua_regia') * 8000)

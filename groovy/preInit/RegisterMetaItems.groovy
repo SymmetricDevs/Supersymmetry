@@ -127,13 +127,9 @@ eventManager.listen {
 
         customMetaItems.addItem(202, "vt_slag");
 
-        customMetaItems.addItem(203, "sponge.titanium").addComponents(new TooltipBehavior((lines) -> {
-            lines.add(TextFormatting.YELLOW + "Ti");
-        }));
+        customMetaItems.addItem(203, "sponge.titanium")
 
-        customMetaItems.addItem(204, "sponge.titanium.crude").addComponents(new TooltipBehavior((lines) -> {
-            lines.add(TextFormatting.YELLOW + "(Ti)(?)");
-        }));
+        customMetaItems.addItem(204, "sponge.titanium.crude")
 		
 		customMetaItems.addItem(210, "bound_leather");
 
