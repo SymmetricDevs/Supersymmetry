@@ -58,9 +58,8 @@ crafting.addShaped("drum_lead", metaitem('drum.lead'), [
         [metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')]
 ]);
 
-crafting.addShapeless("drum_nbt_lead", metaitem('drum.lead'), [
-        metaitem('drum.lead').noreturn()
-]);
+ModHandler.addShapelessNBTClearingRecipe("drum_nbt_lead", MetaTileEntities.LEAD_DRUM.getStackForm(), MetaTileEntities.LEAD_DRUM.getStackForm());
+ModHandler.addShapelessNBTClearingRecipe("drum_nbt_brass", MetaTileEntities.BRASS_DRUM.getStackForm(), MetaTileEntities.BRASS_DRUM.getStackForm());
 
 mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('battery.hull.lv'))
