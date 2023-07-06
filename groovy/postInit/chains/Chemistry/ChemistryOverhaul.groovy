@@ -1370,7 +1370,7 @@ DISTILLERY.recipeBuilder()
 
 DISTILLERY.recipeBuilder()
 .fluidInputs(fluid('mixed_nitrochlorobenzene') * 144)
-.chanchedOutput(metaitem('dustFourNitrochlorobenzene'))
+.chancedOutput(metaitem('dustFourNitrochlorobenzene'), 6500, 0)
 .fluidOutputs(fluid('two_nitrochlorobenzene') * 50)
 .duration(300)
 .EUt(30)
@@ -1379,7 +1379,7 @@ DISTILLERY.recipeBuilder()
 // 4-nitroaniline
 
 BR.recipeBuilder()
-.fluidInputs(fluid('four_nitrochlorobenzene_solution') * 1000)
+.inputs(metaitem('dustFourNitrochlorobenzene'))
 .fluidInputs(fluid('ammonia') * 2000)
 .fluidOutputs(fluid('four_nitroaniline_solution') * 1000)
 .outputs(ore('dustAmmoniumChloride').first() * 6)
