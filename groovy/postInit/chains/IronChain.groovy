@@ -46,6 +46,7 @@ class Combustible {
 
 def PBF_RECIPES = recipemap("primitive_blast_furnace")
 def EBF_RECIPES = recipemap("electric_blast_furnace")
+def REVERBERATORY_FURNACE = recipemap("reverberatory_furnace")
 
 def blastables = [
     new Blastable('dustMagnetite', 7 , 6, 4, 80),
@@ -117,21 +118,14 @@ for (blastable in blastables) {
 
 furnace.add(metaitem('dustBrownLimonite'), metaitem('dustBandedIron'))
 furnace.add(metaitem('dustYellowLimonite'), metaitem('dustBandedIron'))
-furnace.add(metaitem('ingotPigIron'), item('minecraft:iron_ingot'))
+furnace.add(metaitem('ingotWroughtIron'), item('minecraft:iron_ingot'))
 
-def FORGE_HAMMER = recipemap('forge_hammer')
-
-FORGE_HAMMER.recipeBuilder()
+REVERBERATORY_FURNACE.recipeBuilder()
 .inputs(metaitem('ingotPigIron'))
 .outputs(metaitem('ingotWroughtIron'))
 .duration(20)
 .EUt(Globals.voltAmps[0])
 .buildAndRegister()
-
-crafting.addShapeless('hammer_pig_iron',metaitem('ingotWroughtIron'), [
-    ore('craftingToolHardHammer'),
-    metaitem('ingotPigIron')
-])
 
 // Steel Ingot * 1
 mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoke')], null)
