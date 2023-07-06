@@ -1409,11 +1409,11 @@ DISTILLATION_TOWER.recipeBuilder()
 // 3,3'-Dichlorobenzidine
 
 FBR.recipeBuilder()
-.fluidInputs(fluid('two_nitrochlorobenzene_solution') * 100)
-.fluidInputs(fluid('hot_hp_hydrogen') * 100)
+.fluidInputs(fluid('two_nitrochlorobenzene') * 288)
+.fluidInputs(fluid('hot_hp_hydrogen') * 2000)
 .notConsumable(ore('catalystBedPalladium'))
-.fluidOutputs(fluid('two_two_dichlorohydrazobenzene_solution') * 50)
-.duration(15)
+.fluidOutputs(fluid('two_two_dichlorohydrazobenzene_solution') * 1000)
+.duration(300)
 .EUt(120)
 .buildAndRegister()
 
