@@ -53,6 +53,7 @@ class ChangeFlags {
         Phosphorus.addFlags("no_smelting");
         
         DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
+        AquaRegia.setFormula("(HNO3)(HCl)3", true);
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
 

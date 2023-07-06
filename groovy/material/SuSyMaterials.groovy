@@ -104,6 +104,7 @@ class SuSyMaterials {
         public static Material Hydroxyapatite;
         public static Material Rhodochrosite;
         public static Material Carnotite;
+        public static Material AlluvialPlatinum;
 
         // Roasted Ores
 
@@ -837,6 +838,9 @@ class SuSyMaterials {
         public static Material Polycarbonate;
         public static Material SodiumNitrite;
         public static Material SodiumOxide;
+        public static Material HexachloroplatinicAcidSolution;
+        public static Material SodiumHexachloroplatinateSolution;
+        public static Material AmmoniumHexachloroplatinate;
 
         // Second Degree Materials
 
@@ -916,6 +920,7 @@ class SuSyMaterials {
         public static Material DilutedTwoEthylhexylNitrate;
         public static Material DilutedNitromethane;
         public static Material DiluteAmmoniumSulfateSolution;
+        public static Material DilutedAmmoniumChlorideSolution;
 
         // Organic Chemistry Materials
 

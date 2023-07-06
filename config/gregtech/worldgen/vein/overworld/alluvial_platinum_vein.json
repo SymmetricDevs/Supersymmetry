@@ -1,0 +1,34 @@
+{
+    "weight": 40,
+    "density": 0.75,
+    "max_height": 80,
+    "min_height": 0,
+    "vein_populator": {
+      "type": "surface_rock",
+      "material": "alluvial_platinum"
+    },
+    "generator": {
+      "type": "layered",
+      "radius": [
+        10,
+        10
+      ]
+    },
+    "filler": {
+      "type": "layered",
+      "values": [
+        {
+          "primary": "ore:alluvial_platinum"
+        },
+        {
+          "secondary": "ore:alluvial_platinum"
+        },
+        {
+          "between": "ore:alluvial_platinum"
+        },
+        {
+          "sporadic": "ore:alluvial_platinum"
+        }
+      ]
+    }
+  }

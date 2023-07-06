@@ -1451,6 +1451,11 @@ material.phosphate_concentrate_slurry=Phosphate Concentrate Slurry
 material.impure_cassiterite_slurry=Impure Cassiterite Slurry
 material.cassiterite_slurry=Cassiterite Slurry
 material.limestone_tailing_slurry=Limestone Tailing Slurry
+material.hexachloroplatinic_acid_solution=Hexachloroplatinic Acid Solution
+material.sodium_hexachloroplatinate_solution=Sodium Hexachloroplatinate Solution
+material.ammonium_hexachloroplatinate=Ammonium Hexachloroplatinate
+material.diluted_ammonium_chloride_solution=Diluted Ammonium Chloride Solution
+material.alluvial_platinum=Alluvial Platinum
 
 # Isotopes
 
@@ -1799,6 +1804,7 @@ metaitem.vti_rich_pig_iron.name=Vanadium/Titanium-Rich Pig Iron
 metaitem.vt_slag.name=Vanadium/Titanium-Rich Slag
 metaitem.titanium_sponge.name=Titanium Sponge
 metaitem.sponge.titanium.crude.name=Crude Titanium Sponge
+material.sponge.platinum=Platinum Sponge
 
 # Multiblocked
 
