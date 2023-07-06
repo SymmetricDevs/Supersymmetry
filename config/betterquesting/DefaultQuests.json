@@ -24812,7 +24812,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6radiator§o§o§r is a device that transfers heat from a fluid or object to the surrounding environment.\n\nIt can cool down exhaust steam into water or §6§chot compressed fluids into a more manageable temperature.\n§rFor example, you can cool down Hot High Pressure Hydrogen into normal High Pressure Hydrogen.\n§r\nThe Radiator requires:\n\n§6- 1 Heat Radiator Controller\n- 1 Maintenance Hatch\n- 1 Output Hatch\n- 1 Input Hatch\n- 48 Solid Steel Machine Casing\n- 135 Steel Pipe Casing\n\n§rDue to the high cost of steel, it is recommended that you use an EBF and Arc Furnace to process iron into steel instead of just using a PBF setup.",
+          "desc:8": "A §6radiator§o§o§r is a device that transfers heat from a fluid or object to the surrounding environment.\n\nIt can cool down exhaust steam into water or §6§chot compressed fluids into a more manageable temperature.\n§rFor example, you can cool down Hot High Pressure Hydrogen into normal High Pressure Hydrogen.\n§r\nA minimum size Radiator requires:\n\n§6- 1 Heat Radiator Controller\n- 1 Maintenance Hatch\n- 1 Output Hatch\n- 1 Input Hatch\n- 20 Solid Steel Machine Casing\n- 9 Steel Pipe Casing\n\n§rDue to the high cost of steel, it is recommended that you use an EBF and Arc Furnace to process iron into steel instead of just using a PBF setup.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
