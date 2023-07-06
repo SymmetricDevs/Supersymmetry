@@ -274,7 +274,6 @@ class SuSyMaterials {
         public static Material EthylamineMix;
         public static Material ImpureSphaleriteSlurry;
         public static Material UnprocessedSphaleriteSlurry;
-        public static Material GalenaSlurry;
         public static Material SphaleriteSlurry;
         public static Material ThalliumRichFlue;
         public static Material CrudeZinc;
