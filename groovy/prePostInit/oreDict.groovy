@@ -164,7 +164,6 @@ mods.jei.hideCategory('techguns.oredrill')
 mods.jei.hideCategory('techguns.blastfurnace')
 mods.jei.hideCategory('techguns.grinder')
 mods.jei.hideCategory('techguns.camobench')
-mods.jei.hideCategory('techguns.upgradebench')
 
 mods.jei.hideCategory('minecraft.anvil')
 
