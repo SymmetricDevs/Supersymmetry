@@ -1443,6 +1443,5 @@ public class OrganicChemistryMaterials {
                 .components(Caprolactam, 1, Toluene, 1)
                 .colorAverage()
                 .build();
-
     }
 }

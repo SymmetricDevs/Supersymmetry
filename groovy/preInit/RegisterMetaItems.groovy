@@ -123,7 +123,6 @@ eventManager.listen {
 
         customMetaItems.addItem(200, "thick_film_substrate_wafer");
 		
-		customMetaItems.addItem(201, "bound_leather");
 
 
         customMetaItems.addItem(201, "vti_rich_pig_iron");
@@ -137,6 +136,9 @@ eventManager.listen {
         customMetaItems.addItem(204, "sponge.titanium.crude").addComponents(new TooltipBehavior((lines) -> {
             lines.add(TextFormatting.YELLOW + "(Ti)(?)");
         }));
+		
+		customMetaItems.addItem(210, "bound_leather");
+
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
