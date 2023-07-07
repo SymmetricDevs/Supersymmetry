@@ -474,10 +474,10 @@ class SuSyMaterials {
         public static Material DilutedSaltwater;
         public static Material SodiumHydroxideSolution;
         public static Material IronIIIChlorideSolution;
-        public static Material DiluteSaltpeterSolution;
+        public static Material DilutedSaltpeterSolution;
         public static Material HydrogenBromide;
-        public static Material DiluteCalciumChlorideSolution;
-        public static Material DiluteRockSaltSolution;
+        public static Material DilutedCalciumChlorideSolution;
+        public static Material DilutedRockSaltSolution;
         public static Material DryCarbonMonoxide;
         public static Material AmmoniaSolution;
         public static Material SaltpeterSolution;
@@ -857,7 +857,7 @@ class SuSyMaterials {
         public static Material SodiumNitrateSolution;
         public static Material PotassiumHydroxideSolution;
         public static Material CalciumHydroxideSolution;
-        public static Material DilutePotassiumCarbonateSolution;
+        public static Material DilutedPotassiumCarbonateSolution;
         public static Material SodiumSilicateSolution;
         public static Material SodiumAluminateSolution;
         public static Material SodiumFluorideSolution;
@@ -892,10 +892,10 @@ class SuSyMaterials {
         public static Material PotassiumCarbonateSolution;
         public static Material PotassiumSulfateSolution;
         public static Material PhosphoriteSlurry;
-        public static Material DiluteHexafluorosilicicAcid;
+        public static Material DilutedHexafluorosilicicAcid;
         public static Material LithiumSulfateSolution;
-        public static Material DiluteSodiumSulfateSolution;
-        public static Material DiluteHydrofluoricAcid;
+        public static Material DilutedSodiumSulfateSolution;
+        public static Material DilutedHydrofluoricAcid;
         public static Material FluorideFusedBeryl;
         public static Material SodiumFluoroberyllateSolution;
         public static Material AmmoniumFluoroberyllateSolution;
@@ -919,7 +919,7 @@ class SuSyMaterials {
         public static Material DilutedDiTertButylPeroxide;
         public static Material DilutedTwoEthylhexylNitrate;
         public static Material DilutedNitromethane;
-        public static Material DiluteAmmoniumSulfateSolution;
+        public static Material DilutedAmmoniumSulfateSolution;
         public static Material DilutedAmmoniumChlorideSolution;
 
         // Organic Chemistry Materials
@@ -950,7 +950,7 @@ class SuSyMaterials {
         public static Material ChlorinatedGlycerol;
         public static Material EpichlorohydrinSolution;
         public static Material AllylAlcoholMix;
-        public static Material DiluteEpichlorohydrin;
+        public static Material DilutedEpichlorohydrin;
         public static Material Isobutane;
         public static Material Isobutylene;
         public static Material Cyclohexane;

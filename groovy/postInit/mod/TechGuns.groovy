@@ -1059,10 +1059,10 @@ crafting.addShaped("tg_glider_wing", item('techguns:itemshared:91'), [
 //--------------------GregTech machines only recipes--------------------
 
 recipemap('forming_press').recipeBuilder()
-		.inputs([item('minecraft:leather') * 2,
+		.inputs([metaitem('platePolycaprolactam') * 2,
 				 ore('wireFineSteel') * 1
 		])
-		.outputs(item('techguns:itemshared:60'))
+		.outputs(item('techguns:itemshared:60') * 2)
 		.duration(40)
 		.EUt(16)
 		.buildAndRegister();
