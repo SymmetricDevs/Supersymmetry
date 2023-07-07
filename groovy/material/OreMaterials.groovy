@@ -554,5 +554,11 @@ public class OreMaterials{
                 .build();
 
         Carnotite.setFormula("K2(UO2)2(VO4)2 * 3H2O", true)
+
+        AlluvialPlatinum = new Material.Builder(7074, "alluvial_platinum")
+                .dust()
+                .components(Platinum, 1)
+                .colorAverage()
+                .build();
     }
 }

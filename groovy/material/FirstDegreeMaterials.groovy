@@ -2696,5 +2696,52 @@ public class FirstDegreeMaterials{
                 .components(AluminiumTrichloride, 1)
                 .colorAverage()
                 .build();
+
+        SodiumBisphenolateSolution = new Material.Builder(8497, "sodium_bisphenolate_solution")
+                .fluid()
+                .components(SodiumHydroxide, 2, BisphenolA, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        Polycarbonate = new Material.Builder(8498, "polycarbonate")
+                .dust()
+                .components(Carbon, 16, Hydrogen, 14, Oxygen, 3)
+                .color(0xa1cacf)
+                .iconSet(SHINY)
+                .build();
+
+        Polycarbonate.setFormula("C16H14O3", true)
+
+        SodiumNitrite = new Material.Builder(8499, "sodium_nitrite")
+                .dust()
+                .components(Sodium, 1, Nitrogen, 1, Oxygen, 2)
+                .color(0xe7e899)
+                .build();
+
+        SodiumOxide = new Material.Builder(8500, "sodium_oxide")
+                .dust()
+                .components(Sodium, 2, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        HexachloroplatinicAcidSolution = new Material.Builder(8501, "hexachloroplatinic_acid_solution")
+                .fluid()
+                .components(Hydrogen, 2, Platinum, 1, Chlorine, 6, Water, 1)
+                .color(0xe06624)
+                .build();
+
+        SodiumHexachloroplatinateSolution = new Material.Builder(8502, "sodium_hexachloroplatinate_solution")
+                .fluid()
+                .components(Sodium, 2, Platinum, 1, Chlorine, 6, Water, 5)
+                .color(0xb87627)
+                .build();
+        
+        AmmoniumHexachloroplatinate = new Material.Builder(8503, "ammonium_hexachloroplatinate")
+                .dust()
+                .components(Nitrogen, 2, Hydrogen, 8, Platinum, 1, Chlorine, 6)
+                .color(0xe6c532)
+                .build();
+
+        AmmoniumHexachloroplatinate.setFormula("(NH4)2PtCl6", true)
     }
 }
