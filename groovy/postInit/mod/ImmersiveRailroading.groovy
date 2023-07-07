@@ -1,5 +1,11 @@
 println("Running ImmersiveRailroading.groovy...")
 
+import static globals.Globals.*
+import supersymmetry.api.recipes.SuSyRecipeMaps;
+import cam72cam.immersiverailroading.IRItems;
+import cam72cam.mod.serialization.TagCompound;
+import trackapi.lib.Gauges;
+
 ArrayList<String> name_removals = [
 		"immersiverailroading:item_manual",
 		"immersiverailroading:item_conductor_whistle",
@@ -51,10 +57,22 @@ crafting.addShaped("ir_track_exchanger", item('immersiverailroading:item_track_e
 		[ore('paneGlass'), ore('wireFineRedAlloy'), ore('paneGlass')]
 ]);
 
+crafting.addShaped("ir_coupler", item('immersiverailroading:item_hook'), [
+		[null, null, metaitem('ringSteel')],
+		[null, metaitem('stickSteel'), null],
+		[metaitem('stickSteel'), null, null]
+]);
+
 crafting.replaceShaped("immersiverailroading:item_rail", item('immersiverailroading:item_rail'), [
 		[metaitem('screwSteel'), ore('dyeBlack'), metaitem('screwSteel')],
 		[metaitem('stickSteel'), item('minecraft:paper'), metaitem('stickSteel')],
 		[metaitem('screwSteel'), metaitem('stickSteel'), metaitem('screwSteel')]
+]);
+
+crafting.replaceShaped("immersiverailroading:item_radio_control_card", item('immersiverailroading:item_radio_control_card'), [
+		[null, item('opencomputers:component', 3), null],
+		[metaitem('sensor.lv'), metaitem('plateSteel'), metaitem('emitter.lv')],
+		[null, ore('circuitLv'), null]
 ]);
 
 mods.gregtech.bender.recipeBuilder()
@@ -64,3 +82,89 @@ mods.gregtech.bender.recipeBuilder()
 		.duration(200)
 		.EUt(30)
 		.buildAndRegister()
+
+Globals.solders.each { key, val ->
+
+	TagCompound tag = new TagCompound();
+
+	tag.setString("defID", "rolling_stock/locomotives/monorail_engine.json");
+	tag.setFloat("gauge", (float) Gauges.STANDARD);
+
+	cam72cam.mod.item.ItemStack is = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+	is.setTagCompound(tag);
+
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+			.circuitMeta(1)
+			.inputs(item('gregtech:boiler_casing', 1) * 2)
+			.inputs(metaitem('gearSmallSteel') * 12)
+			.inputs(metaitem('electric.motor.lv') * 4)
+			.inputs(metaitem('electric.piston.lv') * 4)
+			.inputs(item('gregtech:boiler_firebox_casing', 1) * 2)
+			.inputs(item('minecraft:glass') * 4)
+			.inputs(metaitem('plateSteel') * 16)
+			.inputs(metaitem('stickLongSteel') * 8)
+			.fluidInputs(fluid(key) * (val * 10))
+			.outputs(is.internal)
+			.EUt(30)
+			.duration(400)
+			.buildAndRegister();
+
+	TagCompound tag2 = new TagCompound();
+
+	tag2.setString("defID", "rolling_stock/freight/monorail_item.json");
+	tag2.setFloat("gauge", (float) Gauges.STANDARD);
+
+	cam72cam.mod.item.ItemStack is2 = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+	is2.setTagCompound(tag2);
+
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+			.circuitMeta(2)
+			.inputs(metaitem('gearSmallSteel') * 12)
+			.inputs(metaitem('plateSteel') * 16)
+			.inputs(metaitem('stickLongSteel') * 8)
+			.fluidInputs(fluid(key) * (val * 10))
+			.outputs(is2.internal)
+			.EUt(30)
+			.duration(400)
+			.buildAndRegister();
+
+	TagCompound tag3 = new TagCompound();
+
+	tag3.setString("defID", "rolling_stock/passenger/monorail_passenger.json");
+	tag3.setFloat("gauge", (float) Gauges.STANDARD);
+
+	cam72cam.mod.item.ItemStack is3 = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+	is3.setTagCompound(tag3);
+
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+			.circuitMeta(3)
+			.inputs(metaitem('gearSmallSteel') * 12)
+			.inputs(metaitem('plateSteel') * 20)
+			.inputs(metaitem('stickLongSteel') * 6)
+			.inputs(item('minecraft:glass') * 4)
+			.fluidInputs(fluid(key) * (val * 10))
+			.outputs(is3.internal)
+			.EUt(30)
+			.duration(400)
+			.buildAndRegister();
+
+	TagCompound tag4 = new TagCompound();
+
+	tag4.setString("defID", "rolling_stock/tank/monorail_fluid.json");
+	tag4.setFloat("gauge", (float) Gauges.STANDARD);
+
+	cam72cam.mod.item.ItemStack is4 = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+	is4.setTagCompound(tag4);
+
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+			.circuitMeta(4)
+			.inputs(metaitem('gearSmallSteel') * 12)
+			.inputs(metaitem('plateSteel') * 16)
+			.inputs(metaitem('stickLongSteel') * 8)
+			.inputs(metaitem('electric.pump.lv') * 2)
+			.fluidInputs(fluid(key) * (val * 10))
+			.outputs(is4.internal)
+			.EUt(30)
+			.duration(400)
+			.buildAndRegister();
+}

@@ -51886,9 +51886,7 @@
       }
     },
     "683:10": {
-      "preRequisites:11": [
-        688
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -52390,7 +52388,7 @@
     },
     "691:10": {
       "preRequisites:11": [
-        683
+        688
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -54220,9 +54218,7 @@
       }
     },
     "719:10": {
-      "preRequisites:11": [
-        691
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -55967,7 +55963,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "As you find more resources around the world, you\u0027ll find that you\u0027ll have to somehow transport them back to your main base. The main method of linking separate bases at this point are Trains.\n\nTrains are made using the Railroad Engineering Station. Keep in mind that the Railroad Engineering Station does not make a train item that you can simply plop into your inventory. The multiblock spawns a train entity when provided with the needed items to construct a train. Check JEI to see what trains you can build.\n\nIn order to actually form the multiblock, you will need to cover the middle 3 rows of the concrete floor of the Station with Immersive Railroading Tracks, which will be explained further in a later quest.\n\nThe concrete blocks in the center row of the floor are replacable with any block, including pipes or air, so that you can easily interact with any trains spawned by the Station.",
+          "desc:8": "As you find more resources around the world, you\u0027ll find that you\u0027ll have to somehow transport them back to your main base. The main method of linking separate bases at this point are Trains.\n\nTrains are made using the Railroad Engineering Station. In order to actually form the multiblock, you will need to cover the middle 3 rows of the concrete floor of the Station with Immersive Railroading Tracks, which will be explained further in a later quest. The concrete blocks in the center row of the floor are replacable with any block, including pipes or air, so that you can easily interact with any trains spawned by the Station.\n\nKeep in mind that the Railroad Engineering Station does not make a train item that you can simply drag into your inventory. §6The multiblock spawns a train entity on the center rails§f when provided with the needed items to construct a train. Check JEI to see what trains you can build.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56006,6 +56002,21 @@
               "Damage:2": 15050,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "immersiverailroading:item_large_wrench"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -56019,7 +56030,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Every Train needs an Engine. Your first available train is the Monorail, powered by the Monorail Engine. Make one.\n\nNote: Due to JEI being bad with NBT, clicking on the monorail engine will show how to make the monorail engine, the monorail tank, the monorail freight and the monorail passanger. Just scroll through until you see the recipe for the actual monorail engine.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56036,12 +56047,12 @@
             "OreDict:8": "",
             "id:8": "immersiverailroading:item_rolling_stock",
             "tag:10": {
-              "defID:8": "rolling_stock/locomotives/big_boy.json",
+              "defID:8": "rolling_stock/locomotives/monorail_engine.json",
               "gauge:6": 1.435
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Your First Train",
@@ -56057,16 +56068,21 @@
       },
       "questID:3": 743,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     },
     "744:10": {
       "preRequisites:11": [
-        742
+        743
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Track Augments include the Detector, Locomotive Control, Item Loader/Unloader, Fluid Loader/Unloader, Speed Retarder, and Coupler. They are very useful when it comes to automating Train logistics.\n\nRight click on a track segment with the augment to apply the augment. Augments can be removed from the track by right clicking them with the Large Wrench.\n\nThere\u0027s a lot of information on how to use the augments, so for brevity we will simply link the Immersive Railroading wiki. Scroll down to the \"Augments\" section to view the pages about Augments.\n\n§9https://github.com/TeamOpenIndustry/ImmersiveRailroading/wiki",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56112,7 +56128,46 @@
           "ignoreNBT:1": 0,
           "index:3": 0,
           "partialMatch:1": 1,
-          "requiredItems:9": {},
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "immersiverailroading:item_augment",
+              "tag:10": {
+                "augment:3": 4,
+                "gauge:6": 1.435
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "immersiverailroading:item_augment",
+              "tag:10": {
+                "augment:3": 3,
+                "gauge:6": 1.435
+              }
+            }
+          },
           "taskID:8": "bq_standard:retrieval"
         }
       }
@@ -56183,12 +56238,12 @@
     },
     "746:10": {
       "preRequisites:11": [
-        747
+        743
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Right clicking an Engine makes you go inside, allowing you to drive the train.\n\nBy default, you use the keypad to control the train. You can change this in Options \u003e Controls. If you want to keep it that way, you will need NumLock enabled for the keypad to work.\n\nThe controls, as well as further instructions, can be seen here: §9https://github.com/TeamOpenIndustry/ImmersiveRailroading/wiki/Driving-Diesel-Locomotives",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56228,16 +56283,26 @@
       },
       "questID:3": 746,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     },
     "747:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        743
+        743,
+        181
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Only Engines need to be fueled before they can work. They can be fueled by two ways:\n\n1. Right clicking the Engine to enter, and then right clicking again to open the fuel GUI, which you can use to add fuel or remove fuel\n\n2. Having the Engine pass over a Fluid Loader, which can automatically add fuel to the Engine\n\nThe following fuels can be used to fuel the Engine:\n- Diesel\n- Gasoline\n- Naphtha\n- Fuel Oil\n- Kerosene\n- Biodiesel\n- Cetane-Boosted Diesel\n- Midgrade Gasoline\n- Premium Gasoline\n- Supreme Gasoline",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56275,7 +56340,12 @@
       },
       "questID:3": 747,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     },
     "748:10": {
       "preRequisites:11": [
@@ -56284,7 +56354,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "There are also Monorail Tanks, Monorail Freights, and Monorail Passenger Chaircars. They are made similarly to the Monorail Engine, and can be connected to the Engine by simply having them bump into each other on a track.\n\nThe Monorail Tank can store 2,500 buckets, or 2,500,000 L of any liquid. They can be interacted with using Fluid Loaders/Unloaders, or by Shift+Right Clicking the Tank to open a GUI for adding or removing fluids.\n\nThe Monorail Freight can store 6,400 items. They can be interacted with using Item Loaders/Unloaders, or by Shift+Right Clicking the Tank to open a GUI for adding or removing items.\n\nRight clicking a Monorail Passenger Chaircar makes you go inside. You can move around.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56301,7 +56371,7 @@
             "OreDict:8": "",
             "id:8": "immersiverailroading:item_rolling_stock",
             "tag:10": {
-              "defID:8": "rolling_stock/freight/dw_gondola.json",
+              "defID:8": "rolling_stock/freight/monorail_item.json",
               "gauge:6": 1.435
             }
           },
@@ -56309,7 +56379,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Train Carts",
+          "name:8": "Cargo Trains",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -56321,6 +56391,217 @@
         }
       },
       "questID:3": 748,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "749:10": {
+      "preRequisites:11": [
+        743
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This item is used to check the coupling status of stock and set the coupling mode.\n\nRight clicking on a piece of rolling stock near a coupler will tell you where it is coupled to and the current coupling mode.\n\nShift + right clicking on a piece of rolling stock near a coupler will set the coupler mode.\n- §6Shunting mode§f means that the cars can bump into each other, but they won\u0027t couple.\n- §6Normal mode§f means that when cars bump into each other they will couple and form a train.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "immersiverailroading:item_hook"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Coupling",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 749,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "immersiverailroading:item_hook"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "750:10": {
+      "preRequisites:11": [
+        743
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "With an OpenComputers system (unlocked in MV) and a Train Radio-Control Card, you can control Trains from the comfort of your base.\n\nTo use the Radio-control Card, it must first be linked with locomotive. Right-clicking a locomotive will link the card to it. Shift-Right-clicking unlinks the card.\n\nOnce the Card is linked (which will also be stated on the item tooltip), the Card needs to be placed into a Tier 0 or higher slot in any OpenComputers computer. The Card can then be polled by the computer with the component name \"ir_remote_control\". If you are not sure how this is done, consult the OpenComputers Wiki.\n\nThe Card can now control the train in a similar fashion to the Locomotive Control Augment. The supported functions are\n- setThrottle(number): Sets the throttle to a value between -1 and 1 (reverse/forward)\n- setBrake(number): Sets the brake to a value between 0 and 1\n- horn(): fires off the locomotive\u0027s horn\n- bell(): rings the locomotive bell\n- getPos(): returns the locomotive\u0027s world position\n- getLinkUUID(): returns the UUID of the linked loco\n\nAn important thing to take care of is that the Card has a limited range and power cost. By default, the range is 500m, and the EU cost per metre is 0.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "immersiverailroading:item_radio_control_card",
+            "tag:10": {}
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Automated Driving",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 750,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "immersiverailroading:item_radio_control_card",
+              "tag:10": {}
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "751:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "New Quest",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 751,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "752:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "New Quest",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 752,
       "rewards:9": {},
       "tasks:9": {}
     }
@@ -58138,38 +58419,52 @@
         },
         "123:10": {
           "id:3": 743,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -354,
-          "y:3": 156
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -402,
+          "y:3": 150
         },
         "124:10": {
           "id:3": 744,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -354,
+          "x:3": -396,
           "y:3": 108
         },
         "125:10": {
           "id:3": 746,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -408,
-          "y:3": 48
+          "x:3": -396,
+          "y:3": 204
         },
         "126:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -408,
-          "y:3": 108
+          "x:3": -450,
+          "y:3": 204
         },
         "127:10": {
           "id:3": 748,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -408,
+          "x:3": -450,
           "y:3": 156
+        },
+        "128:10": {
+          "id:3": 749,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -450,
+          "y:3": 108
+        },
+        "129:10": {
+          "id:3": 750,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -348,
+          "y:3": 204
         }
       }
     },
@@ -59356,7 +59651,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -114,
-          "y:3": -18
+          "y:3": -48
         },
         "34:10": {
           "id:3": 687,
@@ -59390,7 +59685,7 @@
           "id:3": 691,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
+          "x:3": -114,
           "y:3": -18
         },
         "39:10": {
@@ -59581,6 +59876,20 @@
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": -138
+        },
+        "66:10": {
+          "id:3": 751,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -156,
+          "y:3": -18
+        },
+        "67:10": {
+          "id:3": 752,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -156,
+          "y:3": -18
         }
       }
     },

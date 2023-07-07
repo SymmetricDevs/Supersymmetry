@@ -24,6 +24,8 @@ class ChangeFlags {
         log.infoMC("Modifying flags...")
 
         RecipeMaps.BLAST_RECIPES.setMaxFluidInputs(2);
+        SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.setMaxFluidInputs(3);
+        SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.setMaxInputs(12);
 
         Steel.addFlags("generate_spring", "generate_spring_small");
         Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");
