@@ -487,6 +487,11 @@ SupremeGasoline.setDuration(70);
 SupremeGasoline.setAmountToBurn(2 * 10);
 SupremeGasoline.setByproductAmount(1000);
 
+def Ammonia = new IFluidFuel('ammonia', 'flue_gas');
+Ammonia.setDuration(3);
+Ammonia.setAmountToBurn(4 * 10);
+Ammonia.setByproductAmount(1000);
+
 def FluidFuels = [
         Gasoline,
         SulfuricGas,
@@ -517,6 +522,7 @@ def FluidFuels = [
         MidtierGasoline,
         PremiumGasoline,
         SupremeGasoline
+		Ammonia
 ];
 
 def WaterWF = new IWorkingFluid('water', 'steam', 'exhaust_steam');
