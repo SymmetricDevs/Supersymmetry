@@ -1443,18 +1443,51 @@ public class OrganicChemistryMaterials {
                 .components(Caprolactam, 1, Toluene, 1)
                 .colorAverage()
                 .build();
+        
+        Trimethylaluminium = new Material.Builder(15231, "trimethylaluminium")
+                .fluid()
+                .components(Aluminium, 1, Carbon, 3, Hydrogen, 9)
+                .color(0x7abfb4)
+                .build();
 
-        OctylHydroxamicAcid = new Material.Builder(15231, "octyl_hydroxamic_acid")
+        Trimethylaluminium.setFormula("Al(CH3)3", true)
+
+        Methylaluminoxane = new Material.Builder(15232, "methylaluminoxane")
+                .dust()
+                .components(Aluminium, 1, Carbon, 1, Hydrogen, 3, Oxygen, 1)
+                .color(0x33a391)
+                .build();
+
+        ZirconoceneDichloride = new Material.Builder(15233, "zirconocene_dichloride")
+                .dust()
+                .components(Zirconium, 1, Carbon, 10, Hydrogen, 10, Chlorine, 2)
+                .color(0x3ea0a3)
+                .build();
+
+        ZirconoceneDichloride.setFormula("Zr(C5H5)2Cl2", true)
+
+        Tetrahydrofuran = new Material.Builder(15234, "tetrahydrofuran")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 8, Oxygen, 1)
+                .color(0xd13485)
+                .build();
+
+        SodiumCyclopentadienide = new Material.Builder(15235, "sodium_cyclopentadienide")
+                .dust()
+                .components(Sodium, 1, Carbon, 5, Hydrogen, 5)
+                .colorAverage()
+                .build();
+      
+        OctylHydroxamicAcid = new Material.Builder(15236, "octyl_hydroxamic_acid")
                 .dust()
                 .components(Carbon, 8, Hydrogen, 17, Oxygen, 2, Nitrogen, 1)
                 .color(0xd47f31)
                 .build();
 
-        PotassiumOctylHydroxamate = new Material.Builder(15232, "potassium_octyl_hydroxamate")
+        PotassiumOctylHydroxamate = new Material.Builder(15237, "potassium_octyl_hydroxamate")
                 .dust()
                 .components(Carbon, 8, Hydrogen, 16, Oxygen, 2, Nitrogen, 1, Potassium, 1)
                 .color(0xd47f50)
                 .build();
-
     }
 }

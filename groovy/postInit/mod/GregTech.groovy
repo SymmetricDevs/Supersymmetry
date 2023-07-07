@@ -40,6 +40,9 @@ mods.gregtech.fluid_heater.removeByInput(2048, [metaitem('circuit.integrated').w
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('beryllium_oxide') * 144])
 // Beryllium Oxide Plate * 1
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustBerylliumOxide')], null)
+// Laminated Glass * 1
+mods.gregtech.forming_press.removeByInput(480, [item('gregtech:transparent_casing') * 2, metaitem('platePolyvinylButyral')], null)
+
 
 def name_removals = [
         'gregtech:cover_fluid_voiding',
@@ -253,6 +256,12 @@ crafting.replaceShaped("gregtech:gregtech.machine.macerator.lv", metaitem('gregt
     [metaitem('electric.piston.lv'), metaitem('electric.motor.lv') , metaitem('toolHeadBuzzSawSteel')],
     [metaitem('cableGtSingleTin'), metaitem('cableGtSingleTin'), metaitem('gregtech:hull.lv')],
     [ore('circuitLv'), ore('circuitLv'), metaitem('cableGtSingleTin')]
+])
+
+crafting.replaceShaped("gregtech:gregtech.machine.cutter.lv", metaitem('gregtech:cutter.lv'), [
+    [metaitem('cableGtSingleTin'), ore('circuitLv'), item('minecraft:glass')],
+	[metaitem('conveyor.module.lv'), metaitem('gregtech:hull.lv'), metaitem('toolHeadBuzzSawSteel')],
+	[ore('circuitLv'), metaitem('cableGtSingleTin'), metaitem('electric.motor.lv')]
 ])
 
 crafting.replaceShaped("gregtech:gregtech.machine.cutter.mv", metaitem('gregtech:cutter.mv'), [
@@ -812,4 +821,13 @@ mods.gregtech.fluid_heater.recipeBuilder()
         .fluidOutputs(fluid('gtfo_heated_water') * 1000)
         .duration(40)
         .EUt(16)
+        .buildAndRegister();
+
+mods.gregtech.forming_press.recipeBuilder()
+        .inputs(item('gregtech:transparent_casing') * 2)
+        .inputs(metaitem('platePolyvinylButyral') * 2)
+        .inputs(metaitem('platePolycarbonate') * 2)
+        .outputs(item('gregtech:transparent_casing', 2))
+        .duration(200)
+        .EUt(480)
         .buildAndRegister();

@@ -861,7 +861,9 @@ class SuSyMaterials {
         public static Material AmmoniumHexachloroplatinate;
         public static Material DilutedCopperSulfateSolution;
         public static Material NickelSulfateSolution;
-        
+        public static Material AluminiumNitride;
+        public static Material AluminiumOxynitride;
+        public static Material UltraHighMolecularWeightPolyethylene;
 
         // Second Degree Materials
 
@@ -1181,6 +1183,11 @@ class SuSyMaterials {
         public static Material PotassiumOctylHydroxamate;
         public static Material MercuryIICyanide;
         public static Material PalladiumIICyanide;
+        public static Material Trimethylaluminium;
+        public static Material Methylaluminoxane;
+        public static Material ZirconoceneDichloride;
+        public static Material Tetrahydrofuran;
+        public static Material SodiumCyclopentadienide;
 
         // Third Degree Materials
 
@@ -1225,6 +1232,8 @@ class SuSyMaterials {
         public static Material AcidicTributylPhosphate;
         public static Material PhosgeneSolution;
         public static Material TriethylamineSolution;
+        public static Material KaminskyCatalyst;
+        public static Material ZirconiumTetrachlorideTetrahydrofuranComplex;
 
         // Thermodynamics/Greenhouse Materials
 
