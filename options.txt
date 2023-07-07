@@ -1,1 +1,0 @@
-resourcePacks:["Black_Mesa.zip"]
