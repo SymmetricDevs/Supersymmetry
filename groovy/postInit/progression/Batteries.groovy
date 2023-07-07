@@ -61,6 +61,10 @@ crafting.addShaped("drum_lead", metaitem('drum.lead'), [
 crafting.addShapeless("drum_nbt_lead", metaitem('drum.lead'), [
         metaitem('drum.lead').noreturn()
 ]);
+crafting.addShapeless("drum_nbt_brass", metaitem('drum.brass'), [
+        metaitem('drum.brass').noreturn()
+]);
+// Note: this is a temporary fix to clear brass drum.
 
 mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('battery.hull.lv'))
