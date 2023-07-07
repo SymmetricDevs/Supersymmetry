@@ -24812,7 +24812,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6radiator§o§o§r is a device that transfers heat from a fluid or object to the surrounding environment.\n\nIt can cool down exhaust steam into water or §6§chot compressed fluids into a more manageable temperature.\n§rFor example, you can cool down Hot High Pressure Hydrogen into normal High Pressure Hydrogen.\n§r\nThe Radiator requires:\n\n§6- 1 Heat Radiator Controller\n- 1 Maintenance Hatch\n- 1 Output Hatch\n- 1 Input Hatch\n- 48 Solid Steel Machine Casing\n- 135 Steel Pipe Casing\n\n§rDue to the high cost of steel, it is recommended that you use an EBF and Arc Furnace to process iron into steel instead of just using a PBF setup.",
+          "desc:8": "A §6radiator§o§o§r is a device that transfers heat from a fluid or object to the surrounding environment.\n\nIt can cool down exhaust steam into water or §6§chot compressed fluids into a more manageable temperature.\n§rFor example, you can cool down Hot High Pressure Hydrogen into normal High Pressure Hydrogen.\n§r\nThe Radiator requires:\n\n§6- 1 Heat Radiator Controller\n- 1 Maintenance Hatch\n- 1 Output Hatch\n- 1 Input Hatch\n- At least 20 Solid Steel Machine Casing\n- At least 9 Steel Pipe Casing\n\nYou can expand the radiator by adding more rows. More info is in the Multiblock Preview page in JEI.\n\n§rDue to the high cost of steel, it is recommended that you use an EBF and Arc Furnace to process iron into steel instead of just using a PBF setup.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54804,7 +54804,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§lNylon§r or polycaprolactam is an advanced polymer that can be used to make advanced suits and armor.\n\nThis is how you make it:\n\nHydroxylamine + Cyclohexanone -\u003e Cyclohexanone Oxime\n\nCyclohexanone Oxime Dust + Sulfuric Acid -\u003e Caprolactam Solution \n\nAmmonia Solution + Caprolactam Solution -\u003e Neutralized Caprolactam Solution\n\nToluene + Neutralized Caprolactam Solution -\u003e Extracted Caprolactam Solution \n\nExtracted Caprolactam Solution -\u003e Caprolactam\n\nCaprolactam -\u003e Polycaprolactam ",
+          "desc:8": "§lNylon§r or polycaprolactam is an advanced polymer that can be used to make advanced suits and armor.\n\nThis is how you make it:\n\nHydroxylamine + Cyclohexanone -\u003e Cyclohexanone Oxime\n\nCyclohexanone Oxime Dust + Sulfuric Acid -\u003e Caprolactam Solution \n\nAmmonia Solution + Caprolactam Solution -\u003e Extracted Caprolactam Solution\n\nExtracted Caprolactam Solution -\u003e Caprolactam\n\nCaprolactam -\u003e Polycaprolactam ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55838,6 +55838,70 @@
                 "color:8": "silver",
                 "cvalue:3": 10329495
               }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "741:10": {
+      "preRequisites:11": [
+        497
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Multi Smelter§r is a 3x3x3 multiblock machine capable of §esmelting huge amounts of items per second§r. \n\nBy upgrading its coils and power tier, it can become capable of smelting several thousands of items per second.\n\nThe most basic Multi Smelter essentially does 32 items in the same time as a furnace does one. With a set of §6Tungstensteel§r coil blocks, that jumps to 128 items per operation. \n\nThe Multi Smelter requires §a8 coil blocks§r, §a1 input bus§r, §a1 output bus§r, and §21 maintenance hatch§r, §21 muffler hatch§r, and at least §a1 energy hatch§r, all of any tier.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1006,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Multi Smelter",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 741,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1006,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 8,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_coil"
+            },
+            "2:10": {
+              "Count:3": 6,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -58546,6 +58610,13 @@
           "sizeY:3": 24,
           "x:3": 510,
           "y:3": 168
+        },
+        "127:10": {
+          "id:3": 741,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 210,
+          "y:3": 366
         }
       }
     },
@@ -62385,7 +62456,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
