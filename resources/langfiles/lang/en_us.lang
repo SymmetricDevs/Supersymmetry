@@ -1746,7 +1746,7 @@ metaitem.cellulose_acetate_mesh.name=Cellulose Acetate Mesh
 
 metaitem.shape.mold.crucible.name=Mold (Crucible)
 metaitem.shape.mold.rod.name=Mold (Rod)
-metaitem.boron.nitride.crucible.name=Boron Nitride Crucible
+metaitem.crucible.boron.nitride.name=Pyrolytic Boron Nitride Crucible
 
 metaitem.unrefined_boule.silicon.name=Unrefined Silicon Boule
 metaitem.boule.gallium_arsenide.name=Gallium Arsenide Boule
