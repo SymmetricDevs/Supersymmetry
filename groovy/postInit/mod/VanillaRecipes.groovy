@@ -685,7 +685,7 @@ crafting.replaceShaped('gregtech:iron_leggings', item('minecraft:iron_leggings')
 		[ore('plateIron'), null, ore('plateIron')]])
 
 for (int i = 0; i < 16; i++) {
-	recipemap('autoclave').recipeBuilder()
+	recipemap('mixer').recipeBuilder()
 			.fluidInputs(fluid('water') * 100)
 			.inputs(item('minecraft:concrete_powder', i))
 			.outputs(item('minecraft:concrete', i))
