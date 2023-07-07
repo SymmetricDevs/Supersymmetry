@@ -2759,7 +2759,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         UltraHighMolecularWeightPolyethylene = new Material.Builder(8506, "ultra_high_molecular_weight_polyethylene")
-                .dust().ingot().fluid()
+                .polymer()
                 .flags(GENERATE_PLATE)
                 .components(Carbon, 2, Hydrogen, 4)
                 .color(0xc5e3de)
