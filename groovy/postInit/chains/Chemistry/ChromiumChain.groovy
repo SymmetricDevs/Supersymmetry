@@ -210,7 +210,7 @@ CRYSTALLIZER.recipeBuilder()
 
 BR.recipeBuilder()
 .fluidInputs(fluid('gtfo_heated_water') * 1000)
-.outputs(metaitem('dustAmmoniumChromeAlum') * 16)
+.inputs(metaitem('dustAmmoniumChromeAlum') * 16)
 .fluidOutputs(fluid('purified_ammonium_chrome_alum_solution') * 1000)
 .EUt(Globals.voltAmps[1])
 .duration(800)

@@ -62,6 +62,20 @@ for (combustible in combustibles) {
             .buildAndRegister()
 }
 
+ELECTROLYTIC_CELL.recipeBuilder()
+    .fluidInputs(fluid('nickel_sulfate_solution') * 1000)
+    .fluidInputs(fluid('water') * 500)
+    .notConsumable(metaitem('stickNickel'))
+    .notConsumable(metaitem('graphite_electrode'))
+    .fluidInputs(fluid('water') * 1500)
+    .outputs(ore('dustNickel').first())
+    .fluidOutputs(fluid('diluted_sulfuric_acid') * 500)
+    .fluidOutputs(fluid('oxygen') * 1000)
+    .duration(240)
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister()
+
+//MOND PROCESS
 EBF.recipeBuilder()
         .inputs(ore('dustPentlandite') * 17)
         .outputs(metaitem('ingotNickel') * 9)

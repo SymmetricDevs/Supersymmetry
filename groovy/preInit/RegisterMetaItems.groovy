@@ -128,12 +128,12 @@ eventManager.listen {
         customMetaItems.addItem(202, "vt_slag");
 
         customMetaItems.addItem(203, "sponge.titanium")
-
         customMetaItems.addItem(204, "sponge.titanium.crude")
+        customMetaItems.addItem(215, "sponge.platinum")
 		
-		customMetaItems.addItem(210, "bound_leather");
+		customMetaItems.addItem(210, "bound_leather")
 
-        customMetaItems.addItem(211, "sponge.platinum");
+        customMetaItems.addItem(211, "copper_anode_slime")
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")

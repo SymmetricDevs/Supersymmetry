@@ -383,6 +383,24 @@ class SuSyMaterials {
         public static Material ImpureCassiteriteSlurry;
         public static Material CassiteriteSlurry;
         public static Material LimestoneTailingSlurry;
+        public static Material ImpureMalachiteSlurry;
+        public static Material MalachiteSlurry;
+        public static Material ImpureChalcopyriteSlurry;
+        public static Material ChalcopyriteSlurry;
+        public static Material ImpureBorniteSlurry;
+        public static Material BorniteSlurry;
+        public static Material ImpureChalcociteSlurry;
+        public static Material ChalcociteSlurry;
+        public static Material MalachiteLeach;
+        public static Material OxidizedMalachiteLeach;
+        public static Material PyriteSlurry;
+        public static Material CopperConcentrateSlurry;
+        public static Material CopperMatte;
+        public static Material BlisterCopper;
+        public static Material CopperMatteFlueDust;
+        public static Material CopperMatteFlueGas;
+        public static Material CopperConcentrate;
+        public static Material PalladiumContainingSolution;
 
         // Petrochem Materials
 
@@ -841,6 +859,8 @@ class SuSyMaterials {
         public static Material HexachloroplatinicAcidSolution;
         public static Material SodiumHexachloroplatinateSolution;
         public static Material AmmoniumHexachloroplatinate;
+        public static Material DilutedCopperSulfateSolution;
+        public static Material NickelSulfateSolution;
         public static Material AluminiumNitride;
         public static Material AluminiumOxynitride;
         public static Material UltraHighMolecularWeightPolyethylene;
@@ -1159,6 +1179,10 @@ class SuSyMaterials {
         public static Material Polyisoprene;
         public static Material Chloroethane;
         public static Material ExtractedCaprolactamSolution;
+        public static Material OctylHydroxamicAcid;
+        public static Material PotassiumOctylHydroxamate;
+        public static Material MercuryIICyanide;
+        public static Material PalladiumIICyanide;
         public static Material Trimethylaluminium;
         public static Material Methylaluminoxane;
         public static Material ZirconoceneDichloride;

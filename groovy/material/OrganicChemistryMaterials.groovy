@@ -1477,5 +1477,17 @@ public class OrganicChemistryMaterials {
                 .components(Sodium, 1, Carbon, 5, Hydrogen, 5)
                 .colorAverage()
                 .build();
+      
+        OctylHydroxamicAcid = new Material.Builder(15236, "octyl_hydroxamic_acid")
+                .dust()
+                .components(Carbon, 8, Hydrogen, 17, Oxygen, 2, Nitrogen, 1)
+                .color(0xd47f31)
+                .build();
+
+        PotassiumOctylHydroxamate = new Material.Builder(15237, "potassium_octyl_hydroxamate")
+                .dust()
+                .components(Carbon, 8, Hydrogen, 16, Oxygen, 2, Nitrogen, 1, Potassium, 1)
+                .color(0xd47f50)
+                .build();
     }
 }
