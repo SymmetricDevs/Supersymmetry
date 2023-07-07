@@ -841,6 +841,9 @@ class SuSyMaterials {
         public static Material HexachloroplatinicAcidSolution;
         public static Material SodiumHexachloroplatinateSolution;
         public static Material AmmoniumHexachloroplatinate;
+        public static Material AluminiumNitride;
+        public static Material AluminiumOxynitride;
+        public static Material UltraHighMolecularWeightPolyethylene;
 
         // Second Degree Materials
 
@@ -1156,6 +1159,11 @@ class SuSyMaterials {
         public static Material Polyisoprene;
         public static Material Chloroethane;
         public static Material ExtractedCaprolactamSolution;
+        public static Material Trimethylaluminium;
+        public static Material Methylaluminoxane;
+        public static Material ZirconoceneDichloride;
+        public static Material Tetrahydrofuran;
+        public static Material SodiumCyclopentadienide;
 
         // Third Degree Materials
 
@@ -1200,6 +1208,8 @@ class SuSyMaterials {
         public static Material AcidicTributylPhosphate;
         public static Material PhosgeneSolution;
         public static Material TriethylamineSolution;
+        public static Material KaminskyCatalyst;
+        public static Material ZirconiumChlorideTetrahydrofuranComplex;
 
         // Thermodynamics/Greenhouse Materials
 

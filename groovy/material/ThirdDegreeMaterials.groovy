@@ -262,5 +262,17 @@ public class ThirdDegreeMaterials {
                 .components(Triethylamine, 1, Dichloromethane, 4)
                 .colorAverage()
                 .build();
+
+        KaminskyCatalyst = new Material.Builder(24041, "kaminsky_catalyst")
+                .dust()
+                .components(ZirconoceneDichloride, 1, Methylaluminoxane, 1)
+                .colorAverage()
+                .build();
+
+        ZirconiumChlorideTetrahydrofuranComplex = new Material.Builder(24042, "zirconium_chloride_tetrahydrofuran_complex")
+                .dust()
+                .components(ZirconiumChloride, 1, Tetrahydrofuran, 2)
+                .colorAverage()
+                .build();
     }
 }

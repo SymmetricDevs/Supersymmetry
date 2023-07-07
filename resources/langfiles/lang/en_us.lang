@@ -1456,6 +1456,16 @@ material.sodium_hexachloroplatinate_solution=Sodium Hexachloroplatinate Solution
 material.ammonium_hexachloroplatinate=Ammonium Hexachloroplatinate
 material.diluted_ammonium_chloride_solution=Diluted Ammonium Chloride Solution
 material.alluvial_platinum=Alluvial Platinum
+material.aluminium_nitride=Aluminium Nitride
+material.aluminium_oxynitride=Aluminium Oxynitride (ALON)
+material.ultra_high_molecular_weight_polyethylene=UHMWPE
+material.trimethylaluminium=Trimethylaluminium
+material.methylaluminoxane=Methylaluminoxane
+material.zirconocene_dichloride=Zirconocene Dichloride
+material.tetrahydrofuran=Tetrahydrofuran
+material.sodium_cyclopentadienideSodium Cyclopentadienide
+material.kaminsky_catalyst=Kaminsky Catalyst
+material.zirconium_chloride_tetrahydrofuran_complex=Zirconium Chloride Tetrahydrofuran Complex
 
 # Isotopes
 

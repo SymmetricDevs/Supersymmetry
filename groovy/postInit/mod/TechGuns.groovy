@@ -962,21 +962,21 @@ recipemap('canner').recipeBuilder()
 		.buildAndRegister();
 
 crafting.replaceShaped("techguns:riot_shield", item('techguns:riot_shield'), [
-		[metaitem('stickLongSteel'), ore('paneGlass'), metaitem('stickLongSteel')],
+		[metaitem('stickLongSteel'), metaitem('platePolycarbonate'), metaitem('stickLongSteel')],
 		[metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
-		[metaitem('stickLongSteel'), ore('paneGlass'), metaitem('stickLongSteel')]
+		[metaitem('stickLongSteel'), metaitem('platePolycarbonate'), metaitem('stickLongSteel')]
 ]);
 
 crafting.replaceShaped("techguns:ballistic_shield", item('techguns:ballistic_shield'), [
-		[null, metaitem('carbon.mesh'), null],
-		[metaitem('carbon.mesh'), item('techguns:riot_shield'), metaitem('carbon.mesh')],
-		[null, metaitem('carbon.mesh'), null]
+		[metaitem('plateBoronNitride'), item('gregtech:transparent_casing'), metaitem('plateBoronNitride')],
+		[metaitem('plateKevlar'), item('techguns:riot_shield'), metaitem('plateKevlar')],
+		[metaitem('plateBoronNitride'), metaitem('plateKevlar'), metaitem('plateBoronNitride')]
 ]);
 
 crafting.replaceShaped("techguns:advanced_shield", item('techguns:advanced_shield'), [
-		[null, metaitem('plateKevlar'), null],
-		[metaitem('plateKevlar'), item('techguns:ballistic_shield'), metaitem('plateKevlar')],
-		[null, metaitem('plateKevlar'), null]
+		[metaitem('plateUltraHighMolecularWeightPolyethylene'), metaitem('plateAluminiumOxynitride'), metaitem('plateUltraHighMolecularWeightPolyethylene')],
+		[metaitem('plateKevlar'), item('techguns:ballistic_shield'), metaitem('plateUltraHighMolecularWeightPolyethylene')],
+		[metaitem('plateUltraHighMolecularWeightPolyethylene'), metaitem('plateUltraHighMolecularWeightPolyethylene'), metaitem('plateUltraHighMolecularWeightPolyethylene')]
 ]);
 
 crafting.addShaped("stone_barrel", item('techguns:itemshared:37'), [
