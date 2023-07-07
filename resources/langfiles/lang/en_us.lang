@@ -1458,15 +1458,15 @@ material.diluted_ammonium_chloride_solution=Diluted Ammonium Chloride Solution
 material.alluvial_platinum=Alluvial Platinum
 material.aluminium_nitride=Aluminium Nitride
 material.aluminium_oxynitride=Aluminium Oxynitride (ALON)
-material.ultra_high_molecular_weight_polyethylene=UHMWPE
+material.ultra_high_molecular_weight_polyethylene=Ultra High Molecular Weight Polyethylene (UHMWPE)
 material.trimethylaluminium=Trimethylaluminium
 material.methylaluminoxane=Methylaluminoxane
 material.zirconocene_dichloride=Zirconocene Dichloride
 material.tetrahydrofuran=Tetrahydrofuran
 material.sodium_cyclopentadienideSodium Cyclopentadienide
 material.kaminsky_catalyst=Kaminsky Catalyst
-material.zirconium_tetachloride_tetrahydrofuran_complex=Zirconium Tetrachloride Tetrahydrofuran Complex
-
+material.sodium_cyclopentadienide=Sodium Cyclopentadienide
+material.zirconium_tetrachloride_tetrahydrofuran_complex=Zirconium Tetrachloride Tetrahydrofuran Complex
 # Isotopes
 
 # GregTech RecipeMaps
