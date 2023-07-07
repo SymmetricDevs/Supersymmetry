@@ -276,6 +276,26 @@ BR.recipeBuilder()
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
 
+//HYDROXAMATES
+//OCTYL HYDROXAMATE
+BR.recipeBuilder()
+        .fluidInputs(fluid('octanoyl_chloride') * 1000)
+        .fluidInputs(fluid('hydroxylamine') * 1000)
+        .outputs(metaitem('dustOctylHydroxamicAcid'))
+        .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+        .EUt(Globals.voltAmps[3])
+        .duration(80)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .inputs(metaitem('dustOctylHydroxamicAcid'))
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
+        .outputs(metaitem('dustPotassiumOctylHydroxamate'))
+        .fluidOutputs(fluid('water') * 2000)
+        .EUt(Globals.voltAmps[3])
+        .duration(80)
+        .buildAndRegister()
+
 //LIQUID-LIQUID EXTRACTANTS
 //TODGA
 CSTR.recipeBuilder()

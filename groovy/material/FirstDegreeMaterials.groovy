@@ -2743,5 +2743,33 @@ public class FirstDegreeMaterials{
                 .build();
 
         AmmoniumHexachloroplatinate.setFormula("(NH4)2PtCl6", true)
+
+        DilutedCopperSulfateSolution = new Material.Builder(8504, "diluted_copper_sulfate_solution")
+                .fluid()
+                .components(CopperSulfate, 2, Water, 3)
+                .colorAverage()
+                .build();
+
+        NickelSulfateSolution = new Material.Builder(8505, "nickel_sulfate_solution")
+                .fluid()
+                .components(Nickel, 1, Sulfur, 1, Oxygen, 4, Water, 1)
+                .color(0x38add1)
+                .build();
+
+        MercuryIICyanide = new Material.Builder(8506, "mercury_ii_cyanide")
+                .dust()
+                .components(Mercury, 1, Carbon, 2, Nitrogen, 2)
+                .colorAverage()
+                .build();
+
+        MercuryIICyanide.setFormula("Hg(CN)2", true)
+
+        PalladiumIICyanide = new Material.Builder(8507, "palladium_ii_cyanide")
+                .dust()
+                .components(Palladium, 1, Carbon, 2, Nitrogen, 2)
+                .color(0x787a7a)
+                .build();
+
+        PalladiumIICyanide.setFormula("Pd(CN)2", true)
     }
 }

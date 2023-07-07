@@ -1345,5 +1345,99 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x68695d)
                 .build();
+
+        ImpureMalachiteSlurry = new Material.Builder(4257, "impure_malachite_slurry")
+                .fluid()
+                .color(0x104006)
+                .build();
+
+        MalachiteSlurry = new Material.Builder(4258, "malachite_slurry")
+                .fluid()
+                .color(0x155f05)
+                .build();
+
+        ImpureChalcopyriteSlurry = new Material.Builder(4259, "impure_chalcopyrite_slurry")
+                .fluid()
+                .color(0x856119)
+                .build();
+
+        ChalcopyriteSlurry = new Material.Builder(4260, "chalcopyrite_slurry")
+                .fluid()
+                .color(0xa07828)
+                .build();
+
+        ImpureBorniteSlurry = new Material.Builder(4261, "impure_bornite_slurry")
+                .fluid()
+                .color(0x7d511d)
+                .build();
+
+        BorniteSlurry = new Material.Builder(4262, "bornite_slurry")
+                .fluid()
+                .color(0x97662b)
+                .build();
+
+        ImpureChalcociteSlurry = new Material.Builder(4263, "impure_chalcocite_slurry")
+                .fluid()
+                .color(0x262424)
+                .build();
+
+        ChalcociteSlurry = new Material.Builder(4264, "chalcocite_slurry")
+                .fluid()
+                .color(0x353535)
+                .build();
+
+        MalachiteLeach = new Material.Builder(4265, "malachite_leach")
+                .fluid()
+                .color(0x0f6880)
+                .build();
+
+        OxidizedMalachiteLeach = new Material.Builder(4266, "oxidized_malachite_leach")
+                .fluid()
+                .color(0x1a728a)
+                .build();
+
+        PyriteSlurry = new Material.Builder(4267, "pyrite_slurry")
+                .fluid()
+                .color(0x967828)
+                .build();
+
+        CopperConcentrateSlurry = new Material.Builder(4268, "copper_concentrate_slurry")
+                .fluid()
+                .color(0xff6400)
+                .build();
+
+        CopperConcentrate = new Material.Builder(4269, "copper_concentrate")
+                .dust()
+                .color(0xff6400)
+                .iconSet(SAND)
+                .build();
+
+        CopperMatte = new Material.Builder(4270, "copper_matte")
+                .dust()
+                .color(0x5c3d08)
+                .build();
+
+        BlisterCopper = new Material.Builder(4271, "blister_copper")
+                .ingot()
+                .flags(GENERATE_PLATE)
+                .color(0x6e4c14)
+                .iconSet(SHINY)
+                .build();
+
+        CopperMatteFlueDust = new Material.Builder(4272, "copper_matte_flue_dust")
+                .dust()
+                .color(0x3e146e)
+                .iconSet(DULL)
+                .build();
+
+        CopperMatteFlueGas = new Material.Builder(4273, "copper_matte_flue_gas")
+                .fluid()
+                .color(0x3e146e)
+                .build();
+
+        PalladiumContainingSolution = new Material.Builder(4274, "palladium_containing_solution")
+                .fluid()
+                .color(0x808080)
+                .build();
     }
 }

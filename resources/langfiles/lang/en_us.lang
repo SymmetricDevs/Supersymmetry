@@ -1298,6 +1298,7 @@ material.crude_ammonium_iron_ii_sulfate=Crude Ammonium Iron II Sulfate
 material.mohr_mother_liquor=Mohr Mother Liquor
 material.crude_ammonium_iron_ii_sulfate_solution=Crude Ammonium Iron II Sulfate Solution
 material.ammonium_chrome_alum_solution=Ammonium Chrome Alum Solution
+material.aged_ammonium_chrome_alum_solution=Aged Ammonium Chrome Alum Solution
 material.ammonium_iron_ii_sulfate=Ammonium Iron II Sulfate (Mohr's Salt)
 material.ammonium_iron_ii_sulfate_solution=Ammonium Iron II Sulfate Solution
 material.iron_ii_hydroxide=Iron II Hydroxide
@@ -1456,6 +1457,30 @@ material.sodium_hexachloroplatinate_solution=Sodium Hexachloroplatinate Solution
 material.ammonium_hexachloroplatinate=Ammonium Hexachloroplatinate
 material.diluted_ammonium_chloride_solution=Diluted Ammonium Chloride Solution
 material.alluvial_platinum=Alluvial Platinum
+material.impure_malachite_slurry=Impure Malachite Slurry
+material.malachite_slurry=Malachite Slurry
+material.impure_chalcopyrite_slurry=Impure Chalcopyrite Slurry
+material.chalcocite_slurry=Chalcopyrite Slurry
+material.impure_bornite_slurry=Impure Bornite Slurry
+material.bornite_slurry=Bornite Slurry
+material.impure_chalcocite_slurry=Impure Chalcocite Slurry
+material.chalcocite_slurry=Chalcocite Slurry
+material.malachite_leach=Malachite Leach
+material.oxidized_malachite_leach=Oxidized Malachite Leach
+material.pyrite_slurry=Pyrite Slurry
+material.copper_concentrate_slurry=Copper Concentrate Slurry
+material.copper_matte=Copper Matte
+material.blister_copper=Blister Copper
+material.copper_matte_flue_dust=Copper Matte Flue Dust
+material.copper_matte_flue_gas=Copper Matte Flue Gas
+material.copper_concentrate=Copper Concentrate
+material.octyl_hydroxamic_acid=Octyl Hydroxamic Acid
+material.potassium_octyl_hydroxamate=Potassium Octyl Hydroxamate
+material.diluted_copper_sulfate_solution=Diluted Copper Sulfate Solution
+material.nickel_sulfate_solution=Nickel Sulfate Solution
+material.palladium_containing_solution=Palladium Containing Solution
+material.mercury_ii_cyanide=Mercury II Cyanide
+material.palladium_ii_cyanide=Palladium II Cyanide
 
 # Isotopes
 
@@ -1749,6 +1774,7 @@ metaitem.zeolite_membrane_support.name=Zeolite Membrane Support
 metaitem.zeolite_membrane.name=Zeolite Membrane
 metaitem.silver_anode_slime.name=Silver Anode Slime
 metaitem.gold_anode_slime.name=Gold Anode Slime
+metaitem.copper_anode_slime.name=Copper Anode Slime
 
 metaitem.wafer.n_doped.silicon.name=n-Doped Silicon Wafer
 metaitem.wafer.alumina.name=Alumina Wafer
