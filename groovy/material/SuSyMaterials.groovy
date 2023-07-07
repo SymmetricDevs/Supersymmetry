@@ -1209,7 +1209,7 @@ class SuSyMaterials {
         public static Material PhosgeneSolution;
         public static Material TriethylamineSolution;
         public static Material KaminskyCatalyst;
-        public static Material ZirconiumChlorideTetrahydrofuranComplex;
+        public static Material ZirconiumTetrachlorideTetrahydrofuranComplex;
 
         // Thermodynamics/Greenhouse Materials
 

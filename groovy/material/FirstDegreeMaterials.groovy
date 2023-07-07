@@ -2412,7 +2412,7 @@ public class FirstDegreeMaterials{
         SilicaGel = new Material.Builder(8455, 'silica_gel')
                 .dust()
                 .iconSet(SHINY)
-                .components(Silica, 1, Oxygen, 2)
+                .components(Silicon, 1, Oxygen, 2)
                 .color(0x6d6e63)
                 .build();
 
@@ -2704,7 +2704,8 @@ public class FirstDegreeMaterials{
                 .build();
 
         Polycarbonate = new Material.Builder(8498, "polycarbonate")
-                .dust()
+                .polymer()
+                .flags(GENERATE_PLATE)
                 .components(Carbon, 16, Hydrogen, 14, Oxygen, 3)
                 .color(0xa1cacf)
                 .iconSet(SHINY)

@@ -1465,7 +1465,7 @@ material.zirconocene_dichloride=Zirconocene Dichloride
 material.tetrahydrofuran=Tetrahydrofuran
 material.sodium_cyclopentadienideSodium Cyclopentadienide
 material.kaminsky_catalyst=Kaminsky Catalyst
-material.zirconium_chloride_tetrahydrofuran_complex=Zirconium Chloride Tetrahydrofuran Complex
+material.zirconium_tetachloride_tetrahydrofuran_complex=Zirconium Tetrachloride Tetrahydrofuran Complex
 
 # Isotopes
 
@@ -1738,9 +1738,6 @@ metaitem.assemblyenrichednaquadahtriniumeuropiumduranide.name=Enriched Naquadah 
 metaitem.baseenrichednaquadahtriniumeuropiumduranide.name=Base Enriched Naquadah Trinium Europium Duranide Superconductor
 metaitem.assemblyrutheniumtriniumamericiumneutronate.name=Ruthenium Trinium Americium Neutronate Assembly
 metaitem.baserutheniumtriniumamericiumneutronate.name=Base Ruthenium Trinium Americium Neutronate Superconductor
-
-metaitem.crucible.boron.nitride=Pyrolytic Boron Nitride Crucible
-material.crucible.graphite=Graphite Crucible
 
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor

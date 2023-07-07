@@ -269,7 +269,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        ZirconiumChlorideTetrahydrofuranComplex = new Material.Builder(24042, "zirconium_chloride_tetrahydrofuran_complex")
+        ZirconiumTetrachlorideTetrahydrofuranComplex = new Material.Builder(24042, "zirconium_tetrachloride_tetrahydrofuran_complex")
                 .dust()
                 .components(ZirconiumTetrachloride, 1, Tetrahydrofuran, 2)
                 .colorAverage()
