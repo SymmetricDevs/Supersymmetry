@@ -51886,7 +51886,9 @@
       }
     },
     "683:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        104
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -52388,7 +52390,8 @@
     },
     "691:10": {
       "preRequisites:11": [
-        688
+        688,
+        683
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -54218,7 +54221,9 @@
       }
     },
     "719:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        104
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -56542,23 +56547,35 @@
       }
     },
     "751:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        688,
+        719
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Asphalt can be made by putting Bituminous Residue in a Rotary Kiln, mixing the resulting Bitumen with oil, and centrifuging the Bitumen Solution to extract some extra oil, leaving behind Asphalt. This can be used to make Asphalt blocks, which have the same speed boost as concrete.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 4001,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "New Quest",
+          "name:8": "Asphalt",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -56571,39 +56588,34 @@
       },
       "questID:3": 751,
       "rewards:9": {},
-      "tasks:9": {}
-    },
-    "752:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4001,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
           },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "New Quest",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "taskID:8": "bq_standard:retrieval"
         }
-      },
-      "questID:3": 752,
-      "rewards:9": {},
-      "tasks:9": {}
+      }
     }
   },
   "questLines:9": {
@@ -59879,13 +59891,6 @@
         },
         "66:10": {
           "id:3": 751,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": -18
-        },
-        "67:10": {
-          "id:3": 752,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
