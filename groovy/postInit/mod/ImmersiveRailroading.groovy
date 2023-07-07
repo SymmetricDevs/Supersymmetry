@@ -1,7 +1,4 @@
-/*
 println("Running ImmersiveRailroading.groovy...")
-
-def weapons_factory = recipemap('assembler') // REPLACE WITH WEAPONS FACTORY AFTER RECIPE MAPS ARE FIXED
 
 ArrayList<String> name_removals = [
 		"immersiverailroading:item_manual",
@@ -45,7 +42,7 @@ crafting.addShaped("ir_gold_spike", item('immersiverailroading:item_golden_spike
 crafting.addShaped("ir_switch_key", item('immersiverailroading:item_switch_key'), [
 		[null, ore('stickSteel'), null],
 		[ore('craftingToolFile'), ore('stickSteel'), null],
-		[null, ore('ringSteel')]
+		[null, ore('ringSteel'), null]
 ]);
 
 crafting.addShaped("ir_track_exchanger", item('immersiverailroading:item_track_exchanger'), [
@@ -53,4 +50,17 @@ crafting.addShaped("ir_track_exchanger", item('immersiverailroading:item_track_e
 		[item('immersiverailroading:item_large_wrench'), ore('plateSteel'), item('immersiverailroading:item_rail')],
 		[ore('paneGlass'), ore('wireFineRedAlloy'), ore('paneGlass')]
 ]);
-*/
+
+crafting.replaceShaped("immersiverailroading:item_rail", item('immersiverailroading:item_rail'), [
+		[metaitem('screwSteel'), ore('dyeBlack'), metaitem('screwSteel')],
+		[metaitem('stickSteel'), item('minecraft:paper'), metaitem('stickSteel')],
+		[metaitem('screwSteel'), metaitem('stickSteel'), metaitem('screwSteel')]
+]);
+
+mods.gregtech.bender.recipeBuilder()
+		.circuitMeta(3)
+		.inputs(metaitem('plateSteel'))
+		.outputs(item('immersiverailroading:item_rail_part') * 10)
+		.duration(200)
+		.EUt(30)
+		.buildAndRegister()
