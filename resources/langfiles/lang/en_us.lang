@@ -1456,7 +1456,17 @@ material.sodium_hexachloroplatinate_solution=Sodium Hexachloroplatinate Solution
 material.ammonium_hexachloroplatinate=Ammonium Hexachloroplatinate
 material.diluted_ammonium_chloride_solution=Diluted Ammonium Chloride Solution
 material.alluvial_platinum=Alluvial Platinum
-
+material.aluminium_nitride=Aluminium Nitride
+material.aluminium_oxynitride=Aluminium Oxynitride (ALON)
+material.ultra_high_molecular_weight_polyethylene=Ultra High Molecular Weight Polyethylene (UHMWPE)
+material.trimethylaluminium=Trimethylaluminium
+material.methylaluminoxane=Methylaluminoxane
+material.zirconocene_dichloride=Zirconocene Dichloride
+material.tetrahydrofuran=Tetrahydrofuran
+material.sodium_cyclopentadienideSodium Cyclopentadienide
+material.kaminsky_catalyst=Kaminsky Catalyst
+material.sodium_cyclopentadienide=Sodium Cyclopentadienide
+material.zirconium_tetrachloride_tetrahydrofuran_complex=Zirconium Tetrachloride Tetrahydrofuran Complex
 # Isotopes
 
 # GregTech RecipeMaps
@@ -1729,9 +1739,6 @@ metaitem.baseenrichednaquadahtriniumeuropiumduranide.name=Base Enriched Naquadah
 metaitem.assemblyrutheniumtriniumamericiumneutronate.name=Ruthenium Trinium Americium Neutronate Assembly
 metaitem.baserutheniumtriniumamericiumneutronate.name=Base Ruthenium Trinium Americium Neutronate Superconductor
 
-metaitem.crucible.boron.nitride=Pyrolytic Boron Nitride Crucible
-material.crucible.graphite=Graphite Crucible
-
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
 metaitem.raw_diamond.name=Raw Diamond
@@ -1739,7 +1746,7 @@ metaitem.cellulose_acetate_mesh.name=Cellulose Acetate Mesh
 
 metaitem.shape.mold.crucible.name=Mold (Crucible)
 metaitem.shape.mold.rod.name=Mold (Rod)
-metaitem.boron.nitride.crucible.name=Boron Nitride Crucible
+metaitem.crucible.boron.nitride.name=Pyrolytic Boron Nitride Crucible
 
 metaitem.unrefined_boule.silicon.name=Unrefined Silicon Boule
 metaitem.boule.gallium_arsenide.name=Gallium Arsenide Boule
@@ -1749,6 +1756,7 @@ metaitem.zeolite_membrane_support.name=Zeolite Membrane Support
 metaitem.zeolite_membrane.name=Zeolite Membrane
 metaitem.silver_anode_slime.name=Silver Anode Slime
 metaitem.gold_anode_slime.name=Gold Anode Slime
+metaitem.lead_anode_slime.name=Lead Anode Slime
 
 metaitem.wafer.n_doped.silicon.name=n-Doped Silicon Wafer
 metaitem.wafer.alumina.name=Alumina Wafer
@@ -1802,7 +1810,7 @@ metaitem.crop.cotton.name=Cotton
 
 metaitem.vti_rich_pig_iron.name=Vanadium/Titanium-Rich Pig Iron
 metaitem.vt_slag.name=Vanadium/Titanium-Rich Slag
-metaitem.titanium_sponge.name=Titanium Sponge
+metaitem.sponge.titanium.name=Titanium Sponge
 metaitem.sponge.titanium.crude.name=Crude Titanium Sponge
 metaitem.sponge.platinum.name=Platinum Sponge
 

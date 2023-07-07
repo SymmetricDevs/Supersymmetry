@@ -2016,7 +2016,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         ZirconiumTetrachloride = new Material.Builder(8398, 'zirconium_tetrachloride')
-                .fluid()
+                .dust().fluid(FluidTypes.GAS)
                 .fluidTemp(800)
                 .components(Zirconium, 1, Chlorine, 4)
                 .colorAverage()
@@ -2412,13 +2412,13 @@ public class FirstDegreeMaterials{
         SilicaGel = new Material.Builder(8455, 'silica_gel')
                 .dust()
                 .iconSet(SHINY)
-                .components(Sulfur, 1, Oxygen, 2)
+                .components(Silicon, 1, Oxygen, 2)
                 .color(0x6d6e63)
                 .build();
 
         WetSilicaGel = new Material.Builder(8456, 'wet_silica_gel')
                 .dust()
-                .components(Sulfur, 1, Oxygen, 2)
+                .components(Silicon, 1, Oxygen, 2)
                 .color(0x585950)
                 .build();
 
@@ -2704,7 +2704,8 @@ public class FirstDegreeMaterials{
                 .build();
 
         Polycarbonate = new Material.Builder(8498, "polycarbonate")
-                .dust()
+                .polymer()
+                .flags(GENERATE_PLATE)
                 .components(Carbon, 16, Hydrogen, 14, Oxygen, 3)
                 .color(0xa1cacf)
                 .iconSet(SHINY)
@@ -2743,5 +2744,27 @@ public class FirstDegreeMaterials{
                 .build();
 
         AmmoniumHexachloroplatinate.setFormula("(NH4)2PtCl6", true)
+
+        AluminiumNitride = new Material.Builder(8504, "aluminium_nitride")
+                .dust()
+                .components(Aluminium, 1, Nitrogen, 1)
+                .colorAverage()
+                .build();
+
+        AluminiumOxynitride = new Material.Builder(8505, "aluminium_oxynitride")
+                .dust()
+                .flags(GENERATE_PLATE)
+                .components(Aluminium, 23, Oxygen, 27, Nitrogen, 5)
+                .color(0xc7dfed)
+                .iconSet(GLASS)
+                .build();
+
+        UltraHighMolecularWeightPolyethylene = new Material.Builder(8506, "ultra_high_molecular_weight_polyethylene")
+                .polymer()
+                .flags(GENERATE_PLATE)
+                .components(Carbon, 2, Hydrogen, 4)
+                .color(0xc5e3de)
+                .iconSet(SHINY)
+                .build();
     }
 }
