@@ -1756,6 +1756,7 @@ metaitem.zeolite_membrane_support.name=Zeolite Membrane Support
 metaitem.zeolite_membrane.name=Zeolite Membrane
 metaitem.silver_anode_slime.name=Silver Anode Slime
 metaitem.gold_anode_slime.name=Gold Anode Slime
+metaitem.lead_anode_slime.name=Lead Anode Slime
 
 metaitem.wafer.n_doped.silicon.name=n-Doped Silicon Wafer
 metaitem.wafer.alumina.name=Alumina Wafer
@@ -1809,7 +1810,7 @@ metaitem.crop.cotton.name=Cotton
 
 metaitem.vti_rich_pig_iron.name=Vanadium/Titanium-Rich Pig Iron
 metaitem.vt_slag.name=Vanadium/Titanium-Rich Slag
-metaitem.titanium_sponge.name=Titanium Sponge
+metaitem.sponge.titanium.name=Titanium Sponge
 metaitem.sponge.titanium.crude.name=Crude Titanium Sponge
 metaitem.sponge.platinum.name=Platinum Sponge
 
