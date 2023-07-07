@@ -521,7 +521,7 @@ def FluidFuels = [
         Kerosene,
         MidtierGasoline,
         PremiumGasoline,
-        SupremeGasoline
+        SupremeGasoline,
 		Ammonia
 ];
 
