@@ -80,44 +80,64 @@ def combustibles = [
 
 
 for (blastable in blastables) {
-    for (combustible in combustibles) { 
+    for (combustible in combustibles) {
+        //BESSEMER PROCESS
         PBF_RECIPES.recipeBuilder()
         .inputs(ore(blastable.name) * blastable.amount_required)
         .inputs(ore(combustible.name) * (combustible.amount_required * blastable.reductant_required))
         .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
         .outputs(metaitem(combustible.byproduct) * (combustible.amount_required * blastable.reductant_required))
-        .duration(combustible.duration * blastable.amount_produced * blastable.duration)
+        .duration((int) (combustible.duration * blastable.amount_produced * blastable.duration))
+        .buildAndRegister()
+
+        //MODERN BLAST FURNACE
+        EBF_RECIPES.recipeBuilder()
+        .inputs(ore(blastable.name) * blastable.amount_required)
+        .inputs(ore(combustible.name) * (combustible.amount_required * blastable.reductant_required))
+        .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
+        .outputs(metaitem(combustible.byproduct) * (combustible.amount_required * blastable.reductant_required))
+        .duration((int) (combustible.duration * blastable.amount_produced * blastable.duration / 2))
+        .blastFurnaceTemp(1750)
+        .EUt(Globals.voltAmps[1])
         .buildAndRegister()
     }
 
+    //DIRECT REDUCED IRON
     for (reductant in reductants) {
+        EBF_RECIPES.recipeBuilder()
+        .inputs(ore(blastable.name) * blastable.amount_required)
+        .fluidInputs(fluid(reductant.name) * (blastable.reductant_required * reductant.amount_required))
+        .outputs(item('minecraft:iron_ingot') * blastable.amount_produced)
+        .chancedOutput(metaitem('dustSiliconDioxide'), 5000, 0)
+        .fluidOutputs(fluid(reductant.byproduct) * (blastable.reductant_required * reductant.byproduct_amount))
+        .duration((int) (blastable.amount_produced * blastable.duration / 4))
+        .notConsumable(Globals.circuit(1))
+        .blastFurnaceTemp(1750)
+        .EUt(Globals.voltAmps[3])
+        .buildAndRegister()
+
         EBF_RECIPES.recipeBuilder()
         .inputs(ore(blastable.name) * blastable.amount_required)
         .fluidInputs(fluid(reductant.name) * (blastable.reductant_required * reductant.amount_required))
         .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
         .fluidOutputs(fluid(reductant.byproduct) * (blastable.reductant_required * reductant.byproduct_amount))
-        .duration(blastable.amount_produced * blastable.duration)
+        .duration((int)(blastable.amount_produced * blastable.duration / 4))
         .blastFurnaceTemp(1750)
-        .EUt(Globals.voltAmps[1])
-        .notConsumable(Globals.circuit(1))
-        .buildAndRegister()
-
-        EBF_RECIPES.recipeBuilder()
-        .inputs(ore(blastable.name) * blastable.amount_required)
-        .fluidInputs(fluid(reductant.name) * (blastable.reductant_required * reductant.amount_required))
-        .outputs(item('minecraft:iron_ingot') * blastable.amount_produced)
-        .fluidOutputs(fluid(reductant.byproduct) * (blastable.reductant_required * reductant.byproduct_amount))
-        .duration(blastable.amount_produced * blastable.duration)
-        .blastFurnaceTemp(1750)
-        .EUt(Globals.voltAmps[1])
         .notConsumable(Globals.circuit(2))
+        .EUt(Globals.voltAmps[3])
         .buildAndRegister()
     }
 }
 
 furnace.add(metaitem('dustBrownLimonite'), metaitem('dustBandedIron'))
 furnace.add(metaitem('dustYellowLimonite'), metaitem('dustBandedIron'))
-furnace.add(metaitem('ingotPigIron'), item('minecraft:iron_ingot'))
+furnace.add(metaitem('ingotWroughtIron'), item('minecraft:iron_ingot'))
+
+//SLAG REMOVAL BY HAMMER
+crafting.addShapeless('hammer_pig_iron',metaitem('ingotWroughtIron'), [
+    ore('craftingToolHardHammer'),
+    metaitem('ingotPigIron'),
+])
 
 def FORGE_HAMMER = recipemap('forge_hammer')
 
@@ -128,36 +148,28 @@ FORGE_HAMMER.recipeBuilder()
 .EUt(Globals.voltAmps[0])
 .buildAndRegister()
 
-crafting.addShapeless('hammer_pig_iron',metaitem('ingotWroughtIron'), [
-    ore('craftingToolHardHammer'),
-    metaitem('ingotPigIron')
-])
+//BASIC OXYGEN PROCESS
+EBF_RECIPES.recipeBuilder()
+.inputs(metaitem('ingotPigIron'))
+.fluidInputs(fluid('oxygen') * 50)
+.outputs(metaitem('ingotSteel'))
+.blastFurnaceTemp(1750)
+.EUt(Globals.voltAmps[1])
+.duration(10)
+.notConsumable(Globals.circuit(1))
+.buildAndRegister()
 
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoke')], null)
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('gemCoke')], null)
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal') * 2], null)
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoal') * 2], null)
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCharcoal') * 2], null)
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal', 1) * 2], null)
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoke')], null)
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('gemCoke')], null)
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoal') * 2], null)
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCharcoal') * 2], null)
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal') * 2], null)
-// Steel Ingot * 1
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal', 1) * 2], null)
+EBF_RECIPES.recipeBuilder()
+.inputs(metaitem('ingotPigIron'))
+.fluidInputs(fluid('oxygen') * 50)
+.outputs(item('minecraft:iron_ingot'))
+.blastFurnaceTemp(1750)
+.EUt(Globals.voltAmps[1])
+.duration(10)
+.notConsumable(Globals.circuit(2))
+.buildAndRegister()
 
+//CEMENTED STEEL
 for (combustible in combustibles) {
     PBF_RECIPES.recipeBuilder()
     .inputs(item('minecraft:iron_ingot'))
@@ -175,6 +187,20 @@ for (combustible in combustibles) {
     .duration(combustible.duration * 60)
     .buildAndRegister()
 }
+
+//RECIPE REMOVALS
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('gemCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCharcoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal', 1) * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('gemCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCharcoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal', 1) * 2], null)
 
 //High Purity Iron Chain
 

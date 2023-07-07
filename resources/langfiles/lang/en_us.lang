@@ -34,8 +34,8 @@ material.iron_iii_chloride_solution=Iron III Chloride Solution
 material.n_methyl_ii_pyrrolidone=N-methyl-2-pyrrolidone
 material.salty_n_methyl_ii_pyrrolidone=Salty N-methyl-2-pyrrolidone
 material.methyl_acetate_solution=Methyl Acetate Solution
-material.two_nitrochlorobenzene_solution=2-Nitrochlorobenzene Solution
-material.four_nitrochlorobenzene_solution=4-Nitrochlorobenzene Solution
+material.two_nitrochlorobenzene=2-Nitrochlorobenzene
+material.mixed_nitrochlorobenzene=Mixed Nitrochlorobenzene
 material.four_nitroaniline_solution=4-Nitroaniline Solution
 material.para_phenylenediamine_solution=p-Phenylenediamine Solution
 material.four_dichlorohydrazobenzene_solution=4-Dichlorohydrazobenzene Solution
@@ -938,6 +938,9 @@ material.leached_salt_roasted_vanadinite=Leached Salt Roasted Vanadinite
 material.leached_soda_ash_roasted_vanadinite=Leached Soda Ash Roasted Vanadinite
 material.lead_chloride_solution=Lead Chloride Solution
 material.polycaprolactam=Polycaprolactam (Nylon)
+material.chloroauric_acid_solution=Chloroauric Acid Solution
+material.sodium_nitrite=Sodium Nitrate
+material.sodium_oxide=Sodium Oxide
 
 # Thermodynamics
 
@@ -1424,9 +1427,35 @@ material.gaseous_iron_iii_chloride=Gaseous Iron III Chloride
 material.gaseous_titanium_tetrachloride=Gaseous Titanium Tetrachloride
 material.tin_tetrachloride=Tin Tetrachloride
 material.gaseous_aluminium_trichloride=Gaseous Aluminium Trichloride
-material.neutralized_caprolactam_solution=Neutralized Caprolactam Solution
 material.extracted_caprolactam_solution=Extracted Caprolactam Solution
 material.dilute_ammonium_sulfate_solution=Dilute Ammonium Sulfate Solution
+material.phosgene_solution=Phosgene Solution
+material.sodium_bisphenolate_solution=Sodium Bisphenolate Solution
+material.oligomeric_bisphenol_solution=Oligomeric Bisphenol Solution
+material.polycarbonate=Polycarbonate
+material.triethylamine_solution=Triethylamine Solution
+material.impure_barite_slurry=Impure Barite Slurry
+material.barite_slurry=Barite Slurry
+material.granite_tailing_slurry=Granite Tailing Slurry
+material.galena_slurry=Galena Slurry
+material.byproduct_sphalerite_slurry=Byproduct Sphalerite Slurry
+material.impure_cerussite_slurry=Impure Cerussite Slurry
+material.cerussite_slurry=Cerussite Slurry
+material.impure_anglesite_slurry=Impure Anglesite Slurry
+material.anglesite_slurry=Anglesite Slurry
+material.impure_spodumene_slurry=Impure Spodumene Slurry
+material.spodumene_slurry=Spodumene Slurry
+material.pegmatite_tailing_slurry=Pegmatite Tailing Slurry
+material.filtered_phosphate_slurry=Filtered Phosphate Slurry
+material.phosphate_concentrate_slurry=Phosphate Concentrate Slurry
+material.impure_cassiterite_slurry=Impure Cassiterite Slurry
+material.cassiterite_slurry=Cassiterite Slurry
+material.limestone_tailing_slurry=Limestone Tailing Slurry
+material.hexachloroplatinic_acid_solution=Hexachloroplatinic Acid Solution
+material.sodium_hexachloroplatinate_solution=Sodium Hexachloroplatinate Solution
+material.ammonium_hexachloroplatinate=Ammonium Hexachloroplatinate
+material.diluted_ammonium_chloride_solution=Diluted Ammonium Chloride Solution
+material.alluvial_platinum=Alluvial Platinum
 
 # Isotopes
 
@@ -1775,6 +1804,7 @@ metaitem.vti_rich_pig_iron.name=Vanadium/Titanium-Rich Pig Iron
 metaitem.vt_slag.name=Vanadium/Titanium-Rich Slag
 metaitem.titanium_sponge.name=Titanium Sponge
 metaitem.sponge.titanium.crude.name=Crude Titanium Sponge
+metaitem.sponge.platinum.name=Platinum Sponge
 
 # Multiblocked
 

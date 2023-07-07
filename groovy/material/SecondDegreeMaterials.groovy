@@ -477,5 +477,11 @@ public class SecondDegreeMaterials {
                 .components(AmmoniumSulfate, 1, Water, 2)
                 .colorAverage()
                 .build();
+
+        DilutedAmmoniumChlorideSolution = new Material.Builder(13076, "diluted_ammonium_chloride_solution")
+                .fluid()
+                .components(AmmoniumChloride, 1, Water, 8)
+                .colorAverage()
+                .build();
     }
 }

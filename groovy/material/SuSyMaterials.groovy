@@ -104,6 +104,7 @@ class SuSyMaterials {
         public static Material Hydroxyapatite;
         public static Material Rhodochrosite;
         public static Material Carnotite;
+        public static Material AlluvialPlatinum;
 
         // Roasted Ores
 
@@ -274,7 +275,6 @@ class SuSyMaterials {
         public static Material EthylamineMix;
         public static Material ImpureSphaleriteSlurry;
         public static Material UnprocessedSphaleriteSlurry;
-        public static Material GalenaSlurry;
         public static Material SphaleriteSlurry;
         public static Material ThalliumRichFlue;
         public static Material CrudeZinc;
@@ -365,6 +365,24 @@ class SuSyMaterials {
         public static Material GaseousTitaniumTetrachloride;
         public static Material GaseousAluminiumTrichloride;
         public static Material DirtyMolecularSieve;
+        public static Material OligomericBisphenolSolution;
+        public static Material ImpureBariteSlurry;
+        public static Material BariteSlurry;
+        public static Material GraniteTailingSlurry;
+        public static Material GalenaSlurry;
+        public static Material ByproductSphaleriteSlurry;
+        public static Material ImpureCerussiteSlurry;
+        public static Material CerussiteSlurry;
+        public static Material ImpureAnglesiteSlurry;
+        public static Material AnglesiteSlurry;
+        public static Material ImpureSpodumeneSlurry;
+        public static Material SpodumeneSlurry;
+        public static Material PegmatiteTailingSlurry;
+        public static Material FilteredPhosphateSlurry;
+        public static Material PhosphateConcentrateSlurry;
+        public static Material ImpureCassiteriteSlurry;
+        public static Material CassiteriteSlurry;
+        public static Material LimestoneTailingSlurry;
 
         // Petrochem Materials
 
@@ -816,6 +834,13 @@ class SuSyMaterials {
         public static Material DiTertButylPeroxide;
         public static Material TwoEthylhexylNitrate;
         public static Material Nitromethane;
+        public static Material SodiumBisphenolateSolution;
+        public static Material Polycarbonate;
+        public static Material SodiumNitrite;
+        public static Material SodiumOxide;
+        public static Material HexachloroplatinicAcidSolution;
+        public static Material SodiumHexachloroplatinateSolution;
+        public static Material AmmoniumHexachloroplatinate;
 
         // Second Degree Materials
 
@@ -895,6 +920,7 @@ class SuSyMaterials {
         public static Material DilutedTwoEthylhexylNitrate;
         public static Material DilutedNitromethane;
         public static Material DilutedAmmoniumSulfateSolution;
+        public static Material DilutedAmmoniumChlorideSolution;
 
         // Organic Chemistry Materials
 
@@ -930,8 +956,8 @@ class SuSyMaterials {
         public static Material Cyclohexane;
         public static Material SaltyNMethylIIPyrrolidone;
         public static Material MethylAcetateSolution;
-        public static Material TwoNitrochlorobenzeneSolution;
-        public static Material FourNitrochlorobenzeneSolution;
+        public static Material TwoNitrochlorobenzene;
+        public static Material MixedNitrochlorobenzene;
         public static Material FourNitroanilineSolution;
         public static Material ParaPhenylenediamineSolution;
         public static Material TwoTwoDichlorohydrazobenzeneSolution;
@@ -948,7 +974,6 @@ class SuSyMaterials {
         public static Material PBISolution;
         public static Material PBIWaste;
         public static Material Hydroxylamine;
-        public static Material DilutedCyclohexanone;
         public static Material Cyclohexanone;
         public static Material CaprolactamSolution;
         public static Material BisphenolADiglycidylEther;
@@ -1130,7 +1155,6 @@ class SuSyMaterials {
         public static Material Ferrocene;
         public static Material Polyisoprene;
         public static Material Chloroethane;
-        public static Material NeutralizedCaprolactamSolution;
         public static Material ExtractedCaprolactamSolution;
 
         // Third Degree Materials
@@ -1174,6 +1198,8 @@ class SuSyMaterials {
         public static Material PotassiumIsopropylXanthateSolution;
         public static Material PotassiumEthylXanthateSolution;
         public static Material AcidicTributylPhosphate;
+        public static Material PhosgeneSolution;
+        public static Material TriethylamineSolution;
 
         // Thermodynamics/Greenhouse Materials
 
