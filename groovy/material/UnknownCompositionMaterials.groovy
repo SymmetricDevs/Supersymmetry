@@ -1440,7 +1440,7 @@ public class UnknownCompositionMaterials {
                 .color(0x820000)
                 .build();
 
-        CinnabarSlurry = new Material.BUilder(4275, "cinnabar_slurry")
+        CinnabarSlurry = new Material.Builder(4275, "cinnabar_slurry")
                 .fluid()
                 .color(0x960000)
                 .build();

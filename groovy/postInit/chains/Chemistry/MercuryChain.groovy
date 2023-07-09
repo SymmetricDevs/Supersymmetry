@@ -23,7 +23,7 @@ FLOTATION.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
-CLARIFIER.recipeBUilder()
+CLARIFIER.recipeBuilder()
     .fluidInputs(fluid('cinnabar_slurry') * 1000)
     .outputs(metaitem('dustCinnabar') * 16)
     .fluidOutputs(fluid('wastewater') * 1000)
