@@ -123,9 +123,9 @@ public class UnknownCompositionMaterials {
                 .fluidTemp(400)
                 .build();
 
-        GraphiteMix = new Material.Builder(4019, "graphite_mix")
+        PalladiumContainingSolution = new Material.Builder(4019, "palladium_containing_solution")
                 .fluid()
-                .color(0x080808)
+                .color(0x808080)
                 .build();
 
         Mash = new Material.Builder(4020, "mash")
@@ -1435,9 +1435,14 @@ public class UnknownCompositionMaterials {
                 .color(0x3e146e)
                 .build();
 
-        PalladiumContainingSolution = new Material.Builder(4274, "palladium_containing_solution")
+        ImpureCinnabarSlurry = new Material.Builder(4274, "impure_cinnabar_slurry")
                 .fluid()
-                .color(0x808080)
+                .color(0x820000)
+                .build();
+
+        CinnabarSlurry = new Material.BUilder(4275, "cinnabar_slurry")
+                .fluid()
+                .color(0x960000)
                 .build();
     }
 }

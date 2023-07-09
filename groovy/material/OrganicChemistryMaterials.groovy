@@ -1489,5 +1489,13 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 8, Hydrogen, 16, Oxygen, 2, Nitrogen, 1, Potassium, 1)
                 .color(0xd47f50)
                 .build();
+
+        PotassiumButylXanthate = new Material.Builder(15238, "potassium_butyl_xanthate")
+                .dust()
+                .components(Carbon, 5, Hydrogen, 9, Oxygen, 1, Sulfur, 2, Potassium, 1)
+                .color(0xd1c675)
+                .build();
+
+        PotassiumButylXanthate.setFormula("C4H9OCS2K", true)
     }
 }

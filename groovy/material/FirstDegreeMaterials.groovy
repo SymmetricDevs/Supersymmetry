@@ -2339,11 +2339,11 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        ZincOxide = new Material.Builder(8444, 'zinc_oxide')
-                .dust()
-                .components(Zinc, 1, Oxygen, 1)
+        GoldAmalgam = new Material.Builder(8444, "gold_amalgam")
+                .fluid()
+                .components(Gold, 1, Mercury, 1)
                 .colorAverage()
-                .build()
+                .build();
 
         HotSulfuricAcid = new Material.Builder(8445, 'hot_sulfuric_acid')
                 .fluid()
