@@ -204,9 +204,9 @@ mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ing
 
 //High Purity Iron Chain
 
-BR = recipemap('batch_reactor')
 RF = recipemap('reaction_furnace')
 DISTILLERY = recipemap('distillery')
+ROASTER = recipemap('roaster')
 
 RF.recipeBuilder()
     .inputs(metaitem('dustIron'))
@@ -223,11 +223,11 @@ DISTILLERY.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-BR.recipeBuilder()
+ROASTER.recipeBuilder()
     .fluidInputs(fluid('iron_pentacarbonyl') * 1000)
     .outputs(metaitem('dustHighPurityIron'))
-    .duration(300)
     .fluidOutputs(fluid('carbon_monoxide') * 5000)
+    .duration(300)
     .EUt(30)
 	.buildAndRegister()
 
