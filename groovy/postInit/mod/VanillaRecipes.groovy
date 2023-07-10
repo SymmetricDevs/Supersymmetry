@@ -698,3 +698,53 @@ crafting.addShaped('minecraft:arrow_from_paper', item('minecraft:arrow') * 8, [
 		[null, item('minecraft:flint'), null],
 		[null, ore('stickWood'), null],
 		[null, item('minecraft:paper'), null]])
+		
+// Make gunpowder recipe shorter
+mods.gregtech.mixer.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCarbon') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+mods.gregtech.mixer.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+mods.gregtech.mixer.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCharcoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+
+recipemap('mixer').recipeBuilder()
+			.inputs(ore('dustSaltpeter') * 2)
+			.inputs(ore('dustSulfur'))
+			.inputs(ore('dustCoal') * 3)
+			.outputs(item('minecraft:gunpowder') * 6)
+			.duration(150)
+			.EUt(16)
+			.buildAndRegister()
+
+recipemap('mixer').recipeBuilder()
+			.inputs(ore('dustSaltpeter') * 2)
+			.inputs(ore('dustSulfur'))
+			.inputs(ore('dustLignite') * 3)
+			.outputs(item('minecraft:gunpowder') * 6)
+			.duration(150)
+			.EUt(16)
+			.buildAndRegister()
+
+recipemap('mixer').recipeBuilder()
+			.inputs(ore('dustSaltpeter') * 2)
+			.inputs(ore('dustSulfur'))
+			.inputs(ore('dustAnthracite') * 3)
+			.outputs(item('minecraft:gunpowder') * 6)
+			.duration(150)
+			.EUt(16)
+			.buildAndRegister()
+
+recipemap('mixer').recipeBuilder()
+			.inputs(ore('dustSaltpeter') * 2)
+			.inputs(ore('dustSulfur'))
+			.inputs(ore('dustCharcoal') * 3)
+			.outputs(item('minecraft:gunpowder') * 6)
+			.duration(150)
+			.EUt(16)
+			.buildAndRegister()
+
+recipemap('mixer').recipeBuilder()
+			.inputs(ore('dustSaltpeter') * 2)
+			.inputs(ore('dustSulfur'))
+			.inputs(ore('dustCarbon') * 3)
+			.outputs(item('minecraft:gunpowder') * 6)
+			.duration(150)
+			.EUt(16)
+			.buildAndRegister()

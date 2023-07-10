@@ -153,6 +153,21 @@ DUMPER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('ammonia') * 1000)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('water') * 1000)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('ammonia_solution') * 1000)
+        .duration(20)
+        .buildAndRegister()
+
 SIFTER.recipeBuilder()
         .fluidInputs(fluid('flue_gas') * 16000)
         .inputs(metaitem('dustCalcite') * 5)

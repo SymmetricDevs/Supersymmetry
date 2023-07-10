@@ -627,6 +627,12 @@ Globals.solders.each { key, val ->
 			.EUt(Globals.voltAmps[1])
 			.buildAndRegister();
 
+crafting.addShaped("tg_sawoff", item('techguns:sawedoff'), [
+		[metaitem('gun.barrel.steel'), ore('springSmallSteel'), metaitem('gun.barrel.steel')],
+		[tem('techguns:itemshared', 34), item('techguns:itemshared', 2), tem('techguns:itemshared', 43)],
+		[null, null, null]
+]);
+
 	recipemap('weapons_factory').recipeBuilder()
 		.inputs([
 				metaitem('gun.barrel.steel'),

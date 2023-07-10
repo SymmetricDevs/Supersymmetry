@@ -67,7 +67,7 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Aluminium, 8006, false, false)
         generatePurifiedElement(Silicon, 8007, true, false)
 
-        new Material.Builder(8053, "high_purity_phosphorus")
+        new Material.Builder(8008, "high_purity_phosphorus")
                 .ingot().fluid().dust()
                 .iconSet(SHINY)
                 .flags(DISABLE_DECOMPOSITION)
