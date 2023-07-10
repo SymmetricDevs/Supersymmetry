@@ -68,7 +68,7 @@ for (gas in gases) {
 
 mods.gregtech.macerator.recipeBuilder()
     .inputs(metaitem('cement.clinker'))
-    .outputs(metaitem('cement.dust'))
+    .outputs(metaitem('cement.dust') * 16)
     .duration(20)
     .EUt(Globals.voltAmps[0])
     .buildAndRegister()
