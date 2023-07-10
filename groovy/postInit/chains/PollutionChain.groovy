@@ -86,6 +86,11 @@ SMOKE_STACK.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
+SMOKE_STACK.recipeBuilder()
+        .fluidInputs(fluid('coal_gas') * 500)
+        .duration(20)
+        .buildAndRegister()
+
 MIXER.recipeBuilder()
         .fluidInputs(fluid('water') * 100)
         .inputs(metaitem('dustTinyAsh'))
