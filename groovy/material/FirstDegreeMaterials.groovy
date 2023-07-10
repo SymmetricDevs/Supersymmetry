@@ -66,7 +66,16 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Magnesium, 8005, false, false)
         generatePurifiedElement(Aluminium, 8006, false, false)
         generatePurifiedElement(Silicon, 8007, true, false)
-        generatePurifiedElement(Phosphorus, 8008, true, true)
+
+        new Material.Builder(8053, "high_purity_phosphorus")
+                .ingot().fluid().dust()
+                .iconSet(SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .fluidTemp(Phosphorus.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                .color(Phosphorus.materialRGB)
+                .components(Phosphorus, 1)
+                .build();
+
         generatePurifiedElement(Sulfur, 8009, false, false)
         generatePurifiedElement(Potassium, 8010, false, false)
         generatePurifiedElement(Calcium, 8011, false, false)
