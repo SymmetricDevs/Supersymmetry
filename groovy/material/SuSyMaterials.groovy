@@ -401,6 +401,8 @@ class SuSyMaterials {
         public static Material CopperMatteFlueGas;
         public static Material CopperConcentrate;
         public static Material PalladiumContainingSolution;
+        public static Material ImpureCinnabarSlurry;
+        public static Material CinnabarSlurry;
 
         // Petrochem Materials
 
@@ -810,7 +812,6 @@ class SuSyMaterials {
         public static Material DiisopropylaminoEthylEthylMethylphosphonite;
         public static Material VX;
         public static Material TitaniumEthoxide;
-        public static Material ZincOxide;
         public static Material HotSulfuricAcid;
         public static Material CadmiumSulfateSolution;
         public static Material MercuryOxide;
@@ -866,6 +867,7 @@ class SuSyMaterials {
         public static Material AluminiumNitride;
         public static Material AluminiumOxynitride;
         public static Material UltraHighMolecularWeightPolyethylene;
+        public static Material GoldAmalgam;
 
         // Second Degree Materials
 
@@ -1190,6 +1192,7 @@ class SuSyMaterials {
         public static Material ZirconoceneDichloride;
         public static Material Tetrahydrofuran;
         public static Material SodiumCyclopentadienide;
+        public static Material PotassiumButylXanthate;
 
         // Third Degree Materials
 
@@ -1236,6 +1239,7 @@ class SuSyMaterials {
         public static Material TriethylamineSolution;
         public static Material KaminskyCatalyst;
         public static Material ZirconiumTetrachlorideTetrahydrofuranComplex;
+        public static Material PotassiumButylXanthateSolution;
 
         // Thermodynamics/Greenhouse Materials
 

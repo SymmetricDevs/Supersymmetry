@@ -274,5 +274,11 @@ public class ThirdDegreeMaterials {
                 .components(ZirconiumTetrachloride, 1, Tetrahydrofuran, 2)
                 .colorAverage()
                 .build();
+
+        PotassiumButylXanthateSolution = new Material.Builder(24043, "potassium_butyl_xanthate_solution")
+                .fluid()
+                .components(PotassiumButylXanthate, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }

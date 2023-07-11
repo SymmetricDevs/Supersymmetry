@@ -560,6 +560,13 @@ for (FluidFuel in FluidFuels) {
             .EUt(7)
             .buildAndRegister();
 
+    //THIS IS ONLY ADDED SO THAT IT IS A VALID JETPACK FUEL
+    recipemap('combustion_generator').recipeBuilder()
+            .fluidInputs(liquid(FluidFuel.liquid_fuel) * 25)
+            .duration(100)
+            .EUt(-1)
+            .buildAndRegister();
+
     recipemap('canner').recipeBuilder()
             .fluidInputs(liquid(FluidFuel.liquid_fuel) * 500)
             .inputs(item('techguns:itemshared', 28))

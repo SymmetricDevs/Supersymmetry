@@ -66,7 +66,16 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Magnesium, 8005, false, false)
         generatePurifiedElement(Aluminium, 8006, false, false)
         generatePurifiedElement(Silicon, 8007, true, false)
-        generatePurifiedElement(Phosphorus, 8008, true, true)
+
+        new Material.Builder(8008, "high_purity_phosphorus")
+                .ingot().fluid().dust()
+                .iconSet(SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .fluidTemp(Phosphorus.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                .color(Phosphorus.materialRGB)
+                .components(Phosphorus, 1)
+                .build();
+
         generatePurifiedElement(Sulfur, 8009, false, false)
         generatePurifiedElement(Potassium, 8010, false, false)
         generatePurifiedElement(Calcium, 8011, false, false)
@@ -2024,7 +2033,7 @@ public class FirstDegreeMaterials{
 
         RawElectrum = new Material.Builder(8399, "raw_electrum")
                 .ore()
-                .color(0xfcf403).iconSet(SHINY)
+                .color(0xfcf403)
                 .components(Silver, 1, Gold, 1)
                 .build();
 
@@ -2339,11 +2348,11 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        ZincOxide = new Material.Builder(8444, 'zinc_oxide')
-                .dust()
-                .components(Zinc, 1, Oxygen, 1)
+        GoldAmalgam = new Material.Builder(8444, "gold_amalgam")
+                .fluid()
+                .components(Gold, 1, Mercury, 1)
                 .colorAverage()
-                .build()
+                .build();
 
         HotSulfuricAcid = new Material.Builder(8445, 'hot_sulfuric_acid')
                 .fluid()

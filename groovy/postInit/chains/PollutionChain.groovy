@@ -67,6 +67,11 @@ SMOKE_STACK.recipeBuilder()
         .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
+        .fluidInputs(fluid('coal_gas') * 1000)
+        .duration(20)
+        .buildAndRegister()
+
+SMOKE_STACK.recipeBuilder()
         .fluidInputs(fluid('desulfurized_flue_gas') * 1000)
         .duration(20)
         .buildAndRegister()
@@ -145,6 +150,21 @@ DUMPER.recipeBuilder()
 
 DUMPER.recipeBuilder()
         .fluidInputs(fluid('chilled_lava') * 1000)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('coal_tar') * 1000)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('water') * 1000)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('ammonia_solution') * 1000)
         .duration(20)
         .buildAndRegister()
 

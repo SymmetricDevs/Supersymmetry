@@ -190,8 +190,9 @@ DISTILLATION_TOWER.recipeBuilder()
 // Kroll Process
 
 EBF.recipeBuilder()
+        .circuitMeta(2)
         .fluidInputs(fluid('titanium_tetrachloride') * 900)
-        .fluidInputs(fluid('argon') * 1000)
+        .notConsumable(fluid('argon'))
         .inputs(ore('dustMagnesium') * 2)
         .outputs(metaitem('sponge.titanium.crude'))
         .fluidOutputs(fluid('magnesium_chloride') * 864)

@@ -202,7 +202,7 @@ crafting.replaceShaped("techguns:simplemachine_9_repair_bench", item('techguns:s
 ])
 
 crafting.replaceShaped("techguns:simplemachine2_9_armor_bench", item('techguns:simplemachine2', 9), [
-	[ore('plateIron'), ore('rodSteel'), ore('plateIron')],
+	[ore('plateIron'), metaitem('stickSteel'), ore('plateIron')],
 	[ore('gearSteel'), ore('workbench'), ore('gearSteel')],
 	[null, ore('circuitLv'), null]
 ])
@@ -359,6 +359,12 @@ crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
 	ore('sand'),
 	ore('sand')
 ])
+
+crafting.addShaped("tg_sawoff", item('techguns:sawedoff'), [
+		[metaitem('gun.barrel.steel'), ore('springSmallSteel'), metaitem('gun.barrel.steel')],
+		[item('techguns:itemshared', 34), item('techguns:itemshared', 2), item('techguns:itemshared', 43)],
+		[null, null, null]
+]);
 
 Globals.solders.each { key, val ->
 	mods.gregtech.assembler.recipeBuilder()
@@ -659,7 +665,8 @@ Globals.solders.each { key, val ->
 					item('techguns:itemshared', 39) * 2,
 					item('techguns:itemshared', 35),
 					metaitem('ringSteel') * 2,
-					item('minecraft:flint_and_steel')
+					item('minecraft:flint_and_steel'),
+					item('techguns:itemshared', 7)
 			])
 			.fluidInputs(fluid(key) * val)
 			.outputs(item('techguns:rocketlauncher'))
@@ -675,7 +682,8 @@ Globals.solders.each { key, val ->
 					item('minecraft:flint_and_steel'),
 					metaitem('ringSteel') * 2,
 					metaitem('cover.screen'),
-					ore('circuitHv')
+					ore('circuitHv'),
+					item('techguns:itemshared', 7)
 			])
 			.fluidInputs(fluid(key) * val)
 			.outputs(item('techguns:guidedmissilelauncher'))
@@ -691,7 +699,8 @@ Globals.solders.each { key, val ->
 					item('minecraft:flint_and_steel') * 4,
 					metaitem('ringSteel') * 4,
 					metaitem('cover.screen'),
-					ore('circuitHv') * 4
+					ore('circuitHv') * 4,
+					item('techguns:itemshared', 7) * 4
 			])
 			.fluidInputs(fluid(key) * val)
 			.outputs(item('techguns:grimreaper'))
@@ -705,7 +714,8 @@ Globals.solders.each { key, val ->
 					item('techguns:itemshared', 39),
 					item('techguns:itemshared', 35),
 					item('techguns:itemshared', 43),
-					metaitem('large_fluid_cell.steel')
+					metaitem('large_fluid_cell.steel'),
+					item('techguns:itemshared', 5) * 6
 			])
 			.fluidInputs(fluid(key) * val)
 			.outputs(item('techguns:grenadelauncher'))
@@ -1100,7 +1110,7 @@ recipemap('canner').recipeBuilder()
 
 recipemap('weapons_factory').recipeBuilder()
 		.circuitMeta(1)
-		.inputs(ore('plateKevlar') * 5)
+		.inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 5)
 		.inputs(ore('plateBoronNitride') * 2)
 		.outputs(item('techguns:t2_commando_helmet'))
 		.duration(100)
@@ -1109,7 +1119,7 @@ recipemap('weapons_factory').recipeBuilder()
 
 recipemap('weapons_factory').recipeBuilder()
 		.circuitMeta(2)
-		.inputs(ore('plateKevlar') * 8)
+		.inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 8)
 		.inputs(ore('plateBoronNitride') * 4)
 		.outputs(item('techguns:t2_commando_chestplate'))
 		.duration(100)
@@ -1118,7 +1128,7 @@ recipemap('weapons_factory').recipeBuilder()
 
 recipemap('weapons_factory').recipeBuilder()
 		.circuitMeta(3)
-		.inputs(ore('plateKevlar') * 7)
+		.inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 7)
 		.inputs(ore('plateBoronNitride') * 3)
 		.outputs(item('techguns:t2_commando_leggings'))
 		.duration(100)
@@ -1127,9 +1137,45 @@ recipemap('weapons_factory').recipeBuilder()
 
 recipemap('weapons_factory').recipeBuilder()
 		.circuitMeta(4)
-		.inputs(ore('plateKevlar') * 4)
+		.inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 4)
 		.inputs(ore('plateBoronNitride') * 2)
 		.outputs(item('techguns:t2_commando_boots'))
+		.duration(100)
+		.EUt(960)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(1)
+		.inputs(ore('plateKevlar') * 5)
+		.inputs(ore('plateBoronNitride') * 2)
+		.outputs(item('techguns:t2_combat_helmet'))
+		.duration(100)
+		.EUt(960)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(2)
+		.inputs(ore('plateKevlar') * 8)
+		.inputs(ore('plateBoronNitride') * 4)
+		.outputs(item('techguns:t2_combat_chestplate'))
+		.duration(100)
+		.EUt(960)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(3)
+		.inputs(ore('plateKevlar') * 7)
+		.inputs(ore('plateBoronNitride') * 3)
+		.outputs(item('techguns:t2_combat_leggings'))
+		.duration(100)
+		.EUt(960)
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(4)
+		.inputs(ore('plateKevlar') * 4)
+		.inputs(ore('plateBoronNitride') * 2)
+		.outputs(item('techguns:t2_combat_boots'))
 		.duration(100)
 		.EUt(960)
 		.buildAndRegister();

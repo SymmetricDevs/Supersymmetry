@@ -167,6 +167,24 @@ DISTILLERY.recipeBuilder()
         .duration(80)
         .buildAndRegister()
 
+//POTASSIUM BUTYL XANTHATE
+BR.recipeBuilder()
+        .inputs(metaitem('dustPotassiumHydroxide') * 3)
+        .fluidInputs(fluid('n_butanol') * 1000)
+        .fluidInputs(fluid('carbon_disulfide') * 1000)
+        .fluidOutputs(fluid('potassium_butyl_xanthate_solution') * 1000)
+        .EUt(Globals.voltAmps[3])
+        .duration(80)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('potassium_butyl_xanthate_solution') * 1000)
+        .outputs(metaitem('dustPotassiumButylXanthate'))
+        .fluidOutputs(fluid('water') * 1000)
+        .EUt(Globals.voltAmps[3])
+        .duration(80)
+        .buildAndRegister()
+
 //POTASSIUM AMYL XANTHATE
 BR.recipeBuilder()
         .inputs(metaitem('dustDicobaltOctacarbonyl') * 18)
