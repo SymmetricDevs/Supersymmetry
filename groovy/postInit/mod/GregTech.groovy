@@ -931,4 +931,28 @@ mods.gregtech.centrifuge.recipeBuilder()
 		.fluidOutputs(fluid('seed_oil') * 1000)
 		.duration(160)
 		.EUt(30)
+		.buildAndRegister();2
+
+// Steel Turbine Casing * 2
+mods.gregtech.assembler.removeByInput(16, [metaitem('plateMagnalium') * 6, metaitem('frameBlueSteel'), metaitem('circuit.integrated').withNbt(["Configuration": 6])], null)
+
+mods.gregtech.assembler.recipeBuilder()
+		.circuitMeta(6)
+		.inputs(metaitem('stickLongSteel') * 2)
+		.inputs(metaitem('plateSteel') * 4)
+		.inputs(item('gregtech:stone_smooth', 4))
+		.outputs(item('gregtech:turbine_casing', 5) * 4)
+		.duration(50)
+		.EUt(16)
+		.buildAndRegister();
+
+// Ashes * 1
+mods.gregtech.centrifuge.removeByInput(6, [metaitem('dustDarkAsh')], null)
+
+mods.gregtech.centrifuge.recipeBuilder()
+		.inputs(metaitem('dustDarkAsh'))
+		.outputs(metaitem('dustAsh'))
+		.outputs(metaitem('dustCarbon'))
+		.duration(100)
+		.EUt(6)
 		.buildAndRegister();
