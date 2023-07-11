@@ -23,6 +23,52 @@ ore('gtLight').add(metaitem('fluorescent_light'))
 ore('gtLight').add(metaitem('led_light'))
 ore('gtLight').add(metaitem('carbon_arc_lamp'))
 
+//Circuit oredict
+
+ore('circuitZpm').add(metaitem('circuit.gooware_processor'))
+
+ore('circuitUv').add(metaitem('circuit.gooware_assembly'))
+ore('circuitUv').add(metaitem('circuit.optical_processor'))
+
+ore('circuitUhv').add(metaitem('circuit.gooware_computer'))
+ore('circuitUhv').add(metaitem('circuit.optical_assembly'))
+ore('circuitUhv').add(metaitem('circuit.spintronic_processor'))
+
+ore('circuitUev').add(metaitem('circuit.gooware_mainframe'))
+ore('circuitUev').add(metaitem('circuit.optical_computer'))
+ore('circuitUev').add(metaitem('circuit.spintronic_assembly'))
+ore('circuitUev').add(metaitem('circuit.cosmic_processor'))
+
+ore('circuitUiv').add(metaitem('circuit.optical_mainframe'))
+ore('circuitUiv').add(metaitem('circuit.spintronic_computer'))
+ore('circuitUiv').add(metaitem('circuit.cosmic_assembly'))
+ore('circuitUiv').add(metaitem('circuit.supracausal_processor'))
+
+ore('circuitUxv').add(metaitem('circuit.spintronic_mainframe'))
+ore('circuitUxv').add(metaitem('circuit.cosmic_computer'))
+ore('circuitUxv').add(metaitem('circuit.supracausal_assembly'))
+
+ore('circuitOpv').add(metaitem('circuit.cosmic_mainframe'))
+ore('circuitOpv').add(metaitem('circuit.supracausal_computer'))
+
+ore('circuitMax').add(metaitem('circuit.supracausal_mainframe'))
+
+ore('circuitUlv').add(metaitem('circuit.suprachronal.ulv'))
+ore('circuitLv').add(metaitem('circuit.suprachronal.lv'))
+ore('circuitMv').add(metaitem('circuit.suprachronal.mv'))
+ore('circuitHv').add(metaitem('circuit.suprachronal.hv'))
+ore('circuitEv').add(metaitem('circuit.suprachronal.ev'))
+ore('circuitIv').add(metaitem('circuit.suprachronal.iv'))
+ore('circuitLuv').add(metaitem('circuit.suprachronal.luv'))
+ore('circuitZpm').add(metaitem('circuit.suprachronal.zpm'))
+ore('circuitUv').add(metaitem('circuit.suprachronal.uv'))
+ore('circuitUhv').add(metaitem('circuit.suprachronal.uhv'))
+ore('circuitUev').add(metaitem('circuit.suprachronal.uev'))
+ore('circuitUiv').add(metaitem('circuit.suprachronal.uiv'))
+ore('circuitUxv').add(metaitem('circuit.suprachronal.uxv'))
+ore('circuitOpv').add(metaitem('circuit.suprachronal.opv'))
+ore('circuitMax').add(metaitem('circuit.suprachronal.max'))
+
 //Dyes
 
 ore('dyeBrown').add(metaitem('dustSienna'))
@@ -164,6 +210,8 @@ mods.jei.hideCategory('techguns.oredrill')
 mods.jei.hideCategory('techguns.blastfurnace')
 mods.jei.hideCategory('techguns.grinder')
 mods.jei.hideCategory('techguns.camobench')
+
+mods.jei.hideCategory('gregtech:combustion_generator')
 
 mods.jei.hideCategory('minecraft.anvil')
 

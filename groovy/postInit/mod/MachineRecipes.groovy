@@ -614,9 +614,9 @@ crafting.addShaped("gregtech:primitive_mud_pump", metaitem('primitive_mud_pump')
 ]);
 
 crafting.addShaped("gregtech:railroad_engineering_station", metaitem('railroad_engineering_station'), [
-		[item('minecraft:rail'), item('minecraft:rail'), item('minecraft:rail')],
-		[item('minecraft:rail'), hulls[1], item('minecraft:rail')],
-		[item('minecraft:rail'), item('minecraft:rail'), item('minecraft:rail')]
+		[robotArms[1], null, robotArms[1]],
+		[conveyors[1], hulls[1], conveyors[1]],
+		[metaitem('plateSteel'), circuits[1], metaitem('plateSteel')]
 ]);
 
 crafting.addShaped("gregtech:condenser", metaitem('condenser'), [

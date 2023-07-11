@@ -188,6 +188,7 @@ mods.gregtech.assembler.recipeBuilder()
 for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
+			.circuitMeta(2)
 			.inputs(ore('cableGtSingleCopper') * 4)
 			.inputs(metaitem('hull.mv'))
 			.inputs(ore('circuitMv'))
@@ -210,6 +211,7 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
+			.circuitMeta(1)
 			.inputs(ore('cableGtSingleCopper') * 4)
 			.inputs(metaitem('hull.mv'))
 			.inputs(metaitem('screwAluminium') * 4)

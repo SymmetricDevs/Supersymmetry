@@ -17,9 +17,9 @@ FORMINGPRESS.recipeBuilder()
 
 //CRUCIBLE MOLD
 crafting.addShaped("mold_crucible", metaitem('shape.mold.crucible'), [
-    [metaitem('shape.empty'), null, item('gregtech:hammer')],
+    [metaitem('shape.empty'), null, null],
     [null, null, null],
-    [null, null, null]
+    [null, null, item('gregtech:hammer')]
 ])
 
 FORMINGPRESS.recipeBuilder()
