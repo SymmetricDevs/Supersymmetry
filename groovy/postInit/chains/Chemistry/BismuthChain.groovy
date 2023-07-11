@@ -6,7 +6,7 @@ CRYSTALLIZER = recipemap('crystallizer')
 EBF = recipemap('electric_blast_furnace')
 
 ROASTER.recipeBuilder()
-        .inputs(metaitem('dustBismuthinite') * 5)
+        .inputs(ore('dustBismuthinite') * 5)
         .fluidInputs(fluid('oxygen') * 9000)
         .outputs(metaitem('dustBismuthIiiOxide') * 5)
         .fluidOutputs(fluid('sulfur_dioxide') * 3000)

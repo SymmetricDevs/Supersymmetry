@@ -177,7 +177,7 @@ crafting.addShaped('gregtech:co_bronze', metaitem('coke_oven'), [
     [item('gregtech:metal_casing:8'), ore('plateBronze'), item('gregtech:metal_casing:8')]
 ])
 
-crafting.addShaped('gregtech:drum_bronze', metaitem('drum.wood'), [
+crafting.addShaped('gregtech:drum_wood', metaitem('drum.wood'), [
     [ore('craftingToolSoftHammer'), metaitem('rubber_drop'), ore('craftingToolSaw')],
     [ore('plankWood'), ore('stickLongBronze'), ore('plankWood')],
     [ore('plankWood'), ore('stickLongBronze'), ore('plankWood')]
