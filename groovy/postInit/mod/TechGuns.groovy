@@ -360,6 +360,12 @@ crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
 	ore('sand')
 ])
 
+crafting.addShaped("tg_sawoff", item('techguns:sawedoff'), [
+		[metaitem('gun.barrel.steel'), ore('springSmallSteel'), metaitem('gun.barrel.steel')],
+		[item('techguns:itemshared', 34), item('techguns:itemshared', 2), item('techguns:itemshared', 43)],
+		[null, null, null]
+]);
+
 Globals.solders.each { key, val ->
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(metaitem('hull.lv'))
@@ -626,12 +632,6 @@ Globals.solders.each { key, val ->
 			.duration(400)
 			.EUt(Globals.voltAmps[1])
 			.buildAndRegister();
-
-crafting.addShaped("tg_sawoff", item('techguns:sawedoff'), [
-		[metaitem('gun.barrel.steel'), ore('springSmallSteel'), metaitem('gun.barrel.steel')],
-		[tem('techguns:itemshared', 34), item('techguns:itemshared', 2), tem('techguns:itemshared', 43)],
-		[null, null, null]
-]);
 
 	recipemap('weapons_factory').recipeBuilder()
 		.inputs([

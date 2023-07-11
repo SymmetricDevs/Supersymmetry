@@ -169,8 +169,8 @@ crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bron
 ])
 
 crafting.addShaped('gregtech:high_pressure_latex_extractor', metaitem('latex_collector.steel'), [
-        [metaitem('pipeSmallFluidSteel'), metaitem('pump.steam'), metaitem('pipeSmallFluidSteel')]
-        [metaitem('plateSteel'), metaitem('latex_collector.bronze'), metaitem('plateSteel')]
+        [metaitem('pipeSmallFluidSteel'), metaitem('pump.steam'), metaitem('pipeSmallFluidSteel')],
+        [metaitem('plateSteel'), metaitem('latex_collector.bronze'), metaitem('plateSteel')],
         [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')]
 ])
 
