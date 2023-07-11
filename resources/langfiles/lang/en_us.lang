@@ -1736,6 +1736,7 @@ metaitem.wafer.silicon_nitride.name=Silicon Nitride Wafer
 metaitem.wafer.titanium.name=Titanium-Coated Wafer
 metaitem.wafer.tungsten.name=Tungsten-Coated Wafer
 metaitem.wafer.nickel.name=Nickel-Coated Wafer
+metaitem.wafer.gallium_arsenide.name=Gallium Arsenide Wafer
 
 metaitem.seed_crystal.silicon.name=Silicon Seed Crystal
 metaitem.seed_crystal.gallium_arsenide.name=Gallium Arsenide Seed Crystal

@@ -154,11 +154,6 @@ DUMPER.recipeBuilder()
         .buildAndRegister()
 
 DUMPER.recipeBuilder()
-        .fluidInputs(fluid('ammonia') * 1000)
-        .duration(20)
-        .buildAndRegister()
-
-DUMPER.recipeBuilder()
         .fluidInputs(fluid('water') * 1000)
         .duration(20)
         .buildAndRegister()

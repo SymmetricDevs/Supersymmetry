@@ -16,7 +16,7 @@ import supersymmetry.api.recipes.SuSyRecipeMaps;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
 
-//eventManager.listen(EventPriority.LOWEST) 
+//eventManager.listen(EventPriority.LOWEST)
 class ChangeFlags {
     public static void init() {
     //GregTechAPI.MaterialEvent event ->

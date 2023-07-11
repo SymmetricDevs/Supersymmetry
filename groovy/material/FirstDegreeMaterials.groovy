@@ -2033,7 +2033,7 @@ public class FirstDegreeMaterials{
 
         RawElectrum = new Material.Builder(8399, "raw_electrum")
                 .ore()
-                .color(0xfcf403).iconSet(SHINY)
+                .color(0xfcf403)
                 .components(Silver, 1, Gold, 1)
                 .build();
 

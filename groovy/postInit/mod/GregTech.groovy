@@ -78,7 +78,9 @@ def name_removals = [
         'gregtech:quantum_tank_luv',
         'gregtech:quantum_tank_zpm',
         'gregtech:quantum_tank_uv',
-        'gregtech:quantum_tank_uhv'
+        'gregtech:quantum_tank_uhv',
+		'gregtech:large_combustion_engine',
+		'gregtech:extreme_combustion_engine'
 ]
 
 for (name in name_removals) {
@@ -837,3 +839,96 @@ mods.gregtech.forming_press.recipeBuilder()
         .duration(200)
         .EUt(480)
         .buildAndRegister();
+
+// Cobblestone * 1
+mods.gregtech.forge_hammer.removeByInput(16, [item('minecraft:stone')], null)
+
+mods.gregtech.forming_press.recipeBuilder()
+		.inputs(item('minecraft:stone'))
+		.outputs(item('minecraft:cobblestone'))
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
+// Pure Gallium Arsenide * 288
+mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustArsenic'), metaitem('dustGallium'), metaitem('circuit.integrated').withNbt(["Configuration": 12])], [fluid('nitrogen') * 2000])
+// Pure Gallium Arsenide * 288
+mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustArsenic'), metaitem('dustGallium'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
+// Nickel Zinc Ferrite * 864
+mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 6])], [fluid('oxygen') * 8000])
+// Molten Yttrium Barium Cuprate * 1872
+mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 14])], [fluid('oxygen') * 7000, fluid('argon') * 650])
+// Molten Mercury Barium Calcium Cuprate * 2304
+mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustBarium') * 2, metaitem('dustCalcium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 5])], [fluid('mercury') * 1000, fluid('oxygen') * 8000])
+// Molten Yttrium Barium Cuprate * 1872
+mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 7000])
+// Molten Mercury Barium Calcium Cuprate * 2304
+mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustBarium') * 2, metaitem('dustCalcium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 15])], [fluid('mercury') * 1000, fluid('oxygen') * 8000, fluid('nitrogen') * 16000])
+// Molten Indium Tin Barium Titanium Cuprate * 2304
+mods.gregtech.alloy_blast_smelter.removeByInput(7680, [metaitem('dustIndium') * 4, metaitem('dustTin') * 2, metaitem('dustBarium') * 2, metaitem('dustTitanium'), metaitem('dustCopper') * 7, metaitem('circuit.integrated').withNbt(["Configuration": 16])], [fluid('oxygen') * 14000, fluid('argon') * 800])
+// Molten Indium Tin Barium Titanium Cuprate * 2304
+mods.gregtech.alloy_blast_smelter.removeByInput(7680, [metaitem('dustIndium') * 4, metaitem('dustTin') * 2, metaitem('dustBarium') * 2, metaitem('dustTitanium'), metaitem('dustCopper') * 7, metaitem('circuit.integrated').withNbt(["Configuration": 6])], [fluid('oxygen') * 14000])
+// Molten Samarium Iron Arsenic Oxide * 576
+mods.gregtech.alloy_blast_smelter.removeByInput(1920, [metaitem('dustSamarium'), metaitem('dustIron'), metaitem('dustArsenic'), metaitem('circuit.integrated').withNbt(["Configuration": 14])], [fluid('oxygen') * 1000, fluid('helium') * 400])
+// Molten Samarium Iron Arsenic Oxide * 576
+mods.gregtech.alloy_blast_smelter.removeByInput(1920, [metaitem('dustSamarium'), metaitem('dustIron'), metaitem('dustArsenic'), metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 1000])
+
+// NAND Chip * 8
+mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.good'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('soldering_alloy') * 72])
+// NAND Chip * 8
+mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.good'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('tin') * 144])
+// NAND Chip * 12
+mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plastic'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('soldering_alloy') * 72])
+// NAND Chip * 12
+mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plastic'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('tin') * 144])
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.good'))
+		.inputs(metaitem('plate.integrated_logic_circuit'))
+		.inputs(metaitem('boltRedAlloy') * 2)
+		.inputs(metaitem('wireFineTin') * 2)
+		.fluidInputs(fluid('soldering_alloy') * 72)
+		.outputs(metaitem('circuit.nand_chip') * 16)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.good'))
+		.inputs(metaitem('plate.integrated_logic_circuit'))
+		.inputs(metaitem('boltRedAlloy') * 2)
+		.inputs(metaitem('wireFineTin') * 2)
+		.fluidInputs(fluid('tin') * 144)
+		.outputs(metaitem('circuit.nand_chip') * 16)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.plastic'))
+		.inputs(metaitem('plate.integrated_logic_circuit'))
+		.inputs(metaitem('boltRedAlloy') * 2)
+		.inputs(metaitem('wireFineTin') * 2)
+		.fluidInputs(fluid('soldering_alloy') * 72)
+		.outputs(metaitem('circuit.nand_chip') * 24)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.plastic'))
+		.inputs(metaitem('plate.integrated_logic_circuit'))
+		.inputs(metaitem('boltRedAlloy') * 2)
+		.inputs(metaitem('wireFineTin') * 2)
+		.fluidInputs(fluid('tin') * 144)
+		.outputs(metaitem('circuit.nand_chip') * 24)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
+mods.gregtech.centrifuge.recipeBuilder()
+		.fluidInputs(fluid('gtfo_soybean_oil') * 1000)
+		.fluidOutputs(fluid('seed_oil') * 1000)
+		.duration(160)
+		.EUt(30)
+		.buildAndRegister();

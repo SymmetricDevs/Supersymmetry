@@ -1,3 +1,7 @@
+import pl.asie.computronics.integration.ModRecipes;
+
+ModRecipes.instance = null;
+
 def soldering_alloys = [
         liquid('tin') * 144,
         liquid('soldering_alloy') * 72
