@@ -482,10 +482,10 @@ crafting.replaceShaped('susy:home_block', item('susy:home_block'), [
         [null, null, null]
 ])
 
-crafting.addShapeless('susy:home_block_1', item('susy:home_block', 1), [item('susy:home_block')])
-crafting.addShapeless('susy:home_block_2', item('susy:home_block', 2), [item('susy:home_block', 1)])
-crafting.addShapeless('susy:home_block_3', item('susy:home_block', 3), [item('susy:home_block', 2)])
-crafting.addShapeless('susy:home_block_4', item('susy:home_block',), [item('susy:home_block', 3)])
+crafting.addShapeless('susy:home_block_1', item('susy:home_block', 4), [item('susy:home_block', 0)])
+crafting.addShapeless('susy:home_block_2', item('susy:home_block', 8), [item('susy:home_block', 4)])
+crafting.addShapeless('susy:home_block_3', item('susy:home_block', 12), [item('susy:home_block', 8)])
+crafting.addShapeless('susy:home_block_4', item('susy:home_block', 0), [item('susy:home_block', 12)])
 
 // Acetone * 200
 mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('dissolved_calcium_acetate') * 200])
