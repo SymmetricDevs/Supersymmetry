@@ -185,27 +185,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.EUt(120)
 		.buildAndRegister();
 
-mods.gregtech.mixer.recipeBuilder()
-		.fluidInputs(fluid('gtfo_etirps') * 1000)
-		.fluidInputs(fluid('milk') * 1000)
-		.outputs(item('opencomputers:material', 1))
-		.duration(100)
-		.EUt(30)
-		.buildAndRegister();
-
 for (solder in soldering_alloys) {
-
-	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('wireFineCopper') * 2)
-			.inputs(metaitem('component.smd.capacitor') * 4)
-			.inputs(metaitem('sensor.ev'))
-			.inputs(metaitem('electric.motor.ev'))
-			.inputs(ore('circuitEv'))
-            .fluidInputs(solder)
-            .outputs(item('opencomputers:tool', 5) * 4)
-            .duration(200)
-            .EUt(7680)
-            .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
 			.circuitMeta(2)
