@@ -12,9 +12,9 @@ def magnetic_rod_ingredients = [
     [null, null, null]
 ]
 
-oreDict.add('electrolyteFruit', item('gregtechfoodoption:gtfo_meta_item:18'))
-oreDict.add('electrolyteFruit', item('gregtechfoodoption:gtfo_meta_item:17'))
-oreDict.add('electrolyteFruit', item('gregtechfoodoption:gtfo_meta_item:123'))
+oreDict.add('electrolyteFruit', metaitem('gregtechfoodoption:food.lime'))
+oreDict.add('electrolyteFruit', metaitem('gregtechfoodoption:food.lemon'))
+oreDict.add('electrolyteFruit', metaitem('gregtechfoodoption:food.orange'))
 
 crafting.removeByOutput(metaitem('stickIronMagnetic')) 
 

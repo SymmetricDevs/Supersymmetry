@@ -958,7 +958,7 @@ public class FirstDegreeMaterials{
                 .components(Nitrogen, 1, Hydrogen, 5, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
                 .build()
-                ////.setFormula("(NH4)HSO4", true)
+                //.setFormula("(NH4)HSO4", true)
 
         Phosphine = new Material.Builder(8231, GTUtility.gregtechId("phosphine"))
                 .fluid(FluidTypes.GAS)
@@ -1470,7 +1470,7 @@ public class FirstDegreeMaterials{
                 .components(Lithium, 1, Aluminium, 1, Silicon, 4, Oxygen, 10)
                 .iconSet(SAND)
                 .build()
-                .setFormula("(LiAlSi2O6)(SiO2)2", true)
+                //.setFormula("(LiAlSi2O6)(SiO2)2", true)
 
         BetaSpodumene = new Material.Builder(8312, GTUtility.gregtechId("beta_spodumene"))
                 .dust()

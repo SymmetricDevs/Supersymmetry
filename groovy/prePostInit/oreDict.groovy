@@ -146,6 +146,54 @@ unify_oredicts(dicts_gears)
 
  */
 
+//Manual oredict removal
+
+oreDictRemovals = [
+        'libvulpes:productingot:10': 'ingotIridium',
+        'libvulpes:productingot:7': 'ingotTitanium',
+        'libvulpes:productingot:6': 'ingotSteel',
+        'libvulpes:productingot:5': 'ingotTin',
+        'libvulpes:productingot:4': 'ingotCopper',
+        'libvulpes:productingot:3': 'ingotSilicon',
+        'sgcraft:naquadahingot': 'ingotNaquadahAlloy',
+        'libvulpes:productplate:10': 'plateIridium',
+        'libvulpes:productplate:7': 'plateTitanium',
+        'libvulpes:productplate:6': 'plateSteel',
+        'libvulpes:productplate:5': 'plateTin',
+        'libvulpes:productplate:4': 'plateCopper',
+        'libvulpes:productplate:3': 'plateSilicon',
+        'libvulpes:productplate:2': 'plateGold',
+        'libvulpes:productplate:1': 'plateIron',
+        'libvulpes:productrod:10': 'stickIridium',
+        'libvulpes:productrod:7': 'stickTitanium',
+        'libvulpes:productrod:6': 'stickSteel',
+        'libvulpes:productrod:4': 'stickCopper',
+        'libvulpes:productrod:1': 'stickIron',
+        'appliedenergistics2:material:2': 'dustCertusQuartz',
+        'appliedenergistics2:material:3': 'dustNetherQuartz',
+        'appliedenergistics2:material:8': 'dustFluix',
+        'appliedenergistics2:material:46': 'dustEnderPearl',
+        'appliedenergistics2:material:49': 'dustIron',
+        'appliedenergistics2:material:51': 'dustGold',
+        'portalgun:item_dust_ender_pearl': 'dustEnderPearl',
+        'libvulpes:productdust': 'dustDilithium',
+        'libvulpes:productdust:1': 'dustIron',
+        'libvulpes:productdust:2': 'dustGold',
+        'libvulpes:productdust:3': 'dustSilicon',
+        'libvulpes:productdust:4': 'dustCopper',
+        'libvulpes:productdust:5': 'dustTin',
+        'libvulpes:productdust:6': 'dustSteel',
+        'libvulpes:productdust:7': 'dustTitanium',
+        'libvulpes:productdust:10': 'dustiridium',
+        'libvulpes:productgear:6': 'gearSteel',
+        'libvulpes:productgear:7': 'gearTitanium'
+]
+
+oreDictRemovals.each { key, val ->
+    ore(val).remove(item(key))
+    mods.jei.hide(item(key))
+}
+
 susycobble = SuSyBlocks.SUSY_STONE_BLOCKS.get(SusyStoneVariantBlock.StoneVariant.COBBLE)
 
 for (type in SusyStoneVariantBlock.StoneType.values()) {
@@ -232,3 +280,4 @@ for (knife in name_knifeNTP) {
     ore('knifeNTP').add(item(knife))
 }
 */
+

@@ -179,52 +179,6 @@ mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:fish', 2)], null)
 mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:fish', 3)], null)
 // Methane * 38
 mods.gregtech.centrifuge.removeByInput(5, [item('biomesoplenty:filled_honeycomb')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:3')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:17')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:18')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:73')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:76')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:77')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:78')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:122')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:123')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:125')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:126')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:160')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:201')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:206')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:208')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:233')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:234')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:235')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:267')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:269')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:270')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:308')], null)
-// Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:309')], null)
 // Methane * 72
 mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:bread')], null)
 // Methane * 47

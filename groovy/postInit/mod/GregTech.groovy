@@ -42,6 +42,8 @@ mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], 
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustBerylliumOxide')], null)
 // Laminated Glass * 1
 mods.gregtech.forming_press.removeByInput(480, [item('gregtech:transparent_casing') * 2, metaitem('platePolyvinylButyral')], null)
+// Enderpearl Dust * 10
+mods.gregtech.mixer.removeByInput(480, [metaitem('dustBeryllium'), metaitem('dustPotassium') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('nitrogen') * 5000])
 
 
 def name_removals = [
