@@ -99,8 +99,6 @@ mods.gregtech.centrifuge.removeByInput(80, [item('minecraft:soul_sand')], null)
 mods.gregtech.centrifuge.removeByInput(20, [item('gregtech:rubber_log')], null)
 // Methane * 4000
 mods.gregtech.centrifuge.removeByInput(5, null, [fluid('refinery_gas') * 8000])
-// Oil * 500
-mods.gregtech.centrifuge.removeByInput(5, [item('gregtech:ore_oilsands_0')], null)
 // Enriched Uranium Hexafluoride * 100
 mods.gregtech.centrifuge.removeByInput(480, null, [fluid('uranium_hexafluoride') * 1000])
 // Tritium * 40
@@ -182,51 +180,51 @@ mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:fish', 3)], null)
 // Methane * 38
 mods.gregtech.centrifuge.removeByInput(5, [item('biomesoplenty:filled_honeycomb')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('component.corn.cob')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:3')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('food.lemon')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:17')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('food.lime')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:18')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('crop.olive')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:73')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('crop.tomato')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:76')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('crop.onion')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:77')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('crop.cucumber')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:78')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('food.banana')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:122')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('food.orange')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:123')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('food.mango')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:125')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('food.apricot')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:126')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('component.soybean')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:160')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('crop.coffee')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:201')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('component.pea_pod')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:206')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('seed.bean')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:208')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('component.horseradish')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:233')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('component.basil')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:234')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('component.oregano')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:235')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('component.artichoke')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:267')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('component.black_pepper')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:269')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('component.rice')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:270')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('component.garlic_bulb')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:308')], null)
 // Methane * 34
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('crop.aubergine')], null)
+mods.gregtech.centrifuge.removeByInput(5, [item('gregtechfoodoption:gtfo_meta_item:309')], null)
 // Methane * 72
 mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:bread')], null)
 // Methane * 47
@@ -285,15 +283,15 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustYellowLimonite') * 4],
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustBrownLimonite') * 4], null)
 
 recipemap('vacuum_freezer').recipeBuilder()
-        .inputs(metaitem('matter_graham_hot_plate'))
-        .outputs(metaitem('cracker_graham_ungraded_plate'))
-        .EUt(60)
+        .inputs(item('gregtechfoodoption:gtfo_oredict_item:1048'))
+        .outputs(item('gregtechfoodoption:gtfo_oredict_item:1049'))
+        .EUt(16)
         .duration(20)
         .buildAndRegister()
 
 recipemap('vacuum_freezer').recipeBuilder()
-        .inputs(metaitem('hot_apple_hard_candy_plate'))
-        .outputs(metaitem('food.apple_hard_candy'))
-        .EUt(5)
+        .inputs(item('gregtechfoodoption:gtfo_oredict_item:1084'))
+        .outputs(item('gregtechfoodoption:gtfo_meta_item:14'))
+        .EUt(16)
         .duration(200)
         .buildAndRegister()

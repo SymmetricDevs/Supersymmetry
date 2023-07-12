@@ -769,6 +769,12 @@ crafting.addShaped("gregtech:cooling_unit", metaitem('cooling_unit'), [
 		[pumps[3], circuits[3], pumps[3]]
 ])
 
+crafting.replaceShaped("gregtech:electric_blast_furnace", metaitem('electric_blast_furnace'), [
+		[metaitem('wireGtDoubleCopper'), metaitem('wireGtDoubleCopper'), metaitem('wireGtDoubleCopper')],
+		[circuits[1], item('gregtech:metal_casing', 2), circuits[1]],
+		[metaitem('cableGtSingleTin'), circuits[1], metaitem('cableGtSingleTin')]
+])
+
 crafting.addShaped("gregtech:quencher", metaitem('quencher'), [
 		[pumps[3], metaitem('robot.arm.hv'), pumps[3]],
 		[circuits[3], item('gregtech:metal_casing', 5), circuits[3]],
@@ -889,7 +895,7 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('electric.pump.lv') * 4)
 		.inputs(metaitem('electric.motor.lv') * 4)
 		.inputs(metaitem('gearSteel') * 4)
-		.notConsumable(circuit(2))
+		.circuitMeta(2)
 		.outputs(metaitem('fluid_drilling_rig.mv'))
 		.EUt(30)
 		.duration(600)

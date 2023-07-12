@@ -1,15 +1,9 @@
-import gregtech.integration.groovy.GroovyScriptCompat
-
 import com.cleanroommc.groovyscript.api.IIngredient
 
 class Globals {
 
     public static void main (String[] args) {
 
-    }
-
-    public static IIngredient circuit(int x) {
-        return GroovyScriptCompat.getMetaItem('circuit.integrated').withNbt([Configuration: x])
     }
 
     public static voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];

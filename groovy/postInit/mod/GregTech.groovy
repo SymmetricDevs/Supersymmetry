@@ -35,7 +35,7 @@ mods.gregtech.cutter.removeByInput(7, [item('minecraft:cobblestone')], [fluid('d
 // Hot Titanium Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustTitaniumTrifluoride') * 4], [fluid('hydrogen') * 3000])
 // Heated Water * 1000
-mods.gregtech.fluid_heater.removeByInput(2048, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('water') * 1000])
+mods.gregtech.fluid_heater.removeByInput(120, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('water') * 1000])
 // Beryllium Oxide Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('beryllium_oxide') * 144])
 // Beryllium Oxide Plate * 1
@@ -133,7 +133,8 @@ for (name in ore_smelting_removals) {
 // Polycaprolactam Bar * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCaprolactam')], [fluid('nitrogen') * 1000])
 // Monocrystalline Silicon Boule * 1
-mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSilicon') * 32, metaitem('dustSmallGalliumArsenide')], null)
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSilicon') * 32, metaitem('dustSmallGalliumArsenide'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
+
 // Cupronickel Coil Block * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('wireGtDoubleCupronickel') * 8, metaitem('foilBronze') * 8], [fluid('tin_alloy') * 144])
 // Kanthal Coil Block * 1
@@ -171,7 +172,7 @@ crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bron
 ])
 
 crafting.addShaped('gregtech:high_pressure_latex_extractor', metaitem('latex_collector.steel'), [
-        [metaitem('pipeSmallFluidSteel'), metaitem('pump.steam'), metaitem('pipeSmallFluidSteel')],
+        [metaitem('pipeSmallFluidSteel'), metaitem('susy:pump.steam'), metaitem('pipeSmallFluidSteel')],
         [metaitem('plateSteel'), metaitem('latex_collector.bronze'), metaitem('plateSteel')],
         [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')]
 ])
@@ -211,7 +212,7 @@ crafting.addShaped("gregtech:steam_motor", metaitem('steam.motor'), [
     [metaitem('steam.piston'), ore('stickBronze'), metaitem('steam.piston')]
 ]);
 
-crafting.addShaped("gregtech:steam_pump", metaitem('pump.steam'), [
+crafting.addShaped("gregtech:steam_pump", metaitem('susy:pump.steam'), [
     [ore('screwBronze'), ore('rotorBronze'), ore('ringIron')],
     [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
     [ore('ringIron'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
@@ -226,7 +227,7 @@ crafting.replaceShaped("gregtech:steam_extractor_bronze", metaitem('steam_extrac
 
 crafting.replaceShaped("gregtech:steam_vacuum_chamber", metaitem('vacuum_chamber.bronze'), [
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
-    [metaitem('pump.steam'), item('gregtech:steam_casing'), ore('blockGlass')],
+    [metaitem('susy:pump.steam'), item('gregtech:steam_casing'), ore('blockGlass')],
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
 ])
 
@@ -955,4 +956,68 @@ mods.gregtech.centrifuge.recipeBuilder()
 		.outputs(metaitem('dustCarbon'))
 		.duration(100)
 		.EUt(6)
+		.buildAndRegister();
+
+// Add more semi fluid fuel options
+mods.gregtech.semi_fluid_generator.removeByInput(-32, null, [fluid('sulfuric_heavy_fuel') * 16])
+mods.gregtech.semi_fluid_generator.removeByInput(-32, null, [fluid('heavy_fuel') * 8])
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('sulfuric_diesel') * 16)
+		.duration(5)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('diesel') * 8)
+		.duration(15)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('sulfuric_fuel_oil') * 16)
+		.duration(7)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('fuel_oil') * 8)
+		.duration(21)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('sulfuric_refinery_gas') * 16)
+		.duration(4)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('refinery_gas') * 8)
+		.duration(12)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('sulfuric_natural_gas') * 16)
+		.duration(4)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('natural_gas') * 8)
+		.duration(12)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('propane') * 8)
+		.duration(15)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('gtfo_stearin') * 8)
+		.duration(15)
+		.EUt(-32)
 		.buildAndRegister();

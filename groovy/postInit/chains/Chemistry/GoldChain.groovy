@@ -154,10 +154,13 @@ BATCH_REACTOR.recipeBuilder()
     .buildAndRegister()
 
 //PURIFIED GOLD (SPECIALIZED)
+// Aqua Regia * 3000
+mods.gregtech.mixer.removeByInput(30, null, [fluid('nitric_acid') * 1000, fluid('hydrochloric_acid') * 2000])
+
 CSTR.recipeBuilder()
-    .fluidInputs(fluid('hydrogen_chloride') * 150)
+    .fluidInputs(fluid('hydrogen_chloride') * 100)
     .fluidInputs(fluid('nitric_acid') * 50)
-    .fluidOutputs(fluid('aqua_regia') * 200)
+    .fluidOutputs(fluid('aqua_regia') * 150)
     .duration(6)
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()

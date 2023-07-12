@@ -44,18 +44,18 @@ class ChangeFlags {
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
 
-        DilutedHydrochloricAcid.setFormula("(H2O)2(HCl)", true);
+        //DilutedHydrochloricAcid.setFormula("(H2O)2(HCl)", true);
 
         ManganesePhosphide.addFlags("generate_fine_wire");
         UraniumTriplatinum.addFlags("generate_fine_wire");
         RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
 
-        Phosphorus.setFormula("P4", true);
+        //Phosphorus.setFormula("P4", true);
         Phosphorus.setMaterialRGB(0xfffed6);
         Phosphorus.addFlags("no_smelting");
         
-        DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
-        AquaRegia.setFormula("(HNO3)(HCl)3", true);
+        //DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
+        //AquaRegia.setFormula("(HNO3)(HCl)3", true);
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
@@ -65,10 +65,9 @@ class ChangeFlags {
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
 
         LithiumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
         SiliconDioxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());
-
-        Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Cadmium.setProperty(PropertyKey.FLUID, new FluidProperty());

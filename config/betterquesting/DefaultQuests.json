@@ -2106,15 +2106,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1004,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -2147,15 +2138,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1005,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             },
@@ -2192,15 +2174,6 @@
             "3:10": {
               "Count:3": 1,
               "Damage:2": 1004,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -2363,15 +2336,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1002,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -2404,15 +2368,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1002,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -4191,15 +4146,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 4004,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -4232,30 +4178,12 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 4004,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 4003,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -5375,15 +5303,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 4002,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2",
             "tag:10": {
@@ -5419,15 +5338,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 4002,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2",
               "tag:10": {
@@ -5582,15 +5492,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 153,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -5652,15 +5553,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1102,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -5693,15 +5585,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1102,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -5770,15 +5653,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 4103,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -5811,15 +5685,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 4103,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -6989,15 +6854,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1103,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -7030,15 +6886,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1103,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -8401,15 +8248,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 152,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -8442,15 +8280,6 @@
             "0:10": {
               "Count:3": 4,
               "Damage:2": 152,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -8807,15 +8636,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 165,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -8848,15 +8668,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 165,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -8942,15 +8753,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 166,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -8983,15 +8785,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 166,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -10169,7 +9962,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§6 Sprinkler§r sprays fluids onto a 9x9 area of crops. There must be a 3m tall space between the cover and the ground for it to work. It has to be placed on the §cdown §rface of a machine.",
+          "desc:8": "The§6 Sprinkler§r sprays fluids onto a 9x9 area of crops. There must be a 3m tall space between the cover and the ground for it to work. It has to be placed on the §cdown §rface of a machine or a pipe containing a valid fluid.\n\nValid fluids include:\n- Water\n- Fertilizer Solution\n- Blood (obtained using a Mob Extractor)",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15535,15 +15328,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 103,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -15576,15 +15360,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 104,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -15709,15 +15484,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 169,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -15750,15 +15516,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 169,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -25305,15 +25062,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 6,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -29606,15 +29354,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -30436,30 +30175,12 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 5002,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 5102,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -30679,15 +30400,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 5302,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -30720,15 +30432,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 5302,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -32879,15 +32582,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 5153,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -32920,15 +32614,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 5153,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -34258,15 +33943,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 180,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -34299,15 +33975,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 180,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -44797,15 +44464,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 6002,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -44838,15 +44496,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 6002,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -45613,15 +45262,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 6102,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -45654,15 +45294,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 6102,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -45683,15 +45314,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 6103,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -45724,15 +45346,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 6103,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -51052,15 +50665,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 156,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -51093,15 +50697,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 156,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             },
@@ -51287,15 +50882,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 6105,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -51328,15 +50914,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 6105,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -52154,15 +51731,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 8004,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -52195,15 +51763,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 8004,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -52225,15 +51784,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 159,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -52266,15 +51816,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 159,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -52347,15 +51888,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 171,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -52388,15 +51920,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 171,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -52924,15 +52447,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 8003,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -52965,15 +52479,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 8003,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -52996,15 +52501,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 8012,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -53037,15 +52533,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 8012,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -56716,15 +56203,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 172,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -56757,15 +56235,6 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 172,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_2"
             }
@@ -61035,15 +60504,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3003,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -61064,15 +60524,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3007,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -61093,15 +60544,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3011,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -61122,15 +60564,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3015,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -61151,15 +60584,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3019,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -61180,15 +60604,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3021,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },
@@ -61209,15 +60624,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3036,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_2"
           },

@@ -79,7 +79,7 @@ ore('dyeGreen').add(metaitem('dustMalachite'))
 ore('dyeBlue').add(metaitem('dustCobaltAluminate'))
 ore('dyeWhite').add(metaitem('dustLeadNitrate'))
 ore('dyeBlack').add(metaitem('dustCarbon'))
-ore('dyeGreen').add(metaitem('cupric_hydrogen_arsenite_dust'))
+ore('dyeGreen').add(item('gregtechfoodoption:gtfo_oredict_item:1127'))
 
 //Ore dict changes and unification
 
@@ -91,6 +91,9 @@ def get_ore_dicts(List<String> list) {
     return out
 }
 
+//Disable due to server crashing
+
+/*
 def unify (ore, p) {
     def pos = p
     def foundMod = false
@@ -140,6 +143,8 @@ unify_oredicts(dicts_sticks)
 unify_oredicts(dicts_blocks)
 unify_oredicts(dicts_dusts)
 unify_oredicts(dicts_gears)
+
+ */
 
 susycobble = SuSyBlocks.SUSY_STONE_BLOCKS.get(SusyStoneVariantBlock.StoneVariant.COBBLE)
 

@@ -20,8 +20,8 @@ for (name in name_removals) {
 
 // Creates Compressed brick recipes
 def CompressBrickRecipes(brick_mix, compressed_brick) {
-    crafting.addShapeless('Compress' + brick_mix + '_1',metaitem(compressed_brick), [metaitem('wooden_form.brick'), metaitem(brick_mix)]) 
-    crafting.addShaped('Compress' + brick_mix + '_8',metaitem(compressed_brick) * 8, [
+    crafting.addShapeless('Compress' + brick_mix + '_1', item(compressed_brick), [metaitem('wooden_form.brick'), metaitem(brick_mix)])
+    crafting.addShaped('Compress' + brick_mix + '_8', item(compressed_brick) * 8, [
         [metaitem(brick_mix),metaitem(brick_mix),metaitem(brick_mix)],
         [metaitem(brick_mix),metaitem('wooden_form.brick'), metaitem(brick_mix)],
         [metaitem(brick_mix),metaitem(brick_mix),metaitem(brick_mix)]
@@ -58,7 +58,7 @@ crafting.addShaped('slaked_lime_manual', metaitem('dustCalciumHydroxide') * 8, [
     [metaitem('dustQuicklime'),fluid('water') * 1000, metaitem('dustQuicklime')],
     [metaitem('dustQuicklime'),metaitem('dustQuicklime'),metaitem('dustQuicklime')]])
 
-CompressBrickRecipes('dustFireclay', 'compressed.fireclay')
+CompressBrickRecipes('dustFireclay', 'gregtech:meta_item_1:351')
 
 //Adobe Premiere bricks
 
@@ -81,4 +81,4 @@ def damage = {
         }
 }
 
-CompressBrickRecipes('mudbrick_mix', 'brick.adobe')
+CompressBrickRecipes('mudbrick_mix', 'gregtechfoodoption:gtfo_meta_item:44')

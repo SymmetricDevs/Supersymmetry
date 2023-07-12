@@ -230,8 +230,6 @@ mods.gregtech.extruder.removeByInput(56, [metaitem('ingotTreatedNeodymiumAlloy')
 mods.gregtech.extruder.removeByInput(64, [metaitem('ingotTreatedNeodymiumAlloy'), metaitem('shape.extruder.rod_long')], null)
 // Treated Neodymium Alloy Ring * 4
 mods.gregtech.extruder.removeByInput(42, [metaitem('ingotTreatedNeodymiumAlloy'), metaitem('shape.extruder.ring')], null)
-// Double Treated Neodymium Alloy Plate * 1
-mods.gregtech.bender.removeByInput(96, [metaitem('ingotTreatedNeodymiumAlloy') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 // Treated Neodymium Alloy Plate * 9
 mods.gregtech.cutter.removeByInput(30, [metaitem('blockTreatedNeodymiumAlloy')], [fluid('lubricant') * 11])
 // Treated Neodymium Alloy Plate * 9
@@ -304,24 +302,14 @@ mods.gregtech.extractor.removeByInput(30, [metaitem('ingotSamariumAlloy')], null
 mods.gregtech.extractor.removeByInput(30, [metaitem('ingotTreatedSamariumAlloy')], null)
 // Samarium Alloy * 144
 mods.gregtech.extractor.removeByInput(30, [metaitem('ingotSamariumAlloyMagnetic')], null)
-// Samarium Alloy * 288
-mods.gregtech.extractor.removeByInput(30, [metaitem('plateDoubleSamariumAlloy')], null)
-// Samarium Alloy * 288
-mods.gregtech.extractor.removeByInput(30, [metaitem('plateDoubleTreatedSamariumAlloy')], null)
-// Samarium Alloy * 288
-mods.gregtech.extractor.removeByInput(30, [metaitem('plateDoubleSamariumAlloyMagnetic')], null)
 // Samarium Alloy * 1296
 mods.gregtech.extractor.removeByInput(30, [metaitem('blockSamariumAlloy')], null)
 // Samarium Alloy * 1296
 mods.gregtech.extractor.removeByInput(30, [metaitem('blockTreatedSamariumAlloy')], null)
 // Samarium Alloy * 1296
 mods.gregtech.extractor.removeByInput(30, [metaitem('blockSamariumAlloyMagnetic')], null)
-// Double Samarium Alloy Plate * 1
-mods.gregtech.bender.removeByInput(96, [metaitem('ingotSamariumAlloy') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 // Samarium Alloy Ingot * 1
 mods.gregtech.arc_furnace.removeByInput(30, [metaitem('plateSamariumAlloy')], [fluid('oxygen') * 74])
-// Double Samarium Alloy Plate * 1
-mods.gregtech.bender.removeByInput(96, [metaitem('plateSamariumAlloy') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 // Samarium Alloy Nugget * 4
 mods.gregtech.arc_furnace.removeByInput(30, [metaitem('stickSamariumAlloy')], [fluid('oxygen') * 32])
 // Samarium Alloy Ingot * 1
@@ -336,12 +324,8 @@ mods.gregtech.lathe.removeByInput(16, [metaitem('ingotTreatedSamariumAlloy')], n
 mods.gregtech.extruder.removeByInput(64, [metaitem('ingotTreatedSamariumAlloy'), metaitem('shape.extruder.rod_long')], null)
 // Treated Samarium Alloy Ring * 4
 mods.gregtech.extruder.removeByInput(42, [metaitem('ingotTreatedSamariumAlloy'), metaitem('shape.extruder.ring')], null)
-// Double Treated Samarium Alloy Plate * 1
-mods.gregtech.bender.removeByInput(96, [metaitem('ingotTreatedSamariumAlloy') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 // Samarium Alloy Ingot * 1
 mods.gregtech.arc_furnace.removeByInput(30, [metaitem('plateTreatedSamariumAlloy')], [fluid('oxygen') * 74])
-// Double Treated Samarium Alloy Plate * 1
-mods.gregtech.bender.removeByInput(96, [metaitem('plateTreatedSamariumAlloy') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 // Long Treated Samarium Alloy Rod * 1
 mods.gregtech.forge_hammer.removeByInput(16, [metaitem('stickTreatedSamariumAlloy') * 2], null)
 // Samarium Alloy Nugget * 4
@@ -356,12 +340,8 @@ mods.gregtech.lathe.removeByInput(16, [metaitem('ingotSamariumAlloyMagnetic')], 
 mods.gregtech.extruder.removeByInput(64, [metaitem('ingotSamariumAlloyMagnetic'), metaitem('shape.extruder.rod_long')], null)
 // Magnetic Samarium Alloy Ring * 4
 mods.gregtech.extruder.removeByInput(42, [metaitem('ingotSamariumAlloyMagnetic'), metaitem('shape.extruder.ring')], null)
-// Double Magnetic Samarium Alloy Plate * 1
-mods.gregtech.bender.removeByInput(96, [metaitem('ingotSamariumAlloyMagnetic') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 // Samarium Alloy Ingot * 1
 mods.gregtech.arc_furnace.removeByInput(30, [metaitem('plateSamariumAlloyMagnetic')], [fluid('oxygen') * 74])
-// Double Magnetic Samarium Alloy Plate * 1
-mods.gregtech.bender.removeByInput(96, [metaitem('plateSamariumAlloyMagnetic') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 // Long Magnetic Samarium Alloy Rod * 1
 mods.gregtech.forge_hammer.removeByInput(16, [metaitem('stickSamariumAlloyMagnetic') * 2], null)
 // Samarium Alloy Nugget * 4
@@ -389,25 +369,25 @@ mods.gregtech.cutter.removeByInput(30, [metaitem('blockSamariumAlloy')], [fluid(
 // Samarium Alloy Plate * 9
 mods.gregtech.cutter.removeByInput(30, [metaitem('blockSamariumAlloy')], [fluid('water') * 55])
 // Magnetic Samarium Alloy Ingot * 1
-mods.gregtech.polarizer.removeByInput(16, [metaitem('ingotTreatedSamariumAlloy')], null)
+mods.gregtech.polarizer.removeByInput(2, [metaitem('ingotTreatedSamariumAlloy')], null)
 // Magnetic Samarium Alloy Plate * 1
-mods.gregtech.polarizer.removeByInput(16, [metaitem('plateTreatedSamariumAlloy')], null)
+mods.gregtech.polarizer.removeByInput(2, [metaitem('plateTreatedSamariumAlloy')], null)
 // Magnetic Samarium Alloy Rod * 1
-mods.gregtech.polarizer.removeByInput(16, [metaitem('stickTreatedSamariumAlloy')], null)
+mods.gregtech.polarizer.removeByInput(2, [metaitem('stickTreatedSamariumAlloy')], null)
 // Long Magnetic Samarium Alloy Rod * 1
-mods.gregtech.polarizer.removeByInput(16, [metaitem('stickLongTreatedSamariumAlloy')], null)
+mods.gregtech.polarizer.removeByInput(2, [metaitem('stickLongTreatedSamariumAlloy')], null)
 // Magnetic Samarium Alloy Ring * 1
-mods.gregtech.polarizer.removeByInput(16, [metaitem('ringTreatedSamariumAlloy')], null)
+mods.gregtech.polarizer.removeByInput(2, [metaitem('ringTreatedSamariumAlloy')], null)
 // Magnetic Neodymium Alloy Ingot * 1
-mods.gregtech.polarizer.removeByInput(16, [metaitem('ingotTreatedNeodymiumAlloy')], null)
+mods.gregtech.polarizer.removeByInput(2, [metaitem('ingotTreatedNeodymiumAlloy')], null)
 // Magnetic Neodymium Alloy Plate * 1
-mods.gregtech.polarizer.removeByInput(16, [metaitem('plateTreatedNeodymiumAlloy')], null)
+mods.gregtech.polarizer.removeByInput(2, [metaitem('plateTreatedNeodymiumAlloy')], null)
 // Magnetic Neodymium Alloy Rod * 1
-mods.gregtech.polarizer.removeByInput(16, [metaitem('stickTreatedNeodymiumAlloy')], null)
+mods.gregtech.polarizer.removeByInput(2, [metaitem('stickTreatedNeodymiumAlloy')], null)
 // Long Magnetic Neodymium Alloy Rod * 1
-mods.gregtech.polarizer.removeByInput(16, [metaitem('stickLongTreatedNeodymiumAlloy')], null)
+mods.gregtech.polarizer.removeByInput(2, [metaitem('stickLongTreatedNeodymiumAlloy')], null)
 // Magnetic Neodymium Alloy Ring * 1
-mods.gregtech.polarizer.removeByInput(16, [metaitem('ringTreatedNeodymiumAlloy')], null)
+mods.gregtech.polarizer.removeByInput(2, [metaitem('ringTreatedNeodymiumAlloy')], null)
 
 //REPLACE MAGNETIC STUFF IN RECIPES
 

@@ -15,7 +15,7 @@ CRYSTALLIZER = recipemap('crystallizer')
 // Aluminium Nugget * 3
 mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('dustRuby')], null)
 // Ruby Slurry * 3000
-mods.gregtech.mixer.removeByInput(1920, [metaitem('dustRuby') * 6], [fluid('aqua_regia') * 3000])
+mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedRuby') * 2], [fluid('aqua_regia') * 3000])
 
 // Bauxite -> Red Mud
 
