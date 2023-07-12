@@ -403,6 +403,7 @@ class SuSyMaterials {
         public static Material PalladiumContainingSolution;
         public static Material ImpureCinnabarSlurry;
         public static Material CinnabarSlurry;
+        public static Material ChlorofluoromethaneMix;
 
         // Petrochem Materials
 
@@ -770,7 +771,6 @@ class SuSyMaterials {
         public static Material IridiumTrichloride;
         public static Material SodiumBismuthate;
         public static Material BismuthIIIOxide;
-        public static Material Polydimethylsiloxane;
         public static Material ManganeseIINitrate;
         public static Material PurifiedManganeseDioxide;
         public static Material BariumTitanate;
@@ -868,6 +868,13 @@ class SuSyMaterials {
         public static Material AluminiumOxynitride;
         public static Material UltraHighMolecularWeightPolyethylene;
         public static Material GoldAmalgam;
+        public static Material AntimonyTrichloride;
+        public static Material AntimonyPentachloride;
+        public static Material Trichlorofluoromethane;
+        public static Material Dichlorodifluoromethane;
+        public static Material Chlorotrifluoromethane;
+        public static Material Chlorodifluoromethane;
+        public static Material PolychlorinatedBiphenyl;
 
         // Second Degree Materials
 
