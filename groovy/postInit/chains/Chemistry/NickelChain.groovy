@@ -1,6 +1,8 @@
 PRIMITIVEBLASTFURNACE = recipemap('primitive_blast_furnace')
 EBF = recipemap('electric_blast_furnace')
 ROASTER = recipemap('roaster')
+REACTION_FURNACE = recipemap('reaction_furnace')
+BR = recipemap('batch_reactor')
 
 class Combustible {
     String name
@@ -16,6 +18,7 @@ class Combustible {
 }
 
 def combustibles = [
+        new Combustible('dustCarbon', 1, 3, 'dustTinyAsh'),
         new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
         new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
         new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
@@ -36,7 +39,7 @@ for (combustible in combustibles) {
             .buildAndRegister()
 
     PRIMITIVEBLASTFURNACE.recipeBuilder()
-            .inputs(ore('dustGarnierite') * 2)
+            .inputs(ore('dustGarnierite'))
             .inputs(ore(combustible.name) * (combustible.amount_required))
             .outputs(metaitem('ingotNickel'))
             .outputs(metaitem(combustible.byproduct) * (combustible.amount_required))
@@ -44,7 +47,7 @@ for (combustible in combustibles) {
             .buildAndRegister()
 
     PRIMITIVEBLASTFURNACE.recipeBuilder()
-            .inputs(ore('dustPentlandite') * 17)
+            .inputs(ore('dustPentlandite'))
             .inputs(ore(combustible.name) * (combustible.amount_required) * 4)
             .outputs(metaitem('ingotNickel') * 9)
             .outputs(metaitem(combustible.byproduct) * (combustible.amount_required) * 4)
@@ -52,7 +55,7 @@ for (combustible in combustibles) {
             .buildAndRegister()
 
     EBF.recipeBuilder()
-            .inputs(ore('dustGarnierite') * 2)
+            .inputs(ore('dustGarnierite'))
             .inputs(ore(combustible.name) * (combustible.amount_required))
             .outputs(metaitem('ingotNickel'))
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
@@ -76,19 +79,29 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .buildAndRegister()
 
 //MOND PROCESS
-EBF.recipeBuilder()
-        .inputs(ore('dustPentlandite') * 17)
-        .outputs(metaitem('ingotNickel') * 9)
-        .fluidOutputs(fluid('sulfur_dioxide') * 8000)
-        .EUt(30)
-        .blastFurnaceTemp(1728)
-        .duration(500)
-        .buildAndRegister()
 
-ROASTER.recipeBuilder()
+BR.recipeBuilder()
         .inputs(ore('dustNickel'))
         .fluidInputs(fluid('carbon_monoxide') * 4000)
         .fluidOutputs(fluid('nickel_carbonyl') * 1000)
         .EUt(30)
         .duration(200)
         .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .fluidInputs(fluid('nickel_carbonyl') * 1000)
+        .outputs(metaitem('dustHighPurityNickel'))
+        .fluidOutputs(fluid('carbon_monoxide') * 4000)\
+        .EUt(30)
+        .duration(200)
+        .buildAndRegister()
+
+REACTION_FURNACE.recipeBuilder()
+        .inputs(ore('dustGarnierite'))
+        .fluidInputs(fluid('hydrogen') * 2000)
+        .outputs(metaitem('dustNickel'))
+        .fluidOutputs(fluid('steam') * 1000)
+        .EUt(30)
+        .duration(200)
+        .buildAndRegister()
+

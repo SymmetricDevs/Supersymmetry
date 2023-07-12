@@ -212,6 +212,15 @@ TUBE_FURNACE.recipeBuilder()
         .EUt(1920)
         .buildAndRegister();
 
+TUBE_FURNACE.recipeBuilder()
+        .inputs(metaitem('dustManganese'))
+        .inputs(metaitem('dustPhosphorus'))
+        .fluidInputs(fluid('nitrogen') * 1000)
+        .outputs(metaitem('dustSamariumIronArsenicOxide') * 4)
+        .duration(600)
+        .EUt(30)
+        .buildAndRegister();
+
 MIXER.recipeBuilder()
         .inputs(metaitem('dustYttriumOxide') * 5)
         .inputs(metaitem('dustBariumOxide') * 8)

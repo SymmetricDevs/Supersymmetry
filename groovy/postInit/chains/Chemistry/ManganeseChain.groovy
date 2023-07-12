@@ -15,10 +15,10 @@ ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 //PYROMETALLUGRICAL METHODS (75%)
 EBF.recipeBuilder()
-    .inputs(ore('dustPyrolusite') * 3)
+    .inputs(ore('dustPyrolusite'))
     .inputs(ore('dustCoke'))
     .inputs(ore('dustTinyCalcite'))
-    .outputs(metaitem('dustSmallManganese') * 3)
+    .chancedOutput(metaitem('dustManganese'), 7500, 0)
     .fluidOutputs(fluid('carbon_dioxide') * 1000)
     .property('temperature', 1200)
     .duration(120)
@@ -74,7 +74,7 @@ NATURAL GAS: 5.4 mol H, 1.65 mol C, 12 mol e-
 
 for (reductant in hydrocarbonReductants) {
     REACTION_FURNACE.recipeBuilder()
-        .inputs(ore('dustPyrolusite') * 3)
+        .inputs(ore('dustPyrolusite'))
         .fluidInputs(fluid(reductant.name) * reductant.amount_required)
         .outputs(metaitem('dustManganeseIiOxide') * 2)
         .fluidOutputs(fluid(reductant.byproduct) * reductant.byproduct_amount)
@@ -86,7 +86,7 @@ for (reductant in hydrocarbonReductants) {
 
 for (reductant in reductants) {
     REACTION_FURNACE.recipeBuilder()
-        .inputs(ore('dustPyrolusite') * 3)
+        .inputs(ore('dustPyrolusite'))
         .fluidInputs(fluid(reductant.name) * reductant.amount_required)
         .outputs(metaitem('dustManganeseIiOxide') * 2)
         .fluidOutputs(fluid(reductant.byproduct) * reductant.byproduct_amount)
