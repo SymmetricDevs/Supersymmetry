@@ -249,3 +249,22 @@ EBF_RECIPES.recipeBuilder()
         .blastFurnaceTemp(1200)
         .EUt(30)
         .buildAndRegister()
+
+//HYDROXIDE PROCESSING
+def ROASTER = recipemap('roaster')
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustIronIiiHydroxide') * 14)
+    .outputs(metaitem('dustIronIiiOxide') * 5)
+    .fluidOutputs(fluid('steam') * 3000)
+    .duration(80)
+    .EUt(30)
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustIronIiHydroxide') * 5)
+    .outputs(metaitem('dustIronIiOxide') * 2)
+    .fluidOutputs(fluid('steam') * 1000)
+    .EUt(Globals.voltAmps[1])
+    .duration(200)
+    .buildAndRegister()
