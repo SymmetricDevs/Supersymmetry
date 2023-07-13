@@ -486,7 +486,7 @@ public class SecondDegreeMaterials {
 
         AmmoniacalSodiumBicarbonateSolution = new Material.Builder(13077, "ammoniacal_sodium_bicarbonate_solution")
                 .fluid()
-                .components(AmmoniumChloride, 1, SodiumBicarbonateSolution, 1)
+                .components(AmmoniumChloride, 1, SodiumBicarbonate, 1, Water, 1)
                 .colorAverage()
                 .build()
     }
