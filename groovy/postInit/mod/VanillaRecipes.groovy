@@ -754,3 +754,9 @@ recipemap('mixer').recipeBuilder()
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:golden_apple')], null)
 // Gold Ingot * 8
 mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:golden_apple')], [fluid('oxygen') * 1568])
+// Tiny Pile of Iron Dust * 1
+mods.gregtech.macerator.removeByInput(2, [item('minecraft:rail')], null)
+// Wrought Iron Nugget * 1
+mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:rail')], [fluid('oxygen') * 6])
+// Small Pile of Gold Dust * 2
+mods.gregtech.macerator.removeByInput(2, [item('minecraft:golden_rail')], null)
