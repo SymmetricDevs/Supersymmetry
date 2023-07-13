@@ -501,7 +501,7 @@ Globals.solders.each { key, val ->
 			.notConsumable(circuit(5))
 			.outputs(item('techguns:itemshared:18'))
 			.duration(20)
-			.EUt(Globals.voltAmps[2])
+			.EUt(Globals.voltAmps[3])
 			.buildAndRegister();
 
 	recipemap('weapons_factory').recipeBuilder()

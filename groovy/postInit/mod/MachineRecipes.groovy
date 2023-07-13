@@ -524,6 +524,15 @@ crafting.addShaped("silicon_carbide_casing", item('susy:susy_multiblock_casing')
 		[metaitem('plateSiliconCarbide'), ore('craftingToolWrench'), metaitem('plateSiliconCarbide')]
 ])
 
+recipemap('assembler').recipeBuilder()
+		.circuitMeta(6)
+		.inputs(ore('plateSiliconCarbide') * 6)
+		.inputs(item('gregtech:turbine_casing', 7))
+		.outputs(item('susy:susy_multiblock_casing') * 2)
+		.EUt(16)
+		.duration(50)
+		.buildAndRegister()
+
 //New Dynamo Hatches
 
 recipemap('assembler').recipeBuilder()
@@ -945,3 +954,38 @@ recipemap('assembler').recipeBuilder()
 		.EUt(7680)
 		.duration(150)
 		.buildAndRegister()
+
+//New SuSy blocks
+
+crafting.addShaped("structural_casing", item('susy:susy_multiblock_casing', 3) * 2, [
+		[metaitem('plateWroughtIron'), ore('craftingToolHardHammer'), metaitem('plateWroughtIron')],
+		[metaitem('plateWroughtIron'), metaitem('frameIron'), metaitem('plateWroughtIron')],
+		[metaitem('plateWroughtIron'), ore('craftingToolWrench'), metaitem('plateWroughtIron')]
+])
+
+recipemap('assembler').recipeBuilder()
+		.circuitMeta(6)
+		.inputs(ore('plateWroughtIron') * 6)
+		.inputs(ore('frameIron'))
+		.outputs(item('susy:susy_multiblock_casing', 3) * 2)
+		.EUt(16)
+		.duration(50)
+		.buildAndRegister()
+
+crafting.addShaped("serpentine_casing_1", item('susy:serpentine') * 2, [
+		[metaitem('plateRubber'), metaitem('pipeNormalFluidCopper'), metaitem('plateRubber')],
+		[metaitem('pipeNormalFluidCopper'), metaitem('frameSteel'), metaitem('pipeNormalFluidCopper')],
+		[metaitem('plateRubber'), metaitem('pipeNormalFluidCopper'), metaitem('plateRubber')]
+])
+
+crafting.addShaped("serpentine_casing_2", item('susy:serpentine') * 2, [
+		[metaitem('plateSiliconeRubber'), metaitem('pipeNormalFluidCopper'), metaitem('plateSiliconeRubber')],
+		[metaitem('pipeNormalFluidCopper'), metaitem('frameSteel'), metaitem('pipeNormalFluidCopper')],
+		[metaitem('plateSiliconeRubber'), metaitem('pipeNormalFluidCopper'), metaitem('plateSiliconeRubber')]
+])
+
+crafting.addShaped("serpentine_casing_3", item('susy:serpentine') * 2, [
+		[metaitem('plateStyreneButadieneRubber'), metaitem('pipeNormalFluidCopper'), metaitem('plateStyreneButadieneRubber')],
+		[metaitem('pipeNormalFluidCopper'), metaitem('frameSteel'), metaitem('pipeNormalFluidCopper')],
+		[metaitem('plateStyreneButadieneRubber'), metaitem('pipeNormalFluidCopper'), metaitem('plateStyreneButadieneRubber')]
+])
