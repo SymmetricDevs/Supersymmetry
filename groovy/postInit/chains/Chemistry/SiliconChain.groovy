@@ -17,10 +17,23 @@ def AUTOCLAVE = recipemap('autoclave');
 def ZONEREFINER = recipemap('zone_refiner');
 def VACUUMCHAMBER = recipemap('vacuum_chamber')
 def FBR = recipemap('fixed_bed_reactor')
-SINTERING_RECIPES = recipemap("sintering_oven")
+def SINTERING_RECIPES = recipemap("sintering_oven")
+def EBF = recipemap('electric_blast_furnace')
 
 // Silicon Carbide Plate * 1
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustSiliconCarbide')], null)
+// Silicon Ingot * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSiliconDioxide'), metaitem('dustCarbon') * 2], null)
+
+EBF.recipeBuilder()
+        .inputs(ore('dustSiliconDioxide') * 3)
+        .inputs(ore('dustCarbon') * 2)
+        .outputs(metaitem('dustSilicon'))
+        .outputs(metaitem('dustTinyAsh'))
+        .fluidOutputs(fluid('carbon_monoxide') * 2000)
+        .duration(240)
+        .EUt(120)
+        .buildAndRegister()
 
 ROASTER.recipeBuilder()
         .inputs(metaitem('dustSilicon'))
