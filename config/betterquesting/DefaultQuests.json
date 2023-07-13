@@ -38206,24 +38206,24 @@
     },
     "534:10": {
       "preRequisites:11": [
-        549
+        533
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §9RADAR§r allows detection of entities such as players, mobs or dropped items. \n\nThe built in §9API functions §rreturn a table of names and relative distances of entities within the specified range. ",
+          "desc:8": "The Entity Detector can detect entities up to §625 blocks away,§f and outputs information on those entities, including name and§b relative position. §cPlayers may be detected, so this is useful for catching any unsolicited activity.§f\n\nMore documentation can be found here: https://github.com/PC-Logix/OpenSecurity/wiki/EntityDetector",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "computronics:radar"
+            "id:8": "opensecurity:entity_detector"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Radar",
+          "name:8": "Entity Detector",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -38249,7 +38249,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "computronics:radar"
+              "id:8": "opensecurity:entity_detector"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -38257,229 +38257,6 @@
       }
     },
     "535:10": {
-      "preRequisites:11": [
-        546
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The chat box allows the computer to §7write/read chat messages§.§r. \n\nFor reading or saying messages, a listening distance can be specified (default: 40m). \n\nThis can allow programs on the computer to be triggered from the chatbox, by reading the message contained in the chat_message event. \n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:chat_box"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Chat Box",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 535,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:chat_box"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "536:10": {
-      "preRequisites:11": [
-        546
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §ccipher block§r is used to encrypt and decrypt messages. Items can be placed inside the cipher block to generate the encryption key. \n\nMessages can then be decrypted using a cipher block with the exact same encryption key. \n\nFor example, encrypted messages can be sent to other computers on a network; the receiving computer will need a cipher block with the same combination of items to decipher the received message. \n\nThe cipher block can be locked via the component API, preventing access to the block\u0027s GUI. ",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:cipher"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Cipher Block",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 536,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:cipher"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "537:10": {
-      "preRequisites:11": [
-        533
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "You can use a tool called §6LionRay.jar§r to transform audio files into a format called DFPWM. \n\nTo begin, download §bLionRay.jar§r [§9https://github.com/gamax92/LionRay/releases§r], convert the file, and upload it in a cloud service. Then obtain the download address of the file.\n\nTo proceed, connect a §6tape drive to your computer§r. You will have access to two commands: \"§7tape label§r\" and \"§7tape write§r\". \"tape label\" is used to name the cassette drive. \n\nTo write the transformed audio file to the tape, use the command \"tape write\" followed by the download address. \n\n§cHello Meteor is a very good option for your first cassette tape.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:tape_reader"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Tape Drive and Cassettes",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 537,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:tape_reader"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:tape"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "538:10": {
-      "preRequisites:11": [
-        533
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6camera block §radds ray casting functionality to computers. \n\nThe §7distance()§r function calculates the distance to the nearest block along the specified ray, which is defined by angles x and y; if no angle is specified, the angle values default to 0. \n\nBoth angles form a frontal cone in front of the camera, with x being the angle on a horizontal plane parallel to the ground, and y, the angle on a vertical plane perpendicular to the ground. If no block exists in the path of the ray, a value of -1 is returned.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:camera"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Camera",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 538,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:camera"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "539:10": {
       "preRequisites:11": [
         540
       ],
@@ -38549,7 +38326,7 @@
         }
       }
     },
-    "540:10": {
+    "536:10": {
       "preRequisites:11": [
         531
       ],
@@ -38600,7 +38377,7 @@
         }
       }
     },
-    "541:10": {
+    "537:10": {
       "preRequisites:11": [
         540,
         532
@@ -38649,7 +38426,7 @@
         }
       }
     },
-    "542:10": {
+    "538:10": {
       "preRequisites:11": [
         541
       ],
@@ -38697,7 +38474,7 @@
         }
       }
     },
-    "543:10": {
+    "539:10": {
       "preRequisites:11": [
         540
       ],
@@ -38767,7 +38544,7 @@
         }
       }
     },
-    "544:10": {
+    "540:10": {
       "preRequisites:11": [
         540
       ],
@@ -38837,77 +38614,7 @@
         }
       }
     },
-    "545:10": {
-      "preRequisites:11": [
-        546
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §bBeep Card §rcard provides the beep() function, which takes a table of frequency-duration pairs as an input, up to eight entries at once. \nThe card plays each frequency of beeps for the specified duration. \n\nThe §8Noise Card§r, akin to the beep card, provides the play() function. In addition, it also allows setting each of the eight separate channels\u0027 sound modes to make the card play§c square, sine, triangle or sawtooth waves§r.\n\nThe §dSound Card §ris a complex device allowing for high-resolution sound synthesis. Similarly to the noise card, it allows generating sound waves of various forms. Documentation on the sound card can be found here: §9https://oc.shadowkat.net/computronics/item/sound_card.md",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 5,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Beep, Sound and Noise",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 545,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 9,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "546:10": {
+    "541:10": {
       "preRequisites:11": [
         479,
         521
@@ -38996,7 +38703,7 @@
         }
       }
     },
-    "547:10": {
+    "542:10": {
       "preRequisites:11": [
         99
       ],
@@ -39048,7 +38755,7 @@
         }
       }
     },
-    "548:10": {
+    "543:10": {
       "preRequisites:11": [
         546
       ],
@@ -39118,7 +38825,7 @@
         }
       }
     },
-    "549:10": {
+    "544:10": {
       "preRequisites:11": [
         546,
         550
@@ -39207,7 +38914,7 @@
         }
       }
     },
-    "550:10": {
+    "545:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -39264,7 +38971,7 @@
         }
       }
     },
-    "551:10": {
+    "546:10": {
       "preRequisites:11": [
         546
       ],
@@ -39334,111 +39041,7 @@
         }
       }
     },
-    "552:10": {
-      "preRequisites:11": [
-        537
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Audio Cable §rallows you to connect devices which send audio signals to devices which receive and process those. \n\nAn example would be connecting a §6tape drive§r with one or multiple §6speakers§r.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:audio_cable"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Audio Cable",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 552,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:audio_cable"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "553:10": {
-      "preRequisites:11": [
-        552
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Speaker§r may be connected to audio cables. It will pick up any audio signal sent through the cables and convert it to sound, §cmaking it audible.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:speaker"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Speakers",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 553,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:speaker"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "554:10": {
+    "547:10": {
       "preRequisites:11": [
         546
       ],
@@ -39490,7 +39093,7 @@
         }
       }
     },
-    "555:10": {
+    "548:10": {
       "preRequisites:11": [
         533
       ],
@@ -39542,7 +39145,7 @@
         }
       }
     },
-    "556:10": {
+    "549:10": {
       "preRequisites:11": [
         533
       ],
@@ -39594,7 +39197,7 @@
         }
       }
     },
-    "557:10": {
+    "550:10": {
       "preRequisites:11": [
         559
       ],
@@ -39676,7 +39279,7 @@
         }
       }
     },
-    "558:10": {
+    "551:10": {
       "preRequisites:11": [
         559
       ],
@@ -39752,7 +39355,7 @@
         }
       }
     },
-    "559:10": {
+    "552:10": {
       "preRequisites:11": [
         533
       ],
@@ -39804,7 +39407,7 @@
         }
       }
     },
-    "560:10": {
+    "553:10": {
       "preRequisites:11": [
         533
       ],
@@ -39856,7 +39459,7 @@
         }
       }
     },
-    "561:10": {
+    "554:10": {
       "preRequisites:11": [
         549
       ],
@@ -39926,7 +39529,7 @@
         }
       }
     },
-    "562:10": {
+    "555:10": {
       "preRequisites:11": [
         31
       ],
@@ -40020,7 +39623,7 @@
         }
       }
     },
-    "563:10": {
+    "556:10": {
       "preRequisites:11": [
         388
       ],
@@ -40072,7 +39675,7 @@
         }
       }
     },
-    "564:10": {
+    "557:10": {
       "preRequisites:11": [
         546
       ],
@@ -40124,77 +39727,7 @@
         }
       }
     },
-    "565:10": {
-      "preRequisites:11": [
-        537
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §7Portable Tape Drive §rcan be used to play cassettes on the go. So you can play §abattle music §rwhile you\u0027re charging at your enemy.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:portable_tape_drive"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Portable Tape Drive",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 565,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:portable_tape_drive"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "566:10": {
+    "558:10": {
       "preRequisites:11": [
         549
       ],
@@ -40264,7 +39797,7 @@
         }
       }
     },
-    "567:10": {
+    "559:10": {
       "preRequisites:11": [
         549
       ],
@@ -40387,7 +39920,7 @@
         }
       }
     },
-    "568:10": {
+    "560:10": {
       "preRequisites:11": [
         540
       ],
@@ -40439,147 +39972,7 @@
         }
       }
     },
-    "569:10": {
-      "preRequisites:11": [
-        546
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6spoofing card§r acts the same way as a network card, but it allows you to specify the §csource address§r, effectively §amasking the device§r sending the network messages. ",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 4,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Spoofing Card",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 569,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 4,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "570:10": {
-      "preRequisites:11": [
-        546
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Particle Effects Card §rallows computers, robots, and drones to §9create particle effects at a specified location§r, as defined by the coordinates relative to the device. \n\nThe particle name provided to the component API function must be a §avalid particle§r.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 3,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Particle Effects Card",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 570,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 3,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "571:10": {
+    "561:10": {
       "preRequisites:11": [
         568
       ],
@@ -42571,7 +41964,7 @@
         }
       }
     },
-    "572:10": {
+    "562:10": {
       "preRequisites:11": [
         568
       ],
@@ -42709,7 +42102,7 @@
         }
       }
     },
-    "573:10": {
+    "563:10": {
       "preRequisites:11": [
         568
       ],
@@ -42815,7 +42208,7 @@
         }
       }
     },
-    "574:10": {
+    "564:10": {
       "preRequisites:11": [
         568
       ],
@@ -42867,7 +42260,7 @@
         }
       }
     },
-    "575:10": {
+    "565:10": {
       "preRequisites:11": [
         568
       ],
@@ -42919,7 +42312,7 @@
         }
       }
     },
-    "576:10": {
+    "566:10": {
       "preRequisites:11": [
         574
       ],
@@ -42989,7 +42382,7 @@
         }
       }
     },
-    "577:10": {
+    "567:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -43064,217 +42457,7 @@
         }
       }
     },
-    "578:10": {
-      "preRequisites:11": [
-        576
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §7Light Board§r can be put into §6Server Racks§r. It provides 4 §cindicator lights§r which connected computers are able to control using the provi§7ded light_board§r component.\n\nIf you interact with the board using §6any type of wrench§r, you can §6change its layout§r. Note that this resets the color settings.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 10,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Light Board",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 578,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 10,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "579:10": {
-      "preRequisites:11": [
-        576
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Switch Board §rcan be put into Server Racks. \n\nIt has 4§6 clickable switches§r in the front which can be checked and activated using the §7switch_board§r component. \nIn addition, it fires a §7switch_flipped §revent whenever a switch is manually or automatically flipped.\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 13,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Switch Board",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 579,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 13,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "580:10": {
-      "preRequisites:11": [
-        576
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "With a simple command, this amazing device will wipe clean the contents of the server rack and any connected devices after a specified duration. \n\n§6This device can be used with the explode floppy disk§r which allows for convenient and highly configurable self-destruction.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 11,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Why would you do this...",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 580,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 11,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "581:10": {
+    "568:10": {
       "preRequisites:11": [
         546
       ],
@@ -43326,7 +42509,7 @@
         }
       }
     },
-    "582:10": {
+    "569:10": {
       "preRequisites:11": [
         546
       ],
@@ -43378,7 +42561,7 @@
         }
       }
     },
-    "583:10": {
+    "570:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -43450,7 +42633,7 @@
         }
       }
     },
-    "584:10": {
+    "571:10": {
       "preRequisites:11": [
         544
       ],
@@ -43502,7 +42685,7 @@
         }
       }
     },
-    "585:10": {
+    "572:10": {
       "preRequisites:11": [
         533
       ],
@@ -43554,7 +42737,7 @@
         }
       }
     },
-    "586:10": {
+    "573:10": {
       "preRequisites:11": [
         533
       ],
@@ -43647,59 +42830,7 @@
         }
       }
     },
-    "587:10": {
-      "preRequisites:11": [
-        536
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The advanced cipher block uses §6RSA encryption§r by creating a §6public§r and §cprivate §rkey pair. \n\nThe§6 key pair§r can be generated using a pair of prime numbers or randomly. \n\nThe returned value itself will return both key pairs once it is done generating (which will take a few seconds). \n\nThe public key is used to encrypt messages, while the private key is used to decrypt messages. Only devices with access to the private key may decrypt messages.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:cipher_advanced"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Advanced Cipher Block",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 587,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:cipher_advanced"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "588:10": {
+    "574:10": {
       "preRequisites:11": [
         546
       ],
@@ -43751,7 +42882,7 @@
         }
       }
     },
-    "589:10": {
+    "575:10": {
       "preRequisites:11": [
         521
       ],
@@ -43809,7 +42940,7 @@
         }
       }
     },
-    "590:10": {
+    "576:10": {
       "preRequisites:11": [
         549
       ],
@@ -43861,7 +42992,7 @@
         }
       }
     },
-    "591:10": {
+    "577:10": {
       "preRequisites:11": [
         540
       ],
@@ -44051,7 +43182,7 @@
         }
       }
     },
-    "592:10": {
+    "578:10": {
       "preRequisites:11": [
         81
       ],
@@ -44103,7 +43234,7 @@
         }
       }
     },
-    "593:10": {
+    "579:10": {
       "preRequisites:11": [
         400
       ],
@@ -44155,7 +43286,7 @@
         }
       }
     },
-    "594:10": {
+    "580:10": {
       "preRequisites:11": [
         593
       ],
@@ -44250,7 +43381,7 @@
         }
       }
     },
-    "595:10": {
+    "581:10": {
       "preRequisites:11": [
         593
       ],
@@ -44345,7 +43476,7 @@
         }
       }
     },
-    "596:10": {
+    "582:10": {
       "preRequisites:11": [
         593
       ],
@@ -44440,7 +43571,7 @@
         }
       }
     },
-    "597:10": {
+    "583:10": {
       "preRequisites:11": [
         593
       ],
@@ -44535,7 +43666,7 @@
         }
       }
     },
-    "598:10": {
+    "584:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -44610,7 +43741,7 @@
         }
       }
     },
-    "599:10": {
+    "585:10": {
       "preRequisites:11": [
         81
       ],
@@ -44686,7 +43817,7 @@
         }
       }
     },
-    "600:10": {
+    "586:10": {
       "preRequisites:11": [
         213,
         104
@@ -44739,7 +43870,7 @@
         }
       }
     },
-    "601:10": {
+    "587:10": {
       "preRequisites:11": [
         51
       ],
@@ -44791,7 +43922,7 @@
         }
       }
     },
-    "602:10": {
+    "588:10": {
       "preRequisites:11": [
         124
       ],
@@ -44861,7 +43992,7 @@
         }
       }
     },
-    "603:10": {
+    "589:10": {
       "preRequisites:11": [
         36
       ],
@@ -44913,7 +44044,7 @@
         }
       }
     },
-    "604:10": {
+    "590:10": {
       "preRequisites:11": [
         109
       ],
@@ -44961,7 +44092,7 @@
         }
       }
     },
-    "605:10": {
+    "591:10": {
       "preRequisites:11": [
         602
       ],
@@ -45013,7 +44144,7 @@
         }
       }
     },
-    "606:10": {
+    "592:10": {
       "preRequisites:11": [
         602
       ],
@@ -45065,7 +44196,7 @@
         }
       }
     },
-    "607:10": {
+    "593:10": {
       "preRequisites:11": [
         101
       ],
@@ -45117,7 +44248,7 @@
         }
       }
     },
-    "608:10": {
+    "594:10": {
       "preRequisites:11": [
         230
       ],
@@ -45187,7 +44318,7 @@
         }
       }
     },
-    "609:10": {
+    "595:10": {
       "preRequisites:11": [
         31
       ],
@@ -45239,7 +44370,7 @@
         }
       }
     },
-    "610:10": {
+    "596:10": {
       "preRequisites:11": [
         222
       ],
@@ -45297,7 +44428,7 @@
         }
       }
     },
-    "611:10": {
+    "597:10": {
       "preRequisites:11": [
         593
       ],
@@ -45373,7 +44504,7 @@
         }
       }
     },
-    "612:10": {
+    "598:10": {
       "preRequisites:11": [
         611
       ],
@@ -45440,7 +44571,7 @@
         }
       }
     },
-    "613:10": {
+    "599:10": {
       "preRequisites:11": [
         611
       ],
@@ -45492,7 +44623,7 @@
         }
       }
     },
-    "614:10": {
+    "600:10": {
       "preRequisites:11": [
         623
       ],
@@ -45607,7 +44738,7 @@
         }
       }
     },
-    "615:10": {
+    "601:10": {
       "preRequisites:11": [
         618
       ],
@@ -45677,7 +44808,7 @@
         }
       }
     },
-    "616:10": {
+    "602:10": {
       "preRequisites:11": [
         615
       ],
@@ -45747,7 +44878,7 @@
         }
       }
     },
-    "617:10": {
+    "603:10": {
       "preRequisites:11": [
         616,
         390
@@ -45800,7 +44931,7 @@
         }
       }
     },
-    "618:10": {
+    "604:10": {
       "preRequisites:11": [
         188
       ],
@@ -45870,7 +45001,7 @@
         }
       }
     },
-    "619:10": {
+    "605:10": {
       "preRequisites:11": [
         617
       ],
@@ -45904,7 +45035,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "620:10": {
+    "606:10": {
       "preRequisites:11": [
         621,
         614,
@@ -45982,7 +45113,7 @@
         }
       }
     },
-    "621:10": {
+    "607:10": {
       "preRequisites:11": [
         398
       ],
@@ -46034,7 +45165,7 @@
         }
       }
     },
-    "622:10": {
+    "608:10": {
       "preRequisites:11": [
         614
       ],
@@ -46086,7 +45217,7 @@
         }
       }
     },
-    "623:10": {
+    "609:10": {
       "preRequisites:11": [
         479
       ],
@@ -46156,7 +45287,7 @@
         }
       }
     },
-    "624:10": {
+    "610:10": {
       "preRequisites:11": [
         622
       ],
@@ -46208,7 +45339,7 @@
         }
       }
     },
-    "625:10": {
+    "611:10": {
       "preRequisites:11": [
         624
       ],
@@ -46303,7 +45434,7 @@
         }
       }
     },
-    "626:10": {
+    "612:10": {
       "preRequisites:11": [
         624
       ],
@@ -46370,7 +45501,7 @@
         }
       }
     },
-    "627:10": {
+    "613:10": {
       "preRequisites:11": [
         624
       ],
@@ -46465,7 +45596,7 @@
         }
       }
     },
-    "628:10": {
+    "614:10": {
       "preRequisites:11": [
         624
       ],
@@ -46560,7 +45691,7 @@
         }
       }
     },
-    "629:10": {
+    "615:10": {
       "preRequisites:11": [
         624
       ],
@@ -46655,7 +45786,7 @@
         }
       }
     },
-    "630:10": {
+    "616:10": {
       "preRequisites:11": [
         624
       ],
@@ -46750,7 +45881,7 @@
         }
       }
     },
-    "631:10": {
+    "617:10": {
       "preRequisites:11": [
         191
       ],
@@ -46798,7 +45929,7 @@
         }
       }
     },
-    "632:10": {
+    "618:10": {
       "preRequisites:11": [
         622,
         687
@@ -46869,7 +46000,7 @@
         }
       }
     },
-    "633:10": {
+    "619:10": {
       "preRequisites:11": [
         622
       ],
@@ -46939,7 +46070,7 @@
         }
       }
     },
-    "634:10": {
+    "620:10": {
       "preRequisites:11": [
         622
       ],
@@ -47009,7 +46140,7 @@
         }
       }
     },
-    "635:10": {
+    "621:10": {
       "preRequisites:11": [
         622,
         698
@@ -47080,7 +46211,7 @@
         }
       }
     },
-    "636:10": {
+    "622:10": {
       "preRequisites:11": [
         622
       ],
@@ -47150,7 +46281,7 @@
         }
       }
     },
-    "637:10": {
+    "623:10": {
       "preRequisites:11": [
         648
       ],
@@ -47237,7 +46368,7 @@
         }
       }
     },
-    "638:10": {
+    "624:10": {
       "preRequisites:11": [
         181
       ],
@@ -47309,7 +46440,7 @@
         }
       }
     },
-    "639:10": {
+    "625:10": {
       "preRequisites:11": [
         468
       ],
@@ -47385,7 +46516,7 @@
         }
       }
     },
-    "640:10": {
+    "626:10": {
       "preRequisites:11": [
         654
       ],
@@ -47455,7 +46586,7 @@
         }
       }
     },
-    "641:10": {
+    "627:10": {
       "preRequisites:11": [
         614
       ],
@@ -47513,7 +46644,7 @@
         }
       }
     },
-    "642:10": {
+    "628:10": {
       "preRequisites:11": [
         641
       ],
@@ -47579,7 +46710,7 @@
         }
       }
     },
-    "643:10": {
+    "629:10": {
       "preRequisites:11": [
         642
       ],
@@ -47645,7 +46776,7 @@
         }
       }
     },
-    "644:10": {
+    "630:10": {
       "preRequisites:11": [
         643,
         649
@@ -47716,7 +46847,7 @@
         }
       }
     },
-    "645:10": {
+    "631:10": {
       "preRequisites:11": [
         644
       ],
@@ -47786,7 +46917,7 @@
         }
       }
     },
-    "646:10": {
+    "632:10": {
       "preRequisites:11": [
         51
       ],
@@ -47862,7 +46993,7 @@
         }
       }
     },
-    "647:10": {
+    "633:10": {
       "preRequisites:11": [
         614
       ],
@@ -47926,7 +47057,7 @@
         }
       }
     },
-    "648:10": {
+    "634:10": {
       "preRequisiteTypes:7": [
         0,
         2
@@ -47997,7 +47128,7 @@
         }
       }
     },
-    "649:10": {
+    "635:10": {
       "preRequisites:11": [
         648
       ],
@@ -48067,7 +47198,7 @@
         }
       }
     },
-    "650:10": {
+    "636:10": {
       "preRequisites:11": [
         213
       ],
@@ -48115,7 +47246,7 @@
         }
       }
     },
-    "651:10": {
+    "637:10": {
       "preRequisites:11": [
         510
       ],
@@ -48167,7 +47298,7 @@
         }
       }
     },
-    "652:10": {
+    "638:10": {
       "preRequisites:11": [
         188
       ],
@@ -48229,7 +47360,7 @@
         }
       }
     },
-    "653:10": {
+    "639:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -48302,7 +47433,7 @@
         }
       }
     },
-    "654:10": {
+    "640:10": {
       "preRequisites:11": [
         398
       ],
@@ -48336,7 +47467,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "655:10": {
+    "641:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -48389,7 +47520,7 @@
         }
       }
     },
-    "656:10": {
+    "642:10": {
       "preRequisites:11": [
         441,
         18
@@ -48460,7 +47591,7 @@
         }
       }
     },
-    "657:10": {
+    "643:10": {
       "preRequisites:11": [
         388
       ],
@@ -48499,7 +47630,7 @@
         }
       }
     },
-    "658:10": {
+    "644:10": {
       "preRequisites:11": [
         104
       ],
@@ -48547,7 +47678,7 @@
         }
       }
     },
-    "659:10": {
+    "645:10": {
       "preRequisites:11": [
         181
       ],
@@ -48599,7 +47730,7 @@
         }
       }
     },
-    "660:10": {
+    "646:10": {
       "preRequisites:11": [
         604
       ],
@@ -48647,7 +47778,7 @@
         }
       }
     },
-    "661:10": {
+    "647:10": {
       "preRequisites:11": [
         188
       ],
@@ -48699,7 +47830,7 @@
         }
       }
     },
-    "662:10": {
+    "648:10": {
       "preRequisites:11": [
         390,
         672
@@ -48752,7 +47883,7 @@
         }
       }
     },
-    "663:10": {
+    "649:10": {
       "preRequisites:11": [
         243
       ],
@@ -48822,7 +47953,7 @@
         }
       }
     },
-    "664:10": {
+    "650:10": {
       "preRequisites:11": [
         125
       ],
@@ -48870,7 +48001,7 @@
         }
       }
     },
-    "665:10": {
+    "651:10": {
       "preRequisiteTypes:7": [
         0,
         0,
@@ -48929,7 +48060,7 @@
         }
       }
     },
-    "666:10": {
+    "652:10": {
       "preRequisites:11": [
         104
       ],
@@ -48980,7 +48111,7 @@
         }
       }
     },
-    "667:10": {
+    "653:10": {
       "preRequisites:11": [
         104
       ],
@@ -50950,7 +50081,7 @@
         }
       }
     },
-    "668:10": {
+    "654:10": {
       "preRequisites:11": [
         48
       ],
@@ -51046,7 +50177,7 @@
         }
       }
     },
-    "669:10": {
+    "655:10": {
       "preRequisites:11": [
         763
       ],
@@ -51131,7 +50262,7 @@
         }
       }
     },
-    "670:10": {
+    "656:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -51204,7 +50335,7 @@
         }
       }
     },
-    "671:10": {
+    "657:10": {
       "preRequisites:11": [
         81
       ],
@@ -51280,7 +50411,7 @@
         }
       }
     },
-    "672:10": {
+    "658:10": {
       "preRequisites:11": [
         663,
         674
@@ -51351,7 +50482,7 @@
         }
       }
     },
-    "673:10": {
+    "659:10": {
       "preRequisites:11": [
         390
       ],
@@ -51390,7 +50521,7 @@
         }
       }
     },
-    "674:10": {
+    "660:10": {
       "preRequisites:11": [
         243
       ],
@@ -51442,7 +50573,7 @@
         }
       }
     },
-    "675:10": {
+    "661:10": {
       "preRequisites:11": [
         673
       ],
@@ -51504,7 +50635,7 @@
         }
       }
     },
-    "676:10": {
+    "662:10": {
       "preRequisites:11": [
         675,
         678
@@ -51557,7 +50688,7 @@
         }
       }
     },
-    "677:10": {
+    "663:10": {
       "preRequisites:11": [
         673
       ],
@@ -51619,7 +50750,7 @@
         }
       }
     },
-    "678:10": {
+    "664:10": {
       "preRequisites:11": [
         479
       ],
@@ -51689,7 +50820,7 @@
         }
       }
     },
-    "679:10": {
+    "665:10": {
       "preRequisites:11": [
         637
       ],
@@ -51743,7 +50874,7 @@
         }
       }
     },
-    "680:10": {
+    "666:10": {
       "preRequisites:11": [
         644
       ],
@@ -51801,7 +50932,7 @@
         }
       }
     },
-    "681:10": {
+    "667:10": {
       "preRequisites:11": [
         645
       ],
@@ -51871,7 +51002,7 @@
         }
       }
     },
-    "682:10": {
+    "668:10": {
       "preRequisites:11": [
         377
       ],
@@ -51919,7 +51050,7 @@
         }
       }
     },
-    "683:10": {
+    "669:10": {
       "preRequisites:11": [
         104
       ],
@@ -51989,7 +51120,7 @@
         }
       }
     },
-    "684:10": {
+    "670:10": {
       "preRequisites:11": [
         240
       ],
@@ -52059,7 +51190,7 @@
         }
       }
     },
-    "685:10": {
+    "671:10": {
       "preRequisites:11": [
         169
       ],
@@ -52111,7 +51242,7 @@
         }
       }
     },
-    "686:10": {
+    "672:10": {
       "preRequisites:11": [
         374
       ],
@@ -52159,7 +51290,7 @@
         }
       }
     },
-    "687:10": {
+    "673:10": {
       "preRequisites:11": [
         620
       ],
@@ -52229,7 +51360,7 @@
         }
       }
     },
-    "688:10": {
+    "674:10": {
       "preRequisites:11": [
         641,
         466
@@ -52300,7 +51431,7 @@
         }
       }
     },
-    "689:10": {
+    "675:10": {
       "preRequisites:11": [
         641
       ],
@@ -52352,7 +51483,7 @@
         }
       }
     },
-    "690:10": {
+    "676:10": {
       "preRequisites:11": [
         647
       ],
@@ -52422,7 +51553,7 @@
         }
       }
     },
-    "691:10": {
+    "677:10": {
       "preRequisites:11": [
         688,
         683
@@ -52493,7 +51624,7 @@
         }
       }
     },
-    "692:10": {
+    "678:10": {
       "preRequisites:11": [
         614,
         693
@@ -52564,7 +51695,7 @@
         }
       }
     },
-    "693:10": {
+    "679:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -52639,7 +51770,7 @@
         }
       }
     },
-    "694:10": {
+    "680:10": {
       "preRequisites:11": [
         692,
         695
@@ -52716,7 +51847,7 @@
         }
       }
     },
-    "695:10": {
+    "681:10": {
       "preRequisites:11": [
         479
       ],
@@ -52786,7 +51917,7 @@
         }
       }
     },
-    "696:10": {
+    "682:10": {
       "preRequisites:11": [
         692
       ],
@@ -52858,7 +51989,7 @@
         }
       }
     },
-    "697:10": {
+    "683:10": {
       "preRequisites:11": [
         172
       ],
@@ -52928,7 +52059,7 @@
         }
       }
     },
-    "698:10": {
+    "684:10": {
       "preRequisites:11": [
         620,
         451
@@ -52999,7 +52130,7 @@
         }
       }
     },
-    "699:10": {
+    "685:10": {
       "preRequisites:11": [
         687,
         700,
@@ -53071,7 +52202,7 @@
         }
       }
     },
-    "700:10": {
+    "686:10": {
       "preRequisites:11": [
         243
       ],
@@ -53123,7 +52254,7 @@
         }
       }
     },
-    "701:10": {
+    "687:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -53192,7 +52323,7 @@
         }
       }
     },
-    "702:10": {
+    "688:10": {
       "preRequisites:11": [
         699
       ],
@@ -53262,7 +52393,7 @@
         }
       }
     },
-    "703:10": {
+    "689:10": {
       "preRequisites:11": [
         702
       ],
@@ -53332,7 +52463,7 @@
         }
       }
     },
-    "704:10": {
+    "690:10": {
       "preRequisites:11": [
         703
       ],
@@ -53384,7 +52515,7 @@
         }
       }
     },
-    "705:10": {
+    "691:10": {
       "preRequisites:11": [
         703
       ],
@@ -53448,7 +52579,7 @@
         }
       }
     },
-    "706:10": {
+    "692:10": {
       "preRequisites:11": [
         709,
         765
@@ -53519,7 +52650,7 @@
         }
       }
     },
-    "707:10": {
+    "693:10": {
       "preRequisites:11": [
         708
       ],
@@ -53571,7 +52702,7 @@
         }
       }
     },
-    "708:10": {
+    "694:10": {
       "preRequisites:11": [
         479
       ],
@@ -53623,7 +52754,7 @@
         }
       }
     },
-    "709:10": {
+    "695:10": {
       "preRequisites:11": [
         708
       ],
@@ -53699,7 +52830,7 @@
         }
       }
     },
-    "710:10": {
+    "696:10": {
       "preRequisites:11": [
         644
       ],
@@ -53751,7 +52882,7 @@
         }
       }
     },
-    "711:10": {
+    "697:10": {
       "preRequisites:11": [
         66
       ],
@@ -53803,7 +52934,7 @@
         }
       }
     },
-    "712:10": {
+    "698:10": {
       "preRequisites:11": [
         101
       ],
@@ -53870,7 +53001,7 @@
         }
       }
     },
-    "713:10": {
+    "699:10": {
       "preRequisites:11": [
         641
       ],
@@ -53922,7 +53053,7 @@
         }
       }
     },
-    "714:10": {
+    "700:10": {
       "preRequisites:11": [
         647
       ],
@@ -53992,7 +53123,7 @@
         }
       }
     },
-    "715:10": {
+    "701:10": {
       "preRequisites:11": [
         647
       ],
@@ -54062,7 +53193,7 @@
         }
       }
     },
-    "716:10": {
+    "702:10": {
       "preRequisites:11": [
         710
       ],
@@ -54132,7 +53263,7 @@
         }
       }
     },
-    "717:10": {
+    "703:10": {
       "preRequisites:11": [
         679
       ],
@@ -54202,7 +53333,7 @@
         }
       }
     },
-    "718:10": {
+    "704:10": {
       "preRequisites:11": [
         479
       ],
@@ -54254,7 +53385,7 @@
         }
       }
     },
-    "719:10": {
+    "705:10": {
       "preRequisites:11": [
         104
       ],
@@ -54324,7 +53455,7 @@
         }
       }
     },
-    "720:10": {
+    "706:10": {
       "preRequisites:11": [
         637
       ],
@@ -54363,7 +53494,7 @@
         }
       }
     },
-    "721:10": {
+    "707:10": {
       "preRequisites:11": [
         101
       ],
@@ -54415,7 +53546,7 @@
         }
       }
     },
-    "722:10": {
+    "708:10": {
       "preRequisites:11": [
         25
       ],
@@ -54530,7 +53661,7 @@
         }
       }
     },
-    "723:10": {
+    "709:10": {
       "preRequisites:11": [
         25
       ],
@@ -54645,7 +53776,7 @@
         }
       }
     },
-    "724:10": {
+    "710:10": {
       "preRequisites:11": [
         25
       ],
@@ -54745,7 +53876,7 @@
         }
       }
     },
-    "725:10": {
+    "711:10": {
       "preRequisites:11": [
         191
       ],
@@ -54830,7 +53961,7 @@
         }
       }
     },
-    "726:10": {
+    "712:10": {
       "preRequisites:11": [
         243
       ],
@@ -54882,7 +54013,7 @@
         }
       }
     },
-    "727:10": {
+    "713:10": {
       "preRequisites:11": [
         728,
         726
@@ -54953,7 +54084,7 @@
         }
       }
     },
-    "728:10": {
+    "714:10": {
       "preRequisites:11": [
         729,
         411
@@ -55006,7 +54137,7 @@
         }
       }
     },
-    "729:10": {
+    "715:10": {
       "preRequisites:11": [
         203
       ],
@@ -55076,7 +54207,7 @@
         }
       }
     },
-    "730:10": {
+    "716:10": {
       "preRequisites:11": [
         727
       ],
@@ -55146,7 +54277,7 @@
         }
       }
     },
-    "731:10": {
+    "717:10": {
       "preRequisites:11": [
         730
       ],
@@ -55261,7 +54392,7 @@
         }
       }
     },
-    "732:10": {
+    "718:10": {
       "preRequisites:11": [
         733
       ],
@@ -55376,7 +54507,7 @@
         }
       }
     },
-    "733:10": {
+    "719:10": {
       "preRequisites:11": [
         730
       ],
@@ -55491,7 +54622,7 @@
         }
       }
     },
-    "734:10": {
+    "720:10": {
       "preRequisites:11": [
         30
       ],
@@ -55561,7 +54692,7 @@
         }
       }
     },
-    "735:10": {
+    "721:10": {
       "preRequisites:11": [
         398
       ],
@@ -55631,7 +54762,7 @@
         }
       }
     },
-    "736:10": {
+    "722:10": {
       "preRequisites:11": [
         735
       ],
@@ -55674,7 +54805,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "737:10": {
+    "723:10": {
       "preRequisites:11": [
         66
       ],
@@ -55771,7 +54902,7 @@
         }
       }
     },
-    "738:10": {
+    "724:10": {
       "preRequisites:11": [
         30
       ],
@@ -55823,7 +54954,7 @@
         }
       }
     },
-    "739:10": {
+    "725:10": {
       "preRequisites:11": [
         30
       ],
@@ -55868,7 +54999,7 @@
         }
       }
     },
-    "740:10": {
+    "726:10": {
       "preRequisites:11": [
         222
       ],
@@ -55930,7 +55061,7 @@
         }
       }
     },
-    "741:10": {
+    "727:10": {
       "preRequisites:11": [
         497
       ],
@@ -55994,7 +55125,7 @@
         }
       }
     },
-    "742:10": {
+    "728:10": {
       "preRequisites:11": [
         101,
         465
@@ -56062,7 +55193,7 @@
         }
       }
     },
-    "743:10": {
+    "729:10": {
       "preRequisites:11": [
         742
       ],
@@ -56114,7 +55245,7 @@
         }
       }
     },
-    "744:10": {
+    "730:10": {
       "preRequisites:11": [
         743
       ],
@@ -56211,7 +55342,7 @@
         }
       }
     },
-    "745:10": {
+    "731:10": {
       "preRequisites:11": [
         30
       ],
@@ -56275,7 +55406,7 @@
         }
       }
     },
-    "746:10": {
+    "732:10": {
       "preRequisites:11": [
         743
       ],
@@ -56329,7 +55460,7 @@
         }
       }
     },
-    "747:10": {
+    "733:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -56386,7 +55517,7 @@
         }
       }
     },
-    "748:10": {
+    "734:10": {
       "preRequisites:11": [
         743
       ],
@@ -56438,7 +55569,7 @@
         }
       }
     },
-    "749:10": {
+    "735:10": {
       "preRequisites:11": [
         743
       ],
@@ -56508,7 +55639,7 @@
         }
       }
     },
-    "750:10": {
+    "736:10": {
       "preRequisites:11": [
         743
       ],
@@ -56580,7 +55711,7 @@
         }
       }
     },
-    "751:10": {
+    "737:10": {
       "preRequisites:11": [
         688,
         719
@@ -56651,7 +55782,7 @@
         }
       }
     },
-    "752:10": {
+    "738:10": {
       "preRequisites:11": [
         41
       ],
@@ -56721,7 +55852,7 @@
         }
       }
     },
-    "753:10": {
+    "739:10": {
       "preRequisites:11": [
         700
       ],
@@ -56791,7 +55922,7 @@
         }
       }
     },
-    "754:10": {
+    "740:10": {
       "preRequisites:11": [
         755,
         550
@@ -56862,7 +55993,7 @@
         }
       }
     },
-    "755:10": {
+    "741:10": {
       "preRequisites:11": [
         756
       ],
@@ -56932,7 +56063,7 @@
         }
       }
     },
-    "756:10": {
+    "742:10": {
       "preRequisites:11": [
         479
       ],
@@ -57002,7 +56133,7 @@
         }
       }
     },
-    "757:10": {
+    "743:10": {
       "preRequisites:11": [
         754
       ],
@@ -57117,7 +56248,7 @@
         }
       }
     },
-    "758:10": {
+    "744:10": {
       "preRequisites:11": [
         757
       ],
@@ -57169,7 +56300,7 @@
         }
       }
     },
-    "759:10": {
+    "745:10": {
       "preRequisites:11": [
         758
       ],
@@ -57264,7 +56395,7 @@
         }
       }
     },
-    "760:10": {
+    "746:10": {
       "preRequisites:11": [
         758
       ],
@@ -57359,7 +56490,7 @@
         }
       }
     },
-    "761:10": {
+    "747:10": {
       "preRequisites:11": [
         758
       ],
@@ -57454,7 +56585,7 @@
         }
       }
     },
-    "762:10": {
+    "748:10": {
       "preRequisites:11": [
         758
       ],
@@ -57549,7 +56680,7 @@
         }
       }
     },
-    "763:10": {
+    "749:10": {
       "preRequisites:11": [
         20
       ],
@@ -57601,7 +56732,7 @@
         }
       }
     },
-    "764:10": {
+    "750:10": {
       "preRequisites:11": [
         651
       ],
@@ -57653,7 +56784,7 @@
         }
       }
     },
-    "765:10": {
+    "751:10": {
       "preRequisites:11": [
         679
       ],
@@ -63963,360 +63094,262 @@
           "id:3": 534,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 324
-        },
-        "14:10": {
-          "id:3": 535,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 192
-        },
-        "15:10": {
-          "id:3": 536,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 102,
-          "y:3": 120
-        },
-        "16:10": {
-          "id:3": 537,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 360,
-          "y:3": -132
-        },
-        "17:10": {
-          "id:3": 538,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 360,
+          "x:3": 300,
           "y:3": -96
         },
-        "18:10": {
+        "14:10": {
           "id:3": 539,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": -36
         },
-        "19:10": {
+        "15:10": {
           "id:3": 540,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 348,
           "y:3": -12
         },
-        "20:10": {
+        "16:10": {
           "id:3": 541,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 48
         },
-        "21:10": {
+        "17:10": {
           "id:3": 542,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 84
         },
-        "22:10": {
+        "18:10": {
           "id:3": 543,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": 0
         },
-        "23:10": {
+        "19:10": {
           "id:3": 544,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": 36
         },
-        "24:10": {
-          "id:3": 545,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 120
-        },
-        "25:10": {
+        "20:10": {
           "id:3": 546,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": 144
         },
-        "26:10": {
+        "21:10": {
           "id:3": 548,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 156
         },
-        "27:10": {
+        "22:10": {
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": 288
         },
-        "28:10": {
+        "23:10": {
           "id:3": 551,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
-          "y:3": 156
+          "x:3": 60,
+          "y:3": 120
         },
-        "29:10": {
-          "id:3": 552,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 408,
-          "y:3": -132
-        },
-        "30:10": {
-          "id:3": 553,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 456,
-          "y:3": -132
-        },
-        "31:10": {
+        "24:10": {
           "id:3": 554,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 192
+          "y:3": 174
         },
-        "32:10": {
+        "25:10": {
           "id:3": 555,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 336,
-          "y:3": -168
+          "x:3": 348,
+          "y:3": -96
         },
-        "33:10": {
+        "26:10": {
           "id:3": 556,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
+          "x:3": 252,
           "y:3": -96
         },
-        "34:10": {
+        "27:10": {
           "id:3": 557,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": -216
+          "x:3": 276,
+          "y:3": -180
         },
-        "35:10": {
+        "28:10": {
           "id:3": 558,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": -216
+          "x:3": 324,
+          "y:3": -180
         },
-        "36:10": {
+        "29:10": {
           "id:3": 559,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
-          "y:3": -168
+          "x:3": 300,
+          "y:3": -132
         },
-        "37:10": {
+        "30:10": {
           "id:3": 560,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 300,
-          "y:3": -168
+          "x:3": 348,
+          "y:3": -132
         },
-        "38:10": {
+        "31:10": {
           "id:3": 561,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 276
         },
-        "39:10": {
+        "32:10": {
           "id:3": 564,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 120
+          "y:3": 138
         },
-        "40:10": {
-          "id:3": 565,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 408,
-          "y:3": -168
-        },
-        "41:10": {
+        "33:10": {
           "id:3": 566,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 324
         },
-        "42:10": {
+        "34:10": {
           "id:3": 567,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
-          "y:3": 354
+          "x:3": -60,
+          "y:3": 324
         },
-        "43:10": {
+        "35:10": {
           "id:3": 568,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 480,
           "y:3": -12
         },
-        "44:10": {
-          "id:3": 569,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 156
-        },
-        "45:10": {
-          "id:3": 570,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -102,
-          "y:3": 156
-        },
-        "46:10": {
+        "36:10": {
           "id:3": 571,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 552,
           "y:3": 0
         },
-        "47:10": {
+        "37:10": {
           "id:3": 572,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 552,
           "y:3": 36
         },
-        "48:10": {
+        "38:10": {
           "id:3": 573,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 552,
           "y:3": -36
         },
-        "49:10": {
+        "39:10": {
           "id:3": 574,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": 48
         },
-        "50:10": {
+        "40:10": {
           "id:3": 575,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -48
         },
-        "51:10": {
+        "41:10": {
           "id:3": 576,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 468,
           "y:3": 84
         },
-        "52:10": {
+        "42:10": {
           "id:3": 577,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 516,
           "y:3": 84
         },
-        "53:10": {
-          "id:3": 578,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 468,
-          "y:3": 132
-        },
-        "54:10": {
-          "id:3": 579,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 516,
-          "y:3": 132
-        },
-        "55:10": {
-          "id:3": 580,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 420,
-          "y:3": 132
-        },
-        "56:10": {
+        "43:10": {
           "id:3": 581,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
+          "x:3": 60,
           "y:3": 192
         },
-        "57:10": {
+        "44:10": {
           "id:3": 582,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": 120
+          "y:3": 138
         },
-        "58:10": {
+        "45:10": {
           "id:3": 583,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -84
         },
-        "59:10": {
+        "46:10": {
           "id:3": 584,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": 72
         },
-        "60:10": {
+        "47:10": {
           "id:3": 585,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
+          "x:3": 252,
           "y:3": -132
         },
-        "61:10": {
-          "id:3": 587,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 120
-        },
-        "62:10": {
+        "48:10": {
           "id:3": 588,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": 192
+          "y:3": 174
         },
-        "63:10": {
+        "49:10": {
           "id:3": 590,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 276
         },
-        "64:10": {
+        "50:10": {
           "id:3": 591,
           "sizeX:3": 24,
           "sizeY:3": 24,
