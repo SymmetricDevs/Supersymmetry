@@ -592,6 +592,44 @@ DRYER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
+//Chlorofluoromethanes
+
+ROASTER.recipeBuilder()
+        .fluidInputs(fluid('chlorine') * 3000)
+        .inputs(ore('dustAntimony'))
+        .outputs(metaitem('dustAntimonyTrichloride') * 4)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('antimony_trichloride') * 72)
+        .fluidInputs(fluid('chlorine') * 250)
+        .fluidOutputs(fluid('antimony_pentachloride') * 125)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('carbon_tetrachloride') * 150)
+        .fluidInputs(fluid('hydrogen_fluoride') * 300)
+        .fluidInputs(fluid('antimony_pentachloride') * 50)
+        .fluidOutputs(fluid('chlorofluoromethane_mix') * 500)
+        .duration(5)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('chlorofluoromethane_mix') * 5000)
+        .fluidOutputs(fluid('antimony_pentachloride') * 500)
+        .fluidOutputs(fluid('trichlorofluoromethane') * 500)
+        .fluidOutputs(fluid('dichlorodifluoromethane') * 500)
+        .fluidOutputs(fluid('chlorotrifluoromethane') * 500)
+        .fluidOutputs(fluid('hydrogen_chloride') * 3000)
+        .duration(160)
+        .EUt(30)
+        .buildAndRegister()
+
 // Chloroform
 
 CSTR.recipeBuilder()
@@ -919,12 +957,15 @@ DISTILLATION_TOWER.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-for (int i = 0; i < CHEMICAL_DYES.length; i++) {
+dyesLowercase = ["black", "red", "green", "brown", "blue", "purple", "cyan", "light_gray", "gray", "pink", "lime", "yellow", "light_blue", "magenta", "orange", "white"]
+dyesUppercase = ["Black", "Red", "Green", "Brown", "Blue", "Purple", "Cyan", "LightGray", "Gray", "Pink", "Lime", "Yellow", "LightBlue", "Magenta", "Orange", "White"]
+
+for (int i = 0; i < 16; i++) {
     MIXER.recipeBuilder()
-    .input(dye, MarkerMaterials.Color.VALUES[i])
+    .inputs(ore('dye' + dyesUppercase[i]) * 1)
     .inputs(ore('dustSalt') * 2)
     .fluidInputs(fluid('sulfuric_acid') * 250)
-    .fluidOutputs(CHEMICAL_DYES[i].getFluid(288))
+    .fluidOutputs(fluid('dye_' + dyesLowercase[i]) * 288)
     .duration(160)
     .EUt(24)
     .buildAndRegister()
@@ -947,6 +988,15 @@ BCR.recipeBuilder()
 .duration(5)
 .EUt(30)
 .buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+        .fluidInputs(fluid('acidic_chlorodifluoromethane') * 3000)
+        .fluidInputs(fluid('water') * 2000)
+        .fluidOutputs(fluid('chlorodifluoromethane') * 1000)
+        .fluidOutputs(fluid('hydrochloric_acid') * 2000)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
 
 PYROLYSE.recipeBuilder()
 .fluidInputs(fluid('acidic_chlorodifluoromethane') * 6000)

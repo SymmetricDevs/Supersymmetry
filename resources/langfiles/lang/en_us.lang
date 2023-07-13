@@ -342,6 +342,7 @@ material.desalted_oil_light=Desalted Light Oil
 material.desalted_oil=Desalted Oil
 material.desalted_oil_heavy=Desalted Heavy Oil
 material.brine=Brine
+material.warm_brine=Warm Brine
 material.oily_brine=Oily Brine
 material.sulfuric_oil_residue=Sulfuric Oil Residue
 material.high_pressure_water=High Pressure Water
@@ -943,6 +944,7 @@ material.polycaprolactam=Polycaprolactam (Nylon)
 material.chloroauric_acid_solution=Chloroauric Acid Solution
 material.sodium_nitrite=Sodium Nitrate
 material.sodium_oxide=Sodium Oxide
+material.gold_amalgam=Gold Amalgam
 
 # Thermodynamics
 
@@ -1033,9 +1035,32 @@ material.compressed_carbon_dioxide=Compressed Carbon Dioxide
 material.cold_compressed_carbon_dioxide=Cold Compressed Carbon Dioxide
 material.cold_carbon_dioxide=Cold Carbon Dioxide
 
+material.hot_compressed_trichlorofluoromethane=Hot Compressed Trichlorofluoromethane
+material.compressed_trichlorofluoromethane=Compressed Trichlorofluoromethane
+material.cold_compressed_trichlorofluoromethane=Cold Compressed Trichlorofluoromethane
+material.cold_trichlorofluoromethane=Cold Trichlorofluoromethane
+
+material.hot_compressed_dichlorodifluoromethane=Hot Compressed Dichlorodifluoromethane
+material.compressed_dichlorodifluoromethane=Compressed Dichlorodifluoromethane
+material.cold_compressed_dichlorodifluoromethane=Cold Compressed Dichlorodifluoromethane
+material.cold_dichlorodifluoromethane=Cold Dichlorodifluoromethane
+
+material.hot_compressed_chlorotrifluoromethane=Hot Compressed Chlorotrifluoromethane
+material.compressed_chlorotrifluoromethane=Compressed Chlorotrifluoromethane
+material.cold_compressed_chlorotrifluoromethane=Cold Compressed Chlorotrifluoromethane
+material.cold_chlorotrifluoromethane=Cold Chlorotrifluoromethane
+
+material.hot_compressed_chlorodifluoromethane=Hot Compressed Chlorodifluoromethane
+material.compressed_chlorodifluoromethane=Compressed Chlorodifluoromethane
+material.cold_compressed_chlorodifluoromethane=Cold Compressed Chlorodifluoromethane
+material.cold_chlorodifluoromethane=Cold Chlorodifluoromethane
+
 material.warm_water=Warm Water
 material.warm_ethylene_glycol=Warm Ethylene Glycol
-material.warm_brine=Warm Brine
+material.warm_salt_water=Warm Salt Water
+material.warm_lubricant=Warm Lubricant
+material.warm_polychlorinated_biphenyl=Warm Polychlorinated Biphenyl
+material.warm_sodium_potassium=Warm Sodium Potassium
 
 material.hot_air=Hot Air
 material.hot_nitrogen=Hot Nitrogen
@@ -1048,6 +1073,14 @@ material.ruthenium_iv_oxide=Ruthenium IV Oxide
 material.trichlorosilane=Trichlorosilane
 material.purified_trichlorosilane=Purified Trichlorosilane
 material.burned_black_metal=Burned Black Metal
+material.chlorofluoromethane_mix=Chlorofluoromethane Mix
+material.antimony_trichloride=Antimony Trichloride
+material.antimony_pentachloride=Antimony Pentachloride
+material.trichlorofluoromethane=Trichlorofluoromethane
+material.dichlorodifluoromethane=Dichlorodifluoromethane
+material.chlorotrifluoromethane=Chlorotrifluoromethane
+material.chlorodifluoromethane=Chlorodifluoromethane
+material.polychlorinated_biphenyl=Polychlorinated Biphenyl
 
 # Ores
 

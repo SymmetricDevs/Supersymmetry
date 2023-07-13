@@ -2803,5 +2803,47 @@ public class FirstDegreeMaterials{
                 .color(0xc5e3de)
                 .iconSet(SHINY)
                 .build();
+
+        AntimonyTrichloride = new Material.Builder(8511, "antimony_trichloride")
+                .dust().fluid()
+                .components(Antimony, 1, Chlorine, 3)
+                .colorAverage()
+                .build();
+
+        AntimonyPentachloride = new Material.Builder(8512, "antimony_pentachloride")
+                .fluid()
+                .components(Antimony, 1, Chlorine, 5)
+                .colorAverage()
+                .build();
+
+        Trichlorofluoromethane = new Material.Builder(8513, "trichlorofluoromethane")
+                .fluid(FluidTypes.GAS)
+                .components(Carbon, 1, Chlorine, 3, Fluorine, 1)
+                .color(0xeb6a6a)
+                .build();
+
+        Dichlorodifluoromethane = new Material.Builder(8514, "dichlorodifluoromethane")
+                .fluid(FluidTypes.GAS)
+                .components(Carbon, 1, Chlorine, 2, Fluorine, 2)
+                .color(0xd14d4d)
+                .build();
+
+        Chlorotrifluoromethane = new Material.Builder(8515, "chlorotrifluoromethane")
+                .fluid(FluidTypes.GAS)
+                .components(Carbon, 1, Chlorine, 1, Fluorine, 3)
+                .color(0xbf3232)
+                .build();
+
+        Chlorodifluoromethane = new Material.Builder(8516, "chlorodifluoromethane")
+                .fluid(FluidTypes.GAS)
+                .components(Carbon, 1, Hydrogen, 1, Chlorine, 1, Fluorine, 2)
+                .color(0x8c5a99)
+                .build();
+
+        PolychlorinatedBiphenyl = new Material.Builder(8517, "polychlorinated_biphenyl")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
+                .colorAverage()
+                .build();
     }
 }

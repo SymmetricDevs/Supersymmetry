@@ -38,7 +38,7 @@ def name_removals = [
 "opencomputers:transposer29",
 "opencomputers:carpetedcapacitor30",
 "opencomputers:material31",
-"opencomputers:grog32", // please GTFO add this lmao
+"opencomputers:material32", // GROG
 "opencomputers:material33",
 "opencomputers:material34",
 "opencomputers:material35",
