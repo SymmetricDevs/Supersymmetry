@@ -75,7 +75,8 @@ def combustibles = [
     new Combustible('gemCoal', 2, 4),
     new Combustible('dustCoal', 2, 4),
     new Combustible('gemCharcoal', 2, 4),
-    new Combustible('dustCharcoal', 2, 4)
+    new Combustible('dustCharcoal', 2, 4),
+    new Combustible('dustCarbon', 1, 1, 'dustTinyDarkAsh')
 ]
 
 
