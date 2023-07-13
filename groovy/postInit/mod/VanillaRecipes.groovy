@@ -82,7 +82,8 @@ def recipesToRemove = [
 	'minecraft:granite',
 	'minecraft:andesite',
 	'minecraft:minecart',
-	'quark:trapdoor'
+	'quark:trapdoor',
+	'minecraft:golden_apple'
 ]
 
 for(name in recipesToRemove) {
@@ -748,3 +749,8 @@ recipemap('mixer').recipeBuilder()
 			.duration(150)
 			.EUt(16)
 			.buildAndRegister()
+
+// Gold Dust * 8
+mods.gregtech.macerator.removeByInput(2, [item('minecraft:golden_apple')], null)
+// Gold Ingot * 8
+mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:golden_apple')], [fluid('oxygen') * 1568])

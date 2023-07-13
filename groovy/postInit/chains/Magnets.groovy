@@ -434,7 +434,7 @@ mods.gregtech.assembly_line.removeByInput(100000, [metaitem('stickLongSamariumMa
 
 crafting.replaceShaped('gregtech:electric_motor_ev', metaitem('electric.motor.ev'), [
         [metaitem('cableGtDoubleAluminium'), metaitem('wireGtDoubleKanthal'), metaitem('stickTitanium')],
-        [metaitem('wireGtDoubleKanthal'), metaitem('stickNeodymiumAlloyMagnetic'), metaitem('wireGtDoubleKanthal')],
+        [metaitem('wireGtDoubleKanthal'), metaitem('stickSteelMagnetic'), metaitem('wireGtDoubleKanthal')],
         [metaitem('stickTitanium'), metaitem('wireGtDoubleKanthal'), metaitem('cableGtDoubleAluminium')]
 ])
 
@@ -470,7 +470,7 @@ crafting.replaceShaped('gregtech:magnet_hv_energy_crystal', metaitem('item_magne
 
 crafting.replaceShaped('gregtech:gregtech.machine.electromagnetic_separator.ev', metaitem('electromagnetic_separator.ev'), [
         [metaitem('conveyor.module.ev'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleNichrome')],
-        [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('stickNeodymiumAlloyMagnetic')],
+        [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('stickSteelMagnetic')],
         [ore('circuitEv'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleNichrome')]
 ])
 
@@ -481,9 +481,9 @@ crafting.replaceShaped('gregtech:gregtech.machine.electromagnetic_separator.iv',
 ])
 
 crafting.replaceShaped('gregtech:gregtech.machine.polarizer.ev', metaitem('polarizer.ev'), [
-        [metaitem('wireGtQuadrupleNichrome'), metaitem('stickNeodymiumAlloyMagnetic'), metaitem('wireGtQuadrupleNichrome')],
+        [metaitem('wireGtQuadrupleNichrome'), metaitem('stickSteelMagnetic'), metaitem('wireGtQuadrupleNichrome')],
         [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('cableGtSingleAluminium')],
-        [metaitem('wireGtQuadrupleNichrome'), metaitem('stickNeodymiumAlloyMagnetic'), metaitem('wireGtQuadrupleNichrome')]
+        [metaitem('wireGtQuadrupleNichrome'), metaitem('stickSteelMagnetic'), metaitem('wireGtQuadrupleNichrome')]
 ])
 
 crafting.replaceShaped('gregtech:gregtech.machine.polarizer.iv', metaitem('polarizer.iv'), [
@@ -495,7 +495,7 @@ crafting.replaceShaped('gregtech:gregtech.machine.polarizer.iv', metaitem('polar
 mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('cableGtDoubleAluminium') * 2)
         .inputs(metaitem('stickTitanium') * 2)
-        .inputs(metaitem('stickNeodymiumAlloyMagnetic') * 1)
+        .inputs(metaitem('stickSteelMagnetic') * 1)
         .inputs(metaitem('wireGtDoubleKanthal') * 4)
         .outputs(metaitem('electric.motor.ev'))
         .duration(100)
@@ -513,7 +513,7 @@ mods.gregtech.assembler.recipeBuilder()
         .buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-        .inputs(metaitem('stickNeodymiumAlloyMagnetic') * 1)
+        .inputs(metaitem('stickSteelMagnetic') * 1)
         .inputs(metaitem('wireFineTungstenSteel') * 16)
         .outputs(metaitem('voltage_coil.ev'))
         .duration(200)

@@ -362,7 +362,7 @@ crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
 
 crafting.addShaped("tg_sawoff", item('techguns:sawedoff'), [
 		[metaitem('gun.barrel.steel'), ore('springSmallSteel'), metaitem('gun.barrel.steel')],
-		[item('techguns:itemshared', 34), item('techguns:itemshared', 2), item('techguns:itemshared', 43)],
+		[item('techguns:itemshared', 34), item('techguns:itemshared', 2), item('techguns:itemshared', 42)],
 		[null, null, null]
 ]);
 
@@ -501,7 +501,7 @@ Globals.solders.each { key, val ->
 			.notConsumable(circuit(5))
 			.outputs(item('techguns:itemshared:18'))
 			.duration(20)
-			.EUt(Globals.voltAmps[2])
+			.EUt(Globals.voltAmps[3])
 			.buildAndRegister();
 
 	recipemap('weapons_factory').recipeBuilder()
@@ -623,7 +623,7 @@ Globals.solders.each { key, val ->
 			.inputs([
 					metaitem('gun.barrel.steel') * 2,
 					item('techguns:itemshared', 34),
-					item('techguns:itemshared', 43),
+					item('techguns:itemshared', 42),
 					ore('springSmallSteel'),
 					item('techguns:itemshared', 2)
 			])

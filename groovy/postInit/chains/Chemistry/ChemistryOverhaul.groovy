@@ -919,12 +919,15 @@ DISTILLATION_TOWER.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-for (int i = 0; i < CHEMICAL_DYES.length; i++) {
+dyesLowercase = ["black", "red", "green", "brown", "blue", "purple", "cyan", "light_gray", "gray", "pink", "lime", "yellow", "light_blue", "magenta", "orange", "white"]
+dyesUppercase = ["Black", "Red", "Green", "Brown", "Blue", "Purple", "Cyan", "LightGray", "Gray", "Pink", "Lime", "Yellow", "LightBlue", "Magenta", "Orange", "White"]
+
+for (int i = 0; i < 16; i++) {
     MIXER.recipeBuilder()
-    .input(dye, MarkerMaterials.Color.VALUES[i])
+    .inputs(ore('dye' + dyesUppercase[i]) * 1)
     .inputs(ore('dustSalt') * 2)
     .fluidInputs(fluid('sulfuric_acid') * 250)
-    .fluidOutputs(CHEMICAL_DYES[i].getFluid(288))
+    .fluidOutputs(fluid('dye_' + dyesLowercase[i]) * 288)
     .duration(160)
     .EUt(24)
     .buildAndRegister()

@@ -524,6 +524,15 @@ crafting.addShaped("silicon_carbide_casing", item('susy:susy_multiblock_casing')
 		[metaitem('plateSiliconCarbide'), ore('craftingToolWrench'), metaitem('plateSiliconCarbide')]
 ])
 
+recipemap('assembler').recipeBuilder()
+		.circuitMeta(6)
+		.inputs(ore('plateSiliconCarbide') * 6)
+		.inputs(item('gregtech:turbine_casing', 7))
+		.outputs(item('susy:susy_multiblock_casing') * 2)
+		.EUt(16)
+		.duration(50)
+		.buildAndRegister()
+
 //New Dynamo Hatches
 
 recipemap('assembler').recipeBuilder()
