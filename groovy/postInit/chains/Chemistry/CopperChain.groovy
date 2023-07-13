@@ -86,7 +86,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
-    .fluidInputs(fluid('malachite_leach') * 1000)
+    .fluidInputs(fluid('malachite_leach') * 3000)
     .outputs(metaitem('dustCopperSulfate') * 8)
     .fluidOutputs(fluid('diluted_sulfuric_acid') * 1000)
     .EUt(30)
