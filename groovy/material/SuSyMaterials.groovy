@@ -955,6 +955,7 @@ class SuSyMaterials {
         public static Material DilutedNitromethane;
         public static Material DilutedAmmoniumSulfateSolution;
         public static Material DilutedAmmoniumChlorideSolution;
+        public static Material AmmoniacalSodiumBicarbonateSolution;
 
         // Organic Chemistry Materials
 
