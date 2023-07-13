@@ -75,8 +75,6 @@ config/customloadingscreen_timings.nbt
 
 config/littletiles-client.json
 
-config/littletiles.json
-
 screenshots/
 
 backups/
