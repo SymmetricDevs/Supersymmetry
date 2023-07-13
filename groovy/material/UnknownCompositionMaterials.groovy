@@ -1444,5 +1444,10 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x960000)
                 .build();
+
+        ChlorofluoromethaneMix = new Material.Builder(4276, "chlorofluoromethane_mix")
+                .fluid()
+                .color(0xb03f5d)
+                .build();
     }
 }
