@@ -13153,7 +13153,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Crafting Station§r is a highly advanced Crafting Table§r, with inventory slots for item and tools.\n\nPut the recipes in the table either by dropping ghost items, or using the §a+§r in §2JEI§r. \n\nCrafting the items will use the items and tools in the inventory of the table. The 9 slots on the right are saved up recipes so you can re-use them without re-opening §2JEI§r.\n\nThe §3Crafting Station§r can use §6adjacent inventories§r in addition to its own inventory. ",
+          "desc:8": "The §3Crafting Station§r is a highly advanced Crafting Table§r, with inventory slots for item and tools.\n\nPut the recipes in the table either by dropping ghost items, or using the §a+§r in §2JEI§r. \n\nCrafting the items will use the items and tools in the inventory of the table. The 9 slots on the right are saved up recipes so you can re-use them without re-opening §2JEI§r.\n\nThe §3Crafting Station§r can use §6adjacent inventories§r in addition to its own inventory. \n\nIf you try to craft each item only when you need it, you will go insane. It is far more effective to §ebatch-craft§f frequently used items so you don\u0027t have to do it as often. It is very satisfying to get all the ingredients together then craft §ea stack of items§f all at once. Crafting Stations§f are an indispensable tool for batch-crafting. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24571,7 +24571,7 @@
             "id:8": "susy:home_block"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Home Block",
@@ -57583,6 +57583,64 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "764:10": {
+      "preRequisites:11": [
+        87
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Storage Drawers§f provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nTo reduce lag, drawers only render their items while you are close to them. Also, big drawer walls cause a drop in performance.\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "storagedrawers:basicdrawers",
+            "tag:10": {
+              "material:8": "oak"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Storage Drawers",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 764,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "drawerBasic",
+              "id:8": "storagedrawers:basicdrawers",
+              "tag:10": {
+                "material:8": "birch"
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -57917,10 +57975,10 @@
         },
         "43:10": {
           "id:3": 187,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 618
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -72,
+          "y:3": 612
         },
         "44:10": {
           "id:3": 213,
@@ -57931,10 +57989,10 @@
         },
         "45:10": {
           "id:3": 366,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
           "x:3": 36,
-          "y:3": 618
+          "y:3": 612
         },
         "46:10": {
           "id:3": 441,
@@ -64288,6 +64346,13 @@
           "sizeY:3": 36,
           "x:3": 222,
           "y:3": 30
+        },
+        "14:10": {
+          "id:3": 764,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 84
         }
       }
     },
@@ -64328,7 +64393,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
