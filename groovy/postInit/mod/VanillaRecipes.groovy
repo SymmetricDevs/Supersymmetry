@@ -754,3 +754,27 @@ recipemap('mixer').recipeBuilder()
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:golden_apple')], null)
 // Gold Ingot * 8
 mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:golden_apple')], [fluid('oxygen') * 1568])
+// Tiny Pile of Iron Dust * 1
+mods.gregtech.macerator.removeByInput(2, [item('minecraft:rail')], null)
+// Wrought Iron Nugget * 1
+mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:rail')], [fluid('oxygen') * 6])
+// Small Pile of Gold Dust * 2
+mods.gregtech.macerator.removeByInput(2, [item('minecraft:golden_rail')], null)
+
+crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.lv", metaitem('gregtechfoodoption:slicer.lv'), [
+		[metaitem('electric.piston.lv'), ore('circuitLv'), ore('cableGtSingleTin')],
+		[ore('toolHeadBuzzSawSteel'), metaitem('gregtech:hull.lv'), ore('circuitLv')],
+		[ore('plateSteel'), metaitem('conveyor.module.lv'), ore('cableGtSingleTin')]
+])
+
+crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.mv", metaitem('gregtechfoodoption:slicer.mv'), [
+		[metaitem('electric.piston.mv'), ore('circuitMv'), ore('cableGtSingleCopper')],
+		[ore('toolHeadBuzzSawAluminium'), metaitem('gregtech:hull.mv'), ore('circuitMv')],
+		[ore('plateAluminium'), metaitem('conveyor.module.mv'), ore('cableGtSingleCopper')]
+])
+
+crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.hv", metaitem('gregtechfoodoption:slicer.hv'), [
+		[metaitem('electric.piston.hv'), ore('circuitHv'), ore('cableGtSingleGold')],
+		[ore('toolHeadBuzzSawVanadiumSteel'), metaitem('gregtech:hull.hv'), ore('circuitHv')],
+		[ore('plateVanadiumSteel'), metaitem('conveyor.module.hv'), ore('cableGtSingleGold')]
+])
