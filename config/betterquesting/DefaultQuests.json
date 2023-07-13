@@ -26059,7 +26059,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A Tier 1 §6missile launcher §rconsists of §6three primary components§r: a control panel, a base, and a frame.\n\nWhile the base and screen are essential for a basic launch, the inclusion of the frame component can improve the accuracy of the missile. \n\nThe range of this launcher is 1,000 meters.",
+          "desc:8": "A Tier 1 §6missile launcher §rconsists of §6three primary components§r: a control panel, a base, and a frame.\n\nWhile the base and screen are essential for a basic launch, the inclusion of the frame component can improve the accuracy of the missile. \n\nThe range of this launcher is 500 meters, so you may need to set up a separate base close to your target, solely for launching missile attacks.\n\nAnd yes, it may seem dumb that an ICBM only has a range of 500 meters, but the size of a continent in Minecraft is several hundred blocks anyways.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27274,7 +27274,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you are at MV, you can make more advanced types of §cexplosives §rand §cmissiles §rby putting MV power on a Weapons Factory.\n\nThere are 3 new types of explosives:\n§7Breaching explosives§r, made with steel\n§3Thermobaric explosives§r, made with ethylene oxide\n§aContagious explosives§r, made with biomass\n\nYou can get most of the ingredients for these at MV.\nRemember that these are Tier 2 missiles, so you will need a T2 missile launching station for them to work.\n\nThe range of this launcher is 1,500 meters.",
+          "desc:8": "Now that you are at MV, you can make more advanced types of §cexplosives §rand §cmissiles §rby putting MV power on a Weapons Factory.\n\nThere are 3 new types of explosives:\n§7Breaching explosives§r, made with steel\n§3Thermobaric explosives§r, made with ethylene oxide\n§aContagious explosives§r, made with biomass\n\nYou can get most of the ingredients for these at MV.\nRemember that these are Tier 2 missiles, so you will need a T2 missile launching station for them to work.\n\nThe range of this launcher is 1,000 meters.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31317,7 +31317,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Trains created by the Railroad Engineering Station are too large to function on Minecraft\u0027s vanilla Rails. Which is why you\u0027ll need Immersive Railroading\u0027s Tracks.\n\nTracks can be placed by right clicking a Track Blueprint on the ground while having some Wooden Planks of any type and Rail Segments in your inventory. Doing so will create a track about 10 meters in length, which will consume several Planks and Segments from your inventory, so make sure you carry quite a few stacks of those with you when you\u0027re laying track.\n\nRight clicking a Track Blueprint while not looking at any block will open a menu allowing you to customize your Tracks. You can change things like the curvature of the track, the look of the track, and so on.",
+          "desc:8": "Trains created by the Railroad Engineering Station are too large to function on Minecraft\u0027s vanilla Rails. Which is why you\u0027ll need Immersive Railroading\u0027s Tracks.\n\nTracks can be placed by right clicking a Track Blueprint on the ground while having some Wooden Planks of any type and Rail Segments in your inventory. Doing so will create a track about 10 meters in length, which will consume several Planks and Segments from your inventory, so make sure you carry quite a few stacks of those with you when you\u0027re laying track.\n\nRight clicking a Track Blueprint while not looking at any block will open a menu allowing you to customize your Tracks. You can change things like the curvature of the track, the rail bed, length, and so on. More documentation on this can be found here:\n§9https://github.com/TeamOpenIndustry/ImmersiveRailroading/wiki/Track-Blueprint",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38211,7 +38211,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Entity Detector can detect entities up to §625 blocks away,§f and outputs information on those entities, including name and§b relative position. §cPlayers may be detected, so this is useful for catching any unsolicited activity.§f\n\nMore documentation can be found here: https://github.com/PC-Logix/OpenSecurity/wiki/EntityDetector",
+          "desc:8": "The Entity Detector can detect entities up to §625 blocks away,§f and outputs information on those entities, including name and§b relative position. §cPlayers may be detected, so this is useful for catching any unsolicited activity.§f\n\nMore documentation can be found here: §9https://github.com/PC-Logix/OpenSecurity/wiki/EntityDetector",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38257,6 +38257,45 @@
       }
     },
     "535:10": {
+      "preRequisites:11": [
+        518
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Quadruple pipe variants exist for every pipe. They are made from 4 Small pipes of the same material. These will be useful for transferring different types of fluids along the same pipeline.\n\nNonuple pipes also exist for the extra messy factories.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2037,
+            "OreDict:8": "",
+            "id:8": "gregtech:fluid_pipe_quadruple"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Quadruple Pipes",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 535,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "536:10": {
       "preRequisites:11": [
         540
       ],
@@ -38326,7 +38365,7 @@
         }
       }
     },
-    "536:10": {
+    "537:10": {
       "preRequisites:11": [
         531
       ],
@@ -38377,7 +38416,7 @@
         }
       }
     },
-    "537:10": {
+    "538:10": {
       "preRequisites:11": [
         540,
         532
@@ -38426,7 +38465,7 @@
         }
       }
     },
-    "538:10": {
+    "539:10": {
       "preRequisites:11": [
         541
       ],
@@ -38474,7 +38513,7 @@
         }
       }
     },
-    "539:10": {
+    "540:10": {
       "preRequisites:11": [
         540
       ],
@@ -38544,7 +38583,7 @@
         }
       }
     },
-    "540:10": {
+    "541:10": {
       "preRequisites:11": [
         540
       ],
@@ -38614,7 +38653,7 @@
         }
       }
     },
-    "541:10": {
+    "542:10": {
       "preRequisites:11": [
         479,
         521
@@ -38703,7 +38742,7 @@
         }
       }
     },
-    "542:10": {
+    "543:10": {
       "preRequisites:11": [
         99
       ],
@@ -38755,7 +38794,7 @@
         }
       }
     },
-    "543:10": {
+    "544:10": {
       "preRequisites:11": [
         546
       ],
@@ -38825,7 +38864,7 @@
         }
       }
     },
-    "544:10": {
+    "545:10": {
       "preRequisites:11": [
         546,
         550
@@ -38914,7 +38953,7 @@
         }
       }
     },
-    "545:10": {
+    "546:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -38971,7 +39010,7 @@
         }
       }
     },
-    "546:10": {
+    "547:10": {
       "preRequisites:11": [
         546
       ],
@@ -39041,7 +39080,7 @@
         }
       }
     },
-    "547:10": {
+    "548:10": {
       "preRequisites:11": [
         546
       ],
@@ -39093,7 +39132,7 @@
         }
       }
     },
-    "548:10": {
+    "549:10": {
       "preRequisites:11": [
         533
       ],
@@ -39145,7 +39184,7 @@
         }
       }
     },
-    "549:10": {
+    "550:10": {
       "preRequisites:11": [
         533
       ],
@@ -39197,7 +39236,7 @@
         }
       }
     },
-    "550:10": {
+    "551:10": {
       "preRequisites:11": [
         559
       ],
@@ -39279,7 +39318,7 @@
         }
       }
     },
-    "551:10": {
+    "552:10": {
       "preRequisites:11": [
         559
       ],
@@ -39355,7 +39394,7 @@
         }
       }
     },
-    "552:10": {
+    "553:10": {
       "preRequisites:11": [
         533
       ],
@@ -39407,7 +39446,7 @@
         }
       }
     },
-    "553:10": {
+    "554:10": {
       "preRequisites:11": [
         533
       ],
@@ -39459,7 +39498,7 @@
         }
       }
     },
-    "554:10": {
+    "555:10": {
       "preRequisites:11": [
         549
       ],
@@ -39529,7 +39568,7 @@
         }
       }
     },
-    "555:10": {
+    "556:10": {
       "preRequisites:11": [
         31
       ],
@@ -39623,7 +39662,7 @@
         }
       }
     },
-    "556:10": {
+    "557:10": {
       "preRequisites:11": [
         388
       ],
@@ -39675,7 +39714,7 @@
         }
       }
     },
-    "557:10": {
+    "558:10": {
       "preRequisites:11": [
         546
       ],
@@ -39727,7 +39766,7 @@
         }
       }
     },
-    "558:10": {
+    "559:10": {
       "preRequisites:11": [
         549
       ],
@@ -39797,7 +39836,7 @@
         }
       }
     },
-    "559:10": {
+    "560:10": {
       "preRequisites:11": [
         549
       ],
@@ -39920,7 +39959,7 @@
         }
       }
     },
-    "560:10": {
+    "561:10": {
       "preRequisites:11": [
         540
       ],
@@ -39972,7 +40011,7 @@
         }
       }
     },
-    "561:10": {
+    "562:10": {
       "preRequisites:11": [
         568
       ],
@@ -41964,7 +42003,7 @@
         }
       }
     },
-    "562:10": {
+    "563:10": {
       "preRequisites:11": [
         568
       ],
@@ -42102,7 +42141,7 @@
         }
       }
     },
-    "563:10": {
+    "564:10": {
       "preRequisites:11": [
         568
       ],
@@ -42208,7 +42247,7 @@
         }
       }
     },
-    "564:10": {
+    "565:10": {
       "preRequisites:11": [
         568
       ],
@@ -42260,14 +42299,14 @@
         }
       }
     },
-    "565:10": {
+    "566:10": {
       "preRequisites:11": [
         568
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Unlike computers, §6robots§r§r can move around and interact with the world much like a player can.\n\nThey §d§ccan not interact with external components§r, however! If you need to communicate with a computer or other robots, use a§6 Wireless Network Card§r.\n\n§6Robots are built by placing a Computer Case in an Assembler. \n§r\nYou can check the Robot API here: §9https://ocdoc.cil.li/api:robot",
+          "desc:8": "Unlike computers, §6robots§r§r can move around and interact with the world much like a player can.\n\nRobots can be upgraded with previously mentioned devices, including Entity Detectors.\n\nThey §d§ccan not interact with external components§r, however! If you need to communicate with a computer or other robots, use a§6 Wireless Network Card§r.\n\n§6Robots are built by placing a Computer Case in an Assembler. \n§r\nYou can check the Robot API here: §9https://ocdoc.cil.li/api:robot",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42312,7 +42351,7 @@
         }
       }
     },
-    "566:10": {
+    "567:10": {
       "preRequisites:11": [
         574
       ],
@@ -42382,7 +42421,7 @@
         }
       }
     },
-    "567:10": {
+    "568:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -42457,7 +42496,7 @@
         }
       }
     },
-    "568:10": {
+    "569:10": {
       "preRequisites:11": [
         546
       ],
@@ -42509,7 +42548,7 @@
         }
       }
     },
-    "569:10": {
+    "570:10": {
       "preRequisites:11": [
         546
       ],
@@ -42561,7 +42600,7 @@
         }
       }
     },
-    "570:10": {
+    "571:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -42633,7 +42672,7 @@
         }
       }
     },
-    "571:10": {
+    "572:10": {
       "preRequisites:11": [
         544
       ],
@@ -42685,7 +42724,7 @@
         }
       }
     },
-    "572:10": {
+    "573:10": {
       "preRequisites:11": [
         533
       ],
@@ -42737,7 +42776,7 @@
         }
       }
     },
-    "573:10": {
+    "574:10": {
       "preRequisites:11": [
         533
       ],
@@ -42830,7 +42869,7 @@
         }
       }
     },
-    "574:10": {
+    "575:10": {
       "preRequisites:11": [
         546
       ],
@@ -42882,7 +42921,7 @@
         }
       }
     },
-    "575:10": {
+    "576:10": {
       "preRequisites:11": [
         521
       ],
@@ -42940,7 +42979,7 @@
         }
       }
     },
-    "576:10": {
+    "577:10": {
       "preRequisites:11": [
         549
       ],
@@ -42992,7 +43031,7 @@
         }
       }
     },
-    "577:10": {
+    "578:10": {
       "preRequisites:11": [
         540
       ],
@@ -43182,7 +43221,7 @@
         }
       }
     },
-    "578:10": {
+    "579:10": {
       "preRequisites:11": [
         81
       ],
@@ -43234,7 +43273,7 @@
         }
       }
     },
-    "579:10": {
+    "580:10": {
       "preRequisites:11": [
         400
       ],
@@ -43286,7 +43325,7 @@
         }
       }
     },
-    "580:10": {
+    "581:10": {
       "preRequisites:11": [
         593
       ],
@@ -43381,7 +43420,7 @@
         }
       }
     },
-    "581:10": {
+    "582:10": {
       "preRequisites:11": [
         593
       ],
@@ -43476,7 +43515,7 @@
         }
       }
     },
-    "582:10": {
+    "583:10": {
       "preRequisites:11": [
         593
       ],
@@ -43571,7 +43610,7 @@
         }
       }
     },
-    "583:10": {
+    "584:10": {
       "preRequisites:11": [
         593
       ],
@@ -43666,7 +43705,7 @@
         }
       }
     },
-    "584:10": {
+    "585:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -43741,7 +43780,7 @@
         }
       }
     },
-    "585:10": {
+    "586:10": {
       "preRequisites:11": [
         81
       ],
@@ -43817,7 +43856,7 @@
         }
       }
     },
-    "586:10": {
+    "587:10": {
       "preRequisites:11": [
         213,
         104
@@ -43870,7 +43909,7 @@
         }
       }
     },
-    "587:10": {
+    "588:10": {
       "preRequisites:11": [
         51
       ],
@@ -43922,7 +43961,7 @@
         }
       }
     },
-    "588:10": {
+    "589:10": {
       "preRequisites:11": [
         124
       ],
@@ -43992,7 +44031,7 @@
         }
       }
     },
-    "589:10": {
+    "590:10": {
       "preRequisites:11": [
         36
       ],
@@ -44044,7 +44083,7 @@
         }
       }
     },
-    "590:10": {
+    "591:10": {
       "preRequisites:11": [
         109
       ],
@@ -44092,7 +44131,7 @@
         }
       }
     },
-    "591:10": {
+    "592:10": {
       "preRequisites:11": [
         602
       ],
@@ -44144,7 +44183,7 @@
         }
       }
     },
-    "592:10": {
+    "593:10": {
       "preRequisites:11": [
         602
       ],
@@ -44196,7 +44235,7 @@
         }
       }
     },
-    "593:10": {
+    "594:10": {
       "preRequisites:11": [
         101
       ],
@@ -44248,7 +44287,7 @@
         }
       }
     },
-    "594:10": {
+    "595:10": {
       "preRequisites:11": [
         230
       ],
@@ -44318,7 +44357,7 @@
         }
       }
     },
-    "595:10": {
+    "596:10": {
       "preRequisites:11": [
         31
       ],
@@ -44370,7 +44409,7 @@
         }
       }
     },
-    "596:10": {
+    "597:10": {
       "preRequisites:11": [
         222
       ],
@@ -44428,7 +44467,7 @@
         }
       }
     },
-    "597:10": {
+    "598:10": {
       "preRequisites:11": [
         593
       ],
@@ -44504,7 +44543,7 @@
         }
       }
     },
-    "598:10": {
+    "599:10": {
       "preRequisites:11": [
         611
       ],
@@ -44571,7 +44610,7 @@
         }
       }
     },
-    "599:10": {
+    "600:10": {
       "preRequisites:11": [
         611
       ],
@@ -44623,7 +44662,7 @@
         }
       }
     },
-    "600:10": {
+    "601:10": {
       "preRequisites:11": [
         623
       ],
@@ -44738,7 +44777,7 @@
         }
       }
     },
-    "601:10": {
+    "602:10": {
       "preRequisites:11": [
         618
       ],
@@ -44808,7 +44847,7 @@
         }
       }
     },
-    "602:10": {
+    "603:10": {
       "preRequisites:11": [
         615
       ],
@@ -44878,7 +44917,7 @@
         }
       }
     },
-    "603:10": {
+    "604:10": {
       "preRequisites:11": [
         616,
         390
@@ -44931,7 +44970,7 @@
         }
       }
     },
-    "604:10": {
+    "605:10": {
       "preRequisites:11": [
         188
       ],
@@ -45001,7 +45040,7 @@
         }
       }
     },
-    "605:10": {
+    "606:10": {
       "preRequisites:11": [
         617
       ],
@@ -45035,7 +45074,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "606:10": {
+    "607:10": {
       "preRequisites:11": [
         621,
         614,
@@ -45113,7 +45152,7 @@
         }
       }
     },
-    "607:10": {
+    "608:10": {
       "preRequisites:11": [
         398
       ],
@@ -45165,7 +45204,7 @@
         }
       }
     },
-    "608:10": {
+    "609:10": {
       "preRequisites:11": [
         614
       ],
@@ -45217,7 +45256,7 @@
         }
       }
     },
-    "609:10": {
+    "610:10": {
       "preRequisites:11": [
         479
       ],
@@ -45287,7 +45326,7 @@
         }
       }
     },
-    "610:10": {
+    "611:10": {
       "preRequisites:11": [
         622
       ],
@@ -45339,7 +45378,7 @@
         }
       }
     },
-    "611:10": {
+    "612:10": {
       "preRequisites:11": [
         624
       ],
@@ -45434,7 +45473,7 @@
         }
       }
     },
-    "612:10": {
+    "613:10": {
       "preRequisites:11": [
         624
       ],
@@ -45501,7 +45540,7 @@
         }
       }
     },
-    "613:10": {
+    "614:10": {
       "preRequisites:11": [
         624
       ],
@@ -45596,7 +45635,7 @@
         }
       }
     },
-    "614:10": {
+    "615:10": {
       "preRequisites:11": [
         624
       ],
@@ -45691,7 +45730,7 @@
         }
       }
     },
-    "615:10": {
+    "616:10": {
       "preRequisites:11": [
         624
       ],
@@ -45786,7 +45825,7 @@
         }
       }
     },
-    "616:10": {
+    "617:10": {
       "preRequisites:11": [
         624
       ],
@@ -45881,7 +45920,7 @@
         }
       }
     },
-    "617:10": {
+    "618:10": {
       "preRequisites:11": [
         191
       ],
@@ -45929,7 +45968,7 @@
         }
       }
     },
-    "618:10": {
+    "619:10": {
       "preRequisites:11": [
         622,
         687
@@ -46000,7 +46039,7 @@
         }
       }
     },
-    "619:10": {
+    "620:10": {
       "preRequisites:11": [
         622
       ],
@@ -46070,7 +46109,7 @@
         }
       }
     },
-    "620:10": {
+    "621:10": {
       "preRequisites:11": [
         622
       ],
@@ -46140,7 +46179,7 @@
         }
       }
     },
-    "621:10": {
+    "622:10": {
       "preRequisites:11": [
         622,
         698
@@ -46211,7 +46250,7 @@
         }
       }
     },
-    "622:10": {
+    "623:10": {
       "preRequisites:11": [
         622
       ],
@@ -46281,7 +46320,7 @@
         }
       }
     },
-    "623:10": {
+    "624:10": {
       "preRequisites:11": [
         648
       ],
@@ -46368,7 +46407,7 @@
         }
       }
     },
-    "624:10": {
+    "625:10": {
       "preRequisites:11": [
         181
       ],
@@ -46440,7 +46479,7 @@
         }
       }
     },
-    "625:10": {
+    "626:10": {
       "preRequisites:11": [
         468
       ],
@@ -46516,7 +46555,7 @@
         }
       }
     },
-    "626:10": {
+    "627:10": {
       "preRequisites:11": [
         654
       ],
@@ -46586,7 +46625,7 @@
         }
       }
     },
-    "627:10": {
+    "628:10": {
       "preRequisites:11": [
         614
       ],
@@ -46644,7 +46683,7 @@
         }
       }
     },
-    "628:10": {
+    "629:10": {
       "preRequisites:11": [
         641
       ],
@@ -46710,7 +46749,7 @@
         }
       }
     },
-    "629:10": {
+    "630:10": {
       "preRequisites:11": [
         642
       ],
@@ -46776,7 +46815,7 @@
         }
       }
     },
-    "630:10": {
+    "631:10": {
       "preRequisites:11": [
         643,
         649
@@ -46847,7 +46886,7 @@
         }
       }
     },
-    "631:10": {
+    "632:10": {
       "preRequisites:11": [
         644
       ],
@@ -46917,7 +46956,7 @@
         }
       }
     },
-    "632:10": {
+    "633:10": {
       "preRequisites:11": [
         51
       ],
@@ -46993,7 +47032,7 @@
         }
       }
     },
-    "633:10": {
+    "634:10": {
       "preRequisites:11": [
         614
       ],
@@ -47057,7 +47096,7 @@
         }
       }
     },
-    "634:10": {
+    "635:10": {
       "preRequisiteTypes:7": [
         0,
         2
@@ -47128,7 +47167,7 @@
         }
       }
     },
-    "635:10": {
+    "636:10": {
       "preRequisites:11": [
         648
       ],
@@ -47198,7 +47237,7 @@
         }
       }
     },
-    "636:10": {
+    "637:10": {
       "preRequisites:11": [
         213
       ],
@@ -47246,7 +47285,7 @@
         }
       }
     },
-    "637:10": {
+    "638:10": {
       "preRequisites:11": [
         510
       ],
@@ -47298,7 +47337,7 @@
         }
       }
     },
-    "638:10": {
+    "639:10": {
       "preRequisites:11": [
         188
       ],
@@ -47360,7 +47399,7 @@
         }
       }
     },
-    "639:10": {
+    "640:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -47433,7 +47472,7 @@
         }
       }
     },
-    "640:10": {
+    "641:10": {
       "preRequisites:11": [
         398
       ],
@@ -47467,7 +47506,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "641:10": {
+    "642:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -47520,7 +47559,7 @@
         }
       }
     },
-    "642:10": {
+    "643:10": {
       "preRequisites:11": [
         441,
         18
@@ -47591,7 +47630,7 @@
         }
       }
     },
-    "643:10": {
+    "644:10": {
       "preRequisites:11": [
         388
       ],
@@ -47630,7 +47669,7 @@
         }
       }
     },
-    "644:10": {
+    "645:10": {
       "preRequisites:11": [
         104
       ],
@@ -47678,7 +47717,7 @@
         }
       }
     },
-    "645:10": {
+    "646:10": {
       "preRequisites:11": [
         181
       ],
@@ -47730,7 +47769,7 @@
         }
       }
     },
-    "646:10": {
+    "647:10": {
       "preRequisites:11": [
         604
       ],
@@ -47778,7 +47817,7 @@
         }
       }
     },
-    "647:10": {
+    "648:10": {
       "preRequisites:11": [
         188
       ],
@@ -47830,7 +47869,7 @@
         }
       }
     },
-    "648:10": {
+    "649:10": {
       "preRequisites:11": [
         390,
         672
@@ -47883,7 +47922,7 @@
         }
       }
     },
-    "649:10": {
+    "650:10": {
       "preRequisites:11": [
         243
       ],
@@ -47953,7 +47992,7 @@
         }
       }
     },
-    "650:10": {
+    "651:10": {
       "preRequisites:11": [
         125
       ],
@@ -48001,7 +48040,7 @@
         }
       }
     },
-    "651:10": {
+    "652:10": {
       "preRequisiteTypes:7": [
         0,
         0,
@@ -48060,7 +48099,7 @@
         }
       }
     },
-    "652:10": {
+    "653:10": {
       "preRequisites:11": [
         104
       ],
@@ -48111,7 +48150,7 @@
         }
       }
     },
-    "653:10": {
+    "654:10": {
       "preRequisites:11": [
         104
       ],
@@ -50081,7 +50120,7 @@
         }
       }
     },
-    "654:10": {
+    "655:10": {
       "preRequisites:11": [
         48
       ],
@@ -50177,7 +50216,7 @@
         }
       }
     },
-    "655:10": {
+    "656:10": {
       "preRequisites:11": [
         763
       ],
@@ -50262,7 +50301,7 @@
         }
       }
     },
-    "656:10": {
+    "657:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -50335,7 +50374,7 @@
         }
       }
     },
-    "657:10": {
+    "658:10": {
       "preRequisites:11": [
         81
       ],
@@ -50411,7 +50450,7 @@
         }
       }
     },
-    "658:10": {
+    "659:10": {
       "preRequisites:11": [
         663,
         674
@@ -50482,7 +50521,7 @@
         }
       }
     },
-    "659:10": {
+    "660:10": {
       "preRequisites:11": [
         390
       ],
@@ -50521,7 +50560,7 @@
         }
       }
     },
-    "660:10": {
+    "661:10": {
       "preRequisites:11": [
         243
       ],
@@ -50573,7 +50612,7 @@
         }
       }
     },
-    "661:10": {
+    "662:10": {
       "preRequisites:11": [
         673
       ],
@@ -50635,7 +50674,7 @@
         }
       }
     },
-    "662:10": {
+    "663:10": {
       "preRequisites:11": [
         675,
         678
@@ -50688,7 +50727,7 @@
         }
       }
     },
-    "663:10": {
+    "664:10": {
       "preRequisites:11": [
         673
       ],
@@ -50750,7 +50789,7 @@
         }
       }
     },
-    "664:10": {
+    "665:10": {
       "preRequisites:11": [
         479
       ],
@@ -50820,14 +50859,15 @@
         }
       }
     },
-    "665:10": {
+    "666:10": {
       "preRequisites:11": [
-        637
+        479,
+        708
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Titanium has 2 sources at this stage of the game: §6Vanadiferous Titanomagnetite,§f and §cIlmenite.§f Those are sourced from the Mining Drill only.\n\nWhat you\u0027ll want to do is process those dusts into Rutile. Both ores have different processing routes to get to Rutile, but Ilmenite is significantly easier to turn into Rutile, needing only 1 fluidized bed reactor step.\n\nNext, you\u0027ll want to react the Rutile with coke and chlorine in a Fluidized Bed Reactor, for Gaseous Titanium Tetrachloride.\n\nAfter several steps of purification, you should have normal Titanium Tetrachloride.\n\nPutting this normal Titanium Tetrachloride in an EBF with magnesium will give you a Titanium Sponge, which is just a few steps away from Titanium Ingots. You\u0027ll need better coils than just Cupronickel Coils for this though.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50845,7 +50885,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Getting Titanium",
@@ -50867,14 +50907,30 @@
           "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
-          "index:3": 0,
+          "index:3": 1,
           "partialMatch:1": 1,
-          "requiredItems:9": {},
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 206,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
           "taskID:8": "bq_standard:retrieval"
         }
       }
     },
-    "666:10": {
+    "667:10": {
       "preRequisites:11": [
         644
       ],
@@ -50932,7 +50988,7 @@
         }
       }
     },
-    "667:10": {
+    "668:10": {
       "preRequisites:11": [
         645
       ],
@@ -51002,7 +51058,7 @@
         }
       }
     },
-    "668:10": {
+    "669:10": {
       "preRequisites:11": [
         377
       ],
@@ -51050,7 +51106,7 @@
         }
       }
     },
-    "669:10": {
+    "670:10": {
       "preRequisites:11": [
         104
       ],
@@ -51120,7 +51176,7 @@
         }
       }
     },
-    "670:10": {
+    "671:10": {
       "preRequisites:11": [
         240
       ],
@@ -51190,7 +51246,7 @@
         }
       }
     },
-    "671:10": {
+    "672:10": {
       "preRequisites:11": [
         169
       ],
@@ -51242,7 +51298,7 @@
         }
       }
     },
-    "672:10": {
+    "673:10": {
       "preRequisites:11": [
         374
       ],
@@ -51290,7 +51346,7 @@
         }
       }
     },
-    "673:10": {
+    "674:10": {
       "preRequisites:11": [
         620
       ],
@@ -51360,7 +51416,7 @@
         }
       }
     },
-    "674:10": {
+    "675:10": {
       "preRequisites:11": [
         641,
         466
@@ -51431,7 +51487,7 @@
         }
       }
     },
-    "675:10": {
+    "676:10": {
       "preRequisites:11": [
         641
       ],
@@ -51483,7 +51539,7 @@
         }
       }
     },
-    "676:10": {
+    "677:10": {
       "preRequisites:11": [
         647
       ],
@@ -51553,7 +51609,7 @@
         }
       }
     },
-    "677:10": {
+    "678:10": {
       "preRequisites:11": [
         688,
         683
@@ -51624,7 +51680,7 @@
         }
       }
     },
-    "678:10": {
+    "679:10": {
       "preRequisites:11": [
         614,
         693
@@ -51695,7 +51751,7 @@
         }
       }
     },
-    "679:10": {
+    "680:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -51770,7 +51826,7 @@
         }
       }
     },
-    "680:10": {
+    "681:10": {
       "preRequisites:11": [
         692,
         695
@@ -51847,7 +51903,7 @@
         }
       }
     },
-    "681:10": {
+    "682:10": {
       "preRequisites:11": [
         479
       ],
@@ -51917,7 +51973,7 @@
         }
       }
     },
-    "682:10": {
+    "683:10": {
       "preRequisites:11": [
         692
       ],
@@ -51989,7 +52045,7 @@
         }
       }
     },
-    "683:10": {
+    "684:10": {
       "preRequisites:11": [
         172
       ],
@@ -52059,7 +52115,7 @@
         }
       }
     },
-    "684:10": {
+    "685:10": {
       "preRequisites:11": [
         620,
         451
@@ -52130,7 +52186,7 @@
         }
       }
     },
-    "685:10": {
+    "686:10": {
       "preRequisites:11": [
         687,
         700,
@@ -52202,7 +52258,7 @@
         }
       }
     },
-    "686:10": {
+    "687:10": {
       "preRequisites:11": [
         243
       ],
@@ -52254,7 +52310,7 @@
         }
       }
     },
-    "687:10": {
+    "688:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -52323,7 +52379,7 @@
         }
       }
     },
-    "688:10": {
+    "689:10": {
       "preRequisites:11": [
         699
       ],
@@ -52393,7 +52449,7 @@
         }
       }
     },
-    "689:10": {
+    "690:10": {
       "preRequisites:11": [
         702
       ],
@@ -52463,7 +52519,7 @@
         }
       }
     },
-    "690:10": {
+    "691:10": {
       "preRequisites:11": [
         703
       ],
@@ -52515,7 +52571,7 @@
         }
       }
     },
-    "691:10": {
+    "692:10": {
       "preRequisites:11": [
         703
       ],
@@ -52579,15 +52635,15 @@
         }
       }
     },
-    "692:10": {
+    "693:10": {
       "preRequisites:11": [
         709,
-        765
+        679
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Put the Crude Titanium Sponge in a vacuum ejector to purify it. Then, macerate it for titanium dust. Smelt this in an EBF with Kanthal Coils (or better) to get a hot titanium ingot, which has to be cooled in a quencher for normal titanium ingots.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52650,7 +52706,7 @@
         }
       }
     },
-    "693:10": {
+    "694:10": {
       "preRequisites:11": [
         708
       ],
@@ -52702,7 +52758,7 @@
         }
       }
     },
-    "694:10": {
+    "695:10": {
       "preRequisites:11": [
         479
       ],
@@ -52754,7 +52810,7 @@
         }
       }
     },
-    "695:10": {
+    "696:10": {
       "preRequisites:11": [
         708
       ],
@@ -52830,7 +52886,7 @@
         }
       }
     },
-    "696:10": {
+    "697:10": {
       "preRequisites:11": [
         644
       ],
@@ -52882,7 +52938,7 @@
         }
       }
     },
-    "697:10": {
+    "698:10": {
       "preRequisites:11": [
         66
       ],
@@ -52934,7 +52990,7 @@
         }
       }
     },
-    "698:10": {
+    "699:10": {
       "preRequisites:11": [
         101
       ],
@@ -53001,7 +53057,7 @@
         }
       }
     },
-    "699:10": {
+    "700:10": {
       "preRequisites:11": [
         641
       ],
@@ -53053,7 +53109,7 @@
         }
       }
     },
-    "700:10": {
+    "701:10": {
       "preRequisites:11": [
         647
       ],
@@ -53123,7 +53179,7 @@
         }
       }
     },
-    "701:10": {
+    "702:10": {
       "preRequisites:11": [
         647
       ],
@@ -53193,7 +53249,7 @@
         }
       }
     },
-    "702:10": {
+    "703:10": {
       "preRequisites:11": [
         710
       ],
@@ -53263,9 +53319,9 @@
         }
       }
     },
-    "703:10": {
+    "704:10": {
       "preRequisites:11": [
-        679
+        706
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -53333,7 +53389,7 @@
         }
       }
     },
-    "704:10": {
+    "705:10": {
       "preRequisites:11": [
         479
       ],
@@ -53385,7 +53441,7 @@
         }
       }
     },
-    "705:10": {
+    "706:10": {
       "preRequisites:11": [
         104
       ],
@@ -53455,7 +53511,7 @@
         }
       }
     },
-    "706:10": {
+    "707:10": {
       "preRequisites:11": [
         637
       ],
@@ -53494,7 +53550,7 @@
         }
       }
     },
-    "707:10": {
+    "708:10": {
       "preRequisites:11": [
         101
       ],
@@ -53546,7 +53602,7 @@
         }
       }
     },
-    "708:10": {
+    "709:10": {
       "preRequisites:11": [
         25
       ],
@@ -53661,7 +53717,7 @@
         }
       }
     },
-    "709:10": {
+    "710:10": {
       "preRequisites:11": [
         25
       ],
@@ -53776,7 +53832,7 @@
         }
       }
     },
-    "710:10": {
+    "711:10": {
       "preRequisites:11": [
         25
       ],
@@ -53876,7 +53932,7 @@
         }
       }
     },
-    "711:10": {
+    "712:10": {
       "preRequisites:11": [
         191
       ],
@@ -53961,7 +54017,7 @@
         }
       }
     },
-    "712:10": {
+    "713:10": {
       "preRequisites:11": [
         243
       ],
@@ -54013,7 +54069,7 @@
         }
       }
     },
-    "713:10": {
+    "714:10": {
       "preRequisites:11": [
         728,
         726
@@ -54084,7 +54140,7 @@
         }
       }
     },
-    "714:10": {
+    "715:10": {
       "preRequisites:11": [
         729,
         411
@@ -54137,7 +54193,7 @@
         }
       }
     },
-    "715:10": {
+    "716:10": {
       "preRequisites:11": [
         203
       ],
@@ -54207,7 +54263,7 @@
         }
       }
     },
-    "716:10": {
+    "717:10": {
       "preRequisites:11": [
         727
       ],
@@ -54277,7 +54333,7 @@
         }
       }
     },
-    "717:10": {
+    "718:10": {
       "preRequisites:11": [
         730
       ],
@@ -54392,7 +54448,7 @@
         }
       }
     },
-    "718:10": {
+    "719:10": {
       "preRequisites:11": [
         733
       ],
@@ -54507,7 +54563,7 @@
         }
       }
     },
-    "719:10": {
+    "720:10": {
       "preRequisites:11": [
         730
       ],
@@ -54622,7 +54678,7 @@
         }
       }
     },
-    "720:10": {
+    "721:10": {
       "preRequisites:11": [
         30
       ],
@@ -54692,7 +54748,7 @@
         }
       }
     },
-    "721:10": {
+    "722:10": {
       "preRequisites:11": [
         398
       ],
@@ -54762,7 +54818,7 @@
         }
       }
     },
-    "722:10": {
+    "723:10": {
       "preRequisites:11": [
         735
       ],
@@ -54805,7 +54861,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "723:10": {
+    "724:10": {
       "preRequisites:11": [
         66
       ],
@@ -54902,7 +54958,7 @@
         }
       }
     },
-    "724:10": {
+    "725:10": {
       "preRequisites:11": [
         30
       ],
@@ -54954,7 +55010,7 @@
         }
       }
     },
-    "725:10": {
+    "726:10": {
       "preRequisites:11": [
         30
       ],
@@ -54999,7 +55055,7 @@
         }
       }
     },
-    "726:10": {
+    "727:10": {
       "preRequisites:11": [
         222
       ],
@@ -55061,7 +55117,7 @@
         }
       }
     },
-    "727:10": {
+    "728:10": {
       "preRequisites:11": [
         497
       ],
@@ -55125,7 +55181,7 @@
         }
       }
     },
-    "728:10": {
+    "729:10": {
       "preRequisites:11": [
         101,
         465
@@ -55133,7 +55189,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "As you find more resources around the world, you\u0027ll find that you\u0027ll have to somehow transport them back to your main base. The main method of linking separate bases at this point are Trains.\n\nTrains are made using the Railroad Engineering Station. In order to actually form the multiblock, you will need to cover the middle 3 rows of the concrete floor of the Station with Immersive Railroading Tracks, which will be explained further in a later quest. The concrete blocks in the center row of the floor are replacable with any block, including pipes or air, so that you can easily interact with any trains spawned by the Station.\n\nKeep in mind that the Railroad Engineering Station does not make a train item that you can simply drag into your inventory. §6The multiblock spawns a train entity on the center rails§f when provided with the needed items to construct a train. Check JEI to see what trains you can build.\n",
+          "desc:8": "§lGo to the Transportation category of the questbook for the full Train questline. This is only the introduction.§r\n\nAs you find more resources around the world, you\u0027ll find that you\u0027ll have to somehow transport them back to your main base. The main method of linking separate bases at this point are Trains.\n\nTrains are made using the Railroad Engineering Station. In order to actually form the multiblock, you will need to cover the middle 3 rows of the concrete floor of the Station with Immersive Railroading Tracks, which will be explained further in a later quest. The concrete blocks in the center row of the floor are replacable with any block, including pipes or air, so that you can easily interact with any trains spawned by the Station.\n\nKeep in mind that the Railroad Engineering Station does not make a train item that you can simply drag into your inventory. §6The multiblock spawns a train entity on the center rails§f when provided with the needed items to construct a train. Check JEI to see what trains you can build.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55193,14 +55249,14 @@
         }
       }
     },
-    "729:10": {
+    "730:10": {
       "preRequisites:11": [
         742
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Every Train needs an Engine. Your first available train is the Monorail, powered by the Monorail Engine. Make one.\n\nNote: Due to JEI being bad with NBT, clicking on the monorail engine will show how to make the monorail engine, the monorail tank, the monorail freight and the monorail passanger. Just scroll through until you see the recipe for the actual monorail engine.",
+          "desc:8": "Every Train needs an Engine. Your first available train is the Monorail, powered by the Monorail Engine. Make one.\n\n§6TIP:§f Trains can have 2 Engines, one at each end, facing opposite directions. This allows the train to be driven both ways on the track, making return trips far easier.\n\n§eNote:§f Due to JEI being bad with NBT, clicking on the monorail engine will show how to make the monorail engine, the monorail tank, the monorail freight and the monorail passanger. Just scroll through until you see the recipe for the actual monorail engine.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55245,7 +55301,7 @@
         }
       }
     },
-    "730:10": {
+    "731:10": {
       "preRequisites:11": [
         743
       ],
@@ -55342,7 +55398,7 @@
         }
       }
     },
-    "731:10": {
+    "732:10": {
       "preRequisites:11": [
         30
       ],
@@ -55406,7 +55462,7 @@
         }
       }
     },
-    "732:10": {
+    "733:10": {
       "preRequisites:11": [
         743
       ],
@@ -55437,7 +55493,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Driving your Trains",
@@ -55460,7 +55516,7 @@
         }
       }
     },
-    "733:10": {
+    "734:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -55517,7 +55573,7 @@
         }
       }
     },
-    "734:10": {
+    "735:10": {
       "preRequisites:11": [
         743
       ],
@@ -55569,7 +55625,7 @@
         }
       }
     },
-    "735:10": {
+    "736:10": {
       "preRequisites:11": [
         743
       ],
@@ -55639,9 +55695,9 @@
         }
       }
     },
-    "736:10": {
+    "737:10": {
       "preRequisites:11": [
-        743
+        746
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -55711,7 +55767,7 @@
         }
       }
     },
-    "737:10": {
+    "738:10": {
       "preRequisites:11": [
         688,
         719
@@ -55782,7 +55838,7 @@
         }
       }
     },
-    "738:10": {
+    "739:10": {
       "preRequisites:11": [
         41
       ],
@@ -55852,7 +55908,7 @@
         }
       }
     },
-    "739:10": {
+    "740:10": {
       "preRequisites:11": [
         700
       ],
@@ -55922,7 +55978,7 @@
         }
       }
     },
-    "740:10": {
+    "741:10": {
       "preRequisites:11": [
         755,
         550
@@ -55993,7 +56049,7 @@
         }
       }
     },
-    "741:10": {
+    "742:10": {
       "preRequisites:11": [
         756
       ],
@@ -56063,7 +56119,7 @@
         }
       }
     },
-    "742:10": {
+    "743:10": {
       "preRequisites:11": [
         479
       ],
@@ -56133,7 +56189,7 @@
         }
       }
     },
-    "743:10": {
+    "744:10": {
       "preRequisites:11": [
         754
       ],
@@ -56248,7 +56304,7 @@
         }
       }
     },
-    "744:10": {
+    "745:10": {
       "preRequisites:11": [
         757
       ],
@@ -56300,7 +56356,7 @@
         }
       }
     },
-    "745:10": {
+    "746:10": {
       "preRequisites:11": [
         758
       ],
@@ -56395,7 +56451,7 @@
         }
       }
     },
-    "746:10": {
+    "747:10": {
       "preRequisites:11": [
         758
       ],
@@ -56490,7 +56546,7 @@
         }
       }
     },
-    "747:10": {
+    "748:10": {
       "preRequisites:11": [
         758
       ],
@@ -56585,7 +56641,7 @@
         }
       }
     },
-    "748:10": {
+    "749:10": {
       "preRequisites:11": [
         758
       ],
@@ -56680,7 +56736,7 @@
         }
       }
     },
-    "749:10": {
+    "750:10": {
       "preRequisites:11": [
         20
       ],
@@ -56732,7 +56788,7 @@
         }
       }
     },
-    "750:10": {
+    "751:10": {
       "preRequisites:11": [
         651
       ],
@@ -56781,76 +56837,6 @@
         "0:10": {
           "index:3": 0,
           "taskID:8": "bq_standard:checkbox"
-        }
-      }
-    },
-    "751:10": {
-      "preRequisites:11": [
-        679
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 205,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_item_2"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Titanium Sponge",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 765,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 205,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_2"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
         }
       }
     }
@@ -57734,48 +57720,55 @@
           "y:3": -60
         },
         "61:10": {
+          "id:3": 535,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": -90
+        },
+        "62:10": {
           "id:3": 646,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": 438
         },
-        "62:10": {
+        "63:10": {
           "id:3": 668,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 186
         },
-        "63:10": {
+        "64:10": {
           "id:3": 670,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 66,
           "y:3": 342
         },
-        "64:10": {
+        "65:10": {
           "id:3": 711,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 222
         },
-        "65:10": {
+        "66:10": {
           "id:3": 737,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -270,
           "y:3": 330
         },
-        "66:10": {
+        "67:10": {
           "id:3": 745,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 60,
           "y:3": 432
         },
-        "67:10": {
+        "68:10": {
           "id:3": 752,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -59661,8 +59654,8 @@
           "id:3": 550,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -276,
-          "y:3": 102
+          "x:3": -222,
+          "y:3": 174
         },
         "5:10": {
           "id:3": 614,
@@ -59848,10 +59841,10 @@
         },
         "31:10": {
           "id:3": 679,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": -84
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -24,
+          "y:3": 180
         },
         "32:10": {
           "id:3": 680,
@@ -60011,15 +60004,15 @@
           "id:3": 706,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -186,
-          "y:3": 108
+          "x:3": -138,
+          "y:3": 180
         },
         "55:10": {
           "id:3": 707,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -18,
-          "y:3": 162
+          "x:3": -48,
+          "y:3": 150
         },
         "56:10": {
           "id:3": 708,
@@ -60074,14 +60067,14 @@
           "id:3": 717,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
-          "y:3": -84
+          "x:3": -132,
+          "y:3": 240
         },
         "64:10": {
           "id:3": 718,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
+          "x:3": 108,
           "y:3": 162
         },
         "65:10": {
@@ -60111,13 +60104,6 @@
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": -156
-        },
-        "69:10": {
-          "id:3": 765,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": 60
         }
       }
     },
@@ -61674,15 +61660,15 @@
           "id:3": 746,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 396,
-          "y:3": -12
+          "x:3": 294,
+          "y:3": 96
         },
         "10:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 396,
-          "y:3": 90
+          "y:3": 96
         },
         "11:10": {
           "id:3": 748,
@@ -61703,7 +61689,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 294,
-          "y:3": 96
+          "y:3": 144
         }
       }
     },
