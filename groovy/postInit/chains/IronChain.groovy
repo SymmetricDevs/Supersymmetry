@@ -261,7 +261,7 @@ ROASTER.recipeBuilder()
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
-    .inputs(metaitem('dustIronIiHydroxide') * 5)
+    .inputs(ore('dustIronIiHydroxide') * 5)
     .outputs(metaitem('dustIronIiOxide') * 2)
     .fluidOutputs(fluid('steam') * 1000)
     .EUt(Globals.voltAmps[1])
