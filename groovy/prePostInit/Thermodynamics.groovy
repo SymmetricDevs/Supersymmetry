@@ -61,11 +61,6 @@ EthyleneGlycolCoolant.setDurationRadiator(50);
 EthyleneGlycolCoolant.setAmountToUse(2000);
 EthyleneGlycolCoolant.setTimeFactor(4);
 
-def PolydimethylsiloxaneCoolant = new ICoolant("polydimethylsiloxane", "warm_polydimethylsiloxane");
-PolydimethylsiloxaneCoolant.setDurationRadiator(50);
-PolydimethylsiloxaneCoolant.setAmountToUse(1000);
-PolydimethylsiloxaneCoolant.setTimeFactor(3);
-
 def PolychlorinatedBiphenylCoolant = new ICoolant("polychlorinated_biphenyl", "warm_polychlorinated_biphenyl");
 PolychlorinatedBiphenylCoolant.setDurationRadiator(40);
 PolychlorinatedBiphenylCoolant.setAmountToUse(1000);
@@ -77,7 +72,6 @@ def Coolants = [
         LubricantCoolant,
         SodiumPotassiumCoolant,
         EthyleneGlycolCoolant,
-        PolydimethylsiloxaneCoolant,
         PolychlorinatedBiphenylCoolant
 ];
 
