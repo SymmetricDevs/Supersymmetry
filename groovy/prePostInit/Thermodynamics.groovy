@@ -46,6 +46,11 @@ SaltWaterCoolant.setDurationRadiator(100);
 SaltWaterCoolant.setAmountToUse(1000);
 SaltWaterCoolant.setTimeFactor(8);
 
+def BrineCoolant = new ICoolant("brine", "warm_brine");
+BrineCoolant.setDurationRadiator(100);
+BrineCoolant.setAmountToUse(1000);
+BrineCoolant.setTimeFactor(8);
+
 def LubricantCoolant = new ICoolant("lubricant", "warm_lubricant");
 LubricantCoolant.setDurationRadiator(75);
 LubricantCoolant.setAmountToUse(1000);

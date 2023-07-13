@@ -286,6 +286,8 @@ class ThermodynamicsMaterials {
 
                 generateCoolant(PolychlorinatedBiphenyl, 22320);
 
+                generateCoolant(Brine, 22325);
+
                 generateCoolant(SodiumPotassium, 22330);
 
                 generateHotGas(Air, 22400);
