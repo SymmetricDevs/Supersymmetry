@@ -142,6 +142,7 @@ ROASTER.recipeBuilder()
 
 //THERMAL PROCESS
 EBF.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('dustFluorapatite') * 42)
     .inputs(ore('dustSiliconDioxide') * 27)
     .inputs(ore('dustCarbon') * 15)
@@ -155,6 +156,7 @@ EBF.recipeBuilder()
     .buildAndRegister()
 
 EBF.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('dustChlorapatite') * 42)
     .inputs(ore('dustSiliconDioxide') * 27)
     .inputs(ore('dustCarbon') * 15)
@@ -168,6 +170,7 @@ EBF.recipeBuilder()
     .buildAndRegister()
 
 EBF.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('dustFluorapatite') * 44)
     .inputs(ore('dustSiliconDioxide') * 27)
     .inputs(ore('dustCarbon') * 15)
