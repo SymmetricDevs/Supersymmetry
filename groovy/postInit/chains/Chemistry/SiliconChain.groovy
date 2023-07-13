@@ -26,6 +26,7 @@ mods.gregtech.compressor.removeByInput(2, [metaitem('dustSiliconCarbide')], null
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSiliconDioxide'), metaitem('dustCarbon') * 2], null)
 
 EBF.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('dustSiliconDioxide') * 3)
         .inputs(ore('dustCarbon') * 2)
         .outputs(metaitem('dustSilicon'))
