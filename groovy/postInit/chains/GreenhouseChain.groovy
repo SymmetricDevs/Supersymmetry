@@ -67,12 +67,12 @@ def potassiumNutrients = [
 ];
 
 def phosphorusNutrients = [
-        metaitem('dustCalcite'),
         metaitem('dustChlorapatite'),
         metaitem('dustHydroxyapatite'),
         metaitem('dustFluorapatite'),
         metaitem('dustTricalciumPhosphate'),
         metaitem('dustPhosphorus'),
+        metaitem('dustPhosphorite')
         item('minecraft:dye', 15)
 ];
 
