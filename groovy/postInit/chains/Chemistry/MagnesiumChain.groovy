@@ -61,7 +61,7 @@ class Combustible {
 }
 
 def combustibles = [
-        new Combustible('dustCarbon', 1, 1),
+        new Combustible('dustCarbon', 1, 1, 'dustTinyDarkAsh'),
         new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
         new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
         new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),

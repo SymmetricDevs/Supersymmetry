@@ -84,7 +84,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        DilutePotassiumCarbonateSolution = new Material.Builder(13011, "dilute_potassium_carbonate_solution")
+        DilutedPotassiumCarbonateSolution = new Material.Builder(13011, "diluted_potassium_carbonate_solution")
                 .fluid()
                 .components(Water, 3, PotassiumCarbonate, 1)
                 .colorAverage()
@@ -313,7 +313,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
       
-        DiluteHexafluorosilicicAcid = new Material.Builder(13049, "dilute_hexafluorosilicic_acid")
+        DilutedHexafluorosilicicAcid = new Material.Builder(13049, "diluted_hexafluorosilicic_acid")
                 .fluid()
                 .components(Water, 8, HexafluorosilicicAcid, 1)
                 .colorAverage()
@@ -325,13 +325,13 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        DiluteSodiumSulfateSolution = new Material.Builder(13051, "dilute_sodium_sulfate_solution")
+        DilutedSodiumSulfateSolution = new Material.Builder(13051, "diluted_sodium_sulfate_solution")
                 .fluid()
                 .color(0x9191b3)
                 .build()
                 .setFormula("(H2O)2(Na2SO4)", true);
 
-        DiluteHydrofluoricAcid = new Material.Builder(13052, "dilute_hydrofluoric_acid")
+        DilutedHydrofluoricAcid = new Material.Builder(13052, "diluted_hydrofluoric_acid")
                 .fluid()
                 .components(Water, 2, HydrogenFluoride, 1)
                 .colorAverage()
@@ -472,10 +472,22 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        DiluteAmmoniumSulfateSolution = new Material.Builder(13075, "dilute_ammonium_sulfate_solution")
+        DilutedAmmoniumSulfateSolution = new Material.Builder(13075, "diluted_ammonium_sulfate_solution")
                 .fluid()
                 .components(AmmoniumSulfate, 1, Water, 2)
                 .colorAverage()
                 .build();
+
+        DilutedAmmoniumChlorideSolution = new Material.Builder(13076, "diluted_ammonium_chloride_solution")
+                .fluid()
+                .components(AmmoniumChloride, 1, Water, 8)
+                .colorAverage()
+                .build();
+
+        AmmoniacalSodiumBicarbonateSolution = new Material.Builder(13077, "ammoniacal_sodium_bicarbonate_solution")
+                .fluid()
+                .components(AmmoniumChloride, 1, SodiumBicarbonate, 1, Water, 1)
+                .colorAverage()
+                .build()
     }
 }

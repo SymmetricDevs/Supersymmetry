@@ -123,9 +123,9 @@ public class UnknownCompositionMaterials {
                 .fluidTemp(400)
                 .build();
 
-        GraphiteMix = new Material.Builder(4019, "graphite_mix")
+        PalladiumContainingSolution = new Material.Builder(4019, "palladium_containing_solution")
                 .fluid()
-                .color(0x080808)
+                .color(0x808080)
                 .build();
 
         Mash = new Material.Builder(4020, "mash")
@@ -1254,6 +1254,200 @@ public class UnknownCompositionMaterials {
         SupersaturatedBrine = new Material.Builder(4238, "supersaturated_brine")
                 .fluid()
                 .color(0xdbb56e)
+                .build();
+        
+        OligomericBisphenolSolution = new Material.Builder(4239, "oligomeric_bisphenol_solution")
+                .fluid()
+                .color(0xcfa532)
+                .build();
+
+        ImpureBariteSlurry = new Material.Builder(4240, "impure_barite_slurry")
+                .fluid()
+                .color(0x87a2ab)
+                .build();
+
+        BariteSlurry = new Material.Builder(4241, "barite_slurry")
+                .fluid()
+                .color(0x8fb3bf)
+                .build();
+
+        GraniteTailingSlurry = new Material.Builder(4242, "granite_tailing_slurry")
+                .fluid()
+                .color(0xc48072)
+                .build();
+
+        GalenaSlurry = new Material.Builder(4243, "galena_slurry")
+                .fluid()
+                .color(0x6a3678)
+                .build();
+
+        ByproductSphaleriteSlurry = new Material.Builder(4244, "byproduct_sphalerite_slurry")
+                .fluid()
+                .color(0x9f97a1)
+                .build();
+
+        ImpureCerussiteSlurry = new Material.Builder(4245, "impure_cerussite_slurry")
+                .fluid()
+                .color(0xe5a6f5)
+                .build();
+
+        CerussiteSlurry = new Material.Builder(4246, "cerussite_slurry")
+                .fluid()
+                .color(0xdf8cf5)
+                .build();
+
+        ImpureAnglesiteSlurry = new Material.Builder(4247, "impure_anglesite_slurry")
+                .fluid()
+                .color(0x8f60d1)
+                .build();
+
+        AnglesiteSlurry = new Material.Builder(4248, "anglesite_slurry")
+                .fluid()
+                .color(0x854ad9)
+                .build();
+
+        ImpureSpodumeneSlurry = new Material.Builder(4249, "impure_spodumene_slurry")
+                .fluid()
+                .color(0xde9eb6)
+                .build();
+
+        SpodumeneSlurry = new Material.Builder(4250, "spodumene_slurry")
+                .fluid()
+                .color(0xffb5d1)
+                .build();
+                
+        PegmatiteTailingSlurry = new Material.Builder(4251, "pegmatite_tailing_slurry")
+                .fluid()
+                .color(0x2c4a2d)
+                .build();
+
+        FilteredPhosphateSlurry = new Material.Builder(4252, "filtered_phosphate_slurry")
+                .fluid()
+                .color(0x918e27)
+                .build();
+
+        PhosphateConcentrateSlurry = new Material.Builder(4253, "phosphate_concentrate_slurry")
+                .fluid()
+                .color(0xadaa32)
+                .build();
+
+        ImpureCassiteriteSlurry = new Material.Builder(4254, "impure_cassiterite_slurry")
+                .fluid()
+                .color(0xbdbdbd)
+                .build();
+
+        CassiteriteSlurry = new Material.Builder(4255, "cassiterite_slurry")
+                .fluid()
+                .color(0xdcdcdc)
+                .build();
+
+        LimestoneTailingSlurry = new Material.Builder(4256, "limestone_tailing_slurry")
+                .fluid()
+                .color(0x68695d)
+                .build();
+
+        ImpureMalachiteSlurry = new Material.Builder(4257, "impure_malachite_slurry")
+                .fluid()
+                .color(0x104006)
+                .build();
+
+        MalachiteSlurry = new Material.Builder(4258, "malachite_slurry")
+                .fluid()
+                .color(0x155f05)
+                .build();
+
+        ImpureChalcopyriteSlurry = new Material.Builder(4259, "impure_chalcopyrite_slurry")
+                .fluid()
+                .color(0x856119)
+                .build();
+
+        ChalcopyriteSlurry = new Material.Builder(4260, "chalcopyrite_slurry")
+                .fluid()
+                .color(0xa07828)
+                .build();
+
+        ImpureBorniteSlurry = new Material.Builder(4261, "impure_bornite_slurry")
+                .fluid()
+                .color(0x7d511d)
+                .build();
+
+        BorniteSlurry = new Material.Builder(4262, "bornite_slurry")
+                .fluid()
+                .color(0x97662b)
+                .build();
+
+        ImpureChalcociteSlurry = new Material.Builder(4263, "impure_chalcocite_slurry")
+                .fluid()
+                .color(0x262424)
+                .build();
+
+        ChalcociteSlurry = new Material.Builder(4264, "chalcocite_slurry")
+                .fluid()
+                .color(0x353535)
+                .build();
+
+        MalachiteLeach = new Material.Builder(4265, "malachite_leach")
+                .fluid()
+                .color(0x0f6880)
+                .build();
+
+        OxidizedMalachiteLeach = new Material.Builder(4266, "oxidized_malachite_leach")
+                .fluid()
+                .color(0x1a728a)
+                .build();
+
+        PyriteSlurry = new Material.Builder(4267, "pyrite_slurry")
+                .fluid()
+                .color(0x967828)
+                .build();
+
+        CopperConcentrateSlurry = new Material.Builder(4268, "copper_concentrate_slurry")
+                .fluid()
+                .color(0xff6400)
+                .build();
+
+        CopperConcentrate = new Material.Builder(4269, "copper_concentrate")
+                .dust()
+                .color(0xff6400)
+                .iconSet(SAND)
+                .build();
+
+        CopperMatte = new Material.Builder(4270, "copper_matte")
+                .dust()
+                .color(0x5c3d08)
+                .build();
+
+        BlisterCopper = new Material.Builder(4271, "blister_copper")
+                .ingot()
+                .flags(GENERATE_PLATE)
+                .color(0x6e4c14)
+                .iconSet(SHINY)
+                .build();
+
+        CopperMatteFlueDust = new Material.Builder(4272, "copper_matte_flue_dust")
+                .dust()
+                .color(0x3e146e)
+                .iconSet(DULL)
+                .build();
+
+        CopperMatteFlueGas = new Material.Builder(4273, "copper_matte_flue_gas")
+                .fluid()
+                .color(0x3e146e)
+                .build();
+
+        ImpureCinnabarSlurry = new Material.Builder(4274, "impure_cinnabar_slurry")
+                .fluid()
+                .color(0x820000)
+                .build();
+
+        CinnabarSlurry = new Material.Builder(4275, "cinnabar_slurry")
+                .fluid()
+                .color(0x960000)
+                .build();
+
+        ChlorofluoromethaneMix = new Material.Builder(4276, "chlorofluoromethane_mix")
+                .fluid()
+                .color(0xb03f5d)
                 .build();
     }
 }

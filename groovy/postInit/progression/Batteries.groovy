@@ -61,6 +61,10 @@ crafting.addShaped("drum_lead", metaitem('drum.lead'), [
 crafting.addShapeless("drum_nbt_lead", metaitem('drum.lead'), [
         metaitem('drum.lead').noreturn()
 ]);
+crafting.addShapeless("drum_nbt_brass", metaitem('drum.brass'), [
+        metaitem('drum.brass').noreturn()
+]);
+// Note: this is a temporary fix to clear brass drum.
 
 mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('battery.hull.lv'))
@@ -159,7 +163,7 @@ BR.recipeBuilder()
         .fluidInputs(fluid('potassium_hydroxide_solution') * 2000)
         .fluidInputs(fluid('chlorine') * 2000)
         .outputs(metaitem('dustNickelOxideHydroxide') * 8)
-        .fluidOutputs(fluid('dilute_rock_salt_solution') * 4000)
+        .fluidOutputs(fluid('diluted_rock_salt_solution') * 4000)
         .duration(100)
         .EUt(30)
         .buildAndRegister()

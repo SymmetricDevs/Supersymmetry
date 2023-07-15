@@ -16,7 +16,7 @@ import supersymmetry.api.recipes.SuSyRecipeMaps;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
 
-//eventManager.listen(EventPriority.LOWEST) 
+//eventManager.listen(EventPriority.LOWEST)
 class ChangeFlags {
     public static void init() {
     //GregTechAPI.MaterialEvent event ->
@@ -24,6 +24,8 @@ class ChangeFlags {
         log.infoMC("Modifying flags...")
 
         RecipeMaps.BLAST_RECIPES.setMaxFluidInputs(2);
+        SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.setMaxFluidInputs(3);
+        SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.setMaxInputs(12);
 
         Steel.addFlags("generate_spring", "generate_spring_small");
         Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");
@@ -53,6 +55,7 @@ class ChangeFlags {
         Phosphorus.addFlags("no_smelting");
         
         DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
+        AquaRegia.setFormula("(HNO3)(HCl)3", true);
       
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
@@ -69,6 +72,10 @@ class ChangeFlags {
 
         Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Cadmium.setProperty(PropertyKey.FLUID, new FluidProperty());
+
+        BisphenolA.setProperty(PropertyKey.DUST, new DustProperty());
+        BisphenolA.addFlags("no_unification")
+        BisphenolA.getProperty(PropertyKey.FLUID).setFluidTemperature(428)
 
         OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);

@@ -211,7 +211,7 @@ public class OrganicChemistryMaterials {
                 .color(0xbede9b)
                 .build();
 
-        DiluteEpichlorohydrin = new Material.Builder(15033, "dilute_epichlorohydrin")
+        DilutedEpichlorohydrin = new Material.Builder(15033, "diluted_epichlorohydrin")
                 .fluid()
                 .color(0x91664d)
                 .build();
@@ -252,16 +252,15 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        TwoNitrochlorobenzeneSolution = new Material.Builder(15040, 'two_nitrochlorobenzene_solution')
-                .fluid()
-                .components(Toluene, 1, Nitrochlorobenzene, 1)
-                .colorAverage()
+        TwoNitrochlorobenzene = new Material.Builder(15040, 'two_nitrochlorobenzene')
+                .dust().fluid()
+                .components(Carbon, 6, Hydrogen, 4, Chlorine, 1, Nitrogen, 1, Oxygen, 2)
+                .color(0xc7c944)
                 .build();
 
-        FourNitrochlorobenzeneSolution = new Material.Builder(15041, 'four_nitrochlorobenzene_solution')
-                .fluid()
-                .components(Toluene, 1, FourNitrochlorobenzene, 1)
-                .colorAverage()
+        MixedNitrochlorobenzene = new Material.Builder(15041, 'mixed_nitrochlorobenzene')
+                .dust().fluid()
+                .color(0xa4a644)
                 .build();
 
         FourNitroanilineSolution = new Material.Builder(15042, 'four_nitroaniline_solution')
@@ -377,15 +376,15 @@ public class OrganicChemistryMaterials {
                 .color(0x2b1e11)
                 .build();
 
-        DilutedCyclohexanone = new Material.Builder(15061, 'diluted_cyclohexanone')
-                .fluid()
-                .components(Water, 1, Cyclohexanone, 1)
-                .colorAverage()
+        NHexadecylammoniumAcetate = new Material.Builder(15061, "n_hexadecylammonium_acetate")
+                .dust()
+                .components(Carbon, 16, Hydrogen, 39, Nitrogen, 1, Oxygen, 2)
+                .color(0xffd4d4)
                 .build();
 
         CaprolactamSolution = new Material.Builder(15062, 'caprolactam_solution')
                 .fluid()
-                .components(SulfuricAcid, 1, Caprolactam, 1)
+                .components(AmmoniumSulfate, 1, Caprolactam, 1, Water, 2)
                 .colorAverage()
                 .build();
 
@@ -1346,10 +1345,10 @@ public class OrganicChemistryMaterials {
                 .color(0xb3af34)
                 .build();
 
-        NeutralizedCaprolactamSolution = new Material.Builder(15217, "neutralized_caprolactam_solution")
-                .fluid()
-                .components(AmmoniumSulfate, 1, Caprolactam, 1, Water, 2)
-                .colorAverage()
+        NHexadecylamine = new Material.Builder(15217, "n_hexadecylamine")
+                .dust()
+                .components(Carbon, 16, Hydrogen, 35, Nitrogen, 1)
+                .color(0xcff5ff)
                 .build();
 
         TertButylAlcohol = new Material.Builder(15218, "tert_butyl_alcohol")
@@ -1444,17 +1443,59 @@ public class OrganicChemistryMaterials {
                 .components(Caprolactam, 1, Toluene, 1)
                 .colorAverage()
                 .build();
-
-        NHexadecylamine = new Material.Builder(15218, "n_hexadecylamine")
-                .dust()
-                .components(Carbon, 16, Hydrogen, 35, Nitrogen, 1)
-                .color(0xcff5ff)
+        
+        Trimethylaluminium = new Material.Builder(15231, "trimethylaluminium")
+                .fluid()
+                .components(Aluminium, 1, Carbon, 3, Hydrogen, 9)
+                .color(0x7abfb4)
                 .build();
 
-        NHexadecylammoniumAcetate = new Material.Builder(15219, "n_hexadecylammonium_acetate")
+        Trimethylaluminium.setFormula("Al(CH3)3", true)
+
+        Methylaluminoxane = new Material.Builder(15232, "methylaluminoxane")
                 .dust()
-                .components(Carbon, 16, Hydrogen, 39, Nitrogen, 1, Oxygen, 2)
-                .color(0xffd4d4)
+                .components(Aluminium, 1, Carbon, 1, Hydrogen, 3, Oxygen, 1)
+                .color(0x33a391)
                 .build();
+
+        ZirconoceneDichloride = new Material.Builder(15233, "zirconocene_dichloride")
+                .dust()
+                .components(Zirconium, 1, Carbon, 10, Hydrogen, 10, Chlorine, 2)
+                .color(0x3ea0a3)
+                .build();
+
+        ZirconoceneDichloride.setFormula("Zr(C5H5)2Cl2", true)
+
+        Tetrahydrofuran = new Material.Builder(15234, "tetrahydrofuran")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 8, Oxygen, 1)
+                .color(0xd13485)
+                .build();
+
+        SodiumCyclopentadienide = new Material.Builder(15235, "sodium_cyclopentadienide")
+                .dust()
+                .components(Sodium, 1, Carbon, 5, Hydrogen, 5)
+                .colorAverage()
+                .build();
+      
+        OctylHydroxamicAcid = new Material.Builder(15236, "octyl_hydroxamic_acid")
+                .dust()
+                .components(Carbon, 8, Hydrogen, 17, Oxygen, 2, Nitrogen, 1)
+                .color(0xd47f31)
+                .build();
+
+        PotassiumOctylHydroxamate = new Material.Builder(15237, "potassium_octyl_hydroxamate")
+                .dust()
+                .components(Carbon, 8, Hydrogen, 16, Oxygen, 2, Nitrogen, 1, Potassium, 1)
+                .color(0xd47f50)
+                .build();
+
+        PotassiumButylXanthate = new Material.Builder(15238, "potassium_butyl_xanthate")
+                .dust()
+                .components(Carbon, 5, Hydrogen, 9, Oxygen, 1, Sulfur, 2, Potassium, 1)
+                .color(0xd1c675)
+                .build();
+
+        PotassiumButylXanthate.setFormula("C4H9OCS2K", true)
     }
 }

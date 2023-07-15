@@ -524,6 +524,15 @@ crafting.addShaped("silicon_carbide_casing", item('susy:susy_multiblock_casing')
 		[metaitem('plateSiliconCarbide'), ore('craftingToolWrench'), metaitem('plateSiliconCarbide')]
 ])
 
+recipemap('assembler').recipeBuilder()
+		.circuitMeta(6)
+		.inputs(ore('plateSiliconCarbide') * 6)
+		.inputs(item('gregtech:turbine_casing', 7))
+		.outputs(item('susy:susy_multiblock_casing') * 2)
+		.EUt(16)
+		.duration(50)
+		.buildAndRegister()
+
 //New Dynamo Hatches
 
 recipemap('assembler').recipeBuilder()
@@ -614,9 +623,9 @@ crafting.addShaped("gregtech:primitive_mud_pump", metaitem('primitive_mud_pump')
 ]);
 
 crafting.addShaped("gregtech:railroad_engineering_station", metaitem('railroad_engineering_station'), [
-		[item('minecraft:rail'), item('minecraft:rail'), item('minecraft:rail')],
-		[item('minecraft:rail'), hulls[1], item('minecraft:rail')],
-		[item('minecraft:rail'), item('minecraft:rail'), item('minecraft:rail')]
+		[robotArms[1], null, robotArms[1]],
+		[conveyors[1], hulls[1], conveyors[1]],
+		[metaitem('plateSteel'), circuits[1], metaitem('plateSteel')]
 ]);
 
 crafting.addShaped("gregtech:condenser", metaitem('condenser'), [

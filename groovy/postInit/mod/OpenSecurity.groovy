@@ -96,6 +96,18 @@ for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
 			.inputs(ore('oc:cpu1'))
+			.inputs(ore('oc:dataCard1'))
+			.inputs(metaitem('sensor.lv'))
+			.inputs(metaitem('emitter.lv'))
+			.fluidInputs(solder)
+			.outputs(item('opensecurity:entity_detector'))
+			.duration(400)
+			.EUt(120)
+			.buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('hull.mv'))
+			.inputs(ore('oc:cpu1'))
 			.inputs(ore('oc:ram1'))
 			.inputs(item('opensecurity:mag_card'))
             .fluidInputs(solder)

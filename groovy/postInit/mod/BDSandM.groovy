@@ -1,5 +1,6 @@
 def name_removals = [
-    'bdsandm:upgrade_void'
+    'bdsandm:upgrade_void',
+    'bdsandm:wood_crate'
 ]
 
 for (name in name_removals) {

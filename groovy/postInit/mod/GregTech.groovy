@@ -40,6 +40,9 @@ mods.gregtech.fluid_heater.removeByInput(2048, [metaitem('circuit.integrated').w
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('beryllium_oxide') * 144])
 // Beryllium Oxide Plate * 1
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustBerylliumOxide')], null)
+// Laminated Glass * 1
+mods.gregtech.forming_press.removeByInput(480, [item('gregtech:transparent_casing') * 2, metaitem('platePolyvinylButyral')], null)
+
 
 def name_removals = [
         'gregtech:cover_fluid_voiding',
@@ -75,7 +78,9 @@ def name_removals = [
         'gregtech:quantum_tank_luv',
         'gregtech:quantum_tank_zpm',
         'gregtech:quantum_tank_uv',
-        'gregtech:quantum_tank_uhv'
+        'gregtech:quantum_tank_uhv',
+		'gregtech:large_combustion_engine',
+		'gregtech:extreme_combustion_engine'
 ]
 
 for (name in name_removals) {
@@ -163,6 +168,12 @@ crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bron
     [ore('craftingToolHardHammer'), ore('stickBronze'), ore('screwBronze')],
     [ore('plateBronze'), item('gregtech:metal_casing:1'), ore('stickBronze')],
     [ore('craftingToolScrewdriver'), ore('stickBronze'), ore('screwBronze')]
+])
+
+crafting.addShaped('gregtech:high_pressure_latex_extractor', metaitem('latex_collector.steel'), [
+        [metaitem('pipeSmallFluidSteel'), metaitem('pump.steam'), metaitem('pipeSmallFluidSteel')],
+        [metaitem('plateSteel'), metaitem('latex_collector.bronze'), metaitem('plateSteel')],
+        [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')]
 ])
 
 crafting.addShaped('gregtech:steam_macerator', metaitem('steam_macerator_bronze'), [
@@ -253,6 +264,12 @@ crafting.replaceShaped("gregtech:gregtech.machine.macerator.lv", metaitem('gregt
     [metaitem('electric.piston.lv'), metaitem('electric.motor.lv') , metaitem('toolHeadBuzzSawSteel')],
     [metaitem('cableGtSingleTin'), metaitem('cableGtSingleTin'), metaitem('gregtech:hull.lv')],
     [ore('circuitLv'), ore('circuitLv'), metaitem('cableGtSingleTin')]
+])
+
+crafting.replaceShaped("gregtech:gregtech.machine.cutter.lv", metaitem('gregtech:cutter.lv'), [
+    [metaitem('cableGtSingleTin'), ore('circuitLv'), item('minecraft:glass')],
+	[metaitem('conveyor.module.lv'), metaitem('gregtech:hull.lv'), metaitem('toolHeadBuzzSawSteel')],
+	[ore('circuitLv'), metaitem('cableGtSingleTin'), metaitem('electric.motor.lv')]
 ])
 
 crafting.replaceShaped("gregtech:gregtech.machine.cutter.mv", metaitem('gregtech:cutter.mv'), [
@@ -465,10 +482,10 @@ crafting.replaceShaped('susy:home_block', item('susy:home_block'), [
         [null, null, null]
 ])
 
-crafting.addShapeless('susy:home_block_1', item('susy:home_block', 1), [item('susy:home_block')])
-crafting.addShapeless('susy:home_block_2', item('susy:home_block', 2), [item('susy:home_block', 1)])
-crafting.addShapeless('susy:home_block_3', item('susy:home_block', 3), [item('susy:home_block', 2)])
-crafting.addShapeless('susy:home_block_4', item('susy:home_block',), [item('susy:home_block', 3)])
+crafting.addShapeless('susy:home_block_1', item('susy:home_block', 4), [item('susy:home_block', 0)])
+crafting.addShapeless('susy:home_block_2', item('susy:home_block', 8), [item('susy:home_block', 4)])
+crafting.addShapeless('susy:home_block_3', item('susy:home_block', 12), [item('susy:home_block', 8)])
+crafting.addShapeless('susy:home_block_4', item('susy:home_block', 0), [item('susy:home_block', 12)])
 
 // Acetone * 200
 mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('dissolved_calcium_acetate') * 200])
@@ -813,3 +830,193 @@ mods.gregtech.fluid_heater.recipeBuilder()
         .duration(40)
         .EUt(16)
         .buildAndRegister();
+
+mods.gregtech.forming_press.recipeBuilder()
+        .inputs(item('gregtech:transparent_casing') * 2)
+        .inputs(metaitem('platePolyvinylButyral') * 2)
+        .inputs(metaitem('platePolycarbonate') * 2)
+        .outputs(item('gregtech:transparent_casing', 2))
+        .duration(200)
+        .EUt(480)
+        .buildAndRegister();
+
+// Cobblestone * 1
+mods.gregtech.forge_hammer.removeByInput(16, [item('minecraft:stone')], null)
+
+mods.gregtech.forming_press.recipeBuilder()
+		.inputs(item('minecraft:stone'))
+		.outputs(item('minecraft:cobblestone'))
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
+// Pure Gallium Arsenide * 288
+mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustArsenic'), metaitem('dustGallium'), metaitem('circuit.integrated').withNbt(["Configuration": 12])], [fluid('nitrogen') * 2000])
+// Pure Gallium Arsenide * 288
+mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustArsenic'), metaitem('dustGallium'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
+// Nickel Zinc Ferrite * 864
+mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 6])], [fluid('oxygen') * 8000])
+// Molten Yttrium Barium Cuprate * 1872
+mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 14])], [fluid('oxygen') * 7000, fluid('argon') * 650])
+// Molten Mercury Barium Calcium Cuprate * 2304
+mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustBarium') * 2, metaitem('dustCalcium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 5])], [fluid('mercury') * 1000, fluid('oxygen') * 8000])
+// Molten Yttrium Barium Cuprate * 1872
+mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 7000])
+// Molten Mercury Barium Calcium Cuprate * 2304
+mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustBarium') * 2, metaitem('dustCalcium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 15])], [fluid('mercury') * 1000, fluid('oxygen') * 8000, fluid('nitrogen') * 16000])
+// Molten Indium Tin Barium Titanium Cuprate * 2304
+mods.gregtech.alloy_blast_smelter.removeByInput(7680, [metaitem('dustIndium') * 4, metaitem('dustTin') * 2, metaitem('dustBarium') * 2, metaitem('dustTitanium'), metaitem('dustCopper') * 7, metaitem('circuit.integrated').withNbt(["Configuration": 16])], [fluid('oxygen') * 14000, fluid('argon') * 800])
+// Molten Indium Tin Barium Titanium Cuprate * 2304
+mods.gregtech.alloy_blast_smelter.removeByInput(7680, [metaitem('dustIndium') * 4, metaitem('dustTin') * 2, metaitem('dustBarium') * 2, metaitem('dustTitanium'), metaitem('dustCopper') * 7, metaitem('circuit.integrated').withNbt(["Configuration": 6])], [fluid('oxygen') * 14000])
+// Molten Samarium Iron Arsenic Oxide * 576
+mods.gregtech.alloy_blast_smelter.removeByInput(1920, [metaitem('dustSamarium'), metaitem('dustIron'), metaitem('dustArsenic'), metaitem('circuit.integrated').withNbt(["Configuration": 14])], [fluid('oxygen') * 1000, fluid('helium') * 400])
+// Molten Samarium Iron Arsenic Oxide * 576
+mods.gregtech.alloy_blast_smelter.removeByInput(1920, [metaitem('dustSamarium'), metaitem('dustIron'), metaitem('dustArsenic'), metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 1000])
+
+// NAND Chip * 8
+mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.good'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('soldering_alloy') * 72])
+// NAND Chip * 8
+mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.good'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('tin') * 144])
+// NAND Chip * 12
+mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plastic'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('soldering_alloy') * 72])
+// NAND Chip * 12
+mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plastic'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('tin') * 144])
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.good'))
+		.inputs(metaitem('plate.integrated_logic_circuit'))
+		.inputs(metaitem('boltRedAlloy') * 2)
+		.inputs(metaitem('wireFineTin') * 2)
+		.fluidInputs(fluid('soldering_alloy') * 72)
+		.outputs(metaitem('circuit.nand_chip') * 16)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.good'))
+		.inputs(metaitem('plate.integrated_logic_circuit'))
+		.inputs(metaitem('boltRedAlloy') * 2)
+		.inputs(metaitem('wireFineTin') * 2)
+		.fluidInputs(fluid('tin') * 144)
+		.outputs(metaitem('circuit.nand_chip') * 16)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.plastic'))
+		.inputs(metaitem('plate.integrated_logic_circuit'))
+		.inputs(metaitem('boltRedAlloy') * 2)
+		.inputs(metaitem('wireFineTin') * 2)
+		.fluidInputs(fluid('soldering_alloy') * 72)
+		.outputs(metaitem('circuit.nand_chip') * 24)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.plastic'))
+		.inputs(metaitem('plate.integrated_logic_circuit'))
+		.inputs(metaitem('boltRedAlloy') * 2)
+		.inputs(metaitem('wireFineTin') * 2)
+		.fluidInputs(fluid('tin') * 144)
+		.outputs(metaitem('circuit.nand_chip') * 24)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
+mods.gregtech.centrifuge.recipeBuilder()
+		.fluidInputs(fluid('gtfo_soybean_oil') * 1000)
+		.fluidOutputs(fluid('seed_oil') * 1000)
+		.duration(160)
+		.EUt(30)
+		.buildAndRegister();2
+
+// Steel Turbine Casing * 2
+mods.gregtech.assembler.removeByInput(16, [metaitem('plateMagnalium') * 6, metaitem('frameBlueSteel'), metaitem('circuit.integrated').withNbt(["Configuration": 6])], null)
+
+mods.gregtech.assembler.recipeBuilder()
+		.circuitMeta(6)
+		.inputs(metaitem('stickLongSteel') * 2)
+		.inputs(metaitem('plateSteel') * 4)
+		.inputs(item('gregtech:stone_smooth', 4))
+		.outputs(item('gregtech:turbine_casing', 5) * 4)
+		.duration(50)
+		.EUt(16)
+		.buildAndRegister();
+
+// Ashes * 1
+mods.gregtech.centrifuge.removeByInput(6, [metaitem('dustDarkAsh')], null)
+
+mods.gregtech.centrifuge.recipeBuilder()
+		.inputs(metaitem('dustDarkAsh'))
+		.outputs(metaitem('dustAsh'))
+		.outputs(metaitem('dustCarbon'))
+		.duration(100)
+		.EUt(6)
+		.buildAndRegister();
+
+// Add more semi fluid fuel options
+mods.gregtech.semi_fluid_generator.removeByInput(-32, null, [fluid('sulfuric_heavy_fuel') * 16])
+mods.gregtech.semi_fluid_generator.removeByInput(-32, null, [fluid('heavy_fuel') * 8])
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('sulfuric_diesel') * 16)
+		.duration(5)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('diesel') * 8)
+		.duration(15)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('sulfuric_fuel_oil') * 16)
+		.duration(7)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('fuel_oil') * 8)
+		.duration(21)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('sulfuric_refinery_gas') * 16)
+		.duration(4)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('refinery_gas') * 8)
+		.duration(12)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('sulfuric_natural_gas') * 16)
+		.duration(4)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('natural_gas') * 8)
+		.duration(12)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('propane') * 8)
+		.duration(15)
+		.EUt(-32)
+		.buildAndRegister();
+
+mods.gregtech.semi_fluid_generator.recipeBuilder()
+		.fluidInputs(fluid('gtfo_stearin') * 8)
+		.duration(15)
+		.EUt(-32)
+		.buildAndRegister();

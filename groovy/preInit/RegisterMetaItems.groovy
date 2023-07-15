@@ -122,21 +122,18 @@ eventManager.listen {
         customMetaItems.addItem(199, "ag_fifty_w_x_eight_beads");
 
         customMetaItems.addItem(200, "thick_film_substrate_wafer");
-		
-		customMetaItems.addItem(201, "bound_leather");
-
 
         customMetaItems.addItem(201, "vti_rich_pig_iron");
 
         customMetaItems.addItem(202, "vt_slag");
 
-        customMetaItems.addItem(203, "sponge.titanium").addComponents(new TooltipBehavior((lines) -> {
-            lines.add(TextFormatting.YELLOW + "Ti");
-        }));
+        customMetaItems.addItem(203, "sponge.titanium")
+        customMetaItems.addItem(204, "sponge.titanium.crude")
+        customMetaItems.addItem(215, "sponge.platinum")
+		
+		customMetaItems.addItem(210, "bound_leather")
 
-        customMetaItems.addItem(204, "sponge.titanium.crude").addComponents(new TooltipBehavior((lines) -> {
-            lines.add(TextFormatting.YELLOW + "(Ti)(?)");
-        }));
+        customMetaItems.addItem(211, "copper_anode_slime")
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
@@ -158,46 +155,46 @@ eventManager.listen {
         customMetaItems.addItem(2500, "gun.barrel.steel")
 
         //Placeholders until GCYS is available
-        customMetaItems.addItem(3000, "circuit.gooware_processor").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.ZPM);
-        customMetaItems.addItem(3001, "circuit.gooware_assembly").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UV);
-        customMetaItems.addItem(3002, "circuit.gooware_computer").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UHV);
-        customMetaItems.addItem(3003, "circuit.gooware_mainframe").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UEV);
+        customMetaItems.addItem(3000, "circuit.gooware_processor")
+        customMetaItems.addItem(3001, "circuit.gooware_assembly")
+        customMetaItems.addItem(3002, "circuit.gooware_computer")
+        customMetaItems.addItem(3003, "circuit.gooware_mainframe")
 
-        customMetaItems.addItem(3004,"circuit.optical_processor").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UV);
-        customMetaItems.addItem(3005,"circuit.optical_assembly").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UHV);
-        customMetaItems.addItem(3006,"circuit.optical_computer").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UEV);
-        customMetaItems.addItem(3007,"circuit.optical_mainframe").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UIV);
+        customMetaItems.addItem(3004,"circuit.optical_processor")
+        customMetaItems.addItem(3005,"circuit.optical_assembly")
+        customMetaItems.addItem(3006,"circuit.optical_computer")
+        customMetaItems.addItem(3007,"circuit.optical_mainframe")
 
-        customMetaItems.addItem(3008, "circuit.spintronic_processor").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UHV);
-        customMetaItems.addItem(3009, "circuit.spintronic_assembly").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UEV);
-        customMetaItems.addItem(3010, "circuit.spintronic_computer").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UIV);
-        customMetaItems.addItem(3011, "circuit.spintronic_mainframe").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UXV);
+        customMetaItems.addItem(3008, "circuit.spintronic_processor")
+        customMetaItems.addItem(3009, "circuit.spintronic_assembly")
+        customMetaItems.addItem(3010, "circuit.spintronic_computer")
+        customMetaItems.addItem(3011, "circuit.spintronic_mainframe")
 
-        customMetaItems.addItem(3012, "circuit.cosmic_processor").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UEV);
-        customMetaItems.addItem(3013, "circuit.cosmic_assembly").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UIV);
-        customMetaItems.addItem(3014, "circuit.cosmic_computer").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UXV);
-        customMetaItems.addItem(3015, "circuit.cosmic_mainframe").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.OpV);
+        customMetaItems.addItem(3012, "circuit.cosmic_processor")
+        customMetaItems.addItem(3013, "circuit.cosmic_assembly")
+        customMetaItems.addItem(3014, "circuit.cosmic_computer")
+        customMetaItems.addItem(3015, "circuit.cosmic_mainframe")
 
-        customMetaItems.addItem(3016, "circuit.supracausal_processor").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UIV);
-        customMetaItems.addItem(3017, "circuit.supracausal_assembly").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UXV);
-        customMetaItems.addItem(3018, "circuit.supracausal_computer").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.OpV);
-        customMetaItems.addItem(3019, "circuit.supracausal_mainframe").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.MAX);
+        customMetaItems.addItem(3016, "circuit.supracausal_processor")
+        customMetaItems.addItem(3017, "circuit.supracausal_assembly")
+        customMetaItems.addItem(3018, "circuit.supracausal_computer")
+        customMetaItems.addItem(3019, "circuit.supracausal_mainframe")
 
-        customMetaItems.addItem(3020, "circuit.suprachronal.ulv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.ULV);
-        customMetaItems.addItem(3021, "circuit.suprachronal.lv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.LV);
-        customMetaItems.addItem(3022, "circuit.suprachronal.mv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.MV);
-        customMetaItems.addItem(3023, "circuit.suprachronal.hv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.HV);
-        customMetaItems.addItem(3024, "circuit.suprachronal.ev").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.EV);
-        customMetaItems.addItem(3025, "circuit.suprachronal.iv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.IV);
-        customMetaItems.addItem(3026, "circuit.suprachronal.luv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.LuV);
-        customMetaItems.addItem(3027, "circuit.suprachronal.zpm").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.ZPM);
-        customMetaItems.addItem(3028, "circuit.suprachronal.uv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UV);
-        customMetaItems.addItem(3029, "circuit.suprachronal.uhv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UHV);
-        customMetaItems.addItem(3030, "circuit.suprachronal.uev").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UEV);
-        customMetaItems.addItem(3031, "circuit.suprachronal.uiv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UIV);
-        customMetaItems.addItem(3032, "circuit.suprachronal.uxv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UXV);
-        customMetaItems.addItem(3033, "circuit.suprachronal.opv").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.OpV);
-        customMetaItems.addItem(3034, "circuit.suprachronal.max").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.MAX);
+        customMetaItems.addItem(3020, "circuit.suprachronal.ulv")
+        customMetaItems.addItem(3021, "circuit.suprachronal.lv")
+        customMetaItems.addItem(3022, "circuit.suprachronal.mv")
+        customMetaItems.addItem(3023, "circuit.suprachronal.hv")
+        customMetaItems.addItem(3024, "circuit.suprachronal.ev")
+        customMetaItems.addItem(3025, "circuit.suprachronal.iv")
+        customMetaItems.addItem(3026, "circuit.suprachronal.luv")
+        customMetaItems.addItem(3027, "circuit.suprachronal.zpm")
+        customMetaItems.addItem(3028, "circuit.suprachronal.uv")
+        customMetaItems.addItem(3029, "circuit.suprachronal.uhv")
+        customMetaItems.addItem(3030, "circuit.suprachronal.uev")
+        customMetaItems.addItem(3031, "circuit.suprachronal.uiv")
+        customMetaItems.addItem(3032, "circuit.suprachronal.uxv")
+        customMetaItems.addItem(3033, "circuit.suprachronal.opv")
+        customMetaItems.addItem(3034, "circuit.suprachronal.max")
 
         customMetaItems.addItem(3035, "wafer.advanced_random_access_memory");
         customMetaItems.addItem(3036, "plate.advanced_random_access_memory");
@@ -318,6 +315,7 @@ eventManager.listen {
         customMetaItems.addItem(8010, "wafer.doped.polysilicon");
         customMetaItems.addItem(8011, "wafer.silicon_nitride");
         customMetaItems.addItem(8012, "wafer.nickel");
+        customMetaItems.addItem(8013, "wafer.gallium_arsenide");
 
         //Crops 9000-10000
 
