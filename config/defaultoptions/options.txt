@@ -15,7 +15,7 @@ difficulty:2
 fancyGraphics:true
 ao:2
 renderClouds:false
-resourcePacks:["StandardModel.zip"]
+resourcePacks:["Black_Mesa.zip", "ShaderTech.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us

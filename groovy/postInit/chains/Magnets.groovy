@@ -2,7 +2,7 @@ import static globals.Globals.*
 import static globals.SinteringGlobals.*
 
 ABS = recipemap('alloy_blast_smelter')
-SINTERING_RECIPES = recipemap("sintering_oven")
+FORMING_PRESS = recipemap("forming_press")
 
 //REMOVALS
 def name_removals = [
@@ -118,116 +118,45 @@ ABS.recipeBuilder()
         .EUt(1920)
         .buildAndRegister();
 
-for (fuel in sintering_fuels) {
-    if (fuel.isPlasma) {
-        SINTERING_RECIPES.recipeBuilder()
-                .notConsumable(metaitem('shape.mold.long_rod'))
-                .inputs(metaitem('dustSamariumAlloy'))
-                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                .outputs(metaitem('stickLongSamariumAlloy'))
-                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                .duration(fuel.duration * 4)
-                .EUt(Globals.voltAmps[4])
-                .buildAndRegister()
+FORMING_PRESS.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.long_rod'))
+        .inputs(metaitem('dustSamariumAlloy'))
+        .outputs(metaitem('stickLongSamariumAlloy'))
+        .duration(200)
+        .EUt(240)
+        .buildAndRegister()
 
-        SINTERING_RECIPES.recipeBuilder()
-                .notConsumable(metaitem('shape.mold.ring'))
-                .inputs(metaitem('dustSamariumAlloy'))
-                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                .outputs(metaitem('ringSamariumAlloy') * 4)
-                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                .duration(fuel.duration * 4)
-                .EUt(Globals.voltAmps[4])
-                .buildAndRegister()
+FORMING_PRESS.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.ring'))
+        .inputs(metaitem('dustSamariumAlloy'))
+        .outputs(metaitem('ringSamariumAlloy') * 4)
+        .duration(200)
+        .EUt(240)
+        .buildAndRegister()
 
-        SINTERING_RECIPES.recipeBuilder()
-                .notConsumable(metaitem('shape.mold.rod'))
-                .inputs(metaitem('dustSamariumAlloy'))
-                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                .outputs(metaitem('stickSamariumAlloy') * 2)
-                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                .duration(fuel.duration * 4)
-                .EUt(Globals.voltAmps[4])
-                .buildAndRegister()
+FORMING_PRESS.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.rod'))
+        .inputs(metaitem('dustSamariumAlloy'))
+        .outputs(metaitem('stickSamariumAlloy') * 2)
+        .duration(200)
+        .EUt(240)
+        .buildAndRegister()
 
-        SINTERING_RECIPES.recipeBuilder()
-                .notConsumable(metaitem('shape.mold.plate'))
-                .inputs(metaitem('dustSamariumAlloy'))
-                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                .outputs(metaitem('plateSamariumAlloy'))
-                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                .duration(fuel.duration * 4)
-                .EUt(Globals.voltAmps[4])
-                .buildAndRegister()
+FORMING_PRESS.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.plate'))
+        .inputs(metaitem('dustSamariumAlloy'))
+        .outputs(metaitem('plateSamariumAlloy'))
+        .duration(200)
+        .EUt(240)
+        .buildAndRegister()
 
-        SINTERING_RECIPES.recipeBuilder()
-                .notConsumable(metaitem('shape.mold.ingot'))
-                .inputs(metaitem('dustSamariumAlloy'))
-                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                .outputs(metaitem('ingotSamariumAlloy'))
-                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                .duration(fuel.duration * 4)
-                .EUt(Globals.voltAmps[4])
-                .buildAndRegister()
-    } else {
-        for (comburent in sintering_comburents) {
-            SINTERING_RECIPES.recipeBuilder()
-                    .notConsumable(metaitem('shape.mold.long_rod'))
-                    .inputs(metaitem('dustSamariumAlloy'))
-                    .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                    .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-                    .outputs(metaitem('stickLongSamariumAlloy'))
-                    .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                    .duration((fuel.duration + comburent.duration) * 2)
-                    .EUt(Globals.voltAmps[3])
-                    .buildAndRegister()
-
-            SINTERING_RECIPES.recipeBuilder()
-                    .notConsumable(metaitem('shape.mold.ring'))
-                    .inputs(metaitem('dustSamariumAlloy'))
-                    .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                    .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-                    .outputs(metaitem('ringSamariumAlloy') * 4)
-                    .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                    .duration((fuel.duration + comburent.duration) * 2)
-                    .EUt(Globals.voltAmps[3])
-                    .buildAndRegister()
-
-            SINTERING_RECIPES.recipeBuilder()
-                    .notConsumable(metaitem('shape.mold.rod'))
-                    .inputs(metaitem('dustSamariumAlloy'))
-                    .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                    .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-                    .outputs(metaitem('stickSamariumAlloy') * 2)
-                    .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                    .duration((fuel.duration + comburent.duration) * 2)
-                    .EUt(Globals.voltAmps[3])
-                    .buildAndRegister()
-
-            SINTERING_RECIPES.recipeBuilder()
-                    .notConsumable(metaitem('shape.mold.plate'))
-                    .inputs(metaitem('dustSamariumAlloy'))
-                    .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                    .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-                    .outputs(metaitem('plateSamariumAlloy'))
-                    .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                    .duration((fuel.duration + comburent.duration) * 2)
-                    .EUt(Globals.voltAmps[3])
-                    .buildAndRegister()
-
-            SINTERING_RECIPES.recipeBuilder()
-                    .notConsumable(metaitem('shape.mold.ingot'))
-                    .inputs(metaitem('dustSamariumAlloy'))
-                    .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                    .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-                    .outputs(metaitem('ingotSamariumAlloy'))
-                    .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                    .duration((fuel.duration + comburent.duration) * 2)
-                    .EUt(Globals.voltAmps[3])
-                    .buildAndRegister()
-        }
-    }
-}
+FORMING_PRESS.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.ingot'))
+        .inputs(metaitem('dustSamariumAlloy'))
+        .outputs(metaitem('ingotSamariumAlloy'))
+        .duration(200)
+        .EUt(240)
+        .buildAndRegister()
 
 mods.gregtech.electrolyzer.recipeBuilder()
         .fluidInputs(fluid('sulfuric_acid') * 100)
@@ -505,7 +434,7 @@ mods.gregtech.assembly_line.removeByInput(100000, [metaitem('stickLongSamariumMa
 
 crafting.replaceShaped('gregtech:electric_motor_ev', metaitem('electric.motor.ev'), [
         [metaitem('cableGtDoubleAluminium'), metaitem('wireGtDoubleKanthal'), metaitem('stickTitanium')],
-        [metaitem('wireGtDoubleKanthal'), metaitem('stickNeodymiumAlloyMagnetic'), metaitem('wireGtDoubleKanthal')],
+        [metaitem('wireGtDoubleKanthal'), metaitem('stickSteelMagnetic'), metaitem('wireGtDoubleKanthal')],
         [metaitem('stickTitanium'), metaitem('wireGtDoubleKanthal'), metaitem('cableGtDoubleAluminium')]
 ])
 
@@ -541,7 +470,7 @@ crafting.replaceShaped('gregtech:magnet_hv_energy_crystal', metaitem('item_magne
 
 crafting.replaceShaped('gregtech:gregtech.machine.electromagnetic_separator.ev', metaitem('electromagnetic_separator.ev'), [
         [metaitem('conveyor.module.ev'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleNichrome')],
-        [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('stickNeodymiumAlloyMagnetic')],
+        [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('stickSteelMagnetic')],
         [ore('circuitEv'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleNichrome')]
 ])
 
@@ -552,9 +481,9 @@ crafting.replaceShaped('gregtech:gregtech.machine.electromagnetic_separator.iv',
 ])
 
 crafting.replaceShaped('gregtech:gregtech.machine.polarizer.ev', metaitem('polarizer.ev'), [
-        [metaitem('wireGtQuadrupleNichrome'), metaitem('stickNeodymiumAlloyMagnetic'), metaitem('wireGtQuadrupleNichrome')],
+        [metaitem('wireGtQuadrupleNichrome'), metaitem('stickSteelMagnetic'), metaitem('wireGtQuadrupleNichrome')],
         [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('cableGtSingleAluminium')],
-        [metaitem('wireGtQuadrupleNichrome'), metaitem('stickNeodymiumAlloyMagnetic'), metaitem('wireGtQuadrupleNichrome')]
+        [metaitem('wireGtQuadrupleNichrome'), metaitem('stickSteelMagnetic'), metaitem('wireGtQuadrupleNichrome')]
 ])
 
 crafting.replaceShaped('gregtech:gregtech.machine.polarizer.iv', metaitem('polarizer.iv'), [
@@ -566,7 +495,7 @@ crafting.replaceShaped('gregtech:gregtech.machine.polarizer.iv', metaitem('polar
 mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('cableGtDoubleAluminium') * 2)
         .inputs(metaitem('stickTitanium') * 2)
-        .inputs(metaitem('stickNeodymiumAlloyMagnetic') * 1)
+        .inputs(metaitem('stickSteelMagnetic') * 1)
         .inputs(metaitem('wireGtDoubleKanthal') * 4)
         .outputs(metaitem('electric.motor.ev'))
         .duration(100)
@@ -584,7 +513,7 @@ mods.gregtech.assembler.recipeBuilder()
         .buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-        .inputs(metaitem('stickNeodymiumAlloyMagnetic') * 1)
+        .inputs(metaitem('stickSteelMagnetic') * 1)
         .inputs(metaitem('wireFineTungstenSteel') * 16)
         .outputs(metaitem('voltage_coil.ev'))
         .duration(200)

@@ -69,7 +69,8 @@ def name_removals = [
         "icbmclassic:grenades/grenade.4",
         "icbmclassic:grenades/grenade.5",
         "icbmclassic:grenades/grenade.6",
-        "icbmclassic:grenades/grenade.7"
+        "icbmclassic:grenades/grenade.7",
+        "icbmclassic:antidote"
 ]
 
 for (item in name_removals) {

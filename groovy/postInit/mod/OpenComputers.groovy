@@ -38,7 +38,7 @@ def name_removals = [
 "opencomputers:transposer29",
 "opencomputers:carpetedcapacitor30",
 "opencomputers:material31",
-"opencomputers:grog32", // please GTFO add this lmao
+"opencomputers:material32", // GROG
 "opencomputers:material33",
 "opencomputers:material34",
 "opencomputers:material35",
@@ -188,6 +188,7 @@ mods.gregtech.assembler.recipeBuilder()
 for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
+			.circuitMeta(2)
 			.inputs(ore('cableGtSingleCopper') * 4)
 			.inputs(metaitem('hull.mv'))
 			.inputs(ore('circuitMv'))
@@ -210,6 +211,7 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
+			.circuitMeta(1)
 			.inputs(ore('cableGtSingleCopper') * 4)
 			.inputs(metaitem('hull.mv'))
 			.inputs(metaitem('screwAluminium') * 4)

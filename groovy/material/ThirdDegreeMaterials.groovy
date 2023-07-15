@@ -250,5 +250,35 @@ public class ThirdDegreeMaterials {
                 .components(TributylPhosphate, 1, HydrogenChloride, 3)
                 .colorAverage()
                 .build();
+
+        PhosgeneSolution = new Material.Builder(24039, "phosgene_solution")
+                .fluid()
+                .components(Phosgene, 1, Dichloromethane, 1)
+                .colorAverage()
+                .build();
+
+        TriethylamineSolution = new Material.Builder(24040, "triethylamine_solution")
+                .fluid()
+                .components(Triethylamine, 1, Dichloromethane, 4)
+                .colorAverage()
+                .build();
+
+        KaminskyCatalyst = new Material.Builder(24041, "kaminsky_catalyst")
+                .dust()
+                .components(ZirconoceneDichloride, 1, Methylaluminoxane, 1)
+                .colorAverage()
+                .build();
+
+        ZirconiumTetrachlorideTetrahydrofuranComplex = new Material.Builder(24042, "zirconium_tetrachloride_tetrahydrofuran_complex")
+                .dust()
+                .components(ZirconiumTetrachloride, 1, Tetrahydrofuran, 2)
+                .colorAverage()
+                .build();
+
+        PotassiumButylXanthateSolution = new Material.Builder(24043, "potassium_butyl_xanthate_solution")
+                .fluid()
+                .components(PotassiumButylXanthate, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }

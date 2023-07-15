@@ -58,11 +58,6 @@ public class PetrochemistryMaterials {
                 .color(0x59572b)
                 .build();
 
-        DissolvedBitumen = new Material.Builder(20008, "dissolved_bitumen")
-                .fluid()
-                .color(0x1e2021)
-                .build();
-
         SulfuricFuelOil = new Material.Builder(20009, "sulfuric_fuel_oil")
                 .fluid()
                 .color(0x858135)
@@ -294,6 +289,21 @@ public class PetrochemistryMaterials {
         HeavyOilyBrine = new Material.Builder(20066, "heavy_oily_brine")
                 .fluid()
                 .color(0x4f4e37)
+                .build();
+
+        LightBitumenSolution = new Material.Builder(20067, "light_bitumen_solution")
+                .fluid()
+                .color(0x1e2021)
+                .build();
+
+        BitumenSolution = new Material.Builder(20068, "bitumen_solution")
+                .fluid()
+                .color(0x1e2021)
+                .build();
+
+        HeavyBitumenSolution = new Material.Builder(20069, "heavy_bitumen_solution")
+                .fluid()
+                .color(0x1e2021)
                 .build();
     }
 

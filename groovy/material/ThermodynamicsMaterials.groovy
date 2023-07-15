@@ -261,18 +261,34 @@ class ThermodynamicsMaterials {
                 generateLiquidFromGas(Methane, 22108, 112);
 
                 generateLiquidFromGas(NaturalGas, 22109, 110);
-                
+
                 generateThermoRefrigerant(Ammonia, 22150);
 
                 generateThermoRefrigerant(Propane, 22155);
 
                 generateThermoRefrigerant(CarbonDioxide, 22160);
 
+                generateThermoRefrigerant(Trichlorofluoromethane, 22165);
+
+                generateThermoRefrigerant(Dichlorodifluoromethane, 22170);
+
+                generateThermoRefrigerant(Chlorotrifluoromethane, 22175);
+
+                generateThermoRefrigerant(Chlorodifluoromethane, 22180);
+
                 generateCoolant(Water, 22300);
 
                 generateCoolant(EthyleneGlycol, 22305);
 
-                generateCoolant(Brine, 22310);
+                generateCoolant(SaltWater, 22310);
+
+                generateCoolant(Lubricant, 22315);
+
+                generateCoolant(PolychlorinatedBiphenyl, 22320);
+
+                generateCoolant(Brine, 22325);
+
+                generateCoolant(SodiumPotassium, 22330);
 
                 generateHotGas(Air, 22400);
 

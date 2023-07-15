@@ -1,3 +1,8 @@
+/*
+import pl.asie.computronics.integration.ModRecipes;
+
+ModRecipes.instance = null;
+
 def soldering_alloys = [
         liquid('tin') * 144,
         liquid('soldering_alloy') * 72
@@ -383,3 +388,5 @@ crafting.addShaped('computronics:iron_note_block0', item('computronics:iron_note
     [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
     [ore('plateSteel'), item('minecraft:noteblock'), ore('plateSteel')],
     [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')]])
+
+ */
