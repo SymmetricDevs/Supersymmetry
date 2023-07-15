@@ -870,6 +870,17 @@ BR.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+// Acetone
+
+FBR.recipeBuilder()
+.fluidInputs(fluid('propene') * 100)
+.fluidInputs(fluid('oxygen') * 100)
+.notConsumable(ore('catalystBedPlatinum'))
+.fluidOutputs(fluid('acetone') * 100)
+.duration(5)
+.EUt(30)
+.buildAndRegister()
+
 // Acetic Acid
 
 FBR.recipeBuilder()
