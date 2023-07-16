@@ -882,49 +882,49 @@ mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plas
 // NAND Chip * 12
 mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plastic'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('tin') * 144])
 
-mods.gregtech.assembler.recipeBuilder()
+// Microprocessor * 3
+mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plastic'), metaitem('plate.central_processing_unit'), metaitem('component.resistor') * 2, metaitem('component.capacitor') * 2, metaitem('component.transistor') * 2, metaitem('wireFineCopper') * 2], [fluid('soldering_alloy') * 72])
+// Microprocessor * 3
+mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plastic'), metaitem('plate.central_processing_unit'), metaitem('component.resistor') * 2, metaitem('component.capacitor') * 2, metaitem('component.transistor') * 2, metaitem('wireFineCopper') * 2], [fluid('tin') * 144])
+
+def solders = Globals.solders
+
+Globals.solders.each { key, val -> 
+        mods.gregtech.assembler.recipeBuilder()
 		.inputs(metaitem('circuit_board.good'))
 		.inputs(metaitem('plate.integrated_logic_circuit'))
 		.inputs(metaitem('boltRedAlloy') * 2)
 		.inputs(metaitem('wireFineTin') * 2)
-		.fluidInputs(fluid('soldering_alloy') * 72)
+		.fluidInputs(fluid(key) * val)
 		.outputs(metaitem('circuit.nand_chip') * 16)
 		.duration(10)
 		.EUt(16)
 		.buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('circuit_board.good'))
-		.inputs(metaitem('plate.integrated_logic_circuit'))
-		.inputs(metaitem('boltRedAlloy') * 2)
-		.inputs(metaitem('wireFineTin') * 2)
-		.fluidInputs(fluid('tin') * 144)
-		.outputs(metaitem('circuit.nand_chip') * 16)
-		.duration(10)
-		.EUt(16)
-		.buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
+        
+        mods.gregtech.assembler.recipeBuilder()
 		.inputs(metaitem('circuit_board.plastic'))
 		.inputs(metaitem('plate.integrated_logic_circuit'))
 		.inputs(metaitem('boltRedAlloy') * 2)
 		.inputs(metaitem('wireFineTin') * 2)
-		.fluidInputs(fluid('soldering_alloy') * 72)
+		.fluidInputs(fluid(key) * val)
 		.outputs(metaitem('circuit.nand_chip') * 24)
 		.duration(10)
 		.EUt(16)
 		.buildAndRegister();
 
-mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('circuit_board.plastic'))
-		.inputs(metaitem('plate.integrated_logic_circuit'))
-		.inputs(metaitem('boltRedAlloy') * 2)
-		.inputs(metaitem('wireFineTin') * 2)
-		.fluidInputs(fluid('tin') * 144)
-		.outputs(metaitem('circuit.nand_chip') * 24)
-		.duration(10)
-		.EUt(16)
+        mods.gregtech.circuit_assembler.recipeBuilder()
+                .inputs(metaitem('circuit_board.plastic'))
+                .inputs(metaitem('plate.central_processing_unit'))
+                .inputs(metaitem('component.resistor') * 2)
+                .inputs(metaitem('component.capacitor') * 2)
+                .inputs(metaitem('component.transistor') * 2)
+                .inputs(metaitem('wireFineCopper') * 2)
+                .fluidInputs(fluid(key) * val)
+		.outputs(metaitem('circuit.microprocessor') * 4)
+		.duration(200)
+		.EUt(60)
 		.buildAndRegister();
+}
 
 mods.gregtech.centrifuge.recipeBuilder()
 		.fluidInputs(fluid('gtfo_soybean_oil') * 1000)
