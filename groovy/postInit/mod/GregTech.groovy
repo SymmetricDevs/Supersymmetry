@@ -887,8 +887,6 @@ mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plast
 // Microprocessor * 3
 mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plastic'), metaitem('plate.central_processing_unit'), metaitem('component.resistor') * 2, metaitem('component.capacitor') * 2, metaitem('component.transistor') * 2, metaitem('wireFineCopper') * 2], [fluid('tin') * 144])
 
-def solders = Globals.solders
-
 Globals.solders.each { key, val -> 
         mods.gregtech.assembler.recipeBuilder()
 		.inputs(metaitem('circuit_board.good'))
