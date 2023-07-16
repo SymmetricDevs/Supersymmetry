@@ -3291,7 +3291,7 @@ FBR.recipeBuilder()
     .fluidOutputs(fluid('hydrogen') * 100)
     .duration(10)
     .EUt(Globals.voltAmps[1])
-    .buildAndRegister()    
+    .buildAndRegister()
 
 // Raney Nickel and cyclohexane
 
@@ -4479,4 +4479,15 @@ MIXER.recipeBuilder()
         .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
         .EUt(30)
         .duration(120)
+        .buildAndRegister()
+
+//PATCH PHOSPHORUS DUPE
+mods.gregtech.batch_reactor.removeByInput(30, [metaitem('dustPhosphorusPentoxide')], [fluid('water') * 6000])
+
+BR.recipeBuilder()
+        .inputs(ore('dustPhosphorusPentoxide') * 14)
+        .fluidInputs(fluid('water') * 4000)
+        .fluidOutputs(fluid('phosphoric_acid') * 4000)
+        .EUt(30)
+        .duration(40)
         .buildAndRegister()
