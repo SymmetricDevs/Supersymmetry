@@ -252,9 +252,6 @@ class SuSyMaterials {
         public static Material BoraxElectrolyte;
         public static Material FerroelectricCeramicBinding;
         public static Material ConfiguredCircuitOne;
-        public static Material MetalNitrateSolution;
-        public static Material NeutralizedMetalNitrateSolution;
-        public static Material MetalNitrateCatalyst;
         public static Material TwoEthylhexylPhosphoricAcidMix;
         public static Material RareEarthCatalystYNd;
         public static Material DilutedPrimaryAmineN;
@@ -1229,9 +1226,7 @@ class SuSyMaterials {
         public static Material MagnesiumChlorideGlycolate;
         public static Material DiglycolicAcidSolution;
         public static Material DiTwoEthylhexylPhosphoricAcidSolution;
-        public static Material DilutedTetraoctylDiglycolamide;
         public static Material DilutedChloroaceticAnhydride;
-        public static Material DilutedOctylamine;
         public static Material DilutedMethylIsobutylKetone;
         public static Material DilutedTwoEthylTwoHexenal;
         public static Material DilutedDiisopropylamine;
