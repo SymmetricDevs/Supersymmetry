@@ -920,7 +920,7 @@ Globals.solders.each { key, val ->
                 .inputs(metaitem('component.transistor') * 2)
                 .inputs(metaitem('wireFineCopper') * 2)
                 .fluidInputs(fluid(key) * val)
-		.outputs(metaitem('circuit.microprocessor') * 4)
+		.outputs(metaitem('circuit.microprocessor') * 5)
 		.duration(200)
 		.EUt(60)
 		.buildAndRegister();
