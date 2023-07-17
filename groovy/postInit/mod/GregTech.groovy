@@ -1018,3 +1018,14 @@ mods.gregtech.semi_fluid_generator.recipeBuilder()
 		.duration(15)
 		.EUt(-32)
 		.buildAndRegister();
+
+// Light Concrete * 1
+mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid('concrete') * 144])
+
+mods.gregtech.fluid_solidifier.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.block'))
+        .fluidInputs(fluid('concrete') * 144)
+        .outputs(item('gregtech:stone_smooth', 4))
+        .duration(20)
+        .EUt(7)
+        .buildAndRegister();
