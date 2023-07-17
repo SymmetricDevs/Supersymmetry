@@ -1387,7 +1387,7 @@ public class FirstDegreeMaterials{
         GoldPlatedSteel = new Material.Builder(8299, "gold_plated_steel")
                 .ingot()
                 .components(Gold, 1, Steel, 1)
-                .colorAverage()
+                .color(0xb8a639)
                 .flags(GENERATE_FINE_WIRE)
                 .build();
 
