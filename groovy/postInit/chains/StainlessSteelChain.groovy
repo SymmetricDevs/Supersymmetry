@@ -119,3 +119,18 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
         .duration(600)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
+
+// Vanadiumsteel
+
+ADVANCED_ARC_FURNACE.recipeBuilder()
+        .fluidInputs(fluid('oxygen') * 2000)
+        .fluidInputs(fluid('argon') * 500)
+        .fluidInputs(fluid('carburized_stainless_steel') * 1440)
+        .inputs(ore('dustVanadium') * 2)
+        .inputs(ore('dustFerrochromium') * 3)
+        .inputs(ore('dustIron') * 6)
+        .inputs(ore('dustSmallQuicklime'))
+        .fluidOutputs(fluid('stainless_steel') * 2592)
+        .duration(600)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
