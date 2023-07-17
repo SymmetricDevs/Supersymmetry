@@ -2032,7 +2032,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         RawElectrum = new Material.Builder(8399, "raw_electrum")
-                .ore()
+                .ore().fluid()
                 .color(0xfcf403)
                 .components(Silver, 1, Gold, 1)
                 .build();
@@ -2845,5 +2845,13 @@ public class FirstDegreeMaterials{
                 .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
                 .colorAverage()
                 .build();
+
+        DilutedSilverNitrateSolution = new Material.Builder(8518, "diluted_silver_nitrate_solution")
+                .fluid()
+                .components(Silver, 1, Nitrogen, 1, Oxygen, 3, Water, 2)
+                .colorAverage()
+                .build();
+
+        DilutedSilverNitrateSolution.setFormula("(AgNO3)(H2O)2", true)
     }
 }

@@ -872,6 +872,7 @@ class SuSyMaterials {
         public static Material Chlorotrifluoromethane;
         public static Material Chlorodifluoromethane;
         public static Material PolychlorinatedBiphenyl;
+        public static Material DilutedSilverNitrateSolution;
 
         // Second Degree Materials
 
