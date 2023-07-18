@@ -92,10 +92,16 @@ for (var i = 0; i < 8; i++) {
 }
 
 //Explosives tier 1
-crafting.addShaped("icbm_exp_1_0", item('icbmclassic:explosives:0'), [
+crafting.addShaped("icbm_exp_1_0_dynamite", item('icbmclassic:explosives:0'), [
         [metaitem('dynamite'), metaitem('dynamite'), metaitem('dynamite')],
         [metaitem('dynamite'), ore('wireFineRedAlloy'), metaitem('dynamite')],
         [metaitem('dynamite'), metaitem('dynamite'), metaitem('dynamite')]
+]);
+
+crafting.addShaped("icbm_exp_1_0_tnt", item('icbmclassic:explosives:0'), [
+        [null, ore('dustTnt'), null],
+        [ore('dustTnt'), ore('wireFineRedAlloy'), ore('dustTnt')],
+        [null, ore('dustTnt'), null]
 ]);
 
 crafting.addShaped("icbm_exp_1_1", item('icbmclassic:explosives:1'), [
