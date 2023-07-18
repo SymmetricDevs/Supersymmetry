@@ -30,7 +30,7 @@ MIXER.recipeBuilder()
 
 FF.recipeBuilder()
         .fluidInputs(fluid('impure_ilmenite_slurry') * 2000)
-        .fluidInputs(fluid('diluted_sulfuric_acid') * 1000)
+        .notConsumable(fluid('diluted_sulfuric_acid') * 1000)
         .notConsumable(fluid('oleic_acid') * 144)
         .notConsumable(ore('dustSodiumFluoride') * 2)
         .fluidOutputs(fluid('ilmenite_slurry') * 1000)
