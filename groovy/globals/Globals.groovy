@@ -38,16 +38,16 @@ class Globals {
         "biomesoplenty"
     ]
 
-    class Combustible {
-    String name
-    String byproduct
-    int amount_required
-    int duration
-    Combustible(name, amount_required, duration, byproduct = 'dustTinyDarkAsh') {
-        this.name = name
-        this.amount_required = amount_required
-        this.duration = duration
-        this.byproduct = byproduct
+    public static class Combustible {
+        String name
+        String byproduct
+        int amount_required
+        int duration
+        Combustible(name, amount_required, duration, byproduct) {
+            this.name = name
+            this.amount_required = amount_required
+            this.duration = duration
+            this.byproduct = byproduct
         }
     }
 
@@ -56,10 +56,10 @@ class Globals {
         new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
         new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
         new Combustible('dustAnthracite', 1, 2, 'dustTinyAsh'),
-        new Combustible('gemCoal', 2, 4),
-        new Combustible('dustCoal', 2, 4),
-        new Combustible('gemCharcoal', 2, 4),
-        new Combustible('dustCharcoal', 2, 4),
-        new Combustible('dustCarbon', 1, 1, 'dustTinyDarkAsh')
+        new Combustible('gemCoal', 2, 4, 'dustTinyDarkAsh'),
+        new Combustible('dustCoal', 2, 4, 'dustTinyDarkAsh'),
+        new Combustible('gemCharcoal', 2, 4, 'dustTinyDarkAsh'),
+        new Combustible('dustCharcoal', 2, 4, 'dustTinyDarkAsh'),
+        new Combustible('dustCarbon', 1, 1, 'dustTinyAsh')
     ]
 }
