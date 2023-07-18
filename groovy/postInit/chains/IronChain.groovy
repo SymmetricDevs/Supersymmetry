@@ -219,7 +219,7 @@ RF.recipeBuilder()
 
 DISTILLERY.recipeBuilder()
         .fluidInputs(fluid('crude_iron_pentacarbonyl') * 1000)
-        .fluidOutputs(fluid('iron_pentacarbonyl') * 900)
+        .fluidOutputs(fluid('iron_pentacarbonyl') * 1000)
         .duration(300)
         .EUt(30)
         .buildAndRegister()
