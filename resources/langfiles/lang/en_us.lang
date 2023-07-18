@@ -1532,6 +1532,8 @@ material.impure_cinnabar_slurry=Impure Cinnabar Slurry
 material.cinnabar_slurry=Cinnabar Slurry
 material.ammoniacal_sodium_bicarbonate_solution=Ammoniacal Sodium Bicarbonate Solution
 material.diluted_silver_nitrate_solution=DilutedSilverNitrateSolution
+material.picric_acid=Picric Acid (TNP)
+material.tnp_solution=Picric Acid Solution
 
 # Isotopes
 

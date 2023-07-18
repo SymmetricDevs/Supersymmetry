@@ -268,5 +268,11 @@ public class ThirdDegreeMaterials {
                 .components(ZirconoceneDichloride, 1, Methylaluminoxane, 1)
                 .colorAverage()
                 .build();
+
+        TNTSolution = new Material.Builder(24042, 'tnp_solution')
+                .fluid()
+                .components(PicricAcid, 1, DilutedSulfuricAcid, 1)
+                .colorAverage()
+                .build();
     }
 }

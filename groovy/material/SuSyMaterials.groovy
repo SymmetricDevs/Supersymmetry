@@ -1199,6 +1199,7 @@ class SuSyMaterials {
         public static Material Tetrahydrofuran;
         public static Material SodiumCyclopentadienide;
         public static Material PotassiumButylXanthate;
+        public static Material PicricAcid;
 
         // Third Degree Materials
 
@@ -1244,6 +1245,7 @@ class SuSyMaterials {
         public static Material KaminskyCatalyst;
         public static Material ZirconiumTetrachlorideTetrahydrofuranComplex;
         public static Material PotassiumButylXanthateSolution;
+        public static Material TNPSolution;
 
         // Thermodynamics/Greenhouse Materials
 

@@ -138,6 +138,7 @@ def poisons = [
         liquid('chlorine')*1000,
         liquid('fluorine')*1000,
         liquid('carbon_monoxide')*1000
+        liquid('phosgene')*500
 ];
 
 for (poison in poisons) {
@@ -152,6 +153,20 @@ for (poison in poisons) {
             .EUt(16)
             .buildAndRegister();
 }
+
+
+recipemap('weapons_factory').recipeBuilder()
+            .inputs([
+                    item('icbmclassic:explosives:0'),
+                    ore('dustPicricAcid') * 7,
+                    metaitem('sensor.lv') 
+                    //Rationale: air burst explosion with high explosives to create repulsive forces
+            ])
+            .fluidInputs(poison)
+            .outputs(item('icbmclassic:explosives:6'))
+            .duration(20)
+            .EUt(16)
+            .buildAndRegister();
 
 //Explosives tier 2
 Globals.solders.each { key, val ->
@@ -185,7 +200,7 @@ for (fuel in thermobaric_fuels) {
             .buildAndRegister();
 }
 
-recipemap('weapons_factory').recipeBuilder()
+/*recipemap('weapons_factory').recipeBuilder()
         .inputs([
                 metaitem('fluid_cell')*8,
                 item('icbmclassic:explosives:6'),
@@ -196,7 +211,7 @@ recipemap('weapons_factory').recipeBuilder()
         .outputs(item('icbmclassic:explosives:9'))
         .duration(400)
         .EUt(60)
-        .buildAndRegister();
+        .buildAndRegister();*/
 
 //Explosives tier 3
 
@@ -371,7 +386,6 @@ def solidfuels = [
         ore('dustSugar'),
         ore('dustGunpowder'),
         ore('dustAluminium'),
-        ore('dustBeryllium')
 ];
 
 def solidoxys = [
@@ -381,7 +395,7 @@ def solidoxys = [
 
 def liquidfuels = [
         liquid('liquid_hydrogen'),
-        liquid('ethane'),
+        liquid('kerosene'),
         liquid('ethanol')
 ];
 

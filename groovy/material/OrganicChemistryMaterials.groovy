@@ -1497,5 +1497,11 @@ public class OrganicChemistryMaterials {
                 .build();
 
         PotassiumButylXanthate.setFormula("C4H9OCS2K", true)
+
+        PicricAcid = new Material.Builder(15239, "picric_acid") 
+                .dust()
+                .components(Carbon, 6, Hydrogen, 3, Nitrogen, 3, Oxygen, 7)
+                .color(0xc2ba1f)
+                .build();
     }
 }
