@@ -778,3 +778,12 @@ crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.hv"
 		[ore('toolHeadBuzzSawVanadiumSteel'), metaitem('gregtech:hull.hv'), ore('circuitHv')],
 		[ore('plateVanadiumSteel'), metaitem('conveyor.module.hv'), ore('cableGtSingleGold')]
 ])
+
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('dustSodiumBicarbonate') * 6)
+    .fluidInputs(fluid('polyvinyl_acetate') * 576)
+    .fluidInputs(fluid('salt_water') * 1000)
+    .output(item('minecraft:slime'))
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
