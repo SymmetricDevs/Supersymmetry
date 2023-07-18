@@ -667,7 +667,7 @@ for (FluidFuel in FluidFuels) {
     }
 
     recipemap('flare_stack').recipeBuilder()
-            .fluidInputs(liquid(FluidFuel.liquid_fuel) * 100)
+            .fluidInputs(liquid(FluidFuel.liquid_fuel) * 1000)
             .duration(30)
             .EUt(7)
             .buildAndRegister();
