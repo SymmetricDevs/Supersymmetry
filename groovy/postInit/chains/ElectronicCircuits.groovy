@@ -114,39 +114,39 @@ mods.gregtech.assembler.recipeBuilder()
         .duration(400)
         .EUt(30)
         .buildAndRegister();
-		
+
 mods.gregtech.assembler.recipeBuilder()
         .fluidInputs(fluid('glue') * 100)
-        .inputs(metaitem('wireFineAnnealedCopper') * 4)
-        .inputs(metaitem('dustAnthracite') * 1)
-        .outputs(metaitem('component.resistor') * 4)
-        .duration(160)
-        .EUt(6)
-        .buildAndRegister();
-		
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glue') * 100)
-        .inputs(metaitem('wireFineAnnealedCopper') * 4)
-        .inputs(metaitem('dustCoke') * 1)
-        .outputs(metaitem('component.resistor') * 4)
-        .duration(160)
-        .EUt(6)
-        .buildAndRegister();
-		
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glue') * 100)
-        .inputs(metaitem('dustAnthracite') * 1)
-        .inputs(metaitem('wireFineCopper') * 4)
+        .inputs(ore('dustAnthracite') * 1)
+        .inputs(ore('wireFineCopper') * 4)
         .outputs(metaitem('component.resistor') * 2)
         .duration(160)
         .EUt(6)
         .buildAndRegister();
-		
+
 mods.gregtech.assembler.recipeBuilder()
         .fluidInputs(fluid('glue') * 100)
-        .inputs(metaitem('dustCoke') * 1)
-        .inputs(metaitem('wireFineCopper') * 4)
+        .inputs(ore('dustAnthracite') * 1)
+        .inputs(ore('wireFineAnnealedCopper') * 4)
+        .outputs(metaitem('component.resistor') * 4)
+        .duration(160)
+        .EUt(6)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .fluidInputs(fluid('glue') * 100)
+        .inputs(ore('dustCoke') * 1)
+        .inputs(ore('wireFineCopper') * 4)
         .outputs(metaitem('component.resistor') * 2)
+        .duration(160)
+        .EUt(6)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .fluidInputs(fluid('glue') * 100)
+        .inputs(ore('dustCoke') * 1)
+        .inputs(ore('wireFineAnnealedCopper') * 4)
+        .outputs(metaitem('component.resistor') * 4)
         .duration(160)
         .EUt(6)
         .buildAndRegister();
