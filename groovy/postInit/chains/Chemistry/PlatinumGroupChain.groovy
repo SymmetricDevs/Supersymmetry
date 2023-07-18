@@ -77,7 +77,7 @@ MACERATOR.recipeBuilder()
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
-/*BR.recipeBuilder()
+BR.recipeBuilder()
     .fluidInputs(fluid('sodium_hexachloroplatinate_solution') * 5000)
     .fluidInputs(fluid('ammonium_chloride_solution') * 3000)
     .chancedOutput(metaitem('dustAmmoniumHexachloroplatinate') * 17, 6667, 0)
@@ -103,5 +103,5 @@ ROASTER.recipeBuilder()
     .fluidOutputs(fluid('hydrogen_cyanide') * 2000)
     .duration(240)
     .EUt(Globals.voltAmps[3])
-    .buildAndRegister()*/
+    .buildAndRegister()
     

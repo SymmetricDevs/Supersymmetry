@@ -488,6 +488,19 @@ public class SecondDegreeMaterials {
                 .fluid()
                 .components(AmmoniumChloride, 1, SodiumBicarbonate, 1, Water, 1)
                 .colorAverage()
-                .build()
+                .build();
+
+        DeoxygenationCatalystPrecursorSolution = new Material.Builder(13078, "deoxygenation_catalyst_precursor_solution")
+                .fluid()
+                .components(AmmoniumHexachloroplatinate, 1, PhosphoricAcid, 1)
+                .colorAverage()
+                .build();
+
+        DeoxygenationCatalyst = new Material.Builder(13079, "deoxygenation_catalyst")
+                .dust()
+                .components(Alumina, 1, Platinum, 1, Chlorine, 4)
+                .flags(GENERATE_CATALYST_BED)
+                .colorAverage()
+                .build();
     }
 }
