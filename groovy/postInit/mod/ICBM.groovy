@@ -200,6 +200,16 @@ for (fuel in thermobaric_fuels) {
             .buildAndRegister();
 }
 
+recipemap('weapons_factory').recipeBuilder()
+            .inputs([
+                    item('icbmclassic:explosives:1'),
+                    ore('plateSteel')*8
+            ])
+            .outputs(item('icbmclassic:explosives:8'))
+            .duration(400)
+            .EUt(60)
+            .buildAndRegister();
+
 /*recipemap('weapons_factory').recipeBuilder()
         .inputs([
                 metaitem('fluid_cell')*8,
