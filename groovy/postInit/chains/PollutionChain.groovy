@@ -164,6 +164,16 @@ DUMPER.recipeBuilder()
         .buildAndRegister()
 
 DUMPER.recipeBuilder()
+        .fluidInputs(fluid('sea_water') * 1000)
+        .duration(5)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('salt_water') * 1000)
+        .duration(5)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
         .fluidInputs(fluid('ammonia_solution') * 1000)
         .duration(20)
         .buildAndRegister()
