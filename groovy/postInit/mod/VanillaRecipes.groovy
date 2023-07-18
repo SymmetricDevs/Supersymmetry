@@ -787,3 +787,9 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(100)
     .EUt(30)
     .buildAndRegister()
+
+crafting.addShaped("tnt_block", item('minecraft:tnt'), [
+        [null, ore('dustTnt'), null],
+        [ore('dustSiliconDioxide'), ore('wireFineRedAlloy'), ore('dustSiliconDioxide')],
+        [null, ore('dustTnt'), null]
+]);
