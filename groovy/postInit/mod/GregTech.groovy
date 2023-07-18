@@ -211,6 +211,12 @@ crafting.addShaped("gregtech:steam_motor", metaitem('steam.motor'), [
     [metaitem('steam.piston'), ore('stickBronze'), metaitem('steam.piston')]
 ]);
 
+crafting.addShaped("gregtech:steam_conveyor", metaitem('conveyor.steam'), [
+    [ore('plateRubber'), ore('plateRubber'), ore('plateRubber')],
+    [metaitem('steam.motor'), ore('gearSmallBronze'), metaitem('steam.motor')],
+    [ore('plateRubber'), ore('plateRubber'), ore('plateRubber')]
+])
+
 crafting.addShaped("gregtech:steam_pump", metaitem('pump.steam'), [
     [ore('screwBronze'), ore('rotorBronze'), ore('ringIron')],
     [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
