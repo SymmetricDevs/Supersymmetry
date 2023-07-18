@@ -105,10 +105,26 @@ for (i = 0; i < 6; i++) {
 
 TUBE_FURNACE.recipeBuilder()
         .inputs(metaitem('cannedmagnesiumdiboride'))
+        .fluidInputs(fluid('nitrogen') * 500)
+        .outputs(metaitem('tubemagnesiumdiboride'))
+        .duration(1006)
+        .EUt(120)
+        .buildAndRegister();
+
+TUBE_FURNACE.recipeBuilder()
+        .inputs(metaitem('cannedmagnesiumdiboride'))
         .fluidInputs(fluid('argon') * 50)
         .outputs(metaitem('tubemagnesiumdiboride'))
         .duration(670)
         .EUt(120)
+        .buildAndRegister();
+
+TUBE_FURNACE.recipeBuilder()
+        .inputs(metaitem('cannedmercurybariumcalciumcuprate'))
+        .fluidInputs(fluid('nitrogen') * 500)
+        .outputs(metaitem('tubemercurybariumcalciumcuprate'))
+        .duration(1500)
+        .EUt(480)
         .buildAndRegister();
 
 TUBE_FURNACE.recipeBuilder()
