@@ -194,11 +194,11 @@ new Etchant("hydrofluoric_acid", "silicon", 40, 500)
 new NDopant("dustHighPurityBoron", 1)
 new NDopant("dustHighPurityGallium", 2)
 new NDopant("dustHighPurityAluminium", 2)
-new NDopant("dustHighPurityIndium", 8)
+new NDopant("dustTinyHighPurityIndium", 1)
 
 new PDopant("dustHighPurityAntimony", 1)
 new PDopant("dustHighPurityPhosphorus", 2)
-new PDopant("dustHighPurityArsenic", 3)
+new PDopant("dustHighPurityArsenic", 2)
 
 def generatePatterningRecipes(input, product, mask, voltageTier, timeMultiplier, int outputMultiplier, int circ, boolean cleanroom) {
     for (photoresist in Photoresist.photoresists) {
