@@ -12,3 +12,5 @@ def name_removals = [
 for (name in name_removals) {
     crafting.remove(name)
 }
+
+crafting.replaceShapeless("storagedrawers:key_quantify", item('storagedrawers:quantify_key'), [item('storagedrawers:drawer_key'), item('minecraft:book')])
