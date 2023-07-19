@@ -25,22 +25,22 @@ crafting.replaceShaped("gregtech:electronic_circuit_mv", metaitem('circuit.good_
 
 crafting.addShaped('resistor_wire_anthracite', metaitem('component.resistor') * 2, [
     [metaitem('rubber_drop'),item('minecraft:paper'),metaitem('rubber_drop')],
-    [ore('wireFineCopper'),ore('dustAnthracite'), ore('wireGtSingleCopper')],
+    [ore('wireGtSingleCopper'),ore('dustAnthracite'), ore('wireGtSingleCopper')],
     [null,item('minecraft:paper'),null]])
 
 crafting.addShaped('resistor_wire_fine_anthracite', metaitem('component.resistor') * 2, [
     [metaitem('rubber_drop'),item('minecraft:paper'),metaitem('rubber_drop')],
-    [ore('wireGtSingleCopper'),ore('dustAnthracite'), ore('wireFineCopper')],
+    [ore('wireFineCopper'),ore('dustAnthracite'), ore('wireFineCopper')],
     [null,item('minecraft:paper'),null]])
 	
 crafting.addShaped('resistor_wire_coke', metaitem('component.resistor') * 2, [
     [metaitem('rubber_drop'),item('minecraft:paper'),metaitem('rubber_drop')],
-    [ore('wireFineCopper'),ore('dustCoke'), ore('wireGtSingleCopper')],
+    [ore('wireGtSingleCopper'),ore('dustCoke'), ore('wireGtSingleCopper')],
     [null,item('minecraft:paper'),null]])
 
 crafting.addShaped('resistor_wire_fine_coke', metaitem('component.resistor') * 2, [
     [metaitem('rubber_drop'),item('minecraft:paper'),metaitem('rubber_drop')],
-    [ore('wireGtSingleCopper'),ore('dustCoke'), ore('wireFineCopper')],
+    [ore('wireFineCopper'),ore('dustCoke'), ore('wireFineCopper')],
     [null,item('minecraft:paper'),null]])
 
 mods.gregtech.assembler.recipeBuilder()
