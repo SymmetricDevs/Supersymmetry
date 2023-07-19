@@ -122,3 +122,15 @@ crafting.replaceShaped('rsgauges:industrial/trapdorswitch3', item('rsgauges:trap
         [metaitem('wireFineRedAlloy'), metaitem('stickSteel'), metaitem('wireFineRedAlloy')],
         [null, metaitem('sensor.lv'), null]
 ])
+
+crafting.replaceShaped('rsgauges:industrial/automaticswitchdetector1', item('rsgauges:automaticswitch1'), [
+        [null, metaitem('plateSteel'), null],
+        [metaitem('wireFineRedAlloy'), metaitem('plateSteel'), metaitem('sensor.lv')],
+        [null, metaitem('plateSteel'), null]
+])
+
+crafting.replaceShaped('rsgauges:glass/detectorswitch_glass1', item('rsgauges:detectorswitch_glass1'), [
+        [null, metaitem('plateGlass'), null],
+        [metaitem('wireFineRedAlloy'), metaitem('plateGlass'), metaitem('sensor.lv')],
+        [null, metaitem('plateGlass'), null]
+])

@@ -489,6 +489,12 @@ crafting.addShaped("industrialrenewal:brace_greg", item('industrialrenewal:brace
 	[null, ore('stickLongSteel'), ore('stickSteel')]
 ])
 
+crafting.addShaped("industrialrenewal:chunkloader", item('industrialrenewal:chunk_loader'), [
+		[ore('stickIron'), ore('plateIron'), ore('stickIron')],
+		[ore('plateIron'), item('minecraft:redstone'), ore('plateIron')],
+		[ore('stickIron'), ore('plateIron'), ore('stickIron')]
+])
+
 crafting.addShaped("industrialrenewal:column_to_pillar", item('industrialrenewal:catwalk_steel_pillar'), [
 	[item('industrialrenewal:catwalk_column_steel'), null, null],
 	[null, null, null],

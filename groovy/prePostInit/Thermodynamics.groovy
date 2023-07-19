@@ -548,13 +548,13 @@ def PremiumGasoline = new IFluidFuel('premium_gasoline', 'flue_gas');
 PremiumGasoline.setDuration(750);
 PremiumGasoline.setAmountToBurn(10);
 PremiumGasoline.setByproductAmount(1000);
-Gasoline.setIsGasoline(true);
+PremiumGasoline.setIsGasoline(true);
 
 def SupremeGasoline = new IFluidFuel('supreme_gasoline', 'flue_gas');
 SupremeGasoline.setDuration(1000);
 SupremeGasoline.setAmountToBurn(10);
 SupremeGasoline.setByproductAmount(1000);
-Gasoline.setIsGasoline(true);
+SupremeGasoline.setIsGasoline(true);
 
 def Ammonia = new IFluidFuel('ammonia', 'flue_gas');
 Ammonia.setDuration(32);
