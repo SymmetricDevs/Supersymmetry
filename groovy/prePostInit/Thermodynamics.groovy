@@ -542,7 +542,7 @@ def MidgradeGasoline = new IFluidFuel('midgrade_gasoline', 'flue_gas');
 MidgradeGasoline.setDuration(500);
 MidgradeGasoline.setAmountToBurn(10);
 MidgradeGasoline.setByproductAmount(1000);
-Gasoline.setIsGasoline(true);
+MidgradeGasoline.setIsGasoline(true);
 
 def PremiumGasoline = new IFluidFuel('premium_gasoline', 'flue_gas');
 PremiumGasoline.setDuration(750);
