@@ -413,13 +413,13 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        VinylChlorideSolution = new Material.Builder(15067, 'vinyl_chloride_solution')
+        VinylChlorideSuspension = new Material.Builder(15067, 'vinyl_chloride_suspension')
                 .fluid()
                 .components(Water, 1, VinylChloride, 1)
                 .colorAverage()
                 .build();
 
-        PolyvinylChlorideSolution = new Material.Builder(15068, 'polyvinyl_chloride_solution')
+        PolyvinylChlorideSuspension = new Material.Builder(15068, 'polyvinyl_chloride_suspension')
                 .fluid()
                 .components(Water, 1, PolyvinylChloride, 1)
                 .colorAverage()

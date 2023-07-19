@@ -1013,8 +1013,8 @@ class SuSyMaterials {
         public static Material ImpureEpoxyResin;
         public static Material UncuredEpoxyResin;
         public static Material TNTSolution;
-        public static Material VinylChlorideSolution;
-        public static Material PolyvinylChlorideSolution;
+        public static Material VinylChlorideSuspension;
+        public static Material PolyvinylChlorideSuspension;
         public static Material StyreneSolution;
         public static Material PolystyreneSolution;
         public static Material VinylAcetateSolution;
