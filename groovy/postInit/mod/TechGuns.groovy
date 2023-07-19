@@ -1262,10 +1262,10 @@ recipemap('weapons_factory').recipeBuilder()
 
 //Compressed air
 
-recipemap('canning_machine')
-		.inputs(item('techguns:itemshared', 24))
-		.fluidInputs(fluid('compressed_air') * 1000)
-		.outputs(item('techguns:itemshared', 23))
+recipemap('canner').recipeBuilder()
+		.inputs(item('techguns:itemshared:24'))
+		.fluidInputs(fluid('air') * 1000)
+		.outputs(item('techguns:itemshared:23'))
 		.duration(100)
 		.EUt(7)
 		.buildAndRegister();

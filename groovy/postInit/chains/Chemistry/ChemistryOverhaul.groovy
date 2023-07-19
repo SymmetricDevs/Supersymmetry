@@ -902,9 +902,9 @@ ROASTER.recipeBuilder()
 
 CSTR.recipeBuilder()
 .fluidInputs(fluid('ammonia') * 100)
-.fluidInputs(fluid('oxygen') * 100)
+.fluidInputs(fluid('oxygen') * 250)
 .fluidOutputs(fluid('steam') * 150)
-.fluidOutputs(fluid('nitric_oxide') * 50)
+.fluidOutputs(fluid('nitric_oxide') * 100)
 .duration(5)
 .EUt(30)
 .buildAndRegister()
@@ -3269,13 +3269,23 @@ CSTR.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder()
+DISTILLATION_TOWER.recipeBuilder()
     .fluidInputs(fluid('rearranged_cumene') * 150)
     .fluidOutputs(fluid('phosphoric_acid') * 50)
     .fluidOutputs(fluid('phenol') * 50)
     .fluidOutputs(fluid('acetone') * 50)
     .duration(200)
     .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+// Nitrogen Dioxide
+
+REACTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('nitrogen') * 1000)
+    .fluidInputs(fluid('oxygen') * 2000)
+    .fluidOutputs(fluid('nitrogen_dioxide') * 1000)
+    .duration(60)
+    .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
 // Isobutylene

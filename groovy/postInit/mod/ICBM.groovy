@@ -143,7 +143,7 @@ def poisons = [
         liquid('hydrogen_sulfide')*1000,
         liquid('chlorine')*1000,
         liquid('fluorine')*1000,
-        liquid('carbon_monoxide')*1000
+        liquid('carbon_monoxide')*1000,
         liquid('phosgene')*500
 ];
 
@@ -158,14 +158,12 @@ for (poison in poisons) {
             .duration(20)
             .EUt(16)
             .buildAndRegister();
-}
 
-
-recipemap('weapons_factory').recipeBuilder()
+    recipemap('weapons_factory').recipeBuilder()
             .inputs([
                     item('icbmclassic:explosives:0'),
                     ore('dustPicricAcid') * 7,
-                    metaitem('sensor.lv') 
+                    metaitem('sensor.lv')
                     //Rationale: air burst explosion with high explosives to create repulsive forces
             ])
             .fluidInputs(poison)
@@ -173,6 +171,7 @@ recipemap('weapons_factory').recipeBuilder()
             .duration(20)
             .EUt(16)
             .buildAndRegister();
+}
 
 //Explosives tier 2
 Globals.solders.each { key, val ->
@@ -422,7 +421,7 @@ def liquidoxys = [
 
 def hypergolicfuels = [
         liquid('monomethylhydrazine'),
-        liquid('1,1-dimehylhydrazine')
+        liquid('dimethylhydrazine')
 ]
 
 def hypergolicoxys = [
