@@ -199,11 +199,25 @@ crafting.addShaped("pig_iron_tiny_pile_manual", metaitem('dustTinyPigIron'), [
         [null, metaitem('nuggetPigIron')]
 ]);
 
+//Steam Piston
+
 crafting.addShaped("gregtech:steam_piston", metaitem('steam.piston'), [
     [ore('plateBronze'), ore('plateBronze'), ore('plateBronze')],
     [ore('pipeTinyFluidBronze'), ore('stickBronze'), ore('stickBronze')],
     [ore('pipeTinyFluidBronze'), ore('craftingToolHardHammer'), ore('gearSmallBronze')]
 ])
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(ore('plateBronze') * 3)
+        .inputs(ore('stickBronze') * 2)
+        .inputs(ore('gearSmallBronze') * 1)
+        .inputs(ore('pipeTinyFluidBronze') * 2)
+        .outputs(metaitem('steam.piston'))
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+
+//Steam Motor
 
 crafting.addShaped("gregtech:steam_motor", metaitem('steam.motor'), [
     [ore('plateBronze'), ore('stickBronze'), ore('plateBronze')],
@@ -211,11 +225,36 @@ crafting.addShaped("gregtech:steam_motor", metaitem('steam.motor'), [
     [metaitem('steam.piston'), ore('stickBronze'), metaitem('steam.piston')]
 ]);
 
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(ore('plateBronze') * 2)
+        .inputs(ore('stickBronze') * 3)
+        .inputs(ore('gearSmallBronze') * 2)
+        .inputs(metaitem('steam.piston') * 2)
+        .outputs(metaitem('steam.motor'))
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+
+//Steam Pump
+
 crafting.addShaped("gregtech:steam_pump", metaitem('pump.steam'), [
     [ore('screwBronze'), ore('rotorBronze'), ore('ringIron')],
     [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
     [ore('ringIron'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
 ])
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(ore('screwBronze'))
+        .inputs(ore('rotorBronze'))
+        .inputs(ore('ringIron')*2)
+        .inputs(metaitem('steam.motor'))
+        .inputs(ore('pipeTinyFluidBronze') * 2)
+        .outputs(metaitem('steam.motor'))
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+		
+//Steam Conveyor (no recipe for now)
 
 
 crafting.replaceShaped("gregtech:steam_extractor_bronze", metaitem('steam_extractor_bronze'), [
