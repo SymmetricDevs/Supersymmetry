@@ -362,7 +362,7 @@ public class OreMaterials{
                 .build();
 
         Zircon = new Material.Builder(7047, "zircon")
-                .gem()
+                .gem().ore()
                 .iconSet(SHINY)
                 .color(0xf05c51)
                 .components(Zirconium, 1, Silicon, 1, Oxygen, 4)
