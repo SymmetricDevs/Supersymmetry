@@ -43,4 +43,4 @@ crafting.addShaped('susy:kimberlite_bricks', item('susy:susy_stone_bricks', 8) *
         [ore('stoneKimberlite'), ore('stoneKimberlite')]
 ])
 
-crafting.addShapeless('marble_conversion', item('gregtech:stone_smooth', 2), item('chisel:marble2', 7))
+crafting.addShapeless('marble_conversion', item('gregtech:stone_smooth', 2), [item('chisel:marble2', 7)])
