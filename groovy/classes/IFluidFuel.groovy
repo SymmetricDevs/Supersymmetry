@@ -11,6 +11,7 @@ class IFluidFuel{
     public int byproduct_amount = 1000;
 
     public boolean diesel = false;
+    public boolean gasoline = false;
     public boolean gas_turbine = true;
 
     public static void main(String[] args){
@@ -40,6 +41,10 @@ class IFluidFuel{
 
     public void setIsDiesel(boolean b) {
         this.diesel = b;
+    }
+
+    public void setIsGasoline(boolean b) {
+        this.gasoline = b;
     }
 
     public void setIsGasTurbineFuel(boolean b){
