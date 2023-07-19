@@ -259,6 +259,26 @@ recipemap('sintering_oven').recipeBuilder()
 		.duration(150)
 		.buildAndRegister()
 
+recipemap('sintering_oven').recipeBuilder()
+		.inputs(metaitem('raw_electrode'))
+		.fluidInputs(fluid('syngas') * 100)
+		.fluidInputs(fluid('oxygen') * 80)
+		.outputs(metaitem('graphite_electrode'))
+		.fluidOutputs(fluid('carbon_dioxide') * 50)
+		.EUt(30)
+		.duration(150)
+		.buildAndRegister()
+
+recipemap('sintering_oven').recipeBuilder()
+		.inputs(metaitem('raw_electrode'))
+		.fluidInputs(fluid('methane') * 100)
+		.fluidInputs(fluid('oxygen') * 80)
+		.outputs(metaitem('graphite_electrode'))
+		.fluidOutputs(fluid('carbon_dioxide') * 50)
+		.EUt(30)
+		.duration(150)
+		.buildAndRegister()
+
 
 for (i = 1; i <= 8; i++) {
 	crafting.remove('gregtech:gregtech.machine.arc_furnace.' + Globals.voltageTiers[i])
