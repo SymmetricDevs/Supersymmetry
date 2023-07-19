@@ -407,6 +407,7 @@ def Gasoline = new IFluidFuel('gasoline', 'flue_gas');
 Gasoline.setDuration(140);
 Gasoline.setAmountToBurn(10);
 Gasoline.setByproductAmount(1000);
+Gasoline.setIsGasoline(true);
 
 def SulfuricGasoline = new IFluidFuel('sulfuric_gasoline', 'flue_gas');
 SulfuricGasoline.setDuration(14);
@@ -541,16 +542,19 @@ def MidgradeGasoline = new IFluidFuel('midgrade_gasoline', 'flue_gas');
 MidgradeGasoline.setDuration(500);
 MidgradeGasoline.setAmountToBurn(10);
 MidgradeGasoline.setByproductAmount(1000);
+MidgradeGasoline.setIsGasoline(true);
 
 def PremiumGasoline = new IFluidFuel('premium_gasoline', 'flue_gas');
 PremiumGasoline.setDuration(750);
 PremiumGasoline.setAmountToBurn(10);
 PremiumGasoline.setByproductAmount(1000);
+Gasoline.setIsGasoline(true);
 
 def SupremeGasoline = new IFluidFuel('supreme_gasoline', 'flue_gas');
 SupremeGasoline.setDuration(1000);
 SupremeGasoline.setAmountToBurn(10);
 SupremeGasoline.setByproductAmount(1000);
+Gasoline.setIsGasoline(true);
 
 def Ammonia = new IFluidFuel('ammonia', 'flue_gas');
 Ammonia.setDuration(32);
@@ -648,22 +652,57 @@ def WorkingFluids = [
 ];
 
 for (FluidFuel in FluidFuels) {
-    if(FluidFuel.gas_turbine){
-        recipemap('gas_turbine').recipeBuilder()
-                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                .fluidInputs(liquid('air') * 100)
-                .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                .duration(FluidFuel.duration)
-                .EUt(-32)
-                .buildAndRegister();
+    if (FluidFuel.gas_turbine) {
+        if (FluidFuel.diesel) {
+                recipemap('gas_turbine').recipeBuilder()
+                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                        .fluidInputs(liquid('air') * 100)
+                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                        .duration(FluidFuel.duration)
+                        .EUt(-64)
+                        .buildAndRegister();
 
-        recipemap('gas_turbine').recipeBuilder()
-                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                .fluidInputs(liquid('oxygen') * 25)
-                .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                .duration(FluidFuel.duration)
-                .EUt(-32)
-                .buildAndRegister();
+                recipemap('gas_turbine').recipeBuilder()
+                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                        .fluidInputs(liquid('oxygen') * 25)
+                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                        .duration((int) (FluidFuel.duration * 1.1))
+                        .EUt(-64)
+                        .buildAndRegister();
+        } else if (FluidFuel.gasoline) {
+                recipemap('gas_turbine').recipeBuilder()
+                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                        .fluidInputs(liquid('air') * 100)
+                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                        .duration(FluidFuel.duration)
+                        .EUt(-128)
+                        .buildAndRegister();
+
+                recipemap('gas_turbine').recipeBuilder()
+                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                        .fluidInputs(liquid('oxygen') * 25)
+                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                        .duration((int) (FluidFuel.duration * 1.1))
+                        .EUt(-128)
+                        .buildAndRegister();
+        } else {
+                recipemap('gas_turbine').recipeBuilder()
+                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                        .fluidInputs(liquid('air') * 100)
+                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                        .duration(FluidFuel.duration)
+                        .EUt(-32)
+                        .buildAndRegister();
+
+                recipemap('gas_turbine').recipeBuilder()
+                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                        .fluidInputs(liquid('oxygen') * 25)
+                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                        .duration((int) (FluidFuel.duration * 1.1))
+                        .EUt(-32)
+                        .buildAndRegister();
+        }
+                
     }
 
     recipemap('flare_stack').recipeBuilder()
