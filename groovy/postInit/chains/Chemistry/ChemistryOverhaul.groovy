@@ -1111,6 +1111,17 @@ CSTR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
+// Monomethylhydrazine
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('monochloramine') * 50)
+.fluidInputs(fluid('methylamine') * 50)
+.fluidOutputs(fluid('dimethylhydrazine') * 50)
+.fluidOutputs(fluid('hydrogen_chloride') * 50)
+.duration(10)
+.EUt(30)
+.buildAndRegister()
+
 // Vinyl acetate
 
 FBR.recipeBuilder()

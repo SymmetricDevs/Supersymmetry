@@ -1503,5 +1503,11 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 6, Hydrogen, 3, Nitrogen, 3, Oxygen, 7)
                 .color(0xc2ba1f)
                 .build();
+
+        Monomethylhydrazine = new Material.Builder(15240, "monomethylhydrazine")
+                .fluid()
+                .components(Carbon, 1, Hydrogen, 6, Nitrogen, 2)
+                .color(0x558ca6)
+                .build();
     }
 }

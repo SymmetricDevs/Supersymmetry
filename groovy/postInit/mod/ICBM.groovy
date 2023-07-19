@@ -418,9 +418,17 @@ def liquidfuels = [
 def liquidoxys = [
         liquid('liquid_oxygen'),
         //liquid('hydrogen_peroxide'),
-        liquid('nitric_acid'),
-        liquid('dinitrogen_tetroxide')
 ];
+
+def hypergolicfuels = [
+        liquid('monomethylhydrazine'),
+        liquid('1,1-dimehylhydrazine')
+]
+
+def hypergolicoxys = [
+        liquid('dinitrogen_tetroxide'),
+        liquid('nitric_acid')
+]
 
 Globals.solders.each { key, val ->
     for (s_fuel in solidfuels) {
@@ -517,9 +525,9 @@ Globals.solders.each { key, val ->
             }
         }
     }
-    for (l_fuel in liquidfuels) {
-        for (l_oxy_1 in liquidoxys) {
-            for (var k = 15; k < 22; k++) {
+    for (h_fuel in hypergolicfuels) {
+        for (h_oxy_1 in hypergolicoxys) {
+            for (var k = 15; k < 24; k++) {
                 recipemap('large_weapons_factory').recipeBuilder()
                         .inputs([ore('stickTitanium')*4,
                                  ore('ringTitanium')*2,
@@ -528,31 +536,11 @@ Globals.solders.each { key, val ->
                                  item('icbmclassic:explosives:' + k)
                         ])
                         .fluidInputs(fluid(key) * val)
-                        .fluidInputs(l_oxy_1*2000)
-                        .fluidInputs(l_fuel*2000)
+                        .fluidInputs(h_oxy_1*4000)
+                        .fluidInputs(h_fuel*2000)
                         .outputs(item('icbmclassic:missile:' + k))
                         .duration(200)
                         .EUt(500)
-                        .buildAndRegister();
-            }
-        }
-    }
-    for (l_fuel in liquidfuels) {
-        for (l_oxy_1 in liquidoxys) {
-            for (var l = 22; l < 24; l++) {
-                recipemap('large_weapons_factory').recipeBuilder()
-                        .inputs([ore('stickTungstenSteel')*4,
-                                 ore('ringTungstenSteel')*2,
-                                 ore('plateTungstenSteel')*2,
-                                 ore('foilTungstenSteel')*16,
-                                 item('icbmclassic:explosives:' + l)
-                        ])
-                        .fluidInputs(fluid(key) * val)
-                        .fluidInputs(l_oxy_1*2000)
-                        .fluidInputs(fluid('rocket_fuel') * 2000)
-                        .outputs(item('icbmclassic:missile:' + l))
-                        .duration(200)
-                        .EUt(1920)
                         .buildAndRegister();
             }
         }

@@ -1534,6 +1534,8 @@ material.ammoniacal_sodium_bicarbonate_solution=Ammoniacal Sodium Bicarbonate So
 material.diluted_silver_nitrate_solution=DilutedSilverNitrateSolution
 material.picric_acid=Picric Acid (TNP)
 material.tnp_solution=Picric Acid Solution
+material.monomethylhydrazine=Monomethylhydrazine (MMH)
+material.dimethylhydrazine=Unsymmetrical Dimethylhydrazine (UDMH)
 
 # Isotopes
 

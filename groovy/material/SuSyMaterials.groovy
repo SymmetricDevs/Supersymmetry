@@ -1200,6 +1200,7 @@ class SuSyMaterials {
         public static Material SodiumCyclopentadienide;
         public static Material PotassiumButylXanthate;
         public static Material PicricAcid;
+        public static Material Monomethylhydrazine;
 
         // Third Degree Materials
 
