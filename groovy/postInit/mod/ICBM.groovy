@@ -92,10 +92,16 @@ for (var i = 0; i < 8; i++) {
 }
 
 //Explosives tier 1
-crafting.addShaped("icbm_exp_1_0", item('icbmclassic:explosives:0'), [
+crafting.addShaped("icbm_exp_1_0_dynamite", item('icbmclassic:explosives:0'), [
         [metaitem('dynamite'), metaitem('dynamite'), metaitem('dynamite')],
         [metaitem('dynamite'), ore('wireFineRedAlloy'), metaitem('dynamite')],
         [metaitem('dynamite'), metaitem('dynamite'), metaitem('dynamite')]
+]);
+
+crafting.addShaped("icbm_exp_1_0_tnt", item('icbmclassic:explosives:0'), [
+        [null, ore('dustTnt'), null],
+        [ore('dustTnt'), ore('wireFineRedAlloy'), ore('dustTnt')],
+        [null, ore('dustTnt'), null]
 ]);
 
 crafting.addShaped("icbm_exp_1_1", item('icbmclassic:explosives:1'), [
@@ -137,7 +143,8 @@ def poisons = [
         liquid('hydrogen_sulfide')*1000,
         liquid('chlorine')*1000,
         liquid('fluorine')*1000,
-        liquid('carbon_monoxide')*1000
+        liquid('carbon_monoxide')*1000,
+        liquid('phosgene')*500
 ];
 
 for (poison in poisons) {
@@ -148,6 +155,19 @@ for (poison in poisons) {
             ])
             .fluidInputs(poison)
             .outputs(item('icbmclassic:explosives:4'))
+            .duration(20)
+            .EUt(16)
+            .buildAndRegister();
+
+    recipemap('weapons_factory').recipeBuilder()
+            .inputs([
+                    item('icbmclassic:explosives:0'),
+                    ore('dustPicricAcid') * 7,
+                    metaitem('sensor.lv')
+                    //Rationale: air burst explosion with high explosives to create repulsive forces
+            ])
+            .fluidInputs(poison)
+            .outputs(item('icbmclassic:explosives:6'))
             .duration(20)
             .EUt(16)
             .buildAndRegister();
@@ -186,6 +206,16 @@ for (fuel in thermobaric_fuels) {
 }
 
 recipemap('weapons_factory').recipeBuilder()
+            .inputs([
+                    item('icbmclassic:explosives:1'),
+                    ore('plateSteel')*8
+            ])
+            .outputs(item('icbmclassic:explosives:8'))
+            .duration(400)
+            .EUt(60)
+            .buildAndRegister();
+
+/*recipemap('weapons_factory').recipeBuilder()
         .inputs([
                 metaitem('fluid_cell')*8,
                 item('icbmclassic:explosives:6'),
@@ -196,7 +226,7 @@ recipemap('weapons_factory').recipeBuilder()
         .outputs(item('icbmclassic:explosives:9'))
         .duration(400)
         .EUt(60)
-        .buildAndRegister();
+        .buildAndRegister();*/
 
 //Explosives tier 3
 
@@ -371,7 +401,6 @@ def solidfuels = [
         ore('dustSugar'),
         ore('dustGunpowder'),
         ore('dustAluminium'),
-        ore('dustBeryllium')
 ];
 
 def solidoxys = [
@@ -381,16 +410,24 @@ def solidoxys = [
 
 def liquidfuels = [
         liquid('liquid_hydrogen'),
-        liquid('ethane'),
+        liquid('kerosene'),
         liquid('ethanol')
 ];
 
 def liquidoxys = [
         liquid('liquid_oxygen'),
         //liquid('hydrogen_peroxide'),
-        liquid('nitric_acid'),
-        liquid('dinitrogen_tetroxide')
 ];
+
+def hypergolicfuels = [
+        liquid('monomethylhydrazine'),
+        liquid('dimethylhydrazine')
+]
+
+def hypergolicoxys = [
+        liquid('dinitrogen_tetroxide'),
+        liquid('nitric_acid')
+]
 
 Globals.solders.each { key, val ->
     for (s_fuel in solidfuels) {
@@ -487,9 +524,9 @@ Globals.solders.each { key, val ->
             }
         }
     }
-    for (l_fuel in liquidfuels) {
-        for (l_oxy_1 in liquidoxys) {
-            for (var k = 15; k < 22; k++) {
+    for (h_fuel in hypergolicfuels) {
+        for (h_oxy_1 in hypergolicoxys) {
+            for (var k = 15; k < 24; k++) {
                 recipemap('large_weapons_factory').recipeBuilder()
                         .inputs([ore('stickTitanium')*4,
                                  ore('ringTitanium')*2,
@@ -498,31 +535,11 @@ Globals.solders.each { key, val ->
                                  item('icbmclassic:explosives:' + k)
                         ])
                         .fluidInputs(fluid(key) * val)
-                        .fluidInputs(l_oxy_1*2000)
-                        .fluidInputs(l_fuel*2000)
+                        .fluidInputs(h_oxy_1*4000)
+                        .fluidInputs(h_fuel*2000)
                         .outputs(item('icbmclassic:missile:' + k))
                         .duration(200)
                         .EUt(500)
-                        .buildAndRegister();
-            }
-        }
-    }
-    for (l_fuel in liquidfuels) {
-        for (l_oxy_1 in liquidoxys) {
-            for (var l = 22; l < 24; l++) {
-                recipemap('large_weapons_factory').recipeBuilder()
-                        .inputs([ore('stickTungstenSteel')*4,
-                                 ore('ringTungstenSteel')*2,
-                                 ore('plateTungstenSteel')*2,
-                                 ore('foilTungstenSteel')*16,
-                                 item('icbmclassic:explosives:' + l)
-                        ])
-                        .fluidInputs(fluid(key) * val)
-                        .fluidInputs(l_oxy_1*2000)
-                        .fluidInputs(fluid('rocket_fuel') * 2000)
-                        .outputs(item('icbmclassic:missile:' + l))
-                        .duration(200)
-                        .EUt(1920)
                         .buildAndRegister();
             }
         }

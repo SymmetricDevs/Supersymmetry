@@ -413,13 +413,13 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        VinylChlorideSolution = new Material.Builder(15067, 'vinyl_chloride_solution')
+        VinylChlorideSuspension = new Material.Builder(15067, 'vinyl_chloride_suspension')
                 .fluid()
                 .components(Water, 1, VinylChloride, 1)
                 .colorAverage()
                 .build();
 
-        PolyvinylChlorideSolution = new Material.Builder(15068, 'polyvinyl_chloride_solution')
+        PolyvinylChlorideSuspension = new Material.Builder(15068, 'polyvinyl_chloride_suspension')
                 .fluid()
                 .components(Water, 1, PolyvinylChloride, 1)
                 .colorAverage()
@@ -1497,5 +1497,17 @@ public class OrganicChemistryMaterials {
                 .build();
 
         PotassiumButylXanthate.setFormula("C4H9OCS2K", true)
+
+        PicricAcid = new Material.Builder(15239, "picric_acid") 
+                .dust()
+                .components(Carbon, 6, Hydrogen, 3, Nitrogen, 3, Oxygen, 7)
+                .color(0xc2ba1f)
+                .build();
+
+        Monomethylhydrazine = new Material.Builder(15240, "monomethylhydrazine")
+                .fluid()
+                .components(Carbon, 1, Hydrogen, 6, Nitrogen, 2)
+                .color(0x558ca6)
+                .build();
     }
 }

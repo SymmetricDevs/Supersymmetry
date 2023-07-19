@@ -252,9 +252,6 @@ class SuSyMaterials {
         public static Material BoraxElectrolyte;
         public static Material FerroelectricCeramicBinding;
         public static Material ConfiguredCircuitOne;
-        public static Material MetalNitrateSolution;
-        public static Material NeutralizedMetalNitrateSolution;
-        public static Material MetalNitrateCatalyst;
         public static Material TwoEthylhexylPhosphoricAcidMix;
         public static Material RareEarthCatalystYNd;
         public static Material DilutedPrimaryAmineN;
@@ -875,6 +872,7 @@ class SuSyMaterials {
         public static Material Chlorotrifluoromethane;
         public static Material Chlorodifluoromethane;
         public static Material PolychlorinatedBiphenyl;
+        public static Material DilutedSilverNitrateSolution;
 
         // Second Degree Materials
 
@@ -1015,8 +1013,8 @@ class SuSyMaterials {
         public static Material ImpureEpoxyResin;
         public static Material UncuredEpoxyResin;
         public static Material TNTSolution;
-        public static Material VinylChlorideSolution;
-        public static Material PolyvinylChlorideSolution;
+        public static Material VinylChlorideSuspension;
+        public static Material PolyvinylChlorideSuspension;
         public static Material StyreneSolution;
         public static Material PolystyreneSolution;
         public static Material VinylAcetateSolution;
@@ -1201,6 +1199,8 @@ class SuSyMaterials {
         public static Material Tetrahydrofuran;
         public static Material SodiumCyclopentadienide;
         public static Material PotassiumButylXanthate;
+        public static Material PicricAcid;
+        public static Material Monomethylhydrazine;
 
         // Third Degree Materials
 
@@ -1229,9 +1229,7 @@ class SuSyMaterials {
         public static Material MagnesiumChlorideGlycolate;
         public static Material DiglycolicAcidSolution;
         public static Material DiTwoEthylhexylPhosphoricAcidSolution;
-        public static Material DilutedTetraoctylDiglycolamide;
         public static Material DilutedChloroaceticAnhydride;
-        public static Material DilutedOctylamine;
         public static Material DilutedMethylIsobutylKetone;
         public static Material DilutedTwoEthylTwoHexenal;
         public static Material DilutedDiisopropylamine;
@@ -1248,6 +1246,7 @@ class SuSyMaterials {
         public static Material KaminskyCatalyst;
         public static Material ZirconiumTetrachlorideTetrahydrofuranComplex;
         public static Material PotassiumButylXanthateSolution;
+        public static Material TNPSolution;
 
         // Thermodynamics/Greenhouse Materials
 

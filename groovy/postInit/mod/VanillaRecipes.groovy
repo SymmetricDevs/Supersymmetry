@@ -759,4 +759,20 @@ mods.gregtech.macerator.removeByInput(2, [item('minecraft:rail')], null)
 // Wrought Iron Nugget * 1
 mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:rail')], [fluid('oxygen') * 6])
 // Small Pile of Gold Dust * 2
+
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('dustSodiumBicarbonate') * 6)
+    .fluidInputs(fluid('polyvinyl_acetate') * 576)
+    .fluidInputs(fluid('salt_water') * 1000)
+    .outputs(item('minecraft:slime_ball'))
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
+
+crafting.addShaped("tnt_block", item('minecraft:tnt'), [
+        [null, ore('dustTnt'), null],
+        [ore('dustSiliconDioxide'), ore('wireFineRedAlloy'), ore('dustSiliconDioxide')],
+        [null, ore('dustTnt'), null]
+]);
+
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:golden_rail')], null)

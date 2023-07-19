@@ -717,20 +717,19 @@ public class UnknownCompositionMaterials {
                 .color(0xb5bf9b)
                 .build()
       
-        MetalNitrateSolution = new Material.Builder(4135, "metal_nitrate_solution")
+        ChlorofluoromethaneMix = new Material.Builder(4135, "chlorofluoromethane_mix")
                 .fluid()
-                .color(0x663422)
+                .color(0xb03f5d)
                 .build();
 
-        NeutralizedMetalNitrateSolution = new Material.Builder(4136, "neutralized_metal_nitrate_solution")
+        CinnabarSlurry = new Material.Builder(4136, "cinnabar_slurry")
                 .fluid()
-                .color(0x734d3f)
+                .color(0x960000)
                 .build();
 
-        MetalNitrateCatalyst = new Material.Builder(4137, "metal_nitrate_catalyst")
-                .dust()
-                .iconSet(SHINY)
-                .color(0xb58877)
+        ImpureCinnabarSlurry = new Material.Builder(4274, "impure_cinnabar_slurry")
+                .fluid()
+                .color(0x820000)
                 .build();
 
         TwoEthylhexylPhosphoricAcidMix = new Material.Builder(4138, "two_ethylhexyl_phosphoric_acid_mix")
@@ -1433,21 +1432,6 @@ public class UnknownCompositionMaterials {
         CopperMatteFlueGas = new Material.Builder(4273, "copper_matte_flue_gas")
                 .fluid()
                 .color(0x3e146e)
-                .build();
-
-        ImpureCinnabarSlurry = new Material.Builder(4274, "impure_cinnabar_slurry")
-                .fluid()
-                .color(0x820000)
-                .build();
-
-        CinnabarSlurry = new Material.Builder(4275, "cinnabar_slurry")
-                .fluid()
-                .color(0x960000)
-                .build();
-
-        ChlorofluoromethaneMix = new Material.Builder(4276, "chlorofluoromethane_mix")
-                .fluid()
-                .color(0xb03f5d)
                 .build();
     }
 }
