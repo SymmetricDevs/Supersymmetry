@@ -1,0 +1,1 @@
+crafting.remove('weeping-angels:angel_painting')
