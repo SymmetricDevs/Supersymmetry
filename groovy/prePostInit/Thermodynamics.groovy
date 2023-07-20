@@ -512,7 +512,7 @@ SulfuricKerosene.setAmountToBurn(8);
 SulfuricKerosene.setByproductAmount(800);
 
 def Diesel = new IFluidFuel('diesel', 'flue_gas');
-Diesel.setDuration(80);
+Diesel.setDuration(200);
 Diesel.setAmountToBurn(10);
 Diesel.setByproductAmount(1000);
 Diesel.setIsDiesel(true);
@@ -582,7 +582,7 @@ Benzene.setAmountToBurn(8);
 Benzene.setByproductAmount(800);
 
 def NitroFuel = new IFluidFuel('nitro_fuel', 'flue_gas');
-NitroFuel.setDuration(400);
+NitroFuel.setDuration(500);
 NitroFuel.setAmountToBurn(10);
 NitroFuel.setByproductAmount(1000);
 NitroFuel.setIsDiesel(true);
