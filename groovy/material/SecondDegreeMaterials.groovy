@@ -410,12 +410,6 @@ public class SecondDegreeMaterials {
                 .components(ChromiumIIIOxide, 1, SodaAsh, 1)
                 .build();
 
-        SodiumVanadateSolution = new Material.Builder(13065, "sodium_vanadate_solution")
-                .fluid()
-                .components(Water, 1, SodiumVanadate, 1)
-                .colorAverage()
-                .build();
-
         LeadChlorideSolution = new Material.Builder(13066, "lead_chloride_solution")
                 .fluid()
                 .fluidTemp(343)
