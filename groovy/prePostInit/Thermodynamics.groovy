@@ -404,7 +404,7 @@ SulfuricNaphtha.setAmountToBurn(8);
 SulfuricNaphtha.setByproductAmount(800);
 
 def Gasoline = new IFluidFuel('gasoline', 'flue_gas');
-Gasoline.setDuration(140);
+Gasoline.setDuration(100);
 Gasoline.setAmountToBurn(10);
 Gasoline.setByproductAmount(1000);
 Gasoline.setIsGasoline(true);
@@ -545,13 +545,13 @@ MidgradeGasoline.setByproductAmount(1000);
 MidgradeGasoline.setIsGasoline(true);
 
 def PremiumGasoline = new IFluidFuel('premium_gasoline', 'flue_gas');
-PremiumGasoline.setDuration(750);
+PremiumGasoline.setDuration(800);
 PremiumGasoline.setAmountToBurn(10);
 PremiumGasoline.setByproductAmount(1000);
 PremiumGasoline.setIsGasoline(true);
 
 def SupremeGasoline = new IFluidFuel('supreme_gasoline', 'flue_gas');
-SupremeGasoline.setDuration(1000);
+SupremeGasoline.setDuration(1100);
 SupremeGasoline.setAmountToBurn(10);
 SupremeGasoline.setByproductAmount(1000);
 SupremeGasoline.setIsGasoline(true);
@@ -666,7 +666,7 @@ for (FluidFuel in FluidFuels) {
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                         .fluidInputs(liquid('oxygen') * 25)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.1))
+                        .duration(FluidFuel.duration * 1.1)
                         .EUt(-64)
                         .buildAndRegister();
         } else if (FluidFuel.gasoline) {
@@ -682,7 +682,7 @@ for (FluidFuel in FluidFuels) {
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                         .fluidInputs(liquid('oxygen') * 25)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.1))
+                        .duration(FluidFuel.duration * 1.1)
                         .EUt(-128)
                         .buildAndRegister();
         } else {
@@ -698,7 +698,7 @@ for (FluidFuel in FluidFuels) {
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                         .fluidInputs(liquid('oxygen') * 25)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.1))
+                        .duration(FluidFuel.duration * 1.1)
                         .EUt(-32)
                         .buildAndRegister();
         }
@@ -706,7 +706,7 @@ for (FluidFuel in FluidFuels) {
     }
 
     recipemap('flare_stack').recipeBuilder()
-            .fluidInputs(liquid(FluidFuel.liquid_fuel) * 1000)
+            .fluidInputs(liquid(FluidFuel.liquid_fuel) * 100)
             .duration(30)
             .EUt(7)
             .buildAndRegister();
