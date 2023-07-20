@@ -15,6 +15,7 @@ BATH_CONDENSER = recipemap('bath_condenser')
 SMOKE_STACK = recipemap('smoke_stack')
 FBR = recipemap('fixed_bed_reactor')
 SINTERING_OVEN = recipemap('sintering_oven')
+CENTRIFUGE = recipemap('centrifuge')
 
 //TIER ONE (OXYGEN + NITROGEN)
 
@@ -229,6 +230,20 @@ SIFTER.recipeBuilder()
     .fluidOutputs(fluid('purified_waste_gaseous_nitrogen') * 640)
     .duration(29)
     .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+    .fluidInputs(fluid('liquid_nitrogen_product') * 100)
+    .fluidOutputs(fluid('liquid_nitrogen') * 75)
+    .duration(10)
+    .EUt(Globals.voltAmps[0])
+    .buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+    .fluidInputs(fluid('liquid_oxygen_product') * 100)
+    .fluidOutputs(fluid('liquid_oxygen') * 75)
+    .duration(10)
+    .EUt(Globals.voltAmps[0])
     .buildAndRegister()
 
 //TIER TWO: ADDED ARGON
