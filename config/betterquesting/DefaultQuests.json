@@ -28258,23 +28258,19 @@
               },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 290,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            },
-            "2:10": {
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 292,
               "ForgeCaps:10": {
@@ -28288,8 +28284,45 @@
               },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
-            },
-            "3:10": {
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 290,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "3:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 3,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 293,
               "ForgeCaps:10": {
@@ -33767,12 +33800,13 @@
     },
     "501:10": {
       "preRequisites:11": [
-        378
+        378,
+        506
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§cChromite §rcan be roasted to create §6Ferrochrome§r, an impure form of §cchrome§r.",
+          "desc:8": "§cChromite §rcan be put in the Advanced Arc Furnace to create §6Ferrochrome§r, an impure form of §cchrome§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33837,7 +33871,6 @@
     },
     "502:10": {
       "preRequisites:11": [
-        506,
         501,
         500,
         499,
@@ -34586,7 +34619,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 8315,
+              "Damage:2": 8378,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -43322,7 +43355,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 14708,
+              "Damage:2": 14707,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -46539,7 +46572,7 @@
     },
     "627:10": {
       "preRequisites:11": [
-        468
+        243
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -59311,8 +59344,8 @@
           "id:3": 501,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
-          "y:3": -216
+          "x:3": 96,
+          "y:3": -162
         },
         "79:10": {
           "id:3": 502,
