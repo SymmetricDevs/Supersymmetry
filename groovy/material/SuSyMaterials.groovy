@@ -826,7 +826,7 @@ class SuSyMaterials {
         public static Material SodiumChromateMixture;
         public static Material SodiumChromateSolution;
         public static Material LeadChloride;
-        public static Material SodiumVanadate;
+        public static Material SodiumVanadateSolution;
         public static Material AmmoniumMetavanadate;
         public static Material SodiumAmide;
         public static Material LeadChromate;
@@ -941,7 +941,6 @@ class SuSyMaterials {
         public static Material DilutedSodiumSilicateSolution;
         public static Material SodiumDichromateSolution;
         public static Material ChromiumSodaMixture;
-        public static Material SodiumVanadateSolution;
         public static Material LeadChlorideSolution;
         public static Material AmmoniumSulfateSolution;
         public static Material AmmoniumChromeAlumSolution;
