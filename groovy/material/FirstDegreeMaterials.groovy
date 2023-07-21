@@ -2457,7 +2457,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         SodiumVanadateSolution = new Material.Builder(8461, 'sodium_vanadate_solution')
-                .dust()
+                .fluid()
                 .components(Sodium, 1, Vanadium, 1, Oxygen, 3, Water, 1)
                 .colorAverage()
                 .build();
