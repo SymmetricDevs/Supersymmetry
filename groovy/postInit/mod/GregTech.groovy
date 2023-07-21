@@ -59,6 +59,10 @@ def name_removals = [
         'gregtech:gregtech.machine.world_accelerator.luv',
         'gregtech:gregtech.machine.world_accelerator.zpm',
         'gregtech:gregtech.machine.world_accelerator.uv',
+	'gregtech:nano_helmet',
+        'gregtech:nano_chestplate',
+        'gregtech:nano_leggings',
+        'gregtech:nano_boots',
         'gregtech:super_chest_lv',
         'gregtech:super_chest_mv',
         'gregtech:super_chest_hv',
@@ -79,8 +83,8 @@ def name_removals = [
         'gregtech:quantum_tank_zpm',
         'gregtech:quantum_tank_uv',
         'gregtech:quantum_tank_uhv',
-		'gregtech:large_combustion_engine',
-		'gregtech:extreme_combustion_engine'
+	'gregtech:large_combustion_engine',
+	'gregtech:extreme_combustion_engine'
 ]
 
 for (name in name_removals) {
