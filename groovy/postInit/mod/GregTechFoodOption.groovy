@@ -467,6 +467,24 @@ LCR.recipeBuilder()
         .duration(240)
         .EUt(120)
         .buildAndRegister()
+
+// Replace mozzarella recipes to make it obtainable
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dried_mozzarella_curd_nugget'))
+        .outputs(metaitem('solidified_mozzarella_curd_nugget'))
+        .fluidOutputs(fluid('gtfo_whey') * 50)
+        .duration(200)
+        .EUt(16)
+        .buildAndRegister()
+		
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('milk') * 6000)
+        .fluidInputs(fluid('gtfo_crude_rennet_solution'))
+        .fluidInputs(fluid('gtfo_whey') * 400)
+        .outputs(metaitem('large_mozzarella_curd_nugget'))
+        .duration(160)
+        .EUt(8)
+        .buildAndRegister()
 		
 // Force GTFO skewers to be made with only long rods
 // Skewer * 16
