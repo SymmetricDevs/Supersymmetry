@@ -1,4 +1,6 @@
 import classes.*;
+import static globals.Globals.*;
+
 //REMOVALS
 
 mods.gregtech.steam_turbine.removeByInput(-32, null, [fluid('steam') * 640])
@@ -44,12 +46,12 @@ WaterCoolant.setTimeFactor(10);
 def SaltWaterCoolant = new ICoolant("salt_water", "warm_salt_water");
 SaltWaterCoolant.setDurationRadiator(100);
 SaltWaterCoolant.setAmountToUse(1000);
-SaltWaterCoolant.setTimeFactor(8);
+SaltWaterCoolant.setTimeFactor(15);
 
 def BrineCoolant = new ICoolant("brine", "warm_brine");
 BrineCoolant.setDurationRadiator(100);
 BrineCoolant.setAmountToUse(1000);
-BrineCoolant.setTimeFactor(8);
+BrineCoolant.setTimeFactor(15);
 
 def LubricantCoolant = new ICoolant("lubricant", "warm_lubricant");
 LubricantCoolant.setDurationRadiator(75);
@@ -80,50 +82,47 @@ def Coolants = [
         PolychlorinatedBiphenylCoolant
 ];
 
-def CryoHydrogen = new ICryoGas('hydrogen', 'hot_hp_hydrogen', 'hp_hydrogen', 'cold_hp_hydrogen', 'liquid_hydrogen', true);
+def CryoHydrogen = new ICryoGas('hydrogen', 'hot_hp_hydrogen', 'hp_hydrogen', 'cold_hp_hydrogen', 'liquid_hydrogen');
 CryoHydrogen.setEUt(240);
 CryoHydrogen.setDuration(100);
 CryoHydrogen.setPowerHX(100);
 CryoHydrogen.setDurationHX(5);
 CryoHydrogen.setDurationRadiator(400);
 CryoHydrogen.setTemperature(14);
-CryoHydrogen.setAdvancedCooling(true);
 
-def CryoOxygen = new ICryoGas('oxygen', 'hot_hp_oxygen', 'hp_oxygen', 'cold_hp_oxygen', 'liquid_oxygen', true);
+def CryoOxygen = new ICryoGas('oxygen', 'hot_hp_oxygen', 'hp_oxygen', 'cold_hp_oxygen', 'liquid_oxygen');
 CryoOxygen.setEUt(30);
 CryoOxygen.setDuration(100);
 CryoOxygen.setPowerHX(100);
 CryoOxygen.setDurationHX(5);
 CryoOxygen.setDurationRadiator(400);
-CryoOxygen.setTemperature(54);
+CryoOxygen.setTemperature(90);
 
-def CryoHelium = new ICryoGas('helium', 'hot_hp_helium', 'hp_helium', 'cold_hp_helium', 'liquid_helium', true);
+def CryoHelium = new ICryoGas('helium', 'hot_hp_helium', 'hp_helium', 'cold_hp_helium', 'liquid_helium');
 CryoHelium.setEUt(720);
 CryoHelium.setDuration(100);
 CryoHelium.setPowerHX(100);
 CryoHelium.setDurationHX(5);
 CryoHelium.setDurationRadiator(400);
 CryoHelium.setTemperature(4);
-CryoHelium.setAdvancedCooling(true);
 
-def CryoNeon = new ICryoGas('neon', 'hot_hp_neon', 'hp_neon', 'cold_hp_neon', 'liquid_neon', true);
+def CryoNeon = new ICryoGas('neon', 'hot_hp_neon', 'hp_neon', 'cold_hp_neon', 'liquid_neon');
 CryoNeon.setEUt(240);
 CryoNeon.setDuration(100);
 CryoNeon.setPowerHX(100);
 CryoNeon.setDurationHX(5);
 CryoNeon.setDurationRadiator(400);
 CryoNeon.setTemperature(27);
-CryoNeon.setAdvancedCooling(true);
 
-def CryoArgon = new ICryoGas('argon', 'hot_hp_argon', 'hp_argon', 'cold_hp_argon', 'liquid_argon', true);
+def CryoArgon = new ICryoGas('argon', 'hot_hp_argon', 'hp_argon', 'cold_hp_argon', 'liquid_argon');
 CryoArgon.setEUt(120);
 CryoArgon.setDuration(100);
 CryoArgon.setPowerHX(100);
 CryoArgon.setDurationHX(5);
 CryoArgon.setDurationRadiator(400);
-CryoArgon.setTemperature(83);
+CryoArgon.setTemperature(87);
 
-def CryoKrypton = new ICryoGas('krypton', 'hot_hp_krypton', 'hp_krypton', 'cold_hp_krypton', 'liquid_krypton', true);
+def CryoKrypton = new ICryoGas('krypton', 'hot_hp_krypton', 'hp_krypton', 'cold_hp_krypton', 'liquid_krypton');
 CryoKrypton.setEUt(120);
 CryoKrypton.setDuration(100);
 CryoKrypton.setPowerHX(100);
@@ -131,7 +130,7 @@ CryoKrypton.setDurationHX(5);
 CryoKrypton.setDurationRadiator(400);
 CryoKrypton.setTemperature(120);
 
-def CryoXenon = new ICryoGas('xenon', 'hot_hp_xenon', 'hp_xenon', 'cold_hp_xenon', 'liquid_xenon', true);
+def CryoXenon = new ICryoGas('xenon', 'hot_hp_xenon', 'hp_xenon', 'cold_hp_xenon', 'liquid_xenon');
 CryoXenon.setEUt(120);
 CryoXenon.setDuration(100);
 CryoXenon.setPowerHX(100);
@@ -139,7 +138,7 @@ CryoXenon.setDurationHX(5);
 CryoXenon.setDurationRadiator(400);
 CryoXenon.setTemperature(165);
 
-def CryoAir = new ICryoGas('air', 'hot_hp_air', 'hp_air', 'cold_hp_air', 'liquid_air', false);
+def CryoAir = new ICryoGas('air', 'hot_hp_air', 'hp_air', 'cold_hp_air', 'liquid_air');
 CryoAir.setEUt(60);
 CryoAir.setDuration(100);
 CryoAir.setPowerHX(100);
@@ -147,7 +146,7 @@ CryoAir.setDurationHX(5);
 CryoAir.setDurationRadiator(400);
 CryoAir.setTemperature(80);
 
-def CryoNitrogen = new ICryoGas('nitrogen', 'hot_hp_nitrogen', 'hp_nitrogen', 'cold_hp_nitrogen', 'liquid_nitrogen', true);
+def CryoNitrogen = new ICryoGas('nitrogen', 'hot_hp_nitrogen', 'hp_nitrogen', 'cold_hp_nitrogen', 'liquid_nitrogen');
 CryoNitrogen.setEUt(60);
 CryoNitrogen.setDuration(100);
 CryoNitrogen.setPowerHX(100);
@@ -155,7 +154,7 @@ CryoNitrogen.setDurationHX(5);
 CryoNitrogen.setDurationRadiator(400);
 CryoNitrogen.setTemperature(77);
 
-def CryoNetherAir = new ICryoGas('nether_air', 'hot_hp_nether_air', 'hp_nether_air', 'cold_hp_nether_air', 'liquid_nether_air', false);
+def CryoNetherAir = new ICryoGas('nether_air', 'hot_hp_nether_air', 'hp_nether_air', 'cold_hp_nether_air', 'liquid_nether_air');
 CryoNetherAir.setEUt(60);
 CryoNetherAir.setDuration(100);
 CryoNetherAir.setPowerHX(100);
@@ -163,7 +162,7 @@ CryoNetherAir.setDurationHX(5);
 CryoNetherAir.setDurationRadiator(400);
 CryoNetherAir.setTemperature(80);
 
-def CryoRefineryGas = new ICryoGas('refinery_gas', 'hot_hp_refinery_gas', 'hp_refinery_gas', 'cold_hp_refinery_gas', 'liquid_refinery_gas', false);
+def CryoRefineryGas = new ICryoGas('refinery_gas', 'hot_hp_refinery_gas', 'hp_refinery_gas', 'cold_hp_refinery_gas', 'liquid_refinery_gas');
 CryoRefineryGas.setEUt(60);
 CryoRefineryGas.setDuration(100);
 CryoRefineryGas.setPowerHX(100);
@@ -171,7 +170,7 @@ CryoRefineryGas.setDurationHX(5);
 CryoRefineryGas.setDurationRadiator(400);
 CryoRefineryGas.setTemperature(80);
 
-def CryoNaturalGas = new ICryoGas('natural_gas', 'hot_hp_natural_gas', 'hp_natural_gas', 'cold_hp_natural_gas', 'liquid_natural_gas', false);
+def CryoNaturalGas = new ICryoGas('natural_gas', 'hot_hp_natural_gas', 'hp_natural_gas', 'cold_hp_natural_gas', 'liquid_natural_gas');
 CryoNaturalGas.setEUt(60);
 CryoNaturalGas.setDuration(100);
 CryoNaturalGas.setPowerHX(100);
@@ -213,7 +212,7 @@ CarbonDioxideRefrigerant.setPowerToCompress(30);
 CarbonDioxideRefrigerant.setDurationToCompress(60);
 CarbonDioxideRefrigerant.setDurationRadiator(10);
 CarbonDioxideRefrigerant.setAmountToUse(3000);
-CarbonDioxideRefrigerant.setTimeFactor(15);
+CarbonDioxideRefrigerant.setTimeFactor(20);
 
 def TrichlorofluoromethaneRefrigerant = new IRefrigerant("trichlorofluoromethane", 'hot_compressed_trichlorofluoromethane', 'compressed_trichlorofluoromethane', 'cold_trichlorofluoromethane');
 TrichlorofluoromethaneRefrigerant.setPowerToCompress(180);
@@ -305,7 +304,7 @@ for (coolant in Coolants) {
             .fluidInputs(liquid(coolant.warm_coolant) * coolant.amount_to_use)
             .fluidOutputs(liquid(coolant.cold_coolant) * coolant.amount_to_use)
             .duration((int) (coolant.duration_radiator / 2))
-            .EUt(480)
+            .EUt(Globals.voltAmps[3])
             .buildAndRegister();
 }
 
@@ -320,6 +319,15 @@ for (cryogas in CryoGases) {
                 .duration(cryogas.duration_heat_exchanger + coolant.hx_time_factor)
                 .buildAndRegister();
     }
+    for (refrigerant in Refrigerants) {
+        recipemap('heat_exchanger').recipeBuilder()
+                .fluidInputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
+                .fluidInputs(liquid(refrigerant.cold_refrigerant) * refrigerant.amount_to_use)
+                .fluidOutputs(liquid(refrigerant.normal_refrigerant) * refrigerant.amount_to_use)
+                .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * cryogas.amount_to_use)
+                .duration(cryogas.duration_heat_exchanger + refrigerant.hx_time_factor)
+                .buildAndRegister();
+    }
 
     recipemap('fluid_compressor').recipeBuilder()
             .fluidInputs(liquid(cryogas.normal_gas) * 1280)
@@ -327,8 +335,6 @@ for (cryogas in CryoGases) {
             .duration(cryogas.duration)
             .EUt(cryogas.EUt)
             .buildAndRegister();
-
-    //Radiator Cooling
 
     //Decompression
     recipemap('fluid_decompressor').recipeBuilder()
@@ -352,34 +358,26 @@ for (cryogas in CryoGases) {
             .EUt(480)
             .buildAndRegister();
 
-    if (!cryogas.needsAdvancedCooling) {
-        recipemap('cooling_unit').recipeBuilder()
-                .fluidInputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
-                .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * cryogas.amount_to_use)
-                .duration(cryogas.duration_heat_exchanger * 2)
-                .EUt(480)
-                .buildAndRegister();
+    /*if (!cryogas.needsAdvancedCooling) {
+    recipemap('cooling_unit').recipeBuilder()
+        .fluidInputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
+        .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * cryogas.amount_to_use)
+        .duration(cryogas.duration_heat_exchanger * 2)
+        .EUt(480)
+        .buildAndRegister();
 
-        for (refrigerant in Refrigerants) {
-            recipemap('heat_exchanger').recipeBuilder()
-                    .fluidInputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
-                    .fluidInputs(liquid(refrigerant.cold_refrigerant) * refrigerant.amount_to_use)
-                    .fluidOutputs(liquid(refrigerant.normal_refrigerant) * refrigerant.amount_to_use)
-                    .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * cryogas.amount_to_use)
-                    .duration(cryogas.duration_heat_exchanger + refrigerant.hx_time_factor)
-                    .buildAndRegister();
-        }
     } else {
         for (CryoGas in ICryoGas.cryo_gases) {
             recipemap('heat_exchanger').recipeBuilder()
                     .fluidInputs(liquid(cryogas.high_pressure_gas) * (int) (cryogas.amount_to_use / 4))
-                    .fluidInputs(liquid(CryoGas.liquid_gas) * 100)
+                    .fluidInputs(liquid(CryoGas.liquid_gas) * 100)              
                     .fluidOutputs(liquid(CryoGas.normal_gas) * 6400)
                     .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * (int) (cryogas.amount_to_use / 4))
                     .duration(cryogas.duration_heat_exchanger * 4)
                     .buildAndRegister();
         }
     }
+    */
 }
 
 //Water cooling
