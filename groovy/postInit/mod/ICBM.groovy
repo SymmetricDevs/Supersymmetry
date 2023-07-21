@@ -232,51 +232,64 @@ recipemap('weapons_factory').recipeBuilder()
 
 def HV_SC_CriticalTemp = 80;
 
+def cryoLiquids = [
+        'liquid_hydrogen': 14,
+        'liquid_oxygen': 90,
+        'liquid_helium': 4,
+        'liquid_neon': 27,
+        'liquid_argon': 87,
+        'liquid_krypton': 120,
+        'liquid_xenon': 165,
+        'liquid_nitrogen': 77,
+        'liquid_refinery_gas': 80,
+        'liquid_natural_gas': 80
+];
+
 Globals.solders.each { key, val ->
-    for (CryoGas in ICryoGas.cryo_gases) {
-        if(HV_SC_CriticalTemp > CryoGas.fluid_temperature){
-            //EMP
-            recipemap('weapons_factory').recipeBuilder()
-                    .inputs([
-                            ore('plateStainlessSteel')*4,
-                            metaitem('wireGtSingleMercuryBariumCalciumCuprate')*8,
-                            metaitem('fluid_cell')*2
-                    ])
-                    .fluidInputs(fluid(key) * val)
-                    .fluidInputs(liquid(CryoGas.liquid_gas) * 2)
-                    .outputs(item('icbmclassic:explosives:16'))
-                    .duration(200)
-                    .EUt(300)
-                    .buildAndRegister();
+        cryoLiquids.each { liquid, temp ->
+                if(HV_SC_CriticalTemp > temp) {
+                        //EMP
+                        recipemap('weapons_factory').recipeBuilder()
+                                .inputs([
+                                        ore('plateStainlessSteel')*4,
+                                        metaitem('wireGtSingleMercuryBariumCalciumCuprate')*8,
+                                        metaitem('fluid_cell')*2
+                                ])
+                                .fluidInputs(fluid(key) * val)
+                                .fluidInputs(fluid(liquid) * 2)
+                                .outputs(item('icbmclassic:explosives:16'))
+                                .duration(200)
+                                .EUt(300)
+                                .buildAndRegister();
+                }
+                //Endothermic
+                recipemap('weapons_factory').recipeBuilder()
+                        .inputs([
+                                metaitem('fluid_cell')*8,
+                                item('icbmclassic:explosives:6')*8,
+                                ore('plateStainlessSteel')*4
+                        ])
+                        .fluidInputs(fluid(key) * val)
+                        .fluidInputs(fluid(liquid) * 32)
+                        .outputs(item('icbmclassic:explosives:18'))
+                        .duration(60)
+                        .EUt(300)
+                        .buildAndRegister();
         }
-        //Endothermic
-        recipemap('weapons_factory').recipeBuilder()
-                .inputs([
-                        metaitem('fluid_cell')*8,
-                        item('icbmclassic:explosives:6')*8,
-                        ore('plateStainlessSteel')*4
-                ])
-                .fluidInputs(fluid(key) * val)
-                .fluidInputs(liquid(CryoGas.liquid_gas) * 32)
-                .outputs(item('icbmclassic:explosives:18'))
-                .duration(60)
-                .EUt(300)
-                .buildAndRegister();
-    }
-    for (fuel in thermobaric_fuels) {
-        recipemap('large_weapons_factory').recipeBuilder()
-                .inputs([
-                        metaitem('fluid_cell')*8,
-                        item('icbmclassic:explosives:6')*8,
-                        ore('plateStainlessSteel')*4
-                ])
-                .fluidInputs(fluid(key) * val)
-                .fluidInputs(fuel)
-                .outputs(item('icbmclassic:explosives:17'))
-                .duration(60)
-                .EUt(300)
-                .buildAndRegister();
-    }
+                for (fuel in thermobaric_fuels) {
+                        recipemap('large_weapons_factory').recipeBuilder()
+                                .inputs([
+                                        metaitem('fluid_cell')*8,
+                                        item('icbmclassic:explosives:6')*8,
+                                        ore('plateStainlessSteel')*4
+                                ])
+                                .fluidInputs(fluid(key) * val)
+                                .fluidInputs(fuel)
+                                .outputs(item('icbmclassic:explosives:17'))
+                                .duration(60)
+                                .EUt(300)
+                                .buildAndRegister();
+        }
 }
 
 //Launchers
