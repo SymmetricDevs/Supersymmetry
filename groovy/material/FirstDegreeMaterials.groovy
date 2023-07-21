@@ -2456,11 +2456,13 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        SodiumVanadate = new Material.Builder(8461, 'sodium_vanadate')
+        SodiumVanadateSolution = new Material.Builder(8461, 'sodium_vanadate')
                 .dust()
-                .components(Sodium, 1, Vanadium, 1, Oxygen, 3)
+                .components(Sodium, 1, Vanadium, 1, Oxygen, 3, Water, 1)
                 .colorAverage()
                 .build();
+
+        SodiumVanadateSolution.setFormula("(NaVO3)(H2O)", true)
 
         AmmoniumMetavanadate = new Material.Builder(8462, 'ammonium_metavanadate')
                 .dust()

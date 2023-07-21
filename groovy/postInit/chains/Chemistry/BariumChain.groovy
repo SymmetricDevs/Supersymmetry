@@ -8,6 +8,7 @@ DISTILLERY = recipemap('distillery')
 MIXER = recipemap('mixer')
 CLARIFIER = recipemap('clarifier')
 CENTRIFUGE = recipemap('centrifuge')
+REACTION_FURNACE = recipemap('reaction_furnace')
 
 //OPTIONAL FLOTATION
 
@@ -91,6 +92,31 @@ DISTILLERY.recipeBuilder()
     .fluidOutputs(fluid('water') * 2000)
     .EUt(Globals.voltAmps[1])
     .duration(100)
+    .buildAndRegister()
+
+REACTION_FURNACE.recipeBuilder()
+    .inputs(ore('dustAluminium') * 2)
+    .inputs(ore('dustBariumOxide') * 6)
+    .outputs(metaitem('dustBarium') * 3)
+    .outputs(metaitem('dustAlumina') * 5)
+    .EUt(Globals.voltAmps[2])
+    .duration(100)
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustWitherite') * 5)
+    .outputs(metaitem('dustBariumOxide') * 2)
+    .fluidOutputs(fluid('carbon_dioxide') * 1000)
+    .EUt(Globals.voltAmps[3])
+    .duration(20)
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustBariumCarbonate') * 5)
+    .outputs(metaitem('dustBariumOxide') * 2)
+    .fluidOutputs(fluid('carbon_dioxide') * 1000)
+    .EUt(Globals.voltAmps[3])
+    .duration(20)
     .buildAndRegister()
 
 

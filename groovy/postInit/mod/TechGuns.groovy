@@ -1264,7 +1264,7 @@ recipemap('weapons_factory').recipeBuilder()
 
 recipemap('canner').recipeBuilder()
 		.inputs(item('techguns:itemshared:24'))
-		.fluidInputs(fluid('air') * 1000)
+		.fluidInputs(fluid('hp_air') * 1000)
 		.outputs(item('techguns:itemshared:23'))
 		.duration(100)
 		.EUt(7)

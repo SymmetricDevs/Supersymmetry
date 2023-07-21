@@ -185,19 +185,6 @@ for (fuel in sintering_fuels) {
 }
 
 //SINTER-ROAST PROCESS (UNIVERSAL, 200%)
-class Combustible {
-    String name
-    String byproduct
-    int amount_required
-    int duration
-    Combustible(name, amount_required, duration, byproduct = 'dustTinyDarkAsh') {
-        this.name = name
-        this.amount_required = amount_required
-        this.duration = duration
-        this.byproduct = byproduct
-    }
-}
-
 def combustibles = Globals.combustibles
 
 for (combustible in combustibles) {
