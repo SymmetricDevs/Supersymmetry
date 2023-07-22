@@ -10,29 +10,29 @@ for (name in name_removals) {
 
 // Building Gadget
 crafting.addShaped('buildinggadgets:buildingtool', item('buildinggadgets:buildingtool'), [
-    [null, metaitem('electric.piston.Iv'), null],
-    [ore('plateTungstenSteel'), metaitem('power_unit.iv'), ore('plateTungstenSteel')],
-    [ore('plateTungstenSteel'), ore('circuitIv'), ore('plateTungstenSteel')]
+    [null, metaitem('electric.piston.hv'), null],
+    [ore('plateStainlessSteel'), metaitem('power_unit.hv'), ore('plateStainlessSteel')],
+    [ore('plateStainlessSteel'), ore('circuitHv'), ore('plateStainlessSteel')]
 ])
 
 // Exchanging Gadget
 crafting.addShaped('buildinggadgets:exchangertool', item('buildinggadgets:exchangertool'), [
-    [null, metaitem('electric.arm.iv'), null],
-    [ore('plateTungstenSteel'), metaitem('power_unit.iv'), ore('plateTungstenSteel')],
-    [ore('plateTungstenSteel'), ore('circuitIv'), ore('plateTungstenSteel')]
+    [null, metaitem('robot.arm.hv'), null],
+    [ore('plateStainlessSteel'), metaitem('power_unit.hv'), ore('plateStainlessSteel')],
+    [ore('plateStainlessSteel'), ore('circuitHv'), ore('plateStainlessSteel')]
 ])
 
 // Copy Paste Gadget
 crafting.addShaped('buildinggadgets:copypastetool', item('buildinggadgets:copypastetool'), [
-    [null, metaitem('electric.piston.lv'), ore('gearSmallTungstenSteel')],
-    [ore('plateTungstenSteel'), metaitem('power_unit.Iv'), ore('plateTungstenSteel')],
-    [ore('plateTungstenSteel'), ore('circuitIv'), ore('plateTungstenSteel')]
+    [null, metaitem('electric.piston.hv'), ore('gearSmallStainlessSteel')],
+    [ore('plateStainlessSteel'), metaitem('power_unit.hv'), ore('plateStainlessSteel')],
+    [ore('plateStainlessSteel'), ore('circuitHv'), ore('plateStainlessSteel')]
 ])
 
 crafting.replaceShaped('buildinggadgets:templatemanager', item('buildinggadgets:templatemanager'), [
-        [null, metaitem('electric.piston.Iv'), null],
-        [item('minecraft:paper'), metaitem('hull.Iv'), item('minecraft:paper')],
-        [ore('plateTungstenSteel'), ore('circuitIv'), ore('plateTungstenSteel')]
+        [null, metaitem('electric.piston.hv'), null],
+        [item('minecraft:paper'), metaitem('hull.hv'), item('minecraft:paper')],
+        [ore('plateStainlessSteel'), ore('circuitHv'), ore('plateStainlessSteel')]
 ])
 
 CENTRIFUGE.recipeBuilder()
