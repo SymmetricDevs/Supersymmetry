@@ -32,6 +32,6 @@ crafting.addShaped('betterbuilderswands:wanddiamond', item('betterbuilderswands:
 // Unbreakable Wand
 crafting.replaceShaped('betterbuilderswands:wandunbreakable', item('betterbuilderswands:wandunbreakable'), [
 [null, metaitem('duct_tape'), ore('blockObsidian')],
-[null, ore('stickSteel'), metaitem('duct_tape')],
-[ore('stickSteel'), null, null]
+[null, ore('stickTungstenSteel'), metaitem('duct_tape')],
+[ore('stickTungstenSteel'), null, null]
 ])
