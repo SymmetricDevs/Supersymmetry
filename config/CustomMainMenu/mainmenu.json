@@ -184,15 +184,26 @@
 		},
 		"language": {
 			"text": "",
-			"posX": -225,
-			"posY": -23,
+			"posX": -25,
+			"posY": -25,
 			"alignment": "bottom_right",
 			"width": 20,
 			"height": 20,
+			"texture": "supersymmetry:mainmenu/button_language.png",
 			"action": {
 				"type": "openGui",
 				"gui": "languages"
 			}
+		},
+		"replaymod": {
+			"text": "Replay Viewer",
+			"posX": -115,
+			"posY": -25,
+			"alignment": "bottom_right",
+			"width": 85,
+			"height": 20,
+			"texture": "supersymmetry:mainmenu/button_bordered.png",
+			"wrappedButton": 17890234
 		}
 	},
 	"labels": {

@@ -1,5 +1,6 @@
 import static globals.Globals.*
 import classes.*;
+import prePostInit.Thermodynamics
 
 //REMOVALS
 
@@ -35,68 +36,81 @@ mods.gregtech.assembly_line.removeByInput(100000, [metaitem('frameTritanium'), m
 
 //REPLACEMENTS
 
-for (CryoGas in ICryoGas.cryo_gases) {
-    if(100 > CryoGas.fluid_temperature) {
+def cryoLiquids = [
+        'liquid_hydrogen': 14,
+        'liquid_oxygen': 90,
+        'liquid_helium': 4,
+        'liquid_neon': 27,
+        'liquid_argon': 87,
+        'liquid_krypton': 120,
+        'liquid_xenon': 165,
+        'liquid_nitrogen': 77,
+        'liquid_refinery_gas': 80,
+        'liquid_natural_gas': 80
+];
+
+cryoLiquids.each { key, val ->
+    if(100 > val) {
         mods.gregtech.assembler.recipeBuilder()
                 .inputs(metaitem('electric.motor.lv'))
                 .inputs(metaitem('large_fluid_cell.steel'))
                 .inputs(metaitem('wireGtQuadrupleManganesePhosphide') * 4)
                 .inputs(ore('circuitLv') * 2)
-                .fluidInputs(fluid(CryoGas.liquid_gas) * 250)
+                .fluidInputs(fluid(key) * 250)
                 .outputs(metaitem('field.generator.lv'))
                 .duration(100)
                 .EUt(30)
                 .buildAndRegister();
     }
-    if(45 > CryoGas.fluid_temperature) {
+    if(45 > val) {
         mods.gregtech.assembler.recipeBuilder()
                 .inputs(metaitem('electric.motor.mv'))
                 .inputs(metaitem('large_fluid_cell.aluminium'))
                 .inputs(metaitem('wireGtQuadrupleMagnesiumDiboride') * 4)
                 .inputs(ore('circuitMv') * 2)
-                .fluidInputs(fluid(CryoGas.liquid_gas) * 500)
+                .fluidInputs(fluid(key) * 500)
                 .outputs(metaitem('field.generator.mv'))
                 .duration(100)
                 .EUt(120)
                 .buildAndRegister();
     }
-    if(175 > CryoGas.fluid_temperature) {
+    if(25 > val) {
         mods.gregtech.assembler.recipeBuilder()
                 .inputs(metaitem('electric.motor.hv'))
                 .inputs(metaitem('large_fluid_cell.stainless_steel'))
                 .inputs(metaitem('wireGtQuadrupleMercuryBariumCalciumCuprate') * 4)
                 .inputs(ore('circuitHv') * 2)
-                .fluidInputs(fluid(CryoGas.liquid_gas) * 1000)
+                .fluidInputs(fluid(key) * 1000)
                 .outputs(metaitem('field.generator.hv'))
                 .duration(100)
                 .EUt(480)
                 .buildAndRegister();
     }
-    if(5 > CryoGas.fluid_temperature) {
+    if(5 > val) {
         mods.gregtech.assembler.recipeBuilder()
                 .inputs(metaitem('electric.motor.ev'))
                 .inputs(metaitem('large_fluid_cell.titanium'))
                 .inputs(metaitem('wireGtQuadrupleUraniumTriplatinum') * 4)
                 .inputs(ore('circuitEv') * 2)
-                .fluidInputs(fluid(CryoGas.liquid_gas) * 1500)
+                .fluidInputs(fluid(key) * 1500)
                 .outputs(metaitem('field.generator.ev'))
                 .duration(100)
                 .EUt(1920)
                 .buildAndRegister();
     }
-    if(5 > CryoGas.fluid_temperature) {
+    if(5 > val) {
         mods.gregtech.assembler.recipeBuilder()
                 .inputs(metaitem('electric.motor.iv'))
                 .inputs(metaitem('large_fluid_cell.tungstensteel'))
                 .inputs(metaitem('wireGtQuadrupleSamariumIronArsenicOxide') * 4)
                 .inputs(ore('circuitIv') * 2)
-                .fluidInputs(fluid(CryoGas.liquid_gas) * 2000)
+                .fluidInputs(fluid(key) * 2000)
                 .outputs(metaitem('field.generator.iv'))
                 .duration(100)
                 .EUt(7680)
                 .buildAndRegister();
     }
-    if(5 > CryoGas.fluid_temperature) {
+    if(5 > val) {
         mods.gregtech.assembly_line.recipeBuilder()
                 .inputs(metaitem('frameHsss'))
                 .inputs(metaitem('plateHsss') * 6)
@@ -106,13 +120,13 @@ for (CryoGas in ICryoGas.cryo_gases) {
                 .inputs(metaitem('wireFineIndiumTinBariumTitaniumCuprate') * 64)
                 .inputs(metaitem('cableGtSingleNiobiumTitanium') * 4)
                 .fluidInputs(fluid('soldering_alloy') * 576)
-                .fluidInputs(fluid(CryoGas.liquid_gas) * 4000)
+                .fluidInputs(fluid(key) * 4000)
                 .outputs(metaitem('field.generator.luv'))
                 .duration(600)
                 .EUt(7680)
                 .buildAndRegister();
     }
-    if(5 > CryoGas.fluid_temperature) {
+    if(5 > val) {
         mods.gregtech.assembly_line.recipeBuilder()
                 .inputs(metaitem('frameNaquadahAlloy'))
                 .inputs(metaitem('plateNaquadahAlloy') * 6)
@@ -122,13 +136,13 @@ for (CryoGas in ICryoGas.cryo_gases) {
                 .inputs(metaitem('wireFineUraniumRhodiumDinaquadide') * 64)
                 .inputs(metaitem('cableGtSingleVanadiumGallium') * 4)
                 .fluidInputs(fluid('soldering_alloy') * 1152)
-                .fluidInputs(fluid(CryoGas.liquid_gas) * 8000)
+                .fluidInputs(fluid(key) * 8000)
                 .outputs(metaitem('field.generator.zpm'))
                 .duration(600)
                 .EUt(24000)
                 .buildAndRegister();
     }
-    if(5 > CryoGas.fluid_temperature) {
+    if(5 > val) {
         mods.gregtech.assembly_line.recipeBuilder()
                 .inputs(metaitem('frameTritanium'))
                 .inputs(metaitem('plateTritanium') * 6)
@@ -139,10 +153,10 @@ for (CryoGas in ICryoGas.cryo_gases) {
                 .inputs(metaitem('cableGtSingleYttriumBariumCuprate') * 4)
                 .fluidInputs(fluid('soldering_alloy') * 1728)
                 .fluidInputs(fluid('naquadria') * 576)
-                .fluidInputs(fluid(CryoGas.liquid_gas) * 16000)
+                .fluidInputs(fluid(key) * 16000)
                 .outputs(metaitem('field.generator.uv'))
                 .duration(600)
                 .EUt(100000)
-                .buildAndRegister();
+                .buildAndRegister();   
     }
 }

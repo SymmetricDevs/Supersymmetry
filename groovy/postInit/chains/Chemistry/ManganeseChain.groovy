@@ -14,19 +14,23 @@ REACTION_FURNACE = recipemap('reaction_furnace')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 //PYROMETALLUGRICAL METHODS (75%)
-EBF.recipeBuilder()
-    .inputs(ore('dustPyrolusite') * 3)
-    .inputs(ore('dustCoke'))
-    .inputs(ore('dustTinyCalcite'))
-    .outputs(metaitem('dustSmallManganese') * 3)
-    .fluidOutputs(fluid('carbon_dioxide') * 1000)
-    .property('temperature', 1200)
-    .duration(120)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+def combustibles = Globals.combustibles
+
+for (combustible in combustibles) {
+    EBF.recipeBuilder()
+        .inputs(ore('dustPyrolusite'))
+        .inputs(ore(combustible.name) * combustible.amount_required * 2)
+        .inputs(ore('dustTinyCalcite'))
+        .chancedOutput(metaitem('dustManganese'), 7500, 0)
+        .fluidOutputs(fluid('carbon_dioxide') * 1000)
+        .property('temperature', 1200)
+        .duration(120)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+}
 
 ROASTER.recipeBuilder()
-    .inputs(ore('dustRhodochrosite') * 1)
+    .inputs(ore('dustRhodochrosite'))
     .outputs(metaitem('dustManganeseIiOxide') * 2)
     .fluidOutputs(fluid('carbon_dioxide') * 1000)
     .duration(120)
@@ -36,7 +40,7 @@ ROASTER.recipeBuilder()
 ROASTER.recipeBuilder()
     .inputs(ore('dustManganeseIiOxide') * 2)
     .inputs(ore('dustCoke') * 1)
-    .outputs(metaitem('dustSmallManganese') * 3)
+    .chancedOutput(metaitem('dustManganese'), 7500, 0)
     .fluidOutputs(fluid('carbon_monoxide') * 1000)
     .duration(120)
     .EUt(Globals.voltAmps[1])
@@ -74,7 +78,7 @@ NATURAL GAS: 5.4 mol H, 1.65 mol C, 12 mol e-
 
 for (reductant in hydrocarbonReductants) {
     REACTION_FURNACE.recipeBuilder()
-        .inputs(ore('dustPyrolusite') * 3)
+        .inputs(ore('dustPyrolusite'))
         .fluidInputs(fluid(reductant.name) * reductant.amount_required)
         .outputs(metaitem('dustManganeseIiOxide') * 2)
         .fluidOutputs(fluid(reductant.byproduct) * reductant.byproduct_amount)
@@ -86,7 +90,7 @@ for (reductant in hydrocarbonReductants) {
 
 for (reductant in reductants) {
     REACTION_FURNACE.recipeBuilder()
-        .inputs(ore('dustPyrolusite') * 3)
+        .inputs(ore('dustPyrolusite'))
         .fluidInputs(fluid(reductant.name) * reductant.amount_required)
         .outputs(metaitem('dustManganeseIiOxide') * 2)
         .fluidOutputs(fluid(reductant.byproduct) * reductant.byproduct_amount)

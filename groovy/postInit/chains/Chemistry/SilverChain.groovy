@@ -237,6 +237,26 @@ DISTILLERY.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
+//SILVER NITRATE
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('water') * 1000)
+    .fluidInputs(fluid('silver_nitrate_solution') * 1000)
+    .fluidOutputs(fluid('diluted_silver_nitrate_solution') * 1000)
+    .duration(20)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+ELECTROLYZER.recipeBuilder()
+    .notConsumable(metaitem('stickSilver'))
+    .notConsumable(metaitem('graphite_electrode'))
+    .fluidInputs(fluid('diluted_silver_nitrate_solution') * 2000)
+    .outputs(metaitem('dustSilver') * 2)
+    .fluidOutputs(fluid('nitric_acid') * 2000)
+    .fluidOutputs(fluid('oxygen') * 1000)
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
 //HIGH PURITY SILVER
 BATCH_REACTOR.recipeBuilder()
     .inputs(ore('dustSilver') * 3) 

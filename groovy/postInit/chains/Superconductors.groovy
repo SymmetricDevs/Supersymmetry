@@ -105,10 +105,26 @@ for (i = 0; i < 6; i++) {
 
 TUBE_FURNACE.recipeBuilder()
         .inputs(metaitem('cannedmagnesiumdiboride'))
+        .fluidInputs(fluid('nitrogen') * 500)
+        .outputs(metaitem('tubemagnesiumdiboride'))
+        .duration(1006)
+        .EUt(120)
+        .buildAndRegister();
+
+TUBE_FURNACE.recipeBuilder()
+        .inputs(metaitem('cannedmagnesiumdiboride'))
         .fluidInputs(fluid('argon') * 50)
         .outputs(metaitem('tubemagnesiumdiboride'))
         .duration(670)
         .EUt(120)
+        .buildAndRegister();
+
+TUBE_FURNACE.recipeBuilder()
+        .inputs(metaitem('cannedmercurybariumcalciumcuprate'))
+        .fluidInputs(fluid('nitrogen') * 500)
+        .outputs(metaitem('tubemercurybariumcalciumcuprate'))
+        .duration(1500)
+        .EUt(480)
         .buildAndRegister();
 
 TUBE_FURNACE.recipeBuilder()
@@ -163,17 +179,30 @@ for (def i = 0; i < 9; i++) {
         mods.gregtech.wiremill.removeByInput(30, [metaitem('ingot' + allSuperconductors[i]) * 8, metaitem('circuit.integrated').withNbt(["Configuration": 16])], null)
     }
 
-    for (CryoGas in ICryoGas.cryo_gases) {
-        if (criticalTemperatures[i] > CryoGas.fluid_temperature) {
-            CHEMICAL_BATH.recipeBuilder()
-                    .inputs(metaitem('base' + allSuperconductorsLowerCase[i]))
-                    .fluidInputs(liquid(CryoGas.liquid_gas) * 2)
-                    .outputs(metaitem('wireGtSingle' + allSuperconductors[i]))
-                    .duration(50)
-                    .EUt(Globals.voltAmps[i + 1])
-                    .buildAndRegister();
+        def cryoLiquids = [
+                'liquid_hydrogen': 14,
+                'liquid_oxygen': 90,
+                'liquid_helium': 4,
+                'liquid_neon': 27,
+                'liquid_argon': 87,
+                'liquid_krypton': 120,
+                'liquid_xenon': 165,
+                'liquid_nitrogen': 77,
+                'liquid_refinery_gas': 80,
+                'liquid_natural_gas': 80
+        ];
+
+        cryoLiquids.each { key, val ->
+                if (criticalTemperatures[i] > val) {
+                CHEMICAL_BATH.recipeBuilder()
+                        .inputs(metaitem('base' + allSuperconductorsLowerCase[i]))
+                        .fluidInputs(liquid(key) * 2)
+                        .outputs(metaitem('wireGtSingle' + allSuperconductors[i]))
+                        .duration(50)
+                        .EUt(Globals.voltAmps[i + 1])
+                        .buildAndRegister();
+                }
         }
-    }
 }
 
 ROASTER.recipeBuilder()

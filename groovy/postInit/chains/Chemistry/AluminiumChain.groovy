@@ -89,32 +89,25 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .inputs(ore('dustCarbon') * 3)
         .fluidOutputs(fluid('hydrogen_fluoride') * 750)
         .fluidOutputs(fluid('carbon_dioxide') * 3000)
-        .outputs(metaitem('ingotAluminium') * 4)
-        .duration(300)
+        .outputs(ore('ingotAluminium').first() * 4)
+        .duration(100)
         .EUt(Globals.voltAmps[1] * 2)
         .buildAndRegister()
 
 // EBF
+def combustibles = Globals.combustibles
 
-EBF.recipeBuilder()
-.inputs(ore('dustAlumina') * 10)
-.inputs(ore('dustCarbon') * 3)
-.fluidOutputs(fluid('carbon_dioxide') * 3000)
-.outputs(metaitem('ingotAluminium') * 4)
-.blastFurnaceTemp(1200)
-.duration(60)
-.EUt(Globals.voltAmps[3] * 2)
-.buildAndRegister()
-
-EBF.recipeBuilder()
-.inputs(ore('dustAlumina') * 10)
-.inputs(ore('dustCoke') * 3)
-.fluidOutputs(fluid('carbon_dioxide') * 3000)
-.outputs(metaitem('ingotAluminium') * 4)
-.blastFurnaceTemp(1200)
-.duration(60)
-.EUt(Globals.voltAmps[3] * 2)
-.buildAndRegister()
+for (combustible in combustibles) {
+        EBF.recipeBuilder()
+        .inputs(ore('dustAlumina') * 10)
+        .inputs(ore(combustible.name) * combustible.amount_required * 3)
+        .fluidOutputs(fluid('carbon_dioxide') * 3000)
+        .outputs(ore('ingotAluminium').first() * 4)
+        .blastFurnaceTemp(1200)
+        .duration(60)
+        .EUt(Globals.voltAmps[3] * 2)
+        .buildAndRegister()
+}
 
 // Production of cryolite
 
