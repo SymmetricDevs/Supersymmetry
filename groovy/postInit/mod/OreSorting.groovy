@@ -19,7 +19,6 @@ def orthomagmatic_tier_1 = [
 def orthomagmatic_tier_2 = [
     'gregtech:ore_spodumene_0' : 10000,
     'gregtech:ore_lepidolite_0' : 10000,
-    'gregtech:ore_perovskite_0' : 10000,
     'gregtech:ore_chromite_0' : 10000,
     'gregtech:ore_magnetite_0' : 10000,
     'gregtech:ore_chalcopyrite_0' : 10000,
