@@ -3933,7 +3933,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§6 Coagulation Tank§r is a hollow, 3x3x3 cubic structure that coagulates fluids into solids.\n\nThe Coagulation Tank requires:\n§6- 1 Coagulation Tank Controller\n- 24 Wooden Coagulation Tank Wall\n§r\nThe tank can coagulate liquid Latex into a solid hunk of Latex. \nSome fluid §6Catalysts§r can be used to make the process faster, but it requires that Circuits are supplied to the machine, so this isn\u0027t available right now. \n\nYou can §cautomate this machine §rby adding Input and Output Hatches to the structure.\n\nWhile this machine isn\u0027t strictly required, it makes the next step of the Rubber processing chain about §c8x more efficient§r.",
+          "desc:8": "The§6 Coagulation Tank§r is a hollow, 3x3x3 cubic structure that coagulates fluids into solids.\n\nThe Coagulation Tank requires:\n§6- 1 Coagulation Tank Controller\n- 24 Wooden Coagulation Tank Wall\n§r\nThe tank can coagulate liquid Latex into a solid hunk of Latex. \nSome fluid §6Catalysts§r can be used to make the process faster, but it requires that Circuits are supplied to the machine, so this isn\u0027t available right now.\n\nWhile this machine isn\u0027t strictly required, it makes the next step of the Rubber processing chain about §c8x more efficient§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4937,7 +4937,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6Resistor§r is an electrical component that limits the flow of electrical current in an electronic circuit.\n\nResistors are another major component of §bLV circuits§r. They are made with sticky resin, which can be found on §2rubber trees§.. Use a §6Treetap §rto extract the resin. ",
+          "desc:8": "A §6Resistor§r is an electrical component that limits the flow of electrical current in an electronic circuit.\n\nResistors are another major component of §bLV circuits§r. They are made with sticky resin, which can be found in §2rubber trees§.. Use a §6Latex Collector §rto extract the liquid resin. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
