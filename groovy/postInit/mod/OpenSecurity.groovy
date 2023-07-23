@@ -42,7 +42,7 @@ for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
 			.inputs(ore('oc:materialNumPad'))
-			.inputs(ore('oc:cpu1'))
+			.inputs(ore('circuitMv'))
             .fluidInputs(solder)
             .outputs(item('opensecurity:keypad'))
             .duration(400)
@@ -51,8 +51,6 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(ore('oc:cpu1'))
-			.inputs(ore('oc:ram1'))
 			.inputs(item('opensecurity:rfid_reader_card'))
             .fluidInputs(solder)
             .outputs(item('opensecurity:rfid_reader'))
@@ -62,8 +60,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(ore('oc:cpu1'))
-			.inputs(ore('oc:ram1'))
+			.inputs(ore('circuitMv'))
 			.inputs(item('opensecurity:rfid_card'))
             .fluidInputs(solder)
             .outputs(item('opensecurity:card_writer'))
@@ -73,8 +70,6 @@ for (solder in soldering_alloys) {
 			
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(ore('oc:cpu1'))
-			.inputs(ore('oc:ram1'))
 			.inputs(item('minecraft:noteblock'))
             .fluidInputs(solder)
             .outputs(item('opensecurity:alarm'))
@@ -84,8 +79,6 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(ore('oc:cpu1'))
-			.inputs(ore('oc:ram1'))
 			.inputs(ore('oc:dataCard1'))
             .fluidInputs(solder)
             .outputs(item('opensecurity:data_block'))
@@ -95,10 +88,8 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(ore('oc:cpu1'))
-			.inputs(ore('oc:dataCard1'))
+			.inputs(ore('circuitMv'))
 			.inputs(metaitem('sensor.lv'))
-			.inputs(metaitem('emitter.lv'))
 			.fluidInputs(solder)
 			.outputs(item('opensecurity:entity_detector'))
 			.duration(400)
@@ -107,8 +98,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(ore('oc:cpu1'))
-			.inputs(ore('oc:ram1'))
+			.inputs(ore('circuitMv'))
 			.inputs(item('opensecurity:mag_card'))
             .fluidInputs(solder)
             .outputs(item('opensecurity:mag_reader'))
@@ -118,8 +108,6 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(ore('oc:cpu1'))
-			.inputs(ore('oc:ram1'))
 			.inputs(item('opensecurity:mag_card'))
 			.inputs(ore('blockConcrete'))
 			.circuitMeta([2])
@@ -131,8 +119,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.hv'))
-			.inputs(ore('oc:cpu2'))
-			.inputs(ore('oc:ram2'))
+			.inputs(ore('circuitHv'))
 			.inputs(metaitem('sensor.hv'))
             .fluidInputs(solder)
             .outputs(item('opensecurity:biometric_reader'))
@@ -141,39 +128,23 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
-			.inputs(metaitem('hull.hv'))
-			.inputs(ore('oc:cpu2'))
-			.inputs(ore('oc:ram2'))
-			.inputs(metaitem('sensor.hv'))
-            .fluidInputs(solder)
-            .outputs(item('opensecurity:biometric_reader'))
-            .duration(400)
-            .EUt(120)
-            .buildAndRegister();
-
-	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('oc:cpu1'))
 			.inputs(ore('plateSteel') * 5)
 			.inputs(ore('blockConcrete'))
-            .fluidInputs(solder)
             .outputs(item('opensecurity:secure_door'))
             .duration(400)
             .EUt(120)
             .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('oc:cpu2'))
-			.inputs(ore('oc:ram2'))
 			.inputs(ore('plateSteel') * 5)
 			.inputs(ore('blockConcrete'))
-            .fluidInputs(solder)
+			.circuitMeta([1])
             .outputs(item('opensecurity:private_secure_door'))
             .duration(400)
             .EUt(120)
             .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('oc:cpu1'))
 			.inputs(ore('plateSteel') * 8)
 			.circuitMeta([1])
             .fluidInputs(solder)
@@ -184,8 +155,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(ore('oc:cpu1'))
-			.inputs(ore('oc:ram1'))
+			.inputs(ore('circuitMv'))
 			.circuitMeta([10])
             .fluidInputs(solder)
             .outputs(item('opensecurity:door_controller'))
@@ -195,8 +165,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(ore('oc:cpu1'))
-			.inputs(ore('oc:ram1'))
+			.inputs(ore('circuitMv'))
 			.circuitMeta([20])
             .fluidInputs(solder)
             .outputs(item('opensecurity:rolldoor_controller')) //same recipe, diff circuit
@@ -208,6 +177,7 @@ for (solder in soldering_alloys) {
 			.inputs(ore('platePlastic'))
 			.inputs(metaitem('plate.integrated_logic_circuit'))
 			.inputs(ore('foilCopper'))
+			.inputs(ore('circuitMv'))
             .outputs(item('opensecurity:rfid_card')) 
             .duration(400)
             .EUt(120)
@@ -223,8 +193,6 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.circuit_assembler.recipeBuilder()
-			.inputs(item('opencomputers:component', 6))
-			.inputs(item('opencomputers:component'))
 			.inputs(ore('wireFineCopper') * 4)
 			.inputs(metaitem('plate.integrated_logic_circuit'))
 			.inputs(metaitem('circuit_board.good'))
