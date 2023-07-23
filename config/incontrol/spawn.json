@@ -21,15 +21,6 @@
   },
   {
 	"dimension": 0,
-	"mod": "betteranimalsplus",
-	"maxcount": {
-		"amount": 4,
-		"perplayer": true
-	},
-	"result": "default"
-  },
-  {
-	"dimension": 0,
 	"mod": "caracalsmod",
 	"maxcount": {
 		"amount": 1,
