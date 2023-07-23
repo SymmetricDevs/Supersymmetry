@@ -1,11 +1,18 @@
 [
 	{
-		"remove": "Bat"
+		"dimension": 0,
+		"remove": [
+			"Creeper",
+			"Spider",
+			"minecraft:cave_spider"
+		]
 	},
 	{
-		"remove": "Skeleton"
-	},
-	{
-		"remove": "Enderman"
+		"remove": [
+			"Bat",
+			"Skeleton",
+			"Enderman",
+			"Squid"
+		]
 	}
 ]
