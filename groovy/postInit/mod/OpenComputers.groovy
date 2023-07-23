@@ -451,15 +451,6 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('stickIron'))
-			.inputs(metaitem('circuit_board.plastic'))
-            .fluidInputs(solder)
-            .outputs(item('opencomputers:material', 5))
-            .duration(200)
-            .EUt(120)
-            .buildAndRegister();
-
-	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('power_unit.mv'))
 			.inputs(ore('cableGtSingleCopper') * 4)
 			.inputs(ore('screwAluminium') * 2)
