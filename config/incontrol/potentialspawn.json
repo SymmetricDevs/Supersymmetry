@@ -1,1 +1,11 @@
-[]
+[
+	{
+		"remove": "Bat"
+	},
+	{
+		"remove": "Skeleton"
+	},
+	{
+		"remove": "Enderman"
+	}
+]
