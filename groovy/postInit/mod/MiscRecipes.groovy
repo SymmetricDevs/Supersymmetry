@@ -8,6 +8,7 @@ def name_removals = [
         "regeneration:hand_jar",
         "regeneration:lindos_vial",
         "tardis:tardis_coral",
+	"tardis:bessie",
         "sync:sync_core",
         "sync:shell_constructor",
         "sync:shell_storage",
