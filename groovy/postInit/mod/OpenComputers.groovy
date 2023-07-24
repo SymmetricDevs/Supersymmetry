@@ -179,7 +179,7 @@ for (item in name_removals) {
 mods.gregtech.assembler.recipeBuilder()
 		.inputs(ore('plateRubber'))
 		.inputs(ore('wireGtSingleCopper'))
-		.circuitMeta([2])
+		.circuitMeta(2)
 		.outputs(item('opencomputers:cable'))
 		.duration(100)
 		.EUt(120)
@@ -734,9 +734,9 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.circuit_assembler.recipeBuilder()
-			.inputs(item('opencomputers:card', 1))
-			.inputs(item('opencomputers:component', 3))
-			.inputs(item('opencomputers:component'))
+			.inputs(item('opencomputers:card', 2))
+			.inputs(item('opencomputers:component', 4))
+			.inputs(item('opencomputers:component', 1))
 			.inputs(ore('wireFineCopper') * 16)
 			.inputs(metaitem('circuit_board.good'))
             .fluidInputs(solder)
@@ -747,27 +747,14 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 	mods.gregtech.circuit_assembler.recipeBuilder()
-			.inputs(item('opencomputers:card', 2))
-			.inputs(item('opencomputers:component', 4))
+			.inputs(item('opencomputers:card', 3))
+			.inputs(item('opencomputers:component', 5))
 			.inputs(item('opencomputers:component', 2))
-			.inputs(ore('wireFineCopper') * 16)
-			.inputs(metaitem('circuit_board.good'))
+			.inputs(ore('wireFineGold') * 4)
+			.inputs(metaitem('circuit_board.advanced'))
             .fluidInputs(solder)
 			.circuitMeta([2])
             .outputs(item('opencomputers:component', 17))
-            .duration(400)
-            .EUt(120)
-            .buildAndRegister();
-
-	mods.gregtech.circuit_assembler.recipeBuilder()
-			.inputs(item('opencomputers:component', 9))
-			.inputs(item('opencomputers:component', 1))
-			.inputs(item('opencomputers:card', 7))
-			.inputs(ore('wireFineGold') * 4)
-			.inputs(metaitem('circuit_board.plastic'))
-            .fluidInputs(solder)
-			.circuitMeta([11])
-            .outputs(item('opencomputers:component', 18))
             .duration(400)
             .EUt(120)
             .buildAndRegister();
@@ -1163,6 +1150,16 @@ for (solder in soldering_alloys) {
             .fluidInputs(solder)
 			.circuitMeta([10])
             .outputs(item('opencomputers:upgrade', 31))
+            .duration(400)
+            .EUt(120)
+            .buildAndRegister();
+
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(metaitem('electric.piston.lv'))
+			.fluidInputs(fluid('glue') * 36)
+			.circuitMeta([10])
+            .outputs(item('opencomputers:upgrade', 33))
             .duration(400)
             .EUt(120)
             .buildAndRegister();

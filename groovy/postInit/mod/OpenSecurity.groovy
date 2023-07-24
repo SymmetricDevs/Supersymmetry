@@ -51,7 +51,8 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(item('opensecurity:rfid_reader_card'))
+			.inputs(metaitem('emitter.mv'))
+			.circuitMeta(3)
             .fluidInputs(solder)
             .outputs(item('opensecurity:rfid_reader'))
             .duration(400)
@@ -70,6 +71,7 @@ for (solder in soldering_alloys) {
 			
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
+			.inputs(ore('fineWireRedAlloy') * 8)
 			.inputs(item('minecraft:noteblock'))
             .fluidInputs(solder)
             .outputs(item('opensecurity:alarm'))
@@ -99,7 +101,8 @@ for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
 			.inputs(ore('circuitMv'))
-			.inputs(item('opensecurity:mag_card'))
+			.inputs(metaitem('emitter.mv'))
+			.circuitMeta(1)
             .fluidInputs(solder)
             .outputs(item('opensecurity:mag_reader'))
             .duration(400)
@@ -108,9 +111,9 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
-			.inputs(item('opensecurity:mag_card'))
+			.inputs(metaitem('emitter.mv'))
 			.inputs(ore('blockConcrete'))
-			.circuitMeta([2])
+			.circuitMeta(2)
             .fluidInputs(solder)
             .outputs(item('opensecurity:mag_reader_camo'))
             .duration(400)
@@ -178,6 +181,7 @@ for (solder in soldering_alloys) {
 			.inputs(metaitem('plate.integrated_logic_circuit'))
 			.inputs(ore('foilCopper'))
 			.inputs(ore('circuitMv'))
+			.circuitMeta(2)
             .outputs(item('opensecurity:rfid_card')) 
             .duration(400)
             .EUt(120)
@@ -186,7 +190,8 @@ for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(ore('platePlastic'))
 			.inputs(metaitem('plate.integrated_logic_circuit'))
-			.inputs(ore('dustMagneticIron'))
+			.inputs(ore('dustIronMagnetic'))
+			.circuitMeta(3)
             .outputs(item('opensecurity:mag_card')) 
             .duration(400)
             .EUt(120)
@@ -204,4 +209,3 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 
 }
-
