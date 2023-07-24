@@ -71,7 +71,7 @@ ELECTROLYZER.recipeBuilder()
 		.duration(1500)
 		.buildAndRegister()
 
-ELECTROLYZER.recipeBuilder()
+ELECTROLYTIC_CELL.recipeBuilder()
 		.notConsumable(metaitem('stickNickel'))
 		.notConsumable(metaitem('stickIron'))
 		.notConsumable(fluid('sodium_hydroxide_solution') * 50)

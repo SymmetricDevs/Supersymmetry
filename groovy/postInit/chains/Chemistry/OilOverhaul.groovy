@@ -1485,8 +1485,8 @@ def getUniquePairs(Map materialsMap) {
     def pairs = []
 
     materialsMap.each { material1, _ ->
-        materialsMap.each { material2, _ ->
-            if (material1 == material2) { continue }
+        materialsMap.each { material2, __ ->
+            if (material1 == material2) { return }
             def combinationExists = pairs.any { combination -> combination.contains(material1) && combination.contains(material2) }
             if (!combinationExists) { pairs << [material1, material2] }
         }
