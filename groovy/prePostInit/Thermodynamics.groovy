@@ -640,7 +640,7 @@ def FluidFuels = [
 ];
 
 def WaterWF = new IWorkingFluid('water', 'steam', 'exhaust_steam');
-WaterWF.setDuration(10);
+WaterWF.setDuration(1);
 WaterWF.setAmountToUse(6);
 WaterWF.setEfficiency(1);
 WaterWF.setConversionFactor(160);
@@ -781,8 +781,8 @@ recipemap('fluid_compressor').recipeBuilder()
 
 recipemap('heat_exchanger').recipeBuilder()
         .fluidInputs(liquid('water') * 6)
-        .fluidInputs(liquid('lava') * 20)
+        .fluidInputs(liquid('lava') * 40)
         .fluidOutputs(liquid('steam') * 960)
         .fluidOutputs(liquid('chilled_lava') * 20)
-        .duration(10)
+        .duration(1)
         .buildAndRegister();
