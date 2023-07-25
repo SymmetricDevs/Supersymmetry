@@ -178,9 +178,8 @@ for (name in name_removals) {
 }
 
 crafting.replaceShaped("techguns:stielgranate", item('techguns:stielgranate'), [
-		[null, null, null],
-		[null, item('techguns:itemshared', 5), null],
-		[null, item('minecraft:stick'), null]
+	[item('techguns:itemshared', 5)],
+	[item('minecraft:stick')]
 ])
 
 crafting.addShaped("techguns:netherdoor", item('techguns:item_door3x3', 3), [
@@ -250,7 +249,6 @@ crafting.replaceShaped("techguns:ladder0_8_alt", item('techguns:ladder0', 8) * 1
 ])
 
 crafting.replaceShaped("techguns:camonet_0", item('techguns:camonet') * 8, [
-	[null, null, null],
 	[ore('stickWood'), ore('treeLeaves'), ore('stickWood')],
 	[ore('stickWood'), ore('treeLeaves'), ore('stickWood')]
 ])
@@ -262,15 +260,13 @@ crafting.replaceShaped("techguns:camonet_top_0", item('techguns:camonet_top') * 
 ])
 
 crafting.replaceShaped("techguns:itemshared_37_stonebarrel", item('techguns:itemshared', 37), [
-	[null, ore('craftingToolHardHammer'), null],
-	[null, ore('craftingToolFile'), null],
-	[null, ore('stone'), null]
+	[ore('craftingToolHardHammer'), null],
+	[ore('craftingToolFile'), null],
+	[ore('stone'), null]
 ])
 
 crafting.replaceShaped("techguns:itemshared_42_woodstock", item('techguns:itemshared', 42), [
-	[null, null, null],
-	[ore('craftingToolFile'), ore('logWood'), ore('craftingToolSaw')],
-	[null, null, null]
+	[ore('craftingToolFile'), ore('logWood'), ore('craftingToolSaw')]
 ])
 
 crafting.replaceShaped("techguns:t1_miner_helmet", item('techguns:t1_miner_helmet'), [
@@ -292,13 +288,11 @@ crafting.replaceShaped("techguns:t1_miner_leggings", item('techguns:t1_miner_leg
 ])
 
 crafting.replaceShaped("techguns:t1_miner_boots", item('techguns:t1_miner_boots'), [
-	[null, null, null],
 	[item('techguns:itemshared', 60), null, item('techguns:itemshared', 60)],
 	[ore('plateIron'), ore('craftingToolHardHammer'), ore('plateIron')]
 ])
 
 crafting.replaceShaped("techguns:steam_helmet", item('techguns:steam_helmet'), [
-	[null, null, null],
 	[item('techguns:itemshared', 45), item('techguns:itemshared', 45), item('techguns:itemshared', 45)],
 	[item('techguns:itemshared', 45), ore('craftingToolWrench'), item('techguns:itemshared', 45)]
 ])
@@ -316,15 +310,14 @@ crafting.replaceShaped("techguns:steam_leggings", item('techguns:steam_leggings'
 ])
 
 crafting.replaceShaped("techguns:steam_boots", item('techguns:steam_boots'), [
-	[null, null, null],
 	[item('techguns:itemshared', 45), ore('craftingToolWrench'), item('techguns:itemshared', 45)],
 	[item('techguns:itemshared', 45), null, item('techguns:itemshared', 45)]
 ])
 
 crafting.replaceShaped("techguns:item_bunkerdoor", item('techguns:item_bunkerdoor'), [
-	[null, ore('craftingToolHardHammer'), ore('screwIron')],
-	[null, ore('plateIron'), item('minecraft:iron_door')],
-	[null, ore('craftingToolScrewdriver'), ore('screwIron')]
+	[ore('craftingToolHardHammer'), ore('screwIron')],
+	[ore('plateIron'), item('minecraft:iron_door')],
+	[ore('craftingToolScrewdriver'), ore('screwIron')]
 ])
 
 crafting.replaceShaped("techguns:revolver", item('techguns:revolver'), [
