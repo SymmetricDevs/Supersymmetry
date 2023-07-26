@@ -640,7 +640,7 @@ def FluidFuels = [
 ];
 
 def WaterWF = new IWorkingFluid('water', 'steam', 'exhaust_steam');
-WaterWF.setDuration(1);
+WaterWF.setDuration(10);
 WaterWF.setAmountToUse(6);
 WaterWF.setEfficiency(1);
 WaterWF.setConversionFactor(160);
