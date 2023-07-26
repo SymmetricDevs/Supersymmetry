@@ -640,7 +640,7 @@ def FluidFuels = [
 ];
 
 def WaterWF = new IWorkingFluid('water', 'steam', 'exhaust_steam');
-WaterWF.setDuration(1);
+WaterWF.setDuration(10);
 WaterWF.setAmountToUse(6);
 WaterWF.setEfficiency(1);
 WaterWF.setConversionFactor(160);
@@ -734,7 +734,7 @@ recipemap('flare_stack').recipeBuilder()
 for (WorkingFluid in WorkingFluids) {
     recipemap('heat_exchanger').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use))
-            .fluidInputs(liquid('desulfurized_flue_gas')*1000)
+            .fluidInputs(liquid('desulfurized_flue_gas') * 1000)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid('chilled_flue_gas') * 1000)
             .duration(WorkingFluid.duration)
@@ -742,10 +742,10 @@ for (WorkingFluid in WorkingFluids) {
 
     recipemap('heat_exchanger').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use))
-            .fluidInputs(liquid('flue_gas')*1000)
+            .fluidInputs(liquid('flue_gas') * 1000)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid('chilled_flue_gas') * 1000)
-            .duration(WorkingFluid.duration)
+            .duration((int) (WorkingFluid.duration / 16))
             .buildAndRegister();
 
     recipemap('steam_turbine').recipeBuilder()
