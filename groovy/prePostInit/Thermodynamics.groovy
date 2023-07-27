@@ -640,7 +640,7 @@ def FluidFuels = [
 ];
 
 def WaterWF = new IWorkingFluid('water', 'steam', 'exhaust_steam');
-WaterWF.setDuration(16);
+WaterWF.setDuration(10);
 WaterWF.setAmountToUse(6);
 WaterWF.setEfficiency(1);
 WaterWF.setConversionFactor(160);
@@ -745,7 +745,7 @@ for (WorkingFluid in WorkingFluids) {
             .fluidInputs(liquid('flue_gas') * 1000)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid('chilled_flue_gas') * 1000)
-            .duration((int) (math.floor(WorkingFluid.duration / 16)))
+            .duration((int) (math.floor(WorkingFluid.duration / 8)))
             .buildAndRegister();
 
     recipemap('steam_turbine').recipeBuilder()
