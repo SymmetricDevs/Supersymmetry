@@ -468,8 +468,8 @@ NaturalGas.setAmountToBurn(6);
 NaturalGas.setByproductAmount(600);
 
 def Hydrogen = new IFluidFuel('hydrogen', 'steam');
-Hydrogen.setDuration(120);
-Hydrogen.setAmountToBurn(12);
+Hydrogen.setDuration(4);
+Hydrogen.setAmountToBurn(50);
 Hydrogen.setByproductAmount(960);
 
 def WoodGas = new IFluidFuel('wood_gas', 'flue_gas');
@@ -640,7 +640,7 @@ def FluidFuels = [
 ];
 
 def WaterWF = new IWorkingFluid('water', 'steam', 'exhaust_steam');
-WaterWF.setDuration(1);
+WaterWF.setDuration(10);
 WaterWF.setAmountToUse(6);
 WaterWF.setEfficiency(1);
 WaterWF.setConversionFactor(160);
@@ -734,7 +734,7 @@ recipemap('flare_stack').recipeBuilder()
 for (WorkingFluid in WorkingFluids) {
     recipemap('heat_exchanger').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use))
-            .fluidInputs(liquid('desulfurized_flue_gas')*1000)
+            .fluidInputs(liquid('desulfurized_flue_gas') * 1000)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid('chilled_flue_gas') * 1000)
             .duration(WorkingFluid.duration)
@@ -742,10 +742,10 @@ for (WorkingFluid in WorkingFluids) {
 
     recipemap('heat_exchanger').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use))
-            .fluidInputs(liquid('flue_gas')*1000)
+            .fluidInputs(liquid('flue_gas') * 1000)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid('chilled_flue_gas') * 1000)
-            .duration(WorkingFluid.duration)
+            .duration((int) (math.floor(WorkingFluid.duration / 8)))
             .buildAndRegister();
 
     recipemap('steam_turbine').recipeBuilder()
@@ -780,9 +780,9 @@ recipemap('fluid_compressor').recipeBuilder()
         .buildAndRegister();
 
 recipemap('heat_exchanger').recipeBuilder()
-        .fluidInputs(liquid('water') * 6)
-        .fluidInputs(liquid('lava') * 40)
-        .fluidOutputs(liquid('steam') * 960)
-        .fluidOutputs(liquid('chilled_lava') * 20)
-        .duration(1)
+        .fluidInputs(liquid('water') * 66)
+        .fluidInputs(liquid('lava') * 1)
+        .fluidOutputs(liquid('steam') * 10560)
+        .fluidOutputs(liquid('chilled_lava') * 1)
+        .duration(6)
         .buildAndRegister();
