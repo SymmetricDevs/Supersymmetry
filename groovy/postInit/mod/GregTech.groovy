@@ -1120,3 +1120,6 @@ mods.gregtech.macerator.recipeBuilder()
         .duration(150)
         .EUt(8)
         .buildAndRegister();
+        
+// Wireless Digital Interface * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('cover.digital'), metaitem('wireless')], [fluid('plastic') * 144])

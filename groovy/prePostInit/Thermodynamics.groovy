@@ -1,6 +1,8 @@
 import classes.*;
 import static globals.Globals.*;
 
+import java.lang.Math;
+
 //REMOVALS
 
 mods.gregtech.steam_turbine.removeByInput(-32, null, [fluid('steam') * 640])
