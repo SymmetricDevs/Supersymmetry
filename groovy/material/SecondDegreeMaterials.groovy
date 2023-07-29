@@ -158,7 +158,7 @@ public class SecondDegreeMaterials {
 
         ImpregnatedCopperOxideCatalyst = new Material.Builder(13023, "impregnated_copper_oxide_catalyst")
                 .dust()
-                .components(CopperIIOxide, 1, Alumina, 1)
+                .components(CupricOxide, 1, Alumina, 1)
                 .colorAverage()
                 .build()
 

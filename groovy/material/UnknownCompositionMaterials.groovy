@@ -1433,5 +1433,16 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x3e146e)
                 .build();
+
+        ZSMFive = new Material.Builder(4274, "zsm_five")
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .color(0x739133)
+                .build();
+
+        PropanalMixture = new Material.BUilder(4275, "propanal_mixture")
+                .fluid()
+                .color(0x84910f)
+                .build();
     }
 }
