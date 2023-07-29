@@ -249,10 +249,16 @@ mods.gregtech.assembler.recipeBuilder()
         .EUt(30)
         .buildAndRegister();
 
-crafting.addShaped("gregtech:steam_pump", metaitem('pump.steam'), [
+crafting.addShaped("gregtech:steam_pump_iron", metaitem('pump.steam'), [
     [ore('screwBronze'), ore('rotorBronze'), ore('ringIron')],
     [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
     [ore('ringIron'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
+])
+
+crafting.addShaped("gregtech:steam_pump_brass", metaitem('pump.steam'), [
+    [ore('screwBronze'), ore('rotorBronze'), ore('ringBrass')],
+    [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
+    [ore('ringBrass'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
 ])
 
 mods.gregtech.assembler.recipeBuilder()
