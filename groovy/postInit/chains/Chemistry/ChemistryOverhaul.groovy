@@ -38,6 +38,7 @@ ION_EXCHANGE = recipemap('ion_exchange_column')
 FLUID_EXTRACTOR = recipemap('extractor')
 TUBE_FURNACE = recipemap('tube_furnace')
 SINTERING_OVEN = recipemap('sintering_oven')
+VACUUM_DT = recipemap('vacuum_distillation')
 
 def COAL_SOURCES = [
     "dustCarbon",
@@ -3505,6 +3506,13 @@ CSTR.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
+VACUUM_DT.recipeBuilder()
+    .fluidInputs(fluid('hydrogen_peroxide_solution') * 1000)
+    .fluidOutputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('hydrogen_peroxide') * 1000)
+    .duration(40) 
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister()
 
 // Butanone
 
