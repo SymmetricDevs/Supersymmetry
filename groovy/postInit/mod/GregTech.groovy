@@ -42,10 +42,7 @@ mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], 
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustBerylliumOxide')], null)
 // Laminated Glass * 1
 mods.gregtech.forming_press.removeByInput(480, [item('gregtech:transparent_casing') * 2, metaitem('platePolyvinylButyral')], null)
-// Magnalium Ingot * 3
-mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 5)], [fluid('oxygen') * 150])
-// Magnalium Dust * 3
-mods.gregtech.macerator.removeByInput(8, [item('gregtech:turbine_casing', 5)], null)
+
 
 def name_removals = [
         'gregtech:cover_fluid_voiding',
@@ -249,16 +246,10 @@ mods.gregtech.assembler.recipeBuilder()
         .EUt(30)
         .buildAndRegister();
 
-crafting.addShaped("gregtech:steam_pump_iron", metaitem('pump.steam'), [
+crafting.addShaped("gregtech:steam_pump", metaitem('pump.steam'), [
     [ore('screwBronze'), ore('rotorBronze'), ore('ringIron')],
     [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
     [ore('ringIron'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
-])
-
-crafting.addShaped("gregtech:steam_pump_brass", metaitem('pump.steam'), [
-    [ore('screwBronze'), ore('rotorBronze'), ore('ringBrass')],
-    [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
-    [ore('ringBrass'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
 ])
 
 mods.gregtech.assembler.recipeBuilder()
@@ -945,10 +936,6 @@ mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plas
 mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plastic'), metaitem('plate.central_processing_unit'), metaitem('component.resistor') * 2, metaitem('component.capacitor') * 2, metaitem('component.transistor') * 2, metaitem('wireFineCopper') * 2], [fluid('soldering_alloy') * 72])
 // Microprocessor * 3
 mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plastic'), metaitem('plate.central_processing_unit'), metaitem('component.resistor') * 2, metaitem('component.capacitor') * 2, metaitem('component.transistor') * 2, metaitem('wireFineCopper') * 2], [fluid('tin') * 144])
-// Microprocessor * 6
-mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('soldering_alloy') * 72])
-// Microprocessor * 6
-mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('tin') * 144])
 
 Globals.solders.each { key, val -> 
         mods.gregtech.assembler.recipeBuilder()
@@ -984,17 +971,6 @@ Globals.solders.each { key, val ->
 		.outputs(metaitem('circuit.microprocessor') * 5)
 		.duration(200)
 		.EUt(60)
-		.buildAndRegister();
-
-        mods.gregtech.circuit_assembler.recipeBuilder()
-                .inputs(metaitem('circuit_board.plastic'))
-                .inputs(metaitem('plate.system_on_chip'))
-                .inputs(metaitem('wireFineCopper') * 2)
-                .inputs(metaitem('boltTin') * 2)
-                .fluidInputs(fluid(key) * val)
-                .outputs(metaitem('circuit.microprocessor') * 10)
-		.duration(50)
-		.EUt(600)
 		.buildAndRegister();
 }
 
@@ -1102,21 +1078,4 @@ mods.gregtech.fluid_solidifier.recipeBuilder()
         .outputs(item('gregtech:stone_smooth', 4))
         .duration(20)
         .EUt(7)
-        .buildAndRegister();
-
-mods.gregtech.arc_furnace.recipeBuilder()
-        .fluidInputs(fluid('oxygen') * 150)
-        .inputs(item('gregtech:turbine_casing', 5) * 4)
-        .outputs(metaitem('ingotSteel') * 6)
-        .outputs(item('gregtech:stone_smooth', 4))
-        .duration(150)
-        .EUt(30)
-        .buildAndRegister();
-
-mods.gregtech.macerator.recipeBuilder()
-        .inputs(item('gregtech:turbine_casing', 5) * 4)
-        .outputs(metaitem('dustSteel') * 6)
-        .outputs(metaitem('dustConcrete'))
-        .duration(150)
-        .EUt(8)
         .buildAndRegister();

@@ -178,21 +178,6 @@ DUMPER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-DUMPER.recipeBuilder()
-        .fluidInputs(fluid('crude_pyridinium_sulfate') * 1000)
-        .duration(20)
-        .buildAndRegister()
-
-DUMPER.recipeBuilder()
-        .fluidInputs(fluid('naphthalene_oil') * 1000)
-        .duration(20)
-        .buildAndRegister()
-
-DUMPER.recipeBuilder()
-        .fluidInputs(fluid('anthracene_oil') * 1000)
-        .duration(20)
-        .buildAndRegister()
-
 SIFTER.recipeBuilder()
         .fluidInputs(fluid('flue_gas') * 16000)
         .inputs(metaitem('dustCalcite') * 5)

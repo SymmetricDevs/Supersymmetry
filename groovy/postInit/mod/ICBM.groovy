@@ -104,12 +104,6 @@ crafting.addShaped("icbm_exp_1_0_tnt", item('icbmclassic:explosives:0'), [
         [null, ore('dustTnt'), null]
 ]);
 
-crafting.addShaped("icbm_exp_1_0_tnt", item('icbmclassic:explosives:0'), [
-        [null, ore('dustPicricAcid'), null],
-        [ore('dustPicricAcid'), ore('wireFineRedAlloy'), ore('dustPicricAcid')],
-        [null, ore('dustPicricAcid'), null]
-]);
-
 /*crafting.addShaped("icbm_exp_1_1", item('icbmclassic:explosives:1'), [
         [ore('roundLead'), ore('roundLead'), ore('roundLead')],
         [ore('roundLead'), item('icbmclassic:explosives:0'), ore('roundLead')],
@@ -172,6 +166,7 @@ for (poison in poisons) {
                     metaitem('sensor.lv')
                     //Rationale: air burst explosion with high explosives to create repulsive forces
             ])
+            .fluidInputs(poison)
             .outputs(item('icbmclassic:explosives:6'))
             .duration(20)
             .EUt(16)
