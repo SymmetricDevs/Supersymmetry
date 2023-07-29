@@ -580,7 +580,6 @@ class SuSyMaterials {
         public static Material SodiumDichromate;
         public static Material RaneyNickel;
         public static Material ActivatedRaneyNickel;
-        public static Material CopperIIOxide;
         public static Material DicobaltOctacarbonyl;
         public static Material ImpregnatedAluminaCatalyst;
         public static Material BismuthCopper;

@@ -14,6 +14,11 @@ SIFTER = recipemap('sifter')
 CENTRIFUGE = recipemap('centrifuge')
 DISTILLATION_TOWER = recipemap('distillation_tower')
 
+// Cupric Oxide Dust * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustTetrahedrite')], [fluid('oxygen') * 3000])
+// Cupric Oxide Dust * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustChalcopyrite'), metaitem('dustSiliconDioxide')], [fluid('oxygen') * 3000])
+
 //MALACHITE
 MIXER.recipeBuilder()
     .inputs(ore('dustImpureMalachite') * 8)

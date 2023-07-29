@@ -820,11 +820,13 @@ public class FirstDegreeMaterials{
                 .color(0xa9aec4)
                 .build()
 
-        CopperIIOxide = new Material.Builder(8209, "copper_ii_oxide")
-                .dust()
-                .components(Copper, 1, Oxygen, 1)
+        DilutedSilverNitrateSolution = new Material.Builder(8209, "diluted_silver_nitrate_solution")
+                .fluid()
+                .components(Silver, 1, Nitrogen, 1, Oxygen, 3, Water, 2)
                 .colorAverage()
-                .build()
+                .build();
+
+        DilutedSilverNitrateSolution.setFormula("(AgNO3)(H2O)2", true)
 
         DicobaltOctacarbonyl = new Material.Builder(8210, "dicobalt_octacarbonyl")
                 .dust()
@@ -2847,13 +2849,5 @@ public class FirstDegreeMaterials{
                 .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
                 .colorAverage()
                 .build();
-
-        DilutedSilverNitrateSolution = new Material.Builder(8518, "diluted_silver_nitrate_solution")
-                .fluid()
-                .components(Silver, 1, Nitrogen, 1, Oxygen, 3, Water, 2)
-                .colorAverage()
-                .build();
-
-        DilutedSilverNitrateSolution.setFormula("(AgNO3)(H2O)2", true)
     }
 }
