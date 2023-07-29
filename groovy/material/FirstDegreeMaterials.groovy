@@ -1957,11 +1957,11 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        BariumCarbonate = new Material.Builder(8387, 'barium_carbonate')
-                .dust()
-                .components(Barium, 1, Carbon, 1, Oxygen, 3)
+        PolychlorinatedBiphenyl = new Material.Builder(8387, "polychlorinated_biphenyl")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
                 .colorAverage()
-                .build()
+                .build();
 
         LeadOxide = new Material.Builder(8388, 'lead_oxide')
                 .dust()
@@ -2842,12 +2842,6 @@ public class FirstDegreeMaterials{
                 .fluid(FluidTypes.GAS)
                 .components(Carbon, 1, Hydrogen, 1, Chlorine, 1, Fluorine, 2)
                 .color(0x8c5a99)
-                .build();
-
-        PolychlorinatedBiphenyl = new Material.Builder(8517, "polychlorinated_biphenyl")
-                .fluid()
-                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
-                .colorAverage()
                 .build();
     }
 }
