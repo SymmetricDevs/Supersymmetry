@@ -166,7 +166,6 @@ for (poison in poisons) {
                     metaitem('sensor.lv')
                     //Rationale: air burst explosion with high explosives to create repulsive forces
             ])
-            .fluidInputs(poison)
             .outputs(item('icbmclassic:explosives:6'))
             .duration(20)
             .EUt(16)
