@@ -939,6 +939,10 @@ mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plas
 mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plastic'), metaitem('plate.central_processing_unit'), metaitem('component.resistor') * 2, metaitem('component.capacitor') * 2, metaitem('component.transistor') * 2, metaitem('wireFineCopper') * 2], [fluid('soldering_alloy') * 72])
 // Microprocessor * 3
 mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plastic'), metaitem('plate.central_processing_unit'), metaitem('component.resistor') * 2, metaitem('component.capacitor') * 2, metaitem('component.transistor') * 2, metaitem('wireFineCopper') * 2], [fluid('tin') * 144])
+// Microprocessor * 6
+mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('soldering_alloy') * 72])
+// Microprocessor * 6
+mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('tin') * 144])
 
 Globals.solders.each { key, val -> 
         mods.gregtech.assembler.recipeBuilder()
@@ -974,6 +978,17 @@ Globals.solders.each { key, val ->
 		.outputs(metaitem('circuit.microprocessor') * 5)
 		.duration(200)
 		.EUt(60)
+		.buildAndRegister();
+
+        mods.gregtech.circuit_assembler.recipeBuilder()
+                .inputs(metaitem('circuit_board.plastic'))
+                .inputs(metaitem('plate.system_on_chip'))
+                .inputs(metaitem('wireFineCopper') * 2)
+                .inputs(metaitem('boltTin') * 2)
+                .fluidInputs(fluid(key) * val)
+                .outputs(metaitem('circuit.microprocessor') * 10)
+		.duration(50)
+		.EUt(600)
 		.buildAndRegister();
 }
 
