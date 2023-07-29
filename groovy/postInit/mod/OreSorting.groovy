@@ -55,7 +55,7 @@ def orthomagmatic_tier_4 = [
     'gregtech:ore_vanadiferous_titanomagnetite_0' : 10000,
     'gregtech:ore_perovskite_0' : 10000,
     'minecraft:soul_sand' : 10000,
-    'gregtech:ore_armstrongite_0' : 10000,
+    'gregtech:ore_baddeleyite_0' : 10000,
     'gregtech:ore_chromite_0' : 10000,
     'gregtech:ore_magnetite_0' : 10000,
     'gregtech:ore_pentlandite_0' : 10000,

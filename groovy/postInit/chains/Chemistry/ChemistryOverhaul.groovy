@@ -1978,6 +1978,14 @@ DISTILLERY.recipeBuilder()
 
 // Molecular Sieves
 
+DISTILLERY.recipeBuilder()
+.inputs(fluid('sodium_silicate_solution') * 1000)
+.outputs(metaitem('dustSodiumSilicate') * 6)
+.fluidOutputs(fluid('water') * 1000)
+.EUt(Globals.voltAmps[1])
+.duration(20)
+.buildAndRegister()
+
 BR.recipeBuilder()
 .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
 .fluidInputs(fluid('steam') * 1000)
@@ -2812,7 +2820,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustCertusQuartz') * 3)
-            .inputs(metaitem(carbon) * 1)
+            .inputs(metaitem(carbon) * 2)
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2821,7 +2829,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustNetherQuartz') * 3)
-            .inputs(metaitem(carbon) * 1)
+            .inputs(metaitem(carbon) * 2)
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2830,7 +2838,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustSiliconDioxide') * 3)
-            .inputs(metaitem(carbon) * 3)
+            .inputs(metaitem(carbon) * 4)
             .circuitMeta(2)
             .outputs(ore('dustSiliconCarbide').first() * 2)
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
@@ -4539,5 +4547,23 @@ DISTILLERY.recipeBuilder()
 .fluidOutputs(fluid('diluted_sulfuric_acid') * 1000)
 .outputs(ore('dustPicricAcid').first() * 7)
 .duration(300)
+.EUt(30)
+.buildAndRegister()
+
+//AMMONIUM THIOCYANATE
+CSTR.recipeBuilder()
+.fluidInputs(fluid('carbon_disulfide') * 50)
+.fluidInputs(fluid('ammonia_solution') * 50)
+.fluidOutputs(fluid('ammonium_thiocyanate_solution') * 50)
+.fluidOutputs(fluid('hydrogen_sulfide') * 50)
+.duration(5)
+.EUt(30)
+.buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+.fluidInputs(fluid('ammonium_thiocyanate_solution') * 1000)
+.outputs(metaitem('dustAmmoniumThiocyanate') * 8)
+.fluidOutputs(fluid('water') * 1000)
+.duration(60)
 .EUt(30)
 .buildAndRegister()
