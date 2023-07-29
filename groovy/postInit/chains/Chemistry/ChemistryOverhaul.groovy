@@ -1510,6 +1510,17 @@ BR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
+FBR.recipeBuilder()
+.notConsumable(ore('dustVanadiumPentoxide'))
+.fluidInputs(fluid('naphthalene') * 1000)
+.fluidInputs(fluid('oxygen') * 9000)
+.outputs(metaitem('dustPhthalicAcid') * 18)
+.fluidOutputs(fluid('carbon_dioxide') * 2000)
+.fluidOutputs(fluid('water') * 2000)
+.duration(200)
+.EUt(30)
+.buildAndRegister()
+
 // Diphenyl Isophthalate
 
 TBR.recipeBuilder()
