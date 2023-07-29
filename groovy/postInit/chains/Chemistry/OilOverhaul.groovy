@@ -510,6 +510,14 @@ CENTRIFUGE.recipeBuilder()
         .EUt(Globals.voltAmps[0])
         .buildAndRegister()
 
+MIXER.recipeBuilder()
+        .inputs(ore('dustAsphalt'))
+        .fluidInputs(fluid('concrete') * 144)
+        .outputs(item('gregtech:asphalt') * 2)
+        .duration(30)
+        .EUt(16)
+        .buildAndRegister()
+
 // Bituminous Residue -> Coke
 
 COKING.recipeBuilder()
