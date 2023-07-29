@@ -42,7 +42,10 @@ mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], 
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustBerylliumOxide')], null)
 // Laminated Glass * 1
 mods.gregtech.forming_press.removeByInput(480, [item('gregtech:transparent_casing') * 2, metaitem('platePolyvinylButyral')], null)
-
+// Magnalium Ingot * 3
+mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 5)], [fluid('oxygen') * 150])
+// Magnalium Dust * 3
+mods.gregtech.macerator.removeByInput(8, [item('gregtech:turbine_casing', 5)], null)
 
 def name_removals = [
         'gregtech:cover_fluid_voiding',
@@ -1078,4 +1081,21 @@ mods.gregtech.fluid_solidifier.recipeBuilder()
         .outputs(item('gregtech:stone_smooth', 4))
         .duration(20)
         .EUt(7)
+        .buildAndRegister();
+
+mods.gregtech.arc_furnace.recipeBuilder()
+        .fluidInputs(fluid('oxygen') * 150)
+        .inputs(item('gregtech:turbine_casing', 5) * 4)
+        .outputs(metaitem('ingotSteel') * 6)
+        .outputs(item('gregtech:stone_smooth', 4))
+        .duration(150)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('gregtech:turbine_casing', 5) * 4)
+        .outputs(metaitem('dustSteel') * 6)
+        .outputs(metaitem('dustConcrete'))
+        .duration(150)
+        .EUt(8)
         .buildAndRegister();
