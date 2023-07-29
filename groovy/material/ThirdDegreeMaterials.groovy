@@ -277,7 +277,7 @@ public class ThirdDegreeMaterials {
 
         IsophthaloylDichlorideSolution = new Material.Builder(24043, 'isophthaloyl_dichloride_solution')
                 .fluid()
-                .components(Dichloroethane, 1, Water, 1, IsophthaloylDichloride, 1)
+                .components(AceticAcid, 1, Water, 1, IsophthaloylDichloride, 1)
                 .colorAverage()
                 .build();
 
@@ -289,7 +289,7 @@ public class ThirdDegreeMaterials {
 
         DichloroethaneIsophthalicAcidSolution = new Material.Builder(24045, 'dichloroethaneisophthalic_acid_solution')
                 .fluid()
-                .components(Dichloroethane, 1 IsophthalicAcid, 1)
+                .components(Dichloroethane, 1, IsophthalicAcid, 1)
                 .colorAverage()
                 .build()
     }

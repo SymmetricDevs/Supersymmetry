@@ -1440,7 +1440,7 @@ public class UnknownCompositionMaterials {
                 .color(0x739133)
                 .build();
 
-        PropanalMixture = new Material.BUilder(4275, "propanal_mixture")
+        PropanalMixture = new Material.Builder(4275, "propanal_mixture")
                 .fluid()
                 .color(0x84910f)
                 .build();
