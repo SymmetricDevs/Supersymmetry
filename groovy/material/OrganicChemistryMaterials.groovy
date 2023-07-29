@@ -439,13 +439,13 @@ public class OrganicChemistryMaterials {
 
         VinylAcetateSolution = new Material.Builder(15071, 'vinyl_acetate_solution')
                 .fluid()
-                .components(Water, 1, VinylAcetate, 1)
+                .components(Methanol, 1, VinylAcetate, 1)
                 .colorAverage()
                 .build();
 
         PolyvinylAcetateSolution = new Material.Builder(15072, 'polyvinyl_acetate_solution')
                 .fluid()
-                .components(Water, 1, PolyvinylAcetate, 1)
+                .components(Methanol, 1, PolyvinylAcetate, 1)
                 .colorAverage()
                 .build();
 
