@@ -1,6 +1,8 @@
 import classes.*;
 import static globals.Globals.*;
 
+import java.lang.Math;
+
 //REMOVALS
 
 mods.gregtech.steam_turbine.removeByInput(-32, null, [fluid('steam') * 640])
@@ -745,7 +747,7 @@ for (WorkingFluid in WorkingFluids) {
             .fluidInputs(liquid('flue_gas') * 1000)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid('chilled_flue_gas') * 1000)
-            .duration((int) (math.floor(WorkingFluid.duration / 8)))
+            .duration((int) (Math.floor(WorkingFluid.duration / 8)))
             .buildAndRegister();
 
     recipemap('steam_turbine').recipeBuilder()
