@@ -20,7 +20,6 @@ def SINTERING_RECIPES = recipemap("sintering_oven")
 for (fuel in sintering_fuels) {
 
     if (fuel.isPlasma) {
-
         SINTERING_RECIPES.recipeBuilder()
         .inputs(ore('dustClay'))
         .inputs(metaitem('dustLimestone'))
@@ -31,10 +30,19 @@ for (fuel in sintering_fuels) {
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
 
+        SINTERING_RECIPES.recipeBuilder()
+        .inputs(ore('dustClay'))
+        .inputs(metaitem('dustLimestone'))
+        .inputs(ore('dustTinyGypsum'))
+        .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+        .outputs(metaitem('hot.cement.clinker'))
+        .chancedOutput(metaitem('hot.cement.clinker'), 5000, 0)
+        .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+        .duration(fuel.duration)
+        .EUt(Globals.voltAmps[3])
+        .buildAndRegister()
     } else {
-
         for (comburent in sintering_comburents) {
-
             SINTERING_RECIPES.recipeBuilder()
             .inputs(ore('dustClay'))
             .inputs(metaitem('dustLimestone'))
@@ -46,6 +54,18 @@ for (fuel in sintering_fuels) {
             .EUt(Globals.voltAmps[0])
             .buildAndRegister()
 
+            SINTERING_RECIPES.recipeBuilder()
+            .inputs(ore('dustClay'))
+            .inputs(metaitem('dustLimestone'))
+            .inputs(ore('dustTinyGypsum'))
+            .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+            .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+            .outputs(metaitem('hot.cement.clinker'))
+            .chancedOutput(metaitem('hot.cement.clinker'), 5000, 0)
+            .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+            .duration(fuel.duration + comburent.duration)
+            .EUt(Globals.voltAmps[0])
+            .buildAndRegister()
         }
     }
 

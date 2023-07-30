@@ -50,7 +50,6 @@ class ChangeFlags {
         UraniumTriplatinum.addFlags("generate_fine_wire");
         RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
 
-        Phosphorus.setFormula("P4", true);
         Phosphorus.setMaterialRGB(0xfffed6);
         Phosphorus.addFlags("no_smelting");
         

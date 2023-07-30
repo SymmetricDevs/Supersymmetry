@@ -664,7 +664,7 @@ for (FluidFuel in FluidFuels) {
 
                 recipemap('gas_turbine').recipeBuilder()
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('oxygen') * 25)
+                        .fluidInputs(liquid('oxygen') * 20)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
                         .duration((int) (FluidFuel.duration * 1.1))
                         .EUt(-64)
@@ -680,7 +680,7 @@ for (FluidFuel in FluidFuels) {
 
                 recipemap('gas_turbine').recipeBuilder()
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('oxygen') * 25)
+                        .fluidInputs(liquid('oxygen') * 20)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
                         .duration((int) (FluidFuel.duration * 1.1))
                         .EUt(-128)
@@ -696,7 +696,7 @@ for (FluidFuel in FluidFuels) {
 
                 recipemap('gas_turbine').recipeBuilder()
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('oxygen') * 25)
+                        .fluidInputs(liquid('oxygen') * 20)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
                         .duration((int) (FluidFuel.duration * 1.1))
                         .EUt(-32)
@@ -747,7 +747,7 @@ for (WorkingFluid in WorkingFluids) {
             .fluidInputs(liquid('flue_gas') * 1000)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid('chilled_flue_gas') * 1000)
-            .duration((int) (Math.floor(WorkingFluid.duration / 8)))
+            .duration((int) (floor(WorkingFluid.duration / 8)))
             .buildAndRegister();
 
     recipemap('steam_turbine').recipeBuilder()
