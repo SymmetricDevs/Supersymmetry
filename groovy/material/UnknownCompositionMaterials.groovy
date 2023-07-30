@@ -727,7 +727,7 @@ public class UnknownCompositionMaterials {
                 .color(0x960000)
                 .build();
 
-        ImpureCinnabarSlurry = new Material.Builder(4274, "impure_cinnabar_slurry")
+        ImpureCinnabarSlurry = new Material.Builder(4137, "impure_cinnabar_slurry")
                 .fluid()
                 .color(0x820000)
                 .build();

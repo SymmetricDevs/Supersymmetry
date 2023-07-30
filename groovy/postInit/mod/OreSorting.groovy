@@ -299,8 +299,8 @@ def hydrothermal_tier_4 = [
     'gregtech:ore_witherite_0' : 10000,
     'gregtech:ore_cinnabar_0' : 10000,
     'gregtech:ore_galena_0' : 10000,
-    'gregtech:ore_bismuthinite_0' : 10000
-    'gregtech:ore_scheelite' : 10000
+    'gregtech:ore_bismuthinite_0' : 10000,
+    'gregtech:ore_scheelite_0' : 10000
 ];
 
 def alluvial_tier_1 = [

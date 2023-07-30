@@ -402,6 +402,7 @@ class SuSyMaterials {
         public static Material CinnabarSlurry;
         public static Material ChlorofluoromethaneMix;
         public static Material PropanalMixture;
+        public static Material ZSMFive;
 
         // Petrochem Materials
 

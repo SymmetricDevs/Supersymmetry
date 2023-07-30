@@ -287,7 +287,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        DichloroethaneIsophthalicAcidSolution = new Material.Builder(24045, 'dichloroethaneisophthalic_acid_solution')
+        DichloroethaneIsophthalicAcidSolution = new Material.Builder(24045, 'dichloroethane_isophthalic_acid_solution')
                 .fluid()
                 .components(Dichloroethane, 1, IsophthalicAcid, 1)
                 .colorAverage()
