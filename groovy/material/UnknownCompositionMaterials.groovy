@@ -1433,5 +1433,25 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x3e146e)
                 .build();
+
+        ImpureZirconSlurry = new Material.BUilder(4274, "impure_zircon_slurry")
+                .fluid()
+                .color(0xdb6960)
+                .build();
+
+        ZirconSlurry = new Material.BUilder(4275, "zircon_slurry")
+                .fluid()
+                .color(0xf05c51)
+                .build();
+
+        HafniumExtractionMixture = new Material.BUilder(4276, "hafnium_extraction_mixture")
+                .fluid()
+                .color(0xc1e3d3)
+                .build();
+
+        HafniumExtract = new Material.BUilder(4277, "hafnium_extract")
+                .fluid()
+                .color(0xc1e3d9)
+                .build();
     }
 }

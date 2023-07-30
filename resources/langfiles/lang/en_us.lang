@@ -1538,6 +1538,26 @@ material.dimethylhydrazine=Unsymmetrical Dimethylhydrazine (UDMH)
 material.titanium_iodide=Titanium Iodide
 material.zirconium_iodide=Zirconium Iodide
 material.hafnium_iodide=Hafnium Iodide
+material.impure_zircon_slurry=Impure Zircon Slurry
+material.zircon_slurry=Zircon Slurry
+material.hafnium_extraction_mixture=Hafnium Extraction Mixture
+material.hafnium_extract=Hafnium Extract
+material.sifted_zircon=Sifted Zircon
+material.flotated_zircon=Flotated Zircon
+material.zircon_concentrate=Zircon Concentrate
+material.fused_zirconia=Fused Zirconia
+material.impure_zirconium_tetrachloride=Impure Zirconium Tetrachloride
+material.zirconium_sulfate_solution=Zirconium Sulfate Solution
+material.zirconyl_chloride_solution=Zirconyl Chloride Solution
+material.purified_zirconyl_chloride_solution=Purified Zirconyl Chloride Solution
+material.zirconium_basic_sulfate=Zirconium Basic Sulfate
+material.zirconium_tetrachloride=Zirconium Tetrachloride
+material.hafnium_sulfate_solution=Hafnium Sulfate Solution
+material.hafnium_dioxide=Hafnium Dioxide
+material.impure_hafnium_tetrachloride=Impure Hafnium Tetrachloride
+material.hafnium_tetrachloride=Hafnium Tetrachloride
+material.ammonium_thiocyanate=Ammonium Thiocyanate
+material.ammonium_thiocyanate_solution=Ammonium Thiocyanate Solution
 
 # Isotopes
 
@@ -1887,6 +1907,10 @@ metaitem.vt_slag.name=Vanadium/Titanium-Rich Slag
 metaitem.sponge.titanium.name=Titanium Sponge
 metaitem.sponge.titanium.crude.name=Crude Titanium Sponge
 metaitem.sponge.platinum.name=Platinum Sponge
+metaitem.sponge.zirconium.name=Zirconium Sponge
+metaitem.sponge.zirconium.crude.name=Crude Zirconium Sponge
+metaitem.sponge.hafnium.name=Hafnium Sponge
+metaitem.sponge.hafnium.crude.name=Crude Hafnium Sponge
 
 # Multiblocked
 

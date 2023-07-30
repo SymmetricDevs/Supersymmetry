@@ -401,6 +401,10 @@ class SuSyMaterials {
         public static Material ImpureCinnabarSlurry;
         public static Material CinnabarSlurry;
         public static Material ChlorofluoromethaneMix;
+        public static ImpureZirconSlurry;
+        public static ZirconSlurry;
+        public static HafniumExtractionMixture;
+        public static HafniumExtract;
 
         // Petrochem Materials
 
@@ -876,6 +880,21 @@ class SuSyMaterials {
         public static Material TitaniumIodide;
         public static Material ZirconiumIodide;
         public static Material HafniumIodide;
+        public static Material SiftedZircon;
+        public static Material FlotatedZircon;
+        public static Material ZirconConcentrate;
+        public static Material FusedZirconia;
+        public static Material ImpureZirconiumTetrachloride;
+        public static Material ZirconiumSulfateSolution;
+        public static Material ZirconylChlorideSolution;
+        public static Material PurifiedZirconylChlorideSolution;
+        public static Material ZirconiumBasicSulfate;
+        public static Material ZirconiumTetrachloride;
+        public static Material HafniumSulfateSolution;
+        public static Material HafniumDioxide;
+        public static Material ImpureHafniumTetrachloride;
+        public static Material HafniumTetrachloride;
+        public static Material AmmoniumThiocyanate;
 
         // Second Degree Materials
 
@@ -956,6 +975,7 @@ class SuSyMaterials {
         public static Material DilutedAmmoniumSulfateSolution;
         public static Material DilutedAmmoniumChlorideSolution;
         public static Material AmmoniacalSodiumBicarbonateSolution;
+        public static Material AmmoniumThiocyanateSolution;
 
         // Organic Chemistry Materials
 

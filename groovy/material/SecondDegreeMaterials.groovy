@@ -483,5 +483,11 @@ public class SecondDegreeMaterials {
                 .components(AmmoniumChloride, 1, SodiumBicarbonate, 1, Water, 1)
                 .colorAverage()
                 .build()
+
+        AmmoniumThiocyanateSolution = new Material.Builder(13078, "ammonium_thiocyanate_solution")
+                .fluid()
+                .components(AmmoniumThiocyanate, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }
