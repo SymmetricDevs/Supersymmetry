@@ -93,6 +93,7 @@ EBF.recipeBuilder()
     .buildAndRegister()
 
 MIXER.recipeBuilder()
+    .circuitMeta(2)
     .inputs(ore('dustIron'))
     .inputs(ore('dustChrome') * 2)
     .outputs(metaitem('dustFerrochromium') * 3)
