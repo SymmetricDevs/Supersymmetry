@@ -46,7 +46,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        PhthaloylDichloride = new Material.Builder(15005, 'phthaloyl_dichloride')
+        IsophthaloylDichloride = new Material.Builder(15005, 'isophthaloyl_dichloride')
                 .dust()
                 .components(Carbon, 8, Hydrogen, 4, Chlorine, 2, Oxygen, 2)
                 .colorAverage()
@@ -305,10 +305,10 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        PhthaloylDichlorideSolution = new Material.Builder(15049, 'phthaloyl_dichloride_solution')
+        Propionaldehyde = new Material.Builder(15049, "propionaldehyde")
                 .fluid()
-                .components(Dichloroethane, 1, Water, 1, PhthaloylDichloride, 1)
-                .colorAverage()
+                .components(Carbon, 3, Hydrogen, 6, Oxygen, 1)
+                .color(0x917b0f)
                 .build();
 
         SodiumPhenoxideSolution = new Material.Builder(15050, 'sodium_phenoxide_solution')
@@ -439,13 +439,13 @@ public class OrganicChemistryMaterials {
 
         VinylAcetateSolution = new Material.Builder(15071, 'vinyl_acetate_solution')
                 .fluid()
-                .components(Water, 1, VinylAcetate, 1)
+                .components(Methanol, 1, VinylAcetate, 1)
                 .colorAverage()
                 .build();
 
         PolyvinylAcetateSolution = new Material.Builder(15072, 'polyvinyl_acetate_solution')
                 .fluid()
-                .components(Water, 1, PolyvinylAcetate, 1)
+                .components(Methanol, 1, PolyvinylAcetate, 1)
                 .colorAverage()
                 .build();
 
@@ -609,11 +609,11 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        PhthalicAcidSolution = new Material.Builder(15100, 'phthalic_acid_solution')
-                .fluid()
-                .components(Dichloroethane, 1, PhthalicAcid, 1)
-                .color(0xdbbbbd)
-                .build();
+        IsophthalicAcid = new Material.Builder(15100, "isophthalic_acid")
+                .dust()
+                .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
+                .color(0x349972)
+                .build()
 
         NPropanol = new Material.Builder(15101, "n_propanol")
                 .fluid()
@@ -1508,6 +1508,48 @@ public class OrganicChemistryMaterials {
                 .fluid()
                 .components(Carbon, 1, Hydrogen, 6, Nitrogen, 2)
                 .color(0x558ca6)
+                .build();
+
+        OrthoXylene = new Material.Builder(15241, 'ortho_xylene')
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 10)
+                .color(0x3d3427)
+                .build();
+
+        MetaXylene = new Material.Builder(15242, 'meta_xylene')
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 10)
+                .color(0x40392f)
+                .build();
+
+        ParaXylene = new Material.Builder(15243, 'para_xylene')
+                .dust().fluid()
+                .components(Carbon, 8, Hydrogen, 10)
+                .color(0x1a1611)
+                .build();
+
+        MetaParaXyleneMixture = new Material.Builder(15244, 'meta_para_xylene_mixture')
+                .fluid()
+                .components(Carbon, 8, Hydrogen, 10)
+                .color(0x2b2319)
+                .build();
+
+        Tripropylamine = new Material.Builder(15245, "tripropylamine")
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 21, Nitrogen, 1)
+                .color(0x90b846)
+                .build();
+
+        NBromopropane = new Material.Builder(15246, "n_bromopropane")
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 7, Bromine, 1)
+                .color(0x9e833f)
+                .build();
+
+        TetrapropylammoniumBromide = new Material.Builder(15247, "tetrapropylammonium_bromide")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 28, Bromine, 1, Nitrogen, 1)
+                .color(0x916c0f)
                 .build();
     }
 }

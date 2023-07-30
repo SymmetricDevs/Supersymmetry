@@ -274,5 +274,23 @@ public class ThirdDegreeMaterials {
                 .components(PicricAcid, 1, DilutedSulfuricAcid, 1)
                 .colorAverage()
                 .build();
+
+        IsophthaloylDichlorideSolution = new Material.Builder(24043, 'isophthaloyl_dichloride_solution')
+                .fluid()
+                .components(AceticAcid, 1, Water, 1, IsophthaloylDichloride, 1)
+                .colorAverage()
+                .build();
+
+        IsophthalicAcidSolution = new Material.Builder(24044, 'isophthalic_acid_solution')
+                .fluid()
+                .components(AceticAcid, 1, Water, 1, IsophthalicAcid, 1)
+                .colorAverage()
+                .build()
+
+        DichloroethaneIsophthalicAcidSolution = new Material.Builder(24045, 'dichloroethane_isophthalic_acid_solution')
+                .fluid()
+                .components(Dichloroethane, 1, IsophthalicAcid, 1)
+                .colorAverage()
+                .build()
     }
 }

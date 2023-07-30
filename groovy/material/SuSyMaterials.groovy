@@ -227,7 +227,6 @@ class SuSyMaterials {
         public static Material PhosphatePulp;
         public static Material FilteredPhosphatePulp;
         public static Material PhosphateConcentrate;
-        public static Material Phosphogypsum;
         public static Material ImpureAmmoniumFluoroberyllateSolution;
         public static Material ImpureBerylliumSulfateSolution;
         public static Material ImpureLithiumSulfateSolution;
@@ -405,6 +404,8 @@ class SuSyMaterials {
         public static ZirconSlurry;
         public static HafniumExtractionMixture;
         public static HafniumExtract;
+        public static Material PropanalMixture;
+        public static Material ZSMFive;
 
         // Petrochem Materials
 
@@ -584,7 +585,6 @@ class SuSyMaterials {
         public static Material SodiumDichromate;
         public static Material RaneyNickel;
         public static Material ActivatedRaneyNickel;
-        public static Material CopperIIOxide;
         public static Material DicobaltOctacarbonyl;
         public static Material ImpregnatedAluminaCatalyst;
         public static Material BismuthCopper;
@@ -1069,7 +1069,6 @@ class SuSyMaterials {
         public static Material TetrafluoroethyleneEmulsion;
         public static Material Dichloromethane;
         public static Material CarbonTetrachloride;
-        public static Material PhthalicAcidSolution;
         public static Material PolytetrafluoroethyleneSolution;
         public static Material MixedNitrochlorobenzeneSolution;
         public static Material MixedDichlorobenzeneSolution;
@@ -1128,6 +1127,8 @@ class SuSyMaterials {
         public static Material TetrasodiumEthylenediaminetetraaceticAcid;
         public static Material Urea;
         public static Material Diiodobenzene;
+        public static Material IsophthalicAcid;
+        public static Material IsophthaloylDichloride;
         public static Material TerephthalicAcid;
         public static Material Bistrichloromethylbenzene;
         public static Material TerephthaloylChloride;
@@ -1223,6 +1224,14 @@ class SuSyMaterials {
         public static Material PotassiumButylXanthate;
         public static Material PicricAcid;
         public static Material Monomethylhydrazine;
+        public static Material OrthoXylene;
+        public static Material MetaXylene;
+        public static Material ParaXylene;
+        public static Material MetaParaXyleneMixture;
+        public static Material Tripropylamine;
+        public static Material NBromopropane;
+        public static Material TetrapropylammoniumBromide;
+        public static Material Propionaldehyde;
 
         // Third Degree Materials
 
@@ -1269,6 +1278,9 @@ class SuSyMaterials {
         public static Material ZirconiumTetrachlorideTetrahydrofuranComplex;
         public static Material PotassiumButylXanthateSolution;
         public static Material TNPSolution;
+        public static Material IsophthaloylDichlorideSolution;
+        public static Material IsophthalicAcidSolution;
+        public static Material DichloroethaneIsophthalicAcidSolution;
 
         // Thermodynamics/Greenhouse Materials
 

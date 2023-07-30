@@ -253,7 +253,7 @@ for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
 			.inputs(ore('cableGtSingleCopper') * 4)
-			.circuitMeta([1])
+			.circuitMeta([4])
             .fluidInputs(solder)
             .outputs(item('opencomputers:charger'))
             .duration(200)
