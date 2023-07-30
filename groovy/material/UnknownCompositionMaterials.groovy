@@ -1359,9 +1359,10 @@ public class UnknownCompositionMaterials {
                 .color(0x856119)
                 .build();
 
-        ChalcopyriteSlurry = new Material.Builder(4260, "chalcopyrite_slurry")
-                .fluid()
-                .color(0xa07828)
+        CopperMatteFlueDust = new Material.Builder(4260, "copper_matte_flue_dust")
+                .dust()
+                .color(0x3e146e)
+                .iconSet(DULL)
                 .build();
 
         ImpureBorniteSlurry = new Material.Builder(4261, "impure_bornite_slurry")
@@ -1369,9 +1370,9 @@ public class UnknownCompositionMaterials {
                 .color(0x7d511d)
                 .build();
 
-        BorniteSlurry = new Material.Builder(4262, "bornite_slurry")
+        CopperMatteFlueGas = new Material.Builder(4262, "copper_matte_flue_gas")
                 .fluid()
-                .color(0x97662b)
+                .color(0x3e146e)
                 .build();
 
         ImpureChalcociteSlurry = new Material.Builder(4263, "impure_chalcocite_slurry")
@@ -1379,9 +1380,10 @@ public class UnknownCompositionMaterials {
                 .color(0x262424)
                 .build();
 
-        ChalcociteSlurry = new Material.Builder(4264, "chalcocite_slurry")
-                .fluid()
-                .color(0x353535)
+        ZSMFive = new Material.Builder(4264, "zsm_five")
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .color(0x739133)
                 .build();
 
         MalachiteLeach = new Material.Builder(4265, "malachite_leach")
@@ -1420,23 +1422,6 @@ public class UnknownCompositionMaterials {
                 .flags(GENERATE_PLATE)
                 .color(0x6e4c14)
                 .iconSet(SHINY)
-                .build();
-
-        CopperMatteFlueDust = new Material.Builder(4272, "copper_matte_flue_dust")
-                .dust()
-                .color(0x3e146e)
-                .iconSet(DULL)
-                .build();
-
-        CopperMatteFlueGas = new Material.Builder(4273, "copper_matte_flue_gas")
-                .fluid()
-                .color(0x3e146e)
-                .build();
-
-        ZSMFive = new Material.Builder(4274, "zsm_five")
-                .dust()
-                .flags(GENERATE_CATALYST_BED)
-                .color(0x739133)
                 .build();
     }
 }

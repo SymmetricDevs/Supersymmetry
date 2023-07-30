@@ -134,7 +134,7 @@ for (copperOre in copperOres) {
         .notConsumable(metaitem('dustSodiumEthylXanthate'))
         .notConsumable(fluid('sodium_cyanide_solution') * 100)
         .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
-        .fluidOutputs(fluid('copper_concentrate_slurry') * copperOre.amount_produced * 1000)
+        .fluidOutputs(fluid('copper_concentrate_slurry') * (copperOre.amount_produced * 1000))
         .fluidOutputs(fluid('pyrite_slurry') * 1000)
         .EUt(Globals.voltAmps[3])
         .duration(80)
@@ -142,12 +142,12 @@ for (copperOre in copperOres) {
 
     } else {
         FLOTATION.recipeBuilder()
-        .fluidInputs(fluid('impure_' + copperOre.name.toLowerCase() + '_slurry') * 2000)
+        .fluidInputs(fluid('impure_' + copperOre.name.toLowerCase() + '_slurry') * ((copperOre.amount_produced * 1000) + 1000))
         .notConsumable(metaitem('dustQuicklime'))
         .notConsumable(metaitem('dustSodiumEthylXanthate'))
         .notConsumable(fluid('sodium_cyanide_solution') * 100)
         .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
-        .fluidOutputs(fluid('copper_concentrate_slurry') * ((copperOre.amount_produced * 1000) + 1000))
+        .fluidOutputs(fluid('copper_concentrate_slurry') * (copperOre.amount_produced * 1000))
         .fluidOutputs(fluid('granite_tailing_slurry') * 1000)
         .EUt(Globals.voltAmps[3])
         .duration(80)
@@ -157,7 +157,7 @@ for (copperOre in copperOres) {
 
 CLARIFIER.recipeBuilder()
     .fluidInputs(fluid('copper_concentrate_slurry') * 1000)
-    .outputs(metaitem('dustCopperConcentrate') * 4)
+    .outputs(metaitem('dustCopperConcentrate') * 16)
     .fluidOutputs(fluid('wastewater') * 1000)
     .EUt(30)
     .duration(20)
