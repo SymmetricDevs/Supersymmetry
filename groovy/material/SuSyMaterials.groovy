@@ -227,7 +227,6 @@ class SuSyMaterials {
         public static Material PhosphatePulp;
         public static Material FilteredPhosphatePulp;
         public static Material PhosphateConcentrate;
-        public static Material Phosphogypsum;
         public static Material ImpureAmmoniumFluoroberyllateSolution;
         public static Material ImpureBerylliumSulfateSolution;
         public static Material ImpureLithiumSulfateSolution;

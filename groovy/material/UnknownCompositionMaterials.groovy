@@ -583,10 +583,9 @@ public class UnknownCompositionMaterials {
                 .iconSet(SHINY)
                 .build();
 
-        Phosphogypsum = new Material.Builder(4110, "phosphogypsum")
-                .dust()
-                .color(0xd1cba7)
-                .iconSet(DULL)
+        PropanalMixture = new Material.Builder(4110, "propanal_mixture")
+                .fluid()
+                .color(0x84910f)
                 .build();
       
         ImpureAmmoniumFluoroberyllateSolution = new Material.Builder(4111, "ammonium_fluoroberyllate_solution")
@@ -1438,11 +1437,6 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .flags(GENERATE_CATALYST_BED)
                 .color(0x739133)
-                .build();
-
-        PropanalMixture = new Material.Builder(4275, "propanal_mixture")
-                .fluid()
-                .color(0x84910f)
                 .build();
     }
 }
