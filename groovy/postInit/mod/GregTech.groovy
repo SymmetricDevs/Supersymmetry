@@ -1079,3 +1079,6 @@ mods.gregtech.fluid_solidifier.recipeBuilder()
         .duration(20)
         .EUt(7)
         .buildAndRegister();
+
+// Wireless Digital Interface * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('cover.digital'), metaitem('wireless')], [fluid('plastic') * 144])
