@@ -470,9 +470,9 @@ NaturalGas.setAmountToBurn(6);
 NaturalGas.setByproductAmount(600);
 
 def Hydrogen = new IFluidFuel('hydrogen', 'steam');
-Hydrogen.setDuration(4);
-Hydrogen.setAmountToBurn(50);
-Hydrogen.setByproductAmount(960);
+Hydrogen.setDuration(3);
+Hydrogen.setAmountToBurn(40);
+Hydrogen.setByproductAmount(60);
 
 def WoodGas = new IFluidFuel('wood_gas', 'flue_gas');
 WoodGas.setDuration(6);
