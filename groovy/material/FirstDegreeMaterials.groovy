@@ -2855,5 +2855,23 @@ public class FirstDegreeMaterials{
                 .build();
 
         DilutedSilverNitrateSolution.setFormula("(AgNO3)(H2O)2", true)
+
+        TitaniumIodide = new Material.Builder(8519, "titanium_iodide")
+                .dust()
+                .components(Titanium, 1, Iodine, 4)
+                .colorAverage()
+                .build();
+
+        ZirconiumIodide = new Material.Builder(8519, "zirconium_iodide")
+                .dust()
+                .components(Zirconium, 1, Iodine, 4)
+                .colorAverage()
+                .build();
+
+        HafniumIodide = new Material.Builder(8519, "hafnium_iodide")
+                .dust()
+                .components(Hafnium, 1, Iodine, 4)
+                .colorAverage()
+                .build();
     }
 }

@@ -1535,6 +1535,9 @@ material.picric_acid=Picric Acid (TNP)
 material.tnp_solution=Picric Acid Solution
 material.monomethylhydrazine=Monomethylhydrazine (MMH)
 material.dimethylhydrazine=Unsymmetrical Dimethylhydrazine (UDMH)
+material.titanium_iodide=Titanium Iodide
+material.zirconium_iodide=Zirconium Iodide
+material.hafnium_iodide=Hafnium Iodide
 
 # Isotopes
 

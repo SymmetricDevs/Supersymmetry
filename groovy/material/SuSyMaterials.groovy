@@ -873,6 +873,9 @@ class SuSyMaterials {
         public static Material Chlorodifluoromethane;
         public static Material PolychlorinatedBiphenyl;
         public static Material DilutedSilverNitrateSolution;
+        public static Material TitaniumIodide;
+        public static Material ZirconiumIodide;
+        public static Material HafniumIodide;
 
         // Second Degree Materials
 
