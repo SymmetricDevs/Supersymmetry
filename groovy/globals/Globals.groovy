@@ -67,7 +67,7 @@ class Globals {
         String name
         int amount_required
         int duration
-        Combustible(name, amount_required, duration) {
+        InertGas(name, amount_required, duration) {
             this.name = name
             this.amount_required = amount_required
             this.duration = duration
@@ -75,7 +75,7 @@ class Globals {
     }
 
     public static inertGases = [
-        new InertGas('nitrogen', 8000, 4)
+        new InertGas('nitrogen', 8000, 4),
         new InertGas('helium', 4000, 2),
         new InertGas('argon', 1000, 1)
     ]

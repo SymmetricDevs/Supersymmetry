@@ -2019,19 +2019,19 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        HafniumTetrachloride = new Material.Builder(8397, 'hafnium_tetrachloride')
-                .fluid()
-                .fluidTemp(800)
+        HafniumTetrachloride = new Material.Builder(8397, "hafnium_tetrachloride")
+                .dust().fluid()
                 .components(Hafnium, 1, Chlorine, 4)
-                .colorAverage()
-                .build()
+                .color(0xcae3cc)
+                .build();
 
-        ZirconiumTetrachloride = new Material.Builder(8398, 'zirconium_tetrachloride')
-                .dust().fluid(FluidTypes.GAS)
-                .fluidTemp(800)
-                .components(Zirconium, 1, Chlorine, 4)
+        AmmoniumThiocyanate = new Material.Builder(8398, "ammonium_thiocyanate")
+                .dust()
+                .components(Nitrogen, 2, Hydrogen, 4, Sulfur, 1, Carbon, 1)
                 .colorAverage()
-                .build()
+                .build();
+
+        AmmoniumThiocyanate.setFormula("NH4SCN", true)
 
         RawElectrum = new Material.Builder(8399, "raw_electrum")
                 .ore().fluid()
@@ -2864,18 +2864,6 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        ZirconiumIodide = new Material.Builder(8519, "zirconium_iodide")
-                .dust()
-                .components(Zirconium, 1, Iodine, 4)
-                .colorAverage()
-                .build();
-
-        HafniumIodide = new Material.Builder(8519, "hafnium_iodide")
-                .dust()
-                .components(Hafnium, 1, Iodine, 4)
-                .colorAverage()
-                .build();
-
         SiftedZircon = new Material.Builder(8520, "sifted_zircon")
                 .dust()
                 .components(Zircon, 1)
@@ -2972,18 +2960,16 @@ public class FirstDegreeMaterials{
 
         ImpureHafniumTetrachloride.setFormula("(HfCl4)(?)", true)
 
-        HafniumTetrachloride = new Material.Builder(8533, "hafnium_tetrachloride")
-                .dust().fluid()
-                .components(Hafnium, 1, Chlorine, 4)
-                .color(0xcae3cc)
-                .build();
-
-        AmmoniumThiocyanate = new Material.Builder(8534, "ammonium_thiocyanate")
+        ZirconiumIodide = new Material.Builder(8533, "zirconium_iodide")
                 .dust()
-                .components(Nitrogen, 2, Hydrogen, 4, Sulfur, 1, Carbon, 1)
+                .components(Zirconium, 1, Iodine, 4)
                 .colorAverage()
                 .build();
 
-        AmmoniumThiocyanate.setFormula("NH4SCN", true)
+        HafniumIodide = new Material.Builder(8534, "hafnium_iodide")
+                .dust()
+                .components(Hafnium, 1, Iodine, 4)
+                .colorAverage()
+                .build();
     }
 }

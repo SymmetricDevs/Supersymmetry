@@ -2007,7 +2007,7 @@ DISTILLERY.recipeBuilder()
 .inputs(fluid('sodium_silicate_solution') * 1000)
 .outputs(metaitem('dustSodiumSilicate') * 6)
 .fluidOutputs(fluid('water') * 1000)
-.EUt(Globals.voltAmps[1])
+.EUt(30)
 .duration(20)
 .buildAndRegister()
 

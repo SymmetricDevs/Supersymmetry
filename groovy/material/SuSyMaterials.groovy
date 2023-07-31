@@ -38,7 +38,7 @@ class SuSyMaterials {
         public static Material Titanomagnetite;
         public static Material Fluorapatite;
         public static Material VanadiferousTitanomagnetite;
-        public static Material Armstrongite;
+        public static Material Baddeleyite;
         public static Material Vanadinite;
         public static Material Cerussite;
         public static Material Anglesite;
@@ -467,6 +467,8 @@ class SuSyMaterials {
         public static Material LightOilyBrine;
         public static Material HeavyOilyBrine;
         public static Material SulfuricOilResidue;
+        public static Material TreatedSulfuricOilResidue;
+        public static Material OilResidue;
         public static Material LightBitumenSolution;
         public static Material BitumenSolution;
         public static Material HeavyBitumenSolution;
@@ -775,8 +777,6 @@ class SuSyMaterials {
         public static Material ManganeseIINitrate;
         public static Material PurifiedManganeseDioxide;
         public static Material BariumTitanate;
-        public static Material HafniumTetrachloride;
-        public static Material ZirconiumTetrachloride;
         public static Material RawElectrum;
         public static Material NeodymiumAlloy;
         public static Material TreatedNeodymiumAlloy;
