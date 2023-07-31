@@ -1123,3 +1123,10 @@ mods.gregtech.macerator.recipeBuilder()
         
 // Wireless Digital Interface * 1
 mods.gregtech.assembler.removeByInput(480, [metaitem('cover.digital'), metaitem('wireless')], [fluid('plastic') * 144])
+
+// Stainless Steel Ingot * 3
+mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 7)], [fluid('oxygen') * 234])
+// Titanium Ingot * 3
+mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 6)], [fluid('oxygen') * 213])
+// Tungstensteel Ingot * 3
+mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 8)], [fluid('oxygen') * 426])
