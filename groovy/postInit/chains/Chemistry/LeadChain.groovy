@@ -165,7 +165,6 @@ for (fuel in sintering_fuels) {
                     .outputs(metaitem('dustSinteredLeadConcentrate') * 2)
                     .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
                     .fluidInputs(fluid(comburent.name) * (comburent.amountRequired * 40))
-                    .outputs(metaitem('vti_rich_pig_iron') * 4)
                     .fluidOutputs(fluid('sulfur_dioxide') * 1000)
                     .duration(fuel.duration + comburent.duration)
                     .EUt(120)
