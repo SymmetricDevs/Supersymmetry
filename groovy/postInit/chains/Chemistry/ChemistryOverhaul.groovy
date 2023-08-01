@@ -4448,7 +4448,7 @@ CSTR.recipeBuilder()
         .duration(3)
         .buildAndRegister()
 
-BR.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
         .fluidInputs(fluid('oligomeric_bisphenol_solution') * 4000)
         .fluidInputs(fluid('triethylamine') * 1000)
         .outputs(metaitem('dustPolycarbonate'))
