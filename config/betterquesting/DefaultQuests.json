@@ -8583,7 +8583,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Maintenance Hatch is where maintenance is performed on multi-block machines.\n\nWhile a Multiblock is running, new maintenance problems can appear. On average, new problems arise every few months. \n\nMaintenance is done by using tools in the Maintenance Hatch. To use a tool in maintenance, move it up to the Hatch\u0027s GUI and [§aLeft Click§r] once. Here is a list of the possible problems you can have in a Multiblock:\n\n§6\"Pipe is loose\" §rcan be fixed with a §6Wrench§r.\n§6\"Screws are missing.\"§r can be fixed with a §6Screwdriver§r.\n§6\"Something is stuck.\"§r can be fixed with a §6Soft Hammer§r.\n§6\"Platings are dented.\"§r can be fixed with a §6Hammer§r.\n§6\"Circuitry burned out.\"§r can be fixed with a §6Soldering Iron§r.\n§6\"That doesn\u0027t belong there.\"§r can be fixed with a §6Crowbar§r.\n\nAll of the problems can be fixed by using §7Duct Tape§r.\n",
+          "desc:8": "The Maintenance Hatch is where maintenance is performed on multi-block machines.\n\nWhile a Multiblock is running, new maintenance problems can appear. On average, new problems arise every few months. \n\nMaintenance is done by using tools in the Maintenance Hatch. To use a tool in maintenance, move it up to the Hatch\u0027s GUI and [§aLeft Click§r] once. Here is a list of the possible problems you can have in a Multiblock:\n\n§6\"Pipe is loose\" §rcan be fixed with a §6Wrench§r.\n§6\"Screws are missing.\"§r can be fixed with a §6Screwdriver§r.\n§6\"Something is stuck.\"§r can be fixed with a §6Soft Hammer§r.\n§6\"Platings are dented.\"§r can be fixed with a §6Hammer§r.\n§6\"That doesn\u0027t belong there.\"§r can be fixed with a §6Crowbar§r.\n\nAll of the problems can be fixed by using §7Duct Tape§r.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9260,7 +9260,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bWater §rcan be electrolyzed into §bHydrogen §rand §bOxygen §rby using Nickel Rods and Iron Rods as the anode and cathode. This is a prettty slow process, so be patient.",
+          "desc:8": "§bWater §rcan be electrolyzed into §bHydrogen §rand §bOxygen §rby using Nickel Rods and Iron Rods as the anode and cathode. This is a pretty slow process, so be patient.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
