@@ -63,6 +63,11 @@ class Globals {
         new Combustible('dustCarbon', 1, 1, 'dustTinyAsh')
     ]
 
+    public static highPurityCombustibles = [
+        new Combustible('dustCoke', 1, 2, 'dustTinyAsh'),
+        new Combustible('dustCarbon', 1, 1, 'dustTinyAsh')
+    ]
+
     public static class InertGas {
         String name
         int amount_required
