@@ -1281,6 +1281,7 @@ class SuSyMaterials {
         public static Material IsophthaloylDichlorideSolution;
         public static Material IsophthalicAcidSolution;
         public static Material DichloroethaneIsophthalicAcidSolution;
+        public static Material TetrahydrofuranSolution;
 
         // Thermodynamics/Greenhouse Materials
 

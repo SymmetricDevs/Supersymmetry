@@ -2737,7 +2737,7 @@ DISTILLATION_TOWER.recipeBuilder()
 
 //Diethyl Ether
 
-BCR.recipeBuilder()
+CSTR.recipeBuilder()
 .fluidInputs(fluid('ethanol') * 100)
 .fluidInputs(fluid('sulfuric_acid') * 50)
 .fluidOutputs(fluid('diethyl_ether_solution') * 150)
@@ -4485,6 +4485,25 @@ SINTERING_OVEN.recipeBuilder()
         .EUt(1920)
         .duration(20)
         .buildAndRegister()
+
+//TETRAHYDROFURAN
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('butanediol') * 50)
+.fluidInputs(fluid('sulfuric_acid') * 50)
+.fluidOutputs(fluid('tetrahydrofuran_solution') * 150)
+.EUt(30)
+.duration(5)
+.buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+.fluidInputs(fluid('tetrahydrofuran_solution') * 3000)
+.fluidOutputs(fluid('sulfuric_acid') * 1000)
+.fluidOutputs(fluid('water') * 1000)
+.fluidOutputs(fluid('tetrahydrofuran') * 1000)
+.EUt(90)
+.duration(600)
+.buildAndRegister()
 
 //KAMINSKY CATALYST
 
