@@ -208,7 +208,7 @@ SIFTER.recipeBuilder()
 
 MIXER.recipeBuilder()
     .inputs(metaitem('dustFilteredPhosphatePulp') * 8)
-    .fluidInputs(fluid('wastewater') * 2000)
+    .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('filtered_phosphate_slurry') * 2000)
     .EUt(Globals.voltAmps[3])
     .duration(80)

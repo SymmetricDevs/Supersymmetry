@@ -1522,7 +1522,7 @@ FBR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-// Diphenyl Isophthalate
+//Phosgene
 
 TBR.recipeBuilder()
 .fluidInputs(fluid('carbon_monoxide') * 50)
@@ -1532,6 +1532,17 @@ TBR.recipeBuilder()
 .duration(10)
 .EUt(30)
 .buildAndRegister()
+
+REACTION_FURNACE()
+.fluidInputs(fluid('carbon_tetrachloride') * 1000)
+.fluidInputs(fluid('oxygen') * 1000)
+.fluidOutputs(fluid('phosgene') * 1000)
+.fluidOutputs(fluid('chlorine') * 2000)
+.duration(30)
+.EUt(120)
+.buildAndRegister()
+
+// Diphenyl Isophthalate
 
 BR.recipeBuilder()
 .fluidInputs(fluid('dichloroethane') * 1000)
