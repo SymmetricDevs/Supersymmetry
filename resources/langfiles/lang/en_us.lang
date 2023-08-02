@@ -1570,6 +1570,7 @@ material.propionaldehyde=Propionaldehyde
 material.propanal_mixture=Propanal Mixture
 material.zsm_five=ZSM-5
 material.tetrahydrofuran_solution=Tetrahydrofuran Solution
+material.calcium_zirconate=Calcium Zirconate
 
 # Isotopes
 
@@ -1596,6 +1597,7 @@ recipemap.catalytic_reformer_recipes.name=Catalytic Reforming
 recipemap.coking_tower.name=Coking Tower
 recipemap.ion_exchange_column.name=Ion Exchange
 recipemap.smoke_stack.name=Smoke Stack (Chimney)
+recipemap.gravity_separator.name=Gravity Separation
 
 # QMD Particles
 

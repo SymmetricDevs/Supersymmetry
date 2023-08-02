@@ -895,6 +895,7 @@ class SuSyMaterials {
         public static Material ImpureHafniumTetrachloride;
         public static Material HafniumTetrachloride;
         public static Material AmmoniumThiocyanate;
+        public static Material CalciumZirconate;
 
         // Second Degree Materials
 

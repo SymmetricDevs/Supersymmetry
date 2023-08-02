@@ -101,6 +101,11 @@ SMOKE_STACK.recipeBuilder()
         .duration(10)
         .buildAndRegister()
 
+SMOKE_STACK.recipeBuilder()
+        .fluidInputs(fluid('carbon_tetrachloride') * 500)
+        .duration(10)
+        .buildAndRegister()
+
 MIXER.recipeBuilder()
         .fluidInputs(fluid('water') * 100)
         .inputs(metaitem('dustTinyAsh'))

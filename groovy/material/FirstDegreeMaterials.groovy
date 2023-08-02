@@ -2933,7 +2933,7 @@ public class FirstDegreeMaterials{
         ZirconiumBasicSulfate.setFormula("Zr5O8(SO4)2", true)
 
         ZirconiumTetrachloride = new Material.Builder(8529, "zirconium_tetrachloride")
-                .dust()
+                .dust().fluid()
                 .components(Zirconium, 1, Chlorine, 4)
                 .color(0x32ad72)
                 .build();
@@ -2969,6 +2969,12 @@ public class FirstDegreeMaterials{
         HafniumIodide = new Material.Builder(8534, "hafnium_iodide")
                 .dust()
                 .components(Hafnium, 1, Iodine, 4)
+                .colorAverage()
+                .build();
+
+        CalciumZirconate = new Material.Builder(8535, "calcium_zirconate")
+                .dust()
+                .components(Calcium, 1, Zirconium, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
     }

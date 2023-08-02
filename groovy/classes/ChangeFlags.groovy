@@ -63,7 +63,8 @@ class ChangeFlags {
         Asbestos.addFlags("generate_foil");
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
-
+        
+        Iodine.setProperty(PropertyKey.FLUID, new FluidProperty());
         LithiumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
         SiliconDioxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());

@@ -384,7 +384,7 @@ MIXER.recipeBuilder()
 .fluidInputs(fluid('lubricating_oil') * 250)
 .inputs(ore('dustRedstone'))
 .fluidOutputs(fluid('lubricant') * 500)
-.duration(80)a
+.duration(80)
 .EUt(7)
 .buildAndRegister()
 

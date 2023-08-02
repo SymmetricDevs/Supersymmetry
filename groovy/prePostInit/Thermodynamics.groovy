@@ -495,7 +495,7 @@ RefineryGas.setAmountToBurn(6);
 RefineryGas.setByproductAmount(600);
 
 def BioDiesel = new IFluidFuel('bio_diesel', 'flue_gas');
-BioDiesel.setDuration(100);
+BioDiesel.setDuration(75);
 BioDiesel.setAmountToBurn(10);
 BioDiesel.setByproductAmount(1000);
 BioDiesel.setIsDiesel(true);
@@ -512,7 +512,7 @@ SulfuricKerosene.setAmountToBurn(8);
 SulfuricKerosene.setByproductAmount(800);
 
 def Diesel = new IFluidFuel('diesel', 'flue_gas');
-Diesel.setDuration(40);
+Diesel.setDuration(100);
 Diesel.setAmountToBurn(10);
 Diesel.setByproductAmount(1000);
 Diesel.setIsDiesel(true);
@@ -582,7 +582,7 @@ Benzene.setAmountToBurn(8);
 Benzene.setByproductAmount(800);
 
 def NitroFuel = new IFluidFuel('nitro_fuel', 'flue_gas');
-NitroFuel.setDuration(100);
+NitroFuel.setDuration(140);
 NitroFuel.setAmountToBurn(10);
 NitroFuel.setByproductAmount(1000);
 NitroFuel.setIsDiesel(true);
