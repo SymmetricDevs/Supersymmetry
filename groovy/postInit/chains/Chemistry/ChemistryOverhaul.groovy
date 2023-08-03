@@ -1533,7 +1533,7 @@ TBR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-REACTION_FURNACE()
+REACTION_FURNACE.recipeBuilder()
 .fluidInputs(fluid('carbon_tetrachloride') * 1000)
 .fluidInputs(fluid('oxygen') * 1000)
 .fluidOutputs(fluid('phosgene') * 1000)
