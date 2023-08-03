@@ -792,6 +792,15 @@ mods.gregtech.mixer.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('dustSodiumBicarbonate') * 6)
+    .fluidInputs(fluid('glue') * 576)
+    .fluidInputs(fluid('salt_water') * 1000)
+    .outputs(item('minecraft:slime_ball') * 3)
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
+
 crafting.addShaped("tnt_block", item('minecraft:tnt'), [
         [null, ore('dustTnt'), null],
         [ore('dustSiliconDioxide'), ore('wireFineRedAlloy'), ore('dustSiliconDioxide')],
