@@ -435,6 +435,56 @@ BR.recipeBuilder()
         .EUt(480)
         .buildAndRegister()
 
+//TRIOCTYLAMINE
+
+TBR.recipeBuilder()
+        .circuitMeta(1)
+        .notConsumable(ore('dustNickel'))
+        .fluidInputs(fluid('n_octanol') * 150)
+        .fluidInputs(fluid('ammonia') * 50)
+        .fluidOutputs(fluid('trioctylamine') * 50)
+        .fluidOutputs(fluid('water') * 150)
+        .duration(3)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
+//ISODECANOL
+
+FBR.recipeBuilder()
+        .notConsumable(metaitem('catalystBedZsmFive'))
+        .fluidInputs(fluid('propene') * 150)
+        .fluidOutputs(fluid('tripropylene') * 50)
+        .duration(5)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .inputs(metaitem('dustDicobaltOctacarbonyl') * 18)
+        .fluidInputs(fluid('hydrogen') * 2000)
+        .fluidInputs(fluid('carbon_monoxide') * 1000)
+        .fluidInputs(fluid('one_butene') * 1000)
+        .fluidOutputs(fluid('isodecanal_mixture') * 1000)
+        .EUt(Globals.voltAmps[3])
+        .duration(80)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('isodecanal_mixture') * 1000)
+        .outputs(metaitem('dustDicobaltOctacarbonyl') * 18)
+        .fluidOutputs(fluid('isodecanal') * 500)
+        .EUt(Globals.voltAmps[3])
+        .duration(80)
+        .buildAndRegister()
+
+FBR.recipeBuilder()
+        .fluidInputs(fluid('isodecanal') * 50)
+        .fluidInputs(fluid('hydrogen') * 100)
+        .notConsumable(metaitem('catalystBedPlatinum'))
+        .fluidOutputs(fluid('isodecanol') * 50)
+        .EUt(Globals.voltAmps[3])
+        .duration(4)
+        .buildAndRegister()
+
 //TBP
 CSTR.recipeBuilder()
         .fluidInputs(fluid('n_butanol') * 150)
