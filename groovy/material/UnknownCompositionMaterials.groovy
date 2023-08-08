@@ -1480,7 +1480,7 @@ public class UnknownCompositionMaterials {
                 .build();
 
         MolybdenumFreeTungstateSolution = new Material.Builder(4282, "molybdenum_free_tungstate_solution")
-                .dust()
+                .fluid()
                 .color(0x25889c)
                 .build();
 
