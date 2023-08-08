@@ -1231,6 +1231,7 @@ class SuSyMaterials {
         public static Material Tripropylene;
         public static Material Isodecanal;
         public static Material Isodecanol;
+        public static Material Trioctylamine;
 
         // Third Degree Materials
 

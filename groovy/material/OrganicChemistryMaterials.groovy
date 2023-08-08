@@ -1568,6 +1568,12 @@ public class OrganicChemistryMaterials {
                 .fluid()
                 .components(Carbon, 10, Hydrogen, 22, Oxygen, 1)
                 .color(0xeb9546)
-                .build();           
+                .build();
+
+        Trioctylamine = new Material.Builder(15251, "trioctylamine")
+                .fluid()
+                .components(Carbon, 24, Hydrogen, 51, Nitrogen, 1)
+                .color(0x2274a3)
+                .build();
     }
 }

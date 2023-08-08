@@ -2858,7 +2858,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        AmmoniumIsopolytungstateSolution.setFormula("[(NH4)5(HW6O21)](NH3)5(H2O)5")
+        AmmoniumIsopolytungstateSolution.setFormula("[(NH4)5(HW6O21)](NH3)5(H2O)5", true)
                 
         AmmoniumParatungstate = new Material.Builder(8519, "ammonium_paratungstate")
                 .dust()
@@ -2866,7 +2866,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        AmmoniumParatungstate.setFormula("(NH4)10(H2W12O42)·4H2O")
+        AmmoniumParatungstate.setFormula("(NH4)10(H2W12O42)·4H2O", true)
                 
     }
 }
