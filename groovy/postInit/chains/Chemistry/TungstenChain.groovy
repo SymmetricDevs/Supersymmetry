@@ -127,7 +127,7 @@ AUTOCLAVE.recipeBuilder()
 BR.recipeBuilder()
         .inputs(ore('dustAluminiumSulfate') * 17)
         .fluidInputs(fluid('sodium_tungstate_solution') * 18000)
-        .chancedOutput(metaitem('dustAluminiumSilicate') * 8)
+        .outputs(metaitem('dustAluminiumSilicate') * 8)
         .fluidOutputs(fluid('silicate_free_tungstate_solution') * 18000) // 18x H2O, 8x Na2WO4, 1/2x Na2MoO4, 1/2x Na2SO4
         .EUt(Globals.voltAmps[4])
         .duration(240)
