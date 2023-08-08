@@ -1960,6 +1960,7 @@ gregtech.machine.laser_engraver.opv.name=Legendary Electron Beam Lithographer
 recipemap.laser_engraver.name=Electron Beam Lithography
 recipemap.batch_reactor.name=Batch Reactor
 recipemap.zone_refiner.name=Zone Refiner
+recipemap.gravity_separator=Gravity Separation
 
 # Generic Renaming
 item.chisel.chisel_diamond.name=Steel Chisel
