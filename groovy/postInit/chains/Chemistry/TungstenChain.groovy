@@ -217,6 +217,9 @@ ROASTER.recipeBuilder()
         .outputs(metaitem('dustTungstenTrioxide'))
         .fluidOutputs(fluid('steam') * 6000)
         .fluidOutputs(fluid('ammonia') * 1000)
+        .EUt(Globals.voltAmps[4])
+        .duration(20)
+        .buildAndRegister()
 
 // REDUCTION TO PURE METAL
 
