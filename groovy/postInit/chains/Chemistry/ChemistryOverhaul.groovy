@@ -735,7 +735,22 @@ DISTILLERY.recipeBuilder()
 .buildAndRegister()
 
 // Soda Ash 
-    
+
+// Soda Ash (Sodium Carbonate) Dust * 1
+mods.gregtech.centrifuge.removeByInput(30, null, [fluid('gtfo_sodium_carbonate_solution') * 1000])
+// Sodium Carbonate Solution * 1000
+mods.gregtech.mixer.removeByInput(30, [metaitem('dustSodaAsh')], [fluid('water') * 1000])
+// Dutched Chocolate Liquor * 1
+mods.gregtech.chemical_bath.removeByInput(540, [metaitem('chocolate_liquor_refined_crushed')], [fluid('gtfo_sodium_carbonate_solution') * 1000])
+
+CHEMICAL_BATH.recipeBuilder()
+.inputs(metaitem('chocolate_liquor_refined_crushed'))
+.notConsumable(fluid('soda_ash_solution') * 1000)
+.outputs(metaitem('chocolate_liquor_dutched_crushed'))
+.duration(160)
+.EUt(540)
+.buildAndRegister()
+
 // Leblanc process
 
 ROASTER.recipeBuilder()
