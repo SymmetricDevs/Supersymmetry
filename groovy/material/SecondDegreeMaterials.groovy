@@ -483,5 +483,11 @@ public class SecondDegreeMaterials {
                 .components(AmmoniumChloride, 1, SodiumBicarbonate, 1, Water, 1)
                 .colorAverage()
                 .build()
+
+        VeryDilutedSodiumSulfateSolution = new Material.Builder(13078, "very_diluted_sodium_sulfate_solution")
+                .fluid()
+                .components(SodiumSulfate, 1, Water, 9)
+                .colorAverage()
+                .build()
     }
 }

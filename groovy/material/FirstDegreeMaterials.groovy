@@ -2324,6 +2324,8 @@ public class FirstDegreeMaterials{
                 .iconSet(CERTUS)
                 .build()
 
+        CalciumPhosphite.setFormula("Ca3(PO3)2", true)
+
         SulfurTrioxideReactionMixture = new Material.Builder(8440, 'sulfur_trioxide_reaction_mixture')
                 .fluid()
                 .components(SulfurDioxide, 1, Oxygen, 1)
@@ -2843,5 +2845,28 @@ public class FirstDegreeMaterials{
                 .components(Carbon, 1, Hydrogen, 1, Chlorine, 1, Fluorine, 2)
                 .color(0x8c5a99)
                 .build();
+
+        MolybdenumTrisulfide = new Material.Builder(8517, "molybdenum_trisulfide")
+                .dust()
+                .components(Molybdenum, 1, Sulfur, 3)
+                .colorAverage()
+                .build();
+                
+        AmmoniumIsopolytungstateSolution = new Material.Builder(8518, "ammonium_isopolytungstate_solution")
+                .fluid()
+                .components(Nitrogen, 5, Hydrogen, 21, Tungsten, 6, Oxygen, 21, Ammonia, 5, Water, 5)
+                .colorAverage()
+                .build();
+
+        AmmoniumIsopolytungstateSolution.setFormula("[(NH4)5(HW6O21)](NH3)5(H2O)5")
+                
+        AmmoniumParatungstate = new Material.Builder(8519, "ammonium_paratungstate")
+                .dust()
+                .components(Nitrogen, 10, Hydrogen, 42, Tungsten, 12, Oxygen, 42, Water, 4)
+                .colorAverage()
+                .build();
+
+        AmmoniumParatungstate.setFormula("(NH4)10(H2W12O42)·4H2O")
+                
     }
 }

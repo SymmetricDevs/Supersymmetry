@@ -3802,7 +3802,7 @@ ROASTER.recipeBuilder()
 // Tetramethylammonium hydroxide
 BR.recipeBuilder()
         .inputs(metaitem('dustTetramethylammoniumChloride') * 6)
-        .inputs(metaitem('dustSodiumHydroxide') * 3)
+        .inputs(metaitem('dustPotassiumHydroxide') * 3)
         .fluidInputs(fluid('methanol') * 1000)
         .fluidOutputs(fluid('tetramethylammonium_hydroxide_solution') * 1000)
         .outputs(metaitem('dustRockSalt') * 2)

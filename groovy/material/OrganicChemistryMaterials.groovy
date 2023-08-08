@@ -1551,5 +1551,23 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 12, Hydrogen, 28, Bromine, 1, Nitrogen, 1)
                 .color(0x916c0f)
                 .build();
+
+        Tripropylene = new Material.Builder(15248, "tripropylene")
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 18)
+                .color(0xcf5f1f)
+                .build();
+
+        Isodecanal = new Material.Builder(15249, "isodecanal")
+                .fluid()
+                .components(Carbon, 10, Hydrogen, 20, Oxygen, 1)
+                .color(0xde8431)
+                .build();
+
+        Isodecanol = new Material.Builder(15250, "isodecanol")
+                .fluid()
+                .components(Carbon, 10, Hydrogen, 22, Oxygen, 1)
+                .color(0xeb9546)
+                .build();           
     }
 }

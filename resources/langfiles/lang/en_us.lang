@@ -1544,6 +1544,28 @@ material.tetrapropylammonium_bromide=Tetrapropylammonium Bromide
 material.propionaldehyde=Propionaldehyde
 material.propanal_mixture=Propanal Mixture
 material.zsm_five=ZSM-5
+material.sifted_scheelite=Sifted Scheelite
+material.impure_scheelite_slurry=Impure Scheelite Slurry
+material.scheelite_slurry=Scheelite Slurry
+material.flotated_scheelite=Flotated Scheelite
+material.calcined_scheelite=Calcined Scheelite
+material.sifted_wolframite=Sifted Wolframite
+material.impure_wolframite_slurry=Impure Wolframite Slurry
+material.wolframite_slurry=Wolframite Slurry
+material.flotated_wolframite=Flotated Wolframite
+material.silicate_free_tungstate_solution=Silicate Free Tungstate Solution
+material.molybdenum_free_tungstate_solution=Molybdenum Free Tungstate Solution
+material.isodecanal_mixture=Isodecanal Mixture
+material.tungsten_extraction_mixture=Tungsten Extraction Mixture
+material.tungsten_extract=Tungsten Extract
+material.scrubbed_tungsten_extract=Scrubbed Tungsten Extract
+material.molybdenum_trisulfide=Molybdenum Trisulfide
+material.ammonium_isopolytungstate_solution=Ammonium Isopolytungstate Solution
+material.ammonium_paratungstate=Ammonium Paratungstate
+material.very_diluted_sodium_sulfate_solution=Diluted Sodium Sulfate Solution
+material.tripropylene=Tripropylene
+material.isodecanal=Isodecanal
+material.isodecanol=Isodecanol
 
 # Isotopes
 

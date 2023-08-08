@@ -402,6 +402,21 @@ class SuSyMaterials {
         public static Material ChlorofluoromethaneMix;
         public static Material PropanalMixture;
         public static Material ZSMFive;
+        public static Material SiftedScheelite;
+        public static Material ImpureScheeliteSlurry;
+        public static Material ScheeliteSlurry;
+        public static Material FlotatedScheelite;
+        public static Material CalcinedScheelite;
+        public static Material SiftedWolframite;
+        public static Material ImpureWolframiteSlurry;
+        public static Material WolframiteSlurry;
+        public static Material FlotatedWolframite;
+        public static Material SilicateFreeTungstateSolution;
+        public static Material MolybdenumFreeTungstateSolution;
+        public static Material IsodecanalMixture;
+        public static Material TungstenExtractionMixture;
+        public static Material TungstenExtract;
+        public static Material ScrubbedTungstenExtract;
 
         // Petrochem Materials
 
@@ -873,6 +888,9 @@ class SuSyMaterials {
         public static Material Chlorodifluoromethane;
         public static Material PolychlorinatedBiphenyl;
         public static Material DilutedSilverNitrateSolution;
+        public static Material MolybdenumTrisulfide;
+        public static Material AmmoniumIsopolytungstateSolution;
+        public static Material AmmoniumParatungstate;
 
         // Second Degree Materials
 
@@ -953,6 +971,7 @@ class SuSyMaterials {
         public static Material DilutedAmmoniumSulfateSolution;
         public static Material DilutedAmmoniumChlorideSolution;
         public static Material AmmoniacalSodiumBicarbonateSolution;
+        public static Material VeryDilutedSodiumSulfateSolution;
 
         // Organic Chemistry Materials
 
@@ -1209,6 +1228,9 @@ class SuSyMaterials {
         public static Material NBromopropane;
         public static Material TetrapropylammoniumBromide;
         public static Material Propionaldehyde;
+        public static Material Tripropylene;
+        public static Material Isodecanal;
+        public static Material Isodecanol;
 
         // Third Degree Materials
 

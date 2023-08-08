@@ -98,11 +98,12 @@ REACTION_FURNACE.recipeBuilder()
 .buildAndRegister()
 
 CSTR.recipeBuilder()
+.circuitMeta(1)
 .fluidInputs(fluid('water') * 50)
 .fluidInputs(fluid('sulfuric_acid') * 50)
 .fluidOutputs(fluid('diluted_sulfuric_acid') * 100)
 .EUt(Globals.voltAmps[2])
-.duration(100)
+.duration(5)
 .buildAndRegister()
 
 BCR.recipeBuilder()

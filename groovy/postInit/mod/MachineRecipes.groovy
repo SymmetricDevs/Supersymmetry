@@ -924,6 +924,20 @@ recipemap('assembler').recipeBuilder()
 		.duration(600)
 		.buildAndRegister()
 
+//Catalytic Reformer
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('hull.ev'))
+		.inputs(metaitem('frameTitanium') * 4)
+		.inputs(metaitem('electric.pump.ev') * 2)
+		.inputs(metaitem('pipeHugeTitanium'))
+		.inputs(metaitem('rotorTitanium'))
+		.inputs(ore('circuitEv'))
+		.notConsumable(circuit(3))
+		.EUt(480)
+		.duration(600)
+		.buildAndRegister()
+
 //Power Units
 recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('gearSmallSteel') * 2)

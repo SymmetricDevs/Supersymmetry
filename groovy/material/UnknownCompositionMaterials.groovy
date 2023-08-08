@@ -1423,5 +1423,85 @@ public class UnknownCompositionMaterials {
                 .color(0x6e4c14)
                 .iconSet(SHINY)
                 .build();
+
+        SiftedScheelite = new Material.Builder(4272, "sifted_scheelite")
+                .dust()
+                .color(0xc88c14)
+                .iconSet(SAND)
+                .build();
+
+        ImpureScheeliteSlurry = new Material.Builder(4273, "impure_scheelite_slurry")
+                .fluid()
+                .color(0xb37d12)
+                .build();
+
+        ScheeliteSlurry = new Material.Builder(4274, "scheelite_slurry")
+                .fluid()
+                .color(0xc88c14)
+                .build();
+
+        FlotatedScheelite = new Material.Builder(4275, "flotated_scheelite")
+                .dust()
+                .color(0xc88c14)
+                .iconSet(SHINY)
+                .build();
+
+        CalcinedScheelite = new Material.Builder(4276, "calcined_scheelite")
+                .dust()
+                .color(0xc88c14)
+                .iconSet(FLINT)
+                .build();
+
+        SiftedWolframite = new Material.Builder(4277, "sifted_wolframite")
+                .dust()
+                .color(0x1e1c36)
+                .iconSet(SAND)
+                .build();
+
+        ImpureWolframiteSlurry = new Material.Builder(4278, "impure_wolframite_slurry")
+                .fluid()
+                .color(0x373559)
+                .build();
+
+        WolframiteSlurry = new Material.Builder(4279, "wolframite_slurry")
+                .fluid()
+                .color(0x1e1c36)
+                .build();
+
+        FlotatedWolframite = new Material.Builder(4280, "foltated_wolframite")
+                .dust()
+                .color(0x1e1c36)
+                .iconSet(SHINY)
+                .build();
+
+        SilicateFreeTungstateSolution = new Material.Builder(4281, "silicate_free_tungstate_solution")
+                .fluid()
+                .color(0x2c8576)
+                .build();
+
+        MolybdenumFreeTungstateSolution = new Material.Builder(4282, "molybdenum_free_tungstate_solution")
+                .dust()
+                .color(0x25889c)
+                .build();
+
+        IsodecanalMixture = new Material.Builder(4283, "isodecanal_mixture")
+                .dust()
+                .color(0xadad45)
+                .build();
+
+        TungstenExtractionMixture = new Material.Builder(4284, "tungsten_extraction_mixture")
+                .dust()
+                .color(0xbfb341)
+                .build();
+
+        TungstenExtract = new Material.Builder(4285, "tungsten_extract")
+                .dust()
+                .color(0x9e7c2e)
+                .build();
+
+        ScrubbedTungstenExtract = new Material.Builder(4286, "scrubbed_tungsten_extract")
+                .dust()
+                .color(0x85a825)
+                .build();
     }
 }
