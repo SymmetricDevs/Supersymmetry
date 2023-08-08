@@ -1016,9 +1016,11 @@ public class FirstDegreeMaterials{
 
         HydrobromicAcid = new Material.Builder(8241, "hydrobromic_acid")
                 .fluid()
-                .components(Hydrogen, 1, Bromine, 1)
+                .components(Hydrogen, 1, Bromine, 1, Water, 1)
                 .colorAverage()
                 .build()
+        
+        HydrobromicAcid.setFormula("(HBr)(H2O)", true)
 
         AluminiumChloride = new Material.Builder(8242, "aluminium_chloride")
                 .fluid(FluidTypes.GAS)
