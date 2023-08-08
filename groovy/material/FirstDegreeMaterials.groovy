@@ -2875,5 +2875,13 @@ public class FirstDegreeMaterials{
                 .build();
 
         ManganeseIIHydroxide.setFormula("Mn(OH)2", true)
+
+        SodiumTungstateSolution = new Material.Builder(8521, "sodium_tungstate_solution")
+                .fluid()
+                .components(Sodium, 2, Tungsten, 1, Oxygen, 4, Water, 1)
+                .colorAverage()
+                .build();
+
+        SodiumTungstateSolution.setFormula("(?)(Na2WO4)(H2O)", true)
     }
 }
