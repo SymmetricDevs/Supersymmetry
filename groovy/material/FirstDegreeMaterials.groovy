@@ -2854,11 +2854,11 @@ public class FirstDegreeMaterials{
                 
         AmmoniumIsopolytungstateSolution = new Material.Builder(8518, "ammonium_isopolytungstate_solution")
                 .fluid()
-                .components(Nitrogen, 5, Hydrogen, 21, Tungsten, 6, Oxygen, 21, Ammonia, 5, Water, 5)
+                .components(Nitrogen, 5, Hydrogen, 21, Tungsten, 6, Oxygen, 21, Water, 5)
                 .colorAverage()
                 .build();
 
-        AmmoniumIsopolytungstateSolution.setFormula("[(NH4)5(HW6O21)](NH3)5(H2O)5", true)
+        AmmoniumIsopolytungstateSolution.setFormula("[(NH4)5(HW6O21)](H2O)5", true)
                 
         AmmoniumParatungstate = new Material.Builder(8519, "ammonium_paratungstate")
                 .dust()
