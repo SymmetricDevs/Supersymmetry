@@ -669,7 +669,6 @@ material.hot_hp_steam=Hot High Pressure Steam
 
 material.sodium_thiosulfate_solution=Sodium Thiosulfate Solution
 material.sodium_sulfite_solution=Sodium Sulfite Solution
-material.sodium_carbonate=Sodium Carbonate
 material.sodium_cyanide_solution=Sodium Cyanide Solution
 material.sulfidic_silver_cyanide_solution=Sulfidic Silver Cyanide Solution
 material.silver_cyanide_solution=Silver Cyanide Solution
@@ -687,7 +686,6 @@ material.proustite_alkaline_leach_solution=Proustite Alkaline Leach Solution
 material.crude_arsenic_trichloride=Crude Arsenic Trichloride
 material.enargite_sulfide_leach_solution=Enargite Sulfide Leach Solution
 material.arsenic_trichloride=Arsenic Trichloride
-material.sodium_carbonate_solution=Sodium Carbonate Solution
 material.arsenous_acid=Arsenous Acid
 material.acidic_copper_solution=Acidic Copper Solution
 material.arsine=Arsine
