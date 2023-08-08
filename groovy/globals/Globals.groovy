@@ -62,4 +62,9 @@ class Globals {
         new Combustible('dustCharcoal', 2, 4, 'dustTinyDarkAsh'),
         new Combustible('dustCarbon', 1, 1, 'dustTinyAsh')
     ]
+
+    public static highPurityCombustibles = [
+        new Combustible('dustCoke', 1, 2, 'dustTinyAsh'),
+        new Combustible('dustCarbon', 1, 1, 'dustTinyAsh')
+    ]
 }
