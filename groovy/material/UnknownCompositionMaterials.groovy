@@ -1468,7 +1468,7 @@ public class UnknownCompositionMaterials {
                 .color(0x1e1c36)
                 .build();
 
-        FlotatedWolframite = new Material.Builder(4280, "foltated_wolframite")
+        FlotatedWolframite = new Material.Builder(4280, "flotated_wolframite")
                 .dust()
                 .color(0x1e1c36)
                 .iconSet(SHINY)
