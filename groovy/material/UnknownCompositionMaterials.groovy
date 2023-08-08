@@ -1485,7 +1485,7 @@ public class UnknownCompositionMaterials {
                 .build();
 
         IsodecanalMixture = new Material.Builder(4283, "isodecanal_mixture")
-                .dust()
+                .fluid()
                 .color(0xadad45)
                 .build();
 
