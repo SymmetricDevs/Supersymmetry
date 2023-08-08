@@ -2868,5 +2868,12 @@ public class FirstDegreeMaterials{
 
         AmmoniumParatungstate.setFormula("(NH4)10(H2W12O42)·4H2O", true)
                 
+        ManganeseIIHydroxide = new Material.Builder(8520, "manganese_ii_hydroxide")
+                .dust()
+                .components(Manganese, 1, Oxygen, 2, Hydrogen, 2)
+                .colorAverage()
+                .build();
+
+        ManganeseIIHydroxide.setFormula("Mn(OH)2", true)
     }
 }

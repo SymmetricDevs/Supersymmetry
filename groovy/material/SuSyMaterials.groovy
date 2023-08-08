@@ -891,6 +891,7 @@ class SuSyMaterials {
         public static Material MolybdenumTrisulfide;
         public static Material AmmoniumIsopolytungstateSolution;
         public static Material AmmoniumParatungstate;
+        public static Material ManganeseIIHydroxide;
 
         // Second Degree Materials
 
