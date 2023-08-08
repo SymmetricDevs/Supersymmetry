@@ -892,6 +892,7 @@ class SuSyMaterials {
         public static Material AmmoniumIsopolytungstateSolution;
         public static Material AmmoniumParatungstate;
         public static Material ManganeseIIHydroxide;
+        public static Material SodiumTungstateSolution;
 
         // Second Degree Materials
 
