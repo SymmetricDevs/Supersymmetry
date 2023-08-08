@@ -1490,17 +1490,17 @@ public class UnknownCompositionMaterials {
                 .build();
 
         TungstenExtractionMixture = new Material.Builder(4284, "tungsten_extraction_mixture")
-                .dust()
+                .fluid()
                 .color(0xbfb341)
                 .build();
 
         TungstenExtract = new Material.Builder(4285, "tungsten_extract")
-                .dust()
+                .fluid()
                 .color(0x9e7c2e)
                 .build();
 
         ScrubbedTungstenExtract = new Material.Builder(4286, "scrubbed_tungsten_extract")
-                .dust()
+                .fluid()
                 .color(0x85a825)
                 .build();
     }
