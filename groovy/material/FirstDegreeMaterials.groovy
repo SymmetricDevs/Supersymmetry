@@ -1406,7 +1406,7 @@ public class FirstDegreeMaterials{
                 .color(0x44453b)
                 .build();
 
-        LoadedCarbon.setFormula("(Na[Au(CN)2])C")
+        LoadedCarbon.setFormula("(Na[Au(CN)2])C", true)
 
         SpentActivatedCarbon = new Material.Builder(8302, "spent_activated_carbon")
                 .dust()
