@@ -1130,3 +1130,141 @@ mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 7)]
 mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 6)], [fluid('oxygen') * 213])
 // Tungstensteel Ingot * 3
 mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 8)], [fluid('oxygen') * 426])
+
+// ---------- Multiblock components rebalance ----------
+
+// Solid Steel Machine Casing * 2
+mods.gregtech.assembler.removeByInput(16, [metaitem('plateSteel') * 6, metaitem('frameSteel'), metaitem('circuit.integrated').withNbt(["Configuration": 6])], null)
+
+crafting.replaceShaped("gregtech:casing_steel_solid", item('gregtech:metal_casing', 4) * 4, [
+        [ore('plateSteel'), ore('craftingToolHardHammer'), ore('plateSteel')],
+        [ore('plateSteel'), ore('frameGtSteel'), ore('plateSteel')],
+        [ore('plateSteel'), ore('craftingToolWrench'), ore('plateSteel')]
+])
+
+mods.gregtech.assembler.recipeBuilder()
+        .circuitMeta(6)
+        .inputs(ore('plateSteel') * 6)
+        .inputs(ore('frameGtSteel'))
+        .outputs(item('gregtech:metal_casing', 4) * 4)
+        .EUt(16)
+        .duration(50)
+        .buildAndRegister()
+
+// Steel Frame Box * 1
+mods.gregtech.assembler.removeByInput(7, [metaitem('stickSteel') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 4])], null)
+
+crafting.replaceShaped("gregtech:frame_steel", metaitem('frameSteel') * 4, [
+        [ore('stickSteel'), ore('stickSteel'), ore('stickSteel')],
+        [ore('stickSteel'), ore('craftingToolWrench'), ore('stickSteel')],
+        [ore('stickSteel'), ore('stickSteel'), ore('stickSteel')]
+])
+
+mods.gregtech.assembler.recipeBuilder()
+        .circuitMeta(4)
+        .inputs(ore('stickSteel') * 4)
+        .outputs(metaitem('frameSteel') * 2)
+        .EUt(7)
+        .duration(60)
+        .buildAndRegister()
+
+//Steel Pipe Casing
+crafting.replaceShaped("gregtech:casing_steel_pipe", item('gregtech:boiler_casing', 1) * 4, [
+        [ore('plateSteel'), ore('pipeNormalFluidSteel'), ore('plateSteel')],
+        [ore('pipeNormalFluidSteel'), ore('frameGtSteel'), ore('pipeNormalFluidSteel')],
+        [ore('plateSteel'), ore('pipeNormalFluidSteel'), ore('plateSteel')]
+])
+
+//Steel Firebox Casing
+crafting.replaceShaped("gregtech:casing_steel_firebox", item('gregtech:boiler_firebox_casing', 1) * 4, [
+        [ore('plateSteel'), ore('stickSteel'), ore('plateSteel')],
+        [ore('stickSteel'), ore('frameGtSteel'), ore('stickSteel')],
+        [ore('plateSteel'), ore('stickSteel'), ore('plateSteel')]
+])
+
+//Steel components recycling
+
+// Steel Dust * 4
+mods.gregtech.macerator.removeByInput(8, [item('gregtech:metal_casing', 4)], null)
+// Steel Ingot * 4
+mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:metal_casing', 4)], [fluid('oxygen') * 224])
+
+// Steel Dust * 9
+mods.gregtech.macerator.removeByInput(8, [item('gregtech:boiler_casing', 1)], null)
+// Block of Steel * 1
+mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:boiler_casing', 1)], [fluid('oxygen') * 504])
+
+// Steel Dust * 4
+mods.gregtech.macerator.removeByInput(8, [item('gregtech:boiler_firebox_casing', 1)], null)
+// Steel Ingot * 4
+mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:boiler_firebox_casing', 1)], [fluid('oxygen') * 224])
+
+// Steel Dust * 2
+mods.gregtech.macerator.removeByInput(8, [metaitem('frameSteel')], null)
+// Steel Ingot * 2
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('frameSteel')], [fluid('oxygen') * 112])
+// Steel * 288
+mods.gregtech.extractor.removeByInput(120, [metaitem('frameSteel')], null)
+
+//Solid Steel Casing
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('gregtech:metal_casing', 4))
+        .outputs(metaitem('dustSteel') * 2)
+        .duration(220)
+        .EUt(8)
+        .buildAndRegister()
+
+mods.gregtech.arc_furnace.recipeBuilder()
+        .inputs(item('gregtech:metal_casing', 4))
+        .fluidInputs(fluid('oxygen') * 224)
+        .outputs(metaitem('ingotSteel') * 2)
+        .duration(220)
+        .EUt(30)
+        .buildAndRegister()
+
+//Steel Pipe Casing
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('gregtech:boiler_casing', 1))
+        .outputs(metaitem('dustSteel') * 4)
+        .duration(220)
+        .EUt(8)
+        .buildAndRegister()
+
+mods.gregtech.arc_furnace.recipeBuilder()
+        .inputs(item('gregtech:boiler_casing', 1))
+        .fluidInputs(fluid('oxygen') * 504)
+        .outputs(metaitem('ingotSteel') * 4)
+        .duration(220)
+        .EUt(30)
+        .buildAndRegister()
+
+//Steel Fireboxes
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('gregtech:boiler_firebox_casing', 1))
+        .outputs(metaitem('dustSteel') * 2)
+        .duration(220)
+        .EUt(8)
+        .buildAndRegister()
+
+mods.gregtech.arc_furnace.recipeBuilder()
+        .inputs(item('gregtech:boiler_firebox_casing', 1))
+        .fluidInputs(fluid('oxygen') * 224)
+        .outputs(metaitem('ingotSteel') * 2)
+        .duration(220)
+        .EUt(30)
+        .buildAndRegister()
+
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(metaitem('frameSteel'))
+        .outputs(metaitem('dustSteel') * 1)
+        .duration(220)
+        .EUt(8)
+        .buildAndRegister()
+
+mods.gregtech.arc_furnace.recipeBuilder()
+        .inputs(metaitem('frameSteel'))
+        .fluidInputs(fluid('oxygen') * 112)
+        .outputs(metaitem('ingotSteel') * 1)
+        .duration(220)
+        .EUt(30)
+        .buildAndRegister()
