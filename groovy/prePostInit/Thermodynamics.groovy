@@ -180,6 +180,14 @@ CryoNaturalGas.setDurationHX(5);
 CryoNaturalGas.setDurationRadiator(400);
 CryoNaturalGas.setTemperature(80);
 
+def CryoMethane = new ICryoGas('methane', 'hot_hp_methane', 'hp_methane', 'cold_hp_methane', 'liquid_methane');
+CryoMethane.setEUt(60);
+CryoMethane.setDuration(100);
+CryoMethane.setPowerHX(100);
+CryoMethane.setDurationHX(5);
+CryoMethane.setDurationRadiator(400);
+CryoMethane.setTemperature(80);
+
 def CryoGases = [
         CryoHydrogen,
         CryoOxygen,
@@ -192,7 +200,8 @@ def CryoGases = [
         CryoAir,
         CryoNetherAir,
         CryoRefineryGas,
-        CryoNaturalGas
+        CryoNaturalGas,
+        CryoMethane
 ];
 
 def AmmoniaRefrigerant = new IRefrigerant("ammonia", 'hot_compressed_ammonia', 'compressed_ammonia', 'cold_ammonia');
@@ -773,6 +782,20 @@ for (WorkingFluid in WorkingFluids) {
             .EUt(8)
             .buildAndRegister();
 }
+
+recipemap('fluid_compressor').recipeBuilder()
+        .fluidInputs(liquid('benzene') * 1280)
+        .fluidOutputs(liquid('hot_hp_benzene') * 1280)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+        
+recipemap('fluid_compressor').recipeBuilder()
+        .fluidInputs(liquid('propene') * 1280)
+        .fluidOutputs(liquid('hot_hp_propene') * 1280)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
 
 recipemap('fluid_compressor').recipeBuilder()
         .fluidInputs(liquid('steam') * 1000)

@@ -910,26 +910,6 @@ CSTR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-// Cumene
-
-FBR.recipeBuilder()
-.fluidInputs(fluid('hot_hp_propene') * 50)
-.fluidInputs(fluid('hot_hp_benzene') * 50)
-.notConsumable(fluid('phosphoric_acid'))
-.fluidOutputs(fluid('cumene') * 50)
-.duration(5)
-.EUt(30)
-.buildAndRegister()
-
-CSTR.recipeBuilder()
-.fluidInputs(fluid('cumene') * 50)
-.fluidInputs(fluid('oxygen') * 100)
-.fluidOutputs(fluid('phenol') * 50)
-.fluidOutputs(fluid('acetone') * 50)
-.duration(8)
-.EUt(30)
-.buildAndRegister()
-
 // Ethylene
 
 CSTR.recipeBuilder()
