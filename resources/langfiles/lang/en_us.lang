@@ -1573,6 +1573,11 @@ material.purified_molybdenum_trioxide=Purified Molybdenum Trioxide
 material.molybdenic_acid_solution=Molybdenic Acid Solution
 material.neutralized_ammonium_molybdate_solution=Neutralized Ammonium Molybdate Solution
 material.sublimated_molybdenum_trioxide=Sublimated Molybdenum Trioxide
+material.molybdenum_trioxide=Molybdenum Trioxide
+material.ammonium_molybdate_solution=Ammonium Molybdate Solution
+material.impure_molybdenite_slurry=Impure Molybdenite Slurry
+material.molybdenite_slurry=Molybdenite Slurry
+material.flotated_molybdenite=Flotated Molybdenite
 
 # Isotopes
 

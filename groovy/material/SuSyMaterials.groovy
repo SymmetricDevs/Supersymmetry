@@ -417,6 +417,9 @@ class SuSyMaterials {
         public static Material TungstenExtractionMixture;
         public static Material TungstenExtract;
         public static Material ScrubbedTungstenExtract;
+        public static Material ImpureMolybdeniteSlurry;
+        public static Material MolybdeniteSlurry;
+        public static Material FlotatedMolybdenite;
 
         // Petrochem Materials
 
@@ -896,6 +899,8 @@ class SuSyMaterials {
         public static Material ImpureMolybdenumTrioxide;
         public static Material AmmoniumDimolybdate;
         public static Material PurifiedMolybdenumTrioxide;
+        public static Material MolybdenumTrioxide;
+        public static Material AmmoniumMolybdateSolution;
 
         // Second Degree Materials
 

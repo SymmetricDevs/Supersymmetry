@@ -1503,5 +1503,21 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x85a825)
                 .build();
+
+        ImpureMolybdeniteSlurry = new Material.Builder(4287, "impure_molybdenite_slurry")
+                .fluid()
+                .color(0x131313)
+                .build();
+
+        MolybdeniteSlurry = new Material.Builder(4288, "molybdenite_slurry")
+                .fluid()
+                .color(0x191919)
+                .build();
+
+        FlotatedMolybdenite = new Material.Builder(4289, "flotated_molybdenite")
+                .dust()
+                .color(0x191919)
+                .iconSet(SHINY)
+                .build();
     }
 }

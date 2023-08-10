@@ -2906,6 +2906,21 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Molybdenum, 1, Oxygen, 3)
                 .color(0x0f5c23)
+                .iconSet(SHINY)
                 .build();
+
+        MolybdenumTrioxide = new Material.Builder(8525, "molybdenum_trioxide")
+                .dust()
+                .components(Molybdenum, 1, Oxygen, 3)
+                .color(0x0f5c23)
+                .build();
+
+        AmmoniumMolybdateSolution = new Material.Builder(8526, "ammonium_molybdate_solution")
+                .fluid()
+                .components(Nitrogen, 2, Hydrogen, 8, Molybdenum, 1, Oxygen, 4, Water, 1)
+                .colorAverage()
+                .build();
+
+        AmmoniumMolybdateSolution.setFormula("[(NH4)2MoO4](H2O)", true)
     }
 }
