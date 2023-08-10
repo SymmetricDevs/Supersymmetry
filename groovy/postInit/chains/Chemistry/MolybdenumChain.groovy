@@ -5,6 +5,8 @@ REACTION_FURNACE = recipemap('reaction_furnace')
 BR = recipemap('batch_reactor')
 CSTR = recipemap('continuous_stirred_tank_reactor')
 CRYSTALLIZER = recipemap('crystallizer')
+EBF = recipemap('electric_blast_furnace')
+SIFTER = recipemap('sifter')
 
 // TUNGSTEN BYPRODUCT PROCESSING
 
@@ -53,7 +55,27 @@ ROASTER.recipeBuilder()
         .duration(100)
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
-        
+
+// BYPASS (95% yield)
+
+EBF.recipeBuilder()
+        .inputs(ore('dustImpureMolybdenumTrioxide') * 4)
+        .fluidInputs(fluid('air') * 1000)
+        .fluidOutputs(fluid('sublimated_molybdenum_trioxide') * 1000)
+        .blastFurnaceTemp(1400)
+        .duration(100)
+        .EUt(Globals.voltAmps[5])
+        .buildAndRegister()
+
+SIFTER.recipeBuilder()
+        .notConsumable(metaitem('item_filter'))
+        .fluidInputs(fluid('sublimated_molybdenum_trioxide') * 1000)
+        .chancedOutput(metaitem('dustPurifiedMolybdenumTrioxide') * 4, 9500, 0)
+        .fluidOutputs(fluid('air') * 1000)
+        .duration(100)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
 // REDUCTION TO PURE METAL
 
 REACTION_FURNACE.recipeBuilder()

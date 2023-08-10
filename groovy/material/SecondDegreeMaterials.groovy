@@ -505,5 +505,11 @@ public class SecondDegreeMaterials {
                 .build()
 
         NeutralizedAmmoniumMolybdateSolution.setFormula("[(NH4)2MoO4](NH4Cl)(H2O)4")
+
+        SublimatedMolybdenumTrioxide = new Material.Builder(13081, "sublimated_molybdenum_trioxide")
+                .fluid()
+                .components(PurifiedMolybdenumTrioxide, 1, Air, 1)
+                .colorAverage()
+                .build()
     }
 }

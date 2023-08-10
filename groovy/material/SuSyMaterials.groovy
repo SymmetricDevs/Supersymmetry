@@ -979,6 +979,7 @@ class SuSyMaterials {
         public static Material VeryDilutedSodiumSulfateSolution;
         public static Material MolybdenicAcidSolution;
         public static Material NeutralizedAmmoniumMolybdateSolution;
+        public static Material SublimatedMolybdenumTrioxide;
 
         // Organic Chemistry Materials
 
