@@ -2885,5 +2885,27 @@ public class FirstDegreeMaterials{
                 .build();
 
         SodiumTungstateSolution.setFormula("(?)(Na2WO4)(H2O)", true)
+
+        ImpureMolybdenumTrioxide = new Material.Builder(8522, "impure_molybdenum_trioxide")
+                .dust()
+                .components(Molybdenum, 1, Oxygen, 3)
+                .color(0x154f25)
+                .build();
+
+        ImpureMolybdenumTrioxide.setFormula("(?)(MoO3)", true)
+
+        AmmoniumDimolybdate = new Material.Builder(8523, "ammonium_dimolybdate")
+                .dust()
+                .components(Nitrogen, 2, Hydrogen, 8, Molybdenum, 2, Oxygen, 7)
+                .colorAverage()
+                .build();
+
+        AmmoniumDimolybdate.setFormula("(NH4)2Mo2O7", true)
+
+        PurifiedMolybdenumTrioxide = new Material.Builder(8524, "purified_molybdenum_trioxide")
+                .dust()
+                .components(Molybdenum, 1, Oxygen, 3)
+                .color(0x0f5c23)
+                .build();
     }
 }

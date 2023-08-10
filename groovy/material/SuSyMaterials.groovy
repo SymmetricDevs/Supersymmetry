@@ -893,6 +893,9 @@ class SuSyMaterials {
         public static Material AmmoniumParatungstate;
         public static Material ManganeseIIHydroxide;
         public static Material SodiumTungstateSolution;
+        public static Material ImpureMolybdenumTrioxide;
+        public static Material AmmoniumDimolybdate;
+        public static Material PurifiedMolybdenumTrioxide;
 
         // Second Degree Materials
 
@@ -974,6 +977,8 @@ class SuSyMaterials {
         public static Material DilutedAmmoniumChlorideSolution;
         public static Material AmmoniacalSodiumBicarbonateSolution;
         public static Material VeryDilutedSodiumSulfateSolution;
+        public static Material MolybdenicAcidSolution;
+        public static Material NeutralizedAmmoniumMolybdateSolution;
 
         // Organic Chemistry Materials
 

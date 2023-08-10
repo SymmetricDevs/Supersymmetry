@@ -129,8 +129,8 @@ BR.recipeBuilder()
         .fluidInputs(fluid('sodium_tungstate_solution') * 18000)
         .outputs(metaitem('dustAluminiumSilicate') * 8)
         .fluidOutputs(fluid('silicate_free_tungstate_solution') * 18000) // 18x H2O, 8x Na2WO4, 1/2x Na2MoO4, 1/2x Na2SO4
-        .EUt(Globals.voltAmps[1])
-        .duration(20)
+        .EUt(Globals.voltAmps[3])
+        .duration(90)
         .buildAndRegister()
 
 /*
@@ -147,7 +147,7 @@ LCR.recipeBuilder()
         .fluidOutputs(fluid('molybdenum_free_tungstate_solution') * 11250) 
         .fluidOutputs(fluid('hydrogen_sulfide') * 500)
         .EUt(Globals.voltAmps[3])
-        .duration(20)
+        .duration(180)
         .buildAndRegister()
 
 MIXER.recipeBuilder()

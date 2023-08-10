@@ -1567,6 +1567,11 @@ material.isodecanol=Isodecanol
 material.trioctylamine=Trioctylamine
 material.manganese_ii_hydroxide=Manganese II Hydroxide
 material.sodium_tungstate_solution=Sodium Tungstate Solution
+material.impure_molybdenum_trioxide=Impure Molybdenum Trioxide
+material.ammonium_dimolybdate=Ammonium Dimolybdate
+material.purified_molybdenum_trioxide=Purified Molybdenum Trioxide
+material.molybdenic_acid_solution=Molybdenic Acid Solution
+material.neutralized_ammonium_molybdate_solution=Neutralized Ammonium Molybdate Solution
 
 # Isotopes
 
