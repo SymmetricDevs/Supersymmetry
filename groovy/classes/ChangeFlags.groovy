@@ -44,6 +44,18 @@ class ChangeFlags {
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
 
+        /*
+        ManganesePhosphide.addFlags("no_smashing", "no_smelting")
+        MagnesiumDiboride.addFlags("no_smashing", "no_smelting")
+        MercuryBariumCalciumCuprate.addFlags("no_smashing", "no_smelting")
+        UraniumTriplatinum.addFlags("no_smashing", "no_smelting")
+        SamariumIronArsenicOxide.addFlags("no_smashing", "no_smelting")
+        IndiumTinBariumTitaniumCuprate.addFlags("no_smashing", "no_smelting")
+        UraniumRhodiumDinaquadide.addFlags("no_smashing", "no_smelting")
+        EnrichedNaquadahTriniumEuropiumDuranide.addFlags("no_smashing", "no_smelting")
+        RutheniumTriniumAmericiumNeutronate.addFlags("no_smashing", "no_smelting")
+        */
+
         DilutedHydrochloricAcid.setFormula("(H2O)2(HCl)", true);
 
         ManganesePhosphide.addFlags("generate_fine_wire");
