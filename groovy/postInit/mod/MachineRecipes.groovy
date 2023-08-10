@@ -259,6 +259,26 @@ recipemap('sintering_oven').recipeBuilder()
 		.duration(150)
 		.buildAndRegister()
 
+recipemap('sintering_oven').recipeBuilder()
+		.inputs(metaitem('raw_electrode'))
+		.fluidInputs(fluid('syngas') * 100)
+		.fluidInputs(fluid('oxygen') * 80)
+		.outputs(metaitem('graphite_electrode'))
+		.fluidOutputs(fluid('carbon_dioxide') * 50)
+		.EUt(30)
+		.duration(150)
+		.buildAndRegister()
+
+recipemap('sintering_oven').recipeBuilder()
+		.inputs(metaitem('raw_electrode'))
+		.fluidInputs(fluid('methane') * 100)
+		.fluidInputs(fluid('oxygen') * 80)
+		.outputs(metaitem('graphite_electrode'))
+		.fluidOutputs(fluid('carbon_dioxide') * 50)
+		.EUt(30)
+		.duration(150)
+		.buildAndRegister()
+
 
 for (i = 1; i <= 8; i++) {
 	crafting.remove('gregtech:gregtech.machine.arc_furnace.' + Globals.voltageTiers[i])
@@ -523,6 +543,15 @@ crafting.addShaped("silicon_carbide_casing", item('susy:susy_multiblock_casing')
 		[metaitem('plateSiliconCarbide'), item('gregtech:turbine_casing', 7), metaitem('plateSiliconCarbide')],
 		[metaitem('plateSiliconCarbide'), ore('craftingToolWrench'), metaitem('plateSiliconCarbide')]
 ])
+
+recipemap('assembler').recipeBuilder()
+		.circuitMeta(6)
+		.inputs(ore('plateSiliconCarbide') * 6)
+		.inputs(item('gregtech:turbine_casing', 7))
+		.outputs(item('susy:susy_multiblock_casing') * 2)
+		.EUt(16)
+		.duration(50)
+		.buildAndRegister()
 
 //New Dynamo Hatches
 

@@ -8,6 +8,7 @@ def name_removals = [
         "regeneration:hand_jar",
         "regeneration:lindos_vial",
         "tardis:tardis_coral",
+	"tardis:bessie",
         "sync:sync_core",
         "sync:shell_constructor",
         "sync:shell_storage",
@@ -23,7 +24,7 @@ for (name in name_removals) {
     crafting.remove(name)
 }
 
-crafting.replaceShaped('cd4017be_lib:dimstack/dim_pipe', item('dimstack:dim_pipe'), [
+crafting.replaceShaped('cd4017be_lib:dimstack/dim_pipe', item('dimstack:dim_pipe') * 2, [
         [ore('frameGtSteel'), ore('gemQuartzite'), ore('frameGtSteel')],
         [ore('frameGtSteel'), metaitem('crate.wood'), ore('frameGtSteel')],
         [ore('frameGtSteel'), ore('gemQuartzite'), ore('frameGtSteel')]

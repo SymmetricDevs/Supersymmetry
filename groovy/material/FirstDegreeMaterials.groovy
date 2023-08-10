@@ -820,11 +820,13 @@ public class FirstDegreeMaterials{
                 .color(0xa9aec4)
                 .build()
 
-        CopperIIOxide = new Material.Builder(8209, "copper_ii_oxide")
-                .dust()
-                .components(Copper, 1, Oxygen, 1)
+        DilutedSilverNitrateSolution = new Material.Builder(8209, "diluted_silver_nitrate_solution")
+                .fluid()
+                .components(Silver, 1, Nitrogen, 1, Oxygen, 3, Water, 2)
                 .colorAverage()
-                .build()
+                .build();
+
+        DilutedSilverNitrateSolution.setFormula("(AgNO3)(H2O)2", true)
 
         DicobaltOctacarbonyl = new Material.Builder(8210, "dicobalt_octacarbonyl")
                 .dust()
@@ -1387,7 +1389,7 @@ public class FirstDegreeMaterials{
         GoldPlatedSteel = new Material.Builder(8299, "gold_plated_steel")
                 .ingot()
                 .components(Gold, 1, Steel, 1)
-                .colorAverage()
+                .color(0xb8a639)
                 .flags(GENERATE_FINE_WIRE)
                 .build();
 
@@ -1955,11 +1957,11 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        BariumCarbonate = new Material.Builder(8387, 'barium_carbonate')
-                .dust()
-                .components(Barium, 1, Carbon, 1, Oxygen, 3)
+        PolychlorinatedBiphenyl = new Material.Builder(8387, "polychlorinated_biphenyl")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
                 .colorAverage()
-                .build()
+                .build();
 
         LeadOxide = new Material.Builder(8388, 'lead_oxide')
                 .dust()
@@ -2032,7 +2034,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         RawElectrum = new Material.Builder(8399, "raw_electrum")
-                .ore()
+                .ore().fluid()
                 .color(0xfcf403)
                 .components(Silver, 1, Gold, 1)
                 .build();
@@ -2456,11 +2458,13 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        SodiumVanadate = new Material.Builder(8461, 'sodium_vanadate')
-                .dust()
-                .components(Sodium, 1, Vanadium, 1, Oxygen, 3)
+        SodiumVanadateSolution = new Material.Builder(8461, 'sodium_vanadate_solution')
+                .fluid()
+                .components(Sodium, 1, Vanadium, 1, Oxygen, 3, Water, 1)
                 .colorAverage()
                 .build();
+
+        SodiumVanadateSolution.setFormula("(NaVO3)(H2O)", true)
 
         AmmoniumMetavanadate = new Material.Builder(8462, 'ammonium_metavanadate')
                 .dust()
@@ -2802,6 +2806,42 @@ public class FirstDegreeMaterials{
                 .components(Carbon, 2, Hydrogen, 4)
                 .color(0xc5e3de)
                 .iconSet(SHINY)
+                .build();
+
+        AntimonyTrichloride = new Material.Builder(8511, "antimony_trichloride")
+                .dust().fluid()
+                .components(Antimony, 1, Chlorine, 3)
+                .colorAverage()
+                .build();
+
+        AntimonyPentachloride = new Material.Builder(8512, "antimony_pentachloride")
+                .fluid()
+                .components(Antimony, 1, Chlorine, 5)
+                .colorAverage()
+                .build();
+
+        Trichlorofluoromethane = new Material.Builder(8513, "trichlorofluoromethane")
+                .fluid(FluidTypes.GAS)
+                .components(Carbon, 1, Chlorine, 3, Fluorine, 1)
+                .color(0xeb6a6a)
+                .build();
+
+        Dichlorodifluoromethane = new Material.Builder(8514, "dichlorodifluoromethane")
+                .fluid(FluidTypes.GAS)
+                .components(Carbon, 1, Chlorine, 2, Fluorine, 2)
+                .color(0xd14d4d)
+                .build();
+
+        Chlorotrifluoromethane = new Material.Builder(8515, "chlorotrifluoromethane")
+                .fluid(FluidTypes.GAS)
+                .components(Carbon, 1, Chlorine, 1, Fluorine, 3)
+                .color(0xbf3232)
+                .build();
+
+        Chlorodifluoromethane = new Material.Builder(8516, "chlorodifluoromethane")
+                .fluid(FluidTypes.GAS)
+                .components(Carbon, 1, Hydrogen, 1, Chlorine, 1, Fluorine, 2)
+                .color(0x8c5a99)
                 .build();
     }
 }

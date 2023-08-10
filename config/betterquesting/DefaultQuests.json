@@ -3933,7 +3933,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§6 Coagulation Tank§r is a hollow, 3x3x3 cubic structure that coagulates fluids into solids.\n\nThe Coagulation Tank requires:\n§6- 1 Coagulation Tank Controller\n- 24 Wooden Coagulation Tank Wall\n§r\nThe tank can coagulate liquid Latex into a solid hunk of Latex. \nSome fluid §6Catalysts§r can be used to make the process faster, but it requires that Circuits are supplied to the machine, so this isn\u0027t available right now. \n\nYou can §cautomate this machine §rby adding Input and Output Hatches to the structure.\n\nWhile this machine isn\u0027t strictly required, it makes the next step of the Rubber processing chain about §c8x more efficient§r.",
+          "desc:8": "The§6 Coagulation Tank§r is a hollow, 3x3x3 cubic structure that coagulates fluids into solids.\n\nThe Coagulation Tank requires:\n§6- 1 Coagulation Tank Controller\n- 24 Wooden Coagulation Tank Wall\n§r\nThe tank can coagulate liquid Latex into a solid hunk of Latex. \nSome fluid §6Catalysts§r can be used to make the process faster, but it requires that Circuits are supplied to the machine, so this isn\u0027t available right now. \n\nYou can §cautomate this machine §rby adding a GT Input Hatch and Output Bus to the structure.\n\nWhile this machine isn\u0027t strictly required, it makes the next step of the Rubber processing chain about §c8x more efficient§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4937,7 +4937,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6Resistor§r is an electrical component that limits the flow of electrical current in an electronic circuit.\n\nResistors are another major component of §bLV circuits§r. They are made with sticky resin, which can be found on §2rubber trees§.. Use a §6Treetap §rto extract the resin. ",
+          "desc:8": "A §6Resistor§r is an electrical component that limits the flow of electrical current in an electronic circuit.\n\nResistors are another major component of §bLV circuits§r. They are made with sticky resin, which can be found in §2rubber trees§.. Use a §6Latex Collector §rto extract the liquid resin. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8519,7 +8519,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Sintering§r§r is the process of compacting and forming a solid mass of material by pressure or §cheat §rwithout melting it to the point of liquefaction. \n\nA §6Sintering Oven §ris required for making things like §6cement§r, or §7§6electrodes§r.\n\nA Sintering Oven requires:.\n§61x Sintering Oven Controller\n1x Input Bus\n1x Input Hatch\n1x Output Bus\n1x Output Hatch\n1x Energy Hatch (any tier)\n1x Maintenance Hatch\n72x Sintering Brick Block\n43x ULV Machine Casing\n36x Steel Frame \n\n§rCheck JEI for info on how to build the structure. If you are having trouble with the §6Maintenance Hatch§r, you can check the other page linked to the top of this quest. Remember that you have to use §6ULV §rMachine Casings, not LV. These are different.",
+          "desc:8": "§6Sintering§r§r is the process of compacting and forming a solid mass of material by pressure or §cheat §rwithout melting it to the point of liquefaction. \n\nA §6Sintering Oven §ris required for making things like §6cement§r, or §7§6electrodes§r.\n\nA Sintering Oven requires:.\n§61x Sintering Oven Controller\n1x Input Bus\n1x Input Hatch\n1x Output Bus\n1x Output Hatch\n1x Energy Hatch (any tier)\n1x Maintenance Hatch\n72x Sintering Brick Block\n43x Basic Structural Casing\n36x Steel Frame \n\n§rCheck JEI for info on how to build the structure. If you are having trouble with the §6Maintenance Hatch§r, you can check the other page linked to the top of this quest. Remember that you have to use §6ULV §rMachine Casings, not LV. These are different.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8566,10 +8566,10 @@
               "id:8": "susy:sintering_brick"
             },
             "2:10": {
-              "Count:3": 43,
-              "Damage:2": 0,
+              "Count:3": 1,
+              "Damage:2": 3,
               "OreDict:8": "",
-              "id:8": "gregtech:machine_casing"
+              "id:8": "susy:susy_multiblock_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -10169,7 +10169,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§6 Sprinkler§r sprays fluids onto a 9x9 area of crops. There must be a 3m tall space between the cover and the ground for it to work. It has to be placed on the §cdown §rface of a machine.",
+          "desc:8": "The§6 Sprinkler§r sprays fluids onto a 9x9 area of crops. There must be a 3m tall space between the cover and the ground for it to work. It has to be placed on the §cdown §rface of a machine or a pipe containing a valid fluid.\n\nValid fluids include:\n- Water\n- Fertilizer Solution\n- Blood (obtained using a Mob Extractor)",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24812,7 +24812,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6radiator§o§o§r is a device that transfers heat from a fluid or object to the surrounding environment.\n\nIt can cool down exhaust steam into water or §6§chot compressed fluids into a more manageable temperature.\n§rFor example, you can cool down Hot High Pressure Hydrogen into normal High Pressure Hydrogen.\n§r\nThe Radiator requires:\n\n§6- 1 Heat Radiator Controller\n- 1 Maintenance Hatch\n- 1 Output Hatch\n- 1 Input Hatch\n- At least 20 Solid Steel Machine Casing\n- At least 9 Steel Pipe Casing\n\nYou can expand the radiator by adding more rows. More info is in the Multiblock Preview page in JEI.\n\n§rDue to the high cost of steel, it is recommended that you use an EBF and Arc Furnace to process iron into steel instead of just using a PBF setup.",
+          "desc:8": "A §6radiator§o§o§r is a device that transfers heat from a fluid or object to the surrounding environment.\n\nIt can cool down exhaust steam into water or §6§chot compressed fluids into a more manageable temperature.\n§rFor example, you can cool down Hot High Pressure Hydrogen into normal High Pressure Hydrogen.\n§r\nThe Radiator requires:\n\n§6- 1 Heat Radiator Controller\n- 1 Maintenance Hatch\n- 1 Output Hatch\n- 1 Input Hatch\n- At least 20 Solid Steel Machine Casing\n- At least 9 Copper Tubing Serpentine Casing\n\nYou can expand the radiator by adding more rows. More info is in the Multiblock Preview page in JEI.\n\n§rDue to the high cost of steel, it is recommended that you use an EBF and Arc Furnace to process iron into steel instead of just using a PBF setup.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24859,10 +24859,10 @@
               "id:8": "gregtech:metal_casing"
             },
             "2:10": {
-              "Count:3": 9,
-              "Damage:2": 1,
+              "Count:3": 1,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:boiler_casing"
+              "id:8": "susy:serpentine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -25444,16 +25444,22 @@
               "id:8": "gregtech:metal_casing"
             },
             "4:10": {
+              "Count:3": 28,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            },
+            "5:10": {
               "Count:3": 35,
               "Damage:2": 2,
               "OreDict:8": "",
               "id:8": "gregtech:multiblock_casing"
             },
-            "5:10": {
-              "Count:3": 312,
-              "Damage:2": 4,
+            "6:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:stone_smooth"
+              "id:8": "susy:drill_head"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -26053,7 +26059,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A Tier 1 §6missile launcher §rconsists of §6three primary components§r: a control panel, a base, and a frame.\n\nWhile the base and screen are essential for a basic launch, the inclusion of the frame component can improve the accuracy of the missile. \n",
+          "desc:8": "A Tier 1 §6missile launcher §rconsists of §6three primary components§r: a control panel, a base, and a frame.\n\nWhile the base and screen are essential for a basic launch, the inclusion of the frame component can improve the accuracy of the missile. \n\nThe range of this launcher is 500 meters, so you may need to set up a separate base close to your target, solely for launching missile attacks.\n\nAnd yes, it may seem dumb that an ICBM only has a range of 500 meters, but the size of a continent in Minecraft is several hundred blocks anyways.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27268,7 +27274,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you are at MV, you can make more advanced types of §cexplosives §rand §cmissiles §rby putting MV power on a Weapons Factory.\n\nThere are 3 new types of explosives:\n§7Breaching explosives§r, made with steel\n§3Thermobaric explosives§r, made with ethylene oxide\n§aContagious explosives§r, made with biomass\n\nYou can get most of the ingredients for these at MV.\nRemember that these are Tier 2 missiles, so you will need a T2 missile launching station for them to work.",
+          "desc:8": "Now that you are at MV, you can make more advanced types of §cexplosives §rand §cmissiles §rby putting MV power on a Weapons Factory.\n\nThere are 3 new types of explosives:\n§7Breaching explosives§r, made with steel\n§3Thermobaric explosives§r, made with ethylene oxide\n§aContagious explosives§r, made with biomass\n\nYou can get most of the ingredients for these at MV.\nRemember that these are Tier 2 missiles, so you will need a T2 missile launching station for them to work.\n\nThe range of this launcher is 1,000 meters.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -28252,23 +28258,19 @@
               },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 290,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            },
-            "2:10": {
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 292,
               "ForgeCaps:10": {
@@ -28282,8 +28284,45 @@
               },
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
-            },
-            "3:10": {
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 290,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "3:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 3,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 293,
               "ForgeCaps:10": {
@@ -30382,7 +30421,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 14666,
+              "Damage:2": 14667,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -31311,7 +31350,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Trains created by the Railroad Engineering Station are too large to function on Minecraft\u0027s vanilla Rails. Which is why you\u0027ll need Immersive Railroading\u0027s Tracks.\n\nTracks can be placed by right clicking a Track Blueprint on the ground while having some Wooden Planks of any type and Rail Segments in your inventory. Doing so will create a track about 10 meters in length, which will consume several Planks and Segments from your inventory, so make sure you carry quite a few stacks of those with you when you\u0027re laying track.\n\nRight clicking a Track Blueprint while not looking at any block will open a menu allowing you to customize your Tracks. You can change things like the curvature of the track, the look of the track, and so on.",
+          "desc:8": "Trains created by the Railroad Engineering Station are too large to function on Minecraft\u0027s vanilla Rails. Which is why you\u0027ll need Immersive Railroading\u0027s Tracks.\n\nTracks can be placed by right clicking a Track Blueprint on the ground while having some Wooden Planks of any type and Rail Segments in your inventory. Doing so will create a track about 10 meters in length, which will consume several Planks and Segments from your inventory, so make sure you carry quite a few stacks of those with you when you\u0027re laying track.\n\nRight clicking a Track Blueprint while not looking at any block will open a menu allowing you to customize your Tracks. You can change things like the curvature of the track, the rail bed, length, and so on. More documentation on this can be found here:\n§9https://github.com/TeamOpenIndustry/ImmersiveRailroading/wiki/Track-Blueprint",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32662,7 +32701,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "vinyl_chloride_solution"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "vinyl_chloride_solution"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -32731,7 +32773,10 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "vinyl_chloride_solution"
+              "FluidName:8": "betterquesting.placeholder",
+              "Tag:10": {
+                "orig_id:8": "vinyl_chloride_solution"
+              }
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -33761,12 +33806,13 @@
     },
     "501:10": {
       "preRequisites:11": [
-        378
+        378,
+        506
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§cChromite §rcan be roasted to create §6Ferrochrome§r, an impure form of §cchrome§r.",
+          "desc:8": "§cChromite §rcan be put in the Advanced Arc Furnace to create §6Ferrochrome§r, an impure form of §cchrome§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33831,7 +33877,6 @@
     },
     "502:10": {
       "preRequisites:11": [
-        506,
         501,
         500,
         499,
@@ -34580,7 +34625,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 8315,
+              "Damage:2": 8378,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -38200,24 +38245,24 @@
     },
     "534:10": {
       "preRequisites:11": [
-        549
+        533
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §9RADAR§r allows detection of entities such as players, mobs or dropped items. \n\nThe built in §9API functions §rreturn a table of names and relative distances of entities within the specified range. ",
+          "desc:8": "The Entity Detector can detect entities up to §625 blocks away,§f and outputs information on those entities, including name and§b relative position. §cPlayers may be detected, so this is useful for catching any unsolicited activity.§f\n\nMore documentation can be found here: §9https://github.com/PC-Logix/OpenSecurity/wiki/EntityDetector",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "computronics:radar"
+            "id:8": "opensecurity:entity_detector"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Radar",
+          "name:8": "Entity Detector",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -38243,7 +38288,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "computronics:radar"
+              "id:8": "opensecurity:entity_detector"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -38252,24 +38297,24 @@
     },
     "535:10": {
       "preRequisites:11": [
-        546
+        518
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The chat box allows the computer to §7write/read chat messages§.§r. \n\nFor reading or saying messages, a listening distance can be specified (default: 40m). \n\nThis can allow programs on the computer to be triggered from the chatbox, by reading the message contained in the chat_message event. \n",
+          "desc:8": "Quadruple pipe variants exist for every pipe. They are made from 4 Small pipes of the same material. These will be useful for transferring different types of fluids along the same pipeline.\n\nNonuple pipes also exist for the extra messy factories.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 2037,
             "OreDict:8": "",
-            "id:8": "computronics:chat_box"
+            "id:8": "gregtech:fluid_pipe_quadruple"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Chat Box",
+          "name:8": "Quadruple Pipes",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -38284,44 +38329,34 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:chat_box"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
     "536:10": {
       "preRequisites:11": [
-        546
+        31
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §ccipher block§r is used to encrypt and decrypt messages. Items can be placed inside the cipher block to generate the encryption key. \n\nMessages can then be decrypted using a cipher block with the exact same encryption key. \n\nFor example, encrypted messages can be sent to other computers on a network; the receiving computer will need a cipher block with the same combination of items to decipher the received message. \n\nThe cipher block can be locked via the component API, preventing access to the block\u0027s GUI. ",
+          "desc:8": "§6Storage Drawers§f provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nTo reduce lag, drawers only render their items while you are close to them. Also, big drawer walls cause a drop in FPS.\n\nThere are also 1x2 and 2x2 drawers for storing 2 different types of items or 4 types of items in the same drawer block.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:cipher"
+            "OreDict:8": "drawerBasic",
+            "id:8": "storagedrawers:basicdrawers",
+            "tag:10": {
+              "material:8": "spruce"
+            }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Cipher Block",
+          "name:8": "Storage Drawers",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -38346,8 +38381,11 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:cipher"
+              "OreDict:8": "drawerBasic",
+              "id:8": "storagedrawers:basicdrawers",
+              "tag:10": {
+                "material:8": "oak"
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -38355,125 +38393,6 @@
       }
     },
     "537:10": {
-      "preRequisites:11": [
-        533
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "You can use a tool called §6LionRay.jar§r to transform audio files into a format called DFPWM. \n\nTo begin, download §bLionRay.jar§r [§9https://github.com/gamax92/LionRay/releases§r], convert the file, and upload it in a cloud service. Then obtain the download address of the file.\n\nTo proceed, connect a §6tape drive to your computer§r. You will have access to two commands: \"§7tape label§r\" and \"§7tape write§r\". \"tape label\" is used to name the cassette drive. \n\nTo write the transformed audio file to the tape, use the command \"tape write\" followed by the download address. \n\n§cHello Meteor is a very good option for your first cassette tape.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:tape_reader"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Tape Drive and Cassettes",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 537,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:tape_reader"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:tape"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "538:10": {
-      "preRequisites:11": [
-        533
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6camera block §radds ray casting functionality to computers. \n\nThe §7distance()§r function calculates the distance to the nearest block along the specified ray, which is defined by angles x and y; if no angle is specified, the angle values default to 0. \n\nBoth angles form a frontal cone in front of the camera, with x being the angle on a horizontal plane parallel to the ground, and y, the angle on a vertical plane perpendicular to the ground. If no block exists in the path of the ray, a value of -1 is returned.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:camera"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Camera",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 538,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:camera"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "539:10": {
       "preRequisites:11": [
         540
       ],
@@ -38543,7 +38462,7 @@
         }
       }
     },
-    "540:10": {
+    "538:10": {
       "preRequisites:11": [
         531
       ],
@@ -38594,7 +38513,7 @@
         }
       }
     },
-    "541:10": {
+    "539:10": {
       "preRequisites:11": [
         540,
         532
@@ -38643,7 +38562,7 @@
         }
       }
     },
-    "542:10": {
+    "540:10": {
       "preRequisites:11": [
         541
       ],
@@ -38691,7 +38610,7 @@
         }
       }
     },
-    "543:10": {
+    "541:10": {
       "preRequisites:11": [
         540
       ],
@@ -38761,7 +38680,7 @@
         }
       }
     },
-    "544:10": {
+    "542:10": {
       "preRequisites:11": [
         540
       ],
@@ -38831,77 +38750,7 @@
         }
       }
     },
-    "545:10": {
-      "preRequisites:11": [
-        546
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §bBeep Card §rcard provides the beep() function, which takes a table of frequency-duration pairs as an input, up to eight entries at once. \nThe card plays each frequency of beeps for the specified duration. \n\nThe §8Noise Card§r, akin to the beep card, provides the play() function. In addition, it also allows setting each of the eight separate channels\u0027 sound modes to make the card play§c square, sine, triangle or sawtooth waves§r.\n\nThe §dSound Card §ris a complex device allowing for high-resolution sound synthesis. Similarly to the noise card, it allows generating sound waves of various forms. Documentation on the sound card can be found here: §9https://oc.shadowkat.net/computronics/item/sound_card.md",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 5,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Beep, Sound and Noise",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 545,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 9,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "546:10": {
+    "543:10": {
       "preRequisites:11": [
         479,
         521
@@ -38990,7 +38839,7 @@
         }
       }
     },
-    "547:10": {
+    "544:10": {
       "preRequisites:11": [
         99
       ],
@@ -39042,7 +38891,7 @@
         }
       }
     },
-    "548:10": {
+    "545:10": {
       "preRequisites:11": [
         546
       ],
@@ -39112,7 +38961,7 @@
         }
       }
     },
-    "549:10": {
+    "546:10": {
       "preRequisites:11": [
         546,
         550
@@ -39201,7 +39050,7 @@
         }
       }
     },
-    "550:10": {
+    "547:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -39258,7 +39107,7 @@
         }
       }
     },
-    "551:10": {
+    "548:10": {
       "preRequisites:11": [
         546
       ],
@@ -39328,111 +39177,7 @@
         }
       }
     },
-    "552:10": {
-      "preRequisites:11": [
-        537
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Audio Cable §rallows you to connect devices which send audio signals to devices which receive and process those. \n\nAn example would be connecting a §6tape drive§r with one or multiple §6speakers§r.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:audio_cable"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Audio Cable",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 552,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:audio_cable"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "553:10": {
-      "preRequisites:11": [
-        552
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Speaker§r may be connected to audio cables. It will pick up any audio signal sent through the cables and convert it to sound, §cmaking it audible.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:speaker"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Speakers",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 553,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:speaker"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "554:10": {
+    "549:10": {
       "preRequisites:11": [
         546
       ],
@@ -39484,7 +39229,7 @@
         }
       }
     },
-    "555:10": {
+    "550:10": {
       "preRequisites:11": [
         533
       ],
@@ -39536,7 +39281,7 @@
         }
       }
     },
-    "556:10": {
+    "551:10": {
       "preRequisites:11": [
         533
       ],
@@ -39588,7 +39333,7 @@
         }
       }
     },
-    "557:10": {
+    "552:10": {
       "preRequisites:11": [
         559
       ],
@@ -39670,7 +39415,7 @@
         }
       }
     },
-    "558:10": {
+    "553:10": {
       "preRequisites:11": [
         559
       ],
@@ -39746,7 +39491,7 @@
         }
       }
     },
-    "559:10": {
+    "554:10": {
       "preRequisites:11": [
         533
       ],
@@ -39798,7 +39543,7 @@
         }
       }
     },
-    "560:10": {
+    "555:10": {
       "preRequisites:11": [
         533
       ],
@@ -39850,7 +39595,7 @@
         }
       }
     },
-    "561:10": {
+    "556:10": {
       "preRequisites:11": [
         549
       ],
@@ -39920,7 +39665,7 @@
         }
       }
     },
-    "562:10": {
+    "557:10": {
       "preRequisites:11": [
         31
       ],
@@ -40014,7 +39759,7 @@
         }
       }
     },
-    "563:10": {
+    "558:10": {
       "preRequisites:11": [
         388
       ],
@@ -40066,7 +39811,7 @@
         }
       }
     },
-    "564:10": {
+    "559:10": {
       "preRequisites:11": [
         546
       ],
@@ -40118,77 +39863,7 @@
         }
       }
     },
-    "565:10": {
-      "preRequisites:11": [
-        537
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §7Portable Tape Drive §rcan be used to play cassettes on the go. So you can play §abattle music §rwhile you\u0027re charging at your enemy.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:portable_tape_drive"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Portable Tape Drive",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 565,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:portable_tape_drive"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "566:10": {
+    "560:10": {
       "preRequisites:11": [
         549
       ],
@@ -40258,7 +39933,7 @@
         }
       }
     },
-    "567:10": {
+    "561:10": {
       "preRequisites:11": [
         549
       ],
@@ -40381,7 +40056,7 @@
         }
       }
     },
-    "568:10": {
+    "562:10": {
       "preRequisites:11": [
         540
       ],
@@ -40433,147 +40108,7 @@
         }
       }
     },
-    "569:10": {
-      "preRequisites:11": [
-        546
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6spoofing card§r acts the same way as a network card, but it allows you to specify the §csource address§r, effectively §amasking the device§r sending the network messages. ",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 4,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Spoofing Card",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 569,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 4,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "570:10": {
-      "preRequisites:11": [
-        546
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Particle Effects Card §rallows computers, robots, and drones to §9create particle effects at a specified location§r, as defined by the coordinates relative to the device. \n\nThe particle name provided to the component API function must be a §avalid particle§r.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 3,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Particle Effects Card",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 570,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 3,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "571:10": {
+    "563:10": {
       "preRequisites:11": [
         568
       ],
@@ -42565,7 +42100,7 @@
         }
       }
     },
-    "572:10": {
+    "564:10": {
       "preRequisites:11": [
         568
       ],
@@ -42703,7 +42238,7 @@
         }
       }
     },
-    "573:10": {
+    "565:10": {
       "preRequisites:11": [
         568
       ],
@@ -42809,7 +42344,7 @@
         }
       }
     },
-    "574:10": {
+    "566:10": {
       "preRequisites:11": [
         568
       ],
@@ -42861,14 +42396,14 @@
         }
       }
     },
-    "575:10": {
+    "567:10": {
       "preRequisites:11": [
         568
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Unlike computers, §6robots§r§r can move around and interact with the world much like a player can.\n\nThey §d§ccan not interact with external components§r, however! If you need to communicate with a computer or other robots, use a§6 Wireless Network Card§r.\n\n§6Robots are built by placing a Computer Case in an Assembler. \n§r\nYou can check the Robot API here: §9https://ocdoc.cil.li/api:robot",
+          "desc:8": "Unlike computers, §6robots§r§r can move around and interact with the world much like a player can.\n\nRobots can be upgraded with previously mentioned devices, including Entity Detectors.\n\nThey §d§ccan not interact with external components§r, however! If you need to communicate with a computer or other robots, use a§6 Wireless Network Card§r.\n\n§6Robots are built by placing a Computer Case in an Assembler. \n§r\nYou can check the Robot API here: §9https://ocdoc.cil.li/api:robot",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42913,7 +42448,7 @@
         }
       }
     },
-    "576:10": {
+    "568:10": {
       "preRequisites:11": [
         574
       ],
@@ -42983,7 +42518,7 @@
         }
       }
     },
-    "577:10": {
+    "569:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -43058,217 +42593,7 @@
         }
       }
     },
-    "578:10": {
-      "preRequisites:11": [
-        576
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §7Light Board§r can be put into §6Server Racks§r. It provides 4 §cindicator lights§r which connected computers are able to control using the provi§7ded light_board§r component.\n\nIf you interact with the board using §6any type of wrench§r, you can §6change its layout§r. Note that this resets the color settings.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 10,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Light Board",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 578,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 10,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "579:10": {
-      "preRequisites:11": [
-        576
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The §6Switch Board §rcan be put into Server Racks. \n\nIt has 4§6 clickable switches§r in the front which can be checked and activated using the §7switch_board§r component. \nIn addition, it fires a §7switch_flipped §revent whenever a switch is manually or automatically flipped.\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 13,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Switch Board",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 579,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 13,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "580:10": {
-      "preRequisites:11": [
-        576
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "With a simple command, this amazing device will wipe clean the contents of the server rack and any connected devices after a specified duration. \n\n§6This device can be used with the explode floppy disk§r which allows for convenient and highly configurable self-destruction.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 11,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "computronics:oc_parts"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Why would you do this...",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 580,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 11,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "computronics:oc_parts"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "581:10": {
+    "570:10": {
       "preRequisites:11": [
         546
       ],
@@ -43320,7 +42645,7 @@
         }
       }
     },
-    "582:10": {
+    "571:10": {
       "preRequisites:11": [
         546
       ],
@@ -43372,7 +42697,7 @@
         }
       }
     },
-    "583:10": {
+    "572:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -43444,7 +42769,7 @@
         }
       }
     },
-    "584:10": {
+    "573:10": {
       "preRequisites:11": [
         544
       ],
@@ -43496,7 +42821,7 @@
         }
       }
     },
-    "585:10": {
+    "574:10": {
       "preRequisites:11": [
         533
       ],
@@ -43548,7 +42873,7 @@
         }
       }
     },
-    "586:10": {
+    "575:10": {
       "preRequisites:11": [
         533
       ],
@@ -43641,59 +42966,7 @@
         }
       }
     },
-    "587:10": {
-      "preRequisites:11": [
-        536
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "The advanced cipher block uses §6RSA encryption§r by creating a §6public§r and §cprivate §rkey pair. \n\nThe§6 key pair§r can be generated using a pair of prime numbers or randomly. \n\nThe returned value itself will return both key pairs once it is done generating (which will take a few seconds). \n\nThe public key is used to encrypt messages, while the private key is used to decrypt messages. Only devices with access to the private key may decrypt messages.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "computronics:cipher_advanced"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Advanced Cipher Block",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 587,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "computronics:cipher_advanced"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "588:10": {
+    "576:10": {
       "preRequisites:11": [
         546
       ],
@@ -43745,7 +43018,7 @@
         }
       }
     },
-    "589:10": {
+    "577:10": {
       "preRequisites:11": [
         521
       ],
@@ -43803,7 +43076,7 @@
         }
       }
     },
-    "590:10": {
+    "578:10": {
       "preRequisites:11": [
         549
       ],
@@ -43855,7 +43128,7 @@
         }
       }
     },
-    "591:10": {
+    "579:10": {
       "preRequisites:11": [
         540
       ],
@@ -44045,7 +43318,7 @@
         }
       }
     },
-    "592:10": {
+    "580:10": {
       "preRequisites:11": [
         81
       ],
@@ -44088,7 +43361,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 14708,
+              "Damage:2": 14707,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -44097,7 +43370,7 @@
         }
       }
     },
-    "593:10": {
+    "581:10": {
       "preRequisites:11": [
         400
       ],
@@ -44149,7 +43422,7 @@
         }
       }
     },
-    "594:10": {
+    "582:10": {
       "preRequisites:11": [
         593
       ],
@@ -44244,7 +43517,7 @@
         }
       }
     },
-    "595:10": {
+    "583:10": {
       "preRequisites:11": [
         593
       ],
@@ -44339,7 +43612,7 @@
         }
       }
     },
-    "596:10": {
+    "584:10": {
       "preRequisites:11": [
         593
       ],
@@ -44434,7 +43707,7 @@
         }
       }
     },
-    "597:10": {
+    "585:10": {
       "preRequisites:11": [
         593
       ],
@@ -44529,7 +43802,7 @@
         }
       }
     },
-    "598:10": {
+    "586:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -44604,7 +43877,7 @@
         }
       }
     },
-    "599:10": {
+    "587:10": {
       "preRequisites:11": [
         81
       ],
@@ -44680,7 +43953,7 @@
         }
       }
     },
-    "600:10": {
+    "588:10": {
       "preRequisites:11": [
         213,
         104
@@ -44733,7 +44006,7 @@
         }
       }
     },
-    "601:10": {
+    "589:10": {
       "preRequisites:11": [
         51
       ],
@@ -44785,7 +44058,7 @@
         }
       }
     },
-    "602:10": {
+    "590:10": {
       "preRequisites:11": [
         124
       ],
@@ -44855,7 +44128,7 @@
         }
       }
     },
-    "603:10": {
+    "591:10": {
       "preRequisites:11": [
         36
       ],
@@ -44907,7 +44180,7 @@
         }
       }
     },
-    "604:10": {
+    "592:10": {
       "preRequisites:11": [
         109
       ],
@@ -44955,7 +44228,7 @@
         }
       }
     },
-    "605:10": {
+    "593:10": {
       "preRequisites:11": [
         602
       ],
@@ -45007,7 +44280,7 @@
         }
       }
     },
-    "606:10": {
+    "594:10": {
       "preRequisites:11": [
         602
       ],
@@ -45059,7 +44332,7 @@
         }
       }
     },
-    "607:10": {
+    "595:10": {
       "preRequisites:11": [
         101
       ],
@@ -45111,7 +44384,7 @@
         }
       }
     },
-    "608:10": {
+    "596:10": {
       "preRequisites:11": [
         230
       ],
@@ -45181,7 +44454,7 @@
         }
       }
     },
-    "609:10": {
+    "597:10": {
       "preRequisites:11": [
         31
       ],
@@ -45233,7 +44506,7 @@
         }
       }
     },
-    "610:10": {
+    "598:10": {
       "preRequisites:11": [
         222
       ],
@@ -45291,7 +44564,7 @@
         }
       }
     },
-    "611:10": {
+    "599:10": {
       "preRequisites:11": [
         593
       ],
@@ -45367,7 +44640,7 @@
         }
       }
     },
-    "612:10": {
+    "600:10": {
       "preRequisites:11": [
         611
       ],
@@ -45434,7 +44707,7 @@
         }
       }
     },
-    "613:10": {
+    "601:10": {
       "preRequisites:11": [
         611
       ],
@@ -45486,7 +44759,7 @@
         }
       }
     },
-    "614:10": {
+    "602:10": {
       "preRequisites:11": [
         623
       ],
@@ -45601,7 +44874,7 @@
         }
       }
     },
-    "615:10": {
+    "603:10": {
       "preRequisites:11": [
         618
       ],
@@ -45671,7 +44944,7 @@
         }
       }
     },
-    "616:10": {
+    "604:10": {
       "preRequisites:11": [
         615
       ],
@@ -45741,7 +45014,7 @@
         }
       }
     },
-    "617:10": {
+    "605:10": {
       "preRequisites:11": [
         616,
         390
@@ -45794,7 +45067,7 @@
         }
       }
     },
-    "618:10": {
+    "606:10": {
       "preRequisites:11": [
         188
       ],
@@ -45864,7 +45137,7 @@
         }
       }
     },
-    "619:10": {
+    "607:10": {
       "preRequisites:11": [
         617
       ],
@@ -45898,7 +45171,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "620:10": {
+    "608:10": {
       "preRequisites:11": [
         621,
         614,
@@ -45976,7 +45249,7 @@
         }
       }
     },
-    "621:10": {
+    "609:10": {
       "preRequisites:11": [
         398
       ],
@@ -46028,7 +45301,7 @@
         }
       }
     },
-    "622:10": {
+    "610:10": {
       "preRequisites:11": [
         614
       ],
@@ -46080,7 +45353,7 @@
         }
       }
     },
-    "623:10": {
+    "611:10": {
       "preRequisites:11": [
         479
       ],
@@ -46150,7 +45423,7 @@
         }
       }
     },
-    "624:10": {
+    "612:10": {
       "preRequisites:11": [
         622
       ],
@@ -46202,7 +45475,7 @@
         }
       }
     },
-    "625:10": {
+    "613:10": {
       "preRequisites:11": [
         624
       ],
@@ -46297,7 +45570,7 @@
         }
       }
     },
-    "626:10": {
+    "614:10": {
       "preRequisites:11": [
         624
       ],
@@ -46364,7 +45637,7 @@
         }
       }
     },
-    "627:10": {
+    "615:10": {
       "preRequisites:11": [
         624
       ],
@@ -46459,7 +45732,7 @@
         }
       }
     },
-    "628:10": {
+    "616:10": {
       "preRequisites:11": [
         624
       ],
@@ -46554,7 +45827,7 @@
         }
       }
     },
-    "629:10": {
+    "617:10": {
       "preRequisites:11": [
         624
       ],
@@ -46649,7 +45922,7 @@
         }
       }
     },
-    "630:10": {
+    "618:10": {
       "preRequisites:11": [
         624
       ],
@@ -46744,7 +46017,7 @@
         }
       }
     },
-    "631:10": {
+    "619:10": {
       "preRequisites:11": [
         191
       ],
@@ -46792,7 +46065,7 @@
         }
       }
     },
-    "632:10": {
+    "620:10": {
       "preRequisites:11": [
         622,
         687
@@ -46863,7 +46136,7 @@
         }
       }
     },
-    "633:10": {
+    "621:10": {
       "preRequisites:11": [
         622
       ],
@@ -46933,7 +46206,7 @@
         }
       }
     },
-    "634:10": {
+    "622:10": {
       "preRequisites:11": [
         622
       ],
@@ -47003,7 +46276,7 @@
         }
       }
     },
-    "635:10": {
+    "623:10": {
       "preRequisites:11": [
         622,
         698
@@ -47074,7 +46347,7 @@
         }
       }
     },
-    "636:10": {
+    "624:10": {
       "preRequisites:11": [
         622
       ],
@@ -47144,7 +46417,7 @@
         }
       }
     },
-    "637:10": {
+    "625:10": {
       "preRequisites:11": [
         648
       ],
@@ -47231,7 +46504,7 @@
         }
       }
     },
-    "638:10": {
+    "626:10": {
       "preRequisites:11": [
         181
       ],
@@ -47303,9 +46576,9 @@
         }
       }
     },
-    "639:10": {
+    "627:10": {
       "preRequisites:11": [
-        468
+        243
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -47379,7 +46652,7 @@
         }
       }
     },
-    "640:10": {
+    "628:10": {
       "preRequisites:11": [
         654
       ],
@@ -47449,7 +46722,7 @@
         }
       }
     },
-    "641:10": {
+    "629:10": {
       "preRequisites:11": [
         614
       ],
@@ -47507,7 +46780,7 @@
         }
       }
     },
-    "642:10": {
+    "630:10": {
       "preRequisites:11": [
         641
       ],
@@ -47573,7 +46846,7 @@
         }
       }
     },
-    "643:10": {
+    "631:10": {
       "preRequisites:11": [
         642
       ],
@@ -47639,7 +46912,7 @@
         }
       }
     },
-    "644:10": {
+    "632:10": {
       "preRequisites:11": [
         643,
         649
@@ -47710,7 +46983,7 @@
         }
       }
     },
-    "645:10": {
+    "633:10": {
       "preRequisites:11": [
         644
       ],
@@ -47780,7 +47053,7 @@
         }
       }
     },
-    "646:10": {
+    "634:10": {
       "preRequisites:11": [
         51
       ],
@@ -47856,7 +47129,7 @@
         }
       }
     },
-    "647:10": {
+    "635:10": {
       "preRequisites:11": [
         614
       ],
@@ -47920,7 +47193,7 @@
         }
       }
     },
-    "648:10": {
+    "636:10": {
       "preRequisiteTypes:7": [
         0,
         2
@@ -47991,7 +47264,7 @@
         }
       }
     },
-    "649:10": {
+    "637:10": {
       "preRequisites:11": [
         648
       ],
@@ -48061,7 +47334,7 @@
         }
       }
     },
-    "650:10": {
+    "638:10": {
       "preRequisites:11": [
         213
       ],
@@ -48109,7 +47382,7 @@
         }
       }
     },
-    "651:10": {
+    "639:10": {
       "preRequisites:11": [
         510
       ],
@@ -48161,7 +47434,7 @@
         }
       }
     },
-    "652:10": {
+    "640:10": {
       "preRequisites:11": [
         188
       ],
@@ -48223,7 +47496,7 @@
         }
       }
     },
-    "653:10": {
+    "641:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -48296,7 +47569,7 @@
         }
       }
     },
-    "654:10": {
+    "642:10": {
       "preRequisites:11": [
         398
       ],
@@ -48330,7 +47603,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "655:10": {
+    "643:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -48383,7 +47656,7 @@
         }
       }
     },
-    "656:10": {
+    "644:10": {
       "preRequisites:11": [
         441,
         18
@@ -48454,7 +47727,7 @@
         }
       }
     },
-    "657:10": {
+    "645:10": {
       "preRequisites:11": [
         388
       ],
@@ -48493,7 +47766,7 @@
         }
       }
     },
-    "658:10": {
+    "646:10": {
       "preRequisites:11": [
         104
       ],
@@ -48541,7 +47814,7 @@
         }
       }
     },
-    "659:10": {
+    "647:10": {
       "preRequisites:11": [
         181
       ],
@@ -48593,7 +47866,7 @@
         }
       }
     },
-    "660:10": {
+    "648:10": {
       "preRequisites:11": [
         604
       ],
@@ -48641,7 +47914,7 @@
         }
       }
     },
-    "661:10": {
+    "649:10": {
       "preRequisites:11": [
         188
       ],
@@ -48693,7 +47966,7 @@
         }
       }
     },
-    "662:10": {
+    "650:10": {
       "preRequisites:11": [
         390,
         672
@@ -48746,7 +48019,7 @@
         }
       }
     },
-    "663:10": {
+    "651:10": {
       "preRequisites:11": [
         243
       ],
@@ -48816,7 +48089,7 @@
         }
       }
     },
-    "664:10": {
+    "652:10": {
       "preRequisites:11": [
         125
       ],
@@ -48864,7 +48137,7 @@
         }
       }
     },
-    "665:10": {
+    "653:10": {
       "preRequisiteTypes:7": [
         0,
         0,
@@ -48923,7 +48196,7 @@
         }
       }
     },
-    "666:10": {
+    "654:10": {
       "preRequisites:11": [
         104
       ],
@@ -48974,7 +48247,7 @@
         }
       }
     },
-    "667:10": {
+    "655:10": {
       "preRequisites:11": [
         104
       ],
@@ -50944,7 +50217,7 @@
         }
       }
     },
-    "668:10": {
+    "656:10": {
       "preRequisites:11": [
         48
       ],
@@ -51040,7 +50313,7 @@
         }
       }
     },
-    "669:10": {
+    "657:10": {
       "preRequisites:11": [
         763
       ],
@@ -51125,7 +50398,7 @@
         }
       }
     },
-    "670:10": {
+    "658:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -51198,7 +50471,7 @@
         }
       }
     },
-    "671:10": {
+    "659:10": {
       "preRequisites:11": [
         81
       ],
@@ -51274,7 +50547,7 @@
         }
       }
     },
-    "672:10": {
+    "660:10": {
       "preRequisites:11": [
         663,
         674
@@ -51345,7 +50618,7 @@
         }
       }
     },
-    "673:10": {
+    "661:10": {
       "preRequisites:11": [
         390
       ],
@@ -51384,7 +50657,7 @@
         }
       }
     },
-    "674:10": {
+    "662:10": {
       "preRequisites:11": [
         243
       ],
@@ -51436,7 +50709,7 @@
         }
       }
     },
-    "675:10": {
+    "663:10": {
       "preRequisites:11": [
         673
       ],
@@ -51498,7 +50771,7 @@
         }
       }
     },
-    "676:10": {
+    "664:10": {
       "preRequisites:11": [
         675,
         678
@@ -51551,7 +50824,7 @@
         }
       }
     },
-    "677:10": {
+    "665:10": {
       "preRequisites:11": [
         673
       ],
@@ -51613,7 +50886,7 @@
         }
       }
     },
-    "678:10": {
+    "666:10": {
       "preRequisites:11": [
         479
       ],
@@ -51683,18 +50956,19 @@
         }
       }
     },
-    "679:10": {
+    "667:10": {
       "preRequisites:11": [
-        637
+        479,
+        708
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Titanium has 2 sources at this stage of the game: §6Vanadiferous Titanomagnetite,§f and §cIlmenite.§f Those are sourced from the Mining Drill only.\n\nWhat you\u0027ll want to do is process those dusts into Rutile. Both ores have different processing routes to get to Rutile, but Ilmenite is significantly easier to turn into Rutile, needing only 1 fluidized bed reactor step.\n\nNext, you\u0027ll want to react the Rutile with coke and chlorine in a Fluidized Bed Reactor, for Gaseous Titanium Tetrachloride.\n\nAfter several steps of purification, you should have normal Titanium Tetrachloride.\n\nPutting this normal Titanium Tetrachloride in an EBF with magnesium will give you a Titanium Sponge, which is just a few steps away from Titanium Ingots. You\u0027ll need better coils than just Cupronickel Coils for this though.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 113,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -51705,13 +50979,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "start of titanium questline",
+          "name:8": "Getting Titanium",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -51724,9 +50998,36 @@
       },
       "questID:3": 679,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 206,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
-    "680:10": {
+    "668:10": {
       "preRequisites:11": [
         644
       ],
@@ -51784,7 +51085,7 @@
         }
       }
     },
-    "681:10": {
+    "669:10": {
       "preRequisites:11": [
         645
       ],
@@ -51854,7 +51155,7 @@
         }
       }
     },
-    "682:10": {
+    "670:10": {
       "preRequisites:11": [
         377
       ],
@@ -51902,7 +51203,7 @@
         }
       }
     },
-    "683:10": {
+    "671:10": {
       "preRequisites:11": [
         104
       ],
@@ -51972,7 +51273,7 @@
         }
       }
     },
-    "684:10": {
+    "672:10": {
       "preRequisites:11": [
         240
       ],
@@ -52042,7 +51343,7 @@
         }
       }
     },
-    "685:10": {
+    "673:10": {
       "preRequisites:11": [
         169
       ],
@@ -52094,7 +51395,7 @@
         }
       }
     },
-    "686:10": {
+    "674:10": {
       "preRequisites:11": [
         374
       ],
@@ -52142,7 +51443,7 @@
         }
       }
     },
-    "687:10": {
+    "675:10": {
       "preRequisites:11": [
         620
       ],
@@ -52212,7 +51513,7 @@
         }
       }
     },
-    "688:10": {
+    "676:10": {
       "preRequisites:11": [
         641,
         466
@@ -52283,7 +51584,7 @@
         }
       }
     },
-    "689:10": {
+    "677:10": {
       "preRequisites:11": [
         641
       ],
@@ -52335,7 +51636,7 @@
         }
       }
     },
-    "690:10": {
+    "678:10": {
       "preRequisites:11": [
         647
       ],
@@ -52405,7 +51706,7 @@
         }
       }
     },
-    "691:10": {
+    "679:10": {
       "preRequisites:11": [
         688,
         683
@@ -52476,7 +51777,7 @@
         }
       }
     },
-    "692:10": {
+    "680:10": {
       "preRequisites:11": [
         614,
         693
@@ -52547,7 +51848,7 @@
         }
       }
     },
-    "693:10": {
+    "681:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -52622,7 +51923,7 @@
         }
       }
     },
-    "694:10": {
+    "682:10": {
       "preRequisites:11": [
         692,
         695
@@ -52699,7 +52000,7 @@
         }
       }
     },
-    "695:10": {
+    "683:10": {
       "preRequisites:11": [
         479
       ],
@@ -52769,7 +52070,7 @@
         }
       }
     },
-    "696:10": {
+    "684:10": {
       "preRequisites:11": [
         692
       ],
@@ -52841,7 +52142,7 @@
         }
       }
     },
-    "697:10": {
+    "685:10": {
       "preRequisites:11": [
         172
       ],
@@ -52911,7 +52212,7 @@
         }
       }
     },
-    "698:10": {
+    "686:10": {
       "preRequisites:11": [
         620,
         451
@@ -52982,7 +52283,7 @@
         }
       }
     },
-    "699:10": {
+    "687:10": {
       "preRequisites:11": [
         687,
         700,
@@ -53054,7 +52355,7 @@
         }
       }
     },
-    "700:10": {
+    "688:10": {
       "preRequisites:11": [
         243
       ],
@@ -53106,7 +52407,7 @@
         }
       }
     },
-    "701:10": {
+    "689:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -53175,7 +52476,7 @@
         }
       }
     },
-    "702:10": {
+    "690:10": {
       "preRequisites:11": [
         699
       ],
@@ -53245,7 +52546,7 @@
         }
       }
     },
-    "703:10": {
+    "691:10": {
       "preRequisites:11": [
         702
       ],
@@ -53315,7 +52616,7 @@
         }
       }
     },
-    "704:10": {
+    "692:10": {
       "preRequisites:11": [
         703
       ],
@@ -53367,14 +52668,14 @@
         }
       }
     },
-    "705:10": {
+    "693:10": {
       "preRequisites:11": [
         703
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you are at HV, you can make more advanced types of §cexplosives §rand §cmissiles §rby putting HV power on a Weapons Factory.\n\nThere are 3 new types of explosives:\n§7Endothermic explosives§r, made with cryogenics\n§3Exothermic explosives§r, made with ethylene oxide\n§aEMP explosives§r, made with superconductors\n\nYou can get most of the ingredients for these at HV.\nRemember that these are Tier 3 missiles, so you will need a T3 missile launching station for them to work.",
+          "desc:8": "Now that you are at HV, you can make more advanced types of §cexplosives §rand §cmissiles §rby putting HV power on a Weapons Factory.\n\nThere are 3 new types of explosives:\n§7Endothermic explosives§r, made with cryogenics\n§3Exothermic explosives§r, made with ethylene oxide\n§aEMP explosives§r, made with superconductors\n\nYou can get most of the ingredients for these at HV.\nRemember that these are Tier 3 missiles, so you will need a T3 missile launching station for them to work.\n\nThe range of this missile is 3,000 meters.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53431,15 +52732,15 @@
         }
       }
     },
-    "706:10": {
+    "694:10": {
       "preRequisites:11": [
-        679,
-        709
+        709,
+        679
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Put the Crude Titanium Sponge in a vacuum ejector to purify it. Then, macerate it for titanium dust. Smelt this in an EBF with Kanthal Coils (or better) to get a hot titanium ingot, which has to be cooled in a quencher for normal titanium ingots.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53502,7 +52803,7 @@
         }
       }
     },
-    "707:10": {
+    "695:10": {
       "preRequisites:11": [
         708
       ],
@@ -53554,7 +52855,7 @@
         }
       }
     },
-    "708:10": {
+    "696:10": {
       "preRequisites:11": [
         479
       ],
@@ -53606,7 +52907,7 @@
         }
       }
     },
-    "709:10": {
+    "697:10": {
       "preRequisites:11": [
         708
       ],
@@ -53682,7 +52983,7 @@
         }
       }
     },
-    "710:10": {
+    "698:10": {
       "preRequisites:11": [
         644
       ],
@@ -53734,7 +53035,7 @@
         }
       }
     },
-    "711:10": {
+    "699:10": {
       "preRequisites:11": [
         66
       ],
@@ -53786,7 +53087,7 @@
         }
       }
     },
-    "712:10": {
+    "700:10": {
       "preRequisites:11": [
         101
       ],
@@ -53853,7 +53154,7 @@
         }
       }
     },
-    "713:10": {
+    "701:10": {
       "preRequisites:11": [
         641
       ],
@@ -53905,7 +53206,7 @@
         }
       }
     },
-    "714:10": {
+    "702:10": {
       "preRequisites:11": [
         647
       ],
@@ -53975,7 +53276,7 @@
         }
       }
     },
-    "715:10": {
+    "703:10": {
       "preRequisites:11": [
         647
       ],
@@ -54045,7 +53346,7 @@
         }
       }
     },
-    "716:10": {
+    "704:10": {
       "preRequisites:11": [
         710
       ],
@@ -54115,9 +53416,9 @@
         }
       }
     },
-    "717:10": {
+    "705:10": {
       "preRequisites:11": [
-        679
+        706
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -54185,7 +53486,7 @@
         }
       }
     },
-    "718:10": {
+    "706:10": {
       "preRequisites:11": [
         479
       ],
@@ -54237,7 +53538,7 @@
         }
       }
     },
-    "719:10": {
+    "707:10": {
       "preRequisites:11": [
         104
       ],
@@ -54307,7 +53608,7 @@
         }
       }
     },
-    "720:10": {
+    "708:10": {
       "preRequisites:11": [
         637
       ],
@@ -54346,7 +53647,7 @@
         }
       }
     },
-    "721:10": {
+    "709:10": {
       "preRequisites:11": [
         101
       ],
@@ -54398,7 +53699,7 @@
         }
       }
     },
-    "722:10": {
+    "710:10": {
       "preRequisites:11": [
         25
       ],
@@ -54513,7 +53814,7 @@
         }
       }
     },
-    "723:10": {
+    "711:10": {
       "preRequisites:11": [
         25
       ],
@@ -54628,7 +53929,7 @@
         }
       }
     },
-    "724:10": {
+    "712:10": {
       "preRequisites:11": [
         25
       ],
@@ -54728,7 +54029,7 @@
         }
       }
     },
-    "725:10": {
+    "713:10": {
       "preRequisites:11": [
         191
       ],
@@ -54813,7 +54114,7 @@
         }
       }
     },
-    "726:10": {
+    "714:10": {
       "preRequisites:11": [
         243
       ],
@@ -54865,7 +54166,7 @@
         }
       }
     },
-    "727:10": {
+    "715:10": {
       "preRequisites:11": [
         728,
         726
@@ -54936,7 +54237,7 @@
         }
       }
     },
-    "728:10": {
+    "716:10": {
       "preRequisites:11": [
         729,
         411
@@ -54989,7 +54290,7 @@
         }
       }
     },
-    "729:10": {
+    "717:10": {
       "preRequisites:11": [
         203
       ],
@@ -55059,7 +54360,7 @@
         }
       }
     },
-    "730:10": {
+    "718:10": {
       "preRequisites:11": [
         727
       ],
@@ -55129,7 +54430,7 @@
         }
       }
     },
-    "731:10": {
+    "719:10": {
       "preRequisites:11": [
         730
       ],
@@ -55244,7 +54545,7 @@
         }
       }
     },
-    "732:10": {
+    "720:10": {
       "preRequisites:11": [
         733
       ],
@@ -55359,7 +54660,7 @@
         }
       }
     },
-    "733:10": {
+    "721:10": {
       "preRequisites:11": [
         730
       ],
@@ -55474,7 +54775,7 @@
         }
       }
     },
-    "734:10": {
+    "722:10": {
       "preRequisites:11": [
         30
       ],
@@ -55544,7 +54845,7 @@
         }
       }
     },
-    "735:10": {
+    "723:10": {
       "preRequisites:11": [
         398
       ],
@@ -55614,7 +54915,7 @@
         }
       }
     },
-    "736:10": {
+    "724:10": {
       "preRequisites:11": [
         735
       ],
@@ -55657,7 +54958,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "737:10": {
+    "725:10": {
       "preRequisites:11": [
         66
       ],
@@ -55754,7 +55055,7 @@
         }
       }
     },
-    "738:10": {
+    "726:10": {
       "preRequisites:11": [
         30
       ],
@@ -55806,7 +55107,7 @@
         }
       }
     },
-    "739:10": {
+    "727:10": {
       "preRequisites:11": [
         30
       ],
@@ -55851,7 +55152,7 @@
         }
       }
     },
-    "740:10": {
+    "728:10": {
       "preRequisites:11": [
         222
       ],
@@ -55913,7 +55214,7 @@
         }
       }
     },
-    "741:10": {
+    "729:10": {
       "preRequisites:11": [
         497
       ],
@@ -55977,7 +55278,7 @@
         }
       }
     },
-    "742:10": {
+    "730:10": {
       "preRequisites:11": [
         101,
         465
@@ -55985,7 +55286,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "As you find more resources around the world, you\u0027ll find that you\u0027ll have to somehow transport them back to your main base. The main method of linking separate bases at this point are Trains.\n\nTrains are made using the Railroad Engineering Station. In order to actually form the multiblock, you will need to cover the middle 3 rows of the concrete floor of the Station with Immersive Railroading Tracks, which will be explained further in a later quest. The concrete blocks in the center row of the floor are replacable with any block, including pipes or air, so that you can easily interact with any trains spawned by the Station.\n\nKeep in mind that the Railroad Engineering Station does not make a train item that you can simply drag into your inventory. §6The multiblock spawns a train entity on the center rails§f when provided with the needed items to construct a train. Check JEI to see what trains you can build.\n",
+          "desc:8": "§lGo to the Transportation category of the questbook for the full Train questline. This is only the introduction.§r\n\nAs you find more resources around the world, you\u0027ll find that you\u0027ll have to somehow transport them back to your main base. The main method of linking separate bases at this point are Trains.\n\nTrains are made using the Railroad Engineering Station. In order to actually form the multiblock, you will need to cover the middle 3 rows of the concrete floor of the Station with Immersive Railroading Tracks, which will be explained further in a later quest. The concrete blocks in the center row of the floor are replacable with any block, including pipes or air, so that you can easily interact with any trains spawned by the Station.\n\nKeep in mind that the Railroad Engineering Station does not make a train item that you can simply drag into your inventory. §6The multiblock spawns a train entity on the center rails§f when provided with the needed items to construct a train. Check JEI to see what trains you can build.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56045,14 +55346,14 @@
         }
       }
     },
-    "743:10": {
+    "731:10": {
       "preRequisites:11": [
         742
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Every Train needs an Engine. Your first available train is the Monorail, powered by the Monorail Engine. Make one.\n\nNote: Due to JEI being bad with NBT, clicking on the monorail engine will show how to make the monorail engine, the monorail tank, the monorail freight and the monorail passanger. Just scroll through until you see the recipe for the actual monorail engine.",
+          "desc:8": "Every Train needs an Engine. Your first available train is the Monorail, powered by the Monorail Engine. Make one.\n\n§6TIP:§f Trains can have 2 Engines, one at each end, facing opposite directions. This allows the train to be driven both ways on the track, making return trips far easier.\n\n§eNote:§f Due to JEI being bad with NBT, clicking on the monorail engine will show how to make the monorail engine, the monorail tank, the monorail freight and the monorail passanger. Just scroll through until you see the recipe for the actual monorail engine.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56097,7 +55398,7 @@
         }
       }
     },
-    "744:10": {
+    "732:10": {
       "preRequisites:11": [
         743
       ],
@@ -56194,7 +55495,7 @@
         }
       }
     },
-    "745:10": {
+    "733:10": {
       "preRequisites:11": [
         30
       ],
@@ -56258,7 +55559,7 @@
         }
       }
     },
-    "746:10": {
+    "734:10": {
       "preRequisites:11": [
         743
       ],
@@ -56289,7 +55590,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Driving your Trains",
@@ -56312,7 +55613,7 @@
         }
       }
     },
-    "747:10": {
+    "735:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -56369,7 +55670,7 @@
         }
       }
     },
-    "748:10": {
+    "736:10": {
       "preRequisites:11": [
         743
       ],
@@ -56421,7 +55722,7 @@
         }
       }
     },
-    "749:10": {
+    "737:10": {
       "preRequisites:11": [
         743
       ],
@@ -56491,9 +55792,9 @@
         }
       }
     },
-    "750:10": {
+    "738:10": {
       "preRequisites:11": [
-        743
+        746
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -56563,7 +55864,7 @@
         }
       }
     },
-    "751:10": {
+    "739:10": {
       "preRequisites:11": [
         688,
         719
@@ -56634,7 +55935,7 @@
         }
       }
     },
-    "752:10": {
+    "740:10": {
       "preRequisites:11": [
         41
       ],
@@ -56704,7 +56005,7 @@
         }
       }
     },
-    "753:10": {
+    "741:10": {
       "preRequisites:11": [
         700
       ],
@@ -56774,7 +56075,7 @@
         }
       }
     },
-    "754:10": {
+    "742:10": {
       "preRequisites:11": [
         755,
         550
@@ -56845,7 +56146,7 @@
         }
       }
     },
-    "755:10": {
+    "743:10": {
       "preRequisites:11": [
         756
       ],
@@ -56915,7 +56216,7 @@
         }
       }
     },
-    "756:10": {
+    "744:10": {
       "preRequisites:11": [
         479
       ],
@@ -56985,7 +56286,7 @@
         }
       }
     },
-    "757:10": {
+    "745:10": {
       "preRequisites:11": [
         754
       ],
@@ -57100,7 +56401,7 @@
         }
       }
     },
-    "758:10": {
+    "746:10": {
       "preRequisites:11": [
         757
       ],
@@ -57152,7 +56453,7 @@
         }
       }
     },
-    "759:10": {
+    "747:10": {
       "preRequisites:11": [
         758
       ],
@@ -57247,7 +56548,7 @@
         }
       }
     },
-    "760:10": {
+    "748:10": {
       "preRequisites:11": [
         758
       ],
@@ -57342,7 +56643,7 @@
         }
       }
     },
-    "761:10": {
+    "749:10": {
       "preRequisites:11": [
         758
       ],
@@ -57437,7 +56738,7 @@
         }
       }
     },
-    "762:10": {
+    "750:10": {
       "preRequisites:11": [
         758
       ],
@@ -57532,7 +56833,7 @@
         }
       }
     },
-    "763:10": {
+    "751:10": {
       "preRequisites:11": [
         20
       ],
@@ -57576,6 +56877,58 @@
         }
       },
       "questID:3": 763,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "752:10": {
+      "preRequisites:11": [
+        651
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Hydrogen Cyanide is not only a useful chemical, it is a more subtle form of chemical weaponry.\n\nAdding 100 L of Hydrogen Cyanide to any food with §6\"May be laced with fun chemicals\"§f in its tooltip, using a Canning Machine, will §9lace §fthat food with Hydrogen Cyanide.\n\n§lYou can search \"may be laced\" in JEI to find lace-able foods.\n\nPeople won\u0027t know it\u0027s laced. Why would you do such a thing? You would understand in Multiplayer.§r\n\nHydrogen Cyanide can be made 2 ways. The first way requires platinum, which is not available yet. So you\u0027ll have to do it the painful way.\n\n1. React sodium and ammonia for Sodium Amide\n\n2. Roast Sodium Amide with Carbon for Sodium Cyanide\n\n3. React Sodium Cyanide with Hydrochloric Acid for Hydrogen Cyanide",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "gtfo_hydrogen_cyanide"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Hydrogen Cyanide",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 764,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
@@ -58464,48 +57817,62 @@
           "y:3": -60
         },
         "61:10": {
+          "id:3": 535,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": -90
+        },
+        "62:10": {
+          "id:3": 536,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -66,
+          "y:3": 12
+        },
+        "63:10": {
           "id:3": 646,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": 438
         },
-        "62:10": {
+        "64:10": {
           "id:3": 668,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 186
         },
-        "63:10": {
+        "65:10": {
           "id:3": 670,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 66,
           "y:3": 342
         },
-        "64:10": {
+        "66:10": {
           "id:3": 711,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 222
         },
-        "65:10": {
+        "67:10": {
           "id:3": 737,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -270,
           "y:3": 330
         },
-        "66:10": {
+        "68:10": {
           "id:3": 745,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 60,
           "y:3": 432
         },
-        "67:10": {
+        "69:10": {
           "id:3": 752,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -59983,8 +59350,8 @@
           "id:3": 501,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
-          "y:3": -216
+          "x:3": 96,
+          "y:3": -162
         },
         "79:10": {
           "id:3": 502,
@@ -60321,6 +59688,13 @@
           "sizeY:3": 48,
           "x:3": 210,
           "y:3": 366
+        },
+        "127:10": {
+          "id:3": 764,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -78,
+          "y:3": 270
         }
       }
     },
@@ -60384,8 +59758,8 @@
           "id:3": 550,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -276,
-          "y:3": 102
+          "x:3": -222,
+          "y:3": 174
         },
         "5:10": {
           "id:3": 614,
@@ -60571,10 +59945,10 @@
         },
         "31:10": {
           "id:3": 679,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": -84
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -24,
+          "y:3": 180
         },
         "32:10": {
           "id:3": 680,
@@ -60734,15 +60108,15 @@
           "id:3": 706,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -186,
-          "y:3": 108
+          "x:3": -138,
+          "y:3": 180
         },
         "55:10": {
           "id:3": 707,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -18,
-          "y:3": 162
+          "x:3": -48,
+          "y:3": 150
         },
         "56:10": {
           "id:3": 708,
@@ -60797,14 +60171,14 @@
           "id:3": 717,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
-          "y:3": -84
+          "x:3": -132,
+          "y:3": 240
         },
         "64:10": {
           "id:3": 718,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
+          "x:3": 108,
           "y:3": 162
         },
         "65:10": {
@@ -62390,15 +61764,15 @@
           "id:3": 746,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 396,
-          "y:3": -12
+          "x:3": 294,
+          "y:3": 96
         },
         "10:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 396,
-          "y:3": 90
+          "y:3": 96
         },
         "11:10": {
           "id:3": 748,
@@ -62419,7 +61793,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 294,
-          "y:3": 96
+          "y:3": 144
         }
       }
     },
@@ -63810,360 +63184,262 @@
           "id:3": 534,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 324
-        },
-        "14:10": {
-          "id:3": 535,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 192
-        },
-        "15:10": {
-          "id:3": 536,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 102,
-          "y:3": 120
-        },
-        "16:10": {
-          "id:3": 537,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 360,
-          "y:3": -132
-        },
-        "17:10": {
-          "id:3": 538,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 360,
+          "x:3": 300,
           "y:3": -96
         },
-        "18:10": {
+        "14:10": {
           "id:3": 539,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": -36
         },
-        "19:10": {
+        "15:10": {
           "id:3": 540,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 348,
           "y:3": -12
         },
-        "20:10": {
+        "16:10": {
           "id:3": 541,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 48
         },
-        "21:10": {
+        "17:10": {
           "id:3": 542,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 84
         },
-        "22:10": {
+        "18:10": {
           "id:3": 543,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": 0
         },
-        "23:10": {
+        "19:10": {
           "id:3": 544,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": 36
         },
-        "24:10": {
-          "id:3": 545,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 120
-        },
-        "25:10": {
+        "20:10": {
           "id:3": 546,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": 144
         },
-        "26:10": {
+        "21:10": {
           "id:3": 548,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 156
         },
-        "27:10": {
+        "22:10": {
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": 288
         },
-        "28:10": {
+        "23:10": {
           "id:3": 551,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
-          "y:3": 156
+          "x:3": 60,
+          "y:3": 120
         },
-        "29:10": {
-          "id:3": 552,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 408,
-          "y:3": -132
-        },
-        "30:10": {
-          "id:3": 553,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 456,
-          "y:3": -132
-        },
-        "31:10": {
+        "24:10": {
           "id:3": 554,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 192
+          "y:3": 174
         },
-        "32:10": {
+        "25:10": {
           "id:3": 555,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 336,
-          "y:3": -168
+          "x:3": 348,
+          "y:3": -96
         },
-        "33:10": {
+        "26:10": {
           "id:3": 556,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
+          "x:3": 252,
           "y:3": -96
         },
-        "34:10": {
+        "27:10": {
           "id:3": 557,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": -216
+          "x:3": 276,
+          "y:3": -180
         },
-        "35:10": {
+        "28:10": {
           "id:3": 558,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": -216
+          "x:3": 324,
+          "y:3": -180
         },
-        "36:10": {
+        "29:10": {
           "id:3": 559,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
-          "y:3": -168
+          "x:3": 300,
+          "y:3": -132
         },
-        "37:10": {
+        "30:10": {
           "id:3": 560,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 300,
-          "y:3": -168
+          "x:3": 348,
+          "y:3": -132
         },
-        "38:10": {
+        "31:10": {
           "id:3": 561,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 276
         },
-        "39:10": {
+        "32:10": {
           "id:3": 564,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 120
+          "y:3": 138
         },
-        "40:10": {
-          "id:3": 565,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 408,
-          "y:3": -168
-        },
-        "41:10": {
+        "33:10": {
           "id:3": 566,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 324
         },
-        "42:10": {
+        "34:10": {
           "id:3": 567,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
-          "y:3": 354
+          "x:3": -60,
+          "y:3": 324
         },
-        "43:10": {
+        "35:10": {
           "id:3": 568,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 480,
           "y:3": -12
         },
-        "44:10": {
-          "id:3": 569,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 156
-        },
-        "45:10": {
-          "id:3": 570,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -102,
-          "y:3": 156
-        },
-        "46:10": {
+        "36:10": {
           "id:3": 571,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 552,
           "y:3": 0
         },
-        "47:10": {
+        "37:10": {
           "id:3": 572,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 552,
           "y:3": 36
         },
-        "48:10": {
+        "38:10": {
           "id:3": 573,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 552,
           "y:3": -36
         },
-        "49:10": {
+        "39:10": {
           "id:3": 574,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": 48
         },
-        "50:10": {
+        "40:10": {
           "id:3": 575,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -48
         },
-        "51:10": {
+        "41:10": {
           "id:3": 576,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 468,
           "y:3": 84
         },
-        "52:10": {
+        "42:10": {
           "id:3": 577,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 516,
           "y:3": 84
         },
-        "53:10": {
-          "id:3": 578,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 468,
-          "y:3": 132
-        },
-        "54:10": {
-          "id:3": 579,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 516,
-          "y:3": 132
-        },
-        "55:10": {
-          "id:3": 580,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 420,
-          "y:3": 132
-        },
-        "56:10": {
+        "43:10": {
           "id:3": 581,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
+          "x:3": 60,
           "y:3": 192
         },
-        "57:10": {
+        "44:10": {
           "id:3": 582,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": 120
+          "y:3": 138
         },
-        "58:10": {
+        "45:10": {
           "id:3": 583,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -84
         },
-        "59:10": {
+        "46:10": {
           "id:3": 584,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": 72
         },
-        "60:10": {
+        "47:10": {
           "id:3": 585,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
+          "x:3": 252,
           "y:3": -132
         },
-        "61:10": {
-          "id:3": 587,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 120
-        },
-        "62:10": {
+        "48:10": {
           "id:3": 588,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": 192
+          "y:3": 174
         },
-        "63:10": {
+        "49:10": {
           "id:3": 590,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 276
         },
-        "64:10": {
+        "50:10": {
           "id:3": 591,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -64262,27 +63538,34 @@
           "y:3": -12
         },
         "10:10": {
+          "id:3": 536,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 270,
+          "y:3": 78
+        },
+        "11:10": {
           "id:3": 563,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 36
         },
-        "11:10": {
+        "12:10": {
           "id:3": 712,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 270,
           "y:3": 30
         },
-        "12:10": {
-          "id:3": 740,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 228,
-          "y:3": 84
-        },
         "13:10": {
+          "id:3": 740,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 222,
+          "y:3": 78
+        },
+        "14:10": {
           "id:3": 745,
           "sizeX:3": 36,
           "sizeY:3": 36,
@@ -64328,7 +63611,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,

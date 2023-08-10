@@ -117,8 +117,8 @@ for (key in GrindstoneMap) {
     reg.addRecipe(builder.build())
 }
 
-for (int i = 0; i < 16; i++) {
-    crafting.addShaped("biomesoplenty:wood_cutting_" + i, item('biomesoplenty:planks_0', i) * 6, [
+for (int i = 4; i < 8; i++) {
+    crafting.addShaped("biomesoplenty:wood_cutting_0_" + i, item('biomesoplenty:planks_0', i - 4) * 6, [
             [null, ore('toolSaw'), null],
             [null, item('biomesoplenty:log_0', i), null],
             [null, null, null]
@@ -126,25 +126,62 @@ for (int i = 0; i < 16; i++) {
 
     mods.gregtech.cutter.recipeBuilder()
             .inputs(item('biomesoplenty:log_0', i))
+            .outputs(item('biomesoplenty:planks_0', i - 4) * 6)
+            .outputs(metaitem('dustWood') * 2)
+            .duration(200)
+            .EUt(7)
+            .buildAndRegister();
+
+    crafting.addShaped("biomesoplenty:wood_cutting_1_" + i, item('biomesoplenty:planks_0', i) * 6, [
+            [null, ore('toolSaw'), null],
+            [null, item('biomesoplenty:log_1', i), null],
+            [null, null, null]
+    ])
+
+    mods.gregtech.cutter.recipeBuilder()
+            .inputs(item('biomesoplenty:log_1', i))
             .outputs(item('biomesoplenty:planks_0', i) * 6)
             .outputs(metaitem('dustWood') * 2)
             .duration(200)
             .EUt(7)
             .buildAndRegister();
-}
 
-for (int i = 0; i < 9; i++) {
-    crafting.addShaped("gtfo:wood_cutting_" + i, item('gregtechfoodoption:gtfo_planks_0', i) * 6, [
+    crafting.addShaped("biomesoplenty:wood_cutting_2_" + i, item('biomesoplenty:planks_0', i + 4) * 6, [
             [null, ore('toolSaw'), null],
-            [null, item('gregtechfoodoption:gtfo_log_0', i), null],
+            [null, item('biomesoplenty:log_2', i), null],
             [null, null, null]
     ])
 
     mods.gregtech.cutter.recipeBuilder()
-            .inputs(item('gregtechfoodoption:gtfo_log_0', i))
-            .outputs(item('gregtechfoodoption:gtfo_planks_0', i) * 6)
+            .inputs(item('biomesoplenty:log_2', i))
+            .outputs(item('biomesoplenty:planks_0', i + 4) * 6)
+            .outputs(metaitem('dustWood') * 2)
+            .duration(200)
+            .EUt(7)
+            .buildAndRegister();
+
+    crafting.addShaped("biomesoplenty:wood_cutting_3_" + i, item('biomesoplenty:planks_0', i + 8) * 6, [
+            [null, ore('toolSaw'), null],
+            [null, item('biomesoplenty:log_3', i), null],
+            [null, null, null]
+    ])
+
+    mods.gregtech.cutter.recipeBuilder()
+            .inputs(item('biomesoplenty:log_3', i))
+            .outputs(item('biomesoplenty:planks_0', i + 8) * 6)
             .outputs(metaitem('dustWood') * 2)
             .duration(200)
             .EUt(7)
             .buildAndRegister();
 }
+
+
+crafting.addShapeless("gtfo:wood_crafting_0", item('gregtechfoodoption:gtfo_planks_0') * 4, [item('gregtechfoodoption:gtfo_log_0')])
+crafting.addShapeless("gtfo:wood_crafting_1", item('gregtechfoodoption:gtfo_planks_0:1') * 4, [item('gregtechfoodoption:gtfo_log_0:4')])
+crafting.addShapeless("gtfo:wood_crafting_2", item('gregtechfoodoption:gtfo_planks_0:2') * 4, [item('gregtechfoodoption:gtfo_log_0:8')])
+crafting.addShapeless("gtfo:wood_crafting_3", item('gregtechfoodoption:gtfo_planks_0:3') * 4, [item('gregtechfoodoption:gtfo_log_0:12')])
+crafting.addShapeless("gtfo:wood_crafting_4", item('gregtechfoodoption:gtfo_planks_0:4') * 4, [item('gregtechfoodoption:gtfo_log_1')])
+crafting.addShapeless("gtfo:wood_crafting_5", item('gregtechfoodoption:gtfo_planks_0:5') * 4, [item('gregtechfoodoption:gtfo_log_1:4')])
+crafting.addShapeless("gtfo:wood_crafting_6", item('gregtechfoodoption:gtfo_planks_0:6') * 4, [item('gregtechfoodoption:gtfo_log_1:8')])
+crafting.addShapeless("gtfo:wood_crafting_7", item('gregtechfoodoption:gtfo_planks_0:7') * 4, [item('gregtechfoodoption:gtfo_log_1:12')])
+crafting.addShapeless("gtfo:wood_crafting_8", item('gregtechfoodoption:gtfo_planks_0:8') * 4, [item('gregtechfoodoption:gtfo_log_2')])

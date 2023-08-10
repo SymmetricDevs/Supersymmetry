@@ -1,6 +1,5 @@
 import static globals.Globals.*
 
-
 class Blastable {
     String name
     int amount_required
@@ -31,19 +30,6 @@ class Reductant {
     }
 }
 
-class Combustible {
-    String name
-    String byproduct
-    int amount_required
-    int duration
-    Combustible(name, amount_required, duration, byproduct = 'dustTinyDarkAsh') {
-        this.name = name
-        this.amount_required = amount_required
-        this.duration = duration
-        this.byproduct = byproduct
-    }
-}
-
 def PBF_RECIPES = recipemap("primitive_blast_furnace")
 def EBF_RECIPES = recipemap("electric_blast_furnace")
 
@@ -67,17 +53,7 @@ def reductants = [
     new Reductant('hydrogen', 'steam', 2, 1)
 ]
 
-def combustibles = [
-    new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
-    new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
-    new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
-    new Combustible('dustAnthracite', 1, 2, 'dustTinyAsh'),
-    new Combustible('gemCoal', 2, 4),
-    new Combustible('dustCoal', 2, 4),
-    new Combustible('gemCharcoal', 2, 4),
-    new Combustible('dustCharcoal', 2, 4)
-]
-
+def combustibles = Globals.combustibles
 
 for (blastable in blastables) {
     for (combustible in combustibles) {
@@ -218,7 +194,7 @@ RF.recipeBuilder()
 
 DISTILLERY.recipeBuilder()
         .fluidInputs(fluid('crude_iron_pentacarbonyl') * 1000)
-        .fluidOutputs(fluid('iron_pentacarbonyl') * 900)
+        .fluidOutputs(fluid('iron_pentacarbonyl') * 1000)
         .duration(300)
         .EUt(30)
         .buildAndRegister()
@@ -248,3 +224,22 @@ EBF_RECIPES.recipeBuilder()
         .blastFurnaceTemp(1200)
         .EUt(30)
         .buildAndRegister()
+
+//HYDROXIDE PROCESSING
+def ROASTER = recipemap('roaster')
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustIronIiiHydroxide') * 14)
+    .outputs(metaitem('dustIronIiiOxide') * 5)
+    .fluidOutputs(fluid('steam') * 3000)
+    .duration(80)
+    .EUt(30)
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustIronIiHydroxide') * 5)
+    .outputs(metaitem('dustIronIiOxide') * 2)
+    .fluidOutputs(fluid('steam') * 1000)
+    .EUt(Globals.voltAmps[1])
+    .duration(200)
+    .buildAndRegister()

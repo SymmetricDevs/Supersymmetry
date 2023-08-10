@@ -28,6 +28,8 @@ POLYMERIZATION_TANK = recipemap('polymerization_tank')
 BCR = recipemap('bubble_column_reactor')
 TBR = recipemap('trickle_bed_reactor')
 LCR = recipemap('large_chemical_reactor')
+AUTOCLAVE = recipemap('autoclave')
+UV_LIGHT_BOX = recipemap('uv_light_box')
 
 class Oil {
     String name
@@ -510,6 +512,14 @@ CENTRIFUGE.recipeBuilder()
         .EUt(Globals.voltAmps[0])
         .buildAndRegister()
 
+MIXER.recipeBuilder()
+        .inputs(ore('dustAsphalt'))
+        .fluidInputs(fluid('concrete') * 144)
+        .outputs(item('gregtech:asphalt') * 2)
+        .duration(30)
+        .EUt(16)
+        .buildAndRegister()
+
 // Bituminous Residue -> Coke
 
 COKING.recipeBuilder()
@@ -810,6 +820,7 @@ EBF.recipeBuilder()
 .inputs(metaitem('spent_cracking_catalyst'))
 .fluidOutputs(fluid('flue_gas') * 1000)
 .outputs(metaitem('cracking_catalyst'))
+.blastFurnaceTemp(1200)
 .duration(200)
 .EUt(Globals.voltAmps[1] * 2)
 .buildAndRegister()
@@ -1072,6 +1083,107 @@ DT.recipeBuilder()
 .EUt(Globals.voltAmps[1] * 2)
 .buildAndRegister()
 
+// XYLENE SEPARATION
+DT.recipeBuilder()
+.fluidInputs(fluid('xylene') * 1000)
+.fluidOutputs(fluid('ortho_xylene') * 200)
+.fluidOutputs(fluid('meta_para_xylene_mixture') * 800)
+.duration(500)
+.EUt(Globals.voltAmps[1] * 2)
+.buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+.fluidInputs(fluid('meta_para_xylene_mixture') * 4000)
+.outputs(metaitem('dustParaXylene'))
+.fluidOutputs(fluid('meta_xylene') * 3000)
+.duration(500)
+.EUt(Globals.voltAmps[1])
+.buildAndRegister()
+
+BR.recipeBuilder()
+.inputs(metaitem('dustDicobaltOctacarbonyl') * 18)
+.fluidInputs(fluid('hydrogen') * 2000)
+.fluidInputs(fluid('carbon_monoxide') * 1000)
+.fluidInputs(fluid('propene') * 1000)
+.fluidOutputs(fluid('propanal_mixture') * 1000)
+.EUt(Globals.voltAmps[3])
+.duration(80)
+.buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+.fluidInputs(fluid('pentanal_mixture') * 1000)
+.outputs(metaitem('dustDicobaltOctacarbonyl') * 18)
+.fluidOutputs(fluid('propionaldehyde') * 800)
+.EUt(Globals.voltAmps[3])
+.duration(80)
+.buildAndRegister()
+
+FBR.recipeBuilder()
+.fluidInputs(fluid('propionaldehyde') * 50)
+.fluidInputs(fluid('hydrogen') * 100)
+.notConsumable(metaitem('hv_catalyst_bed_reduction'))
+.fluidOutputs(fluid('n_propanol') * 50)
+.EUt(Globals.voltAmps[3])
+.duration(4)
+.buildAndRegister()
+
+FBR.recipeBuilder()
+.fluidInputs(fluid('valeraldehyde') * 50)
+.fluidInputs(fluid('hydrogen') * 100)
+.notConsumable(metaitem('catalystBedPlatinum'))
+.fluidOutputs(fluid('n_propanol') * 50)
+.EUt(Globals.voltAmps[3])
+.duration(4)
+.buildAndRegister()
+
+FBR.recipeBuilder()
+.notConsumable(metaitem('catalystBedAlumina'))
+.fluidInputs(fluid('ammonia') * 50)
+.fluidInputs(fluid('n_propanol') * 150)
+.fluidOutputs(fluid('tripropylamine') * 50)
+.fluidOutputs(fluid('water') * 150)
+.duration(5)
+.EUt(120)
+.buildAndRegister();
+
+BR.recipeBuilder()
+.notConsumable(metaitem('emitter.lv'))
+.notConsumable(fluid('hydrogen_peroxide') * 50)
+.fluidInputs(fluid('hydrobromic_acid') * 1000)
+.fluidInputs(fluid('propene') * 1000)
+.fluidOutputs(fluid('n_bromopropane') * 1000)
+.duration(5)
+.EUt(120)
+.buildAndRegister();
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('n_bromopropane') * 50)
+.fluidInputs(fluid('tripropylamine') * 50)
+.fluidOutputs(fluid('tetrapropylammonium_bromide') * 50)
+.duration(5)
+.EUt(120)
+.buildAndRegister();
+
+LCR.recipeBuilder()
+.inputs(ore('dustSiliconDioxide') * 6)
+.inputs(ore('dustAluminiumSulfate') * 51)
+.inputs(ore('dustSodiumHydroxide'))
+.fluidInputs(fluid('ethanol') * 100)
+.fluidInputs(fluid('demineralized_water') * 1800)
+.fluidInputs(fluid('tetrapropylammonium_bromide') * 100)
+.outputs(metaitem('dustZsmFive'))
+.duration(500)
+.EUt(480)
+.buildAndRegister();
+
+REFORMER.recipeBuilder()
+.notConsumable(metaitem('catalystBedZsmFive'))
+.fluidInputs(fluid('meta_xylene') * 1000)
+.fluidOutputs(fluid('para_xylene') * 1000)
+.duration(60)
+.EUt(Globals.voltAmps[1] * 2)
+.buildAndRegister()
+
 // FUEL ADDITIVES
 
 CSTR.recipeBuilder()
@@ -1331,41 +1443,6 @@ DT.recipeBuilder()
         .EUt(120)
         .buildAndRegister()
 
-def OxygenateMap = [
-        'ethanol': 500,
-        'methanol': 500,
-        'n_butanol': 100,
-        'tert_butyl_alcohol': 100,
-        'isopropyl_alcohol': 200,
-        'ethyl_tertbutyl_ether': 150
-]
-
-def AntioxidantsMap = [
-        'butylated_hydroxytoluene': 300,
-        'dimethyl_tert_butylphenol': 300,
-        'di_tert_butylphenol': 300,
-        'ethylenediamine': 300
-]
-
-def AntiknockMap = [
-        'toluene': 500,
-        'isooctane': 300,
-        'tetraethyllead': 100
-]
-
-def GeneralAdditiveMap = [
-        'acetone': 500,
-        'diethyl_ether': 500,
-        'nitromethane': 500
-]
-
-def AdditivesMap = [
-        'gasoline_general_additives',
-        'gasoline_antioxidants',
-        'gasoline_oxygenates',
-        'gasoline_antiknock'
-]
-
 //TODO: MOVE TO LARGE MIXING MULTIBLOCK WHEN IT'S DONE
 
 LCR.recipeBuilder()
@@ -1481,68 +1558,86 @@ LCR.recipeBuilder()
         .EUt(120)
         .buildAndRegister()
 
-GeneralAdditiveMap.each { key, val ->
-    GeneralAdditiveMap.each { key2, val2 ->
-        if (!key.equals(key2)) {
-            MIXER.recipeBuilder()
-                    .fluidInputs(fluid(key) * val)
-                    .fluidInputs(fluid(key2) * val2)
-                    .fluidOutputs(fluid('gasoline_general_additives') * 1000)
-                    .duration(200)
-                    .EUt(120)
-                    .buildAndRegister()
+def OxygenateMap = [
+        'ethanol': 500,
+        'methanol': 500,
+        'n_butanol': 100,
+        'tert_butyl_alcohol': 100,
+        'isopropyl_alcohol': 200,
+        'ethyl_tertbutyl_ether': 150
+]
+
+def AntioxidantMap = [
+        'butylated_hydroxytoluene': 300,
+        'dimethyl_tert_butylphenol': 300,
+        'di_tert_butylphenol': 300,
+        'ethylenediamine': 300
+]
+
+def AntiknockMap = [
+        'toluene': 500,
+        'isooctane': 300,
+        'tetraethyllead': 100
+]
+
+def GeneralAdditiveMap = [
+        'acetone': 500,
+        'diethyl_ether': 500,
+        'nitromethane': 500
+]
+
+def AdditivesMap = [
+        'gasoline_general_additives',
+        'gasoline_antioxidants',
+        'gasoline_oxygenates',
+        'gasoline_antiknock'
+]
+
+def getUniquePairs(Map materialsMap) {
+    def pairs = []
+
+    materialsMap.each { material1, _ ->
+        materialsMap.each { material2, __ ->
+            if (material1 == material2) { return }
+            def combinationExists = pairs.any { combination -> combination.contains(material1) && combination.contains(material2) }
+            if (!combinationExists) { pairs << [material1, material2] }
         }
     }
+
+    return pairs
 }
 
-OxygenateMap.each { key, val ->
-    OxygenateMap.each { key2, val2 ->
-        if (!key.equals(key2)) {
-            MIXER.recipeBuilder()
-                    .fluidInputs(fluid(key) * val)
-                    .fluidInputs(fluid(key2) * val2)
-                    .fluidOutputs(fluid('gasoline_oxygenates') * 1000)
-                    .duration(200)
-                    .EUt(120)
-                    .buildAndRegister()
-        }
-    }
-}
-
-AntioxidantsMap.each { key, val ->
-    AntioxidantsMap.each { key2, val2 ->
-        if (!key.equals(key2)) {
-            MIXER.recipeBuilder()
-                    .fluidInputs(fluid(key) * val)
-                    .fluidInputs(fluid(key2) * val2)
-                    .fluidOutputs(fluid('gasoline_antioxidants') * 1000)
-                    .duration(200)
-                    .EUt(120)
-                    .buildAndRegister()
-        }
-    }
+getUniquePairs(GeneralAdditiveMap).each { key, val -> 
     MIXER.recipeBuilder()
-            .inputs(ore('dustParaPhenylenediamine'))
-            .fluidInputs(fluid(key) * val)
-            .fluidOutputs(fluid('gasoline_antioxidants') * 1000)
-            .duration(200)
-            .EUt(120)
-            .buildAndRegister()
+        .fluidInputs(fluid(key) * GeneralAdditiveMap[key])
+        .fluidInputs(fluid(val) * GeneralAdditiveMap[val])
+        .fluidOutputs(fluid('gasoline_general_additives') * 1000)
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
+}
+
+getUniquePairs(OxygenateMap).each { key, val -> 
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid(key) * OxygenateMap[key])
+        .fluidInputs(fluid(val) * OxygenateMap[val])
+        .fluidOutputs(fluid('gasoline_oxygenates') * 1000)
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
+}
+
+getUniquePairs(AntioxidantMap).each { key, val -> 
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid(key) * AntioxidantMap[key])
+        .fluidInputs(fluid(val) * AntioxidantMap[val])
+        .fluidOutputs(fluid('gasoline_antioxidants') * 1000)
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
 }
 
 AntiknockMap.each { key, val ->
-    AntiknockMap.each { key2, val2 ->
-        if (!key.equals(key2)) {
-            MIXER.recipeBuilder()
-                    .fluidInputs(fluid(key) * val)
-                    .fluidInputs(fluid(key2) * val2)
-                    .fluidOutputs(fluid('gasoline_antiknock') * 1000)
-                    .duration(200)
-                    .EUt(120)
-                    .buildAndRegister()
-        }
-    }
-
     MIXER.recipeBuilder()
             .inputs(ore('dustFerrocene'))
             .fluidInputs(fluid(key) * val)
@@ -1550,6 +1645,16 @@ AntiknockMap.each { key, val ->
             .duration(200)
             .EUt(120)
             .buildAndRegister()
+}
+
+getUniquePairs(AntiknockMap).each { key, val -> 
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid(key) * AntiknockMap[key])
+        .fluidInputs(fluid(val) * AntiknockMap[val])
+        .fluidOutputs(fluid('gasoline_antiknock') * 1000)
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
 }
 
 // Cetane-Boosted Diesel * 750

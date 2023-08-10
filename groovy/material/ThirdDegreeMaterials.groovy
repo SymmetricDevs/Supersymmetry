@@ -154,11 +154,11 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        DilutedTetraoctylDiglycolamide = new Material.Builder(24023, "diluted_tetraoctyl_diglycolamide")
-                .fluid()
-                .components(TetraoctylDiglycolamide, 1, SaltWater, 2)
+        ZirconiumTetrachlorideTetrahydrofuranComplex = new Material.Builder(24023, "zirconium_tetrachloride_tetrahydrofuran_complex")
+                .dust()
+                .components(ZirconiumTetrachloride, 1, Tetrahydrofuran, 2)
                 .colorAverage()
-                .build()
+                .build();
 
         DilutedTwoEthylTwoHexenal = new Material.Builder(24024, "diluted_two_ethyl_two_hexenal")
                 .fluid()
@@ -166,11 +166,11 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        DilutedOctylamine = new Material.Builder(24025, 'diluted_octylamine')
+        PotassiumButylXanthateSolution = new Material.Builder(24025, "potassium_butyl_xanthate_solution")
                 .fluid()
-                .components(NOctylamine, 1, Water, 1)
+                .components(PotassiumButylXanthate, 1, Water, 1)
                 .colorAverage()
-                .build()
+                .build();
 
         DilutedMethylIsobutylKetone = new Material.Builder(24026, 'diluted_methyl_isobutyl_ketone')
                 .fluid()
@@ -269,16 +269,28 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        ZirconiumTetrachlorideTetrahydrofuranComplex = new Material.Builder(24042, "zirconium_tetrachloride_tetrahydrofuran_complex")
-                .dust()
-                .components(ZirconiumTetrachloride, 1, Tetrahydrofuran, 2)
+        TNTSolution = new Material.Builder(24042, 'tnp_solution')
+                .fluid()
+                .components(PicricAcid, 1, DilutedSulfuricAcid, 1)
                 .colorAverage()
                 .build();
 
-        PotassiumButylXanthateSolution = new Material.Builder(24043, "potassium_butyl_xanthate_solution")
+        IsophthaloylDichlorideSolution = new Material.Builder(24043, 'isophthaloyl_dichloride_solution')
                 .fluid()
-                .components(PotassiumButylXanthate, 1, Water, 1)
+                .components(AceticAcid, 1, Water, 1, IsophthaloylDichloride, 1)
                 .colorAverage()
                 .build();
+
+        IsophthalicAcidSolution = new Material.Builder(24044, 'isophthalic_acid_solution')
+                .fluid()
+                .components(AceticAcid, 1, Water, 1, IsophthalicAcid, 1)
+                .colorAverage()
+                .build()
+
+        DichloroethaneIsophthalicAcidSolution = new Material.Builder(24045, 'dichloroethane_isophthalic_acid_solution')
+                .fluid()
+                .components(Dichloroethane, 1, IsophthalicAcid, 1)
+                .colorAverage()
+                .build()
     }
 }

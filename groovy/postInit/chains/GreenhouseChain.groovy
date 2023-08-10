@@ -67,12 +67,12 @@ def potassiumNutrients = [
 ];
 
 def phosphorusNutrients = [
-        metaitem('dustCalcite'),
         metaitem('dustChlorapatite'),
         metaitem('dustHydroxyapatite'),
         metaitem('dustFluorapatite'),
         metaitem('dustTricalciumPhosphate'),
         metaitem('dustPhosphorus'),
+        metaitem('dustPhosphorite'),
         item('minecraft:dye', 15)
 ];
 
@@ -636,13 +636,13 @@ GREENHOUSE.recipeBuilder()
 GREENHOUSE.recipeBuilder()
         .notConsumable(item('biomesoplenty:sapling_1', 7))
         .notConsumable(Globals.circuit(1))
-        .fluidInputs(fluid('greenhouse_gases') * 10000)
-        .fluidInputs(fluid('water') * 5000)
-        .inputs(metaitem('fertilizer') * 4)
+        .fluidInputs(fluid('greenhouse_gases') * 20000)
+        .fluidInputs(fluid('water') * 20000)
+        .inputs(metaitem('fertilizer') * 16)
         .outputs(item('minecraft:log') * 120)
         .outputs(item('minecraft:leaves') * 64)
         .EUt(30)
-        .duration(4800)
+        .duration(6000)
         .buildAndRegister()
 
 generateGreenhouseTreeRecipes('greenhouse_gases', item('biomesoplenty:sapling_0', 1), item('biomesoplenty:leaves_0', 1), item('minecraft:log2', 1))

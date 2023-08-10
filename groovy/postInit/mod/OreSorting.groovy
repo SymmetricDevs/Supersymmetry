@@ -19,7 +19,6 @@ def orthomagmatic_tier_1 = [
 def orthomagmatic_tier_2 = [
     'gregtech:ore_spodumene_0' : 10000,
     'gregtech:ore_lepidolite_0' : 10000,
-    'gregtech:ore_perovskite_0' : 10000,
     'gregtech:ore_chromite_0' : 10000,
     'gregtech:ore_magnetite_0' : 10000,
     'gregtech:ore_chalcopyrite_0' : 10000,
@@ -300,7 +299,8 @@ def hydrothermal_tier_4 = [
     'gregtech:ore_witherite_0' : 10000,
     'gregtech:ore_cinnabar_0' : 10000,
     'gregtech:ore_galena_0' : 10000,
-    'gregtech:ore_bismuthinite_0' : 10000
+    'gregtech:ore_bismuthinite_0' : 10000,
+    'gregtech:ore_scheelite_0' : 10000
 ];
 
 def alluvial_tier_1 = [
@@ -353,7 +353,7 @@ for (rock in rocks) {
         recipe.circuitMeta(a)
         recipe.inputs(metaitem(rock.input_rock) * (oreList.size()));
         for (ore in oreList) {
-            recipe.chancedOutput(item(ore.getKey()), oreList[ore.getKey()], 0);
+            if (ore.getKey() == 'gregtech:ore_coal_0') { recipe.chancedOutput(item(ore.getKey()) * 2, oreList[ore.getKey()], 0); } else { recipe.chancedOutput(item(ore.getKey()), oreList[ore.getKey()], 0); }   
         }
         recipe.duration(20);
         recipe.EUt(Globals.voltAmps[rock.starting_tier + a]);

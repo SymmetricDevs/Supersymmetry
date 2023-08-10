@@ -158,7 +158,7 @@ public class SecondDegreeMaterials {
 
         ImpregnatedCopperOxideCatalyst = new Material.Builder(13023, "impregnated_copper_oxide_catalyst")
                 .dust()
-                .components(CopperIIOxide, 1, Alumina, 1)
+                .components(CupricOxide, 1, Alumina, 1)
                 .colorAverage()
                 .build()
 
@@ -410,12 +410,6 @@ public class SecondDegreeMaterials {
                 .components(ChromiumIIIOxide, 1, SodaAsh, 1)
                 .build();
 
-        SodiumVanadateSolution = new Material.Builder(13065, "sodium_vanadate_solution")
-                .fluid()
-                .components(Water, 1, SodiumVanadate, 1)
-                .colorAverage()
-                .build();
-
         LeadChlorideSolution = new Material.Builder(13066, "lead_chloride_solution")
                 .fluid()
                 .fluidTemp(343)
@@ -483,5 +477,11 @@ public class SecondDegreeMaterials {
                 .components(AmmoniumChloride, 1, Water, 8)
                 .colorAverage()
                 .build();
+
+        AmmoniacalSodiumBicarbonateSolution = new Material.Builder(13077, "ammoniacal_sodium_bicarbonate_solution")
+                .fluid()
+                .components(AmmoniumChloride, 1, SodiumBicarbonate, 1, Water, 1)
+                .colorAverage()
+                .build()
     }
 }

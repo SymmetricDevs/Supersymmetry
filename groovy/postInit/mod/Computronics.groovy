@@ -1,3 +1,4 @@
+/*
 import pl.asie.computronics.integration.ModRecipes;
 
 ModRecipes.instance = null;
@@ -387,3 +388,5 @@ crafting.addShaped('computronics:iron_note_block0', item('computronics:iron_note
     [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
     [ore('plateSteel'), item('minecraft:noteblock'), ore('plateSteel')],
     [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')]])
+
+ */

@@ -1,35 +1,12 @@
+import static globals.Globals.*
+
 PRIMITIVEBLASTFURNACE = recipemap('primitive_blast_furnace')
 EBF = recipemap('electric_blast_furnace')
 ROASTER = recipemap('roaster')
 REACTION_FURNACE = recipemap('reaction_furnace')
 BR = recipemap('batch_reactor')
 
-class Combustible {
-    String name
-    String byproduct
-    int amount_required
-    int duration
-    Combustible(name, amount_required, duration, byproduct = 'dustTinyDarkAsh') {
-        this.name = name
-        this.amount_required = amount_required
-        this.duration = duration
-        this.byproduct = byproduct
-    }
-}
-
-def combustibles = [
-        new Combustible('dustCarbon', 1, 3, 'dustTinyAsh'),
-        new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
-        new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
-        new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
-        new Combustible('dustAnthracite', 1, 2, 'dustTinyAsh'),
-        new Combustible('gemCoal', 2, 4),
-        new Combustible('dustCoal', 2, 4),
-        new Combustible('gemCharcoal', 2, 4),
-        new Combustible('dustCharcoal', 2, 4)
-]
-
-for (combustible in combustibles) {
+for (combustible in Globals.combustibles) {
     PRIMITIVEBLASTFURNACE.recipeBuilder()
             .inputs(ore('dustNickel'))
             .inputs(ore(combustible.name) * (combustible.amount_required))

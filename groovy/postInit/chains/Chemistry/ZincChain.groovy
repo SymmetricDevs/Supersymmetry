@@ -111,6 +111,7 @@ CLARIFIER.recipeBuilder()
 
 ROASTER.recipeBuilder()
         .inputs(metaitem('dustSphalerite') * 1)
+        .fluidInputs(fluid('oxygen') * 2000)
         .fluidOutputs(fluid('sulfur_dioxide') * 1000)
         .outputs(metaitem('dustZincite') * 2)
         .EUt(30)
