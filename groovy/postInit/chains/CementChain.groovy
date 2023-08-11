@@ -22,7 +22,7 @@ for (fuel in sintering_fuels) {
     if (fuel.isPlasma) {
         SINTERING_RECIPES.recipeBuilder()
         .inputs(ore('dustClay'))
-        .inputs(metaitem('dustLimestone'))
+        .inputs(ore('dustLimestone'))
         .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
         .outputs(metaitem('hot.cement.clinker'))
         .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
@@ -32,7 +32,7 @@ for (fuel in sintering_fuels) {
 
         SINTERING_RECIPES.recipeBuilder()
         .inputs(ore('dustClay'))
-        .inputs(metaitem('dustLimestone'))
+        .inputs(ore('dustLimestone'))
         .inputs(ore('dustTinyGypsum'))
         .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
         .outputs(metaitem('hot.cement.clinker'))
@@ -45,7 +45,7 @@ for (fuel in sintering_fuels) {
         for (comburent in sintering_comburents) {
             SINTERING_RECIPES.recipeBuilder()
             .inputs(ore('dustClay'))
-            .inputs(metaitem('dustLimestone'))
+            .inputs(ore('dustLimestone'))
             .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
             .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
             .outputs(metaitem('hot.cement.clinker'))
@@ -56,7 +56,7 @@ for (fuel in sintering_fuels) {
 
             SINTERING_RECIPES.recipeBuilder()
             .inputs(ore('dustClay'))
-            .inputs(metaitem('dustLimestone'))
+            .inputs(ore('dustLimestone'))
             .inputs(ore('dustTinyGypsum'))
             .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
             .fluidInputs(fluid(comburent.name) * comburent.amountRequired)

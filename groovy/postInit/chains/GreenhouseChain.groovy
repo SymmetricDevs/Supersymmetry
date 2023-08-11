@@ -90,7 +90,7 @@ for (p in phosphorusNutrients) {
         }
     }
     MIXER.recipeBuilder()
-            .inputs(metaitem('dustAmmoniumDihydrogenPhosphate') * 2)
+            .inputs(ore('dustAmmoniumDihydrogenPhosphate') * 2)
             .inputs(p)
             .outputs(metaitem('fertilizer') * 5)
             .EUt(30)
@@ -98,7 +98,7 @@ for (p in phosphorusNutrients) {
             .buildAndRegister()
 
     MIXER.recipeBuilder()
-            .inputs(metaitem('dustSaltpeter') * 2)
+            .inputs(ore('dustSaltpeter') * 2)
             .inputs(p)
             .outputs(metaitem('fertilizer') * 5)
             .EUt(30)
@@ -148,7 +148,7 @@ PYROLYSE_OVEN.recipeBuilder()
 // WEED KILLERS & PESTICIDES
 
 MIXER.recipeBuilder()
-        .inputs(metaitem('dustSalt') * 2)
+        .inputs(ore('dustSalt') * 2)
         .fluidInputs(fluid('acetic_acid') * 100)
         .fluidInputs(fluid('gtfo_sodium_stearate') * 100)
         .fluidInputs(fluid('water') * 1000)

@@ -4,7 +4,7 @@ AUTOCLAVE = recipemap('autoclave')
 DRYER = recipemap('dryer')
 
 ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('wireFineAluminium') * 8)
+        .inputs(ore('wireFineAluminium') * 8)
         .circuitMeta(8)
         .outputs(metaitem('zeolite_membrane_support') * 1)
         .duration(180)

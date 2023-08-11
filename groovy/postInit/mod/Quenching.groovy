@@ -81,7 +81,7 @@ def ingotMap = [
 for (entry in ingotMap) {
     for (fluid in IQuenchingFluid.quenching_fluids) {
         recipemap('quencher').recipeBuilder()
-                .inputs(metaitem('ingotHot' + entry.key))
+                .inputs(ore('ingotHot' + entry.key))
                 .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
                 .outputs(metaitem('ingot' + entry.key))
                 .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)

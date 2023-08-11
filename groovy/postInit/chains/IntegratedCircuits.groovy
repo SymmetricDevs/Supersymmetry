@@ -3,7 +3,7 @@
 mods.gregtech.assembler.removeByInput(120, [metaitem('plateSilicon'), metaitem('wireFineTin') * 6], [fluid('plastic') * 144])
 
 mods.gregtech.assembler.recipeBuilder()
-        .inputs(metaitem('wireFineTin') * 6)
+        .inputs(ore('wireFineTin') * 6)
         .inputs(metaitem('wafer.silicon'))
         .fluidInputs(fluid('plastic') * 144)
         .outputs(metaitem('component.transistor') * 8)

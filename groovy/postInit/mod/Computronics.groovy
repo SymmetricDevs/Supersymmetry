@@ -100,7 +100,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(ore('foilPlastic') * 4)
-			.inputs(metaitem('dustTinyIronMagnetic'))
+			.inputs(ore('dustTinyIronMagnetic'))
             .outputs(item('computronics:parts'))
             .duration(400)
             .EUt(30)
@@ -199,7 +199,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('power_unit.mv'))
-			.inputs(metaitem('plateAluminium') * 4)
+			.inputs(ore('plateAluminium') * 4)
 			.inputs(ore('wireFineRedAlloy') * 4)
             .outputs(item('computronics:portable_tape_drive'))
             .duration(400)
@@ -361,7 +361,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.circuit_assembler.recipeBuilder()
 			.inputs(item('computronics:speaker'))
-			.inputs(metaitem('plateSteel') * 4)
+			.inputs(ore('plateSteel') * 4)
 			.inputs(item('opencomputers:component', 1))
 			.inputs(item('opencomputers:component', 4))
             .fluidInputs(solder)
@@ -373,7 +373,7 @@ for (solder in soldering_alloys) {
 
 	mods.gregtech.circuit_assembler.recipeBuilder()
 			.inputs(item('computronics:speech_box'))
-			.inputs(metaitem('plateSteel') * 4)
+			.inputs(ore('plateSteel') * 4)
 			.inputs(item('opencomputers:component', 4))
 			.fluidInputs(solder)
 			.circuitMeta([1])

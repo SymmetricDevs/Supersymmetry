@@ -14,7 +14,7 @@ Globals.solders.each { key, val ->
             .inputs(ore('componentDiode') * 4)
             .inputs(metaitem('plate.random_access_memory') * 4)
             .inputs(metaitem('plate.nand_memory_chip') * 4)
-            .inputs(metaitem('cableGtSingleElectrum') * 4)
+            .inputs(ore('cableGtSingleElectrum') * 4)
             .fluidInputs(fluid(key) * val)
             .outputs(metaitem('circuit.workstation'))
             .cleanroom(CleanroomType.CLEANROOM)

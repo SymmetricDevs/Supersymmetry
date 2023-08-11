@@ -200,7 +200,7 @@ REACTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 ELECTROLYTIC_CELL.recipeBuilder()
-    .inputs(metaitem('plateBlisterCopper') * 4)
+    .inputs(ore('plateBlisterCopper') * 4)
     .notConsumable(metaitem('plateStainlessSteel') * 4)
     .notConsumable(fluid('copper_sulfate_solution') * 1000)
     .fluidInputs(fluid('diluted_sulfuric_acid') * 320)

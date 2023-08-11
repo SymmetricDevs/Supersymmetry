@@ -8,7 +8,7 @@ import gregtech.api.unification.stack.UnificationEntry;
 def ROASTER_RECIPES = recipemap('roaster');
 
 ROASTER_RECIPES.recipeBuilder()
-.inputs(metaitem('dustPyrite') * 2)
+.inputs(ore('dustPyrite') * 2)
 .outputs(metaitem('dustIronIiiSulfate'))
 .outputs(metaitem('dustSulfur'))
 .duration(80)
@@ -16,7 +16,7 @@ ROASTER_RECIPES.recipeBuilder()
 .buildAndRegister()
 
 ROASTER_RECIPES.recipeBuilder()
-.inputs(metaitem('dustIronIiiSulfate'))
+.inputs(ore('dustIronIiiSulfate'))
 .outputs(metaitem('dustBandedIron'))
 .fluidOutputs(fluid('sulfur_trioxide') * 3000)
 .duration(160)
