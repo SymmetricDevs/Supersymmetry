@@ -7,6 +7,7 @@ CSTR = recipemap('continuous_stirred_tank_reactor')
 CRYSTALLIZER = recipemap('crystallizer')
 EBF = recipemap('electric_blast_furnace')
 SIFTER = recipemap('sifter')
+FF = recipemap('froth_flotation')
 
 // MOLYBDENITE BENEFICIATION
 
