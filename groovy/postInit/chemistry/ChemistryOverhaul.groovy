@@ -2866,7 +2866,7 @@ for (carbon in CARBON_DUSTS) {
 ARC_FURNACE.recipeBuilder()
         .inputs(ore('dustSiliconCarbide') * 2)
         .outputs(metaitem('dustSilicon'))
-        .outputs(('dustGraphite'))
+        .outputs(metaitem('dustGraphite'))
         .EUt(60)
         .duration(270)
         .buildAndRegister()

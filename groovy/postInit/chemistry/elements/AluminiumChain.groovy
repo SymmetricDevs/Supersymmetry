@@ -156,7 +156,7 @@ EMSEPARATOR.recipeBuilder()
 
 EBF.recipeBuilder()
 .fluidInputs(fluid('concentrated_red_mud') * 2000)
-.outputs(('ingotIron'))
+.outputs(metaitem('ingotIron'))
 .outputs(metaitem('red_mud_slag'))
 .blastFurnaceTemp(1600)
 .duration(300)
