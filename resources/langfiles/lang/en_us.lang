@@ -947,6 +947,7 @@ material.chloroauric_acid_solution=Chloroauric Acid Solution
 material.sodium_nitrite=Sodium Nitrate
 material.sodium_oxide=Sodium Oxide
 material.gold_amalgam=Gold Amalgam
+material.decarburized_air=Decarburized Air
 
 # Thermodynamics
 

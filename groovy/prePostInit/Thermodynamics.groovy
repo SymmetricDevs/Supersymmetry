@@ -148,6 +148,14 @@ CryoAir.setDurationHX(5);
 CryoAir.setDurationRadiator(400);
 CryoAir.setTemperature(80);
 
+def CryoDecarburizedAir = new ICryoGas('decarburized_air', 'hot_hp_decarburized_air', 'hp_decarburized_air', 'cold_hp_decarburized_air', 'liquid_decarburized_air');
+CryoDecarburizedAir.setEUt(60);
+CryoDecarburizedAir.setDuration(1);
+CryoDecarburizedAir.setPowerHX(100);
+CryoDecarburizedAir.setDurationHX(8);
+CryoDecarburizedAir.setDurationRadiator(40);
+CryoDecarburizedAir.setTemperature(80);
+
 def CryoNitrogen = new ICryoGas('nitrogen', 'hot_hp_nitrogen', 'hp_nitrogen', 'cold_hp_nitrogen', 'liquid_nitrogen');
 CryoNitrogen.setEUt(60);
 CryoNitrogen.setDuration(100);
@@ -218,29 +226,29 @@ CarbonDioxideRefrigerant.setTimeFactor(20);
 
 def TrichlorofluoromethaneRefrigerant = new IRefrigerant("trichlorofluoromethane", 'hot_compressed_trichlorofluoromethane', 'compressed_trichlorofluoromethane', 'cold_trichlorofluoromethane');
 TrichlorofluoromethaneRefrigerant.setPowerToCompress(180);
-TrichlorofluoromethaneRefrigerant.setDurationToCompress(20);
-TrichlorofluoromethaneRefrigerant.setDurationRadiator(10);
+TrichlorofluoromethaneRefrigerant.setDurationToCompress(4);
+TrichlorofluoromethaneRefrigerant.setDurationRadiator(2);
 TrichlorofluoromethaneRefrigerant.setAmountToUse(1000);
 TrichlorofluoromethaneRefrigerant.setTimeFactor(2);
 
 def DichlorodifluoromethaneRefrigerant = new IRefrigerant("dichlorodifluoromethane", 'hot_compressed_dichlorodifluoromethane', 'compressed_dichlorodifluoromethane', 'cold_dichlorodifluoromethane');
 DichlorodifluoromethaneRefrigerant.setPowerToCompress(180);
-DichlorodifluoromethaneRefrigerant.setDurationToCompress(20);
-DichlorodifluoromethaneRefrigerant.setDurationRadiator(10);
+DichlorodifluoromethaneRefrigerant.setDurationToCompress(4);
+DichlorodifluoromethaneRefrigerant.setDurationRadiator(2);
 DichlorodifluoromethaneRefrigerant.setAmountToUse(1000);
 DichlorodifluoromethaneRefrigerant.setTimeFactor(2);
 
 def ChlorotrifluoromethaneRefrigerant = new IRefrigerant("chlorotrifluoromethane", 'hot_compressed_chlorotrifluoromethane', 'compressed_chlorotrifluoromethane', 'cold_chlorotrifluoromethane');
 ChlorotrifluoromethaneRefrigerant.setPowerToCompress(180);
-ChlorotrifluoromethaneRefrigerant.setDurationToCompress(20);
-ChlorotrifluoromethaneRefrigerant.setDurationRadiator(10);
+ChlorotrifluoromethaneRefrigerant.setDurationToCompress(4);
+ChlorotrifluoromethaneRefrigerant.setDurationRadiator(2);
 ChlorotrifluoromethaneRefrigerant.setAmountToUse(1000);
 ChlorotrifluoromethaneRefrigerant.setTimeFactor(2);
 
 def ChlorodifluoromethaneRefrigerant = new IRefrigerant("chlorodifluoromethane", 'hot_compressed_chlorodifluoromethane', 'compressed_chlorodifluoromethane', 'cold_chlorodifluoromethane');
 ChlorodifluoromethaneRefrigerant.setPowerToCompress(180);
-ChlorodifluoromethaneRefrigerant.setDurationToCompress(20);
-ChlorodifluoromethaneRefrigerant.setDurationRadiator(10);
+ChlorodifluoromethaneRefrigerant.setDurationToCompress(4);
+ChlorodifluoromethaneRefrigerant.setDurationRadiator(2);
 ChlorodifluoromethaneRefrigerant.setAmountToUse(1000);
 ChlorodifluoromethaneRefrigerant.setTimeFactor(2);
 
@@ -342,6 +350,14 @@ for (cryogas in CryoGases) {
     recipemap('fluid_decompressor').recipeBuilder()
             .fluidInputs(liquid(cryogas.cold_high_pressure_gas) * 1280)
             .fluidOutputs(liquid(cryogas.liquid_gas) * 20)
+            .duration(20)
+            .EUt(8)
+            .buildAndRegister();
+
+    //Reheating
+    recipemap('fluid_heater').recipeBuilder()
+            .fluidInputs(liquid(cryogas.liquid_gas) * 20)
+            .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * 1280)
             .duration(20)
             .EUt(8)
             .buildAndRegister();

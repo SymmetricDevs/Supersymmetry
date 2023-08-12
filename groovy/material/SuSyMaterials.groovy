@@ -873,6 +873,7 @@ class SuSyMaterials {
         public static Material Chlorodifluoromethane;
         public static Material PolychlorinatedBiphenyl;
         public static Material DilutedSilverNitrateSolution;
+        public static Material DecarburizedAir;
 
         // Second Degree Materials
 
@@ -1263,17 +1264,17 @@ class SuSyMaterials {
 
         public static Material EarthlikeAir;
         public static Material HotHighPressureSteam;
-        public static Material CompressedAir;
+        /*public static Material CompressedAir;
         public static Material ChilledAir;
         public static Material PurifiedAir;
         public static Material BoostedAir;
-        public static Material ColdWater;
+        public static Material ColdWater;*/
         public static Material WasteGaseousNitrogen;
-        public static Material PurfiedWasteGaseousNitrogen;
+        /*public static Material PurfiedWasteGaseousNitrogen;
         public static Material ChilledBoostedAir;
         public static Material PartiallyLiquifiedAir;
         public static Material GaseousAirFeedstock;
-        public static Material LiquidAirFeedstock;
+        public static Material LiquidAirFeedstock;*/
         public static Material ChillyWasteGaseousNitrogen;
         public static Material SubcooledLiquidNitrogen;
         public static Material ColdWasteGaseousNitrogen;

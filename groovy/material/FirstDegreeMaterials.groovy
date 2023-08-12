@@ -2843,5 +2843,11 @@ public class FirstDegreeMaterials{
                 .components(Carbon, 1, Hydrogen, 1, Chlorine, 1, Fluorine, 2)
                 .color(0x8c5a99)
                 .build();
+
+        DecarburizedAir = new Material.Builder(8517, "decarburized_air")
+                .fluid(FluidTypes.GAS)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
+                .color(0x90bbe0)
+                .build();
     }
 }

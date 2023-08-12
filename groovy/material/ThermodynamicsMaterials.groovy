@@ -242,6 +242,8 @@ class ThermodynamicsMaterials {
 
                 generateHighPressureGases(NaturalGas, 22045, true);
 
+                generateHighPressureGases(DecarburizedAir, 22048, true);
+
                 generateLiquidFromGas(Hydrogen, 22100, 14);
 
                 generateLiquidFromGas(Helium, 22101, 5);
@@ -261,6 +263,8 @@ class ThermodynamicsMaterials {
                 generateLiquidFromGas(Methane, 22108, 112);
 
                 generateLiquidFromGas(NaturalGas, 22109, 110);
+
+                generateLiquidFromGas(DecarburizedAir, 22110, 80)
 
                 generateThermoRefrigerant(Ammonia, 22150);
 
@@ -331,7 +335,7 @@ class ThermodynamicsMaterials {
                 .color(0xffffff)
                 .build();
 
-        CompressedAir = new Material.Builder(22802, "compressed_air")
+        /*CompressedAir = new Material.Builder(22802, "compressed_air")
                 .fluid(FluidTypes.GAS)
                 .color(0x95bee6)
                 .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
@@ -363,14 +367,14 @@ class ThermodynamicsMaterials {
                 .fluidTemp(273)
                 .color(0x6293e3)
                 .components(Hydrogen, 2, Oxygen, 1)
-                .build();
+                .build();*/
 
         WasteGaseousNitrogen = new Material.Builder(22807, "waste_gaseous_nitrogen")
                 .fluid(FluidTypes.GAS)
                 .color(0x29a4a6)
                 .build();
 
-        PurfiedWasteGaseousNitrogen = new Material.Builder(22808, "purified_waste_gaseous_nitrogen")
+        /*PurfiedWasteGaseousNitrogen = new Material.Builder(22808, "purified_waste_gaseous_nitrogen")
                 .fluid(FluidTypes.GAS)
                 .color(0x37b1b3)
                 .build();
@@ -401,7 +405,7 @@ class ThermodynamicsMaterials {
                 .fluidTemp(80)
                 .color(0x3b72a8)
                 .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
-                .build();
+                .build();*/
 
         ChillyWasteGaseousNitrogen = new Material.Builder(22813, "chilly_waste_gaseous_nitrogen")
                 .fluid(FluidTypes.GAS)
