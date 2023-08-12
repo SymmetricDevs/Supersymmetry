@@ -945,6 +945,9 @@ material.chloroauric_acid_solution=Chloroauric Acid Solution
 material.sodium_nitrite=Sodium Nitrate
 material.sodium_oxide=Sodium Oxide
 material.gold_amalgam=Gold Amalgam
+material.alkali_fused_wulfenite=Alkali Fused Wulfenite
+material.lead_ii_hydroxide=Lead II Hydroxide
+material.sodium_molybdate_solution=Sodium Molybdate Solution
 
 # Thermodynamics
 

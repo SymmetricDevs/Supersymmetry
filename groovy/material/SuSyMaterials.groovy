@@ -904,6 +904,9 @@ class SuSyMaterials {
         public static Material AmmoniumMolybdateSolution;
         public static Material PhosphorusPentasulfide;
         public static Material SodiumDithiophosphateSolution;
+        public static Material AlkaliFusedWulfenite;
+        public static Material LeadIIHydroxide;
+        public static Material SodiumMolybdateSolution;
 
         // Second Degree Materials
 

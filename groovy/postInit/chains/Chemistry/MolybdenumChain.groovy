@@ -47,7 +47,7 @@ BR.recipeBuilder()
         .EUt(Globals.voltAmps[3])
         .duration(20)
         .buildAndRegister()
-        
+
 
 FF.recipeBuilder()
         .fluidInputs(fluid('copper_molybdenite_slurry') * 2000)
@@ -67,6 +67,38 @@ CLARIFIER.recipeBuilder()
         .fluidOutputs(fluid('wastewater') * 1000)
         .duration(20)
         .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
+// WULFENITE
+
+EBF.recipeBuilder()
+        .inputs(ore('dustWulfenite'))
+        .inputs(ore('dustSodiumHydroxide') * 6)
+        .outputs(metaitem('dustAlkaliFusedWulfenite') * 9)
+        .blastFurnaceTemp(700)
+        .duration(100)
+        .EUt(Globals.voltAmps[4])
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .inputs(ore('dustAlkaliFusedWulfenite') * 9)
+        .fluidInputs(fluid('distilled_water') * 1000)
+        .outputs(metaitem('dustLeadIiHydroxide') * 5)
+        .fluidOutputs(fluid('sodium_molybdate_solution') * 1000)
+        .duration(100)
+        .EUt(Globals.voltAmps[3])
+        .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+        .notConsumable(item('gregtech:wire_coil', 2))
+        .fluidInputs(fluid('sodium_molybdate_solution') * 2000)
+        .fluidInputs(fluid('ammoium_chloride_solution') * 4000)
+        .outputs(metaitem('dustAmmoniumDimolybdate') * 19)
+        .fluidOutputs(fluid('ammonia') * 2000)
+        .fluidOutputs(fluid('steam') * 3000)
+        .fluidOutputs(fluid('salt_water') * 4000)
+        .duration(100)
+        .EUt(Globals.voltAmps[3])
         .buildAndRegister()
 
 // PURIFICATION

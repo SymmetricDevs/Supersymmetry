@@ -2346,7 +2346,7 @@ public class FirstDegreeMaterials{
                 .fluidTemp(554)
                 .colorAverage()
                 .build()
-                .setFormula("P4", true);
+                .setFormula("(P)(H2O)", true);
 
         PotassiumAmylXanthate = new Material.Builder(8443, 'potassium_amyl_xanthate')
                 .dust()
@@ -2931,10 +2931,34 @@ public class FirstDegreeMaterials{
 
         SodiumDithiophosphateSolution = new Material.Builder(8528, "sodium_dithiophosphate_solution")
                 .fluid()
-                .components(Sodium, 3, Phophorus, 1, Oxygen, 2, Sulfur, 2, Water, 2)
+                .components(Sodium, 3, Phosphorus, 1, Oxygen, 2, Sulfur, 2, Water, 2)
                 .color(0xa69737)
                 .build();
 
         SodiumDithiophosphateSolution.setFormula("(Na3PO2S2)(H2O)2", true)
+
+        AlkaliFusedWulfenite = new Material.Builder(8529, "alkali_fused_wulfenite")
+                .dust()
+                .components(Lead, 1, Molybdenum, 1, Sodium, 2, Hydrogen, 2, Oxygen, 6)
+                .color(0xff805e)
+                .build();
+
+        AlkaliFusedWulfenite.setFormula("[Pb(OH)2](Na2MoO4)", true)
+
+        LeadIIHydroxide = new Material.Builder(8530, "lead_ii_hydroxide")
+                .dust()
+                .components(Lead, 1, Oxygen, 2, Hydrogen, 2)
+                .colorAverage()
+                .build();
+
+        LeadIIHydroxide.setFormula("Pb(OH)2", true)
+
+        SodiumMolybdateSolution = new Material.Builder(8531, "sodium_molybdate_solution")
+                .fluid()
+                .components(Sodium, 2, Molybdenum, 1, Oxygen, 4, Water, 1)
+                .colorAverage()
+                .build();
+
+        SodiumMolybdateSolution.setFormula("(Na2MoO4)(H2O)", true)
     }
 }
