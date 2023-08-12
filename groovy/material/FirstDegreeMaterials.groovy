@@ -2922,5 +2922,19 @@ public class FirstDegreeMaterials{
                 .build();
 
         AmmoniumMolybdateSolution.setFormula("[(NH4)2MoO4](H2O)", true)
+
+        PhosphorusPentasulfide = new Material.Builder(8527, "phosphorus_pentasulfide")
+                .dust()
+                .components(Phosphorus, 2, Sulfur, 5)
+                .colorAverage()
+                .build();
+
+        SodiumDithiophosphateSolution = new Material.Builder(8528, "sodium_dithiophosphate_solution")
+                .fluid()
+                .components(Sodium, 3, Phophorus, 1, Oxygen, 2, Sulfur, 2, Water, 2)
+                .color(0xa69737)
+                .build();
+
+        SodiumDithiophosphateSolution.setFormula("(Na3PO2S2)(H2O)2", true)
     }
 }

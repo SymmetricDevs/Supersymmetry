@@ -61,7 +61,7 @@ EM_SEPARATOR.recipeBuilder()
 
 CHEMICAL_BATH.recipeBuilder()
         .inputs(metaitem('dustCassiteriteConcentrate'))
-        .fluidInputs(fluid('ammonia_solution') * 60)
+        .fluidInputs(fluid('ammonia_solution') * 120)
         .fluidOutputs(fluid('ammonium_tungstate_solution') * 60)
         .outputs(metaitem('dustLeachedCassiteriteConcentrate'))
         .EUt(1920)

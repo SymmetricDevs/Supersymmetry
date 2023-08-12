@@ -1519,5 +1519,10 @@ public class UnknownCompositionMaterials {
                 .color(0x191919)
                 .iconSet(SHINY)
                 .build();
+
+        CopperMolybdeniteSlurry = new Material.Builder(4290, "copper_molybdenite_slurry")
+                .fluid()
+                .color(0x2e2419)
+                .build();
     }
 }

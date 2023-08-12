@@ -14,9 +14,7 @@ REACTION_FURNACE = recipemap('reaction_furnace')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 //PYROMETALLUGRICAL METHODS (75%)
-def combustibles = Globals.combustibles
-
-for (combustible in combustibles) {
+for (combustible in Globals.combustibles) {
     EBF.recipeBuilder()
         .inputs(ore('dustPyrolusite'))
         .inputs(ore(combustible.name) * combustible.amount_required * 2)
@@ -37,14 +35,16 @@ ROASTER.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-ROASTER.recipeBuilder()
-    .inputs(ore('dustManganeseIiOxide') * 2)
-    .inputs(ore('dustCoke') * 1)
-    .chancedOutput(metaitem('dustManganese'), 7500, 0)
-    .fluidOutputs(fluid('carbon_monoxide') * 1000)
-    .duration(120)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
+for (highPurityCombustible in Globals.highPurityCombustibles) {
+    ROASTER.recipeBuilder()
+        .inputs(ore('dustManganeseIiOxide') * 2)
+        .inputs(ore(highPurityCombustible.name) * 1)
+        .chancedOutput(metaitem('dustManganese'), 8500, 0)
+        .fluidOutputs(fluid('carbon_monoxide') * 1000)
+        .duration(120)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+}
 
 //PARTIAL REDUCTION OF PYROLUSITE FOR SULFURIC ACID LEACH
 class Reductant {

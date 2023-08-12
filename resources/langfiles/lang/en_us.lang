@@ -780,7 +780,7 @@ material.ammonium_fluoroberyllate=Ammonium Fluoroberyllate
 material.chromium_iii_hydroxide=Chromium III Hydroxide
 material.diluted_hexafluorosilicic_acid=Diluted Hexafluorosilicic Acid
 material.lithium_sulfate_solution=Lithium Sulfate Solution
-material.diluted_sodium_sulfate_solution=Dilutd Sodium Sulfate Solution
+material.diluted_sodium_sulfate_solution=Diluted Sodium Sulfate Solution
 material.alkaline_sodium_oleate_solution=Alkaline Sodium Oleate Solution
 material.fatty_acid_solution=Fatty Acid Solution
 material.oleic_acid_solution=Oleic Acid Solution
@@ -1578,6 +1578,9 @@ material.ammonium_molybdate_solution=Ammonium Molybdate Solution
 material.impure_molybdenite_slurry=Impure Molybdenite Slurry
 material.molybdenite_slurry=Molybdenite Slurry
 material.flotated_molybdenite=Flotated Molybdenite
+material.copper_molybdenite_slurry=Copper Molybdenite Slurry
+material.phosphorus_pentasulfide=Phosphorus Pentasulfide
+material.sodium_dithiophosphate_solution=Sodium Dithiophosphate Solution
 
 # Isotopes
 

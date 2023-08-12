@@ -420,6 +420,7 @@ class SuSyMaterials {
         public static Material ImpureMolybdeniteSlurry;
         public static Material MolybdeniteSlurry;
         public static Material FlotatedMolybdenite;
+        public static Material CopperMolybdeniteSlurry;
 
         // Petrochem Materials
 
@@ -901,6 +902,8 @@ class SuSyMaterials {
         public static Material PurifiedMolybdenumTrioxide;
         public static Material MolybdenumTrioxide;
         public static Material AmmoniumMolybdateSolution;
+        public static Material PhosphorusPentasulfide;
+        public static Material SodiumDithiophosphateSolution;
 
         // Second Degree Materials
 
