@@ -14,7 +14,7 @@ MIXER.recipeBuilder()
     .buildAndRegister()
 
 FLOTATION.recipeBuilder()
-    .fluidInputs(fluid('impure_cinnabar_slurry'))
+    .fluidInputs(fluid('impure_cinnabar_slurry') * 1000)
     .notConsumable(metaitem('dustPotassiumButylXanthate'))
     .notConsumable(metaitem('dustLeadNitrate') * 5)
     .fluidOutputs(fluid('pegmatite_tailing_slurry') * 1000)

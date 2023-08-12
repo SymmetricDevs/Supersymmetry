@@ -494,6 +494,11 @@ public class SecondDegreeMaterials {
                 .dust()
                 .components(Alumina, 1, Platinum, 1, Chlorine, 4)
                 .flags(GENERATE_CATALYST_BED)
+                .build()
+
+        AmmoniumThiocyanateSolution = new Material.Builder(13080, "ammonium_thiocyanate_solution")
+                .fluid()
+                .components(AmmoniumThiocyanate, 1, Water, 1)
                 .colorAverage()
                 .build();
     }

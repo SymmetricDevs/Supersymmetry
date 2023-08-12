@@ -75,7 +75,7 @@ for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(metaitem('hull.mv'))
 			.inputs(ore('oc:cpu1'))
-			.inputs(ore('fineWireRedAlloy') * 8)
+			.inputs(ore('wireFineRedAlloy') * 8)
 			.inputs(item('minecraft:noteblock'))
             .fluidInputs(solder)
             .outputs(item('opensecurity:alarm'))

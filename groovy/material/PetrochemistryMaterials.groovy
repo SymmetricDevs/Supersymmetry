@@ -305,6 +305,16 @@ public class PetrochemistryMaterials {
                 .fluid()
                 .color(0x1e2021)
                 .build();
+
+        TreatedSulfuricOilResidue = new Material.Builder(20070, "treated_sulfuric_oil_residue")
+                .fluid()
+                .color(0x3b3a1e)
+                .build();
+                
+        OilResidue = new Material.Builder(20071, "oil_residue")
+                .fluid()
+                .color(0x242313)
+                .build();
     }
 
 }           
