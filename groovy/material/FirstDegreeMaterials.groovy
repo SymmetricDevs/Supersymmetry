@@ -1229,7 +1229,7 @@ public class FirstDegreeMaterials{
                 .components(Iron, 1, Carbon, 5, Oxygen, 5)
                 .color(0x362f2b)
                 .build()
-                .setFormula('Fe(CO)5')
+                .setFormula('Fe(CO)5', true)
 
         AluminiumSulfate = new Material.Builder(8276, 'aluminium_sulfate')
                 .dust()
@@ -1362,7 +1362,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        SpentMoebiusElectrolyte.setFormula("(?)(AgNO3)(H2O)")
+        SpentMoebiusElectrolyte.setFormula("(?)(AgNO3)(H2O)", true)
 
         ActivatedCarbon = new Material.Builder(8296, "activated_carbon")
                 .dust()
@@ -1406,7 +1406,7 @@ public class FirstDegreeMaterials{
                 .color(0x44453b)
                 .build();
 
-        LoadedCarbon.setFormula("(Na[Au(CN)2])C")
+        LoadedCarbon.setFormula("(Na[Au(CN)2])C", true)
 
         SpentActivatedCarbon = new Material.Builder(8302, "spent_activated_carbon")
                 .dust()
