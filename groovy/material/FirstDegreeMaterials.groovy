@@ -820,11 +820,13 @@ public class FirstDegreeMaterials{
                 .color(0xa9aec4)
                 .build()
 
-        CopperIIOxide = new Material.Builder(8209, "copper_ii_oxide")
-                .dust()
-                .components(Copper, 1, Oxygen, 1)
+        DilutedSilverNitrateSolution = new Material.Builder(8209, "diluted_silver_nitrate_solution")
+                .fluid()
+                .components(Silver, 1, Nitrogen, 1, Oxygen, 3, Water, 2)
                 .colorAverage()
-                .build()
+                .build();
+
+        DilutedSilverNitrateSolution.setFormula("(AgNO3)(H2O)2", true)
 
         DicobaltOctacarbonyl = new Material.Builder(8210, "dicobalt_octacarbonyl")
                 .dust()
@@ -1227,7 +1229,7 @@ public class FirstDegreeMaterials{
                 .components(Iron, 1, Carbon, 5, Oxygen, 5)
                 .color(0x362f2b)
                 .build()
-                .setFormula('Fe(CO)5')
+                .setFormula('Fe(CO)5', true)
 
         AluminiumSulfate = new Material.Builder(8276, 'aluminium_sulfate')
                 .dust()
@@ -1360,7 +1362,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        SpentMoebiusElectrolyte.setFormula("(?)(AgNO3)(H2O)")
+        SpentMoebiusElectrolyte.setFormula("(?)(AgNO3)(H2O)", true)
 
         ActivatedCarbon = new Material.Builder(8296, "activated_carbon")
                 .dust()
@@ -1387,7 +1389,7 @@ public class FirstDegreeMaterials{
         GoldPlatedSteel = new Material.Builder(8299, "gold_plated_steel")
                 .ingot()
                 .components(Gold, 1, Steel, 1)
-                .colorAverage()
+                .color(0xb8a639)
                 .flags(GENERATE_FINE_WIRE)
                 .build();
 
@@ -1404,7 +1406,7 @@ public class FirstDegreeMaterials{
                 .color(0x44453b)
                 .build();
 
-        LoadedCarbon.setFormula("(Na[Au(CN)2])C")
+        LoadedCarbon.setFormula("(Na[Au(CN)2])C", true)
 
         SpentActivatedCarbon = new Material.Builder(8302, "spent_activated_carbon")
                 .dust()
@@ -1955,11 +1957,11 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        BariumCarbonate = new Material.Builder(8387, 'barium_carbonate')
-                .dust()
-                .components(Barium, 1, Carbon, 1, Oxygen, 3)
+        PolychlorinatedBiphenyl = new Material.Builder(8387, "polychlorinated_biphenyl")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
                 .colorAverage()
-                .build()
+                .build();
 
         LeadOxide = new Material.Builder(8388, 'lead_oxide')
                 .dust()
@@ -2032,7 +2034,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         RawElectrum = new Material.Builder(8399, "raw_electrum")
-                .ore()
+                .ore().fluid()
                 .color(0xfcf403)
                 .components(Silver, 1, Gold, 1)
                 .build();
@@ -2456,11 +2458,13 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        SodiumVanadate = new Material.Builder(8461, 'sodium_vanadate')
-                .dust()
-                .components(Sodium, 1, Vanadium, 1, Oxygen, 3)
+        SodiumVanadateSolution = new Material.Builder(8461, 'sodium_vanadate_solution')
+                .fluid()
+                .components(Sodium, 1, Vanadium, 1, Oxygen, 3, Water, 1)
                 .colorAverage()
                 .build();
+
+        SodiumVanadateSolution.setFormula("(NaVO3)(H2O)", true)
 
         AmmoniumMetavanadate = new Material.Builder(8462, 'ammonium_metavanadate')
                 .dust()
@@ -2838,12 +2842,6 @@ public class FirstDegreeMaterials{
                 .fluid(FluidTypes.GAS)
                 .components(Carbon, 1, Hydrogen, 1, Chlorine, 1, Fluorine, 2)
                 .color(0x8c5a99)
-                .build();
-
-        PolychlorinatedBiphenyl = new Material.Builder(8517, "polychlorinated_biphenyl")
-                .fluid()
-                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
-                .colorAverage()
                 .build();
     }
 }

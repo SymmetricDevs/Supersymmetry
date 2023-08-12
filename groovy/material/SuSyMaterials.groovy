@@ -227,7 +227,6 @@ class SuSyMaterials {
         public static Material PhosphatePulp;
         public static Material FilteredPhosphatePulp;
         public static Material PhosphateConcentrate;
-        public static Material Phosphogypsum;
         public static Material ImpureAmmoniumFluoroberyllateSolution;
         public static Material ImpureBerylliumSulfateSolution;
         public static Material ImpureLithiumSulfateSolution;
@@ -252,9 +251,6 @@ class SuSyMaterials {
         public static Material BoraxElectrolyte;
         public static Material FerroelectricCeramicBinding;
         public static Material ConfiguredCircuitOne;
-        public static Material MetalNitrateSolution;
-        public static Material NeutralizedMetalNitrateSolution;
-        public static Material MetalNitrateCatalyst;
         public static Material TwoEthylhexylPhosphoricAcidMix;
         public static Material RareEarthCatalystYNd;
         public static Material DilutedPrimaryAmineN;
@@ -404,6 +400,8 @@ class SuSyMaterials {
         public static Material ImpureCinnabarSlurry;
         public static Material CinnabarSlurry;
         public static Material ChlorofluoromethaneMix;
+        public static Material PropanalMixture;
+        public static Material ZSMFive;
 
         // Petrochem Materials
 
@@ -583,7 +581,6 @@ class SuSyMaterials {
         public static Material SodiumDichromate;
         public static Material RaneyNickel;
         public static Material ActivatedRaneyNickel;
-        public static Material CopperIIOxide;
         public static Material DicobaltOctacarbonyl;
         public static Material ImpregnatedAluminaCatalyst;
         public static Material BismuthCopper;
@@ -829,7 +826,7 @@ class SuSyMaterials {
         public static Material SodiumChromateMixture;
         public static Material SodiumChromateSolution;
         public static Material LeadChloride;
-        public static Material SodiumVanadate;
+        public static Material SodiumVanadateSolution;
         public static Material AmmoniumMetavanadate;
         public static Material SodiumAmide;
         public static Material LeadChromate;
@@ -875,6 +872,7 @@ class SuSyMaterials {
         public static Material Chlorotrifluoromethane;
         public static Material Chlorodifluoromethane;
         public static Material PolychlorinatedBiphenyl;
+        public static Material DilutedSilverNitrateSolution;
 
         // Second Degree Materials
 
@@ -943,7 +941,6 @@ class SuSyMaterials {
         public static Material DilutedSodiumSilicateSolution;
         public static Material SodiumDichromateSolution;
         public static Material ChromiumSodaMixture;
-        public static Material SodiumVanadateSolution;
         public static Material LeadChlorideSolution;
         public static Material AmmoniumSulfateSolution;
         public static Material AmmoniumChromeAlumSolution;
@@ -1015,8 +1012,8 @@ class SuSyMaterials {
         public static Material ImpureEpoxyResin;
         public static Material UncuredEpoxyResin;
         public static Material TNTSolution;
-        public static Material VinylChlorideSolution;
-        public static Material PolyvinylChlorideSolution;
+        public static Material VinylChlorideSuspension;
+        public static Material PolyvinylChlorideSuspension;
         public static Material StyreneSolution;
         public static Material PolystyreneSolution;
         public static Material VinylAcetateSolution;
@@ -1049,7 +1046,6 @@ class SuSyMaterials {
         public static Material TetrafluoroethyleneEmulsion;
         public static Material Dichloromethane;
         public static Material CarbonTetrachloride;
-        public static Material PhthalicAcidSolution;
         public static Material PolytetrafluoroethyleneSolution;
         public static Material MixedNitrochlorobenzeneSolution;
         public static Material MixedDichlorobenzeneSolution;
@@ -1108,6 +1104,8 @@ class SuSyMaterials {
         public static Material TetrasodiumEthylenediaminetetraaceticAcid;
         public static Material Urea;
         public static Material Diiodobenzene;
+        public static Material IsophthalicAcid;
+        public static Material IsophthaloylDichloride;
         public static Material TerephthalicAcid;
         public static Material Bistrichloromethylbenzene;
         public static Material TerephthaloylChloride;
@@ -1201,6 +1199,16 @@ class SuSyMaterials {
         public static Material Tetrahydrofuran;
         public static Material SodiumCyclopentadienide;
         public static Material PotassiumButylXanthate;
+        public static Material PicricAcid;
+        public static Material Monomethylhydrazine;
+        public static Material OrthoXylene;
+        public static Material MetaXylene;
+        public static Material ParaXylene;
+        public static Material MetaParaXyleneMixture;
+        public static Material Tripropylamine;
+        public static Material NBromopropane;
+        public static Material TetrapropylammoniumBromide;
+        public static Material Propionaldehyde;
 
         // Third Degree Materials
 
@@ -1229,9 +1237,7 @@ class SuSyMaterials {
         public static Material MagnesiumChlorideGlycolate;
         public static Material DiglycolicAcidSolution;
         public static Material DiTwoEthylhexylPhosphoricAcidSolution;
-        public static Material DilutedTetraoctylDiglycolamide;
         public static Material DilutedChloroaceticAnhydride;
-        public static Material DilutedOctylamine;
         public static Material DilutedMethylIsobutylKetone;
         public static Material DilutedTwoEthylTwoHexenal;
         public static Material DilutedDiisopropylamine;
@@ -1248,6 +1254,10 @@ class SuSyMaterials {
         public static Material KaminskyCatalyst;
         public static Material ZirconiumTetrachlorideTetrahydrofuranComplex;
         public static Material PotassiumButylXanthateSolution;
+        public static Material TNPSolution;
+        public static Material IsophthaloylDichlorideSolution;
+        public static Material IsophthalicAcidSolution;
+        public static Material DichloroethaneIsophthalicAcidSolution;
 
         // Thermodynamics/Greenhouse Materials
 

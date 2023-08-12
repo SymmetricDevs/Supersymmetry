@@ -8,6 +8,42 @@ import gregtech.api.unification.stack.UnificationEntry;
 import gregtechfoodoption.utils.GTFOUtils;
 import static gregtechfoodoption.utils.GTFOUtils.*;
 
+// MACHINE RECIPES
+
+crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.lv", metaitem('gregtechfoodoption:slicer.lv'), [
+		[metaitem('electric.piston.lv'), ore('circuitLv'), ore('cableGtSingleTin')],
+		[ore('toolHeadBuzzSawSteel'), metaitem('gregtech:hull.lv'), ore('circuitLv')],
+		[ore('plateSteel'), metaitem('conveyor.module.lv'), ore('cableGtSingleTin')]
+])
+
+crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.mv", metaitem('gregtechfoodoption:slicer.mv'), [
+		[metaitem('electric.piston.mv'), ore('circuitMv'), ore('cableGtSingleCopper')],
+		[ore('toolHeadBuzzSawAluminium'), metaitem('gregtech:hull.mv'), ore('circuitMv')],
+		[ore('plateAluminium'), metaitem('conveyor.module.mv'), ore('cableGtSingleCopper')]
+])
+
+crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.hv", metaitem('gregtechfoodoption:slicer.hv'), [
+		[metaitem('electric.piston.hv'), ore('circuitHv'), ore('cableGtSingleGold')],
+		[ore('toolHeadBuzzSawVanadiumSteel'), metaitem('gregtech:hull.hv'), ore('circuitHv')],
+		[ore('plateVanadiumSteel'), metaitem('conveyor.module.hv'), ore('cableGtSingleGold')]
+])
+
+// Greenhouse * 1
+mods.gregtech.assembler.removeByInput(120, [metaitem('hull.mv'), metaitem('electric.pump.mv') * 2, metaitem('circuit.advanced_integrated') * 4, metaitem('frameSteel'), metaitem('plateSterlingSilver') * 6, metaitem('circuit.integrated').withNbt(["Configuration": 3])], null)
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(metaitem('hull.mv'))
+        .inputs(metaitem('electric.pump.mv') * 2)
+        .inputs(ore('circuitMv'))
+        .inputs(metaitem('frameSteel'))
+        .inputs(metaitem('plateSterlingSilver') * 6)
+        .outputs(metaitem('gregtechfoodoption:greenhouse'))
+        .duration(400)
+        .EUt(120)
+        .buildAndRegister()
+
+// FOOD RECIPES
+
 def DISTILLERY = recipemap('distillery');
 def MIXER = recipemap('mixer');
 
@@ -430,6 +466,24 @@ LCR.recipeBuilder()
         .outputs(metaitem('vanillin_dust') * 19)
         .duration(240)
         .EUt(120)
+        .buildAndRegister()
+
+// Replace mozzarella recipes to make it obtainable
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dried_mozzarella_curd_nugget'))
+        .outputs(metaitem('solidified_mozzarella_curd_nugget'))
+        .fluidOutputs(fluid('gtfo_whey') * 50)
+        .duration(200)
+        .EUt(16)
+        .buildAndRegister()
+		
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('milk') * 6000)
+        .fluidInputs(fluid('gtfo_crude_rennet_solution'))
+        .fluidInputs(fluid('gtfo_whey') * 400)
+        .outputs(metaitem('large_mozzarella_curd_nugget'))
+        .duration(160)
+        .EUt(8)
         .buildAndRegister()
 		
 // Force GTFO skewers to be made with only long rods

@@ -387,7 +387,7 @@ crafting.replaceShaped("industrialrenewal:fluid_gauge", item('industrialrenewal:
 	[null, ore('plateSteel'), null]
 ])
 
-crafting.replaceShaped("industrialrenewal:industrial_floor", item('industrialrenewal:industrial_floor') * 6, [
+crafting.replaceShaped("industrialrenewal:industrial_floor", item('industrialrenewal:industrial_floor') * 12, [
 	[ore('barsIron'), ore('barsIron'), ore('barsIron')],
 	[null, null, null],
 	[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')]
@@ -405,19 +405,19 @@ crafting.replaceShaped("industrialrenewal:platform", item('industrialrenewal:pla
 	[null, item('industrialrenewal:catwalk_pillar'), null]
 ])
 
-crafting.replaceShaped("industrialrenewal:handrail_steel", item('industrialrenewal:handrail_steel') * 16, [
+crafting.replaceShaped("industrialrenewal:handrail_steel", item('industrialrenewal:handrail_steel') * 32, [
 	[ore('stickSteel'), ore('stickSteel'), ore('stickSteel')],
 	[ore('stickSteel'), null, ore('stickSteel')],
 	[ore('stickSteel'), ore('plateSteel'), ore('stickSteel')]
 ])
 
-crafting.replaceShaped("industrialrenewal:catwalk_steel", item('industrialrenewal:catwalk_steel') * 4, [
+crafting.replaceShaped("industrialrenewal:catwalk_steel", item('industrialrenewal:catwalk_steel') * 8, [
 	[null, item('industrialrenewal:handrail_steel'), null],
 	[item('industrialrenewal:handrail_steel'), ore('barsIron'), item('industrialrenewal:handrail_steel')],
 	[null, item('industrialrenewal:handrail_steel'), null]
 ])
 
-crafting.replaceShaped("industrialrenewal:catwalk_stair_steel", item('industrialrenewal:catwalk_stair_steel') * 4, [
+crafting.replaceShaped("industrialrenewal:catwalk_stair_steel", item('industrialrenewal:catwalk_stair_steel') * 8, [
 	[ore('plateSteel'), item('industrialrenewal:handrail_steel'), null],
 	[item('industrialrenewal:handrail_steel'), ore('plateSteel'), item('industrialrenewal:handrail_steel')],
 	[null, item('industrialrenewal:handrail_steel'), ore('plateSteel')]
@@ -487,6 +487,12 @@ crafting.addShaped("industrialrenewal:brace_greg", item('industrialrenewal:brace
 	[ore('stickSteel'), ore('stickLongSteel'), null],
 	[ore('stickLongSteel'), ore('stickSteel'), ore('stickLongSteel')],
 	[null, ore('stickLongSteel'), ore('stickSteel')]
+])
+
+crafting.addShaped("industrialrenewal:chunkloader", item('industrialrenewal:chunk_loader'), [
+		[ore('stickIron'), ore('plateIron'), ore('stickIron')],
+		[ore('plateIron'), item('minecraft:redstone'), ore('plateIron')],
+		[ore('stickIron'), ore('plateIron'), ore('stickIron')]
 ])
 
 crafting.addShaped("industrialrenewal:column_to_pillar", item('industrialrenewal:catwalk_steel_pillar'), [

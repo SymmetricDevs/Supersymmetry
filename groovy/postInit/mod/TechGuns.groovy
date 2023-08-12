@@ -1260,6 +1260,15 @@ recipemap('weapons_factory').recipeBuilder()
 		.EUt(480)
 		.buildAndRegister();
 
+//Compressed air
+
+recipemap('canner').recipeBuilder()
+		.inputs(item('techguns:itemshared:24'))
+		.fluidInputs(fluid('hp_air') * 1000)
+		.outputs(item('techguns:itemshared:23'))
+		.duration(100)
+		.EUt(7)
+		.buildAndRegister();
 
 //-------------------Change TechGuns damage values to be better suited with SUSy progression----------------
 

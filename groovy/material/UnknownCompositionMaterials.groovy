@@ -583,10 +583,9 @@ public class UnknownCompositionMaterials {
                 .iconSet(SHINY)
                 .build();
 
-        Phosphogypsum = new Material.Builder(4110, "phosphogypsum")
-                .dust()
-                .color(0xd1cba7)
-                .iconSet(DULL)
+        PropanalMixture = new Material.Builder(4110, "propanal_mixture")
+                .fluid()
+                .color(0x84910f)
                 .build();
       
         ImpureAmmoniumFluoroberyllateSolution = new Material.Builder(4111, "ammonium_fluoroberyllate_solution")
@@ -717,20 +716,19 @@ public class UnknownCompositionMaterials {
                 .color(0xb5bf9b)
                 .build()
       
-        MetalNitrateSolution = new Material.Builder(4135, "metal_nitrate_solution")
+        ChlorofluoromethaneMix = new Material.Builder(4135, "chlorofluoromethane_mix")
                 .fluid()
-                .color(0x663422)
+                .color(0xb03f5d)
                 .build();
 
-        NeutralizedMetalNitrateSolution = new Material.Builder(4136, "neutralized_metal_nitrate_solution")
+        CinnabarSlurry = new Material.Builder(4136, "cinnabar_slurry")
                 .fluid()
-                .color(0x734d3f)
+                .color(0x960000)
                 .build();
 
-        MetalNitrateCatalyst = new Material.Builder(4137, "metal_nitrate_catalyst")
-                .dust()
-                .iconSet(SHINY)
-                .color(0xb58877)
+        ImpureCinnabarSlurry = new Material.Builder(4137, "impure_cinnabar_slurry")
+                .fluid()
+                .color(0x820000)
                 .build();
 
         TwoEthylhexylPhosphoricAcidMix = new Material.Builder(4138, "two_ethylhexyl_phosphoric_acid_mix")
@@ -1361,9 +1359,10 @@ public class UnknownCompositionMaterials {
                 .color(0x856119)
                 .build();
 
-        ChalcopyriteSlurry = new Material.Builder(4260, "chalcopyrite_slurry")
-                .fluid()
-                .color(0xa07828)
+        CopperMatteFlueDust = new Material.Builder(4260, "copper_matte_flue_dust")
+                .dust()
+                .color(0x3e146e)
+                .iconSet(DULL)
                 .build();
 
         ImpureBorniteSlurry = new Material.Builder(4261, "impure_bornite_slurry")
@@ -1371,9 +1370,9 @@ public class UnknownCompositionMaterials {
                 .color(0x7d511d)
                 .build();
 
-        BorniteSlurry = new Material.Builder(4262, "bornite_slurry")
+        CopperMatteFlueGas = new Material.Builder(4262, "copper_matte_flue_gas")
                 .fluid()
-                .color(0x97662b)
+                .color(0x3e146e)
                 .build();
 
         ImpureChalcociteSlurry = new Material.Builder(4263, "impure_chalcocite_slurry")
@@ -1381,9 +1380,10 @@ public class UnknownCompositionMaterials {
                 .color(0x262424)
                 .build();
 
-        ChalcociteSlurry = new Material.Builder(4264, "chalcocite_slurry")
-                .fluid()
-                .color(0x353535)
+        ZSMFive = new Material.Builder(4264, "zsm_five")
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .color(0x739133)
                 .build();
 
         MalachiteLeach = new Material.Builder(4265, "malachite_leach")
@@ -1422,32 +1422,6 @@ public class UnknownCompositionMaterials {
                 .flags(GENERATE_PLATE)
                 .color(0x6e4c14)
                 .iconSet(SHINY)
-                .build();
-
-        CopperMatteFlueDust = new Material.Builder(4272, "copper_matte_flue_dust")
-                .dust()
-                .color(0x3e146e)
-                .iconSet(DULL)
-                .build();
-
-        CopperMatteFlueGas = new Material.Builder(4273, "copper_matte_flue_gas")
-                .fluid()
-                .color(0x3e146e)
-                .build();
-
-        ImpureCinnabarSlurry = new Material.Builder(4274, "impure_cinnabar_slurry")
-                .fluid()
-                .color(0x820000)
-                .build();
-
-        CinnabarSlurry = new Material.Builder(4275, "cinnabar_slurry")
-                .fluid()
-                .color(0x960000)
-                .build();
-
-        ChlorofluoromethaneMix = new Material.Builder(4276, "chlorofluoromethane_mix")
-                .fluid()
-                .color(0xb03f5d)
                 .build();
     }
 }

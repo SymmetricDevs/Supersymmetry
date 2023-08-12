@@ -185,30 +185,7 @@ for (fuel in sintering_fuels) {
 }
 
 //SINTER-ROAST PROCESS (UNIVERSAL, 200%)
-class Combustible {
-    String name
-    String byproduct
-    int amount_required
-    int duration
-    Combustible(name, amount_required, duration, byproduct = 'dustTinyDarkAsh') {
-        this.name = name
-        this.amount_required = amount_required
-        this.duration = duration
-        this.byproduct = byproduct
-    }
-}
-
-def combustibles = [
-        new Combustible('dustCarbon', 1, 1, 'dustTinyDarkAsh'),
-        new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
-        new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
-        new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
-        new Combustible('dustAnthracite', 1, 2, 'dustTinyAsh'),
-        new Combustible('gemCoal', 2, 4),
-        new Combustible('dustCoal', 2, 4),
-        new Combustible('gemCharcoal', 2, 4),
-        new Combustible('dustCharcoal', 2, 4)
-]
+def combustibles = Globals.combustibles
 
 for (combustible in combustibles) {
     EBF.recipeBuilder()

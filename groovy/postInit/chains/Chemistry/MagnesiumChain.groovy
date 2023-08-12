@@ -1,3 +1,5 @@
+import static globals.Globals.*
+
 ROASTER = recipemap('roaster')
 EBF = recipemap('electric_blast_furnace')
 BR = recipemap('batch_reactor')
@@ -47,26 +49,7 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 //IG FARBEN CHLORINATION
-class Combustible {
-    String name
-    String byproduct
-    int amount_required
-    int duration
-    Combustible(name, amount_required, duration, byproduct = 'dustTinyDarkAsh') {
-        this.name = name
-        this.amount_required = amount_required
-        this.duration = duration
-        this.byproduct = byproduct
-    }
-}
-
-def combustibles = [
-        new Combustible('dustCarbon', 1, 1, 'dustTinyDarkAsh'),
-        new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
-        new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
-        new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
-        new Combustible('dustAnthracite', 1, 2, 'dustTinyAsh'),
-]
+def combustibles = Globals.combustibles
 
 for (combustible in combustibles) {
 REACTION_FURNACE.recipeBuilder()
