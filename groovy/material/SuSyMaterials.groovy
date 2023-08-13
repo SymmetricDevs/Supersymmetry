@@ -900,6 +900,8 @@ class SuSyMaterials {
 
         // Second Degree Materials
 
+        public static Material DeoxygenationCatalystPrecursorSolution;
+        public static Material DeoxygenationCatalyst;
         public static Material NitrateSaltMix;
         public static Material AmmoniumChlorideSolution;
         public static Material PotassiumChlorideSolution;

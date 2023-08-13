@@ -2982,5 +2982,6 @@ public class FirstDegreeMaterials{
                 .fluid(FluidTypes.GAS)
                 .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
                 .color(0x90bbe0)
+                .build();
     }
 }

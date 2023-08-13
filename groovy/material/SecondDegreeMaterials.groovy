@@ -11,6 +11,7 @@ import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtechfoodoption.GTFOMaterialHandler.*;
+import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
 public class SecondDegreeMaterials {
     public static void register() {
