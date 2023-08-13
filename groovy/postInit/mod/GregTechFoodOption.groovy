@@ -312,7 +312,7 @@ CHEMICAL_BATH.recipeBuilder()
         .outputs(metaitem('dustMeat'))
         .fluidOutputs(fluid('gtfo_sludge') * 40)
         .duration(600)
-        .EUt(32)
+        .EUt(30)
         .buildAndRegister()
 
 MIXER.recipeBuilder()

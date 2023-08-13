@@ -292,5 +292,11 @@ public class ThirdDegreeMaterials {
                 .components(Dichloroethane, 1, IsophthalicAcid, 1)
                 .colorAverage()
                 .build()
+
+        TetrahydrofuranSolution = new Material.Builder(24046, "tetrahydrofuran_solution")
+                .fluid()
+                .components(Tetrahydrofuran, 1, SulfuricAcid, 1, Water, 1)
+                .colorAverage()
+                .build()
     }
 }
