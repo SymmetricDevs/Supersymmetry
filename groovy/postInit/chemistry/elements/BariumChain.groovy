@@ -47,7 +47,7 @@ CENTRIFUGE.recipeBuilder()
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
-    .inputs(ore('dustBarite') * 6)
+    .inputs(ore('dustBarite'))
     .inputs(ore('dustCarbon') * 4)
     .outputs(metaitem('dustBariumSulfide') * 2)
     .fluidOutputs(fluid('carbon_monoxide') * 4000)

@@ -62,7 +62,7 @@ for (solder in soldering_alloys) {
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:turret_base:1'))
             .duration(200)
-            .EUt(32)
+            .EUt(30)
             .buildAndRegister();
 
     recipemap('weapons_factory').recipeBuilder()
@@ -75,7 +75,7 @@ for (solder in soldering_alloys) {
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:turret_base:2'))
             .duration(200)
-            .EUt(128)
+            .EUt(120)
             .buildAndRegister();
 
     recipemap('weapons_factory').recipeBuilder()
@@ -88,7 +88,7 @@ for (solder in soldering_alloys) {
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:turret_base:3'))
             .duration(200)
-            .EUt(512)
+            .EUt(480)
             .buildAndRegister();
 
     recipemap('weapons_factory').recipeBuilder()

@@ -352,6 +352,8 @@ material.brine=Brine
 material.warm_brine=Warm Brine
 material.oily_brine=Oily Brine
 material.sulfuric_oil_residue=Sulfuric Oil Residue
+material.treated_sulfuric_oil_residue=Treated Sulfuric Oil Residue
+material.oil_residue=Oil Residue
 material.high_pressure_water=High Pressure Water
 material.light_bitumen_solution=Light Bitumen Solution
 material.bitumen_solution=Bitumen Solution
@@ -1093,7 +1095,7 @@ material.perovskite=Perovskite
 material.titanomagnetite=Titanomagnetite
 material.fluorapatite=Fluorapatite
 material.vanadiferous_titanomagnetite=Vanadiferous Titanomagnetite
-material.armstrongite=Armstrongite
+material.baddeleyite=Baddeleyite
 material.vanadinite=Vanadinite
 material.cerussite=Cerussite
 material.anglesite=Anglesite
@@ -1539,12 +1541,37 @@ material.picric_acid=Picric Acid (TNP)
 material.tnp_solution=Picric Acid Solution
 material.monomethylhydrazine=Monomethylhydrazine (MMH)
 material.dimethylhydrazine=Unsymmetrical Dimethylhydrazine (UDMH)
+material.titanium_iodide=Titanium Iodide
+material.zirconium_iodide=Zirconium Iodide
+material.hafnium_iodide=Hafnium Iodide
+material.impure_zircon_slurry=Impure Zircon Slurry
+material.zircon_slurry=Zircon Slurry
+material.hafnium_extraction_mixture=Hafnium Extraction Mixture
+material.hafnium_extract=Hafnium Extract
+material.sifted_zircon=Sifted Zircon
+material.flotated_zircon=Flotated Zircon
+material.zircon_concentrate=Zircon Concentrate
+material.fused_zirconia=Fused Zirconia
+material.impure_zirconium_tetrachloride=Impure Zirconium Tetrachloride
+material.zirconium_sulfate_solution=Zirconium Sulfate Solution
+material.zirconyl_chloride_solution=Zirconyl Chloride Solution
+material.purified_zirconyl_chloride_solution=Purified Zirconyl Chloride Solution
+material.zirconium_basic_sulfate=Zirconium Basic Sulfate
+material.zirconium_tetrachloride=Zirconium Tetrachloride
+material.hafnium_sulfate_solution=Hafnium Sulfate Solution
+material.hafnium_dioxide=Hafnium Dioxide
+material.impure_hafnium_tetrachloride=Impure Hafnium Tetrachloride
+material.hafnium_tetrachloride=Hafnium Tetrachloride
+material.ammonium_thiocyanate=Ammonium Thiocyanate
+material.ammonium_thiocyanate_solution=Ammonium Thiocyanate Solution
 material.tripropylamine=Tripropylamine
 material.n_bromopropane=n-Bromopropane
 material.tetrapropylammonium_bromide=Tetrapropylammonium Bromide
 material.propionaldehyde=Propionaldehyde
 material.propanal_mixture=Propanal Mixture
 material.zsm_five=ZSM-5
+material.tetrahydrofuran_solution=Tetrahydrofuran Solution
+material.calcium_zirconate=Calcium Zirconate
 
 # Isotopes
 
@@ -1571,6 +1598,7 @@ recipemap.catalytic_reformer_recipes.name=Catalytic Reforming
 recipemap.coking_tower.name=Coking Tower
 recipemap.ion_exchange_column.name=Ion Exchange
 recipemap.smoke_stack.name=Smoke Stack (Chimney)
+recipemap.gravity_separator.name=Gravity Separation
 
 # QMD Particles
 
@@ -1894,6 +1922,10 @@ metaitem.vt_slag.name=Vanadium/Titanium-Rich Slag
 metaitem.sponge.titanium.name=Titanium Sponge
 metaitem.sponge.titanium.crude.name=Crude Titanium Sponge
 metaitem.sponge.platinum.name=Platinum Sponge
+metaitem.sponge.zirconium.name=Zirconium Sponge
+metaitem.sponge.zirconium.crude.name=Crude Zirconium Sponge
+metaitem.sponge.hafnium.name=Hafnium Sponge
+metaitem.sponge.hafnium.crude.name=Crude Hafnium Sponge
 
 # Multiblocked
 

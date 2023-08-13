@@ -1502,7 +1502,7 @@ FBR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-// Diphenyl Isophthalate
+//Phosgene
 
 TBR.recipeBuilder()
 .fluidInputs(fluid('carbon_monoxide') * 50)
@@ -1512,6 +1512,17 @@ TBR.recipeBuilder()
 .duration(10)
 .EUt(30)
 .buildAndRegister()
+
+REACTION_FURNACE.recipeBuilder()
+.fluidInputs(fluid('carbon_tetrachloride') * 1000)
+.fluidInputs(fluid('oxygen') * 1000)
+.fluidOutputs(fluid('phosgene') * 1000)
+.fluidOutputs(fluid('chlorine') * 2000)
+.duration(30)
+.EUt(120)
+.buildAndRegister()
+
+// Diphenyl Isophthalate
 
 BR.recipeBuilder()
 .fluidInputs(fluid('dichloroethane') * 1000)
@@ -1972,6 +1983,9 @@ CSTR.recipeBuilder()
 .fluidInputs(fluid('sodium_nitrate_solution') * 50)
 .fluidInputs(fluid('potassium_chloride_solution') * 50)
 .fluidOutputs(fluid('salty_saltpeter_solution') * 100)
+.duration(5)
+.EUt(30)
+.buildAndRegister()
 
 DISTILLERY.recipeBuilder()
 .fluidInputs(fluid('salty_saltpeter_solution') * 2000)
@@ -1982,6 +1996,14 @@ DISTILLERY.recipeBuilder()
 .buildAndRegister()
 
 // Molecular Sieves
+
+DISTILLERY.recipeBuilder()
+.fluidInputs(fluid('sodium_silicate_solution') * 1000)
+.outputs(metaitem('dustSodiumSilicate') * 6)
+.fluidOutputs(fluid('water') * 1000)
+.duration(20)
+.EUt(30)
+.buildAndRegister()
 
 BR.recipeBuilder()
 .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
@@ -2707,7 +2729,7 @@ DISTILLATION_TOWER.recipeBuilder()
 
 //Diethyl Ether
 
-BCR.recipeBuilder()
+CSTR.recipeBuilder()
 .fluidInputs(fluid('ethanol') * 100)
 .fluidInputs(fluid('sulfuric_acid') * 50)
 .fluidOutputs(fluid('diethyl_ether_solution') * 150)
@@ -2816,7 +2838,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustCertusQuartz') * 3)
-            .inputs(ore(carbon) * 1)
+            .inputs(ore(carbon) * 2)
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2825,7 +2847,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustNetherQuartz') * 3)
-            .inputs(ore(carbon) * 1)
+            .inputs(ore(carbon) * 2)
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -4418,7 +4440,7 @@ CSTR.recipeBuilder()
         .duration(3)
         .buildAndRegister()
 
-BR.recipeBuilder()
+POLYMERIZATION.recipeBuilder()
         .fluidInputs(fluid('oligomeric_bisphenol_solution') * 4000)
         .fluidInputs(fluid('triethylamine') * 1000)
         .outputs(metaitem('dustPolycarbonate'))
@@ -4455,6 +4477,25 @@ SINTERING_OVEN.recipeBuilder()
         .EUt(1920)
         .duration(20)
         .buildAndRegister()
+
+//TETRAHYDROFURAN
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('butanediol') * 50)
+.fluidInputs(fluid('sulfuric_acid') * 50)
+.fluidOutputs(fluid('tetrahydrofuran_solution') * 150)
+.EUt(30)
+.duration(5)
+.buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+.fluidInputs(fluid('tetrahydrofuran_solution') * 3000)
+.fluidOutputs(fluid('sulfuric_acid') * 1000)
+.fluidOutputs(fluid('water') * 1000)
+.fluidOutputs(fluid('tetrahydrofuran') * 1000)
+.EUt(90)
+.duration(600)
+.buildAndRegister()
 
 //KAMINSKY CATALYST
 
@@ -4580,5 +4621,23 @@ DISTILLERY.recipeBuilder()
 .fluidOutputs(fluid('diluted_sulfuric_acid') * 1000)
 .outputs(metaitem('dustPicricAcid') * 7)
 .duration(300)
+.EUt(30)
+.buildAndRegister()
+
+//AMMONIUM THIOCYANATE
+CSTR.recipeBuilder()
+.fluidInputs(fluid('carbon_disulfide') * 50)
+.fluidInputs(fluid('ammonia_solution') * 50)
+.fluidOutputs(fluid('ammonium_thiocyanate_solution') * 50)
+.fluidOutputs(fluid('hydrogen_sulfide') * 50)
+.duration(5)
+.EUt(30)
+.buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+.fluidInputs(fluid('ammonium_thiocyanate_solution') * 1000)
+.outputs(metaitem('dustAmmoniumThiocyanate') * 8)
+.fluidOutputs(fluid('water') * 1000)
+.duration(60)
 .EUt(30)
 .buildAndRegister()

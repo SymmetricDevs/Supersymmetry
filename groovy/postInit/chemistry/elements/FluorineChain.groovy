@@ -9,7 +9,7 @@ ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 //POTASSIUM FLUORIDE PRODUCTION
 ROASTER.recipeBuilder()
-        .inputs(ore('dustPotassiumCarbonate') * 5)
+        .inputs(ore('dustPotassiumCarbonate') * 6)
         .fluidInputs(fluid('hydrofluoric_acid') * 2000)
         .fluidOutputs(fluid('potassium_fluoride_solution') * 2000)
         .fluidOutputs(fluid('carbon_dioxide') * 1000)

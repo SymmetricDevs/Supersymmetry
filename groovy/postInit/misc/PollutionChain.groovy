@@ -96,6 +96,16 @@ SMOKE_STACK.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
+SMOKE_STACK.recipeBuilder()
+        .fluidInputs(fluid('nitrosyl_chloride') * 500)
+        .duration(10)
+        .buildAndRegister()
+
+SMOKE_STACK.recipeBuilder()
+        .fluidInputs(fluid('carbon_tetrachloride') * 500)
+        .duration(10)
+        .buildAndRegister()
+
 MIXER.recipeBuilder()
         .fluidInputs(fluid('water') * 100)
         .inputs(ore('dustTinyAsh'))

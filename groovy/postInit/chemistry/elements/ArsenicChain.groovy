@@ -305,7 +305,7 @@ CSTR.recipeBuilder()
 //ROASTED ORE PROCESSING
 BATCH_REACTOR.recipeBuilder()
         .inputs(ore('dustRoastedSperrylite'))
-        .fluidInputs(fluid('hydrochloric_acid') * 500)
+        .fluidInputs(fluid('hydrochloric_acid') * 1000)
         .outputs(metaitem('dustPlatinum'))
         .fluidOutputs(fluid('sperrylite_waste') * 250)
         .duration(120)

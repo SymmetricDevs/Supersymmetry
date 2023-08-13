@@ -97,7 +97,7 @@ for (i = 0; i < 6; i++) {
     EXTRUDER.recipeBuilder()
             .inputs(metaitem('assembly' + lowTempSuperconductorsLowerCase[i]))
             .notConsumable(metaitem('shape.extruder.wire'))
-            .outputs(metaitem('base' + lowTempSuperconductorsLowerCase[i]) * 4)
+            .outputs(metaitem('base' + lowTempSuperconductorsLowerCase[i]) * 16)
             .duration(200)
             .EUt(30)
             .buildAndRegister();
@@ -155,7 +155,7 @@ for (i = 0; i < 3; i++) {
     EXTRUDER.recipeBuilder()
             .inputs(metaitem('tube' + highTempSuperconductorsLowerCase[i]))
             .notConsumable(metaitem('shape.extruder.wire'))
-            .outputs(metaitem('base' + highTempSuperconductorsLowerCase[i]) * 4)
+            .outputs(metaitem('base' + highTempSuperconductorsLowerCase[i]) * 16)
             .duration(200)
             .EUt(30)
             .buildAndRegister();
@@ -196,7 +196,7 @@ for (def i = 0; i < 9; i++) {
                 if (criticalTemperatures[i] > val) {
                 CHEMICAL_BATH.recipeBuilder()
                         .inputs(metaitem('base' + allSuperconductorsLowerCase[i]))
-                        .fluidInputs(liquid(key) * 2)
+                        .fluidInputs(liquid(key) * 1)
                         .outputs(metaitem('wireGtSingle' + allSuperconductors[i]))
                         .duration(50)
                         .EUt(Globals.voltAmps[i + 1])

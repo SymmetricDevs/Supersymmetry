@@ -137,14 +137,14 @@ FORMINGPRESS.recipeBuilder()
 
 //ELECTROLYSIS OF B2O3
 ELECTROLYTIC_CELL.recipeBuilder()
-	.inputs(ore('dustBoronTrioxide') * 7)
+	.inputs(ore('dustBoronTrioxide') * 5)
 	.notConsumable(metaitem('graphite_electrode'))
 	.notConsumable(metaitem('stickBoronCarbide'))
-	.notConsumable(fluid('sodium_fluoride') * 13 * 144)
-	.notConsumable(fluid('potassium_tetrafluoroborate') * 6 * 144)
+	.notConsumable(fluid('sodium_fluoride') * (13 * 144))
+	.notConsumable(fluid('potassium_tetrafluoroborate') * (6 * 144))
 	.outputs(metaitem('dustElectrolyticBoron') * 2)
 	.fluidOutputs(fluid('oxygen') * 3000)
-	.duration(720)
+	.duration(120)
 	.EUt(120)
 	.buildAndRegister()
 
