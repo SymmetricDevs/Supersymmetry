@@ -1326,6 +1326,12 @@ class SuSyMaterials {
         public static Material GaseousCrudeNeon;
         public static Material LiquidCrudeNeon;
         public static Material ColdGaseousNitrogen;
+        public static Material LiquidArgonProduct;
+        public static Material LiquidOxygenProduct;
+        public static Material LiquidNitrogenProduct;
+        public static Material LiquidDeoxygenatedArgon;
+        public static Material LiquidWasteNitrogen;
+        public static Material PartiallyLiquefiedArgon;
 
         public static void init() {
                 ElementMaterials.register();
