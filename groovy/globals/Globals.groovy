@@ -52,20 +52,20 @@ class Globals {
     }
 
     public static combustibles = [
-        new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
-        new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
-        new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
-        new Combustible('dustAnthracite', 1, 2, 'dustTinyAsh'),
-        new Combustible('gemCoal', 2, 4, 'dustTinyDarkAsh'),
-        new Combustible('dustCoal', 2, 4, 'dustTinyDarkAsh'),
-        new Combustible('gemCharcoal', 2, 4, 'dustTinyDarkAsh'),
-        new Combustible('dustCharcoal', 2, 4, 'dustTinyDarkAsh'),
-        new Combustible('dustCarbon', 1, 1, 'dustTinyAsh')
+        new Combustible('gemCoke', 1, 3, 'dustAsh'),
+        new Combustible('dustCoke', 1, 3, 'dustAsh'),
+        new Combustible('gemAnthracite', 1, 2, 'dustAsh'),
+        new Combustible('dustAnthracite', 1, 2, 'dustAsh'),
+        new Combustible('gemCoal', 2, 4, 'dustDarkAsh'),
+        new Combustible('dustCoal', 2, 4, 'dustDarkAsh'),
+        new Combustible('gemCharcoal', 2, 4, 'dustDarkAsh'),
+        new Combustible('dustCharcoal', 2, 4, 'dustDarkAsh'),
+        new Combustible('dustCarbon', 1, 1, 'dustAsh')
     ]
 
     public static highPurityCombustibles = [
-        new Combustible('dustCoke', 1, 2, 'dustTinyAsh'),
-        new Combustible('dustCarbon', 1, 1, 'dustTinyAsh')
+        new Combustible('dustCoke', 1, 2, 'dustAsh'),
+        new Combustible('dustCarbon', 1, 1, 'dustAsh')
     ]
 
     public static class InertGas {

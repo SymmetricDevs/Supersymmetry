@@ -1259,7 +1259,7 @@ crafting.addShaped('opencomputers:scrench', item('opencomputers:wrench'), [
 //disk platter
 	mods.gregtech.assembler.recipeBuilder()
 			.inputs(ore('lensGlass') * 4)
-			.inputs(ore('dustSmallCobalt'))
+			.inputs(ore('dustCobalt'))
             .outputs(item('opencomputers:material', 12))
             .duration(400)
             .EUt(120)

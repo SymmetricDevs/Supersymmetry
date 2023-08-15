@@ -53,6 +53,20 @@ def reductants = [
     new Reductant('hydrogen', 'steam', 2, 1)
 ]
 
+//RECIPE REMOVALS
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('gemCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCharcoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal', 1) * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('gemCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCharcoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal', 1) * 2], null)
+
 def combustibles = Globals.combustibles
 
 for (blastable in blastables) {
@@ -62,7 +76,7 @@ for (blastable in blastables) {
         .inputs(ore(blastable.name) * blastable.amount_required)
         .inputs(ore(combustible.name) * (combustible.amount_required * blastable.reductant_required))
         .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
-        .outputs(metaitem(combustible.byproduct) * (combustible.amount_required * blastable.reductant_required))
+        .chancedOutput(metaitem(combustible.byproduct), 1000 * (combustible.amount_required * blastable.reductant_required), 0)
         .duration((int) (combustible.duration * blastable.amount_produced * blastable.duration))
         .buildAndRegister()
 
@@ -71,7 +85,7 @@ for (blastable in blastables) {
         .inputs(ore(blastable.name) * blastable.amount_required)
         .inputs(ore(combustible.name) * (combustible.amount_required * blastable.reductant_required))
         .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
-        .outputs(metaitem(combustible.byproduct) * (combustible.amount_required * blastable.reductant_required))
+        .chancedOutput(metaitem(combustible.byproduct), 1000 * (combustible.amount_required * blastable.reductant_required), 0)
         .duration((int) (combustible.duration * blastable.amount_produced * blastable.duration / 2))
         .blastFurnaceTemp(1750)
         .EUt(Globals.voltAmps[1])
@@ -151,7 +165,7 @@ for (combustible in combustibles) {
     .inputs(item('minecraft:iron_ingot'))
     .inputs(ore(combustible.name) * combustible.amount_required)
     .outputs(metaitem('ingotSteel'))
-    .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
+    .chancedOutput(metaitem(combustible.byproduct), 1000 * combustible.amount_required, 0)
     .duration(combustible.duration * 120)
     .buildAndRegister()
 
@@ -159,24 +173,10 @@ for (combustible in combustibles) {
     .inputs(ore('ingotWroughtIron'))
     .inputs(ore(combustible.name) * combustible.amount_required)
     .outputs(metaitem('ingotSteel'))
-    .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
+    .chancedOutput(metaitem(combustible.byproduct), 1000 * combustible.amount_required, 0)
     .duration(combustible.duration * 60)
     .buildAndRegister()
 }
-
-//RECIPE REMOVALS
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoke')], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('gemCoke')], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCharcoal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal', 1) * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoke')], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('gemCoke')], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCharcoal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal', 1) * 2], null)
 
 //High Purity Iron Chain
 

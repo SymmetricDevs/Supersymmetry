@@ -9,6 +9,7 @@ for (combustible in combustibles) {
         .inputs(ore('dustCobaltOxide') * 2)
         .inputs(ore(combustible.name) * (combustible.amount_required))
         .outputs(metaitem('dustCobalt'))
+        .chancedOutput(metaitem(combustible.byproduct), 1000, 0)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .duration(120)
         .EUt(Globals.voltAmps[2])

@@ -44,56 +44,56 @@ crafting.addShaped('resistor_wire_fine_coke', metaitem('component.resistor') * 2
     [null,item('minecraft:paper'),null]])
 
 mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glass') * 144)
-        .inputs(ore('wireFineCopper') * 4)
-        .inputs(ore('dustSmallGalena') * 1)
-        .outputs(metaitem('component.diode'))
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glass') * 144)
-        .inputs(ore('wireFineAnnealedCopper') * 4)
-        .inputs(ore('dustSmallGalena') * 1)
-        .outputs(metaitem('component.diode') * 2)
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glass') * 144)
-        .inputs(ore('wireFineCopper') * 4)
-        .inputs(ore('dustSmallGalliumArsenide') * 1)
-        .outputs(metaitem('component.diode') * 3)
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glass') * 144)
-        .inputs(ore('wireFineAnnealedCopper') * 4)
-        .inputs(ore('dustSmallGalliumArsenide') * 1)
+        .fluidInputs(fluid('glass') * 576)
+        .inputs(ore('wireFineCopper') * 16)
+        .inputs(ore('dustGalena') * 1)
         .outputs(metaitem('component.diode') * 4)
-        .duration(400)
+        .duration(1600)
         .EUt(30)
         .buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 144)
-        .inputs(ore('wireFineCopper') * 4)
-        .inputs(ore('dustSmallGalliumArsenide') * 1)
-        .outputs(metaitem('component.diode') * 6)
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 144)
-        .inputs(ore('wireFineAnnealedCopper') * 4)
-        .inputs(ore('dustSmallGalliumArsenide') * 1)
+        .fluidInputs(fluid('glass') * 576)
+        .inputs(ore('wireFineAnnealedCopper') * 16)
+        .inputs(ore('dustGalena') * 1)
         .outputs(metaitem('component.diode') * 8)
-        .duration(400)
+        .duration(1600)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .fluidInputs(fluid('glass') * 576)
+        .inputs(ore('wireFineCopper') * 16)
+        .inputs(ore('dustGalliumArsenide') * 1)
+        .outputs(metaitem('component.diode') * 12)
+        .duration(1600)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .fluidInputs(fluid('glass') * 576)
+        .inputs(ore('wireFineAnnealedCopper') * 16)
+        .inputs(ore('dustGalliumArsenide') * 1)
+        .outputs(metaitem('component.diode') * 16)
+        .duration(1600)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .fluidInputs(fluid('plastic') * 576)
+        .inputs(ore('wireFineCopper') * 16)
+        .inputs(ore('dustGalliumArsenide') * 1)
+        .outputs(metaitem('component.diode') * 24)
+        .duration(1600)
+        .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .fluidInputs(fluid('plastic') * 576)
+        .inputs(ore('wireFineAnnealedCopper') * 16)
+        .inputs(ore('dustGalliumArsenide') * 1)
+        .outputs(metaitem('component.diode') * 32)
+        .duration(1600)
         .EUt(30)
         .buildAndRegister();
 

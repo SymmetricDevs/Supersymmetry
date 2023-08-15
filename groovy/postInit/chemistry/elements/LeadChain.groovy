@@ -192,7 +192,7 @@ for (combustible in combustibles) {
             .inputs(ore(combustible.name) * (combustible.amount_required))
             .inputs(ore('dustCalcite'))
             .outputs(metaitem('ingotCrudeLead') * 2)
-            .outputs(metaitem(combustible.byproduct))
+            .chancedOutput(metaitem(combustible.byproduct), 1000, 0)
             .fluidOutputs(fluid('cadmium_rich_flue_gas') * 1000)
             .EUt(120)
             .blastFurnaceTemp(850)

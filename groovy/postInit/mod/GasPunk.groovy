@@ -238,7 +238,7 @@ CENTRIFUGE.recipeBuilder()
 
 DRYER.recipeBuilder()
         .fluidInputs(fluid('capsaicin_solution') * 1000)
-        .outputs(metaitem('dustTinyCapsaicin'))
+        .chancedOutput(metaitem('dustCapsaicin'), 1100, 500)
         .fluidOutputs(fluid('ethanol') * 1000)
         .duration(200)
         .EUt(120)

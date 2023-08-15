@@ -21,6 +21,7 @@ for (highPurityCombustible in Globals.highPurityCombustibles) {
                 .inputs(ore('dustBismuthIiiOxide') * 5)
                 .inputs(ore(highPurityCombustible.name) * 3)
                 .outputs(metaitem('dustBismuth') * 2)
+                .chancedOutput(metaitem(highPurityCombustible.byproduct), 100, 0)
                 .fluidOutputs(fluid('carbon_monoxide') * 3000)
                 .EUt(120)
                 .duration(120)

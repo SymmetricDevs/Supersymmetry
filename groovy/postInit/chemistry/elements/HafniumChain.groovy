@@ -44,6 +44,7 @@ for (highPurityCombustible in Globals.highPurityCombustibles) {
                 .inputs(ore(highPurityCombustible.name) * 2)
                 .fluidInputs(fluid('chlorine') * 4000)
                 .outputs(metaitem('dustImpureHafniumTetrachloride') * 5)
+                .chancedOutput(metaitem(highPurityCombustible.byproduct), 100, 0)
                 .fluidOutputs(fluid('carbon_monoxide') * 2000)
                 .duration(200 * highPurityCombustible.duration)
                 .EUt(Globals.voltAmps[3])

@@ -261,7 +261,7 @@ CRYSTALLIZER.recipeBuilder()
         .buildAndRegister()
 
 CRYSTALLIZER.recipeBuilder()
-        .notConsumable(metaitem('dustTinyAluminiumSulfate'))
+        .notConsumable(metaitem('dustAluminiumSulfate'))
         .fluidInputs(fluid('neutralized_lepidolite_leach') * 1000)
         .outputs(metaitem('dustAluminiumSulfate') * 17)
         .fluidOutputs(fluid('aluminium_free_lepidolite_leach') * 1000)
