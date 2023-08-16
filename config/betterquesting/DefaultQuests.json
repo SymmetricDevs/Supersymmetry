@@ -43512,6 +43512,77 @@
     },
     "584:10": {
       "preRequisites:11": [
+        765,
+        199
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Patterened Silicon Dioxide Wafers §rare then §6etched§r in a §cMV Chemical Bath §susing Hydrofluoric Acid.\n\n§rNote: Requires cleanroom.§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5307,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Etched Silicon Dioxide Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 587,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5307,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "585:10": {
+      "preRequisites:11": [
         546
       ],
       "properties:10": {
@@ -43562,7 +43633,7 @@
         }
       }
     },
-    "585:10": {
+    "586:10": {
       "preRequisites:11": [
         521
       ],
@@ -43620,7 +43691,7 @@
         }
       }
     },
-    "586:10": {
+    "587:10": {
       "preRequisites:11": [
         549
       ],
@@ -43672,7 +43743,7 @@
         }
       }
     },
-    "587:10": {
+    "588:10": {
       "preRequisites:11": [
         540
       ],
@@ -43862,7 +43933,7 @@
         }
       }
     },
-    "588:10": {
+    "589:10": {
       "preRequisites:11": [
         81
       ],
@@ -43914,7 +43985,7 @@
         }
       }
     },
-    "589:10": {
+    "590:10": {
       "preRequisites:11": [
         400
       ],
@@ -43966,7 +44037,7 @@
         }
       }
     },
-    "590:10": {
+    "591:10": {
       "preRequisites:11": [
         593
       ],
@@ -44061,7 +44132,7 @@
         }
       }
     },
-    "591:10": {
+    "592:10": {
       "preRequisites:11": [
         593
       ],
@@ -44156,7 +44227,7 @@
         }
       }
     },
-    "592:10": {
+    "593:10": {
       "preRequisites:11": [
         593
       ],
@@ -44251,7 +44322,7 @@
         }
       }
     },
-    "593:10": {
+    "594:10": {
       "preRequisites:11": [
         593
       ],
@@ -44346,7 +44417,7 @@
         }
       }
     },
-    "594:10": {
+    "595:10": {
       "preRequisiteTypes:7": [
         0,
         1,
@@ -44423,7 +44494,7 @@
         }
       }
     },
-    "595:10": {
+    "596:10": {
       "preRequisites:11": [
         81
       ],
@@ -44499,7 +44570,7 @@
         }
       }
     },
-    "596:10": {
+    "597:10": {
       "preRequisites:11": [
         213,
         104
@@ -44552,7 +44623,7 @@
         }
       }
     },
-    "597:10": {
+    "598:10": {
       "preRequisites:11": [
         51
       ],
@@ -44604,7 +44675,7 @@
         }
       }
     },
-    "598:10": {
+    "599:10": {
       "preRequisites:11": [
         124
       ],
@@ -44674,7 +44745,7 @@
         }
       }
     },
-    "599:10": {
+    "600:10": {
       "preRequisites:11": [
         36
       ],
@@ -44726,7 +44797,7 @@
         }
       }
     },
-    "600:10": {
+    "601:10": {
       "preRequisites:11": [
         109
       ],
@@ -44774,7 +44845,7 @@
         }
       }
     },
-    "601:10": {
+    "602:10": {
       "preRequisites:11": [
         602
       ],
@@ -44826,7 +44897,7 @@
         }
       }
     },
-    "602:10": {
+    "603:10": {
       "preRequisites:11": [
         602
       ],
@@ -44878,7 +44949,7 @@
         }
       }
     },
-    "603:10": {
+    "604:10": {
       "preRequisites:11": [
         101
       ],
@@ -44930,7 +45001,7 @@
         }
       }
     },
-    "604:10": {
+    "605:10": {
       "preRequisites:11": [
         230
       ],
@@ -45000,7 +45071,7 @@
         }
       }
     },
-    "605:10": {
+    "606:10": {
       "preRequisites:11": [
         31
       ],
@@ -45052,7 +45123,7 @@
         }
       }
     },
-    "606:10": {
+    "607:10": {
       "preRequisites:11": [
         222
       ],
@@ -45110,7 +45181,7 @@
         }
       }
     },
-    "607:10": {
+    "608:10": {
       "preRequisites:11": [
         593
       ],
@@ -45186,7 +45257,7 @@
         }
       }
     },
-    "608:10": {
+    "609:10": {
       "preRequisites:11": [
         611
       ],
@@ -45253,7 +45324,7 @@
         }
       }
     },
-    "609:10": {
+    "610:10": {
       "preRequisites:11": [
         611
       ],
@@ -45305,7 +45376,7 @@
         }
       }
     },
-    "610:10": {
+    "611:10": {
       "preRequisites:11": [
         623
       ],
@@ -45420,7 +45491,7 @@
         }
       }
     },
-    "611:10": {
+    "612:10": {
       "preRequisites:11": [
         618
       ],
@@ -45490,7 +45561,7 @@
         }
       }
     },
-    "612:10": {
+    "613:10": {
       "preRequisites:11": [
         615
       ],
@@ -45560,7 +45631,7 @@
         }
       }
     },
-    "613:10": {
+    "614:10": {
       "preRequisites:11": [
         616,
         390
@@ -45613,7 +45684,7 @@
         }
       }
     },
-    "614:10": {
+    "615:10": {
       "preRequisites:11": [
         188
       ],
@@ -45683,7 +45754,7 @@
         }
       }
     },
-    "615:10": {
+    "616:10": {
       "preRequisites:11": [
         617
       ],
@@ -45717,7 +45788,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "616:10": {
+    "617:10": {
       "preRequisites:11": [
         621,
         614,
@@ -45795,7 +45866,7 @@
         }
       }
     },
-    "617:10": {
+    "618:10": {
       "preRequisites:11": [
         398
       ],
@@ -45847,7 +45918,7 @@
         }
       }
     },
-    "618:10": {
+    "619:10": {
       "preRequisites:11": [
         614
       ],
@@ -45899,7 +45970,7 @@
         }
       }
     },
-    "619:10": {
+    "620:10": {
       "preRequisites:11": [
         479
       ],
@@ -45969,7 +46040,7 @@
         }
       }
     },
-    "620:10": {
+    "621:10": {
       "preRequisites:11": [
         622
       ],
@@ -46021,7 +46092,7 @@
         }
       }
     },
-    "621:10": {
+    "622:10": {
       "preRequisites:11": [
         624
       ],
@@ -46116,7 +46187,7 @@
         }
       }
     },
-    "622:10": {
+    "623:10": {
       "preRequisites:11": [
         624
       ],
@@ -46183,7 +46254,7 @@
         }
       }
     },
-    "623:10": {
+    "624:10": {
       "preRequisites:11": [
         624
       ],
@@ -46278,7 +46349,7 @@
         }
       }
     },
-    "624:10": {
+    "625:10": {
       "preRequisites:11": [
         624
       ],
@@ -46373,7 +46444,7 @@
         }
       }
     },
-    "625:10": {
+    "626:10": {
       "preRequisites:11": [
         624
       ],
@@ -46468,7 +46539,7 @@
         }
       }
     },
-    "626:10": {
+    "627:10": {
       "preRequisites:11": [
         624
       ],
@@ -46563,7 +46634,7 @@
         }
       }
     },
-    "627:10": {
+    "628:10": {
       "preRequisites:11": [
         191
       ],
@@ -46611,7 +46682,7 @@
         }
       }
     },
-    "628:10": {
+    "629:10": {
       "preRequisites:11": [
         622,
         687
@@ -46682,7 +46753,7 @@
         }
       }
     },
-    "629:10": {
+    "630:10": {
       "preRequisites:11": [
         622
       ],
@@ -46752,7 +46823,7 @@
         }
       }
     },
-    "630:10": {
+    "631:10": {
       "preRequisites:11": [
         622
       ],
@@ -46822,7 +46893,7 @@
         }
       }
     },
-    "631:10": {
+    "632:10": {
       "preRequisites:11": [
         622,
         698
@@ -46893,7 +46964,7 @@
         }
       }
     },
-    "632:10": {
+    "633:10": {
       "preRequisites:11": [
         622
       ],
@@ -46963,7 +47034,7 @@
         }
       }
     },
-    "633:10": {
+    "634:10": {
       "preRequisites:11": [
         648
       ],
@@ -47050,7 +47121,7 @@
         }
       }
     },
-    "634:10": {
+    "635:10": {
       "preRequisites:11": [
         181
       ],
@@ -47122,7 +47193,7 @@
         }
       }
     },
-    "635:10": {
+    "636:10": {
       "preRequisites:11": [
         243
       ],
@@ -47198,7 +47269,7 @@
         }
       }
     },
-    "636:10": {
+    "637:10": {
       "preRequisites:11": [
         654
       ],
@@ -47268,7 +47339,7 @@
         }
       }
     },
-    "637:10": {
+    "638:10": {
       "preRequisites:11": [
         614
       ],
@@ -47326,7 +47397,7 @@
         }
       }
     },
-    "638:10": {
+    "639:10": {
       "preRequisites:11": [
         641
       ],
@@ -47392,7 +47463,7 @@
         }
       }
     },
-    "639:10": {
+    "640:10": {
       "preRequisites:11": [
         642
       ],
@@ -47458,7 +47529,7 @@
         }
       }
     },
-    "640:10": {
+    "641:10": {
       "preRequisites:11": [
         643,
         649
@@ -47529,9 +47600,14 @@
         }
       }
     },
-    "641:10": {
+    "642:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        644
+        644,
+        622
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -47599,7 +47675,7 @@
         }
       }
     },
-    "642:10": {
+    "643:10": {
       "preRequisites:11": [
         51
       ],
@@ -47675,7 +47751,7 @@
         }
       }
     },
-    "643:10": {
+    "644:10": {
       "preRequisites:11": [
         614
       ],
@@ -47739,7 +47815,7 @@
         }
       }
     },
-    "644:10": {
+    "645:10": {
       "preRequisiteTypes:7": [
         0,
         2
@@ -47777,7 +47853,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "The Ziegler Process [Steps 7-12]",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -47810,7 +47886,7 @@
         }
       }
     },
-    "645:10": {
+    "646:10": {
       "preRequisites:11": [
         648
       ],
@@ -47880,7 +47956,7 @@
         }
       }
     },
-    "646:10": {
+    "647:10": {
       "preRequisites:11": [
         213
       ],
@@ -47928,7 +48004,7 @@
         }
       }
     },
-    "647:10": {
+    "648:10": {
       "preRequisites:11": [
         510
       ],
@@ -47980,7 +48056,7 @@
         }
       }
     },
-    "648:10": {
+    "649:10": {
       "preRequisites:11": [
         188
       ],
@@ -48046,7 +48122,7 @@
         }
       }
     },
-    "649:10": {
+    "650:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -48119,7 +48195,7 @@
         }
       }
     },
-    "650:10": {
+    "651:10": {
       "preRequisites:11": [
         398
       ],
@@ -48153,7 +48229,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "651:10": {
+    "652:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -48206,7 +48282,7 @@
         }
       }
     },
-    "652:10": {
+    "653:10": {
       "preRequisites:11": [
         441,
         18
@@ -48277,7 +48353,7 @@
         }
       }
     },
-    "653:10": {
+    "654:10": {
       "preRequisites:11": [
         388
       ],
@@ -48316,7 +48392,7 @@
         }
       }
     },
-    "654:10": {
+    "655:10": {
       "preRequisites:11": [
         104
       ],
@@ -48364,7 +48440,7 @@
         }
       }
     },
-    "655:10": {
+    "656:10": {
       "preRequisites:11": [
         181
       ],
@@ -48416,7 +48492,7 @@
         }
       }
     },
-    "656:10": {
+    "657:10": {
       "preRequisites:11": [
         604
       ],
@@ -48464,7 +48540,7 @@
         }
       }
     },
-    "657:10": {
+    "658:10": {
       "preRequisites:11": [
         188
       ],
@@ -48516,7 +48592,7 @@
         }
       }
     },
-    "658:10": {
+    "659:10": {
       "preRequisites:11": [
         390,
         672
@@ -48569,7 +48645,7 @@
         }
       }
     },
-    "659:10": {
+    "660:10": {
       "preRequisites:11": [
         243
       ],
@@ -48639,7 +48715,7 @@
         }
       }
     },
-    "660:10": {
+    "661:10": {
       "preRequisites:11": [
         125
       ],
@@ -48687,7 +48763,7 @@
         }
       }
     },
-    "661:10": {
+    "662:10": {
       "preRequisiteTypes:7": [
         0,
         0,
@@ -48746,7 +48822,7 @@
         }
       }
     },
-    "662:10": {
+    "663:10": {
       "preRequisites:11": [
         104
       ],
@@ -48797,7 +48873,7 @@
         }
       }
     },
-    "663:10": {
+    "664:10": {
       "preRequisites:11": [
         104
       ],
@@ -50767,7 +50843,7 @@
         }
       }
     },
-    "664:10": {
+    "665:10": {
       "preRequisites:11": [
         48
       ],
@@ -50863,7 +50939,7 @@
         }
       }
     },
-    "665:10": {
+    "666:10": {
       "preRequisites:11": [
         763
       ],
@@ -50948,7 +51024,7 @@
         }
       }
     },
-    "666:10": {
+    "667:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -51021,7 +51097,7 @@
         }
       }
     },
-    "667:10": {
+    "668:10": {
       "preRequisites:11": [
         81
       ],
@@ -51097,7 +51173,7 @@
         }
       }
     },
-    "668:10": {
+    "669:10": {
       "preRequisites:11": [
         663,
         674
@@ -51168,7 +51244,7 @@
         }
       }
     },
-    "669:10": {
+    "670:10": {
       "preRequisites:11": [
         390
       ],
@@ -51207,7 +51283,7 @@
         }
       }
     },
-    "670:10": {
+    "671:10": {
       "preRequisites:11": [
         243
       ],
@@ -51259,7 +51335,7 @@
         }
       }
     },
-    "671:10": {
+    "672:10": {
       "preRequisites:11": [
         673
       ],
@@ -51321,7 +51397,7 @@
         }
       }
     },
-    "672:10": {
+    "673:10": {
       "preRequisites:11": [
         675,
         678
@@ -51374,7 +51450,7 @@
         }
       }
     },
-    "673:10": {
+    "674:10": {
       "preRequisites:11": [
         673
       ],
@@ -51436,7 +51512,7 @@
         }
       }
     },
-    "674:10": {
+    "675:10": {
       "preRequisites:11": [
         479
       ],
@@ -51506,7 +51582,7 @@
         }
       }
     },
-    "675:10": {
+    "676:10": {
       "preRequisites:11": [
         479,
         708
@@ -51577,7 +51653,7 @@
         }
       }
     },
-    "676:10": {
+    "677:10": {
       "preRequisites:11": [
         644
       ],
@@ -51635,7 +51711,7 @@
         }
       }
     },
-    "677:10": {
+    "678:10": {
       "preRequisites:11": [
         645
       ],
@@ -51705,7 +51781,7 @@
         }
       }
     },
-    "678:10": {
+    "679:10": {
       "preRequisites:11": [
         377
       ],
@@ -51753,7 +51829,7 @@
         }
       }
     },
-    "679:10": {
+    "680:10": {
       "preRequisites:11": [
         104
       ],
@@ -51823,7 +51899,7 @@
         }
       }
     },
-    "680:10": {
+    "681:10": {
       "preRequisites:11": [
         240
       ],
@@ -51893,7 +51969,7 @@
         }
       }
     },
-    "681:10": {
+    "682:10": {
       "preRequisites:11": [
         169
       ],
@@ -51945,7 +52021,7 @@
         }
       }
     },
-    "682:10": {
+    "683:10": {
       "preRequisites:11": [
         374
       ],
@@ -51993,7 +52069,7 @@
         }
       }
     },
-    "683:10": {
+    "684:10": {
       "preRequisites:11": [
         620
       ],
@@ -52063,7 +52139,7 @@
         }
       }
     },
-    "684:10": {
+    "685:10": {
       "preRequisites:11": [
         641,
         466
@@ -52134,7 +52210,7 @@
         }
       }
     },
-    "685:10": {
+    "686:10": {
       "preRequisites:11": [
         641
       ],
@@ -52186,7 +52262,7 @@
         }
       }
     },
-    "686:10": {
+    "687:10": {
       "preRequisites:11": [
         647
       ],
@@ -52256,7 +52332,7 @@
         }
       }
     },
-    "687:10": {
+    "688:10": {
       "preRequisites:11": [
         688,
         683
@@ -52327,7 +52403,7 @@
         }
       }
     },
-    "688:10": {
+    "689:10": {
       "preRequisites:11": [
         614,
         693
@@ -52398,7 +52474,7 @@
         }
       }
     },
-    "689:10": {
+    "690:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -52473,7 +52549,7 @@
         }
       }
     },
-    "690:10": {
+    "691:10": {
       "preRequisites:11": [
         692,
         695
@@ -52550,7 +52626,7 @@
         }
       }
     },
-    "691:10": {
+    "692:10": {
       "preRequisites:11": [
         479
       ],
@@ -52620,7 +52696,7 @@
         }
       }
     },
-    "692:10": {
+    "693:10": {
       "preRequisites:11": [
         692
       ],
@@ -52692,7 +52768,7 @@
         }
       }
     },
-    "693:10": {
+    "694:10": {
       "preRequisites:11": [
         172
       ],
@@ -52762,7 +52838,7 @@
         }
       }
     },
-    "694:10": {
+    "695:10": {
       "preRequisites:11": [
         620,
         451
@@ -52833,11 +52909,12 @@
         }
       }
     },
-    "695:10": {
+    "696:10": {
       "preRequisites:11": [
-        687,
         700,
-        701
+        701,
+        769,
+        687
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -52905,7 +52982,7 @@
         }
       }
     },
-    "696:10": {
+    "697:10": {
       "preRequisites:11": [
         243
       ],
@@ -52957,7 +53034,7 @@
         }
       }
     },
-    "697:10": {
+    "698:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -53026,14 +53103,15 @@
         }
       }
     },
-    "698:10": {
+    "699:10": {
       "preRequisites:11": [
+        776,
         699
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Behold, the NAND wafer. A well-earned technological achievement.",
+          "desc:8": "Behold, the NAND chip. A well-earned technological achievement.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53054,7 +53132,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "NAND Wafers",
+          "name:8": "NAND Chips",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -53096,9 +53174,10 @@
         }
       }
     },
-    "699:10": {
+    "700:10": {
       "preRequisites:11": [
-        702
+        702,
+        497
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -53166,7 +53245,7 @@
         }
       }
     },
-    "700:10": {
+    "701:10": {
       "preRequisites:11": [
         703
       ],
@@ -53218,7 +53297,7 @@
         }
       }
     },
-    "701:10": {
+    "702:10": {
       "preRequisites:11": [
         703
       ],
@@ -53282,9 +53361,8 @@
         }
       }
     },
-    "702:10": {
+    "703:10": {
       "preRequisites:11": [
-        709,
         679
       ],
       "properties:10": {
@@ -53353,7 +53431,7 @@
         }
       }
     },
-    "703:10": {
+    "704:10": {
       "preRequisites:11": [
         708
       ],
@@ -53405,9 +53483,9 @@
         }
       }
     },
-    "704:10": {
+    "705:10": {
       "preRequisites:11": [
-        479
+        709
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -53457,9 +53535,9 @@
         }
       }
     },
-    "705:10": {
+    "706:10": {
       "preRequisites:11": [
-        708
+        614
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -53533,7 +53611,7 @@
         }
       }
     },
-    "706:10": {
+    "707:10": {
       "preRequisites:11": [
         644
       ],
@@ -53585,7 +53663,7 @@
         }
       }
     },
-    "707:10": {
+    "708:10": {
       "preRequisites:11": [
         66
       ],
@@ -53637,7 +53715,7 @@
         }
       }
     },
-    "708:10": {
+    "709:10": {
       "preRequisites:11": [
         101
       ],
@@ -53704,7 +53782,7 @@
         }
       }
     },
-    "709:10": {
+    "710:10": {
       "preRequisites:11": [
         641
       ],
@@ -53756,7 +53834,7 @@
         }
       }
     },
-    "710:10": {
+    "711:10": {
       "preRequisites:11": [
         647
       ],
@@ -53826,7 +53904,7 @@
         }
       }
     },
-    "711:10": {
+    "712:10": {
       "preRequisites:11": [
         647
       ],
@@ -53896,7 +53974,7 @@
         }
       }
     },
-    "712:10": {
+    "713:10": {
       "preRequisites:11": [
         710
       ],
@@ -53966,7 +54044,7 @@
         }
       }
     },
-    "713:10": {
+    "714:10": {
       "preRequisites:11": [
         706
       ],
@@ -54036,7 +54114,7 @@
         }
       }
     },
-    "714:10": {
+    "715:10": {
       "preRequisites:11": [
         479
       ],
@@ -54088,7 +54166,7 @@
         }
       }
     },
-    "715:10": {
+    "716:10": {
       "preRequisites:11": [
         104,
         545
@@ -54159,7 +54237,7 @@
         }
       }
     },
-    "716:10": {
+    "717:10": {
       "preRequisites:11": [
         637
       ],
@@ -54198,7 +54276,7 @@
         }
       }
     },
-    "717:10": {
+    "718:10": {
       "preRequisites:11": [
         101
       ],
@@ -54250,7 +54328,7 @@
         }
       }
     },
-    "718:10": {
+    "719:10": {
       "preRequisites:11": [
         25
       ],
@@ -54365,7 +54443,7 @@
         }
       }
     },
-    "719:10": {
+    "720:10": {
       "preRequisites:11": [
         25
       ],
@@ -54480,7 +54558,7 @@
         }
       }
     },
-    "720:10": {
+    "721:10": {
       "preRequisites:11": [
         25
       ],
@@ -54580,7 +54658,7 @@
         }
       }
     },
-    "721:10": {
+    "722:10": {
       "preRequisites:11": [
         191
       ],
@@ -54665,7 +54743,7 @@
         }
       }
     },
-    "722:10": {
+    "723:10": {
       "preRequisites:11": [
         538
       ],
@@ -54731,7 +54809,7 @@
         }
       }
     },
-    "723:10": {
+    "724:10": {
       "preRequisites:11": [
         728,
         726
@@ -54802,7 +54880,7 @@
         }
       }
     },
-    "724:10": {
+    "725:10": {
       "preRequisites:11": [
         729,
         411
@@ -54855,7 +54933,7 @@
         }
       }
     },
-    "725:10": {
+    "726:10": {
       "preRequisites:11": [
         203
       ],
@@ -54925,7 +55003,7 @@
         }
       }
     },
-    "726:10": {
+    "727:10": {
       "preRequisites:11": [
         727
       ],
@@ -54995,7 +55073,7 @@
         }
       }
     },
-    "727:10": {
+    "728:10": {
       "preRequisites:11": [
         730
       ],
@@ -55110,7 +55188,7 @@
         }
       }
     },
-    "728:10": {
+    "729:10": {
       "preRequisites:11": [
         733
       ],
@@ -55225,7 +55303,7 @@
         }
       }
     },
-    "729:10": {
+    "730:10": {
       "preRequisites:11": [
         730
       ],
@@ -55340,7 +55418,7 @@
         }
       }
     },
-    "730:10": {
+    "731:10": {
       "preRequisites:11": [
         30
       ],
@@ -55410,7 +55488,7 @@
         }
       }
     },
-    "731:10": {
+    "732:10": {
       "preRequisites:11": [
         398
       ],
@@ -55480,7 +55558,7 @@
         }
       }
     },
-    "732:10": {
+    "733:10": {
       "preRequisites:11": [
         735
       ],
@@ -55523,7 +55601,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "733:10": {
+    "734:10": {
       "preRequisites:11": [
         66
       ],
@@ -55620,7 +55698,7 @@
         }
       }
     },
-    "734:10": {
+    "735:10": {
       "preRequisites:11": [
         30
       ],
@@ -55672,7 +55750,7 @@
         }
       }
     },
-    "735:10": {
+    "736:10": {
       "preRequisites:11": [
         30
       ],
@@ -55717,7 +55795,7 @@
         }
       }
     },
-    "736:10": {
+    "737:10": {
       "preRequisites:11": [
         222
       ],
@@ -55779,7 +55857,7 @@
         }
       }
     },
-    "737:10": {
+    "738:10": {
       "preRequisites:11": [
         497
       ],
@@ -55843,7 +55921,7 @@
         }
       }
     },
-    "738:10": {
+    "739:10": {
       "preRequisites:11": [
         101,
         465
@@ -55911,7 +55989,7 @@
         }
       }
     },
-    "739:10": {
+    "740:10": {
       "preRequisites:11": [
         742
       ],
@@ -55963,7 +56041,7 @@
         }
       }
     },
-    "740:10": {
+    "741:10": {
       "preRequisites:11": [
         743
       ],
@@ -56060,7 +56138,7 @@
         }
       }
     },
-    "741:10": {
+    "742:10": {
       "preRequisites:11": [
         30
       ],
@@ -56124,7 +56202,7 @@
         }
       }
     },
-    "742:10": {
+    "743:10": {
       "preRequisites:11": [
         743
       ],
@@ -56178,7 +56256,7 @@
         }
       }
     },
-    "743:10": {
+    "744:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -56235,7 +56313,7 @@
         }
       }
     },
-    "744:10": {
+    "745:10": {
       "preRequisites:11": [
         743
       ],
@@ -56287,7 +56365,7 @@
         }
       }
     },
-    "745:10": {
+    "746:10": {
       "preRequisites:11": [
         743
       ],
@@ -56357,7 +56435,7 @@
         }
       }
     },
-    "746:10": {
+    "747:10": {
       "preRequisites:11": [
         746
       ],
@@ -56429,7 +56507,7 @@
         }
       }
     },
-    "747:10": {
+    "748:10": {
       "preRequisites:11": [
         688,
         719
@@ -56500,7 +56578,7 @@
         }
       }
     },
-    "748:10": {
+    "749:10": {
       "preRequisites:11": [
         41
       ],
@@ -56596,7 +56674,7 @@
         }
       }
     },
-    "749:10": {
+    "750:10": {
       "preRequisites:11": [
         700
       ],
@@ -56666,7 +56744,7 @@
         }
       }
     },
-    "750:10": {
+    "751:10": {
       "preRequisites:11": [
         755,
         550
@@ -56737,7 +56815,7 @@
         }
       }
     },
-    "751:10": {
+    "752:10": {
       "preRequisites:11": [
         756
       ],
@@ -56807,7 +56885,7 @@
         }
       }
     },
-    "752:10": {
+    "753:10": {
       "preRequisites:11": [
         479
       ],
@@ -56877,7 +56955,7 @@
         }
       }
     },
-    "753:10": {
+    "754:10": {
       "preRequisites:11": [
         754
       ],
@@ -56992,7 +57070,7 @@
         }
       }
     },
-    "754:10": {
+    "755:10": {
       "preRequisites:11": [
         757
       ],
@@ -57044,7 +57122,7 @@
         }
       }
     },
-    "755:10": {
+    "756:10": {
       "preRequisites:11": [
         758
       ],
@@ -57139,7 +57217,7 @@
         }
       }
     },
-    "756:10": {
+    "757:10": {
       "preRequisites:11": [
         758
       ],
@@ -57234,7 +57312,7 @@
         }
       }
     },
-    "757:10": {
+    "758:10": {
       "preRequisites:11": [
         758
       ],
@@ -57329,7 +57407,7 @@
         }
       }
     },
-    "758:10": {
+    "759:10": {
       "preRequisites:11": [
         758
       ],
@@ -57424,7 +57502,7 @@
         }
       }
     },
-    "759:10": {
+    "760:10": {
       "preRequisites:11": [
         20
       ],
@@ -57476,7 +57554,7 @@
         }
       }
     },
-    "760:10": {
+    "761:10": {
       "preRequisites:11": [
         651
       ],
@@ -57525,6 +57603,1111 @@
         "0:10": {
           "index:3": 0,
           "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "762:10": {
+      "preRequisites:11": [
+        687,
+        770
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Silicon Dioxide Wafers §rneed to be §6etched§r in a §cHV UV Light Box §rwith an Advanced Photolithography Mask.\n\nNote: Requires cleanroom.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5107,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Patterned Silicon Dioxide Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 765,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5107,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "763:10": {
+      "preRequisites:11": [
+        587
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "With a §cHV Ion Implanter§r and high-purity group 13 element (like Gallium or Boron), you can §6n-dope§r the Silicon Dioxde Wafer.\n\nNote: Requires cleanroom.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8010,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "n-Doped Silicon Dioxde Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 766,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8010,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "764:10": {
+      "preRequisites:11": [
+        766,
+        701,
+        700
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "With a §cHV CVD Unit§r and §6Silane§r you can turn your n-doped Silicon Dioxde Wafer into a §e§6Polysilicon Wafer§r§r.\n\nNote: Requires cleanroom.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8011,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Polysilicon Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 767,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8011,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "765:10": {
+      "preRequisites:11": [
+        767
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§9§7§6Polysilicon Wafers§6 §rneed to be §6etched§r in a §cHV UV Light Box §rwith an Advanced Photolithography Mask.\n\nNote: Requires cleanroom.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5108,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Patterned Polysilicon Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 768,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5108,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "766:10": {
+      "preRequisites:11": [
+        768
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Patterened Polysilicon Wafers §rare then §6etched§r in a §cMV Chemical Bath §susing Hydrofluoric Acid.\n\n§rNote: Requires cleanroom.§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5308,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Etched Polysilicon Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 769,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5308,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "767:10": {
+      "preRequisites:11": [
+        719
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Advanced Photolithography Mask §ris used for the §6etching§f of more advanced types of wafers.\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5010,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Advanced Photolithography Mask",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 770,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5010,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "768:10": {
+      "preRequisites:11": [
+        699
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "With a §cHV CVD Unit§r, §6Silane§r §6and Ammonia§r,§r§r you can turn your Doped Polysilicon Wafer into a §e§6Silicon Nitride Wafer§r.§r\n\nNote: Requires cleanroom.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8013,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Silicon Nitride Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 771,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8013,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "769:10": {
+      "preRequisites:11": [
+        771
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Silicon Nitride Wafers§6 §rneed to be §6etched§r in a §cHV UV Light Box §rwith an Advanced Photolithography Mask.\n\nNote: Requires cleanroom.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5109,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Patterned Silicon Nitride Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 772,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5109,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "770:10": {
+      "preRequisites:11": [
+        777
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§9§7§6Nickel Coated Wafers §rneed to be §6etched§r in a §cHV UV Light Box §rwith an §6NOR Photolithography Mask§r.\n\nNote: Requires cleanroom.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5111,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nickel-Coated Wafer (NOR)",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 773,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5009,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5111,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "771:10": {
+      "preRequisites:11": [
+        780
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6NOR §rwill be used for even more advanced circuits.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 601,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "NOR Chips",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 774,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 601,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "772:10": {
+      "preRequisites:11": [
+        778
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Nickel-Coated NAND Wafers §rare then §6etched§r in a §cMV Chemical Bath §susing Hydrofluoric Acid.§r\n\nNote: Requires cleanroom.§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 575,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "NAND Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 776,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 575,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "773:10": {
+      "preRequisites:11": [
+        779
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "With a §cHV CVD Unit§r and §6Nickel Carbonyl§r,§r§r you can turn your Etched Silicon Nitride Wafer into a §e§6Nickel-Coated Wafer§r.\n\nNote: The §6Carbon Monoxide§r from Nickel Carbonyl is recycled.\n§rNote 2: Requires cleanroom.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8014,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nickel-Coated Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 777,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8014,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "774:10": {
+      "preRequisites:11": [
+        777
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§9§7§6Nickel Coated Wafers §rneed to be §6etched§r in a §cHV UV Light Box §rwith an §6NAND Photolithography Mask§r.\n\nNote: Requires cleanroom.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5110,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nickel-Coated Wafer (NAND)",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 778,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5008,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5110,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "775:10": {
+      "preRequisites:11": [
+        772
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Patterened Silicon Nitride Wafers §rare then §6etched§r in a §cMV Chemical Bath §susing Hydrofluoric Acid.\n\n§rNote: Requires cleanroom.§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5309,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Etched Silicon Nitride Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 779,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5309,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "776:10": {
+      "preRequisites:11": [
+        773
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Nickel-Coated NOR Wafers §rare then §6etched§r in a §cMV Chemical Bath §susing Hydrofluoric Acid.§r\n\nNote: Requires cleanroom.§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 576,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "NOR Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 780,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 576,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     }
@@ -60405,8 +61588,8 @@
           "id:3": 550,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -222,
-          "y:3": 174
+          "x:3": -216,
+          "y:3": 198
         },
         "5:10": {
           "id:3": 614,
@@ -60595,7 +61778,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -24,
-          "y:3": 180
+          "y:3": 204
         },
         "32:10": {
           "id:3": 680,
@@ -60755,28 +61938,28 @@
           "id:3": 706,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -138,
-          "y:3": 180
+          "x:3": -111,
+          "y:3": 204
         },
         "55:10": {
           "id:3": 707,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 150
+          "x:3": -61,
+          "y:3": 165
         },
         "56:10": {
           "id:3": 708,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -18,
-          "y:3": 114
+          "y:3": 165
         },
         "57:10": {
           "id:3": 709,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -78,
+          "x:3": -24,
           "y:3": 108
         },
         "58:10": {
@@ -60818,8 +62001,8 @@
           "id:3": 717,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 240
+          "x:3": -105,
+          "y:3": 263
         },
         "64:10": {
           "id:3": 718,
@@ -62539,7 +63722,7 @@
           "id:3": 291,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -60,
+          "x:3": -48,
           "y:3": -12
         },
         "4:10": {
@@ -62569,6 +63752,146 @@
           "sizeY:3": 24,
           "x:3": 138,
           "y:3": 42
+        },
+        "8:10": {
+          "id:3": 587,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -200,
+          "y:3": 100
+        },
+        "9:10": {
+          "id:3": 687,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -280,
+          "y:3": 100
+        },
+        "10:10": {
+          "id:3": 699,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -1,
+          "y:3": 100
+        },
+        "11:10": {
+          "id:3": 702,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 280,
+          "y:3": 100
+        },
+        "12:10": {
+          "id:3": 703,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 280,
+          "y:3": 42
+        },
+        "13:10": {
+          "id:3": 765,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -240,
+          "y:3": 100
+        },
+        "14:10": {
+          "id:3": 766,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -160,
+          "y:3": 100
+        },
+        "15:10": {
+          "id:3": 767,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -120,
+          "y:3": 100
+        },
+        "16:10": {
+          "id:3": 768,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -80,
+          "y:3": 100
+        },
+        "17:10": {
+          "id:3": 769,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -40,
+          "y:3": 100
+        },
+        "18:10": {
+          "id:3": 770,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -240,
+          "y:3": 140
+        },
+        "19:10": {
+          "id:3": 771,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 40,
+          "y:3": 100
+        },
+        "20:10": {
+          "id:3": 772,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 80,
+          "y:3": 100
+        },
+        "21:10": {
+          "id:3": 773,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 200,
+          "y:3": 140
+        },
+        "22:10": {
+          "id:3": 774,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 280,
+          "y:3": 140
+        },
+        "23:10": {
+          "id:3": 776,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 240,
+          "y:3": 100
+        },
+        "24:10": {
+          "id:3": 777,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 160,
+          "y:3": 100
+        },
+        "25:10": {
+          "id:3": 778,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 200,
+          "y:3": 100
+        },
+        "26:10": {
+          "id:3": 779,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 120,
+          "y:3": 100
+        },
+        "27:10": {
+          "id:3": 780,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 240,
+          "y:3": 140
         }
       }
     },
