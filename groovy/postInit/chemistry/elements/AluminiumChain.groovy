@@ -14,6 +14,14 @@ CRYSTALLIZER = recipemap('crystallizer')
 
 // Aluminium Nugget * 3
 mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('dustRuby')], null)
+//Aluminium Dust -> Aluminium Ingot
+furnace.add(ore('dustAluminium'), metaitem('ingotAluminium'))
+//Remove EBF recipe with Aluminium Dust:
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('nitrogen') * 1000])
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+
+
+
 // Ruby Slurry * 3000
 mods.gregtech.mixer.removeByInput(1920, [metaitem('dustRuby') * 6], [fluid('aqua_regia') * 3000])
 
