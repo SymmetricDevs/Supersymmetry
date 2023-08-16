@@ -78,14 +78,14 @@ public class OreMaterials{
 
         VanadiferousTitanomagnetite.setFormula("(V,Fe,Ti)2O4", true);
 
-        Armstrongite = new Material.Builder(7007, "armstrongite")
+        Baddeleyite = new Material.Builder(7007, "baddeleyite")
                 .dust().ore()
                 .flags(NO_SMELTING)
                 .color(0x3a4f43)
-                .components(Calcium, 1, Zirconium, 1, Silicon, 6, Oxygen, 15, Water, 3)
+                .components(Zirconium, 1, Oxygen, 2)
                 .build()
 
-        Armstrongite.setFormula("CaZr[Si6O15] * (H2O)3", true);
+        Baddeleyite.setFormula("ZrO2", true);
 
         Vanadinite = new Material.Builder(7008, "vanadinite")
                 .gem().ore()
@@ -362,7 +362,7 @@ public class OreMaterials{
                 .build();
 
         Zircon = new Material.Builder(7047, "zircon")
-                .gem()
+                .gem().ore()
                 .iconSet(SHINY)
                 .color(0xf05c51)
                 .components(Zirconium, 1, Silicon, 1, Oxygen, 4)
@@ -533,7 +533,7 @@ public class OreMaterials{
                 .setFormula("K2Mg2(SO4)3", true);
 
         Hydroxyapatite = new Material.Builder(7071, "hydroxyapatite")
-                .dust().gem()
+                .dust().gem().ore()
                 .iconSet(SHINY)
                 .color(0xc7afaa)
                 .components(Calcium, 5, Phosphorus, 3, Oxygen, 13, Hydrogen, 1)

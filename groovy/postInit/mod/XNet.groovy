@@ -40,15 +40,15 @@ crafting.addShaped("xnet_cable_routing", item('xnet:netcable:4')*48, [
 ]);
 
 crafting.addShaped("xnet_connector", item('xnet:connector:0'), [
-        [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')],
-        [metaitem('robot.arm.lv'), metaitem('hull.lv'), metaitem('pump.lv')],
-        [ore('plateSteel'), ore('wireGtSingleTin'), ore('plateSteel')]
+        [null, ore('circuitLv'), null],
+        [metaitem('robot.arm.lv'), metaitem('hull.lv'), metaitem('electric.pump.lv')],
+        [null, ore('wireGtSingleTin'), null]
 ]);
 
 crafting.addShaped("xnet_connector_advanced", item('xnet:advanced_connector:0'), [
-        [ore('plateAluminium'), ore('circuitMv'), ore('plateAluminium')],
-        [metaitem('robot.arm.mv'), metaitem('hull.mv'), metaitem('pump.mv')],
-        [ore('plateAluminium'), ore('wireGtSingleAnnealedCopper'), ore('plateAluminium')]
+        [null, ore('circuitMv'), null],
+        [metaitem('robot.arm.mv'), metaitem('hull.mv'), metaitem('electric.pump.mv')],
+        [null, ore('wireGtSingleAnnealedCopper'), null]
 ]);
 
 crafting.addShaped("xnet_controller", item('xnet:controller'), [

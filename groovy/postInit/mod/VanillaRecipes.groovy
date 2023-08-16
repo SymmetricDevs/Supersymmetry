@@ -373,6 +373,29 @@ mods.gregtech.assembler.removeByInput(16, [metaitem('plateSteel'), item('minecra
 mods.gregtech.assembler.removeByInput(16, [metaitem('plateAluminium'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
 // Piston * 8
 mods.gregtech.assembler.removeByInput(16, [metaitem('plateTitanium'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
+// Powered Rail * 12
+mods.gregtech.assembler.removeByInput(30, [metaitem('stickGold') * 12, item('minecraft:stick'), item('minecraft:redstone'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
+// Gold Nugget * 4
+mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:golden_rail')], [fluid('oxygen') * 87])
+
+mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(ore('stickBrass') * 12)
+    .inputs(ore('stickWood'))
+    .inputs(ore('wireFineRedAlloy'))
+    .outputs(item('minecraft:golden_rail') * 12)
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
+
+mods.gregtech.arc_furnace.recipeBuilder()
+    .inputs(item('minecraft:golden_rail') * 12)
+    .fluidInputs(fluid('oxygen') * 87)
+    .outputs(metaitem('ingotBrass') * 6)
+    .outputs(metaitem('nuggetRedAlloy'))
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
     .inputs(ore('cobblestone') * 4)
@@ -439,7 +462,7 @@ mods.gregtech.assembler.recipeBuilder()
 //Autoclave
 
 mods.gregtech.autoclave.recipeBuilder()
-		.inputs(metaitem('dustWood'))
+		.inputs(ore('dustWood'))
 		.fluidInputs(fluid('distilled_water') * 100)
 		.outputs(metaitem('dustPaper'))
 		.duration(200)
@@ -447,7 +470,7 @@ mods.gregtech.autoclave.recipeBuilder()
 		.buildAndRegister()
 
 mods.gregtech.autoclave.recipeBuilder()
-		.inputs(metaitem('dustWood'))
+		.inputs(ore('dustWood'))
 		.fluidInputs(fluid('water') * 100)
 		.outputs(metaitem('dustPaper'))
 		.duration(200)
@@ -558,7 +581,7 @@ mods.gregtech.mixer.recipeBuilder()
     .buildAndRegister()
 
 mods.gregtech.mixer.recipeBuilder()
-		.inputs(metaitem('dustQuicklime'))
+		.inputs(ore('dustQuicklime'))
 		.fluidInputs(fluid('sugary_water') * 10000)
 		.fluidOutputs(fluid('clarified_sugary_water') * 10000)
 		.duration(400)
@@ -759,22 +782,29 @@ mods.gregtech.macerator.removeByInput(2, [item('minecraft:rail')], null)
 // Wrought Iron Nugget * 1
 mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:rail')], [fluid('oxygen') * 6])
 // Small Pile of Gold Dust * 2
+
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('dustSodiumBicarbonate') * 6)
+    .fluidInputs(fluid('polyvinyl_acetate') * 576)
+    .fluidInputs(fluid('salt_water') * 1000)
+    .outputs(item('minecraft:slime_ball') * 9)
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
+
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('dustSodiumBicarbonate') * 6)
+    .fluidInputs(fluid('glue') * 576)
+    .fluidInputs(fluid('salt_water') * 1000)
+    .outputs(item('minecraft:slime_ball') * 3)
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
+
+crafting.addShaped("tnt_block", item('minecraft:tnt'), [
+        [null, ore('dustTnt'), null],
+        [ore('dustSiliconDioxide'), ore('wireFineRedAlloy'), ore('dustSiliconDioxide')],
+        [null, ore('dustTnt'), null]
+]);
+
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:golden_rail')], null)
-
-crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.lv", metaitem('gregtechfoodoption:slicer.lv'), [
-		[metaitem('electric.piston.lv'), ore('circuitLv'), ore('cableGtSingleTin')],
-		[ore('toolHeadBuzzSawSteel'), metaitem('gregtech:hull.lv'), ore('circuitLv')],
-		[ore('plateSteel'), metaitem('conveyor.module.lv'), ore('cableGtSingleTin')]
-])
-
-crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.mv", metaitem('gregtechfoodoption:slicer.mv'), [
-		[metaitem('electric.piston.mv'), ore('circuitMv'), ore('cableGtSingleCopper')],
-		[ore('toolHeadBuzzSawAluminium'), metaitem('gregtech:hull.mv'), ore('circuitMv')],
-		[ore('plateAluminium'), metaitem('conveyor.module.mv'), ore('cableGtSingleCopper')]
-])
-
-crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.hv", metaitem('gregtechfoodoption:slicer.hv'), [
-		[metaitem('electric.piston.hv'), ore('circuitHv'), ore('cableGtSingleGold')],
-		[ore('toolHeadBuzzSawVanadiumSteel'), metaitem('gregtech:hull.hv'), ore('circuitHv')],
-		[ore('plateVanadiumSteel'), metaitem('conveyor.module.hv'), ore('cableGtSingleGold')]
-])

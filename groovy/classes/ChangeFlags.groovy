@@ -43,6 +43,7 @@ class ChangeFlags {
         Platinum.addFlags("generate_catalyst_bed");
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
+        Brass.addFlags("generate_ring")
 
         DilutedHydrochloricAcid.setFormula("(H2O)2(HCl)", true);
 
@@ -50,7 +51,6 @@ class ChangeFlags {
         UraniumTriplatinum.addFlags("generate_fine_wire");
         RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
 
-        Phosphorus.setFormula("P4", true);
         Phosphorus.setMaterialRGB(0xfffed6);
         Phosphorus.addFlags("no_smelting");
         
@@ -63,7 +63,8 @@ class ChangeFlags {
         Asbestos.addFlags("generate_foil");
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
-
+        
+        Iodine.setProperty(PropertyKey.FLUID, new FluidProperty());
         LithiumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
         SiliconDioxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());

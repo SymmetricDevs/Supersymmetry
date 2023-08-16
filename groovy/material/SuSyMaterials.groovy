@@ -38,7 +38,7 @@ class SuSyMaterials {
         public static Material Titanomagnetite;
         public static Material Fluorapatite;
         public static Material VanadiferousTitanomagnetite;
-        public static Material Armstrongite;
+        public static Material Baddeleyite;
         public static Material Vanadinite;
         public static Material Cerussite;
         public static Material Anglesite;
@@ -227,7 +227,6 @@ class SuSyMaterials {
         public static Material PhosphatePulp;
         public static Material FilteredPhosphatePulp;
         public static Material PhosphateConcentrate;
-        public static Material Phosphogypsum;
         public static Material ImpureAmmoniumFluoroberyllateSolution;
         public static Material ImpureBerylliumSulfateSolution;
         public static Material ImpureLithiumSulfateSolution;
@@ -252,9 +251,6 @@ class SuSyMaterials {
         public static Material BoraxElectrolyte;
         public static Material FerroelectricCeramicBinding;
         public static Material ConfiguredCircuitOne;
-        public static Material MetalNitrateSolution;
-        public static Material NeutralizedMetalNitrateSolution;
-        public static Material MetalNitrateCatalyst;
         public static Material TwoEthylhexylPhosphoricAcidMix;
         public static Material RareEarthCatalystYNd;
         public static Material DilutedPrimaryAmineN;
@@ -404,6 +400,12 @@ class SuSyMaterials {
         public static Material ImpureCinnabarSlurry;
         public static Material CinnabarSlurry;
         public static Material ChlorofluoromethaneMix;
+        public static ImpureZirconSlurry;
+        public static ZirconSlurry;
+        public static HafniumExtractionMixture;
+        public static HafniumExtract;
+        public static Material PropanalMixture;
+        public static Material ZSMFive;
 
         // Petrochem Materials
 
@@ -465,6 +467,8 @@ class SuSyMaterials {
         public static Material LightOilyBrine;
         public static Material HeavyOilyBrine;
         public static Material SulfuricOilResidue;
+        public static Material TreatedSulfuricOilResidue;
+        public static Material OilResidue;
         public static Material LightBitumenSolution;
         public static Material BitumenSolution;
         public static Material HeavyBitumenSolution;
@@ -583,7 +587,6 @@ class SuSyMaterials {
         public static Material SodiumDichromate;
         public static Material RaneyNickel;
         public static Material ActivatedRaneyNickel;
-        public static Material CopperIIOxide;
         public static Material DicobaltOctacarbonyl;
         public static Material ImpregnatedAluminaCatalyst;
         public static Material BismuthCopper;
@@ -774,8 +777,6 @@ class SuSyMaterials {
         public static Material ManganeseIINitrate;
         public static Material PurifiedManganeseDioxide;
         public static Material BariumTitanate;
-        public static Material HafniumTetrachloride;
-        public static Material ZirconiumTetrachloride;
         public static Material RawElectrum;
         public static Material NeodymiumAlloy;
         public static Material TreatedNeodymiumAlloy;
@@ -829,7 +830,7 @@ class SuSyMaterials {
         public static Material SodiumChromateMixture;
         public static Material SodiumChromateSolution;
         public static Material LeadChloride;
-        public static Material SodiumVanadate;
+        public static Material SodiumVanadateSolution;
         public static Material AmmoniumMetavanadate;
         public static Material SodiumAmide;
         public static Material LeadChromate;
@@ -875,6 +876,26 @@ class SuSyMaterials {
         public static Material Chlorotrifluoromethane;
         public static Material Chlorodifluoromethane;
         public static Material PolychlorinatedBiphenyl;
+        public static Material DilutedSilverNitrateSolution;
+        public static Material TitaniumIodide;
+        public static Material ZirconiumIodide;
+        public static Material HafniumIodide;
+        public static Material SiftedZircon;
+        public static Material FlotatedZircon;
+        public static Material ZirconConcentrate;
+        public static Material FusedZirconia;
+        public static Material ImpureZirconiumTetrachloride;
+        public static Material ZirconiumSulfateSolution;
+        public static Material ZirconylChlorideSolution;
+        public static Material PurifiedZirconylChlorideSolution;
+        public static Material ZirconiumBasicSulfate;
+        public static Material ZirconiumTetrachloride;
+        public static Material HafniumSulfateSolution;
+        public static Material HafniumDioxide;
+        public static Material ImpureHafniumTetrachloride;
+        public static Material HafniumTetrachloride;
+        public static Material AmmoniumThiocyanate;
+        public static Material CalciumZirconate;
 
         // Second Degree Materials
 
@@ -943,7 +964,6 @@ class SuSyMaterials {
         public static Material DilutedSodiumSilicateSolution;
         public static Material SodiumDichromateSolution;
         public static Material ChromiumSodaMixture;
-        public static Material SodiumVanadateSolution;
         public static Material LeadChlorideSolution;
         public static Material AmmoniumSulfateSolution;
         public static Material AmmoniumChromeAlumSolution;
@@ -956,6 +976,7 @@ class SuSyMaterials {
         public static Material DilutedAmmoniumSulfateSolution;
         public static Material DilutedAmmoniumChlorideSolution;
         public static Material AmmoniacalSodiumBicarbonateSolution;
+        public static Material AmmoniumThiocyanateSolution;
 
         // Organic Chemistry Materials
 
@@ -1015,8 +1036,8 @@ class SuSyMaterials {
         public static Material ImpureEpoxyResin;
         public static Material UncuredEpoxyResin;
         public static Material TNTSolution;
-        public static Material VinylChlorideSolution;
-        public static Material PolyvinylChlorideSolution;
+        public static Material VinylChlorideSuspension;
+        public static Material PolyvinylChlorideSuspension;
         public static Material StyreneSolution;
         public static Material PolystyreneSolution;
         public static Material VinylAcetateSolution;
@@ -1049,7 +1070,6 @@ class SuSyMaterials {
         public static Material TetrafluoroethyleneEmulsion;
         public static Material Dichloromethane;
         public static Material CarbonTetrachloride;
-        public static Material PhthalicAcidSolution;
         public static Material PolytetrafluoroethyleneSolution;
         public static Material MixedNitrochlorobenzeneSolution;
         public static Material MixedDichlorobenzeneSolution;
@@ -1108,6 +1128,8 @@ class SuSyMaterials {
         public static Material TetrasodiumEthylenediaminetetraaceticAcid;
         public static Material Urea;
         public static Material Diiodobenzene;
+        public static Material IsophthalicAcid;
+        public static Material IsophthaloylDichloride;
         public static Material TerephthalicAcid;
         public static Material Bistrichloromethylbenzene;
         public static Material TerephthaloylChloride;
@@ -1201,6 +1223,16 @@ class SuSyMaterials {
         public static Material Tetrahydrofuran;
         public static Material SodiumCyclopentadienide;
         public static Material PotassiumButylXanthate;
+        public static Material PicricAcid;
+        public static Material Monomethylhydrazine;
+        public static Material OrthoXylene;
+        public static Material MetaXylene;
+        public static Material ParaXylene;
+        public static Material MetaParaXyleneMixture;
+        public static Material Tripropylamine;
+        public static Material NBromopropane;
+        public static Material TetrapropylammoniumBromide;
+        public static Material Propionaldehyde;
 
         // Third Degree Materials
 
@@ -1229,9 +1261,7 @@ class SuSyMaterials {
         public static Material MagnesiumChlorideGlycolate;
         public static Material DiglycolicAcidSolution;
         public static Material DiTwoEthylhexylPhosphoricAcidSolution;
-        public static Material DilutedTetraoctylDiglycolamide;
         public static Material DilutedChloroaceticAnhydride;
-        public static Material DilutedOctylamine;
         public static Material DilutedMethylIsobutylKetone;
         public static Material DilutedTwoEthylTwoHexenal;
         public static Material DilutedDiisopropylamine;
@@ -1248,6 +1278,11 @@ class SuSyMaterials {
         public static Material KaminskyCatalyst;
         public static Material ZirconiumTetrachlorideTetrahydrofuranComplex;
         public static Material PotassiumButylXanthateSolution;
+        public static Material TNPSolution;
+        public static Material IsophthaloylDichlorideSolution;
+        public static Material IsophthalicAcidSolution;
+        public static Material DichloroethaneIsophthalicAcidSolution;
+        public static Material TetrahydrofuranSolution;
 
         // Thermodynamics/Greenhouse Materials
 
