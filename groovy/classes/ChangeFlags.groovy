@@ -56,7 +56,8 @@ class ChangeFlags {
         
         DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
         AquaRegia.setFormula("(HNO3)(HCl)3", true);
-      
+        Tantalite.setFormula("(Fe,Mn)Ta2O6", true);
+
 		Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
         Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
@@ -64,7 +65,7 @@ class ChangeFlags {
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
         
-        Iodine.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Iodine.setProperty(PropertyKey.FLUID, new FluidProperty(FluidTypes.GAS));
         LithiumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
         SiliconDioxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());

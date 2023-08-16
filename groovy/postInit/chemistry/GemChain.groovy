@@ -131,3 +131,33 @@ BR.recipeBuilder()
         .duration(200)
         .EUt(120)
         .buildAndRegister();
+
+// Lithium Niobate
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustLithium') * 2)
+        .fluidInputs(fluid('oxygen') * 1000)
+        .outputs(metaitem('dustLithiumOxide'))
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister();
+
+CRYSTALLIZER.recipeBuilder()
+        .inputs(metaitem('seed_crystal.lithium_niobate'))
+        .inputs(ore('NiobiumOxide') * 14)
+        .fluidInputs(fluid('lithium_oxide') * 864)
+        .outputs(metaitem('boule.lithium_niobate'))
+        .duration(400)
+        .EUt(120)
+        .buildAndRegister()
+
+CUTTER.recipeBuilder()
+        .inputs(metaitem('boule.lithium_niobate'))
+        .outputs(metaitem('seed_crystal.lithium_niobate'))
+        .outputs(metaitem('gemExquisiteLithiumNiobate') * 5)
+        .duration(400)
+        .EUt(120)
+        .buildAndRegister()
+
+// Lead Zirconate Titanate
+

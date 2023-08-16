@@ -204,6 +204,7 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 ROASTER.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('dustAmmoniumFluoride') * 12)
         .outputs(metaitem('dustAmmoniumBifluoride') * 8)
         .fluidOutputs(fluid('ammonia') * 1000)
