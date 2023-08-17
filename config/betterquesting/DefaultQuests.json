@@ -9138,7 +9138,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Pig iron§r is the product of smelting iron ore (such as §6Banded Iron§r and §6Magnetite§o§r) with a high-carbon fuel like §6Coal§r, Charcoal or Coal Coke in a Blast Furnace. §6Limonite §rcan also be used as an ore, but it has to be smelted in a normal Furnace first, or dried by using a Dryer.\n\nExtracting usable metal from iron ores requires kilns or furnaces (such as a §cBlast Furnace§r) capable of reaching 1,500 °C (1,773K) or higher, about 500 °C higher than that required to smelt copper. \n\n§6Pig iron §rmust be smelted in a normal Furnace to get §8§7Iron§r. \n\n§cIt is recommended to use dusts instead of ores while smelting Iron. If you can\u0027t macerate ores into dusts, look into the Grindstone.",
+          "desc:8": "§6Pig iron§r is the product of smelting iron ore (such as §6Banded Iron§r and §6Magnetite§o§r) with a high-carbon fuel like §6Coal§r, Charcoal or Coal Coke in a Blast Furnace. §6Limonite §rcan also be used as an ore, but it has to be smelted in a normal Furnace first, or dried by using a Dryer.\n\nExtracting usable metal from iron ores requires kilns or furnaces (such as a §cBlast Furnace§r) capable of reaching 1,500 °C (1,773K) or higher, about 500 °C higher than that required to smelt copper.\n\n§cIt is recommended to use dusts instead of ores while smelting Iron. If you can\u0027t macerate ores into dusts, look into the Grindstone.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
