@@ -12,6 +12,13 @@ VACUUM_DT = recipemap('vacuum_distillation')
 FLBR = recipemap('fluidized_bed_reactor')
 DT = recipemap('distillation_tower')
 
+def carbon_sources = [
+        'dustCarbon',
+        'dustCoal',
+        'dustCharcoal',
+        'dustCoke'
+]
+
 ROASTER.recipeBuilder()
         .inputs(ore('dustMagnesite') * 5)
         .outputs(metaitem('dustMagnesia') * 2)
@@ -34,11 +41,25 @@ EBF.recipeBuilder()
         .inputs(metaitem('dustQuicklime') * 4)
         .inputs(metaitem('dustSilicon') * 1)
         .outputs(metaitem('dustCalciumOrthosilicate') * 7)
-        .fluidOutputs(fluid('magnesium') * 288)
-        .EUt(30)
-        .duration(200)
+        .outputs(metaitem('dustMagnesium') * 2)
+        .EUt(120)
+        .duration(100)
         .blastFurnaceTemp(1370)
         .buildAndRegister()
+
+for (carbon_source in carbon_sources) {
+
+        EBF.recipeBuilder()
+                .inputs(ore('dustMagnesia') * 2)
+                .inputs(ore(carbon_source))
+                .outputs(metaitem('dustMagnesium'))
+                .fluidOutputs(fluid('carbon_monoxide') * 1000)
+                .EUt(120)
+                .duration(100)
+                .blastFurnaceTemp(2500)
+                .buildAndRegister()
+
+}
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustCalciumOrthosilicate') * 7)
