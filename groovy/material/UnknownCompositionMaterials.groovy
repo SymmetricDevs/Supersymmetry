@@ -763,12 +763,12 @@ public class UnknownCompositionMaterials {
                 .color(0xe0e6bc)
                 .build();
 
-        TrialkylaluminiumMixture = new Material.Builder(4144, 'trialkylaluminium_mixture')
+        AlfolTrialkylaluminiumMixture = new Material.Builder(4144, 'alfol_trialkylaluminium_mixture')
                 .fluid()
                 .color(0x6b777d)
                 .build()
 
-        TrialkylaluminiumMixture.setFormula("AlR3", true)
+        AlfolTrialkylaluminiumMixture.setFormula("AlR3", true)
 
         AluminiumAlkoxideMixture = new Material.Builder(4145, 'aluminium_alkoxide_mixture')
                 .dust()
@@ -777,7 +777,7 @@ public class UnknownCompositionMaterials {
 
         AluminiumAlkoxideMixture.setFormula("Al(OR)3", true)
 
-        ZieglerAlcoholMixture = new Material.Builder(4146, 'ziegler_alcohol_mixture')
+        ZieglerAlfolMixture = new Material.Builder(4146, 'ziegler_alfol_mixture')
                 .fluid()
                 .color(0xc47631)
                 .build()
@@ -1359,7 +1359,7 @@ public class UnknownCompositionMaterials {
                 .color(0x856119)
                 .build();
 
-        CopperMatteFlueDust = new Material.Builder(4260, "copper_matte_flue_dust")
+        CopperMatteFlueDust = new Material.Builder(4260, "copper_matte_flue")
                 .dust()
                 .color(0x3e146e)
                 .iconSet(DULL)

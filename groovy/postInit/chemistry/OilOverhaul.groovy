@@ -1194,7 +1194,7 @@ CSTR.recipeBuilder()
 .EUt(120)
 .buildAndRegister();
 
-LCR.recipeBuilder()
+BR.recipeBuilder()
 .inputs(ore('dustSiliconDioxide') * 6)
 .inputs(ore('dustAluminiumSulfate') * 51)
 .inputs(ore('dustSodiumHydroxide'))

@@ -533,10 +533,10 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        DilutedDichloroethane = new Material.Builder(15087, 'diluted_dichloroethane')
+        TetrapropylammoniumBromide = new Material.Builder(15087, "tetrapropylammonium_bromide")
                 .fluid()
-                .components(Water, 3, Dichloroethane, 1)
-                .colorAverage()
+                .components(Carbon, 12, Hydrogen, 28, Bromine, 1, Nitrogen, 1)
+                .color(0x916c0f)
                 .build();
 
         Formaldehyde = new Material.Builder(15088, "formaldehyde")
@@ -1544,12 +1544,6 @@ public class OrganicChemistryMaterials {
                 .fluid()
                 .components(Carbon, 3, Hydrogen, 7, Bromine, 1)
                 .color(0x9e833f)
-                .build();
-
-        TetrapropylammoniumBromide = new Material.Builder(15247, "tetrapropylammonium_bromide")
-                .fluid()
-                .components(Carbon, 12, Hydrogen, 28, Bromine, 1, Nitrogen, 1)
-                .color(0x916c0f)
                 .build();
     }
 }

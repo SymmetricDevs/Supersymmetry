@@ -269,7 +269,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        TNTSolution = new Material.Builder(24042, 'tnp_solution')
+        TNPSolution = new Material.Builder(24042, 'tnp_solution')
                 .fluid()
                 .components(PicricAcid, 1, DilutedSulfuricAcid, 1)
                 .colorAverage()

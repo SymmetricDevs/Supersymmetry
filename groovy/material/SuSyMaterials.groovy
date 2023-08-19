@@ -257,9 +257,9 @@ class SuSyMaterials {
         public static Material CrosslinkedPolystyrene;
         public static Material EthyleneGlycolMix;
         public static Material PalladiumDopedCrosslinkedPolystyrene;
-        public static Material TrialkylaluminiumMixture;
+        public static Material AlfolTrialkylaluminiumMixture;
         public static Material AluminiumAlkoxideMixture;
-        public static Material ZieglerAlcoholMixture;
+        public static Material ZieglerAlfolMixture;
         public static Material ImpureDiethylEther;
         public static Material AluminiumAlkoxideSolution;
         public static Material DisproportionatedTrichlorosilane;
@@ -1057,7 +1057,6 @@ class SuSyMaterials {
         public static Material MethylFormate;
         public static Material MethylFormateSolution;
         public static Material Acetylene;
-        public static Material DilutedDichloroethane;
         public static Material Formaldehyde;
         public static Material MethylamineMix;
         public static Material Methylamine;
