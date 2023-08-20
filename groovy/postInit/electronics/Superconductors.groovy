@@ -86,9 +86,9 @@ for (i = 0; i < 6; i++) {
     mods.gregtech.wiremill.removeByInput(7, [metaitem('wireGtSingle' + lowTempSuperconductors[i]), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
     ASSEMBLER.recipeBuilder()
-            .inputs(metaitem('wireGtSingleCopper'))
-            .inputs(metaitem('wireFine' + lowTempSuperconductors[i]) * 8)
-            .inputs(metaitem('foilCopper'))
+            .inputs(ore('wireGtSingleCopper'))
+            .inputs(ore('wireFine' + lowTempSuperconductors[i]) * 8)
+            .inputs(ore('foilCopper'))
             .outputs(metaitem('assembly' + lowTempSuperconductorsLowerCase[i]))
             .duration(200)
             .EUt(30)
@@ -97,7 +97,7 @@ for (i = 0; i < 6; i++) {
     EXTRUDER.recipeBuilder()
             .inputs(metaitem('assembly' + lowTempSuperconductorsLowerCase[i]))
             .notConsumable(metaitem('shape.extruder.wire'))
-            .outputs(metaitem('base' + lowTempSuperconductorsLowerCase[i]) * 4)
+            .outputs(metaitem('base' + lowTempSuperconductorsLowerCase[i]) * 16)
             .duration(200)
             .EUt(30)
             .buildAndRegister();
@@ -280,8 +280,8 @@ TUBE_FURNACE.recipeBuilder()
 
 for (i = 0; i < 3; i++) {
     CANNER.recipeBuilder()
-            .inputs(metaitem('pipeTinyFluidSilver'))
-            .inputs(metaitem('dust' + highTempSuperconductors[i]))
+            .inputs(ore('pipeTinyFluidSilver'))
+            .inputs(ore('dust' + highTempSuperconductors[i]))
             .outputs(metaitem('canned' + highTempSuperconductorsLowerCase[i]))
             .duration(200)
             .EUt(30)
@@ -290,7 +290,7 @@ for (i = 0; i < 3; i++) {
     EXTRUDER.recipeBuilder()
             .inputs(metaitem('tube' + highTempSuperconductorsLowerCase[i]))
             .notConsumable(metaitem('shape.extruder.wire'))
-            .outputs(metaitem('base' + highTempSuperconductorsLowerCase[i]) * 4)
+            .outputs(metaitem('base' + highTempSuperconductorsLowerCase[i]) * 16)
             .duration(200)
             .EUt(30)
             .buildAndRegister();
@@ -331,7 +331,7 @@ for (def i = 0; i < 9; i++) {
                 if (criticalTemperatures[i] > val) {
                 CHEMICAL_BATH.recipeBuilder()
                         .inputs(metaitem('base' + allSuperconductorsLowerCase[i]))
-                        .fluidInputs(liquid(key) * 2)
+                        .fluidInputs(liquid(key) * 1)
                         .outputs(metaitem('wireGtSingle' + allSuperconductors[i]))
                         .duration(50)
                         .EUt(Globals.voltAmps[i + 1])
@@ -341,7 +341,7 @@ for (def i = 0; i < 9; i++) {
 }
 
 ROASTER.recipeBuilder()
-        .inputs(metaitem('dustBarium') * 1)
+        .inputs(ore('dustBarium') * 1)
         .fluidInputs(liquid('oxygen') * 1000)
         .outputs(metaitem('dustBariumOxide') * 2)
         .duration(200)
@@ -357,36 +357,46 @@ ROASTER.recipeBuilder()
         .buildAndRegister();
 
 MIXER.recipeBuilder()
-        .inputs(metaitem('dustMercuryOxide') * 2)
-        .inputs(metaitem('dustQuicklime') * 4)
-        .inputs(metaitem('dustBariumOxide') * 4)
-        .inputs(metaitem('dustCupricOxide') * 6)
+        .inputs(ore('dustMercuryOxide') * 2)
+        .inputs(ore('dustQuicklime') * 4)
+        .inputs(ore('dustBariumOxide') * 4)
+        .inputs(ore('dustCupricOxide') * 6)
         .outputs(metaitem('dustMercuryBariumCalciumCuprate') * 16)
         .duration(300)
         .EUt(240)
         .buildAndRegister();
 
 TUBE_FURNACE.recipeBuilder()
-        .inputs(metaitem('dustSamarium'))
-        .inputs(metaitem('dustArsenic'))
-        .inputs(metaitem('dustIron'))
+        .inputs(ore('dustSamarium'))
+        .inputs(ore('dustArsenic'))
+        .inputs(ore('dustIron'))
         .fluidInputs(fluid('oxygen') * 1000)
         .outputs(metaitem('dustSamariumIronArsenicOxide') * 4)
         .duration(600)
         .EUt(1920)
         .buildAndRegister();
 
+
+TUBE_FURNACE.recipeBuilder()
+        .inputs(ore('dustManganese'))
+        .inputs(ore('dustPhosphorus'))
+        .fluidInputs(fluid('nitrogen') * 1000)
+        .outputs(metaitem('dustManganesePhosphide') * 4)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister();
+
 MIXER.recipeBuilder()
-        .inputs(metaitem('dustYttriumOxide') * 5)
-        .inputs(metaitem('dustBariumOxide') * 8)
-        .inputs(metaitem('dustCupricOxide') * 12)
+        .inputs(ore('dustYttriumOxide') * 5)
+        .inputs(ore('dustBariumOxide') * 8)
+        .inputs(ore('dustCupricOxide') * 12)
         .outputs(metaitem('dustYttriumBariumCuprate') * 25)
         .duration(600)
         .EUt(7680)
         .buildAndRegister();
 
 ROASTER.recipeBuilder()
-        .inputs(metaitem('dustIndium') * 1)
+        .inputs(ore('dustIndium') * 1)
         .fluidInputs(liquid('chlorine') * 3000)
         .outputs(metaitem('dustIndiumChloride') * 4)
         .duration(200)
@@ -394,7 +404,7 @@ ROASTER.recipeBuilder()
         .buildAndRegister();
 
 BR.recipeBuilder()
-        .inputs(metaitem('dustIndiumChloride') * 4)
+        .inputs(ore('dustIndiumChloride') * 4)
         .fluidInputs(liquid('sodium_hydroxide_solution') * 3000)
         .outputs(metaitem('dustIndiumHydroxide') * 7)
         .fluidOutputs(liquid('salt_water') * 3000)
@@ -403,7 +413,7 @@ BR.recipeBuilder()
         .buildAndRegister();
 
 ROASTER.recipeBuilder()
-        .inputs(metaitem('dustIndiumHydroxide') * 14)
+        .inputs(ore('dustIndiumHydroxide') * 14)
         .outputs(metaitem('dustIndiumOxide') * 5)
         .fluidOutputs(liquid('steam') * 3000)
         .duration(200)
@@ -411,11 +421,11 @@ ROASTER.recipeBuilder()
         .buildAndRegister();
 
 MIXER.recipeBuilder()
-        .inputs(metaitem('dustIndiumOxide') * 10)
-        .inputs(metaitem('dustPurifiedTinIiOxide') * 4)
-        .inputs(metaitem('dustBariumOxide') * 4)
-        .inputs(metaitem('dustTitaniumDioxide') * 2)
-        .inputs(metaitem('dustCupricOxide') * 14)
+        .inputs(ore('dustIndiumOxide') * 10)
+        .inputs(ore('dustPurifiedTinIiOxide') * 4)
+        .inputs(ore('dustBariumOxide') * 4)
+        .inputs(ore('dustTitaniumDioxide') * 2)
+        .inputs(ore('dustCupricOxide') * 14)
         .outputs(metaitem('dustIndiumTinBariumTitaniumCuprate') * 16)
         .duration(600)
         .EUt(30720)

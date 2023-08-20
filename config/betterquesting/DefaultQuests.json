@@ -8583,7 +8583,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Maintenance Hatch is where maintenance is performed on multi-block machines.\n\nWhile a Multiblock is running, new maintenance problems can appear. On average, new problems arise every few months. \n\nMaintenance is done by using tools in the Maintenance Hatch. To use a tool in maintenance, move it up to the Hatch\u0027s GUI and [§aLeft Click§r] once. Here is a list of the possible problems you can have in a Multiblock:\n\n§6\"Pipe is loose\" §rcan be fixed with a §6Wrench§r.\n§6\"Screws are missing.\"§r can be fixed with a §6Screwdriver§r.\n§6\"Something is stuck.\"§r can be fixed with a §6Soft Hammer§r.\n§6\"Platings are dented.\"§r can be fixed with a §6Hammer§r.\n§6\"Circuitry burned out.\"§r can be fixed with a §6Soldering Iron§r.\n§6\"That doesn\u0027t belong there.\"§r can be fixed with a §6Crowbar§r.\n\nAll of the problems can be fixed by using §7Duct Tape§r.\n",
+          "desc:8": "The Maintenance Hatch is where maintenance is performed on multi-block machines.\n\nWhile a Multiblock is running, new maintenance problems can appear. On average, new problems arise every few months. \n\nMaintenance is done by using tools in the Maintenance Hatch. To use a tool in maintenance, move it up to the Hatch\u0027s GUI and [§aLeft Click§r] once. Here is a list of the possible problems you can have in a Multiblock:\n\n§6\"Pipe is loose\" §rcan be fixed with a §6Wrench§r.\n§6\"Screws are missing.\"§r can be fixed with a §6Screwdriver§r.\n§6\"Something is stuck.\"§r can be fixed with a §6Soft Hammer§r.\n§6\"Platings are dented.\"§r can be fixed with a §6Hammer§r.\n§6\"That doesn\u0027t belong there.\"§r can be fixed with a §6Crowbar§r.\n\nAll of the problems can be fixed by using §7Duct Tape§r.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9260,7 +9260,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bWater §rcan be electrolyzed into §bHydrogen §rand §bOxygen §rby using Nickel Rods and Iron Rods as the anode and cathode. This is a prettty slow process, so be patient.",
+          "desc:8": "§bWater §rcan be electrolyzed into §bHydrogen §rand §bOxygen §rby using Nickel Rods and Iron Rods as the anode and cathode. This is a pretty slow process, so be patient.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18728,7 +18728,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Calcium (Ca)\n§bAtomic Number§r: 20\n§aAtomic Mass§r: 40.08 amu\n§cMelting Point§r: 1115 K\n§5Boiling Point§r: 1757 K\n§6Properties§r: Calcium is an alkaline earth metal essential for the human body and found in bones and teeth. It is used in construction, as a dietary supplement, and in the production of steel.\n\n§lPrimitive: §r§cN/A\n\n§r§lUniversal:§r Ammonia can be combined with Hydrochloric Acid to get §6Ammonium Chloride Solution§r, which is distilled to get §bAmmonium Chloride§r.\t\nAmmonium Chloride can be combined with Quicklime to get §7Calcium Chloride§r, which is melted and then electrolyzed to get §bCalcium§r.\n\n§lSpecialized:§r§c N/A",
+          "desc:8": "§6Element§r: Calcium (Ca)\n§bAtomic Number§r: 20\n§aAtomic Mass§r: 40.08 amu\n§cMelting Point§r: 1115 K\n§5Boiling Point§r: 1757 K\n§6Properties§r: Calcium is an alkaline earth metal essential for the human body and found in bones and teeth. It is used in construction, as a dietary supplement, and in the production of steel.\n\n§lPrimitive: §r§cN/A\n\n§r§lUniversal:§r Ammonia can be combined with Hydrochloric Acid to get §6Ammonium Chloride Solution§r, which is distilled to get §bAmmonium Chloride§r.\t\nAmmonium Chloride can be combined with Quicklime to get §7Calcium Chloride§r, which is melted and then electrolyzed to get §bCalcium§r.\n\n§lSpecialized:§r§c §rMake High Purity Calcium by using a §cVacuum Distillation Tower§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18864,7 +18864,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Titanium (Ti)\n§bAtomic Number§r: 22\n§aAtomic Mass§r: 47.87 amu\n§cMelting Point§r: 1941 K\n§5Boiling Point§r: 3560 K\n§6Properties§r: Titanium is a transition metal known for its high strength, low density, and corrosion resistance. It is used in aerospace applications, medical implants, and in the production of durable goods.\n",
+          "desc:8": "§6Element§r: Titanium (Ti)\n§bAtomic Number§r: 22\n§aAtomic Mass§r: 47.87 amu\n§cMelting Point§r: 1941 K\n§5Boiling Point§r: 3560 K\n§6Properties§r: Titanium is a transition metal known for its high strength, low density, and corrosion resistance. It is used in aerospace applications, medical implants, and in the production of durable goods.\n\n§lPrimitive: §r§cN/A\n\n§r§lUniversal: §rTitanium has 2 sources at this stage of the game: §6Vanadiferous Titanomagnetite,§f and §cIlmenite.§f Those are sourced from the Mining Drill only.\n\nWhat you\u0027ll want to do is process those dusts into Rutile. Both ores have different processing routes to get to Rutile, but Ilmenite is significantly easier to turn into Rutile, needing only 1 fluidized bed reactor step.\n\nNext, you\u0027ll want to react the Rutile with coke and chlorine in a Fluidized Bed Reactor, for Gaseous Titanium Tetrachloride.\n\nAfter several steps of purification, you should have normal Titanium Tetrachloride.\n\nPutting this normal Titanium Tetrachloride in an EBF with magnesium will give you a Titanium Sponge, which is just a few steps away from Titanium Ingots. You\u0027ll need better coils than just Cupronickel Coils for this though.\n\n§lSpecialized: §r§cYou can extract vanadium out of Vanadiferous Titanomagnetite using this process:\n§r\n[Impure Vanadiferous Titanomagnetite Dust] -EM separator➝ [Vanadiferous Titanomagnetite Dust + Tailings]\n\n[2,000L Distilled Water + 8 Vanadiferous Titanomagnetite Dust] -mixer➝ [2,000L Impure Vanadiferous Titanomagnetite Slurry]\n\n[2,000L Impure Vanadiferous Titanomagnetite Slurry + 100L MIBC (NC) + 100L Octylamine (NC)] -flotation➝ [1,000L Silicon Dioxide Slurry + 1,000L Vanadiferous Titanomagnetite Slurry]\n\n[1,000L Vanadiferous Titanomagnetite Slurry] -centrifuge➝ [16x Vanadiferous Titanomagnetite Concentrate + 1,000L Wastewater]\n\n[1,000L Silicon Dioxide Slurry] -centrifuge➝ [1 Silicon Dioxide + 1000L Wastewater]\n\n[11 Vanadiferous Titanomagnetite Concentrate + 7 Coke/Carbon + 1 Dolomite Dust + 100L Natural Gas + 50L Air] -rotary kiln➝ [4 V/Ti-Rich Pig Iron + 7,000L Carbon Monoxide]\n\n[4 V/Ti-Rich Pig Iron + 2,700L oxygen] -advanced arc furnace➝[4 Steel + 1 Vanadium-Titania Slag]\n\n[1 Vanadium-Titania Slag] -macerator➝ [1 Vanadium-Titania Slag Dust]\n\n[1 Vanadium-Titania Slag Dust + 5 Soda Ash Dust + 100L Natural Gas + 50L Air] -rotary kiln➝ [1 Alkali Roasted Vanadium-Titania Slag Dust + 1,000L Carbon Dioxide]\n\n[7 Alkali Roasted Vanadium-Titania Slag Dust + 1,000L Distilled Water] ➝ [1,000L Sodium Vanadate Solution + 6 Titania Slag]\n\n[1 Titania Slag + 1,000L Oleum] ➝ [1,000L Titanyl Sulfate Solution + 1 Silica Dust]\n[1,000 Titanyl Sulfate Solution + 1,000L Heated Water] ➝ [1,000L Rutile Slurry]\n[1,000L Rutile Slurry + Item Filter (NC)] -sifter➝ [1,000L Wastewater + 3 Rutile Dust]\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18932,7 +18932,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Vanadium (V)\n§bAtomic Number§r: 23\n§aAtomic Mass§r: 50.94 amu\n§cMelting Point§r: 2183 K\n§5Boiling Point§r: 3680 K\n§6Properties§r: Vanadium is a transition metal with excellent structural §6Properties§r. It is used in the production of steel, as a catalyst, and in energy storage systems.\n",
+          "desc:8": "§6Element§r: Vanadium (V)\n§bAtomic Number§r: 23\n§aAtomic Mass§r: 50.94 amu\n§cMelting Point§r: 2183 K\n§5Boiling Point§r: 3680 K\n§6Properties§r: Vanadium is a transition metal with excellent structural §6Properties§r. It is used in the production of steel, as a catalyst, and in energy storage systems.\n\n§l§lPrimitive: §r§cN/A\n\n§l§f§c§f§lUniversal: §rRoast vanadinite with salt or sodium carbonate, and leach sodium vanadate from the mixture using water. \n\nReact it with ammonium chloride to precipitate ammonium vanadate, which can be roasted to produce vanadium pentoxide. \n\nReduce with §ahigh purity calcium§r to produce vanadium metal.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19340,7 +19340,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Copper (Cu)\n§bAtomic Number§r: 29\n§aAtomic Mass§r: 63.55 amu\n§cMelting Point§r: 1357.77 K\n§5Boiling Point§r: 2835 K\n§6Properties§r: Copper is a transition metal with excellent thermal and electrical conductivity. It is used in electrical wiring, plumbing, and as a component in various alloys.\n",
+          "desc:8": "§6Element§r: Copper (Cu)\n§bAtomic Number§r: 29\n§aAtomic Mass§r: 63.55 amu\n§cMelting Point§r: 1357.77 K\n§5Boiling Point§r: 2835 K\n§6Properties§r: Copper is a transition metal with excellent thermal and electrical conductivity. It is used in electrical wiring, plumbing, and as a component in various alloys.\n\n§lPrimitive: §rCopper is found in §6Chalcopyrite, Chalcocite, Malachite, Bornite, Tetrahedrite, §ror §6Copper Ore§r deposits.\n\n§lUniversal: §rYou can use §cfroth flotation §rand advanced processing to obtain §l§c§l\u003e100%§r copper yields from ore and valuable byproducts such as the platinum group metals, §6selenium, tellurium, molybdenum, and rhenium §r(to be implemented)\n\nTo process chalcopyrite, chalcocite, and bornite, use froth flotation with S.E.X. to obtain §6copper concentrate §rto first double the yield from the ore.\n\nSmelt the copper concentrate in a EBF with a §areductant (natural gas)§r and oxygen to produce §6copper matte§r and to remove some sulfur dioxide.\n\nTake the copper matte and smelt again with oxygen to remove the rest of the sulfur from the concentrate to make §6blister copper and remove impurities such as bismuth, antimony, arsenic, and tin§r.\n\nTurn the blister copper into plates to use for electrolysis, which produces nickel and anode slime as a byproduct. The anode slime can be further processed for selenium, tellurium, and the platinum group metals.\n\nFor §2malachite§r, a different flotation agent, octyl hydroxamate is used. Leach the product of froth flotation with sulfuric acid and optionally add hydrogen peroxide to recover some iron and boost yield. This produces copper sulfate, which can be directly electrolyzed to copper.\n§l\nSpecialized: §cN/A",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19408,7 +19408,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Zinc (Zn)\n§bAtomic Number§r: 30\n§aAtomic Mass§r: 65.38 amu\n§cMelting Point§r: 692.68 K\n§5Boiling Point§r: 1180 K\n§6Properties§r: Zinc is a transition metal known for its corrosion resistance. It is used in galvanizing processes, as a dietary supplement, and in the production of alloys.\n\n§lPrimitive: §rSmelt §bsphalerite ore §r§rin a furnace to get Zinc.\n\n§lUniversal:§r Sphalerite can be roasted to get Zinc Oxide.\nZinc Oxide is roasted again to get Crude Zinc.\nCrude Zinc goes into the distillation tower to obtain Cadmium Rich Zinc and a variety of other metals. \nCadmium Rich Zinc goes into the tower again to get Zinc and Cadmium.\n\n§lSpecialized: §rUse JEI and the §aAdvanced Electrolyzer §rprocess to get Zinc.",
+          "desc:8": "§6Element§r: Zinc (Zn)\n§bAtomic Number§r: 30\n§aAtomic Mass§r: 65.38 amu\n§cMelting Point§r: 692.68 K\n§5Boiling Point§r: 1180 K\n§6Properties§r: Zinc is a transition metal known for its corrosion resistance. It is used in galvanizing processes, as a dietary supplement, and in the production of alloys.\n\n§lPrimitive: §rSmelt §bsphalerite ore §r§rin a furnace to get Zinc.\n\n§lUniversal:§r Sphalerite can be roasted to get Zinc Oxide.\nZinc Oxide is roasted again to get Crude Zinc.\nCrude Zinc goes into the distillation tower to obtain Cadmium Rich Zinc and a variety of other metals. \nCadmium Rich Zinc goes into the tower again to get Zinc and Cadmium.\n\n§lSpecialized: §rUse the §aZinc Cementation Slurry §rprocess to get Zinc.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20072,7 +20072,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Zirconium (Zr)\n§bAtomic Number§r: 40\n§aAtomic Mass§r: 91.22 amu\n§cMelting Point§r: 2128 K\n§5Boiling Point§r: 4682 K\n§6Properties§r: Zirconium is a transition metal known for its high resistance to corrosion. It is used in nuclear reactors, as a structural material in the aerospace industry, and in the production of ceramics.\n",
+          "desc:8": "§6Element§r: Zirconium (Zr)\n§bAtomic Number§r: 40\n§aAtomic Mass§r: 91.22 amu\n§cMelting Point§r: 2128 K\n§5Boiling Point§r: 4682 K\n§6Properties§r: Zirconium is a transition metal known for its high resistance to corrosion. It is used in nuclear reactors, as a structural material in the aerospace industry, and in the production of ceramics.\n\n§lPrimitive: §r§r§d§d§cN/A\n\n§r§lUniversal: §r§6Zircon (ZrSiO4) and Baddeleyite (ZrO2) are the primary minerals of zircon§r. To process zircon, the following process is used.\n\nGravity separate the zircon, float the zircon in oleic acid, and electromagnetically separate other minerals from it.\n\nNext, put it in a fluidized bed reactor similar to produce impure zirconium tetrachloride, like the §ctitanium process§r. (You may notice that zirconium is right under titanium in the periodic table). \n\nReact the §azirconium tetrachloride§r in water to produce §9impure zirconyl chloride§r. \n\nSeparate the hafnium using a mixture of§a ammonium thiocyanate, kerosene, and methyl isobutyl ketone§r. \n\nPrecipitate the zirconium with water and sulfuric acid to produce zirconium basic sulfate. Finally, produce pure zirconium dioxide by reacting with ammonia solution.\n\nTo obtain the metal, carbochlorinate the zirconium dioxide to make pure zirconium tetrachloride, which can be turned into metal in a manner similar to titanium.\n\n§bBaddeleyite§r can be processed with fewer steps by directly carbochlorinating into impure zirconium tetrachloride and processing from there.\n\n§lSpecialized: §r§d§cN/A",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20798,7 +20798,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Tin (Sn)\n§bAtomic Number§r: 50\n§aAtomic Mass§r: 118.71 amu\n§cMelting Point§r: 505.08 K\n§5Boiling Point§r: 2875 K\n§6Properties§r: Tin is a post-transition metal known for its low §cMelting Point§r. It is used in the production of solder, as a protective coating, and in the manufacture of tin cans.\n",
+          "desc:8": "§6Element§r: Tin (Sn)\n§bAtomic Number§r: 50\n§aAtomic Mass§r: 118.71 amu\n§cMelting Point§r: 505.08 K\n§5Boiling Point§r: 2875 K\n§6Properties§r: Tin is a post-transition metal known for its low §cMelting Point§r. It is used in the production of solder, as a protective coating, and in the manufacture of tin cans.\n\n§lPrimitive: §rSmelt §7§6Cassiterite §rto get §7Tin§r.\n\n§lUniversal: §rTo obtain higher yields from tin and obtain byproducts such as§6 antimony, bismuth, and tungsten§r, §cfroth flotation §rand some specialized processes are utilized. First, float cassiterite in oleic acid with some additives to boost your yield.\n \nYou can optionally separate hematite and §aammonium tungstate §rfrom the cassiterite product using an §delectromagnetic separator§r and ammonia solution i§echemical bath§r, respectively.\n\nNext, reduce the tin in a §9reaction furnace§r with a combustible of your choice, producing crude tin, a dross, and carbon dioxide.\n\nYou can separate iron from tin using the dross using a centrifuge. It is important to note that if you do not want to go further in the chain, you can simply§c fluid solidify the tin into an ingot form at a higher fluid cost§r.\n\nNext, treat the tin with sulfur to decopperize the tin.§c Finally, dip fine wire into the tin to allow for antimony and bismuth to crystallize, yielding relatively pure tin.\n§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20866,7 +20866,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "\n§6Element§r: Antimony (Sb)\n§bAtomic Number§r: 51\n§aAtomic Mass§r: 121.76 amu\n§cMelting Point§r: 903.78 K\n§5Boiling Point§r: 1860 K\n§6Properties§r: Antimony is a metalloid with various industrial applications, including flame retardants, alloys, and as a dopant in semiconductor materials.\n",
+          "desc:8": "§6Element§r: Antimony (Sb)\n§bAtomic Number§r: 51\n§aAtomic Mass§r: 121.76 amu\n§cMelting Point§r: 903.78 K\n§5Boiling Point§r: 1860 K\n§6Properties§r: Antimony is a metalloid with various industrial applications, including flame retardants, alloys, and as a dopant in semiconductor materials.\n\n§lPrimitive: §rSmelt §6Stibnite §rto get antimony.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21303,7 +21303,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Hafnium (Hf)\n§bAtomic Number§r: 72\n§aAtomic Mass§r: 178.49 amu\n§cMelting Point§r: 2506 K\n§5Boiling Point§r: 4876 K\n§6Properties§r: Hafnium is a transition metal known for its high §cMelting Point§r and corrosion resistance. It is used in nuclear reactors, as a superalloy component, and in some electrical applications.\n",
+          "desc:8": "§6Element§r: Hafnium (Hf)\n§bAtomic Number§r: 72\n§aAtomic Mass§r: 178.49 amu\n§cMelting Point§r: 2506 K\n§5Boiling Point§r: 4876 K\n§6Properties§r: Hafnium is a transition metal known for its high §cMelting Point§r and corrosion resistance. It is used in nuclear reactors, as a superalloy component, and in some electrical applications.\n\n§lPrimitive: §r§cN/A\n\n§l§r§lUniversal: §rFrom the §aextracted hafnium§r from the §eZirconium chain§r, strip the hafnium from the kerosene mixture with §6sulfuric acid§r. \n\nReact it to produce hafnium dioxide, and then impure hafnium tetrachloride. \n\nTo purify, use an atmosphere of hydrogen and nitrogen to produce §9Pure Hafnium Tetrachloride§r. Finally, process in a manner similar to titanium and zirconium to produce the metal.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21711,7 +21711,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Platinum (Pt)\n§bAtomic Number§r: 78\n§aAtomic Mass§r: 195.08 amu\n§cMelting Point§r: 2041.4 K\n§5Boiling Point§r: 4098 K\n§6Properties§r: Platinum is a transition metal known for its resistance to corrosion and its use in jewelry, catalytic converters, and in certain electronic devices.\n",
+          "desc:8": "§6Element§r: Platinum (Pt)\n§bAtomic Number§r: 78\n§aAtomic Mass§r: 195.08 amu\n§cMelting Point§r: 2041.4 K\n§5Boiling Point§r: 4098 K\n§6Properties§r: Platinum is a transition metal known for its resistance to corrosion and its use in jewelry, catalytic converters, and in certain electronic devices.\n\n§lPrimitive: §rTo make early platinum, you need to find an §6alluvial deposit§r. Drill it and sort for platinum §6placer deposits§r. Crush the alluvial platinum and dissolve it in §6aqua regia§r, made of nitric and hydrochloric acid. This produces §6hexachloroplatinic acid solution§r. \n\nNeutralize the solution with §6sodium hydroxide§r. Then, precipitate the platinum with ammonium chloride solution as §6ammonium hexachloroplatinat§re, which can be roasted with hydrogen to make §6platinum sponge§r, which can be crushed to make platinum dust.\n\nThe dust can be extruded as pellets and used as a catalyst bed for processes such as §cnylon (polycaprolactam) chain§r, required for armor and Techguns equipment.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21953,7 +21953,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Lead (Pb)\n§bAtomic Number§r: 82\n§aAtomic Mass§r: 207.2 amu\n§cMelting Point§r: 600.61 K\n§5Boiling Point§r: 2022 K\n§6Properties§r: Lead is a post-transition metal used in batteries, soldering materials, and as a radiation shielding material. It is also found in certain building materials.\n",
+          "desc:8": "§6Element§r: Lead (Pb)\n§bAtomic Number§r: 82\n§aAtomic Mass§r: 207.2 amu\n§cMelting Point§r: 600.61 K\n§5Boiling Point§r: 2022 K\n§6Properties§r: Lead is a post-transition metal used in batteries, soldering materials, and as a radiation shielding material. It is also found in certain building materials.\n\n§lPrimitive: §rSmelt §6Galena §rto get Lead.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27929,7 +27929,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -27949,6 +27949,10 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -38394,6 +38398,126 @@
     },
     "537:10": {
       "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Make §6Aqua Regia§r, a solution of nitric acid and hydrochloric acid. This will be used to get platinum.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "aqua_regia"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Aqua Regian",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 537,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "aqua_regia"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "538:10": {
+      "preRequisites:11": [
+        537
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "To make§6 early platinum§r, you need to find an alluvial deposit. Drill it and sort for platinum placer deposits. \n\nCrush the alluvial platinum and dissolve it in aqua regia, made of nitric and hydrochloric acid.\n\nThis produces hexachloroplatinic acid solution. Neutralize the solution with sodium hydroxide. \n\nhen, precipitate the platinum with ammonium chloride solution as ammonium hexachloroplatinate, which can be roasted with hydrogen to make platinum sponge, which can be crushed to make platinum dust.\n\nThe dust can be extruded as pellets and used as a catalyst bed for processes such as nylon, required for armor and Techguns equipment.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 80,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_catalyst_bed"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Platinum Catalysts",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 538,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {},
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "539:10": {
+      "preRequisites:11": [
         540
       ],
       "properties:10": {
@@ -38462,7 +38586,7 @@
         }
       }
     },
-    "538:10": {
+    "540:10": {
       "preRequisites:11": [
         531
       ],
@@ -38513,7 +38637,7 @@
         }
       }
     },
-    "539:10": {
+    "541:10": {
       "preRequisites:11": [
         540,
         532
@@ -38562,7 +38686,7 @@
         }
       }
     },
-    "540:10": {
+    "542:10": {
       "preRequisites:11": [
         541
       ],
@@ -38610,7 +38734,7 @@
         }
       }
     },
-    "541:10": {
+    "543:10": {
       "preRequisites:11": [
         540
       ],
@@ -38680,7 +38804,7 @@
         }
       }
     },
-    "542:10": {
+    "544:10": {
       "preRequisites:11": [
         540
       ],
@@ -38750,7 +38874,7 @@
         }
       }
     },
-    "543:10": {
+    "545:10": {
       "preRequisites:11": [
         479,
         521
@@ -38839,7 +38963,7 @@
         }
       }
     },
-    "544:10": {
+    "546:10": {
       "preRequisites:11": [
         99
       ],
@@ -38891,7 +39015,7 @@
         }
       }
     },
-    "545:10": {
+    "547:10": {
       "preRequisites:11": [
         546
       ],
@@ -38961,7 +39085,7 @@
         }
       }
     },
-    "546:10": {
+    "548:10": {
       "preRequisites:11": [
         546,
         550
@@ -39050,7 +39174,7 @@
         }
       }
     },
-    "547:10": {
+    "549:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -39107,7 +39231,7 @@
         }
       }
     },
-    "548:10": {
+    "550:10": {
       "preRequisites:11": [
         546
       ],
@@ -39177,7 +39301,7 @@
         }
       }
     },
-    "549:10": {
+    "551:10": {
       "preRequisites:11": [
         546
       ],
@@ -39229,7 +39353,7 @@
         }
       }
     },
-    "550:10": {
+    "552:10": {
       "preRequisites:11": [
         533
       ],
@@ -39281,7 +39405,7 @@
         }
       }
     },
-    "551:10": {
+    "553:10": {
       "preRequisites:11": [
         533
       ],
@@ -39333,7 +39457,7 @@
         }
       }
     },
-    "552:10": {
+    "554:10": {
       "preRequisites:11": [
         559
       ],
@@ -39415,7 +39539,7 @@
         }
       }
     },
-    "553:10": {
+    "555:10": {
       "preRequisites:11": [
         559
       ],
@@ -39491,7 +39615,7 @@
         }
       }
     },
-    "554:10": {
+    "556:10": {
       "preRequisites:11": [
         533
       ],
@@ -39543,7 +39667,7 @@
         }
       }
     },
-    "555:10": {
+    "557:10": {
       "preRequisites:11": [
         533
       ],
@@ -39595,7 +39719,7 @@
         }
       }
     },
-    "556:10": {
+    "558:10": {
       "preRequisites:11": [
         549
       ],
@@ -39665,7 +39789,7 @@
         }
       }
     },
-    "557:10": {
+    "559:10": {
       "preRequisites:11": [
         31
       ],
@@ -39759,7 +39883,7 @@
         }
       }
     },
-    "558:10": {
+    "560:10": {
       "preRequisites:11": [
         388
       ],
@@ -39811,7 +39935,7 @@
         }
       }
     },
-    "559:10": {
+    "561:10": {
       "preRequisites:11": [
         546
       ],
@@ -39863,7 +39987,7 @@
         }
       }
     },
-    "560:10": {
+    "562:10": {
       "preRequisites:11": [
         549
       ],
@@ -39933,7 +40057,7 @@
         }
       }
     },
-    "561:10": {
+    "563:10": {
       "preRequisites:11": [
         549
       ],
@@ -40056,7 +40180,7 @@
         }
       }
     },
-    "562:10": {
+    "564:10": {
       "preRequisites:11": [
         540
       ],
@@ -40108,7 +40232,7 @@
         }
       }
     },
-    "563:10": {
+    "565:10": {
       "preRequisites:11": [
         568
       ],
@@ -42100,7 +42224,7 @@
         }
       }
     },
-    "564:10": {
+    "566:10": {
       "preRequisites:11": [
         568
       ],
@@ -42238,7 +42362,7 @@
         }
       }
     },
-    "565:10": {
+    "567:10": {
       "preRequisites:11": [
         568
       ],
@@ -42344,7 +42468,7 @@
         }
       }
     },
-    "566:10": {
+    "568:10": {
       "preRequisites:11": [
         568
       ],
@@ -42396,7 +42520,7 @@
         }
       }
     },
-    "567:10": {
+    "569:10": {
       "preRequisites:11": [
         568
       ],
@@ -42448,7 +42572,7 @@
         }
       }
     },
-    "568:10": {
+    "570:10": {
       "preRequisites:11": [
         574
       ],
@@ -42518,7 +42642,7 @@
         }
       }
     },
-    "569:10": {
+    "571:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -42593,7 +42717,7 @@
         }
       }
     },
-    "570:10": {
+    "572:10": {
       "preRequisites:11": [
         546
       ],
@@ -42645,7 +42769,7 @@
         }
       }
     },
-    "571:10": {
+    "573:10": {
       "preRequisites:11": [
         546
       ],
@@ -42697,7 +42821,7 @@
         }
       }
     },
-    "572:10": {
+    "574:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -42769,7 +42893,7 @@
         }
       }
     },
-    "573:10": {
+    "575:10": {
       "preRequisites:11": [
         544
       ],
@@ -42821,7 +42945,7 @@
         }
       }
     },
-    "574:10": {
+    "576:10": {
       "preRequisites:11": [
         533
       ],
@@ -42873,7 +42997,7 @@
         }
       }
     },
-    "575:10": {
+    "577:10": {
       "preRequisites:11": [
         533
       ],
@@ -42966,7 +43090,7 @@
         }
       }
     },
-    "576:10": {
+    "578:10": {
       "preRequisites:11": [
         546
       ],
@@ -43018,7 +43142,7 @@
         }
       }
     },
-    "577:10": {
+    "579:10": {
       "preRequisites:11": [
         521
       ],
@@ -43076,7 +43200,7 @@
         }
       }
     },
-    "578:10": {
+    "580:10": {
       "preRequisites:11": [
         549
       ],
@@ -43128,7 +43252,7 @@
         }
       }
     },
-    "579:10": {
+    "581:10": {
       "preRequisites:11": [
         540
       ],
@@ -43318,7 +43442,7 @@
         }
       }
     },
-    "580:10": {
+    "582:10": {
       "preRequisites:11": [
         81
       ],
@@ -43370,7 +43494,7 @@
         }
       }
     },
-    "581:10": {
+    "583:10": {
       "preRequisites:11": [
         400
       ],
@@ -43422,7 +43546,7 @@
         }
       }
     },
-    "582:10": {
+    "584:10": {
       "preRequisites:11": [
         593
       ],
@@ -43517,7 +43641,7 @@
         }
       }
     },
-    "583:10": {
+    "585:10": {
       "preRequisites:11": [
         593
       ],
@@ -43612,7 +43736,7 @@
         }
       }
     },
-    "584:10": {
+    "586:10": {
       "preRequisites:11": [
         593
       ],
@@ -43707,7 +43831,7 @@
         }
       }
     },
-    "585:10": {
+    "587:10": {
       "preRequisites:11": [
         593
       ],
@@ -43802,7 +43926,7 @@
         }
       }
     },
-    "586:10": {
+    "588:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -43877,7 +44001,7 @@
         }
       }
     },
-    "587:10": {
+    "589:10": {
       "preRequisites:11": [
         81
       ],
@@ -43953,7 +44077,7 @@
         }
       }
     },
-    "588:10": {
+    "590:10": {
       "preRequisites:11": [
         213,
         104
@@ -44006,7 +44130,7 @@
         }
       }
     },
-    "589:10": {
+    "591:10": {
       "preRequisites:11": [
         51
       ],
@@ -44058,7 +44182,7 @@
         }
       }
     },
-    "590:10": {
+    "592:10": {
       "preRequisites:11": [
         124
       ],
@@ -44128,7 +44252,7 @@
         }
       }
     },
-    "591:10": {
+    "593:10": {
       "preRequisites:11": [
         36
       ],
@@ -44180,7 +44304,7 @@
         }
       }
     },
-    "592:10": {
+    "594:10": {
       "preRequisites:11": [
         109
       ],
@@ -44228,7 +44352,7 @@
         }
       }
     },
-    "593:10": {
+    "595:10": {
       "preRequisites:11": [
         602
       ],
@@ -44280,7 +44404,7 @@
         }
       }
     },
-    "594:10": {
+    "596:10": {
       "preRequisites:11": [
         602
       ],
@@ -44332,7 +44456,7 @@
         }
       }
     },
-    "595:10": {
+    "597:10": {
       "preRequisites:11": [
         101
       ],
@@ -44384,7 +44508,7 @@
         }
       }
     },
-    "596:10": {
+    "598:10": {
       "preRequisites:11": [
         230
       ],
@@ -44454,7 +44578,7 @@
         }
       }
     },
-    "597:10": {
+    "599:10": {
       "preRequisites:11": [
         31
       ],
@@ -44506,7 +44630,7 @@
         }
       }
     },
-    "598:10": {
+    "600:10": {
       "preRequisites:11": [
         222
       ],
@@ -44564,7 +44688,7 @@
         }
       }
     },
-    "599:10": {
+    "601:10": {
       "preRequisites:11": [
         593
       ],
@@ -44640,7 +44764,7 @@
         }
       }
     },
-    "600:10": {
+    "602:10": {
       "preRequisites:11": [
         611
       ],
@@ -44707,7 +44831,7 @@
         }
       }
     },
-    "601:10": {
+    "603:10": {
       "preRequisites:11": [
         611
       ],
@@ -44759,7 +44883,7 @@
         }
       }
     },
-    "602:10": {
+    "604:10": {
       "preRequisites:11": [
         623
       ],
@@ -44874,7 +44998,7 @@
         }
       }
     },
-    "603:10": {
+    "605:10": {
       "preRequisites:11": [
         618
       ],
@@ -44944,7 +45068,7 @@
         }
       }
     },
-    "604:10": {
+    "606:10": {
       "preRequisites:11": [
         615
       ],
@@ -45014,7 +45138,7 @@
         }
       }
     },
-    "605:10": {
+    "607:10": {
       "preRequisites:11": [
         616,
         390
@@ -45067,7 +45191,7 @@
         }
       }
     },
-    "606:10": {
+    "608:10": {
       "preRequisites:11": [
         188
       ],
@@ -45137,7 +45261,7 @@
         }
       }
     },
-    "607:10": {
+    "609:10": {
       "preRequisites:11": [
         617
       ],
@@ -45171,7 +45295,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "608:10": {
+    "610:10": {
       "preRequisites:11": [
         621,
         614,
@@ -45249,7 +45373,7 @@
         }
       }
     },
-    "609:10": {
+    "611:10": {
       "preRequisites:11": [
         398
       ],
@@ -45301,7 +45425,7 @@
         }
       }
     },
-    "610:10": {
+    "612:10": {
       "preRequisites:11": [
         614
       ],
@@ -45353,7 +45477,7 @@
         }
       }
     },
-    "611:10": {
+    "613:10": {
       "preRequisites:11": [
         479
       ],
@@ -45423,7 +45547,7 @@
         }
       }
     },
-    "612:10": {
+    "614:10": {
       "preRequisites:11": [
         622
       ],
@@ -45475,7 +45599,7 @@
         }
       }
     },
-    "613:10": {
+    "615:10": {
       "preRequisites:11": [
         624
       ],
@@ -45570,7 +45694,7 @@
         }
       }
     },
-    "614:10": {
+    "616:10": {
       "preRequisites:11": [
         624
       ],
@@ -45637,7 +45761,7 @@
         }
       }
     },
-    "615:10": {
+    "617:10": {
       "preRequisites:11": [
         624
       ],
@@ -45732,7 +45856,7 @@
         }
       }
     },
-    "616:10": {
+    "618:10": {
       "preRequisites:11": [
         624
       ],
@@ -45827,7 +45951,7 @@
         }
       }
     },
-    "617:10": {
+    "619:10": {
       "preRequisites:11": [
         624
       ],
@@ -45922,7 +46046,7 @@
         }
       }
     },
-    "618:10": {
+    "620:10": {
       "preRequisites:11": [
         624
       ],
@@ -46017,7 +46141,7 @@
         }
       }
     },
-    "619:10": {
+    "621:10": {
       "preRequisites:11": [
         191
       ],
@@ -46065,7 +46189,7 @@
         }
       }
     },
-    "620:10": {
+    "622:10": {
       "preRequisites:11": [
         622,
         687
@@ -46136,7 +46260,7 @@
         }
       }
     },
-    "621:10": {
+    "623:10": {
       "preRequisites:11": [
         622
       ],
@@ -46206,7 +46330,7 @@
         }
       }
     },
-    "622:10": {
+    "624:10": {
       "preRequisites:11": [
         622
       ],
@@ -46276,7 +46400,7 @@
         }
       }
     },
-    "623:10": {
+    "625:10": {
       "preRequisites:11": [
         622,
         698
@@ -46347,7 +46471,7 @@
         }
       }
     },
-    "624:10": {
+    "626:10": {
       "preRequisites:11": [
         622
       ],
@@ -46417,7 +46541,7 @@
         }
       }
     },
-    "625:10": {
+    "627:10": {
       "preRequisites:11": [
         648
       ],
@@ -46504,7 +46628,7 @@
         }
       }
     },
-    "626:10": {
+    "628:10": {
       "preRequisites:11": [
         181
       ],
@@ -46576,7 +46700,7 @@
         }
       }
     },
-    "627:10": {
+    "629:10": {
       "preRequisites:11": [
         243
       ],
@@ -46652,7 +46776,7 @@
         }
       }
     },
-    "628:10": {
+    "630:10": {
       "preRequisites:11": [
         654
       ],
@@ -46722,7 +46846,7 @@
         }
       }
     },
-    "629:10": {
+    "631:10": {
       "preRequisites:11": [
         614
       ],
@@ -46780,7 +46904,7 @@
         }
       }
     },
-    "630:10": {
+    "632:10": {
       "preRequisites:11": [
         641
       ],
@@ -46846,7 +46970,7 @@
         }
       }
     },
-    "631:10": {
+    "633:10": {
       "preRequisites:11": [
         642
       ],
@@ -46912,7 +47036,7 @@
         }
       }
     },
-    "632:10": {
+    "634:10": {
       "preRequisites:11": [
         643,
         649
@@ -46983,7 +47107,7 @@
         }
       }
     },
-    "633:10": {
+    "635:10": {
       "preRequisites:11": [
         644
       ],
@@ -47053,7 +47177,7 @@
         }
       }
     },
-    "634:10": {
+    "636:10": {
       "preRequisites:11": [
         51
       ],
@@ -47129,7 +47253,7 @@
         }
       }
     },
-    "635:10": {
+    "637:10": {
       "preRequisites:11": [
         614
       ],
@@ -47193,7 +47317,7 @@
         }
       }
     },
-    "636:10": {
+    "638:10": {
       "preRequisiteTypes:7": [
         0,
         2
@@ -47237,7 +47361,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -47264,7 +47388,7 @@
         }
       }
     },
-    "637:10": {
+    "639:10": {
       "preRequisites:11": [
         648
       ],
@@ -47334,7 +47458,7 @@
         }
       }
     },
-    "638:10": {
+    "640:10": {
       "preRequisites:11": [
         213
       ],
@@ -47382,7 +47506,7 @@
         }
       }
     },
-    "639:10": {
+    "641:10": {
       "preRequisites:11": [
         510
       ],
@@ -47434,7 +47558,7 @@
         }
       }
     },
-    "640:10": {
+    "642:10": {
       "preRequisites:11": [
         188
       ],
@@ -47473,7 +47597,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -47493,10 +47617,14 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
-    "641:10": {
+    "643:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -47569,7 +47697,7 @@
         }
       }
     },
-    "642:10": {
+    "644:10": {
       "preRequisites:11": [
         398
       ],
@@ -47603,7 +47731,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "643:10": {
+    "645:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -47656,7 +47784,7 @@
         }
       }
     },
-    "644:10": {
+    "646:10": {
       "preRequisites:11": [
         441,
         18
@@ -47727,7 +47855,7 @@
         }
       }
     },
-    "645:10": {
+    "647:10": {
       "preRequisites:11": [
         388
       ],
@@ -47766,7 +47894,7 @@
         }
       }
     },
-    "646:10": {
+    "648:10": {
       "preRequisites:11": [
         104
       ],
@@ -47814,7 +47942,7 @@
         }
       }
     },
-    "647:10": {
+    "649:10": {
       "preRequisites:11": [
         181
       ],
@@ -47866,7 +47994,7 @@
         }
       }
     },
-    "648:10": {
+    "650:10": {
       "preRequisites:11": [
         604
       ],
@@ -47914,7 +48042,7 @@
         }
       }
     },
-    "649:10": {
+    "651:10": {
       "preRequisites:11": [
         188
       ],
@@ -47966,7 +48094,7 @@
         }
       }
     },
-    "650:10": {
+    "652:10": {
       "preRequisites:11": [
         390,
         672
@@ -48019,7 +48147,7 @@
         }
       }
     },
-    "651:10": {
+    "653:10": {
       "preRequisites:11": [
         243
       ],
@@ -48089,7 +48217,7 @@
         }
       }
     },
-    "652:10": {
+    "654:10": {
       "preRequisites:11": [
         125
       ],
@@ -48137,7 +48265,7 @@
         }
       }
     },
-    "653:10": {
+    "655:10": {
       "preRequisiteTypes:7": [
         0,
         0,
@@ -48196,7 +48324,7 @@
         }
       }
     },
-    "654:10": {
+    "656:10": {
       "preRequisites:11": [
         104
       ],
@@ -48247,7 +48375,7 @@
         }
       }
     },
-    "655:10": {
+    "657:10": {
       "preRequisites:11": [
         104
       ],
@@ -50217,7 +50345,7 @@
         }
       }
     },
-    "656:10": {
+    "658:10": {
       "preRequisites:11": [
         48
       ],
@@ -50313,7 +50441,7 @@
         }
       }
     },
-    "657:10": {
+    "659:10": {
       "preRequisites:11": [
         763
       ],
@@ -50398,7 +50526,7 @@
         }
       }
     },
-    "658:10": {
+    "660:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -50471,7 +50599,7 @@
         }
       }
     },
-    "659:10": {
+    "661:10": {
       "preRequisites:11": [
         81
       ],
@@ -50547,7 +50675,7 @@
         }
       }
     },
-    "660:10": {
+    "662:10": {
       "preRequisites:11": [
         663,
         674
@@ -50618,7 +50746,7 @@
         }
       }
     },
-    "661:10": {
+    "663:10": {
       "preRequisites:11": [
         390
       ],
@@ -50657,7 +50785,7 @@
         }
       }
     },
-    "662:10": {
+    "664:10": {
       "preRequisites:11": [
         243
       ],
@@ -50709,7 +50837,7 @@
         }
       }
     },
-    "663:10": {
+    "665:10": {
       "preRequisites:11": [
         673
       ],
@@ -50771,7 +50899,7 @@
         }
       }
     },
-    "664:10": {
+    "666:10": {
       "preRequisites:11": [
         675,
         678
@@ -50824,7 +50952,7 @@
         }
       }
     },
-    "665:10": {
+    "667:10": {
       "preRequisites:11": [
         673
       ],
@@ -50886,7 +51014,7 @@
         }
       }
     },
-    "666:10": {
+    "668:10": {
       "preRequisites:11": [
         479
       ],
@@ -50956,7 +51084,7 @@
         }
       }
     },
-    "667:10": {
+    "669:10": {
       "preRequisites:11": [
         479,
         708
@@ -51027,7 +51155,7 @@
         }
       }
     },
-    "668:10": {
+    "670:10": {
       "preRequisites:11": [
         644
       ],
@@ -51085,7 +51213,7 @@
         }
       }
     },
-    "669:10": {
+    "671:10": {
       "preRequisites:11": [
         645
       ],
@@ -51155,7 +51283,7 @@
         }
       }
     },
-    "670:10": {
+    "672:10": {
       "preRequisites:11": [
         377
       ],
@@ -51203,7 +51331,7 @@
         }
       }
     },
-    "671:10": {
+    "673:10": {
       "preRequisites:11": [
         104
       ],
@@ -51273,7 +51401,7 @@
         }
       }
     },
-    "672:10": {
+    "674:10": {
       "preRequisites:11": [
         240
       ],
@@ -51343,7 +51471,7 @@
         }
       }
     },
-    "673:10": {
+    "675:10": {
       "preRequisites:11": [
         169
       ],
@@ -51395,7 +51523,7 @@
         }
       }
     },
-    "674:10": {
+    "676:10": {
       "preRequisites:11": [
         374
       ],
@@ -51443,7 +51571,7 @@
         }
       }
     },
-    "675:10": {
+    "677:10": {
       "preRequisites:11": [
         620
       ],
@@ -51513,7 +51641,7 @@
         }
       }
     },
-    "676:10": {
+    "678:10": {
       "preRequisites:11": [
         641,
         466
@@ -51584,7 +51712,7 @@
         }
       }
     },
-    "677:10": {
+    "679:10": {
       "preRequisites:11": [
         641
       ],
@@ -51636,7 +51764,7 @@
         }
       }
     },
-    "678:10": {
+    "680:10": {
       "preRequisites:11": [
         647
       ],
@@ -51706,7 +51834,7 @@
         }
       }
     },
-    "679:10": {
+    "681:10": {
       "preRequisites:11": [
         688,
         683
@@ -51777,7 +51905,7 @@
         }
       }
     },
-    "680:10": {
+    "682:10": {
       "preRequisites:11": [
         614,
         693
@@ -51848,7 +51976,7 @@
         }
       }
     },
-    "681:10": {
+    "683:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -51923,7 +52051,7 @@
         }
       }
     },
-    "682:10": {
+    "684:10": {
       "preRequisites:11": [
         692,
         695
@@ -52000,7 +52128,7 @@
         }
       }
     },
-    "683:10": {
+    "685:10": {
       "preRequisites:11": [
         479
       ],
@@ -52070,7 +52198,7 @@
         }
       }
     },
-    "684:10": {
+    "686:10": {
       "preRequisites:11": [
         692
       ],
@@ -52142,7 +52270,7 @@
         }
       }
     },
-    "685:10": {
+    "687:10": {
       "preRequisites:11": [
         172
       ],
@@ -52212,7 +52340,7 @@
         }
       }
     },
-    "686:10": {
+    "688:10": {
       "preRequisites:11": [
         620,
         451
@@ -52283,7 +52411,7 @@
         }
       }
     },
-    "687:10": {
+    "689:10": {
       "preRequisites:11": [
         687,
         700,
@@ -52355,7 +52483,7 @@
         }
       }
     },
-    "688:10": {
+    "690:10": {
       "preRequisites:11": [
         243
       ],
@@ -52407,7 +52535,7 @@
         }
       }
     },
-    "689:10": {
+    "691:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -52476,7 +52604,7 @@
         }
       }
     },
-    "690:10": {
+    "692:10": {
       "preRequisites:11": [
         699
       ],
@@ -52546,7 +52674,7 @@
         }
       }
     },
-    "691:10": {
+    "693:10": {
       "preRequisites:11": [
         702
       ],
@@ -52616,7 +52744,7 @@
         }
       }
     },
-    "692:10": {
+    "694:10": {
       "preRequisites:11": [
         703
       ],
@@ -52668,7 +52796,7 @@
         }
       }
     },
-    "693:10": {
+    "695:10": {
       "preRequisites:11": [
         703
       ],
@@ -52732,7 +52860,7 @@
         }
       }
     },
-    "694:10": {
+    "696:10": {
       "preRequisites:11": [
         709,
         679
@@ -52803,7 +52931,7 @@
         }
       }
     },
-    "695:10": {
+    "697:10": {
       "preRequisites:11": [
         708
       ],
@@ -52855,7 +52983,7 @@
         }
       }
     },
-    "696:10": {
+    "698:10": {
       "preRequisites:11": [
         479
       ],
@@ -52907,7 +53035,7 @@
         }
       }
     },
-    "697:10": {
+    "699:10": {
       "preRequisites:11": [
         708
       ],
@@ -52983,7 +53111,7 @@
         }
       }
     },
-    "698:10": {
+    "700:10": {
       "preRequisites:11": [
         644
       ],
@@ -53035,7 +53163,7 @@
         }
       }
     },
-    "699:10": {
+    "701:10": {
       "preRequisites:11": [
         66
       ],
@@ -53087,7 +53215,7 @@
         }
       }
     },
-    "700:10": {
+    "702:10": {
       "preRequisites:11": [
         101
       ],
@@ -53154,7 +53282,7 @@
         }
       }
     },
-    "701:10": {
+    "703:10": {
       "preRequisites:11": [
         641
       ],
@@ -53206,7 +53334,7 @@
         }
       }
     },
-    "702:10": {
+    "704:10": {
       "preRequisites:11": [
         647
       ],
@@ -53276,7 +53404,7 @@
         }
       }
     },
-    "703:10": {
+    "705:10": {
       "preRequisites:11": [
         647
       ],
@@ -53346,7 +53474,7 @@
         }
       }
     },
-    "704:10": {
+    "706:10": {
       "preRequisites:11": [
         710
       ],
@@ -53416,7 +53544,7 @@
         }
       }
     },
-    "705:10": {
+    "707:10": {
       "preRequisites:11": [
         706
       ],
@@ -53486,7 +53614,7 @@
         }
       }
     },
-    "706:10": {
+    "708:10": {
       "preRequisites:11": [
         479
       ],
@@ -53538,7 +53666,7 @@
         }
       }
     },
-    "707:10": {
+    "709:10": {
       "preRequisites:11": [
         104
       ],
@@ -53608,14 +53736,14 @@
         }
       }
     },
-    "708:10": {
+    "710:10": {
       "preRequisites:11": [
         637
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Due to the immense amount of chemicals required for §6floth frotation§r, they may not be covered in this chapter. For more info on froth flotation, look at the Periodic Table chapter.",
+          "desc:8": "Due to the immense amount of chemicals required for §6floth frotation§r, they may not be covered in this chapter. For more info on froth flotation, look at the Periodic Table chapter. §cBetter methods for producing up to 8 times of Copper and Tin have been unlocked.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53647,7 +53775,7 @@
         }
       }
     },
-    "709:10": {
+    "711:10": {
       "preRequisites:11": [
         101
       ],
@@ -53699,7 +53827,7 @@
         }
       }
     },
-    "710:10": {
+    "712:10": {
       "preRequisites:11": [
         25
       ],
@@ -53814,7 +53942,7 @@
         }
       }
     },
-    "711:10": {
+    "713:10": {
       "preRequisites:11": [
         25
       ],
@@ -53929,7 +54057,7 @@
         }
       }
     },
-    "712:10": {
+    "714:10": {
       "preRequisites:11": [
         25
       ],
@@ -54029,7 +54157,7 @@
         }
       }
     },
-    "713:10": {
+    "715:10": {
       "preRequisites:11": [
         191
       ],
@@ -54114,9 +54242,9 @@
         }
       }
     },
-    "714:10": {
+    "716:10": {
       "preRequisites:11": [
-        243
+        538
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -54147,7 +54275,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Hydroxylamine",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -54163,10 +54291,24 @@
         "0:10": {
           "index:3": 0,
           "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hydroxylamine"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
-    "715:10": {
+    "717:10": {
       "preRequisites:11": [
         728,
         726
@@ -54237,7 +54379,7 @@
         }
       }
     },
-    "716:10": {
+    "718:10": {
       "preRequisites:11": [
         729,
         411
@@ -54290,7 +54432,7 @@
         }
       }
     },
-    "717:10": {
+    "719:10": {
       "preRequisites:11": [
         203
       ],
@@ -54360,7 +54502,7 @@
         }
       }
     },
-    "718:10": {
+    "720:10": {
       "preRequisites:11": [
         727
       ],
@@ -54430,7 +54572,7 @@
         }
       }
     },
-    "719:10": {
+    "721:10": {
       "preRequisites:11": [
         730
       ],
@@ -54545,7 +54687,7 @@
         }
       }
     },
-    "720:10": {
+    "722:10": {
       "preRequisites:11": [
         733
       ],
@@ -54660,7 +54802,7 @@
         }
       }
     },
-    "721:10": {
+    "723:10": {
       "preRequisites:11": [
         730
       ],
@@ -54775,7 +54917,7 @@
         }
       }
     },
-    "722:10": {
+    "724:10": {
       "preRequisites:11": [
         30
       ],
@@ -54845,7 +54987,7 @@
         }
       }
     },
-    "723:10": {
+    "725:10": {
       "preRequisites:11": [
         398
       ],
@@ -54915,7 +55057,7 @@
         }
       }
     },
-    "724:10": {
+    "726:10": {
       "preRequisites:11": [
         735
       ],
@@ -54958,7 +55100,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "725:10": {
+    "727:10": {
       "preRequisites:11": [
         66
       ],
@@ -55055,7 +55197,7 @@
         }
       }
     },
-    "726:10": {
+    "728:10": {
       "preRequisites:11": [
         30
       ],
@@ -55107,7 +55249,7 @@
         }
       }
     },
-    "727:10": {
+    "729:10": {
       "preRequisites:11": [
         30
       ],
@@ -55152,7 +55294,7 @@
         }
       }
     },
-    "728:10": {
+    "730:10": {
       "preRequisites:11": [
         222
       ],
@@ -55214,7 +55356,7 @@
         }
       }
     },
-    "729:10": {
+    "731:10": {
       "preRequisites:11": [
         497
       ],
@@ -55278,7 +55420,7 @@
         }
       }
     },
-    "730:10": {
+    "732:10": {
       "preRequisites:11": [
         101,
         465
@@ -55346,7 +55488,7 @@
         }
       }
     },
-    "731:10": {
+    "733:10": {
       "preRequisites:11": [
         742
       ],
@@ -55398,7 +55540,7 @@
         }
       }
     },
-    "732:10": {
+    "734:10": {
       "preRequisites:11": [
         743
       ],
@@ -55495,7 +55637,7 @@
         }
       }
     },
-    "733:10": {
+    "735:10": {
       "preRequisites:11": [
         30
       ],
@@ -55559,7 +55701,7 @@
         }
       }
     },
-    "734:10": {
+    "736:10": {
       "preRequisites:11": [
         743
       ],
@@ -55613,7 +55755,7 @@
         }
       }
     },
-    "735:10": {
+    "737:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -55670,7 +55812,7 @@
         }
       }
     },
-    "736:10": {
+    "738:10": {
       "preRequisites:11": [
         743
       ],
@@ -55722,7 +55864,7 @@
         }
       }
     },
-    "737:10": {
+    "739:10": {
       "preRequisites:11": [
         743
       ],
@@ -55792,7 +55934,7 @@
         }
       }
     },
-    "738:10": {
+    "740:10": {
       "preRequisites:11": [
         746
       ],
@@ -55864,7 +56006,7 @@
         }
       }
     },
-    "739:10": {
+    "741:10": {
       "preRequisites:11": [
         688,
         719
@@ -55935,7 +56077,7 @@
         }
       }
     },
-    "740:10": {
+    "742:10": {
       "preRequisites:11": [
         41
       ],
@@ -55970,7 +56112,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -56002,10 +56144,36 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 363,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
-    "741:10": {
+    "743:10": {
       "preRequisites:11": [
         700
       ],
@@ -56075,7 +56243,7 @@
         }
       }
     },
-    "742:10": {
+    "744:10": {
       "preRequisites:11": [
         755,
         550
@@ -56146,7 +56314,7 @@
         }
       }
     },
-    "743:10": {
+    "745:10": {
       "preRequisites:11": [
         756
       ],
@@ -56216,7 +56384,7 @@
         }
       }
     },
-    "744:10": {
+    "746:10": {
       "preRequisites:11": [
         479
       ],
@@ -56286,7 +56454,7 @@
         }
       }
     },
-    "745:10": {
+    "747:10": {
       "preRequisites:11": [
         754
       ],
@@ -56401,7 +56569,7 @@
         }
       }
     },
-    "746:10": {
+    "748:10": {
       "preRequisites:11": [
         757
       ],
@@ -56453,7 +56621,7 @@
         }
       }
     },
-    "747:10": {
+    "749:10": {
       "preRequisites:11": [
         758
       ],
@@ -56548,7 +56716,7 @@
         }
       }
     },
-    "748:10": {
+    "750:10": {
       "preRequisites:11": [
         758
       ],
@@ -56643,7 +56811,7 @@
         }
       }
     },
-    "749:10": {
+    "751:10": {
       "preRequisites:11": [
         758
       ],
@@ -56738,7 +56906,7 @@
         }
       }
     },
-    "750:10": {
+    "752:10": {
       "preRequisites:11": [
         758
       ],
@@ -56833,7 +57001,7 @@
         }
       }
     },
-    "751:10": {
+    "753:10": {
       "preRequisites:11": [
         20
       ],
@@ -56885,7 +57053,7 @@
         }
       }
     },
-    "752:10": {
+    "754:10": {
       "preRequisites:11": [
         651
       ],
@@ -59452,244 +59620,258 @@
           "y:3": 234
         },
         "93:10": {
+          "id:3": 537,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -30,
+          "y:3": -48
+        },
+        "94:10": {
+          "id:3": 538,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -30,
+          "y:3": -84
+        },
+        "95:10": {
           "id:3": 592,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 42
         },
-        "94:10": {
+        "96:10": {
           "id:3": 593,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": 72
         },
-        "95:10": {
+        "97:10": {
           "id:3": 594,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 114
         },
-        "96:10": {
+        "98:10": {
           "id:3": 595,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": 114
         },
-        "97:10": {
+        "99:10": {
           "id:3": 596,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 156
         },
-        "98:10": {
+        "100:10": {
           "id:3": 597,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": 156
         },
-        "99:10": {
+        "101:10": {
           "id:3": 598,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 235
         },
-        "100:10": {
+        "102:10": {
           "id:3": 599,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 90,
           "y:3": -42
         },
-        "101:10": {
+        "103:10": {
           "id:3": 611,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": 192
         },
-        "102:10": {
+        "104:10": {
           "id:3": 612,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -30,
           "y:3": 192
         },
-        "103:10": {
+        "105:10": {
           "id:3": 613,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -126,
           "y:3": 192
         },
-        "104:10": {
+        "106:10": {
           "id:3": 639,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -132,
           "y:3": 6
         },
-        "105:10": {
+        "107:10": {
           "id:3": 640,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 414,
           "y:3": 24
         },
-        "106:10": {
+        "108:10": {
           "id:3": 651,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -30,
           "y:3": 270
         },
-        "107:10": {
+        "109:10": {
           "id:3": 652,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 210
         },
-        "108:10": {
+        "110:10": {
           "id:3": 653,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 234,
           "y:3": -162
         },
-        "109:10": {
+        "111:10": {
           "id:3": 654,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 450,
           "y:3": 18
         },
-        "110:10": {
+        "112:10": {
           "id:3": 655,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": -96
         },
-        "111:10": {
+        "113:10": {
           "id:3": 659,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 414,
           "y:3": 126
         },
-        "112:10": {
+        "114:10": {
           "id:3": 665,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -30,
           "y:3": 306
         },
-        "113:10": {
+        "115:10": {
           "id:3": 671,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 186,
           "y:3": 12
         },
-        "114:10": {
+        "116:10": {
           "id:3": 685,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": -114
         },
-        "115:10": {
+        "117:10": {
           "id:3": 686,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 270,
           "y:3": -216
         },
-        "116:10": {
+        "118:10": {
           "id:3": 726,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -30,
-          "y:3": -36
+          "x:3": -78,
+          "y:3": -114
         },
-        "117:10": {
+        "119:10": {
           "id:3": 727,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -84,
-          "y:3": -78
+          "x:3": -132,
+          "y:3": -90
         },
-        "118:10": {
+        "120:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -30,
-          "y:3": -72
+          "x:3": -78,
+          "y:3": -84
         },
-        "119:10": {
+        "121:10": {
           "id:3": 729,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -30,
-          "y:3": -102
+          "x:3": -78,
+          "y:3": -48
         },
-        "120:10": {
+        "122:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -126,
-          "y:3": -72
+          "x:3": -174,
+          "y:3": -84
         },
-        "121:10": {
+        "123:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -126,
-          "y:3": -108
+          "x:3": -174,
+          "y:3": -120
         },
-        "122:10": {
+        "124:10": {
           "id:3": 732,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -168,
-          "y:3": -36
+          "x:3": -216,
+          "y:3": -48
         },
-        "123:10": {
+        "125:10": {
           "id:3": 733,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -126,
-          "y:3": -36
+          "x:3": -174,
+          "y:3": -48
         },
-        "124:10": {
+        "126:10": {
           "id:3": 735,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 510,
           "y:3": 126
         },
-        "125:10": {
+        "127:10": {
           "id:3": 736,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 510,
           "y:3": 168
         },
-        "126:10": {
+        "128:10": {
           "id:3": 741,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 210,
           "y:3": 366
         },
-        "127:10": {
+        "129:10": {
           "id:3": 764,
           "sizeX:3": 24,
           "sizeY:3": 24,

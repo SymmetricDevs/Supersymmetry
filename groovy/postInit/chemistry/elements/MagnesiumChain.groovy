@@ -12,12 +12,14 @@ VACUUM_DT = recipemap('vacuum_distillation')
 FLBR = recipemap('fluidized_bed_reactor')
 DT = recipemap('distillation_tower')
 
+
 def carbon_sources = [
         'dustCarbon',
         'dustCoal',
         'dustCharcoal',
         'dustCoke'
 ]
+
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustMagnesite') * 5)
@@ -37,13 +39,13 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 EBF.recipeBuilder()
-        .inputs(metaitem('dustMagnesia') * 4)
-        .inputs(metaitem('dustQuicklime') * 4)
-        .inputs(metaitem('dustSilicon') * 1)
+        .inputs(ore('dustMagnesia') * 4)
+        .inputs(ore('dustQuicklime') * 4)
+        .inputs(ore('dustSilicon') * 1)
         .outputs(metaitem('dustCalciumOrthosilicate') * 7)
-        .outputs(metaitem('dustMagnesium') * 2)
-        .EUt(120)
-        .duration(100)
+        .fluidOutputs(fluid('magnesium') * 288)
+        .EUt(30)
+        .duration(200)
         .blastFurnaceTemp(1370)
         .buildAndRegister()
 
@@ -74,7 +76,7 @@ def combustibles = Globals.combustibles
 
 for (combustible in combustibles) {
 REACTION_FURNACE.recipeBuilder()
-        .inputs(metaitem('dustMagnesia') * 2)
+        .inputs(ore('dustMagnesia') * 2)
         .inputs(ore(combustible.name) * (combustible.amount_required))
         .fluidInputs(fluid('chlorine') * 2000)
         .outputs(metaitem('dustMagnesiumChloride') * 3)
@@ -87,7 +89,7 @@ REACTION_FURNACE.recipeBuilder()
 
 //MPLC CHLORINATION
 REACTION_FURNACE.recipeBuilder()
-        .inputs(metaitem('dustMagnesite') * 5)
+        .inputs(ore('dustMagnesite') * 5)
         .fluidInputs(fluid('carbon_monoxide') * 1000)
         .fluidInputs(fluid('chlorine') * 2000)
         .outputs(metaitem('dustMagnesiumChloride') * 3)
@@ -97,7 +99,7 @@ REACTION_FURNACE.recipeBuilder()
         .buildAndRegister()
 
 LCR.recipeBuilder()
-        .inputs(metaitem('dustMagnesite') * 5)
+        .inputs(ore('dustMagnesite') * 5)
         .fluidInputs(fluid('hydrochloric_acid') * 2000)
         .fluidOutputs(fluid('magnesium_chloride_solution') * 2000)
         .fluidOutputs(fluid('carbon_dioxide') * 1000)
@@ -130,7 +132,7 @@ DISTILLERY.recipeBuilder()
         .buildAndRegister()
 
 ROASTER.recipeBuilder()
-        .inputs(metaitem('dustMagnesiumSulfate') * 6)
+        .inputs(ore('dustMagnesiumSulfate') * 6)
         .outputs(metaitem('dustMagnesia') * 2)
         .fluidOutputs(fluid('sulfur_trioxide') * 1000)
         .EUt(30)
@@ -138,7 +140,7 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 ROASTER.recipeBuilder()
-        .inputs(metaitem('dustKieserite') * 7)
+        .inputs(ore('dustKieserite') * 7)
         .outputs(metaitem('dustMagnesiumSulfate') * 6)
         .fluidOutputs(fluid('steam') * 1000)
         .EUt(30)
@@ -146,7 +148,7 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 MIXER.recipeBuilder()
-        .inputs(metaitem('dustLangbeinite') * 24)
+        .inputs(ore('dustLangbeinite') * 24)
         .fluidInputs(fluid('water') * 1000)
         .fluidOutputs(fluid('langbeinite_leach') * 1000)
         .EUt(30)
@@ -170,7 +172,7 @@ DISTILLERY.recipeBuilder()
         .buildAndRegister()
 
 MIXER.recipeBuilder()
-        .inputs(metaitem('dustPolyhalite') * 32)
+        .inputs(ore('dustPolyhalite') * 32)
         .fluidInputs(fluid('water') * 1000)
         .outputs(metaitem('dustCalciumSulfate') * 12)
         .fluidOutputs(fluid('polyhalite_leach') * 1000)
@@ -229,7 +231,7 @@ MIXER.recipeBuilder()
         .buildAndRegister()
 
 MIXER.recipeBuilder()
-        .inputs(metaitem('dustMagnesiumChlorideAmmoniate') * 9)
+        .inputs(ore('dustMagnesiumChlorideAmmoniate') * 9)
         .fluidInputs(fluid('saturated_ammoniacal_methanol') * 1000)
         .outputs(metaitem('dustWashedMagnesiumChlorideAmmoniate') * 9)
         .fluidOutputs(fluid('impure_saturated_ammoniacal_methanol') * 1000)
@@ -247,7 +249,7 @@ DT.recipeBuilder()
         .buildAndRegister()
 
 FLBR.recipeBuilder()
-        .inputs(metaitem('dustMagnesiumChlorideAmmoniate') * 9)
+        .inputs(ore('dustMagnesiumChlorideAmmoniate') * 9)
         .outputs(metaitem('dustPurifiedMagnesiumChloride') * 3)
         .fluidOutputs(fluid('ammonia') * 6000)
         .EUt(480)
