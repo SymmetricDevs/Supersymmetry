@@ -1,0 +1,75 @@
+import gregtech.api.recipes.RecipeBuilder
+import static globals.Globals.*
+
+def DRONE_PAD = recipemap('drone_pad');
+
+Globals.solders.each { key, val ->
+
+    mods.gregtech.assembler.recipeBuilder()
+        .inputs(metaitem('electric.motor.lv') * 4)
+        .inputs(ore('rotorSteel') * 4)
+        .inputs(ore('stickSteel') * 4)
+        .inputs(ore('plateTin') * 2)
+        .inputs(ore('chest') * 1)
+        .inputs(ore('craftingToolButcheryKnife') * 1)
+        .inputs(metaitem('robot.arm.lv') * 1)
+        .inputs(ore('batteryLv'))
+        .fluidInputs(fluid(key) * val)
+        .outputs(metaitem('drone.lv').withNbt(["Charge": 0]))
+        .EUt(Globals.voltAmps[1])
+        .duration(80)
+        .buildAndRegister()
+
+}
+
+DRONE_PAD.recipeBuilder()
+    .inputs(metaitem('drone.lv').withNbt(["Charge": 10000]))
+    .circuitMeta(0)
+    .outputs(metaitem('drone.lv').withNbt(["Charge": 0]))
+    .chancedOutput(item('minecraft:bone') * 8, 8000, 400)
+    .chancedOutput(item('minecraft:rotten_flesh') * 8, 8000, 400)
+    .EUt(Globals.voltAmps[1])
+    .duration(800)
+    .buildAndRegister()
+
+DRONE_PAD.recipeBuilder()
+    .inputs(metaitem('drone.lv').withNbt(["Charge": 10000]))
+    .circuitMeta(1)
+    .outputs(metaitem('drone.lv').withNbt(["Charge": 0]))
+    .chancedOutput(item('minecraft:porkchop') * 8, 8000, 400)
+    .chancedOutput(item('minecraft:beef') * 8, 8000, 400)
+    .chancedOutput(item('minecraft:chicken') * 8, 8000, 400)
+    .EUt(Globals.voltAmps[1])
+    .duration(800)
+    .buildAndRegister()
+
+DRONE_PAD.recipeBuilder()
+    .inputs(metaitem('drone.lv').withNbt(["Charge": 10000]))
+    .circuitMeta(2)
+    .outputs(metaitem('drone.lv').withNbt(["Charge": 0]))
+    .chancedOutput(item('minecraft:rabbit') * 8, 8000, 400)
+    .chancedOutput(item('minecraft:mutton') * 8, 8000, 400)
+    .EUt(Globals.voltAmps[1])
+    .duration(800)
+    .buildAndRegister()
+
+DRONE_PAD.recipeBuilder()
+    .inputs(metaitem('drone.lv').withNbt(["Charge": 10000]))
+    .circuitMeta(3)
+    .outputs(metaitem('drone.lv').withNbt(["Charge": 0]))
+    .chancedOutput(item('minecraft:fish') * 8, 8000, 400)
+    .chancedOutput(item('minecraft:fish', 1) * 8, 8000, 400)
+    .chancedOutput(item('minecraft:dye') * 8, 8000, 400)
+    .EUt(Globals.voltAmps[1])
+    .duration(800)
+    .buildAndRegister()
+
+DRONE_PAD.recipeBuilder()
+    .inputs(metaitem('drone.lv').withNbt(["Charge": 10000]))
+    .circuitMeta(4)
+    .outputs(metaitem('drone.lv').withNbt(["Charge": 0]))
+    .chancedOutput(item('minecraft:leather') * 8, 8000, 400)
+    .chancedOutput(item('minecraft:wool') * 8, 8000, 400)
+    .EUt(Globals.voltAmps[1])
+    .duration(800)
+    .buildAndRegister()
