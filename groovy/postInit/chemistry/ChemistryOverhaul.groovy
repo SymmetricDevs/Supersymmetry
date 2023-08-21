@@ -593,7 +593,7 @@ DRYER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-//Chlorofluoromethanes
+// Chlorofluoromethanes
 
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 3000)
@@ -630,6 +630,29 @@ DISTILLATION_TOWER.recipeBuilder()
         .duration(160)
         .EUt(30)
         .buildAndRegister()
+
+// Synthetic methane
+
+REACTION_FURNACE.recipeBuilder()
+        .notConsumable(ore('catalystBedNickel'))
+        .fluidInputs(fluid('carbon_dioxide') * 1000)
+        .fluidInputs(fluid('hydrogen') * 8000)
+        .fluidOutputs(fluid('methane') * 1000)
+        .fluidOutputs(fluid('steam') * 2000)
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
+
+REACTION_FURNACE.recipeBuilder()
+        .notConsumable(ore('catalystBedNickel'))
+        .fluidInputs(fluid('carbon_monoxide') * 1000)
+        .fluidInputs(fluid('hydrogen') * 6000)
+        .fluidOutputs(fluid('methane') * 1000)
+        .fluidOutputs(fluid('steam') * 1000)
+        .duration(150)
+        .EUt(120)
+        .buildAndRegister()
+        
 
 // Chloroform
 
