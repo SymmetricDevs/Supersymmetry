@@ -12,15 +12,6 @@ VACUUM_DT = recipemap('vacuum_distillation')
 FLBR = recipemap('fluidized_bed_reactor')
 DT = recipemap('distillation_tower')
 
-
-def carbon_sources = [
-        'dustCarbon',
-        'dustCoal',
-        'dustCharcoal',
-        'dustCoke'
-]
-
-
 ROASTER.recipeBuilder()
         .inputs(ore('dustMagnesite') * 5)
         .outputs(metaitem('dustMagnesia') * 2)
@@ -49,15 +40,16 @@ EBF.recipeBuilder()
         .blastFurnaceTemp(1370)
         .buildAndRegister()
 
-for (carbon_source in carbon_sources) {
+for (combustible in Globals.combustibles) {
 
         EBF.recipeBuilder()
                 .inputs(ore('dustMagnesia') * 2)
-                .inputs(ore(carbon_source))
+                .inputs(ore(combustible.name) * combustible.amount_required)
                 .outputs(metaitem('dustMagnesium'))
+                .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
                 .fluidOutputs(fluid('carbon_monoxide') * 1000)
                 .EUt(120)
-                .duration(100)
+                .duration(20 * duration)
                 .blastFurnaceTemp(2500)
                 .buildAndRegister()
 
