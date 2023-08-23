@@ -129,6 +129,13 @@ eventManager.listen {
 
         customMetaItems.addItem(203, "sponge.titanium")
         customMetaItems.addItem(204, "sponge.titanium.crude")
+
+        customMetaItems.addItem(205, "sponge.zirconium")
+        customMetaItems.addItem(206, "sponge.zirconium.crude")
+
+        customMetaItems.addItem(207, "sponge.hafnium")
+        customMetaItems.addItem(208, "sponge.hafnium.crude")
+
         customMetaItems.addItem(215, "sponge.platinum")
 		
 		customMetaItems.addItem(210, "bound_leather")

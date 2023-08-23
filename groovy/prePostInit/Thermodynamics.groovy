@@ -180,6 +180,14 @@ CryoNaturalGas.setDurationHX(5);
 CryoNaturalGas.setDurationRadiator(400);
 CryoNaturalGas.setTemperature(80);
 
+def CryoMethane = new ICryoGas('methane', 'hot_hp_methane', 'hp_methane', 'cold_hp_methane', 'liquid_methane');
+CryoMethane.setEUt(60);
+CryoMethane.setDuration(100);
+CryoMethane.setPowerHX(100);
+CryoMethane.setDurationHX(5);
+CryoMethane.setDurationRadiator(400);
+CryoMethane.setTemperature(80);
+
 def CryoGases = [
         CryoHydrogen,
         CryoOxygen,
@@ -192,7 +200,8 @@ def CryoGases = [
         CryoAir,
         CryoNetherAir,
         CryoRefineryGas,
-        CryoNaturalGas
+        CryoNaturalGas,
+        CryoMethane
 ];
 
 def AmmoniaRefrigerant = new IRefrigerant("ammonia", 'hot_compressed_ammonia', 'compressed_ammonia', 'cold_ammonia');
@@ -471,8 +480,8 @@ NaturalGas.setByproductAmount(600);
 
 def Hydrogen = new IFluidFuel('hydrogen', 'steam');
 Hydrogen.setDuration(3);
-Hydrogen.setAmountToBurn(50);
-Hydrogen.setByproductAmount(960);
+Hydrogen.setAmountToBurn(40);
+Hydrogen.setByproductAmount(60);
 
 def WoodGas = new IFluidFuel('wood_gas', 'flue_gas');
 WoodGas.setDuration(6);
@@ -495,7 +504,7 @@ RefineryGas.setAmountToBurn(6);
 RefineryGas.setByproductAmount(600);
 
 def BioDiesel = new IFluidFuel('bio_diesel', 'flue_gas');
-BioDiesel.setDuration(100);
+BioDiesel.setDuration(75);
 BioDiesel.setAmountToBurn(10);
 BioDiesel.setByproductAmount(1000);
 BioDiesel.setIsDiesel(true);
@@ -512,7 +521,7 @@ SulfuricKerosene.setAmountToBurn(8);
 SulfuricKerosene.setByproductAmount(800);
 
 def Diesel = new IFluidFuel('diesel', 'flue_gas');
-Diesel.setDuration(40);
+Diesel.setDuration(100);
 Diesel.setAmountToBurn(10);
 Diesel.setByproductAmount(1000);
 Diesel.setIsDiesel(true);
@@ -582,7 +591,7 @@ Benzene.setAmountToBurn(8);
 Benzene.setByproductAmount(800);
 
 def NitroFuel = new IFluidFuel('nitro_fuel', 'flue_gas');
-NitroFuel.setDuration(100);
+NitroFuel.setDuration(140);
 NitroFuel.setAmountToBurn(10);
 NitroFuel.setByproductAmount(1000);
 NitroFuel.setIsDiesel(true);
@@ -773,6 +782,20 @@ for (WorkingFluid in WorkingFluids) {
             .EUt(8)
             .buildAndRegister();
 }
+
+recipemap('fluid_compressor').recipeBuilder()
+        .fluidInputs(liquid('benzene') * 1280)
+        .fluidOutputs(liquid('hot_hp_benzene') * 1280)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
+        
+recipemap('fluid_compressor').recipeBuilder()
+        .fluidInputs(liquid('propene') * 1280)
+        .fluidOutputs(liquid('hot_hp_propene') * 1280)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister();
 
 recipemap('fluid_compressor').recipeBuilder()
         .fluidInputs(liquid('steam') * 1000)

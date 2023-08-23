@@ -19,9 +19,6 @@ removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES);
 removeAllRecipes(RecipeMaps.VACUUM_RECIPES);
 removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES);
 
-//Removed due to infinite stone being unrealistic
-removeAllRecipes(recipemap('rock_breaker'));
-
 //Removal of certain centrifuging recipes
 
 // LPG * 370

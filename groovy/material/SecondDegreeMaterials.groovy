@@ -511,5 +511,10 @@ public class SecondDegreeMaterials {
                 .components(PurifiedMolybdenumTrioxide, 1, Air, 1)
                 .colorAverage()
                 .build()
+        AmmoniumThiocyanateSolution = new Material.Builder(13082, "ammonium_thiocyanate_solution")
+                .fluid()
+                .components(AmmoniumThiocyanate, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }
