@@ -1232,7 +1232,14 @@ class SuSyMaterials {
         public static Material NBromopropane;
         public static Material TetrapropylammoniumBromide;
         public static Material Propionaldehyde;
-
+        public static Material AminatedEthyleneMixture;
+	public static Material NeutralizedAminatedEthyleneMixture;
+	public static Material Triethylenetetramine;
+	public static Material Aminoethylpiperazine;
+	public static Material Diethylenetriamine;
+	public static Material Ethylenediamine;
+	public static Material Piperazine;
+	
         // Third Degree Materials
 
         public static Material FurfuralSolution;

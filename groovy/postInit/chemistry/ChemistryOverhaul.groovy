@@ -3782,7 +3782,7 @@ BR.recipeBuilder()
 
 BR.recipeBuilder()
         .fluidInputs(fluid('aminated_ethylene_mixture') * 1000)
-        .fluidInputs(fluid('sodium_hydroxide_mixture') * 3050)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 3050)
         .fluidOutputs(fluid('neutralized_aminated_ethylene_mixture') * 4050)
         .duration(300)
         .EUt(30)
@@ -3790,7 +3790,7 @@ BR.recipeBuilder()
 
 DISTILLATION_TOWER.recipeBuilder()
         .fluidInputs(fluid('neutralized_aminated_ethylene_mixture') * 4050)
-        .chancedOutput(metaitem('dustSalt') * 6)
+        .outputs(metaitem('dustSalt') * 6) // TODO: you wanted this to be chanced, planetme
         .fluidOutputs(fluid('triethylenetetramine') * 100)
         .fluidOutputs(fluid('aminoethylpiperazine') * 50)
         .fluidOutputs(fluid('diethylenetriamine') * 300)
@@ -4904,7 +4904,7 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 BR.recipeBuilder()
-        .fluidInputs(fluid('ethylene') * (1000 + ))
+        .fluidInputs(fluid('ethylene') * (1000)) // TODO: you were going to add something to 1000 here, planetme
         .notConsumable(fluid('shell_higher_olefin_catalyst_solution'))
         .fluidOutputs(fluid('alpha_olefin_mixture') * 1000)
         .duration(125)
