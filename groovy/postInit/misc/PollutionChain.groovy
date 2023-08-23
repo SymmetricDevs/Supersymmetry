@@ -203,6 +203,31 @@ DUMPER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
+DUMPER.recipeBuilder()
+        .fluidOutputs(fluid('triethylenetetramine') * 100)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidOutputs(fluid('aminoethylpiperazine') * 50)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidOutputs(fluid('diethylenetriamine') * 300)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidOutputs(fluid('ethylenediamine') * 500)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidOutputs(fluid('piperazine') * 50)
+        .duration(20)
+        .buildAndRegister()
+        
 SIFTER.recipeBuilder()
         .fluidInputs(fluid('flue_gas') * 16000)
         .inputs(ore('dustCalcite') * 5)
