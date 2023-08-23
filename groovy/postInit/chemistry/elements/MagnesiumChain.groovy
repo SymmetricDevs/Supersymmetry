@@ -49,7 +49,7 @@ for (combustible in Globals.combustibles) {
                 .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
                 .fluidOutputs(fluid('carbon_monoxide') * 1000)
                 .EUt(120)
-                .duration(20 * duration)
+                .duration(20 * combustible.duration)
                 .blastFurnaceTemp(2500)
                 .buildAndRegister()
 
