@@ -206,6 +206,7 @@ def CryoGases = [
         CryoXenon,
         CryoNitrogen,
         CryoAir,
+        CryoDecarburizedAir,
         CryoNetherAir,
         CryoRefineryGas,
         CryoNaturalGas,

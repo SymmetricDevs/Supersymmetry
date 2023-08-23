@@ -233,9 +233,9 @@ LOW_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
     .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
-        .fluidInputs(fluid('argon_rich_gas') * 200)
-        .duration(5)
-        .buildAndRegister()
+    .fluidInputs(fluid('argon_rich_gas') * 200)
+    .duration(5)
+    .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder()
     .fluidInputs(fluid('liquid_nitrogen_product') * 100)
