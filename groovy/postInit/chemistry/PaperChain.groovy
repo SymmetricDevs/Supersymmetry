@@ -68,6 +68,7 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 MIXER.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('dustSodiumSulfide') * 3)
         .inputs(ore('dustSodiumHydroxide') * 3)
         .fluidInputs(fluid('water') * 1000)
