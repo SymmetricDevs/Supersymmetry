@@ -39,6 +39,7 @@ FLUID_EXTRACTOR = recipemap('extractor')
 TUBE_FURNACE = recipemap('tube_furnace')
 SINTERING_OVEN = recipemap('sintering_oven')
 VACUUM_DT = recipemap('vacuum_distillation')
+CRACKER = recipemap('cracker')
 
 def COAL_SOURCES = [
     "dustCarbon",
@@ -4641,3 +4642,62 @@ DISTILLERY.recipeBuilder()
 .duration(60)
 .EUt(30)
 .buildAndRegister()
+
+//TOLUENE FROM BENZENE
+TBR.recipeBuilder()
+.notConsumable(ore('dustAluminiumChloride'))
+.notConsumable(circuit(1))
+.fluidInputs(fluid('benzene') * 50)
+.fluidInputs(fluid('chloromethane') * 50)
+.fluidOutputs(fluid('toluene') * 50)
+.fluidOutputs(fluid('hydrogen_chloride') * 50)
+.duration(10)
+.EUt(30)
+.buildAndRegister()
+
+//XYLENE FROM BENZENE
+TBR.recipeBuilder()
+.notConsumable(ore('dustAluminiumChloride'))
+.notConsumable(circuit(2))
+.fluidInputs(fluid('benzene') * 50)
+.fluidInputs(fluid('chloromethane') * 100)
+.fluidOutputs(fluid('toluene') * 50)
+.fluidOutputs(fluid('hydrogen_chloride') * 100)
+.duration(10)
+.EUt(30)
+.buildAndRegister()
+
+//XYLENE FROM TOLUENE
+TBR.recipeBuilder()
+.notConsumable(ore('dustAluminiumChloride'))
+.fluidInputs(fluid('toluene') * 50)
+.fluidInputs(fluid('chloromethane') * 50)
+.fluidOutputs(fluid('meta_para_xylene_mixture') * 50)
+.fluidOutputs(fluid('hydrogen_chloride') * 50)
+.duration(10)
+.EUt(30)
+.buildAndRegister()
+
+//POLYCHLORINATED BIPHENYL, BENZENE FROM TOLUENE
+//can someone register these fluids and check stoic
+/*
+CRACKER.recipeBuilder()
+.fluidInputs(fluid('toluene') * 1000)
+.fluidInputs(fluid('hydrogen') * 1000)
+.fluidOutputs(fluid('hydroalkylated_toluene_mixture') * 1000)
+.duration(200)
+.EUt(Globals.voltAmps[2])
+.buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder()
+.fluidInputs(fluid('hydroalkylated_toluene_mixture') * 1000)
+.fluidOutputs(fluid('biphenyl') * 20)
+.fluidOutputs(fluid('toluene') * 210)
+.fluidOutputs(fluid('benzene') * 750)
+.fluidOutputs(fluid('methane') * 750)
+.fluidOutputs(fluid('hydrogen') * 10)
+.duration(30)
+.EUt(30)
+.buildAndRegister()
+
+*/
