@@ -4700,4 +4700,35 @@ DISTILLATION_TOWER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
+TBR.recipeBuilder()
+.notConsumable(ore('dustIronIiiChlorideChloride'))
+.fluidInputs(fluid('biphenyl') * 50)
+.fluidInputs(fluid('chloride') * 250)
+.fluidOutputs(fluid('polychlorinated_biphenyl') * 50)
+.fluidOutputs(fluid('hydrogen_chloride') * 250)
+.duration(300)
+.EUt(30)
+.buildAndRegister()
+
 */
+
+//PHENOL FROM CHLOROBENZENE
+BR.recipeBuilder()
+.fluidInputs(fluid('chlorobenzene') * 1000)
+.fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
+.fluidOutputs(fluid('sodium_phenoxide_solution') * 1000)
+.fluidOutputs(fluid('salt_water') * 1000)
+.duration(200)
+.EUt(30)
+.buildAndRegister()
+
+BR.recipeBuilder()
+.fluidInputs(fluid('sodium_phenoxide_solution') * 1000)
+.fluidInputs(fluid('hydrogen_chloride') * 1000)
+.fluidOutputs(fluid('phenol') * 1000)
+.fluidOutputs(fluid('salt_water') * 1000)
+.duration(100)
+.EUt(30)
+.buildAndRegister()
+
+
