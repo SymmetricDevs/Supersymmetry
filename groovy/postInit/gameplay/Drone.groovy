@@ -3,6 +3,24 @@ import static globals.Globals.*
 
 def DRONE_PAD = recipemap('drone_pad');
 
+crafting.addShaped("susy:drone_pad_controller", metaitem('drone_pad'), [
+    [ore('plateSteel'), metaitem('emitter.lv'), ore('plateSteel')],
+    [item('susy:susy_multiblock_casing', 4), item('gregtech:metal_casing', 4), item('susy:susy_multiblock_casing', 4)],
+    [ore('plateSteel'), item('susy:susy_multiblock_casing', 4), ore('plateSteel')]
+])
+
+crafting.addShaped("susy:drone_pad_block", item('susy:susy_multiblock_casing', 4) * 3, [
+    [null, null, null],
+    [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
+    [ore('blockConcrete'), ore('blockConcrete'), ore('blockConcrete')]
+])
+
+crafting.addShaped("susy:drone_pad_block_alt", item('susy:susy_multiblock_casing', 4) * 3, [
+    [null, null, null],
+    [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
+    [ore('stonePolished'), ore('stonePolished'), ore('stonePolished')]
+])
+
 Globals.solders.each { key, val ->
 
     mods.gregtech.assembler.recipeBuilder()
