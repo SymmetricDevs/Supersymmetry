@@ -896,6 +896,7 @@ class SuSyMaterials {
         public static Material HafniumTetrachloride;
         public static Material AmmoniumThiocyanate;
         public static Material CalciumZirconate;
+        public static Material NickelIINitrateSolution;
 
         // Second Degree Materials
 
@@ -1237,8 +1238,16 @@ class SuSyMaterials {
 	public static Material Triethylenetetramine;
 	public static Material Aminoethylpiperazine;
 	public static Material Diethylenetriamine;
-	public static Material Ethylenediamine;
 	public static Material Piperazine;
+	public static Material Cyclooctadiene;
+	public static Material AcidicTriethylPhosphate;
+	public static Material TriethylPhosphate;
+	public static Material IsopropenylAcetate;
+	public static Material Acetylacetone;
+	public static Material NickelIIBisacetylacetonateSolution;
+	public static Material NickelIIBisacetylacetonate;
+	public static Material BiscyclooctadienenickelZero;
+	public static Material DiethylaluminiumAcetylacetonate;
 	
         // Third Degree Materials
 

@@ -2978,5 +2978,13 @@ public class FirstDegreeMaterials{
                 .components(Calcium, 1, Zirconium, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
+                
+        NickelIINitrateSolution = new Material.Builder(8536, "nickel_nitrate_solution")
+        	.fluid()
+        	.components(Nickel, 1, Nitrogen, 2, Oxygen, 6, Water, 1)
+        	.colorAverage()
+        	.build();
+        NickelIINitrateSolution.setFormula("[Ni(NO3)2](H2O)", true);
+        
     }
 }

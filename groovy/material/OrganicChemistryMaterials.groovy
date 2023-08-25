@@ -1574,17 +1574,61 @@ public class OrganicChemistryMaterials {
       		.fluid()
       		.color(0x0234a8)
       		.build();
-    
-        Ethylenediamine = new Material.Builder(15252, "ethylenediamine")
-              	.components(Carbon, 2, Hydrogen, 8, Nitrogen, 2)
-      		.fluid()
-      		.color(0x2e7a25)
-      		.build();
       		
-      	Piperazine = new Material.Builder(15253, "piperazine")
+      	Piperazine = new Material.Builder(15252, "piperazine")
       	      	.components(Carbon, 4, Hydrogen, 10, Nitrogen, 2)
       		.fluid()
       		.color(0x8a8f9f)
       		.build();
+      		
+      	Cyclooctadiene = new Material.Builder(15253, "cyclooctadiene")
+      		.components(Carbon, 8, Hydrogen, 12)
+      		.fluid()
+      		.color(0x4639ee)
+      		.build();
+      		
+      	AcidicTriethylPhosphate = new Material.Builder(15254, "acidic_triethyl_phosphate")
+      		.fluid()
+      		.color(0x4639ee)
+      		.build();
+      		
+      	TriethylPhosphate = new Material.Builder(15255, "triethyl_phosphate")
+      		.components(Carbon, 6, Hydrogen, 15)
+      		.fluid()
+      		.color(0x4639ee)
+      		.build();
+      		
+        IsopropenylAcetate = new Material.Builder(15256, "isopropenyl_acetate")
+      		.components(Carbon, 5, Hydrogen, 8, Oxygen, 2)
+      		.fluid()
+      		.color(0x4639ee)
+      		.build();
+      		
+      	Acetylacetone = new Material.Builder(15257, "acetylacetone")
+      		.components(Carbon, 5, Hydrogen, 8, Oxygen, 2)
+      		.fluid()
+      		.color(0x092b30)
+      		.build();
+      		
+      	NickelIIBisacetylacetonateSolution = new Material.Builder(15258, "nickel_ii_bisacetylacetonate_solution")
+      		.components(Carbon, 10, Hydrogen, 14, Nickel, 1, Oxygen, 4, Water, 1)
+      		.fluid()
+      		.color(0x3e5051)
+      		.build();
+      		
+        NickelIIBisacetylacetonate = new Material.Builder(15259, "nickel_ii_bisacetylacetonate")
+      		.components(Carbon, 10, Hydrogen, 14, Nickel, 1, Oxygen, 4)
+      		.dust()
+      		.color(0x3e5051)
+      		.build();
+      		
+        BiscyclooctadienenickelZero = new Material.Builder(15230, "biscyclooctadienenickel_zero")
+        	.components(Carbon, 16, Hydrogen, 24, Nickel, 1)
+        	.dust()
+        	.color(0xe0e00d)
+        	.build();
+        	
+        DiethylaluminiumAcetylacetonate = new Material.Builder(15231, "diethylaluminium_acetylacetonate")
+        	.components(
     }
 }
