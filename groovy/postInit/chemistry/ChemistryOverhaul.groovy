@@ -4732,3 +4732,14 @@ BR.recipeBuilder()
 .buildAndRegister()
 
 
+//BENZENE FROM PHENOL
+ROASTER.recipeBuilder()
+.fluidInputs(fluid('phenol') * 1000)
+.inputs(ore('dustZinc'))
+.fluidOutputs(fluid('benzene') * 1000)
+.outputs(metaitem('dustZincite'))
+.duration(120)
+.EUt(30)
+.buildAndRegister()
+
+
