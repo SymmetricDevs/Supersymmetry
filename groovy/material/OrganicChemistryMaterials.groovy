@@ -1545,37 +1545,32 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 3, Hydrogen, 7, Bromine, 1)
                 .color(0x9e833f)
                 .build();
-       
-      	AminatedEthyleneMixture = new Material.Builder(15247, "aminated_ethylene_mixture")
-      		.fluid()
-      		.color(0xb9a9db)
-      		.build();
       		
-             
-      	NeutralizedAminatedEthyleneMixture = new Material.Builder(15248, "neutralized_aminated_ethylene_mixture")
-      		.fluid()
-      		.color(0x8a819c)
-      		.build();
-      		
-      	Triethylenetetramine = new Material.Builder(15249, "triethylenetetramine")
+      	Triethylenetetramine = new Material.Builder(15247, "triethylenetetramine")
       		.fluid()
       		.components(Carbon, 6, Hydrogen, 18, Nitrogen, 4)
       		.color(0x3d98ab)
       		.build();
       		
-      	Aminoethylpiperazine = new Material.Builder(15250, "aminoethylpiperazine")
+      	Aminoethylpiperazine = new Material.Builder(15248, "aminoethylpiperazine")
       	      	.components(Carbon, 6, Hydrogen, 15, Nitrogen, 3)
       		.fluid()
       		.color(0xcce862)
       		.build();	
     
-        Diethylenetriamine = new Material.Builder(15251, "diethylenetriamine")
+        Diethylenetriamine = new Material.Builder(15249, "diethylenetriamine")
               	.components(Carbon, 4, Hydrogen, 13, Nitrogen, 3)
       		.fluid()
       		.color(0x0234a8)
       		.build();
+    
+        Ethylenediamine = new Material.Builder(15250, "ethylenediamine")
+              	.components(Carbon, 2, Hydrogen, 8, Nitrogen, 2)
+      		.fluid()
+      		.color(0x2e7a25)
+      		.build();
       		
-      	Piperazine = new Material.Builder(15252, "piperazine")
+      	Piperazine = new Material.Builder(15251, "piperazine")
       	      	.components(Carbon, 4, Hydrogen, 10, Nitrogen, 2)
       		.fluid()
       		.color(0x8a8f9f)
@@ -1629,6 +1624,23 @@ public class OrganicChemistryMaterials {
         	.build();
         	
         DiethylaluminiumAcetylacetonate = new Material.Builder(15231, "diethylaluminium_acetylacetonate")
-        	.components(
+        	.components(Aluminium, 1, Carbon, 9, Hydrogen, 17, Oxygen, 2)
+                .fluid()
+                .color(0x10a37e)
+                .build();
+
+        OxalicAcid = new Material.Builder(1523, "")
+                .components()
+                .dust()
+                .color(0x)
+                .build();
+
+        OneAmidoethylTwoAlkylImidazoline = new Material.Builder(1523, "")
+                .components()
+                .fluid()
+                .color(0x)
+                .build();
+
+
     }
 }
