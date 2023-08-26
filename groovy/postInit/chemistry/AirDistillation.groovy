@@ -414,6 +414,7 @@ HEAT_EXCHANGER.recipeBuilder()
 
 //BOILING
 FLUID_HEATER.recipeBuilder()
+    .circuitMeta(1)
     .fluidInputs(fluid('liquid_nitrogen') * 100)
     .fluidOutputs(fluid('nitrogen') * 6400)
     .duration(2)
@@ -421,6 +422,7 @@ FLUID_HEATER.recipeBuilder()
     .buildAndRegister()
 
 FLUID_HEATER.recipeBuilder()
+    .circuitMeta(1)
     .fluidInputs(fluid('liquid_oxygen') * 100)
     .fluidOutputs(fluid('oxygen') * 6400)
     .duration(2)
