@@ -41,7 +41,7 @@ FLOTATION.recipeBuilder()
 
 CLARIFIER.recipeBuilder()
     .fluidInputs(fluid('malachite_slurry') * 1000)
-    .outputs(metaitem('dustMalachite') * 4)
+    .outputs(metaitem('dustMalachite') * 16)
     .fluidOutputs(fluid('wastewater') * 1000)
     .EUt(30)
     .duration(20)

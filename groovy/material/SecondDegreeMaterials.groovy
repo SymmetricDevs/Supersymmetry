@@ -484,7 +484,34 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        AmmoniumThiocyanateSolution = new Material.Builder(13078, "ammonium_thiocyanate_solution")
+        VeryDilutedSodiumSulfateSolution = new Material.Builder(13078, "very_diluted_sodium_sulfate_solution")
+                .fluid()
+                .components(SodiumSulfate, 1, Water, 9)
+                .colorAverage()
+                .build()
+
+        MolybdenicAcidSolution = new Material.Builder(13079, "molybdenic_acid_solution")
+                .fluid()
+                .components(Hydrogen, 2, Molybdenum, 1, Oxygen, 4, HydrogenChloride, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        MolybdenicAcidSolution.setFormula("(H2MoO4)(HCl)(H2O)", true)
+
+        NeutralizedAmmoniumMolybdateSolution = new Material.Builder(13080, "neutralized_ammonium_molybdate_solution")
+                .fluid()
+                .components(Nitrogen, 2, Hydrogen, 8, Molybdenum, 1, Oxygen, 4, AmmoniumChloride, 1, Water, 4)
+                .colorAverage()
+                .build()
+
+        NeutralizedAmmoniumMolybdateSolution.setFormula("[(NH4)2MoO4](NH4Cl)(H2O)4")
+
+        SublimatedMolybdenumTrioxide = new Material.Builder(13081, "sublimated_molybdenum_trioxide")
+                .fluid()
+                .components(PurifiedMolybdenumTrioxide, 1, Air, 1)
+                .colorAverage()
+                .build()
+        AmmoniumThiocyanateSolution = new Material.Builder(13082, "ammonium_thiocyanate_solution")
                 .fluid()
                 .components(AmmoniumThiocyanate, 1, Water, 1)
                 .colorAverage()

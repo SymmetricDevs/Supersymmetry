@@ -352,6 +352,7 @@ MIXER.recipeBuilder()
         .buildAndRegister()
 
 MIXER.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('dustSodiumHydroxide') * 3)
         .fluidInputs(fluid('gtfo_stearin') * 1000)
         .fluidInputs(fluid('water') * 2000)
