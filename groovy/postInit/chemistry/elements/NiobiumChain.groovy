@@ -85,7 +85,7 @@ CHEMICAL_BATH.recipeBuilder() // Digested Pyrochlore
 REACTION_FURNACE.recipeBuilder() // Ferroniobium-tantalum
     .inputs(ore('dustIronIIIOxide') * 15)
     .inputs(ore('dustDigestedPyrochlore') * 7)
-    .inputs(ore('dustAluminium') * (6 + 36))
+    .inputs(ore('dustAluminium') * 42)
     .fluidInputs(fluid('sodium_nitrate') * 720)
     .fluidOutputs(fluid('sodium_nitrite') * 720)
     .outputs(metaitem('dustFerroniobiumTantalum') * 20)
@@ -270,7 +270,7 @@ CENTRIFUGE.recipeBuilder()
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
-    .fluidInputs(fluid('metal_sulfate_waste'))
+    .fluidInputs(fluid('metal_sulfate_waste') * 20000)
     .fluidOutputs(fluid('steam') * 20000)
     .chancedOutput(metaitem('dustIronSulfate') * 6, 5000, 0)
     .chancedOutput(metaitem('dustManganeseIiSulfate') * 6, 5000, 0)

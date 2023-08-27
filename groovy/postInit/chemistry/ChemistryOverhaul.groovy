@@ -4602,8 +4602,7 @@ DISTILLATION_TOWER.recipeBuilder() //SCHULZ FLORY DISTRIBUTION, p = 0.73, ROUNDE
 
 BR.recipeBuilder()
         .inputs(ore('dustNickelChloride') * 3)
-        .inputs(ore('dustTriphenylphosphine') * 64)
-        .inputs(ore('dustTriphenylphosphine') * 4)
+        .inputs(ore('dustTriphenylphosphine') * 68)
         .notConsumable(fluid('acetic_acid') * 1000)
         .outputs(metaitem('dustDichlorobistriphenylphosphinenickelIi'))
         .duration(200)
@@ -4769,7 +4768,7 @@ BR.recipeBuilder()
 
 BR.recipeBuilder()
         .fluidInputs(fluid('ethylene') * (1000 + 3000))
-        .notConsumable(fluid('shell_higher_olefin_catalyst_solution'))
+        .notConsumable(fluid('shell_higher_olefin_catalyst_solution') * 1000)
         .fluidOutputs(fluid('alpha_olefin_mixture') * 1000)
         .duration(125)
         .EUt(Globals.voltAmps[3])
