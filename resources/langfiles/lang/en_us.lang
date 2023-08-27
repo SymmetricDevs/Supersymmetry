@@ -1658,14 +1658,23 @@ material.rhenium_rich_flue=Rhenium Rich Flue
 material.scrubbed_perrhenate_solution=Scrubbed Perrhenate Solution
 material.ammonium_perrhenate=Ammonium Perrhenate
 material.ammonium_perrhenate_solution=Ammonium Perrhenate Solution
-AlphaOlefinMixture
-EightTwentyOlefinMixture
-NineTwentyOneAldehydeMixture
-NineTwentyOneFattyAcidMixture
-Chlorodiphenylphosphine
-DiphenylphosphinoaceticAcid
-OneHexene
-ShellHigherOlefinCatalystSolution
+material.alpha_olefin_mixture=Alpha Olefin Mixture
+material.eight_twenty_olefin_mixture=C8-C20 Olefin Mixture
+material.nine_twenty_one_aldehyde_mixture=C9-C21 Aldehyde Mixture
+material.nine_twenty_one_fattya_acid_mixture=C9-C21 Fatty Acid Mixture
+material.chlorodiphenylphosphine=Chlorodiphenylphosphine
+material.diphenylphosphinoacetic_acid=Diphenylphosphinoacetic Acid
+material.one_hexene=1-Hexene
+material.shell_higher_olefin_catalyst_solution=Shell Higher Olefin Catalyst Solution
+material.hzsm_five=HZSM-Five
+material.functionalizable_crosslinked_polystyrene=Functionalizable Crosslinked Polystyrene
+material.raney_cobalt=Raney Cobalt
+material.activated_raney_cobalt=Activated Raney Cobalt
+material.lithium_oxide=Lithium Oxide
+material.n_butylamine=n-Butylamine
+material.ethyltoluene=Ethyltoluene
+material.vinylbenzyl_chloride=Vinylbenzyl Chloride
+material.cyclohexylamine=Cyclohexylamine
 
 # Isotopes
 
@@ -1956,10 +1965,10 @@ metaitem.unrefined_boule.gallium_arsenide.name=Unrefined Gallium Arsenide Boule
 
 metaitem.zeolite_membrane_support.name=Zeolite Membrane Support
 metaitem.zeolite_membrane.name=Zeolite Membrane
-metaitem.silver_anode_slime.name=Silver Anode Slime
-metaitem.gold_anode_slime.name=Gold Anode Slime
-metaitem.copper_anode_slime.name=Copper Anode Slime
-metaitem.lead_anode_slime.name=Lead Anode Slime
+metaitem.anode_slime.silver.name=Silver Anode Slime
+metaitem.anode_slime.gold.name=Gold Anode Slime
+metaitem.anode_slime.copper.name=Copper Anode Slime
+metaitem.anode_slime.lead.name=Lead Anode Slime
 
 metaitem.wafer.n_doped.silicon.name=n-Doped Silicon Wafer
 metaitem.wafer.alumina.name=Alumina Wafer
@@ -1973,10 +1982,12 @@ metaitem.boule.emerald.name=Emerald Boule
 metaitem.boule.sapphire.name=Sapphire Boule
 metaitem.boule.ruby.name=Ruby Boule
 metaitem.boule.silicon_germanium.name=Silicon-Germanium Boule
+metaitem.boule.lithium_niobate.name=Lithium Niobate Boule
 
 metaitem.seed_crystal.alumina.name=Alumina Seed Crystal
 metaitem.seed_crystal.beryllium_oxide.name=Beryllium Oxide Seed Crystal
 metaitem.seed_crystal.emerald.name=Emerald Seed Crystal
+metaitem.seed_crystal.lithium_niobate.name=Lithium Niobate Seed Crystal
 
 metaitem.thick_film_substrate_wafer.name=Thick-Film Substrate Wafer
 metaitem.patterned_thick_film_substrate_wafer.name=Patterned Thick-Film Substrate Wafer
@@ -2001,8 +2012,10 @@ metaitem.chip.insulated_silicon_germanium.name=Insulated Silicon-Germanium Chip
 metaitem.chip.n_doped_silicon.name=n-Doped Silicon Chip
 metaitem.chip.silicon_dioxide.name=Silicon Dioxide Chip
 
-metaitem.ag_fifty_w_x_eight_beads.name=AG 50W-X8 Resin Beads
-metaitem.amberlyst_ch_beads.name=Amberlyst CH-43 Beads
+metaitem.beads.ag_fifty_w_x_eight.name=AG 50W-X8 Resin Beads
+metaitem.beads.amberlyst_ch.name=Amberlyst CH-43 Beads
+metaitem.beads.rhenium_ion_exchange.name=Rhenium Ion Exchange Beads
+metaitem.beads.loaded_rhenium_ion_exchange.name=Loaded Rhenium Ion Exchange Beads
 
 metaitem.fused_quartz.name=Fused Quartz Plate
 metaitem.crucible.quartz.name=Quartz Crucible

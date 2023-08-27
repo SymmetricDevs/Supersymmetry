@@ -463,6 +463,8 @@ class SuSyMaterials {
         public static Material MolybdeniteSlurry;
         public static Material FlotatedMolybdenite;
         public static Material CopperMolybdeniteSlurry;
+        public static Material HZSMFive;
+        public static Material FunctionalizableCrosslinkedPolystyrene;
 
         // Petrochem Materials
 
@@ -980,6 +982,9 @@ class SuSyMaterials {
         public static Material DilutedAmmoniaSolution;
         public static Material TantalumFluoride;
         public static Material AmmoniumPerrhenate;
+        public static Material RaneyCobalt;
+        public static Material ActivatedRaneyCobalt;
+        public static Material LithiumOxide;
 
         // Second Degree Materials
 
@@ -1338,11 +1343,14 @@ class SuSyMaterials {
         public static Material Chlorodiphenylphosphine;
         public static Material DiphenylphosphinoaceticAcid;
         public static Material OneHexene;
-	
         public static Material Tripropylene;
         public static Material Isodecanal;
         public static Material Isodecanol;
         public static Material Trioctylamine;
+        public static Material NButylamine;
+        public static Material Ethyltoluene;
+        public static Material VinylbenzylChloride;
+        public static Material Cyclohexylamine;
 
         // Third Degree Materials
 

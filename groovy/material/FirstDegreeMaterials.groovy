@@ -285,7 +285,7 @@ public class FirstDegreeMaterials{
         LithiumNiobate = new Material.Builder(8121, 'lithium_niobate')
                 .gem().iconSet(RUBY)
                 .components(Lithium, 1, Niobium, 1, Oxygen, 3)
-                .colorAverage()
+                .color(0xbcabde)
                 .build()
 
         LeadZirconateTitanite = new Material.Builder(8122, 'lead_zirconate_titanate')
@@ -3178,6 +3178,27 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Nitrogen, 1, Hydrogen, 4, Rhenium, 1, Oxygen, 4)
                 .color(0x2b6cb3)
+                .build();
+
+        RaneyCobalt = new Material.Builder(8563, "raney_cobalt")
+                .dust()
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Cobalt, 1, Aluminium, 1)
+                .color(0x1858a1)
+                .build();
+
+        ActivatedRaneyCobalt = new Material.Builder(8564, "activated_raney_cobalt")
+                .dust()
+                .iconSet(SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Cobalt, 1, Aluminium, 1)
+                .color(0x3274bf)
+                .build();
+
+        LithiumOxide = new Material.Builder(8565, "lithium_oxide")
+                .dust()
+                .components(Lithium, 2, Oxygen, 1)
+                .colorAverage()
                 .build();
     }
 }

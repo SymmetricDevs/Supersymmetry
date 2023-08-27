@@ -1676,5 +1676,29 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 24, Hydrogen, 51, Nitrogen, 1)
                 .color(0x2274a3)
                 .build();
+
+        NButylamine = new Material.Builder(15269, "n_butylamine")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 11, Nitrogen, 1)
+                .color(0x43576e)
+                .build();
+
+        Ethyltoluene = new Material.Builder(15270, "ethyltoluene")
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 12)
+                .color(0x806706)
+                .build();
+
+        VinylbenzylChloride = new Material.Builder(15271, "vinylbenzyl_chloride")
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 9, Chlorine, 1)
+                .color(0x8fa32a)
+                .build();
+
+        Cyclohexylamine = new Material.Builder(15272, "cyclohexylamine")
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 13, Nitrogen, 1)
+                .color(0xbfba8c)
+                .build();
     }
 }

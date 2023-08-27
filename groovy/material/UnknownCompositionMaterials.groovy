@@ -1653,7 +1653,7 @@ public class UnknownCompositionMaterials {
                 .color(0xd99152)
                 .build();
 
-        FluoroniobicAcidSolution = new Material.Builder(4135, "fluoroniobic_acid_solution")
+        FluoroniobicAcidSolution = new Material.Builder(4315, "fluoroniobic_acid_solution")
                 .fluid()
                 .color(0x48147d)
                 .build();
@@ -1745,6 +1745,13 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xa37b1d)
                 .build();
-                
+        
+        HZSMFive = new Material.Builder(4333, "hzsm_five")
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .color(0x75a118)
+                .build();
+
+        FunctionalizableCrosslinkedPolystyrene
     }
 }

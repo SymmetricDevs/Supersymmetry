@@ -1,6 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-      "layer0": "gregtech:items/metaitems/ag_fifty_w_x_eight_beads"
-    }
-  }
