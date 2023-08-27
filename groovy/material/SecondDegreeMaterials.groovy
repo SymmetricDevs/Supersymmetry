@@ -511,19 +511,20 @@ public class SecondDegreeMaterials {
                 .components(PurifiedMolybdenumTrioxide, 1, Air, 1)
                 .colorAverage()
                 .build()
+
         AmmoniumThiocyanateSolution = new Material.Builder(13082, "ammonium_thiocyanate_solution")
                 .fluid()
                 .components(AmmoniumThiocyanate, 1, Water, 1)
                 .colorAverage()
                 .build();
 
-        TantalumFluorideSolution = new Material.Builder(13079, "tantalum_fluoride_solution")
+        TantalumFluorideSolution = new Material.Builder(13083, "tantalum_fluoride_solution")
                 .fluid()
                 .components(TantalumFluoride, 1, Water, 2)
                 .colorAverage()
                 .build();
 
-        AmmoniumPerrhenateSolution = new Material.Builder(13080, "ammonium_perrhenate_solution")
+        AmmoniumPerrhenateSolution = new Material.Builder(13084, "ammonium_perrhenate_solution")
                 .fluid()
                 .components(AmmoniumPerrhenate, 1, Water, 1)
                 .colorAverage()

@@ -3096,7 +3096,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
                 
-        NickelIINitrateSolution = new Material.Builder(8536, "nickel_nitrate_solution")
+        NickelIINitrateSolution = new Material.Builder(8551, "nickel_nitrate_solution")
         	.fluid()
         	.components(Nickel, 1, Nitrogen, 2, Oxygen, 6, Water, 1)
         	.colorAverage()
@@ -3104,27 +3104,29 @@ public class FirstDegreeMaterials{
 
         NickelIINitrateSolution.setFormula("[Ni(NO3)2](H2O)", true);
 
-        FerroniobiumTantalum = new Material.Builder(8537, "ferroniobium_tantalum")
+        FerroniobiumTantalum = new Material.Builder(8552, "ferroniobium_tantalum")
                 .dust()
                 .components(Iron, 30, Niobium, 65, Tantalum, 5)
                 .colorAverage()
                 .build();
                 
-        TantalumPentachloride = new Material.Builder(8538, "tantalum_pentachloride")
+        TantalumPentachloride = new Material.Builder(8553, "tantalum_pentachloride")
                 .dust().fluid(FluidTypes.GAS)
                 .flags(NO_UNIFICATION)
+                .fluidTemp(513)
                 .components(Tantalum, 1, Chlorine, 5)
                 .colorAverage()
                 .build();
                 
-        NiobiumPentachloride = new Material.Builder(8539, "niobium_pentachloride")
+        NiobiumPentachloride = new Material.Builder(8554, "niobium_pentachloride")
                 .dust().fluid(FluidTypes.GAS)
                 .flags(NO_UNIFICATION)
+                .fluidTemp(521)
                 .components(Niobium, 1, Chlorine, 5)
-                .colorAverage()
+                .color(0xcfcf1d)
                 .build();
                 
-        NiobiumOxideDihydrate = new Material.Builder(8540, "niobium_oxide_dihydrate")
+        NiobiumOxideDihydrate = new Material.Builder(8555, "niobium_oxide_dihydrate")
                 .dust()
                 .components(Niobium, 2, Oxygen, 5, Water, 2)
                 .colorAverage()
@@ -3132,7 +3134,7 @@ public class FirstDegreeMaterials{
 
         NiobiumOxideDihydrate.setFormula("Nb2O5 * (H2O)2", true)
                 
-        PurifiedFluoroniobicAcidSolution = new Material.Builder(8541, "purified_fluoroniobic_acid_solution")
+        PurifiedFluoroniobicAcidSolution = new Material.Builder(8556, "purified_fluoroniobic_acid_solution")
                 .fluid()
                 .components(Hydrogen, 6, Niobium, 3, Fluorine, 9, Water, 6)
                 .colorAverage()
@@ -3140,13 +3142,13 @@ public class FirstDegreeMaterials{
 
         PurifiedFluoroniobicAcidSolution.setFormula("(H2NbF7)1.35(H2O)6", true)
                 
-        NiobiumOxide = new Material.Builder(8542, "niobium_oxide")
+        NiobiumOxide = new Material.Builder(8557, "niobium_oxide")
                 .dust()
                 .components(Niobium, 2, Oxygen, 5)
                 .colorAverage()
                 .build();
                 
-        FluorotantalicAcidSolution = new Material.Builder(8543, "fluorotantalic_acid_solution")
+        FluorotantalicAcidSolution = new Material.Builder(8558, "fluorotantalic_acid_solution")
                 .fluid()
                 .components(Hydrogen, 2, Tantalum, 1, Fluorine, 7, Water, 1)
                 .colorAverage()
@@ -3154,25 +3156,25 @@ public class FirstDegreeMaterials{
 
         FluorotantalicAcidSolution.setFormula("(H2TaF7)0.9(H2O)", true)
                 
-        PotassiumHeptafluorotantalate = new Material.Builder(8544, "potassium_heptafluorotantalate")
+        PotassiumHeptafluorotantalate = new Material.Builder(8559, "potassium_heptafluorotantalate")
                 .dust()
                 .components(Potassium, 2, Tantalum, 1, Fluorine, 7)
                 .colorAverage()
                 .build();
                 
-        DilutedAmmoniaSolution = new Material.Builder(8545, "diluted_ammonia_solution")
+        DilutedAmmoniaSolution = new Material.Builder(8560, "diluted_ammonia_solution")
                 .fluid()
                 .components(Ammonia, 1, Water, 2)
                 .colorAverage()
                 .build();
                 
-        TantalumFluoride = new Material.Builder(8546, "tantalum_fluoride")
+        TantalumFluoride = new Material.Builder(8561, "tantalum_fluoride")
                 .dust()
                 .components(Tantalum, 1, Fluorine, 5)
                 .colorAverage()
                 .build();
 
-        AmmoniumPerrhenate = new Material.Builder(8547, "ammonium_perrhenate")
+        AmmoniumPerrhenate = new Material.Builder(8562, "ammonium_perrhenate")
                 .dust()
                 .components(Nitrogen, 1, Hydrogen, 4, Rhenium, 1, Oxygen, 4)
                 .color(0x2b6cb3)

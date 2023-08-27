@@ -311,6 +311,10 @@ public class ThirdDegreeMaterials {
       		.color(0x3e5051)
       		.build();
 
-        ShellHigherOlefinCatalystSolution
+        ShellHigherOlefinCatalystSolution = new Material.Builder(24049, "shell_higher_olefin_catalyst_solution")
+                .fluid()
+                .components(Nickel, 1, DiphenylphosphinoaceticAcid, 1, Cyclooctadiene, 2, EthyleneGlycol, 1)
+                .color(0x9c1012)
+                .build();
     }
 }
