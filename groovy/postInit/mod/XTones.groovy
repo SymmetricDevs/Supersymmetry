@@ -28,12 +28,18 @@ crafting.replaceShaped('xtones:vena', item('xtones:vena') * 8, [
         [item('xtones:base'), item('xtones:base'), item('xtones:base')]
 ])
 
+crafting.replaceShaped('xtones:base', item('xtones:base') * 32, [
+        [ore('slabStone'), ore('slabStone'), null],
+        [ore('slabStone'), ore('stone'), ore('slabStone')],
+        [null, ore('slabStone'), ore('slabStone')]
+])
+
 ASSEMBLER = recipemap('assembler')
 
 ASSEMBLER.recipeBuilder()
         .inputs(ore('stone'))
         .inputs(item('minecraft:stone_slab') * 6)
-        .outputs(item('xtones:base') * 8)
+        .outputs(item('xtones:base') * 32)
         .duration(20)
         .EUt(7)
         .buildAndRegister();

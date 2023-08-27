@@ -46,6 +46,18 @@ crafting.replaceShaped('chisel:temple', item('chisel:temple') * 32, [
         [ore('stone'), ore('stone'), ore('stone')]
 ])
 
+crafting.replaceShaped('chisel:futura', item('chisel:futura', 0) * 32, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), ore('dustRedstone'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])
+
+crafting.replaceShaped('chisel:laboratory', item('chisel:laboratory', 0) * 32, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), ore('dyeWhite'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])
+
 ASSEMBLER = recipemap('assembler')
 
 ASSEMBLER.recipeBuilder()

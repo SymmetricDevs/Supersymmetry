@@ -144,7 +144,7 @@ FORMINGPRESS.recipeBuilder()
 	.notConsumable(metaitem('shape.mold.rod'))
 	.outputs(metaitem('stickBoronCarbide'))
 	.duration(120)
-	.EUt(Globals.voltAmps[3])
+	.EUt(Globals.voltAmps[1])
 	.buildAndRegister()
 
 //ELECTROLYSIS OF B2O3
