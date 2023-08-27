@@ -1178,10 +1178,11 @@ FBR.recipeBuilder()
 
 BR.recipeBuilder()
 .notConsumable(metaitem('emitter.lv'))
-.notConsumable(fluid('hydrogen_peroxide') * 50)
+.notConsumable(fluid('hydrogen_peroxide_solution') * 50)
 .fluidInputs(fluid('hydrobromic_acid') * 1000)
 .fluidInputs(fluid('propene') * 1000)
 .fluidOutputs(fluid('n_bromopropane') * 1000)
+.fluidOutputs(fluid('water') * 1000)
 .duration(5)
 .EUt(120)
 .buildAndRegister();

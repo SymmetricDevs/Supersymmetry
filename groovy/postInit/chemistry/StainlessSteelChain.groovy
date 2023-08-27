@@ -81,16 +81,18 @@ EBF.recipeBuilder()
 //     .EUt(Globals.voltAmps[3])
 //     .buildAndRegister()
 
-EBF.recipeBuilder()
+for (highPurityCombustible in Globals.highPurityCombustibles) {
+    EBF.recipeBuilder()
     .inputs(ore('dustSiliconDioxide') * 3)
     .inputs(ore('dustIron') * 3)
-    .inputs(ore('dustCoke') * 2)
+    .inputs(ore(highPurityCombustible.name) * 2)
     .outputs(metaitem('dustFerrosilicon') * 4)
     .fluidOutputs(fluid('carbon_monoxide') * 2000)
     .blastFurnaceTemp(1400)
-    .duration(300)
+    .duration(200 * highPurityCombustible.duration)
     .EUt(Globals.voltAmps[1] * 2)
     .buildAndRegister()
+}
 
 MIXER.recipeBuilder()
     .circuitMeta(2)

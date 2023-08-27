@@ -76,7 +76,7 @@ def metamorphic_tier_1 = [
     'gregtech:ore_realgar_0' : 10000,
     'gregtech:ore_arsenopyrite_0' : 10000,
     'gregtech:ore_pyrargyrite_0' : 10000,
-    'minecraft:redstone_ore' : 10000,
+    'gregtech:ore_redstone_0' : 10000,
     'gregtech:ore_tetrahedrite_0' : 10000,
     'gregtech:ore_cinnabar_0' : 10000
 ];
@@ -90,7 +90,7 @@ def metamorphic_tier_2 = [
     'gregtech:ore_arsenopyrite_0' : 10000,
     'gregtech:ore_pyrargyrite_0' : 10000,
     'gregtech:ore_stephanite_0' : 10000,
-    'minecraft:redstone_ore' : 10000,
+    'gregtech:ore_redstone_0' : 10000,
     'gregtech:ore_tetrahedrite_0' : 10000,
     'gregtech:ore_cinnabar_0' : 10000
 ];
@@ -103,10 +103,10 @@ def metamorphic_tier_3 = [
     'gregtech:ore_cobaltite_0' : 10000,
     'gregtech:ore_realgar_0' : 10000,
     'gregtech:ore_arsenopyrite_0' : 10000,
-    'gregtech:ore_powellite_0' : 10000,
+    'gregtech:ore_wolframite_0' : 10000,
     'gregtech:ore_pyrargyrite_0' : 10000,
     'gregtech:ore_stephanite_0' : 10000,
-    'minecraft:redstone_ore' : 10000,
+    'gregtech:ore_redstone_0' : 10000,
     'gregtech:ore_tetrahedrite_0' : 10000,
     'gregtech:ore_cinnabar_0' : 10000
 ];
@@ -183,7 +183,7 @@ def magmatic_hydrothermal_tier_1 = [
     'gregtech:ore_chalcopyrite_0' : 10000,
     'gregtech:ore_sphalerite_0' : 10000,
     'gregtech:ore_enargite_0' : 10000,
-    'minecraft:redstone_ore' : 10000,
+    'gregtech:ore_redstone_0' : 10000,
     'gregtech:ore_cassiterite_0' : 10000
 ];
 
@@ -194,7 +194,7 @@ def magmatic_hydrothermal_tier_2 = [
     'gregtech:ore_chalcopyrite_0' : 10000,
     'gregtech:ore_sphalerite_0' : 10000,
     'gregtech:ore_enargite_0' : 10000,
-    'minecraft:redstone_ore' : 10000,
+    'gregtech:ore_redstone_0' : 10000,
     'gregtech:ore_cassiterite_0' : 10000
 ];
 
@@ -206,8 +206,9 @@ def magmatic_hydrothermal_tier_3 = [
     'gregtech:ore_sphalerite_0' : 10000,
     'gregtech:ore_enargite_0' : 10000,
     'gregtech:ore_pyrochlore_0' : 10000,
-    'gregtech:ore_powellite_0' : 10000,
-    'minecraft:redstone_ore' : 10000,
+    'gregtech:ore_wolframite_0' : 10000,
+    'gregtech:ore_scheelite_0' : 10000,
+    'gregtech:ore_redstone_0' : 10000,
     'gregtech:ore_cassiterite_0' : 10000
 ];
 
@@ -220,8 +221,9 @@ def magmatic_hydrothermal_tier_4 = [
     'gregtech:ore_sphalerite_0' : 10000,
     'gregtech:ore_enargite_0' : 10000,
     'gregtech:ore_pyrochlore_0' : 10000,
-    'gregtech:ore_powellite_0' : 10000,
-    'minecraft:redstone_ore' : 10000,
+    'gregtech:ore_wolframite_0' : 10000,
+    'gregtech:ore_scheelite_0' : 10000,
+    'gregtech:ore_redstone_0' : 10000,
     'gregtech:ore_cassiterite_0' : 10000,
     'gregtech:ore_uraninite_0' : 10000
 ];
@@ -270,7 +272,6 @@ def hydrothermal_tier_3 = [
     'gregtech:ore_arsenopyrite_0' : 10000,
     'gregtech:ore_proustite_0' : 10000,
     'gregtech:ore_strontianite_0' : 10000,
-    'gregtech:ore_wulfenite_0' : 10000,
     'gregtech:ore_cassiterite_0' : 10000,
     'gregtech:ore_acanthite_0' : 10000,
     'gregtech:ore_stibnite_0' : 10000,
@@ -292,7 +293,6 @@ def hydrothermal_tier_4 = [
     'gregtech:ore_arsenopyrite_0' : 10000,
     'gregtech:ore_proustite_0' : 10000,
     'gregtech:ore_strontianite_0' : 10000,
-    'gregtech:ore_wulfenite_0' : 10000,
     'gregtech:ore_cassiterite_0' : 10000,
     'gregtech:ore_acanthite_0' : 10000,
     'gregtech:ore_stibnite_0' : 10000,
@@ -300,7 +300,6 @@ def hydrothermal_tier_4 = [
     'gregtech:ore_cinnabar_0' : 10000,
     'gregtech:ore_galena_0' : 10000,
     'gregtech:ore_bismuthinite_0' : 10000,
-    'gregtech:ore_scheelite_0' : 10000
 ];
 
 def alluvial_tier_1 = [

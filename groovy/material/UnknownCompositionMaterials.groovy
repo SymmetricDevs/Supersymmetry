@@ -1424,22 +1424,123 @@ public class UnknownCompositionMaterials {
                 .iconSet(SHINY)
                 .build();
 
-        ImpureZirconSlurry = new Material.Builder(4272, "impure_zircon_slurry")
+        SiftedScheelite = new Material.Builder(4272, "sifted_scheelite")
+                .dust()
+                .color(0xc88c14)
+                .iconSet(SAND)
+                .build();
+
+        ImpureScheeliteSlurry = new Material.Builder(4273, "impure_scheelite_slurry")
+                .fluid()
+                .color(0xb37d12)
+                .build();
+
+        ScheeliteSlurry = new Material.Builder(4274, "scheelite_slurry")
+                .fluid()
+                .color(0xc88c14)
+                .build();
+
+        FlotatedScheelite = new Material.Builder(4275, "flotated_scheelite")
+                .dust()
+                .color(0xc88c14)
+                .iconSet(SHINY)
+                .build();
+
+        CalcinedScheelite = new Material.Builder(4276, "calcined_scheelite")
+                .dust()
+                .color(0xc88c14)
+                .iconSet(FLINT)
+                .build();
+
+        SiftedWolframite = new Material.Builder(4277, "sifted_wolframite")
+                .dust()
+                .color(0x1e1c36)
+                .iconSet(SAND)
+                .build();
+
+        ImpureWolframiteSlurry = new Material.Builder(4278, "impure_wolframite_slurry")
+                .fluid()
+                .color(0x373559)
+                .build();
+
+        WolframiteSlurry = new Material.Builder(4279, "wolframite_slurry")
+                .fluid()
+                .color(0x1e1c36)
+                .build();
+
+        FlotatedWolframite = new Material.Builder(4280, "flotated_wolframite")
+                .dust()
+                .color(0x1e1c36)
+                .iconSet(SHINY)
+                .build();
+
+        SilicateFreeTungstateSolution = new Material.Builder(4281, "silicate_free_tungstate_solution")
+                .fluid()
+                .color(0x2c8576)
+                .build();
+
+        MolybdenumFreeTungstateSolution = new Material.Builder(4282, "molybdenum_free_tungstate_solution")
+                .fluid()
+                .color(0x25889c)
+                .build();
+
+        IsodecanalMixture = new Material.Builder(4283, "isodecanal_mixture")
+                .fluid()
+                .color(0xadad45)
+                .build();
+
+        TungstenExtractionMixture = new Material.Builder(4284, "tungsten_extraction_mixture")
+                .fluid()
+                .color(0xbfb341)
+                .build();
+
+        TungstenExtract = new Material.Builder(4285, "tungsten_extract")
+                .fluid()
+                .color(0x9e7c2e)
+                .build();
+
+        ScrubbedTungstenExtract = new Material.Builder(4286, "scrubbed_tungsten_extract")
+                .fluid()
+                .color(0x85a825)
+                .build();
+
+        ImpureMolybdeniteSlurry = new Material.Builder(4287, "impure_molybdenite_slurry")
+                .fluid()
+                .color(0x131313)
+                .build();
+
+        MolybdeniteSlurry = new Material.Builder(4288, "molybdenite_slurry")
+                .fluid()
+                .color(0x191919)
+                .build();
+
+        FlotatedMolybdenite = new Material.Builder(4289, "flotated_molybdenite")
+                .dust()
+                .color(0x191919)
+                .iconSet(SHINY)
+                .build();
+
+        CopperMolybdeniteSlurry = new Material.Builder(4290, "copper_molybdenite_slurry")
+                .fluid()
+                .color(0x2e2419)
+                .build();
+
+        ImpureZirconSlurry = new Material.Builder(4291, "impure_zircon_slurry")
                 .fluid()
                 .color(0xdb6960)
                 .build();
 
-        ZirconSlurry = new Material.Builder(4273, "zircon_slurry")
+        ZirconSlurry = new Material.Builder(4292, "zircon_slurry")
                 .fluid()
                 .color(0xf05c51)
                 .build();
 
-        HafniumExtractionMixture = new Material.Builder(4274, "hafnium_extraction_mixture")
+        HafniumExtractionMixture = new Material.Builder(4293, "hafnium_extraction_mixture")
                 .fluid()
                 .color(0xc1e3d3)
                 .build();
 
-        HafniumExtract = new Material.Builder(4275, "hafnium_extract")
+        HafniumExtract = new Material.Builder(4294, "hafnium_extract")
                 .fluid()
                 .color(0xc1e3d9)
                 .build();

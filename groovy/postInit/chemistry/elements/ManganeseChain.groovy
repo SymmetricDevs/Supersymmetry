@@ -40,7 +40,7 @@ for (highPurityCombustible in Globals.highPurityCombustibles) {
     ROASTER.recipeBuilder()
         .inputs(ore('dustManganeseIiOxide') * 2)
         .inputs(ore(highPurityCombustible.name) * 1)
-        .chancedOutput(metaitem('dustManganese'), 7500, 0)
+        .chancedOutput(metaitem('dustManganese'), 8500, 0)
         .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .duration(120 * highPurityCombustible.duration)

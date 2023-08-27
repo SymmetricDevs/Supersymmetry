@@ -675,7 +675,7 @@ for (FluidFuel in FluidFuels) {
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                         .fluidInputs(liquid('oxygen') * 20)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.1))
+                        .duration((int) (FluidFuel.duration * 1.5))
                         .EUt(-64)
                         .buildAndRegister();
         } else if (FluidFuel.gasoline) {
@@ -691,7 +691,7 @@ for (FluidFuel in FluidFuels) {
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                         .fluidInputs(liquid('oxygen') * 20)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.1))
+                        .duration((int) (FluidFuel.duration * 1.5))
                         .EUt(-128)
                         .buildAndRegister();
         } else {
@@ -707,7 +707,7 @@ for (FluidFuel in FluidFuels) {
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                         .fluidInputs(liquid('oxygen') * 20)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.1))
+                        .duration((int) (FluidFuel.duration * 1.5))
                         .EUt(-32)
                         .buildAndRegister();
         }
