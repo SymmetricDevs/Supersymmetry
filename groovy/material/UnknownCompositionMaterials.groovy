@@ -1609,5 +1609,20 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x5247b5)
                 .build();
+
+        MolybdeniteFlueGas = new Material.Builder(4307, "molybdenite_flue_gas")
+                .fluid()
+                .color(0x464e61)
+                .build();
+
+        RheniumRichFlue = new Material.Builder(4308, "rhenium_rich_flue")
+                .dust()
+                .color(0x384b75)
+                .build();
+
+        ScrubbedPerrhenateSolution = new Material.Builder(4309, "scrubbed_perrhenate_solution")
+                .fluid()
+                .color(0x3c70bd)
+                .build();
     }
 }

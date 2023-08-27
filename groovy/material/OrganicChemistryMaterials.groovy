@@ -1630,15 +1630,14 @@ public class OrganicChemistryMaterials {
                 .build();
 
         OxalicAcid = new Material.Builder(1523, "")
-                .components()
+                .components(Hydrogen, 2, Carbon, 2, Oxygen, 4)
                 .dust()
-                .color(0x)
+                .color(0xb5a7aa)
                 .build();
 
-        OneAmidoethylTwoAlkylImidazoline = new Material.Builder(1523, "")
-                .components()
+        OneAmidoethylTwoAlkylTwoImidazoline = new Material.Builder(1523, "one_amidoethyl_two_alkyl_two_imidazoline")
                 .fluid()
-                .color(0x)
+                .color(0x9c3398)
                 .build();
 
 

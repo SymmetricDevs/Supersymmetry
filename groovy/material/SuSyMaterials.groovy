@@ -437,6 +437,9 @@ class SuSyMaterials {
         public static Material TantalumRichExtract;
         public static Material ScrubbedTantalumRichExtract;
         public static Material HydrofluoricAmmoniaMixture;
+        public static Material MolybdeniteFlueGas;
+        public static Material RheniumRichFlue;
+        public static Material ScrubbedPerrhenateSolution;
 
         // Petrochem Materials
 
@@ -928,16 +931,17 @@ class SuSyMaterials {
         public static Material AmmoniumThiocyanate;
         public static Material CalciumZirconate;
         public static Material NickelIINitrateSolution;
-        public static FerroniobiumTantalum;
-        public static TantalumPentachloride;
-        public static NiobiumPentachloride;
-        public static NiobiumOxideDihydrate;
-        public static PurifiedFluoroniobicAcidSolution;
-        public static NiobiumOxide;
-        public static FluorotantalicAcidSolution;
-        public static PotassiumHeptafluorotantalate;
-        public static DilutedAmmoniaSolution;
-        public static TantalumFluoride;
+        public static Material FerroniobiumTantalum;
+        public static Material TantalumPentachloride;
+        public static Material NiobiumPentachloride;
+        public static Material NiobiumOxideDihydrate;
+        public static Material PurifiedFluoroniobicAcidSolution;
+        public static Material NiobiumOxide;
+        public static Material FluorotantalicAcidSolution;
+        public static Material PotassiumHeptafluorotantalate;
+        public static Material DilutedAmmoniaSolution;
+        public static Material TantalumFluoride;
+        public static Material AmmoniumPerrhenate;
 
         // Second Degree Materials
 
@@ -1020,6 +1024,7 @@ class SuSyMaterials {
         public static Material AmmoniacalSodiumBicarbonateSolution;
         public static Material AmmoniumThiocyanateSolution;
         public static Material TantalumFluorideSolution;
+        public static Material AmmoniumPerrhenateSolution;
 
         // Organic Chemistry Materials
 
@@ -1289,7 +1294,7 @@ class SuSyMaterials {
 	public static Material BiscyclooctadienenickelZero;
 	public static Material DiethylaluminiumAcetylacetonate;
         public static Material OxalicAcid;
-        public static Material OneAmidoethylTwoAlkylImidazoline;
+        public static Material OneAmidoethylTwoAlkylTwoImidazoline;
 	
         // Third Degree Materials
 

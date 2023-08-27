@@ -1600,19 +1600,24 @@ material.impure_fluorotantalic_acid_solution=Impure Fluorotantalic Acid Solution
 material.tantalum_rich_extract=Tantalum Rich Extract
 material.scrubbed_tantalum_rich_extract=Scrubbed Tantalum Rich Extract
 material.hydrofluoric_ammonia_mixture=Hydrofluoric Ammonia Mixture
-material.=Ferroniobium Tantalum
-material.=Tantalum Pentachloride
-material.=Niobium Pentachloride
-material.=Niobium Oxide Dihydrate
-material.=Purified Fluoroniobic Acid Solution
-material.=Niobium Oxide
-material.=Fluorotantalic Acid Solution
-material.=Potassium Heptafluorotantalate
-material.=Diluted Ammonia Solution
-material.=Tantalum Fluoride
-material.=Tantalum Fluoride Solution
-material.=Oxalic Acid
-material.=1-Amidoethyl-2-Alkylimidazoline
+material.ferroniobium_tantalum=Ferroniobium Tantalum
+material.tantalum_pentachloride=Tantalum Pentachloride
+material.niobium_pentachloride=Niobium Pentachloride
+material.niobium_oxide_dihydrate=Niobium Oxide Dihydrate
+material.purified_fluoroniobic_acid_solution=Purified Fluoroniobic Acid Solution
+material.niobium_oxide=Niobium Oxide
+material.fluorotantalic_acid_solution=Fluorotantalic Acid Solution
+material.potassium_heptafluorotantalate=Potassium Heptafluorotantalate
+material.diluted_ammonia_solution=Diluted Ammonia Solution
+material.tantalum_fluoride=Tantalum Fluoride
+material.tantalum_fluoride_solution=Tantalum Fluoride Solution
+material.oxalic_acid=Oxalic Acid
+material.one_amidoethyl_two_alkyl_two_imidazoline=1-Amidoethyl-2-Alkyl-2-Imidazoline
+material.molybdenite_flue_gas=Molybdenite Flue Gas
+material.rhenium_rich_flue=Rhenium Rich Flue
+material.scrubbed_perrhenate_solution=Scrubbed Perrhenate Solution
+material.ammonium_perrhenate=Ammonium Perrhenate
+material.ammonium_perrhenate_solution=Ammonium Perrhenate Solution
 
 # Isotopes
 

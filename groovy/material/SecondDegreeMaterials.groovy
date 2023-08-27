@@ -495,5 +495,11 @@ public class SecondDegreeMaterials {
                 .components(TantalumFluoride, 1, Water, 2)
                 .colorAverage()
                 .build();
+
+        AmmoniumPerrhenateSolution = new Material.Builder(13080, "ammonium_perrhenate_solution")
+                .fluid()
+                .components(AmmoniumPerrhenate, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }

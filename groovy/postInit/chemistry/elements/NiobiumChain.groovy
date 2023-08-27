@@ -49,7 +49,7 @@ FF.recipeBuilder() // Pyrochlore Slurry
     .notConsumable(ore('dustOxalicAcid'))
     .fluidInputs(fluid('impure_pyrochlore_slurry') * 2000)
     .notConsumable(fluid('hexafluorosilicic_acid') * 100)
-    .notConsumable(fluid('one_amidoethyl_two_alkyl_imidazoline') * 100)
+    .notConsumable(fluid('one_amidoethyl_two_alkyl_two_imidazoline') * 100)
     .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
     .fluidOutputs(fluid('pyrochlore_slurry') * 1000)
     .fluidOutputs(fluid('limestone_tailing_slurry') * 1000)
@@ -162,7 +162,7 @@ MIXER.recipeBuilder() // Impure Columbite Slurry
 FF.recipeBuilder() // Columbite Slurry
     .notConsumable(ore('dustSodiumFluorosilicate'))
     .fluidInputs(fluid('impure_columbite_slurry') * 2000)
-    .notConsumable(fluid('one_amidoethyl_two_alkyl_imidazoline') * 100)
+    .notConsumable(fluid('one_amidoethyl_two_alkyl_two_imidazoline') * 100)
     .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
     .notConsumable(fluid('hydrochloric_acid') * 100)
     .fluidOutputs(fluid('columbite_slurry') * 1000)

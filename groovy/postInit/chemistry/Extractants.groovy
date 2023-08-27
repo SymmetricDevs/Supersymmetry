@@ -314,7 +314,7 @@ BR.recipeBuilder()
         .duration(80)
         .buildAndRegister()
 
-//1-AMIDOETHYL-2-ALKYLIMIDAZOLINE
+//1-AMIDOETHYL-2-ALKYL-2-IMIDAZOLINE
 
 REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustDicobaltOctacarbonyl') * 18)
@@ -337,7 +337,7 @@ BR.recipeBuilder()
 REACTION_FURNACE.recipeBuilder()
         .fluidInputs(fluid('diethylenetriamine') * 1000)
         .fluidInputs(fluid('nine_twenty_one_fatty_acid_mixture') * 2000)
-        .fluidOutputs(fluid('one_amidoethyl_two_alkyl_imidazoline') * 1000)
+        .fluidOutputs(fluid('one_amidoethyl_two_alkyl_two_imidazoline') * 1000)
         .fluidOutputs(fluid('steam') * 3000)
         .EUt(Globals.voltAmps[4])
         .duration(80)

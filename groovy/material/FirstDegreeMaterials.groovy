@@ -3053,5 +3053,11 @@ public class FirstDegreeMaterials{
                 .components(Tantalum, 1, Fluorine, 5)
                 .colorAverage()
                 .build();
+
+        AmmoniumPerrhenate = new Material.Builder(8547, "ammonium_perrhenate")
+                .dust()
+                .components(Nitrogen, 1, Hydrogen, 4, Rhenium, 1, Oxygen, 4)
+                .color(0x2b6cb3)
+                .build();
     }
 }
