@@ -83,16 +83,23 @@ CHEMICAL_BATH.recipeBuilder() // Digested Pyrochlore
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder() // Ferroniobium-tantalum
-    .inputs(ore('dustIronIIIOxide') * 15)
+    .inputs(ore('dustIronIiiOxide') * 15)
     .inputs(ore('dustDigestedPyrochlore') * 7)
     .inputs(ore('dustAluminium') * 42)
     .fluidInputs(fluid('sodium_nitrate') * 720)
-    .fluidOutputs(fluid('sodium_nitrite') * 720)
     .outputs(metaitem('dustFerroniobiumTantalum') * 20)
     .outputs(metaitem('dustAlumina') * 105)
     .outputs(metaitem('dustCalcium') * 14)
+    .fluidOutputs(fluid('sodium_nitrite') * 720)
     .duration(800)
     .EUt(Globals.voltAmps[4])
+    .buildAndRegister()
+
+FLUID_SOLIDIFIER.recipeBuilder()
+    .fluidInputs(fluid('sodium_nitrite') * 144)
+    .outputs(metaitem('dustSodiumNitrite'))
+    .duration(40)
+    .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder() // Impure Niobium Pentachloride

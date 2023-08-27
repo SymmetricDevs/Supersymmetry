@@ -400,7 +400,7 @@ for (i = 1; i <= 8; i++) {
 
 //Electrostatic separator
 
-def tieredElectrodes = [ore('wireFineSteel'), metaitem('graphite_electrode'), ore('wireFinePlatinum'), ore('wireFineTitanium'),
+def tieredElectrodes = [ore('wireFineRedAlloy'), ore('wireFineSteel'), metaitem('graphite_electrode'), ore('wireFinePlatinum'), ore('wireFineTitanium'),
 					ore('wireFineTungsten'), ore('wireFineOsmiridium'), ore('wireFineNiobiumTitanium'),
 					ore('wireFineNaquadah'), ore('wireFineNaquadahAlloy')];
 
@@ -714,12 +714,6 @@ crafting.addShaped("gregtech:gravity_separator", metaitem('gravity_separator'), 
 		[metaitem('component.grinder.diamond'), circuits[2], metaitem('component.grinder.diamond')],
 		[conveyors[2], hulls[2], conveyors[2]],
 		[circuits[2], tieredCables[2], circuits[2]]
-]);
-
-crafting.addShaped("gregtech:separator_rotor", item('susy:separator_rotor') * 2, [
-		[metaitem('plateSteel'), metaitem('rotorSteel'), metaitem('plateSteel')],
-		[metaitem('rotorSteel'), metaitem('frameSteel'), metaitem('rotorSteel')],
-		[metaitem('plateSteel'), motors[1], metaitem('plateSteel')]
 ]);
 
 crafting.addShaped("gregtech:reaction_furnace", metaitem('reaction_furnace'), [

@@ -3107,6 +3107,7 @@ public class FirstDegreeMaterials{
         FerroniobiumTantalum = new Material.Builder(8552, "ferroniobium_tantalum")
                 .dust()
                 .components(Iron, 30, Niobium, 65, Tantalum, 5)
+                .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build();
                 
