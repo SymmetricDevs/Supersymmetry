@@ -405,7 +405,7 @@ def tieredElectrodes = [ore('wireFineSteel'), metaitem('graphite_electrode'), or
 					ore('wireFineNaquadah'), ore('wireFineNaquadahAlloy')];
 
 for (i = 1; i <= 8; i++) {
-	crafting.replaceShaped("gregtech:gregtech.machine.polarizer." + Globals.voltageTiers[i], metaitem('polarizer.' + Globals.voltageTiers[i]), [
+	crafting.replaceShaped("gregtech:gregtech.machine.electrostatic_separator." + Globals.voltageTiers[i], metaitem('electrostatic_separator.' + Globals.voltageTiers[i]), [
 			[tieredWires[i], tieredElectrodes[i], tieredWires[i]],
 			[tieredCables[i], hulls[i], tieredCables[i]],
 			[tieredWires[i], tieredElectrodes[i], tieredWires[i]]
