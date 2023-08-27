@@ -2984,6 +2984,7 @@ public class FirstDegreeMaterials{
         	.components(Nickel, 1, Nitrogen, 2, Oxygen, 6, Water, 1)
         	.colorAverage()
         	.build();
+
         NickelIINitrateSolution.setFormula("[Ni(NO3)2](H2O)", true);
 
         FerroniobiumTantalum = new Material.Builder(8537, "ferroniobium_tantalum")

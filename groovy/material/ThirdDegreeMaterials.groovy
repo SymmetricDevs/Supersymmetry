@@ -298,5 +298,19 @@ public class ThirdDegreeMaterials {
                 .components(Tetrahydrofuran, 1, SulfuricAcid, 1, Water, 1)
                 .colorAverage()
                 .build()
+
+        AcidicTriethylPhosphate = new Material.Builder(24047, "acidic_triethyl_phosphate")
+      		.fluid()
+                .components(TriethylPhosphate, 1, HydrogenChloride, 3)
+      		.color(0x4639ee)
+      		.build();
+
+        NickelIIBisacetylacetonateSolution = new Material.Builder(15257, "nickel_ii_bisacetylacetonate_solution")
+      		.fluid()
+      		.components(NickelIIBisacetylacetonate, 1, SodiumNitrate, 2, Water, 2)
+      		.color(0x3e5051)
+      		.build();
+
+        ShellHigherOlefinCatalystSolution
     }
 }

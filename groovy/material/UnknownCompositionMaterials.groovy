@@ -1624,5 +1624,26 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x3c70bd)
                 .build();
+
+        AlphaOlefinMixture = new Material.Builder(4310, "alpha_olefin_mixture")
+                .fluid()
+                .color(0xd15298)
+                .build();
+                
+        EightTwentyOlefinMixture = new Material.Builder(4311, "eight_twenty_olefin_mixture")
+                .fluid()
+                .color(0xa31d53)
+                .build();
+                
+        NineTwentyOneAldehydeMixture = new Material.Builder(4312, "nine_twenty_one_aldehyde_mixture")
+                .fluid()
+                .color(0x911da3)
+                .build();
+                
+        NineTwentyOneFattyAcidMixture = new Material.Builder(4313, "nine_twenty_one_fatty_acid_mixture")
+                .fluid()
+                .color(0xa37b1d)
+                .build();
+                
     }
 }

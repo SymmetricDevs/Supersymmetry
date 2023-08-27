@@ -1270,7 +1270,7 @@ public class OrganicChemistryMaterials {
         OneButene = new Material.Builder(15206, "one_butene")
                 .fluid(FluidTypes.GAS)
                 .components(Carbon, 4, Hydrogen, 8)
-                .color(0x965a15)
+                .color(0xed9595)
                 .build();
 
         TwoButene = new Material.Builder(15207, "two_butene")
@@ -1582,64 +1582,76 @@ public class OrganicChemistryMaterials {
       		.color(0x4639ee)
       		.build();
       		
-      	AcidicTriethylPhosphate = new Material.Builder(15254, "acidic_triethyl_phosphate")
+      	TriethylPhosphate = new Material.Builder(15254, "triethyl_phosphate")
+      		.components(Carbon, 6, Hydrogen, 15, Oxygen, 4, Phosphorus, 1)
       		.fluid()
       		.color(0x4639ee)
       		.build();
       		
-      	TriethylPhosphate = new Material.Builder(15255, "triethyl_phosphate")
-      		.components(Carbon, 6, Hydrogen, 15)
-      		.fluid()
-      		.color(0x4639ee)
-      		.build();
-      		
-        IsopropenylAcetate = new Material.Builder(15256, "isopropenyl_acetate")
+        IsopropenylAcetate = new Material.Builder(15255, "isopropenyl_acetate")
       		.components(Carbon, 5, Hydrogen, 8, Oxygen, 2)
       		.fluid()
       		.color(0x4639ee)
       		.build();
       		
-      	Acetylacetone = new Material.Builder(15257, "acetylacetone")
+      	Acetylacetone = new Material.Builder(15256, "acetylacetone")
       		.components(Carbon, 5, Hydrogen, 8, Oxygen, 2)
       		.fluid()
       		.color(0x092b30)
       		.build();
       		
-      	NickelIIBisacetylacetonateSolution = new Material.Builder(15258, "nickel_ii_bisacetylacetonate_solution")
-      		.components(Carbon, 10, Hydrogen, 14, Nickel, 1, Oxygen, 4, Water, 1)
-      		.fluid()
-      		.color(0x3e5051)
-      		.build();
-      		
-        NickelIIBisacetylacetonate = new Material.Builder(15259, "nickel_ii_bisacetylacetonate")
+        NickelIIBisacetylacetonate = new Material.Builder(15257, "nickel_ii_bisacetylacetonate")
       		.components(Carbon, 10, Hydrogen, 14, Nickel, 1, Oxygen, 4)
       		.dust()
       		.color(0x3e5051)
       		.build();
-      		
-        BiscyclooctadienenickelZero = new Material.Builder(15230, "biscyclooctadienenickel_zero")
+      	
+        NickelIIBisacetylacetonate.setFormula("Ni(acac)2", true)
+
+        BiscyclooctadienenickelZero = new Material.Builder(15258, "biscyclooctadienenickel_zero")
         	.components(Carbon, 16, Hydrogen, 24, Nickel, 1)
         	.dust()
         	.color(0xe0e00d)
         	.build();
+
+        BiscyclooctadienenickelZero.setFormula("Ni(cod)2", true)
         	
-        DiethylaluminiumAcetylacetonate = new Material.Builder(15231, "diethylaluminium_acetylacetonate")
+        DiethylaluminiumAcetylacetonate = new Material.Builder(15259, "diethylaluminium_acetylacetonate")
         	.components(Aluminium, 1, Carbon, 9, Hydrogen, 17, Oxygen, 2)
                 .fluid()
                 .color(0x10a37e)
                 .build();
 
-        OxalicAcid = new Material.Builder(1523, "")
+        DiethylaluminiumAcetylacetonate.setFormula("(acac)AlEt2", true)
+
+        OxalicAcid = new Material.Builder(15260, "oxalic_acid")
                 .components(Hydrogen, 2, Carbon, 2, Oxygen, 4)
                 .dust()
                 .color(0xb5a7aa)
                 .build();
 
-        OneAmidoethylTwoAlkylTwoImidazoline = new Material.Builder(1523, "one_amidoethyl_two_alkyl_two_imidazoline")
+        OneAmidoethylTwoAlkylTwoImidazoline = new Material.Builder(15261, "one_amidoethyl_two_alkyl_two_imidazoline")
                 .fluid()
                 .color(0x9c3398)
                 .build();
 
+        Chlorodiphenylphosphine = new Material.Builder(15262, "chlorodiphenylphosphine")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 10, Chlorine, 1, Phosphorus, 1)
+                .color(0xd2e080)
+                .build();
+
+        DiphenylphosphinoaceticAcid = new Material.Builder(15263, "diphenylphosphinoacetic_acid")
+                .fluid()
+                .components(Carbon, 14, Hydrogen, 13, Oxygen, 2, Phosphorus, 1)
+                .color(0xdeba6d)
+                .build();
+
+        OneHexene = new Material.Builder(15264, "one_hexene")
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 12)
+                .color(0xd96c6c)
+                .build();
 
     }
 }

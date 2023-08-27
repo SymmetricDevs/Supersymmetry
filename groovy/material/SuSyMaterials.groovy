@@ -440,6 +440,10 @@ class SuSyMaterials {
         public static Material MolybdeniteFlueGas;
         public static Material RheniumRichFlue;
         public static Material ScrubbedPerrhenateSolution;
+        public static Material AlphaOlefinMixture;
+        public static Material EightTwentyOlefinMixture;
+        public static Material NineTwentyOneAldehydeMixture;
+        public static Material NineTwentyOneFattyAcidMixture;
 
         // Petrochem Materials
 
@@ -1285,16 +1289,17 @@ class SuSyMaterials {
 	public static Material Diethylenetriamine;
 	public static Material Piperazine;
 	public static Material Cyclooctadiene;
-	public static Material AcidicTriethylPhosphate;
 	public static Material TriethylPhosphate;
 	public static Material IsopropenylAcetate;
 	public static Material Acetylacetone;
-	public static Material NickelIIBisacetylacetonateSolution;
 	public static Material NickelIIBisacetylacetonate;
 	public static Material BiscyclooctadienenickelZero;
 	public static Material DiethylaluminiumAcetylacetonate;
         public static Material OxalicAcid;
         public static Material OneAmidoethylTwoAlkylTwoImidazoline;
+        public static Material Chlorodiphenylphosphine;
+        public static Material DiphenylphosphinoaceticAcid;
+        public static Material OneHexene;
 	
         // Third Degree Materials
 
@@ -1345,6 +1350,9 @@ class SuSyMaterials {
         public static Material IsophthalicAcidSolution;
         public static Material DichloroethaneIsophthalicAcidSolution;
         public static Material TetrahydrofuranSolution;
+        public static Material AcidicTriethylPhosphate;
+        public static Material NickelIIBisacetylacetonateSolution;
+        public static Material ShellHigherOlefinCatalystSolution;
 
         // Thermodynamics/Greenhouse Materials
 

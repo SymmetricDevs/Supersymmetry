@@ -1618,6 +1618,14 @@ material.rhenium_rich_flue=Rhenium Rich Flue
 material.scrubbed_perrhenate_solution=Scrubbed Perrhenate Solution
 material.ammonium_perrhenate=Ammonium Perrhenate
 material.ammonium_perrhenate_solution=Ammonium Perrhenate Solution
+AlphaOlefinMixture
+EightTwentyOlefinMixture
+NineTwentyOneAldehydeMixture
+NineTwentyOneFattyAcidMixture
+Chlorodiphenylphosphine
+DiphenylphosphinoaceticAcid
+OneHexene
+ShellHigherOlefinCatalystSolution
 
 # Isotopes
 
