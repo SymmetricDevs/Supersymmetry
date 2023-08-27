@@ -7,7 +7,7 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
 
 BR = recipemap('batch_reactor')
 MIXER = recipemap('mixer')
-EMSEPARATOR = recipemap('electromagnetic_separator')
+ELECTROSTATIC_SEPARATOR = recipemap('electrostatic_separator')
 CENTRIFUGE = recipemap('centrifuge')
 DT = recipemap('distillation_tower')
 ROASTER = recipemap('roaster')
@@ -160,7 +160,7 @@ oils.each { _, oil -> {
     }
 }
 
-EMSEPARATOR.recipeBuilder()
+ELECTROSTATIC_SEPARATOR.recipeBuilder()
         .fluidInputs(fluid('diluted_oil') * 1000)
         .fluidOutputs(fluid('oily_brine') * 100)
         .fluidOutputs(fluid('desalted_oil') * 1000)
@@ -168,7 +168,7 @@ EMSEPARATOR.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-EMSEPARATOR.recipeBuilder()
+ELECTROSTATIC_SEPARATOR.recipeBuilder()
         .fluidInputs(fluid('diluted_oil_light') * 1000)
         .fluidOutputs(fluid('light_oily_brine') * 100)
         .fluidOutputs(fluid('desalted_oil_light') * 1000)
@@ -176,7 +176,7 @@ EMSEPARATOR.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-EMSEPARATOR.recipeBuilder()
+ELECTROSTATIC_SEPARATOR.recipeBuilder()
         .fluidInputs(fluid('diluted_oil_heavy') * 1000)
         .fluidOutputs(fluid('heavy_oily_brine') * 100)
         .fluidOutputs(fluid('desalted_oil_heavy') * 1000)

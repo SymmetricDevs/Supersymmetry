@@ -1675,6 +1675,12 @@ material.n_butylamine=n-Butylamine
 material.ethyltoluene=Ethyltoluene
 material.vinylbenzyl_chloride=Vinylbenzyl Chloride
 material.cyclohexylamine=Cyclohexylamine
+material.crude_nitrobenzene=Crude Nitrobenzene
+material.aluminium_chloride_solution=Aluminium Chloride Solution
+material.dichlorobistriphenylphosphinenickelIi=Dichlorobis(triphenylphosphine)nickel(II)
+material.dicarbonylbistriphenylphosphinenickelZero=Dicarbonylbis(triphenylphosphine)nickel(0)
+material.tantalum_extract=Tantalum Extract
+material.manganese_ii_sulfate=Manganese II Sulfate
 
 # Isotopes
 
@@ -1702,6 +1708,7 @@ recipemap.coking_tower.name=Coking Tower
 recipemap.ion_exchange_column.name=Ion Exchange
 recipemap.smoke_stack.name=Smoke Stack (Chimney)
 recipemap.gravity_separator.name=Gravity Separation
+recipemap.electrostatic_separator.name=Electrostatic Separation
 
 # QMD Particles
 

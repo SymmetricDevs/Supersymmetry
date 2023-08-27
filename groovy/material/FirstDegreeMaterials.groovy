@@ -1922,7 +1922,7 @@ public class FirstDegreeMaterials{
 
         NitrogenTrifluoride = new Material.Builder(8381, 'nitrogen_trifluoride')
                 .fluid(FluidTypes.GAS).plasma()
-                .components(Nitrogen, 1, Chlorine, 3)
+                .components(Nitrogen, 1, Fluorine, 3)
                 .colorAverage()
                 .build()
 
@@ -3196,8 +3196,14 @@ public class FirstDegreeMaterials{
                 .build();
 
         LithiumOxide = new Material.Builder(8565, "lithium_oxide")
-                .dust()
+                .dust().fluid()
                 .components(Lithium, 2, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        ManganeseIISulfate = new Material.Builder(8566, "manganese_ii_sulfate")
+                .dust()
+                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
     }

@@ -204,27 +204,27 @@ DUMPER.recipeBuilder()
         .buildAndRegister()
 
 DUMPER.recipeBuilder()
-        .fluidOutputs(fluid('triethylenetetramine') * 100)
+        .fluidInputs(fluid('triethylenetetramine') * 100)
         .duration(20)
         .buildAndRegister()
 
 DUMPER.recipeBuilder()
-        .fluidOutputs(fluid('aminoethylpiperazine') * 50)
+        .fluidInputs(fluid('aminoethylpiperazine') * 50)
         .duration(20)
         .buildAndRegister()
 
 DUMPER.recipeBuilder()
-        .fluidOutputs(fluid('diethylenetriamine') * 300)
+        .fluidInputs(fluid('diethylenetriamine') * 300)
         .duration(20)
         .buildAndRegister()
 
 DUMPER.recipeBuilder()
-        .fluidOutputs(fluid('ethylenediamine') * 500)
+        .fluidInputs(fluid('ethylenediamine') * 500)
         .duration(20)
         .buildAndRegister()
 
 DUMPER.recipeBuilder()
-        .fluidOutputs(fluid('piperazine') * 50)
+        .fluidInputs(fluid('piperazine') * 50)
         .duration(20)
         .buildAndRegister()
         

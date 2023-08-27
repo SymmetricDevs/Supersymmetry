@@ -837,7 +837,7 @@ BR.recipeBuilder()
 
 TBR.recipeBuilder()
         .fluidInputs(fluid('hydrogen') * 300)
-        .fluidInputs(fluid('aniline') * 50)
+        .fluidInputs(fluid('gtfo_aniline') * 50)
         .notConsumable(ore('dustActivatedRaneyCobalt') * 1)
         .fluidOutputs(fluid('cyclohexylamine') * 50)
         .duration(20)

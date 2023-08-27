@@ -105,8 +105,8 @@ eventManager.listen {
 
         customMetaItems.addItem(198, "beads.amberlyst_ch");
         customMetaItems.addItem(199, "beads.ag_fifty_w_x_eight");
-        customMetaItems.addItem(211, "beads.rhenium_ion_exchange")
-        customMetaItems.addItem(212, "beads.loaded_rhenium_ion_exchange")
+        customMetaItems.addItem(212, "beads.rhenium_ion_exchange")
+        customMetaItems.addItem(213, "beads.loaded_rhenium_ion_exchange")
 
         customMetaItems.addItem(200, "thick_film_substrate_wafer");
 
@@ -279,6 +279,7 @@ eventManager.listen {
         customMetaItems.addItem(7002, "seed_crystal.alumina");
         customMetaItems.addItem(7003, "seed_crystal.beryllium_oxide");
         customMetaItems.addItem(7004, "seed_crystal.emerald");
+        customMetaItems.addItem(7005, "seed_crystal.lithium_niobate");
 
         //Boules 7500-8000
 
@@ -291,6 +292,7 @@ eventManager.listen {
         customMetaItems.addItem(7506, "boule.sapphire");
         customMetaItems.addItem(7507, "boule.ruby");
         customMetaItems.addItem(7508, "boule.silicon_germanium");
+        customMetaItems.addItem(7509, "boule.lithium_niobate");
 
         //Wafers 8000-9000
 

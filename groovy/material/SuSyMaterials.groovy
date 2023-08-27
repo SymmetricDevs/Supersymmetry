@@ -465,6 +465,7 @@ class SuSyMaterials {
         public static Material CopperMolybdeniteSlurry;
         public static Material HZSMFive;
         public static Material FunctionalizableCrosslinkedPolystyrene;
+        public static Material TantalumExtract;
 
         // Petrochem Materials
 
@@ -985,6 +986,7 @@ class SuSyMaterials {
         public static Material RaneyCobalt;
         public static Material ActivatedRaneyCobalt;
         public static Material LithiumOxide;
+        public static Material ManganeseIISulfate;
 
         // Second Degree Materials
 
@@ -1072,6 +1074,7 @@ class SuSyMaterials {
         public static Material AmmoniumThiocyanateSolution;
         public static Material TantalumFluorideSolution;
         public static Material AmmoniumPerrhenateSolution;
+        public static Material AluminiumChlorideSolution;
 
         // Organic Chemistry Materials
 
@@ -1404,6 +1407,9 @@ class SuSyMaterials {
         public static Material AcidicTriethylPhosphate;
         public static Material NickelIIBisacetylacetonateSolution;
         public static Material ShellHigherOlefinCatalystSolution;
+        public static Material CrudeNitrobenzene;
+        public static Material DichlorobistriphenylphosphinenickelII;
+        public static Material DicarbonylbistriphenylphosphinenickelZero;
 
         // Thermodynamics/Greenhouse Materials
 

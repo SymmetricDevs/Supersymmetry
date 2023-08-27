@@ -12,7 +12,7 @@ AUTOCLAVE = recipemap('autoclave')
 FLUID_EXTRACTOR = recipemap('extractor')
 ARC_FURNACE = recipemap('arc_furnace')
 DT = recipemap('distillation_tower')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifer')
+FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 
 //Emerald: 3BeO · Al2O3 · 6SiO2
 //Bertrandite: Be4Si2O7(OH)2

@@ -398,6 +398,20 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+//Electrostatic separator
+
+def tieredElectrodes = [ore('wireFineSteel'), metaitem('graphite_electrode'), ore('wireFinePlatinum'), ore('wireFineTitanium'),
+					ore('wireFineTungsten'), ore('wireFineOsmiridium'), ore('wireFineNiobiumTitanium'),
+					ore('wireFineNaquadah'), ore('wireFineNaquadahAlloy')];
+
+for (i = 1; i <= 8; i++) {
+	crafting.replaceShaped("gregtech:gregtech.machine.polarizer." + Globals.voltageTiers[i], metaitem('polarizer.' + Globals.voltageTiers[i]), [
+			[tieredWires[i], tieredElectrodes[i], tieredWires[i]],
+			[tieredCables[i], hulls[i], tieredCables[i]],
+			[tieredWires[i], tieredElectrodes[i], tieredWires[i]]
+	])
+}
+
 //Add recipes for high pressure steam machines
 
 crafting.addShaped("gregtech:vulcanizing_press.steel", metaitem('vulcanizing_press.steel'), [

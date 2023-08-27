@@ -529,5 +529,11 @@ public class SecondDegreeMaterials {
                 .components(AmmoniumPerrhenate, 1, Water, 1)
                 .colorAverage()
                 .build();
+        
+        AluminiumChlorideSolution = new Material.Builder(13085, "aluminium_chloride_solution")
+                .fluid()
+                .components(AluminiumChloride, 1, Water, 3)
+                .colorAverage()
+                .build();
     }
 }

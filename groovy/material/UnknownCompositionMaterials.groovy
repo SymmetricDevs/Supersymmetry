@@ -1752,6 +1752,15 @@ public class UnknownCompositionMaterials {
                 .color(0x75a118)
                 .build();
 
-        FunctionalizableCrosslinkedPolystyrene
+        FunctionalizableCrosslinkedPolystyrene = new Material.Builder(4334, "functionalizable_crosslinked_polystyrene")
+                .ingot().fluid()
+                .flags(GENERATE_ROUND)
+                .color(0x8689cf)
+                .build();
+
+        TantalumExtract = new Material.Builder(4335, "tantalum_extract")
+                .fluid()
+                .color(0xc97328)
+                .build();
     }
 }

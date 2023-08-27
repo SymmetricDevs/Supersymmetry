@@ -316,5 +316,27 @@ public class ThirdDegreeMaterials {
                 .components(Nickel, 1, DiphenylphosphinoaceticAcid, 1, Cyclooctadiene, 2, EthyleneGlycol, 1)
                 .color(0x9c1012)
                 .build();
+
+        CrudeNitrobenzene = new Material.Builder(24050, "crude_nitrobenzene")
+                .fluid()
+                .components(Nitrobenzene, 2, Benzene, 1)
+                .colorAverage()
+                .build();
+
+        DichlorobistriphenylphosphinenickelII = new Material.Builder(24051, "dichlorobistriphenylphosphinenickel_ii")
+                .dust()
+                .components(Nickel, 1, Chlorine, 2, TriphenylPhosphine, 2)
+                .colorAverage()
+                .build();
+
+        DichlorobistriphenylphosphinenickelII.setFormula("NiCl2(PPh3)2", true)
+
+        DicarbonylbistriphenylphosphinenickelZero = new Material.Builder(24052, "dicarbonylbistriphenylphosphinenickel_zero")
+                .dust()
+                .components(Nickel, 1, Carbon, 2, Oxygen, 2, TriphenylPhosphine, 2)
+                .colorAverage()
+                .build();
+
+        DicarbonylbistriphenylphosphinenickelZero.setFormula("Ni(CO)2(PPh)2", true)
     }
 }
