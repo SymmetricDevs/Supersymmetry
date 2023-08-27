@@ -2985,6 +2985,73 @@ public class FirstDegreeMaterials{
         	.colorAverage()
         	.build();
         NickelIINitrateSolution.setFormula("[Ni(NO3)2](H2O)", true);
-        
+
+        FerroniobiumTantalum = new Material.Builder(8537, "ferroniobium_tantalum")
+                .dust()
+                .components(Iron, 30, Niobium, 65, Tantalum, 5)
+                .colorAverage()
+                .build();
+                
+        TantalumPentachloride = new Material.Builder(8538, "tantalum_pentachloride")
+                .dust().fluid(FluidTypes.GAS)
+                .flags(NO_UNIFICATION)
+                .components(Tantalum, 1, Chlorine, 5)
+                .colorAverage()
+                .build();
+                
+        NiobiumPentachloride = new Material.Builder(8539, "niobium_pentachloride")
+                .dust().fluid(FluidTypes.GAS)
+                .flags(NO_UNIFICATION)
+                .components(Niobium, 1, Chlorine, 5)
+                .colorAverage()
+                .build();
+                
+        NiobiumOxideDihydrate = new Material.Builder(8540, "niobium_oxide_dihydrate")
+                .dust()
+                .components(Niobium, 2, Oxygen, 5, Water, 2)
+                .colorAverage()
+                .build();
+
+        NiobiumOxideDihydrate.setFormula("Nb2O5 * (H2O)2", true)
+                
+        PurifiedFluoroniobicAcidSolution = new Material.Builder(8541, "purified_fluoroniobic_acid_solution")
+                .fluid()
+                .components(Hydrogen, 6, Niobium, 3, Fluorine, 9, Water, 6)
+                .colorAverage()
+                .build();
+
+        PurifiedFluoroniobicAcidSolution.setFormula("(H2NbF7)1.35(H2O)6", true)
+                
+        NiobiumOxide = new Material.Builder(8542, "niobium_oxide")
+                .dust()
+                .components(Niobium, 2, Oxygen 5)
+                .colorAverage()
+                .build();
+                
+        FluorotantalicAcidSolution = new Material.Builder(8543, "fluorotantalic_acid_solution")
+                .fluid()
+                .components(Hydrogen, 2, Tantalum, 1, Fluorine, 7, Water, 1)
+                .colorAverage()
+                .build();
+
+        FluorotantalicAcidSolution.setFormula("(H2TaF7)0.9(H2O)", true)
+                
+        PotassiumHeptafluorotantalate = new Material.Builder(8544, "potassium_heptafluorotantalate")
+                .dust()
+                .components(Potassium, 2, Tantalum, 1, Fluorine, 7)
+                .colorAverage()
+                .build();
+                
+        DilutedAmmoniaSolution = new Material.Builder(8545, "diluted_ammonia_solution")
+                .fluid()
+                .components(Ammonia, 1, Water, 2)
+                .colorAverage()
+                .build();
+                
+        TantalumFluoride = new Material.Builder(8546, "tantalum_fluoride")
+                .dust()
+                .components(Tantalum, 1, Fluorine, 5)
+                .colorAverage()
+                .build();
     }
 }

@@ -406,6 +406,37 @@ class SuSyMaterials {
         public static HafniumExtract;
         public static Material PropanalMixture;
         public static Material ZSMFive;
+        public static Material AminatedEthyleneMixture;
+	public static Material NeutralizedAminatedEthyleneMixture;
+        public static Material SiftedPyrochlore;
+        public static Material PyrochloreConcentrate;
+        public static Material ImpurePyrochloreSlurry;
+        public static Material PyrochloreSlurry;
+        public static Material FlotatedPyrochlore;
+        public static Material RoastedPyrochlore;
+        public static Material DigestedPyrochlore;
+        public static Material ImpureNiobiumPentachloride;
+        public static Material SiftedColumbite;
+        public static Material ColumbiteConcentrate;
+        public static Material ImpureColumbiteSlurry;
+        public static Material ColumbiteSlurry;
+        public static Material FlotatedColumbite;
+        public static Material ImpureFluoroniobicAcidSolution;
+        public static Material NiobiumRichExtract;
+        public static Material MetalSulfateWaste;
+        public static Material ScrubbedNiobiumRichExtract;
+        public static Material DilutedTantalumExtract;
+        public static Material FluoroniobicAcidSolution;
+        public static Material DilutedNiobiumExtract;
+        public static Material SiftedTantalite;
+        public static Material TantaliteConcentrate;
+        public static Material ImpureTantaliteSlurry;
+        public static Material TantaliteSlurry;
+        public static Material FlotatedTantalite;
+        public static Material ImpureFluorotantalicAcidSolution;
+        public static Material TantalumRichExtract;
+        public static Material ScrubbedTantalumRichExtract;
+        public static Material HydrofluoricAmmoniaMixture;
 
         // Petrochem Materials
 
@@ -897,6 +928,16 @@ class SuSyMaterials {
         public static Material AmmoniumThiocyanate;
         public static Material CalciumZirconate;
         public static Material NickelIINitrateSolution;
+        public static FerroniobiumTantalum;
+        public static TantalumPentachloride;
+        public static NiobiumPentachloride;
+        public static NiobiumOxideDihydrate;
+        public static PurifiedFluoroniobicAcidSolution;
+        public static NiobiumOxide;
+        public static FluorotantalicAcidSolution;
+        public static PotassiumHeptafluorotantalate;
+        public static DilutedAmmoniaSolution;
+        public static TantalumFluoride;
 
         // Second Degree Materials
 
@@ -978,6 +1019,7 @@ class SuSyMaterials {
         public static Material DilutedAmmoniumChlorideSolution;
         public static Material AmmoniacalSodiumBicarbonateSolution;
         public static Material AmmoniumThiocyanateSolution;
+        public static Material TantalumFluorideSolution;
 
         // Organic Chemistry Materials
 
@@ -1233,8 +1275,6 @@ class SuSyMaterials {
         public static Material NBromopropane;
         public static Material TetrapropylammoniumBromide;
         public static Material Propionaldehyde;
-        public static Material AminatedEthyleneMixture;
-	public static Material NeutralizedAminatedEthyleneMixture;
 	public static Material Triethylenetetramine;
 	public static Material Aminoethylpiperazine;
 	public static Material Diethylenetriamine;
@@ -1248,6 +1288,8 @@ class SuSyMaterials {
 	public static Material NickelIIBisacetylacetonate;
 	public static Material BiscyclooctadienenickelZero;
 	public static Material DiethylaluminiumAcetylacetonate;
+        public static Material OxalicAcid;
+        public static Material OneAmidoethylTwoAlkylImidazoline;
 	
         // Third Degree Materials
 

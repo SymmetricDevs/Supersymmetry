@@ -152,7 +152,7 @@ CENTRIFUGE.recipeBuilder()
         .duration(400)
         .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder()
+CLARIFIER.recipeBuilder()
         .fluidInputs(fluid('vtm_slurry') * 1000)
         .fluidOutputs(fluid('wastewater') * 1000)
         .outputs(metaitem('dustVtmConcentrate') * 16)

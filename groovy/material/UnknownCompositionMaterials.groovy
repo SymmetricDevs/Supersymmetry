@@ -1443,5 +1443,171 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xc1e3d9)
                 .build();
+
+        AminatedEthyleneMixture = new Material.Builder(4276, "aminated_ethylene_mixture")
+      		.fluid()
+      		.color(0xb9a9db)
+      		.build();
+             
+      	NeutralizedAminatedEthyleneMixture = new Material.Builder(4277, "neutralized_aminated_ethylene_mixture")
+      		.fluid()
+      		.color(0x8a819c)
+      		.build();
+
+        SiftedPyrochlore = new Material.Builder(4278, "sifted_pyrochlore")
+                .dust()
+                .color(0x2b1100)
+                .iconSet(SAND)
+                .build();
+
+        PyrochloreConcentrate = new Material.Builder(4279, "pyrochlore_concentrate")
+                .dust()
+                .color(0x2b1100)
+                .iconSet(DULL)
+                .build();
+
+        ImpurePyrochloreSlurry = new Material.Builder(4280, "impure_pyrochlore_slurry")
+                .fluid()
+                .color(0x230300)
+                .build();
+
+        PyrochloreSlurry = new Material.Builder(4281, "pyrochlore_slurry")
+                .fluid()
+                .color(0x2b1100)
+                .build();
+
+        FlotatedPyrochlore = new Material.Builder(4282, "flotated_pyrochlore")
+                .dust()
+                .color(0x2b1100)
+                .iconSet(SHINY)
+                .build();
+
+        RoastedPyrochlore = new Material.Builder(4283, "roasted_pyrochlore")
+                .dust()
+                .color(0x230300)
+                .iconSet(DULL)
+                .build();
+
+        DigestedPyrochlore = new Material.Builder(4284, "digested_pyrochlore")
+                .dust()
+                .color(0x230300)
+                .iconSet(QUARTZ)
+                .build();
+
+        ImpureNiobiumPentachloride = new Material.Builder(4285, "impure_niobium_pentachloride")
+                .fluid()
+                .color(0xb0c8b8)
+                .build();
+
+        SiftedColumbite = new Material.Builder(4286, "sifted_columbite")
+                .dust()
+                .color(0x574f2f)
+                .iconSet(SAND)
+                .build();
+
+        ColumbiteConcentrate = new Material.Builder(4287, "columbite_concentrate")
+                .dust()
+                .color(0x574f2f)
+                .iconSet(DULL)
+                .build();
+
+        ImpureColumbiteSlurry = new Material.Builder(4288, "impure_columbite_slurry")
+                .fluid()
+                .color(0x3d3720)
+                .build();
+
+        ColumbiteSlurry = new Material.Builder(4289, "columbite_slurry")
+                .fluid()
+                .color(0x574f2f)
+                .build();
+
+        FlotatedColumbite = new Material.Builder(4290, "flotated_columbite")
+                .dust()
+                .color(0x574f2f)
+                .iconSet(SHINY)
+                .build();
+
+        ImpureFluoroniobicAcidSolution = new Material.Builder(4291, "impure_fluoroniobic_acid_solution")
+                .fluid()
+                .color(0x502b75)
+                .build();
+
+        NiobiumRichExtract = new Material.Builder(4292, "niobium_rich_extract")
+                .fluid()
+                .color(0x4a2894)
+                .build();
+
+        MetalSulfateWaste = new Material.Builder(4293, "metal_sulfate_waste")
+                .fluid()
+                .color(0x947728)
+                .build();
+
+        ScrubbedNiobiumRichExtract = new Material.Builder(4294, "scrubbed_niobium_rich_extract")
+                .fluid()
+                .color(0x5a34ad)
+                .build();
+
+        DilutedTantalumExtract = new Material.Builder(4295, "diluted_tantalum_extract")
+                .fluid()
+                .color(0xd99152)
+                .build();
+
+        FluoroniobicAcidSolution = new Material.Builder(4296, "fluoroniobic_acid_solution")
+                .fluid()
+                .color(0x48147d)
+                .build();
+
+        DilutedNiobiumExtract = new Material.Builder(4297, "diluted_niobium_extract")
+                .fluid()
+                .color(0xa46edb)
+                .build();
+
+        SiftedTantalite = new Material.Builder(4298, "sifted_tantalite")
+                .dust()
+                .color(0x915028)
+                .iconSet(SAND)
+                .build();
+
+        TantaliteConcentrate = new Material.Builder(4299, "tantalite_concentrate")
+                .dust()
+                .color(0x915028)
+                .iconSet(DULL)
+                .build();
+
+        ImpureTantaliteSlurry = new Material.Builder(4300, "impure_tantalite_slurry")
+                .fluid()
+                .color(0x915028)
+                .build();
+
+        TantaliteSlurry = new Material.Builder(4301, "tantalite_slurry")
+                .fluid()
+                .color(0x915028)
+                .build();
+
+        FlotatedTantalite = new Material.Builder(4302, "flotated_tantalite")
+                .dust()
+                .color(0x915028)
+                .iconSet(SHINY)
+                .build();
+
+        ImpureFluorotantalicAcidSolution = new Material.Builder(4303, "impure_fluorotantalic_acid_solution")
+                .fluid()
+                .color(0x753a10)
+                .build();
+
+        TantalumRichExtract = new Material.Builder(4304, "tantalum_rich_extract")
+                .fluid()
+                .color(0x9c5625)
+                .build();
+
+        ScrubbedTantalumRichExtract = new Material.Builder(4305, "scrubbed_tantalum_rich_extract")
+                .fluid()
+                .color(0xb56731)
+                .build();
+
+        HydrofluoricAmmoniaMixture = new Material.Builder(4306, "hydrofluoric_ammonia_mixture")
+                .fluid()
+                .color(0x5247b5)
+                .build();
     }
 }

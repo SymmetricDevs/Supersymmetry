@@ -489,5 +489,11 @@ public class SecondDegreeMaterials {
                 .components(AmmoniumThiocyanate, 1, Water, 1)
                 .colorAverage()
                 .build();
+
+        TantalumFluorideSolution = new Material.Builder(13079, "tantalum_fluoride_solution")
+                .fluid()
+                .components(TantalumFluoride, 1, Water, 2)
+                .colorAverage()
+                .build();
     }
 }
