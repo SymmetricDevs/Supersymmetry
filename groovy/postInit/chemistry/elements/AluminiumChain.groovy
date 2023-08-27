@@ -19,6 +19,14 @@ furnace.add(ore('dustAluminium'), metaitem('ingotAluminium'))
 //Remove EBF recipe with Aluminium Dust:
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('nitrogen') * 1000])
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+//EBF recipe with Al dust re-enabled:
+EBF.recipeBuilder()
+		.inputs(ore('dustAluminium'))
+		.outputs(metaitem('ingotAluminium'))
+		.duration(20)
+		.blastFurnaceTemp(933)
+		.EUt(30)
+		.buildAndRegister()
 
 
 
