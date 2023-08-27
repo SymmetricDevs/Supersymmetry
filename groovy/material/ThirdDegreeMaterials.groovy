@@ -305,7 +305,7 @@ public class ThirdDegreeMaterials {
       		.color(0x4639ee)
       		.build();
 
-        NickelIIBisacetylacetonateSolution = new Material.Builder(15257, "nickel_ii_bisacetylacetonate_solution")
+        NickelIIBisacetylacetonateSolution = new Material.Builder(24048, "nickel_ii_bisacetylacetonate_solution")
       		.fluid()
       		.components(NickelIIBisacetylacetonate, 1, SodiumNitrate, 2, Water, 2)
       		.color(0x3e5051)

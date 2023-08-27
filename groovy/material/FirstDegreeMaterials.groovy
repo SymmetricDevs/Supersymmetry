@@ -3025,7 +3025,7 @@ public class FirstDegreeMaterials{
                 
         NiobiumOxide = new Material.Builder(8542, "niobium_oxide")
                 .dust()
-                .components(Niobium, 2, Oxygen 5)
+                .components(Niobium, 2, Oxygen, 5)
                 .colorAverage()
                 .build();
                 
