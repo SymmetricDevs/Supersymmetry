@@ -227,7 +227,17 @@ DUMPER.recipeBuilder()
         .fluidInputs(fluid('piperazine') * 50)
         .duration(20)
         .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('wastewater') * 5000)
+        .duration(4)
+        .buildAndRegister()
         
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('metal_sulfate_waste') * 20000)
+        .duration(20)
+        .buildAndRegister()
+
 SIFTER.recipeBuilder()
         .fluidInputs(fluid('flue_gas') * 16000)
         .inputs(ore('dustCalcite') * 5)
