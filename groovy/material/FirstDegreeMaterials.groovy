@@ -3100,7 +3100,8 @@ public class FirstDegreeMaterials{
                 .build();
 
         Ferroplatinum = new Material.Builder(8551, "ferroplatinum")
-                .dust()
+                .dust().ingot()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Platinum, 3, Iron, 1)
                 .colorAverage()
                 .build();

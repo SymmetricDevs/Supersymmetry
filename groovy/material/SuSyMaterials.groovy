@@ -1019,6 +1019,7 @@ class SuSyMaterials {
         public static Material SublimatedMolybdenumTrioxide;
         public static Material AmmoniumThiocyanateSolution;
         public static Material PalladiumMotherLiquor;
+        public static Material DivalentPalladiumSolution;
 
         // Organic Chemistry Materials
 

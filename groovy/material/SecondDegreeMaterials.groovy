@@ -478,6 +478,8 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
+        PlatinumMotherLiquor.setFormula("(?)(NH4Cl)(HCl)6(H2O)8", true)
+
         AmmoniacalSodiumBicarbonateSolution = new Material.Builder(13077, "ammoniacal_sodium_bicarbonate_solution")
                 .fluid()
                 .components(AmmoniumChloride, 1, SodiumBicarbonate, 1, Water, 1)
@@ -523,5 +525,13 @@ public class SecondDegreeMaterials {
                 .components(AmmoniumChloride, 1, Ammonia, 2, HydrogenChloride, 8, Water, 12)
                 .colorAverage()
                 .build();
+
+        DivalentPalladiumSolution = new Material.Builder(13084, "divalent_palladium_solution")
+                .fluid()
+                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
+                .colorAverage()
+                .build();
+
+        DivalentPalladiumSolution.setFormula("(?)(NH4Cl)(HCl)6(H2O)8", true)
     }
 }
