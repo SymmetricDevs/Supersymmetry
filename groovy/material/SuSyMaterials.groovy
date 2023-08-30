@@ -406,6 +406,25 @@ class SuSyMaterials {
         public static HafniumExtract;
         public static Material PropanalMixture;
         public static Material ZSMFive;
+        public static Material SiftedScheelite;
+        public static Material ImpureScheeliteSlurry;
+        public static Material ScheeliteSlurry;
+        public static Material FlotatedScheelite;
+        public static Material CalcinedScheelite;
+        public static Material SiftedWolframite;
+        public static Material ImpureWolframiteSlurry;
+        public static Material WolframiteSlurry;
+        public static Material FlotatedWolframite;
+        public static Material SilicateFreeTungstateSolution;
+        public static Material MolybdenumFreeTungstateSolution;
+        public static Material IsodecanalMixture;
+        public static Material TungstenExtractionMixture;
+        public static Material TungstenExtract;
+        public static Material ScrubbedTungstenExtract;
+        public static Material ImpureMolybdeniteSlurry;
+        public static Material MolybdeniteSlurry;
+        public static Material FlotatedMolybdenite;
+        public static Material CopperMolybdeniteSlurry;
 
         // Petrochem Materials
 
@@ -877,6 +896,21 @@ class SuSyMaterials {
         public static Material Chlorodifluoromethane;
         public static Material PolychlorinatedBiphenyl;
         public static Material DilutedSilverNitrateSolution;
+        public static Material MolybdenumTrisulfide;
+        public static Material AmmoniumIsopolytungstateSolution;
+        public static Material AmmoniumParatungstate;
+        public static Material ManganeseIIHydroxide;
+        public static Material SodiumTungstateSolution;
+        public static Material ImpureMolybdenumTrioxide;
+        public static Material AmmoniumDimolybdate;
+        public static Material PurifiedMolybdenumTrioxide;
+        public static Material MolybdenumTrioxide;
+        public static Material AmmoniumMolybdateSolution;
+        public static Material PhosphorusPentasulfide;
+        public static Material SodiumDithiophosphateSolution;
+        public static Material AlkaliFusedWulfenite;
+        public static Material LeadIIHydroxide;
+        public static Material SodiumMolybdateSolution;
         public static Material TitaniumIodide;
         public static Material ZirconiumIodide;
         public static Material HafniumIodide;
@@ -976,6 +1010,10 @@ class SuSyMaterials {
         public static Material DilutedAmmoniumSulfateSolution;
         public static Material DilutedAmmoniumChlorideSolution;
         public static Material AmmoniacalSodiumBicarbonateSolution;
+        public static Material VeryDilutedSodiumSulfateSolution;
+        public static Material MolybdenicAcidSolution;
+        public static Material NeutralizedAmmoniumMolybdateSolution;
+        public static Material SublimatedMolybdenumTrioxide;
         public static Material AmmoniumThiocyanateSolution;
 
         // Organic Chemistry Materials
@@ -1233,6 +1271,10 @@ class SuSyMaterials {
         public static Material NBromopropane;
         public static Material TetrapropylammoniumBromide;
         public static Material Propionaldehyde;
+        public static Material Tripropylene;
+        public static Material Isodecanal;
+        public static Material Isodecanol;
+        public static Material Trioctylamine;
 
         // Third Degree Materials
 

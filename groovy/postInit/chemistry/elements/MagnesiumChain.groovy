@@ -40,6 +40,21 @@ EBF.recipeBuilder()
         .blastFurnaceTemp(1370)
         .buildAndRegister()
 
+for (combustible in Globals.combustibles) {
+
+        EBF.recipeBuilder()
+                .inputs(ore('dustMagnesia') * 2)
+                .inputs(ore(combustible.name) * combustible.amount_required)
+                .outputs(metaitem('dustMagnesium'))
+                .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
+                .fluidOutputs(fluid('carbon_monoxide') * 1000)
+                .EUt(120)
+                .duration(20 * combustible.duration)
+                .blastFurnaceTemp(2500)
+                .buildAndRegister()
+
+}
+
 ROASTER.recipeBuilder()
         .inputs(ore('dustCalciumOrthosilicate') * 7)
         .outputs(metaitem('dustSiliconDioxide') * 3)
