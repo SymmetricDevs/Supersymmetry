@@ -236,9 +236,9 @@ for (fuel in sintering_fuels) {
 }
 
 ADVANCED_ARC_FURNACE.recipeBuilder()
-        .inputs(metaitem('vti_rich_pig_iron') * 4)
+        .inputs(metaitem('vti_rich_pig_iron') * 2)
         .fluidInputs(fluid('oxygen') * 2700)
-        .outputs(metaitem('ingotSteel') * 4)
+        .outputs(metaitem('ingotSteel') * 2)
         .outputs(metaitem('vt_slag'))
         .EUt(240)
         .duration(300)
