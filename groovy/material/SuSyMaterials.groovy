@@ -930,6 +930,9 @@ class SuSyMaterials {
         public static Material HafniumTetrachloride;
         public static Material AmmoniumThiocyanate;
         public static Material CalciumZirconate;
+        public static Material CementedHexachloroplatinicAcidSolution;
+        public static Material Ferroplatinum;
+        public static Material Diamminedichloropalladium;
 
         // Second Degree Materials
 
@@ -1008,13 +1011,14 @@ class SuSyMaterials {
         public static Material DilutedTwoEthylhexylNitrate;
         public static Material DilutedNitromethane;
         public static Material DilutedAmmoniumSulfateSolution;
-        public static Material DilutedAmmoniumChlorideSolution;
+        public static Material PlatinumMotherLiquor;
         public static Material AmmoniacalSodiumBicarbonateSolution;
         public static Material VeryDilutedSodiumSulfateSolution;
         public static Material MolybdenicAcidSolution;
         public static Material NeutralizedAmmoniumMolybdateSolution;
         public static Material SublimatedMolybdenumTrioxide;
         public static Material AmmoniumThiocyanateSolution;
+        public static Material PalladiumMotherLiquor;
 
         // Organic Chemistry Materials
 

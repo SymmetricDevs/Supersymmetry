@@ -472,9 +472,9 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        DilutedAmmoniumChlorideSolution = new Material.Builder(13076, "diluted_ammonium_chloride_solution")
+        PlatinumMotherLiquor = new Material.Builder(13076, "platinum_mother_liquor")
                 .fluid()
-                .components(AmmoniumChloride, 1, Water, 8)
+                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
                 .colorAverage()
                 .build();
 
@@ -511,9 +511,16 @@ public class SecondDegreeMaterials {
                 .components(PurifiedMolybdenumTrioxide, 1, Air, 1)
                 .colorAverage()
                 .build()
+
         AmmoniumThiocyanateSolution = new Material.Builder(13082, "ammonium_thiocyanate_solution")
                 .fluid()
                 .components(AmmoniumThiocyanate, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        PalladiumMotherLiquor = new Material.Builder(13083, "palladium_mother_liquor")
+                .fluid()
+                .components(AmmoniumChloride, 1, Ammonia, 2, HydrogenChloride, 8, Water, 12)
                 .colorAverage()
                 .build();
     }
