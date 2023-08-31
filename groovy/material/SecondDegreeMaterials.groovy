@@ -518,12 +518,6 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        SodiumHypobromite = new Material.Builder(15250, "sodium_hypobromite")
-                .dust().fluid()
-                .components(Sodium, 1, Bromine, 1, Oxygen, 1)
-                .color(0xf2ae00)
-                .build();
-        
         Methylidynetricobaltnonacarbonyl = new Material.Builder(13079, "methylidynetricobaltnonacarbonyl")
                 .dust()
                 .components(Cobalt, 3, Carbon, 10, Oxygen, 9, Hydrogen, 1)
