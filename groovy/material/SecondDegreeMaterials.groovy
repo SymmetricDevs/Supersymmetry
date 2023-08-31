@@ -523,5 +523,14 @@ public class SecondDegreeMaterials {
                 .components(Sodium, 1, Bromine, 1, Oxygen, 1)
                 .color(0xf2ae00)
                 .build();
+        
+        Methylidynetricobaltnonacarbonyl = new Material.Builder(13079, "methylidynetricobaltnonacarbonyl")
+                .dust()
+                .components(Cobalt, 3, Carbon, 10, Oxygen, 9, Hydrogen, 1)
+                .color(0x140020)
+                .build();
+                .setFormula("HCCo3(CO)9)", true);
+                .flags(GENERATE_CATALYST_BED)
+
     }
 }
