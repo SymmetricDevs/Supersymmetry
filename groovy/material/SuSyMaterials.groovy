@@ -930,6 +930,7 @@ class SuSyMaterials {
         public static Material HafniumTetrachloride;
         public static Material AmmoniumThiocyanate;
         public static Material CalciumZirconate;
+        public static Material CobaltIIBromide;
 
         // Second Degree Materials
 
@@ -1015,7 +1016,6 @@ class SuSyMaterials {
         public static Material NeutralizedAmmoniumMolybdateSolution;
         public static Material SublimatedMolybdenumTrioxide;
         public static Material AmmoniumThiocyanateSolution;
-        public static Material SodiumHypobromite
 
         // Organic Chemistry Materials
 
