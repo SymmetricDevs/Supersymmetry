@@ -1015,6 +1015,7 @@ class SuSyMaterials {
         public static Material NeutralizedAmmoniumMolybdateSolution;
         public static Material SublimatedMolybdenumTrioxide;
         public static Material AmmoniumThiocyanateSolution;
+        public static Material SodiumHypobromite
 
         // Organic Chemistry Materials
 
@@ -1275,6 +1276,8 @@ class SuSyMaterials {
         public static Material Isodecanal;
         public static Material Isodecanol;
         public static Material Trioctylamine;
+        public static Material Bromoform;
+        public static Material SodiumAcetate;
 
         // Third Degree Materials
 
