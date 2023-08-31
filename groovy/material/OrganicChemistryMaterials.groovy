@@ -1594,7 +1594,6 @@ public class OrganicChemistryMaterials {
                 .components(Cobalt, 3, Carbon, 10, Oxygen, 9, Hydrogen, 1)
                 .color(0x140020)
                 .build();
-                .flags(GENERATE_CATALYST_BED)
 
         Methylidynetricobaltnonacarbonyl.setFormula("HCCo3(CO)9)", true);
     }
