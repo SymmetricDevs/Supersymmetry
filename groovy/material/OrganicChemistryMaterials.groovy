@@ -1575,5 +1575,17 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 24, Hydrogen, 51, Nitrogen, 1)
                 .color(0x2274a3)
                 .build();
+
+        Bromoform = new Material.Builder(15248, "bromoform")
+                .fluid()
+                .components(Carbon, 1, Hydrogen, 1, Bromine, 3)
+                .color(0x77042d)
+                .build();
+
+        SodiumAcetate = new Material.Builder(15249, "sodium_acetate")
+                .dust().fluid()
+                .components(Carbon, 2, Hydrogen, 3, Oxygen, 2, Sodium, 1)
+                .color(0xf4f7ff)
+                .build();
     }
 }
