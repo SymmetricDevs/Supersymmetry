@@ -511,10 +511,17 @@ public class SecondDegreeMaterials {
                 .components(PurifiedMolybdenumTrioxide, 1, Air, 1)
                 .colorAverage()
                 .build()
+        
         AmmoniumThiocyanateSolution = new Material.Builder(13082, "ammonium_thiocyanate_solution")
                 .fluid()
                 .components(AmmoniumThiocyanate, 1, Water, 1)
                 .colorAverage()
+                .build();
+
+        SodiumHypobromite = new Material.Builder(15250, "sodium_hypobromite")
+                .dust().fluid()
+                .components(Sodium, 1, Bromine, 1, Oxygen, 1)
+                .color(0xf2ae00)
                 .build();
     }
 }
