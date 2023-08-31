@@ -1016,6 +1016,7 @@ class SuSyMaterials {
         public static Material NeutralizedAmmoniumMolybdateSolution;
         public static Material SublimatedMolybdenumTrioxide;
         public static Material AmmoniumThiocyanateSolution;
+        public static Material Methylidynetricobaltnonacarbonyl;
 
         // Organic Chemistry Materials
 
