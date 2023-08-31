@@ -1587,5 +1587,15 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 2, Hydrogen, 3, Oxygen, 2, Sodium, 1)
                 .color(0xf4f7ff)
                 .build();
+
+        
+        Methylidynetricobaltnonacarbonyl = new Material.Builder(13079, "methylidynetricobaltnonacarbonyl")
+                .dust()
+                .components(Cobalt, 3, Carbon, 10, Oxygen, 9, Hydrogen, 1)
+                .color(0x140020)
+                .build();
+                .flags(GENERATE_CATALYST_BED)
+
+        Methylidynetricobaltnonacarbonyl.setFormula("HCCo3(CO)9)", true);
     }
 }
