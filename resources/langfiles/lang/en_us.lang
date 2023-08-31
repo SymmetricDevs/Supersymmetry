@@ -191,6 +191,11 @@ material.black_liquor=Black Liquor
 material.concentrated_black_liquor=Concentrated Black Liquor
 material.green_liquor=Green Liquor
 
+material.bromoform=Bromoform
+material.sodium_acetate=Sodium Acetate
+material.methylidynetricobaltnonacarbonyl=Methylidynetricobaltnonacarbonyl
+material.cobalt_ii_bromide= Cobalt II Bromide
+
 # Solids
 
 material.pig_iron=Pig Iron
