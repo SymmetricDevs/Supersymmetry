@@ -931,6 +931,7 @@ class SuSyMaterials {
         public static Material AmmoniumThiocyanate;
         public static Material CalciumZirconate;
         public static Material CobaltIIBromide;
+        public static Material CobaltIIBromideSolution;
 
         // Second Degree Materials
 
