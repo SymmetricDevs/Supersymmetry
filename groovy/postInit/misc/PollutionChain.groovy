@@ -1,6 +1,7 @@
 import static globals.Globals.*
 
 SMOKE_STACK = recipemap('smoke_stack')
+FLARE_STACK = recipemap('flare_stack')
 MIXER = recipemap('mixer')
 DUMPER = recipemap('dumping')
 SIFTER = recipemap('sifter')
@@ -103,6 +104,11 @@ SMOKE_STACK.recipeBuilder()
 
 SMOKE_STACK.recipeBuilder()
         .fluidInputs(fluid('carbon_tetrachloride') * 500)
+        .duration(10)
+        .buildAndRegister()
+
+FLARE_STACK.recipeBuilder()
+        .fluidInputs(fluid('lubricating_oil') * 500)
         .duration(10)
         .buildAndRegister()
 

@@ -4643,6 +4643,7 @@ DISTILLERY.recipeBuilder()
 .buildAndRegister()
 
 //AMMONIUM THIOCYANATE
+
 CSTR.recipeBuilder()
 .fluidInputs(fluid('carbon_disulfide') * 50)
 .fluidInputs(fluid('ammonia_solution') * 50)
