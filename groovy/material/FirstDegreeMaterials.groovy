@@ -3095,7 +3095,13 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
         
-        CobaltIIBromide = new Material.Builder(8535,"cobalt_ii_bromide")
+        CobaltIIBromide = new Material.Builder(8535,"cobalt_ii_bromide_solution")
+                .fluid()
+                .components(Cobalt, 1, Bromine, 2, Water, 1)
+                .colorAverage()
+                .build();
+
+        CobaltIIBromideSolution = new Material.Builder(8536 ,"cobalt_ii_bromide")
                 .fluid()
                 .components(Cobalt, 1, Bromine, 2)
                 .colorAverage()
