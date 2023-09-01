@@ -1280,6 +1280,7 @@ class SuSyMaterials {
         public static Material Bromoform;
         public static Material SodiumAcetate;
         public static Material Methylidynetricobaltnonacarbonyl;
+        public static Material SodiumAcetateSolution;
 
         // Third Degree Materials
 
