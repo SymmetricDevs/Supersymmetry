@@ -1050,7 +1050,7 @@ public class FirstDegreeMaterials{
 
         SilverCyanideSolution = new Material.Builder(8248, "silver_cyanide_solution")
                 .fluid()
-                .components(Silver, 2, Carbon, 4, Nitrogen, 4, Sodium, 4, Chlorine, 2)
+                .components(Silver, 2, Carbon, 4, Nitrogen, 4, Sodium, 4, Chlorine, 2, Water, 4)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
@@ -1066,11 +1066,11 @@ public class FirstDegreeMaterials{
 
         PyrargyriteCyanideLeachSolution = new Material.Builder(8250, 'pyrargyrite_cyanide_leach_solution')
                 .fluid()
-                .components(Sodium, 6, Silver, 3, Carbon, 6, Nitrogen, 6, Antimony, 1, Chlorine, 6, Water, 12)
+                .components(Sodium, 6, Silver, 3, Carbon, 6, Nitrogen, 6, Chlorine, 3, Water, 12)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula('(Na[Ag(CN)2])3(NaCl)2(NaSbCl4)(H2O)6', true)
+                .setFormula('(Na[Ag(CN)2])3(NaCl)3(H2O)6', true)
 
         PyrargyriteThiosulfateLeachSolution = new Material.Builder(8251, 'pyrargyrite_thiosulfate_leach_solution')
                 .fluid()
@@ -1104,11 +1104,11 @@ public class FirstDegreeMaterials{
 
         StephaniteCyanideLeachSolution = new Material.Builder(8255, 'stephanite_cyanide_leach_solution')
                 .fluid()
-                .components(Sodium, 10, Silver, 5, Carbon, 10, Nitrogen, 10, Antimony, 1, Chlorine, 8, Water, 20)
+                .components(Sodium, 10, Silver, 5, Carbon, 10, Nitrogen, 10, Chlorine, 5, Water, 20)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula('(Na[Ag(CN)2])5(NaCl)2(NaSbCl6)(H2O)20', true)
+                .setFormula('(Na[Ag(CN)2])5(NaCl)5(H2O)20', true)
 
         ProustiteThiosulfateLeachSolution = new Material.Builder(8256, 'proustite_thiosulfate_leach_solution')
                 .fluid()
