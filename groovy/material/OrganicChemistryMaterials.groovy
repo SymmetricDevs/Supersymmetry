@@ -1596,5 +1596,11 @@ public class OrganicChemistryMaterials {
                 .build();
 
         Methylidynetricobaltnonacarbonyl.setFormula("HCCo3(CO)9)", true);
+
+        SodiumAcetateSolution = new Material.Builder(15251, "sodium_acetate_solution")
+                .fluid()
+                .components(Carbon, 2, Hydrogen, 3, Oxygen, 2, Sodium, 1, Water, 1)
+                .color(0xf4f7ff)
+                .build();
     }
 }
