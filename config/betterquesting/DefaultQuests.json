@@ -48010,7 +48010,7 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "ziegler_alcohol_mixture"
+              "FluidName:8": "ziegler_alfol_mixture"
             }
           },
           "ignoresview:1": 0,
@@ -48040,7 +48040,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "ziegler_alcohol_mixture"
+              "FluidName:8": "ziegler_alfol_mixture"
             }
           },
           "taskID:8": "bq_standard:fluid"
