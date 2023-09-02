@@ -87,11 +87,7 @@ def name_removals = [
         'gregtech:quantum_tank_uv',
         'gregtech:quantum_tank_uhv',
 	'gregtech:large_combustion_engine',
-	'gregtech:extreme_combustion_engine',
-        'gregtech:gregtech.machine.fisher.lv',
-        'gregtech:gregtech.machine.fisher.mv',
-        'gregtech:gregtech.machine.fisher.hv',
-        'gregtech:gregtech.machine.fisher.ev',
+	'gregtech:extreme_combustion_engine'
 ]
 
 for (name in name_removals) {
