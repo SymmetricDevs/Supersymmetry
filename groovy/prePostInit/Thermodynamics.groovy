@@ -468,29 +468,29 @@ RefineryGas.setAmountToBurn(160);
 RefineryGas.setByproductAmount(750);
 
 def Ammonia = new IFluidFuel('ammonia', 'nitrogen');
-Ammonia.setDuration(32);
-Ammonia.setAmountToBurn(6);
-Ammonia.setByproductAmount(6);
+Ammonia.setDuration(70);
+Ammonia.setAmountToBurn(160);
+Ammonia.setByproductAmount(500);
 
 def Propene = new IFluidFuel('propene', 'flue_gas');
-Propene.setDuration(48);
-Propene.setAmountToBurn(8);
-Propene.setByproductAmount(800);
+Propene.setDuration(85);
+Propene.setAmountToBurn(160);
+Propene.setByproductAmount(500);
 
 def Butene = new IFluidFuel('butene', 'flue_gas');
-Butene.setDuration(64);
-Butene.setAmountToBurn(8);
-Butene.setByproductAmount(800);
+Butene.setDuration(90);
+Butene.setAmountToBurn(160);
+Butene.setByproductAmount(500);
 
 def Phenol = new IFluidFuel('phenol', 'flue_gas');
-Phenol.setDuration(42);
-Phenol.setAmountToBurn(6);
-Phenol.setByproductAmount(600);
+Phenol.setDuration(120);
+Phenol.setAmountToBurn(10);
+Phenol.setByproductAmount(750);
 
 def Benzene = new IFluidFuel('benzene', 'flue_gas');
-Benzene.setDuration(72);
-Benzene.setAmountToBurn(8);
-Benzene.setByproductAmount(800);
+Benzene.setDuration(120);
+Benzene.setAmountToBurn(10);
+Benzene.setByproductAmount(750);
 
 def Methanol = new IFluidFuel('methanol', 'flue_gas');
 Methanol.setDuration(40);
@@ -603,39 +603,60 @@ def WorkingFluids = [
 for (FluidFuel in FluidFuels) {
     if (FluidFuel.gas_turbine) {
         if (FluidFuel.refined_fuel) {
-                recipemap('gas_turbine').recipeBuilder()
-                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('air') * 100)
-                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration(FluidFuel.duration)
-                        .EUt(-128)
-                        .buildAndRegister();
+            recipemap('gas_turbine').recipeBuilder()
+                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                .fluidInputs(liquid('air') * 100)
+                .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                .duration(FluidFuel.duration)
+                .EUt(-128)
+                .buildAndRegister();
 
-                recipemap('gas_turbine').recipeBuilder()
-                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('oxygen') * 20)
-                        .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
-                        .duration((int) (FluidFuel.duration * 1.5))
-                        .EUt(-128)
-                        .buildAndRegister();
+            recipemap('gas_turbine').recipeBuilder()
+                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                .fluidInputs(liquid('oxygen') * 20)
+                .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                .duration((int) (FluidFuel.duration * 1.5))
+                .EUt(-128)
+                .buildAndRegister();
         } else {
-                recipemap('gas_turbine').recipeBuilder()
-                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('air') * 100)
-                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration(FluidFuel.duration)
-                        .EUt(-32)
-                        .buildAndRegister();
+            recipemap('gas_turbine').recipeBuilder()
+                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                .fluidInputs(liquid('air') * 100)
+                .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                .duration(FluidFuel.duration)
+                .EUt(-32)
+                .buildAndRegister();
 
-                recipemap('gas_turbine').recipeBuilder()
-                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('oxygen') * 20)
-                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.5))
-                        .EUt(-32)
-                        .buildAndRegister();
+            recipemap('gas_turbine').recipeBuilder()
+                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                .fluidInputs(liquid('oxygen') * 20)
+                .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                .duration((int) (FluidFuel.duration * 1.5))
+                .EUt(-32)
+                .buildAndRegister();
         }
-                
+
+        for (lubricant in Globals.lubricants) {
+            if (FluidFuel.refined_fuel) {
+                recipemap('gas_turbine').recipeBuilder()
+                    .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
+                    .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                    .fluidInputs(liquid('oxygen') * 20)
+                    .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                    .duration((int) (FluidFuel.duration * lubricant.boost * 1.5))
+                    .EUt(-128)
+                    .buildAndRegister();
+            } else {
+                recipemap('gas_turbine').recipeBuilder()
+                    .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
+                    .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                    .fluidInputs(liquid('oxygen') * 20)
+                    .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                    .duration((int) (FluidFuel.duration * lubricant.boost * 1.5))
+                    .EUt(-32)
+                    .buildAndRegister();
+            }
+        }
     }
 
     recipemap('flare_stack').recipeBuilder()
@@ -690,6 +711,16 @@ for (WorkingFluid in WorkingFluids) {
             .EUt(32)
             .buildAndRegister();
 
+    for (lubricant in Globals.lubricants) {
+            recipemap('steam_turbine').recipeBuilder()
+                    .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
+                    .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+                    .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+                    .duration((int) (WorkingFluid.duration * WorkingFluid.efficiency * lubricant.boost))
+                    .EUt(32)
+                    .buildAndRegister();
+    }
+        
     recipemap('cooling_tower').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidInputs(liquid('water') * 1000)

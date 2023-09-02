@@ -84,4 +84,23 @@ class Globals {
         new InertGas('helium', 4000, 2),
         new InertGas('argon', 1000, 1)
     ]
+
+    public static class Lubricant {
+        String name
+        int amount_required
+        double boost
+        Lubricant(name, amount_required, boost) {
+            this.name = name
+            this.amount_required = amount_required
+            this.boost = boost
+        }
+    }
+
+    public static lubricants = {
+        new Lubricant('lubricating_oil', 3, 1.2)
+        new Lubricant('lubricant', 3, 1.4)
+        /*new Lubricant('midgrade_lubricant', 2, 1.6)
+        new Lubricant('premium_lubricant', 2, 1.8)
+        new Lubricant('supreme_lubricant', 1, 2.0)*/
+    }
 }
