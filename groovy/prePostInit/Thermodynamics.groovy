@@ -672,7 +672,7 @@ for (WorkingFluid in WorkingFluids) {
             .fluidInputs(liquid('desulfurized_flue_gas') * 250)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor) * 10)
             .fluidOutputs(liquid('chilled_flue_gas') * 250)
-            .duration((int) (WorkingFluid.duration / 10))
+            .duration((int) (WorkingFluid.duration / 2))
             .buildAndRegister();
 
     recipemap('heat_exchanger').recipeBuilder()
@@ -680,7 +680,7 @@ for (WorkingFluid in WorkingFluids) {
             .fluidInputs(liquid('flue_gas') * 250)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor) * 10)
             .fluidOutputs(liquid('chilled_flue_gas') * 250)
-            .duration((int) (WorkingFluid.duration / 10))
+            .duration((int) (WorkingFluid.duration / 2))
             .buildAndRegister();
 
     recipemap('steam_turbine').recipeBuilder()
