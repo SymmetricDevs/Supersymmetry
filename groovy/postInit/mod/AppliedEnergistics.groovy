@@ -263,7 +263,7 @@ crafting.replaceShapeless('appliedenergistics2:materials/cardspeed', item('appli
 crafting.replaceShapeless('appliedenergistics2:materials/cardpatternexpansion', item('appliedenergistics2:material:58'), [item('appliedenergistics2:material:30')])
 crafting.replaceShapeless('appliedenergistics2:materials/cardinverter', item('appliedenergistics2:material:31'), [item('appliedenergistics2:material:58')])
 crafting.replaceShapeless('appliedenergistics2:materials/cardfuzzy', item('appliedenergistics2:material:29'), [item('appliedenergistics2:material:31')])
-crafting.replaceShapeless('wct:magnet_card', item('wct:magnet_card'), [item('appliedenergistics2:material:29')])
+//crafting.replaceShapeless('wct:magnet_card', item('wct:magnet_card'), [item('appliedenergistics2:material:29')])
 //crafting.addShapeless('appliedenergistics2:recycle_advcard', item('appliedenergistics2:material:28'), [item('wct:magnet_card')])
 
 crafting.replaceShapeless('appliedenergistics2:network/cells/view_cell_storage', item('appliedenergistics2:view_cell'), [item('appliedenergistics2:material', 39), metaitem('cover.screen')])
@@ -325,10 +325,10 @@ crafting.replaceShaped('appliedenergistics2:tools/misctools_entropy_manipulator'
         [null, null, item('appliedenergistics2:energy_cell')]
 ])
 
-crafting.replaceShapeless('wct:wct', item('wct:wct'), [item('appliedenergistics2:part', 360), item('appliedenergistics2:wireless_terminal')])
-crafting.replaceShapeless('wft:wft', item('wft:wft'), [item('appliedenergistics2:part', 520), item('appliedenergistics2:wireless_terminal')])
-crafting.replaceShapeless('wit:wit', item('wit:wit'), [item('appliedenergistics2:part', 440), item('appliedenergistics2:wireless_terminal')])
-crafting.replaceShapeless('wpt:wpt', item('wpt:wpt'), [item('appliedenergistics2:part', 340), item('appliedenergistics2:wireless_terminal')])
+//crafting.replaceShapeless('wct:wct', item('wct:wct'), [item('appliedenergistics2:part', 360), item('appliedenergistics2:wireless_terminal')])
+//crafting.replaceShapeless('wft:wft', item('wft:wft'), [item('appliedenergistics2:part', 520), item('appliedenergistics2:wireless_terminal')])
+//crafting.replaceShapeless('wit:wit', item('wit:wit'), [item('appliedenergistics2:part', 440), item('appliedenergistics2:wireless_terminal')])
+//crafting.replaceShapeless('wpt:wpt', item('wpt:wpt'), [item('appliedenergistics2:part', 340), item('appliedenergistics2:wireless_terminal')])
 
 //GT Machines Recipes
 

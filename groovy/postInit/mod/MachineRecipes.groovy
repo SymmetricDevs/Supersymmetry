@@ -225,7 +225,7 @@ crafting.addShaped("gregtech:coagulation_tank_wall", item('susy:coagulation_tank
 //Nerf arc furnaces, add graphite rod chain
 recipemap('mixer').recipeBuilder()
 		.fluidInputs(fluid('coal_tar') * 1000)
-		.inputs(metaitem('dustCoke') * 4)
+		.inputs(ore('dustCoke') * 4)
 		.outputs(metaitem('pitch_binder') * 4)
 		.EUt(30)
 		.duration(200)
@@ -398,6 +398,20 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+//Electrostatic separator
+
+def tieredElectrodes = [ore('wireFineRedAlloy'), ore('wireFineSteel'), metaitem('graphite_electrode'), ore('wireFinePlatinum'), ore('wireFineTitanium'),
+					ore('wireFineTungsten'), ore('wireFineOsmiridium'), ore('wireFineNiobiumTitanium'),
+					ore('wireFineNaquadah'), ore('wireFineNaquadahAlloy')];
+
+for (i = 1; i <= 8; i++) {
+	crafting.replaceShaped("gregtech:gregtech.machine.electrostatic_separator." + Globals.voltageTiers[i], metaitem('electrostatic_separator.' + Globals.voltageTiers[i]), [
+			[tieredWires[i], tieredElectrodes[i], tieredWires[i]],
+			[tieredCables[i], hulls[i], tieredCables[i]],
+			[tieredWires[i], tieredElectrodes[i], tieredWires[i]]
+	])
+}
+
 //Add recipes for high pressure steam machines
 
 crafting.addShaped("gregtech:vulcanizing_press.steel", metaitem('vulcanizing_press.steel'), [
@@ -540,7 +554,7 @@ crafting.addShaped("gas_turbine_controller", metaitem('basic_gas_turbine'), [
 
 crafting.addShaped("silicon_carbide_casing", item('susy:susy_multiblock_casing') * 2, [
 		[metaitem('plateSiliconCarbide'), ore('craftingToolHardHammer'), metaitem('plateSiliconCarbide')],
-		[metaitem('plateSiliconCarbide'), item('gregtech:turbine_casing', 7), metaitem('plateSiliconCarbide')],
+		[metaitem('plateSiliconCarbide'), item('gregtech:metal_casing', 5), metaitem('plateSiliconCarbide')],
 		[metaitem('plateSiliconCarbide'), ore('craftingToolWrench'), metaitem('plateSiliconCarbide')]
 ])
 
@@ -559,7 +573,7 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('transformer.lv'))
 		.inputs(metaitem('energy_hatch.output.lv'))
 		.inputs(metaitem('voltage_coil.lv'))
-		.inputs(metaitem('wireGtQuadrupleTin') * 2)
+		.inputs(ore('wireGtQuadrupleTin') * 2)
 		.outputs(metaitem('energy_hatch.output_4a.lv'))
 		.EUt(7)
 		.duration(100)
@@ -569,7 +583,7 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('transformer.adjustable.lv'))
 		.inputs(metaitem('energy_hatch.output_4a.lv'))
 		.inputs(metaitem('voltage_coil.lv'))
-		.inputs(metaitem('wireGtOctalTin') * 2)
+		.inputs(ore('wireGtOctalTin') * 2)
 		.outputs(metaitem('energy_hatch.output_16a.lv'))
 		.EUt(7)
 		.duration(200)
@@ -580,7 +594,7 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('energy_hatch.output.mv'))
 		.inputs(metaitem('plate.ultra_low_power_integrated_circuit'))
 		.inputs(metaitem('voltage_coil.mv'))
-		.inputs(metaitem('wireGtQuadrupleCopper') * 2)
+		.inputs(ore('wireGtQuadrupleCopper') * 2)
 		.outputs(metaitem('energy_hatch.output_4a.mv'))
 		.EUt(30)
 		.duration(100)
@@ -591,7 +605,7 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('energy_hatch.output_4a.mv'))
 		.inputs(metaitem('plate.ultra_low_power_integrated_circuit') * 2)
 		.inputs(metaitem('voltage_coil.mv'))
-		.inputs(metaitem('wireGtOctalCopper') * 2)
+		.inputs(ore('wireGtOctalCopper') * 2)
 		.outputs(metaitem('energy_hatch.output_16a.mv'))
 		.EUt(30)
 		.duration(200)
@@ -602,7 +616,7 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('energy_hatch.output.hv'))
 		.inputs(metaitem('plate.low_power_integrated_circuit'))
 		.inputs(metaitem('voltage_coil.hv'))
-		.inputs(metaitem('wireGtQuadrupleGold') * 2)
+		.inputs(ore('wireGtQuadrupleGold') * 2)
 		.outputs(metaitem('energy_hatch.output_4a.hv'))
 		.EUt(120)
 		.duration(100)
@@ -613,7 +627,7 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('energy_hatch.output_4a.hv'))
 		.inputs(metaitem('plate.low_power_integrated_circuit') * 2)
 		.inputs(metaitem('voltage_coil.hv'))
-		.inputs(metaitem('wireGtOctalGold') * 2)
+		.inputs(ore('wireGtOctalGold') * 2)
 		.outputs(metaitem('energy_hatch.output_16a.hv'))
 		.EUt(120)
 		.duration(200)
@@ -624,7 +638,7 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('energy_hatch.output_4a.ev'))
 		.inputs(metaitem('plate.power_integrated_circuit') * 2)
 		.inputs(metaitem('voltage_coil.ev'))
-		.inputs(metaitem('wireGtOctalAluminium') * 2)
+		.inputs(ore('wireGtOctalAluminium') * 2)
 		.outputs(metaitem('energy_hatch.output_16a.ev'))
 		.EUt(480)
 		.duration(200)
@@ -700,12 +714,6 @@ crafting.addShaped("gregtech:gravity_separator", metaitem('gravity_separator'), 
 		[metaitem('component.grinder.diamond'), circuits[2], metaitem('component.grinder.diamond')],
 		[conveyors[2], hulls[2], conveyors[2]],
 		[circuits[2], tieredCables[2], circuits[2]]
-]);
-
-crafting.addShaped("gregtech:separator_rotor", item('susy:separator_rotor') * 2, [
-		[metaitem('plateSteel'), metaitem('rotorSteel'), metaitem('plateSteel')],
-		[metaitem('rotorSteel'), metaitem('frameSteel'), metaitem('rotorSteel')],
-		[metaitem('plateSteel'), motors[1], metaitem('plateSteel')]
 ]);
 
 crafting.addShaped("gregtech:reaction_furnace", metaitem('reaction_furnace'), [
@@ -917,17 +925,31 @@ recipemap('assembler').recipeBuilder()
 		.inputs(ore('circuitLv') * 4)
 		.inputs(metaitem('electric.pump.lv') * 4)
 		.inputs(metaitem('electric.motor.lv') * 4)
-		.inputs(metaitem('gearSteel') * 4)
+		.inputs(ore('gearSteel') * 4)
 		.notConsumable(circuit(2))
 		.outputs(metaitem('fluid_drilling_rig.mv'))
 		.EUt(30)
 		.duration(600)
 		.buildAndRegister()
 
+//Catalytic Reformer
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('hull.ev'))
+		.inputs(metaitem('frameTitanium') * 4)
+		.inputs(metaitem('electric.pump.ev') * 2)
+		.inputs(metaitem('pipeHugeFluidTitanium'))
+		.inputs(metaitem('rotorTitanium'))
+		.inputs(ore('circuitEv'))
+		.notConsumable(circuit(3))
+		.EUt(480)
+		.duration(600)
+		.buildAndRegister()	
+
 //Power Units
 recipemap('assembler').recipeBuilder()
-		.inputs(metaitem('gearSmallSteel') * 2)
-		.inputs(metaitem('boltSteel') * 2)
+		.inputs(ore('gearSmallSteel') * 2)
+		.inputs(ore('boltSteel') * 2)
 		.inputs(metaitem('electric.motor.lv') * 2)
 		.inputs(ore('batteryLv'))
 		.outputs(metaitem('power_unit.lv'))
@@ -936,8 +958,8 @@ recipemap('assembler').recipeBuilder()
 		.buildAndRegister()
 
 recipemap('assembler').recipeBuilder()
-		.inputs(metaitem('gearSmallAluminium') * 2)
-		.inputs(metaitem('boltAluminium') * 2)
+		.inputs(ore('gearSmallAluminium') * 2)
+		.inputs(ore('boltAluminium') * 2)
 		.inputs(metaitem('electric.motor.mv') * 2)
 		.inputs(ore('batteryMv'))
 		.outputs(metaitem('power_unit.mv'))
@@ -946,8 +968,8 @@ recipemap('assembler').recipeBuilder()
 		.buildAndRegister()
 
 recipemap('assembler').recipeBuilder()
-		.inputs(metaitem('gearSmallStainlessSteel') * 2)
-		.inputs(metaitem('boltStainlessSteel') * 2)
+		.inputs(ore('gearSmallStainlessSteel') * 2)
+		.inputs(ore('boltStainlessSteel') * 2)
 		.inputs(metaitem('electric.motor.hv') * 2)
 		.inputs(ore('batteryHv'))
 		.outputs(metaitem('power_unit.hv'))
@@ -956,8 +978,8 @@ recipemap('assembler').recipeBuilder()
 		.buildAndRegister()
 
 recipemap('assembler').recipeBuilder()
-		.inputs(metaitem('gearSmallTitanium') * 2)
-		.inputs(metaitem('boltTitanium') * 2)
+		.inputs(ore('gearSmallTitanium') * 2)
+		.inputs(ore('boltTitanium') * 2)
 		.inputs(metaitem('electric.motor.ev') * 2)
 		.inputs(ore('batteryEv'))
 		.outputs(metaitem('power_unit.ev'))
@@ -966,8 +988,8 @@ recipemap('assembler').recipeBuilder()
 		.buildAndRegister()
 
 recipemap('assembler').recipeBuilder()
-		.inputs(metaitem('gearSmallTungstenSteel') * 2)
-		.inputs(metaitem('boltTungstenSteel') * 2)
+		.inputs(ore('gearSmallTungstenSteel') * 2)
+		.inputs(ore('boltTungstenSteel') * 2)
 		.inputs(metaitem('electric.motor.iv') * 2)
 		.inputs(ore('batteryIv'))
 		.outputs(metaitem('power_unit.iv'))

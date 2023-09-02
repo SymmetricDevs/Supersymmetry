@@ -21,18 +21,9 @@
   },
   {
 	"dimension": 0,
-	"mod": "betteranimalsplus",
-	"maxcount": {
-		"amount": 4,
-		"perplayer": true
-	},
-	"result": "default"
-  },
-  {
-	"dimension": 0,
 	"mod": "caracalsmod",
 	"maxcount": {
-		"amount": 4,
+		"amount": 1,
 		"perplayer": true
 	},
 	"result": "default"
@@ -46,26 +37,24 @@
 	"maxtime": 23999,
 	"seesky": true,
 	"maxcount": {
-		"amount": 5,
+		"amount": 2,
 		"perplayer": true
 	},
 	"result": "default",
-	"speedmultiply": 2.5,
-	"damagemultiply": 2,
+	"damagemultiply": 3,
 	"angry": true
   },
-    {
+  {
 	"dimension": 0,
 	"mob": [
 		"techguns:outcast"
 	],
 	"spawner": true,
 	"maxcount": {
-		"amount": 4,
+		"amount": 2,
 		"perplayer": true
 	},
 	"result": "default",
-	"speedmultiply": 1.5,
 	"angry": true
   },
   {
@@ -84,7 +73,7 @@
 		"weeping-angels:weepingangel"
 	],
 	"maxcount": {
-		"amount": 3,
+		"amount": 1,
 		"perplayer": true
 	},
 	"result": "default"

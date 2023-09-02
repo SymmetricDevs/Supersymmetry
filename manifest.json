@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Supersymmetry",
-  "version": "0.1.4",
+  "version": "0.1.9",
   "author": "SymmetricDevs",
   "externalDeps": [],
   "files": [
@@ -41,11 +41,6 @@
       "required": true
     },
     {
-      "projectID": 304022,
-      "fileID": 2830253,
-      "required": true
-    },
-    {
       "projectID": 313146,
       "fileID": 2668213,
       "required": true
@@ -53,11 +48,6 @@
     {
       "projectID": 250363,
       "fileID": 2746011,
-      "required": true
-    },
-    {
-      "projectID": 255232,
-      "fileID": 2830265,
       "required": true
     },
     {
@@ -241,8 +231,8 @@
       "required": true
     },
     {
-      "projectID": 256717,
-      "fileID": 2666198,
+      "projectID": 633806,
+      "fileID": 4412006,
       "required": true
     },
     {
@@ -411,11 +401,6 @@
       "required": true
     },
     {
-      "projectID": 304024,
-      "fileID": 2830114,
-      "required": true
-    },
-    {
       "projectID": 225605,
       "fileID": 2489549,
       "required": true
@@ -452,17 +437,12 @@
     },
     {
       "projectID": 846224,
-      "fileID": 4652086,
+      "fileID": 4723373,
       "required": true
     },
     {
       "projectID": 243478,
       "fileID": 2745657,
-      "required": true
-    },
-    {
-      "projectID": 324495,
-      "fileID": 2830255,
       "required": true
     },
     {
@@ -667,7 +647,7 @@
     },
     {
       "projectID": 885673,
-      "fileID": 4630264,
+      "fileID": 4724873,
       "required": true
     },
     {
@@ -678,11 +658,6 @@
     {
       "projectID": 614513,
       "fileID": 3756455,
-      "required": true
-    },
-    {
-      "projectID": 244559,
-      "fileID": 2830252,
       "required": true
     },
     {
@@ -718,11 +693,6 @@
     {
       "projectID": 256989,
       "fileID": 3149033,
-      "required": true
-    },
-    {
-      "projectID": 324508,
-      "fileID": 2830254,
       "required": true
     },
     {

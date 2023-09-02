@@ -104,11 +104,17 @@ crafting.addShaped("icbm_exp_1_0_tnt", item('icbmclassic:explosives:0'), [
         [null, ore('dustTnt'), null]
 ]);
 
-crafting.addShaped("icbm_exp_1_1", item('icbmclassic:explosives:1'), [
+crafting.addShaped("icbm_exp_1_0_tnp", item('icbmclassic:explosives:0'), [
+        [null, ore('dustPicricAcid'), null],
+        [ore('dustPicricAcid'), ore('wireFineRedAlloy'), ore('dustPicricAcid')],
+        [null, ore('dustPicricAcid'), null]
+]);
+
+/*crafting.addShaped("icbm_exp_1_1", item('icbmclassic:explosives:1'), [
         [ore('roundLead'), ore('roundLead'), ore('roundLead')],
         [ore('roundLead'), item('icbmclassic:explosives:0'), ore('roundLead')],
         [ore('roundLead'), ore('roundLead'), ore('roundLead')]
-]);
+]);*/
 
 def flammable_liquids = [
         liquid('naphtha')*1000,
@@ -166,7 +172,6 @@ for (poison in poisons) {
                     metaitem('sensor.lv')
                     //Rationale: air burst explosion with high explosives to create repulsive forces
             ])
-            .fluidInputs(poison)
             .outputs(item('icbmclassic:explosives:6'))
             .duration(20)
             .EUt(16)
@@ -205,7 +210,7 @@ for (fuel in thermobaric_fuels) {
             .buildAndRegister();
 }
 
-recipemap('weapons_factory').recipeBuilder()
+/*recipemap('weapons_factory').recipeBuilder()
             .inputs([
                     item('icbmclassic:explosives:1'),
                     ore('plateSteel')*8
@@ -213,7 +218,7 @@ recipemap('weapons_factory').recipeBuilder()
             .outputs(item('icbmclassic:explosives:8'))
             .duration(400)
             .EUt(60)
-            .buildAndRegister();
+            .buildAndRegister();*/
 
 /*recipemap('weapons_factory').recipeBuilder()
         .inputs([
