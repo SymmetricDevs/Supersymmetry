@@ -2035,6 +2035,8 @@ metaitem.sponge.zirconium.crude.name=Crude Zirconium Sponge
 metaitem.sponge.hafnium.name=Hafnium Sponge
 metaitem.sponge.hafnium.crude.name=Crude Hafnium Sponge
 
+metaitem.drone.lv.name=Basic Drone
+
 # Multiblocked
 
 tile.multiblocked.item_input.name=Small Input Bus
