@@ -636,7 +636,7 @@ for (FluidFuel in FluidFuels) {
                 .buildAndRegister();
         }
 
-        for (lubricant in Globals.lubricants) {
+        /*for (lubricant in Globals.lubricants) {
             if (FluidFuel.refined_fuel) {
                 recipemap('gas_turbine').recipeBuilder()
                     .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
@@ -656,7 +656,7 @@ for (FluidFuel in FluidFuels) {
                     .EUt(-32)
                     .buildAndRegister();
             }
-        }
+        }*/
     }
 
     recipemap('flare_stack').recipeBuilder()
@@ -711,7 +711,7 @@ for (WorkingFluid in WorkingFluids) {
             .EUt(32)
             .buildAndRegister();
 
-    for (lubricant in Globals.lubricants) {
+    /*for (lubricant in Globals.lubricants) {
             recipemap('steam_turbine').recipeBuilder()
                     .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
                     .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
@@ -719,7 +719,7 @@ for (WorkingFluid in WorkingFluids) {
                     .duration((int) (WorkingFluid.duration * WorkingFluid.efficiency * lubricant.boost))
                     .EUt(32)
                     .buildAndRegister();
-    }
+    }*/
         
     recipemap('cooling_tower').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
