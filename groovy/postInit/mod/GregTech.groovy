@@ -16,6 +16,8 @@ println("Running GregTech.groovy...")
 
 //REMOVALS
 
+// Salt Water * 1000
+mods.gregtech.mixer.removeByInput(7, [metaitem('dustSalt') * 2], [fluid('water') * 1000])
 // Carbon Dust * 2
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustCoal')], null)
 // Small Pile of Rare Earth * 1
@@ -770,6 +772,15 @@ LATEX_COLLECTOR.recipeBuilder()
 //TODO: ADD GRAVITY SEPARATOR STUFF
 // Construction Foam * 8000
 mods.gregtech.mixer.removeByInput(16, [metaitem('dustRawRubber')], [fluid('concrete') * 576])
+
+MIXER.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(ore('dustSalt') * 2)
+        .fluidInputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('salt_water') * 1000)
+        .EUt(7)
+        .duration(40)
+        .buildAndRegister()
 
 MIXER.recipeBuilder()
         .inputs(ore('dustRubber'))
