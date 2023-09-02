@@ -103,11 +103,6 @@ eventManager.listen {
 
         customMetaItems.addItem(197, "fused_quartz");
 
-        customMetaItems.addItem(198, "beads.amberlyst_ch");
-        customMetaItems.addItem(199, "beads.ag_fifty_w_x_eight");
-        customMetaItems.addItem(212, "beads.rhenium_ion_exchange")
-        customMetaItems.addItem(213, "beads.loaded_rhenium_ion_exchange")
-
         customMetaItems.addItem(200, "thick_film_substrate_wafer");
 
         customMetaItems.addItem(201, "vti_rich_pig_iron");
@@ -124,6 +119,11 @@ eventManager.listen {
 	customMetaItems.addItem(210, "bound_leather")
 
         customMetaItems.addItem(212, "drone.lv").setMaxStackSize(1).addComponents(ElectricStats.createRechargeableBattery(10000, GTValues.LV)).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+
+        customMetaItems.addItem(250, "beads.amberlyst_ch");
+        customMetaItems.addItem(251, "beads.ag_fifty_w_x_eight");
+        customMetaItems.addItem(252, "beads.rhenium_ion_exchange")
+        customMetaItems.addItem(253, "beads.loaded_rhenium_ion_exchange")
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
