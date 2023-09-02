@@ -209,6 +209,41 @@ DUMPER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('triethylenetetramine') * 100)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('aminoethylpiperazine') * 50)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('diethylenetriamine') * 300)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('ethylenediamine') * 500)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('piperazine') * 50)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('wastewater') * 5000)
+        .duration(4)
+        .buildAndRegister()
+        
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('metal_sulfate_waste') * 20000)
+        .duration(20)
+        .buildAndRegister()
+
 SIFTER.recipeBuilder()
         .fluidInputs(fluid('flue_gas') * 16000)
         .inputs(ore('dustCalcite') * 5)

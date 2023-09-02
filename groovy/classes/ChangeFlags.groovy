@@ -15,6 +15,7 @@ import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import supersymmetry.api.recipes.SuSyRecipeMaps;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
+import gregtech.api.fluids.fluidType.FluidTypes;
 
 //eventManager.listen(EventPriority.LOWEST)
 class ChangeFlags {
@@ -68,15 +69,16 @@ class ChangeFlags {
         
         DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
         AquaRegia.setFormula("(HNO3)(HCl)3", true);
-      
-		Borax.setProperty(PropertyKey.ORE, new OreProperty());
+        Tantalite.setFormula("(Fe,Mn)Ta2O6", true);
+
+	Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
         Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
         Asbestos.addFlags("generate_foil");
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
         
-        Iodine.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Iodine.setProperty(PropertyKey.FLUID, new FluidProperty(FluidTypes.GAS, false));
         LithiumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
         SiliconDioxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());

@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "gregtech:items/metaitems/lead_anode_slime"
+      "layer0": "gregtech:items/metaitems/drone.lv"
     }
   }

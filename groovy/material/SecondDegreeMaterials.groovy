@@ -520,13 +520,31 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        PalladiumMotherLiquor = new Material.Builder(13083, "palladium_mother_liquor")
+        TantalumFluorideSolution = new Material.Builder(13083, "tantalum_fluoride_solution")
+                .fluid()
+                .components(TantalumFluoride, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        AmmoniumPerrhenateSolution = new Material.Builder(13084, "ammonium_perrhenate_solution")
+                .fluid()
+                .components(AmmoniumPerrhenate, 1, Water, 1)
+                .colorAverage()
+                .build();
+        
+        AluminiumChlorideSolution = new Material.Builder(13085, "aluminium_chloride_solution")
+                .fluid()
+                .components(AluminiumChloride, 1, Water, 3)
+                .colorAverage()
+                .build();
+
+        PalladiumMotherLiquor = new Material.Builder(13086, "palladium_mother_liquor")
                 .fluid()
                 .components(AmmoniumChloride, 1, Ammonia, 2, HydrogenChloride, 8, Water, 12)
                 .colorAverage()
                 .build();
 
-        DivalentPalladiumSolution = new Material.Builder(13084, "divalent_palladium_solution")
+        DivalentPalladiumSolution = new Material.Builder(13087, "divalent_palladium_solution")
                 .fluid()
                 .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
                 .colorAverage()
