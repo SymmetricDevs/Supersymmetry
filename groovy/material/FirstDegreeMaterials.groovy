@@ -3095,12 +3095,6 @@ public class FirstDegreeMaterials{
                 .components(Calcium, 1, Zirconium, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
-
-        HydrogenSilsesquioxane = new Material.Builder(8551, 'hydrogen_silsesquioxane')
-                .dust()
-                .color(0xC7C0CB)
-                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
-                .build()
                 
         NickelIINitrateSolution = new Material.Builder(8551, "nickel_nitrate_solution")
         	.fluid()
@@ -3213,5 +3207,11 @@ public class FirstDegreeMaterials{
                 .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
+        
+        HydrogenSilsesquioxane = new Material.Builder(8567, 'hydrogen_silsesquioxane')
+                .dust()
+                .color(0xC7C0CB)
+                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
+                .build()
     }
 }
