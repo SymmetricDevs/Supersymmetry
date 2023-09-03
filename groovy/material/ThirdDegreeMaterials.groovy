@@ -298,5 +298,11 @@ public class ThirdDegreeMaterials {
                 .components(Tetrahydrofuran, 1, SulfuricAcid, 1, Water, 1)
                 .colorAverage()
                 .build()
+
+        HydrogenSilsesquioxaneSolution = new Material.Builder(24047, "hydrogen_silsesquioxane_solution")
+                .fluid()
+                .components(HydrogenSilsesquioxane, 1, MethylIsobutylKetone, 1)
+                .colorAverage()
+                .build();
     }
 }
