@@ -517,5 +517,23 @@ public class SecondDegreeMaterials {
                 .components(AmmoniumThiocyanate, 1, Water, 1)
                 .colorAverage()
                 .build();
+
+        TantalumFluorideSolution = new Material.Builder(13083, "tantalum_fluoride_solution")
+                .fluid()
+                .components(TantalumFluoride, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        AmmoniumPerrhenateSolution = new Material.Builder(13084, "ammonium_perrhenate_solution")
+                .fluid()
+                .components(AmmoniumPerrhenate, 1, Water, 1)
+                .colorAverage()
+                .build();
+        
+        AluminiumChlorideSolution = new Material.Builder(13085, "aluminium_chloride_solution")
+                .fluid()
+                .components(AluminiumChloride, 1, Water, 3)
+                .colorAverage()
+                .build();
     }
 }

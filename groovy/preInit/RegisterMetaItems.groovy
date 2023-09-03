@@ -74,40 +74,26 @@ eventManager.listen {
 
         customMetaItems.addItem(171, "cellulose_acetate_mesh");
 
-        customMetaItems.addItem(175, "gold_anode_slime")
-        
-        customMetaItems.addItem(176, "silver_anode_slime")
+        customMetaItems.addItem(175, "anode_slime.gold")
+        customMetaItems.addItem(176, "anode_slime.silver")
+        customMetaItems.addItem(179, "anode_slime.lead")
+        customMetaItems.addItem(211, "anode_slime.copper")
 
         customMetaItems.addItem(177, "zeolite_membrane_support");
-
         customMetaItems.addItem(178, "zeolite_membrane");
 
-        customMetaItems.addItem(179, "lead_anode_slime")
-
         customMetaItems.addItem(180, "patterned_thick_film_substrate_wafer");
-
         customMetaItems.addItem(181, "thick_film_resistor_wafer");
-
         customMetaItems.addItem(182, "metallized_plastic_film");
-
         customMetaItems.addItem(183, "metallized_plastic_square");
-
         customMetaItems.addItem(184, "raw_smd_capacitor");
-
         customMetaItems.addItem(185, "raw_capacitor_roll");
-
         customMetaItems.addItem(186, "aluminium_electrolytic_capacitor");
-
         customMetaItems.addItem(187, "tantalum_chip");
-
         customMetaItems.addItem(188, "anodized_tantalum_chip");
-
         customMetaItems.addItem(189, "manganized_tantalum_chip");
-
         customMetaItems.addItem(190, "ferroelectric_ceramic_foil");
-
         customMetaItems.addItem(191, "stacked_ceramic_capacitor");
-
         customMetaItems.addItem(192, "raw_ceramic_capacitor");
 
         customMetaItems.addItem(193, "chip.insulated_silicon");
@@ -117,30 +103,27 @@ eventManager.listen {
 
         customMetaItems.addItem(197, "fused_quartz");
 
-        customMetaItems.addItem(198, "amberlyst_ch_beads");
-
-        customMetaItems.addItem(199, "ag_fifty_w_x_eight_beads");
-
         customMetaItems.addItem(200, "thick_film_substrate_wafer");
 
         customMetaItems.addItem(201, "vti_rich_pig_iron");
-
         customMetaItems.addItem(202, "vt_slag");
 
         customMetaItems.addItem(203, "sponge.titanium")
         customMetaItems.addItem(204, "sponge.titanium.crude")
-
         customMetaItems.addItem(205, "sponge.zirconium")
         customMetaItems.addItem(206, "sponge.zirconium.crude")
-
         customMetaItems.addItem(207, "sponge.hafnium")
         customMetaItems.addItem(208, "sponge.hafnium.crude")
+        customMetaItems.addItem(209, "sponge.platinum")
 
-        customMetaItems.addItem(215, "sponge.platinum")
-		
-		customMetaItems.addItem(210, "bound_leather")
+	customMetaItems.addItem(210, "bound_leather")
 
-        customMetaItems.addItem(211, "copper_anode_slime")
+        customMetaItems.addItem(212, "drone.lv").setMaxStackSize(1).addComponents(ElectricStats.createRechargeableBattery(10000, GTValues.LV)).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+
+        customMetaItems.addItem(250, "beads.amberlyst_ch");
+        customMetaItems.addItem(251, "beads.ag_fifty_w_x_eight");
+        customMetaItems.addItem(252, "beads.rhenium_ion_exchange")
+        customMetaItems.addItem(253, "beads.loaded_rhenium_ion_exchange")
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
@@ -151,12 +134,16 @@ eventManager.listen {
         customMetaItems.addItem(1101, "steam.motor")
 
         customMetaItems.addItem(2000, "spaceship.me.scrap")
+
         customMetaItems.addItem(2001, "wafer.pattern.processor")
         customMetaItems.addItem(2002, "wafer.pattern.memory")
+
         customMetaItems.addItem(2003, "plate.pattern.processor")
         customMetaItems.addItem(2004, "plate.pattern.memory")
+
         customMetaItems.addItem(2005, "pattern.processor")
         customMetaItems.addItem(2006, "pattern.memory")
+
         customMetaItems.addItem(2007, "storage.segment")
 
         customMetaItems.addItem(2500, "gun.barrel.steel")
@@ -294,6 +281,7 @@ eventManager.listen {
         customMetaItems.addItem(7002, "seed_crystal.alumina");
         customMetaItems.addItem(7003, "seed_crystal.beryllium_oxide");
         customMetaItems.addItem(7004, "seed_crystal.emerald");
+        customMetaItems.addItem(7005, "seed_crystal.lithium_niobate");
 
         //Boules 7500-8000
 
@@ -306,6 +294,7 @@ eventManager.listen {
         customMetaItems.addItem(7506, "boule.sapphire");
         customMetaItems.addItem(7507, "boule.ruby");
         customMetaItems.addItem(7508, "boule.silicon_germanium");
+        customMetaItems.addItem(7509, "boule.lithium_niobate");
 
         //Wafers 8000-9000
 
