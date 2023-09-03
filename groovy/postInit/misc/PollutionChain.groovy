@@ -240,7 +240,7 @@ DUMPER.recipeBuilder()
         .buildAndRegister()
         
 DUMPER.recipeBuilder()
-        .fluidInputs(fluid('metal_sulfate_waste') * 20000)
+        .fluidInputs(fluid('metal_sulfate_waste') * 1000)
         .duration(20)
         .buildAndRegister()
 

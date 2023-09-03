@@ -67,19 +67,18 @@ CLARIFIER.recipeBuilder() // Flotated Tantalite
 
 AUTOCLAVE.recipeBuilder() // Impure Fluorotantalic Acid Solution
     .inputs(ore('dustFlotatedTantalite') * 1)
-    .fluidInputs(fluid('hydrofluoric_acid') * 14000)
-    .fluidInputs(fluid('sulfuric_acid') * 1000)
-    .fluidOutputs(fluid('impure_fluorotantalic_acid_solution') * 20000)
+    .fluidInputs(fluid('hydrogen_fluoride') * 14000)
+    .fluidInputs(fluid('diluted_sulfuric_acid') * 2000)
+    .fluidOutputs(fluid('impure_fluorotantalic_acid_solution') * 1000)
     .duration(80)
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder() // Tantalum-rich Extract
-    .fluidInputs(fluid('impure_fluorotantalic_acid_solution') * 20000)
+    .fluidInputs(fluid('impure_fluorotantalic_acid_solution') * 1000)
     .fluidInputs(fluid('methyl_isobutyl_ketone') * 8000)
     .fluidOutputs(fluid('tantalum_rich_extract') * 8000)
-    .fluidOutputs(fluid('metal_sulfate_waste') * 16000)
-    .fluidOutputs(fluid('metal_sulfate_waste') * 4000)
+    .fluidOutputs(fluid('metal_sulfate_waste') * 1000)
     .duration(80)
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()

@@ -492,6 +492,11 @@ Benzene.setDuration(120);
 Benzene.setAmountToBurn(10);
 Benzene.setByproductAmount(750);
 
+def Hydrogen = new IFluidFuel('hydrogen', "steam")
+Hydrogen.setDuration(10);
+Hydrogen.setAmountToBurn(160);
+Hydrogen.setByproductAmount(80);
+
 def Methanol = new IFluidFuel('methanol', 'flue_gas');
 Methanol.setDuration(40);
 Methanol.setAmountToBurn(10);
@@ -577,6 +582,7 @@ def FluidFuels = [
         Butene,
         Phenol,
         Benzene,
+        Hydrogen,
         Methanol,
         Ethanol,
         LiquidNaturalGas,
@@ -636,7 +642,7 @@ for (FluidFuel in FluidFuels) {
                 .buildAndRegister();
         }
 
-        /*for (lubricant in Globals.lubricants) {
+        for (lubricant in Globals.lubricants) {
             if (FluidFuel.refined_fuel) {
                 recipemap('gas_turbine').recipeBuilder()
                     .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
@@ -656,7 +662,7 @@ for (FluidFuel in FluidFuels) {
                     .EUt(-32)
                     .buildAndRegister();
             }
-        }*/
+        }
     }
 
     recipemap('flare_stack').recipeBuilder()

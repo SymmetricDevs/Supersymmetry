@@ -96,11 +96,8 @@ class Globals {
         }
     }
 
-    public static lubricants = {
-        new Lubricant('lubricating_oil', 3, 1.2)
-        new Lubricant('lubricant', 3, 1.4)
-        /*new Lubricant('midgrade_lubricant', 2, 1.6)
-        new Lubricant('premium_lubricant', 2, 1.8)
-        new Lubricant('supreme_lubricant', 1, 2.0)*/
-    }
+    public static lubricants = [
+        new Lubricant('lubricating_oil', 1, 1.1),
+        new Lubricant('lubricant', 2, 1.2)
+    ]
 }
