@@ -91,6 +91,20 @@ mods.gregtech.cutter.removeByInput(192, [metaitem('wafer.nor_memory_chip')], [fl
 
 //FEEL FREE TO ADD MORE AS YOU FIND THEM
 
+class Photoresist {
+    String fluidName
+    int amountUsed
+    int timeUsed
+    public static ArrayList<Photoresist> photoresists = new ArrayList<Photoresist>();
+
+    public Photoresist(String fluidName, int amountUsed, float timeUsed) {
+        this.fluidName = fluidName
+        this.amountUsed = amountUsed
+        this.timeUsed = timeUsed
+        photoresists.add(this)
+    }
+}
+
 class Etchant {
     String fluidName
     String materialEtched
@@ -132,6 +146,9 @@ class NDopant {
 }
 
 //FEEL FREE TO ADD MORE IF YOU FIND THEM
+
+new Photoresist("novolacs", 50, 300)
+new Photoresist("pmma", 16, 150)
 
 new Etchant("plasma.chlorine", "aluminium", 10, 80)
 new Etchant("plasma.carbon_tetrafluoride", "aluminium", 10, 60)
@@ -184,80 +201,46 @@ new PDopant("dustHighPurityPhosphorus", 2)
 new PDopant("dustHighPurityArsenic", 2)
 
 def generatePatterningRecipes(input, product, mask, voltageTier, timeMultiplier, int outputMultiplier, int circ, boolean cleanroom) {
-    if (cleanroom) {
-        UV_LIGHT_BOX.recipeBuilder()
-                .inputs(metaitem(input))
-                .notConsumable(metaitem(mask))
-                .fluidInputs(fluid("novolacs") * 50)
-                .outputs(metaitem(product) * outputMultiplier)
-                .duration(300 * timeMultiplier)
-                .cleanroom(CleanroomType.CLEANROOM)
-                .EUt(Globals.voltAmps[voltageTier])
-                .buildAndRegister()
+    for (photoresist in Photoresist.photoresists) {
+        if (cleanroom) {
+            UV_LIGHT_BOX.recipeBuilder()
+                    .inputs(metaitem(input))
+                    .notConsumable(metaitem(mask))
+                    .fluidInputs(fluid(photoresist.fluidName) * photoresist.amountUsed)
+                    .outputs(metaitem(product) * outputMultiplier)
+                    .duration(photoresist.timeUsed * timeMultiplier)
+                    .cleanroom(CleanroomType.CLEANROOM)
+                    .EUt(Globals.voltAmps[voltageTier])
+                    .buildAndRegister()
 
-        UV_LIGHT_BOX.recipeBuilder()
-                .inputs(metaitem(input))
-                .notConsumable(metaitem(mask))
-                .fluidInputs(fluid("pmma") * 16)
-                .outputs(metaitem(product) * outputMultiplier)
-                .duration(150 * timeMultiplier)
-                .cleanroom(CleanroomType.CLEANROOM)
-                .EUt(Globals.voltAmps[voltageTier])
-                .buildAndRegister()
+            LASER_ENGRAVER.recipeBuilder()
+                    .inputs(metaitem(input))
+                    .notConsumable(Globals.circuit(circ))
+                    .fluidInputs(fluid(photoresist.fluidName) * (photoresist.amountUsed / 4))
+                    .outputs(metaitem(product) * outputMultiplier)
+                    .duration((int) (photoresist.timeUsed * timeMultiplier / 10))
+                    .cleanroom(CleanroomType.CLEANROOM)
+                    .EUt(Globals.voltAmps[voltageTier])
+                    .buildAndRegister()
+        } else {
+            UV_LIGHT_BOX.recipeBuilder()
+                    .inputs(metaitem(input))
+                    .notConsumable(metaitem(mask))
+                    .fluidInputs(fluid(photoresist.fluidName) * photoresist.amountUsed)
+                    .outputs(metaitem(product) * outputMultiplier)
+                    .duration(photoresist.timeUsed * timeMultiplier)
+                    .EUt(Globals.voltAmps[voltageTier])
+                    .buildAndRegister()
 
-        LASER_ENGRAVER.recipeBuilder()
-                .inputs(metaitem(input))
-                .notConsumable(Globals.circuit(circ))
-                .fluidInputs(fluid("novolacs") * 16)
-                .outputs(metaitem(product) * outputMultiplier)
-                .duration((int) (30 * timeMultiplier))
-                .cleanroom(CleanroomType.CLEANROOM)
-                .EUt(Globals.voltAmps[voltageTier])
-                .buildAndRegister()
-        LASER_ENGRAVER.recipeBuilder()
-                .inputs(metaitem(input))
-                .notConsumable(Globals.circuit(circ))
-                .fluidInputs(fluid("pmma") * 4)
-                .outputs(metaitem(product) * outputMultiplier)
-                .duration((int) (15 * timeMultiplier))
-                .cleanroom(CleanroomType.CLEANROOM)
-                .EUt(Globals.voltAmps[voltageTier])
-                .buildAndRegister()
-    } else {
-        UV_LIGHT_BOX.recipeBuilder()
-                .inputs(metaitem(input))
-                .notConsumable(metaitem(mask))
-                .fluidInputs(fluid("novolacs") * 50)
-                .outputs(metaitem(product) * outputMultiplier)
-                .duration(300 * timeMultiplier)
-                .EUt(Globals.voltAmps[voltageTier])
-                .buildAndRegister()
-
-        UV_LIGHT_BOX.recipeBuilder()
-                .inputs(metaitem(input))
-                .notConsumable(metaitem(mask))
-                .fluidInputs(fluid("pmma") * 16)
-                .outputs(metaitem(product) * outputMultiplier)
-                .duration(150 * timeMultiplier)
-                .EUt(Globals.voltAmps[voltageTier])
-                .buildAndRegister()
-        LASER_ENGRAVER.recipeBuilder()
-                .inputs(metaitem(input))
-                .notConsumable(Globals.circuit(circ))
-                .fluidInputs(fluid("novolacs") * 16)
-                .outputs(metaitem(product) * outputMultiplier)
-                .duration((int) (30 * timeMultiplier))
-                .cleanroom(CleanroomType.CLEANROOM)
-                .EUt(Globals.voltAmps[voltageTier])
-                .buildAndRegister()
-        LASER_ENGRAVER.recipeBuilder()
-                .inputs(metaitem(input))
-                .notConsumable(Globals.circuit(circ))
-                .fluidInputs(fluid("pmma") * 4)
-                .outputs(metaitem(product) * outputMultiplier)
-                .duration((int) (15 * timeMultiplier))
-                .EUt(Globals.voltAmps[voltageTier])
-                .buildAndRegister()
+            LASER_ENGRAVER.recipeBuilder()
+                    .inputs(metaitem(input))
+                    .notConsumable(Globals.circuit(circ))
+                    .fluidInputs(fluid(photoresist.fluidName) * (photoresist.amountUsed / 4))
+                    .outputs(metaitem(product) * outputMultiplier)
+                    .duration((int) (photoresist.timeUsed * timeMultiplier / 10))
+                    .EUt(Globals.voltAmps[voltageTier])
+                    .buildAndRegister()
+        }
     }
 }
 
