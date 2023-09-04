@@ -177,27 +177,14 @@ ELECTROLYZER.recipeBuilder()
         .duration(300)
         .buildAndRegister()
 
-
-
-
 ELECTROLYZER.recipeBuilder()
         .notConsumable(metaitem('graphite_electrode'))
-        .notConsumable(metaitem('stickIron'))
-        .fluidInputs(fluid('IronIiiChloride') * 576)
+        .notConsumable(metaitem('stickSteel'))
+        .fluidInputs(fluid('purified_magnesium_chloride') * 432)
         .fluidOutputs(fluid('chlorine') * 2000)
-        .outputs(metaitem('dustIron'))
+        .outputs(metaitem('dustHighPurityMagnesium'))
         .EUt(30)
         .duration(300)
-        .buildAndRegister()	
-
-ELECTROLYZER.recipeBuilder()
-        .notConsumable(metaitem('graphite_electrode'))
-        .notConsumable(metaitem('stickIron'))
-        .fluidInputs(fluid('IronIiiChloride') * 576)
-        .fluidOutputs(fluid('chlorine') * 2000)
-        .outputs(metaitem('dustIron'))
-        .EUt(30)
-        .duration(300)
-        .buildAndRegister()	
+        .buildAndRegister()
 
 
