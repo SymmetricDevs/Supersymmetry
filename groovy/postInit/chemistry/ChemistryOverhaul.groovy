@@ -2742,15 +2742,6 @@ DISTILLATION_TOWER.recipeBuilder()
 //useful reactions
 
 BR.recipeBuilder()
-.fluidInputs(fluid('calcium_hydroxide_solution') * 1000)
-.inputs(ore('dustPotassiumCarbonate') * 6)
-.fluidOutputs(fluid('potassium_hydroxide_solution') * 1000)
-.outputs(metaitem('dustCalcite') *  5)
-.EUt(30)
-.duration(200)
-.buildAndRegister()
-
-BR.recipeBuilder()
 .inputs(ore('dustPotassiumHydroxide') * 3)
 .fluidInputs(fluid('hydrochloric_acid')* 1000)
 .fluidOutputs(fluid('diluted_rock_salt_solution') * 2000)
