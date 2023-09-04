@@ -1,6 +1,9 @@
 {
   "data": [
     {
+      "biomes": "$FOREST"
+    },
+    {
       "biomes": "$MOUNTAIN"
     },
     {
