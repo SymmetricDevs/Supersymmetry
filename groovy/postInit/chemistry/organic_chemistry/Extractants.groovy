@@ -50,6 +50,27 @@ DISTILLERY.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
+//Frank-Caro process
+EBF.recipeBuilder()
+    .inputs(ore('dustCalciumCarbide') * 3)
+    .fluidInputs(fluid('nitrogen') * 2000)
+    .outputs(metaitem('dustCalciumCyanamide') * 4)
+    .outputs(metaitem('dustCarbon'))
+    .blastFurnaceTemp(1200)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustCalciumCyanamide') * 4)
+    .inputs(ore('dustCarbon'))
+    .fluidInputs(fluid('salt') * 576)
+    .outputs(metaitem('dustSodiumCyanide') * 6)
+    .outputs(metaitem('dustCalciumChloride') * 3)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister()
+
 //SODIUM THIOSULFATE
 BCR.recipeBuilder() 
     .fluidInputs(fluid('soda_ash_solution') * 50)
