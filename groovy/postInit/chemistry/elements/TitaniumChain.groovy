@@ -232,7 +232,7 @@ MACERATOR.recipeBuilder()
 // Byproducts
 
 BR.recipeBuilder()
-        .inputs(ore('vanadium_oxydichloride') * 4)
+        .inputs(ore('dustVanadiumOxydichloride') * 4)
         .fluidInputs(fluid('chlorine') * 1000)
         .fluidOutputs(fluid('vanadium_oxytrichloride') * 1000)
         .duration(200)
