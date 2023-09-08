@@ -414,7 +414,7 @@ mods.gregtech.chemical_bath.recipeBuilder()
 
 mods.gregtech.fluid_solidifier.recipeBuilder()
         .fluidInputs(fluid('iron_iii_chloride') * 144)
-        .outputs(ore('dustIronIiiChloride') * 1)
+        .outputs(metaitem('dustIronIiiChloride') * 1)
         .duration(30)
         .EUt(16)
         .buildAndRegister();
