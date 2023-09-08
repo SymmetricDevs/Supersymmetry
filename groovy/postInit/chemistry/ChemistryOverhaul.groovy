@@ -234,6 +234,16 @@ for (coal_source in COAL_SOURCES) {
             .buildAndRegister()
 }
 
+// Iron III chloride reduction
+
+ROASTER.recipeBuilder()
+.fluidInputs(fluid('hydrogen') * 3000)
+.inputs(ore('dustIronIiiChloride') * 4)
+.fluidOutputs(fluid('hydrogen_chloride') * 3000)
+.outputs(metaitem('dustIron') * 1)
+.duration(120)
+.EUt(120)
+.buildAndRegister()
 
 // Phosphorous Pentoxide roaster
 
