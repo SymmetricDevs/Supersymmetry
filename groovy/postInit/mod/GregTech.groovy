@@ -410,6 +410,15 @@ mods.gregtech.chemical_bath.recipeBuilder()
         .EUt(30)
         .buildAndRegister();
 
+//Iron III chloride
+
+mods.gregtech.fluid_solidifier.recipeBuilder()
+        .fluidInputs(fluid('iron_iii_chloride') * 144)
+        .outputs(item('dustIronIiiChloride') * 1)
+        .duration(30)
+        .EUt(16)
+        .buildAndRegister();
+
 //Lava
 
 mods.gregtech.fluid_solidifier.recipeBuilder()
