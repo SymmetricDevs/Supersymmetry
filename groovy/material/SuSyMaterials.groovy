@@ -359,7 +359,7 @@ class SuSyMaterials {
         public static Material UltramaficTailingSlurry;
         public static Material GaseousIronIIIChloride;
         public static Material GaseousTitaniumTetrachloride;
-        public static Material GaseousAluminiumTrichloride;
+        public static Material GaseousAluminiumChloride;
         public static Material DirtyMolecularSieve;
         public static Material OligomericBisphenolSolution;
         public static Material ImpureBariteSlurry;
@@ -651,7 +651,6 @@ class SuSyMaterials {
         public static Material ImpregnatedAluminaCatalyst;
         public static Material BismuthCopper;
         public static Material Bromobenzene;
-        public static Material AluminiumTrichloride;
         public static Material Triethylaluminium;
         public static Material HydrogenPeroxide;
         public static Material Tetrabromomethane;

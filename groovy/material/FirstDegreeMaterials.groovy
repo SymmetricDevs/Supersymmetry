@@ -854,12 +854,11 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        AluminiumTrichloride = new Material.Builder(8214, "aluminium_trichloride")
+        ManganeseIISulfate = new Material.Builder(8214, "manganese_ii_sulfate")
                 .dust()
-                .components(Aluminium, 1, Chlorine, 3)
-                .flags(GENERATE_CATALYST_BED)
+                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
-                .build()
+                .build();
 
         Triethylaluminium = new Material.Builder(8215, "triethylaluminium")
                 .fluid()
@@ -1024,7 +1023,7 @@ public class FirstDegreeMaterials{
 
         AluminiumChloride = new Material.Builder(8242, "aluminium_chloride")
                 .dust().fluid(FluidTypes.GAS)
-                .flags(NO_UNIFICATION)
+                .flags(NO_UNIFICATION, GENERATE_CATALYST_BED)
                 .fluidTemp(460)
                 .components(Aluminium, 1, Chlorine, 3)
                 .colorAverage()
@@ -2708,10 +2707,10 @@ public class FirstDegreeMaterials{
                 .color(0x887866)
                 .build();
 
-        GaseousAluminiumTrichloride = new Material.Builder(8496, "gaseous_aluminium_trichloride")
+        GaseousAluminiumChloride = new Material.Builder(8496, "gaseous_aluminium_chloride")
                 .fluid(FluidTypes.GAS)
                 .fluidTemp(460)
-                .components(AluminiumTrichloride, 1)
+                .components(AluminiumChloride, 1)
                 .colorAverage()
                 .build();
 
@@ -3199,12 +3198,6 @@ public class FirstDegreeMaterials{
         LithiumOxide = new Material.Builder(8565, "lithium_oxide")
                 .dust().fluid()
                 .components(Lithium, 2, Oxygen, 1)
-                .colorAverage()
-                .build();
-
-        ManganeseIISulfate = new Material.Builder(8566, "manganese_ii_sulfate")
-                .dust()
-                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
     }

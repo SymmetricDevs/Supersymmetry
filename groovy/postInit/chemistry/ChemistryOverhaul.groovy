@@ -3231,12 +3231,12 @@ FBR.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-// Aluminium Trichloride
+// Bromobenzene
 
 TBR.recipeBuilder()
     .fluidInputs(fluid('benzene') * 50)
     .fluidInputs(fluid('bromine') * 50)
-    .notConsumable(ore('dustAluminiumTrichloride'))
+    .notConsumable(ore('dustAluminiumChloride'))
     .fluidOutputs(fluid('bromobenzene') * 50)
     .fluidOutputs(fluid('hydrogen') * 50)
     .duration(10) 
@@ -3258,7 +3258,7 @@ ALLOY_SMELTER.recipeBuilder()
 ROASTER.recipeBuilder()
     .inputs(ore('dustAluminium'))
     .fluidInputs(fluid('chlorine') * 3000)
-    .outputs(metaitem('dustAluminiumTrichloride') * 4)
+    .outputs(metaitem('dustAluminiumChloride') * 4)
     .duration(100) // Adjust the duration as needed
     .EUt(Globals.voltAmps[1])
     .buildAndRegister();
