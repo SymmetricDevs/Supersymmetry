@@ -1642,7 +1642,7 @@ public class FirstDegreeMaterials{
                 .fluidTemp(600)
                 .components(Lead, 1)
                 .color(0x1f1926)
-                .flags(GENERATE_PLATE)
+                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION)
                 .build();
 
         SilverFreeLead = new Material.Builder(8338, "silver_free_lead")
@@ -1725,6 +1725,7 @@ public class FirstDegreeMaterials{
         BettsCrudeLead = new Material.Builder(8350, "betts_crude_lead")
                 .fluid().ingot()
                 .components(Bismuth, 3, Lead, 6, Copper, 1)
+                .flags(DISABLE_DECOMPOSITION)
                 .color(0x393673)
                 .build();
 
