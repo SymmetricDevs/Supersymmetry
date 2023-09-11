@@ -5,6 +5,12 @@
     },
     {
       "biomes": "$MESA"
+    },
+    {
+      "biomes": "$BEACH"
+    },
+    {
+      "biomes": "$RIVER"
     }
   ],
   "metadata": {
