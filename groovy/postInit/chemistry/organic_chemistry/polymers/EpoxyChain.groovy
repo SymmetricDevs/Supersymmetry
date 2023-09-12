@@ -15,7 +15,7 @@ FLUID_SOLIDIFER = recipemap('fluid_solidifer')
 CHEMICAL_BATH = recipemap('chemical_bath')
 
 // Curing agents
-public static class CuringAgent {
+static class CuringAgent {
     String name
     boolean liquid
     int amount_required
@@ -28,7 +28,7 @@ public static class CuringAgent {
     }
 }
 
-public static curingAgents = [
+static curingAgents = [
     new CuringAgent('diethylenetriamine', true, 100, 1),
     new CuringAgent('triethylenetetramine', true, 50, 1),
     new CuringAgent('aminoethylpiperazine', true, 50, 1),

@@ -1695,74 +1695,74 @@ public class OrganicChemistryMaterials {
                 .color(0x8fa32a)
                 .build();
 
-        TetrabromobisphenolA = new material.Builder(15272, "tetrabromobisphenol_a")
+        TetrabromobisphenolA = new Material.Builder(15272, "tetrabromobisphenol_a")
                 .dust()
                 .components(Carbon, 15, Hydrogen, 12, Bromine, 4, Oxygen, 2)
                 .color(0x6b3220)
                 .build();
 
-        Cyanamide = new material.Builder(15273, "cyanamide")
+        Cyanamide = new Material.Builder(15273, "cyanamide")
                 .dust()
                 .components(Carbon, 1, Hydrogen, 2, Nitrogen, 2)
                 .colorAverage()
                 .build();
 
-        Dicyandiamide = new material.Builder(15274, "dicyandiamide")
+        Dicyandiamide = new Material.Builder(15274, "dicyandiamide")
                 .dust()
                 .components(Carbon, 2, Hydrogen, 4, Nitrogen, 4)
                 .colorAverage()
                 .iconSet(QUARTZ)
                 .build();
 
-        TwoMethylimidazole = new material.Builder(15275, "two_methylimidazole")
+        TwoMethylimidazole = new Material.Builder(15275, "two_methylimidazole")
                 .dust()
                 .components(Carbon, 4, Hydrogen, 6, Nitrogen, 2)
                 .colorAverage()
                 .build();
 
-        FlameRetardantEpoxy = new material.Builder(15276, "flame_retardant_epoxy")
+        FlameRetardantEpoxy = new Material.Builder(15276, "flame_retardant_epoxy")
                 .dust().fluid()
                 .components(Carbon, 21, Hydrogen, 21, Bromine, 4, Chlorine, 1, Oxygen, 5)
                 .color(0xc86b14)
                 .build();
 
-        PropyleneChlorohydrin = new material.Builder(15277, "propylene_chlorohydrin")
+        PropyleneChlorohydrin = new Material.Builder(15277, "propylene_chlorohydrin")
                 .fluid()
                 .components(Carbon, 3, Hydrogen, 7, Chlorine, 1, Oxygen, 1)
                 .colorAverage()
                 .build();
 
-        PropyleneOxide = new material.Builder(15278, "propylene_oxide")
+        PropyleneOxide = new Material.Builder(15278, "propylene_oxide")
                 .fluid()
                 .components(Carbon, 3, Hydrogen, 6, Oxygen, 1)
                 .color(0x9ab522)
                 .build();
 
-        PropyleneCarbonate = new material.Builder(15279, "propylene_carbonate")
+        PropyleneCarbonate = new Material.Builder(15279, "propylene_carbonate")
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 6, Oxygen, 3)
                 .color(0x5db522)
                 .build();
 
-        DiphenylSulfide = new material.Builder(15280, "diphenyl_sulfide")
+        DiphenylSulfide = new Material.Builder(15280, "diphenyl_sulfide")
                 .dust()
                 .components(Carbon, 12, Hydrogen, 10, Sulfur, 1)
                 .color(0x5e5c0a)
                 .build();
 
-        DiphenylSulfoxide = new material.Builder(15281, "diphenyl_sulfoxide")
+        DiphenylSulfoxide = new Material.Builder(15281, "diphenyl_sulfoxide")
                 .dust()
                 .components(Carbon, 12, Hydrogen, 10, Oxygen, 1, Sulfur, 1)
                 .color(0x435e0a)
                 .build();
 
-        MethanesulfonicAcid = new material.Builder(15282, "methanesulfonic_acid")
+        MethanesulfonicAcid = new Material.Builder(15282, "methanesulfonic_acid")
                 .fluid()
                 .components(Carbon, 1, Hydrogen, 4, Oxygen, 3, Sulfur, 1)
                 .color(0xff6e6e)
                 .build();
 
-        TriarylsulfoniumHexafluoroantimonate = new material.Builder(15283, "triarylsulfonium_hexafluoroantimonate")
+        TriarylsulfoniumHexafluoroantimonate = new Material.Builder(15283, "triarylsulfonium_hexafluoroantimonate")
                 .dust()
                 .components(Carbon, 24, Hydrogen, 19, Fluorine, 6, Sulfur, 2, Antimony, 1)
                 .color(0x31a374)

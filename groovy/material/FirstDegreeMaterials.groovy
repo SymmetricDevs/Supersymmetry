@@ -3228,14 +3228,14 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        AcidWashedSiliconDioxide = new Material.Builder(8570, "")
+        AcidWashedSiliconDioxide = new Material.Builder(8570, "acid_washed_silicon_dioxide")
                 .dust()
                 .components(SiliconDioxide, 1)
                 .color(0xc8c8c8)
                 .iconSet(SHINY)
                 .build();
 
-        DisulfurDichloride = new Material.Builder(856, "")
+        DisulfurDichloride = new Material.Builder(8571, "disulfur_dichloride")
                 .fluid()
                 .components(Sulfur, 2, Chlorine, 2)
                 .color(0xccc31d)

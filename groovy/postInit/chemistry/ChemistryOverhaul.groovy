@@ -1316,7 +1316,7 @@ LCR.recipeBuilder()
 
 DISTILLERY.recipeBuilder()
 .fluidInputs(fluid('sodium_hexafluoroantimonate_solution') * 1000)
-.outputs(ore('dustSodiumHexafluoroantimonate') * 8)
+.outputs(metaitem('dustSodiumHexafluoroantimonate') * 8)
 .fluidOutputs(fluid('hydrogen_fluoride') * 1000)
 .duration(20)
 .EUt(30)
