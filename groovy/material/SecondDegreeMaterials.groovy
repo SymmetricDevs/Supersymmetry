@@ -535,5 +535,23 @@ public class SecondDegreeMaterials {
                 .components(AluminiumChloride, 1, Water, 3)
                 .colorAverage()
                 .build();
+
+        DilutedSodiumSulfiteSolution = new Material.Builder(13086, "diluted_sodium_sulfite_solution")
+                .fluid()
+                .components(SodiumSulfite, 1, Water, 14)
+                .color(0x75745a)
+                .build();
+
+        SodiumHexafluoroantimonateSolution = new Material.Builder(13087, "sodium_hexafluoroantimonate_solution")
+                .fluid()
+                .components(SodiumHexafluoroantimonate, 1, HydrogenFluoride, 1)
+                .colorAverage()
+                .build();
+
+        EGlass = new Material.Builder(13088, "e_glass")
+                .fluid()
+                .components(SiliconDioxide, 6, Alumina, 1, BoronTrioxide, 1, Quicklime, 2)
+                .color(0x778f8b)
+                .build();
     }
 }

@@ -32,7 +32,7 @@ public static curingAgents = [
     new CuringAgent('diethylenetriamine', true, 100, 1),
     new CuringAgent('triethylenetetramine', true, 50, 1),
     new CuringAgent('aminoethylpiperazine', true, 50, 1),
-    new CuringAgent('dustDicyanamide', false, 2, 2),
+    new CuringAgent('dustDicyandiamide', false, 2, 2),
     new CuringAgent('dustPhthalicAnhydride', false, 1, 2),
     new CuringAgent('dustEpoxyCuringMixture', false, 1, 0.25)
 ]
@@ -119,7 +119,7 @@ for (curingAgent in curingAgents) {
         .fluidInputs(fluid('epichlorohydrin') * 1200) //excess epichlorohydrin to control degree of polymerization
         .fluidInputs(fluid(curingAgent.name) * curingAgent.amount_required)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
-        .outputs(metaitem('dustWetEpoxyResin') * 7)
+        .outputs(metaitem('dustWetEpoxy') * 7)
         .fluidOutputs(fluid('diluted_salt_water') * 2000)
         .duration((int) (100 * curingAgent.duration))
         .EUt(480)
@@ -130,7 +130,7 @@ for (curingAgent in curingAgents) {
         .fluidInputs(fluid('epichlorohydrin') * 4800)
         .inputs(ore(curingAgent.name) * curingAgent.amount_required)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 4000)
-        .outputs(metaitem('dustWetEpoxyResin') * 28)
+        .outputs(metaitem('dustWetEpoxy') * 28)
         .fluidOutputs(fluid('diluted_salt_water') * 8000)
         .duration((int) (100 * curingAgent.duration))
         .EUt(480)
@@ -139,9 +139,9 @@ for (curingAgent in curingAgents) {
 }
 
 VACUUM_CHAMBER.recipeBuilder()
-    .inputs(ore('dustWetEpoxyResin') * 7)
+    .inputs(ore('dustWetEpoxy') * 7)
     .notConsumable(ore('springNichrome'))
-    .outputs(metaitem('dustEpoxyResin') * 7)
+    .outputs(metaitem('dustEpoxy') * 7)
     .duration(100)
     .EUt(30)
     .buildAndRegister()
@@ -161,9 +161,9 @@ BR.recipeBuilder()
     .inputs(ore('dustNickelChloride') * 9)
     .inputs(ore('dustAluminiumChloride') * 4)
     .fluidInputs(fluid('deionized_water') * 4000)
-    .fluidInputs(fluid('sodium_hydroxide_solution') * 9000)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 8000)
     .outputs(metaitem('dustNickelHydrotalcite'))
-    .fluidOutputs(fluid('water') * 9000)
+    .fluidOutputs(fluid('salt_water') * 8000)
     .duration(100)
     .EUt(480)
     .buildAndRegister()
@@ -236,7 +236,7 @@ BR.recipeBuilder()
 BR.recipeBuilder()
     .inputs(ore('dustCyanamide') * 10)
     .notConsumable(fluid('sodium_hydroxide_solution') * 1000)
-    .outputs(metaitem('dustDicyanamide') * 10)
+    .outputs(metaitem('dustDicyandiamide') * 10)
     .duration(200)
     .EUt(30)
     .buildAndRegister()
@@ -253,7 +253,7 @@ LCR.recipeBuilder()
 
 MIXER.recipeBuilder()
     .inputs(ore('dustTwoMethylimidazole'))
-    .inputs(ore('dustCyanamide') * 2)
+    .inputs(ore('dustDicyandiamide') * 2)
     .inputs(ore('dustPhthalicAnhydride'))
     .outputs(metaitem('dustEpoxyCuringMixture'))
     .duration(20)
@@ -265,16 +265,16 @@ POLYMERIZATION.recipeBuilder()
     .fluidInputs(fluid('epichlorohydrin') * 4800)
     .inputs(ore('dustEpoxyCuringMixture'))
     .fluidInputs(fluid('sodium_hydroxide_solution') * 4000)
-    .outputs(metaitem('dustWetFlameRetardantEpoxyResin') * 28)
+    .outputs(metaitem('dustWetFlameRetardantEpoxy') * 28)
     .fluidOutputs(fluid('diluted_salt_water') * 8000)
     .duration(100)
     .EUt(1920)
     .buildAndRegister()
 
 VACUUM_CHAMBER.recipeBuilder()
-    .inputs(ore('dustWetFlameRetardantEpoxyResin') * 7)
+    .inputs(ore('dustWetFlameRetardantEpoxy') * 7)
     .notConsumable(ore('springNichrome'))
-    .outputs(metaitem('dustFlameRetardantEpoxyResin') * 7)
+    .outputs(metaitem('dustFlameRetardantEpoxy') * 7)
     .duration(25)
     .EUt(30)
     .buildAndRegister()
@@ -291,9 +291,9 @@ MIXER.recipeBuilder()
     .buildAndRegister()
 
 MIXER.recipeBuilder()
-    .inputs(ore('dustSiliconDioxide') * 18)
+    .inputs(ore('dustAcidWashedSiliconDioxide') * 18)
     .inputs(ore('dustAlumina') * 5)
-    .inputs(ore('dustBoricAcid') * 14)
+    .inputs(ore('dustBoronTrioxide') * 5)
     .inputs(ore('dustQuicklime') * 4)
     .outputs(metaitem('dustEGlass') * 10)
     .duration(100)
@@ -319,7 +319,7 @@ CENTRIFUGE.recipeBuilder()
 
 CHEMICAL_BATH.recipeBuilder()
     .inputs(metaitem('e_glass_fibers'))
-    .fluidInputs(fluid('flame_retardant_epoxy_resin') * 144)
+    .fluidInputs(fluid('flame_retardant_epoxy') * 144)
     .outputs(metaitem('epoxy_lamina'))
     .EUt(120)
     .duration(10)
@@ -336,7 +336,7 @@ DRYER.recipeBuilder()
 
 // Bisphenol A Novolac Epoxy
 POLYMERIZATION.recipeBuilder()
-    .fluidInputs(fluid('epoxy_resin') * 1008)
+    .fluidInputs(fluid('epoxy') * 1008)
     .fluidInputs(fluid('formaldehyde') * 3000)
     .outputs(metaitem('dustBisphenolANovolacEpoxy') * 7)
     .duration(100)
@@ -415,3 +415,80 @@ BR.recipeBuilder()
     .EUt(480)
     .buildAndRegister()
 
+TBR.recipeBuilder()
+    .notConsumable(ore('dustAluminiumChloride'))
+    .fluidInputs(fluid('benzene') * 2000)
+    .fluidInputs(fluid('sulfur_dioxide') * 1000)
+    .outputs(metaitem('dustDiphenylSulfoxide'))
+    .duration(2)
+    .EUt(30)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustTinyPotassiumPersulfate'))
+    .fluidInputs(fluid('methane') * 8000)
+    .fluidInputs(fluid('oleum') * 8000)
+    .fluidOutputs(fluid('methanesulfonic_acid') * 8000)
+    .duration(100)
+    .EUt(480)
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustPhosphorusPentoxide'))
+    .fluidInputs(fluid('methanesulfonic_acid') * 4000)
+    .fluidOutputs(fluid('sulfonium_preparation_mixture') * 4000)
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustDiphenylSulfoxide'))
+    .inputs(ore('dustDiphenylSulfide'))
+    .inputs(ore('dustSodiumHexafluoroantimonate') * 8)
+    .notConsumable(fluid('sulfonium_preparation_mixture') * 28000)
+    .outputs(metaitem('dustTriarylsulfoniumHexafluoroantimonate') * 52)
+    .duration(100)
+    .EUt(480)
+    .buildAndRegister()
+
+/*
+Bisphenol-A Novolac Epoxy
+    Average Molar Mass: 900 g/mol
+    Percent Weight: 50%
+Gamma-Butyrolactone
+    Molar Mass: 86.090 g/mol
+    Percent Weight: 45%
+Propylene Carbonate
+    Molar Mass: 102.089 g/mol
+    Percent Weight: 2.5%
+Triarylsulfonium Hexafluoroantimonate
+    Molar Mass: 607.29 g/mol
+    Percent Weight: 2.5%
+
+Assume 100g of material.
+    50g Novolac
+    45g Gamma Butyrolactone
+    2.5g Propylene Carbonate
+    2.5g Triarylsulfonium Hexafluoroantimonate
+
+    55.6 mmol Bisphenol-A Novolac Epoxy
+    523 mmol Gamma-Butyrolactone
+    24.5 mmol Propylene Carbonate
+    4.12 mmol Triarylsulfonium Hexafluoroantimonate
+
+Total: 607.22 mmol.
+    9.16% Bisphenol-A Novolac Epoxy
+    86.1% Gamma-Butyrolactone
+    4.03% Propylene Carbonate
+    0.678% Triarylsulfonium Hexafluoroantimonate
+*/
+
+LCR.recipeBuilder()
+    .inputs(ore('dustTriarylsulfoniumHexafluoroantimonate') * 26)
+    .inputs(ore('dustBisphenolANovolacEpoxy') * 47)
+    .fluidInputs(fluid('propylene_carbonate') * 3000)
+    .fluidInputs(fluid('gamma_butyrolactone') * 63500)
+    .outputs(fluid('su_eight') * 66500)
+    .duration(670)
+    .EUt(1920)
+    .buildAndRegister()

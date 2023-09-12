@@ -1674,6 +1674,37 @@ material.acetylacetone=Acetylacetone
 material.diethylaluminium_acetylacetonate=Diethylaluminium Acetylacetonate
 material.diluted_two_ethyl_two_hexenal=Diluted 2-Ethyl-2-hexenal
 material.acidic_triethyl_phosphate=Acidic Triethyl Phosphate
+material.bisphenol_bromination_catalyst=Bisphenol Bromination Catalyst
+material.impure_brominated_bisphenol_emulsion=Impure Brominated Bisphenol Emulsion
+material.impure_brominated_bisphenol_solution=Impure Brominated Bisphenol Solution
+material.bisphenol_a_novolac_epoxy=Bisphenol A Novolac Epoxy
+material.sulfonium_preparation_mixture=Sulfonium Preparation Mixture
+material.nickel_hydrotalcite=Nickel Hydrotalcite
+material.calcium_cyanamide=Calcium Cyanamide
+material.antimony_pentafluoride=Antimony Pentafluoride
+material.sodium_hexafluoroantimonate=Sodium Hexafluoroantimonate
+material.acid_washed_silicon_dioxide=Acid Washed Silicon Dioxide
+material.disulfur_dichloride=Disulfur Dichloride
+material.diluted_sodium_sulfite_solution=Diluted Sodium Sulfite Solution
+material.sodium_hexafluoroantimonate_solution=Sodium Hexafluoroantimonate Solution
+material.e_glass=E Glass
+material.tetrabromobisphenol_a=Tetrabromobisphenol A
+material.cyanamide=Cyanamide
+material.dicyandiamide=Dicyandiamide
+material.two_methylimidazole=Two Methylimidazole
+material.flame_retardant_epoxy=Flame Retardant Epoxy
+material.propylene_chlorohydrin=Propylene Chlorohydrin
+material.propylene_oxide=Propylene Oxide
+material.propylene_carbonate=Propylene Carbonate
+material.diphenyl_sulfide=Diphenyl Sulfide
+material.diphenyl_sulfoxide=Diphenyl Sulfoxide
+material.methanesulfonic_acid=Methanesulfonic Acid
+material.triarylsulfonium_hexafluoroantimonate=Triarylsulfonium Hexafluoroantimonate
+material.wet_epoxy=Wet Epoxy
+material.tetrabromobisphenol_a_solution=Tetrabromobisphenol A Solution
+material.epoxy_curing_mixture=Epoxy Curing Mixture
+material.wet_flame_retardant_epoxy=Wet Flame Retardant Epoxy
+material.propylene_oxide_solution=Propylene Oxide Solution
 
 # Isotopes
 

@@ -466,6 +466,11 @@ class SuSyMaterials {
         public static Material HZSMFive;
         public static Material FunctionalizableCrosslinkedPolystyrene;
         public static Material TantalumExtract;
+        public static Material BisphenolBrominationCatalyst;
+        public static Material ImpureBrominatedBisphenolEmulsion;
+        public static Material ImpureBrominatedBisphenolSolution;
+        public static Material BisphenolANovolacEpoxy;
+        public static Material SulfoniumPreparationMixture;
 
         // Petrochem Materials
 
@@ -986,6 +991,12 @@ class SuSyMaterials {
         public static Material ActivatedRaneyCobalt;
         public static Material LithiumOxide;
         public static Material ManganeseIISulfate;
+        public static Material NickelHydrotalcite;
+        public static Material CalciumCyanamide;
+        public static Material AntimonyPentafluoride;
+        public static Material SodiumHexafluoroantimonate;
+        public static Material AcidWashedSiliconDioxide;
+        public static Material DisulfurDichloride;
 
         // Second Degree Materials
 
@@ -1074,6 +1085,9 @@ class SuSyMaterials {
         public static Material TantalumFluorideSolution;
         public static Material AmmoniumPerrhenateSolution;
         public static Material AluminiumChlorideSolution;
+        public static Material DilutedSodiumSulfiteSolution;
+        public static Material SodiumHexafluoroantimonateSolution;
+        public static Material EGlass;
 
         // Organic Chemistry Materials
 
@@ -1118,7 +1132,6 @@ class SuSyMaterials {
         public static Material Xylene;
         public static Material Phosgene;
         public static Material PhthaloylDichlorideSolution;
-        public static Material SodiumPhenoxideSolution;
         public static Material DiphenylIsophthalateSolution;
         public static Material DiaminobenzidineSolution;
         public static Material PBIPolymerizationMix;
@@ -1353,6 +1366,18 @@ class SuSyMaterials {
         public static Material Ethyltoluene;
         public static Material VinylbenzylChloride;
         public static Material Cyclohexylamine;
+        public static Material TetrabromobisphenolA;
+        public static Material Cyanamide;
+        public static Material Dicyandiamide;
+        public static Material TwoMethylimidazole;
+        public static Material FlameRetardantEpoxy;
+        public static Material PropyleneChlorohydrin;
+        public static Material PropyleneOxide;
+        public static Material PropyleneCarbonate;
+        public static Material DiphenylSulfide;
+        public static Material DiphenylSulfoxide;
+        public static Material MethanesulfonicAcid;
+        public static Material TriarylsulfoniumHexafluoroantimonate;
 
         // Third Degree Materials
 
@@ -1409,6 +1434,12 @@ class SuSyMaterials {
         public static Material CrudeNitrobenzene;
         public static Material DichlorobistriphenylphosphinenickelII;
         public static Material DicarbonylbistriphenylphosphinenickelZero;
+        public static Material SodiumPhenoxideSolution;
+        public static Material WetEpoxy;
+        public static Material TetrabromobisphenolASolution;
+        public static Material EpoxyCuringMixture;
+        public static Material WetFlameRetardantEpoxy;
+        public static Material PropyleneOxideSolution;
 
         // Thermodynamics/Greenhouse Materials
 

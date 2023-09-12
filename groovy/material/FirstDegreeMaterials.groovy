@@ -3201,5 +3201,44 @@ public class FirstDegreeMaterials{
                 .components(Lithium, 2, Oxygen, 1)
                 .colorAverage()
                 .build();
+
+        NickelHydrotalcite = new Material.Builder(8566, "nickel_hydrotalcite")
+                .dust()
+                .components(Nickel, 6, Aluminium, 2, )
+                .color(0x9fb833)
+                .build();
+
+        NickelHydrotalcite.setFormula("[Ni3Al(OH)8]Cl", true)
+
+        CalciumCyanamide = new Material.Builder(8567, "calcium_cyanamide")
+                .dust()
+                .components(Calcium, 1, Carbon, 1, Nitrogen, 2)
+                .colorAverage()
+                .build();
+
+        AntimonyPentafluoride = new Material.Builder(8568, "antimony_pentafluoride")
+                .fluid()
+                .components(Antimony, 1, Fluorine, 5)
+                .colorAverage()
+                .build();
+
+        SodiumHexafluoroantimonate = new Material.Builder(8569, "sodium_hexafluoroantimonate")
+                .dust()
+                .components(Sodium, 1, Antimony, 1, Fluorine, 6)
+                .colorAverage()
+                .build();
+
+        AcidWashedSiliconDioxide = new Material.Builder(8570, "")
+                .dust()
+                .components(SiliconDioxide, 1)
+                .color(0xc8c8c8)
+                .iconSet(SHINY)
+                .build();
+
+        DisulfurDichloride = new Material.Builder(856, "")
+                .fluid()
+                .components(Sulfur, 2, Chlorine, 2)
+                .color(0xccc31d)
+                .build();
     }
 }

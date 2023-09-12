@@ -1762,5 +1762,30 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xc97328)
                 .build();
+
+        BisphenolBrominationCatalyst = new Material.Builder(4336, "bisphenol_bromination_catalyst")
+                .dust()
+                .color(0xbd800f)
+                .build();
+
+        ImpureBrominatedBisphenolEmulsion = new Material.Builder(4337, "impure_brominated_bisphenol_emulsion")
+                .fluid()
+                .color(0x502d0a)
+                .build();
+
+        ImpureBrominatedBisphenolSolution = new Material.Builder(4338, "impure_brominated_bisphenol_solution")
+                .fluid()
+                .color(0x78410a)
+                .build();
+
+        BisphenolANovolacEpoxy = new Material.Builder(4339, "bisphenol_a_novolac_epoxy")
+                .dust()
+                .color(0xa87e54)
+                .build();
+
+        SulfoniumPreparationMixture = new Material.Builder(4340, "sulfonium_preparation_mixture")
+                .fluid()
+                .color(0x9e935c)
+                .build();
     }
 }
