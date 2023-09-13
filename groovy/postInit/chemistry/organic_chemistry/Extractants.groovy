@@ -71,6 +71,15 @@ BR.recipeBuilder()
     .duration(200)
     .buildAndRegister()
 
+BR.recipeBuilder()
+    .inputs(ore('dustCalciumCyanamide') * 4)
+    .fluidInputs(fluid('water') * 3000)
+    .outputs(metaitem('dustCalcite') * 5)
+    .fluidOutputs(fluid('ammonia') * 200)
+    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
 //SODIUM THIOSULFATE
 BCR.recipeBuilder() 
     .fluidInputs(fluid('soda_ash_solution') * 50)
