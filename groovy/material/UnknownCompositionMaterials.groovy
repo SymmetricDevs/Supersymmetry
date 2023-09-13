@@ -616,7 +616,7 @@ public class UnknownCompositionMaterials {
                 .iconSet(SAND)
                 .build();
 
-        CadmiumRichFlueDust = new Material.Builder(4116, "cadmium_rich_flue_dust")
+        CadmiumRichFlue = new Material.Builder(4116, "cadmium_rich_flue")
                 .dust()
                 .color(0x757061)
                 .iconSet(DULL)
@@ -1786,6 +1786,11 @@ public class UnknownCompositionMaterials {
         SulfoniumPreparationMixture = new Material.Builder(4340, "sulfonium_preparation_mixture")
                 .fluid()
                 .color(0x9e935c)
+                .build();
+
+        SuEight = new Material.Builder(4341, "su_eight")
+                .fluid()
+                .color(0x11915c)
                 .build();
     }
 }

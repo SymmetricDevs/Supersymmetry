@@ -1396,10 +1396,22 @@ DISTILLATION_TOWER.recipeBuilder()
 BCR.recipeBuilder()
 .fluidInputs(fluid('benzene') * 50)
 .fluidInputs(fluid('chlorine') * 100)
-.notConsumable(ore('dustIronIiiChloride'))
+.notConsumable(ore('dustAluminiumChloride'))
 .fluidOutputs(fluid('chlorobenzene') * 50)
 .fluidOutputs(fluid('hydrogen_chloride') * 50)
 .duration(12)
+.EUt(30)
+.buildAndRegister()
+
+// Daw's process
+
+REACTION_FURNACE.recipeBuilder()
+.notConsumable(ore('dustTricalciumPhosphate'))
+.fluidInputs(fluid('chlorobenzene') * 1000)
+.fluidInputs(fluid('steam') * 1000)
+.fluidOutputs(fluid('phenol') * 1000)
+.fluidOutputs(fluid('hydrogen_chloride') * 1000)
+.duration(240)
 .EUt(30)
 .buildAndRegister()
 

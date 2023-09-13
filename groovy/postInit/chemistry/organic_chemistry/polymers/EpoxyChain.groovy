@@ -1,7 +1,7 @@
 import static globals.Globals.*
 
 ION_EXCHANGE = recipemap('ion_exchange_column')
-FLUID_EXTRACTOR = recipemap('fluid_extractor')
+FLUID_EXTRACTOR = recipemap('extractor')
 CSTR = recipemap('continuous_stirred_tank_reactor')
 BCR = recipemap('bubble_column_reactor')
 BR = recipemap('batch_reactor')
@@ -11,11 +11,16 @@ VACUUM_CHAMBER = recipemap('vacuum_chamber')
 PHASE_SEPARATOR = recipemap('phase_separator')
 POLYMERIZATION = recipemap('polymerization_tank')
 EBF = recipemap('electric_blast_furnace')
-FLUID_SOLIDIFER = recipemap('fluid_solidifer')
+FLUID_SOLIDIFER = recipemap('fluid_solidifier')
 CHEMICAL_BATH = recipemap('chemical_bath')
 
+// Fiber-Reinforced Epoxy Resin Sheet * 1
+mods.gregtech.chemical_bath.removeByInput(16, [metaitem('wireFineBorosilicateGlass')], [fluid('epoxy') * 144])
+// Fiber-Reinforced Epoxy Resin Sheet * 1
+mods.gregtech.chemical_bath.removeByInput(16, [metaitem('carbon.fibers')], [fluid('epoxy') * 144])
+
 // Curing agents
-static class CuringAgent {
+class CuringAgent {
     String name
     boolean liquid
     int amount_required
@@ -28,7 +33,7 @@ static class CuringAgent {
     }
 }
 
-static curingAgents = [
+curingAgents = [
     new CuringAgent('diethylenetriamine', true, 100, 1),
     new CuringAgent('triethylenetetramine', true, 50, 1),
     new CuringAgent('aminoethylpiperazine', true, 50, 1),
@@ -120,7 +125,7 @@ for (curingAgent in curingAgents) {
         .fluidInputs(fluid(curingAgent.name) * curingAgent.amount_required)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
         .outputs(metaitem('dustWetEpoxy') * 7)
-        .fluidOutputs(fluid('diluted_salt_water') * 2000)
+        .fluidOutputs(fluid('diluted_saltwater') * 2000)
         .duration((int) (100 * curingAgent.duration))
         .EUt(480)
         .buildAndRegister()
@@ -131,7 +136,7 @@ for (curingAgent in curingAgents) {
         .inputs(ore(curingAgent.name) * curingAgent.amount_required)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 4000)
         .outputs(metaitem('dustWetEpoxy') * 28)
-        .fluidOutputs(fluid('diluted_salt_water') * 8000)
+        .fluidOutputs(fluid('diluted_saltwater') * 8000)
         .duration((int) (100 * curingAgent.duration))
         .EUt(480)
         .buildAndRegister()
@@ -160,7 +165,7 @@ BR.recipeBuilder()
 BR.recipeBuilder()
     .inputs(ore('dustNickelChloride') * 9)
     .inputs(ore('dustAluminiumChloride') * 4)
-    .fluidInputs(fluid('deionized_water') * 4000)
+    .fluidInputs(fluid('demineralized_water') * 4000)
     .fluidInputs(fluid('sodium_hydroxide_solution') * 8000)
     .outputs(metaitem('dustNickelHydrotalcite'))
     .fluidOutputs(fluid('salt_water') * 8000)
@@ -266,7 +271,7 @@ POLYMERIZATION.recipeBuilder()
     .inputs(ore('dustEpoxyCuringMixture'))
     .fluidInputs(fluid('sodium_hydroxide_solution') * 4000)
     .outputs(metaitem('dustWetFlameRetardantEpoxy') * 28)
-    .fluidOutputs(fluid('diluted_salt_water') * 8000)
+    .fluidOutputs(fluid('diluted_saltwater') * 8000)
     .duration(100)
     .EUt(1920)
     .buildAndRegister()
@@ -302,7 +307,7 @@ MIXER.recipeBuilder()
 
 EBF.recipeBuilder()
     .inputs(ore('dustEGlass'))
-    .outputs(fluid('e_glass') * 144)
+    .fluidOutputs(fluid('e_glass') * 144)
     .blastFurnaceTemp(1000)
     .EUt(120)
     .duration(10)
@@ -312,13 +317,13 @@ CENTRIFUGE.recipeBuilder()
     .notConsumable(ore('stickSteel'))
     .inputs(ore('wireFineKevlar'))
     .fluidInputs(fluid('e_glass') * 144)
-    .outputs(metaitem('e_glass_fibers'))
+    .outputs(metaitem('glass_fibers'))
     .EUt(120)
     .duration(10)
     .buildAndRegister()
 
 CHEMICAL_BATH.recipeBuilder()
-    .inputs(metaitem('e_glass_fibers'))
+    .inputs(metaitem('glass_fibers'))
     .fluidInputs(fluid('flame_retardant_epoxy') * 144)
     .outputs(metaitem('epoxy_lamina'))
     .EUt(120)
@@ -327,7 +332,7 @@ CHEMICAL_BATH.recipeBuilder()
 
 DRYER.recipeBuilder()
     .inputs(metaitem('epoxy_lamina'))
-    .outputs(metaitem('plateFiberReinforcedEpoxy'))
+    .outputs(metaitem('plateReinforcedEpoxyResin'))
     .EUt(120)
     .duration(100)
     .buildAndRegister()
@@ -345,7 +350,7 @@ POLYMERIZATION.recipeBuilder()
 
 // Propylene Carbonate
 CSTR.recipeBuilder()
-    .fluidInputs(fluid('propylene') * 100)
+    .fluidInputs(fluid('propene') * 100)
     .fluidInputs(fluid('chlorine') * 100)
     .fluidInputs(fluid('water') * 50)
     .fluidOutputs(fluid('propylene_chlorohydrin') * 100)
@@ -363,7 +368,7 @@ BR.recipeBuilder()
 
 DISTILLATION_TOWER.recipeBuilder()
     .fluidInputs(fluid('propylene_oxide_solution') * 2000)
-    .outputs(ore('dustCalciumChloride') * 3)
+    .outputs(metaitem('dustCalciumChloride') * 3)
     .fluidOutputs(fluid('water') * 2000)
     .fluidOutputs(fluid('propylene_oxide') * 2000)
     .duration(100)
@@ -397,7 +402,7 @@ BR.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-TBR.recipeBuilder()
+BCR.recipeBuilder()
     .notConsumable(ore('dustAluminiumChloride'))
     .fluidInputs(fluid('benzene') * 2000)
     .fluidInputs(fluid('sulfur_dioxide') * 1000)
@@ -415,12 +420,12 @@ BR.recipeBuilder()
     .EUt(480)
     .buildAndRegister()
 
-TBR.recipeBuilder()
+BR.recipeBuilder()
     .notConsumable(ore('dustAluminiumChloride'))
     .fluidInputs(fluid('benzene') * 2000)
     .fluidInputs(fluid('sulfur_dioxide') * 1000)
     .outputs(metaitem('dustDiphenylSulfoxide'))
-    .duration(2)
+    .duration(100)
     .EUt(30)
     .buildAndRegister()
 
@@ -488,7 +493,7 @@ LCR.recipeBuilder()
     .inputs(ore('dustBisphenolANovolacEpoxy') * 47)
     .fluidInputs(fluid('propylene_carbonate') * 3000)
     .fluidInputs(fluid('gamma_butyrolactone') * 63500)
-    .outputs(fluid('su_eight') * 66500)
+    .fluidOutputs(fluid('su_eight') * 66500)
     .duration(670)
     .EUt(1920)
     .buildAndRegister()

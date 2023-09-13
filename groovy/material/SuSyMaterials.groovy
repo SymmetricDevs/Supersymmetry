@@ -232,7 +232,7 @@ class SuSyMaterials {
         public static Material ImpureLithiumSulfateSolution;
         public static Material GalenaByproductsSlurry;
         public static Material SinteredLeadConcentrate;
-        public static Material CadmiumRichFlueDust;
+        public static Material CadmiumRichFlue;
         public static Material BlackMetal;
         public static Material AntimonyArsenicFlueDust;
         public static Material BurnedBlackMetal;
@@ -471,6 +471,7 @@ class SuSyMaterials {
         public static Material ImpureBrominatedBisphenolSolution;
         public static Material BisphenolANovolacEpoxy;
         public static Material SulfoniumPreparationMixture;
+        public static Material SuEight;
 
         // Petrochem Materials
 

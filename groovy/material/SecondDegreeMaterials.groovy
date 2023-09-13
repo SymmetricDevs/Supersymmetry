@@ -549,7 +549,7 @@ public class SecondDegreeMaterials {
                 .build();
 
         EGlass = new Material.Builder(13088, "e_glass")
-                .fluid()
+                .dust().fluid()
                 .components(SiliconDioxide, 6, Alumina, 1, BoronTrioxide, 1, Quicklime, 2)
                 .color(0x778f8b)
                 .build();

@@ -1687,7 +1687,7 @@ material.acid_washed_silicon_dioxide=Acid Washed Silicon Dioxide
 material.disulfur_dichloride=Disulfur Dichloride
 material.diluted_sodium_sulfite_solution=Diluted Sodium Sulfite Solution
 material.sodium_hexafluoroantimonate_solution=Sodium Hexafluoroantimonate Solution
-material.e_glass=E Glass
+material.e_glass=E-Glass
 material.tetrabromobisphenol_a=Tetrabromobisphenol A
 material.cyanamide=Cyanamide
 material.dicyandiamide=Dicyandiamide
@@ -1705,6 +1705,7 @@ material.tetrabromobisphenol_a_solution=Tetrabromobisphenol A Solution
 material.epoxy_curing_mixture=Epoxy Curing Mixture
 material.wet_flame_retardant_epoxy=Wet Flame Retardant Epoxy
 material.propylene_oxide_solution=Propylene Oxide Solution
+material.su_eight=SU-8 Photoresist
 
 # Isotopes
 
@@ -2065,6 +2066,9 @@ metaitem.sponge.hafnium.name=Hafnium Sponge
 metaitem.sponge.hafnium.crude.name=Crude Hafnium Sponge
 
 metaitem.drone.lv.name=Basic Drone
+
+metaitem.glass_fibers.name=Glass Fibers
+metaitem.epoxy_lamina.name=Epoxy Lamina
 
 # Multiblocked
 

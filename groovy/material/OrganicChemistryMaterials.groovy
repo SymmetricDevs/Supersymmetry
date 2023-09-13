@@ -934,7 +934,7 @@ public class OrganicChemistryMaterials {
         Kevlar = new Material.Builder(15154, 'kevlar')
                 .polymer(3)
                 .color(0x4d443e)
-                .flags(GENERATE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_FINE_WIRE)
                 .build()
 
         Kevlar.setFormula("COC6H4CONHC6H4NH", true)
