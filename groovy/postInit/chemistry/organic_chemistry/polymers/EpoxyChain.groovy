@@ -186,6 +186,7 @@ BR.recipeBuilder()
 
 BR.recipeBuilder()
     .inputs(ore('dustBisphenolA'))
+    .notConsumable(ore('dustBisphenolBrominationCatalyst'))
     .fluidInputs(fluid('dichloroethane') * 6000)
     .fluidInputs(fluid('hydrogen_peroxide_solution') * 2000)
     .fluidInputs(fluid('bromine') * 4000)
