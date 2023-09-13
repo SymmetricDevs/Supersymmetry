@@ -616,7 +616,7 @@ public class UnknownCompositionMaterials {
                 .iconSet(SAND)
                 .build();
 
-        CadmiumRichFlueDust = new Material.Builder(4116, "cadmium_rich_flue_dust")
+        CadmiumRichFlue = new Material.Builder(4116, "cadmium_rich_flue")
                 .dust()
                 .color(0x757061)
                 .iconSet(DULL)
@@ -1761,6 +1761,36 @@ public class UnknownCompositionMaterials {
         TantalumExtract = new Material.Builder(4335, "tantalum_extract")
                 .fluid()
                 .color(0xc97328)
+                .build();
+
+        BisphenolBrominationCatalyst = new Material.Builder(4336, "bisphenol_bromination_catalyst")
+                .dust()
+                .color(0xbd800f)
+                .build();
+
+        ImpureBrominatedBisphenolEmulsion = new Material.Builder(4337, "impure_brominated_bisphenol_emulsion")
+                .fluid()
+                .color(0x502d0a)
+                .build();
+
+        ImpureBrominatedBisphenolSolution = new Material.Builder(4338, "impure_brominated_bisphenol_solution")
+                .fluid()
+                .color(0x78410a)
+                .build();
+
+        BisphenolANovolacEpoxy = new Material.Builder(4339, "bisphenol_a_novolac_epoxy")
+                .dust()
+                .color(0xa87e54)
+                .build();
+
+        SulfoniumPreparationMixture = new Material.Builder(4340, "sulfonium_preparation_mixture")
+                .fluid()
+                .color(0x9e935c)
+                .build();
+
+        SuEight = new Material.Builder(4341, "su_eight")
+                .fluid()
+                .color(0x11915c)
                 .build();
     }
 }

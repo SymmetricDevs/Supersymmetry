@@ -103,7 +103,6 @@ def metamorphic_tier_3 = [
     'gregtech:ore_cobaltite_0' : 10000,
     'gregtech:ore_realgar_0' : 10000,
     'gregtech:ore_arsenopyrite_0' : 10000,
-    'gregtech:ore_wolframite_0' : 10000,
     'gregtech:ore_pyrargyrite_0' : 10000,
     'gregtech:ore_stephanite_0' : 10000,
     'gregtech:ore_redstone_0' : 10000,
