@@ -2599,7 +2599,7 @@ DISTILLATION_TOWER.recipeBuilder()
 .duration(600)
 .buildAndRegister()
 
-//useful reactions
+// Useful reactions
 
 BR.recipeBuilder()
 .inputs(ore('dustPotassiumHydroxide') * 3)
@@ -2657,6 +2657,48 @@ DISTILLERY.recipeBuilder()
 .EUt(30)
 .duration(100)
 .buildAndRegister()
+
+BR.recipeBuilder()
+.fluidInputs(fluid('potassium_carbonate_solution') * 1000)
+.fluidInputs(fluid('water') * 1000)
+.inputs(ore('dustCalciumHydroxide') * 5)
+.fluidOutputs(fluid('potassium_hydroxide_solution') * 2000)
+.outputs(metaitem('dustCalcite') *  5)
+.EUt(30)
+.duration(200)
+.buildAndRegister()
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 50)
+    .fluidInputs(fluid('hydrogen_chloride') * 50)
+    .fluidOutputs(fluid('salt_water') * 100)
+    .duration(10)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustQuicklime') * 2)
+    .fluidInputs(fluid('hydrogen_chloride') * 2000)
+    .fluidOutputs(fluid('calcium_chloride_solution') * 1000)
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustCalciumHydroxide') * 5)
+    .fluidInputs(fluid('hydrogen_chloride') * 2000)
+    .fluidOutputs(fluid('diluted_calcium_chloride_solution') * 2000)
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustCalcium'))
+    .fluidInputs(fluid('oxygen') * 1000)
+    .fluidOutputs(metaitem('dustQuicklime') * 2)
+    .duration(60)
+    .EUt(30)
+    .buildAndRegister()
 
 //Silicon & Graphite
 
