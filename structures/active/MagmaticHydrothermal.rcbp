@@ -7,14 +7,14 @@
       "biomes": "$MOUNTAIN"
     },
     {
-      "biomes": "$HILLS"
+      "biomes": "$JUNGLE"
     },
     {
-      "biomes": "$JUNGLE"
+      "biomes": "$HILLS"
     }
   ],
   "metadata": {
-    "title": "Hydrothermal",
+    "title": "Magmatic Hydrothermal",
     "description": [
       ""
     ]
