@@ -12,6 +12,7 @@ ION_IMPLANTER = recipemap('ion_implantation')
 UV_LIGHT_BOX = recipemap('uv_light_box')
 CVD = recipemap('cvd')
 REACTION_FURNACE = recipemap('reaction_furnace')
+CSTR = recipemap('continuous_stirred_tank_reactor')
 
 /*
 Etchants used:
@@ -402,11 +403,11 @@ ASSEMBLER.recipeBuilder()
 
 //NOVOLACS
 
-MIXER.recipeBuilder()
-        .fluidInputs(fluid('formaldehyde')*1000)
-        .fluidInputs(fluid('phenol')*1000)
-        .fluidOutputs(fluid('novolacs')*2000)
-        .duration(200)
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('formaldehyde')*50)
+        .fluidInputs(fluid('phenol')*50)
+        .fluidOutputs(fluid('novolacs')*100)
+        .duration(10)
         .EUt(7)
         .buildAndRegister()
 

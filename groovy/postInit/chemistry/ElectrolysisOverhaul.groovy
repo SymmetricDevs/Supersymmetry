@@ -187,4 +187,14 @@ ELECTROLYZER.recipeBuilder()
         .duration(300)
         .buildAndRegister()
 
+ELECTROLYZER.recipeBuilder()
+        .notConsumable(metaitem('graphite_electrode'))
+        .notConsumable(metaitem('stickIron'))
+        .fluidInputs(fluid('IronIiiChloride') * 576)
+        .fluidOutputs(fluid('chlorine') * 2000)
+        .outputs(metaitem('dustIron'))
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()	
+
 
