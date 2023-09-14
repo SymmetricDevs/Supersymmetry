@@ -103,6 +103,141 @@ for (i = 0; i < 6; i++) {
             .buildAndRegister();
 }
 
+// Remove wire recycling recipes
+//Manganese Phosphide has to be handled separately due to having different voltages
+
+mods.gregtech.macerator.removeByInput(8, [metaitem('wireGtSingleManganesePhosphide')], null)
+mods.gregtech.macerator.removeByInput(8, [metaitem('wireGtDoubleManganesePhosphide')], null)
+mods.gregtech.macerator.removeByInput(8, [metaitem('wireGtQuadrupleManganesePhosphide')], null)
+mods.gregtech.macerator.removeByInput(8, [metaitem('wireGtOctalManganesePhosphide')], null)
+mods.gregtech.macerator.removeByInput(8, [metaitem('wireGtHexManganesePhosphide')], null)
+
+mods.gregtech.extractor.removeByInput(120, [metaitem('wireGtSingleManganesePhosphide')], null)
+mods.gregtech.extractor.removeByInput(120, [metaitem('wireGtDoubleManganesePhosphide')], null)
+mods.gregtech.extractor.removeByInput(120, [metaitem('wireGtQuadrupleManganesePhosphide')], null)
+mods.gregtech.extractor.removeByInput(120, [metaitem('wireGtOctalManganesePhosphide')], null)
+mods.gregtech.extractor.removeByInput(120, [metaitem('wireGtHexManganesePhosphide')], null)
+
+//All the arc furnace ones need to be done by hand
+
+// Manganese Phosphide Nugget * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtSingleManganesePhosphide')], [fluid('oxygen') * 18])
+// Magnesium Diboride Nugget * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtSingleMagnesiumDiboride')], [fluid('oxygen') * 6])
+// Mercury Barium Calcium Cuprate Nugget * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtSingleMercuryBariumCalciumCuprate')], [fluid('oxygen') * 24])
+// Uranium Triplatinum Nugget * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtSingleUraniumTriplatinum')], [fluid('oxygen') * 91])
+// Samarium Iron Arsenic Oxide Nugget * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtSingleSamariumIronArsenicOxide')], [fluid('oxygen') * 32])
+// Indium Tin Barium Titanium Cuprate Nugget * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtSingleIndiumTinBariumTitaniumCuprate')], [fluid('oxygen') * 24])
+// Uranium Rhodium Dinaquadide Nugget * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtSingleUraniumRhodiumDinaquadide')], [fluid('oxygen') * 154])
+// Enriched Naquadah Trinium Europium Duranide Nugget * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtSingleEnrichedNaquadahTriniumEuropiumDuranide')], [fluid('oxygen') * 163])
+// Ruthenium Trinium Americium Neutronate Nugget * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtSingleRutheniumTriniumAmericiumNeutronate')], [fluid('oxygen') * 98])
+
+// Manganese Phosphide Ingot * 1
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtDoubleManganesePhosphide')], [fluid('oxygen') * 42])
+// Magnesium Diboride Ingot * 1
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtDoubleMagnesiumDiboride')], [fluid('oxygen') * 14])
+// Mercury Barium Calcium Cuprate Ingot * 1
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtDoubleMercuryBariumCalciumCuprate')], [fluid('oxygen') * 54])
+// Uranium Triplatinum Ingot * 1
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtDoubleUraniumTriplatinum')], [fluid('oxygen') * 205])
+// Samarium Iron Arsenic Oxide Ingot * 1
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtDoubleSamariumIronArsenicOxide')], [fluid('oxygen') * 74])
+// Indium Tin Barium Titanium Cuprate Ingot * 1
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtDoubleIndiumTinBariumTitaniumCuprate')], [fluid('oxygen') * 55])
+// Uranium Rhodium Dinaquadide Ingot * 1
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtDoubleUraniumRhodiumDinaquadide')], [fluid('oxygen') * 348])
+// Enriched Naquadah Trinium Europium Duranide Ingot * 1
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtDoubleEnrichedNaquadahTriniumEuropiumDuranide')], [fluid('oxygen') * 368])
+// Ruthenium Trinium Americium Neutronate Ingot * 1
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtDoubleRutheniumTriniumAmericiumNeutronate')], [fluid('oxygen') * 222])
+
+// Manganese Phosphide Ingot * 2
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtQuadrupleManganesePhosphide')], [fluid('oxygen') * 84])
+// Magnesium Diboride Ingot * 2
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtQuadrupleMagnesiumDiboride')], [fluid('oxygen') * 28])
+// Mercury Barium Calcium Cuprate Ingot * 2
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtQuadrupleMercuryBariumCalciumCuprate')], [fluid('oxygen') * 108])
+// Uranium Triplatinum Ingot * 2
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtQuadrupleUraniumTriplatinum')], [fluid('oxygen') * 410])
+// Samarium Iron Arsenic Oxide Ingot * 2
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtQuadrupleSamariumIronArsenicOxide')], [fluid('oxygen') * 148])
+// Indium Tin Barium Titanium Cuprate Ingot * 2
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtQuadrupleIndiumTinBariumTitaniumCuprate')], [fluid('oxygen') * 110])
+// Uranium Rhodium Dinaquadide Ingot * 2
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide')], [fluid('oxygen') * 696])
+// Enriched Naquadah Trinium Europium Duranide Ingot * 2
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtQuadrupleEnrichedNaquadahTriniumEuropiumDuranide')], [fluid('oxygen') * 736])
+// Ruthenium Trinium Americium Neutronate Ingot * 2
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtQuadrupleRutheniumTriniumAmericiumNeutronate')], [fluid('oxygen') * 444])
+
+// Manganese Phosphide Ingot * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtOctalManganesePhosphide')], [fluid('oxygen') * 168])
+// Magnesium Diboride Ingot * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtOctalMagnesiumDiboride')], [fluid('oxygen') * 56])
+// Mercury Barium Calcium Cuprate Ingot * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtOctalMercuryBariumCalciumCuprate')], [fluid('oxygen') * 216])
+// Uranium Triplatinum Ingot * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtOctalUraniumTriplatinum')], [fluid('oxygen') * 820])
+// Samarium Iron Arsenic Oxide Ingot * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtOctalSamariumIronArsenicOxide')], [fluid('oxygen') * 296])
+// Indium Tin Barium Titanium Cuprate Ingot * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtOctalIndiumTinBariumTitaniumCuprate')], [fluid('oxygen') * 220])
+// Uranium Rhodium Dinaquadide Ingot * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtOctalUraniumRhodiumDinaquadide')], [fluid('oxygen') * 1392])
+// Enriched Naquadah Trinium Europium Duranide Ingot * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtOctalEnrichedNaquadahTriniumEuropiumDuranide')], [fluid('oxygen') * 1472])
+// Ruthenium Trinium Americium Neutronate Ingot * 4
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtOctalRutheniumTriniumAmericiumNeutronate')], [fluid('oxygen') * 888])
+
+// Manganese Phosphide Ingot * 8
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexManganesePhosphide')], [fluid('oxygen') * 336])
+// Magnesium Diboride Ingot * 8
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexMagnesiumDiboride')], [fluid('oxygen') * 112])
+// Mercury Barium Calcium Cuprate Ingot * 8
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexMercuryBariumCalciumCuprate')], [fluid('oxygen') * 432])
+// Uranium Triplatinum Ingot * 8
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexUraniumTriplatinum')], [fluid('oxygen') * 1640])
+// Samarium Iron Arsenic Oxide Ingot * 8
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexSamariumIronArsenicOxide')], [fluid('oxygen') * 592])
+// Indium Tin Barium Titanium Cuprate Ingot * 8
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexIndiumTinBariumTitaniumCuprate')], [fluid('oxygen') * 440])
+// Uranium Rhodium Dinaquadide Ingot * 8
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexUraniumRhodiumDinaquadide')], [fluid('oxygen') * 2784])
+// Enriched Naquadah Trinium Europium Duranide Ingot * 8
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexEnrichedNaquadahTriniumEuropiumDuranide')], [fluid('oxygen') * 2944])
+// Ruthenium Trinium Americium Neutronate Ingot * 8
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexRutheniumTriniumAmericiumNeutronate')], [fluid('oxygen') * 1776])
+
+
+for (supercon in allSuperconductors) {
+
+        if (supercon == "ManganesePhosphide") {
+                continue
+        }
+
+        // Supercon maceration
+        mods.gregtech.macerator.removeByInput(32, [metaitem('wireGtSingle' + supercon)], null)
+        mods.gregtech.macerator.removeByInput(32, [metaitem('wireGtDouble' + supercon)], null)
+        mods.gregtech.macerator.removeByInput(32, [metaitem('wireGtQuadruple' + supercon)], null)
+        mods.gregtech.macerator.removeByInput(32, [metaitem('wireGtOctal' + supercon)], null)
+        mods.gregtech.macerator.removeByInput(32, [metaitem('wireGtHex' + supercon)], null)
+        // Supercon extraction
+        mods.gregtech.extractor.removeByInput(480, [metaitem('wireGtSingle' + supercon)], null)
+        mods.gregtech.extractor.removeByInput(480, [metaitem('wireGtDouble' + supercon)], null)
+        mods.gregtech.extractor.removeByInput(480, [metaitem('wireGtQuadruple' + supercon)], null)
+        mods.gregtech.extractor.removeByInput(480, [metaitem('wireGtOctal' + supercon)], null)
+        mods.gregtech.extractor.removeByInput(480, [metaitem('wireGtHex' + supercon)], null)
+
+
+}
+
 TUBE_FURNACE.recipeBuilder()
         .inputs(metaitem('cannedmagnesiumdiboride'))
         .fluidInputs(fluid('nitrogen') * 500)
@@ -240,6 +375,7 @@ TUBE_FURNACE.recipeBuilder()
         .duration(600)
         .EUt(1920)
         .buildAndRegister();
+
 
 TUBE_FURNACE.recipeBuilder()
         .inputs(ore('dustManganese'))

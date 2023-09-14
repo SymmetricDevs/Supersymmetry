@@ -47,7 +47,6 @@ def name_removals = [
         "rftools:endergenic",
         "rftools:pearl_injector",
         "rftools:ender_monitor",
-        "rftools:storage_scanner",
         "rftools:elevator",
         "rftools:booster",
         "rftools:storage_terminal",
@@ -249,4 +248,10 @@ crafting.replaceShaped('rftools:oredict_module', item('rftools:oredict_module'),
         [null, null, null],
         [null, metaitem('ore_dictionary_filter'), null],
         [null, null, null]
+])
+
+crafting.replaceShaped('rftools:storage_scanner', item('rftools:storage_scanner'), [
+        [ore('plateSteel'), metaitem('sensor.lv'), ore('plateSteel')],
+        [ore('chest'), metaitem('hull.lv'), ore('chest')],
+        [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')]
 ])

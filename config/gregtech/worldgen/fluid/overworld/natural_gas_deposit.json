@@ -2,13 +2,13 @@
   "weight": 15,
   "name": "Overworld Natural Gas Deposit",
   "yield": {
-    "min": 100,
-    "max": 175
+    "min": 400,
+    "max": 600
   },
   "depletion": {
-    "amount": 1,
-    "chance": 100,
-    "depleted_yield": 20
+    "amount": 0,
+    "chance": 0,
+    "depleted_yield": 400
   },
   "fluid": "natural_gas"
 }

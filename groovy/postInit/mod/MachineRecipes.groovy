@@ -398,6 +398,20 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+//Electrostatic separator
+
+def tieredElectrodes = [ore('wireFineRedAlloy'), ore('wireFineSteel'), metaitem('graphite_electrode'), ore('wireFinePlatinum'), ore('wireFineTitanium'),
+					ore('wireFineTungsten'), ore('wireFineOsmiridium'), ore('wireFineNiobiumTitanium'),
+					ore('wireFineNaquadah'), ore('wireFineNaquadahAlloy')];
+
+for (i = 1; i <= 8; i++) {
+	crafting.replaceShaped("gregtech:gregtech.machine.electrostatic_separator." + Globals.voltageTiers[i], metaitem('electrostatic_separator.' + Globals.voltageTiers[i]), [
+			[tieredWires[i], tieredElectrodes[i], tieredWires[i]],
+			[tieredCables[i], hulls[i], tieredCables[i]],
+			[tieredWires[i], tieredElectrodes[i], tieredWires[i]]
+	])
+}
+
 //Add recipes for high pressure steam machines
 
 crafting.addShaped("gregtech:vulcanizing_press.steel", metaitem('vulcanizing_press.steel'), [
@@ -540,7 +554,7 @@ crafting.addShaped("gas_turbine_controller", metaitem('basic_gas_turbine'), [
 
 crafting.addShaped("silicon_carbide_casing", item('susy:susy_multiblock_casing') * 2, [
 		[metaitem('plateSiliconCarbide'), ore('craftingToolHardHammer'), metaitem('plateSiliconCarbide')],
-		[metaitem('plateSiliconCarbide'), item('gregtech:turbine_casing', 7), metaitem('plateSiliconCarbide')],
+		[metaitem('plateSiliconCarbide'), item('gregtech:metal_casing', 5), metaitem('plateSiliconCarbide')],
 		[metaitem('plateSiliconCarbide'), ore('craftingToolWrench'), metaitem('plateSiliconCarbide')]
 ])
 
@@ -700,12 +714,6 @@ crafting.addShaped("gregtech:gravity_separator", metaitem('gravity_separator'), 
 		[metaitem('component.grinder.diamond'), circuits[2], metaitem('component.grinder.diamond')],
 		[conveyors[2], hulls[2], conveyors[2]],
 		[circuits[2], tieredCables[2], circuits[2]]
-]);
-
-crafting.addShaped("gregtech:separator_rotor", item('susy:separator_rotor') * 2, [
-		[metaitem('plateSteel'), metaitem('rotorSteel'), metaitem('plateSteel')],
-		[metaitem('rotorSteel'), metaitem('frameSteel'), metaitem('rotorSteel')],
-		[metaitem('plateSteel'), motors[1], metaitem('plateSteel')]
 ]);
 
 crafting.addShaped("gregtech:reaction_furnace", metaitem('reaction_furnace'), [
@@ -923,6 +931,21 @@ recipemap('assembler').recipeBuilder()
 		.EUt(30)
 		.duration(600)
 		.buildAndRegister()
+
+//Catalytic Reformer
+
+recipemap('assembler').recipeBuilder()
+		.inputs(metaitem('hull.ev'))
+		.inputs(metaitem('frameTitanium') * 4)
+		.inputs(metaitem('electric.pump.ev') * 2)
+		.inputs(metaitem('pipeHugeFluidTitanium'))
+		.inputs(metaitem('rotorTitanium'))
+		.inputs(ore('circuitEv'))
+		.outputs(metaitem('catalytic_reformer'))
+		.notConsumable(circuit(3))
+		.EUt(480)
+		.duration(600)
+		.buildAndRegister()	
 
 //Power Units
 recipemap('assembler').recipeBuilder()

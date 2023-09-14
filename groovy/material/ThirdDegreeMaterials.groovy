@@ -269,7 +269,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        TNTSolution = new Material.Builder(24042, 'tnp_solution')
+        TNPSolution = new Material.Builder(24042, 'tnp_solution')
                 .fluid()
                 .components(PicricAcid, 1, DilutedSulfuricAcid, 1)
                 .colorAverage()
@@ -298,5 +298,81 @@ public class ThirdDegreeMaterials {
                 .components(Tetrahydrofuran, 1, SulfuricAcid, 1, Water, 1)
                 .colorAverage()
                 .build()
+
+        AcidicTriethylPhosphate = new Material.Builder(24047, "acidic_triethyl_phosphate")
+      		.fluid()
+                .components(TriethylPhosphate, 1, HydrogenChloride, 3)
+      		.color(0x4639ee)
+      		.build();
+
+        NickelIIBisacetylacetonateSolution = new Material.Builder(24048, "nickel_ii_bisacetylacetonate_solution")
+      		.fluid()
+      		.components(NickelIIBisacetylacetonate, 1, SodiumNitrate, 2, Water, 2)
+      		.color(0x3e5051)
+      		.build();
+
+        ShellHigherOlefinCatalystSolution = new Material.Builder(24049, "shell_higher_olefin_catalyst_solution")
+                .fluid()
+                .components(Nickel, 1, DiphenylphosphinoaceticAcid, 1, Cyclooctadiene, 2, EthyleneGlycol, 1)
+                .color(0x9c1012)
+                .build();
+
+        CrudeNitrobenzene = new Material.Builder(24050, "crude_nitrobenzene")
+                .fluid()
+                .components(Nitrobenzene, 2, Benzene, 1)
+                .colorAverage()
+                .build();
+
+        DichlorobistriphenylphosphinenickelII = new Material.Builder(24051, "dichlorobistriphenylphosphinenickel_ii")
+                .dust()
+                .components(Nickel, 1, Chlorine, 2, TriphenylPhosphine, 2)
+                .colorAverage()
+                .build();
+
+        DichlorobistriphenylphosphinenickelII.setFormula("NiCl2(PPh3)2", true)
+
+        DicarbonylbistriphenylphosphinenickelZero = new Material.Builder(24052, "dicarbonylbistriphenylphosphinenickel_zero")
+                .dust()
+                .components(Nickel, 1, Carbon, 2, Oxygen, 2, TriphenylPhosphine, 2)
+                .colorAverage()
+                .build();
+
+        DicarbonylbistriphenylphosphinenickelZero.setFormula("Ni(CO)2(PPh)2", true)
+
+        SodiumPhenoxideSolution = new Material.Builder(24053, 'sodium_phenoxide_solution')
+                .fluid()
+                .components(Water, 1, SodiumPhenoxide, 1)
+                .colorAverage()
+                .build();
+
+        WetEpoxy = new Material.Builder(24054, 'wet_epoxy')
+                .dust()
+                .components(Epoxy, 1)
+                .color(0xa16f0d)
+                .build();
+
+        TetrabromobisphenolASolution = new Material.Builder(24055, 'tetrabromobisphenol_a_solution')
+                .fluid()
+                .components(TetrabromobisphenolA, 1, Dichloroethane, 6)
+                .colorAverage()
+                .build();
+
+        EpoxyCuringMixture = new Material.Builder(24056, 'epoxy_curing_mixture')
+                .dust()
+                .components(Dicyandiamide, 1, TwoMethylimidazole, 1, PhthalicAnhydride, 1)
+                .colorAverage()
+                .build();
+
+        WetFlameRetardantEpoxy = new Material.Builder(24057, 'wet_flame_retardant_epoxy')
+                .dust()
+                .components(FlameRetardantEpoxy, 1)
+                .color(0xa1530b)
+                .build();
+
+        PropyleneOxideSolution = new Material.Builder(24058, 'propylene_oxide_solution')
+                .fluid()
+                .components(CalciumChloride, 1, PropyleneOxide, 2, Water, 2)
+                .colorAverage()
+                .build();
     }
 }

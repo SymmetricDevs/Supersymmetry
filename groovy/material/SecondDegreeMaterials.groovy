@@ -484,10 +484,74 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        AmmoniumThiocyanateSolution = new Material.Builder(13078, "ammonium_thiocyanate_solution")
+        VeryDilutedSodiumSulfateSolution = new Material.Builder(13078, "very_diluted_sodium_sulfate_solution")
+                .fluid()
+                .components(SodiumSulfate, 1, Water, 9)
+                .colorAverage()
+                .build()
+
+        MolybdenicAcidSolution = new Material.Builder(13079, "molybdenic_acid_solution")
+                .fluid()
+                .components(Hydrogen, 2, Molybdenum, 1, Oxygen, 4, HydrogenChloride, 1, Water, 1)
+                .colorAverage()
+                .build()
+
+        MolybdenicAcidSolution.setFormula("(H2MoO4)(HCl)(H2O)", true)
+
+        NeutralizedAmmoniumMolybdateSolution = new Material.Builder(13080, "neutralized_ammonium_molybdate_solution")
+                .fluid()
+                .components(Nitrogen, 2, Hydrogen, 8, Molybdenum, 1, Oxygen, 4, AmmoniumChloride, 1, Water, 4)
+                .colorAverage()
+                .build()
+
+        NeutralizedAmmoniumMolybdateSolution.setFormula("[(NH4)2MoO4](NH4Cl)(H2O)4")
+
+        SublimatedMolybdenumTrioxide = new Material.Builder(13081, "sublimated_molybdenum_trioxide")
+                .fluid()
+                .components(PurifiedMolybdenumTrioxide, 1, Air, 1)
+                .colorAverage()
+                .build()
+
+        AmmoniumThiocyanateSolution = new Material.Builder(13082, "ammonium_thiocyanate_solution")
                 .fluid()
                 .components(AmmoniumThiocyanate, 1, Water, 1)
                 .colorAverage()
+                .build();
+
+        TantalumFluorideSolution = new Material.Builder(13083, "tantalum_fluoride_solution")
+                .fluid()
+                .components(TantalumFluoride, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        AmmoniumPerrhenateSolution = new Material.Builder(13084, "ammonium_perrhenate_solution")
+                .fluid()
+                .components(AmmoniumPerrhenate, 1, Water, 1)
+                .colorAverage()
+                .build();
+        
+        AluminiumChlorideSolution = new Material.Builder(13085, "aluminium_chloride_solution")
+                .fluid()
+                .components(AluminiumChloride, 1, Water, 3)
+                .colorAverage()
+                .build();
+
+        DilutedSodiumSulfiteSolution = new Material.Builder(13086, "diluted_sodium_sulfite_solution")
+                .fluid()
+                .components(SodiumSulfite, 1, Water, 14)
+                .color(0x75745a)
+                .build();
+
+        SodiumHexafluoroantimonateSolution = new Material.Builder(13087, "sodium_hexafluoroantimonate_solution")
+                .fluid()
+                .components(SodiumHexafluoroantimonate, 1, HydrogenFluoride, 1)
+                .colorAverage()
+                .build();
+
+        EGlass = new Material.Builder(13088, "e_glass")
+                .dust().fluid()
+                .components(SiliconDioxide, 6, Alumina, 1, BoronTrioxide, 1, Quicklime, 2)
+                .color(0x778f8b)
                 .build();
     }
 }
