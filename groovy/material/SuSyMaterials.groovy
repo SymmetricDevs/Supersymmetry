@@ -940,6 +940,7 @@ class SuSyMaterials {
         public static Material Chlorotrifluoromethane;
         public static Material Chlorodifluoromethane;
         public static Material DilutedSilverNitrateSolution;
+        public static Material DecarburizedAir;
         public static Material MolybdenumTrisulfide;
         public static Material AmmoniumIsopolytungstateSolution;
         public static Material AmmoniumParatungstate;
@@ -999,6 +1000,8 @@ class SuSyMaterials {
 
         // Second Degree Materials
 
+        public static Material DeoxygenationCatalystPrecursorSolution;
+        public static Material DeoxygenationCatalyst;
         public static Material NitrateSaltMix;
         public static Material AmmoniumChlorideSolution;
         public static Material PotassiumChlorideSolution;
@@ -1447,17 +1450,17 @@ class SuSyMaterials {
 
         public static Material EarthlikeAir;
         public static Material HotHighPressureSteam;
-        public static Material CompressedAir;
+        /*public static Material CompressedAir;
         public static Material ChilledAir;
         public static Material PurifiedAir;
         public static Material BoostedAir;
-        public static Material ColdWater;
+        public static Material ColdWater;*/
         public static Material WasteGaseousNitrogen;
-        public static Material PurfiedWasteGaseousNitrogen;
+        /*public static Material PurfiedWasteGaseousNitrogen;
         public static Material ChilledBoostedAir;
         public static Material PartiallyLiquifiedAir;
         public static Material GaseousAirFeedstock;
-        public static Material LiquidAirFeedstock;
+        public static Material LiquidAirFeedstock;*/
         public static Material ChillyWasteGaseousNitrogen;
         public static Material SubcooledLiquidNitrogen;
         public static Material ColdWasteGaseousNitrogen;
@@ -1482,6 +1485,12 @@ class SuSyMaterials {
         public static Material GaseousCrudeNeon;
         public static Material LiquidCrudeNeon;
         public static Material ColdGaseousNitrogen;
+        public static Material LiquidArgonProduct;
+        public static Material LiquidOxygenProduct;
+        public static Material LiquidNitrogenProduct;
+        public static Material LiquidDeoxygenatedArgon;
+        public static Material LiquidWasteNitrogen;
+        public static Material PartiallyLiquefiedArgon;
 
         public static void init() {
                 ElementMaterials.register();

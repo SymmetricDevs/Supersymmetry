@@ -3210,5 +3210,24 @@ public class FirstDegreeMaterials{
                 .components(Sodium, 1, Antimony, 1, Fluorine, 6)
                 .colorAverage()
                 .build();
+
+        AcidWashedSiliconDioxide = new Material.Builder(8570, "acid_washed_silicon_dioxide")
+                .dust()
+                .components(SiliconDioxide, 1)
+                .color(0xc8c8c8)
+                .iconSet(SHINY)
+                .build();
+
+        DisulfurDichloride = new Material.Builder(8571, "disulfur_dichloride")
+                .fluid()
+                .components(Sulfur, 2, Chlorine, 2)
+                .color(0xccc31d)
+                .build();
+
+        DecarburizedAir = new Material.Builder(8572, "decarburized_air")
+                .fluid(FluidTypes.GAS)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
+                .color(0x90bbe0)
+                .build();
     }
 }

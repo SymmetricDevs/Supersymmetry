@@ -11,6 +11,7 @@ import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtechfoodoption.GTFOMaterialHandler.*;
+import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
 public class SecondDegreeMaterials {
     public static void register() {
@@ -482,7 +483,7 @@ public class SecondDegreeMaterials {
                 .fluid()
                 .components(AmmoniumChloride, 1, SodiumBicarbonate, 1, Water, 1)
                 .colorAverage()
-                .build()
+                .build();
 
         VeryDilutedSodiumSulfateSolution = new Material.Builder(13078, "very_diluted_sodium_sulfate_solution")
                 .fluid()
@@ -567,5 +568,17 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
                 .setFormula('(MnSO4)(H2O)', true)
+
+        DeoxygenationCatalystPrecursorSolution = new Material.Builder(13091, "deoxygenation_catalyst_precursor_solution")
+                .fluid()
+                .components(AmmoniumHexachloroplatinate, 1, PhosphoricAcid, 1)
+                .colorAverage()
+                .build();
+
+        DeoxygenationCatalyst = new Material.Builder(13092, "deoxygenation_catalyst")
+                .dust()
+                .components(Alumina, 1, Platinum, 1, Chlorine, 4)
+                .flags(GENERATE_CATALYST_BED)
+                .build()
     }
 }

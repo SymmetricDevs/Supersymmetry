@@ -927,6 +927,9 @@ material.chloroauric_acid_solution=Chloroauric Acid Solution
 material.sodium_nitrite=Sodium Nitrite
 material.sodium_oxide=Sodium Oxide
 material.gold_amalgam=Gold Amalgam
+material.decarburized_air=Decarburized Air
+material.liquid_deoxygenated_argon=Liquid Deoxygenated Argon
+material.liquid_waste_nitrogen=Liquid Waste Nitrogen
 material.alkali_fused_wulfenite=Alkali Fused Wulfenite
 material.lead_ii_hydroxide=Lead II Hydroxide
 material.sodium_molybdate_solution=Sodium Molybdate Solution
@@ -984,6 +987,7 @@ material.liquid_nitrogen=Liquid Nitrogen
 material.liquid_refinery_gas=Liquid Refinery Gas
 material.liquid_natural_gas=Liquid Natural Gas (LNG)
 material.liquid_methane=Liquid Methane
+material.liquid_decarburized_air=Liquid Decarburized Air
 
 material.hot_hp_air=Hot High-Pressure Air
 material.hp_air=High-Pressure Air
@@ -992,6 +996,10 @@ material.cold_hp_air=Cold High-Pressure Air
 material.hot_hp_nether_air=Hot High-Pressure Nether Air
 material.hp_nether_air=High-Pressure Nether Air
 material.cold_hp_nether_air=Cold High-Pressure Nether Air
+
+material.hot_hp_decarburized_air=Hot High-Pressure Decarburized Air
+material.hp_decarburized_air=High-Pressure Decarburized Air
+material.cold_hp_decarburized_air=Cold High-Pressure Decarburized Air
 
 material.hot_hp_refinery_gas=Hot High-Pressure Refinery Gas
 material.hp_refinery_gas=High-Pressure Refinery Gas
@@ -1065,6 +1073,10 @@ material.dichlorodifluoromethane=Dichlorodifluoromethane
 material.chlorotrifluoromethane=Chlorotrifluoromethane
 material.chlorodifluoromethane=Chlorodifluoromethane
 material.polychlorinated_biphenyl=Polychlorinated Biphenyl
+
+material.liquid_argon_product=Liquid Argon Product
+material.liquid_oxygen_product=Liquid Oxygen Product
+material.liquid_nitrogen_product=Liquid Nitrogen Product
 
 # Ores
 
@@ -1437,6 +1449,8 @@ material.gaseous_titanium_tetrachloride=Gaseous Titanium Tetrachloride
 material.tin_tetrachloride=Tin Tetrachloride
 material.gaseous_aluminium_chloride=Gaseous Aluminium Chloride
 material.extracted_caprolactam_solution=Extracted Caprolactam Solution
+material.dilute_ammonium_sulfate_solution=Dilute Ammonium Sulfate Solution
+material.chloroauric_acid_solution=Chloroauric Acid Solution
 material.diluted_ammonium_sulfate_solution=Diluted Ammonium Sulfate Solution
 material.phosgene_solution=Phosgene Solution
 material.sodium_bisphenolate_solution=Sodium Bisphenolate Solution
