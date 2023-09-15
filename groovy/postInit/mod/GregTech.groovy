@@ -87,7 +87,11 @@ def name_removals = [
         'gregtech:quantum_tank_uv',
         'gregtech:quantum_tank_uhv',
 	'gregtech:large_combustion_engine',
-	'gregtech:extreme_combustion_engine'
+	'gregtech:extreme_combustion_engine',
+        'gregtech:gregtech.machine.fisher.lv',
+        'gregtech:gregtech.machine.fisher.mv',
+        'gregtech:gregtech.machine.fisher.hv',
+        'gregtech:gregtech.machine.fisher.ev',
 ]
 
 for (name in name_removals) {
@@ -404,6 +408,15 @@ mods.gregtech.chemical_bath.recipeBuilder()
         .outputs(metaitem('dustCalciumHydroxide'))
         .duration(20)
         .EUt(30)
+        .buildAndRegister();
+
+//Iron III chloride
+
+mods.gregtech.fluid_solidifier.recipeBuilder()
+        .fluidInputs(fluid('iron_iii_chloride') * 144)
+        .outputs(metaitem('dustIronIiiChloride') * 1)
+        .duration(30)
+        .EUt(16)
         .buildAndRegister();
 
 //Lava

@@ -12,6 +12,7 @@ AUTOCLAVE = recipemap('autoclave')
 FLUID_EXTRACTOR = recipemap('extractor')
 ARC_FURNACE = recipemap('arc_furnace')
 DT = recipemap('distillation_tower')
+FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 
 //Emerald: 3BeO · Al2O3 · 6SiO2
 //Bertrandite: Be4Si2O7(OH)2
@@ -161,8 +162,15 @@ DT.recipeBuilder() //Maybe switch to a fractional condenser
         .duration(480)
         .buildAndRegister()
 
-BR.recipeBuilder()
+FLUID_SOLIDIFIER.recipeBuilder()
         .fluidInputs(fluid('aluminium_chloride') * 1000)
+        .outputs(metaitem('dustAluminiumChloride') * 4)
+        .EUt(Globals.voltAmps[1])
+        .duration(20)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .inputs(ore('dustAluminiumChloride') * 4)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
         .outputs(metaitem('dustAluminiumHydroxide') * 7)
         .fluidOutputs(fluid('salt_water') * 3000)
@@ -204,6 +212,7 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 ROASTER.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('dustAmmoniumFluoride') * 12)
         .outputs(metaitem('dustAmmoniumBifluoride') * 8)
         .fluidOutputs(fluid('ammonia') * 1000)

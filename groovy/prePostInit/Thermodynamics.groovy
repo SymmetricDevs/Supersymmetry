@@ -692,7 +692,7 @@ for (FluidFuel in FluidFuels) {
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                         .fluidInputs(liquid('oxygen') * 20)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.1))
+                        .duration((int) (FluidFuel.duration * 1.5))
                         .EUt(-64)
                         .buildAndRegister();
         } else if (FluidFuel.gasoline) {
@@ -708,7 +708,7 @@ for (FluidFuel in FluidFuels) {
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                         .fluidInputs(liquid('oxygen') * 20)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.1))
+                        .duration((int) (FluidFuel.duration * 1.5))
                         .EUt(-128)
                         .buildAndRegister();
         } else {
@@ -724,7 +724,7 @@ for (FluidFuel in FluidFuels) {
                         .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                         .fluidInputs(liquid('oxygen') * 20)
                         .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.1))
+                        .duration((int) (FluidFuel.duration * 1.5))
                         .EUt(-32)
                         .buildAndRegister();
         }
@@ -784,17 +784,17 @@ for (WorkingFluid in WorkingFluids) {
             .buildAndRegister();
 
     recipemap('cooling_tower').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor) * 64)
             .fluidInputs(liquid('water') * 1000)
-            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
+            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use * 64)
             .fluidOutputs(liquid('water') * 750)
-            .duration((int) (WorkingFluid.duration / 10))
+            .duration(WorkingFluid.duration)
             .EUt(8)
             .buildAndRegister();
 
     recipemap('radiator').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
-            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
+            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor) * 16)
+            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use * 16)
             .duration(WorkingFluid.duration)
             .EUt(8)
             .buildAndRegister();

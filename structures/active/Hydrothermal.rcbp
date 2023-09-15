@@ -1,14 +1,16 @@
 {
   "data": [
     {
-      "biomes": "$OCEAN \u0026 $SNOWY",
-      "weight": 0.0
+      "biomes": "$FOREST"
     },
     {
-      "biomes": "$OCEAN"
+      "biomes": "$MOUNTAIN"
     },
     {
-      "biomes": "$SANDY"
+      "biomes": "$HILLS"
+    },
+    {
+      "biomes": "$JUNGLE"
     }
   ],
   "metadata": {
