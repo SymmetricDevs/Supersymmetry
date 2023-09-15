@@ -473,11 +473,13 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        DilutedAmmoniumChlorideSolution = new Material.Builder(13076, "diluted_ammonium_chloride_solution")
+        PlatinumMotherLiquor = new Material.Builder(13076, "platinum_mother_liquor")
                 .fluid()
-                .components(AmmoniumChloride, 1, Water, 8)
+                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
                 .colorAverage()
                 .build();
+
+        PlatinumMotherLiquor.setFormula("(?)(NH4Cl)(HCl)6(H2O)8", true)
 
         AmmoniacalSodiumBicarbonateSolution = new Material.Builder(13077, "ammoniacal_sodium_bicarbonate_solution")
                 .fluid()
@@ -555,19 +557,19 @@ public class SecondDegreeMaterials {
                 .color(0x778f8b)
                 .build();
 
-        CrudeManganeseIISulfateSolution = new Material.Builder(13089, "crude_manganese_ii_sulfate_solution")
+        PalladiumMotherLiquor = new Material.Builder(13089, "palladium_mother_liquor")
                 .fluid()
-                .components(ManganeseIISulfate, 1, Water, 1)
+                .components(AmmoniumChloride, 1, Ammonia, 2, HydrogenChloride, 8, Water, 12)
                 .colorAverage()
-                .build()
-                .setFormula('(?)(MnSO4)(H2O)', true)
+                .build();
 
-        ManganeseIISulfateSolution = new Material.Builder(13090, "manganese_ii_sulfate_solution")
+        DivalentPalladiumSolution = new Material.Builder(13090, "divalent_palladium_solution")
                 .fluid()
-                .components(ManganeseIISulfate, 1, Water, 1)
+                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
                 .colorAverage()
-                .build()
-                .setFormula('(MnSO4)(H2O)', true)
+                .build();
+
+        DivalentPalladiumSolution.setFormula("(?)(NH4Cl)(HCl)6(H2O)8", true)
 
         DeoxygenationCatalystPrecursorSolution = new Material.Builder(13091, "deoxygenation_catalyst_precursor_solution")
                 .fluid()
@@ -580,5 +582,19 @@ public class SecondDegreeMaterials {
                 .components(Alumina, 1, Platinum, 1, Chlorine, 4)
                 .flags(GENERATE_CATALYST_BED)
                 .build()
+
+        CrudeManganeseIISulfateSolution = new Material.Builder(13093, "crude_manganese_ii_sulfate_solution")
+                .fluid()
+                .components(ManganeseIISulfate, 1, Water, 1)
+                .colorAverage()
+                .build()
+                .setFormula('(?)(MnSO4)(H2O)', true)
+
+        ManganeseIISulfateSolution = new Material.Builder(13094, "manganese_ii_sulfate_solution")
+                .fluid()
+                .components(ManganeseIISulfate, 1, Water, 1)
+                .colorAverage()
+                .build()
+                .setFormula('(MnSO4)(H2O)', true)
     }
 }

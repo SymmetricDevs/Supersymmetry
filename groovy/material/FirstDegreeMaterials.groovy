@@ -2746,15 +2746,19 @@ public class FirstDegreeMaterials{
 
         HexachloroplatinicAcidSolution = new Material.Builder(8501, "hexachloroplatinic_acid_solution")
                 .fluid()
-                .components(Hydrogen, 2, Platinum, 1, Chlorine, 6, Water, 1)
+                .components(Iron, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
                 .color(0xe06624)
                 .build();
 
-        SodiumHexachloroplatinateSolution = new Material.Builder(8502, "sodium_hexachloroplatinate_solution")
+        HexachloroplatinicAcidSolution.setFormula("(?)(H2PtCl6)3(FeCl2)(H2O)8", true)
+
+        CementedHexachloroplatinicAcidSolution = new Material.Builder(8502, "cemented_hexachloroplatinic_acid_solution")
                 .fluid()
-                .components(Sodium, 2, Platinum, 1, Chlorine, 6, Water, 5)
+                .components(Iron, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
                 .color(0xb87627)
                 .build();
+
+        HexachloroplatinicAcidSolution.setFormula("(?)(H2PtCl6)3(ZnCl2)(H2O)8", true)
         
         AmmoniumHexachloroplatinate = new Material.Builder(8503, "ammonium_hexachloroplatinate")
                 .dust()
@@ -3224,7 +3228,22 @@ public class FirstDegreeMaterials{
                 .color(0xccc31d)
                 .build();
 
-        DecarburizedAir = new Material.Builder(8572, "decarburized_air")
+        Ferroplatinum = new Material.Builder(8572, "ferroplatinum")
+                .dust().ingot()
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Platinum, 3, Iron, 1)
+                .colorAverage()
+                .build();
+
+        Diamminedichloropalladium = new Material.Builder(8573, "diamminedichloropalladium")
+                .dust()
+                .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
+                .colorAverage()
+                .build();
+
+        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
+
+        DecarburizedAir = new Material.Builder(8574, "decarburized_air")
                 .fluid(FluidTypes.GAS)
                 .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
                 .color(0x90bbe0)
