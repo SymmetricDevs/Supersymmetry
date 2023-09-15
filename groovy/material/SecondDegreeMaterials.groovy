@@ -485,18 +485,6 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        DeoxygenationCatalystPrecursorSolution = new Material.Builder(13078, "deoxygenation_catalyst_precursor_solution")
-                .fluid()
-                .components(AmmoniumHexachloroplatinate, 1, PhosphoricAcid, 1)
-                .colorAverage()
-                .build();
-
-        DeoxygenationCatalyst = new Material.Builder(13079, "deoxygenation_catalyst")
-                .dust()
-                .components(Alumina, 1, Platinum, 1, Chlorine, 4)
-                .flags(GENERATE_CATALYST_BED)
-                .build()
-
         VeryDilutedSodiumSulfateSolution = new Material.Builder(13078, "very_diluted_sodium_sulfate_solution")
                 .fluid()
                 .components(SodiumSulfate, 1, Water, 9)
@@ -566,5 +554,17 @@ public class SecondDegreeMaterials {
                 .components(SiliconDioxide, 6, Alumina, 1, BoronTrioxide, 1, Quicklime, 2)
                 .color(0x778f8b)
                 .build();
+
+        DeoxygenationCatalystPrecursorSolution = new Material.Builder(13089, "deoxygenation_catalyst_precursor_solution")
+                .fluid()
+                .components(AmmoniumHexachloroplatinate, 1, PhosphoricAcid, 1)
+                .colorAverage()
+                .build();
+
+        DeoxygenationCatalyst = new Material.Builder(13090, "deoxygenation_catalyst")
+                .dust()
+                .components(Alumina, 1, Platinum, 1, Chlorine, 4)
+                .flags(GENERATE_CATALYST_BED)
+                .build()
     }
 }
