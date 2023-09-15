@@ -56,7 +56,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .fluidOutputs(fluid('hydrogen') * 2000)
         .fluidOutputs(fluid('oxygen') * 1000)
         .EUt(30)
-        .duration(200)
+        .duration(400)
         .buildAndRegister()
 
 //CHLOROALKALI PROCESS

@@ -473,11 +473,13 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        DilutedAmmoniumChlorideSolution = new Material.Builder(13076, "diluted_ammonium_chloride_solution")
+        PlatinumMotherLiquor = new Material.Builder(13076, "platinum_mother_liquor")
                 .fluid()
-                .components(AmmoniumChloride, 1, Water, 8)
+                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
                 .colorAverage()
                 .build();
+
+        PlatinumMotherLiquor.setFormula("(?)(NH4Cl)(HCl)6(H2O)8", true)
 
         AmmoniacalSodiumBicarbonateSolution = new Material.Builder(13077, "ammoniacal_sodium_bicarbonate_solution")
                 .fluid()
@@ -555,13 +557,27 @@ public class SecondDegreeMaterials {
                 .color(0x778f8b)
                 .build();
 
-        DeoxygenationCatalystPrecursorSolution = new Material.Builder(13089, "deoxygenation_catalyst_precursor_solution")
+        PalladiumMotherLiquor = new Material.Builder(13089, "palladium_mother_liquor")
+                .fluid()
+                .components(AmmoniumChloride, 1, Ammonia, 2, HydrogenChloride, 8, Water, 12)
+                .colorAverage()
+                .build();
+
+        DivalentPalladiumSolution = new Material.Builder(13090, "divalent_palladium_solution")
+                .fluid()
+                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
+                .colorAverage()
+                .build();
+
+        DivalentPalladiumSolution.setFormula("(?)(NH4Cl)(HCl)6(H2O)8", true)
+
+        DeoxygenationCatalystPrecursorSolution = new Material.Builder(13091, "deoxygenation_catalyst_precursor_solution")
                 .fluid()
                 .components(AmmoniumHexachloroplatinate, 1, PhosphoricAcid, 1)
                 .colorAverage()
                 .build();
 
-        DeoxygenationCatalyst = new Material.Builder(13090, "deoxygenation_catalyst")
+        DeoxygenationCatalyst = new Material.Builder(13092, "deoxygenation_catalyst")
                 .dust()
                 .components(Alumina, 1, Platinum, 1, Chlorine, 4)
                 .flags(GENERATE_CATALYST_BED)

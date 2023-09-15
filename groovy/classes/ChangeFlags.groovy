@@ -44,6 +44,7 @@ class ChangeFlags {
         Platinum.addFlags("generate_catalyst_bed");
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
+        Nickel.addFlags("generate_catalyst_bed");
         Brass.addFlags("generate_ring")
 
         /*
