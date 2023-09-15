@@ -488,7 +488,6 @@ material.ethanolamine=Ethanolamine
 material.diethanolamine=Diethanolamine
 material.triethanolamine=Triethanolamine
 
-material.calcium_carbonate_solution=Calcium Carbonate Solution
 material.bentonite_clay_solution=Bentonite Clay Solution
 material.mineralized_water=Mineralized Water
 material.oxide_water=Oxide Water
@@ -516,7 +515,6 @@ material.dicobalt_octacarbonyl=Dicobalt Octacarbonyl
 material.impregnated_alumina_catalyst=Impregnated Alumina Catalyst
 material.bismuth_copper=Bismuth-Copper
 material.bromobenzene=Bromobenzene
-material.aluminium_trichloride=Aluminium Trichloride
 material.triethylaluminium=Triethylaluminium
 material.hydrogen_peroxide=Hydrogen Peroxide
 material.tetrabromomethane=Tetrabromomethane
@@ -829,7 +827,7 @@ material.sodium_ethyl_xanthate_solution=Sodium Ethyl Xanthate Solution
 material.impure_galena_slurry=Impure Galena Slurry
 material.galena_byproducts_slurry=Galena Byproducts Slurry
 material.sintered_lead_concentrate=Sintered Lead Concentrate
-material.cadmium_rich_flue_dust=Cadmium Rich Flue
+material.cadmium_rich_flue=Cadmium Rich Flue
 material.copper_dross=Copper Dross
 material.decoppered_lead=Decoppered Lead
 material.dezinced_lead=Dezinced Lead
@@ -929,6 +927,9 @@ material.chloroauric_acid_solution=Chloroauric Acid Solution
 material.sodium_nitrite=Sodium Nitrite
 material.sodium_oxide=Sodium Oxide
 material.gold_amalgam=Gold Amalgam
+material.decarburized_air=Decarburized Air
+material.liquid_deoxygenated_argon=Liquid Deoxygenated Argon
+material.liquid_waste_nitrogen=Liquid Waste Nitrogen
 material.alkali_fused_wulfenite=Alkali Fused Wulfenite
 material.lead_ii_hydroxide=Lead II Hydroxide
 material.sodium_molybdate_solution=Sodium Molybdate Solution
@@ -987,6 +988,7 @@ material.liquid_nitrogen=Liquid Nitrogen
 material.liquid_refinery_gas=Liquid Refinery Gas
 material.liquid_natural_gas=Liquid Natural Gas (LNG)
 material.liquid_methane=Liquid Methane
+material.liquid_decarburized_air=Liquid Decarburized Air
 
 material.hot_hp_air=Hot High-Pressure Air
 material.hp_air=High-Pressure Air
@@ -995,6 +997,10 @@ material.cold_hp_air=Cold High-Pressure Air
 material.hot_hp_nether_air=Hot High-Pressure Nether Air
 material.hp_nether_air=High-Pressure Nether Air
 material.cold_hp_nether_air=Cold High-Pressure Nether Air
+
+material.hot_hp_decarburized_air=Hot High-Pressure Decarburized Air
+material.hp_decarburized_air=High-Pressure Decarburized Air
+material.cold_hp_decarburized_air=Cold High-Pressure Decarburized Air
 
 material.hot_hp_refinery_gas=Hot High-Pressure Refinery Gas
 material.hp_refinery_gas=High-Pressure Refinery Gas
@@ -1068,6 +1074,10 @@ material.dichlorodifluoromethane=Dichlorodifluoromethane
 material.chlorotrifluoromethane=Chlorotrifluoromethane
 material.chlorodifluoromethane=Chlorodifluoromethane
 material.polychlorinated_biphenyl=Polychlorinated Biphenyl
+
+material.liquid_argon_product=Liquid Argon Product
+material.liquid_oxygen_product=Liquid Oxygen Product
+material.liquid_nitrogen_product=Liquid Nitrogen Product
 
 # Ores
 
@@ -1438,8 +1448,10 @@ material.vanadium_oxytrichloride=Vanadium Oxytrichloride
 material.gaseous_iron_iii_chloride=Gaseous Iron III Chloride
 material.gaseous_titanium_tetrachloride=Gaseous Titanium Tetrachloride
 material.tin_tetrachloride=Tin Tetrachloride
-material.gaseous_aluminium_trichloride=Gaseous Aluminium Trichloride
+material.gaseous_aluminium_chloride=Gaseous Aluminium Chloride
 material.extracted_caprolactam_solution=Extracted Caprolactam Solution
+material.dilute_ammonium_sulfate_solution=Dilute Ammonium Sulfate Solution
+material.chloroauric_acid_solution=Chloroauric Acid Solution
 material.diluted_ammonium_sulfate_solution=Diluted Ammonium Sulfate Solution
 material.phosgene_solution=Phosgene Solution
 material.sodium_bisphenolate_solution=Sodium Bisphenolate Solution
@@ -1464,9 +1476,8 @@ material.impure_cassiterite_slurry=Impure Cassiterite Slurry
 material.cassiterite_slurry=Cassiterite Slurry
 material.limestone_tailing_slurry=Limestone Tailing Slurry
 material.hexachloroplatinic_acid_solution=Hexachloroplatinic Acid Solution
-material.sodium_hexachloroplatinate_solution=Sodium Hexachloroplatinate Solution
 material.ammonium_hexachloroplatinate=Ammonium Hexachloroplatinate
-material.diluted_ammonium_chloride_solution=Diluted Ammonium Chloride Solution
+material.platinum_mother_liquor=Platinum Mother Liquor
 material.alluvial_platinum=Alluvial Platinum
 material.impure_malachite_slurry=Impure Malachite Slurry
 material.malachite_slurry=Malachite Slurry
@@ -1490,8 +1501,6 @@ material.potassium_octyl_hydroxamate=Potassium Octyl Hydroxamate
 material.diluted_copper_sulfate_solution=Diluted Copper Sulfate Solution
 material.nickel_sulfate_solution=Nickel Sulfate Solution
 material.palladium_containing_solution=Palladium Containing Solution
-material.mercury_ii_cyanide=Mercury II Cyanide
-material.palladium_ii_cyanide=Palladium II Cyanide
 material.aluminium_nitride=Aluminium Nitride
 material.aluminium_oxynitride=Aluminium Oxynitride (ALON)
 material.ultra_high_molecular_weight_polyethylene=Ultra High Molecular Weight Polyethylene (UHMWPE)
@@ -1588,6 +1597,11 @@ material.phosphorus_pentasulfide=Phosphorus Pentasulfide
 material.sodium_dithiophosphate_solution=Sodium Dithiophosphate Solution
 material.tetrahydrofuran_solution=Tetrahydrofuran Solution
 material.calcium_zirconate=Calcium Zirconate
+material.cemented_hexachloroplatinic_acid_solution=Cemented Hexachloroplatinic Acid Solution
+material.palladium_mother_liquor=Palladium Mother Liquor
+material.ferroplatinum=Ferroplatinum
+material.diamminedichloropalladium=Diamminedichloropalladium
+material.divalent_palladium_solution=Divalent Palladium Solution
 material.sifted_pyrochlore=Sifted Pyrochlore
 material.pyrochlore_concentrate=Pyrochlore Concentrate
 material.impure_pyrochlore_slurry=Impure Pyrochlore Slurry
@@ -1677,6 +1691,40 @@ material.acetylacetone=Acetylacetone
 material.diethylaluminium_acetylacetonate=Diethylaluminium Acetylacetonate
 material.diluted_two_ethyl_two_hexenal=Diluted 2-Ethyl-2-hexenal
 material.acidic_triethyl_phosphate=Acidic Triethyl Phosphate
+material.bisphenol_bromination_catalyst=Bisphenol Bromination Catalyst
+material.impure_brominated_bisphenol_emulsion=Impure Brominated Bisphenol Emulsion
+material.impure_brominated_bisphenol_solution=Impure Brominated Bisphenol Solution
+material.bisphenol_a_novolac_epoxy=Bisphenol A Novolac Epoxy
+material.sulfonium_preparation_mixture=Sulfonium Preparation Mixture
+material.nickel_hydrotalcite=Nickel Hydrotalcite
+material.calcium_cyanamide=Calcium Cyanamide
+material.antimony_pentafluoride=Antimony Pentafluoride
+material.sodium_hexafluoroantimonate=Sodium Hexafluoroantimonate
+material.acid_washed_silicon_dioxide=Acid Washed Silicon Dioxide
+material.disulfur_dichloride=Disulfur Dichloride
+material.diluted_sodium_sulfite_solution=Diluted Sodium Sulfite Solution
+material.sodium_hexafluoroantimonate_solution=Sodium Hexafluoroantimonate Solution
+material.e_glass=E-Glass
+material.tetrabromobisphenol_a=Tetrabromobisphenol A
+material.cyanamide=Cyanamide
+material.dicyandiamide=Dicyandiamide
+material.two_methylimidazole=2-Methylimidazole
+material.flame_retardant_epoxy=Flame Retardant Epoxy
+material.propylene_chlorohydrin=Propylene Chlorohydrin
+material.propylene_oxide=Propylene Oxide
+material.propylene_carbonate=Propylene Carbonate
+material.diphenyl_sulfide=Diphenyl Sulfide
+material.diphenyl_sulfoxide=Diphenyl Sulfoxide
+material.methanesulfonic_acid=Methanesulfonic Acid
+material.triarylsulfonium_hexafluoroantimonate=Triarylsulfonium Hexafluoroantimonate
+material.wet_epoxy=Wet Epoxy
+material.tetrabromobisphenol_a_solution=Tetrabromobisphenol A Solution
+material.epoxy_curing_mixture=Epoxy Curing Mixture
+material.wet_flame_retardant_epoxy=Wet Flame Retardant Epoxy
+material.propylene_oxide_solution=Propylene Oxide Solution
+material.su_eight=SU-8 Photoresist
+material.hydrodealkylated_toluene_mixture=Hydrodealkylated Toluene Mixture
+material.ortho_para_xylene_mixture=o/p-Xylene Mixture
 
 # Isotopes
 
@@ -2037,6 +2085,9 @@ metaitem.sponge.hafnium.name=Hafnium Sponge
 metaitem.sponge.hafnium.crude.name=Crude Hafnium Sponge
 
 metaitem.drone.lv.name=Basic Drone
+
+metaitem.glass_fibers.name=Glass Fibers
+metaitem.epoxy_lamina.name=Epoxy Lamina
 
 # Multiblocked
 

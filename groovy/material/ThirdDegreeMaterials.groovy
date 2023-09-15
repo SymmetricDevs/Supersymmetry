@@ -338,5 +338,47 @@ public class ThirdDegreeMaterials {
                 .build();
 
         DicarbonylbistriphenylphosphinenickelZero.setFormula("Ni(CO)2(PPh)2", true)
+
+        SodiumPhenoxideSolution = new Material.Builder(24053, 'sodium_phenoxide_solution')
+                .fluid()
+                .components(Water, 1, SodiumPhenoxide, 1)
+                .colorAverage()
+                .build();
+
+        WetEpoxy = new Material.Builder(24054, 'wet_epoxy')
+                .dust()
+                .components(Epoxy, 1)
+                .color(0xa16f0d)
+                .build();
+
+        TetrabromobisphenolASolution = new Material.Builder(24055, 'tetrabromobisphenol_a_solution')
+                .fluid()
+                .components(TetrabromobisphenolA, 1, Dichloroethane, 6)
+                .colorAverage()
+                .build();
+
+        EpoxyCuringMixture = new Material.Builder(24056, 'epoxy_curing_mixture')
+                .dust()
+                .components(Dicyandiamide, 1, TwoMethylimidazole, 1, PhthalicAnhydride, 1)
+                .colorAverage()
+                .build();
+
+        WetFlameRetardantEpoxy = new Material.Builder(24057, 'wet_flame_retardant_epoxy')
+                .dust()
+                .components(FlameRetardantEpoxy, 1)
+                .color(0xa1530b)
+                .build();
+
+        PropyleneOxideSolution = new Material.Builder(24058, 'propylene_oxide_solution')
+                .fluid()
+                .components(CalciumChloride, 1, PropyleneOxide, 2, Water, 2)
+                .colorAverage()
+                .build();
+
+        OrthoParaXyleneMixture = new Material.Builder(24059, "ortho_para_xylene_mixture")
+                .fluid()
+                .components(OrthoXylene, 60, ParaXylene, 40)
+                .colorAverage()
+                .build();
     }
 }

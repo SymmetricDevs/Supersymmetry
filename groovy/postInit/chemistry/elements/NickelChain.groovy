@@ -6,13 +6,26 @@ ROASTER = recipemap('roaster')
 REACTION_FURNACE = recipemap('reaction_furnace')
 BR = recipemap('batch_reactor')
 
+// Garnierite Dust * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustPentlandite')], [fluid('oxygen') * 3000])
+
+EBF.recipeBuilder()
+        .inputs(ore('dustPentlandite'))
+        .fluidInputs(fluid('oxygen') * 3000)
+        .outputs(metaitem('dustGarnierite'))
+        .fluidOutputs(fluid('sulfur_dioxide') * 1000)
+        .EUt(30)
+        .blastFurnaceTemp(1728)
+        .duration(40)
+        .buildAndRegister()
+
 for (combustible in Globals.combustibles) {
     PRIMITIVEBLASTFURNACE.recipeBuilder()
             .inputs(ore('dustNickel'))
             .inputs(ore(combustible.name) * (combustible.amount_required))
             .outputs(metaitem('ingotNickel'))
             .outputs(metaitem(combustible.byproduct) * (combustible.amount_required))
-            .duration(200)
+            .duration(250)
             .buildAndRegister()
 
     PRIMITIVEBLASTFURNACE.recipeBuilder()
@@ -20,15 +33,15 @@ for (combustible in Globals.combustibles) {
             .inputs(ore(combustible.name) * (combustible.amount_required))
             .outputs(metaitem('ingotNickel'))
             .outputs(metaitem(combustible.byproduct) * (combustible.amount_required))
-            .duration(200)
+            .duration(250)
             .buildAndRegister()
 
     PRIMITIVEBLASTFURNACE.recipeBuilder()
             .inputs(ore('dustPentlandite'))
             .inputs(ore(combustible.name) * (combustible.amount_required) * 4)
-            .outputs(metaitem('ingotNickel') * 9)
+            .outputs(metaitem('ingotNickel'))
             .outputs(metaitem(combustible.byproduct) * (combustible.amount_required) * 4)
-            .duration(1200)
+            .duration(250)
             .buildAndRegister()
 
     EBF.recipeBuilder()
@@ -38,7 +51,7 @@ for (combustible in Globals.combustibles) {
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .EUt(30)
             .blastFurnaceTemp(1728)
-            .duration(100)
+            .duration(40)
             .buildAndRegister()
 }
 
@@ -67,7 +80,7 @@ BR.recipeBuilder()
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('nickel_carbonyl') * 1000)
         .outputs(metaitem('dustHighPurityNickel'))
-        .fluidOutputs(fluid('carbon_monoxide') * 4000)\
+        .fluidOutputs(fluid('carbon_monoxide') * 4000)
         .EUt(30)
         .duration(200)
         .buildAndRegister()
@@ -78,6 +91,6 @@ REACTION_FURNACE.recipeBuilder()
         .outputs(metaitem('dustNickel'))
         .fluidOutputs(fluid('steam') * 1000)
         .EUt(30)
-        .duration(200)
+        .duration(40)
         .buildAndRegister()
 
