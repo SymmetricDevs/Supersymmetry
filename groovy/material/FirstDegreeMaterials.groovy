@@ -3207,5 +3207,11 @@ public class FirstDegreeMaterials{
                 .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
+
+        ZincOxide = new Material.Builder(8567, "zinc_oxide")
+                .dust()
+                .components(Zinc, 1, Oxygen, 1)
+                .colorAverage()
+                .build();
     }
 }

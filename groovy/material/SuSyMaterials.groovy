@@ -987,6 +987,7 @@ class SuSyMaterials {
         public static Material ActivatedRaneyCobalt;
         public static Material LithiumOxide;
         public static Material ManganeseIISulfate;
+        public static Material ZincOxide;
 
         // Second Degree Materials
 
