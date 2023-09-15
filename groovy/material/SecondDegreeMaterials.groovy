@@ -582,5 +582,19 @@ public class SecondDegreeMaterials {
                 .components(Alumina, 1, Platinum, 1, Chlorine, 4)
                 .flags(GENERATE_CATALYST_BED)
                 .build()
+
+        CrudeManganeseIISulfateSolution = new Material.Builder(13093, "crude_manganese_ii_sulfate_solution")
+                .fluid()
+                .components(ManganeseIISulfate, 1, Water, 1)
+                .colorAverage()
+                .build()
+                .setFormula('(?)(MnSO4)(H2O)', true)
+
+        ManganeseIISulfateSolution = new Material.Builder(13094, "manganese_ii_sulfate_solution")
+                .fluid()
+                .components(ManganeseIISulfate, 1, Water, 1)
+                .colorAverage()
+                .build()
+                .setFormula('(MnSO4)(H2O)', true)
     }
 }

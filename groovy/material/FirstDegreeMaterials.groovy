@@ -1169,19 +1169,20 @@ public class FirstDegreeMaterials{
                 .iconSet(SAND)
                 .build()
 
-        CrudeManganeseIISulfateSolution = new Material.Builder(8266, "crude_manganese_ii_sulfate_solution")
-                .fluid()
-                .components(Manganese, 1, Sulfur, 1, Oxygen, 4, Water, 1)
-                .colorAverage()
-                .build()
-                .setFormula('(?)(MnSO4)(H2O)', true)
+        RaneyCobalt = new Material.Builder(8266, "raney_cobalt")
+                .dust()
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Cobalt, 1, Aluminium, 1)
+                .color(0x1858a1)
+                .build();
 
-        CrudeManganeseIISulfateSolution = new Material.Builder(8267, "manganese_ii_sulfate_solution")
-                .fluid()
-                .components(Manganese, 1, Sulfur, 1, Oxygen, 4, Water, 1)
-                .colorAverage()
-                .build()
-                .setFormula('(MnSO4)(H2O)', true)
+        ActivatedRaneyCobalt = new Material.Builder(8267, "activated_raney_cobalt")
+                .dust()
+                .iconSet(SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Cobalt, 1, Aluminium, 1)
+                .color(0x3274bf)
+                .build();
 
         IronIIIHydroxide = new Material.Builder(8268, "iron_iii_hydroxide")
                 .dust()
@@ -1960,9 +1961,9 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        PolychlorinatedBiphenyl = new Material.Builder(8387, "polychlorinated_biphenyl")
-                .fluid()
-                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
+        LithiumOxide = new Material.Builder(8387, "lithium_oxide")
+                .dust().fluid()
+                .components(Lithium, 2, Oxygen, 1)
                 .colorAverage()
                 .build();
 
@@ -2779,21 +2780,18 @@ public class FirstDegreeMaterials{
                 .color(0x38add1)
                 .build();
 
-        MercuryIICyanide = new Material.Builder(8506, "mercury_ii_cyanide")
-                .dust()
-                .components(Mercury, 1, Carbon, 2, Nitrogen, 2)
-                .colorAverage()
+        DisulfurDichloride = new Material.Builder(8506, "disulfur_dichloride")
+                .fluid()
+                .components(Sulfur, 2, Chlorine, 2)
+                .color(0xccc31d)
                 .build();
 
-        MercuryIICyanide.setFormula("Hg(CN)2", true)
-
-        PalladiumIICyanide = new Material.Builder(8507, "palladium_ii_cyanide")
+        AcidWashedSiliconDioxide = new Material.Builder(8507, "acid_washed_silicon_dioxide")
                 .dust()
-                .components(Palladium, 1, Carbon, 2, Nitrogen, 2)
-                .color(0x787a7a)
+                .components(SiliconDioxide, 1)
+                .color(0xc8c8c8)
+                .iconSet(SHINY)
                 .build();
-
-        PalladiumIICyanide.setFormula("Pd(CN)2", true)
 
         AluminiumNitride = new Material.Builder(8508, "aluminium_nitride")
                 .dust()
@@ -2966,9 +2964,9 @@ public class FirstDegreeMaterials{
 
         SodiumMolybdateSolution.setFormula("(Na2MoO4)(H2O)", true)
 
-        PolychlorinatedBiphenyl = new Material.Builder(8532, "polychlorinated_biphenyl")
-                .fluid()
-                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
+        ManganeseIISulfate = new Material.Builder(8532, "manganese_ii_sulfate")
+                .dust()
+                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
 
@@ -3185,28 +3183,13 @@ public class FirstDegreeMaterials{
                 .color(0x2b6cb3)
                 .build();
 
-        RaneyCobalt = new Material.Builder(8563, "raney_cobalt")
-                .dust()
-                .flags(DISABLE_DECOMPOSITION)
-                .components(Cobalt, 1, Aluminium, 1)
-                .color(0x1858a1)
-                .build();
-
-        ActivatedRaneyCobalt = new Material.Builder(8564, "activated_raney_cobalt")
-                .dust()
-                .iconSet(SHINY)
-                .flags(DISABLE_DECOMPOSITION)
-                .components(Cobalt, 1, Aluminium, 1)
-                .color(0x3274bf)
-                .build();
-
-        LithiumOxide = new Material.Builder(8565, "lithium_oxide")
+        LithiumOxide = new Material.Builder(8563, "lithium_oxide")
                 .dust().fluid()
                 .components(Lithium, 2, Oxygen, 1)
                 .colorAverage()
                 .build();
 
-        NickelHydrotalcite = new Material.Builder(8566, "nickel_hydrotalcite")
+        NickelHydrotalcite = new Material.Builder(8564, "nickel_hydrotalcite")
                 .dust()
                 .components(Nickel, 6, Aluminium, 2, )
                 .color(0x9fb833)
@@ -3214,13 +3197,13 @@ public class FirstDegreeMaterials{
 
         NickelHydrotalcite.setFormula("[Ni3Al(OH)8]Cl", true)
 
-        CalciumCyanamide = new Material.Builder(8567, "calcium_cyanamide")
+        CalciumCyanamide = new Material.Builder(8565, "calcium_cyanamide")
                 .dust()
                 .components(Calcium, 1, Carbon, 1, Nitrogen, 2)
                 .colorAverage()
                 .build();
 
-        AntimonyPentafluoride = new Material.Builder(8568, "antimony_pentafluoride")
+        AntimonyPentafluoride = new Material.Builder(8566, "antimony_pentafluoride")
                 .fluid()
                 .components(Antimony, 1, Fluorine, 5)
                 .colorAverage()

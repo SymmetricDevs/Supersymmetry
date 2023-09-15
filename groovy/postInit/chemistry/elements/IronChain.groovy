@@ -109,6 +109,28 @@ furnace.add(metaitem('dustBrownLimonite'), metaitem('dustBandedIron'))
 furnace.add(metaitem('dustYellowLimonite'), metaitem('dustBandedIron'))
 furnace.add(metaitem('ingotWroughtIron'), item('minecraft:iron_ingot'))
 
+//Deleting old Steel Dust -> Steel Ingot recipe
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSteel')], null)
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSteelMagnetic')], null)
+
+
+//Readding Steel Dust -> Steel Ingot recipe
+
+EBF_RECIPES.recipeBuilder()
+		.inputs(ore('dustSteel'))
+		.outputs(metaitem('ingotSteel'))
+		.duration(60)
+		.blastFurnaceTemp(1750)
+		.EUt(60)
+		.buildAndRegister()
+EBF_RECIPES.recipeBuilder()
+		.inputs(ore('dustSteelMagnetic'))
+		.outputs(metaitem('ingotSteel'))
+		.duration(60)
+		.blastFurnaceTemp(1750)
+		.EUt(60)
+		.buildAndRegister()
+
 //SLAG REMOVAL BY HAMMER
 crafting.addShapeless('hammer_pig_iron',metaitem('ingotWroughtIron'), [
     ore('craftingToolHardHammer'),

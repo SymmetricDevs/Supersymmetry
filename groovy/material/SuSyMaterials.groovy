@@ -466,6 +466,7 @@ class SuSyMaterials {
         public static Material HZSMFive;
         public static Material FunctionalizableCrosslinkedPolystyrene;
         public static Material TantalumExtract;
+        public static Material HydrodealkylatedTolueneMixture;
         public static Material BisphenolBrominationCatalyst;
         public static Material ImpureBrominatedBisphenolEmulsion;
         public static Material ImpureBrominatedBisphenolSolution;
@@ -705,8 +706,6 @@ class SuSyMaterials {
         public static Material AntimonyIIISulfide;
         public static Material IronThioarsenite;
         public static Material ManganeseIIOxide;
-        public static Material CrudeManganeseIISulfateSolution;
-        public static Material ManganeseIISulfateSolution;
         public static Material IronIIIHydroxide;
         public static Material Cellulose;
         public static Material CrudeGalliumTrichloride;
@@ -940,7 +939,6 @@ class SuSyMaterials {
         public static Material Dichlorodifluoromethane;
         public static Material Chlorotrifluoromethane;
         public static Material Chlorodifluoromethane;
-        public static Material PolychlorinatedBiphenyl;
         public static Material DilutedSilverNitrateSolution;
         public static Material DecarburizedAir;
         public static Material MolybdenumTrisulfide;
@@ -1094,6 +1092,8 @@ class SuSyMaterials {
         public static Material TantalumFluorideSolution;
         public static Material AmmoniumPerrhenateSolution;
         public static Material AluminiumChlorideSolution;
+        public static Material CrudeManganeseIISulfateSolution;
+        public static Material ManganeseIISulfateSolution;
         public static Material DilutedSodiumSulfiteSolution;
         public static Material SodiumHexafluoroantimonateSolution;
         public static Material EGlass;
@@ -1333,8 +1333,6 @@ class SuSyMaterials {
         public static Material ExtractedCaprolactamSolution;
         public static Material OctylHydroxamicAcid;
         public static Material PotassiumOctylHydroxamate;
-        public static Material MercuryIICyanide;
-        public static Material PalladiumIICyanide;
         public static Material Trimethylaluminium;
         public static Material Methylaluminoxane;
         public static Material ZirconoceneDichloride;
@@ -1375,6 +1373,8 @@ class SuSyMaterials {
         public static Material Ethyltoluene;
         public static Material VinylbenzylChloride;
         public static Material Cyclohexylamine;
+        public static Material Biphenyl;
+        public static Material PolychlorinatedBiphenyl;
         public static Material TetrabromobisphenolA;
         public static Material Cyanamide;
         public static Material Dicyandiamide;
@@ -1443,6 +1443,7 @@ class SuSyMaterials {
         public static Material CrudeNitrobenzene;
         public static Material DichlorobistriphenylphosphinenickelII;
         public static Material DicarbonylbistriphenylphosphinenickelZero;
+        public static Material OrthoParaXyleneMixture;
         public static Material SodiumPhenoxideSolution;
         public static Material WetEpoxy;
         public static Material TetrabromobisphenolASolution;

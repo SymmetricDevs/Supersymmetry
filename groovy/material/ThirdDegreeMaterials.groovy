@@ -374,5 +374,11 @@ public class ThirdDegreeMaterials {
                 .components(CalciumChloride, 1, PropyleneOxide, 2, Water, 2)
                 .colorAverage()
                 .build();
+
+        OrthoParaXyleneMixture = new Material.Builder(24059, "ortho_para_xylene_mixture")
+                .fluid()
+                .components(OrthoXylene, 60, ParaXylene, 40)
+                .colorAverage()
+                .build();
     }
 }
