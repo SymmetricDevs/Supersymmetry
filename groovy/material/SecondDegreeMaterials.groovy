@@ -556,14 +556,14 @@ public class SecondDegreeMaterials {
 
         CrudeManganeseIISulfateSolution = new Material.Builder(13089, "crude_manganese_ii_sulfate_solution")
                 .fluid()
-                .components(ManganeseIISulfate, Water, 1)
+                .components(ManganeseIISulfate, 1, Water, 1)
                 .colorAverage()
                 .build()
                 .setFormula('(?)(MnSO4)(H2O)', true)
 
         ManganeseIISulfateSolution = new Material.Builder(13090, "manganese_ii_sulfate_solution")
                 .fluid()
-                .components(ManganeseIISulfate, Water, 1)
+                .components(ManganeseIISulfate, 1, Water, 1)
                 .colorAverage()
                 .build()
                 .setFormula('(MnSO4)(H2O)', true)

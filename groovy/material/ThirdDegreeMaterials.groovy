@@ -375,7 +375,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        OrthoParaXyleneMixture = new Material.Builder(24053, "ortho_para_xylene_mixture")
+        OrthoParaXyleneMixture = new Material.Builder(24059, "ortho_para_xylene_mixture")
                 .fluid()
                 .components(OrthoXylene, 60, ParaXylene, 40)
                 .colorAverage()

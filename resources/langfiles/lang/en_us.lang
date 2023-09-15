@@ -827,7 +827,7 @@ material.sodium_ethyl_xanthate_solution=Sodium Ethyl Xanthate Solution
 material.impure_galena_slurry=Impure Galena Slurry
 material.galena_byproducts_slurry=Galena Byproducts Slurry
 material.sintered_lead_concentrate=Sintered Lead Concentrate
-material.cadmium_rich_flue_dust=Cadmium Rich Flue
+material.cadmium_rich_flue=Cadmium Rich Flue
 material.copper_dross=Copper Dross
 material.decoppered_lead=Decoppered Lead
 material.dezinced_lead=Dezinced Lead
@@ -1487,8 +1487,6 @@ material.potassium_octyl_hydroxamate=Potassium Octyl Hydroxamate
 material.diluted_copper_sulfate_solution=Diluted Copper Sulfate Solution
 material.nickel_sulfate_solution=Nickel Sulfate Solution
 material.palladium_containing_solution=Palladium Containing Solution
-material.mercury_ii_cyanide=Mercury II Cyanide
-material.palladium_ii_cyanide=Palladium II Cyanide
 material.aluminium_nitride=Aluminium Nitride
 material.aluminium_oxynitride=Aluminium Oxynitride (ALON)
 material.ultra_high_molecular_weight_polyethylene=Ultra High Molecular Weight Polyethylene (UHMWPE)
@@ -1706,6 +1704,8 @@ material.epoxy_curing_mixture=Epoxy Curing Mixture
 material.wet_flame_retardant_epoxy=Wet Flame Retardant Epoxy
 material.propylene_oxide_solution=Propylene Oxide Solution
 material.su_eight=SU-8 Photoresist
+material.hydrodealkylated_toluene_mixture=Hydrodealkylated Toluene Mixture
+material.ortho_para_xylene_mixture=o/p-Xylene Mixture
 
 # Isotopes
 

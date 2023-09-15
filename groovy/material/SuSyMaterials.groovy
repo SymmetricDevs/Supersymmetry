@@ -1325,8 +1325,6 @@ class SuSyMaterials {
         public static Material ExtractedCaprolactamSolution;
         public static Material OctylHydroxamicAcid;
         public static Material PotassiumOctylHydroxamate;
-        public static Material MercuryIICyanide;
-        public static Material PalladiumIICyanide;
         public static Material Trimethylaluminium;
         public static Material Methylaluminoxane;
         public static Material ZirconoceneDichloride;

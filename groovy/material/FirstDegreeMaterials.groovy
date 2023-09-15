@@ -2776,21 +2776,18 @@ public class FirstDegreeMaterials{
                 .color(0x38add1)
                 .build();
 
-        MercuryIICyanide = new Material.Builder(8506, "mercury_ii_cyanide")
-                .dust()
-                .components(Mercury, 1, Carbon, 2, Nitrogen, 2)
-                .colorAverage()
+        DisulfurDichloride = new Material.Builder(8506, "disulfur_dichloride")
+                .fluid()
+                .components(Sulfur, 2, Chlorine, 2)
+                .color(0xccc31d)
                 .build();
 
-        MercuryIICyanide.setFormula("Hg(CN)2", true)
-
-        PalladiumIICyanide = new Material.Builder(8507, "palladium_ii_cyanide")
+        AcidWashedSiliconDioxide = new Material.Builder(8507, "acid_washed_silicon_dioxide")
                 .dust()
-                .components(Palladium, 1, Carbon, 2, Nitrogen, 2)
-                .color(0x787a7a)
+                .components(SiliconDioxide, 1)
+                .color(0xc8c8c8)
+                .iconSet(SHINY)
                 .build();
-
-        PalladiumIICyanide.setFormula("Pd(CN)2", true)
 
         AluminiumNitride = new Material.Builder(8508, "aluminium_nitride")
                 .dust()
@@ -3212,19 +3209,6 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Sodium, 1, Antimony, 1, Fluorine, 6)
                 .colorAverage()
-                .build();
-
-        AcidWashedSiliconDioxide = new Material.Builder(8570, "acid_washed_silicon_dioxide")
-                .dust()
-                .components(SiliconDioxide, 1)
-                .color(0xc8c8c8)
-                .iconSet(SHINY)
-                .build();
-
-        DisulfurDichloride = new Material.Builder(8571, "disulfur_dichloride")
-                .fluid()
-                .components(Sulfur, 2, Chlorine, 2)
-                .color(0xccc31d)
                 .build();
     }
 }
