@@ -18,11 +18,6 @@ SMOKE_STACK.recipeBuilder()
         .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
-        .fluidInputs(fluid('oxygen') * 500)
-        .duration(20)
-        .buildAndRegister()
-
-SMOKE_STACK.recipeBuilder()
         .fluidInputs(fluid('steam') * 4000)
         .duration(20)
         .buildAndRegister()
@@ -53,8 +48,13 @@ SMOKE_STACK.recipeBuilder()
         .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
-        .fluidInputs(fluid('nitrogen') * 4000)
-        .duration(20)
+        .fluidInputs(fluid('nitrogen') * 10000)
+        .duration(5)
+        .buildAndRegister()
+
+SMOKE_STACK.recipeBuilder()
+        .fluidInputs(fluid('oxygen') * 5000)
+        .duration(5)
         .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
@@ -78,7 +78,7 @@ SMOKE_STACK.recipeBuilder()
         .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
-        .fluidInputs(fluid('unscrubbed_wood_gas') * 500)
+        .fluidInputs(fluid('unscrubbed_wood_gas') * 1000)
         .duration(20)
         .buildAndRegister()
 

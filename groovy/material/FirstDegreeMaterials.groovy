@@ -3259,5 +3259,11 @@ public class FirstDegreeMaterials{
                 .build();
 
         Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
+
+        DecarburizedAir = new Material.Builder(8574, "decarburized_air")
+                .fluid(FluidTypes.GAS)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
+                .color(0x90bbe0)
+                .build();
     }
 }

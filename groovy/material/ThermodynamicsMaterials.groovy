@@ -242,6 +242,8 @@ class ThermodynamicsMaterials {
 
                 generateHighPressureGases(NaturalGas, 22045, true);
 
+                generateHighPressureGases(DecarburizedAir, 22048, true);
+
                 generateLiquidFromGas(Hydrogen, 22100, 14);
 
                 generateLiquidFromGas(Helium, 22101, 5);
@@ -261,6 +263,8 @@ class ThermodynamicsMaterials {
                 generateLiquidFromGas(Methane, 22108, 112);
 
                 generateLiquidFromGas(NaturalGas, 22109, 110);
+
+                generateLiquidFromGas(DecarburizedAir, 22110, 80)
 
                 generateThermoRefrigerant(Ammonia, 22150);
 
@@ -331,7 +335,7 @@ class ThermodynamicsMaterials {
                 .color(0xffffff)
                 .build();
 
-        CompressedAir = new Material.Builder(22802, "compressed_air")
+        /*CompressedAir = new Material.Builder(22802, "compressed_air")
                 .fluid(FluidTypes.GAS)
                 .color(0x95bee6)
                 .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
@@ -363,14 +367,14 @@ class ThermodynamicsMaterials {
                 .fluidTemp(273)
                 .color(0x6293e3)
                 .components(Hydrogen, 2, Oxygen, 1)
-                .build();
+                .build();*/
 
         WasteGaseousNitrogen = new Material.Builder(22807, "waste_gaseous_nitrogen")
                 .fluid(FluidTypes.GAS)
                 .color(0x29a4a6)
                 .build();
 
-        PurfiedWasteGaseousNitrogen = new Material.Builder(22808, "purified_waste_gaseous_nitrogen")
+        /*PurfiedWasteGaseousNitrogen = new Material.Builder(22808, "purified_waste_gaseous_nitrogen")
                 .fluid(FluidTypes.GAS)
                 .color(0x37b1b3)
                 .build();
@@ -401,7 +405,7 @@ class ThermodynamicsMaterials {
                 .fluidTemp(80)
                 .color(0x3b72a8)
                 .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
-                .build();
+                .build();*/
 
         ChillyWasteGaseousNitrogen = new Material.Builder(22813, "chilly_waste_gaseous_nitrogen")
                 .fluid(FluidTypes.GAS)
@@ -545,6 +549,42 @@ class ThermodynamicsMaterials {
                 .fluid(FluidTypes.GAS)
                 .fluidTemp(140)
                 .color(0x23b9ba)
+                .build();
+
+        LiquidArgonProduct = new Material.Builder(22837, "liquid_argon_product")
+                .fluid()
+                .fluidTemp(87)
+                .color(0x0ecc0e)
+                .build();
+
+        LiquidOxygenProduct = new Material.Builder(22838, "liquid_oxygen_product")
+                .fluid()
+                .fluidTemp(90)
+                .color(0x459fcc)
+                .build();
+
+        LiquidNitrogenProduct = new Material.Builder(22839, "liquid_nitrogen_product")
+                .fluid()
+                .fluidTemp(77)
+                .color(0x0b9a9c)
+                .build();
+
+        LiquidDeoxygenatedArgon = new Material.Builder(22840, "liquid_deoxygenated_argon")
+                .fluid()
+                .fluidTemp(87)
+                .color(0x3de03d)
+                .build();
+
+        LiquidWasteNitrogen = new Material.Builder(22841, "liquid_waste_nitrogen")
+                .fluid()
+                .fluidTemp(77)
+                .color(0x379394)
+                .build();
+
+        PartiallyLiquefiedArgon = new Material.Builder(22842, "partially_liquefied_argon")
+                .fluid()
+                .fluidTemp(120)
+                .color(0x56bf56)
                 .build();
     }
 }
