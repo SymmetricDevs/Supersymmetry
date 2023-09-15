@@ -1170,19 +1170,20 @@ public class FirstDegreeMaterials{
                 .iconSet(SAND)
                 .build()
 
-        CrudeManganeseIISulfateSolution = new Material.Builder(8266, "crude_manganese_ii_sulfate_solution")
-                .fluid()
-                .components(Manganese, 1, Sulfur, 1, Oxygen, 4, Water, 1)
-                .colorAverage()
-                .build()
-                .setFormula('(?)(MnSO4)(H2O)', true)
+        RaneyCobalt = new Material.Builder(8266, "raney_cobalt")
+                .dust()
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Cobalt, 1, Aluminium, 1)
+                .color(0x1858a1)
+                .build();
 
-        CrudeManganeseIISulfateSolution = new Material.Builder(8267, "manganese_ii_sulfate_solution")
-                .fluid()
-                .components(Manganese, 1, Sulfur, 1, Oxygen, 4, Water, 1)
-                .colorAverage()
-                .build()
-                .setFormula('(MnSO4)(H2O)', true)
+        ActivatedRaneyCobalt = new Material.Builder(8267, "activated_raney_cobalt")
+                .dust()
+                .iconSet(SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Cobalt, 1, Aluminium, 1)
+                .color(0x3274bf)
+                .build();
 
         IronIIIHydroxide = new Material.Builder(8268, "iron_iii_hydroxide")
                 .dust()
@@ -1960,9 +1961,9 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        PolychlorinatedBiphenyl = new Material.Builder(8387, "polychlorinated_biphenyl")
-                .fluid()
-                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
+        LithiumOxide = new Material.Builder(8387, "lithium_oxide")
+                .dust().fluid()
+                .components(Lithium, 2, Oxygen, 1)
                 .colorAverage()
                 .build();
 
@@ -2962,9 +2963,9 @@ public class FirstDegreeMaterials{
 
         SodiumMolybdateSolution.setFormula("(Na2MoO4)(H2O)", true)
 
-        PolychlorinatedBiphenyl = new Material.Builder(8532, "polychlorinated_biphenyl")
-                .fluid()
-                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
+        ManganeseIISulfate = new Material.Builder(8532, "manganese_ii_sulfate")
+                .dust()
+                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
 
@@ -3179,33 +3180,6 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Nitrogen, 1, Hydrogen, 4, Rhenium, 1, Oxygen, 4)
                 .color(0x2b6cb3)
-                .build();
-
-        RaneyCobalt = new Material.Builder(8563, "raney_cobalt")
-                .dust()
-                .flags(DISABLE_DECOMPOSITION)
-                .components(Cobalt, 1, Aluminium, 1)
-                .color(0x1858a1)
-                .build();
-
-        ActivatedRaneyCobalt = new Material.Builder(8564, "activated_raney_cobalt")
-                .dust()
-                .iconSet(SHINY)
-                .flags(DISABLE_DECOMPOSITION)
-                .components(Cobalt, 1, Aluminium, 1)
-                .color(0x3274bf)
-                .build();
-
-        LithiumOxide = new Material.Builder(8565, "lithium_oxide")
-                .dust().fluid()
-                .components(Lithium, 2, Oxygen, 1)
-                .colorAverage()
-                .build();
-
-        ManganeseIISulfate = new Material.Builder(8566, "manganese_ii_sulfate")
-                .dust()
-                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
-                .colorAverage()
                 .build();
     }
 }

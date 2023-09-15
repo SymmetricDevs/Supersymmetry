@@ -466,6 +466,7 @@ class SuSyMaterials {
         public static Material HZSMFive;
         public static Material FunctionalizableCrosslinkedPolystyrene;
         public static Material TantalumExtract;
+        public static Material HydrodealkylatedTolueneMixture;
 
         // Petrochem Materials
 
@@ -700,8 +701,6 @@ class SuSyMaterials {
         public static Material AntimonyIIISulfide;
         public static Material IronThioarsenite;
         public static Material ManganeseIIOxide;
-        public static Material CrudeManganeseIISulfateSolution;
-        public static Material ManganeseIISulfateSolution;
         public static Material IronIIIHydroxide;
         public static Material Cellulose;
         public static Material CrudeGalliumTrichloride;
@@ -935,7 +934,6 @@ class SuSyMaterials {
         public static Material Dichlorodifluoromethane;
         public static Material Chlorotrifluoromethane;
         public static Material Chlorodifluoromethane;
-        public static Material PolychlorinatedBiphenyl;
         public static Material DilutedSilverNitrateSolution;
         public static Material MolybdenumTrisulfide;
         public static Material AmmoniumIsopolytungstateSolution;
@@ -1075,6 +1073,8 @@ class SuSyMaterials {
         public static Material TantalumFluorideSolution;
         public static Material AmmoniumPerrhenateSolution;
         public static Material AluminiumChlorideSolution;
+        public static Material CrudeManganeseIISulfateSolution;
+        public static Material ManganeseIISulfateSolution;
 
         // Organic Chemistry Materials
 
@@ -1354,6 +1354,8 @@ class SuSyMaterials {
         public static Material Ethyltoluene;
         public static Material VinylbenzylChloride;
         public static Material Cyclohexylamine;
+        public static Material Biphenyl;
+        public static Material PolychlorinatedBiphenyl;
 
         // Third Degree Materials
 
@@ -1410,6 +1412,7 @@ class SuSyMaterials {
         public static Material CrudeNitrobenzene;
         public static Material DichlorobistriphenylphosphinenickelII;
         public static Material DicarbonylbistriphenylphosphinenickelZero;
+        public static Material OrthoParaXyleneMixture;
 
         // Thermodynamics/Greenhouse Materials
 

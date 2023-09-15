@@ -1762,5 +1762,10 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xc97328)
                 .build();
+
+        HydrodealkylatedTolueneMixture = new Materail.Builder(4336, "hydrodealkylated_toluene_mixture")
+                .fluid()
+                .color(0x4a320a)
+                .build();
     }
 }

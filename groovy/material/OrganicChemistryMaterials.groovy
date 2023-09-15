@@ -1700,5 +1700,17 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 6, Hydrogen, 13, Nitrogen, 1)
                 .color(0xbfba8c)
                 .build();
+
+        Biphenyl = new Material.Builder(15275, "biphenyl")
+                .dust()
+                .components(Carbon, 12, Hydrogen, 10)
+                .colorAverage()
+                .build();
+                
+        PolychlorinatedBiphenyl = new Material.Builder(15274, "polychlorinated_biphenyl")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 5, Chlorine, 5)
+                .colorAverage()
+                .build();
     }
 }

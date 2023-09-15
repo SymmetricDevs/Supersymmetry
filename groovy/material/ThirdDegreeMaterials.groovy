@@ -338,5 +338,11 @@ public class ThirdDegreeMaterials {
                 .build();
 
         DicarbonylbistriphenylphosphinenickelZero.setFormula("Ni(CO)2(PPh)2", true)
+
+        OrthoParaXyleneMixture = new Material.Builder(24053, "ortho_para_xylene_mixture")
+                .fluid()
+                .components(OrthoXylene, 60, ParaXylene, 40)
+                .colorAverage()
+                .build();
     }
 }
