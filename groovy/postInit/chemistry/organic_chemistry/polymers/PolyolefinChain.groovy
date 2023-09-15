@@ -36,7 +36,7 @@ POLYMERIZATION.recipeBuilder()
         .duration(300)
         .buildAndRegister()
 
-// POLYPROPYLENE
+// Polypropylene
 
 POLYMERIZATION.recipeBuilder()
         .notConsumable(metaitem('dustPhilipsCatalyst'))

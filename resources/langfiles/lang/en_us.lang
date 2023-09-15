@@ -488,7 +488,6 @@ material.ethanolamine=Ethanolamine
 material.diethanolamine=Diethanolamine
 material.triethanolamine=Triethanolamine
 
-material.calcium_carbonate_solution=Calcium Carbonate Solution
 material.bentonite_clay_solution=Bentonite Clay Solution
 material.mineralized_water=Mineralized Water
 material.oxide_water=Oxide Water
@@ -516,7 +515,6 @@ material.dicobalt_octacarbonyl=Dicobalt Octacarbonyl
 material.impregnated_alumina_catalyst=Impregnated Alumina Catalyst
 material.bismuth_copper=Bismuth-Copper
 material.bromobenzene=Bromobenzene
-material.aluminium_trichloride=Aluminium Trichloride
 material.triethylaluminium=Triethylaluminium
 material.hydrogen_peroxide=Hydrogen Peroxide
 material.tetrabromomethane=Tetrabromomethane
@@ -1437,7 +1435,7 @@ material.vanadium_oxytrichloride=Vanadium Oxytrichloride
 material.gaseous_iron_iii_chloride=Gaseous Iron III Chloride
 material.gaseous_titanium_tetrachloride=Gaseous Titanium Tetrachloride
 material.tin_tetrachloride=Tin Tetrachloride
-material.gaseous_aluminium_trichloride=Gaseous Aluminium Trichloride
+material.gaseous_aluminium_chloride=Gaseous Aluminium Chloride
 material.extracted_caprolactam_solution=Extracted Caprolactam Solution
 material.diluted_ammonium_sulfate_solution=Diluted Ammonium Sulfate Solution
 material.phosgene_solution=Phosgene Solution
@@ -1497,7 +1495,7 @@ material.trimethylaluminium=Trimethylaluminium
 material.methylaluminoxane=Methylaluminoxane
 material.zirconocene_dichloride=Zirconocene Dichloride
 material.tetrahydrofuran=Tetrahydrofuran
-material.sodium_cyclopentadienideSodium Cyclopentadienide
+material.sodium_cyclopentadienide=Sodium Cyclopentadienide
 material.kaminsky_catalyst=Kaminsky Catalyst
 material.sodium_cyclopentadienide=Sodium Cyclopentadienide
 material.zirconium_tetrachloride_tetrahydrofuran_complex=Zirconium Tetrachloride Tetrahydrofuran Complex
@@ -1680,6 +1678,38 @@ material.acetylacetone=Acetylacetone
 material.diethylaluminium_acetylacetonate=Diethylaluminium Acetylacetonate
 material.diluted_two_ethyl_two_hexenal=Diluted 2-Ethyl-2-hexenal
 material.acidic_triethyl_phosphate=Acidic Triethyl Phosphate
+material.bisphenol_bromination_catalyst=Bisphenol Bromination Catalyst
+material.impure_brominated_bisphenol_emulsion=Impure Brominated Bisphenol Emulsion
+material.impure_brominated_bisphenol_solution=Impure Brominated Bisphenol Solution
+material.bisphenol_a_novolac_epoxy=Bisphenol A Novolac Epoxy
+material.sulfonium_preparation_mixture=Sulfonium Preparation Mixture
+material.nickel_hydrotalcite=Nickel Hydrotalcite
+material.calcium_cyanamide=Calcium Cyanamide
+material.antimony_pentafluoride=Antimony Pentafluoride
+material.sodium_hexafluoroantimonate=Sodium Hexafluoroantimonate
+material.acid_washed_silicon_dioxide=Acid Washed Silicon Dioxide
+material.disulfur_dichloride=Disulfur Dichloride
+material.diluted_sodium_sulfite_solution=Diluted Sodium Sulfite Solution
+material.sodium_hexafluoroantimonate_solution=Sodium Hexafluoroantimonate Solution
+material.e_glass=E-Glass
+material.tetrabromobisphenol_a=Tetrabromobisphenol A
+material.cyanamide=Cyanamide
+material.dicyandiamide=Dicyandiamide
+material.two_methylimidazole=2-Methylimidazole
+material.flame_retardant_epoxy=Flame Retardant Epoxy
+material.propylene_chlorohydrin=Propylene Chlorohydrin
+material.propylene_oxide=Propylene Oxide
+material.propylene_carbonate=Propylene Carbonate
+material.diphenyl_sulfide=Diphenyl Sulfide
+material.diphenyl_sulfoxide=Diphenyl Sulfoxide
+material.methanesulfonic_acid=Methanesulfonic Acid
+material.triarylsulfonium_hexafluoroantimonate=Triarylsulfonium Hexafluoroantimonate
+material.wet_epoxy=Wet Epoxy
+material.tetrabromobisphenol_a_solution=Tetrabromobisphenol A Solution
+material.epoxy_curing_mixture=Epoxy Curing Mixture
+material.wet_flame_retardant_epoxy=Wet Flame Retardant Epoxy
+material.propylene_oxide_solution=Propylene Oxide Solution
+material.su_eight=SU-8 Photoresist
 
 # Isotopes
 
@@ -2040,6 +2070,9 @@ metaitem.sponge.hafnium.name=Hafnium Sponge
 metaitem.sponge.hafnium.crude.name=Crude Hafnium Sponge
 
 metaitem.drone.lv.name=Basic Drone
+
+metaitem.glass_fibers.name=Glass Fibers
+metaitem.epoxy_lamina.name=Epoxy Lamina
 
 # Multiblocked
 

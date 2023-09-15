@@ -538,13 +538,31 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        PalladiumMotherLiquor = new Material.Builder(13086, "palladium_mother_liquor")
+        DilutedSodiumSulfiteSolution = new Material.Builder(13086, "diluted_sodium_sulfite_solution")
+                .fluid()
+                .components(SodiumSulfite, 1, Water, 14)
+                .color(0x75745a)
+                .build();
+
+        SodiumHexafluoroantimonateSolution = new Material.Builder(13087, "sodium_hexafluoroantimonate_solution")
+                .fluid()
+                .components(SodiumHexafluoroantimonate, 1, HydrogenFluoride, 1)
+                .colorAverage()
+                .build();
+
+        EGlass = new Material.Builder(13088, "e_glass")
+                .dust().fluid()
+                .components(SiliconDioxide, 6, Alumina, 1, BoronTrioxide, 1, Quicklime, 2)
+                .color(0x778f8b)
+                .build();
+
+        PalladiumMotherLiquor = new Material.Builder(13089, "palladium_mother_liquor")
                 .fluid()
                 .components(AmmoniumChloride, 1, Ammonia, 2, HydrogenChloride, 8, Water, 12)
                 .colorAverage()
                 .build();
 
-        DivalentPalladiumSolution = new Material.Builder(13087, "divalent_palladium_solution")
+        DivalentPalladiumSolution = new Material.Builder(13090, "divalent_palladium_solution")
                 .fluid()
                 .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
                 .colorAverage()
