@@ -854,12 +854,11 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        AluminiumTrichloride = new Material.Builder(8214, "aluminium_trichloride")
+        ManganeseIISulfate = new Material.Builder(8214, "manganese_ii_sulfate")
                 .dust()
-                .components(Aluminium, 1, Chlorine, 3)
-                .flags(GENERATE_CATALYST_BED)
+                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
-                .build()
+                .build();
 
         Triethylaluminium = new Material.Builder(8215, "triethylaluminium")
                 .fluid()
@@ -1024,7 +1023,7 @@ public class FirstDegreeMaterials{
 
         AluminiumChloride = new Material.Builder(8242, "aluminium_chloride")
                 .dust().fluid(FluidTypes.GAS)
-                .flags(NO_UNIFICATION)
+                .flags(NO_UNIFICATION, GENERATE_CATALYST_BED)
                 .fluidTemp(460)
                 .components(Aluminium, 1, Chlorine, 3)
                 .colorAverage()
@@ -1644,7 +1643,7 @@ public class FirstDegreeMaterials{
                 .fluidTemp(600)
                 .components(Lead, 1)
                 .color(0x1f1926)
-                .flags(GENERATE_PLATE)
+                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION)
                 .build();
 
         SilverFreeLead = new Material.Builder(8338, "silver_free_lead")
@@ -1727,6 +1726,7 @@ public class FirstDegreeMaterials{
         BettsCrudeLead = new Material.Builder(8350, "betts_crude_lead")
                 .fluid().ingot()
                 .components(Bismuth, 3, Lead, 6, Copper, 1)
+                .flags(DISABLE_DECOMPOSITION)
                 .color(0x393673)
                 .build();
 
@@ -2709,10 +2709,10 @@ public class FirstDegreeMaterials{
                 .color(0x887866)
                 .build();
 
-        GaseousAluminiumTrichloride = new Material.Builder(8496, "gaseous_aluminium_trichloride")
+        GaseousAluminiumChloride = new Material.Builder(8496, "gaseous_aluminium_chloride")
                 .fluid(FluidTypes.GAS)
                 .fluidTemp(460)
-                .components(AluminiumTrichloride, 1)
+                .components(AluminiumChloride, 1)
                 .colorAverage()
                 .build();
 
@@ -3180,6 +3180,51 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Nitrogen, 1, Hydrogen, 4, Rhenium, 1, Oxygen, 4)
                 .color(0x2b6cb3)
+                .build();
+
+        LithiumOxide = new Material.Builder(8563, "lithium_oxide")
+                .dust().fluid()
+                .components(Lithium, 2, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        NickelHydrotalcite = new Material.Builder(8564, "nickel_hydrotalcite")
+                .dust()
+                .components(Nickel, 6, Aluminium, 2, )
+                .color(0x9fb833)
+                .build();
+
+        NickelHydrotalcite.setFormula("[Ni3Al(OH)8]Cl", true)
+
+        CalciumCyanamide = new Material.Builder(8565, "calcium_cyanamide")
+                .dust()
+                .components(Calcium, 1, Carbon, 1, Nitrogen, 2)
+                .colorAverage()
+                .build();
+
+        AntimonyPentafluoride = new Material.Builder(8566, "antimony_pentafluoride")
+                .fluid()
+                .components(Antimony, 1, Fluorine, 5)
+                .colorAverage()
+                .build();
+
+        SodiumHexafluoroantimonate = new Material.Builder(8569, "sodium_hexafluoroantimonate")
+                .dust()
+                .components(Sodium, 1, Antimony, 1, Fluorine, 6)
+                .colorAverage()
+                .build();
+
+        AcidWashedSiliconDioxide = new Material.Builder(8570, "acid_washed_silicon_dioxide")
+                .dust()
+                .components(SiliconDioxide, 1)
+                .color(0xc8c8c8)
+                .iconSet(SHINY)
+                .build();
+
+        DisulfurDichloride = new Material.Builder(8571, "disulfur_dichloride")
+                .fluid()
+                .components(Sulfur, 2, Chlorine, 2)
+                .color(0xccc31d)
                 .build();
     }
 }

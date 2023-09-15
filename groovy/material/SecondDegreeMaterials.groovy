@@ -536,14 +536,32 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        CrudeManganeseIISulfateSolution = new Material.Builder(13086, "crude_manganese_ii_sulfate_solution")
+        DilutedSodiumSulfiteSolution = new Material.Builder(13086, "diluted_sodium_sulfite_solution")
+                .fluid()
+                .components(SodiumSulfite, 1, Water, 14)
+                .color(0x75745a)
+                .build();
+
+        SodiumHexafluoroantimonateSolution = new Material.Builder(13087, "sodium_hexafluoroantimonate_solution")
+                .fluid()
+                .components(SodiumHexafluoroantimonate, 1, HydrogenFluoride, 1)
+                .colorAverage()
+                .build();
+
+        EGlass = new Material.Builder(13088, "e_glass")
+                .dust().fluid()
+                .components(SiliconDioxide, 6, Alumina, 1, BoronTrioxide, 1, Quicklime, 2)
+                .color(0x778f8b)
+                .build();
+
+        CrudeManganeseIISulfateSolution = new Material.Builder(13089, "crude_manganese_ii_sulfate_solution")
                 .fluid()
                 .components(ManganeseIISulfate, Water, 1)
                 .colorAverage()
                 .build()
                 .setFormula('(?)(MnSO4)(H2O)', true)
 
-        ManganeseIISulfateSolution = new Material.Builder(13087, "manganese_ii_sulfate_solution")
+        ManganeseIISulfateSolution = new Material.Builder(13090, "manganese_ii_sulfate_solution")
                 .fluid()
                 .components(ManganeseIISulfate, Water, 1)
                 .colorAverage()
