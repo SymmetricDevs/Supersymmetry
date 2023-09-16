@@ -160,7 +160,7 @@ for (highPurityCombustible in Globals.highPurityCombustibles) {
             .outputs(metaitem('dustZinc'))
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .EUt(30)
-            .duration(160 * combustible.duration)
+            .duration(160 * highPurityCombustible.duration)
             .buildAndRegister()
 }
 
