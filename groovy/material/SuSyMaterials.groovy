@@ -1450,7 +1450,8 @@ class SuSyMaterials {
         public static Material TetrabromobisphenolASolution;
         public static Material EpoxyCuringMixture;
         public static Material WetFlameRetardantEpoxy;
-        public static Material PropyleneOxideSolution;
+        public static Material PropyleneOxideSolution;        
+        public static Material DilutedZincChlorideSolution;
 
         // Thermodynamics/Greenhouse Materials
 

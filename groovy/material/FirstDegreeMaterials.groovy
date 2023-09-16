@@ -3252,7 +3252,7 @@ public class FirstDegreeMaterials{
         ZincOxide = new Material.Builder(8575, "zinc_oxide")
                 .dust()
                 .components(Zinc, 1, Oxygen, 1)
-                .colorAverage()
+                .color(0xFFFFF5)
                 .build();
     }
 }
