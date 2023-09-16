@@ -155,7 +155,7 @@ for (combustible in Globals.combustibles) {
 
 for (highPurityCombustible in Globals.highPurityCombustibles) {
         ROASTER.recipeBuilder()
-            .inputs(ore('dustZincite') * 2)
+            .inputs(ore('dustZincOxide') * 2)
             .inputs(ore(highPurityCombustible.name) * highPurityCombustible.amount_required)
             .outputs(metaitem('dustZinc'))
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
