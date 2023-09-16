@@ -144,7 +144,7 @@ FLUIDIZEDBR.recipeBuilder()
 for (combustible in Globals.combustibles) {
     ROASTER.recipeBuilder()
             .inputs(ore('dustZincite') * 2)
-            .inputs(ore(combustible.name) * amount_required)
+            .inputs(ore(combustible.name) * combustible.amount_required)
             .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_zinc') * 216)
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
@@ -155,7 +155,7 @@ for (combustible in Globals.combustibles) {
 
 for (highPurityCombustible in Globals.highPurityCombustibles) {
         ROASTER.recipeBuilder()
-            .inputs(ore('dustZincOxide') * 2)
+            .inputs(ore('dustZincite') * 2)
             .inputs(ore(highPurityCombustible.name) * highPurityCombustible.amount_required)
             .outputs(metaitem('dustZinc'))
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
