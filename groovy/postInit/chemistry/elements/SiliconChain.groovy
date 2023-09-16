@@ -88,7 +88,7 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 ELECTROLYZER.recipeBuilder()
-        .fluidInputs(fluid('') * 432)
+        .fluidInputs(fluid('zinc_chloride') * 432)
         .notConsumable(metaitem('stickIron'))
         .notConsumable(metaitem('stickNickel'))
         .outputs(metaitem('dustZinc'))
