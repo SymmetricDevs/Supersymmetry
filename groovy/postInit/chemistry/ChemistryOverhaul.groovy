@@ -4587,10 +4587,27 @@ ROASTER.recipeBuilder()
 .fluidInputs(fluid('phenol') * 1000)
 .inputs(ore('dustZinc'))
 .fluidOutputs(fluid('benzene') * 1000)
-.outputs(metaitem('dustZincite') * 2)
+.outputs(metaitem('dustZincOxide') * 2)
 .duration(120)
 .EUt(30)
 .buildAndRegister()
+
+//ZnO -> ZnCl2
+BR.recipeBuilder()
+.fluidInputs(fluid('hydrochloric_acid') * 2000)
+.inputs(ore('dustZincOxide'))
+.fluidOutputs(fluid('diluted_zinc_chloride_solution') * 2000)
+.duration(120)
+.EUt(30)
+.buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('diluted_zinc_chloride_solution') * 2000)
+    .outputs(metaitem('dustZincChloride') * 3)
+    .fluidOutputs(fluid('water') * 2000)
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
 
 //ZIEGLER-ALFOL PROCESS
 CSTR.recipeBuilder()

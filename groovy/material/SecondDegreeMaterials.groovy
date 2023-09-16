@@ -596,5 +596,11 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
                 .setFormula('(MnSO4)(H2O)', true)
+
+        DilutedZincChlorideSolution = new Material.Builder(13095, "diluted_zinc_chloride_solution")
+                .fluid()
+                .components(ZincChloride, 1, Water, 2)
+                .colorAverage()
+                .build();
     }
 }

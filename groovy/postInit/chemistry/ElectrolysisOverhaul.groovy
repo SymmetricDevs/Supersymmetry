@@ -197,4 +197,14 @@ ELECTROLYZER.recipeBuilder()
         .duration(300)
         .buildAndRegister()	
 
+ELECTROLYZER.recipeBuilder()
+        .notConsumable(metaitem('graphite_electrode'))
+        .notConsumable(metaitem('stickZinc'))
+        .fluidInputs(fluid('zinc_chloride') * 432)
+        .fluidOutputs(fluid('chlorine') * 2000)
+        .outputs(metaitem('zinc'))
+        .EUt(30)
+        .duration(300)
+        .buildAndRegister()	
+
 
