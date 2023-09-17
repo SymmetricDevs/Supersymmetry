@@ -36,7 +36,27 @@ POLYMERIZATION.recipeBuilder()
         .duration(300)
         .buildAndRegister()
 
-// POLYPROPYLENE
+// UHMWPE
+
+POLYMERIZATION.recipeBuilder()
+        .circuitMeta(4)
+        .notConsumable(metaitem('dustKaminskyCatalyst'))
+        .fluidInputs(fluid('ethylene') * 144)
+        .fluidOutputs(fluid('ultra_high_molecular_weight_polyethylene') * 144)
+        .EUt(1920)
+        .duration(20)
+        .buildAndRegister()
+
+POLYMERIZATION.recipeBuilder()
+        .circuitMeta(3)
+        .notConsumable(metaitem('dustZieglerNattaCatalyst'))
+        .fluidInputs(fluid('ethylene') * 144)
+        .fluidOutputs(fluid('ultra_high_molecular_weight_polyethylene') * 72)
+        .EUt(1920)
+        .duration(20)
+        .buildAndRegister()
+
+// Polypropylene
 
 POLYMERIZATION.recipeBuilder()
         .notConsumable(metaitem('dustPhilipsCatalyst'))
