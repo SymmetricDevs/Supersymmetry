@@ -601,7 +601,6 @@ material.diiodobenzene_solution=Diiodobenzene Solution
 material.impure_four_four_oxydianiline=Impure 4,4-Oxydianiline
 material.ethylene_glycol_solution=Ethylene Glycol Solution
 material.terephthalic_acid_solution=Terephthalic Acid Solution
-material.hydrogen_silsesquioxane_solution=Hydrogen Silsesquioxane (HSQ) Solution
 
 material.impure_acetaldehyde=Impure Acetaldehyde
 material.cativa_process_preparation=Cativa Process Preparation
@@ -1726,6 +1725,11 @@ material.propylene_oxide_solution=Propylene Oxide Solution
 material.su_eight=SU-8 Photoresist
 material.hydrodealkylated_toluene_mixture=Hydrodealkylated Toluene Mixture
 material.ortho_para_xylene_mixture=o/p-Xylene Mixture
+material.acidic_hydrogen_silsesquioxane_solution=Acidic Hydrogen Silsesquioxane (HSQ) Solution
+material.hydrogen_silsesquioxane_solution=Hydrogen Silsesquioxane (HSQ) Solution
+material.trichlorosilane_solution=Trichlorosilane Solution
+material.tosylic_acid_solution=Tosylic Acid Solution
+material.hydrogen_silsesquioxane_photoresist=Hydrogen Silsesquioxane (HSQ) Photoresist
 
 # Isotopes
 
