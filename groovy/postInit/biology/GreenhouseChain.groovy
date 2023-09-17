@@ -148,11 +148,9 @@ PYROLYSE_OVEN.recipeBuilder()
 // WEED KILLERS & PESTICIDES
 
 MIXER.recipeBuilder()
-        .circuitMeta(1)
-        .inputs(ore('dustSalt') * 2)
         .fluidInputs(fluid('acetic_acid') * 100)
         .fluidInputs(fluid('gtfo_sodium_stearate') * 100)
-        .fluidInputs(fluid('water') * 1000)
+        .fluidInputs(fluid('salt_water') * 1000)
         .fluidOutputs(fluid('weed_killer') * 1000)
         .EUt(30)
         .duration(60)

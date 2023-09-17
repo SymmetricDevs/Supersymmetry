@@ -4436,12 +4436,13 @@
     },
     "57:10": {
       "preRequisites:11": [
-        31
+        31,
+        787
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Lava can also be used to boil steam.",
+          "desc:8": "Lava can also be used to boil steam. You may also choose to use creosote from your coke ovens.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4453,7 +4454,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Lava Boiler",
+          "name:8": "Liquid Boilers",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -4488,7 +4489,8 @@
     },
     "58:10": {
       "preRequisites:11": [
-        31
+        31,
+        787
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -24746,7 +24748,8 @@
     "369:10": {
       "preRequisites:11": [
         222,
-        438
+        438,
+        686
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -25042,7 +25045,8 @@
     "373:10": {
       "preRequisites:11": [
         181,
-        410
+        410,
+        786
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26528,9 +26532,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 11,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:warning_sign"
+            "id:8": "susy:turbine_rotor"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -29585,7 +29589,8 @@
     },
     "438:10": {
       "preRequisites:11": [
-        66
+        66,
+        787
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -43301,6 +43306,45 @@
     },
     "580:10": {
       "preRequisites:11": [
+        31
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This chapter will cover most methods to produce power / ways to upgrade existing power system",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 11,
+            "OreDict:8": "",
+            "id:8": "gregtech:warning_sign"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Power Generation",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 580,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "581:10": {
+      "preRequisites:11": [
         546
       ],
       "properties:10": {
@@ -43351,7 +43395,7 @@
         }
       }
     },
-    "581:10": {
+    "582:10": {
       "preRequisites:11": [
         546
       ],
@@ -43403,7 +43447,7 @@
         }
       }
     },
-    "582:10": {
+    "583:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -43475,7 +43519,7 @@
         }
       }
     },
-    "583:10": {
+    "584:10": {
       "preRequisites:11": [
         544
       ],
@@ -43527,7 +43571,7 @@
         }
       }
     },
-    "584:10": {
+    "585:10": {
       "preRequisites:11": [
         533
       ],
@@ -43579,7 +43623,7 @@
         }
       }
     },
-    "585:10": {
+    "586:10": {
       "preRequisites:11": [
         533
       ],
@@ -43672,7 +43716,7 @@
         }
       }
     },
-    "586:10": {
+    "587:10": {
       "preRequisites:11": [
         765,
         199
@@ -43743,7 +43787,7 @@
         }
       }
     },
-    "587:10": {
+    "588:10": {
       "preRequisites:11": [
         546
       ],
@@ -43795,7 +43839,7 @@
         }
       }
     },
-    "588:10": {
+    "589:10": {
       "preRequisites:11": [
         521
       ],
@@ -43853,7 +43897,7 @@
         }
       }
     },
-    "589:10": {
+    "590:10": {
       "preRequisites:11": [
         549
       ],
@@ -43905,7 +43949,7 @@
         }
       }
     },
-    "590:10": {
+    "591:10": {
       "preRequisites:11": [
         540
       ],
@@ -44095,7 +44139,7 @@
         }
       }
     },
-    "591:10": {
+    "592:10": {
       "preRequisites:11": [
         81
       ],
@@ -44147,7 +44191,7 @@
         }
       }
     },
-    "592:10": {
+    "593:10": {
       "preRequisites:11": [
         400
       ],
@@ -44199,7 +44243,7 @@
         }
       }
     },
-    "593:10": {
+    "594:10": {
       "preRequisites:11": [
         593
       ],
@@ -44294,7 +44338,7 @@
         }
       }
     },
-    "594:10": {
+    "595:10": {
       "preRequisites:11": [
         593
       ],
@@ -44389,7 +44433,7 @@
         }
       }
     },
-    "595:10": {
+    "596:10": {
       "preRequisites:11": [
         593
       ],
@@ -44484,7 +44528,7 @@
         }
       }
     },
-    "596:10": {
+    "597:10": {
       "preRequisites:11": [
         593
       ],
@@ -44579,7 +44623,7 @@
         }
       }
     },
-    "597:10": {
+    "598:10": {
       "preRequisiteTypes:7": [
         0,
         1,
@@ -44656,7 +44700,7 @@
         }
       }
     },
-    "598:10": {
+    "599:10": {
       "preRequisites:11": [
         81
       ],
@@ -44732,7 +44776,7 @@
         }
       }
     },
-    "599:10": {
+    "600:10": {
       "preRequisites:11": [
         213,
         104
@@ -44785,7 +44829,7 @@
         }
       }
     },
-    "600:10": {
+    "601:10": {
       "preRequisites:11": [
         51
       ],
@@ -44837,7 +44881,7 @@
         }
       }
     },
-    "601:10": {
+    "602:10": {
       "preRequisites:11": [
         124
       ],
@@ -44907,7 +44951,7 @@
         }
       }
     },
-    "602:10": {
+    "603:10": {
       "preRequisites:11": [
         36
       ],
@@ -44959,7 +45003,7 @@
         }
       }
     },
-    "603:10": {
+    "604:10": {
       "preRequisites:11": [
         109
       ],
@@ -45007,7 +45051,7 @@
         }
       }
     },
-    "604:10": {
+    "605:10": {
       "preRequisites:11": [
         602
       ],
@@ -45059,7 +45103,7 @@
         }
       }
     },
-    "605:10": {
+    "606:10": {
       "preRequisites:11": [
         602
       ],
@@ -45111,7 +45155,7 @@
         }
       }
     },
-    "606:10": {
+    "607:10": {
       "preRequisites:11": [
         101
       ],
@@ -45163,7 +45207,7 @@
         }
       }
     },
-    "607:10": {
+    "608:10": {
       "preRequisites:11": [
         230
       ],
@@ -45233,7 +45277,7 @@
         }
       }
     },
-    "608:10": {
+    "609:10": {
       "preRequisites:11": [
         31
       ],
@@ -45285,7 +45329,7 @@
         }
       }
     },
-    "609:10": {
+    "610:10": {
       "preRequisites:11": [
         222
       ],
@@ -45343,7 +45387,7 @@
         }
       }
     },
-    "610:10": {
+    "611:10": {
       "preRequisites:11": [
         593
       ],
@@ -45419,7 +45463,7 @@
         }
       }
     },
-    "611:10": {
+    "612:10": {
       "preRequisites:11": [
         611
       ],
@@ -45486,7 +45530,7 @@
         }
       }
     },
-    "612:10": {
+    "613:10": {
       "preRequisites:11": [
         611
       ],
@@ -45538,7 +45582,7 @@
         }
       }
     },
-    "613:10": {
+    "614:10": {
       "preRequisites:11": [
         623
       ],
@@ -45653,7 +45697,7 @@
         }
       }
     },
-    "614:10": {
+    "615:10": {
       "preRequisites:11": [
         618
       ],
@@ -45723,7 +45767,7 @@
         }
       }
     },
-    "615:10": {
+    "616:10": {
       "preRequisites:11": [
         615
       ],
@@ -45793,7 +45837,7 @@
         }
       }
     },
-    "616:10": {
+    "617:10": {
       "preRequisites:11": [
         616,
         390
@@ -45846,7 +45890,7 @@
         }
       }
     },
-    "617:10": {
+    "618:10": {
       "preRequisites:11": [
         188
       ],
@@ -45916,7 +45960,7 @@
         }
       }
     },
-    "618:10": {
+    "619:10": {
       "preRequisites:11": [
         617
       ],
@@ -45950,7 +45994,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "619:10": {
+    "620:10": {
       "preRequisites:11": [
         621,
         614,
@@ -46028,7 +46072,7 @@
         }
       }
     },
-    "620:10": {
+    "621:10": {
       "preRequisites:11": [
         398
       ],
@@ -46080,7 +46124,7 @@
         }
       }
     },
-    "621:10": {
+    "622:10": {
       "preRequisites:11": [
         614
       ],
@@ -46132,7 +46176,7 @@
         }
       }
     },
-    "622:10": {
+    "623:10": {
       "preRequisites:11": [
         479
       ],
@@ -46202,7 +46246,7 @@
         }
       }
     },
-    "623:10": {
+    "624:10": {
       "preRequisites:11": [
         622
       ],
@@ -46254,7 +46298,7 @@
         }
       }
     },
-    "624:10": {
+    "625:10": {
       "preRequisites:11": [
         624
       ],
@@ -46349,7 +46393,7 @@
         }
       }
     },
-    "625:10": {
+    "626:10": {
       "preRequisites:11": [
         624
       ],
@@ -46416,7 +46460,7 @@
         }
       }
     },
-    "626:10": {
+    "627:10": {
       "preRequisites:11": [
         624
       ],
@@ -46511,7 +46555,7 @@
         }
       }
     },
-    "627:10": {
+    "628:10": {
       "preRequisites:11": [
         624
       ],
@@ -46606,7 +46650,7 @@
         }
       }
     },
-    "628:10": {
+    "629:10": {
       "preRequisites:11": [
         624
       ],
@@ -46701,7 +46745,7 @@
         }
       }
     },
-    "629:10": {
+    "630:10": {
       "preRequisites:11": [
         624
       ],
@@ -46796,7 +46840,7 @@
         }
       }
     },
-    "630:10": {
+    "631:10": {
       "preRequisites:11": [
         191
       ],
@@ -46844,7 +46888,7 @@
         }
       }
     },
-    "631:10": {
+    "632:10": {
       "preRequisites:11": [
         622,
         687
@@ -46915,7 +46959,7 @@
         }
       }
     },
-    "632:10": {
+    "633:10": {
       "preRequisites:11": [
         622
       ],
@@ -46985,7 +47029,7 @@
         }
       }
     },
-    "633:10": {
+    "634:10": {
       "preRequisites:11": [
         622
       ],
@@ -47055,7 +47099,7 @@
         }
       }
     },
-    "634:10": {
+    "635:10": {
       "preRequisites:11": [
         622,
         698
@@ -47126,7 +47170,7 @@
         }
       }
     },
-    "635:10": {
+    "636:10": {
       "preRequisites:11": [
         622
       ],
@@ -47196,7 +47240,7 @@
         }
       }
     },
-    "636:10": {
+    "637:10": {
       "preRequisites:11": [
         648
       ],
@@ -47283,7 +47327,7 @@
         }
       }
     },
-    "637:10": {
+    "638:10": {
       "preRequisites:11": [
         181
       ],
@@ -47355,7 +47399,7 @@
         }
       }
     },
-    "638:10": {
+    "639:10": {
       "preRequisites:11": [
         243,
         469,
@@ -47434,7 +47478,7 @@
         }
       }
     },
-    "639:10": {
+    "640:10": {
       "preRequisites:11": [
         654
       ],
@@ -47504,7 +47548,7 @@
         }
       }
     },
-    "640:10": {
+    "641:10": {
       "preRequisites:11": [
         614
       ],
@@ -47562,7 +47606,7 @@
         }
       }
     },
-    "641:10": {
+    "642:10": {
       "preRequisites:11": [
         641
       ],
@@ -47628,7 +47672,7 @@
         }
       }
     },
-    "642:10": {
+    "643:10": {
       "preRequisites:11": [
         642
       ],
@@ -47694,7 +47738,7 @@
         }
       }
     },
-    "643:10": {
+    "644:10": {
       "preRequisites:11": [
         643,
         649
@@ -47765,7 +47809,7 @@
         }
       }
     },
-    "644:10": {
+    "645:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -47840,7 +47884,7 @@
         }
       }
     },
-    "645:10": {
+    "646:10": {
       "preRequisites:11": [
         51
       ],
@@ -47916,7 +47960,7 @@
         }
       }
     },
-    "646:10": {
+    "647:10": {
       "preRequisites:11": [
         614
       ],
@@ -47980,7 +48024,7 @@
         }
       }
     },
-    "647:10": {
+    "648:10": {
       "preRequisiteTypes:7": [
         0,
         2
@@ -48051,7 +48095,7 @@
         }
       }
     },
-    "648:10": {
+    "649:10": {
       "preRequisites:11": [
         648
       ],
@@ -48121,7 +48165,7 @@
         }
       }
     },
-    "649:10": {
+    "650:10": {
       "preRequisites:11": [
         213
       ],
@@ -48169,7 +48213,7 @@
         }
       }
     },
-    "650:10": {
+    "651:10": {
       "preRequisites:11": [
         510
       ],
@@ -48221,7 +48265,7 @@
         }
       }
     },
-    "651:10": {
+    "652:10": {
       "preRequisites:11": [
         188
       ],
@@ -48287,7 +48331,7 @@
         }
       }
     },
-    "652:10": {
+    "653:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -48360,7 +48404,7 @@
         }
       }
     },
-    "653:10": {
+    "654:10": {
       "preRequisites:11": [
         398
       ],
@@ -48394,7 +48438,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "654:10": {
+    "655:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -48447,7 +48491,7 @@
         }
       }
     },
-    "655:10": {
+    "656:10": {
       "preRequisites:11": [
         441,
         18
@@ -48518,7 +48562,7 @@
         }
       }
     },
-    "656:10": {
+    "657:10": {
       "preRequisites:11": [
         388
       ],
@@ -48557,7 +48601,7 @@
         }
       }
     },
-    "657:10": {
+    "658:10": {
       "preRequisites:11": [
         104
       ],
@@ -48605,7 +48649,7 @@
         }
       }
     },
-    "658:10": {
+    "659:10": {
       "preRequisites:11": [
         181
       ],
@@ -48657,7 +48701,7 @@
         }
       }
     },
-    "659:10": {
+    "660:10": {
       "preRequisites:11": [
         604
       ],
@@ -48705,7 +48749,7 @@
         }
       }
     },
-    "660:10": {
+    "661:10": {
       "preRequisites:11": [
         188
       ],
@@ -48757,7 +48801,7 @@
         }
       }
     },
-    "661:10": {
+    "662:10": {
       "preRequisites:11": [
         390,
         672
@@ -48810,7 +48854,7 @@
         }
       }
     },
-    "662:10": {
+    "663:10": {
       "preRequisites:11": [
         243
       ],
@@ -48880,7 +48924,7 @@
         }
       }
     },
-    "663:10": {
+    "664:10": {
       "preRequisites:11": [
         125
       ],
@@ -48928,7 +48972,7 @@
         }
       }
     },
-    "664:10": {
+    "665:10": {
       "preRequisiteTypes:7": [
         0,
         0,
@@ -48987,7 +49031,7 @@
         }
       }
     },
-    "665:10": {
+    "666:10": {
       "preRequisites:11": [
         104
       ],
@@ -49038,7 +49082,7 @@
         }
       }
     },
-    "666:10": {
+    "667:10": {
       "preRequisites:11": [
         104
       ],
@@ -51008,7 +51052,7 @@
         }
       }
     },
-    "667:10": {
+    "668:10": {
       "preRequisites:11": [
         48
       ],
@@ -51104,7 +51148,7 @@
         }
       }
     },
-    "668:10": {
+    "669:10": {
       "preRequisites:11": [
         763
       ],
@@ -51189,7 +51233,7 @@
         }
       }
     },
-    "669:10": {
+    "670:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -51262,7 +51306,7 @@
         }
       }
     },
-    "670:10": {
+    "671:10": {
       "preRequisites:11": [
         81
       ],
@@ -51338,7 +51382,7 @@
         }
       }
     },
-    "671:10": {
+    "672:10": {
       "preRequisites:11": [
         663,
         674
@@ -51409,7 +51453,7 @@
         }
       }
     },
-    "672:10": {
+    "673:10": {
       "preRequisites:11": [
         390
       ],
@@ -51448,7 +51492,7 @@
         }
       }
     },
-    "673:10": {
+    "674:10": {
       "preRequisites:11": [
         243
       ],
@@ -51500,7 +51544,7 @@
         }
       }
     },
-    "674:10": {
+    "675:10": {
       "preRequisites:11": [
         673
       ],
@@ -51562,7 +51606,7 @@
         }
       }
     },
-    "675:10": {
+    "676:10": {
       "preRequisites:11": [
         675,
         678
@@ -51615,7 +51659,7 @@
         }
       }
     },
-    "676:10": {
+    "677:10": {
       "preRequisites:11": [
         673
       ],
@@ -51677,7 +51721,7 @@
         }
       }
     },
-    "677:10": {
+    "678:10": {
       "preRequisites:11": [
         479
       ],
@@ -51747,7 +51791,7 @@
         }
       }
     },
-    "678:10": {
+    "679:10": {
       "preRequisites:11": [
         479,
         708
@@ -51818,7 +51862,7 @@
         }
       }
     },
-    "679:10": {
+    "680:10": {
       "preRequisites:11": [
         644
       ],
@@ -51876,7 +51920,7 @@
         }
       }
     },
-    "680:10": {
+    "681:10": {
       "preRequisites:11": [
         645
       ],
@@ -51946,7 +51990,7 @@
         }
       }
     },
-    "681:10": {
+    "682:10": {
       "preRequisites:11": [
         377
       ],
@@ -51994,7 +52038,7 @@
         }
       }
     },
-    "682:10": {
+    "683:10": {
       "preRequisites:11": [
         104
       ],
@@ -52064,7 +52108,7 @@
         }
       }
     },
-    "683:10": {
+    "684:10": {
       "preRequisites:11": [
         240
       ],
@@ -52134,7 +52178,7 @@
         }
       }
     },
-    "684:10": {
+    "685:10": {
       "preRequisites:11": [
         169
       ],
@@ -52186,9 +52230,10 @@
         }
       }
     },
-    "685:10": {
+    "686:10": {
       "preRequisites:11": [
-        374
+        374,
+        787
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -52234,7 +52279,7 @@
         }
       }
     },
-    "686:10": {
+    "687:10": {
       "preRequisites:11": [
         620
       ],
@@ -52304,7 +52349,7 @@
         }
       }
     },
-    "687:10": {
+    "688:10": {
       "preRequisites:11": [
         641,
         466
@@ -52375,7 +52420,7 @@
         }
       }
     },
-    "688:10": {
+    "689:10": {
       "preRequisites:11": [
         641
       ],
@@ -52427,7 +52472,7 @@
         }
       }
     },
-    "689:10": {
+    "690:10": {
       "preRequisites:11": [
         647
       ],
@@ -52497,7 +52542,7 @@
         }
       }
     },
-    "690:10": {
+    "691:10": {
       "preRequisites:11": [
         688,
         683
@@ -52568,7 +52613,7 @@
         }
       }
     },
-    "691:10": {
+    "692:10": {
       "preRequisites:11": [
         614,
         693
@@ -52639,7 +52684,7 @@
         }
       }
     },
-    "692:10": {
+    "693:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -52714,7 +52759,7 @@
         }
       }
     },
-    "693:10": {
+    "694:10": {
       "preRequisites:11": [
         692,
         695
@@ -52791,7 +52836,7 @@
         }
       }
     },
-    "694:10": {
+    "695:10": {
       "preRequisites:11": [
         479
       ],
@@ -52861,7 +52906,7 @@
         }
       }
     },
-    "695:10": {
+    "696:10": {
       "preRequisites:11": [
         692
       ],
@@ -52933,7 +52978,7 @@
         }
       }
     },
-    "696:10": {
+    "697:10": {
       "preRequisites:11": [
         172
       ],
@@ -53003,7 +53048,7 @@
         }
       }
     },
-    "697:10": {
+    "698:10": {
       "preRequisites:11": [
         620,
         451
@@ -53074,7 +53119,7 @@
         }
       }
     },
-    "698:10": {
+    "699:10": {
       "preRequisites:11": [
         700,
         701,
@@ -53147,7 +53192,7 @@
         }
       }
     },
-    "699:10": {
+    "700:10": {
       "preRequisites:11": [
         243
       ],
@@ -53199,7 +53244,7 @@
         }
       }
     },
-    "700:10": {
+    "701:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -53268,7 +53313,7 @@
         }
       }
     },
-    "701:10": {
+    "702:10": {
       "preRequisites:11": [
         776,
         699
@@ -53339,7 +53384,7 @@
         }
       }
     },
-    "702:10": {
+    "703:10": {
       "preRequisites:11": [
         702,
         497
@@ -53410,7 +53455,7 @@
         }
       }
     },
-    "703:10": {
+    "704:10": {
       "preRequisites:11": [
         703
       ],
@@ -53462,7 +53507,7 @@
         }
       }
     },
-    "704:10": {
+    "705:10": {
       "preRequisites:11": [
         703
       ],
@@ -53526,7 +53571,7 @@
         }
       }
     },
-    "705:10": {
+    "706:10": {
       "preRequisites:11": [
         679
       ],
@@ -53596,7 +53641,7 @@
         }
       }
     },
-    "706:10": {
+    "707:10": {
       "preRequisites:11": [
         708
       ],
@@ -53648,7 +53693,7 @@
         }
       }
     },
-    "707:10": {
+    "708:10": {
       "preRequisites:11": [
         709
       ],
@@ -53700,7 +53745,7 @@
         }
       }
     },
-    "708:10": {
+    "709:10": {
       "preRequisites:11": [
         614
       ],
@@ -53776,7 +53821,7 @@
         }
       }
     },
-    "709:10": {
+    "710:10": {
       "preRequisites:11": [
         644
       ],
@@ -53828,7 +53873,7 @@
         }
       }
     },
-    "710:10": {
+    "711:10": {
       "preRequisites:11": [
         66
       ],
@@ -53880,7 +53925,7 @@
         }
       }
     },
-    "711:10": {
+    "712:10": {
       "preRequisites:11": [
         101
       ],
@@ -53947,7 +53992,7 @@
         }
       }
     },
-    "712:10": {
+    "713:10": {
       "preRequisites:11": [
         641
       ],
@@ -53999,7 +54044,7 @@
         }
       }
     },
-    "713:10": {
+    "714:10": {
       "preRequisites:11": [
         647
       ],
@@ -54069,7 +54114,7 @@
         }
       }
     },
-    "714:10": {
+    "715:10": {
       "preRequisites:11": [
         647
       ],
@@ -54139,7 +54184,7 @@
         }
       }
     },
-    "715:10": {
+    "716:10": {
       "preRequisites:11": [
         710
       ],
@@ -54209,7 +54254,7 @@
         }
       }
     },
-    "716:10": {
+    "717:10": {
       "preRequisites:11": [
         706
       ],
@@ -54279,9 +54324,11 @@
         }
       }
     },
-    "717:10": {
+    "718:10": {
       "preRequisites:11": [
-        479
+        479,
+        394,
+        775
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -54331,7 +54378,7 @@
         }
       }
     },
-    "718:10": {
+    "719:10": {
       "preRequisites:11": [
         104,
         545
@@ -54402,7 +54449,7 @@
         }
       }
     },
-    "719:10": {
+    "720:10": {
       "preRequisites:11": [
         637
       ],
@@ -54441,7 +54488,7 @@
         }
       }
     },
-    "720:10": {
+    "721:10": {
       "preRequisites:11": [
         101
       ],
@@ -54493,7 +54540,7 @@
         }
       }
     },
-    "721:10": {
+    "722:10": {
       "preRequisites:11": [
         25
       ],
@@ -54608,7 +54655,7 @@
         }
       }
     },
-    "722:10": {
+    "723:10": {
       "preRequisites:11": [
         25
       ],
@@ -54723,7 +54770,7 @@
         }
       }
     },
-    "723:10": {
+    "724:10": {
       "preRequisites:11": [
         25
       ],
@@ -54823,7 +54870,7 @@
         }
       }
     },
-    "724:10": {
+    "725:10": {
       "preRequisites:11": [
         191
       ],
@@ -54908,7 +54955,7 @@
         }
       }
     },
-    "725:10": {
+    "726:10": {
       "preRequisites:11": [
         538
       ],
@@ -54974,7 +55021,7 @@
         }
       }
     },
-    "726:10": {
+    "727:10": {
       "preRequisites:11": [
         728,
         726
@@ -55045,7 +55092,7 @@
         }
       }
     },
-    "727:10": {
+    "728:10": {
       "preRequisites:11": [
         729,
         411
@@ -55098,7 +55145,7 @@
         }
       }
     },
-    "728:10": {
+    "729:10": {
       "preRequisites:11": [
         203
       ],
@@ -55168,7 +55215,7 @@
         }
       }
     },
-    "729:10": {
+    "730:10": {
       "preRequisites:11": [
         727
       ],
@@ -55238,7 +55285,7 @@
         }
       }
     },
-    "730:10": {
+    "731:10": {
       "preRequisites:11": [
         730
       ],
@@ -55353,7 +55400,7 @@
         }
       }
     },
-    "731:10": {
+    "732:10": {
       "preRequisites:11": [
         733
       ],
@@ -55468,7 +55515,7 @@
         }
       }
     },
-    "732:10": {
+    "733:10": {
       "preRequisites:11": [
         730
       ],
@@ -55583,7 +55630,7 @@
         }
       }
     },
-    "733:10": {
+    "734:10": {
       "preRequisites:11": [
         30
       ],
@@ -55653,7 +55700,7 @@
         }
       }
     },
-    "734:10": {
+    "735:10": {
       "preRequisites:11": [
         398
       ],
@@ -55723,7 +55770,7 @@
         }
       }
     },
-    "735:10": {
+    "736:10": {
       "preRequisites:11": [
         735
       ],
@@ -55766,7 +55813,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "736:10": {
+    "737:10": {
       "preRequisites:11": [
         66
       ],
@@ -55863,7 +55910,7 @@
         }
       }
     },
-    "737:10": {
+    "738:10": {
       "preRequisites:11": [
         30
       ],
@@ -55915,7 +55962,7 @@
         }
       }
     },
-    "738:10": {
+    "739:10": {
       "preRequisites:11": [
         30
       ],
@@ -55960,7 +56007,7 @@
         }
       }
     },
-    "739:10": {
+    "740:10": {
       "preRequisites:11": [
         222
       ],
@@ -56022,7 +56069,7 @@
         }
       }
     },
-    "740:10": {
+    "741:10": {
       "preRequisites:11": [
         497
       ],
@@ -56086,7 +56133,7 @@
         }
       }
     },
-    "741:10": {
+    "742:10": {
       "preRequisites:11": [
         101,
         465
@@ -56154,7 +56201,7 @@
         }
       }
     },
-    "742:10": {
+    "743:10": {
       "preRequisites:11": [
         742
       ],
@@ -56206,7 +56253,7 @@
         }
       }
     },
-    "743:10": {
+    "744:10": {
       "preRequisites:11": [
         743
       ],
@@ -56303,7 +56350,7 @@
         }
       }
     },
-    "744:10": {
+    "745:10": {
       "preRequisites:11": [
         30
       ],
@@ -56367,7 +56414,7 @@
         }
       }
     },
-    "745:10": {
+    "746:10": {
       "preRequisites:11": [
         743
       ],
@@ -56421,7 +56468,7 @@
         }
       }
     },
-    "746:10": {
+    "747:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -56478,7 +56525,7 @@
         }
       }
     },
-    "747:10": {
+    "748:10": {
       "preRequisites:11": [
         743
       ],
@@ -56530,7 +56577,7 @@
         }
       }
     },
-    "748:10": {
+    "749:10": {
       "preRequisites:11": [
         743
       ],
@@ -56600,7 +56647,7 @@
         }
       }
     },
-    "749:10": {
+    "750:10": {
       "preRequisites:11": [
         746
       ],
@@ -56672,7 +56719,7 @@
         }
       }
     },
-    "750:10": {
+    "751:10": {
       "preRequisites:11": [
         688,
         719
@@ -56743,7 +56790,7 @@
         }
       }
     },
-    "751:10": {
+    "752:10": {
       "preRequisites:11": [
         41
       ],
@@ -56839,7 +56886,7 @@
         }
       }
     },
-    "752:10": {
+    "753:10": {
       "preRequisites:11": [
         700
       ],
@@ -56909,7 +56956,7 @@
         }
       }
     },
-    "753:10": {
+    "754:10": {
       "preRequisites:11": [
         755,
         550
@@ -56980,7 +57027,7 @@
         }
       }
     },
-    "754:10": {
+    "755:10": {
       "preRequisites:11": [
         756
       ],
@@ -57050,7 +57097,7 @@
         }
       }
     },
-    "755:10": {
+    "756:10": {
       "preRequisites:11": [
         479
       ],
@@ -57120,7 +57167,7 @@
         }
       }
     },
-    "756:10": {
+    "757:10": {
       "preRequisites:11": [
         754
       ],
@@ -57235,7 +57282,7 @@
         }
       }
     },
-    "757:10": {
+    "758:10": {
       "preRequisites:11": [
         757
       ],
@@ -57287,7 +57334,7 @@
         }
       }
     },
-    "758:10": {
+    "759:10": {
       "preRequisites:11": [
         758
       ],
@@ -57382,7 +57429,7 @@
         }
       }
     },
-    "759:10": {
+    "760:10": {
       "preRequisites:11": [
         758
       ],
@@ -57477,7 +57524,7 @@
         }
       }
     },
-    "760:10": {
+    "761:10": {
       "preRequisites:11": [
         758
       ],
@@ -57572,7 +57619,7 @@
         }
       }
     },
-    "761:10": {
+    "762:10": {
       "preRequisites:11": [
         758
       ],
@@ -57667,7 +57714,7 @@
         }
       }
     },
-    "762:10": {
+    "763:10": {
       "preRequisites:11": [
         20
       ],
@@ -57719,7 +57766,7 @@
         }
       }
     },
-    "763:10": {
+    "764:10": {
       "preRequisites:11": [
         651
       ],
@@ -57771,7 +57818,7 @@
         }
       }
     },
-    "764:10": {
+    "765:10": {
       "preRequisites:11": [
         687,
         770
@@ -57842,7 +57889,7 @@
         }
       }
     },
-    "765:10": {
+    "766:10": {
       "preRequisites:11": [
         587
       ],
@@ -57912,7 +57959,7 @@
         }
       }
     },
-    "766:10": {
+    "767:10": {
       "preRequisites:11": [
         766,
         701,
@@ -57984,7 +58031,7 @@
         }
       }
     },
-    "767:10": {
+    "768:10": {
       "preRequisites:11": [
         767
       ],
@@ -58054,7 +58101,7 @@
         }
       }
     },
-    "768:10": {
+    "769:10": {
       "preRequisites:11": [
         768
       ],
@@ -58124,7 +58171,7 @@
         }
       }
     },
-    "769:10": {
+    "770:10": {
       "preRequisites:11": [
         719
       ],
@@ -58194,7 +58241,7 @@
         }
       }
     },
-    "770:10": {
+    "771:10": {
       "preRequisites:11": [
         699
       ],
@@ -58264,7 +58311,7 @@
         }
       }
     },
-    "771:10": {
+    "772:10": {
       "preRequisites:11": [
         771
       ],
@@ -58334,7 +58381,7 @@
         }
       }
     },
-    "772:10": {
+    "773:10": {
       "preRequisites:11": [
         777
       ],
@@ -58430,7 +58477,7 @@
         }
       }
     },
-    "773:10": {
+    "774:10": {
       "preRequisites:11": [
         780
       ],
@@ -58500,7 +58547,59 @@
         }
       }
     },
-    "774:10": {
+    "775:10": {
+      "preRequisites:11": [
+        788
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Petrochem is the acquisition of useful resources from refining Crude Oil / Natural Gas, many of these products can then be used to make fuels which are fit for HV / EV",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "oil"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Petrochem",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 775,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "776:10": {
       "preRequisites:11": [
         778
       ],
@@ -58570,7 +58669,7 @@
         }
       }
     },
-    "775:10": {
+    "777:10": {
       "preRequisites:11": [
         779
       ],
@@ -58640,7 +58739,7 @@
         }
       }
     },
-    "776:10": {
+    "778:10": {
       "preRequisites:11": [
         777
       ],
@@ -58736,7 +58835,7 @@
         }
       }
     },
-    "777:10": {
+    "779:10": {
       "preRequisites:11": [
         772
       ],
@@ -58806,7 +58905,7 @@
         }
       }
     },
-    "778:10": {
+    "780:10": {
       "preRequisites:11": [
         773
       ],
@@ -58875,6 +58974,516 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "781:10": {
+      "preRequisites:11": [
+        31,
+        580
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This section covers most easy off-site ways to generate power, used in for example drills or fluid rigs",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "susy:drill_head"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Off-Site Power Generation",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 781,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "782:10": {
+      "preRequisites:11": [
+        781
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "While they do not generate power batteries are ideal for places you don\u0027t need running a lot and can\u0027t be bothered to generate power for. Using battery buffers each battery added to the buffer increases amps output by 1.\n\nAlso serves as an ideal method to store power from incosistent power generation sources. (Solar power)",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 735,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "Charge:4": 120000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Batteries",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 782,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "783:10": {
+      "preRequisites:11": [
+        781
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Solar power is one of the simplest power generation methods, simply place down a solar panel that has a clear view of the sky. Will not work at night or when it is raining, so it\u0027s best to add a battery buffer to it. The main downside is very low yield.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Solar power",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 783,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 332,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "784:10": {
+      "preRequisites:11": [
+        31,
+        787
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Your first power production method are small boilers, they are only really viable for LV and should be phased out at around the start of MV.\n\nTake the steam they generate and put them into a Basic Steam Turbine, you will require 2 for 1 amp of LV",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Solid Boilers",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 784,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "785:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "New Quest",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 785,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "786:10": {
+      "preRequisites:11": [
+        243,
+        580
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Ideal power production methods for MV.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 987,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "MV",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 786,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "787:10": {
+      "preRequisites:11": [
+        31,
+        580
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Ideal power production methods for LV.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 986,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 787,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 986,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "788:10": {
+      "preRequisites:11": [
+        479,
+        580
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Ideal power production methods for HV.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 988,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "HV",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 788,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "789:10": {
+      "preRequisites:11": [
+        31,
+        781
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Solar boilers §rcan be used to get steam using the power of the sun. \nThey only generate steam while the sun is up, 13 hours per day.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 3,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Power of the Sun",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 789,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "790:10": {
+      "preRequisites:11": [
+        786,
+        373
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Using a mining drill, you can sort coal from the rocks, which you can pyrolyze to produce Coal Gas, which you can process into Synthesis Gas in a centrifuge. Burning Syngas in a Large Gas Turbine a good Early MV power generation method.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "syngas"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Syngas",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 790,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "791:10": {
+      "preRequisites:11": [
+        775,
+        394
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Using your petrochemistry setup, you can distill out lubricants, which give a power boost to gas and steam turbines when inputted.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "lubricant"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Lubricants",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 791,
+      "rewards:9": {},
+      "tasks:9": {}
     }
   },
   "questLines:9": {
@@ -65792,11 +66401,165 @@
           "y:3": -12
         }
       }
+    },
+    "27:10": {
+      "lineID:3": 27,
+      "order:3": 27,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "No Description",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 950,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "name:8": "Power Generation",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "quests:9": {
+        "0:10": {
+          "id:3": 57,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 48
+        },
+        "1:10": {
+          "id:3": 58,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 48
+        },
+        "2:10": {
+          "id:3": 369,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 144
+        },
+        "3:10": {
+          "id:3": 373,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": 48
+        },
+        "4:10": {
+          "id:3": 394,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": 144
+        },
+        "5:10": {
+          "id:3": 438,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 96
+        },
+        "6:10": {
+          "id:3": 580,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": -48
+        },
+        "7:10": {
+          "id:3": 686,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
+          "y:3": 96
+        },
+        "8:10": {
+          "id:3": 718,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 336,
+          "y:3": 144
+        },
+        "9:10": {
+          "id:3": 775,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 336,
+          "y:3": 48
+        },
+        "10:10": {
+          "id:3": 781,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": -96
+        },
+        "11:10": {
+          "id:3": 782,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 192,
+          "y:3": -144
+        },
+        "12:10": {
+          "id:3": 784,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
+          "y:3": 48
+        },
+        "13:10": {
+          "id:3": 786,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": 0
+        },
+        "14:10": {
+          "id:3": 787,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": 0
+        },
+        "15:10": {
+          "id:3": 788,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 336,
+          "y:3": 0
+        },
+        "16:10": {
+          "id:3": 789,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 240,
+          "y:3": -144
+        },
+        "17:10": {
+          "id:3": 790,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 264,
+          "y:3": 48
+        },
+        "18:10": {
+          "id:3": 791,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 336,
+          "y:3": 96
+        }
+      }
     }
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
