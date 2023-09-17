@@ -43,7 +43,6 @@ def orthomagmatic_tier_3 = [
     'gregtech:ore_molybdenite_0' : 10000,
     'gregtech:ore_cassiterite_0' : 10000,
     'gregtech:ore_tantalite_0' : 10000,
-    'gregtech:ore_sperrylite_0' : 10000,
     'gregtech:ore_pollucite_0' : 10000
 ];
 
@@ -65,7 +64,6 @@ def orthomagmatic_tier_4 = [
     'gregtech:ore_molybdenite_0' : 10000,
     'gregtech:ore_cassiterite_0' : 10000,
     'gregtech:ore_tantalite_0' : 10000,
-    'gregtech:ore_sperrylite_0' : 10000,
     'gregtech:ore_pollucite_0' : 10000
 ];
 
@@ -103,7 +101,6 @@ def metamorphic_tier_3 = [
     'gregtech:ore_cobaltite_0' : 10000,
     'gregtech:ore_realgar_0' : 10000,
     'gregtech:ore_arsenopyrite_0' : 10000,
-    'gregtech:ore_wolframite_0' : 10000,
     'gregtech:ore_pyrargyrite_0' : 10000,
     'gregtech:ore_stephanite_0' : 10000,
     'gregtech:ore_redstone_0' : 10000,

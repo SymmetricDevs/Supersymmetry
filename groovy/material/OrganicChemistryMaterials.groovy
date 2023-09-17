@@ -311,10 +311,10 @@ public class OrganicChemistryMaterials {
                 .color(0x917b0f)
                 .build();
 
-        SodiumPhenoxideSolution = new Material.Builder(15050, 'sodium_phenoxide_solution')
+        Cyclohexylamine = new Material.Builder(15050, "cyclohexylamine")
                 .fluid()
-                .components(Water, 1, SodiumPhenoxide, 1)
-                .colorAverage()
+                .components(Carbon, 6, Hydrogen, 13, Nitrogen, 1)
+                .color(0xbfba8c)
                 .build();
 
         DiphenylIsophthalateSolution = new Material.Builder(15051, 'diphenyl_isophthalate_solution')
@@ -533,10 +533,10 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        DilutedDichloroethane = new Material.Builder(15087, 'diluted_dichloroethane')
+        TetrapropylammoniumBromide = new Material.Builder(15087, "tetrapropylammonium_bromide")
                 .fluid()
-                .components(Water, 3, Dichloroethane, 1)
-                .colorAverage()
+                .components(Carbon, 12, Hydrogen, 28, Bromine, 1, Nitrogen, 1)
+                .color(0x916c0f)
                 .build();
 
         Formaldehyde = new Material.Builder(15088, "formaldehyde")
@@ -934,7 +934,7 @@ public class OrganicChemistryMaterials {
         Kevlar = new Material.Builder(15154, 'kevlar')
                 .polymer(3)
                 .color(0x4d443e)
-                .flags(GENERATE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_FINE_WIRE)
                 .build()
 
         Kevlar.setFormula("COC6H4CONHC6H4NH", true)
@@ -1270,7 +1270,7 @@ public class OrganicChemistryMaterials {
         OneButene = new Material.Builder(15206, "one_butene")
                 .fluid(FluidTypes.GAS)
                 .components(Carbon, 4, Hydrogen, 8)
-                .color(0x965a15)
+                .color(0xed9595)
                 .build();
 
         TwoButene = new Material.Builder(15207, "two_butene")
@@ -1545,35 +1545,239 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 3, Hydrogen, 7, Bromine, 1)
                 .color(0x9e833f)
                 .build();
+      		
+      	Triethylenetetramine = new Material.Builder(15247, "triethylenetetramine")
+      		.fluid()
+      		.components(Carbon, 6, Hydrogen, 18, Nitrogen, 4)
+      		.color(0x3d98ab)
+      		.build();
+      		
+      	Aminoethylpiperazine = new Material.Builder(15248, "aminoethylpiperazine")
+      	      	.components(Carbon, 6, Hydrogen, 15, Nitrogen, 3)
+      		.fluid()
+      		.color(0xcce862)
+      		.build();	
+    
+        Diethylenetriamine = new Material.Builder(15249, "diethylenetriamine")
+              	.components(Carbon, 4, Hydrogen, 13, Nitrogen, 3)
+      		.fluid()
+      		.color(0x0234a8)
+      		.build();
+    
+        Ethylenediamine = new Material.Builder(15250, "ethylenediamine")
+              	.components(Carbon, 2, Hydrogen, 8, Nitrogen, 2)
+      		.fluid()
+      		.color(0x2e7a25)
+      		.build();
+      		
+      	Piperazine = new Material.Builder(15251, "piperazine")
+      	      	.components(Carbon, 4, Hydrogen, 10, Nitrogen, 2)
+      		.fluid()
+      		.color(0x8a8f9f)
+      		.build();
+      		
+      	Cyclooctadiene = new Material.Builder(15253, "cyclooctadiene")
+      		.components(Carbon, 8, Hydrogen, 12)
+      		.fluid()
+      		.color(0x4639ee)
+      		.build();
+      		
+      	TriethylPhosphate = new Material.Builder(15254, "triethyl_phosphate")
+      		.components(Carbon, 6, Hydrogen, 15, Oxygen, 4, Phosphorus, 1)
+      		.fluid()
+      		.color(0x4639ee)
+      		.build();
+      		
+        IsopropenylAcetate = new Material.Builder(15255, "isopropenyl_acetate")
+      		.components(Carbon, 5, Hydrogen, 8, Oxygen, 2)
+      		.fluid()
+      		.color(0x4639ee)
+      		.build();
+      		
+      	Acetylacetone = new Material.Builder(15256, "acetylacetone")
+      		.components(Carbon, 5, Hydrogen, 8, Oxygen, 2)
+      		.fluid()
+      		.color(0x092b30)
+      		.build();
+      		
+        NickelIIBisacetylacetonate = new Material.Builder(15257, "nickel_ii_bisacetylacetonate")
+      		.components(Carbon, 10, Hydrogen, 14, Nickel, 1, Oxygen, 4)
+      		.dust()
+      		.color(0x3e5051)
+      		.build();
+      	
+        NickelIIBisacetylacetonate.setFormula("Ni(acac)2", true)
 
-        TetrapropylammoniumBromide = new Material.Builder(15247, "tetrapropylammonium_bromide")
+        BiscyclooctadienenickelZero = new Material.Builder(15258, "biscyclooctadienenickel_zero")
+        	.components(Carbon, 16, Hydrogen, 24, Nickel, 1)
+        	.dust()
+        	.color(0xe0e00d)
+        	.build();
+
+        BiscyclooctadienenickelZero.setFormula("Ni(cod)2", true)
+        	
+        DiethylaluminiumAcetylacetonate = new Material.Builder(15259, "diethylaluminium_acetylacetonate")
+        	.components(Aluminium, 1, Carbon, 9, Hydrogen, 17, Oxygen, 2)
                 .fluid()
-                .components(Carbon, 12, Hydrogen, 28, Bromine, 1, Nitrogen, 1)
-                .color(0x916c0f)
+                .color(0x10a37e)
                 .build();
 
-        Tripropylene = new Material.Builder(15248, "tripropylene")
+        DiethylaluminiumAcetylacetonate.setFormula("(acac)AlEt2", true)
+
+        OxalicAcid = new Material.Builder(15260, "oxalic_acid")
+                .components(Hydrogen, 2, Carbon, 2, Oxygen, 4)
+                .dust()
+                .color(0xb5a7aa)
+                .build();
+
+        OneAmidoethylTwoAlkylTwoImidazoline = new Material.Builder(15261, "one_amidoethyl_two_alkyl_two_imidazoline")
+                .fluid()
+                .color(0x9c3398)
+                .build();
+
+        Chlorodiphenylphosphine = new Material.Builder(15262, "chlorodiphenylphosphine")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 10, Chlorine, 1, Phosphorus, 1)
+                .color(0xd2e080)
+                .build();
+
+        DiphenylphosphinoaceticAcid = new Material.Builder(15263, "diphenylphosphinoacetic_acid")
+                .fluid()
+                .components(Carbon, 14, Hydrogen, 13, Oxygen, 2, Phosphorus, 1)
+                .color(0xdeba6d)
+                .build();
+
+        OneHexene = new Material.Builder(15264, "one_hexene")
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 12)
+                .color(0xd96c6c)
+                .build();
+
+        Tripropylene = new Material.Builder(15265, "tripropylene")
                 .fluid()
                 .components(Carbon, 9, Hydrogen, 18)
                 .color(0xcf5f1f)
                 .build();
 
-        Isodecanal = new Material.Builder(15249, "isodecanal")
+        Isodecanal = new Material.Builder(15266, "isodecanal")
                 .fluid()
                 .components(Carbon, 10, Hydrogen, 20, Oxygen, 1)
                 .color(0xde8431)
                 .build();
 
-        Isodecanol = new Material.Builder(15250, "isodecanol")
+        Isodecanol = new Material.Builder(15267, "isodecanol")
                 .fluid()
                 .components(Carbon, 10, Hydrogen, 22, Oxygen, 1)
                 .color(0xeb9546)
                 .build();
 
-        Trioctylamine = new Material.Builder(15251, "trioctylamine")
+        Trioctylamine = new Material.Builder(15268, "trioctylamine")
                 .fluid()
                 .components(Carbon, 24, Hydrogen, 51, Nitrogen, 1)
                 .color(0x2274a3)
+                .build();
+
+        NButylamine = new Material.Builder(15269, "n_butylamine")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 11, Nitrogen, 1)
+                .color(0x43576e)
+                .build();
+
+        Ethyltoluene = new Material.Builder(15270, "ethyltoluene")
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 12)
+                .color(0x806706)
+                .build();
+
+        VinylbenzylChloride = new Material.Builder(15271, "vinylbenzyl_chloride")
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 9, Chlorine, 1)
+                .color(0x8fa32a)
+                .build();
+
+        TetrabromobisphenolA = new Material.Builder(15272, "tetrabromobisphenol_a")
+                .dust()
+                .components(Carbon, 15, Hydrogen, 12, Bromine, 4, Oxygen, 2)
+                .color(0x6b3220)
+                .build();
+
+        Cyanamide = new Material.Builder(15273, "cyanamide")
+                .dust()
+                .components(Carbon, 1, Hydrogen, 2, Nitrogen, 2)
+                .colorAverage()
+                .build();
+
+        Dicyandiamide = new Material.Builder(15274, "dicyandiamide")
+                .dust()
+                .components(Carbon, 2, Hydrogen, 4, Nitrogen, 4)
+                .colorAverage()
+                .iconSet(QUARTZ)
+                .build();
+
+        TwoMethylimidazole = new Material.Builder(15275, "two_methylimidazole")
+                .dust()
+                .components(Carbon, 4, Hydrogen, 6, Nitrogen, 2)
+                .colorAverage()
+                .build();
+
+        FlameRetardantEpoxy = new Material.Builder(15276, "flame_retardant_epoxy")
+                .dust().fluid()
+                .components(Carbon, 21, Hydrogen, 21, Bromine, 4, Chlorine, 1, Oxygen, 5)
+                .color(0xc86b14)
+                .build();
+
+        PropyleneChlorohydrin = new Material.Builder(15277, "propylene_chlorohydrin")
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 7, Chlorine, 1, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        PropyleneOxide = new Material.Builder(15278, "propylene_oxide")
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 6, Oxygen, 1)
+                .color(0x9ab522)
+                .build();
+
+        PropyleneCarbonate = new Material.Builder(15279, "propylene_carbonate")
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 3)
+                .color(0x5db522)
+                .build();
+
+        DiphenylSulfide = new Material.Builder(15280, "diphenyl_sulfide")
+                .dust()
+                .components(Carbon, 12, Hydrogen, 10, Sulfur, 1)
+                .color(0x5e5c0a)
+                .build();
+
+        DiphenylSulfoxide = new Material.Builder(15281, "diphenyl_sulfoxide")
+                .dust()
+                .components(Carbon, 12, Hydrogen, 10, Oxygen, 1, Sulfur, 1)
+                .color(0x435e0a)
+                .build();
+
+        MethanesulfonicAcid = new Material.Builder(15282, "methanesulfonic_acid")
+                .fluid()
+                .components(Carbon, 1, Hydrogen, 4, Oxygen, 3, Sulfur, 1)
+                .color(0xff6e6e)
+                .build();
+
+        TriarylsulfoniumHexafluoroantimonate = new Material.Builder(15283, "triarylsulfonium_hexafluoroantimonate")
+                .dust()
+                .components(Carbon, 24, Hydrogen, 19, Fluorine, 6, Sulfur, 2, Antimony, 1)
+                .color(0x31a374)
+                .build();
+
+        Biphenyl = new Material.Builder(15284, "biphenyl")
+                .dust()
+                .components(Carbon, 12, Hydrogen, 10)
+                .colorAverage()
+                .build();
+
+        PolychlorinatedBiphenyl = new Material.Builder(15285, "polychlorinated_biphenyl")
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 5, Chlorine, 5)
+                .colorAverage()
                 .build();
     }
 }

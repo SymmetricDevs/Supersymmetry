@@ -9,6 +9,7 @@ FORGE_HAMMER = recipemap('forge_hammer')
 AUTOCLAVE = recipemap('autoclave')
 BR = recipemap('batch_reactor')
 ROASTER = recipemap('roaster')
+TUBE_FURNACE = recipemap('tube_furnace')
 
 CVD.recipeBuilder()
         .notConsumable(metaitem('wafer.silicon'))
@@ -131,3 +132,41 @@ BR.recipeBuilder()
         .duration(200)
         .EUt(120)
         .buildAndRegister();
+
+// Lithium Niobate
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustLithium') * 2)
+        .fluidInputs(fluid('oxygen') * 1000)
+        .outputs(metaitem('dustLithiumOxide'))
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister();
+
+TUBE_FURNACE.recipeBuilder()
+        .inputs(ore('dustNiobiumOxide') * 7)
+        .inputs(ore('dustLithiumOxide') * 32)
+        .chancedOutput(metaitem('seed_crystal.lithium_niobate'), 5000, 1000)
+        .duration(200)
+        .EUt(Globals.voltAmps[4])
+        .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+        .inputs(metaitem('seed_crystal.lithium_niobate'))
+        .inputs(ore('dustNiobiumOxide') * 14)
+        .fluidInputs(fluid('lithium_oxide') * 864)
+        .outputs(metaitem('boule.lithium_niobate'))
+        .duration(400)
+        .EUt(120)
+        .buildAndRegister()
+
+CUTTER.recipeBuilder()
+        .inputs(metaitem('boule.lithium_niobate'))
+        .outputs(metaitem('seed_crystal.lithium_niobate'))
+        .outputs(metaitem('gemExquisiteLithiumNiobate') * 5)
+        .duration(400)
+        .EUt(120)
+        .buildAndRegister()
+
+// Lead Zirconate Titanate
+

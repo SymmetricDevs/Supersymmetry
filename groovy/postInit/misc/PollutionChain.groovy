@@ -1,6 +1,7 @@
 import static globals.Globals.*
 
 SMOKE_STACK = recipemap('smoke_stack')
+FLARE_STACK = recipemap('flare_stack')
 MIXER = recipemap('mixer')
 DUMPER = recipemap('dumping')
 SIFTER = recipemap('sifter')
@@ -13,11 +14,6 @@ SMOKE_STACK.recipeBuilder()
 
 SMOKE_STACK.recipeBuilder()
         .fluidInputs(fluid('carbon_monoxide') * 500)
-        .duration(20)
-        .buildAndRegister()
-
-SMOKE_STACK.recipeBuilder()
-        .fluidInputs(fluid('oxygen') * 500)
         .duration(20)
         .buildAndRegister()
 
@@ -52,8 +48,13 @@ SMOKE_STACK.recipeBuilder()
         .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
-        .fluidInputs(fluid('nitrogen') * 4000)
-        .duration(20)
+        .fluidInputs(fluid('nitrogen') * 10000)
+        .duration(5)
+        .buildAndRegister()
+
+SMOKE_STACK.recipeBuilder()
+        .fluidInputs(fluid('oxygen') * 5000)
+        .duration(5)
         .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
@@ -77,7 +78,7 @@ SMOKE_STACK.recipeBuilder()
         .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
-        .fluidInputs(fluid('unscrubbed_wood_gas') * 500)
+        .fluidInputs(fluid('unscrubbed_wood_gas') * 1000)
         .duration(20)
         .buildAndRegister()
 
@@ -103,6 +104,11 @@ SMOKE_STACK.recipeBuilder()
 
 SMOKE_STACK.recipeBuilder()
         .fluidInputs(fluid('carbon_tetrachloride') * 500)
+        .duration(10)
+        .buildAndRegister()
+
+FLARE_STACK.recipeBuilder()
+        .fluidInputs(fluid('lubricating_oil') * 500)
         .duration(10)
         .buildAndRegister()
 
@@ -200,6 +206,41 @@ DUMPER.recipeBuilder()
 
 DUMPER.recipeBuilder()
         .fluidInputs(fluid('anthracene_oil') * 1000)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('triethylenetetramine') * 100)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('aminoethylpiperazine') * 50)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('diethylenetriamine') * 300)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('ethylenediamine') * 500)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('piperazine') * 50)
+        .duration(20)
+        .buildAndRegister()
+
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('wastewater') * 5000)
+        .duration(4)
+        .buildAndRegister()
+        
+DUMPER.recipeBuilder()
+        .fluidInputs(fluid('metal_sulfate_waste') * 1000)
         .duration(20)
         .buildAndRegister()
 

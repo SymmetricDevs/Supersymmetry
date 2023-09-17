@@ -285,7 +285,7 @@ public class FirstDegreeMaterials{
         LithiumNiobate = new Material.Builder(8121, 'lithium_niobate')
                 .gem().iconSet(RUBY)
                 .components(Lithium, 1, Niobium, 1, Oxygen, 3)
-                .colorAverage()
+                .color(0xbcabde)
                 .build()
 
         LeadZirconateTitanite = new Material.Builder(8122, 'lead_zirconate_titanate')
@@ -854,12 +854,11 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        AluminiumTrichloride = new Material.Builder(8214, "aluminium_trichloride")
+        ManganeseIISulfate = new Material.Builder(8214, "manganese_ii_sulfate")
                 .dust()
-                .components(Aluminium, 1, Chlorine, 3)
-                .flags(GENERATE_CATALYST_BED)
+                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
-                .build()
+                .build();
 
         Triethylaluminium = new Material.Builder(8215, "triethylaluminium")
                 .fluid()
@@ -1023,7 +1022,8 @@ public class FirstDegreeMaterials{
         HydrobromicAcid.setFormula("(HBr)(H2O)", true)
 
         AluminiumChloride = new Material.Builder(8242, "aluminium_chloride")
-                .fluid(FluidTypes.GAS)
+                .dust().fluid(FluidTypes.GAS)
+                .flags(NO_UNIFICATION, GENERATE_CATALYST_BED)
                 .fluidTemp(460)
                 .components(Aluminium, 1, Chlorine, 3)
                 .colorAverage()
@@ -1169,19 +1169,20 @@ public class FirstDegreeMaterials{
                 .iconSet(SAND)
                 .build()
 
-        CrudeManganeseIISulfateSolution = new Material.Builder(8266, "crude_manganese_ii_sulfate_solution")
-                .fluid()
-                .components(Manganese, 1, Sulfur, 1, Oxygen, 4, Water, 1)
-                .colorAverage()
-                .build()
-                .setFormula('(?)(MnSO4)(H2O)', true)
+        RaneyCobalt = new Material.Builder(8266, "raney_cobalt")
+                .dust()
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Cobalt, 1, Aluminium, 1)
+                .color(0x1858a1)
+                .build();
 
-        CrudeManganeseIISulfateSolution = new Material.Builder(8267, "manganese_ii_sulfate_solution")
-                .fluid()
-                .components(Manganese, 1, Sulfur, 1, Oxygen, 4, Water, 1)
-                .colorAverage()
-                .build()
-                .setFormula('(MnSO4)(H2O)', true)
+        ActivatedRaneyCobalt = new Material.Builder(8267, "activated_raney_cobalt")
+                .dust()
+                .iconSet(SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Cobalt, 1, Aluminium, 1)
+                .color(0x3274bf)
+                .build();
 
         IronIIIHydroxide = new Material.Builder(8268, "iron_iii_hydroxide")
                 .dust()
@@ -1642,7 +1643,7 @@ public class FirstDegreeMaterials{
                 .fluidTemp(600)
                 .components(Lead, 1)
                 .color(0x1f1926)
-                .flags(GENERATE_PLATE)
+                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION)
                 .build();
 
         SilverFreeLead = new Material.Builder(8338, "silver_free_lead")
@@ -1725,6 +1726,7 @@ public class FirstDegreeMaterials{
         BettsCrudeLead = new Material.Builder(8350, "betts_crude_lead")
                 .fluid().ingot()
                 .components(Bismuth, 3, Lead, 6, Copper, 1)
+                .flags(DISABLE_DECOMPOSITION)
                 .color(0x393673)
                 .build();
 
@@ -1921,7 +1923,7 @@ public class FirstDegreeMaterials{
 
         NitrogenTrifluoride = new Material.Builder(8381, 'nitrogen_trifluoride')
                 .fluid(FluidTypes.GAS).plasma()
-                .components(Nitrogen, 1, Chlorine, 3)
+                .components(Nitrogen, 1, Fluorine, 3)
                 .colorAverage()
                 .build()
 
@@ -1959,9 +1961,9 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        PolychlorinatedBiphenyl = new Material.Builder(8387, "polychlorinated_biphenyl")
-                .fluid()
-                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
+        LithiumOxide = new Material.Builder(8387, "lithium_oxide")
+                .dust().fluid()
+                .components(Lithium, 2, Oxygen, 1)
                 .colorAverage()
                 .build();
 
@@ -2707,10 +2709,10 @@ public class FirstDegreeMaterials{
                 .color(0x887866)
                 .build();
 
-        GaseousAluminiumTrichloride = new Material.Builder(8496, "gaseous_aluminium_trichloride")
+        GaseousAluminiumChloride = new Material.Builder(8496, "gaseous_aluminium_chloride")
                 .fluid(FluidTypes.GAS)
                 .fluidTemp(460)
-                .components(AluminiumTrichloride, 1)
+                .components(AluminiumChloride, 1)
                 .colorAverage()
                 .build();
 
@@ -2731,7 +2733,7 @@ public class FirstDegreeMaterials{
         Polycarbonate.setFormula("C16H14O3", true)
 
         SodiumNitrite = new Material.Builder(8499, "sodium_nitrite")
-                .dust()
+                .dust().fluid()
                 .components(Sodium, 1, Nitrogen, 1, Oxygen, 2)
                 .color(0xe7e899)
                 .build();
@@ -2744,15 +2746,19 @@ public class FirstDegreeMaterials{
 
         HexachloroplatinicAcidSolution = new Material.Builder(8501, "hexachloroplatinic_acid_solution")
                 .fluid()
-                .components(Hydrogen, 2, Platinum, 1, Chlorine, 6, Water, 1)
+                .components(Iron, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
                 .color(0xe06624)
                 .build();
 
-        SodiumHexachloroplatinateSolution = new Material.Builder(8502, "sodium_hexachloroplatinate_solution")
+        HexachloroplatinicAcidSolution.setFormula("(?)(H2PtCl6)3(FeCl2)(H2O)8", true)
+
+        CementedHexachloroplatinicAcidSolution = new Material.Builder(8502, "cemented_hexachloroplatinic_acid_solution")
                 .fluid()
-                .components(Sodium, 2, Platinum, 1, Chlorine, 6, Water, 5)
+                .components(Iron, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
                 .color(0xb87627)
                 .build();
+
+        HexachloroplatinicAcidSolution.setFormula("(?)(H2PtCl6)3(ZnCl2)(H2O)8", true)
         
         AmmoniumHexachloroplatinate = new Material.Builder(8503, "ammonium_hexachloroplatinate")
                 .dust()
@@ -2774,21 +2780,18 @@ public class FirstDegreeMaterials{
                 .color(0x38add1)
                 .build();
 
-        MercuryIICyanide = new Material.Builder(8506, "mercury_ii_cyanide")
-                .dust()
-                .components(Mercury, 1, Carbon, 2, Nitrogen, 2)
-                .colorAverage()
+        DisulfurDichloride = new Material.Builder(8506, "disulfur_dichloride")
+                .fluid()
+                .components(Sulfur, 2, Chlorine, 2)
+                .color(0xccc31d)
                 .build();
 
-        MercuryIICyanide.setFormula("Hg(CN)2", true)
-
-        PalladiumIICyanide = new Material.Builder(8507, "palladium_ii_cyanide")
+        AcidWashedSiliconDioxide = new Material.Builder(8507, "acid_washed_silicon_dioxide")
                 .dust()
-                .components(Palladium, 1, Carbon, 2, Nitrogen, 2)
-                .color(0x787a7a)
+                .components(SiliconDioxide, 1)
+                .color(0xc8c8c8)
+                .iconSet(SHINY)
                 .build();
-
-        PalladiumIICyanide.setFormula("Pd(CN)2", true)
 
         AluminiumNitride = new Material.Builder(8508, "aluminium_nitride")
                 .dust()
@@ -2961,9 +2964,9 @@ public class FirstDegreeMaterials{
 
         SodiumMolybdateSolution.setFormula("(Na2MoO4)(H2O)", true)
 
-        PolychlorinatedBiphenyl = new Material.Builder(8532, "polychlorinated_biphenyl")
-                .fluid()
-                .components(Carbon, 12, Hydrogen, 8, Chlorine, 2)
+        ManganeseIISulfate = new Material.Builder(8532, "manganese_ii_sulfate")
+                .dust()
+                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
 
@@ -3093,6 +3096,157 @@ public class FirstDegreeMaterials{
                 .dust()
                 .components(Calcium, 1, Zirconium, 1, Oxygen, 3)
                 .colorAverage()
+                .build();
+                
+        NickelIINitrateSolution = new Material.Builder(8551, "nickel_nitrate_solution")
+        	.fluid()
+        	.components(Nickel, 1, Nitrogen, 2, Oxygen, 6, Water, 1)
+        	.colorAverage()
+        	.build();
+
+        NickelIINitrateSolution.setFormula("[Ni(NO3)2](H2O)", true);
+
+        FerroniobiumTantalum = new Material.Builder(8552, "ferroniobium_tantalum")
+                .dust()
+                .components(Iron, 30, Niobium, 65, Tantalum, 5)
+                .flags(DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build();
+                
+        TantalumPentachloride = new Material.Builder(8553, "tantalum_pentachloride")
+                .dust().fluid(FluidTypes.GAS)
+                .flags(NO_UNIFICATION)
+                .fluidTemp(513)
+                .components(Tantalum, 1, Chlorine, 5)
+                .colorAverage()
+                .build();
+                
+        NiobiumPentachloride = new Material.Builder(8554, "niobium_pentachloride")
+                .dust().fluid(FluidTypes.GAS)
+                .flags(NO_UNIFICATION)
+                .fluidTemp(521)
+                .components(Niobium, 1, Chlorine, 5)
+                .color(0xcfcf1d)
+                .build();
+                
+        NiobiumOxideDihydrate = new Material.Builder(8555, "niobium_oxide_dihydrate")
+                .dust()
+                .components(Niobium, 2, Oxygen, 5, Water, 2)
+                .colorAverage()
+                .build();
+
+        NiobiumOxideDihydrate.setFormula("Nb2O5 * (H2O)2", true)
+                
+        PurifiedFluoroniobicAcidSolution = new Material.Builder(8556, "purified_fluoroniobic_acid_solution")
+                .fluid()
+                .components(Hydrogen, 6, Niobium, 3, Fluorine, 9, Water, 6)
+                .colorAverage()
+                .build();
+
+        PurifiedFluoroniobicAcidSolution.setFormula("(H2NbF7)1.35(H2O)6", true)
+                
+        NiobiumOxide = new Material.Builder(8557, "niobium_oxide")
+                .dust()
+                .components(Niobium, 2, Oxygen, 5)
+                .colorAverage()
+                .build();
+                
+        FluorotantalicAcidSolution = new Material.Builder(8558, "fluorotantalic_acid_solution")
+                .fluid()
+                .components(Hydrogen, 2, Tantalum, 1, Fluorine, 7, Water, 1)
+                .colorAverage()
+                .build();
+
+        FluorotantalicAcidSolution.setFormula("(H2TaF7)0.9(H2O)", true)
+                
+        PotassiumHeptafluorotantalate = new Material.Builder(8559, "potassium_heptafluorotantalate")
+                .dust()
+                .components(Potassium, 2, Tantalum, 1, Fluorine, 7)
+                .colorAverage()
+                .build();
+                
+        DilutedAmmoniaSolution = new Material.Builder(8560, "diluted_ammonia_solution")
+                .fluid()
+                .components(Ammonia, 1, Water, 2)
+                .colorAverage()
+                .build();
+                
+        TantalumFluoride = new Material.Builder(8561, "tantalum_fluoride")
+                .dust()
+                .components(Tantalum, 1, Fluorine, 5)
+                .colorAverage()
+                .build();
+
+        AmmoniumPerrhenate = new Material.Builder(8562, "ammonium_perrhenate")
+                .dust()
+                .components(Nitrogen, 1, Hydrogen, 4, Rhenium, 1, Oxygen, 4)
+                .color(0x2b6cb3)
+                .build();
+
+        LithiumOxide = new Material.Builder(8563, "lithium_oxide")
+                .dust().fluid()
+                .components(Lithium, 2, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        NickelHydrotalcite = new Material.Builder(8564, "nickel_hydrotalcite")
+                .dust()
+                .components(Nickel, 6, Aluminium, 2, )
+                .color(0x9fb833)
+                .build();
+
+        NickelHydrotalcite.setFormula("[Ni3Al(OH)8]Cl", true)
+
+        CalciumCyanamide = new Material.Builder(8565, "calcium_cyanamide")
+                .dust()
+                .components(Calcium, 1, Carbon, 1, Nitrogen, 2)
+                .colorAverage()
+                .build();
+
+        AntimonyPentafluoride = new Material.Builder(8566, "antimony_pentafluoride")
+                .fluid()
+                .components(Antimony, 1, Fluorine, 5)
+                .colorAverage()
+                .build();
+
+        SodiumHexafluoroantimonate = new Material.Builder(8569, "sodium_hexafluoroantimonate")
+                .dust()
+                .components(Sodium, 1, Antimony, 1, Fluorine, 6)
+                .colorAverage()
+                .build();
+
+        AcidWashedSiliconDioxide = new Material.Builder(8570, "acid_washed_silicon_dioxide")
+                .dust()
+                .components(SiliconDioxide, 1)
+                .color(0xc8c8c8)
+                .iconSet(SHINY)
+                .build();
+
+        DisulfurDichloride = new Material.Builder(8571, "disulfur_dichloride")
+                .fluid()
+                .components(Sulfur, 2, Chlorine, 2)
+                .color(0xccc31d)
+                .build();
+
+        Ferroplatinum = new Material.Builder(8572, "ferroplatinum")
+                .dust().ingot()
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Platinum, 3, Iron, 1)
+                .colorAverage()
+                .build();
+
+        Diamminedichloropalladium = new Material.Builder(8573, "diamminedichloropalladium")
+                .dust()
+                .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
+                .colorAverage()
+                .build();
+
+        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
+
+        DecarburizedAir = new Material.Builder(8574, "decarburized_air")
+                .fluid(FluidTypes.GAS)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
+                .color(0x90bbe0)
                 .build();
     }
 }
