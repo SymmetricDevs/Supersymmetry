@@ -40,6 +40,7 @@ TUBE_FURNACE = recipemap('tube_furnace')
 SINTERING_OVEN = recipemap('sintering_oven')
 VACUUM_DT = recipemap('vacuum_distillation')
 CRACKER = recipemap('cracker')
+FLUID_HEATER = recipemap('fluid_heater')
 
 def COAL_SOURCES = [
     "dustCarbon",
@@ -4836,4 +4837,13 @@ FBR.recipeBuilder()
         .fluidOutputs(fluid('water') * 100)
         .duration(100)
         .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+// Heated water
+FLUID_HEATER.recipeBuilder()
+        .circuitMeta(2)
+        .fluidInputs(fluid('distilled_water') * 1000)
+        .fluidOutputs(fluid('gtfo_heated_water') * 1000)
+        .duration(20)
+        .EUt(Globals.voltAmps[1])
         .buildAndRegister()

@@ -89,6 +89,11 @@ SMOKE_STACK.recipeBuilder()
     .duration(1)
     .buildAndRegister()
 
+SMOKE_STACK.recipeBuilder()
+    .fluidInputs(fluid('chilly_waste_gaseous_nitrogen') * 640)
+    .duration(1)
+    .buildAndRegister()
+
 //SIDESTREAM OF BOOSTED AIR FOR COLD GENERATION
 /*FLUID_COMPRESSOR.recipeBuilder()
     .fluidInputs(fluid('purified_air') * 1000)
