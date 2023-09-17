@@ -22,6 +22,8 @@ def EBF = recipemap('electric_blast_furnace')
 
 // Silicon Carbide Plate * 1
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustSiliconCarbide')], null)
+// Silicon Ingot * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSiliconDioxide'), metaitem('dustCarbon') * 2], null)
 
 EBF.recipeBuilder()
         .circuitMeta(1)

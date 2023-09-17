@@ -1129,6 +1129,7 @@ class SuSyMaterials {
         public static Material DilutedEpichlorohydrin;
         public static Material Isobutane;
         public static Material Isobutylene;
+        public static Material Cyclohexane;
         public static Material SaltyNMethylIIPyrrolidone;
         public static Material MethylAcetateSolution;
         public static Material TwoNitrochlorobenzene;
@@ -1372,6 +1373,8 @@ class SuSyMaterials {
         public static Material Ethyltoluene;
         public static Material VinylbenzylChloride;
         public static Material Cyclohexylamine;
+        public static Material Biphenyl;
+        public static Material PolychlorinatedBiphenyl;
         public static Material TetrabromobisphenolA;
         public static Material Cyanamide;
         public static Material Dicyandiamide;

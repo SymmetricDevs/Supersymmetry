@@ -5,7 +5,7 @@ import java.lang.Math;
 
 //REMOVALS
 
-/*mods.gregtech.steam_turbine.removeByInput(-32, null, [fluid('steam') * 640])
+mods.gregtech.steam_turbine.removeByInput(-32, null, [fluid('steam') * 640])
 mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('coal_gas')])
 mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('ethylene')])
 mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('natural_gas') * 8])
@@ -38,7 +38,7 @@ mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('oil_medium')
 mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('nitro_fuel') * 2])
 mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('gasoline')])
 mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('gasoline_premium')])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('rocket_fuel') * 16])*/
+mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('rocket_fuel') * 16])
 
 def WaterCoolant = new ICoolant("water", "warm_water");
 WaterCoolant.setDurationRadiator(100);

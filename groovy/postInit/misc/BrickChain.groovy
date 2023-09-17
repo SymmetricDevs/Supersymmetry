@@ -81,4 +81,4 @@ def damage = {
         }
 }
 
-CompressBrickRecipes('mudbrick_mix', 'gregtechfoodoption:brick.adobe')
+CompressBrickRecipes('mudbrick_mix', 'brick.adobe')

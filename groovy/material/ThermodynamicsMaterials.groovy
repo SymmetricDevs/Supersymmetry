@@ -248,6 +248,8 @@ class ThermodynamicsMaterials {
 
                 generateLiquidFromGas(Hydrogen, 22100, 14);
 
+                generateLiquidFromGas(Helium, 22101, 5);
+
                 generateLiquidFromGas(Neon, 22102, 27);
 
                 generateLiquidFromGas(Argon, 22103, 88);
