@@ -1722,6 +1722,9 @@ susy.material.propylene_oxide_solution=Propylene Oxide Solution
 susy.material.su_eight=SU-8 Photoresist
 susy.material.hydrodealkylated_toluene_mixture=Hydrodealkylated Toluene Mixture
 susy.material.ortho_para_xylene_mixture=o/p-Xylene Mixture
+susy.material.partially_liquefied_argon=Partially Liquefied Argon
+susy.material.deoxygenation_catalyst=Deoxygenation Catalyst
+susy.material.deoxygenation_catalyst_precursor_solution=Deoxygenation Catalyst Precursor Solution
 
 # Isotopes
 
