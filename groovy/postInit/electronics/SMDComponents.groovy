@@ -64,6 +64,11 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 
 
 // SMD Transistor * 16
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineAnnealedCopper') * 8], [fluid('plastic') * 144])
+// SMD Transistor * 32
+mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineTantalum') * 8], [fluid('plastic') * 144])
+// SMD Resistor * 32
+mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 288])
+
 
 // SMD Diode * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), metaitem('wireFinePlatinum') * 8], [fluid('plastic') * 288])
@@ -78,6 +83,10 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustFerriteMi
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('alumina') * 144])
 // Alumina Plate * 1
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustAlumina')], null)
+
+// Advanced SMD Transistor * 16
+mods.gregtech.assembler.removeByInput(3840, [metaitem('foilVanadiumGallium'), metaitem('wireFineHssg') * 8], [fluid('polybenzimidazole') * 144])
+
 
 //SMD Diodes
 
@@ -178,8 +187,6 @@ for (fuel in sintering_fuels) {
         }
     }
 }
-
-
 
 MIXER.recipeBuilder()
         .inputs(ore('dustAlumina') * 5)
