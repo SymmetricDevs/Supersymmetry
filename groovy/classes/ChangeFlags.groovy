@@ -20,7 +20,7 @@ import gregtech.api.fluids.fluidType.FluidTypes;
 //eventManager.listen(EventPriority.LOWEST)
 class ChangeFlags {
     public static void init() {
-    //GregTechAPI.MaterialEvent event ->
+    //MaterialEvent event ->
 
         log.infoMC("Modifying flags...")
 

@@ -7,6 +7,8 @@ import gregtech.api.GregTechAPI;
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.properties.*
 
+import supersymmetry.api.util.SuSyUtility;
+
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -14,368 +16,368 @@ import static gregtech.api.unification.material.Materials.*;
 public class ThirdDegreeMaterials {
     public static void register() {
 
-        log.infoMC("Registering Third Degree Materials!");
+        log.infoMC('Registering Third Degree Materials!');
 
-        DiethylEtherSolution = new Material.Builder(24000, 'diethyl_ether_solution')
+        DiethylEtherSolution = new Material.Builder(24000, SuSyUtility.susyId('diethyl_ether_solution'))
                 .fluid()
                 .components(Water, 1, SulfuricAcid, 1, material('diethyl_ether'), 1)
                 .colorAverage()
                 .build();
 
-        LithiumSolution = new Material.Builder(24001, 'lithium_solution')
+        LithiumSolution = new Material.Builder(24001, SuSyUtility.susyId('lithium_solution'))
                 .fluid()
                 .components(Lithium, 2, material('diethyl_ether'), 1)
                 .colorAverage()
                 .build();
 
-        DimethylacetamideSolution = new Material.Builder(24002, 'dimethylacetamide_solution')
+        DimethylacetamideSolution = new Material.Builder(24002, SuSyUtility.susyId('dimethylacetamide_solution'))
                 .fluid()
                 .components(Water, 1, Dimethylacetamide, 1)
                 .colorAverage()
                 .build();
 
-        FurfuralSolution = new Material.Builder(24003, "furfural_solution")
+        FurfuralSolution = new Material.Builder(24003, SuSyUtility.susyId('furfural_solution'))
                 .fluid()
                 .components(Water, 3, SulfuricAcid, 1, Furfural, 1)
                 .colorAverage()
                 .build();
 
-        WackerCatalystSolution = new Material.Builder(24004, "wacker_catalyst_solution")
+        WackerCatalystSolution = new Material.Builder(24004, SuSyUtility.susyId('wacker_catalyst_solution'))
                 .fluid()
                 .components(Water, 1, WackerCatalyst, 1)
                 .colorAverage()
                 .build();
 
-        TwoEthylanthraquinoneSolution = new Material.Builder(24005, "two_ethylanthraquinone_solution")
+        TwoEthylanthraquinoneSolution = new Material.Builder(24005, SuSyUtility.susyId('two_ethylanthraquinone_solution'))
                 .fluid()
                 .components(TwoEthylanthraquinone, 1, HydrogenPeroxide, 3)
                 .colorAverage()
                 .build();
 
-        AcetamideSolution = new Material.Builder(24006, "acetamide_solution")
+        AcetamideSolution = new Material.Builder(24006, SuSyUtility.susyId('acetamide_solution'))
                 .fluid()
                 .components(Butanone, 1, Acetamide, 1)
                 .colorAverage()
                 .build();
 
-        HydrazineSolution = new Material.Builder(24007, "hydrazine_solution")
+        HydrazineSolution = new Material.Builder(24007, SuSyUtility.susyId('hydrazine_solution'))
                 .fluid()
                 .components(Water, 4, Hydrazine, 1, Ammonia, 2)
                 .colorAverage()
                 .build();
 
-        EthylenediamineSolution = new Material.Builder(24008, 'ethylenediamine_solution')
+        EthylenediamineSolution = new Material.Builder(24008, SuSyUtility.susyId('ethylenediamine_solution'))
                 .fluid()
                 .components(Ethylenediamine, 1, HydrogenChloride, 1)
                 .colorAverage()
                 .build()
 
-        DeacidifiedEthylenediamine = new Material.Builder(24009, 'deacidified_ethylenediamine')
+        DeacidifiedEthylenediamine = new Material.Builder(24009, SuSyUtility.susyId('deacidified_ethylenediamine'))
                 .fluid()
                 .components(Ethylenediamine, 1, Water, 2, Salt, 1)
                 .colorAverage()
                 .build()
 
-        EthylenediaminetetraaceticAcidSolution = new Material.Builder(24010, 'ethylenediaminetetraacetic_acid_solution')
+        EthylenediaminetetraaceticAcidSolution = new Material.Builder(24010, SuSyUtility.susyId('ethylenediaminetetraacetic_acid_solution'))
                 .fluid()
                 .components(Water, 1, EthylenediaminetetraaceticAcid, 1)
                 .colorAverage()
                 .build()
 
-        TetrasodiumEthylenediaminetetraaceticAcidSolution = new Material.Builder(24011, 'tetrasodium_ethylenediaminetetraacetic_acid_solution')
+        TetrasodiumEthylenediaminetetraaceticAcidSolution = new Material.Builder(24011, SuSyUtility.susyId('tetrasodium_ethylenediaminetetraacetic_acid_solution'))
                 .fluid()
                 .components(SaltWater, 1, TetrasodiumEthylenediaminetetraaceticAcid, 1)
                 .colorAverage()
                 .build()
 
-        UreaSolution = new Material.Builder(24012, 'urea_solution')
+        UreaSolution = new Material.Builder(24012, SuSyUtility.susyId('urea_solution'))
                 .fluid()
                 .components(Water, 1, Urea, 1)
                 .colorAverage()
                 .build()
 
-        DiiodobenzeneSolution = new Material.Builder(24013, 'diiodobenzene_solution')
+        DiiodobenzeneSolution = new Material.Builder(24013, SuSyUtility.susyId('diiodobenzene_solution'))
                 .fluid()
                 .components(Ethanol, 1, Diiodobenzene, 1)
                 .colorAverage()
                 .build()
 
-        ImpureFourFourOxydianiline = new Material.Builder(24014, 'impure_four_four_oxydianiline')
+        ImpureFourFourOxydianiline = new Material.Builder(24014, SuSyUtility.susyId('impure_four_four_oxydianiline'))
                 .fluid()
                 .components(Ethanol, 2, Water, 5, FourFourOxydianiline, 1, AmmoniumIodide, 4)
                 .colorAverage()
                 .build()
 
-        EthyleneGlycolSolution = new Material.Builder(24015, 'ethylene_glycol_solution')
+        EthyleneGlycolSolution = new Material.Builder(24015, SuSyUtility.susyId('ethylene_glycol_solution'))
                 .fluid()
                 .components(EthyleneGlycol, 1, Water, 2, SodiumHydroxide, 3)
                 .colorAverage()
                 .build()
 
-        TerephthalicAcidSolution = new Material.Builder(24016, 'terephthalic_acid_solution')
+        TerephthalicAcidSolution = new Material.Builder(24016, SuSyUtility.susyId('terephthalic_acid_solution'))
                 .fluid()
                 .components(AceticAcid, 1, Water, 1, TerephthalicAcid, 1)
                 .colorAverage()
                 .build()
 
-        CelluloseAcetateSolution = new Material.Builder(24017, 'cellulose_acetate_solution')
+        CelluloseAcetateSolution = new Material.Builder(24017, SuSyUtility.susyId('cellulose_acetate_solution'))
                 .fluid()
                 .components(Acetone, 1, CelluloseAcetate, 1)
                 .colorAverage()
                 .build()
 
-        TwoButanolSolution = new Material.Builder(24018, 'two_butanol_solution')
+        TwoButanolSolution = new Material.Builder(24018, SuSyUtility.susyId('two_butanol_solution'))
                 .fluid()
                 .components(SulfuricAcid, 1, TwoButanol, 1)
                 .colorAverage()
                 .build()
 
-        FourFourOxydianilineSolution = new Material.Builder(24019, 'four_four_oxydianiline_solution')
+        FourFourOxydianilineSolution = new Material.Builder(24019, SuSyUtility.susyId('four_four_oxydianiline_solution'))
                 .fluid()
                 .components(Water, 5, FourFourOxydianiline, 1)
                 .colorAverage()
                 .build()
 
-        DiglycolicAcidSolution = new Material.Builder(24020, 'diglycolic_acid_solution')
+        DiglycolicAcidSolution = new Material.Builder(24020, SuSyUtility.susyId('diglycolic_acid_solution'))
                 .fluid()
                 .components(DiglycolicAcid, 1, AmmoniaSolution, 1, Ethanol, 1)
                 .colorAverage()
                 .build()
 
-        DiTwoEthylhexylPhosphoricAcidSolution = new Material.Builder(24021, 'di_two_ethylhexyl_phosphoric_acid_solution')
+        DiTwoEthylhexylPhosphoricAcidSolution = new Material.Builder(24021, SuSyUtility.susyId('di_two_ethylhexyl_phosphoric_acid_solution'))
                 .fluid()
                 .components(DiTwoEthylhexylPhosphoricAcid, 1, Hexane, 1)
                 .colorAverage()
                 .build()
 
-        DilutedChloroaceticAnhydride = new Material.Builder(24022, "diluted_chloroacetic_anhydride")
+        DilutedChloroaceticAnhydride = new Material.Builder(24022, SuSyUtility.susyId('diluted_chloroacetic_anhydride'))
                 .fluid()
                 .components(ChloroaceticAnhydride, 1, Pyridine, 1, Water, 1)
                 .colorAverage()
                 .build()
 
-        ZirconiumTetrachlorideTetrahydrofuranComplex = new Material.Builder(24023, "zirconium_tetrachloride_tetrahydrofuran_complex")
+        ZirconiumTetrachlorideTetrahydrofuranComplex = new Material.Builder(24023, SuSyUtility.susyId('zirconium_tetrachloride_tetrahydrofuran_complex'))
                 .dust()
                 .components(ZirconiumTetrachloride, 1, Tetrahydrofuran, 2)
                 .colorAverage()
                 .build();
 
-        DilutedTwoEthylTwoHexenal = new Material.Builder(24024, "diluted_two_ethyl_two_hexenal")
+        DilutedTwoEthylTwoHexenal = new Material.Builder(24024, SuSyUtility.susyId('diluted_two_ethyl_two_hexenal'))
                 .fluid()
                 .components(TwoEthylTwoHexenal, 1, DilutedSodiumHydroxideSolution, 1)
                 .colorAverage()
                 .build()
 
-        PotassiumButylXanthateSolution = new Material.Builder(24025, "potassium_butyl_xanthate_solution")
+        PotassiumButylXanthateSolution = new Material.Builder(24025, SuSyUtility.susyId('potassium_butyl_xanthate_solution'))
                 .fluid()
                 .components(PotassiumButylXanthate, 1, Water, 1)
                 .colorAverage()
                 .build();
 
-        DilutedMethylIsobutylKetone = new Material.Builder(24026, 'diluted_methyl_isobutyl_ketone')
+        DilutedMethylIsobutylKetone = new Material.Builder(24026, SuSyUtility.susyId('diluted_methyl_isobutyl_ketone'))
                 .fluid()
                 .components(MethylIsobutylKetone, 1, Water, 1)
                 .colorAverage()
                 .build()
 
-        ChlorinatedBeryl = new Material.Builder(24027, "chlorinated_beryl")
+        ChlorinatedBeryl = new Material.Builder(24027, SuSyUtility.susyId('chlorinated_beryl'))
                 .fluid(FluidTypes.GAS)
                 .fluidTemp(1100)
                 .components(BerylliumChloride, 3, AluminiumChloride, 2, SiliconTetrachloride, 6, CarbonMonoxide, 18)
                 .colorAverage()
                 .build();
 
-        HydratedMagnesiumChlorideGlycolate = new Material.Builder(24028, "hydrated_magnesium_chloride_glycolate")
+        HydratedMagnesiumChlorideGlycolate = new Material.Builder(24028, SuSyUtility.susyId('hydrated_magnesium_chloride_glycolate'))
                 .fluid()
                 .components(MagnesiumChloride, 1, Water, 2, EthyleneGlycol, 3)
                 .colorAverage()
                 .build();
 
-        MagnesiumChlorideGlycolate = new Material.Builder(24029, "magnesium_chloride_glycolate")
+        MagnesiumChlorideGlycolate = new Material.Builder(24029, SuSyUtility.susyId('magnesium_chloride_glycolate'))
                 .fluid()
                 .components(MagnesiumChloride, 1, EthyleneGlycol, 3)
                 .colorAverage()
                 .build();
 
-        DilutedDiisopropylamine = new Material.Builder(24030, 'diluted_diisopropylamine')
+        DilutedDiisopropylamine = new Material.Builder(24030, SuSyUtility.susyId('diluted_diisopropylamine'))
                 .fluid()
                 .components(Diisopropylamine, 1, Water, 2)
                 .colorAverage()
                 .build()
 
-        PerfluorooctanoicAcidMixture = new Material.Builder(24031, 'perfluorooctanoic_acid_mixture')
+        PerfluorooctanoicAcidMixture = new Material.Builder(24031, SuSyUtility.susyId('perfluorooctanoic_acid_mixture'))
                 .fluid()
                 .components(PerfluorooctanoicAcid, 1, HydrofluoricAcid, 1)
                 .colorAverage()
                 .build()
 
-        FluorinatedSurfactantMixture = new Material.Builder(24032, "fluorinated_surfactant_mixture")
+        FluorinatedSurfactantMixture = new Material.Builder(24032, SuSyUtility.susyId('fluorinated_surfactant_mixture'))
                 .fluid()
                 .components(PerfluorooctanoicAcid, 1, Water, 1)
                 .colorAverage()
                 .build();
 
-        SodiumEthylXanthateSolution = new Material.Builder(24033, "sodium_ethyl_xanthate_solution")
+        SodiumEthylXanthateSolution = new Material.Builder(24033, SuSyUtility.susyId('sodium_ethyl_xanthate_solution'))
                 .fluid()
                 .components(SodiumEthylXanthate, 1, Water, 1)
                 .colorAverage()
                 .build();
 
-        PotassiumAmylXanthateSolution = new Material.Builder(24034, "potassium_amyl_xanthate_solution")
+        PotassiumAmylXanthateSolution = new Material.Builder(24034, SuSyUtility.susyId('potassium_amyl_xanthate_solution'))
                 .fluid()
                 .components(PotassiumAmylXanthate, 1, Water, 1)
                 .colorAverage()
                 .build();
 
-        SodiumIsobutylXanthateSolution = new Material.Builder(24035, "sodium_isobutyl_xanthate_solution")
+        SodiumIsobutylXanthateSolution = new Material.Builder(24035, SuSyUtility.susyId('sodium_isobutyl_xanthate_solution'))
                 .fluid()
                 .components(SodiumIsobutylXanthate, 1, Water, 1)
                 .colorAverage()
                 .build();
 
-        PotassiumIsopropylXanthateSolution = new Material.Builder(24036, "potassium_isopropyl_xanthate_solution")
+        PotassiumIsopropylXanthateSolution = new Material.Builder(24036, SuSyUtility.susyId('potassium_isopropyl_xanthate_solution'))
                 .fluid()
                 .components(PotassiumIsopropylXanthate, 1, Water, 1)
                 .colorAverage()
                 .build();
 
-        PotassiumEthylXanthateSolution = new Material.Builder(24037, "potassium_ethyl_xanthate_solution")
+        PotassiumEthylXanthateSolution = new Material.Builder(24037, SuSyUtility.susyId('potassium_ethyl_xanthate_solution'))
                 .fluid()
                 .components(PotassiumEthylXanthate, 1, Water, 1)
                 .colorAverage()
                 .build();
 
-        AcidicTributylPhosphate = new Material.Builder(24038, "acidic_tributyl_phosphate")
+        AcidicTributylPhosphate = new Material.Builder(24038, SuSyUtility.susyId('acidic_tributyl_phosphate'))
                 .fluid()
                 .components(TributylPhosphate, 1, HydrogenChloride, 3)
                 .colorAverage()
                 .build();
 
-        PhosgeneSolution = new Material.Builder(24039, "phosgene_solution")
+        PhosgeneSolution = new Material.Builder(24039, SuSyUtility.susyId('phosgene_solution'))
                 .fluid()
                 .components(Phosgene, 1, Dichloromethane, 1)
                 .colorAverage()
                 .build();
 
-        TriethylamineSolution = new Material.Builder(24040, "triethylamine_solution")
+        TriethylamineSolution = new Material.Builder(24040, SuSyUtility.susyId('triethylamine_solution'))
                 .fluid()
                 .components(Triethylamine, 1, Dichloromethane, 4)
                 .colorAverage()
                 .build();
 
-        KaminskyCatalyst = new Material.Builder(24041, "kaminsky_catalyst")
+        KaminskyCatalyst = new Material.Builder(24041, SuSyUtility.susyId('kaminsky_catalyst'))
                 .dust()
                 .components(ZirconoceneDichloride, 1, Methylaluminoxane, 1)
                 .colorAverage()
                 .build();
 
-        TNPSolution = new Material.Builder(24042, 'tnp_solution')
+        TNPSolution = new Material.Builder(24042, SuSyUtility.susyId('tnp_solution'))
                 .fluid()
                 .components(PicricAcid, 1, DilutedSulfuricAcid, 1)
                 .colorAverage()
                 .build();
 
-        IsophthaloylDichlorideSolution = new Material.Builder(24043, 'isophthaloyl_dichloride_solution')
+        IsophthaloylDichlorideSolution = new Material.Builder(24043, SuSyUtility.susyId('isophthaloyl_dichloride_solution'))
                 .fluid()
                 .components(AceticAcid, 1, Water, 1, IsophthaloylDichloride, 1)
                 .colorAverage()
                 .build();
 
-        IsophthalicAcidSolution = new Material.Builder(24044, 'isophthalic_acid_solution')
+        IsophthalicAcidSolution = new Material.Builder(24044, SuSyUtility.susyId('isophthalic_acid_solution'))
                 .fluid()
                 .components(AceticAcid, 1, Water, 1, IsophthalicAcid, 1)
                 .colorAverage()
                 .build()
 
-        DichloroethaneIsophthalicAcidSolution = new Material.Builder(24045, 'dichloroethane_isophthalic_acid_solution')
+        DichloroethaneIsophthalicAcidSolution = new Material.Builder(24045, SuSyUtility.susyId('dichloroethane_isophthalic_acid_solution'))
                 .fluid()
                 .components(Dichloroethane, 1, IsophthalicAcid, 1)
                 .colorAverage()
                 .build()
 
-        TetrahydrofuranSolution = new Material.Builder(24046, "tetrahydrofuran_solution")
+        TetrahydrofuranSolution = new Material.Builder(24046, SuSyUtility.susyId('tetrahydrofuran_solution'))
                 .fluid()
                 .components(Tetrahydrofuran, 1, SulfuricAcid, 1, Water, 1)
                 .colorAverage()
                 .build()
 
-        AcidicTriethylPhosphate = new Material.Builder(24047, "acidic_triethyl_phosphate")
+        AcidicTriethylPhosphate = new Material.Builder(24047, SuSyUtility.susyId('acidic_triethyl_phosphate'))
       		.fluid()
                 .components(TriethylPhosphate, 1, HydrogenChloride, 3)
       		.color(0x4639ee)
       		.build();
 
-        NickelIIBisacetylacetonateSolution = new Material.Builder(24048, "nickel_ii_bisacetylacetonate_solution")
+        NickelIIBisacetylacetonateSolution = new Material.Builder(24048, SuSyUtility.susyId('nickel_ii_bisacetylacetonate_solution'))
       		.fluid()
       		.components(NickelIIBisacetylacetonate, 1, SodiumNitrate, 2, Water, 2)
       		.color(0x3e5051)
       		.build();
 
-        ShellHigherOlefinCatalystSolution = new Material.Builder(24049, "shell_higher_olefin_catalyst_solution")
+        ShellHigherOlefinCatalystSolution = new Material.Builder(24049, SuSyUtility.susyId('shell_higher_olefin_catalyst_solution'))
                 .fluid()
                 .components(Nickel, 1, DiphenylphosphinoaceticAcid, 1, Cyclooctadiene, 2, EthyleneGlycol, 1)
                 .color(0x9c1012)
                 .build();
 
-        CrudeNitrobenzene = new Material.Builder(24050, "crude_nitrobenzene")
+        CrudeNitrobenzene = new Material.Builder(24050, SuSyUtility.susyId('crude_nitrobenzene'))
                 .fluid()
                 .components(Nitrobenzene, 2, Benzene, 1)
                 .colorAverage()
                 .build();
 
-        DichlorobistriphenylphosphinenickelII = new Material.Builder(24051, "dichlorobistriphenylphosphinenickel_ii")
+        DichlorobistriphenylphosphinenickelII = new Material.Builder(24051, SuSyUtility.susyId('dichlorobistriphenylphosphinenickel_ii'))
                 .dust()
                 .components(Nickel, 1, Chlorine, 2, TriphenylPhosphine, 2)
                 .colorAverage()
                 .build();
 
-        DichlorobistriphenylphosphinenickelII.setFormula("NiCl2(PPh3)2", true)
+        DichlorobistriphenylphosphinenickelII.setFormula('NiCl2(PPh3)2', true)
 
-        DicarbonylbistriphenylphosphinenickelZero = new Material.Builder(24052, "dicarbonylbistriphenylphosphinenickel_zero")
+        DicarbonylbistriphenylphosphinenickelZero = new Material.Builder(24052, SuSyUtility.susyId('dicarbonylbistriphenylphosphinenickel_zero'))
                 .dust()
                 .components(Nickel, 1, Carbon, 2, Oxygen, 2, TriphenylPhosphine, 2)
                 .colorAverage()
                 .build();
 
-        DicarbonylbistriphenylphosphinenickelZero.setFormula("Ni(CO)2(PPh)2", true)
+        DicarbonylbistriphenylphosphinenickelZero.setFormula('Ni(CO)2(PPh)2', true)
 
-        SodiumPhenoxideSolution = new Material.Builder(24053, 'sodium_phenoxide_solution')
+        SodiumPhenoxideSolution = new Material.Builder(24053, SuSyUtility.susyId('sodium_phenoxide_solution'))
                 .fluid()
                 .components(Water, 1, SodiumPhenoxide, 1)
                 .colorAverage()
                 .build();
 
-        WetEpoxy = new Material.Builder(24054, 'wet_epoxy')
+        WetEpoxy = new Material.Builder(24054, SuSyUtility.susyId('wet_epoxy'))
                 .dust()
                 .components(Epoxy, 1)
                 .color(0xa16f0d)
                 .build();
 
-        TetrabromobisphenolASolution = new Material.Builder(24055, 'tetrabromobisphenol_a_solution')
+        TetrabromobisphenolASolution = new Material.Builder(24055, SuSyUtility.susyId('tetrabromobisphenol_a_solution'))
                 .fluid()
                 .components(TetrabromobisphenolA, 1, Dichloroethane, 6)
                 .colorAverage()
                 .build();
 
-        EpoxyCuringMixture = new Material.Builder(24056, 'epoxy_curing_mixture')
+        EpoxyCuringMixture = new Material.Builder(24056, SuSyUtility.susyId('epoxy_curing_mixture'))
                 .dust()
                 .components(Dicyandiamide, 1, TwoMethylimidazole, 1, PhthalicAnhydride, 1)
                 .colorAverage()
                 .build();
 
-        WetFlameRetardantEpoxy = new Material.Builder(24057, 'wet_flame_retardant_epoxy')
+        WetFlameRetardantEpoxy = new Material.Builder(24057, SuSyUtility.susyId('wet_flame_retardant_epoxy'))
                 .dust()
                 .components(FlameRetardantEpoxy, 1)
                 .color(0xa1530b)
                 .build();
 
-        PropyleneOxideSolution = new Material.Builder(24058, 'propylene_oxide_solution')
+        PropyleneOxideSolution = new Material.Builder(24058, SuSyUtility.susyId('propylene_oxide_solution'))
                 .fluid()
                 .components(CalciumChloride, 1, PropyleneOxide, 2, Water, 2)
                 .colorAverage()
                 .build();
 
-        OrthoParaXyleneMixture = new Material.Builder(24059, "ortho_para_xylene_mixture")
+        OrthoParaXyleneMixture = new Material.Builder(24059, SuSyUtility.susyId('ortho_para_xylene_mixture'))
                 .fluid()
                 .components(OrthoXylene, 60, ParaXylene, 40)
                 .colorAverage()

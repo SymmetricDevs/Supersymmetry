@@ -1042,9 +1042,7 @@ mods.gregtech.centrifuge.recipeBuilder()
 		.EUt(6)
 		.buildAndRegister();
 
-// Add more semi fluid fuel options
-mods.gregtech.semi_fluid_generator.removeByInput(-32, null, [fluid('sulfuric_heavy_fuel') * 16])
-mods.gregtech.semi_fluid_generator.removeByInput(-32, null, [fluid('heavy_fuel') * 8])
+/*// Add more semi fluid fuel options
 
 mods.gregtech.semi_fluid_generator.recipeBuilder()
 		.fluidInputs(fluid('sulfuric_diesel') * 16)
@@ -1104,7 +1102,7 @@ mods.gregtech.semi_fluid_generator.recipeBuilder()
 		.fluidInputs(fluid('gtfo_stearin') * 8)
 		.duration(15)
 		.EUt(-32)
-		.buildAndRegister();
+		.buildAndRegister();*/
 
 // Light Concrete * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid('concrete') * 144])
