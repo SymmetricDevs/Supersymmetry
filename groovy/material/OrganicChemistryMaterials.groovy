@@ -230,10 +230,10 @@ public class OrganicChemistryMaterials {
                 .color(0x917d61)
                 .build();
 
-        Cyclohexane = new Material.Builder(15036, SuSyUtility.susyId('cyclohexane'))
-                .fluid()
-                .components(Carbon, 6, Hydrogen, 12)
-                .color(0x66553c)
+        TriarylsulfoniumHexafluoroantimonate = new Material.Builder(15036, SuSyUtility.susyId('triarylsulfonium_hexafluoroantimonate'))
+                .dust()
+                .components(Carbon, 24, Hydrogen, 19, Fluorine, 6, Sulfur, 2, Antimony, 1)
+                .color(0x31a374)
                 .build();
 
         NMethylIIPyrrolidone = new Material.Builder(15037, SuSyUtility.susyId('n_methyl_ii_pyrrolidone'))
@@ -1762,24 +1762,6 @@ public class OrganicChemistryMaterials {
                 .fluid()
                 .components(Carbon, 1, Hydrogen, 4, Oxygen, 3, Sulfur, 1)
                 .color(0xff6e6e)
-                .build();
-
-        TriarylsulfoniumHexafluoroantimonate = new Material.Builder(15283, SuSyUtility.susyId('triarylsulfonium_hexafluoroantimonate'))
-                .dust()
-                .components(Carbon, 24, Hydrogen, 19, Fluorine, 6, Sulfur, 2, Antimony, 1)
-                .color(0x31a374)
-                .build();
-
-        Biphenyl = new Material.Builder(15284, SuSyUtility.susyId('biphenyl'))
-                .dust()
-                .components(Carbon, 12, Hydrogen, 10)
-                .colorAverage()
-                .build();
-
-        PolychlorinatedBiphenyl = new Material.Builder(15285, SuSyUtility.susyId('polychlorinated_biphenyl'))
-                .fluid()
-                .components(Carbon, 12, Hydrogen, 5, Chlorine, 5)
-                .colorAverage()
                 .build();
     }
 }

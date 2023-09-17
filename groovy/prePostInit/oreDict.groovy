@@ -83,7 +83,7 @@ ore('dyeGreen').add(metaitem('dustMalachite'))
 ore('dyeBlue').add(metaitem('dustCobaltAluminate'))
 ore('dyeWhite').add(metaitem('dustLeadNitrate'))
 ore('dyeBlack').add(metaitem('dustCarbon'))
-ore('dyeGreen').add(metaitem('cupric_hydrogen_arsenite_dust'))
+ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust'))
 
 //Ore dict changes and unification
 //DISABLED FOR NOW DUE TO SERVER CRASHES
