@@ -1779,5 +1779,13 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 12, Hydrogen, 5, Chlorine, 5)
                 .colorAverage()
                 .build();
+
+        TosylicAcidSolution = new Material.Builder(15286, "tosylic_acid_solution")
+                .fluid()
+                .components(Carbon, 7, Hydrogen, 8, Oxygen, 3, Sulfur, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        TosylicAcidSolution.setFormula("(TsOH)(H2O)", true)
     }
 }

@@ -381,9 +381,9 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        HydrogenSilsesquioxaneSolution = new Material.Builder(24060, "hydrogen_silsesquioxane_solution")
+        HydrogenSilsesquioxanePhotoresist = new Material.Builder(24060, "hydrogen_silsesquioxane_photoresist")
                 .fluid()
-                .components(HydrogenSilsesquioxane, 1, MethylIsobutylKetone, 1)
+                .components(HydrogenSilsesquioxane, 1, MethylIsobutylKetone, 99)
                 .colorAverage()
                 .build();
     }

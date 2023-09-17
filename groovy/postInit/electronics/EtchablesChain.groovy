@@ -148,7 +148,9 @@ class NDopant {
 //FEEL FREE TO ADD MORE IF YOU FIND THEM
 
 new Photoresist("novolacs", 50, 300)
+new Photoresist("hydrogen_silsesquioxane_photoresist", 25, 200)
 new Photoresist("pmma", 16, 150)
+new Photoresist("su_eight", 16, 50)
 
 new Etchant("plasma.chlorine", "aluminium", 10, 80)
 new Etchant("plasma.carbon_tetrafluoride", "aluminium", 10, 60)
