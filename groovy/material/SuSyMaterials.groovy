@@ -1454,7 +1454,6 @@ class SuSyMaterials {
         public static Material WetFlameRetardantEpoxy;
         public static Material PropyleneOxideSolution;        
         public static Material DilutedZincChlorideSolution;
-        public static Material PropyleneOxideSolution;
         public static Material HydrogenSilsesquioxanePhotoresist;
 
         // Thermodynamics/Greenhouse Materials
