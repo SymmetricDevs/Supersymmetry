@@ -55,7 +55,6 @@ ROASTER.recipeBuilder()
 //UNIVERSAL (MV)
 //REMOVE APATITE RECIPES
 mods.gregtech.mixer.removeByInput(8, [item('minecraft:clay_ball'), metaitem('dustStone'), metaitem('dustApatite') * 2], null)
-mods.gregtech.batch_reactor.removeByInput(30, [metaitem('dustApatite') * 21], [fluid('sulfuric_acid') * 5000])
 
 def apatites = [
         metaitem('dustChlorapatite'),

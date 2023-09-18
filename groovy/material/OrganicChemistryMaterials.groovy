@@ -1770,19 +1770,7 @@ public class OrganicChemistryMaterials {
                 .color(0x31a374)
                 .build();
 
-        Biphenyl = new Material.Builder(15284, SuSyUtility.susyId("biphenyl"))
-                .dust()
-                .components(Carbon, 12, Hydrogen, 10)
-                .colorAverage()
-                .build();
-
-        PolychlorinatedBiphenyl = new Material.Builder(15285, SuSyUtility.susyId("polychlorinated_biphenyl"))
-                .fluid()
-                .components(Carbon, 12, Hydrogen, 5, Chlorine, 5)
-                .colorAverage()
-                .build();
-
-        TosylicAcidSolution = new Material.Builder(15286, SuSyUtility.susyId("tosylic_acid_solution"))
+        TosylicAcidSolution = new Material.Builder(15284, SuSyUtility.susyId("tosylic_acid_solution"))
                 .fluid()
                 .components(Carbon, 7, Hydrogen, 8, Oxygen, 3, Sulfur, 1, Water, 1)
                 .colorAverage()
