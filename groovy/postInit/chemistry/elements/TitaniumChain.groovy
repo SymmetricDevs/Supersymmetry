@@ -164,6 +164,13 @@ VACUUM_FREEZER.recipeBuilder()
         .buildAndRegister()
 
 VACUUM_FREEZER.recipeBuilder()
+        .fluidInputs(fluid('gaseous_aluminium_chloride') * 144)
+        .outputs(metaitem('dustAluminiumChloride'))
+        .duration(200)
+        .EUt(Globals.voltAmps[1] * 2)
+        .buildAndRegister()
+
+VACUUM_FREEZER.recipeBuilder()
         .fluidInputs(fluid('gaseous_titanium_tetrachloride') * 1000)
         .fluidOutputs(fluid('impure_titanium_tetrachloride') * 1000)
         .duration(200)

@@ -997,6 +997,7 @@ class SuSyMaterials {
         public static Material ActivatedRaneyCobalt;
         public static Material LithiumOxide;
         public static Material ManganeseIISulfate;
+        public static Material ZincOxide;
         public static Material NickelHydrotalcite;
         public static Material CalciumCyanamide;
         public static Material AntimonyPentafluoride;
@@ -1454,6 +1455,8 @@ class SuSyMaterials {
         public static Material TetrabromobisphenolASolution;
         public static Material EpoxyCuringMixture;
         public static Material WetFlameRetardantEpoxy;
+        public static Material PropyleneOxideSolution;        
+        public static Material DilutedZincChlorideSolution;
         public static Material PropyleneOxideSolution;
         public static Material HydrogenSilsesquioxanePhotoresist;
 
