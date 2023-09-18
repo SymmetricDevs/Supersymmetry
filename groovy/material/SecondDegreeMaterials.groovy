@@ -596,5 +596,11 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
                 .setFormula('(MnSO4)(H2O)', true)
+
+        TrichlorosilaneSolution = new Material.Builder(13095, "trichlorosilane_solution")
+                .fluid()
+                .components(Trichlorosilane, 1, Toluene, 6)
+                .colorAverage()
+                .build()
     }
 }
