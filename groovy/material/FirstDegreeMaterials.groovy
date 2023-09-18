@@ -24,7 +24,7 @@ public class FirstDegreeMaterials{
             new Material.Builder(id, SuSyUtility.susyId('high_purity_' + material.toString()))
                     .dust().fluid()
                     .iconSet(SHINY)
-                    //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+            //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
                     .color(color)
                     .components(material, 1)
                     .build();
@@ -32,7 +32,7 @@ public class FirstDegreeMaterials{
             new Material.Builder(id, SuSyUtility.susyId('high_purity_' + material.toString()))
                     .dust().ingot()
                     .iconSet(SHINY)
-                    //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+            //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
                     .color(color)
                     .components(material, 1)
                     .build();
@@ -40,7 +40,7 @@ public class FirstDegreeMaterials{
             new Material.Builder(id, SuSyUtility.susyId('high_purity_' + material.toString()))
                     .dust().ingot().fluid()
                     .iconSet(SHINY)
-                    //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+            //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
                     .color(color)
                     .components(material, 1)
                     .build();
@@ -1020,7 +1020,7 @@ public class FirstDegreeMaterials{
                 .components(Hydrogen, 1, Bromine, 1, Water, 1)
                 .colorAverage()
                 .build()
-        
+
         HydrobromicAcid.setFormula("(HBr)(H2O)", true)
 
         AluminiumChloride = new Material.Builder(8242, SuSyUtility.susyId('aluminium_chloride'))
@@ -1052,7 +1052,7 @@ public class FirstDegreeMaterials{
 
         SilverCyanideSolution = new Material.Builder(8248, SuSyUtility.susyId('silver_cyanide_solution'))
                 .fluid()
-                .components(Silver, 2, Carbon, 4, Nitrogen, 4, Sodium, 4, Chlorine, 2)
+                .components(Silver, 2, Carbon, 4, Nitrogen, 4, Sodium, 4, Chlorine, 2, Water, 4)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
@@ -1068,7 +1068,7 @@ public class FirstDegreeMaterials{
 
         PyrargyriteCyanideLeachSolution = new Material.Builder(8250, SuSyUtility.susyId('pyrargyrite_cyanide_leach_solution'))
                 .fluid()
-                .components(Sodium, 6, Silver, 3, Carbon, 6, Nitrogen, 6, Antimony, 1, Chlorine, 6, Water, 12)
+                .components(Sodium, 6, Silver, 3, Carbon, 6, Nitrogen, 6, Chlorine, 3, Water, 12)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
@@ -1106,7 +1106,7 @@ public class FirstDegreeMaterials{
 
         StephaniteCyanideLeachSolution = new Material.Builder(8255, SuSyUtility.susyId('stephanite_cyanide_leach_solution'))
                 .fluid()
-                .components(Sodium, 10, Silver, 5, Carbon, 10, Nitrogen, 10, Antimony, 1, Chlorine, 8, Water, 20)
+                .components(Sodium, 10, Silver, 5, Carbon, 10, Nitrogen, 10, Chlorine, 5, Water, 20)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
@@ -2756,11 +2756,11 @@ public class FirstDegreeMaterials{
 
         CementedHexachloroplatinicAcidSolution = new Material.Builder(8502, SuSyUtility.susyId('cemented_hexachloroplatinic_acid_solution'))
                 .fluid()
-                .components(Iron, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
+                .components(Zinc, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
                 .color(0xb87627)
                 .build();
 
-        HexachloroplatinicAcidSolution.setFormula("(?)(H2PtCl6)3(ZnCl2)(H2O)8", true)
+        CementedHexachloroplatinicAcidSolution.setFormula("(?)(H2PtCl6)3(ZnCl2)(H2O)8", true)
         
         AmmoniumHexachloroplatinate = new Material.Builder(8503, SuSyUtility.susyId('ammonium_hexachloroplatinate'))
                 .dust()
@@ -3249,6 +3249,18 @@ public class FirstDegreeMaterials{
                 .fluid(FluidTypes.GAS)
                 .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
                 .color(0x90bbe0)
-                .build();//
+                .build();
+      
+        ZincOxide = new Material.Builder(8575, SuSyUtility.susyId("zinc_oxide"))
+                .dust()
+                .components(Zinc, 1, Oxygen, 1)
+                .color(0xFFFFF5)
+                .build();
+
+        HydrogenSilsesquioxane = new Material.Builder(8576, SuSyUtility.susyId('hydrogen_silsesquioxane'))
+                .dust()
+                .color(0xC7C0CB)
+                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
+                .build()
     }
 }

@@ -34,18 +34,6 @@ FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 // Zincite Dust * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSphalerite')], [fluid('oxygen') * 3000])
 
-def COAL_SOURCES = [
-        "dustCarbon",
-        "gemCoal",
-        "dustCoal",
-        "gemCharcoal",
-        "dustCoke",
-        "gemCoke",
-        "dustCharcoal",
-        "gemAnthracite",
-        "dustAnthracite"
-]
-
 MIXER.recipeBuilder()
         .inputs(ore('dustImpureSphalerite') * 4)
         .fluidInputs(fluid('water') * 2000)
@@ -153,14 +141,26 @@ FLUIDIZEDBR.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-for (coal_source in COAL_SOURCES) {
+for (combustible in Globals.combustibles) {
     ROASTER.recipeBuilder()
             .inputs(ore('dustZincite') * 2)
-            .inputs(ore(coal_source) * 1)
+            .inputs(ore(combustible.name) * combustible.amount_required)
+            .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_zinc') * 216)
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .EUt(30)
-            .duration(160)
+            .duration(160 * combustible.duration)
+            .buildAndRegister()
+}
+
+for (highPurityCombustible in Globals.highPurityCombustibles) {
+        ROASTER.recipeBuilder()
+            .inputs(ore('dustZincOxide') * 2)
+            .inputs(ore(highPurityCombustible.name) * highPurityCombustible.amount_required)
+            .outputs(metaitem('dustZinc'))
+            .fluidOutputs(fluid('carbon_monoxide') * 1000)
+            .EUt(30)
+            .duration(160 * highPurityCombustible.duration)
             .buildAndRegister()
 }
 

@@ -1799,5 +1799,15 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x4a320a)
                 .build();
+
+        AcidicHydrogenSilsesquioxaneSolution = new Material.Builder(4343, "acidic_hydrogen_silsesquioxane_solution")
+                .fluid()
+                .color(0xb086aa)
+                .build();
+
+        HydrogenSilsesquioxaneSolution = new Material.Builder(4344, "hydrogen_silsesquioxane_solution")
+                .fluid()
+                .color(0xa186b0)
+                .build();
     }
 }

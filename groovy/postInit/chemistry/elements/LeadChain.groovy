@@ -239,7 +239,7 @@ DISTILLERY.recipeBuilder()
 
 //SOFTENING (HARRIS PROCESS) (4% Sb, 2% As, 5% Sn)
 REACTION_FURNACE.recipeBuilder()
-        .fluidInputs(fluid('sodium_nitrate') * 144)
+        .fluidInputs(fluid('sodium_nitrate') * 720)
         .fluidInputs(fluid('decoppered_lead') * 1440)
         .fluidInputs(fluid('sodium_hydroxide') * 288)
         .outputs(metaitem('dustHarrisSlag'))

@@ -199,10 +199,10 @@ susy.material.lithium_niobate=Lithium Niobate
 susy.material.lead_zirconate_titanate=Lead Zirconate Titanate
 susy.material.polyvinylidene_fluoride=Polyvinylidene Fluoride
 
-
 susy.material.pmma=Polymethyl Methacrylate (PMMA)
 susy.material.zinc_chloride=Zinc Chloride
 susy.material.polypropylene=Polypropylene
+susy.material.hydrogen_silsesquioxane=Hydrogen Silsesquioxane (HSQ)
 
 susy.material.high_purity_lithium=High Purity Lithium
 susy.material.high_purity_beryllium=High Purity Beryllium
@@ -932,6 +932,7 @@ susy.material.liquid_waste_nitrogen=Liquid Waste Nitrogen
 susy.material.alkali_fused_wulfenite=Alkali Fused Wulfenite
 susy.material.lead_ii_hydroxide=Lead II Hydroxide
 susy.material.sodium_molybdate_solution=Sodium Molybdate Solution
+susy.material.zinc_oxide=Zinc Oxide
 
 # Thermodynamics
 
@@ -1725,6 +1726,12 @@ susy.material.ortho_para_xylene_mixture=o/p-Xylene Mixture
 susy.material.partially_liquefied_argon=Partially Liquefied Argon
 susy.material.deoxygenation_catalyst=Deoxygenation Catalyst
 susy.material.deoxygenation_catalyst_precursor_solution=Deoxygenation Catalyst Precursor Solution
+susy.material.diluted_zinc_chloride_solution=Diluted Zinc Chloride Solution
+susy.material.acidic_hydrogen_silsesquioxane_solution=Acidic Hydrogen Silsesquioxane (HSQ) Solution
+susy.material.hydrogen_silsesquioxane_solution=Hydrogen Silsesquioxane (HSQ) Solution
+susy.material.trichlorosilane_solution=Trichlorosilane Solution
+susy.material.tosylic_acid_solution=Tosylic Acid Solution
+susy.material.hydrogen_silsesquioxane_photoresist=Hydrogen Silsesquioxane (HSQ) Photoresist
 
 # Isotopes
 

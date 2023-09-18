@@ -1681,7 +1681,7 @@ AntiknockMap.each { key, val ->
     MIXER.recipeBuilder()
             .inputs(ore('dustFerrocene'))
             .fluidInputs(fluid(key) * val)
-            .fluidOutputs(fluid('gasoline_antioxidants') * 2000)
+            .fluidOutputs(fluid('gasoline_antiknock') * 2000)
             .duration(200)
             .EUt(120)
             .buildAndRegister()
