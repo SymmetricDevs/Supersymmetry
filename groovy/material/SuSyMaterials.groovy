@@ -473,6 +473,8 @@ class SuSyMaterials {
         public static Material BisphenolANovolacEpoxy;
         public static Material SulfoniumPreparationMixture;
         public static Material SuEight;
+        public static Material AcidicHydrogenSilsesquioxaneSolution;
+        public static Material HydrogenSilsesquioxaneSolution;
 
         // Petrochem Materials
 
@@ -975,6 +977,7 @@ class SuSyMaterials {
         public static Material HafniumTetrachloride;
         public static Material AmmoniumThiocyanate;
         public static Material CalciumZirconate;
+        public static Material HydrogenSilsesquioxane;
         public static Material CementedHexachloroplatinicAcidSolution;
         public static Material Ferroplatinum;
         public static Material Diamminedichloropalladium;
@@ -1097,6 +1100,7 @@ class SuSyMaterials {
         public static Material DilutedSodiumSulfiteSolution;
         public static Material SodiumHexafluoroantimonateSolution;
         public static Material EGlass;
+        public static Material TrichlorosilaneSolution;
 
         // Organic Chemistry Materials
 
@@ -1387,6 +1391,7 @@ class SuSyMaterials {
         public static Material DiphenylSulfoxide;
         public static Material MethanesulfonicAcid;
         public static Material TriarylsulfoniumHexafluoroantimonate;
+        public static Material TosylicAcidSolution;
 
         // Third Degree Materials
 
@@ -1450,6 +1455,7 @@ class SuSyMaterials {
         public static Material EpoxyCuringMixture;
         public static Material WetFlameRetardantEpoxy;
         public static Material PropyleneOxideSolution;
+        public static Material HydrogenSilsesquioxanePhotoresist;
 
         // Thermodynamics/Greenhouse Materials
 
