@@ -882,6 +882,22 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+// Bath Condenser
+
+crafting.addShaped("gregtech:bath_condenser", metaitem('bath_condenser.lv'), [
+	[metaitem('pipeSmallStainlessSteel'), metaitem('pipeSmallStainlessSteel'), metaitem('pipeSmallStainlessSteel')],
+	[metaitem('pipeSmallStainlessSteel'), metaitem('hull.hv'), metaitem('pipeSmallStainlessSteel')],
+	[metaitem('pipeSmallStainlessSteel'), metaitem('pipeSmallStainlessSteel'), metaitem('pipeSmallStainlessSteel')]
+])
+
+// Phase Separator
+
+crafting.addShaped("gregtech:phase_separator", metaitem('phase_separator.lv'), [
+	[metaitem('frameStainlessSteel'), metaitem('drum.stainless_steel'), metaitem('pipeSmallStainlessSteel')],
+	[metaitem('pipeSmallStainlessSteel'), metaitem('hull.hv'), metaitem('pipeSmallStainlessSteel')],
+	[null, null, null]
+])
+
 //Multiblocked Machines
 
 /*

@@ -508,7 +508,6 @@ CUTTER.recipeBuilder()
         .EUt(240)
         .buildAndRegister()
 
-/*
 SOLIDIFIER.recipeBuilder()
         .fluidInputs(fluid('beryllium_oxide') * 36)
         .notConsumable(metaitem('shape.mold.ball'))
@@ -516,6 +515,16 @@ SOLIDIFIER.recipeBuilder()
         .duration(200)
         .EUt(240)
         .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+        .inputs(metaitem('seed_crystal.beryllium_oxide'))
+        .circuitMeta(1)
+        .fluidInputs(fluid('beryllium_oxide') * 3168)
+        .outputs(metaitem('boule.beryllium_oxide'))
+        .duration(400)
+        .EUt(240)
+        .buildAndRegister()
+
 
 CUTTER.recipeBuilder()
         .inputs(metaitem('boule.beryllium_oxide'))
@@ -563,8 +572,6 @@ ASSEMBLER.recipeBuilder()
         .duration(100)
         .EUt(240)
         .buildAndRegister()
-
- */
 
 ASSEMBLER.recipeBuilder()
         .circuitMeta(1)

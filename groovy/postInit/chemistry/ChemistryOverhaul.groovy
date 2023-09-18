@@ -3134,7 +3134,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .fluidOutputs(fluid('phosphoric_acid') * 50)
     .fluidOutputs(fluid('phenol') * 50)
     .fluidOutputs(fluid('acetone') * 50)
-    .duration(200)
+    .duration(10)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 

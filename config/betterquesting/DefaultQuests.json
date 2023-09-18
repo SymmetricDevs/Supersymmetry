@@ -8673,10 +8673,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "syngas"
-              }
+              "FluidName:8": "syngas"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12275,10 +12272,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "diluted_oil_light"
-              }
+              "FluidName:8": "diluted_oil_light"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12292,10 +12286,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "diluted_oil"
-              }
+              "FluidName:8": "diluted_oil"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12309,10 +12300,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "diluted_oil_heavy"
-              }
+              "FluidName:8": "diluted_oil_heavy"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12434,10 +12422,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "desalted_oil_light"
-              }
+              "FluidName:8": "desalted_oil_light"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12451,10 +12436,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "desalted_oil"
-              }
+              "FluidName:8": "desalted_oil"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12468,10 +12450,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "desalted_oil_heavy"
-              }
+              "FluidName:8": "desalted_oil_heavy"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12985,10 +12964,7 @@
             },
             "1:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "sodium_hydroxide_solution"
-              }
+              "FluidName:8": "sodium_hydroxide_solution"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -13124,10 +13100,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "sodium_aluminate_solution"
-              }
+              "FluidName:8": "sodium_aluminate_solution"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -13323,7 +13296,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Crystallize §rthe Sodium Aluminate solution in a §6Crystallizer §rwith water to get§5§6 Aluminium Hydroxide§r.",
+          "desc:8": "§6Crystallize §rthe Sodium Aluminate solution in aa §6Crystallizer §rwith water to get§5§6 Aluminium Hydroxide§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14047,10 +14020,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "hydrogen_fluoride"
-              }
+              "FluidName:8": "hydrogen_fluoride"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -14587,10 +14557,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "potassium_hydroxide_solution"
-              }
+              "FluidName:8": "potassium_hydroxide_solution"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -24277,7 +24244,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Rutherfordium (Rf)\n§bAtomic Number§r: 104\n§aAtomic Mass§r: 267 amu\n§cMelting Point§r: 2400 K\n§5Boiling Point§r: 5800 K\n§6Properties§r: Rutherfordium is a radioactive metal that does not occur naturally. Relatively few atoms of it have ever been made. At present, it is only used in research.\n",
+          "desc:8": "No Description",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26651,10 +26618,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "grain_solution"
-              }
+              "FluidName:8": "grain_solution"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -26720,10 +26684,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "ethanol_water_azeotrope"
-              }
+              "FluidName:8": "ethanol_water_azeotrope"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -29471,17 +29432,11 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "weed_killer"
-              }
+              "FluidName:8": "weed_killer"
             },
             "1:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "pesticide"
-              }
+              "FluidName:8": "pesticide"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -30174,7 +30129,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Silver Oxide §rmust then be roasted to make §6Silver§r.",
+          "desc:8": "§6Silver Oxide §rmust then be roasted with Carbon to make §6Silver§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30247,7 +30202,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Acanthite §rand a tiny pile of §6Calcite §rcan be §croasted §rwith Oxygen to create §6Silver Oxide§r.",
+          "desc:8": "§6Acanthite §rcan be §croasted §rwith Oxygen to create §6Silver Oxide§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30633,10 +30588,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "novolacs"
-              }
+              "FluidName:8": "novolacs"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -30768,10 +30720,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "formaldehyde"
-              }
+              "FluidName:8": "formaldehyde"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -31069,10 +31018,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "ultrapure_water"
-              }
+              "FluidName:8": "ultrapure_water"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -31134,10 +31080,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "sodium_silicate_solution"
-              }
+              "FluidName:8": "sodium_silicate_solution"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -31277,10 +31220,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "demineralized_water"
-              }
+              "FluidName:8": "demineralized_water"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -33188,10 +33128,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "sodium_bisulfate_solution"
-              }
+              "FluidName:8": "sodium_bisulfate_solution"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -34091,10 +34028,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "carburized_stainless_steel"
-              }
+              "FluidName:8": "carburized_stainless_steel"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -35204,10 +35138,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "heated_wastewater"
-              }
+              "FluidName:8": "heated_wastewater"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -35274,10 +35205,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "flocculated_wastewater"
-              }
+              "FluidName:8": "flocculated_wastewater"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -40663,10 +40591,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "reformed_syngas"
-              }
+              "FluidName:8": "reformed_syngas"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -48159,10 +48084,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "ziegler_alfol_mixture"
-              }
+              "FluidName:8": "ziegler_alfol_mixture"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -48398,10 +48320,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "acetylene"
-              }
+              "FluidName:8": "acetylene"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -51680,10 +51599,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "liquid_hydrogen"
-              }
+              "FluidName:8": "liquid_hydrogen"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -53386,10 +53302,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "silane"
-              }
+              "FluidName:8": "silane"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -54582,7 +54495,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With Energy, Items, and a specified Recipe, RFTools Autocrafters can automatically craft stuff for you.\n\nGT Wires/Cables are compatible with RF machines, so don\u0027t worry about having to convert energy.\n\nThese can come in handy if you dont want to make a GT Packager to deal with tiny dusts or small dusts.",
+          "desc:8": "With Energy, Items, and a specified Recipe, RFTools Autocrafters can automatically craft stuff for you.\n\nGT Wirse/Cables are compatible with RF machines, so don\u0027t worry about having to convert energy.\n\nThese can come in handy if you dont want to make a GT Packager to deal with tiny dusts or small dusts.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55101,10 +55014,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "hydroxylamine"
-              }
+              "FluidName:8": "hydroxylamine"
             }
           },
           "taskID:8": "bq_standard:fluid"

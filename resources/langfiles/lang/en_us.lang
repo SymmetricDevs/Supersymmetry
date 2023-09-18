@@ -1760,6 +1760,9 @@ recipemap.ion_exchange_column.name=Ion Exchange
 recipemap.smoke_stack.name=Smoke Stack (Chimney)
 recipemap.gravity_separator.name=Gravity Separation
 recipemap.electrostatic_separator.name=Electrostatic Separation
+recipemap.single_column_cryogenic_distillation.name=Single Column Cryogenic Distillation
+recipemap.low_pressure_cryogenic_distillation.name=Low Pressure Cryogenic Distillation
+recipemap.high_pressure_cryogenic_distillation.name=High Pressure Cryogenic Distillation
 
 # QMD Particles
 
