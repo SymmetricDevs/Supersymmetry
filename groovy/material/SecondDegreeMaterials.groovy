@@ -602,5 +602,11 @@ public class SecondDegreeMaterials {
                 .components(ZincChloride, 1, Water, 2)
                 .colorAverage()
                 .build();
+
+        TrichlorosilaneSolution = new Material.Builder(13096, "trichlorosilane_solution")
+                .fluid()
+                .components(Trichlorosilane, 1, Toluene, 6)
+                .colorAverage()
+                .build()
     }
 }

@@ -149,7 +149,9 @@ class NDopant {
 //FEEL FREE TO ADD MORE IF YOU FIND THEM
 
 new Photoresist("novolacs", 50, 300)
+new Photoresist("hydrogen_silsesquioxane_photoresist", 25, 200)
 new Photoresist("pmma", 16, 150)
+new Photoresist("su_eight", 16, 50)
 
 new Etchant("plasma.chlorine", "aluminium", 10, 80)
 new Etchant("plasma.carbon_tetrafluoride", "aluminium", 10, 60)
@@ -278,7 +280,7 @@ def generateCuttingRecipes(input, product, productMultiplier, voltageTier, boole
                 .fluidInputs(fluid('ultrapure_water') * 100)
                 .inputs(metaitem(input))
                 .outputs(metaitem(product) * productMultiplier)
-                .duration(900)
+                .duration(450)
                 .cleanroom(CleanroomType.CLEANROOM)
                 .EUt(Globals.voltAmps[voltageTier])
                 .buildAndRegister()
@@ -295,7 +297,7 @@ def generateCuttingRecipes(input, product, productMultiplier, voltageTier, boole
                 .fluidInputs(fluid('ultrapure_water') * 100)
                 .inputs(metaitem(input))
                 .outputs(metaitem(product) * productMultiplier)
-                .duration(900)
+                .duration(450)
                 .EUt(Globals.voltAmps[voltageTier])
                 .buildAndRegister()
 
@@ -442,7 +444,7 @@ for (ndopant in NDopant.ndopants) {
                 .inputs(metaitem(pdopant.metaItemName))
                 .inputs(metaitem(ndopant.metaItemName))
                 .outputs(metaitem('wafer.doped.silicon') * 16 * batchSize)
-                .duration(400)
+                .duration(200)
                 .EUt(60)
                 .buildAndRegister()
 
@@ -452,7 +454,7 @@ for (ndopant in NDopant.ndopants) {
                 .inputs(metaitem(ndopant.metaItemName))
                 .outputs(metaitem('wafer.doped.polysilicon') * 16 * batchSize)
                 .cleanroom(CleanroomType.CLEANROOM)
-                .duration(400)
+                .duration(200)
                 .EUt(240)
                 .buildAndRegister()
     }
@@ -631,7 +633,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('wafer.alumina'))
         .outputs(metaitem('wafer.power_integrated_circuit'))
         .cleanroom(CleanroomType.CLEANROOM)
-        .duration(400)
+        .duration(200)
         .EUt(120)
         .buildAndRegister()
 

@@ -22,7 +22,7 @@ public class FirstDegreeMaterials{
             new Material.Builder(id, "high_purity_" + material.toString())
                     .dust().fluid()
                     .iconSet(SHINY)
-                    //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+            //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
                     .color(color)
                     .components(material, 1)
                     .build();
@@ -30,7 +30,7 @@ public class FirstDegreeMaterials{
             new Material.Builder(id, "high_purity_" + material.toString())
                     .dust().ingot()
                     .iconSet(SHINY)
-                    //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+            //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
                     .color(color)
                     .components(material, 1)
                     .build();
@@ -38,7 +38,7 @@ public class FirstDegreeMaterials{
             new Material.Builder(id, "high_purity_" + material.toString())
                     .dust().ingot().fluid()
                     .iconSet(SHINY)
-                    //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+            //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
                     .color(color)
                     .components(material, 1)
                     .build();
@@ -1018,7 +1018,7 @@ public class FirstDegreeMaterials{
                 .components(Hydrogen, 1, Bromine, 1, Water, 1)
                 .colorAverage()
                 .build()
-        
+
         HydrobromicAcid.setFormula("(HBr)(H2O)", true)
 
         AluminiumChloride = new Material.Builder(8242, "aluminium_chloride")
@@ -1856,7 +1856,7 @@ public class FirstDegreeMaterials{
                 .color(0xd40d5c)
                 .iconSet(SHINY)
                 .build();
-                
+
         BariumSulfide = new Material.Builder(8371, "barium_sulfide")
                 .dust()
                 .components(Barium, 1, Sulfur, 1)
@@ -2305,7 +2305,7 @@ public class FirstDegreeMaterials{
                 .components(Titanium, 4, Carbon, 32, Hydrogen, 80, Oxygen, 16)
                 .colorAverage()
                 .build();
-      
+
         DilutedPhosphoricAcid = new Material.Builder(8437, 'diluted_phosphoric_acid')
                 .fluid()
                 .components(PhosphoricAcid, 3, Water, 1)
@@ -2754,11 +2754,11 @@ public class FirstDegreeMaterials{
 
         CementedHexachloroplatinicAcidSolution = new Material.Builder(8502, "cemented_hexachloroplatinic_acid_solution")
                 .fluid()
-                .components(Iron, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
+                .components(Zinc, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
                 .color(0xb87627)
                 .build();
 
-        HexachloroplatinicAcidSolution.setFormula("(?)(H2PtCl6)3(ZnCl2)(H2O)8", true)
+        CementedHexachloroplatinicAcidSolution.setFormula("(?)(H2PtCl6)3(ZnCl2)(H2O)8", true)
         
         AmmoniumHexachloroplatinate = new Material.Builder(8503, "ammonium_hexachloroplatinate")
                 .dust()
@@ -2856,7 +2856,7 @@ public class FirstDegreeMaterials{
                 .components(Molybdenum, 1, Sulfur, 3)
                 .colorAverage()
                 .build();
-                
+
         AmmoniumIsopolytungstateSolution = new Material.Builder(8518, "ammonium_isopolytungstate_solution")
                 .fluid()
                 .components(Nitrogen, 5, Hydrogen, 21, Tungsten, 6, Oxygen, 21, Water, 5)
@@ -2864,7 +2864,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         AmmoniumIsopolytungstateSolution.setFormula("[(NH4)5(HW6O21)](H2O)5", true)
-                
+
         AmmoniumParatungstate = new Material.Builder(8519, "ammonium_paratungstate")
                 .dust()
                 .components(Nitrogen, 10, Hydrogen, 42, Tungsten, 12, Oxygen, 42, Water, 4)
@@ -2872,7 +2872,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         AmmoniumParatungstate.setFormula("(NH4)10(H2W12O42) * 4H2O", true)
-                
+
         ManganeseIIHydroxide = new Material.Builder(8520, "manganese_ii_hydroxide")
                 .dust()
                 .components(Manganese, 1, Oxygen, 2, Hydrogen, 2)
@@ -3254,5 +3254,11 @@ public class FirstDegreeMaterials{
                 .components(Zinc, 1, Oxygen, 1)
                 .color(0xFFFFF5)
                 .build();
+
+        HydrogenSilsesquioxane = new Material.Builder(8576, 'hydrogen_silsesquioxane')
+                .dust()
+                .color(0xC7C0CB)
+                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
+                .build()
     }
 }

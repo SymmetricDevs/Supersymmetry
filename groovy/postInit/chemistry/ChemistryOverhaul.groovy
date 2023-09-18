@@ -235,16 +235,6 @@ for (coal_source in COAL_SOURCES) {
             .buildAndRegister()
 }
 
-// Iron III chloride reduction
-
-ROASTER.recipeBuilder()
-.fluidInputs(fluid('hydrogen') * 3000)
-.inputs(ore('dustIronIiiChloride') * 4)
-.fluidOutputs(fluid('hydrogen_chloride') * 3000)
-.outputs(metaitem('dustIron') * 1)
-.duration(120)
-.EUt(120)
-.buildAndRegister()
 
 // Phosphorous Pentoxide roaster
 
@@ -3848,6 +3838,69 @@ DRYER.recipeBuilder()
         .fluidInputs(fluid('polymethyl_methacrylate_solution') * 2000)
         .outputs(metaitem('dustPmma') * 7)
         .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Tosylic Acid, Hydrogen Silsesquioxane
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('toluene') * 1000)
+        .fluidInputs(fluid('oleum') * 1000)
+        .fluidInputs(fluid('distilled_water') * 1000)
+        .fluidOutputs(fluid('tosylic_acid_solution') * 1000)
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('trichlorosilane') * 50)
+        .fluidInputs(fluid('toluene') * 300)
+        .fluidOutputs(fluid('trichlorosilane_solution') * 350)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .notConsumable(fluid('tosylic_acid_solution') * 3500)
+        .fluidInputs(fluid('trichlorosilane_solution') * 3500)
+        .fluidOutputs(fluid('acidic_hydrogen_silsesquioxane_solution') * 3000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('acidic_hydrogen_silsesquioxane_solution') * 3000)
+        .fluidInputs(fluid('distilled_water') * 100)
+        .fluidOutputs(fluid('hydrogen_silsesquioxane_solution') * 3050)
+        .fluidOutputs(fluid('acidic_wastewater') * 50)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+VACUUM_DT.recipeBuilder()
+        .fluidInputs(fluid('hydrogen_silsesquioxane_solution') * 3050)
+        .chancedOutput(metaitem('dustHydrogenSilsesquioxane'), 625, 0)
+        .fluidOutputs(fluid('water') * 50)
+        .fluidOutputs(fluid('toluene') * 3000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+/*
+Let us produce a 5% wt solution of hydrogen silsesquioxane (H8Si8O12) in MIBK.
+
+Assume 100g.
+5g HSQ / (424.744 g/mol) = 0.0117718 mol HSQ
+95g MIBK / (100.16 g/mol) = 0.94848 mol MIBK
+
+Thus, HSQ should be 1.24% molar in MIBK
+*/
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustTinyHydrogenSilsesquioxane'))
+        .fluidInputs(fluid('methyl_isobutyl_ketone') * 11000)
+        .fluidOutputs(fluid('hydrogen_silsesquioxane_photoresist') * 11000)
+        .duration(100)
         .EUt(30)
         .buildAndRegister()
 
