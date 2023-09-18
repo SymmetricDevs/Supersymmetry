@@ -934,6 +934,7 @@ material.liquid_waste_nitrogen=Liquid Waste Nitrogen
 material.alkali_fused_wulfenite=Alkali Fused Wulfenite
 material.lead_ii_hydroxide=Lead II Hydroxide
 material.sodium_molybdate_solution=Sodium Molybdate Solution
+material.zinc_oxide=Zinc Oxide
 
 # Thermodynamics
 
@@ -1725,6 +1726,7 @@ material.propylene_oxide_solution=Propylene Oxide Solution
 material.su_eight=SU-8 Photoresist
 material.hydrodealkylated_toluene_mixture=Hydrodealkylated Toluene Mixture
 material.ortho_para_xylene_mixture=o/p-Xylene Mixture
+material.diluted_zinc_chloride_solution=Diluted Zinc Chloride Solution
 material.acidic_hydrogen_silsesquioxane_solution=Acidic Hydrogen Silsesquioxane (HSQ) Solution
 material.hydrogen_silsesquioxane_solution=Hydrogen Silsesquioxane (HSQ) Solution
 material.trichlorosilane_solution=Trichlorosilane Solution
