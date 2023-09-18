@@ -13296,7 +13296,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Crystallize §rthe Sodium Aluminate solution in aa §6Crystallizer §rwith water to get§5§6 Aluminium Hydroxide§r.",
+          "desc:8": "§6Crystallize §rthe Sodium Aluminate solution in a §6Crystallizer §rwith water to get§5§6 Aluminium Hydroxide§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24244,7 +24244,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "§6Element§r: Rutherfordium (Rf)\n§bAtomic Number§r: 104\n§aAtomic Mass§r: 267 amu\n§cMelting Point§r: 2400 K\n§5Boiling Point§r: 5800 K\n§6Properties§r: Rutherfordium is a radioactive metal that does not occur naturally. Relatively few atoms of it have ever been made. At present, it is only used in research.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30129,7 +30129,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Silver Oxide §rmust then be roasted with Carbon to make §6Silver§r.",
+          "desc:8": "§6Silver Oxide §rmust then be roasted to make §6Silver§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30202,7 +30202,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Acanthite §rcan be §croasted §rwith Oxygen to create §6Silver Oxide§r.",
+          "desc:8": "§6Acanthite §rand a tiny pile of §6Calcite §rcan be §croasted §rwith Oxygen to create §6Silver Oxide§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54495,7 +54495,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With Energy, Items, and a specified Recipe, RFTools Autocrafters can automatically craft stuff for you.\n\nGT Wirse/Cables are compatible with RF machines, so don\u0027t worry about having to convert energy.\n\nThese can come in handy if you dont want to make a GT Packager to deal with tiny dusts or small dusts.",
+          "desc:8": "With Energy, Items, and a specified Recipe, RFTools Autocrafters can automatically craft stuff for you.\n\nGT Wires/Cables are compatible with RF machines, so don\u0027t worry about having to convert energy.\n\nThese can come in handy if you dont want to make a GT Packager to deal with tiny dusts or small dusts.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
