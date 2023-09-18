@@ -18,7 +18,7 @@ Globals.solders.each { key, val ->
             .fluidInputs(fluid(key) * val)
             .outputs(metaitem('circuit.workstation'))
             .cleanroom(CleanroomType.CLEANROOM)
-            .duration(400)
+            .duration(250)
             .EUt(120)
             .buildAndRegister();
 }

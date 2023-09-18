@@ -116,7 +116,7 @@ material.diluted_methyl_ii_pyrrolidone=Diluted N-Methyl-2-pyrrolidone
 material.dimethyldichlorosilane_emulsion=Dimethyldichlorosilane Emulsion
 material.tetrafluoroethylene_emulsion=Tetrafluoroethylene Emulsion
 material.dichloromethane=Dichloromethane
-material.carbon_tetrachloride=Carbon Tetrachloride 
+material.carbon_tetrachloride=Carbon Tetrachloride
 material.phthalic_acid_solution=Phthalic Acid Solution
 material.butanol=Butanol
 material.saltpeter_solution=Saltpeter Solution
@@ -204,6 +204,7 @@ material.polyvinylidene_fluoride=Polyvinylidene Fluoride
 material.pmma=Polymethyl Methacrylate (PMMA)
 material.zinc_chloride=Zinc Chloride
 material.polypropylene=Polypropylene
+material.hydrogen_silsesquioxane=Hydrogen Silsesquioxane (HSQ)
 
 material.high_purity_lithium=High Purity Lithium
 material.high_purity_beryllium=High Purity Beryllium
@@ -561,7 +562,7 @@ material.pyrocatechol=Pyrocatechol
 material.acetone_cyanohydrin=Acetone Cyanohydrin
 material.methyl_methacrylate=Methyl Methacrylate
 material.methyl_methacrylate_emulsion=Methyl Methacrylate Emulsion
-material.polymethyl_methacrylate_solution=P.M.M.A. Solution
+material.polymethyl_methacrylate_solution=PMMA Solution
 material.polystyrene_sulfonate=Polystyrene Sulfonate
 material.ethylenediaminetetraacetic_acid=Ethylenediaminetetraacetic Acid
 material.tetrasodium_ethylenediaminetetraacetic_acid=Tetrasodium Ethylenediaminetetraacetic Acid
@@ -1724,6 +1725,11 @@ material.propylene_oxide_solution=Propylene Oxide Solution
 material.su_eight=SU-8 Photoresist
 material.hydrodealkylated_toluene_mixture=Hydrodealkylated Toluene Mixture
 material.ortho_para_xylene_mixture=o/p-Xylene Mixture
+material.acidic_hydrogen_silsesquioxane_solution=Acidic Hydrogen Silsesquioxane (HSQ) Solution
+material.hydrogen_silsesquioxane_solution=Hydrogen Silsesquioxane (HSQ) Solution
+material.trichlorosilane_solution=Trichlorosilane Solution
+material.tosylic_acid_solution=Tosylic Acid Solution
+material.hydrogen_silsesquioxane_photoresist=Hydrogen Silsesquioxane (HSQ) Photoresist
 
 # Isotopes
 
