@@ -599,13 +599,13 @@ public class SecondDegreeMaterials {
                 .build()
                 .setFormula('(MnSO4)(H2O)', true)
 
-        DilutedZincChlorideSolution = new Material.Builder(13095, "diluted_zinc_chloride_solution")
+        DilutedZincChlorideSolution = new Material.Builder(13095, SuSyUtility.susyId("diluted_zinc_chloride_solution"))
                 .fluid()
                 .components(ZincChloride, 1, Water, 2)
                 .colorAverage()
                 .build();
 
-        TrichlorosilaneSolution = new Material.Builder(13096, "trichlorosilane_solution")
+        TrichlorosilaneSolution = new Material.Builder(13096, SuSyUtility.susyId("trichlorosilane_solution"))
                 .fluid()
                 .components(Trichlorosilane, 1, Toluene, 6)
                 .colorAverage()

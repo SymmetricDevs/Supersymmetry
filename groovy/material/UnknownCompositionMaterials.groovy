@@ -1800,12 +1800,12 @@ public class UnknownCompositionMaterials {
                 .color(0x4a320a)
                 .build();
 
-        AcidicHydrogenSilsesquioxaneSolution = new Material.Builder(4343, "acidic_hydrogen_silsesquioxane_solution")
+        AcidicHydrogenSilsesquioxaneSolution = new Material.Builder(4343, SuSyUtility.susyId("acidic_hydrogen_silsesquioxane_solution"))
                 .fluid()
                 .color(0xb086aa)
                 .build();
 
-        HydrogenSilsesquioxaneSolution = new Material.Builder(4344, "hydrogen_silsesquioxane_solution")
+        HydrogenSilsesquioxaneSolution = new Material.Builder(4344, SuSyUtility.susyId("hydrogen_silsesquioxane_solution"))
                 .fluid()
                 .color(0xa186b0)
                 .build();
