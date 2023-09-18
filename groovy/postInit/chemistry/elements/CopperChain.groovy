@@ -241,7 +241,7 @@ SIFTER.recipeBuilder()
 
 CENTRIFUGE.recipeBuilder()
     .inputs(ore('dustCopperMatteFlue'))
-    .chancedOutput(metaitem('dustZincite') * 2, 2000, 0)
+    .chancedOutput(metaitem('dustZincOxide') * 2, 2000, 0)
     .chancedOutput(metaitem('dustMassicot') * 2, 2000, 0)
     .chancedOutput(metaitem('dustCassiterite') * 2, 2000, 0)
     .EUt(480)
