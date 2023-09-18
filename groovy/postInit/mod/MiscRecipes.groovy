@@ -47,3 +47,15 @@ crafting.addShaped('quark:redstone_randomizer', item('quark:redstone_randomizer'
         [null, ore('circuitLv'), null],
         [null, item('minecraft:comparator'), null]
 ])
+
+crafting.replaceShaped('toolbelt:pouch', item('toolbelt:pouch'), [
+        [metaitem('boltGold'), null, metaitem('boltGold')],
+        [metaitem('bound_leather'), null, metaitem('bound_leather')],
+        [item('minecraft:string'), metaitem('bound_leather'), item('minecraft:string')]
+]) 
+
+crafting.replaceShaped('toolbelt:belt', item('toolbelt:belt'), [
+        [item('minecraft:string'), metaitem('bound_leather'), item('minecraft:string')],
+        [metaitem('bound_leather'), null, metaitem('bound_leather')],
+        [item('toolbelt:pouch'), metaitem('ringSteel'), item('toolbelt:pouch')]
+]) 
