@@ -34535,7 +34535,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Steel needs to be reacted with Carbon Monoxide in a §aReaction Furnace§r to produce §7Crude Iron Pentacarbonyl§r, that needs to be distilled to make §7Iron Pentacarbonyl§r.\n\nIron Pentacarbonyl then goes in the batch reactor to make §4High Purity Iron§o§r.\n\n\n",
+          "desc:8": "Iron Dust needs to be reacted with Carbon Monoxide in a §aReaction Furnace§r to produce §7Crude Iron Pentacarbonyl§r, this needs to be distilled to make §7Iron Pentacarbonyl§r.\n\nIron Pentacarbonyl then goes in a roaster to make §4High Purity Iron§o§r.\n\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
