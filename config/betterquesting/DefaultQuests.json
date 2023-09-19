@@ -34745,7 +34745,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§1Cobaltite §rneeds to be roasted to make §aCobalt Oxide§r.\n\nCombine §aCobalt Oxide §rwith §4Purified Iron III Oxide §r§rto make Nickel Zinc Ferrite.\n",
+          "desc:8": "§1Nickel §rneeds to be roasted with Oxygen to make §aNickel II Oxide§r.\n\nCombine §aNickel II Oxide §rwith §4Purified Iron III Oxide §r§r and Zincite to make Nickel Zinc Ferrite.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
