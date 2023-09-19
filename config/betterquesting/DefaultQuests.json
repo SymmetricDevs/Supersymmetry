@@ -59643,6 +59643,111 @@
       "questID:3": 791,
       "rewards:9": {},
       "tasks:9": {}
+    },
+    "792:10": {
+      "preRequisites:11": [
+        161
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§aDrones§r can be used as a totally §mharmless§r way of §ccollecting§\u0027 §6leather§r, §6wool§r, §6bones §rand §6various types meat§r straight from the wildreness.\n\nIn order to deploy a drone you\u0027ll be required to assemble and place the §6Drone Pad§r.\n\n§61x Drone Pad\n9x Drone Pad Blocks\n8x Solid Steel Machine Casing\n1x Energy Hatch\n1x Input Bus\n1x Output Bus\n\n§fDo note that the deployment area must have §9§bclear access to the sky§r otherwise the drone will §cexplode§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 214,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2",
+            "tag:10": {
+              "Charge:4": 10000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Drone Pad",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 792,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 214,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2",
+              "tag:10": {
+                "Charge:4": 10000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 15062,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 9,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "susy:susy_multiblock_casing"
+            },
+            "2:10": {
+              "Count:3": 8,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -61490,6 +61595,13 @@
           "sizeY:3": 36,
           "x:3": -306,
           "y:3": 150
+        },
+        "125:10": {
+          "id:3": 792,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 180,
+          "y:3": 144
         }
       }
     },
