@@ -33431,7 +33431,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Microprocessors §rare the second type of §cLV §rcircuit that you make. They are made in the same way as Integrated Processors, but using less materials and a copper foil. \n\nMaking these is faster than making LV circuits manually using the traditional process.",
+          "desc:8": "§6Microprocessors §rare the second type of §cLV §rcircuits that you make. They are made in the same way as Integrated Processors, but using less materials and some fine copper wire. \n\nMaking these is faster than making LV circuits manually using the traditional process.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
