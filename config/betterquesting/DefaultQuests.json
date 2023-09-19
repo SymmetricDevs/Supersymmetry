@@ -1672,7 +1672,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §7Coke Oven §ris a hollow 3x3x3 structure made of Coke Bricks with a Coke Oven Controller in the center.\nIt turns §7Coal §rinto §7Coal Coke§r, and Logs into Charcoal.\n\nCoal Coke burns longer in furnaces, and in small coal boilers. \n\nThe Coke Oven also produces Creosote Oil, which can be used either as furnace fuel or for creating§6 Treated Wood §rblcoks.",
+          "desc:8": "The §7Coke Oven §ris a hollow 3x3x3 structure made of Coke Bricks with a Coke Oven Controller in the center.\nIt turns §7Coal §rinto §7Coal Coke§r, and Logs into Charcoal.\n\nCoal Coke burns longer in furnaces, and in small coal boilers. \n\nThe Coke Oven also produces Creosote Oil, which can be used either as furnace fuel or for creating§6 Treated Wood §rblocks.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
