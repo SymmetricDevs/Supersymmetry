@@ -12,6 +12,7 @@ ION_IMPLANTER = recipemap('ion_implantation')
 UV_LIGHT_BOX = recipemap('uv_light_box')
 CVD = recipemap('cvd')
 REACTION_FURNACE = recipemap('reaction_furnace')
+CSTR = recipemap('continuous_stirred_tank_reactor')
 
 /*
 Etchants used:
@@ -148,7 +149,9 @@ class NDopant {
 //FEEL FREE TO ADD MORE IF YOU FIND THEM
 
 new Photoresist("novolacs", 50, 300)
+new Photoresist("hydrogen_silsesquioxane_photoresist", 25, 200)
 new Photoresist("pmma", 16, 150)
+new Photoresist("su_eight", 16, 50)
 
 new Etchant("plasma.chlorine", "aluminium", 10, 80)
 new Etchant("plasma.carbon_tetrafluoride", "aluminium", 10, 60)
@@ -402,11 +405,11 @@ ASSEMBLER.recipeBuilder()
 
 //NOVOLACS
 
-MIXER.recipeBuilder()
-        .fluidInputs(fluid('formaldehyde')*1000)
-        .fluidInputs(fluid('phenol')*1000)
-        .fluidOutputs(fluid('novolacs')*2000)
-        .duration(200)
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('formaldehyde')*50)
+        .fluidInputs(fluid('phenol')*50)
+        .fluidOutputs(fluid('novolacs')*100)
+        .duration(10)
         .EUt(7)
         .buildAndRegister()
 

@@ -306,10 +306,10 @@ public class ThirdDegreeMaterials {
       		.build();
 
         NickelIIBisacetylacetonateSolution = new Material.Builder(24048, "nickel_ii_bisacetylacetonate_solution")
-      		.fluid()
+      	    	.fluid()
       		.components(NickelIIBisacetylacetonate, 1, SodiumNitrate, 2, Water, 2)
       		.color(0x3e5051)
-      		.build();
+      	    	.build();
 
         ShellHigherOlefinCatalystSolution = new Material.Builder(24049, "shell_higher_olefin_catalyst_solution")
                 .fluid()
@@ -378,6 +378,12 @@ public class ThirdDegreeMaterials {
         OrthoParaXyleneMixture = new Material.Builder(24059, "ortho_para_xylene_mixture")
                 .fluid()
                 .components(OrthoXylene, 60, ParaXylene, 40)
+                .colorAverage()
+                .build();
+
+        HydrogenSilsesquioxanePhotoresist = new Material.Builder(24060, "hydrogen_silsesquioxane_photoresist")
+                .fluid()
+                .components(HydrogenSilsesquioxane, 1, MethylIsobutylKetone, 99)
                 .colorAverage()
                 .build();
     }

@@ -235,16 +235,6 @@ for (coal_source in COAL_SOURCES) {
             .buildAndRegister()
 }
 
-// Iron III chloride reduction
-
-ROASTER.recipeBuilder()
-.fluidInputs(fluid('hydrogen') * 3000)
-.inputs(ore('dustIronIiiChloride') * 4)
-.fluidOutputs(fluid('hydrogen_chloride') * 3000)
-.outputs(metaitem('dustIron') * 1)
-.duration(120)
-.EUt(120)
-.buildAndRegister()
 
 // Phosphorous Pentoxide roaster
 
@@ -2610,16 +2600,7 @@ DISTILLATION_TOWER.recipeBuilder()
 .duration(600)
 .buildAndRegister()
 
-//useful reactions
-
-BR.recipeBuilder()
-.fluidInputs(fluid('calcium_hydroxide_solution') * 1000)
-.inputs(ore('dustPotassiumCarbonate') * 6)
-.fluidOutputs(fluid('potassium_hydroxide_solution') * 1000)
-.outputs(metaitem('dustCalcite') *  5)
-.EUt(30)
-.duration(200)
-.buildAndRegister()
+// Useful reactions
 
 BR.recipeBuilder()
 .inputs(ore('dustPotassiumHydroxide') * 3)
@@ -2677,6 +2658,48 @@ DISTILLERY.recipeBuilder()
 .EUt(30)
 .duration(100)
 .buildAndRegister()
+
+BR.recipeBuilder()
+.fluidInputs(fluid('potassium_carbonate_solution') * 1000)
+.fluidInputs(fluid('water') * 1000)
+.inputs(ore('dustCalciumHydroxide') * 5)
+.fluidOutputs(fluid('potassium_hydroxide_solution') * 2000)
+.outputs(metaitem('dustCalcite') *  5)
+.EUt(30)
+.duration(200)
+.buildAndRegister()
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 50)
+    .fluidInputs(fluid('hydrogen_chloride') * 50)
+    .fluidOutputs(fluid('salt_water') * 100)
+    .duration(10)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustQuicklime') * 2)
+    .fluidInputs(fluid('hydrogen_chloride') * 2000)
+    .fluidOutputs(fluid('calcium_chloride_solution') * 1000)
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustCalciumHydroxide') * 5)
+    .fluidInputs(fluid('hydrogen_chloride') * 2000)
+    .fluidOutputs(fluid('diluted_calcium_chloride_solution') * 2000)
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustCalcium'))
+    .fluidInputs(fluid('oxygen') * 1000)
+    .outputs(metaitem('dustQuicklime') * 2)
+    .duration(60)
+    .EUt(30)
+    .buildAndRegister()
 
 //Silicon & Graphite
 
@@ -2834,7 +2857,7 @@ REACTION_FURNACE.recipeBuilder()
 ROASTER.recipeBuilder()
         .inputs(ore('dustZinc'))
         .fluidInputs(fluid('oxygen') * 1000)
-        .outputs(metaitem('dustZincite') * 2)
+        .outputs(metaitem('dustZincOxide') * 2)
         .duration(300)
         .EUt(30)
         .buildAndRegister()
@@ -2849,7 +2872,7 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 BR.recipeBuilder()
-        .inputs(ore('dustZincite') * 1)
+        .inputs(ore('dustZincOxide') * 1)
         .inputs(ore('dustCupricOxide') * 1)
         .inputs(ore('dustAlumina') * 1)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
@@ -3405,7 +3428,7 @@ FBR.recipeBuilder()
 TBR.recipeBuilder()
     .fluidInputs(fluid('benzene') * 50)
     .fluidInputs(fluid('bromine') * 50)
-    .notConsumable(ore('dustAluminiumTrichloride'))
+    .notConsumable(ore('dustAluminiumChloride'))
     .fluidOutputs(fluid('bromobenzene') * 50)
     .fluidOutputs(fluid('hydrogen') * 50)
     .duration(10) 
@@ -3427,7 +3450,7 @@ ALLOY_SMELTER.recipeBuilder()
 ROASTER.recipeBuilder()
     .inputs(ore('dustAluminium'))
     .fluidInputs(fluid('chlorine') * 3000)
-    .outputs(metaitem('dustAluminiumTrichloride') * 4)
+    .outputs(metaitem('dustAluminiumChloride') * 4)
     .duration(100) // Adjust the duration as needed
     .EUt(Globals.voltAmps[1])
     .buildAndRegister();
@@ -3815,6 +3838,69 @@ DRYER.recipeBuilder()
         .fluidInputs(fluid('polymethyl_methacrylate_solution') * 2000)
         .outputs(metaitem('dustPmma') * 7)
         .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+// Tosylic Acid, Hydrogen Silsesquioxane
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('toluene') * 1000)
+        .fluidInputs(fluid('oleum') * 1000)
+        .fluidInputs(fluid('distilled_water') * 1000)
+        .fluidOutputs(fluid('tosylic_acid_solution') * 1000)
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister()
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('trichlorosilane') * 50)
+        .fluidInputs(fluid('toluene') * 300)
+        .fluidOutputs(fluid('trichlorosilane_solution') * 350)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .notConsumable(fluid('tosylic_acid_solution') * 3500)
+        .fluidInputs(fluid('trichlorosilane_solution') * 3500)
+        .fluidOutputs(fluid('acidic_hydrogen_silsesquioxane_solution') * 3000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('acidic_hydrogen_silsesquioxane_solution') * 3000)
+        .fluidInputs(fluid('distilled_water') * 100)
+        .fluidOutputs(fluid('hydrogen_silsesquioxane_solution') * 3050)
+        .fluidOutputs(fluid('acidic_wastewater') * 50)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+VACUUM_DT.recipeBuilder()
+        .fluidInputs(fluid('hydrogen_silsesquioxane_solution') * 3050)
+        .chancedOutput(metaitem('dustHydrogenSilsesquioxane'), 625, 0)
+        .fluidOutputs(fluid('water') * 50)
+        .fluidOutputs(fluid('toluene') * 3000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+/*
+Let us produce a 5% wt solution of hydrogen silsesquioxane (H8Si8O12) in MIBK.
+
+Assume 100g.
+5g HSQ / (424.744 g/mol) = 0.0117718 mol HSQ
+95g MIBK / (100.16 g/mol) = 0.94848 mol MIBK
+
+Thus, HSQ should be 1.24% molar in MIBK
+*/
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustTinyHydrogenSilsesquioxane'))
+        .fluidInputs(fluid('methyl_isobutyl_ketone') * 11000)
+        .fluidOutputs(fluid('hydrogen_silsesquioxane_photoresist') * 11000)
+        .duration(100)
         .EUt(30)
         .buildAndRegister()
 
@@ -4554,10 +4640,27 @@ ROASTER.recipeBuilder()
 .fluidInputs(fluid('phenol') * 1000)
 .inputs(ore('dustZinc'))
 .fluidOutputs(fluid('benzene') * 1000)
-.outputs(metaitem('dustZincite') * 2)
+.outputs(metaitem('dustZincOxide') * 2)
 .duration(120)
 .EUt(30)
 .buildAndRegister()
+
+//ZnO -> ZnCl2
+BR.recipeBuilder()
+.fluidInputs(fluid('hydrochloric_acid') * 2000)
+.inputs(ore('dustZincOxide'))
+.fluidOutputs(fluid('diluted_zinc_chloride_solution') * 2000)
+.duration(120)
+.EUt(30)
+.buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('diluted_zinc_chloride_solution') * 2000)
+    .outputs(metaitem('dustZincChloride') * 3)
+    .fluidOutputs(fluid('water') * 2000)
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
 
 //ZIEGLER-ALFOL PROCESS
 CSTR.recipeBuilder()
