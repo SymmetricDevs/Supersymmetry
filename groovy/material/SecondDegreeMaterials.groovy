@@ -11,6 +11,7 @@ import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtechfoodoption.GTFOMaterialHandler.*;
+import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
 public class SecondDegreeMaterials {
     public static void register() {
@@ -472,17 +473,19 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        DilutedAmmoniumChlorideSolution = new Material.Builder(13076, "diluted_ammonium_chloride_solution")
+        PlatinumMotherLiquor = new Material.Builder(13076, "platinum_mother_liquor")
                 .fluid()
-                .components(AmmoniumChloride, 1, Water, 8)
+                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
                 .colorAverage()
                 .build();
+
+        PlatinumMotherLiquor.setFormula("(?)(NH4Cl)(HCl)6(H2O)8", true)
 
         AmmoniacalSodiumBicarbonateSolution = new Material.Builder(13077, "ammoniacal_sodium_bicarbonate_solution")
                 .fluid()
                 .components(AmmoniumChloride, 1, SodiumBicarbonate, 1, Water, 1)
                 .colorAverage()
-                .build()
+                .build();
 
         VeryDilutedSodiumSulfateSolution = new Material.Builder(13078, "very_diluted_sodium_sulfate_solution")
                 .fluid()
@@ -553,5 +556,57 @@ public class SecondDegreeMaterials {
                 .components(SiliconDioxide, 6, Alumina, 1, BoronTrioxide, 1, Quicklime, 2)
                 .color(0x778f8b)
                 .build();
+
+        PalladiumMotherLiquor = new Material.Builder(13089, "palladium_mother_liquor")
+                .fluid()
+                .components(AmmoniumChloride, 1, Ammonia, 2, HydrogenChloride, 8, Water, 12)
+                .colorAverage()
+                .build();
+
+        DivalentPalladiumSolution = new Material.Builder(13090, "divalent_palladium_solution")
+                .fluid()
+                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
+                .colorAverage()
+                .build();
+
+        DivalentPalladiumSolution.setFormula("(?)(NH4Cl)(HCl)6(H2O)8", true)
+
+        DeoxygenationCatalystPrecursorSolution = new Material.Builder(13091, "deoxygenation_catalyst_precursor_solution")
+                .fluid()
+                .components(AmmoniumHexachloroplatinate, 1, PhosphoricAcid, 1)
+                .colorAverage()
+                .build();
+
+        DeoxygenationCatalyst = new Material.Builder(13092, "deoxygenation_catalyst")
+                .dust()
+                .components(Alumina, 1, Platinum, 1, Chlorine, 4)
+                .flags(GENERATE_CATALYST_BED)
+                .build()
+
+        CrudeManganeseIISulfateSolution = new Material.Builder(13093, "crude_manganese_ii_sulfate_solution")
+                .fluid()
+                .components(ManganeseIISulfate, 1, Water, 1)
+                .colorAverage()
+                .build()
+                .setFormula('(?)(MnSO4)(H2O)', true)
+
+        ManganeseIISulfateSolution = new Material.Builder(13094, "manganese_ii_sulfate_solution")
+                .fluid()
+                .components(ManganeseIISulfate, 1, Water, 1)
+                .colorAverage()
+                .build()
+                .setFormula('(MnSO4)(H2O)', true)
+
+        DilutedZincChlorideSolution = new Material.Builder(13095, "diluted_zinc_chloride_solution")
+                .fluid()
+                .components(ZincChloride, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        TrichlorosilaneSolution = new Material.Builder(13096, "trichlorosilane_solution")
+                .fluid()
+                .components(Trichlorosilane, 1, Toluene, 6)
+                .colorAverage()
+                .build()
     }
 }

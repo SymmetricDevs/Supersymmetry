@@ -116,7 +116,7 @@ material.diluted_methyl_ii_pyrrolidone=Diluted N-Methyl-2-pyrrolidone
 material.dimethyldichlorosilane_emulsion=Dimethyldichlorosilane Emulsion
 material.tetrafluoroethylene_emulsion=Tetrafluoroethylene Emulsion
 material.dichloromethane=Dichloromethane
-material.carbon_tetrachloride=Carbon Tetrachloride 
+material.carbon_tetrachloride=Carbon Tetrachloride
 material.phthalic_acid_solution=Phthalic Acid Solution
 material.butanol=Butanol
 material.saltpeter_solution=Saltpeter Solution
@@ -204,6 +204,7 @@ material.polyvinylidene_fluoride=Polyvinylidene Fluoride
 material.pmma=Polymethyl Methacrylate (PMMA)
 material.zinc_chloride=Zinc Chloride
 material.polypropylene=Polypropylene
+material.hydrogen_silsesquioxane=Hydrogen Silsesquioxane (HSQ)
 
 material.high_purity_lithium=High Purity Lithium
 material.high_purity_beryllium=High Purity Beryllium
@@ -561,7 +562,7 @@ material.pyrocatechol=Pyrocatechol
 material.acetone_cyanohydrin=Acetone Cyanohydrin
 material.methyl_methacrylate=Methyl Methacrylate
 material.methyl_methacrylate_emulsion=Methyl Methacrylate Emulsion
-material.polymethyl_methacrylate_solution=P.M.M.A. Solution
+material.polymethyl_methacrylate_solution=PMMA Solution
 material.polystyrene_sulfonate=Polystyrene Sulfonate
 material.ethylenediaminetetraacetic_acid=Ethylenediaminetetraacetic Acid
 material.tetrasodium_ethylenediaminetetraacetic_acid=Tetrasodium Ethylenediaminetetraacetic Acid
@@ -827,7 +828,7 @@ material.sodium_ethyl_xanthate_solution=Sodium Ethyl Xanthate Solution
 material.impure_galena_slurry=Impure Galena Slurry
 material.galena_byproducts_slurry=Galena Byproducts Slurry
 material.sintered_lead_concentrate=Sintered Lead Concentrate
-material.cadmium_rich_flue_dust=Cadmium Rich Flue
+material.cadmium_rich_flue=Cadmium Rich Flue
 material.copper_dross=Copper Dross
 material.decoppered_lead=Decoppered Lead
 material.dezinced_lead=Dezinced Lead
@@ -927,9 +928,13 @@ material.chloroauric_acid_solution=Chloroauric Acid Solution
 material.sodium_nitrite=Sodium Nitrite
 material.sodium_oxide=Sodium Oxide
 material.gold_amalgam=Gold Amalgam
+material.decarburized_air=Decarburized Air
+material.liquid_deoxygenated_argon=Liquid Deoxygenated Argon
+material.liquid_waste_nitrogen=Liquid Waste Nitrogen
 material.alkali_fused_wulfenite=Alkali Fused Wulfenite
 material.lead_ii_hydroxide=Lead II Hydroxide
 material.sodium_molybdate_solution=Sodium Molybdate Solution
+material.zinc_oxide=Zinc Oxide
 
 # Thermodynamics
 
@@ -984,6 +989,7 @@ material.liquid_nitrogen=Liquid Nitrogen
 material.liquid_refinery_gas=Liquid Refinery Gas
 material.liquid_natural_gas=Liquid Natural Gas (LNG)
 material.liquid_methane=Liquid Methane
+material.liquid_decarburized_air=Liquid Decarburized Air
 
 material.hot_hp_air=Hot High-Pressure Air
 material.hp_air=High-Pressure Air
@@ -992,6 +998,10 @@ material.cold_hp_air=Cold High-Pressure Air
 material.hot_hp_nether_air=Hot High-Pressure Nether Air
 material.hp_nether_air=High-Pressure Nether Air
 material.cold_hp_nether_air=Cold High-Pressure Nether Air
+
+material.hot_hp_decarburized_air=Hot High-Pressure Decarburized Air
+material.hp_decarburized_air=High-Pressure Decarburized Air
+material.cold_hp_decarburized_air=Cold High-Pressure Decarburized Air
 
 material.hot_hp_refinery_gas=Hot High-Pressure Refinery Gas
 material.hp_refinery_gas=High-Pressure Refinery Gas
@@ -1065,6 +1075,10 @@ material.dichlorodifluoromethane=Dichlorodifluoromethane
 material.chlorotrifluoromethane=Chlorotrifluoromethane
 material.chlorodifluoromethane=Chlorodifluoromethane
 material.polychlorinated_biphenyl=Polychlorinated Biphenyl
+
+material.liquid_argon_product=Liquid Argon Product
+material.liquid_oxygen_product=Liquid Oxygen Product
+material.liquid_nitrogen_product=Liquid Nitrogen Product
 
 # Ores
 
@@ -1437,6 +1451,8 @@ material.gaseous_titanium_tetrachloride=Gaseous Titanium Tetrachloride
 material.tin_tetrachloride=Tin Tetrachloride
 material.gaseous_aluminium_chloride=Gaseous Aluminium Chloride
 material.extracted_caprolactam_solution=Extracted Caprolactam Solution
+material.dilute_ammonium_sulfate_solution=Dilute Ammonium Sulfate Solution
+material.chloroauric_acid_solution=Chloroauric Acid Solution
 material.diluted_ammonium_sulfate_solution=Diluted Ammonium Sulfate Solution
 material.phosgene_solution=Phosgene Solution
 material.sodium_bisphenolate_solution=Sodium Bisphenolate Solution
@@ -1461,9 +1477,8 @@ material.impure_cassiterite_slurry=Impure Cassiterite Slurry
 material.cassiterite_slurry=Cassiterite Slurry
 material.limestone_tailing_slurry=Limestone Tailing Slurry
 material.hexachloroplatinic_acid_solution=Hexachloroplatinic Acid Solution
-material.sodium_hexachloroplatinate_solution=Sodium Hexachloroplatinate Solution
 material.ammonium_hexachloroplatinate=Ammonium Hexachloroplatinate
-material.diluted_ammonium_chloride_solution=Diluted Ammonium Chloride Solution
+material.platinum_mother_liquor=Platinum Mother Liquor
 material.alluvial_platinum=Alluvial Platinum
 material.impure_malachite_slurry=Impure Malachite Slurry
 material.malachite_slurry=Malachite Slurry
@@ -1487,8 +1502,6 @@ material.potassium_octyl_hydroxamate=Potassium Octyl Hydroxamate
 material.diluted_copper_sulfate_solution=Diluted Copper Sulfate Solution
 material.nickel_sulfate_solution=Nickel Sulfate Solution
 material.palladium_containing_solution=Palladium Containing Solution
-material.mercury_ii_cyanide=Mercury II Cyanide
-material.palladium_ii_cyanide=Palladium II Cyanide
 material.aluminium_nitride=Aluminium Nitride
 material.aluminium_oxynitride=Aluminium Oxynitride (ALON)
 material.ultra_high_molecular_weight_polyethylene=Ultra High Molecular Weight Polyethylene (UHMWPE)
@@ -1585,6 +1598,11 @@ material.phosphorus_pentasulfide=Phosphorus Pentasulfide
 material.sodium_dithiophosphate_solution=Sodium Dithiophosphate Solution
 material.tetrahydrofuran_solution=Tetrahydrofuran Solution
 material.calcium_zirconate=Calcium Zirconate
+material.cemented_hexachloroplatinic_acid_solution=Cemented Hexachloroplatinic Acid Solution
+material.palladium_mother_liquor=Palladium Mother Liquor
+material.ferroplatinum=Ferroplatinum
+material.diamminedichloropalladium=Diamminedichloropalladium
+material.divalent_palladium_solution=Divalent Palladium Solution
 material.sifted_pyrochlore=Sifted Pyrochlore
 material.pyrochlore_concentrate=Pyrochlore Concentrate
 material.impure_pyrochlore_slurry=Impure Pyrochlore Slurry
@@ -1706,6 +1724,14 @@ material.epoxy_curing_mixture=Epoxy Curing Mixture
 material.wet_flame_retardant_epoxy=Wet Flame Retardant Epoxy
 material.propylene_oxide_solution=Propylene Oxide Solution
 material.su_eight=SU-8 Photoresist
+material.hydrodealkylated_toluene_mixture=Hydrodealkylated Toluene Mixture
+material.ortho_para_xylene_mixture=o/p-Xylene Mixture
+material.diluted_zinc_chloride_solution=Diluted Zinc Chloride Solution
+material.acidic_hydrogen_silsesquioxane_solution=Acidic Hydrogen Silsesquioxane (HSQ) Solution
+material.hydrogen_silsesquioxane_solution=Hydrogen Silsesquioxane (HSQ) Solution
+material.trichlorosilane_solution=Trichlorosilane Solution
+material.tosylic_acid_solution=Tosylic Acid Solution
+material.hydrogen_silsesquioxane_photoresist=Hydrogen Silsesquioxane (HSQ) Photoresist
 
 # Isotopes
 

@@ -1672,7 +1672,7 @@ AntiknockMap.each { key, val ->
     MIXER.recipeBuilder()
             .inputs(ore('dustFerrocene'))
             .fluidInputs(fluid(key) * val)
-            .fluidOutputs(fluid('gasoline_antioxidants') * 2000)
+            .fluidOutputs(fluid('gasoline_antiknock') * 2000)
             .duration(200)
             .EUt(120)
             .buildAndRegister()
@@ -1693,7 +1693,7 @@ mods.gregtech.mixer.removeByInput(480, null, [fluid('bio_diesel') * 1000, fluid(
 // Cetane-Boosted Diesel * 1000
 mods.gregtech.mixer.removeByInput(480, null, [fluid('diesel') * 1000, fluid('tetranitromethane') * 20])
 
-MIXER.recipeBuilder()
+/* MIXER.recipeBuilder()
         .fluidInputs(fluid('diesel') * 1000)
         .fluidInputs(fluid('tetranitromethane') * 20)
         .fluidOutputs(fluid('nitro_fuel') * 1000)
@@ -1739,4 +1739,4 @@ MIXER.recipeBuilder()
         .fluidOutputs(fluid('nitro_fuel') * 750)
         .duration(20)
         .EUt(120)
-        .buildAndRegister()
+        .buildAndRegister() */
