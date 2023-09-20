@@ -34133,7 +34133,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Iron, Nickel and Manganese can be combined in an §6HV EBF §rto create molten §cCarburized Stainless Steel§o§r.",
+          "desc:8": "Iron, Nickel and Manganese can be combined in an §6HV EBF§t to create molten §cCarburized Stainless Steel§o§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34334,8 +34334,13 @@
       }
     },
     "506:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        509
+        509,
+        498
       ],
       "properties:10": {
         "betterquesting:10": {
