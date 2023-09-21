@@ -230,7 +230,7 @@ ROASTER.recipeBuilder()
 
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('ethanol') * 1000)
-        .inputs(metaitem('black_pepper_dust'))
+        .inputs(metaitem('gregtechfoodoption:black_pepper_dust'))
         .fluidOutputs(fluid('capsaicin_solution') * 1000)
         .duration(200)
         .EUt(120)

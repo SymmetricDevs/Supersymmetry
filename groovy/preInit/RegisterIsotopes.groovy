@@ -1,9 +1,9 @@
 /*
 import gregtech.api.unification.material.Material;
-import gregtech.api.GregTechAPI;
 import gregtech.api.unification.Element;
 import gregtech.api.fluids.fluidType.FluidTypes;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
+import gregtech.api.unification.material.event.MaterialEvent;
 
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -39,7 +39,7 @@ private void addNuclearFuelMaterials (Material materialName, int startingInt) {
 }
 
 eventManager.listen {
-    GregTechAPI.MaterialEvent event ->
+    MaterialEvent event ->
 
         println("Running RegisterIsotopes.groovy...")
 

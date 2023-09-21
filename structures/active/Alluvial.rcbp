@@ -10,7 +10,8 @@
       "biomes": "$BEACH"
     },
     {
-      "biomes": "$RIVER"
+      "biomes": "$RIVER",
+      "weight": 2.5
     }
   ],
   "metadata": {

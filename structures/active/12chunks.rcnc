@@ -1,6 +1,6 @@
 {
   "generationInfos": [],
-  "defaultSpawnChance": 0.083333,
+  "defaultSpawnChance": 0.05,
   "spawnDistanceMultiplier": 0.0,
   "spawnDistanceMultiplierCap": 1.0,
   "selectableInGUI": true,

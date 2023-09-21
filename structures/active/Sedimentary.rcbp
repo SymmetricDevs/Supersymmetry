@@ -1,19 +1,28 @@
 {
   "data": [
     {
-      "biomes": "$PLAINS"
+      "biomes": "$PLAINS",
+      "weight": 0.4
     },
     {
-      "biomes": "$SWAMP"
+      "biomes": "$SWAMP",
+      "weight": 0.4
     },
     {
-      "biomes": "$SANDY"
+      "biomes": "$SANDY",
+      "weight": 0.65
     },
     {
-      "biomes": "$SAVANNA"
+      "biomes": "$SAVANNA",
+      "weight": 0.65
     },
     {
-      "biomes": "$MESA"
+      "biomes": "$MESA",
+      "weight": 0.9
+    },
+    {
+      "biomes": "",
+      "weight": 0.1
     }
   ],
   "metadata": {
