@@ -882,6 +882,22 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+// Bath Condenser
+
+crafting.addShaped("gregtech:bath_condenser", metaitem('bath_condenser.lv'), [
+	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel')],
+	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('hull.hv'), metaitem('pipeSmallFluidStainlessSteel')],
+	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel')]
+])
+
+// Phase Separator
+
+crafting.addShaped("gregtech:phase_separator", metaitem('phase_separator.lv'), [
+	[metaitem('frameStainlessSteel'), metaitem('drum.stainless_steel'), metaitem('pipeSmallFluidStainlessSteel')],
+	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('hull.hv'), metaitem('pipeSmallFluidStainlessSteel')],
+	[null, null, null]
+])
+
 //Multiblocked Machines
 
 /*
@@ -926,7 +942,7 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('electric.pump.lv') * 4)
 		.inputs(metaitem('electric.motor.lv') * 4)
 		.inputs(ore('gearSteel') * 4)
-		.notConsumable(circuit(2))
+		.circuitMeta(2)
 		.outputs(metaitem('fluid_drilling_rig.mv'))
 		.EUt(30)
 		.duration(600)
@@ -942,7 +958,7 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('rotorTitanium'))
 		.inputs(ore('circuitEv'))
 		.outputs(metaitem('catalytic_reformer'))
-		.notConsumable(circuit(3))
+		.circuitMeta(3)
 		.EUt(480)
 		.duration(600)
 		.buildAndRegister()	

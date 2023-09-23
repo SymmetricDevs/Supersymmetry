@@ -21,7 +21,7 @@ AUTOCLAVE.recipeBuilder()
     .inputs(ore('dustBone'))
     .fluidInputs(fluid('water') * 250)
     .outputs(metaitem('dustTricalciumPhosphate') * 13)
-    .outputs(metaitem('fat_ingot'))
+    .outputs(metaitem('gregtechfoodoption:fat_ingot'))
     .duration(120)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
@@ -55,7 +55,6 @@ ROASTER.recipeBuilder()
 //UNIVERSAL (MV)
 //REMOVE APATITE RECIPES
 mods.gregtech.mixer.removeByInput(8, [item('minecraft:clay_ball'), metaitem('dustStone'), metaitem('dustApatite') * 2], null)
-mods.gregtech.batch_reactor.removeByInput(30, [metaitem('dustApatite') * 21], [fluid('sulfuric_acid') * 5000])
 
 def apatites = [
         metaitem('dustChlorapatite'),
@@ -68,7 +67,7 @@ for (apatite in apatites) {
         .inputs(apatite * 2)
         .inputs(item('minecraft:clay_ball'))
         .inputs(ore('dustStone'))
-        .outputs(metaitem('bone_china_clay_dust') * 4)
+        .outputs(metaitem('gregtechfoodoption:bone_china_clay_dust') * 4)
         .duration(40)
         .EUt(8)
         .buildAndRegister()
@@ -274,6 +273,7 @@ DISTILLERY.recipeBuilder()
 
 FLUID_SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('high_purity_phosphorus') * 144)
+    .notConsumable(metaitem('shape.mold.ball'))
     .outputs(metaitem('dustHighPurityPhosphorus'))
     .duration(60)
     .EUt(Globals.voltAmps[1])

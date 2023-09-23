@@ -75,6 +75,17 @@ MIXER.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+// resolve recipe conflict with dough
+mods.gregtech.mixer.removeByInput(8, [metaitem('dustWheat') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 3])], [fluid('water') * 1000])
+MIXER.recipeBuilder()
+        .inputs(ore('dustWheat') * 4)
+        .fluidInputs(fluid('water') * 1000)
+        .outputs(metaitem('gregtechfoodoption:component.dough') * 4)
+        .circuitMeta(5)
+        .duration(200)
+        .EUt(8)
+        .buildAndRegister()
+
 FERMENTER.recipeBuilder()
         .fluidInputs(fluid('grain_solution') * 16000)
         .fluidOutputs(fluid('yeast_solution') * 16000)

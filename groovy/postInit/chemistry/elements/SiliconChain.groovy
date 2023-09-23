@@ -22,11 +22,15 @@ def EBF = recipemap('electric_blast_furnace')
 
 // Silicon Carbide Plate * 1
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustSiliconCarbide')], null)
-// Silicon Ingot * 1
-mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSiliconDioxide'), metaitem('dustCarbon') * 2], null)
+// Phosphorus-doped Monocrystalline Silicon Boule * 1
+mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustSilicon') * 64, metaitem('dustPhosphorus') * 8, metaitem('dustSmallGalliumArsenide') * 2], [fluid('nitrogen') * 8000])
+// Naquadah-doped Monocrystalline Silicon Boule * 1
+mods.gregtech.electric_blast_furnace.removeByInput(1920, [metaitem('blockSilicon') * 16, metaitem('ingotNaquadah'), metaitem('dustGalliumArsenide')], [fluid('argon') * 8000])
+// Neutronium-doped Monocrystalline Silicon Boule * 1
+mods.gregtech.electric_blast_furnace.removeByInput(7680, [metaitem('blockSilicon') * 32, metaitem('ingotNeutronium') * 4, metaitem('dustGalliumArsenide') * 2], [fluid('xenon') * 8000])
 
 EBF.recipeBuilder()
-        .circuitMeta(1)
+        .circuitMeta(2)
         .inputs(ore('dustSiliconDioxide') * 3)
         .inputs(ore('dustCarbon') * 2)
         .outputs(metaitem('dustSilicon'))
@@ -36,6 +40,9 @@ EBF.recipeBuilder()
         .duration(240)
         .EUt(120)
         .buildAndRegister()
+
+// Fix Hot Silicon Ingot conflict with dust
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSiliconDioxide') * 3, metaitem('dustCarbon') * 2], null)
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustSilicon'))
