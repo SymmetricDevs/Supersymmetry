@@ -44,7 +44,7 @@ def blastables = [
     new Blastable('oreBandedIron', 5, 2, 3, 60),
     new Blastable('oreNetherrackMagnetite', 7, 6, 4, 60),
     new Blastable('oreNetherrackBandedIron', 5, 4, 3, 60),
-    new Blastable('oreEndstoneRackMagnetite', 7, 6, 4, 60),
+    new Blastable('oreEndstoneMagnetite', 7, 6, 4, 60),
     new Blastable('oreEndstoneBandedIron', 5, 4, 3, 60)
 ]
 

@@ -231,7 +231,7 @@ for (solder in soldering_alloys) {
 			.inputs(metaitem('plate.integrated_logic_circuit'))
 			.inputs(metaitem('circuit_board.good'))
             .fluidInputs(solder)
-			.circuitMeta([1])
+			.circuitMeta([13])
             .outputs(item('opensecurity:rfid_reader_card'))
             .duration(400)
             .EUt(30)

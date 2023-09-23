@@ -30,7 +30,7 @@ mods.gregtech.electric_blast_furnace.removeByInput(1920, [metaitem('blockSilicon
 mods.gregtech.electric_blast_furnace.removeByInput(7680, [metaitem('blockSilicon') * 32, metaitem('ingotNeutronium') * 4, metaitem('dustGalliumArsenide') * 2], [fluid('xenon') * 8000])
 
 EBF.recipeBuilder()
-        .circuitMeta(1)
+        .circuitMeta(2)
         .inputs(ore('dustSiliconDioxide') * 3)
         .inputs(ore('dustCarbon') * 2)
         .outputs(metaitem('dustSilicon'))
@@ -40,6 +40,9 @@ EBF.recipeBuilder()
         .duration(240)
         .EUt(120)
         .buildAndRegister()
+
+// Fix Hot Silicon Ingot conflict with dust
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSiliconDioxide') * 3, metaitem('dustCarbon') * 2], null)
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustSilicon'))
