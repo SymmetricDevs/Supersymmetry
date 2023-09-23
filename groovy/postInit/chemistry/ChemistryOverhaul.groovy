@@ -925,10 +925,10 @@ CSTR.recipeBuilder()
 // Ethylene
 
 CSTR.recipeBuilder()
-        .fluidInputs(fluid('hot_sulfuric_acid') * 100)
+        .fluidInputs(fluid('hot_sulfuric_acid') * 90)
         .fluidInputs(fluid('ethanol_water_azeotrope') * 100)
-        .fluidOutputs(fluid('ethylene') * 80)
-        .fluidOutputs(fluid('diluted_sulfuric_acid') * 200)
+        .fluidOutputs(fluid('ethylene') * 90)
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 180)
         .duration(5)
         .EUt(30)
         .buildAndRegister()
