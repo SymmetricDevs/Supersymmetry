@@ -1861,11 +1861,11 @@ public class FirstDegreeMaterials{
                 .iconSet(SHINY)
                 .build();
                 
-        BariumSulfide = new Material.Builder(8371, SuSyUtility.susyId('barium_sulfide'))
+        HydrogenSilsesquioxane = new Material.Builder(8371, SuSyUtility.susyId('hydrogen_silsesquioxane'))
                 .dust()
-                .components(Barium, 1, Sulfur, 1)
-                .colorAverage()
-                .build();
+                .color(0xC7C0CB)
+                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
+                .build()
 
         BariumChloride = new Material.Builder(8372, SuSyUtility.susyId('barium_chloride'))
                 .dust()
@@ -3258,11 +3258,5 @@ public class FirstDegreeMaterials{
                 .components(Zinc, 1, Oxygen, 1)
                 .color(0xFFFFF5)
                 .build();
-
-        HydrogenSilsesquioxane = new Material.Builder(8576, SuSyUtility.susyId('hydrogen_silsesquioxane'))
-                .dust()
-                .color(0xC7C0CB)
-                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
-                .build()
     }
 }

@@ -813,7 +813,6 @@ class SuSyMaterials {
         public static Material MagnesiumChlorideAmmoniate;
         public static Material PurifiedMagnesiumChloride;
         public static Material WashedMagnesiumChlorideAmmoniate;
-        public static Material BariumSulfide;
         public static Material BariumChloride;
         public static Material BariumOxide;
         public static Material CrudeIronPentacarbonyl;
