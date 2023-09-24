@@ -3219,27 +3219,14 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        AcidWashedSiliconDioxide = new Material.Builder(8570, SuSyUtility.susyId('acid_washed_silicon_dioxide'))
-                .dust()
-                .components(SiliconDioxide, 1)
-                .color(0xc8c8c8)
-                .iconSet(SHINY)
-                .build();
-
-        DisulfurDichloride = new Material.Builder(8571, SuSyUtility.susyId('disulfur_dichloride'))
-                .fluid()
-                .components(Sulfur, 2, Chlorine, 2)
-                .color(0xccc31d)
-                .build();
-
-        Ferroplatinum = new Material.Builder(8572, SuSyUtility.susyId('ferroplatinum'))
+        Ferroplatinum = new Material.Builder(8570, SuSyUtility.susyId('ferroplatinum'))
                 .dust().ingot()
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Platinum, 3, Iron, 1)
                 .colorAverage()
                 .build();
 
-        Diamminedichloropalladium = new Material.Builder(8573, SuSyUtility.susyId('diamminedichloropalladium'))
+        Diamminedichloropalladium = new Material.Builder(8571, SuSyUtility.susyId('diamminedichloropalladium'))
                 .dust()
                 .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
                 .colorAverage()
@@ -3247,13 +3234,13 @@ public class FirstDegreeMaterials{
 
         Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
 
-        DecarburizedAir = new Material.Builder(8574, SuSyUtility.susyId('decarburized_air'))
+        DecarburizedAir = new Material.Builder(8572, SuSyUtility.susyId('decarburized_air'))
                 .fluid(FluidTypes.GAS)
                 .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
                 .color(0x90bbe0)
                 .build();
       
-        ZincOxide = new Material.Builder(8575, SuSyUtility.susyId("zinc_oxide"))
+        ZincOxide = new Material.Builder(8573, SuSyUtility.susyId("zinc_oxide"))
                 .dust()
                 .components(Zinc, 1, Oxygen, 1)
                 .color(0xFFFFF5)
