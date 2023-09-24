@@ -3238,5 +3238,31 @@ public class FirstDegreeMaterials{
                 .components(Platinum, 3, Iron, 1)
                 .colorAverage()
                 .build();
+
+        Diamminedichloropalladium = new Material.Builder(8573, SuSyUtility.susyId('diamminedichloropalladium'))
+                .dust()
+                .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
+                .colorAverage()
+                .build();
+
+        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
+
+        DecarburizedAir = new Material.Builder(8574, SuSyUtility.susyId('decarburized_air'))
+                .fluid(FluidTypes.GAS)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
+                .color(0x90bbe0)
+                .build();
+      
+        ZincOxide = new Material.Builder(8575, SuSyUtility.susyId("zinc_oxide"))
+                .dust()
+                .components(Zinc, 1, Oxygen, 1)
+                .color(0xFFFFF5)
+                .build();
+
+        HydrogenSilsesquioxane = new Material.Builder(8576, SuSyUtility.susyId('hydrogen_silsesquioxane'))
+                .dust()
+                .color(0xC7C0CB)
+                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
+                .build()
     }
 }
