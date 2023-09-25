@@ -223,18 +223,6 @@ for (type in StoneVariantBlock.StoneType.values()) {
     OreDictionary.registerOre('stone', variant)
 }
 
-//Saw oredict
-
-ore('toolSaw').remove(item('notreepunching:saw/iron'))
-ore('toolSaw').remove(item('notreepunching:saw/gold'))
-ore('toolSaw').remove(item('notreepunching:saw/diamond'))
-
-//No tree punching knife fixes
-
-ore('toolKnife').remove(item('notreepunching:knife/iron'))
-ore('toolKnife').remove(item('notreepunching:knife/gold'))
-ore('toolKnife').remove(item('notreepunching:knife/diamond'))
-
 //Manual Fixes
 ore('stickWood').add(item('minecraft:stick'))
 ore('stickIron').remove(item('industrialrenewal:stick_iron'))

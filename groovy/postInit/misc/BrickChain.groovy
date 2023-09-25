@@ -75,8 +75,6 @@ def mudbrick_mix_ingredients = [
 
 crafting.addShapeless('ManualMudbrickMix',metaitem('mudbrick_mix') * 2, mudbrick_mix_ingredients)
 
-crafting.addShapeless('StrawCutting',metaitem('straw') * 2, [ore('toolKnife'), item('notreepunching:grass_fiber')])
-
 def damage = { 
     stack -> 
         stack.setItemDamage(stack.getItemDamage() + 1)

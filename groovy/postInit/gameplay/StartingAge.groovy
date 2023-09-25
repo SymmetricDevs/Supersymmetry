@@ -8,14 +8,6 @@ final IGrinderRegistry reg = AEApi.instance().registries().grinder();
 log.infoMC("Running StartingAge.groovy...")
 
 def name_removals = [
-        "notreepunching:tools/iron_saw",
-        "notreepunching:tools/gold_saw",
-        "notreepunching:tools/diamond_saw",
-        "notreepunching:misc/clay_tool_clay_brick_2",
-        "notreepunching:misc/clay_tool_clay_brick",
-        "notreepunching:tools/iron_knife",
-        "notreepunching:tools/gold_knife",
-        "notreepunching:tools/diamond_knife",
         "biomesoplenty:mud_from_dirt"
 ]
 
@@ -23,34 +15,9 @@ for (item in name_removals) {
     crafting.remove(item);
 }
 
-crafting.addShapeless("fiber_from_cane", item('notreepunching:grass_fiber') * 2, [
-        item('minecraft:reeds'),
-        ore('toolknife')
-])
-
-crafting.addShapeless("fiber_from_wheat", item('notreepunching:grass_fiber') * 2, [
-        item('minecraft:wheat'),
-        ore('toolknife')
-])
-
-crafting.addShapeless("fiber_from_grass", item('notreepunching:grass_fiber'), [
-        item('minecraft:tallgrass', 1),
-        ore('toolknife')
-])
-
-crafting.addShapeless("fiber_from_leaves", item('notreepunching:grass_fiber'), [
-        ore('treeLeaves'),
-        ore('toolknife')
-])
-
 crafting.replaceShapeless("gregtech:clay_ball_to_dust", metaitem('dustClay'), [
         ore('craftingToolMortar'),
         ore('ingotClay')
-])
-
-crafting.replaceShapeless("gregtech:clay_block_to_dust", metaitem('dustClay') * 4, [
-        ore('craftingToolMortar'),
-        item('minecraft:clay')
 ])
 
 crafting.addShapeless("gregtech:mud_block_to_ball", item('biomesoplenty:mudball') * 4, [
