@@ -78,6 +78,24 @@ def ingotMap = [
         'IncoloyMa956':3625
 ]
 
+//MV Tweaks (from CEu #1724)
+
+// Kanthal Ingot * 1
+mods.gregtech.chemical_bath.removeByInput(120, [metaitem('ingotHotKanthal')], [fluid('water') * 100])
+// Kanthal Ingot * 1
+mods.gregtech.chemical_bath.removeByInput(120, [metaitem('ingotHotKanthal')], [fluid('distilled_water') * 100])
+
+for (fluid in IQuenchingFluid.quenching_fluids) {
+        recipemap('chemical_bath').recipeBuilder()
+                .inputs(ore('ingotHotKanthal'))
+                .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
+                .outputs(metaitem('ingotKanthal'))
+                .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
+                .duration((int) fluid.getDuration() * 4)
+                .EUt(120)
+                .buildAndRegister();
+}
+
 for (entry in ingotMap) {
     for (fluid in IQuenchingFluid.quenching_fluids) {
         recipemap('quencher').recipeBuilder()
@@ -139,7 +157,7 @@ for (entry in fluidMap) {
                 .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
                 .outputs(metaitem('ingot' + entry.value))
                 .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
-                .duration((int) ((int) fluid.getDuration() * (int) 2)) //IS THIS INT ENOUGH FOR YOU, GROOVYSCRIPT?!?!?!?
+                .duration((int) ((int) fluid.getDuration() * (int) 2))
                 .EUt(120)
                 .buildAndRegister();
     }
