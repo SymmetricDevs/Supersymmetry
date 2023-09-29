@@ -16331,6 +16331,18 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "industrialrenewal:electric_gate"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk_steel"
+            },
+            "5:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk_ladder_steel"
             }
           },
           "taskID:8": "bq_standard:retrieval"
