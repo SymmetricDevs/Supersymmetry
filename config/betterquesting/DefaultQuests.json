@@ -14779,7 +14779,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Littletiles §fis an incredibly powerful mod that allows you to manipulate blocks by their 16x16x16 subcomponents, known as §bpixels§r.\n\nThe §6Little Bag §rtakes in blocks and converts them to a form with a finite pixel quantity for use with §2Littletiles§r. It also takes in any dyes, and converts them to a quantity in the bag corresponding with the §bC§dM§d§eY§8K§r subtractive color model. (§bCyan, §dMagenta, §eYellow,§r and §8Key (black))\n\n§rThe §6Little Chisel, Little Hammer,§r §6Little Saw§r, and §6Little Glove§r can have their menus accessed by §a\u0027C\u0027§r by default, where you can set the draw shape, as well as setting a color, which will consume the color in the bag. §eYou may need to rebind this to something else, due to existing key conflicts in Supersymmetry. This bind is named \"Configure Tool\".§r You can see other options by looking at the text that shows up in the lower left corner when you hold the tool in your hand.  §e\n\n§fThe §6Little Chisel§r can be used for additive changes to §bpixels§r, and is used by §aright-clicking§r. \n\nThe §6Little Hammer§r can be used for subtractive changes to §bpixels§r, and is used by §aleft-clicking§r. \n\nThe §6Little Saw§r can be used for extrusive changes to §bfaces§r, and is used by §aright-clicking and shift right-clicking§r (The lower left corner is §4§c§lLYING§r to you)!\n\nThe §6Little Glove§r has multiple modes\n- Placing rectangles of pixels of defined dimensions\n- Copying placed structures to the hand (Recipe Mode)\n- Replacing pixels on the face you are looking at with other pixels\nAll of which are accessible by §aright-clicking§r.",
+          "desc:8": "§2Littletiles §fis an incredibly powerful mod that allows you to manipulate blocks by their 16x16x16 subcomponents, known as §bpixels§r.\n\nThe §6Little Bag §rtakes in blocks and converts them to a form with a finite pixel quantity for use with §2Littletiles§r. It also takes in any dyes, and converts them to a quantity in the bag corresponding with the §bC§dM§d§eY§8K§r subtractive color model. (§bCyan, §dMagenta, §eYellow,§r and §8Key (black)§f)\n\n§rThe §6Little Chisel, Little Hammer,§r §6Little Saw§r, and §6Little Glove§r can have their menus accessed by §a\u0027C\u0027§r by default, where you can set the draw shape, as well as setting a color, which will consume the color in the bag. §eYou may need to rebind this to something else, due to existing key conflicts in Supersymmetry. This bind is named \"Configure Tool\".§r You can see other options by looking at the text that shows up in the lower left corner when you hold the tool in your hand.  §e\n\n§fThe §6Little Chisel§r can be used for additive changes to §bpixels§r, and is used by §aright-clicking§r. \n\nThe §6Little Hammer§r can be used for subtractive changes to §bpixels§r, and is used by §aleft-clicking§r. \n\nThe §6Little Saw§r can be used for extrusive changes to §bfaces§r, and is used by §aright-clicking and shift right-clicking§r (The lower left corner is §4§c§lLYING§r to you)!\n\nThe §6Little Glove§r has multiple modes\n- Placing rectangles of pixels of defined dimensions\n- Copying placed structures to the hand (Recipe Mode)\n- Replacing pixels on the face you are looking at with other pixels\nAll of which are accessible by §aright-clicking§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16331,6 +16331,18 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "industrialrenewal:electric_gate"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk_steel"
+            },
+            "5:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk_ladder_steel"
             }
           },
           "taskID:8": "bq_standard:retrieval"
