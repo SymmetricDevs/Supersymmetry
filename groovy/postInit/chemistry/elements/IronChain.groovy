@@ -36,7 +36,8 @@ def EBF_RECIPES = recipemap("electric_blast_furnace")
 def blastables = [
     new Blastable('dustMagnetite', 7 , 6, 4, 80),
     new Blastable('dustBandedIron', 5 , 4, 3, 80),
-    new Blastable('dustIronIiiOxide', 5, 2, 3, 80),
+    new Blastable('dustHematite', 5 , 4, 3, 80),
+    new Blastable('dustIronIiiOxide', 5, 2, 3, 20),
     new Blastable('dustIronIiOxide', 2, 1, 1, 20),
     new Blastable('dustGraniticMineralSand', 14, 6, 4, 80),
     new Blastable('oreIron', 3, 2, 2, 60),
