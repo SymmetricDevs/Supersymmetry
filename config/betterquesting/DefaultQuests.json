@@ -24759,9 +24759,7 @@
     },
     "369:10": {
       "preRequisites:11": [
-        222,
-        438,
-        686
+        222
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29601,8 +29599,7 @@
     },
     "438:10": {
       "preRequisites:11": [
-        66,
-        787
+        369
       ],
       "properties:10": {
         "betterquesting:10": {
