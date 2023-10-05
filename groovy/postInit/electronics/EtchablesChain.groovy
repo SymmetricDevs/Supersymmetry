@@ -203,6 +203,15 @@ new PDopant("dustHighPurityAntimony", 1)
 new PDopant("dustHighPurityPhosphorus", 2)
 new PDopant("dustHighPurityArsenic", 2)
 
+MIXER.recipeBuilder()
+        .inputs(ore('dustTinyPotassiumHydroxide'))
+        .inputs(ore('dustSiliconDioxide') * 30)
+        .fluidInputs(fluid('deionized_water') * 10000)
+        .fluidOutputs(fluid('silicon_dioxide_slurry') * 10000)
+        .duration(200)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
 def generatePatterningRecipes(input, product, mask, voltageTier, timeMultiplier, int outputMultiplier, int circ, boolean cleanroom) {
     for (photoresist in Photoresist.photoresists) {
         if (cleanroom) {
