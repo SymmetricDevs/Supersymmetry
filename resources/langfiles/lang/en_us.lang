@@ -1,3 +1,8 @@
+# Vanilla Gregtech Renaming
+
+gregtech.material.phosphorus=White Phosphorus
+gregtech.material.rock_salt=Potassium Chloride
+
 # Chemistry
 
 susy.material.dichlorobenzene=1,4-Dichlorobenzene
@@ -324,7 +329,6 @@ susy.material.gallium_arsenide=Pure Gallium Arsenide
 
 susy.material.monocalcium_phosphate=Monocalcium Phosphate
 susy.material.calcium_phosphite=Calcium Phosphite
-susy.material.phosphorus=White Phosphorus
 susy.material.hydroxyapatite=Hydroxyapatite
 susy.material.calcium_metasilicate=Calcium Metasilicate
 

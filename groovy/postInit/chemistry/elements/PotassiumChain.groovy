@@ -9,6 +9,13 @@ REACTION_FURNACE = recipemap('reaction_furnace')
 FLBR = recipemap('fluidized_bed_reactor')
 CLARIFIER = recipemap('clarifier')
 
+CENTRIFUGE.recipeBuilder
+        .inputs(ore('dustPotashConcentrate') * 8)
+        .outputs(metaitem('dustRockSalt') * 2)
+        .EUt(30)
+        .duration(200)
+        .buildAndRegister()
+
 MIXER.recipeBuilder()
         .inputs(ore('dustPotashConcentrate') * 8)
         .fluidInputs(fluid('brine') * 2000)
