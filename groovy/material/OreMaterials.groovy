@@ -73,7 +73,7 @@ public class OreMaterials{
 
         VanadiferousTitanomagnetite = new Material.Builder(7006, SuSyUtility.susyId('vanadiferous_titanomagnetite'))
                 .dust().ore()
-                .flags(NO_SMELTING)
+                .flags(NO_SMELTING, GENERATE_SLURRIES)
                 .color(0x87685c)
                 .components(Vanadium, 1, Iron, 1, Titanium, 1, Oxygen, 4)
                 .build()
@@ -101,14 +101,14 @@ public class OreMaterials{
 
         Cerussite = new Material.Builder(7009, SuSyUtility.susyId('cerussite'))
                 .dust().ore()
-                .flags(NO_SMELTING)
+                .flags(NO_SMELTING, GENERATE_SLURRIES)
                 .color(0xe0d9ba)
                 .components(Lead, 1, Carbon, 1, Oxygen, 3)
                 .build();
 
         Anglesite = new Material.Builder(7010, SuSyUtility.susyId('anglesite'))
                 .dust().ore()
-                .flags(NO_SMELTING)
+                .flags(NO_SMELTING, GENERATE_SLURRIES)
                 .color(0xe0ded5)
                 .components(Lead, 1, Sulfur, 1, Oxygen, 4)
                 .build();
@@ -123,7 +123,7 @@ public class OreMaterials{
 
         Smithsonite = new Material.Builder(7012, SuSyUtility.susyId('smithsonite'))
                 .dust().ore()
-                .flags(NO_SMELTING)
+                .flags(NO_SMELTING, GENERATE_SLURRIES)
                 .color(0x6aadab)
                 .components(Zinc, 1, Carbon, 1, Oxygen, 3)
                 .build();
@@ -193,7 +193,7 @@ public class OreMaterials{
 
         Wolframite = new Material.Builder(7021, SuSyUtility.susyId('wolframite'))
                 .dust().ore()
-                .flags(NO_SMELTING)
+                .flags(NO_SMELTING, GENERATE_SIFTED, GENERATE_SLURRIES, GENERATE_FLOTATED)
                 .color(0x1e1c36)
                 .components(Iron, 1, Manganese, 1, Tungsten, 1, Oxygen, 4)
                 .build()
@@ -366,6 +366,7 @@ public class OreMaterials{
         Zircon = new Material.Builder(7047, SuSyUtility.susyId('zircon'))
                 .gem().ore()
                 .iconSet(SHINY)
+                .flags(GENERATE_SIFTED, GENERATE_FLOTATED, GENERATE_SLURRIES)
                 .color(0xf05c51)
                 .components(Zirconium, 1, Silicon, 1, Oxygen, 4)
                 .build();
@@ -462,6 +463,7 @@ public class OreMaterials{
                 .dust()
                 .color(0x574f2f)
                 .iconSet(SHINY)
+                .flags(GENERATE_SIFTED, GENERATE_FLOTATED, GENERATE_SLURRIES)
                 .components(Iron, 1, Manganese, 1, Niobium, 2, Oxygen, 6)
                 .build()
                 .setFormula('(Fe,Mn)Nb2O6)', true);

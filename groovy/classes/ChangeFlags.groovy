@@ -72,7 +72,18 @@ class ChangeFlags {
         AquaRegia.setFormula("(HNO3)(HCl)3", true);
         Tantalite.setFormula("(Fe,Mn)Ta2O6", true);
 
-	Borax.setProperty(PropertyKey.ORE, new OreProperty());
+	    Borax.setProperty(PropertyKey.ORE, new OreProperty());
+        Scheelite.addFlags("generate_sifted", "generate_slurries", "generate_flotated");
+        Pyrochlore.addFlags("generate_sifted", "generate_slurries", "generate_flotated");
+        Molybdenite.addFlags("generate_slurries", "generate_flotated");
+        Tantalite.addFlags("generate_sifted", "generate_slurries", "generate_flotated");
+        Galena.addFlags("generate_slurries");
+        Cinnabar.addFlags("generate_slurries");
+        Ilmenite.addFlags("generate_slurries");
+        Barite.addFlags("generate_slurries");
+        Spodumene.addFlags("generate_slurries");
+        Cassiterite.addFlags("generate_slurries");
+        Malachite.addFlags("generate_slurries");
 
         Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
         Asbestos.addFlags("generate_foil");

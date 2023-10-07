@@ -1701,10 +1701,10 @@ public class FirstDegreeMaterials{
                 .color(0x2c733a)
                 .build();
 
-        ImpureGalenaSlurry = new Material.Builder(8346, SuSyUtility.susyId('impure_galena_slurry'))
-                .fluid()
-                .components(Galena, 2, Water, 1)
-                .colorAverage()
+        ZincOxide = new Material.Builder(8346, SuSyUtility.susyId("zinc_oxide"))
+                .dust()
+                .components(Zinc, 1, Oxygen, 1)
+                .color(0xFFFFF5)
                 .build();
 
         CopperDross = new Material.Builder(8347, SuSyUtility.susyId('copper_dross'))
@@ -2986,19 +2986,17 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        SiftedZircon = new Material.Builder(8535, SuSyUtility.susyId('sifted_zircon'))
+        ZincOxide = new Material.Builder(8535, SuSyUtility.susyId("zinc_oxide"))
                 .dust()
-                .components(Zircon, 1)
-                .colorAverage()
-                .iconSet(SAND)
+                .components(Zinc, 1, Oxygen, 1)
+                .color(0xFFFFF5)
                 .build();
-
-        FlotatedZircon = new Material.Builder(8536, SuSyUtility.susyId('flotated_zircon'))
+                
+        HydrogenSilsesquioxane = new Material.Builder(85, SuSyUtility.susyId('hydrogen_silsesquioxane'))
                 .dust()
-                .components(Zircon, 1)
-                .colorAverage()
-                .iconSet(QUARTZ)
-                .build();
+                .color(0xC7C0CB)
+                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
+                .build()
 
         ZirconConcentrate = new Material.Builder(8537, SuSyUtility.susyId('zircon_concentrate'))
                 .dust()
@@ -3250,17 +3248,5 @@ public class FirstDegreeMaterials{
                 .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
                 .color(0x90bbe0)
                 .build();
-      
-        ZincOxide = new Material.Builder(8575, SuSyUtility.susyId("zinc_oxide"))
-                .dust()
-                .components(Zinc, 1, Oxygen, 1)
-                .color(0xFFFFF5)
-                .build();
-
-        HydrogenSilsesquioxane = new Material.Builder(8576, SuSyUtility.susyId('hydrogen_silsesquioxane'))
-                .dust()
-                .color(0xC7C0CB)
-                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
-                .build()
     }
 }
