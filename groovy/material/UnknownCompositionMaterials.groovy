@@ -1808,6 +1808,21 @@ public class UnknownCompositionMaterials {
         HydrogenSilsesquioxaneSolution = new Material.Builder(4344, SuSyUtility.susyId("hydrogen_silsesquioxane_solution"))
                 .fluid()
                 .color(0xa186b0)
+                .build
+     
+        OrganosiliconMixture = new Material.Builder(4344, "organosilicon_mixture")
+                .fluid()
+                .color(0xbebdb8)
                 .build();
+     
+        ImpurePolydimethylsiloxaneMixture = new Material.Builder(4345, "impure_polydimethylsiloxane_mixture")
+                .fluid()
+                .color(0xf6f7f0)
+                .build();
+     
+        RawPolydimethylsiloxaneMixture = new Material.Builder(4346, "raw_polydimethylsiloxane_mixture")
+                .fluid()
+                .color(0xf6f7f0)
+                .build();  
     }
 }
