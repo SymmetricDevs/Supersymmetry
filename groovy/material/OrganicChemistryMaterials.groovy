@@ -1777,5 +1777,46 @@ public class OrganicChemistryMaterials {
                 .build();
 
         TosylicAcidSolution.setFormula("(TsOH)(H2O)", true)
+
+        Dimethyldichlorosilane = new Material.Builder(15285, "dimethyldichlorosilane")
+                .fluid()
+                .compontents(Silicon, 1, Methane, 2, Chlorine, 2)
+                .color(0xd9dddc)
+                .build();
+
+        Dimethyldichlorosilane.setFormula("Si(CH3)2Cl2", true)
+        
+        Methyltrichlorosilane = new Material.Builder(15286, "methyltrichlorosilane")
+                .fluid()
+                .compontents(Methane, 1, Silicon, 1, Chlorine, 3)
+                .color(0xd9dddc)
+                .build();
+
+        Methyltrichlorosilane.setFormula("CH3SiCl3", true)
+
+        Methyldichlorosilane = new Material.Builder(15287, "methyldichlorosilane")
+                .fluid()
+                .compontents(Methane, 1, Chlorine, 2, Silicon, 1)
+                .color(0xd9dddc)
+                .build();
+
+        Methyldichlorosilane.setFormula("CH3Cl2Si", true)
+
+        Chlorotrimethylsilane = new Material.Builder(15287, "chlorotrimethylsilane")
+                .fluid()
+                .compontents(Methane, 3, Silicon, 1, Chlorine, 1)
+                .color(0xd9dddc)
+                .build();
+
+        Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
+        
+        Polydimethylsiloxane = new Material.Builder(15287, "polydimethylsiloxane")
+                .fluid()
+                .compontents(Methane, 6, Silicon, 2, Chlorine, 1)
+                .color(#f6f7f0)
+                .build();
+
+        Polydimethylsiloxane.setFormula("CH3[Si(CH3)2O]Si(CH3)3", true)
+        
     }
 }
