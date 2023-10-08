@@ -16966,7 +16966,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combine §6Glue §rand wood pulp in an Assembler to make a phenolic circuit board. Then coat it with §7silver §rwires to finalize the circuit board.\n\n§cTODO: ADD SILVER ",
+          "desc:8": "Combine §6Glue §rand wood pulp in an Assembler to make a phenolic circuit board. Then coat it with §7silver §rwires to finalize the circuit board.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21158,7 +21158,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Cesium (Cs)\n§bAtomic Number§r: 55\n§aAtomic Mass§r: 132.91 amu\n§cMelting Point§r: 301.59 K\n§5Boiling Point§r: 944 K\n§6Properties§r: Cesium is an alkali metal known for its low ionization energy and reactivity with water. It is used in atomic clocks, catalysts, and in some medical applications.\n",
+          "desc:8": "§6Element§r: Caesium (Cs)\n§bAtomic Number§r: 55\n§aAtomic Mass§r: 132.91 amu\n§cMelting Point§r: 301.59 K\n§5Boiling Point§r: 944 K\n§6Properties§r: Caesium is an alkali metal known for its low ionization energy and reactivity with water. It is used in atomic clocks, catalysts, and in some medical applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
