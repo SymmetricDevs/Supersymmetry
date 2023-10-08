@@ -1053,10 +1053,9 @@ public class UnknownCompositionMaterials {
                 .color(0x11915c)
                 .build();
 
-        ColumbiteConcentrate = new Material.Builder(4200, SuSyUtility.susyId('columbite_concentrate'))
-                .dust()
-                .color(0x574f2f)
-                .iconSet(DULL)
+        NineTwentyOneFattyAcidMixture = new Material.Builder(4200, SuSyUtility.susyId('nine_twenty_one_fatty_acid_mixture'))
+                .fluid()
+                .color(0xa37b1d)
                 .build();
 
         SiliconDioxideSlurry = new Material.Builder(4201, SuSyUtility.susyId('silicon_dioxide_slurry'))
@@ -1064,9 +1063,9 @@ public class UnknownCompositionMaterials {
                 .color(0x69675b)
                 .build();
 
-        VTMConcentrate = new Material.Builder(4202, SuSyUtility.susyId('vtm_concentrate'))
-                .dust()
-                .color(0x691e21)
+        NineTwentyOneAldehydeMixture = new Material.Builder(4202, SuSyUtility.susyId('nine_twenty_one_aldehyde_mixture'))
+                .fluid()
+                .color(0x911da3)
                 .build();
 
         VTSlag = new Material.Builder(4203, SuSyUtility.susyId('vt_slag'))
@@ -1207,12 +1206,10 @@ public class UnknownCompositionMaterials {
                 .color(0xa31d53)
                 .build();
 
-        ImpureIlmeniteConcentrate = new Material.Builder(4230, SuSyUtility.susyId('impure_ilmenite_concentrate'))
-                .dust()
-                .color(0x4a474c).iconSet(ROUGH)
+        ScrubbedTungstenExtract = new Material.Builder(4230, SuSyUtility.susyId('scrubbed_tungsten_extract'))
+                .fluid()
+                .color(0x85a825)
                 .build();
-
-        ImpureIlmeniteConcentrate.setFormula('(FeTiO3)(?)', true);
 
         RoastedPyrochlore = new Material.Builder(4231, SuSyUtility.susyId('roasted_pyrochlore'))
                 .dust()
@@ -1285,7 +1282,7 @@ public class UnknownCompositionMaterials {
                 .color(0x5a34ad)
                 .build();
 
-        SphaleriteByproductsSlurry = new Material.Builder(4244, SuSyUtility.susyId('sphalerite_byproducts_slurry'))
+        SphaleriteByproductSlurry = new Material.Builder(4244, SuSyUtility.susyId('sphalerite_byproduct_slurry'))
                 .fluid()
                 .color(0x9f97a1)
                 .build();
@@ -1295,10 +1292,9 @@ public class UnknownCompositionMaterials {
                 .color(0x4a320a)
                 .build();
 
-        PyrochloreConcentrate = new Material.Builder(4246, SuSyUtility.susyId('pyrochlore_concentrate'))
-                .dust()
-                .color(0x2b1100)
-                .iconSet(DULL)
+        TungstenExtract = new Material.Builder(4246, SuSyUtility.susyId('tungsten_extract'))
+                .fluid()
+                .color(0x9e7c2e)
                 .build();
 
         AminatedEthyleneMixture = new Material.Builder(4247, SuSyUtility.susyId('aminated_ethylene_mixture'))
@@ -1341,10 +1337,9 @@ public class UnknownCompositionMaterials {
                 .color(0x9e935c)
                 .build();
 
-        TantaliteConcentrate = new Material.Builder(4255, SuSyUtility.susyId('tantalite_concentrate'))
-                .dust()
-                .color(0x915028)
-                .iconSet(DULL)
+        TungstenExtractionMixture = new Material.Builder(4255, SuSyUtility.susyId('tungsten_extraction_mixture'))
+                .fluid()
+                .color(0xbfb341)
                 .build();
 
         LimestoneTailingSlurry = new Material.Builder(4256, SuSyUtility.susyId('limestone_tailing_slurry'))
@@ -1493,31 +1488,6 @@ public class UnknownCompositionMaterials {
         IsodecanalMixture = new Material.Builder(4283, SuSyUtility.susyId('isodecanal_mixture'))
                 .fluid()
                 .color(0xadad45)
-                .build();
-
-        TungstenExtractionMixture = new Material.Builder(4284, SuSyUtility.susyId('tungsten_extraction_mixture'))
-                .fluid()
-                .color(0xbfb341)
-                .build();
-
-        TungstenExtract = new Material.Builder(4285, SuSyUtility.susyId('tungsten_extract'))
-                .fluid()
-                .color(0x9e7c2e)
-                .build();
-
-        ScrubbedTungstenExtract = new Material.Builder(4286, SuSyUtility.susyId('scrubbed_tungsten_extract'))
-                .fluid()
-                .color(0x85a825)
-                .build();
-
-        NineTwentyOneAldehydeMixture = new Material.Builder(4287, SuSyUtility.susyId('nine_twenty_one_aldehyde_mixture'))
-                .fluid()
-                .color(0x911da3)
-                .build();
-                
-        NineTwentyOneFattyAcidMixture = new Material.Builder(4288, SuSyUtility.susyId('nine_twenty_one_fatty_acid_mixture'))
-                .fluid()
-                .color(0xa37b1d)
                 .build();
     }
 }

@@ -1786,11 +1786,10 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        CassiteriteConcentrate = new Material.Builder(8360, SuSyUtility.susyId('cassiterite_concentrate'))
-                .dust()
-                .components(Cassiterite, 1)
-                .colorAverage()
-                .iconSet(SHINY)
+        DecarburizedAir = new Material.Builder(8360, SuSyUtility.susyId('decarburized_air'))
+                .fluid(FluidTypes.GAS)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
+                .color(0x90bbe0)
                 .build();
 
         CrudeTin = new Material.Builder(8361, SuSyUtility.susyId('crude_tin'))
@@ -2633,13 +2632,13 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        RutileConcentrate = new Material.Builder(8485, SuSyUtility.susyId('rutile_concentrate'))
+        Diamminedichloropalladium = new Material.Builder(8485, SuSyUtility.susyId('diamminedichloropalladium'))
                 .dust()
-                .components(Rutile, 1)
-                .color(0x503f3e)
+                .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
+                .colorAverage()
                 .build();
 
-        RutileConcentrate.setFormula("(TiO2)(?)", true);
+        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
 
         UltramaficTailingSlurry = new Material.Builder(8486, SuSyUtility.susyId('ultramafic_tailing_slurry'))
                 .fluid()
@@ -2992,17 +2991,17 @@ public class FirstDegreeMaterials{
                 .color(0xFFFFF5)
                 .build();
                 
-        HydrogenSilsesquioxane = new Material.Builder(85, SuSyUtility.susyId('hydrogen_silsesquioxane'))
+        HydrogenSilsesquioxane = new Material.Builder(8536, SuSyUtility.susyId('hydrogen_silsesquioxane'))
                 .dust()
                 .color(0xC7C0CB)
                 .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
                 .build()
 
-        ZirconConcentrate = new Material.Builder(8537, SuSyUtility.susyId('zircon_concentrate'))
-                .dust()
-                .components(Zircon, 1)
+        Ferroplatinum = new Material.Builder(8537, SuSyUtility.susyId('ferroplatinum'))
+                .dust().ingot()
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Platinum, 3, Iron, 1)
                 .colorAverage()
-                .iconSet(DULL)
                 .build();
 
         FusedZirconia = new Material.Builder(8538, SuSyUtility.susyId('fused_zirconia'))
@@ -3226,27 +3225,6 @@ public class FirstDegreeMaterials{
                 .fluid()
                 .components(Sulfur, 2, Chlorine, 2)
                 .color(0xccc31d)
-                .build();
-
-        Ferroplatinum = new Material.Builder(8572, SuSyUtility.susyId('ferroplatinum'))
-                .dust().ingot()
-                .flags(DISABLE_DECOMPOSITION)
-                .components(Platinum, 3, Iron, 1)
-                .colorAverage()
-                .build();
-
-        Diamminedichloropalladium = new Material.Builder(8573, SuSyUtility.susyId('diamminedichloropalladium'))
-                .dust()
-                .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
-                .colorAverage()
-                .build();
-
-        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
-
-        DecarburizedAir = new Material.Builder(8574, SuSyUtility.susyId('decarburized_air'))
-                .fluid(FluidTypes.GAS)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
-                .color(0x90bbe0)
                 .build();
     }
 }

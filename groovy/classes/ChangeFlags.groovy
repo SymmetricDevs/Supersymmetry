@@ -74,16 +74,17 @@ class ChangeFlags {
 
 	    Borax.setProperty(PropertyKey.ORE, new OreProperty());
         Scheelite.addFlags("generate_sifted", "generate_slurries", "generate_flotated");
-        Pyrochlore.addFlags("generate_sifted", "generate_slurries", "generate_flotated");
+        Pyrochlore.addFlags("generate_sifted", "generate_slurries", "generate_flotated", "generate_concentrate");
         Molybdenite.addFlags("generate_slurries", "generate_flotated");
-        Tantalite.addFlags("generate_sifted", "generate_slurries", "generate_flotated");
+        Tantalite.addFlags("generate_sifted", "generate_slurries", "generate_flotated", "generate_concentrate");
         Galena.addFlags("generate_slurries");
         Cinnabar.addFlags("generate_slurries");
-        Ilmenite.addFlags("generate_slurries");
+        Ilmenite.addFlags("generate_slurries", "generate_flotated");
         Barite.addFlags("generate_slurries");
         Spodumene.addFlags("generate_slurries");
-        Cassiterite.addFlags("generate_slurries");
+        Cassiterite.addFlags("generate_slurries", "generate_concentrate");
         Malachite.addFlags("generate_slurries");
+        Rutile.addFlags("generate_concentrate");
 
         Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
         Asbestos.addFlags("generate_foil");

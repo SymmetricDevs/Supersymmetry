@@ -73,7 +73,7 @@ public class OreMaterials{
 
         VanadiferousTitanomagnetite = new Material.Builder(7006, SuSyUtility.susyId('vanadiferous_titanomagnetite'))
                 .dust().ore()
-                .flags(NO_SMELTING, GENERATE_SLURRIES)
+                .flags(NO_SMELTING, GENERATE_SLURRIES, GENERATE_FLOTATED)
                 .color(0x87685c)
                 .components(Vanadium, 1, Iron, 1, Titanium, 1, Oxygen, 4)
                 .build()
@@ -366,7 +366,7 @@ public class OreMaterials{
         Zircon = new Material.Builder(7047, SuSyUtility.susyId('zircon'))
                 .gem().ore()
                 .iconSet(SHINY)
-                .flags(GENERATE_SIFTED, GENERATE_FLOTATED, GENERATE_SLURRIES)
+                .flags(GENERATE_SIFTED, GENERATE_FLOTATED, GENERATE_SLURRIES, GENERATE_CONCENTRATE)
                 .color(0xf05c51)
                 .components(Zirconium, 1, Silicon, 1, Oxygen, 4)
                 .build();
@@ -463,7 +463,7 @@ public class OreMaterials{
                 .dust()
                 .color(0x574f2f)
                 .iconSet(SHINY)
-                .flags(GENERATE_SIFTED, GENERATE_FLOTATED, GENERATE_SLURRIES)
+                .flags(GENERATE_SIFTED, GENERATE_FLOTATED, GENERATE_SLURRIES, GENERATE_CONCENTRATE)
                 .components(Iron, 1, Manganese, 1, Niobium, 2, Oxygen, 6)
                 .build()
                 .setFormula('(Fe,Mn)Nb2O6)', true);

@@ -315,7 +315,6 @@ class SuSyMaterials {
         public static Material PotashSlurry;
         public static Material SupersaturatedBrine;
         public static Material SiliconDioxideSlurry;
-        public static Material VTMConcentrate;
         public static Material VTSlag;
         public static Material AlkaliVTSlag;
         public static Material TitaniaSlag;
@@ -342,12 +341,10 @@ class SuSyMaterials {
         public static Material CesiumMolecularSieve;
         public static Material SaturatedPotassiumMolecularSieve;
         public static Material SaturatedCesiumMolecularSieve;
-        public static Material ImpureIlmeniteConcentrate;
         public static Material AcidicWastewater;
         public static Material ImpureTitaniumTetrachloride;
         public static Material DistilledTitaniumTetrachloride;
         public static Material VanadiumFreeTitaniumTetrachloride;
-        public static Material RutileConcentrate;
         public static Material UltramaficTailingSlurry;
         public static Material GaseousIronIIIChloride;
         public static Material GaseousTitaniumTetrachloride;
@@ -355,7 +352,7 @@ class SuSyMaterials {
         public static Material DirtyMolecularSieve;
         public static Material OligomericBisphenolSolution;
         public static Material GraniteTailingSlurry;
-        public static Material SphaleriteByprocutsSlurry;
+        public static Material SphaleriteByproductsSlurry;
         public static Material PegmatiteTailingSlurry;
         public static Material FilteredPhosphateSlurry;
         public static Material PhosphateConcentrateSlurry;
@@ -380,11 +377,9 @@ class SuSyMaterials {
         public static Material ZSMFive;
         public static Material AminatedEthyleneMixture;
 	public static Material NeutralizedAminatedEthyleneMixture;
-        public static Material PyrochloreConcentrate;
         public static Material RoastedPyrochlore;
         public static Material DigestedPyrochlore;
         public static Material ImpureNiobiumPentachloride;
-        public static Material ColumbiteConcentrate;
         public static Material ImpureFluoroniobicAcidSolution;
         public static Material NiobiumRichExtract;
         public static Material MetalSulfateWaste;
@@ -392,7 +387,6 @@ class SuSyMaterials {
         public static Material DilutedTantalumExtract;
         public static Material FluoroniobicAcidSolution;
         public static Material DilutedNiobiumExtract;
-        public static Material TantaliteConcentrate;
         public static Material ImpureFluorotantalicAcidSolution;
         public static Material TantalumRichExtract;
         public static Material ScrubbedTantalumRichExtract;
@@ -754,7 +748,6 @@ class SuSyMaterials {
         public static Material SaltyArsenicPentoxide;
         public static Material TinIVOxide;
         public static Material AntimonyVOxide;
-        public static Material CassiteriteConcentrate;
         public static Material CrudeTin;
         public static Material LeachedCassiteriteConcentrate;
         public static Material AmmoniumTungstateSolution;

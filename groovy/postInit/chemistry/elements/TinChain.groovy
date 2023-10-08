@@ -53,14 +53,14 @@ CENTRIFUGE.recipeBuilder()
 
 EM_SEPARATOR.recipeBuilder()
         .inputs(ore('dustCassiterite'))
-        .outputs(metaitem('dustCassiteriteConcentrate'))
+        .outputs(metaitem('dustConcentrateCassiterite'))
         .chancedOutput(metaitem('dustHematite'), 2500, 0)
         .EUt(7)
         .duration(100)
         .buildAndRegister()
 
 CHEMICAL_BATH.recipeBuilder()
-        .inputs(metaitem('dustCassiteriteConcentrate'))
+        .inputs(metaitem('dustConcentrateCassiterite'))
         .fluidInputs(fluid('ammonia_solution') * 120)
         .fluidOutputs(fluid('ammonium_tungstate_solution') * 60)
         .outputs(metaitem('dustLeachedCassiteriteConcentrate'))
@@ -73,7 +73,7 @@ def combustibles = Globals.combustibles
 
 for (combustible in combustibles) {
     REACTION_FURNACE.recipeBuilder()
-            .inputs(ore('dustCassiteriteConcentrate'))
+            .inputs(ore('dustConcentrateCassiterite'))
             .inputs(ore(combustible.name) * (combustible.amount_required) * 2)
             .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_tin') * 190)
