@@ -185,6 +185,15 @@ susy.material.black_liquor=Black Liquor
 susy.material.concentrated_black_liquor=Concentrated Black Liquor
 susy.material.green_liquor=Green Liquor
 
+susy.material.organosilicon_mixture=Organosilicon Mixture
+susy.material.impure_polydimethylsiloxane_mixture=Impure Polydimethylsiloxane Mixture
+susy.material.raw_polydimethylsiloxane_mixture=Raw Polydimethylsiloxane Mixture
+susy.material.polydimethylsiloxane=Polydimethylsiloxane
+susy.material.chlorotrimethylsilane=Chlorotrimethylsilane
+susy.material.methyldichlorosilane=Methyldichlorosilane
+susy.material.methyltrichlorosilane=Methyltrichlorosilane
+susy.material.dimethyldichlorosilane=Dimethyldichlorosilane
+
 # Solids
 
 susy.material.pig_iron=Pig Iron
