@@ -1672,7 +1672,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §7Coke Oven §ris a hollow 3x3x3 structure made of Coke Bricks with a Coke Oven Controller in the center.\nIt turns §7Coal §rinto §7Coal Coke§r, and Logs into Charcoal.\n\nCoal Coke burns longer in furnaces, and in small coal boilers. \n\nThe Coke Oven also produces Creosote Oil, which can be used either as furnace fuel or for creating§6 Treated Wood §rblcoks.",
+          "desc:8": "The §7Coke Oven §ris a hollow 3x3x3 structure made of Coke Bricks with a Coke Oven Controller in the center.\nIt turns §7Coal §rinto §7Coal Coke§r, and Logs into Charcoal.\n\nCoal Coke burns longer in furnaces, and in small coal boilers. \n\nThe Coke Oven also produces Creosote Oil, which can be used either as furnace fuel or for creating§6 Treated Wood §rblocks.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14779,7 +14779,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Littletiles §fis an incredibly powerful mod that allows you to manipulate blocks by their 16x16x16 subcomponents, known as §bpixels§r.\n\nThe §6Little Bag §rtakes in blocks and converts them to a form with a finite pixel quantity for use with §2Littletiles§r. It also takes in any dyes, and converts them to a quantity in the bag corresponding with the §bC§dM§d§eY§8K§r subtractive color model. (§bCyan, §dMagenta, §eYellow,§r and §8Key (black))\n\n§rThe §6Little Chisel, Little Hammer,§r §6Little Saw§r, and §6Little Glove§r can have their menus accessed by §a\u0027C\u0027§r by default, where you can set the draw shape, as well as setting a color, which will consume the color in the bag. §eYou may need to rebind this to something else, due to existing key conflicts in Supersymmetry. This bind is named \"Configure Tool\".§r You can see other options by looking at the text that shows up in the lower left corner when you hold the tool in your hand.  §e\n\n§fThe §6Little Chisel§r can be used for additive changes to §bpixels§r, and is used by §aright-clicking§r. \n\nThe §6Little Hammer§r can be used for subtractive changes to §bpixels§r, and is used by §aleft-clicking§r. \n\nThe §6Little Saw§r can be used for extrusive changes to §bfaces§r, and is used by §aright-clicking and shift right-clicking§r (The lower left corner is §4§c§lLYING§r to you)!\n\nThe §6Little Glove§r has multiple modes\n- Placing rectangles of pixels of defined dimensions\n- Copying placed structures to the hand (Recipe Mode)\n- Replacing pixels on the face you are looking at with other pixels\nAll of which are accessible by §aright-clicking§r.",
+          "desc:8": "§2Littletiles §fis an incredibly powerful mod that allows you to manipulate blocks by their 16x16x16 subcomponents, known as §bpixels§r.\n\nThe §6Little Bag §rtakes in blocks and converts them to a form with a finite pixel quantity for use with §2Littletiles§r. It also takes in any dyes, and converts them to a quantity in the bag corresponding with the §bC§dM§d§eY§8K§r subtractive color model. (§bCyan, §dMagenta, §eYellow,§r and §8Key (black)§f)\n\n§rThe §6Little Chisel, Little Hammer,§r §6Little Saw§r, and §6Little Glove§r can have their menus accessed by §a\u0027C\u0027§r by default, where you can set the draw shape, as well as setting a color, which will consume the color in the bag. §eYou may need to rebind this to something else, due to existing key conflicts in Supersymmetry. This bind is named \"Configure Tool\".§r You can see other options by looking at the text that shows up in the lower left corner when you hold the tool in your hand.  §e\n\n§fThe §6Little Chisel§r can be used for additive changes to §bpixels§r, and is used by §aright-clicking§r. \n\nThe §6Little Hammer§r can be used for subtractive changes to §bpixels§r, and is used by §aleft-clicking§r. \n\nThe §6Little Saw§r can be used for extrusive changes to §bfaces§r, and is used by §aright-clicking and shift right-clicking§r (The lower left corner is §4§c§lLYING§r to you)!\n\nThe §6Little Glove§r has multiple modes\n- Placing rectangles of pixels of defined dimensions\n- Copying placed structures to the hand (Recipe Mode)\n- Replacing pixels on the face you are looking at with other pixels\nAll of which are accessible by §aright-clicking§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16331,6 +16331,18 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "industrialrenewal:electric_gate"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk_steel"
+            },
+            "5:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk_ladder_steel"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -24747,9 +24759,7 @@
     },
     "369:10": {
       "preRequisites:11": [
-        222,
-        438,
-        686
+        222
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29502,7 +29512,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§a High Pressure Oxygen §r§r§ris then cooled to make §bCold High Pressure Oxygen. §f\nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Monoxide or Cold Propane§r.\n\n§bCold Carbon Dioxide §rcan be made by first compressing Carbon Dioxide into Hot Compressed CO2, then radiating out the heat using a Radiator, and then decompressing it to make §bCold CO2§r.",
+          "desc:8": "The§a High Pressure Oxygen §r§r§ris then cooled to make §bCold High Pressure Oxygen. §f\nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Dioxide or Cold Propane§r.\n\n§bCold Carbon Dioxide §rcan be made by first compressing Carbon Dioxide into Hot Compressed CO2, then radiating out the heat using a Radiator, and then decompressing it to make §bCold CO2§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29590,7 +29600,8 @@
     "438:10": {
       "preRequisites:11": [
         66,
-        787
+        787,
+        369
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33431,7 +33442,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Microprocessors §rare the second type of §cLV §rcircuit that you make. They are made in the same way as Integrated Processors, but using less materials and a copper foil. \n\nMaking these is faster than making LV circuits manually using the traditional process.",
+          "desc:8": "§6Microprocessors §rare the second type of §cLV §rcircuits that you make. They are made in the same way as Integrated Processors, but using less materials and some fine copper wire. \n\nMaking these is faster than making LV circuits manually using the traditional process.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34535,7 +34546,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Steel needs to be reacted with Carbon Monoxide in a §aReaction Furnace§r to produce §7Crude Iron Pentacarbonyl§r, that needs to be distilled to make §7Iron Pentacarbonyl§r.\n\nIron Pentacarbonyl then goes in the batch reactor to make §4High Purity Iron§o§r.\n\n\n",
+          "desc:8": "Iron Dust needs to be reacted with Carbon Monoxide in a §aReaction Furnace§r to produce §7Crude Iron Pentacarbonyl§r, this needs to be distilled to make §7Iron Pentacarbonyl§r.\n\nIron Pentacarbonyl then goes in a roaster to make §4High Purity Iron§o§r.\n\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34745,7 +34756,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§1Cobaltite §rneeds to be roasted to make §aCobalt Oxide§r.\n\nCombine §aCobalt Oxide §rwith §4Purified Iron III Oxide §r§rto make Nickel Zinc Ferrite.\n",
+          "desc:8": "§1Nickel §rneeds to be roasted with Oxygen to make §aNickel II Oxide§r.\n\nCombine §aNickel II Oxide §rwith §4Purified Iron III Oxide §r§r and Zincite to make Nickel Zinc Ferrite.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
