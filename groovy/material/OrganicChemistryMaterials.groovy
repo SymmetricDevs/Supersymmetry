@@ -1811,7 +1811,7 @@ public class OrganicChemistryMaterials {
         Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
         
         Polydimethylsiloxane = new Material.Builder(15287, "polydimethylsiloxane")
-                .fluid()
+                .dust().fluid()
                 .compontents(Methane, 6, Silicon, 2, Chlorine, 1)
                 .color(#f6f7f0)
                 .build();
