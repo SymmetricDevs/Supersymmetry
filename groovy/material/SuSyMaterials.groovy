@@ -476,6 +476,10 @@ class SuSyMaterials {
         public static Material AcidicHydrogenSilsesquioxaneSolution;
         public static Material HydrogenSilsesquioxaneSolution;
 
+	public static Material OrganosiliconMixture;
+	public static Material ImpurePolydimethylsiloxaneMixture;
+	public static Material RawPolydimethylsiloxaneMixture;
+
         // Petrochem Materials
 
         public static Material DilutedOil;
