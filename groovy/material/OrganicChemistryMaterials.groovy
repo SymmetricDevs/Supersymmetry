@@ -1813,7 +1813,7 @@ public class OrganicChemistryMaterials {
         Polydimethylsiloxane = new Material.Builder(15287, "polydimethylsiloxane")
                 .dust().fluid()
                 .compontents(Methane, 6, Silicon, 2, Chlorine, 1)
-                .color(#f6f7f0)
+                .color(0xf6f7f0)
                 .build();
 
         Polydimethylsiloxane.setFormula("CH3[Si(CH3)2O]Si(CH3)3", true)
