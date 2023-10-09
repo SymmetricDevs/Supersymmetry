@@ -84,8 +84,6 @@ class ChangeFlags {
         SiliconDioxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());
 
-        Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
-
         Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Cadmium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
