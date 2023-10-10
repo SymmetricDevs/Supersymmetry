@@ -34,19 +34,19 @@ def PBF_RECIPES = recipemap("primitive_blast_furnace")
 def EBF_RECIPES = recipemap("electric_blast_furnace")
 
 def blastables = [
-    new Blastable('dustMagnetite', 7 , 6, 4, 80),
-    new Blastable('dustBandedIron', 5 , 4, 3, 80),
-    new Blastable('dustHematite', 5 , 4, 3, 80),
+    new Blastable('dustMagnetite', 2, 6, 4, 80),
+    new Blastable('dustBandedIron', 2, 4, 3, 80),
+    new Blastable('dustHematite', 2, 4, 3, 80),
     new Blastable('dustIronIiiOxide', 5, 2, 3, 20),
     new Blastable('dustIronIiOxide', 2, 1, 1, 20),
-    new Blastable('dustGraniticMineralSand', 14, 6, 4, 80),
-    new Blastable('oreIron', 3, 2, 2, 60),
-    new Blastable('oreMagnetite', 7, 3, 4, 60),
-    new Blastable('oreBandedIron', 5, 2, 3, 60),
-    new Blastable('oreNetherrackMagnetite', 7, 6, 4, 60),
-    new Blastable('oreNetherrackBandedIron', 5, 4, 3, 60),
-    new Blastable('oreEndstoneMagnetite', 7, 6, 4, 60),
-    new Blastable('oreEndstoneBandedIron', 5, 4, 3, 60)
+    new Blastable('dustGraniticMineralSand', 2, 6, 4, 80),
+    new Blastable('oreIron', 2, 2, 2, 60),
+    new Blastable('oreMagnetite', 1, 3, 4, 60),
+    new Blastable('oreBandedIron', 1, 2, 3, 60),
+    new Blastable('oreNetherrackMagnetite', 1, 6, 4, 60),
+    new Blastable('oreNetherrackBandedIron', 1, 4, 3, 60),
+    new Blastable('oreEndstoneMagnetite', 1, 6, 4, 60),
+    new Blastable('oreEndstoneBandedIron', 1, 4, 3, 60)
 ]
 
 def reductants = [
