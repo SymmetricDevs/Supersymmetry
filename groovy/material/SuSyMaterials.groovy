@@ -407,7 +407,7 @@ class SuSyMaterials {
         public static Material PropanalMixture;
         public static Material ZSMFive;
         public static Material AminatedEthyleneMixture;
-	public static Material NeutralizedAminatedEthyleneMixture;
+		public static Material NeutralizedAminatedEthyleneMixture;
         public static Material SiftedPyrochlore;
         public static Material PyrochloreConcentrate;
         public static Material ImpurePyrochloreSlurry;
@@ -475,6 +475,17 @@ class SuSyMaterials {
         public static Material SuEight;
         public static Material AcidicHydrogenSilsesquioxaneSolution;
         public static Material HydrogenSilsesquioxaneSolution;
+        public static Material AlkalineSaltRedMudMixture;
+        public static Material RoastedAlkalineSaltRedMudMixture;
+        public static Material LeachedRedMudResidue;
+        public static Material OrganicLoadedRedMudMixture;
+        public static Material ScrubbedOrganicLoadedRedMudMixture;
+        public static Material PrimeneJmt;
+        public static Material PurifiedLeachedRedMud;
+        public static Material ImpureSodiumScandateSolution;
+        public static Material ImpureScandiumHydroxide;
+        public static Material ImpureScandiumChlorideSolution;
+        public static Material ImpureScandiumSulfateSolution;
 
         // Petrochem Materials
 
@@ -1004,6 +1015,10 @@ class SuSyMaterials {
         public static Material SodiumHexafluoroantimonate;
         public static Material AcidWashedSiliconDioxide;
         public static Material DisulfurDichloride;
+        public static Material SodiumPhosphate;
+        public static Material ScandiumOxalate;
+        public static Material ScandiumOxide;
+        public static Material ScandiumFluoride;
 
         // Second Degree Materials
 
@@ -1102,6 +1117,8 @@ class SuSyMaterials {
         public static Material SodiumHexafluoroantimonateSolution;
         public static Material EGlass;
         public static Material TrichlorosilaneSolution;
+        public static Material SodiumPhosphateSolution;
+        public static Material DilutedSodiumPhosphateSolution;
 
         // Organic Chemistry Materials
 
