@@ -327,7 +327,7 @@ public class ThirdDegreeMaterials {
 
         DichlorobistriphenylphosphinenickelII = new Material.Builder(24051, SuSyUtility.susyId('dichlorobistriphenylphosphinenickel_ii'))
                 .dust()
-                .components(Nickel, 1, Chlorine, 2, TriphenylPhosphine, 2)
+                .components(Nickel, 1, Chlorine, 2, Triphenylphosphine, 2)
                 .colorAverage()
                 .build();
 
@@ -335,7 +335,7 @@ public class ThirdDegreeMaterials {
 
         DicarbonylbistriphenylphosphinenickelZero = new Material.Builder(24052, SuSyUtility.susyId('dicarbonylbistriphenylphosphinenickel_zero'))
                 .dust()
-                .components(Nickel, 1, Carbon, 2, Oxygen, 2, TriphenylPhosphine, 2)
+                .components(Nickel, 1, Carbon, 2, Oxygen, 2, Triphenylphosphine, 2)
                 .colorAverage()
                 .build();
 
