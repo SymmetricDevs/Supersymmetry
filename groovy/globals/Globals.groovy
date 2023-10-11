@@ -1,15 +1,9 @@
-import gregtech.integration.groovy.GroovyScriptCompat
-
 import com.cleanroommc.groovyscript.api.IIngredient
 
 class Globals {
 
     public static void main (String[] args) {
 
-    }
-
-    public static IIngredient circuit(int x) {
-        return GroovyScriptCompat.getMetaItem('circuit.integrated').withNbt([Configuration: x])
     }
 
     public static voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
@@ -83,5 +77,21 @@ class Globals {
         new InertGas('nitrogen', 8000, 4),
         new InertGas('helium', 4000, 2),
         new InertGas('argon', 1000, 1)
+    ]
+
+    public static class Lubricant {
+        String name
+        int amount_required
+        double boost
+        Lubricant(name, amount_required, boost) {
+            this.name = name
+            this.amount_required = amount_required
+            this.boost = boost
+        }
+    }
+
+    public static lubricants = [
+        new Lubricant('lubricating_oil', 1, 1.1),
+        new Lubricant('lubricant', 2, 1.2)
     ]
 }

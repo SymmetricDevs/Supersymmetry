@@ -1,5 +1,5 @@
 import gregtech.api.unification.material.Material;
-import gregtech.api.GregTechAPI;
+import gregtech.api.unification.material.event.MaterialEvent;
 
 /*
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -9,7 +9,7 @@ import static gregtech.api.unification.material.Materials.*;
 
 
 eventManager.listen {
-    GregTechAPI.MaterialEvent event ->
+    MaterialEvent event ->
 
         println("Running RegisterElements.groovy...")
         println("Groovy starting modifying isotopes")

@@ -35,7 +35,7 @@ mods.gregtech.cutter.removeByInput(7, [item('minecraft:cobblestone')], [fluid('d
 // Hot Titanium Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustTitaniumTrifluoride') * 4], [fluid('hydrogen') * 3000])
 // Heated Water * 1000
-mods.gregtech.fluid_heater.removeByInput(2048, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('water') * 1000])
+mods.gregtech.fluid_heater.removeByInput(120, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('water') * 1000])
 // Beryllium Oxide Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('beryllium_oxide') * 144])
 // Beryllium Oxide Plate * 1
@@ -144,7 +144,7 @@ for (name in ore_smelting_removals) {
 // Polycaprolactam Bar * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCaprolactam')], [fluid('nitrogen') * 1000])
 // Monocrystalline Silicon Boule * 1
-mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSilicon') * 32, metaitem('dustSmallGalliumArsenide')], null)
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSilicon') * 32, metaitem('dustSmallGalliumArsenide'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 // Cupronickel Coil Block * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('wireGtDoubleCupronickel') * 8, metaitem('foilBronze') * 8], [fluid('tin_alloy') * 144])
 // Kanthal Coil Block * 1
@@ -182,7 +182,7 @@ crafting.addShaped('gregtech:pbf_bronze', metaitem('primitive_blast_furnace.bron
 ])
 
 crafting.addShaped('gregtech:high_pressure_latex_extractor', metaitem('latex_collector.steel'), [
-        [metaitem('pipeSmallFluidSteel'), metaitem('pump.steam'), metaitem('pipeSmallFluidSteel')],
+        [metaitem('pipeSmallFluidSteel'), metaitem('susy:pump.steam'), metaitem('pipeSmallFluidSteel')],
         [metaitem('plateSteel'), metaitem('latex_collector.bronze'), metaitem('plateSteel')],
         [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')]
 ])
@@ -236,8 +236,7 @@ crafting.addShaped("gregtech:steam_motor", metaitem('steam.motor'), [
     [metaitem('steam.piston'), ore('stickBronze'), metaitem('steam.piston')]
 ]);
 
-
-crafting.addShaped("gregtech:steam_conveyor", metaitem('conveyor.steam'), [
+crafting.addShaped("gregtech:steam_conveyor", metaitem('susy:conveyor.steam'), [
     [ore('plateRubber'), ore('plateRubber'), ore('plateRubber')],
     [metaitem('steam.motor'), ore('gearSmallBronze'), metaitem('steam.motor')],
     [ore('plateRubber'), ore('plateRubber'), ore('plateRubber')]
@@ -253,13 +252,13 @@ mods.gregtech.assembler.recipeBuilder()
         .EUt(30)
         .buildAndRegister();
 
-crafting.addShaped("gregtech:steam_pump_iron", metaitem('pump.steam'), [
+crafting.addShaped("gregtech:steam_pump_iron", metaitem('susy:pump.steam'), [
     [ore('screwBronze'), ore('rotorBronze'), ore('ringIron')],
     [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
     [ore('ringIron'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
 ])
 
-crafting.addShaped("gregtech:steam_pump_brass", metaitem('pump.steam'), [
+crafting.addShaped("gregtech:steam_pump_brass", metaitem('susy:pump.steam'), [
     [ore('screwBronze'), ore('rotorBronze'), ore('ringBrass')],
     [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
     [ore('ringBrass'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
@@ -271,7 +270,7 @@ mods.gregtech.assembler.recipeBuilder()
         .inputs(ore('ringIron')*2)
         .inputs(metaitem('steam.motor'))
         .inputs(ore('pipeTinyFluidBronze') * 2)
-        .outputs(metaitem('pump.steam'))
+        .outputs(metaitem('susy:pump.steam'))
         .duration(100)
         .EUt(30)
         .buildAndRegister();
@@ -287,7 +286,7 @@ crafting.replaceShaped("gregtech:steam_extractor_bronze", metaitem('steam_extrac
 
 crafting.replaceShaped("gregtech:steam_vacuum_chamber", metaitem('vacuum_chamber.bronze'), [
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
-    [metaitem('pump.steam'), item('gregtech:steam_casing'), ore('blockGlass')],
+    [metaitem('susy:pump.steam'), item('gregtech:steam_casing'), ore('blockGlass')],
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
 ])
 
@@ -408,6 +407,15 @@ mods.gregtech.chemical_bath.recipeBuilder()
         .outputs(metaitem('dustCalciumHydroxide'))
         .duration(20)
         .EUt(30)
+        .buildAndRegister();
+
+//Iron III chloride
+
+mods.gregtech.fluid_solidifier.recipeBuilder()
+        .fluidInputs(fluid('iron_iii_chloride') * 144)
+        .outputs(metaitem('dustIronIiiChloride') * 1)
+        .duration(30)
+        .EUt(16)
         .buildAndRegister();
 
 //Lava
@@ -886,14 +894,6 @@ mods.gregtech.gas_collector.recipeBuilder()
         .EUt(16)
         .buildAndRegister();
 
-mods.gregtech.fluid_heater.recipeBuilder()
-        .circuitMeta(2)
-        .fluidInputs(fluid('water') * 1000)
-        .fluidOutputs(fluid('gtfo_heated_water') * 1000)
-        .duration(40)
-        .EUt(16)
-        .buildAndRegister();
-
 mods.gregtech.forming_press.recipeBuilder()
         .inputs(item('gregtech:transparent_casing') * 2)
         .inputs(ore('platePolyvinylButyral') * 2)
@@ -1034,8 +1034,9 @@ mods.gregtech.centrifuge.recipeBuilder()
 		.buildAndRegister();
 
 // Add more semi fluid fuel options
-mods.gregtech.semi_fluid_generator.removeByInput(-32, null, [fluid('sulfuric_heavy_fuel') * 16])
-mods.gregtech.semi_fluid_generator.removeByInput(-32, null, [fluid('heavy_fuel') * 8])
+mods.gregtech.semi_fluid_generator.removeByInput(32, null, [fluid('sulfuric_heavy_fuel') * 16])
+mods.gregtech.semi_fluid_generator.removeByInput(32, null, [fluid('heavy_fuel') * 8])
+
 
 mods.gregtech.semi_fluid_generator.recipeBuilder()
 		.fluidInputs(fluid('sulfuric_diesel') * 16)

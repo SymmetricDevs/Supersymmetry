@@ -398,6 +398,20 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+//Electrostatic separator
+
+def tieredElectrodes = [ore('wireFineRedAlloy'), ore('wireFineSteel'), metaitem('graphite_electrode'), ore('wireFinePlatinum'), ore('wireFineTitanium'),
+					ore('wireFineTungsten'), ore('wireFineOsmiridium'), ore('wireFineNiobiumTitanium'),
+					ore('wireFineNaquadah'), ore('wireFineNaquadahAlloy')];
+
+for (i = 1; i <= 8; i++) {
+	crafting.replaceShaped("gregtech:gregtech.machine.electrostatic_separator." + Globals.voltageTiers[i], metaitem('electrostatic_separator.' + Globals.voltageTiers[i]), [
+			[tieredWires[i], tieredElectrodes[i], tieredWires[i]],
+			[tieredCables[i], hulls[i], tieredCables[i]],
+			[tieredWires[i], tieredElectrodes[i], tieredWires[i]]
+	])
+}
+
 //Add recipes for high pressure steam machines
 
 crafting.addShaped("gregtech:vulcanizing_press.steel", metaitem('vulcanizing_press.steel'), [
@@ -702,12 +716,6 @@ crafting.addShaped("gregtech:gravity_separator", metaitem('gravity_separator'), 
 		[circuits[2], tieredCables[2], circuits[2]]
 ]);
 
-crafting.addShaped("gregtech:separator_rotor", item('susy:separator_rotor') * 2, [
-		[metaitem('plateSteel'), metaitem('rotorSteel'), metaitem('plateSteel')],
-		[metaitem('rotorSteel'), metaitem('frameSteel'), metaitem('rotorSteel')],
-		[metaitem('plateSteel'), motors[1], metaitem('plateSteel')]
-]);
-
 crafting.addShaped("gregtech:reaction_furnace", metaitem('reaction_furnace'), [
 		[tieredQuadCables[2], tieredSprings[2], tieredQuadCables[2]],
 		[circuits[2], hulls[2], circuits[2]],
@@ -874,6 +882,22 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+// Bath Condenser
+
+crafting.addShaped("gregtech:bath_condenser", metaitem('bath_condenser.lv'), [
+	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel')],
+	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('hull.hv'), metaitem('pipeSmallFluidStainlessSteel')],
+	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel')]
+])
+
+// Phase Separator
+
+crafting.addShaped("gregtech:phase_separator", metaitem('phase_separator.lv'), [
+	[metaitem('frameStainlessSteel'), metaitem('drum.stainless_steel'), metaitem('pipeSmallFluidStainlessSteel')],
+	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('hull.hv'), metaitem('pipeSmallFluidStainlessSteel')],
+	[null, null, null]
+])
+
 //Multiblocked Machines
 
 /*
@@ -918,7 +942,7 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('electric.pump.lv') * 4)
 		.inputs(metaitem('electric.motor.lv') * 4)
 		.inputs(ore('gearSteel') * 4)
-		.notConsumable(circuit(2))
+		.circuitMeta(2)
 		.outputs(metaitem('fluid_drilling_rig.mv'))
 		.EUt(30)
 		.duration(600)
@@ -933,7 +957,8 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('pipeHugeFluidTitanium'))
 		.inputs(metaitem('rotorTitanium'))
 		.inputs(ore('circuitEv'))
-		.notConsumable(circuit(3))
+		.outputs(metaitem('catalytic_reformer'))
+		.circuitMeta(3)
 		.EUt(480)
 		.duration(600)
 		.buildAndRegister()	

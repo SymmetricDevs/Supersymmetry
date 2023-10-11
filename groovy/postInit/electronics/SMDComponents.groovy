@@ -64,6 +64,11 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 
 
 // SMD Transistor * 16
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineAnnealedCopper') * 8], [fluid('plastic') * 144])
+// SMD Transistor * 32
+mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineTantalum') * 8], [fluid('plastic') * 144])
+// SMD Resistor * 32
+mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 288])
+
 
 // SMD Diode * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), metaitem('wireFinePlatinum') * 8], [fluid('plastic') * 288])
@@ -78,6 +83,10 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustFerriteMi
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('alumina') * 144])
 // Alumina Plate * 1
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustAlumina')], null)
+
+// Advanced SMD Transistor * 16
+mods.gregtech.assembler.removeByInput(3840, [metaitem('foilVanadiumGallium'), metaitem('wireFineHssg') * 8], [fluid('polybenzimidazole') * 144])
+
 
 //SMD Diodes
 
@@ -178,8 +187,6 @@ for (fuel in sintering_fuels) {
         }
     }
 }
-
-
 
 MIXER.recipeBuilder()
         .inputs(ore('dustAlumina') * 5)
@@ -501,7 +508,6 @@ CUTTER.recipeBuilder()
         .EUt(240)
         .buildAndRegister()
 
-/*
 SOLIDIFIER.recipeBuilder()
         .fluidInputs(fluid('beryllium_oxide') * 36)
         .notConsumable(metaitem('shape.mold.ball'))
@@ -509,6 +515,16 @@ SOLIDIFIER.recipeBuilder()
         .duration(200)
         .EUt(240)
         .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+        .inputs(metaitem('seed_crystal.beryllium_oxide'))
+        .circuitMeta(1)
+        .fluidInputs(fluid('beryllium_oxide') * 3168)
+        .outputs(metaitem('boule.beryllium_oxide'))
+        .duration(400)
+        .EUt(240)
+        .buildAndRegister()
+
 
 CUTTER.recipeBuilder()
         .inputs(metaitem('boule.beryllium_oxide'))
@@ -556,8 +572,6 @@ ASSEMBLER.recipeBuilder()
         .duration(100)
         .EUt(240)
         .buildAndRegister()
-
- */
 
 ASSEMBLER.recipeBuilder()
         .circuitMeta(1)
@@ -757,7 +771,7 @@ CHEMICAL_BATH.recipeBuilder()
 
 EBF.recipeBuilder()
         .inputs(ore('dustPurifiedIronIiiOxide') * 10)
-        .inputs(ore('dustZincite') * 2)
+        .inputs(ore('dustZincOxide') * 2)
         .inputs(ore('dustNickelIiOxide') * 2)
         .outputs(metaitem('ingotNickelZincFerrite') * 14)
         .blastFurnaceTemp(1200)
@@ -767,7 +781,7 @@ EBF.recipeBuilder()
 
 EBF.recipeBuilder()
         .inputs(ore('dustPurifiedIronIiiOxide') * 10)
-        .inputs(ore('dustZincite') * 2)
+        .inputs(ore('dustZincOxide') * 2)
         .inputs(ore('dustManganeseIiOxide') * 2)
         .outputs(metaitem('ingotManganeseZincFerrite') * 14)
         .blastFurnaceTemp(1200)

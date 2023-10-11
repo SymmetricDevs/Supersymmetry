@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "biomes": "$MOUNTAIN",
+      "weight": 0.75
+    },
+    {
+      "biomes": "$JUNGLE",
+      "weight": 0.25
+    },
+    {
+      "biomes": "$HILLS",
+      "weight": 0.25
+    },
+    {
+      "biomes": "$LUSH",
+      "weight": 0.4
+    }
+  ],
+  "metadata": {
+    "title": "Magmatic Hydrothermal",
+    "description": [
+      ""
+    ]
+  }
+}

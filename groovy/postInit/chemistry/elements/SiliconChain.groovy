@@ -22,8 +22,12 @@ def EBF = recipemap('electric_blast_furnace')
 
 // Silicon Carbide Plate * 1
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustSiliconCarbide')], null)
-// Silicon Ingot * 1
-mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSiliconDioxide'), metaitem('dustCarbon') * 2], null)
+// Phosphorus-doped Monocrystalline Silicon Boule * 1
+mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustSilicon') * 64, metaitem('dustPhosphorus') * 8, metaitem('dustSmallGalliumArsenide') * 2], [fluid('nitrogen') * 8000])
+// Naquadah-doped Monocrystalline Silicon Boule * 1
+mods.gregtech.electric_blast_furnace.removeByInput(1920, [metaitem('blockSilicon') * 16, metaitem('ingotNaquadah'), metaitem('dustGalliumArsenide')], [fluid('argon') * 8000])
+// Neutronium-doped Monocrystalline Silicon Boule * 1
+mods.gregtech.electric_blast_furnace.removeByInput(7680, [metaitem('blockSilicon') * 32, metaitem('ingotNeutronium') * 4, metaitem('dustGalliumArsenide') * 2], [fluid('xenon') * 8000])
 
 EBF.recipeBuilder()
         .circuitMeta(1)
@@ -149,7 +153,7 @@ ROASTER.recipeBuilder()
 
 FBR.recipeBuilder()
         .fluidInputs(fluid('trichlorosilane') * 2000)
-        .notConsumable(metaitem('catalystBedAluminiumTrichloride'))
+        .notConsumable(metaitem('catalystBedAluminiumChloride'))
         .fluidOutputs(fluid('disproportionated_trichlorosilane') * 2000)
         .duration(100)
         .EUt(120)
@@ -165,7 +169,7 @@ DT.recipeBuilder()
 
 FBR.recipeBuilder()
         .fluidInputs(fluid('dichlorosilane') * 2000)
-        .notConsumable(metaitem('catalystBedAluminiumTrichloride'))
+        .notConsumable(metaitem('catalystBedAluminiumChloride'))
         .fluidOutputs(fluid('disproportionated_dichlorosilane') * 2000)
         .duration(100)
         .EUt(120)
@@ -181,7 +185,7 @@ DT.recipeBuilder()
 
 FBR.recipeBuilder()
         .fluidInputs(fluid('chlorosilane') * 2000)
-        .notConsumable(metaitem('catalystBedAluminiumTrichloride'))
+        .notConsumable(metaitem('catalystBedAluminiumChloride'))
         .fluidOutputs(fluid('disproportionated_chlorosilane') * 2000)
         .duration(100)
         .EUt(120)

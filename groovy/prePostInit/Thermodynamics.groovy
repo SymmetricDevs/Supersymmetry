@@ -5,40 +5,40 @@ import java.lang.Math;
 
 //REMOVALS
 
-mods.gregtech.steam_turbine.removeByInput(-32, null, [fluid('steam') * 640])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('coal_gas')])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('ethylene')])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('natural_gas') * 8])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('refinery_gas')])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('sulfuric_naphtha') * 4])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('propene')])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('wood_gas') * 8])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('methane') * 2])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('butene')])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('phenol')])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('lpg')])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('benzene')])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('ethane') * 4])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('sulfuric_gas') * 32])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('propane') * 4])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('butane') * 4])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('nitrobenzene')])
-mods.gregtech.gas_turbine.removeByInput(-32, null, [fluid('butadiene') * 16])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('octane') * 2])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('oil_light') * 32])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('sulfuric_light_fuel') * 4])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('ethanol')])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('bio_diesel')])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('methanol') * 4])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('light_fuel')])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('toluene')])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('naphtha')])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('diesel')])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('oil_medium') * 64])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('nitro_fuel') * 2])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('gasoline')])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('gasoline_premium')])
-mods.gregtech.combustion_generator.removeByInput(-32, null, [fluid('rocket_fuel') * 16])
+mods.gregtech.steam_turbine.removeByInput(32, null, [fluid('steam') * 640])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('coal_gas')])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('ethylene')])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('natural_gas') * 8])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('refinery_gas')])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('sulfuric_naphtha') * 4])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('propene')])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('wood_gas') * 8])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('methane') * 2])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('butene')])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('phenol')])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('lpg')])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('benzene')])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('ethane') * 4])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('sulfuric_gas') * 32])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('propane') * 4])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('butane') * 4])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('nitrobenzene')])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('butadiene') * 16])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('octane') * 2])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('oil_light') * 32])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('sulfuric_light_fuel') * 4])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('ethanol')])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('bio_diesel')])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('methanol') * 4])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('light_fuel')])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('toluene')])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('naphtha')])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('diesel')])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('oil_medium') * 64])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('nitro_fuel') * 2])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('gasoline')])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('gasoline_premium')])
+mods.gregtech.combustion_generator.removeByInput(32, null, [fluid('rocket_fuel') * 16])
 
 def WaterCoolant = new ICoolant("water", "warm_water");
 WaterCoolant.setDurationRadiator(100);
@@ -148,6 +148,14 @@ CryoAir.setDurationHX(5);
 CryoAir.setDurationRadiator(400);
 CryoAir.setTemperature(80);
 
+def CryoDecarburizedAir = new ICryoGas('decarburized_air', 'hot_hp_decarburized_air', 'hp_decarburized_air', 'cold_hp_decarburized_air', 'liquid_decarburized_air');
+CryoDecarburizedAir.setEUt(60);
+CryoDecarburizedAir.setDuration(1);
+CryoDecarburizedAir.setPowerHX(100);
+CryoDecarburizedAir.setDurationHX(8);
+CryoDecarburizedAir.setDurationRadiator(40);
+CryoDecarburizedAir.setTemperature(80);
+
 def CryoNitrogen = new ICryoGas('nitrogen', 'hot_hp_nitrogen', 'hp_nitrogen', 'cold_hp_nitrogen', 'liquid_nitrogen');
 CryoNitrogen.setEUt(60);
 CryoNitrogen.setDuration(100);
@@ -198,6 +206,7 @@ def CryoGases = [
         CryoXenon,
         CryoNitrogen,
         CryoAir,
+        CryoDecarburizedAir,
         CryoNetherAir,
         CryoRefineryGas,
         CryoNaturalGas,
@@ -227,29 +236,29 @@ CarbonDioxideRefrigerant.setTimeFactor(20);
 
 def TrichlorofluoromethaneRefrigerant = new IRefrigerant("trichlorofluoromethane", 'hot_compressed_trichlorofluoromethane', 'compressed_trichlorofluoromethane', 'cold_trichlorofluoromethane');
 TrichlorofluoromethaneRefrigerant.setPowerToCompress(180);
-TrichlorofluoromethaneRefrigerant.setDurationToCompress(20);
-TrichlorofluoromethaneRefrigerant.setDurationRadiator(10);
+TrichlorofluoromethaneRefrigerant.setDurationToCompress(4);
+TrichlorofluoromethaneRefrigerant.setDurationRadiator(2);
 TrichlorofluoromethaneRefrigerant.setAmountToUse(1000);
 TrichlorofluoromethaneRefrigerant.setTimeFactor(2);
 
 def DichlorodifluoromethaneRefrigerant = new IRefrigerant("dichlorodifluoromethane", 'hot_compressed_dichlorodifluoromethane', 'compressed_dichlorodifluoromethane', 'cold_dichlorodifluoromethane');
 DichlorodifluoromethaneRefrigerant.setPowerToCompress(180);
-DichlorodifluoromethaneRefrigerant.setDurationToCompress(20);
-DichlorodifluoromethaneRefrigerant.setDurationRadiator(10);
+DichlorodifluoromethaneRefrigerant.setDurationToCompress(4);
+DichlorodifluoromethaneRefrigerant.setDurationRadiator(2);
 DichlorodifluoromethaneRefrigerant.setAmountToUse(1000);
 DichlorodifluoromethaneRefrigerant.setTimeFactor(2);
 
 def ChlorotrifluoromethaneRefrigerant = new IRefrigerant("chlorotrifluoromethane", 'hot_compressed_chlorotrifluoromethane', 'compressed_chlorotrifluoromethane', 'cold_chlorotrifluoromethane');
 ChlorotrifluoromethaneRefrigerant.setPowerToCompress(180);
-ChlorotrifluoromethaneRefrigerant.setDurationToCompress(20);
-ChlorotrifluoromethaneRefrigerant.setDurationRadiator(10);
+ChlorotrifluoromethaneRefrigerant.setDurationToCompress(4);
+ChlorotrifluoromethaneRefrigerant.setDurationRadiator(2);
 ChlorotrifluoromethaneRefrigerant.setAmountToUse(1000);
 ChlorotrifluoromethaneRefrigerant.setTimeFactor(2);
 
 def ChlorodifluoromethaneRefrigerant = new IRefrigerant("chlorodifluoromethane", 'hot_compressed_chlorodifluoromethane', 'compressed_chlorodifluoromethane', 'cold_chlorodifluoromethane');
 ChlorodifluoromethaneRefrigerant.setPowerToCompress(180);
-ChlorodifluoromethaneRefrigerant.setDurationToCompress(20);
-ChlorodifluoromethaneRefrigerant.setDurationRadiator(10);
+ChlorodifluoromethaneRefrigerant.setDurationToCompress(4);
+ChlorodifluoromethaneRefrigerant.setDurationRadiator(2);
 ChlorodifluoromethaneRefrigerant.setAmountToUse(1000);
 ChlorodifluoromethaneRefrigerant.setTimeFactor(2);
 
@@ -355,6 +364,14 @@ for (cryogas in CryoGases) {
             .EUt(8)
             .buildAndRegister();
 
+    //Reheating
+    recipemap('fluid_heater').recipeBuilder()
+            .fluidInputs(liquid(cryogas.liquid_gas) * 20)
+            .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * 1280)
+            .duration(20)
+            .EUt(8)
+            .buildAndRegister();
+
     //Radiative Cooling
     recipemap('radiator').recipeBuilder()
             .fluidInputs(liquid(cryogas.hot_high_pressure_gas) * cryogas.amount_to_use)
@@ -403,251 +420,197 @@ for (refrigerant in Refrigerants) {
 }
 
 def Naphtha = new IFluidFuel('naphtha', 'flue_gas');
-Naphtha.setDuration(120);
+Naphtha.setDuration(160);
 Naphtha.setAmountToBurn(10);
 Naphtha.setByproductAmount(1000);
 
-def SulfuricNaphtha = new IFluidFuel('sulfuric_naphtha', 'flue_gas');
-SulfuricNaphtha.setDuration(12);
-SulfuricNaphtha.setAmountToBurn(8);
-SulfuricNaphtha.setByproductAmount(800);
-
-def Gasoline = new IFluidFuel('gasoline', 'flue_gas');
-Gasoline.setDuration(20);
-Gasoline.setAmountToBurn(10);
-Gasoline.setByproductAmount(1000);
-Gasoline.setIsGasoline(true);
-
-def SulfuricGasoline = new IFluidFuel('sulfuric_gasoline', 'flue_gas');
-SulfuricGasoline.setDuration(14);
-SulfuricGasoline.setAmountToBurn(8);
-SulfuricGasoline.setByproductAmount(80);
-
-def Methanol = new IFluidFuel('methanol', 'flue_gas');
-Methanol.setDuration(16);
-Methanol.setAmountToBurn(8);
-Methanol.setByproductAmount(800);
-
-def Ethanol = new IFluidFuel('ethanol', 'flue_gas');
-Ethanol.setDuration(12);
-Ethanol.setAmountToBurn(8);
-Ethanol.setByproductAmount(800);
-
-def SulfuricRefineryGas = new IFluidFuel('sulfuric_refinery_gas', 'flue_gas');
-SulfuricRefineryGas.setDuration(5);
-SulfuricRefineryGas.setAmountToBurn(6);
-SulfuricRefineryGas.setByproductAmount(600);
-
-def SulfuricNaturalGas = new IFluidFuel('sulfuric_natural_gas', 'flue_gas');
-SulfuricNaturalGas.setDuration(5);
-SulfuricNaturalGas.setAmountToBurn(6);
-SulfuricNaturalGas.setByproductAmount(600);
+def NaturalGas = new IFluidFuel('natural_gas', 'flue_gas');
+NaturalGas.setDuration(100);
+NaturalGas.setAmountToBurn(160);
+NaturalGas.setByproductAmount(750);
 
 def Methane = new IFluidFuel('methane', 'flue_gas');
-Methane.setDuration(21);
-Methane.setAmountToBurn(6);
-Methane.setByproductAmount(600);
+Methane.setDuration(80);
+Methane.setAmountToBurn(160);
+Methane.setByproductAmount(500);
 
 def Ethane = new IFluidFuel('ethane', 'flue_gas');
-Ethane.setDuration(40);
-Ethane.setAmountToBurn(8);
-Ethane.setByproductAmount(800);
+Ethane.setDuration(85);
+Ethane.setAmountToBurn(160);
+Ethane.setByproductAmount(500);
 
 def Butadiene = new IFluidFuel('butadiene', 'flue_gas');
-Butadiene.setDuration(44);
-Butadiene.setAmountToBurn(8);
-Butadiene.setByproductAmount(800);
+Butadiene.setDuration(100);
+Butadiene.setAmountToBurn(160);
+Butadiene.setByproductAmount(600);
 
 def Propane = new IFluidFuel('propane', 'flue_gas');
-Propane.setDuration(52);
-Propane.setAmountToBurn(8);
-Propane.setByproductAmount(800);
+Propane.setDuration(90);
+Propane.setAmountToBurn(160);
+Propane.setByproductAmount(500);
 
 def Butane = new IFluidFuel('butane', 'flue_gas');
-Butane.setDuration(64);
-Butane.setAmountToBurn(8);
-Butane.setByproductAmount(800);
+Butane.setDuration(95);
+Butane.setAmountToBurn(160);
+Butane.setByproductAmount(500);
 
 def Toluene = new IFluidFuel('toluene', 'flue_gas');
-Toluene.setDuration(68);
-Toluene.setAmountToBurn(8);
-Toluene.setByproductAmount(800);
-
-def NaturalGas = new IFluidFuel('natural_gas', 'flue_gas');
-NaturalGas.setDuration(15);
-NaturalGas.setAmountToBurn(6);
-NaturalGas.setByproductAmount(600);
-
-def Hydrogen = new IFluidFuel('hydrogen', 'steam');
-Hydrogen.setDuration(3);
-Hydrogen.setAmountToBurn(40);
-Hydrogen.setByproductAmount(60);
+Toluene.setDuration(160);
+Toluene.setAmountToBurn(10);
+Toluene.setByproductAmount(1000);
 
 def WoodGas = new IFluidFuel('wood_gas', 'flue_gas');
-WoodGas.setDuration(6);
-WoodGas.setAmountToBurn(8);
-WoodGas.setByproductAmount(800);
+WoodGas.setDuration(80);
+WoodGas.setAmountToBurn(160);
+WoodGas.setByproductAmount(750);
 
 def CoalGas = new IFluidFuel('coal_gas', 'flue_gas');
-CoalGas.setDuration(10);
-CoalGas.setAmountToBurn(6);
-CoalGas.setByproductAmount(600);
+CoalGas.setDuration(90);
+CoalGas.setAmountToBurn(160);
+CoalGas.setByproductAmount(750);
+
+def Syngas = new IFluidFuel('syngas', 'flue_gas');
+Syngas.setDuration(200);
+Syngas.setAmountToBurn(160);
+Syngas.setByproductAmount(1500);
 
 def Ethylene = new IFluidFuel('ethylene', 'flue_gas');
-Ethylene.setDuration(28);
-Ethylene.setAmountToBurn(8);
-Ethylene.setByproductAmount(800);
+Ethylene.setDuration(85);
+Ethylene.setAmountToBurn(160);
+Ethylene.setByproductAmount(500);
 
 def RefineryGas = new IFluidFuel('refinery_gas', 'flue_gas');
-RefineryGas.setDuration(15);
-RefineryGas.setAmountToBurn(6);
-RefineryGas.setByproductAmount(600);
+RefineryGas.setDuration(100);
+RefineryGas.setAmountToBurn(160);
+RefineryGas.setByproductAmount(750);
+
+def Ammonia = new IFluidFuel('ammonia', 'nitrogen');
+Ammonia.setDuration(70);
+Ammonia.setAmountToBurn(160);
+Ammonia.setByproductAmount(500);
+
+def Propene = new IFluidFuel('propene', 'flue_gas');
+Propene.setDuration(85);
+Propene.setAmountToBurn(160);
+Propene.setByproductAmount(500);
+
+def Butene = new IFluidFuel('butene', 'flue_gas');
+Butene.setDuration(90);
+Butene.setAmountToBurn(160);
+Butene.setByproductAmount(500);
+
+def Phenol = new IFluidFuel('phenol', 'flue_gas');
+Phenol.setDuration(120);
+Phenol.setAmountToBurn(10);
+Phenol.setByproductAmount(750);
+
+def Benzene = new IFluidFuel('benzene', 'flue_gas');
+Benzene.setDuration(120);
+Benzene.setAmountToBurn(10);
+Benzene.setByproductAmount(750);
+
+def Hydrogen = new IFluidFuel('hydrogen', "steam")
+Hydrogen.setDuration(10);
+Hydrogen.setAmountToBurn(160);
+Hydrogen.setByproductAmount(80);
+
+def Methanol = new IFluidFuel('methanol', 'flue_gas');
+Methanol.setDuration(40);
+Methanol.setAmountToBurn(10);
+Methanol.setByproductAmount(1000);
+Methanol.setIsRefinedFuel(true);
+
+def Ethanol = new IFluidFuel('ethanol', 'flue_gas');
+Ethanol.setDuration(48);
+Ethanol.setAmountToBurn(10);
+Ethanol.setByproductAmount(1200);
+Ethanol.setIsRefinedFuel(true);
+
+def LiquidNaturalGas = new IFluidFuel('liquid_natural_gas', 'flue_gas');
+LiquidNaturalGas.setDuration(120);
+LiquidNaturalGas.setAmountToBurn(10);
+LiquidNaturalGas.setByproductAmount(1250);
+LiquidNaturalGas.setIsRefinedFuel(true);
+
+def FuelOil = new IFluidFuel('fuel_oil', 'flue_gas');
+FuelOil.setDuration(100);
+FuelOil.setAmountToBurn(10);
+FuelOil.setByproductAmount(2000);
+FuelOil.setIsRefinedFuel(true);
 
 def BioDiesel = new IFluidFuel('bio_diesel', 'flue_gas');
-BioDiesel.setDuration(75);
+BioDiesel.setDuration(90);
 BioDiesel.setAmountToBurn(10);
-BioDiesel.setByproductAmount(1000);
-BioDiesel.setIsDiesel(true);
+BioDiesel.setByproductAmount(1750);
+BioDiesel.setIsRefinedFuel(true);
+
+def Diesel = new IFluidFuel('diesel', 'flue_gas');
+Diesel.setDuration(100);
+Diesel.setAmountToBurn(10);
+Diesel.setByproductAmount(2000);
+Diesel.setIsRefinedFuel(true);
+
+def Gasoline = new IFluidFuel('gasoline', 'flue_gas');
+Gasoline.setDuration(100);
+Gasoline.setAmountToBurn(10);
+Gasoline.setByproductAmount(2000);
+Gasoline.setIsRefinedFuel(true);
+
+def MidgradeGasoline = new IFluidFuel('midgrade_gasoline', 'flue_gas');
+MidgradeGasoline.setDuration(150);
+MidgradeGasoline.setAmountToBurn(10);
+MidgradeGasoline.setByproductAmount(3000);
+MidgradeGasoline.setIsRefinedFuel(true);
+
+def PremiumGasoline = new IFluidFuel('premium_gasoline', 'flue_gas');
+PremiumGasoline.setDuration(200);
+PremiumGasoline.setAmountToBurn(10);
+PremiumGasoline.setByproductAmount(4000);
+PremiumGasoline.setIsRefinedFuel(true);
+
+def SupremeGasoline = new IFluidFuel('supreme_gasoline', 'flue_gas');
+SupremeGasoline.setDuration(250);
+SupremeGasoline.setAmountToBurn(10);
+SupremeGasoline.setByproductAmount(5000);
+SupremeGasoline.setIsRefinedFuel(true);
 
 def Kerosene = new IFluidFuel('kerosene', 'flue_gas');
 Kerosene.setDuration(100);
 Kerosene.setAmountToBurn(10);
 Kerosene.setByproductAmount(1000);
-Kerosene.setIsDiesel(true);
-
-def SulfuricKerosene = new IFluidFuel('sulfuric_kerosene', 'flue_gas');
-SulfuricKerosene.setDuration(10);
-SulfuricKerosene.setAmountToBurn(8);
-SulfuricKerosene.setByproductAmount(800);
-
-def Diesel = new IFluidFuel('diesel', 'flue_gas');
-Diesel.setDuration(100);
-Diesel.setAmountToBurn(10);
-Diesel.setByproductAmount(1000);
-Diesel.setIsDiesel(true);
-
-def SulfuricDiesel = new IFluidFuel('sulfuric_diesel', 'flue_gas');
-SulfuricDiesel.setDuration(8);
-SulfuricDiesel.setAmountToBurn(8);
-SulfuricDiesel.setByproductAmount(800);
-
-def FuelOil = new IFluidFuel('fuel_oil', 'flue_gas');
-FuelOil.setDuration(60);
-FuelOil.setAmountToBurn(10);
-FuelOil.setByproductAmount(1000);
-FuelOil.setIsDiesel(true);
-
-def SulfuricFuelOil = new IFluidFuel('sulfuric_fuel_oil', 'flue_gas');
-SulfuricFuelOil.setDuration(6);
-SulfuricFuelOil.setAmountToBurn(8);
-SulfuricFuelOil.setByproductAmount(800);
-
-def Syngas = new IFluidFuel('syngas', 'flue_gas');
-Syngas.setDuration(10);
-Syngas.setAmountToBurn(8);
-Syngas.setByproductAmount(800);
-
-def MidgradeGasoline = new IFluidFuel('midgrade_gasoline', 'flue_gas');
-MidgradeGasoline.setDuration(60);
-MidgradeGasoline.setAmountToBurn(10);
-MidgradeGasoline.setByproductAmount(1000);
-MidgradeGasoline.setIsGasoline(true);
-
-def PremiumGasoline = new IFluidFuel('premium_gasoline', 'flue_gas');
-PremiumGasoline.setDuration(90);
-PremiumGasoline.setAmountToBurn(10);
-PremiumGasoline.setByproductAmount(1000);
-PremiumGasoline.setIsGasoline(true);
-
-def SupremeGasoline = new IFluidFuel('supreme_gasoline', 'flue_gas');
-SupremeGasoline.setDuration(110);
-SupremeGasoline.setAmountToBurn(10);
-SupremeGasoline.setByproductAmount(1000);
-SupremeGasoline.setIsGasoline(true);
-
-def Ammonia = new IFluidFuel('ammonia', 'flue_gas');
-Ammonia.setDuration(32);
-Ammonia.setAmountToBurn(6);
-Ammonia.setByproductAmount(600);
-
-def Propene = new IFluidFuel('propene', 'flue_gas');
-Propene.setDuration(48);
-Propene.setAmountToBurn(8);
-Propene.setByproductAmount(800);
-
-def Butene = new IFluidFuel('butene', 'flue_gas');
-Butene.setDuration(64);
-Butene.setAmountToBurn(8);
-Butene.setByproductAmount(800);
-
-def Phenol = new IFluidFuel('phenol', 'flue_gas');
-Phenol.setDuration(42);
-Phenol.setAmountToBurn(6);
-Phenol.setByproductAmount(600);
-
-def Benzene = new IFluidFuel('benzene', 'flue_gas');
-Benzene.setDuration(72);
-Benzene.setAmountToBurn(8);
-Benzene.setByproductAmount(800);
-
-def NitroFuel = new IFluidFuel('nitro_fuel', 'flue_gas');
-NitroFuel.setDuration(140);
-NitroFuel.setAmountToBurn(10);
-NitroFuel.setByproductAmount(1000);
-NitroFuel.setIsDiesel(true);
-
-def Oil = new IFluidFuel('oil', 'flue_gas');
-Oil.setDuration(15);
-Oil.setAmountToBurn(48);
-Oil.setByproductAmount(4800);
-Oil.setIsDiesel(true);
-
-def LightOil = new IFluidFuel('oil_light', 'flue_gas');
-LightOil.setDuration(15);
-LightOil.setAmountToBurn(24);
-LightOil.setByproductAmount(2400);
-LightOil.setIsDiesel(true);
+Kerosene.setIsRefinedFuel(true);
 
 def FluidFuels = [
         Naphtha,
-        SulfuricNaphtha,
-        Gasoline,
-        SulfuricGasoline,
-        Methanol,
-        Ethanol,
-        SulfuricRefineryGas,
-        SulfuricNaturalGas,
+        NaturalGas,
         Methane,
         Ethane,
         Butadiene,
         Propane,
         Butane,
         Toluene,
-        NaturalGas,
-        Hydrogen,
         WoodGas,
         CoalGas,
+        Syngas,
         Ethylene,
         RefineryGas,
-        BioDiesel,
-        Kerosene,
-        SulfuricKerosene,
-        Diesel,
-        SulfuricDiesel,
-        FuelOil,
-        SulfuricFuelOil,
-        Syngas,
-        MidgradeGasoline,
-        PremiumGasoline,
-        SupremeGasoline,
         Ammonia,
         Propene,
         Butene,
         Phenol,
         Benzene,
-        NitroFuel,
-        Oil,
-        LightOil
+        Hydrogen,
+        Methanol,
+        Ethanol,
+        LiquidNaturalGas,
+        FuelOil,
+        BioDiesel,
+        Diesel,
+        Gasoline,
+        MidgradeGasoline,
+        PremiumGasoline,
+        SupremeGasoline,
+        Kerosene
 ];
 
 def WaterWF = new IWorkingFluid('water', 'steam', 'exhaust_steam');
@@ -662,56 +625,61 @@ def WorkingFluids = [
 
 for (FluidFuel in FluidFuels) {
     if (FluidFuel.gas_turbine) {
-        if (FluidFuel.diesel) {
-                recipemap('gas_turbine').recipeBuilder()
-                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('air') * 100)
-                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration(FluidFuel.duration)
-                        .EUt(-64)
-                        .buildAndRegister();
+        if (FluidFuel.refined_fuel) {
+            recipemap('gas_turbine').recipeBuilder()
+                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                .fluidInputs(liquid('air') * 100)
+                .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                .duration(FluidFuel.duration)
+                .EUt(-128)
+                .buildAndRegister();
 
-                recipemap('gas_turbine').recipeBuilder()
-                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('oxygen') * 20)
-                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.5))
-                        .EUt(-64)
-                        .buildAndRegister();
-        } else if (FluidFuel.gasoline) {
-                recipemap('gas_turbine').recipeBuilder()
-                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('air') * 100)
-                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration(FluidFuel.duration)
-                        .EUt(-128)
-                        .buildAndRegister();
-
-                recipemap('gas_turbine').recipeBuilder()
-                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('oxygen') * 20)
-                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.5))
-                        .EUt(-128)
-                        .buildAndRegister();
+            recipemap('gas_turbine').recipeBuilder()
+                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                .fluidInputs(liquid('oxygen') * 20)
+                .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                .duration((int) (FluidFuel.duration * 1.5))
+                .EUt(-128)
+                .buildAndRegister();
         } else {
-                recipemap('gas_turbine').recipeBuilder()
-                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('air') * 100)
-                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration(FluidFuel.duration)
-                        .EUt(-32)
-                        .buildAndRegister();
+            recipemap('gas_turbine').recipeBuilder()
+                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                .fluidInputs(liquid('air') * 100)
+                .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                .duration(FluidFuel.duration)
+                .EUt(-32)
+                .buildAndRegister();
 
-                recipemap('gas_turbine').recipeBuilder()
-                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                        .fluidInputs(liquid('oxygen') * 20)
-                        .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                        .duration((int) (FluidFuel.duration * 1.5))
-                        .EUt(-32)
-                        .buildAndRegister();
+            recipemap('gas_turbine').recipeBuilder()
+                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                .fluidInputs(liquid('oxygen') * 20)
+                .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                .duration((int) (FluidFuel.duration * 1.5))
+                .EUt(-32)
+                .buildAndRegister();
         }
-                
+
+        for (lubricant in Globals.lubricants) {
+            if (FluidFuel.refined_fuel) {
+                recipemap('gas_turbine').recipeBuilder()
+                    .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
+                    .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                    .fluidInputs(liquid('oxygen') * 20)
+                    .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                    .duration((int) (FluidFuel.duration * lubricant.boost * 1.5))
+                    .EUt(-128)
+                    .buildAndRegister();
+            } else {
+                recipemap('gas_turbine').recipeBuilder()
+                    .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
+                    .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                    .fluidInputs(liquid('oxygen') * 20)
+                    .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                    .duration((int) (FluidFuel.duration * lubricant.boost * 1.5))
+                    .EUt(-32)
+                    .buildAndRegister();
+            }
+        }
     }
 
     recipemap('flare_stack').recipeBuilder()
@@ -744,19 +712,19 @@ recipemap('flare_stack').recipeBuilder()
 
 for (WorkingFluid in WorkingFluids) {
     recipemap('heat_exchanger').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use))
-            .fluidInputs(liquid('desulfurized_flue_gas') * 1000)
-            .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
-            .fluidOutputs(liquid('chilled_flue_gas') * 1000)
-            .duration(WorkingFluid.duration)
+            .fluidInputs(liquid(WorkingFluid.normal_fluid) * ((WorkingFluid.amount_to_use) * 10))
+            .fluidInputs(liquid('desulfurized_flue_gas') * 250)
+            .fluidOutputs(liquid(WorkingFluid.heated_fluid) * ((WorkingFluid.amount_to_use * WorkingFluid.conversion_factor) * 10))
+            .fluidOutputs(liquid('chilled_flue_gas') * 250)
+            .duration((int) (WorkingFluid.duration / 2))
             .buildAndRegister();
 
     recipemap('heat_exchanger').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use))
-            .fluidInputs(liquid('flue_gas') * 1000)
-            .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
-            .fluidOutputs(liquid('chilled_flue_gas') * 1000)
-            .duration((int) (floor(WorkingFluid.duration / 8)))
+            .fluidInputs(liquid(WorkingFluid.normal_fluid) * ((WorkingFluid.amount_to_use) * 10))
+            .fluidInputs(liquid('flue_gas') * 250)
+            .fluidOutputs(liquid(WorkingFluid.heated_fluid) * ((WorkingFluid.amount_to_use * WorkingFluid.conversion_factor) * 10))
+            .fluidOutputs(liquid('chilled_flue_gas') * 250)
+            .duration((int) (WorkingFluid.duration / 2))
             .buildAndRegister();
 
     recipemap('steam_turbine').recipeBuilder()
@@ -766,18 +734,28 @@ for (WorkingFluid in WorkingFluids) {
             .EUt(32)
             .buildAndRegister();
 
+    for (lubricant in Globals.lubricants) {
+            recipemap('steam_turbine').recipeBuilder()
+                    .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
+                    .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+                    .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+                    .duration((int) (WorkingFluid.duration * WorkingFluid.efficiency * lubricant.boost))
+                    .EUt(32)
+                    .buildAndRegister();
+    }
+        
     recipemap('cooling_tower').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor) * 64)
             .fluidInputs(liquid('water') * 1000)
-            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
+            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use * 64)
             .fluidOutputs(liquid('water') * 750)
-            .duration((int) (WorkingFluid.duration / 10))
+            .duration(WorkingFluid.duration)
             .EUt(8)
             .buildAndRegister();
 
     recipemap('radiator').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
-            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
+            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor) * 16)
+            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use * 16)
             .duration(WorkingFluid.duration)
             .EUt(8)
             .buildAndRegister();
@@ -805,9 +783,9 @@ recipemap('fluid_compressor').recipeBuilder()
         .buildAndRegister();
 
 recipemap('heat_exchanger').recipeBuilder()
-        .fluidInputs(liquid('water') * 66)
-        .fluidInputs(liquid('lava') * 1)
-        .fluidOutputs(liquid('steam') * 10560)
-        .fluidOutputs(liquid('chilled_lava') * 1)
-        .duration(6)
+        .fluidInputs(liquid('water') * 96)
+        .fluidInputs(liquid('lava') * 3)
+        .fluidOutputs(liquid('steam') * 15360)
+        .fluidOutputs(liquid('chilled_lava') * 3)
+        .duration(10)
         .buildAndRegister();

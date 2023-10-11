@@ -147,7 +147,7 @@ CSTR.recipeBuilder()
         .buildAndRegister();
 
 FBR.recipeBuilder()
-        .notConsumable(metaitem('catalystBedAluminiumTrichloride'))
+        .notConsumable(metaitem('catalystBedAluminiumChloride'))
         .fluidInputs(fluid('ethylene_oxide') * 50)
         .fluidInputs(fluid('diisopropylamine') * 50)
         .fluidOutputs(fluid('diisopropylaminoethanol') * 50)
@@ -156,7 +156,7 @@ FBR.recipeBuilder()
         .buildAndRegister();
 
 LCR.recipeBuilder()
-        .notConsumable(metaitem('dustAluminiumTrichloride') * 4)
+        .notConsumable(metaitem('dustAluminiumChloride') * 4)
         .inputs(ore('dustIron') * 1)
         .fluidInputs(fluid('phosphorus_trichloride') * 1000)
         .fluidInputs(fluid('chloromethane') * 1000)
@@ -230,7 +230,7 @@ ROASTER.recipeBuilder()
 
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('ethanol') * 1000)
-        .inputs(metaitem('black_pepper_dust'))
+        .inputs(metaitem('gregtechfoodoption:black_pepper_dust'))
         .fluidOutputs(fluid('capsaicin_solution') * 1000)
         .duration(200)
         .EUt(120)

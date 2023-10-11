@@ -14,8 +14,26 @@ CRYSTALLIZER = recipemap('crystallizer')
 
 // Aluminium Nugget * 3
 mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('dustRuby')], null)
+//Remove EBF recipe with Aluminium Dust:
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('nitrogen') * 1000])
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+//EBF recipe with Al dust re-enabled:
+EBF.recipeBuilder()
+		.inputs(ore('dustAluminium'))
+		.outputs(metaitem('ingotAluminium'))
+		.duration(240)
+		.blastFurnaceTemp(933)
+		.EUt(120)
+		.buildAndRegister()
+
+
+
 // Ruby Slurry * 3000
-mods.gregtech.mixer.removeByInput(1920, [metaitem('dustRuby') * 6], [fluid('aqua_regia') * 3000])
+mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedRuby') * 2], [fluid('aqua_regia') * 3000])
+// Sapphire Slurry * 3000
+mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedSapphire') * 2], [fluid('aqua_regia') * 3000])
+// Green Sapphire Slurry * 3000
+mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedGreenSapphire') * 2], [fluid('aqua_regia') * 3000])
 
 // Bauxite -> Red Mud
 
@@ -24,7 +42,7 @@ ROASTER.recipeBuilder()
 .inputs(ore('dustBauxite') * 5)
 .fluidOutputs(fluid('impure_sodium_aluminate_solution') * 3000)
 .duration(200)
-.EUt(Globals.voltAmps[1])
+.EUt(16)
 .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder()
@@ -32,7 +50,7 @@ CENTRIFUGE.recipeBuilder()
 .fluidOutputs(fluid('sodium_aluminate_solution') * 3000)
 .fluidOutputs(fluid('red_mud') * 500)
 .duration(200)
-.EUt(Globals.voltAmps[1])
+.EUt(16)
 .buildAndRegister()
 
 // Carbon dioxide bubbling
@@ -44,7 +62,7 @@ CRYSTALLIZER.recipeBuilder()
 .fluidOutputs(fluid('impure_soda_ash_solution') * 1000)
 .outputs(metaitem('dustAluminiumHydroxide') * 14)
 .duration(300)
-.EUt(Globals.voltAmps[1])
+.EUt(20)
 .buildAndRegister()
 
 CRYSTALLIZER.recipeBuilder()
@@ -54,7 +72,7 @@ CRYSTALLIZER.recipeBuilder()
 .fluidOutputs(fluid('impure_sodium_hydroxide_solution') * 1000) //TO GALLIUM PROCESSING
 .outputs(metaitem('dustAluminiumHydroxide') * 7)
 .duration(300)
-.EUt(Globals.voltAmps[1])
+.EUt(16)
 .buildAndRegister()
 
 // Alumina from Al(OH)3
@@ -65,7 +83,7 @@ EBF.recipeBuilder()
 .outputs(metaitem('dustAlumina') * 5)
 .duration(100)
 .blastFurnaceTemp(1400)
-.EUt(Globals.voltAmps[1] * 2)
+.EUt(40)
 .buildAndRegister()
 
 // Electrolysis
@@ -79,7 +97,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .fluidOutputs(fluid('carbon_dioxide') * 3000)
         .outputs(metaitem('ingotAluminium') * 4)
         .duration(300)
-        .EUt(Globals.voltAmps[1] * 2)
+        .EUt(40)
         .buildAndRegister()
 
 ELECTROLYTIC_CELL.recipeBuilder()
@@ -91,7 +109,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .fluidOutputs(fluid('carbon_dioxide') * 3000)
         .outputs(metaitem('ingotAluminium') * 4)
         .duration(100)
-        .EUt(Globals.voltAmps[1] * 2)
+        .EUt(40)
         .buildAndRegister()
 
 // EBF
@@ -117,7 +135,7 @@ ROASTER.recipeBuilder()
 .fluidOutputs(fluid('steam') * 9000)
 .outputs(metaitem('dustAluminiumTrifluoride') * 8)
 .duration(300)
-.EUt(Globals.voltAmps[1])
+.EUt(16)
 .buildAndRegister()
 
 BCR.recipeBuilder()
@@ -125,7 +143,7 @@ BCR.recipeBuilder()
 .fluidInputs(fluid('sodium_hydroxide_solution') * 50)
 .fluidOutputs(fluid('sodium_fluoride_solution') * 50)
 .duration(5)
-.EUt(Globals.voltAmps[1])
+.EUt(16)
 .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
@@ -133,7 +151,7 @@ DISTILLERY.recipeBuilder()
 .fluidOutputs(fluid('water') * 1000)
 .outputs(metaitem('dustSodiumFluoride') * 2)
 .duration(200)
-.EUt(Globals.voltAmps[1])
+.EUt(7)
 .buildAndRegister()
 
 ROASTER.recipeBuilder()
@@ -141,7 +159,7 @@ ROASTER.recipeBuilder()
 .inputs(ore('dustSodiumFluoride') * 6)
 .outputs(metaitem('dustCryolite') * 10)
 .duration(180)
-.EUt(Globals.voltAmps[1])
+.EUt(16)
 .buildAndRegister()
 
 // Red mud processing
@@ -151,7 +169,7 @@ EMSEPARATOR.recipeBuilder()
 .chancedOutput(metaitem('dustIronIiiOxide'), 5000, 0)
 .fluidOutputs(fluid('concentrated_red_mud') * 1000)
 .duration(200)
-.EUt(Globals.voltAmps[2])
+.EUt(96)
 .buildAndRegister()
 
 EBF.recipeBuilder()
@@ -177,7 +195,7 @@ BR.recipeBuilder()
         .inputs(ore('dustAluminiumHydroxide') * 14)
         .fluidOutputs(fluid('aluminium_sulfate_solution') * 1000)
         .duration(100)
-        .EUt(120)
+        .EUt(96)
         .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
@@ -185,7 +203,7 @@ DISTILLERY.recipeBuilder()
         .outputs(metaitem('dustAluminiumSulfate') * 17)
         .fluidOutputs(fluid('water') * 6000)
         .duration(100)
-        .EUt(120)
+        .EUt(96)
         .buildAndRegister()
 
 ROASTER.recipeBuilder()

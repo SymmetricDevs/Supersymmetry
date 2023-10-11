@@ -87,7 +87,7 @@ for (blastable in blastables) {
         .chancedOutput(metaitem('dustSiliconDioxide'), 5000, 0)
         .fluidOutputs(fluid(reductant.byproduct) * (blastable.reductant_required * reductant.byproduct_amount))
         .duration((int) (blastable.amount_produced * blastable.duration / 4))
-        .notConsumable(Globals.circuit(1))
+        .circuitMeta(1)
         .blastFurnaceTemp(1750)
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
@@ -99,7 +99,7 @@ for (blastable in blastables) {
         .fluidOutputs(fluid(reductant.byproduct) * (blastable.reductant_required * reductant.byproduct_amount))
         .duration((int)(blastable.amount_produced * blastable.duration / 4))
         .blastFurnaceTemp(1750)
-        .notConsumable(Globals.circuit(2))
+        .circuitMeta(2)
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
     }
@@ -108,6 +108,28 @@ for (blastable in blastables) {
 furnace.add(metaitem('dustBrownLimonite'), metaitem('dustBandedIron'))
 furnace.add(metaitem('dustYellowLimonite'), metaitem('dustBandedIron'))
 furnace.add(metaitem('ingotWroughtIron'), item('minecraft:iron_ingot'))
+
+//Deleting old Steel Dust -> Steel Ingot recipe
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSteel')], null)
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSteelMagnetic')], null)
+
+
+//Readding Steel Dust -> Steel Ingot recipe
+
+EBF_RECIPES.recipeBuilder()
+		.inputs(ore('dustSteel'))
+		.outputs(metaitem('ingotSteel'))
+		.duration(60)
+		.blastFurnaceTemp(1750)
+		.EUt(60)
+		.buildAndRegister()
+EBF_RECIPES.recipeBuilder()
+		.inputs(ore('dustSteelMagnetic'))
+		.outputs(metaitem('ingotSteel'))
+		.duration(60)
+		.blastFurnaceTemp(1750)
+		.EUt(60)
+		.buildAndRegister()
 
 //SLAG REMOVAL BY HAMMER
 crafting.addShapeless('hammer_pig_iron',metaitem('ingotWroughtIron'), [
@@ -132,7 +154,7 @@ EBF_RECIPES.recipeBuilder()
 .blastFurnaceTemp(1750)
 .EUt(Globals.voltAmps[1])
 .duration(10)
-.notConsumable(Globals.circuit(1))
+.circuitMeta(1)
 .buildAndRegister()
 
 EBF_RECIPES.recipeBuilder()
@@ -142,7 +164,7 @@ EBF_RECIPES.recipeBuilder()
 .blastFurnaceTemp(1750)
 .EUt(Globals.voltAmps[1])
 .duration(10)
-.notConsumable(Globals.circuit(2))
+.circuitMeta(2)
 .buildAndRegister()
 
 //CEMENTED STEEL
@@ -208,7 +230,7 @@ ROASTER.recipeBuilder()
 	.buildAndRegister()
 
 EBF_RECIPES.recipeBuilder()
-        .notConsumable(Globals.circuit(1))
+        .circuitMeta(1)
         .inputs(ore('dustIron'))
         .outputs(item('minecraft:iron_ingot'))
         .duration(60)
@@ -217,7 +239,7 @@ EBF_RECIPES.recipeBuilder()
         .buildAndRegister()
 
 EBF_RECIPES.recipeBuilder()
-        .notConsumable(Globals.circuit(1))
+        .circuitMeta(1)
         .inputs(ore('ingotPigIron'))
         .outputs(item('minecraft:iron_ingot'))
         .duration(80)
