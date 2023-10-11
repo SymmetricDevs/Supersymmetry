@@ -258,6 +258,7 @@ for (solder in soldering_alloys) {
                     ore('plateSteel')*6,
                     item('techguns:itemshared:39')
             ])
+            .circuitMeta(1)
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:intermediate_tiered:11'))
             .duration(200)
@@ -269,6 +270,7 @@ for (solder in soldering_alloys) {
                     ore('plateAluminium')*6,
                     item('techguns:itemshared:39')
             ])
+            .circuitMeta(1)
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:intermediate_tiered:12'))
             .duration(200)
@@ -280,6 +282,7 @@ for (solder in soldering_alloys) {
                     ore('plateStainlessSteel')*6,
                     item('techguns:itemshared:39')
             ])
+            .circuitMeta(1)
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:intermediate_tiered:13'))
             .duration(200)

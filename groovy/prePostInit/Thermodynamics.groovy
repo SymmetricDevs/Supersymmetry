@@ -662,6 +662,7 @@ for (FluidFuel in FluidFuels) {
         for (lubricant in Globals.lubricants) {
             if (FluidFuel.refined_fuel) {
                 recipemap('gas_turbine').recipeBuilder()
+                    .circuitMeta(1)
                     .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
                     .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                     .fluidInputs(liquid('oxygen') * 20)
@@ -671,6 +672,7 @@ for (FluidFuel in FluidFuels) {
                     .buildAndRegister();
             } else {
                 recipemap('gas_turbine').recipeBuilder()
+                    .circuitMeta(1)
                     .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
                     .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
                     .fluidInputs(liquid('oxygen') * 20)
@@ -736,6 +738,7 @@ for (WorkingFluid in WorkingFluids) {
 
     for (lubricant in Globals.lubricants) {
             recipemap('steam_turbine').recipeBuilder()
+                    .circuitMeta(1)
                     .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
                     .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
                     .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
