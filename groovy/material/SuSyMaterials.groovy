@@ -649,10 +649,6 @@ class SuSyMaterials {
         public static Material PotassiumIodide;
         public static Material IridiumIodide;
         public static Material PhosphorusTrichloride;
-        public static Material TriphenylPhosphine;
-        public static Material TriphenylPhosphineDichloride;
-        public static Material BistriphenylphosphineiminiumChloride;
-        public static Material TriphenylphosphineOxide;
         public static Material SodiumDichromate;
         public static Material RaneyNickel;
         public static Material ActivatedRaneyNickel;
@@ -817,7 +813,6 @@ class SuSyMaterials {
         public static Material MagnesiumChlorideAmmoniate;
         public static Material PurifiedMagnesiumChloride;
         public static Material WashedMagnesiumChlorideAmmoniate;
-        public static Material BariumSulfide;
         public static Material BariumChloride;
         public static Material BariumOxide;
         public static Material CrudeIronPentacarbonyl;
@@ -1390,6 +1385,10 @@ class SuSyMaterials {
         public static Material MethanesulfonicAcid;
         public static Material TriarylsulfoniumHexafluoroantimonate;
         public static Material TosylicAcidSolution;
+        public static Material Triphenylphosphine;
+        public static Material TriphenylphosphineDichloride;
+        public static Material BistriphenylphosphineiminiumChloride;
+        public static Material TriphenylphosphineOxide;
 
         // Third Degree Materials
 
