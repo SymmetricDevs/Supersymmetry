@@ -233,13 +233,6 @@ BATCH_REACTOR.recipeBuilder()
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
 
-DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('crude_arsenic_trichloride') * 1000)
-        .fluidOutputs(fluid('arsenic_trichloride') * 1000)
-        .duration(120)
-        .EUt(Globals.voltAmps[1])
-        .buildAndRegister()
-
 DT.recipeBuilder()
         .fluidInputs(fluid('crude_arsenic_trichloride') * 2000)
         .fluidOutputs(fluid('arsenic_trichloride') * 2000)

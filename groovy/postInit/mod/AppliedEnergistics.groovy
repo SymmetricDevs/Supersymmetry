@@ -864,6 +864,7 @@ Globals.solders.each { key, val ->
                         .inputs(ore(circuit) * 4)
                         .inputs(ore('plateTitanium') * 8)
                         .inputs(item('appliedenergistics2:part:16') * 16)
+                        .circuitMeta(1)
                         .fluidInputs(solder)
                         .outputs(item('appliedenergistics2:crafting_unit') * (4 << i))
                         .cleanroom(CleanroomType.CLEANROOM)
