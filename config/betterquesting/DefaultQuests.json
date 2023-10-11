@@ -56969,7 +56969,6 @@
     },
     "754:10": {
       "preRequisites:11": [
-        755,
         550
       ],
       "properties:10": {
@@ -57040,16 +57039,16 @@
     },
     "755:10": {
       "preRequisites:11": [
-        756
+        550
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Magnetic Iron and Magnetic Steel will not suffice for higher tier machinery. You will need Magnetic Neodymium Alloy, which can be made by the following steps:\n\n1. Mixing neodymium, iron and boron for neodymium alloy dust\n\n2. Smelting the dust into ingots in an EBF\n\n3. Extruding the ingots into whatever shape you need the magnet to be\n\n4. Treating the extruded parts with sulfuric acid, boric acid and nickel in an electrolyzer\n\n5. Polarizing the treated parts for your final magnet",
+          "desc:8": "You have probably realized that you couldn’t make a bed all the way at the start, this is because we needed some standards.\nLuckily, due to industrial progress, these standards have now been met. So here’s how to make a bed.\n\nYou will first need to make Memory Foam which is made from Silicone Rubber and Polyurethane.\nTo make Polyurethane you will need to make a few new chemicals, to make Methylene Diphenyl Diisocyanate do :\n  \n4 wood pulp + 1000L sulfuric acid \u003d  Furfural Solution \u003e \nDistill \u003e \nFurfural + Acidic Light Oil \u003d Crude Pyridium Sulfate \u003e \nCrude Pyridium Sulfate + Ammonia \u003d Impure Pyridine \u003e \nDistill to get Aniline \u003e \n1000L Hydrochloric + 1000L Aniline + 2000L Formaldehyde \u003d 8 Methylenedianiline dust \u003e \n8 Methylenedianiline dust + 2000L Phosgene \u003d 10 Methylene Diphenyl Diisocyanate Dust. \n\nHowever to make Polyurethane you will also need Triethylenediamine, to make it :\n\n150L Ethylene Mix + 300L Ammonia \u003e \n150L Ethanolamine Mix \u003e \ndistill into Ethanolamine \u003e \n3000L of Ethanolamine in bed reactor will produce 8 Triethylenediamine\n\nYou should already be producing Ethylene Glycol and Glycerol, so just combine the chemicals to produce Polyurethane.\n\nNote that you need to do the above process §l§n8 times§r to make enough §6Memory foam§r.\n\nAfter making Polyurethane, combine it with Silicone rubber and you have Memory Foam. \n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 8402,
+            "Damage:2": 15013,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -57060,13 +57059,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtech:meta_stick"
+            "id:8": "gregtech:meta_plate"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Better Magnets",
+          "name:8": "Memory Foam",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -57089,8 +57088,8 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 8402,
+              "Count:3": 16,
+              "Damage:2": 15013,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -57101,7 +57100,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "gregtech:meta_stick"
+              "id:8": "gregtech:meta_plate"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -57110,16 +57109,16 @@
     },
     "756:10": {
       "preRequisites:11": [
-        479
+        755
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "(Insert how to get neodymium)",
+          "desc:8": "Now that you have memory foam, the hard part is over.\n\nNow, you still need to make Rayon! To do that, you will need to do the following.\n \nBathe 4 Cellulose Dust + 3000L Sodium Hydroxide Solution \u003e\nBathe 4 Alkali Cellulose + 1000L Carbon Disulfide (Carbon Disulfide is refunded at the end of the chain) \u003e Polymerize 8 Sodium Cellulose Xanthate Dust + 1000L Sulfuric acid \u003d 8 Rayon\n\nYou §oalso§r need to do this recipe 8 times in order to get enough Rayon.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 66,
+            "Damage:2": 15014,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -57130,13 +57129,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtech:meta_dust"
+            "id:8": "gregtech:meta_wire_fine"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Dying for Neodymium",
+          "name:8": "Rayon",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -57159,8 +57158,8 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 66,
+              "Count:3": 64,
+              "Damage:2": 15014,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -57171,7 +57170,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "id:8": "gregtech:meta_wire_fine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -57255,7 +57254,7 @@
                   "trait:8": "regeneration:boring"
                 }
               },
-              "OreDict:8": "",
+              "OreDict:8": "Finally, with the Rayon, Memory foam, some wood, and steel springs, you can get a good night\u0027s sleep.\n\nYou §l§n§r§l§odo need EV power§r to run this recipe though.\n\n§o§6Have a good night.",
               "id:8": "gregtech:meta_item_1"
             },
             "2:10": {
@@ -59498,164 +59497,7 @@
     },
     "792:10": {
       "preRequisites:11": [
-        550,
-        716,
-        713
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "You have probably realized that you couldn’t make a bed all the way at the start, this is because we needed some standards.\nLuckily, due to industrial progress, these standards have now been met. So here’s how to make a bed.\n\nYou will first need to make Memory Foam which is made from Silicone Rubber and Polyurethane.\nTo make Polyurethane you will need to make a few new chemicals, to make Methylene Diphenyl Diisocyanate do :\n  \n4 wood pulp + 1000L sulfuric acid \u003d  Furfural Solution \u003e \nDistill \u003e \nFurfural + Acidic Light Oil \u003d Crude Pyridium Sulfate \u003e \nCrude Pyridium Sulfate + Ammonia \u003d Impure Pyridine \u003e \nDistill to get Aniline \u003e \n1000L Hydrochloric + 1000L Aniline + 2000L Formaldehyde \u003d 8 Methylenedianiline dust \u003e \n8 Methylenedianiline dust + 2000L Phosgene \u003d 10 Methylene Diphenyl Diisocyanate Dust. \n\nHowever to make Polyurethane you will also need Triethylenediamine, to make it :\n\n150L Ethylene Mix + 300L Ammonia \u003e \n150L Ethanolamine Mix \u003e \ndistill into Ethanolamine \u003e \n3000L of Ethanolamine in bed reactor will produce 8 Triethylenediamine\n\nYou should already be producing Ethylene Glycol and Glycerol, so just combine the chemicals to produce Polyurethane.\n\nNote that you need to do the above process §l§n8 times§r to make enough §6Memory foam§r.\n\nAfter making Polyurethane, combine it with Silicone rubber and you have Memory Foam. \n\n",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 15013,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_plate"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Memory foam",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 792,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 15124,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            },
-            "1:10": {
-              "Count:3": 16,
-              "Damage:2": 15013,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_plate"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "793:10": {
-      "preRequisites:11": [
-        792
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Now that you have memory foam, the hard part is over.\n\nNow, you still need to make Rayon! To do that, you will need to do the following.\n \nBathe 4 Cellulose Dust + 3000L Sodium Hydroxide Solution \u003e\nBathe 4 Alkali Cellulose + 1000L Carbon Disulfide (Carbon Disulfide is refunded at the end of the chain) \u003e Polymerize 8 Sodium Cellulose Xanthate Dust + 1000L Sulfuric acid \u003d 8 Rayon\n\nYou §oalso§r need to do this recipe 8 times in order to get enough Rayon.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 15014,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_wire_fine"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Rayon",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 793,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 64,
-              "Damage:2": 15014,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_wire_fine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "794:10": {
-      "preRequisites:11": [
-        793
+        756
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -59681,7 +59523,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "The Fabled Bed",
+          "name:8": "Beds",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -59692,7 +59534,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 794,
+      "questID:3": 792,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
@@ -63064,71 +62906,78 @@
           "id:3": 550,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -12,
-          "y:3": -12
+          "x:3": -18,
+          "y:3": -18
         },
         "1:10": {
           "id:3": 754,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -6,
-          "y:3": -54
+          "x:3": -12,
+          "y:3": -60
         },
         "2:10": {
           "id:3": 755,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": -54
+          "x:3": -60,
+          "y:3": -12
         },
         "3:10": {
           "id:3": 756,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": -54
+          "y:3": -12
         },
         "4:10": {
           "id:3": 757,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -6,
-          "y:3": -102
+          "x:3": 30,
+          "y:3": -60
         },
         "5:10": {
           "id:3": 758,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": -102
+          "x:3": 72,
+          "y:3": -60
         },
         "6:10": {
           "id:3": 759,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": -132
+          "x:3": 108,
+          "y:3": -96
         },
         "7:10": {
           "id:3": 760,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": -102
+          "x:3": 108,
+          "y:3": -60
         },
         "8:10": {
           "id:3": 761,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": -72
+          "x:3": 108,
+          "y:3": -24
         },
         "9:10": {
           "id:3": 762,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 114,
-          "y:3": -102
+          "x:3": 144,
+          "y:3": -60
+        },
+        "10:10": {
+          "id:3": 792,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": -12
         }
       }
     },
@@ -66797,7 +66646,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
