@@ -12,6 +12,9 @@ DISTILLERY = recipemap('distillery')
 EMSEPARATOR = recipemap('electromagnetic_separator')
 ELECTROLYZER = recipemap('electrolyzer')
 CRYSTALLIZER = recipemap('crystallizer')
+DRYER = recipemap('dryer')
+MIXER = recipemap('mixer')
+COMPRESSOR = recipemap('compressor')
 
 // Aluminium Nugget * 3
 mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('dustRuby')], null)
@@ -150,31 +153,86 @@ ROASTER.recipeBuilder()
 
 // Red mud processing
 
+DRYER.recipeBuilder()
+.fluidInputs(fluid('red_mud') * 1000)
+.notConsumable(metaitem('item_filter'))
+.outputs(metaitem('dustRed_mud'))
+.fluidOutputs(fluid('water') * 1000)
+.duration(300)
+.EUt(64)
+.buildAndRegister()
+
+def alkalineAdditives  = [
+        metaitem('dustSodaAsh'),
+        metaitem('dustSodiumSulfate'),
+        //metaitem('dustPotassiumCarbonate'),
+        //metaitem('dustPotassiumSulfate'),
+];
+for (a in alkalineAdditives) {
+MIXER.recipeBuilder()
+        .inputs(a)
+        .inputs(dustRed_mud)
+        .outputs(metaitem('dustAlkalineRedMudMixture') * 2) //need to be registered
+        .EUt(16)
+        .duration(5)
+        .buildAndRegister()
+}
+COMPRESSOR.recipeBuilder() //maybe an extruder
+.inputs(ore('dustAlkalineRedMudMixture'))
+.notConsumable(metaitem('shape.mold.nugget'))
+.outputs(metaitem('nuggetAlkalineRedMudMixture') * 9)
+.duration(240)
+.EUt(24)
+.buildAndRegister()
+
+for (combustible in Globals.combustibles) {
+    EBF.recipeBuilder()
+            .inputs(ore('nuggetAlkalineRedMudMixture') * 9)
+            .inputs(ore(combustible.name) * combustible.amount_required)
+            .outputs(metaitem(combustible.byproduct))
+            .outputs(metaitem('nuggetRoastedAlkalineRedMudMixture') * 9) //need to be registered
+            .fluidOutputs(fluid('carbon_monoxide') * 1000)
+            .EUt(30)
+            .duration(300 * combustible.duration)
+            .buildAndRegister()
+}
+BR.recipeBuilder()
+    .inputs(ore('dustRoastedAlkalineRedMudMixture'))
+    .fluidInputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('sodium_aluminate_solution') * 1000) 
+    /*note: Al2O3 in red mud is 6-43%, so someone will have to balance the amount of NaAlO2 produced.
+     The sodium comes from the sodium salt + residue NaOH, since IRL NaOH recovery in bauxite recovery isn't 100% */
+    .outputs(metaitem('dustConcentratedRedMud'))
+    .EUt(Globals.voltAmps[2])
+    .duration(200) 
+    .buildAndRegister()
+
 EMSEPARATOR.recipeBuilder()
-.fluidInputs(fluid('red_mud') * 2000)
-.chancedOutput(metaitem('dustIronIiiOxide'), 5000, 0)
-.fluidOutputs(fluid('concentrated_red_mud') * 1000)
+.inputs(ore('dustConcentratedRedMud'))
+.chancedOutput(metaitem('dustMagnetite'), 2500, 0)
+.chancedOutput(metaitem('dustIron'), 2500, 0)
+.outputs(metaitem('red_mud_residue'))
 .duration(200)
 .EUt(96)
 .buildAndRegister()
 
-EBF.recipeBuilder()
-.fluidInputs(fluid('concentrated_red_mud') * 2000)
-.outputs(ore('ingotIron').first())
-.outputs(metaitem('red_mud_slag'))
-.blastFurnaceTemp(1600)
-.duration(300)
-.EUt(Globals.voltAmps[2] * 2)
-.buildAndRegister()
-
 CENTRIFUGE.recipeBuilder()
-.fluidInputs(fluid('sulfuric_acid') * 250)
-.inputs(metaitem('red_mud_slag'))
+.fluidInputs(fluid('sulfuric_acid') * 1000)
+.inputs(metaitem('red_mud_residue'))
 .outputs(metaitem('dustTinyRutile') * 3)
-.outputs(metaitem('leached_red_mud_slag'))
+.fluidOutputs(fluid('leached_red_mud_residue') * 1000) //for scandium and REE chain //need to be registered
 .duration(100)
 .EUt(Globals.voltAmps[3])
 .buildAndRegister()
+
+/* CENTRIFUGE.recipeBuilder()
+.fluidInputs(fluid('hydrochloric_acid') * 1000)
+.inputs(metaitem('red_mud_residue'))
+.outputs(metaitem('dustTinyRutile') * 3)
+.fluidOutputs(fluid('leached_red_mud_residue') * 1000) //for scandium and REE chain //need to be registered
+.duration(100)
+.EUt(Globals.voltAmps[3])
+.buildAndRegister() */
 
 BR.recipeBuilder()
         .fluidInputs(fluid('sulfuric_acid') * 3000)
@@ -210,11 +268,4 @@ ROASTER.recipeBuilder()
         .EUt(120)
         .buildAndRegister()
 
-// CENTRIFUGE.recipeBuilder()
-// .fluidInputs(fluid('hydrochloric_acid') * 500)
-// .inputs(metaitem('leached_red_mud_slag'))
-// .fluidOutputs(fluid('acidic_ree_solution') * 500)
-// .duration(100)
-// .EUt(Globals.voltAmps[4])
-// .buildAndRegister()
 
