@@ -9,6 +9,7 @@ ROASTER = recipemap('roaster')
 DUMPER = recipemap('dumping')
 PHASE_SEPARATOR = recipemap('phase_seperator')
 CHEMICAL_BATH = recipemap('chemical_bath')
+BR = recipemap('batch_reactor')
 
 // Polydimethylsiloxane
 
@@ -70,3 +71,20 @@ CHEMICAL_BATH.recipeBuilder()
   .fluidInputs(fluid('water') * 500)
   .fluidOutputs(fluid('hydrochloric_acid') * 500)
   .fluidOutputs(fluid('polydimethylsiloxane') * 1000)
+
+BR.recipeBuilder()
+  .fluidInputs(fluid('polydimemthylsiloxane') * 1000)
+  .fluidInputs(fluid('di_tert_butyl_peroxide') * 50)
+  .inputs(ore('dustSiliconeDioxide'))
+  .fluidOutputs(fluid('silicone_rubber') * 1000)
+  .EUt(Globals.voltAmps[1])
+  .buildAndRegister()
+
+BR.recipeBuilder()
+  .fluidInputs(fluid('polydimemthylsiloxane') * 1000)
+  .fluidInputs(fluid('di_tert_butyl_peroxide') * 50)
+  .inputs(ore('dustCarbon') * 1)
+  .fluidOutputs(fluid('silicone_rubber') * 1000)
+  .EUt(Globals.voltAmps[1])
+  .buildAndRegister()
+
