@@ -485,6 +485,17 @@ class SuSyMaterials {
         public static Material SpandexPolymerizationMix;
         public static Material AcrylicPhotoemulsion;
         public static Material TreatedCollagen;
+        public static Material AlkalineSaltRedMudMixture;
+        public static Material RoastedAlkalineSaltRedMudMixture;
+        public static Material LeachedRedMudResidue;
+        public static Material OrganicLoadedRedMudMixture;
+        public static Material ScrubbedOrganicLoadedRedMudMixture;
+        public static Material PrimeneJmt;
+        public static Material PurifiedLeachedRedMud;
+        public static Material ImpureSodiumScandateSolution;
+        public static Material ImpureScandiumHydroxide;
+        public static Material ImpureScandiumChlorideSolution;
+        public static Material ImpureScandiumSulfateSolution;
 
         // Petrochem Materials
 
@@ -1024,6 +1035,10 @@ class SuSyMaterials {
         public static Material GelatinSolution;
         public static Material UraniumDioxide;
         public static Material UraniumTetrafluoride;
+        public static Material SodiumPhosphate;
+        public static Material ScandiumOxalate;
+        public static Material ScandiumOxide;
+        public static Material ScandiumFluoride;
 
         // Second Degree Materials
 
@@ -1129,6 +1144,8 @@ class SuSyMaterials {
         public static Material ManganeseIIChlorideSolution;
         public static Material DilutedManganeseIIChlorideSolution;
         public static Material SupportedPalladium;
+        public static Material SodiumPhosphateSolution;
+        public static Material DilutedSodiumPhosphateSolution;
 
         // Organic Chemistry Materials
 

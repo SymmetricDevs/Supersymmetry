@@ -294,9 +294,8 @@ public class SecondDegreeMaterials {
                 .fluid()
                 .components(SodiumCyanide, 1, SodiumHydroxide, 1, Sodium, 27, Gold, 27, Carbon, 54, Nitrogen, 54, Water, 27)
                 .color(0xbbcc64)
-                .build();
-
-        GoldEluteSolution.setFormula('(NaCN)(NaOH)(Na[Au(CN)2])27(H2O)27', true)
+                .build()
+		GoldEluteSolution.setFormula('(NaCN)(NaOH)(Na[Au(CN)2])27(H2O)27', true)
 
         PotassiumCarbonateSolution = new Material.Builder(13046, SuSyUtility.susyId('potassium_carbonate_solution'))
                 .fluid()
@@ -651,6 +650,16 @@ public class SecondDegreeMaterials {
                 .dust()
                 .components(PalladiumChloride, 1, Alumina, 1)
                 .flags(GENERATE_CATALYST_BED)
+
+        SodiumPhosphateSolution = new Material.Builder(13105, SuSyUtility.susyId("sodium_phosphate_solution"))
+                .fluid()
+                .components(SodiumPhosphate, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        DilutedSodiumPhosphateSolution = new Material.Builder(13106, SuSyUtility.susyId("diluted_sodium_phosphate_solution"))
+                .fluid()
+                .components(SodiumPhosphate, 1, Water, 3)
                 .colorAverage()
                 .build();
     }
