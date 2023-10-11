@@ -94,7 +94,7 @@ public class UnknownCompositionMaterials {
                 .build();
 
         RedMud = new Material.Builder(4013, SuSyUtility.susyId('red_mud'))
-                .fluid()
+                .fluid().dust()
                 .color(0x913f2d)
                 .build();
 
@@ -109,7 +109,7 @@ public class UnknownCompositionMaterials {
                 .build();
 
         ConcentratedRedMud = new Material.Builder(4016, SuSyUtility.susyId('concentrated_red_mud'))
-                .fluid()
+                .fluid().dust()
                 .color(0x824133)
                 .build();
 
