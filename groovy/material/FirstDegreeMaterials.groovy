@@ -777,28 +777,30 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        TriphenylPhosphine = new Material.Builder(8201, SuSyUtility.susyId('triphenyl_phosphine'))
+        Diamminedichloropalladium = new Material.Builder(8201, SuSyUtility.susyId('diamminedichloropalladium'))
                 .dust()
-                .components(Carbon, 18, Hydrogen, 15, Phosphorus, 1)
+                .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
                 .colorAverage()
-                .build()
+                .build();
 
-        TriphenylPhosphineDichloride = new Material.Builder(8202, SuSyUtility.susyId('triphenyl_phosphine_dichloride'))
-                .dust()
-                .components(Carbon, 18, Hydrogen, 15, Chlorine, 2, Phosphorus, 1)
-                .colorAverage()
-                .build()
+        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
 
-        BistriphenylphosphineiminiumChloride = new Material.Builder(8203, SuSyUtility.susyId('bistriphenylphosphineiminium_chloride'))
+        DecarburizedAir = new Material.Builder(8202, SuSyUtility.susyId('decarburized_air'))
+                .fluid(FluidTypes.GAS)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
+                .color(0x90bbe0)
+                .build();
+      
+        ZincOxide = new Material.Builder(8203, SuSyUtility.susyId("zinc_oxide"))
                 .dust()
-                .components(Carbon, 36, Hydrogen, 30, Chlorine, 1, Nitrogen, 1, Phosphorus, 2)
-                .colorAverage()
-                .build()
+                .components(Zinc, 1, Oxygen, 1)
+                .color(0xFFFFF5)
+                .build();
 
-        TriphenylphosphineOxide = new Material.Builder(8204, SuSyUtility.susyId('triphenylphosphine_oxide'))
+        HydrogenSilsesquioxane = new Material.Builder(8204, SuSyUtility.susyId('hydrogen_silsesquioxane'))
                 .dust()
-                .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
-                .colorAverage()
+                .color(0xC7C0CB)
+                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
                 .build()
 
         SodiumDichromate = new Material.Builder(8205, SuSyUtility.susyId('sodium_dichromate'))
@@ -1859,11 +1861,11 @@ public class FirstDegreeMaterials{
                 .iconSet(SHINY)
                 .build();
                 
-        BariumSulfide = new Material.Builder(8371, SuSyUtility.susyId('barium_sulfide'))
+        HydrogenSilsesquioxane = new Material.Builder(8371, SuSyUtility.susyId('hydrogen_silsesquioxane'))
                 .dust()
-                .components(Barium, 1, Sulfur, 1)
-                .colorAverage()
-                .build();
+                .color(0xC7C0CB)
+                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
+                .build()
 
         BariumChloride = new Material.Builder(8372, SuSyUtility.susyId('barium_chloride'))
                 .dust()
@@ -3217,27 +3219,14 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        AcidWashedSiliconDioxide = new Material.Builder(8570, SuSyUtility.susyId('acid_washed_silicon_dioxide'))
-                .dust()
-                .components(SiliconDioxide, 1)
-                .color(0xc8c8c8)
-                .iconSet(SHINY)
-                .build();
-
-        DisulfurDichloride = new Material.Builder(8571, SuSyUtility.susyId('disulfur_dichloride'))
-                .fluid()
-                .components(Sulfur, 2, Chlorine, 2)
-                .color(0xccc31d)
-                .build();
-
-        Ferroplatinum = new Material.Builder(8572, SuSyUtility.susyId('ferroplatinum'))
+        Ferroplatinum = new Material.Builder(8570, SuSyUtility.susyId('ferroplatinum'))
                 .dust().ingot()
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Platinum, 3, Iron, 1)
                 .colorAverage()
                 .build();
 
-        Diamminedichloropalladium = new Material.Builder(8573, SuSyUtility.susyId('diamminedichloropalladium'))
+        Diamminedichloropalladium = new Material.Builder(8571, SuSyUtility.susyId('diamminedichloropalladium'))
                 .dust()
                 .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
                 .colorAverage()
@@ -3245,22 +3234,16 @@ public class FirstDegreeMaterials{
 
         Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
 
-        DecarburizedAir = new Material.Builder(8574, SuSyUtility.susyId('decarburized_air'))
+        DecarburizedAir = new Material.Builder(8572, SuSyUtility.susyId('decarburized_air'))
                 .fluid(FluidTypes.GAS)
                 .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
                 .color(0x90bbe0)
                 .build();
       
-        ZincOxide = new Material.Builder(8575, SuSyUtility.susyId("zinc_oxide"))
+        ZincOxide = new Material.Builder(8573, SuSyUtility.susyId("zinc_oxide"))
                 .dust()
                 .components(Zinc, 1, Oxygen, 1)
                 .color(0xFFFFF5)
                 .build();
-
-        HydrogenSilsesquioxane = new Material.Builder(8576, SuSyUtility.susyId('hydrogen_silsesquioxane'))
-                .dust()
-                .color(0xC7C0CB)
-                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
-                .build()
     }
 }
