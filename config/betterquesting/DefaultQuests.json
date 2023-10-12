@@ -1449,7 +1449,7 @@
             },
             "1:10": {
               "Count:3": 1,
-              "Damage:2": 5,
+              "Damage:2": 112,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -1460,7 +1460,7 @@
                 }
               },
               "OreDict:8": "dustTin",
-              "id:8": "libvulpes:productdust"
+              "id:8": "gregtech:meta_dust"
             },
             "2:10": {
               "Count:3": 3,
@@ -2750,7 +2750,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 8,
-              "Damage:2": 6,
+              "Damage:2": 324,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -2761,7 +2761,7 @@
                 }
               },
               "OreDict:8": "ingotSteel",
-              "id:8": "libvulpes:productingot"
+              "id:8": "gregtech:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -5326,7 +5326,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "advancedrocketry:moonturf"
+            "id:8": "tardis:moon_dirt"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -7315,9 +7315,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "advancedrocketry:hotturf"
+            "id:8": "minecraft:sand"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -59182,38 +59182,6 @@
       "tasks:9": {}
     },
     "785:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "New Quest",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 785,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "786:10": {
       "preRequisites:11": [
         243,
         580
@@ -59253,7 +59221,7 @@
         }
       }
     },
-    "787:10": {
+    "786:10": {
       "preRequisites:11": [
         31,
         580
@@ -59306,7 +59274,7 @@
         }
       }
     },
-    "788:10": {
+    "787:10": {
       "preRequisites:11": [
         479,
         580
@@ -59346,7 +59314,7 @@
         }
       }
     },
-    "789:10": {
+    "788:10": {
       "preRequisites:11": [
         31,
         781
@@ -59399,7 +59367,7 @@
         }
       }
     },
-    "790:10": {
+    "789:10": {
       "preRequisites:11": [
         786,
         373
@@ -59447,7 +59415,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "791:10": {
+    "790:10": {
       "preRequisites:11": [
         775,
         394
@@ -59495,7 +59463,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "792:10": {
+    "791:10": {
       "preRequisites:11": [
         756
       ],
@@ -59565,7 +59533,7 @@
         }
       }
     },
-    "793:10": {
+    "792:10": {
       "preRequisites:11": [
         550
       ],
@@ -59629,7 +59597,7 @@
         }
       }
     },
-    "794:10": {
+    "793:10": {
       "preRequisites:11": [
         793
       ],
@@ -59725,7 +59693,7 @@
         }
       }
     },
-    "795:10": {
+    "794:10": {
       "preRequisites:11": [
         794,
         796
@@ -59787,7 +59755,7 @@
         }
       }
     },
-    "796:10": {
+    "795:10": {
       "preRequisites:11": [
         648
       ],
@@ -59853,7 +59821,7 @@
         }
       }
     },
-    "797:10": {
+    "796:10": {
       "preRequisites:11": [
         795
       ],
@@ -59923,7 +59891,7 @@
         }
       }
     },
-    "798:10": {
+    "797:10": {
       "preRequisites:11": [
         797
       ],
@@ -59993,7 +59961,7 @@
         }
       }
     },
-    "799:10": {
+    "798:10": {
       "preRequisites:11": [
         637
       ],
@@ -60063,7 +60031,7 @@
         }
       }
     },
-    "800:10": {
+    "799:10": {
       "preRequisites:11": [
         795,
         799
@@ -60134,7 +60102,7 @@
         }
       }
     },
-    "801:10": {
+    "800:10": {
       "preRequisites:11": [
         800
       ],
@@ -60204,7 +60172,7 @@
         }
       }
     },
-    "802:10": {
+    "801:10": {
       "preRequisites:11": [
         800
       ],
@@ -60288,7 +60256,7 @@
         }
       }
     },
-    "803:10": {
+    "802:10": {
       "preRequisites:11": [
         802
       ],
@@ -64718,7 +64686,7 @@
           "desc:8": "A list of all locations in the known universe.",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 4,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -64729,7 +64697,7 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "advancedrocketry:jetpack"
+            "id:8": "openmodularturrets:ammo_meta"
           },
           "name:8": "Exploration",
           "visibility:8": "ALWAYS"
@@ -67516,7 +67484,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
