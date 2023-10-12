@@ -5448,7 +5448,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Antimony §ris a metalloid. In its metallic form it is silvery, hard and brittle. Antimony is used to make §6battery alloy§r, which is used to make the casings for §6batteries§r.\n\nAntimony is found in §6Stibnite Ore§r, in Stibnite veins.§k§6 §rStibnite can also be found in § §6Cinnabar §rveins, in small amounts§r.",
+          "desc:8": "§6Antimony §ris a metalloid. In its metallic form it is silvery, hard and brittle. Antimony is used to make §6battery alloy§r, which is used to make the casings for §6batteries§r.\n\nAntimony is found in §6Stibnite Ore§r, in Stibnite veins.§k§6 §rStibnite can also be found in § §6Cinnabar §rveins in small amounts§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
