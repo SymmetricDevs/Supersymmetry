@@ -465,7 +465,7 @@ susy.material.impure_semiheavy_hydrogen_sulfide=含杂半重硫化氢
 susy.material.impure_heavy_hydrogen_sulfide=含杂重硫化氢
 susy.material.sea_water=海水
 
-susy.material.novolacs=Novolacs光刻胶
+susy.material.novolacs=酸性酚醛树脂光刻胶
 susy.material.silicon_tetrachloride=四氯化硅
 susy.material.purified_silicon_tetrachloride=纯净四氯化硅
 
