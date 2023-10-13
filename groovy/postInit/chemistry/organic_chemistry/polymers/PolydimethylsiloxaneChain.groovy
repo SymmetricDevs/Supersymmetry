@@ -66,7 +66,7 @@ PHASE_SEPARATOR.recipeBuilder()
   .duration(200)
   .buildAndRegister()
 
-CHEMICAL_BATH.recipeBuilder()
+MIXER.recipeBuilder()
   .fluidInputs(fluid('raw_polydimethylsiloxane_mixture') * 1000)
   .fluidInputs(fluid('water') * 500)
   .fluidOutputs(fluid('hydrochloric_acid') * 500)
