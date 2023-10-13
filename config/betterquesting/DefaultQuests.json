@@ -39309,7 +39309,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "NORMAL"
         }
       },
       "questID:3": 550,
@@ -59183,6 +59183,72 @@
     },
     "785:10": {
       "preRequisites:11": [
+        804
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "At long last, you have produced the chemical required to concentrate §dniobium §rand §6tantalum§r. DO NOT LOSE IT.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "one_amidoethyl_two_alkyl_two_imidazoline"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Niobium/Tantalum Froth Flotation",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 785,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "one_amidoethyl_two_alkyl_two_imidazoline"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "786:10": {
+      "preRequisites:11": [
         243,
         580
       ],
@@ -59221,7 +59287,7 @@
         }
       }
     },
-    "786:10": {
+    "787:10": {
       "preRequisites:11": [
         31,
         580
@@ -59274,7 +59340,7 @@
         }
       }
     },
-    "787:10": {
+    "788:10": {
       "preRequisites:11": [
         479,
         580
@@ -59314,7 +59380,7 @@
         }
       }
     },
-    "788:10": {
+    "789:10": {
       "preRequisites:11": [
         31,
         781
@@ -59367,7 +59433,7 @@
         }
       }
     },
-    "789:10": {
+    "790:10": {
       "preRequisites:11": [
         786,
         373
@@ -59415,7 +59481,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "790:10": {
+    "791:10": {
       "preRequisites:11": [
         775,
         394
@@ -59463,7 +59529,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "791:10": {
+    "792:10": {
       "preRequisites:11": [
         756
       ],
@@ -59488,7 +59554,7 @@
             "id:8": "minecraft:bed"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Beds",
@@ -59533,14 +59599,14 @@
         }
       }
     },
-    "792:10": {
+    "793:10": {
       "preRequisites:11": [
         550
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §1§0§r§bgravity separator §rmultiblock is used for advanced ore processing at EV and beyond. Many element production lines will rely on this multiblock in the future. To properly form, make sure to wrench its rotors such that the 2 white lines on the top of the blocks are on the front half of the block.\n\nTo operate, it relies on differing §cspecific gravities §r(or the ratio between a compound\u0027s density and water\u0027s density) to separate valuable ores from gangue.",
+          "desc:8": "The §1§0§r§bgravity separator §rmultiblock is used for advanced ore processing at EV and beyond. Many element production lines will rely on this multiblock in the future. To properly form, make sure to wrench its rotors such that the 2 white lines on the top of the blocks are on the front half of the block.\n\nTo operate, it relies on differing §cspecific gravities §r(or the ratio between a compound\u0027s density and water\u0027s density) to separate valuable ores from gangue.\n\nIt is recommended that you make a lot of these multiblocks. You will need it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59549,7 +59615,7 @@
             "id:8": "susy:separator_rotor"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "The Gates of Ore Processing Hell",
@@ -59597,7 +59663,7 @@
         }
       }
     },
-    "793:10": {
+    "794:10": {
       "preRequisites:11": [
         793
       ],
@@ -59693,7 +59759,7 @@
         }
       }
     },
-    "794:10": {
+    "795:10": {
       "preRequisites:11": [
         794,
         796
@@ -59701,7 +59767,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "In order to further purify tungsten, a few reactions and a §dliquid-liquid extraction§r step must occur. From your beneficiated ore concentrates, dissolve it to form a sodium tungstate solution, react it with aluminium sulfate to remove any dissolved silicate.\n\nNext, add sodium sulfide and sulfuric acid to remove any §bmolybdenum§r impurities, a useful byproduct.\n\nAfter the initial purification reactions, combine the solution with the §etungsten extraction mixture§r to load it with tungstate ions. This tungsten extract is then washed with demineralized water.\n\nFinally, to extract the tungstate from the mixture, mix it with ammonium to precipitate §aAmmonium Paratungstate Dust§f§f. This can then be calcined to produce ammonia, steam, and §6Tungsten Trioxide Dust§r.",
+          "desc:8": "In order to further purify tungsten, a few reactions and a §dliquid-liquid extraction§r step must occur. From your beneficiated ore concentrates, dissolve it to form a sodium tungstate solution, react it with aluminium sulfate to remove any dissolved silicate.\n\nNext, add sodium sulfide and sulfuric acid to remove any §bmolybdenum§r impurities, a useful byproduct.\n\nAfter the initial purification reactions, combine the solution with the §eTungsten Extraction Mixture§r to load it with tungstate ions. This tungsten extract is then washed with demineralized water.\n\nFinally, to extract the tungstate from the mixture, mix it with ammonium to precipitate §aAmmonium Paratungstate Dust§f§f. This can then be calcined to produce ammonia, steam, and §6Tungsten Trioxide Dust§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59755,7 +59821,7 @@
         }
       }
     },
-    "795:10": {
+    "796:10": {
       "preRequisites:11": [
         648
       ],
@@ -59788,7 +59854,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Tungsten Extraction Mixture",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -59821,7 +59887,7 @@
         }
       }
     },
-    "796:10": {
+    "797:10": {
       "preRequisites:11": [
         795
       ],
@@ -59891,7 +59957,7 @@
         }
       }
     },
-    "797:10": {
+    "798:10": {
       "preRequisites:11": [
         797
       ],
@@ -59961,7 +60027,7 @@
         }
       }
     },
-    "798:10": {
+    "799:10": {
       "preRequisites:11": [
         637
       ],
@@ -60031,7 +60097,7 @@
         }
       }
     },
-    "799:10": {
+    "800:10": {
       "preRequisites:11": [
         795,
         799
@@ -60102,7 +60168,7 @@
         }
       }
     },
-    "800:10": {
+    "801:10": {
       "preRequisites:11": [
         800
       ],
@@ -60172,7 +60238,7 @@
         }
       }
     },
-    "801:10": {
+    "802:10": {
       "preRequisites:11": [
         800
       ],
@@ -60242,7 +60308,7 @@
         },
         "1:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 1,
@@ -60256,7 +60322,7 @@
         }
       }
     },
-    "802:10": {
+    "803:10": {
       "preRequisites:11": [
         802
       ],
@@ -60325,6 +60391,693 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "804:10": {
+      "preRequisites:11": [
+        550
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Before you can producing §dniobium§r and §6tantalum§r, you must first utilize this the §cShell Higher Olefin Process§r to produce a froth flotation agent suitable for the concentration of the two elements. This catalyst is the main hassle in the process, and requires multitudinous steps to synthesize. Good luck, you will need it.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "shell_higher_olefin_catalyst_solution"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "ETERNAL SUFFERING",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 804,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "shell_higher_olefin_catalyst_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "805:10": {
+      "preRequisites:11": [
+        785,
+        793
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The beneficiation process for §d§5pyrochlore§r involves first sifting it, passing it through an electromagnetic separator, then froth flotation, followed by roasting and digestion.\n\nThe process for §dcolumbite§r and §6tantalite§r are similar, involving a sifting step, electromagnetic separator, and then froth flotation.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4321,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Niobium/Tantalum Beneficiation",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 805,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4303,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4309,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4321,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "806:10": {
+      "preRequisites:11": [
+        805
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The§b liquid-liquid extraction§r of §dniobium §rand §6tantalum§r is intertwined, and is a very complex process. It uses MIBK in order to carry around both metals as their heptafluoride complexes, and both processes rely upon one another. First, using hydrofluoric acid and sulfuric acid, dissolve your flotated ores. Next, extract with MIBK. Then, scrub the extract with sulfuric acid and wash with water to separate the niobium from the tantalum. Columbite carries more niobium than tantalum. For the columbite line, which produces mainly §dfluoroniobic acid solution§r, reextract that solution with MIBK to remove all traces of §6tantalum§r. As for the tantalite line, dilute ammonia solution is used to strip the tantalum from the MIBK. \n\nAcross these steps, niobium is separated from a tantalum-rich solution for the case of the tantalite line, and tantalum is separated from a niobium-rich solution in the case of the columbite line.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "methyl_isobutyl_ketone"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Niobium/Tantalum Liquid-Liquid Extraction",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 806,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "purified_fluoroniobic_acid_solution"
+            },
+            "1:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "fluorotantalic_acid_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "807:10": {
+      "preRequisites:11": [
+        805
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "React your digested pyrochlore with iron (III) oxide, sodium nitrate, and aluminium to produce §dFerroniobium-Tantalum§r. This will then be partitioned into its components in the following steps.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8552,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Ferroniobium-Tantalum",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 807,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8552,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "808:10": {
+      "preRequisites:11": [
+        807
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Next, we chlorinate the §dFerroniobium-Tantalum§r in a bath of salt and iron (III) chloride to produce impure niobium chloride. This is then distilled to yield §6Tantalum Pentachloride §rand §dNiobium Pentachloride.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1005,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Ferroniobium-Tantalum Partitioning",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 808,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 6500,
+              "FluidName:8": "niobium_pentachloride"
+            },
+            "1:10": {
+              "Amount:3": 500,
+              "FluidName:8": "tantalum_pentachloride"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "809:10": {
+      "preRequisites:11": [
+        811
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "To obtain pure §dNiobium Metal§r, reduce niobium oxide with §baluminium§r in a reaction furnace.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 71,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Niobium Metal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 809,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 71,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "810:10": {
+      "preRequisites:11": [
+        812
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§rTo produce tantalum metal, §cPotassium Fluorotantalate Dust§r is reduced with sodium to produce the metal.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 104,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tantalum Metal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 810,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "811:10": {
+      "preRequisites:11": [
+        808,
+        806
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "From either the §aniobium pentachloride §o§ror §dpurified fluoroniobic acid solution§r, niobium oxide dihydrate is precipitated, which is then roasted to form niobium oxide.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8555,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Niobium Purification",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 811,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8557,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "812:10": {
+      "preRequisites:11": [
+        806
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "To further purify tantalum from pyrochlore, the tantalum chloride is first reacted with hydrogen fluoride to produce hydrogen chloride. This is then dissolved in water and crystallized with potassium fluoride to produce §cPotassium Fluorotantalate Dust§r. From tantalite, the fluorotantalic acid solution is directly crystallized with potassium fluoride to produce §cPotassium Fluorotantalate Dust§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8559,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tantalum Purification",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 812,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8559,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "813:10": {
+      "preRequisites:11": [
+        809,
+        810,
+        801,
+        803,
+        797
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The five elements you have just produced, ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 3003,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Superalloys",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 813,
+      "rewards:9": {},
+      "tasks:9": {}
     }
   },
   "questLines:9": {
@@ -63675,20 +64428,20 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": -60
+          "y:3": -54
         },
         "2:10": {
           "id:3": 755,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
+          "x:3": -54,
           "y:3": -12
         },
         "3:10": {
           "id:3": 756,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -102,
+          "x:3": -96,
           "y:3": -12
         },
         "4:10": {
@@ -63696,126 +64449,203 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
-          "y:3": -60
+          "y:3": -54
         },
         "5:10": {
           "id:3": 758,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": -60
+          "y:3": -54
         },
         "6:10": {
           "id:3": 759,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
-          "y:3": -96
+          "y:3": -90
         },
         "7:10": {
           "id:3": 760,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
-          "y:3": -60
+          "y:3": -54
         },
         "8:10": {
           "id:3": 761,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
-          "y:3": -24
+          "y:3": -18
         },
         "9:10": {
           "id:3": 762,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
-          "y:3": -60
+          "y:3": -54
         },
         "10:10": {
+          "id:3": 785,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -96,
+          "y:3": 30
+        },
+        "11:10": {
           "id:3": 792,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
+          "x:3": -138,
           "y:3": -12
         },
-        "11:10": {
+        "12:10": {
           "id:3": 793,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 36
+          "y:3": 30
         },
-        "12:10": {
+        "13:10": {
           "id:3": 794,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 78
+          "y:3": 72
         },
-        "13:10": {
+        "14:10": {
           "id:3": 795,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 120
+          "y:3": 114
         },
-        "14:10": {
+        "15:10": {
           "id:3": 796,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
-          "y:3": 120
+          "y:3": 114
         },
-        "15:10": {
+        "16:10": {
           "id:3": 797,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 162
+          "y:3": 156
         },
-        "16:10": {
+        "17:10": {
           "id:3": 798,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 204
+          "x:3": -54,
+          "y:3": 156
         },
-        "17:10": {
+        "18:10": {
           "id:3": 799,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
-          "y:3": 78
+          "y:3": 72
         },
-        "18:10": {
+        "19:10": {
           "id:3": 800,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
-          "y:3": 120
+          "y:3": 114
         },
-        "19:10": {
+        "20:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
-          "y:3": 204
+          "y:3": 156
         },
-        "20:10": {
+        "21:10": {
           "id:3": 802,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": 162
+          "y:3": 114
         },
-        "21:10": {
+        "22:10": {
           "id:3": 803,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": 204
+          "y:3": 156
+        },
+        "23:10": {
+          "id:3": 804,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -54,
+          "y:3": 30
+        },
+        "24:10": {
+          "id:3": 805,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -54,
+          "y:3": 72
+        },
+        "25:10": {
+          "id:3": 806,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -96,
+          "y:3": 114
+        },
+        "26:10": {
+          "id:3": 807,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -96,
+          "y:3": 72
+        },
+        "27:10": {
+          "id:3": 808,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -138,
+          "y:3": 114
+        },
+        "28:10": {
+          "id:3": 809,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -54,
+          "y:3": 234
+        },
+        "29:10": {
+          "id:3": 810,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -54,
+          "y:3": 192
+        },
+        "30:10": {
+          "id:3": 811,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -138,
+          "y:3": 192
+        },
+        "31:10": {
+          "id:3": 812,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -96,
+          "y:3": 192
+        },
+        "32:10": {
+          "id:3": 813,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 24,
+          "y:3": 228
         }
       }
     },
