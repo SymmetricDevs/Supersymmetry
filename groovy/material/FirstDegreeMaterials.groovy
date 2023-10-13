@@ -1861,11 +1861,11 @@ public class FirstDegreeMaterials{
                 .iconSet(SHINY)
                 .build();
                 
-        HydrogenSilsesquioxane = new Material.Builder(8371, SuSyUtility.susyId('hydrogen_silsesquioxane'))
-                .dust()
-                .color(0xC7C0CB)
-                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
-                .build()
+        DecarburizedAir = new Material.Builder(8371, SuSyUtility.susyId('decarburized_air'))
+                .fluid(FluidTypes.GAS)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
+                .color(0x90bbe0)
+                .build();
 
         BariumChloride = new Material.Builder(8372, SuSyUtility.susyId('barium_chloride'))
                 .dust()
@@ -3233,17 +3233,5 @@ public class FirstDegreeMaterials{
                 .build();
 
         Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
-
-        DecarburizedAir = new Material.Builder(8572, SuSyUtility.susyId('decarburized_air'))
-                .fluid(FluidTypes.GAS)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
-                .color(0x90bbe0)
-                .build();
-      
-        ZincOxide = new Material.Builder(8573, SuSyUtility.susyId("zinc_oxide"))
-                .dust()
-                .components(Zinc, 1, Oxygen, 1)
-                .color(0xFFFFF5)
-                .build();
     }
 }

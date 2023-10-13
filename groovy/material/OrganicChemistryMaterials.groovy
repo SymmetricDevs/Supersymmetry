@@ -1764,10 +1764,10 @@ public class OrganicChemistryMaterials {
                 .color(0xff6e6e)
                 .build();
 
-        TriarylsulfoniumHexafluoroantimonate = new Material.Builder(15283, SuSyUtility.susyId("triarylsulfonium_hexafluoroantimonate"))
+        TriphenylphosphineOxide = new Material.Builder(15283, SuSyUtility.susyId('triphenylphosphine_oxide'))
                 .dust()
-                .components(Carbon, 24, Hydrogen, 19, Fluorine, 6, Sulfur, 2, Antimony, 1)
-                .color(0x31a374)
+                .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
+                .colorAverage()
                 .build();
 
         TosylicAcidSolution = new Material.Builder(15284, SuSyUtility.susyId("tosylic_acid_solution"))
@@ -1793,12 +1793,6 @@ public class OrganicChemistryMaterials {
         BistriphenylphosphineiminiumChloride = new Material.Builder(15287, SuSyUtility.susyId('bistriphenylphosphineiminium_chloride'))
                 .dust()
                 .components(Carbon, 36, Hydrogen, 30, Chlorine, 1, Nitrogen, 1, Phosphorus, 2)
-                .colorAverage()
-                .build();
-
-        TriphenylphosphineOxide = new Material.Builder(15288, SuSyUtility.susyId('triphenylphosphine_oxide'))
-                .dust()
-                .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
                 .colorAverage()
                 .build();
     }
