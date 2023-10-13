@@ -42,7 +42,7 @@ Globals.solders.each { key, val ->
 
 DRONE_PAD.recipeBuilder()
     .inputs(metaitem('drone.lv').withNbt(["Charge": 10000L]))
-    .circuitMeta(0)
+    .circuitMeta(5)
     .outputs(metaitem('drone.lv').withNbt(["Charge": 0L]))
     .chancedOutput(item('minecraft:bone') * 8, 8000, 400)
     .chancedOutput(item('minecraft:rotten_flesh') * 8, 8000, 400)
