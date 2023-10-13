@@ -61043,7 +61043,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The five elements you have just produced, ",
+          "desc:8": "The five elements you have just produced, §7§5Tungsten§r, §bMolybdenum§r, §7Rhenium§r, §dNiobium§r, and §6Tantalum§r, are known as the refractory metals, known for their hardness and strength at high temperatures. They are frequently added to alloys to produce extremely resistant alloys for applications such as gas turbines, jets, rocket engines, and more.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -61077,7 +61077,12 @@
       },
       "questID:3": 813,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
