@@ -1809,5 +1809,20 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xa186b0)
                 .build();
+     
+        OrganosiliconMixture = new Material.Builder(4345, SuSyUtility.susyId("organosilicon_mixture"))
+                .fluid()
+                .color(0xbebdb8)
+                .build();
+     
+        ImpurePolydimethylsiloxaneMixture = new Material.Builder(4346, SuSyUtility.susyId("impure_polydimethylsiloxane_mixture"))
+                .fluid()
+                .color(0xf6f7f0)
+                .build();
+     
+        RawPolydimethylsiloxaneMixture = new Material.Builder(4347, SuSyUtility.susyId("raw_polydimethylsiloxane_mixture"))
+                .fluid()
+                .color(0xf6f7f0)
+                .build();  
     }
 }
