@@ -390,24 +390,29 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        BisphenolADiglycidylEther = new Material.Builder(15063, SuSyUtility.susyId('bisphenola_diglycidyl_ether'))
+        Chlorotrimethylsilane = new Material.Builder(15063, SuSyUtility.susyId("chlorotrimethylsilane"))
                 .fluid()
-                .components(Carbon, 21, Hydrogen, 24, Oxygen, 4)
-                .colorAverage()
+                .components(Carbon, 3, Hydrogen, 9, Silicon, 1, Chlorine, 1)
+                .color(0xd9dddc)
                 .build();
 
-        ImpureEpoxyResin = new Material.Builder(15064, SuSyUtility.susyId('impure_epoxy_resin'))
+        Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
+
+        Methyldichlorosilane = new Material.Builder(15064, SuSyUtility.susyId("methyldichlorosilane"))
                 .fluid()
-                .components(SaltWater, 1, Epoxy, 1)
-                .colorAverage()
+                .components(Carbon, 1, Hydrogen, 4, Chlorine, 2, Silicon, 1)
+                .color(0xd9dddc)
                 .build();
 
-        UncuredEpoxyResin = new Material.Builder(15065, SuSyUtility.susyId('uncured_epoxy_resin'))
+        Methyldichlorosilane.setFormula("CH3Cl2SiH", true)
+
+        Methyltrichlorosilane = new Material.Builder(15065, SuSyUtility.susyId("methyltrichlorosilane"))
                 .fluid()
-                .components(Epoxy, 1)
-                .colorAverage()
-                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 1, Hydrogen, 3, Silicon, 1, Chlorine, 3)
+                .color(0xd9dddc)
                 .build();
+
+        Methyltrichlorosilane.setFormula("CH3SiCl3", true)
 
         TNTSolution = new Material.Builder(15066, SuSyUtility.susyId('tnt_solution'))
                 .fluid()
@@ -1795,29 +1800,7 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 36, Hydrogen, 30, Chlorine, 1, Nitrogen, 1, Phosphorus, 2)
                 .colorAverage()
                 .build();
-                
-        Methyltrichlorosilane = new Material.Builder(15288, SuSyUtility.susyId("methyltrichlorosilane"))
-                .fluid()
-                .components(Carbon, 1, Hydrogen, 3, Silicon, 1, Chlorine, 3)
-                .color(0xd9dddc)
-                .build();
 
-        Methyltrichlorosilane.setFormula("CH3SiCl3", true)
-
-        Methyldichlorosilane = new Material.Builder(15289, SuSyUtility.susyId("methyldichlorosilane"))
-                .fluid()
-                .components(Carbon, 1, Hydrogen, 4, Chlorine, 2, Silicon, 1)
-                .color(0xd9dddc)
-                .build();
-
-        Methyldichlorosilane.setFormula("CH3Cl2SiH", true)
-
-        Chlorotrimethylsilane = new Material.Builder(15290, SuSyUtility.susyId("chlorotrimethylsilane"))
-                .fluid()
-                .components(Carbon, 3, Hydrogen, 9, Silicon, 1, Chlorine, 1)
-                .color(0xd9dddc)
-                .build();
-
-        Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
+        
     }
 }

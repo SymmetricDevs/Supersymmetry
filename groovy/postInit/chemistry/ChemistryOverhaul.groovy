@@ -1606,41 +1606,6 @@ BR.recipeBuilder()
 .duration(80)
 .buildAndRegister()
 
-// Epoxy Resin
-
-CSTR.recipeBuilder()
-.fluidInputs(fluid('bisphenol_a') * 50)
-.fluidInputs(fluid('epichlorohydrin') * 50)
-.fluidOutputs(fluid('bisphenola_diglycidyl_ether') * 50)
-.duration(10)
-.EUt(30)
-.buildAndRegister()
-
-BR.recipeBuilder()
-.fluidInputs(fluid('bisphenola_diglycidyl_ether') * 1000)
-.inputs(ore('dustSodiumHydroxide') * 3)
-.fluidOutputs(fluid('impure_epoxy_resin') * 2000)
-.duration(200)
-.EUt(30)
-.buildAndRegister()
-
-CENTRIFUGE.recipeBuilder()
-.fluidInputs(fluid('impure_epoxy_resin') * 2000)
-.fluidOutputs(fluid('salt_water') * 1000)
-.fluidOutputs(fluid('uncured_epoxy_resin') * 1000)
-.duration(180)
-.EUt(30)
-.buildAndRegister()
-
-VULCANIZER.recipeBuilder()
-.fluidInputs(fluid('uncured_epoxy_resin') * 1000)
-.fluidInputs(fluid('bisphenol_a') * 100)
-.notConsumable(metaitem('shape.extruder.plate'))
-.outputs(metaitem('plateEpoxy') * 7)
-.duration(200)
-.EUt(30)
-.buildAndRegister()
-
 // Salt from Sodium and Chlorine
 
 ROASTER.recipeBuilder()
