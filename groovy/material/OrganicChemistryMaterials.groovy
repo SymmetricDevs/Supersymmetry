@@ -1804,7 +1804,7 @@ public class OrganicChemistryMaterials {
         
         Methyltrichlorosilane = new Material.Builder(15289, "methyltrichlorosilane")
                 .fluid()
-                .compontents(Carbon, 1, Hydrogen, 3, Silicon, 1, Chlorine, 3)
+                .components(Carbon, 1, Hydrogen, 3, Silicon, 1, Chlorine, 3)
                 .color(0xd9dddc)
                 .build();
 
@@ -1812,7 +1812,7 @@ public class OrganicChemistryMaterials {
 
         Methyldichlorosilane = new Material.Builder(15290, "methyldichlorosilane")
                 .fluid()
-                .compontents(Carbon, 1, Hydrogen, 4, Chlorine, 2, Silicon, 1)
+                .components(Carbon, 1, Hydrogen, 4, Chlorine, 2, Silicon, 1)
                 .color(0xd9dddc)
                 .build();
 
@@ -1820,7 +1820,7 @@ public class OrganicChemistryMaterials {
 
         Chlorotrimethylsilane = new Material.Builder(15291, "chlorotrimethylsilane")
                 .fluid()
-                .compontents(Carbon, 3, Hydrogen, 9, Silicon, 1, Chlorine, 1)
+                .components(Carbon, 3, Hydrogen, 9, Silicon, 1, Chlorine, 1)
                 .color(0xd9dddc)
                 .build();
 
@@ -1828,7 +1828,7 @@ public class OrganicChemistryMaterials {
         
         Polydimethylsiloxane = new Material.Builder(15292, "polydimethylsiloxane")
                 .dust().fluid()
-                .compontents(Carbon, 2, Hydrogen, 6, Silicon, 1, Oxygen, 1)
+                .components(Carbon, 2, Hydrogen, 6, Silicon, 1, Oxygen, 1)
                 .color(0xf6f7f0)
                 .build();
 
