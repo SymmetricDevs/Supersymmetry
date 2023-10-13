@@ -1035,36 +1035,6 @@ DISTILLATION_TOWER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-// Polydimethylsiloxane
-
-FLUIDIZEDBR.recipeBuilder()
-.fluidInputs(fluid('chloromethane') * 2000)
-.notConsumable(ore('dustCuprousOxide'))
-.inputs(ore('dustSilicon'))
-.fluidOutputs(fluid('dimethyldichlorosilane') * 1000)
-.duration(160)
-.EUt(480)
-.buildAndRegister()
-
-MIXER.recipeBuilder()
-.fluidInputs(fluid('dimethyldichlorosilane') * 1000)
-.fluidInputs(fluid('water') * 2000)
-.fluidInputs(fluid('gtfo_sodium_stearate') * 100)
-.fluidOutputs(fluid('dimethyldichlorosilane_emulsion') * 3000)
-.duration(120)
-.EUt(30)
-.buildAndRegister()
-
-POLYMERIZATION.recipeBuilder()
-.fluidInputs(fluid('dimethyldichlorosilane_emulsion') * 3000)
-.inputs(ore('dustTinyPotassiumPersulfate'))
-.outputs(metaitem('dustPolydimethylsiloxane') * 3)
-.fluidOutputs(fluid('hydrogen_chloride') * 2000)
-.EUt(30)
-.duration(160)
-.buildAndRegister()
-//Vulcanisation in Rubber Recipes 
-
 // Ammonia
 
 MIXER.recipeBuilder()
