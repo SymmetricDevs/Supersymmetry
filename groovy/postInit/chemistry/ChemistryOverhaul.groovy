@@ -1140,33 +1140,6 @@ BCR.recipeBuilder()
 
 // Epichlorohydrin
 
-CSTR.recipeBuilder()
-.fluidInputs(fluid('glycerol') * 50)
-.fluidInputs(fluid('hydrogen_chloride') * 100)
-.fluidInputs(fluid('acetic_acid') * 50)
-.fluidOutputs(fluid('chlorinated_glycerol') * 50)
-.duration(5)
-.EUt(30)
-.buildAndRegister()
-
-BR.recipeBuilder()
-.fluidInputs(fluid('chlorinated_glycerol') * 4000)
-.inputs(ore('dustSodiumHydroxide') * 3)
-.fluidOutputs(fluid('epichlorohydrin_solution') * 5000)
-.duration(120)
-.EUt(30)
-.buildAndRegister()
-
-DISTILLATION_TOWER.recipeBuilder()
-.fluidInputs(fluid('epichlorohydrin_solution') * 5000)
-.fluidOutputs(fluid('acetic_acid') * 1000)
-.fluidOutputs(fluid('epichlorohydrin') * 1000)
-.fluidOutputs(fluid('water') * 3000)
-.outputs(metaitem('dustSalt') * 2)
-.duration(120)
-.EUt(30)
-.buildAndRegister()
-
 BCR.recipeBuilder()
 .fluidInputs(fluid('allyl_chloride') * 50)
 .fluidInputs(fluid('hypochlorous_acid') * 50)
