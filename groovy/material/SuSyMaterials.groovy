@@ -1393,7 +1393,6 @@ class SuSyMaterials {
         public static Material TriphenylphosphineDichloride;
         public static Material BistriphenylphosphineiminiumChloride;
         public static Material TriphenylphosphineOxide;
-        public static Material Dimethyldichlorosilane;
         public static Material Methyltrichlorosilane;
         public static Material Methyldichlorosilane;
         public static Material Chlorotrimethylsilane;

@@ -1801,42 +1801,34 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
                 .colorAverage()
                 .build();
-      
-        Dimethyldichlorosilane = new Material.Builder(15289, "dimethyldichlorosilane")
-                .fluid()
-                .compontents(Silicon, 1, Methane, 2, Chlorine, 2)
-                .color(0xd9dddc)
-                .build();
-
-        Dimethyldichlorosilane.setFormula("Si(CH3)2Cl2", true)
         
-        Methyltrichlorosilane = new Material.Builder(15290, "methyltrichlorosilane")
+        Methyltrichlorosilane = new Material.Builder(15289, "methyltrichlorosilane")
                 .fluid()
-                .compontents(Methane, 1, Silicon, 1, Chlorine, 3)
+                .compontents(Carbon, 1, Hydrogen, 3, Silicon, 1, Chlorine, 3)
                 .color(0xd9dddc)
                 .build();
 
         Methyltrichlorosilane.setFormula("CH3SiCl3", true)
 
-        Methyldichlorosilane = new Material.Builder(15291, "methyldichlorosilane")
+        Methyldichlorosilane = new Material.Builder(15290, "methyldichlorosilane")
                 .fluid()
-                .compontents(Methane, 1, Chlorine, 2, Silicon, 1)
+                .compontents(Carbon, 1, Hydrogen, 4, Chlorine, 2, Silicon, 1)
                 .color(0xd9dddc)
                 .build();
 
-        Methyldichlorosilane.setFormula("CH3Cl2Si", true)
+        Methyldichlorosilane.setFormula("CH3Cl2SiH", true)
 
-        Chlorotrimethylsilane = new Material.Builder(15292, "chlorotrimethylsilane")
+        Chlorotrimethylsilane = new Material.Builder(15291, "chlorotrimethylsilane")
                 .fluid()
-                .compontents(Methane, 3, Silicon, 1, Chlorine, 1)
+                .compontents(Carbon, 3, Hydrogen, 9, Silicon, 1, Chlorine, 1)
                 .color(0xd9dddc)
                 .build();
 
         Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
         
-        Polydimethylsiloxane = new Material.Builder(15293, "polydimethylsiloxane")
+        Polydimethylsiloxane = new Material.Builder(15292, "polydimethylsiloxane")
                 .dust().fluid()
-                .compontents(Methane, 6, Silicon, 2, Chlorine, 1)
+                .compontents(Carbon, 2, Hydrogen, 6, Silicon, 1, Oxygen, 1)
                 .color(0xf6f7f0)
                 .build();
 
