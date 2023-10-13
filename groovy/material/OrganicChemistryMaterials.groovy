@@ -1818,5 +1818,28 @@ public class OrganicChemistryMaterials {
 
         Polydimethylsiloxane.setFormula("CH3[Si(CH3)2O]Si(CH3)3", true)
         
+        Triphenylphosphine = new Material.Builder(15288, SuSyUtility.susyId('triphenylphosphine'))
+                .dust()
+                .components(Carbon, 18, Hydrogen, 15, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        TriphenylphosphineDichloride = new Material.Builder(15289, SuSyUtility.susyId('triphenylphosphine_dichloride'))
+                .dust()
+                .components(Carbon, 18, Hydrogen, 15, Chlorine, 2, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        BistriphenylphosphineiminiumChloride = new Material.Builder(15290, SuSyUtility.susyId('bistriphenylphosphineiminium_chloride'))
+                .dust()
+                .components(Carbon, 36, Hydrogen, 30, Chlorine, 1, Nitrogen, 1, Phosphorus, 2)
+                .colorAverage()
+                .build();
+
+        TriphenylphosphineOxide = new Material.Builder(15291, SuSyUtility.susyId('triphenylphosphine_oxide'))
+                .dust()
+                .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
+                .colorAverage()
+                .build();
     }
 }

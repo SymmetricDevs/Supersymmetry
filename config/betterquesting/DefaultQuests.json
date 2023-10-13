@@ -1449,7 +1449,7 @@
             },
             "1:10": {
               "Count:3": 1,
-              "Damage:2": 5,
+              "Damage:2": 112,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -1460,7 +1460,7 @@
                 }
               },
               "OreDict:8": "dustTin",
-              "id:8": "libvulpes:productdust"
+              "id:8": "gregtech:meta_dust"
             },
             "2:10": {
               "Count:3": 3,
@@ -1672,7 +1672,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §7Coke Oven §ris a hollow 3x3x3 structure made of Coke Bricks with a Coke Oven Controller in the center.\nIt turns §7Coal §rinto §7Coal Coke§r, and Logs into Charcoal.\n\nCoal Coke burns longer in furnaces, and in small coal boilers. \n\nThe Coke Oven also produces Creosote Oil, which can be used either as furnace fuel or for creating§6 Treated Wood §rblcoks.",
+          "desc:8": "The §7Coke Oven §ris a hollow 3x3x3 structure made of Coke Bricks with a Coke Oven Controller in the center.\nIt turns §7Coal §rinto §7Coal Coke§r, and Logs into Charcoal.\n\nCoal Coke burns longer in furnaces, and in small coal boilers. \n\nThe Coke Oven also produces Creosote Oil, which can be used either as furnace fuel or for creating§6 Treated Wood §rblocks.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2750,7 +2750,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 8,
-              "Damage:2": 6,
+              "Damage:2": 324,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -2761,7 +2761,7 @@
                 }
               },
               "OreDict:8": "ingotSteel",
-              "id:8": "libvulpes:productingot"
+              "id:8": "gregtech:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -5326,7 +5326,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "advancedrocketry:moonturf"
+            "id:8": "tardis:moon_dirt"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -5448,7 +5448,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Antimony §ris a semi-metal. In its metallic form it is silvery, hard and brittle. Antimony is used to make §6battery alloy§r, which is used to make the casings for §6batteries§r.\n\nAntimony is found in §6Stibnite Ore§r, in the same deposit as §6Redstone §rand §6Cinnabar§r.",
+          "desc:8": "§6Antimony §ris a metalloid. In its metallic form it is silvery, hard and brittle. Antimony is used to make §6battery alloy§r, which is used to make the casings for §6batteries§r.\n\nAntimony is found in §6Stibnite Ore§r, in Stibnite veins.§k§6 §rStibnite can also be found in § §6Cinnabar §rveins in small amounts§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6622,7 +6622,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Primitive Water Pump§r is the first way to get large quantities of water for steam. Pumping water into a boiler manually has been widely regarded as a bad idea.\n\nCheck the JEI database for more info on the structure. Structures can be previewed by §ashift right click§ring the main block.\n\nThe Output Hatch§r is where water will be pumped out, you may have it face up or down to auto-output water into your pipes. Use a §6Wrench§r to rotate GregTech blocks (sneak right-click).\n\nThe Primitive Water Pump requires:\n§610 Pump Deck \n10 Treated Wood Frame\n1 Pump Output Hatch\n1 Primitive Water Pump controller§r\n\nKeep in mind that this fortunately does not require external water in the world to function. This is essentially an §einfinite water source§r.\n\n§rCreosote is needed for making the treated wood frames, so make sure to get a Coke Oven first.",
+          "desc:8": "The §3Primitive Water Pump§r is the first way to get large quantities of water for steam. Pumping water into a boiler manually has been widely regarded as a bad idea.\n\nCheck the JEI database for more info on the structure. Structures can be previewed by §ashift right click§ring the main block.\n\nThe Output Hatch§r is where water will be pumped out, you may have it face up or down to auto-output water into your pipes. Use a §6Wrench§r to rotate GregTech blocks (sneak right-click). \n\nTo increase the water output, the Output Hatch used can be upgraded to §6ULV §ror §6LV§r§r. \n\nThe Primitive Water Pump requires:\n§610 Pump Deck \n10 Treated Wood Frame\n1 Pump Output Hatch\n1 Primitive Water Pump controller§r\n\nKeep in mind that this fortunately does not require external water in the world to function. This is essentially an §einfinite water source§r.\n\n§rCreosote is needed for making the treated wood frames, so make sure to get a Coke Oven first.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7315,9 +7315,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "advancedrocketry:hotturf"
+            "id:8": "minecraft:sand"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -8286,7 +8286,6 @@
     },
     "115:10": {
       "preRequisites:11": [
-        477,
         105
       ],
       "properties:10": {
@@ -8522,7 +8521,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Sintering§r§r is the process of compacting and forming a solid mass of material by pressure or §cheat §rwithout melting it to the point of liquefaction. \n\nA §6Sintering Oven §ris required for making things like §6cement§r, or §7§6electrodes§r.\n\nA Sintering Oven requires:.\n§61x Sintering Oven Controller\n1x Input Bus\n1x Input Hatch\n1x Output Bus\n1x Output Hatch\n1x Energy Hatch (any tier)\n1x Maintenance Hatch\n72x Sintering Brick Block\n43x Basic Structural Casing\n36x Steel Frame \n\n§rCheck JEI for info on how to build the structure. If you are having trouble with the §6Maintenance Hatch§r, you can check the other page linked to the top of this quest. Remember that you have to use §6ULV §rMachine Casings, not LV. These are different.",
+          "desc:8": "§6Sintering§r§r is the process of compacting and forming a solid mass of material by pressure or §cheat §rwithout melting it to the point of liquefaction. \n\nA §6Sintering Oven §ris required for making things like §6cement§r, or §7§6electrodes§r.\n\nA Sintering Oven requires:.\n§61x Sintering Oven Controller\n1x Input Bus\n1x Input Hatch\n1x Output Bus\n1x Output Hatch\n1x Energy Hatch (any tier)\n1x Maintenance Hatch\n72x Sintering Brick Block\n43x Basic Structural Casing\n36x Steel Frame \n\n§rCheck JEI for info on how to build the structure.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14779,7 +14778,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Littletiles §fis an incredibly powerful mod that allows you to manipulate blocks by their 16x16x16 subcomponents, known as §bpixels§r.\n\nThe §6Little Bag §rtakes in blocks and converts them to a form with a finite pixel quantity for use with §2Littletiles§r. It also takes in any dyes, and converts them to a quantity in the bag corresponding with the §bC§dM§d§eY§8K§r subtractive color model. (§bCyan, §dMagenta, §eYellow,§r and §8Key (black))\n\n§rThe §6Little Chisel, Little Hammer,§r §6Little Saw§r, and §6Little Glove§r can have their menus accessed by §a\u0027C\u0027§r by default, where you can set the draw shape, as well as setting a color, which will consume the color in the bag. §eYou may need to rebind this to something else, due to existing key conflicts in Supersymmetry. This bind is named \"Configure Tool\".§r You can see other options by looking at the text that shows up in the lower left corner when you hold the tool in your hand.  §e\n\n§fThe §6Little Chisel§r can be used for additive changes to §bpixels§r, and is used by §aright-clicking§r. \n\nThe §6Little Hammer§r can be used for subtractive changes to §bpixels§r, and is used by §aleft-clicking§r. \n\nThe §6Little Saw§r can be used for extrusive changes to §bfaces§r, and is used by §aright-clicking and shift right-clicking§r (The lower left corner is §4§c§lLYING§r to you)!\n\nThe §6Little Glove§r has multiple modes\n- Placing rectangles of pixels of defined dimensions\n- Copying placed structures to the hand (Recipe Mode)\n- Replacing pixels on the face you are looking at with other pixels\nAll of which are accessible by §aright-clicking§r.",
+          "desc:8": "§2Littletiles §fis an incredibly powerful mod that allows you to manipulate blocks by their 16x16x16 subcomponents, known as §bpixels§r.\n\nThe §6Little Bag §rtakes in blocks and converts them to a form with a finite pixel quantity for use with §2Littletiles§r. It also takes in any dyes, and converts them to a quantity in the bag corresponding with the §bC§dM§d§eY§8K§r subtractive color model. (§bCyan, §dMagenta, §eYellow,§r and §8Key (black)§f)\n\n§rThe §6Little Chisel, Little Hammer,§r §6Little Saw§r, and §6Little Glove§r can have their menus accessed by §a\u0027C\u0027§r by default, where you can set the draw shape, as well as setting a color, which will consume the color in the bag. §eYou may need to rebind this to something else, due to existing key conflicts in Supersymmetry. This bind is named \"Configure Tool\".§r You can see other options by looking at the text that shows up in the lower left corner when you hold the tool in your hand.  §e\n\n§fThe §6Little Chisel§r can be used for additive changes to §bpixels§r, and is used by §aright-clicking§r. \n\nThe §6Little Hammer§r can be used for subtractive changes to §bpixels§r, and is used by §aleft-clicking§r. \n\nThe §6Little Saw§r can be used for extrusive changes to §bfaces§r, and is used by §aright-clicking and shift right-clicking§r (The lower left corner is §4§c§lLYING§r to you)!\n\nThe §6Little Glove§r has multiple modes\n- Placing rectangles of pixels of defined dimensions\n- Copying placed structures to the hand (Recipe Mode)\n- Replacing pixels on the face you are looking at with other pixels\nAll of which are accessible by §aright-clicking§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16331,6 +16330,18 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "industrialrenewal:electric_gate"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk_steel"
+            },
+            "5:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "industrialrenewal:catwalk_ladder_steel"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -16955,7 +16966,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combine §6Glue §rand wood pulp in an Assembler to make a phenolic circuit board. Then coat it with §7silver §rwires to finalize the circuit board.\n\n§cTODO: ADD SILVER ",
+          "desc:8": "Combine §6Glue §rand wood pulp in an Assembler to make a phenolic circuit board. Then coat it with §7silver §rwires to finalize the circuit board.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21147,7 +21158,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Element§r: Cesium (Cs)\n§bAtomic Number§r: 55\n§aAtomic Mass§r: 132.91 amu\n§cMelting Point§r: 301.59 K\n§5Boiling Point§r: 944 K\n§6Properties§r: Cesium is an alkali metal known for its low ionization energy and reactivity with water. It is used in atomic clocks, catalysts, and in some medical applications.\n",
+          "desc:8": "§6Element§r: Caesium (Cs)\n§bAtomic Number§r: 55\n§aAtomic Mass§r: 132.91 amu\n§cMelting Point§r: 301.59 K\n§5Boiling Point§r: 944 K\n§6Properties§r: Caesium is an alkali metal known for its low ionization energy and reactivity with water. It is used in atomic clocks, catalysts, and in some medical applications.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24748,13 +24759,12 @@
     "369:10": {
       "preRequisites:11": [
         222,
-        438,
         686
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§6 Large Steam Turbine §rcan generate power using§6 steam§r. It is a larger version of the small LV steam turbine.\n\nIt generates §616 amps §rof LV power and turns 960 L of steam into 960 L of exhaust steam every 0.5 seconds.\n§6\nThe structure requires:\n- 1 Large Steam Turbine Controller\n- 1 LV Dynamo Hatch (can emit up to 16 amps)\n- 1 Maintenance Hatch\n- 1 LV Output Hatch\n- 1 LV Input Hatch\n- 4 Steel Turbine Block\n- 3 Copper Alternator Block\n- 57 Steel Turbine Casing\n§r\n§c§lWARNING: The preview shows that a ULV Dynamo Hatch must be used. This is a bug. Any Dynamo Hatch can be used. You should use a 16A LV Dynamo Hatch.§r\n\nThe Exhaust Steam can be cooled back into 4 L of Water using a §cRadiator (LV) §ror 960 L of Water using a §cCooling Unit (MV)§r",
+          "desc:8": "The§6 Large Steam Turbine §rcan generate power using§6 steam§r. It is a larger version of the small LV steam turbine.\n\nIt generates as much power as the §6Dynamo hatch §rused can support. You should build a 16A LV one for now.\n§6\nThe structure requires:\n- 1 Large Steam Turbine Controller\n- 1 LV Dynamo Hatch (can emit up to 16 amps)\n- 1 Maintenance Hatch\n- 1 LV Output Hatch\n- 1 LV Input Hatch\n- 4 Steel Turbine Block\n- 3 Copper Alternator Block\n- 57 Steel Turbine Casing\n§r\n§c§lWARNING: The preview shows that a ULV Dynamo Hatch must be used. This is a bug. Any Dynamo Hatch can be used. You should use a 16A LV Dynamo Hatch.§r\n\nThe Exhaust Steam can be cooled back into 4 L of Water using a §cRadiator (LV) §ror 960 L of Water using a §cCooling Unit (MV)§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29502,7 +29512,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§a High Pressure Oxygen §r§r§ris then cooled to make §bCold High Pressure Oxygen. §f\nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Monoxide or Cold Propane§r.\n\n§bCold Carbon Dioxide §rcan be made by first compressing Carbon Dioxide into Hot Compressed CO2, then radiating out the heat using a Radiator, and then decompressing it to make §bCold CO2§r.",
+          "desc:8": "The§a High Pressure Oxygen §r§r§ris then cooled to make §bCold High Pressure Oxygen. §f\nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Dioxide or Cold Propane§r.\n\n§bCold Carbon Dioxide §rcan be made by first compressing Carbon Dioxide into Hot Compressed CO2, then radiating out the heat using a Radiator, and then decompressing it to make §bCold CO2§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29590,7 +29600,8 @@
     "438:10": {
       "preRequisites:11": [
         66,
-        787
+        787,
+        369
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33431,7 +33442,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Microprocessors §rare the second type of §cLV §rcircuit that you make. They are made in the same way as Integrated Processors, but using less materials and a copper foil. \n\nMaking these is faster than making LV circuits manually using the traditional process.",
+          "desc:8": "§6Microprocessors §rare the second type of §cLV §rcircuits that you make. They are made in the same way as Integrated Processors, but using less materials and some fine copper wire. \n\nMaking these is faster than making LV circuits manually using the traditional process.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34535,7 +34546,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Steel needs to be reacted with Carbon Monoxide in a §aReaction Furnace§r to produce §7Crude Iron Pentacarbonyl§r, that needs to be distilled to make §7Iron Pentacarbonyl§r.\n\nIron Pentacarbonyl then goes in the batch reactor to make §4High Purity Iron§o§r.\n\n\n",
+          "desc:8": "Iron Dust needs to be reacted with Carbon Monoxide in a §aReaction Furnace§r to produce §7Crude Iron Pentacarbonyl§r, this needs to be distilled to make §7Iron Pentacarbonyl§r.\n\nIron Pentacarbonyl then goes in a roaster to make §4High Purity Iron§o§r.\n\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34745,7 +34756,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§1Cobaltite §rneeds to be roasted to make §aCobalt Oxide§r.\n\nCombine §aCobalt Oxide §rwith §4Purified Iron III Oxide §r§rto make Nickel Zinc Ferrite.\n",
+          "desc:8": "§1Nickel §rneeds to be roasted with Oxygen to make §aNickel II Oxide§r.\n\nCombine §aNickel II Oxide §rwith §4Purified Iron III Oxide §r§r and Zincite to make Nickel Zinc Ferrite.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56958,7 +56969,6 @@
     },
     "754:10": {
       "preRequisites:11": [
-        755,
         550
       ],
       "properties:10": {
@@ -57029,16 +57039,16 @@
     },
     "755:10": {
       "preRequisites:11": [
-        756
+        550
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Magnetic Iron and Magnetic Steel will not suffice for higher tier machinery. You will need Magnetic Neodymium Alloy, which can be made by the following steps:\n\n1. Mixing neodymium, iron and boron for neodymium alloy dust\n\n2. Smelting the dust into ingots in an EBF\n\n3. Extruding the ingots into whatever shape you need the magnet to be\n\n4. Treating the extruded parts with sulfuric acid, boric acid and nickel in an electrolyzer\n\n5. Polarizing the treated parts for your final magnet",
+          "desc:8": "You have probably realized that you couldn’t make a bed all the way at the start, this is because we needed some standards.\nLuckily, due to industrial progress, these standards have now been met. So here’s how to make a bed.\n\nYou will first need to make Memory Foam which is made from Silicone Rubber and Polyurethane.\nTo make Polyurethane you will need to make a few new chemicals, to make Methylene Diphenyl Diisocyanate do :\n  \n4 wood pulp + 1000L sulfuric acid \u003d  Furfural Solution \u003e \nDistill \u003e \nFurfural + Acidic Light Oil \u003d Crude Pyridium Sulfate \u003e \nCrude Pyridium Sulfate + Ammonia \u003d Impure Pyridine \u003e \nDistill to get Aniline \u003e \n1000L Hydrochloric + 1000L Aniline + 2000L Formaldehyde \u003d 8 Methylenedianiline dust \u003e \n8 Methylenedianiline dust + 2000L Phosgene \u003d 10 Methylene Diphenyl Diisocyanate Dust. \n\nHowever to make Polyurethane you will also need Triethylenediamine, to make it :\n\n150L Ethylene Mix + 300L Ammonia \u003e \n150L Ethanolamine Mix \u003e \ndistill into Ethanolamine \u003e \n3000L of Ethanolamine in bed reactor will produce 8 Triethylenediamine\n\nYou should already be producing Ethylene Glycol and Glycerol, so just combine the chemicals to produce Polyurethane.\n\nNote that you need to do the above process §l§n8 times§r to make enough §6Memory foam§r.\n\nAfter making Polyurethane, combine it with Silicone rubber and you have Memory Foam. \n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 8402,
+            "Damage:2": 15013,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -57049,13 +57059,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtech:meta_stick"
+            "id:8": "gregtech:meta_plate"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Better Magnets",
+          "name:8": "Memory Foam",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -57078,8 +57088,8 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 8402,
+              "Count:3": 16,
+              "Damage:2": 15013,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -57090,7 +57100,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "gregtech:meta_stick"
+              "id:8": "gregtech:meta_plate"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -57099,16 +57109,16 @@
     },
     "756:10": {
       "preRequisites:11": [
-        479
+        755
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "(Insert how to get neodymium)",
+          "desc:8": "Now that you have memory foam, the hard part is over.\n\nNow, you still need to make Rayon! To do that, you will need to do the following.\n \nBathe 4 Cellulose Dust + 3000L Sodium Hydroxide Solution \u003e\nBathe 4 Alkali Cellulose + 1000L Carbon Disulfide (Carbon Disulfide is refunded at the end of the chain) \u003e Polymerize 8 Sodium Cellulose Xanthate Dust + 1000L Sulfuric acid \u003d 8 Rayon\n\nYou §oalso§r need to do this recipe 8 times in order to get enough Rayon.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 66,
+            "Damage:2": 15014,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -57119,13 +57129,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtech:meta_dust"
+            "id:8": "gregtech:meta_wire_fine"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Dying for Neodymium",
+          "name:8": "Rayon",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -57148,8 +57158,8 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 66,
+              "Count:3": 64,
+              "Damage:2": 15014,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -57160,7 +57170,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "id:8": "gregtech:meta_wire_fine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -59172,38 +59182,6 @@
       "tasks:9": {}
     },
     "785:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "New Quest",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 785,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "786:10": {
       "preRequisites:11": [
         243,
         580
@@ -59243,7 +59221,7 @@
         }
       }
     },
-    "787:10": {
+    "786:10": {
       "preRequisites:11": [
         31,
         580
@@ -59296,7 +59274,7 @@
         }
       }
     },
-    "788:10": {
+    "787:10": {
       "preRequisites:11": [
         479,
         580
@@ -59336,7 +59314,7 @@
         }
       }
     },
-    "789:10": {
+    "788:10": {
       "preRequisites:11": [
         31,
         781
@@ -59389,7 +59367,7 @@
         }
       }
     },
-    "790:10": {
+    "789:10": {
       "preRequisites:11": [
         786,
         373
@@ -59437,7 +59415,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "791:10": {
+    "790:10": {
       "preRequisites:11": [
         775,
         394
@@ -59484,6 +59462,869 @@
       "questID:3": 791,
       "rewards:9": {},
       "tasks:9": {}
+    },
+    "791:10": {
+      "preRequisites:11": [
+        756
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Finally, with the Rayon, Memory foam, some wood, and steel springs, you can get a good nights sleep.\n\nYou §l§n§r§l§odo need EV power§r to run this recipe though.\n\n§o§6Have a good night.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "minecraft:bed"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Beds",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 792,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "minecraft:bed"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "792:10": {
+      "preRequisites:11": [
+        550
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §1§0§r§bgravity separator §rmultiblock is used for advanced ore processing at EV and beyond. Many element production lines will rely on this multiblock in the future. To properly form, make sure to wrench its rotors such that the 2 white lines on the top of the blocks are on the front half of the block.\n\nTo operate, it relies on differing §cspecific gravities §r(or the ratio between a compound\u0027s density and water\u0027s density) to separate valuable ores from gangue.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "susy:separator_rotor"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Gates of Ore Processing Hell",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 793,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 15052,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 25,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "susy:separator_rotor"
+            },
+            "2:10": {
+              "Count:3": 99,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "793:10": {
+      "preRequisites:11": [
+        793
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Two ores can be used to produce tungsten, §ascheelite §rand §b§6wolframite§r. Both will require gravity separation followed by flotation. However, §ascheelite§r requires an extra calcination step with hydrochloric acid before the next step.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4272,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tungsten Beneficiation",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 794,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4276,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4280,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "794:10": {
+      "preRequisites:11": [
+        794,
+        796
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "In order to further purify tungsten, a few reactions and a §dliquid-liquid extraction§r step must occur. From your beneficiated ore concentrates, dissolve it to form a sodium tungstate solution, react it with aluminium sulfate to remove any dissolved silicate.\n\nNext, add sodium sulfide and sulfuric acid to remove any §bmolybdenum§r impurities, a useful byproduct.\n\nAfter the initial purification reactions, combine the solution with the §etungsten extraction mixture§r to load it with tungstate ions. This tungsten extract is then washed with demineralized water.\n\nFinally, to extract the tungstate from the mixture, mix it with ammonium to precipitate §aAmmonium Paratungstate Dust§f§f. This can then be calcined to produce ammonia, steam, and §6Tungsten Trioxide Dust§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 187,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tungsten Purification",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 795,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8146,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "795:10": {
+      "preRequisites:11": [
+        648
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "In order to carry out the liquid-liquid extraction of tungsten, you need the §eTungsten Extraction Mixture§r, which is recycled within the process.\n\nTo produce it, the following steps are required.\n\n  - Produce tripropylene from propene and ZSM-5 catalyst.\n  - Produce isooctanol from the tripropylene using hydroformylation of tripropylene follwed by hydrogenation.\n  - Produce trioctylamine from n-octanol from the §bZiegler Process§r.\n  - Mix these components with kerosene to obtain the mixture.\n\nYou will need at least 8000L of §eTungsten Extraction Mixture§r, but to ensure maximum uptime for your tungsten setup, it is recommended to produce 16000L.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "tungsten_extraction_mixture"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tungsten Extraction Mixture",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 796,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 8000,
+              "FluidName:8": "tungsten_extraction_mixture"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "796:10": {
+      "preRequisites:11": [
+        795
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "React the §6Tungsten Trioxide Dust§f with hydrogen to produce steam and tungsten dust.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 115,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tungsten Metal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 797,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 115,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "797:10": {
+      "preRequisites:11": [
+        797
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Mix your tungsten and steel in an EV Mixer to make the dust, and put it in an EBF with §bNichrome coils§r to produce the base metal for the §l§dIV Tier§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2013,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "I Craved the Strength and Certainty of Tungstensteel",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 798,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2013,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "798:10": {
+      "preRequisites:11": [
+        637
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "In order to purify Molybdenite, no gravity separation is required. However, a multi-step §bfroth flotation§r setup is required, as well as a §6Nokes reagent§r, or sodium dithiophosphate. This reagent is very powerful, but is also consumed during the process of froth flotation.\n\nFirst, flotate with §ePotassium Amyl Xanthate§r, then flotate with §6Nokes reagent§r to remove the gangue and copper, respectively. This should yield flotated molybdenite dust, which is further purified.\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4289,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Molybdenum Beneficiation",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 799,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4289,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "799:10": {
+      "preRequisites:11": [
+        795,
+        799
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "There are two ways to obtain molybdenum trioxide. The first one is to roast §9§a§b§c§aFlotated Molybdenite Dust§r with oxygen. The other method is to roast §6Molybdenum Trisulfide Dust§r, a byproduct of tungsten purification.\n\nTo purify, sublimate molybdenum trioxide in an EBF, then filter the resultant dust to yield pure molybdenum trioxide.\n\nThe flue gas obtained from roasting §aFlotated Molybdenite Dust§r can be used to obtain §7Rhenium§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8525,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Molybdenum Purification",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 800,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8524,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "800:10": {
+      "preRequisites:11": [
+        800
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "To obtain §bMolybdenum Dust§o§r, react purified molybdenum trioxide dust with hydrogen in a reaction furnace.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 64,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Molybdenum Metal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 801,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 64,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "801:10": {
+      "preRequisites:11": [
+        800
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "From the flue gas obtained from roasting molybdenite, pass it through an electrostatic separator with an item filter to obtain a flue dust rich in rhenium. Next, dissolve the rhenium present with water to form §bScrubbed Perrhenate Solution§r.\n\nNext, pass this through some ion exchange beads in an ion exchange columns to extract the rhenium from the rest of the components. The extraction beads are complicated to obtain, but I will assume you are competent enough with JEI to figure out how to make them.\n\nElute the perrhenate from the beads using ammonia solution to form §aAmmonium Perrhenate Solution§r. This solution is very pure and will next be used to produce pure rhenium metal.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 255,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Rhenium Purification",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 802,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 254,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ammonium_perrhenate_solution"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "802:10": {
+      "preRequisites:11": [
+        802
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§rUsing some §bAmmonium Perrhenate Solution§r, crystallize the ammonium perrhenate from the solution, then react the dust with hydrogen to produce molybdenum metal, steam, and ammonia.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 89,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Rhenium Metal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 803,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 89,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -62826,71 +63667,155 @@
           "id:3": 550,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -12,
-          "y:3": -12
+          "x:3": -18,
+          "y:3": -18
         },
         "1:10": {
           "id:3": 754,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -6,
-          "y:3": -54
+          "x:3": -12,
+          "y:3": -60
         },
         "2:10": {
           "id:3": 755,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": -54
+          "x:3": -60,
+          "y:3": -12
         },
         "3:10": {
           "id:3": 756,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
-          "y:3": -54
+          "y:3": -12
         },
         "4:10": {
           "id:3": 757,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -6,
-          "y:3": -102
+          "x:3": 30,
+          "y:3": -60
         },
         "5:10": {
           "id:3": 758,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": -102
+          "x:3": 72,
+          "y:3": -60
         },
         "6:10": {
           "id:3": 759,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": -132
+          "x:3": 108,
+          "y:3": -96
         },
         "7:10": {
           "id:3": 760,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": -102
+          "x:3": 108,
+          "y:3": -60
         },
         "8:10": {
           "id:3": 761,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": -72
+          "x:3": 108,
+          "y:3": -24
         },
         "9:10": {
           "id:3": 762,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 114,
-          "y:3": -102
+          "x:3": 144,
+          "y:3": -60
+        },
+        "10:10": {
+          "id:3": 792,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": -12
+        },
+        "11:10": {
+          "id:3": 793,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 36
+        },
+        "12:10": {
+          "id:3": 794,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 78
+        },
+        "13:10": {
+          "id:3": 795,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 120
+        },
+        "14:10": {
+          "id:3": 796,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -54,
+          "y:3": 120
+        },
+        "15:10": {
+          "id:3": 797,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 162
+        },
+        "16:10": {
+          "id:3": 798,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 204
+        },
+        "17:10": {
+          "id:3": 799,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 30,
+          "y:3": 78
+        },
+        "18:10": {
+          "id:3": 800,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 30,
+          "y:3": 120
+        },
+        "19:10": {
+          "id:3": 801,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 30,
+          "y:3": 204
+        },
+        "20:10": {
+          "id:3": 802,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": 162
+        },
+        "21:10": {
+          "id:3": 803,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": 204
         }
       }
     },
@@ -63162,7 +64087,7 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "Supersymmetry",
+          "desc:8": "Supersymmetry.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3036,
@@ -63186,12 +64111,12 @@
     },
     "16:10": {
       "lineID:3": 16,
-      "order:3": 22,
+      "order:3": 23,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "No Description",
+          "desc:8": "The backbone of Supersymmetry.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 14554,
@@ -63205,10 +64130,10 @@
       "quests:9": {
         "0:10": {
           "id:3": 38,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": -287
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -312,
+          "y:3": -24
         },
         "1:10": {
           "id:3": 46,
@@ -63761,7 +64686,7 @@
           "desc:8": "A list of all locations in the known universe.",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 4,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -63772,7 +64697,7 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "advancedrocketry:jetpack"
+            "id:8": "openmodularturrets:ammo_meta"
           },
           "name:8": "Exploration",
           "visibility:8": "ALWAYS"
@@ -64115,12 +65040,12 @@
     },
     "19:10": {
       "lineID:3": 19,
-      "order:3": 23,
+      "order:3": 24,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "No Description",
+          "desc:8": "Superconductors are very super! You will want these.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
@@ -64450,7 +65375,7 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "No Description",
+          "desc:8": "Using computational power of a really really high caliber.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 592,
@@ -64671,7 +65596,7 @@
     },
     "22:10": {
       "lineID:3": 22,
-      "order:3": 24,
+      "order:3": 25,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -66255,7 +67180,7 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "No Description",
+          "desc:8": "Storage options for your factory.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1610,
@@ -66362,12 +67287,12 @@
     },
     "26:10": {
       "lineID:3": 26,
-      "order:3": 25,
+      "order:3": 27,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "No Description",
+          "desc:8": "There are a few creatures you may encounter.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
@@ -66404,12 +67329,12 @@
     },
     "27:10": {
       "lineID:3": 27,
-      "order:3": 27,
+      "order:3": 22,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "No Description",
+          "desc:8": "Let\u0027s make those electrons §odance§o.§r For progress.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 950,
