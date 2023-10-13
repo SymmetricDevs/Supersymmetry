@@ -1802,7 +1802,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
         
-        Methyltrichlorosilane = new Material.Builder(15289, "methyltrichlorosilane")
+        Methyltrichlorosilane = new Material.Builder(15289, SuSyUtility.susyId("methyltrichlorosilane"))
                 .fluid()
                 .components(Carbon, 1, Hydrogen, 3, Silicon, 1, Chlorine, 3)
                 .color(0xd9dddc)
@@ -1810,7 +1810,7 @@ public class OrganicChemistryMaterials {
 
         Methyltrichlorosilane.setFormula("CH3SiCl3", true)
 
-        Methyldichlorosilane = new Material.Builder(15290, "methyldichlorosilane")
+        Methyldichlorosilane = new Material.Builder(15290, SuSyUtility.susyId("methyldichlorosilane"))
                 .fluid()
                 .components(Carbon, 1, Hydrogen, 4, Chlorine, 2, Silicon, 1)
                 .color(0xd9dddc)
@@ -1818,21 +1818,12 @@ public class OrganicChemistryMaterials {
 
         Methyldichlorosilane.setFormula("CH3Cl2SiH", true)
 
-        Chlorotrimethylsilane = new Material.Builder(15291, "chlorotrimethylsilane")
+        Chlorotrimethylsilane = new Material.Builder(15291, SuSyUtility.susyId("chlorotrimethylsilane"))
                 .fluid()
                 .components(Carbon, 3, Hydrogen, 9, Silicon, 1, Chlorine, 1)
                 .color(0xd9dddc)
                 .build();
 
         Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
-        
-        Polydimethylsiloxane = new Material.Builder(15292, "polydimethylsiloxane")
-                .dust().fluid()
-                .components(Carbon, 2, Hydrogen, 6, Silicon, 1, Oxygen, 1)
-                .color(0xf6f7f0)
-                .build();
-
-        Polydimethylsiloxane.setFormula("CH3[Si(CH3)2O]Si(CH3)3", true)
-        
     }
 }
