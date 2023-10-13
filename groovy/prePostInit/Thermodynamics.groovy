@@ -748,7 +748,7 @@ for (WorkingFluid in WorkingFluids) {
     }
         
     recipemap('cooling_tower').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor) * 64)
+            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidInputs(liquid('water') * 1000)
             .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
             .fluidOutputs(liquid('water') * 750)
@@ -757,7 +757,7 @@ for (WorkingFluid in WorkingFluids) {
             .buildAndRegister();
 
     recipemap('radiator').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor) * 16)
+            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
             .duration(WorkingFluid.duration)
             .EUt(8)
