@@ -1778,7 +1778,31 @@ public class OrganicChemistryMaterials {
 
         TosylicAcidSolution.setFormula("(TsOH)(H2O)", true)
 
-        Dimethyldichlorosilane = new Material.Builder(15285, "dimethyldichlorosilane")
+        Triphenylphosphine = new Material.Builder(15285, SuSyUtility.susyId('triphenylphosphine'))
+                .dust()
+                .components(Carbon, 18, Hydrogen, 15, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        TriphenylphosphineDichloride = new Material.Builder(15286, SuSyUtility.susyId('triphenylphosphine_dichloride'))
+                .dust()
+                .components(Carbon, 18, Hydrogen, 15, Chlorine, 2, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        BistriphenylphosphineiminiumChloride = new Material.Builder(15287, SuSyUtility.susyId('bistriphenylphosphineiminium_chloride'))
+                .dust()
+                .components(Carbon, 36, Hydrogen, 30, Chlorine, 1, Nitrogen, 1, Phosphorus, 2)
+                .colorAverage()
+                .build();
+
+        TriphenylphosphineOxide = new Material.Builder(15288, SuSyUtility.susyId('triphenylphosphine_oxide'))
+                .dust()
+                .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
+                .colorAverage()
+                .build();
+      
+        Dimethyldichlorosilane = new Material.Builder(15289, "dimethyldichlorosilane")
                 .fluid()
                 .compontents(Silicon, 1, Methane, 2, Chlorine, 2)
                 .color(0xd9dddc)
@@ -1786,7 +1810,7 @@ public class OrganicChemistryMaterials {
 
         Dimethyldichlorosilane.setFormula("Si(CH3)2Cl2", true)
         
-        Methyltrichlorosilane = new Material.Builder(15286, "methyltrichlorosilane")
+        Methyltrichlorosilane = new Material.Builder(15290, "methyltrichlorosilane")
                 .fluid()
                 .compontents(Methane, 1, Silicon, 1, Chlorine, 3)
                 .color(0xd9dddc)
@@ -1794,7 +1818,7 @@ public class OrganicChemistryMaterials {
 
         Methyltrichlorosilane.setFormula("CH3SiCl3", true)
 
-        Methyldichlorosilane = new Material.Builder(15287, "methyldichlorosilane")
+        Methyldichlorosilane = new Material.Builder(15291, "methyldichlorosilane")
                 .fluid()
                 .compontents(Methane, 1, Chlorine, 2, Silicon, 1)
                 .color(0xd9dddc)
@@ -1802,7 +1826,7 @@ public class OrganicChemistryMaterials {
 
         Methyldichlorosilane.setFormula("CH3Cl2Si", true)
 
-        Chlorotrimethylsilane = new Material.Builder(15287, "chlorotrimethylsilane")
+        Chlorotrimethylsilane = new Material.Builder(15292, "chlorotrimethylsilane")
                 .fluid()
                 .compontents(Methane, 3, Silicon, 1, Chlorine, 1)
                 .color(0xd9dddc)
@@ -1810,7 +1834,7 @@ public class OrganicChemistryMaterials {
 
         Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
         
-        Polydimethylsiloxane = new Material.Builder(15287, "polydimethylsiloxane")
+        Polydimethylsiloxane = new Material.Builder(15293, "polydimethylsiloxane")
                 .dust().fluid()
                 .compontents(Methane, 6, Silicon, 2, Chlorine, 1)
                 .color(0xf6f7f0)
@@ -1818,28 +1842,5 @@ public class OrganicChemistryMaterials {
 
         Polydimethylsiloxane.setFormula("CH3[Si(CH3)2O]Si(CH3)3", true)
         
-        Triphenylphosphine = new Material.Builder(15288, SuSyUtility.susyId('triphenylphosphine'))
-                .dust()
-                .components(Carbon, 18, Hydrogen, 15, Phosphorus, 1)
-                .colorAverage()
-                .build();
-
-        TriphenylphosphineDichloride = new Material.Builder(15289, SuSyUtility.susyId('triphenylphosphine_dichloride'))
-                .dust()
-                .components(Carbon, 18, Hydrogen, 15, Chlorine, 2, Phosphorus, 1)
-                .colorAverage()
-                .build();
-
-        BistriphenylphosphineiminiumChloride = new Material.Builder(15290, SuSyUtility.susyId('bistriphenylphosphineiminium_chloride'))
-                .dust()
-                .components(Carbon, 36, Hydrogen, 30, Chlorine, 1, Nitrogen, 1, Phosphorus, 2)
-                .colorAverage()
-                .build();
-
-        TriphenylphosphineOxide = new Material.Builder(15291, SuSyUtility.susyId('triphenylphosphine_oxide'))
-                .dust()
-                .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
-                .colorAverage()
-                .build();
     }
 }

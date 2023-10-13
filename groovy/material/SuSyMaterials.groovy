@@ -1389,15 +1389,16 @@ class SuSyMaterials {
         public static Material MethanesulfonicAcid;
         public static Material TriarylsulfoniumHexafluoroantimonate;
         public static Material TosylicAcidSolution;
-	public static Material Dimethyldichlorosilane;
-	public static Material Methyltrichlorosilane;
-	public static Material Methyldichlorosilane;
-	public static Material Chlorotrimethylsilane;
-	public static Material Polydimethylsiloxane;
         public static Material Triphenylphosphine;
         public static Material TriphenylphosphineDichloride;
         public static Material BistriphenylphosphineiminiumChloride;
         public static Material TriphenylphosphineOxide;
+        public static Material Dimethyldichlorosilane;
+        public static Material Methyltrichlorosilane;
+        public static Material Methyldichlorosilane;
+        public static Material Chlorotrimethylsilane;
+        public static Material Polydimethylsiloxane;
+
 
         // Third Degree Materials
 
