@@ -1808,7 +1808,7 @@ public class UnknownCompositionMaterials {
         HydrogenSilsesquioxaneSolution = new Material.Builder(4344, SuSyUtility.susyId("hydrogen_silsesquioxane_solution"))
                 .fluid()
                 .color(0xa186b0)
-                .build
+                .build();
      
         OrganosiliconMixture = new Material.Builder(4345, SuSyUtility.susyId("organosilicon_mixture"))
                 .fluid()
