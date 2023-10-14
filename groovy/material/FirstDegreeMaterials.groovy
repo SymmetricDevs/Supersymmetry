@@ -3245,5 +3245,17 @@ public class FirstDegreeMaterials{
                 .components(Zinc, 1, Oxygen, 1)
                 .color(0xFFFFF5)
                 .build();
+
+        StrontiumSulfide = new Material.Builder(8574, SuSyUtility.susyId('strontium_sulfide'))
+                .dust()
+                .components(Strontium, 1, Sulfur, 1)
+                .colorAverage()
+                .build();
+      
+        StrontiumOxide = new Material.Builder(8575, SuSyUtility.susyId("strontiumc_oxide"))
+                .dust()
+                .components(Strontium, 1, Oxygen, 1)
+                .colorAverage()
+                .build();
     }
 }

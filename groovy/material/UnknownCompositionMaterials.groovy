@@ -1809,5 +1809,15 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xa186b0)
                 .build();
+
+        ImpureCelestineSlurry = new Material.Builder(4345, SuSyUtility.susyId("impure_celestine_slurry"))
+                .fluid()
+                .color(0x698886)
+                .build();
+
+        CelestineSlurry = new Material.Builder(4346, SuSyUtility.susyId("celestine_slurry"))
+                .fluid()
+                .color(0x8cb5b3)
+                .build();
     }
 }
