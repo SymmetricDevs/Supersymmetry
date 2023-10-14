@@ -459,12 +459,12 @@ public class OreMaterials{
                 .build();
 
         Columbite = new Material.Builder(7060, SuSyUtility.susyId('columbite'))
-                .dust()
+                .ore().dust()
                 .color(0x574f2f)
                 .iconSet(SHINY)
                 .components(Iron, 1, Manganese, 1, Niobium, 2, Oxygen, 6)
                 .build()
-                .setFormula('(Fe,Mn)Nb2O6)', true);
+                .setFormula('(Fe,Mn)Nb2O6', true);
 
         Ferrimolybdite = new Material.Builder(7061, SuSyUtility.susyId('ferrimolybdite'))
                 .dust()
