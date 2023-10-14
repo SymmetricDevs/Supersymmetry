@@ -62,4 +62,16 @@ class SinteringGlobals {
     public static sintering_blankets = [
         new Blanket('argon', 100, 300)
     ]
+
+    public static rotary_kiln_fuels = [
+        new Combustible('methane', false, 25, 50, 'carbon_dioxide', 25),
+        new Combustible('natural_gas', false, 8, 50, 'carbon_dioxide', 25),
+        new Combustible('refinery_gas', false, 8, 50, 'carbon_dioxide', 25),
+        new Combustible('fuel_oil', false, 4, 50, 'carbon_dioxide', 25)
+    ]
+
+    public static rotary_kiln_comburents = [
+        new Comburent('air', 250, 50),
+        new Comburent('oxygen', 50, 30)
+    ]
 }

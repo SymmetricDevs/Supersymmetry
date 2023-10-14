@@ -609,6 +609,18 @@ public class SecondDegreeMaterials {
                 .fluid()
                 .components(Trichlorosilane, 1, Toluene, 6)
                 .colorAverage()
-                .build()
+                .build();
+
+        ImpureBariumSulfideSolution = new Material.Builder(13097, SuSyUtility.susyId("impure_barium_sulfide_solution"))
+                .fluid()
+                .components(ImpureBariumSulfide, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        ImpureStrontiumSulfideSlurry = new Material.Builder(13098, SuSyUtility.susyId("impure_strontium_sulfide_slurry"))
+                .fluid()
+                .components(ImpureStrontiumSulfide, 1, Water, 1, SiliconDioxide, 1)
+                .colorAverage()
+                .build();
     }
 }

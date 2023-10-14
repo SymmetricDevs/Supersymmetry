@@ -1810,6 +1810,7 @@ public class UnknownCompositionMaterials {
                 .color(0xa186b0)
                 .build();
 
+        
         ImpureCelestineSlurry = new Material.Builder(4345, SuSyUtility.susyId("impure_celestine_slurry"))
                 .fluid()
                 .color(0x698886)
@@ -1818,6 +1819,11 @@ public class UnknownCompositionMaterials {
         CelestineSlurry = new Material.Builder(4346, SuSyUtility.susyId("celestine_slurry"))
                 .fluid()
                 .color(0x8cb5b3)
+                .build();
+
+        BariumResidue = new Material.Builder(4347, SuSyUtility.susyId("hydrogen_silsesquioxane_solution"))
+                .dust()
+                .color(0xc9c4b1)
                 .build();
     }
 }

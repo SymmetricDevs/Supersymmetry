@@ -1732,6 +1732,14 @@ susy.material.hydrogen_silsesquioxane_solution=Hydrogen Silsesquioxane (HSQ) Sol
 susy.material.trichlorosilane_solution=Trichlorosilane Solution
 susy.material.tosylic_acid_solution=Tosylic Acid Solution
 susy.material.hydrogen_silsesquioxane_photoresist=Hydrogen Silsesquioxane (HSQ) Photoresist
+susy.material.strontium_sulfide_solution=Strontium Sulfide Solution
+susy.material.strontium_oxide=Strontium Oxide
+susy.material.impure_barium_sulfide=Impure Barium Sulfide
+susy.material.barium_residue=Barium Residue
+susy.material.impure_barium_sulfide_solution=Impure Barium Sulfide Solution
+susy.material.impure_celestine_slurry=Impure Celestine Slurry
+susy.material.celestine_slurry=Celestine Slurry
+susy.material.impure_stronium_sulfide_slurry=Impure Strontium Sulfide Slurry
 
 # Isotopes
 

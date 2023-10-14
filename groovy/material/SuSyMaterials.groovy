@@ -477,6 +477,7 @@ class SuSyMaterials {
         public static Material HydrogenSilsesquioxaneSolution;
         public static Material ImpureCelestineSlurry;
         public static Material CelestineSlurry;
+        public static Material BariumResidue;
 
         // Petrochem Materials
 
@@ -1001,8 +1002,10 @@ class SuSyMaterials {
         public static Material SodiumHexafluoroantimonate;
         public static Material AcidWashedSiliconDioxide;
         public static Material DisulfurDichloride;
-        public static Material StrontiumSulfide;
+        public static Material StrontiumSulfideSolution;
         public static Material StrontiumOxide;
+        public static Material ImpureBariumSulfide;
+        public static Material ImpureStrontiumSulfide;
 
         // Second Degree Materials
 
@@ -1101,6 +1104,8 @@ class SuSyMaterials {
         public static Material SodiumHexafluoroantimonateSolution;
         public static Material EGlass;
         public static Material TrichlorosilaneSolution;
+        public static Material ImpureBariumSulfideSolution;
+        public static Material ImpureStrontiumSulfideSlurry;
 
         // Organic Chemistry Materials
 
