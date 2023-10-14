@@ -1801,5 +1801,29 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
                 .colorAverage()
                 .build();
+        
+        Methyltrichlorosilane = new Material.Builder(15289, SuSyUtility.susyId("methyltrichlorosilane"))
+                .fluid()
+                .components(Carbon, 1, Hydrogen, 3, Silicon, 1, Chlorine, 3)
+                .color(0xd9dddc)
+                .build();
+
+        Methyltrichlorosilane.setFormula("CH3SiCl3", true)
+
+        Methyldichlorosilane = new Material.Builder(15290, SuSyUtility.susyId("methyldichlorosilane"))
+                .fluid()
+                .components(Carbon, 1, Hydrogen, 4, Chlorine, 2, Silicon, 1)
+                .color(0xd9dddc)
+                .build();
+
+        Methyldichlorosilane.setFormula("CH3Cl2SiH", true)
+
+        Chlorotrimethylsilane = new Material.Builder(15291, SuSyUtility.susyId("chlorotrimethylsilane"))
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 9, Silicon, 1, Chlorine, 1)
+                .color(0xd9dddc)
+                .build();
+
+        Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
     }
 }

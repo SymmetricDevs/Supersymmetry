@@ -1810,7 +1810,6 @@ public class UnknownCompositionMaterials {
                 .color(0xa186b0)
                 .build();
 
-        
         ImpureCelestineSlurry = new Material.Builder(4345, SuSyUtility.susyId("impure_celestine_slurry"))
                 .fluid()
                 .color(0x698886)
@@ -1825,5 +1824,20 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0xc9c4b1)
                 .build();
+     
+        OrganosiliconMixture = new Material.Builder(4348, SuSyUtility.susyId("organosilicon_mixture"))
+                .fluid()
+                .color(0xbebdb8)
+                .build();
+     
+        ImpurePolydimethylsiloxaneMixture = new Material.Builder(4349, SuSyUtility.susyId("impure_polydimethylsiloxane_mixture"))
+                .fluid()
+                .color(0xf6f7f0)
+                .build();
+     
+        RawPolydimethylsiloxaneMixture = new Material.Builder(4350, SuSyUtility.susyId("raw_polydimethylsiloxane_mixture"))
+                .fluid()
+                .color(0xf6f7f0)
+                .build();  
     }
 }

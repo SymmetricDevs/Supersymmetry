@@ -479,6 +479,10 @@ class SuSyMaterials {
         public static Material CelestineSlurry;
         public static Material BariumResidue;
 
+	public static Material OrganosiliconMixture;
+	public static Material ImpurePolydimethylsiloxaneMixture;
+	public static Material RawPolydimethylsiloxaneMixture;
+
         // Petrochem Materials
 
         public static Material DilutedOil;
@@ -1398,6 +1402,9 @@ class SuSyMaterials {
         public static Material TriphenylphosphineDichloride;
         public static Material BistriphenylphosphineiminiumChloride;
         public static Material TriphenylphosphineOxide;
+        public static Material Methyltrichlorosilane;
+        public static Material Methyldichlorosilane;
+        public static Material Chlorotrimethylsilane;
 
         // Third Degree Materials
 
