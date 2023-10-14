@@ -1820,7 +1820,7 @@ public class UnknownCompositionMaterials {
                 .color(0x8cb5b3)
                 .build();
 
-        BariumResidue = new Material.Builder(4347, SuSyUtility.susyId("hydrogen_silsesquioxane_solution"))
+        BariumResidue = new Material.Builder(4347, SuSyUtility.susyId("barium_residue"))
                 .dust()
                 .color(0xc9c4b1)
                 .build();
