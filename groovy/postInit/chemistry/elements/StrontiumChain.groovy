@@ -65,15 +65,14 @@ for (fuel in rotary_kiln_fuels) {
 
 MIXER.recipeBuilder()
     .inputs(ore('dustImpureStrontiumSulfide') * 4)
-    .fluidInputs(fluid('gtfo_heated_water') * 1000)
-    .outputs(metaitem('dustStrontiumResidue') * 2)
-    .fluidOutputs(fluid('impure_strontium_sulfide_slurry') * 1000)
+    .fluidInputs(fluid('gtfo_heated_water') * 2000)
+    .fluidOutputs(fluid('impure_strontium_sulfide_slurry') * 2000)
     .EUt(Globals.voltAmps[1])
     .duration(100)
     .buildAndRegister()
 
 CLARIFIER.recipeBuilder()
-    .fluidInputs(fluid('impure_strontum_sulfide_slurry') * 1000)
+    .fluidInputs(fluid('impure_strontium_sulfide_slurry') * 1000)
     .outputs(metaitem('dustSiliconDioxide'))
     .fluidOutputs(fluid('strontium_sulfide_solution') * 1000)
     .EUt(Globals.voltAmps[1])
