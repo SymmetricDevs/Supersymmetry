@@ -150,11 +150,6 @@ DUMPER.recipeBuilder()
         .buildAndRegister()
 
 DUMPER.recipeBuilder()
-        .fluidInputs(fluid('water') * 1000)
-        .duration(20)
-        .buildAndRegister()
-
-DUMPER.recipeBuilder()
         .fluidInputs(fluid('red_mud') * 1000)
         .duration(20)
         .buildAndRegister()

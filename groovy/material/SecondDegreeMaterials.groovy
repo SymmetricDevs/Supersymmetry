@@ -253,7 +253,7 @@ public class SecondDegreeMaterials {
                 .build()
 
         ChloroauricAcidSolution = new Material.Builder(13039, SuSyUtility.susyId('chloroauric_acid_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(ChloroauricAcid, 3, NitricAcid, 1, Water, 6)
                 .color(0xd69129)
                 .build();
@@ -335,7 +335,7 @@ public class SecondDegreeMaterials {
                 .setFormula('(H2O)2(Na2SO4)', true);
 
         DilutedHydrofluoricAcid = new Material.Builder(13052, SuSyUtility.susyId('diluted_hydrofluoric_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Water, 2, HydrogenFluoride, 1)
                 .colorAverage()
                 .build();

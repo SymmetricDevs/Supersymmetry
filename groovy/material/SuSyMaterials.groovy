@@ -1154,9 +1154,6 @@ class SuSyMaterials {
         public static Material Hydroxylamine;
         public static Material Cyclohexanone;
         public static Material CaprolactamSolution;
-        public static Material BisphenolADiglycidylEther;
-        public static Material ImpureEpoxyResin;
-        public static Material UncuredEpoxyResin;
         public static Material TNTSolution;
         public static Material VinylChlorideSuspension;
         public static Material PolyvinylChlorideSuspension;

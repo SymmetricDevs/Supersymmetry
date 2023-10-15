@@ -349,6 +349,7 @@ public class ThirdDegreeMaterials {
 
         WetEpoxy = new Material.Builder(24054, SuSyUtility.susyId('wet_epoxy'))
                 .dust()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Epoxy, 1)
                 .color(0xa16f0d)
                 .build();
@@ -367,6 +368,7 @@ public class ThirdDegreeMaterials {
 
         WetFlameRetardantEpoxy = new Material.Builder(24057, SuSyUtility.susyId('wet_flame_retardant_epoxy'))
                 .dust()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(FlameRetardantEpoxy, 1)
                 .color(0xa1530b)
                 .build();
