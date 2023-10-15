@@ -1027,7 +1027,7 @@ public class FirstDegreeMaterials{
 
         AluminiumChloride = new Material.Builder(8242, SuSyUtility.susyId('aluminium_chloride'))
                 .dust().fluid(FluidTypes.GAS)
-                .flags(NO_UNIFICATION, GENERATE_CATALYST_BED)
+                .flags(GENERATE_CATALYST_BED)
                 .fluidTemp(460)
                 .components(Aluminium, 1, Chlorine, 3)
                 .colorAverage()
