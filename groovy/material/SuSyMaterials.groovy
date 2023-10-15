@@ -1405,6 +1405,7 @@ class SuSyMaterials {
         public static Material Methyltrichlorosilane;
         public static Material Methyldichlorosilane;
         public static Material Chlorotrimethylsilane;
+        public static Material DilutedSodiumCarbonateSolution;
 
         // Third Degree Materials
 

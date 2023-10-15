@@ -622,5 +622,11 @@ public class SecondDegreeMaterials {
                 .components(ImpureStrontiumSulfide, 1, Water, 1, SiliconDioxide, 1)
                 .colorAverage()
                 .build();
+
+        DilutedSodiumCarbonateSolution = new Material.Builder(13099, SuSyUtility.susyId("diluted_sodium_carbonate_solution"))
+                .fluid()
+                .components(SodaAsh, 1, Water, 3)
+                .colorAverage()
+                .build();
     }
 }

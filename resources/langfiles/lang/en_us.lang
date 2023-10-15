@@ -126,6 +126,7 @@ susy.material.mixed_nitrochlorobenzene_solution=Mixed Nitrochlorobenzene Solutio
 susy.material.mixed_dichlorobenzene_solution=Mixed Dichlorobenzene Solution
 susy.material.two_two_dichlorohydrazobenzene_solution=2,2'-Dichlorohydrazobenzene Solution
 susy.material.two_butanol_solution=2-Butanol Solution
+susy.material.DilutedSodiumCarbonateSolution=Diluted Sodium Carbonate Solution
 
 susy.material.iron_ii_sulfide=Iron II Sulfide
 susy.material.potassium_bisulfate=Potassium Bisulfate
