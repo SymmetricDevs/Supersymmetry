@@ -1748,7 +1748,8 @@ susy.material.barium_residue=Barium Residue
 susy.material.impure_barium_sulfide_solution=Impure Barium Sulfide Solution
 susy.material.impure_celestine_slurry=Impure Celestine Slurry
 susy.material.celestine_slurry=Celestine Slurry
-susy.material.impure_stronium_sulfide_slurry=Impure Strontium Sulfide Slurry
+susy.material.impure_strontium_sulfide_slurry=Impure Strontium Sulfide Slurry
+susy.material.impure_strontium_sulfide=Impure Strontium Sulfide
 
 # Isotopes
 
