@@ -9,7 +9,6 @@ REACTION_FURNACE = recipemap('reaction_furnace')
 BR = recipemap('batch_reactor')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 FLOTATION = recipemap('froth_flotation')
-SINTERING_OVEN = recipemap('sintering_oven')
 VACUUM_CHAMBER = recipemap('vacuum_chamber')
 DISTILLERY = recipemap('distillery')
 FLUID_EXTRACTOR = recipemap('extractor')
@@ -139,14 +138,6 @@ CLARIFIER.recipeBuilder()
         .buildAndRegister()
 
 //CONCENTRATE SINTERING
-SINTERING_OVEN.recipeBuilder()
-        .inputs(ore('dustAnglesite') * 1)
-        .outputs(metaitem('dustSinteredLeadConcentrate') * 2)
-        .fluidOutputs(fluid('sulfur_trioxide') * 1000)
-        .EUt(120)
-        .duration(200)
-        .buildAndRegister()
-
 for (fuel in rotary_kiln_fuels) {
     for (comburent in rotary_kiln_comburents) {
         ROTARY_KILN.recipeBuilder()
