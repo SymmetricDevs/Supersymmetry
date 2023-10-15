@@ -644,7 +644,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         TetrafluoroboricAcid = new Material.Builder(8182, SuSyUtility.susyId('tetrafluoroboric_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Water, 3, Hydrogen, 1, Boron, 1, Fluorine, 4)
                 .color(0xa4ab91)
                 .build();
@@ -732,7 +732,7 @@ public class FirstDegreeMaterials{
                 .setFormula("(H2O)3(Ni,Co)Cl2", true)
 
         AcidicCopperSolution = new Material.Builder(8194, SuSyUtility.susyId('acidic_copper_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Water, 4, Copper, 2, Sulfur, 2, Oxygen, 8, NitricAcid, 2)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
@@ -891,7 +891,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         VeryDilutedSulfuricAcid = new Material.Builder(8219, SuSyUtility.susyId('very_diluted_sulfuric_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Water, 2, SulfuricAcid, 1)
                 .color(0x54362c)
                 .build()
@@ -1018,7 +1018,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         HydrobromicAcid = new Material.Builder(8241, SuSyUtility.susyId('hydrobromic_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Hydrogen, 1, Bromine, 1, Water, 1)
                 .colorAverage()
                 .build()
@@ -1123,7 +1123,7 @@ public class FirstDegreeMaterials{
                 .setFormula("(Na3[Ag(S2O3)2])3(Na3AsS3)(H2O)5", true)
 
         AcidicArsenateVSolution = new Material.Builder(8257, SuSyUtility.susyId('acidic_arsenate_v_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(NitricAcid, 6, Hydrogen, 9, Arsenic, 3, Oxygen, 12)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
@@ -2311,7 +2311,7 @@ public class FirstDegreeMaterials{
                 .build();
       
         DilutedPhosphoricAcid = new Material.Builder(8437, SuSyUtility.susyId('diluted_phosphoric_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(PhosphoricAcid, 3, Water, 1)
                 .colorAverage()
                 .build()
@@ -2367,7 +2367,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         HotSulfuricAcid = new Material.Builder(8445, SuSyUtility.susyId('hot_sulfuric_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .fluidTemp(353)
                 .components(Hydrogen, 2, Sulfur, 1, Oxygen, 4)
                 .color(0xff570f)
@@ -3142,7 +3142,7 @@ public class FirstDegreeMaterials{
         NiobiumOxideDihydrate.setFormula("Nb2O5 * (H2O)2", true)
                 
         PurifiedFluoroniobicAcidSolution = new Material.Builder(8556, SuSyUtility.susyId('purified_fluoroniobic_acid_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Hydrogen, 6, Niobium, 3, Fluorine, 9, Water, 6)
                 .colorAverage()
                 .build();
@@ -3156,7 +3156,7 @@ public class FirstDegreeMaterials{
                 .build();
                 
         FluorotantalicAcidSolution = new Material.Builder(8558, SuSyUtility.susyId('fluorotantalic_acid_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Hydrogen, 2, Tantalum, 1, Fluorine, 7, Water, 1)
                 .colorAverage()
                 .build();
