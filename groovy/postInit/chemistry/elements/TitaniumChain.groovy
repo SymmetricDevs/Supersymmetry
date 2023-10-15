@@ -215,6 +215,7 @@ for (inertGas in Globals.inertGases) {
                 .inputs(ore('dustMagnesium') * 2)
                 .outputs(metaitem('sponge.titanium.crude'))
                 .fluidOutputs(fluid('magnesium_chloride') * 756)
+                .chancedOutput(metaitem('dustMagnesium'), 1250, 0)
                 .blastFurnaceTemp(2150)
                 .duration(100 * inertGas.duration)
                 .EUt(Globals.voltAmps[3] * 2)

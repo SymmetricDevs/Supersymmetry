@@ -64,9 +64,6 @@ susy.material.hydroxylamine=Hydroxylamine
 susy.material.cyclohexanone=Cyclohexanone
 susy.material.diluted_cyclohexanone=Diluted Cyclohexanone
 susy.material.caprolactam_solution=Caprolactam Solution
-susy.material.bisphenola_diglycidyl_ether=Bisphenol A Diglycidyl Ether
-susy.material.impure_epoxy_resin=Impure Epoxy Resin
-susy.material.uncured_epoxy_resin=Uncured Epoxy Resin
 susy.material.tnt_solution=Trinitrotoluene (TNT) Solution
 susy.material.ammonium_nitrate_solution=Ammonium Nitrate Solution
 susy.material.nitrate_solution=Nitrate Solution
@@ -126,6 +123,7 @@ susy.material.mixed_nitrochlorobenzene_solution=Mixed Nitrochlorobenzene Solutio
 susy.material.mixed_dichlorobenzene_solution=Mixed Dichlorobenzene Solution
 susy.material.two_two_dichlorohydrazobenzene_solution=2,2'-Dichlorohydrazobenzene Solution
 susy.material.two_butanol_solution=2-Butanol Solution
+susy.material.DilutedSodiumCarbonateSolution=Diluted Sodium Carbonate Solution
 
 susy.material.iron_ii_sulfide=Iron II Sulfide
 susy.material.potassium_bisulfate=Potassium Bisulfate
@@ -1741,6 +1739,16 @@ susy.material.hydrogen_silsesquioxane_solution=Hydrogen Silsesquioxane (HSQ) Sol
 susy.material.trichlorosilane_solution=Trichlorosilane Solution
 susy.material.tosylic_acid_solution=Tosylic Acid Solution
 susy.material.hydrogen_silsesquioxane_photoresist=Hydrogen Silsesquioxane (HSQ) Photoresist
+susy.material.strontium_sulfide_solution=Strontium Sulfide Solution
+susy.material.strontium_oxide=Strontium Oxide
+susy.material.impure_barium_sulfide=Impure Barium Sulfide
+susy.material.barium_residue=Barium Residue
+susy.material.impure_barium_sulfide_solution=Impure Barium Sulfide Solution
+susy.material.impure_celestine_slurry=Impure Celestine Slurry
+susy.material.celestine_slurry=Celestine Slurry
+susy.material.impure_strontium_sulfide_slurry=Impure Strontium Sulfide Slurry
+susy.material.impure_strontium_sulfide=Impure Strontium Sulfide
+susy.material.diluted_sodium_carbonate_solution=Diluted Sodium Carbonate Solution
 
 # Isotopes
 

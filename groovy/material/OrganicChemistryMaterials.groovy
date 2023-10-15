@@ -390,24 +390,29 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        BisphenolADiglycidylEther = new Material.Builder(15063, SuSyUtility.susyId('bisphenola_diglycidyl_ether'))
+        Chlorotrimethylsilane = new Material.Builder(15063, SuSyUtility.susyId("chlorotrimethylsilane"))
                 .fluid()
-                .components(Carbon, 21, Hydrogen, 24, Oxygen, 4)
-                .colorAverage()
+                .components(Carbon, 3, Hydrogen, 9, Silicon, 1, Chlorine, 1)
+                .color(0xd9dddc)
                 .build();
 
-        ImpureEpoxyResin = new Material.Builder(15064, SuSyUtility.susyId('impure_epoxy_resin'))
+        Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
+
+        Methyldichlorosilane = new Material.Builder(15064, SuSyUtility.susyId("methyldichlorosilane"))
                 .fluid()
-                .components(SaltWater, 1, Epoxy, 1)
-                .colorAverage()
+                .components(Carbon, 1, Hydrogen, 4, Chlorine, 2, Silicon, 1)
+                .color(0xd9dddc)
                 .build();
 
-        UncuredEpoxyResin = new Material.Builder(15065, SuSyUtility.susyId('uncured_epoxy_resin'))
+        Methyldichlorosilane.setFormula("CH3Cl2SiH", true)
+
+        Methyltrichlorosilane = new Material.Builder(15065, SuSyUtility.susyId("methyltrichlorosilane"))
                 .fluid()
-                .components(Epoxy, 1)
-                .colorAverage()
-                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 1, Hydrogen, 3, Silicon, 1, Chlorine, 3)
+                .color(0xd9dddc)
                 .build();
+
+        Methyltrichlorosilane.setFormula("CH3SiCl3", true)
 
         TNTSolution = new Material.Builder(15066, SuSyUtility.susyId('tnt_solution'))
                 .fluid()
@@ -1764,10 +1769,10 @@ public class OrganicChemistryMaterials {
                 .color(0xff6e6e)
                 .build();
 
-        TriarylsulfoniumHexafluoroantimonate = new Material.Builder(15283, SuSyUtility.susyId("triarylsulfonium_hexafluoroantimonate"))
+        TriphenylphosphineOxide = new Material.Builder(15283, SuSyUtility.susyId('triphenylphosphine_oxide'))
                 .dust()
-                .components(Carbon, 24, Hydrogen, 19, Fluorine, 6, Sulfur, 2, Antimony, 1)
-                .color(0x31a374)
+                .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
+                .colorAverage()
                 .build();
 
         TosylicAcidSolution = new Material.Builder(15284, SuSyUtility.susyId("tosylic_acid_solution"))
@@ -1796,34 +1801,6 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        TriphenylphosphineOxide = new Material.Builder(15288, SuSyUtility.susyId('triphenylphosphine_oxide'))
-                .dust()
-                .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
-                .colorAverage()
-                .build();
         
-        Methyltrichlorosilane = new Material.Builder(15289, SuSyUtility.susyId("methyltrichlorosilane"))
-                .fluid()
-                .components(Carbon, 1, Hydrogen, 3, Silicon, 1, Chlorine, 3)
-                .color(0xd9dddc)
-                .build();
-
-        Methyltrichlorosilane.setFormula("CH3SiCl3", true)
-
-        Methyldichlorosilane = new Material.Builder(15290, SuSyUtility.susyId("methyldichlorosilane"))
-                .fluid()
-                .components(Carbon, 1, Hydrogen, 4, Chlorine, 2, Silicon, 1)
-                .color(0xd9dddc)
-                .build();
-
-        Methyldichlorosilane.setFormula("CH3Cl2SiH", true)
-
-        Chlorotrimethylsilane = new Material.Builder(15291, SuSyUtility.susyId("chlorotrimethylsilane"))
-                .fluid()
-                .components(Carbon, 3, Hydrogen, 9, Silicon, 1, Chlorine, 1)
-                .color(0xd9dddc)
-                .build();
-
-        Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
     }
 }

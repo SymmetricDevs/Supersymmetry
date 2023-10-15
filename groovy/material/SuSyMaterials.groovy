@@ -475,6 +475,9 @@ class SuSyMaterials {
         public static Material SuEight;
         public static Material AcidicHydrogenSilsesquioxaneSolution;
         public static Material HydrogenSilsesquioxaneSolution;
+        public static Material ImpureCelestineSlurry;
+        public static Material CelestineSlurry;
+        public static Material BariumResidue;
 
 	public static Material OrganosiliconMixture;
 	public static Material ImpurePolydimethylsiloxaneMixture;
@@ -1003,6 +1006,10 @@ class SuSyMaterials {
         public static Material SodiumHexafluoroantimonate;
         public static Material AcidWashedSiliconDioxide;
         public static Material DisulfurDichloride;
+        public static Material StrontiumSulfideSolution;
+        public static Material StrontiumOxide;
+        public static Material ImpureBariumSulfide;
+        public static Material ImpureStrontiumSulfide;
 
         // Second Degree Materials
 
@@ -1101,6 +1108,8 @@ class SuSyMaterials {
         public static Material SodiumHexafluoroantimonateSolution;
         public static Material EGlass;
         public static Material TrichlorosilaneSolution;
+        public static Material ImpureBariumSulfideSolution;
+        public static Material ImpureStrontiumSulfideSlurry;
 
         // Organic Chemistry Materials
 
@@ -1154,9 +1163,6 @@ class SuSyMaterials {
         public static Material Hydroxylamine;
         public static Material Cyclohexanone;
         public static Material CaprolactamSolution;
-        public static Material BisphenolADiglycidylEther;
-        public static Material ImpureEpoxyResin;
-        public static Material UncuredEpoxyResin;
         public static Material TNTSolution;
         public static Material VinylChlorideSuspension;
         public static Material PolyvinylChlorideSuspension;
@@ -1396,6 +1402,7 @@ class SuSyMaterials {
         public static Material Methyltrichlorosilane;
         public static Material Methyldichlorosilane;
         public static Material Chlorotrimethylsilane;
+        public static Material DilutedSodiumCarbonateSolution;
 
         // Third Degree Materials
 
