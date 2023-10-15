@@ -8,6 +8,7 @@ import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.properties.*
 
 import supersymmetry.api.util.SuSyUtility;
+import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -170,7 +171,7 @@ public class OreMaterials{
 
         Celestine = new Material.Builder(7018, SuSyUtility.susyId('celestine'))
                 .dust().gem().ore()
-                .flags(NO_SMELTING)
+                .flags(NO_SMELTING, GENERATE_SIFTED, GENERATE_FLOTATED)
                 .color(0xafe3e0)
                 .iconSet(SHINY)
                 .components(Strontium, 1, Sulfur, 1, Oxygen, 4)

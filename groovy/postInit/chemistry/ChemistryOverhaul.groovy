@@ -4653,3 +4653,22 @@ FLUID_HEATER.recipeBuilder()
         .duration(20)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
+
+// Soda Ash Solution
+BCR.recipeBuilder()
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 100)
+        .fluidInputs(fluid('carbon_dioxide') * 50)
+        .fluidOutputs(fluid('diluted_sodium_carbonate_solution') * 150)
+        .duration(4)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('diluted_sodium_carbonate_solution') * 3000)
+        .outputs(metaitem('dustSodaAsh') * 6)
+        .fluidOutputs(fluid('water') * 3000)
+        .duration(120)
+        .EUt(30)
+        .buildAndRegister()
+		
+		

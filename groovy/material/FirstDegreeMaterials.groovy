@@ -3233,5 +3233,37 @@ public class FirstDegreeMaterials{
                 .build();
 
         Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
+
+        ImpureBariumSulfide = new Material.Builder(8572, SuSyUtility.susyId("impure_barium_sulfide"))
+                .dust()
+                .components(Barium, 1, Sulfur, 1)
+                .iconSet(DULL)
+                .colorAverage()
+                .build();
+
+        ImpureBariumSulfide.setFormula("(?)(BaS)", true)
+
+        ImpureStrontiumSulfide = new Material.Builder(8573, SuSyUtility.susyId("impure_strontium_sulfide"))
+                .dust()
+                .components(Strontium, 1, Sulfur, 1)
+                .iconSet(DULL)
+                .colorAverage()
+                .build();
+
+        ImpureStrontiumSulfide.setFormula("(?)(SrS)", true)
+
+        StrontiumSulfideSolution = new Material.Builder(8574, SuSyUtility.susyId("strontium_sulfide_solution"))
+                .fluid()
+                .components(Strontium, 1, Sulfur, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        StrontiumSulfideSolution.setFormula("(SrS)(H2O)", true)
+      
+        StrontiumOxide = new Material.Builder(8575, SuSyUtility.susyId("strontium_oxide"))
+                .dust()
+                .components(Strontium, 1, Oxygen, 1)
+                .colorAverage()
+                .build();
     }
 }
