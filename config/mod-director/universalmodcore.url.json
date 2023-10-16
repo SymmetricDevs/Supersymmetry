@@ -1,3 +1,7 @@
 {
-    "url": "https://teamopenindustry.cc/maven/cam72cam/universalmodcore/UniversalModCore/1.12.2-forge-1.1.4-98c9f07/UniversalModCore-1.12.2-forge-1.1.4-98c9f07.jar"
+    "url": "https://teamopenindustry.cc/maven/cam72cam/universalmodcore/UniversalModCore/1.12.2-forge-1.1.4-98c9f07/UniversalModCore-1.12.2-forge-1.1.4-98c9f07.jar",
+    "installationPolicy": {
+       "continueOnFailedDownload": false,
+       "name": "UniversalModCore-1.12.2-forge-1.1.4-98c9f07"
+    }
 }
