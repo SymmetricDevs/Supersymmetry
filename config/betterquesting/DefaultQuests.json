@@ -33921,7 +33921,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combine §6Ferrosilicon§r, §cFerrochromium§r, §7Carburized Stainless Steel§r, §aFluorite§r §rand §6Quicklime §rto get Stainless Steel. This process is done in an EBF at 480 EU/t and it produces §cmolten §rstainless steel. \n\nIt has to be run through a §6Fluid Solidifier §rbefore actually using it.",
+          "desc:8": "Combine §6Ferrosilicon§r, §cFerrochromium§r, §7Carburized Stainless Steel§r, §aFluorite§r §rand §6Quicklime §rto get Stainless Steel. This process is done in an EBF at 240 EU/t and it produces §cmolten §rstainless steel. \n\nIt has to be run through a §6Fluid Solidifier §rbefore actually using it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
