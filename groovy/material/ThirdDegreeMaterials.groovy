@@ -114,7 +114,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        TerephthalicAcidSolution = new Material.Builder(24016, SuSyUtility.susyId('terephthalic_acid_solution'))
+        TerephthalicAcidSlurry = new Material.Builder(24016, SuSyUtility.susyId('terephthalic_acid_slurry'))
                 .fluid()
                 .components(AceticAcid, 1, Water, 1, TerephthalicAcid, 1)
                 .colorAverage()
@@ -283,7 +283,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        IsophthalicAcidSolution = new Material.Builder(24044, SuSyUtility.susyId('isophthalic_acid_solution'))
+        IsophthalicAcidSlurry = new Material.Builder(24044, SuSyUtility.susyId('isophthalic_acid_slurry'))
                 .fluid()
                 .components(AceticAcid, 1, Water, 1, IsophthalicAcid, 1)
                 .colorAverage()

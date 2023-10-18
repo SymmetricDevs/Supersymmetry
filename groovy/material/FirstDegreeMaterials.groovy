@@ -3265,5 +3265,11 @@ public class FirstDegreeMaterials{
                 .components(Strontium, 1, Oxygen, 1)
                 .colorAverage()
                 .build();
+
+        DilutedAceticAcid = new Material.Builder(8576, SuSyUtility.susyId("diluted_acetic_acid"))
+                .fluid()
+                .components(AceticAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }

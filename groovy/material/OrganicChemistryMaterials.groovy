@@ -920,7 +920,8 @@ public class OrganicChemistryMaterials {
                 .build()
 
         TerephthalicAcid = new Material.Builder(15151, SuSyUtility.susyId('terephthalic_acid'))
-                .dust()
+                .dust().fluid()
+                .fluidTemp(473)
                 .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
                 .colorAverage()
                 .build()

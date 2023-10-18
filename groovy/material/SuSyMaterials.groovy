@@ -1010,6 +1010,7 @@ class SuSyMaterials {
         public static Material StrontiumOxide;
         public static Material ImpureBariumSulfide;
         public static Material ImpureStrontiumSulfide;
+        public static Material DilutedAceticAcid;
 
         // Second Degree Materials
 
@@ -1422,7 +1423,7 @@ class SuSyMaterials {
         public static Material DiiodobenzeneSolution;
         public static Material ImpureFourFourOxydianiline;
         public static Material EthyleneGlycolSolution;
-        public static Material TerephthalicAcidSolution;
+        public static Material TerephthalicAcidSlurry;
         public static Material CelluloseAcetateSolution;
         public static Material TwoButanolSolution;
         public static Material FourFourOxydianilineSolution;
@@ -1450,7 +1451,7 @@ class SuSyMaterials {
         public static Material PotassiumButylXanthateSolution;
         public static Material TNPSolution;
         public static Material IsophthaloylDichlorideSolution;
-        public static Material IsophthalicAcidSolution;
+        public static Material IsophthalicAcidSlurry;
         public static Material DichloroethaneIsophthalicAcidSolution;
         public static Material TetrahydrofuranSolution;
         public static Material AcidicTriethylPhosphate;
