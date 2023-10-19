@@ -3274,8 +3274,11 @@ public class FirstDegreeMaterials{
 
         CobaltIIAcetate = new Material.Builder(8577, SuSyUtility.susyId("cobalt_ii_acetate"))
                 .dust()
-                .components(Cobalt, 1, Carbon, 4, Oxygen, 6, Hydrogen, 4)
+                .components(Cobalt, 1, Carbon, 4, Oxygen, 6, Hydrogen, 4, Water, 4)
                 .color(0xfc7e89)
                 .build();
+
+        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)
+        
     }
 }

@@ -1488,6 +1488,7 @@ class SuSyMaterials {
         public static Material ParaToluateMixture;
         public static Material CrudeDimethylTerephthalateSolution;
         public static Material TerephthalateMotherLiquor;
+        public static Material MethylParaToluateMixture;
 
         // Thermodynamics/Greenhouse Materials
 

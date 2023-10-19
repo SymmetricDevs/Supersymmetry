@@ -629,7 +629,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        PalladiumOnCarbon = new Material.Builder(13100, SuSyUtility.susyId("diluted_sodium_carbonate_solution"))
+        PalladiumOnCarbon = new Material.Builder(13100, SuSyUtility.susyId("palladium_on_carbon"))
                 .dust()
                 .components(Palladium, 1, ActivatedCarbon, 4)
                 .colorAverage()

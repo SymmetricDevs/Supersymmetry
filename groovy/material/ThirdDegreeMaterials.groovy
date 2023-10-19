@@ -394,14 +394,14 @@ public class ThirdDegreeMaterials {
         CrudeTerephthalicAcidSolution = new Material.Builder(24061, SuSyUtility.susyId('crude_terephthalic_acid_solution'))
                 .fluid()
                 .fluidTemp(533)
-                .components(CrudeTerephthalicAcid, 1, Water, 1)
+                .components(AmocoTerephthalicAcid, 1, Water, 1)
                 .colorAverage()
                 .build();
 
         CrudeIsophthalicAcidSolution = new Material.Builder(24062, SuSyUtility.susyId('crude_isophthalic_acid_solution'))
                 .fluid()
                 .fluidTemp(533)
-                .components(CrudeIsophthalicAcid, 1, Water, 1)
+                .components(AmocoIsophthalicAcid, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -442,6 +442,12 @@ public class ThirdDegreeMaterials {
         TerephthalateMotherLiquor = new Material.Builder(24068, SuSyUtility.susyId('terephthalate_mother_liquor'))
                 .fluid()
                 .components(CrudeDimethylTerephthalate, 1, Methanol, 2)
+                .colorAverage()
+                .build();
+
+        MethylParaToluateMixture = new Material.Builder(24069, SuSyUtility.susyId('methyl_para_toluate_mixture'))
+                .fluid()
+                .components(MethylParaToluate, 1, DimethylTerephthalate, 1)
                 .colorAverage()
                 .build();
     }

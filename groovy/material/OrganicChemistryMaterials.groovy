@@ -619,7 +619,7 @@ public class OrganicChemistryMaterials {
         IsophthalicAcid = new Material.Builder(15100, SuSyUtility.susyId('isophthalic_acid'))
                 .dust()
                 .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
-                .color(0x349972)
+                .color(0x8ac294)
                 .build()
 
         NPropanol = new Material.Builder(15101, SuSyUtility.susyId('n_propanol'))
@@ -930,8 +930,9 @@ public class OrganicChemistryMaterials {
                 .fluid()
                 .components(Carbon, 6, Hydrogen, 4, Carbon, 2, Chlorine, 6)
                 .colorAverage()
-                .build(0x8ac294)
-                .setFormula('C6H4(CCl3)2', true)
+                .build()
+
+        Bistrichloromethylbenzene.setFormula('C6H4(CCl3)2', true)
 
         TerephthaloylChloride = new Material.Builder(15153, SuSyUtility.susyId('terephthaloyl_chloride'))
                 .dust()
@@ -1843,7 +1844,7 @@ public class OrganicChemistryMaterials {
                 .color(0x4e8538)
                 .build();
 
-        CrudeDimethylTerephthalate = new Material.Builder(15294, SuSyUtility.susyId('crude_dimethyl_terephthalic'))
+        CrudeDimethylTerephthalate = new Material.Builder(15294, SuSyUtility.susyId('crude_dimethyl_terephthalate'))
                 .dust()
                 .components(Carbon, 10, Hydrogen, 10, Oxygen, 4)
                 .color(0x388568)
