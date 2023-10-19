@@ -1011,6 +1011,7 @@ class SuSyMaterials {
         public static Material ImpureBariumSulfide;
         public static Material ImpureStrontiumSulfide;
         public static Material DilutedAceticAcid;
+        public static Material CobaltIIAcetate;
 
         // Second Degree Materials
 
@@ -1111,6 +1112,7 @@ class SuSyMaterials {
         public static Material TrichlorosilaneSolution;
         public static Material ImpureBariumSulfideSolution;
         public static Material ImpureStrontiumSulfideSlurry;
+        public static Material PalladiumOnCarbon;
 
         // Organic Chemistry Materials
 
@@ -1404,6 +1406,15 @@ class SuSyMaterials {
         public static Material Methyldichlorosilane;
         public static Material Chlorotrimethylsilane;
         public static Material DilutedSodiumCarbonateSolution;
+        public static Material DimethylTerephthalate;
+        public static Material PolyethyleneTerephthalate;
+        public static Material AmocoTerephthalicAcid;
+        public static Material AmocoIsophthalicAcid;
+        public static Material ParaToluicAcid;
+        public static Material MethylParaToluate;
+        public static Material CrudeDimethylTerephthalate;
+        public static Material WetTerephthalicAcid;
+        public static Material WetIsophthalicAcid;
 
         // Third Degree Materials
 
@@ -1469,22 +1480,20 @@ class SuSyMaterials {
         public static Material PropyleneOxideSolution;        
         public static Material DilutedZincChlorideSolution;
         public static Material HydrogenSilsesquioxanePhotoresist;
+        public static Material CrudeTerephthalicAcidSolution;
+        public static Material CrudeIsophthalicAcidSolution;
+        public static Material HydrogenatedTerephthalicAcidSolution;
+        public static Material HydrogenatedIsophthalicAcidSolution;
+        public static Material AmocoPurificationMotherLiquor;
+        public static Material ParaToluateMixture;
+        public static Material CrudeDimethylTerephthalateSolution;
+        public static Material TerephthalateMotherLiquor;
 
         // Thermodynamics/Greenhouse Materials
 
         public static Material EarthlikeAir;
         public static Material HotHighPressureSteam;
-        /*public static Material CompressedAir;
-        public static Material ChilledAir;
-        public static Material PurifiedAir;
-        public static Material BoostedAir;
-        public static Material ColdWater;*/
         public static Material WasteGaseousNitrogen;
-        /*public static Material PurfiedWasteGaseousNitrogen;
-        public static Material ChilledBoostedAir;
-        public static Material PartiallyLiquifiedAir;
-        public static Material GaseousAirFeedstock;
-        public static Material LiquidAirFeedstock;*/
         public static Material ChillyWasteGaseousNitrogen;
         public static Material SubcooledLiquidNitrogen;
         public static Material ColdWasteGaseousNitrogen;
