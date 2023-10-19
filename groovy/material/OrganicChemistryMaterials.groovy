@@ -1811,7 +1811,8 @@ public class OrganicChemistryMaterials {
                 .build();
 
         PolyethyleneTerephthalate = new Material.Builder(15289, SuSyUtility.susyId('polyethylene_terephthalate'))
-                .dust().fluid()
+                .polymer()
+                .flags(GENERATE_FOIL)
                 .fluidTemp(533)
                 .components(Carbon, 10, Hydrogen, 6, Oxygen, 4)
                 .color(0x7e9e8e)

@@ -30,3 +30,6 @@ POLYMERIZATION.recipeBuilder()
     .EUt(Globals.voltAmps[3])
     .duration(80)
     .buildAndRegister()
+
+furnace.add(ore('foilPolyethyleneTerephthalate'), metaitem('mylar'), 0f)
+oreDict.add('foilMylar', metaitem('mylar'))

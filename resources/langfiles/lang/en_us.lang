@@ -1864,6 +1864,7 @@ metaitem.steam.pump.name=Steam Pump
 metaitem.bound_leather.name=Bound Leather
 
 metaitem.vacuum_tube_components.name=Vacuum Tube Components
+metaitem.mylar.name=Thin Mylar Sheet
 
 metaitem.circuit.gooware_processor.name=Gooware Processor
 metaitem.circuit.gooware_processor.tooltip=Reaction-Diffusion Computation/n§2ZPM-tier Circuit
