@@ -47,7 +47,7 @@ susy.material.meta_para_xylene_mixture=m/p-Xylene Mixture
 susy.material.phosgene=Phosgene
 susy.material.dichloroethane=Dichloroethane
 susy.material.isophthalic_acid=Isophthalic Acid
-susy.material.isophthalic_acid_solution=Isophthalic Acid Solution
+susy.material.isophthalic_acid_slurry=Isophthalic Acid Slurry
 susy.material.dichloroethane_isophthalic_acid_solution=Dichloroethane Isophthalic Acid Solution
 susy.material.isophthaloyl_dichloride_solution=Isophthaloyl Dichloride Solution
 susy.material.sodium_phenoxide_solution=Sodium Phenoxide Solution
@@ -605,7 +605,7 @@ susy.material.urea_solution=Urea Solution
 susy.material.diiodobenzene_solution=Diiodobenzene Solution
 susy.material.impure_four_four_oxydianiline=Impure 4,4-Oxydianiline
 susy.material.ethylene_glycol_solution=Ethylene Glycol Solution
-susy.material.terephthalic_acid_solution=Terephthalic Acid Solution
+susy.material.terephthalic_acid_slurry=Terephthalic Acid Slurry
 
 susy.material.impure_acetaldehyde=Impure Acetaldehyde
 susy.material.cativa_process_preparation=Cativa Process Preparation
@@ -1749,6 +1749,27 @@ susy.material.celestine_slurry=Celestine Slurry
 susy.material.impure_strontium_sulfide_slurry=Impure Strontium Sulfide Slurry
 susy.material.impure_strontium_sulfide=Impure Strontium Sulfide
 susy.material.diluted_sodium_carbonate_solution=Diluted Sodium Carbonate Solution
+susy.material.diluted_acetic_acid=Diluted Acetic Acid
+susy.material.cobalt_ii_acetate=Cobalt II Acetate
+susy.material.palladium_on_carbon=Palladium On Carbon
+susy.material.dimethyl_terephthalate=Dimethyl Terephthalate
+susy.material.polyethylene_terephthalate=Polyethylene Terephthalate
+susy.material.amoco_terephthalic_acid=Amoco Terephthalic Acid
+susy.material.amoco_isophthalic_acid=Amoco Isophthalic Acid
+susy.material.para_toluic_acid=p-Toluic Acid
+susy.material.methyl_para_toluate=Methyl p-Toluate
+susy.material.crude_dimethyl_terephthalate=Crude Dimethyl Terephthalate
+susy.material.crude_terephthalic_acid_solution=Crude Terephthalic Acid Solution
+susy.material.crude_isophthalic_acid_solution=Crude Isophthalic Acid Solution
+susy.material.hydrogenated_terephthalic_acid_solution=Hydrogenated Terephthalic Acid Solution
+susy.material.hydrogenated_isophthalic_acid_solution=Hydrogenated Isophthalic Acid Solution
+susy.material.amoco_purification_mother_liquor=Amoco Purification Mother Liquor
+susy.material.para_toluate_mixture=p-Toluate Mixture
+susy.material.crude_dimethyl_terephthalate_solution=Crude Dimethyl Terephthalate Solution
+susy.material.terephthalate_mother_liquor=Terephthalate Mother Liquor
+susy.material.wet_terephthalic_acid=Wet Terephthalic Acid
+susy.material.wet_isophthalic_acid=Wet Isophthalic Acid
+susy.material.methyl_para_toluate_mixture=Methyl p-Toluate Mixture
 
 # Isotopes
 
@@ -1843,6 +1864,7 @@ metaitem.steam.pump.name=Steam Pump
 metaitem.bound_leather.name=Bound Leather
 
 metaitem.vacuum_tube_components.name=Vacuum Tube Components
+metaitem.mylar.name=Thin Mylar Sheet
 
 metaitem.circuit.gooware_processor.name=Gooware Processor
 metaitem.circuit.gooware_processor.tooltip=Reaction-Diffusion Computation/n§2ZPM-tier Circuit

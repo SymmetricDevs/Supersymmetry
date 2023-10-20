@@ -619,7 +619,7 @@ public class OrganicChemistryMaterials {
         IsophthalicAcid = new Material.Builder(15100, SuSyUtility.susyId('isophthalic_acid'))
                 .dust()
                 .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
-                .color(0x349972)
+                .color(0x8ac294)
                 .build()
 
         NPropanol = new Material.Builder(15101, SuSyUtility.susyId('n_propanol'))
@@ -920,9 +920,10 @@ public class OrganicChemistryMaterials {
                 .build()
 
         TerephthalicAcid = new Material.Builder(15151, SuSyUtility.susyId('terephthalic_acid'))
-                .dust()
+                .dust().fluid()
+                .fluidTemp(473)
                 .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
-                .colorAverage()
+                .color(0xadf0ce)
                 .build()
 
         Bistrichloromethylbenzene = new Material.Builder(15152, SuSyUtility.susyId('bistrichloromethylbenzene'))
@@ -930,7 +931,8 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 6, Hydrogen, 4, Carbon, 2, Chlorine, 6)
                 .colorAverage()
                 .build()
-                .setFormula('C6H4(CCl3)2', true)
+
+        Bistrichloromethylbenzene.setFormula('C6H4(CCl3)2', true)
 
         TerephthaloylChloride = new Material.Builder(15153, SuSyUtility.susyId('terephthaloyl_chloride'))
                 .dust()
@@ -1801,6 +1803,66 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        
+        DimethylTerephthalate = new Material.Builder(15288, SuSyUtility.susyId('dimethyl_terephthalate'))
+                .dust().fluid()
+                .fluidTemp(533)
+                .components(Carbon, 10, Hydrogen, 10, Oxygen, 4)
+                .color(0x56c48c)
+                .build();
+
+        PolyethyleneTerephthalate = new Material.Builder(15289, SuSyUtility.susyId('polyethylene_terephthalate'))
+                .polymer()
+                .flags(GENERATE_FOIL)
+                .fluidTemp(533)
+                .components(Carbon, 10, Hydrogen, 6, Oxygen, 4)
+                .color(0x7e9e8e)
+                .build();
+
+        AmocoTerephthalicAcid = new Material.Builder(15290, SuSyUtility.susyId('amoco_terephthalic_acid'))
+                .dust()
+                .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
+                .color(0x66916c)
+                .build();
+
+        AmocoIsophthalicAcid = new Material.Builder(15291, SuSyUtility.susyId('amoco_isophthalic_acid'))
+                .dust()
+                .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
+                .color(0x6b9166)
+                .build();
+
+        ParaToluicAcid = new Material.Builder(15292, SuSyUtility.susyId('para_toluic_acid'))
+                .dust().fluid()
+                .fluidTemp(454)
+                .flags(NO_UNIFICATION)
+                .components(Carbon, 8, Hydrogen, 8, Oxygen, 2)
+                .color(0x83943a)
+                .build();
+
+        MethylParaToluate = new Material.Builder(15293, SuSyUtility.susyId('methyl_para_toluate'))
+                .fluid()
+                .fluidTemp(323)
+                .components(Carbon, 9, Hydrogen, 10, Oxygen, 2)
+                .color(0x4e8538)
+                .build();
+
+        CrudeDimethylTerephthalate = new Material.Builder(15294, SuSyUtility.susyId('crude_dimethyl_terephthalate'))
+                .dust()
+                .components(Carbon, 10, Hydrogen, 10, Oxygen, 4)
+                .color(0x388568)
+                .build();
+
+        WetTerephthalicAcid = new Material.Builder(15295, SuSyUtility.susyId('wet_terephthalic_acid'))
+                .dust()
+                .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
+                .color(0x669181)
+                .iconSet(DULL)
+                .build();
+
+        WetIsophthalicAcid = new Material.Builder(15296, SuSyUtility.susyId('wet_isophthalic_acid'))
+                .dust()
+                .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
+                .color(0x609169)
+                .iconSet(DULL)
+                .build();
     }
 }

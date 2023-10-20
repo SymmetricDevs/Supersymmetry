@@ -3265,5 +3265,19 @@ public class FirstDegreeMaterials{
                 .components(Strontium, 1, Oxygen, 1)
                 .colorAverage()
                 .build();
+
+        DilutedAceticAcid = new Material.Builder(8576, SuSyUtility.susyId("diluted_acetic_acid"))
+                .fluid()
+                .components(AceticAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        CobaltIIAcetate = new Material.Builder(8577, SuSyUtility.susyId("cobalt_ii_acetate"))
+                .dust()
+                .components(Cobalt, 1, Carbon, 4, Oxygen, 6, Hydrogen, 4, Water, 4)
+                .color(0xfc7e89)
+                .build();
+
+        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)   
     }
 }
