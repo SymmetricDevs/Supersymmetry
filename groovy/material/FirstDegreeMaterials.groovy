@@ -3226,13 +3226,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        Diamminedichloropalladium = new Material.Builder(8571, SuSyUtility.susyId('diamminedichloropalladium'))
-                .dust()
-                .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
-                .colorAverage()
-                .build();
-
-        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
+        // FREE ID: 8572
 
         ImpureBariumSulfide = new Material.Builder(8572, SuSyUtility.susyId("impure_barium_sulfide"))
                 .dust()
