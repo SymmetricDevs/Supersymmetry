@@ -478,10 +478,11 @@ class SuSyMaterials {
         public static Material ImpureCelestineSlurry;
         public static Material CelestineSlurry;
         public static Material BariumResidue;
-
 	public static Material OrganosiliconMixture;
 	public static Material ImpurePolydimethylsiloxaneMixture;
 	public static Material RawPolydimethylsiloxaneMixture;
+        public static Material AcidicDinitrobenzeneMixture;
+        public static Material DinitrobenzeneMixture;
 
         // Petrochem Materials
 
@@ -1117,7 +1118,7 @@ class SuSyMaterials {
         // Organic Chemistry Materials
 
         public static Material NMethylIIPyrrolidone;
-        public static Material FourNitrochlorobenzene;
+        public static Material FourChloronitrobenzene;
         public static Material FourNitroaniline;
         public static Material TwoTwoDichlorohydrazobenzene;
         public static Material ParaPhenylenediamine;
@@ -1147,8 +1148,8 @@ class SuSyMaterials {
         public static Material Isobutylene;
         public static Material SaltyNMethylIIPyrrolidone;
         public static Material MethylAcetateSolution;
-        public static Material TwoNitrochlorobenzene;
-        public static Material MixedNitrochlorobenzene;
+        public static Material TwoChloronitrobenzene;
+        public static Material MixedChloronitrobenzene;
         public static Material FourNitroanilineSolution;
         public static Material ParaPhenylenediamineSolution;
         public static Material TwoTwoDichlorohydrazobenzeneSolution;
@@ -1201,7 +1202,7 @@ class SuSyMaterials {
         public static Material Dichloromethane;
         public static Material CarbonTetrachloride;
         public static Material PolytetrafluoroethyleneSolution;
-        public static Material MixedNitrochlorobenzeneSolution;
+        public static Material AcidicChloronitrobenzeneMixture;
         public static Material MixedDichlorobenzeneSolution;
         public static Material Novolacs;
         public static Material SiliconTetrachloride;
@@ -1259,7 +1260,7 @@ class SuSyMaterials {
         public static Material Urea;
         public static Material Diiodobenzene;
         public static Material IsophthalicAcid;
-        public static Material IsophthaloylDichloride;
+        public static Material IsophthaloylChloride;
         public static Material TerephthalicAcid;
         public static Material Bistrichloromethylbenzene;
         public static Material TerephthaloylChloride;
@@ -1415,6 +1416,9 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalate;
         public static Material WetTerephthalicAcid;
         public static Material WetIsophthalicAcid;
+        public static Material OneThreeDinitrobenzene;
+        public static Material MetaPhenylenediamine;
+        public static Material Nomex;
 
         // Third Degree Materials
 
@@ -1461,14 +1465,14 @@ class SuSyMaterials {
         public static Material ZirconiumTetrachlorideTetrahydrofuranComplex;
         public static Material PotassiumButylXanthateSolution;
         public static Material TNPSolution;
-        public static Material IsophthaloylDichlorideSolution;
+        public static Material IsophthaloylChlorideSolution;
         public static Material IsophthalicAcidSlurry;
         public static Material DichloroethaneIsophthalicAcidSolution;
         public static Material TetrahydrofuranSolution;
         public static Material AcidicTriethylPhosphate;
         public static Material NickelIIBisacetylacetonateSolution;
         public static Material ShellHigherOlefinCatalystSolution;
-        public static Material CrudeNitrobenzene;
+        public static Material AcidicNitrobenzeneMixture;
         public static Material DichlorobistriphenylphosphinenickelII;
         public static Material DicarbonylbistriphenylphosphinenickelZero;
         public static Material OrthoParaXyleneMixture;
@@ -1489,6 +1493,7 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalateSolution;
         public static Material TerephthalateMotherLiquor;
         public static Material MethylParaToluateMixture;
+        public static Material NomexPolymerizationMix;
 
         // Thermodynamics/Greenhouse Materials
 

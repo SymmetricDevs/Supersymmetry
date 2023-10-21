@@ -18,7 +18,7 @@ public class OrganicChemistryMaterials {
         
         log.infoMC('Registering Organic Chemistry Materials!');
 
-        FourNitrochlorobenzene = new Material.Builder(15000, SuSyUtility.susyId('four_nitrochlorobenzene'))
+        FourChloronitrobenzene = new Material.Builder(15000, SuSyUtility.susyId('four_chloronitrobenzene'))
                 .dust()
                 .components(Carbon, 6, Hydrogen, 4, Chlorine, 1, Nitrogen, 1, Oxygen, 2)
                 .colorAverage()
@@ -48,7 +48,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        IsophthaloylDichloride = new Material.Builder(15005, SuSyUtility.susyId('isophthaloyl_dichloride'))
+        IsophthaloylChloride = new Material.Builder(15005, SuSyUtility.susyId('isophthaloyl_chloride'))
                 .dust()
                 .components(Carbon, 8, Hydrogen, 4, Chlorine, 2, Oxygen, 2)
                 .colorAverage()
@@ -254,13 +254,13 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        TwoNitrochlorobenzene = new Material.Builder(15040, SuSyUtility.susyId('two_nitrochlorobenzene'))
+        TwoChloronitrobenzene = new Material.Builder(15040, SuSyUtility.susyId('two_chloronitrobenzene'))
                 .dust().fluid()
                 .components(Carbon, 6, Hydrogen, 4, Chlorine, 1, Nitrogen, 1, Oxygen, 2)
                 .color(0xc7c944)
                 .build();
 
-        MixedNitrochlorobenzene = new Material.Builder(15041, SuSyUtility.susyId('mixed_nitrochlorobenzene'))
+        MixedChloronitrobenzene = new Material.Builder(15041, SuSyUtility.susyId('mixed_chloronitrobenzene'))
                 .dust().fluid()
                 .color(0xa4a644)
                 .build();
@@ -636,8 +636,8 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        MixedNitrochlorobenzeneSolution = new Material.Builder(15103, SuSyUtility.susyId('mixed_nitrochlorobenzene_solution'))
-                .fluid()
+        AcidicChloronitrobenzeneMixture = new Material.Builder(15103, SuSyUtility.susyId('acidic_chloronitrobenzene_mixture'))
+                .fluid(FluidTypes.ACID)
                 .color(0xc18c18)
                 .build();
 
@@ -1863,6 +1863,21 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
                 .color(0x609169)
                 .iconSet(DULL)
+                .build();
+
+        OneThreeDinitrobenzene = new Material.Builder(15297, SuSyUtility.susyId('one_three_dinitrobenzene'))
+                .dust()
+                .color(0x1c718a)
+                .build();
+
+        MetaPhenylenediamine = new Material.Builder(15298, SuSyUtility.susyId('meta_phenylenediamine'))
+                .dust()
+                .color(0x1e89a8)
+                .build();
+
+        Nomex = new Material.Builder(15299, SuSyUtility.susyId('nomex'))
+                .polymer()
+                .color(0x5d95a3)
                 .build();
     }
 }

@@ -1838,6 +1838,17 @@ public class UnknownCompositionMaterials {
         RawPolydimethylsiloxaneMixture = new Material.Builder(4350, SuSyUtility.susyId("raw_polydimethylsiloxane_mixture"))
                 .fluid()
                 .color(0xf6f7f0)
-                .build();  
+                .build();
+        
+        AcidicDinitrobenzeneMixture = new Material.Builder(4351, SuSyUtility.susyId("acidic_dinitrobenzene_mixture"))
+                .fluid(FluidTypes.ACID)
+                .fluidTemp(363)
+                .color(0x255563)
+                .build();
+
+        DinitrobenzeneMixture = new Material.Builder(4352, SuSyUtility.susyId("dinitrobenzene_mixture"))
+                .dust()
+                .color(0x1f6478)
+                .build();
     }
 }

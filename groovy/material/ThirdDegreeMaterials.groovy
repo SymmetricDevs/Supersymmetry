@@ -277,15 +277,15 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        IsophthaloylDichlorideSolution = new Material.Builder(24043, SuSyUtility.susyId('isophthaloyl_dichloride_solution'))
+        IsophthaloylChlorideSolution = new Material.Builder(24043, SuSyUtility.susyId('isophthaloyl_chloride_solution'))
                 .fluid()
-                .components(AceticAcid, 1, Water, 1, IsophthaloylDichloride, 1)
+                .components(Dichloroethane, 1, IsophthaloylChloride, 1)
                 .colorAverage()
                 .build();
 
         IsophthalicAcidSlurry = new Material.Builder(24044, SuSyUtility.susyId('isophthalic_acid_slurry'))
                 .fluid()
-                .components(AceticAcid, 1, Water, 1, IsophthalicAcid, 1)
+                .components(Water, 1, Dichloroethane, 1, IsophthalicAcid, 1)
                 .colorAverage()
                 .build()
 
@@ -319,9 +319,9 @@ public class ThirdDegreeMaterials {
                 .color(0x9c1012)
                 .build();
 
-        CrudeNitrobenzene = new Material.Builder(24050, SuSyUtility.susyId('crude_nitrobenzene'))
-                .fluid()
-                .components(Nitrobenzene, 2, Benzene, 1)
+        AcidicNitrobenzeneMixture = new Material.Builder(24050, SuSyUtility.susyId('acidic_nitrobenzene_mixture'))
+                .fluid(FluidTypes.ACID)
+                .components(Nitrobenzene, 1, SulfuricAcid, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -448,6 +448,12 @@ public class ThirdDegreeMaterials {
         MethylParaToluateMixture = new Material.Builder(24069, SuSyUtility.susyId('methyl_para_toluate_mixture'))
                 .fluid()
                 .components(MethylParaToluate, 1, DimethylTerephthalate, 1)
+                .colorAverage()
+                .build();
+
+        NomexPolymerizationMix = new Material.Builder(24070, SuSyUtility.susyId('nomex_polymerization_mix'))
+                .fluid()
+                .components(Nomex, 1, Dimethylacetamide, 4)
                 .colorAverage()
                 .build();
     }
