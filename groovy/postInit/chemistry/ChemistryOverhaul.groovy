@@ -4561,7 +4561,7 @@ DISTILLERY.recipeBuilder()
         .buildAndRegister()
 
 BR.recipeBuilder()
-        .inputs(ore('dustTriphenylPhosphine'))
+        .inputs(ore('dustTriphenylphosphine'))
         .fluidInputs(fluid('phosphorus_trichloride') * 500)
         .fluidOutputs(fluid('chlorodiphenylphosphine') * 1500)
         .duration(200)
