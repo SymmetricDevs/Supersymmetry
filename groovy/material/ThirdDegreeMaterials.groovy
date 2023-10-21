@@ -450,5 +450,11 @@ public class ThirdDegreeMaterials {
                 .components(MethylParaToluate, 1, DimethylTerephthalate, 1)
                 .colorAverage()
                 .build();
+
+        PolyethyleneVinylAcetateMixture = new Material.Builder(24070, SuSyUtility.susyId('polyethylene_vinyl_acetate_mixture'))
+                .fluid()
+                .components(PolyethyleneVinylAcetate, 1, Methanol, 1)
+                .colorAverage()
+                .build();
     }
 }

@@ -1172,7 +1172,7 @@ class SuSyMaterials {
         public static Material StyreneSolution;
         public static Material PolystyreneSolution;
         public static Material VinylAcetateSolution;
-        public static Material PolyvinylAcetateSolution;
+        public static Material PolyvinylAcetateMixture;
         public static Material Bleach;
         public static Material ImpureBleach;
         public static Material OneFourDichlorobenzeneSolution;
@@ -1415,6 +1415,7 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalate;
         public static Material WetTerephthalicAcid;
         public static Material WetIsophthalicAcid;
+        public static Material PolyethyleneVinylAcetate;
 
         // Third Degree Materials
 
@@ -1489,6 +1490,7 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalateSolution;
         public static Material TerephthalateMotherLiquor;
         public static Material MethylParaToluateMixture;
+        public static Material PolyethyleneVinylAcetateMixture;
 
         // Thermodynamics/Greenhouse Materials
 
