@@ -1164,32 +1164,6 @@ MIXER.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-// Phosphoric acid from sulfuric acid? 
-
-    // Fluoroapatite route
-
-BR.recipeBuilder()
-    .fluidInputs(fluid('sulfuric_acid') * 5000)
-    .inputs(ore('dustFluorapatite') * 21)
-    .fluidOutputs(fluid('phosphoric_acid') * 3000)
-    .fluidOutputs(fluid('hydrogen_fluoride') * 1000)
-    .outputs(metaitem('dustCalciumSulfate') * 30)
-    .duration(120)
-    .EUt(30)
-    .buildAndRegister()
-
-    // Apatite route
-
-BR.recipeBuilder()
-    .fluidInputs(fluid('sulfuric_acid') * 5000)
-    .inputs(ore('dustApatite') * 21)
-    .fluidOutputs(fluid('phosphoric_acid') * 3000)
-    .fluidOutputs(fluid('hydrogen_chloride') * 1000)
-    .outputs(metaitem('dustCalciumSulfate') * 30)
-    .duration(120)
-    .EUt(30)
-    .buildAndRegister()
-
 // Fluoroantimonic Acid
 
 LCR.recipeBuilder()
@@ -1958,7 +1932,7 @@ BR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-// Dichlorbenzene
+// Dichlorobenzene
 
 FBR.recipeBuilder()
 .fluidInputs(fluid('toluene') * 50)
@@ -2851,6 +2825,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .fluidOutputs(fluid('phosphoric_acid') * 50)
     .fluidOutputs(fluid('phenol') * 50)
     .fluidOutputs(fluid('acetone') * 50)
+    .disableDistilleryRecipes()
     .duration(10)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
