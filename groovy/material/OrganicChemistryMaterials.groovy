@@ -1865,7 +1865,7 @@ public class OrganicChemistryMaterials {
                 .iconSet(DULL)
                 .build();
 
-        PolyvinylEthyleneAcetate = new Material.Builder(15297, SuSyUtility.susyId('polyvinyl_ethylene_acetate'))
+        PolyethyleneVinylAcetate = new Material.Builder(15297, SuSyUtility.susyId('polyvinyl_ethylene_acetate'))
                 .polymer()
                 .components(Ethylene, 1, VinylAcetate, 1)
                 .color(0x686ad4)
