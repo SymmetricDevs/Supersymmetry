@@ -240,15 +240,6 @@ EBF_RECIPES.recipeBuilder()
         .EUt(60)
         .buildAndRegister()
 
-EBF_RECIPES.recipeBuilder()
-        .circuitMeta(1)
-        .inputs(ore('ingotPigIron'))
-        .outputs(item('minecraft:iron_ingot'))
-        .duration(80)
-        .blastFurnaceTemp(1200)
-        .EUt(30)
-        .buildAndRegister()
-
 //HYDROXIDE PROCESSING
 def ROASTER = recipemap('roaster')
 
