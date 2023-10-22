@@ -261,6 +261,7 @@ CRYSTALLIZER.recipeBuilder()
         .buildAndRegister()
 
 MIXER.recipeBuilder()
+        .circuitMeta(1)
         .fluidInputs(fluid('water') * 1000)
         .inputs(ore('dustSodiumBicarbonate') * 6)
         .fluidOutputs(fluid('sodium_bicarbonate_solution') * 1000)
