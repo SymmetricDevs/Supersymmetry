@@ -247,16 +247,6 @@ DT.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-// Oily Brine Processing
-
-CENTRIFUGE.recipeBuilder()
-.fluidInputs(fluid('oily_brine') * 100)
-.fluidOutputs(fluid('brine') * 100)
-.fluidOutputs(fluid('desalted_oil') * 50)
-.duration(260)
-.EUt(30)
-.buildAndRegister()
-
 fractions.each { _, fraction -> {
         FBR.recipeBuilder()
         .fluidInputs(fraction.getSulfuric(180))
@@ -1128,14 +1118,6 @@ BR.recipeBuilder()
 .fluidInputs(fluid('carbon_monoxide') * 1000)
 .fluidInputs(fluid('propene') * 1000)
 .fluidOutputs(fluid('propanal_mixture') * 1000)
-.EUt(Globals.voltAmps[3])
-.duration(80)
-.buildAndRegister()
-
-DISTILLERY.recipeBuilder()
-.fluidInputs(fluid('pentanal_mixture') * 1000)
-.outputs(metaitem('dustDicobaltOctacarbonyl') * 18)
-.fluidOutputs(fluid('propionaldehyde') * 800)
 .EUt(Globals.voltAmps[3])
 .duration(80)
 .buildAndRegister()
