@@ -313,7 +313,7 @@ MIXER.recipeBuilder()
 
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('sulfuric_acid') * 1000)
-        .inputs(ore('dustCopperCadmiumResidue') * 20)
+        .inputs(ore('dustCobaltResidue') * 20)
         .fluidOutputs(fluid('zinc_leach') * 1000)
         .outputs(metaitem('dustCobalt') * 1)
         .EUt(30)
