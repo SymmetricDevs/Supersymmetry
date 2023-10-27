@@ -49,7 +49,7 @@ mods.gregtech.assembler.recipeBuilder()
     .buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
-    .circuitMeta(8)
+    .circuitMeta(11)
     .inputs(ore('plateStainlessSteel') * 4)
     .inputs(ore('frameStainlessSteel'))
     .outputs(item('susy:susy_multiblock_casing', 1))
