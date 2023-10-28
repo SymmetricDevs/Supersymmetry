@@ -1,15 +1,11 @@
 import static globals.Globals.*
 
-import net.minecraft.potion.PotionEffect;
-
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 
 import gregtechfoodoption.utils.GTFOUtils;
-import gregtechfoodoption.potion.LacingEntry;
-import gregtechfoodoption.potion.AntiSchizoPotion;
 import static gregtechfoodoption.utils.GTFOUtils.*;
 
 // MACHINE RECIPES
@@ -520,7 +516,3 @@ mods.gregtech.lathe.removeByInput(30, [metaitem('stickSteel')], null)
 
 // Skewer * 8
 mods.gregtech.lathe.removeByInput(40, [metaitem('stickStainlessSteel')], null)
-
-LacingEntry.LACING_REGISTRY.register(2, "antischizo", new LacingEntry(metaitem("dustLithiumCarbonate"),
-        new PotionEffect(AntiSchizoPotion.INSTANCE, 1000, 0), 
-        "i24pwk5j/1/2/3/7/8/"));
