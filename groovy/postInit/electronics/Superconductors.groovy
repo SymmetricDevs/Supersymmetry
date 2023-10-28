@@ -376,6 +376,16 @@ TUBE_FURNACE.recipeBuilder()
         .EUt(1920)
         .buildAndRegister();
 
+TUBE_FURNACE.recipeBuilder()
+        .inputs(ore('dustSamarium'))
+        .inputs(ore('dustHighPurityArsenic'))
+        .inputs(ore('dustIron'))
+        .fluidInputs(fluid('oxygen') * 1000)
+        .outputs(metaitem('dustSamariumIronArsenicOxide') * 4)
+        .duration(600)
+        .EUt(1920)
+        .buildAndRegister();
+
 
 TUBE_FURNACE.recipeBuilder()
         .inputs(ore('dustManganese'))
