@@ -1505,36 +1505,14 @@ public class UnknownCompositionMaterials {
                 .color(0x85a825)
                 .build();
 
-        ImpureMolybdeniteSlurry = new Material.Builder(4287, SuSyUtility.susyId('impure_molybdenite_slurry'))
-                .fluid()
-                .color(0x131313)
-                .build();
-
-        MolybdeniteSlurry = new Material.Builder(4288, SuSyUtility.susyId('molybdenite_slurry'))
-                .fluid()
-                .color(0x191919)
-                .build();
-
-        FlotatedMolybdenite = new Material.Builder(4289, SuSyUtility.susyId('flotated_molybdenite'))
-                .dust()
-                .color(0x191919)
-                .iconSet(SHINY)
-                .build();
+        //FREE ID: 4287-4289
 
         CopperMolybdeniteSlurry = new Material.Builder(4290, SuSyUtility.susyId('copper_molybdenite_slurry'))
                 .fluid()
                 .color(0x2e2419)
                 .build();
 
-        ImpureZirconSlurry = new Material.Builder(4291, SuSyUtility.susyId('impure_zircon_slurry'))
-                .fluid()
-                .color(0xdb6960)
-                .build();
-
-        ZirconSlurry = new Material.Builder(4292, SuSyUtility.susyId('zircon_slurry'))
-                .fluid()
-                .color(0xf05c51)
-                .build();
+        //FREE ID: 4291-4292
 
         HafniumExtractionMixture = new Material.Builder(4293, SuSyUtility.susyId('hafnium_extraction_mixture'))
                 .fluid()
@@ -1556,33 +1534,7 @@ public class UnknownCompositionMaterials {
       		.color(0x8a819c)
       		.build();
 
-        SiftedPyrochlore = new Material.Builder(4297, SuSyUtility.susyId('sifted_pyrochlore'))
-                .dust()
-                .color(0x2b1100)
-                .iconSet(SAND)
-                .build();
-
-        PyrochloreConcentrate = new Material.Builder(4298, SuSyUtility.susyId('pyrochlore_concentrate'))
-                .dust()
-                .color(0x2b1100)
-                .iconSet(DULL)
-                .build();
-
-        ImpurePyrochloreSlurry = new Material.Builder(4299, SuSyUtility.susyId('impure_pyrochlore_slurry'))
-                .fluid()
-                .color(0x230300)
-                .build();
-
-        PyrochloreSlurry = new Material.Builder(4300, SuSyUtility.susyId('pyrochlore_slurry'))
-                .fluid()
-                .color(0x2b1100)
-                .build();
-
-        FlotatedPyrochlore = new Material.Builder(4301, SuSyUtility.susyId('flotated_pyrochlore'))
-                .dust()
-                .color(0x2b1100)
-                .iconSet(SHINY)
-                .build();
+        //FREE ID: 4297-4301
 
         RoastedPyrochlore = new Material.Builder(4302, SuSyUtility.susyId('roasted_pyrochlore'))
                 .dust()
@@ -1601,33 +1553,7 @@ public class UnknownCompositionMaterials {
                 .color(0xb0c8b8)
                 .build();
 
-        SiftedColumbite = new Material.Builder(4305, SuSyUtility.susyId('sifted_columbite'))
-                .dust()
-                .color(0x574f2f)
-                .iconSet(SAND)
-                .build();
-
-        ColumbiteConcentrate = new Material.Builder(4306, SuSyUtility.susyId('columbite_concentrate'))
-                .dust()
-                .color(0x574f2f)
-                .iconSet(DULL)
-                .build();
-
-        ImpureColumbiteSlurry = new Material.Builder(4307, SuSyUtility.susyId('impure_columbite_slurry'))
-                .fluid()
-                .color(0x3d3720)
-                .build();
-
-        ColumbiteSlurry = new Material.Builder(4308, SuSyUtility.susyId('columbite_slurry'))
-                .fluid()
-                .color(0x574f2f)
-                .build();
-
-        FlotatedColumbite = new Material.Builder(4309, SuSyUtility.susyId('flotated_columbite'))
-                .dust()
-                .color(0x574f2f)
-                .iconSet(SHINY)
-                .build();
+        //FREE ID: 4305-4309
 
         ImpureFluoroniobicAcidSolution = new Material.Builder(4310, SuSyUtility.susyId('impure_fluoroniobic_acid_solution'))
                 .fluid()
@@ -1664,33 +1590,7 @@ public class UnknownCompositionMaterials {
                 .color(0xa46edb)
                 .build();
 
-        SiftedTantalite = new Material.Builder(4317, SuSyUtility.susyId('sifted_tantalite'))
-                .dust()
-                .color(0x915028)
-                .iconSet(SAND)
-                .build();
-
-        TantaliteConcentrate = new Material.Builder(4318, SuSyUtility.susyId('tantalite_concentrate'))
-                .dust()
-                .color(0x915028)
-                .iconSet(DULL)
-                .build();
-
-        ImpureTantaliteSlurry = new Material.Builder(4319, SuSyUtility.susyId('impure_tantalite_slurry'))
-                .fluid()
-                .color(0x915028)
-                .build();
-
-        TantaliteSlurry = new Material.Builder(4320, SuSyUtility.susyId('tantalite_slurry'))
-                .fluid()
-                .color(0x915028)
-                .build();
-
-        FlotatedTantalite = new Material.Builder(4321, SuSyUtility.susyId('flotated_tantalite'))
-                .dust()
-                .color(0x915028)
-                .iconSet(SHINY)
-                .build();
+        //FREE ID: 4317-4321
 
         ImpureFluorotantalicAcidSolution = new Material.Builder(4322, SuSyUtility.susyId('impure_fluorotantalic_acid_solution'))
                 .fluid()

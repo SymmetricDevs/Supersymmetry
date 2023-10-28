@@ -352,7 +352,7 @@ class SuSyMaterials {
         public static Material DirtyMolecularSieve;
         public static Material OligomericBisphenolSolution;
         public static Material GraniteTailingSlurry;
-        public static Material SphaleriteByproductsSlurry;
+        public static Material SphaleriteByproductSlurry;
         public static Material PegmatiteTailingSlurry;
         public static Material FilteredPhosphateSlurry;
         public static Material PhosphateConcentrateSlurry;
