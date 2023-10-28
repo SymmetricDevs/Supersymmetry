@@ -67,6 +67,7 @@ BR.recipeBuilder() //Potassium permangante is typically added to oxidize iron II
 
 BR.recipeBuilder() //75%
         .inputs(ore('dustSodiumHydroxide') * 18)
+        .circuitMeta(1)
         .fluidInputs(fluid('beryllium_sulfate_solution') * 1000)
         .outputs(metaitem('dustBerylliumHydroxide') * 9)
         .fluidOutputs(fluid('sodium_sulfate_solution') * 8000)
@@ -171,6 +172,7 @@ FLUID_SOLIDIFIER.recipeBuilder()
 
 BR.recipeBuilder()
         .inputs(ore('dustAluminiumChloride') * 4)
+        .circuitMeta(1)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
         .outputs(metaitem('dustAluminiumHydroxide') * 7)
         .fluidOutputs(fluid('salt_water') * 3000)
