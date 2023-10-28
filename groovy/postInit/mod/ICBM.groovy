@@ -164,8 +164,9 @@ for (poison in poisons) {
             .duration(20)
             .EUt(16)
             .buildAndRegister();
+}
 
-    recipemap('weapons_factory').recipeBuilder()
+recipemap('weapons_factory').recipeBuilder()
             .inputs([
                     item('icbmclassic:explosives:0'),
                     ore('dustPicricAcid') * 7,
@@ -176,7 +177,6 @@ for (poison in poisons) {
             .duration(20)
             .EUt(16)
             .buildAndRegister();
-}
 
 //Explosives tier 2
 recipemap('weapons_factory').recipeBuilder()
@@ -248,52 +248,54 @@ def cryoLiquids = [
         'liquid_natural_gas': 80
 ];
 
-cryoLiquids.each { liquid, temp ->
-        if(HV_SC_CriticalTemp > temp) {
-                //EMP
+Globals.solders.each { key, val ->
+        cryoLiquids.each { liquid, temp ->
+                if(HV_SC_CriticalTemp > temp) {
+                        //EMP
+                        recipemap('weapons_factory').recipeBuilder()
+                                .inputs([
+                                        ore('plateStainlessSteel')*4,
+                                        metaitem('wireGtSingleMercuryBariumCalciumCuprate')*8,
+                                        metaitem('fluid_cell')*2
+                                ])
+                                .fluidInputs(fluid(key) * val)
+                                .fluidInputs(fluid(liquid) * 2)
+                                .outputs(item('icbmclassic:explosives:16'))
+                                .duration(200)
+                                .EUt(300)
+                                .buildAndRegister();
+                }
+
+                //Endothermic
                 recipemap('weapons_factory').recipeBuilder()
                         .inputs([
-                                ore('plateStainlessSteel')*4,
-                                metaitem('wireGtSingleMercuryBariumCalciumCuprate')*8,
-                                metaitem('fluid_cell')*2
+                                metaitem('fluid_cell')*8,
+                                item('icbmclassic:explosives:6')*8,
+                                ore('plateStainlessSteel')*4
                         ])
-                        .fluidInputs(fluid('soldering_alloy') * 72)
-                        .fluidInputs(fluid(liquid) * 2)
-                        .outputs(item('icbmclassic:explosives:16'))
-                        .duration(200)
+                        .fluidInputs(fluid(key) * val)
+                        .fluidInputs(fluid(liquid) * 32)
+                        .outputs(item('icbmclassic:explosives:18'))
+                        .duration(60)
                         .EUt(300)
                         .buildAndRegister();
         }
 
-        //Endothermic
-        recipemap('weapons_factory').recipeBuilder()
-                .inputs([
-                        metaitem('fluid_cell')*8,
-                        item('icbmclassic:explosives:6')*8,
-                        ore('plateStainlessSteel')*4
-                ])
-                .fluidInputs(fluid('soldering_alloy') * 72)
-                .fluidInputs(fluid(liquid) * 32)
-                .outputs(item('icbmclassic:explosives:18'))
-                .duration(60)
-                .EUt(300)
-                .buildAndRegister();
-}
-
-for (fuel in thermobaric_fuels) {
-        recipemap('large_weapons_factory').recipeBuilder()
-                .inputs([
-                        metaitem('fluid_cell')*8,
-                        item('icbmclassic:explosives:6')*8,
-                        ore('plateStainlessSteel')*4
-                ])
-                .fluidInputs(fluid('soldering_alloy') * 72)
-                .fluidInputs(fuel)
-                .outputs(item('icbmclassic:explosives:17'))
-                .duration(60)
-                .EUt(300)
-                .buildAndRegister();
-}
+        for (fuel in thermobaric_fuels) {
+                recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                metaitem('fluid_cell')*8,
+                                item('icbmclassic:explosives:6')*8,
+                                ore('plateStainlessSteel')*4
+                        ])
+                        .fluidInputs(fluid(key) * val)
+                        .fluidInputs(fuel)
+                        .outputs(item('icbmclassic:explosives:17'))
+                        .duration(60)
+                        .EUt(300)
+                        .buildAndRegister();
+        }
+}        
 
 //Launchers
 mods.gregtech.assembler.recipeBuilder()
@@ -443,118 +445,121 @@ def hypergolicoxys = [
         liquid('nitric_acid')
 ]
 
-for (s_fuel in solidfuels) {
-        for (s_oxy in solidoxys) {
-                for (var i = 0; i < 8; i++) {
-                        recipemap('large_weapons_factory').recipeBuilder()
-                                .inputs([ore('stickAluminium')*4,
-                                                ore('ringAluminium')*2,
-                                                ore('plateAluminium')*2,
-                                                ore('foilAluminium')*16,
-                                                s_oxy*16,
-                                                s_fuel*16,
-                                                item('icbmclassic:explosives:' + i)
+Globals.solders.each { key, val ->
+        for (s_fuel in solidfuels) {
+                for (s_oxy in solidoxys) {
+                        for (var i = 0; i < 8; i++) {
+                                recipemap('large_weapons_factory').recipeBuilder()
+                                        .inputs([ore('stickAluminium')*4,
+                                                        ore('ringAluminium')*2,
+                                                        ore('plateAluminium')*2,
+                                                        ore('foilAluminium')*16,
+                                                        s_oxy*16,
+                                                        s_fuel*16,
+                                                        item('icbmclassic:explosives:' + i)
+                                        ])
+                                        .fluidInputs(fluid(key) * val)
+                                        .outputs(item('icbmclassic:missile:' + i))
+                                        .duration(200)
+                                        .EUt(30)
+                                        .buildAndRegister();
+                        }
+
+                        recipemap('weapons_factory').recipeBuilder()
+                                .inputs([
+                                        ore('plateStainlessSteel') * 2,
+                                        s_oxy,
+                                        s_fuel,
+                                        ore('wireFineRedAlloy')
                                 ])
-                                .fluidInputs(fluid('soldering_alloy') * 72)
-                                .outputs(item('icbmclassic:missile:' + i))
-                                .duration(200)
-                                .EUt(30)
+                                .circuitMeta(1)
+                                .fluidInputs(fluid(key) * val)
+                                .outputs(item('openmodularturrets:ammo_meta:4')*8)
+                                .duration(20)
+                                .EUt(200)
+                                .buildAndRegister();
+
+                        recipemap('weapons_factory').recipeBuilder()
+                                .inputs([
+                                        ore('plateStainlessSteel') * 2,
+                                        s_oxy,
+                                        s_fuel,
+                                        ore('wireFineRedAlloy')
+                                ])
+                                .circuitMeta(2)
+                                .fluidInputs(fluid(key) * val)
+                                .outputs(item('techguns:itemshared', 7)*8)
+                                .duration(20)
+                                .EUt(200)
+                                .buildAndRegister();
+
+                        recipemap('weapons_factory').recipeBuilder()
+                                .inputs([
+                                        ore('plateStainlessSteel') * 2,
+                                        s_oxy * 2,
+                                        s_fuel * 2,
+                                        ore('wireFineRedAlloy')
+                                ])
+                                .circuitMeta(3)
+                                .fluidInputs(fluid(key) * val)
+                                .outputs(item('techguns:itemshared', 145)*8)
+                                .duration(20)
+                                .EUt(200)
+                                .buildAndRegister();
+
+                        recipemap('weapons_factory').recipeBuilder()
+                                .inputs([
+                                        ore('plateStainlessSteel') * 2,
+                                        s_oxy,
+                                        s_fuel,
+                                        ore('wireFineRedAlloy')
+                                ])
+                                .circuitMeta(4)
+                                .fluidInputs(fluid(key) * val)
+                                .outputs(item('minecraft:fireworks') * 16)
+                                .duration(20)
+                                .EUt(200)
                                 .buildAndRegister();
                 }
 
-                recipemap('weapons_factory').recipeBuilder()
-                        .inputs([
-                                ore('plateStainlessSteel') * 2,
-                                s_oxy,
-                                s_fuel,
-                                ore('wireFineRedAlloy')
-                        ])
-                        .circuitMeta(1)
-                        .fluidInputs(fluid('soldering_alloy') * 72)
-                        .outputs(item('openmodularturrets:ammo_meta:4')*8)
-                        .duration(20)
-                        .EUt(200)
-                        .buildAndRegister();
-
-                recipemap('weapons_factory').recipeBuilder()
-                        .inputs([
-                                ore('plateStainlessSteel') * 2,
-                                s_oxy,
-                                s_fuel,
-                                ore('wireFineRedAlloy')
-                        ])
-                        .circuitMeta(2)
-                        .fluidInputs(fluid('soldering_alloy') * 72)
-                        .outputs(item('techguns:itemshared', 7)*8)
-                        .duration(20)
-                        .EUt(200)
-                        .buildAndRegister();
-
-                recipemap('weapons_factory').recipeBuilder()
-                        .inputs([
-                                ore('plateStainlessSteel') * 2,
-                                s_oxy * 2,
-                                s_fuel * 2,
-                                ore('wireFineRedAlloy')
-                        ])
-                        .circuitMeta(3)
-                        .fluidInputs(fluid('soldering_alloy') * 72)
-                        .outputs(item('techguns:itemshared', 145)*8)
-                        .duration(20)
-                        .EUt(200)
-                        .buildAndRegister();
-
-                recipemap('weapons_factory').recipeBuilder()
-                        .inputs([
-                                ore('plateStainlessSteel') * 2,
-                                s_oxy,
-                                s_fuel,
-                                ore('wireFineRedAlloy')
-                        ])
-                        .circuitMeta(4)
-                        .fluidInputs(fluid('soldering_alloy') * 72)
-                        .outputs(item('minecraft:fireworks') * 16)
-                        .duration(20)
-                        .EUt(200)
-                        .buildAndRegister();
-}
-
-for (l_oxy in liquidoxys) {
-        for (var j = 8; j < 14; j++) {
-        recipemap('large_weapons_factory').recipeBuilder()
-                .inputs([ore('stickStainlessSteel')*4,
-                                ore('ringStainlessSteel')*2,
-                                ore('plateStainlessSteel')*2,
-                                ore('foilStainlessSteel')*16,
-                                s_fuel*16,
-                                item('icbmclassic:explosives:' + j)
-                ])
-                .fluidInputs(fluid('soldering_alloy') * 72)
-                .fluidInputs(l_oxy*2000)
-                .outputs(item('icbmclassic:missile:' + j))
-                .duration(200)
-                .EUt(120)
-                .buildAndRegister();
+                for (l_oxy in liquidoxys) {
+                        for (var j = 8; j < 14; j++) {
+                        recipemap('large_weapons_factory').recipeBuilder()
+                                .inputs([ore('stickStainlessSteel')*4,
+                                                ore('ringStainlessSteel')*2,
+                                                ore('plateStainlessSteel')*2,
+                                                ore('foilStainlessSteel')*16,
+                                                s_fuel*16,
+                                                item('icbmclassic:explosives:' + j)
+                                ])
+                                .fluidInputs(fluid(key) * val)
+                                .fluidInputs(l_oxy*2000)
+                                .outputs(item('icbmclassic:missile:' + j))
+                                .duration(200)
+                                .EUt(120)
+                                .buildAndRegister();
+                        }
+                }
         }
-}
-}
-for (h_fuel in hypergolicfuels) {
-        for (h_oxy_1 in hypergolicoxys) {
-                for (var k = 15; k < 24; k++) {
-                recipemap('large_weapons_factory').recipeBuilder()
-                        .inputs([ore('stickTitanium')*4,
-                                        ore('ringTitanium')*2,
-                                        ore('plateTitanium')*2,
-                                        ore('foilTitanium')*16,
-                                        item('icbmclassic:explosives:' + k)
-                        ])
-                        .fluidInputs(fluid('soldering_alloy') * 72)
-                        .fluidInputs(h_oxy_1*4000)
-                        .fluidInputs(h_fuel*2000)
-                        .outputs(item('icbmclassic:missile:' + k))
-                        .duration(200)
-                        .EUt(500)
-                        .buildAndRegister();
+
+        for (h_fuel in hypergolicfuels) {
+                for (h_oxy_1 in hypergolicoxys) {
+                        for (var k = 15; k < 24; k++) {
+                                recipemap('large_weapons_factory').recipeBuilder()
+                                        .inputs([ore('stickTitanium')*4,
+                                                        ore('ringTitanium')*2,
+                                                        ore('plateTitanium')*2,
+                                                        ore('foilTitanium')*16,
+                                                        item('icbmclassic:explosives:' + k)
+                                        ])
+                                        .fluidInputs(fluid(key) * val)
+                                        .fluidInputs(h_oxy_1*4000)
+                                        .fluidInputs(h_fuel*2000)
+                                        .outputs(item('icbmclassic:missile:' + k))
+                                        .duration(200)
+                                        .EUt(500)
+                                        .buildAndRegister();
+                        }
                 }
         }
 }

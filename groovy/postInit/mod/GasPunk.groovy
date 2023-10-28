@@ -45,29 +45,31 @@ for (item in name_removals) {
     crafting.remove(item);
 }
 
-recipemap('weapons_factory').recipeBuilder()
-        .inputs([
-                ore('ringRubber')*4,
-                ore('platePlastic'),
-                ore('plateSteel')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('gaspunk:diffuser'))
-        .duration(200)
-        .EUt(60)
-        .buildAndRegister();
+Globals.solders.each { key, val ->
+        recipemap('weapons_factory').recipeBuilder()
+                .inputs([
+                        ore('ringRubber')*4,
+                        ore('platePlastic'),
+                        ore('plateSteel')
+                ])
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('gaspunk:diffuser'))
+                .duration(200)
+                .EUt(60)
+                .buildAndRegister();
 
-recipemap('weapons_factory').recipeBuilder()
-        .inputs([
-                ore('ringRubber')*4,
-                metaitem('component.glass.tube'),
-                ore('plateSteel')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('gp_inhaler:empty_inhaler'))
-        .duration(200)
-        .EUt(60)
-        .buildAndRegister();
+        recipemap('weapons_factory').recipeBuilder()
+                .inputs([
+                        ore('ringRubber')*4,
+                        metaitem('component.glass.tube'),
+                        ore('plateSteel')
+                ])
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('gp_inhaler:empty_inhaler'))
+                .duration(200)
+                .EUt(60)
+                .buildAndRegister();
+}
 
 recipemap('assembler').recipeBuilder()
         .inputs([

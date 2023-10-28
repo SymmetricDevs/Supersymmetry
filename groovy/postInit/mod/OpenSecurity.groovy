@@ -133,17 +133,6 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('hull.hv'))
-		.inputs(ore('oc:cpu2'))
-		.inputs(ore('oc:ram2'))
-		.inputs(metaitem('sensor.hv'))
-		.fluidInputs(solder)
-		.outputs(item('opensecurity:biometric_reader'))
-		.duration(400)
-		.EUt(120)
-		.buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
 		.inputs(ore('oc:cpu1'))
 		.inputs(ore('plateSteel') * 5)
 		.inputs(ore('blockConcrete'))

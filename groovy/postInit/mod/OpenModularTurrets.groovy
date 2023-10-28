@@ -51,7 +51,6 @@ for (item in name_removals) {
 }
 
 for (solder in soldering_alloys) {
-
     recipemap('weapons_factory').recipeBuilder()
             .inputs([
                     ore('plateSteel')*4,
@@ -291,9 +290,7 @@ for (solder in soldering_alloys) {
 }
 
 recipemap('mixer').recipeBuilder()
-        .inputs([
-                ore('dustClay')
-        ])
+        .inputs(ore('dustClay'))
         .fluidInputs(liquid('gasoline')*1000)
         .outputs(item('openmodularturrets:ammo_meta:0')*32)
         .duration(20)
