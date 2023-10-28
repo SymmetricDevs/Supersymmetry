@@ -1301,11 +1301,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        LithiumCarbonate = new Material.Builder(8286, SuSyUtility.susyId('lithium_carbonate'))
-                .dust()
-                .components(Lithium, 2, Carbon, 1, Oxygen, 3)
-                .colorAverage()
-                .build();
+        // FREE ID: 8286
 
         LithiumCobaltOxide = new Material.Builder(8287, SuSyUtility.susyId('lithium_cobalt_oxide'))
                 .dust()
