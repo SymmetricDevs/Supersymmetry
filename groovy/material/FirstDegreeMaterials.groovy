@@ -644,7 +644,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         TetrafluoroboricAcid = new Material.Builder(8182, SuSyUtility.susyId('tetrafluoroboric_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Water, 3, Hydrogen, 1, Boron, 1, Fluorine, 4)
                 .color(0xa4ab91)
                 .build();
@@ -732,7 +732,7 @@ public class FirstDegreeMaterials{
                 .setFormula("(H2O)3(Ni,Co)Cl2", true)
 
         AcidicCopperSolution = new Material.Builder(8194, SuSyUtility.susyId('acidic_copper_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Water, 4, Copper, 2, Sulfur, 2, Oxygen, 8, NitricAcid, 2)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
@@ -777,28 +777,30 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build()
 
-        TriphenylPhosphine = new Material.Builder(8201, SuSyUtility.susyId('triphenyl_phosphine'))
+        Diamminedichloropalladium = new Material.Builder(8201, SuSyUtility.susyId('diamminedichloropalladium'))
                 .dust()
-                .components(Carbon, 18, Hydrogen, 15, Phosphorus, 1)
+                .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
                 .colorAverage()
-                .build()
+                .build();
 
-        TriphenylPhosphineDichloride = new Material.Builder(8202, SuSyUtility.susyId('triphenyl_phosphine_dichloride'))
-                .dust()
-                .components(Carbon, 18, Hydrogen, 15, Chlorine, 2, Phosphorus, 1)
-                .colorAverage()
-                .build()
+        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
 
-        BistriphenylphosphineiminiumChloride = new Material.Builder(8203, SuSyUtility.susyId('bistriphenylphosphineiminium_chloride'))
+        DecarburizedAir = new Material.Builder(8202, SuSyUtility.susyId('decarburized_air'))
+                .fluid(FluidTypes.GAS)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
+                .color(0x90bbe0)
+                .build();
+      
+        ZincOxide = new Material.Builder(8203, SuSyUtility.susyId("zinc_oxide"))
                 .dust()
-                .components(Carbon, 36, Hydrogen, 30, Chlorine, 1, Nitrogen, 1, Phosphorus, 2)
-                .colorAverage()
-                .build()
+                .components(Zinc, 1, Oxygen, 1)
+                .color(0xFFFFF5)
+                .build();
 
-        TriphenylphosphineOxide = new Material.Builder(8204, SuSyUtility.susyId('triphenylphosphine_oxide'))
+        HydrogenSilsesquioxane = new Material.Builder(8204, SuSyUtility.susyId('hydrogen_silsesquioxane'))
                 .dust()
-                .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
-                .colorAverage()
+                .color(0xC7C0CB)
+                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
                 .build()
 
         SodiumDichromate = new Material.Builder(8205, SuSyUtility.susyId('sodium_dichromate'))
@@ -889,7 +891,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         VeryDilutedSulfuricAcid = new Material.Builder(8219, SuSyUtility.susyId('very_diluted_sulfuric_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Water, 2, SulfuricAcid, 1)
                 .color(0x54362c)
                 .build()
@@ -1016,7 +1018,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         HydrobromicAcid = new Material.Builder(8241, SuSyUtility.susyId('hydrobromic_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Hydrogen, 1, Bromine, 1, Water, 1)
                 .colorAverage()
                 .build()
@@ -1025,7 +1027,7 @@ public class FirstDegreeMaterials{
 
         AluminiumChloride = new Material.Builder(8242, SuSyUtility.susyId('aluminium_chloride'))
                 .dust().fluid(FluidTypes.GAS)
-                .flags(NO_UNIFICATION, GENERATE_CATALYST_BED)
+                .flags(GENERATE_CATALYST_BED)
                 .fluidTemp(460)
                 .components(Aluminium, 1, Chlorine, 3)
                 .colorAverage()
@@ -1121,7 +1123,7 @@ public class FirstDegreeMaterials{
                 .setFormula("(Na3[Ag(S2O3)2])3(Na3AsS3)(H2O)5", true)
 
         AcidicArsenateVSolution = new Material.Builder(8257, SuSyUtility.susyId('acidic_arsenate_v_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(NitricAcid, 6, Hydrogen, 9, Arsenic, 3, Oxygen, 12)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
@@ -1858,10 +1860,10 @@ public class FirstDegreeMaterials{
                 .iconSet(SHINY)
                 .build();
                 
-        BariumSulfide = new Material.Builder(8371, SuSyUtility.susyId('barium_sulfide'))
-                .dust()
-                .components(Barium, 1, Sulfur, 1)
-                .colorAverage()
+        DecarburizedAir = new Material.Builder(8371, SuSyUtility.susyId('decarburized_air'))
+                .fluid(FluidTypes.GAS)
+                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
+                .color(0x90bbe0)
                 .build();
 
         BariumChloride = new Material.Builder(8372, SuSyUtility.susyId('barium_chloride'))
@@ -2308,7 +2310,7 @@ public class FirstDegreeMaterials{
                 .build();
       
         DilutedPhosphoricAcid = new Material.Builder(8437, SuSyUtility.susyId('diluted_phosphoric_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(PhosphoricAcid, 3, Water, 1)
                 .colorAverage()
                 .build()
@@ -2364,7 +2366,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         HotSulfuricAcid = new Material.Builder(8445, SuSyUtility.susyId('hot_sulfuric_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .fluidTemp(353)
                 .components(Hydrogen, 2, Sulfur, 1, Oxygen, 4)
                 .color(0xff570f)
@@ -3137,7 +3139,7 @@ public class FirstDegreeMaterials{
         NiobiumOxideDihydrate.setFormula("Nb2O5 * (H2O)2", true)
                 
         PurifiedFluoroniobicAcidSolution = new Material.Builder(8556, SuSyUtility.susyId('purified_fluoroniobic_acid_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Hydrogen, 6, Niobium, 3, Fluorine, 9, Water, 6)
                 .colorAverage()
                 .build();
@@ -3151,7 +3153,7 @@ public class FirstDegreeMaterials{
                 .build();
                 
         FluorotantalicAcidSolution = new Material.Builder(8558, SuSyUtility.susyId('fluorotantalic_acid_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Hydrogen, 2, Tantalum, 1, Fluorine, 7, Water, 1)
                 .colorAverage()
                 .build();
@@ -3214,17 +3216,65 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        AcidWashedSiliconDioxide = new Material.Builder(8570, SuSyUtility.susyId('acid_washed_silicon_dioxide'))
-                .dust()
-                .components(SiliconDioxide, 1)
-                .color(0xc8c8c8)
-                .iconSet(SHINY)
+        Ferroplatinum = new Material.Builder(8570, SuSyUtility.susyId('ferroplatinum'))
+                .dust().ingot()
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Platinum, 3, Iron, 1)
+                .colorAverage()
                 .build();
 
-        DisulfurDichloride = new Material.Builder(8571, SuSyUtility.susyId('disulfur_dichloride'))
-                .fluid()
-                .components(Sulfur, 2, Chlorine, 2)
-                .color(0xccc31d)
+        Diamminedichloropalladium = new Material.Builder(8571, SuSyUtility.susyId('diamminedichloropalladium'))
+                .dust()
+                .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
+                .colorAverage()
                 .build();
+
+        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
+
+        ImpureBariumSulfide = new Material.Builder(8572, SuSyUtility.susyId("impure_barium_sulfide"))
+                .dust()
+                .components(Barium, 1, Sulfur, 1)
+                .iconSet(DULL)
+                .colorAverage()
+                .build();
+
+        ImpureBariumSulfide.setFormula("(?)(BaS)", true)
+
+        ImpureStrontiumSulfide = new Material.Builder(8573, SuSyUtility.susyId("impure_strontium_sulfide"))
+                .dust()
+                .components(Strontium, 1, Sulfur, 1)
+                .iconSet(DULL)
+                .colorAverage()
+                .build();
+
+        ImpureStrontiumSulfide.setFormula("(?)(SrS)", true)
+
+        StrontiumSulfideSolution = new Material.Builder(8574, SuSyUtility.susyId("strontium_sulfide_solution"))
+                .fluid()
+                .components(Strontium, 1, Sulfur, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        StrontiumSulfideSolution.setFormula("(SrS)(H2O)", true)
+      
+        StrontiumOxide = new Material.Builder(8575, SuSyUtility.susyId("strontium_oxide"))
+                .dust()
+                .components(Strontium, 1, Oxygen, 1)
+                .colorAverage()
+                .build();
+
+        DilutedAceticAcid = new Material.Builder(8576, SuSyUtility.susyId("diluted_acetic_acid"))
+                .fluid()
+                .components(AceticAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        CobaltIIAcetate = new Material.Builder(8577, SuSyUtility.susyId("cobalt_ii_acetate"))
+                .dust()
+                .components(Cobalt, 1, Carbon, 4, Oxygen, 6, Hydrogen, 4, Water, 4)
+                .color(0xfc7e89)
+                .build();
+
+        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)   
     }
 }

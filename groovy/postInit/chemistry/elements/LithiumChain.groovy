@@ -216,15 +216,6 @@ BR.recipeBuilder()
         .EUt(200)
         .buildAndRegister()
 
-BR.recipeBuilder()
-        .inputs(ore('dustAluminiumChloride') * 3)
-        .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
-        .outputs(metaitem('dustAluminiumHydroxide') * 7)
-        .fluidOutputs(fluid('salt_water') * 3000)
-        .duration(120)
-        .EUt(200)
-        .buildAndRegister()
-
 for (fuel in sintering_fuels) {
     if (!fuel.isPlasma) {
         for (comburent in sintering_comburents) {

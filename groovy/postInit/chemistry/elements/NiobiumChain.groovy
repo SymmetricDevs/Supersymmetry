@@ -76,7 +76,7 @@ ROASTER.recipeBuilder() // Roasted Pyrochlore
 CHEMICAL_BATH.recipeBuilder() // Digested Pyrochlore
     .inputs(ore('dustRoastedPyrochlore') * 16)
     .fluidInputs(fluid('hot_sulfuric_acid') * 1000)
-    .outputs(metaitem('dustDigestedPyrochlore'))
+    .outputs(metaitem('dustDigestedPyrochlore') * 16)
     .fluidOutputs(fluid('sulfuric_acid') * 1000)
     .duration(20)
     .EUt(Globals.voltAmps[1])

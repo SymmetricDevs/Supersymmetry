@@ -114,7 +114,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        TerephthalicAcidSolution = new Material.Builder(24016, SuSyUtility.susyId('terephthalic_acid_solution'))
+        TerephthalicAcidSlurry = new Material.Builder(24016, SuSyUtility.susyId('terephthalic_acid_slurry'))
                 .fluid()
                 .components(AceticAcid, 1, Water, 1, TerephthalicAcid, 1)
                 .colorAverage()
@@ -283,7 +283,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        IsophthalicAcidSolution = new Material.Builder(24044, SuSyUtility.susyId('isophthalic_acid_solution'))
+        IsophthalicAcidSlurry = new Material.Builder(24044, SuSyUtility.susyId('isophthalic_acid_slurry'))
                 .fluid()
                 .components(AceticAcid, 1, Water, 1, IsophthalicAcid, 1)
                 .colorAverage()
@@ -327,7 +327,7 @@ public class ThirdDegreeMaterials {
 
         DichlorobistriphenylphosphinenickelII = new Material.Builder(24051, SuSyUtility.susyId('dichlorobistriphenylphosphinenickel_ii'))
                 .dust()
-                .components(Nickel, 1, Chlorine, 2, TriphenylPhosphine, 2)
+                .components(Nickel, 1, Chlorine, 2, Triphenylphosphine, 2)
                 .colorAverage()
                 .build();
 
@@ -335,7 +335,7 @@ public class ThirdDegreeMaterials {
 
         DicarbonylbistriphenylphosphinenickelZero = new Material.Builder(24052, SuSyUtility.susyId('dicarbonylbistriphenylphosphinenickel_zero'))
                 .dust()
-                .components(Nickel, 1, Carbon, 2, Oxygen, 2, TriphenylPhosphine, 2)
+                .components(Nickel, 1, Carbon, 2, Oxygen, 2, Triphenylphosphine, 2)
                 .colorAverage()
                 .build();
 
@@ -349,6 +349,7 @@ public class ThirdDegreeMaterials {
 
         WetEpoxy = new Material.Builder(24054, SuSyUtility.susyId('wet_epoxy'))
                 .dust()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Epoxy, 1)
                 .color(0xa16f0d)
                 .build();
@@ -367,6 +368,7 @@ public class ThirdDegreeMaterials {
 
         WetFlameRetardantEpoxy = new Material.Builder(24057, SuSyUtility.susyId('wet_flame_retardant_epoxy'))
                 .dust()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(FlameRetardantEpoxy, 1)
                 .color(0xa1530b)
                 .build();
@@ -383,9 +385,69 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        HydrogenSilsesquioxanePhotoresist = new Material.Builder(24060, SuSyUtility.susyId("hydrogen_silsesquioxane_photoresist"))
+        HydrogenSilsesquioxanePhotoresist = new Material.Builder(24060, SuSyUtility.susyId('hydrogen_silsesquioxane_photoresist'))
                 .fluid()
                 .components(HydrogenSilsesquioxane, 1, MethylIsobutylKetone, 99)
+                .colorAverage()
+                .build();
+
+        CrudeTerephthalicAcidSolution = new Material.Builder(24061, SuSyUtility.susyId('crude_terephthalic_acid_solution'))
+                .fluid()
+                .fluidTemp(533)
+                .components(AmocoTerephthalicAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        CrudeIsophthalicAcidSolution = new Material.Builder(24062, SuSyUtility.susyId('crude_isophthalic_acid_solution'))
+                .fluid()
+                .fluidTemp(533)
+                .components(AmocoIsophthalicAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        HydrogenatedTerephthalicAcidSolution = new Material.Builder(24063, SuSyUtility.susyId('hydrogenated_terephthalic_acid_solution'))
+                .fluid()
+                .fluidTemp(533)
+                .components(TerephthalicAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        HydrogenatedIsophthalicAcidSolution = new Material.Builder(24064, SuSyUtility.susyId('hydrogenated_isophthalic_acid_solution'))
+                .fluid()
+                .fluidTemp(533)
+                .components(IsophthalicAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        AmocoPurificationMotherLiquor = new Material.Builder(24065, SuSyUtility.susyId('amoco_purification_mother_liquor'))
+                .fluid()
+                .components(MethylParaToluate, 1, Water, 100)
+                .colorAverage()
+                .build();
+
+        ParaToluateMixture = new Material.Builder(24066, SuSyUtility.susyId('para_toluate_mixture'))
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 8, Oxygen, 4, ParaToluicAcid, 1)
+                .colorAverage()
+                .build();
+        
+        ParaToluateMixture.setFormula("(C10H10O4)(C9H8O4)", true)
+
+        CrudeDimethylTerephthalateSolution = new Material.Builder(24067, SuSyUtility.susyId('crude_dimethyl_terephthalate_solution'))
+                .fluid()
+                .components(CrudeDimethylTerephthalate, 1, Methanol, 1)
+                .colorAverage()
+                .build();
+
+        TerephthalateMotherLiquor = new Material.Builder(24068, SuSyUtility.susyId('terephthalate_mother_liquor'))
+                .fluid()
+                .components(CrudeDimethylTerephthalate, 1, Methanol, 2)
+                .colorAverage()
+                .build();
+
+        MethylParaToluateMixture = new Material.Builder(24069, SuSyUtility.susyId('methyl_para_toluate_mixture'))
+                .fluid()
+                .components(MethylParaToluate, 1, DimethylTerephthalate, 1)
                 .colorAverage()
                 .build();
     }
