@@ -83,14 +83,6 @@ CHEMICAL_BATH.recipeBuilder()
         .buildAndRegister();
 
 CHEMICAL_BATH.recipeBuilder()
-        .fluidInputs(fluid('dye_pink') * 144)
-        .inputs(ore('blockElevator'))
-        .outputs(item('elevatorid:elevator_pink'))
-        .duration(20)
-        .EUt(7)
-        .buildAndRegister();
-
-CHEMICAL_BATH.recipeBuilder()
         .fluidInputs(fluid('dye_gray') * 144)
         .inputs(ore('blockElevator'))
         .outputs(item('elevatorid:elevator_gray'))

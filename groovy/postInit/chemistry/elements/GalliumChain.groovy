@@ -97,7 +97,7 @@ mods.gregtech.mixer.removeByInput(7, [metaitem('dustGallium'), metaitem('dustArs
 //SEED CRYSTAL
 CRYSTALLIZER.recipeBuilder()
 .inputs(ore('dustSmallHighPurityArsenic'))
-.fluidInputs(fluid('high_purity_gallium') * 250)
+.fluidInputs(fluid('high_purity_gallium') * 36)
 .chancedOutput(metaitem('seed_crystal.gallium_arsenide'), 2500, 0)
 .duration(500)
 .EUt(Globals.voltAmps[1])

@@ -642,19 +642,17 @@ crafting.replaceShaped('minecraft:stone_slab', item('minecraft:stone_slab') * 6,
 		[null, null, null]
 ])
 
-Globals.solders.each { key, val ->
-	recipemap('assembler').recipeBuilder()
-			.inputs([
-					metaitem('platePolytetrafluoroethylene') * 2,
-					metaitem('plateStainlessSteel'),
-					metaitem('ringStainlessSteel') * 2
-			])
-			.fluidInputs(fluid(key) * val)
-			.outputs(item('minecraft:elytra'))
-			.duration(200)
-			.EUt(240)
-			.buildAndRegister();
-}
+recipemap('assembler').recipeBuilder()
+        .inputs([
+                metaitem('platePolytetrafluoroethylene') * 2,
+                metaitem('plateStainlessSteel'),
+                metaitem('ringStainlessSteel') * 2
+        ])
+        .fluidInputs(fluid('soldering_alloy') * 72)
+        .outputs(item('minecraft:elytra'))
+        .duration(200)
+        .EUt(240)
+        .buildAndRegister();
 
 crafting.replaceShaped('minecraft:leather_helmet', item('minecraft:leather_helmet'), [
 		[metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],

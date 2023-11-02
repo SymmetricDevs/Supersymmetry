@@ -167,7 +167,7 @@ EBF.recipeBuilder()
     .buildAndRegister()
 
 EBF.recipeBuilder()
-    .inputs(ore('dustFluorapatite') * 2)
+    .inputs(ore('dustHydroxyapatite') * 2)
     .inputs(ore('dustSiliconDioxide') * 27)
     .inputs(ore('dustCarbon') * 15)
     .outputs(metaitem('dustPhosphorus') * 6)

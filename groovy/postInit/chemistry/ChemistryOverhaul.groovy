@@ -354,24 +354,6 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 ROASTER.recipeBuilder()
-        .fluidInputs(fluid('water') * 4000)
-        .inputs(ore('dustIron') * 3)
-        .outputs(metaitem('dustIronTwoThreeOxide') * 7)
-        .fluidOutputs(fluid('hydrogen') * 8000)
-        .duration(160)
-        .EUt(60)
-        .buildAndRegister()
-
-ROASTER.recipeBuilder()
-        .fluidInputs(fluid('water') * 4000)
-        .inputs(ore('dustHighPurityIron') * 3)
-        .outputs(metaitem('dustPurifiedIronTwoThreeOxide') * 7)
-        .fluidOutputs(fluid('hydrogen') * 8000)
-        .duration(160)
-        .EUt(60)
-        .buildAndRegister()
-
-ROASTER.recipeBuilder()
         .fluidInputs(fluid('oxygen') * 1000)
         .inputs(ore('dustIronTwoThreeOxide') * 14)
         .outputs(metaitem('dustIronIiiOxide') * 15)
@@ -942,14 +924,6 @@ CSTR.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
-        .fluidInputs(fluid('diluted_sulfuric_acid') * 500)
-        .fluidOutputs(fluid('water') * 250)
-        .fluidOutputs(fluid('sulfuric_acid') * 250)
-        .duration(50)
-        .EUt(30)
-        .buildAndRegister()
-
 dyesLowercase = ["black", "red", "green", "brown", "blue", "purple", "cyan", "light_gray", "gray", "pink", "lime", "yellow", "light_blue", "magenta", "orange", "white"]
 dyesUppercase = ["Black", "Red", "Green", "Brown", "Blue", "Purple", "Cyan", "LightGray", "Gray", "Pink", "Lime", "Yellow", "LightBlue", "Magenta", "Orange", "White"]
 
@@ -1181,32 +1155,6 @@ MIXER.recipeBuilder()
 .duration(160)
 .EUt(30)
 .buildAndRegister()
-
-// Phosphoric acid from sulfuric acid? 
-
-    // Fluoroapatite route
-
-BR.recipeBuilder()
-    .fluidInputs(fluid('sulfuric_acid') * 5000)
-    .inputs(ore('dustFluorapatite') * 21)
-    .fluidOutputs(fluid('phosphoric_acid') * 3000)
-    .fluidOutputs(fluid('hydrogen_fluoride') * 1000)
-    .outputs(metaitem('dustCalciumSulfate') * 30)
-    .duration(120)
-    .EUt(30)
-    .buildAndRegister()
-
-    // Apatite route
-
-BR.recipeBuilder()
-    .fluidInputs(fluid('sulfuric_acid') * 5000)
-    .inputs(ore('dustApatite') * 21)
-    .fluidOutputs(fluid('phosphoric_acid') * 3000)
-    .fluidOutputs(fluid('hydrogen_chloride') * 1000)
-    .outputs(metaitem('dustCalciumSulfate') * 30)
-    .duration(120)
-    .EUt(30)
-    .buildAndRegister()
 
 // Fluoroantimonic Acid
 
@@ -1976,7 +1924,7 @@ BR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-// Dichlorbenzene
+// Dichlorobenzene
 
 FBR.recipeBuilder()
 .fluidInputs(fluid('toluene') * 50)
@@ -2342,11 +2290,11 @@ DISTILLERY.recipeBuilder()
 .buildAndRegister()
 
 BR.recipeBuilder()
+.inputs(ore('dustCalciumHydroxide') * 5)
 .fluidInputs(fluid('potassium_carbonate_solution') * 1000)
 .fluidInputs(fluid('water') * 1000)
-.inputs(ore('dustCalciumHydroxide') * 5)
-.fluidOutputs(fluid('potassium_hydroxide_solution') * 2000)
 .outputs(metaitem('dustCalcite') *  5)
+.fluidOutputs(fluid('potassium_hydroxide_solution') * 2000)
 .EUt(30)
 .duration(200)
 .buildAndRegister()
@@ -2869,6 +2817,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .fluidOutputs(fluid('phosphoric_acid') * 50)
     .fluidOutputs(fluid('phenol') * 50)
     .fluidOutputs(fluid('acetone') * 50)
+    .disableDistilleryRecipes()
     .duration(10)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
@@ -3961,25 +3910,6 @@ DISTILLATION_TOWER.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-//BPA
-
-ION_EXCHANGE.recipeBuilder()
-        .fluidInputs(fluid('phenol') * 2000)
-        .fluidInputs(fluid('acetone') * 1000)
-        .notConsumable(metaitem('beads.ag_fifty_w_x_eight'))
-        .fluidOutputs(fluid('water') * 1000)
-        .outputs(metaitem('dustBisphenolA'))
-        .EUt(480)
-        .duration(100)
-        .buildAndRegister()
-
-FLUID_EXTRACTOR.recipeBuilder()
-        .inputs(ore('dustBisphenolA'))
-        .fluidOutputs(fluid('bisphenol_a') * 1000)
-        .EUt(30)
-        .duration(100)
-        .buildAndRegister()
-
 //ALON
 
 TUBE_FURNACE.recipeBuilder()
@@ -4076,8 +4006,6 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 //DISTILLATION REORDERING
-
-mods.gregtech.distillation_tower.removeByInput(30, null, [fluid('diluted_sulfuric_acid') * 500])
 
 DISTILLATION_TOWER.recipeBuilder()
         .fluidInputs(fluid('diluted_sulfuric_acid') * 500)
@@ -4451,7 +4379,7 @@ DISTILLERY.recipeBuilder()
         .buildAndRegister()
 
 BR.recipeBuilder()
-        .inputs(ore('dustTriphenylPhosphine'))
+        .inputs(ore('dustTriphenylphosphine'))
         .fluidInputs(fluid('phosphorus_trichloride') * 500)
         .fluidOutputs(fluid('chlorodiphenylphosphine') * 1500)
         .duration(200)
