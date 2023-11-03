@@ -1482,6 +1482,8 @@ REACTION_FURNACE.recipeBuilder()
         .EUt(480)
         .buildAndRegister()
 
+oreDict.add('dyeWhite', metaitem('dustTitaniumDioxide'))
+
 // Butyraldehyde
 
 REACTION_FURNACE.recipeBuilder()
