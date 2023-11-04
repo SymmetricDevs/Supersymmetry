@@ -46,7 +46,6 @@ mods.gregtech.assembler.recipeBuilder()
 
 def DISTILLERY = recipemap('distillery');
 def MIXER = recipemap('mixer');
-
 def LCR = recipemap('large_chemical_reactor')
 def BR = recipemap('batch_reactor')
 def CSTR = recipemap('continuous_stirred_tank_reactor');
@@ -488,6 +487,15 @@ MIXER.recipeBuilder()
         .outputs(metaitem('gregtechfoodoption:large_mozzarella_curd_nugget'))
         .duration(160)
         .EUt(8)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(item('minecraft:dye', 3) * 8)
+        .outputs(metaitem('gregtechfoodoption:component.roasted_beans') * 8)
+        .fluidOutputs(fluid('steam') * 1000)
+        .EUt(120)
+        .duration(30)
         .buildAndRegister()
 		
 // Force GTFO skewers to be made with only long rods
