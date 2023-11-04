@@ -44,21 +44,15 @@ eventManager.listen {
         customMetaItems.addItem(155, "sugar_cane_dust");
 
         customMetaItems.addItem(156, "bitumen");
-
         customMetaItems.addItem(157, "bituminous_residue");
-
         customMetaItems.addItem(158, "paraffin_wax");
-
         customMetaItems.addItem(159, "spent_cracking_catalyst");
 
         customMetaItems.addItem(160, "red_mud_slag");
-
         customMetaItems.addItem(161, "leached_red_mud_slag");
 
         customMetaItems.addItem(162, "pitch_binder");
-
         customMetaItems.addItem(163, "raw_electrode");
-
         customMetaItems.addItem(164, "graphite_electrode");
 
         customMetaItems.addItem(165, "rydberg_atom_array");
@@ -317,6 +311,8 @@ eventManager.listen {
         customMetaItems.addItem(8011, "wafer.silicon_nitride");
         customMetaItems.addItem(8012, "wafer.nickel");
         customMetaItems.addItem(8013, "wafer.gallium_arsenide");
+        customMetaItems.addItem(8014, "wafer.raw.silicon");
+        customMetaItems.addItem(8015, "wafer.treated.silicon");
 
         //Crops 9000-10000
 
