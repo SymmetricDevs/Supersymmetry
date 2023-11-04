@@ -1707,18 +1707,21 @@ public class FirstDegreeMaterials{
 
         CopperDross = new Material.Builder(8347, SuSyUtility.susyId('copper_dross'))
                 .dust()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Copper, 1, Sulfur, 1)
                 .color(0x000000)
                 .build();
 
         DecopperedLead = new Material.Builder(8348, SuSyUtility.susyId('decoppered_lead'))
                 .fluid()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Lead, 1)
                 .color(0x886b9c)
                 .build();
 
         DezincedLead = new Material.Builder(8349, SuSyUtility.susyId('dezinced_lead'))
                 .fluid()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Lead, 1)
                 .color(0x825d9c)
                 .build();
@@ -1732,18 +1735,21 @@ public class FirstDegreeMaterials{
 
         DecopperedBettsLead = new Material.Builder(8351, SuSyUtility.susyId('decoppered_betts_lead'))
                 .fluid()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Bismuth, 3, Lead, 6)
                 .color(0x2f2d63)
                 .build();
 
         SoftenedLead = new Material.Builder(8352, SuSyUtility.susyId('softened_lead'))
                 .dust().fluid()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Lead, 1)
                 .color(0x9874b0)
                 .build();
 
         SodiumAntimonate = new Material.Builder(8353, SuSyUtility.susyId('sodium_antimonate'))
                 .dust()
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Sodium, 1, Antimony, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
