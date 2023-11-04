@@ -128,6 +128,8 @@ eventManager.listen {
         customMetaItems.addItem(252, "beads.rhenium_ion_exchange")
         customMetaItems.addItem(253, "beads.loaded_rhenium_ion_exchange")
 
+        customMetaItems.addItem(300, "mylar")
+
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);
