@@ -47665,7 +47665,7 @@
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -47731,7 +47731,7 @@
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -48113,7 +48113,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§lIMPORTANT: YOU DO NOT NEED TO AUTOMATE THIS, THIS IS A ONE TIME PROCESS AS YOU CAN RECYCLE P.F.O.A.\n\n3000L §6N-octanol §r+ 16 Chromium Trioxide Dust + 6000L Sulfuric Acid --\u003e 3000L §6Caprylic (octanoic) acid§r + 1000L §6Chromium Sulfate Solution§r in a §cBatch Reactor§r.\n\n50L §6Caprylic acid§r + 50L §6Thionyl Chloride§r §c--\u003e§r 50L §6Diluted Octanoyl Chloride §r+ 50L Sulfur Dioxide + 50L Hydrogen Chloride\n\n3000L §6Diluted Octanoyl Chloride§r, when §cdistilled§r, will produce 1000L of §6Octanoyl Chloride§r, 1000L of Water, and 1000L of Pyridine.\n\n50L of§6 Octanoyl Chloride§r + 750L of Hydrofluoric Acid§c --\u003e §r800L of §6Fluorinated Octanoyl Chloride§r + 750L Hydrogen + 750L water\n\n§cDistillation§r of 16000L Fluorinated Octanoyl Chloride will produce 2400L of§6 Perfluorooctanoyl Fluoride§r. §cReact 1:1 with water§r to produce §6PFOA solution§r, which is further §cdistilled§r§r.",
+          "desc:8": "§lIMPORTANT: YOU DO NOT NEED TO AUTOMATE THIS, THIS IS A ONE TIME PROCESS AS YOU CAN RECYCLE P.F.O.A.\n\n1500L §6N-octanol §r+ 8 Chromium Trioxide Dust + 3000L Sulfuric Acid + 500L Acetone --\u003e 1500L §6Caprylic (octanoic) acid§r + 500L §6Chromium Sulfate Solution§r in a §cBatch Reactor§r.\n\n1000L §6Caprylic acid§r + 1000L §6Thionyl Chloride§r §c--\u003e§r 1000L §6Octanoyl Chloride §r+ 1000L Sulfur Dioxide + 1000L Hydrogen Chloride\n\n1000L of§6 Octanoyl Chloride§r + 15000L of Hydrofluoric Acid§c --\u003e §r1000L of §6Fluorinated Octanoyl Chloride§r + 15000L Hydrogen using a cobalt and nickel plate as an electrode.\n\n§cDistillation§r of 1000L Fluorinated Octanoyl Chloride will produce 150L of§6 Perfluorooctanoyl Fluoride§r. §cReact 1:1 with water§r to produce §6PFOA solution§r, which is further §cdistilled§r§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54202,7 +54202,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A Fluidized Bed Reactor allows you to create §dPolydimethylsiloxane,§f which can be vulcanized to create §cSilicone Rubber.§f\n\nIt can do all the things that Rubber can in recipes, but at a lower cost in assembling recipes.\n\nIn case you missed it, §6Styrene-Butadiene Rubber§f is the other higher tier rubber available at HV.\n\nThe items required are §6Chloromethane §r(you should already have this), Copper Oxide and Silicon, as well as Potassium Persulfate. Since we\u0027re now in HV, the quests will no longer list every single step in a chemical process. ",
+          "desc:8": "A Fluidized Bed Reactor allows you to create §dPolydimethylsiloxane,§f which can be vulcanized to create §cSilicone Rubber.§f\n\nIt can do all the things that Rubber can in recipes, but at a lower cost in assembling recipes.\n\nIn case you missed it, §6Styrene-Butadiene Rubber§f is the other higher tier rubber available at HV.\n\nYou can produce silicone rubber by reacting silicon and chloromethane with a cuprous oxide catalyst. This can be distilled into various components, including dimethyldichlorosilane. This is reacted with water to polymerize into polydimethylsiloxane, which undergoes further processing to remove any HCl generated. This can then be cured using di-tert-butyl peroxide and silica to produce silicone rubber.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -61566,76 +61566,6 @@
     },
     "821:10": {
       "preRequisites:11": [
-        641
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "You can produce silicone rubber by reacting silicon and chloromethane with a cuprous oxide catalyst. This can be distilled into various components, including dimethyldichlorosilane. This is reacted with water to polymerize into polydimethylsiloxane, which undergoes further processing to remove any HCl generated. This can then be cured using di-tert-butyl peroxide and silica to produce silicone rubber.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1011,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_dust"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Silicone Rubber",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 821,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 1000,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "822:10": {
-      "preRequisites:11": [
         757
       ],
       "properties:10": {
@@ -61704,7 +61634,7 @@
         }
       }
     },
-    "823:10": {
+    "822:10": {
       "preRequisites:11": [
         822
       ],
@@ -61770,7 +61700,7 @@
         }
       }
     },
-    "824:10": {
+    "823:10": {
       "preRequisites:11": [
         823
       ],
@@ -61840,7 +61770,7 @@
         }
       }
     },
-    "825:10": {
+    "824:10": {
       "preRequisites:11": [
         828
       ],
@@ -61910,7 +61840,7 @@
         }
       }
     },
-    "826:10": {
+    "825:10": {
       "preRequisites:11": [
         824
       ],
@@ -61972,7 +61902,7 @@
         }
       }
     },
-    "827:10": {
+    "826:10": {
       "preRequisites:11": [
         828
       ],
@@ -62042,7 +61972,7 @@
         }
       }
     },
-    "828:10": {
+    "827:10": {
       "preRequisites:11": [
         826
       ],
@@ -62112,7 +62042,7 @@
         }
       }
     },
-    "829:10": {
+    "828:10": {
       "preRequisites:11": [
         793
       ],
@@ -65488,13 +65418,6 @@
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": -156
-        },
-        "69:10": {
-          "id:3": 821,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -42,
-          "y:3": -48
         }
       }
     },
