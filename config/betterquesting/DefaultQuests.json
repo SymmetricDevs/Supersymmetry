@@ -32809,10 +32809,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "vinyl_chloride_solution"
-              }
+              "FluidName:8": "potassium_bisulfate"
             }
           },
           "taskID:8": "bq_standard:fluid"
