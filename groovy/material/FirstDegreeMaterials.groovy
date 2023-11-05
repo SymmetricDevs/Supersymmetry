@@ -3278,6 +3278,6 @@ public class FirstDegreeMaterials{
                 .color(0xfc7e89)
                 .build();
 
-        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)   
+        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)
     }
 }

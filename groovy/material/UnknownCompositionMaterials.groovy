@@ -1838,6 +1838,12 @@ public class UnknownCompositionMaterials {
         RawPolydimethylsiloxaneMixture = new Material.Builder(4350, SuSyUtility.susyId("raw_polydimethylsiloxane_mixture"))
                 .fluid()
                 .color(0xf6f7f0)
-                .build();  
+                .build();
+
+        WaferTreatmentAcid = new Material.Builder(4351, SuSyUtility.susyId("wafer_treatment_acid"))
+                .fluid(FluidTypes.ACID)
+                .components(HydrochloricAcid, 9, HydrofluoricAcid, 9, AceticAcid, 2)
+                .color(0x3e7d68)
+                .build();
     }
 }

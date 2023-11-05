@@ -33,12 +33,6 @@ Etchants used:
 
 //REMOVALS
 
-// Silicon Wafer * 16
-mods.gregtech.cutter.removeByInput(64, [metaitem('boule.silicon')], [fluid('lubricant') * 20])
-// Silicon Wafer * 16
-mods.gregtech.cutter.removeByInput(64, [metaitem('boule.silicon')], [fluid('distilled_water') * 60])
-// Silicon Wafer * 16
-mods.gregtech.cutter.removeByInput(64, [metaitem('boule.silicon')], [fluid('water') * 80])
 // CPU * 8
 mods.gregtech.cutter.removeByInput(120, [metaitem('wafer.central_processing_unit')], [fluid('lubricant') * 84])
 // CPU * 8

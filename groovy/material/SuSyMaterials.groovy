@@ -478,10 +478,10 @@ class SuSyMaterials {
         public static Material ImpureCelestineSlurry;
         public static Material CelestineSlurry;
         public static Material BariumResidue;
-
 	public static Material OrganosiliconMixture;
 	public static Material ImpurePolydimethylsiloxaneMixture;
 	public static Material RawPolydimethylsiloxaneMixture;
+        public static Material WaferTreatmentAcid;
 
         // Petrochem Materials
 
