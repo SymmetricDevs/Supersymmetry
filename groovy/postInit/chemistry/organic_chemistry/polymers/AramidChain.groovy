@@ -7,6 +7,7 @@ CSTR = recipemap('continuous_stirred_tank_reactor')
 SIFTER = recipemap('sifter')
 DISTILLATION_TOWER = recipemap('distillation_tower')
 PHASE_SEPARATOR = recipemap('phase_separator')
+DRYER = recipemap('dryer')
 
 // 4-nitroaniline
 
@@ -97,7 +98,7 @@ BR.recipeBuilder()
 
 BR.recipeBuilder()
     .inputs(ore('dustOneThreeDinitrobenzene'))
-    .fluidInputs(fluid('hydrogen') * 400)
+    .fluidInputs(fluid('hydrogen') * 4000)
     .notConsumable(ore('dustActivatedRaneyNickel') * 1)
     .outputs(metaitem('dustMetaPhenylenediamine') * 16)
     .duration(20)
@@ -107,7 +108,7 @@ BR.recipeBuilder()
 // Nomex
 
 LCR.recipeBuilder()
-    .inputs(ore('dustMetaPhenyleneDiamine') * 16)
+    .inputs(ore('dustMetaPhenylenediamine') * 16)
     .inputs(ore('dustIsophthaloylChloride') * 16)
     .fluidInputs(fluid('dimethylacetamide') * 4000)
     .fluidOutputs(fluid('nomex_polymerization_mix') * 4000)
@@ -117,8 +118,15 @@ LCR.recipeBuilder()
 
 SIFTER.recipeBuilder()
     .fluidInputs(fluid('nomex_polymerization_mix') * 4000)
-    .outputs(metaitem('dustNomex') * 7)
+    .outputs(metaitem('fiberWetNomex') * 56)
     .fluidOutputs(fluid('dimethylacetamide') * 4000)
     .duration(300)
+    .EUt(120)
+    .buildAndRegister()
+
+DRYER.recipeBuilder()
+    .inputs(ore('fiberWetNomex') * 8)
+    .outputs(metaitem('wireFineNomex') * 8)
+    .duration(40)
     .EUt(120)
     .buildAndRegister()

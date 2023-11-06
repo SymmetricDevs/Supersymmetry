@@ -8,6 +8,8 @@ import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.properties.*
 
 import supersymmetry.api.util.SuSyUtility;
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey;
+import supersymmetry.api.unification.material.properties.FiberProperty;
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -943,6 +945,7 @@ public class OrganicChemistryMaterials {
         Kevlar = new Material.Builder(15154, SuSyUtility.susyId('kevlar'))
                 .polymer(3)
                 .color(0x4d443e)
+                .components(Carbon, 14, Hydrogen, 10, Nitrogen, 2, Oxygen, 2)
                 .flags(GENERATE_PLATE, GENERATE_FINE_WIRE)
                 .build()
 
@@ -1867,17 +1870,21 @@ public class OrganicChemistryMaterials {
 
         OneThreeDinitrobenzene = new Material.Builder(15297, SuSyUtility.susyId('one_three_dinitrobenzene'))
                 .dust()
+                .components(Carbon, 6, Hydrogen, 4, Nitrogen, 2, Oxygen, 4)
                 .color(0x1c718a)
                 .build();
 
         MetaPhenylenediamine = new Material.Builder(15298, SuSyUtility.susyId('meta_phenylenediamine'))
                 .dust()
+                .components(Carbon, 6, Hydrogen, 8, Nitrogen, 2)
                 .color(0x1e89a8)
                 .build();
 
         Nomex = new Material.Builder(15299, SuSyUtility.susyId('nomex'))
-                .polymer()
+                .components(Carbon, 14, Hydrogen, 10, Nitrogen, 2, Oxygen, 2)
                 .color(0x5d95a3)
                 .build();
+
+        Nomex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, true))
     }
 }
