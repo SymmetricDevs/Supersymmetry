@@ -943,13 +943,13 @@ public class OrganicChemistryMaterials {
                 .build()
 
         Kevlar = new Material.Builder(15154, SuSyUtility.susyId('kevlar'))
-                .polymer(3)
                 .color(0x4d443e)
                 .components(Carbon, 14, Hydrogen, 10, Nitrogen, 2, Oxygen, 2)
-                .flags(GENERATE_PLATE, GENERATE_FINE_WIRE)
+                .flags(GENERATE_PLATE)
                 .build()
 
-        Kevlar.setFormula('COC6H4CONHC6H4NH', true)
+        Kevlar.setFormula('[COC6H4CONHC6H4NH]', true)
+        Kevlar.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, true))
 
         BiphenylTetracarboxylicAcidDianhydride = new Material.Builder(15155, SuSyUtility.susyId('biphenyl_tetracarboxylic_acid_dianhydride'))
                 .dust()
@@ -1885,6 +1885,7 @@ public class OrganicChemistryMaterials {
                 .color(0x5d95a3)
                 .build();
 
+        Nomex.setFormula('[COC6H4CONHC6H4NH]', true)
         Nomex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, true))
     }
 }
