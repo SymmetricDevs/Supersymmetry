@@ -1012,6 +1012,7 @@ class SuSyMaterials {
         public static Material ImpureStrontiumSulfide;
         public static Material DilutedAceticAcid;
         public static Material CobaltIIAcetate;
+        public static Material PotassiumPyrosulfate;
 
         // Second Degree Materials
 
