@@ -20,23 +20,6 @@
     "Output item strings are in the format: (domain):(path):(meta)"
   ],
   "oredict": {
-    "oreAluminum": {
-      "slagColor": "e2e2e3",
-      "langKey": [
-        "libvulpes:material.Aluminum"
-      ],
-      "output": [
-        "libvulpes:productnugget:9"
-      ],
-      "bloomYieldMinMax": [
-        12,
-        15
-      ],
-      "slagBloomYieldMinMax": [
-        12,
-        15
-      ]
-    },
     "oreCobalt": {
       "slagColor": "1c5bc1",
       "langKey": [
@@ -58,12 +41,10 @@
       "slagColor": "ffaa1c",
       "langKey": [
         "gregtech:tile.ore_block",
-        "libvulpes:material.Copper",
         "techguns:tile.techguns.basicore.0"
       ],
       "output": [
         "gregtech:meta_nugget:25",
-        "libvulpes:productnugget:4",
         "techguns:itemshared:86"
       ],
       "bloomYieldMinMax": [
@@ -83,24 +64,6 @@
       ],
       "output": [
         "minecraft:gold_nugget:0"
-      ],
-      "bloomYieldMinMax": [
-        12,
-        15
-      ],
-      "slagBloomYieldMinMax": [
-        12,
-        15
-      ]
-    },
-    "oreIridium": {
-      "slagColor": "d5d4e7",
-      "langKey": [
-        "libvulpes:material.Iridium"
-      ],
-      "output": [
-        "gregtech:meta_nugget:50",
-        "libvulpes:productnugget:10"
       ],
       "bloomYieldMinMax": [
         12,
@@ -205,12 +168,10 @@
       "slagColor": "c3e9ff",
       "langKey": [
         "gregtech:tile.ore_block",
-        "libvulpes:material.Tin",
         "techguns:tile.techguns.basicore.1"
       ],
       "output": [
-        "gregtech:meta_nugget:112",
-        "libvulpes:productnugget:5"
+        "gregtech:meta_nugget:112"
       ],
       "bloomYieldMinMax": [
         12,
