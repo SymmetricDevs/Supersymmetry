@@ -10,7 +10,6 @@
     "Entry item strings are in the format: (domain):(path):(meta)"
   ],
   "entries": {
-    "advancedrocketry:alienwood:0": "advancedrocketry:planks:0",
     "biomesoplenty:log_0:4": "biomesoplenty:planks_0:0",
     "biomesoplenty:log_0:5": "biomesoplenty:planks_0:1",
     "biomesoplenty:log_0:6": "biomesoplenty:planks_0:2",
