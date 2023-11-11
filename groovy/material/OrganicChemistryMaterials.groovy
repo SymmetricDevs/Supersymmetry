@@ -1869,6 +1869,7 @@ public class OrganicChemistryMaterials {
                 .polymer()
                 .components(Ethylene, 1, VinylAcetate, 1)
                 .color(0x686ad4)
+                .fluidPipeProperties(363, 100, true)
                 .iconSet(DULL)
                 .build();
 
