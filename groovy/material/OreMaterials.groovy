@@ -273,7 +273,7 @@ public class OreMaterials{
                 .build();
 
         Lignite = new Material.Builder(7033, SuSyUtility.susyId('lignite'))
-                .gem(1, 534).ore(2, 1)
+                .gem(1, 600).ore(2, 1)
                 .color(0x644646).iconSet(LIGNITE)
                 .components(Carbon, 1)
                 .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
