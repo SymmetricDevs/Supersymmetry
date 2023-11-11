@@ -48,6 +48,8 @@ class Globals {
     public static combustibles = [
         new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
         new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
+        new Combustible('gemLigniteCoke', 2, 4, 'dustTinyAsh'),
+        new Combustible('dustLigniteCoke', 2, 4, 'dustTinyAsh'),
         new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
         new Combustible('dustAnthracite', 1, 2, 'dustTinyAsh'),
         new Combustible('gemCoal', 2, 4, 'dustTinyDarkAsh'),

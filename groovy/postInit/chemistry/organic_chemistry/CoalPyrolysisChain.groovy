@@ -29,7 +29,7 @@ PYROLYSE_OVEN.recipeBuilder()
         .duration(320)
         .EUt(60)
         .buildAndRegister()
-        
+
 PYROLYSE_OVEN.recipeBuilder()
         .inputs(ore('gemAnthracite') * 16)
         .outputs(metaitem('gemCoke') * 14)
@@ -178,4 +178,59 @@ DISTILLATION_TOWER.recipeBuilder()
         .fluidOutputs(fluid('naphthalene_oil') * 200)
         .duration(200)
         .EUt(48)
+        .buildAndRegister()
+
+// Lignite processing
+
+//----- Lignite pyrolysis to Lignite Coke
+PYROLYSE_OVEN.recipeBuilder()
+        .inputs(ore('gemLignite') * 16)
+        .outputs(metaitem('gemLigniteCoke') * 4)
+        .fluidOutputs(fluid('creosote') * 2000)
+        .fluidOutputs(fluid('syngas') * 3200)
+        .duration(320)
+        .EUt(60)
+        .buildAndRegister()
+
+PYROLYSE_OVEN.recipeBuilder()
+        .inputs(ore('dustLignite') * 16)
+        .outputs(metaitem('dustLigniteCoke') * 4)
+        .fluidOutputs(fluid('creosote') * 2000)
+        .fluidOutputs(fluid('syngas') * 3200)
+        .duration(320)
+        .EUt(60)
+        .buildAndRegister()
+
+//----- Lignite Coke pyrolysis
+PYROLYSE_OVEN.recipeBuilder()
+        .inputs(ore('gemLigniteCoke') * 16)
+        .outputs(metaitem('dustCarbon') * 9)
+        .fluidInputs(fluid('steam') * 15000)
+        .fluidOutputs(fluid('syngas') * 12000)
+        .duration(320)
+        .EUt(60)
+        .buildAndRegister()
+
+PYROLYSE_OVEN.recipeBuilder()
+        .inputs(ore('dustLigniteCoke') * 16)
+        .outputs(metaitem('dustCarbon') * 9)
+        .fluidInputs(fluid('steam') * 15000)
+        .fluidOutputs(fluid('syngas') * 12000)
+        .duration(320)
+        .EUt(60)
+        .buildAndRegister()
+
+//----- Centrifuging to Carbon
+CENTRIFUGE.recipeBuilder()
+        .inputs(ore('dustLignite'))
+        .chancedOutput(metaitem('dustCarbon'), 2500, 0)
+        .duration(80)
+        .EUt(30)
+        .buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(ore('dustLigniteCoke'))
+        .chancedOutput(metaitem('dustCarbon'), 7500, 0)
+        .duration(80)
+        .EUt(30)
         .buildAndRegister()
