@@ -1494,6 +1494,8 @@ class SuSyMaterials {
         public static Material TerephthalateMotherLiquor;
         public static Material MethylParaToluateMixture;
         public static Material NomexPolymerizationMix;
+        public static Material KevlarPolymerizationMix;
+        public static Material SpentDimethylacetamide;
 
         // Thermodynamics/Greenhouse Materials
 

@@ -316,7 +316,7 @@ EBF.recipeBuilder()
 
 CENTRIFUGE.recipeBuilder()
     .notConsumable(ore('stickSteel'))
-    .inputs(ore('fiberKevlar') * 8)
+    .inputs(ore('fiberKevlar'))
     .fluidInputs(fluid('e_glass') * 144)
     .outputs(metaitem('glass_fibers'))
     .EUt(120)

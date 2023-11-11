@@ -453,7 +453,19 @@ public class ThirdDegreeMaterials {
 
         NomexPolymerizationMix = new Material.Builder(24070, SuSyUtility.susyId('nomex_polymerization_mix'))
                 .fluid()
-                .components(Nomex, 1, Dimethylacetamide, 4)
+                .components(Nomex, 1, CalciumChloride, 1 Dimethylacetamide, 4)
+                .colorAverage()
+                .build();
+
+        KevlarPolymerizationMix = new Material.Builder(24071, SuSyUtility.susyId('kevlar_polymerization_mix'))
+                .fluid()
+                .components(Kevlar, 1, CalciumChloride, 1 Dimethylacetamide, 4)
+                .colorAverage()
+                .build();
+
+        SpentDimethylacetamide = new Material.Builder(24072, SuSyUtility.susyId('spent_dimethylacetamide'))
+                .fluid()
+                .components(CalciumChloride, 1 Dimethylacetamide, 4)
                 .colorAverage()
                 .build();
     }

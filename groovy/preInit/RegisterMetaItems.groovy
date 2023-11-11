@@ -129,6 +129,7 @@ eventManager.listen {
         customMetaItems.addItem(253, "beads.loaded_rhenium_ion_exchange")
 
         customMetaItems.addItem(300, "mylar")
+        customMetaItems.addItem(301, "spinneret")
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
