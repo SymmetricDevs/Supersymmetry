@@ -12,7 +12,7 @@ def COMPRESSOR = recipemap('compressor');
 CHEMICAL_BATH.recipeBuilder()
         .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
         .inputs(ore('dustCellulose') * 4)
-        .fluidOutputs(fluid('water') * 2000)
+        .fluidOutputs(fluid('wastewater') * 2000)
         .outputs(metaitem('dustAlkaliCellulose') * 4)
         .duration(200)
         .EUt(240)

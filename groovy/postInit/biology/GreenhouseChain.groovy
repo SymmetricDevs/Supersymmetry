@@ -27,7 +27,7 @@ mods.gregtech.assembler.removeByInput(24, [metaitem('gregtechfoodoption:cupric_h
 
 crafting.addShaped("susy:cotton_seeds", metaitem('seed.cotton') * 2, [
         [null, null, metaitem('gregtechfoodoption:seed.unknown')],
-        [null, metaitem('gregtechfoodoption:seed.unknown'), null],
+        [null, null, metaitem('gregtechfoodoption:seed.unknown')],
         [null, null, null]
 ])
 

@@ -108,13 +108,15 @@ public class OrganicChemistryMaterials {
                 .build()
 
         Rayon = new Material.Builder(15014, SuSyUtility.susyId('rayon'))
-                .polymer(1)
                 .components(Carbon, 6, Hydrogen, 10, Oxygen, 5)
                 .flags(GENERATE_FINE_WIRE)
                 .color(0xaee8d9)
                 .fluidTemp(438)
                 .build()
-                .setFormula('C6H5(OH)4OH', true);
+                
+
+        Rayon.setFormula('C6H5(OH)4OH', true)
+        Rayon.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
 
         AlkaliCellulose = new Material.Builder(15015, SuSyUtility.susyId('alkali_cellulose'))
                 .dust()
