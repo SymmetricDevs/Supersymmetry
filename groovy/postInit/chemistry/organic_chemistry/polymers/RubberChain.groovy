@@ -110,6 +110,7 @@ def CoagulationRecipe(amount, duration, circ){
     def COAGULATION_RECIPES = recipemap("coagulation_tank")
 
     COAGULATION_RECIPES.recipeBuilder()
+    .circuitMeta(circ)
     .fluidInputs(fluid('latex') * (1000 * amount))
     .notConsumable(ore('stickIron'))
     .outputs(metaitem('dustLatex') * amount)
