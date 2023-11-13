@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
@@ -41,18 +42,6 @@ SINTERING_OVEN = recipemap('sintering_oven')
 VACUUM_DT = recipemap('vacuum_distillation')
 CRACKER = recipemap('cracker')
 FLUID_HEATER = recipemap('fluid_heater')
-
-def COAL_SOURCES = [
-    "dustCarbon",
-    "gemCoal",
-    "dustCoal",
-    "gemCharcoal",
-    "dustCoke",
-    "gemCoke",
-    "dustCharcoal",
-    "gemAnthracite",
-    "dustAnthracite"
-]
 
 def CARBON_DUSTS = [
         "dustCarbon",
@@ -172,40 +161,41 @@ DISTILLERY.recipeBuilder()
 .buildAndRegister()
 
 // Carbon Monoxide roaster
-
-for (coal_source in COAL_SOURCES) {
+// TODO: set output according to carbon amount?
+for (carbon in CarbonGlobals.sources) {
     ROASTER.recipeBuilder()
-    .fluidInputs(fluid('oxygen') * 1000)
-    .inputs(ore(coal_source))
-    .circuitMeta(1)
-    .fluidOutputs(fluid('carbon_monoxide') * 1000)
-    .duration(80)
-    .EUt(7)
-    .buildAndRegister()
+        .fluidInputs(fluid('oxygen') * 1000)
+        .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(60))
+        .circuitMeta(1)
+        .fluidOutputs(fluid('carbon_monoxide') * 1000)
+        .duration(80)
+        .EUt(7)
+        .buildAndRegister()
 }
 
 // Carbon Dioxide roaster
-for (coal_source in COAL_SOURCES) {
+// TODO: set output according to carbon amount?
+for (carbon in CarbonGlobals.sources) {
     ROASTER.recipeBuilder()
-    .fluidInputs(fluid('oxygen') * 2000)
-    .inputs(ore(coal_source))
-    .circuitMeta(2)
-    .fluidOutputs(fluid('carbon_dioxide') * 1000)
-    .duration(40)
-    .EUt(7)
-    .buildAndRegister()
+        .fluidInputs(fluid('oxygen') * 2000)
+        .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(60))
+        .circuitMeta(2)
+        .fluidOutputs(fluid('carbon_dioxide') * 1000)
+        .duration(40)
+        .EUt(7)
+        .buildAndRegister()
 }
 
 //CARBON DISULFIDE
 
-for (coal_source in COAL_SOURCES) {
+for (carbon in CarbonGlobals.sources) {
     ROASTER.recipeBuilder()
-            .inputs(ore(coal_source))
-            .inputs(ore('dustSulfur') * 2)
-            .fluidOutputs(fluid('carbon_disulfide') * 1000)
-            .duration(100)
-            .EUt(60)
-            .buildAndRegister()
+        .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(60))
+        .inputs(ore('dustSulfur') * 2)
+        .fluidOutputs(fluid('carbon_disulfide') * 1000)
+        .duration(100)
+        .EUt(60)
+        .buildAndRegister()
 }
 
 
@@ -2051,10 +2041,10 @@ DRYER.recipeBuilder()
 
 //acetylene
 
-for (carbon in COAL_SOURCES) {
+for (carbon in CarbonGlobals.sources) {
     EBF.recipeBuilder()
             .inputs(ore('dustQuicklime') * 2)
-            .inputs(ore(carbon) * 3)
+            .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(180))
             .outputs(metaitem('dustCalciumCarbide') * 3)
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .blastFurnaceTemp(2473)

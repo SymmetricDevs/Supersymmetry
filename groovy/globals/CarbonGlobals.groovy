@@ -41,7 +41,7 @@ class CarbonGlobals {
         }
     }
 
-    public static carbon_sources = [
+    public static sources = [
         new CarbonSource('dustCarbon', 100, 'dustTinyAsh').withTraits(HighPurityCombustible).tap {
             duration = 1
         },
@@ -79,7 +79,7 @@ class CarbonGlobals {
         new CarbonSource('dustLignite', 25, 'dustTinyAsh')
     ]
 
-    public static List combustibles() { carbon_sources.grep(Combustible) }
-    public static List highPurityCombustibles() { carbon_sources.grep(HighPurityCombustible) }
+    public static List combustibles() { sources.grep(Combustible) }
+    public static List highPurityCombustibles() { sources.grep(HighPurityCombustible) }
 
 }
