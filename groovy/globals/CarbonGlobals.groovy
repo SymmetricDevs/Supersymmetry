@@ -4,11 +4,15 @@ class CarbonGlobals {
 
     public static void main (String[] args) {}
 
+    // Anthracite coal value, so most recipes would require
+    // equal amount of carbon/coke/anthracite and 2x coal
+    static final int UNIVERSAL_COAL_EQUIALENT = 90
+
     trait Combustible {
         int amount
         int duration
         {
-            amount = item_amount_for_combustible()
+            amount = amount_equialent(1)
         }
     }
 
@@ -33,12 +37,8 @@ class CarbonGlobals {
         int carbon
         String byproduct
 
-        public int item_amount_of_carbon(int required_carbon) {
-            return item_amount_of_provider(required_carbon, this.carbon)
-        }
-
-        int item_amount_for_combustible() {
-            return item_amount_of_carbon(90)
+        public int amount_equialent(int required_carbon_items) {
+            return item_amount_of_provider(required_carbon_items * UNIVERSAL_COAL_EQUIALENT, this.carbon)
         }
     }
 

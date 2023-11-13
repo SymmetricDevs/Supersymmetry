@@ -302,7 +302,7 @@ BR.recipeBuilder()
 for (carbon in CarbonGlobals.sources) {
     ROASTER.recipeBuilder()
             .inputs(ore('dustAntimonyVOxide') * 7)
-            .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(500))
+            .inputs(ore(carbon.name) * carbon.amount_equialent(5))
             .outputs(metaitem('dustAntimony') * 2)
             .fluidOutputs(fluid('carbon_monoxide') * 5000)
             .EUt(120)
@@ -311,17 +311,17 @@ for (carbon in CarbonGlobals.sources) {
 
     ROASTER.recipeBuilder()
             .inputs(ore('dustTinIvOxide') * 3)
-            .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(200))
+            .inputs(ore(carbon.name) * carbon.amount_equialent(2))
             .outputs(metaitem('dustTin'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(120)
             .duration(200)
             .buildAndRegister()
 
-    if (carbon.carbon > 36) {
+    if (carbon.amount_equialent(23) <= 64) {
         ROASTER.recipeBuilder()
                 .inputs(ore('dustLithargeSlag') * 10)
-                .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(2300))
+                .inputs(ore(carbon.name) * carbon.amount_equialent(23))
                 .outputs(metaitem('ingotBettsCrudeLead') * 10)
                 .EUt(Globals.voltAmps[3])
                 .duration(400)
