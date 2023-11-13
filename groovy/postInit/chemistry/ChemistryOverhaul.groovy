@@ -43,14 +43,6 @@ VACUUM_DT = recipemap('vacuum_distillation')
 CRACKER = recipemap('cracker')
 FLUID_HEATER = recipemap('fluid_heater')
 
-def CARBON_DUSTS = [
-        "dustCarbon",
-        "dustCoal",
-        "dustCoke",
-        "dustCharcoal",
-        "dustAnthracite"
-]
-
 ASSEMBLER.recipeBuilder()
         .inputs(ore('stickIron') * 4)
         .inputs(ore('pipeTinyFluidSteel') * 4)
@@ -2375,10 +2367,10 @@ ROASTER.recipeBuilder()
 
 //Silicon & Graphite
 
-for (carbon in CARBON_DUSTS) {
+for (carbon in CarbonGlobals.dusts()) {
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustSiliconDioxide') * 3)
-            .inputs(ore(carbon) * 1)
+            .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(90))
             .outputs(metaitem('dustSilicon'))
             .circuitMeta(1)
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
@@ -2388,7 +2380,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustQuartzite') * 3)
-            .inputs(ore(carbon) * 1)
+            .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(90))
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2397,7 +2389,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustCertusQuartz') * 3)
-            .inputs(ore(carbon) * 2)
+            .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(270))
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2406,7 +2398,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustNetherQuartz') * 3)
-            .inputs(ore(carbon) * 2)
+            .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(180))
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2415,7 +2407,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustSiliconDioxide') * 3)
-            .inputs(ore(carbon) * 3)
+            .inputs(ore(carbon.name) * carbon.item_amount_of_carbon(270))
             .circuitMeta(2)
             .outputs(metaitem('dustSiliconCarbide') * 2)
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
