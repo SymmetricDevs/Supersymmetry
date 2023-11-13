@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 import static globals.SinteringGlobals.*
 
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
@@ -173,12 +174,12 @@ for (fuel in rotary_kiln_fuels) {
 }
 
 //SINTER-ROAST PROCESS (UNIVERSAL, 200%)
-def combustibles = Globals.combustibles
+def combustibles = CarbonGlobals.combustibles()
 
 for (combustible in combustibles) {
     EBF.recipeBuilder()
             .inputs(ore('dustSinteredLeadConcentrate') * 2)
-            .inputs(ore(combustible.name) * (combustible.amount_required))
+            .inputs(ore(combustible.name) * (combustible.amount))
             .inputs(ore('dustTinyCalcite'))
             .outputs(metaitem('ingotCrudeLead') * 2)
             .outputs(metaitem(combustible.byproduct))

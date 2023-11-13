@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 PRIMITIVEBLASTFURNACE = recipemap('primitive_blast_furnace')
 EBF = recipemap('electric_blast_furnace')
@@ -19,34 +20,34 @@ EBF.recipeBuilder()
         .duration(40)
         .buildAndRegister()
 
-for (combustible in Globals.combustibles) {
+for (combustible in CarbonGlobals.combustibles()) {
     PRIMITIVEBLASTFURNACE.recipeBuilder()
             .inputs(ore('dustNickel'))
-            .inputs(ore(combustible.name) * (combustible.amount_required))
+            .inputs(ore(combustible.name) * (combustible.amount))
             .outputs(metaitem('ingotNickel'))
-            .outputs(metaitem(combustible.byproduct) * (combustible.amount_required))
+            .outputs(metaitem(combustible.byproduct) * (combustible.amount))
             .duration(250)
             .buildAndRegister()
 
     PRIMITIVEBLASTFURNACE.recipeBuilder()
             .inputs(ore('dustGarnierite'))
-            .inputs(ore(combustible.name) * (combustible.amount_required))
+            .inputs(ore(combustible.name) * (combustible.amount))
             .outputs(metaitem('ingotNickel'))
-            .outputs(metaitem(combustible.byproduct) * (combustible.amount_required))
+            .outputs(metaitem(combustible.byproduct) * (combustible.amount))
             .duration(250)
             .buildAndRegister()
 
     PRIMITIVEBLASTFURNACE.recipeBuilder()
             .inputs(ore('dustPentlandite'))
-            .inputs(ore(combustible.name) * (combustible.amount_required) * 4)
+            .inputs(ore(combustible.name) * (combustible.amount * 4))
             .outputs(metaitem('ingotNickel'))
-            .outputs(metaitem(combustible.byproduct) * (combustible.amount_required) * 4)
+            .outputs(metaitem(combustible.byproduct) * (combustible.amount * 4))
             .duration(250)
             .buildAndRegister()
 
     EBF.recipeBuilder()
             .inputs(ore('dustGarnierite'))
-            .inputs(ore(combustible.name) * (combustible.amount_required))
+            .inputs(ore(combustible.name) * (combustible.amount))
             .outputs(metaitem('ingotNickel'))
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .EUt(30)

@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 AUTOCLAVE = recipemap('autoclave')
 ROASTER = recipemap('roaster')
@@ -69,12 +70,10 @@ CHEMICAL_BATH.recipeBuilder()
         .buildAndRegister()
 
 //SMELTING
-def combustibles = Globals.combustibles
-
-for (combustible in combustibles) {
+for (combustible in CarbonGlobals.combustibles()) {
     REACTION_FURNACE.recipeBuilder()
             .inputs(ore('dustCassiteriteConcentrate'))
-            .inputs(ore(combustible.name) * (combustible.amount_required) * 2)
+            .inputs(ore(combustible.name) * (combustible.amount * 2))
             .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_tin') * 190)
             .fluidOutputs(fluid('tin_dross') * 25)
@@ -85,7 +84,7 @@ for (combustible in combustibles) {
 
     REACTION_FURNACE.recipeBuilder()
             .inputs(ore('dustLeachedCassiteriteConcentrate'))
-            .inputs(ore(combustible.name) * (combustible.amount_required) * 2)
+            .inputs(ore(combustible.name) * (combustible.amount * 2))
             .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_tin') * 190)
             .fluidOutputs(fluid('tin_dross') * 25)

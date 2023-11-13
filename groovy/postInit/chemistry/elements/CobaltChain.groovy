@@ -1,13 +1,12 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 ROASTER = recipemap('roaster')
 
-def combustibles = Globals.combustibles
-
-for (combustible in combustibles) {
+for (combustible in CarbonGlobals.combustibles()) {
     ROASTER.recipeBuilder()
         .inputs(ore('dustCobaltOxide') * 2)
-        .inputs(ore(combustible.name) * (combustible.amount_required))
+        .inputs(ore(combustible.name) * (combustible.amount))
         .outputs(metaitem('dustCobalt'))
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .duration(120)

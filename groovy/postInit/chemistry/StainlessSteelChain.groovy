@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
@@ -81,11 +82,11 @@ EBF.recipeBuilder()
 //     .EUt(Globals.voltAmps[3])
 //     .buildAndRegister()
 
-for (highPurityCombustible in Globals.highPurityCombustibles) {
+for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
     EBF.recipeBuilder()
     .inputs(ore('dustSiliconDioxide') * 3)
     .inputs(ore('dustIron') * 3)
-    .inputs(ore(highPurityCombustible.name) * 2)
+    .inputs(ore(highPurityCombustible.name) * (highPurityCombustible.amount * 2))
     .outputs(metaitem('dustFerrosilicon') * 4)
     .fluidOutputs(fluid('carbon_monoxide') * 2000)
     .blastFurnaceTemp(1400)

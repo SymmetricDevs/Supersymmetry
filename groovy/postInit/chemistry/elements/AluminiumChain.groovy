@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 ROASTER = recipemap('roaster')
 CENTRIFUGE = recipemap('centrifuge')
@@ -113,12 +114,10 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .buildAndRegister()
 
 // EBF
-def combustibles = Globals.combustibles
-
-for (combustible in combustibles) {
+for (combustible in CarbonGlobals.combustibles()) {
         EBF.recipeBuilder()
         .inputs(ore('dustAlumina') * 10)
-        .inputs(ore(combustible.name) * combustible.amount_required * 3)
+        .inputs(ore(combustible.name) * (combustible.amount * 3))
         .fluidOutputs(fluid('carbon_dioxide') * 3000)
         .outputs(metaitem('ingotAluminium') * 4)
         .blastFurnaceTemp(1200)
