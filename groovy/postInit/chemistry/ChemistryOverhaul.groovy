@@ -2036,7 +2036,7 @@ DRYER.recipeBuilder()
 for (carbon in CarbonGlobals.sources) {
     EBF.recipeBuilder()
             .inputs(ore('dustQuicklime') * 2)
-            .inputs(ore(carbon.name) * carbon.amount_equialent(2))
+            .inputs(ore(carbon.name) * carbon.amount_equialent(3))
             .outputs(metaitem('dustCalciumCarbide') * 3)
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .blastFurnaceTemp(2473)
@@ -2389,7 +2389,7 @@ for (carbon in CarbonGlobals.dusts()) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustCertusQuartz') * 3)
-            .inputs(ore(carbon.name) * carbon.amount_equialent(3))
+            .inputs(ore(carbon.name) * carbon.amount_equialent(2))
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
