@@ -37,6 +37,11 @@ class CarbonGlobals {
         int carbon
         String byproduct
 
+        // currently not used, but may be interesting for future uses
+        public int amount_of_carbon(int required_carbon) {
+            return item_amount_of_provider(required_carbon, this.carbon)
+        }
+
         public int amount_equialent(int required_carbon_items) {
             return item_amount_of_provider(required_carbon_items * UNIVERSAL_COAL_EQUIALENT, this.carbon)
         }
