@@ -756,7 +756,6 @@ public class OrganicChemistryMaterials {
                 .polymer(1)
                 .components(Carbon, 17, Hydrogen, 16, Nitrogen, 2, Oxygen, 4)
                 .color(0xd1d1d1)
-                .flags(GENERATE_FINE_WIRE)
                 .fluidTemp(438)
                 .build()
                 .setFormula('(C15H10N2O2)(C2H6O2)', true);
