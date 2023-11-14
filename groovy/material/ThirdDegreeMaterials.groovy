@@ -468,5 +468,11 @@ public class ThirdDegreeMaterials {
                 .components(CalciumChloride, 1, Dimethylacetamide, 4)
                 .colorAverage()
                 .build();
+
+        SodiumCelluloseXanthateSolution = new Material.Builder(24073, SuSyUtility.susyId('sodium_cellulose_xanthate_solution'))
+                .fluid()
+                .components(SodiumCelluloseXanthate, 1, SodiumHydroxide, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }

@@ -109,12 +109,9 @@ public class OrganicChemistryMaterials {
 
         Rayon = new Material.Builder(15014, SuSyUtility.susyId('rayon'))
                 .components(Carbon, 6, Hydrogen, 10, Oxygen, 5)
-                .flags(GENERATE_FINE_WIRE)
                 .color(0xaee8d9)
-                .fluidTemp(438)
                 .build()
                 
-
         Rayon.setFormula('C6H5(OH)4OH', true)
         Rayon.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
 
@@ -951,7 +948,7 @@ public class OrganicChemistryMaterials {
                 .build()
 
         Kevlar.setFormula('[COC6H4CONHC6H4NH]n', true)
-        Kevlar.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, true))
+        Kevlar.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
 
         BiphenylTetracarboxylicAcidDianhydride = new Material.Builder(15155, SuSyUtility.susyId('biphenyl_tetracarboxylic_acid_dianhydride'))
                 .dust()
@@ -960,11 +957,11 @@ public class OrganicChemistryMaterials {
                 .build()
 
         CelluloseAcetate = new Material.Builder(15157, SuSyUtility.susyId('cellulose_acetate'))
-                .polymer()
-                .flags(GENERATE_FINE_WIRE)
                 .components(Carbon, 76, Hydrogen, 114, Oxygen, 49)
                 .color(0xd4c9ab)
                 .build()
+
+        CelluloseAcetate.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
 
         Pyridine = new Material.Builder(15158, SuSyUtility.susyId('pyridine'))
                 .fluid()
@@ -1888,6 +1885,6 @@ public class OrganicChemistryMaterials {
                 .build();
 
         Nomex.setFormula('[COC6H4CONHC6H4NH]n', true)
-        Nomex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, true))
+        Nomex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
     }
 }

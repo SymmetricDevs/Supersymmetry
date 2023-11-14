@@ -483,6 +483,7 @@ class SuSyMaterials {
 	public static Material RawPolydimethylsiloxaneMixture;
         public static Material AcidicDinitrobenzeneMixture;
         public static Material DinitrobenzeneMixture;
+        public static Material Cotton;
 
         // Petrochem Materials
 
@@ -1496,6 +1497,7 @@ class SuSyMaterials {
         public static Material NomexPolymerizationMix;
         public static Material KevlarPolymerizationMix;
         public static Material SpentDimethylacetamide;
+        public static Material SodiumCelluloseXanthateSolution;
 
         // Thermodynamics/Greenhouse Materials
 

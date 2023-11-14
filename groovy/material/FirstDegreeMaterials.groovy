@@ -2968,11 +2968,7 @@ public class FirstDegreeMaterials{
 
         SodiumMolybdateSolution.setFormula("(Na2MoO4)(H2O)", true)
 
-        ManganeseIISulfate = new Material.Builder(8532, SuSyUtility.susyId('manganese_ii_sulfate'))
-                .dust()
-                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
-                .colorAverage()
-                .build();
+        // FREE ID: 8532
 
         DilutedSilverNitrateSolution = new Material.Builder(8533, SuSyUtility.susyId('diluted_silver_nitrate_solution'))
                 .fluid()

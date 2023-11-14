@@ -11,8 +11,10 @@ CENTRIFUGE = recipemap('centrifuge')
 GREENHOUSE = recipemap('greenhouse')
 COMPRESSOR = recipemap('compressor')
 CHEMICAL_BATH = recipemap('chemical_bath')
-PYROLYSE_OVEN = recipemap('pyrolyse_oven');
-EXTRUDER = recipemap('extruder');
+PYROLYSE_OVEN = recipemap('pyrolyse_oven')
+EXTRUDER = recipemap('extruder')
+EXTRACTOR = recipemap('extractor')
+MACERATOR = recipemap('macerator')
 
 //REMOVALS
 
@@ -32,12 +34,32 @@ crafting.addShaped("susy:cotton_seeds", metaitem('seed.cotton') * 2, [
 ])
 
 EXTRUDER.recipeBuilder()
-        .inputs(metaitem('crop.cotton'))
-        .notConsumable(metaitem('shape.extruder.rod'))
-        .outputs(item('minecraft:string') * 4)
+        .inputs(metaitem('crop.cotton') * 20)
+        .notConsumable(ore('gearSteel') * 8)
+        .outputs(metaitem('seed.cotton') * 5)
+        .outputs(metaitem('stem.cotton') * 5)
+        .outputs(metaitem('fiberCotton') * 40)
         .EUt(7)
         .duration(80)
         .buildAndRegister()
+
+EXTRACTOR.recipeBuilder()
+        .inputs(metaitem('seed.cotton'))
+        .fluidOutputs(fluid('seed_oil') * 10)
+        .EUt(2)
+        .duration(32)
+        .buildAndRegister()
+
+crafting.addShapeless('string.cotton', item('minecraft:string'), [
+    metaitem('threadCotton')
+]) 
+
+MACERATOR.recipeBuilder()
+        .inputs(ore('threadCotton') * 2)
+        .outputs(metaitem('dustCellulose'))
+        .duration(100)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
 
 //GREENHOUSE
 

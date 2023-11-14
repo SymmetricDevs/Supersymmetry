@@ -8,6 +8,8 @@ import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.properties.*
 
 import supersymmetry.api.util.SuSyUtility;
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey;
+import supersymmetry.api.unification.material.properties.FiberProperty;
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -1850,5 +1852,12 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0x1f6478)
                 .build();
+
+        Cotton = new Material.Builder(4353, SuSyUtility.susyId("cotton"))
+                .color(0xf0edd8)
+                .build();
+
+        Cotton.setFormula('C6H5(OH)4OH', true)
+        Cotton.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
     }
 }
