@@ -1159,7 +1159,7 @@ ROASTER.recipeBuilder()
 
 MIXER.recipeBuilder()
 .fluidInputs(fluid('water') * 1000)
-.inputs(ore('dustIronIiiChloride') * 8)
+.inputs(ore('dustIronIiiChloride') * 4)
 .fluidOutputs(fluid('iron_iii_chloride_solution') * 1000)
 .duration(160)
 .EUt(30)
