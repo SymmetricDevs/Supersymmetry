@@ -100,7 +100,7 @@ DISTILLERY.recipeBuilder()
     .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('fiberKevlar') * 8)
+    .inputs(ore('threadKevlar') * 8)
     .outputs(metaitem('plateKevlar'))
     .EUt(1920)
     .duration(300)

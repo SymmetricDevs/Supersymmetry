@@ -1885,5 +1885,16 @@ public class OrganicChemistryMaterials {
 
         Nomex.setFormula('[COC6H4CONHC6H4NH]n', true)
         Nomex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
+
+        UltraHighMolecularWeightPolyethylene = new Material.Builder(15300, SuSyUtility.susyId('ultra_high_molecular_weight_polyethylene'))
+                .dust().fluid()
+                .flags(GENERATE_PLATE)
+                .components(Carbon, 2, Hydrogen, 4)
+                .color(0xc5e3de)
+                .iconSet(SHINY)
+                .build();
+
+        UltraHighMolecularWeightPolyethylene.setFormula('[C2H4]n', true)
+        UltraHighMolecularWeightPolyethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true))
     }
 }

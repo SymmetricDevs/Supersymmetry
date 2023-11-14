@@ -937,7 +937,6 @@ class SuSyMaterials {
         public static Material NickelSulfateSolution;
         public static Material AluminiumNitride;
         public static Material AluminiumOxynitride;
-        public static Material UltraHighMolecularWeightPolyethylene;
         public static Material GoldAmalgam;
         public static Material AntimonyTrichloride;
         public static Material AntimonyPentachloride;
@@ -1420,6 +1419,7 @@ class SuSyMaterials {
         public static Material OneThreeDinitrobenzene;
         public static Material MetaPhenylenediamine;
         public static Material Nomex;
+        public static Material UltraHighMolecularWeightPolyethylene;
 
         // Third Degree Materials
 

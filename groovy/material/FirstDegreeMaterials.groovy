@@ -2811,13 +2811,7 @@ public class FirstDegreeMaterials{
                 .iconSet(GLASS)
                 .build();
 
-        UltraHighMolecularWeightPolyethylene = new Material.Builder(8510, SuSyUtility.susyId('ultra_high_molecular_weight_polyethylene'))
-                .polymer()
-                .flags(GENERATE_PLATE)
-                .components(Carbon, 2, Hydrogen, 4)
-                .color(0xc5e3de)
-                .iconSet(SHINY)
-                .build();
+        //FREE ID: 8510
 
         AntimonyTrichloride = new Material.Builder(8511, SuSyUtility.susyId('antimony_trichloride'))
                 .dust().fluid()
