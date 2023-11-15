@@ -12,7 +12,7 @@ class CarbonGlobals {
         int amount
         int duration
         {
-            amount = amount_equivalent(1)
+            amount = equivalent(1)
         }
     }
 
@@ -41,7 +41,9 @@ class CarbonGlobals {
             return item_amount_of_provider(required_carbon, this.carbon)
         }
 
-        public int amount_equivalent(int required_carbon_items) {
+        // Return the number of CarbonSource items with summary carbon content
+        // equal to carbon content of %required_carbon_items% anthracite items
+        public int equivalent(int required_carbon_items) {
             return item_amount_of_provider(required_carbon_items * UNIVERSAL_COAL_EQUIVALENT, this.carbon)
         }
     }

@@ -157,7 +157,7 @@ DISTILLERY.recipeBuilder()
 for (carbon in CarbonGlobals.sources) {
     ROASTER.recipeBuilder()
         .fluidInputs(fluid('oxygen') * 1000)
-        .inputs(ore(carbon.name) * carbon.amount_equivalent(1))
+        .inputs(ore(carbon.name) * carbon.equivalent(1))
         .circuitMeta(1)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .duration(80)
@@ -170,7 +170,7 @@ for (carbon in CarbonGlobals.sources) {
 for (carbon in CarbonGlobals.sources) {
     ROASTER.recipeBuilder()
         .fluidInputs(fluid('oxygen') * 2000)
-        .inputs(ore(carbon.name) * carbon.amount_equivalent(1))
+        .inputs(ore(carbon.name) * carbon.equivalent(1))
         .circuitMeta(2)
         .fluidOutputs(fluid('carbon_dioxide') * 1000)
         .duration(40)
@@ -182,7 +182,7 @@ for (carbon in CarbonGlobals.sources) {
 
 for (carbon in CarbonGlobals.sources) {
     ROASTER.recipeBuilder()
-        .inputs(ore(carbon.name) * carbon.amount_equivalent(1))
+        .inputs(ore(carbon.name) * carbon.equivalent(1))
         .inputs(ore('dustSulfur') * 2)
         .fluidOutputs(fluid('carbon_disulfide') * 1000)
         .duration(100)
@@ -2036,7 +2036,7 @@ DRYER.recipeBuilder()
 for (carbon in CarbonGlobals.sources) {
     EBF.recipeBuilder()
             .inputs(ore('dustQuicklime') * 2)
-            .inputs(ore(carbon.name) * carbon.amount_equivalent(3))
+            .inputs(ore(carbon.name) * carbon.equivalent(3))
             .outputs(metaitem('dustCalciumCarbide') * 3)
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .blastFurnaceTemp(2473)
@@ -2370,7 +2370,7 @@ ROASTER.recipeBuilder()
 for (carbon in CarbonGlobals.dusts()) {
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustSiliconDioxide') * 3)
-            .inputs(ore(carbon.name) * carbon.amount_equivalent(1))
+            .inputs(ore(carbon.name) * carbon.equivalent(1))
             .outputs(metaitem('dustSilicon'))
             .circuitMeta(1)
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
@@ -2380,7 +2380,7 @@ for (carbon in CarbonGlobals.dusts()) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustQuartzite') * 3)
-            .inputs(ore(carbon.name) * carbon.amount_equivalent(1))
+            .inputs(ore(carbon.name) * carbon.equivalent(1))
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2389,7 +2389,7 @@ for (carbon in CarbonGlobals.dusts()) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustCertusQuartz') * 3)
-            .inputs(ore(carbon.name) * carbon.amount_equivalent(2))
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2398,7 +2398,7 @@ for (carbon in CarbonGlobals.dusts()) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustNetherQuartz') * 3)
-            .inputs(ore(carbon.name) * carbon.amount_equivalent(2))
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2407,7 +2407,7 @@ for (carbon in CarbonGlobals.dusts()) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustSiliconDioxide') * 3)
-            .inputs(ore(carbon.name) * carbon.amount_equivalent(3))
+            .inputs(ore(carbon.name) * carbon.equivalent(3))
             .circuitMeta(2)
             .outputs(metaitem('dustSiliconCarbide') * 2)
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
