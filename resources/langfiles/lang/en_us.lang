@@ -2197,8 +2197,8 @@ tooltip.computronics.waila.tape.tapeinserted=Tape Inserted
 item.susy.material.ultra_high_molecular_weight_polyethylene.dustTiny=Tiny Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp
 item.susy.material.ultra_high_molecular_weight_polyethylene.dustSmall=Small Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp
 item.susy.material.ultra_high_molecular_weight_polyethylene.dust=Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp
-item.susy.material.ultra_high_molecular_weight_polyethylene.plate=Ultra High Molecular Weight Polyethylene (UHMWPE) Sheet
-item.susy.material.kevlar.plate=Kevlar Sheet
+item.susy.material.ultra_high_molecular_weight_polyethylene.plate=Woven Ultra High Molecular Weight Polyethylene (UHMWPE)
+item.susy.material.kevlar.plate=Woven Kevlar
 
 # Resin Logs
 gregtech.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log

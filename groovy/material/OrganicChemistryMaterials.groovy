@@ -1819,6 +1819,8 @@ public class OrganicChemistryMaterials {
                 .color(0x7e9e8e)
                 .build();
 
+        PolyethyleneTerephthalate.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true))
+
         AmocoTerephthalicAcid = new Material.Builder(15290, SuSyUtility.susyId('amoco_terephthalic_acid'))
                 .dust()
                 .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)

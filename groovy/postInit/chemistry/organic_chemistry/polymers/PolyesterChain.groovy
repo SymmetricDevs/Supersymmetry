@@ -31,5 +31,13 @@ POLYMERIZATION.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
+FLUID_SOLIDIFIER.recipeBuilder()
+    .notConsumable(metaitem('spinneret'))
+    .fluidInputs(fluid('polyethylene_terephthalate') * 144)
+    .outputs(metaitem('fiberPolyethyleneTerephthalate'))
+    .EUt(480)
+    .duration(20)
+    .buildAndRegister()
+
 furnace.add(ore('foilPolyethyleneTerephthalate'), metaitem('mylar'), 0f)
 oreDict.add('foilMylar', metaitem('mylar'))
