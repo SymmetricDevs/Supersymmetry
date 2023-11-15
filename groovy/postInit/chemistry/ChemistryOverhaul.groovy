@@ -2370,7 +2370,7 @@ ROASTER.recipeBuilder()
 for (carbon in CarbonGlobals.dusts()) {
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustSiliconDioxide') * 3)
-            .inputs(ore(carbon.name) * carbon.equivalent(1))
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
             .outputs(metaitem('dustSilicon'))
             .circuitMeta(1)
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
@@ -2380,7 +2380,7 @@ for (carbon in CarbonGlobals.dusts()) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustQuartzite') * 3)
-            .inputs(ore(carbon.name) * carbon.equivalent(1))
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
