@@ -86,6 +86,9 @@ class CarbonGlobals {
         new CarbonSource('dustLignite', 25, 'dustTinyAsh')
     ]
 
+    static Map sourcesMap = sources.collectEntries{[it.name, it]}
+    public static List byNames(List names) { sourcesMap.subMap(names)*.value }
+
     public static List combustibles() { sources.grep(Combustible) }
     public static List highPurityCombustibles() { sources.grep(HighPurityCombustible) }
     public static List dusts() { sources.grep { it.name.startsWith('dust') } }
