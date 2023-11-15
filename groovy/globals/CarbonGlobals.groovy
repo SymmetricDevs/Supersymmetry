@@ -17,7 +17,6 @@ class CarbonGlobals {
     }
 
     trait HighPurityCombustible extends Combustible {}
-    trait Dust {}
 
     // Get number of items which would contatin `required` amount of
     // material if single item has `provider` amount
@@ -48,45 +47,45 @@ class CarbonGlobals {
     }
 
     public static sources = [
-        new CarbonSource('dustCarbon', 100, 'dustTinyAsh').withTraits(HighPurityCombustible, Dust).tap {
+        new CarbonSource('dustCarbon', 100, 'dustTinyAsh').withTraits(HighPurityCombustible).tap {
             duration = 1
         },
         new CarbonSource('gemCoke', 100, 'dustTinyAsh').withTraits(Combustible).tap {
             duration = 2
         },
-        new CarbonSource('dustCoke', 100, 'dustTinyAsh').withTraits(HighPurityCombustible, Dust).tap {
+        new CarbonSource('dustCoke', 100, 'dustTinyAsh').withTraits(HighPurityCombustible).tap {
             duration = 2
         },
         new CarbonSource('gemAnthracite', 90, 'dustTinyAsh').withTraits(Combustible).tap {
             duration = 2
         },
-        new CarbonSource('dustAnthracite', 90, 'dustTinyAsh').withTraits(Combustible, Dust).tap {
+        new CarbonSource('dustAnthracite', 90, 'dustTinyAsh').withTraits(Combustible).tap {
             duration = 2
         },
         new CarbonSource('gemLigniteCoke', 75, 'dustTinyAsh').withTraits(Combustible).tap {
             duration = 3
         },
-        new CarbonSource('dustLigniteCoke', 75, 'dustTinyAsh').withTraits(Combustible, Dust).tap {
+        new CarbonSource('dustLigniteCoke', 75, 'dustTinyAsh').withTraits(Combustible).tap {
             duration = 3
         },
         new CarbonSource('gemCoal', 75, 'dustTinyDarkAsh').withTraits(Combustible).tap {
             duration = 4
         },
-        new CarbonSource('dustCoal', 75, 'dustTinyDarkAsh').withTraits(Combustible, Dust).tap {
+        new CarbonSource('dustCoal', 75, 'dustTinyDarkAsh').withTraits(Combustible).tap {
             duration = 4
         },
         new CarbonSource('gemCharcoal', 60, 'dustTinyDarkAsh').withTraits(Combustible).tap {
             duration = 4
         },
-        new CarbonSource('dustCharcoal', 60, 'dustTinyDarkAsh').withTraits(Combustible, Dust).tap {
+        new CarbonSource('dustCharcoal', 60, 'dustTinyDarkAsh').withTraits(Combustible).tap {
             duration = 4
         },
         new CarbonSource('gemLignite', 25, 'dustTinyAsh'),
-        new CarbonSource('dustLignite', 25, 'dustTinyAsh').withTraits(Dust)
+        new CarbonSource('dustLignite', 25, 'dustTinyAsh')
     ]
 
     public static List combustibles() { sources.grep(Combustible) }
     public static List highPurityCombustibles() { sources.grep(HighPurityCombustible) }
-    public static List dusts() { sources.grep(Dust) }
+    public static List dusts() { sources.grep { it.name.startsWith('dust') } }
 
 }
