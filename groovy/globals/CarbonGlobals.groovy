@@ -18,6 +18,10 @@ class CarbonGlobals {
 
     trait HighPurityCombustible extends Combustible {}
 
+    trait Pyrolyzable {
+        String pyrolysis_product
+    }
+
     // Get number of items which would contatin %required% amount of
     // material if single item has %provider% amount
     // E.g. for 90 carbon this would yield 1 for dustCarbon or
@@ -51,43 +55,57 @@ class CarbonGlobals {
         new CarbonSource('dustCarbon', 100, 'dustTinyAsh').withTraits(HighPurityCombustible).tap {
             duration = 1
         },
-        new CarbonSource('gemCoke', 100, 'dustTinyAsh').withTraits(Combustible).tap {
+        new CarbonSource('gemCoke', 100, 'dustTinyAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 2
+            pyrolysis_product = 'dustCarbon'
         },
-        new CarbonSource('dustCoke', 100, 'dustTinyAsh').withTraits(HighPurityCombustible).tap {
+        new CarbonSource('dustCoke', 100, 'dustTinyAsh').withTraits(HighPurityCombustible, Pyrolyzable).tap {
             duration = 2
+            pyrolysis_product = 'dustCarbon'
         },
-        new CarbonSource('gemAnthracite', 90, 'dustTinyAsh').withTraits(Combustible).tap {
+        new CarbonSource('gemAnthracite', 90, 'dustTinyAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 2
+            pyrolysis_product = 'gemCoke'
         },
-        new CarbonSource('dustAnthracite', 90, 'dustTinyAsh').withTraits(Combustible).tap {
+        new CarbonSource('dustAnthracite', 90, 'dustTinyAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 2
+            pyrolysis_product = 'dustCoke'
         },
-        new CarbonSource('gemLigniteCoke', 75, 'dustTinyAsh').withTraits(Combustible).tap {
+        new CarbonSource('gemLigniteCoke', 75, 'dustTinyAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 3
+            pyrolysis_product = 'dustCarbon'
         },
-        new CarbonSource('dustLigniteCoke', 75, 'dustTinyAsh').withTraits(Combustible).tap {
+        new CarbonSource('dustLigniteCoke', 75, 'dustTinyAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 3
+            pyrolysis_product = 'dustCarbon'
         },
-        new CarbonSource('gemCoal', 75, 'dustTinyDarkAsh').withTraits(Combustible).tap {
+        new CarbonSource('gemCoal', 75, 'dustTinyDarkAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 4
+            pyrolysis_product = 'gemCoke'
         },
-        new CarbonSource('dustCoal', 75, 'dustTinyDarkAsh').withTraits(Combustible).tap {
+        new CarbonSource('dustCoal', 75, 'dustTinyDarkAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 4
+            pyrolysis_product = 'dustCoke'
         },
-        new CarbonSource('gemCharcoal', 60, 'dustTinyDarkAsh').withTraits(Combustible).tap {
+        new CarbonSource('gemCharcoal', 60, 'dustTinyDarkAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 4
+            pyrolysis_product = 'gemCoke'
         },
-        new CarbonSource('dustCharcoal', 60, 'dustTinyDarkAsh').withTraits(Combustible).tap {
+        new CarbonSource('dustCharcoal', 60, 'dustTinyDarkAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 4
+            pyrolysis_product = 'dustCoke'
         },
-        new CarbonSource('gemLignite', 25, 'dustTinyAsh'),
-        new CarbonSource('dustLignite', 25, 'dustTinyAsh')
+        new CarbonSource('gemLignite', 25, 'dustTinyAsh').withTraits(Pyrolyzable).tap {
+            pyrolysis_product = 'gemLigniteCoke'
+        },
+        new CarbonSource('dustLignite', 25, 'dustTinyAsh').withTraits(Pyrolyzable).tap {
+            pyrolysis_product = 'dustLigniteCoke'
+        }
     ]
 
-    public static Map sourcesMap = sources.collectEntries{[it.name, it]}
-    // %names% may contain duplicates, so we can't just slap a submap here
-    public static List byNames(List names) { names.collect { sourcesMap[it] } }
+    static Map sourcesMap = sources.collectEntries{[it.name, it]}
+    public static def byName(String name) {sourcesMap[name] }
+    public static List byNames(List names) { sourcesMap.subMap(names)*.value }
 
     public static List combustibles() { sources.grep(Combustible) }
     public static List highPurityCombustibles() { sources.grep(HighPurityCombustible) }

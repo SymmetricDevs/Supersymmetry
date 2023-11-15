@@ -13,14 +13,9 @@ def MIXER = recipemap('mixer');
 def CSTR = recipemap('continuous_stirred_tank_reactor');
 def DISTILLERY = recipemap('distillery');
 
-static List make_pyrolysis_io(List input, List output) {
-    [CarbonGlobals.byNames(input), CarbonGlobals.byNames(output)].transpose()
-}
-
-make_pyrolysis_io(['dustCoal', 'gemCoal', 'dustCharcoal', 'gemCharcoal'],
-/* output */      ['dustCoke', 'gemCoke', 'dustCoke',     'gemCoke'    ])
-.each { input, output ->
+CarbonGlobals.byNames(['dustCoal', 'gemCoal', 'dustCharcoal', 'gemCharcoal']).each { input ->
     int CARBON_PROCESSED = 1200
+    def output = CarbonGlobals.byName(input.pyrolysis_product)
     PYROLYSE_OVEN.recipeBuilder()
         .inputs(ore(input.name) * input.num_items_by_carbon(CARBON_PROCESSED))
         .outputs(metaitem(output.name) * output.num_items_by_carbon(CARBON_PROCESSED))
@@ -31,10 +26,9 @@ make_pyrolysis_io(['dustCoal', 'gemCoal', 'dustCharcoal', 'gemCharcoal'],
         .buildAndRegister()
 }
 
-make_pyrolysis_io(['dustAnthracite', 'gemAnthracite'],
-/* output */      ['dustCoke',       'gemCoke'      ])
-.each { input, output ->
+CarbonGlobals.byNames(['dustAnthracite', 'gemAnthracite']).each { input ->
     int CARBON_PROCESSED = 1400
+    def output = CarbonGlobals.byName(input.pyrolysis_product)
     PYROLYSE_OVEN.recipeBuilder()
         .inputs(ore(input.name) * input.num_items_by_carbon(CARBON_PROCESSED))
         .outputs(metaitem(output.name) * output.num_items_by_carbon(CARBON_PROCESSED))
@@ -45,10 +39,9 @@ make_pyrolysis_io(['dustAnthracite', 'gemAnthracite'],
         .buildAndRegister()
 }
 
-make_pyrolysis_io(['dustLignite',     'gemLignite'],
-/* output */      ['dustLigniteCoke', 'gemLigniteCoke'])
-.each { input, output ->
+CarbonGlobals.byNames(['dustLignite', 'gemLignite']).each { input ->
     int CARBON_PROCESSED = 400
+    def output = CarbonGlobals.byName(input.pyrolysis_product)
     PYROLYSE_OVEN.recipeBuilder()
         .inputs(ore(input.name) * input.num_items_by_carbon(CARBON_PROCESSED))
         .outputs(metaitem(output.name) * output.num_items_by_carbon(CARBON_PROCESSED))
@@ -59,9 +52,8 @@ make_pyrolysis_io(['dustLignite',     'gemLignite'],
         .buildAndRegister()
 }
 
-make_pyrolysis_io(['dustCoke',   'gemCoke'],
-/* output */      ['dustCarbon', 'dustCarbon'])
-.each { input, output ->
+CarbonGlobals.byNames(['dustCoke', 'gemCoke']).each { input ->
+    def output = CarbonGlobals.byName(input.pyrolysis_product)
     PYROLYSE_OVEN.recipeBuilder()
         .inputs(ore(input.name) * 16)
         .outputs(metaitem(output.name) * 12)
@@ -72,9 +64,8 @@ make_pyrolysis_io(['dustCoke',   'gemCoke'],
         .buildAndRegister()
 }
 
-make_pyrolysis_io(['dustLigniteCoke', 'gemLigniteCoke'],
-/* output */      ['dustCarbon',      'dustCarbon'])
-.each { input, output ->
+CarbonGlobals.byNames(['dustLigniteCoke', 'gemLigniteCoke']).each { input ->
+    def output = CarbonGlobals.byName(input.pyrolysis_product)
     PYROLYSE_OVEN.recipeBuilder()
         .inputs(ore(input.name) * 16)
         .outputs(metaitem(output.name) * 9)
