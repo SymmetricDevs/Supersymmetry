@@ -113,19 +113,6 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .EUt(40)
         .buildAndRegister()
 
-// EBF
-for (combustible in CarbonGlobals.combustibles()) {
-        EBF.recipeBuilder()
-        .inputs(ore('dustAlumina') * 10)
-        .inputs(ore(combustible.name) * (combustible.amount * 3))
-        .fluidOutputs(fluid('carbon_dioxide') * 3000)
-        .outputs(metaitem('ingotAluminium') * 4)
-        .blastFurnaceTemp(1200)
-        .duration(60)
-        .EUt(Globals.voltAmps[3] * 2)
-        .buildAndRegister()
-}
-
 // Production of cryolite
 
 ROASTER.recipeBuilder()
