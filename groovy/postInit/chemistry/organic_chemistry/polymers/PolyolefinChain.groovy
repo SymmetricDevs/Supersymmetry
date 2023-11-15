@@ -1,7 +1,7 @@
 import static globals.Globals.*
 
 POLYMERIZATION = recipemap('polymerization_tank')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
+EXTRUDER = recipemap('extruder')
 
 // Polyethylene
 
@@ -66,10 +66,10 @@ POLYMERIZATION.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-FLUID_SOLIDIFIER.recipeBuilder()
+EXTRUDER.recipeBuilder()
         .notConsumable(metaitem('spinneret'))
         .fluidInputs(fluid('ultra_high_molecular_weight_polyethylene') * 144)
-        .outputs(metaitem('fiberUltraHighMolecularWeightPolyethylene'))
+        .outputs(metaitem('fiberUltraHighMolecularWeightPolyethylene') * 8)
         .EUt(480)
         .duration(20)
         .buildAndRegister()
