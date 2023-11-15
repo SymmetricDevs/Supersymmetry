@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
@@ -12,41 +13,77 @@ def MIXER = recipemap('mixer');
 def CSTR = recipemap('continuous_stirred_tank_reactor');
 def DISTILLERY = recipemap('distillery');
 
-PYROLYSE_OVEN.recipeBuilder()
-        .inputs(item('minecraft:coal', 1) * 16)
-        .outputs(metaitem('gemCoke') * 12)
+static List make_pyrolysis_io(List input, List output) {
+    [CarbonGlobals.byNames(input), CarbonGlobals.byNames(output)].transpose()
+}
+
+make_pyrolysis_io(['dustCoal', 'gemCoal', 'dustCharcoal', 'gemCharcoal'],
+/* output */      ['dustCoke', 'gemCoke', 'dustCoke',     'gemCoke'    ])
+.each { input, output ->
+    int CARBON_PROCESSED = 1200
+    PYROLYSE_OVEN.recipeBuilder()
+        .inputs(ore(input.name) * input.num_items_by_carbon(CARBON_PROCESSED))
+        .outputs(metaitem(output.name) * output.num_items_by_carbon(CARBON_PROCESSED))
         .fluidOutputs(fluid('coal_gas') * 2500)
         .fluidOutputs(fluid('coal_tar') * 2500)
         .duration(320)
         .EUt(60)
         .buildAndRegister()
+}
 
-PYROLYSE_OVEN.recipeBuilder()
-        .inputs(item('minecraft:coal') * 16)
-        .outputs(metaitem('gemCoke') * 12)
-        .fluidOutputs(fluid('coal_gas') * 2500)
-        .fluidOutputs(fluid('coal_tar') * 2500)
-        .duration(320)
-        .EUt(60)
-        .buildAndRegister()
-
-PYROLYSE_OVEN.recipeBuilder()
-        .inputs(ore('gemAnthracite') * 16)
-        .outputs(metaitem('gemCoke') * 14)
+make_pyrolysis_io(['dustAnthracite', 'gemAnthracite'],
+/* output */      ['dustCoke',       'gemCoke'      ])
+.each { input, output ->
+    int CARBON_PROCESSED = 1400
+    PYROLYSE_OVEN.recipeBuilder()
+        .inputs(ore(input.name) * input.num_items_by_carbon(CARBON_PROCESSED))
+        .outputs(metaitem(output.name) * output.num_items_by_carbon(CARBON_PROCESSED))
         .fluidOutputs(fluid('coal_gas') * 3200)
         .fluidOutputs(fluid('coal_tar') * 3200)
         .duration(320)
         .EUt(60)
         .buildAndRegister()
+}
 
-PYROLYSE_OVEN.recipeBuilder()
-        .inputs(ore('gemCoke') * 16)
-        .outputs(metaitem('dustCarbon') * 12)
+make_pyrolysis_io(['dustLignite',     'gemLignite'],
+/* output */      ['dustLigniteCoke', 'gemLigniteCoke'])
+.each { input, output ->
+    int CARBON_PROCESSED = 400
+    PYROLYSE_OVEN.recipeBuilder()
+        .inputs(ore(input.name) * input.num_items_by_carbon(CARBON_PROCESSED))
+        .outputs(metaitem(output.name) * output.num_items_by_carbon(CARBON_PROCESSED))
+        .fluidOutputs(fluid('creosote') * 1600)
+        .fluidOutputs(fluid('syngas') * 2000)
+        .duration(320)
+        .EUt(60)
+        .buildAndRegister()
+}
+
+make_pyrolysis_io(['dustCoke',   'gemCoke'],
+/* output */      ['dustCarbon', 'dustCarbon'])
+.each { input, output ->
+    PYROLYSE_OVEN.recipeBuilder()
+        .inputs(ore(input.name) * 16)
+        .outputs(metaitem(output.name) * 12)
         .fluidInputs(fluid('steam') * 15000)
         .fluidOutputs(fluid('syngas') * 12000)
         .duration(320)
         .EUt(60)
         .buildAndRegister()
+}
+
+make_pyrolysis_io(['dustLigniteCoke', 'gemLigniteCoke'],
+/* output */      ['dustCarbon',      'dustCarbon'])
+.each { input, output ->
+    PYROLYSE_OVEN.recipeBuilder()
+        .inputs(ore(input.name) * 16)
+        .outputs(metaitem(output.name) * 9)
+        .fluidInputs(fluid('steam') * 15000)
+        .fluidOutputs(fluid('syngas') * 12000)
+        .duration(320)
+        .EUt(60)
+        .buildAndRegister()
+}
 
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('coal_gas') * 10000)
@@ -180,47 +217,7 @@ DISTILLATION_TOWER.recipeBuilder()
         .EUt(48)
         .buildAndRegister()
 
-// Lignite processing
-
-//----- Lignite pyrolysis to Lignite Coke
-PYROLYSE_OVEN.recipeBuilder()
-        .inputs(ore('gemLignite') * 16)
-        .outputs(metaitem('gemLigniteCoke') * 4)
-        .fluidOutputs(fluid('creosote') * 2000)
-        .fluidOutputs(fluid('syngas') * 3200)
-        .duration(320)
-        .EUt(60)
-        .buildAndRegister()
-
-PYROLYSE_OVEN.recipeBuilder()
-        .inputs(ore('dustLignite') * 16)
-        .outputs(metaitem('dustLigniteCoke') * 4)
-        .fluidOutputs(fluid('creosote') * 2000)
-        .fluidOutputs(fluid('syngas') * 3200)
-        .duration(320)
-        .EUt(60)
-        .buildAndRegister()
-
-//----- Lignite Coke pyrolysis
-PYROLYSE_OVEN.recipeBuilder()
-        .inputs(ore('gemLigniteCoke') * 16)
-        .outputs(metaitem('dustCarbon') * 9)
-        .fluidInputs(fluid('steam') * 15000)
-        .fluidOutputs(fluid('syngas') * 12000)
-        .duration(320)
-        .EUt(60)
-        .buildAndRegister()
-
-PYROLYSE_OVEN.recipeBuilder()
-        .inputs(ore('dustLigniteCoke') * 16)
-        .outputs(metaitem('dustCarbon') * 9)
-        .fluidInputs(fluid('steam') * 15000)
-        .fluidOutputs(fluid('syngas') * 12000)
-        .duration(320)
-        .EUt(60)
-        .buildAndRegister()
-
-//----- Centrifuging to Carbon
+// Centrifuging Lignite to Carbon
 CENTRIFUGE.recipeBuilder()
         .inputs(ore('dustLignite'))
         .chancedOutput(metaitem('dustCarbon'), 2500, 0)

@@ -18,11 +18,11 @@ class CarbonGlobals {
 
     trait HighPurityCombustible extends Combustible {}
 
-    // Get number of items which would contatin `required` amount of
-    // material if single item has `provider` amount
+    // Get number of items which would contatin %required% amount of
+    // material if single item has %provider% amount
     // E.g. for 90 carbon this would yield 1 for dustCarbon or
     // dustAnthracite and 2 for dustCharcoal or gemLigniteCoke
-    static int item_amount_of_provider(int required, int provider) {
+    static int num_item_by_provider(int required, int provider) {
         int result = required.intdiv(provider)
         if (required % provider > 0) {
             result += 1
@@ -36,15 +36,14 @@ class CarbonGlobals {
         int carbon
         String byproduct
 
-        // currently not used, but may be interesting for future uses
-        public int amount_of_carbon(int required_carbon) {
-            return item_amount_of_provider(required_carbon, this.carbon)
+        public int num_items_by_carbon(int required_carbon) {
+            return num_item_by_provider(required_carbon, this.carbon)
         }
 
         // Return the number of CarbonSource items with summary carbon content
         // equal to carbon content of %required_carbon_items% anthracite items
         public int equivalent(int required_carbon_items) {
-            return item_amount_of_provider(required_carbon_items * UNIVERSAL_COAL_EQUIVALENT, this.carbon)
+            return num_item_by_provider(required_carbon_items * UNIVERSAL_COAL_EQUIVALENT, this.carbon)
         }
     }
 
@@ -86,8 +85,9 @@ class CarbonGlobals {
         new CarbonSource('dustLignite', 25, 'dustTinyAsh')
     ]
 
-    static Map sourcesMap = sources.collectEntries{[it.name, it]}
-    public static List byNames(List names) { sourcesMap.subMap(names)*.value }
+    public static Map sourcesMap = sources.collectEntries{[it.name, it]}
+    // %names% may contain duplicates, so we can't just slap a submap here
+    public static List byNames(List names) { names.collect { sourcesMap[it] } }
 
     public static List combustibles() { sources.grep(Combustible) }
     public static List highPurityCombustibles() { sources.grep(HighPurityCombustible) }
