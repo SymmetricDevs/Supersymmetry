@@ -13,6 +13,8 @@ import gregtech.api.unification.material.properties.PropertyKey;
 import static material.SuSyMaterials.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import supersymmetry.api.recipes.SuSyRecipeMaps;
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey;
+import supersymmetry.api.unification.material.properties.FiberProperty;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.fluids.fluidType.FluidTypes;
