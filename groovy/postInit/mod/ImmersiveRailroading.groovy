@@ -218,12 +218,12 @@ SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
 		.buildAndRegister();
 
 // large steam locomotive
-TagCompound tag = new TagCompound();
+tag = new TagCompound();
 
 tag.setString("defID", "rolling_stock/locomotives/k4_pacific.json");
 tag.setFloat("gauge", (float) Gauges.STANDARD);
 
-cam72cam.mod.item.ItemStack is = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+is = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
 is.setTagCompound(tag);
 
 // 4-6-2 wheel config
