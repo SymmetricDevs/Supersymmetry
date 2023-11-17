@@ -1864,5 +1864,19 @@ public class OrganicChemistryMaterials {
                 .color(0x609169)
                 .iconSet(DULL)
                 .build();
+
+        DodecanesulfonicAcid = new Material.Builder(1529, SuSyUtility.susyId('dodec'))
+                .dust()
+                .components(Carbon, 12, Hydrogen, 26, Sulfur, 1, Oxygen, 4)
+                .iconSet(SAND)
+                .color(0xd8dbb8)
+                .build();
+                
+        SodiumDodecylSulfate = new Material.Builder(1529, SuSyUtility.susyId('dodec'))
+                .dust()
+                .components(Carbon, 12, Hydrogen, 25 Sulfur, 1, Oxygen, 4, Sodium, 1)
+                .iconSet(SAND)
+                .color(0xe6e4cf)
+                .build();
     }
 }

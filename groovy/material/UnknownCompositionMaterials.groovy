@@ -1838,6 +1838,11 @@ public class UnknownCompositionMaterials {
         RawPolydimethylsiloxaneMixture = new Material.Builder(4350, SuSyUtility.susyId("raw_polydimethylsiloxane_mixture"))
                 .fluid()
                 .color(0xf6f7f0)
-                .build();  
+                .build();
+
+        LubricityAdditive = new Material.Builder(4351, SuSyUtility.susyId("lubricity_additive"))
+                .fluid()
+                .color(0xab8f61)
+                .build();
     }
 }

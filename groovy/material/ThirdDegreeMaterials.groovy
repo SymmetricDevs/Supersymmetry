@@ -450,5 +450,11 @@ public class ThirdDegreeMaterials {
                 .components(MethylParaToluate, 1, DimethylTerephthalate, 1)
                 .colorAverage()
                 .build();
+
+        SodiumDodecylSulfateSolution = new Material.Builder(24070, SuSyUtility.susyId('sodium_dodecyl_sulfate_solution'))
+                .fluid()
+                .components(SodiumDodecylSulfate, 1, Salt, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }

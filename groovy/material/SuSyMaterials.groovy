@@ -478,10 +478,10 @@ class SuSyMaterials {
         public static Material ImpureCelestineSlurry;
         public static Material CelestineSlurry;
         public static Material BariumResidue;
-
 	public static Material OrganosiliconMixture;
 	public static Material ImpurePolydimethylsiloxaneMixture;
 	public static Material RawPolydimethylsiloxaneMixture;
+        public static Mateiral LubricityAdditive;
 
         // Petrochem Materials
 
@@ -1415,6 +1415,9 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalate;
         public static Material WetTerephthalicAcid;
         public static Material WetIsophthalicAcid;
+        public static Material ChlorosulfuricAcid;
+        public static Material DodecanesulfonicAcid;
+        public static Material SodiumDodecylSulfate;
 
         // Third Degree Materials
 
@@ -1489,6 +1492,7 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalateSolution;
         public static Material TerephthalateMotherLiquor;
         public static Material MethylParaToluateMixture;
+        public static Material SodiumDodecylSulfateSolution;
 
         // Thermodynamics/Greenhouse Materials
 

@@ -3278,6 +3278,12 @@ public class FirstDegreeMaterials{
                 .color(0xfc7e89)
                 .build();
 
-        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)   
+        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)
+
+        ChlorosulfuricAcid = new Material.Builder(8578, SuSyUtility.susyId("chlorosulfuric_acid"))
+                .fluid(FluidTypes.ACID)
+                .components(Hydrogen, 1, Sulfur, 1, Oxygen, 3, Chlorine, 1)
+                .colorAverage()
+                .build();
     }
 }

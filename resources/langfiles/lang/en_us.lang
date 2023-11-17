@@ -1770,6 +1770,11 @@ susy.material.terephthalate_mother_liquor=Terephthalate Mother Liquor
 susy.material.wet_terephthalic_acid=Wet Terephthalic Acid
 susy.material.wet_isophthalic_acid=Wet Isophthalic Acid
 susy.material.methyl_para_toluate_mixture=Methyl p-Toluate Mixture
+susy.material.chlorosulfuric_acid=Chlorosulfuric Acid
+susy.material.sodium_dodecyl_sulfate_solution=Sodium Dodecyl Sulfate Solution
+susy.material.dodecanesulfonic_acid=Dodecanesulfonic Acid
+susy.material.sodium_dodecyl_sulfate=Sodium Dodecyl Sulfate
+susy.material.lubricity_additive=Lubricity Additive
 
 # Isotopes
 
