@@ -130,6 +130,12 @@ eventManager.listen {
 
         customMetaItems.addItem(300, "mylar")
 
+        customMetaItems.addItem(301, "train_unshaped_wheel")
+        customMetaItems.addItem(302, "train_small_wheel")
+        customMetaItems.addItem(303, "train_drive_wheel")
+        customMetaItems.addItem(304, "train_bogie")
+        customMetaItems.addItem(305, "train_steam_boiler")
+
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);
