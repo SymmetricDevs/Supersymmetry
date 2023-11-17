@@ -1865,7 +1865,7 @@ metaitem.bound_leather.name=Bound Leather
 
 metaitem.vacuum_tube_components.name=Vacuum Tube Components
 metaitem.mylar.name=Thin Mylar Sheet
-metaitem.train_small_wheel.name=Unshaped Train Wheel
+metaitem.train_unshaped_wheel.name=Unshaped Train Wheel
 metaitem.train_small_wheel.name=Small Train Wheel
 metaitem.train_drive_wheel.name=Train Drive Wheel
 metaitem.train_bogie.name=Train Bogie
