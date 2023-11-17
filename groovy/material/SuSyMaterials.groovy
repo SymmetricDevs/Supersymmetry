@@ -484,6 +484,10 @@ class SuSyMaterials {
         public static Material AcidicDinitrobenzeneMixture;
         public static Material DinitrobenzeneMixture;
         public static Material Cotton;
+        public static Material Spandex;
+        public static Material PolyurethanePolymerizationMix;
+        public static Material SpandexPrepolymer;
+        public static Material SpandexPolymerizationMix;
 
         // Petrochem Materials
 
@@ -1013,6 +1017,7 @@ class SuSyMaterials {
         public static Material ImpureStrontiumSulfide;
         public static Material DilutedAceticAcid;
         public static Material CobaltIIAcetate;
+        public static Material HydrogenIodide;
 
         // Second Degree Materials
 
@@ -1226,7 +1231,6 @@ class SuSyMaterials {
         public static Material MethyleneDiphenylDiisocyanate;
         public static Material Triethylenediamine;
         public static Material Polyurethane;
-        public static Material MemoryFoam;
         public static Material Rayon;
         public static Material AlkaliCellulose;
         public static Material SodiumCelluloseXanthate;
@@ -1420,6 +1424,7 @@ class SuSyMaterials {
         public static Material MetaPhenylenediamine;
         public static Material Nomex;
         public static Material UltraHighMolecularWeightPolyethylene;
+        public static Material AdipicAcid;
 
         // Third Degree Materials
 
@@ -1534,6 +1539,7 @@ class SuSyMaterials {
         public static Material LiquidDeoxygenatedArgon;
         public static Material LiquidWasteNitrogen;
         public static Material PartiallyLiquefiedArgon;
+        public static Material SupercriticalCarbonDioxide;
 
         public static void init() {
                 ElementMaterials.register();

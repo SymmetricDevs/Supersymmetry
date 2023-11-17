@@ -2301,7 +2301,7 @@ FLUID_HEATER.recipeBuilder()
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
 
-CHEMICAL_BATH.recipeBuilder()
+DRYER.recipeBuilder()
         .fluidInputs(fluid('cellulose_acetate_solution') * 2000)
         .fluidInputs(fluid('hot_air') * 1000)
         .notConsumable(metaitem('spinneret'))
@@ -4441,3 +4441,14 @@ FBR.recipeBuilder()
     .EUt(120)
     .duration(4)
     .buildAndRegister()
+
+// Hydrogen Iodide
+
+BR.recipeBuilder()
+.fluidInputs(fluid('iodine') * 576)
+.fluidInputs(fluid('hydrazine') * 1000)
+.fluidOutputs(fluid('hydrogen_iodide') * 4000)
+.fluidOutputs(fluid('nitrogen') * 2000)
+.duration(80)    
+.EUt(30)
+.buildAndRegister()

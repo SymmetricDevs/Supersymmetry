@@ -100,12 +100,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        MemoryFoam = new Material.Builder(15013, SuSyUtility.susyId('memory_foam'))
-                .polymer(1)
-                .flags(GENERATE_PLATE)
-                .color(0xFFFFFF)
-                .fluidTemp(438)
-                .build()
+        //FREE ID: 15013
 
         Rayon = new Material.Builder(15014, SuSyUtility.susyId('rayon'))
                 .components(Carbon, 6, Hydrogen, 10, Oxygen, 5)
@@ -753,10 +748,10 @@ public class OrganicChemistryMaterials {
                 .build()
 
         Polyurethane = new Material.Builder(15124, SuSyUtility.susyId('polyurethane'))
-                .polymer(1)
+                .dust()
                 .components(Carbon, 17, Hydrogen, 16, Nitrogen, 2, Oxygen, 4)
                 .color(0xd1d1d1)
-                .fluidTemp(438)
+                .flags(NO_UNIFICATION, GENERATE_PLATE, FORCE_GENERATE_BLOCK)
                 .build()
                 .setFormula('(C15H10N2O2)(C2H6O2)', true);
 
@@ -1898,5 +1893,11 @@ public class OrganicChemistryMaterials {
 
         UltraHighMolecularWeightPolyethylene.setFormula('[C2H4]n', true)
         UltraHighMolecularWeightPolyethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true))
+
+        AdipicAcid = new Material.Builder(15301, SuSyUtility.susyId('adipic_acid'))
+                .dust()
+                .components(Carbon, 6, Hydrogen, 10, Oxygen, 4)
+                .color(0xe3ddb6)
+                .build();
     }
 }

@@ -1859,5 +1859,26 @@ public class UnknownCompositionMaterials {
 
         Cotton.setFormula('C6H5(OH)4OH', true)
         Cotton.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+
+        Spandex = new Material.Builder(4354, SuSyUtility.susyId("spandex"))
+                .color(0x625f8a)
+                .build();
+
+        Spandex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+
+        PolyurethanePolymerizationMix = new Material.Builder(4355, SuSyUtility.susyId("polyurethane_polymerization_mix"))
+                .fluid()
+                .color(0x9c9c9c)
+                .build();
+
+        SpandexPrepolymer = new Material.Builder(4356, SuSyUtility.susyId("spandex_prepolymer"))
+                .fluid()
+                .color(0x393563)
+                .build();
+
+        SpandexPolymerizationMix = new Material.Builder(4357, SuSyUtility.susyId("spandex_polymerization_mix"))
+                .fluid()
+                .color(0x494575)
+                .build();
     }
 }

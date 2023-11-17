@@ -498,7 +498,7 @@ crafting.replaceShaped('gregtech:filter_casing', item('gregtech:cleanroom_casing
 mods.gregtech.assembler.recipeBuilder()
         .inputs(ore('stickLongWood') * 4)
         .inputs(ore('plateWood') * 8)
-        .inputs(ore('plateMemoryFoam') * 16)
+        .inputs(ore('platePolyurethane') * 16)
         .inputs(ore('threadRayon') * 64)
         .inputs(ore('springSmallSteel') * 8)
         .outputs(item('minecraft:bed'))

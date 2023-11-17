@@ -2811,7 +2811,11 @@ public class FirstDegreeMaterials{
                 .iconSet(GLASS)
                 .build();
 
-        //FREE ID: 8510
+        HydrogenIodide = new Material.Builder(8510, SuSyUtility.susyId('hydrogen_iodide'))
+                .fluid(FluidTypes.GAS)
+                .components(Hydrogen, 1, Iodine, 1)
+                .colorAverage()
+                .build();
 
         AntimonyTrichloride = new Material.Builder(8511, SuSyUtility.susyId('antimony_trichloride'))
                 .dust().fluid()
