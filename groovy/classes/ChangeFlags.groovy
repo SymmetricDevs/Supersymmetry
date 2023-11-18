@@ -74,7 +74,7 @@ class ChangeFlags {
         AquaRegia.setFormula("(HNO3)(HCl)3", true);
         Tantalite.setFormula("(Fe,Mn)Ta2O6", true);
 
-	    Borax.setProperty(PropertyKey.ORE, new OreProperty());
+        Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
         Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
         Asbestos.addFlags("generate_foil");
