@@ -1775,6 +1775,9 @@ susy.material.sodium_dodecyl_sulfate_solution=Sodium Dodecyl Sulfate Solution
 susy.material.dodecanesulfonic_acid=Dodecanesulfonic Acid
 susy.material.sodium_dodecyl_sulfate=Sodium Dodecyl Sulfate
 susy.material.lubricity_additive=Lubricity Additive
+susy.material.dinonylnaphthalene=Dinonylnaphthalene
+susy.material.dinonylnaphthalene_sulfonic_acid=Dinonylnaphthalene Sulfonic Acid
+susy.material.antistatic_additive=Antistatic Additive
 
 # Isotopes
 

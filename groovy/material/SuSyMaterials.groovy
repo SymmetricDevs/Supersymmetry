@@ -482,6 +482,7 @@ class SuSyMaterials {
 	public static Material ImpurePolydimethylsiloxaneMixture;
 	public static Material RawPolydimethylsiloxaneMixture;
         public static Mateiral LubricityAdditive;
+        public static Mateiral AntistaticAdditive;
 
         // Petrochem Materials
 
@@ -1418,6 +1419,8 @@ class SuSyMaterials {
         public static Material ChlorosulfuricAcid;
         public static Material DodecanesulfonicAcid;
         public static Material SodiumDodecylSulfate;
+        public static Mateiral Dinonylnaphthalene;
+        public static Mateiral DinonylnaphthaleneSulfonate;
 
         // Third Degree Materials
 

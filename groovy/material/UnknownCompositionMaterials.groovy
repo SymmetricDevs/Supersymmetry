@@ -1844,5 +1844,10 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xab8f61)
                 .build();
+
+        AntistaticAdditive = new Material.Builder(4352, SuSyUtility.susyId("antistatic_additive"))
+                .fluid()
+                .color(0xd1cc8e)
+                .build();
     }
 }

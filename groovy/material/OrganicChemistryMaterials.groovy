@@ -1865,18 +1865,32 @@ public class OrganicChemistryMaterials {
                 .iconSet(DULL)
                 .build();
 
-        DodecanesulfonicAcid = new Material.Builder(1529, SuSyUtility.susyId('dodec'))
+        DodecanesulfonicAcid = new Material.Builder(15297, SuSyUtility.susyId('dodecanesulfonic_acid'))
                 .dust()
                 .components(Carbon, 12, Hydrogen, 26, Sulfur, 1, Oxygen, 4)
                 .iconSet(SAND)
                 .color(0xd8dbb8)
                 .build();
                 
-        SodiumDodecylSulfate = new Material.Builder(1529, SuSyUtility.susyId('dodec'))
+        SodiumDodecylSulfate = new Material.Builder(15298, SuSyUtility.susyId('sodium_dodecyl_sulfate'))
                 .dust()
                 .components(Carbon, 12, Hydrogen, 25 Sulfur, 1, Oxygen, 4, Sodium, 1)
                 .iconSet(SAND)
                 .color(0xe6e4cf)
+                .build();
+
+        Dinonylnaphthalene = new Material.Builder(15299, SuSyUtility.susyId('dinonylnaphthalene'))
+                .dust()
+                .components(Carbon, 28, Hydrogen, 44)
+                .iconSet(SAND)
+                .color(0xbfa263)
+                .build();
+
+        DinonylnaphthaleneSulfonicAcid = new Material.Builder(15300, SuSyUtility.susyId('dinonylnaphthalene_sulfonic_acid'))
+                .dust()
+                .components(Carbon, 28, Hydrogen, 44, Sulfur, 1, Oxygen, 3)
+                .iconSet(SAND)
+                .color(0xbfb463)
                 .build();
     }
 }

@@ -3525,11 +3525,12 @@ DRYER.recipeBuilder()
 
 // Tosylic Acid, Hydrogen Silsesquioxane
 
-BR.recipeBuilder()
-        .fluidInputs(fluid('toluene') * 1000)
-        .fluidInputs(fluid('oleum') * 1000)
-        .fluidInputs(fluid('distilled_water') * 1000)
-        .fluidOutputs(fluid('tosylic_acid_solution') * 1000)
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('toluene') * 50)
+        .fluidInputs(fluid('oleum') * 550)
+        .fluidInputs(fluid('distilled_water') * 50)
+        .fluidOutputs(fluid('tosylic_acid_solution') * 50)
+        .fluidOutputs(fluid('sulfuric_acid') * 500)
         .duration(20)
         .EUt(30)
         .buildAndRegister()
