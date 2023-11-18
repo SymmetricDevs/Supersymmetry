@@ -453,7 +453,7 @@ public class ThirdDegreeMaterials {
 
         SodiumDodecylSulfateSolution = new Material.Builder(24070, SuSyUtility.susyId('sodium_dodecyl_sulfate_solution'))
                 .fluid()
-                .components(SodiumDodecylSulfate, 1, Salt, 1, Water, 1)
+                .components(SodiumDodecylSulfate, 1, Water, 2)
                 .colorAverage()
                 .build();
     }
