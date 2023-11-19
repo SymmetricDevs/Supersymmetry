@@ -344,6 +344,24 @@ crafting.replaceShaped("gregtech:gregtech.machine.cutter.hv", metaitem('gregtech
 	[ore('circuitHv'), metaitem('cableGtSingleGold'), metaitem('electric.motor.hv')]
 ])
 
+crafting.replaceShaped("gregtech:gregtech.machine.cutter.lv", metaitem('gregtech:cutter.lv'), [
+		[metaitem('cableGtSingleTin'), ore('circuitLv'), item('minecraft:glass')],
+		[metaitem('conveyor.module.lv'), metaitem('gregtech:hull.lv'), metaitem('toolHeadBuzzSawSteel')],
+		[ore('circuitLv'), metaitem('cableGtSingleTin'), metaitem('electric.motor.lv')]
+])
+
+crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.lv", metaitem('gregtech:electrolyzer.lv'), [
+		[metaitem('wireGtSingleSilver'), item('minecraft:glass'), metaitem('wireGtSingleSilver')],
+		[metaitem('wireGtSingleSilver'), metaitem('gregtech:hull.lv'), metaitem('wireGtSingleSilver')],
+		[ore('circuitLv'), metaitem('cableGtSingleTin'), ore('circuitLv')]
+])
+
+crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metaitem('gregtech:electrolyzer.mv'), [
+		[metaitem('wireGtSingleGold'), item('minecraft:glass'), metaitem('wireGtSingleGold')],
+		[metaitem('wireGtSingleGold'), metaitem('gregtech:hull.mv'), metaitem('wireGtSingleGold')],
+		[ore('circuitMv'), metaitem('cableGtSingleCopper'), ore('circuitMv')]
+])
+
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
 //     [ore('craftingToolFile'), null, null],
 //     [null, ore('ingotRubber'), null],
