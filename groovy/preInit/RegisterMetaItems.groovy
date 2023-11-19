@@ -320,5 +320,81 @@ eventManager.listen {
         customMetaItems.addItem(9000, "seed.cotton");
         customMetaItems.addItem(9001, "crop.cotton");
 
+		//Combat and Guns 10,000 - 10,100
+		// Bullet Casings
+		customMetaItems.addItem(10000, "bullet.primer");
+		customMetaItems.addItem(10001, "bullet.casing_small");
+		customMetaItems.addItem(10002, "bullet.casing_medium");
+		customMetaItems.addItem(10003, "bullet.casing_large");	
+		customMetaItems.addItem(10004, "bullet.casing_shotgun");
+		// Gun Barrels
+		customMetaItems.addItem(10010, "barrel.lv");
+		customMetaItems.addItem(10011, "barrel.mv");
+		customMetaItems.addItem(10012, "barrel.hv");
+		customMetaItems.addItem(10013, "barrel.ev");
+		customMetaItems.addItem(10014, "barrel.iv");
+		customMetaItems.addItem(10015, "barrel.mg");
+		// Rifle Stocks
+		customMetaItems.addItem(10020, "stock.wood");
+		customMetaItems.addItem(10021, "stock.treated_wood");
+		customMetaItems.addItem(10022, "stock.plastic");
+		customMetaItems.addItem(10023, "stock.advanced_plastic");
+		//10030-10040 rear grips
+		customMetaItems.addItem(10030, "rear_grip.wood");
+		customMetaItems.addItem(10031, "rear_grip.treated_wood");
+		customMetaItems.addItem(10032, "rear_grip.plastic");
+		customMetaItems.addItem(10033, "rear_grip.advanced_plastic");
+		//10040-10050 handguards
+		customMetaItems.addItem(10040, "handguard.wood");
+		customMetaItems.addItem(10041, "handguard.treated_wood");
+		customMetaItems.addItem(10042, "handguard.stainless_steel");
+		customMetaItems.addItem(10043, "handguard.titanium");
+		customMetaItems.addItem(10044, "handguard.tungsten_steel");
+		//10050-10060 pistol body
+		customMetaItems.addItem(10050, "pistol_body.MV");
+		customMetaItems.addItem(10051, "pistol_body.HV");
+		customMetaItems.addItem(10052, "pistol_body.EV");
+		customMetaItems.addItem(10053, "pistol_body.IV");
+		//10060-10070 pistol slide
+		customMetaItems.addItem(10060, "pistol_slide.MV");
+		customMetaItems.addItem(10061, "pistol_slide.HV");
+		customMetaItems.addItem(10062, "pistol_slide.EV");
+		customMetaItems.addItem(10063, "pistol_slide.IV");
+		//10070-10080 smg body
+		customMetaItems.addItem(10070, "smg_body.MV");
+		customMetaItems.addItem(10071, "smg_body.HV");
+		customMetaItems.addItem(10072, "smg_body.EV");
+		customMetaItems.addItem(10073, "smg_body.IV");
+		//10080-10090 rifle receivers
+		customMetaItems.addItem(10080, "rifle_receiver.lever_action");
+		customMetaItems.addItem(10081, "rifle_receiver.MV");
+		customMetaItems.addItem(10082, "rifle_receiver.HV");
+		customMetaItems.addItem(10083, "rifle_receiver.EV");
+		customMetaItems.addItem(10084, "rifle_receiver.IV");
+		//10090-10100 sniper rifle chassis
+		customMetaItems.addItem(10090, "chassis.wood");
+		customMetaItems.addItem(10091, "chassis.treated_wood");
+		customMetaItems.addItem(10092, "chassis.stainless_steel");
+		customMetaItems.addItem(10093, "chassis.titanium");
+		customMetaItems.addItem(10094, "chassis.tungsten_steel");
+		//10100-10110 bolt action receivers
+		customMetaItems.addItem(10100, "bolt_action.MV");
+		customMetaItems.addItem(10101, "bolt_action.HV");
+		customMetaItems.addItem(10102, "bolt_action.EV");
+		customMetaItems.addItem(10103, "bolt_action.IV");
+		//Bingus's additions
+		//UMP-45 shenanigans (10200-10220)
+		customMetaItems.addItem(10200, "ump_45.bolt");
+		customMetaItems.addItem(10201, "ump_45.recoil_spring_assembly");
+		customMetaItems.addItem(10202, "ump_45.8inch_unrifled_barrel");
+		customMetaItems.addItem(10203, "ump_45.8inch_barrel");
+		customMetaItems.addItem(10204, "ump_45.8inch_threaded_barrel");
+		customMetaItems.addItem(10205, "ump_45.selector_left");
+		customMetaItems.addItem(10206, "ump_45.selector_right");
+		customMetaItems.addItem(10207, "ump_45.selector_ambi");
+		customMetaItems.addItem(10208, "ump_45.trigger_group");
+		customMetaItems.addItem(10209, "ump_45.pistol_grip");
+		customMetaItems.addItem(10210, "ump_45.trigger");
+
         log.infoMC("Finished adding metaitems")
 }

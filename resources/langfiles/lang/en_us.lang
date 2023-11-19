@@ -2141,3 +2141,16 @@ gregtech.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spr
 gregtech.block_group_members.extractable_logs_2.name=Acacia and Dark Oak
 
 gregtech.block_group_members.latex_logs.name=Rubber Log
+
+# Bingus's Additions
+metaitem.ump_45.bolt.name=UMP-45 Bolt
+metaitem.ump_45.recoil_spring_assembly.name=UMP-45 Recoil spring assembly
+metaitem.ump_45.8inch_unrifled_barrel.name=UMP-45 Unrifled 8 inch barrel
+metaitem.ump_45.8inch_barrel.name=UMP-45 8 inch barrel
+metaitem.ump_45.8inch_threaded_barrel.name=UMP-45 Threaded 8 inch barrel
+metaitem.ump_45.selector_left.name=UMP-45 Fire select switch (left)
+metaitem.ump_45.selector_right.name=UMP-45 Fire select switch (right)
+metaitem.ump_45.selector_ambi.name=UMP-45 Ambidextrous fire select switch
+metaitem.ump_45.trigger_group.name=UMP-45 Trigger group
+metaitem.ump_45.pistol_grip.name=UMP-45 Pistol grip
+metaitem.ump_45.trigger.name=UMP-45 Trigger
