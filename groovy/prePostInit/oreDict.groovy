@@ -85,6 +85,10 @@ ore('dyeWhite').add(metaitem('dustLeadNitrate'))
 ore('dyeBlack').add(metaitem('dustCarbon'))
 ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust'))
 
+//Adds non-traditional "ores" to oredict
+
+ore('oreBauxite').add(item('susy:resource_block'))
+
 //Ore dict changes and unification
 //DISABLED FOR NOW DUE TO SERVER CRASHES
 
