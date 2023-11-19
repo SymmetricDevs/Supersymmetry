@@ -1778,6 +1778,8 @@ susy.material.lubricity_additive=Lubricity Additive
 susy.material.dinonylnaphthalene=Dinonylnaphthalene
 susy.material.dinonylnaphthalene_sulfonic_acid=Dinonylnaphthalene Sulfonic Acid
 susy.material.antistatic_additive=Antistatic Additive
+susy.material.antifoaming_additive=Antifoaming Additive
+susy.material.pseudocumene=Pseudocumene
 
 # Isotopes
 

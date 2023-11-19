@@ -1892,5 +1892,11 @@ public class OrganicChemistryMaterials {
                 .iconSet(SAND)
                 .color(0xbfb463)
                 .build();
+
+        Pseudocumene = new Material.Builder(15301, SuSyUtility.susyId('pseudocumene'))
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 12)
+                .color(0x553300)
+                .build();
     }
 }

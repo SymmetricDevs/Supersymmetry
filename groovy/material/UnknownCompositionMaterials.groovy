@@ -1849,5 +1849,10 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xd1cc8e)
                 .build();
+
+        AntifoamingAdditive = new Material.Builder(4353, SuSyUtility.susyId("antifoaming_additive"))
+                .fluid()
+                .color(0x597275)
+                .build();
     }
 }
