@@ -106,6 +106,15 @@ class SuSyMaterials {
         public static Material Carnotite;
         public static Material AlluvialPlatinum;
 
+        // Deposits for scanning
+
+        public static Material OrthomagmaticDeposit;
+        public static Material MetamorphicDeposit;
+        public static Material SedimentaryDeposit;
+        public static Material HydrothermalDeposit;
+        public static Material AlluvialDeposit;
+        public static Material MagmaticHydrothermalDeposit;
+
         // Roasted Ores
 
         public static Material RoastedSperrylite;
@@ -407,7 +416,7 @@ class SuSyMaterials {
         public static Material PropanalMixture;
         public static Material ZSMFive;
         public static Material AminatedEthyleneMixture;
-	public static Material NeutralizedAminatedEthyleneMixture;
+        public static Material NeutralizedAminatedEthyleneMixture;
         public static Material SiftedPyrochlore;
         public static Material PyrochloreConcentrate;
         public static Material ImpurePyrochloreSlurry;
@@ -479,9 +488,9 @@ class SuSyMaterials {
         public static Material CelestineSlurry;
         public static Material BariumResidue;
 
-	public static Material OrganosiliconMixture;
-	public static Material ImpurePolydimethylsiloxaneMixture;
-	public static Material RawPolydimethylsiloxaneMixture;
+        public static Material OrganosiliconMixture;
+        public static Material ImpurePolydimethylsiloxaneMixture;
+        public static Material RawPolydimethylsiloxaneMixture;
 
         // Petrochem Materials
 
@@ -1361,17 +1370,17 @@ class SuSyMaterials {
         public static Material NBromopropane;
         public static Material TetrapropylammoniumBromide;
         public static Material Propionaldehyde;
-	public static Material Triethylenetetramine;
-	public static Material Aminoethylpiperazine;
-	public static Material Diethylenetriamine;
-	public static Material Piperazine;
-	public static Material Cyclooctadiene;
-	public static Material TriethylPhosphate;
-	public static Material IsopropenylAcetate;
-	public static Material Acetylacetone;
-	public static Material NickelIIBisacetylacetonate;
-	public static Material BiscyclooctadienenickelZero;
-	public static Material DiethylaluminiumAcetylacetonate;
+        public static Material Triethylenetetramine;
+        public static Material Aminoethylpiperazine;
+        public static Material Diethylenetriamine;
+        public static Material Piperazine;
+        public static Material Cyclooctadiene;
+        public static Material TriethylPhosphate;
+        public static Material IsopropenylAcetate;
+        public static Material Acetylacetone;
+        public static Material NickelIIBisacetylacetonate;
+        public static Material BiscyclooctadienenickelZero;
+        public static Material DiethylaluminiumAcetylacetonate;
         public static Material OxalicAcid;
         public static Material OneAmidoethylTwoAlkylTwoImidazoline;
         public static Material Chlorodiphenylphosphine;
@@ -1477,7 +1486,7 @@ class SuSyMaterials {
         public static Material TetrabromobisphenolASolution;
         public static Material EpoxyCuringMixture;
         public static Material WetFlameRetardantEpoxy;
-        public static Material PropyleneOxideSolution;        
+        public static Material PropyleneOxideSolution;
         public static Material DilutedZincChlorideSolution;
         public static Material HydrogenSilsesquioxanePhotoresist;
         public static Material CrudeTerephthalicAcidSolution;

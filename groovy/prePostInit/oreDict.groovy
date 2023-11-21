@@ -85,9 +85,14 @@ ore('dyeWhite').add(metaitem('dustLeadNitrate'))
 ore('dyeBlack').add(metaitem('dustCarbon'))
 ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust'))
 
-//Adds non-traditional "ores" to oredict
+ore('ore').add(item('susy:resource_block'))
 
-ore('oreBauxite').add(item('susy:resource_block'))
+ore('oreOrthomagmaticDeposit').add(item('susy:deposit_block:0'))
+ore('oreMetamorphicDeposit').add(item('susy:deposit_block:1'))
+ore('oreSedimentaryDeposit').add(item('susy:deposit_block:2'))
+ore('oreHydrothermalDeposit').add(item('susy:deposit_block:3'))
+ore('oreAlluvialDeposit').add(item('susy:deposit_block:4'))
+ore('oreMagmaticHydrothermalDeposit').add(item('susy:deposit_block:5'))
 
 //Ore dict changes and unification
 //DISABLED FOR NOW DUE TO SERVER CRASHES
