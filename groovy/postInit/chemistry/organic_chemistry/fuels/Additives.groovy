@@ -313,53 +313,24 @@ CSTR.recipeBuilder()
         .EUt(120)
         .buildAndRegister()
 
-// Cetane improver active ingredients
+// Cetane improver (2-ethylhexyl nitrate)
 
-    // Di-tert-butyl peroxide
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('two_ethylhexanol') * 50)
+    .fluidInputs(fluid('nitration_mixture') * 100)
+    .fluidOutputs(fluid('diluted_two_ethylhexyl_nitrate') * 150)
+    .duration(5)
+    .EUt(120)
+    .buildAndRegister()
 
-    CSTR.recipeBuilder()
-        .fluidInputs(fluid('isobutane') * 50)
-        .fluidInputs(fluid('oxygen') * 100)
-        .fluidOutputs(fluid('tert_butyl_hydroperoxide') * 50)
-        .duration(5)
-        .EUt(120)
-        .buildAndRegister()
-
-    TBR.recipeBuilder()
-        .fluidInputs(fluid('tert_butyl_hydroperoxide') * 50)
-        .fluidInputs(fluid('tert_butyl_alcohol') * 50)
-        .notConsumable(metaitem('dustMolecularSieve'))
-        .fluidOutputs(fluid('diluted_di_tert_butyl_peroxide') * 100)
-        .duration(5)
-        .EUt(120)
-        .buildAndRegister()
-
-    DT.recipeBuilder()
-        .fluidInputs(fluid('diluted_di_tert_butyl_peroxide') * 2000)
-        .fluidOutputs(fluid('water') * 1000)
-        .fluidOutputs(fluid('di_tert_butyl_peroxide') * 1000)
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
-
-    // 2-ethylhexyl nitrate
-
-    CSTR.recipeBuilder()
-        .fluidInputs(fluid('two_ethylhexanol') * 50)
-        .fluidInputs(fluid('nitration_mixture') * 100)
-        .fluidOutputs(fluid('diluted_two_ethylhexyl_nitrate') * 150)
-        .duration(5)
-        .EUt(120)
-        .buildAndRegister()
-
-    DT.recipeBuilder()
-        .fluidInputs(fluid('diluted_two_ethylhexyl_nitrate') * 3000)
-        .fluidOutputs(fluid('two_ethylhexyl_nitrate') * 1000)
-        .fluidOutputs(fluid('water') * 1000)
-        .fluidOutputs(fluid('sulfuric_acid') * 1000)
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
+DT.recipeBuilder()
+    .fluidInputs(fluid('diluted_two_ethylhexyl_nitrate') * 3000)
+    .fluidOutputs(fluid('two_ethylhexyl_nitrate') * 1000)
+    .fluidOutputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('sulfuric_acid') * 1000)
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister()
 
 // Metal deactivator (N,N’-Disalicylidene-1,2-propanediamine, SALPN)
 
@@ -417,12 +388,14 @@ DISTILLERY.recipeBuilder()
     .buildAndRegister()  
 
 def OxygenateMap = [
-    'ethanol': 500,
-    'methanol': 500,
-    'n_butanol': 100,
-    'tert_butyl_alcohol': 100,
-    'isopropyl_alcohol': 200,
-    'ethyl_tertbutyl_ether': 150
+    'methanol': 125,
+    'ethanol': 125,
+    'n_propanol': 125,
+    'isopropyl_alcohol': 125,
+    'n_butanol': 125,
+    'isobutyl_alcohol': 125,
+    'tert_butyl_alcohol': 125,
+    'ethyl_tertbutyl_ether': 125
 ]
 
 def AntioxidantMap = [
@@ -435,13 +408,6 @@ def AntiknockMap = [
     'toluene': 500,
     'isooctane': 300,
     'tetraethyllead': 100
-]
-
-def AdditivesMap = [
-    'gasoline_general_additives',
-    'gasoline_antioxidants',
-    'gasoline_oxygenates',
-    'gasoline_antiknock'
 ]
 
 def getUniquePairs(Map materialsMap) {
@@ -487,9 +453,9 @@ for (major_solvent in major_solvents) {
     for (minor_solvent in minor_solvents) {
         MIXER.recipeBuilder()
             .inputs(metaitem('dustSmallSodiumDodecylSulfate'))
-            .fluidInputs(fluid('two_butoxyethanol') * 100)
+            .fluidInputs(fluid('two_butoxyethanol') * 250)
             .fluidInputs(fluid(major_solvent) * 1500)
-            .fluidInputs(fluid(minor_solvent) * 400)
+            .fluidInputs(fluid(minor_solvent) * 250)
             .fluidOutputs(fluid('lubricity_additive') * 2000)
             .duration(200)
             .EUt(Globals.voltAmps[2])
@@ -518,6 +484,15 @@ for (major_solvent in major_solvents) {
             .fluidInputs(fluid(major_solvent) * 1500)
             .fluidInputs(fluid(minor_solvent) * 500)
             .fluidOutputs(fluid('metal_deactivator') * 2000)
+            .duration(200)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
+
+        MIXER.recipeBuilder()
+            .fluidInputs(fluid('two_ethylhexyl_nitrate') * 250)
+            .fluidInputs(fluid(major_solvent) * 1500)
+            .fluidInputs(fluid(minor_solvent) * 250)
+            .fluidOutputs(fluid('ignition_improver') * 2000)
             .duration(200)
             .EUt(Globals.voltAmps[2])
             .buildAndRegister()

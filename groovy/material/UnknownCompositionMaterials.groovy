@@ -1871,5 +1871,10 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x9b34a8)
                 .build();
+
+        IgnitionImprover = new Material.Builder(4358, SuSyUtility.susyId('ignition_improver'))
+                .fluid()
+                .color(0x8ede6f)
+                .build();
     }
 }

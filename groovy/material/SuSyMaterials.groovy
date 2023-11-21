@@ -487,6 +487,7 @@ class SuSyMaterials {
         public static Material PropanolamineMix;
         public static Material MetalDeactivator;
         public static Material SalicylideneOneTwoPropanediamineSolution;
+        public static Material IgnitionImprover;
 
         // Petrochem Materials
 
