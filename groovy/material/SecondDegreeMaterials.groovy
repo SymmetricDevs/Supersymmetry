@@ -634,5 +634,17 @@ public class SecondDegreeMaterials {
                 .components(Palladium, 1, ActivatedCarbon, 4)
                 .colorAverage()
                 .build();
+
+        ManganeseIIChlorideSolution = new Material.Builder(8578, SuSyUtility.susyId("manganese_ii_chloride_solution"))
+                .fluid()
+                .components(ManganeseIIChloride, 1, Water, 3)
+                .colorAverage()
+                .build();
+
+        DilutedManganeseIIChlorideSolution = new Material.Builder(8578, SuSyUtility.susyId("diluted_manganese_ii_chloride_solution"))
+                .fluid()
+                .components(ManganeseIIChloride, 1, Water, 6)
+                .colorAverage()
+                .build();
     }
 }

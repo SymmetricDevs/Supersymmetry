@@ -451,6 +451,37 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
+        SodiumDodecylSulfateSolution = new Material.Builder(24070, SuSyUtility.susyId('sodium_dodecyl_sulfate_solution'))
+                .fluid()
+                .components(SodiumDodecylSulfate, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        SodiumCyclopentadienideSolution = new Material.Builder(24071, SuSyUtility.susyId('sodium_cyclopentadienide_solution'))
+                .fluid()
+                .components(Sodium, 1, Carbon, 5, Hydrogen, 5, Tetrahydrofuran, 1)
+                .colorAverage()
+                .build()
+                .setFormula("(NaC5H5)(C4H8O)", true);
+
+        MethylcyclopentadieneSolution = new Material.Builder(24072, SuSyUtility.susyId('methylcyclopentadiene_solution'))
+                .fluid()
+                .components(Methylcyclopentadiene, 1, Tetrahydrofuran, 1, Salt, 2)
+                .colorAverage()
+                .build();
+
+        BismethylcyclopentadienylmanganeseSolution = new Material.Builder(24073, SuSyUtility.susyId('bismethylcyclopentadienylmanganese_solution'))
+                .fluid()
+                .components(Bismethylcyclopentadienylmanganese, 1, Diglyme, 1, Salt, 2)
+                .colorAverage()
+                .build();
+
+        SalicylaldehydeSolution = new Material.Builder(24074, SuSyUtility.susyId('salicylaldehyde_solution'))
+                .fluid()
+                .components(Salicylaldehyde, 1, RockSalt, 3, Water, 2)
+                .colorAverage()
+                .build();
+      
         PolyethyleneVinylAcetateMixture = new Material.Builder(24070, SuSyUtility.susyId('polyethylene_vinyl_acetate_mixture'))
                 .fluid()
                 .components(PolyethyleneVinylAcetate, 1, Methanol, 1)

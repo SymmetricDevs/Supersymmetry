@@ -892,7 +892,7 @@ public class FirstDegreeMaterials{
 
         VeryDilutedSulfuricAcid = new Material.Builder(8219, SuSyUtility.susyId('very_diluted_sulfuric_acid'))
                 .fluid(FluidTypes.ACID)
-                .components(Water, 2, SulfuricAcid, 1)
+                .components(SulfuricAcid, 1, Water, 2)
                 .color(0x54362c)
                 .build()
 
@@ -2014,7 +2014,7 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula("Mn(NO3)2", true)
 
-        PurifiedManganeseDioxide = new Material.Builder(8395, SuSyUtility.susyId('purified_manganese_dioxide'))
+        ManganeseDioxide = new Material.Builder(8395, SuSyUtility.susyId('manganese_dioxide'))
                 .dust()
                 .iconSet('SHINY')
                 .components(Manganese, 1, Oxygen, 2)
@@ -3278,6 +3278,18 @@ public class FirstDegreeMaterials{
                 .color(0xfc7e89)
                 .build();
 
-        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)   
+        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)
+
+        ChlorosulfuricAcid = new Material.Builder(8578, SuSyUtility.susyId("chlorosulfuric_acid"))
+                .fluid(FluidTypes.ACID)
+                .components(Hydrogen, 1, Sulfur, 1, Oxygen, 3, Chlorine, 1)
+                .colorAverage()
+                .build();
+
+        ManganeseIIChloride = new Material.Builder(8579, SuSyUtility.susyId("manganese_ii_chloride"))
+                .dust()
+                .components(Manganese, 1, Chlorine, 2)
+                .colorAverage()
+                .build();
     }
 }

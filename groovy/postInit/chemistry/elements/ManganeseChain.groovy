@@ -129,10 +129,63 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
+// MnCl2
 
+BR.recipeBuilder()
+    .inputs(ore('dustManganese'))
+    .fluidInputs(fluid('chlorine') * 2000)
+    .outputs(metaitem('dustManganeseIiChloride') * 3)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
 
+BR.recipeBuilder()
+    .inputs(ore('dustManganeseIiOxide') * 2)
+    .fluidInputs(fluid('hydrochloric_acid') * 2000)
+    .fluidOutputs(fluid('manganese_ii_chloride_solution') * 3000)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
 
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('manganese_ii_chloride_solution') * 3000)
+    .outputs(metaitem('dustManganeseIiChloride') * 3)
+    .fluidOutputs(fluid('water') * 3000)
+    .duration(20)
+    .EUt(30)
+    .buildAndRegister()
 
+BR.recipeBuilder()
+    .inputs(ore('dustManganeseDioxide') * 3)
+    .fluidInputs(fluid('hydrochloric_acid') * 4000)
+    .fluidOutputs(fluid('dilute_manganese_ii_chloride_solution') * 6000)
+    .fluidOutputs(fluid('chlorine') * 2000)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
 
-    
-    
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('dilute_manganese_ii_chloride_solution') * 3000)
+    .outputs(metaitem('dustManganeseIiChloride') * 3)
+    .fluidOutputs(fluid('water') * 6000)
+    .duration(20)
+    .EUt(30)
+    .buildAndRegister()
+
+// MnO2
+
+BR.recipeBuilder()
+    .inputs(ore('dustPyrolusite') * 3)
+    .fluidInputs(fluid('nitrogen_dioxide') * 2000)
+    .outputs(metaitem('dustManganeseIiNitrate') * 9)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustManganeseIiNitrate') * 9)
+    .fluidOutputs(fluid('nitrogen_dioxide') * 2000)
+    .outputs(metaitem('dustManganeseDioxide') * 3)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()

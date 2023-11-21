@@ -1481,11 +1481,7 @@ public class OrganicChemistryMaterials {
                 .color(0xd13485)
                 .build();
 
-        SodiumCyclopentadienide = new Material.Builder(15235, SuSyUtility.susyId('sodium_cyclopentadienide'))
-                .dust()
-                .components(Sodium, 1, Carbon, 5, Hydrogen, 5)
-                .colorAverage()
-                .build();
+        //FREE ID: 15235
       
         OctylHydroxamicAcid = new Material.Builder(15236, SuSyUtility.susyId('octyl_hydroxamic_acid'))
                 .dust()
@@ -1865,13 +1861,106 @@ public class OrganicChemistryMaterials {
                 .iconSet(DULL)
                 .build();
 
-        PolyethyleneVinylAcetate = new Material.Builder(15297, SuSyUtility.susyId('polyvinyl_ethylene_acetate'))
+        DodecanesulfonicAcid = new Material.Builder(15297, SuSyUtility.susyId('dodecanesulfonic_acid'))
+                .dust()
+                .components(Carbon, 12, Hydrogen, 26, Sulfur, 1, Oxygen, 4)
+                .iconSet(SAND)
+                .color(0xd8dbb8)
+                .build();
+                
+        SodiumDodecylSulfate = new Material.Builder(15298, SuSyUtility.susyId('sodium_dodecyl_sulfate'))
+                .dust()
+                .components(Carbon, 12, Hydrogen, 25 Sulfur, 1, Oxygen, 4, Sodium, 1)
+                .iconSet(SAND)
+                .color(0xe6e4cf)
+                .build();
+
+        Dinonylnaphthalene = new Material.Builder(15299, SuSyUtility.susyId('dinonylnaphthalene'))
+                .dust()
+                .components(Carbon, 28, Hydrogen, 44)
+                .iconSet(SAND)
+                .color(0xbfa263)
+                .build();
+
+        DinonylnaphthaleneSulfonicAcid = new Material.Builder(15300, SuSyUtility.susyId('dinonylnaphthalene_sulfonic_acid'))
+                .dust()
+                .components(Carbon, 28, Hydrogen, 44, Sulfur, 1, Oxygen, 3)
+                .iconSet(SAND)
+                .color(0xbfb463)
+                .build();
+
+        Pseudocumene = new Material.Builder(15301, SuSyUtility.susyId('pseudocumene'))
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 12)
+                .color(0x553300)
+                .build();
+
+        Methylcyclopentadiene = new Material.Builder(15302, SuSyUtility.susyId('methylcyclopentadiene'))
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 8)
+                .color(0x57ab82)
+                .build();
+
+        Methylcyclopentadiene.setFormula('C5H4CH3', true)
+
+        Diglyme = new Material.Builder(15303, SuSyUtility.susyId('diglyme'))
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 14, Oxygen, 3)
+                .color(0x2f9982)
+                .build();
+
+        Bismethylcyclopentadienylmanganese = new Material.Builder(15304, SuSyUtility.susyId('bismethylcyclopentadienylmanganese'))
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 10, Manganese, 1)
+                .color(0x75250d)
+                .build();
+        
+        Bismethylcyclopentadienylmanganese.setFormula('Mn(C5H4CH3)2', true)
+
+        MethylcyclopentadienylmanganeseTricarbonyl = new Material.Builder(15305, SuSyUtility.susyId('methylcyclopentadienylmanganese_tricarbonyl'))
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 7, Oxygen, 3, Manganese, 1)
+                .color(0xa16c0b)
+                .build()
+
+        MethylcyclopentadienylmanganeseTricarbonyl.setFormula('(C5H4CH3)Mn(CO)3', true)
+
+        MethylCarbitol = new Material.Builder(15306, SuSyUtility.susyId('methyl_carbitol'))
+                .fluid()
+                .components(Carbon, 5, Hydrogen, 12, Oxygen, 3)
+                .color(0x3fd1b1)
+                .build();
+
+        DiisopropylParaPhenylenediamine = new Material.Builder(15307, SuSyUtility.susyId('diisopropyl_para_phenylenediamine'))
+                .dust()
+                .components(Carbon, 12, Hydrogen, 22, Nitrogen, 2)
+                .color(0x1d666e)
+                .build();
+
+        OneTwoDiaminopropaneSolution = new Material.Builder(15308, SuSyUtility.susyId('one_two_diaminopropane_solution'))
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 10, Nitrogen, 2, Water, 1)
+                .color(0x22b55d)
+                .build();
+
+        Salicylaldehyde = new Material.Builder(1530, SuSyUtility.susyId('salicylaldehyde'))
+                .fluid()
+                .components(Carbon, 7, Hydrogen, 6, Oxygen, 2)
+                .color(0x3f44a6)
+                .build();
+
+        SalicylideneOneTwoPropanediamine = new Material.Builder(15310, SuSyUtility.susyId('salicylidene_one_two_propanediamine'))
+                .dust()
+                .components(Carbon, 17, Hydrogen, 18, Nitrogen, 2, Oxygen, 2)
+                .color(0x571f80)
+                .build();
+
+         PolyethyleneVinylAcetate = new Material.Builder(15311, SuSyUtility.susyId('polyvinyl_ethylene_acetate'))
                 .polymer()
                 .components(Ethylene, 1, VinylAcetate, 1)
                 .color(0x686ad4)
                 .fluidPipeProperties(363, 100, true)
                 .iconSet(DULL)
                 .build();
-
     }
 }
