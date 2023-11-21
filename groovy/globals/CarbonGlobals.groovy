@@ -9,11 +9,7 @@ class CarbonGlobals {
     static final int UNIVERSAL_COAL_EQUIVALENT = 90
 
     trait Combustible {
-        int amount
         int duration
-        {
-            amount = equivalent(1)
-        }
     }
 
     trait HighPurityCombustible extends Combustible {}

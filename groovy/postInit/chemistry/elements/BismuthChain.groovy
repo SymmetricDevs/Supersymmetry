@@ -20,7 +20,7 @@ ROASTER.recipeBuilder()
 for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         ROASTER.recipeBuilder()
                 .inputs(ore('dustBismuthIiiOxide') * 5)
-                .inputs(ore(highPurityCombustible.name) * (highPurityCombustible.amount * 3))
+                .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(3))
                 .outputs(metaitem('dustBismuth') * 2)
                 .fluidOutputs(fluid('carbon_monoxide') * 3000)
                 .EUt(120)

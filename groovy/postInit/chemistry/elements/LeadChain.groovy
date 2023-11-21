@@ -169,7 +169,7 @@ def combustibles = CarbonGlobals.combustibles()
 for (combustible in combustibles) {
     EBF.recipeBuilder()
             .inputs(ore('dustSinteredLeadConcentrate') * 2)
-            .inputs(ore(combustible.name) * (combustible.amount))
+            .inputs(ore(combustible.name) * combustible.equivalent(1))
             .inputs(ore('dustTinyCalcite'))
             .outputs(metaitem('ingotCrudeLead') * 2)
             .outputs(metaitem(combustible.byproduct))

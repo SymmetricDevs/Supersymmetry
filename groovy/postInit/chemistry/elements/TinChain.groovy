@@ -73,7 +73,7 @@ CHEMICAL_BATH.recipeBuilder()
 for (combustible in CarbonGlobals.combustibles()) {
     REACTION_FURNACE.recipeBuilder()
             .inputs(ore('dustCassiteriteConcentrate'))
-            .inputs(ore(combustible.name) * (combustible.amount * 2))
+            .inputs(ore(combustible.name) * combustible.equivalent(2))
             .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_tin') * 190)
             .fluidOutputs(fluid('tin_dross') * 25)
@@ -84,7 +84,7 @@ for (combustible in CarbonGlobals.combustibles()) {
 
     REACTION_FURNACE.recipeBuilder()
             .inputs(ore('dustLeachedCassiteriteConcentrate'))
-            .inputs(ore(combustible.name) * (combustible.amount * 2))
+            .inputs(ore(combustible.name) * combustible.equivalent(2))
             .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_tin') * 190)
             .fluidOutputs(fluid('tin_dross') * 25)
