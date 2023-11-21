@@ -450,7 +450,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        PolyvinylAcetateSolution = new Material.Builder(15072, SuSyUtility.susyId('polyvinyl_acetate_solution'))
+        PolyvinylAcetateMixture = new Material.Builder(15072, SuSyUtility.susyId('polyvinyl_acetate_mixture'))
                 .fluid()
                 .components(Methanol, 1, PolyvinylAcetate, 1)
                 .colorAverage()
@@ -1953,6 +1953,14 @@ public class OrganicChemistryMaterials {
                 .dust()
                 .components(Carbon, 17, Hydrogen, 18, Nitrogen, 2, Oxygen, 2)
                 .color(0x571f80)
+                .build();
+
+         PolyethyleneVinylAcetate = new Material.Builder(15311, SuSyUtility.susyId('polyvinyl_ethylene_acetate'))
+                .polymer()
+                .components(Ethylene, 1, VinylAcetate, 1)
+                .color(0x686ad4)
+                .fluidPipeProperties(363, 100, true)
+                .iconSet(DULL)
                 .build();
     }
 }
