@@ -1138,25 +1138,22 @@ public class UnknownCompositionMaterials {
                 .color(0x2b1e1e)
                 .build();
 
-        GasolineOxygenates = new Material.Builder(4218, SuSyUtility.susyId('gasoline_oxygenates'))
+        Oxygenates = new Material.Builder(4218, SuSyUtility.susyId('oxygenates'))
                 .fluid()
                 .color(0xb4c5e0)
                 .build();
 
-        GasolineAntioxidants = new Material.Builder(4219, SuSyUtility.susyId('gasoline_antioxidants'))
+        Antioxidants = new Material.Builder(4219, SuSyUtility.susyId('antioxidants'))
                 .fluid()
                 .color(0x380b0d)
                 .build();
 
-        GasolineAntiknock = new Material.Builder(4220, SuSyUtility.susyId('gasoline_antiknock'))
+        Antiknock = new Material.Builder(4220, SuSyUtility.susyId('antiknock'))
                 .fluid()
                 .color(0x48485e)
                 .build();
 
-        GasolineGeneralAdditives = new Material.Builder(4221, SuSyUtility.susyId('gasoline_general_additives'))
-                .fluid()
-                .color(0x718072)
-                .build();
+        //FREE ID: 4221
 
         MidgradeGasoline = new Material.Builder(4222, SuSyUtility.susyId('midgrade_gasoline'))
                 .fluid()
@@ -1853,6 +1850,26 @@ public class UnknownCompositionMaterials {
         AntifoamingAdditive = new Material.Builder(4353, SuSyUtility.susyId("antifoaming_additive"))
                 .fluid()
                 .color(0x597275)
+                .build();
+
+        DiisopropylParaPhenylenediamineSolution = new Material.Builder(4354, SuSyUtility.susyId('diisopropyl_para_phenylenediamine_solution'))
+                .fluid()
+                .color(0x189477)
+                .build();
+
+        PropanolamineMix = new Material.Builder(4355, SuSyUtility.susyId('propanolamine_mix'))
+                .fluid()
+                .color(0x4cb522)
+                .build();
+
+        SalicylideneOneTwoPropanediamineSolution = new Material.Builder(4356, SuSyUtility.susyId('salicylidene_one_two_propanediamine_solution'))
+                .fluid()
+                .color(0x3e1f80)
+                .build();
+
+        MetalDeactivator = new Material.Builder(4357, SuSyUtility.susyId('metal_deactivator'))
+                .fluid()
+                .color(0x9b34a8)
                 .build();
     }
 }

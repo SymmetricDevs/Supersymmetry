@@ -337,10 +337,9 @@ class SuSyMaterials {
         public static Material UranylCarbonateSolution;
         public static Material UranylSulfateSolution;
         public static Material TetraethylleadSludge;
-        public static Material GasolineOxygenates;
-        public static Material GasolineAntioxidants;
-        public static Material GasolineAntiknock;
-        public static Material GasolineGeneralAdditives;
+        public static Material Oxygenates;
+        public static Material Antioxidants;
+        public static Material Antiknock;
         public static Material MidgradeGasoline;
         public static Material PremiumGasoline;
         public static Material SupremeGasoline;
@@ -484,6 +483,10 @@ class SuSyMaterials {
         public static Mateiral LubricityAdditive;
         public static Mateiral AntistaticAdditive;
         public static Material AntifoamingAdditive;
+        public static Material DiisopropylParaPhenylenediamineSolution;
+        public static Material PropanolamineMix;
+        public static Material MetalDeactivator;
+        public static Material SalicylideneOneTwoPropanediamineSolution;
 
         // Petrochem Materials
 
@@ -845,7 +848,7 @@ class SuSyMaterials {
         public static Material SodiumBismuthate;
         public static Material BismuthIIIOxide;
         public static Material ManganeseIINitrate;
-        public static Material PurifiedManganeseDioxide;
+        public static Material ManganeseDioxide;
         public static Material BariumTitanate;
         public static Material RawElectrum;
         public static Material NeodymiumAlloy;
@@ -1014,6 +1017,7 @@ class SuSyMaterials {
         public static Material ImpureStrontiumSulfide;
         public static Material DilutedAceticAcid;
         public static Material CobaltIIAcetate;
+        public static Material ManganeseIIChloride;
 
         // Second Degree Materials
 
@@ -1115,6 +1119,8 @@ class SuSyMaterials {
         public static Material ImpureBariumSulfideSolution;
         public static Material ImpureStrontiumSulfideSlurry;
         public static Material PalladiumOnCarbon;
+        public static Material ManganeseIIChlorideSolution;
+        public static Material DilutedManganeseIIChlorideSolution;
 
         // Organic Chemistry Materials
 
@@ -1351,7 +1357,6 @@ class SuSyMaterials {
         public static Material Methylaluminoxane;
         public static Material ZirconoceneDichloride;
         public static Material Tetrahydrofuran;
-        public static Material SodiumCyclopentadienide;
         public static Material PotassiumButylXanthate;
         public static Material PicricAcid;
         public static Material Monomethylhydrazine;
@@ -1423,6 +1428,15 @@ class SuSyMaterials {
         public static Material Dinonylnaphthalene;
         public static Material DinonylnaphthaleneSulfonate;
         public static Material Psuedocumene;
+        public static Material Methylcyclopentadiene;
+        public static Material Diglyme;
+        public static Material Bismethylcyclopentadienylmanganese;
+        public static Material MethylcyclopentadienylmanganeseTricarbonyl;
+        public static Material MethylCarbitol;
+        public static Material DiisopropylParaPhenylenediamine;
+        public static Material OneTwoDiaminopropaneSolution;
+        public static Material Salicylaldehyde;
+        public static Material SalicylideneOneTwoPropanediamine;
 
         // Third Degree Materials
 
@@ -1498,6 +1512,10 @@ class SuSyMaterials {
         public static Material TerephthalateMotherLiquor;
         public static Material MethylParaToluateMixture;
         public static Material SodiumDodecylSulfateSolution;
+        public static Material SodiumCyclopentadienide;
+        public static Material MethylcyclopentadieneSolution;
+        public static Material BismethylcyclopentadienylmanganeseSolution;
+        public static Material SalicylaldehydeSolution;
 
         // Thermodynamics/Greenhouse Materials
 

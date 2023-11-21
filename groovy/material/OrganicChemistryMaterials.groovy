@@ -1481,11 +1481,7 @@ public class OrganicChemistryMaterials {
                 .color(0xd13485)
                 .build();
 
-        SodiumCyclopentadienide = new Material.Builder(15235, SuSyUtility.susyId('sodium_cyclopentadienide'))
-                .dust()
-                .components(Sodium, 1, Carbon, 5, Hydrogen, 5)
-                .colorAverage()
-                .build();
+        //FREE ID: 15235
       
         OctylHydroxamicAcid = new Material.Builder(15236, SuSyUtility.susyId('octyl_hydroxamic_acid'))
                 .dust()
@@ -1897,6 +1893,66 @@ public class OrganicChemistryMaterials {
                 .fluid()
                 .components(Carbon, 9, Hydrogen, 12)
                 .color(0x553300)
+                .build();
+
+        Methylcyclopentadiene = new Material.Builder(15302, SuSyUtility.susyId('methylcyclopentadiene'))
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 8)
+                .color(0x57ab82)
+                .build();
+
+        Methylcyclopentadiene.setFormula('C5H4CH3', true)
+
+        Diglyme = new Material.Builder(15303, SuSyUtility.susyId('diglyme'))
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 14, Oxygen, 3)
+                .color(0x2f9982)
+                .build();
+
+        Bismethylcyclopentadienylmanganese = new Material.Builder(15304, SuSyUtility.susyId('bismethylcyclopentadienylmanganese'))
+                .fluid()
+                .components(Carbon, 12, Hydrogen, 10, Manganese, 1)
+                .color(0x75250d)
+                .build();
+        
+        Bismethylcyclopentadienylmanganese.setFormula('Mn(C5H4CH3)2', true)
+
+        MethylcyclopentadienylmanganeseTricarbonyl = new Material.Builder(15305, SuSyUtility.susyId('methylcyclopentadienylmanganese_tricarbonyl'))
+                .fluid()
+                .components(Carbon, 9, Hydrogen, 7, Oxygen, 3, Manganese, 1)
+                .color(0xa16c0b)
+                .build()
+
+        MethylcyclopentadienylmanganeseTricarbonyl.setFormula('(C5H4CH3)Mn(CO)3', true)
+
+        MethylCarbitol = new Material.Builder(15306, SuSyUtility.susyId('methyl_carbitol'))
+                .fluid()
+                .components(Carbon, 5, Hydrogen, 12, Oxygen, 3)
+                .color(0x3fd1b1)
+                .build();
+
+        DiisopropylParaPhenylenediamine = new Material.Builder(15307, SuSyUtility.susyId('diisopropyl_para_phenylenediamine'))
+                .dust()
+                .components(Carbon, 12, Hydrogen, 22, Nitrogen, 2)
+                .color(0x1d666e)
+                .build();
+
+        OneTwoDiaminopropaneSolution = new Material.Builder(15308, SuSyUtility.susyId('one_two_diaminopropane_solution'))
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 10, Nitrogen, 2, Water, 1)
+                .color(0x22b55d)
+                .build();
+
+        Salicylaldehyde = new Material.Builder(1530, SuSyUtility.susyId('salicylaldehyde'))
+                .fluid()
+                .components(Carbon, 7, Hydrogen, 6, Oxygen, 2)
+                .color(0x3f44a6)
+                .build();
+
+        SalicylideneOneTwoPropanediamine = new Material.Builder(15310, SuSyUtility.susyId('salicylidene_one_two_propanediamine'))
+                .dust()
+                .components(Carbon, 17, Hydrogen, 18, Nitrogen, 2, Oxygen, 2)
+                .color(0x571f80)
                 .build();
     }
 }
