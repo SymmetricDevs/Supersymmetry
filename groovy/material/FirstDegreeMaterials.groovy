@@ -207,6 +207,7 @@ public class FirstDegreeMaterials{
 
         SodiumNitrate = new Material.Builder(8109, SuSyUtility.susyId('sodium_nitrate'))
                 .dust().fluid()
+                .fluidTemp(581)
                 .components(Sodium, 1, Nitrogen, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
@@ -2740,6 +2741,7 @@ public class FirstDegreeMaterials{
 
         SodiumNitrite = new Material.Builder(8499, SuSyUtility.susyId('sodium_nitrite'))
                 .dust().fluid()
+                .fluidTemp(544)
                 .components(Sodium, 1, Nitrogen, 1, Oxygen, 2)
                 .color(0xe7e899)
                 .build();
