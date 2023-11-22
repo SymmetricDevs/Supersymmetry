@@ -486,8 +486,9 @@ class SuSyMaterials {
         public static Material DiisopropylParaPhenylenediamineSolution;
         public static Material PropanolamineMix;
         public static Material MetalDeactivator;
-        public static Material SalicylideneOneTwoPropanediamineSolution;
         public static Material IgnitionImprover;
+        public static Material ColdFlowImprover;
+        public static Material CorrosionInhibitor;
 
         // Petrochem Materials
 
@@ -1423,7 +1424,8 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalate;
         public static Material WetTerephthalicAcid;
         public static Material WetIsophthalicAcid;
-        public static Material PolyethyleneVinylAcetate;
+        public static Material EthyleneVinylAcetate;
+        public static Material EthyleneIsobutyleneVinylAcetate;
         public static Material ChlorosulfuricAcid;
         public static Material DodecanesulfonicAcid;
         public static Material SodiumDodecylSulfate;
@@ -1439,6 +1441,9 @@ class SuSyMaterials {
         public static Material OneTwoDiaminopropaneSolution;
         public static Material Salicylaldehyde;
         public static Material SalicylideneOneTwoPropanediamine;
+        public static Material Dihexadecylamine;
+        public static Material DihexadecylaminePhthalateAmide;
+        public static Material MethylTertButylEther;
 
         // Third Degree Materials
 
@@ -1513,12 +1518,12 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalateSolution;
         public static Material TerephthalateMotherLiquor;
         public static Material MethylParaToluateMixture;
-        public static Material PolyethyleneVinylAcetateMixture;
+        public static Material EthyleneVinylAcetateMixture;
+        public static Material EthyleneIsobutyleneVinylAcetateMixture;
         public static Material SodiumDodecylSulfateSolution;
         public static Material SodiumCyclopentadienide;
         public static Material MethylcyclopentadieneSolution;
         public static Material BismethylcyclopentadienylmanganeseSolution;
-        public static Material SalicylaldehydeSolution;
 
         // Thermodynamics/Greenhouse Materials
 

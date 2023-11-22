@@ -476,15 +476,17 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        SalicylaldehydeSolution = new Material.Builder(24074, SuSyUtility.susyId('salicylaldehyde_solution'))
+        //FREE ID: 24074
+      
+        EthyleneVinylAcetateMixture = new Material.Builder(24075, SuSyUtility.susyId('ethylene_vinyl_acetate_mixture'))
                 .fluid()
-                .components(Salicylaldehyde, 1, RockSalt, 3, Water, 2)
+                .components(EthyleneVinylAcetate, 1, Methanol, 1)
                 .colorAverage()
                 .build();
-      
-        PolyethyleneVinylAcetateMixture = new Material.Builder(24070, SuSyUtility.susyId('polyethylene_vinyl_acetate_mixture'))
+
+        EthyleneIsobutyleneVinylAcetateMixture = new Material.Builder(24076, SuSyUtility.susyId('ethylene_isobutylene_vinyl_acetate_mixture'))
                 .fluid()
-                .components(PolyethyleneVinylAcetate, 1, Methanol, 1)
+                .components(EthyleneIsobutyleneVinylAcetate, 1, Methanol, 1)
                 .colorAverage()
                 .build();
     }

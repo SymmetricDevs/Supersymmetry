@@ -1862,10 +1862,7 @@ public class UnknownCompositionMaterials {
                 .color(0x4cb522)
                 .build();
 
-        SalicylideneOneTwoPropanediamineSolution = new Material.Builder(4356, SuSyUtility.susyId('salicylidene_one_two_propanediamine_solution'))
-                .fluid()
-                .color(0x3e1f80)
-                .build();
+        //FREE ID: 4356
 
         MetalDeactivator = new Material.Builder(4357, SuSyUtility.susyId('metal_deactivator'))
                 .fluid()
@@ -1875,6 +1872,16 @@ public class UnknownCompositionMaterials {
         IgnitionImprover = new Material.Builder(4358, SuSyUtility.susyId('ignition_improver'))
                 .fluid()
                 .color(0x8ede6f)
+                .build();
+
+        ColdFlowImprover = new Material.BUilder(4359, SuSyUtility.susyId('cold_flow_improver'))
+                .fluid()
+                .color(0x1c32a3)
+                .build();
+
+        CorrosionInhibitor = new Material.Builder(4360, SuSyUtility.susyId('corrosion_inhibitor'))
+                .fluid()
+                .color(0x8a633a)
                 .build();
     }
 }

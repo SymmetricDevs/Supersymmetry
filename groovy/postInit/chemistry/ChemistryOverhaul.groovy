@@ -1118,33 +1118,6 @@ BR.recipeBuilder()
 .EUt(480)
 .buildAndRegister()
 
-// Ethyl-tert-butyl ether
-
-FBR.recipeBuilder()
-.fluidInputs(fluid('butane') * 50)
-.notConsumable(ore('dustAluminiumChloride'))
-.fluidOutputs(fluid('isobutane') * 50)
-.duration(5)
-.EUt(30)
-.buildAndRegister()
-
-FBR.recipeBuilder()
-.fluidInputs(fluid('isobutane') * 50)
-.notConsumable(ore('dustChromiumTrioxide'))
-.fluidOutputs(fluid('isobutylene') * 50)
-.duration(5)
-.EUt(30)
-.buildAndRegister()
-
-
-CSTR.recipeBuilder()
-.fluidInputs(fluid('methanol') * 50)
-.fluidInputs(fluid('isobutylene') * 50)
-.fluidOutputs(fluid('ethyl_tertbutyl_ether') * 50)
-.duration(5)
-.EUt(30)
-.buildAndRegister()
-
 // Cyclohexane
 
 TBR.recipeBuilder()

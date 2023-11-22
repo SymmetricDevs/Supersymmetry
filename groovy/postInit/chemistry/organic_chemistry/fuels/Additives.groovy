@@ -45,6 +45,34 @@ def minor_solvents = [
     'ethylbenzene'
 ]
 
+// Oxygenates
+
+// Methyl-tert-butyl ether
+
+    FBR.recipeBuilder()
+        .fluidInputs(fluid('butane') * 50)
+        .notConsumable(ore('dustAluminiumChloride'))
+        .fluidOutputs(fluid('isobutane') * 50)
+        .duration(5)
+        .EUt(30)
+        .buildAndRegister()
+
+    FBR.recipeBuilder()
+        .fluidInputs(fluid('isobutane') * 50)
+        .notConsumable(ore('dustChromiumTrioxide'))
+        .fluidOutputs(fluid('isobutylene') * 50)
+        .duration(5)
+        .EUt(30)
+        .buildAndRegister()
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('methanol') * 50)
+        .fluidInputs(fluid('isobutylene') * 50)
+        .fluidOutputs(fluid('methyl_tert_butyl_ether') * 50)
+        .duration(5)
+        .EUt(30)
+        .buildAndRegister()
+
 // Antioxidant active ingredients
 
     // 2,6-Di-tert-butylphenol
@@ -355,16 +383,9 @@ BR.recipeBuilder()
     .inputs(ore('dustPotassiumHydroxide') * 9)
     .fluidInputs(fluid('phenol') * 1000)
     .fluidInputs(fluid('chloroform') * 1000)
-    .fluidOutputs(fluid('salicylaldehyde_solution') * 3000)
-    .duration(200)
-    .EUt(120)
-    .buildAndRegister()
-
-DISTILLATION_TOWER.recipeBuilder()
-    .fluidInputs(fluid('salicylaldehyde_solution') * 3000)
-    .outputs(metaitem('dustRockSalt') * 6)
+    .fluidInputs(fluid('water') * 1000)
     .fluidOutputs(fluid('salicylaldehyde') * 1000)
-    .fluidOutputs(fluid('water') * 2000)
+    .fluidOutputs(fluid('rock_salt_solution') * 3000)
     .duration(200)
     .EUt(120)
     .buildAndRegister()
@@ -374,18 +395,73 @@ BR.recipeBuilder()
     .inputs(ore('dustSodiumCyanoborohydride') * 14)
     .fluidInputs(fluid('hydrochloric_acid') * 2000)
     .fluidInputs(fluid('salicylaldehyde') * 2000)
-    .fluidOutputs(fluid('salicylidene_one_two_propanediamine_solution') * 3000)
+    .outputs(metaitem('dustSalicylideneOneTwoPropanediamine'))
+    .fluidOutputs(fluid('wastewater') * 3000)
     .duration(200)
     .EUt(120)
     .buildAndRegister()
 
-DISTILLERY.recipeBuilder()
-    .fluidInputs(fluid('salicylidene_one_two_propanediamine_solution') * 3000)
-    .outputs(metaitem('dustSalicylideneOneTwoPropanediamine'))
-    .fluidOutputs(fluid('wastewater') * 3000)
-    .duration(20)
-    .EUt(30)
-    .buildAndRegister()  
+// Cold flow improvers
+
+    // EVA-isobutylene terpolymer for cold flow additives
+
+    POLYMERIZATION.recipeBuilder()
+        .fluidInputs(fluid('ethylene') * 1000)
+        .fluidInputs(fluid('isobutylene') * 1000)
+        .fluidInputs(fluid('vinyl_acetate_solution') * 1000)
+        .inputs(ore('dustTinyPotassiumPersulfate'))
+        .fluidOutputs(fluid('ethylene_isobutylene_vinyl_acetate_mixture') * 2000)
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
+
+    PHASE_SEPARATOR.recipeBuilder()
+        .fluidInputs(fluid('ethylene_isobutylene_vinyl_acetate_mixture') * 2000)
+        .outputs(metaitem('dustEthyleneIsobutyleneVinylAcetate'))
+        .fluidOutputs(fluid('methanol') * 1000)
+        .duration(50)
+        .buildAndRegister()
+
+    // Wax antisetlling agent (N,N-dihexadecyl phthalic acid amide)
+
+    FBR.recipeBuilder()
+        .notConsumable(metaitem('catalystBedAlumina'))
+        .fluidInputs(fluid('hexadecanol') * 100)
+        .fluidInputs(fluid('ammonia') * 50)
+        .fluidOutputs(fluid('dihexadecylamine') * 50)
+        .fluidOutputs(fluid('water') * 100)
+        .duration(5)
+        .EUt(120)
+        .buildAndRegister();
+
+    BR.recipeBuilder()
+        .inputs(ore("dustPhthalicAnhydride") * 13)
+        .fluidInputs(fluid('dihexadecylamine') * 2000)
+        .notConsumable(fluid('sulfuric_acid') * 50)
+        .outputs(metaitem('dustDihexadecylaminePhthalateAmide'))
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
+
+// Corrosion inhibitors
+
+    REACTION_FURNACE.recipeBuilder()
+        .notConsumable(ore('dustAluminiumSilicate'))
+        .notConsumable(fluid('argon') * 2000)
+        .fluidInputs(fluid('linoleic_acid') * 2000)
+        .fluidOutputs(fluid('corrosion_inhibitor') * 2000)
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
+
+    REACTION_FURNACE.recipeBuilder()
+        .notConsumable(ore('dustAluminiumSilicate'))
+        .notConsumable(fluid('argon') * 2000)
+        .fluidInputs(fluid('oleic_acid') * 2000)
+        .fluidOutputs(fluid('corrosion_inhibitor') * 2000)
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
 
 def OxygenateMap = [
     'methanol': 125,
@@ -395,7 +471,7 @@ def OxygenateMap = [
     'n_butanol': 125,
     'isobutyl_alcohol': 125,
     'tert_butyl_alcohol': 125,
-    'ethyl_tertbutyl_ether': 125
+    'methyl_tert_butyl_ether': 125
 ]
 
 def AntioxidantMap = [
@@ -497,12 +573,31 @@ for (major_solvent in major_solvents) {
             .EUt(Globals.voltAmps[2])
             .buildAndRegister()
 
+        MIXER.recipeBuilder()
+            .inputs(ore('dustSmallEthyleneIsobutyleneVinylAcetate'))
+            .fluidInputs(fluid(major_solvent) * 1500)
+            .fluidInputs(fluid(minor_solvent) * 500)
+            .fluidOutputs(fluid('cold_flow_improver') * 2000)
+            .duration(200)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
+
+        MIXER.recipeBuilder()
+            .inputs(ore('dustSmallEthyleneIsobutyleneVinylAcetate'))
+            .inputs(ore('dustSmalldustDihexadecylaminePhthalateAmide'))
+            .fluidInputs(fluid(major_solvent) * 6000)
+            .fluidInputs(fluid(minor_solvent) * 2000)
+            .fluidOutputs(fluid('cold_flow_improver') * 8000)
+            .duration(200)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
+
         getUniquePairs(AntioxidantMap).each { key, val -> 
             MIXER.recipeBuilder()
                 .fluidInputs(fluid(key) * AntioxidantMap[key])
                 .fluidInputs(fluid(val) * AntioxidantMap[val])
-                .fluidInputs(fluid(major_solvent) * 1200)
-                .fluidInputs(fluid(minor_solvent) * 400)
+                .fluidInputs(fluid(major_solvent) * 1400)
+                .fluidInputs(fluid(minor_solvent) * 200)
                 .fluidOutputs(fluid('antioxidants') * 2000)
                 .duration(200)
                 .EUt(120)
@@ -513,9 +608,9 @@ for (major_solvent in major_solvents) {
             MIXER.recipeBuilder()
                     .inputs(ore('dustDiisopropylParaPhenyleneDiamine') * 4)
                     .fluidInputs(fluid(antioxidant) * 200)
-                    .fluidInputs(fluid(major_solvent) * 1400)
+                    .fluidInputs(fluid(major_solvent) * 3400)
                     .fluidInputs(fluid(minor_solvent) * 400)
-                    .fluidOutputs(fluid('gasoline_antiknock') * 2000)
+                    .fluidOutputs(fluid('gasoline_antiknock') * 4000)
                     .duration(200)
                     .EUt(120)
                     .buildAndRegister()

@@ -1955,12 +1955,37 @@ public class OrganicChemistryMaterials {
                 .color(0x571f80)
                 .build();
 
-         PolyethyleneVinylAcetate = new Material.Builder(15311, SuSyUtility.susyId('polyvinyl_ethylene_acetate'))
+        EthyleneVinylAcetate = new Material.Builder(15311, SuSyUtility.susyId('ethylene_vinyl_acetate'))
                 .polymer()
                 .components(Ethylene, 1, VinylAcetate, 1)
                 .color(0x686ad4)
                 .fluidPipeProperties(363, 100, true)
                 .iconSet(DULL)
+                .build();
+        
+        EthyleneIsobutyleneVinylAcetate = new Material.Builder(15312, SuSyUtility.susyId('ethylene_isobutylene_vinyl_acetate'))
+                .polymer()
+                .components(Ethylene, 1, Isobutylene, 1, VinylAcetate, 1)
+                .color(0x8768d4)
+                .iconSet(DULL)
+                .build();
+
+        Dihexadecylamine = new Material.Builder(15313, SuSyUtility.susyId('dihexadecylamine'))
+                .fluid()
+                .components(Carbon, 32, Hydrogen, 67, Nitrogen, 1)
+                .color(0x5f6e0e)
+                .build();
+
+        DihexadecylaminePhthalateAmide = new Material.Builder(15314, SuSyUtility.susyId('dihexadecylamine_phthalate_amide'))
+                .dust()
+                .components(Carbon, 72, Hydrogen, 138, Nitrogen, 2, Oxygen, 3)
+                .color(0x3e6e0e)
+                .build();
+
+        MethylTertButylEther = new Material.Builder(15315, SuSyUtility.susyId('methyl_tert_butyl_ether'))
+                .fluid()
+                .components(Carbon, 5, Hydrogen, 12, Oxygen, 1)
+                .color(0xae21b0)
                 .build();
     }
 }
