@@ -1883,5 +1883,35 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x8a633a)
                 .build();
+
+        MidgradeDiesel = new Material.Builder(4361, SuSyUtility.susyId('midgrade_diesel'))
+                .fluid()
+                .color(0xc4a535)
+                .build();
+
+        PremiumDiesel = new Material.Builder(4362, SuSyUtility.susyId('premium_diesel'))
+                .fluid()
+                .color(0xd1aa1d)
+                .build();
+
+        SupremeDiesel = new Material.Builder(4363, SuSyUtility.susyId('supreme_diesel'))
+                .fluid()
+                .color(0xdb9a16)
+                .build();
+
+        MidgradeKerosene = new Material.Builder(4364, SuSyUtility.susyId('midgrade_kerosene'))
+                .fluid()
+                .color(0xa8a44a)
+                .build();
+
+        PremiumKerosene = new Material.Builder(4365, SuSyUtility.susyId('premium_kerosene'))
+                .fluid()
+                .color(0xbab541)
+                .build();
+
+        SupremeKerosene = new Material.Builder(4366, SuSyUtility.susyId('supreme_kerosene'))
+                .fluid()
+                .color(0xd9c148)
+                .build();
     }
 }

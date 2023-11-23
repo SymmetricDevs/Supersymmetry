@@ -489,6 +489,12 @@ class SuSyMaterials {
         public static Material IgnitionImprover;
         public static Material ColdFlowImprover;
         public static Material CorrosionInhibitor;
+        public static Material MidgradeDiesel;
+        public static Material PremiumDiesel;
+        public static Material SupremeDiesel;
+        public static Material MidgradeKerosene;
+        public static Material PremiumKerosene;
+        public static Material SupremeKerosene;
 
         // Petrochem Materials
 

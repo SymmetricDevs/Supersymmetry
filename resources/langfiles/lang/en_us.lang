@@ -1806,6 +1806,12 @@ susy.material.dihexadecylamine=Dihexadecylamine
 susy.material.dihexadecylamine_phthalate_amide=Dihexadecylamine Phthalate Amide
 susy.material.methyl_tert_butyl_ether=Methyl tert-Butyl Ether (MTBE)
 susy.material.corrosion_inhibitor=Corrosion Inhibitor
+susy.material.midgrade_diesel=Midgrade Diesel
+susy.material.premium_diesel=Premium Diesel
+susy.material.supreme_diesel=Supreme Diesel
+susy.material.midgrade_kerosene=Midgrade Kerosene
+susy.material.premium_kerosene=Premium Kerosene
+susy.material.supreme_kerosene=Supreme Kerosene
 
 # Isotopes
 

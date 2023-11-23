@@ -464,13 +464,13 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 def OxygenateMap = [
-    'methanol': 125,
-    'ethanol': 125,
-    'n_propanol': 125,
-    'isopropyl_alcohol': 125,
-    'n_butanol': 125,
-    'isobutyl_alcohol': 125,
-    'tert_butyl_alcohol': 125,
+    'methanol': 1000,
+    'ethanol': 1000,
+    'n_propanol': 750,
+    'isopropyl_alcohol': 750,
+    'n_butanol': 500,
+    'isobutyl_alcohol': 500,
+    'tert_butyl_alcohol': 250,
     'methyl_tert_butyl_ether': 125
 ]
 
@@ -482,8 +482,9 @@ def AntioxidantMap = [
 
 def AntiknockMap = [
     'toluene': 500,
-    'isooctane': 300,
-    'tetraethyllead': 100
+    'isooctane': 250,
+    'tetraethyllead': 100,
+    'methylcyclopentadienylmanganese_tricarbonyl': 50
 ]
 
 def getUniquePairs(Map materialsMap) {
@@ -498,26 +499,6 @@ def getUniquePairs(Map materialsMap) {
     }
 
     return pairs
-}
-
-getUniquePairs(OxygenateMap).each { key, val -> 
-    MIXER.recipeBuilder()
-        .fluidInputs(fluid(key) * OxygenateMap[key])
-        .fluidInputs(fluid(val) * OxygenateMap[val])
-        .fluidOutputs(fluid('gasoline_oxygenates') * 1000)
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
-}
-
-getUniquePairs(AntiknockMap).each { key, val -> 
-    MIXER.recipeBuilder()
-        .fluidInputs(fluid(key) * AntiknockMap[key])
-        .fluidInputs(fluid(val) * AntiknockMap[val])
-        .fluidOutputs(fluid('gasoline_antiknock') * 1000)
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
 }
 
 // Cetane-Boosted Diesel * 750
@@ -592,6 +573,17 @@ for (major_solvent in major_solvents) {
             .EUt(Globals.voltAmps[2])
             .buildAndRegister()
 
+        AntiknockMap.each { key, val ->
+            MIXER.recipeBuilder()
+                .fluidInputs(fluid(key) * val)
+                .fluidInputs(fluid(major_solvent) * 1500)
+                .fluidInputs(fluid(minor_solvent) * 500 - val)
+                .fluidOutputs(fluid('gasoline_antiknock') * 1000)
+                .duration(200)
+                .EUt(120)
+                .buildAndRegister()
+        }
+
         getUniquePairs(AntioxidantMap).each { key, val -> 
             MIXER.recipeBuilder()
                 .fluidInputs(fluid(key) * AntioxidantMap[key])
@@ -610,44 +602,48 @@ for (major_solvent in major_solvents) {
                     .fluidInputs(fluid(antioxidant) * 200)
                     .fluidInputs(fluid(major_solvent) * 3400)
                     .fluidInputs(fluid(minor_solvent) * 400)
-                    .fluidOutputs(fluid('gasoline_antiknock') * 4000)
+                    .fluidOutputs(fluid('antioxidants') * 4000)
                     .duration(200)
                     .EUt(120)
                     .buildAndRegister()
         }
+
+        getUniquePairs(OxygenateMap).each { key, val -> 
+            MIXER.recipeBuilder()
+                .fluidInputs(fluid(key) * OxygenateMap[key])
+                .fluidInputs(fluid(val) * OxygenateMap[val])
+                .fluidOutputs(fluid('oxygenates') * 2000)
+                .duration(200)
+                .EUt(120)
+                .buildAndRegister()
+}
     }
 }
 
 // Gasoline final blending
 
-LCR.recipeBuilder()
-    .circuitMeta(1)
+MIXER.recipeBuilder()
     .fluidInputs(fluid('gasoline') * 1000)
-    .fluidInputs(fluid('gasoline_antioxidants') * 100)
     .fluidInputs(fluid('gasoline_oxygenates') * 100)
+    .fluidInputs(fluid('antiknock') * 100)
     .fluidOutputs(fluid('midgrade_gasoline') * 1000)
     .duration(10)
     .EUt(120)
     .buildAndRegister()
 
-LCR.recipeBuilder()
-    .circuitMeta(2)
-    .fluidInputs(fluid('gasoline') * 1000)
-    .fluidInputs(fluid('gasoline_general_additives') * 100)
-    .fluidInputs(fluid('gasoline_antioxidants') * 100)
-    .fluidInputs(fluid('gasoline_oxygenates') * 100)
+MIXER.recipeBuilder()
+    .fluidOutputs(fluid('midgrade_gasoline') * 1000)
+    .fluidInputs(fluid('methyl_carbitol') * 100)
+    .fluidInputs(fluid('corrosion_inhibitor') * 100)
     .fluidOutputs(fluid('premium_gasoline') * 1000)
     .duration(10)
     .EUt(120)
     .buildAndRegister()
 
-LCR.recipeBuilder()
-    .circuitMeta(3)
-    .fluidInputs(fluid('gasoline') * 1000)
-    .fluidInputs(fluid('gasoline_general_additives') * 100)
-    .fluidInputs(fluid('gasoline_oxygenates') * 100)
-    .fluidInputs(fluid('gasoline_antiknock') * 100)
-    .fluidInputs(fluid('gasoline_antioxidants') * 100)
+MIXER.recipeBuilder()
+    .fluidOutputs(fluid('premium_gasoline') * 1000)
+    .fluidInputs(fluid('antioxidants') * 100)
+    .fluidInputs(fluid('metal_deactivator') * 100)
     .fluidOutputs(fluid('supreme_gasoline') * 1000)
     .duration(10)
     .EUt(120)
@@ -655,4 +651,59 @@ LCR.recipeBuilder()
 
 // Diesel final blending
 
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('diesel') * 1000)
+    .fluidInputs(fluid('ignition_improver') * 100)
+    .fluidInputs(fluid('cold_flow_improver') * 100)
+    .fluidOutputs(fluid('midgrade_diesel') * 1000)
+    .duration(10)
+    .EUt(120)
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .fluidOutputs(fluid('midgrade_diesel') * 1000)
+    .fluidInputs(fluid('antistatic_additive') * 100)
+    .fluidInputs(fluid('lubricity_additive') * 100)
+    .fluidOutputs(fluid('premium_diesel') * 1000)
+    .duration(10)
+    .EUt(120)
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .fluidOutputs(fluid('premium_diesel') * 1000)
+    .fluidInputs(fluid('antioxidants') * 100)
+    .fluidInputs(fluid('antifoaming_additive') * 100)
+    .fluidOutputs(fluid('supreme_diesel') * 1000)
+    .duration(10)
+    .EUt(120)
+    .buildAndRegister()
+
+
 // Kerosene final blending
+
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('kerosene') * 1000)
+    .fluidInputs(fluid('methyl_carbitol') * 100)
+    .fluidInputs(fluid('antistatic_additive') * 100)
+    .fluidOutputs(fluid('midgrade_kerosene') * 1000)
+    .duration(10)
+    .EUt(120)
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .fluidOutputs(fluid('midgrade_kerosene') * 1000)
+    .fluidInputs(fluid('lubricity_additive') * 100)
+    .fluidInputs(fluid('antioxidants') * 100)
+    .fluidOutputs(fluid('premium_kerosene') * 1000)
+    .duration(10)
+    .EUt(120)
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .fluidOutputs(fluid('premium_kerosene') * 1000)
+    .fluidInputs(fluid('corrosion_inhibitor') * 100)
+    .fluidInputs(fluid('metal_deactivator') * 100)
+    .fluidOutputs(fluid('supreme_kerosene') * 1000)
+    .duration(10)
+    .EUt(120)
+    .buildAndRegister()
