@@ -80,6 +80,8 @@ class ChangeFlags {
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
         
         Iodine.setProperty(PropertyKey.FLUID, new FluidProperty(FluidTypes.GAS, false));
+        AntimonyTrifluoride.setProperty(PropertyKey.FLUID, new FluidProperty());
+        AntimonyTrifluoride.getProperty(PropertyKey.FLUID).setFluidTemperature(565);
         LithiumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
         SiliconDioxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());
@@ -90,8 +92,8 @@ class ChangeFlags {
         Cadmium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         BisphenolA.setProperty(PropertyKey.DUST, new DustProperty());
-        BisphenolA.addFlags("no_unification")
-        BisphenolA.getProperty(PropertyKey.FLUID).setFluidTemperature(428)
+        BisphenolA.addFlags("no_unification");
+        BisphenolA.getProperty(PropertyKey.FLUID).setFluidTemperature(428);
 
         OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
