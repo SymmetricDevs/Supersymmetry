@@ -7,6 +7,15 @@ import gregtech.api.unification.stack.UnificationEntry;
 
 import gregtechfoodoption.utils.GTFOUtils;
 import static gregtechfoodoption.utils.GTFOUtils.*;
+// RECIPE REMOVALS
+
+def name_removals = [
+        'gregtechfoodoption:baking_oven2',
+]
+
+for (name in name_removals) {
+    crafting.remove(name)
+}
 
 // MACHINE RECIPES
 
