@@ -1124,11 +1124,11 @@ susy.material.sperrylite=Sperrylite
 # Deposit ores for scanning
 
 item.susy.material.orthomagmatic_deposit.ore=Orthomagmatic Deposit
-item.susy.material.orthomagmatic_deposit.ore=Metamorphic Deposit
-item.susy.material.orthomagmatic_deposit.ore=Sedimentary Deposit
-item.susy.material.orthomagmatic_deposit.ore=Hydrothermal Deposit
-item.susy.material.orthomagmatic_deposit.ore=Alluvial Deposit
-item.susy.material.orthomagmatic_deposit.ore=Magmatic Hydrothermal Deposit
+item.susy.material.metamorphic_deposit.ore=Metamorphic Deposit
+item.susy.material.sedimentary_deposit.ore=Sedimentary Deposit
+item.susy.material.hydrothermal_deposit.ore=Hydrothermal Deposit
+item.susy.material.alluvial_deposit.ore=Alluvial Deposit
+item.susy.material.magmatic_hydrothermal_deposit.ore=Magmatic Hydrothermal Deposit
 
 susy.material.orthomagmatic_deposit=Orthomagmatic Deposit
 susy.material.metamorphic_deposit=Metamorphic Deposit
