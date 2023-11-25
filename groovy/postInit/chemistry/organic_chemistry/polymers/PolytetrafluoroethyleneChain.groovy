@@ -76,7 +76,7 @@ BR.recipeBuilder()
 
 DISTILLERY.recipeBuilder()
 .fluidInputs(fluid('perfluorooctanoic_acid_mixture') * 500)
-.chancedOutput(metaitem('dustPerfluorooctanoicAcid') * 13)
+.outputs(metaitem('dustPerfluorooctanoicAcid') * 13)
 .fluidOutputs(fluid('hydrofluoric_acid') * 500)
 .duration(200)
 .EUt(30)
