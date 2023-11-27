@@ -47,7 +47,6 @@ def name_removals = [
 	"industrialrenewal:drill_diamond",
 	"industrialrenewal:drill_deep",
 	"industrialrenewal:block_steel",
-	"industrialrenewal:concrete",
 	"industrialrenewal:manual",
 	"industrialrenewal:medkit",
 	"industrialrenewal:chunk_loader"
@@ -513,6 +512,12 @@ crafting.addShaped("industrialrenewal:wrench_custom", item('industrialrenewal:ca
 	[null, ore('stickSteel'), null]
 ])
 
+crafting.replaceShaped("industrialrenewal:concrete", item('industrialrenewal:concrete') * 4, [
+	[item("minecraft:sand"), item("minecraft:gravel"), item("minecraft:sand")],
+	[item("minecraft:gravel"), null, item("minecraft:gravel")],
+	[item("minecraft:sand"), item("minecraft:gravel"), item("minecraft:sand")]
+])
+
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(metaitem('large_fluid_cell.steel'))
 	.inputs(metaitem('electric.pump.lv'))
@@ -520,6 +525,15 @@ mods.gregtech.assembler.recipeBuilder()
 	.fluidInputs(fluid('compressed_carbon_dioxide') * 8000)
 	.outputs(item('industrialrenewal:item_fire_extinguisher'))
 	.duration(20)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+	.circuitMeta(6)
+	.inputs((item('minecraft:gravel')) * 4)
+	.inputs((item('minecraft:sand')) * 4)
+	.outputs((item('industrialrenewal:concrete')) * 4)
+	.duration(40)
 	.EUt(Globals.voltAmps[1])
 	.buildAndRegister()
 
@@ -588,6 +602,16 @@ Globals.solders.each { key, val ->
 		.EUt(Globals.voltAmps[1])
 		.buildAndRegister()
 }
+
+//vanilla recipe furnace only as it's overwritten by oredict in Gregtech machines. In GT machines this creates GT concrete. - Neeyo
+furnace.add((metaitem('dustConcrete')), item('industrialrenewal:concrete'))
+
+mods.gregtech.compressor.recipeBuilder()
+		.inputs((item('minecraft:gravel')) * 2)
+		.outputs(item('industrialrenewal:concrete'))
+		.duration(100)
+		.EUt(4)
+		.buildAndRegister();
 
 /*
 
@@ -919,6 +943,7 @@ mods.gregtech.canner.recipeBuilder().EUt(30).duration(20)
 		.fluidInputs(liquid('carbon_dioxide')*1000)
 		.outputs(item('industrialrenewal:item_fire_extinguisher'))
 		.buildAndRegister();
+]);
 
 for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder().EUt(30).duration(20)
@@ -929,4 +954,5 @@ for (solder in soldering_alloys) {
 			.outputs(item('industrialrenewal:entity_detector'))
 			.buildAndRegister();
 }
+
 */
