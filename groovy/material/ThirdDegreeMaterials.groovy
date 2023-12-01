@@ -489,5 +489,11 @@ public class ThirdDegreeMaterials {
                 .components(EthyleneIsobutyleneVinylAcetate, 1, Methanol, 1)
                 .colorAverage()
                 .build();
+
+        DewaxingSolvent = new Material.BUilder(24077, SuSyUtility.susyId('dewaxing_solvent'))
+                .fluid()
+                .components(Dichloroethane, 1, Dicloromethane, 1)
+                .colorAverage()
+                .build();
     }
 }

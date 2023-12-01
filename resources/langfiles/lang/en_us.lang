@@ -351,8 +351,6 @@ susy.material.brine=Brine
 susy.material.warm_brine=Warm Brine
 susy.material.oily_brine=Oily Brine
 susy.material.sulfuric_oil_residue=Sulfuric Oil Residue
-susy.material.treated_sulfuric_oil_residue=Treated Sulfuric Oil Residue
-susy.material.oil_residue=Oil Residue
 susy.material.high_pressure_water=High Pressure Water
 susy.material.light_bitumen_solution=Light Bitumen Solution
 susy.material.bitumen_solution=Bitumen Solution
@@ -1812,6 +1810,28 @@ susy.material.supreme_diesel=Supreme Diesel
 susy.material.midgrade_kerosene=Midgrade Kerosene
 susy.material.premium_kerosene=Premium Kerosene
 susy.material.supreme_kerosene=Supreme Kerosene
+susy.material.crude_lubricating_oil=Crude Lubricating Oil
+susy.material.solvent_lubricant_mixture=Solvent-Lubricant Mixture
+susy.material.cold_solvent_lubricant_mixture=Cold Solvent-Lubricant Mixture
+susy.material.sulfuric_lubricating_oil=Sulfuric Lubricating Oil
+susy.material.dewaxing_solvent=Dewaxing Solvent
+DewaxedLubricantMixture
+SAPOEleven
+PlatinumSAPOEleven
+SiliconeOilMixture
+SiliconeOil
+ChloroplatinicAcidSolution
+TetraethylOrthosilicate
+Methylphenyldichlorosilane
+OneOctene
+OneDecene
+OneDodecene
+OneTetradecene
+OneHexadecene
+OneOctadecene
+OneIcosene
+OneDocosene
+OneTetracosene
 
 # Isotopes
 

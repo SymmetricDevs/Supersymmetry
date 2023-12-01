@@ -3291,5 +3291,7 @@ public class FirstDegreeMaterials{
                 .components(Manganese, 1, Chlorine, 2)
                 .colorAverage()
                 .build();
+
+        ChloroplatinicAcidSolution
     }
 }

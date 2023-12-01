@@ -495,6 +495,10 @@ class SuSyMaterials {
         public static Material MidgradeKerosene;
         public static Material PremiumKerosene;
         public static Material SupremeKerosene;
+        public static Material SAPOEleven;
+        public static Material PlatinumSAPOEleven;
+        public static Material SiliconeOilMixture;
+        public static Material SiliconeOil;
 
         // Petrochem Materials
 
@@ -569,6 +573,11 @@ class SuSyMaterials {
         public static Material BTEX;
         public static Material Syngas;
         public static Material ReformedSyngas;
+        public static Material SulfuricCrudeLubricatingOil;
+        public static Material SolventLubricantMixture;
+        public static Material ColdSolventLubricantMixture;
+        public static Material SulfuricLubricatingOil;
+        public static Material DewaxedLubricantMixture;
 
         // First Degree Materials
 
@@ -1026,6 +1035,7 @@ class SuSyMaterials {
         public static Material DilutedAceticAcid;
         public static Material CobaltIIAcetate;
         public static Material ManganeseIIChloride;
+        ChloroplatinicAcidSolution
 
         // Second Degree Materials
 
@@ -1450,6 +1460,17 @@ class SuSyMaterials {
         public static Material Dihexadecylamine;
         public static Material DihexadecylaminePhthalateAmide;
         public static Material MethylTertButylEther;
+        public static Material TetraethylOrthosilicate;
+        public static Material Methylphenyldichlorosilane;
+        public static Material OneOctene;
+        public static Material OneDecene;
+        public static Material OneDodecene;
+        public static Material OneTetradecene;
+        public static Material OneHexadecene;
+        public static Material OneOctadecene;
+        public static Material OneIcosene;
+        public static Material OneDocosene;
+        public static Material OneTetracosene;
 
         // Third Degree Materials
 
@@ -1530,6 +1551,7 @@ class SuSyMaterials {
         public static Material SodiumCyclopentadienide;
         public static Material MethylcyclopentadieneSolution;
         public static Material BismethylcyclopentadienylmanganeseSolution;
+        public static Material DewaxingSolvent;
 
         // Thermodynamics/Greenhouse Materials
 

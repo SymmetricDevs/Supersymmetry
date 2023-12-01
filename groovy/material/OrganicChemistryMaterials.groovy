@@ -1987,5 +1987,17 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 5, Hydrogen, 12, Oxygen, 1)
                 .color(0xae21b0)
                 .build();
+
+        TetraethylOrthosilicate
+        Methylphenyldichlorosilane
+        OneOctene
+        OneDecene
+        OneDodecene
+        OneTetradecene
+        OneHexadecene
+        OneOctadecene
+        OneIcosene
+        OneDocosene
+        OneTetracosene
     }
 }

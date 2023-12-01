@@ -1913,5 +1913,10 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xd9c148)
                 .build();
+
+        SAPOEleven
+        PlatinumSAPOEleven
+        SiliconeOilMixture
+        SiliconeOil
     }
 }
