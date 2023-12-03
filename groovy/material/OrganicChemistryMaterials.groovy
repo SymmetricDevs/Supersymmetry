@@ -390,24 +390,29 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        BisphenolADiglycidylEther = new Material.Builder(15063, SuSyUtility.susyId('bisphenola_diglycidyl_ether'))
+        Chlorotrimethylsilane = new Material.Builder(15063, SuSyUtility.susyId("chlorotrimethylsilane"))
                 .fluid()
-                .components(Carbon, 21, Hydrogen, 24, Oxygen, 4)
-                .colorAverage()
+                .components(Carbon, 3, Hydrogen, 9, Silicon, 1, Chlorine, 1)
+                .color(0xd9dddc)
                 .build();
 
-        ImpureEpoxyResin = new Material.Builder(15064, SuSyUtility.susyId('impure_epoxy_resin'))
+        Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
+
+        Methyldichlorosilane = new Material.Builder(15064, SuSyUtility.susyId("methyldichlorosilane"))
                 .fluid()
-                .components(SaltWater, 1, Epoxy, 1)
-                .colorAverage()
+                .components(Carbon, 1, Hydrogen, 4, Chlorine, 2, Silicon, 1)
+                .color(0xd9dddc)
                 .build();
 
-        UncuredEpoxyResin = new Material.Builder(15065, SuSyUtility.susyId('uncured_epoxy_resin'))
+        Methyldichlorosilane.setFormula("CH3Cl2SiH", true)
+
+        Methyltrichlorosilane = new Material.Builder(15065, SuSyUtility.susyId("methyltrichlorosilane"))
                 .fluid()
-                .components(Epoxy, 1)
-                .colorAverage()
-                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 1, Hydrogen, 3, Silicon, 1, Chlorine, 3)
+                .color(0xd9dddc)
                 .build();
+
+        Methyltrichlorosilane.setFormula("CH3SiCl3", true)
 
         TNTSolution = new Material.Builder(15066, SuSyUtility.susyId('tnt_solution'))
                 .fluid()
@@ -614,7 +619,7 @@ public class OrganicChemistryMaterials {
         IsophthalicAcid = new Material.Builder(15100, SuSyUtility.susyId('isophthalic_acid'))
                 .dust()
                 .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
-                .color(0x349972)
+                .color(0x8ac294)
                 .build()
 
         NPropanol = new Material.Builder(15101, SuSyUtility.susyId('n_propanol'))
@@ -915,9 +920,10 @@ public class OrganicChemistryMaterials {
                 .build()
 
         TerephthalicAcid = new Material.Builder(15151, SuSyUtility.susyId('terephthalic_acid'))
-                .dust()
+                .dust().fluid()
+                .fluidTemp(473)
                 .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
-                .colorAverage()
+                .color(0xadf0ce)
                 .build()
 
         Bistrichloromethylbenzene = new Material.Builder(15152, SuSyUtility.susyId('bistrichloromethylbenzene'))
@@ -925,7 +931,8 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 6, Hydrogen, 4, Carbon, 2, Chlorine, 6)
                 .colorAverage()
                 .build()
-                .setFormula('C6H4(CCl3)2', true)
+
+        Bistrichloromethylbenzene.setFormula('C6H4(CCl3)2', true)
 
         TerephthaloylChloride = new Material.Builder(15153, SuSyUtility.susyId('terephthaloyl_chloride'))
                 .dust()
@@ -1764,10 +1771,10 @@ public class OrganicChemistryMaterials {
                 .color(0xff6e6e)
                 .build();
 
-        TriarylsulfoniumHexafluoroantimonate = new Material.Builder(15283, SuSyUtility.susyId("triarylsulfonium_hexafluoroantimonate"))
+        TriphenylphosphineOxide = new Material.Builder(15283, SuSyUtility.susyId('triphenylphosphine_oxide'))
                 .dust()
-                .components(Carbon, 24, Hydrogen, 19, Fluorine, 6, Sulfur, 2, Antimony, 1)
-                .color(0x31a374)
+                .components(Carbon, 18, Hydrogen, 15, Oxygen, 1, Phosphorus, 1)
+                .colorAverage()
                 .build();
 
         TosylicAcidSolution = new Material.Builder(15284, SuSyUtility.susyId("tosylic_acid_solution"))
@@ -1777,5 +1784,85 @@ public class OrganicChemistryMaterials {
                 .build();
 
         TosylicAcidSolution.setFormula("(TsOH)(H2O)", true)
+
+        Triphenylphosphine = new Material.Builder(15285, SuSyUtility.susyId('triphenylphosphine'))
+                .dust()
+                .components(Carbon, 18, Hydrogen, 15, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        TriphenylphosphineDichloride = new Material.Builder(15286, SuSyUtility.susyId('triphenylphosphine_dichloride'))
+                .dust()
+                .components(Carbon, 18, Hydrogen, 15, Chlorine, 2, Phosphorus, 1)
+                .colorAverage()
+                .build();
+
+        BistriphenylphosphineiminiumChloride = new Material.Builder(15287, SuSyUtility.susyId('bistriphenylphosphineiminium_chloride'))
+                .dust()
+                .components(Carbon, 36, Hydrogen, 30, Chlorine, 1, Nitrogen, 1, Phosphorus, 2)
+                .colorAverage()
+                .build();
+
+        DimethylTerephthalate = new Material.Builder(15288, SuSyUtility.susyId('dimethyl_terephthalate'))
+                .dust().fluid()
+                .fluidTemp(533)
+                .components(Carbon, 10, Hydrogen, 10, Oxygen, 4)
+                .color(0x56c48c)
+                .build();
+
+        PolyethyleneTerephthalate = new Material.Builder(15289, SuSyUtility.susyId('polyethylene_terephthalate'))
+                .polymer()
+                .flags(GENERATE_FOIL)
+                .fluidTemp(533)
+                .components(Carbon, 10, Hydrogen, 6, Oxygen, 4)
+                .color(0x7e9e8e)
+                .build();
+
+        AmocoTerephthalicAcid = new Material.Builder(15290, SuSyUtility.susyId('amoco_terephthalic_acid'))
+                .dust()
+                .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
+                .color(0x66916c)
+                .build();
+
+        AmocoIsophthalicAcid = new Material.Builder(15291, SuSyUtility.susyId('amoco_isophthalic_acid'))
+                .dust()
+                .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
+                .color(0x6b9166)
+                .build();
+
+        ParaToluicAcid = new Material.Builder(15292, SuSyUtility.susyId('para_toluic_acid'))
+                .dust().fluid()
+                .fluidTemp(454)
+                .flags(NO_UNIFICATION)
+                .components(Carbon, 8, Hydrogen, 8, Oxygen, 2)
+                .color(0x83943a)
+                .build();
+
+        MethylParaToluate = new Material.Builder(15293, SuSyUtility.susyId('methyl_para_toluate'))
+                .fluid()
+                .fluidTemp(323)
+                .components(Carbon, 9, Hydrogen, 10, Oxygen, 2)
+                .color(0x4e8538)
+                .build();
+
+        CrudeDimethylTerephthalate = new Material.Builder(15294, SuSyUtility.susyId('crude_dimethyl_terephthalate'))
+                .dust()
+                .components(Carbon, 10, Hydrogen, 10, Oxygen, 4)
+                .color(0x388568)
+                .build();
+
+        WetTerephthalicAcid = new Material.Builder(15295, SuSyUtility.susyId('wet_terephthalic_acid'))
+                .dust()
+                .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
+                .color(0x669181)
+                .iconSet(DULL)
+                .build();
+
+        WetIsophthalicAcid = new Material.Builder(15296, SuSyUtility.susyId('wet_isophthalic_acid'))
+                .dust()
+                .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
+                .color(0x609169)
+                .iconSet(DULL)
+                .build();
     }
 }

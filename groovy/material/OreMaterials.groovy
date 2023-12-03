@@ -8,6 +8,7 @@ import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.properties.*
 
 import supersymmetry.api.util.SuSyUtility;
+import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -170,7 +171,7 @@ public class OreMaterials{
 
         Celestine = new Material.Builder(7018, SuSyUtility.susyId('celestine'))
                 .dust().gem().ore()
-                .flags(NO_SMELTING)
+                .flags(NO_SMELTING, GENERATE_SIFTED, GENERATE_FLOTATED)
                 .color(0xafe3e0)
                 .iconSet(SHINY)
                 .components(Strontium, 1, Sulfur, 1, Oxygen, 4)
@@ -459,12 +460,12 @@ public class OreMaterials{
                 .build();
 
         Columbite = new Material.Builder(7060, SuSyUtility.susyId('columbite'))
-                .dust()
+                .ore().dust()
                 .color(0x574f2f)
                 .iconSet(SHINY)
                 .components(Iron, 1, Manganese, 1, Niobium, 2, Oxygen, 6)
                 .build()
-                .setFormula('(Fe,Mn)Nb2O6)', true);
+                .setFormula('(Fe,Mn)Nb2O6', true);
 
         Ferrimolybdite = new Material.Builder(7061, SuSyUtility.susyId('ferrimolybdite'))
                 .dust()

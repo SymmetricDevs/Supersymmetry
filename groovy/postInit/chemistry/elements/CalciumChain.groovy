@@ -13,6 +13,7 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 ROASTER.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('dustCalciumSulfate') * 6)
         .outputs(metaitem('dustQuicklime') * 2)
         .fluidOutputs(fluid('sulfur_trioxide') * 1000)

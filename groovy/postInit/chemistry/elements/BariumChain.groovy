@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.SinteringGlobals.*
 
 FLOTATION = recipemap('froth_flotation')
 ROASTER = recipemap('roaster')
@@ -9,6 +10,8 @@ MIXER = recipemap('mixer')
 CLARIFIER = recipemap('clarifier')
 CENTRIFUGE = recipemap('centrifuge')
 REACTION_FURNACE = recipemap('reaction_furnace')
+ROTARY_KILN = recipemap('rotary_kiln')
+CRYSTALLIZER = recipemap('crystallizer')
 
 //OPTIONAL FLOTATION
 
@@ -46,11 +49,44 @@ CENTRIFUGE.recipeBuilder()
     .duration(20)
     .buildAndRegister()
 
-ROASTER.recipeBuilder()
-    .inputs(ore('dustBarite'))
-    .inputs(ore('dustCarbon') * 4)
+for (fuel in rotary_kiln_fuels) {
+    for (comburent in rotary_kiln_comburents) {
+        ROTARY_KILN.recipeBuilder()
+            .inputs(ore('dustBarite'))
+            .inputs(ore('dustCarbon') * 2)
+            .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+            .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+            .outputs(metaitem('dustImpureBariumSulfide') * 2)
+            .fluidOutputs(fluid('carbon_dioxide') * 2025)
+            .EUt(Globals.voltAmps[1])
+            .duration(fuel.duration + comburent.duration)
+            .buildAndRegister()
+    }
+}
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustImpureBariumSulfide') * 4)
+    .fluidInputs(fluid('gtfo_heated_water') * 1000)
+    .outputs(metaitem('dustBariumResidue') * 2)
+    .fluidOutputs(fluid('impure_barium_sulfide_solution') * 1000)
+    .EUt(Globals.voltAmps[1])
+    .duration(100)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustBariumResidue') * 2)
+    .fluidInputs(fluid('gtfo_heated_water') * 1000)
+    .fluidInputs(fluid('hydrogen_sulfide') * 1000)
+    .fluidOutputs(fluid('impure_barium_sulfide_solution') * 1000)
+    .outputs(metaitem('dustSiliconDioxide'))
+    .EUt(Globals.voltAmps[1])
+    .duration(100)
+    .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+    .fluidInputs(fluid('impure_barium_sulfide_solution') * 1000)
     .outputs(metaitem('dustBariumSulfide') * 2)
-    .fluidOutputs(fluid('carbon_monoxide') * 4000)
+    .fluidOutputs(fluid('wastewater') * 1000)
     .EUt(Globals.voltAmps[1])
     .duration(100)
     .buildAndRegister()

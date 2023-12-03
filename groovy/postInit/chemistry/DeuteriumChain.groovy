@@ -10,7 +10,7 @@ LCR.recipeBuilder().EUt(480).duration(200)
 	.fluidInputs(fluid('sea_water') * 128000)
 	.fluidOutputs(fluid('impure_semiheavy_water') * 128000)
 	.fluidOutputs(fluid('isotopically_pure_hydrogen_sulfide') * 2000)
-	.circuitMeta(0)
+	.circuitMeta(3)
 	.buildAndRegister()
 	
 LCR.recipeBuilder().EUt(480).duration(200)

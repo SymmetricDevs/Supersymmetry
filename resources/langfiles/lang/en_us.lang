@@ -47,7 +47,7 @@ susy.material.meta_para_xylene_mixture=m/p-Xylene Mixture
 susy.material.phosgene=Phosgene
 susy.material.dichloroethane=Dichloroethane
 susy.material.isophthalic_acid=Isophthalic Acid
-susy.material.isophthalic_acid_solution=Isophthalic Acid Solution
+susy.material.isophthalic_acid_slurry=Isophthalic Acid Slurry
 susy.material.dichloroethane_isophthalic_acid_solution=Dichloroethane Isophthalic Acid Solution
 susy.material.isophthaloyl_dichloride_solution=Isophthaloyl Dichloride Solution
 susy.material.sodium_phenoxide_solution=Sodium Phenoxide Solution
@@ -64,9 +64,6 @@ susy.material.hydroxylamine=Hydroxylamine
 susy.material.cyclohexanone=Cyclohexanone
 susy.material.diluted_cyclohexanone=Diluted Cyclohexanone
 susy.material.caprolactam_solution=Caprolactam Solution
-susy.material.bisphenola_diglycidyl_ether=Bisphenol A Diglycidyl Ether
-susy.material.impure_epoxy_resin=Impure Epoxy Resin
-susy.material.uncured_epoxy_resin=Uncured Epoxy Resin
 susy.material.tnt_solution=Trinitrotoluene (TNT) Solution
 susy.material.ammonium_nitrate_solution=Ammonium Nitrate Solution
 susy.material.nitrate_solution=Nitrate Solution
@@ -126,6 +123,7 @@ susy.material.mixed_nitrochlorobenzene_solution=Mixed Nitrochlorobenzene Solutio
 susy.material.mixed_dichlorobenzene_solution=Mixed Dichlorobenzene Solution
 susy.material.two_two_dichlorohydrazobenzene_solution=2,2'-Dichlorohydrazobenzene Solution
 susy.material.two_butanol_solution=2-Butanol Solution
+susy.material.DilutedSodiumCarbonateSolution=Diluted Sodium Carbonate Solution
 
 susy.material.iron_ii_sulfide=Iron II Sulfide
 susy.material.potassium_bisulfate=Potassium Bisulfate
@@ -184,6 +182,15 @@ susy.material.white_liquor=White Liquor
 susy.material.black_liquor=Black Liquor
 susy.material.concentrated_black_liquor=Concentrated Black Liquor
 susy.material.green_liquor=Green Liquor
+
+susy.material.organosilicon_mixture=Organosilicon Mixture
+susy.material.impure_polydimethylsiloxane_mixture=Impure Polydimethylsiloxane Mixture
+susy.material.raw_polydimethylsiloxane_mixture=Raw Polydimethylsiloxane Mixture
+susy.material.polydimethylsiloxane=Polydimethylsiloxane
+susy.material.chlorotrimethylsilane=Chlorotrimethylsilane
+susy.material.methyldichlorosilane=Methyldichlorosilane
+susy.material.methyltrichlorosilane=Methyltrichlorosilane
+susy.material.dimethyldichlorosilane=Dimethyldichlorosilane
 
 # Solids
 
@@ -503,8 +510,8 @@ susy.material.hexachloroiridic_acid=Hexachloroiridic Acid
 susy.material.potassium_iodide=Potassium Iodide
 susy.material.iridium_iodide=Iridium Iodide
 susy.material.potassium_trichloride=Potassium Trichloride
-susy.material.triphenyl_phosphine=Triphenyl Phosphine
-susy.material.triphenyl_phosphine_dichloride=Triphenyl Phosphine Dichloride
+susy.material.triphenylphosphine=Triphenylphosphine
+susy.material.triphenylphosphine_dichloride=Triphenylphosphine Dichloride
 susy.material.bistriphenylphosphineiminium_chloride=Bis(triphenylphosphine)iminium Chloride
 susy.material.triphenylphosphine_oxide=Triphenylphosphine Oxide
 susy.material.sodium_dichromate=Sodium Dichromate
@@ -598,7 +605,7 @@ susy.material.urea_solution=Urea Solution
 susy.material.diiodobenzene_solution=Diiodobenzene Solution
 susy.material.impure_four_four_oxydianiline=Impure 4,4-Oxydianiline
 susy.material.ethylene_glycol_solution=Ethylene Glycol Solution
-susy.material.terephthalic_acid_solution=Terephthalic Acid Solution
+susy.material.terephthalic_acid_slurry=Terephthalic Acid Slurry
 
 susy.material.impure_acetaldehyde=Impure Acetaldehyde
 susy.material.cativa_process_preparation=Cativa Process Preparation
@@ -1732,6 +1739,37 @@ susy.material.hydrogen_silsesquioxane_solution=Hydrogen Silsesquioxane (HSQ) Sol
 susy.material.trichlorosilane_solution=Trichlorosilane Solution
 susy.material.tosylic_acid_solution=Tosylic Acid Solution
 susy.material.hydrogen_silsesquioxane_photoresist=Hydrogen Silsesquioxane (HSQ) Photoresist
+susy.material.strontium_sulfide_solution=Strontium Sulfide Solution
+susy.material.strontium_oxide=Strontium Oxide
+susy.material.impure_barium_sulfide=Impure Barium Sulfide
+susy.material.barium_residue=Barium Residue
+susy.material.impure_barium_sulfide_solution=Impure Barium Sulfide Solution
+susy.material.impure_celestine_slurry=Impure Celestine Slurry
+susy.material.celestine_slurry=Celestine Slurry
+susy.material.impure_strontium_sulfide_slurry=Impure Strontium Sulfide Slurry
+susy.material.impure_strontium_sulfide=Impure Strontium Sulfide
+susy.material.diluted_sodium_carbonate_solution=Diluted Sodium Carbonate Solution
+susy.material.diluted_acetic_acid=Diluted Acetic Acid
+susy.material.cobalt_ii_acetate=Cobalt II Acetate
+susy.material.palladium_on_carbon=Palladium On Carbon
+susy.material.dimethyl_terephthalate=Dimethyl Terephthalate
+susy.material.polyethylene_terephthalate=Polyethylene Terephthalate
+susy.material.amoco_terephthalic_acid=Amoco Terephthalic Acid
+susy.material.amoco_isophthalic_acid=Amoco Isophthalic Acid
+susy.material.para_toluic_acid=p-Toluic Acid
+susy.material.methyl_para_toluate=Methyl p-Toluate
+susy.material.crude_dimethyl_terephthalate=Crude Dimethyl Terephthalate
+susy.material.crude_terephthalic_acid_solution=Crude Terephthalic Acid Solution
+susy.material.crude_isophthalic_acid_solution=Crude Isophthalic Acid Solution
+susy.material.hydrogenated_terephthalic_acid_solution=Hydrogenated Terephthalic Acid Solution
+susy.material.hydrogenated_isophthalic_acid_solution=Hydrogenated Isophthalic Acid Solution
+susy.material.amoco_purification_mother_liquor=Amoco Purification Mother Liquor
+susy.material.para_toluate_mixture=p-Toluate Mixture
+susy.material.crude_dimethyl_terephthalate_solution=Crude Dimethyl Terephthalate Solution
+susy.material.terephthalate_mother_liquor=Terephthalate Mother Liquor
+susy.material.wet_terephthalic_acid=Wet Terephthalic Acid
+susy.material.wet_isophthalic_acid=Wet Isophthalic Acid
+susy.material.methyl_para_toluate_mixture=Methyl p-Toluate Mixture
 
 # Isotopes
 
@@ -1826,6 +1864,7 @@ metaitem.steam.pump.name=Steam Pump
 metaitem.bound_leather.name=Bound Leather
 
 metaitem.vacuum_tube_components.name=Vacuum Tube Components
+metaitem.mylar.name=Thin Mylar Sheet
 
 metaitem.circuit.gooware_processor.name=Gooware Processor
 metaitem.circuit.gooware_processor.tooltip=Reaction-Diffusion Computation/n§2ZPM-tier Circuit

@@ -273,6 +273,7 @@ DISTILLERY.recipeBuilder()
 
 FLUID_SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('high_purity_phosphorus') * 144)
+    .notConsumable(metaitem('shape.mold.ball'))
     .outputs(metaitem('dustHighPurityPhosphorus'))
     .duration(60)
     .EUt(Globals.voltAmps[1])
