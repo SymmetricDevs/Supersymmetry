@@ -1427,8 +1427,6 @@ class SuSyMaterials {
         public static Material TwoEthylanthraquinoneSolution;
         public static Material AcetamideSolution;
         public static Material HydrazineSolution;
-        public static Material EthylenediamineSolution;
-        public static Material DeacidifiedEthylenediamine;
         public static Material EthylenediaminetetraaceticAcidSolution;
         public static Material TetrasodiumEthylenediaminetetraaceticAcidSolution;
         public static Material UreaSolution;

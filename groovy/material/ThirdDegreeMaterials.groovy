@@ -66,17 +66,9 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        EthylenediamineSolution = new Material.Builder(24008, SuSyUtility.susyId('ethylenediamine_solution'))
-                .fluid()
-                .components(Ethylenediamine, 1, HydrogenChloride, 1)
-                .colorAverage()
-                .build()
+        //FREE ID: 24008
 
-        DeacidifiedEthylenediamine = new Material.Builder(24009, SuSyUtility.susyId('deacidified_ethylenediamine'))
-                .fluid()
-                .components(Ethylenediamine, 1, Water, 2, Salt, 1)
-                .colorAverage()
-                .build()
+        //FREE ID: 24009
 
         EthylenediaminetetraaceticAcidSolution = new Material.Builder(24010, SuSyUtility.susyId('ethylenediaminetetraacetic_acid_solution'))
                 .fluid()

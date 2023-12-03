@@ -3262,31 +3262,6 @@ DISTILLATION_TOWER.recipeBuilder()
 
 // Amine oligomerization
 
-/*CSTR.recipeBuilder()
-        .fluidInputs(fluid('dichloroethane') * 50)
-        .fluidInputs(fluid('ammonia') * 100)
-        .fluidOutputs(fluid('ethylenediamine_solution') * 50)
-        .duration(10)
-        .EUt(30)
-        .buildAndRegister()
-
-DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('ethylenediamine_solution') * 1000)
-        .inputs(ore('dustSodiumHydroxide') * 6)
-        .fluidOutputs(fluid('deacidified_ethylenediamine') * 3000)
-        .duration(300)
-        .EUt(30)
-        .buildAndRegister()
-
-DISTILLATION_TOWER.recipeBuilder()
-        .fluidInputs(fluid('deacidified_ethylenediamine') * 3000)
-        .outputs(metaitem('dustSalt') * 2)
-        .fluidOutputs(fluid('ethylenediamine') * 1000)
-        .fluidOutputs(fluid('water') * 2000)
-        .duration(300)
-        .EUt(30)
-        .buildAndRegister()*/
-
 BR.recipeBuilder()
         .fluidInputs(fluid('dichloroethane') * 1525)
         .fluidInputs(fluid('ammonia') * 2425)
