@@ -30,6 +30,7 @@ ASSEMBLER.recipeBuilder()
 
 BR.recipeBuilder()
     .inputs(ore('dustFourChloronitrobenzene'))
+    .fluidInputs(fluid('toluene') * 1000)
     .fluidInputs(fluid('ammonia') * 2000)
     .fluidOutputs(fluid('four_nitroaniline_solution') * 1000)
     .outputs(metaitem('dustAmmoniumChloride') * 6)
@@ -40,6 +41,7 @@ BR.recipeBuilder()
 // p-Phenylenediamine
 
 BCR.recipeBuilder()
+    .notConsumable(ore('catalystBedPalladium'))
     .fluidInputs(fluid('four_nitroaniline_solution') * 50)
     .fluidInputs(fluid('hydrogen') * 300)
     .fluidOutputs(fluid('para_phenylenediamine_solution') * 150)
