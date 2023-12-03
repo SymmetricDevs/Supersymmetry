@@ -480,12 +480,6 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        DryEthanol = new Material.Builder(15077, SuSyUtility.susyId('dry_ethanol'))
-                .fluid()
-                .components(Ethanol, 1)
-                .color(0xeb6b34)
-                .build();
-
         StyreneButadieneSolution = new Material.Builder(15078, SuSyUtility.susyId('styrene_butadiene_solution'))
                 .fluid()
                 .components(Styrene, 1, Butadiene, 1, Ethanol, 1)

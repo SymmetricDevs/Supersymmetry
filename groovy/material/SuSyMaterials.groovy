@@ -1203,7 +1203,6 @@ class SuSyMaterials {
         public static Material ImpureBleach;
         public static Material OneFourDichlorobenzeneSolution;
         public static Material OneTwoDichlorobenzeneSolution;
-        public static Material DryEthanol;
         public static Material StyreneButadieneSolution;
         public static Material DiethylEther;
         public static Material OneBromobutane;
