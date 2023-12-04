@@ -254,59 +254,59 @@ def cryoLiquids = [
 ];
 
 Globals.solders.each { key, val ->
-        cryoLiquids.each { liquid, temp ->
-                if(HV_SC_CriticalTemp > temp) {
-                        //EMP
-                        recipemap('weapons_factory').recipeBuilder()
-                                .inputs([
-                                        ore('plateStainlessSteel')*4,
-                                        metaitem('wireGtSingleMercuryBariumCalciumCuprate')*8,
-                                        metaitem('fluid_cell')*2
-                                ])
-                                .fluidInputs(fluid(key) * val)
-                                .fluidInputs(fluid(liquid) * 2)
-                                .outputs(item('icbmclassic:explosives:16'))
-                                .duration(200)
-                                .EUt(300)
-                                .buildAndRegister();
-                }
-                //Endothermic
-                recipemap('weapons_factory').recipeBuilder()
-                        .inputs([
-                                metaitem('fluid_cell')*8,
-                                item('icbmclassic:explosives:6')*8,
-                                ore('plateStainlessSteel')*4
-                        ])
-                        .fluidInputs(fluid(key) * val)
-                        .fluidInputs(fluid(liquid) * 32)
-                        .outputs(item('icbmclassic:explosives:18'))
-                        .duration(60)
-                        .EUt(300)
-                        .buildAndRegister();
+    cryoLiquids.each { liquid, temp ->
+        if(HV_SC_CriticalTemp > temp) {
+            //EMP
+            recipemap('weapons_factory').recipeBuilder()
+                    .inputs([
+                            ore('plateStainlessSteel')*4,
+                            metaitem('wireGtSingleMercuryBariumCalciumCuprate')*8,
+                            metaitem('fluid_cell')*2
+                    ])
+                    .fluidInputs(fluid(key) * val)
+                    .fluidInputs(fluid(liquid) * 2)
+                    .outputs(item('icbmclassic:explosives:16'))
+                    .duration(200)
+                    .EUt(300)
+                    .buildAndRegister();
         }
-                for (fuel in thermobaric_fuels) {
-                        recipemap('large_weapons_factory').recipeBuilder()
-                                .inputs([
-                                        metaitem('fluid_cell')*8,
-                                        item('icbmclassic:explosives:6')*8,
-                                        ore('plateStainlessSteel')*4
-                                ])
-                                .fluidInputs(fluid(key) * val)
-                                .fluidInputs(fuel)
-                                .outputs(item('icbmclassic:explosives:17'))
-                                .duration(60)
-                                .EUt(300)
-                                .buildAndRegister();
-        }
+        //Endothermic
+        recipemap('weapons_factory').recipeBuilder()
+                .inputs([
+                        metaitem('fluid_cell')*8,
+                        item('icbmclassic:explosives:6')*8,
+                        ore('plateStainlessSteel')*4
+                ])
+                .fluidInputs(fluid(key) * val)
+                .fluidInputs(fluid(liquid) * 32)
+                .outputs(item('icbmclassic:explosives:18'))
+                .duration(60)
+                .EUt(300)
+                .buildAndRegister();
+    }
+    for (fuel in thermobaric_fuels) {
+        recipemap('large_weapons_factory').recipeBuilder()
+                .inputs([
+                        metaitem('fluid_cell')*8,
+                        item('icbmclassic:explosives:6')*8,
+                        ore('plateStainlessSteel')*4
+                ])
+                .fluidInputs(fluid(key) * val)
+                .fluidInputs(fuel)
+                .outputs(item('icbmclassic:explosives:17'))
+                .duration(60)
+                .EUt(300)
+                .buildAndRegister();
+    }
 }
 
 //Concrete
 mods.gregtech.assembler.recipeBuilder()
         .circuitMeta(1)
         .fluidInputs(fluid('water') * 500)
-        .inputs(metaitem('dustObsidian'))
-        .inputs(metaitem('cement.dust'))
-        .inputs(metaitem('dustStone') * 4)
+        .inputs(ore('dustObsidian'))
+        .inputs(ore('dustCement'))
+        .inputs(ore('dustStone') * 4)
         .outputs(item('icbmclassic:concrete', 0) * 4)
         .duration(160)
         .EUt(24)
@@ -315,11 +315,11 @@ mods.gregtech.assembler.recipeBuilder()
 mods.gregtech.assembler.recipeBuilder()
         .circuitMeta(2)
         .fluidInputs(fluid('water') * 500)
-        .inputs(metaitem('dustObsidian'))
-        .inputs(metaitem('dustPolypropylene'))
-        .inputs(metaitem('cement.dust'))
-        .inputs(metaitem('dustStone') * 4)
-        .inputs(metaitem('frameSteel'))
+        .inputs(ore('dustObsidian'))
+        .inputs(ore('dustPolypropylene'))
+        .inputs(ore('dustCement'))
+        .inputs(ore('dustStone') * 4)
+        .inputs(ore('frameGtSteel'))
         .outputs(item('icbmclassic:concrete', 1) * 4)
         .duration(160)
         .EUt(96)
@@ -328,11 +328,11 @@ mods.gregtech.assembler.recipeBuilder()
 mods.gregtech.assembler.recipeBuilder()
         .circuitMeta(3)
         .fluidInputs(fluid('water') * 500)
-        .inputs(metaitem('dustObsidian'))
-        .inputs(metaitem('dustBoronNitride'))
-        .inputs(metaitem('cement.dust'))
-        .inputs(metaitem('dustStone') * 4)
-        .inputs(metaitem('frameStainlessSteel'))
+        .inputs(ore('dustObsidian'))
+        .inputs(ore('dustBoronNitride'))
+        .inputs(ore('dustCement'))
+        .inputs(ore('dustStone') * 4)
+        .inputs(ore('frameGtStainlessSteel'))
         .outputs(item('icbmclassic:concrete', 2) * 4)
         .duration(160)
         .EUt(384)
@@ -341,11 +341,11 @@ mods.gregtech.assembler.recipeBuilder()
 mods.gregtech.assembler.recipeBuilder()
         .circuitMeta(3)
         .fluidInputs(fluid('water') * 500)
-        .inputs(metaitem('dustObsidian'))
-        .inputs(metaitem('dustBorosilicateGlass'))
-        .inputs(metaitem('cement.dust'))
-        .inputs(metaitem('dustStone') * 4)
-        .inputs(metaitem('frameStainlessSteel'))
+        .inputs(ore('dustObsidian'))
+        .inputs(ore('dustBorosilicateGlass'))
+        .inputs(ore('dustCement'))
+        .inputs(ore('dustStone') * 4)
+        .inputs(ore('frameGtStainlessSteel'))
         .outputs(item('icbmclassic:concrete', 2) * 4)
         .duration(160)
         .EUt(384)
