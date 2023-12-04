@@ -49,7 +49,8 @@ def name_removals = [
 	"industrialrenewal:block_steel",
 	"industrialrenewal:manual",
 	"industrialrenewal:medkit",
-	"industrialrenewal:chunk_loader"
+	"industrialrenewal:chunk_loader",
+	"industrialrenewal:concrete"
 ]
 
 for (name in name_removals) {
@@ -230,7 +231,7 @@ crafting.replaceShaped("industrialrenewal:small_wind_blade", item('industrialren
 	[null, ore('turbineBladeAluminium'), null]
 ])
 
-crafting.replaceShaped("industrialrenewal:wall_concrete", item('industrialrenewal:wall_concrete') * 8, [
+crafting.replaceShaped("industrialrenewal:wall_concrete", item('industrialrenewal:wall_concrete') * 6, [
 	[null, null, null],
 	[ore('blockConcrete'), ore('blockConcrete'), ore('blockConcrete')],
 	[ore('blockConcrete'), ore('blockConcrete'), ore('blockConcrete')]
@@ -512,12 +513,6 @@ crafting.addShaped("industrialrenewal:wrench_custom", item('industrialrenewal:ca
 	[null, ore('stickSteel'), null]
 ])
 
-crafting.replaceShaped("industrialrenewal:concrete", item('industrialrenewal:concrete') * 4, [
-	[item("minecraft:sand"), item("minecraft:gravel"), item("minecraft:sand")],
-	[item("minecraft:gravel"), null, item("minecraft:gravel")],
-	[item("minecraft:sand"), item("minecraft:gravel"), item("minecraft:sand")]
-])
-
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(metaitem('large_fluid_cell.steel'))
 	.inputs(metaitem('electric.pump.lv'))
@@ -526,16 +521,29 @@ mods.gregtech.assembler.recipeBuilder()
 	.outputs(item('industrialrenewal:item_fire_extinguisher'))
 	.duration(20)
 	.EUt(Globals.voltAmps[1])
-	.buildAndRegister()
+	.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
 	.circuitMeta(6)
-	.inputs((item('minecraft:gravel')) * 4)
-	.inputs((item('minecraft:sand')) * 4)
+	.fluidInputs(fluid('water') * 500)
+	.inputs(metaitem('cement.dust') * 1)
+	.inputs(metaitem('dustStone') * 3)
+	.inputs(ore('dustSteel') * 2)
+	.inputs((item('minecraft:sand')) * 2)
 	.outputs((item('industrialrenewal:concrete')) * 4)
 	.duration(40)
-	.EUt(Globals.voltAmps[1])
-	.buildAndRegister()
+	.EUt(14)
+	.buildAndRegister();
+
+mods.gregtech.mixer.recipeBuilder()
+		.fluidInputs(fluid('water') * 250)
+		.inputs(metaitem('dustConcrete'))
+		.inputs(metaitem('cement.dust'))
+		.inputs(ore('dustSteel'))
+		.outputs(item('industrialrenewal:concrete') * 2)
+		.duration(60)
+		.EUt(7)
+		.buildAndRegister();
 
 Globals.solders.each { key, val ->
 	mods.gregtech.assembler.recipeBuilder()
@@ -546,7 +554,7 @@ Globals.solders.each { key, val ->
 		.outputs(item('industrialrenewal:entity_detector'))
 		.duration(20)
 		.EUt(Globals.voltAmps[1])
-		.buildAndRegister()
+		.buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(item('gregtech:turbine_casing', 5) * 8)
@@ -558,7 +566,7 @@ Globals.solders.each { key, val ->
 		.outputs(item('industrialrenewal:dam_turbine'))
 		.duration(400)
 		.EUt(Globals.voltAmps[2])
-		.buildAndRegister()
+		.buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(item('gregtech:turbine_casing', 5) * 8)
@@ -570,7 +578,7 @@ Globals.solders.each { key, val ->
 		.outputs(item('industrialrenewal:dam_generator'))
 		.duration(400)
 		.EUt(Globals.voltAmps[2])
-		.buildAndRegister()
+		.buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(ore('stickLongMagnalium') * 6)
@@ -579,7 +587,7 @@ Globals.solders.each { key, val ->
 		.outputs(item('industrialrenewal:dam_axis'))
 		.duration(200)
 		.EUt(Globals.voltAmps[2])
-		.buildAndRegister()
+		.buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(ore('pipeLargeFluidStainlessSteel'))
@@ -589,7 +597,7 @@ Globals.solders.each { key, val ->
 		.outputs(item('industrialrenewal:high_pressure_pipe'))
 		.duration(100)
 		.EUt(Globals.voltAmps[1])
-		.buildAndRegister()
+		.buildAndRegister();
 
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(metaitem('drum.steel') * 8)
@@ -602,16 +610,6 @@ Globals.solders.each { key, val ->
 		.EUt(Globals.voltAmps[1])
 		.buildAndRegister()
 }
-
-//vanilla recipe furnace only as it's overwritten by oredict in Gregtech machines. In GT machines this creates GT concrete. - Neeyo
-furnace.add((metaitem('dustConcrete')), item('industrialrenewal:concrete'))
-
-mods.gregtech.compressor.recipeBuilder()
-		.inputs((item('minecraft:gravel')) * 2)
-		.outputs(item('industrialrenewal:concrete'))
-		.duration(100)
-		.EUt(4)
-		.buildAndRegister();
 
 /*
 
