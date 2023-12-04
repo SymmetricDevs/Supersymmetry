@@ -87,6 +87,7 @@ ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust')
 
 //Concrete
 
+ore('dustCement').add(metaitem('cement.dust'))
 ore('blockConcrete').add(item('industrialrenewal:concrete'))
 ore('blockConcrete').add(item('engineersdecor:rebar_concrete'))
 ore('blockConcrete').add(item('engineersdecor:rebar_concrete_tile'))
