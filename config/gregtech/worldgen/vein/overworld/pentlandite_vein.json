@@ -5,29 +5,29 @@
   "min_height": 0,
   "vein_populator": {
     "type": "surface_rock",
-    "material": "silver"
+    "material": "pentlandite"
   },
   "generator": {
     "type": "layered",
     "radius": [
-      16,
-      16
+      20,
+      20
     ]
   },
   "filler": {
     "type": "layered",
     "values": [
       {
-        "primary": "ore:acanthite"
+        "primary": "ore:pentlandite"
       },
       {
-        "secondary": "ore:galena"
+        "secondary": "ore:chalcopyrite"
       },
       {
-        "between": "ore:pyrargyrite"
+        "between": "ore:pyrite"
       },
       {
-        "sporadic": "ore:silver"
+        "sporadic": "ore:pyrite"
       }
     ]
   }
