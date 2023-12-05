@@ -142,7 +142,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 2013,
+            "Damage:2": 0,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -153,7 +153,7 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtech:meta_screw"
+            "id:8": "sereneseasons:season_clock"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -895,7 +895,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -2846,7 +2846,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -2869,6 +2869,23 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 18,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -2879,7 +2896,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Steam Macerator §ris used to convert ores into crushed ores. This is the most simple way of doing ore processing.\n\nEvery ore put into the Steam Macerator turns into 2 crushed ores, that can be smelted in the Furnace or PBFto get two ingots.\n",
+          "desc:8": "The §6§cSteam Macerator §ris used to convert ores into crushed ores. This is the most simple way of doing ore processing.\n\nEvery ore put into the Steam Macerator turns into 2 crushed ores, that can be smelted in the Furnace or PBFto get two ingots.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2898,7 +2915,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -2916,6 +2933,23 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 9,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 10,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -3068,7 +3102,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The creation of §6Rubber §ris a very important step for any aspiring technician. Later on, rubber allows you to create circuitry.\nRubber is made from §5§6Latex§r, a fluid which is collected by putting a §6Steam Latex Collector §rnear a Rubber Tree. \n\nMake sure that the Collector is touching a Rubber Log on the §6white §rside of the machine.",
+          "desc:8": "The creation of §6Rubber §ris a very important step for any aspiring technician. Later on, rubber allows you to create circuitry.\nRubber is made from §5§6Latex§r, a fluid which is collected by putting a §6§cSteam Latex Collector §rnear a Rubber Tree. \n\nMake sure that the Collector is touching a Rubber Log on the §6white §rside of the machine.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3087,7 +3121,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -3105,6 +3139,23 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 14510,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14511,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -3279,7 +3330,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -3302,6 +3353,23 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14680,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -3312,7 +3380,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §aSteam Compressor §rcompresses things. It can turn ingots into blocks, as well as nuggets to ingots.\n        ",
+          "desc:8": "The §a§cSteam Compressor §rcompresses things. It can turn ingots into blocks, as well as nuggets to ingots.\n        ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3331,7 +3399,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -3354,6 +3422,23 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 12,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -3364,7 +3449,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §l§r§6Steam Forge Hammer §ris an extremely useful machine that will do pretty much anything that requires a hammer.\n\nIt can make §6plates §r§l§rat a better ratio, only requiring 1.5 ingots instead of 2 per plate. This can allow you to save a substantial amount of ingots until you acquire the §6bender§r, which requires only 1 ingot per plate.",
+          "desc:8": "The §l§r§6§cSteam Forge Hammer §ris an extremely useful machine that will do pretty much anything that requires a hammer.\n\nIt can make §6plates §r§l§rat a better ratio, only requiring 1.5 ingots instead of 2 per plate. This can allow you to save a substantial amount of ingots until you acquire the §6bender§r, which requires only 1 ingot per plate.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3383,7 +3468,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -3406,12 +3491,29 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
     "41:10": {
       "preRequisites:11": [
-        49
+        35
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -3435,7 +3537,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -3453,6 +3555,23 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 14515,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14516,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -3608,7 +3727,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Pyrite §rcan be obtained by digging in §6Galena §ror §6Sphalerite §rdeposits, found in the first two layers of the crust.\n\nPyrite §6dust §rcan be roasted to obtain Banded Iron dust and elemental §6Sulfur§r, which will be used in processing rubber.\n\n§cIron II Sulfate§o§r can be roasted again to obtain §6Sulfur Trioxide§r.",
+          "desc:8": "§6Pyrite §rcan be obtained by digging in §6Galena §ror §6Sphalerite §rdeposits, found in the first two layers of the crust.\n\nPyrite §6dust §rcan be roasted to obtain Banded Iron dust and elemental §6Sulfur§r, which will be used in processing rubber.\n\n§cIron III Sulfate§o§r can be roasted again to obtain §6Sulfur Trioxide§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3693,7 +3812,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §7§6Steam Mixer §rmixes several dusts or fluids together. It will be required for mixing Sulfur Trioxide and Water to create H2SO4. \n\nIf some mixer recipes require a §6programmed circuit§r, you can §aclick §ron the \"G\" in the bottom right of the Mixer to change the configuration.",
+          "desc:8": "The §7§6§cSteam Mixer §rmixes several dusts or fluids together. It will be required for mixing Sulfur Trioxide and Water to create H2SO4. \n\nIf some mixer recipes require a §6programmed circuit§r, you can §aclick §ron the \"G\" in the bottom right of the Mixer to change the configuration.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3712,7 +3831,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -3735,6 +3854,23 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14537,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -3746,7 +3882,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Sulfur Trioxide and Water can be mixed together to create §6Sulfuric Acid§r.\n\nSO3 + H2O -\u003e H2SO4\n\nSince §6Sulfuric Acid §ris an acid, it will require §6special equipment §rto handle it. §c§lBuckets or Bronze/Steel Drums can\u0027t handle Acids. §rYou must use a §c§lLead Drum §rto transport Sulfuric Acid, as it\u0027s acid-proof.",
+          "desc:8": "Sulfur Trioxide and Water can be mixed together in §cMixer§r (§cSteam Mixer§r should do the job) to create §6Sulfuric Acid§r.\n\nSO3 + H2O -\u003e H2SO4\n\nSince §6Sulfuric Acid §ris an acid, it will require §6special equipment §rto handle it. §c§l§9§2§3§5§8§9§6§d§f§k§l§r§a§a§b§lBuckets or Bronze/Steel Drums can\u0027t handle Acids. §rYou must use a §c§l§d§5§d§lLead Drum§r/§e§lGold Drum§r §rto transport Sulfuric Acid, as it\u0027s acid-proof.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3778,7 +3914,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -3789,7 +3925,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -3800,7 +3936,38 @@
               "id:8": "gregtech:machine"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:optional_retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1617,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sulfuric_acid"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -3933,7 +4100,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The§6 Coagulation Tank§r is a hollow, 3x3x3 cubic structure that coagulates fluids into solids.\n\nThe Coagulation Tank requires:\n§6- 1 Coagulation Tank Controller\n- 24 Wooden Coagulation Tank Wall\n§r\nThe tank can coagulate liquid Latex into a solid hunk of Latex. \nSome fluid §6Catalysts§r can be used to make the process faster, but it requires that Circuits are supplied to the machine, so this isn\u0027t available right now. \n\nYou can §cautomate this machine §rby adding a GT Input Hatch and Output Bus to the structure.\n\nWhile this machine isn\u0027t strictly required, it makes the next step of the Rubber processing chain about §c8x more efficient§r.",
+          "desc:8": "The§6 §cCoagulation Tank§r is a hollow, 3x3x3 cubic structure that coagulates fluids into solids.\n\nThe Coagulation Tank requires:\n§6- 1 Coagulation Tank Controller\n- 24 Wooden Coagulation Tank Wall\n§r\nThe tank can coagulate liquid Latex into a solid hunk of Latex. \nSome fluid §6Catalysts§r can be used to make the process faster, but it requires that Circuits are supplied to the machine, so this isn\u0027t available right now. \n\nYou can §c§bautomate this machine §rby adding a GT Input Hatch and Output Bus to the structure.\n\nWhile this machine isn\u0027t strictly required, it makes the next step of the Rubber processing chain about §c§a8x more efficient§r.\n\n§lNote: This machine has some issues which input hatch/output bus placement. I suggest you try building this multiblock in creative first, to see which hatch placment allows the §6§lCoagulation Tank§r§l to form.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4341,7 +4508,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Macerating is still an ore doubler like in other mods, but there is a twist, it does not give dusts directly! Crushed Ores are meant for more advanced ore processing. One Crushed Ore will convert to one dust.\n\nTo get the Impure Dust§r, hammer the Crushed Ore. \n\nThis is done either by using a Hammer tool in the crafting table, or using the Steam Forge Hammer.\n\nThe Impure Dust can be smelted in the Furnace to get the Ingot, however mixed ores (Limonite, Chalcopyrite) will only give nuggets over ingots.\n\nThe Impure Dust can also be thrown in a vanilla Cauldron filled with water to clean it and turn it into a regular dust. Throw them in full stacks to consume less water per single dust.\n\n§lNote: Macerating, hammering, and then smelting (sometimes into nuggets) is really time consuming in the steam age! Resource efficiency can be ignored for now. Nobody will blame you for smelting ores directly into ingots.\n",
+          "desc:8": "Macerating is still an ore doubler like in other mods, but there is a twist, it does not give dusts directly! Crushed Ores are meant for more advanced ore processing. One Crushed Ore will convert to one dust.\n\nTo get the Impure Dust§r, hammer the Crushed Ore. \n\nThis is done either by using a Hammer tool in the crafting table, or using the Steam Forge Hammer.\n\nThe Impure Dust can be smelted in the Furnace to get the Ingot, however mixed ores (Limonite, Chalcopyrite) will only give nuggets over ingots.\n\nThe Impure Dust can also be thrown in a vanilla Cauldron filled with water to clean it and turn it into a regular dust. Throw them in full stacks to consume less water per single dust.\n\n§l§4§3§e§f§k§e§d§e§lNote: Macerating, hammering, and then smelting (sometimes into nuggets) is really time consuming in the steam age! Resource efficiency can be ignored for now. Nobody will blame you for smelting ores directly into ingots.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4461,7 +4628,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -4479,6 +4646,23 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 5,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 6,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -4514,7 +4698,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -4532,6 +4716,23 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -5372,7 +5573,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6lead–acid battery§r is the first type of rechargeable battery ever created. Compared to more powerful batteries, lead–acid batteries have relatively low energy density. But it\u0027s a start.\n\nCombining Cathodes and Anodes makes a Battery.\n",
+          "desc:8": "The §6Lead–Acid Battery§r is the first type of rechargeable battery ever created. Compared to more powerful batteries, §6Lead–Acid Batteries§r have relatively low energy density. But it\u0027s a start. Nevertheless, §6Lead–Acid Batter§i§6ies§r are still better than using the §cSteel Multiblock Tank§r, as 3 §6Lead–Acid Batter§i§6ies§r have similar amount of energy as a §cSteel Multiblock Tank§r full of §7Steam§r\n\nCombining Cathodes and Anodes makes a Battery.\n\nYou can access better recipe to make Lead-Acid Battery with the §cLV assembler§r, which consumes 1 LV Battery Cell, 2 Lead Plates and 1 bucket of Sulfuric Acid",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5397,7 +5598,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Lead Acid Battery",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -5838,7 +6039,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §6vacuum chamber§r is a rigid enclosure from which air and other gases are removed by a vacuum pump.\n\nThis results in extremely low pressures, for example, the Vacuum Tube requires less than 130 §6§lmicro§l§r§6Pascals §rto function.\n\nThis is required to make the Vacuum Tube.",
+          "desc:8": "A §6§cVacuum Chamber§r is a rigid enclosure from which air and other gases are removed by a vacuum pump.\n\nThis results in extremely low pressures, for example, the Vacuum Tube requires less than 130§6§e§r §6§lmicro§l§r§6Pascals §rto function.\n\nThis is required to make the §6Vacuum Tube§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5857,7 +6058,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -5875,6 +6076,23 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 14538,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14539,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -7182,7 +7400,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -9615,7 +9833,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 2511,
+            "Damage:2": 51,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -9633,7 +9851,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Setting Up",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -10409,7 +10627,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Steam Grinder§r is a multi machine that can macerate§6 8 Ores §rat once instead of 1. It runs on steam power.\n\nBuilding a Steam Grinder requires:\n1x Steam Grinder Controller\n1x Steam Input Bus\n1x Steam Hatch\n1x Steam Output Bus\n22x Bronze Machine Casing\n\nCheck JEI for more info on the structure.\nItems should be put into the Input Bus, ready to be processed. They will come out of the Output Bus.",
+          "desc:8": "The §6§cSteam Grinder§r is a multi machine that can macerate§6 8 items §rat once instead of §61§r, but the recipe time for each time is multiplied by 150% This means that the §cSteam Grinder§r is §68/3§r, or §62.3333§r times faster than the §cLV macerator§r. Also, just like the §6LV/MV Macerator§r, the §6§cSteam Grinder§r does not output byproducts.  . It runs on steam power.\n\nBuilding a §cSteam Grinder§r requires:\n§6- 1x Steam Grinder Controller\n- 1x Steam Input Bus\n- 1x Steam Hatch\n- 1x Steam Output Bus\n- 22x Bronze Machine Casing§r\n\nCheck §eJEI§r for more info on the structure.\nItems should be put into the Input Bus, ready to be processed. They will come out of the §6Output Bus§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11943,7 +12161,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -11961,6 +12179,40 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1316,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1330,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1344,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -16488,7 +16740,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Toluene §rcan be distilled from Coal Tar using an §cLV Distillery§r.",
+          "desc:8": "§6Toluene §rcan be processed from §6Coal Tar§r through several steps of processing. First, distill §6Coal Tar§r for §6Coal Tar Oil§r. Then mix §6Coal Tar Oil§r with §6Sulfuric Acid§r for §6Acidic Coal Tar Oil§r, centrifuge §7§6Acidic Coal Tar Oil§r with §6Furfural§  to get §6B.T.E.X Extract§r then centrifuge §6B.T.E.X Extract§r with §6Steam§r to get §6B.T.E.X.§r (Note: Furfural is recycled). Distill §6B.T.E.X§r for §6Toluene§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16529,7 +16781,7 @@
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -16604,7 +16856,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32024,
+              "Damage:2": 15007,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -25414,7 +25666,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §bMining Drill§r mines§6 nearly infinite rocks§r from a §6deposit block§r. It mines one rock per second while running at LV.\n\nThese rocks are not like normal ores because they have to be §csorted first using an Ore Sorter§r.\n\nWhile building the Mining Drill, §c§lthe Steel Drill Head must be exactly on top of the deposit block.§r You have to find a deposit in the world and place the drill on top of it.\n\nThere are 7 different types of deposits: orthomagmatic, magmatic-hydrothermal, hydrothermal, sedimentary, alluvial, metamorphic and residual. For more info, check JEI.\n\n§6\nThe Mining Drill requires:\n- 1 Mining Drill\n- 1 Maintenance Hatch\n- 1 Output Bus\n- 1 Output Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Energy Hatch\n- 1 Steel Drill Head\n- 278 Steel Frame Box\n- 312 Light Concrete\n- 35 Grate Machine Casing\n- 52 Steel Gearbox Casing\n- 92 Solid Steel Machine Casing\n- 28 Steel Pipe Casing\n\n§rDue to the over 1,000 steel required to build this machine, you should set up an arc furnace and EBF setup for smelting steel more quickly. Also check the §6Better Building §rchapter for info on making concrete.",
+          "desc:8": "The §bMining Drill§r mines§6 nearly infinite rocks§r from a §6deposit block§r. It mines one rock per second while running at LV.\n\nThese rocks are not like normal ores because they have to be §csorted first using an Ore Sorter§r.\n\nWhile building the Mining Drill, §c§lthe Steel Drill Head must be exactly on top of the deposit block.§r You have to find a deposit in the world and place the drill on top of it.\n\nThere are 7 different types of deposits: orthomagmatic, magmatic-hydrothermal, hydrothermal, sedimentary, alluvial, metamorphic and residual. For more info, check JEI.\n\n§6\n§rThe §c§9§bMining Drill§r requires:§6\n- 1 Mining Drill\n- 1 Maintenance Hatch\n- 1 Output Bus\n- 1 Output Hatch\n- 1 Input Bus\n- 1 Input Hatch\n- 1 Energy Hatch\n- 1 Steel Drill Head\n- 278 Steel Frame Box\n- 312 Light Concrete\n- 35 Grate Machine Casing\n- 52 Steel Gearbox Casing\n- 92 Solid Steel Machine Casing\n- 28 Steel Pipe Casing\n\n§rDue to the cost of almost 1,000 steel required to build this machine, you should set up a double EBF setup that convert banded iron/magnetite into steel for smelting steel more quickly. Also check the §6Better Building §rchapter for info on making concrete.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25643,7 +25895,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Coal Tar §rcan be distilled from §6coal§r, charcoal and anthracite and it can be used as a fuel in the §6Large LV Gas Turbine§r. It can also be distilled to produce toluene, for explosives.",
+          "desc:8": "§6Coal Tar §rcan be distilled from §6Coal§r,§r §e§2§3§4§6§6§8§6Charcoal §rand §6Anthracite§r in a §6§cPyrolyse Oven§r. §7§6Coal Tar§6§r can be distilled into §6Anthracene Oi§6§r§6l§r, §6Naphthalene Oil§r, §6Light Oil§r, and §6Creosote§r. §6Light Oil§r will be your early game source of §6Benzene§r and §6Toluene§r. Check §eJEI§r for more infomation on how to get §6Toluene§r from §6Light Oil§r. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25684,7 +25936,7 @@
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -26754,7 +27006,7 @@
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -27644,7 +27896,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Benzene §rcan be used as a source of power in the §cLarge Gas Turbine§r. It can be §cdistilled §rout of Coal Tar.",
+          "desc:8": "Although §6Benzene §rcan be used as a source of power in the §cLarge Gas Turbine§r, §6Benzene§r is not recommended as a viable power source. Yeah, the title is kinda misleading, as unlike other GregTech packs, the only way to get §6Benzene§r before §d§5EV§r is from §6§rprocessing§r §6Coal Tar.§r This route has very low yields however. §T\nIf you still want to get plentiful amount of §6Benzene§r, the §cCatalytic Reformer§c§r §6§rcan §ttransform §6Naphtha§r into §6Naphtha Refornate§r, a feedstock for §6B.T.E.X§r. By that point however, you would have unlocked better fuel sources derived from oil. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27669,7 +27921,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Church of Benzene",
+          "name:8": "Church of Benzene?",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -27861,7 +28113,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Coal Gas §rcan be used as a source of power in the §cLarge Gas Turbine§r. It can be §cobtained with the Pyrolyse Oven§r.",
+          "desc:8": "§6Coal Gas §rcan be used as a source of power in the §cLarge Gas Turbine§r. It can be §c§robtained with the §cPyrolyse Oven§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32689,7 +32941,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§7Vinyl Chloride §rcan be diluted with §9Water §rto make a §7Vinyl Chloride Solution§r.",
+          "desc:8": "§7Vinyl Chloride §rcan be diluted with §9Water §rto make a §7Vinyl Chloride Suspension.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32715,7 +32967,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Vinyl Chloride Solution",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -32737,10 +32989,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "betterquesting.placeholder",
-              "Tag:10": {
-                "orig_id:8": "vinyl_chloride_solution"
-              }
+              "FluidName:8": "vinyl_chloride_suspension"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -32787,7 +33036,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Potassium Bisulfate",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -33703,7 +33952,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Iron, Silicon and Coke §rcan be combined to get ferrosilicon, a material needed for stainless steel.",
+          "desc:8": "§6Iron, Silicon Dioxide and Coke Dust/Carbon Dust §rcan be combined to get §0§2§1§4§5§8Ferrosilicon§r, a material needed for §7Stainless Steel§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33774,7 +34023,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Fluorite Dust §ris needed for Hydrofluoric Acid and Stainless Steel later on, so let\u0027s get some.",
+          "desc:8": "§2§6§2Fluorite Dust §ris needed for §5Hydrofluoric Acid§r and §7Stainless Steel§r later on, so let\u0027s get some.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33918,7 +34167,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combine §6Ferrosilicon§r, §cFerrochromium§r, §7Carburized Stainless Steel§r, §aFluorite§r §rand §6Quicklime §rto get Stainless Steel. This process is done in an EBF at 240 EU/t and it produces §cmolten §rstainless steel. \n\nIt has to be run through a §6Fluid Solidifier §rbefore actually using it.",
+          "desc:8": "Combine §6§8Ferrosilicon§r, §c§6Ferrochromium§r, §7Carburized Stainless Steel§r, §a§2Fluorite§r §rand §6Quicklime §rto get §7Stainless Stee§rl. This process is done in an EBF at 120 EU/t and it produces §cmolten §rstainless steel. \n\nIt has to be run through a §6§cFluid Solidifier §rbefore actually using it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34054,7 +34303,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Pyrolusite §rcan be smelted in an EBF with Coke to make §6Small Piles of Manganese§r.",
+          "desc:8": "§6Pyrolusite §rcan be smelted in an EBF with a §1§3Carbon Source (Coal, Charcoal, Anthracite, Coke, Carbon)§r to get §6Manganee dust.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34110,7 +34359,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust_small"
+              "id:8": "gregtech:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -34683,7 +34932,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Zinc §rneeds to be roasted to make §7Zincite§r.\n\n§dRhodochrosite §rneeds to be roasted to make §4Manganese II Oxide§r.\n\nCombine both of them with §4Purified Iron III Oxide §rto make §6Manganese Zinc Ferrite§r.",
+          "desc:8": "§6Zinc §rneeds to be roasted to make §7Zinc Oxide§r.\n\n§dRhodochrosite §rneeds to be roasted to make §4Manganese II Oxide§r.\n\nCombine both of them with §4Purified Iron III Oxide §rto make §6Manganese Zinc Ferrite§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34753,7 +35002,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§1Nickel §rneeds to be roasted with Oxygen to make §aNickel II Oxide§r.\n\nCombine §aNickel II Oxide §rwith §4Purified Iron III Oxide §r§r and Zincite to make Nickel Zinc Ferrite.\n",
+          "desc:8": "§1§a§9§9§a§9§d§2§1§6§9Nickel §rneeds to be roasted with Oxygen to make §aNickel II Oxide§r.\n\nCombine §aNickel II Oxide §rwith §4Purified Iron III Oxide §r§r and Zincite to make Nickel Zinc Ferrite.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38458,13 +38707,13 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Aqua Regian",
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -38473,7 +38722,7 @@
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -38540,7 +38789,23 @@
           "ignoreNBT:1": 0,
           "index:3": 0,
           "partialMatch:1": 1,
-          "requiredItems:9": {},
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 80,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_catalyst_bed"
+            }
+          },
           "taskID:8": "bq_standard:retrieval"
         }
       }
@@ -48306,7 +48571,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Acetylene",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -48664,7 +48929,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you have §7Oil§f and don\u0027t feel like using §6Ethanol§f to create §cEthylene,§f then check this out.\n\nChemicals like §6ethane §rand §6propane§f are obtained from distilling desulfurized oil fractions.\n\nThese chemicals can be roasted with §7steam §rto create Steam Cracked fractions, which can be distilled down to §6ethylene§r.",
+          "desc:8": "If you have §7Oil§f and don\u0027t feel like using §6Ethanol§f to create §cEthylene,§f then check this out.\n\nChemicals like §6Ethane §rand §6Propane§f are obtained from distilling desulfurized oil fractions.\n\nThese chemicals can be roasted with §7Steam §rto create Steam Cracked fractions, which can be distilled down to §6Ethylene§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53888,7 +54153,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "XNet systems are a powerful tool for early game automation.",
+          "desc:8": "§6XNet systems§r are a powerful tool for early game automation. For more infomation on how to use XNet, I suggest searching XNet guides on §cYouTube§r, as they will be more capable of explaining the systems than a questbook. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55002,7 +55267,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "NORMAL"
         }
       },
@@ -55015,7 +55280,7 @@
         },
         "1:10": {
           "autoConsume:1": 0,
-          "consume:1": 1,
+          "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 1,
@@ -55140,7 +55405,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -55150,6 +55415,20 @@
         "0:10": {
           "index:3": 0,
           "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "cyclohexanone"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -55339,7 +55618,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -55454,7 +55733,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -55471,7 +55750,10 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "techguns:t2_riot_helmet"
+              "id:8": "techguns:t2_riot_helmet",
+              "tag:10": {
+                "camo:1": 0
+              }
             },
             "1:10": {
               "Count:3": 1,
@@ -55486,7 +55768,10 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "techguns:t2_riot_chestplate"
+              "id:8": "techguns:t2_riot_chestplate",
+              "tag:10": {
+                "camo:1": 0
+              }
             },
             "2:10": {
               "Count:3": 1,
@@ -55501,7 +55786,10 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "techguns:t2_riot_leggings"
+              "id:8": "techguns:t2_riot_leggings",
+              "tag:10": {
+                "camo:1": 0
+              }
             },
             "3:10": {
               "Count:3": 1,
@@ -55516,7 +55804,10 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "techguns:t2_riot_boots"
+              "id:8": "techguns:t2_riot_boots",
+              "tag:10": {
+                "camo:1": 0
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -55569,7 +55860,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -55977,7 +56268,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "The§a Camo Bench §rcan be used to change the texture of Techguns armor to your favorite one. The bench should work with any Techguns armor with the exception of Ranger armor.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56010,7 +56301,14 @@
           "ignoreNBT:1": 0,
           "index:3": 0,
           "partialMatch:1": 1,
-          "requiredItems:9": {},
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8,
+              "OreDict:8": "",
+              "id:8": "techguns:simplemachine"
+            }
+          },
           "taskID:8": "bq_standard:retrieval"
         }
       }
@@ -57392,7 +57690,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -57487,7 +57785,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -57582,7 +57880,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -57677,7 +57975,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -61638,7 +61936,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Reform naphtha from your oil processing plant into B.T.E.X to obtain aromatic products such as §8§6§8§7benzene§r, §6toluene§r, ethylbenzene, §3xylene§r§r, which can be further processed into useful chemicals such as §4styrene§r and §aphenol§r.",
+          "desc:8": "Reform naphtha from your oil processing plant into B.T.E.X to obtain aromatic products such as §8§6§8§7Benzene§r, §6Toluene§r, Ethylbenzene, §3Xylene§r§r, which can be further processed into useful chemicals such as §4Styrene§r and §aPhenol§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -61664,13 +61962,13 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "B.T.E.X.",
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -62614,7 +62912,7 @@
           "id:3": 31,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -24,
+          "x:3": -48,
           "y:3": -24
         },
         "8:10": {
@@ -62628,7 +62926,7 @@
           "id:3": 33,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
+          "x:3": 112,
           "y:3": 48
         },
         "10:10": {
@@ -62656,14 +62954,14 @@
           "id:3": 39,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 48
+          "x:3": 112,
+          "y:3": -64
         },
         "14:10": {
           "id:3": 40,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 12,
+          "x:3": 60,
           "y:3": 48
         },
         "15:10": {
@@ -62671,7 +62969,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
-          "y:3": 144
+          "y:3": 96
         },
         "16:10": {
           "id:3": 42,
@@ -62713,14 +63011,14 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -42,
-          "y:3": 180
+          "y:3": 138
         },
         "22:10": {
           "id:3": 49,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -42,
-          "y:3": 90
+          "x:3": 6,
+          "y:3": 42
         },
         "23:10": {
           "id:3": 50,
@@ -62754,8 +63052,8 @@
           "id:3": 55,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 96
+          "x:3": 164,
+          "y:3": 100
         },
         "28:10": {
           "id:3": 56,
@@ -62768,22 +63066,22 @@
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": -72
+          "x:3": 52,
+          "y:3": -36
         },
         "30:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": -72
+          "x:3": -109,
+          "y:3": -62
         },
         "31:10": {
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": -72
+          "x:3": -137,
+          "y:3": -93
         },
         "32:10": {
           "id:3": 61,
@@ -62852,7 +63150,7 @@
           "id:3": 75,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 48,
+          "x:3": 100,
           "y:3": -24
         },
         "42:10": {
@@ -62880,22 +63178,22 @@
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": -108
+          "x:3": -84,
+          "y:3": -102
         },
         "46:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
+          "x:3": 164,
           "y:3": -12
         },
         "47:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": -12
+          "x:3": 164,
+          "y:3": 48
         },
         "48:10": {
           "id:3": 97,
@@ -62922,15 +63220,15 @@
           "id:3": 147,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 96
+          "x:3": 112,
+          "y:3": 100
         },
         "52:10": {
           "id:3": 148,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": -144
+          "x:3": -36,
+          "y:3": -122
         },
         "53:10": {
           "id:3": 170,
@@ -62957,15 +63255,15 @@
           "id:3": 375,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -66,
-          "y:3": -36
+          "x:3": -175,
+          "y:3": -47
         },
         "57:10": {
           "id:3": 376,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -114,
-          "y:3": -36
+          "x:3": -175,
+          "y:3": -93
         },
         "58:10": {
           "id:3": 422,
@@ -62985,21 +63283,21 @@
           "id:3": 518,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -174,
-          "y:3": -60
+          "x:3": -228,
+          "y:3": -52
         },
         "61:10": {
           "id:3": 535,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": -90
+          "x:3": -228,
+          "y:3": -92
         },
         "62:10": {
           "id:3": 536,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -66,
+          "x:3": -84,
           "y:3": 12
         },
         "63:10": {
@@ -63167,10 +63465,10 @@
         },
         "12:10": {
           "id:3": 110,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": 66,
-          "y:3": 210
+          "sizeX:3": 26,
+          "sizeY:3": 26,
+          "x:3": 28,
+          "y:3": 176
         },
         "13:10": {
           "id:3": 111,
@@ -63243,699 +63541,706 @@
           "y:3": 318
         },
         "23:10": {
+          "id:3": 123,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": 204
+        },
+        "24:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 324
         },
-        "24:10": {
+        "25:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 378
         },
-        "25:10": {
+        "26:10": {
           "id:3": 127,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 216
         },
-        "26:10": {
+        "27:10": {
           "id:3": 128,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 318
         },
-        "27:10": {
+        "28:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 282
         },
-        "28:10": {
+        "29:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 192
         },
-        "29:10": {
+        "30:10": {
           "id:3": 158,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 96
         },
-        "30:10": {
+        "31:10": {
           "id:3": 159,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 48
         },
-        "31:10": {
+        "32:10": {
           "id:3": 160,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 108
         },
-        "32:10": {
+        "33:10": {
           "id:3": 161,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 108
         },
-        "33:10": {
+        "34:10": {
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 108
         },
-        "34:10": {
+        "35:10": {
           "id:3": 169,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -306,
           "y:3": 210
         },
-        "35:10": {
+        "36:10": {
           "id:3": 171,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
           "y:3": 78
         },
-        "36:10": {
+        "37:10": {
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 270
         },
-        "37:10": {
+        "38:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 318
         },
-        "38:10": {
+        "39:10": {
           "id:3": 174,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -348,
           "y:3": 402
         },
-        "39:10": {
+        "40:10": {
           "id:3": 175,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 366
         },
-        "40:10": {
+        "41:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 408
         },
-        "41:10": {
+        "42:10": {
           "id:3": 179,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -342,
           "y:3": 366
         },
-        "42:10": {
+        "43:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 456
         },
-        "43:10": {
+        "44:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 504
         },
-        "44:10": {
+        "45:10": {
           "id:3": 183,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 378
         },
-        "45:10": {
+        "46:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 378
         },
-        "46:10": {
+        "47:10": {
           "id:3": 185,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 426
         },
-        "47:10": {
+        "48:10": {
           "id:3": 186,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 114
         },
-        "48:10": {
+        "49:10": {
           "id:3": 188,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 160,
           "y:3": 463
         },
-        "49:10": {
+        "50:10": {
           "id:3": 189,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 475
         },
-        "50:10": {
+        "51:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 475
         },
-        "51:10": {
+        "52:10": {
           "id:3": 191,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 48
         },
-        "52:10": {
+        "53:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 48
         },
-        "53:10": {
+        "54:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 48
         },
-        "54:10": {
+        "55:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 24
         },
-        "55:10": {
+        "56:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 72
         },
-        "56:10": {
+        "57:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": -24
         },
-        "57:10": {
+        "58:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 12
         },
-        "58:10": {
+        "59:10": {
           "id:3": 198,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 282
         },
-        "59:10": {
+        "60:10": {
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 50,
           "y:3": 323
         },
-        "60:10": {
+        "61:10": {
           "id:3": 200,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 378
         },
-        "61:10": {
+        "62:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 427
         },
-        "62:10": {
+        "63:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 378
         },
-        "63:10": {
+        "64:10": {
           "id:3": 203,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 162,
           "y:3": 366
         },
-        "64:10": {
+        "65:10": {
           "id:3": 204,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": 114
         },
-        "65:10": {
+        "66:10": {
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 90,
           "y:3": 108
         },
-        "66:10": {
+        "67:10": {
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 432
         },
-        "67:10": {
+        "68:10": {
           "id:3": 222,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 468
         },
-        "68:10": {
+        "69:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 174
         },
-        "69:10": {
+        "70:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -186,
           "y:3": 270
         },
-        "70:10": {
+        "71:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 426
         },
-        "71:10": {
+        "72:10": {
           "id:3": 239,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 558
         },
-        "72:10": {
+        "73:10": {
           "id:3": 240,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 114,
           "y:3": 558
         },
-        "73:10": {
+        "74:10": {
           "id:3": 241,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 558
         },
-        "74:10": {
+        "75:10": {
           "id:3": 242,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 18,
           "y:3": 546
         },
-        "75:10": {
+        "76:10": {
           "id:3": 243,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 18,
           "y:3": 624
         },
-        "76:10": {
+        "77:10": {
           "id:3": 368,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 468
         },
-        "77:10": {
+        "78:10": {
           "id:3": 369,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -216,
           "y:3": 504
         },
-        "78:10": {
+        "79:10": {
           "id:3": 372,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": 427
         },
-        "79:10": {
+        "80:10": {
           "id:3": 377,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 132,
           "y:3": -102
         },
-        "80:10": {
+        "81:10": {
           "id:3": 378,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": -102
         },
-        "81:10": {
+        "82:10": {
           "id:3": 379,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 60,
           "y:3": -102
         },
-        "82:10": {
+        "83:10": {
           "id:3": 380,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 172,
           "y:3": 52
         },
-        "83:10": {
+        "84:10": {
           "id:3": 381,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
           "y:3": 324
         },
-        "84:10": {
+        "85:10": {
           "id:3": 383,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 229,
           "y:3": 52
         },
-        "85:10": {
+        "86:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 12
         },
-        "86:10": {
+        "87:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": -24
         },
-        "87:10": {
+        "88:10": {
           "id:3": 386,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 12
         },
-        "88:10": {
+        "89:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 12
         },
-        "89:10": {
+        "90:10": {
           "id:3": 388,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 204
         },
-        "90:10": {
+        "91:10": {
           "id:3": 418,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": -42
         },
-        "91:10": {
+        "92:10": {
           "id:3": 419,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
           "y:3": -6
         },
-        "92:10": {
+        "93:10": {
           "id:3": 420,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 66,
           "y:3": -6
         },
-        "93:10": {
+        "94:10": {
           "id:3": 421,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": 0
         },
-        "94:10": {
+        "95:10": {
           "id:3": 438,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -156,
           "y:3": 510
         },
-        "95:10": {
+        "96:10": {
           "id:3": 439,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": -90
         },
-        "96:10": {
+        "97:10": {
           "id:3": 440,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": -42
         },
-        "97:10": {
+        "98:10": {
           "id:3": 446,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 594
         },
-        "98:10": {
+        "99:10": {
           "id:3": 447,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 114,
           "y:3": 594
         },
-        "99:10": {
+        "100:10": {
           "id:3": 472,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -222,
           "y:3": 270
         },
-        "100:10": {
+        "101:10": {
           "id:3": 473,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 522
         },
-        "101:10": {
+        "102:10": {
           "id:3": 474,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 426
         },
-        "102:10": {
+        "103:10": {
           "id:3": 500,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 252
         },
-        "103:10": {
+        "104:10": {
           "id:3": 517,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 474
         },
-        "104:10": {
+        "105:10": {
           "id:3": 602,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 324
         },
-        "105:10": {
+        "106:10": {
           "id:3": 603,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 6
         },
-        "106:10": {
+        "107:10": {
           "id:3": 604,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 252
         },
-        "107:10": {
+        "108:10": {
           "id:3": 610,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -150,
           "y:3": 468
         },
-        "108:10": {
+        "109:10": {
           "id:3": 631,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 48
         },
-        "109:10": {
+        "110:10": {
           "id:3": 638,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -306,
           "y:3": 540
         },
-        "110:10": {
+        "111:10": {
           "id:3": 657,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 168,
           "y:3": 192
         },
-        "111:10": {
+        "112:10": {
           "id:3": 658,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": 78
         },
-        "112:10": {
+        "113:10": {
           "id:3": 660,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 252
         },
-        "113:10": {
+        "114:10": {
           "id:3": 661,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 222,
           "y:3": 462
         },
-        "114:10": {
+        "115:10": {
           "id:3": 666,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
           "y:3": 42
         },
-        "115:10": {
+        "116:10": {
           "id:3": 667,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": 42
         },
-        "116:10": {
+        "117:10": {
           "id:3": 682,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -90
         },
-        "117:10": {
+        "118:10": {
           "id:3": 684,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 558
         },
-        "118:10": {
+        "119:10": {
           "id:3": 712,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 96
         },
-        "119:10": {
+        "120:10": {
           "id:3": 721,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 96
         },
-        "120:10": {
+        "121:10": {
           "id:3": 725,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": -24
         },
-        "121:10": {
+        "122:10": {
           "id:3": 740,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 468
         },
-        "122:10": {
+        "123:10": {
           "id:3": 742,
           "sizeX:3": 36,
           "sizeY:3": 36,
@@ -69449,7 +69754,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
