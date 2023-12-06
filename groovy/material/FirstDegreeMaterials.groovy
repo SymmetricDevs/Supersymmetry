@@ -519,19 +519,19 @@ public class FirstDegreeMaterials{
 
         SodiumHydroxideSolution = new Material.Builder(8159, SuSyUtility.susyId('sodium_hydroxide_solution'))
                 .fluid()
-                .components(Water, 1, SodiumHydroxide, 1)
+                .components(SodiumHydroxide, 1, Water, 1)
                 .colorAverage()
                 .build();
 
         IronIIIChlorideSolution = new Material.Builder(8160, SuSyUtility.susyId('iron_iii_chloride_solution'))
                 .fluid()
-                .components(Water, 1, Iron3Chloride, 1)
+                .components(Iron3Chloride, 1, Water, 1)
                 .colorAverage()
                 .build();
 
         DilutedSaltpeterSolution = new Material.Builder(8161, SuSyUtility.susyId('diluted_saltpeter_solution'))
                 .fluid()
-                .components(Water, 2, Saltpeter, 1)
+                .components(Saltpeter, 1, Water, 2)
                 .colorAverage()
                 .build();
 
@@ -543,13 +543,13 @@ public class FirstDegreeMaterials{
 
         DilutedCalciumChlorideSolution = new Material.Builder(8163, SuSyUtility.susyId('diluted_calcium_chloride_solution'))
                 .fluid()
-                .components(Water, 2, CalciumChloride, 1)
+                .components(CalciumChloride, 1, Water, 2)
                 .colorAverage()
                 .build();
 
         DilutedRockSaltSolution = new Material.Builder(8164, SuSyUtility.susyId('diluted_rock_salt_solution'))
                 .fluid()
-                .components(Water, 2, RockSalt, 1)
+                .components(RockSalt, 1, Water, 2)
                 .colorAverage()
                 .build();
 
@@ -561,19 +561,19 @@ public class FirstDegreeMaterials{
 
         AmmoniaSolution = new Material.Builder(8166, SuSyUtility.susyId('ammonia_solution'))
                 .fluid()
-                .components(Water, 1, Ammonia, 1)
+                .components(Ammonia, 1, Water, 1)
                 .colorAverage()
                 .build();
 
         SaltpeterSolution = new Material.Builder(8167, SuSyUtility.susyId('saltpeter_solution'))
                 .fluid()
-                .components(Water, 1, Saltpeter, 1)
+                .components(Saltpeter, 1, Water, 1)
                 .colorAverage()
                 .build();
 
         SaltySaltpeterSolution = new Material.Builder(8168, SuSyUtility.susyId('salty_saltpeter_solution'))
                 .fluid()
-                .components(SaltWater, 1, Saltpeter, 1)
+                .components(Saltpeter, 1, SaltWater, 1)
                 .colorAverage()
                 .build();
 
@@ -1125,11 +1125,11 @@ public class FirstDegreeMaterials{
 
         AcidicArsenateVSolution = new Material.Builder(8257, SuSyUtility.susyId('acidic_arsenate_v_solution'))
                 .fluid(FluidTypes.ACID)
-                .components(NitricAcid, 6, Hydrogen, 9, Arsenic, 3, Oxygen, 12)
+                .components(Hydrogen, 9, Arsenic, 3, Oxygen, 12, NitricAcid, 6)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(HNO3)6(H3AsO4)3", true)
+                .setFormula("(H3AsO4)3(HNO3)6", true)
 
         ArsenicVOxide = new Material.Builder(8258, SuSyUtility.susyId('arsenic_v_oxide'))
                 .dust()
@@ -2225,7 +2225,7 @@ public class FirstDegreeMaterials{
 
         DilutedSodiumHydroxideSolution = new Material.Builder(8423, SuSyUtility.susyId('diluted_sodium_hydroxide_solution'))
                 .fluid()
-                .components(Water, 2, SodiumHydroxide, 1)
+                .components(SodiumHydroxide, 1, Water, 2)
                 .colorAverage()
                 .build();
 
@@ -2374,9 +2374,10 @@ public class FirstDegreeMaterials{
 
         CadmiumSulfateSolution = new Material.Builder(8446, SuSyUtility.susyId('cadmium_sulfate_solution'))
                 .fluid()
-                .components(Water, 1, Cadmium, 1, Sulfur, 1, Oxygen, 4)
+                .components(Cadmium, 1, Sulfur, 1, Oxygen, 4, Water, 1)
                 .colorAverage()
                 .build()
+        CadmiumSulfateSolution.setFormula("In(OH)3", true)
 
         MercuryOxide = new Material.Builder(8447, SuSyUtility.susyId('mercury_oxide'))
                 .dust()
