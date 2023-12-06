@@ -1609,11 +1609,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        CopperChloride = new Material.Builder(8332, SuSyUtility.susyId('copper_chloride'))
-                .dust()
-                .components(Copper, 1, Chlorine, 2)
-                .colorAverage()
-                .build();
+        //8332 is free
 
         RutheniumIVOxide = new Material.Builder(8333, SuSyUtility.susyId('ruthenium_iv_oxide'))
                 .dust()

@@ -1369,3 +1369,13 @@ crafting.addShaped("gregtech:fluid_hatch.export.lv", metaitem('fluid_hatch.expor
 		[null, metaitem('hull.lv'), null],
 		[null, item('minecraft:glass'), null]
 ])
+
+//Centrifuging Magnesium Dust * 3
+mods.gregtech.centrifuge.recipeBuilder()
+        .inputs(ore('dustMagnalium') * 3)
+        .outputs(metaitem('dustMagnesium') * 1)
+        .outputs(metaitem('dustAluminium') * 2)
+        .duration(72)
+        .EUt(30)
+        .buildAndRegister()
+

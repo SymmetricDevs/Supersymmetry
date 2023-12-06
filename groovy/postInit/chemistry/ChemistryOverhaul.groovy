@@ -260,7 +260,7 @@ BCR.recipeBuilder()
 //Chlorine
 
 FLUIDIZEDBR.recipeBuilder()
-        .notConsumable(metaitem('dustCopperChloride'))
+        .notConsumable(metaitem('dustCopperIIChloride'))
         .fluidInputs(fluid('hydrogen_chloride') * 1000)
         .fluidInputs(fluid('oxygen') * 500)
         .fluidOutputs(fluid('chlorine') * 1000)
@@ -4495,3 +4495,14 @@ BR.recipeBuilder()
         .duration(120)
         .EUt(30)
         .buildAndRegister()
+		
+// MnO
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustManganese'))
+        .fluidInputs(fluid('oxygen') * 1000)
+        .outputs(metaitem('dustManganeseIIOxide') * 2)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+

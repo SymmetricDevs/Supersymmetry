@@ -756,7 +756,6 @@ class SuSyMaterials {
         public static Material CeriumIVOxide;
         public static Material CeriumIIIOxide;
         public static Material IronSulfate;
-        public static Material CopperChloride;
         public static Material RutheniumIVOxide;
         public static Material Trichlorosilane;
         public static Material PurifiedTrichlorosilane;
