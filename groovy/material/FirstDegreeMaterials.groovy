@@ -703,7 +703,7 @@ public class FirstDegreeMaterials{
                 .setFormula("(Fe(NO3)2)3(H3AsO4)3(H2O)3", true)
 
         ArsenousAcid = new Material.Builder(8190, SuSyUtility.susyId('arsenous_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Hydrogen, 3, Arsenic, 1, Oxygen, 3)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
@@ -717,7 +717,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         SaltyArsenousAcid = new Material.Builder(8192, SuSyUtility.susyId('acidic_copper_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Water, 4, Copper, 2, Sulfur, 2, Oxygen, 8, NitricAcid, 2)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
@@ -754,7 +754,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         HexachloroiridicAcid = new Material.Builder(8197, SuSyUtility.susyId('hexachloroiridic_acid'))
-                .dust()
+                .dust(FluidTypes.ACID)
                 .iconSet(SHINY)
                 .components(Chlorine, 6, Hydrogen, 2, Iridium, 1)
                 .colorAverage()
@@ -1353,7 +1353,7 @@ public class FirstDegreeMaterials{
         SilverNitrateSolution.setFormula("(AgNO3)(H2O)", true)
 
         ChloroauricAcid = new Material.Builder(8294, SuSyUtility.susyId('chloroauric_acid'))
-                .dust()
+                .dust(FluidTypes.ACID)
                 .components(Hydrogen, 1, Gold, 1, Chlorine, 4)
                 .color(0xcc8821)
                 .build();
@@ -1375,7 +1375,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         SulfuricPGMSolution = new Material.Builder(8297, SuSyUtility.susyId('sulfuric_pgm_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(SulfuricAcid, 3, HydrochloricAcid, 12, Water, 8)
                 .colorAverage()
                 .build();
@@ -1383,7 +1383,7 @@ public class FirstDegreeMaterials{
         SulfuricPGMSolution.setFormula("(?)(H2SO4)3(HCl)12(H2O)8", true)
 
         PGMSolution = new Material.Builder(8298, SuSyUtility.susyId('pgm_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(HydrochloricAcid, 12, Water, 12)
                 .colorAverage()
                 .build();
@@ -1582,7 +1582,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         DissolvedMagnesiumFluoride = new Material.Builder(8328, SuSyUtility.susyId('dissolved_magnesium_fluoride'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Magnesium, 1, Chlorine, 2, HydrofluoricAcid, 2)
                 .colorAverage()
                 .build();
@@ -1630,7 +1630,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         HexafluorosilicicAcid = new Material.Builder(8336, SuSyUtility.susyId('hexafluorosilicic_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Hydrogen, 2, Silicon, 1, Fluorine, 6)
                 .colorAverage()
                 .build();
@@ -1764,7 +1764,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         SaltyArsenicAcid = new Material.Builder(8356, SuSyUtility.susyId('salty_arsenic_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Salt, 3, Hydrogen, 3, Arsenic, 1, Oxygen, 4)
                 .colorAverage()
                 .build();
@@ -2238,7 +2238,7 @@ public class FirstDegreeMaterials{
         DiethylEther.setFormula("(C2H5)2O", true)
 
         Oleum = new Material.Builder(8425, SuSyUtility.susyId('oleum'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(SulfuricAcid, 10, SulfurTrioxide, 1)
                 .color(0xe8c3a5)
                 .build();
@@ -2750,7 +2750,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         HexachloroplatinicAcidSolution = new Material.Builder(8501, SuSyUtility.susyId('hexachloroplatinic_acid_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Iron, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
                 .color(0xe06624)
                 .build();
@@ -2758,7 +2758,7 @@ public class FirstDegreeMaterials{
         HexachloroplatinicAcidSolution.setFormula("(?)(H2PtCl6)3(FeCl2)(H2O)8", true)
 
         CementedHexachloroplatinicAcidSolution = new Material.Builder(8502, SuSyUtility.susyId('cemented_hexachloroplatinic_acid_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Zinc, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
                 .color(0xb87627)
                 .build();
@@ -3262,7 +3262,7 @@ public class FirstDegreeMaterials{
                 .build();
 
         DilutedAceticAcid = new Material.Builder(8576, SuSyUtility.susyId("diluted_acetic_acid"))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(AceticAcid, 1, Water, 1)
                 .colorAverage()
                 .build();
