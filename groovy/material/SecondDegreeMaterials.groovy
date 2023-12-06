@@ -214,7 +214,7 @@ public class SecondDegreeMaterials {
                 .build()
 
         BrominatedSulfurDioxide = new Material.Builder(13032, SuSyUtility.susyId('brominated_sulfur_dioxide'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(SulfuricAcid, 1, HydrobromicAcid, 2)
                 .colorAverage()
                 .build()
@@ -265,13 +265,13 @@ public class SecondDegreeMaterials {
                 .build();
 
         WohlwillElectrolyte = new Material.Builder(13041, SuSyUtility.susyId('wohlwill_electrolyte'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(ChloroauricAcid, 1, Water, 1, HydrogenChloride, 2)
                 .color(0xe8b833)
                 .build();
 
         SpentWohlwilElectrolyte = new Material.Builder(13042, SuSyUtility.susyId('spent_wohlwill_electrolyte'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(ChloroauricAcid, 1, Water, 1, HydrogenChloride, 2)
                 .color(0xfacd50)
                 .build();
@@ -317,7 +317,7 @@ public class SecondDegreeMaterials {
                 .build()
       
         DilutedHexafluorosilicicAcid = new Material.Builder(13049, SuSyUtility.susyId('diluted_hexafluorosilicic_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Water, 8, HexafluorosilicicAcid, 1)
                 .colorAverage()
                 .build()
@@ -403,7 +403,7 @@ public class SecondDegreeMaterials {
                 .build();
 
         SodiumDichromateSolution = new Material.Builder(13063, SuSyUtility.susyId('sodium_dichromate_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(SodiumDichromate, 1, Water, 1, SulfuricAcid, 1)
                 .color(0xe0912f)
                 .build();
@@ -458,7 +458,7 @@ public class SecondDegreeMaterials {
                 .build();
 
         DilutedTwoEthylhexylNitrate = new Material.Builder(13073, SuSyUtility.susyId('diluted_two_ethylhexyl_nitrate'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(TwoEthylhexylNitrate, 1, Water, 1, SulfuricAcid, 1)
                 .colorAverage()
                 .build();
@@ -496,7 +496,7 @@ public class SecondDegreeMaterials {
                 .build()
 
         MolybdenicAcidSolution = new Material.Builder(13079, SuSyUtility.susyId('molybdenic_acid_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Hydrogen, 2, Molybdenum, 1, Oxygen, 4, HydrogenChloride, 1, Water, 1)
                 .colorAverage()
                 .build()
@@ -574,7 +574,7 @@ public class SecondDegreeMaterials {
         DivalentPalladiumSolution.setFormula('(?)(NH4Cl)(HCl)6(H2O)8', true)
 
         DeoxygenationCatalystPrecursorSolution = new Material.Builder(13091, SuSyUtility.susyId('deoxygenation_catalyst_precursor_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(AmmoniumHexachloroplatinate, 1, PhosphoricAcid, 1)
                 .colorAverage()
                 .build();
