@@ -726,7 +726,7 @@ public class FirstDegreeMaterials{
 
         SperryliteWaste = new Material.Builder(8193, SuSyUtility.susyId('sperrylite_waste'))
                 .fluid()
-                .components(Water, 3, Chlorine, 2, Cobalt, 1, Nickel, 1)
+                .components(Water, 4, Chlorine, 2, Cobalt, 1, Nickel, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
