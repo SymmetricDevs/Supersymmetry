@@ -249,7 +249,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         MethylAcetateSolution = new Material.Builder(15039, SuSyUtility.susyId('methyl_acetate_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Water, 1, SulfuricAcid, 1, MethylAcetate, 1)
                 .colorAverage()
                 .build();
@@ -415,7 +415,7 @@ public class OrganicChemistryMaterials {
         Methyltrichlorosilane.setFormula("CH3SiCl3", true)
 
         TNTSolution = new Material.Builder(15066, SuSyUtility.susyId('tnt_solution'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(TNT, 1, DilutedSulfuricAcid, 1)
                 .colorAverage()
                 .build();
@@ -986,7 +986,7 @@ public class OrganicChemistryMaterials {
                 .build()
 
         DiglycolicAcid = new Material.Builder(15162, SuSyUtility.susyId('diglycolic_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Carbon, 4, Hydrogen, 6, Oxygen, 5)
                 .colorAverage()
                 .build()
@@ -1030,7 +1030,7 @@ public class OrganicChemistryMaterials {
                 .build()
 
         DiTwoEthylhexylPhosphoricAcid = new Material.Builder(15169, SuSyUtility.susyId('di_two_ethylhexyl_phosphoric_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Carbon, 16, Hydrogen, 35, Oxygen, 4, Phosphorus, 1)
                 .color(0xb5a677)
                 .build()
@@ -1038,13 +1038,13 @@ public class OrganicChemistryMaterials {
         DiTwoEthylhexylPhosphoricAcid.setFormula('(C8H17O)2PO(OH)2', true)
 
         LauricAcid = new Material.Builder(15170, SuSyUtility.susyId('lauric_acid'))
-                .fluid()
+                .fluid(FluidTypes)
                 .components(Carbon, 12, Hydrogen, 24, Oxygen, 2)
                 .color(0xe39c32)
                 .build()
 
         CapricAcid = new Material.Builder(15171, SuSyUtility.susyId('capric_acid'))
-                .fluid()
+                .fluid(FluidTypes)
                 .components(Carbon, 10, Hydrogen, 20, Oxygen, 2)
                 .color(0xe3ba32)
                 .build()
@@ -1094,7 +1094,7 @@ public class OrganicChemistryMaterials {
         DibutylCarbitol.setFormula('(CH3CH2CH2CH2OCH2CH2)2O', true)
 
         MonoTwoEthylhexylPhosphoricAcid = new Material.Builder(15179, SuSyUtility.susyId('mono_two_ethylhexyl_phosphoric_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Carbon, 16, Hydrogen, 34, Oxygen, 3, Phosphorus, 1)
                 .color(0xb5a677)
                 .build()
@@ -1634,8 +1634,8 @@ public class OrganicChemistryMaterials {
         DiethylaluminiumAcetylacetonate.setFormula('(acac)AlEt2', true)
 
         OxalicAcid = new Material.Builder(15260, SuSyUtility.susyId('oxalic_acid'))
-                .components(Hydrogen, 2, Carbon, 2, Oxygen, 4)
                 .dust()
+                .components(Hydrogen, 2, Carbon, 2, Oxygen, 4)
                 .color(0xb5a7aa)
                 .build();
 
@@ -1651,7 +1651,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         DiphenylphosphinoaceticAcid = new Material.Builder(15263, SuSyUtility.susyId('diphenylphosphinoacetic_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Carbon, 14, Hydrogen, 13, Oxygen, 2, Phosphorus, 1)
                 .color(0xdeba6d)
                 .build();
@@ -1766,7 +1766,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         MethanesulfonicAcid = new Material.Builder(15282, SuSyUtility.susyId('methanesulfonic_acid'))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Carbon, 1, Hydrogen, 4, Oxygen, 3, Sulfur, 1)
                 .color(0xff6e6e)
                 .build();
@@ -1778,7 +1778,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         TosylicAcidSolution = new Material.Builder(15284, SuSyUtility.susyId("tosylic_acid_solution"))
-                .fluid()
+                .fluid(FluidTypes.ACID)
                 .components(Carbon, 7, Hydrogen, 8, Oxygen, 3, Sulfur, 1, Water, 1)
                 .colorAverage()
                 .build();
@@ -1831,7 +1831,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         ParaToluicAcid = new Material.Builder(15292, SuSyUtility.susyId('para_toluic_acid'))
-                .dust().fluid()
+                .dust().fluid(FluidTypes.ACID)
                 .fluidTemp(454)
                 .flags(NO_UNIFICATION)
                 .components(Carbon, 8, Hydrogen, 8, Oxygen, 2)

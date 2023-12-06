@@ -198,13 +198,13 @@ public class ThirdDegreeMaterials {
                 .build()
 
         PerfluorooctanoicAcidMixture = new Material.Builder(24031, SuSyUtility.susyId('perfluorooctanoic_acid_mixture'))
-                .fluid(FluidTypes.ACID)
+                .fluid(FluidTypes)
                 .components(PerfluorooctanoicAcid, 1, HydrofluoricAcid, 1)
                 .colorAverage()
                 .build()
 
         FluorinatedSurfactantMixture = new Material.Builder(24032, SuSyUtility.susyId('fluorinated_surfactant_mixture'))
-                .fluid(FluidTypes.ACID)
+                .fluid(FluidTypes)
                 .components(PerfluorooctanoicAcid, 1, Water, 1)
                 .colorAverage()
                 .build();
