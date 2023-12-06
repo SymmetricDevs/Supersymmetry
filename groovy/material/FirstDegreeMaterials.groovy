@@ -2784,6 +2784,7 @@ public class FirstDegreeMaterials{
                 .components(Nickel, 1, Sulfur, 1, Oxygen, 4, Water, 1)
                 .color(0x38add1)
                 .build();
+        NickelSulfateSolution.setFormula("(NiSO4)(H2O)", true)
 
         DisulfurDichloride = new Material.Builder(8506, SuSyUtility.susyId('disulfur_dichloride'))
                 .fluid()
