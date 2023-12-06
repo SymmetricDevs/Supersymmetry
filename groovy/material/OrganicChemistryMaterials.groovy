@@ -168,7 +168,7 @@ public class OrganicChemistryMaterials {
 
         ChloromethaneSolution = new Material.Builder(15024, SuSyUtility.susyId('chloromethane_solution'))
                 .fluid()
-                .components(Water, 1, Chloromethane, 1)
+                .components(Chloromethane, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -250,7 +250,7 @@ public class OrganicChemistryMaterials {
 
         MethylAcetateSolution = new Material.Builder(15039, SuSyUtility.susyId('methyl_acetate_solution'))
                 .fluid(FluidTypes.ACID)
-                .components(Water, 1, SulfuricAcid, 1, MethylAcetate, 1)
+                .components(SulfuricAcid, 1, MethylAcetate, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -321,13 +321,13 @@ public class OrganicChemistryMaterials {
 
         DiphenylIsophthalateSolution = new Material.Builder(15051, SuSyUtility.susyId('diphenyl_isophthalate_solution'))
                 .fluid()
-                .components(Water, 2, Dichloroethane, 1, DiphenylIsophtalate, 1)
+                .components(Dichloroethane, 1, DiphenylIsophtalate, 1, Water, 2)
                 .colorAverage()
                 .build();
 
         DiaminobenzidineSolution = new Material.Builder(15052, SuSyUtility.susyId('diaminobenzidine_solution'))
                 .fluid()
-                .components(Water, 1, Toluene, 1, Diaminobenzidine, 1)
+                .components(Toluene, 1, Diaminobenzidine, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -422,25 +422,25 @@ public class OrganicChemistryMaterials {
 
         VinylChlorideSuspension = new Material.Builder(15067, SuSyUtility.susyId('vinyl_chloride_suspension'))
                 .fluid()
-                .components(Water, 1, VinylChloride, 1)
+                .components(VinylChloride, 1, Water, 1)
                 .colorAverage()
                 .build();
 
         PolyvinylChlorideSuspension = new Material.Builder(15068, SuSyUtility.susyId('polyvinyl_chloride_suspension'))
                 .fluid()
-                .components(Water, 1, PolyvinylChloride, 1)
+                .components(PolyvinylChloride, 1, Water, 1)
                 .colorAverage()
                 .build();
 
         StyreneSolution = new Material.Builder(15069, SuSyUtility.susyId('styrene_solution'))
                 .fluid()
-                .components(Water, 1, Styrene, 1)
+                .components(Styrene, 1, Water, 1)
                 .colorAverage()
                 .build();
 
         PolystyreneSolution = new Material.Builder(15070, SuSyUtility.susyId('polystyrene_solution'))
                 .fluid()
-                .components(Water, 1, Polystyrene, 1)
+                .components(Polystyrene, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -458,13 +458,13 @@ public class OrganicChemistryMaterials {
 
         Bleach = new Material.Builder(15073, SuSyUtility.susyId('bleach'))
                 .fluid()
-                .components(Water, 1, Sodium, 1, Chlorine, 1, Oxygen, 1)
+                .components(Sodium, 1, Chlorine, 1, Oxygen, 1, Water, 1)
                 .colorAverage()
                 .build();
 
         ImpureBleach = new Material.Builder(15074, SuSyUtility.susyId('impure_bleach'))
                 .fluid()
-                .components(Water, 3, Bleach, 1, Salt, 1)
+                .components(Bleach, 1, Salt, 1, Water, 3)
                 .colorAverage()
                 .build();
 
@@ -500,7 +500,7 @@ public class OrganicChemistryMaterials {
 
         DilutedOneBromobutane = new Material.Builder(15080, SuSyUtility.susyId('diluted_one_bromobutane'))
                 .fluid()
-                .components(Water, 1, OneBromobutane, 1)
+                .components(OneBromobutane, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -512,7 +512,7 @@ public class OrganicChemistryMaterials {
 
         DilutedButyllithium = new Material.Builder(15082, SuSyUtility.susyId('diluted_butyllithium'))
                 .fluid()
-                .components(Water, 1, Butyllithium, 1)
+                .components(Butyllithium, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -530,7 +530,7 @@ public class OrganicChemistryMaterials {
 
         MethylFormateSolution = new Material.Builder(15085, SuSyUtility.susyId('methyl_formate_solution'))
                 .fluid(FluidTypes.GAS)
-                .components(Water, 1, MethylFormate, 1, SodiumHydroxide, 1)
+                .components(MethylFormate, 1, SodiumHydroxide, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -590,7 +590,7 @@ public class OrganicChemistryMaterials {
 
         DilutedMethylIIPyrrolidone = new Material.Builder(15095, SuSyUtility.susyId('diluted_methyl_ii_pyrrolidone'))
                 .fluid()
-                .components(Water, 1, NMethylIIPyrrolidone, 1)
+                .components(NMethylIIPyrrolidone, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -632,7 +632,7 @@ public class OrganicChemistryMaterials {
 
         PolytetrafluoroethyleneSolution = new Material.Builder(15102, SuSyUtility.susyId('polytetrafluoroethylene_solution'))
                 .fluid()
-                .components(Water, 1, Polytetrafluoroethylene, 1)
+                .components(Polytetrafluoroethylene, 1, Water, 1)
                 .colorAverage()
                 .build();
 

@@ -20,7 +20,7 @@ public class ThirdDegreeMaterials {
 
         DiethylEtherSolution = new Material.Builder(24000, SuSyUtility.susyId('diethyl_ether_solution'))
                 .fluid(FluidTypes.ACID)
-                .components(Water, 1, SulfuricAcid, 1, material('diethyl_ether'), 1)
+                .components(material('diethyl_ether'), 1, SulfuricAcid, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -32,19 +32,19 @@ public class ThirdDegreeMaterials {
 
         DimethylacetamideSolution = new Material.Builder(24002, SuSyUtility.susyId('dimethylacetamide_solution'))
                 .fluid()
-                .components(Water, 1, Dimethylacetamide, 1)
+                .components(Dimethylacetamide, 1, Water, 1)
                 .colorAverage()
                 .build();
 
         FurfuralSolution = new Material.Builder(24003, SuSyUtility.susyId('furfural_solution'))
                 .fluid(FluidTypes.ACID)
-                .components(Water, 3, SulfuricAcid, 1, Furfural, 1)
+                .components(Furfural, 1, SulfuricAcid, 1, Water, 3)
                 .colorAverage()
                 .build();
 
         WackerCatalystSolution = new Material.Builder(24004, SuSyUtility.susyId('wacker_catalyst_solution'))
                 .fluid()
-                .components(Water, 1, WackerCatalyst, 1)
+                .components(WackerCatalyst, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -62,7 +62,7 @@ public class ThirdDegreeMaterials {
 
         HydrazineSolution = new Material.Builder(24007, SuSyUtility.susyId('hydrazine_solution'))
                 .fluid()
-                .components(Water, 4, Hydrazine, 1, Ammonia, 2)
+                .components(Hydrazine, 1, Ammonia, 2, Water, 4)
                 .colorAverage()
                 .build();
 
@@ -86,7 +86,7 @@ public class ThirdDegreeMaterials {
 
         UreaSolution = new Material.Builder(24012, SuSyUtility.susyId('urea_solution'))
                 .fluid()
-                .components(Water, 1, Urea, 1)
+                .components(Urea, 1, Water, 1)
                 .colorAverage()
                 .build()
 
@@ -128,7 +128,7 @@ public class ThirdDegreeMaterials {
 
         FourFourOxydianilineSolution = new Material.Builder(24019, SuSyUtility.susyId('four_four_oxydianiline_solution'))
                 .fluid()
-                .components(Water, 5, FourFourOxydianiline, 1)
+                .components(FourFourOxydianiline, 1, Water, 5)
                 .colorAverage()
                 .build()
 
@@ -337,7 +337,7 @@ public class ThirdDegreeMaterials {
 
         SodiumPhenoxideSolution = new Material.Builder(24053, SuSyUtility.susyId('sodium_phenoxide_solution'))
                 .fluid()
-                .components(Water, 1, SodiumPhenoxide, 1)
+                .components(SodiumPhenoxide, 1, Water, 1)
                 .colorAverage()
                 .build();
 

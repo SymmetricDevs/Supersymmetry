@@ -513,7 +513,7 @@ public class FirstDegreeMaterials{
 
         DilutedSaltwater = new Material.Builder(8158, SuSyUtility.susyId('diluted_saltwater'))
                 .fluid()
-                .components(Water, 2, Salt, 1)
+                .components(Salt, 1, Water, 2)
                 .color(0x3d61b8)
                 .build();
 
@@ -622,7 +622,7 @@ public class FirstDegreeMaterials{
 
         ImpureSemiheavyWater = new Material.Builder(8177, SuSyUtility.susyId('impure_semiheavy_water'))
                 .fluid()
-                .components(Water, 1, SemiHeavyWater, 1)
+                .components(SemiHeavyWater, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -646,7 +646,7 @@ public class FirstDegreeMaterials{
 
         TetrafluoroboricAcid = new Material.Builder(8182, SuSyUtility.susyId('tetrafluoroboric_acid'))
                 .fluid(FluidTypes.ACID)
-                .components(Water, 3, Hydrogen, 1, Boron, 1, Fluorine, 4)
+                .components(Hydrogen, 1, Boron, 1, Fluorine, 4, Water, 3)
                 .color(0xa4ab91)
                 .build();
 
@@ -718,27 +718,27 @@ public class FirstDegreeMaterials{
 
         SaltyArsenousAcid = new Material.Builder(8192, SuSyUtility.susyId('acidic_copper_solution'))
                 .fluid(FluidTypes.ACID)
-                .components(Water, 4, Copper, 2, Sulfur, 2, Oxygen, 8, NitricAcid, 2)
+                .components(Copper, 2, Sulfur, 2, Oxygen, 8, NitricAcid, 2, Water, 4)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(H2O)4(CuSO4)2(HNO3)2", true)
+                .setFormula("(CuSO4)2(HNO3)2(H2O)4", true)
 
         SperryliteWaste = new Material.Builder(8193, SuSyUtility.susyId('sperrylite_waste'))
                 .fluid()
-                .components(Water, 4, Chlorine, 2, Cobalt, 1, Nickel, 1)
+                .components(Chlorine, 2, Cobalt, 1, Nickel, 1, Water, 4)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(H2O)3(Ni,Co)Cl2", true)
+                .setFormula("(Ni,Co)Cl2(H2O)4", true)
 
         AcidicCopperSolution = new Material.Builder(8194, SuSyUtility.susyId('acidic_copper_solution'))
                 .fluid(FluidTypes.ACID)
-                .components(Water, 4, Copper, 2, Sulfur, 2, Oxygen, 8, NitricAcid, 2)
+                .components(Copper, 2, Sulfur, 2, Oxygen, 8, NitricAcid, 2, Water, 4)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
-                .setFormula("(H2O)4(CuSO4)2(HNO3)2", true)
+                .setFormula("(CuSO4)2(HNO3)2(H2O)4", true)
 
         WustiteCatalyst = new Material.Builder(8195, SuSyUtility.susyId('wustite_catalyst'))
                 .dust()
@@ -893,7 +893,7 @@ public class FirstDegreeMaterials{
 
         VeryDilutedSulfuricAcid = new Material.Builder(8219, SuSyUtility.susyId('very_diluted_sulfuric_acid'))
                 .fluid(FluidTypes.ACID)
-                .components(Water, 2, SulfuricAcid, 1)
+                .components(SulfuricAcid, 1, Water, 2)
                 .color(0x54362c)
                 .build()
 
@@ -1292,13 +1292,13 @@ public class FirstDegreeMaterials{
 
         ConcentratedSaltWater = new Material.Builder(8284, SuSyUtility.susyId('concentrated_salt_water'))
                 .fluid()
-                .components(Water, 1, Salt, 2)
+                .components(Salt, 2, Water, 1)
                 .colorAverage()
                 .build();
 
         HypersalineWater = new Material.Builder(8285, SuSyUtility.susyId('hypersaline_water'))
                 .fluid()
-                .components(Water, 1, Salt, 4)
+                .components(Salt, 4, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -2645,7 +2645,7 @@ public class FirstDegreeMaterials{
 
         UltramaficTailingSlurry = new Material.Builder(8486, SuSyUtility.susyId('ultramafic_tailing_slurry'))
                 .fluid()
-                .components(Water, 1, UltramaficTailings, 1)
+                .components(UltramaficTailings, 1, Water, 1)
                 .color(0x878170)
                 .build();
 
