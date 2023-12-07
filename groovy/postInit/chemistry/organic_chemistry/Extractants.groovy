@@ -108,8 +108,8 @@ DISTILLERY.recipeBuilder()
 
 //FLOTATION AGENTS
 //FATTY ACIDS
-ROASTER.recipeBuilder()
-    .fluidInputs(fluid('steam') * 3000)
+AUTOCLAVE.recipeBuilder()
+    .fluidInputs(fluid('distilled_water') * 3000)
     .fluidInputs(fluid('seed_oil') * 1000)
     .fluidOutputs(fluid('glycerol') * 1000)
     .fluidOutputs(fluid('fatty_acid_solution') * 3000)

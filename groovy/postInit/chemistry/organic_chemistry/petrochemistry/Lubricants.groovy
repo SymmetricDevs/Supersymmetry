@@ -258,8 +258,14 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-    // Simple esters
+    // Esters
     
+    def alcoholTab = [
+        'n_octanol',
+        'n_decanol',
+        'n_dodecanol'
+    ]
+
     LCR.recipeBuilder()
         .fluidInputs(fluid('pseudocumene') * 1000)
         .fluidInputs(fluid('hot_hp_air') * 12000)
@@ -286,22 +292,126 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
         .duration(100)
         .buildAndRegister()
 
+    for (alcohol in alcoholTab) {
+        BR.recipeBuilder()
+            .inputs(ore('dustPhthalicAnhydride') * 15)
+            .fluidInputs(fluid(alcohol) * 1000)
+            .fluidOutputs(fluid('ester_base_oil') * 1000)
+            .EUt(120)
+            .duration(100)
+            .buildAndRegister()
+
+        BR.recipeBuilder()
+            .inputs(ore('dustTrimelliticAnhydride') * 18)
+            .fluidInputs(fluid(alcohol) * 1000)
+            .fluidOutputs(fluid('ester_base_oil') * 1500)
+            .EUt(120)
+            .duration(100)
+            .buildAndRegister()
+
+        BR.recipeBuilder()
+            .inputs(ore('dustPyromelliticDianhydride') * 18)
+            .fluidInputs(fluid(alcohol) * 2000)
+            .fluidOutputs(fluid('ester_base_oil') * 3000)
+            .EUt(120)
+            .duration(100)
+            .buildAndRegister()
+    }
+
 // Friction Modifiers
 
     /*Mechanically working FMs: molybdenum disulfide,
-    graphite, PTFE, polyamide, polyimide, fluorinated
-    graphite
+    graphite, PTFE, polyamide, fluorinated
+    graphite*/
 
-    Adsoprtion layer FMs:
+    // Molybdenum disulfide
+
+    CENTRIFUGE.recipeBuilder()
+        .inputs(ore('dustFlotatedMolybdenite'))
+        .outputs(metaitem('dustMolybdenumDisulfide'))
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
+
+    ROASTER.recipeBuilder()
+        .notConsumable(fluid('nitrogen') * 8000)
+        .inputs(ore('dustMolybdenumTrisulfide'))
+        .outputs(metaitem('dustMolybdenumDisulfide'))
+        .outputs(metaitem('dustSulfur'))
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
+
+    // Fluorinated graphite
+
+    REACTION_FURNACE.recipeBuilder()
+        .inputs(ore('dustGraphite'))
+        .fluidInputs(fluid('fluorine') * 1000)
+        .outputs(metaitem('dustFluorinatedGraphite'))
+        .duration(200)
+        .EUt(240)
+        .buildAndRegister()
+
+    /*Adsoprtion layer FMs:
     long-chain carboxylic acids, fatty acid esters,
-    ethers, alcohols, amines, amides, imides
+    ethers, alcohols, amides*/
 
-    Tribochemical FMs:
+    // Oleomide
+
+    CSTR.recipeBuilder()
+        .notConsumable(ore('springKanthal'))
+        .fluidInputs(fluid('oleic_acid') * 50)
+        .fluidInputs(fluid('ammonia') * 50)
+        .fluidOutputs(fluid('oleylamide') * 50)
+        .fluidOutputs(fluid('water') * 50)
+        .duration(10)
+        .EUt(240)
+        .buildAndRegister()
+
+    // Monoglycerides
+
+    CSTR.recipeBuilder()
+        .notConsumable(ore('springKanthal'))
+        .fluidInputs(fluid('seed_oil') * 50)
+        .fluidInputs(fluid('glycerol') * 100)
+        .fluidOutputs(fluid('monoglycerides') * 150)
+        .duration(10)
+        .EUt(240)
+        .buildAndRegister()
+
+    /*Tribochemical FMs:
     saturated fatty acids, phosphoric and thiophosphoric
     acid esters, xanthates, sulfurized fatty
-    acids
+    acids*/
 
-    Friction polymer FMs:
+    // Stearic acid
+
+    AUTOCLAVE.recipeBuilder()
+        .fluidInputs(fluid('distilled_water') * 3000)
+        .fluidInputs(fluid('gtfo_stearin') * 1000)
+        .fluidOutputs(fluid('glycerol') * 1000)
+        .fluidOutputs(fluid('stearic_acid') * 3000)
+        .EUt(30)
+        .duration(200)
+        .buildAndRegister()
+
+    // Palmitic acid
+
+    // ADD PALM OIL WHEN READY
+
+    LCR.recipeBuilder()
+        .inputs(ore('dustChromiumTrioxide') * 16)
+        .fluidInputs(fluid('sulfuric_acid') * 6000)
+        .fluidInputs(fluid('distilled_water') * 15000)
+        .fluidInputs(fluid('acetone') * 1000)
+        .fluidInputs(fluid('n_hexadecanol') * 3000)
+        .fluidOutputs(fluid('chromium_sulfate_solution') * 1000)
+        .fluidOutputs(fluid('palmitic_acid') * 3000)
+        .duration(200)
+        .EUt(200)
+        .buildAndRegister()
+
+    /*Friction polymer FMs:
     ethoxylated dicarboxylic acid monoesters, dialkyl phthalates,
     methacrylates, unsaturated fatty acids, sulfurized olefins*/
 
@@ -845,9 +955,9 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
         .EUt(30)
         .buildAndRegister()
 
-    // SALEN
+// Chelates: SALEN
 
-    BR.recipeBuilder()
+BR.recipeBuilder()
     .inputs(ore('ethylenediamine') * 1000)
     .inputs(ore('dustSodiumCyanoborohydride') * 14)
     .fluidInputs(fluid('hydrochloric_acid') * 2000)
@@ -860,11 +970,77 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
 
 // Final blending
 
-def frictionModifiersMap = [
-    'dustTalc': 0.5
-    'dustSoapstone': 0.5
+def baseOilMap = [
+    'seed_oil': 0.5,
+    'lubricating_oil': 1,
+    'polybutene': 1.5,
+    'polyalphaolefin': 2.5,
+    'ester_base_oil': 3
 ]
 
-def baseOils = [
-
+def solidFrictionModifierMap = [
+    'dustTalc': 0.5,
+    'dustSoapstone': 0.5,
+    'dustGraphite': 1,
+    'dustFluorinatedGraphite': 2,
+    'dustPolycaprolactam': 3,
+    'dustPolytetrafluoroethylene': 4,
+    'dustMolybdenumDisulfide': 4
 ]
+
+def liquidFrictionModifierMap = [
+    'seed_oil': 0.5,
+    'oleic_acid': 1,
+    'stearic_acid': 1,
+    'linoleic_acid': 1,
+    'palmitic_acid': 1,
+    'oleylamine': 2,
+    'monoglycerides': 2
+]
+
+def solidAntiwearMap = [
+    'tricresyl_phosphate': 1,
+    'zinc_dialkyldithiophosphate': 1.5
+]
+
+def liquidAntiwearMap = [
+    'dustMolybdenumDialkyldithiophosphate': 4,
+    'dustZincBisdiethyldithiocarbamate': 2
+]
+
+// polyisobutene: 2
+
+def pourPointDepressantMap = [
+    'dustEthylenePropyleneCopolymer': 1
+    'dustHydrogenatedStyreneIsopreneRubber': 2
+    'dustHydrogenatedStyreneButadieneRubber': 2
+    'dustPama': 4
+]
+
+// calcium_phenate: 3
+
+def detergentMap = [
+    'dustCalciumDodecylSulfate': 1,
+    'dustDodecylbenzenesulfonicAcid': 2,
+    'dustCalciumSalicylate': 2,
+    'dustPolyisobuteneSuccinicAnhydride': 4
+]
+
+def chelates = [
+    'dustSalicylideneOneTwoEthylenediamine',
+    'dustSalicylideneOneTwoPropanediamine'
+]
+
+def corrosionInhibitors = [
+    'dustBenzotriazole',
+    'dustMecaptobenzothiazole'
+]
+
+// dustNPhenylOneNaphthylamine: 2
+
+def antioxidantMap = [
+    'butylated_hydroxytoluene': 1.5,
+    'dimethyl_tert_butylphenol': 1,
+    'di_tert_butylphenol': 1
+]
+
