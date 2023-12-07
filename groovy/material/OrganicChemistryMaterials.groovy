@@ -899,7 +899,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        TetrasodiumEthylenediaminetetraaceticAcid = new Material.Builder(15148, SuSyUtility.susyId('tetrasodium_ethylenediaminetetraacetic_acid'))
+        TetrasodiumEthylenediaminetetraacetate = new Material.Builder(15148, SuSyUtility.susyId('tetrasodium_ethylenediaminetetraacetate'))
                 .dust()
                 .components(Carbon, 10, Hydrogen, 12, Nitrogen, 2, Sodium, 4, Oxygen, 8)
                 .colorAverage()

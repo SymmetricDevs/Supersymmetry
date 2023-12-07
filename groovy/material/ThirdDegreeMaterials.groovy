@@ -77,12 +77,12 @@ public class ThirdDegreeMaterials {
                 .build()
         EthylenediaminetetraaceticAcidSolution.setFormula('(H4EDTA)((NaCl)(H2O))4', true)
 
-        TetrasodiumEthylenediaminetetraaceticAcidSolution = new Material.Builder(24011, SuSyUtility.susyId('tetrasodium_ethylenediaminetetraacetic_acid_solution'))
+        TetrasodiumEthylenediaminetetraacetateSolution = new Material.Builder(24011, SuSyUtility.susyId('tetrasodium_ethylenediaminetetraacetate_solution'))
                 .fluid()
-                .components(TetrasodiumEthylenediaminetetraaceticAcid, 1, DilutedSaltWater, 1)
+                .components(TetrasodiumEthylenediaminetetraacetate, 1, DilutedSaltWater, 1)
                 .colorAverage()
                 .build()
-        TetrasodiumEthylenediaminetetraaceticAcidSolution.setFormula('(Na4EDTA)((NaCl)(H2O)2)4', true)
+        TetrasodiumEthylenediaminetetraacetateSolution.setFormula('(Na4EDTA)((NaCl)(H2O)2)4', true)
 
         UreaSolution = new Material.Builder(24012, SuSyUtility.susyId('urea_solution'))
                 .fluid()
