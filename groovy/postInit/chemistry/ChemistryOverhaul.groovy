@@ -4526,14 +4526,4 @@ BR.recipeBuilder()
         .duration(120)
         .EUt(30)
         .buildAndRegister()
-		
-// MnO
-
-ROASTER.recipeBuilder()
-        .inputs(ore('dustManganese'))
-        .fluidInputs(fluid('oxygen') * 1000)
-        .outputs(metaitem('dustManganeseIIOxide') * 2)
-        .duration(300)
-        .EUt(30)
-        .buildAndRegister()
 
