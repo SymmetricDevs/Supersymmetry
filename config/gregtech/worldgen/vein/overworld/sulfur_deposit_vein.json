@@ -1,7 +1,7 @@
 {
   "weight": -1,
   "density": 0.75,
-  "max_height": 70,
+  "max_height": 110,
   "min_height": 62,
   "block": "minecraft:sand",
   "vein_populator": {
@@ -15,8 +15,8 @@
   "generator": {
     "type": "layered",
     "radius": [
-      32,
-      32
+      16,
+      16
     ]
   },
   "filler": {
