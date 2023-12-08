@@ -1013,6 +1013,7 @@ class SuSyMaterials {
         public static Material DilutedAceticAcid;
         public static Material CobaltIIAcetate;
         public static Material PotassiumPyrosulfate;
+        public static Material IronIIINitrateSolution;
 
         // Second Degree Materials
 
