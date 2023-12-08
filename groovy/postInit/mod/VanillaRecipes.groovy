@@ -322,6 +322,11 @@ crafting.replaceShaped('minecraft:torchAnthDust', item('minecraft:torch') *8, [
     [ore('stickWood')]
 ])
 
+crafting.addShaped('minecraft:torchCarbonDust', item('minecraft:torch') *8, [
+    [metaitem('dustCarbon')],
+    [ore('stickWood')]
+])
+
 crafting.addShaped('gregtech:chad_from_wood', metaitem('dustPaper') * 4, [
 		[ore('dustWood'), ore('dustWood'), ore('dustWood')],
 		[ore('dustWood'), ore('dustWood'), ore('dustWood')],
