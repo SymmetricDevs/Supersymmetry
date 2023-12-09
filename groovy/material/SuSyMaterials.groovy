@@ -1102,6 +1102,7 @@ class SuSyMaterials {
         public static Material SublimatedMolybdenumTrioxide;
         public static Material AmmoniumThiocyanateSolution;
         public static Material AlluvialPalladiumMotherLiquor;
+        public static Material AlluvialPlatinumMotherLiquor;
         public static Material AlluvialDivalentPalladiumSolution;
         public static Material TantalumFluorideSolution;
         public static Material AmmoniumPerrhenateSolution;
