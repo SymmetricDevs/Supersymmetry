@@ -1353,7 +1353,7 @@ public class FirstDegreeMaterials{
         SilverNitrateSolution.setFormula("(AgNO3)(H2O)", true)
 
         ChloroauricAcid = new Material.Builder(8294, SuSyUtility.susyId('chloroauric_acid'))
-                .dust(FluidTypes.ACID)
+                .dust(=)
                 .components(Hydrogen, 1, Gold, 1, Chlorine, 4)
                 .color(0xcc8821)
                 .build();
