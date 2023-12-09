@@ -558,10 +558,9 @@ public class OreMaterials{
 
         Carnotite.setFormula('K2(UO2)2(VO4)2 * 3H2O', true)
 
-        AlluvialPlatinum = new Material.Builder(7074, SuSyUtility.susyId('alluvial_platinum'))
+        AlluvialPGMSand = new Material.Builder(7074, SuSyUtility.susyId('alluvial_pgm_sand'))
                 .dust()
-                .components(Platinum, 1)
-                .colorAverage()
+                .color(0x948a5d)
                 .build();
     }
 }

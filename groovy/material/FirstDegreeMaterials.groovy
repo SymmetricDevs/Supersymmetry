@@ -781,7 +781,7 @@ public class FirstDegreeMaterials{
         Diamminedichloropalladium = new Material.Builder(8201, SuSyUtility.susyId('diamminedichloropalladium'))
                 .dust()
                 .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
-                .colorAverage()
+                .color(0xd4d192)
                 .build();
 
         Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
@@ -2752,21 +2752,21 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        HexachloroplatinicAcidSolution = new Material.Builder(8501, SuSyUtility.susyId('hexachloroplatinic_acid_solution'))
+        AlluvialPGMSolution = new Material.Builder(8501, SuSyUtility.susyId('alluvial_pgm_solution'))
                 .fluid()
-                .components(Iron, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
+                .components(Iron, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 10)
                 .color(0xe06624)
                 .build();
 
-        HexachloroplatinicAcidSolution.setFormula("(?)(H2PtCl6)3(FeCl2)(H2O)8", true)
+        AlluvialPGMSolution.setFormula("(H2PtCl6)2(H2PdCl4)(FeCl2)(H2O)10", true)
 
-        CementedHexachloroplatinicAcidSolution = new Material.Builder(8502, SuSyUtility.susyId('cemented_hexachloroplatinic_acid_solution'))
+        CementedAlluvialPGMSolution = new Material.Builder(8502, SuSyUtility.susyId('cemented_alluvial_pgm_solution'))
                 .fluid()
                 .components(Zinc, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
                 .color(0xb87627)
                 .build();
 
-        CementedHexachloroplatinicAcidSolution.setFormula("(?)(H2PtCl6)3(ZnCl2)(H2O)8", true)
+        CementedAlluvialPGMSolution.setFormula("(H2PtCl6)2(H2PdCl4)(FeCl2)(H2O)10", true)
         
         AmmoniumHexachloroplatinate = new Material.Builder(8503, SuSyUtility.susyId('ammonium_hexachloroplatinate'))
                 .dust()
@@ -3223,10 +3223,10 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        Ferroplatinum = new Material.Builder(8570, SuSyUtility.susyId('ferroplatinum'))
+        AlluvialPGM = new Material.Builder(8570, SuSyUtility.susyId('alluvial_pgm'))
                 .dust().ingot()
                 .flags(DISABLE_DECOMPOSITION)
-                .components(Platinum, 3, Iron, 1)
+                .components(Platinum, 2, Palladium, 1, Iron, 1)
                 .colorAverage()
                 .build();
 
@@ -3283,5 +3283,13 @@ public class FirstDegreeMaterials{
                 .components(Potassium, 2, Sulfur, 2, Oxygen, 7)
                 .colorAverage()
                 .build();
+
+        IronIIINitrateSolution = new Material.Builder(8579, SuSyUtility.susyId("iron_iii_nitrate_solution"))
+                .fluid()
+                .components(Iron, 1, Nitrogen, 3, Oxygen, 9, Water, 3)
+                .colorAverage()
+                .build();
+
+        IronIIINitrateSolution.setFormula("(Fe(NO3)3)(H2O)3", true)
     }
 }
