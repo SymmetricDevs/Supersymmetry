@@ -27,6 +27,8 @@ Special thanks to our volunteers:
 - SuperObama • Consultant
 - trainvoi • Research/Playtesting
 - ZombieZilla • Research/Playtesting
+- Tian-mi • Chinese translation
+- Lavinia • Textures
 
 ## Building the pack
 You'll need python3 and python requests installed to build run the main.py script.
