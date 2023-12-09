@@ -416,7 +416,7 @@ public class SecondDegreeMaterials {
         LeadChlorideSolution = new Material.Builder(13066, SuSyUtility.susyId('lead_chloride_solution'))
                 .fluid()
                 .fluidTemp(343)
-                .components(=LeadChloride, 1, Water, 1)
+                .components(LeadChloride, 1, Water, 1)
                 .colorAverage()
                 .build();
 
