@@ -30935,12 +30935,6 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 246,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 1,
               "Damage:2": 593,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
@@ -30954,7 +30948,7 @@
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
             },
-            "2:10": {
+            "1:10": {
               "Count:3": 1,
               "Damage:2": 592,
               "ForgeCaps:10": {
@@ -62181,6 +62175,128 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "830:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
+      "preRequisites:11": [
+        378,
+        99
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§7Long Distance Item Pipelines §rcan transfer items over long distances with infinite throughput. They can be formed by placing two Endpoints and connecting them with at least 160 pipeline blocks. Pipeline blocks do not require wrenching. IMPORTANT: PIPELINES WILL NOT ALWAYS FORM INSTANTLY, ESPECIALLY OVER LONG DISTANCES.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1749,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Long Distance Item Pipelines",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 830,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 1749,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 160,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:ld_item_pipe"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "831:10": {
+      "preRequisites:11": [
+        99,
+        169
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§7Long Distance Fluid Pipelines §rcan transfer fluids over long distances with infinite throughput. They can be formed by placing two Endpoints and connecting them with at least 160 pipeline blocks. Pipeline blocks do not require wrenching, and automatically connect to adjacent pipeline blocks. IMPORTANT: PIPELINES WILL NOT ALWAYS FORM INSTANTLY, ESPECIALLY OVER LONG DISTANCES.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1749,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Long Distance Fluid Pipelines",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 831,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 1750,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 160,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:ld_fluid_pipe"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -64014,6 +64130,20 @@
           "sizeY:3": 36,
           "x:3": -306,
           "y:3": 150
+        },
+        "123:10": {
+          "id:3": 830,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 0,
+          "y:3": -150
+        },
+        "124:10": {
+          "id:3": 831,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -342,
+          "y:3": 216
         }
       }
     },
