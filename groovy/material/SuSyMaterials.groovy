@@ -1110,7 +1110,6 @@ class SuSyMaterials {
         public static Material CrudeManganeseIISulfateSolution;
         public static Material ManganeseIISulfateSolution;
         public static Material DilutedSodiumSulfiteSolution;
-        public static Material SodiumHexafluoroantimonateSolution;
         public static Material EGlass;
         public static Material TrichlorosilaneSolution;
         public static Material ImpureBariumSulfideSolution;

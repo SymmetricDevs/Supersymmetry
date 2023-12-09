@@ -547,12 +547,6 @@ public class SecondDegreeMaterials {
                 .color(0x75745a)
                 .build();
 
-        SodiumHexafluoroantimonateSolution = new Material.Builder(13087, SuSyUtility.susyId('sodium_hexafluoroantimonate_solution'))
-                .fluid()
-                .components(SodiumHexafluoroantimonate, 1, HydrogenFluoride, 1)
-                .colorAverage()
-                .build();
-
         EGlass = new Material.Builder(13088, SuSyUtility.susyId('e_glass'))
                 .dust().fluid()
                 .components(SiliconDioxide, 6, Alumina, 1, BoronTrioxide, 1, Quicklime, 2)

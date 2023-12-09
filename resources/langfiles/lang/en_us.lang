@@ -1705,7 +1705,6 @@ susy.material.sodium_hexafluoroantimonate=Sodium Hexafluoroantimonate
 susy.material.acid_washed_silicon_dioxide=Acid Washed Silicon Dioxide
 susy.material.disulfur_dichloride=Disulfur Dichloride
 susy.material.diluted_sodium_sulfite_solution=Diluted Sodium Sulfite Solution
-susy.material.sodium_hexafluoroantimonate_solution=Sodium Hexafluoroantimonate Solution
 susy.material.e_glass=E-Glass
 susy.material.tetrabromobisphenol_a=Tetrabromobisphenol A
 susy.material.cyanamide=Cyanamide
@@ -1769,6 +1768,7 @@ susy.material.wet_isophthalic_acid=Wet Isophthalic Acid
 susy.material.methyl_para_toluate_mixture=Methyl p-Toluate Mixture
 susy.material.potassium_pyrosulfate=Potassium Pyrosulfate
 susy.material.iron_iii_nitrate_solution=Iron III Nitrate Solution
+susy.material.alluvial_platinum_mother_liquor=Alluvial Platinum Mother Liquor
 
 # Isotopes
 
