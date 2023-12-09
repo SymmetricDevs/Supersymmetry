@@ -754,7 +754,6 @@ public class FirstDegreeMaterials{
                 .build()
 
         HexachloroiridicAcid = new Material.Builder(8197, SuSyUtility.susyId('hexachloroiridic_acid'))
-                .dust(FluidTypes.ACID)
                 .iconSet(SHINY)
                 .components(Chlorine, 6, Hydrogen, 2, Iridium, 1)
                 .colorAverage()
@@ -1353,7 +1352,7 @@ public class FirstDegreeMaterials{
         SilverNitrateSolution.setFormula("(AgNO3)(H2O)", true)
 
         ChloroauricAcid = new Material.Builder(8294, SuSyUtility.susyId('chloroauric_acid'))
-                .dust(=)
+                .dust()
                 .components(Hydrogen, 1, Gold, 1, Chlorine, 4)
                 .color(0xcc8821)
                 .build();
