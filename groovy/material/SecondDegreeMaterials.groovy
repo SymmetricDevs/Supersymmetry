@@ -475,13 +475,13 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        PlatinumMotherLiquor = new Material.Builder(13076, SuSyUtility.susyId('platinum_mother_liquor'))
+        AlluvialPlatinumMotherLiquor = new Material.Builder(13076, SuSyUtility.susyId('alluvial_platinum_mother_liquor'))
                 .fluid()
-                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
+                .components(Hydrogen, 2, Palladium, 1, Chlorine, 4, ZincChloride, 1, HydrogenChloride, 4, Water, 14)
                 .colorAverage()
                 .build();
 
-        PlatinumMotherLiquor.setFormula('(?)(NH4Cl)(HCl)6(H2O)8', true)
+        AlluvialPlatinumMotherLiquor.setFormula('(H2PdCl4)(ZnCl2)(HCl)4(H2O)14', true)
 
         AmmoniacalSodiumBicarbonateSolution = new Material.Builder(13077, SuSyUtility.susyId('ammoniacal_sodium_bicarbonate_solution'))
                 .fluid()
@@ -559,19 +559,19 @@ public class SecondDegreeMaterials {
                 .color(0x778f8b)
                 .build();
 
-        PalladiumMotherLiquor = new Material.Builder(13089, SuSyUtility.susyId('palladium_mother_liquor'))
+        AlluvialPalladiumMotherLiquor = new Material.Builder(13089, SuSyUtility.susyId('alluvial_palladium_mother_liquor'))
                 .fluid()
-                .components(AmmoniumChloride, 1, Ammonia, 2, HydrogenChloride, 8, Water, 12)
+                .components(AmmoniumChloride, 2, ZincChloride, 1, HydrogenChloride, 4, Water, 16)
                 .colorAverage()
                 .build();
 
-        DivalentPalladiumSolution = new Material.Builder(13090, SuSyUtility.susyId('divalent_palladium_solution'))
+        AlluvialDivalentPalladiumSolution = new Material.Builder(13090, SuSyUtility.susyId('alluvial_divalent_palladium_solution'))
                 .fluid()
-                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
+                .components(Hydrogen, 2, Palladium, 1, Chlorine, 4, ZincChloride, 1, HydrogenChloride, 4, Water, 14)
                 .colorAverage()
                 .build();
 
-        DivalentPalladiumSolution.setFormula('(?)(NH4Cl)(HCl)6(H2O)8', true)
+        AlluvialPlatinumMotherLiquor.setFormula('(H2PdCl4)(ZnCl2)(HCl)4(H2O)14', true)
 
         DeoxygenationCatalystPrecursorSolution = new Material.Builder(13091, SuSyUtility.susyId('deoxygenation_catalyst_precursor_solution'))
                 .fluid()
