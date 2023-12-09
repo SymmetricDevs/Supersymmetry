@@ -754,6 +754,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         HexachloroiridicAcid = new Material.Builder(8197, SuSyUtility.susyId('hexachloroiridic_acid'))
+				.dust()
                 .iconSet(SHINY)
                 .components(Chlorine, 6, Hydrogen, 2, Iridium, 1)
                 .colorAverage()
