@@ -1038,13 +1038,13 @@ public class OrganicChemistryMaterials {
         DiTwoEthylhexylPhosphoricAcid.setFormula('(C8H17O)2PO(OH)2', true)
 
         LauricAcid = new Material.Builder(15170, SuSyUtility.susyId('lauric_acid'))
-                .fluid(FluidTypes)
+                .fluid()
                 .components(Carbon, 12, Hydrogen, 24, Oxygen, 2)
                 .color(0xe39c32)
                 .build()
 
         CapricAcid = new Material.Builder(15171, SuSyUtility.susyId('capric_acid'))
-                .fluid(FluidTypes)
+                .fluid()
                 .components(Carbon, 10, Hydrogen, 20, Oxygen, 2)
                 .color(0xe3ba32)
                 .build()
