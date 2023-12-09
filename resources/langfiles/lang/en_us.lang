@@ -597,8 +597,6 @@ susy.material.wacker_catalyst_solution=Wacker Catalyst Solution
 susy.material.two_ethylanthraquinone_solution=2-Ethylanthraquinone Solution
 susy.material.acetamide_solution=Acetamide Solution
 susy.material.hydrazine_solution=Hydrazine Solution
-susy.material.ethylenediamine_solution=Ethylenediamine Solution
-susy.material.deacidified_ethylenediamine=Deacidified Ethylenediamine
 susy.material.ethylenediaminetetraacetic_acid_solution=Ethylenediaminetetraacetic Acid Solution
 susy.material.tetrasodium_ethylenediaminetetraacetic_acid_solution=Tetrasodium Ethylenediaminetetraacetic Acid Solution
 susy.material.urea_solution=Urea Solution
@@ -1770,6 +1768,7 @@ susy.material.wet_terephthalic_acid=Wet Terephthalic Acid
 susy.material.wet_isophthalic_acid=Wet Isophthalic Acid
 susy.material.methyl_para_toluate_mixture=Methyl p-Toluate Mixture
 susy.material.potassium_pyrosulfate=Potassium Pyrosulfate
+susy.material.iron_iii_nitrate_solution=Iron III Nitrate Solution
 
 # Isotopes
 

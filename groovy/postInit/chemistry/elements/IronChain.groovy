@@ -147,9 +147,9 @@ EBF_RECIPES.recipeBuilder()
 		.buildAndRegister()
 
 //SLAG REMOVAL BY HAMMER
-crafting.addShapeless('hammer_pig_iron',metaitem('ingotWroughtIron'), [
+crafting.addShapeless('pig_iron_shearing', metaitem('ingotWroughtIron'), [
     ore('craftingToolHardHammer'),
-    metaitem('ingotPigIron'),
+    metaitem('ingotPigIron')
 ])
 
 def FORGE_HAMMER = recipemap('forge_hammer')

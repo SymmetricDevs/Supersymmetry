@@ -3283,5 +3283,13 @@ public class FirstDegreeMaterials{
                 .components(Potassium, 2, Sulfur, 2, Oxygen, 7)
                 .colorAverage()
                 .build();
+
+        IronIIINitrateSolution = new Material.Builder(8579, SuSyUtility.susyId("iron_iii_nitrate_solution"))
+                .fluid()
+                .components(Iron, 1, Nitrogen, 3, Oxygen, 9, Water, 3)
+                .colorAverage()
+                .build();
+
+        IronIIINitrateSolution.setFormula("(Fe(NO3)3)(H2O)3", true)
     }
 }

@@ -1013,6 +1013,7 @@ class SuSyMaterials {
         public static Material DilutedAceticAcid;
         public static Material CobaltIIAcetate;
         public static Material PotassiumPyrosulfate;
+        public static Material IronIIINitrateSolution;
 
         // Second Degree Materials
 
@@ -1427,8 +1428,6 @@ class SuSyMaterials {
         public static Material TwoEthylanthraquinoneSolution;
         public static Material AcetamideSolution;
         public static Material HydrazineSolution;
-        public static Material EthylenediamineSolution;
-        public static Material DeacidifiedEthylenediamine;
         public static Material EthylenediaminetetraaceticAcidSolution;
         public static Material TetrasodiumEthylenediaminetetraaceticAcidSolution;
         public static Material UreaSolution;
