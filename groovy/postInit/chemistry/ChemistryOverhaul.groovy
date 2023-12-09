@@ -3687,7 +3687,7 @@ ROASTER.recipeBuilder()
 
 BR.recipeBuilder()
         .fluidInputs(fluid('sodium_nitrate') * 720)
-        .inputs(fluid('lead') * 144)
+        .fluidInputs(fluid('lead') * 144)
         .fluidOutputs(fluid('sodium_nitrite') * 576)
         .outputs(metaitem('dustLeadOxide') * 2)
         .duration(20)

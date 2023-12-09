@@ -156,7 +156,7 @@ BATCH_REACTOR.recipeBuilder()
 
 ROASTER.recipeBuilder()
     .fluidInputs(fluid('iron_iii_nitrate_solution') * 6000)
-    .outputs(metaitem('dustIronIIIOxide') * 5)
+    .outputs(metaitem('dustIronIiiOxide') * 5)
     .fluidOutputs(fluid('steam') * 6000)
     .fluidOutputs(fluid('nitrogen_dioxide') * 6000)
     .fluidOutputs(fluid('oxygen') * 3000)
