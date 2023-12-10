@@ -2759,7 +2759,7 @@ public class FirstDegreeMaterials{
 
         CementedHexachloroplatinicAcidSolution = new Material.Builder(8502, SuSyUtility.susyId('cemented_hexachloroplatinic_acid_solution'))
                 .fluid(FluidTypes.ACID)
-                .components(Hydrogen, 6, Platinum, 3, Chlorine, 18, ZincChloride, 1, Water, 8)
+                .components(Zinc, 1, Hydrogen, 6, Platinum, 3, Chlorine, 20, Water, 8)
                 .color(0xb87627)
                 .build();
 

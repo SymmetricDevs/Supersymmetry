@@ -477,11 +477,11 @@ public class SecondDegreeMaterials {
 
         PlatinumMotherLiquor = new Material.Builder(13076, SuSyUtility.susyId('platinum_mother_liquor'))
                 .fluid()
-                .components(ZincChloride, 1, AmmoniumChloride, 2, HydrogenChloride, 6, Water, 16)
+                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
                 .colorAverage()
                 .build();
 
-        PlatinumMotherLiquor.setFormula('(?)(ZnCl2)(NH4Cl)2(HCl)6(H2O)16', true)
+        PlatinumMotherLiquor.setFormula('(?)(NH4Cl)(HCl)6(H2O)8', true)
 
         AmmoniacalSodiumBicarbonateSolution = new Material.Builder(13077, SuSyUtility.susyId('ammoniacal_sodium_bicarbonate_solution'))
                 .fluid()
@@ -567,11 +567,11 @@ public class SecondDegreeMaterials {
 
         DivalentPalladiumSolution = new Material.Builder(13090, SuSyUtility.susyId('divalent_palladium_solution'))
                 .fluid()
-                .components(ZincChloride,1 ,AmmoniumChloride, 2, HydrogenChloride, 6, Water, 16)
+                .components(AmmoniumChloride, 1, HydrogenChloride, 6, Water, 8)
                 .colorAverage()
                 .build();
 
-        DivalentPalladiumSolution.setFormula('(?)(ZnCl2)(NH4Cl)2(HCl)6(H2O)16', true)
+        DivalentPalladiumSolution.setFormula('(?)(NH4Cl)(HCl)6(H2O)8', true)
 
         DeoxygenationCatalystPrecursorSolution = new Material.Builder(13091, SuSyUtility.susyId('deoxygenation_catalyst_precursor_solution'))
                 .fluid(FluidTypes.ACID)
