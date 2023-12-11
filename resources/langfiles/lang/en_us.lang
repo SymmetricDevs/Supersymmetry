@@ -776,7 +776,6 @@ susy.material.aluminium_silicate_leach=Aluminium Silicate Leach
 susy.material.alkali_alum_mix=Alkali Alum Mix
 susy.material.oleic_acid=Oleic Acid
 susy.material.linoleic_acid=Linoleic Acid
-susy.material.palmitic_acid=Palmitic Acid
 susy.material.amblygonite_leach=Amblygonite Leach
 susy.material.roasted_lepidolite=Roasted Lepidolite
 susy.material.lepidolite_leach=Lepidolite Leach
@@ -1727,8 +1726,8 @@ susy.material.su_eight=SU-8 Photoresist
 susy.material.hydrodealkylated_toluene_mixture=Hydrodealkylated Toluene Mixture
 susy.material.ortho_para_xylene_mixture=o/p-Xylene Mixture
 susy.material.partially_liquefied_argon=Partially Liquefied Argon
-susy.material.deoxygenation_catalyst=Deoxygenation Catalyst
-susy.material.deoxygenation_catalyst_precursor_solution=Deoxygenation Catalyst Precursor Solution
+susy.material.supported_platinum=Supported Platinum
+susy.material.platinum_precursor_solution=Platinum Precursor Solution
 susy.material.diluted_zinc_chloride_solution=Diluted Zinc Chloride Solution
 susy.material.acidic_hydrogen_silsesquioxane_solution=Acidic Hydrogen Silsesquioxane (HSQ) Solution
 susy.material.hydrogen_silsesquioxane_solution=Hydrogen Silsesquioxane (HSQ) Solution
@@ -1772,7 +1771,7 @@ susy.material.ethylene_isobutylene_vinyl_acetate=Ethylene-Isobutylene-Vinyl Acet
 susy.material.ethylene_isobutylene_vinyl_acetate_mixture=Ethylene-Isobutylene-Vinyl Acetate Mixture
 susy.material.chlorosulfuric_acid=Chlorosulfuric Acid
 susy.material.sodium_dodecyl_sulfate_solution=Sodium Dodecyl Sulfate Solution
-susy.material.dodecanesulfonic_acid=Dodecanesulfonic Acid
+susy.material.hydrogen_dodecyl_sulfate=Hydrogen Dodecyl Sulfate
 susy.material.sodium_dodecyl_sulfate=Sodium Dodecyl Sulfate
 susy.material.lubricity_additive=Lubricity Additive
 susy.material.dinonylnaphthalene=Dinonylnaphthalene
@@ -1785,18 +1784,18 @@ susy.material.manganese_ii_chloride_solution=Manganese II Chloride Solution
 susy.material.diluted_manganese_ii_chloride_solution=Diluted Manganese II Chloride Solution
 susy.material.methylcyclopentadiene=Methylcyclopentadiene
 susy.material.diglyme=Diglyme
-susy.material.bismethylcyclopentadienylmanganese=Bismethylcyclopentadienylmanganese
+susy.material.bismethylcyclopentadienylmanganese=Bis(methylcyclopentadienyl)manganese
 susy.material.methylcyclopentadienylmanganese_tricarbonyl=Methylcyclopentadienylmanganese Tricarbonyl
 susy.material.methyl_carbitol=Methyl Carbitol
 susy.material.methylcyclopentadiene_solution=Methylcyclopentadiene Solution
-susy.material.bismethylcyclopentadienylmanganese_solution=Bismethylcyclopentadienylmanganese Solution
+susy.material.bismethylcyclopentadienylmanganese_solution=Bis(methylcyclopentadienyl)manganese Solution
 susy.material.diisopropyl_para_phenylenediamine=N,N'-Diisopropyl-p-Phenylenediamine
 susy.material.diisopropyl_para_phenylenediamine_solution=N,N'-Diisopropyl-p-Phenylenediamine Solution
 susy.material.propanolamine_mix=Propanolamine Mix
 susy.material.metal_deactivator=Metal Deactivator
 susy.material.one_two_diaminopropane_solution=1,2-Diaminopropane Solution
 susy.material.salicylaldehyde=Salicylaldehyde
-susy.material.salicylidene_one_two_propanediamine=N,N'-bis(salicylidene)-1,2-propanediamine
+susy.material.salicylidene_one_two_propanediamine=N,N'-bis(salicylidene)-1,2-propanediamine (SALPN)
 susy.material.ignition_improver=Ignition Improver
 susy.material.cold_flow_improver=Cold Flow Improver
 susy.material.dihexadecylamine=Dihexadecylamine
@@ -1814,23 +1813,100 @@ susy.material.solvent_lubricant_mixture=Solvent-Lubricant Mixture
 susy.material.cold_solvent_lubricant_mixture=Cold Solvent-Lubricant Mixture
 susy.material.sulfuric_lubricating_oil=Sulfuric Lubricating Oil
 susy.material.dewaxing_solvent=Dewaxing Solvent
-DewaxedLubricantMixture
-SAPOEleven
-PlatinumSAPOEleven
-SiliconeOilMixture
-SiliconeOil
-ChloroplatinicAcidSolution
-TetraethylOrthosilicate
-Methylphenyldichlorosilane
-OneOctene
-OneDecene
-OneDodecene
-OneTetradecene
-OneHexadecene
-OneOctadecene
-OneIcosene
-OneDocosene
-OneTetracosene
+susy.material.dewaxed_lubricant_mixture=Dewaxed Lubricant Mixture
+susy.material.sapo_eleven=SAPO-11
+susy.material.platinum_sapo_eleven=Platinum SAPO-11
+susy.material.silicone_oil_mixture=Silicone Oil Mixture
+susy.material.silicone_oil=Silicone Oil
+susy.material.chloroplatinic_acid_solution=Chloroplatinic Acid Solution
+susy.material.tetraethyl_orthosilicate=Tetraethyl Orthosilicate (TEOS)
+susy.material.methylphenyldichlorosilane=Methylphenyldichlorosilane
+susy.material.one_octene=1-Octene
+susy.material.one_decene=1-Decene
+susy.material.one_dodecene=1-Dodecene
+susy.material.one_tetradecene=1-Tetradecene
+susy.material.one_hexadecene=1-Hexadecene
+susy.material.one_octadecene=1-Octadecene
+susy.material.one_icosene=1-Icosene
+susy.material.one_docosene=1-Docosene
+susy.material.one_tetracosene=1-Tetracosene
+susy.material.olefin_polymerization_initiator=Olefin Polymerization Initiator
+susy.material.crude_polyalphaolefin_mixture=Crude Polyalphaolefin Mixture
+susy.material.boron_trifluoride_mixture=Boron Trifluoride Mixture
+susy.material.unsaturated_polyalphaolefin=Unsaturated Polyalphaolefin
+susy.material.n_butanol_waste=n-Butanol Waste
+susy.material.palladium_precursor_solution=Palladium Precursor Solution
+susy.material.supported_palladium=Supported Palladium
+susy.material.polyalphaolefin=Polyalphaolefin (PAO)
+susy.material.polybutene_mixture=Polybutene Mixture
+susy.material.polybutene=Polybutene
+susy.material.trimellitic_acid_slurry=Trimellitic Acid Slurry
+susy.material.trimellitic_acid=Trimellitic Acid
+susy.material.trimellitic_anhydride=Trimellitic Anhydride
+susy.material.ester_base_oil=Ester Base Oil
+susy.material.molybdenum_disulfide=Molybdenum Disulfide
+susy.material.fluorinated_graphite=Fluorinated Graphite
+susy.material.oleylamide=Oleylamide
+susy.material.monoglycerides=Monoglycerides
+susy.material.stearic_acid=Stearic Acid
+susy.material.palmitic_acid=Palmitic Acid
+susy.material.crude_one_nitronaphthalene=Crude-1-Nitronaphthalene
+susy.material.one_nitronaphthalene=1-Nitronaphthalene
+susy.material.one_naphthylamine=1-Naphthylamine
+susy.material.n_phenyl_one_naphthylamine=N-Phenyl-1-Naphthylamine
+susy.material.polyisobutene_mixture=Polyisobutene Mixture
+susy.material.polyisobutene=Polyisobutene
+susy.material.ethylene_propylene_copolymer=Ethylene Propylene Copolymer
+susy.material.methacrylic_acid=Methacrylic Acid
+susy.material.alkyl_methacrylate=Alkyl Methacrylate
+susy.material.polyalkyl_methacrylate_solution=Polyalkyl Methacrylate Solution
+susy.material.alkyl_methacrylate_emulsion=Alkyl Methacrylate Emulsion
+susy.material.pama=Polyalkyl Methacrylate (PAMA)
+susy.material.styrene_isoprene_solution=Styrene-Isoprene Solution
+susy.material.polymerized_styrene_isoprene_solution=Polymerized Styrene-Isoprene Solution
+susy.material.raw_styrene_isoprene_rubber=Raw Styrene-Isoprene Rubber
+susy.material.styrene_isoprene_rubber=Styrene-Isoprene Rubber
+susy.material.hydrogenated_styrene_isoprene_rubber=Hydrogenated Styrene-Isoprene Rubber
+susy.material.hydrogenated_styrene_butadiene_rubber=Hydrogenated Styrene-Butadiene Rubber
+susy.material.dodecylphenol=Dodecylphenol
+susy.material.calcium_phenate=Calcium Phenate
+susy.material.calcium_dodecyl_sulfate=Calcium Dodecyl Sulfate
+susy.material.dodecylbenzene=Dodecylbenzene
+susy.material.dodecylbenzene_sulfonic_acid=Dodecylbenzenesulfonic Acid
+susy.material.calcium_dodecylbenzene_sulfate=Calcium Dodecylbenzene Sulfate
+susy.material.calcium_salicylate_solution=Calcium Salicylate Solution
+susy.material.calcium_salicylate=Calcium Salicylate
+susy.material.maleic_anhydride=Maleic Anhydride
+susy.material.polyisobutene_succinic_anhydride=Polyisobutene Succinic Anhydride (PIBSA)
+susy.material.calcium_dinonylnaphthalene_sulfonate=Calcium Dinonylnaphthalene Sulfonate
+susy.material.meta_para_cresol_mixture=m/p-Cresol Mixture
+susy.material.ortho_cresol=o-Cresol
+susy.material.acidic_tricresyl_phosphate=Acidic Tricresyl Phosphate
+susy.material.tricresyl_phosphate=Tricresyl Phosphate
+susy.material.diisopropyldithiophosphoric_acid=Diisopropyldithiophosphoric Acid
+susy.material.dibutyldithiophosphoric_acid=Dibutyldithiophosphoric Acid
+susy.material.zinc_dialkyldithiophosphate=Zinc Dialkyldithiophospate
+susy.material.molybdenum_dialkyldithiophosphate=Molybdenum Dialkyldithiophosphate
+susy.material.diamylamine=Diamylamine
+susy.material.sodium_diamyldithiocarbamate_solution=Sodium Diamylthiocarbamate Solution
+susy.material.zinc_bisdiamyldithiocarbamate=Zinc Bis(diamyldithiocarbamate)
+susy.material.didodecylbenzene=Didodecylbenzene
+susy.material.didodecylbenzene_sulfonic_acid=Didodecylbenzene Sulfonic Acid
+susy.material.calcium_didodecylbenzene_sulfate=Calcium Didodecylbenzene Sulfate
+susy.material.nonylphenol=Nonylphenol
+susy.material.trichloroethylene=Trichloroethylene
+susy.material.chloroacetic_acid_solution=Chloroacetic Acid Solution
+susy.material.chloroacetic_acid=Chloroacetic Acid
+susy.material.four_nonylphenoxyacetic_acid=4-Nonylphenoxyacetic Acid
+susy.material.two_nitroaniline_solution=2-Nitroaniline Solution
+susy.material.ortho_phenylenediamine_solution=o-Phenylenediamine Solution
+susy.material.ortho_phenylenediamine=o-Phenylenediamine
+susy.material.benzotriazole=Benzotriazole
+susy.material.mercaptobenzothiazole=Mercaptobenzothiazole
+susy.material.salicylidene_one_two_ethylenediamine=N,N'-bis(salicylidene)ethylenediamine (SALEN)
+susy.material.midgrade_lubricant=Midgrade Lubricant
+susy.material.premium_lubricant=Premium Lubricant
+susy.material.supreme_lubricant=Supreme Lubricant
 
 # Isotopes
 

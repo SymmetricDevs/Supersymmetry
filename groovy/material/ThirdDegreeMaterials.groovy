@@ -490,9 +490,45 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        DewaxingSolvent = new Material.BUilder(24077, SuSyUtility.susyId('dewaxing_solvent'))
+        DewaxingSolvent = new Material.Builder(24077, SuSyUtility.susyId('dewaxing_solvent'))
                 .fluid()
-                .components(Dichloroethane, 1, Dicloromethane, 1)
+                .components(Dichloroethane, 1, Dichloromethane, 1)
+                .colorAverage()
+                .build();
+
+        OlefinPolymerizationInitiator = new Material.Builder(24078, SuSyUtility.susyId('olefin_polymerization_initiator'))
+                .fluid()
+                .components(NButanol, 1, BoronTrifluoride, 3)
+                .colorAverage()
+                .build();
+        
+        TrimelliticAcidSlurry = new Material.Builder(24079, SuSyUtility.susyId('trimellitic_acid_slurry'))
+                .fluid(FluidTypes.ACID)
+                .components(TrimelliticAcid, 1, AceticAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
+        
+        CalciumSalicylateSolution = new Material.Builder(24080, SuSyUtility.susyId('calcium_salicylate_solution'))
+                .fluid()
+                .components(CalciumSalicylate, 1, DiethyleneGlycol, 1)
+                .colorAverage()
+                .build();
+        
+        AcidicTricresylPhosphate = new Material.Builder(24081, SuSyUtility.susyId('acidic_tricresyl_phoshpate'))
+                .fluid(FluidTypes.ACID)
+                .components(TricresylPhosphate, 1, HydrogenChloride, 3)
+                .colorAverage()
+                .build();
+        
+        ChloroaceticAcidSolution = new Material.Builder(24082, SuSyUtility.susyId('chloroacetic_acid_solution'))
+                .fluid(FluidTypes.ACID)
+                .components(ChloroaceticAcid, 1, SulfuricAcid, 2)
+                .colorAverage()
+                .build();
+        
+        OrthoPhenylenediamineSolution = new Material.Builder(24083, SuSyUtility.susyId('ortho_phenylenediamine_solution'))
+                .fluid()
+                .components(OrthoPhenylenediamine, 1, Toluene, 1, Water, 2)
                 .colorAverage()
                 .build();
     }

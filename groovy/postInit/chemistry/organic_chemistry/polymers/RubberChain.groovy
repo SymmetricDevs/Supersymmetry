@@ -126,8 +126,11 @@ def rubbers = [
     new Rubber('dustLatex', 'Rubber', 16, 10 * 20, 4, false),
     new Rubber('latex', 'Rubber', 32, 20 * 20, 1, true),
     new Rubber('dustPolyisoprene', 'Rubber', 8, 225, 8, false),
+    new Rubber('dustRawStyreneIsopreneRubber', 'StyreneIsopreneRubber', 4, 30 * 20, 4, false)
     new Rubber('dustRawStyreneButadieneRubber', 'StyreneButadieneRubber', 4, 30 * 20, 4, false)
 ]
+name, output, amount_required, duration, yield, isFluid
+
 def sulfurSources = [
     new SulfurSource('dustSulfur', 1)
 ]
@@ -252,23 +255,23 @@ POLYMERIZATION_TANK.recipeBuilder()
 
 MIXER.recipeBuilder()
 .fluidInputs(fluid('styrene') * 1000)
-.fluidInputs(fluid('isoprene') * 1000)
+.fluidInputs(fluid('isoprene') * 3000)
 .fluidInputs(fluid('ethanol') * 1000)
-.fluidOutputs(fluid('styrene_isoprene_solution') * 3000)
+.fluidOutputs(fluid('styrene_isoprene_solution') * 5000)
 .EUt(60)
 .duration(200)
 .buildAndRegister()
 
 POLYMERIZATION.recipeBuilder()
-.fluidInputs(fluid('styrene_isoprene_solution') * 3000)
+.fluidInputs(fluid('styrene_isoprene_solution') * 5000)
 .notConsumable(fluid('butyllithium') * 100)
-.fluidOutputs(fluid('polymerized_styrene_butadiene_solution') * 3000)
+.fluidOutputs(fluid('polymerized_styrene_isoprene_solution') * 5000)
 .EUt(120)
 .duration(533)
 .buildAndRegister()
 
 DRYER.recipeBuilder()
-.fluidInputs(fluid('polymerized_styrene_isoprene_solution') * 3000)
+.fluidInputs(fluid('polymerized_styrene_isoprene_solution') * 5000)
 .fluidOutputs(fluid('ethanol') * 1000)
 .outputs(metaitem('dustRawStyreneIsopreneRubber') * 16)
 .EUt(120)
@@ -288,23 +291,23 @@ SIFTER.recipeBuilder()
 
 MIXER.recipeBuilder()
 .fluidInputs(fluid('styrene') * 1000)
-.fluidInputs(fluid('butadiene') * 1000)
+.fluidInputs(fluid('butadiene') * 3000)
 .fluidInputs(fluid('ethanol') * 1000)
-.fluidOutputs(fluid('styrene_butadiene_solution') * 3000)
+.fluidOutputs(fluid('styrene_butadiene_solution') * 5000)
 .EUt(60)
 .duration(200)
 .buildAndRegister()
 
 POLYMERIZATION.recipeBuilder()
-.fluidInputs(fluid('styrene_butadiene_solution') * 3000)
+.fluidInputs(fluid('styrene_butadiene_solution') * 5000)
 .notConsumable(fluid('butyllithium') * 100)
-.fluidOutputs(fluid('polymerized_styrene_butadiene_solution') * 3000)
+.fluidOutputs(fluid('polymerized_styrene_butadiene_solution') * 5000)
 .EUt(120)
 .duration(533)
 .buildAndRegister()
 
 DRYER.recipeBuilder()
-.fluidInputs(fluid('polymerized_styrene_butadiene_solution') * 3000)
+.fluidInputs(fluid('polymerized_styrene_butadiene_solution') * 5000)
 .fluidOutputs(fluid('ethanol') * 1000)
 .outputs(metaitem('dustRawStyreneButadieneRubber') * 16)
 .EUt(120)

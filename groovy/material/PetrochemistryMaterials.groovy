@@ -308,27 +308,27 @@ public class PetrochemistryMaterials {
                 .color(0x1e2021)
                 .build();
 
-        CrudeLubricatingOil = new Material.Builder(2007, SuSyUtility.susyId('lubrica'))
+        CrudeLubricatingOil = new Material.Builder(20070, SuSyUtility.susyId('crude_lubricating_oil'))
                 .fluid()
                 .color(0x80743c)
                 .build();
 
-        SolventLubricantMixture = new Material.Builder(2007, SuSyUtility.susyId('lubrica'))
+        SolventLubricantMixture = new Material.Builder(20071, SuSyUtility.susyId('solvent_lubricant_mixture'))
                 .fluid()
                 .color(0x6e803c)
                 .build();
 
-        ColdSolventLubricantMixture = new Material.Builder(2007, SuSyUtility.susyId('lubrica'))
+        ColdSolventLubricantMixture = new Material.Builder(20072, SuSyUtility.susyId('cold_solvent_lubricant_mixture'))
                 .fluid()
                 .color(0x5e8064)
                 .build();
 
-        DewaxedLubricantMixture = new Material.Builder(2007, SuSyUtility.susyId('lubrica'))
+        DewaxedLubricantMixture = new Material.Builder(20073, SuSyUtility.susyId('dewaxed_lubricant_mixture'))
                 .fluid()
                 .color(0x7d782e)
                 .build();
 
-        SulfuricLubricatingOil = new Material.Builder(2007, SuSyUtility.susyId('lubrica'))
+        SulfuricLubricatingOil = new Material.Builder(20074, SuSyUtility.susyId('sulfuric_lubricating_oil'))
                 .fluid()
                 .color(0x7d782e)
                 .build();

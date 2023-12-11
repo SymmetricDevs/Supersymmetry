@@ -3292,6 +3292,22 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        ChloroplatinicAcidSolution
+        ChloroplatinicAcidSolution = new Material.Builder(8580, SuSyUtility.susyId("chloroplatinic_acid_solution"))
+                .fluid(FluidTypes.ACID)
+                .components(Hydrogen, 2, Platinum, 1, Chlorine, 6, Water, 4)
+                .colorAverage()
+                .build();
+
+        MolybdenumDisulfide = new Material.Builder(8581, SuSyUtility.susyId("molybdenum_disulfide"))
+                .dust()
+                .components(Molybdenum, 1, Sulfur, 2)
+                .colorAverage()
+                .build();
+
+        FluorinatedGraphite = new Material.Builder(8582, SuSyUtility.susyId("fluorinated_graphite"))
+                .dust()
+                .components(Carbon, 1, Fluorine, 1)
+                .colorAverage()
+                .build();
     }
 }

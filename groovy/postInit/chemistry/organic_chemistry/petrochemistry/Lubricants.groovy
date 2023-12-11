@@ -212,7 +212,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
         .buildAndRegister()
 
     MIXER.recipeBuilder()
-        .inputs(ore('dustDiamminedichloropalladium') * 11)
+        .inputs(ore('dustPalladiumChloride') * 3)
         .fluidInputs(fluid('phosphoric_acid') * 1000)
         .fluidOutputs(fluid('palladium_precursor_solution') * 1000)
         .duration(100)
@@ -224,7 +224,6 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
         .fluidInputs(fluid('palladium_precursor_solution') * 1000)
         .outputs(metaitem('dustSupportedPalladium'))
         .fluidOutputs(fluid('phosphoric_acid') * 1000)
-        .fluidOutputs(fluid('ammonia') * 2000)
         .duration(100)
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
@@ -271,7 +270,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
         .fluidInputs(fluid('hot_hp_air') * 12000)
         .fluidInputs(fluid('acetic_acid') * 1000)
         .notConsumable(metaitem('dustAmocoProcessCatalyst'))
-        .fluidOutputs(fluid('trimellitic_anhydride_slurry') * 2000)
+        .fluidOutputs(fluid('trimellitic_acid_slurry') * 2000)
         .EUt(1920)
         .duration(200)
         .buildAndRegister()
@@ -533,10 +532,10 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
 
     BR.recipeBuilder()
         .inputs(ore('dustRawStyreneIsopreneRubber') * 16)
-        .fluidInputs(fluid('hydrogen') * 2000)
+        .fluidInputs(fluid('hydrogen') * 6000)
         .notConsumable(metaitem('catalystBedSupportedPalladium'))
-        .outputs(metaitem('dustHydrogenatedStyreneIsopreneRubber') * 18)
-        .fluidOutputs(fluid('water') * 1000)
+        .outputs(metaitem('dustHydrogenatedStyreneIsopreneRubber') * 16)
+        .fluidOutputs(fluid('water') * 3000)
         .duration(20)
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
@@ -545,10 +544,10 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
 
     BR.recipeBuilder()
         .inputs(ore('dustRawStyreneButadieneRubber') * 16)
-        .fluidInputs(fluid('hydrogen') * 2000)
+        .fluidInputs(fluid('hydrogen') * 6000)
         .notConsumable(metaitem('catalystBedSupportedPalladium'))
-        .outputs(metaitem('dustHydrogenatedStyreneButadieneRubber') * 18)
-        .fluidOutputs(fluid('water') * 1000)
+        .outputs(metaitem('dustHydrogenatedStyreneButadieneRubber') * 16)
+        .fluidOutputs(fluid('water') * 3000)
         .duration(20)
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
@@ -567,24 +566,13 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
         .buildAndRegister()
 
     BR.recipeBuilder()
-        .inputs(ore('dustDodecylphenol') * 3)
-        .inputs(ore('dustCalcite'))
-        .fluidInputs(fluid('sulfur_dichloride') * 2000)
+        .inputs(ore('dustDodecylphenol'))
+        .inputs(ore('dustCalcite') * 5)
+        .fluidInputs(fluid('sulfur_dichloride') * 1000)
         .fluidOutputs(fluid('calcium_phenate') * 1000)
-        .fluidOutputs(fluid('hydrogen_chloride') * 4000)
+        .fluidOutputs(fluid('hydrogen_chloride') * 2000)
         .duration(200)
         .EUt(30)
-        .buildAndRegister()
-
-    // Calcium dodecylsulfonate
-
-    BR.recipeBuilder()
-        .inputs(ore('dustDodecanesulfonicAcid') * 2)
-        .fluidInputs(fluid('calcium_hydroxide_solution') * 1000)
-        .outputs(metaitem('dustCalciumDodecylSulfate'))
-        .fluidOutputs(fluid('water') * 1000)
-        .duration(200)
-        .EUt(120)
         .buildAndRegister()
 
     // Calcium dodecylbenzene sulfonate
@@ -615,6 +603,15 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
         .fluidOutputs(fluid('hydrogen_chloride') * 1000)
         .duration(200)
         .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustDodecylbenzenesulfonicAcid') * 2)
+        .fluidInputs(fluid('calcium_hydroxide_solution') * 1000)
+        .outputs(metaitem('dustCalciumDodecylbenzeneSulfonate'))
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(200)
+        .EUt(120)
         .buildAndRegister()
 
     // Calcium salicylate
@@ -795,7 +792,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
     BR.recipeBuilder()
         .inputs(ore('dustZincChloride') * 3)
         .fluidInputs(fluid('sodium_diamyldithiocarbamate_solution') * 2000)
-        .outputs(metaitem('dustZincBisdiethyldithiocarbamate'))
+        .outputs(metaitem('dustZincBisdiamyldithiocarbamate'))
         .fluidOutputs(fluid('salt_water') * 2000)
         .duration(200)
         .EUt(120)
@@ -847,7 +844,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
     BR.recipeBuilder()
         .inputs(ore('dustDidodecylbenzeneSulfonicAcid') * 2)
         .fluidInputs(fluid('calcium_hydroxide_solution') * 1000)
-        .outputs(metaitem('dustCalciumDidodecylbenzeneSulfate'))
+        .outputs(metaitem('dustCalciumDidodecylbenzeneSulfonate'))
         .fluidOutputs(fluid('water') * 1000)
         .duration(200)
         .EUt(120)
@@ -962,7 +959,7 @@ BR.recipeBuilder()
     .inputs(ore('dustSodiumCyanoborohydride') * 14)
     .fluidInputs(fluid('hydrochloric_acid') * 2000)
     .fluidInputs(fluid('salicylaldehyde') * 2000)
-    .outputs(metaitem('dustSalicylideneOneTwoEthylenediamine'))
+    .outputs(metaitem('dustSalicylideneEthylenediamine'))
     .fluidOutputs(fluid('wastewater') * 2000)
     .duration(200)
     .EUt(120)
@@ -1008,24 +1005,23 @@ def liquidAntiwearMap = [
 ]
 
 def pourPointDepressantMap = [
-    'dustEthylenePropyleneCopolymer': 1
-    'dustHydrogenatedStyreneIsopreneRubber': 2
-    'dustHydrogenatedStyreneButadieneRubber': 2
-    'dustPolyisobutene': 2
+    'dustEthylenePropyleneCopolymer': 1,
+    'dustHydrogenatedStyreneIsopreneRubber': 2,
+    'dustHydrogenatedStyreneButadieneRubber': 2,
+    'dustPolyisobutene': 2,
     'dustPama': 4
 ]
 
 // calcium_phenate: 3
 
 def detergentMap = [
-    'dustCalciumDodecylSulfate': 1,
-    'dustDodecylbenzenesulfonicAcid': 2,
+    'dustCalciumDodecylbenzeneSulfonate': 1,
     'dustCalciumSalicylate': 2,
     'dustPolyisobuteneSuccinicAnhydride': 4
 ]
 
 def chelates = [
-    'dustSalicylideneOneTwoEthylenediamine',
+    'dustSalicylideneEthylenediamine',
     'dustSalicylideneOneTwoPropanediamine'
 ]
 
@@ -1113,30 +1109,30 @@ liquidAntiwearMap.each { law, multiplier ->
 // Premium
 pourPointDepressantMap.each { ppd, multiplier1 ->
     MIXER.recipeBuilder()
-            .inputs(ore(ppd))
-            .fluidInputs(fluid('calcium_phenate') * 1000)
-            .inputs(ore('dustCalciumDidodecylbenzeneSulfate'))
-            .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
-            .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
-            .duration(200)
-            .EUt(120)
-            .buildAndRegister()
+        .inputs(ore(ppd))
+        .fluidInputs(fluid('calcium_phenate') * 1000)
+        .inputs(ore('dustCalciumDidodecylbenzeneSulfonate'))
+        .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
+        .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
 
-        MIXER.recipeBuilder()
-            .inputs(ore(ppd))
-            .fluidInputs(fluid('calcium_phenate') * 1000)
-            .fluidInputs(fluid('four_nonylphenoxyacetic_acid') * 1000)
-            .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * 3 * 4))
-            .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * 3 * 4))
-            .duration(200)
-            .EUt(120)
-            .buildAndRegister()
+    MIXER.recipeBuilder()
+        .inputs(ore(ppd))
+        .fluidInputs(fluid('calcium_phenate') * 1000)
+        .fluidInputs(fluid('four_nonylphenoxyacetic_acid') * 1000)
+        .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * 3 * 4))
+        .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * 3 * 4))
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
     
     detergentMap.each { det, multiplier2 ->
         MIXER.recipeBuilder()
             .inputs(ore(det))
             .inputs(ore(ppd))
-            .inputs(ore('dustCalciumDidodecylbenzeneSulfate'))
+            .inputs(ore('dustCalciumDidodecylbenzeneSulfonate'))
             .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .duration(200)
