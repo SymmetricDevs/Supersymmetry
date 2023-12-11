@@ -1369,3 +1369,11 @@ crafting.addShaped("gregtech:fluid_hatch.export.lv", metaitem('fluid_hatch.expor
 		[null, metaitem('hull.lv'), null],
 		[null, item('minecraft:glass'), null]
 ])
+
+// Multiblock Builder
+
+crafting.replaceShaped("gregtech:multiblock_builder", metaitem('tool.multiblock_builder'), [
+		[ore('toolWrench'), metaitem('robot.arm.ev'), metaitem('field.generator.hv')],
+		[ore('screwStainlessSteel'), ore('stickPolytetrafluoroethylene'), metaitem('robot.arm.ev')],
+		[ore('stickPolytetrafluoroethylene'), ore('screwStainlessSteel'), ore('toolScrewdriver')]
+])
