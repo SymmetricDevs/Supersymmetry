@@ -10,15 +10,15 @@
     },
     {
       "biomes": "$SANDY",
-      "weight": 0.65
+      "weight": 0.75
     },
     {
       "biomes": "$SAVANNA",
-      "weight": 0.65
+      "weight": 0.75
     },
     {
       "biomes": "$MESA",
-      "weight": 0.9
+      "weight": 0.75
     },
     {
       "biomes": "",
