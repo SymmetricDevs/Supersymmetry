@@ -628,5 +628,11 @@ public class SecondDegreeMaterials {
                 .components(Palladium, 1, ActivatedCarbon, 4)
                 .colorAverage()
                 .build();
+
+        AcetoneSolution = new Material.Builder(13101, SuSyUtility.susyId("acetone_solution"))
+                .fluid()
+                .components(Acetone, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }
