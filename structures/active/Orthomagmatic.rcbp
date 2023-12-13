@@ -2,15 +2,19 @@
   "data": [
     {
       "biomes": "$WASTELAND",
-      "weight": 1.2
+      "weight": 1.5
     },
     {
       "biomes": "$MOUNTAIN",
-      "weight": 0.6
+      "weight": 0.75
     },
     {
       "biomes": "volcanic",
-      "weight": 1.2
+      "weight": 2
+    },
+    {
+      "biomes": "",
+      "weight": 0.1
     }
   ],
   "metadata": {
