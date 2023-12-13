@@ -11,6 +11,10 @@
     {
       "biomes": "volcanic",
       "weight": 1.2
+    },
+    {
+      "biomes": "",
+      "weight": 0.1
     }
   ],
   "metadata": {
