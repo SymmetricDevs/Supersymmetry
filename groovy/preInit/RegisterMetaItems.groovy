@@ -249,6 +249,10 @@ eventManager.listen {
         customMetaItems.addItem(5306, "etched.polysilicon");
         customMetaItems.addItem(5307, "etched.silicon_nitride");
 
+                // Photomasks: 5900-6000
+
+                customMetaItems.addItem(5900, "rubylith")
+
         //Light Sources 6000-6100
         customMetaItems.addItem(6000, "carbon_arc_lamp");
         customMetaItems.addItem(6001, "incandescent_light");
