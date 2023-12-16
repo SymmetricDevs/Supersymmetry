@@ -1346,3 +1346,20 @@ GunStatTweaker.setWeaponStat("scar","DAMAGE_MIN", 12);
 //Minigun (20 shots per second)
 GunStatTweaker.setWeaponStat("minigun","DAMAGE", 5);
 GunStatTweaker.setWeaponStat("minigun","DAMAGE_MIN", 4);
+
+//-------------------Removing TechGuns plates from jei so that they don't flash when crafting----------------
+
+//Iron Plate
+mods.jei.removeAndHide(item('techguns:itemshared', 46))
+//Copper Plate
+mods.jei.removeAndHide(item('techguns:itemshared', 47))
+//Tin Plate
+mods.jei.removeAndHide(item('techguns:itemshared', 48))
+//Bronze Plate
+mods.jei.removeAndHide(item('techguns:itemshared', 49))
+//Steel Plate
+mods.jei.removeAndHide(item('techguns:itemshared', 50))
+//Lead Plate
+mods.jei.removeAndHide(item('techguns:itemshared', 52))
+//Titanium Plate
+mods.jei.removeAndHide(item('techguns:itemshared', 54))
