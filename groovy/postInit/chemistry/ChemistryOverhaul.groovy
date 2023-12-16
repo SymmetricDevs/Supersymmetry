@@ -4288,19 +4288,6 @@ DISTILLATION_TOWER.recipeBuilder() // SCHULZ-FLORY, p = 0.82, ROUNDED TO NEAREST
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
 
-LCR.recipeBuilder()
-        .fluidInputs(fluid('one_icosene') * 35)
-        .fluidInputs(fluid('one_octadecene') * 40)
-        .fluidInputs(fluid('one_hexadecene') * 50)
-        .fluidInputs(fluid('one_tetradecene') * 60)
-        .fluidInputs(fluid('one_dodecene') * 75)
-        .fluidInputs(fluid('one_decene') * 90)
-        .fluidInputs(fluid('one_octene') * 130)
-        .fluidOutputs(fluid('eight_twenty_olefin_mixture') * 485) // FOR 1-AMINOETHYL-2-ALKYLIMIDAZOLINE COLLECTOR
-        .duration(125)
-        .EUt(Globals.voltAmps[3])
-        .buildAndRegister()
-
 //OXALIC ACID
 LCR.recipeBuilder()
         .fluidInputs(fluid('ethylene_glycol') * 1000)

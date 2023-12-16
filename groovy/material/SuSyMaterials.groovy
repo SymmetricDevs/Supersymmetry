@@ -440,9 +440,6 @@ class SuSyMaterials {
         public static Material RheniumRichFlue;
         public static Material ScrubbedPerrhenateSolution;
         public static Material AlphaOlefinMixture;
-        public static Material EightTwentyOlefinMixture;
-        public static Material NineTwentyOneAldehydeMixture;
-        public static Material NineTwentyOneFattyAcidMixture;
         public static Material SiftedScheelite;
         public static Material ImpureScheeliteSlurry;
         public static Material ScheeliteSlurry;
@@ -1528,7 +1525,7 @@ class SuSyMaterials {
         public static Material SodiumDiamylthiocarbamateSolution;
         public static Material ZincBisdiamyldithiocarbamate;
         public static Material Didodecylbenzene;
-        public static Material DidodecylbenzeneSulfonicAcid;
+        public static Material DidodecylbenzenesulfonicAcid;
         public static Material CalciumDidodecylbenzeneSulfonate;
         public static Material Nonylphenol;
         public static Material Trichloroethylene;
@@ -1540,6 +1537,8 @@ class SuSyMaterials {
         public static Material Mercaptobenzothiazole;
         public static Material SalicylideneEthylenediamine;
         public static Material Pseudocumene;
+        public static Material TwoButoxyethanol;
+        public static Material PolyethyleneGlycol;
 
         // Third Degree Materials
 

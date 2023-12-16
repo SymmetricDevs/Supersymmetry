@@ -1957,7 +1957,7 @@ public class OrganicChemistryMaterials {
                 .build();
         
         EthyleneIsobutyleneVinylAcetate = new Material.Builder(15312, SuSyUtility.susyId('ethylene_isobutylene_vinyl_acetate'))
-                .polymer()
+                .dust()
                 .components(Ethylene, 1, Isobutylene, 1, VinylAcetate, 1)
                 .color(0x8768d4)
                 .iconSet(DULL)
@@ -2096,7 +2096,8 @@ public class OrganicChemistryMaterials {
                 .build();
 
         OneNaphthylamine = new Material.Builder(15334, SuSyUtility.susyId('one_naphthylamine'))
-                .dust()
+                .dust().fluid()
+                .fluidTemp(322)
                 .components(Carbon, 10, Hydrogen, 9, Nitrogen, 1)
                 .color(0x82bd9c)
                 .build();
@@ -2142,7 +2143,9 @@ public class OrganicChemistryMaterials {
                 .build();
 
         StyreneIsopreneRubber = new Material.Builder(15341, SuSyUtility.susyId('styrene_isoprene_rubber'))
-                .dust()
+                .polymer()
+                .iconSet(SHINY)
+                .flags(GENERATE_FOIL, GENERATE_RING)
                 .components(Isoprene, 3, Styrene, 1)
                 .color(0x57103a)
                 .build();
@@ -2183,7 +2186,7 @@ public class OrganicChemistryMaterials {
                 .color(0x604882)
                 .build();
 
-        DodecylbenzenesulfonicAcid = new Material.Builder(15348, SuSyUtility.susyId('dodecylbenzene_sulfonic_acid'))
+        DodecylbenzenesulfonicAcid = new Material.Builder(15348, SuSyUtility.susyId('dodecylbenzenesulfonic_acid'))
                 .dust()
                 .components(Carbon, 18, Hydrogen, 30, Sulfur, 1, Oxygen, 3)
                 .color(0x7c4882)
@@ -2249,7 +2252,13 @@ public class OrganicChemistryMaterials {
                 .color(0x856914)
                 .build();
 
-        //FREE ID: 15358-15359
+        TwoButoxyethanol = new Material.Builder(15358, SuSyUtility.susyId('two_butoxyethanol'))
+                .fluid()
+                .components(Carbon, 6, Hydrogen, 14, Oxygen, 2)
+                .color(0xa0c9db)
+                .build();
+
+        //FREE ID: 15359
 
         Diamylamine = new Material.Builder(15360, SuSyUtility.susyId('diamylamine'))
                 .fluid()
@@ -2279,7 +2288,7 @@ public class OrganicChemistryMaterials {
                 .color(0x327894)
                 .build();
 
-        DidodecylbenzeneSulfonicAcid = new Material.Builder(15364, SuSyUtility.susyId('didodecylbenzene_sulfonic_acid'))
+        DidodecylbenzenesulfonicAcid = new Material.Builder(15364, SuSyUtility.susyId('didodecylbenzenesulfonic_acid'))
                 .dust()
                 .components(Carbon, 30, Hydrogen, 54, Sulfur, 1, Oxygen, 3)
                 .color(0x32947c)
@@ -2341,10 +2350,16 @@ public class OrganicChemistryMaterials {
                 .color(0x878000)
                 .build();
 
-        SalicylideneEthylenediamine = new Material.Builder(15374, SuSyUtility.susyId('salicylidene_one_two_ethylenediamine'))
+        SalicylideneEthylenediamine = new Material.Builder(15374, SuSyUtility.susyId('salicylidene_ethylenediamine'))
                 .dust()
                 .components(Carbon, 16, Hydrogen, 16, Nitrogen, 2, Oxygen, 2)
                 .color(0x5c84c4)
+                .build();
+
+        PolyethyleneGlycol = new Material.Builder(15375, SuSyUtility.susyId('polyethylene_glycol'))
+                .fluid()
+                .components(Carbon, 2, Hydrogen, 4, Oxygen, 1)
+                .color(0x599c8e)
                 .build();
     }
 }

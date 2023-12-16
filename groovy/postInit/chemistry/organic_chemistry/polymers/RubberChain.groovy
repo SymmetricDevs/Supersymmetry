@@ -126,10 +126,9 @@ def rubbers = [
     new Rubber('dustLatex', 'Rubber', 16, 10 * 20, 4, false),
     new Rubber('latex', 'Rubber', 32, 20 * 20, 1, true),
     new Rubber('dustPolyisoprene', 'Rubber', 8, 225, 8, false),
-    new Rubber('dustRawStyreneIsopreneRubber', 'StyreneIsopreneRubber', 4, 30 * 20, 4, false)
+    new Rubber('dustRawStyreneIsopreneRubber', 'StyreneIsopreneRubber', 4, 30 * 20, 4, false),
     new Rubber('dustRawStyreneButadieneRubber', 'StyreneButadieneRubber', 4, 30 * 20, 4, false)
 ]
-name, output, amount_required, duration, yield, isFluid
 
 def sulfurSources = [
     new SulfurSource('dustSulfur', 1)

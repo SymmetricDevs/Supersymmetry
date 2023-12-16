@@ -1730,20 +1730,7 @@ public class UnknownCompositionMaterials {
                 .color(0xd15298)
                 .build();
                 
-        EightTwentyOlefinMixture = new Material.Builder(4330, SuSyUtility.susyId('eight_twenty_olefin_mixture'))
-                .fluid()
-                .color(0xa31d53)
-                .build();
-                
-        NineTwentyOneAldehydeMixture = new Material.Builder(4331, SuSyUtility.susyId('nine_twenty_one_aldehyde_mixture'))
-                .fluid()
-                .color(0x911da3)
-                .build();
-                
-        NineTwentyOneFattyAcidMixture = new Material.Builder(4332, SuSyUtility.susyId('nine_twenty_one_fatty_acid_mixture'))
-                .fluid()
-                .color(0xa37b1d)
-                .build();
+        //FREE ID: 4330-4332
         
         HZSMFive = new Material.Builder(4333, SuSyUtility.susyId('hzsm_five'))
                 .dust()
@@ -1922,6 +1909,7 @@ public class UnknownCompositionMaterials {
         PlatinumSAPOEleven = new Material.Builder(4368, SuSyUtility.susyId('platinum_sapo_eleven'))
                 .dust()
                 .color(0x969444)
+                .flags(GENERATE_CATALYST_BED)
                 .build();
                 
         SiliconeOilMixture = new Material.Builder(4369, SuSyUtility.susyId('silicone_oil_mixture'))

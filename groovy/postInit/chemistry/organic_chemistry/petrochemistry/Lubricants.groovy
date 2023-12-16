@@ -31,6 +31,9 @@ LCR = recipemap('large_chemical_reactor')
 AUTOCLAVE = recipemap('autoclave')
 HEAT_EXCHANGER = recipemap('heat_exchanger')
 UV_LIGHT_BOX = recipemap('uv_light_box')
+BLENDER = recipemap('blender')
+PHASE_SEPARATOR = recipemap('phase_separator')
+DUMPER = recipemap('dumping')
 
 // Lubricant base oils
 
@@ -60,13 +63,11 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
         .duration(5)
         .buildAndRegister()
 
-    SIFTER.recipeBuilder()
-        .notConsumable(metaitem('item_filter'))
+    PHASE_SEPARATOR.recipeBuilder()
         .fluidInputs(fluid('cold_solvent_lubricant_mixture') * 2850)
         .fluidOutputs(fluid('slack_wax') * 350)
         .fluidOutputs(fluid('dewaxed_lubricant_mixture') * 2500)
-        .duration(20)
-        .EUt(30)
+        .duration(5)
         .buildAndRegister()
 
     DT.recipeBuilder()
@@ -276,7 +277,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
         .buildAndRegister()
 
     DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('trimellitic_anhydride_slurry') * 2000)
+        .fluidInputs(fluid('trimellitic_acid_slurry') * 2000)
         .outputs(metaitem('dustTrimelliticAcid') * 21)
         .fluidOutputs(fluid('diluted_acetic_acid') * 2000)
         .EUt(120)
@@ -446,7 +447,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
 
     ROASTER.recipeBuilder()
         .fluidInputs(fluid('one_naphthylamine') * 144)
-        .fluidInputs(fluid('aniline') * 1000)
+        .fluidInputs(fluid('gtfo_aniline') * 1000)
         .outputs(metaitem('dustNPhenylOneNaphthylamine'))
         .duration(200)
         .EUt(120)
@@ -616,7 +617,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
 
     // Calcium salicylate
 
-    BR.recipeBuilder()
+    LCR.recipeBuilder()
         .inputs(ore('dustCalciumHydroxide') * 5)
         .inputs(ore('dustCalcite'))
         .fluidInputs(fluid('phenol') * 2000)
@@ -650,7 +651,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
 
     REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustMaleicAnhydride') * 9)
-        .fluidInputs(fluid('polyisobutene') * 1000)
+        .inputs(ore('dustPolyisobutene'))
         .outputs(metaitem('dustPolyisobuteneSuccinicAnhydride'))
         .duration(200)
         .EUt(240)
@@ -706,7 +707,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
 
     BR.recipeBuilder()
         .inputs(ore('dustSodiumHydroxide') * 9)
-        .fluidInputs(fluid('acidic_triethyl_phosphate') * 4000)
+        .fluidInputs(fluid('acidic_tricresyl_phosphate') * 4000)
         .fluidOutputs(fluid('tricresyl_phosphate') * 1000)
         .fluidOutputs(fluid('salt_water') * 3000)
         .duration(200)
@@ -726,7 +727,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
 
     BR.recipeBuilder()
         .inputs(ore('dustPhosphorusPentasulfide') * 7)
-        .fluidInputs(fluid('butanolol') * 4000)
+        .fluidInputs(fluid('n_butanol') * 4000)
         .fluidOutputs(fluid('dibutyldithiophosphoric_acid') * 2000)
         .fluidOutputs(fluid('hydrogen_sulfide') * 1000)
         .duration(200)
@@ -825,7 +826,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
     BR.recipeBuilder()
         .inputs(ore('dustDidodecylbenzene'))
         .fluidInputs(fluid('oleum') * 11000)
-        .outputs(metaitem('dustDidodecylbenzeneSulfonicAcid'))
+        .outputs(metaitem('dustDidodecylbenzenesulfonicAcid'))
         .fluidOutputs(fluid('sulfuric_acid') * 10000)
         .duration(100)
         .EUt(Globals.voltAmps[2])
@@ -835,14 +836,14 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
         .notConsumable(ore('platePolytetrafluoroethylene') * 6)
         .inputs(ore('dustDidodecylbenzene'))
         .fluidInputs(fluid('chlorosulfuric_acid') * 1000)
-        .outputs(metaitem('dustDidodecylbenzeneSulfonicAcid'))
+        .outputs(metaitem('dustDidodecylbenzenesulfonicAcid'))
         .fluidOutputs(fluid('hydrogen_chloride') * 1000)
         .duration(100)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
     BR.recipeBuilder()
-        .inputs(ore('dustDidodecylbenzeneSulfonicAcid') * 2)
+        .inputs(ore('dustDidodecylbenzenesulfonicAcid') * 2)
         .fluidInputs(fluid('calcium_hydroxide_solution') * 1000)
         .outputs(metaitem('dustCalciumDidodecylbenzeneSulfonate'))
         .fluidOutputs(fluid('water') * 1000)
@@ -854,7 +855,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
 
     BR.recipeBuilder()
         .fluidInputs(fluid('phenol') * 1000)
-        .fluidInputs(fluid('triproplyene') * 1000)
+        .fluidInputs(fluid('tripropylene') * 1000)
         .notConsumable(fluid('hydrofluoric_acid') * 100)
         .fluidOutputs(fluid('nonylphenol'))
         .duration(200)
@@ -944,9 +945,9 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
 
     BR.recipeBuilder()
         .inputs(ore('dustSulfur'))
-        .fluidInputs(fluid('aniline') * 1000)
+        .fluidInputs(fluid('gtfo_aniline') * 1000)
         .fluidInputs(fluid('carbon_disulfide') * 1000)
-        .outputs(metaitem('dustMecaptobenzothiazole'))
+        .outputs(metaitem('dustMercaptobenzothiazole'))
         .fluidOutputs(fluid('hydrogen_sulfide') * 1000)
         .duration(200)
         .EUt(30)
@@ -990,18 +991,19 @@ def liquidFrictionModifierMap = [
     'stearic_acid': 1,
     'linoleic_acid': 1,
     'palmitic_acid': 1,
-    'oleylamine': 2,
+    'oleylamide': 2,
     'monoglycerides': 2
 ]
 
 def solidAntiwearMap = [
-    'tricresyl_phosphate': 1,
-    'zinc_dialkyldithiophosphate': 1.5
+    'dustMolybdenumDialkyldithiophosphate': 4,
+    'dustZincBisdiethyldithiocarbamate': 2
+
 ]
 
 def liquidAntiwearMap = [
-    'dustMolybdenumDialkyldithiophosphate': 4,
-    'dustZincBisdiethyldithiocarbamate': 2
+    'tricresyl_phosphate': 1,
+    'zinc_dialkyldithiophosphate': 1.5
 ]
 
 def pourPointDepressantMap = [
@@ -1027,7 +1029,7 @@ def chelates = [
 
 def corrosionInhibitors = [
     'dustBenzotriazole',
-    'dustMecaptobenzothiazole'
+    'dustMercaptobenzothiazole'
 ]
 
 // dustNPhenylOneNaphthylamine: 2
@@ -1041,7 +1043,7 @@ def antioxidantMap = [
 // Base
 baseOilMap.each { oil, multiplier1 ->
     solidFrictionModifierMap.each { sfm, multiplier2 ->
-        MIXER.recipeBuilder()
+        BLENDER.recipeBuilder()
             .inputs(ore(sfm))
             .fluidInputs(fluid(oil) * (1000 * multiplier2 * 4))
             .fluidOutputs(fluid('lubricant') * (1000 * multiplier1 * multiplier2 * 4))
@@ -1051,7 +1053,7 @@ baseOilMap.each { oil, multiplier1 ->
     }
 
     liquidFrictionModifierMap.each { lfm, multiplier3 ->
-        MIXER.recipeBuilder()
+        BLENDER.recipeBuilder()
             .fluidInputs(fluid(oil) * (1000 * multiplier3))
             .fluidInputs(fluid(lfm) * 250)
             .fluidOutputs(fluid('lubricant') * (1000 * multiplier1 * multiplier3))
@@ -1063,7 +1065,7 @@ baseOilMap.each { oil, multiplier1 ->
 
 // Midgrade
 solidAntiwearMap.each { saw, multiplier ->
-    MIXER.recipeBuilder()
+    BLENDER.recipeBuilder()
         .inputs(ore(saw))
         .fluidInputs(fluid('lubricant') * (1000 * multiplier * 4))
         .fluidInputs(fluid('polyethylene_glycol') * 1000)
@@ -1073,7 +1075,7 @@ solidAntiwearMap.each { saw, multiplier ->
         .EUt(120)
         .buildAndRegister()
         
-    MIXER.recipeBuilder()
+    BLENDER.recipeBuilder()
         .inputs(ore(saw))
         .inputs(ore('dustCalciumDinonylnaphthaleneSulfonate'))
         .fluidInputs(fluid('lubricant') * (1000 * multiplier * 4))
@@ -1085,7 +1087,7 @@ solidAntiwearMap.each { saw, multiplier ->
 }
 
 liquidAntiwearMap.each { law, multiplier ->
-    MIXER.recipeBuilder()
+    BLENDER.recipeBuilder()
         .fluidInputs(fluid('lubricant') * (1000 * multiplier))
         .fluidInputs(fluid('polyethylene_glycol') * 250)
         .fluidInputs(fluid('antifoaming_additive') * 250)
@@ -1095,7 +1097,7 @@ liquidAntiwearMap.each { law, multiplier ->
         .EUt(120)
         .buildAndRegister()
 
-    MIXER.recipeBuilder()
+    BLENDER.recipeBuilder()
         .inputs(ore('dustCalciumDinonylnaphthaleneSulfonate'))
         .fluidInputs(fluid('lubricant') * (1000 * multiplier * 4))
         .fluidInputs(fluid('antifoaming_additive') * 1000)
@@ -1108,28 +1110,28 @@ liquidAntiwearMap.each { law, multiplier ->
 
 // Premium
 pourPointDepressantMap.each { ppd, multiplier1 ->
-    MIXER.recipeBuilder()
+    BLENDER.recipeBuilder()
         .inputs(ore(ppd))
         .fluidInputs(fluid('calcium_phenate') * 1000)
         .inputs(ore('dustCalciumDidodecylbenzeneSulfonate'))
-        .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
-        .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
-
-    MIXER.recipeBuilder()
-        .inputs(ore(ppd))
-        .fluidInputs(fluid('calcium_phenate') * 1000)
-        .fluidInputs(fluid('four_nonylphenoxyacetic_acid') * 1000)
         .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * 3 * 4))
         .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * 3 * 4))
         .duration(200)
         .EUt(120)
         .buildAndRegister()
+
+    BLENDER.recipeBuilder()
+        .inputs(ore(ppd))
+        .fluidInputs(fluid('calcium_phenate') * 1000)
+        .fluidInputs(fluid('four_nonylphenoxyacetic_acid') * 1000)
+        .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * 3 * 4 * 1.5))
+        .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * 3 * 4 * 1.5))
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
     
     detergentMap.each { det, multiplier2 ->
-        MIXER.recipeBuilder()
+        BLENDER.recipeBuilder()
             .inputs(ore(det))
             .inputs(ore(ppd))
             .inputs(ore('dustCalciumDidodecylbenzeneSulfonate'))
@@ -1139,7 +1141,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
             .EUt(120)
             .buildAndRegister()
 
-        MIXER.recipeBuilder()
+        BLENDER.recipeBuilder()
             .inputs(ore(det))
             .inputs(ore(ppd))
             .fluidInputs(fluid('four_nonylphenoxyacetic_acid') * 1000)
@@ -1155,7 +1157,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
 
 for (chelate in chelates) {
     for (ci in corrosionInhibitors) {
-        MIXER.recipeBuilder()
+        BLENDER.recipeBuilder()
             .inputs(ore(chelate))
             .inputs(ore(ci))
             .inputs(ore('dustNPhenylOneNaphthylamine'))
@@ -1165,8 +1167,8 @@ for (chelate in chelates) {
             .EUt(120)
             .buildAndRegister()
 
-        antioxidantMap.each { ant, multiplier 
-            MIXER.recipeBuilder()
+        antioxidantMap.each { ant, multiplier ->
+            BLENDER.recipeBuilder()
                 .inputs(ore(chelate))
                 .inputs(ore(ci))
                 .fluidInputs(fluid(ant) * 1000)

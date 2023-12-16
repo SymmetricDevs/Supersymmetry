@@ -514,7 +514,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
         
-        AcidicTricresylPhosphate = new Material.Builder(24081, SuSyUtility.susyId('acidic_tricresyl_phoshpate'))
+        AcidicTricresylPhosphate = new Material.Builder(24081, SuSyUtility.susyId('acidic_tricresyl_phosphate'))
                 .fluid(FluidTypes.ACID)
                 .components(TricresylPhosphate, 1, HydrogenChloride, 3)
                 .colorAverage()

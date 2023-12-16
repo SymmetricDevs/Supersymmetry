@@ -647,15 +647,16 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        PalladiumPrecursorSolution = new Material.Builder(13103, SuSyUtility.susyId("palladium"))
+        PalladiumPrecursorSolution = new Material.Builder(13103, SuSyUtility.susyId("palladium_precursor_solution"))
                 .fluid(FluidTypes.ACID)
                 .components(PalladiumChloride, 1, PhosphoricAcid, 1)
                 .colorAverage()
                 .build();
 
-        SupportedPalladium = new Material.Builder(13104, SuSyUtility.susyId("palladium"))
+        SupportedPalladium = new Material.Builder(13104, SuSyUtility.susyId("supported_palladium"))
                 .dust()
                 .components(PalladiumChloride, 1, Alumina, 1)
+                .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build();
     }
