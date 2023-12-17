@@ -1707,7 +1707,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 29,
+              "Count:3": 25,
               "Damage:2": 8,
               "OreDict:8": "",
               "id:8": "gregtech:metal_casing"
@@ -2005,7 +2005,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 33,
+              "Count:3": 32,
               "Damage:2": 1,
               "OreDict:8": "",
               "id:8": "gregtech:metal_casing"
@@ -9127,7 +9127,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 16,
+              "Count:3": 15,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "gregtechfoodoption:gtfo_casing"
@@ -12291,7 +12291,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
