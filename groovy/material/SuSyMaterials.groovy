@@ -104,7 +104,7 @@ class SuSyMaterials {
         public static Material Hydroxyapatite;
         public static Material Rhodochrosite;
         public static Material Carnotite;
-        public static Material AlluvialPlatinum;
+        public static Material AlluvialPGMSand;
 
         // Roasted Ores
 
@@ -927,7 +927,7 @@ class SuSyMaterials {
         public static Material Polycarbonate;
         public static Material SodiumNitrite;
         public static Material SodiumOxide;
-        public static Material HexachloroplatinicAcidSolution;
+        public static Material AlluvialPGMSolution;
         public static Material SodiumHexachloroplatinateSolution;
         public static Material AmmoniumHexachloroplatinate;
         public static Material DilutedCopperSulfateSolution;
@@ -979,8 +979,8 @@ class SuSyMaterials {
         public static Material AmmoniumThiocyanate;
         public static Material CalciumZirconate;
         public static Material HydrogenSilsesquioxane;
-        public static Material CementedHexachloroplatinicAcidSolution;
-        public static Material Ferroplatinum;
+        public static Material CementedAlluvialPGMSolution;
+        public static Material AlluvialPGM;
         public static Material Diamminedichloropalladium;
         public static Material NickelIINitrateSolution;
         public static Material FerroniobiumTantalum;
@@ -1012,6 +1012,7 @@ class SuSyMaterials {
         public static Material DilutedAceticAcid;
         public static Material CobaltIIAcetate;
         public static Material PotassiumPyrosulfate;
+        public static Material IronIIINitrateSolution;
 
         // Second Degree Materials
 
@@ -1099,15 +1100,15 @@ class SuSyMaterials {
         public static Material NeutralizedAmmoniumMolybdateSolution;
         public static Material SublimatedMolybdenumTrioxide;
         public static Material AmmoniumThiocyanateSolution;
-        public static Material PalladiumMotherLiquor;
-        public static Material DivalentPalladiumSolution;
+        public static Material AlluvialPalladiumMotherLiquor;
+        public static Material AlluvialPlatinumMotherLiquor;
+        public static Material AlluvialDivalentPalladiumSolution;
         public static Material TantalumFluorideSolution;
         public static Material AmmoniumPerrhenateSolution;
         public static Material AluminiumChlorideSolution;
         public static Material CrudeManganeseIISulfateSolution;
         public static Material ManganeseIISulfateSolution;
         public static Material DilutedSodiumSulfiteSolution;
-        public static Material SodiumHexafluoroantimonateSolution;
         public static Material EGlass;
         public static Material TrichlorosilaneSolution;
         public static Material ImpureBariumSulfideSolution;
@@ -1415,6 +1416,7 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalate;
         public static Material WetTerephthalicAcid;
         public static Material WetIsophthalicAcid;
+        public static Material CalciumAcetate;
 
         // Third Degree Materials
 

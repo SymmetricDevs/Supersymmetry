@@ -1866,5 +1866,14 @@ public class OrganicChemistryMaterials {
                 .color(0x609169)
                 .iconSet(DULL)
                 .build();
+        
+        CalciumAcetate = new Material.Builder(15297, SuSyUtility.susyId('calcium_acetate'))
+                .dust()
+                .components(Calcium, 1, Carbon, 4, Hydrogen, 6, Oxygen, 4)
+                .color(0xe3dcc8)
+                .iconSet(QUARTZ)
+                .build();
+
+        CalciumAcetate.setFormula("Ca(CH3CO2)2", true)
     }
 }

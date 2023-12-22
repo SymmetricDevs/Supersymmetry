@@ -1370,12 +1370,10 @@ crafting.addShaped("gregtech:fluid_hatch.export.lv", metaitem('fluid_hatch.expor
 		[null, item('minecraft:glass'), null]
 ])
 
-//Centrifuging Magnesium Dust * 3
-mods.gregtech.centrifuge.recipeBuilder()
-        .inputs(ore('dustMagnalium') * 3)
-        .outputs(metaitem('dustMagnesium') * 1)
-        .outputs(metaitem('dustAluminium') * 2)
-        .duration(72)
-        .EUt(30)
-        .buildAndRegister()
+// Multiblock Builder
 
+crafting.replaceShaped("gregtech:multiblock_builder", metaitem('tool.multiblock_builder'), [
+		[ore('craftingToolWrench'), metaitem('robot.arm.ev'), metaitem('field.generator.hv')],
+		[ore('screwStainlessSteel'), ore('stickPolytetrafluoroethylene'), metaitem('robot.arm.ev')],
+		[ore('stickPolytetrafluoroethylene'), ore('screwStainlessSteel'), ore('craftingToolScrewdriver')]
+])

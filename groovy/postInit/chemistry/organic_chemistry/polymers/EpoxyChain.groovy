@@ -385,6 +385,23 @@ BCR.recipeBuilder()
     .buildAndRegister()
 
 // Triarylsulfonium Hexafluoroantimonate
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('antimony_trifluoride') * 576)
+    .fluidInputs(fluid('fluorine') * 2000)
+    .fluidOutputs(fluid('antimony_pentafluoride') * 1000)
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustSodiumFluoride') * 2)
+    .fluidInputs(fluid('antimony_pentafluoride') * 1000)
+    .outputs(metaitem('dustSodiumHexafluoroantimonate') * 8)
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
+
 BR.recipeBuilder()
     .inputs(ore('dustSulfur') * 2)
     .fluidInputs(fluid('chlorine') * 2000)
@@ -441,7 +458,7 @@ BR.recipeBuilder()
 
 /*
 Bisphenol-A Novolac Epoxy
-    Average Molar Mass: 900 g/mol
+    Average Molar Mass: "430" g/mol (not real)
     Percent Weight: 50%
 Gamma-Butyrolactone
     Molar Mass: 86.090 g/mol
@@ -459,24 +476,24 @@ Assume 100g of material.
     2.5g Propylene Carbonate
     2.5g Triarylsulfonium Hexafluoroantimonate
 
-    55.6 mmol Bisphenol-A Novolac Epoxy
+    116 mmol Bisphenol-A Novolac Epoxy
     523 mmol Gamma-Butyrolactone
     24.5 mmol Propylene Carbonate
     4.12 mmol Triarylsulfonium Hexafluoroantimonate
 
-Total: 607.22 mmol.
-    9.16% Bisphenol-A Novolac Epoxy
-    86.1% Gamma-Butyrolactone
-    4.03% Propylene Carbonate
-    0.678% Triarylsulfonium Hexafluoroantimonate
+Total: 667.62 mmol.
+    17.4% Bisphenol-A Novolac Epoxy
+    78.3% Gamma-Butyrolactone
+    3.67% Propylene Carbonate
+    0.617% Triarylsulfonium Hexafluoroantimonate
 */
 
 LCR.recipeBuilder()
-    .inputs(ore('dustTriarylsulfoniumHexafluoroantimonate') * 26)
-    .inputs(ore('dustBisphenolANovolacEpoxy') * 47)
-    .fluidInputs(fluid('propylene_carbonate') * 3000)
-    .fluidInputs(fluid('gamma_butyrolactone') * 63500)
-    .fluidOutputs(fluid('su_eight') * 66500)
+    .inputs(ore('dustTriarylsulfoniumHexafluoroantimonate'))
+    .inputs(ore('dustBisphenolANovolacEpoxy') * 7)
+    .fluidInputs(fluid('propylene_carbonate') * 200)
+    .fluidInputs(fluid('gamma_butyrolactone') * 4800)
+    .fluidOutputs(fluid('su_eight') * 5000)
     .duration(670)
     .EUt(1920)
     .buildAndRegister()
