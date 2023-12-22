@@ -17,6 +17,6 @@ crafting.replaceShapeless("storagedrawers:key_quantify", item('storagedrawers:qu
 crafting.replaceShapeless("storagedrawers:key_concealment", item('storagedrawers:shroud_key'), [item('storagedrawers:drawer_key'), item('minecraft:name_tag')])
 crafting.replaceShaped("storagedrawers:key_drawer", item('storagedrawers:drawer_key'), [
         [null, ore('stickBrass'), null],
-        [ore('toolFile'), ore('stickBrass'), null],
+        [ore('craftingToolFile'), ore('stickBrass'), null],
         [null, ore('plateBrass'), null]
 ])
