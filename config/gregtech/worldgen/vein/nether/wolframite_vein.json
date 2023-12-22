@@ -23,10 +23,10 @@
         "secondary": "ore:scheelite"
       },
       {
-        "between": "ore:bismuthinite"
+        "between": "ore:sphalerite"
       },
       {
-        "sporadic": "ore:sphalerite"
+        "sporadic": "ore:bismuthinite"
       }
     ]
   }
