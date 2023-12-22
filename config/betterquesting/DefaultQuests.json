@@ -12228,7 +12228,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Iron Drill §rmines a 3x3x1 area with a single hit. If you [§9§aRight Click§r] while holding it, it will automatically place any Torches that you have.\n\nThe §6Iron Chainsaw §racts as an axe, but it can harvest ice and it can also be used as a weapon which disables shields.\n\nYou can get higher tier electric tools in MV, HV, and beyond. Higher tier tools will have bigger energy buffers, mining area, and so on.",
+          "desc:8": "§6GT Electric Tools§r are a good upgrade during your playthrough because they mine much faster compared too their unpowered counterparts such as the Mining Hammer or Wrench. They also consume their durability much slower than their unpowered counterparts too, as long as these tools have energy inside their buffer. Otherwise, the electric tools will consume durability much, much faster. §cSo, REMEMBER TO CHARGE YOUR TOOLS!§r\n\nIf your electric tools run out of durability, it should return the power unit of the same voltage. §6LV tools§5§6§r return §6LV power units§r, §6V tools return MV power unit§r, and so on. You can recraft the retrieved power unit with a new tip to make a new electric tool. Alternatively, you can craft your damaged tool with a fresh new tip to get a new tool with 100% durability §9§e(this crafting recipe can be done in a 2x2 crafting grid!)§r. You can upgrade your old tool with better drill/wrench tips this way too, so a §6Steel Drill (LV)§r can be combined with Aluminium Drill tip to make §6Aluminium Drill (LV)§r. However, you can\u0027t remove the tip from an electric tools.\n\n§l§e§lNote: You can right click a GT battery to allow the battery to charge items in inventories, which might be useful during a long mining trip. Lead-Acid battery (or any LV battery) should be able to power your LV tools. MV battery can charge MV and LV tools, HV battery can charge HV, MV and LV tools, and so on.§r§r\n\nYou can get higher tier electric tools in §d§bMV§r, §eH§r§7§6§f§eV§r, and beyond. Higher tier tools will have bigger energy buffers, mining area, mining speed, durability.\n\n§l§e§lNote: There is no higher tier for the Chainsaw and Screwdriver, the Wrench skips MV and EV tier, and there are no tier above IV.§r\n\nThe §6Steel Drill §rmines a 3x3x1 area with a single hit. If you [§9§aRight Click§r] while holding it, it will automatically place any Torches that you have. If you [§9§aShift + Right Click§r] while holding it, a memu will open, which will allow you to configure the mining area of the drill. I recommending testing this featureon your Singleplayer Creative world.\n\nThe §6Steel Wrench §racts as an wrench. (Note: The §bAluminium§6 Drill§r can\u0027t break §7§8Steel Pipe Casing§r, so it is recommended that you keep using §8Steel§r Wrench Tip until you get §7Stainless Steel§r)\n\nThe §6Steel Chainsaw §racts as an axe, but it can harvest ice and it can also be used as a weapon which disables shields.\n\nThe §6Steel Screwdriver §racts as an screwdriver.\n\nYou can make these tools using other materials such as bronze, invar, iron to complete this quest.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12274,7 +12274,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Gregic Tools V2",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -12291,7 +12291,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -12310,7 +12310,7 @@
               "OreDict:8": "",
               "id:8": "gregtech:drill_lv",
               "tag:10": {
-                "Charge:4": 2147483647,
+                "Charge:4": 0,
                 "DisallowContainerItem:1": 0,
                 "GT.Behaviours:10": {
                   "AoEColumn:3": 1,
@@ -12322,19 +12322,72 @@
                   "TorchPlacing:1": 1
                 },
                 "GT.Tool:10": {
-                  "AttackDamage:5": 3.0,
+                  "AttackDamage:5": 4.0,
                   "AttackSpeed:5": -3.2,
                   "Durability:3": 0,
-                  "HarvestLevel:3": 2,
-                  "Material:8": "iron",
-                  "MaxDurability:3": 768,
-                  "ToolSpeed:5": 6.0
+                  "HarvestLevel:3": 3,
+                  "Material:8": "gregtech:steel",
+                  "MaxDurability:3": 1535,
+                  "ToolSpeed:5": 9.0
                 },
                 "HideFlags:3": 2,
-                "MaxCharge:4": 2147483647
+                "MaxCharge:4": 100000
               }
-            },
-            "1:10": {
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:wrench_lv",
+              "tag:10": {
+                "Charge:4": 0,
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 4.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 3,
+                  "Material:8": "gregtech:steel",
+                  "MaxDurability:3": 511,
+                  "ToolSpeed:5": 14.0
+                },
+                "HideFlags:3": 2,
+                "MaxCharge:4": 100000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "ForgeCaps:10": {
@@ -12349,7 +12402,7 @@
               "OreDict:8": "",
               "id:8": "gregtech:chainsaw_lv",
               "tag:10": {
-                "Charge:4": 2147483647,
+                "Charge:4": 0,
                 "DisallowContainerItem:1": 0,
                 "GT.Behaviours:10": {
                   "DisableShields:1": 1,
@@ -12357,20 +12410,61 @@
                   "TreeFelling:1": 1
                 },
                 "GT.Tool:10": {
-                  "AttackDamage:5": 7.0,
+                  "AttackDamage:5": 8.0,
                   "AttackSpeed:5": -3.2,
                   "Durability:3": 0,
-                  "HarvestLevel:3": 2,
-                  "Material:8": "iron",
-                  "MaxDurability:3": 256,
-                  "ToolSpeed:5": 8.0
+                  "HarvestLevel:3": 3,
+                  "Material:8": "gregtech:steel",
+                  "MaxDurability:3": 511,
+                  "ToolSpeed:5": 14.0
                 },
                 "HideFlags:3": 2,
-                "MaxCharge:4": 2147483647
+                "MaxCharge:4": 100000
               }
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:optional_retrieval"
+        },
+        "3:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 3,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:screwdriver_lv",
+              "tag:10": {
+                "Charge:4": 0,
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 2.0,
+                  "AttackSpeed:5": 3.0,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 3,
+                  "Material:8": "gregtech:steel",
+                  "MaxDurability:3": 511
+                },
+                "HideFlags:3": 2,
+                "MaxCharge:4": 100000
+              }
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -31187,12 +31281,6 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 246,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 1,
               "Damage:2": 593,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
@@ -31206,7 +31294,7 @@
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
             },
-            "2:10": {
+            "1:10": {
               "Count:3": 1,
               "Damage:2": 592,
               "ForgeCaps:10": {
@@ -44419,7 +44507,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Silicon boules need to be §6refined§o§r before being cut into wafers.\n\nThe §cZone Refiner §rpasses a hot coil over the boule and melts off impurities.",
+          "desc:8": "§eSilicon Boules§r need to be §6refined§o§r before being cut into wafers.\n\nThe §cZone Refiner §rpasses a hot coil over the boule and melts off impurities.\n\nThis quest requires either a LV or MV Zone Refiner.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44432,7 +44520,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Zone Refiner",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -44456,6 +44544,23 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 14707,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14708,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -53082,7 +53187,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
