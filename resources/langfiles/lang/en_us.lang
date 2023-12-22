@@ -1748,7 +1748,6 @@ susy.material.diluted_sodium_carbonate_solution=Diluted Sodium Carbonate Solutio
 susy.material.diluted_acetic_acid=Diluted Acetic Acid
 susy.material.cobalt_ii_acetate=Cobalt II Acetate
 susy.material.palladium_on_carbon=Palladium On Carbon
-susy.material.acetone_solution=Acetone Solution
 susy.material.dimethyl_terephthalate=Dimethyl Terephthalate
 susy.material.polyethylene_terephthalate=Polyethylene Terephthalate
 susy.material.amoco_terephthalic_acid=Amoco Terephthalic Acid
@@ -1770,6 +1769,7 @@ susy.material.methyl_para_toluate_mixture=Methyl p-Toluate Mixture
 susy.material.potassium_pyrosulfate=Potassium Pyrosulfate
 susy.material.iron_iii_nitrate_solution=Iron III Nitrate Solution
 susy.material.alluvial_platinum_mother_liquor=Alluvial Platinum Mother Liquor
+susy.material.calcium_acetate=Calcium Acetate
 
 # Isotopes
 
