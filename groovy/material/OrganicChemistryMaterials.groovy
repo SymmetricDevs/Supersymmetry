@@ -905,7 +905,8 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 10, Hydrogen, 12, Nitrogen, 2, Sodium, 4, Oxygen, 8)
                 .colorAverage()
                 .build()
-                .setFormula('(Na4EDTA)', true)
+        
+        TetrasodiumEthylenediaminetetraacetate.setFormula('(Na4EDTA)', true)
 
         Urea = new Material.Builder(15149, SuSyUtility.susyId('urea'))
                 .dust()

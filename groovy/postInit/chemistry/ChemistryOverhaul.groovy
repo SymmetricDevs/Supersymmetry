@@ -745,6 +745,8 @@ DISTILLERY.recipeBuilder()
 // Soda Ash (Sodium Carbonate) Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('gtfo_sodium_carbonate_solution') * 1000])
 // Sodium Carbonate Solution * 1000
+mods.gregtech.blender.removeByInput(30, [metaitem('dustSodaAsh')], [fluid('water') * 1000])
+// Sodium Carbonate Solution * 1000
 mods.gregtech.mixer.removeByInput(30, [metaitem('dustSodaAsh')], [fluid('water') * 1000])
 // Dutched Chocolate Liquor * 1
 mods.gregtech.chemical_bath.removeByInput(540, [metaitem('gregtechfoodoption:chocolate_liquor_refined_crushed')], [fluid('gtfo_sodium_carbonate_solution') * 1000])
