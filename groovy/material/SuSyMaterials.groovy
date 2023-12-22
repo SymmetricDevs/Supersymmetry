@@ -1115,6 +1115,7 @@ class SuSyMaterials {
         public static Material ImpureBariumSulfideSolution;
         public static Material ImpureStrontiumSulfideSlurry;
         public static Material PalladiumOnCarbon;
+        public static Material AcetoneSolution;
 
         // Organic Chemistry Materials
 
