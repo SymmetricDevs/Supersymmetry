@@ -121,7 +121,6 @@ def rubbers = [
     new Rubber('dustLatex', 'Rubber', 16, 10 * 20, 4, false),
     new Rubber('latex', 'Rubber', 32, 20 * 20, 1, true),
     new Rubber('dustPolyisoprene', 'Rubber', 8, 225, 8, false),
-    new Rubber('dustPolydimethylsiloxane', 'SiliconeRubber', 4, 30 * 20, 4, false),
     new Rubber('dustRawStyreneButadieneRubber', 'StyreneButadieneRubber', 4, 30 * 20, 4, false)
 ]
 def sulfurSources = [
@@ -180,7 +179,7 @@ for (rubber in rubbers) {
                     .fluidInputs(fluid(rubber.name) * rubber.amount_required * 1000)
                     .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
                     .notConsumable(metaitem('shape.extruder.' + shape.name))
-                    .circuitMeta(0)
+                    .circuitMeta(2)
                     .outputs(metaitem(shape.name + rubber.output) * (rubber.yield * shape.yield))
                     .duration(rubber.duration)
                     .EUt(7)
@@ -191,7 +190,7 @@ for (rubber in rubbers) {
                     .inputs(ore(rubber.name) * rubber.amount_required)
                     .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
                     .notConsumable(metaitem('shape.extruder.' + shape.name))
-                    .circuitMeta(0)
+                    .circuitMeta(2)
                     .outputs(metaitem(shape.name + rubber.output) * (rubber.yield * shape.yield))
                     .duration(rubber.duration)
                     .EUt(7)
