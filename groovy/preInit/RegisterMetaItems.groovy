@@ -214,17 +214,25 @@ eventManager.listen {
         customMetaItems.addItem(4101, "vacuum_tube_components");
 
         //Circuit Stuff 5000-6000
-
-        customMetaItems.addItem(5000, "mask.ic");
-        customMetaItems.addItem(5001, "mask.cpu");
-        customMetaItems.addItem(5002, "mask.ram");
-        customMetaItems.addItem(5003, "mask.pcb");
-        customMetaItems.addItem(5004, "mask.ulpic");
-        customMetaItems.addItem(5005, "mask.lpic");
-        customMetaItems.addItem(5006, "mask.nand");
-        customMetaItems.addItem(5007, "mask.nor");
-        customMetaItems.addItem(5008, "mask.advanced");
-
+        //Photomasks 5000-5099
+        customMetaItems.addItem(5000, "rubylith")
+        customMetaItems.addItem(5001, "rubylith_film")
+        customMetaItems.addItem(5002, "stencil.ic")
+        customMetaItems.addItem(5003, "stencil.cpu")
+        customMetaItems.addItem(5004, "stencil.ram")
+        customMetaItems.addItem(5005, "stencil.pcb")
+        customMetaItems.addItem(5006, "stencil.ulpic")
+        customMetaItems.addItem(5007, "stencil.lpic")
+        customMetaItems.addItem(5020, "mask.blank")
+        customMetaItems.addItem(5021, "mask.ic");
+        customMetaItems.addItem(5022, "mask.cpu");
+        customMetaItems.addItem(5023, "mask.ram");
+        customMetaItems.addItem(5024, "mask.pcb");
+        customMetaItems.addItem(5025, "mask.ulpic");
+        customMetaItems.addItem(5026, "mask.lpic");
+        customMetaItems.addItem(5027, "mask.nand");
+        customMetaItems.addItem(5028, "mask.nor");
+        customMetaItems.addItem(5029, "mask.advanced");
         customMetaItems.addItem(5100, "patterned.ic");
         customMetaItems.addItem(5101, "patterned.cpu");
         customMetaItems.addItem(5102, "patterned.ram");
@@ -237,9 +245,7 @@ eventManager.listen {
         customMetaItems.addItem(5109, "patterned.nor");
         customMetaItems.addItem(5150, "patterned.board.phenolic");
         customMetaItems.addItem(5151, "patterned.board.plastic");
-
         customMetaItems.addItem(5200, "laminated.board.phenolic");
-
         customMetaItems.addItem(5300, "etched.ic");
         customMetaItems.addItem(5301, "etched.cpu");
         customMetaItems.addItem(5302, "etched.ram");
@@ -248,11 +254,6 @@ eventManager.listen {
         customMetaItems.addItem(5305, "etched.silicon_dioxide");
         customMetaItems.addItem(5306, "etched.polysilicon");
         customMetaItems.addItem(5307, "etched.silicon_nitride");
-
-                // Photomasks: 5900-6000
-
-                customMetaItems.addItem(5900, "rubylith")
-                custonMetaImtes.addItem(5901, "rubylith_film")
 
         //Light Sources 6000-6100
         customMetaItems.addItem(6000, "carbon_arc_lamp");
