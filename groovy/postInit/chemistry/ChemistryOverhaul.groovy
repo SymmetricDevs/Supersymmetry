@@ -4496,3 +4496,39 @@ BR.recipeBuilder()
         .duration(120)
         .EUt(30)
         .buildAndRegister()
+		
+//Acetone from dry distillation
+
+BR.recipeBuilder()
+        .inputs(ore('dustCalcite') * 5) // CaCO3 + 2 CH3COOH --> Ca(CH3COO)2 + H2O + CO2
+        .fluidInputs(fluid('acetic_acid') * 2000)
+        .fluidOutputs(fluid('dissolved_calcium_acetate') * 1000)
+        .fluidOutputs(fluid('carbon_dioxide') * 1000)
+        .duration(1800)
+        .EUt(16)
+        .buildAndRegister()
+		
+BR.recipeBuilder()
+        .inputs(ore('dustQuicklime') * 2) // CaO + 2 CH3COOH --> Ca(CH3COO)2 + H2O
+        .fluidInputs(fluid('acetic_acid') * 2000)
+        .fluidOutputs(fluid('dissolved_calcium_acetate') * 1000)
+        .duration(1800)
+        .EUt(16)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('dissolved_calcium_acetate') * 1000)
+        .outputs(metaitem('dustCalciumAcetate') * 15)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(20)
+        .EUt(16)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustCalciumAcetate') * 15)
+        .outputs(metaitem('dustQuicklime') * 2)
+        .fluidOutputs(fluid('carbon_dioxide') * 1000)
+        .fluidOutputs(fluid('acetone') * 1000)
+        .duration(600)
+        .EUt(30)
+        .buildAndRegister()

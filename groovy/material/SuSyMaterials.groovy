@@ -1417,6 +1417,7 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalate;
         public static Material WetTerephthalicAcid;
         public static Material WetIsophthalicAcid;
+        public static Material CalciumAcetate;
 
         // Third Degree Materials
 
