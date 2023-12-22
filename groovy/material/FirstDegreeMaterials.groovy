@@ -726,7 +726,7 @@ public class FirstDegreeMaterials{
 
         SperryliteWaste = new Material.Builder(8193, SuSyUtility.susyId('sperrylite_waste'))
                 .fluid()
-                .components(Chlorine, 2, Cobalt, 1, Nickel, 1, Water, 4)
+                .components(Chlorine, 4, Cobalt, 1, Nickel, 1, Water, 2)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
@@ -754,7 +754,7 @@ public class FirstDegreeMaterials{
                 .build()
 
         HexachloroiridicAcid = new Material.Builder(8197, SuSyUtility.susyId('hexachloroiridic_acid'))
-				.dust()
+                .dust()
                 .iconSet(SHINY)
                 .components(Chlorine, 6, Hydrogen, 2, Iridium, 1)
                 .colorAverage()
