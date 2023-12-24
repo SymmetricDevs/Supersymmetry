@@ -1770,6 +1770,16 @@ susy.material.terephthalate_mother_liquor=Terephthalate Mother Liquor
 susy.material.wet_terephthalic_acid=Wet Terephthalic Acid
 susy.material.wet_isophthalic_acid=Wet Isophthalic Acid
 susy.material.methyl_para_toluate_mixture=Methyl p-Toluate Mixture
+susy.material.trimethylolpropane=Trimethylolpropane
+susy.material.acrylic_catalyst=Acrylic Catalyst
+susy.material.acrylic_acid=Acrylic Acid
+susy.material.trimethylolpropane_triacrylate=Trimethylolpropane Triacrylate
+susy.material.benzenediazonium_chloride=Benzenediazonium Chloride
+susy.material.acrylic_photoemulsion=Acrylic Photoemulsion
+susy.material.crotonaldehyde_mixture=Crotonaldehyde Mixture
+susy.material.crotonaldehyde=Crotonaldehyde
+susy.material.treated_collagen=Treated Collagen
+susy.material.gelatin_solution=Gelatin Solution
 
 # Isotopes
 
@@ -1959,6 +1969,7 @@ metaitem.graphite_electrode.name=Graphite Electrode
 metaitem.rydberg_atom_array.name=Rydberg Atom Array
 metaitem.malted_grain.name=Malted Grain
 
+metaitem.mask.blank.name=Photolithography Mask (Blank)
 metaitem.mask.ic.name=Photolithography Mask (IC)
 metaitem.mask.cpu.name=Photolithography Mask (CPU)
 metaitem.mask.ram.name=Photolithography Mask (RAM)
@@ -2137,6 +2148,15 @@ metaitem.drone.lv.name=Basic Drone
 
 metaitem.glass_fibers.name=Glass Fibers
 metaitem.epoxy_lamina.name=Epoxy Lamina
+
+metaitem.rubylith.name=Rubylith
+metaitem.rubylith_film.name=Rubylith Film
+metaitem.stencil.ic.name=Integrated Circuit Stencil
+metaitem.stencil.cpu.name=CPU Stencil
+metaitem.stencil.ram.name=RAM Stencil
+metaitem.stencil.pcb.name=PCB Stencil
+metaitem.stencil.ulpic.name=ULPIC Stencil
+metaitem.stencil.lpic.name=LPIC Stencil
 
 # Multiblocked
 
