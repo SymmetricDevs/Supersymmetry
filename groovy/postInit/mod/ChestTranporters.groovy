@@ -1,6 +1,6 @@
 def name_removals = [
   'chesttransporter:tin_transporter',
-  'chesttransporter:silver_transporter',
+  'chesttransporter:gold_transporter',
   'chesttransporter:obsidian_transporter',
   'chesttransporter:diamond_transporter'
 ];
@@ -21,10 +21,10 @@ crafting.replaceShaped('chesttransporter:iron_transporter', item('chesttransport
   [ore('craftingToolScrewdriver'), ore('stickWroughtIron'), ore('craftingToolHardHammer')]
 ]);
 
-crafting.replaceShaped('chesttransporter:gold_transporter', item('chesttransporter:chesttransporter_gold'), [
+crafting.replaceShaped('chesttransporter:silver_transporter', item('chesttransporter:chesttransporter_sillver'), [
   [metaitem('robot.arm.lv'), null, metaitem('robot.arm.lv')],
   [ore('screwSteel'), ore('gearSmallSteel') , ore('screwSteel')],
-  [ore('craftingToolScrewdriver'), ore('stickGold'), ore('craftingToolHardHammer')]
+  [ore('craftingToolScrewdriver'), ore('stickSilver'), ore('craftingToolHardHammer')]
 ]);
 
 crafting.replaceShaped('chesttransporter:copper_transporter', item('chesttransporter:chesttransporter_copper'), [
