@@ -21,7 +21,7 @@ crafting.replaceShaped('chesttransporter:iron_transporter', item('chesttransport
   [ore('craftingToolScrewdriver'), ore('stickWroughtIron'), ore('craftingToolHardHammer')]
 ]);
 
-crafting.replaceShaped('chesttransporter:silver_transporter', item('chesttransporter:chesttransporter_sillver'), [
+crafting.replaceShaped('chesttransporter:silver_transporter', item('chesttransporter:chesttransporter_silver'), [
   [metaitem('robot.arm.lv'), null, metaitem('robot.arm.lv')],
   [ore('screwSteel'), ore('gearSmallSteel') , ore('screwSteel')],
   [ore('craftingToolScrewdriver'), ore('stickSilver'), ore('craftingToolHardHammer')]
