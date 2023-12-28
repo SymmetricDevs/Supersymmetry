@@ -32,3 +32,19 @@ crafting.replaceShaped('chesttransporter:copper_transporter', item('chesttranspo
   [ore('screwBronze'), ore('gearSmallBronze') , ore('screwBronze')],
   [ore('craftingToolScrewdriver'), ore('stickBronze'), ore('craftingToolHardHammer')]
 ]);
+
+recipemap('assembler').recipeBuilder()
+        .inputs(item('minecraft:stick') * 4)
+        .fluidInputs(fluid('glue') * 20)
+        .outputs(item('chesttransporter:chesttransporter'))
+        .duration(400)
+        .EUt(16)
+        .buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+        .inputs(item('minecraft:stick') * 4)
+        .fluidInputs(fluid('resin') * 100)
+        .outputs(item('chesttransporter:chesttransporter'))
+        .duration(800)
+        .EUt(16)
+        .buildAndRegister()
