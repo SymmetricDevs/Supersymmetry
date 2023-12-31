@@ -3292,7 +3292,8 @@ public class FirstDegreeMaterials{
                 .components(Gelatin, 1, Water, 1)
                 .colorAverage()
                 .build(); 
-              OrthomagmaticDeposit = new Material.Builder(8580, SuSyUtility.susyId("orthomagmatic_deposit"))
+        
+        OrthomagmaticDeposit = new Material.Builder(8580, SuSyUtility.susyId("orthomagmatic_deposit"))
                 .ore()
                 .color(0x80081e)
                 .build();
