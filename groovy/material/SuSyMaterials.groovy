@@ -488,9 +488,11 @@ class SuSyMaterials {
         public static Material CelestineSlurry;
         public static Material BariumResidue;
 
-        public static Material OrganosiliconMixture;
-        public static Material ImpurePolydimethylsiloxaneMixture;
-        public static Material RawPolydimethylsiloxaneMixture;
+	      public static Material OrganosiliconMixture;
+	      public static Material ImpurePolydimethylsiloxaneMixture;
+	      public static Material RawPolydimethylsiloxaneMixture;
+        public static Material AcrylicPhotoemulsion;
+        public static Material TreatedCollagen;
 
         // Petrochem Materials
 
@@ -1021,6 +1023,8 @@ class SuSyMaterials {
         public static Material ImpureStrontiumSulfide;
         public static Material DilutedAceticAcid;
         public static Material CobaltIIAcetate;
+        public static Material AcrylicCatalyst;
+        public static Material GelatinSolution;
 
         // Second Degree Materials
 
@@ -1424,6 +1428,11 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalate;
         public static Material WetTerephthalicAcid;
         public static Material WetIsophthalicAcid;
+        public static Material Trimethylolpropane;
+        public static Material AcrylicAcid;
+        public static Material TrimethylolpropaneTriacrylate;
+        public static Material BenzenediazoniumChloride;
+        public static Material Crotonaldehyde;
 
         // Third Degree Materials
 
@@ -1498,6 +1507,7 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalateSolution;
         public static Material TerephthalateMotherLiquor;
         public static Material MethylParaToluateMixture;
+        public static Material CrotonaldehydeMixture;
 
         // Thermodynamics/Greenhouse Materials
 

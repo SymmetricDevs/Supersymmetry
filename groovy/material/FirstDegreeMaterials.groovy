@@ -3280,32 +3280,44 @@ public class FirstDegreeMaterials{
 
         CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)
 
-        OrthomagmaticDeposit = new Material.Builder(8578, SuSyUtility.susyId("orthomagmatic_deposit"))
+        AcrylicCatalyst = new Material.Builder(8578, SuSyUtility.susyId("acrylic_catalyst"))
+                .dust()
+                .components(Copper, 1, Nickel, 1, Bromine, 4)
+                .colorAverage()
+                .build();
+
+        GelatinSolution = new Material.Builder(8579, SuSyUtility.susyId("gelatin_solution"))
+                .fluid()
+                .fluidTemp(323)
+                .components(Gelatin, 1, Water, 1)
+                .colorAverage()
+                .build(); 
+              OrthomagmaticDeposit = new Material.Builder(8580, SuSyUtility.susyId("orthomagmatic_deposit"))
                 .ore()
                 .color(0x80081e)
                 .build();
 
-        MetamorphicDeposit = new Material.Builder(8579, SuSyUtility.susyId("metamorphic_deposit"))
+        MetamorphicDeposit = new Material.Builder(8581, SuSyUtility.susyId("metamorphic_deposit"))
                 .ore()
                 .color(0x21011c)
                 .build();
 
-        SedimentaryDeposit = new Material.Builder(8580, SuSyUtility.susyId("sedimentary_deposit"))
+        SedimentaryDeposit = new Material.Builder(8582, SuSyUtility.susyId("sedimentary_deposit"))
                 .ore()
                 .color(0xfce46d)
                 .build();
 
-        HydrothermalDeposit = new Material.Builder(8581, SuSyUtility.susyId("hydrothermal_deposit"))
+        HydrothermalDeposit = new Material.Builder(8583, SuSyUtility.susyId("hydrothermal_deposit"))
                 .ore()
                 .color(0xe8e1c1)
                 .build();
 
-        AlluvialDeposit = new Material.Builder(8582, SuSyUtility.susyId("alluvial_deposit"))
+        AlluvialDeposit = new Material.Builder(8584, SuSyUtility.susyId("alluvial_deposit"))
                 .ore()
                 .color(0xb59e35)
                 .build();
 
-        MagmaticHydrothermalDeposit = new Material.Builder(8583, SuSyUtility.susyId("magmatic_hydrothermal_deposit"))
+        MagmaticHydrothermalDeposit = new Material.Builder(8585, SuSyUtility.susyId("magmatic_hydrothermal_deposit"))
                 .ore()
                 .color(0x91835d)
                 .build();
