@@ -105,7 +105,7 @@ def stones = [
 for (stone in stones) {
     mods.gregtech.mixer.recipeBuilder()
         .inputs(ore(stone))
-        .inputs(metaitem('cement.dust'))
+        .inputs(ore('dustCement'))
         .fluidInputs(fluid('water') * 500)
         .fluidOutputs(fluid('concrete') * 576)
         .duration(20)
