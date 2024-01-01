@@ -104,7 +104,7 @@ ore('blockConcrete').add(item('industrialrenewal:concrete'))
 ore('blockConcrete').add(item('engineersdecor:rebar_concrete'))
 ore('blockConcrete').add(item('engineersdecor:rebar_concrete_tile'))
 ore('blockConcrete').add(item('engineersdecor:gas_concrete'))
-ore('blockConcrete').add(metaitem('icbmclassic:concrete'))
+ore('blockConcrete').add(item('icbmclassic:concrete'))
 
 
 //Ore dict changes and unification
