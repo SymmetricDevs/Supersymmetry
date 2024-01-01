@@ -167,6 +167,8 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustStainlessSteel') * 9],
 mods.gregtech.arc_furnace.removeByInput(30, [metaitem('pyrolyse_oven')], [fluid('oxygen') * 2160])
 // Aluminium Dust * 21
 mods.gregtech.macerator.removeByInput(8, [metaitem('pyrolyse_oven')], null)
+// Lapotron Crystal * 1
+mods.gregtech.assembler.removeByInput(1920, [metaitem('gemLapotron'), metaitem('circuit.advanced_integrated') * 2], null)
 
 //ADDITIONS
 
