@@ -3309,5 +3309,18 @@ public class FirstDegreeMaterials{
                 .components(Carbon, 1, Fluorine, 1)
                 .colorAverage()
                 .build();
+      
+        AcrylicCatalyst = new Material.Builder(8583, SuSyUtility.susyId("acrylic_catalyst"))
+                .dust()
+                .components(Copper, 1, Nickel, 1, Bromine, 4)
+                .colorAverage()
+                .build();
+
+        GelatinSolution = new Material.Builder(8584, SuSyUtility.susyId("gelatin_solution"))
+                .fluid()
+                .fluidTemp(323)
+                .components(Gelatin, 1, Water, 1)
+                .colorAverage()
+                .build(); 
     }
 }

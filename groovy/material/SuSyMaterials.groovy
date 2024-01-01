@@ -406,7 +406,7 @@ class SuSyMaterials {
         public static Material PropanalMixture;
         public static Material ZSMFive;
         public static Material AminatedEthyleneMixture;
-	public static Material NeutralizedAminatedEthyleneMixture;
+        public static Material NeutralizedAminatedEthyleneMixture;
         public static Material SiftedPyrochlore;
         public static Material PyrochloreConcentrate;
         public static Material ImpurePyrochloreSlurry;
@@ -474,9 +474,9 @@ class SuSyMaterials {
         public static Material ImpureCelestineSlurry;
         public static Material CelestineSlurry;
         public static Material BariumResidue;
-	public static Material OrganosiliconMixture;
-	public static Material ImpurePolydimethylsiloxaneMixture;
-	public static Material RawPolydimethylsiloxaneMixture;
+        public static Material OrganosiliconMixture;
+        public static Material ImpurePolydimethylsiloxaneMixture;
+        public static Material RawPolydimethylsiloxaneMixture;
         public static Material LubricityAdditive;
         public static Material AntistaticAdditive;
         public static Material AntifoamingAdditive;
@@ -517,6 +517,8 @@ class SuSyMaterials {
         public static Material SupremeLubricant;
         public static Material ZincDialkyldithiophospate;
         public static Material MolybdenumDialkyldithiophosphate;
+        public static Material AcrylicPhotoemulsion;
+        public static Material TreatedCollagen;
 
         // Petrochem Materials
 
@@ -1056,6 +1058,8 @@ class SuSyMaterials {
         public static Material ChloroplatinicAcidSolution;
         public static Material MolybdenumDisulfide;
         public static Material FluorinatedGraphite;
+        public static Material AcrylicCatalyst;
+        public static Material GelatinSolution;
 
         // Second Degree Materials
 
@@ -1407,17 +1411,17 @@ class SuSyMaterials {
         public static Material NBromopropane;
         public static Material TetrapropylammoniumBromide;
         public static Material Propionaldehyde;
-	public static Material Triethylenetetramine;
-	public static Material Aminoethylpiperazine;
-	public static Material Diethylenetriamine;
-	public static Material Piperazine;
-	public static Material Cyclooctadiene;
-	public static Material TriethylPhosphate;
-	public static Material IsopropenylAcetate;
-	public static Material Acetylacetone;
-	public static Material NickelIIBisacetylacetonate;
-	public static Material BiscyclooctadienenickelZero;
-	public static Material DiethylaluminiumAcetylacetonate;
+        public static Material Triethylenetetramine;
+        public static Material Aminoethylpiperazine;
+        public static Material Diethylenetriamine;
+        public static Material Piperazine;
+        public static Material Cyclooctadiene;
+        public static Material TriethylPhosphate;
+        public static Material IsopropenylAcetate;
+        public static Material Acetylacetone;
+        public static Material NickelIIBisacetylacetonate;
+        public static Material BiscyclooctadienenickelZero;
+        public static Material DiethylaluminiumAcetylacetonate;
         public static Material OxalicAcid;
         public static Material OneAmidoethylTwoAlkylTwoImidazoline;
         public static Material Chlorodiphenylphosphine;
@@ -1539,6 +1543,11 @@ class SuSyMaterials {
         public static Material Pseudocumene;
         public static Material TwoButoxyethanol;
         public static Material PolyethyleneGlycol;
+        public static Material Trimethylolpropane;
+        public static Material AcrylicAcid;
+        public static Material TrimethylolpropaneTriacrylate;
+        public static Material BenzenediazoniumChloride;
+        public static Material Crotonaldehyde;
 
         // Third Degree Materials
 
@@ -1626,6 +1635,7 @@ class SuSyMaterials {
         public static Material AcidicTricresylPhosphate;
         public static Material ChloroaceticAcidSolution;
         public static Material OrthoPhenylenediamineSolution;
+        public static Material CrotonaldehydeMixture;
 
         // Thermodynamics/Greenhouse Materials
 

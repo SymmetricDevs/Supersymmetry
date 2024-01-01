@@ -506,7 +506,51 @@ MIXER.recipeBuilder()
         .duration(160)
         .EUt(8)
         .buildAndRegister()
-		
+
+// Gelatin
+CHEMICAL_BATH.recipeBuilder()
+        .inputs(ore('dustBone') * 1)
+        .fluidInputs(fluid('hydrochloric_acid') * 2000)
+        .outputs(metaitem('dustCollagen') * 1)
+        .fluidOutputs(fluid('wastewater') * 2000)
+        .duration(160)
+        .EUt(8)
+        .buildAndRegister()
+
+CHEMICAL_BATH.recipeBuilder()
+        .inputs(item('minecraft:leather'))
+        .fluidInputs(fluid('hydrochloric_acid') * 2000)
+        .outputs(metaitem('dustCollagen') * 1)
+        .fluidOutputs(fluid('wastewater') * 2000)
+        .duration(160)
+        .EUt(8)
+        .buildAndRegister()
+
+CHEMICAL_BATH.recipeBuilder()
+        .inputs(ore('dustCollagen'))
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 250)
+        .outputs(metaitem('dustTreatedCollagen'))
+        .fluidOutputs(fluid('wastewater') * 250)
+        .duration(160)
+        .EUt(8)
+        .buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(ore('dustTreatedCollagen'))
+        .fluidInputs(fluid('gtfo_heated_water') * 1000)
+        .fluidOutputs(fluid('gelatin_solution') * 1000)
+        .duration(160)
+        .EUt(8)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('gelatin_solution') * 1000)
+        .outputs(metaitem('dustGelatin'))
+        .fluidOutputs(fluid('wastewater') * 1000)
+        .duration(160)
+        .EUt(8)
+        .buildAndRegister()
+
 // Force GTFO skewers to be made with only long rods
 // Skewer * 16
 mods.gregtech.lathe.removeByInput(200, [metaitem('stickTitanium')], null)

@@ -531,5 +531,10 @@ public class ThirdDegreeMaterials {
                 .components(OrthoPhenylenediamine, 1, Toluene, 1, Water, 2)
                 .colorAverage()
                 .build();
+        CrotonaldehydeMixture = new Material.Builder(24084, SuSyUtility.susyId('crotonaldehyde_mixture'))
+                .fluid()
+                .components(SodiumHydroxide, 1, Crotonaldehyde, 1)
+                .colorAverage()
+                .build();
     }
 }

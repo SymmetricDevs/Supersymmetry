@@ -2361,5 +2361,35 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 2, Hydrogen, 4, Oxygen, 1)
                 .color(0x599c8e)
                 .build();
+
+        Trimethylolpropane = new Material.Builder(15376, SuSyUtility.susyId('trimethylolpropane'))
+                .dust()
+                .components(Carbon, 6, Hydrogen, 14, Oxygen, 3)
+                .color(0x5d8230)
+                .build();
+
+        AcrylicAcid = new Material.Builder(15377, SuSyUtility.susyId('acrylic_acid'))
+                .fluid(FluidTypes.ACID)
+                .components(Carbon, 3, Hydrogen, 4, Oxygen, 2)
+                .color(0x308264)
+                .build();
+
+        TrimethylolpropaneTriacrylate = new Material.Builder(15378, SuSyUtility.susyId('trimethylolpropane_triacrylate'))
+                .fluid()
+                .components(Carbon, 15, Hydrogen, 20, Oxygen, 6)
+                .color(0x279630)
+                .build();
+
+        BenzenediazoniumChloride = new Material.Builder(15379, SuSyUtility.susyId('benzenediazonium_chloride'))
+                .dust()
+                .components(Carbon, 6, Hydrogen, 5, Nitrogen, 2, Chlorine, 1)
+                .color(0x18262b)
+                .build();
+
+        Crotonaldehyde = new Material.Builder(15380, SuSyUtility.susyId('crotonaldehyde'))
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 1)
+                .color(0xa31a5c)
+                .build();
     }
 }
