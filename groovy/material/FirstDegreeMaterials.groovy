@@ -3292,36 +3292,5 @@ public class FirstDegreeMaterials{
                 .components(Gelatin, 1, Water, 1)
                 .colorAverage()
                 .build(); 
-        
-        OrthomagmaticDeposit = new Material.Builder(8580, SuSyUtility.susyId("orthomagmatic_deposit"))
-                .ore()
-                .color(0x80081e)
-                .build();
-
-        MetamorphicDeposit = new Material.Builder(8581, SuSyUtility.susyId("metamorphic_deposit"))
-                .ore()
-                .color(0x21011c)
-                .build();
-
-        SedimentaryDeposit = new Material.Builder(8582, SuSyUtility.susyId("sedimentary_deposit"))
-                .ore()
-                .color(0xfce46d)
-                .build();
-
-        HydrothermalDeposit = new Material.Builder(8583, SuSyUtility.susyId("hydrothermal_deposit"))
-                .ore()
-                .color(0xe8e1c1)
-                .build();
-
-        AlluvialDeposit = new Material.Builder(8584, SuSyUtility.susyId("alluvial_deposit"))
-                .ore()
-                .color(0xb59e35)
-                .build();
-
-        MagmaticHydrothermalDeposit = new Material.Builder(8585, SuSyUtility.susyId("magmatic_hydrothermal_deposit"))
-                .ore()
-                .color(0x91835d)
-                .build();
-
     }
 }
