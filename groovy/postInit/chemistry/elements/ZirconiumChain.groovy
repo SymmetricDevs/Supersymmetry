@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 MIXER = recipemap('mixer')
 FF = recipemap('froth_flotation')
@@ -81,10 +82,10 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
         .buildAndRegister()
 
 // Carbochlorination (100%)
-for (highPurityCombustible in Globals.highPurityCombustibles) {
+for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
                 .inputs(ore('dustConcentrateZircon'))
-                .inputs(ore(highPurityCombustible.name) * 4)
+                .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(4))
                 .fluidInputs(fluid('chlorine') * 8000)
                 .outputs(metaitem('dustImpureZirconiumTetrachloride') * 5)
                 .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
@@ -142,10 +143,10 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 // Carbochlorination (100%)
-for (highPurityCombustible in Globals.highPurityCombustibles) {
+for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
                 .inputs(ore('dustBaddeleyite'))
-                .inputs(ore(highPurityCombustible.name) * 2)
+                .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
                 .fluidInputs(fluid('chlorine') * 4000)
                 .outputs(metaitem('dustImpureZirconiumTetrachloride') * 5)
                 .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
@@ -202,10 +203,10 @@ BR.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-for (highPurityCombustible in Globals.highPurityCombustibles) {
+for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
                 .inputs(ore('dustZirconiumDioxide'))
-                .inputs(ore(highPurityCombustible.name) * 2)
+                .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
                 .fluidInputs(fluid('chlorine') * 4000)
                 .outputs(metaitem('dustZirconiumTetrachloride') * 5)
                 .fluidOutputs(fluid('carbon_monoxide') * 2000)
