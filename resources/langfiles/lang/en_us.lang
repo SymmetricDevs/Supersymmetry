@@ -111,7 +111,7 @@ susy.material.diluted_methyl_ii_pyrrolidone=Diluted N-Methyl-2-pyrrolidone
 susy.material.dimethyldichlorosilane_emulsion=Dimethyldichlorosilane Emulsion
 susy.material.tetrafluoroethylene_emulsion=Tetrafluoroethylene Emulsion
 susy.material.dichloromethane=Dichloromethane
-susy.material.carbon_tetrachloride=Carbon Tetrachloride 
+susy.material.carbon_tetrachloride=Carbon Tetrachloride
 susy.material.phthalic_acid_solution=Phthalic Acid Solution
 susy.material.butanol=Butanol
 susy.material.saltpeter_solution=Saltpeter Solution
@@ -1114,6 +1114,7 @@ susy.material.hutchinsonite=Hutchinsonite
 susy.material.crookesite=Crookesite
 susy.material.dilithium=Dilithium
 susy.material.lignite=Lignite
+susy.material.lignite_coke=Lignite Coke
 susy.material.anthracite=Anthracite
 susy.material.phosphorite=Phosphorite
 susy.material.sperrylite=Sperrylite
@@ -2340,6 +2341,7 @@ recipemap.gravity_separator.name=Gravity Separation
 item.chisel.chisel_diamond.name=Steel Chisel
 tooltip.computronics.waila.tape.notapeinserted=No Tape Inserted
 tooltip.computronics.waila.tape.tapeinserted=Tape Inserted
+item.chesttransporter_copper.name=Bronze Chest Transporter
 
 # Resin Logs
 gregtech.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log

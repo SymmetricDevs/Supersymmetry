@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 MIXER = recipemap('mixer')
 FF = recipemap('froth_flotation')
@@ -119,11 +120,11 @@ BR.recipeBuilder()
 
 // Chloride Ilmenite Process
 
-for (highPurityCombustible in highPurityCombustibles) {
+for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 3000)
         .inputs(ore('dustIlmenite'))
-        .inputs(ore(highPurityCombustible.name))
+        .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
         .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
         .fluidOutputs(fluid('gaseous_iron_iii_chloride') * 120)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
@@ -135,7 +136,7 @@ for (highPurityCombustible in highPurityCombustibles) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 2000)
         .inputs(ore('dustPerovskite'))
-        .inputs(ore(highPurityCombustible.name))
+        .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
         .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
         .fluidOutputs(fluid('calcium_chloride') * 432)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
@@ -146,7 +147,7 @@ for (highPurityCombustible in highPurityCombustibles) {
 
         FLUIDIZED_BED_REACTOR.recipeBuilder()
         .inputs(ore('dustRutile') * 3)
-        .inputs(ore(highPurityCombustible.name) * 2)
+        .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
         .fluidInputs(fluid('chlorine') * 4000)
         .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
         .fluidOutputs(fluid('gaseous_titanium_tetrachloride') * 1000)
