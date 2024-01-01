@@ -65,6 +65,7 @@ class SuSyMaterials {
         public static Material Crookesite;
         public static Material Dilithium;
         public static Material Lignite;
+        public static Material LigniteCoke;
         public static Material Anthracite;
         public static Material Acanthite;
         public static Material Phosphorite;

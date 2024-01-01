@@ -1117,6 +1117,7 @@ susy.material.hutchinsonite=Hutchinsonite
 susy.material.crookesite=Crookesite
 susy.material.dilithium=Dilithium
 susy.material.lignite=Lignite
+susy.material.lignite_coke=Lignite Coke
 susy.material.anthracite=Anthracite
 susy.material.phosphorite=Phosphorite
 susy.material.sperrylite=Sperrylite
@@ -2220,6 +2221,7 @@ recipemap.gravity_separator.name=Gravity Separation
 item.chisel.chisel_diamond.name=Steel Chisel
 tooltip.computronics.waila.tape.notapeinserted=No Tape Inserted
 tooltip.computronics.waila.tape.tapeinserted=Tape Inserted
+item.chesttransporter_copper.name=Bronze Chest Transporter
 
 # Resin Logs
 gregtech.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log
