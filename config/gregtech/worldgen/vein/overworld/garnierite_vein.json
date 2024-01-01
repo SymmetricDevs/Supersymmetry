@@ -1,33 +1,33 @@
 {
-  "weight": 80,
+  "weight": 60,
   "density": 0.75,
   "max_height": 80,
   "min_height": 0,
   "vein_populator": {
     "type": "surface_rock",
-    "material": "silver"
+    "material": "garnierite"
   },
   "generator": {
     "type": "layered",
     "radius": [
-      16,
-      16
+      20,
+      20
     ]
   },
   "filler": {
     "type": "layered",
     "values": [
       {
-        "primary": "ore:acanthite"
+        "primary": "ore:garnierite"
       },
       {
-        "secondary": "ore:proustite"
+        "secondary": "ore:garnierite"
       },
       {
-        "between": "ore:pyrargyrite"
+        "between": "ore:garnierite"
       },
       {
-        "sporadic": "ore:silver"
+        "sporadic": "ore:garnierite"
       }
     ]
   }

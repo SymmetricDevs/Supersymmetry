@@ -85,6 +85,8 @@ ore('dyeWhite').add(metaitem('dustLeadNitrate'))
 ore('dyeBlack').add(metaitem('dustCarbon'))
 ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust'))
 
+//Add non traditional ore blocks to scanner
+
 ore('oreBauxite').add(item('susy:resource_block:0'))
 ore('oreSulfur').add(item('susy:resource_blocK:14'))
 
@@ -94,6 +96,16 @@ ore('oreSedimentaryDeposit').add(item('susy:deposit_block:2'))
 ore('oreHydrothermalDeposit').add(item('susy:deposit_block:3'))
 ore('oreAlluvialDeposit').add(item('susy:deposit_block:4'))
 ore('oreMagmaticHydrothermalDeposit').add(item('susy:deposit_block:5'))
+
+//Concrete
+
+ore('dustCement').add(metaitem('cement.dust'))
+ore('blockConcrete').add(item('industrialrenewal:concrete'))
+ore('blockConcrete').add(item('engineersdecor:rebar_concrete'))
+ore('blockConcrete').add(item('engineersdecor:rebar_concrete_tile'))
+ore('blockConcrete').add(item('engineersdecor:gas_concrete'))
+ore('blockConcrete').add(metaitem('icbmclassic:concrete'))
+
 
 //Ore dict changes and unification
 //DISABLED FOR NOW DUE TO SERVER CRASHES
@@ -223,7 +235,6 @@ ore('toolKnife').remove(item('notreepunching:knife/diamond'))
 
 //Manual Fixes
 ore('stickWood').add(item('minecraft:stick'))
-ore('blockConcrete').add(item('industrialrenewal:concrete'))
 ore('stickIron').remove(item('industrialrenewal:stick_iron'))
 ore('stickSteel').remove(item('industrialrenewal:stick_steel'))
 ore('ingotSteel').remove(item('industrialrenewal:ingot_steel'))

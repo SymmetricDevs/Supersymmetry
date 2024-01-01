@@ -678,6 +678,13 @@ mods.gregtech.macerator.recipeBuilder()
         .EUt(7)
         .buildAndRegister();
 
+mods.gregtech.macerator.recipeBuilder()
+		.inputs(item('susy:resource_block', 14))
+		.outputs(metaitem('dustSulfur') * 8)
+		.duration(240)
+		.EUt(7)
+		.buildAndRegister();
+
 mods.gregtech.sifter.recipeBuilder()
         .inputs(ore('dustNonMarineEvaporite'))
         .chancedOutput(metaitem('dustSalt'), 8000, 500)
