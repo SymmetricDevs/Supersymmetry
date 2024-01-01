@@ -12,8 +12,7 @@
     "classes/IQuenchingFluid.groovy",
     "classes/IRefrigerant.groovy",
     "classes/IWorkingFluid.groovy",
-    "globals/SinteringGlobals.groovy",
-    "globals/Globals.groovy",
+    "globals/",
     "material/"
   ],
   "loaders": {

@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 FLOTATION = recipemap('froth_flotation')
 CLARIFIER = recipemap('clarifier')
@@ -141,10 +142,10 @@ FLUIDIZEDBR.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-for (combustible in Globals.combustibles) {
+for (combustible in CarbonGlobals.combustibles()) {
     ROASTER.recipeBuilder()
             .inputs(ore('dustZincite') * 2)
-            .inputs(ore(combustible.name) * combustible.amount_required)
+            .inputs(ore(combustible.name) * combustible.equivalent(1))
             .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_zinc') * 216)
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
@@ -153,10 +154,10 @@ for (combustible in Globals.combustibles) {
             .buildAndRegister()
 }
 
-for (highPurityCombustible in Globals.highPurityCombustibles) {
+for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         ROASTER.recipeBuilder()
             .inputs(ore('dustZincOxide') * 2)
-            .inputs(ore(highPurityCombustible.name) * highPurityCombustible.amount_required)
+            .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
             .outputs(metaitem('dustZinc'))
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .EUt(30)
