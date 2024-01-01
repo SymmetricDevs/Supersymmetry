@@ -13540,7 +13540,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Aluminum Hydroxide §r§rcan be reduced to Alumina in an Electric Blast Furnace. Later on, Alumina can be reduced directly to Aluminium for a small price of 960 EU/t.",
+          "desc:8": "§6Aluminum Hydroxide §r§rcan be reduced to Alumina in an Electric Blast Furnace.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

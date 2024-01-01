@@ -1838,6 +1838,17 @@ public class UnknownCompositionMaterials {
         RawPolydimethylsiloxaneMixture = new Material.Builder(4350, SuSyUtility.susyId("raw_polydimethylsiloxane_mixture"))
                 .fluid()
                 .color(0xf6f7f0)
-                .build();  
+                .build();
+
+        AcrylicPhotoemulsion = new Material.Builder(4351, SuSyUtility.susyId("acrylic_photoemulsion"))
+                .fluid()
+                .color(0x8a2531)
+                .build();
+
+        TreatedCollagen = new Material.Builder(4352, SuSyUtility.susyId("treated_collagen"))
+                .dust()
+                .color(0xa6a490)
+                .iconSet(ROUGH)
+                .build();
     }
 }

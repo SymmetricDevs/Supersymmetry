@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 ROASTER = recipemap('roaster')
 EBF = recipemap('electric_blast_furnace')
@@ -40,19 +41,17 @@ EBF.recipeBuilder()
         .blastFurnaceTemp(1370)
         .buildAndRegister()
 
-for (combustible in Globals.combustibles) {
-
-        EBF.recipeBuilder()
-                .inputs(ore('dustMagnesia') * 2)
-                .inputs(ore(combustible.name) * combustible.amount_required)
-                .outputs(metaitem('dustMagnesium'))
-                .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
-                .fluidOutputs(fluid('carbon_monoxide') * 1000)
-                .EUt(120)
-                .duration(20 * combustible.duration)
-                .blastFurnaceTemp(2500)
-                .buildAndRegister()
-
+for (combustible in CarbonGlobals.combustibles()) {
+    EBF.recipeBuilder()
+        .inputs(ore('dustMagnesia') * 2)
+        .inputs(ore(combustible.name) * combustible.equivalent(1))
+        .outputs(metaitem('dustMagnesium'))
+        .outputs(metaitem(combustible.byproduct) * combustible.equivalent(1))
+        .fluidOutputs(fluid('carbon_monoxide') * 1000)
+        .EUt(120)
+        .duration(20 * combustible.duration)
+        .blastFurnaceTemp(2500)
+        .buildAndRegister()
 }
 
 ROASTER.recipeBuilder()
@@ -64,12 +63,10 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 //IG FARBEN CHLORINATION
-def combustibles = Globals.combustibles
-
-for (combustible in combustibles) {
-REACTION_FURNACE.recipeBuilder()
+for (combustible in CarbonGlobals.combustibles()) {
+    REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustMagnesia') * 2)
-        .inputs(ore(combustible.name) * (combustible.amount_required))
+        .inputs(ore(combustible.name) * combustible.equivalent(1))
         .fluidInputs(fluid('chlorine') * 2000)
         .outputs(metaitem('dustMagnesiumChloride') * 3)
         .outputs(metaitem(combustible.byproduct))
