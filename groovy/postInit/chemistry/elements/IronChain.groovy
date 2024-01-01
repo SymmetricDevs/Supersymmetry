@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 //RECIPE REMOVALS
 mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoke')], null)
@@ -68,25 +69,25 @@ def reductants = [
     new Reductant('hydrogen', 'steam', 2, 1)
 ]
 
-def combustibles = Globals.combustibles
+def combustibles = CarbonGlobals.combustibles()
 
 for (blastable in blastables) {
     for (combustible in combustibles) {
         //BESSEMER PROCESS
         PBF_RECIPES.recipeBuilder()
         .inputs(ore(blastable.name) * blastable.amount_required)
-        .inputs(ore(combustible.name) * (combustible.amount_required * blastable.reductant_required))
+        .inputs(ore(combustible.name) * (combustible.equivalent(1) * blastable.reductant_required))
         .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
-        .outputs(metaitem(combustible.byproduct) * (combustible.amount_required * blastable.reductant_required))
+        .outputs(metaitem(combustible.byproduct) * (combustible.equivalent(1) * blastable.reductant_required))
         .duration((int) (combustible.duration * blastable.amount_produced * blastable.duration))
         .buildAndRegister()
 
         //MODERN BLAST FURNACE
         EBF_RECIPES.recipeBuilder()
         .inputs(ore(blastable.name) * blastable.amount_required)
-        .inputs(ore(combustible.name) * (combustible.amount_required * blastable.reductant_required))
+        .inputs(ore(combustible.name) * (combustible.equivalent(1) * blastable.reductant_required))
         .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
-        .outputs(metaitem(combustible.byproduct) * (combustible.amount_required * blastable.reductant_required))
+        .outputs(metaitem(combustible.byproduct) * (combustible.equivalent(1) * blastable.reductant_required))
         .duration((int) (combustible.duration * blastable.amount_produced * blastable.duration / 2))
         .blastFurnaceTemp(1750)
         .EUt(Globals.voltAmps[1])
@@ -187,17 +188,17 @@ EBF_RECIPES.recipeBuilder()
 for (combustible in combustibles) {
     PBF_RECIPES.recipeBuilder()
     .inputs(item('minecraft:iron_ingot'))
-    .inputs(ore(combustible.name) * combustible.amount_required)
+    .inputs(ore(combustible.name) * combustible.equivalent(1))
     .outputs(metaitem('ingotSteel'))
-    .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
+    .outputs(metaitem(combustible.byproduct) * combustible.equivalent(1))
     .duration(combustible.duration * 120)
     .buildAndRegister()
 
     PBF_RECIPES.recipeBuilder()
     .inputs(ore('ingotWroughtIron'))
-    .inputs(ore(combustible.name) * combustible.amount_required)
+    .inputs(ore(combustible.name) * combustible.equivalent(1))
     .outputs(metaitem('ingotSteel'))
-    .outputs(metaitem(combustible.byproduct) * combustible.amount_required)
+    .outputs(metaitem(combustible.byproduct) * combustible.equivalent(1))
     .duration(combustible.duration * 60)
     .buildAndRegister()
 }

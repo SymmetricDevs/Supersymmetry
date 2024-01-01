@@ -442,5 +442,11 @@ public class ThirdDegreeMaterials {
                 .components(MethylParaToluate, 1, DimethylTerephthalate, 1)
                 .colorAverage()
                 .build();
+
+        CrotonaldehydeMixture = new Material.Builder(24070, SuSyUtility.susyId('crotonaldehyde_mixture'))
+                .fluid()
+                .components(SodiumHydroxide, 1, Crotonaldehyde, 1)
+                .colorAverage()
+                .build();
     }
 }

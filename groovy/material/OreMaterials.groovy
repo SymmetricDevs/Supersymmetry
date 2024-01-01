@@ -273,7 +273,7 @@ public class OreMaterials{
                 .build();
 
         Lignite = new Material.Builder(7033, SuSyUtility.susyId('lignite'))
-                .gem(1, 1200).ore(2, 1)
+                .gem(1, 600).ore(2, 1)
                 .color(0x644646).iconSet(LIGNITE)
                 .components(Carbon, 1)
                 .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
@@ -562,5 +562,13 @@ public class OreMaterials{
                 .dust()
                 .color(0x948a5d)
                 .build();
+
+        LigniteCoke = new Material.Builder(7075, SuSyUtility.susyId('lignite_coke'))
+                .gem(1, 1200)
+                .color(0x8f7070).iconSet(LIGNITE)
+                .components(Carbon, 1)
+                .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
+                .build();
+
     }
 }

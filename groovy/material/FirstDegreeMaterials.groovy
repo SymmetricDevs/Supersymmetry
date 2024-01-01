@@ -3291,5 +3291,18 @@ public class FirstDegreeMaterials{
                 .build();
 
         IronIIINitrateSolution.setFormula("(Fe(NO3)3)(H2O)3", true)
+        
+        AcrylicCatalyst = new Material.Builder(8580, SuSyUtility.susyId("acrylic_catalyst"))
+                .dust()
+                .components(Copper, 1, Nickel, 1, Bromine, 4)
+                .colorAverage()
+                .build();
+
+        GelatinSolution = new Material.Builder(8581, SuSyUtility.susyId("gelatin_solution"))
+                .fluid()
+                .fluidTemp(323)
+                .components(Gelatin, 1, Water, 1)
+                .colorAverage()
+                .build(); 
     }
 }

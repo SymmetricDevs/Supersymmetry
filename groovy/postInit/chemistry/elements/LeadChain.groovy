@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 import static globals.SinteringGlobals.*
 
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
@@ -16,16 +17,6 @@ ELECTROLYZER = recipemap('electrolyzer')
 SIFTER = recipemap('sifter')
 ROTARY_KILN = recipemap('rotary_kiln')
 CLARIFIER = recipemap('clarifier')
-
-def COAL_SOURCES = [
-        "dustCarbon",
-        "gemCoal",
-        "dustCoal",
-        "gemCharcoal",
-        "dustCoke",
-        "gemCoke",
-        "dustCharcoal"
-]
 
 //REMOVAL
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustGalena')], [fluid('oxygen') * 3000])
@@ -171,12 +162,12 @@ for (fuel in rotary_kiln_fuels) {
 }
 
 //SINTER-ROAST PROCESS (UNIVERSAL, 200%)
-def combustibles = Globals.combustibles
+def combustibles = CarbonGlobals.combustibles()
 
 for (combustible in combustibles) {
     EBF.recipeBuilder()
             .inputs(ore('dustSinteredLeadConcentrate') * 2)
-            .inputs(ore(combustible.name) * (combustible.amount_required))
+            .inputs(ore(combustible.name) * combustible.equivalent(1))
             .inputs(ore('dustTinyCalcite'))
             .outputs(metaitem('ingotCrudeLead') * 2)
             .outputs(metaitem(combustible.byproduct))
@@ -306,10 +297,10 @@ BR.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-for (coal_source in COAL_SOURCES) {
+for (carbon in CarbonGlobals.sources) {
     ROASTER.recipeBuilder()
             .inputs(ore('dustAntimonyVOxide') * 7)
-            .inputs(ore(coal_source) * 5)
+            .inputs(ore(carbon.name) * carbon.equivalent(5))
             .outputs(metaitem('dustAntimony') * 2)
             .fluidOutputs(fluid('carbon_monoxide') * 5000)
             .EUt(120)
@@ -318,20 +309,22 @@ for (coal_source in COAL_SOURCES) {
 
     ROASTER.recipeBuilder()
             .inputs(ore('dustTinIvOxide') * 3)
-            .inputs(ore(coal_source) * 2)
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
             .outputs(metaitem('dustTin'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(120)
             .duration(200)
             .buildAndRegister()
 
-    ROASTER.recipeBuilder()
-            .inputs(ore('dustLithargeSlag') * 10)
-            .inputs(ore(coal_source) * 23)
-            .outputs(metaitem('ingotBettsCrudeLead') * 10)
-            .EUt(Globals.voltAmps[3])
-            .duration(400)
-            .buildAndRegister()
+    if (carbon.equivalent(23) <= 64) {
+        ROASTER.recipeBuilder()
+                .inputs(ore('dustLithargeSlag') * 10)
+                .inputs(ore(carbon.name) * carbon.equivalent(23))
+                .outputs(metaitem('ingotBettsCrudeLead') * 10)
+                .EUt(Globals.voltAmps[3])
+                .duration(400)
+                .buildAndRegister()
+    }
 }
 
 //SILVER REMOVAL (PARKES PROCESS)
