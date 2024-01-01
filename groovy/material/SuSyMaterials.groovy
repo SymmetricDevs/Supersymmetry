@@ -65,6 +65,7 @@ class SuSyMaterials {
         public static Material Crookesite;
         public static Material Dilithium;
         public static Material Lignite;
+        public static Material LigniteCoke;
         public static Material Anthracite;
         public static Material Acanthite;
         public static Material Phosphorite;
@@ -488,6 +489,8 @@ class SuSyMaterials {
         public static Material PolyurethanePolymerizationMix;
         public static Material SpandexPrepolymer;
         public static Material SpandexPolymerizationMix;
+        public static Material AcrylicPhotoemulsion;
+        public static Material TreatedCollagen;
 
         // Petrochem Materials
 
@@ -1018,6 +1021,8 @@ class SuSyMaterials {
         public static Material DilutedAceticAcid;
         public static Material CobaltIIAcetate;
         public static Material HydrogenIodide;
+        public static Material AcrylicCatalyst;
+        public static Material GelatinSolution;
 
         // Second Degree Materials
 
@@ -1425,6 +1430,11 @@ class SuSyMaterials {
         public static Material Nomex;
         public static Material UltraHighMolecularWeightPolyethylene;
         public static Material AdipicAcid;
+        public static Material Trimethylolpropane;
+        public static Material AcrylicAcid;
+        public static Material TrimethylolpropaneTriacrylate;
+        public static Material BenzenediazoniumChloride;
+        public static Material Crotonaldehyde;
 
         // Third Degree Materials
 
@@ -1503,6 +1513,7 @@ class SuSyMaterials {
         public static Material KevlarPolymerizationMix;
         public static Material SpentDimethylacetamide;
         public static Material SodiumCelluloseXanthateSolution;
+        public static Material CrotonaldehydeMixture;
 
         // Thermodynamics/Greenhouse Materials
 

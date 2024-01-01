@@ -6,6 +6,7 @@ import gregtech.api.unification.ore.OrePrefix;
 
 import static gregtech.api.unification.material.Materials.*;
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 EBF = recipemap('electric_blast_furnace')
 ROASTER = recipemap('roaster')
@@ -15,10 +16,10 @@ ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 //PYROMETALLUGRICAL METHODS (75%)
 
-for (combustible in Globals.combustibles) {
+for (combustible in CarbonGlobals.combustibles()) {
     EBF.recipeBuilder()
         .inputs(ore('dustPyrolusite'))
-        .inputs(ore(combustible.name) * combustible.amount_required * 2)
+        .inputs(ore(combustible.name) * combustible.equivalent(2))
         .inputs(ore('dustTinyCalcite'))
         .chancedOutput(metaitem('dustManganese'), 7500, 0)
         .fluidOutputs(fluid('carbon_dioxide') * 1000)
@@ -36,10 +37,10 @@ ROASTER.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-for (highPurityCombustible in Globals.highPurityCombustibles) {
+for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
     ROASTER.recipeBuilder()
         .inputs(ore('dustManganeseIiOxide') * 2)
-        .inputs(ore(highPurityCombustible.name) * 1)
+        .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
         .chancedOutput(metaitem('dustManganese'), 8500, 0)
         .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)

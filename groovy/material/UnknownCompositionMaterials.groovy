@@ -1880,5 +1880,16 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x494575)
                 .build();
+
+        AcrylicPhotoemulsion = new Material.Builder(4358, SuSyUtility.susyId("acrylic_photoemulsion"))
+                .fluid()
+                .color(0x8a2531)
+                .build();
+
+        TreatedCollagen = new Material.Builder(4359, SuSyUtility.susyId("treated_collagen"))
+                .dust()
+                .color(0xa6a490)
+                .iconSet(ROUGH)
+                .build();
     }
 }

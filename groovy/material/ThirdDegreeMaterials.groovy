@@ -474,5 +474,11 @@ public class ThirdDegreeMaterials {
                 .components(SodiumCelluloseXanthate, 1, SodiumHydroxide, 1, Water, 1)
                 .colorAverage()
                 .build();
+
+        CrotonaldehydeMixture = new Material.Builder(24074, SuSyUtility.susyId('crotonaldehyde_mixture'))
+                .fluid()
+                .components(SodiumHydroxide, 1, Crotonaldehyde, 1)
+                .colorAverage()
+                .build();
     }
 }

@@ -2,7 +2,7 @@
   "data": [
     {
       "biomes": "$FOREST",
-      "weight": 0.1
+      "weight": 0.25
     },
     {
       "biomes": "$MOUNTAIN",
@@ -14,6 +14,10 @@
     },
     {
       "biomes": "$JUNGLE",
+      "weight": 0.25
+    },
+    {
+      "biomes": "",
       "weight": 0.1
     }
   ],

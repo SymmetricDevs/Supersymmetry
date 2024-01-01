@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
@@ -42,26 +43,6 @@ VACUUM_DT = recipemap('vacuum_distillation')
 CRACKER = recipemap('cracker')
 FLUID_HEATER = recipemap('fluid_heater')
 PHASE_SEPARATOR = recipemap('phase_separator')
-
-def COAL_SOURCES = [
-    "dustCarbon",
-    "gemCoal",
-    "dustCoal",
-    "gemCharcoal",
-    "dustCoke",
-    "gemCoke",
-    "dustCharcoal",
-    "gemAnthracite",
-    "dustAnthracite"
-]
-
-def CARBON_DUSTS = [
-        "dustCarbon",
-        "dustCoal",
-        "dustCoke",
-        "dustCharcoal",
-        "dustAnthracite"
-]
 
 ASSEMBLER.recipeBuilder()
         .inputs(ore('stickIron') * 4)
@@ -173,40 +154,41 @@ DISTILLERY.recipeBuilder()
 .buildAndRegister()
 
 // Carbon Monoxide roaster
-
-for (coal_source in COAL_SOURCES) {
+// TODO: set output according to carbon amount?
+for (carbon in CarbonGlobals.sources) {
     ROASTER.recipeBuilder()
-    .fluidInputs(fluid('oxygen') * 1000)
-    .inputs(ore(coal_source))
-    .circuitMeta(1)
-    .fluidOutputs(fluid('carbon_monoxide') * 1000)
-    .duration(80)
-    .EUt(7)
-    .buildAndRegister()
+        .fluidInputs(fluid('oxygen') * 1000)
+        .inputs(ore(carbon.name) * carbon.equivalent(1))
+        .circuitMeta(1)
+        .fluidOutputs(fluid('carbon_monoxide') * 1000)
+        .duration(80)
+        .EUt(7)
+        .buildAndRegister()
 }
 
 // Carbon Dioxide roaster
-for (coal_source in COAL_SOURCES) {
+// TODO: set output according to carbon amount?
+for (carbon in CarbonGlobals.sources) {
     ROASTER.recipeBuilder()
-    .fluidInputs(fluid('oxygen') * 2000)
-    .inputs(ore(coal_source))
-    .circuitMeta(2)
-    .fluidOutputs(fluid('carbon_dioxide') * 1000)
-    .duration(40)
-    .EUt(7)
-    .buildAndRegister()
+        .fluidInputs(fluid('oxygen') * 2000)
+        .inputs(ore(carbon.name) * carbon.equivalent(1))
+        .circuitMeta(2)
+        .fluidOutputs(fluid('carbon_dioxide') * 1000)
+        .duration(40)
+        .EUt(7)
+        .buildAndRegister()
 }
 
 //CARBON DISULFIDE
 
-for (coal_source in COAL_SOURCES) {
+for (carbon in CarbonGlobals.sources) {
     ROASTER.recipeBuilder()
-            .inputs(ore(coal_source))
-            .inputs(ore('dustSulfur') * 2)
-            .fluidOutputs(fluid('carbon_disulfide') * 1000)
-            .duration(100)
-            .EUt(60)
-            .buildAndRegister()
+        .inputs(ore(carbon.name) * carbon.equivalent(1))
+        .inputs(ore('dustSulfur') * 2)
+        .fluidOutputs(fluid('carbon_disulfide') * 1000)
+        .duration(100)
+        .EUt(60)
+        .buildAndRegister()
 }
 
 
@@ -1875,10 +1857,10 @@ DRYER.recipeBuilder()
 
 //acetylene
 
-for (carbon in COAL_SOURCES) {
+for (carbon in CarbonGlobals.sources) {
     EBF.recipeBuilder()
             .inputs(ore('dustQuicklime') * 2)
-            .inputs(ore(carbon) * 3)
+            .inputs(ore(carbon.name) * carbon.equivalent(3))
             .outputs(metaitem('dustCalciumCarbide') * 3)
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .blastFurnaceTemp(2473)
@@ -2209,10 +2191,10 @@ ROASTER.recipeBuilder()
 
 //Silicon & Graphite
 
-for (carbon in CARBON_DUSTS) {
+for (carbon in CarbonGlobals.dusts()) {
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustSiliconDioxide') * 3)
-            .inputs(ore(carbon) * 1)
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
             .outputs(metaitem('dustSilicon'))
             .circuitMeta(1)
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
@@ -2222,7 +2204,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustQuartzite') * 3)
-            .inputs(ore(carbon) * 1)
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2231,7 +2213,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustCertusQuartz') * 3)
-            .inputs(ore(carbon) * 2)
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2240,7 +2222,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustNetherQuartz') * 3)
-            .inputs(ore(carbon) * 2)
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
             .outputs(metaitem('dustSilicon'))
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
             .EUt(30)
@@ -2249,7 +2231,7 @@ for (carbon in CARBON_DUSTS) {
 
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustSiliconDioxide') * 3)
-            .inputs(ore(carbon) * 3)
+            .inputs(ore(carbon.name) * carbon.equivalent(3))
             .circuitMeta(2)
             .outputs(metaitem('dustSiliconCarbide') * 2)
             .fluidOutputs(fluid('carbon_monoxide') * 2000)
@@ -3258,7 +3240,7 @@ BR.recipeBuilder()
         .inputs(ore('dustSodiumHydroxide') * 3)
         .fluidInputs(fluid('methanol') * 1000)
         .fluidOutputs(fluid('tetramethylammonium_hydroxide_solution') * 1000)
-        .outputs(metaitem('dustRockSalt') * 2)
+        .outputs(metaitem('dustSalt') * 2)
         .duration(300)
         .EUt(30)
         .buildAndRegister()
@@ -4452,3 +4434,32 @@ BR.recipeBuilder()
 .duration(80)    
 .EUt(30)
 .buildAndRegister()
+
+// Early butyraldehyde
+
+BR.recipeBuilder()
+        .notConsumable(ore('springCupronickel'))
+        .fluidInputs(fluid('gtfo_acetaldehyde') * 2000)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+        .fluidOutputs(fluid('crotonaldehyde_mixture') * 1000)
+        .fluidOutputs(fluid('steam') * 2000)
+        .duration(400)
+        .EUt(120)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('crotonaldehyde_mixture') * 1000)
+        .outputs(metaitem('dustSodiumHydroxide') * 3)
+        .fluidOutputs(fluid('crotonaldehyde') * 1000)
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister()
+
+FBR.recipeBuilder()
+        .notConsumable(ore('catalystBedCopper'))
+        .fluidInputs(fluid('crotonaldehyde') * 50)
+        .fluidInputs(fluid('hydrogen') * 100)
+        .fluidOutputs(fluid('butyraldehyde') * 50)
+        .duration(20)
+        .EUt(120)
+        .buildAndRegister()

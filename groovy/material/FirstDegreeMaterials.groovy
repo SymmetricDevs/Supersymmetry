@@ -3272,6 +3272,19 @@ public class FirstDegreeMaterials{
                 .color(0xfc7e89)
                 .build();
 
-        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)   
+        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)
+
+        AcrylicCatalyst = new Material.Builder(8578, SuSyUtility.susyId("acrylic_catalyst"))
+                .dust()
+                .components(Copper, 1, Nickel, 1, Bromine, 4)
+                .colorAverage()
+                .build();
+
+        GelatinSolution = new Material.Builder(8579, SuSyUtility.susyId("gelatin_solution"))
+                .fluid()
+                .fluidTemp(323)
+                .components(Gelatin, 1, Water, 1)
+                .colorAverage()
+                .build(); 
     }
 }
