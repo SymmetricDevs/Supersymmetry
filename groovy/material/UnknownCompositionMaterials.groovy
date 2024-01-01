@@ -1845,5 +1845,16 @@ public class UnknownCompositionMaterials {
                 .components(HydrochloricAcid, 9, HydrofluoricAcid, 9, AceticAcid, 2)
                 .color(0x3e7d68)
                 .build();
+                
+        AcrylicPhotoemulsion = new Material.Builder(4352, SuSyUtility.susyId("acrylic_photoemulsion"))
+                .fluid()
+                .color(0x8a2531)
+                .build();
+
+        TreatedCollagen = new Material.Builder(4353, SuSyUtility.susyId("treated_collagen"))
+                .dust()
+                .color(0xa6a490)
+                .iconSet(ROUGH)
+                .build();
     }
 }

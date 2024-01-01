@@ -198,6 +198,15 @@ new PDopant("dustHighPurityAntimony", 1)
 new PDopant("dustHighPurityPhosphorus", 2)
 new PDopant("dustHighPurityArsenic", 2)
 
+MIXER.recipeBuilder()
+        .inputs(ore('dustTinyPotassiumHydroxide'))
+        .inputs(ore('dustSiliconDioxide') * 30)
+        .fluidInputs(fluid('demineralized_water') * 10000)
+        .fluidOutputs(fluid('silicon_dioxide_slurry') * 10000)
+        .duration(200)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
 def generatePatterningRecipes(input, product, mask, voltageTier, timeMultiplier, int outputMultiplier, int circ, boolean cleanroom) {
     for (photoresist in Photoresist.photoresists) {
         if (cleanroom) {
@@ -304,99 +313,6 @@ def generateCuttingRecipes(input, product, productMultiplier, voltageTier, boole
                 .buildAndRegister()
     }
 }
-
-//LITHOGRAPHY MASKS
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(ore('plateGlass'))
-        .circuitMeta(6)
-        .fluidInputs(fluid('dye_black')*100)
-        .outputs(metaitem('mask.cpu'))
-        .duration(200)
-        .EUt(7)
-        .buildAndRegister()
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(ore('plateGlass'))
-        .circuitMeta(1)
-        .fluidInputs(fluid('dye_black')*100)
-        .outputs(metaitem('mask.ram'))
-        .duration(200)
-        .EUt(7)
-        .buildAndRegister()
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(ore('plateGlass'))
-        .circuitMeta(2)
-        .fluidInputs(fluid('dye_black')*100)
-        .outputs(metaitem('mask.ic'))
-        .duration(200)
-        .EUt(7)
-        .buildAndRegister()
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(ore('plateGlass'))
-        .circuitMeta(3)
-        .fluidInputs(fluid('dye_black')*100)
-        .outputs(metaitem('mask.pcb'))
-        .duration(200)
-        .EUt(7)
-        .buildAndRegister()
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(ore('plateGlass'))
-        .circuitMeta(4)
-        .fluidInputs(fluid('dye_black')*100)
-        .outputs(metaitem('mask.ulpic'))
-        .duration(200)
-        .EUt(7)
-        .buildAndRegister()
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(ore('plateGlass'))
-        .circuitMeta(5)
-        .fluidInputs(fluid('dye_black')*100)
-        .outputs(metaitem('mask.lpic'))
-        .duration(200)
-        .EUt(7)
-        .buildAndRegister()
-
-REACTION_FURNACE.recipeBuilder()
-        .notConsumable(metaitem('shape.mold.plate'))
-        .fluidInputs(fluid('silicon_tetrachloride')*1000)
-        .fluidInputs(fluid('oxygen')*3000)
-        .fluidInputs(fluid('hydrogen')*2000)
-        .outputs(metaitem('fused_quartz'))
-        .duration(400)
-        .EUt(120)
-        .buildAndRegister()
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('fused_quartz'))
-        .inputs(ore('dustTinyChromiumTrioxide'))
-        .circuitMeta(1)
-        .outputs(metaitem('mask.advanced'))
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('fused_quartz'))
-        .inputs(ore('dustTinyChromiumTrioxide'))
-        .circuitMeta(2)
-        .outputs(metaitem('mask.nand'))
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('fused_quartz'))
-        .inputs(ore('dustTinyChromiumTrioxide'))
-        .circuitMeta(3)
-        .outputs(metaitem('mask.nor'))
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
 
 //NOVOLACS
 
