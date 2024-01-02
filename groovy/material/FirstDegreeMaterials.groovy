@@ -703,7 +703,7 @@ public class FirstDegreeMaterials{
                 .setFormula("(Fe(NO3)2)3(H3AsO4)3(H2O)3", true)
 
         ArsenousAcid = new Material.Builder(8190, SuSyUtility.susyId('arsenous_acid'))
-                .fluid(FluidTypes.ACID)
+                .fluid()
                 .components(Hydrogen, 3, Arsenic, 1, Oxygen, 3)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()

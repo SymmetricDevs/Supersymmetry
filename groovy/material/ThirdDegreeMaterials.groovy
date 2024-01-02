@@ -302,7 +302,7 @@ public class ThirdDegreeMaterials {
       	    	.build();
 
         ShellHigherOlefinCatalystSolution = new Material.Builder(24049, SuSyUtility.susyId('shell_higher_olefin_catalyst_solution'))
-                .fluid(FluidTypes.ACID)
+                .fluid()
                 .components(Nickel, 1, DiphenylphosphinoaceticAcid, 1, Cyclooctadiene, 2, EthyleneGlycol, 1)
                 .color(0x9c1012)
                 .build();
