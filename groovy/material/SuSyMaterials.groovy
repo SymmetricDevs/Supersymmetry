@@ -759,7 +759,6 @@ class SuSyMaterials {
         public static Material CeriumIVOxide;
         public static Material CeriumIIIOxide;
         public static Material IronSulfate;
-        public static Material CopperChloride;
         public static Material RutheniumIVOxide;
         public static Material Trichlorosilane;
         public static Material PurifiedTrichlorosilane;
@@ -1262,7 +1261,7 @@ class SuSyMaterials {
         public static Material PolymethylMethacrylateSolution;
         public static Material PolystyreneSulfonate;
         public static Material EthylenediaminetetraaceticAcid;
-        public static Material TetrasodiumEthylenediaminetetraaceticAcid;
+        public static Material TetrasodiumEthylenediaminetetraacetate;
         public static Material Urea;
         public static Material Diiodobenzene;
         public static Material IsophthalicAcid;
@@ -1440,7 +1439,7 @@ class SuSyMaterials {
         public static Material AcetamideSolution;
         public static Material HydrazineSolution;
         public static Material EthylenediaminetetraaceticAcidSolution;
-        public static Material TetrasodiumEthylenediaminetetraaceticAcidSolution;
+        public static Material TetrasodiumEthylenediaminetetraacetateSolution;
         public static Material UreaSolution;
         public static Material DiiodobenzeneSolution;
         public static Material ImpureFourFourOxydianiline;
