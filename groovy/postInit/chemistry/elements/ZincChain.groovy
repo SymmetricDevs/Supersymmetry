@@ -37,7 +37,7 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSphalerit
 
 MIXER.recipeBuilder()
         .inputs(ore('dustImpureSphalerite') * 4)
-        .fluidInputs(fluid('water') * 2000)
+        .fluidInputs(fluid('distilled_water') * 2000)
         .fluidOutputs(fluid('impure_sphalerite_slurry') * 2000)
         .EUt(Globals.voltAmps[3])
         .duration(80)

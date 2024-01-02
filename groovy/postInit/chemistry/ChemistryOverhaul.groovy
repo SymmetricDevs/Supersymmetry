@@ -232,6 +232,7 @@ CSTR.recipeBuilder()
 .buildAndRegister()
 
 BCR.recipeBuilder()
+.circuitMeta(1)
 .fluidInputs(fluid('hydrogen_chloride') * 50)
 .fluidInputs(fluid('water') * 50)
 .fluidOutputs(fluid('hydrochloric_acid') * 50)
@@ -239,10 +240,27 @@ BCR.recipeBuilder()
 .EUt(7)
 .buildAndRegister()
 
+BCR.recipeBuilder()
+.circuitMeta(2)
+.fluidInputs(fluid('hydrogen_chloride') * 50)
+.fluidInputs(fluid('water') * 100)
+.fluidOutputs(fluid('diluted_hydrochloric_acid') * 100)
+.duration(1)
+.EUt(7)
+.buildAndRegister()
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('hydrochloric_acid') * 50)
+.fluidInputs(fluid('water') * 50)
+.fluidOutputs(fluid('diluted_hydrochloric_acid') * 100)
+.duration(1)
+.EUt(7)
+.buildAndRegister()
+
 //Chlorine
 
 FLUIDIZEDBR.recipeBuilder()
-        .notConsumable(metaitem('dustCopperChloride'))
+        .notConsumable(metaitem('dustCopperIiChloride'))
         .fluidInputs(fluid('hydrogen_chloride') * 1000)
         .fluidInputs(fluid('oxygen') * 500)
         .fluidOutputs(fluid('chlorine') * 1000)
@@ -708,6 +726,8 @@ DISTILLERY.recipeBuilder()
 
 // Soda Ash (Sodium Carbonate) Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('gtfo_sodium_carbonate_solution') * 1000])
+// Sodium Carbonate Solution * 1000
+mods.gregtech.blender.removeByInput(30, [metaitem('dustSodaAsh')], [fluid('water') * 1000])
 // Sodium Carbonate Solution * 1000
 mods.gregtech.mixer.removeByInput(30, [metaitem('dustSodaAsh')], [fluid('water') * 1000])
 // Dutched Chocolate Liquor * 1
@@ -3560,28 +3580,29 @@ BR.recipeBuilder()
 
 // Tetrasodium EDTA
 LCR.recipeBuilder()
+        .inputs(ore('dustSodiumCyanide') * 12)
         .fluidInputs(fluid('ethylenediamine') * 1000)
         .fluidInputs(fluid('formaldehyde') * 4000)
-        .inputs(ore('dustSodiumCyanide') * 12)
         .fluidInputs(fluid('diluted_hydrochloric_acid') * 8000)
+        .outputs(metaitem('dustEthylenediaminetetraaceticAcid') * 32)
         .fluidOutputs(fluid('ammonia') * 4000)
-        .fluidOutputs(fluid('ethylenediaminetetraacetic_acid_solution') * 4000)
+        .fluidOutputs(fluid('wastewater') * 4000)
         .duration(300)
         .EUt(30)
         .buildAndRegister()
 
 BR.recipeBuilder()
-        .fluidInputs(fluid('ethylenediaminetetraacetic_acid_solution') * 1000)
-        .inputs(ore('dustSodiumHydroxide') * 3)
-        .fluidOutputs(fluid('tetrasodium_ethylenediaminetetraacetic_acid_solution') * 1000)
+        .inputs(ore('dustEthylenediaminetetraaceticAcid') * 36)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 4000)
+        .fluidOutputs(fluid('tetrasodium_ethylenediaminetetraacetate_solution') * 4000)
         .duration(300)
         .EUt(30)
         .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('tetrasodium_ethylenediaminetetraacetic_acid_solution') * 4000)
-        .fluidOutputs(fluid('salt_water') * 4000)
-        .outputs(metaitem('dustTetrasodiumEthylenediaminetetraaceticAcid') * 44)
+        .fluidInputs(fluid('tetrasodium_ethylenediaminetetraacetate_solution') * 4000)
+        .fluidOutputs(fluid('diluted_saltwater') * 8000)
+        .outputs(metaitem('dustTetrasodiumEthylenediaminetetraacetate') * 36)
         .duration(300)
         .EUt(30)
         .buildAndRegister()
@@ -4486,7 +4507,7 @@ BR.recipeBuilder()
         .duration(120)
         .EUt(30)
         .buildAndRegister()
-		
+
 //Acetone from dry distillation
 
 BR.recipeBuilder()

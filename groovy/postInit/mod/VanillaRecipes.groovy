@@ -302,23 +302,28 @@ crafting.replaceShaped('quark:chain', item('quark:chain') * 3, [
     [null, null, ore('ringIron')]
 ])
 
-crafting.replaceShaped('minecraft:torchLig', item('minecraft:torch') *2, [
+crafting.replaceShaped('minecraft:torchLig', item('minecraft:torch') * 2, [
     [metaitem('gemLignite')],
     [ore('stickWood')]
 ])
 
-crafting.replaceShaped('minecraft:torchLigDust', item('minecraft:torch') *2, [
+crafting.replaceShaped('minecraft:torchLigDust', item('minecraft:torch') * 2, [
     [metaitem('dustLignite')],
     [ore('stickWood')]
 ])
 
-crafting.replaceShaped('minecraft:torchAnth', item('minecraft:torch') *8, [
+crafting.replaceShaped('minecraft:torchAnth', item('minecraft:torch') * 8, [
     [metaitem('gemAnthracite')],
     [ore('stickWood')]
 ])
 
-crafting.replaceShaped('minecraft:torchAnthDust', item('minecraft:torch') *8, [
+crafting.replaceShaped('minecraft:torchAnthDust', item('minecraft:torch') * 8, [
     [metaitem('dustAnthracite')],
+    [ore('stickWood')]
+])
+
+crafting.addShaped('minecraft:torchCarbonDust', item('minecraft:torch') * 8, [
+    [metaitem('dustCarbon')],
     [ore('stickWood')]
 ])
 
