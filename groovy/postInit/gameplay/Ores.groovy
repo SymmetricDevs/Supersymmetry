@@ -1,6 +1,5 @@
 def RedundantOreRemovals = [
-
-        ore('oreOrthomagmaticDeposit'),
+        item('gregtech:ore_orthomagmatic_deposit_0'),
         ore('oreNetherrackOrthomagmaticDeposit'),
         ore('oreEndstoneOrthomagmaticDeposit'),
         ore('crushedOrthomagmaticDeposit'),
@@ -12,7 +11,7 @@ def RedundantOreRemovals = [
         ore('dustSmallOrthomagmaticDeposit'),
         ore('dustTinyOrthomagmaticDeposit'),
 
-        ore('oreMetamorphicDeposit'),
+        item('gregtech:ore_metamorphic_deposit_0'),
         ore('oreNetherrackMetamorphicDeposit'),
         ore('oreEndstoneMetamorphicDeposit'),
         ore('crushedMetamorphicDeposit'),
@@ -24,7 +23,7 @@ def RedundantOreRemovals = [
         ore('dustSmallMetamorphicDeposit'),
         ore('dustTinyMetamorphicDeposit'),
 
-        ore('oreSedimentaryDeposit'),
+        item('gregtech:ore_sedimentary_deposit_0'),
         ore('oreNetherrackSedimentaryDeposit'),
         ore('oreEndstoneSedimentaryDeposit'),
         ore('crushedSedimentaryDeposit'),
@@ -36,7 +35,7 @@ def RedundantOreRemovals = [
         ore('dustSmallSedimentaryDeposit'),
         ore('dustTinySedimentaryDeposit'),
 
-        ore('oreHydrothermalDeposit'),
+        item('gregtech:ore_hydrothermal_deposit_0'),
         ore('oreNetherrackHydrothermalDeposit'),
         ore('oreEndstoneHydrothermalDeposit'),
         ore('crushedHydrothermalDeposit'),
@@ -48,7 +47,7 @@ def RedundantOreRemovals = [
         ore('dustSmallHydrothermalDeposit'),
         ore('dustTinyHydrothermalDeposit'),
 
-        ore('oreAlluvialDeposit'),
+        item('gregtech:ore_alluvial_deposit_0'),
         ore('oreNetherrackAlluvialDeposit'),
         ore('oreEndstoneAlluvialDeposit'),
         ore('crushedAlluvialDeposit'),
@@ -60,7 +59,7 @@ def RedundantOreRemovals = [
         ore('dustSmallAlluvialDeposit'),
         ore('dustTinyAlluvialDeposit'),
 
-        ore('oreMagmaticHydrothermalDeposit'),
+        item('gregtech:ore_magmatic_hydrothermal_deposit_0'),
         ore('oreNetherrackMagmaticHydrothermalDeposit'),
         ore('oreEndstoneMagmaticHydrothermalDeposit'),
         ore('crushedMagmaticHydrothermalDeposit'),
@@ -71,7 +70,6 @@ def RedundantOreRemovals = [
         ore('dustMagmaticHydrothermalDeposit'),
         ore('dustSmallMagmaticHydrothermalDeposit'),
         ore('dustTinyMagmaticHydrothermalDeposit')
-
 ]
 
 for (entry in RedundantOreRemovals) {
