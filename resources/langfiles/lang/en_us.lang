@@ -1,7 +1,6 @@
 # Chemistry
 
 susy.material.dichlorobenzene=1,4-Dichlorobenzene
-
 susy.material.ammonium_chloride_solution=Ammonium Chloride Solution
 susy.material.crude_styrene=Crude Styrene
 susy.material.hydrogen_chloride=Hydrogen Chloride
@@ -1122,6 +1121,22 @@ susy.material.lignite_coke=Lignite Coke
 susy.material.anthracite=Anthracite
 susy.material.phosphorite=Phosphorite
 susy.material.sperrylite=Sperrylite
+
+# Deposit ores for scanning
+
+item.susy.material.orthomagmatic_deposit.ore=Orthomagmatic Deposit
+item.susy.material.metamorphic_deposit.ore=Metamorphic Deposit
+item.susy.material.sedimentary_deposit.ore=Sedimentary Deposit
+item.susy.material.hydrothermal_deposit.ore=Hydrothermal Deposit
+item.susy.material.alluvial_deposit.ore=Alluvial Deposit
+item.susy.material.magmatic_hydrothermal_deposit.ore=Magmatic Hydrothermal Deposit
+
+susy.material.orthomagmatic_deposit=Orthomagmatic Deposit
+susy.material.metamorphic_deposit=Metamorphic Deposit
+susy.material.sedimentary_deposit=Sedimentary Deposit
+susy.material.hydrothermal_deposit=Hydrothermal Deposit
+susy.material.alluvial_deposit=Alluvial Deposit
+susy.material.magmatic_hydrothermal_deposit=Magmatic Hydrothermal Deposit
 
 susy.material.corundum=Corundum
 susy.material.tourmaline=Tourmaline
