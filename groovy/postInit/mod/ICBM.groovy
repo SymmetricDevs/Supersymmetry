@@ -70,7 +70,10 @@ def name_removals = [
         "icbmclassic:grenades/grenade.5",
         "icbmclassic:grenades/grenade.6",
         "icbmclassic:grenades/grenade.7",
-        "icbmclassic:antidote"
+        "icbmclassic:antidote",
+        "icbmclassic:concrete",
+        "icbmclassic:concrete.1",
+        "icbmclassic:concrete.2"
 ]
 
 for (item in name_removals) {
@@ -296,6 +299,58 @@ Globals.solders.each { key, val ->
                         .buildAndRegister();
         }
 }        
+
+//Concrete
+mods.gregtech.assembler.recipeBuilder()
+        .circuitMeta(1)
+        .fluidInputs(fluid('water') * 500)
+        .inputs(ore('dustObsidian'))
+        .inputs(ore('dustCement'))
+        .inputs(ore('dustStone') * 4)
+        .outputs(item('icbmclassic:concrete', 0) * 4)
+        .duration(160)
+        .EUt(24)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .circuitMeta(2)
+        .fluidInputs(fluid('water') * 500)
+        .inputs(ore('dustObsidian'))
+        .inputs(ore('dustPolypropylene'))
+        .inputs(ore('dustCement'))
+        .inputs(ore('dustStone') * 4)
+        .inputs(ore('frameGtSteel'))
+        .outputs(item('icbmclassic:concrete', 1) * 4)
+        .duration(160)
+        .EUt(96)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .circuitMeta(3)
+        .fluidInputs(fluid('water') * 500)
+        .inputs(ore('dustObsidian'))
+        .inputs(ore('dustBoronNitride'))
+        .inputs(ore('dustCement'))
+        .inputs(ore('dustStone') * 4)
+        .inputs(ore('frameGtStainlessSteel'))
+        .outputs(item('icbmclassic:concrete', 2) * 4)
+        .duration(160)
+        .EUt(384)
+        .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .circuitMeta(3)
+        .fluidInputs(fluid('water') * 500)
+        .inputs(ore('dustObsidian'))
+        .inputs(ore('dustBorosilicateGlass'))
+        .inputs(ore('dustCement'))
+        .inputs(ore('dustStone') * 4)
+        .inputs(ore('frameGtStainlessSteel'))
+        .outputs(item('icbmclassic:concrete', 2) * 4)
+        .duration(160)
+        .EUt(384)
+        .buildAndRegister();
+
 
 //Launchers
 mods.gregtech.assembler.recipeBuilder()

@@ -48,50 +48,48 @@ mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 5)]
 mods.gregtech.macerator.removeByInput(8, [item('gregtech:turbine_casing', 5)], null)
 
 def name_removals = [
-        'gregtech:cover_fluid_voiding',
-        'gregtech:cover_item_voiding',
-        'gregtech:fluid_filter_lapis',
-        'gregtech:fluid_filter_sodalite',
-        'gregtech:fluid_filter_lazurite',
-        'gregtech:comparator_certus',
-        'gregtech:gregtech.machine.world_accelerator.lv',
-        'gregtech:gregtech.machine.world_accelerator.mv',
-        'gregtech:gregtech.machine.world_accelerator.hv',
-        'gregtech:gregtech.machine.world_accelerator.ev',
-        'gregtech:gregtech.machine.world_accelerator.iv',
-        'gregtech:gregtech.machine.world_accelerator.luv',
-        'gregtech:gregtech.machine.world_accelerator.zpm',
-        'gregtech:gregtech.machine.world_accelerator.uv',
+	'gregtech:cover_fluid_voiding',
+	'gregtech:cover_item_voiding',
+	'gregtech:fluid_filter_lapis',
+	'gregtech:fluid_filter_sodalite',
+	'gregtech:fluid_filter_lazurite',
+	'gregtech:comparator_certus',
+	'gregtech:gregtech.machine.world_accelerator.lv',
+	'gregtech:gregtech.machine.world_accelerator.mv',
+	'gregtech:gregtech.machine.world_accelerator.hv',
+	'gregtech:gregtech.machine.world_accelerator.ev',
+	'gregtech:gregtech.machine.world_accelerator.iv',
+	'gregtech:gregtech.machine.world_accelerator.luv',
+	'gregtech:gregtech.machine.world_accelerator.zpm',
+	'gregtech:gregtech.machine.world_accelerator.uv',
 	'gregtech:nano_helmet',
-        'gregtech:nano_chestplate',
-        'gregtech:nano_leggings',
-        'gregtech:nano_boots',
-        'gregtech:super_chest_lv',
-        'gregtech:super_chest_mv',
-        'gregtech:super_chest_hv',
-        'gregtech:super_chest_ev',
-        'gregtech:super_chest_iv',
-        'gregtech:super_tank_lv',
-        'gregtech:super_tank_mv',
-        'gregtech:super_tank_hv',
-        'gregtech:super_tank_ev',
-        'gregtech:super_tank_iv',
-        'gregtech:quantum_chest_uhv',
-        'gregtech:quantum_chest_luv',
-        'gregtech:quantum_chest_zpm',
-        'gregtech:quantum_chest_uv',
-        'gregtech:quantum_chest_uhv',
-        'gregtech:quantum_tank_uhv',
-        'gregtech:quantum_tank_luv',
-        'gregtech:quantum_tank_zpm',
-        'gregtech:quantum_tank_uv',
-        'gregtech:quantum_tank_uhv',
+	'gregtech:nano_chestplate',
+	'gregtech:nano_leggings',
+	'gregtech:nano_boots',
+	'gregtech:super_chest_lv',
+	'gregtech:super_chest_mv',
+	'gregtech:super_chest_hv',
+	'gregtech:super_chest_ev',
+	'gregtech:super_tank_lv',
+	'gregtech:super_tank_mv',
+	'gregtech:super_tank_hv',
+	'gregtech:super_tank_ev',
+	'gregtech:quantum_chest_iv',
+	'gregtech:quantum_chest_luv',
+	'gregtech:quantum_chest_zpm',
+	'gregtech:quantum_chest_uv',
+	'gregtech:quantum_chest_uhv',
+	'gregtech:quantum_tank_iv',
+	'gregtech:quantum_tank_luv',
+	'gregtech:quantum_tank_zpm',
+	'gregtech:quantum_tank_uv',
+	'gregtech:quantum_tank_uhv',
 	'gregtech:large_combustion_engine',
 	'gregtech:extreme_combustion_engine',
-        'gregtech:gregtech.machine.fisher.lv',
-        'gregtech:gregtech.machine.fisher.mv',
-        'gregtech:gregtech.machine.fisher.hv',
-        'gregtech:gregtech.machine.fisher.ev',
+	'gregtech:gregtech.machine.fisher.lv',
+	'gregtech:gregtech.machine.fisher.mv',
+	'gregtech:gregtech.machine.fisher.hv',
+	'gregtech:gregtech.machine.fisher.ev',
 ]
 
 for (name in name_removals) {
@@ -169,6 +167,8 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustStainlessSteel') * 9],
 mods.gregtech.arc_furnace.removeByInput(30, [metaitem('pyrolyse_oven')], [fluid('oxygen') * 2160])
 // Aluminium Dust * 21
 mods.gregtech.macerator.removeByInput(8, [metaitem('pyrolyse_oven')], null)
+// Lapotron Crystal * 1
+mods.gregtech.assembler.removeByInput(1920, [metaitem('gemLapotron'), metaitem('circuit.advanced_integrated') * 2], null)
 
 //ADDITIONS
 
@@ -342,6 +342,18 @@ crafting.replaceShaped("gregtech:gregtech.machine.cutter.hv", metaitem('gregtech
     [metaitem('cableGtSingleGold'), ore('circuitHv'), item('gregtech:transparent_casing')],
 	[metaitem('conveyor.module.hv'), metaitem('gregtech:hull.hv'), metaitem('toolHeadBuzzSawVanadiumSteel')],
 	[ore('circuitHv'), metaitem('cableGtSingleGold'), metaitem('electric.motor.hv')]
+])
+
+crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.lv", metaitem('gregtech:electrolyzer.lv'), [
+		[metaitem('wireGtSingleSilver'), item('minecraft:glass'), metaitem('wireGtSingleSilver')],
+		[metaitem('wireGtSingleSilver'), metaitem('gregtech:hull.lv'), metaitem('wireGtSingleSilver')],
+		[ore('circuitLv'), metaitem('cableGtSingleTin'), ore('circuitLv')]
+])
+
+crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metaitem('gregtech:electrolyzer.mv'), [
+		[metaitem('wireGtSingleGold'), item('minecraft:glass'), metaitem('wireGtSingleGold')],
+		[metaitem('wireGtSingleGold'), metaitem('gregtech:hull.mv'), metaitem('wireGtSingleGold')],
+		[ore('circuitMv'), metaitem('cableGtSingleCopper'), ore('circuitMv')]
 ])
 
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
