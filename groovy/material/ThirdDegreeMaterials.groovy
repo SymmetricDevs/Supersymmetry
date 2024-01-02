@@ -277,15 +277,15 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        IsophthaloylDichlorideSolution = new Material.Builder(24043, SuSyUtility.susyId('isophthaloyl_dichloride_solution'))
+        IsophthaloylChlorideSolution = new Material.Builder(24043, SuSyUtility.susyId('isophthaloyl_chloride_solution'))
                 .fluid()
-                .components(AceticAcid, 1, Water, 1, IsophthaloylDichloride, 1)
+                .components(Dichloroethane, 1, IsophthaloylChloride, 1)
                 .colorAverage()
                 .build();
 
         IsophthalicAcidSlurry = new Material.Builder(24044, SuSyUtility.susyId('isophthalic_acid_slurry'))
                 .fluid()
-                .components(AceticAcid, 1, Water, 1, IsophthalicAcid, 1)
+                .components(Water, 1, Dichloroethane, 1, IsophthalicAcid, 1)
                 .colorAverage()
                 .build()
 
@@ -319,9 +319,9 @@ public class ThirdDegreeMaterials {
                 .color(0x9c1012)
                 .build();
 
-        CrudeNitrobenzene = new Material.Builder(24050, SuSyUtility.susyId('crude_nitrobenzene'))
-                .fluid()
-                .components(Nitrobenzene, 2, Benzene, 1)
+        AcidicNitrobenzeneMixture = new Material.Builder(24050, SuSyUtility.susyId('acidic_nitrobenzene_mixture'))
+                .fluid(FluidTypes.ACID)
+                .components(Nitrobenzene, 1, SulfuricAcid, 1, Water, 1)
                 .colorAverage()
                 .build();
 
@@ -451,7 +451,31 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        CrotonaldehydeMixture = new Material.Builder(24070, SuSyUtility.susyId('crotonaldehyde_mixture'))
+        NomexPolymerizationMix = new Material.Builder(24070, SuSyUtility.susyId('nomex_polymerization_mix'))
+                .fluid()
+                .components(Nomex, 1, CalciumChloride, 1, Dimethylacetamide, 4)
+                .colorAverage()
+                .build();
+
+        KevlarPolymerizationMix = new Material.Builder(24071, SuSyUtility.susyId('kevlar_polymerization_mix'))
+                .fluid()
+                .components(Kevlar, 1, CalciumChloride, 1, Dimethylacetamide, 4)
+                .colorAverage()
+                .build();
+
+        SpentDimethylacetamide = new Material.Builder(24072, SuSyUtility.susyId('spent_dimethylacetamide'))
+                .fluid()
+                .components(CalciumChloride, 1, Dimethylacetamide, 4)
+                .colorAverage()
+                .build();
+
+        SodiumCelluloseXanthateSolution = new Material.Builder(24073, SuSyUtility.susyId('sodium_cellulose_xanthate_solution'))
+                .fluid()
+                .components(SodiumCelluloseXanthate, 1, SodiumHydroxide, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        CrotonaldehydeMixture = new Material.Builder(24074, SuSyUtility.susyId('crotonaldehyde_mixture'))
                 .fluid()
                 .components(SodiumHydroxide, 1, Crotonaldehyde, 1)
                 .colorAverage()

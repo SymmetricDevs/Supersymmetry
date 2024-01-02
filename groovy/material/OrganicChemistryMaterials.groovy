@@ -8,6 +8,8 @@ import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.properties.*
 
 import supersymmetry.api.util.SuSyUtility;
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey;
+import supersymmetry.api.unification.material.properties.FiberProperty;
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -18,7 +20,7 @@ public class OrganicChemistryMaterials {
         
         log.infoMC('Registering Organic Chemistry Materials!');
 
-        FourNitrochlorobenzene = new Material.Builder(15000, SuSyUtility.susyId('four_nitrochlorobenzene'))
+        FourChloronitrobenzene = new Material.Builder(15000, SuSyUtility.susyId('four_chloronitrobenzene'))
                 .dust()
                 .components(Carbon, 6, Hydrogen, 4, Chlorine, 1, Nitrogen, 1, Oxygen, 2)
                 .colorAverage()
@@ -48,7 +50,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        IsophthaloylDichloride = new Material.Builder(15005, SuSyUtility.susyId('isophthaloyl_dichloride'))
+        IsophthaloylChloride = new Material.Builder(15005, SuSyUtility.susyId('isophthaloyl_chloride'))
                 .dust()
                 .components(Carbon, 8, Hydrogen, 4, Chlorine, 2, Oxygen, 2)
                 .colorAverage()
@@ -98,21 +100,15 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        MemoryFoam = new Material.Builder(15013, SuSyUtility.susyId('memory_foam'))
-                .polymer(1)
-                .flags(GENERATE_PLATE)
-                .color(0xFFFFFF)
-                .fluidTemp(438)
-                .build()
+        //FREE ID: 15013
 
         Rayon = new Material.Builder(15014, SuSyUtility.susyId('rayon'))
-                .polymer(1)
                 .components(Carbon, 6, Hydrogen, 10, Oxygen, 5)
-                .flags(GENERATE_FINE_WIRE)
                 .color(0xaee8d9)
-                .fluidTemp(438)
                 .build()
-                .setFormula('C6H5(OH)4OH', true);
+                
+        Rayon.setFormula('C6H5(OH)4OH', true)
+        Rayon.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
 
         AlkaliCellulose = new Material.Builder(15015, SuSyUtility.susyId('alkali_cellulose'))
                 .dust()
@@ -254,13 +250,13 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        TwoNitrochlorobenzene = new Material.Builder(15040, SuSyUtility.susyId('two_nitrochlorobenzene'))
+        TwoChloronitrobenzene = new Material.Builder(15040, SuSyUtility.susyId('two_chloronitrobenzene'))
                 .dust().fluid()
                 .components(Carbon, 6, Hydrogen, 4, Chlorine, 1, Nitrogen, 1, Oxygen, 2)
                 .color(0xc7c944)
                 .build();
 
-        MixedNitrochlorobenzene = new Material.Builder(15041, SuSyUtility.susyId('mixed_nitrochlorobenzene'))
+        MixedChloronitrobenzene = new Material.Builder(15041, SuSyUtility.susyId('mixed_chloronitrobenzene'))
                 .dust().fluid()
                 .color(0xa4a644)
                 .build();
@@ -636,8 +632,8 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        MixedNitrochlorobenzeneSolution = new Material.Builder(15103, SuSyUtility.susyId('mixed_nitrochlorobenzene_solution'))
-                .fluid()
+        AcidicChloronitrobenzeneMixture = new Material.Builder(15103, SuSyUtility.susyId('acidic_chloronitrobenzene_mixture'))
+                .fluid(FluidTypes.ACID)
                 .color(0xc18c18)
                 .build();
 
@@ -752,11 +748,10 @@ public class OrganicChemistryMaterials {
                 .build()
 
         Polyurethane = new Material.Builder(15124, SuSyUtility.susyId('polyurethane'))
-                .polymer(1)
+                .dust()
                 .components(Carbon, 17, Hydrogen, 16, Nitrogen, 2, Oxygen, 4)
                 .color(0xd1d1d1)
-                .flags(GENERATE_FINE_WIRE)
-                .fluidTemp(438)
+                .flags(NO_UNIFICATION, GENERATE_PLATE, FORCE_GENERATE_BLOCK)
                 .build()
                 .setFormula('(C15H10N2O2)(C2H6O2)', true);
 
@@ -941,12 +936,13 @@ public class OrganicChemistryMaterials {
                 .build()
 
         Kevlar = new Material.Builder(15154, SuSyUtility.susyId('kevlar'))
-                .polymer(3)
                 .color(0x4d443e)
-                .flags(GENERATE_PLATE, GENERATE_FINE_WIRE)
+                .components(Carbon, 14, Hydrogen, 10, Nitrogen, 2, Oxygen, 2)
+                .flags(GENERATE_PLATE)
                 .build()
 
-        Kevlar.setFormula('COC6H4CONHC6H4NH', true)
+        Kevlar.setFormula('[COC6H4CONHC6H4NH]n', true)
+        Kevlar.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
 
         BiphenylTetracarboxylicAcidDianhydride = new Material.Builder(15155, SuSyUtility.susyId('biphenyl_tetracarboxylic_acid_dianhydride'))
                 .dust()
@@ -955,11 +951,11 @@ public class OrganicChemistryMaterials {
                 .build()
 
         CelluloseAcetate = new Material.Builder(15157, SuSyUtility.susyId('cellulose_acetate'))
-                .polymer()
-                .flags(GENERATE_FINE_WIRE)
                 .components(Carbon, 76, Hydrogen, 114, Oxygen, 49)
                 .color(0xd4c9ab)
                 .build()
+
+        CelluloseAcetate.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
 
         Pyridine = new Material.Builder(15158, SuSyUtility.susyId('pyridine'))
                 .fluid()
@@ -1818,6 +1814,8 @@ public class OrganicChemistryMaterials {
                 .color(0x7e9e8e)
                 .build();
 
+        PolyethyleneTerephthalate.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true))
+
         AmocoTerephthalicAcid = new Material.Builder(15290, SuSyUtility.susyId('amoco_terephthalic_acid'))
                 .dust()
                 .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
@@ -1865,31 +1863,68 @@ public class OrganicChemistryMaterials {
                 .iconSet(DULL)
                 .build();
 
-        Trimethylolpropane = new Material.Builder(15297, SuSyUtility.susyId('trimethylolpropane'))
+        OneThreeDinitrobenzene = new Material.Builder(15297, SuSyUtility.susyId('one_three_dinitrobenzene'))
+                .dust()
+                .components(Carbon, 6, Hydrogen, 4, Nitrogen, 2, Oxygen, 4)
+                .color(0x1c718a)
+                .build();
+
+        MetaPhenylenediamine = new Material.Builder(15298, SuSyUtility.susyId('meta_phenylenediamine'))
+                .dust()
+                .components(Carbon, 6, Hydrogen, 8, Nitrogen, 2)
+                .color(0x1e89a8)
+                .build();
+
+        Nomex = new Material.Builder(15299, SuSyUtility.susyId('nomex'))
+                .components(Carbon, 14, Hydrogen, 10, Nitrogen, 2, Oxygen, 2)
+                .color(0x5d95a3)
+                .build();
+
+        Nomex.setFormula('[COC6H4CONHC6H4NH]n', true)
+        Nomex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
+
+        UltraHighMolecularWeightPolyethylene = new Material.Builder(15300, SuSyUtility.susyId('ultra_high_molecular_weight_polyethylene'))
+                .dust().fluid()
+                .flags(GENERATE_PLATE)
+                .components(Carbon, 2, Hydrogen, 4)
+                .color(0xc5e3de)
+                .iconSet(SHINY)
+                .build();
+
+        UltraHighMolecularWeightPolyethylene.setFormula('[C2H4]n', true)
+        UltraHighMolecularWeightPolyethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true))
+
+        AdipicAcid = new Material.Builder(15301, SuSyUtility.susyId('adipic_acid'))
+                .dust()
+                .components(Carbon, 6, Hydrogen, 10, Oxygen, 4)
+                .color(0xe3ddb6)
+                .build();
+                
+        Trimethylolpropane = new Material.Builder(15302, SuSyUtility.susyId('trimethylolpropane'))
                 .dust()
                 .components(Carbon, 6, Hydrogen, 14, Oxygen, 3)
                 .color(0x5d8230)
                 .build();
 
-        AcrylicAcid = new Material.Builder(15298, SuSyUtility.susyId('acrylic_acid'))
+        AcrylicAcid = new Material.Builder(15303, SuSyUtility.susyId('acrylic_acid'))
                 .fluid(FluidTypes.ACID)
                 .components(Carbon, 3, Hydrogen, 4, Oxygen, 2)
                 .color(0x308264)
                 .build();
 
-        TrimethylolpropaneTriacrylate = new Material.Builder(15299, SuSyUtility.susyId('trimethylolpropane_triacrylate'))
+        TrimethylolpropaneTriacrylate = new Material.Builder(15304, SuSyUtility.susyId('trimethylolpropane_triacrylate'))
                 .fluid()
                 .components(Carbon, 15, Hydrogen, 20, Oxygen, 6)
                 .color(0x279630)
                 .build();
 
-        BenzenediazoniumChloride = new Material.Builder(15300, SuSyUtility.susyId('benzenediazonium_chloride'))
+        BenzenediazoniumChloride = new Material.Builder(15305, SuSyUtility.susyId('benzenediazonium_chloride'))
                 .dust()
                 .components(Carbon, 6, Hydrogen, 5, Nitrogen, 2, Chlorine, 1)
                 .color(0x18262b)
                 .build();
 
-        Crotonaldehyde = new Material.Builder(15301, SuSyUtility.susyId('crotonaldehyde'))
+        Crotonaldehyde = new Material.Builder(15306, SuSyUtility.susyId('crotonaldehyde'))
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 6, Oxygen, 1)
                 .color(0xa31a5c)

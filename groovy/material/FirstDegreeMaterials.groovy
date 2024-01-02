@@ -2811,12 +2811,10 @@ public class FirstDegreeMaterials{
                 .iconSet(GLASS)
                 .build();
 
-        UltraHighMolecularWeightPolyethylene = new Material.Builder(8510, SuSyUtility.susyId('ultra_high_molecular_weight_polyethylene'))
-                .polymer()
-                .flags(GENERATE_PLATE)
-                .components(Carbon, 2, Hydrogen, 4)
-                .color(0xc5e3de)
-                .iconSet(SHINY)
+        HydrogenIodide = new Material.Builder(8510, SuSyUtility.susyId('hydrogen_iodide'))
+                .fluid(FluidTypes.GAS)
+                .components(Hydrogen, 1, Iodine, 1)
+                .colorAverage()
                 .build();
 
         AntimonyTrichloride = new Material.Builder(8511, SuSyUtility.susyId('antimony_trichloride'))
@@ -2968,11 +2966,7 @@ public class FirstDegreeMaterials{
 
         SodiumMolybdateSolution.setFormula("(Na2MoO4)(H2O)", true)
 
-        ManganeseIISulfate = new Material.Builder(8532, SuSyUtility.susyId('manganese_ii_sulfate'))
-                .dust()
-                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
-                .colorAverage()
-                .build();
+        // FREE ID: 8532
 
         DilutedSilverNitrateSolution = new Material.Builder(8533, SuSyUtility.susyId('diluted_silver_nitrate_solution'))
                 .fluid()

@@ -8,6 +8,8 @@ import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.properties.*
 
 import supersymmetry.api.util.SuSyUtility;
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey;
+import supersymmetry.api.unification.material.properties.FiberProperty;
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -1839,13 +1841,52 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xf6f7f0)
                 .build();
+        
+        AcidicDinitrobenzeneMixture = new Material.Builder(4351, SuSyUtility.susyId("acidic_dinitrobenzene_mixture"))
+                .fluid(FluidTypes.ACID)
+                .fluidTemp(363)
+                .color(0x255563)
+                .build();
 
-        AcrylicPhotoemulsion = new Material.Builder(4351, SuSyUtility.susyId("acrylic_photoemulsion"))
+        DinitrobenzeneMixture = new Material.Builder(4352, SuSyUtility.susyId("dinitrobenzene_mixture"))
+                .dust()
+                .color(0x1f6478)
+                .build();
+
+        Cotton = new Material.Builder(4353, SuSyUtility.susyId("cotton"))
+                .color(0xf0edd8)
+                .build();
+
+        Cotton.setFormula('C6H5(OH)4OH', true)
+        Cotton.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+
+        Spandex = new Material.Builder(4354, SuSyUtility.susyId("spandex"))
+                .color(0x625f8a)
+                .build();
+
+        Spandex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+
+        PolyurethanePolymerizationMix = new Material.Builder(4355, SuSyUtility.susyId("polyurethane_polymerization_mix"))
+                .fluid()
+                .color(0x9c9c9c)
+                .build();
+
+        SpandexPrepolymer = new Material.Builder(4356, SuSyUtility.susyId("spandex_prepolymer"))
+                .fluid()
+                .color(0x393563)
+                .build();
+
+        SpandexPolymerizationMix = new Material.Builder(4357, SuSyUtility.susyId("spandex_polymerization_mix"))
+                .fluid()
+                .color(0x494575)
+                .build();
+
+        AcrylicPhotoemulsion = new Material.Builder(4358, SuSyUtility.susyId("acrylic_photoemulsion"))
                 .fluid()
                 .color(0x8a2531)
                 .build();
 
-        TreatedCollagen = new Material.Builder(4352, SuSyUtility.susyId("treated_collagen"))
+        TreatedCollagen = new Material.Builder(4359, SuSyUtility.susyId("treated_collagen"))
                 .dust()
                 .color(0xa6a490)
                 .iconSet(ROUGH)

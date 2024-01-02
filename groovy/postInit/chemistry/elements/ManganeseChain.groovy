@@ -112,7 +112,7 @@ BATCH_REACTOR.recipeBuilder()
     .buildAndRegister()
 
 BATCH_REACTOR.recipeBuilder()
-    .inputs(ore('dustSodiumHydroxide') * 3)
+    .inputs(ore('dustTinySodiumHydroxide') * 2)
     .fluidInputs(fluid('crude_manganese_ii_sulfate_solution') * 4000)
     .chancedOutput(metaitem('dustIronIiiHydroxide') * 7, 500, 0)
     .fluidOutputs(fluid('manganese_ii_sulfate_solution') * 4000)

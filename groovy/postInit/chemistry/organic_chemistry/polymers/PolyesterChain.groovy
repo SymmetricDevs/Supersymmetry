@@ -2,6 +2,7 @@ import static globals.Globals.*
 
 POLYMERIZATION = recipemap('polymerization_tank')
 BR = recipemap('batch_reactor')
+EXTRUDER = recipemap('extruder')
 
 POLYMERIZATION.recipeBuilder()
     .fluidInputs(fluid('ethylene_glycol') * 1000)
@@ -29,6 +30,14 @@ POLYMERIZATION.recipeBuilder()
     .fluidOutputs(fluid('methanol') * 2000)
     .EUt(Globals.voltAmps[3])
     .duration(80)
+    .buildAndRegister()
+
+EXTRUDER.recipeBuilder()
+    .notConsumable(metaitem('spinneret'))
+    .fluidInputs(fluid('polyethylene_terephthalate') * 144)
+    .outputs(metaitem('fiberPolyethyleneTerephthalate') * 8)
+    .EUt(480)
+    .duration(20)
     .buildAndRegister()
 
 furnace.add(ore('foilPolyethyleneTerephthalate'), metaitem('mylar'), 0f)
