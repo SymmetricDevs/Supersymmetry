@@ -884,7 +884,7 @@ for (i = 1; i <= 8; i++) {
 
 // Bath Condenser
 
-crafting.addShaped("gregtech:bath_condenser", metaitem('bath_condenser.lv'), [
+crafting.addShaped("gregtech:bath_condenser", metaitem('bath_condenser'), [
 	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel')],
 	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('hull.hv'), metaitem('pipeSmallFluidStainlessSteel')],
 	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel'), metaitem('pipeSmallFluidStainlessSteel')]
@@ -892,7 +892,7 @@ crafting.addShaped("gregtech:bath_condenser", metaitem('bath_condenser.lv'), [
 
 // Phase Separator
 
-crafting.addShaped("gregtech:phase_separator", metaitem('phase_separator.lv'), [
+crafting.addShaped("gregtech:phase_separator", metaitem('phase_separator'), [
 	[metaitem('frameStainlessSteel'), metaitem('drum.stainless_steel'), metaitem('pipeSmallFluidStainlessSteel')],
 	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('hull.hv'), metaitem('pipeSmallFluidStainlessSteel')],
 	[null, null, null]
