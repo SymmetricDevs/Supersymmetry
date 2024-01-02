@@ -2377,7 +2377,7 @@ public class FirstDegreeMaterials{
                 .components(Cadmium, 1, Sulfur, 1, Oxygen, 4, Water, 1)
                 .colorAverage()
                 .build()
-        CadmiumSulfateSolution.setFormula("In(OH)3", true)
+        CadmiumSulfateSolution.setFormula("(CdSO4)(H2O)", true)
 
         MercuryOxide = new Material.Builder(8447, SuSyUtility.susyId('mercury_oxide'))
                 .dust()
