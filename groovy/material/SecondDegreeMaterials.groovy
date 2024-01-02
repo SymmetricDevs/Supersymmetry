@@ -495,13 +495,13 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        MolybdenicAcidSolution = new Material.Builder(13079, SuSyUtility.susyId('molybdenic_acid_solution'))
-                .fluid()
+        MolybdicAcidSolution = new Material.Builder(13079, SuSyUtility.susyId('molybdic_acid_solution'))
+                .fluid(FluidTypes.ACID)
                 .components(Hydrogen, 2, Molybdenum, 1, Oxygen, 4, HydrogenChloride, 1, Water, 1)
                 .colorAverage()
                 .build()
 
-        MolybdenicAcidSolution.setFormula('(H2MoO4)(HCl)(H2O)', true)
+        MolybdicAcidSolution.setFormula('(H2MoO4)(HCl)(H2O)', true)
 
         NeutralizedAmmoniumMolybdateSolution = new Material.Builder(13080, SuSyUtility.susyId('neutralized_ammonium_molybdate_solution'))
                 .fluid()

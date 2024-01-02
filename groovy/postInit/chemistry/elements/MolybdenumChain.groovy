@@ -145,13 +145,13 @@ BR.recipeBuilder()
         .inputs(ore('dustImpureMolybdenumTrioxide') * 4)
         .fluidInputs(fluid('hydrochloric_acid') * 1000)
         .fluidInputs(fluid('distilled_water') * 1000)
-        .fluidOutputs(fluid('molybdenic_acid_solution') * 1000) // 1x H2MoO4, 1x HCl, 1x H2O
+        .fluidOutputs(fluid('molybdic_acid_solution') * 1000) // 1x H2MoO4, 1x HCl, 1x H2O
         .duration(100)
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
 
 CSTR.recipeBuilder()
-        .fluidInputs(fluid('molybdenic_acid_solution') * 1000)
+        .fluidInputs(fluid('molybdic_acid_solution') * 1000)
         .fluidInputs(fluid('ammonia_solution') * 3000)
         .fluidOutputs(fluid('neutralized_ammonium_molybdate_solution') * 4000)
         .duration(100)
