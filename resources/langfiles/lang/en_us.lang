@@ -1,7 +1,6 @@
 # Chemistry
 
 susy.material.dichlorobenzene=1,4-Dichlorobenzene
-
 susy.material.ammonium_chloride_solution=Ammonium Chloride Solution
 susy.material.crude_styrene=Crude Styrene
 susy.material.hydrogen_chloride=Hydrogen Chloride
@@ -33,8 +32,8 @@ susy.material.iron_iii_chloride_solution=Iron III Chloride Solution
 susy.material.n_methyl_ii_pyrrolidone=N-methyl-2-pyrrolidone
 susy.material.salty_n_methyl_ii_pyrrolidone=Salty N-methyl-2-pyrrolidone
 susy.material.methyl_acetate_solution=Methyl Acetate Solution
-susy.material.two_nitrochlorobenzene=2-Nitrochlorobenzene
-susy.material.mixed_nitrochlorobenzene=Mixed Nitrochlorobenzene
+susy.material.two_chloronitrobenzene=2-Chloronitrobenzene
+susy.material.mixed_chloronitrobenzene=Mixed Chloronitrobenzene
 susy.material.four_nitroaniline_solution=4-Nitroaniline Solution
 susy.material.para_phenylenediamine_solution=p-Phenylenediamine Solution
 susy.material.four_dichlorohydrazobenzene_solution=4-Dichlorohydrazobenzene Solution
@@ -49,7 +48,7 @@ susy.material.dichloroethane=Dichloroethane
 susy.material.isophthalic_acid=Isophthalic Acid
 susy.material.isophthalic_acid_slurry=Isophthalic Acid Slurry
 susy.material.dichloroethane_isophthalic_acid_solution=Dichloroethane Isophthalic Acid Solution
-susy.material.isophthaloyl_dichloride_solution=Isophthaloyl Dichloride Solution
+susy.material.isophthaloyl_chloride_solution=Isophthaloyl Chloride Solution
 susy.material.sodium_phenoxide_solution=Sodium Phenoxide Solution
 susy.material.diphenyl_isophthalate_solution=Diphenyl Isophthalate Solution
 susy.material.diaminobenzidine_solution=Diaminobenzidine Solution
@@ -118,7 +117,7 @@ susy.material.saltpeter_solution=Saltpeter Solution
 susy.material.salty_saltpeter_solution=Salty Saltpeter Solution
 susy.material.diluted_saltpeter_solution=Diluted Saltpeter Solution
 susy.material.polytetrafluoroethylene_solution=Polytetrafluoroethylene (PTFE) Solution
-susy.material.mixed_nitrochlorobenzene_solution=Mixed Nitrochlorobenzene Solution
+susy.material.acidic_chloronitrobenzene_mixture=Acidic Chloronitrobenzene Mixture
 susy.material.mixed_dichlorobenzene_solution=Mixed Dichlorobenzene Solution
 susy.material.two_two_dichlorohydrazobenzene_solution=2,2'-Dichlorohydrazobenzene Solution
 susy.material.two_butanol_solution=2-Butanol Solution
@@ -133,14 +132,14 @@ susy.material.sodium_bicarbonate=Sodium Bicarbonate
 susy.material.calcium_sulfide=Calcium Sulfide
 susy.material.ammonium_nitrate=Ammonium Nitrate
 susy.material.calcium_sulfate=Calcium Sulfate
-susy.material.four_nitrochlorobenzene=4-Nitrochlorobenzene
+susy.material.four_chloronitrobenzene=4-Chloronitrobenzene
 susy.material.four_nitroaniline=4-Nitroaniline
 susy.material.para_phenylenediamine=p-Phenylenediamine
 susy.material.four_dichlorohydrazobenzene=4-Dichlorohydrazobenzene
 susy.material.vanadium_pentoxide=Vanadium Pentoxide
 susy.material.phthalic_anhydride=Phthalic Anhydride
 susy.material.sodium_phenoxide=Sodium Phenoxide
-susy.material.isophthaloyl_dichloride=Isophthaloyl Dichloride
+susy.material.isophthaloyl_chloride=Isophthaloyl Chloride
 susy.material.caprolactam_oxime=Caprolactam Oxime
 susy.material.ammonium_sulfate=Ammonium Sulfate
 susy.material.impure_caprolactam=Impure Caprolactam
@@ -294,8 +293,7 @@ susy.material.electrolytic_boron=Electrolytic Boron
 susy.material.methylenedianiline=Methylenedianiline
 susy.material.methylene_diphenyl_diisocyanate=Methylene Diphenyl Diisocyanate
 susy.material.triethylenediamine=Triethylenediamine
-susy.material.polyurethane=Polyurethane
-susy.material.memory_foam=Memory Foam
+susy.material.polyurethane=Polyurethane Foam
 susy.material.rayon=Rayon
 susy.material.alkali_cellulose=Alkali Cellulose
 susy.material.sodium_cellulose_xanthate=Sodium Cellulose Xanthate
@@ -692,13 +690,13 @@ susy.material.diluted_phosphoric_acid=Diluted Phosphoric Acid
 susy.material.high_purity_phosphorus_vapor_mixture=High Purity Phosphorus Vapor Mixture
 
 susy.material.unscrubbed_wood_gas=Unscrubbed Wood Gas
-susy.material.light_oil=Light Oil
+susy.material.light_oil=Coal Tar Oil
 susy.material.impure_creosote=Impure Creosote
 susy.material.naphthalene_oil=Naphthalene Oil
 susy.material.anthracene_oil=Anthracene Oil
 susy.material.alkaline_naphthalene_oil=Alkaline Naphthalene Oil
 susy.material.purified_naphthalene_oil=Purified Naphthalene Oil
-susy.material.acidic_light_oil=Acidic Light Oil
+susy.material.acidic_light_oil=Acidic Coal Tar Oil
 susy.material.crude_pyridinium_sulfate=Crude Pyridinium Sulfate
 susy.material.impure_pyridine=Impure Pyridine
 susy.material.acidic_anthracene_oil=Acidic Anthracene Oil
@@ -1118,6 +1116,22 @@ susy.material.lignite_coke=Lignite Coke
 susy.material.anthracite=Anthracite
 susy.material.phosphorite=Phosphorite
 susy.material.sperrylite=Sperrylite
+
+# Deposit ores for scanning
+
+item.susy.material.orthomagmatic_deposit.ore=Orthomagmatic Deposit
+item.susy.material.metamorphic_deposit.ore=Metamorphic Deposit
+item.susy.material.sedimentary_deposit.ore=Sedimentary Deposit
+item.susy.material.hydrothermal_deposit.ore=Hydrothermal Deposit
+item.susy.material.alluvial_deposit.ore=Alluvial Deposit
+item.susy.material.magmatic_hydrothermal_deposit.ore=Magmatic Hydrothermal Deposit
+
+susy.material.orthomagmatic_deposit=Orthomagmatic Deposit
+susy.material.metamorphic_deposit=Metamorphic Deposit
+susy.material.sedimentary_deposit=Sedimentary Deposit
+susy.material.hydrothermal_deposit=Hydrothermal Deposit
+susy.material.alluvial_deposit=Alluvial Deposit
+susy.material.magmatic_hydrothermal_deposit=Magmatic Hydrothermal Deposit
 
 susy.material.corundum=Corundum
 susy.material.tourmaline=Tourmaline
@@ -1663,7 +1677,7 @@ susy.material.n_butylamine=n-Butylamine
 susy.material.ethyltoluene=Ethyltoluene
 susy.material.vinylbenzyl_chloride=Vinylbenzyl Chloride
 susy.material.cyclohexylamine=Cyclohexylamine
-susy.material.crude_nitrobenzene=Crude Nitrobenzene
+susy.material.acidic_nitrobenzene_mixture=Acidic Nitrobenzene Mixture
 susy.material.aluminium_chloride_solution=Aluminium Chloride Solution
 susy.material.dichlorobistriphenylphosphinenickelIi=Dichlorobis(triphenylphosphine)nickel(II)
 susy.material.dicarbonylbistriphenylphosphinenickelZero=Dicarbonylbis(triphenylphosphine)nickel(0)
@@ -1906,6 +1920,23 @@ susy.material.polyethylene_glycol=Polyethylene Glycol (PEG)
 susy.material.midgrade_lubricant=Midgrade Lubricant
 susy.material.premium_lubricant=Premium Lubricant
 susy.material.supreme_lubricant=Supreme Lubricant
+susy.material.acidic_dinitrobenzene_mixture=Acidic Dinitrobenzene Mixture
+susy.material.dinitrobenzene_mixture=Dinitrobenzene Mixture
+susy.material.one_three_dinitrobenzene=1,3-Dinitrobenzene
+susy.material.meta_phenylenediamine=m-Phenylenediamine
+susy.material.nomex=Nomex
+susy.material.nomex_polymerization_mix=Nomex Polymerization Mix
+susy.material.kevlar_polymerization_mix=Kevlar Polymerization Mix
+susy.material.cotton=Cotton
+susy.material.sodium_cellulose_xanthate_solution=Sodium Cellulose Xanthate Solution
+susy.material.hydrogen_iodide=Hydrogen Iodide
+susy.material.adipic_acid=Adipic Acid
+susy.material.spandex=Spandex
+susy.material.spent_dimethylacetamide=Spent Dimethylacetamide
+susy.material.supercritical_carbon_dioxide=Supercritical Carbon Dioxide
+susy.material.polyurethane_polymerization_mix=Polyurethane Polymerization Mix
+susy.material.spandex_prepolymer=Spandex Prepolymer
+susy.material.spandex_polymerization_mix=Spandex Polymerization Mix
 susy.material.trimethylolpropane=Trimethylolpropane
 susy.material.acrylic_catalyst=Acrylic Catalyst
 susy.material.acrylic_acid=Acrylic Acid
@@ -2284,6 +2315,8 @@ metaitem.drone.lv.name=Basic Drone
 
 metaitem.glass_fibers.name=Glass Fibers
 metaitem.epoxy_lamina.name=Epoxy Lamina
+metaitem.stem.cotton.name=Cotton Stem
+metaitem.spinneret.name=Spinneret
 
 metaitem.rubylith.name=Rubylith
 metaitem.rubylith_film.name=Rubylith Film
@@ -2333,15 +2366,21 @@ gregtech.machine.laser_engraver.uxv.name=Epic Electron Beam Lithographer IV
 gregtech.machine.laser_engraver.opv.name=Legendary Electron Beam Lithographer
 
 recipemap.laser_engraver.name=Electron Beam Lithography
-recipemap.batch_reactor.name=Batch Reactor
-recipemap.zone_refiner.name=Zone Refiner
-recipemap.gravity_separator.name=Gravity Separation
 
 # Generic Renaming
 item.chisel.chisel_diamond.name=Steel Chisel
 tooltip.computronics.waila.tape.notapeinserted=No Tape Inserted
 tooltip.computronics.waila.tape.tapeinserted=Tape Inserted
 item.chesttransporter_copper.name=Bronze Chest Transporter
+
+# Material Renaming
+item.susy.material.ultra_high_molecular_weight_polyethylene.dustTiny=Tiny Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp
+item.susy.material.ultra_high_molecular_weight_polyethylene.dustSmall=Small Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp
+item.susy.material.ultra_high_molecular_weight_polyethylene.dust=Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp
+item.susy.material.ultra_high_molecular_weight_polyethylene.plate=Woven Ultra High Molecular Weight Polyethylene (UHMWPE)
+item.susy.material.kevlar.plate=Woven Kevlar
+item.gregtech.material.polytetrafluoroethylene.fiber=Expanded Polytetrafluoroethylene Fiber
+item.gregtech.material.polytetrafluoroethylene.thread=Expanded Polytetrafluoroethylene Thread
 
 # Resin Logs
 gregtech.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log
