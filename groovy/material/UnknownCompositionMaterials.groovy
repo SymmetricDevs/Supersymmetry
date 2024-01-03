@@ -2077,7 +2077,7 @@ public class UnknownCompositionMaterials {
                 .iconSet(ROUGH)
                 .build();
 
-        WaferTreatmentAcid = new Material.Builder(4354, SuSyUtility.susyId("wafer_treatment_acid"))
+        WaferTreatmentAcid = new Material.Builder(4400, SuSyUtility.susyId("wafer_treatment_acid"))
                 .fluid(FluidTypes.ACID)
                 .components(HydrochloricAcid, 9, HydrofluoricAcid, 9, AceticAcid, 2)
                 .color(0x3e7d68)
