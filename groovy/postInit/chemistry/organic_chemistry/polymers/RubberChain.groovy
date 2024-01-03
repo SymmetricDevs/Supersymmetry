@@ -5,6 +5,11 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 
+POLYMERIZATION_TANK = recipemap('polymerization_tank')
+MIXER = recipemap('mixer')
+SIFTER = recipemap('sifter')
+DRYER = recipemap('dryer')
+
 //REMOVALS
 // Raw Rubber Pulp * 2
 mods.gregtech.extractor.removeByInput(2, [item('minecraft:slime_ball')], null)
@@ -122,8 +127,10 @@ def rubbers = [
     new Rubber('dustLatex', 'Rubber', 16, 10 * 20, 4, false),
     new Rubber('latex', 'Rubber', 32, 20 * 20, 1, true),
     new Rubber('dustPolyisoprene', 'Rubber', 8, 225, 8, false),
+    new Rubber('dustRawStyreneIsopreneRubber', 'StyreneIsopreneRubber', 4, 30 * 20, 4, false),
     new Rubber('dustRawStyreneButadieneRubber', 'StyreneButadieneRubber', 4, 30 * 20, 4, false)
 ]
+
 def sulfurSources = [
     new SulfurSource('dustSulfur', 1)
 ]
@@ -210,3 +217,99 @@ for (coagulant in coagulants) {
     CoagulationRecipe(coagulant, 4, 1000, 4)
     CoagulationRecipe(coagulant, 16, 2500, 5)
 }
+
+// Polyisoprene
+POLYMERIZATION_TANK.recipeBuilder()
+    .fluidInputs(fluid('isoprene') * 1000)
+    .outputs(metaitem('dustPolyisoprene') * 4)
+    .notConsumable(metaitem('dustZieglerNattaCatalyst'))
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister()
+
+POLYMERIZATION_TANK.recipeBuilder()
+    .fluidInputs(fluid('isoprene') * 1000)
+    .outputs(metaitem('dustPolyisoprene') * 6)
+    .notConsumable(fluid('butyllithium') * 100)
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister()
+
+POLYMERIZATION_TANK.recipeBuilder()
+    .fluidInputs(fluid('purified_isoprene') * 1000)
+    .outputs(metaitem('dustPolyisoprene') * 6)
+    .notConsumable(metaitem('dustZieglerNattaCatalyst'))
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister()
+
+POLYMERIZATION_TANK.recipeBuilder()
+    .fluidInputs(fluid('purified_isoprene') * 1000)
+    .outputs(metaitem('dustPolyisoprene') * 8)
+    .notConsumable(fluid('butyllithium') * 100)
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister()
+
+// Styrene - Isoprene rubber
+
+MIXER.recipeBuilder()
+.fluidInputs(fluid('styrene') * 1000)
+.fluidInputs(fluid('isoprene') * 3000)
+.fluidInputs(fluid('ethanol') * 1000)
+.fluidOutputs(fluid('styrene_isoprene_solution') * 5000)
+.EUt(60)
+.duration(200)
+.buildAndRegister()
+
+POLYMERIZATION.recipeBuilder()
+.fluidInputs(fluid('styrene_isoprene_solution') * 5000)
+.notConsumable(fluid('butyllithium') * 100)
+.fluidOutputs(fluid('polymerized_styrene_isoprene_solution') * 5000)
+.EUt(120)
+.duration(533)
+.buildAndRegister()
+
+DRYER.recipeBuilder()
+.fluidInputs(fluid('polymerized_styrene_isoprene_solution') * 5000)
+.fluidOutputs(fluid('ethanol') * 1000)
+.outputs(metaitem('dustRawStyreneIsopreneRubber') * 16)
+.EUt(120)
+.duration(533)
+.buildAndRegister()
+
+// Styrene - Butadiene rubber
+
+SIFTER.recipeBuilder()
+.fluidInputs(fluid('ethanol_water_azeotrope') * 1000)
+.inputs(ore('dustMolecularSieve')* 4)
+.fluidOutputs(fluid('ethanol') * 900)
+.outputs(metaitem('dustWetMolecularSieve') * 4)
+.EUt(30)
+.duration(200)
+.buildAndRegister()
+
+MIXER.recipeBuilder()
+.fluidInputs(fluid('styrene') * 1000)
+.fluidInputs(fluid('butadiene') * 3000)
+.fluidInputs(fluid('ethanol') * 1000)
+.fluidOutputs(fluid('styrene_butadiene_solution') * 5000)
+.EUt(60)
+.duration(200)
+.buildAndRegister()
+
+POLYMERIZATION.recipeBuilder()
+.fluidInputs(fluid('styrene_butadiene_solution') * 5000)
+.notConsumable(fluid('butyllithium') * 100)
+.fluidOutputs(fluid('polymerized_styrene_butadiene_solution') * 5000)
+.EUt(120)
+.duration(533)
+.buildAndRegister()
+
+DRYER.recipeBuilder()
+.fluidInputs(fluid('polymerized_styrene_butadiene_solution') * 5000)
+.fluidOutputs(fluid('ethanol') * 1000)
+.outputs(metaitem('dustRawStyreneButadieneRubber') * 16)
+.EUt(120)
+.duration(533)
+.buildAndRegister()

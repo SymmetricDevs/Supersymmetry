@@ -2013,7 +2013,7 @@ public class FirstDegreeMaterials{
                 .build()
                 .setFormula("Mn(NO3)2", true)
 
-        PurifiedManganeseDioxide = new Material.Builder(8395, SuSyUtility.susyId('purified_manganese_dioxide'))
+        ManganeseDioxide = new Material.Builder(8395, SuSyUtility.susyId('manganese_dioxide'))
                 .dust()
                 .iconSet('SHINY')
                 .components(Manganese, 1, Oxygen, 2)
@@ -3284,13 +3284,43 @@ public class FirstDegreeMaterials{
 
         IronIIINitrateSolution.setFormula("(Fe(NO3)3)(H2O)3", true)
         
-        AcrylicCatalyst = new Material.Builder(8580, SuSyUtility.susyId("acrylic_catalyst"))
+        ChlorosulfuricAcid = new Material.Builder(8580, SuSyUtility.susyId("chlorosulfuric_acid"))
+                .fluid(FluidTypes.ACID)
+                .components(Hydrogen, 1, Sulfur, 1, Oxygen, 3, Chlorine, 1)
+                .colorAverage()
+                .build();
+
+        ManganeseIIChloride = new Material.Builder(8581, SuSyUtility.susyId("manganese_ii_chloride"))
+                .dust()
+                .components(Manganese, 1, Chlorine, 2)
+                .colorAverage()
+                .build();
+
+        ChloroplatinicAcidSolution = new Material.Builder(8582, SuSyUtility.susyId("chloroplatinic_acid_solution"))
+                .fluid(FluidTypes.ACID)
+                .components(Hydrogen, 2, Platinum, 1, Chlorine, 6, Water, 4)
+                .colorAverage()
+                .build();
+
+        MolybdenumDisulfide = new Material.Builder(8583, SuSyUtility.susyId("molybdenum_disulfide"))
+                .dust()
+                .components(Molybdenum, 1, Sulfur, 2)
+                .colorAverage()
+                .build();
+
+        FluorinatedGraphite = new Material.Builder(8584, SuSyUtility.susyId("fluorinated_graphite"))
+                .dust()
+                .components(Carbon, 1, Fluorine, 1)
+                .colorAverage()
+                .build();
+      
+        AcrylicCatalyst = new Material.Builder(8585, SuSyUtility.susyId("acrylic_catalyst"))
                 .dust()
                 .components(Copper, 1, Nickel, 1, Bromine, 4)
                 .colorAverage()
                 .build();
 
-        GelatinSolution = new Material.Builder(8581, SuSyUtility.susyId("gelatin_solution"))
+        GelatinSolution = new Material.Builder(8586, SuSyUtility.susyId("gelatin_solution"))
                 .fluid()
                 .fluidTemp(323)
                 .components(Gelatin, 1, Water, 1)
