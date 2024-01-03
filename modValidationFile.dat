@@ -33,6 +33,7 @@ catwalks-1.12.2-4.0.45.jar
 CaveGenerator-1.1.jar
 CD4017BE_lib-1.12.2-6.5.1.jar
 censoredasm5.6.jar
+ChestTransporter-1.12.2-2.8.8.jar
 Chisel-MC1.12.2-1.0.2.45.jar
 CIE-1.12.2-1.0.4.jar
 Clumps-3.1.2.jar
@@ -87,7 +88,7 @@ HungerInPeace-mc1.12-1.0.0.jar
 ICBM-classic-1.12.2-4.0.1b75.jar
 iChunUtil-1.12.2-7.2.2.jar
 igisereneseasons-1.0.0.1.jar
-ImmersiveRailroading-1.12.2-forge-1.9.1.jar
+ImmersiveRailroading-1.12.2-forge-1.10.0.jar
 incontrol-1.12-3.9.18.jar
 IndustrialRenewal_1.12.2-0.21.8.jar
 infinitylib-1.12.1.jar
@@ -96,6 +97,7 @@ InventoryTweaks-1.63.jar
 itemzoom_1.12.2-1.11.jar
 IvToolkit-1.3.3-1.12.jar
 jeiintegration_1.12.2-1.6.0.jar
+JEI-Utilities-1.12.2-0.2.12.jar
 journeymap-1.12.2-5.7.1.jar
 JustEnoughCalculation-1.12.2-3.2.7.jar
 justenoughdimensions-1.12.2-1.6.0-dev.20200416.184714.jar
@@ -178,9 +180,10 @@ torchmaster_1.12.2-1.8.5.0.jar
 TrackAPI-1.2.jar
 TravelersBackpack-1.12.2-1.0.35.jar
 Trinity-1.4.b.jar.disabled
-UniversalModCore-1.12.2-forge-1.1.4-2b81e7.jar
+UniversalModCore-1.12.2-forge-1.2.1.jar
 UniversalTweaks-1.12.2-1.3.2.jar
 VerticallyStackedDimensions-1.12.2-0.1.9.jar
+visualores-0.2.3.jar
 WaterControlExtreme-1.0.2.jar
 weeping-angels-46.jar
 WirelessCraftingTerminal-1.12.2-3.12.97.jar

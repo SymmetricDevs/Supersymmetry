@@ -573,13 +573,13 @@ public class SecondDegreeMaterials {
 
         DivalentPalladiumSolution.setFormula('(?)(NH4Cl)(HCl)6(H2O)8', true)
 
-        DeoxygenationCatalystPrecursorSolution = new Material.Builder(13091, SuSyUtility.susyId('deoxygenation_catalyst_precursor_solution'))
+        PlatinumPrecursorSolution = new Material.Builder(13091, SuSyUtility.susyId('platinum_precursor_solution'))
                 .fluid()
                 .components(AmmoniumHexachloroplatinate, 1, PhosphoricAcid, 1)
                 .colorAverage()
                 .build();
 
-        DeoxygenationCatalyst = new Material.Builder(13092, SuSyUtility.susyId('deoxygenation_catalyst'))
+        SupportedPlatinum = new Material.Builder(13092, SuSyUtility.susyId('supported_platinum'))
                 .dust()
                 .components(Alumina, 1, Platinum, 1, Chlorine, 4)
                 .flags(GENERATE_CATALYST_BED)
@@ -632,6 +632,31 @@ public class SecondDegreeMaterials {
         PalladiumOnCarbon = new Material.Builder(13100, SuSyUtility.susyId("palladium_on_carbon"))
                 .dust()
                 .components(Palladium, 1, ActivatedCarbon, 4)
+                .colorAverage()
+                .build();
+
+        ManganeseIIChlorideSolution = new Material.Builder(13101, SuSyUtility.susyId("manganese_ii_chloride_solution"))
+                .fluid()
+                .components(ManganeseIIChloride, 1, Water, 3)
+                .colorAverage()
+                .build();
+
+        DilutedManganeseIIChlorideSolution = new Material.Builder(13102, SuSyUtility.susyId("diluted_manganese_ii_chloride_solution"))
+                .fluid()
+                .components(ManganeseIIChloride, 1, Water, 6)
+                .colorAverage()
+                .build();
+
+        PalladiumPrecursorSolution = new Material.Builder(13103, SuSyUtility.susyId("palladium_precursor_solution"))
+                .fluid(FluidTypes.ACID)
+                .components(PalladiumChloride, 1, PhosphoricAcid, 1)
+                .colorAverage()
+                .build();
+
+        SupportedPalladium = new Material.Builder(13104, SuSyUtility.susyId("supported_palladium"))
+                .dust()
+                .components(PalladiumChloride, 1, Alumina, 1)
+                .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build();
     }

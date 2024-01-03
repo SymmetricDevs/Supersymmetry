@@ -586,5 +586,12 @@ class ThermodynamicsMaterials {
                 .fluidTemp(120)
                 .color(0x56bf56)
                 .build();
+
+        SupercriticalCarbonDioxide = new Material.Builder(22843, SuSyUtility.susyId('supercritical_carbon_dioxide'))
+                .fluid()
+                .components(CarbonDioxide, 1)
+                .fluidTemp(373)
+                .colorAverage()
+                .build();
     }
 }

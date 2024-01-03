@@ -13,6 +13,8 @@ import gregtech.api.unification.material.properties.PropertyKey;
 import static material.SuSyMaterials.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import supersymmetry.api.recipes.SuSyRecipeMaps;
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey;
+import supersymmetry.api.unification.material.properties.FiberProperty;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.fluids.fluidType.FluidTypes;
@@ -72,7 +74,7 @@ class ChangeFlags {
         AquaRegia.setFormula("(HNO3)(HCl)3", true);
         Tantalite.setFormula("(Fe,Mn)Ta2O6", true);
 
-	    Borax.setProperty(PropertyKey.ORE, new OreProperty());
+	Borax.setProperty(PropertyKey.ORE, new OreProperty());
         Scheelite.addFlags("generate_sifted", "generate_slurries", "generate_flotated");
         Pyrochlore.addFlags("generate_sifted", "generate_slurries", "generate_flotated", "generate_concentrate");
         Molybdenite.addFlags("generate_flotated", "generate_slurries");
@@ -97,6 +99,7 @@ class ChangeFlags {
         SiliconDioxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());
 
+        Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true))
         Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
