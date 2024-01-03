@@ -294,3 +294,42 @@ MIXER.recipeBuilder()
     .EUt(120)
     .duration(20)
     .buildAndRegister()
+
+// Isophthaloyl chloride
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('dichloroethane') * 1000)
+    .inputs(ore('dustIsophthalicAcid') * 18)
+    .fluidOutputs(fluid('dichloroethane_isophthalic_acid_solution') * 1000)
+    .duration(120)
+    .EUt(30)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('dichloroethane_isophthalic_acid_solution') * 1000)
+    .fluidInputs(fluid('phosgene') * 2000)
+    .fluidOutputs(fluid('isophthaloyl_chloride_solution') * 1000)
+    .fluidOutputs(fluid('carbon_dioxide') * 2000)
+    .fluidOutputs(fluid('hydrogen_chloride') * 2000)
+    .duration(10)
+    .EUt(30)
+    .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('isophthaloyl_chloride_solution') * 1000)
+    .outputs(metaitem('dustIsophthaloylChloride') * 16)
+    .fluidOutputs(fluid('dichloroethane') * 1000)
+    .duration(40)
+    .EUt(30)
+    .buildAndRegister()
+
+// Terephthaloyl chloride
+
+BR.recipeBuilder()
+    .inputs(ore('dustTerephthalicAcid') * 3)
+    .fluidInputs(fluid('bistrichloromethylbenzene') * 1000)
+    .outputs(metaitem('dustTerephthaloylChloride') * 32)
+    .fluidOutputs(fluid('hydrogen_chloride') * 2000)
+    .duration(300)
+    .EUt(30)
+    .buildAndRegister()
