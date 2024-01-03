@@ -1776,6 +1776,7 @@ susy.material.terephthalate_mother_liquor=Terephthalate Mother Liquor
 susy.material.wet_terephthalic_acid=Wet Terephthalic Acid
 susy.material.wet_isophthalic_acid=Wet Isophthalic Acid
 susy.material.methyl_para_toluate_mixture=Methyl p-Toluate Mixture
+susy.material.wafer_treatment_acid=Wafer Treatment Acid
 susy.material.ethylene_vinyl_acetate=Ethylene-Vinyl Acetate (EVA)
 susy.material.ethylene_vinyl_acetate_mixture=Ethylene-Vinyl Acetate (EVA) Mixture
 susy.material.ethylene_isobutylene_vinyl_acetate=Ethylene-Isobutylene-Vinyl Acetate
@@ -2189,6 +2190,8 @@ metaitem.wafer.titanium.name=Titanium-Coated Wafer
 metaitem.wafer.tungsten.name=Tungsten-Coated Wafer
 metaitem.wafer.nickel.name=Nickel-Coated Wafer
 metaitem.wafer.gallium_arsenide.name=Gallium Arsenide Wafer
+metaitem.wafer.raw.silicon.name=Raw Silicon Wafer
+metaitem.wafer.treated.silicon.name=Acid Treated Silicon Wafer
 
 metaitem.seed_crystal.silicon.name=Silicon Seed Crystal
 metaitem.seed_crystal.gallium_arsenide.name=Gallium Arsenide Seed Crystal

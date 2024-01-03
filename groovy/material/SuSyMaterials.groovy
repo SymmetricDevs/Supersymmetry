@@ -484,9 +484,10 @@ class SuSyMaterials {
         public static Material ImpureCelestineSlurry;
         public static Material CelestineSlurry;
         public static Material BariumResidue;
-        public static Material OrganosiliconMixture;
-        public static Material ImpurePolydimethylsiloxaneMixture;
-        public static Material RawPolydimethylsiloxaneMixture;
+	public static Material OrganosiliconMixture;
+	public static Material ImpurePolydimethylsiloxaneMixture;
+	public static Material RawPolydimethylsiloxaneMixture;
+        public static Material WaferTreatmentAcid;
         public static Material LubricityAdditive;
         public static Material AntistaticAdditive;
         public static Material AntifoamingAdditive;
@@ -527,9 +528,6 @@ class SuSyMaterials {
         public static Material SupremeLubricant;
         public static Material ZincDialkyldithiophospate;
         public static Material MolybdenumDialkyldithiophosphate;
-	public static Material OrganosiliconMixture;
-	public static Material ImpurePolydimethylsiloxaneMixture;
-	public static Material RawPolydimethylsiloxaneMixture;
         public static Material AcidicDinitrobenzeneMixture;
         public static Material DinitrobenzeneMixture;
         public static Material Cotton;

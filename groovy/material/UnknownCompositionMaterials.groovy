@@ -1832,11 +1832,6 @@ public class UnknownCompositionMaterials {
                 .color(0x255563)
                 .build();
 
-        LubricityAdditive = new Material.Builder(4351, SuSyUtility.susyId("lubricity_additive"))
-                .fluid()
-                .color(0xab8f61)
-                .build();
-
         AntistaticAdditive = new Material.Builder(4352, SuSyUtility.susyId("antistatic_additive"))
                 .fluid()
                 .color(0xd1cc8e)
@@ -1857,7 +1852,10 @@ public class UnknownCompositionMaterials {
                 .color(0x4cb522)
                 .build();
 
-        //FREE ID: 4356
+        LubricityAdditive = new Material.Builder(4356, SuSyUtility.susyId("lubricity_additive"))
+                .fluid()
+                .color(0xab8f61)
+                .build();
 
         MetalDeactivator = new Material.Builder(4357, SuSyUtility.susyId('metal_deactivator'))
                 .fluid()
@@ -2077,6 +2075,12 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0xa6a490)
                 .iconSet(ROUGH)
+                .build();
+
+        WaferTreatmentAcid = new Material.Builder(4400, SuSyUtility.susyId("wafer_treatment_acid"))
+                .fluid(FluidTypes.ACID)
+                .components(HydrochloricAcid, 9, HydrofluoricAcid, 9, AceticAcid, 2)
+                .color(0x3e7d68)
                 .build();
     }
 }
