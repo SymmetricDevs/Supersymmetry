@@ -8,6 +8,8 @@ import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.properties.*
 
 import supersymmetry.api.util.SuSyUtility;
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey;
+import supersymmetry.api.unification.material.properties.FiberProperty;
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -1138,25 +1140,22 @@ public class UnknownCompositionMaterials {
                 .color(0x2b1e1e)
                 .build();
 
-        GasolineOxygenates = new Material.Builder(4218, SuSyUtility.susyId('gasoline_oxygenates'))
+        Oxygenates = new Material.Builder(4218, SuSyUtility.susyId('oxygenates'))
                 .fluid()
                 .color(0xb4c5e0)
                 .build();
 
-        GasolineAntioxidants = new Material.Builder(4219, SuSyUtility.susyId('gasoline_antioxidants'))
+        Antioxidants = new Material.Builder(4219, SuSyUtility.susyId('antioxidants'))
                 .fluid()
                 .color(0x380b0d)
                 .build();
 
-        GasolineAntiknock = new Material.Builder(4220, SuSyUtility.susyId('gasoline_antiknock'))
+        Antiknock = new Material.Builder(4220, SuSyUtility.susyId('antiknock'))
                 .fluid()
                 .color(0x48485e)
                 .build();
 
-        GasolineGeneralAdditives = new Material.Builder(4221, SuSyUtility.susyId('gasoline_general_additives'))
-                .fluid()
-                .color(0x718072)
-                .build();
+        //FREE ID: 4221
 
         MidgradeGasoline = new Material.Builder(4222, SuSyUtility.susyId('midgrade_gasoline'))
                 .fluid()
@@ -1733,20 +1732,7 @@ public class UnknownCompositionMaterials {
                 .color(0xd15298)
                 .build();
                 
-        EightTwentyOlefinMixture = new Material.Builder(4330, SuSyUtility.susyId('eight_twenty_olefin_mixture'))
-                .fluid()
-                .color(0xa31d53)
-                .build();
-                
-        NineTwentyOneAldehydeMixture = new Material.Builder(4331, SuSyUtility.susyId('nine_twenty_one_aldehyde_mixture'))
-                .fluid()
-                .color(0x911da3)
-                .build();
-                
-        NineTwentyOneFattyAcidMixture = new Material.Builder(4332, SuSyUtility.susyId('nine_twenty_one_fatty_acid_mixture'))
-                .fluid()
-                .color(0xa37b1d)
-                .build();
+        //FREE ID: 4330-4332
         
         HZSMFive = new Material.Builder(4333, SuSyUtility.susyId('hzsm_five'))
                 .dust()
@@ -1839,16 +1825,262 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0xf6f7f0)
                 .build();
+        
+        AcidicDinitrobenzeneMixture = new Material.Builder(4351, SuSyUtility.susyId("acidic_dinitrobenzene_mixture"))
+                .fluid(FluidTypes.ACID)
+                .fluidTemp(363)
+                .color(0x255563)
+                .build();
 
-        AcrylicPhotoemulsion = new Material.Builder(4351, SuSyUtility.susyId("acrylic_photoemulsion"))
+        AntistaticAdditive = new Material.Builder(4352, SuSyUtility.susyId("antistatic_additive"))
+                .fluid()
+                .color(0xd1cc8e)
+                .build();
+
+        AntifoamingAdditive = new Material.Builder(4353, SuSyUtility.susyId("antifoaming_additive"))
+                .fluid()
+                .color(0x597275)
+                .build();
+
+        DiisopropylParaPhenylenediamineSolution = new Material.Builder(4354, SuSyUtility.susyId('diisopropyl_para_phenylenediamine_solution'))
+                .fluid()
+                .color(0x189477)
+                .build();
+
+        PropanolamineMix = new Material.Builder(4355, SuSyUtility.susyId('propanolamine_mix'))
+                .fluid()
+                .color(0x4cb522)
+                .build();
+
+        LubricityAdditive = new Material.Builder(4356, SuSyUtility.susyId("lubricity_additive"))
+                .fluid()
+                .color(0xab8f61)
+                .build();
+
+        MetalDeactivator = new Material.Builder(4357, SuSyUtility.susyId('metal_deactivator'))
+                .fluid()
+                .color(0x9b34a8)
+                .build();
+
+        IgnitionImprover = new Material.Builder(4358, SuSyUtility.susyId('ignition_improver'))
+                .fluid()
+                .color(0x8ede6f)
+                .build();
+
+        ColdFlowImprover = new Material.Builder(4359, SuSyUtility.susyId('cold_flow_improver'))
+                .fluid()
+                .color(0x1c32a3)
+                .build();
+
+        CorrosionInhibitor = new Material.Builder(4360, SuSyUtility.susyId('corrosion_inhibitor'))
+                .fluid()
+                .color(0x8a633a)
+                .build();
+
+        MidgradeDiesel = new Material.Builder(4361, SuSyUtility.susyId('midgrade_diesel'))
+                .fluid()
+                .color(0xc4a535)
+                .build();
+
+        PremiumDiesel = new Material.Builder(4362, SuSyUtility.susyId('premium_diesel'))
+                .fluid()
+                .color(0xd1aa1d)
+                .build();
+
+        SupremeDiesel = new Material.Builder(4363, SuSyUtility.susyId('supreme_diesel'))
+                .fluid()
+                .color(0xdb9a16)
+                .build();
+
+        MidgradeKerosene = new Material.Builder(4364, SuSyUtility.susyId('midgrade_kerosene'))
+                .fluid()
+                .color(0xa8a44a)
+                .build();
+
+        PremiumKerosene = new Material.Builder(4365, SuSyUtility.susyId('premium_kerosene'))
+                .fluid()
+                .color(0xbab541)
+                .build();
+
+        SupremeKerosene = new Material.Builder(4366, SuSyUtility.susyId('supreme_kerosene'))
+                .fluid()
+                .color(0xd9c148)
+                .build();
+
+        SAPOEleven = new Material.Builder(4367, SuSyUtility.susyId('sapo_eleven'))
+                .dust()
+                .color(0x91834e)
+                .build();
+                
+        PlatinumSAPOEleven = new Material.Builder(4368, SuSyUtility.susyId('platinum_sapo_eleven'))
+                .dust()
+                .color(0x969444)
+                .flags(GENERATE_CATALYST_BED)
+                .build();
+                
+        SiliconeOilMixture = new Material.Builder(4369, SuSyUtility.susyId('silicone_oil_mixture'))
+                .fluid()
+                .color(0x9aa38c)
+                .build();
+                
+        SiliconeOil = new Material.Builder(4370, SuSyUtility.susyId('silicone_oil'))
+                .fluid()
+                .color(0xbec7b1)
+                .build();
+                
+        CrudePolyalphaolefinMixture = new Material.Builder(4371, SuSyUtility.susyId('crude_polyalphaolefin_mixture'))
+                .fluid()
+                .color(0xc77db2)
+                .build();
+                
+        BoronTrifluorideMixture = new Material.Builder(4372, SuSyUtility.susyId('boron_trifluoride_mixture'))
+                .fluid(FluidTypes.ACID)
+                .color(0xbd3a6b)
+                .build();
+                
+        UnsaturatedPolyalphaolefin = new Material.Builder(4373, SuSyUtility.susyId('unsaturated_polyalphaolefin'))
+                .fluid()
+                .color(0xb393ba)
+                .build();
+                
+        NButanolWaste = new Material.Builder(4374, SuSyUtility.susyId('n_butanol_waste'))
+                .fluid()
+                .color(0xba6685)
+                .build();
+                
+        Polyalphaolefin = new Material.Builder(4375, SuSyUtility.susyId('polyalphaolefin'))
+                .fluid()
+                .color(0xcbaed1)
+                .build();
+                
+        PolybuteneMixture = new Material.Builder(4376, SuSyUtility.susyId('polybutene_mixture'))
+                .fluid()
+                .color(0xb08d63)
+                .build();
+                
+        EsterBaseOil = new Material.Builder(4377, SuSyUtility.susyId('ester_base_oil'))
+                .fluid()
+                .color(0xa098d4)
+                .build();
+                
+        Monoglycerides = new Material.Builder(4378, SuSyUtility.susyId('monoglycerides'))
+                .fluid()
+                .color(0xb39147)
+                .build();
+                
+        CrudeOneNitronaphthalene = new Material.Builder(4379, SuSyUtility.susyId('crude_one_nitronaphthalene'))
+                .dust()
+                .color(0x918a41)
+                .build();
+                
+        PolyisobuteneMixture = new Material.Builder(4380, SuSyUtility.susyId('polyisobutene_mixture'))
+                .fluid()
+                .color(0xad6d34)
+                .build();
+                
+        AlkylMethacrylate = new Material.Builder(4381, SuSyUtility.susyId('alkyl_methacrylate'))
+                .fluid()
+                .color(0x72ba6e)
+                .build();
+                
+        PolyalkylMethacrylateSolution = new Material.Builder(4382, SuSyUtility.susyId('polyalkyl_methacrylate_solution'))
+                .fluid()
+                .color(0x8db08b)
+                .build();
+                
+        AlkylMethacrylateEmulsion = new Material.Builder(4383, SuSyUtility.susyId('alkyl_methacrylate_emulsion'))
+                .fluid()
+                .color(0xa4d4a1)
+                .build();
+                
+        Pama = new Material.Builder(4384, SuSyUtility.susyId('pama'))
+                .dust()
+                .color(0xc9edc7)
+                .build();
+                
+        PolymerizedStyreneIsopreneSolution = new Material.Builder(4385, SuSyUtility.susyId('polymerized_styrene_isoprene_solution'))
+                .fluid()
+                .color(0x361940)
+                .build();
+                
+        PolyisobuteneSuccinicAnhydride = new Material.Builder(4386, SuSyUtility.susyId('polyisobutene_succinic_anhydride'))
+                .dust()
+                .color(0x6b142b)
+                .build();
+
+        ZincDialkyldithiophospate = new Material.Builder(4387, SuSyUtility.susyId('zinc_dialkyldithiophosphate'))
+                .fluid()
+                .color(0x423900)
+                .build();
+
+        MolybdenumDialkyldithiophosphate = new Material.Builder(4388, SuSyUtility.susyId('molybdenum_dialkyldithiophosphate'))
+                .dust()
+                .color(0x244200)
+                .build();
+                
+        MidgradeLubricant = new Material.Builder(4389, SuSyUtility.susyId('midgrade_lubricant'))
+                .fluid()
+                .color(0xc7aa2a)
+                .build();
+                
+        PremiumLubricant = new Material.Builder(4390, SuSyUtility.susyId('premium_lubricant'))
+                .fluid()
+                .color(0xba831c)
+                .build();
+                
+        SupremeLubricant = new Material.Builder(4391, SuSyUtility.susyId('supreme_lubricant'))
+                .fluid()
+                .color(0xad5f10)
+                .build();
+
+        DinitrobenzeneMixture = new Material.Builder(4392, SuSyUtility.susyId("dinitrobenzene_mixture"))
+                .dust()
+                .color(0x1f6478)
+                .build();
+
+        Cotton = new Material.Builder(4393, SuSyUtility.susyId("cotton"))
+                .color(0xf0edd8)
+                .build();
+
+        Cotton.setFormula('C6H5(OH)4OH', true)
+        Cotton.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+
+        Spandex = new Material.Builder(4394, SuSyUtility.susyId("spandex"))
+                .color(0x625f8a)
+                .build();
+
+        Spandex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+
+        PolyurethanePolymerizationMix = new Material.Builder(4395, SuSyUtility.susyId("polyurethane_polymerization_mix"))
+                .fluid()
+                .color(0x9c9c9c)
+                .build();
+
+        SpandexPrepolymer = new Material.Builder(4396, SuSyUtility.susyId("spandex_prepolymer"))
+                .fluid()
+                .color(0x393563)
+                .build();
+
+        SpandexPolymerizationMix = new Material.Builder(4397, SuSyUtility.susyId("spandex_polymerization_mix"))
+                .fluid()
+                .color(0x494575)
+                .build();
+
+        AcrylicPhotoemulsion = new Material.Builder(4398, SuSyUtility.susyId("acrylic_photoemulsion"))
                 .fluid()
                 .color(0x8a2531)
                 .build();
 
-        TreatedCollagen = new Material.Builder(4352, SuSyUtility.susyId("treated_collagen"))
+        TreatedCollagen = new Material.Builder(4399, SuSyUtility.susyId("treated_collagen"))
                 .dust()
                 .color(0xa6a490)
                 .iconSet(ROUGH)
+                .build();
+
+        WaferTreatmentAcid = new Material.Builder(4400, SuSyUtility.susyId("wafer_treatment_acid"))
+                .fluid(FluidTypes.ACID)
+                .components(HydrochloricAcid, 9, HydrofluoricAcid, 9, AceticAcid, 2)
+                .color(0x3e7d68)
                 .build();
     }
 }

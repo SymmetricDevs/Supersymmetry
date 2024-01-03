@@ -107,6 +107,15 @@ class SuSyMaterials {
         public static Material Carnotite;
         public static Material AlluvialPlatinum;
 
+        // Deposits for scanning
+
+        public static Material OrthomagmaticDeposit;
+        public static Material MetamorphicDeposit;
+        public static Material SedimentaryDeposit;
+        public static Material HydrothermalDeposit;
+        public static Material AlluvialDeposit;
+        public static Material MagmaticHydrothermalDeposit;
+
         // Roasted Ores
 
         public static Material RoastedSperrylite;
@@ -338,10 +347,9 @@ class SuSyMaterials {
         public static Material UranylCarbonateSolution;
         public static Material UranylSulfateSolution;
         public static Material TetraethylleadSludge;
-        public static Material GasolineOxygenates;
-        public static Material GasolineAntioxidants;
-        public static Material GasolineAntiknock;
-        public static Material GasolineGeneralAdditives;
+        public static Material Oxygenates;
+        public static Material Antioxidants;
+        public static Material Antiknock;
         public static Material MidgradeGasoline;
         public static Material PremiumGasoline;
         public static Material SupremeGasoline;
@@ -408,7 +416,7 @@ class SuSyMaterials {
         public static Material PropanalMixture;
         public static Material ZSMFive;
         public static Material AminatedEthyleneMixture;
-	public static Material NeutralizedAminatedEthyleneMixture;
+        public static Material NeutralizedAminatedEthyleneMixture;
         public static Material SiftedPyrochlore;
         public static Material PyrochloreConcentrate;
         public static Material ImpurePyrochloreSlurry;
@@ -442,9 +450,6 @@ class SuSyMaterials {
         public static Material RheniumRichFlue;
         public static Material ScrubbedPerrhenateSolution;
         public static Material AlphaOlefinMixture;
-        public static Material EightTwentyOlefinMixture;
-        public static Material NineTwentyOneAldehydeMixture;
-        public static Material NineTwentyOneFattyAcidMixture;
         public static Material SiftedScheelite;
         public static Material ImpureScheeliteSlurry;
         public static Material ScheeliteSlurry;
@@ -479,10 +484,57 @@ class SuSyMaterials {
         public static Material ImpureCelestineSlurry;
         public static Material CelestineSlurry;
         public static Material BariumResidue;
-
 	public static Material OrganosiliconMixture;
 	public static Material ImpurePolydimethylsiloxaneMixture;
 	public static Material RawPolydimethylsiloxaneMixture;
+        public static Material WaferTreatmentAcid;
+        public static Material LubricityAdditive;
+        public static Material AntistaticAdditive;
+        public static Material AntifoamingAdditive;
+        public static Material DiisopropylParaPhenylenediamineSolution;
+        public static Material PropanolamineMix;
+        public static Material MetalDeactivator;
+        public static Material IgnitionImprover;
+        public static Material ColdFlowImprover;
+        public static Material CorrosionInhibitor;
+        public static Material MidgradeDiesel;
+        public static Material PremiumDiesel;
+        public static Material SupremeDiesel;
+        public static Material MidgradeKerosene;
+        public static Material PremiumKerosene;
+        public static Material SupremeKerosene;
+        public static Material SAPOEleven;
+        public static Material PlatinumSAPOEleven;
+        public static Material SiliconeOilMixture;
+        public static Material SiliconeOil;
+        public static Material CrudePolyalphaolefinMixture;
+        public static Material BoronTrifluorideMixture;
+        public static Material UnsaturatedPolyalphaolefin;
+        public static Material NButanolWaste;
+        public static Material Polyalphaolefin;
+        public static Material PolybuteneMixture;
+        public static Material EsterBaseOil;
+        public static Material Monoglycerides;
+        public static Material CrudeOneNitronaphthalene;
+        public static Material PolyisobuteneMixture;
+        public static Material AlkylMethacrylate;
+        public static Material PolyalkylMethacrylateSolution;
+        public static Material AlkylMethacrylateEmulsion;
+        public static Material Pama;
+        public static Material PolymerizedStyreneIsopreneSolution;
+        public static Material PolyisobuteneSuccinicAnhydride;
+        public static Material MidgradeLubricant;
+        public static Material PremiumLubricant;
+        public static Material SupremeLubricant;
+        public static Material ZincDialkyldithiophospate;
+        public static Material MolybdenumDialkyldithiophosphate;
+        public static Material AcidicDinitrobenzeneMixture;
+        public static Material DinitrobenzeneMixture;
+        public static Material Cotton;
+        public static Material Spandex;
+        public static Material PolyurethanePolymerizationMix;
+        public static Material SpandexPrepolymer;
+        public static Material SpandexPolymerizationMix;
         public static Material AcrylicPhotoemulsion;
         public static Material TreatedCollagen;
 
@@ -559,6 +611,11 @@ class SuSyMaterials {
         public static Material BTEX;
         public static Material Syngas;
         public static Material ReformedSyngas;
+        public static Material CrudeLubricatingOil;
+        public static Material SolventLubricantMixture;
+        public static Material ColdSolventLubricantMixture;
+        public static Material SulfuricLubricatingOil;
+        public static Material DewaxedLubricantMixture;
 
         // First Degree Materials
 
@@ -846,7 +903,7 @@ class SuSyMaterials {
         public static Material SodiumBismuthate;
         public static Material BismuthIIIOxide;
         public static Material ManganeseIINitrate;
-        public static Material PurifiedManganeseDioxide;
+        public static Material ManganeseDioxide;
         public static Material BariumTitanate;
         public static Material RawElectrum;
         public static Material NeodymiumAlloy;
@@ -938,7 +995,6 @@ class SuSyMaterials {
         public static Material NickelSulfateSolution;
         public static Material AluminiumNitride;
         public static Material AluminiumOxynitride;
-        public static Material UltraHighMolecularWeightPolyethylene;
         public static Material GoldAmalgam;
         public static Material AntimonyTrichloride;
         public static Material AntimonyPentachloride;
@@ -1015,13 +1071,19 @@ class SuSyMaterials {
         public static Material ImpureStrontiumSulfide;
         public static Material DilutedAceticAcid;
         public static Material CobaltIIAcetate;
+        public static Material ManganeseIIChloride;
+        public static Material ChloroplatinicAcidSolution;
+        public static Material MolybdenumDisulfide;
+        public static Material FluorinatedGraphite;
+        public static Material HydrogenIodide;
         public static Material AcrylicCatalyst;
         public static Material GelatinSolution;
 
         // Second Degree Materials
 
-        public static Material DeoxygenationCatalystPrecursorSolution;
-        public static Material DeoxygenationCatalyst;
+        public static Material PlatinumPrecursorSolution;
+        public static Material PalladiumPrecursorSolution;
+        public static Material SupportedPlatinum;
         public static Material NitrateSaltMix;
         public static Material AmmoniumChlorideSolution;
         public static Material PotassiumChlorideSolution;
@@ -1118,11 +1180,14 @@ class SuSyMaterials {
         public static Material ImpureBariumSulfideSolution;
         public static Material ImpureStrontiumSulfideSlurry;
         public static Material PalladiumOnCarbon;
+        public static Material ManganeseIIChlorideSolution;
+        public static Material DilutedManganeseIIChlorideSolution;
+        public static Material SupportedPalladium;
 
         // Organic Chemistry Materials
 
         public static Material NMethylIIPyrrolidone;
-        public static Material FourNitrochlorobenzene;
+        public static Material FourChloronitrobenzene;
         public static Material FourNitroaniline;
         public static Material TwoTwoDichlorohydrazobenzene;
         public static Material ParaPhenylenediamine;
@@ -1152,8 +1217,8 @@ class SuSyMaterials {
         public static Material Isobutylene;
         public static Material SaltyNMethylIIPyrrolidone;
         public static Material MethylAcetateSolution;
-        public static Material TwoNitrochlorobenzene;
-        public static Material MixedNitrochlorobenzene;
+        public static Material TwoChloronitrobenzene;
+        public static Material MixedChloronitrobenzene;
         public static Material FourNitroanilineSolution;
         public static Material ParaPhenylenediamineSolution;
         public static Material TwoTwoDichlorohydrazobenzeneSolution;
@@ -1177,12 +1242,11 @@ class SuSyMaterials {
         public static Material StyreneSolution;
         public static Material PolystyreneSolution;
         public static Material VinylAcetateSolution;
-        public static Material PolyvinylAcetateSolution;
+        public static Material PolyvinylAcetateMixture;
         public static Material Bleach;
         public static Material ImpureBleach;
         public static Material OneFourDichlorobenzeneSolution;
         public static Material OneTwoDichlorobenzeneSolution;
-        public static Material DryEthanol;
         public static Material StyreneButadieneSolution;
         public static Material DiethylEther;
         public static Material OneBromobutane;
@@ -1206,7 +1270,7 @@ class SuSyMaterials {
         public static Material Dichloromethane;
         public static Material CarbonTetrachloride;
         public static Material PolytetrafluoroethyleneSolution;
-        public static Material MixedNitrochlorobenzeneSolution;
+        public static Material AcidicChloronitrobenzeneMixture;
         public static Material MixedDichlorobenzeneSolution;
         public static Material Novolacs;
         public static Material SiliconTetrachloride;
@@ -1230,7 +1294,6 @@ class SuSyMaterials {
         public static Material MethyleneDiphenylDiisocyanate;
         public static Material Triethylenediamine;
         public static Material Polyurethane;
-        public static Material MemoryFoam;
         public static Material Rayon;
         public static Material AlkaliCellulose;
         public static Material SodiumCelluloseXanthate;
@@ -1264,7 +1327,7 @@ class SuSyMaterials {
         public static Material Urea;
         public static Material Diiodobenzene;
         public static Material IsophthalicAcid;
-        public static Material IsophthaloylDichloride;
+        public static Material IsophthaloylChloride;
         public static Material TerephthalicAcid;
         public static Material Bistrichloromethylbenzene;
         public static Material TerephthaloylChloride;
@@ -1354,7 +1417,6 @@ class SuSyMaterials {
         public static Material Methylaluminoxane;
         public static Material ZirconoceneDichloride;
         public static Material Tetrahydrofuran;
-        public static Material SodiumCyclopentadienide;
         public static Material PotassiumButylXanthate;
         public static Material PicricAcid;
         public static Material Monomethylhydrazine;
@@ -1366,17 +1428,17 @@ class SuSyMaterials {
         public static Material NBromopropane;
         public static Material TetrapropylammoniumBromide;
         public static Material Propionaldehyde;
-	public static Material Triethylenetetramine;
-	public static Material Aminoethylpiperazine;
-	public static Material Diethylenetriamine;
-	public static Material Piperazine;
-	public static Material Cyclooctadiene;
-	public static Material TriethylPhosphate;
-	public static Material IsopropenylAcetate;
-	public static Material Acetylacetone;
-	public static Material NickelIIBisacetylacetonate;
-	public static Material BiscyclooctadienenickelZero;
-	public static Material DiethylaluminiumAcetylacetonate;
+        public static Material Triethylenetetramine;
+        public static Material Aminoethylpiperazine;
+        public static Material Diethylenetriamine;
+        public static Material Piperazine;
+        public static Material Cyclooctadiene;
+        public static Material TriethylPhosphate;
+        public static Material IsopropenylAcetate;
+        public static Material Acetylacetone;
+        public static Material NickelIIBisacetylacetonate;
+        public static Material BiscyclooctadienenickelZero;
+        public static Material DiethylaluminiumAcetylacetonate;
         public static Material OxalicAcid;
         public static Material OneAmidoethylTwoAlkylTwoImidazoline;
         public static Material Chlorodiphenylphosphine;
@@ -1420,6 +1482,89 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalate;
         public static Material WetTerephthalicAcid;
         public static Material WetIsophthalicAcid;
+        public static Material EthyleneVinylAcetate;
+        public static Material EthyleneIsobutyleneVinylAcetate;
+        public static Material ChlorosulfuricAcid;
+        public static Material HydrogenDodecylSulfate;
+        public static Material SodiumDodecylSulfate;
+        public static Material Dinonylnaphthalene;
+        public static Material DinonylnaphthaleneSulfonicAcid;
+        public static Material Psuedocumene;
+        public static Material Methylcyclopentadiene;
+        public static Material Diglyme;
+        public static Material Bismethylcyclopentadienylmanganese;
+        public static Material MethylcyclopentadienylmanganeseTricarbonyl;
+        public static Material MethylCarbitol;
+        public static Material DiisopropylParaPhenylenediamine;
+        public static Material OneTwoDiaminopropaneSolution;
+        public static Material Salicylaldehyde;
+        public static Material SalicylideneOneTwoPropanediamine;
+        public static Material Dihexadecylamine;
+        public static Material DihexadecylaminePhthalateAmide;
+        public static Material MethylTertButylEther;
+        public static Material TetraethylOrthosilicate;
+        public static Material Methylphenyldichlorosilane;
+        public static Material OneOctene;
+        public static Material OneDecene;
+        public static Material OneDodecene;
+        public static Material OneTetradecene;
+        public static Material OneHexadecene;
+        public static Material OneOctadecene;
+        public static Material OneIcosene;
+        public static Material OneDocosene;
+        public static Material OneTetracosene;
+        public static Material Polybutene;
+        public static Material TrimelliticAcid;
+        public static Material TrimelliticAnhydride;
+        public static Material Oleylamide;
+        public static Material StearicAcid;
+        public static Material OneNitronaphthalene;
+        public static Material OneNaphthylamine;
+        public static Material NPhenylOneNaphthylamine;
+        public static Material Polyisobutene;
+        public static Material EthylenePropyleneCopolymer;
+        public static Material MethacrylicAcid;
+        public static Material StyreneIsopreneSolution;
+        public static Material RawStyreneIsopreneRubber;
+        public static Material StyreneIsopreneRubber;
+        public static Material HydrogenatedStyreneIsopreneRubber;
+        public static Material HydrogenatedStyreneButadieneRubber;
+        public static Material Dodecylphenol;
+        public static Material CalciumPhenate;
+        public static Material Dodecylbenzene;
+        public static Material DodecylbenzenesulfonicAcid;
+        public static Material CalciumDodecylbenzeneSulfonate;
+        public static Material CalciumSalicylate;
+        public static Material MaleicAnhydride;
+        public static Material CalciumDinonylnaphthaleneSulfonate;
+        public static Material MetaParaCresolMixture;
+        public static Material OrthoCresol;
+        public static Material TricresylPhosphate;
+        public static Material DiisopropyldithiophosphoricAcid;
+        public static Material DibutyldithiophosphoricAcid;
+        public static Material Diamylamine;
+        public static Material SodiumDiamylthiocarbamateSolution;
+        public static Material ZincBisdiamyldithiocarbamate;
+        public static Material Didodecylbenzene;
+        public static Material DidodecylbenzenesulfonicAcid;
+        public static Material CalciumDidodecylbenzeneSulfonate;
+        public static Material Nonylphenol;
+        public static Material Trichloroethylene;
+        public static Material ChloroaceticAcid;
+        public static Material FourNonylphenoxyaceticAcid;
+        public static Material TwoNitroanilineSolution;
+        public static Material OrthoPhenylenediamine;
+        public static Material Benzotriazole;
+        public static Material Mercaptobenzothiazole;
+        public static Material SalicylideneEthylenediamine;
+        public static Material Pseudocumene;
+        public static Material TwoButoxyethanol;
+        public static Material PolyethyleneGlycol;
+        public static Material OneThreeDinitrobenzene;
+        public static Material MetaPhenylenediamine;
+        public static Material Nomex;
+        public static Material UltraHighMolecularWeightPolyethylene;
+        public static Material AdipicAcid;
         public static Material Trimethylolpropane;
         public static Material AcrylicAcid;
         public static Material TrimethylolpropaneTriacrylate;
@@ -1471,14 +1616,14 @@ class SuSyMaterials {
         public static Material ZirconiumTetrachlorideTetrahydrofuranComplex;
         public static Material PotassiumButylXanthateSolution;
         public static Material TNPSolution;
-        public static Material IsophthaloylDichlorideSolution;
+        public static Material IsophthaloylChlorideSolution;
         public static Material IsophthalicAcidSlurry;
         public static Material DichloroethaneIsophthalicAcidSolution;
         public static Material TetrahydrofuranSolution;
         public static Material AcidicTriethylPhosphate;
         public static Material NickelIIBisacetylacetonateSolution;
         public static Material ShellHigherOlefinCatalystSolution;
-        public static Material CrudeNitrobenzene;
+        public static Material AcidicNitrobenzeneMixture;
         public static Material DichlorobistriphenylphosphinenickelII;
         public static Material DicarbonylbistriphenylphosphinenickelZero;
         public static Material OrthoParaXyleneMixture;
@@ -1487,7 +1632,7 @@ class SuSyMaterials {
         public static Material TetrabromobisphenolASolution;
         public static Material EpoxyCuringMixture;
         public static Material WetFlameRetardantEpoxy;
-        public static Material PropyleneOxideSolution;        
+        public static Material PropyleneOxideSolution;
         public static Material DilutedZincChlorideSolution;
         public static Material HydrogenSilsesquioxanePhotoresist;
         public static Material CrudeTerephthalicAcidSolution;
@@ -1499,6 +1644,23 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalateSolution;
         public static Material TerephthalateMotherLiquor;
         public static Material MethylParaToluateMixture;
+        public static Material EthyleneVinylAcetateMixture;
+        public static Material EthyleneIsobutyleneVinylAcetateMixture;
+        public static Material SodiumDodecylSulfateSolution;
+        public static Material SodiumCyclopentadienideSolution;
+        public static Material MethylcyclopentadieneSolution;
+        public static Material BismethylcyclopentadienylmanganeseSolution;
+        public static Material DewaxingSolvent;
+        public static Material OlefinPolymerizationInitiator;
+        public static Material TrimelliticAcidSlurry;
+        public static Material CalciumSalicylateSolution;
+        public static Material AcidicTricresylPhosphate;
+        public static Material ChloroaceticAcidSolution;
+        public static Material OrthoPhenylenediamineSolution;
+        public static Material NomexPolymerizationMix;
+        public static Material KevlarPolymerizationMix;
+        public static Material SpentDimethylacetamide;
+        public static Material SodiumCelluloseXanthateSolution;
         public static Material CrotonaldehydeMixture;
 
         // Thermodynamics/Greenhouse Materials
@@ -1536,6 +1698,7 @@ class SuSyMaterials {
         public static Material LiquidDeoxygenatedArgon;
         public static Material LiquidWasteNitrogen;
         public static Material PartiallyLiquefiedArgon;
+        public static Material SupercriticalCarbonDioxide;
 
         public static void init() {
                 ElementMaterials.register();

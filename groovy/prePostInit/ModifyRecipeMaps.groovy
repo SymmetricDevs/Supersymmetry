@@ -1,6 +1,8 @@
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ingredients.GTRecipeInput;
 import gregtechfoodoption.recipe.GTFORecipeMaps;
+import supersymmetry.api.recipes.SuSyRecipeMaps;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.recipes.GTRecipeHandler.*;
 
@@ -18,6 +20,22 @@ removeAllRecipes(RecipeMaps.LASER_ENGRAVER_RECIPES);
 removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES);
 removeAllRecipes(RecipeMaps.VACUUM_RECIPES);
 removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES);
+
+//Add mixer recipes to blender
+
+RecipeMaps.MIXER_RECIPES.onRecipeBuild(recipeBuilder -> {
+        recipeBuilder.invalidateOnBuildAction();
+        SuSyRecipeMaps.BLENDER_RECIPES.recipeBuilder()
+                .inputs(recipeBuilder.getInputs().toArray(new GTRecipeInput[0]))
+                .fluidInputs(recipeBuilder.getFluidInputs())
+                .outputs(recipeBuilder.getOutputs())
+                .chancedOutputs(recipeBuilder.getChancedOutputs())
+                .fluidOutputs(recipeBuilder.getFluidOutputs())
+                .cleanroom(recipeBuilder.getCleanroom())
+                .duration((int) (recipeBuilder.duration / 4))
+                .EUt(recipeBuilder.EUt)
+                .buildAndRegister();
+});
 
 //Removal of certain centrifuging recipes
 
