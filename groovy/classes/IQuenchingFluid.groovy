@@ -18,13 +18,12 @@ class IQuenchingFluid{
         //this is needed for some reason, otherwise it will error
     }
 
-    public IQuenchingFluid(String ColdFluid2, String HotFluid2, int amount, float time, boolean inert, boolean alreadyHasRecipe){
+    public IQuenchingFluid(String ColdFluid2, String HotFluid2, int amount, float time, boolean inert){
         this.cold_fluid = ColdFluid2;
         this.hot_fluid = HotFluid2;
         this.amount = amount;
         this.time = time;
         this.inert = inert;
-        this.has_recipe = alreadyHasRecipe;
         quenching_fluids.add(this);
     }
 
@@ -42,9 +41,5 @@ class IQuenchingFluid{
 
     public boolean isInert(){
         return this.inert;
-    }
-
-    public boolean hasRecipe(){
-        return this.has_recipe;
     }
 }

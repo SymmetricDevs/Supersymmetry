@@ -1,6 +1,20 @@
 import static globals.Globals.*
 import static globals.CarbonGlobals.*
 
+//RECIPE REMOVALS
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('gemCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCharcoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal', 1) * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('gemCoke')], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCharcoal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal') * 2], null)
+mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal', 1) * 2], null)
+
 class Blastable {
     String name
     int amount_required
@@ -134,9 +148,9 @@ EBF_RECIPES.recipeBuilder()
 		.buildAndRegister()
 
 //SLAG REMOVAL BY HAMMER
-crafting.addShapeless('hammer_pig_iron',metaitem('ingotWroughtIron'), [
+crafting.addShapeless('pig_iron_shearing', metaitem('ingotWroughtIron'), [
     ore('craftingToolHardHammer'),
-    metaitem('ingotPigIron'),
+    metaitem('ingotPigIron')
 ])
 
 def FORGE_HAMMER = recipemap('forge_hammer')
@@ -170,6 +184,7 @@ EBF_RECIPES.recipeBuilder()
 .buildAndRegister()
 
 //CEMENTED STEEL
+
 for (combustible in combustibles) {
     PBF_RECIPES.recipeBuilder()
     .inputs(item('minecraft:iron_ingot'))
@@ -187,20 +202,6 @@ for (combustible in combustibles) {
     .duration(combustible.duration * 60)
     .buildAndRegister()
 }
-
-//RECIPE REMOVALS
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoke')], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('gemCoke')], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCharcoal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), item('minecraft:coal', 1) * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoke')], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('gemCoke')], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCoal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), metaitem('dustCharcoal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal') * 2], null)
-mods.gregtech.primitive_blast_furnace.removeByInput(1, [item('minecraft:iron_ingot'), item('minecraft:coal', 1) * 2], null)
 
 //High Purity Iron Chain
 
@@ -238,15 +239,6 @@ EBF_RECIPES.recipeBuilder()
         .duration(60)
         .blastFurnaceTemp(1750)
         .EUt(60)
-        .buildAndRegister()
-
-EBF_RECIPES.recipeBuilder()
-        .circuitMeta(1)
-        .inputs(ore('ingotPigIron'))
-        .outputs(item('minecraft:iron_ingot'))
-        .duration(80)
-        .blastFurnaceTemp(1200)
-        .EUt(30)
         .buildAndRegister()
 
 //HYDROXIDE PROCESSING

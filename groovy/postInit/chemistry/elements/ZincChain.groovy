@@ -37,7 +37,7 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSphalerit
 
 MIXER.recipeBuilder()
         .inputs(ore('dustImpureSphalerite') * 4)
-        .fluidInputs(fluid('water') * 2000)
+        .fluidInputs(fluid('distilled_water') * 2000)
         .fluidOutputs(fluid('impure_sphalerite_slurry') * 2000)
         .EUt(Globals.voltAmps[3])
         .duration(80)
@@ -314,7 +314,7 @@ MIXER.recipeBuilder()
 
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('sulfuric_acid') * 1000)
-        .inputs(ore('dustCopperCadmiumResidue') * 20)
+        .inputs(ore('dustCobaltResidue') * 20)
         .fluidOutputs(fluid('zinc_leach') * 1000)
         .outputs(metaitem('dustCobalt') * 1)
         .EUt(30)

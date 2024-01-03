@@ -21,24 +21,20 @@ crafting.addShaped("susy:drone_pad_block_alt", item('susy:susy_multiblock_casing
     [ore('stonePolished'), ore('stonePolished'), ore('stonePolished')]
 ])
 
-Globals.solders.each { key, val ->
-
-    mods.gregtech.assembler.recipeBuilder()
-        .inputs(metaitem('electric.motor.lv') * 4)
-        .inputs(ore('rotorSteel') * 4)
-        .inputs(ore('stickSteel') * 4)
-        .inputs(ore('plateTin') * 2)
-        .inputs(ore('chest') * 1)
-        .inputs(ore('craftingToolButcheryKnife') * 1)
-        .inputs(metaitem('robot.arm.lv') * 1)
-        .inputs(ore('batteryLv'))
-        .fluidInputs(fluid(key) * val)
-        .outputs(metaitem('drone.lv').withNbt(["Charge": 0L]))
-        .EUt(Globals.voltAmps[1])
-        .duration(80)
-        .buildAndRegister()
-
-}
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(metaitem('electric.motor.lv') * 4)
+    .inputs(ore('rotorSteel') * 4)
+    .inputs(ore('stickSteel') * 4)
+    .inputs(ore('plateTin') * 2)
+    .inputs(ore('chest') * 1)
+    .inputs(ore('craftingToolButcheryKnife') * 1)
+    .inputs(metaitem('robot.arm.lv') * 1)
+    .inputs(ore('batteryLv'))
+    .fluidInputs(fluid('soldering_alloy') * 72)
+    .outputs(metaitem('drone.lv').withNbt(["Charge": 0L]))
+    .EUt(Globals.voltAmps[1])
+    .duration(80)
+    .buildAndRegister()
 
 DRONE_PAD.recipeBuilder()
     .inputs(metaitem('drone.lv').withNbt(["Charge": 10000L]))

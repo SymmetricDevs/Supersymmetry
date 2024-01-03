@@ -8,13 +8,13 @@ import gregtech.api.unification.ore.OrePrefix;
 
 //IQuenchingFluid(cold fluid, hot fluid, amount, duration, isInert, generateHeatRadiatorRecipes)
 
-IQuenchingFluid Water = new IQuenchingFluid("water", 'warm_water', 1000, 100.0, false, true);
-IQuenchingFluid Air = new IQuenchingFluid('air', 'hot_air', 10000, 1000.0, false, false);
-IQuenchingFluid CompressedAir = new IQuenchingFluid('hp_air', 'hot_hp_air', 5000, 500.0, false, true);
-IQuenchingFluid Nitrogen = new IQuenchingFluid('nitrogen', 'hot_nitrogen', 10000, 500.0, true, false);
-IQuenchingFluid CompressedNitrogen = new IQuenchingFluid('hp_nitrogen', 'hot_hp_nitrogen', 5000, 500.0, true, true);
-IQuenchingFluid SaltWater = new IQuenchingFluid('salt_water', 'warm_salt_water', 1000, 150.0, false, false);
-IQuenchingFluid Brine = new IQuenchingFluid('brine', 'warm_brine', 1000, 150.0, false, false);
+IQuenchingFluid Water = new IQuenchingFluid("water", 'warm_water', 1000, 100.0, false);
+IQuenchingFluid Air = new IQuenchingFluid('air', 'hot_air', 10000, 1000.0, false);
+IQuenchingFluid CompressedAir = new IQuenchingFluid('hp_air', 'hot_hp_air', 5000, 500.0, false);
+IQuenchingFluid Nitrogen = new IQuenchingFluid('nitrogen', 'hot_nitrogen', 10000, 500.0, true);
+IQuenchingFluid CompressedNitrogen = new IQuenchingFluid('hp_nitrogen', 'hot_hp_nitrogen', 5000, 500.0, true);
+IQuenchingFluid SaltWater = new IQuenchingFluid('salt_water', 'warm_salt_water', 1000, 150.0, false);
+IQuenchingFluid Brine = new IQuenchingFluid('brine', 'warm_brine', 1000, 150.0, false);
 
 //Material name, blast furnace temperature
 
@@ -162,16 +162,4 @@ for (entry in fluidMap) {
                 .buildAndRegister();
     }
 }
-
-for (fluid in IQuenchingFluid.quenching_fluids) {
-    if (!fluid.hasRecipe()){
-        recipemap('radiator').recipeBuilder()
-                .fluidInputs(liquid(fluid.getHotFluid())*fluid.amount)
-                .fluidOutputs(liquid(fluid.getColdFluid())*fluid.amount)
-                .duration(400)
-                .EUt(8)
-                .buildAndRegister();
-    }
-}
-
 

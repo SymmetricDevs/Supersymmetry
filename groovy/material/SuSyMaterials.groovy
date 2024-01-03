@@ -105,7 +105,7 @@ class SuSyMaterials {
         public static Material Hydroxyapatite;
         public static Material Rhodochrosite;
         public static Material Carnotite;
-        public static Material AlluvialPlatinum;
+        public static Material AlluvialPGMSand;
 
         // Deposits for scanning
 
@@ -816,7 +816,6 @@ class SuSyMaterials {
         public static Material CeriumIVOxide;
         public static Material CeriumIIIOxide;
         public static Material IronSulfate;
-        public static Material CopperChloride;
         public static Material RutheniumIVOxide;
         public static Material Trichlorosilane;
         public static Material PurifiedTrichlorosilane;
@@ -988,7 +987,7 @@ class SuSyMaterials {
         public static Material Polycarbonate;
         public static Material SodiumNitrite;
         public static Material SodiumOxide;
-        public static Material HexachloroplatinicAcidSolution;
+        public static Material AlluvialPGMSolution;
         public static Material SodiumHexachloroplatinateSolution;
         public static Material AmmoniumHexachloroplatinate;
         public static Material DilutedCopperSulfateSolution;
@@ -1039,8 +1038,8 @@ class SuSyMaterials {
         public static Material AmmoniumThiocyanate;
         public static Material CalciumZirconate;
         public static Material HydrogenSilsesquioxane;
-        public static Material CementedHexachloroplatinicAcidSolution;
-        public static Material Ferroplatinum;
+        public static Material CementedAlluvialPGMSolution;
+        public static Material AlluvialPGM;
         public static Material Diamminedichloropalladium;
         public static Material NickelIINitrateSolution;
         public static Material FerroniobiumTantalum;
@@ -1071,6 +1070,8 @@ class SuSyMaterials {
         public static Material ImpureStrontiumSulfide;
         public static Material DilutedAceticAcid;
         public static Material CobaltIIAcetate;
+        public static Material PotassiumPyrosulfate;
+        public static Material IronIIINitrateSolution;
         public static Material ManganeseIIChloride;
         public static Material ChloroplatinicAcidSolution;
         public static Material MolybdenumDisulfide;
@@ -1162,19 +1163,19 @@ class SuSyMaterials {
         public static Material PlatinumMotherLiquor;
         public static Material AmmoniacalSodiumBicarbonateSolution;
         public static Material VeryDilutedSodiumSulfateSolution;
-        public static Material MolybdenicAcidSolution;
+        public static Material MolybdicAcidSolution;
         public static Material NeutralizedAmmoniumMolybdateSolution;
         public static Material SublimatedMolybdenumTrioxide;
         public static Material AmmoniumThiocyanateSolution;
-        public static Material PalladiumMotherLiquor;
-        public static Material DivalentPalladiumSolution;
+        public static Material AlluvialPalladiumMotherLiquor;
+        public static Material AlluvialPlatinumMotherLiquor;
+        public static Material AlluvialDivalentPalladiumSolution;
         public static Material TantalumFluorideSolution;
         public static Material AmmoniumPerrhenateSolution;
         public static Material AluminiumChlorideSolution;
         public static Material CrudeManganeseIISulfateSolution;
         public static Material ManganeseIISulfateSolution;
         public static Material DilutedSodiumSulfiteSolution;
-        public static Material SodiumHexafluoroantimonateSolution;
         public static Material EGlass;
         public static Material TrichlorosilaneSolution;
         public static Material ImpureBariumSulfideSolution;
@@ -1323,7 +1324,7 @@ class SuSyMaterials {
         public static Material PolymethylMethacrylateSolution;
         public static Material PolystyreneSulfonate;
         public static Material EthylenediaminetetraaceticAcid;
-        public static Material TetrasodiumEthylenediaminetetraaceticAcid;
+        public static Material TetrasodiumEthylenediaminetetraacetate;
         public static Material Urea;
         public static Material Diiodobenzene;
         public static Material IsophthalicAcid;
@@ -1482,6 +1483,7 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalate;
         public static Material WetTerephthalicAcid;
         public static Material WetIsophthalicAcid;
+        public static Material CalciumAcetate;
         public static Material EthyleneVinylAcetate;
         public static Material EthyleneIsobutyleneVinylAcetate;
         public static Material ChlorosulfuricAcid;
@@ -1581,10 +1583,8 @@ class SuSyMaterials {
         public static Material TwoEthylanthraquinoneSolution;
         public static Material AcetamideSolution;
         public static Material HydrazineSolution;
-        public static Material EthylenediamineSolution;
-        public static Material DeacidifiedEthylenediamine;
         public static Material EthylenediaminetetraaceticAcidSolution;
-        public static Material TetrasodiumEthylenediaminetetraaceticAcidSolution;
+        public static Material TetrasodiumEthylenediaminetetraacetateSolution;
         public static Material UreaSolution;
         public static Material DiiodobenzeneSolution;
         public static Material ImpureFourFourOxydianiline;

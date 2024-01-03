@@ -233,6 +233,7 @@ CSTR.recipeBuilder()
 .buildAndRegister()
 
 BCR.recipeBuilder()
+.circuitMeta(1)
 .fluidInputs(fluid('hydrogen_chloride') * 50)
 .fluidInputs(fluid('water') * 50)
 .fluidOutputs(fluid('hydrochloric_acid') * 50)
@@ -240,10 +241,27 @@ BCR.recipeBuilder()
 .EUt(7)
 .buildAndRegister()
 
+BCR.recipeBuilder()
+.circuitMeta(2)
+.fluidInputs(fluid('hydrogen_chloride') * 50)
+.fluidInputs(fluid('water') * 100)
+.fluidOutputs(fluid('diluted_hydrochloric_acid') * 100)
+.duration(1)
+.EUt(7)
+.buildAndRegister()
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('hydrochloric_acid') * 50)
+.fluidInputs(fluid('water') * 50)
+.fluidOutputs(fluid('diluted_hydrochloric_acid') * 100)
+.duration(1)
+.EUt(7)
+.buildAndRegister()
+
 //Chlorine
 
 FLUIDIZEDBR.recipeBuilder()
-        .notConsumable(metaitem('dustCopperChloride'))
+        .notConsumable(metaitem('dustCopperIiChloride'))
         .fluidInputs(fluid('hydrogen_chloride') * 1000)
         .fluidInputs(fluid('oxygen') * 500)
         .fluidOutputs(fluid('chlorine') * 1000)
@@ -317,24 +335,6 @@ ROASTER.recipeBuilder()
 .buildAndRegister()
 
 // Fe2O3
-
-ROASTER.recipeBuilder()
-        .fluidInputs(fluid('water') * 4000)
-        .inputs(ore('dustIron') * 3)
-        .outputs(metaitem('dustIronTwoThreeOxide') * 7)
-        .fluidOutputs(fluid('hydrogen') * 8000)
-        .duration(160)
-        .EUt(60)
-        .buildAndRegister()
-
-ROASTER.recipeBuilder()
-        .fluidInputs(fluid('water') * 4000)
-        .inputs(ore('dustHighPurityIron') * 3)
-        .outputs(metaitem('dustPurifiedIronTwoThreeOxide') * 7)
-        .fluidOutputs(fluid('hydrogen') * 8000)
-        .duration(160)
-        .EUt(60)
-        .buildAndRegister()
 
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('water') * 4000)
@@ -478,20 +478,29 @@ DISTILLERY.recipeBuilder()
 .buildAndRegister()
 
 ROASTER.recipeBuilder()
-.fluidInputs(fluid('sodium_bisulfate_solution') * 1000)
-.inputs(ore('dustSalt') * 2)
-.fluidOutputs(fluid('hydrochloric_acid') * 1000)
+.inputs(ore('dustSodiumBisulfate') * 14)
 .outputs(metaitem('dustSodiumSulfate') * 7)
+.fluidOutputs(fluid('steam') * 1000)
+.fluidOutputs(fluid('sulfur_trioxide') * 1000)
 .duration(60)
 .EUt(30)
 .buildAndRegister()
 
 ROASTER.recipeBuilder()
-.fluidInputs(fluid('potassium_bisulfate_solution') * 1000)
-.inputs(ore('dustSalt') * 2)
-.fluidOutputs(fluid('hydrogen_chloride') * 1000)
+.circuitMeta(1)
+.inputs(ore('dustPotassiumBisulfate') * 14)
+.outputs(metaitem('dustPotassiumSulfate') * 7)
 .fluidOutputs(fluid('steam') * 1000)
-.outputs(metaitem('dustPotassiumSulfate'))
+.fluidOutputs(fluid('sulfur_trioxide') * 1000)
+.duration(60)
+.EUt(30)
+.buildAndRegister()
+
+ROASTER.recipeBuilder()
+.circuitMeta(2)
+.inputs(ore('dustPotassiumBisulfate') * 14)
+.outputs(metaitem('dustPotassiumPyrosulfate') * 11)
+.fluidOutputs(fluid('steam') * 1000)
 .duration(60)
 .EUt(30)
 .buildAndRegister()
@@ -719,6 +728,8 @@ DISTILLERY.recipeBuilder()
 // Soda Ash (Sodium Carbonate) Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('gtfo_sodium_carbonate_solution') * 1000])
 // Sodium Carbonate Solution * 1000
+mods.gregtech.blender.removeByInput(30, [metaitem('dustSodaAsh')], [fluid('water') * 1000])
+// Sodium Carbonate Solution * 1000
 mods.gregtech.mixer.removeByInput(30, [metaitem('dustSodaAsh')], [fluid('water') * 1000])
 // Dutched Chocolate Liquor * 1
 mods.gregtech.chemical_bath.removeByInput(540, [metaitem('gregtechfoodoption:chocolate_liquor_refined_crushed')], [fluid('gtfo_sodium_carbonate_solution') * 1000])
@@ -925,14 +936,6 @@ CSTR.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
-        .fluidInputs(fluid('diluted_sulfuric_acid') * 500)
-        .fluidOutputs(fluid('water') * 250)
-        .fluidOutputs(fluid('sulfuric_acid') * 250)
-        .duration(50)
-        .EUt(30)
-        .buildAndRegister()
-
 dyesLowercase = ["black", "red", "green", "brown", "blue", "purple", "cyan", "light_gray", "gray", "pink", "lime", "yellow", "light_blue", "magenta", "orange", "white"]
 dyesUppercase = ["Black", "Red", "Green", "Brown", "Blue", "Purple", "Cyan", "LightGray", "Gray", "Pink", "Lime", "Yellow", "LightBlue", "Magenta", "Orange", "White"]
 
@@ -1132,37 +1135,11 @@ ROASTER.recipeBuilder()
 
 MIXER.recipeBuilder()
 .fluidInputs(fluid('water') * 1000)
-.inputs(ore('dustIronIiiChloride') * 8)
+.inputs(ore('dustIronIiiChloride') * 4)
 .fluidOutputs(fluid('iron_iii_chloride_solution') * 1000)
 .duration(160)
 .EUt(30)
 .buildAndRegister()
-
-// Phosphoric acid from sulfuric acid? 
-
-    // Fluoroapatite route
-
-BR.recipeBuilder()
-    .fluidInputs(fluid('sulfuric_acid') * 5000)
-    .inputs(ore('dustFluorapatite') * 21)
-    .fluidOutputs(fluid('phosphoric_acid') * 3000)
-    .fluidOutputs(fluid('hydrogen_fluoride') * 1000)
-    .outputs(metaitem('dustCalciumSulfate') * 30)
-    .duration(120)
-    .EUt(30)
-    .buildAndRegister()
-
-    // Apatite route
-
-BR.recipeBuilder()
-    .fluidInputs(fluid('sulfuric_acid') * 5000)
-    .inputs(ore('dustApatite') * 21)
-    .fluidOutputs(fluid('phosphoric_acid') * 3000)
-    .fluidOutputs(fluid('hydrogen_chloride') * 1000)
-    .outputs(metaitem('dustCalciumSulfate') * 30)
-    .duration(120)
-    .EUt(30)
-    .buildAndRegister()
 
 // Fluoroantimonic Acid
 
@@ -1313,6 +1290,8 @@ REACTION_FURNACE.recipeBuilder()
         .duration(200)
         .EUt(480)
         .buildAndRegister()
+
+oreDict.add('dyeWhite', metaitem('dustTitaniumDioxide'))
 
 // Butyraldehyde
 
@@ -1646,7 +1625,7 @@ BR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-// Dichlorbenzene
+// Dichlorobenzene
 
 FBR.recipeBuilder()
 .fluidInputs(fluid('toluene') * 50)
@@ -1975,12 +1954,20 @@ DISTILLERY.recipeBuilder()
 .duration(100)
 .buildAndRegister()
 
+MIXER.recipeBuilder()
+.inputs(ore('dustPotassiumCarbonate') * 6)
+.fluidInputs(fluid('water') * 1000)
+.fluidOutputs(fluid('potassium_carbonate_solution') * 1000)
+.EUt(30)
+.duration(80)
+.buildAndRegister()
+
 BR.recipeBuilder()
+.inputs(ore('dustCalciumHydroxide') * 5)
 .fluidInputs(fluid('potassium_carbonate_solution') * 1000)
 .fluidInputs(fluid('water') * 1000)
-.inputs(ore('dustCalciumHydroxide') * 5)
-.fluidOutputs(fluid('potassium_hydroxide_solution') * 2000)
 .outputs(metaitem('dustCalcite') *  5)
+.fluidOutputs(fluid('potassium_hydroxide_solution') * 2000)
 .EUt(30)
 .duration(200)
 .buildAndRegister()
@@ -2513,6 +2500,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .fluidOutputs(fluid('phosphoric_acid') * 50)
     .fluidOutputs(fluid('phenol') * 50)
     .fluidOutputs(fluid('acetone') * 50)
+    .disableDistilleryRecipes()
     .duration(10)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
@@ -2947,31 +2935,6 @@ DISTILLATION_TOWER.recipeBuilder()
 
 // Amine oligomerization
 
-/*CSTR.recipeBuilder()
-        .fluidInputs(fluid('dichloroethane') * 50)
-        .fluidInputs(fluid('ammonia') * 100)
-        .fluidOutputs(fluid('ethylenediamine_solution') * 50)
-        .duration(10)
-        .EUt(30)
-        .buildAndRegister()
-
-DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('ethylenediamine_solution') * 1000)
-        .inputs(ore('dustSodiumHydroxide') * 6)
-        .fluidOutputs(fluid('deacidified_ethylenediamine') * 3000)
-        .duration(300)
-        .EUt(30)
-        .buildAndRegister()
-
-DISTILLATION_TOWER.recipeBuilder()
-        .fluidInputs(fluid('deacidified_ethylenediamine') * 3000)
-        .outputs(metaitem('dustSalt') * 2)
-        .fluidOutputs(fluid('ethylenediamine') * 1000)
-        .fluidOutputs(fluid('water') * 2000)
-        .duration(300)
-        .EUt(30)
-        .buildAndRegister()*/
-
 BR.recipeBuilder()
         .fluidInputs(fluid('dichloroethane') * 1525)
         .fluidInputs(fluid('ammonia') * 2425)
@@ -3235,28 +3198,29 @@ BR.recipeBuilder()
 
 // Tetrasodium EDTA
 LCR.recipeBuilder()
+        .inputs(ore('dustSodiumCyanide') * 12)
         .fluidInputs(fluid('ethylenediamine') * 1000)
         .fluidInputs(fluid('formaldehyde') * 4000)
-        .inputs(ore('dustSodiumCyanide') * 12)
         .fluidInputs(fluid('diluted_hydrochloric_acid') * 8000)
+        .outputs(metaitem('dustEthylenediaminetetraaceticAcid') * 32)
         .fluidOutputs(fluid('ammonia') * 4000)
-        .fluidOutputs(fluid('ethylenediaminetetraacetic_acid_solution') * 4000)
+        .fluidOutputs(fluid('wastewater') * 4000)
         .duration(300)
         .EUt(30)
         .buildAndRegister()
 
 BR.recipeBuilder()
-        .fluidInputs(fluid('ethylenediaminetetraacetic_acid_solution') * 1000)
-        .inputs(ore('dustSodiumHydroxide') * 3)
-        .fluidOutputs(fluid('tetrasodium_ethylenediaminetetraacetic_acid_solution') * 1000)
+        .inputs(ore('dustEthylenediaminetetraaceticAcid') * 36)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 4000)
+        .fluidOutputs(fluid('tetrasodium_ethylenediaminetetraacetate_solution') * 4000)
         .duration(300)
         .EUt(30)
         .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('tetrasodium_ethylenediaminetetraacetic_acid_solution') * 4000)
-        .fluidOutputs(fluid('salt_water') * 4000)
-        .outputs(metaitem('dustTetrasodiumEthylenediaminetetraaceticAcid') * 44)
+        .fluidInputs(fluid('tetrasodium_ethylenediaminetetraacetate_solution') * 4000)
+        .fluidOutputs(fluid('diluted_saltwater') * 8000)
+        .outputs(metaitem('dustTetrasodiumEthylenediaminetetraacetate') * 36)
         .duration(300)
         .EUt(30)
         .buildAndRegister()
@@ -3346,7 +3310,16 @@ ROASTER.recipeBuilder()
         .inputs(ore('dustSodiumNitrate') * 5)
         .outputs(metaitem('dustSodiumNitrite') * 4)
         .fluidOutputs(fluid('oxygen') * 1000)
-        .duration(60)
+        .duration(400)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .fluidInputs(fluid('sodium_nitrate') * 720)
+        .fluidInputs(fluid('lead') * 144)
+        .fluidOutputs(fluid('sodium_nitrite') * 576)
+        .outputs(metaitem('dustLeadOxide') * 2)
+        .duration(20)
         .EUt(30)
         .buildAndRegister()
 
@@ -3561,25 +3534,6 @@ DISTILLATION_TOWER.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-//BPA
-
-ION_EXCHANGE.recipeBuilder()
-        .fluidInputs(fluid('phenol') * 2000)
-        .fluidInputs(fluid('acetone') * 1000)
-        .notConsumable(metaitem('beads.ag_fifty_w_x_eight'))
-        .fluidOutputs(fluid('water') * 1000)
-        .outputs(metaitem('dustBisphenolA'))
-        .EUt(480)
-        .duration(100)
-        .buildAndRegister()
-
-FLUID_EXTRACTOR.recipeBuilder()
-        .inputs(ore('dustBisphenolA'))
-        .fluidOutputs(fluid('bisphenol_a') * 1000)
-        .EUt(30)
-        .duration(100)
-        .buildAndRegister()
-
 //ALON
 
 TUBE_FURNACE.recipeBuilder()
@@ -3653,6 +3607,7 @@ BR.recipeBuilder()
         .inputs(ore('dustAluminium'))
         .inputs(ore('dustSodium') * 3)
         .fluidInputs(fluid('chloromethane') * 3000)
+        .outputs(metaitem('dustSalt') * 6)
         .fluidOutputs(fluid('trimethylaluminium') * 1000)
         .EUt(1920)
         .duration(60)
@@ -3678,8 +3633,6 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 //DISTILLATION REORDERING
-
-mods.gregtech.distillation_tower.removeByInput(30, null, [fluid('diluted_sulfuric_acid') * 500])
 
 DISTILLATION_TOWER.recipeBuilder()
         .fluidInputs(fluid('diluted_sulfuric_acid') * 500)
@@ -4053,7 +4006,7 @@ DISTILLERY.recipeBuilder()
         .buildAndRegister()
 
 BR.recipeBuilder()
-        .inputs(ore('dustTriphenylPhosphine'))
+        .inputs(ore('dustTriphenylphosphine'))
         .fluidInputs(fluid('phosphorus_trichloride') * 500)
         .fluidOutputs(fluid('chlorodiphenylphosphine') * 1500)
         .duration(200)
@@ -4181,6 +4134,42 @@ BR.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+//Acetone from dry distillation
+
+BR.recipeBuilder()
+        .inputs(ore('dustCalcite') * 5) // CaCO3 + 2 CH3COOH --> Ca(CH3COO)2 + H2O + CO2
+        .fluidInputs(fluid('acetic_acid') * 2000)
+        .fluidOutputs(fluid('dissolved_calcium_acetate') * 1000)
+        .fluidOutputs(fluid('carbon_dioxide') * 1000)
+        .duration(1800)
+        .EUt(16)
+        .buildAndRegister()
+		
+BR.recipeBuilder()
+        .inputs(ore('dustQuicklime') * 2) // CaO + 2 CH3COOH --> Ca(CH3COO)2 + H2O
+        .fluidInputs(fluid('acetic_acid') * 2000)
+        .fluidOutputs(fluid('dissolved_calcium_acetate') * 1000)
+        .duration(1800)
+        .EUt(16)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('dissolved_calcium_acetate') * 1000)
+        .outputs(metaitem('dustCalciumAcetate') * 15)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(20)
+        .EUt(16)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustCalciumAcetate') * 15)
+        .outputs(metaitem('dustQuicklime') * 2)
+        .fluidOutputs(fluid('carbon_dioxide') * 1000)
+        .fluidOutputs(fluid('acetone') * 1000)
+        .duration(600)
+        .EUt(30)
+        .buildAndRegister()
+        
 // Ethylbenzene
 
 CSTR.recipeBuilder()

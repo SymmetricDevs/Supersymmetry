@@ -302,23 +302,28 @@ crafting.replaceShaped('quark:chain', item('quark:chain') * 3, [
     [null, null, ore('ringIron')]
 ])
 
-crafting.replaceShaped('minecraft:torchLig', item('minecraft:torch') *2, [
+crafting.replaceShaped('minecraft:torchLig', item('minecraft:torch') * 2, [
     [metaitem('gemLignite')],
     [ore('stickWood')]
 ])
 
-crafting.replaceShaped('minecraft:torchLigDust', item('minecraft:torch') *2, [
+crafting.replaceShaped('minecraft:torchLigDust', item('minecraft:torch') * 2, [
     [metaitem('dustLignite')],
     [ore('stickWood')]
 ])
 
-crafting.replaceShaped('minecraft:torchAnth', item('minecraft:torch') *8, [
+crafting.replaceShaped('minecraft:torchAnth', item('minecraft:torch') * 8, [
     [metaitem('gemAnthracite')],
     [ore('stickWood')]
 ])
 
-crafting.replaceShaped('minecraft:torchAnthDust', item('minecraft:torch') *8, [
+crafting.replaceShaped('minecraft:torchAnthDust', item('minecraft:torch') * 8, [
     [metaitem('dustAnthracite')],
+    [ore('stickWood')]
+])
+
+crafting.addShaped('minecraft:torchCarbonDust', item('minecraft:torch') * 8, [
+    [metaitem('dustCarbon')],
     [ore('stickWood')]
 ])
 
@@ -642,19 +647,17 @@ crafting.replaceShaped('minecraft:stone_slab', item('minecraft:stone_slab') * 6,
 		[null, null, null]
 ])
 
-Globals.solders.each { key, val ->
-	recipemap('assembler').recipeBuilder()
-			.inputs([
-					metaitem('platePolytetrafluoroethylene') * 2,
-					metaitem('plateStainlessSteel'),
-					metaitem('ringStainlessSteel') * 2
-			])
-			.fluidInputs(fluid(key) * val)
-			.outputs(item('minecraft:elytra'))
-			.duration(200)
-			.EUt(240)
-			.buildAndRegister();
-}
+recipemap('assembler').recipeBuilder()
+        .inputs([
+                metaitem('platePolytetrafluoroethylene') * 2,
+                metaitem('plateStainlessSteel'),
+                metaitem('ringStainlessSteel') * 2
+        ])
+        .fluidInputs(fluid('soldering_alloy') * 72)
+        .outputs(item('minecraft:elytra'))
+        .duration(200)
+        .EUt(240)
+        .buildAndRegister();
 
 crafting.replaceShaped('minecraft:leather_helmet', item('minecraft:leather_helmet'), [
 		[metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],

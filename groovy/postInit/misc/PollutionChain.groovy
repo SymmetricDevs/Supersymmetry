@@ -93,11 +93,6 @@ SMOKE_STACK.recipeBuilder()
         .buildAndRegister()
 
 SMOKE_STACK.recipeBuilder()
-        .fluidInputs(fluid('coal_gas') * 500)
-        .duration(20)
-        .buildAndRegister()
-
-SMOKE_STACK.recipeBuilder()
         .fluidInputs(fluid('nitrosyl_chloride') * 500)
         .duration(10)
         .buildAndRegister()

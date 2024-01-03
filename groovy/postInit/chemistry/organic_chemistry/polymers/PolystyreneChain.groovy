@@ -9,14 +9,6 @@ POLYMERIZATION = recipemap('polymerization_tank')
 
 // Styrene 
 
-DISTILLERY.recipeBuilder()
-    .fluidInputs(fluid('ammonium_chloride_solution') * 1000)
-    .outputs(metaitem('dustAmmoniumChloride') * 6)
-    .fluidOutputs(fluid('water') * 1000)
-    .duration(120)
-    .EUt(30)
-    .buildAndRegister()
-
 FBR.recipeBuilder()
     .fluidInputs(fluid('ethylbenzene') * 50)
     .fluidInputs(fluid('steam') * 50)

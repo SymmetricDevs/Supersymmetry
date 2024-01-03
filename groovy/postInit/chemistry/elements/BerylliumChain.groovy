@@ -204,7 +204,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 
 //BERYLLIUM FLUORIDE ROUTE (TAKES LONGER, MV)
 BR.recipeBuilder()
-        .fluidInputs(fluid('hexafluorosilicic_acid') * 9)
+        .fluidInputs(fluid('hexafluorosilicic_acid') * 1000)
         .fluidInputs(fluid('ammonia') * 6000)
         .fluidInputs(fluid('distilled_water') * 2000)
         .outputs(metaitem('dustSiliconDioxide') * 3)

@@ -20,8 +20,6 @@ CLARIFIER = recipemap('clarifier')
 
 //REMOVAL
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustGalena')], [fluid('oxygen') * 3000])
-// Bismuth Dust * 3
-mods.gregtech.centrifuge.removeByInput(30, null, [fluid('decoppered_betts_lead') * 1000])
 
 //OPTIONAL FLOTATION
 //GALENA
@@ -328,9 +326,6 @@ for (carbon in CarbonGlobals.sources) {
                 .buildAndRegister()
     }
 }
-
-// Lead Dust * 1
-mods.gregtech.centrifuge.removeByInput(30, null, [fluid('dezinced_lead') * 1000])
 
 //SILVER REMOVAL (PARKES PROCESS)
 CENTRIFUGE.recipeBuilder()
