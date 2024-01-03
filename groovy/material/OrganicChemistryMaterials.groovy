@@ -2430,7 +2430,7 @@ public class OrganicChemistryMaterials {
                 .color(0xa31a5c)
                 .build();
 
-        CalciumAcetate = new Material.Builder(15307, SuSyUtility.susyId('calcium_acetate'))
+        CalciumAcetate = new Material.Builder(15387, SuSyUtility.susyId('calcium_acetate'))
                 .dust()
                 .components(Calcium, 1, Carbon, 4, Hydrogen, 6, Oxygen, 4)
                 .color(0xe3dcc8)
