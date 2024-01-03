@@ -1703,11 +1703,7 @@ public class FirstDegreeMaterials{
                 .color(0x2c733a)
                 .build();
 
-        ZincOxide = new Material.Builder(8346, SuSyUtility.susyId("zinc_oxide"))
-                .dust()
-                .components(Zinc, 1, Oxygen, 1)
-                .color(0xFFFFF5)
-                .build();
+        //FREE ID: 8346
 
         CopperDross = new Material.Builder(8347, SuSyUtility.susyId('copper_dross'))
                 .dust()
@@ -1788,11 +1784,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        DecarburizedAir = new Material.Builder(8360, SuSyUtility.susyId('decarburized_air'))
-                .fluid(FluidTypes.GAS)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
-                .color(0x90bbe0)
-                .build();
+        // FREE ID: 8360
 
         CrudeTin = new Material.Builder(8361, SuSyUtility.susyId('crude_tin'))
                 .fluid()
@@ -1860,11 +1852,7 @@ public class FirstDegreeMaterials{
                 .iconSet(SHINY)
                 .build();
 
-        DecarburizedAir = new Material.Builder(8371, SuSyUtility.susyId('decarburized_air'))
-                .fluid(FluidTypes.GAS)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 1)
-                .color(0x90bbe0)
-                .build();
+        // FREE ID: 8371
 
         BariumChloride = new Material.Builder(8372, SuSyUtility.susyId('barium_chloride'))
                 .dust()
@@ -2634,13 +2622,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        Diamminedichloropalladium = new Material.Builder(8485, SuSyUtility.susyId('diamminedichloropalladium'))
-                .dust()
-                .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
-                .colorAverage()
-                .build();
-
-        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
+        // FREE ID: 8485
 
         UltramaficTailingSlurry = new Material.Builder(8486, SuSyUtility.susyId('ultramafic_tailing_slurry'))
                 .fluid()
@@ -2981,17 +2963,9 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        ZincOxide = new Material.Builder(8535, SuSyUtility.susyId("zinc_oxide"))
-                .dust()
-                .components(Zinc, 1, Oxygen, 1)
-                .color(0xFFFFF5)
-                .build();
+        // FREE ID: 8535
                 
-        HydrogenSilsesquioxane = new Material.Builder(8536, SuSyUtility.susyId('hydrogen_silsesquioxane'))
-                .dust()
-                .color(0xC7C0CB)
-                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
-                .build()
+        // FREE ID: 8536
 
         Ferroplatinum = new Material.Builder(8537, SuSyUtility.susyId('ferroplatinum'))
                 .dust().ingot()
@@ -3210,20 +3184,9 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        Ferroplatinum = new Material.Builder(8570, SuSyUtility.susyId('ferroplatinum'))
-                .dust().ingot()
-                .flags(DISABLE_DECOMPOSITION)
-                .components(Platinum, 3, Iron, 1)
-                .colorAverage()
-                .build();
+        // FREE ID: 8570
 
-        Diamminedichloropalladium = new Material.Builder(8571, SuSyUtility.susyId('diamminedichloropalladium'))
-                .dust()
-                .components(Palladium, 1, Nitrogen, 2, Hydrogen, 6, Chlorine, 2)
-                .colorAverage()
-                .build();
-
-        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
+        // FREE ID: 8571
 
         ImpureBariumSulfide = new Material.Builder(8572, SuSyUtility.susyId("impure_barium_sulfide"))
                 .dust()

@@ -1050,25 +1050,16 @@ public class UnknownCompositionMaterials {
                 .color(0x662e2e)
                 .build();
 
-        SuEight = new Material.Builder(4199, SuSyUtility.susyId('su_eight'))
-                .fluid()
-                .color(0x11915c)
-                .build();
+        //FREE ID: 4199
 
-        NineTwentyOneFattyAcidMixture = new Material.Builder(4200, SuSyUtility.susyId('nine_twenty_one_fatty_acid_mixture'))
-                .fluid()
-                .color(0xa37b1d)
-                .build();
+        //FREE ID: 4200
 
         SiliconDioxideSlurry = new Material.Builder(4201, SuSyUtility.susyId('silicon_dioxide_slurry'))
                 .fluid()
                 .color(0x69675b)
                 .build();
 
-        NineTwentyOneAldehydeMixture = new Material.Builder(4202, SuSyUtility.susyId('nine_twenty_one_aldehyde_mixture'))
-                .fluid()
-                .color(0x911da3)
-                .build();
+        //FREE ID: 4202
 
         VTSlag = new Material.Builder(4203, SuSyUtility.susyId('vt_slag'))
                 .dust()
@@ -1200,10 +1191,7 @@ public class UnknownCompositionMaterials {
                 .color(0x9c7f73)
                 .build();
 
-        EightTwentyOlefinMixture = new Material.Builder(4229, SuSyUtility.susyId('eight_twenty_olefin_mixture'))
-                .fluid()
-                .color(0xa31d53)
-                .build();
+        //FREE ID: 4229
 
         ScrubbedTungstenExtract = new Material.Builder(4230, SuSyUtility.susyId('scrubbed_tungsten_extract'))
                 .fluid()
@@ -1489,57 +1477,7 @@ public class UnknownCompositionMaterials {
                 .color(0xadad45)
                 .build();
 
-        TungstenExtractionMixture = new Material.Builder(4284, SuSyUtility.susyId('tungsten_extraction_mixture'))
-                .fluid()
-                .color(0xbfb341)
-                .build();
-
-        TungstenExtract = new Material.Builder(4285, SuSyUtility.susyId('tungsten_extract'))
-                .fluid()
-                .color(0x9e7c2e)
-                .build();
-
-        ScrubbedTungstenExtract = new Material.Builder(4286, SuSyUtility.susyId('scrubbed_tungsten_extract'))
-                .fluid()
-                .color(0x85a825)
-                .build();
-
-        //FREE ID: 4287-4289
-
-        CopperMolybdeniteSlurry = new Material.Builder(4290, SuSyUtility.susyId('copper_molybdenite_slurry'))
-                .fluid()
-                .color(0x2e2419)
-                .build();
-
-        //FREE ID: 4291-4292
-
-        HafniumExtractionMixture = new Material.Builder(4293, SuSyUtility.susyId('hafnium_extraction_mixture'))
-                .fluid()
-                .color(0xc1e3d3)
-                .build();
-
-        HafniumExtract = new Material.Builder(4294, SuSyUtility.susyId('hafnium_extract'))
-                .fluid()
-                .color(0xc1e3d9)
-                .build();
-
-        AminatedEthyleneMixture = new Material.Builder(4295, SuSyUtility.susyId('aminated_ethylene_mixture'))
-      		.fluid()
-      		.color(0xb9a9db)
-      		.build();
-             
-      	NeutralizedAminatedEthyleneMixture = new Material.Builder(4296, SuSyUtility.susyId('neutralized_aminated_ethylene_mixture'))
-      		.fluid()
-      		.color(0x8a819c)
-      		.build();
-
-        //FREE ID: 4297-4301
-
-        RoastedPyrochlore = new Material.Builder(4302, SuSyUtility.susyId('roasted_pyrochlore'))
-                .dust()
-                .color(0x230300)
-                .iconSet(DULL)
-                .build();
+        //FREE ID: 4284-4302
 
         DigestedPyrochlore = new Material.Builder(4303, SuSyUtility.susyId('digested_pyrochlore'))
                 .dust()
@@ -1547,37 +1485,7 @@ public class UnknownCompositionMaterials {
                 .iconSet(QUARTZ)
                 .build();
 
-        ImpureNiobiumPentachloride = new Material.Builder(4304, SuSyUtility.susyId('impure_niobium_pentachloride'))
-                .fluid()
-                .color(0xb0c8b8)
-                .build();
-
-        //FREE ID: 4305-4309
-
-        ImpureFluoroniobicAcidSolution = new Material.Builder(4310, SuSyUtility.susyId('impure_fluoroniobic_acid_solution'))
-                .fluid()
-                .color(0x502b75)
-                .build();
-
-        NiobiumRichExtract = new Material.Builder(4311, SuSyUtility.susyId('niobium_rich_extract'))
-                .fluid()
-                .color(0x4a2894)
-                .build();
-
-        MetalSulfateWaste = new Material.Builder(4312, SuSyUtility.susyId('metal_sulfate_waste'))
-                .fluid()
-                .color(0x947728)
-                .build();
-
-        ScrubbedNiobiumRichExtract = new Material.Builder(4313, SuSyUtility.susyId('scrubbed_niobium_rich_extract'))
-                .fluid()
-                .color(0x5a34ad)
-                .build();
-
-        DilutedTantalumExtract = new Material.Builder(4314, SuSyUtility.susyId('diluted_tantalum_extract'))
-                .fluid()
-                .color(0xd99152)
-                .build();
+        //FREE ID: 4304-4314
 
         FluoroniobicAcidSolution = new Material.Builder(4315, SuSyUtility.susyId('fluoroniobic_acid_solution'))
                 .fluid()
@@ -1596,15 +1504,7 @@ public class UnknownCompositionMaterials {
                 .color(0x753a10)
                 .build();
 
-        TantalumRichExtract = new Material.Builder(4323, SuSyUtility.susyId('tantalum_rich_extract'))
-                .fluid()
-                .color(0x9c5625)
-                .build();
-
-        ScrubbedTantalumRichExtract = new Material.Builder(4324, SuSyUtility.susyId('scrubbed_tantalum_rich_extract'))
-                .fluid()
-                .color(0xb56731)
-                .build();
+        // FREE ID: 4323-4324
 
         HydrofluoricAmmoniaMixture = new Material.Builder(4325, SuSyUtility.susyId('hydrofluoric_ammonia_mixture'))
                 .fluid()
@@ -1621,54 +1521,7 @@ public class UnknownCompositionMaterials {
                 .color(0x384b75)
                 .build();
 
-        ScrubbedPerrhenateSolution = new Material.Builder(4328, SuSyUtility.susyId('scrubbed_perrhenate_solution'))
-                .fluid()
-                .color(0x3c70bd)
-                .build();
-
-        AlphaOlefinMixture = new Material.Builder(4329, SuSyUtility.susyId('alpha_olefin_mixture'))
-                .fluid()
-                .color(0xd15298)
-                .build();
-                
-        //FREE ID: 4330-4332
-        
-        HZSMFive = new Material.Builder(4333, SuSyUtility.susyId('hzsm_five'))
-                .dust()
-                .flags(GENERATE_CATALYST_BED)
-                .color(0x75a118)
-                .build();
-
-        FunctionalizableCrosslinkedPolystyrene = new Material.Builder(4334, SuSyUtility.susyId('functionalizable_crosslinked_polystyrene'))
-                .ingot().fluid()
-                .flags(GENERATE_ROUND)
-                .color(0x8689cf)
-                .build();
-
-        TantalumExtract = new Material.Builder(4335, SuSyUtility.susyId('tantalum_extract'))
-                .fluid()
-                .color(0xc97328)
-                .build();
-
-        BisphenolBrominationCatalyst = new Material.Builder(4336, SuSyUtility.susyId('bisphenol_bromination_catalyst'))
-                .dust()
-                .color(0xbd800f)
-                .build();
-
-        ImpureBrominatedBisphenolEmulsion = new Material.Builder(4337, SuSyUtility.susyId('impure_brominated_bisphenol_emulsion'))
-                .fluid()
-                .color(0x502d0a)
-                .build();
-
-        ImpureBrominatedBisphenolSolution = new Material.Builder(4338, SuSyUtility.susyId('impure_brominated_bisphenol_solution'))
-                .fluid()
-                .color(0x78410a)
-                .build();
-
-        BisphenolANovolacEpoxy = new Material.Builder(4339, SuSyUtility.susyId('bisphenol_a_novolac_epoxy'))
-                .dust()
-                .color(0xa87e54)
-                .build();
+        // FREE ID: 4328-4339
 
         SulfoniumPreparationMixture = new Material.Builder(4340, SuSyUtility.susyId('sulfonium_preparation_mixture'))
                 .fluid()
@@ -1680,20 +1533,7 @@ public class UnknownCompositionMaterials {
                 .color(0x11915c)
                 .build();
 
-        HydrodealkylatedTolueneMixture = new Material.Builder(4342, SuSyUtility.susyId('hydrodealkylated_toluene_mixture'))
-                .fluid()
-                .color(0x4a320a)
-                .build();
-
-        AcidicHydrogenSilsesquioxaneSolution = new Material.Builder(4343, SuSyUtility.susyId("acidic_hydrogen_silsesquioxane_solution"))
-                .fluid()
-                .color(0xb086aa)
-                .build();
-
-        HydrogenSilsesquioxaneSolution = new Material.Builder(4344, SuSyUtility.susyId("hydrogen_silsesquioxane_solution"))
-                .fluid()
-                .color(0xa186b0)
-                .build();
+        // FREE ID: 4342-4344
 
         ImpureCelestineSlurry = new Material.Builder(4345, SuSyUtility.susyId("impure_celestine_slurry"))
                 .fluid()
