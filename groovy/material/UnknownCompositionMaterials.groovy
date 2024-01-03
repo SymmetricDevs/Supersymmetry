@@ -1840,10 +1840,90 @@ public class UnknownCompositionMaterials {
                 .color(0xf6f7f0)
                 .build();
 
-        WaferTreatmentAcid = new Material.Builder(4351, SuSyUtility.susyId("wafer_treatment_acid"))
+        AcidicDinitrobenzeneMixture = new Material.Builder(4351, SuSyUtility.susyId("acidic_dinitrobenzene_mixture"))
                 .fluid(FluidTypes.ACID)
-                .components(HydrochloricAcid, 9, HydrofluoricAcid, 9, AceticAcid, 2)
-                .color(0x3e7d68)
+                .fluidTemp(363)
+                .color(0x255563)
+                .build();
+
+        AntistaticAdditive = new Material.Builder(4352, SuSyUtility.susyId("antistatic_additive"))
+                .fluid()
+                .color(0xd1cc8e)
+                .build();
+
+        AntifoamingAdditive = new Material.Builder(4353, SuSyUtility.susyId("antifoaming_additive"))
+                .fluid()
+                .color(0x597275)
+                .build();
+
+        DiisopropylParaPhenylenediamineSolution = new Material.Builder(4354, SuSyUtility.susyId('diisopropyl_para_phenylenediamine_solution'))
+                .fluid()
+                .color(0x189477)
+                .build();
+
+        PropanolamineMix = new Material.Builder(4355, SuSyUtility.susyId('propanolamine_mix'))
+                .fluid()
+                .color(0x4cb522)
+                .build();
+
+        LubricityAdditive = new Material.Builder(4356, SuSyUtility.susyId("lubricity_additive"))
+                .fluid()
+                .color(0xab8f61)
+                .build();
+
+        MetalDeactivator = new Material.Builder(4357, SuSyUtility.susyId('metal_deactivator'))
+                .fluid()
+                .color(0x9b34a8)
+                .build();
+
+        IgnitionImprover = new Material.Builder(4358, SuSyUtility.susyId('ignition_improver'))
+                .fluid()
+                .color(0x8ede6f)
+                .build();
+
+        ColdFlowImprover = new Material.Builder(4359, SuSyUtility.susyId('cold_flow_improver'))
+                .fluid()
+                .color(0x1c32a3)
+                .build();
+
+        CorrosionInhibitor = new Material.Builder(4360, SuSyUtility.susyId('corrosion_inhibitor'))
+                .fluid()
+                .color(0x8a633a)
+                .build();
+
+        MidgradeDiesel = new Material.Builder(4361, SuSyUtility.susyId('midgrade_diesel'))
+                .fluid()
+                .color(0xc4a535)
+                .build();
+
+        PremiumDiesel = new Material.Builder(4362, SuSyUtility.susyId('premium_diesel'))
+                .fluid()
+                .color(0xd1aa1d)
+                .build();
+
+        SupremeDiesel = new Material.Builder(4363, SuSyUtility.susyId('supreme_diesel'))
+                .fluid()
+                .color(0xdb9a16)
+                .build();
+
+        MidgradeKerosene = new Material.Builder(4364, SuSyUtility.susyId('midgrade_kerosene'))
+                .fluid()
+                .color(0xa8a44a)
+                .build();
+
+        PremiumKerosene = new Material.Builder(4365, SuSyUtility.susyId('premium_kerosene'))
+                .fluid()
+                .color(0xbab541)
+                .build();
+
+        SupremeKerosene = new Material.Builder(4366, SuSyUtility.susyId('supreme_kerosene'))
+                .fluid()
+                .color(0xd9c148)
+                .build();
+
+        SAPOEleven = new Material.Builder(4367, SuSyUtility.susyId('sapo_eleven'))
+                .dust()
+                .color(0x91834e)
                 .build();
                 
         AcrylicPhotoemulsion = new Material.Builder(4352, SuSyUtility.susyId("acrylic_photoemulsion"))
@@ -1855,6 +1935,12 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0xa6a490)
                 .iconSet(ROUGH)
+                .build();
+
+        WaferTreatmentAcid = new Material.Builder(4354, SuSyUtility.susyId("wafer_treatment_acid"))
+                .fluid(FluidTypes.ACID)
+                .components(HydrochloricAcid, 9, HydrofluoricAcid, 9, AceticAcid, 2)
+                .color(0x3e7d68)
                 .build();
     }
 }
