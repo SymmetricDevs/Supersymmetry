@@ -123,6 +123,7 @@ eventManager.listen {
         customMetaItems.addItem(253, "beads.loaded_rhenium_ion_exchange")
 
         customMetaItems.addItem(300, "mylar")
+        customMetaItems.addItem(301, "spinneret")
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
@@ -204,9 +205,10 @@ eventManager.listen {
         //customMetaItems.addItem(4006, "battery.hv.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
         //customMetaItems.addItem(4007, "battery.ev.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
 
-
         customMetaItems.addItem(4101, "vacuum_tube_components");
 
+        //Dusts & Pulps 4500-4999
+        
         //Circuit Stuff 5000-6000
         //Photomasks 5000-5099
         customMetaItems.addItem(5000, "rubylith")
@@ -324,6 +326,7 @@ eventManager.listen {
 
         customMetaItems.addItem(9000, "seed.cotton");
         customMetaItems.addItem(9001, "crop.cotton");
+        customMetaItems.addItem(9002, "stem.cotton");
 
         log.infoMC("Finished adding metaitems")
 }

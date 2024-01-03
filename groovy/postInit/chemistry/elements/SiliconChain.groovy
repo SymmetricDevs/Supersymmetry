@@ -21,6 +21,7 @@ def SINTERING_RECIPES = recipemap("sintering_oven")
 def EBF = recipemap('electric_blast_furnace')
 def CHEMICAL_BATH = recipemap('chemical_bath')
 def POLISHING_MACHINE = recipemap('polishing_machine')
+def CSTR = recipemap('continuous_stirred_tank_reactor')
 
 // Silicon Carbide Plate * 1
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustSiliconCarbide')], null)
@@ -295,3 +296,14 @@ for (fuel in sintering_fuels) {
         }
     }
 }
+
+// TEOS
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('silicon_tetrachloride') * 50)
+        .fluidInputs(fluid('ethanol') * 200)
+        .fluidOutputs(fluid('tetraethyl_orthosilicate') * 50)
+        .fluidOutputs(fluid('hydrogen_chloride') * 200)
+        .duration(5)
+        .EUt(120)
+        .buildAndRegister()

@@ -85,12 +85,12 @@ mods.gregtech.assembler.recipeBuilder()
         .buildAndRegister()
 
 MIXER_RECIPES.recipeBuilder()
-.fluidInputs(Materials.SulfurTrioxide.getFluid(1000))
-.fluidInputs(Materials.Water.getFluid(1000))
-.fluidOutputs(Materials.SulfuricAcid.getFluid(1000))
-.EUt(7)
-.duration(40)
-.buildAndRegister()
+        .fluidInputs(Materials.SulfurTrioxide.getFluid(1000))
+        .fluidInputs(Materials.Water.getFluid(1000))
+        .fluidOutputs(Materials.SulfuricAcid.getFluid(1000))
+        .EUt(7)
+        .duration(40)
+        .buildAndRegister()
 
 mods.gregtech.electric_blast_furnace.recipeBuilder()
         .inputs(ore('dustSodium') * 4)
@@ -259,6 +259,17 @@ mods.gregtech.assembler.recipeBuilder()
         .buildAndRegister()
 
 // Remove Batteries
+
+mods.gregtech.autoclave.removeByInput(480, [metaitem('energium_dust') * 9], [fluid('water') * 1000])
+mods.gregtech.autoclave.removeByInput(320, [metaitem('energium_dust') * 9], [fluid('distilled_water') * 1000])
+mods.gregtech.autoclave.removeByInput(256, [metaitem('energium_dust') * 9], [fluid('black_steel') * 288])
+mods.gregtech.autoclave.removeByInput(192, [metaitem('energium_dust') * 9], [fluid('blue_steel') * 72])
+
+mods.gregtech.autoclave.removeByInput(480, [metaitem('dustLapotron') * 15], [fluid('water') * 1000])
+mods.gregtech.autoclave.removeByInput(320, [metaitem('dustLapotron') * 15], [fluid('distilled_water') * 1000])
+mods.gregtech.autoclave.removeByInput(256, [metaitem('dustLapotron') * 15], [fluid('blue_steel') * 288])
+mods.gregtech.autoclave.removeByInput(192, [metaitem('dustLapotron') * 15], [fluid('red_steel') * 72])
+
 mods.hei.removeAndHide(metaitem('energy_crystal'));
 mods.hei.removeAndHide(metaitem('lapotron_crystal'));
 

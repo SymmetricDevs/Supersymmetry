@@ -62,6 +62,9 @@ class Globals {
 
     public static lubricants = [
         new Lubricant('lubricating_oil', 1, 1.1),
-        new Lubricant('lubricant', 2, 1.2)
+        new Lubricant('lubricant', 2, 1.2),
+        new Lubricant('midgrade_lubricant', 2, 1.3),
+        new Lubricant('premium_lubricant', 1, 1.4),
+        new Lubricant('supreme_lubricant', 1, 1.5)
     ]
 }
