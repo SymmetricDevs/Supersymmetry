@@ -385,8 +385,8 @@ class SuSyMaterials {
         public static Material CopperConcentrate;
         public static Material PalladiumContainingSolution;
         public static Material ChlorofluoromethaneMix;
-        public static HafniumExtractionMixture;
-        public static HafniumExtract;
+        public static Material HafniumExtractionMixture;
+        public static Material HafniumExtract;
         public static Material PropanalMixture;
         public static Material ZSMFive;
         public static Material AminatedEthyleneMixture;
