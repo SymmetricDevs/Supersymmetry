@@ -1696,11 +1696,7 @@ public class FirstDegreeMaterials{
                 .color(0x2c733a)
                 .build();
 
-        ImpureGalenaSlurry = new Material.Builder(8346, SuSyUtility.susyId('impure_galena_slurry'))
-                .fluid()
-                .components(Galena, 2, Water, 1)
-                .colorAverage()
-                .build();
+        //FREE ID: 8346
 
         CopperDross = new Material.Builder(8347, SuSyUtility.susyId('copper_dross'))
                 .dust()
@@ -1787,12 +1783,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        CassiteriteConcentrate = new Material.Builder(8360, SuSyUtility.susyId('cassiterite_concentrate'))
-                .dust()
-                .components(Cassiterite, 1)
-                .colorAverage()
-                .iconSet(SHINY)
-                .build();
+        //FREE ID: 8360
 
         CrudeTin = new Material.Builder(8361, SuSyUtility.susyId('crude_tin'))
                 .fluid()
@@ -2635,13 +2626,6 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        RutileConcentrate = new Material.Builder(8485, SuSyUtility.susyId('rutile_concentrate'))
-                .dust()
-                .components(Rutile, 1)
-                .color(0x503f3e)
-                .build();
-
-        RutileConcentrate.setFormula("(TiO2)(?)", true);
 
         UltramaficTailingSlurry = new Material.Builder(8486, SuSyUtility.susyId('ultramafic_tailing_slurry'))
                 .fluid()
@@ -2984,26 +2968,7 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        SiftedZircon = new Material.Builder(8535, SuSyUtility.susyId('sifted_zircon'))
-                .dust()
-                .components(Zircon, 1)
-                .colorAverage()
-                .iconSet(SAND)
-                .build();
-
-        FlotatedZircon = new Material.Builder(8536, SuSyUtility.susyId('flotated_zircon'))
-                .dust()
-                .components(Zircon, 1)
-                .colorAverage()
-                .iconSet(QUARTZ)
-                .build();
-
-        ZirconConcentrate = new Material.Builder(8537, SuSyUtility.susyId('zircon_concentrate'))
-                .dust()
-                .components(Zircon, 1)
-                .colorAverage()
-                .iconSet(DULL)
-                .build();
+        //FREE IDs: 8535-8537
 
         FusedZirconia = new Material.Builder(8538, SuSyUtility.susyId('fused_zirconia'))
                 .dust()
