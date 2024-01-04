@@ -3333,5 +3333,12 @@ public class FirstDegreeMaterials{
                 .components(Uranium, 1, Oxygen, 2)
                 .color(0x20291b)
                 .build();
+
+        UraniumTetrafluoride = new Material.Builder(8538, SuSyUtility.susyId("uranium_tetrafluoride"))
+                .dust()
+                .iconSet(SAND)
+                .components(Uranium, 1, Fluorine, 4)
+                .color(0x58826a)
+                .build();
     }
 }
