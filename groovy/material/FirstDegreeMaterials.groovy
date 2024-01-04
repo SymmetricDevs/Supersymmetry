@@ -3325,6 +3325,13 @@ public class FirstDegreeMaterials{
                 .fluidTemp(323)
                 .components(Gelatin, 1, Water, 1)
                 .colorAverage()
-                .build(); 
+                .build();
+
+        UraniumDioxide = new Material.Builder(8537, SuSyUtility.susyId("uranium_dioxide"))
+                .dust()
+                .iconSet(SAND)
+                .components(Uranium, 1, Oxygen, 2)
+                .color(0x20291b)
+                .build();
     }
 }
