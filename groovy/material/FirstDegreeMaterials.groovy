@@ -2581,7 +2581,7 @@ public class FirstDegreeMaterials{
         AmmoniumDiuranate = new Material.Builder(8477, SuSyUtility.susyId('ammonium_diuranate'))
                 .dust()
                 .iconSet(SHINY)
-                .components(Nitrogen, 2, Hydrogen, 8, Uranium235, 2, Oxygen, 7)
+                .components(Nitrogen, 2, Hydrogen, 8, Uranium238, 2, Oxygen, 7)
                 .color(0xe6be22)
                 .build();
 
@@ -3330,14 +3330,14 @@ public class FirstDegreeMaterials{
         UraniumDioxide = new Material.Builder(8537, SuSyUtility.susyId("uranium_dioxide"))
                 .dust()
                 .iconSet(SAND)
-                .components(Uranium, 1, Oxygen, 2)
+                .components(Uranium238, 1, Oxygen, 2)
                 .color(0x20291b)
                 .build();
 
         UraniumTetrafluoride = new Material.Builder(8538, SuSyUtility.susyId("uranium_tetrafluoride"))
                 .dust()
                 .iconSet(SAND)
-                .components(Uranium, 1, Fluorine, 4)
+                .components(Uranium238, 1, Fluorine, 4)
                 .color(0x58826a)
                 .build();
     }
