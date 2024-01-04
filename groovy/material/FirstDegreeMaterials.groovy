@@ -3327,18 +3327,22 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        UraniumDioxide = new Material.Builder(8537, SuSyUtility.susyId("uranium_dioxide"))
+        UraniumDioxide = new Material.Builder(8587, SuSyUtility.susyId("uranium_dioxide"))
                 .dust()
                 .iconSet(SAND)
                 .components(Uranium238, 1, Oxygen, 2)
                 .color(0x20291b)
                 .build();
 
-        UraniumTetrafluoride = new Material.Builder(8538, SuSyUtility.susyId("uranium_tetrafluoride"))
+        UraniumDioxide.setFormula("UO2", true)
+
+        UraniumTetrafluoride = new Material.Builder(8588, SuSyUtility.susyId("uranium_tetrafluoride"))
                 .dust()
                 .iconSet(SAND)
                 .components(Uranium238, 1, Fluorine, 4)
                 .color(0x58826a)
                 .build();
+
+        UraniumTetrafluoride.setFormula("UF4", true)
     }
 }
