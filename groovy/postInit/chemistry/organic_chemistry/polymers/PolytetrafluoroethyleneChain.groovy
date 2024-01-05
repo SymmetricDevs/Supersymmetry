@@ -108,7 +108,7 @@ POLYMERIZATION.recipeBuilder()
 
 DRYER.recipeBuilder()
 .fluidInputs(fluid('polytetrafluoroethylene_solution') * 500)
-.outputs(metaitem('dustPolytetrafluoroethylene') * 7)
+.outputs(metaitem('dustPolytetrafluoroethylene'))
 .fluidOutputs(fluid('fluorinated_surfactant_mixture') * 500)
 .duration(200)
 .EUt(30)

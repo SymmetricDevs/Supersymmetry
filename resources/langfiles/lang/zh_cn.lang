@@ -51,9 +51,6 @@ susy.material.isophthaloyl_chloride_solution=间苯甲酰氯溶液
 susy.material.sodium_phenoxide_solution=苯酚钠溶液
 susy.material.diphenyl_isophthalate_solution=间苯二甲酸二苯酯溶液
 susy.material.diaminobenzidine_solution=二氨基联苯胺溶液
-susy.material.pbi_polymerization_mix=聚苯并咪唑聚合混合物
-susy.material.pbi_pre_polymer_foam=聚苯并咪唑预聚物泡沫
-susy.material.impure_pbi_solution=含杂聚苯并咪唑溶液
 susy.material.dimethylacetamide=二甲基乙酰胺
 susy.material.dimethylacetamide_solution=二甲基乙酰胺溶液
 susy.material.pbi_solution=聚苯并咪唑溶液
@@ -117,7 +114,6 @@ susy.material.salty_saltpeter_solution=含盐硝石溶液
 susy.material.diluted_saltpeter_solution=稀硝石溶液
 susy.material.polytetrafluoroethylene_solution=聚四氟乙烯（PTFE）溶液
 susy.material.mixed_dichlorobenzene_solution=二氯苯混合物溶液
-susy.material.two_two_dichlorohydrazobenzene_solution=2,2'-二氯氢化偶氮苯溶液
 susy.material.two_butanol_solution=2-丁醇溶液
 susy.material.DilutedSodiumCarbonateSolution=稀碳酸钠溶液
 

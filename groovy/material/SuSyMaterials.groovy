@@ -1167,16 +1167,14 @@ class SuSyMaterials {
         public static Material MixedChloronitrobenzene;
         public static Material FourNitroanilineSolution;
         public static Material ParaPhenylenediamineSolution;
-        public static Material TwoTwoDichlorohydrazobenzeneSolution;
         public static Material DichlorobenzidineSolution;
         public static Material Xylene;
         public static Material Phosgene;
         public static Material PhthaloylDichlorideSolution;
         public static Material DiphenylIsophthalateSolution;
         public static Material DiaminobenzidineSolution;
-        public static Material PBIPolymerizationMix;
-        public static Material PBIPrePolymerFoam;
-        public static Material ImpurePBISolution;
+        public static Material PBIFoam;
+        public static Material PBIPrepolymer;
         public static Material PBISolution;
         public static Material PBIWaste;
         public static Material Hydroxylamine;
