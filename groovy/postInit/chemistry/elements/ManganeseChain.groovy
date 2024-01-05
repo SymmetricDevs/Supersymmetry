@@ -6,6 +6,7 @@ import gregtech.api.unification.ore.OrePrefix;
 
 import static gregtech.api.unification.material.Materials.*;
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 EBF = recipemap('electric_blast_furnace')
 ROASTER = recipemap('roaster')
@@ -15,10 +16,10 @@ ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 //PYROMETALLUGRICAL METHODS (75%)
 
-for (combustible in Globals.combustibles) {
+for (combustible in CarbonGlobals.combustibles()) {
     EBF.recipeBuilder()
         .inputs(ore('dustPyrolusite'))
-        .inputs(ore(combustible.name) * combustible.amount_required * 2)
+        .inputs(ore(combustible.name) * combustible.equivalent(2))
         .inputs(ore('dustTinyCalcite'))
         .chancedOutput(metaitem('dustManganese'), 7500, 0)
         .fluidOutputs(fluid('carbon_dioxide') * 1000)
@@ -36,10 +37,10 @@ ROASTER.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-for (highPurityCombustible in Globals.highPurityCombustibles) {
+for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
     ROASTER.recipeBuilder()
         .inputs(ore('dustManganeseIiOxide') * 2)
-        .inputs(ore(highPurityCombustible.name) * 1)
+        .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
         .chancedOutput(metaitem('dustManganese'), 8500, 0)
         .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
@@ -111,7 +112,7 @@ BATCH_REACTOR.recipeBuilder()
     .buildAndRegister()
 
 BATCH_REACTOR.recipeBuilder()
-    .inputs(ore('dustSodiumHydroxide') * 3)
+    .inputs(ore('dustTinySodiumHydroxide') * 2)
     .fluidInputs(fluid('crude_manganese_ii_sulfate_solution') * 4000)
     .chancedOutput(metaitem('dustIronIiiHydroxide') * 7, 500, 0)
     .fluidOutputs(fluid('manganese_ii_sulfate_solution') * 4000)
@@ -129,10 +130,63 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
+// MnCl2
 
+BR.recipeBuilder()
+    .inputs(ore('dustManganese'))
+    .fluidInputs(fluid('chlorine') * 2000)
+    .outputs(metaitem('dustManganeseIiChloride') * 3)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
 
+BR.recipeBuilder()
+    .inputs(ore('dustManganeseIiOxide') * 2)
+    .fluidInputs(fluid('hydrochloric_acid') * 2000)
+    .fluidOutputs(fluid('manganese_ii_chloride_solution') * 3000)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
 
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('manganese_ii_chloride_solution') * 3000)
+    .outputs(metaitem('dustManganeseIiChloride') * 3)
+    .fluidOutputs(fluid('water') * 3000)
+    .duration(20)
+    .EUt(30)
+    .buildAndRegister()
 
+BR.recipeBuilder()
+    .inputs(ore('dustManganeseDioxide') * 3)
+    .fluidInputs(fluid('hydrochloric_acid') * 4000)
+    .fluidOutputs(fluid('diluted_manganese_ii_chloride_solution') * 6000)
+    .fluidOutputs(fluid('chlorine') * 2000)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
 
-    
-    
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('diluted_manganese_ii_chloride_solution') * 3000)
+    .outputs(metaitem('dustManganeseIiChloride') * 3)
+    .fluidOutputs(fluid('water') * 6000)
+    .duration(20)
+    .EUt(30)
+    .buildAndRegister()
+
+// MnO2
+
+BR.recipeBuilder()
+    .inputs(ore('dustPyrolusite') * 3)
+    .fluidInputs(fluid('nitrogen_dioxide') * 2000)
+    .outputs(metaitem('dustManganeseIiNitrate') * 9)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustManganeseIiNitrate') * 9)
+    .fluidOutputs(fluid('nitrogen_dioxide') * 2000)
+    .outputs(metaitem('dustManganeseDioxide') * 3)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()

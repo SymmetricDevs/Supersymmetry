@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 FLOTATION = recipemap('froth_flotation')
 CLARIFIER = recipemap('clarifier')
@@ -36,7 +37,7 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSphalerit
 
 MIXER.recipeBuilder()
         .inputs(ore('dustImpureSphalerite') * 4)
-        .fluidInputs(fluid('water') * 2000)
+        .fluidInputs(fluid('distilled_water') * 2000)
         .fluidOutputs(fluid('impure_sphalerite_slurry') * 2000)
         .EUt(Globals.voltAmps[3])
         .duration(80)
@@ -141,10 +142,10 @@ FLUIDIZEDBR.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-for (combustible in Globals.combustibles) {
+for (combustible in CarbonGlobals.combustibles()) {
     ROASTER.recipeBuilder()
             .inputs(ore('dustZincite') * 2)
-            .inputs(ore(combustible.name) * combustible.amount_required)
+            .inputs(ore(combustible.name) * combustible.equivalent(1))
             .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_zinc') * 216)
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
@@ -153,10 +154,10 @@ for (combustible in Globals.combustibles) {
             .buildAndRegister()
 }
 
-for (highPurityCombustible in Globals.highPurityCombustibles) {
+for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         ROASTER.recipeBuilder()
             .inputs(ore('dustZincOxide') * 2)
-            .inputs(ore(highPurityCombustible.name) * highPurityCombustible.amount_required)
+            .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
             .outputs(metaitem('dustZinc'))
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .EUt(30)
@@ -313,7 +314,7 @@ MIXER.recipeBuilder()
 
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('sulfuric_acid') * 1000)
-        .inputs(ore('dustCopperCadmiumResidue') * 20)
+        .inputs(ore('dustCobaltResidue') * 20)
         .fluidOutputs(fluid('zinc_leach') * 1000)
         .outputs(metaitem('dustCobalt') * 1)
         .EUt(30)

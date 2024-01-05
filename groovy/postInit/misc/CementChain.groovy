@@ -35,6 +35,7 @@ for (fuel in sintering_fuels) {
         .inputs(ore('dustClay'))
         .inputs(ore('dustLimestone'))
         .inputs(ore('dustTinyGypsum'))
+        .circuitMeta(2)
         .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
         .outputs(metaitem('hot.cement.clinker'))
         .chancedOutput(metaitem('hot.cement.clinker'), 5000, 0)
@@ -42,6 +43,7 @@ for (fuel in sintering_fuels) {
         .duration(fuel.duration)
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
+
     } else {
         for (comburent in sintering_comburents) {
             SINTERING_RECIPES.recipeBuilder()
@@ -60,6 +62,7 @@ for (fuel in sintering_fuels) {
             .inputs(ore('dustClay'))
             .inputs(ore('dustLimestone'))
             .inputs(ore('dustTinyGypsum'))
+            .circuitMeta(2)
             .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
             .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
             .outputs(metaitem('hot.cement.clinker'))
@@ -105,7 +108,7 @@ def stones = [
 for (stone in stones) {
     mods.gregtech.mixer.recipeBuilder()
         .inputs(ore(stone))
-        .inputs(metaitem('cement.dust'))
+        .inputs(ore('dustCement'))
         .fluidInputs(fluid('water') * 500)
         .fluidOutputs(fluid('concrete') * 576)
         .duration(20)

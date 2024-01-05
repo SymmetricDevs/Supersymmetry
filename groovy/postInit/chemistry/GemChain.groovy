@@ -135,14 +135,6 @@ BR.recipeBuilder()
 
 // Lithium Niobate
 
-ROASTER.recipeBuilder()
-        .inputs(ore('dustLithium') * 2)
-        .fluidInputs(fluid('oxygen') * 1000)
-        .outputs(metaitem('dustLithiumOxide'))
-        .duration(20)
-        .EUt(30)
-        .buildAndRegister();
-
 TUBE_FURNACE.recipeBuilder()
         .inputs(ore('dustNiobiumOxide') * 7)
         .inputs(ore('dustLithiumOxide') * 32)

@@ -8,7 +8,7 @@ def oreDictSmeltingRemovals = [
 	ore('crushedCentrifugedIron'),
 	ore('dustImpureIron'),
 	ore('dustPureIron'),
-	ore('dustIron'),
+	metaitem('dustIron'),
 
 	ore('oreBandedIron'),
 	ore('oreNetherrackBandedIron'),

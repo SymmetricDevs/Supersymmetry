@@ -13,6 +13,8 @@ import gregtech.api.unification.material.properties.PropertyKey;
 import static material.SuSyMaterials.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import supersymmetry.api.recipes.SuSyRecipeMaps;
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey;
+import supersymmetry.api.unification.material.properties.FiberProperty;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.fluids.fluidType.FluidTypes;
@@ -72,7 +74,7 @@ class ChangeFlags {
         AquaRegia.setFormula("(HNO3)(HCl)3", true);
         Tantalite.setFormula("(Fe,Mn)Ta2O6", true);
 
-	Borax.setProperty(PropertyKey.ORE, new OreProperty());
+        Borax.setProperty(PropertyKey.ORE, new OreProperty());
 
         Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
         Asbestos.addFlags("generate_foil");
@@ -80,18 +82,21 @@ class ChangeFlags {
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
         
         Iodine.setProperty(PropertyKey.FLUID, new FluidProperty(FluidTypes.GAS, false));
+        AntimonyTrifluoride.setProperty(PropertyKey.FLUID, new FluidProperty());
+        AntimonyTrifluoride.getProperty(PropertyKey.FLUID).setFluidTemperature(565);
         LithiumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
         SiliconDioxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         Chlorine.setProperty(PropertyKey.PLASMA, new PlasmaProperty());
 
+        Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true))
         Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Cadmium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         BisphenolA.setProperty(PropertyKey.DUST, new DustProperty());
-        BisphenolA.addFlags("no_unification")
-        BisphenolA.getProperty(PropertyKey.FLUID).setFluidTemperature(428)
+        BisphenolA.addFlags("no_unification");
+        BisphenolA.getProperty(PropertyKey.FLUID).setFluidTemperature(428);
 
         OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);

@@ -169,8 +169,6 @@ def name_removals = [
 	"techguns:itemshared_149_upgrade_blast_protection_1",
 	"techguns:itemshared_152_upgrade_blast_protection_2",
 	"techguns:itemshared_155_upgrade_blast_protection_3",
-
-
 ]
 
 for (name in name_removals) {
@@ -366,19 +364,19 @@ crafting.addShaped("tg_sawoff", item('techguns:sawedoff'), [
 		[null, null, null]
 ]);
 
-Globals.solders.each { key, val ->
-	mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('hull.lv'))
-		.inputs(metaitem('electric.motor.lv'))
-		.inputs(ore('circuitLv'))
-		.inputs(ore('wireFineRedAlloy'))
-		.inputs(ore('plateSteel') * 4)
-		.fluidInputs(fluid(key) * val)
-		.outputs(item('techguns:basicmachine', 3))
-		.duration(100)
-		.EUt(Globals.voltAmps[1])
-		.buildAndRegister()
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(metaitem('hull.lv'))
+	.inputs(metaitem('electric.motor.lv'))
+	.inputs(ore('circuitLv'))
+	.inputs(ore('wireFineRedAlloy'))
+	.inputs(ore('plateSteel') * 4)
+	.fluidInputs(fluid('soldering_alloy') * 72)
+	.outputs(item('techguns:basicmachine', 3))
+	.duration(100)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
 
+Globals.solders.each { key, val ->
 	recipemap('weapons_factory').recipeBuilder()
 		.inputs(ore('plateIron') * 3)
 		.inputs(ore('stickIron') * 2)
@@ -433,11 +431,11 @@ Globals.solders.each { key, val ->
 
 	recipemap('weapons_factory').recipeBuilder()
 		.inputs([ore('plateSteel'),
-				 ore('springSmallSteel'),
-				 ore('gearSmallSteel'),
-				 metaitem('gun.barrel.steel'),
-				 ore('plateRubber')*2,
-				 item('techguns:itemshared:11')
+					ore('springSmallSteel'),
+					ore('gearSmallSteel'),
+					metaitem('gun.barrel.steel'),
+					ore('plateRubber')*2,
+					item('techguns:itemshared:11')
 		])
 		.fluidInputs(fluid(key) * val)
 		.outputs(item('techguns:pistol'))
@@ -447,7 +445,7 @@ Globals.solders.each { key, val ->
 
 	recipemap('weapons_factory').recipeBuilder()
 		.inputs([ore('plateSteel'),
-				 ore('springSmallSteel')*4
+					ore('springSmallSteel')*4
 		])
 		.fluidInputs(fluid(key) * val)
 		.circuitMeta(1)
@@ -814,29 +812,9 @@ Globals.solders.each { key, val ->
 }
 
 recipemap('weapons_factory').recipeBuilder()
-		.inputs([ore('plateBrass'),
-				 ore('gunpowder'),
-				 ore('roundLead')
-		])
-		.outputs(item('techguns:itemshared', 1)*12)
-		.duration(10)
-		.EUt(Globals.voltAmps[1])
-		.buildAndRegister();
-
-recipemap('weapons_factory').recipeBuilder()
-		.inputs([ore('plateBrass') * 2,
-				 ore('gunpowder'),
-				 ore('roundLead') * 3
-		])
-		.outputs(item('techguns:itemshared', 2) * 5)
-		.duration(10)
-		.EUt(Globals.voltAmps[1])
-		.buildAndRegister();
-
-recipemap('weapons_factory').recipeBuilder()
 		.inputs([ore('plateCupronickel'),
-				 ore('dustGunpowder'),
-				 ore('roundLead')
+				ore('dustGunpowder'),
+				ore('roundLead')
 		])
 		.outputs(item('techguns:itemshared', 3)*8)
 		.duration(10)
@@ -845,8 +823,8 @@ recipemap('weapons_factory').recipeBuilder()
 
 recipemap('weapons_factory').recipeBuilder()
 		.inputs([ore('plateAluminium'),
-				 ore('dustGunpowder'),
-				 ore('roundLead')
+				ore('dustGunpowder'),
+				ore('roundLead')
 		])
 		.outputs(item('techguns:itemshared', 4)*8)
 		.duration(10)
@@ -855,10 +833,10 @@ recipemap('weapons_factory').recipeBuilder()
 
 recipemap('weapons_factory').recipeBuilder()
 		.inputs([
-				 ore('dustGunpowder') * 2,
-				 metaitem('plateSteel'),
-				 metaitem('ringSteel') * 2,
-				 metaitem('boltSteel')
+				ore('dustGunpowder') * 2,
+				metaitem('plateSteel'),
+				metaitem('ringSteel') * 2,
+				metaitem('boltSteel')
 		])
 		.circuitMeta(1)
 		.outputs(item('techguns:itemshared', 5)*4)
@@ -885,6 +863,28 @@ recipemap('weapons_factory').recipeBuilder()
 		.circuitMeta(1)
 		.outputs(item('techguns:itemshared', 43))
 		.duration(200)
+		.EUt(Globals.voltAmps[1])
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(1)
+		.inputs([ore('plateBrass'),
+				ore('gunpowder'),
+				ore('roundLead')
+		])
+		.outputs(item('techguns:itemshared', 1)*12)
+		.duration(10)
+		.EUt(Globals.voltAmps[1])
+		.buildAndRegister();
+
+recipemap('weapons_factory').recipeBuilder()
+		.circuitMeta(2)
+		.inputs([ore('plateBrass') * 2,
+				ore('gunpowder'),
+				ore('roundLead') * 3
+		])
+		.outputs(item('techguns:itemshared', 2) * 5)
+		.duration(10)
 		.EUt(Globals.voltAmps[1])
 		.buildAndRegister();
 
@@ -1097,16 +1097,6 @@ crafting.addShaped("bound_leather", metaitem('bound_leather')*8, [
 		[item('techguns:itemshared:77'), item('minecraft:string'), item('techguns:itemshared:77')],
 		[item('techguns:itemshared:77'), item('techguns:itemshared:77'), item('techguns:itemshared:77')]
 ]);
-
-item('techguns:itemshared', 77)
-
-recipemap('canner').recipeBuilder()
-		.inputs(item('techguns:itemshared', 3) * 4)
-		.inputs(ore('dustPhosphorus'))
-		.outputs(item('techguns:itemshared', 110) * 4)
-		.duration(100)
-		.EUt(30)
-		.buildAndRegister();
 
 recipemap('weapons_factory').recipeBuilder()
 		.circuitMeta(1)

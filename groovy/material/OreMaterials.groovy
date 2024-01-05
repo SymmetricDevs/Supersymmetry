@@ -273,7 +273,7 @@ public class OreMaterials{
                 .build();
 
         Lignite = new Material.Builder(7033, SuSyUtility.susyId('lignite'))
-                .gem(1, 1200).ore(2, 1)
+                .gem(1, 600).ore(2, 1)
                 .color(0x644646).iconSet(LIGNITE)
                 .components(Carbon, 1)
                 .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
@@ -558,10 +558,46 @@ public class OreMaterials{
 
         Carnotite.setFormula('K2(UO2)2(VO4)2 * 3H2O', true)
 
-        AlluvialPlatinum = new Material.Builder(7074, SuSyUtility.susyId('alluvial_platinum'))
+        AlluvialPGMSand = new Material.Builder(7074, SuSyUtility.susyId('alluvial_pgm_sand'))
                 .dust()
-                .components(Platinum, 1)
-                .colorAverage()
+                .color(0x948a5d)
+                .build();
+
+        LigniteCoke = new Material.Builder(7075, SuSyUtility.susyId('lignite_coke'))
+                .gem(1, 1200)
+                .color(0x8f7070).iconSet(LIGNITE)
+                .components(Carbon, 1)
+                .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
+                .build();
+
+        OrthomagmaticDeposit = new Material.Builder(7076, SuSyUtility.susyId("orthomagmatic_deposit"))
+                .ore()
+                .color(0x80081e)
+                .build();
+
+        MetamorphicDeposit = new Material.Builder(7077, SuSyUtility.susyId("metamorphic_deposit"))
+                .ore()
+                .color(0x21011c)
+                .build();
+
+        SedimentaryDeposit = new Material.Builder(7078, SuSyUtility.susyId("sedimentary_deposit"))
+                .ore()
+                .color(0xfce46d)
+                .build();
+
+        HydrothermalDeposit = new Material.Builder(7079, SuSyUtility.susyId("hydrothermal_deposit"))
+                .ore()
+                .color(0xe8e1c1)
+                .build();
+
+        AlluvialDeposit = new Material.Builder(7080, SuSyUtility.susyId("alluvial_deposit"))
+                .ore()
+                .color(0xb59e35)
+                .build();
+
+        MagmaticHydrothermalDeposit = new Material.Builder(7081, SuSyUtility.susyId("magmatic_hydrothermal_deposit"))
+                .ore()
+                .color(0x91835d)
                 .build();
     }
 }

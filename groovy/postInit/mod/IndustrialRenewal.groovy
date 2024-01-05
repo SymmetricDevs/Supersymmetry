@@ -47,10 +47,10 @@ def name_removals = [
 	"industrialrenewal:drill_diamond",
 	"industrialrenewal:drill_deep",
 	"industrialrenewal:block_steel",
-	"industrialrenewal:concrete",
 	"industrialrenewal:manual",
 	"industrialrenewal:medkit",
-	"industrialrenewal:chunk_loader"
+	"industrialrenewal:chunk_loader",
+	"industrialrenewal:concrete"
 ]
 
 for (name in name_removals) {
@@ -231,7 +231,7 @@ crafting.replaceShaped("industrialrenewal:small_wind_blade", item('industrialren
 	[null, ore('turbineBladeAluminium'), null]
 ])
 
-crafting.replaceShaped("industrialrenewal:wall_concrete", item('industrialrenewal:wall_concrete') * 8, [
+crafting.replaceShaped("industrialrenewal:wall_concrete", item('industrialrenewal:wall_concrete') * 6, [
 	[null, null, null],
 	[ore('blockConcrete'), ore('blockConcrete'), ore('blockConcrete')],
 	[ore('blockConcrete'), ore('blockConcrete'), ore('blockConcrete')]
@@ -521,73 +521,93 @@ mods.gregtech.assembler.recipeBuilder()
 	.outputs(item('industrialrenewal:item_fire_extinguisher'))
 	.duration(20)
 	.EUt(Globals.voltAmps[1])
+	.buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+	.circuitMeta(6)
+	.fluidInputs(fluid('water') * 500)
+	.inputs(ore('dustCement') * 1)
+	.inputs(ore('dustStone') * 3)
+	.inputs(ore('wireFineSteel') * 16)
+	.inputs(ore('sand') * 2)
+	.outputs(item('industrialrenewal:concrete') * 4)
+	.duration(40)
+	.EUt(14)
+	.buildAndRegister();
+
+mods.gregtech.mixer.recipeBuilder()
+	.fluidInputs(fluid('water') * 250)
+	.inputs(ore('dustConcrete'))
+	.inputs(ore('dustCement'))
+	.inputs(ore('wireFineSteel') * 8)
+	.outputs(item('industrialrenewal:concrete') * 2)
+	.duration(60)
+	.EUt(7)
+	.buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(metaitem('sensor.lv'))
+	.inputs(ore('wireFineRedAlloy')*4)
+	.inputs(ore('stickSteel') * 2)
+	.fluidInputs(fluid('soldering_alloy') * 72)
+	.outputs(item('industrialrenewal:entity_detector'))
+	.duration(20)
+	.EUt(Globals.voltAmps[1])
 	.buildAndRegister()
 
-Globals.solders.each { key, val ->
-	mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('sensor.lv'))
-		.inputs(ore('wireFineRedAlloy')*4)
-		.inputs(ore('stickSteel') * 2)
-		.fluidInputs(fluid(key) * val)
-		.outputs(item('industrialrenewal:entity_detector'))
-		.duration(20)
-		.EUt(Globals.voltAmps[1])
-		.buildAndRegister()
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(item('gregtech:turbine_casing', 5) * 8)
+	.inputs(ore('stickLongSteel') * 4)
+	.inputs(item('industrialrenewal:high_pressure_pipe') * 2)
+	.inputs(ore('plateSteel') * 6)
+	.inputs(ore('turbineBladeSteel') * 8)
+	.fluidInputs(fluid('soldering_alloy') * 72)
+	.outputs(item('industrialrenewal:dam_turbine'))
+	.duration(400)
+	.EUt(Globals.voltAmps[2])
+	.buildAndRegister()
 
-	mods.gregtech.assembler.recipeBuilder()
-		.inputs(item('gregtech:turbine_casing', 5) * 8)
-		.inputs(ore('stickLongSteel') * 4)
-		.inputs(item('industrialrenewal:high_pressure_pipe') * 2)
-		.inputs(ore('plateSteel') * 6)
-		.inputs(ore('turbineBladeSteel') * 8)
-		.fluidInputs(fluid(key) * val)
-		.outputs(item('industrialrenewal:dam_turbine'))
-		.duration(400)
-		.EUt(Globals.voltAmps[2])
-		.buildAndRegister()
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(item('gregtech:turbine_casing', 5) * 8)
+	.inputs(ore('stickLongSteel') * 4)
+	.inputs(ore('circuitHv') * 2)
+	.inputs(ore('plateSteel') * 6)
+	.inputs(metaitem('electric.motor.hv'))
+	.fluidInputs(fluid('soldering_alloy') * 72)
+	.outputs(item('industrialrenewal:dam_generator'))
+	.duration(400)
+	.EUt(Globals.voltAmps[2])
+	.buildAndRegister()
 
-	mods.gregtech.assembler.recipeBuilder()
-		.inputs(item('gregtech:turbine_casing', 5) * 8)
-		.inputs(ore('stickLongSteel') * 4)
-		.inputs(ore('circuitHv') * 2)
-		.inputs(ore('plateSteel') * 6)
-		.inputs(metaitem('electric.motor.hv'))
-		.fluidInputs(fluid(key) * val)
-		.outputs(item('industrialrenewal:dam_generator'))
-		.duration(400)
-		.EUt(Globals.voltAmps[2])
-		.buildAndRegister()
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('stickLongMagnalium') * 6)
+	.inputs(ore('ringSteel'))
+	.fluidInputs(fluid('soldering_alloy') * 72)
+	.outputs(item('industrialrenewal:dam_axis'))
+	.duration(200)
+	.EUt(Globals.voltAmps[2])
+	.buildAndRegister()
 
-	mods.gregtech.assembler.recipeBuilder()
-		.inputs(ore('stickLongMagnalium') * 6)
-		.inputs(ore('ringSteel'))
-		.fluidInputs(fluid(key) * val)
-		.outputs(item('industrialrenewal:dam_axis'))
-		.duration(200)
-		.EUt(Globals.voltAmps[2])
-		.buildAndRegister()
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('pipeLargeFluidStainlessSteel'))
+	.inputs(ore('boltSteel') * 8)
+	.inputs(ore('ringSteel'))
+	.fluidInputs(fluid('soldering_alloy') * 72)
+	.outputs(item('industrialrenewal:high_pressure_pipe'))
+	.duration(100)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
 
-	mods.gregtech.assembler.recipeBuilder()
-		.inputs(ore('pipeLargeFluidStainlessSteel'))
-		.inputs(ore('boltSteel') * 8)
-		.inputs(ore('ringSteel'))
-		.fluidInputs(fluid(key) * val)
-		.outputs(item('industrialrenewal:high_pressure_pipe'))
-		.duration(100)
-		.EUt(Globals.voltAmps[1])
-		.buildAndRegister()
-
-	mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('drum.steel') * 8)
-		.inputs(ore('plateSteel') * 6)
-		.inputs(item('industrialrenewal:catwalk_pillar') * 4)
-		.inputs(item('industrialrenewal:fluid_gauge'))
-		.fluidInputs(fluid(key) * val)
-		.outputs(item('industrialrenewal:fluid_tank'))
-		.duration(100)
-		.EUt(Globals.voltAmps[1])
-		.buildAndRegister()
-}
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(metaitem('drum.steel') * 8)
+	.inputs(ore('plateSteel') * 6)
+	.inputs(item('industrialrenewal:catwalk_pillar') * 4)
+	.inputs(item('industrialrenewal:fluid_gauge'))
+	.fluidInputs(fluid('soldering_alloy') * 72)
+	.outputs(item('industrialrenewal:fluid_tank'))
+	.duration(100)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
 
 /*
 
@@ -919,6 +939,7 @@ mods.gregtech.canner.recipeBuilder().EUt(30).duration(20)
 		.fluidInputs(liquid('carbon_dioxide')*1000)
 		.outputs(item('industrialrenewal:item_fire_extinguisher'))
 		.buildAndRegister();
+]);
 
 for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder().EUt(30).duration(20)
@@ -929,4 +950,5 @@ for (solder in soldering_alloys) {
 			.outputs(item('industrialrenewal:entity_detector'))
 			.buildAndRegister();
 }
+
 */

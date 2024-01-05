@@ -1,4 +1,5 @@
 import static globals.Globals.*
+import static globals.CarbonGlobals.*
 
 AUTOCLAVE = recipemap('autoclave')
 ROASTER = recipemap('roaster')
@@ -69,12 +70,10 @@ CHEMICAL_BATH.recipeBuilder()
         .buildAndRegister()
 
 //SMELTING
-def combustibles = Globals.combustibles
-
-for (combustible in combustibles) {
+for (combustible in CarbonGlobals.combustibles()) {
     REACTION_FURNACE.recipeBuilder()
             .inputs(ore('dustCassiteriteConcentrate'))
-            .inputs(ore(combustible.name) * (combustible.amount_required) * 2)
+            .inputs(ore(combustible.name) * combustible.equivalent(2))
             .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_tin') * 190)
             .fluidOutputs(fluid('tin_dross') * 25)
@@ -85,7 +84,7 @@ for (combustible in combustibles) {
 
     REACTION_FURNACE.recipeBuilder()
             .inputs(ore('dustLeachedCassiteriteConcentrate'))
-            .inputs(ore(combustible.name) * (combustible.amount_required) * 2)
+            .inputs(ore(combustible.name) * combustible.equivalent(2))
             .outputs(metaitem(combustible.byproduct))
             .fluidOutputs(fluid('crude_tin') * 190)
             .fluidOutputs(fluid('tin_dross') * 25)
@@ -99,7 +98,7 @@ CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('tin_dross') * 100)
         .fluidOutputs(fluid('crude_tin') * 85)
         .fluidOutputs(fluid('iron') * 15)
-        .EUt(32)
+        .EUt(30)
         .duration(80)
         .buildAndRegister()
 
@@ -142,7 +141,7 @@ CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('crude_tin') * 5760)
         .fluidOutputs(fluid('decopperized_tin') * 5760)
         .outputs(metaitem('dustCopperMonosulfide') * 2)
-        .EUt(32)
+        .EUt(30)
         .duration(300)
         .buildAndRegister()
 
@@ -151,7 +150,7 @@ ROASTER.recipeBuilder()
         .inputs(ore('dustCopperMonosulfide') * 2)
         .outputs(metaitem('dustCopper'))
         .fluidOutputs(fluid('sulfur_dioxide') * 1000)
-        .EUt(32)
+        .EUt(30)
         .duration(120)
         .buildAndRegister()
 
@@ -161,6 +160,6 @@ CRYSTALLIZER.recipeBuilder()
         .chancedOutput(metaitem('dustAntimony'), 500, 0)
         .chancedOutput(metaitem('dustBismuth'), 500, 0)
         .fluidOutputs(fluid('tin') * 2880)
-        .EUt(32)
+        .EUt(30)
         .duration(160)
         .buildAndRegister()

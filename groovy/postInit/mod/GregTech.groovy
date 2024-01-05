@@ -48,50 +48,48 @@ mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 5)]
 mods.gregtech.macerator.removeByInput(8, [item('gregtech:turbine_casing', 5)], null)
 
 def name_removals = [
-        'gregtech:cover_fluid_voiding',
-        'gregtech:cover_item_voiding',
-        'gregtech:fluid_filter_lapis',
-        'gregtech:fluid_filter_sodalite',
-        'gregtech:fluid_filter_lazurite',
-        'gregtech:comparator_certus',
-        'gregtech:gregtech.machine.world_accelerator.lv',
-        'gregtech:gregtech.machine.world_accelerator.mv',
-        'gregtech:gregtech.machine.world_accelerator.hv',
-        'gregtech:gregtech.machine.world_accelerator.ev',
-        'gregtech:gregtech.machine.world_accelerator.iv',
-        'gregtech:gregtech.machine.world_accelerator.luv',
-        'gregtech:gregtech.machine.world_accelerator.zpm',
-        'gregtech:gregtech.machine.world_accelerator.uv',
+	'gregtech:cover_fluid_voiding',
+	'gregtech:cover_item_voiding',
+	'gregtech:fluid_filter_lapis',
+	'gregtech:fluid_filter_sodalite',
+	'gregtech:fluid_filter_lazurite',
+	'gregtech:comparator_certus',
+	'gregtech:gregtech.machine.world_accelerator.lv',
+	'gregtech:gregtech.machine.world_accelerator.mv',
+	'gregtech:gregtech.machine.world_accelerator.hv',
+	'gregtech:gregtech.machine.world_accelerator.ev',
+	'gregtech:gregtech.machine.world_accelerator.iv',
+	'gregtech:gregtech.machine.world_accelerator.luv',
+	'gregtech:gregtech.machine.world_accelerator.zpm',
+	'gregtech:gregtech.machine.world_accelerator.uv',
 	'gregtech:nano_helmet',
-        'gregtech:nano_chestplate',
-        'gregtech:nano_leggings',
-        'gregtech:nano_boots',
-        'gregtech:super_chest_lv',
-        'gregtech:super_chest_mv',
-        'gregtech:super_chest_hv',
-        'gregtech:super_chest_ev',
-        'gregtech:super_chest_iv',
-        'gregtech:super_tank_lv',
-        'gregtech:super_tank_mv',
-        'gregtech:super_tank_hv',
-        'gregtech:super_tank_ev',
-        'gregtech:super_tank_iv',
-        'gregtech:quantum_chest_uhv',
-        'gregtech:quantum_chest_luv',
-        'gregtech:quantum_chest_zpm',
-        'gregtech:quantum_chest_uv',
-        'gregtech:quantum_chest_uhv',
-        'gregtech:quantum_tank_uhv',
-        'gregtech:quantum_tank_luv',
-        'gregtech:quantum_tank_zpm',
-        'gregtech:quantum_tank_uv',
-        'gregtech:quantum_tank_uhv',
+	'gregtech:nano_chestplate',
+	'gregtech:nano_leggings',
+	'gregtech:nano_boots',
+	'gregtech:super_chest_lv',
+	'gregtech:super_chest_mv',
+	'gregtech:super_chest_hv',
+	'gregtech:super_chest_ev',
+	'gregtech:super_tank_lv',
+	'gregtech:super_tank_mv',
+	'gregtech:super_tank_hv',
+	'gregtech:super_tank_ev',
+	'gregtech:quantum_chest_iv',
+	'gregtech:quantum_chest_luv',
+	'gregtech:quantum_chest_zpm',
+	'gregtech:quantum_chest_uv',
+	'gregtech:quantum_chest_uhv',
+	'gregtech:quantum_tank_iv',
+	'gregtech:quantum_tank_luv',
+	'gregtech:quantum_tank_zpm',
+	'gregtech:quantum_tank_uv',
+	'gregtech:quantum_tank_uhv',
 	'gregtech:large_combustion_engine',
 	'gregtech:extreme_combustion_engine',
-        'gregtech:gregtech.machine.fisher.lv',
-        'gregtech:gregtech.machine.fisher.mv',
-        'gregtech:gregtech.machine.fisher.hv',
-        'gregtech:gregtech.machine.fisher.ev',
+	'gregtech:gregtech.machine.fisher.lv',
+	'gregtech:gregtech.machine.fisher.mv',
+	'gregtech:gregtech.machine.fisher.hv',
+	'gregtech:gregtech.machine.fisher.ev',
 ]
 
 for (name in name_removals) {
@@ -169,6 +167,8 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustStainlessSteel') * 9],
 mods.gregtech.arc_furnace.removeByInput(30, [metaitem('pyrolyse_oven')], [fluid('oxygen') * 2160])
 // Aluminium Dust * 21
 mods.gregtech.macerator.removeByInput(8, [metaitem('pyrolyse_oven')], null)
+// Lapotron Crystal * 1
+mods.gregtech.assembler.removeByInput(1920, [metaitem('gemLapotron'), metaitem('circuit.advanced_integrated') * 2], null)
 
 //ADDITIONS
 
@@ -344,6 +344,18 @@ crafting.replaceShaped("gregtech:gregtech.machine.cutter.hv", metaitem('gregtech
 	[ore('circuitHv'), metaitem('cableGtSingleGold'), metaitem('electric.motor.hv')]
 ])
 
+crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.lv", metaitem('gregtech:electrolyzer.lv'), [
+		[metaitem('wireGtSingleSilver'), item('minecraft:glass'), metaitem('wireGtSingleSilver')],
+		[metaitem('wireGtSingleSilver'), metaitem('gregtech:hull.lv'), metaitem('wireGtSingleSilver')],
+		[ore('circuitLv'), metaitem('cableGtSingleTin'), ore('circuitLv')]
+])
+
+crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metaitem('gregtech:electrolyzer.mv'), [
+		[metaitem('wireGtSingleGold'), item('minecraft:glass'), metaitem('wireGtSingleGold')],
+		[metaitem('wireGtSingleGold'), metaitem('gregtech:hull.mv'), metaitem('wireGtSingleGold')],
+		[ore('circuitMv'), metaitem('cableGtSingleCopper'), ore('circuitMv')]
+])
+
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
 //     [ore('craftingToolFile'), null, null],
 //     [null, ore('ingotRubber'), null],
@@ -498,8 +510,8 @@ crafting.replaceShaped('gregtech:filter_casing', item('gregtech:cleanroom_casing
 mods.gregtech.assembler.recipeBuilder()
         .inputs(ore('stickLongWood') * 4)
         .inputs(ore('plateWood') * 8)
-        .inputs(ore('plateMemoryFoam') * 16)
-        .inputs(ore('wireFineRayon') * 64)
+        .inputs(ore('platePolyurethane') * 16)
+        .inputs(ore('threadRayon') * 64)
         .inputs(ore('springSmallSteel') * 8)
         .outputs(item('minecraft:bed'))
         .duration(400)
@@ -667,6 +679,13 @@ mods.gregtech.macerator.recipeBuilder()
         .duration(240)
         .EUt(7)
         .buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+		.inputs(item('susy:resource_block', 14))
+		.outputs(metaitem('dustSulfur') * 8)
+		.duration(240)
+		.EUt(7)
+		.buildAndRegister();
 
 mods.gregtech.sifter.recipeBuilder()
         .inputs(ore('dustNonMarineEvaporite'))
@@ -954,53 +973,51 @@ mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plas
 // Microprocessor * 6
 mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('tin') * 144])
 
-Globals.solders.each { key, val -> 
-        mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('circuit_board.good'))
-		.inputs(metaitem('plate.integrated_logic_circuit'))
-		.inputs(ore('boltRedAlloy') * 2)
-		.inputs(ore('wireFineTin') * 2)
-		.fluidInputs(fluid(key) * val)
-		.outputs(metaitem('circuit.nand_chip') * 16)
-		.duration(10)
-		.EUt(16)
-		.buildAndRegister();
-        
-        mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('circuit_board.plastic'))
-		.inputs(metaitem('plate.integrated_logic_circuit'))
-		.inputs(ore('boltRedAlloy') * 2)
-		.inputs(ore('wireFineTin') * 2)
-		.fluidInputs(fluid(key) * val)
-		.outputs(metaitem('circuit.nand_chip') * 24)
-		.duration(10)
-		.EUt(16)
-		.buildAndRegister();
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(metaitem('circuit_board.good'))
+        .inputs(metaitem('plate.integrated_logic_circuit'))
+        .inputs(ore('boltRedAlloy') * 2)
+        .inputs(ore('wireFineTin') * 2)
+        .fluidInputs(fluid('soldering_alloy') * 72)
+        .outputs(metaitem('circuit.nand_chip') * 16)
+        .duration(10)
+        .EUt(16)
+        .buildAndRegister();
 
-        mods.gregtech.circuit_assembler.recipeBuilder()
-                .inputs(metaitem('circuit_board.plastic'))
-                .inputs(metaitem('plate.central_processing_unit'))
-                .inputs(metaitem('component.resistor') * 2)
-                .inputs(metaitem('component.capacitor') * 2)
-                .inputs(metaitem('component.transistor') * 2)
-                .inputs(ore('wireFineCopper') * 2)
-                .fluidInputs(fluid(key) * val)
-		.outputs(metaitem('circuit.microprocessor') * 5)
-		.duration(200)
-		.EUt(60)
-		.buildAndRegister();
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(metaitem('circuit_board.plastic'))
+        .inputs(metaitem('plate.integrated_logic_circuit'))
+        .inputs(ore('boltRedAlloy') * 2)
+        .inputs(ore('wireFineTin') * 2)
+        .fluidInputs(fluid('soldering_alloy') * 72)
+        .outputs(metaitem('circuit.nand_chip') * 24)
+        .duration(10)
+        .EUt(16)
+        .buildAndRegister();
 
-        mods.gregtech.circuit_assembler.recipeBuilder()
-                .inputs(metaitem('circuit_board.plastic'))
-                .inputs(metaitem('plate.system_on_chip'))
-                .inputs(ore('wireFineCopper') * 2)
-                .inputs(ore('boltTin') * 2)
-                .fluidInputs(fluid(key) * val)
-                .outputs(metaitem('circuit.microprocessor') * 10)
-		.duration(50)
-		.EUt(600)
-		.buildAndRegister();
-}
+mods.gregtech.circuit_assembler.recipeBuilder()
+        .inputs(metaitem('circuit_board.plastic'))
+        .inputs(metaitem('plate.central_processing_unit'))
+        .inputs(ore('componentResistor') * 2)
+        .inputs(ore('componentCapacitor') * 2)
+        .inputs(ore('componentTransistor') * 2)
+        .inputs(ore('wireFineCopper') * 2)
+        .fluidInputs(fluid('soldering_alloy') * 72)
+        .outputs(metaitem('circuit.microprocessor') * 5)
+        .duration(200)
+        .EUt(60)
+        .buildAndRegister();
+
+mods.gregtech.circuit_assembler.recipeBuilder()
+        .inputs(metaitem('circuit_board.plastic'))
+        .inputs(metaitem('plate.system_on_chip'))
+        .inputs(ore('wireFineCopper') * 2)
+        .inputs(ore('boltTin') * 2)
+        .fluidInputs(fluid('soldering_alloy') * 72)
+        .outputs(metaitem('circuit.microprocessor') * 10)
+        .duration(50)
+        .EUt(600)
+        .buildAndRegister();
 
 mods.gregtech.centrifuge.recipeBuilder()
 		.fluidInputs(fluid('gtfo_soybean_oil') * 1000)
@@ -1370,4 +1387,12 @@ crafting.addShaped("gregtech:fluid_hatch.export.lv", metaitem('fluid_hatch.expor
 		[null, null, null],
 		[null, metaitem('hull.lv'), null],
 		[null, item('minecraft:glass'), null]
+])
+
+// Multiblock Builder
+
+crafting.replaceShaped("gregtech:multiblock_builder", metaitem('tool.multiblock_builder'), [
+		[ore('craftingToolWrench'), metaitem('robot.arm.ev'), metaitem('field.generator.hv')],
+		[ore('screwStainlessSteel'), ore('stickPolytetrafluoroethylene'), metaitem('robot.arm.ev')],
+		[ore('stickPolytetrafluoroethylene'), ore('screwStainlessSteel'), ore('craftingToolScrewdriver')]
 ])
