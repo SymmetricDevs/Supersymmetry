@@ -294,8 +294,9 @@ public class SecondDegreeMaterials {
                 .fluid()
                 .components(SodiumCyanide, 1, SodiumHydroxide, 1, Sodium, 27, Gold, 27, Carbon, 54, Nitrogen, 54, Water, 27)
                 .color(0xbbcc64)
-                .build()
-		GoldEluteSolution.setFormula('(NaCN)(NaOH)(Na[Au(CN)2])27(H2O)27', true)
+                .build();
+
+        GoldEluteSolution.setFormula('(NaCN)(NaOH)(Na[Au(CN)2])27(H2O)27', true)
 
         PotassiumCarbonateSolution = new Material.Builder(13046, SuSyUtility.susyId('potassium_carbonate_solution'))
                 .fluid()

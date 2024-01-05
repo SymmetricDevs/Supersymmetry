@@ -3309,16 +3309,13 @@ public class FirstDegreeMaterials{
                 .build();
 
         UraniumTetrafluoride.setFormula("UF4", true)
-                .color(0xC7C0CB)
-                .components(Hydrogen, 8, Silicon, 8, Oxygen, 12)
-                .build()
 
         ScandiumOxalate = new Material.Builder(8589, SuSyUtility.susyId("scandium_oxalate"))
                 .dust()
                 .components(Scandium, 2, Carbon, 6, Oxygen, 12)
                 .colorAverage()
-                .build()
-                .setFormula('(Sc2(C2O4)3)', true);
+                .build();
+        ScandiumOxalate.setFormula('(Sc2(C2O4)3)', true)
 
         ScandiumOxide = new Material.Builder(8590, SuSyUtility.susyId("scandium_oxide"))
                 .dust()
@@ -3336,7 +3333,6 @@ public class FirstDegreeMaterials{
                 .dust()
                 .colorAverage()
                 .components(Sodium, 3, Phosphorus, 1, Oxygen, 4)
-                .build() 
-        SodiumPhosphate.setFormula("Na3PO4", true)
+                .build();
     }
 }

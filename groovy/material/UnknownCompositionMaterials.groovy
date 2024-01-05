@@ -97,7 +97,7 @@ public class UnknownCompositionMaterials {
 
         RedMud = new Material.Builder(4013, SuSyUtility.susyId('red_mud'))
                 .fluid().dust()
-				.fluidTemp(293)
+                .fluidTemp(293)
                 .color(0x913f2d)
                 .build();
 
@@ -1870,25 +1870,25 @@ public class UnknownCompositionMaterials {
         ImpureSodiumScandateSolution = new Material.Builder(4408, SuSyUtility.susyId("impure_sodium_scandate_solution"))
                 .fluid()
                 .colorAverage()
-                .build()
-				.setFormula('(Na3(Sc(OH)6)(?))', true)
+                .build();
+        ImpureSodiumScandateSolution.setFormula('(Na3(Sc(OH)6)(?))', true)
 
         ImpureScandiumHydroxide = new Material.Builder(4409, SuSyUtility.susyId("impure_scandium_hydroxide"))
                 .dust()
                 .colorAverage()
-                .build()
-				.setFormula('(Sc(OH)3)(?)', true)
+                .build();
+        ImpureScandiumHydroxide.setFormula('(Sc(OH)3)(?)', true)
 
         ImpureScandiumChlorideSolution = new Material.Builder(4410, SuSyUtility.susyId("impure_scandium_chloride_solution"))
                 .fluid()
                 .colorAverage()
-                .build()
-				.setFormula('(ScCl)3)(?)', true)
+                .build();
+        ImpureScandiumChlorideSolution.setFormula('(ScCl)3)(?)', true)
 
         ImpureScandiumSulfateSolution = new Material.Builder(44011, SuSyUtility.susyId("impure_scandium_sulfate_solution"))
                 .fluid()
                 .colorAverage()
-                .build()
-				.setFormula('(Sc2(SO4)3)(?)', true)
+                .build();
+        ImpureScandiumSulfateSolution.setFormula('(Sc2(SO4)3)(?)', true)
     }
 }
