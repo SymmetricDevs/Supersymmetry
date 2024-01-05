@@ -417,7 +417,7 @@ BR.recipeBuilder()
 
     PHASE_SEPARATOR.recipeBuilder()
         .fluidInputs(fluid('ethylene_isobutylene_vinyl_acetate_mixture') * 2000)
-        .outputs(metaitem('dustEthyleneIsobutyleneVinylAcetate'))
+        .outputs(metaitem('dustEthyleneIsobutyleneVinylAcetate') * 3)
         .fluidOutputs(fluid('methanol') * 1000)
         .duration(50)
         .buildAndRegister()
