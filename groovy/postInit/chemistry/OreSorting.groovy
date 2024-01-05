@@ -346,10 +346,14 @@ for (rock in rocks) {
     int a = 0;
     for (oreList in rock.oreLists) {
         def recipe = recipemap('ore_sorter').recipeBuilder();
-        recipe.circuitMeta(a)
+        recipe.circuitMeta(a + 1)
         recipe.inputs(metaitem(rock.input_rock) * (oreList.size()));
         for (ore in oreList) {
-            if (ore.getKey() == 'gregtech:ore_coal_0') { recipe.chancedOutput(item(ore.getKey()) * 2, oreList[ore.getKey()], 0); } else { recipe.chancedOutput(item(ore.getKey()), oreList[ore.getKey()], 0); }   
+            if (ore.getKey() == 'gregtech:ore_coal_0') {
+                recipe.chancedOutput(item(ore.getKey()) * 2, oreList[ore.getKey()], 0);
+            } else {
+                recipe.chancedOutput(item(ore.getKey()), oreList[ore.getKey()], 0);
+            }
         }
         recipe.duration(20);
         recipe.EUt(Globals.voltAmps[rock.starting_tier + a]);
