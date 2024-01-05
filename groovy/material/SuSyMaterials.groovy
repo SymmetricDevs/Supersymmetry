@@ -1079,6 +1079,8 @@ class SuSyMaterials {
         public static Material HydrogenIodide;
         public static Material AcrylicCatalyst;
         public static Material GelatinSolution;
+        public static Material UraniumDioxide;
+        public static Material UraniumTetrafluoride;
 
         // Second Degree Materials
 
