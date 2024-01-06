@@ -3068,6 +3068,8 @@ CSTR.recipeBuilder()
 
 // Ammonium Bisulfate
 ELECTROLYZER.recipeBuilder()
+        .notConsumable(ore('stickPlatinum'))
+        .notConsumable(metaitem('graphite_electrode'))
         .fluidInputs(fluid('ammonium_bisulfate') * 1584)
         .fluidOutputs(fluid('sulfuric_acid') * 1000)
         .fluidOutputs(fluid('ammonia') * 1000)
