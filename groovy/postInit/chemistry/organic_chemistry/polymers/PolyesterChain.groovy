@@ -40,5 +40,11 @@ EXTRUDER.recipeBuilder()
     .duration(20)
     .buildAndRegister()
 
-furnace.add(ore('foilPolyethyleneTerephthalate'), metaitem('mylar'), 0f)
+EXTRUDER.recipeBuilder()
+    .inputs(ore('foilPolyethyleneTerephthalate'))
+    .outputs(metaitem(metaitem('mylar')))
+    .EUt(120)
+    .duration(10)
+    .buildAndRegister()
+
 oreDict.add('foilMylar', metaitem('mylar'))
