@@ -3724,6 +3724,15 @@ TBR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
+DISTILLATION_TOWER.recipeBuilder()
+.fluidInputs(fluid('ortho_para_xylene_mixture') * 1000)
+.fluidOutputs(fluid('para_xylene') * 575)
+.fluidOutputs(fluid('ortho_xylene') * 375)
+.fluidOutputs(fluid('meta_xylene') * 50)
+.duration(100)
+.EUt(Globals.voltAmps[1] * 2)
+.buildAndRegister()
+
 //XYLENE FROM TOLUENE
 TBR.recipeBuilder()
 .notConsumable(ore('dustAluminiumChloride'))
