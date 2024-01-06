@@ -156,10 +156,13 @@ for (int i = 0; i < 16; i++) {
 //REMOVALS OF DEFAULT RECIPES
 // Concrete * 576
 mods.gregtech.mixer.removeByInput(16, [metaitem('dustClay'), metaitem('dustStone') * 3], [fluid('water') * 500])
+mods.gregtech.blender.removeByInput(16, [metaitem('dustClay'), metaitem('dustStone') * 3], [fluid('water') * 500])
 // Concrete * 1152
 mods.gregtech.mixer.removeByInput(16, [metaitem('dustStone') * 2, metaitem('dustCalcite'), metaitem('dustGypsum')], [fluid('water') * 1000])
+mods.gregtech.blender.removeByInput(16, [metaitem('dustStone') * 2, metaitem('dustCalcite'), metaitem('dustGypsum')], [fluid('water') * 1000])
 // Concrete * 1152
 mods.gregtech.mixer.removeByInput(16, [metaitem('dustStone') * 2, metaitem('dustMarble'), metaitem('dustGypsum')], [fluid('water') * 1000])
+mods.gregtech.blender.removeByInput(16, [metaitem('dustStone') * 2, metaitem('dustMarble'), metaitem('dustGypsum')], [fluid('water') * 1000])
 
 def name_removals = [
     'minecraft:white_concrete_powder',
@@ -188,7 +191,7 @@ for (name in name_removals) {
 for (dye in dyes) {
     // Concrete Powder * 8
     mods.gregtech.mixer.removeByInput(7, [item('minecraft:sand') * 4, item('minecraft:gravel') * 4], [fluid(dye) * 144])
-
+    mods.gregtech.blender.removeByInput(7, [item('minecraft:sand') * 4, item('minecraft:gravel') * 4], [fluid(dye) * 144])
 }
 
 for (int i = 0; i < 16; i++) {
