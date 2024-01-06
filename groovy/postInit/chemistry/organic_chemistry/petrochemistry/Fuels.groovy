@@ -569,7 +569,7 @@ for (major_solvent in major_solvents) {
             .fluidInputs(fluid('polydimethylsiloxane') * 250)
             .fluidInputs(fluid(major_solvent) * 1500)
             .fluidInputs(fluid(minor_solvent) * 250)
-            .fluidOutputs(fluid('antifoaming_additives') * 2000)
+            .fluidOutputs(fluid('antifoaming_additive') * 2000)
             .duration(200)
             .EUt(Globals.voltAmps[2])
             .buildAndRegister()

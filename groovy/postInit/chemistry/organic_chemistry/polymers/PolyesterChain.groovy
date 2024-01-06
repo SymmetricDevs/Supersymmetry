@@ -42,7 +42,7 @@ EXTRUDER.recipeBuilder()
 
 EXTRUDER.recipeBuilder()
     .inputs(ore('foilPolyethyleneTerephthalate'))
-    .outputs(metaitem(metaitem('mylar')))
+    .outputs(metaitem('mylar'))
     .EUt(120)
     .duration(10)
     .buildAndRegister()
