@@ -998,7 +998,6 @@ def liquidFrictionModifierMap = [
 def solidAntiwearMap = [
     'dustMolybdenumDialkyldithiophosphate': 4,
     'dustZincBisdiethyldithiocarbamate': 2
-
 ]
 
 def liquidAntiwearMap = [
