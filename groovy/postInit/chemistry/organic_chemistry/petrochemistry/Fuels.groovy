@@ -565,6 +565,15 @@ for (major_solvent in major_solvents) {
             .buildAndRegister()
 
         BLENDER.recipeBuilder()
+            .fluidInputs(fluid('polydimethylsiloxane') * 250)
+            .fluidInputs(fluid(major_solvent) * 1500)
+            .fluidInputs(fluid(minor_solvent) * 250)
+            .fluidOutputs(fluid('antifoaming_additives') * 2000)
+            .duration(200)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
+
+        BLENDER.recipeBuilder()
             .inputs(ore('dustSmallEthyleneIsobutyleneVinylAcetate'))
             .inputs(ore('dustSmallDihexadecylaminePhthalateAmide'))
             .fluidInputs(fluid(major_solvent) * 6000)
