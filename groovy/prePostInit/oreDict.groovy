@@ -88,7 +88,7 @@ ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust')
 //Add non traditional ore blocks to scanner
 
 ore('oreBauxite').add(item('susy:resource_block:0'))
-ore('oreSulfur').add(item('susy:resource_blocK:14'))
+ore('oreSulfur').add(item('susy:resource_block:14'))
 
 ore('oreOrthomagmaticDeposit').add(item('susy:deposit_block:0'))
 ore('oreMetamorphicDeposit').add(item('susy:deposit_block:1'))
