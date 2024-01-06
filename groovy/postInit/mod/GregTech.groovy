@@ -46,6 +46,10 @@ mods.gregtech.forming_press.removeByInput(480, [item('gregtech:transparent_casin
 mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 5)], [fluid('oxygen') * 150])
 // Magnalium Dust * 3
 mods.gregtech.macerator.removeByInput(8, [item('gregtech:turbine_casing', 5)], null)
+// Gelatin Mixture * 4000
+mods.gregtech.mixer.removeByInput(480, [metaitem('dustCollagen') * 4], [fluid('phosphoric_acid') * 1000, fluid('water') * 3000])
+// Phosphorus Dust * 1
+mods.gregtech.centrifuge.removeByInput(480, null, [fluid('gelatin_mixture') * 6000])
 
 def name_removals = [
 	'gregtech:cover_fluid_voiding',
