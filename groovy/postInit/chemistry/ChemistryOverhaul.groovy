@@ -4311,3 +4311,14 @@ FBR.recipeBuilder()
         .duration(20)
         .EUt(120)
         .buildAndRegister()
+
+//1-butene from n-butanol
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('hot_sulfuric_acid') * 100)
+        .fluidInputs(fluid('n_butanol') * 100)
+        .fluidOutputs(fluid('one_butene') * 100)
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 200)
+        .duration(5)
+        .EUt(30)
+        .buildAndRegister()
