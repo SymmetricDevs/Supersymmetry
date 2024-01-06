@@ -20,8 +20,10 @@ MACERATOR = recipemap('macerator')
 
 // Fertilizer * 4
 mods.gregtech.mixer.removeByInput(30, [item('minecraft:dirt'), metaitem('dustWood') * 2, item('minecraft:sand') * 4], [fluid('water') * 1000])
+mods.gregtech.blender.removeByInput(30, [item('minecraft:dirt'), metaitem('dustWood') * 2, item('minecraft:sand') * 4], [fluid('water') * 1000])
 // Fertilizer Solution * 5000
 mods.gregtech.mixer.removeByInput(16, [item('minecraft:dye', 15)], [fluid('water') * 5000])
+mods.gregtech.blender.removeByInput(16, [item('minecraft:dye', 15)], [fluid('water') * 5000])
 // Greenhouse Glass * 1
 mods.gregtech.assembler.removeByInput(24, [metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust'), item('gregtech:transparent_casing')], null)
 
