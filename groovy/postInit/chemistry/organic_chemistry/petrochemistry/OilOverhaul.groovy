@@ -726,11 +726,11 @@ fractions.each { _, fraction -> {
 
 EBF.recipeBuilder()
 .fluidInputs(fluid('oxygen') * 1000)
-.inputs(metaitem('spent_cracking_catalyst'))
+.inputs(metaitem('spent_cracking_catalyst') * 4)
 .fluidOutputs(fluid('flue_gas') * 1000)
-.outputs(metaitem('cracking_catalyst'))
-.blastFurnaceTemp(1200)
-.duration(200)
+.outputs(metaitem('cracking_catalyst') * 4)
+.blastFurnaceTemp(1013)
+.duration(160)
 .EUt(Globals.voltAmps[1] * 2)
 .buildAndRegister()
 
