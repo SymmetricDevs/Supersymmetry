@@ -3788,7 +3788,7 @@ FLUIDIZEDBR.recipeBuilder()
 .buildAndRegister()
 
 AUTOCLAVE.recipeBuilder()
-.fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+.fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
 .fluidInputs(fluid('chlorobenzene') * 1000)
 .fluidOutputs(fluid('sodium_phenoxide_solution') * 1000)
 .fluidOutputs(fluid('salt_water') * 1000)
