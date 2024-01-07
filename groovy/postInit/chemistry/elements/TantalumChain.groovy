@@ -138,7 +138,7 @@ DISTILLATION_TOWER.recipeBuilder()
 
 REACTION_FURNACE.recipeBuilder() // Tantalum
     .inputs(ore('dustPotassiumHeptafluorotantalate') * 10)
-    .inputs(ore('dustSodium') * 5)
+    .inputs(ore('dustAnyPuritySodium') * 5)
     .outputs(metaitem('dustTantalum'))
     .outputs(metaitem('dustSodiumFluoride') * 10)
     .outputs(metaitem('dustPotassiumFluoride') * 4)
