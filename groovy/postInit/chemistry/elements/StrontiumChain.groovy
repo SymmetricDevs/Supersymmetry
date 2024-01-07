@@ -52,7 +52,7 @@ for (fuel in rotary_kiln_fuels) {
     for (comburent in rotary_kiln_comburents) {
         ROTARY_KILN.recipeBuilder()
             .inputs(ore('dustFlotatedCelestine'))
-            .inputs(ore('dustCarbon') * 2)
+            .inputs(ore('dustAnyPurityCarbon') * 2)
             .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
             .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
             .outputs(metaitem('dustImpureStrontiumSulfide') * 2)
@@ -107,7 +107,7 @@ ROASTER.recipeBuilder()
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()
-    .inputs(ore('dustAluminium') * 2)
+    .inputs(ore('dustAnyPurityAluminium') * 2)
     .inputs(ore('dustStrontiumOxide') * 6)
     .outputs(metaitem('dustStrontium') * 3)
     .outputs(metaitem('dustAlumina') * 5)
