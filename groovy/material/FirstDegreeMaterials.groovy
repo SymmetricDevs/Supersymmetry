@@ -3325,6 +3325,14 @@ public class FirstDegreeMaterials{
                 .fluidTemp(323)
                 .components(Gelatin, 1, Water, 1)
                 .colorAverage()
-                .build(); 
+                .build();
+
+        PhosphomolybdicAcid = new Material.Builder(8587, SuSyUtility.susyId("phosphomolybdic_acid"))
+                .dust()
+                .components(Hydrogen, 3, Phosphorus, 1, Molybdenum, 12, Oxygen, 40)
+                .color(0xb39c07)
+                .build();
+
+        PhosphomolybdicAcid.setFormula("H3[PMo12O40]", true)
     }
 }

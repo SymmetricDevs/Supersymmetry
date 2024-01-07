@@ -549,5 +549,20 @@ public class ThirdDegreeMaterials {
                 .components(SodiumHydroxide, 1, Crotonaldehyde, 1)
                 .colorAverage()
                 .build();
+
+        GaseousMethacrylicAcidMixture = new Material.Builder(24090, SuSyUtility.susyId('gaseous_methacrylic_acid_mixture'))
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(434)
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 1, MethacrylicAcid, 3, Water, 4)
+                .colorAverage()
+                .build();
+
+        GaseousMethacrylicAcidMixture.setFormula("(C4H6O)(C4H6O2)3(H2O)4", true)
+        
+        MethacrylicAcidSolution = new Material.Builder(24091, SuSyUtility.susyId('methacrylic_acid_solution'))
+                .fluid(FluidTypes.ACID)
+                .components(MethacrylicAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }

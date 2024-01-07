@@ -1948,6 +1948,12 @@ susy.material.crotonaldehyde=Crotonaldehyde
 susy.material.treated_collagen=Treated Collagen
 susy.material.gelatin_solution=Gelatin Solution
 susy.material.mixed_cyanide_solution=Mixed Cyanide Solution
+susy.material.phosphomolybdic_acid=Phosphomolybdic Acid
+susy.material.gaseous_methacrolein_mixture=Gaseous Methacrolein Mixture
+susy.material.gaseous_methacrolein_residue=Gaseous Methacrolein Residue
+susy.material.absorbed_methacrolein=Absorbed Methacrolein
+susy.material.gaseous_methacrylic_acid_mixture=Gaseous Methacrylic Acid Mixture
+susy.material.methacrylic_acid_solution=Methacrylic Acid Solution
 
 # Isotopes
 

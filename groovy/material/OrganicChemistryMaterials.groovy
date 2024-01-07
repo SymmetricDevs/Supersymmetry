@@ -2438,5 +2438,31 @@ public class OrganicChemistryMaterials {
                 .build();
 
         CalciumAcetate.setFormula("Ca(CH3CO2)2", true)
+
+        GaseousMethacroleinMixture = new Material.Builder(15388, SuSyUtility.susyId('gaseous_methacrolein_mixture'))
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(434)
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 1, Steam, 1)
+                .colorAverage()
+                .build();
+
+        GaseousMethacroleinMixture.setFormula("(C4H6O)(H2O)", true)
+
+        GaseousMethacroleinResidue = new Material.Builder(15389, SuSyUtility.susyId('gaseous_methacrolein_residue'))
+                .fluid(FluidTypes.GAS)
+                .fluidTemp(434)
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 1, Steam, 4)
+                .colorAverage()
+                .build();
+
+        GaseousMethacroleinResidue.setFormula("(C4H6O)(H2O)4", true)
+
+        AbsorbedMethacrolein = new Material.Builder(15390, SuSyUtility.susyId('absorbed_methacrolein'))
+                .fluid(FluidTypes.ACID)
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 1, AceticAcid, 4, Water, 5)
+                .colorAverage()
+                .build();
+
+        AbsorbedMethacrolein.setFormula("(C4H6O)(CH3COOH)4(H2O)5", true)
     }
 }

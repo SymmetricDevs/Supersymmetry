@@ -1078,6 +1078,7 @@ class SuSyMaterials {
         public static Material HydrogenIodide;
         public static Material AcrylicCatalyst;
         public static Material GelatinSolution;
+        public static Material PhosphomolybdicAcid;
 
         // Second Degree Materials
 
@@ -1572,6 +1573,9 @@ class SuSyMaterials {
         public static Material TrimethylolpropaneTriacrylate;
         public static Material BenzenediazoniumChloride;
         public static Material Crotonaldehyde;
+        public static Material GaseousMethacroleinMixture;
+        public static Material GaseousMethacroleinResidue;
+        public static Material AbsorbedMethacrolein;
 
         // Third Degree Materials
 
@@ -1662,6 +1666,8 @@ class SuSyMaterials {
         public static Material SpentDimethylacetamide;
         public static Material SodiumCelluloseXanthateSolution;
         public static Material CrotonaldehydeMixture;
+        public static Material GaseousMethacrylicAcidMixture;
+        public static Material MethacrylicAcidSolution;
 
         // Thermodynamics/Greenhouse Materials
 
