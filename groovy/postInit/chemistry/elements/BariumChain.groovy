@@ -22,7 +22,7 @@ MIXER.recipeBuilder()
     .EUt(Globals.voltAmps[3])
     .duration(80)
     .buildAndRegister()
-    
+
 FLOTATION.recipeBuilder()
     .fluidInputs(fluid('impure_barite_slurry') * 2000)
     .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
@@ -53,7 +53,7 @@ for (fuel in rotary_kiln_fuels) {
     for (comburent in rotary_kiln_comburents) {
         ROTARY_KILN.recipeBuilder()
             .inputs(ore('dustBarite'))
-            .inputs(ore('dustCarbon') * 2)
+            .inputs(ore('dustAnyPurityCarbon') * 2)
             .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
             .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
             .outputs(metaitem('dustImpureBariumSulfide') * 2)
@@ -131,7 +131,7 @@ DISTILLERY.recipeBuilder()
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()
-    .inputs(ore('dustAluminium') * 2)
+    .inputs(ore('dustAnyPurityAluminium') * 2)
     .inputs(ore('dustBariumOxide') * 6)
     .outputs(metaitem('dustBarium') * 3)
     .outputs(metaitem('dustAlumina') * 5)

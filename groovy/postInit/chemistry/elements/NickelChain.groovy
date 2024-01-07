@@ -22,7 +22,7 @@ EBF.recipeBuilder()
 
 for (combustible in CarbonGlobals.combustibles()) {
     PRIMITIVEBLASTFURNACE.recipeBuilder()
-            .inputs(ore('dustNickel'))
+            .inputs(ore('dustAnyPurityNickel'))
             .inputs(ore(combustible.name) * combustible.equivalent(1))
             .outputs(metaitem('ingotNickel'))
             .outputs(metaitem(combustible.byproduct) * combustible.equivalent(1))

@@ -234,7 +234,7 @@ ROASTER.recipeBuilder()
 
 EBF_RECIPES.recipeBuilder()
         .circuitMeta(1)
-        .inputs(ore('dustIron'))
+        .inputs(ore('dustAnyPurityIron'))
         .outputs(item('minecraft:iron_ingot'))
         .duration(60)
         .blastFurnaceTemp(1750)

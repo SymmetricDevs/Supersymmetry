@@ -16,7 +16,7 @@ ROASTER.recipeBuilder()
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustSodaAsh') * 6)
-        .inputs(ore('dustCarbon') * 2)
+        .inputs(ore('dustAnyPurityCarbon') * 2)
         .outputs(metaitem('dustSodium') * 2)
         .fluidOutputs(fluid('carbon_monoxide') * 3000)
         .EUt(30)

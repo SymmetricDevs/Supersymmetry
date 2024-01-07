@@ -251,7 +251,7 @@ AUTOCLAVE.recipeBuilder()
 
 EBF.recipeBuilder()
         .inputs(ore('dustZincRichSlag') * 10)
-        .inputs(ore('dustCarbon') * 2)
+        .inputs(ore('dustAnyPurityCarbon') * 2)
         .outputs(metaitem('dustWaelzOxide') * 7)
         .outputs(metaitem('dustGermaniumRichSlag') * 3)
         .blastFurnaceTemp(1400)
