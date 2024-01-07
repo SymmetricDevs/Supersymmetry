@@ -81,7 +81,7 @@ for (ore in tab_MAsS) {
     }
 
     BATCH_REACTOR.recipeBuilder()
-        .inputs(metaitem('dustAnyPurity' + ore) * 3)
+        .inputs(metaitem('dust' + ore) * 3)
         .fluidInputs(fluid('nitric_acid') * 13000)
         .fluidInputs(fluid('distilled_water') * 3000)
         .outputs(metaitem('dustSulfur') * 3)
