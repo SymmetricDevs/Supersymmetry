@@ -47,7 +47,7 @@ FBR.recipeBuilder()
     .buildAndRegister()
 
 LCR.recipeBuilder()
-    .inputs(ore('dustMolybdenumTrioxide') * 48)
+    .inputs(ore('dustPurifiedMolybdenumTrioxide') * 48)
     .fluidInputs(fluid('phosphoric_acid') * 1000)
     .fluidInputs(fluid('distilled_water') * 28000)
     .outputs(metaitem('dustPhosphomolybdicAcid'))
