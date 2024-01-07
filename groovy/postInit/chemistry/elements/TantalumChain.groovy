@@ -30,7 +30,7 @@ GRAVITY_SEPARATOR.recipeBuilder() // Sifted Tantalite
 
 ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Tantalite Concentrate
     .inputs(ore('dustSiftedTantalite'))
-    .outputs(metaitem('dustTantaliteConcentrate'))
+    .outputs(metaitem('dustConcentrateTantalite'))
     .chancedOutput(metaitem('dustPegmatiteTailings'), 2500, 0)
     .chancedOutput(metaitem('dustNetherQuartz'), 2500, 0)
     .EUt(Globals.voltAmps[1])
@@ -38,7 +38,7 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Tantalite Concentrate
     .buildAndRegister()
 
 MIXER.recipeBuilder() // Impure Tantalite Slurry
-    .inputs(ore('dustTantaliteConcentrate') * 8)
+    .inputs(ore('dustConcentrateTantalite') * 8)
     .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('impure_tantalite_slurry') * 2000)
     .EUt(Globals.voltAmps[3])

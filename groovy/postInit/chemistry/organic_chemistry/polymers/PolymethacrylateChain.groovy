@@ -129,7 +129,7 @@ POLYMERIZATION.recipeBuilder()
 
 DRYER.recipeBuilder()
     .fluidInputs(fluid('polymethyl_methacrylate_solution') * 2000)
-    .outputs(metaitem('dustPmma') * 7)
+    .outputs(metaitem('dustPmma'))
     .duration(300)
     .EUt(30)
     .buildAndRegister()

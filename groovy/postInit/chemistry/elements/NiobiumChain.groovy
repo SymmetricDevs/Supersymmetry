@@ -30,7 +30,7 @@ GRAVITY_SEPARATOR.recipeBuilder() // Sifted Pyrochlore
 
 ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Pyrochlore Concentrate
     .inputs(ore('dustSiftedPyrochlore'))
-    .outputs(metaitem('dustPyrochloreConcentrate'))
+    .outputs(metaitem('dustConcentratePyrochlore'))
     .chancedOutput(metaitem('dustLimestoneTailings'), 2500, 0)
     .chancedOutput(metaitem('dustCalcite'), 2500, 0)
     .EUt(Globals.voltAmps[1])
@@ -38,7 +38,7 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Pyrochlore Concentrate
     .buildAndRegister()
 
 MIXER.recipeBuilder() // Impure Pyrochlore Slurry
-    .inputs(ore('dustPyrochloreConcentrate') * 8)
+    .inputs(ore('dustConcentratePyrochlore') * 8)
     .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('impure_pyrochlore_slurry') * 2000)
     .EUt(Globals.voltAmps[3])
@@ -151,7 +151,7 @@ GRAVITY_SEPARATOR.recipeBuilder() // Sifted Columbite
 
 ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Columbite Concentrate
     .inputs(ore('dustSiftedColumbite'))
-    .outputs(metaitem('dustColumbiteConcentrate'))
+    .outputs(metaitem('dustConcentrateColumbite'))
     .chancedOutput(metaitem('dustPegmatiteTailings'), 2500, 0)
     .chancedOutput(metaitem('dustNetherQuartz'), 2500, 0)
     .EUt(Globals.voltAmps[1])
@@ -159,7 +159,7 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Columbite Concentrate
     .buildAndRegister()
 
 MIXER.recipeBuilder() // Impure Columbite Slurry
-    .inputs(ore('dustColumbiteConcentrate') * 8)
+    .inputs(ore('dustConcentrateColumbite') * 8)
     .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('impure_columbite_slurry') * 2000)
     .EUt(Globals.voltAmps[3])
