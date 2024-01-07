@@ -497,7 +497,7 @@ DUMPER = recipemap('dumping')
 
     CSTR.recipeBuilder()
         .fluidInputs(fluid('methacrylic_acid') * 50)
-        .fluidInputs(fluid('lauric_acid') * 50)
+        .fluidInputs(fluid('n_dodecanol') * 50)
         .fluidInputs(fluid('sulfuric_acid') * 50)
         .fluidOutputs(fluid('alkyl_methacrylate') * 50)
         .fluidOutputs(fluid('diluted_sulfuric_acid') * 100)

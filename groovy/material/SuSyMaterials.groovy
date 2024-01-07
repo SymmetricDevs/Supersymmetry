@@ -751,7 +751,6 @@ class SuSyMaterials {
         public static Material HydrobromicAcid;
         public static Material SodiumSulfite;
         public static Material SodiumThiosulfate;
-        public static Material HydrogenCyanide;
         public static Material SulfidicSilverCyanideSolution;
         public static Material SilverCyanideSolution;
         public static Material SulfidicPyrargyriteCyanideLeachSolution;
@@ -1184,6 +1183,7 @@ class SuSyMaterials {
         public static Material ManganeseIIChlorideSolution;
         public static Material DilutedManganeseIIChlorideSolution;
         public static Material SupportedPalladium;
+        public static Material MixedCyanideSolution;
 
         // Organic Chemistry Materials
 

@@ -653,5 +653,13 @@ public class SecondDegreeMaterials {
                 .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build();
+
+        MixedCyanideSolution = new Material.Builder(13105, SuSyUtility.susyId("mixed_cyanide_solution"))
+                .fluid()
+                .components(SodiumCyanide, 2, Hydrogen, 2, Carbon, 2, Nitrogen, 2, Water, 1)
+                .colorAverage()
+                .build();
+
+        MixedCyanideSolution.setFormula("(NaCN)2(HCN)2(H2O)", true)
     }
 }
