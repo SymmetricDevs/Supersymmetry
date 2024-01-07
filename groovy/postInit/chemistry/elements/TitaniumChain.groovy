@@ -270,7 +270,7 @@ BR.recipeBuilder()
 
 BR.recipeBuilder()
         .inputs(ore('dustTitanium'))
-        .inputs(ore('dustIodine') * 4)
+        .inputs(ore('dustAnyPurityIodine') * 4)
         .outputs(metaitem('dustTitaniumIodide') * 5)
         .duration(240)
         .EUt(Globals.voltAmps[3])
