@@ -45826,7 +45826,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Relativistic Turret shoots shoots nearby enemies on top of a player. Its radius is 20 meters. It needs a Tier 3 or higher turret base. \n\nIt uses §45,000 RF§r (1250 EU) per shot, and it shoots 2.5 times per second.\n",
+          "desc:8": "The Relativistic Turret shoots nearby enemies on top of a player. Its radius is 20 meters. It needs a Tier 3 or higher turret base. \n\nIt uses §45,000 RF§r (1250 EU) per shot, and it shoots 2.5 times per second.\n\nNote: This currently has no recipe.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
