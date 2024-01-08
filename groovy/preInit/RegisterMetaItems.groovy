@@ -47,9 +47,10 @@ eventManager.listen {
         customMetaItems.addItem(157, "bituminous_residue");
         customMetaItems.addItem(158, "paraffin_wax");
         customMetaItems.addItem(159, "spent_cracking_catalyst");
+		
+		customMetaItems.addItem(160, "red_mud_residue");
 
-        customMetaItems.addItem(160, "red_mud_slag");
-        customMetaItems.addItem(161, "leached_red_mud_slag");
+        customMetaItems.addItem(161, "leached_red_mud_residue"); #unused
 
         customMetaItems.addItem(162, "pitch_binder");
         customMetaItems.addItem(163, "raw_electrode");

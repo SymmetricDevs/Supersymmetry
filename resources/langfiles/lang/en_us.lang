@@ -1889,6 +1889,22 @@ susy.material.treated_collagen=Treated Collagen
 susy.material.gelatin_solution=Gelatin Solution
 susy.material.uranium_dioxide=Uranium Dioxide
 susy.material.uranium_tetrafluoride=Uranium Tetrafluoride
+susy.material.alkaline_salt_red_mud_mixture=Alkaline Salt-Red Mud Mixture
+susy.material.roasted_alkaline_salt_red_mud_mixture=Roasted Alkaline Salt-Red Mud Mixture
+susy.material.leached_red_mud_residue=Leached Red Mud Residue
+susy.material.organic_loaded_red_mud_mixture=Organic-Loaded Red Mud Mixture
+susy.material.scrubbed_organic_loaded_red_mud_mixture=Scrubbed Organic-Loaded Red Mud Mixture
+susy.material.primene_jmt=Primene Jmt
+susy.material.purified_leached_red_mud=Purified Leached Red Mud
+susy.material.impure_sodium_scandate_solution=Impure Sodium Scandate Solution
+susy.material.impure_scandium_hydroxide=Impure Scandium Hydroxide
+susy.material.impure_scandium_chloride_solution=Impure Scandium Chloride Solution
+susy.material.impure_scandium_sulfate_solution=Impure Scandium Sulfate Solution
+susy.material.scandium_oxide=Scandium Oxide
+susy.material.scandium_fluoride=Scandium Fluoride
+susy.material.sodium_phosphate=Sodium Phosphate
+susy.material.sodium_phosphate_solution=Sodium Phosphate Solution
+susy.material.diluted_sodium_phosphate_solution=Diluted Sodium Phosphate Solution
 
 # Isotopes
 
@@ -2069,8 +2085,8 @@ metaitem.bituminous_residue.name=Bituminous Residue
 metaitem.paraffin_wax.name=Paraffin Wax
 metaitem.spent_cracking_catalyst.name=Spent Cracking Catalyst
 metaitem.cracking_catalyst.name=Cracking Catalyst
-metaitem.red_mud_slag.name=Red Mud Slag
-metaitem.leached_red_mud_slag.name=Leached Red Mud Slag
+metaitem.red_mud_residue.name=Red Mud Residue
+metaitem.leached_red_mud_residue.name=Leached Red Mud Residue
 metaitem.pitch_binder.name=Pitch Binder
 metaitem.raw_electrode.name=Raw Electrode
 metaitem.graphite_electrode.name=Graphite Electrode

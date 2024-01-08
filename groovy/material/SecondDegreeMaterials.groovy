@@ -651,6 +651,16 @@ public class SecondDegreeMaterials {
                 .dust()
                 .components(PalladiumChloride, 1, Alumina, 1)
                 .flags(GENERATE_CATALYST_BED)
+
+        SodiumPhosphateSolution = new Material.Builder(13105, SuSyUtility.susyId("sodium_phosphate_solution"))
+                .fluid()
+                .components(SodiumPhosphate, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        DilutedSodiumPhosphateSolution = new Material.Builder(13106, SuSyUtility.susyId("diluted_sodium_phosphate_solution"))
+                .fluid()
+                .components(SodiumPhosphate, 1, Water, 3)
                 .colorAverage()
                 .build();
     }
