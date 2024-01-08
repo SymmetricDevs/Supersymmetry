@@ -74,7 +74,7 @@ EBF.recipeBuilder()
 def tab_MAsS = ["Cobaltite", "Arsenopyrite"]
 for (ore in tab_MAsS) {
     def metal = null
-    
+
     for (mat in material(ore.toLowerCase()).getMaterialComponents()) {
         if (mat.material == Cobalt){metal = "Cobalt"; break}
         if (mat.material == Iron){metal = "Iron"; break}
@@ -116,7 +116,7 @@ ROASTER.recipeBuilder()
 
 //ARSENIC OXIDES REDUCTION
 ROASTER.recipeBuilder()
-        .inputs(ore('dustCarbon') * 3)
+        .inputs(ore('dustAnyPurityCarbon') * 3)
         .inputs(ore('dustArsenicTrioxide') * 5)
         .outputs(metaitem('dustArsenic') * 2)
         .fluidOutputs(fluid('carbon_monoxide') * 3000)
@@ -125,7 +125,7 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 ROASTER.recipeBuilder()
-        .inputs(ore('dustCarbon') * 5)
+        .inputs(ore('dustAnyPurityCarbon') * 5)
         .inputs(ore('dustArsenicVOxide') * 7)
         .outputs(metaitem('dustArsenic') * 2)
         .fluidOutputs(fluid('carbon_monoxide') * 5000)
@@ -164,7 +164,7 @@ BATCH_REACTOR.recipeBuilder()
         .outputs(metaitem('dustArsenicIiiSulfide') * 5)
         .fluidOutputs(fluid('hydrogen_sulfide') * 3000)
         .fluidOutputs(fluid('diluted_saltwater') * 6000)
-        .duration(120)  
+        .duration(120)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
 
@@ -173,7 +173,7 @@ BATCH_REACTOR.recipeBuilder()
         .fluidInputs(fluid('hydrochloric_acid') * 6000)
         .outputs(metaitem('dustArsenicVSulfide') * 7)
         .fluidOutputs(fluid('hydrogen_sulfide') * 4500)
-        .duration(120)  
+        .duration(120)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
 
@@ -260,7 +260,7 @@ BATCH_REACTOR.recipeBuilder()
         .buildAndRegister()
 
 ARC_FURNACE.recipeBuilder()
-        .inputs(ore('dustSodium') * 3)
+        .inputs(ore('dustAnyPuritySodium') * 3)
         .inputs(ore('dustHighPurityArsenic'))
         .outputs(metaitem('dustSodiumArsenide') * 4)
         .duration(120)

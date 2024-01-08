@@ -239,7 +239,7 @@ BATCH_REACTOR.recipeBuilder()
 //SILVER CHLORIDE
 BATCH_REACTOR.recipeBuilder()
     .inputs(ore('dustSilverChloride') * 4)
-    .inputs(ore('dustZinc'))
+    .inputs(ore('dustAnyPurityZinc'))
     .fluidInputs(fluid('distilled_water') * 1000)
     .notConsumable(fluid('sulfuric_acid') * 10)
     .outputs(metaitem('dustSilver') * 2)

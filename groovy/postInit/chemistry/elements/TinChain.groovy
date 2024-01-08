@@ -137,7 +137,7 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder()
-        .inputs(ore('dustSulfur'))
+        .inputs(ore('dustAnyPuritySulfur'))
         .fluidInputs(fluid('crude_tin') * 5760)
         .fluidOutputs(fluid('decopperized_tin') * 5760)
         .outputs(metaitem('dustCopperMonosulfide') * 2)

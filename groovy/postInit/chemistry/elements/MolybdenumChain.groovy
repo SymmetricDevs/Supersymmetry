@@ -31,7 +31,7 @@ FF.recipeBuilder()
         .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()
-        .inputs(ore('dustSulfur') * 5)
+        .inputs(ore('dustAnyPuritySulfur') * 5)
         .fluidInputs(fluid('phosphorus') * 288)
         .outputs(metaitem('dustPhosphorusPentasulfide') * 7)
         .EUt(Globals.voltAmps[3])

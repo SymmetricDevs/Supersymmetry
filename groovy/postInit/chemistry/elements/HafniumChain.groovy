@@ -65,7 +65,7 @@ for (inertGas in Globals.inertGases) {
                 .circuitMeta(2)
                 .fluidInputs(fluid('hafnium_tetrachloride') * 720)
                 .notConsumable(fluid(inertGas.name) * inertGas.amount_required)
-                .inputs(ore('dustMagnesium') * 2)
+                .inputs(ore('dustAnyPurityMagnesium') * 2)
                 .outputs(metaitem('sponge.hafnium.crude'))
                 .fluidOutputs(fluid('magnesium_chloride') * 864)
                 .blastFurnaceTemp(2150)
@@ -92,7 +92,7 @@ MACERATOR.recipeBuilder()
 
 BR.recipeBuilder()
         .inputs(ore('dustHafnium'))
-        .inputs(ore('dustIodine') * 4)
+        .inputs(ore('dustAnyPurityIodine') * 4)
         .outputs(metaitem('dustHafniumIodide') * 5)
         .duration(360)
         .EUt(Globals.voltAmps[3])
@@ -106,5 +106,3 @@ CVD.recipeBuilder()
         .duration(180)
         .EUt(Globals.voltAmps[4])
         .buildAndRegister()
-
-        

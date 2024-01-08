@@ -133,7 +133,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 // MnCl2
 
 BR.recipeBuilder()
-    .inputs(ore('dustManganese'))
+    .inputs(ore('dustAnyPurityManganese'))
     .fluidInputs(fluid('chlorine') * 2000)
     .outputs(metaitem('dustManganeseIiChloride') * 3)
     .duration(100)

@@ -111,7 +111,7 @@ def minor_solvents = [
     // 2,6-Di-tert-butylphenol
 
     BR.recipeBuilder()
-        .inputs(ore('dustAluminium'))
+        .inputs(ore('dustAnyPurityAluminium'))
         .fluidInputs(fluid('phenol') * 3000)
         .fluidOutputs(fluid('aluminium_phenolate') * 1000)
         .fluidOutputs(fluid('hydrogen') * 3000)
@@ -188,7 +188,7 @@ CSTR.recipeBuilder()
     // Ferrocene
 
     ALLOY_SMELTER.recipeBuilder()
-        .inputs(ore('dustPotassium'))
+        .inputs(ore('dustAnyPurityPotassium'))
         .inputs(ore('dustMolecularSieve') * 4)
         .outputs(metaitem('dustPotassiumMolecularSieve') * 4)
         .duration(300)
@@ -204,8 +204,8 @@ CSTR.recipeBuilder()
         .buildAndRegister()
 
     ALLOY_SMELTER.recipeBuilder()
-        .inputs(ore('dustSodium'))
-        .inputs(ore('dustLead'))
+        .inputs(ore('dustAnyPuritySodium'))
+        .inputs(ore('dustAnyPurityLead'))
         .outputs(metaitem('ingotSodiumLeadAlloy') * 2)
         .duration(300)
         .EUt(30)

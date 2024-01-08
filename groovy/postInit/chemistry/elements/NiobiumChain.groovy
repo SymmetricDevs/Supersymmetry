@@ -85,7 +85,7 @@ CHEMICAL_BATH.recipeBuilder() // Digested Pyrochlore
 REACTION_FURNACE.recipeBuilder() // Ferroniobium-tantalum
     .inputs(ore('dustIronIiiOxide') * 15)
     .inputs(ore('dustDigestedPyrochlore') * 7)
-    .inputs(ore('dustAluminium') * 42)
+    .inputs(ore('dustAnyPurityAluminium') * 42)
     .fluidInputs(fluid('sodium_nitrate') * 720)
     .outputs(metaitem('dustFerroniobiumTantalum') * 20)
     .outputs(metaitem('dustAlumina') * 105)
@@ -259,7 +259,7 @@ ROASTER.recipeBuilder() // Niobium Oxide
 
 ADVANCED_ARC_FURNACE.recipeBuilder() // Niobium
     .inputs(ore('dustNiobiumOxide') * 21)
-    .inputs(ore('dustAluminium') * 10)
+    .inputs(ore('dustAnyPurityAluminium') * 10)
     .outputs(metaitem('dustAlumina') * 25)
     .fluidOutputs(fluid('niobium') * 864)
     .duration(240)

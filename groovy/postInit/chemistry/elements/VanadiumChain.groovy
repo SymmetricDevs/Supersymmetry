@@ -203,7 +203,7 @@ for (fuel in sintering_fuels) {
 
             ROTARY_KILN.recipeBuilder()
                     .inputs(ore('dustFlotatedVanadiferousTitanomagnetite') * 11)
-                    .inputs(ore('dustCarbon') * 7)
+                    .inputs(ore('dustAnyPurityCarbon') * 7)
                     .inputs(ore('dustDolomite'))
                     .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
                     .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
