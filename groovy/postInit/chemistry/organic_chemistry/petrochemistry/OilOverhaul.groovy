@@ -729,8 +729,8 @@ EBF.recipeBuilder()
 .inputs(metaitem('spent_cracking_catalyst') * 4)
 .fluidOutputs(fluid('flue_gas') * 1000)
 .outputs(metaitem('cracking_catalyst') * 4)
-.blastFurnaceTemp(1013)
-.duration(160)
+.blastFurnaceTemp(1200)
+.duration(100)
 .EUt(Globals.voltAmps[1] * 2)
 .buildAndRegister()
 
@@ -913,9 +913,7 @@ DT.recipeBuilder()
 .buildAndRegister()
 
 fractions.each { _, fraction -> {
-
         if (fraction.isUpgradable) {
-
             CRACKER.recipeBuilder()
             .fluidInputs(fraction.get(1000))
             .inputs(metaitem('cracking_catalyst'))
@@ -931,11 +929,8 @@ fractions.each { _, fraction -> {
             .duration(160)
             .EUt(Globals.voltAmps[1])
             .buildAndRegister()
-
         }
-
     }
-
 }
 
 CRACKER.recipeBuilder()
