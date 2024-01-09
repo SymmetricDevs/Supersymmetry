@@ -15,44 +15,28 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
-public class FirstDegreeMaterials{
+public class FirstDegreeMaterials {
+        private static Material generatePurifiedElement(Material material, int id, boolean generateLiquid, boolean generateIngot) {
+                var color = material.materialRGB;
+                var mat = new Material.Builder(id, SuSyUtility.susyId('high_purity_' + material.toString()))
+                                .dust()
+                                .iconSet(SHINY)
+                                .flags(DISABLE_DECOMPOSITION)
+                                .color(color)
+                                .components(material, 1)
+                                .build();
 
-    private static void generatePurifiedElement(Material material, int id, boolean generateLiquid, boolean generateIngot) {
-        var color = material.materialRGB;
+                if (generateLiquid) {
+                        mat.fluid(FluidStorageKey.LIQUID, new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature()))
+                }
 
-        if (generateLiquid & !generateIngot) {
-            new Material.Builder(id, SuSyUtility.susyId('high_purity_' + material.toString()))
-                    .dust().fluid()
-                    .iconSet(SHINY)
-            //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
-                    .color(color)
-                    .components(material, 1)
-                    .build();
-        } else if(generateIngot & !generateLiquid) {
-            new Material.Builder(id, SuSyUtility.susyId('high_purity_' + material.toString()))
-                    .dust().ingot()
-                    .iconSet(SHINY)
-            //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
-                    .color(color)
-                    .components(material, 1)
-                    .build();
-        } else if(generateLiquid & generateIngot) {
-            new Material.Builder(id, SuSyUtility.susyId('high_purity_' + material.toString()))
-                    .dust().ingot().fluid()
-                    .iconSet(SHINY)
-            //.fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
-                    .color(color)
-                    .components(material, 1)
-                    .build();
-        } else {
-            new Material.Builder(id, SuSyUtility.susyId('high_purity_' + material.toString()))
-                    .dust()
-                    .iconSet(SHINY)
-                    .color(color)
-                    .components(material, 1)
-                    .build();
+                if (generateIngot) {
+                        mat.ingot()
+                }
+
+                return mat
         }
-    }
+}
 
     public static void register() {
 
@@ -68,16 +52,7 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Magnesium, 8005, false, false)
         generatePurifiedElement(Aluminium, 8006, false, false)
         generatePurifiedElement(Silicon, 8007, true, false)
-
-        new Material.Builder(8008, SuSyUtility.susyId('high_purity_phosphorus'))
-                .ingot().fluid().dust()
-                .iconSet(SHINY)
-                .flags(DISABLE_DECOMPOSITION)
-                .fluidTemp(Phosphorus.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
-                .color(Phosphorus.materialRGB)
-                .components(Phosphorus, 1)
-                .build();
-
+        generatePurifiedElement(Phosphorus, 8008, true, true)
         generatePurifiedElement(Sulfur, 8009, false, false)
         generatePurifiedElement(Potassium, 8010, false, false)
         generatePurifiedElement(Calcium, 8011, false, false)
@@ -122,16 +97,7 @@ public class FirstDegreeMaterials{
         generatePurifiedElement(Osmium, 8050, false, false)
         generatePurifiedElement(Iridium, 8051, false, false)
         generatePurifiedElement(Platinum, 8052, false, false)
-
-        new Material.Builder(8053, SuSyUtility.susyId('high_purity_gold'))
-                .ingot()
-                .iconSet(SHINY)
-                .flags(GENERATE_FOIL, GENERATE_PLATE, DISABLE_DECOMPOSITION)
-                .fluidTemp(Gold.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
-                .color(Gold.materialRGB)
-                .components(Gold, 1)
-                .build();
-
+        generatePurifiedElement(Gold, 8053, false, true).flags(GENERATE_FOIL, GENERATE_PLATE)
         generatePurifiedElement(Thallium, 8054, false, false)
         generatePurifiedElement(Lead, 8055, false, false)
         generatePurifiedElement(Bismuth, 8056, false, false)
