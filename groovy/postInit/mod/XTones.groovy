@@ -44,7 +44,7 @@ ASSEMBLER.recipeBuilder()
         .EUt(7)
         .buildAndRegister();
 
-for (var i = 1; i < 17; i++) {
+for (var i = 17; i < 33; i++) {
     ASSEMBLER.recipeBuilder()
             .inputs(item('xtones:base') * 8)
             .inputs(item('minecraft:stick'))

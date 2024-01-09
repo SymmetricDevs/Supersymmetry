@@ -100,6 +100,7 @@ POLYMERIZATION.recipeBuilder()
         .buildAndRegister()
 
 POLYMERIZATION.recipeBuilder()
+        .circuitMeta(1)
         .notConsumable(metaitem('dustKaminskyCatalyst'))
         .fluidInputs(fluid('propene') * 1000)
         .outputs(metaitem('dustPolypropylene'))

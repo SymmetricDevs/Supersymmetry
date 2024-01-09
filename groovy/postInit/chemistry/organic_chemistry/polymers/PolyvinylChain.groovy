@@ -101,6 +101,7 @@ MIXER.recipeBuilder()
     .buildAndRegister()
 
 POLYMERIZATION.recipeBuilder()
+    .circuitMeta(1)
     .fluidInputs(fluid('vinyl_acetate_solution') * 2000)
     .inputs(ore('dustTinyPotassiumPersulfate'))
     .fluidOutputs(fluid('polyvinyl_acetate_mixture') * 2000)
@@ -115,9 +116,10 @@ PHASE_SEPARATOR.recipeBuilder()
     .duration(50)
     .buildAndRegister()
 
-// Ethylene-vinyl acetate)
+// Ethylene-vinyl acetate
 
 POLYMERIZATION.recipeBuilder()
+    .circuitMeta(2)
     .fluidInputs(fluid('ethylene') * 1000)
     .fluidInputs(fluid('vinyl_acetate_solution') * 1000)
     .inputs(ore('dustTinyPotassiumPersulfate'))

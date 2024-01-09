@@ -3292,7 +3292,15 @@ public class FirstDegreeMaterials{
                 .colorAverage()
                 .build();
 
-        UraniumDioxide = new Material.Builder(8587, SuSyUtility.susyId("uranium_dioxide"))
+        PhosphomolybdicAcid = new Material.Builder(8587, SuSyUtility.susyId("phosphomolybdic_acid"))
+                .dust()
+                .components(Hydrogen, 3, Phosphorus, 1, Molybdenum, 12, Oxygen, 40)
+                .color(0xb39c07)
+                .build();
+
+        PhosphomolybdicAcid.setFormula("H3[PMo12O40]", true)
+        
+        UraniumDioxide = new Material.Builder(8588, SuSyUtility.susyId("uranium_dioxide"))
                 .dust()
                 .iconSet(SAND)
                 .components(Uranium238, 1, Oxygen, 2)
@@ -3301,7 +3309,7 @@ public class FirstDegreeMaterials{
 
         UraniumDioxide.setFormula("UO2", true)
 
-        UraniumTetrafluoride = new Material.Builder(8588, SuSyUtility.susyId("uranium_tetrafluoride"))
+        UraniumTetrafluoride = new Material.Builder(8589, SuSyUtility.susyId("uranium_tetrafluoride"))
                 .dust()
                 .iconSet(SAND)
                 .components(Uranium238, 1, Fluorine, 4)

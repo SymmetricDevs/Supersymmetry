@@ -476,6 +476,7 @@ DUMPER = recipemap('dumping')
     // Ethylene propylene copolymer
 
     POLYMERIZATION.recipeBuilder()
+        .circuitMeta(2)
         .notConsumable(metaitem('dustKaminskyCatalyst'))
         .fluidInputs(fluid('ethylene') * 1000)
         .fluidInputs(fluid('propene') * 1000)
@@ -497,7 +498,7 @@ DUMPER = recipemap('dumping')
 
     CSTR.recipeBuilder()
         .fluidInputs(fluid('methacrylic_acid') * 50)
-        .fluidInputs(fluid('lauric_acid') * 50)
+        .fluidInputs(fluid('n_dodecanol') * 50)
         .fluidInputs(fluid('sulfuric_acid') * 50)
         .fluidOutputs(fluid('alkyl_methacrylate') * 50)
         .fluidOutputs(fluid('diluted_sulfuric_acid') * 100)
@@ -579,6 +580,7 @@ DUMPER = recipemap('dumping')
     // Calcium dodecylbenzene sulfonate
 
     BR.recipeBuilder()
+        .circuitMeta(3)
         .fluidInputs(fluid('benzene') * 1000)
         .fluidInputs(fluid('one_dodecene') * 1000)
         .notConsumable(fluid('hydrofluoric_acid') * 100)
@@ -904,7 +906,7 @@ DUMPER = recipemap('dumping')
     // Benzotriazole
 
     BR.recipeBuilder()
-        .inputs(ore('dustTwoNitrochlorobenzene'))
+        .inputs(ore('dustTwoChloronitrobenzene'))
         .fluidInputs(fluid('toluene') * 1000)
         .fluidInputs(fluid('ammonia') * 2000)
         .outputs(metaitem('dustAmmoniumChloride') * 6)
@@ -956,8 +958,8 @@ DUMPER = recipemap('dumping')
 // Chelates: SALEN
 
 BR.recipeBuilder()
-    .inputs(ore('ethylenediamine') * 1000)
     .inputs(ore('dustSodiumCyanoborohydride') * 14)
+    .fluidInputs(fluid('ethylenediamine') * 1000)
     .fluidInputs(fluid('hydrochloric_acid') * 2000)
     .fluidInputs(fluid('salicylaldehyde') * 2000)
     .outputs(metaitem('dustSalicylideneEthylenediamine'))
@@ -997,7 +999,8 @@ def liquidFrictionModifierMap = [
 
 def solidAntiwearMap = [
     'dustMolybdenumDialkyldithiophosphate': 4,
-    'dustZincBisdiethyldithiocarbamate': 2
+    'dustZincBisdiamyldithiocarbamate': 2
+
 ]
 
 def liquidAntiwearMap = [

@@ -51,8 +51,14 @@ mods.gregtech.assembler.recipeBuilder()
 mods.gregtech.assembler.recipeBuilder()
     .circuitMeta(11)
     .inputs(ore('plateStainlessSteel') * 4)
-    .inputs(ore('frameStainlessSteel'))
+    .inputs(ore('frameGtStainlessSteel'))
     .outputs(item('susy:susy_multiblock_casing', 1))
     .duration(240)
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()
+
+//Deposit stuff
+// Crushed Sulfur Ore * 1
+mods.gregtech.forge_hammer.removeByInput(16, [item('gregtech:ore_sulfur_0')], null)
+// Crushed Sulfur Ore * 2
+mods.gregtech.macerator.removeByInput(2, [item('gregtech:ore_sulfur_0')], null)

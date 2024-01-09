@@ -403,6 +403,7 @@ mods.gregtech.arc_furnace.recipeBuilder()
     .buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(10)
     .inputs(ore('cobblestone') * 4)
     .inputs(ore('plankWood') * 3)
     .inputs(ore('wireFineRedAlloy'))
@@ -415,6 +416,7 @@ mods.gregtech.assembler.recipeBuilder()
 // Dispenser * 1
 mods.gregtech.assembler.removeByInput(30, [item('minecraft:cobblestone') * 7, item('minecraft:bow'), item('minecraft:redstone'), circuit(1)], null)
 mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(11)
     .inputs(ore('cobblestone'))
     .inputs(ore('springSteel'))
     .inputs(ore('string'))
@@ -428,6 +430,7 @@ mods.gregtech.assembler.recipeBuilder()
 // Dropper * 1
 mods.gregtech.assembler.removeByInput(30, [item('minecraft:cobblestone') * 7, item('minecraft:redstone'), circuit(2)], null)
 mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(12)
     .inputs(ore('cobblestone'))
     .inputs(ore('wireFineRedAlloy'))
     .inputs(metaitem('electric.piston.lv'))
@@ -572,10 +575,13 @@ mods.gregtech.macerator.recipeBuilder()
 //Mixer
 // Fermented Spider Eye * 1
 mods.gregtech.mixer.removeByInput(7, [item('minecraft:sugar'), item('minecraft:red_mushroom'), item('minecraft:spider_eye')], null)
+mods.gregtech.blender.removeByInput(7, [item('minecraft:sugar'), item('minecraft:red_mushroom'), item('minecraft:spider_eye')], null)
 // Fermented Spider Eye * 1
 mods.gregtech.mixer.removeByInput(7, [item('minecraft:sugar'), item('minecraft:brown_mushroom'), item('minecraft:spider_eye')], null)
+mods.gregtech.blender.removeByInput(7, [item('minecraft:sugar'), item('minecraft:brown_mushroom'), item('minecraft:spider_eye')], null)
 // Fire Charge * 3
 mods.gregtech.mixer.removeByInput(30, [metaitem('dustCoal'), item('minecraft:gunpowder'), item('minecraft:blaze_powder')], null)
+mods.gregtech.blender.removeByInput(30, [metaitem('dustCoal'), item('minecraft:gunpowder'), item('minecraft:blaze_powder')], null)
 mods.gregtech.mixer.recipeBuilder()
     .inputs(ore('dustCoal'))
     .inputs(ore('dustGunpowder'))
@@ -730,6 +736,9 @@ crafting.addShaped('minecraft:arrow_from_paper', item('minecraft:arrow') * 8, [
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCarbon') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCharcoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+mods.gregtech.blender.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCarbon') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+mods.gregtech.blender.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+mods.gregtech.blender.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCharcoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
 recipemap('mixer').recipeBuilder()
 			.inputs(ore('dustSaltpeter') * 2)

@@ -3,8 +3,12 @@ POLYMERIZATION = recipemap('polymerization_tank')
 MIXER = recipemap('mixer')
 DRYER = recipemap('dryer')
 CSTR = recipemap('continuous_stirred_tank_reactor')
+DT = recipemap('distillation_tower')
+LCR = recipemap('large_chemical_reactor')
+BCR = recipemap('bubble_column_reactor')
+CENTRIFUGE = recipemap('centrifuge')
 
-// PMMA
+// Route 1
 
 CSTR.recipeBuilder()
     .fluidInputs(fluid('gtfo_hydrogen_cyanide') * 50)
@@ -30,6 +34,81 @@ BR.recipeBuilder()
     .duration(300)
     .EUt(30)
     .buildAndRegister()
+
+// Route 2
+
+FBR.recipeBuilder()
+    .notConsumable(ore('dustMolybdenumTrioxide'))
+    .fluidInputs(fluid('isobutylene') * 50)
+    .fluidInputs(fluid('oxygen') * 100)
+    .fluidOutputs(fluid('gaseous_methacrolein_mixture') * 100)
+    .duration(10)
+    .EUt(30)
+    .buildAndRegister()
+
+LCR.recipeBuilder()
+    .inputs(ore('dustPurifiedMolybdenumTrioxide') * 48)
+    .fluidInputs(fluid('phosphoric_acid') * 1000)
+    .fluidInputs(fluid('distilled_water') * 28000)
+    .outputs(metaitem('dustPhosphomolybdicAcid'))
+    .duration(500)
+    .EUt(480)
+    .buildAndRegister()
+
+FBR.recipeBuilder()
+    .notConsumable(ore('dustPhosphomolybdicAcid'))
+    .fluidInputs(fluid('gaseous_methacrolein_mixture') * 100)
+    .fluidInputs(fluid('oxygen') * 50)
+    .fluidOutputs(fluid('gaseous_methacrylic_acid_mixture') * 100)
+    .duration(10)
+    .EUt(30)
+    .buildAndRegister()
+
+BCR.recipeBuilder() // MOVE TO QUENCHER
+    .fluidInputs(fluid('gaseous_methacrylic_acid_mixture') * 2000) // 1000L water, 750L methacrylic acid, 250L methacrolein
+    .fluidInputs(fluid('water') * 750)
+    .fluidOutputs(fluid('methacrylic_acid_solution') * 1500)
+    .fluidOutputs(fluid('gaseous_methacrolein_residue') * 1250)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister()
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('gaseous_methacrolein_residue') * 1250)
+    .fluidInputs(fluid('water') * 250)
+    .fluidInputs(fluid('acetic_acid') * 1000)
+    .fluidOutputs(fluid('absorbed_methacrolein') * 2500)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister()
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('absorbed_methacrolein') * 2500)
+    .fluidOutputs(fluid('diluted_acetic_acid') * 2000)
+    .fluidOutputs(fluid('gaseous_methacrolein_mixture') * 500)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister()
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('methacrylic_acid_solution') * 2000)
+    .fluidOutputs(fluid('methacrylic_acid') * 1000)
+    .fluidOutputs(fluid('water') * 1000)
+    .duration(250)
+    .EUt(30)
+    .buildAndRegister()
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('methacrylic_acid') * 50)
+    .fluidInputs(fluid('methanol') * 50)
+    .fluidInputs(fluid('sulfuric_acid') * 50)
+    .fluidOutputs(fluid('methyl_methacrylate') * 50)
+    .fluidOutputs(fluid('diluted_sulfuric_acid') * 100)
+    .duration(10)
+    .EUt(30)
+    .buildAndRegister()
+
+// Polymerization
 
 MIXER.recipeBuilder()
     .fluidInputs(fluid('methyl_methacrylate') * 1000)

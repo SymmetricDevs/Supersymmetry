@@ -376,6 +376,7 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 BR.recipeBuilder()
+        .circuitMeta(2)
         .fluidInputs(fluid('gtfo_aniline') * 2000)
         .fluidInputs(fluid('hydrogen_chloride') * 1000)
         .outputs(metaitem('gregtechfoodoption:diphenylamine_dust') * 24)
@@ -540,3 +541,6 @@ mods.gregtech.lathe.removeByInput(30, [metaitem('stickSteel')], null)
 
 // Skewer * 8
 mods.gregtech.lathe.removeByInput(40, [metaitem('stickStainlessSteel')], null)
+
+// Baking Soda Solution * 1000
+mods.gregtech.blender.removeByInput(8, [metaitem('dustSodiumBicarbonate')], [fluid('water') * 1000])

@@ -574,31 +574,37 @@ public class OreMaterials{
 
         OrthomagmaticDeposit = new Material.Builder(7076, SuSyUtility.susyId("orthomagmatic_deposit"))
                 .ore()
+                .flags(NO_UNIFICATION)
                 .color(0x80081e)
                 .build();
 
         MetamorphicDeposit = new Material.Builder(7077, SuSyUtility.susyId("metamorphic_deposit"))
                 .ore()
+                .flags(NO_UNIFICATION)
                 .color(0x21011c)
                 .build();
 
         SedimentaryDeposit = new Material.Builder(7078, SuSyUtility.susyId("sedimentary_deposit"))
                 .ore()
+                .flags(NO_UNIFICATION)
                 .color(0xfce46d)
                 .build();
 
         HydrothermalDeposit = new Material.Builder(7079, SuSyUtility.susyId("hydrothermal_deposit"))
                 .ore()
+                .flags(NO_UNIFICATION)
                 .color(0xe8e1c1)
                 .build();
 
         AlluvialDeposit = new Material.Builder(7080, SuSyUtility.susyId("alluvial_deposit"))
                 .ore()
+                .flags(NO_UNIFICATION)
                 .color(0xb59e35)
                 .build();
 
         MagmaticHydrothermalDeposit = new Material.Builder(7081, SuSyUtility.susyId("magmatic_hydrothermal_deposit"))
                 .ore()
+                .flags(NO_UNIFICATION)
                 .color(0x91835d)
                 .build();
     }

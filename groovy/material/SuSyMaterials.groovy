@@ -699,7 +699,6 @@ class SuSyMaterials {
         public static Material HydrobromicAcid;
         public static Material SodiumSulfite;
         public static Material SodiumThiosulfate;
-        public static Material HydrogenCyanide;
         public static Material SulfidicSilverCyanideSolution;
         public static Material SilverCyanideSolution;
         public static Material SulfidicPyrargyriteCyanideLeachSolution;
@@ -1022,6 +1021,7 @@ class SuSyMaterials {
         public static Material HydrogenIodide;
         public static Material AcrylicCatalyst;
         public static Material GelatinSolution;
+        public static Material PhosphomolybdicAcid;
         public static Material UraniumDioxide;
         public static Material UraniumTetrafluoride;
 
@@ -1129,6 +1129,7 @@ class SuSyMaterials {
         public static Material ManganeseIIChlorideSolution;
         public static Material DilutedManganeseIIChlorideSolution;
         public static Material SupportedPalladium;
+        public static Material MixedCyanideSolution;
 
         // Organic Chemistry Materials
 
@@ -1515,6 +1516,9 @@ class SuSyMaterials {
         public static Material TrimethylolpropaneTriacrylate;
         public static Material BenzenediazoniumChloride;
         public static Material Crotonaldehyde;
+        public static Material GaseousMethacroleinMixture;
+        public static Material GaseousMethacroleinResidue;
+        public static Material AbsorbedMethacrolein;
 
         // Third Degree Materials
 
@@ -1605,6 +1609,8 @@ class SuSyMaterials {
         public static Material SpentDimethylacetamide;
         public static Material SodiumCelluloseXanthateSolution;
         public static Material CrotonaldehydeMixture;
+        public static Material GaseousMethacrylicAcidMixture;
+        public static Material MethacrylicAcidSolution;
 
         // Thermodynamics/Greenhouse Materials
 

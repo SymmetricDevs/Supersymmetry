@@ -725,11 +725,11 @@ fractions.each { _, fraction -> {
 
 EBF.recipeBuilder()
 .fluidInputs(fluid('oxygen') * 1000)
-.inputs(metaitem('spent_cracking_catalyst'))
+.inputs(metaitem('spent_cracking_catalyst') * 4)
 .fluidOutputs(fluid('flue_gas') * 1000)
-.outputs(metaitem('cracking_catalyst'))
+.outputs(metaitem('cracking_catalyst') * 4)
 .blastFurnaceTemp(1200)
-.duration(200)
+.duration(100)
 .EUt(Globals.voltAmps[1] * 2)
 .buildAndRegister()
 
@@ -912,9 +912,7 @@ DT.recipeBuilder()
 .buildAndRegister()
 
 fractions.each { _, fraction -> {
-
         if (fraction.isUpgradable) {
-
             CRACKER.recipeBuilder()
             .fluidInputs(fraction.get(1000))
             .inputs(metaitem('cracking_catalyst'))
@@ -930,11 +928,8 @@ fractions.each { _, fraction -> {
             .duration(160)
             .EUt(Globals.voltAmps[1])
             .buildAndRegister()
-
         }
-
     }
-
 }
 
 CRACKER.recipeBuilder()
@@ -996,7 +991,7 @@ DT.recipeBuilder()
 .fluidInputs(fluid('xylene') * 1000)
 .fluidOutputs(fluid('ortho_xylene') * 200)
 .fluidOutputs(fluid('meta_para_xylene_mixture') * 800)
-.duration(500)
+.duration(100)
 .EUt(Globals.voltAmps[1] * 2)
 .buildAndRegister()
 
@@ -1004,7 +999,7 @@ CRYSTALLIZER.recipeBuilder()
 .fluidInputs(fluid('meta_para_xylene_mixture') * 4000)
 .outputs(metaitem('dustParaXylene'))
 .fluidOutputs(fluid('meta_xylene') * 3000)
-.duration(500)
+.duration(100)
 .EUt(Globals.voltAmps[1])
 .buildAndRegister()
 

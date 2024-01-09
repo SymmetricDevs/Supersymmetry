@@ -728,9 +728,8 @@ DISTILLERY.recipeBuilder()
 // Soda Ash (Sodium Carbonate) Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('gtfo_sodium_carbonate_solution') * 1000])
 // Sodium Carbonate Solution * 1000
-mods.gregtech.blender.removeByInput(30, [metaitem('dustSodaAsh')], [fluid('water') * 1000])
-// Sodium Carbonate Solution * 1000
 mods.gregtech.mixer.removeByInput(30, [metaitem('dustSodaAsh')], [fluid('water') * 1000])
+mods.gregtech.blender.removeByInput(30, [metaitem('dustSodaAsh')], [fluid('water') * 1000])
 // Dutched Chocolate Liquor * 1
 mods.gregtech.chemical_bath.removeByInput(540, [metaitem('gregtechfoodoption:chocolate_liquor_refined_crushed')], [fluid('gtfo_sodium_carbonate_solution') * 1000])
 
@@ -3069,6 +3068,8 @@ CSTR.recipeBuilder()
 
 // Ammonium Bisulfate
 ELECTROLYZER.recipeBuilder()
+        .notConsumable(ore('stickPlatinum'))
+        .notConsumable(metaitem('graphite_electrode'))
         .fluidInputs(fluid('ammonium_bisulfate') * 1584)
         .fluidOutputs(fluid('sulfuric_acid') * 1000)
         .fluidOutputs(fluid('ammonia') * 1000)
@@ -3724,6 +3725,15 @@ TBR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
+DISTILLATION_TOWER.recipeBuilder()
+.fluidInputs(fluid('ortho_para_xylene_mixture') * 1000)
+.fluidOutputs(fluid('para_xylene') * 575)
+.fluidOutputs(fluid('ortho_xylene') * 375)
+.fluidOutputs(fluid('meta_xylene') * 50)
+.duration(100)
+.EUt(Globals.voltAmps[1] * 2)
+.buildAndRegister()
+
 //XYLENE FROM TOLUENE
 TBR.recipeBuilder()
 .notConsumable(ore('dustAluminiumChloride'))
@@ -3773,6 +3783,15 @@ FLUIDIZEDBR.recipeBuilder()
 .chancedOutput(metaitem('dustBiphenyl'), 500, 0)
 .fluidOutputs(fluid('benzene') * 900)
 .fluidOutputs(fluid('water') * 50)
+.duration(100)
+.EUt(30)
+.buildAndRegister()
+
+BR.recipeBuilder()
+.fluidInputs(fluid('sodium_hydroxide') * 432)
+.fluidInputs(fluid('chlorobenzene') * 1000)
+.outputs(metaitem('dustSalt') * 2)
+.fluidOutputs(fluid('phenol') * 1000)
 .duration(100)
 .EUt(30)
 .buildAndRegister()
@@ -4300,4 +4319,35 @@ FBR.recipeBuilder()
         .fluidOutputs(fluid('butyraldehyde') * 50)
         .duration(20)
         .EUt(120)
+        .buildAndRegister()
+
+//1-butene from n-butanol
+
+CSTR.recipeBuilder()
+        .fluidInputs(fluid('hot_sulfuric_acid') * 50)
+        .fluidInputs(fluid('n_butanol') * 50)
+        .fluidOutputs(fluid('one_butene') * 50)
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 100)
+        .duration(5)
+        .EUt(30)
+        .buildAndRegister()
+
+// NaHCO3 solutions
+
+MIXER.recipeBuilder()
+        .circuitMeta(1)
+        .fluidInputs(fluid('water') * 1000)
+        .inputs(ore('dustSodiumBicarbonate') * 6)
+        .fluidOutputs(fluid('sodium_bicarbonate_solution') * 1000)
+        .EUt(30)
+        .duration(80)
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .circuitMeta(2)
+        .fluidInputs(fluid('water') * 1000)
+        .inputs(ore('dustSodiumBicarbonate'))
+        .fluidOutputs(fluid('gtfo_baking_soda_solution') * 1000)
+        .EUt(30)
+        .duration(80)
         .buildAndRegister()

@@ -391,8 +391,8 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 BR.recipeBuilder()
-    .inputs(ore('one_two_diaminopropane_solution') * 2000)
     .inputs(ore('dustSodiumCyanoborohydride') * 14)
+    .fluidInputs(fluid('one_two_diaminopropane_solution') * 2000)
     .fluidInputs(fluid('hydrochloric_acid') * 2000)
     .fluidInputs(fluid('salicylaldehyde') * 2000)
     .outputs(metaitem('dustSalicylideneOneTwoPropanediamine'))
@@ -406,6 +406,7 @@ BR.recipeBuilder()
     // EVA-isobutylene terpolymer for cold flow additives
 
     POLYMERIZATION.recipeBuilder()
+        .circuitMeta(3)
         .fluidInputs(fluid('ethylene') * 1000)
         .fluidInputs(fluid('isobutylene') * 1000)
         .fluidInputs(fluid('vinyl_acetate_solution') * 1000)
@@ -512,9 +513,10 @@ def getUniquePairs(Map materialsMap) {
 
 // Cetane-Boosted Diesel * 750
 mods.gregtech.mixer.removeByInput(480, null, [fluid('bio_diesel') * 1000, fluid('tetranitromethane') * 40])
+mods.gregtech.blender.removeByInput(480, null, [fluid('bio_diesel') * 1000, fluid('tetranitromethane') * 40])
 // Cetane-Boosted Diesel * 1000
 mods.gregtech.mixer.removeByInput(480, null, [fluid('diesel') * 1000, fluid('tetranitromethane') * 20])
-
+mods.gregtech.blender.removeByInput(480, null, [fluid('diesel') * 1000, fluid('tetranitromethane') * 20])
 for (major_solvent in major_solvents) {
     for (minor_solvent in minor_solvents) {
         BLENDER.recipeBuilder()
@@ -560,6 +562,15 @@ for (major_solvent in major_solvents) {
             .fluidInputs(fluid(major_solvent) * 1500)
             .fluidInputs(fluid(minor_solvent) * 500)
             .fluidOutputs(fluid('cold_flow_improver') * 2000)
+            .duration(200)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
+
+        BLENDER.recipeBuilder()
+            .fluidInputs(fluid('polydimethylsiloxane') * 250)
+            .fluidInputs(fluid(major_solvent) * 1500)
+            .fluidInputs(fluid(minor_solvent) * 250)
+            .fluidOutputs(fluid('antifoaming_additive') * 2000)
             .duration(200)
             .EUt(Globals.voltAmps[2])
             .buildAndRegister()

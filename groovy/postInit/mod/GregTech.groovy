@@ -22,6 +22,7 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustCoal')], null)
 mods.gregtech.extractor.removeByInput(64, [metaitem('dustMonazite')], null)
 // Graphene Dust * 1
 mods.gregtech.mixer.removeByInput(480, [metaitem('dustGraphite'), metaitem('dustSilicon'), metaitem('dustCarbon') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+mods.gregtech.blender.removeByInput(480, [metaitem('dustGraphite'), metaitem('dustSilicon'), metaitem('dustCarbon') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 // Wrought Iron Ingot * 2
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustIlmenite') * 10, metaitem('dustCarbon') * 4], null)
 // Stone Slab * 2
@@ -46,6 +47,11 @@ mods.gregtech.forming_press.removeByInput(480, [item('gregtech:transparent_casin
 mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 5)], [fluid('oxygen') * 150])
 // Magnalium Dust * 3
 mods.gregtech.macerator.removeByInput(8, [item('gregtech:turbine_casing', 5)], null)
+// Gelatin Mixture * 4000
+mods.gregtech.mixer.removeByInput(480, [metaitem('dustCollagen') * 4], [fluid('phosphoric_acid') * 1000, fluid('water') * 3000])
+mods.gregtech.blender.removeByInput(480, [metaitem('dustCollagen') * 4], [fluid('phosphoric_acid') * 1000, fluid('water') * 3000])
+// Phosphorus Dust * 1
+mods.gregtech.centrifuge.removeByInput(480, null, [fluid('gelatin_mixture') * 6000])
 
 def name_removals = [
 	'gregtech:cover_fluid_voiding',
@@ -797,6 +803,7 @@ LATEX_COLLECTOR.recipeBuilder()
 //TODO: ADD GRAVITY SEPARATOR STUFF
 // Construction Foam * 8000
 mods.gregtech.mixer.removeByInput(16, [metaitem('dustRawRubber')], [fluid('concrete') * 576])
+mods.gregtech.blender.removeByInput(16, [metaitem('dustRawRubber')], [fluid('concrete') * 576])
 
 MIXER.recipeBuilder()
         .inputs(ore('dustRubber'))

@@ -77,7 +77,7 @@ BR.recipeBuilder() //75%
 
 BR.recipeBuilder() //100% (Technically, it makes a little bit of ferric EDTA but I dont want to model it)
         .inputs(ore('dustSodiumHydroxide') * 18)
-        .inputs(ore('dustTinyTetrasodiumEthylenediaminetetraaceticAcid'))
+        .inputs(ore('dustTinyTetrasodiumEthylenediaminetetraacetate'))
         .fluidInputs(fluid('beryllium_sulfate_solution') * 1000)
         .outputs(metaitem('dustBerylliumHydroxide') * 12)
         .fluidOutputs(fluid('sodium_sulfate_solution') * 8000)
