@@ -221,6 +221,7 @@ FLUID_EXTRACTOR.recipeBuilder()
 // Dynamit-Nobel process
 // Initialization
 FBR.recipeBuilder() 
+    .circuitMeta(1)
     .notConsumable(metaitem('catalystBedCobalt'))
     .fluidInputs(fluid('para_xylene') * 50)
     .fluidInputs(fluid('oxygen') * 150)
@@ -241,6 +242,7 @@ REACTION_FURNACE.recipeBuilder()
 
 // Looping
 FBR.recipeBuilder() 
+    .circuitMeta(2)
     .notConsumable(metaitem('catalystBedCobalt'))
     .fluidInputs(fluid('para_xylene') * 50)
     .fluidInputs(fluid('methyl_para_toluate') * 50)

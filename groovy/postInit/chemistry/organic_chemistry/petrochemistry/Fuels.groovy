@@ -391,8 +391,8 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 BR.recipeBuilder()
-    .inputs(ore('one_two_diaminopropane_solution') * 2000)
     .inputs(ore('dustSodiumCyanoborohydride') * 14)
+    .fluidInputs(fluid('one_two_diaminopropane_solution') * 2000)
     .fluidInputs(fluid('hydrochloric_acid') * 2000)
     .fluidInputs(fluid('salicylaldehyde') * 2000)
     .outputs(metaitem('dustSalicylideneOneTwoPropanediamine'))
@@ -406,6 +406,7 @@ BR.recipeBuilder()
     // EVA-isobutylene terpolymer for cold flow additives
 
     POLYMERIZATION.recipeBuilder()
+        .circuitMeta(3)
         .fluidInputs(fluid('ethylene') * 1000)
         .fluidInputs(fluid('isobutylene') * 1000)
         .fluidInputs(fluid('vinyl_acetate_solution') * 1000)

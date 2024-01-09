@@ -4331,3 +4331,23 @@ CSTR.recipeBuilder()
         .duration(5)
         .EUt(30)
         .buildAndRegister()
+
+// NaHCO3 solutions
+
+MIXER.recipeBuilder()
+        .circuitMeta(1)
+        .fluidInputs(fluid('water') * 1000)
+        .inputs(ore('dustSodiumBicarbonate') * 6)
+        .fluidOutputs(fluid('sodium_bicarbonate_solution') * 1000)
+        .EUt(30)
+        .duration(80)
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .circuitMeta(2)
+        .fluidInputs(fluid('water') * 1000)
+        .inputs(ore('dustSodiumBicarbonate'))
+        .fluidOutputs(fluid('gtfo_baking_soda_solution') * 1000)
+        .EUt(30)
+        .duration(80)
+        .buildAndRegister()
