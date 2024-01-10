@@ -656,5 +656,11 @@ public class SecondDegreeMaterials {
                 .build();
 
         MixedCyanideSolution.setFormula("(NaCN)2(HCN)2(H2O)", true)
+
+        ChlorinatedBeryl = new Material.Builder(13106, SuSyUtility.susyId('chlorinated_beryl'))
+                .gas(new FluidBuilder().temperature(1100))
+                .components(BerylliumChloride, 3, AluminiumChloride, 2, SiliconTetrachloride, 6, CarbonMonoxide, 18)
+                .colorAverage()
+                .build();
     }
 }

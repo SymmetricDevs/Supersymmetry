@@ -4,7 +4,8 @@ import static material.SuSyMaterials.*;
 
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
-import gregtech.api.fluids.fluidType.FluidTypes;
+import gregtech.api.fluids.attribute.FluidAttributes;
+import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.properties.*
 
 import supersymmetry.api.util.SuSyUtility;
@@ -634,18 +635,6 @@ public class OrganicChemistryMaterials {
         Novolacs = new Material.Builder(15105, SuSyUtility.susyId('novolacs'))
                 .fluid()
                 .color(0xbfa26f)
-                .build();
-
-        SiliconTetrachloride = new Material.Builder(15106, SuSyUtility.susyId('silicon_tetrachloride'))
-                .fluid()
-                .components(Silicon, 1, Chlorine, 4)
-                .color(0x63827f)
-                .build();
-
-        PurifiedSiliconTetrachloride = new Material.Builder(15107, SuSyUtility.susyId('purified_silicon_tetrachloride'))
-                .fluid()
-                .components(Silicon, 1, Chlorine, 4)
-                .color(0x7fa3a0)
                 .build();
 
         Ethanolamine = new Material.Builder(15108, SuSyUtility.susyId('ethanolamine'))

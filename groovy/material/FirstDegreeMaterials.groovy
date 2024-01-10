@@ -38,7 +38,6 @@ public class FirstDegreeMaterials {
 
                 return mat
         }
-}
 
     public static void register() {
 
@@ -3164,5 +3163,17 @@ public class FirstDegreeMaterials {
                 .build();
 
         UraniumTetrafluoride.setFormula("UF4", true)
+
+        SiliconTetrachloride = new Material.Builder(8590, SuSyUtility.susyId('silicon_tetrachloride'))
+                .fluid()
+                .components(Silicon, 1, Chlorine, 4)
+                .color(0x63827f)
+                .build();
+
+        PurifiedSiliconTetrachloride = new Material.Builder(8591, SuSyUtility.susyId('purified_silicon_tetrachloride'))
+                .fluid()
+                .components(Silicon, 1, Chlorine, 4)
+                .color(0x7fa3a0)
+                .build();
     }
 }
