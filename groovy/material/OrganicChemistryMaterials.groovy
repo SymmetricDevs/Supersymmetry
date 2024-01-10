@@ -100,7 +100,11 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        //FREE ID: 15013
+        EthyleneCarbonate = new Material.Builder(15013, SuSyUtility.susyId('ethylene_carbonate'))
+                .liquid()
+                .components(Carbon, 3, Hydrogen, 4, Oxygen, 3)
+                .color(0x348060)
+                .build()
 
         Rayon = new Material.Builder(15014, SuSyUtility.susyId('rayon'))
                 .components(Carbon, 6, Hydrogen, 10, Oxygen, 5)
@@ -743,9 +747,10 @@ public class OrganicChemistryMaterials {
         DiethylEther = new Material.Builder(15125, SuSyUtility.susyId('diethyl_ether'))
                 .fluid()
                 .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
-                .colorAverage()
+                .color(0x2177ff)
                 .build()
-                .setFormula('(C2H5)2O', true);
+
+        DiethylEther.setFormula("(C2H5)2O", true)
 
         Polypropylene = new Material.Builder(15126, SuSyUtility.susyId('polypropylene'))
                 .polymer(1)
@@ -2456,5 +2461,57 @@ public class OrganicChemistryMaterials {
                 .build();
 
         AbsorbedMethacrolein.setFormula("(C4H6O)(CH3COOH)4(H2O)5", true)
+
+        Tetraethyllead = new Material.Builder(15391, SuSyUtility.susyId('tetraethyllead'))
+                .liquid()
+                .components(Carbon, 8, Hydrogen, 20, Lead, 1)
+                .colorAverage()
+                .build();
+
+        Tetraethyllead.setFormula("Pb(CH3CH2)4", true)
+
+        TertButylHydroperoxide = new Material.Builder(15392, SuSyUtility.susyId('tert_butyl_hydroperoxide'))
+                .liquid()
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 2)
+                .colorAverage()
+                .build();
+
+        TertButylHydroperoxide.setFormula("(CH3)3COOH", true)
+
+        DiTertButylPeroxide = new Material.Builder(15393, SuSyUtility.susyId('di_tert_butyl_peroxide'))
+                .liquid()
+                .components(Carbon, 8, Hydrogen, 18, Oxygen, 2)
+                .colorAverage()
+                .build();
+
+        DiTertButylPeroxide.setFormula("(CH3)3COOC(CH3)3", true)
+
+        TwoEthylhexylNitrate = new Material.Builder(15394, SuSyUtility.susyId('two_ethylhexyl_nitrate'))
+                .liquid()
+                .components(Carbon, 8, Hydrogen, 17, Nitrogen, 1, Oxygen, 3)
+                .colorAverage()
+                .build();
+
+        Nitromethane = new Material.Builder(15395, SuSyUtility.susyId('nitromethane'))
+                .liquid()
+                .components(Carbon, 1, Hydrogen, 3, Nitrogen, 1, Oxygen, 2)
+                .colorAverage()
+                .build();
+
+        SodiumBisphenolateSolution = new Material.Builder(15396, SuSyUtility.susyId('sodium_bisphenolate_solution'))
+                .liquid()
+                .components(SodiumHydroxide, 2, BisphenolA, 1, Water, 2)
+                .colorAverage()
+                .build();
+
+        Polycarbonate = new Material.Builder(15397, SuSyUtility.susyId('polycarbonate'))
+                .polymer()
+                .flags(GENERATE_PLATE)
+                .components(Carbon, 16, Hydrogen, 14, Oxygen, 3)
+                .color(0xa1cacf)
+                .iconSet(SHINY)
+                .build();
+
+        Polycarbonate.setFormula("C16H14O3", true)
     }
 }

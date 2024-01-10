@@ -66,7 +66,11 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 24008
+        LithiumHexafluorophosphateElectrolyte = new Material.Builder(24008, SuSyUtility.susyId("lithium_hexafluorophosphate_electrolyte"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(LithiumHexafluorophosphate, 1, EthyleneCarbonate, 1)
+                .colorAverage()
+                .build();
 
         //FREE ID: 24009
 

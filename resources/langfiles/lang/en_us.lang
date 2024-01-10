@@ -93,7 +93,6 @@ susy.material.potassium_hydroxide_solution=Potassium Hydroxide Solution
 susy.material.calcium_hydroxide_solution=Calcium Hydroxide Solution
 susy.material.sodium_silicate_solution=Sodium Silicate Solution
 susy.material.raw_molecular_sieve=Raw Molecular Sieve
-susy.material.dry_carbon_monoxide=Dry Carbon Monoxide
 susy.material.methyl_formate=Methyl Formate
 susy.material.methyl_formate_solution=Methyl Formate Solution
 susy.material.acetylene=Acetylene
@@ -346,7 +345,6 @@ susy.material.brine=Brine
 susy.material.warm_brine=Warm Brine
 susy.material.oily_brine=Oily Brine
 susy.material.sulfuric_oil_residue=Sulfuric Oil Residue
-susy.material.high_pressure_water=High Pressure Water
 susy.material.light_bitumen_solution=Light Bitumen Solution
 susy.material.bitumen_solution=Bitumen Solution
 susy.material.heavy_bitumen_solution=Heavy Bitumen Solution
@@ -669,7 +667,6 @@ susy.material.proustite_alkaline_leach_solution=Proustite Alkaline Leach Solutio
 susy.material.crude_arsenic_trichloride=Crude Arsenic Trichloride
 susy.material.enargite_sulfide_leach_solution=Enargite Sulfide Leach Solution
 susy.material.arsenic_trichloride=Arsenic Trichloride
-susy.material.arsenous_acid=Arsenous Acid
 susy.material.acidic_copper_solution=Acidic Copper Solution
 susy.material.arsine=Arsine
 susy.material.sodium_bromide_solution=Sodium Bromide Solution
@@ -1896,6 +1893,8 @@ susy.material.gaseous_methacrylic_acid_mixture=Gaseous Methacrylic Acid Mixture
 susy.material.methacrylic_acid_solution=Methacrylic Acid Solution
 susy.material.uranium_dioxide=Uranium Dioxide
 susy.material.uranium_tetrafluoride=Uranium Tetrafluoride
+susy.material.ethylene_carbonate=Ethylene Carbonate
+susy.material.lithium_hexafluorophosphate_electrolyte=Lithium Hexafluorophosphate Electrolyte
 
 # Isotopes
 

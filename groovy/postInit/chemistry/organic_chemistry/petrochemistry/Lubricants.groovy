@@ -488,7 +488,7 @@ DUMPER = recipemap('dumping')
     // Polyalkyl methacrylate
 
     BR.recipeBuilder()
-        .fluidInputs(fluid('methacrylamide_sulfate') * 1000)
+        .inputs(ore('dustMethacrylamideSulfate'))
         .fluidInputs(fluid('water') * 1000)
         .fluidOutputs(fluid('methacrylic_acid') * 1000)
         .outputs(metaitem('dustAmmoniumBisulfate') * 11)
