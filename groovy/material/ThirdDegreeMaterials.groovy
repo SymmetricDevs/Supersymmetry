@@ -73,7 +73,11 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 24009
+        TNTSlurry = new Material.Builder(24009, SuSyUtility.susyId('tnt_slurry'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(TNT, 1, DilutedSulfuricAcid, 1)
+                .colorAverage()
+                .build();
 
         //FREE ID: 24010
 
@@ -259,7 +263,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        TNPSolution = new Material.Builder(24042, SuSyUtility.susyId('tnp_solution'))
+        TNPSlurry = new Material.Builder(24042, SuSyUtility.susyId('tnp_slurry'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(PicricAcid, 1, DilutedSulfuricAcid, 1)
                 .colorAverage()
@@ -462,13 +466,13 @@ public class ThirdDegreeMaterials {
 
         //FREE ID: 24074
       
-        EthyleneVinylAcetateMixture = new Material.Builder(24075, SuSyUtility.susyId('ethylene_vinyl_acetate_mixture'))
+        EthyleneVinylAcetateSuspension = new Material.Builder(24075, SuSyUtility.susyId('ethylene_vinyl_acetate_suspension'))
                 .liquid()
                 .components(EthyleneVinylAcetate, 1, Methanol, 1)
                 .colorAverage()
                 .build();
 
-        EthyleneIsobutyleneVinylAcetateMixture = new Material.Builder(24076, SuSyUtility.susyId('ethylene_isobutylene_vinyl_acetate_mixture'))
+        EthyleneIsobutyleneVinylAcetateSuspension = new Material.Builder(24076, SuSyUtility.susyId('ethylene_isobutylene_vinyl_acetate_suspension'))
                 .liquid()
                 .components(EthyleneIsobutyleneVinylAcetate, 1, Methanol, 1)
                 .colorAverage()
@@ -557,6 +561,30 @@ public class ThirdDegreeMaterials {
         MethacrylicAcidSolution = new Material.Builder(24091, SuSyUtility.susyId('methacrylic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(MethacrylicAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        AcidicChlorodifluoromethane = new Material.Builder(24092, SuSyUtility.susyId('acidic_chlorodifluoromethane'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Chlorodifluoromethane, 1, HydrogenChloride, 2)
+                .color(0xbd97c7)
+                .build();
+        
+        SaltyNMethylTwoPyrrolidone = new Material.Builder(24093, SuSyUtility.susyId('salty_n_methyl_two_pyrrolidone'))
+                .liquid()
+                .components(NMethylTwoPyrrolidone, 1, Salt, 1)
+                .colorAverage()
+                .build();
+
+        DilutedNMethylTwoPyrrolidone = new Material.Builder(24094, SuSyUtility.susyId('diluted_n_methyl_two_pyrrolidone'))
+                .liquid()
+                .components(NMethylTwoPyrrolidone, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        DilutedButyllithium = new Material.Builder(15082, SuSyUtility.susyId('diluted_butyllithium'))
+                .liquid()
+                .components(Butyllithium, 1, DiethylEther, 1)
                 .colorAverage()
                 .build();
     }

@@ -1124,7 +1124,7 @@ class SuSyMaterials {
 
         // Organic Chemistry Materials
 
-        public static Material NMethylIIPyrrolidone;
+        public static Material NMethylTwoPyrrolidone;
         public static Material FourChloronitrobenzene;
         public static Material FourNitroaniline;
         public static Material TwoTwoDichlorohydrazobenzene;
@@ -1142,18 +1142,16 @@ class SuSyMaterials {
         public static Material ChlorinatedChloromethaneMixture;
         public static Material ChlorinatedDichloromethaneMixture;
         public static Material ChloromethaneSolution;
-        public static Material AcidicChlorodifluoromethane;
         public static Material AcidicTetrafluoroethylene;
         public static Material TrinitromethaneSolution;
         public static Material TetranitronmethaneSolution;
-        public static Material ImpureDimethyldichloroSilane;
+        public static Material ImpureDimethyldichlorosilane;
         public static Material ChlorinatedGlycerol;
         public static Material EpichlorohydrinSolution;
         public static Material AllylAlcoholMix;
         public static Material DilutedEpichlorohydrin;
         public static Material Isobutane;
         public static Material Isobutylene;
-        public static Material SaltyNMethylIIPyrrolidone;
         public static Material MethylAcetateSolution;
         public static Material TwoChloronitrobenzene;
         public static Material MixedChloronitrobenzene;
@@ -1172,13 +1170,12 @@ class SuSyMaterials {
         public static Material Hydroxylamine;
         public static Material Cyclohexanone;
         public static Material CaprolactamSolution;
-        public static Material TNTSolution;
         public static Material VinylChlorideSuspension;
         public static Material PolyvinylChlorideSuspension;
-        public static Material StyreneSolution;
-        public static Material PolystyreneSolution;
-        public static Material VinylAcetateSolution;
-        public static Material PolyvinylAcetateMixture;
+        public static Material StyreneSuspension;
+        public static Material PolystyreneSuspension;
+        public static Material VinylAcetateSuspension;
+        public static Material PolyvinylAcetateSuspension;
         public static Material Bleach;
         public static Material ImpureBleach;
         public static Material OneFourDichlorobenzeneSolution;
@@ -1186,12 +1183,8 @@ class SuSyMaterials {
         public static Material StyreneButadieneSolution;
         public static Material DiethylEther;
         public static Material OneBromobutane;
-        public static Material DilutedOneBromobutane;
         public static Material Butyllithium;
-        public static Material DilutedButyllithium;
         public static Material PolymerizedStyreneButadieneSolution;
-        public static Material MethylFormate;
-        public static Material MethylFormateSolution;
         public static Material Acetylene;
         public static Material Formaldehyde;
         public static Material MethylamineMix;
@@ -1200,7 +1193,6 @@ class SuSyMaterials {
         public static Material Butynediol;
         public static Material Butanediol;
         public static Material GammaButyrolactone;
-        public static Material DilutedMethylIIPyrrolidone;
         public static Material DimethyldichlorosilaneEmulsion;
         public static Material TetrafluoroethyleneEmulsion;
         public static Material Dichloromethane;
@@ -1558,7 +1550,7 @@ class SuSyMaterials {
         public static Material KaminskyCatalyst;
         public static Material ZirconiumTetrachlorideTetrahydrofuranComplex;
         public static Material PotassiumButylXanthateSolution;
-        public static Material TNPSolution;
+        public static Material TNPSlurry;
         public static Material IsophthaloylChlorideSolution;
         public static Material IsophthalicAcidSlurry;
         public static Material DichloroethaneIsophthalicAcidSolution;
@@ -1587,8 +1579,8 @@ class SuSyMaterials {
         public static Material CrudeDimethylTerephthalateSolution;
         public static Material TerephthalateMotherLiquor;
         public static Material MethylParaToluateMixture;
-        public static Material EthyleneVinylAcetateMixture;
-        public static Material EthyleneIsobutyleneVinylAcetateMixture;
+        public static Material EthyleneVinylAcetateSuspension;
+        public static Material EthyleneIsobutyleneVinylAcetateSuspension;
         public static Material SodiumDodecylSulfateSolution;
         public static Material SodiumCyclopentadienideSolution;
         public static Material MethylcyclopentadieneSolution;
@@ -1608,6 +1600,11 @@ class SuSyMaterials {
         public static Material GaseousMethacrylicAcidMixture;
         public static Material MethacrylicAcidSolution;
         public static Material LithiumHexafluorophosphateElectrolyte;
+        public static Material AcidicChlorodifluoromethane;
+        public static Material TNTSlurry;
+        public static Material SaltyNMethylTwoPyrrolidone;
+        public static Material DilutedNMethylTwoPyrrolidone;
+        public static Material DilutedButyllithium;
 
         // Thermodynamics/Greenhouse Materials
 

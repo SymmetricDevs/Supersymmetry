@@ -2668,29 +2668,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        Trichlorofluoromethane = new Material.Builder(8513, SuSyUtility.susyId('trichlorofluoromethane'))
-                .gas()
-                .components(Carbon, 1, Chlorine, 3, Fluorine, 1)
-                .color(0xeb6a6a)
-                .build();
-
-        Dichlorodifluoromethane = new Material.Builder(8514, SuSyUtility.susyId('dichlorodifluoromethane'))
-                .gas()
-                .components(Carbon, 1, Chlorine, 2, Fluorine, 2)
-                .color(0xd14d4d)
-                .build();
-
-        Chlorotrifluoromethane = new Material.Builder(8515, SuSyUtility.susyId('chlorotrifluoromethane'))
-                .gas()
-                .components(Carbon, 1, Chlorine, 1, Fluorine, 3)
-                .color(0xbf3232)
-                .build();
-
-        Chlorodifluoromethane = new Material.Builder(8516, SuSyUtility.susyId('chlorodifluoromethane'))
-                .gas()
-                .components(Carbon, 1, Hydrogen, 1, Chlorine, 1, Fluorine, 2)
-                .color(0x8c5a99)
-                .build();
+        //FREE IDs: 8513-8516
 
         MolybdenumTrisulfide = new Material.Builder(8517, SuSyUtility.susyId('molybdenum_trisulfide'))
                 .dust()
@@ -3165,13 +3143,13 @@ public class FirstDegreeMaterials {
         UraniumTetrafluoride.setFormula("UF4", true)
 
         SiliconTetrachloride = new Material.Builder(8590, SuSyUtility.susyId('silicon_tetrachloride'))
-                .fluid()
+                .liquid()
                 .components(Silicon, 1, Chlorine, 4)
                 .color(0x63827f)
                 .build();
 
         PurifiedSiliconTetrachloride = new Material.Builder(8591, SuSyUtility.susyId('purified_silicon_tetrachloride'))
-                .fluid()
+                .liquid()
                 .components(Silicon, 1, Chlorine, 4)
                 .color(0x7fa3a0)
                 .build();
