@@ -882,6 +882,16 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+// Polishing Machine
+
+for (i = 1; i <= 8; i++) {
+	crafting.addShaped("gregtech:polishing_machine." + Globals.voltageTiers[i], metaitem('polishing_machine.'  + Globals.voltageTiers[i]), [
+			[robotArms[i], tieredSprings[i], pumps[i]],
+			[circuits[i], hulls[i], circuits[i]],
+			[tieredCables[i], tieredGlass[i], tieredCables[i]]
+	])
+}
+
 // Bath Condenser
 
 crafting.addShaped("gregtech:bath_condenser", metaitem('bath_condenser.lv'), [
