@@ -7,7 +7,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Welcome to §9§9§9§b§b§b§b§b§b§l§l§l§l§l§lSupersymmetry§r§r§r§r§r§r! \n\nYou have just landed on an unfamiliar planet. This book will teach you how to rebuild civilization from scratch in only §k4200§r pages.\n\nStart by getting a rock§r. This quest book is interactive.\n\nPages that have a normal icon aren\u0027t required for progression. \nPages that have a framed icon, like this one are §crequired §rand contain critical information for your survival.\n\nYou have been given a §6home block§r. It allows you to set your spawn if you ever die. You cannot skip the night, as beds are not available before EV.\n\n",
+          "desc:8": "Welcome to §9§9§9§b§b§b§b§b§b§l§l§l§l§l§lSupersymmetry§r§r§r§r§r§r! \n\nYou have just landed on an unfamiliar planet. This book will teach you how to rebuild civilization from scratch in only §k4200§r pages.\n\nStart by getting a rock§r. This quest book is interactive.\n\nWhen you pick up a rock from the ground, press the §l§l§l§l§l§l§a§a§a§a§a§aSUBMIT§r button to complete the quest and continue.\n\nIf you lose this book, you can check the quests by pressing the §2§aGRAVE (`) §rkey.\n\nPages that have a normal icon aren\u0027t required for progression. \nPages that have a framed icon, like this one are §crequired §rand contain critical information for your survival.\n\nYou have been given a §6home block§r. It allows you to set your spawn if you ever die. You cannot skip the night, as beds are not available before EV.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -90,7 +90,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "It is probably impossible to try to play GregTech without using JEI. So here are some tips on how to use JEI to its full potential.\n\nFirst of all, you can press §6R §ron an item in the questbook and in JEI to see the item\u0027s crafting recipe, or §6U §rto see its uses.\n\n§eBookmark items regularly§r (default key §aA§r) so you don\u0027t have to type the names over and over.\n\nMost of the items in this pack have §emultiple recipes§r! Don\u0027t stop at the first recipe and think that item is impossible.\nSometimes a material is only available from §etiny dusts§r, sometimes it\u0027s available from a §efluid solution§r. It takes some practice. Oil processing and nuclear chemistry are pretty bad about this, §6§6ESPECIALLY§f in this pack.\n\n\nYou can §epress @§r to see only items from that mod. For example, if you search for §c@gregtech§r, you will only see items from GregTech.\n\nYou can §epress $ §rto see only items from a specific entry in the Ore Dictionary. For example, if you search for §c$logWood§r, you will only see wooden logs. This feature will be really useful for certain recipies!",
+          "desc:8": "It is probably impossible to try to play GregTech without using JEI. So here are some tips on how to use JEI to its full potential.\n\nThis pack will assume that the player\u0027s IQ is above 100. If you are confused, you can press §6R §ron an item in the questbook and in JEI to see the item\u0027s crafting recipe, or §6U §rto see its uses.\n\n§eBookmark items regularly§r (default key §aA§r) so you don\u0027t have to type the names over and over.\n\nMost of the items in this pack have §emultiple recipes§r! Don\u0027t stop at the first recipe and think that item is impossible.\nSometimes a material is only available from §etiny dusts§r, sometimes it\u0027s available from a §efluid solution§r. It takes some practice. Oil processing and nuclear chemistry are pretty bad about this, §6§6ESPECIALLY§f in this pack.\n\n\nYou can §epress @§r to see only items from that mod. For example, if you search for §c@gregtech§r, you will only see items from GregTech.\n\nYou can §epress $ §rto see only items from a specific entry in the Ore Dictionary. For example, if you search for §c$logWood§r, you will only see wooden logs. This feature will be really useful for certain recipies!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6618,7 +6618,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Make a §6Crafting Table§f\n\n----------------------------------------\n§3WELCOME TO SUPERSYMMETRY!\n§r----------------------------------------\n- Explore your surroundings\n§r- Find or build shelter\n- Prepare for the winter\n- Acquire basic resources\n- Try not to die\n------------------------------------",
+          "desc:8": "Convert 1 log into 4 §6planks§r. \n\nYou can then craft those planks into a §acrafting table§f.\n\n----------------------------------------\n§3WELCOME TO SUPERSYMMETRY!\n§r----------------------------------------\n- Explore your surroundings\n§r- Find or build shelter\n- Prepare for the winter\n- Acquire basic resources\n- Try not to die\n------------------------------------",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9284,7 +9284,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Pig Iron§r is the product of smelting iron ore (such as §6Banded Iron§r and §6Magnetite§o§r) with a high-carbon fuel like §6Coal§r, Charcoal, Anthracite, or Coal Coke in a Blast Furnace. §6Limonite §rcan also be used as an ore, but it has to be smelted in a normal Furnace first, or dried by using a Dryer.\n\nThe next step is to make §7§f§7§7§r§7Wrought Iron§ §f out of this Pig Iron, which will be explained in the next quest.\n\nExtracting usable metal from iron ores requires kilns or furnaces (such as a §cBlast Furnace§r) capable of reaching 1,500 °C (1,773K) or higher, about 500 °C higher than that required to smelt copper. \n\n§\n§cIt is recommended to use dusts instead of ores while smelting Iron. If you can\u0027t macerate ores into dusts, look into the Grindstone and Macerator.",
+          "desc:8": "§6Pig Iron§r is the product of smelting iron ore (such as §6Banded Iron§r and §6Magnetite§o§r) with a high-carbon fuel like §6Coal§r, Charcoal, Anthracite, or Coal Coke in a Blast Furnace. §6Limonite §rcan also be used as an ore, but it has to be smelted in a normal Furnace first, or dried by using a Dryer.\n\nThe next step is to make §7§f§7§7§r§7Wrought Iron§ §f out of this Pig Iron, which will be explained in the next quest.\n\nExtracting usable metal from iron ores requires kilns or furnaces (such as a §cBlast Furnace§r) capable of reaching 1,500 °C (1,773K) or higher, about 500 °C higher than that required to smelt copper. \n\n§\n§cIt is recommended to use dusts instead of ores while smelting Iron. If you can\u0027t macerate ores into dusts, look into the Grindstone and Macerator (the Macerator is only unlocked in steam age, though.)",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63646,7 +63646,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "New Quest",
+          "name:8": "Camo Bench",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -63872,7 +63872,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
