@@ -1677,6 +1677,43 @@ class SuSyMaterials {
         public static Material DilutedTwoEthylhexylNitrate;
         public static Material DilutedNitromethane;
 
+        // Thermodynamics Materials
+
+                public static Material EarthlikeAir;
+        public static Material HotHighPressureSteam;
+        public static Material WasteGaseousNitrogen;
+        public static Material ChillyWasteGaseousNitrogen;
+        public static Material SubcooledLiquidNitrogen;
+        public static Material ColdWasteGaseousNitrogen;
+        public static Material UntreatedLiquidOxygen;
+        public static Material UntreatedLiquidNitrogen;
+        public static Material OxygenRichLiquid;
+        public static Material OxygenRichGas;
+        public static Material NitrogenRichGas;
+        public static Material ArgonRichGas;
+        public static Material OxygenRichVapor;
+        public static Material CrudeArgonVapor;
+        public static Material LiquidCrudeArgon;
+        public static Material SubcooledOxygenRichLiquid;
+        public static Material CrudeLiquidKrypton;
+        public static Material RareGasRichFraction;
+        public static Material CondensedRareGasRichFraction;
+        public static Material CrudeNeonVapor;
+        public static Material GaseousCrudeKrypton;
+        public static Material ColdLiquidOxygen;
+        public static Material CompressedCrudeNeon;
+        public static Material PartiallyLiquefiedCrudeNeon;
+        public static Material GaseousCrudeNeon;
+        public static Material LiquidCrudeNeon;
+        public static Material ColdGaseousNitrogen;
+        public static Material LiquidArgonProduct;
+        public static Material LiquidOxygenProduct;
+        public static Material LiquidNitrogenProduct;
+        public static Material LiquidDeoxygenatedArgon;
+        public static Material LiquidWasteNitrogen;
+        public static Material PartiallyLiquefiedArgon;
+        public static Material SupercriticalCarbonDioxide;
+
         public static void init() {
                 ElementMaterials.register();
                 IsotopeMaterials.register();
