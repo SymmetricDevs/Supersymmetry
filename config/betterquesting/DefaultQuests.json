@@ -6740,7 +6740,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Primitive Water Pump§r is the first way to get large quantities of water for steam. Pumping water into a boiler manually has been widely regarded as a bad idea.\n\nCheck the JEI database for more info on the structure. Structures can be previewed by §ashift right click§ring the main block.\n\nThe Output Hatch§r is where water will be pumped out, you may have it face up or down to auto-output water into your pipes. Use a §6Wrench§r to rotate GregTech blocks (sneak right-click). \n\nTo increase the water output, the Output Hatch used can be upgraded to §6ULV §ror §6LV§r§r. \n\nThe Primitive Water Pump requires:\n§610 Pump Deck \n10 Treated Wood Frame\n1 Pump Output Hatch\n1 Primitive Water Pump controller§r\n\nKeep in mind that this fortunately does not require external water in the world to function. This is essentially an §einfinite water source§r.\n\n§rCreosote is needed for making the treated wood frames, so make sure to get a Coke Oven first.",
+          "desc:8": "The §3Primitive Water Pump§r is the first way to get large quantities of water for steam. Pumping water into a boiler manually has been widely regarded as a bad idea.\n\nCheck the JEI database for more info on the structure. Structures can be previewed by §ashift right click§ring the main block.\n\nThe Output Hatch§r is where water will be pumped out, you may have it face up or down to auto-output water into your pipes. Use a §6Wrench§r to rotate GregTech blocks (sneak right-click). \n\nTo increase the water output, the Output Hatch used can be upgraded to §6ULV §ror §6LV§r§r. \n\nThe Primitive Water Pump requires:\n§610 Pump Deck \n10 Treated Wood Frame\n1 Pump Output Hatch\n1 Primitive Water Pump controller§r\n\nKeep in mind that this fortunately does not require external water in the world to function. This is essentially an §einfinite water source§r.\n\n§rCreosote is needed for making the treated wood frames, so make sure to get a Coke Oven first.\n\nIf you want to store water outside of the pump, look into the §6Drums §fand §6Wooden Multiblock Tank§f quests.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6881,7 +6881,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §aWooden Multi Tank§r is the first tank that you can construct.\n\nIt has a capacity of 250,000 L (that is 250 buckets), but it cannot store hot fluids since it\u0027s made of wood.\n\nThe structure requires:\n\n§623x Wooden Wall\n2x Wooden Tank Valve\n1x Wooden Multiblock Tank Controller\n\n§rYou can input the fluids via the wooden tank valves or the controller.\n\nFor more info on how to build it, look it up in JEI.",
+          "desc:8": "The §aWooden Multiblock Tank§r is the first tank that you can construct. Since it\u0027s a bit of an investment, you should know it is completely optional, and is superseded by the §aSteel Multiblock Tank.§f\n\nIt has a capacity of 250,000 L (that is 250 buckets), but it cannot store hot fluids since it\u0027s made of wood.\n\nThe structure requires:\n\n§623x Wooden Wall\n2x Wooden Tank Valve\n1x Wooden Multiblock Tank Controller\n\n§rYou can input the fluids via the wooden tank valves or the controller.\n\nFor more info on how to build it, look it up in JEI.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6893,7 +6893,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Wooden Multi Tank",
+          "name:8": "Wooden Multiblock Tank",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -12157,7 +12157,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6GT Electric Tools§r are a good upgrade during your playthrough because they mine much faster compared too their unpowered counterparts such as the Mining Hammer or Wrench. They also consume their durability much slower than their unpowered counterparts too, as long as these tools have energy inside their buffer. Otherwise, the electric tools will consume durability much, much faster. §cSo, REMEMBER TO CHARGE YOUR TOOLS!§\n\n\n§fIf your electric tools run out of durability, it should return the power unit of the same voltage. §6LV tools§5§6§r return §6LV power units§r, §6V tools return MV power unit§r, and so on. You can recraft the retrieved power unit with a new tip to make a new electric tool. Alternatively, you can craft your damaged tool with a fresh new tip to get a new tool with 100% durability §9§e(this crafting recipe can be done in a 2x2 crafting grid!)§r. You can upgrade your old tool with better drill/wrench tips this way too, so a §6Steel Drill (LV)§r can be combined with Aluminium Drill tip to make §6Aluminium Drill (LV)§r. However, you can\u0027t remove the tip from an electric tools.§l\n\n§e§lNote: You can right click a GT battery to allow the battery to charge items in inventories, which might be useful during a long mining trip. Lead-Acid battery (or any LV battery) should be able to power your LV tools. MV battery can charge MV and LV tools, HV battery can charge HV, MV and LV tools, and so on.§r§r\n\nYou can get higher tier electric tools in §d§bMV§r, §eH§r§7§6§f§eV§r, and beyond. Higher tier tools will have bigger energy buffers, mining area, mining speed, durability.\n\n§l§e§lNote: There is no higher tier for the Chainsaw and Screwdriver, the Wrench skips MV and EV tier, and there are no tier above IV.§r\n\nThe §6Steel Drill §rmines a 3x3x1 area with a single hit. If you [§9§aRight Click§r] while holding it, it will automatically place any Torches that you have. If you [§9§aShift + Right Click§r] while holding it, a menu will open, which will allow you to configure the mining area of the drill. I recommending testing this feature on your Singleplayer Creative world.\n\nThe §6Steel Wrench §racts as an wrench. (Note: The §bAluminium§6 Drill§r can\u0027t break §7§8Steel Pipe Casing§r, so it is recommended that you keep using §8Steel§r Wrench Tip until you get §7Stainless Steel§r)\n\nThe §6Steel Chainsaw §racts as an axe, but it can harvest ice and it can also be used as a weapon which disables shields.\n\nThe §6Steel Screwdriver §racts as an screwdriver.\n\nYou can make these tools using other materials such as bronze, invar, iron to complete this quest.",
+          "desc:8": "§6GT Electric Tools§r are a good upgrade during your playthrough because they mine much faster compared too their unpowered counterparts such as the Mining Hammer or Wrench. They also consume their durability much slower than their unpowered counterparts too, as long as these tools have energy inside their buffer. Otherwise, the electric tools will consume durability much, much faster. §cSo, REMEMBER TO CHARGE YOUR TOOLS!§\n\n\n§fIf your electric tools run out of durability, it should return the power unit of the same voltage. §6LV tools§5§6§r return §6LV power units§r, §6MV tools return MV power unit§r, and so on. You can recraft the retrieved power unit with a new tip to make a new electric tool. Alternatively, you can craft your damaged tool with a fresh new tip to get a new tool with 100% durability §9§e(this crafting recipe can be done in a 2x2 crafting grid!)§r. You can upgrade your old tool with better drill/wrench tips this way too, so a §6Steel Drill (LV)§r can be combined with Aluminium Drill tip to make §6Aluminium Drill (LV)§r. However, you can\u0027t remove the tip from an electric tools.§l\n\n§e§lNote: You can right click a GT battery to allow the battery to charge items in inventories, which might be useful during a long mining trip. Lead-Acid battery (or any LV battery) should be able to power your LV tools. MV battery can charge MV and LV tools, HV battery can charge HV, MV and LV tools, and so on.§r§r\n\nYou can get higher tier electric tools in §d§bMV§r, §eH§r§7§6§f§eV§r, and beyond. Higher tier tools will have bigger energy buffers, mining area, mining speed, durability.\n\n§l§e§lNote: There is no higher tier for the Chainsaw and Screwdriver, the Wrench skips MV and EV tier, and there are no tier above IV.§r\n\nThe §6Steel Drill §rmines a 3x3x1 area with a single hit. If you [§9§aRight Click§r] while holding it, it will automatically place any Torches that you have. If you [§9§aShift + Right Click§r] while holding it, a menu will open, which will allow you to configure the mining area of the drill. I recommending testing this feature on your Singleplayer Creative world.\n\nThe §6Steel Wrench §racts as an wrench. (Note: The §bAluminium§6 Drill§r can\u0027t break §7§8Steel Pipe Casing§r, so it is recommended that you keep using §8Steel§r Wrench Tip until you get §7Stainless Steel§r)\n\nThe §6Steel Chainsaw §racts as an axe, but it can harvest ice and it can also be used as a weapon which disables shields.\n\nThe §6Steel Screwdriver §racts as an screwdriver.\n\nYou can make these tools using other materials such as bronze, invar, iron to complete this quest.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49220,13 +49220,8 @@
       }
     },
     "664:10": {
-      "preRequisiteTypes:7": [
-        0,
-        1
-      ],
       "preRequisites:11": [
-        125,
-        2
+        125
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -63651,7 +63646,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Camo Bench",
+          "name:8": "New Quest",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -63877,7 +63872,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
+          "tasklogic:8": "AND",
           "visibility:8": "ALWAYS"
         }
       },
@@ -64798,8 +64793,8 @@
           "id:3": 8,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 138
+          "x:3": -60,
+          "y:3": 132
         },
         "9:10": {
           "id:3": 9,
@@ -64915,16 +64910,16 @@
         },
         "25:10": {
           "id:3": 59,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -240,
-          "y:3": 396
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 378
         },
         "26:10": {
           "id:3": 74,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
+          "x:3": 72,
           "y:3": 180
         },
         "27:10": {
@@ -64973,7 +64968,7 @@
           "id:3": 93,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
+          "x:3": 36,
           "y:3": 180
         },
         "34:10": {
@@ -65001,21 +64996,21 @@
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
+          "x:3": -60,
           "y:3": 180
         },
         "38:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -96,
           "y:3": 180
         },
         "39:10": {
           "id:3": 125,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -186,
+          "x:3": -150,
           "y:3": 174
         },
         "40:10": {
@@ -65085,14 +65080,14 @@
           "id:3": 664,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -186,
+          "x:3": -150,
           "y:3": 114
         },
         "50:10": {
           "id:3": 669,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -168,
           "y:3": 516
         },
         "51:10": {
@@ -65120,7 +65115,7 @@
           "id:3": 763,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
+          "x:3": -120,
           "y:3": 516
         },
         "55:10": {
