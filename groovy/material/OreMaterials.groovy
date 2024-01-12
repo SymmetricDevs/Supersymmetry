@@ -367,7 +367,7 @@ public class OreMaterials{
                 .build();
 
         Zircon = new Material.Builder(7047, SuSyUtility.susyId('zircon'))
-                .gem().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder()).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+                .gem().ore()
                 .iconSet(SHINY)
                 .flags(GENERATE_SIFTED, GENERATE_FLOTATED, GENERATE_CONCENTRATE)
                 .color(0xf05c51)

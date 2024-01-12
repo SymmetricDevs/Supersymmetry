@@ -16,7 +16,6 @@ import static material.OreMaterials.*;
 import static material.OrganicChemistryMaterials.*;
 import static material.PetrochemistryMaterials.*;
 import static material.SecondDegreeMaterials.*;
-import static material.ThermodynamicsMaterials.*;
 import static material.ThirdDegreeMaterials.*;
 import static material.UnknownCompositionMaterials.*;
 
@@ -720,7 +719,6 @@ class SuSyMaterials {
         public static Material MercuryIIChloride;
         public static Material BoronNitride;
         public static Material CrudeGalliumArsenide;
-        public static Material HighPurityIron;
         public static Material IronPentacarbonyl;
         public static Material DilutedPhosphoricAcid;
         public static Material MonocalciumPhosphate;
@@ -930,10 +928,6 @@ class SuSyMaterials {
         public static Material GoldAmalgam;
         public static Material AntimonyTrichloride;
         public static Material AntimonyPentachloride;
-        public static Material Trichlorofluoromethane;
-        public static Material Dichlorodifluoromethane;
-        public static Material Chlorotrifluoromethane;
-        public static Material Chlorodifluoromethane;
         public static Material DilutedSilverNitrateSolution;
         public static Material DecarburizedAir;
         public static Material MolybdenumTrisulfide;
@@ -1015,6 +1009,80 @@ class SuSyMaterials {
         public static Material SiliconTetrachloride;
         public static Material PurifiedSiliconTetrachloride;
 
+        // HP Materials
+
+        public static Material HighPurityLithium;
+        public static Material HighPurityBeryllium;
+        public static Material HighPurityBoron;
+        public static Material HighPurityCarbon;
+        public static Material HighPuritySodium;
+        public static Material HighPurityMagnesium;
+        public static Material HighPurityAluminium;
+        public static Material HighPuritySilicon;
+        public static Material HighPurityPhosphorus;
+        public static Material HighPuritySulfur;
+        public static Material HighPurityPotassium;
+        public static Material HighPurityCalcium;
+        public static Material HighPurityScandium;
+        public static Material HighPurityTitanium;
+        public static Material HighPurityVanadium;
+        public static Material HighPurityChrome;
+        public static Material HighPurityManganese;
+        public static Material HighPurityIron;
+        public static Material HighPurityNickel;
+        public static Material HighPurityCobalt;
+        public static Material HighPurityCopper;
+        public static Material HighPurityZinc;
+        public static Material HighPurityGallium;
+        public static Material HighPurityGermanium;
+        public static Material HighPurityArsenic;
+        public static Material HighPuritySelenium;
+        public static Material HighPurityRubidium;
+        public static Material HighPurityStronium;
+        public static Material HighPurityYttrium;
+        public static Material HighPurityZirconium;
+        public static Material HighPurityNiobium;
+        public static Material HighPurityMolybdenum;
+        public static Material HighPurityTechnetium;
+        public static Material HighPurityRuthenium;
+        public static Material HighPurityRhodium;
+        public static Material HighPurityPalladium;
+        public static Material HighPuritySilver;
+        public static Material HighPurityCadmium;
+        public static Material HighPurityIndium;
+        public static Material HighPurityTin;
+        public static Material HighPurityAntimony;
+        public static Material HighPurityTellurium;
+        public static Material HighPurityIodine;
+        public static Material HighPurityCaesium;
+        public static Material HighPurityBarium;
+        public static Material HighPurityLanthanum;
+        public static Material HighPurityHafnium;
+        public static Material HighPurityTantalum;
+        public static Material HighPurityTungsten;
+        public static Material HighPurityRhenium;
+        public static Material HighPurityOsmium;
+        public static Material HighPurityIridium;
+        public static Material HighPurityPlatinum;
+        public static Material HighPurityGold;
+        public static Material HighPurityThallium;
+        public static Material HighPurityLead;
+        public static Material HighPurityBismuth;
+        public static Material HighPurityCerium;
+        public static Material HighPurityPraesodymium;
+        public static Material HighPurityNeodymium;
+        public static Material HighPuritySamarium;
+        public static Material HighPurityEuropium;
+        public static Material HighPurityGadolinium;
+        public static Material HighPurityTerbium;
+        public static Material HighPurityDysprosium;
+        public static Material HighPurityHolmium;
+        public static Material HighPurityErbium;
+        public static Material HighPurityThulium;
+        public static Material HighPurityYtterbium;
+        public static Material HighPurityLutetium;
+        public static Material HighPurityThorium;
+
         // Second Degree Materials
 
         public static Material PlatinumPrecursorSolution;
@@ -1090,9 +1158,6 @@ class SuSyMaterials {
         public static Material AgedAmmoniumChromeAlumSolution;
         public static Material PurifiedAmmoniumChromeAlumSolution;
         public static Material AmmoniumIronIISulfateSolution;
-        public static Material DilutedDiTertButylPeroxide;
-        public static Material DilutedTwoEthylhexylNitrate;
-        public static Material DilutedNitromethane;
         public static Material DilutedAmmoniumSulfateSolution;
         public static Material PlatinumMotherLiquor;
         public static Material AmmoniacalSodiumBicarbonateSolution;
@@ -1508,6 +1573,10 @@ class SuSyMaterials {
         public static Material Nitromethane;
         public static Material SodiumBisphenolateSolution;
         public static Material Polycarbonate;
+        public static Material Trichlorofluoromethane;
+        public static Material Dichlorodifluoromethane;
+        public static Material Chlorotrifluoromethane;
+        public static Material Chlorodifluoromethane;
 
         // Third Degree Materials
 
@@ -1604,43 +1673,9 @@ class SuSyMaterials {
         public static Material SaltyNMethylTwoPyrrolidone;
         public static Material DilutedNMethylTwoPyrrolidone;
         public static Material DilutedButyllithium;
-
-        // Thermodynamics/Greenhouse Materials
-
-        public static Material EarthlikeAir;
-        public static Material HotHighPressureSteam;
-        public static Material WasteGaseousNitrogen;
-        public static Material ChillyWasteGaseousNitrogen;
-        public static Material SubcooledLiquidNitrogen;
-        public static Material ColdWasteGaseousNitrogen;
-        public static Material UntreatedLiquidOxygen;
-        public static Material UntreatedLiquidNitrogen;
-        public static Material OxygenRichLiquid;
-        public static Material OxygenRichGas;
-        public static Material NitrogenRichGas;
-        public static Material ArgonRichGas;
-        public static Material OxygenRichVapor;
-        public static Material CrudeArgonVapor;
-        public static Material LiquidCrudeArgon;
-        public static Material SubcooledOxygenRichLiquid;
-        public static Material CrudeLiquidKrypton;
-        public static Material RareGasRichFraction;
-        public static Material CondensedRareGasRichFraction;
-        public static Material CrudeNeonVapor;
-        public static Material GaseousCrudeKrypton;
-        public static Material ColdLiquidOxygen;
-        public static Material CompressedCrudeNeon;
-        public static Material PartiallyLiquefiedCrudeNeon;
-        public static Material GaseousCrudeNeon;
-        public static Material LiquidCrudeNeon;
-        public static Material ColdGaseousNitrogen;
-        public static Material LiquidArgonProduct;
-        public static Material LiquidOxygenProduct;
-        public static Material LiquidNitrogenProduct;
-        public static Material LiquidDeoxygenatedArgon;
-        public static Material LiquidWasteNitrogen;
-        public static Material PartiallyLiquefiedArgon;
-        public static Material SupercriticalCarbonDioxide;
+        public static Material DilutedDiTertButylPeroxide;
+        public static Material DilutedTwoEthylhexylNitrate;
+        public static Material DilutedNitromethane;
 
         public static void init() {
                 ElementMaterials.register();
@@ -1652,6 +1687,5 @@ class SuSyMaterials {
                 OrganicChemistryMaterials.register();
                 PetrochemistryMaterials.register();
                 ThirdDegreeMaterials.register();
-                ThermodynamicsMaterials.register();
         }
 }

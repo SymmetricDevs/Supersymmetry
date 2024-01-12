@@ -446,23 +446,7 @@ public class SecondDegreeMaterials {
                 .color(0x70cc6e)
                 .build();
 
-        DilutedDiTertButylPeroxide = new Material.Builder(13072, SuSyUtility.susyId('diluted_di_tert_butyl_peroxide'))
-                .liquid()
-                .components(DiTertButylPeroxide, 1, Water, 1)
-                .colorAverage()
-                .build();
-
-        DilutedTwoEthylhexylNitrate = new Material.Builder(13073, SuSyUtility.susyId('diluted_two_ethylhexyl_nitrate'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(TwoEthylhexylNitrate, 1, Water, 1, SulfuricAcid, 1)
-                .colorAverage()
-                .build();
-
-        DilutedNitromethane = new Material.Builder(13074, SuSyUtility.susyId('diluted_nitromethane'))
-                .liquid()
-                .components(Nitromethane, 3, Water, 1)
-                .colorAverage()
-                .build();
+        //FREE IDs: 13072-13074
 
         DilutedAmmoniumSulfateSolution = new Material.Builder(13075, SuSyUtility.susyId('diluted_ammonium_sulfate_solution'))
                 .liquid()

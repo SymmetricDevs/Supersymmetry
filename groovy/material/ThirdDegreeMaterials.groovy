@@ -79,7 +79,11 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 24010
+        DilutedDiTertButylPeroxide = new Material.Builder(24010, SuSyUtility.susyId('diluted_di_tert_butyl_peroxide'))
+                .liquid()
+                .components(DiTertButylPeroxide, 1, Water, 1)
+                .colorAverage()
+                .build();
 
         TetrasodiumEthylenediaminetetraacetateSolution = new Material.Builder(24011, SuSyUtility.susyId('tetrasodium_ethylenediaminetetraacetate_solution'))
                 .liquid()
@@ -177,7 +181,11 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        //FREE ID: 24027
+        DilutedTwoEthylhexylNitrate = new Material.Builder(24027, SuSyUtility.susyId('diluted_two_ethylhexyl_nitrate'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(TwoEthylhexylNitrate, 1, Water, 1, SulfuricAcid, 1)
+                .colorAverage()
+                .build();
 
         HydratedMagnesiumChlorideGlycolate = new Material.Builder(24028, SuSyUtility.susyId('hydrated_magnesium_chloride_glycolate'))
                 .liquid()
@@ -464,7 +472,11 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 24074
+        DilutedNitromethane = new Material.Builder(24074, SuSyUtility.susyId('diluted_nitromethane'))
+                .liquid()
+                .components(Nitromethane, 3, Water, 1)
+                .colorAverage()
+                .build();
       
         EthyleneVinylAcetateSuspension = new Material.Builder(24075, SuSyUtility.susyId('ethylene_vinyl_acetate_suspension'))
                 .liquid()
