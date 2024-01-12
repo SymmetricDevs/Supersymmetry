@@ -7,6 +7,7 @@ import gregtech.api.GregTechAPI;
 import gregtech.api.fluids.attribute.FluidAttributes;
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.fluids.store.FluidStorageKeys;
+import gregtech.api.fluids.store.FluidStorage;
 import gregtech.api.unification.material.properties.*
 
 import supersymmetry.api.util.SuSyUtility;
@@ -16,6 +17,7 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
+import static gregtech.api.fluids.FluidConstants.*;
 
 public class FirstDegreeMaterials {
         
@@ -29,7 +31,7 @@ public class FirstDegreeMaterials {
                         .components(material, 1)
                 
                 if (generateLiquid) {
-                        builder.liquid(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature()))
+                        builder.liquid(new FluidBuilder().temperature(determineTemperatureLiquid(material)))
                 }
         
                 if (generateIngot) {
@@ -38,6 +40,25 @@ public class FirstDegreeMaterials {
         
                 return builder.build()
         }
+        
+    	private static int determineTemperatureLiquid(Material material) {
+    		if (material.getProperty(PropertyKey.FLUID) != null && material.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) != null) {
+    			def current = material.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID).temperature
+  			if (current != -1) {
+    				return current
+    			}
+    		}
+            	BlastProperty property = material.getProperty(PropertyKey.BLAST);
+            	if (property == null) {
+                	if (material.hasProperty(PropertyKey.DUST)) {
+                   		return SOLID_LIQUID_TEMPERATURE;
+                	}
+                	return ROOM_TEMPERATURE;
+            	} else {
+                	return property.getBlastTemperature() + LIQUID_TEMPERATURE_OFFSET
+            	}
+    }
+
 
     public static void register() {
 
