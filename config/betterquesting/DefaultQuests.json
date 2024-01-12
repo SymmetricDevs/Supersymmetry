@@ -7,7 +7,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Welcome to §9§9§9§b§b§b§b§b§b§l§l§l§l§l§lSupersymmetry§r§r§r§r§r§r! \n\nYou have just landed on an unfamiliar planet. This book will teach you how to rebuild civilization from scratch in only §k4200§r pages.\n\nStart by getting a rock§r. This quest book is interactive.\n\nWhen you pick up a rock from the ground, press the §l§l§l§l§l§l§a§a§a§a§a§aSUBMIT§r button to complete the quest and continue.\n\nIf you lose this book, you can check the quests by pressing the §2§aGRAVE (`) §rkey.\n\nPages that have a normal icon aren\u0027t required for progression. \nPages that have a framed icon, like this one are §crequired §rand contain critical information for your survival.\n\nYou have been given a §6home block§r. It allows you to set your spawn if you ever die. You cannot skip the night, as beds are not available before EV.\n\n",
+          "desc:8": "Welcome to §9§9§9§b§b§b§b§b§b§l§l§l§l§l§lSupersymmetry§r§r§r§r§r§r! \n\nYou have just landed on an unfamiliar planet. This book will teach you how to rebuild civilization from scratch in only §k4200§r pages.\n\nStart by getting a rock§r. This quest book is interactive.\n\nPages that have a normal icon aren\u0027t required for progression. \nPages that have a framed icon, like this one are §crequired §rand contain critical information for your survival.\n\nYou have been given a §6home block§r. It allows you to set your spawn if you ever die. You cannot skip the night, as beds are not available before EV.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -90,7 +90,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "It is probably impossible to try to play GregTech without using JEI. So here are some tips on how to use JEI to its full potential.\n\nThis pack will assume that the player\u0027s IQ is above 100. If you are confused, press §6R §ron an item in the questbook to see the item\u0027s crafting recipe, or §6U §rto see its uses.\n\n§eBookmark items regularly§r (default key §aA§r) so you don\u0027t have to type the names over and over.\n\nMost of the items in this pack have §emultiple recipes§r! Don\u0027t stop at the first recipe and think that item is impossible.\nSometimes a material is only available from §etiny dusts§r, sometimes it\u0027s available from a §efluid solution§r. It takes some practice. Oil processing and nuclear chemistry are pretty bad about this.\n\nYou can §epress @§r to see only items from that mod. For example, if you search for §c@gregtech§r, you will only see items from GregTech.\n\nYou can §epress $ §rto see only items from a specific entry in the Ore Dictionary. For example, if you search for §c$logWood§r, you will only see wooden logs.\n\nYou can §epress U §ron an item to see its uses.",
+          "desc:8": "It is probably impossible to try to play GregTech without using JEI. So here are some tips on how to use JEI to its full potential.\n\nFirst of all, you can press §6R §ron an item in the questbook and in JEI to see the item\u0027s crafting recipe, or §6U §rto see its uses.\n\n§eBookmark items regularly§r (default key §aA§r) so you don\u0027t have to type the names over and over.\n\nMost of the items in this pack have §emultiple recipes§r! Don\u0027t stop at the first recipe and think that item is impossible.\nSometimes a material is only available from §etiny dusts§r, sometimes it\u0027s available from a §efluid solution§r. It takes some practice. Oil processing and nuclear chemistry are pretty bad about this, §6§6ESPECIALLY§f in this pack.\n\n\nYou can §epress @§r to see only items from that mod. For example, if you search for §c@gregtech§r, you will only see items from GregTech.\n\nYou can §epress $ §rto see only items from a specific entry in the Ore Dictionary. For example, if you search for §c$logWood§r, you will only see wooden logs. This feature will be really useful for certain recipies!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -181,7 +181,7 @@
     },
     "3:10": {
       "preRequisites:11": [
-        135
+        76
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -765,8 +765,13 @@
       }
     },
     "8:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        87
+        87,
+        6
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -1516,7 +1521,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Nights are dark and extremely dangerous on most planets known to support life, seek shelter as soon as possible.\n\nIf you go outside, you may notice that there are several entities around you. At this stage you are nowhere near ready for killing any of them, so§c you must hide. §r",
+          "desc:8": "Nights are dark and extremely dangerous on most planets known to support life, seek shelter as soon as possible.\n\nIf you go outside, you may notice that there are several entities around you. At this stage you are nowhere near ready for killing any of them, so§c you must hide. \n\n§fLater down the line, you will get raided by mobs and soldiers, so you should also make various traps around the base and get prepared §4§4§f§cas soon as possible.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1564,7 +1569,7 @@
             "id:8": "appliedenergistics2:grindstone"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Macerator V0.2 Beta",
@@ -1979,13 +1984,18 @@
       }
     },
     "22:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        107
+        107,
+        21
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A furnace is not really good for smelting items. Its maximum temperature is only 1,000 K (730°C), which is not hot enough for iron.\n\nA Primitive Blast Furnace is made out of 32 §cFirebricks§r and 1 §4Primitive Blast Furnace Controller§r. It\u0027s a §a3x4x3 structure§r§r of firebricks that is hollowed out in the middle. For more help, look at the §cStructure Preview§r in the JEI database.\n\nThe Primitive Blast Furnace can make iron, wrought iron and §bsteel§r. It has a maximum temperature of about 1,500 K (1,227°C).\n\nLike many other structures, it is possible to share the walls of multiple Primitive Blast Furnaces and they will still work.",
+          "desc:8": "A furnace is not really good for smelting items. Its maximum temperature is only 1,000 K (730°C), which is not hot enough for iron.\n\nA Primitive Blast Furnace is made out of 32 §cFirebricks§r and 1 §4Primitive Blast Furnace Controller§r. It\u0027s a §a3x4x3 structure§r§r of firebricks that is hollowed out in the middle. For more help, look at the §cStructure Preview§r in the JEI database.\n\nThe Primitive Blast Furnace can make §biron§f, §bwrought iron §fand §bsteel§r. It has a maximum temperature of about 1,500 K (1,227°C).\n\nLike many other structures, it is possible to share the walls of multiple Primitive Blast Furnaces and they will still work.\n\nThe optimal setup (least blocks used for most PBFs) of PBFs will look like this:\n\nBBBBB\nBHBHB\nBBBBB (look from above)\nBHBHB\nBBBBB\n\nwhere B - Fireblock Block, and H - Hole in the middle of the PBF structure.\nIf you want to assemble more PBFs, you can continue the same pattern.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2736,7 +2746,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Steel§r is an alloy of iron and carbon with §6improved strength§r and fracture resistance compared to other forms of iron.\n\nThe §cPrimitive Blast Furnace§f §rcan turn §7Wrought Iron§f ingots into §l§e§6Steel§r, by smelting them with Coal Coke. \n\nMaking steel is one of the top priorities of the Industrial Age. Make sure to have your Primitive Blast Furnace running at all times, and try to make 4 Primitive Blast Furnaces sharing their walls.",
+          "desc:8": "§6Steel§r is an alloy of iron and carbon with §6improved strength§r and fracture resistance compared to other forms of iron.\n\nThe §cPrimitive Blast Furnace§f §rcan turn §7Wrought Iron§f ingots into §l§e§6Steel§r, by smelting them with Coal Coke. \n\nMaking steel is one of the top priorities of the Industrial Age. Make sure to have your Primitive Blast Furnace running at all times, and try to make 4 Primitive Blast Furnaces sharing their walls. The instruction of making 4 Primitive Blast Furnaces the most efficient way is described in the §6Primitive Blast Furnace §fquest.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5672,7 +5682,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Quicklime§r, or calcium oxide, can be obtained by smelting limestone in a Furnace. Limestone can be found by mining underground. \n\n§6§rAt your current level of technology, §6Quicklime §rcan be turned into §6Slaked Lime §rusing either a §6Ceramic Bucket§r or a §6Bronze Drum§r. Since iron buckets aren\u0027t available now, and Bronze Drums are expensive, you can check the §6§lBalanced Bucket§r quest entry for more info. It will be used for the construction of §6firebricks§r.",
+          "desc:8": "§6Quicklime§r, or calcium oxide, can be obtained by smelting limestone in a Furnace. Limestone can be found by mining underground. \n\n§6§rAt your current level of technology, §6Quicklime §rcan be turned into §6Slaked Lime §rusing either a §6Ceramic Bucket§r or a §6Bronze Drum§r. Since iron buckets aren\u0027t available now, and Bronze Drums are expensive, you can use §6Ceramic Buckets §ffor the time being.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5822,7 +5832,7 @@
     },
     "76:10": {
       "preRequisites:11": [
-        0
+        135
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6608,7 +6618,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Convert 1 log into 4 §6planks§r. \n\nYou can then craft those planks into a §acrafting table§f.\n\n----------------------------------------\n§3WELCOME TO SUPERSYMMETRY!\n§r----------------------------------------\n- Explore your surroundings\n§r- Find or build shelter\n- Prepare for the winter\n- Acquire basic resources\n- Try not to die\n------------------------------------",
+          "desc:8": "Make a §6Crafting Table§f\n\n----------------------------------------\n§3WELCOME TO SUPERSYMMETRY!\n§r----------------------------------------\n- Explore your surroundings\n§r- Find or build shelter\n- Prepare for the winter\n- Acquire basic resources\n- Try not to die\n------------------------------------",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6660,7 +6670,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Kill cows to get §6leather§r. This can be used to get primitive armor. \n\nNote that animals aren\u0027t very common, but you can still find them.",
+          "desc:8": "Kill cows to get §6leather§r. This can be used to get primitive armor. \n\nNote that animals aren\u0027t very common, but you can still find them.\n\nLater down the line, you will be able to make artificial leather, so don\u0027t focus §§§ltoo §fmuch time on this quest",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6940,15 +6950,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 4394,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_thread"
           },
@@ -6996,7 +6997,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Iron buckets§r aren\u0027t available yet, so they must be made with clay. \n\nUse a §6Clay Tool §r[§aRight Click§r] on clay to get the bucket. Make sure to then break it with a §6§6§6shovel§6§f, not your hand, or it will drop nothing.\n\nYou should also make sure it isn\u0027t a Clay Large or Clay Small Vessel first. \n\nAfter obtaining the bucket, smelt it in a furnace to fire it and get a §cCeramic Bucket§r.",
+          "desc:8": "Iron buckets§r aren\u0027t available yet, so they must be made with clay. \n\nUse a §6Clay Tool §r[§aRight Click§r] on a clay block to get the bucket. Make sure to then break it with a §6§6§6shovel§6§f, not your hand, or it will drop nothing.\n\nYou should also make sure it isn\u0027t a Clay Large or Clay Small Vessel first. \n\nAfter obtaining the bucket, smelt it in a furnace to fire it and get a §cCeramic Bucket§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7222,7 +7223,7 @@
     },
     "96:10": {
       "preRequisites:11": [
-        12
+        87
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -7877,7 +7878,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining §6Slaked Lime§r, §7Flint Dust§r, §6Sand Dust§r and §7Clay Balls (dusts can be made using a Flint Mortar) will create §6Fireclay Mix§r.\n\nFireclay Mix can be turned into Compressed Fireclay by using a brick form. ",
+          "desc:8": "Combining §6Slaked Lime§r, §7Flint Dust§r, §6Sand Dust§r and §7Clay Balls (dusts can be made using a Flint Mortar) will create §6Fireclay Mix§r.\n\nFireclay Mix can be turned into Compressed Fireclay by using a brick form. \n\nCraft §6§aA LOT§f of those§f, you will need a lot of those for a single PBF (§6Primitive Blast Furnace§f), and you will need a lot of PBFs!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9006,8 +9007,13 @@
       }
     },
     "125:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        118
+        118,
+        21
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -9278,7 +9284,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Pig Iron§r is the product of smelting iron ore (such as §6Banded Iron§r and §6Magnetite§o§r) with a high-carbon fuel like §6Coal§r, Charcoal, Anthracite, or Coal Coke in a Blast Furnace. §6Limonite §rcan also be used as an ore, but it has to be smelted in a normal Furnace first, or dried by using a Dryer.\n\nThe next step is to make §7§f§7§7§r§7Wrought Iron§ §f out of this Pig Iron, which will be explained in the next quest.\n\nExtracting usable metal from iron ores requires kilns or furnaces (such as a §cBlast Furnace§r) capable of reaching 1,500 °C (1,773K) or higher, about 500 °C higher than that required to smelt copper. \n\n§\n§cIt is recommended to use dusts instead of ores while smelting Iron. If you can\u0027t macerate ores into dusts, look into the Grindstone.",
+          "desc:8": "§6Pig Iron§r is the product of smelting iron ore (such as §6Banded Iron§r and §6Magnetite§o§r) with a high-carbon fuel like §6Coal§r, Charcoal, Anthracite, or Coal Coke in a Blast Furnace. §6Limonite §rcan also be used as an ore, but it has to be smelted in a normal Furnace first, or dried by using a Dryer.\n\nThe next step is to make §7§f§7§7§r§7Wrought Iron§ §f out of this Pig Iron, which will be explained in the next quest.\n\nExtracting usable metal from iron ores requires kilns or furnaces (such as a §cBlast Furnace§r) capable of reaching 1,500 °C (1,773K) or higher, about 500 °C higher than that required to smelt copper. \n\n§\n§cIt is recommended to use dusts instead of ores while smelting Iron. If you can\u0027t macerate ores into dusts, look into the Grindstone and Macerator.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9749,7 +9755,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "First of all, let\u0027s do a little setup before starting on your journey.\n\n- Make sure you have the latest version of Supersymmetry\n\n- Make sure your download did not get corrupted\n\n- Make sure you downloaded Supersymmetry from a trusted source (our Discord server, GitHub or CurseForge). If you got the pack from sketchy sites like 9minecraft.net your computer isn\u0027t safe.\n\n- Make sure you are using the latest version of Java 8. (Java 9 or later won\u0027t work.)\n\n- Make sure you haven\u0027t modified the pack, added new mods or changed recipes. \n\n§3§3§3Press the checkbox to continue.\n§r\n",
+          "desc:8": "First of all, let\u0027s do a little setup before starting on your journey.\n\n- Make sure you have the latest version of Supersymmetry\n\n- Make sure your download did not get corrupted\n\n- Make sure you downloaded Supersymmetry from a trusted source (our Discord server, GitHub or CurseForge). If you got the pack from sketchy sites like 9minecraft.net your computer isn\u0027t safe.\n\n- Make sure you are using the latest version of Java 8. (Java 9 or later won\u0027t work.)\n\n- Make sure you haven\u0027t modified the pack, added new mods or changed recipes. \n\nIf you have any problems with the installation or have encountered any bugs, join our Discord server and we will help you out!\n§r\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10687,7 +10693,7 @@
             "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Lead",
@@ -48806,7 +48812,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Not as good as MSG",
@@ -49214,8 +49220,13 @@
       }
     },
     "664:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        125
+        125,
+        2
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -57406,15 +57417,6 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 15014,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
             "id:8": "gregtech:meta_thread"
           },
@@ -64741,27 +64743,27 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
-          "y:3": -24
+          "y:3": -60
         },
         "1:10": {
           "id:3": 1,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
-          "y:3": -12
+          "y:3": -78
         },
         "2:10": {
           "id:3": 2,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": -12
+          "y:3": -78
         },
         "3:10": {
           "id:3": 3,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
+          "x:3": -48,
           "y:3": 72
         },
         "4:10": {
@@ -64769,371 +64771,371 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
-          "y:3": 36
+          "y:3": -24
         },
         "5:10": {
           "id:3": 5,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 144
+          "x:3": 24,
+          "y:3": 72
         },
         "6:10": {
           "id:3": 6,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 180
+          "x:3": 60,
+          "y:3": 72
         },
         "7:10": {
           "id:3": 7,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 216
+          "y:3": 108
         },
         "8:10": {
           "id:3": 8,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": 264
+          "x:3": -54,
+          "y:3": 138
         },
         "9:10": {
           "id:3": 9,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 312
+          "y:3": 228
         },
         "10:10": {
           "id:3": 12,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
-          "y:3": 348
+          "y:3": 264
         },
         "11:10": {
           "id:3": 13,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 28,
-          "y:3": 420
+          "x:3": 30,
+          "y:3": 318
         },
         "12:10": {
           "id:3": 14,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -52,
-          "y:3": 420
+          "x:3": -54,
+          "y:3": 318
         },
         "13:10": {
           "id:3": 15,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 448
+          "y:3": 336
         },
         "14:10": {
           "id:3": 16,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
-          "y:3": 498
+          "y:3": 396
         },
         "15:10": {
           "id:3": 17,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 36
+          "y:3": -24
         },
         "16:10": {
           "id:3": 18,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
-          "y:3": 612
+          "y:3": 510
         },
         "17:10": {
           "id:3": 19,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 108
+          "y:3": 72
         },
         "18:10": {
           "id:3": 20,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -120,
-          "y:3": 552
+          "x:3": -156,
+          "y:3": 450
         },
         "19:10": {
           "id:3": 21,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
-          "y:3": 558
+          "y:3": 456
         },
         "20:10": {
           "id:3": 22,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 84,
-          "y:3": 408
+          "x:3": 108,
+          "y:3": 264
         },
         "21:10": {
           "id:3": 25,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 84,
-          "y:3": 552
+          "x:3": 108,
+          "y:3": 396
         },
         "22:10": {
           "id:3": 28,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 480
+          "x:3": 36,
+          "y:3": 420
         },
         "23:10": {
           "id:3": 29,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 480
+          "y:3": 378
         },
         "24:10": {
           "id:3": 30,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 84,
-          "y:3": 624
+          "x:3": 180,
+          "y:3": 396
         },
         "25:10": {
           "id:3": 59,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 528
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -240,
+          "y:3": 396
         },
         "26:10": {
           "id:3": 74,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
-          "y:3": 264
+          "x:3": 84,
+          "y:3": 180
         },
         "27:10": {
           "id:3": 76,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": -84
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 36
         },
         "28:10": {
           "id:3": 87,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
-          "y:3": 252
+          "y:3": 168
         },
         "29:10": {
           "id:3": 88,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": 144
+          "x:3": 60,
+          "y:3": 36
         },
         "30:10": {
           "id:3": 89,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -204,
-          "y:3": 552
+          "x:3": -246,
+          "y:3": 450
         },
         "31:10": {
           "id:3": 90,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 312
+          "x:3": 60,
+          "y:3": 276
         },
         "32:10": {
           "id:3": 91,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -120,
-          "y:3": 408
+          "x:3": -156,
+          "y:3": 324
         },
         "33:10": {
           "id:3": 93,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": 42,
-          "y:3": 258
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 180
         },
         "34:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 360
+          "y:3": 228
         },
         "35:10": {
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
-          "y:3": 312
+          "x:3": 120,
+          "y:3": 180
         },
         "36:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
-          "y:3": 360
+          "x:3": 120,
+          "y:3": 222
         },
         "37:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 312
+          "y:3": 180
         },
         "38:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 312
+          "x:3": -120,
+          "y:3": 180
         },
         "39:10": {
           "id:3": 125,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -198,
-          "y:3": 306
+          "x:3": -186,
+          "y:3": 174
         },
         "40:10": {
           "id:3": 129,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 90,
-          "y:3": 486
+          "x:3": 114,
+          "y:3": 336
         },
         "41:10": {
           "id:3": 135,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 36
+          "y:3": 0
         },
         "42:10": {
           "id:3": 149,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 360
+          "x:3": -84,
+          "y:3": 276
         },
         "43:10": {
           "id:3": 187,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 618
+          "y:3": 516
         },
         "44:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 564
+          "x:3": 120,
+          "y:3": 468
         },
         "45:10": {
           "id:3": 366,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 618
+          "y:3": 516
         },
         "46:10": {
           "id:3": 441,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 672
+          "y:3": 570
         },
         "47:10": {
           "id:3": 650,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": 204,
-          "y:3": 552
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 114,
+          "y:3": 516
         },
         "48:10": {
           "id:3": 656,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
-          "y:3": 666
+          "y:3": 564
         },
         "49:10": {
           "id:3": 664,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -204,
-          "y:3": 354
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -186,
+          "y:3": 114
         },
         "50:10": {
           "id:3": 669,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -150,
-          "y:3": 618
+          "x:3": -192,
+          "y:3": 516
         },
         "51:10": {
           "id:3": 722,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 528
+          "x:3": 84,
+          "y:3": 468
         },
         "52:10": {
           "id:3": 723,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
-          "y:3": 600
+          "y:3": 468
         },
         "53:10": {
           "id:3": 738,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 636
+          "x:3": 246,
+          "y:3": 432
         },
         "54:10": {
           "id:3": 763,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 618
+          "x:3": -144,
+          "y:3": 516
         },
         "55:10": {
           "id:3": 861,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 672
+          "x:3": 246,
+          "y:3": 378
         },
         "56:10": {
           "id:3": 862,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": 216
+          "x:3": 60,
+          "y:3": 108
         }
       }
     },
