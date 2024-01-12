@@ -720,7 +720,7 @@ public class UnknownCompositionMaterials {
         //FREE ID: 4136-4137
 
         TwoEthylhexylPhosphoricAcidMix = new Material.Builder(4138, SuSyUtility.susyId('two_ethylhexyl_phosphoric_acid_mix'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.Acid))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xd1bb75)
                 .build();
 

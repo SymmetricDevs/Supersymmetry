@@ -16,6 +16,7 @@ import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.fluids.FluidBuilder;
+import gregtech.api.fluids.FluidState;
 import gregtech.api.fluids.store.FluidStorageKeys;
 
 import supersymmetry.api.fluids.SusyFluidStorageKeys;

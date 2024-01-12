@@ -29,7 +29,7 @@ public class FirstDegreeMaterials {
                                 .build();
 
                 if (generateLiquid) {
-                        mat.liquid(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature()))
+                        mat.liquid(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature()))
                 }
 
                 if (generateIngot) {
@@ -857,7 +857,7 @@ public class FirstDegreeMaterials {
                 .build()
 
         BoronTrifluoride = new Material.Builder(8223, SuSyUtility.susyId('boron_trifluoride'))
-                .gas(new FluidBuilder(.attribute(FluidAttributes.ACID)))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(Boron, 1, Fluorine, 3)
                 .colorAverage()
                 .build()

@@ -104,7 +104,7 @@ class ThermodynamicsMaterials {
                 var color = material.materialRGB;
 
                 new Material.Builder(id, SuSyUtility.susyId("hot_" + material.toString()))
-                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature() + 100))
+                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature() + 100))
                         .color(color)
                         .components(material, 1)
                         .flags(DISABLE_DECOMPOSITION)
@@ -115,56 +115,56 @@ class ThermodynamicsMaterials {
                 var color = material.materialRGB;
 
                 new Material.Builder(id, SuSyUtility.susyId("warm_dry_" + material.toString()))
-                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature() + 20))
+                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature() + 20))
                         .color(color)
                         .components(material, 1)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
                 new Material.Builder(id + 1, SuSyUtility.susyId("warm_" + material.toString()))
-                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature() + 20))
+                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature() + 20))
                         .color(color)
                         .components(material, 1)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
                 new Material.Builder(id + 2, SuSyUtility.susyId("warm_humid_" + material.toString()))
-                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature() + 20))
+                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature() + 20))
                         .color(color)
                         .components(material, 1)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
                 new Material.Builder(id + 3, SuSyUtility.susyId("dry_" + material.toString()))
-                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature()))
+                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature()))
                         .color(color)
                         .components(material, 1)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
                 new Material.Builder(id + 4, SuSyUtility.susyId("humid_" + material.toString()))
-                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature()))
+                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature()))
                         .color(color)
                         .components(material, 1)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
                 new Material.Builder(id + 5, SuSyUtility.susyId("cool_dry_" + material.toString()))
-                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature() - 20))
+                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature() - 20))
                         .color(color)
                         .components(material, 1)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
                 new Material.Builder(id + 6, SuSyUtility.susyId("cool_" + material.toString()))
-                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature() - 20))
+                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature() - 20))
                         .color(color)
                         .components(material, 1)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
                 new Material.Builder(id + 7, SuSyUtility.susyId("cool_humid_" + material.toString()))
-                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature() - 20))
+                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature() - 20))
                         .color(color)
                         .components(material, 1)
                         .flags(DISABLE_DECOMPOSITION)
@@ -175,7 +175,7 @@ class ThermodynamicsMaterials {
                 var color = material.materialRGB;
 
                 new Material.Builder(id, SuSyUtility.susyId("high_purity_" + material.toString()))
-                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature()))
+                        .gas(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature()))
                         .color(color)
                         .components(material, 1)
                         .build();
@@ -185,7 +185,7 @@ class ThermodynamicsMaterials {
                 var color = material.materialRGB;
 
                 new Material.Builder(id, SuSyUtility.susyId("high_purity_" + material.toString()))
-                        .liquid(new FluidBuilder().temperature(material.getFluid(FluidStorageKey.LIQUID).getTemperature()))
+                        .liquid(new FluidBuilder().temperature(material.getFluid(FluidStorageKeys.LIQUID).getTemperature()))
                         .color(color)
                         .components(material, 1)
                         .build();
