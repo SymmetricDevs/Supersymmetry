@@ -1045,7 +1045,7 @@ def antioxidantMap = [
 // Base
 baseOilMap.each { oil, multiplier1 ->
     solidFrictionModifierMap.each { sfm, multiplier2 ->
-        BLENDER.recipeBuilder()
+        MIXER.recipeBuilder()
             .inputs(ore(sfm))
             .fluidInputs(fluid(oil) * (1000 * multiplier2 * 4))
             .fluidOutputs(fluid('lubricant') * (1000 * multiplier1 * multiplier2 * 4))
@@ -1055,7 +1055,7 @@ baseOilMap.each { oil, multiplier1 ->
     }
 
     liquidFrictionModifierMap.each { lfm, multiplier3 ->
-        BLENDER.recipeBuilder()
+        MIXER.recipeBuilder()
             .fluidInputs(fluid(oil) * (1000 * multiplier3))
             .fluidInputs(fluid(lfm) * 250)
             .fluidOutputs(fluid('lubricant') * (1000 * multiplier1 * multiplier3))
