@@ -1,0 +1,34 @@
+{
+  "weight": 90,
+  "density": 1,
+  "max_height": 60,
+  "min_height": 0,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "talc"
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      15,
+      15
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:talc"
+      },
+      {
+        "secondary": "ore:soapstone"
+      },
+      {
+        "between": "ore:calcite"
+      },
+      {
+        "sporadic": "ore:magnesite"
+      }
+    ]
+  }
+}

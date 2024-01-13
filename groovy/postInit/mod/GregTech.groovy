@@ -1396,6 +1396,27 @@ crafting.addShaped("gregtech:fluid_hatch.export.lv", metaitem('fluid_hatch.expor
 		[null, item('minecraft:glass'), null]
 ])
 
+// Black Granite Dust * 1
+mods.gregtech.macerator.removeByInput(2, [item('gregtech:stone_smooth')], null)
+
+mods.gregtech.Dust.recipeBuilder()
+        .inputs(ore('stoneGraniteBlack'))
+        .outputs(metaitem('dustGraniteBlack') * 1)
+        .duration(150)
+        .EUt(2)
+        .buildAndRegister()
+
+// Red Granite Dust * 1
+mods.gregtech.macerator.removeByInput(2, [item('gregtech:stone_smooth', 1)], null)
+
+mods.gregtech.Dust.recipeBuilder()
+        .inputs(ore('stoneGraniteRed'))
+        .outputs(metaitem('dustGraniteRed') * 1)
+        .duration(150)
+        .EUt(2)
+        .buildAndRegister()
+
+
 // Multiblock Builder
 
 crafting.replaceShaped("gregtech:multiblock_builder", metaitem('tool.multiblock_builder'), [
