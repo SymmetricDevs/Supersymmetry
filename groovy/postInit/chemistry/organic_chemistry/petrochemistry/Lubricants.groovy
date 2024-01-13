@@ -1050,7 +1050,7 @@ baseOilMap.each { oil, multiplier1 ->
             .fluidInputs(fluid(oil) * (1000 * multiplier2 * 4))
             .fluidOutputs(fluid('lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .duration(200)
-            .EUt(120)
+            .EUt(7)
             .buildAndRegister()
     }
 
@@ -1060,7 +1060,7 @@ baseOilMap.each { oil, multiplier1 ->
             .fluidInputs(fluid(lfm) * 250)
             .fluidOutputs(fluid('lubricant') * (1000 * multiplier1 * multiplier3))
             .duration(200)
-            .EUt(120)
+            .EUt(7)
             .buildAndRegister()
     }
 }
