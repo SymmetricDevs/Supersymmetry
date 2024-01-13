@@ -886,9 +886,9 @@ for (i = 1; i <= 8; i++) {
 
 for (i = 1; i <= 8; i++) {
 	crafting.addShaped("gregtech:polishing_machine." + Globals.voltageTiers[i], metaitem('polishing_machine.'  + Globals.voltageTiers[i]), [
-			[robotArms[i], tieredSprings[i], pumps[i]],
-			[circuits[i], hulls[i], circuits[i]],
-			[tieredCables[i], tieredGlass[i], tieredCables[i]]
+			[robotArms[i], circuits[i], pumps[i]],
+			[tieredGlass[i], hulls[i], tieredGlass[i]],
+			[tieredCables[i], motors[i], tieredCables[i]]
 	])
 }
 
@@ -896,9 +896,9 @@ for (i = 1; i <= 8; i++) {
 
 for (i = 1; i <= 8; i++) {
 	crafting.addShaped("gregtech:spinning." + Globals.voltageTiers[i], metaitem('polishing_machine.'  + Globals.voltageTiers[i]), [
-			[motor[i], tieredCables[i], motor[i]],
-			[motor[i], hulls[i], motor[i]],
-			[circuits[i], tieredCables[i], circuits[i]]
+			[circuits[i], tieredCables[i], circuits[i]],
+			[pumps[i], hulls[i], motor[i]],
+			[tieredCables[i], motor[i], motor[i]]
 	])
 }
 

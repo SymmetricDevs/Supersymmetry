@@ -981,7 +981,6 @@ def baseOilMap = [
 def solidFrictionModifierMap = [
     'dustTalc': 0.5,
     'dustSoapstone': 0.5,
-    'dustRedstone': 0.5,
     'dustGraphite': 1,
     'dustFluorinatedGraphite': 2,
     'dustPolycaprolactam': 3,
