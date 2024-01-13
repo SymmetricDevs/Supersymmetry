@@ -950,7 +950,7 @@
             "id:8": "gregtech:ore_magnetite_0"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Magnetite",
@@ -2061,7 +2061,7 @@
             "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Zinc",
@@ -2134,7 +2134,7 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Voltaic Pile",
@@ -2406,7 +2406,7 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Magnetite Chunks",
@@ -2975,7 +2975,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Alloy Smelter Molds",
@@ -3583,7 +3583,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Glass Tubes",
@@ -3878,10 +3878,10 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Bending Machine",
+          "name:8": "LV Bending Machine",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -4000,7 +4000,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Coagulation Tank",
@@ -4262,7 +4262,7 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Cathodes and Anodes",
@@ -4669,7 +4669,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Wiremill",
+          "name:8": "LV Wiremill",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -5015,7 +5015,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Resistors",
@@ -5088,7 +5088,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Coated Circuit Boards",
@@ -5460,7 +5460,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Lead Acid Battery",
@@ -5533,7 +5533,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Stibnite and Antimony",
@@ -5594,7 +5594,7 @@
             "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Battery Alloy",
@@ -6016,7 +6016,7 @@
             "id:8": "gregtech:meta_wire_fine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Wiring 101",
@@ -7741,7 +7741,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Lathe",
@@ -8038,7 +8038,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Polarizer",
@@ -8090,7 +8090,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Mixer",
@@ -8142,7 +8142,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "C.S.T.R.",
@@ -8194,10 +8194,10 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Trickle Bed Reactor",
+          "name:8": "LV Trickle Bed Reactor",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -8249,10 +8249,10 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Bubble Column Reactor",
+          "name:8": "LV Bubble Column Reactor",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -8301,10 +8301,10 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Fixed Bed Reactor",
+          "name:8": "LV Fixed Bed Reactor",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -8399,7 +8399,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Electrolysis§r is a stage in the separation of elements from naturally occurring sources, such as ores using an §6Electrolyzer§r.\n\n\n",
+          "desc:8": "§6Electrolysis§r is a stage in the separation of elements from naturally occurring sources, such as ores using an §6LV Electrolyzer§r.\n\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8411,7 +8411,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Electrolyzer",
+          "name:8": "LV Electrolyzer",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -8463,7 +8463,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Gas Collector",
@@ -8898,10 +8898,10 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Batch Reactor",
+          "name:8": "LV Batch Reactor",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -9147,7 +9147,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Extruder §ris an extremely fast, flexible, and expensive semi-universal metal shaping machine. A common use of the§6 Extruder§r is to craft §6tool parts§r, or to make §6electrodes§r. \n\nThe Extruder functions by using §6extruder shapes§r. Look them up in JEI for more info.",
+          "desc:8": "The §6Extruder §ris an extremely fast, flexible, and expensive semi-universal metal shaping machine. A common use of the§6 Extruder§r is to craft §6tool parts§r, or to make §6electrodes§r. \n\nThe Extruder functions by using §6extruder shapes§r. Look them up in JEI for more info.\n\nIt\u0027s recommended that you get a §6§eMV §5§6Extruder§r upon reaching §6§eMedium Voltage§r, as the MV extruder unlock recipes to make long rods, pipes and rings without spending the durability of a §bHammer§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9159,7 +9159,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Extruder",
+          "name:8": "LV Extruder",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -9503,7 +9503,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Soldering Alloy",
@@ -10556,7 +10556,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Parallel Steam Macerating",
@@ -11488,7 +11488,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Autoclave",
+          "name:8": "LV Autoclave",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -11946,7 +11946,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Can\u0027t find a vein?",
@@ -12074,7 +12074,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Battery Buffer",
@@ -12151,7 +12151,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6GT Electric Tools§r are a good upgrade during your playthrough because they mine much faster compared too their unpowered counterparts such as the Mining Hammer or Wrench. They also consume their durability much slower than their unpowered counterparts too, as long as these tools have energy inside their buffer. Otherwise, the electric tools will consume durability much, much faster. §cSo, REMEMBER TO CHARGE YOUR TOOLS!§\n\n\n§fIf your electric tools run out of durability, it should return the power unit of the same voltage. §6LV tools§5§6§r return §6LV power units§r, §6V tools return MV power unit§r, and so on. You can recraft the retrieved power unit with a new tip to make a new electric tool. Alternatively, you can craft your damaged tool with a fresh new tip to get a new tool with 100% durability §9§e(this crafting recipe can be done in a 2x2 crafting grid!)§r. You can upgrade your old tool with better drill/wrench tips this way too, so a §6Steel Drill (LV)§r can be combined with Aluminium Drill tip to make §6Aluminium Drill (LV)§r. However, you can\u0027t remove the tip from an electric tools.§l\n\n§e§lNote: You can right click a GT battery to allow the battery to charge items in inventories, which might be useful during a long mining trip. Lead-Acid battery (or any LV battery) should be able to power your LV tools. MV battery can charge MV and LV tools, HV battery can charge HV, MV and LV tools, and so on.§r§r\n\nYou can get higher tier electric tools in §d§bMV§r, §eH§r§7§6§f§eV§r, and beyond. Higher tier tools will have bigger energy buffers, mining area, mining speed, durability.\n\n§l§e§lNote: There is no higher tier for the Chainsaw and Screwdriver, the Wrench skips MV and EV tier, and there are no tier above IV.§r\n\nThe §6Steel Drill §rmines a 3x3x1 area with a single hit. If you [§9§aRight Click§r] while holding it, it will automatically place any Torches that you have. If you [§9§aShift + Right Click§r] while holding it, a menu will open, which will allow you to configure the mining area of the drill. I recommending testing this feature on your Singleplayer Creative world.\n\nThe §6Steel Wrench §racts as an wrench. (Note: The §bAluminium§6 Drill§r can\u0027t break §7§8Steel Pipe Casing§r, so it is recommended that you keep using §8Steel§r Wrench Tip until you get §7Stainless Steel§r)\n\nThe §6Steel Chainsaw §racts as an axe, but it can harvest ice and it can also be used as a weapon which disables shields.\n\nThe §6Steel Screwdriver §racts as an screwdriver.\n\nYou can make these tools using other materials such as bronze, invar, iron to complete this quest.",
+          "desc:8": "§6GT Electric Tools§r are a good upgrade during your playthrough because they mine much faster compared too their unpowered counterparts such as the Mining Hammer or Wrench. They also consume their durability much slower than their unpowered counterparts too, as long as these tools have energy inside their buffer. Otherwise, the electric tools will consume durability much, much faster. §cSo, REMEMBER TO CHARGE YOUR TOOLS!§\n\n\n§fIf your electric tools run out of durability, it should return the power unit of the same voltage. §6LV tools§5§6§r return §6LV power units§r, §6MV tools §rreturn§e§6 MV power units§r, and so on. You can recraft the retrieved power unit with a new tip to make a new electric tool. Alternatively, you can craft your damaged tool with a fresh new tip to get a new tool with 100% durability §9§e(this crafting recipe can be done in a 2x2 crafting grid!)§r. You can upgrade your old tool with better drill/wrench tips this way too, so a §6Steel Drill (LV)§r can be combined with Aluminium Drill tip to make §6Aluminium Drill (LV)§r. However, you can\u0027t remove the tip from an electric tools.§l\n\n§e§lNote: You can right click a GT battery to allow the battery to charge items in inventories, which might be useful during a long mining trip. Lead-Acid Battery (or any LV battery) should be able to power your LV tools. MV battery can charge MV and LV tools, HV battery can charge HV, MV and LV tools, and so on.§r§r \n\nYou can get higher tier electric tools in §d§bMV§r, §eH§r§7§6§f§eV§r, and beyond. Higher tier tools will have bigger energy buffers, mining area, mining speed, durability.\n\n§l§e§lNote: There is no higher tier for the Chainsaw and Screwdriver, the Wrench skips MV and EV tier, and there are no tier above IV.§r\n\nThe §6Steel Drill §rmines a 3x3x1 area with a single hit. If you [§9§aRight Click§r] while holding it, it will automatically place any Torches that you have. If you [§9§aShift + Right Click§r] while holding it, a menu will open, which will allow you to configure the mining area of the drill. I recommending testing this feature on your Singleplayer Creative world.\n\nThe §6Steel Wrench §racts as an wrench. (Note: The §bAluminium§6 Drill§r can\u0027t break §7§8Steel Pipe Casing§r, so it is recommended that you keep using §8Steel§r Wrench Tip until you get §7Stainless Steel§r)\n\nThe §6Steel Chainsaw §racts as an axe, but it can harvest ice and it can also be used as a weapon which disables shields.\n\nThe §6Steel Screwdriver §racts as an screwdriver.\n\nYou can make these tools using other materials such as bronze, invar, iron to complete this quest.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12386,7 +12386,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Land of the Free",
@@ -12480,7 +12480,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Diluted Oil",
@@ -12564,7 +12564,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Distillery",
@@ -12630,7 +12630,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Desalted Oil",
@@ -12922,7 +12922,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Sulfuric Oil Fractions",
@@ -13029,7 +13029,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Treated Sulfuric Fractions",
@@ -13361,7 +13361,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Centrifuge",
@@ -13680,7 +13680,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Trolling Machine",
@@ -14228,7 +14228,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Hydrogen Fluoride",
@@ -14295,7 +14295,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Hydrofluoric Acid",
@@ -14625,7 +14625,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can §ccentrifuge §6Carbon §rout of various carbonaceous sources, such as coal dust or coke dust.",
+          "desc:8": "You can §ccentrifuge §6Carbon §rout of various carbonaceous sources, such as coal dust or coke dust. Carbon is a very important resource to have, since it will be used in various smelting recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14704,7 +14704,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Extractor",
@@ -16267,7 +16267,7 @@
             "id:8": "minecraft:gunpowder"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Gunpowder",
@@ -17006,7 +17006,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Gallium Arsenide",
@@ -25824,7 +25824,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Large Weapons Factory",
@@ -26722,7 +26722,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Fermentation Vat",
@@ -27419,11 +27419,11 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Monocrystalline Silicon Boules§r need to be cut into §6Wafers §rbefore being able to be processed.",
+          "desc:8": "§6Monocrystalline Silicon Boules§r need to be cut into §6Raw Wafers §rbefore being able to be processed. The §6Raw Wafe§rr can not be used to make circuit right away, however.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 371,
+            "Damage:2": 8016,
             "ForgeCaps:10": {
               "regeneration:arch:10": {
                 "arch_status:8": "NORMAL_ITEM",
@@ -27434,13 +27434,13 @@
               }
             },
             "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
+            "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Silicon Boule",
+          "name:8": "Raw Silicon Wafer",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -27464,7 +27464,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 371,
+              "Damage:2": 8016,
               "ForgeCaps:10": {
                 "regeneration:arch:10": {
                   "arch_status:8": "NORMAL_ITEM",
@@ -27475,7 +27475,7 @@
                 }
               },
               "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
+              "id:8": "gregtech:meta_item_2"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -28191,7 +28191,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Biomass",
@@ -28324,7 +28324,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Fermented Biomass \u0026 Methane",
@@ -28386,7 +28386,7 @@
             "id:8": "minecraft:dye"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Lapis Lazuli",
@@ -28495,7 +28495,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Filtration Mechanisms",
@@ -28658,7 +28658,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Mr. Freeman",
@@ -29980,7 +29980,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Sifting Machine",
@@ -30166,7 +30166,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Wood Vinegar and Acetic Acid",
@@ -30677,7 +30677,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Ion Implantation",
@@ -30716,8 +30716,8 @@
     "452:10": {
       "preRequisites:11": [
         453,
-        404,
-        866
+        866,
+        877
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -30821,7 +30821,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Photoresist",
@@ -30887,7 +30887,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Phenol",
@@ -30953,7 +30953,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Formaldehyde",
@@ -31576,7 +31576,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "High Purity Arsenic",
@@ -31868,7 +31868,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Medium Voltage Battery Hull",
@@ -33283,7 +33283,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Iron (III) Chloride",
@@ -33349,7 +33349,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Sodium Bisulfate",
@@ -34373,7 +34373,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Evaporation Pool",
@@ -34864,7 +34864,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Purified Iron III Oxide",
@@ -44496,7 +44496,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§c§lWAR",
@@ -45005,7 +45005,7 @@
             "id:8": "gregtech:meta_block_frame_20"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Ocean Drill",
@@ -45242,7 +45242,8 @@
     },
     "603:10": {
       "preRequisites:11": [
-        36
+        36,
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -45256,7 +45257,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Chemical Bath",
@@ -45634,7 +45635,7 @@
             "id:8": "ompd:hardened"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Open Modular Passive Defense",
@@ -47719,7 +47720,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Electric Jetpack",
@@ -48531,7 +48532,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Even More Ammonia",
@@ -48867,7 +48868,7 @@
             "id:8": "gregtech:wire_single"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Superconductors",
@@ -48915,7 +48916,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "A Chemist\u0027s Dream",
@@ -49015,7 +49016,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Artificial Dyes",
@@ -52496,7 +52497,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Brine Processing",
@@ -54550,7 +54551,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Ziegler-Natta Catalysts, which require Titanium Tetrachloride, can boost the speed and production of several polymerization processes, such as making polyethylene and polyisoprene.",
+          "desc:8": "§6Ziegler-Natta Catalysts§r, which require §aTitanium Tetrachloride§r, can boost the speed and production of several polymerization processes, such as making §6Polyethylene§r and §6Polyisoprene.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55336,7 +55337,7 @@
             "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Nylon",
@@ -63786,7 +63787,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Gelatin",
@@ -63865,7 +63866,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Ethylene, Ethylene Oxide, and Acetaldehyde",
@@ -63912,12 +63913,13 @@
     },
     "865:10": {
       "preRequisites:11": [
-        864
+        864,
+        873
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "To produce §3dimethyl terephthalate,§r xylene is progressively oxidized using oxygen, additional xylene, and a cobalt catalyst in a complicated process (more details in JEI). You should already have §bethylene glycol, §rand §ccobalt acetate §rcan be produced with acetic acid and cobalt oxide.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63935,7 +63937,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Dimethyl Terephthalate",
@@ -64038,7 +64040,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Benzenediazonium chloride§r is the photoinitiator used in the acrylic photoemulsion. This material disassociates in UV light and initiates a photopolymerization reaction in §atrimethylolpropane triacrylate§r. To produce it, take §aaniline§r and react it with sodium nitrite (produced by roasting sodium nitrate, which comes of NaOH and nitric acid) and hydrogen chloride. ",
+          "desc:8": "§2Benzenediazonium chloride§r is the photoinitiator used in the acrylic photoemulsion. This material disassociates in UV light and initiates a photopolymerization reaction in §atrimethylolpropane triacrylate§r. To produce it, take §aaniline§r and react it with sodium nitrite (produced by roasting sodium nitrate, which comes of NaOH and nitric acid) and hydrogen chloride. §a§rAt LV, the only way to get §aAniline §ris processing Coal Tar. To produce 1 dust of §2Benzenediazonium chloride§r, you will need at least Coal Tar.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -64056,7 +64058,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Benzenediazonium Chloride",
@@ -64132,7 +64134,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Acrylic Photoinitiator",
@@ -64205,7 +64207,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Trimethylolpropane Triacrylate",
@@ -64271,7 +64273,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Church of Benzene",
@@ -64342,7 +64344,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Nitrobenzene and Aniline",
@@ -64382,8 +64384,7 @@
     "872:10": {
       "preRequisites:11": [
         865,
-        864,
-        873
+        864
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -64453,7 +64454,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Xylene",
@@ -64602,6 +64603,67 @@
     },
     "877:10": {
       "preRequisites:11": [
+        880
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Polish your §6Acid-Treated Silicon Wafer§r to get a §6Silicon Wafer§r. You can now use this wafer to craft §6ICs, CPUs, RAMs,§r etc..",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 371,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Silicon Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 877,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:stone"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "878:10": {
+      "preRequisites:11": [
         876,
         676,
         879
@@ -64636,7 +64698,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "878:10": {
+    "879:10": {
       "preRequisites:11": [
         550
       ],
@@ -64703,6 +64765,143 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "880:10": {
+      "preRequisites:11": [
+        404,
+        881
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Bath your§6 Raw Wafer§r in §2Wafer §2Treatment Acid§r to get an §6Acid-Treated Silicon Wafer§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8017,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Acid-Treated Silicon Wafer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 880,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8017,
+              "ForgeCaps:10": {
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                }
+              },
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "881:10": {
+      "preRequisites:11": [
+        199
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You need to make §6Wafer Treatment Acid§r to polish your §6Wafers§r. To make §6Wafer Treatment Acid§r, mix §2§a§d§b§a§5§4§3Hydrofluoric Acid§r and §8§7Hydrochloric Acid§r. If you add §d§5§4§3§f§7Acetic Acid§r, the mixing time will go down from 30 seconds to 10 seconds.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "ForgeCaps:10": {
+              "regeneration:arch:10": {
+                "arch_status:8": "NORMAL_ITEM",
+                "regenAmount:3": 0,
+                "skin:8": "NONE",
+                "skinType:8": "STEVE",
+                "trait:8": "regeneration:boring"
+              }
+            },
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "wafer_treatment_acid"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Wafer Treatment Acid",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 881,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "wafer_treatment_acid"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
@@ -65724,7 +65923,7 @@
           "id:3": 102,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 60,
+          "x:3": 108,
           "y:3": 144
         },
         "7:10": {
@@ -65773,7 +65972,7 @@
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 54,
+          "x:3": 60,
           "y:3": 108
         },
         "14:10": {
@@ -65787,8 +65986,8 @@
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": 138
+          "x:3": 60,
+          "y:3": 140
         },
         "16:10": {
           "id:3": 114,
@@ -65840,699 +66039,706 @@
           "y:3": 318
         },
         "23:10": {
+          "id:3": 123,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 175,
+          "y:3": 150
+        },
+        "24:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 324
         },
-        "24:10": {
+        "25:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 378
         },
-        "25:10": {
+        "26:10": {
           "id:3": 127,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 216
         },
-        "26:10": {
+        "27:10": {
           "id:3": 128,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 318
         },
-        "27:10": {
+        "28:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 282
         },
-        "28:10": {
+        "29:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 192
         },
-        "29:10": {
+        "30:10": {
           "id:3": 158,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 96
         },
-        "30:10": {
+        "31:10": {
           "id:3": 159,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 48
         },
-        "31:10": {
+        "32:10": {
           "id:3": 160,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 132,
+          "x:3": 148,
           "y:3": 108
         },
-        "32:10": {
+        "33:10": {
           "id:3": 161,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 108
         },
-        "33:10": {
+        "34:10": {
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 108
         },
-        "34:10": {
+        "35:10": {
           "id:3": 169,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -306,
           "y:3": 210
         },
-        "35:10": {
+        "36:10": {
           "id:3": 171,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
           "y:3": 78
         },
-        "36:10": {
+        "37:10": {
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 270
         },
-        "37:10": {
+        "38:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 318
         },
-        "38:10": {
+        "39:10": {
           "id:3": 174,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -348,
           "y:3": 402
         },
-        "39:10": {
+        "40:10": {
           "id:3": 175,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 366
         },
-        "40:10": {
+        "41:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 408
         },
-        "41:10": {
+        "42:10": {
           "id:3": 179,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -342,
           "y:3": 366
         },
-        "42:10": {
+        "43:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 456
         },
-        "43:10": {
+        "44:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 504
         },
-        "44:10": {
+        "45:10": {
           "id:3": 183,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 378
         },
-        "45:10": {
+        "46:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 378
         },
-        "46:10": {
+        "47:10": {
           "id:3": 185,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 426
         },
-        "47:10": {
+        "48:10": {
           "id:3": 186,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 114
         },
-        "48:10": {
+        "49:10": {
           "id:3": 188,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 160,
           "y:3": 463
         },
-        "49:10": {
+        "50:10": {
           "id:3": 189,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 475
         },
-        "50:10": {
+        "51:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 475
         },
-        "51:10": {
-          "id:3": 191,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 48
-        },
         "52:10": {
+          "id:3": 191,
+          "sizeX:3": 40,
+          "sizeY:3": 44,
+          "x:3": -212,
+          "y:3": 38
+        },
+        "53:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 48
         },
-        "53:10": {
+        "54:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 48
         },
-        "54:10": {
+        "55:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 24
         },
-        "55:10": {
+        "56:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 72
         },
-        "56:10": {
+        "57:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": -24
         },
-        "57:10": {
+        "58:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 12
         },
-        "58:10": {
+        "59:10": {
           "id:3": 198,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 282
         },
-        "59:10": {
+        "60:10": {
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 50,
           "y:3": 323
         },
-        "60:10": {
+        "61:10": {
           "id:3": 200,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 378
         },
-        "61:10": {
+        "62:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 427
         },
-        "62:10": {
+        "63:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 378
         },
-        "63:10": {
+        "64:10": {
           "id:3": 203,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 162,
           "y:3": 366
         },
-        "64:10": {
+        "65:10": {
           "id:3": 204,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": 114
         },
-        "65:10": {
+        "66:10": {
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 90,
           "y:3": 108
         },
-        "66:10": {
+        "67:10": {
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 432
         },
-        "67:10": {
+        "68:10": {
           "id:3": 222,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 468
         },
-        "68:10": {
+        "69:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": 174
+          "x:3": 60,
+          "y:3": 176
         },
-        "69:10": {
+        "70:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -186,
           "y:3": 270
         },
-        "70:10": {
+        "71:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 426
         },
-        "71:10": {
+        "72:10": {
           "id:3": 239,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 558
         },
-        "72:10": {
+        "73:10": {
           "id:3": 240,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 114,
           "y:3": 558
         },
-        "73:10": {
+        "74:10": {
           "id:3": 241,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 558
         },
-        "74:10": {
+        "75:10": {
           "id:3": 242,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 18,
           "y:3": 546
         },
-        "75:10": {
+        "76:10": {
           "id:3": 243,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 18,
           "y:3": 624
         },
-        "76:10": {
+        "77:10": {
           "id:3": 368,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 468
         },
-        "77:10": {
+        "78:10": {
           "id:3": 369,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -216,
           "y:3": 504
         },
-        "78:10": {
+        "79:10": {
           "id:3": 372,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": 427
         },
-        "79:10": {
+        "80:10": {
           "id:3": 377,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 132,
           "y:3": -102
         },
-        "80:10": {
+        "81:10": {
           "id:3": 378,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": -102
         },
-        "81:10": {
+        "82:10": {
           "id:3": 379,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 60,
           "y:3": -102
         },
-        "82:10": {
+        "83:10": {
           "id:3": 380,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 172,
           "y:3": 52
         },
-        "83:10": {
+        "84:10": {
           "id:3": 381,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
           "y:3": 324
         },
-        "84:10": {
+        "85:10": {
           "id:3": 383,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 229,
           "y:3": 52
         },
-        "85:10": {
+        "86:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 12
         },
-        "86:10": {
+        "87:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": -24
         },
-        "87:10": {
+        "88:10": {
           "id:3": 386,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 12
         },
-        "88:10": {
+        "89:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 12
         },
-        "89:10": {
+        "90:10": {
           "id:3": 388,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 132,
+          "x:3": 120,
           "y:3": 204
         },
-        "90:10": {
+        "91:10": {
           "id:3": 418,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -78,
-          "y:3": -42
+          "x:3": -92,
+          "y:3": -48
         },
-        "91:10": {
+        "92:10": {
           "id:3": 419,
           "sizeX:3": 34,
           "sizeY:3": 34,
-          "x:3": -16,
-          "y:3": -12
+          "x:3": -17,
+          "y:3": -20
         },
-        "92:10": {
+        "93:10": {
           "id:3": 420,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 66,
-          "y:3": -6
+          "x:3": 68,
+          "y:3": -4
         },
-        "93:10": {
+        "94:10": {
           "id:3": 421,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -78,
-          "y:3": 0
+          "x:3": -54,
+          "y:3": -15
         },
-        "94:10": {
+        "95:10": {
           "id:3": 438,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -156,
           "y:3": 510
         },
-        "95:10": {
+        "96:10": {
           "id:3": 439,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": -90
         },
-        "96:10": {
+        "97:10": {
           "id:3": 440,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": -42
+          "y:3": -48
         },
-        "97:10": {
+        "98:10": {
           "id:3": 446,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 594
         },
-        "98:10": {
+        "99:10": {
           "id:3": 447,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 114,
           "y:3": 594
         },
-        "99:10": {
+        "100:10": {
           "id:3": 472,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -222,
           "y:3": 270
         },
-        "100:10": {
+        "101:10": {
           "id:3": 473,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 522
         },
-        "101:10": {
+        "102:10": {
           "id:3": 474,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 426
         },
-        "102:10": {
+        "103:10": {
           "id:3": 500,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 252
         },
-        "103:10": {
+        "104:10": {
           "id:3": 517,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 474
         },
-        "104:10": {
+        "105:10": {
           "id:3": 602,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 324
         },
-        "105:10": {
+        "106:10": {
           "id:3": 603,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": 6
+          "x:3": 120,
+          "y:3": 24
         },
-        "106:10": {
+        "107:10": {
           "id:3": 604,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 252
         },
-        "107:10": {
+        "108:10": {
           "id:3": 610,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -150,
           "y:3": 468
         },
-        "108:10": {
+        "109:10": {
           "id:3": 631,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 48
         },
-        "109:10": {
+        "110:10": {
           "id:3": 638,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -306,
           "y:3": 540
         },
-        "110:10": {
+        "111:10": {
           "id:3": 657,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 168,
           "y:3": 192
         },
-        "111:10": {
+        "112:10": {
           "id:3": 658,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": 78
         },
-        "112:10": {
+        "113:10": {
           "id:3": 660,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 252
         },
-        "113:10": {
+        "114:10": {
           "id:3": 661,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 222,
           "y:3": 462
         },
-        "114:10": {
+        "115:10": {
           "id:3": 666,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
           "y:3": 42
         },
-        "115:10": {
+        "116:10": {
           "id:3": 667,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": 42
         },
-        "116:10": {
+        "117:10": {
           "id:3": 682,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -90
         },
-        "117:10": {
+        "118:10": {
           "id:3": 684,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 558
         },
-        "118:10": {
+        "119:10": {
           "id:3": 712,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 96
         },
-        "119:10": {
+        "120:10": {
           "id:3": 721,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 96
         },
-        "120:10": {
+        "121:10": {
           "id:3": 725,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": -24
         },
-        "121:10": {
+        "122:10": {
           "id:3": 740,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 468
         },
-        "122:10": {
+        "123:10": {
           "id:3": 742,
           "sizeX:3": 36,
           "sizeY:3": 36,
@@ -66683,10 +66889,10 @@
         },
         "16:10": {
           "id:3": 400,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -30,
-          "y:3": 72
+          "sizeX:3": 44,
+          "sizeY:3": 44,
+          "x:3": -36,
+          "y:3": 60
         },
         "17:10": {
           "id:3": 401,
@@ -66706,22 +66912,22 @@
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 186,
+          "x:3": 176,
           "y:3": 72
         },
         "20:10": {
           "id:3": 405,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 186,
-          "y:3": 42
+          "x:3": 176,
+          "y:3": 44
         },
         "21:10": {
           "id:3": 406,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -132,
-          "y:3": 66
+          "x:3": -141,
+          "y:3": 64
         },
         "22:10": {
           "id:3": 410,
@@ -66783,8 +66989,8 @@
           "id:3": 443,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 270,
-          "y:3": 12
+          "x:3": 244,
+          "y:3": 10
         },
         "31:10": {
           "id:3": 450,
@@ -66804,42 +67010,42 @@
           "id:3": 452,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 234,
+          "x:3": 276,
           "y:3": 72
         },
         "34:10": {
           "id:3": 453,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 234,
-          "y:3": 42
+          "x:3": 275,
+          "y:3": 40
         },
         "35:10": {
           "id:3": 454,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 270,
-          "y:3": 42
+          "x:3": 307,
+          "y:3": 12
         },
         "36:10": {
           "id:3": 455,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 234,
-          "y:3": 12
+          "x:3": 275,
+          "y:3": 11
         },
         "37:10": {
           "id:3": 456,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 234,
+          "x:3": 248,
           "y:3": 132
         },
         "38:10": {
           "id:3": 457,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 186,
+          "x:3": 176,
           "y:3": 132
         },
         "39:10": {
@@ -66994,7 +67200,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
-          "y:3": 162
+          "y:3": 156
         },
         "61:10": {
           "id:3": 484,
@@ -67008,7 +67214,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 612,
-          "y:3": 162
+          "y:3": 156
         },
         "63:10": {
           "id:3": 486,
@@ -67112,8 +67318,8 @@
           "id:3": 500,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 42,
-          "y:3": -216
+          "x:3": -7,
+          "y:3": -215
         },
         "78:10": {
           "id:3": 501,
@@ -67134,14 +67340,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 42,
-          "y:3": -258
+          "y:3": -216
         },
         "81:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 42,
-          "y:3": -300
+          "y:3": -263
         },
         "82:10": {
           "id:3": 505,
@@ -67260,14 +67466,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
-          "y:3": 42
+          "y:3": 44
         },
         "99:10": {
           "id:3": 593,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
-          "y:3": 72
+          "y:3": 70
         },
         "100:10": {
           "id:3": 594,
@@ -67343,7 +67549,7 @@
           "id:3": 640,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 414,
+          "x:3": 510,
           "y:3": 24
         },
         "111:10": {
@@ -67358,7 +67564,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
-          "y:3": 210
+          "y:3": 192
         },
         "113:10": {
           "id:3": 653,
@@ -67399,7 +67605,7 @@
           "id:3": 671,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 186,
+          "x:3": 176,
           "y:3": 12
         },
         "119:10": {
@@ -67511,15 +67717,15 @@
           "id:3": 864,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 414,
-          "y:3": 156
+          "x:3": 396,
+          "y:3": 164
         },
         "135:10": {
           "id:3": 865,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 414,
-          "y:3": 114
+          "x:3": 396,
+          "y:3": 112
         },
         "136:10": {
           "id:3": 866,
@@ -67553,7 +67759,7 @@
           "id:3": 870,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 306,
+          "x:3": 342,
           "y:3": 12
         },
         "141:10": {
@@ -67561,7 +67767,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 306,
-          "y:3": 42
+          "y:3": 40
         },
         "142:10": {
           "id:3": 872,
@@ -67574,8 +67780,29 @@
           "id:3": 873,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 342,
+          "x:3": 396,
           "y:3": 12
+        },
+        "144:10": {
+          "id:3": 877,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 247,
+          "y:3": 72
+        },
+        "145:10": {
+          "id:3": 880,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 213,
+          "y:3": 72
+        },
+        "146:10": {
+          "id:3": 881,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 213,
+          "y:3": 43
         }
       }
     },
@@ -72396,7 +72623,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
