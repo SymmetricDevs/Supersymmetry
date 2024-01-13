@@ -892,6 +892,16 @@ for (i = 1; i <= 8; i++) {
 	])
 }
 
+// Textile Spinner
+
+for (i = 1; i <= 8; i++) {
+	crafting.addShaped("gregtech:spinning." + Globals.voltageTiers[i], metaitem('polishing_machine.'  + Globals.voltageTiers[i]), [
+			[motor[i], tieredCables[i], motor[i]],
+			[motor[i], hulls[i], motor[i]],
+			[circuits[i], tieredCables[i], circuits[i]]
+	])
+}
+
 // Bath Condenser
 
 crafting.addShaped("gregtech:bath_condenser", metaitem('bath_condenser.lv'), [
