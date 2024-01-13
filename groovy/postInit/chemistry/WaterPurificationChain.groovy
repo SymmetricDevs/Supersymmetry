@@ -142,7 +142,7 @@ BCR.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 10)
         .fluidOutputs(fluid('chlorinated_brine') * 50)
         .duration(1)
-        .EUt(480)
+        .EUt(120)
         .buildAndRegister()
 
 VACUUM_CHAMBER.recipeBuilder()
