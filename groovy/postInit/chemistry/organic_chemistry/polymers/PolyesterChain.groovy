@@ -28,7 +28,7 @@ POLYMERIZATION.recipeBuilder()
     .fluidInputs(fluid('dimethyl_terephthalate') * 3456)
     .outputs(metaitem('dustPolyethyleneTerephthalate') * 2)
     .fluidOutputs(fluid('methanol') * 2000)
-    .EUt(Globals.voltAmps[3])
+    .EUt(Globals.voltAmps[2])
     .duration(80)
     .buildAndRegister()
 
