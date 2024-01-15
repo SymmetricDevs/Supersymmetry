@@ -8659,7 +8659,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Sintering§r§r is the process of compacting and forming a solid mass of material by pressure or §cheat §rwithout melting it to the point of liquefaction. \n\nA §6Sintering Oven §ris required for making things like §6cement§r, or §7§6electrodes§r.\n\nA Sintering Oven requires:.\n§61x Sintering Oven Controller\n1x Input Bus\n1x Input Hatch\n1x Output Bus\n1x Output Hatch\n1x Energy Hatch (any tier)\n1x Maintenance Hatch\n72x Sintering Brick Block\n43x Basic Structural Casing\n36x Steel Frame \n\n§rCheck JEI for info on how to build the structure.",
+          "desc:8": "§6Sintering§r§r is the process of compacting and forming a solid mass of material by pressure or §cheat §rwithout melting it to the point of liquefaction. \n\nA §6Sintering Oven §ris required for making things like §6cement§r, or §7§6electrodes§r.\n\nA Sintering Oven requires:.\n§61x Sintering Oven Controller\n1x Input Bus\n1x Input Hatch\n1x Output Bus\n1x Output Hatch\n1x Energy Hatch (any tier)\n1x Maintenance Hatch\n72x Sintering Brick Block\n43x Basic Structural Casing\n36x Steel Frame \n\n§N§fNote that the output bus and the input hatch need to be on §nthe front side of the oven§n§r, and the input bus and output bus have to be placed on §nthe back side§r of it. As usual, JEI provides a reference structure.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40643,32 +40643,27 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
-            "ForgeCaps:10": {
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              }
-            },
             "OreDict:8": "",
-            "id:8": "openglasses:openglasses",
+            "id:8": "betterquesting:placeholder",
             "tag:10": {
-              "Energy:3": 0,
-              "EnergyCapacity:3": 50000,
-              "UUIDLeast:4": -8008510319657539887,
-              "UUIDMost:4": -3837972173196932816,
-              "radarRange:3": 0,
-              "regeneration:arch:10": {
-                "arch_status:8": "NORMAL_ITEM",
-                "regenAmount:3": 0,
-                "skin:8": "NONE",
-                "skinType:8": "STEVE",
-                "trait:8": "regeneration:boring"
-              },
-              "upkeepCost:3": 1,
-              "widgetLimit:3": 9
+              "orig_id:8": "openglasses:openglasses",
+              "orig_meta:3": 0,
+              "orig_tag:10": {
+                "Energy:3": 0,
+                "EnergyCapacity:3": 50000,
+                "UUIDLeast:4": -8008510319657539887,
+                "UUIDMost:4": -3837972173196932816,
+                "radarRange:3": 0,
+                "regeneration:arch:10": {
+                  "arch_status:8": "NORMAL_ITEM",
+                  "regenAmount:3": 0,
+                  "skin:8": "NONE",
+                  "skinType:8": "STEVE",
+                  "trait:8": "regeneration:boring"
+                },
+                "upkeepCost:3": 1,
+                "widgetLimit:3": 9
+              }
             }
           },
           "ignoresview:1": 0,
@@ -40701,53 +40696,47 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "openglasses:openglassesterminal"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "openglasses:openglassesterminal",
+                "orig_meta:3": 0
+              }
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
-              "id:8": "openglasses:openglasses",
+              "id:8": "betterquesting:placeholder",
               "tag:10": {
-                "Energy:3": 0,
-                "EnergyCapacity:3": 50000,
-                "UUIDLeast:4": -8008510319657539887,
-                "UUIDMost:4": -3837972173196932816,
-                "radarRange:3": 0,
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                },
-                "upkeepCost:3": 1,
-                "widgetLimit:3": 9
+                "orig_id:8": "openglasses:openglasses",
+                "orig_meta:3": 0,
+                "orig_tag:10": {
+                  "Energy:3": 0,
+                  "EnergyCapacity:3": 50000,
+                  "UUIDLeast:4": -8008510319657539887,
+                  "UUIDMost:4": -3837972173196932816,
+                  "radarRange:3": 0,
+                  "regeneration:arch:10": {
+                    "arch_status:8": "NORMAL_ITEM",
+                    "regenAmount:3": 0,
+                    "skin:8": "NONE",
+                    "skinType:8": "STEVE",
+                    "trait:8": "regeneration:boring"
+                  },
+                  "upkeepCost:3": 1,
+                  "widgetLimit:3": 9
+                }
               }
             },
             "2:10": {
               "Count:3": 1,
               "Damage:2": 0,
-              "ForgeCaps:10": {
-                "regeneration:arch:10": {
-                  "arch_status:8": "NORMAL_ITEM",
-                  "regenAmount:3": 0,
-                  "skin:8": "NONE",
-                  "skinType:8": "STEVE",
-                  "trait:8": "regeneration:boring"
-                }
-              },
               "OreDict:8": "",
-              "id:8": "openglasses:openglasses_card"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "openglasses:openglasses_card",
+                "orig_meta:3": 0
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
