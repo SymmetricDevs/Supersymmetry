@@ -305,6 +305,7 @@ def alluvial_tier_1 = [
 
 def alluvial_tier_2 = [
     'gregtech:ore_cassiterite_0' : 10000,
+    'susy:resource_block:10' : 100,
     'susy:resource_block:11' : 10000
 ];
 
