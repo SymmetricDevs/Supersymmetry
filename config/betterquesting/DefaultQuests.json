@@ -21967,7 +21967,8 @@
             "id:8": "opensecurity:rfid_card"
           },
           "ignoresview:1": 0,
-          "name:8": "susy.quest.db.557.title"
+          "name:8": "susy.quest.db.557.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 557,
@@ -31797,7 +31798,8 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.726.title",
-          "tasklogic:8": "OR"
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 726,
@@ -42193,7 +42195,8 @@
               }
             }
           },
-          "name:8": "susy.quest.ql.22.title"
+          "name:8": "susy.quest.ql.22.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "quests:9": {
