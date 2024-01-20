@@ -32,7 +32,7 @@ crafting.addShaped('resistor_wire_fine_anthracite', metaitem('component.resistor
     [metaitem('rubber_drop'),item('minecraft:paper'),metaitem('rubber_drop')],
     [ore('wireFineCopper'),ore('dustAnthracite'), ore('wireFineCopper')],
     [null,item('minecraft:paper'),null]])
-	
+
 crafting.addShaped('resistor_wire_coke', metaitem('component.resistor') * 2, [
     [metaitem('rubber_drop'),item('minecraft:paper'),metaitem('rubber_drop')],
     [ore('wireGtSingleCopper'),ore('dustCoke'), ore('wireGtSingleCopper')],

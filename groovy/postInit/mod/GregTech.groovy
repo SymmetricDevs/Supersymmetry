@@ -12,6 +12,8 @@ import supersymmetry.api.capability.impl.PseudoMultiRecipeLogic;
 import supersymmetry.api.recipes.builders.PseudoMultiRecipeBuilder;
 import net.minecraft.init.Blocks;
 
+import static globals.Globals.*
+
 println("Running GregTech.groovy...")
 
 //REMOVALS
@@ -1002,29 +1004,31 @@ mods.gregtech.assembler.recipeBuilder()
         .EUt(16)
         .buildAndRegister();
 
-mods.gregtech.circuit_assembler.recipeBuilder()
-        .inputs(metaitem('circuit_board.plastic'))
-        .inputs(metaitem('plate.central_processing_unit'))
-        .inputs(ore('componentResistor') * 2)
-        .inputs(ore('componentCapacitor') * 2)
-        .inputs(ore('componentTransistor') * 2)
-        .inputs(ore('wireFineCopper') * 2)
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(metaitem('circuit.microprocessor') * 5)
-        .duration(200)
-        .EUt(60)
-        .buildAndRegister();
+Globals.solders.each { key, val ->
+    recipemap('circuit_assembler').recipeBuilder()
+            .inputs(metaitem('circuit_board.plastic'))
+            .inputs(metaitem('plate.central_processing_unit'))
+            .inputs(ore('componentResistor') * 2)
+            .inputs(ore('componentCapacitor') * 2)
+            .inputs(ore('componentTransistor') * 2)
+            .inputs(ore('wireFineCopper') * 2)
+            .fluidInputs(fluid(key) * val)
+            .outputs(metaitem('circuit.microprocessor') * 5)
+            .duration(200)
+            .EUt(60)
+            .buildAndRegister();
 
-mods.gregtech.circuit_assembler.recipeBuilder()
-        .inputs(metaitem('circuit_board.plastic'))
-        .inputs(metaitem('plate.system_on_chip'))
-        .inputs(ore('wireFineCopper') * 2)
-        .inputs(ore('boltTin') * 2)
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(metaitem('circuit.microprocessor') * 10)
-        .duration(50)
-        .EUt(600)
-        .buildAndRegister();
+    recipemap('circuit_assembler').recipeBuilder()
+            .inputs(metaitem('circuit_board.plastic'))
+            .inputs(metaitem('plate.system_on_chip'))
+            .inputs(ore('wireFineCopper') * 2)
+            .inputs(ore('boltTin') * 2)
+            .fluidInputs(fluid(key) * val)
+            .outputs(metaitem('circuit.microprocessor') * 10)
+            .duration(50)
+            .EUt(600)
+            .buildAndRegister();
+}
 
 mods.gregtech.centrifuge.recipeBuilder()
 		.fluidInputs(fluid('gtfo_soybean_oil') * 1000)
