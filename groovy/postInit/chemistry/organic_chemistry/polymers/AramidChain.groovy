@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 BR = recipemap('batch_reactor')
 LCR = recipemap('large_chemical_reactor')

@@ -1,4 +1,5 @@
-import classes.*;
+import classes.*
+import globals.Globals
 
 println("Running OreSorting.groovy...")
 

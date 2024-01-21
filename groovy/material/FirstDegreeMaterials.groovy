@@ -1,6 +1,7 @@
 package material;
 
 import static material.SuSyMaterials.*;
+import static globals.Globals.*;
 
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
@@ -18,6 +19,7 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 import static gregtech.api.fluids.FluidConstants.*;
+
 
 public class FirstDegreeMaterials {
         
@@ -40,24 +42,7 @@ public class FirstDegreeMaterials {
         
                 return builder.build()
         }
-        
-    	private static int determineTemperatureLiquid(Material material) {
-    		if (material.getProperty(PropertyKey.FLUID) != null && material.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) != null) {
-    			def current = material.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID).temperature
-  			if (current != -1) {
-    				return current
-    			}
-    		}
-            	BlastProperty property = material.getProperty(PropertyKey.BLAST);
-            	if (property == null) {
-                	if (material.hasProperty(PropertyKey.DUST)) {
-                   		return SOLID_LIQUID_TEMPERATURE;
-                	}
-                	return ROOM_TEMPERATURE;
-            	} else {
-                	return property.getBlastTemperature() + LIQUID_TEMPERATURE_OFFSET
-            	}
-    }
+
 
 
     public static void register() {
@@ -2141,7 +2126,23 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        //FREE IDs: 8419-8421
+        Bromooctane = new Material.Builder(8419, SuSyUtility.susyId('bromooctane'))
+                .liquid()
+                .components(Carbon, 8, Hydrogen, 17, Bromine, 1)
+                .colorAverage()
+                .build()
+
+        LithiumDioctylcopper = new Material.Builder(8420, SuSyUtility.susyId('lithium_dioctylcopper'))
+                .liquid()
+                .components(Carbon, 16, Hydrogen, 34, Copper, 1, Lithium, 1)
+                .colorAverage()
+                .build()
+
+        DecanoylChloride = new Material.Builder(8421, SuSyUtility.susyId('decanoyl_chloride'))
+                .liquid()
+                .components(Carbon, 10, Hydrogen, 19, Chlorine, 1, Oxygen, 1)
+                .colorAverage()
+                .build()
 
         SodiumCyanoborohydride = new Material.Builder(8422, SuSyUtility.susyId('sodium_cyanoborohydride'))
                 .dust()

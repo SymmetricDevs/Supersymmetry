@@ -1714,6 +1714,7 @@ class SuSyMaterials {
         public static Material PartiallyLiquefiedArgon;
         public static Material SupercriticalCarbonDioxide;
 
+
         public static void init() {
                 ElementMaterials.register();
                 IsotopeMaterials.register();
@@ -1724,5 +1725,6 @@ class SuSyMaterials {
                 OrganicChemistryMaterials.register();
                 PetrochemistryMaterials.register();
                 ThirdDegreeMaterials.register();
+                ThermodynamicsMaterials.register();
         }
 }

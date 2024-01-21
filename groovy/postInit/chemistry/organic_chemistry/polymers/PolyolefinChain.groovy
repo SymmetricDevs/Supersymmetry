@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 POLYMERIZATION = recipemap('polymerization_tank')
 EXTRUDER = recipemap('extruder')

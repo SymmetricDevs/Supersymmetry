@@ -71,6 +71,7 @@ public class OrganicChemistryMaterials {
 
         Polystyrene = new Material.Builder(15008, SuSyUtility.susyId('polystyrene'))
                 .polymer(1)
+                .liquid(new FluidBuilder().temperature(513))
                 .components(Carbon, 8, Hydrogen, 8)
                 .color(0xa2a389)
                 .build();
@@ -831,6 +832,7 @@ public class OrganicChemistryMaterials {
 
         PolystyreneSulfonate = new Material.Builder(15146, SuSyUtility.susyId('polystyrene_sulfonate'))
                 .polymer(1)
+                .liquid()
                 .color(0x8f795e)
                 .build()
                 .setFormula('(CH2CHC6H4SO3H)', true)

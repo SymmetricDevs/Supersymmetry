@@ -1,6 +1,6 @@
 println("Running ImmersiveRailroading.groovy...")
 
-import static globals.Globals.*
+import globals.Globals
 import supersymmetry.api.recipes.SuSyRecipeMaps;
 import cam72cam.immersiverailroading.IRItems;
 import cam72cam.mod.serialization.TagCompound;

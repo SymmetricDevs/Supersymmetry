@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;

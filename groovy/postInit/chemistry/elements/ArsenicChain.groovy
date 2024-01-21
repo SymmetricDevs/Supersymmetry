@@ -5,7 +5,7 @@ import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.ore.OrePrefix;
 
 import static gregtech.api.unification.material.Materials.*;
-import static globals.Globals.*
+import globals.Globals
 import static RegisterOres;
 import static RegisterSolids;
 

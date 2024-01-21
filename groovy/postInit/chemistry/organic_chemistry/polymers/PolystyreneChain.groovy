@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 DISTILLATION_TOWER = recipemap('distillation_tower')
 DISTILLERY = recipemap('distillery')

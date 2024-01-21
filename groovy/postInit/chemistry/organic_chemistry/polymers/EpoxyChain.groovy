@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 ION_EXCHANGE = recipemap('ion_exchange_column')
 FLUID_EXTRACTOR = recipemap('extractor')

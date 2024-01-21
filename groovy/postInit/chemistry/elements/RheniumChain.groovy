@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 ELECTROSTATIC_SEPARATOR = recipemap('electrostatic_separator')
 BR = recipemap('batch_reactor')

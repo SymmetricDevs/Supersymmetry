@@ -1,3 +1,5 @@
+import globals.Globals
+
 CSTR = recipemap('continuous_stirred_tank_reactor')
 TBR = recipemap('trickle_bed_reactor')
 FBR = recipemap('fixed_bed_reactor')
