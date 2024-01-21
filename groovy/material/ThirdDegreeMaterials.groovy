@@ -158,7 +158,7 @@ public class ThirdDegreeMaterials {
                 .build()
 
         ZirconiumTetrachlorideTetrahydrofuranComplex = new Material.Builder(24023, SuSyUtility.susyId('zirconium_tetrachloride_tetrahydrofuran_complex'))
-                .liquid()
+                .dust()
                 .components(ZirconiumTetrachloride, 1, Tetrahydrofuran, 2)
                 .colorAverage()
                 .build();

@@ -49,7 +49,7 @@ class ChangeFlags {
                 property.getStorage().enqueueRegistration(key, new FluidBuilder().temperature(temp))
             }
         }
-                if (mat.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) == null) {
+        if (mat.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) == null) {
             setupFluidType(mat, FluidStorageKeys.LIQUID, temp)
         }
 	}
@@ -62,7 +62,7 @@ class ChangeFlags {
             def property = mat.getProperty(PropertyKey.FLUID)
 		    property.getStorage().enqueueRegistration(key, new FluidBuilder())
         }
-                if (mat.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) == null) {
+        if (mat.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) == null) {
             setupFluidType(mat, FluidStorageKeys.LIQUID)
         }
 	}
