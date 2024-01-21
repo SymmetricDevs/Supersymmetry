@@ -31,10 +31,9 @@ carbons = new ItemStack[]{
         metaitem('dustCoal'),
         metaitem('dustCharcoal'),
         metaitem('dustCarbon'),
-        metaitem('dustCoal'),
         metaitem('dustHighPurityCarbon'),
         metaitem('dustAnthracite'),
-        metaitem('dustCoal')
+        metaitem('dustCoke')
 }
 
 mods.gregtech.assembler.recipeBuilder()
