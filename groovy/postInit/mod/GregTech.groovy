@@ -54,6 +54,38 @@ mods.gregtech.blender.removeByInput(480, [metaitem('dustCollagen') * 4], [fluid(
 mods.gregtech.centrifuge.removeByInput(480, null, [fluid('gelatin_mixture') * 6000])
 // Reservoir Hatch * 1
 mods.gregtech.assembler.removeByInput(1920, [metaitem('cover.infinite_water'), metaitem('fluid_hatch.import.ev'), metaitem('electric.pump.ev')], null)
+// White Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool') * 3, metaitem('plateWood') * 3], null)
+// Orange Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 1) * 3, metaitem('plateWood') * 3], null)
+// Magenta Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 2) * 3, metaitem('plateWood') * 3], null)
+// Light Blue Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 3) * 3, metaitem('plateWood') * 3], null)
+// Yellow Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 4) * 3, metaitem('plateWood') * 3], null)
+// Lime Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 5) * 3, metaitem('plateWood') * 3], null)
+// Pink Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 6) * 3, metaitem('plateWood') * 3], null)
+// Gray Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 7) * 3, metaitem('plateWood') * 3], null)
+// Light Gray Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 8) * 3, metaitem('plateWood') * 3], null)
+// Cyan Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 9) * 3, metaitem('plateWood') * 3], null)
+// Purple Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 10) * 3, metaitem('plateWood') * 3], null)
+// Blue Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 11) * 3, metaitem('plateWood') * 3], null)
+// Brown Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 12) * 3, metaitem('plateWood') * 3], null)
+// Green Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 13) * 3, metaitem('plateWood') * 3], null)
+// Red Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 14) * 3, metaitem('plateWood') * 3], null)
+// Black Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 15) * 3, metaitem('plateWood') * 3], null)
 
 def name_removals = [
 	'gregtech:cover_fluid_voiding',
