@@ -446,7 +446,7 @@ public class SecondDegreeMaterials {
                 .color(0x70cc6e)
                 .build();
 
-        //FREE IDs: 13072-13074
+        // IDs 13072-13074 are not free.
 
         DilutedAmmoniumSulfateSolution = new Material.Builder(13075, SuSyUtility.susyId('diluted_ammonium_sulfate_solution'))
                 .liquid()
@@ -641,7 +641,7 @@ public class SecondDegreeMaterials {
 
         MixedCyanideSolution.setFormula("(NaCN)2(HCN)2(H2O)", true)
 
-        ChlorinatedBeryl = new Material.Builder(13106, SuSyUtility.susyId('chlorinated_beryl'))
+        ChlorinatedBeryl = new Material.Builder(24027, SuSyUtility.susyId('chlorinated_beryl'))
                 .gas(new FluidBuilder().temperature(1100))
                 .components(BerylliumChloride, 3, AluminiumChloride, 2, SiliconTetrachloride, 6, CarbonMonoxide, 18)
                 .colorAverage()

@@ -701,7 +701,8 @@ public class OrganicChemistryMaterials {
                 .build()
                 .setFormula('(C15H10N2O2)(C2H6O2)', true);
 
-        DiethylEther = new Material.Builder(15125, SuSyUtility.susyId('diethyl_ether'))
+        // Free ID: 15125
+        DiethylEther = new Material.Builder(8424, SuSyUtility.susyId('diethyl_ether'))
                 .liquid()
                 .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
                 .color(0x2177ff)
@@ -2406,7 +2407,7 @@ public class OrganicChemistryMaterials {
 
         AbsorbedMethacrolein.setFormula("(C4H6O)(CH3COOH)4(H2O)5", true)
 
-        Tetraethyllead = new Material.Builder(15391, SuSyUtility.susyId('tetraethyllead'))
+        Tetraethyllead = new Material.Builder(8480, SuSyUtility.susyId('tetraethyllead'))
                 .liquid()
                 .components(Carbon, 8, Hydrogen, 20, Lead, 1)
                 .colorAverage()
@@ -2414,7 +2415,7 @@ public class OrganicChemistryMaterials {
 
         Tetraethyllead.setFormula("Pb(CH3CH2)4", true)
 
-        TertButylHydroperoxide = new Material.Builder(15392, SuSyUtility.susyId('tert_butyl_hydroperoxide'))
+        TertButylHydroperoxide = new Material.Builder(8481, SuSyUtility.susyId('tert_butyl_hydroperoxide'))
                 .liquid()
                 .components(Carbon, 4, Hydrogen, 10, Oxygen, 2)
                 .colorAverage()
@@ -2422,7 +2423,7 @@ public class OrganicChemistryMaterials {
 
         TertButylHydroperoxide.setFormula("(CH3)3COOH", true)
 
-        DiTertButylPeroxide = new Material.Builder(15393, SuSyUtility.susyId('di_tert_butyl_peroxide'))
+        DiTertButylPeroxide = new Material.Builder(8482, SuSyUtility.susyId('di_tert_butyl_peroxide'))
                 .liquid()
                 .components(Carbon, 8, Hydrogen, 18, Oxygen, 2)
                 .colorAverage()
@@ -2430,25 +2431,25 @@ public class OrganicChemistryMaterials {
 
         DiTertButylPeroxide.setFormula("(CH3)3COOC(CH3)3", true)
 
-        TwoEthylhexylNitrate = new Material.Builder(15394, SuSyUtility.susyId('two_ethylhexyl_nitrate'))
+        TwoEthylhexylNitrate = new Material.Builder(8483, SuSyUtility.susyId('two_ethylhexyl_nitrate'))
                 .liquid()
                 .components(Carbon, 8, Hydrogen, 17, Nitrogen, 1, Oxygen, 3)
                 .colorAverage()
                 .build();
 
-        Nitromethane = new Material.Builder(15395, SuSyUtility.susyId('nitromethane'))
+        Nitromethane = new Material.Builder(8484, SuSyUtility.susyId('nitromethane'))
                 .liquid()
                 .components(Carbon, 1, Hydrogen, 3, Nitrogen, 1, Oxygen, 2)
                 .colorAverage()
                 .build();
 
-        SodiumBisphenolateSolution = new Material.Builder(15396, SuSyUtility.susyId('sodium_bisphenolate_solution'))
+        SodiumBisphenolateSolution = new Material.Builder(8497, SuSyUtility.susyId('sodium_bisphenolate_solution'))
                 .liquid()
                 .components(SodiumHydroxide, 2, BisphenolA, 1, Water, 2)
                 .colorAverage()
                 .build();
 
-        Polycarbonate = new Material.Builder(15397, SuSyUtility.susyId('polycarbonate'))
+        Polycarbonate = new Material.Builder(8498, SuSyUtility.susyId('polycarbonate'))
                 .polymer()
                 .flags(GENERATE_PLATE)
                 .components(Carbon, 16, Hydrogen, 14, Oxygen, 3)
@@ -2458,25 +2459,25 @@ public class OrganicChemistryMaterials {
 
         Polycarbonate.setFormula("C16H14O3", true)
 
-        Trichlorofluoromethane = new Material.Builder(15398, SuSyUtility.susyId('trichlorofluoromethane'))
+        Trichlorofluoromethane = new Material.Builder(8513, SuSyUtility.susyId('trichlorofluoromethane'))
                 .gas()
                 .components(Carbon, 1, Chlorine, 3, Fluorine, 1)
                 .color(0xeb6a6a)
                 .build();
 
-        Dichlorodifluoromethane = new Material.Builder(15399, SuSyUtility.susyId('dichlorodifluoromethane'))
+        Dichlorodifluoromethane = new Material.Builder(8514, SuSyUtility.susyId('dichlorodifluoromethane'))
                 .gas()
                 .components(Carbon, 1, Chlorine, 2, Fluorine, 2)
                 .color(0xd14d4d)
                 .build();
 
-        Chlorotrifluoromethane = new Material.Builder(15400, SuSyUtility.susyId('chlorotrifluoromethane'))
+        Chlorotrifluoromethane = new Material.Builder(8515, SuSyUtility.susyId('chlorotrifluoromethane'))
                 .gas()
                 .components(Carbon, 1, Chlorine, 1, Fluorine, 3)
                 .color(0xbf3232)
                 .build();
 
-        Chlorodifluoromethane = new Material.Builder(15401, SuSyUtility.susyId('chlorodifluoromethane'))
+        Chlorodifluoromethane = new Material.Builder(8516, SuSyUtility.susyId('chlorodifluoromethane'))
                 .gas()
                 .components(Carbon, 1, Hydrogen, 1, Chlorine, 1, Fluorine, 2)
                 .color(0x8c5a99)
