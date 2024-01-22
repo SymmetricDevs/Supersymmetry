@@ -830,7 +830,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        Tetrabromomethane = new Material.Builder(8217, SuSyUtility.susyId('tetrabromomethane'))
+        CarbonTetrabromide = new Material.Builder(8217, SuSyUtility.susyId('carbon_tetrabromide'))
                 .dust()
                 .components(Carbon, 1, Bromine, 4)
                 .colorAverage()

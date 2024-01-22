@@ -667,7 +667,7 @@ class SuSyMaterials {
         public static Material Bromobenzene;
         public static Material Triethylaluminium;
         public static Material HydrogenPeroxide;
-        public static Material Tetrabromomethane;
+        public static Material CarbonTetrabromide;
         public static Material Bromomethane;
         public static Material VeryDilutedSulfuricAcid;
         public static Material SulfurDichloride;
