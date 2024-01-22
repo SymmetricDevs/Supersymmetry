@@ -1289,6 +1289,23 @@ mods.gregtech.arc_furnace.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+// Tapes
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(ore('foilPlastic') * 4)
+        .fluidInputs(fluid('glue') * 250)
+        .outputs(metaitem('basic_tape') * 8)
+        .duration(100)
+        .EUt(7)
+        .buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(ore('foilPolypropylene') * 4)
+        .fluidInputs(fluid('glue') * 250)
+        .outputs(metaitem('basic_tape') * 16)
+        .duration(100)
+        .EUt(7)
+        .buildAndRegister()
+
 // Hatches
 
 // ULV Input Bus * 1
