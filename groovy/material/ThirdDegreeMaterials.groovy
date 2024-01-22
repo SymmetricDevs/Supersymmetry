@@ -79,8 +79,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 24010
-        DilutedDiTertButylPeroxide = new Material.Builder(13072, SuSyUtility.susyId('diluted_di_tert_butyl_peroxide'))
+        DilutedDiTertButylPeroxide = new Material.Builder(24010, SuSyUtility.susyId('diluted_di_tert_butyl_peroxide'))
                 .liquid()
                 .components(DiTertButylPeroxide, 1, Water, 1)
                 .colorAverage()
@@ -182,8 +181,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // ID 24027 is not free.
-        DilutedTwoEthylhexylNitrate = new Material.Builder(13073, SuSyUtility.susyId('diluted_two_ethylhexyl_nitrate'))
+        DilutedTwoEthylhexylNitrate = new Material.Builder(24027, SuSyUtility.susyId('diluted_two_ethylhexyl_nitrate'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(TwoEthylhexylNitrate, 1, Water, 1, SulfuricAcid, 1)
                 .colorAverage()
@@ -474,8 +472,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 24074
-        DilutedNitromethane = new Material.Builder(13074, SuSyUtility.susyId('diluted_nitromethane'))
+        DilutedNitromethane = new Material.Builder(24074, SuSyUtility.susyId('diluted_nitromethane'))
                 .liquid()
                 .components(Nitromethane, 3, Water, 1)
                 .colorAverage()

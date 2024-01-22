@@ -2158,8 +2158,6 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        // 8424 is not free.
-
         Oleum = new Material.Builder(8425, SuSyUtility.susyId('oleum'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(SulfuricAcid, 10, SulfurTrioxide, 1)
@@ -2520,8 +2518,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        // IDs 8480-8484 are not free.
-        // FREE ID: 8485
+        //FREE IDs: 8480-8485
 
         UltramaficTailingSlurry = new Material.Builder(8486, SuSyUtility.susyId('ultramafic_tailing_slurry'))
                 .liquid()
@@ -2597,8 +2594,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE IDs: 8497
-        // ID 8498 is not
+        //FREE IDs: 8497-8498
 
         SodiumNitrite = new Material.Builder(8499, SuSyUtility.susyId('sodium_nitrite'))
                 .dust().liquid(new FluidBuilder().temperature(544))
@@ -2694,7 +2690,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        // IDs 8513-8516 are not free.
+        //FREE IDs: 8513-8516
 
         MolybdenumTrisulfide = new Material.Builder(8517, SuSyUtility.susyId('molybdenum_trisulfide'))
                 .dust()
