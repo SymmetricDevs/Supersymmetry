@@ -52,6 +52,8 @@ mods.gregtech.mixer.removeByInput(480, [metaitem('dustCollagen') * 4], [fluid('p
 mods.gregtech.blender.removeByInput(480, [metaitem('dustCollagen') * 4], [fluid('phosphoric_acid') * 1000, fluid('water') * 3000])
 // Phosphorus Dust * 1
 mods.gregtech.centrifuge.removeByInput(480, null, [fluid('gelatin_mixture') * 6000])
+// Reservoir Hatch * 1
+mods.gregtech.assembler.removeByInput(1920, [metaitem('cover.infinite_water'), metaitem('fluid_hatch.import.ev'), metaitem('electric.pump.ev')], null)
 
 def name_removals = [
 	'gregtech:cover_fluid_voiding',
