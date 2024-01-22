@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 FF = recipemap('froth_flotation')
 GRAVITY_SEPARATOR = recipemap('gravity_separator')

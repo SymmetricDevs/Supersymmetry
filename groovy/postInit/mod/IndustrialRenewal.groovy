@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 def name_removals = [
 	"industrialrenewal:prospecting_pan",

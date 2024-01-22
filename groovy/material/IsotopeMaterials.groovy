@@ -4,7 +4,6 @@ import static material.SuSyMaterials.*;
 
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
-import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.properties.*
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*;

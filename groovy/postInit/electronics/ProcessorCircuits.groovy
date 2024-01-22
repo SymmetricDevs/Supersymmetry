@@ -1,5 +1,5 @@
 import classes.*;
-import static globals.Globals.*
+import globals.Globals
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
 // Workstation * 1

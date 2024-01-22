@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 DISTILLATION_TOWER = recipemap('distillation_tower')
 DISTILLERY = recipemap('distillery')
@@ -32,22 +32,23 @@ DISTILLATION_TOWER.recipeBuilder()
 MIXER.recipeBuilder()
     .fluidInputs(fluid('styrene') * 1000)
     .fluidInputs(fluid('water') * 1000)
-    .fluidOutputs(fluid('styrene_solution') * 2000)
+    .fluidOutputs(fluid('styrene_suspension') * 2000)
     .duration(200)
     .EUt(30)
     .buildAndRegister()
 
 POLYMERIZATION.recipeBuilder()
-    .fluidInputs(fluid('styrene_solution') * 2000)
+    .fluidInputs(fluid('styrene_suspension') * 2000)
     .inputs(ore('dustTinyPotassiumPersulfate'))
-    .fluidOutputs(fluid('polystyrene_solution') * 2000)
+    .fluidOutputs(fluid('polystyrene_suspension') * 2000)
     .duration(300)
     .EUt(60)
     .buildAndRegister()
 
 DRYER.recipeBuilder()
-    .fluidInputs(fluid('polystyrene_solution') * 2000)
+    .fluidInputs(fluid('polystyrene_suspension') * 2000)
     .outputs(metaitem('dustPolystyrene'))
+    .fluidOutputs(fluid('water') * 1000)
     .duration(260)
     .EUt(30)
     .buildAndRegister()

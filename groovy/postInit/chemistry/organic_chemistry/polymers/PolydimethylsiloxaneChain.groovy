@@ -1,5 +1,4 @@
-import static globals.Globals.*
-
+import globals.Globals
 
 DISTILLATION_TOWER = recipemap('distillation_tower')
 FLUIDIZED_BED_REACTOR = recipemap('fluidized_bed_reactor')

@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.CarbonGlobals.*
 import static globals.SinteringGlobals.*
 
@@ -256,13 +256,13 @@ FLUID_EXTRACTOR.recipeBuilder()
 BR.recipeBuilder()
         .inputs(ore('dustSodiumArsenate') * 8)
         .fluidInputs(fluid('hydrochloric_acid') * 3000)
-        .fluidOutputs(fluid('salty_arsenic_acid') * 1000)
+        .fluidOutputs(fluid('salty_arsenic_acid') * 3000)
         .EUt(120)
         .duration(200)
         .buildAndRegister()
 
 ROASTER.recipeBuilder()
-        .fluidInputs(fluid('salty_arsenic_acid') * 2000)
+        .fluidInputs(fluid('salty_arsenic_acid') * 6000)
         .outputs(metaitem('dustSaltyArsenicPentoxide') * 7)
         .fluidOutputs(fluid('steam') * 9000)
         .EUt(120)

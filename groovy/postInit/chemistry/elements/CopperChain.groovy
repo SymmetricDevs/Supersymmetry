@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 //REVERBERATORY_FURNACE = recipemap('reverberatory_furnace')
 EBF = recipemap('electric_blast_furnace')

@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 BR = recipemap('batch_reactor')
 LCR = recipemap('large_chemical_reactor')
@@ -63,7 +63,7 @@ DISTILLATION_TOWER.recipeBuilder()
 LCR.recipeBuilder()
     .inputs(ore('dustParaPhenylenediamine') * 16)
     .inputs(ore('dustTerephthaloylChloride') * 16)
-    .notConsumable(fluid('n_methyl_ii_pyrrolidone') * 4000)
+    .notConsumable(fluid('n_methyl_two_pyrrolidone') * 4000)
     .fluidInputs(fluid('soda_ash_solution') * 1000)
     .outputs(metaitem('fiberWetKevlar') * 8)
     .fluidOutputs(fluid('carbon_dioxide') * 1000)
