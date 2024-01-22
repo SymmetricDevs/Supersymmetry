@@ -1,3 +1,5 @@
+import gregtech.api.recipes.ingredients.GTRecipeItemInput;
+
 // Diode * 2
 mods.gregtech.assembler.removeByInput(30, [metaitem('wireFineAnnealedCopper') * 4, metaitem('dustSmallGalliumArsenide')], [fluid('glass') * 144])
 // Diode * 1
@@ -10,38 +12,59 @@ mods.gregtech.assembler.removeByInput(30, [metaitem('wireFineCopper') * 4, metai
 mods.gregtech.assembler.removeByInput(30, [metaitem('wireFineAnnealedCopper') * 4, metaitem('dustSmallGalliumArsenide')], [fluid('plastic') * 144])
 // Diode * 2
 mods.gregtech.assembler.removeByInput(30, [metaitem('wireFineCopper') * 4, metaitem('dustSmallGalliumArsenide')], [fluid('plastic') * 144])
+// Resistor * 2
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCoal'), metaitem('wireFineCopper') * 4], [fluid('glue') * 100])
+// Resistor * 2
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCharcoal'), metaitem('wireFineCopper') * 4], [fluid('glue') * 100])
+// Resistor * 2
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCarbon'), metaitem('wireFineCopper') * 4], [fluid('glue') * 100])
+// Resistor * 4
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCoal'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100])
+// Resistor * 4
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCharcoal'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100])
+// Resistor * 4
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCarbon'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100])
 
-//Remove steel plates from electronic circuits since they were unnecessary
+crafting.removeByOutput(metaitem('component.resistor')) 
 
-crafting.replaceShaped("gregtech:electronic_circuit_lv", metaitem('circuit.electronic'), [
-        [metaitem('component.resistor'), ore('craftingToolWireCutter'), metaitem('component.resistor')],
-        [metaitem('circuit.vacuum_tube'), metaitem('circuit_board.basic'), metaitem('circuit.vacuum_tube')],
-        [ore('cableGtSingleRedAlloy'), ore('cableGtSingleRedAlloy'), ore('cableGtSingleRedAlloy')]])
+carbons = new ItemStack[]{
+        metaitem('dustCoal'),
+        metaitem('dustCharcoal'),
+        metaitem('dustCarbon'),
+        metaitem('dustHighPurityCarbon'),
+        metaitem('dustAnthracite'),
+        metaitem('dustCoke')
+}
 
-crafting.replaceShaped("gregtech:electronic_circuit_mv", metaitem('circuit.good_electronic'), [
-        [metaitem('component.diode'), ore('craftingToolWireCutter'), metaitem('component.diode')],
-        [metaitem('circuit.electronic'), metaitem('circuit_board.good'), metaitem('circuit.electronic')],
-        [ore('wireGtSingleCopper'), metaitem('circuit.electronic'), ore('wireGtSingleCopper')]])
+mods.gregtech.assembler.recipeBuilder()
+        .fluidInputs(fluid('glue') * 100)
+        .input(new GTRecipeItemInput(carbons, 1))
+        .inputs(ore('wireFineCopper') * 4)
+        .outputs(metaitem('component.resistor') * 2)
+        .duration(160)
+        .EUt(6)
+        .buildAndRegister();
 
-crafting.addShaped('resistor_wire_anthracite', metaitem('component.resistor') * 2, [
-    [metaitem('rubber_drop'),item('minecraft:paper'),metaitem('rubber_drop')],
-    [ore('wireGtSingleCopper'),ore('dustAnthracite'), ore('wireGtSingleCopper')],
-    [null,item('minecraft:paper'),null]])
+mods.gregtech.assembler.recipeBuilder()
+        .fluidInputs(fluid('glue') * 100)
+        .input(new GTRecipeItemInput(carbons, 1))
+        .inputs(ore('wireFineAnnealedCopper') * 4)
+        .outputs(metaitem('component.resistor') * 4)
+        .duration(160)
+        .EUt(6)
+        .buildAndRegister();        
 
-crafting.addShaped('resistor_wire_fine_anthracite', metaitem('component.resistor') * 2, [
-    [metaitem('rubber_drop'),item('minecraft:paper'),metaitem('rubber_drop')],
-    [ore('wireFineCopper'),ore('dustAnthracite'), ore('wireFineCopper')],
-    [null,item('minecraft:paper'),null]])
-	
-crafting.addShaped('resistor_wire_coke', metaitem('component.resistor') * 2, [
-    [metaitem('rubber_drop'),item('minecraft:paper'),metaitem('rubber_drop')],
-    [ore('wireGtSingleCopper'),ore('dustCoke'), ore('wireGtSingleCopper')],
-    [null,item('minecraft:paper'),null]])
-
-crafting.addShaped('resistor_wire_fine_coke', metaitem('component.resistor') * 2, [
-    [metaitem('rubber_drop'),item('minecraft:paper'),metaitem('rubber_drop')],
-    [ore('wireFineCopper'),ore('dustCoke'), ore('wireFineCopper')],
-    [null,item('minecraft:paper'),null]])
+crafting.shapedBuilder()               
+        .name('resistor_wire')            
+        .output(metaitem('component.resistor') * 2)      
+        .matrix('RPR',                      
+                'WCW',                 
+                ' P ')
+        .key('R', metaitem('rubber_drop'))  
+        .key('P', item('minecraft:paper'))         
+        .key('W', ore('wireGtSingleCopper') | ore('wireFineCopper'))  
+        .key('C', ore('dustAnthracite') | ore('dustCoke') | ore('dustCarbon') | ore('dustCoal') | ore('dustCharcoal'))             
+        .register() 
 
 mods.gregtech.assembler.recipeBuilder()
         .fluidInputs(fluid('glass') * 144)
@@ -113,40 +136,4 @@ mods.gregtech.assembler.recipeBuilder()
         .outputs(metaitem('component.diode') * 16)
         .duration(400)
         .EUt(30)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glue') * 100)
-        .inputs(ore('dustAnthracite') * 1)
-        .inputs(ore('wireFineCopper') * 4)
-        .outputs(metaitem('component.resistor') * 2)
-        .duration(160)
-        .EUt(6)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glue') * 100)
-        .inputs(ore('dustAnthracite') * 1)
-        .inputs(ore('wireFineAnnealedCopper') * 4)
-        .outputs(metaitem('component.resistor') * 4)
-        .duration(160)
-        .EUt(6)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glue') * 100)
-        .inputs(ore('dustCoke') * 1)
-        .inputs(ore('wireFineCopper') * 4)
-        .outputs(metaitem('component.resistor') * 2)
-        .duration(160)
-        .EUt(6)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glue') * 100)
-        .inputs(ore('dustCoke') * 1)
-        .inputs(ore('wireFineAnnealedCopper') * 4)
-        .outputs(metaitem('component.resistor') * 4)
-        .duration(160)
-        .EUt(6)
         .buildAndRegister();
