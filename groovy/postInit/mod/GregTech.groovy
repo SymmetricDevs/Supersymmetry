@@ -1303,18 +1303,6 @@ crafting.addShaped("gregtech:item_bus.import.ulv", metaitem('item_bus.import.ulv
 		[null, null, null]
 ])
 
-// LV Input Bus * 1
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 500])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('plastic') * 144])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polytetrafluoroethylene') * 72])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polybenzimidazole') * 9])
-
-crafting.addShaped("gregtech:item_bus.import.lv", metaitem('item_bus.import.lv'), [
-		[null, ore('chestWood'), null],
-		[null, metaitem('hull.lv'), null],
-		[null, null, null]
-])
-
 // ULV Output Bus * 1
 mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('glue') * 250])
 mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('plastic') * 72])
@@ -1324,18 +1312,6 @@ mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:
 crafting.addShaped("gregtech:item_bus.export.ulv", metaitem('item_bus.export.ulv'), [
 		[null, null, null],
 		[null, metaitem('hull.ulv'), null],
-		[null, ore('chestWood'), null]
-])
-
-// LV Output Bus * 1
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('glue') * 500])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('plastic') * 144])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polytetrafluoroethylene') * 72])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polybenzimidazole') * 9])
-
-crafting.addShaped("gregtech:item_bus.export.lv", metaitem('item_bus.export.lv'), [
-		[null, null, null],
-		[null, metaitem('hull.lv'), null],
 		[null, ore('chestWood'), null]
 ])
 
@@ -1351,18 +1327,6 @@ crafting.addShaped("gregtech:fluid_hatch.import.ulv", metaitem('fluid_hatch.impo
 		[null, null, null]
 ])
 
-// LV Input Hatch * 1
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 500])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('plastic') * 144])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polytetrafluoroethylene') * 72])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polybenzimidazole') * 9])
-
-crafting.addShaped("gregtech:fluid_hatch.import.lv", metaitem('fluid_hatch.import.lv'), [
-		[null, item('minecraft:glass'), null],
-		[null, metaitem('hull.lv'), null],
-		[null, null, null]
-])
-
 // ULV Output Hatch * 1
 mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('glue') * 250])
 mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('plastic') * 72])
@@ -1372,18 +1336,6 @@ mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:
 crafting.addShaped("gregtech:fluid_hatch.export.ulv", metaitem('fluid_hatch.export.ulv'), [
 		[null, null, null],
 		[null, metaitem('hull.ulv'), null],
-		[null, item('minecraft:glass'), null]
-])
-
-// LV Output Hatch * 1
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('glue') * 500])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('plastic') * 144])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polytetrafluoroethylene') * 72])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polybenzimidazole') * 9])
-
-crafting.addShaped("gregtech:fluid_hatch.export.lv", metaitem('fluid_hatch.export.lv'), [
-		[null, null, null],
-		[null, metaitem('hull.lv'), null],
 		[null, item('minecraft:glass'), null]
 ])
 
