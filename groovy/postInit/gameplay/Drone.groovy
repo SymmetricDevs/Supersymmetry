@@ -1,5 +1,5 @@
 import gregtech.api.recipes.RecipeBuilder
-import static globals.Globals.*
+import globals.Globals
 
 def DRONE_PAD = recipemap('drone_pad');
 

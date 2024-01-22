@@ -1,3 +1,3 @@
-import static globals.Globals.*
+import globals.Globals
 
 crafting.remove("quark:arrow_explosive")

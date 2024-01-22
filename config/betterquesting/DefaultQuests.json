@@ -9043,7 +9043,7 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "tnt_solution"
+              "FluidName:8": "tnt_slurry"
             }
           },
           "ignoresview:1": 0,

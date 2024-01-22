@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 crafting.addShaped("susy:basic_structural_casing", item('susy:susy_multiblock_casing', 3) * 6, [
     [ore('screwWroughtIron'), ore('plateWroughtIron'), ore('craftingToolHardHammer')],

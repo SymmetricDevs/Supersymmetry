@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 MIXER = recipemap('mixer')
 FF = recipemap('froth_flotation')

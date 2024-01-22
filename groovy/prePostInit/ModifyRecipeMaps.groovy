@@ -75,7 +75,7 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustStibnite') * 5], null)
 // Raw Platinum Powder * 3
 mods.gregtech.centrifuge.removeByInput(480, [metaitem('dustPlatinumGroupSludge') * 6], [fluid('aqua_regia') * 1200])
 // Small Pile of Redstone Dust * 2
-mods.gregtech.centrifuge.removeByInput(80, [item('minecraft:glowstone_dust')], null)
+mods.gregtech.centrifuge.removeByInput(80, [item('minecraft:glowstone_dust') * 2], null)
 // Small Pile of Quartzite Dust * 1
 mods.gregtech.centrifuge.removeByInput(120, [metaitem('dustStone')], null)
 // Raw Rubber Pulp * 3

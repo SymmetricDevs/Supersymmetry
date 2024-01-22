@@ -1,10 +1,9 @@
 import gregtech.api.GregTechAPI;
 import gregtech.api.unification.material.Material;
-import static globals.Globals.*
+import globals.Globals
 import static globals.SinteringGlobals.*
 
 import static gregtech.api.unification.material.Materials.*;
-import static globals.Globals.*
 
 VACUUM_FREEZER = recipemap('vacuum_freezer')
 CSTR = recipemap('continuous_stirred_tank_reactor')

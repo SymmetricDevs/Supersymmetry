@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
@@ -199,16 +199,6 @@ CENTRIFUGE.recipeBuilder()
         .fluidOutputs(fluid('gtfo_whey') * 600)
         .duration(200)
         .EUt(30)
-        .buildAndRegister()
-
-// Unpasteurized Skimmed Milk conflict (adds circuit 1)
-mods.gregtech.centrifuge.removeByInput(24, null, [fluid('milk') * 1000])
-CENTRIFUGE.recipeBuilder()
-        .fluidInputs(fluid('milk') * 1000)
-        .circuitMeta(1)
-        .fluidOutputs(fluid('gtfo_unpasteurized_skimmed_milk') * 800)
-        .duration(100)
-        .EUt(24)
         .buildAndRegister()
 
 FERMENTER.recipeBuilder()

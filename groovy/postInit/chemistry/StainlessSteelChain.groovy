@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.CarbonGlobals.*
 
 import static gregtech.api.unification.material.Materials.*;
@@ -12,11 +12,6 @@ mods.gregtech.blender.removeByInput(120, [metaitem('dustIron') * 6, metaitem('du
 // Stainless Steel Dust * 9
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustIron') * 4, metaitem('dustInvar') * 3, metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 mods.gregtech.blender.removeByInput(120, [metaitem('dustIron') * 4, metaitem('dustInvar') * 3, metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
-// Stainless Steel * 1296
-mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustIron') * 6, metaitem('dustChrome'), metaitem('dustManganese'), metaitem('dustNickel'), metaitem('circuit.integrated').withNbt(["Configuration": 14])], [fluid('nitrogen') * 9000])
-// Stainless Steel * 1296
-mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustIron') * 6, metaitem('dustChrome'), metaitem('dustManganese'), metaitem('dustNickel'), metaitem('circuit.integrated').withNbt(["Configuration": 4])], null)
-
 
 EBF = recipemap('electric_blast_furnace')
 MIXER = recipemap('mixer')
