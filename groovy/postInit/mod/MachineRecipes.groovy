@@ -668,12 +668,6 @@ crafting.addShaped("gregtech:condenser", metaitem('condenser'), [
 		[null, metaitem('electric.pump.lv'), null]
 ]);
 
-crafting.addShaped("gregtech:condenser", metaitem('condenser'), [
-		[null, metaitem('electric.pump.lv'), null],
-		[metaitem('frameSteel'), item('gregtech:boiler_casing', 1), metaitem('frameSteel')],
-		[null, metaitem('electric.pump.lv'), null]
-]);
-
 crafting.addShaped("gregtech:heat_exchanger", metaitem('heat_exchanger'), [
 		[null, metaitem('frameSteel'), null],
 		[metaitem('electric.pump.lv'), item('gregtech:boiler_casing', 1), metaitem('electric.pump.lv')],

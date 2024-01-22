@@ -15,7 +15,6 @@ def recipesToRemove = [
     'quark:gravisand',
     'quark:ender_watcher',
     'quark:redstone_inductor',
-    'quark:redstone_randomizer',
     'minecraft:fermented_spider_eye',
     'minecraft:speckled_melon',
     'minecraft:magma_cream',

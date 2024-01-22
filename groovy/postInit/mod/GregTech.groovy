@@ -170,7 +170,7 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustFerrochromium') * 3], 
 // Iron Dust * 6
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustStainlessSteel') * 9], null)
 // Aluminium Ingot * 21
-mods.gregtech.arc_furnace.removeByInput(30, [metaitem('pyrolyse_oven')], [fluid('oxygen') * 2160])
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('pyrolyse_oven')], [fluid('oxygen') * 2493])
 // Aluminium Dust * 21
 mods.gregtech.macerator.removeByInput(8, [metaitem('pyrolyse_oven')], null)
 // Lapotron Crystal * 1
@@ -383,12 +383,6 @@ crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metaitem('gr
 //         .duration(400)
 //         .EUt(8)
 //         .buildAndRegister();
-
-crafting.addShaped('gregtech:compressed_coke_clay', metaitem('compressed.coke_clay') * 8, [
-    [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')],
-    [ore('sand'), metaitem('wooden_form.brick'), ore('sand')],
-    [ore('sand'), ore('sand'), ore('sand')]
-])
 
 furnace.add(metaitem('dustLimestone'), metaitem('dustQuicklime'))
 
@@ -939,18 +933,15 @@ mods.gregtech.forming_press.recipeBuilder()
 		.EUt(16)
 		.buildAndRegister();
 
-// Pure Gallium Arsenide * 288
-mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustArsenic'), metaitem('dustGallium'), metaitem('circuit.integrated').withNbt(["Configuration": 12])], [fluid('nitrogen') * 2000])
-// Pure Gallium Arsenide * 288
-mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustArsenic'), metaitem('dustGallium'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 // Nickel Zinc Ferrite * 864
 mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 6])], [fluid('oxygen') * 8000])
 // Molten Yttrium Barium Cuprate * 1872
-mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 14])], [fluid('oxygen') * 7000, fluid('argon') * 650])
+mods.gregtech.alloy_blast_smelter.removeByInput(7680, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 14])], [fluid('oxygen') * 7000, fluid('argon') * 650])
+// Molten Yttrium Barium Cuprate * 1872
+mods.gregtech.alloy_blast_smelter.removeByInput(7680, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 7000])
+
 // Molten Mercury Barium Calcium Cuprate * 2304
 mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustBarium') * 2, metaitem('dustCalcium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 5])], [fluid('mercury') * 1000, fluid('oxygen') * 8000])
-// Molten Yttrium Barium Cuprate * 1872
-mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 7000])
 // Molten Mercury Barium Calcium Cuprate * 2304
 mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustBarium') * 2, metaitem('dustCalcium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 15])], [fluid('mercury') * 1000, fluid('oxygen') * 8000, fluid('nitrogen') * 16000])
 // Molten Indium Tin Barium Titanium Cuprate * 2304
