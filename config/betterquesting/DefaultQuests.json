@@ -33312,7 +33312,7 @@
         "betterquesting:10": {
           "desc:8": "susy.quest.db.770.desc",
           "icon:10": {
-            "Damage:2": 5010,
+            "Damage:2": 5031,
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
@@ -33328,7 +33328,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 5010,
+              "Damage:2": 5031,
               "id:8": "gregtech:meta_item_2"
             }
           },
