@@ -1024,6 +1024,7 @@ class SuSyMaterials {
         public static Material PhosphomolybdicAcid;
         public static Material UraniumDioxide;
         public static Material UraniumTetrafluoride;
+        public static Material SaltyHydrofluoricAcid;
 
         // Second Degree Materials
 
@@ -1130,6 +1131,7 @@ class SuSyMaterials {
         public static Material DilutedManganeseIIChlorideSolution;
         public static Material SupportedPalladium;
         public static Material MixedCyanideSolution;
+        public static Material SupportedMolybdenumVanadium;
 
         // Organic Chemistry Materials
 
@@ -1519,6 +1521,7 @@ class SuSyMaterials {
         public static Material GaseousMethacroleinMixture;
         public static Material GaseousMethacroleinResidue;
         public static Material AbsorbedMethacrolein;
+        public static Material Acrolein;
 
         // Third Degree Materials
 

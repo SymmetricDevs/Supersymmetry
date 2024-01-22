@@ -2456,5 +2456,11 @@ public class OrganicChemistryMaterials {
                 .build();
 
         AbsorbedMethacrolein.setFormula("(C4H6O)(CH3COOH)4(H2O)5", true)
+
+        Acrolein = new Material.Builder(15391, SuSyUtility.susyId('acrolein'))
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 4, Oxygen, 1)
+                .color(0x389c7a)
+                .build();
     }
 }

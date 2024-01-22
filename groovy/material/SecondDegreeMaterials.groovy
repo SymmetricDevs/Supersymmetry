@@ -661,5 +661,12 @@ public class SecondDegreeMaterials {
                 .build();
 
         MixedCyanideSolution.setFormula("(NaCN)2(HCN)2(H2O)", true)
+
+        SupportedMolybdenumVanadium = new Material.Builder(13106, SuSyUtility.susyId("supported_molybdenum_vanadium"))
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .components(MolybdenumTrioxide, 1, VanadiumPentoxide, 1, Alumina, 1)
+                .colorAverage()
+                .build();
     }
 }

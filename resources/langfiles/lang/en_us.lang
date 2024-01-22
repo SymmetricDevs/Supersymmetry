@@ -1896,6 +1896,9 @@ susy.material.gaseous_methacrylic_acid_mixture=Gaseous Methacrylic Acid Mixture
 susy.material.methacrylic_acid_solution=Methacrylic Acid Solution
 susy.material.uranium_dioxide=Uranium Dioxide
 susy.material.uranium_tetrafluoride=Uranium Tetrafluoride
+susy.material.salty_hydrofluoric_acid=Salty Hydrofluoric Acid
+susy.material.supported_molybdenum_vanadium=Supported Molybdenum Vanadium
+susy.material.acrolein=Acrolein
 
 # Isotopes
 

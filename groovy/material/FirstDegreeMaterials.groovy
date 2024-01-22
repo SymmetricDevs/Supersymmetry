@@ -3317,5 +3317,11 @@ public class FirstDegreeMaterials{
                 .build();
 
         UraniumTetrafluoride.setFormula("UF4", true)
+
+        SaltyHydrofluoricAcid = new Material.Builder(8590, SuSyUtility.susyId("salty_hydrofluoric_acid"))
+                .fluid(FluidTypes.ACID)
+                .components(Salt, 1, HydrofluoricAcid, 1)
+                .colorAverage()
+                .build();
     }
 }
