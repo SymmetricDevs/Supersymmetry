@@ -1,5 +1,7 @@
 def name_removals = [
+        'buildinggadgets:buildingtool',
         'buildinggadgets:exchangingtool',
+        'buildinggadgets:copypastetool',
         'buildinggadgets:constructionpastepowder',
         'buildinggadgets:destructiontool'
 ]

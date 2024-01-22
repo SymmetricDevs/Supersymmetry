@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 SIFTER = recipemap('sifter')
 MIXER = recipemap('mixer')

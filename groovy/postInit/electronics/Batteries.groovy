@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;
@@ -34,6 +34,8 @@ mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('du
 CSTR = recipemap('continuous_stirred_tank_reactor')
 ROASTER = recipemap('roaster')
 BR = recipemap('batch_reactor')
+BCR = recipemap('bubble_column_reactor')
+
 crafting.addShaped("battery_lead_acid", metaitem('battery.lead_acid'), [
         [metaitem('plateBatteryAlloy'), metaitem('cableGtSingleTin'), metaitem('plateBatteryAlloy')],
         [metaitem('cathode.lead'),fluid('sulfuric_acid') * 1000, metaitem('anode.lead')],
@@ -127,8 +129,24 @@ BR.recipeBuilder()
         .inputs(ore('dustPhosphorusPentachloride') * 6)
         .fluidInputs(fluid('hydrogen_fluoride') * 5000)
         .fluidOutputs(fluid('hydrogen_chloride') * 5000)
-        .fluidOutputs(fluid('lithium_hexafluorophosphate') * 1000)
+        .outputs(metaitem('dustLithiumHexafluorophosphate') * 8)
         .duration(140)
+        .EUt(30)
+        .buildAndRegister()
+
+BCR.recipeBuilder()
+        .fluidInputs(fluid('ethylene_oxide') * 50)
+        .fluidInputs(fluid('carbon_dioxide') * 50)
+        .fluidOutputs(fluid('ethylene_carbonate') * 50)
+        .duration(5)
+        .EUt(30)
+        .buildAndRegister()
+
+MIXER_RECIPES.recipeBuilder()
+        .inputs(ore('dustLithiumHexafluorophosphate') * 8)
+        .fluidInputs(fluid('ethylene_carbonate') * 1000)
+        .fluidOutputs(fluid('lithium_hexafluorophosphate_electrolyte') * 1000)
+        .duration(400)
         .EUt(30)
         .buildAndRegister()
 
@@ -202,7 +220,7 @@ mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('battery.hull.lv'))
         .inputs(ore('dustGraphite'))
         .inputs(ore('dustLithiumCobaltOxide'))
-        .fluidInputs(fluid('lithium_hexafluorophosphate') * 100)
+        .fluidInputs(fluid('lithium_hexafluorophosphate_electrolyte') * 100)
         .outputs(metaitem('battery.re.lv.lithium'))
         .duration(100)
         .EUt(16)
@@ -212,7 +230,7 @@ mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('battery.hull.mv'))
         .inputs(ore('dustGraphite') * 2)
         .inputs(ore('dustLithiumCobaltOxide') * 2)
-        .fluidInputs(fluid('lithium_hexafluorophosphate') * 200)
+        .fluidInputs(fluid('lithium_hexafluorophosphate_electrolyte') * 200)
         .outputs(metaitem('battery.re.mv.lithium'))
         .duration(200)
         .EUt(16)
@@ -222,7 +240,7 @@ mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('battery.hull.hv'))
         .inputs(ore('dustGraphite') * 4)
         .inputs(ore('dustLithiumCobaltOxide') * 4)
-        .fluidInputs(fluid('lithium_hexafluorophosphate') * 500)
+        .fluidInputs(fluid('lithium_hexafluorophosphate_electrolyte') * 500)
         .outputs(metaitem('battery.re.hv.lithium'))
         .duration(400)
         .EUt(16)
@@ -270,12 +288,12 @@ mods.gregtech.autoclave.removeByInput(320, [metaitem('dustLapotron') * 15], [flu
 mods.gregtech.autoclave.removeByInput(256, [metaitem('dustLapotron') * 15], [fluid('blue_steel') * 288])
 mods.gregtech.autoclave.removeByInput(192, [metaitem('dustLapotron') * 15], [fluid('red_steel') * 72])
 
-mods.hei.removeAndHide(metaitem('energy_crystal'));
-mods.hei.removeAndHide(metaitem('lapotron_crystal'));
+mods.jei.removeAndHide(metaitem('energy_crystal'));
+mods.jei.removeAndHide(metaitem('lapotron_crystal'));
 
-mods.hei.removeAndHide(metaitem('energy.lapotronic_orb'));
-mods.hei.removeAndHide(metaitem('energy.lapotronic_orb_cluster'));
-mods.hei.removeAndHide(metaitem('energy.module'));
-mods.hei.removeAndHide(metaitem('energy.cluster'));
-mods.hei.removeAndHide(metaitem('max.battery'));
+mods.jei.removeAndHide(metaitem('energy.lapotronic_orb'));
+mods.jei.removeAndHide(metaitem('energy.lapotronic_orb_cluster'));
+mods.jei.removeAndHide(metaitem('energy.module'));
+mods.jei.removeAndHide(metaitem('energy.cluster'));
+mods.jei.removeAndHide(metaitem('max.battery'));
 

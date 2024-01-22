@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.CarbonGlobals.*
 
 import gregtech.api.recipes.ModHandler;
@@ -176,7 +176,7 @@ CENTRIFUGE.recipeBuilder()
 
 DISTILLATION_TOWER.recipeBuilder()
         .fluidInputs(fluid('anthracene_extract') * 1000)
-        .fluidOutputs(fluid('anthracene') * 800)
+        .chancedOutput(metaitem('dustAnthracene'), 8000, 0)
         .fluidOutputs(fluid('ethylene_glycol') * 100)
         .fluidOutputs(fluid('light_oil') * 200)
         .duration(200)

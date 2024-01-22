@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;
@@ -12,11 +12,11 @@ import gregtech.*
 crafting.remove("gregtech:vacuum_tube")
 
 // Vacuum Tube * 4
-mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel'), metaitem('wireGtSingleAnnealedCopper') * 2], [fluid('red_alloy') * 18])
+mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleAnnealedCopper') * 2], [fluid('red_alloy') * 18])
 // Vacuum Tube * 3
-mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel'), metaitem('wireGtSingleCopper') * 2], [fluid('red_alloy') * 18])
+mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleCopper') * 2], [fluid('red_alloy') * 18])
 // Vacuum Tube * 2
-mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel'), metaitem('wireGtSingleCopper') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleCopper') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
 
 crafting.addShaped("vacuum_tube_components", metaitem('vacuum_tube_components') * 4, [
