@@ -28,7 +28,7 @@ def ShiftLocalisationKeys(questbook: dict, location: str):
 		actualQuestTitel = questbook[location][quest]["properties:10"]["betterquesting:10"]["name:8"]
 		actualQuestDescription = questbook[location][quest]["properties:10"]["betterquesting:10"]["desc:8"]
 
-		if actualQuestTitel != wantedQuestTitel and actualQuestDescription != wantedQuestDescription:
+		if actualQuestTitel != wantedQuestTitel or actualQuestDescription != wantedQuestDescription:
 			questbook[location][quest]["properties:10"]["betterquesting:10"]["name:8"] = wantedQuestTitel
 			questbook[location][quest]["properties:10"]["betterquesting:10"]["desc:8"] = wantedQuestDescription
 			print(f"Quest {questId} - Fixed!")
