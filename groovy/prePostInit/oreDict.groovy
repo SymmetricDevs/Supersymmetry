@@ -297,3 +297,25 @@ for (knife in name_knifeNTP) {
     ore('knifeNTP').add(item(knife))
 }
 */
+
+// Nitrogen Nutrients
+ore('nutrientNitrogen').add(metaitem('dustAmmoniumChloride'))
+ore('nutrientNitrogen').add(metaitem('dustAmmoniumNitrate'))
+ore('nutrientNitrogen').add(metaitem('dustAmmoniumSulfate'))
+ore('nutrientNitrogen').add(metaitem('dustUrea'))
+
+// Potassium Nutrients
+ore('nutrientPotassium').add(metaitem('dustAsh'))
+ore('nutrientPotassium').add(metaitem('dustCharcoal'))
+ore('nutrientPotassium').add(metaitem('dustRockSalt'))
+ore('nutrientPotassium').add(metaitem('dustPotassiumCarbonate'))
+ore('nutrientPotassium').add(metaitem('dustPotash'))
+
+// Phosphorous Nutrients
+ore('nutrientPhosphorous').add(metaitem('dustChlorapatite'))
+ore('nutrientPhosphorous').add(metaitem('dustHydroxyapatite'))
+ore('nutrientPhosphorous').add(metaitem('dustFluorapatite'))
+ore('nutrientPhosphorous').add(metaitem('dustTricalciumPhosphate'))
+ore('nutrientPhosphorous').add(metaitem('dustPhosphorus'))
+ore('nutrientPhosphorous').add(metaitem('dustPhosphorite'))
+ore('nutrientPhosphorous').add(item('minecraft:dye', 15))
