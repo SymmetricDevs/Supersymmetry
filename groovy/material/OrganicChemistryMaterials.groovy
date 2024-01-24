@@ -1404,12 +1404,6 @@ public class OrganicChemistryMaterials {
                 .color(0x403c32)
                 .build();
 
-        CyclopentadieneSolution = new Material.Builder(15226, SuSyUtility.susyId('cyclopentadiene_solution'))
-                .fluid()
-                .components(Cyclopentadiene, 1, Benzene, 1)
-                .colorAverage()
-                .build();
-
         Ferrocene = new Material.Builder(15227, SuSyUtility.susyId('ferrocene'))
                 .dust()
                 .components(Carbon, 10, Hydrogen, 10, Iron, 1)
@@ -2461,6 +2455,13 @@ public class OrganicChemistryMaterials {
                 .fluid()
                 .components(Carbon, 3, Hydrogen, 4, Oxygen, 1)
                 .color(0x389c7a)
+                .build();
+
+        Dicyclopentadiene = new Material.Builder(15392, SuSyUtility.susyId('dicyclopentadiene'))
+                .fluid()
+                .fluidTemp(306)
+                .components(Carbon, 10, Hydrogen, 12)
+                .color(0x9c388b)
                 .build();
     }
 }

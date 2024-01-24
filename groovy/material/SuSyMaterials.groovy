@@ -348,10 +348,6 @@ class SuSyMaterials {
         public static Material MidgradeGasoline;
         public static Material PremiumGasoline;
         public static Material SupremeGasoline;
-        public static Material PotassiumMolecularSieve;
-        public static Material CesiumMolecularSieve;
-        public static Material SaturatedPotassiumMolecularSieve;
-        public static Material SaturatedCesiumMolecularSieve;
         public static Material AcidicWastewater;
         public static Material ImpureTitaniumTetrachloride;
         public static Material DistilledTitaniumTetrachloride;
@@ -564,6 +560,8 @@ class SuSyMaterials {
         public static Material ColdSolventLubricantMixture;
         public static Material SulfuricLubricatingOil;
         public static Material DewaxedLubricantMixture;
+        public static Material CFiveFraction;
+        public static Material DimerizedCFiveFraction;
 
         // First Degree Materials
 
@@ -1353,7 +1351,6 @@ class SuSyMaterials {
         public static Material IsoOctane;
         public static Material PurifiedIsoprene;
         public static Material Cyclopentadiene;
-        public static Material CyclopentadieneSolution;
         public static Material Ferrocene;
         public static Material Polyisoprene;
         public static Material Chloroethane;
@@ -1522,6 +1519,7 @@ class SuSyMaterials {
         public static Material GaseousMethacroleinResidue;
         public static Material AbsorbedMethacrolein;
         public static Material Acrolein;
+        public static Material Dicyclopentadiene;
 
         // Third Degree Materials
 

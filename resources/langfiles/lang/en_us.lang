@@ -1409,7 +1409,6 @@ susy.material.di_tert_butylphenol=2,6-Di-tert-butylphenol
 susy.material.isooctane=iso-Octane
 susy.material.purified_isoprene=Purified Isoprene
 susy.material.cyclopentadiene=Cyclopentadiene
-susy.material.cyclopentadiene_solution=Cyclopentadiene Solution
 susy.material.ferrocene=Ferrocene
 susy.material.polyisoprene=Polyisoprene
 susy.material.chloroethane=Chloroethane
@@ -1899,6 +1898,9 @@ susy.material.uranium_tetrafluoride=Uranium Tetrafluoride
 susy.material.salty_hydrofluoric_acid=Salty Hydrofluoric Acid
 susy.material.supported_molybdenum_vanadium=Supported Molybdenum Vanadium
 susy.material.acrolein=Acrolein
+susy.material.c_five_fraction=C5 Fraction
+susy.material.dimerized_c_five_fraction=Dimerized C5 Fraction
+susy.material.dicyclopentadiene=Dicyclopentadiene
 
 # Isotopes
 

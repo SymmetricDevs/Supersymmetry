@@ -1134,29 +1134,7 @@ public class UnknownCompositionMaterials {
                 .color(0xf26d1b)
                 .build();
 
-        PotassiumMolecularSieve = new Material.Builder(4225, SuSyUtility.susyId('potassium_molecular_sieve'))
-                .dust()
-                .iconSet(SHINY)
-                .color(0x7c8e94)
-                .build();
-
-        CesiumMolecularSieve = new Material.Builder(4226, SuSyUtility.susyId('cesium_molecular_sieve'))
-                .dust()
-                .iconSet(SHINY)
-                .color(0x9c7f73)
-                .build();
-
-        SaturatedPotassiumMolecularSieve = new Material.Builder(4227, SuSyUtility.susyId('saturated_potassium_molecular_sieve'))
-                .dust()
-                .color(0x7c8e94)
-                .build();
-
-        SaturatedCesiumMolecularSieve = new Material.Builder(4228, SuSyUtility.susyId('saturated_cesium_molecular_sieve'))
-                .dust()
-                .color(0x9c7f73)
-                .build();
-
-        //FREE IDs: 4229-4231
+        //FREE IDs: 4225-4231
 
         TitanylSulfateSolution = new Material.Builder(4232, SuSyUtility.susyId('titanyl_sulfate_solution'))
                 .fluid()
