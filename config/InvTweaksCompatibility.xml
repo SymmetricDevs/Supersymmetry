@@ -1,0 +1,4 @@
+<root>
+    <chest class="cassiokf.industrialrenewal.gui.container.ContainerStorageChest"/>
+    <chest class="gregtech.api.gui.impl.ModularUIContainer"/>
+</root>
