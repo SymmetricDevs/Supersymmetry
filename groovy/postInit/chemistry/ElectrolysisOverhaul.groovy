@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;

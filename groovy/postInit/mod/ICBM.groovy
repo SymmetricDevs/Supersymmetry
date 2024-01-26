@@ -1,5 +1,5 @@
 import classes.*;
-import static globals.Globals.*
+import globals.Globals
 
 def name_removals = [
         "icbmclassic:missile/vanilla/missile.module",

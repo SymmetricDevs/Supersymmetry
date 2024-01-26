@@ -1,6 +1,6 @@
 println("Running ImmersiveRailroading.groovy...")
 
-import static globals.Globals.*
+import globals.Globals
 import supersymmetry.api.recipes.SuSyRecipeMaps;
 import cam72cam.immersiverailroading.IRItems;
 import cam72cam.mod.serialization.TagCompound;
@@ -145,6 +145,7 @@ Globals.solders.each { key, val ->
 			.circuitMeta(1)
 			.inputs(item('gregtech:boiler_casing', 1) * 2)
 			.inputs(ore('gearSmallSteel') * 12)
+			.inputs(metaitem('minecart_wheels.steel') * 4)
 			.inputs(metaitem('electric.motor.lv') * 4)
 			.inputs(metaitem('electric.piston.lv') * 4)
 			.inputs(item('gregtech:boiler_firebox_casing', 1) * 2)
@@ -168,6 +169,7 @@ Globals.solders.each { key, val ->
 	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
 			.circuitMeta(2)
 			.inputs(ore('gearSmallSteel') * 12)
+			.inputs(metaitem('minecart_wheels.steel') * 4)
 			.inputs(ore('plateSteel') * 16)
 			.inputs(ore('stickLongSteel') * 8)
 			.fluidInputs(fluid(key) * (val * 10))
@@ -187,6 +189,7 @@ Globals.solders.each { key, val ->
 	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
 			.circuitMeta(3)
 			.inputs(ore('gearSmallSteel') * 12)
+			.inputs(metaitem('minecart_wheels.steel') * 4)
 			.inputs(ore('plateSteel') * 20)
 			.inputs(ore('stickLongSteel') * 6)
 			.inputs(item('minecraft:glass') * 4)
@@ -207,6 +210,7 @@ Globals.solders.each { key, val ->
 	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
 			.circuitMeta(4)
 			.inputs(ore('gearSmallSteel') * 12)
+			.inputs(metaitem('minecart_wheels.steel') * 4)
 			.inputs(ore('plateSteel') * 16)
 			.inputs(ore('stickLongSteel') * 8)
 			.inputs(metaitem('electric.pump.lv') * 2)

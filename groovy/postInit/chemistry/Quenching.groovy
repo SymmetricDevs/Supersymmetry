@@ -59,6 +59,7 @@ def ingotMap = [
         'EnrichedNaquadahTriniumEuropiumDuranide':9900,
         'RutheniumTriniumAmericiumNeutronate':10800,
         'TungstenSteel':3000,
+        'RtmAlloy': 3200,
         'NaquadahAlloy':7200,
         'RhodiumPlatedPalladium':4500,
         'Hssg':4200,

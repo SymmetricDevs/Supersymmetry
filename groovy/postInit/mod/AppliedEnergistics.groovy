@@ -1,6 +1,6 @@
 import com.cleanroommc.groovyscript.api.GroovyLog
 import gregtech.api.metatileentity.multiblock.CleanroomType
-import static globals.Globals.*
+import globals.Globals
 
 /*
 def solders = [

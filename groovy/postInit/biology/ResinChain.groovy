@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 //REMOVALS
 furnace.removeByInput(item('minecraft:slime_ball'))

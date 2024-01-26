@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 CSTR = recipemap('continuous_stirred_tank_reactor')
 TBR = recipemap('trickle_bed_reactor')
@@ -649,16 +649,9 @@ CSTR.recipeBuilder()
 CSTR.recipeBuilder()
         .fluidInputs(fluid('hydrobromic_acid') * 50)
         .fluidInputs(fluid('n_octanol') * 50)
-        .fluidOutputs(fluid('diluted_bromooctane') * 150)
+        .fluidOutputs(fluid('bromooctane') * 50)
+        .fluidOutputs(fluid('water') * 50)
         .duration(5)
-        .EUt(120)
-        .buildAndRegister()
-
-CENTRIFUGE.recipeBuilder()
-        .fluidInputs(fluid('diluted_bromooctane') * 2000)
-        .fluidOutputs(fluid('bromooctane') * 1000)
-        .fluidOutputs(fluid('water') * 2000)
-        .duration(160)
         .EUt(120)
         .buildAndRegister()
 

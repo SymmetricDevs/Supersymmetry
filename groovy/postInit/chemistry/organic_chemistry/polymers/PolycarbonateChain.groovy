@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 BCR = recipemap('bubble_column_reactor')
 CSTR = recipemap('continuous_stirred_tank_reactor')

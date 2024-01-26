@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 ELECTROLYZER = recipemap('electrolyzer')
 BATCH_REACTOR = recipemap('batch_reactor')

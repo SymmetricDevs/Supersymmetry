@@ -15,6 +15,7 @@ def name_removals = [
         "sync:treadmill",
         "weeping-angels:timey_wimey_dectecterino",
         "weeping-angels:chronodyne_generator",
+        'quark:redstone_randomizer',
         "gravitygun:gravitygun",
         "gravitygun:supercharged_gravitygun",
         "portalgun:portalgun"

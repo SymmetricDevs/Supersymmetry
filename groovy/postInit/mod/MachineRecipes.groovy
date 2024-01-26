@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 
@@ -660,12 +660,6 @@ crafting.addShaped("gregtech:railroad_engineering_station", metaitem('railroad_e
 		[robotArms[1], null, robotArms[1]],
 		[conveyors[1], hulls[1], conveyors[1]],
 		[metaitem('plateSteel'), circuits[1], metaitem('plateSteel')]
-]);
-
-crafting.addShaped("gregtech:condenser", metaitem('condenser'), [
-		[null, metaitem('electric.pump.lv'), null],
-		[metaitem('frameSteel'), item('gregtech:boiler_casing', 1), metaitem('frameSteel')],
-		[null, metaitem('electric.pump.lv'), null]
 ]);
 
 crafting.addShaped("gregtech:condenser", metaitem('condenser'), [

@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 CSTR = recipemap('continuous_stirred_tank_reactor')
 TBR = recipemap('trickle_bed_reactor')

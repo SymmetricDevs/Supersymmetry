@@ -1,5 +1,5 @@
 import classes.*;
-import static globals.Globals.*;
+import globals.Globals;
 
 import java.lang.Math;
 
@@ -774,23 +774,30 @@ for (WorkingFluid in WorkingFluids) {
             .buildAndRegister();
 
     recipemap('steam_turbine').recipeBuilder()
+            .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+            .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+            .duration(WorkingFluid.duration * WorkingFluid.efficiency)
+            .EUt(32)
+            .buildAndRegister()
+
+    recipemap('large_steam_turbine').recipeBuilder()
             .circuitMeta(1)
             .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .duration(WorkingFluid.duration * WorkingFluid.efficiency)
             .EUt(32)
-            .buildAndRegister();
+            .buildAndRegister()
 
     for (lubricant in Globals.lubricants) {
-            recipemap('steam_turbine').recipeBuilder()
+            recipemap('large_steam_turbine').recipeBuilder()
                     .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
                     .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
                     .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
                     .duration((int) (WorkingFluid.duration * WorkingFluid.efficiency * lubricant.boost))
                     .EUt(32)
-                    .buildAndRegister();
+                    .buildAndRegister()
     }
-        
+
     recipemap('cooling_tower').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor * 64))
             .fluidInputs(liquid('water') * 1000)
