@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 def voltaic_pile_ingredients = [
     [null, metaitem('electrolyte_paper'), null],

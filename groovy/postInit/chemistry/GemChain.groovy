@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 CVD = recipemap('cvd')
 CUTTER = recipemap('cutter')

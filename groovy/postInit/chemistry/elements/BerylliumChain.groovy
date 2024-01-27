@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.SinteringGlobals.*
 
 BR = recipemap('batch_reactor')

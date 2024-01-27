@@ -1,5 +1,5 @@
-import static globals.Globals.*
-import static globals.SinteringGlobals.*
+import globals.Globals
+import globals.SinteringGlobals
 
 ABS = recipemap('alloy_blast_smelter')
 FORMING_PRESS = recipemap("forming_press")

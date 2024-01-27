@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 FBR = recipemap('fixed_bed_reactor')
 BR = recipemap('batch_reactor')

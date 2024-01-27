@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 ROASTER = recipemap('roaster')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
