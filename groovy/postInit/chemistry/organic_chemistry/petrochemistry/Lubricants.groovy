@@ -676,7 +676,7 @@ DUMPER = recipemap('dumping')
 
     POLYMERIZATION.recipeBuilder()
         .fluidInputs(fluid('ethylene_oxide') * 1000)
-        .fluidInputs(fluid('boron_trifluoride') * 50)
+        .notConsumable(fluid('boron_trifluoride') * 50)
         .fluidOutputs(fluid('polyethylene_glycol') * 1000)
         .duration(200)
         .EUt(240)
