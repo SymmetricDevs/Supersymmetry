@@ -52,6 +52,40 @@ mods.gregtech.mixer.removeByInput(480, [metaitem('dustCollagen') * 4], [fluid('p
 mods.gregtech.blender.removeByInput(480, [metaitem('dustCollagen') * 4], [fluid('phosphoric_acid') * 1000, fluid('water') * 3000])
 // Phosphorus Dust * 1
 mods.gregtech.centrifuge.removeByInput(480, null, [fluid('gelatin_mixture') * 6000])
+// Reservoir Hatch * 1
+mods.gregtech.assembler.removeByInput(1920, [metaitem('cover.infinite_water'), metaitem('fluid_hatch.import.ev'), metaitem('electric.pump.ev')], null)
+// White Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool') * 3, metaitem('plateWood') * 3], null)
+// Orange Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 1) * 3, metaitem('plateWood') * 3], null)
+// Magenta Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 2) * 3, metaitem('plateWood') * 3], null)
+// Light Blue Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 3) * 3, metaitem('plateWood') * 3], null)
+// Yellow Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 4) * 3, metaitem('plateWood') * 3], null)
+// Lime Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 5) * 3, metaitem('plateWood') * 3], null)
+// Pink Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 6) * 3, metaitem('plateWood') * 3], null)
+// Gray Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 7) * 3, metaitem('plateWood') * 3], null)
+// Light Gray Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 8) * 3, metaitem('plateWood') * 3], null)
+// Cyan Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 9) * 3, metaitem('plateWood') * 3], null)
+// Purple Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 10) * 3, metaitem('plateWood') * 3], null)
+// Blue Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 11) * 3, metaitem('plateWood') * 3], null)
+// Brown Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 12) * 3, metaitem('plateWood') * 3], null)
+// Green Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 13) * 3, metaitem('plateWood') * 3], null)
+// Red Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 14) * 3, metaitem('plateWood') * 3], null)
+// Black Bed * 1
+mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 15) * 3, metaitem('plateWood') * 3], null)
 
 def name_removals = [
 	'gregtech:cover_fluid_voiding',
@@ -170,7 +204,7 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustFerrochromium') * 3], 
 // Iron Dust * 6
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustStainlessSteel') * 9], null)
 // Aluminium Ingot * 21
-mods.gregtech.arc_furnace.removeByInput(30, [metaitem('pyrolyse_oven')], [fluid('oxygen') * 2160])
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('pyrolyse_oven')], [fluid('oxygen') * 2493])
 // Aluminium Dust * 21
 mods.gregtech.macerator.removeByInput(8, [metaitem('pyrolyse_oven')], null)
 // Lapotron Crystal * 1
@@ -384,12 +418,6 @@ crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metaitem('gr
 //         .EUt(8)
 //         .buildAndRegister();
 
-crafting.addShaped('gregtech:compressed_coke_clay', metaitem('compressed.coke_clay') * 8, [
-    [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')],
-    [ore('sand'), metaitem('wooden_form.brick'), ore('sand')],
-    [ore('sand'), ore('sand'), ore('sand')]
-])
-
 furnace.add(metaitem('dustLimestone'), metaitem('dustQuicklime'))
 
 //TechGuns carbon plate removal
@@ -420,9 +448,9 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('plateEnderPearl') * 9, met
 crafting.addShapeless('convert_old_slaked_lime', metaitem('dustCalciumHydroxide'), [metaitem('slaked_lime')])
 
 mods.gregtech.chemical_bath.recipeBuilder()
-        .inputs(ore('dustQuicklime') * 2)
-        .fluidInputs(fluid('water') * 1000)
-        .outputs(metaitem('dustCalciumHydroxide') * 5)
+        .inputs(ore('dustQuicklime'))
+        .fluidInputs(fluid('water') * 500)
+        .outputs(metaitem('dustCalciumHydroxide'))
         .duration(20)
         .EUt(30)
         .buildAndRegister();
@@ -939,18 +967,15 @@ mods.gregtech.forming_press.recipeBuilder()
 		.EUt(16)
 		.buildAndRegister();
 
-// Pure Gallium Arsenide * 288
-mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustArsenic'), metaitem('dustGallium'), metaitem('circuit.integrated').withNbt(["Configuration": 12])], [fluid('nitrogen') * 2000])
-// Pure Gallium Arsenide * 288
-mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustArsenic'), metaitem('dustGallium'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 // Nickel Zinc Ferrite * 864
 mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 6])], [fluid('oxygen') * 8000])
 // Molten Yttrium Barium Cuprate * 1872
-mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 14])], [fluid('oxygen') * 7000, fluid('argon') * 650])
+mods.gregtech.alloy_blast_smelter.removeByInput(7680, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 14])], [fluid('oxygen') * 7000, fluid('argon') * 650])
+// Molten Yttrium Barium Cuprate * 1872
+mods.gregtech.alloy_blast_smelter.removeByInput(7680, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 7000])
+
 // Molten Mercury Barium Calcium Cuprate * 2304
 mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustBarium') * 2, metaitem('dustCalcium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 5])], [fluid('mercury') * 1000, fluid('oxygen') * 8000])
-// Molten Yttrium Barium Cuprate * 1872
-mods.gregtech.alloy_blast_smelter.removeByInput(120, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 7000])
 // Molten Mercury Barium Calcium Cuprate * 2304
 mods.gregtech.alloy_blast_smelter.removeByInput(480, [metaitem('dustBarium') * 2, metaitem('dustCalcium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 15])], [fluid('mercury') * 1000, fluid('oxygen') * 8000, fluid('nitrogen') * 16000])
 // Molten Indium Tin Barium Titanium Cuprate * 2304
@@ -1298,6 +1323,23 @@ mods.gregtech.arc_furnace.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+// Tapes
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(ore('foilPlastic') * 4)
+        .fluidInputs(fluid('glue') * 250)
+        .outputs(metaitem('basic_tape') * 8)
+        .duration(100)
+        .EUt(7)
+        .buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(ore('foilPolypropylene') * 4)
+        .fluidInputs(fluid('glue') * 250)
+        .outputs(metaitem('basic_tape') * 16)
+        .duration(100)
+        .EUt(7)
+        .buildAndRegister()
+
 // Hatches
 
 // ULV Input Bus * 1
@@ -1309,18 +1351,6 @@ mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:
 crafting.addShaped("gregtech:item_bus.import.ulv", metaitem('item_bus.import.ulv'), [
 		[null, ore('chestWood'), null],
 		[null, metaitem('hull.ulv'), null],
-		[null, null, null]
-])
-
-// LV Input Bus * 1
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 500])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('plastic') * 144])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polytetrafluoroethylene') * 72])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polybenzimidazole') * 9])
-
-crafting.addShaped("gregtech:item_bus.import.lv", metaitem('item_bus.import.lv'), [
-		[null, ore('chestWood'), null],
-		[null, metaitem('hull.lv'), null],
 		[null, null, null]
 ])
 
@@ -1336,18 +1366,6 @@ crafting.addShaped("gregtech:item_bus.export.ulv", metaitem('item_bus.export.ulv
 		[null, ore('chestWood'), null]
 ])
 
-// LV Output Bus * 1
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('glue') * 500])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('plastic') * 144])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polytetrafluoroethylene') * 72])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polybenzimidazole') * 9])
-
-crafting.addShaped("gregtech:item_bus.export.lv", metaitem('item_bus.export.lv'), [
-		[null, null, null],
-		[null, metaitem('hull.lv'), null],
-		[null, ore('chestWood'), null]
-])
-
 // ULV Input Hatch * 1
 mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 250])
 mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('plastic') * 72])
@@ -1357,18 +1375,6 @@ mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:
 crafting.addShaped("gregtech:fluid_hatch.import.ulv", metaitem('fluid_hatch.import.ulv'), [
 		[null, item('minecraft:glass'), null],
 		[null, metaitem('hull.ulv'), null],
-		[null, null, null]
-])
-
-// LV Input Hatch * 1
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 500])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('plastic') * 144])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polytetrafluoroethylene') * 72])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polybenzimidazole') * 9])
-
-crafting.addShaped("gregtech:fluid_hatch.import.lv", metaitem('fluid_hatch.import.lv'), [
-		[null, item('minecraft:glass'), null],
-		[null, metaitem('hull.lv'), null],
 		[null, null, null]
 ])
 
@@ -1383,39 +1389,6 @@ crafting.addShaped("gregtech:fluid_hatch.export.ulv", metaitem('fluid_hatch.expo
 		[null, metaitem('hull.ulv'), null],
 		[null, item('minecraft:glass'), null]
 ])
-
-// LV Output Hatch * 1
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('glue') * 500])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('plastic') * 144])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polytetrafluoroethylene') * 72])
-mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polybenzimidazole') * 9])
-
-crafting.addShaped("gregtech:fluid_hatch.export.lv", metaitem('fluid_hatch.export.lv'), [
-		[null, null, null],
-		[null, metaitem('hull.lv'), null],
-		[null, item('minecraft:glass'), null]
-])
-
-// Black Granite Dust * 1
-mods.gregtech.macerator.removeByInput(2, [item('gregtech:stone_smooth')], null)
-
-mods.gregtech.Dust.recipeBuilder()
-        .inputs(ore('stoneGraniteBlack'))
-        .outputs(metaitem('dustGraniteBlack') * 1)
-        .duration(150)
-        .EUt(2)
-        .buildAndRegister()
-
-// Red Granite Dust * 1
-mods.gregtech.macerator.removeByInput(2, [item('gregtech:stone_smooth', 1)], null)
-
-mods.gregtech.Dust.recipeBuilder()
-        .inputs(ore('stoneGraniteRed'))
-        .outputs(metaitem('dustGraniteRed') * 1)
-        .duration(150)
-        .EUt(2)
-        .buildAndRegister()
-
 
 // Multiblock Builder
 

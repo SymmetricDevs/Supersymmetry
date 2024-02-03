@@ -2,7 +2,7 @@ import gregtech.api.GregTechAPI;
 import gregtech.api.unification.material.Material;
 
 import static gregtech.api.unification.material.Materials.*;
-import static globals.Globals.*
+import globals.Globals
 
 ELECTROLYZER = recipemap('electrolyzer')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')

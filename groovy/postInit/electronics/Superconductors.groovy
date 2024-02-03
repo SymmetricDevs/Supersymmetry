@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import classes.*;
 
 def recipesToRemove = [

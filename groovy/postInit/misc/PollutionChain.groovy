@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 SMOKE_STACK = recipemap('smoke_stack')
 FLARE_STACK = recipemap('flare_stack')
