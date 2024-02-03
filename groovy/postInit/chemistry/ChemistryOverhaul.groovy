@@ -4393,3 +4393,12 @@ DISTILLERY.recipeBuilder()
         .duration(20)
         .EUt(30)
         .buildAndRegister()
+
+//Ca(OH)2.H2O
+MIXER.recipeBuilder()
+        .inputs(ore('dustCalciumHydroxide') * 5)
+        .fluidInputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('calcium_hydroxide_solution') * 1000)
+        .EUt(16)
+        .duration(100)
+        .buildAndRegister()
