@@ -9,6 +9,7 @@ POLYMERIZATION_TANK = recipemap('polymerization_tank')
 MIXER = recipemap('mixer')
 SIFTER = recipemap('sifter')
 DRYER = recipemap('dryer')
+EXTRACTOR = recipemap('extractor')
 
 //REMOVALS
 // Raw Rubber Pulp * 2
@@ -217,6 +218,14 @@ for (coagulant in coagulants) {
     CoagulationRecipe(coagulant, 4, 1000, 4)
     CoagulationRecipe(coagulant, 16, 2500, 5)
 }
+
+mods.gregtech.extractor.removeByInput(30, [metaitem('dustLatex')])
+EXTRACTOR.recipeBuilder()
+.inputs(ore('dustLatex'))
+.fluidOutputs(fluid('latex') * 1000)
+.duration(98)
+.EUt(30)
+.buildAndRegister()
 
 // Polyisoprene
 POLYMERIZATION_TANK.recipeBuilder()
