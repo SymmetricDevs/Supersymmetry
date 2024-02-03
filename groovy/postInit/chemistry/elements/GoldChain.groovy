@@ -11,6 +11,7 @@ DISTILLATION_TOWER = recipemap('distillation_tower')
 
 // Silver Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustRawElectrum') * 2], null)
+mods.gregtech.mixer.removeByInput(30, [fluid('hydrochloric_acid') * 2000], [fluid('nitric_acid') * 1000])
 
 //GOLD AMALGAMATION (50% EFFICIENCY)
 MIXER.recipeBuilder()
