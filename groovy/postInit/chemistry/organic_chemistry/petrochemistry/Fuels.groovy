@@ -393,25 +393,25 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 // Corrosion inhibitors
-
+for (inertGas in Globals.inertGases) {
     REACTION_FURNACE.recipeBuilder()
         .notConsumable(ore('dustAluminiumSilicate'))
-        .notConsumable(fluid('argon') * 2000)
+        .notConsumable(fluid(inertGas.name) * inertGas.amount_required)
         .fluidInputs(fluid('linoleic_acid') * 2000)
         .fluidOutputs(fluid('corrosion_inhibitor') * 2000)
-        .duration(200)
+        .duration(200 * inertGas.duration)
         .EUt(120)
         .buildAndRegister()
 
     REACTION_FURNACE.recipeBuilder()
         .notConsumable(ore('dustAluminiumSilicate'))
-        .notConsumable(fluid('argon') * 2000)
+        .notConsumable(fluid(inertGas.name) * inertGas.amount_required)
         .fluidInputs(fluid('oleic_acid') * 2000)
         .fluidOutputs(fluid('corrosion_inhibitor') * 2000)
-        .duration(200)
+        .duration(200 * inertGas.duration)
         .EUt(120)
         .buildAndRegister()
-
+}
 def OxygenateMap = [
     'methanol': 1000,
     'ethanol': 1000,
