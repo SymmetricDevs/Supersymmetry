@@ -100,14 +100,6 @@ CENTRIFUGE.recipeBuilder() // Tantalum Extract
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()
 
-MIXER.recipeBuilder()
-    .fluidInputs(fluid('ammonia_solution') * 1000)
-    .fluidInputs(fluid('water') * 1000)
-    .fluidOutputs(fluid('diluted_ammonia_solution') * 1000)
-    .duration(20)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
 CENTRIFUGE.recipeBuilder() // Fluorotantalic Acid Solution
     .fluidInputs(fluid('tantalum_extract') * 8000)
     .fluidInputs(fluid('diluted_ammonia_solution') * 2000)
