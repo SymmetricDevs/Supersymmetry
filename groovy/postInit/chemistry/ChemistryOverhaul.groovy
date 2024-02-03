@@ -3438,7 +3438,7 @@ DISTILLATION_TOWER.recipeBuilder()
         .fluidOutputs(fluid('diethylene_glycol') * 100)
         .fluidOutputs(fluid('ethylene_glycol') * 500)
         .fluidOutputs(fluid('water') * 400)
-        .duration(300)
+        .duration(200)
         .EUt(30)
         .buildAndRegister()
 
