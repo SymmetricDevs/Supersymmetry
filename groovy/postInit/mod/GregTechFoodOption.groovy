@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
@@ -219,16 +219,6 @@ CENTRIFUGE.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-// Unpasteurized Skimmed Milk conflict (adds circuit 1)
-mods.gregtech.centrifuge.removeByInput(24, null, [fluid('milk') * 1000])
-CENTRIFUGE.recipeBuilder()
-        .fluidInputs(fluid('milk') * 1000)
-        .circuitMeta(1)
-        .fluidOutputs(fluid('gtfo_unpasteurized_skimmed_milk') * 800)
-        .duration(100)
-        .EUt(24)
-        .buildAndRegister()
-
 FERMENTER.recipeBuilder()
         .inputs(metaitem('gregtechfoodoption:component.brined_parmigiano_roll') * 64)
         .fluidInputs(fluid('air') * 10000)
@@ -394,6 +384,7 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 BR.recipeBuilder()
+        .circuitMeta(2)
         .fluidInputs(fluid('gtfo_aniline') * 2000)
         .fluidInputs(fluid('hydrogen_chloride') * 1000)
         .outputs(metaitem('gregtechfoodoption:diphenylamine_dust') * 24)
@@ -558,3 +549,6 @@ mods.gregtech.lathe.removeByInput(30, [metaitem('stickSteel')], null)
 
 // Skewer * 8
 mods.gregtech.lathe.removeByInput(40, [metaitem('stickStainlessSteel')], null)
+
+// Baking Soda Solution * 1000
+mods.gregtech.blender.removeByInput(8, [metaitem('dustSodiumBicarbonate')], [fluid('water') * 1000])

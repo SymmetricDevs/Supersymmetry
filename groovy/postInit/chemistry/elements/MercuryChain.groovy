@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 ROASTER = recipemap('roaster')
 FLOTATION = recipemap('froth_flotation')

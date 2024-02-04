@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 CSTR = recipemap('continuous_stirred_tank_reactor')
 TBR = recipemap('trickle_bed_reactor')
@@ -111,18 +111,18 @@ def minor_solvents = [
     // 2,6-Di-tert-butylphenol
 
     BR.recipeBuilder()
-        .inputs(ore('dustAluminium'))
+        .inputs(ore('dustAnyPurityAluminium'))
         .fluidInputs(fluid('phenol') * 3000)
-        .fluidOutputs(fluid('aluminium_phenolate') * 1000)
+        .outputs(metaitem('dustAluminiumPhenolate'))
         .fluidOutputs(fluid('hydrogen') * 3000)
         .duration(200)
         .EUt(120)
         .buildAndRegister()
 
     CSTR.recipeBuilder()
+        .notConsumable(ore('dustAluminiumPhenolate'))
         .fluidInputs(fluid('isobutylene') * 100)
         .fluidInputs(fluid('phenol') * 50)
-        .notConsumable(fluid('aluminium_phenolate') * 50)
         .fluidOutputs(fluid('di_tert_butylphenol') * 50)
         .duration(5)
         .EUt(120)
@@ -188,7 +188,7 @@ CSTR.recipeBuilder()
     // Ferrocene
 
     ALLOY_SMELTER.recipeBuilder()
-        .inputs(ore('dustPotassium'))
+        .inputs(ore('dustAnyPurityPotassium'))
         .inputs(ore('dustMolecularSieve') * 4)
         .outputs(metaitem('dustPotassiumMolecularSieve') * 4)
         .duration(300)
@@ -204,8 +204,8 @@ CSTR.recipeBuilder()
         .buildAndRegister()
 
     ALLOY_SMELTER.recipeBuilder()
-        .inputs(ore('dustSodium'))
-        .inputs(ore('dustLead'))
+        .inputs(ore('dustAnyPuritySodium'))
+        .inputs(ore('dustAnyPurityLead'))
         .outputs(metaitem('ingotSodiumLeadAlloy') * 2)
         .duration(300)
         .EUt(30)
@@ -391,8 +391,8 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 BR.recipeBuilder()
-    .inputs(ore('one_two_diaminopropane_solution') * 2000)
     .inputs(ore('dustSodiumCyanoborohydride') * 14)
+    .fluidInputs(fluid('one_two_diaminopropane_solution') * 2000)
     .fluidInputs(fluid('hydrochloric_acid') * 2000)
     .fluidInputs(fluid('salicylaldehyde') * 2000)
     .outputs(metaitem('dustSalicylideneOneTwoPropanediamine'))
@@ -406,18 +406,19 @@ BR.recipeBuilder()
     // EVA-isobutylene terpolymer for cold flow additives
 
     POLYMERIZATION.recipeBuilder()
+        .circuitMeta(3)
         .fluidInputs(fluid('ethylene') * 1000)
         .fluidInputs(fluid('isobutylene') * 1000)
-        .fluidInputs(fluid('vinyl_acetate_solution') * 1000)
+        .fluidInputs(fluid('vinyl_acetate_suspension') * 1000)
         .inputs(ore('dustTinyPotassiumPersulfate'))
-        .fluidOutputs(fluid('ethylene_isobutylene_vinyl_acetate_mixture') * 2000)
+        .fluidOutputs(fluid('ethylene_isobutylene_vinyl_acetate_suspension') * 2000)
         .duration(200)
         .EUt(120)
         .buildAndRegister()
 
     PHASE_SEPARATOR.recipeBuilder()
-        .fluidInputs(fluid('ethylene_isobutylene_vinyl_acetate_mixture') * 2000)
-        .outputs(metaitem('dustEthyleneIsobutyleneVinylAcetate'))
+        .fluidInputs(fluid('ethylene_isobutylene_vinyl_acetate_suspension') * 2000)
+        .outputs(metaitem('dustEthyleneIsobutyleneVinylAcetate') * 3)
         .fluidOutputs(fluid('methanol') * 1000)
         .duration(50)
         .buildAndRegister()
@@ -512,9 +513,10 @@ def getUniquePairs(Map materialsMap) {
 
 // Cetane-Boosted Diesel * 750
 mods.gregtech.mixer.removeByInput(480, null, [fluid('bio_diesel') * 1000, fluid('tetranitromethane') * 40])
+mods.gregtech.blender.removeByInput(480, null, [fluid('bio_diesel') * 1000, fluid('tetranitromethane') * 40])
 // Cetane-Boosted Diesel * 1000
 mods.gregtech.mixer.removeByInput(480, null, [fluid('diesel') * 1000, fluid('tetranitromethane') * 20])
-
+mods.gregtech.blender.removeByInput(480, null, [fluid('diesel') * 1000, fluid('tetranitromethane') * 20])
 for (major_solvent in major_solvents) {
     for (minor_solvent in minor_solvents) {
         BLENDER.recipeBuilder()
@@ -560,6 +562,15 @@ for (major_solvent in major_solvents) {
             .fluidInputs(fluid(major_solvent) * 1500)
             .fluidInputs(fluid(minor_solvent) * 500)
             .fluidOutputs(fluid('cold_flow_improver') * 2000)
+            .duration(200)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
+
+        BLENDER.recipeBuilder()
+            .fluidInputs(fluid('polydimethylsiloxane') * 250)
+            .fluidInputs(fluid(major_solvent) * 1500)
+            .fluidInputs(fluid(minor_solvent) * 250)
+            .fluidOutputs(fluid('antifoaming_additive') * 2000)
             .duration(200)
             .EUt(Globals.voltAmps[2])
             .buildAndRegister()

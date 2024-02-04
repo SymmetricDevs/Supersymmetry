@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.SinteringGlobals.*
 
 import static gregtech.api.unification.material.Materials.*;
@@ -24,7 +24,6 @@ REACTION_FURNACE = recipemap('reaction_furnace')
 FBR = recipemap('fixed_bed_reactor')
 SIFTER = recipemap('sifter')
 ALLOY_SMELTER = recipemap('alloy_smelter')
-POLYMERIZATION_TANK = recipemap('polymerization_tank')
 BCR = recipemap('bubble_column_reactor')
 TBR = recipemap('trickle_bed_reactor')
 LCR = recipemap('large_chemical_reactor')
@@ -726,11 +725,11 @@ fractions.each { _, fraction -> {
 
 EBF.recipeBuilder()
 .fluidInputs(fluid('oxygen') * 1000)
-.inputs(metaitem('spent_cracking_catalyst'))
+.inputs(metaitem('spent_cracking_catalyst') * 4)
 .fluidOutputs(fluid('flue_gas') * 1000)
-.outputs(metaitem('cracking_catalyst'))
+.outputs(metaitem('cracking_catalyst') * 4)
 .blastFurnaceTemp(1200)
-.duration(200)
+.duration(100)
 .EUt(Globals.voltAmps[1] * 2)
 .buildAndRegister()
 
@@ -913,9 +912,7 @@ DT.recipeBuilder()
 .buildAndRegister()
 
 fractions.each { _, fraction -> {
-
         if (fraction.isUpgradable) {
-
             CRACKER.recipeBuilder()
             .fluidInputs(fraction.get(1000))
             .inputs(metaitem('cracking_catalyst'))
@@ -931,11 +928,8 @@ fractions.each { _, fraction -> {
             .duration(160)
             .EUt(Globals.voltAmps[1])
             .buildAndRegister()
-
         }
-
     }
-
 }
 
 CRACKER.recipeBuilder()
@@ -997,7 +991,7 @@ DT.recipeBuilder()
 .fluidInputs(fluid('xylene') * 1000)
 .fluidOutputs(fluid('ortho_xylene') * 200)
 .fluidOutputs(fluid('meta_para_xylene_mixture') * 800)
-.duration(500)
+.duration(100)
 .EUt(Globals.voltAmps[1] * 2)
 .buildAndRegister()
 
@@ -1005,7 +999,7 @@ CRYSTALLIZER.recipeBuilder()
 .fluidInputs(fluid('meta_para_xylene_mixture') * 4000)
 .outputs(metaitem('dustParaXylene'))
 .fluidOutputs(fluid('meta_xylene') * 3000)
-.duration(500)
+.duration(100)
 .EUt(Globals.voltAmps[1])
 .buildAndRegister()
 
@@ -1057,21 +1051,21 @@ BR.recipeBuilder()
 .EUt(120)
 .buildAndRegister();
 
-CSTR.recipeBuilder()
-.fluidInputs(fluid('n_bromopropane') * 50)
-.fluidInputs(fluid('tripropylamine') * 50)
-.fluidOutputs(fluid('tetrapropylammonium_bromide') * 50)
+BR.recipeBuilder()
+.fluidInputs(fluid('n_bromopropane') * 1000)
+.fluidInputs(fluid('tripropylamine') * 1000)
+.outputs(metaitem('dustTetrapropylammoniumBromide'))
 .duration(5)
 .EUt(120)
 .buildAndRegister();
 
-BR.recipeBuilder()
+LCR.recipeBuilder()
 .inputs(ore('dustSiliconDioxide') * 6)
 .inputs(ore('dustAluminiumSulfate') * 51)
 .inputs(ore('dustSodiumHydroxide'))
+.inputs(ore('dustTinyTetrapropylammoniumBromide'))
 .fluidInputs(fluid('ethanol') * 100)
 .fluidInputs(fluid('demineralized_water') * 1800)
-.fluidInputs(fluid('tetrapropylammonium_bromide') * 100)
 .outputs(metaitem('dustZsmFive'))
 .duration(500)
 .EUt(480)

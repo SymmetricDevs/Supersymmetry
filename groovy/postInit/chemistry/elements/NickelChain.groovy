@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.CarbonGlobals.*
 
 PRIMITIVEBLASTFURNACE = recipemap('primitive_blast_furnace')
@@ -22,7 +22,7 @@ EBF.recipeBuilder()
 
 for (combustible in CarbonGlobals.combustibles()) {
     PRIMITIVEBLASTFURNACE.recipeBuilder()
-            .inputs(ore('dustNickel'))
+            .inputs(ore('dustAnyPurityNickel'))
             .inputs(ore(combustible.name) * combustible.equivalent(1))
             .outputs(metaitem('ingotNickel'))
             .outputs(metaitem(combustible.byproduct) * combustible.equivalent(1))

@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 BR = recipemap('batch_reactor')
 ROASTER = recipemap('roaster')
@@ -15,7 +15,7 @@ BR.recipeBuilder()
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustAntimonyIiiSulfide') * 5)
-    .inputs(ore('dustCarbon') * 3)
+    .inputs(ore('dustAnyPurityCarbon') * 3)
     .fluidInputs(fluid('oxygen') * 6000)
     .outputs(metaitem('dustAntimony') * 2)
     .fluidOutputs(fluid('carbon_monoxide') * 3000)

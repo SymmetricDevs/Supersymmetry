@@ -5,7 +5,7 @@ import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.ore.OrePrefix;
 
 import static gregtech.api.unification.material.Materials.*;
-import static globals.Globals.*
+import globals.Globals
 import static globals.CarbonGlobals.*
 
 EBF = recipemap('electric_blast_furnace')
@@ -133,7 +133,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 // MnCl2
 
 BR.recipeBuilder()
-    .inputs(ore('dustManganese'))
+    .inputs(ore('dustAnyPurityManganese'))
     .fluidInputs(fluid('chlorine') * 2000)
     .outputs(metaitem('dustManganeseIiChloride') * 3)
     .duration(100)

@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.SinteringGlobals.*
 
 import gregtech.api.recipes.ModHandler;
@@ -44,7 +44,7 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSiliconDi
 EBF.recipeBuilder()
         .circuitMeta(2)
         .inputs(ore('dustSiliconDioxide') * 3)
-        .inputs(ore('dustCarbon') * 2)
+        .inputs(ore('dustAnyPurityCarbon') * 2)
         .outputs(metaitem('dustSilicon'))
         .outputs(metaitem('dustTinyAsh'))
         .fluidOutputs(fluid('carbon_monoxide') * 2000)
@@ -70,7 +70,7 @@ DISTILLERY.recipeBuilder()
 
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('purified_silicon_tetrachloride') * 1000)
-        .inputs(ore('dustZinc') * 2)
+        .inputs(ore('dustAnyPurityZinc') * 2)
         .outputs(metaitem('dustHighPuritySilicon'))
         .fluidOutputs(fluid('zinc_chloride') * 864)
         .duration(100)
@@ -95,20 +95,10 @@ DISTILLERY.recipeBuilder()
 
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('purified_trichlorosilane') * 1000)
-        .inputs(ore('dustZinc') * 1)
+        .inputs(ore('dustAnyPurityZinc') * 1)
         .outputs(metaitem('dustHighPuritySilicon'))
         .fluidOutputs(fluid('zinc_chloride') * 432)
         .fluidOutputs(fluid('hydrogen_chloride') * 1000)
-        .duration(100)
-        .EUt(30)
-        .buildAndRegister()
-
-ELECTROLYZER.recipeBuilder()
-        .fluidInputs(fluid('zinc_chloride') * 432)
-        .notConsumable(metaitem('stickIron'))
-        .notConsumable(metaitem('stickNickel'))
-        .outputs(metaitem('dustZinc'))
-        .fluidOutputs(fluid('chlorine') * 2000)
         .duration(100)
         .EUt(30)
         .buildAndRegister()

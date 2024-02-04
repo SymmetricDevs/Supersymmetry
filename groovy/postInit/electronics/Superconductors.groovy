@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import classes.*;
 
 def recipesToRemove = [
@@ -16,12 +16,16 @@ for(name in recipesToRemove) {
 
 // Mercury Barium Calcium Cuprate Dust * 16
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustBarium') * 2, metaitem('dustCalcium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('mercury') * 1000, fluid('oxygen') * 8000])
+mods.gregtech.blender.removeByInput(120, [metaitem('dustBarium') * 2, metaitem('dustCalcium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('mercury') * 1000, fluid('oxygen') * 8000])
 // Samarium Iron Arsenic Oxide Dust * 4
 mods.gregtech.mixer.removeByInput(7680, [metaitem('dustSamarium'), metaitem('dustIron'), metaitem('dustArsenic'), metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 1000])
+mods.gregtech.blender.removeByInput(7680, [metaitem('dustSamarium'), metaitem('dustIron'), metaitem('dustArsenic'), metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 1000])
 // Yttrium Barium Cuprate Dust * 13
 mods.gregtech.mixer.removeByInput(1920, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('oxygen') * 7000])
+mods.gregtech.blender.removeByInput(1920, [metaitem('dustYttrium'), metaitem('dustBarium') * 2, metaitem('dustCopper') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('oxygen') * 7000])
 // Indium Tin Barium Titanium Cuprate Dust * 16
 mods.gregtech.mixer.removeByInput(30720, [metaitem('dustIndium') * 4, metaitem('dustTin') * 2, metaitem('dustBarium') * 2, metaitem('dustTitanium'), metaitem('dustCopper') * 7, metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 14000])
+mods.gregtech.blender.removeByInput(30720, [metaitem('dustIndium') * 4, metaitem('dustTin') * 2, metaitem('dustBarium') * 2, metaitem('dustTitanium'), metaitem('dustCopper') * 7, metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('oxygen') * 14000])
 
 // Hot Mercury Barium Calcium Cuprate Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustMercuryBariumCalciumCuprate'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('nitrogen') * 1000])
@@ -48,7 +52,6 @@ TBR = recipemap('trickle_bed_reactor')
 FBR = recipemap('fixed_bed_reactor')
 BCR = recipemap('bubble_column_reactor')
 BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
 FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
 DISTILLATION_TOWER = recipemap('distillation_tower')
 DISTILLERY = recipemap('distillery')

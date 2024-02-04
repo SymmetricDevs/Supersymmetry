@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.CarbonGlobals.*
 
 ROASTER = recipemap('roaster')
@@ -20,7 +20,7 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 //EBF recipe with Al dust re-enabled:
 EBF.recipeBuilder()
-		.inputs(ore('dustAluminium'))
+		.inputs(ore('dustAnyPurityAluminium'))
 		.outputs(metaitem('ingotAluminium'))
 		.duration(240)
 		.blastFurnaceTemp(933)
@@ -31,10 +31,13 @@ EBF.recipeBuilder()
 
 // Ruby Slurry * 3000
 mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedRuby') * 2], [fluid('aqua_regia') * 3000])
+mods.gregtech.blender.removeByInput(1920, [metaitem('crushedRuby') * 2], [fluid('aqua_regia') * 3000])
 // Sapphire Slurry * 3000
 mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedSapphire') * 2], [fluid('aqua_regia') * 3000])
+mods.gregtech.blender.removeByInput(1920, [metaitem('crushedSapphire') * 2], [fluid('aqua_regia') * 3000])
 // Green Sapphire Slurry * 3000
 mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedGreenSapphire') * 2], [fluid('aqua_regia') * 3000])
+mods.gregtech.blender.removeByInput(1920, [metaitem('crushedGreenSapphire') * 2], [fluid('aqua_regia') * 3000])
 
 // Bauxite -> Red Mud
 
@@ -105,7 +108,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .notConsumable(fluid('cryolite') * 2592)
         .inputs(ore('dustAlumina') * 10)
         .inputs(ore('dustAluminiumTrifluoride'))
-        .inputs(ore('dustCarbon') * 3)
+        .inputs(ore('dustAnyPurityCarbon') * 3)
         .fluidOutputs(fluid('hydrogen_fluoride') * 750)
         .fluidOutputs(fluid('carbon_dioxide') * 3000)
         .outputs(metaitem('ingotAluminium') * 4)
@@ -203,7 +206,7 @@ DISTILLERY.recipeBuilder()
 
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('sulfuric_acid') * 3000)
-        .inputs(ore('dustAluminium') * 2)
+        .inputs(ore('dustAnyPurityAluminium') * 2)
         .outputs(metaitem('dustAluminiumSulfate') * 17)
         .fluidOutputs(fluid('hydrogen') * 6000)
         .duration(100)
@@ -217,4 +220,6 @@ ROASTER.recipeBuilder()
 // .duration(100)
 // .EUt(Globals.voltAmps[4])
 // .buildAndRegister()
+
+
 

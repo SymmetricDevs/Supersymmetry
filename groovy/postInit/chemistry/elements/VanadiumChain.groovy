@@ -1,10 +1,9 @@
 import gregtech.api.GregTechAPI;
 import gregtech.api.unification.material.Material;
-import static globals.Globals.*
+import globals.Globals
 import static globals.SinteringGlobals.*
 
 import static gregtech.api.unification.material.Materials.*;
-import static globals.Globals.*
 
 VACUUM_FREEZER = recipemap('vacuum_freezer')
 CSTR = recipemap('continuous_stirred_tank_reactor')
@@ -129,25 +128,25 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
 MIXER.recipeBuilder()
         .fluidInputs(fluid('distilled_water') * 2000)
         .inputs(ore('dustVanadiferousTitanomagnetite') * 8)
-        .fluidOutputs(fluid('impure_vtm_slurry') * 2000)
+        .fluidOutputs(fluid('impure_vanadiferous_titanomagnetite_slurry') * 2000)
         .EUt(120)
         .duration(200)
         .buildAndRegister()
 
 FLOTATION.recipeBuilder()
-        .fluidInputs(fluid('impure_vtm_slurry') * 2000)
+        .fluidInputs(fluid('impure_vanadiferous_titanomagnetite_slurry') * 2000)
         .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
         .notConsumable(fluid('n_octylamine') * 100)
-        .fluidOutputs(fluid('vtm_slurry') * 1000)
+        .fluidOutputs(fluid('vanadiferous_titanomagnetite_slurry') * 1000)
         .fluidOutputs(fluid('pegmatite_tailing_slurry') * 1000)
         .EUt(480)
         .duration(800)
         .buildAndRegister()
 
 CLARIFIER.recipeBuilder()
-        .fluidInputs(fluid('vtm_slurry') * 1000)
+        .fluidInputs(fluid('vanadiferous_titanomagnetite_slurry') * 1000)
         .fluidOutputs(fluid('wastewater') * 1000)
-        .outputs(metaitem('dustVtmConcentrate') * 16)
+        .outputs(metaitem('dustFlotatedVanadiferousTitanomagnetite') * 16)
         .EUt(30)
         .duration(20)
         .buildAndRegister()
@@ -190,7 +189,7 @@ for (fuel in sintering_fuels) {
     if (!fuel.isPlasma) {
         for (comburent in sintering_comburents) {
             ROTARY_KILN.recipeBuilder()
-                    .inputs(ore('dustVtmConcentrate') * 11)
+                    .inputs(ore('dustFlotatedVanadiferousTitanomagnetite') * 11)
                     .inputs(ore('dustCoke') * 7)
                     .inputs(ore('dustDolomite'))
                     .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
@@ -202,8 +201,8 @@ for (fuel in sintering_fuels) {
                     .buildAndRegister()
 
             ROTARY_KILN.recipeBuilder()
-                    .inputs(ore('dustVtmConcentrate') * 11)
-                    .inputs(ore('dustCarbon') * 7)
+                    .inputs(ore('dustFlotatedVanadiferousTitanomagnetite') * 11)
+                    .inputs(ore('dustAnyPurityCarbon') * 7)
                     .inputs(ore('dustDolomite'))
                     .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
                     .fluidInputs(fluid(comburent.name) * comburent.amountRequired)

@@ -48,6 +48,9 @@ class CarbonGlobals {
     }
 
     public static sources = [
+        new CarbonSource('dustHighPurityCarbon', 100, 'dustTinyAsh').withTraits(HighPurityCombustible).tap {
+            duration = 1
+        },
         new CarbonSource('dustCarbon', 100, 'dustTinyAsh').withTraits(HighPurityCombustible).tap {
             duration = 1
         },

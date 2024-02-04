@@ -1,9 +1,10 @@
+import globals.Globals
+
 CSTR = recipemap('continuous_stirred_tank_reactor')
 TBR = recipemap('trickle_bed_reactor')
 FBR = recipemap('fixed_bed_reactor')
 BCR = recipemap('bubble_column_reactor')
 BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
 FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
 DISTILLATION_TOWER = recipemap('distillation_tower')
 DISTILLERY = recipemap('distillery')

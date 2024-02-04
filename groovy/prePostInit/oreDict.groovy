@@ -88,7 +88,7 @@ ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust')
 //Add non traditional ore blocks to scanner
 
 ore('oreBauxite').add(item('susy:resource_block:0'))
-ore('oreSulfur').add(item('susy:resource_blocK:14'))
+ore('oreSulfur').add(item('susy:resource_block:14'))
 
 ore('oreOrthomagmaticDeposit').add(item('susy:deposit_block:0'))
 ore('oreMetamorphicDeposit').add(item('susy:deposit_block:1'))
@@ -262,77 +262,28 @@ mods.jei.hideCategory('gregtech:combustion_generator')
 
 mods.jei.hideCategory('minecraft.anvil')
 
-//High purity oredicting
-ore('dustLithium').add(metaitem('dustHighPurityLithium'))
-ore('dustBeryllium').add(metaitem('dustHighPurityBeryllium'))
-ore('dustBoron').add(metaitem('dustHighPurityBoron'))
-ore('dustCarbon').add(metaitem('dustHighPurityCarbon'))
-ore('dustSodium').add(metaitem('dustHighPuritySodium'))
-ore('dustMagnesium').add(metaitem('dustHighPurityMagnesium'))
-ore('dustAluminium').add(metaitem('dustHighPurityAluminium'))
-ore('dustSilicon').add(metaitem('dustHighPuritySilicon'))
-ore('dustPhosphorus').add(metaitem('dustHighPurityPhosphorus'))
-ore('dustSulfur').add(metaitem('dustHighPuritySulfur'))
-ore('dustPotassium').add(metaitem('dustHighPurityPotassium'))
-ore('dustCalcium').add(metaitem('dustHighPurityCalcium'))
-ore('dustScandium').add(metaitem('dustHighPurityScandium'))
-ore('dustTitanium').add(metaitem('dustHighPurityTitanium'))
-ore('dustVanadium').add(metaitem('dustHighPurityVanadium'))
-ore('dustChrome').add(metaitem('dustHighPurityChrome'))
-ore('dustManganese').add(metaitem('dustHighPurityManganese'))
-ore('dustIron').add(metaitem('dustHighPurityIron'))
-ore('dustCobalt').add(metaitem('dustHighPurityCobalt'))
-ore('dustNickel').add(metaitem('dustHighPurityNickel'))
-ore('dustCopper').add(metaitem('dustHighPurityCopper'))
-ore('dustZinc').add(metaitem('dustHighPurityZinc'))
-ore('dustGallium').add(metaitem('dustHighPurityGallium'))
-ore('dustGermanium').add(metaitem('dustHighPurityGermanium'))
-ore('dustArsenic').add(metaitem('dustHighPurityArsenic'))
-ore('dustSelenium').add(metaitem('dustHighPuritySelenium'))
-ore('dustRubidium').add(metaitem('dustHighPurityRubidium'))
-ore('dustStrontium').add(metaitem('dustHighPurityStrontium'))
-ore('dustYttrium').add(metaitem('dustHighPurityYttrium'))
-ore('dustZirconium').add(metaitem('dustHighPurityZirconium'))
-ore('dustNiobium').add(metaitem('dustHighPurityNiobium'))
-ore('dustMolybdenum').add(metaitem('dustHighPurityMolybdenum'))
-ore('dustTechnetium').add(metaitem('dustHighPurityTechnetium'))
-ore('dustRhenium').add(metaitem('dustHighPurityRhenium'))
-ore('dustRhodium').add(metaitem('dustHighPurityRhodium'))
-ore('dustPalladium').add(metaitem('dustHighPurityPalladium'))
-ore('dustSilver').add(metaitem('dustHighPuritySilver'))
-ore('dustCadmium').add(metaitem('dustHighPurityCadmium'))
-ore('dustIndium').add(metaitem('dustHighPurityIndium'))
-ore('dustTin').add(metaitem('dustHighPurityTin'))
-ore('dustAntimony').add(metaitem('dustHighPurityAntimony'))
-ore('dustTellurium').add(metaitem('dustHighPurityTellurium'))
-ore('dustIodine').add(metaitem('dustHighPurityIodine'))
-ore('dustCaesium').add(metaitem('dustHighPurityCaesium'))
-ore('dustBarium').add(metaitem('dustHighPurityBarium'))
-ore('dustLanthanum').add(metaitem('dustHighPurityLanthanum'))
-ore('dustHafnium').add(metaitem('dustHighPurityHafnium'))
-ore('dustTantalum').add(metaitem('dustHighPurityTantalum'))
-ore('dustTungsten').add(metaitem('dustHighPurityTungsten'))
-ore('dustOsmium').add(metaitem('dustHighPurityOsmium'))
-ore('dustIridium').add(metaitem('dustHighPurityIridium'))
-ore('dustPlatinum').add(metaitem('dustHighPurityPlatinum'))
-ore('dustGold').add(metaitem('dustHighPurityGold'))
-ore('dustThallium').add(metaitem('dustHighPurityThallium'))
-ore('dustLead').add(metaitem('dustHighPurityLead'))
-ore('dustBismuth').add(metaitem('dustHighPurityBismuth'))
-ore('dustCerium').add(metaitem('dustHighPurityCerium'))
-ore('dustPraseodymium').add(metaitem('dustHighPurityPraseodymium'))
-ore('dustNeodymium').add(metaitem('dustHighPurityNeodymium'))
-ore('dustSamarium').add(metaitem('dustHighPuritySamarium'))
-ore('dustEuropium').add(metaitem('dustHighPurityEuropium'))
-ore('dustGadolinium').add(metaitem('dustHighPurityGadolinium'))
-ore('dustTerbium').add(metaitem('dustHighPurityTerbium'))
-ore('dustDysprosium').add(metaitem('dustHighPurityDysprosium'))
-ore('dustHolmium').add(metaitem('dustHighPurityHolmium'))
-ore('dustErbium').add(metaitem('dustHighPurityErbium'))
-ore('dustThulium').add(metaitem('dustHighPurityThulium'))
-ore('dustYtterbium').add(metaitem('dustHighPurityYtterbium'))
-ore('dustLutetium').add(metaitem('dustHighPurityLutetium'))
-ore('dustThorium').add(metaitem('dustHighPurityThorium'))
+//Dust oredicting
+elements = [
+    'Lithium', 'Beryllium', 'Boron', 'Carbon', 'Sodium', 'Magnesium', 'Aluminium', 'Silicon',
+    'Phosphorus', 'Sulfur', 'Potassium', 'Calcium', 'Scandium', 'Titanium', 'Vanadium', 'Chrome',
+    'Manganese', 'Iron', 'Cobalt', 'Nickel', 'Copper', 'Zinc', 'Gallium', 'Germanium', 'Arsenic',
+    'Selenium', 'Rubidium', 'Strontium', 'Yttrium', 'Ruthenium', 'Zirconium', 'Niobium', 'Molybdenum', 'Technetium',
+    'Rhenium', 'Rhodium', 'Palladium', 'Silver', 'Cadmium', 'Indium', 'Tin', 'Antimony', 'Tellurium',
+    'Iodine', 'Caesium', 'Barium', 'Lanthanum', 'Hafnium', 'Tantalum', 'Tungsten', 'Osmium',
+    'Iridium', 'Platinum', 'Gold', 'Thallium', 'Lead', 'Bismuth', 'Cerium', 'Praseodymium',
+    'Neodymium', 'Samarium', 'Europium', 'Gadolinium', 'Terbium', 'Dysprosium', 'Holmium', 'Erbium',
+    'Thulium', 'Ytterbium', 'Lutetium', 'Thorium'
+]
+
+elements.each { element ->
+    String anyPurityDust = "dustAnyPurity${element}"
+    String highPurityDust = "dustHighPurity${element}"
+    String normalDust = "dust${element}"
+
+    // Add both high purity and normal dust to the anyPurity dust ore dictionary entry
+    ore(anyPurityDust).add(metaitem(highPurityDust))
+    ore(anyPurityDust).add(metaitem(normalDust))
+}
 
 //NTP knives
 /* //custom oredicts break with custom transforms, will report this bug today
@@ -346,3 +297,25 @@ for (knife in name_knifeNTP) {
     ore('knifeNTP').add(item(knife))
 }
 */
+
+// Nitrogen Nutrients
+ore('nutrientNitrogen').add(metaitem('dustAmmoniumChloride'))
+ore('nutrientNitrogen').add(metaitem('dustAmmoniumNitrate'))
+ore('nutrientNitrogen').add(metaitem('dustAmmoniumSulfate'))
+ore('nutrientNitrogen').add(metaitem('dustUrea'))
+
+// Potassium Nutrients
+ore('nutrientPotassium').add(metaitem('dustAsh'))
+ore('nutrientPotassium').add(metaitem('dustCharcoal'))
+ore('nutrientPotassium').add(metaitem('dustRockSalt'))
+ore('nutrientPotassium').add(metaitem('dustPotassiumCarbonate'))
+ore('nutrientPotassium').add(metaitem('dustPotash'))
+
+// Phosphorous Nutrients
+ore('nutrientPhosphorous').add(metaitem('dustChlorapatite'))
+ore('nutrientPhosphorous').add(metaitem('dustHydroxyapatite'))
+ore('nutrientPhosphorous').add(metaitem('dustFluorapatite'))
+ore('nutrientPhosphorous').add(metaitem('dustTricalciumPhosphate'))
+ore('nutrientPhosphorous').add(metaitem('dustPhosphorus'))
+ore('nutrientPhosphorous').add(metaitem('dustPhosphorite'))
+ore('nutrientPhosphorous').add(item('minecraft:dye', 15))

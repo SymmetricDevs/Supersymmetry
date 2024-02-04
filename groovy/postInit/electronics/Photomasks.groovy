@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 ASSEMBLER = recipemap('assembler')
 BR = recipemap('batch_reactor')
@@ -52,6 +52,7 @@ BR.recipeBuilder()
 // UV initiator, Benzenediazonium tetrafluoroborate
 
 BR.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('dustSodiumNitrite') * 4)
     .fluidInputs(fluid('hydrogen_chloride') * 2000)
     .fluidInputs(fluid('gtfo_aniline') * 1000)

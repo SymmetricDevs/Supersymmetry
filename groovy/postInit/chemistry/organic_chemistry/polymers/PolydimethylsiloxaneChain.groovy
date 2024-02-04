@@ -1,5 +1,4 @@
-import static globals.Globals.*
-
+import globals.Globals
 
 DISTILLATION_TOWER = recipemap('distillation_tower')
 FLUIDIZED_BED_REACTOR = recipemap('fluidized_bed_reactor')
@@ -81,7 +80,7 @@ POLYMERIZATION.recipeBuilder()
     .fluidInputs(fluid('polydimethylsiloxane') * 1000)
     .fluidInputs(fluid('di_tert_butyl_peroxide') * 50)
     .inputs(ore('dustSiliconDioxide'))
-    .fluidOutputs(fluid('silicone_rubber') * 1000)
+    .fluidOutputs(fluid('silicone_rubber') * 144)
     .duration(100)
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()
@@ -90,7 +89,7 @@ POLYMERIZATION.recipeBuilder()
     .fluidInputs(fluid('polydimethylsiloxane') * 1000)
     .fluidInputs(fluid('di_tert_butyl_peroxide') * 50)
     .inputs(ore('dustCarbon'))
-    .fluidOutputs(fluid('silicone_rubber') * 1000)
+    .fluidOutputs(fluid('silicone_rubber') * 144)
     .duration(100)
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()

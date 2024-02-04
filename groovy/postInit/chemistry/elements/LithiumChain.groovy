@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.SinteringGlobals.*
 
 BR = recipemap('batch_reactor')
@@ -260,16 +260,7 @@ CRYSTALLIZER.recipeBuilder()
         .EUt(200)
         .buildAndRegister()
 
-MIXER.recipeBuilder()
-        .circuitMeta(1)
-        .fluidInputs(fluid('water') * 1000)
-        .inputs(ore('dustSodiumBicarbonate') * 6)
-        .fluidOutputs(fluid('sodium_bicarbonate_solution') * 1000)
-        .EUt(30)
-        .duration(80)
-        .buildAndRegister()
-
-BR.recipeBuilder()
+BR.recipeBuilder()      
         .inputs(ore('dustAluminiumSulfate') * 17)
         .fluidInputs(fluid('sodium_bicarbonate_solution') * 6000)
         .outputs(metaitem('dustAluminiumHydroxide') * 14)

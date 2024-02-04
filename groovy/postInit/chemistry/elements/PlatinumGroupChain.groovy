@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 BR = recipemap('batch_reactor')
 CSTR = recipemap('continuous_stirred_tank_reactor')
@@ -38,7 +38,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 BR.recipeBuilder()
-    .inputs(ore('dustZinc'))
+    .inputs(ore('dustAnyPurityZinc'))
     .fluidInputs(fluid('alluvial_pgm_solution') * 10000)
     .outputs(metaitem('dustIronIiChloride') * 3)
     .fluidOutputs(fluid('cemented_alluvial_pgm_solution') * 10000)

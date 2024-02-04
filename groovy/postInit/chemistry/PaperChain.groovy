@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 AUTOCLAVE = recipemap('autoclave')
 ROASTER = recipemap('roaster')

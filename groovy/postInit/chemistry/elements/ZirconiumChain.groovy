@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.CarbonGlobals.*
 
 MIXER = recipemap('mixer')
@@ -63,7 +63,7 @@ CLARIFIER.recipeBuilder()
 
 ELECTROSTATIC_SEPARATOR.recipeBuilder()
         .inputs(ore('dustFlotatedZircon'))
-        .outputs(metaitem('dustZirconConcentrate'))
+        .outputs(metaitem('dustConcentrateZircon'))
         .chancedOutput(metaitem('dustIlmenite'), 500, 100)
         .chancedOutput(metaitem('dustChromite'), 500, 100)
         .chancedOutput(metaitem('dustHematite'), 500, 100)
@@ -74,7 +74,7 @@ ELECTROSTATIC_SEPARATOR.recipeBuilder()
 
 // Thermal disassociation (90%)
 ADVANCED_ARC_FURNACE.recipeBuilder()
-        .inputs(ore('dustZirconConcentrate'))
+        .inputs(ore('dustConcentrateZircon'))
         .chancedOutput(metaitem('dustFusedZirconia') * 3, 9000, 0)
         .outputs(metaitem('dustSiliconDioxide') * 3)
         .duration(20)
@@ -84,7 +84,7 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
 // Carbochlorination (100%)
 for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
-                .inputs(ore('dustZirconConcentrate'))
+                .inputs(ore('dustConcentrateZircon'))
                 .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(4))
                 .fluidInputs(fluid('chlorine') * 8000)
                 .outputs(metaitem('dustImpureZirconiumTetrachloride') * 5)
@@ -220,7 +220,7 @@ for (inertGas in Globals.inertGases) {
                 .circuitMeta(2)
                 .inputs(ore('dustZirconiumTetrachloride') * 5)
                 .notConsumable(fluid(inertGas.name) * inertGas.amount_required)
-                .inputs(ore('dustMagnesium') * 2)
+                .inputs(ore('dustAnyPurityMagnesium') * 2)
                 .outputs(metaitem('sponge.zirconium.crude'))
                 .fluidOutputs(fluid('magnesium_chloride') * 864)
                 .blastFurnaceTemp(2150)
@@ -247,7 +247,7 @@ MACERATOR.recipeBuilder()
 
 BR.recipeBuilder()
         .inputs(ore('dustZirconium'))
-        .inputs(ore('dustIodine') * 4)
+        .inputs(ore('dustAnyPurityIodine') * 4)
         .outputs(metaitem('dustZirconiumIodide') * 5)
         .duration(300)
         .EUt(Globals.voltAmps[3])

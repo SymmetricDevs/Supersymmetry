@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.CarbonGlobals.*
 
 FLOTATION = recipemap('froth_flotation')
@@ -8,7 +8,6 @@ TBR = recipemap('trickle_bed_reactor')
 FBR = recipemap('fixed_bed_reactor')
 BCR = recipemap('bubble_column_reactor')
 BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
 FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
 HT_DISTILLATION_TOWER = recipemap('high_temperature_distillation')
 DISTILLERY = recipemap('distillery')
@@ -252,7 +251,7 @@ AUTOCLAVE.recipeBuilder()
 
 EBF.recipeBuilder()
         .inputs(ore('dustZincRichSlag') * 10)
-        .inputs(ore('dustCarbon') * 2)
+        .inputs(ore('dustAnyPurityCarbon') * 2)
         .outputs(metaitem('dustWaelzOxide') * 7)
         .outputs(metaitem('dustGermaniumRichSlag') * 3)
         .blastFurnaceTemp(1400)

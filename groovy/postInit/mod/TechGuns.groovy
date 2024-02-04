@@ -1,6 +1,6 @@
 import techguns.items.guns.GenericGun;
 import techguns.plugins.crafttweaker.GunStatTweaker;
-import static globals.Globals.*
+import globals.Globals
 
 def name_removals = [
 	"techguns:basicmachine_0_ammo_press",

@@ -1,10 +1,9 @@
-import static globals.Globals.*
+import globals.Globals
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
-
 MIXER = recipemap('mixer')
 FLUID_HEATER = recipemap('fluid_heater')
 CENTRIFUGE = recipemap('centrifuge')
@@ -20,8 +19,10 @@ MACERATOR = recipemap('macerator')
 
 // Fertilizer * 4
 mods.gregtech.mixer.removeByInput(30, [item('minecraft:dirt'), metaitem('dustWood') * 2, item('minecraft:sand') * 4], [fluid('water') * 1000])
+mods.gregtech.blender.removeByInput(30, [item('minecraft:dirt'), metaitem('dustWood') * 2, item('minecraft:sand') * 4], [fluid('water') * 1000])
 // Fertilizer Solution * 5000
 mods.gregtech.mixer.removeByInput(16, [item('minecraft:dye', 15)], [fluid('water') * 5000])
+mods.gregtech.blender.removeByInput(16, [item('minecraft:dye', 15)], [fluid('water') * 5000])
 // Greenhouse Glass * 1
 mods.gregtech.assembler.removeByInput(24, [metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust'), item('gregtech:transparent_casing')], null)
 
@@ -73,76 +74,46 @@ CHEMICAL_BATH.recipeBuilder()
 
 //FERTILIZER CHAIN
 
-def nitrogenNutrients = [
-        metaitem('dustAmmoniumChloride'),
-        metaitem('dustAmmoniumNitrate'),
-        metaitem('dustAmmoniumSulfate'),
-        metaitem('dustUrea')
-];
+MIXER.recipeBuilder()
+        .inputs(ore('nutrientNitrogen'))
+        .inputs(ore('nutrientPotassium'))
+        .inputs(ore('nutrientPhosphorous'))
+        .outputs(metaitem('fertilizer') * 5)
+        .EUt(30)
+        .duration(100)
+        .buildAndRegister();
 
-def potassiumNutrients = [
-        metaitem('dustAsh'),
-        metaitem('dustCharcoal'),
-        metaitem('dustRockSalt'),
-        metaitem('dustPotassiumCarbonate'),
-        metaitem('dustPotash')
-];
+MIXER.recipeBuilder()
+        .inputs(ore('dustAmmoniumDihydrogenPhosphate') * 2)
+        .inputs(ore('nutrientPotassium'))
+        .outputs(metaitem('fertilizer') * 5)
+        .EUt(30)
+        .duration(100)
+        .buildAndRegister()
 
-def phosphorusNutrients = [
-        metaitem('dustChlorapatite'),
-        metaitem('dustHydroxyapatite'),
-        metaitem('dustFluorapatite'),
-        metaitem('dustTricalciumPhosphate'),
-        metaitem('dustPhosphorus'),
-        metaitem('dustPhosphorite'),
-        item('minecraft:dye', 15)
-];
+MIXER.recipeBuilder()
+        .inputs(ore('dustSaltpeter') * 2)
+        .inputs(ore('nutrientPhosphorous'))
+        .outputs(metaitem('fertilizer') * 5)
+        .EUt(30)
+        .duration(100)
+        .buildAndRegister()
 
-for (p in phosphorusNutrients) {
-    for (n in nitrogenNutrients) {
-        for (k in potassiumNutrients) {
-            MIXER.recipeBuilder()
-                    .inputs(p)
-                    .inputs(n)
-                    .inputs(k)
-                    .outputs(metaitem('fertilizer') * 5)
-                    .EUt(30)
-                    .duration(100)
-                    .buildAndRegister()
-        }
-    }
-    MIXER.recipeBuilder()
-            .inputs(ore('dustAmmoniumDihydrogenPhosphate') * 2)
-            .inputs(p)
-            .outputs(metaitem('fertilizer') * 5)
-            .EUt(30)
-            .duration(100)
-            .buildAndRegister()
+MIXER.recipeBuilder()
+        .inputs(metaitem('bio_chaff') * 2)
+        .inputs(ore('nutrientPhosphorous'))
+        .outputs(metaitem('fertilizer') * 5)
+        .EUt(30)
+        .duration(100)
+        .buildAndRegister()
 
-    MIXER.recipeBuilder()
-            .inputs(ore('dustSaltpeter') * 2)
-            .inputs(p)
-            .outputs(metaitem('fertilizer') * 5)
-            .EUt(30)
-            .duration(100)
-            .buildAndRegister()
-
-    MIXER.recipeBuilder()
-            .inputs(metaitem('bio_chaff') * 2)
-            .inputs(p)
-            .outputs(metaitem('fertilizer') * 5)
-            .EUt(30)
-            .duration(100)
-            .buildAndRegister()
-
-    MIXER.recipeBuilder()
-            .fluidInputs(fluid('fermented_biomass') * 1000)
-            .inputs(p)
-            .outputs(metaitem('fertilizer') * 5)
-            .EUt(30)
-            .duration(100)
-            .buildAndRegister()
-}
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('fermented_biomass') * 1000)
+        .inputs(ore('nutrientPhosphorous'))
+        .outputs(metaitem('fertilizer') * 5)
+        .EUt(30)
+        .duration(100)
+        .buildAndRegister()
 
 MIXER.recipeBuilder()
         .inputs(metaitem('fertilizer') * 2)
@@ -151,6 +122,8 @@ MIXER.recipeBuilder()
         .EUt(30)
         .duration(60)
         .buildAndRegister()
+
+
 
 COMPRESSOR.recipeBuilder()
         .inputs(ore('treeLeaves') * 16)

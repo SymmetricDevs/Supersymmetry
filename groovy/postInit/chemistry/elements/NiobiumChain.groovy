@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 FF = recipemap('froth_flotation')
 GRAVITY_SEPARATOR = recipemap('gravity_separator')
@@ -30,7 +30,7 @@ GRAVITY_SEPARATOR.recipeBuilder() // Sifted Pyrochlore
 
 ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Pyrochlore Concentrate
     .inputs(ore('dustSiftedPyrochlore'))
-    .outputs(metaitem('dustPyrochloreConcentrate'))
+    .outputs(metaitem('dustConcentratePyrochlore'))
     .chancedOutput(metaitem('dustLimestoneTailings'), 2500, 0)
     .chancedOutput(metaitem('dustCalcite'), 2500, 0)
     .EUt(Globals.voltAmps[1])
@@ -38,7 +38,7 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Pyrochlore Concentrate
     .buildAndRegister()
 
 MIXER.recipeBuilder() // Impure Pyrochlore Slurry
-    .inputs(ore('dustPyrochloreConcentrate') * 8)
+    .inputs(ore('dustConcentratePyrochlore') * 8)
     .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('impure_pyrochlore_slurry') * 2000)
     .EUt(Globals.voltAmps[3])
@@ -85,7 +85,7 @@ CHEMICAL_BATH.recipeBuilder() // Digested Pyrochlore
 REACTION_FURNACE.recipeBuilder() // Ferroniobium-tantalum
     .inputs(ore('dustIronIiiOxide') * 15)
     .inputs(ore('dustDigestedPyrochlore') * 7)
-    .inputs(ore('dustAluminium') * 42)
+    .inputs(ore('dustAnyPurityAluminium') * 42)
     .fluidInputs(fluid('sodium_nitrate') * 720)
     .outputs(metaitem('dustFerroniobiumTantalum') * 20)
     .outputs(metaitem('dustAlumina') * 105)
@@ -151,7 +151,7 @@ GRAVITY_SEPARATOR.recipeBuilder() // Sifted Columbite
 
 ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Columbite Concentrate
     .inputs(ore('dustSiftedColumbite'))
-    .outputs(metaitem('dustColumbiteConcentrate'))
+    .outputs(metaitem('dustConcentrateColumbite'))
     .chancedOutput(metaitem('dustPegmatiteTailings'), 2500, 0)
     .chancedOutput(metaitem('dustNetherQuartz'), 2500, 0)
     .EUt(Globals.voltAmps[1])
@@ -159,7 +159,7 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Columbite Concentrate
     .buildAndRegister()
 
 MIXER.recipeBuilder() // Impure Columbite Slurry
-    .inputs(ore('dustColumbiteConcentrate') * 8)
+    .inputs(ore('dustConcentrateColumbite') * 8)
     .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('impure_columbite_slurry') * 2000)
     .EUt(Globals.voltAmps[3])
@@ -259,7 +259,7 @@ ROASTER.recipeBuilder() // Niobium Oxide
 
 ADVANCED_ARC_FURNACE.recipeBuilder() // Niobium
     .inputs(ore('dustNiobiumOxide') * 21)
-    .inputs(ore('dustAluminium') * 10)
+    .inputs(ore('dustAnyPurityAluminium') * 10)
     .outputs(metaitem('dustAlumina') * 25)
     .fluidOutputs(fluid('niobium') * 864)
     .duration(240)

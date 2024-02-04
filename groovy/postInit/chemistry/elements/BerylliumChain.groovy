@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.SinteringGlobals.*
 
 BR = recipemap('batch_reactor')
@@ -77,7 +77,7 @@ BR.recipeBuilder() //75%
 
 BR.recipeBuilder() //100% (Technically, it makes a little bit of ferric EDTA but I dont want to model it)
         .inputs(ore('dustSodiumHydroxide') * 18)
-        .inputs(ore('dustTinyTetrasodiumEthylenediaminetetraaceticAcid'))
+        .inputs(ore('dustTinyTetrasodiumEthylenediaminetetraacetate'))
         .fluidInputs(fluid('beryllium_sulfate_solution') * 1000)
         .outputs(metaitem('dustBerylliumHydroxide') * 12)
         .fluidOutputs(fluid('sodium_sulfate_solution') * 8000)
@@ -146,7 +146,7 @@ ROASTER.recipeBuilder()
 //3BeO · Al2O3 · 6SiO2 + 18Cl2 + 18C → 3BeCl2 + 2AlCl3 + 6SiCl4 + 18CO
 REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustEmerald'))
-        .inputs(ore('dustCarbon') * 18)
+        .inputs(ore('dustAnyPurityCarbon') * 18)
         .fluidInputs(fluid('chlorine') * 36000)
         .fluidOutputs(fluid('chlorinated_beryl') * 900)
         .EUt(Globals.voltAmps[4])
@@ -183,7 +183,7 @@ BR.recipeBuilder()
 //BERYLLIUM CHLORIDE ROUTE (SHORTER, EV)
 REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustBerylliumOxide') * 2)
-        .inputs(ore('dustCarbon') * 1)
+        .inputs(ore('dustAnyPurityCarbon') * 1)
         .fluidInputs(fluid('chlorine') * 2000)
         .outputs(metaitem('dustBerylliumChloride') * 3)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
@@ -240,7 +240,7 @@ BR.recipeBuilder()
         .EUt(Globals.voltAmps[2])
         .duration(100)
         .buildAndRegister()
-        
+
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('ammonium_fluoroberyllate_solution') * 1000)
         .outputs(metaitem('dustAmmoniumFluoroberyllate') * 13)
@@ -284,7 +284,7 @@ SINTERING_OVEN.recipeBuilder()
 
 REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustBerylliumFluoride') * 3)
-        .inputs(ore('dustMagnesium'))
+        .inputs(ore('dustAnyPurityMagnesium'))
         .notConsumable(metaitem('crucible.graphite'))
         .outputs(metaitem('dustBeryllium'))
         .outputs(metaitem('dustMagnesiumFluoride') * 3)

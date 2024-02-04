@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.SinteringGlobals.*
 
 import static gregtech.api.unification.material.Materials.*;
@@ -476,10 +476,11 @@ DUMPER = recipemap('dumping')
     // Ethylene propylene copolymer
 
     POLYMERIZATION.recipeBuilder()
+        .circuitMeta(2)
         .notConsumable(metaitem('dustKaminskyCatalyst'))
-        .fluidInputs(fluid('ethylene') * 500)
-        .fluidInputs(fluid('propene') * 500)
-        .outputs(metaitem('dustEthylenePropyleneCopolymer'))
+        .fluidInputs(fluid('ethylene') * 1000)
+        .fluidInputs(fluid('propene') * 1000)
+        .outputs(metaitem('dustEthylenePropyleneCopolymer') * 2)
         .EUt(30)
         .duration(200)
         .buildAndRegister()
@@ -487,7 +488,7 @@ DUMPER = recipemap('dumping')
     // Polyalkyl methacrylate
 
     BR.recipeBuilder()
-        .fluidInputs(fluid('methacrylamide_sulfate') * 1000)
+        .inputs(ore('dustMethacrylamideSulfate'))
         .fluidInputs(fluid('water') * 1000)
         .fluidOutputs(fluid('methacrylic_acid') * 1000)
         .outputs(metaitem('dustAmmoniumBisulfate') * 11)
@@ -497,7 +498,7 @@ DUMPER = recipemap('dumping')
 
     CSTR.recipeBuilder()
         .fluidInputs(fluid('methacrylic_acid') * 50)
-        .fluidInputs(fluid('lauric_acid') * 50)
+        .fluidInputs(fluid('n_dodecanol') * 50)
         .fluidInputs(fluid('sulfuric_acid') * 50)
         .fluidOutputs(fluid('alkyl_methacrylate') * 50)
         .fluidOutputs(fluid('diluted_sulfuric_acid') * 100)
@@ -524,7 +525,7 @@ DUMPER = recipemap('dumping')
 
     DRYER.recipeBuilder()
         .fluidInputs(fluid('polyalkyl_methacrylate_solution') * 2000)
-        .outputs(metaitem('dustPama') * 7)
+        .outputs(metaitem('dustPama'))
         .duration(200)
         .EUt(30)
         .buildAndRegister()
@@ -579,6 +580,7 @@ DUMPER = recipemap('dumping')
     // Calcium dodecylbenzene sulfonate
 
     BR.recipeBuilder()
+        .circuitMeta(3)
         .fluidInputs(fluid('benzene') * 1000)
         .fluidInputs(fluid('one_dodecene') * 1000)
         .notConsumable(fluid('hydrofluoric_acid') * 100)
@@ -889,12 +891,12 @@ DUMPER = recipemap('dumping')
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-    CSTR.recipeBuilder()
-        .fluidInputs(fluid('nonylphenol') * 50)
-        .fluidInputs(fluid('sodium_hydroxide_solution') * 50)
-        .fluidInputs(fluid('chloroacetic_acid') * 50)
-        .fluidOutputs(fluid('four_nonylphenoxyacetic_acid') * 50)
-        .fluidOutputs(fluid('diluted_saltwater') * 100)
+    BR.recipeBuilder()
+        .fluidInputs(fluid('nonylphenol') * 1000)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+        .fluidInputs(fluid('chloroacetic_acid') * 1000)
+        .outputs(metaitem('dustFourNonylphenoxyaceticAcid'))
+        .fluidOutputs(fluid('diluted_saltwater') * 2000)
         .duration(10)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
@@ -904,7 +906,7 @@ DUMPER = recipemap('dumping')
     // Benzotriazole
 
     BR.recipeBuilder()
-        .inputs(ore('dustTwoNitrochlorobenzene'))
+        .inputs(ore('dustTwoChloronitrobenzene'))
         .fluidInputs(fluid('toluene') * 1000)
         .fluidInputs(fluid('ammonia') * 2000)
         .outputs(metaitem('dustAmmoniumChloride') * 6)
@@ -917,15 +919,15 @@ DUMPER = recipemap('dumping')
         .notConsumable(ore('catalystBedPalladium'))
         .fluidInputs(fluid('two_nitroaniline_solution') * 50)
         .fluidInputs(fluid('hydrogen') * 300)
-        .fluidOutputs(fluid('ortho_phenylenediamine_solution') * 150)
+        .fluidOutputs(fluid('ortho_phenylenediamine_slurry') * 150)
         .duration(200)
         .EUt(30)
         .buildAndRegister()
 
     DISTILLATION_TOWER.recipeBuilder()
-        .fluidInputs(fluid('ortho_phenylenediamine_solution') * 3000)
+        .fluidInputs(fluid('ortho_phenylenediamine_slurry') * 3000)
         .fluidOutputs(fluid('toluene') * 1000)
-        .fluidOutputs(fluid('steam') * 2000)
+        .fluidOutputs(fluid('water') * 2000)
         .outputs(metaitem('dustOrthoPhenylenediamine') * 16)
         .duration(200)
         .EUt(30)
@@ -956,8 +958,8 @@ DUMPER = recipemap('dumping')
 // Chelates: SALEN
 
 BR.recipeBuilder()
-    .inputs(ore('ethylenediamine') * 1000)
     .inputs(ore('dustSodiumCyanoborohydride') * 14)
+    .fluidInputs(fluid('ethylenediamine') * 1000)
     .fluidInputs(fluid('hydrochloric_acid') * 2000)
     .fluidInputs(fluid('salicylaldehyde') * 2000)
     .outputs(metaitem('dustSalicylideneEthylenediamine'))
@@ -997,7 +999,7 @@ def liquidFrictionModifierMap = [
 
 def solidAntiwearMap = [
     'dustMolybdenumDialkyldithiophosphate': 4,
-    'dustZincBisdiethyldithiocarbamate': 2
+    'dustZincBisdiamyldithiocarbamate': 2
 
 ]
 
@@ -1123,7 +1125,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
     BLENDER.recipeBuilder()
         .inputs(ore(ppd))
         .fluidInputs(fluid('calcium_phenate') * 1000)
-        .fluidInputs(fluid('four_nonylphenoxyacetic_acid') * 1000)
+        .inputs(ore('dustFourNonylphenoxyaceticAcid'))
         .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * 3 * 4 * 1.5))
         .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * 3 * 4 * 1.5))
         .duration(200)
@@ -1144,7 +1146,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
         BLENDER.recipeBuilder()
             .inputs(ore(det))
             .inputs(ore(ppd))
-            .fluidInputs(fluid('four_nonylphenoxyacetic_acid') * 1000)
+            .inputs(ore('dustFourNonylphenoxyaceticAcid'))
             .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .duration(200)

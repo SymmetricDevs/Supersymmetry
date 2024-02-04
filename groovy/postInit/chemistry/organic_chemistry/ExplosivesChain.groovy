@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 
 //TODO: ADD MORE EXPLOSIVES (AND THEIR CHAINS)
 

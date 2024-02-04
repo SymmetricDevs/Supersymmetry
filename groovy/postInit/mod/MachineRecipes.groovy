@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 
@@ -668,12 +668,6 @@ crafting.addShaped("gregtech:condenser", metaitem('condenser'), [
 		[null, metaitem('electric.pump.lv'), null]
 ]);
 
-crafting.addShaped("gregtech:condenser", metaitem('condenser'), [
-		[null, metaitem('electric.pump.lv'), null],
-		[metaitem('frameSteel'), item('gregtech:boiler_casing', 1), metaitem('frameSteel')],
-		[null, metaitem('electric.pump.lv'), null]
-]);
-
 crafting.addShaped("gregtech:heat_exchanger", metaitem('heat_exchanger'), [
 		[null, metaitem('frameSteel'), null],
 		[metaitem('electric.pump.lv'), item('gregtech:boiler_casing', 1), metaitem('electric.pump.lv')],
@@ -1017,7 +1011,7 @@ recipemap('assembler').recipeBuilder()
 // AIR DIST. CONTROLLERS
 
 recipemap('assembler').recipeBuilder()
-		.circuitMeta(1)
+		.circuitMeta(2)
 		.inputs(metaitem('hull.Hv'))
 		.inputs(metaitem('frameAluminium') * 3)
 		.inputs(ore('circuitHv') * 4)
@@ -1030,7 +1024,7 @@ recipemap('assembler').recipeBuilder()
 		.buildAndRegister()
 
 recipemap('assembler').recipeBuilder()
-		.circuitMeta(2)
+		.circuitMeta(3)
 		.inputs(metaitem('hull.Hv'))
 		.inputs(metaitem('frameAluminium') * 3)
 		.inputs(ore('circuitHv') * 2)
@@ -1044,7 +1038,7 @@ recipemap('assembler').recipeBuilder()
 		.buildAndRegister()
 
 recipemap('assembler').recipeBuilder()
-		.circuitMeta(3)
+		.circuitMeta(4)
 		.inputs(metaitem('hull.Hv'))
 		.inputs(metaitem('frameAluminium') * 12)
 		.inputs(ore('circuitHv') * 6)
@@ -1052,6 +1046,19 @@ recipemap('assembler').recipeBuilder()
 		.inputs(ore('plateAluminium') * 4)
 		.inputs(metaitem('mineral_wool') * 64)
 		.outputs(metaitem('high_pressure_cryogenic_distillation_plant'))
+		.EUt(30)
+		.duration(600)
+		.buildAndRegister()
+
+recipemap('assembler').recipeBuilder()
+		.circuitMeta(3)
+		.inputs(metaitem('hull.Hv'))
+		.inputs(metaitem('frameStainlessSteel'))
+		.inputs(ore('platePolytetrafluoroethylene') * 4)
+		.inputs(ore('circuitHv') * 2)
+		.inputs(metaitem('electric.motor.hv'))
+		.inputs(metaitem('electric.pump.hv') * 4)
+		.outputs(metaitem('blender'))
 		.EUt(30)
 		.duration(600)
 		.buildAndRegister()

@@ -1,4 +1,4 @@
-import static globals.Globals.*
+import globals.Globals
 import static globals.SinteringGlobals.*
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
@@ -13,7 +13,6 @@ TBR = recipemap('trickle_bed_reactor')
 FBR = recipemap('fixed_bed_reactor')
 BCR = recipemap('bubble_column_reactor')
 BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
 FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
 DISTILLATION_TOWER = recipemap('distillation_tower')
 DISTILLERY = recipemap('distillery')
@@ -74,6 +73,7 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), met
 
 // Ferrite Mixture Dust * 6
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
+mods.gregtech.blender.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 
 // Nickel Zinc Ferrite Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustFerriteMixture')], [fluid('oxygen') * 2000])
