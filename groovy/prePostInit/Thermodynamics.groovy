@@ -1,5 +1,5 @@
 import classes.*;
-import globals.Globals.*;
+import globals.Globals;
 
 import java.lang.Math;
 
@@ -674,7 +674,7 @@ for (FluidFuel in FluidFuels) {
                 .fluidInputs(liquid('air') * 100)
                 .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
                 .duration(FluidFuel.duration)
-                .EUt(128)
+                .EUt(-128)
                 .buildAndRegister();
 
             recipemap('gas_turbine').recipeBuilder()
@@ -683,7 +683,7 @@ for (FluidFuel in FluidFuels) {
                 .fluidInputs(liquid('oxygen') * 20)
                 .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
                 .duration((int) (FluidFuel.duration * 1.5))
-                .EUt(128)
+                .EUt(-128)
                 .buildAndRegister();
         } else {
             recipemap('gas_turbine').recipeBuilder()
@@ -692,7 +692,7 @@ for (FluidFuel in FluidFuels) {
                 .fluidInputs(liquid('air') * 100)
                 .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
                 .duration(FluidFuel.duration)
-                .EUt(32)
+                .EUt(-32)
                 .buildAndRegister();
 
             recipemap('gas_turbine').recipeBuilder()
@@ -701,7 +701,7 @@ for (FluidFuel in FluidFuels) {
                 .fluidInputs(liquid('oxygen') * 20)
                 .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
                 .duration((int) (FluidFuel.duration * 1.5))
-                .EUt(32)
+                .EUt(-32)
                 .buildAndRegister();
         }
 
@@ -713,7 +713,7 @@ for (FluidFuel in FluidFuels) {
                     .fluidInputs(liquid('oxygen') * 20)
                     .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
                     .duration((int) (FluidFuel.duration * lubricant.boost * 1.5))
-                    .EUt(128)
+                    .EUt(-128)
                     .buildAndRegister();
             } else {
                 recipemap('gas_turbine').recipeBuilder()
@@ -722,7 +722,7 @@ for (FluidFuel in FluidFuels) {
                     .fluidInputs(liquid('oxygen') * 20)
                     .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
                     .duration((int) (FluidFuel.duration * lubricant.boost * 1.5))
-                    .EUt(32)
+                    .EUt(-32)
                     .buildAndRegister();
             }
         }
@@ -774,23 +774,30 @@ for (WorkingFluid in WorkingFluids) {
             .buildAndRegister();
 
     recipemap('steam_turbine').recipeBuilder()
+            .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+            .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+            .duration(WorkingFluid.duration * WorkingFluid.efficiency)
+            .EUt(32)
+            .buildAndRegister()
+
+    recipemap('large_steam_turbine').recipeBuilder()
             .circuitMeta(1)
             .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .duration(WorkingFluid.duration * WorkingFluid.efficiency)
             .EUt(32)
-            .buildAndRegister();
+            .buildAndRegister()
 
     for (lubricant in Globals.lubricants) {
-            recipemap('steam_turbine').recipeBuilder()
+            recipemap('large_steam_turbine').recipeBuilder()
                     .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
                     .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
                     .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
                     .duration((int) (WorkingFluid.duration * WorkingFluid.efficiency * lubricant.boost))
                     .EUt(32)
-                    .buildAndRegister();
+                    .buildAndRegister()
     }
-        
+
     recipemap('cooling_tower').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor * 64))
             .fluidInputs(liquid('water') * 1000)
