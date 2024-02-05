@@ -536,7 +536,7 @@ crafting.addShaped("steel_turbine_rotor", item('susy:turbine_rotor'), [
 
 crafting.addShaped("steel_turbine_controller", metaitem('basic_steam_turbine'), [
 		[ore('plateSteel'),            metaitem('cableGtSingleTin'),       ore('plateSteel')],
-		[ore('circuitLv'),             item('gregtech:machine_casing', 1), ore('circuitLv')],
+		[ore('circuitLv'),             metaitem('hull.lv'), ore('circuitLv')],
 		[metaitem('cableGtSingleTin'), ore('circuitLv'),                   metaitem('cableGtSingleTin')]
 ])
 
@@ -873,6 +873,26 @@ for (i = 1; i <= 8; i++) {
 			[circuits[i], tieredGlass[i], tieredGlass[i]],
 			[hulls[i], tieredSprings[i], tieredPipes[i]],
 			[tieredCables[i], conveyors[i], tieredCables[i]]
+	])
+}
+
+// Polishing Machine
+
+for (i = 1; i <= 8; i++) {
+	crafting.addShaped("gregtech:polishing_machine." + Globals.voltageTiers[i], metaitem('polishing_machine.'  + Globals.voltageTiers[i]), [
+			[robotArms[i], circuits[i], pumps[i]],
+			[tieredGlass[i], hulls[i], tieredGlass[i]],
+			[tieredCables[i], motors[i], tieredCables[i]]
+	])
+}
+
+// Textile Spinner
+
+for (i = 1; i <= 8; i++) {
+	crafting.addShaped("gregtech:spinning." + Globals.voltageTiers[i], metaitem('polishing_machine.'  + Globals.voltageTiers[i]), [
+			[circuits[i], tieredCables[i], circuits[i]],
+			[pumps[i], hulls[i], motor[i]],
+			[tieredCables[i], motor[i], motor[i]]
 	])
 }
 

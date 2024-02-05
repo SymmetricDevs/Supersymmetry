@@ -190,3 +190,13 @@ ROASTER.recipeBuilder()
     .duration(100)
     .EUt(120)
     .buildAndRegister()
+
+// Manganese hydroxide calcination
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustManganeseIiHydroxide') * 5)
+    .fluidOutputs(fluid('steam') * 1000)
+    .outputs(metaitem('dustManganeseIiOxide') * 2)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister()

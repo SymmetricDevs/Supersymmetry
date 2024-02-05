@@ -646,5 +646,12 @@ public class SecondDegreeMaterials {
                 .components(BerylliumChloride, 3, AluminiumChloride, 2, SiliconTetrachloride, 6, CarbonMonoxide, 18)
                 .colorAverage()
                 .build();
+
+        SupportedMolybdenumVanadium = new Material.Builder(13107, SuSyUtility.susyId("supported_molybdenum_vanadium"))
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .components(MolybdenumTrioxide, 1, VanadiumPentoxide, 1, Alumina, 1)
+                .colorAverage()
+                .build();
     }
 }

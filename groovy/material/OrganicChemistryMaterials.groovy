@@ -1364,11 +1364,7 @@ public class OrganicChemistryMaterials {
                 .color(0x403c32)
                 .build();
 
-        CyclopentadieneSolution = new Material.Builder(15226, SuSyUtility.susyId('cyclopentadiene_solution'))
-                .liquid()
-                .components(Cyclopentadiene, 1, Benzene, 1)
-                .colorAverage()
-                .build();
+        //FREE ID: 15226
 
         Ferrocene = new Material.Builder(15227, SuSyUtility.susyId('ferrocene'))
                 .dust()
@@ -2480,6 +2476,18 @@ public class OrganicChemistryMaterials {
                 .gas()
                 .components(Carbon, 1, Hydrogen, 1, Chlorine, 1, Fluorine, 2)
                 .color(0x8c5a99)
+                .build();
+
+        Acrolein = new Material.Builder(15402, SuSyUtility.susyId('acrolein'))
+                .fluid()
+                .components(Carbon, 3, Hydrogen, 4, Oxygen, 1)
+                .color(0x389c7a)
+                .build();
+
+        Dicyclopentadiene = new Material.Builder(15403, SuSyUtility.susyId('dicyclopentadiene'))
+                .fluid(new FluidBuilder().temperature(306))
+                .components(Carbon, 10, Hydrogen, 12)
+                .color(0x9c388b)
                 .build();
     }
 }
