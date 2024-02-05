@@ -219,7 +219,9 @@ for (coagulant in coagulants) {
     CoagulationRecipe(coagulant, 16, 2500, 5)
 }
 
-mods.gregtech.extractor.removeByInput(30, [metaitem('dustLatex')])
+// Liquid Latex * 144
+mods.gregtech.extractor.removeByInput(30, [metaitem('dustLatex')], null)
+
 EXTRACTOR.recipeBuilder()
 .inputs(ore('dustLatex'))
 .fluidOutputs(fluid('latex') * 1000)
