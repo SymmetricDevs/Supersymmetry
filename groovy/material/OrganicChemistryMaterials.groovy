@@ -1469,6 +1469,7 @@ public class OrganicChemistryMaterials {
 
         ParaXylene = new Material.Builder(15243, SuSyUtility.susyId('para_xylene'))
                 .dust().liquid()
+                .flags(NO_UNIFICATION)
                 .components(Carbon, 8, Hydrogen, 10)
                 .color(0x1a1611)
                 .build();
