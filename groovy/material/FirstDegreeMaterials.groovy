@@ -3175,5 +3175,11 @@ public class FirstDegreeMaterials {
                 .components(Silicon, 1, Chlorine, 4)
                 .color(0x7fa3a0)
                 .build();
+
+        SaltyHydrofluoricAcid = new Material.Builder(8592, SuSyUtility.susyId("salty_hydrofluoric_acid"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Salt, 1, HydrofluoricAcid, 1)
+                .colorAverage()
+                .build();
     }
 }

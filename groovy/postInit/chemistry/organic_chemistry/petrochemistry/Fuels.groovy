@@ -187,74 +187,6 @@ CSTR.recipeBuilder()
 
     // Ferrocene
 
-    ALLOY_SMELTER.recipeBuilder()
-        .inputs(ore('dustAnyPurityPotassium'))
-        .inputs(ore('dustMolecularSieve') * 4)
-        .outputs(metaitem('dustPotassiumMolecularSieve') * 4)
-        .duration(300)
-        .EUt(120)
-        .buildAndRegister()
-
-    ALLOY_SMELTER.recipeBuilder()
-        .inputs(ore('dustCaesium'))
-        .inputs(ore('dustMolecularSieve') * 4)
-        .outputs(metaitem('dustCesiumMolecularSieve') * 4)
-        .duration(400)
-        .EUt(120)
-        .buildAndRegister()
-
-    ALLOY_SMELTER.recipeBuilder()
-        .inputs(ore('dustAnyPuritySodium'))
-        .inputs(ore('dustAnyPurityLead'))
-        .outputs(metaitem('ingotSodiumLeadAlloy') * 2)
-        .duration(300)
-        .EUt(30)
-        .buildAndRegister()
-
-    SIFTER.recipeBuilder()
-        .fluidInputs(fluid('isoprene') * 4000)
-        .inputs(ore('dustCesiumMolecularSieve') * 1)
-        .fluidOutputs(fluid('purified_isoprene') * 4000)
-        .outputs(metaitem('dustSaturatedCesiumMolecularSieve') * 1)
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
-
-    SIFTER.recipeBuilder()
-        .fluidInputs(fluid('isoprene') * 4000)
-        .inputs(ore('dustPotassiumMolecularSieve') * 1)
-        .fluidOutputs(fluid('purified_isoprene') * 4000)
-        .outputs(metaitem('dustSaturatedPotassiumMolecularSieve') * 1)
-        .duration(300)
-        .EUt(120)
-        .buildAndRegister()
-
-    CENTRIFUGE.recipeBuilder()
-        .fluidInputs(fluid('benzene') * 50)
-        .inputs(ore('dustSaturatedPotassiumMolecularSieve') * 1)
-        .fluidOutputs(fluid('cyclopentadiene_solution') * 100)
-        .outputs(metaitem('dustPotassiumMolecularSieve') * 1)
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
-
-    CENTRIFUGE.recipeBuilder()
-        .fluidInputs(fluid('benzene') * 100)
-        .inputs(ore('dustSaturatedCesiumMolecularSieve') * 1)
-        .fluidOutputs(fluid('cyclopentadiene_solution') * 200)
-        .outputs(metaitem('dustCesiumMolecularSieve') * 1)
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
-
-    DT.recipeBuilder()
-        .fluidInputs(fluid('cyclopentadiene_solution') * 2000)
-        .fluidOutputs(fluid('benzene') * 1000)
-        .fluidOutputs(fluid('cyclopentadiene') * 1000)
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
-
     BR.recipeBuilder()
         .fluidInputs(fluid('iron_pentacarbonyl') * 1000)
         .fluidInputs(fluid('cyclopentadiene') * 2000)
@@ -315,6 +247,22 @@ CSTR.recipeBuilder()
         .buildAndRegister()
 
     // Tetraethyl Lead
+
+    ALLOY_SMELTER.recipeBuilder()
+        .inputs(ore('dustAnyPuritySodium'))
+        .inputs(ore('dustAnyPurityLead'))
+        .outputs(metaitem('ingotSodiumLeadAlloy') * 2)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
+
+    ALLOY_SMELTER.recipeBuilder()
+        .inputs(ore('dustAnyPuritySodium'))
+        .inputs(ore('ingotLead'))
+        .outputs(metaitem('ingotSodiumLeadAlloy') * 2)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
 
     BCR.recipeBuilder()
         .fluidInputs(fluid('hydrogen_chloride') * 50)
@@ -445,25 +393,25 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 // Corrosion inhibitors
-
+for (inertGas in Globals.inertGases) {
     REACTION_FURNACE.recipeBuilder()
         .notConsumable(ore('dustAluminiumSilicate'))
-        .notConsumable(fluid('argon') * 2000)
+        .notConsumable(fluid(inertGas.name) * inertGas.amount_required)
         .fluidInputs(fluid('linoleic_acid') * 2000)
         .fluidOutputs(fluid('corrosion_inhibitor') * 2000)
-        .duration(200)
+        .duration(200 * inertGas.duration)
         .EUt(120)
         .buildAndRegister()
 
     REACTION_FURNACE.recipeBuilder()
         .notConsumable(ore('dustAluminiumSilicate'))
-        .notConsumable(fluid('argon') * 2000)
+        .notConsumable(fluid(inertGas.name) * inertGas.amount_required)
         .fluidInputs(fluid('oleic_acid') * 2000)
         .fluidOutputs(fluid('corrosion_inhibitor') * 2000)
-        .duration(200)
+        .duration(200 * inertGas.duration)
         .EUt(120)
         .buildAndRegister()
-
+}
 def OxygenateMap = [
     'methanol': 1000,
     'ethanol': 1000,

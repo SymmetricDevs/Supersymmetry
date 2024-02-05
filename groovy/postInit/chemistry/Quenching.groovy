@@ -164,3 +164,16 @@ for (entry in fluidMap) {
     }
 }
 
+// Air cooling
+recipemap('radiator').recipeBuilder()
+            .fluidInputs(fluid('hot_air') * 1000)
+            .fluidOutputs(liquid('air') * 1000)
+            .duration(100)
+            .buildAndRegister();
+
+recipemap('cooling_unit').recipeBuilder()
+            .fluidInputs(fluid('hot_air') * 1000)
+            .fluidOutputs(liquid('air') * 1000)
+            .duration(50)
+            .EUt(480)
+            .buildAndRegister();
