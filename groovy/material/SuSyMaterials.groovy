@@ -1099,7 +1099,7 @@ class SuSyMaterials {
         public static Material NitrateSolution;
         public static Material SodiumNitrateSolution;
         public static Material PotassiumHydroxideSolution;
-        public static Material CalciumHydroxideSolution;
+        public static Material CalciumHydroxideSlurry;
         public static Material DilutedPotassiumCarbonateSolution;
         public static Material SodiumSilicateSolution;
         public static Material SodiumAluminateSolution;
