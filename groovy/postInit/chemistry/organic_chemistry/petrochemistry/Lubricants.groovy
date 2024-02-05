@@ -676,7 +676,7 @@ DUMPER = recipemap('dumping')
 
     POLYMERIZATION.recipeBuilder()
         .fluidInputs(fluid('ethylene_oxide') * 1000)
-        .fluidInputs(fluid('boron_trifluoride') * 50)
+        .notConsumable(fluid('boron_trifluoride') * 50)
         .fluidOutputs(fluid('polyethylene_glycol') * 1000)
         .duration(200)
         .EUt(240)
@@ -859,7 +859,7 @@ DUMPER = recipemap('dumping')
         .fluidInputs(fluid('phenol') * 1000)
         .fluidInputs(fluid('tripropylene') * 1000)
         .notConsumable(fluid('hydrofluoric_acid') * 100)
-        .fluidOutputs(fluid('nonylphenol'))
+        .fluidOutputs(fluid('nonylphenol') * 1000)
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
@@ -1045,22 +1045,22 @@ def antioxidantMap = [
 // Base
 baseOilMap.each { oil, multiplier1 ->
     solidFrictionModifierMap.each { sfm, multiplier2 ->
-        BLENDER.recipeBuilder()
+        MIXER.recipeBuilder()
             .inputs(ore(sfm))
             .fluidInputs(fluid(oil) * (1000 * multiplier2 * 4))
             .fluidOutputs(fluid('lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .duration(200)
-            .EUt(120)
+            .EUt(7)
             .buildAndRegister()
     }
 
     liquidFrictionModifierMap.each { lfm, multiplier3 ->
-        BLENDER.recipeBuilder()
+        MIXER.recipeBuilder()
             .fluidInputs(fluid(oil) * (1000 * multiplier3))
             .fluidInputs(fluid(lfm) * 250)
             .fluidOutputs(fluid('lubricant') * (1000 * multiplier1 * multiplier3))
             .duration(200)
-            .EUt(120)
+            .EUt(7)
             .buildAndRegister()
     }
 }

@@ -448,9 +448,9 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('plateEnderPearl') * 9, met
 crafting.addShapeless('convert_old_slaked_lime', metaitem('dustCalciumHydroxide'), [metaitem('slaked_lime')])
 
 mods.gregtech.chemical_bath.recipeBuilder()
-        .inputs(ore('dustQuicklime'))
-        .fluidInputs(fluid('water') * 500)
-        .outputs(metaitem('dustCalciumHydroxide'))
+        .inputs(ore('dustQuicklime') * 2)
+        .fluidInputs(fluid('water') * 1000)
+        .outputs(metaitem('dustCalciumHydroxide') * 5)
         .duration(20)
         .EUt(30)
         .buildAndRegister();
@@ -1389,6 +1389,26 @@ crafting.addShaped("gregtech:fluid_hatch.export.ulv", metaitem('fluid_hatch.expo
 		[null, metaitem('hull.ulv'), null],
 		[null, item('minecraft:glass'), null]
 ])
+
+// Black Granite Dust * 1
+mods.gregtech.macerator.removeByInput(2, [item('gregtech:stone_smooth')], null)
+
+mods.gregtech.Dust.recipeBuilder()
+        .inputs(ore('stoneGraniteBlack'))
+        .outputs(metaitem('dustGraniteBlack') * 1)
+        .duration(150)
+        .EUt(2)
+        .buildAndRegister()
+
+// Red Granite Dust * 1
+mods.gregtech.macerator.removeByInput(2, [item('gregtech:stone_smooth', 1)], null)
+
+mods.gregtech.Dust.recipeBuilder()
+        .inputs(ore('stoneGraniteRed'))
+        .outputs(metaitem('dustGraniteRed') * 1)
+        .duration(150)
+        .EUt(2)
+        .buildAndRegister()
 
 // Multiblock Builder
 
