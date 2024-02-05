@@ -891,8 +891,8 @@ for (i = 1; i <= 8; i++) {
 for (i = 1; i <= 8; i++) {
 	crafting.addShaped("gregtech:spinning." + Globals.voltageTiers[i], metaitem('polishing_machine.'  + Globals.voltageTiers[i]), [
 			[circuits[i], tieredCables[i], circuits[i]],
-			[pumps[i], hulls[i], motor[i]],
-			[tieredCables[i], motor[i], motor[i]]
+			[pumps[i], hulls[i], motors[i]],
+			[tieredCables[i], motors[i], motors[i]]
 	])
 }
 

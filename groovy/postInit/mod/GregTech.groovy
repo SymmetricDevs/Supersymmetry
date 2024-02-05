@@ -1393,9 +1393,9 @@ crafting.addShaped("gregtech:fluid_hatch.export.ulv", metaitem('fluid_hatch.expo
 // Black Granite Dust * 1
 mods.gregtech.macerator.removeByInput(2, [item('gregtech:stone_smooth')], null)
 
-mods.gregtech.Dust.recipeBuilder()
-        .inputs(ore('stoneGraniteBlack'))
-        .outputs(metaitem('dustGraniteBlack') * 1)
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('gregtech:stone_smooth'))
+        .outputs(metaitem('dustGraniteBlack'))
         .duration(150)
         .EUt(2)
         .buildAndRegister()
@@ -1403,9 +1403,9 @@ mods.gregtech.Dust.recipeBuilder()
 // Red Granite Dust * 1
 mods.gregtech.macerator.removeByInput(2, [item('gregtech:stone_smooth', 1)], null)
 
-mods.gregtech.Dust.recipeBuilder()
-        .inputs(ore('stoneGraniteRed'))
-        .outputs(metaitem('dustGraniteRed') * 1)
+mods.gregtech.macerator.recipeBuilder()
+        .inputs(item('gregtech:stone_smooth',01))
+        .outputs(metaitem('dustGraniteRed'))
         .duration(150)
         .EUt(2)
         .buildAndRegister()
@@ -1413,7 +1413,9 @@ mods.gregtech.Dust.recipeBuilder()
 // Multiblock Builder
 
 crafting.replaceShaped("gregtech:multiblock_builder", metaitem('tool.multiblock_builder'), [
-		[ore('craftingToolWrench'), metaitem('robot.arm.ev'), metaitem('field.generator.hv')],
-		[ore('screwStainlessSteel'), ore('stickPolytetrafluoroethylene'), metaitem('robot.arm.ev')],
-		[ore('stickPolytetrafluoroethylene'), ore('screwStainlessSteel'), ore('craftingToolScrewdriver')]
+        [ore('craftingToolWrench'), metaitem('robot.arm.ev'), metaitem('field.generator.hv')],
+        [ore('screwStainlessSteel'), ore('stickPolytetrafluoroethylene'), metaitem('robot.arm.ev')],
+        [ore('stickPolytetrafluoroethylene'), ore('screwStainlessSteel'), ore('craftingToolScrewdriver')]
 ])
+//
+

@@ -322,7 +322,7 @@ public class PetrochemistryMaterials {
                 .color(0x9c8638)
                 .build();
 
-        DimerizedCFiveFraction = new Material.Builder(20076, SuSyUtility.susyId('c_five_fraction'))
+        DimerizedCFiveFraction = new Material.Builder(20076, SuSyUtility.susyId('dimerized_c_five_fraction'))
                 .fluid()
                 .color(0x9c9538)
                 .build();
