@@ -536,7 +536,7 @@ crafting.addShaped("steel_turbine_rotor", item('susy:turbine_rotor'), [
 
 crafting.addShaped("steel_turbine_controller", metaitem('basic_steam_turbine'), [
 		[ore('plateSteel'),            metaitem('cableGtSingleTin'),       ore('plateSteel')],
-		[ore('circuitLv'),             item('gregtech:machine_casing', 1), ore('circuitLv')],
+		[ore('circuitLv'),             metaitem('hull.lv'), ore('circuitLv')],
 		[metaitem('cableGtSingleTin'), ore('circuitLv'),                   metaitem('cableGtSingleTin')]
 ])
 
