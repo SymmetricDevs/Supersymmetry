@@ -1159,7 +1159,7 @@ MIXER.recipeBuilder()
 .inputs(ore('dustAnyPuritySodium'))
 .inputs(ore('dustAnyPurityPotassium'))
 .fluidOutputs(fluid('sodium_potassium') * 1000)
-.duration(3000)
+.duration(300)
 .EUt(30)
 .buildAndRegister()
 
