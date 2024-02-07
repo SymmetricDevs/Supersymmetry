@@ -3401,17 +3401,18 @@ MIXER.recipeBuilder()
         .buildAndRegister()
 
 
-DISTILLATION_TOWER.recipeBuilder()
+/*DISTILLATION_TOWER.recipeBuilder()
+        .disableDistilleryRecipes()
         .circuitMeta(1)
         .fluidInputs(fluid('diluted_ammonia_solution') * 1000)
         .fluidOutputs(fluid('water') * 2000)
         .fluidOutputs(fluid('ammonia') * 1000)
         .duration(40)
         .EUt(30)
-        .buildAndRegister()
+        .buildAndRegister() */
 
 DISTILLATION_TOWER.recipeBuilder()
-        .circuitMeta(2)
+        //.circuitMeta(2)
         .fluidInputs(fluid('diluted_ammonia_solution') * 1000)
         .fluidOutputs(fluid('ammonia_solution') * 1000)
         .fluidOutputs(fluid('water') * 1000)
