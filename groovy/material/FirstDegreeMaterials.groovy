@@ -524,7 +524,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 8165
+        ZirconylChloride = new Material.Builder(8165, SuSyUtility.susyId('zirconyl_chloride'))
+                .dust()
+                .components(Zirconium, 1, Oxygen, 2, Chlorine, 2)
+                .colorAverage()
+                .build();
 
         AmmoniaSolution = new Material.Builder(8166, SuSyUtility.susyId('ammonia_solution'))
                 .liquid()
