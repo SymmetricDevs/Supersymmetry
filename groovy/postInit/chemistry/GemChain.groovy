@@ -170,19 +170,9 @@ MIXER.recipeBuilder()
         .inputs(ore('dustZirconiumDioxide') * 3)
         .outputs(metaitem('dustLeadZirconTitanate') * 10)
         .duration(200)
-        ..EUt(Globals.voltAmps[3])
+        .EUt(Globals.voltAmps[3])
         .buildAndRegister()
-
-TUBE_FURNACE.recipeBuilder()
-        .inputs(ore('dustLeadZirconTitanate')7)
-        .inputs(ore('dustLithiumOxide') * 32)
-        .chancedOutput(metaitem('genLeadZirconTitanate'), 5000, 1000)
-        .duration(400)
-        .EUt(Globals.voltAmps[5])
-        .buildAndRegister()
-
 //Low-Temperature Chemical Method (GCYL way)
-
 
 BR.recipeBuilder()
         .inputs(ore('dustZirconiumTetrachloride') * 5)
@@ -204,4 +194,13 @@ LCR.recipeBuilder()
         .duration(400)
         .EUt(Globals.voltAmps[5])
         .buildAndRegister()
+
+TUBE_FURNACE.recipeBuilder()
+        .inputs(ore('dustLeadZirconTitanate')7)
+        .inputs(ore('dustLithiumOxide') * 32)
+        .chancedOutput(metaitem('genLeadZirconTitanate'), 5000, 1000)
+        .duration(400)
+        .EUt(Globals.voltAmps[5])
+        .buildAndRegister()
+
 
