@@ -4407,3 +4407,13 @@ MIXER.recipeBuilder()
         .EUt(16)
         .duration(100)
         .buildAndRegister()
+
+//ZnCl2.H2O
+
+MIXER.recipeBuilder()
+.fluidInputs(fluid('water') * 1000)
+.inputs(ore('dustZincChloride') * 3)
+.fluidOutputs(fluid('zinc_chloride_solution') * 1000)
+.EUt(16)
+.duration(80)
+.buildAndRegister()
