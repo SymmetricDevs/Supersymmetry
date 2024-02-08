@@ -1094,6 +1094,7 @@ class SuSyMaterials {
         public static Material SodiumBisulfateSolution;
         public static Material CalciumChlorideSolution;
         public static Material SodaAshSolution;
+        public static Material DilutedSodaAshSolution;
         public static Material SodiumBicarbonateSolution;
         public static Material AmmoniumNitrateSolution;
         public static Material NitrateSolution;
