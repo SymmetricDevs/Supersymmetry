@@ -95,7 +95,7 @@ CENTRIFUGE.recipeBuilder()
 
 SIFTER.recipeBuilder()
         .fluidInputs(fluid('impure_uranyl_carbonate_solution') * 6000)
-        .chancedOutput(metaitem('dustAluminiumCarbonate') * 14, 1000, 1000)
+        .chancedOutput(metaitem('dustAluminiumHydroxide') * 14, 1000, 1000)
         .chancedOutput(metaitem('dustIronCarbonate') * 5, 4000, 1000)
         .fluidOutputs(fluid('uranyl_carbonate_solution') * 6000)
         .EUt(240)
