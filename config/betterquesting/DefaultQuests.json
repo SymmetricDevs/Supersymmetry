@@ -51091,7 +51091,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "susy.quest.db.811.title",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -51125,7 +51125,8 @@
     },
     "812:10": {
       "preRequisites:11": [
-        806
+        806,
+        808
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -51143,7 +51144,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "susy.quest.db.812.title",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
