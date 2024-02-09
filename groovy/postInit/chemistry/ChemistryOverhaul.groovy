@@ -4407,7 +4407,8 @@ DISTILLERY.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-//Ca(OH)2.H2O
+// Calcium hydroxide slurry
+
 MIXER.recipeBuilder()
         .inputs(ore('dustCalciumHydroxide') * 5)
         .fluidInputs(fluid('water') * 1000)
@@ -4416,7 +4417,7 @@ MIXER.recipeBuilder()
         .duration(100)
         .buildAndRegister()
 
-//ZnCl2.H2O
+// Zinc chloride soln.
 
 MIXER.recipeBuilder()
         .fluidInputs(fluid('water') * 1000)
@@ -4424,20 +4425,4 @@ MIXER.recipeBuilder()
         .fluidOutputs(fluid('zinc_chloride_solution') * 1000)
         .EUt(16)
         .duration(80)
-        .buildAndRegister()
-
-BCR.recipeBuilder()
-        .fluidInputs(fluid('sodium_hydroxide_solution') * 100)
-        .fluidInputs(fluid('carbon_dioxide') * 50)
-        .fluidOutputs(fluid('diluted_soda_ash_solution') * 150)
-        .duration(5)
-        .EUt(30)
-        .buildAndRegister()
-
-DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('diluted_soda_ash_solution') * 2000)
-        .outputs(metaitem('dustSodaAsh') * 6)
-        .fluidOutputs(fluid('water') * 3000)
-        .duration(80)
-        .EUt(30)
         .buildAndRegister()
