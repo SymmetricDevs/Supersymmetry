@@ -9,6 +9,8 @@ AUTOCLAVE = recipemap('autoclave')
 BR = recipemap('batch_reactor')
 ROASTER = recipemap('roaster')
 TUBE_FURNACE = recipemap('tube_furnace')
+REACTION_FURNACE = recipemap('reaction_furnace')
+FORMING_PRESS = recipemap("forming_press")
 
 // Lithium Niobate Dust * 4
 mods.gregtech.macerator.removeByInput(2, [metaitem('gemExquisiteLithiumNiobate')], null)
@@ -202,3 +204,20 @@ CUTTER.recipeBuilder()
 
 // Lead Zirconate Titanate
 
+REACTION_FURNACE.recipeBuilder()
+        .notConsumable(ore('dustLeadOxide'))
+        .inputs(ore('dustLeadOxide') * 4)
+        .inputs(ore('dustTitaniumDioxide') * 3)
+        .inputs(ore('dustZirconiumDioxide') * 3)
+        .outputs(metaitem('dustLeadZirconateTitanate') * 10)
+        .duration(200)
+        .EUt(Globals.voltAmps[3])
+        .buildAndRegister()
+
+FORMING_PRESS.recipeBuilder()
+        .outputs(ore('dustLeadZirconateTitanate') * 10)
+        .notConsumable(metaitem('shape.mold.ball'))
+        .outputs(metaitem('gemLeadZirconateTitanate'))
+        .duration(500)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
