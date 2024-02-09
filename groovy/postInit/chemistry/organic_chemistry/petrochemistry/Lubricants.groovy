@@ -958,9 +958,8 @@ DUMPER = recipemap('dumping')
 // Chelates: SALEN
 
 BR.recipeBuilder()
-    //.inputs(ore('dustSodiumCyanoborohydride') * 14)
     .fluidInputs(fluid('ethylenediamine') * 1000)
-    //.fluidInputs(fluid('hydrochloric_acid') * 2000)
+    .notConsumable(fluid('hydrochloric_acid') * 1000)
     .fluidInputs(fluid('salicylaldehyde') * 2000)
     .outputs(metaitem('dustSalicylideneEthylenediamine'))
     .fluidOutputs(fluid('water') * 2000)
