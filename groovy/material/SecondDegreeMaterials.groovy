@@ -379,7 +379,11 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 13059
+        DilutedSodaAshSolution = new Material.Builder(13059, SuSyUtility.susyId('diluted_soda_ash_solution'))
+                .liquid()
+                .components(SodaAsh, 1, Water, 3)
+                .colorAverage()
+                .build();
 
         CopperSulfateSolution = new Material.Builder(13060, SuSyUtility.susyId('copper_sulfate_solution'))
                 .liquid()
