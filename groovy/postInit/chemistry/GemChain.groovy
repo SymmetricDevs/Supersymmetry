@@ -4,6 +4,7 @@ CVD = recipemap('cvd')
 CUTTER = recipemap('cutter')
 CRYSTALLIZER = recipemap('crystallizer')
 SOLIDIFIER = recipemap('fluid_solidifier')
+CUTTER = recipemap('cutter')
 FORGE_HAMMER = recipemap('forge_hammer')
 AUTOCLAVE = recipemap('autoclave')
 BR = recipemap('batch_reactor')
@@ -11,23 +12,6 @@ ROASTER = recipemap('roaster')
 TUBE_FURNACE = recipemap('tube_furnace')
 REACTION_FURNACE = recipemap('reaction_furnace')
 FORMING_PRESS = recipemap("forming_press")
-
-// Lithium Niobate Dust * 4
-mods.gregtech.macerator.removeByInput(2, [metaitem('gemExquisiteLithiumNiobate')], null)
-// Flawless Lithium Niobate * 2
-mods.gregtech.cutter.removeByInput(16, [metaitem('gemExquisiteLithiumNiobate')], [fluid('water') * 4])
-// Flawless Lithium Niobate * 2
-mods.gregtech.cutter.removeByInput(16, [metaitem('gemExquisiteLithiumNiobate')], [fluid('distilled_water') * 3])
-// Flawless Lithium Niobate * 2
-mods.gregtech.cutter.removeByInput(16, [metaitem('gemExquisiteLithiumNiobate')], [fluid('lubricant')])
-// Lithium Niobate * 2
-mods.gregtech.cutter.removeByInput(16, [metaitem('gemFlawlessLithiumNiobate')], [fluid('water') * 4])
-// Lithium Niobate * 2
-mods.gregtech.cutter.removeByInput(16, [metaitem('gemFlawlessLithiumNiobate')], [fluid('distilled_water') * 3])
-// Lithium Niobate * 2
-mods.gregtech.cutter.removeByInput(16, [metaitem('gemFlawlessLithiumNiobate')], [fluid('lubricant')])
-// Lithium Niobate Dust * 2
-mods.gregtech.macerator.removeByInput(2, [metaitem('gemFlawlessLithiumNiobate')], null)
 
 CVD.recipeBuilder()
         .notConsumable(metaitem('wafer.silicon'))
@@ -176,30 +160,6 @@ CUTTER.recipeBuilder()
         .outputs(metaitem('gemExquisiteLithiumNiobate') * 5)
         .duration(400)
         .EUt(120)
-        .buildAndRegister()
-
-CUTTER.recipeBuilder()
-        .inputs(ore('gemExquisiteLithiumNiobate'))
-        .fluidInputs(fluid('water') * 8)
-        .outputs(metaitem('gemLithiumNiobate') * 4)
-        .duration(80)
-        .EUt(16)
-        .buildAndRegister()
-
-CUTTER.recipeBuilder()
-        .inputs(ore('gemExquisiteLithiumNiobate'))
-        .fluidInputs(fluid('distilled_water') * 6)
-        .outputs(metaitem('gemLithiumNiobate') * 4)
-        .duration(60)
-        .EUt(16)
-        .buildAndRegister()
-
-CUTTER.recipeBuilder()
-        .inputs(ore('gemExquisiteLithiumNiobate'))
-        .fluidInputs(fluid('lubricant') * 2)
-        .outputs(metaitem('gemLithiumNiobate') * 4)
-        .duration(40)
-        .EUt(16)
         .buildAndRegister()
 
 // Lead Zirconate Titanate
