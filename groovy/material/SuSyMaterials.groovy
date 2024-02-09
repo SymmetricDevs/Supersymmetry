@@ -619,7 +619,7 @@ class SuSyMaterials {
         public static Material AluminiumTrifluoride;
         public static Material GalliumPhosphate;
         public static Material LithiumNiobate;
-        public static Material LeadZirconateTitanite;
+        public static Material LeadZirconateTitanate;
         public static Material BoricAcid;
         public static Material AmorphousBoron;
         public static Material BoronTrioxide;
@@ -1007,6 +1007,7 @@ class SuSyMaterials {
         public static Material SaltyHydrofluoricAcid;
         public static Material SiliconTetrachloride;
         public static Material PurifiedSiliconTetrachloride;
+        public static Material ZirconylChloride;
 
         // HP Materials
 
