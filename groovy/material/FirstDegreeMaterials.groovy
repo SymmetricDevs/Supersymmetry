@@ -2483,13 +2483,7 @@ public class FirstDegreeMaterials {
 
         AmmoniumDihydrogenPhosphate.setFormula("NH4H2PO4", true)
 
-        AluminiumCarbonate = new Material.Builder(8474, SuSyUtility.susyId('aluminium_carbonate'))
-                .dust()
-                .components(Aluminium, 2, Carbon, 3, Oxygen, 9)
-                .colorAverage()
-                .build();
-
-        AluminiumCarbonate.setFormula("Al2(CO3)3", true)
+        //FREE ID: 8474
 
         IronCarbonate = new Material.Builder(8475, SuSyUtility.susyId('iron_carbonate'))
                 .dust()

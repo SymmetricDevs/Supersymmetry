@@ -906,7 +906,6 @@ class SuSyMaterials {
         public static Material ElectrolyticChromium;
         public static Material GalliumTrioxide;
         public static Material AmmoniumDihydrogenPhosphate;
-        public static Material AluminiumCarbonate;
         public static Material IronCarbonate;
         public static Material AmmoniumDiuranate;
         public static Material VanadiumOxydichloride;
