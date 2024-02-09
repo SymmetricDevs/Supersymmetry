@@ -105,13 +105,6 @@ ROASTER.recipeBuilder()
     .EUt(Globals.voltAmps[3])
     .duration(20)
     .buildAndRegister()
-    
-CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustStrontianite') * 5)
-    .outputs(metaitem('dustStrontiumCarbonate') * 5)
-    .EUt(Globals.voltAmps[1])
-    .duration(80)
-    .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()
     .inputs(ore('dustAnyPurityAluminium') * 2)

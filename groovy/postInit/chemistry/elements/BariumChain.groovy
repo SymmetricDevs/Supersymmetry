@@ -146,13 +146,6 @@ ROASTER.recipeBuilder()
     .EUt(Globals.voltAmps[3])
     .duration(20)
     .buildAndRegister()
-    
-CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustWitherite') * 5)
-    .outputs(metaitem('dustBariumCarbonate') * 5)
-    .EUt(Globals.voltAmps[1])
-    .duration(80)
-    .buildAndRegister()
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustBariumCarbonate') * 5)
