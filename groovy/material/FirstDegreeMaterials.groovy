@@ -257,7 +257,7 @@ public class FirstDegreeMaterials {
         GalliumPhosphate.setFormula("GaPO4", true)
 
         LithiumNiobate = new Material.Builder(8121, SuSyUtility.susyId('lithium_niobate'))
-                .gem().iconSet(RUBY)
+                .gem().iconSet(RUBY).liquid(new FluidBuilder().temperature(1510))
                 .components(Lithium, 1, Niobium, 1, Oxygen, 3)
                 .color(0xbcabde)
                 .build()
