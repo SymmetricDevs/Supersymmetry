@@ -262,7 +262,7 @@ public class FirstDegreeMaterials {
                 .color(0xbcabde)
                 .build()
 
-        LeadZirconateTitanite = new Material.Builder(8122, SuSyUtility.susyId('lead_zirconate_titanate'))
+        LeadZirconateTitanate = new Material.Builder(8122, SuSyUtility.susyId('lead_zirconate_titanate'))
                 .gem().iconSet(RUBY)
                 .components(Lead, 2, Zirconium, 1, Titanium, 1, Oxygen, 6)
                 .colorAverage()
@@ -524,11 +524,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        ZirconylChloride = new Material.Builder(8165, SuSyUtility.susyId('zirconyl_chloride'))
-                .dust()
-                .components(Zirconium, 1, Oxygen, 2, Chlorine, 2)
-                .colorAverage()
-                .build();
+        //FREE ID: 8165
 
         AmmoniaSolution = new Material.Builder(8166, SuSyUtility.susyId('ammonia_solution'))
                 .liquid()
