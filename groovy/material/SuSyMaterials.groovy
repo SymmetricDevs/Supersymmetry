@@ -1007,7 +1007,6 @@ class SuSyMaterials {
         public static Material SaltyHydrofluoricAcid;
         public static Material SiliconTetrachloride;
         public static Material PurifiedSiliconTetrachloride;
-        public static Material ZirconylChloride;
 
         // HP Materials
 
