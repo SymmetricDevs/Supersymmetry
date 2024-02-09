@@ -15597,7 +15597,7 @@
           "taskID:8": "bq_standard:fluid"
         },
         "2:10": {
-          "index:3": 1,
+          "index:3": 2,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -34730,6 +34730,7 @@
           },
           "taskID:8": "bq_standard:retrieval"
         }
+      }
     },
     "811:10": {
       "preRequisites:11": [
