@@ -4,13 +4,11 @@ CVD = recipemap('cvd')
 CUTTER = recipemap('cutter')
 CRYSTALLIZER = recipemap('crystallizer')
 SOLIDIFIER = recipemap('fluid_solidifier')
-CUTTER = recipemap('cutter')
 FORGE_HAMMER = recipemap('forge_hammer')
 AUTOCLAVE = recipemap('autoclave')
 BR = recipemap('batch_reactor')
 ROASTER = recipemap('roaster')
 TUBE_FURNACE = recipemap('tube_furnace')
-MACERATOR = recipemap('macerator')
 
 // Lithium Niobate Dust * 4
 mods.gregtech.macerator.removeByInput(2, [metaitem('gemExquisiteLithiumNiobate')], null)
