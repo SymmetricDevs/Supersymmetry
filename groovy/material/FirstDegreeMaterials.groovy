@@ -1904,7 +1904,8 @@ public class FirstDegreeMaterials {
                 .build();
 
         LeadOxide = new Material.Builder(8388, SuSyUtility.susyId('lead_oxide'))
-                .dust()
+                .dust().gas(new FluidBuilder().temperature(1750))
+                .flags(NO_UNIFICATION)
                 .components(Lead, 1, Oxygen, 1)
                 .colorAverage()
                 .build()
