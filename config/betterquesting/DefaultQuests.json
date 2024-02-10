@@ -15572,6 +15572,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.434.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -15583,13 +15584,22 @@
             "0:10": {
               "Amount:3": 1000,
               "FluidName:8": "weed_killer"
-            },
-            "1:10": {
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "requiredFluids:9": {
+            "0:10": {
               "Amount:3": 1000,
               "FluidName:8": "pesticide"
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "2:10": {
+          "index:3": 2,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -15641,7 +15651,7 @@
       },
       "questID:3": 436,
       "rewards:9": {},
-      "tasks:9": {
+      "tasks:9": {  
         "0:10": {
           "taskID:8": "bq_standard:checkbox"
         }
@@ -27357,6 +27367,7 @@
           "ignoresview:1": 0,
           "ismain:1": 1,
           "name:8": "susy.quest.db.651.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -27364,6 +27375,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ammonia"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -27766,6 +27787,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.665.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -27773,6 +27795,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "reformed_syngas"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -33127,6 +33159,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.764.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33134,6 +33167,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "gtfo_hydrogen_cyanide"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -34070,6 +34113,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.794.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34354,6 +34398,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.802.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34469,6 +34514,7 @@
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.805.title",
           "questlogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34676,7 +34722,19 @@
       },
       "questID:3": 810,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 104,
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "811:10": {
       "preRequisites:11": [
@@ -34968,7 +35026,19 @@
       },
       "questID:3": 819,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 123,
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "820:10": {
       "preRequisites:11": [
@@ -35109,6 +35179,7 @@
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.823.title",
           "tasklogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35208,6 +35279,7 @@
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.826.title",
           "questlogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
