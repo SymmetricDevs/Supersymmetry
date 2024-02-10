@@ -27367,6 +27367,7 @@
           "ignoresview:1": 0,
           "ismain:1": 1,
           "name:8": "susy.quest.db.651.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -27786,6 +27787,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.665.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33157,6 +33159,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.764.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
