@@ -619,7 +619,7 @@ class SuSyMaterials {
         public static Material AluminiumTrifluoride;
         public static Material GalliumPhosphate;
         public static Material LithiumNiobate;
-        public static Material LeadZirconateTitanite;
+        public static Material LeadZirconateTitanate;
         public static Material BoricAcid;
         public static Material AmorphousBoron;
         public static Material BoronTrioxide;
@@ -906,7 +906,6 @@ class SuSyMaterials {
         public static Material ElectrolyticChromium;
         public static Material GalliumTrioxide;
         public static Material AmmoniumDihydrogenPhosphate;
-        public static Material AluminiumCarbonate;
         public static Material IronCarbonate;
         public static Material AmmoniumDiuranate;
         public static Material VanadiumOxydichloride;
@@ -1099,7 +1098,7 @@ class SuSyMaterials {
         public static Material NitrateSolution;
         public static Material SodiumNitrateSolution;
         public static Material PotassiumHydroxideSolution;
-        public static Material CalciumHydroxideSolution;
+        public static Material CalciumHydroxideSlurry;
         public static Material DilutedPotassiumCarbonateSolution;
         public static Material SodiumSilicateSolution;
         public static Material SodiumAluminateSolution;
