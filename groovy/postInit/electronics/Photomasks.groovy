@@ -42,7 +42,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
 
     // Propene route
         
-        ROASTER.recipeBuilder()
+        REACTION_FURNACE.recipeBuilder()
             .inputs(ore('dustMolybdenumTrioxide') * 4)
             .inputs(ore('dustVanadiumPentoxide') * 7)
             .inputs(ore('dustAlumina') * 5)
