@@ -1469,6 +1469,7 @@ public class OrganicChemistryMaterials {
 
         ParaXylene = new Material.Builder(15243, SuSyUtility.susyId('para_xylene'))
                 .dust().liquid()
+                .flags(NO_UNIFICATION)
                 .components(Carbon, 8, Hydrogen, 10)
                 .color(0x1a1611)
                 .build();
@@ -2485,7 +2486,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         Dicyclopentadiene = new Material.Builder(15403, SuSyUtility.susyId('dicyclopentadiene'))
-                .fluid(new FluidBuilder().temperature(306))
+                .liquid(new FluidBuilder().temperature(306))
                 .components(Carbon, 10, Hydrogen, 12)
                 .color(0x9c388b)
                 .build();

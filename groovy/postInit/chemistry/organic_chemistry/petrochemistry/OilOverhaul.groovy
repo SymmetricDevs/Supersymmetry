@@ -1004,7 +1004,6 @@ CRYSTALLIZER.recipeBuilder()
 .EUt(Globals.voltAmps[1])
 .buildAndRegister()
 
-mods.gregtech.extractor.removeByInput(30, [metaitem('dustParaXylene')])
 EXTRACTOR.recipeBuilder()
 .inputs(ore('dustParaXylene'))
 .fluidOutputs(fluid('para_xylene') * 1000)

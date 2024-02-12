@@ -1,5 +1,5 @@
 import classes.*;
-import globals.Globals.*;
+import globals.Globals;
 
 import java.lang.Math;
 

@@ -257,12 +257,12 @@ public class FirstDegreeMaterials {
         GalliumPhosphate.setFormula("GaPO4", true)
 
         LithiumNiobate = new Material.Builder(8121, SuSyUtility.susyId('lithium_niobate'))
-                .gem().iconSet(RUBY)
+                .dust().gem().iconSet(RUBY)
                 .components(Lithium, 1, Niobium, 1, Oxygen, 3)
                 .color(0xbcabde)
                 .build()
 
-        LeadZirconateTitanite = new Material.Builder(8122, SuSyUtility.susyId('lead_zirconate_titanate'))
+        LeadZirconateTitanate = new Material.Builder(8122, SuSyUtility.susyId('lead_zirconate_titanate'))
                 .gem().iconSet(RUBY)
                 .components(Lead, 2, Zirconium, 1, Titanium, 1, Oxygen, 6)
                 .colorAverage()
@@ -1904,7 +1904,8 @@ public class FirstDegreeMaterials {
                 .build();
 
         LeadOxide = new Material.Builder(8388, SuSyUtility.susyId('lead_oxide'))
-                .dust()
+                .dust().gas(new FluidBuilder().temperature(1750))
+                .flags(NO_UNIFICATION)
                 .components(Lead, 1, Oxygen, 1)
                 .colorAverage()
                 .build()
@@ -2483,13 +2484,7 @@ public class FirstDegreeMaterials {
 
         AmmoniumDihydrogenPhosphate.setFormula("NH4H2PO4", true)
 
-        AluminiumCarbonate = new Material.Builder(8474, SuSyUtility.susyId('aluminium_carbonate'))
-                .dust()
-                .components(Aluminium, 2, Carbon, 3, Oxygen, 9)
-                .colorAverage()
-                .build();
-
-        AluminiumCarbonate.setFormula("Al2(CO3)3", true)
+        //FREE ID: 8474
 
         IronCarbonate = new Material.Builder(8475, SuSyUtility.susyId('iron_carbonate'))
                 .dust()

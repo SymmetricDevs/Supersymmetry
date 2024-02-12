@@ -434,7 +434,6 @@
             "id:8": "gregtech:ore_magnetite_0"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.10.title",
           "visibility:8": "ALWAYS"
         }
@@ -1041,7 +1040,6 @@
             "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.23.title",
           "visibility:8": "ALWAYS"
         }
@@ -1078,7 +1076,6 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.24.title",
           "visibility:8": "ALWAYS"
         }
@@ -1166,7 +1163,6 @@
             "id:8": "gregtech:meta_stick"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.26.title",
           "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -1201,7 +1197,6 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.27.title",
           "visibility:8": "ALWAYS"
         }
@@ -1549,6 +1544,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.34.title",
           "visibility:8": "ALWAYS"
         }
@@ -1741,6 +1737,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.39.title",
           "visibility:8": "ALWAYS"
         }
@@ -1876,6 +1873,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.43.title",
           "visibility:8": "ALWAYS"
         }
@@ -2043,7 +2041,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.47.title",
           "visibility:8": "ALWAYS"
         }
@@ -2247,7 +2244,6 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.53.title",
           "visibility:8": "ALWAYS"
         }
@@ -2475,7 +2471,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.60.title",
           "visibility:8": "ALWAYS"
         }
@@ -2648,7 +2643,6 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.64.title",
           "visibility:8": "ALWAYS"
         }
@@ -2685,7 +2679,6 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.65.title",
           "visibility:8": "ALWAYS"
         }
@@ -2865,7 +2858,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.71.title",
           "visibility:8": "ALWAYS"
         }
@@ -2902,7 +2894,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.72.title",
           "visibility:8": "ALWAYS"
         }
@@ -2934,7 +2925,6 @@
             "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.73.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -3143,6 +3133,7 @@
             "id:8": "gregtech:meta_wire_fine"
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.79.title",
           "visibility:8": "ALWAYS"
         }
@@ -3708,7 +3699,6 @@
             "id:8": "susy:meta_item"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.95.title",
           "visibility:8": "ALWAYS"
         }
@@ -4024,7 +4014,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.103.title",
           "visibility:8": "ALWAYS"
         }
@@ -4193,7 +4182,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.108.title",
           "visibility:8": "ALWAYS"
         }
@@ -4226,7 +4214,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.109.title",
           "visibility:8": "ALWAYS"
         }
@@ -4259,7 +4246,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.110.title",
           "visibility:8": "ALWAYS"
         }
@@ -4292,7 +4278,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.111.title",
           "visibility:8": "ALWAYS"
         }
@@ -4361,7 +4346,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.113.title",
           "visibility:8": "ALWAYS"
         }
@@ -4397,7 +4381,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.114.title",
           "visibility:8": "ALWAYS"
         }
@@ -4466,7 +4449,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.116.title",
           "visibility:8": "ALWAYS"
         }
@@ -4641,7 +4623,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.121.title",
           "visibility:8": "ALWAYS"
         }
@@ -4714,7 +4695,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.123.title",
           "visibility:8": "ALWAYS"
         }
@@ -4748,7 +4728,6 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.124.title",
           "visibility:8": "ALWAYS"
         }
@@ -4856,7 +4835,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.127.title",
           "visibility:8": "ALWAYS"
         }
@@ -5042,7 +5020,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.132.title",
           "visibility:8": "ALWAYS"
         }
@@ -6101,7 +6078,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.160.title",
           "visibility:8": "ALWAYS"
         }
@@ -6134,7 +6110,6 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.161.title",
           "visibility:8": "ALWAYS"
         }
@@ -6446,7 +6421,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.170.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -6648,6 +6622,7 @@
             }
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.172.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -6706,6 +6681,7 @@
             }
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.173.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -6764,7 +6740,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.174.title",
           "visibility:8": "ALWAYS"
         }
@@ -6800,6 +6775,7 @@
             }
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.175.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -6990,6 +6966,7 @@
             }
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.178.title",
           "visibility:8": "ALWAYS"
         }
@@ -7052,6 +7029,7 @@
             }
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.180.title",
           "visibility:8": "ALWAYS"
         }
@@ -7240,7 +7218,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.186.title",
           "visibility:8": "ALWAYS"
         }
@@ -7424,6 +7401,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.191.title",
           "visibility:8": "ALWAYS"
         }
@@ -7764,10 +7742,6 @@
       }
     },
     "200:10": {
-      "preRequisiteTypes:7": [
-        0,
-        1
-      ],
       "preRequisites:11": [
         184,
         198
@@ -7946,7 +7920,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.205.title",
           "visibility:8": "ALWAYS"
         }
@@ -8774,6 +8747,7 @@
             "id:8": "minecraft:gunpowder"
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.228.title",
           "visibility:8": "ALWAYS"
         }
@@ -9174,7 +9148,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.238.title",
           "visibility:8": "ALWAYS"
         }
@@ -9210,7 +9183,6 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.239.title",
           "visibility:8": "ALWAYS"
         }
@@ -9249,7 +9221,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.240.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -9286,7 +9257,6 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.241.title",
           "visibility:8": "ALWAYS"
         }
@@ -12283,8 +12253,7 @@
         "betterquesting:10": {
           "desc:8": "susy.quest.db.338.desc",
           "icon:10": {
-            "Damage:2": 86,
-            "id:8": "gregtech:meta_dust"
+            "id:8": "betterquesting:placeholder"
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.338.title",
@@ -12295,15 +12264,7 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 86,
-              "id:8": "gregtech:meta_dust"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -13150,7 +13111,6 @@
             "id:8": "minecraft:iron_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.372.title",
           "visibility:8": "ALWAYS"
         }
@@ -13560,7 +13520,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.381.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -14082,7 +14041,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.395.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -14121,7 +14079,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.396.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -14162,7 +14119,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.397.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
@@ -14398,8 +14354,8 @@
         "betterquesting:10": {
           "desc:8": "susy.quest.db.404.desc",
           "icon:10": {
-            "Damage:2": 371,
-            "id:8": "gregtech:meta_item_1"
+            "Damage:2": 8016,
+            "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -14415,8 +14371,8 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 371,
-              "id:8": "gregtech:meta_item_1"
+              "Damage:2": 8016,
+              "id:8": "gregtech:meta_item_2"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -14995,7 +14951,6 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.420.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -15125,6 +15080,7 @@
             "id:8": "minecraft:glass"
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.422.title",
           "visibility:8": "ALWAYS"
         }
@@ -15616,6 +15572,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.434.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -15627,13 +15584,22 @@
             "0:10": {
               "Amount:3": 1000,
               "FluidName:8": "weed_killer"
-            },
-            "1:10": {
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "requiredFluids:9": {
+            "0:10": {
               "Amount:3": 1000,
               "FluidName:8": "pesticide"
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "2:10": {
+          "index:3": 2,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -15685,7 +15651,7 @@
       },
       "questID:3": 436,
       "rewards:9": {},
-      "tasks:9": {
+      "tasks:9": {  
         "0:10": {
           "taskID:8": "bq_standard:checkbox"
         }
@@ -16059,7 +16025,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.447.title",
           "visibility:8": "ALWAYS"
         }
@@ -16167,11 +16132,10 @@
         "betterquesting:10": {
           "desc:8": "susy.quest.db.451.desc",
           "icon:10": {
-            "Damage:2": 14666,
+            "Damage:2": 14667,
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.451.title",
           "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -16196,8 +16160,8 @@
     "452:10": {
       "preRequisites:11": [
         453,
-        404,
-        866
+        866,
+        877
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16249,7 +16213,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.453.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -16288,7 +16251,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.454.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -16327,7 +16289,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.455.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -16621,7 +16582,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.463.title",
           "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -16655,7 +16615,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.464.title",
           "visibility:8": "ALWAYS"
         }
@@ -17065,7 +17024,6 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.475.title",
           "visibility:8": "ALWAYS"
         }
@@ -17306,7 +17264,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.482.title",
           "visibility:8": "ALWAYS"
         }
@@ -17347,7 +17304,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.483.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
@@ -17387,7 +17343,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.484.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -17429,7 +17384,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.485.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -17467,7 +17421,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.486.title",
           "visibility:8": "ALWAYS"
         }
@@ -17569,7 +17522,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.489.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -17608,7 +17560,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.490.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -17780,6 +17731,7 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.495.title",
           "visibility:8": "ALWAYS"
         }
@@ -17914,7 +17866,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.499.title",
           "visibility:8": "ALWAYS"
         }
@@ -17948,7 +17899,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.500.title",
           "visibility:8": "ALWAYS"
         }
@@ -18054,7 +18004,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.503.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -18090,7 +18039,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.504.title",
           "visibility:8": "ALWAYS"
         }
@@ -18417,6 +18365,7 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.512.title",
           "visibility:8": "ALWAYS"
         }
@@ -21967,7 +21916,8 @@
             "id:8": "opensecurity:rfid_card"
           },
           "ignoresview:1": 0,
-          "name:8": "susy.quest.db.557.title"
+          "name:8": "susy.quest.db.557.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 557,
@@ -25655,7 +25605,6 @@
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.602.title",
           "visibility:8": "ALWAYS"
         }
@@ -25688,7 +25637,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.603.title",
           "visibility:8": "ALWAYS"
         }
@@ -26170,8 +26118,13 @@
       }
     },
     "618:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        188
+        188,
+        674
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26182,6 +26135,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.618.title",
+          "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -26976,7 +26930,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.639.title",
           "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -27414,6 +27367,7 @@
           "ignoresview:1": 0,
           "ismain:1": 1,
           "name:8": "susy.quest.db.651.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -27421,6 +27375,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ammonia"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -27618,7 +27582,6 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.658.title",
           "visibility:8": "ALWAYS"
         }
@@ -27713,8 +27676,8 @@
     },
     "662:10": {
       "preRequisites:11": [
-        390,
-        672
+        672,
+        882
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27824,6 +27787,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.665.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -27831,6 +27795,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "reformed_syngas"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -29966,7 +29940,8 @@
     "672:10": {
       "preRequisites:11": [
         663,
-        674
+        674,
+        678
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29977,6 +29952,8 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.672.title",
+          "questlogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -29989,6 +29966,18 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 6105,
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 6108,
               "id:8": "gregtech:meta_item_2"
             }
           },
@@ -31797,7 +31786,8 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.726.title",
-          "tasklogic:8": "OR"
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 726,
@@ -31831,7 +31821,6 @@
             "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.727.title",
           "visibility:8": "ALWAYS"
         }
@@ -32320,6 +32309,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
+          "ismain:1": 1,
           "name:8": "susy.quest.db.741.title",
           "visibility:8": "ALWAYS"
         }
@@ -32362,7 +32352,6 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.742.title",
           "visibility:8": "ALWAYS"
         }
@@ -33170,6 +33159,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.764.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33177,6 +33167,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "gtfo_hydrogen_cyanide"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -33352,7 +33352,7 @@
         "betterquesting:10": {
           "desc:8": "susy.quest.db.770.desc",
           "icon:10": {
-            "Damage:2": 5010,
+            "Damage:2": 5031,
             "id:8": "gregtech:meta_item_2"
           },
           "ignoresview:1": 0,
@@ -33368,7 +33368,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 5010,
+              "Damage:2": 5031,
               "id:8": "gregtech:meta_item_2"
             }
           },
@@ -34113,6 +34113,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.794.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34397,6 +34398,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.802.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34512,6 +34514,7 @@
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.805.title",
           "questlogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34719,7 +34722,19 @@
       },
       "questID:3": 810,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 104,
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "811:10": {
       "preRequisites:11": [
@@ -34735,6 +34750,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.811.title",
+          "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34756,7 +34772,8 @@
     },
     "812:10": {
       "preRequisites:11": [
-        806
+        806,
+        808
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34767,6 +34784,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.812.title",
+          "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35008,7 +35026,19 @@
       },
       "questID:3": 819,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 123,
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "820:10": {
       "preRequisites:11": [
@@ -35149,6 +35179,7 @@
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.823.title",
           "tasklogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35210,8 +35241,8 @@
         "betterquesting:10": {
           "desc:8": "susy.quest.db.825.desc",
           "icon:10": {
-            "Damage:2": 8498,
-            "id:8": "gregtech:meta_plate"
+            "Damage:2": 15397,
+            "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.825.title",
@@ -35226,7 +35257,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 8498,
+              "Damage:2": 15397,
               "id:8": "gregtech:meta_dust"
             }
           },
@@ -35248,6 +35279,7 @@
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.826.title",
           "questlogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35407,7 +35439,7 @@
         "betterquesting:10": {
           "desc:8": "susy.quest.db.831.desc",
           "icon:10": {
-            "id:8": "gregtech:borderless_white_lamp"
+            "id:8": "gregtech:borderless_yellow_lamp"
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.831.title",
@@ -35579,8 +35611,8 @@
         "betterquesting:10": {
           "desc:8": "susy.quest.db.838.desc",
           "icon:10": {
-            "Damage:2": 12,
-            "id:8": "littletiles:ltcoloredblock"
+            "Damage:2": 14,
+            "id:8": "susy:resource_block"
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.838.title",
@@ -36157,7 +36189,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.863.title",
           "visibility:8": "ALWAYS"
         }
@@ -36198,7 +36229,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.864.title",
           "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36242,7 +36272,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.865.title",
           "visibility:8": "ALWAYS"
         }
@@ -36288,13 +36317,13 @@
     "867:10": {
       "preRequisiteTypes:7": [
         1,
-        0,
-        1
+        1,
+        0
       ],
       "preRequisites:11": [
         243,
-        871,
-        232
+        232,
+        871
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -36304,7 +36333,6 @@
             "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.867.title",
           "visibility:8": "ALWAYS"
         }
@@ -36388,7 +36416,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.869.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36427,7 +36454,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.870.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36452,13 +36478,8 @@
       }
     },
     "871:10": {
-      "preRequisiteTypes:7": [
-        0,
-        1
-      ],
       "preRequisites:11": [
-        870,
-        538
+        870
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -36471,8 +36492,8 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.871.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36491,6 +36512,10 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -36531,7 +36556,6 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
           "name:8": "susy.quest.db.873.title",
           "visibility:8": "ALWAYS"
         }
@@ -36611,9 +36635,42 @@
     },
     "877:10": {
       "preRequisites:11": [
+        880
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "susy.quest.db.877.desc",
+          "icon:10": {
+            "Damage:2": 371,
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "name:8": "susy.quest.db.877.title",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 877,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 371,
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "878:10": {
+      "preRequisites:11": [
         876,
-        676,
-        879
+        879,
+        677
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -36632,7 +36689,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "878:10": {
+    "879:10": {
       "preRequisites:11": [
         550
       ],
@@ -36661,6 +36718,106 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "880:10": {
+      "preRequisites:11": [
+        404,
+        881
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "susy.quest.db.880.desc",
+          "icon:10": {
+            "Damage:2": 8017,
+            "id:8": "gregtech:meta_item_2"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "name:8": "susy.quest.db.880.title",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 880,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8017,
+              "id:8": "gregtech:meta_item_2"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "881:10": {
+      "preRequisites:11": [
+        199
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "susy.quest.db.881.desc",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "wafer_treatment_acid"
+            }
+          },
+          "ignoresview:1": 0,
+          "name:8": "susy.quest.db.881.title",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 881,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "wafer_treatment_acid"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "882:10": {
+      "preRequisites:11": [
+        673
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "susy.quest.db.882.desc",
+          "icon:10": {
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "liquid_nitrogen"
+            }
+          },
+          "ignoresview:1": 0,
+          "name:8": "susy.quest.db.882.title",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 882,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "liquid_nitrogen"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
         }
       }
     }
@@ -37758,699 +37915,706 @@
           "y:3": 318
         },
         "23:10": {
+          "id:3": 123,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 168,
+          "y:3": 156
+        },
+        "24:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 324
         },
-        "24:10": {
+        "25:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 378
         },
-        "25:10": {
+        "26:10": {
           "id:3": 127,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 216
         },
-        "26:10": {
+        "27:10": {
           "id:3": 128,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": 318
         },
-        "27:10": {
+        "28:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 282
         },
-        "28:10": {
+        "29:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 192
         },
-        "29:10": {
+        "30:10": {
           "id:3": 158,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 96
         },
-        "30:10": {
+        "31:10": {
           "id:3": 159,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 48
         },
-        "31:10": {
+        "32:10": {
           "id:3": 160,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 108
         },
-        "32:10": {
+        "33:10": {
           "id:3": 161,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 108
         },
-        "33:10": {
+        "34:10": {
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 108
         },
-        "34:10": {
+        "35:10": {
           "id:3": 169,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -306,
           "y:3": 210
         },
-        "35:10": {
+        "36:10": {
           "id:3": 171,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
           "y:3": 78
         },
-        "36:10": {
+        "37:10": {
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 270
         },
-        "37:10": {
+        "38:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 318
         },
-        "38:10": {
+        "39:10": {
           "id:3": 174,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -348,
           "y:3": 402
         },
-        "39:10": {
+        "40:10": {
           "id:3": 175,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 366
         },
-        "40:10": {
+        "41:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 408
         },
-        "41:10": {
+        "42:10": {
           "id:3": 179,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -342,
           "y:3": 366
         },
-        "42:10": {
+        "43:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 456
         },
-        "43:10": {
+        "44:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 504
         },
-        "44:10": {
+        "45:10": {
           "id:3": 183,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 378
         },
-        "45:10": {
+        "46:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 378
         },
-        "46:10": {
+        "47:10": {
           "id:3": 185,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 426
         },
-        "47:10": {
+        "48:10": {
           "id:3": 186,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 114
         },
-        "48:10": {
+        "49:10": {
           "id:3": 188,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 160,
           "y:3": 463
         },
-        "49:10": {
+        "50:10": {
           "id:3": 189,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 475
         },
-        "50:10": {
+        "51:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 475
         },
-        "51:10": {
-          "id:3": 191,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 48
-        },
         "52:10": {
+          "id:3": 191,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -216,
+          "y:3": 36
+        },
+        "53:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 48
         },
-        "53:10": {
+        "54:10": {
           "id:3": 193,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 48
         },
-        "54:10": {
+        "55:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 24
         },
-        "55:10": {
+        "56:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 72
         },
-        "56:10": {
+        "57:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -240,
           "y:3": -24
         },
-        "57:10": {
+        "58:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -252,
           "y:3": 12
         },
-        "58:10": {
+        "59:10": {
           "id:3": 198,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 282
         },
-        "59:10": {
+        "60:10": {
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 50,
           "y:3": 323
         },
-        "60:10": {
+        "61:10": {
           "id:3": 200,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 378
         },
-        "61:10": {
+        "62:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 427
         },
-        "62:10": {
+        "63:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 378
         },
-        "63:10": {
+        "64:10": {
           "id:3": 203,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 162,
           "y:3": 366
         },
-        "64:10": {
+        "65:10": {
           "id:3": 204,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": 114
         },
-        "65:10": {
+        "66:10": {
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 90,
           "y:3": 108
         },
-        "66:10": {
+        "67:10": {
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 432
         },
-        "67:10": {
+        "68:10": {
           "id:3": 222,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 468
         },
-        "68:10": {
+        "69:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 174
         },
-        "69:10": {
+        "70:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -186,
           "y:3": 270
         },
-        "70:10": {
+        "71:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 426
         },
-        "71:10": {
+        "72:10": {
           "id:3": 239,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 558
         },
-        "72:10": {
+        "73:10": {
           "id:3": 240,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 114,
           "y:3": 558
         },
-        "73:10": {
+        "74:10": {
           "id:3": 241,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 558
         },
-        "74:10": {
+        "75:10": {
           "id:3": 242,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 18,
           "y:3": 546
         },
-        "75:10": {
+        "76:10": {
           "id:3": 243,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 18,
           "y:3": 624
         },
-        "76:10": {
+        "77:10": {
           "id:3": 368,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 468
         },
-        "77:10": {
+        "78:10": {
           "id:3": 369,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -216,
           "y:3": 504
         },
-        "78:10": {
+        "79:10": {
           "id:3": 372,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": 427
         },
-        "79:10": {
+        "80:10": {
           "id:3": 377,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 132,
           "y:3": -102
         },
-        "80:10": {
+        "81:10": {
           "id:3": 378,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -12,
           "y:3": -102
         },
-        "81:10": {
+        "82:10": {
           "id:3": 379,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 60,
           "y:3": -102
         },
-        "82:10": {
+        "83:10": {
           "id:3": 380,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 172,
           "y:3": 52
         },
-        "83:10": {
+        "84:10": {
           "id:3": 381,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
           "y:3": 324
         },
-        "84:10": {
+        "85:10": {
           "id:3": 383,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 229,
           "y:3": 52
         },
-        "85:10": {
+        "86:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": 12
+          "x:3": -168,
+          "y:3": -12
         },
-        "86:10": {
+        "87:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
-          "y:3": -24
+          "y:3": -36
         },
-        "87:10": {
+        "88:10": {
           "id:3": 386,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 12
         },
-        "88:10": {
+        "89:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": 12
         },
-        "89:10": {
+        "90:10": {
           "id:3": 388,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 204
         },
-        "90:10": {
+        "91:10": {
           "id:3": 418,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": -42
         },
-        "91:10": {
+        "92:10": {
           "id:3": 419,
           "sizeX:3": 34,
           "sizeY:3": 34,
           "x:3": -16,
           "y:3": -12
         },
-        "92:10": {
+        "93:10": {
           "id:3": 420,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 66,
           "y:3": -6
         },
-        "93:10": {
+        "94:10": {
           "id:3": 421,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": 0
         },
-        "94:10": {
+        "95:10": {
           "id:3": 438,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -156,
           "y:3": 510
         },
-        "95:10": {
+        "96:10": {
           "id:3": 439,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": -90
         },
-        "96:10": {
+        "97:10": {
           "id:3": 440,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": -42
         },
-        "97:10": {
+        "98:10": {
           "id:3": 446,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 78,
           "y:3": 594
         },
-        "98:10": {
+        "99:10": {
           "id:3": 447,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 114,
           "y:3": 594
         },
-        "99:10": {
+        "100:10": {
           "id:3": 472,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -222,
           "y:3": 270
         },
-        "100:10": {
+        "101:10": {
           "id:3": 473,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 522
         },
-        "101:10": {
+        "102:10": {
           "id:3": 474,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 426
         },
-        "102:10": {
+        "103:10": {
           "id:3": 500,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 252
         },
-        "103:10": {
+        "104:10": {
           "id:3": 517,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": 474
         },
-        "104:10": {
+        "105:10": {
           "id:3": 602,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 324
         },
-        "105:10": {
+        "106:10": {
           "id:3": 603,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 6
         },
-        "106:10": {
+        "107:10": {
           "id:3": 604,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 252
         },
-        "107:10": {
+        "108:10": {
           "id:3": 610,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -150,
           "y:3": 468
         },
-        "108:10": {
+        "109:10": {
           "id:3": 631,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 48
         },
-        "109:10": {
+        "110:10": {
           "id:3": 638,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -306,
           "y:3": 540
         },
-        "110:10": {
+        "111:10": {
           "id:3": 657,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 168,
           "y:3": 192
         },
-        "111:10": {
+        "112:10": {
           "id:3": 658,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": 78
         },
-        "112:10": {
+        "113:10": {
           "id:3": 660,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": 252
         },
-        "113:10": {
+        "114:10": {
           "id:3": 661,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 222,
           "y:3": 462
         },
-        "114:10": {
+        "115:10": {
           "id:3": 666,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
           "y:3": 42
         },
-        "115:10": {
+        "116:10": {
           "id:3": 667,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": 42
         },
-        "116:10": {
+        "117:10": {
           "id:3": 682,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -90
         },
-        "117:10": {
+        "118:10": {
           "id:3": 684,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": 558
         },
-        "118:10": {
+        "119:10": {
           "id:3": 712,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 96
         },
-        "119:10": {
+        "120:10": {
           "id:3": 721,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 96
         },
-        "120:10": {
+        "121:10": {
           "id:3": 725,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": -24
+          "x:3": -204,
+          "y:3": -36
         },
-        "121:10": {
+        "122:10": {
           "id:3": 740,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 468
         },
-        "122:10": {
+        "123:10": {
           "id:3": 742,
           "sizeX:3": 36,
           "sizeY:3": 36,
@@ -38588,8 +38752,8 @@
         },
         "16:10": {
           "id:3": 400,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
           "x:3": -30,
           "y:3": 72
         },
@@ -38611,22 +38775,22 @@
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 186,
+          "x:3": 174,
           "y:3": 72
         },
         "20:10": {
           "id:3": 405,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 186,
+          "x:3": 174,
           "y:3": 42
         },
         "21:10": {
           "id:3": 406,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -132,
-          "y:3": 66
+          "x:3": -168,
+          "y:3": 72
         },
         "22:10": {
           "id:3": 410,
@@ -38688,7 +38852,7 @@
           "id:3": 443,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 270,
+          "x:3": 234,
           "y:3": 12
         },
         "31:10": {
@@ -38709,42 +38873,42 @@
           "id:3": 452,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 234,
+          "x:3": 264,
           "y:3": 72
         },
         "34:10": {
           "id:3": 453,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 234,
+          "x:3": 264,
           "y:3": 42
         },
         "35:10": {
           "id:3": 454,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 270,
-          "y:3": 42
+          "x:3": 294,
+          "y:3": 12
         },
         "36:10": {
           "id:3": 455,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 234,
+          "x:3": 264,
           "y:3": 12
         },
         "37:10": {
           "id:3": 456,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 234,
+          "x:3": 216,
           "y:3": 132
         },
         "38:10": {
           "id:3": 457,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 186,
+          "x:3": 180,
           "y:3": 132
         },
         "39:10": {
@@ -38822,14 +38986,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
-          "y:3": 42
+          "y:3": 36
         },
         "50:10": {
           "id:3": 470,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
-          "y:3": -18
+          "y:3": -12
         },
         "51:10": {
           "id:3": 471,
@@ -39169,24 +39333,24 @@
         },
         "99:10": {
           "id:3": 593,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -78,
-          "y:3": 72
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -90,
+          "y:3": 66
         },
         "100:10": {
           "id:3": 594,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -102,
-          "y:3": 114
+          "x:3": -120,
+          "y:3": 120
         },
         "101:10": {
           "id:3": 595,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 114
+          "x:3": -36,
+          "y:3": 120
         },
         "102:10": {
           "id:3": 596,
@@ -39304,7 +39468,7 @@
           "id:3": 671,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 186,
+          "x:3": 174,
           "y:3": 12
         },
         "119:10": {
@@ -39409,7 +39573,7 @@
           "id:3": 863,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
+          "x:3": 264,
           "y:3": 192
         },
         "134:10": {
@@ -39424,62 +39588,83 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 414,
-          "y:3": 114
+          "y:3": 108
         },
         "136:10": {
           "id:3": 866,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
+          "x:3": 264,
           "y:3": 132
         },
         "137:10": {
           "id:3": 867,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 306,
+          "x:3": 294,
           "y:3": 102
         },
         "138:10": {
           "id:3": 868,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 306,
+          "x:3": 294,
           "y:3": 162
         },
         "139:10": {
           "id:3": 869,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 336,
+          "x:3": 324,
           "y:3": 192
         },
         "140:10": {
           "id:3": 870,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 306,
+          "x:3": 324,
           "y:3": 12
         },
         "141:10": {
           "id:3": 871,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 306,
+          "x:3": 294,
           "y:3": 42
         },
         "142:10": {
           "id:3": 872,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 336,
+          "x:3": 324,
           "y:3": 132
         },
         "143:10": {
           "id:3": 873,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 342,
+          "x:3": 324,
+          "y:3": 42
+        },
+        "144:10": {
+          "id:3": 877,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 234,
+          "y:3": 72
+        },
+        "145:10": {
+          "id:3": 880,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 204,
+          "y:3": 72
+        },
+        "146:10": {
+          "id:3": 881,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 204,
           "y:3": 12
         }
       }
@@ -41749,36 +41934,36 @@
           "id:3": 662,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 234,
-          "y:3": 30
+          "x:3": 174,
+          "y:3": 78
         },
         "14:10": {
           "id:3": 663,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": -48
+          "x:3": 288,
+          "y:3": 84
         },
         "15:10": {
           "id:3": 672,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": -12
+          "x:3": 234,
+          "y:3": 84
         },
         "16:10": {
           "id:3": 673,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 132,
+          "x:3": 84,
           "y:3": 84
         },
         "17:10": {
           "id:3": 674,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 300,
-          "y:3": -12
+          "x:3": 234,
+          "y:3": 36
         },
         "18:10": {
           "id:3": 675,
@@ -41798,28 +41983,35 @@
           "id:3": 677,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 132
+          "x:3": 132,
+          "y:3": 180
         },
         "21:10": {
           "id:3": 678,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 180,
-          "y:3": 84
+          "x:3": 288,
+          "y:3": 132
         },
         "22:10": {
           "id:3": 878,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 234,
-          "y:3": 126
+          "x:3": 174,
+          "y:3": 174
         },
         "23:10": {
           "id:3": 879,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
+          "x:3": 234,
+          "y:3": 180
+        },
+        "24:10": {
+          "id:3": 882,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
           "y:3": 84
         }
       }
@@ -42193,7 +42385,8 @@
               }
             }
           },
-          "name:8": "susy.quest.ql.22.title"
+          "name:8": "susy.quest.ql.22.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "quests:9": {
