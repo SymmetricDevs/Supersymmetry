@@ -8,5 +8,4 @@ new MobHordeEvent((player) -> {return new EntityZombie(player.world);}, 5, 10)
 	
 new MobHordeEvent((player) -> {Bandit bandit = new Bandit(player.world); bandit.addRandomArmor(0); return bandit;}, 2, 4)
 	.setAdvancementUnlock(new ResourceLocation("gregtech:low_voltage/23_lv_assembler"))
-	.setMaximumDistanceUnderground(20)
 	.setTimer(6000, 15000)
