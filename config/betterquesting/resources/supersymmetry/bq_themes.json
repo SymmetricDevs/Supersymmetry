@@ -4,8 +4,7 @@
 		"themeName": "Supersymmetry",
 		"themeID": "supersymmetry:supersymmetry",
 		"textures": {
-			"betterquesting:panel_main":
-			{
+			"betterquesting:panel_main": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [32, 24, 8, 8],
