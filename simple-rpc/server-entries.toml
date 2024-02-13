@@ -1,0 +1,7 @@
+#Enable/Disable Server Entries overrides
+enabled = false
+#Internal Version Number. NO TOUCHY!
+version = 1
+#Server override entries
+entry = []
+
