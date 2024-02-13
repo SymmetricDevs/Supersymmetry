@@ -88,8 +88,8 @@ susy.material.polymerized_styrene_butadiene_solution=苯乙烯-丁二烯共聚�
 susy.material.diluted_calcium_chloride_solution=稀氯化钙溶液
 susy.material.diluted_rock_salt_solution=稀岩盐溶液
 susy.material.diluted_potassium_carbonate_solution=稀碳酸钾溶液
-susy.material.potassium_hydroxide_solution=氢氧化钾浆液
-susy.material.calcium_hydroxide_solution=氢氧化钙溶液
+susy.material.potassium_hydroxide_solution=氢氧化钾溶液
+susy.material.calcium_hydroxide_slurry=氢氧化钙浆液
 susy.material.sodium_silicate_solution=硅酸钠溶液
 susy.material.raw_molecular_sieve=分子筛原料
 susy.material.acetylene=乙炔
@@ -342,8 +342,6 @@ susy.material.brine=卤水
 susy.material.warm_brine=温卤水
 susy.material.oily_brine=石油盐水
 susy.material.sulfuric_oil_residue=含硫油渣
-susy.material.treated_sulfuric_oil_residue=氢化含硫油渣
-susy.material.oil_residue=油渣
 susy.material.light_bitumen_solution=沥青轻油溶液
 susy.material.bitumen_solution=沥青石油溶液
 susy.material.heavy_bitumen_solution=沥青重油溶液
@@ -567,6 +565,7 @@ susy.material.terephthalic_acid=对苯二甲酸
 susy.material.bistrichloromethylbenzene=1,4-双（三氯甲基）苯
 susy.material.terephthaloyl_chloride=对苯二甲酰氯
 susy.material.kevlar=凯夫拉
+susy.material.four_four_oxydianiline_solution=4,4'-二氨基二苯醚溶液
 susy.material.wacker_catalyst=Wacker催化剂
 susy.material.potassium_iodide_solution=碘化钾溶液
 susy.material.sodium_sulfate_solution=硫酸钠溶液
@@ -1444,7 +1443,7 @@ susy.material.chloroauric_acid_solution=氯金酸溶液
 susy.material.diluted_ammonium_sulfate_solution=稀硫酸铵溶液
 susy.material.phosgene_solution=光气溶液
 susy.material.sodium_bisphenolate_solution=双酚A二钠溶液
-susy.material.oligomeric_bisphenol_solution=双酚A寡聚物溶液
+susy.material.oligomeric_bisphenol_solution=寡聚碳酸酯溶液
 susy.material.polycarbonate=聚碳酸酯
 susy.material.triethylamine_solution=三乙胺溶液
 susy.material.granite_tailing_slurry=花岗岩尾矿浆液
@@ -1888,6 +1887,14 @@ susy.material.gaseous_methacrylic_acid_mixture=气态甲基丙烯酸混合物
 susy.material.methacrylic_acid_solution=甲基丙烯酸溶液
 susy.material.uranium_dioxide=二氧化铀
 susy.material.uranium_tetrafluoride=四氟化铀
+susy.material.salty_hydrofluoric_acid=含盐氢氟酸
+susy.material.supported_molybdenum_vanadium=氧化铝负载氧化钼-氧化钒（VO-MO）
+susy.material.acrolein=丙烯醛
+susy.material.c_five_fraction=C5馏分
+susy.material.dimerized_c_five_fraction=二聚化C5馏分
+susy.material.dicyclopentadiene=二聚环戊二烯
+susy.material.ethylene_carbonate=碳酸乙烯酯
+susy.material.lithium_hexafluorophosphate_electrolyte=六氟磷酸锂电解液
 
 # Isotopes
 
@@ -1954,7 +1961,7 @@ metaitem.limestone.dust.name=石灰石粉
 metaitem.chunk.magnetite.name=磁铁矿碎块
 metaitem.hot_iron_rod.name=热铁杆
 metaitem.voltaic_pile.name=伏打电堆
-metaitem.electrolyte_paper.name=浸渍电解质的纸
+metaitem.electrolyte_paper.name=浸渍电解液的纸
 metaitem.sand.dust.name=细沙堆
 metaitem.straw.name=草秆
 metaitem.mudbrick_mix.name=泥砖泥料
@@ -2218,19 +2225,19 @@ metaitem.metallized_plastic_square.name=金属化塑料方片
 metaitem.raw_smd_capacitor.name=薄膜电容半成品
 metaitem.raw_capacitor_roll.name=铝电容筒
 metaitem.aluminium_electrolytic_capacitor.name=铝电解电容
-metaitem.tantalum_chip.name=钽芯片
-metaitem.anodized_tantalum_chip.name=阳极氧化钽芯片
-metaitem.manganized_tantalum_chip.name=二氧化锰覆膜钽芯片
+metaitem.tantalum_chip.name=钽晶片
+metaitem.anodized_tantalum_chip.name=阳极氧化钽晶片
+metaitem.manganized_tantalum_chip.name=二氧化锰覆膜钽晶片
 metaitem.ferroelectric_ceramic_foil.name=铁电陶瓷箔
 metaitem.stacked_ceramic_capacitor.name=叠层陶瓷电容
 metaitem.raw_ceramic_capacitor.name=陶瓷电容半成品
 
 metaitem.wafer.insulated_silicon.name=表面绝缘硅晶圆
 metaitem.wafer.insulated_silicon_germanium.name=表面绝缘硅化锗晶圆
-metaitem.chip.insulated_silicon.name=表面绝缘硅芯片
-metaitem.chip.insulated_silicon_germanium.name=表面绝缘硅化锗芯片
-metaitem.chip.n_doped_silicon.name=N型掺杂硅芯片
-metaitem.chip.silicon_dioxide.name=二氧化硅芯片
+metaitem.chip.insulated_silicon.name=表面绝缘硅晶片
+metaitem.chip.insulated_silicon_germanium.name=表面绝缘硅化锗晶片
+metaitem.chip.n_doped_silicon.name=N型掺杂硅晶片
+metaitem.chip.silicon_dioxide.name=二氧化硅晶片
 
 metaitem.beads.ag_fifty_w_x_eight.name=AG 50W-X8离子交换树脂颗粒
 metaitem.beads.amberlyst_ch.name=Amberlyst CH-43离子交换树脂颗粒
@@ -2308,7 +2315,7 @@ gregtech.machine.laser_engraver.uiv.name=史诗电子束光刻机 III
 gregtech.machine.laser_engraver.uxv.name=史诗电子束光刻机 IV
 gregtech.machine.laser_engraver.opv.name=传说电子束光刻机
 
-recipemap.gravity_separator.name=重力分离
+recipemap.laser_engraver.name=电子束光刻
 
 # Generic Renaming
 item.chisel.chisel_diamond.name=钢凿子
@@ -2333,4 +2340,6 @@ gregtech.block_group_members.latex_logs.name=橡胶木
 
 # Renaming (zh_cn only)
 gregtech.material.lubricant=润滑剂
-susy.material.cotton.fiber=棉花纤维
+item.susy.material.fluix.gem=福鲁伊克斯水晶
+item.susy.material.fluix.gemFlawless=无暇的福鲁伊克斯水晶
+item.susy.material.fluix.gemExquisite=精致的福鲁伊克斯水晶
