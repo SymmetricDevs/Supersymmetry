@@ -4393,7 +4393,7 @@ MIXER.recipeBuilder()
 
 BCR.recipeBuilder()
         .fluidInputs(fluid('sodium_fluoride_solution') * 50)
-        .fluidOutputs(fluid('hydrogen_chloride') * 50)
+        .fluidInputs(fluid('hydrogen_chloride') * 50)
         .fluidOutputs(fluid('salty_hydrofluoric_acid') * 50)
         .duration(2)
         .EUt(30)
