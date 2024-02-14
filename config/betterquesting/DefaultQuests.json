@@ -30070,6 +30070,10 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -30137,6 +30141,10 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -34647,6 +34655,7 @@
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.808.title",
           "questlogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36818,6 +36827,10 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
