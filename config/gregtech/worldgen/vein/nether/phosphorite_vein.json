@@ -17,13 +17,22 @@
     "type": "layered",
     "values": [
       {
-        "primary": "ore:phosphorite"
+        "primary": {
+          "block":"susy:resource_block",
+          "variant":"phosphorite"
+	}
       },
       {
-        "secondary": "ore:phosphorite"
+        "secondary": {
+          "block":"susy:resource_block",
+          "variant":"phosphorite"
+	}
       },
       {
-        "between": "ore:phosphorite"
+        "between": {
+          "block":"susy:resource_block",
+          "variant":"phosphorite"
+	}
       },
       {
         "sporadic": "ore:apatite"

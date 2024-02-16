@@ -24,10 +24,10 @@
 	}
       },
       {
-        "secondary": "fluorapatite"
+        "secondary": "ore:fluorapatite"
       },
       {
-        "between": "hydroxyapatite"
+        "between": "ore:hydroxyapatite"
       },
       {
         "sporadic": "ore:chlorapatite"
