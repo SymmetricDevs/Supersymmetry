@@ -56,6 +56,12 @@ mods.gregtech.assembler.recipeBuilder()
     .duration(240)
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()
+    
+crafting.addShaped("susy:air_vent", item('susy:meta_item', 4), [
+	[ore('craftingToolHardHammer'),ore('stickWroughtIron'),ore('craftingToolScrewdriver')],
+	[ore('plateWroughtIron'),ore('stickWroughtIron'),ore('plateWroughtIron')],
+	[ore('screwWroughtIron'),ore('stickWroughtIron'),ore('screwWroughtIron')]
+])
 
 //Deposit stuff
 // Crushed Sulfur Ore * 1
