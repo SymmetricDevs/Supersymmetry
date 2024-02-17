@@ -355,7 +355,7 @@ SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
     .fluidInputs(fluid('liquid_waste_nitrogen'))
     .fluidOutputs(fluid('cold_waste_gaseous_nitrogen') * 24)
     .fluidOutputs(fluid('liquid_argon_product') * 200)
-    .duration(200)
+    .duration(83)
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()
 
