@@ -34,7 +34,7 @@ def build(args):
     modlist = []
     basePath = os.path.normpath(os.path.realpath(__file__)[:-7] + "..")
     copyDirs = ["/scripts", "/resources", "/config",
-                "/mods", "/structures", "/groovy"]
+                "/mods", "/structures", "/groovy", "/simple-rpc"]
     serverCopyDirs = ["/scripts", "/config", "/mods", "/structures", "/groovy"]
 
     if args.clean:
