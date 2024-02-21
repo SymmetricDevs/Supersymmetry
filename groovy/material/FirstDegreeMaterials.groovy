@@ -776,13 +776,7 @@ public class FirstDegreeMaterials {
                 .color(0xa9aec4)
                 .build()
 
-        DilutedSilverNitrateSolution = new Material.Builder(8209, SuSyUtility.susyId('diluted_silver_nitrate_solution'))
-                .liquid()
-                .components(Silver, 1, Nitrogen, 1, Oxygen, 3, Water, 2)
-                .colorAverage()
-                .build();
-
-        DilutedSilverNitrateSolution.setFormula("(AgNO3)(H2O)2", true)
+        //FREE IDs: 8208-8209
 
         DicobaltOctacarbonyl = new Material.Builder(8210, SuSyUtility.susyId('dicobalt_octacarbonyl'))
                 .dust()
@@ -2800,13 +2794,7 @@ public class FirstDegreeMaterials {
 
         SodiumMolybdateSolution.setFormula("(Na2MoO4)(H2O)", true)
 
-        // FREE ID: 8532
-
-        DilutedSilverNitrateSolution = new Material.Builder(8533, SuSyUtility.susyId('diluted_silver_nitrate_solution'))
-                .liquid()
-                .components(Silver, 1, Nitrogen, 1, Oxygen, 3, Water, 2)
-                .colorAverage()
-                .build();
+        // FREE ID: 8532-8533
 
         DilutedSilverNitrateSolution.setFormula("(AgNO3)(H2O)2", true)
 
