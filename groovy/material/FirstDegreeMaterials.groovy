@@ -2796,8 +2796,6 @@ public class FirstDegreeMaterials {
 
         // FREE ID: 8532-8533
 
-        DilutedSilverNitrateSolution.setFormula("(AgNO3)(H2O)2", true)
-
         TitaniumIodide = new Material.Builder(8534, SuSyUtility.susyId('titanium_iodide'))
                 .dust()
                 .components(Titanium, 1, Iodine, 4)
