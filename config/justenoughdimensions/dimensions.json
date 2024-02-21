@@ -1,6 +1,21 @@
 {
     "dimensions": [
 		{
+            "dim": -1,
+            "override": true,
+            "dimensiontype":
+            {
+                "id": -1,
+                "name": "Nether",
+                "keeploaded": false,
+                "worldprovider": "WorldProviderHellJED",
+                "require_exact_match": true
+            },
+            "jed": {
+                "MovementFactor": 0.125
+            }
+        },
+        {
             "dim": 8,
             "dimensiontype": {
                 "id": 8,
