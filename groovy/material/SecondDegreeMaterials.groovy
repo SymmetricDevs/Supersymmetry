@@ -100,7 +100,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        CalciumHydroxideSolution = new Material.Builder(13013, SuSyUtility.susyId('calcium_hydroxide_solution'))
+        CalciumHydroxideSlurry = new Material.Builder(13013, SuSyUtility.susyId('calcium_hydroxide_slurry'))
                 .liquid()
                 .components(material('calcium_hydroxide'), 1, Water, 1)
                 .colorAverage()
@@ -378,7 +378,7 @@ public class SecondDegreeMaterials {
                 .components(AluminiumSulfate, 1, Water, 6)
                 .colorAverage()
                 .build();
-
+        
         //FREE ID: 13059
 
         CopperSulfateSolution = new Material.Builder(13060, SuSyUtility.susyId('copper_sulfate_solution'))

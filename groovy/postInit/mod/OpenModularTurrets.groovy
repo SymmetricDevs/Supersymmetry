@@ -1,3 +1,7 @@
+import gregtech.api.recipes.ingredients.nbtmatch.*
+
+
+
 def soldering_alloys = [
         liquid('tin') * 144,
         liquid('soldering_alloy') * 72
@@ -110,8 +114,8 @@ for (solder in soldering_alloys) {
                     item('openmodularturrets:intermediate_regular:0'),
                     ore('circuitLv'),
                     metaitem('electric.motor.lv') * 2,
-                    item('techguns:pistol')
             ])
+            .inputNBT(item('techguns:pistol').getItem(), NBTMatcher.ANY, NBTCondition.ANY)
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:machine_gun_turret'))
             .duration(200)
