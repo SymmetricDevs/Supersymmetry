@@ -152,6 +152,7 @@ class ChangeFlags {
         setupFluidType(SiliconDioxide, FluidStorageKeys.LIQUID, 1986)
         setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
 
+        Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true))
         Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
 
