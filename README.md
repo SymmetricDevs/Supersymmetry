@@ -28,6 +28,7 @@ Special thanks to our volunteers:
 - trainvoi • Research/Playtesting
 - ZombieZilla • Research/Playtesting
 - Tian-mi • Chinese translation
+- Roque_Crafter • Portuguese translation
 - Lavinia • Textures
 
 ## Building the pack
