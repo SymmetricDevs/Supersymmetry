@@ -89,7 +89,7 @@ CryoHydrogen.setEUt(240);
 CryoHydrogen.setDuration(100);
 CryoHydrogen.setPowerHX(100);
 CryoHydrogen.setDurationHX(5);
-CryoHydrogen.setDurationRadiator(400);
+CryoHydrogen.setDurationRadiator(200);
 CryoHydrogen.setTemperature(14);
 
 def CryoOxygen = new ICryoGas('oxygen', 'hot_hp_oxygen', 'hp_oxygen', 'cold_hp_oxygen', 'liquid_oxygen');
@@ -97,7 +97,7 @@ CryoOxygen.setEUt(30);
 CryoOxygen.setDuration(100);
 CryoOxygen.setPowerHX(100);
 CryoOxygen.setDurationHX(5);
-CryoOxygen.setDurationRadiator(400);
+CryoOxygen.setDurationRadiator(200);
 CryoOxygen.setTemperature(90);
 
 def CryoHelium = new ICryoGas('helium', 'hot_hp_helium', 'hp_helium', 'cold_hp_helium', 'liquid_helium');
@@ -105,7 +105,7 @@ CryoHelium.setEUt(720);
 CryoHelium.setDuration(100);
 CryoHelium.setPowerHX(100);
 CryoHelium.setDurationHX(5);
-CryoHelium.setDurationRadiator(400);
+CryoHelium.setDurationRadiator(200);
 CryoHelium.setTemperature(4);
 
 def CryoNeon = new ICryoGas('neon', 'hot_hp_neon', 'hp_neon', 'cold_hp_neon', 'liquid_neon');
@@ -113,7 +113,7 @@ CryoNeon.setEUt(240);
 CryoNeon.setDuration(100);
 CryoNeon.setPowerHX(100);
 CryoNeon.setDurationHX(5);
-CryoNeon.setDurationRadiator(400);
+CryoNeon.setDurationRadiator(200);
 CryoNeon.setTemperature(27);
 
 def CryoArgon = new ICryoGas('argon', 'hot_hp_argon', 'hp_argon', 'cold_hp_argon', 'liquid_argon');
@@ -121,7 +121,7 @@ CryoArgon.setEUt(120);
 CryoArgon.setDuration(100);
 CryoArgon.setPowerHX(100);
 CryoArgon.setDurationHX(5);
-CryoArgon.setDurationRadiator(400);
+CryoArgon.setDurationRadiator(200);
 CryoArgon.setTemperature(87);
 
 def CryoKrypton = new ICryoGas('krypton', 'hot_hp_krypton', 'hp_krypton', 'cold_hp_krypton', 'liquid_krypton');
@@ -129,7 +129,7 @@ CryoKrypton.setEUt(120);
 CryoKrypton.setDuration(100);
 CryoKrypton.setPowerHX(100);
 CryoKrypton.setDurationHX(5);
-CryoKrypton.setDurationRadiator(400);
+CryoKrypton.setDurationRadiator(200);
 CryoKrypton.setTemperature(120);
 
 def CryoXenon = new ICryoGas('xenon', 'hot_hp_xenon', 'hp_xenon', 'cold_hp_xenon', 'liquid_xenon');
@@ -137,7 +137,7 @@ CryoXenon.setEUt(120);
 CryoXenon.setDuration(100);
 CryoXenon.setPowerHX(100);
 CryoXenon.setDurationHX(5);
-CryoXenon.setDurationRadiator(400);
+CryoXenon.setDurationRadiator(200);
 CryoXenon.setTemperature(165);
 
 def CryoAir = new ICryoGas('air', 'hot_hp_air', 'hp_air', 'cold_hp_air', 'liquid_air');
@@ -145,7 +145,7 @@ CryoAir.setEUt(60);
 CryoAir.setDuration(100);
 CryoAir.setPowerHX(100);
 CryoAir.setDurationHX(5);
-CryoAir.setDurationRadiator(400);
+CryoAir.setDurationRadiator(200);
 CryoAir.setTemperature(80);
 
 def CryoDecarburizedAir = new ICryoGas('decarburized_air', 'hot_hp_decarburized_air', 'hp_decarburized_air', 'cold_hp_decarburized_air', 'liquid_decarburized_air');
@@ -153,7 +153,7 @@ CryoDecarburizedAir.setEUt(60);
 CryoDecarburizedAir.setDuration(1);
 CryoDecarburizedAir.setPowerHX(100);
 CryoDecarburizedAir.setDurationHX(8);
-CryoDecarburizedAir.setDurationRadiator(40);
+CryoDecarburizedAir.setDurationRadiator(20);
 CryoDecarburizedAir.setTemperature(80);
 
 def CryoNitrogen = new ICryoGas('nitrogen', 'hot_hp_nitrogen', 'hp_nitrogen', 'cold_hp_nitrogen', 'liquid_nitrogen');
@@ -161,7 +161,7 @@ CryoNitrogen.setEUt(60);
 CryoNitrogen.setDuration(100);
 CryoNitrogen.setPowerHX(100);
 CryoNitrogen.setDurationHX(5);
-CryoNitrogen.setDurationRadiator(400);
+CryoNitrogen.setDurationRadiator(200);
 CryoNitrogen.setTemperature(77);
 
 def CryoNetherAir = new ICryoGas('nether_air', 'hot_hp_nether_air', 'hp_nether_air', 'cold_hp_nether_air', 'liquid_nether_air');
@@ -169,7 +169,7 @@ CryoNetherAir.setEUt(60);
 CryoNetherAir.setDuration(100);
 CryoNetherAir.setPowerHX(100);
 CryoNetherAir.setDurationHX(5);
-CryoNetherAir.setDurationRadiator(400);
+CryoNetherAir.setDurationRadiator(200);
 CryoNetherAir.setTemperature(80);
 
 def CryoRefineryGas = new ICryoGas('refinery_gas', 'hot_hp_refinery_gas', 'hp_refinery_gas', 'cold_hp_refinery_gas', 'liquid_refinery_gas');
@@ -177,7 +177,7 @@ CryoRefineryGas.setEUt(60);
 CryoRefineryGas.setDuration(100);
 CryoRefineryGas.setPowerHX(100);
 CryoRefineryGas.setDurationHX(5);
-CryoRefineryGas.setDurationRadiator(400);
+CryoRefineryGas.setDurationRadiator(200);
 CryoRefineryGas.setTemperature(80);
 
 def CryoNaturalGas = new ICryoGas('natural_gas', 'hot_hp_natural_gas', 'hp_natural_gas', 'cold_hp_natural_gas', 'liquid_natural_gas');
@@ -185,7 +185,7 @@ CryoNaturalGas.setEUt(60);
 CryoNaturalGas.setDuration(100);
 CryoNaturalGas.setPowerHX(100);
 CryoNaturalGas.setDurationHX(5);
-CryoNaturalGas.setDurationRadiator(400);
+CryoNaturalGas.setDurationRadiator(200);
 CryoNaturalGas.setTemperature(80);
 
 def CryoMethane = new ICryoGas('methane', 'hot_hp_methane', 'hp_methane', 'cold_hp_methane', 'liquid_methane');
@@ -193,7 +193,7 @@ CryoMethane.setEUt(60);
 CryoMethane.setDuration(100);
 CryoMethane.setPowerHX(100);
 CryoMethane.setDurationHX(5);
-CryoMethane.setDurationRadiator(400);
+CryoMethane.setDurationRadiator(200);
 CryoMethane.setTemperature(80);
 
 def CryoGases = [
@@ -336,7 +336,7 @@ for (cryogas in CryoGases) {
                 .fluidInputs(liquid(coolant.cold_coolant) * coolant.amount_to_use)
                 .fluidOutputs(liquid(coolant.warm_coolant) * coolant.amount_to_use)
                 .fluidOutputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
-                .duration(cryogas.duration_heat_exchanger + coolant.hx_time_factor)
+                .duration((int)((cryogas.duration_heat_exchanger + coolant.hx_time_factor) / 2))
                 .buildAndRegister();
     }
     for (refrigerant in Refrigerants) {
@@ -345,7 +345,7 @@ for (cryogas in CryoGases) {
                 .fluidInputs(liquid(refrigerant.cold_refrigerant) * refrigerant.amount_to_use)
                 .fluidOutputs(liquid(refrigerant.normal_refrigerant) * refrigerant.amount_to_use)
                 .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * cryogas.amount_to_use)
-                .duration(cryogas.duration_heat_exchanger + refrigerant.hx_time_factor)
+                .duration((int)((cryogas.duration_heat_exchanger + refrigerant.hx_time_factor) / 2))
                 .buildAndRegister();
     }
 
@@ -376,13 +376,13 @@ for (cryogas in CryoGases) {
     recipemap('radiator').recipeBuilder()
             .fluidInputs(liquid(cryogas.hot_high_pressure_gas) * cryogas.amount_to_use)
             .fluidOutputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
-            .duration(cryogas.duration_heat_exchanger*5)
+            .duration((int)(cryogas.duration_heat_exchanger * 5 / 2))
             .buildAndRegister();
 
     recipemap('cooling_unit').recipeBuilder()
             .fluidInputs(liquid(cryogas.hot_high_pressure_gas) * cryogas.amount_to_use)
             .fluidOutputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
-            .duration(cryogas.duration_heat_exchanger*2)
+            .duration(cryogas.duration_heat_exchanger)
             .EUt(480)
             .buildAndRegister();
 
@@ -669,61 +669,61 @@ for (FluidFuel in FluidFuels) {
     if (FluidFuel.gas_turbine) {
         if (FluidFuel.refined_fuel) {
             recipemap('gas_turbine').recipeBuilder()
-                .circuitMeta(1)
-                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                .fluidInputs(liquid('air') * 100)
-                .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                .duration(FluidFuel.duration)
-                .EUt(128)
-                .buildAndRegister();
+                    .circuitMeta(1)
+                    .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                    .fluidInputs(liquid('air') * 100)
+                    .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                    .duration(FluidFuel.duration)
+                    .EUt(128)
+                    .buildAndRegister();
 
             recipemap('gas_turbine').recipeBuilder()
-                .circuitMeta(1)
-                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                .fluidInputs(liquid('oxygen') * 20)
-                .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
-                .duration((int) (FluidFuel.duration * 1.5))
-                .EUt(128)
-                .buildAndRegister();
+                    .circuitMeta(1)
+                    .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                    .fluidInputs(liquid('oxygen') * 20)
+                    .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                    .duration((int) (FluidFuel.duration * 1.5))
+                    .EUt(128)
+                    .buildAndRegister();
         } else {
             recipemap('gas_turbine').recipeBuilder()
-                .circuitMeta(1)
-                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                .fluidInputs(liquid('air') * 100)
-                .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
-                .duration(FluidFuel.duration)
-                .EUt(32)
-                .buildAndRegister();
+                    .circuitMeta(1)
+                    .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                    .fluidInputs(liquid('air') * 100)
+                    .fluidOutputs(liquid(FluidFuel.byproduct) * FluidFuel.byproduct_amount)
+                    .duration(FluidFuel.duration)
+                    .EUt(32)
+                    .buildAndRegister();
 
             recipemap('gas_turbine').recipeBuilder()
-                .circuitMeta(1)
-                .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                .fluidInputs(liquid('oxygen') * 20)
-                .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
-                .duration((int) (FluidFuel.duration * 1.5))
-                .EUt(32)
-                .buildAndRegister();
+                    .circuitMeta(1)
+                    .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                    .fluidInputs(liquid('oxygen') * 20)
+                    .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                    .duration((int) (FluidFuel.duration * 1.5))
+                    .EUt(32)
+                    .buildAndRegister();
         }
 
         for (lubricant in Globals.lubricants) {
             if (FluidFuel.refined_fuel) {
                 recipemap('gas_turbine').recipeBuilder()
-                    .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
-                    .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                    .fluidInputs(liquid('oxygen') * 20)
-                    .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
-                    .duration((int) (FluidFuel.duration * lubricant.boost * 1.5))
-                    .EUt(128)
-                    .buildAndRegister();
+                        .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
+                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                        .fluidInputs(liquid('oxygen') * 20)
+                        .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                        .duration((int) (FluidFuel.duration * lubricant.boost * 1.5))
+                        .EUt(128)
+                        .buildAndRegister();
             } else {
                 recipemap('gas_turbine').recipeBuilder()
-                    .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
-                    .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
-                    .fluidInputs(liquid('oxygen') * 20)
-                    .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
-                    .duration((int) (FluidFuel.duration * lubricant.boost * 1.5))
-                    .EUt(32)
-                    .buildAndRegister();
+                        .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
+                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                        .fluidInputs(liquid('oxygen') * 20)
+                        .fluidOutputs(liquid(FluidFuel.byproduct) * ((int) (FluidFuel.byproduct_amount * 1.5)))
+                        .duration((int) (FluidFuel.duration * lubricant.boost * 1.5))
+                        .EUt(32)
+                        .buildAndRegister();
             }
         }
     }
@@ -789,13 +789,13 @@ for (WorkingFluid in WorkingFluids) {
             .buildAndRegister()
 
     for (lubricant in Globals.lubricants) {
-            recipemap('large_steam_turbine').recipeBuilder()
-                    .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
-                    .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
-                    .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
-                    .duration((int) (WorkingFluid.duration * WorkingFluid.efficiency * lubricant.boost))
-                    .EUt(32)
-                    .buildAndRegister()
+        recipemap('large_steam_turbine').recipeBuilder()
+                .fluidInputs(liquid(lubricant.name) * lubricant.amount_required)
+                .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+                .fluidOutputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
+                .duration((int) (WorkingFluid.duration * WorkingFluid.efficiency * lubricant.boost))
+                .EUt(32)
+                .buildAndRegister()
     }
 
     recipemap('cooling_tower').recipeBuilder()
@@ -821,7 +821,7 @@ recipemap('fluid_compressor').recipeBuilder()
         .duration(100)
         .EUt(30)
         .buildAndRegister();
-        
+
 recipemap('fluid_compressor').recipeBuilder()
         .fluidInputs(liquid('propene') * 1280)
         .fluidOutputs(liquid('hot_hp_propene') * 1280)
