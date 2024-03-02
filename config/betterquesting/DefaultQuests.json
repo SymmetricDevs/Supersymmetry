@@ -36273,7 +36273,6 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.865.title",
-          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36784,10 +36783,6 @@
               "Amount:3": 1000,
               "FluidName:8": "wafer_treatment_acid"
             }
-          },
-          "1:10": {
-            "index:3": 1,
-            "taskID:8": "bq_standard:checkbox"
           },
           "taskID:8": "bq_standard:fluid"
         }
