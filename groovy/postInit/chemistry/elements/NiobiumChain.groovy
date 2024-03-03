@@ -90,7 +90,7 @@ REACTION_FURNACE.recipeBuilder() // Ferroniobium-tantalum
     .outputs(metaitem('dustFerroniobiumTantalum') * 20)
     .outputs(metaitem('dustAlumina') * 105)
     .outputs(metaitem('dustCalcium') * 14)
-    .fluidOutputs(fluid('sodium_nitrite') * 720)
+    .fluidOutputs(fluid('sodium_nitrite') * 576)
     .duration(800)
     .EUt(Globals.voltAmps[4])
     .buildAndRegister()
