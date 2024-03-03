@@ -925,7 +925,6 @@ class SuSyMaterials {
         public static Material GoldAmalgam;
         public static Material AntimonyTrichloride;
         public static Material AntimonyPentachloride;
-        public static Material DilutedSilverNitrateSolution;
         public static Material DecarburizedAir;
         public static Material MolybdenumTrisulfide;
         public static Material AmmoniumIsopolytungstateSolution;
