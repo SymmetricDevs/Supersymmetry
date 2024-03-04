@@ -5,7 +5,6 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 
-def DUMPER = recipemap('dumping');
 def MIXER = recipemap('mixer');
 def CLARIFIER = recipemap('clarifier');
 def DRYER = recipemap('dryer');
@@ -222,11 +221,6 @@ PSA.recipeBuilder()
         .fluidOutputs(fluid('water') * 5000)
         .duration(40)
         .EUt(480)
-        .buildAndRegister()
-
-DUMPER.recipeBuilder()
-        .fluidInputs(fluid('wastewater_sludge') * 1000)
-        .duration(20)
         .buildAndRegister()
 
 FLUID_HEATER.recipeBuilder()
