@@ -1,0 +1,9 @@
+{
+	"name": "weakness",
+	"potion": "minecraft:weakness",
+	"amplifier": 0,
+	"minimum": 0,
+	"maximum": 10,
+	"detect": "average",
+	"enabled": true
+}
