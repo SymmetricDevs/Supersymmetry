@@ -728,12 +728,6 @@ for (FluidFuel in FluidFuels) {
         }
     }
 
-    recipemap('flare_stack').recipeBuilder()
-            .fluidInputs(liquid(FluidFuel.liquid_fuel) * 1000)
-            .duration(30)
-            .EUt(7)
-            .buildAndRegister();
-
     //THIS IS ONLY ADDED SO THAT IT IS A VALID JETPACK FUEL
     recipemap('combustion_generator').recipeBuilder()
             .fluidInputs(liquid(FluidFuel.liquid_fuel) * 25)
@@ -749,12 +743,6 @@ for (FluidFuel in FluidFuels) {
             .EUt(7)
             .buildAndRegister();
 }
-
-recipemap('flare_stack').recipeBuilder()
-        .fluidInputs(liquid('creosote') * 100)
-        .duration(30)
-        .EUt(7)
-        .buildAndRegister();
 
 for (WorkingFluid in WorkingFluids) {
     recipemap('heat_exchanger').recipeBuilder()
