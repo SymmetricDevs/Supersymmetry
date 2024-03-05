@@ -6,13 +6,13 @@ Todos os mods têm a sua progressão alterada para se incluir melhor na progress
 O pack está de momento em Beta. Podes juntar-te ao server de Discord aqui:
 https://discord.gg/BNbbK98rh6
 
-## Creditos
+## Créditos
 Obrigado aos desenvolvedores da [Gregicality Community Pack](https://github.com/Gregicality/Gregicality-Community-Pack) por nos deixarem usar alguns dos seus *scripts*.
 O *script* de construção [htmlcsjs](https://github.com/htmlcsjs).
 Baseado em ideias de: [Zalgo](https://github.com/Zalgo239), [Gaming](https://github.com/swagxdragonslayer46yt), e [planetme](https://github.com/planetme).
 Trabalho no [Core mod](https://github.com/SymmetricDevs/Susy-Core) por [MTBO](https://github.com/loxoDev), [beanie](https://github.com/BestMod), [Gaming](https://github.com/swagxdragonslayer46yt), [Eight](https://github.com/EightXOR8) e [bruberu](https://github.com/bruberu).
-Tarefas por [Regian](https://github.com/Regian24) de todo.
-Texturas e trabalho artístico por [GDCM05](https://github.com/gdcm05) de todo.
+Tarefas por [Regian](https://github.com/Regian24) e outros.
+Texturas e trabalho artístico por [GDCM05](https://github.com/gdcm05) e outros.
 
 Agradecimentos especiais aos nossos voluntários:
 - tots • Pesquisa
@@ -31,5 +31,5 @@ Agradecimentos especiais aos nossos voluntários:
 - Roque_Crafter • Tradução para Português (Oláá)/*Playtesting*
 - Lavinia • Texturas
 
-## Building the pack
+## Construção do *pack*
 Vais precisar dos requerimentos python3 e python instalados para rodar o *script* de construção *main.py*.
