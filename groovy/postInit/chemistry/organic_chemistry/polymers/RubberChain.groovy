@@ -125,7 +125,7 @@ def CoagulationRecipe(amount, duration, circ){
 }
 
 def rubbers = [
-    new Rubber('dustLatex', 'Rubber', 16, 10 * 20, 4, false),
+    new Rubber('dustLatex', 'Rubber', 1, 10 * 20, 1, false),
     new Rubber('latex', 'Rubber', 32, 20 * 20, 1, true),
     new Rubber('dustPolyisoprene', 'Rubber', 8, 225, 8, false),
     new Rubber('dustRawStyreneIsopreneRubber', 'StyreneIsopreneRubber', 4, 30 * 20, 4, false),
@@ -162,7 +162,7 @@ for (rubber in rubbers) {
             for (catalyser in catalysers) {
                     if(rubber.isFluid)  {
                         VULCANIZING_RECIPES.recipeBuilder()
-                        .fluidInputs(fluid(rubber.name) * rubber.amount_required * 1000)
+                        .fluidInputs(fluid(rubber.name) * rubber.amount_required * 4000)
                         .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
                         .notConsumable(ore(catalyser.name))
                         .notConsumable(metaitem('shape.extruder.' + shape.name))
@@ -185,7 +185,7 @@ for (rubber in rubbers) {
                 }
                 if(rubber.isFluid)  {
                     VULCANIZING_RECIPES.recipeBuilder()
-                    .fluidInputs(fluid(rubber.name) * rubber.amount_required * 1000)
+                    .fluidInputs(fluid(rubber.name) * rubber.amount_required * 4000)
                     .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
                     .notConsumable(metaitem('shape.extruder.' + shape.name))
                     .circuitMeta(2)
