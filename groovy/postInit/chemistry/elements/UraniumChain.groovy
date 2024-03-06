@@ -121,7 +121,7 @@ CSTR.recipeBuilder()
 
 LCR.recipeBuilder()
         .fluidInputs(fluid('uranyl_sulfate_solution') * 2000)
-        .fluidInputs(fluid('ammonia') * 2000)
+        .fluidInputs(fluid('ammonia') * 4000)
         .fluidOutputs(fluid('ammonium_sulfate_solution') * 1000)
         .outputs(metaitem('dustAmmoniumDiuranate') * 19)
         .EUt(720)
