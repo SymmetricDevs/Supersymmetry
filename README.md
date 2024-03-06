@@ -29,7 +29,6 @@ Special thanks to our volunteers:
 - ZombieZilla • Research/Playtesting
 - Tian-mi • Chinese translation
 - Roque_Crafter • Portuguese translation
-- Lavinia • Textures
 
 ## Building the pack
 You'll need python3 and python requests installed to build run the main.py script.
