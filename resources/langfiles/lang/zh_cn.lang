@@ -460,7 +460,7 @@ susy.material.impure_semiheavy_hydrogen_sulfide=含杂半重硫化氢
 susy.material.impure_heavy_hydrogen_sulfide=含杂重硫化氢
 susy.material.sea_water=海水
 
-susy.material.novolacs=Novolac酸性酚醛树脂光刻胶
+susy.material.novolacs=Novolacs酸性酚醛树脂光刻胶
 susy.material.silicon_tetrachloride=四氯化硅
 susy.material.purified_silicon_tetrachloride=纯净四氯化硅
 
@@ -2336,6 +2336,14 @@ gregtech.block_group_members.extractable_logs_1.name=白桦木，丛林木，橡
 gregtech.block_group_members.extractable_logs_2.name=金合欢木或深色橡木
 
 gregtech.block_group_members.latex_logs.name=橡胶木
+
+# Main Menu
+susy.menu.options=选项
+susy.menu.discord=Discord服务器
+susy.menu.reportabug=报告Bug
+susy.menu.openfolder=打开MC文件夹
+susy.menu.refresh=刷新菜单
+susy.menu.replayviewer=观看回放
 
 # Renaming (zh_cn only)
 gregtech.material.lubricant=润滑剂
