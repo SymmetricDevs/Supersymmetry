@@ -163,7 +163,7 @@
 			"hoverTextColor": 65484,
 			"action": {
 				"type": "openFolder",
-				"folderName": "./"
+				"folderName": "/"
 			}
 		},
 		"refresh": {
