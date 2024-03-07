@@ -80,7 +80,7 @@ uselessProps = {
     "bg_size:3": 256,
 
     # delete edit mode if its true
-    "editmode:1": 1,
+    #"editmode:1": 1, # Actually don't because edit mode is enabled by default
 }
 
 basePath = os.path.normpath(os.path.abspath(__file__ + "/../../"))
@@ -99,6 +99,9 @@ def nest(location: dict) -> dict:
             del location[entry]
         elif (isinstance(location[entry], dict)):
             location[entry] = nest(location[entry])
+
+    location["questSettings:10"]["betterquesting:10"]["editmode:1"] = 0
+
     return location
 
 
