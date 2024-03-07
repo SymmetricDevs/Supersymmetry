@@ -61,7 +61,7 @@
 			"height": 20,
 			"imageWidth": 200,
 			"imageHeight": 20,
-			"tooltip": "susy.menu.mods.tooltip",
+			"tooltip": "§a#modsactive#§r/§e#modsloaded#§r",
 			"texture": "supersymmetry:mainmenu/button.png",
 			"hoverTextColor": 65484,
 			"clickSound": "block.lever.click",

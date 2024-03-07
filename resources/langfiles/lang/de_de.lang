@@ -1,6 +1,5 @@
 # Main Menu
 fml.menu.mods=Modifizierungen
-susy.menu.mods.tooltip=§a#modsactive#§r/§e#modsloaded#§7 Modifizierungen geladen.§r
 susy.menu.options=Einstellungen
 susy.menu.discord=Discord-Server
 susy.menu.reportabug=Spielfehler melden
