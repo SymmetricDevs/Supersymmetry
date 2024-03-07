@@ -61,7 +61,7 @@
 			"height": 20,
 			"imageWidth": 200,
 			"imageHeight": 20,
-			"tooltip": "§a#modsactive#§r/§e#modsloaded#§7 mods loaded.§r",
+			"tooltip": "susy.menu.mods.tooltip",
 			"texture": "supersymmetry:mainmenu/button.png",
 			"hoverTextColor": 65484,
 			"clickSound": "block.lever.click",
@@ -89,7 +89,7 @@
 		},
 		"quit": {
 			"text": "menu.quit",
-			"hoverText": "You can never escape Greg.",
+			"hoverText": "susy.menu.quit.hover",
 			"alignment": "center",
 			"posX": -150,
 			"posY": 55,

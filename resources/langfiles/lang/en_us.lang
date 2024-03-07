@@ -2338,9 +2338,11 @@ gregtech.block_group_members.extractable_logs_2.name=Acacia and Dark Oak
 gregtech.block_group_members.latex_logs.name=Rubber Log
 
 # Main Menu
+susy.menu.mods.tooltip=§a#modsactive#§r/§e#modsloaded#§7 mods loaded.§r
 susy.menu.options=Options
 susy.menu.discord=Discord Server
 susy.menu.reportabug=Report A Bug
 susy.menu.openfolder=Open MC Folder
 susy.menu.refresh=Refresh Menu
 susy.menu.replayviewer=Replay Viewer
+susy.menu.quit.hover=You can never escape Greg.
