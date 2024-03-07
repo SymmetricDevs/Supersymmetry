@@ -1,0 +1,10 @@
+# Main Menu
+fml.menu.mods=Modifizierungen
+susy.menu.mods.tooltip=§a#modsactive#§r/§e#modsloaded#§7 Modifizierungen geladen.§r
+susy.menu.options=Einstellungen
+susy.menu.discord=Discord-Server
+susy.menu.reportabug=Spielfehler melden
+susy.menu.openfolder=Minecraft-Ordner öffnen
+susy.menu.refresh=Menü aktualisieren
+susy.menu.replayviewer=Wiederholungen
+susy.menu.quit.hover=Du kannst GregTech nicht entkommen.
