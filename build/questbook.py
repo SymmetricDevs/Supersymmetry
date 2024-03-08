@@ -100,8 +100,6 @@ def nest(location: dict) -> dict:
         elif (isinstance(location[entry], dict)):
             location[entry] = nest(location[entry])
 
-    location["questSettings:10"]["betterquesting:10"]["editmode:1"] = 0
-
     return location
 
 
@@ -177,6 +175,7 @@ def build(args):
     except FileNotFoundError:
         print("lang file %s was not found" % (langFile))
 
+    questbook["questSettings:10"]["betterquesting:10"]["editmode:1"] = 0
 
     nest(questbook)
 
