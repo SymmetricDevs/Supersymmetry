@@ -13,6 +13,9 @@ import sys
 
 import requests
 
+# Used to run questbook.py
+import questbook
+
 
 def parse_args():
     parser = argparse.ArgumentParser(prog="build", description=__doc__)
@@ -31,6 +34,9 @@ def parse_args():
 
 
 def build(args):
+    # Run questbook.py first
+    questbook.build(questbook.parse_args())
+
     modlist = []
     basePath = os.path.normpath(os.path.realpath(__file__)[:-7] + "..")
     copyDirs = ["/scripts", "/resources", "/config",
