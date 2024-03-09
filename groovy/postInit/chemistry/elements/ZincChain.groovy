@@ -1,5 +1,6 @@
 import globals.Globals
 import static globals.CarbonGlobals.*
+import static globals.SinteringGlobals.*
 
 FLOTATION = recipemap('froth_flotation')
 CLARIFIER = recipemap('clarifier')
@@ -29,11 +30,13 @@ ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 REACTION_FURNACE = recipemap('reaction_furnace')
 ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
 FLUID_HEATER = recipemap('fluid_heater')
+ROTARY_KILN = recipemap('rotary_kiln')
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 
 // Zincite Dust * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSphalerite')], [fluid('oxygen') * 3000])
 
+// Zinc ore beneficiation
 MIXER.recipeBuilder()
         .inputs(ore('dustImpureSphalerite') * 4)
         .fluidInputs(fluid('distilled_water') * 2000)
@@ -97,10 +100,11 @@ CLARIFIER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
+// Ore pretreatment to form oxide concentrate
 ROASTER.recipeBuilder()
         .inputs(ore('dustSphalerite') * 1)
         .fluidInputs(fluid('oxygen') * 2000)
-        .fluidOutputs(fluid('sulfur_dioxide') * 1000)
+        .fluidOutputs(fluid('thallium_rich_flue_gas') * 1000)
         .outputs(metaitem('dustZincite') * 2)
         .EUt(30)
         .duration(200)
@@ -108,14 +112,14 @@ ROASTER.recipeBuilder()
 
 FLUIDIZEDBR.recipeBuilder()
         .inputs(ore('dustSphalerite') * 1)
-        .fluidInputs(fluid('oxygen') * 3000)
+        .fluidInputs(fluid('oxygen') * 2000)
         .fluidOutputs(fluid('thallium_rich_flue_gas') * 1000)
         .outputs(metaitem('dustZincite') * 2)
-        .outputs(metaitem('dustZincRichSlag') * 1)
         .EUt(120)
         .duration(20)
-        .buildAndRegister()
+        .buildAndRegister()     
 
+// Thallium chain
 SIFTER.recipeBuilder()
         .notConsumable(metaitem('item_filter'))
         .fluidInputs(fluid('thallium_rich_flue_gas') * 1000)
@@ -123,7 +127,7 @@ SIFTER.recipeBuilder()
         .fluidOutputs(fluid('sulfur_dioxide') * 1000)
         .EUt(120)
         .duration(20)
-        .buildAndRegister()
+        .buildAndRegister()  
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustSmithsonite') * 1)
@@ -141,6 +145,7 @@ FLUIDIZEDBR.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
+// Conversion to metal via pyrometallurgy
 for (combustible in CarbonGlobals.combustibles()) {
     ROASTER.recipeBuilder()
             .inputs(ore('dustZincite') * 2)
@@ -199,6 +204,7 @@ HT_DISTILLATION_TOWER.recipeBuilder()
         .duration(300)
         .buildAndRegister()
 
+// Hydrometallurgical method
 CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('dustZincite') * 2)
         .fluidInputs(fluid('sulfuric_acid') * 1000)

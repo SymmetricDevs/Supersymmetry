@@ -3162,5 +3162,25 @@ public class FirstDegreeMaterials {
                 .components(Salt, 1, HydrofluoricAcid, 1)
                 .colorAverage()
                 .build();
+
+        WaferTreatmentAcid = new Material.Builder(8593, SuSyUtility.susyId("wafer_treatment_acid"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(HydrochloricAcid, 9, HydrofluoricAcid, 9, AceticAcid, 2)
+                .color(0x3e7d68)
+                .build();
+
+        ThalliumIChloride = new Material.Builder(859, SuSyUtility.susyId("thallium_i_chloride"))
+                .dust()
+                .components(Thallium, 1, Chlorine, 1)
+                .colorAverage()
+                .build();
+
+        ThalliumSulfateSolution = new Material.Builder(859, SuSyUtility.susyId("thallium"))
+                .liquid()
+                .components(Thallium, 2, Sulfur, 1, Oxygen, 4, HydrogenChloride, 2, Water, 1)
+                .colorAverage()
+                .build();
+
+        ThalliumSulfateSolution.setFormula("(Tl2SO4)(HCl)2(H2O)", true)
     }
 }

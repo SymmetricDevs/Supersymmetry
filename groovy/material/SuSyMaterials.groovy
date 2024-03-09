@@ -429,7 +429,6 @@ class SuSyMaterials {
 	public static Material OrganosiliconMixture;
 	public static Material ImpurePolydimethylsiloxaneMixture;
 	public static Material RawPolydimethylsiloxaneMixture;
-        public static Material WaferTreatmentAcid;
         public static Material LubricityAdditive;
         public static Material AntistaticAdditive;
         public static Material AntifoamingAdditive;
@@ -479,6 +478,7 @@ class SuSyMaterials {
         public static Material SpandexPolymerizationMix;
         public static Material AcrylicPhotoemulsion;
         public static Material TreatedCollagen;
+        public static Material ImpureThalliumSulfateSolution;
 
         // Petrochem Materials
 
@@ -1005,6 +1005,9 @@ class SuSyMaterials {
         public static Material SaltyHydrofluoricAcid;
         public static Material SiliconTetrachloride;
         public static Material PurifiedSiliconTetrachloride;
+        public static Material ThalliumIChloride;
+        public static Material ThalliumSulfateSolution;
+        public static Material WaferTreatmentAcid;
 
         // HP Materials
 
