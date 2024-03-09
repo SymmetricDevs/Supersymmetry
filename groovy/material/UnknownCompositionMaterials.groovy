@@ -1753,13 +1753,13 @@ public class UnknownCompositionMaterials {
                 .build();
 
         Cotton.setFormula('C6H5(OH)4OH', true)
-        Cotton.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+        Cotton.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false, false))
 
         Spandex = new Material.Builder(4394, SuSyUtility.susyId("spandex"))
                 .color(0x625f8a)
                 .build();
 
-        Spandex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+        Spandex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false, true))
 
         PolyurethanePolymerizationMix = new Material.Builder(4395, SuSyUtility.susyId("polyurethane_polymerization_mix"))
                 .liquid()

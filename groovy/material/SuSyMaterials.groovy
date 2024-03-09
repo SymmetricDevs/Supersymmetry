@@ -767,7 +767,6 @@ class SuSyMaterials {
         public static Material BetaSpodumene;
         public static Material LithiumSulfate;
         public static Material AluminiumPhosphate;
-        public static Material LithiumChloride;
         public static Material AluminiumSilicate;
         public static Material SodiumFluorosilicate;
         public static Material BerylliumHydroxide;
@@ -1676,6 +1675,7 @@ class SuSyMaterials {
         public static Material DilutedDiTertButylPeroxide;
         public static Material DilutedTwoEthylhexylNitrate;
         public static Material DilutedNitromethane;
+        public static Material SpentPBISolution;
 
         // Thermodynamics Materials
 
