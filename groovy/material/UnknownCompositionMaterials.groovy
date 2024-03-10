@@ -612,7 +612,7 @@ public class UnknownCompositionMaterials {
                 .iconSet(SAND)
                 .build();
 
-        CadmiumRichFlue = new Material.Builder(4116, SuSyUtility.susyId('cadmium_rich_flue'))
+        OxideFume = new Material.Builder(4116, SuSyUtility.susyId('oxide_fume'))
                 .dust()
                 .color(0x757061)
                 .iconSet(DULL)
@@ -806,8 +806,7 @@ public class UnknownCompositionMaterials {
 
         //FREE ID: 4155-4156
 
-        ThalliumRichFlue = new Material.Builder(4157, SuSyUtility.susyId('thallium_rich_flue'))
-                .dust()
+        ZincFlue = new Material.Builder(4157, SuSyUtility.susyId('zinc_flue')
                 .color(0x26222e)
                 .build()
 
@@ -908,7 +907,7 @@ public class UnknownCompositionMaterials {
                 .color(0x151521)
                 .build()
 
-        CadmiumRichFlueGas = new Material.Builder(4179, SuSyUtility.susyId('cadmium_rich_flue_gas'))
+        OxideFumeGas = new Material.Builder(4179, SuSyUtility.susyId('oxide_fume_gas'))
                 .gas(new FluidBuilder().temperature(1000))
                 .color(0x757061)
                 .build();
@@ -918,7 +917,7 @@ public class UnknownCompositionMaterials {
                 .color(0x707063)
                 .build();
 
-        ThalliumRichFlueGas = new Material.Builder(4181, SuSyUtility.susyId('thallium_rich_flue_gas'))
+        ZincFlueGas = new Material.Builder(4181, SuSyUtility.susyId('zinc_flue_gas'))
                 .gas(new FluidBuilder().temperature(1000))
                 .color(0x26222e)
                 .build()
@@ -1789,7 +1788,12 @@ public class UnknownCompositionMaterials {
 
         ImpureThalliumSulfateSolution = new Material.Builder(4400, SuSyUtility.susyId("impure_thallium_sulfate_solution"))
                 .liquid()
-                .color(0x)
+                .color(0x6f8578)
+                .build();
+
+        ImpureCadmiumSulfateSolution = new Material.Builder(4400, SuSyUtility.susyId("impure_cadmium_sulfate_solution"))
+                .liquid()
+                .color(0x6f8485)
                 .build();
     }
 }

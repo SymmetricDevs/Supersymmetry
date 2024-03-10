@@ -3169,18 +3169,44 @@ public class FirstDegreeMaterials {
                 .color(0x3e7d68)
                 .build();
 
-        ThalliumIChloride = new Material.Builder(859, SuSyUtility.susyId("thallium_i_chloride"))
+        ThalliumIChloride = new Material.Builder(8594, SuSyUtility.susyId("thallium_i_chloride"))
                 .dust()
                 .components(Thallium, 1, Chlorine, 1)
                 .colorAverage()
                 .build();
 
-        ThalliumSulfateSolution = new Material.Builder(859, SuSyUtility.susyId("thallium"))
+        AcidicThalliumSulfateSolution = new Material.Builder(8595, SuSyUtility.susyId("acidic_thallium_sulfate_solution"))
                 .liquid()
                 .components(Thallium, 2, Sulfur, 1, Oxygen, 4, HydrogenChloride, 2, Water, 1)
                 .colorAverage()
                 .build();
 
         ThalliumSulfateSolution.setFormula("(Tl2SO4)(HCl)2(H2O)", true)
+
+        ThalliumSulfateSolution = new Material.Builder(8596, SuSyUtility.susyId("thallium_sulfate_solution"))
+                .liquid()
+                .components(Thallium, 2, Sulfur, 1, Oxygen, 4, Water, 1)
+                .colorAverage()
+                .build();
+
+        ThalliumSulfateSolution.setFormula("(Tl2SO4)(H2O)", true)
+
+        ArsenicIIIOxide = new Material.Builder(8597, SuSyUtility.susyId('arsenic_iii_oxide'))
+                .dust()
+                .components(Arsenic, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        AntimonyIIIOxide = new Material.Builder(8597, SuSyUtility.susyId('antimony_iii_oxide'))
+                .dust()
+                .components(Antimony, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        PurifiedCadmiumSolution = new Material.Builder(8598, SuSyUtility.susyId('purified_cadmium_solution'))
+                .fluid()
+                .components(Cadmium, 1, Sulfur, 1, Oxygen, 4, Water, 1)
+                .colorAverage()
+                .build()
     }
 }

@@ -814,7 +814,7 @@ susy.material.sodium_ethyl_xanthate=Sodium Ethyl Xanthate (SEX)
 susy.material.sodium_ethyl_xanthate_solution=Sodium Ethyl Xanthate Solution
 susy.material.galena_byproducts_slurry=Galena Byproducts Slurry
 susy.material.sintered_lead_concentrate=Sintered Lead Concentrate
-susy.material.cadmium_rich_flue=Cadmium Rich Flue
+susy.material.oxide_fume=Oxide Fume
 susy.material.copper_dross=Copper Dross
 susy.material.decoppered_lead=Decoppered Lead
 susy.material.dezinced_lead=Dezinced Lead
@@ -857,7 +857,7 @@ susy.material.barium_oxide=Barium Oxide
 susy.material.barium_chloride_solution=Barium Chloride Solution
 susy.material.halite_leach=Halite Leach
 susy.material.unprocessed_sphalerite_slurry=Unprocessed Sphalerite Slurry
-susy.material.thallium_rich_flue=Thallium Rich Flue
+susy.material.zinc_flue=Zinc Flue
 susy.material.crude_zinc=Crude Zinc
 susy.material.cadmium_rich_zinc=Cadmium Rich Zinc
 susy.material.ethanol_water_azeotrope=Ethanol-Water Azeotrope
@@ -1294,9 +1294,9 @@ susy.material.titanium_dioxide=Titanium Dioxide
 susy.material.indium_oxide=Indium Oxide
 susy.material.ash_slurry=Ash Slurry
 susy.material.desulfurized_flue_gas=Desulfurized Flue Gas
-susy.material.cadmium_rich_flue_gas=Cadmium-Rich Flue Gas
+susy.material.oxide_fume_gas=Oxide Fume Gas
 susy.material.antimony_arsenic_flue_gas=Antimony-Arsenic-Rich Flue Gas
-susy.material.thallium_rich_flue_gas=Thallium-Rich Flue Gas
+susy.material.zinc_flue_gas=Zinc Flue Gas
 susy.material.light_oily_brine=Light Oily Brine
 susy.material.heavy_oily_brine=Heavy Oily Brine
 susy.material.calcium_sulfite=Calcium Sulfite
@@ -1897,6 +1897,10 @@ susy.material.lithium_hexafluorophosphate_electrolyte=Lithium Hexafluorophosphat
 susy.material.impure_thallium_sulfate_solution=Impure Thallium Sulfate Solution
 susy.material.thallium_i_chloride=Thallium I Chloride
 susy.material.thallium_sulfate_solution=Thallium Sulfate Solution
+susy.material.arsenic_iii_oxide=Arsenic III Oxide
+susy.material.antimony_iii_oxide=Antimony III Oxide
+susy.material.impure_cadmium_sulfate_solution=Impure Cadmium Sulfate Solution
+susy.material.purified_cadmium_solution=Purified Cadmium Solution
 
 # Isotopes
 
@@ -2262,6 +2266,7 @@ metaitem.sponge.zirconium.name=Zirconium Sponge
 metaitem.sponge.zirconium.crude.name=Crude Zirconium Sponge
 metaitem.sponge.hafnium.name=Hafnium Sponge
 metaitem.sponge.hafnium.crude.name=Crude Hafnium Sponge
+metaitem.sponge.cadmium.name=Cadmium Sponge
 
 metaitem.drone.lv.name=Basic Drone
 
