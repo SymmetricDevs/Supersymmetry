@@ -95,8 +95,6 @@ class ChangeFlags {
         Nickel.addFlags("generate_catalyst_bed");
         Brass.addFlags("generate_ring")
 
-        Thallium.setProperty(PropertyKey.DUST, new DustProperty());
-
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
         MagnesiumDiboride.addFlags("no_smashing", "no_smelting")

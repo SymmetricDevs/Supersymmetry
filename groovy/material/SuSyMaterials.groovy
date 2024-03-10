@@ -1007,7 +1007,7 @@ class SuSyMaterials {
         public static Material SiliconTetrachloride;
         public static Material PurifiedSiliconTetrachloride;
         public static Material ThalliumIChloride;
-        public static Mateiral AcidicThalliumSulfateSolution;
+        public static Material AcidicThalliumSulfateSolution;
         public static Material ThalliumSulfateSolution;
         public static Material WaferTreatmentAcid;
         public static Material ArsenicIIIOxide;

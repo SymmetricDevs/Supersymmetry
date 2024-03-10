@@ -126,7 +126,7 @@ ROASTER.recipeBuilder()
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustAnyPurityCarbon') * 5)
-        .inputs(ore('dustArsenicIIIOxide') * 5)
+        .inputs(ore('dustArsenicIiiOxide') * 5)
         .outputs(metaitem('dustArsenic') * 2)
         .fluidOutputs(fluid('carbon_monoxide') * 3000)
         .duration(30)

@@ -806,7 +806,8 @@ public class UnknownCompositionMaterials {
 
         //FREE ID: 4155-4156
 
-        ZincFlue = new Material.Builder(4157, SuSyUtility.susyId('zinc_flue')
+        ZincFlue = new Material.Builder(4157, SuSyUtility.susyId('zinc_flue'))
+                .dust()
                 .color(0x26222e)
                 .build()
 
@@ -1784,11 +1785,6 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0xa6a490)
                 .iconSet(ROUGH)
-                .build();
-
-        ImpureThalliumSulfateSolution = new Material.Builder(4400, SuSyUtility.susyId("impure_thallium_sulfate_solution"))
-                .liquid()
-                .color(0x6f8578)
                 .build();
 
         ImpureCadmiumSulfateSolution = new Material.Builder(4400, SuSyUtility.susyId("impure_cadmium_sulfate_solution"))

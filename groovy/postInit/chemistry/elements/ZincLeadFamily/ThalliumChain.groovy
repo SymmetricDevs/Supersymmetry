@@ -1,6 +1,6 @@
 BR = recipemap('batch_reactor')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-DISTILLATION_TOWER = reicpemap('distillation_tower')
+DISTILLATION_TOWER = recipemap('distillation_tower')
 
 BR.recipeBuilder()
     .inputs(ore('dustThalliumIChloride') * 4)
