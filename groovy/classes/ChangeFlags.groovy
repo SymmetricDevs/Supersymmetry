@@ -95,6 +95,8 @@ class ChangeFlags {
         Nickel.addFlags("generate_catalyst_bed");
         Brass.addFlags("generate_ring")
 
+        Thallium.setProperty(PropertyKey.DUST, new DustProperty());
+
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
         MagnesiumDiboride.addFlags("no_smashing", "no_smelting")
@@ -157,7 +159,7 @@ class ChangeFlags {
 
         Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
         setupFluidType(Cadmium, FluidStorageKeys.LIQUID, 600)
-
+        
         BisphenolA.setProperty(PropertyKey.DUST, new DustProperty());
         BisphenolA.addFlags("no_unification");
         setupFluidType(BisphenolA, FluidStorageKeys.LIQUID, 428)
