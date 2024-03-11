@@ -1,4 +1,5 @@
 {
+  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -13995,6 +13996,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.390.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -14002,6 +14004,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "liquid_oxygen"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -15649,6 +15661,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.432.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -15656,6 +15669,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hot_hp_oxygen"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -15776,6 +15799,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.435.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -15783,6 +15807,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hp_oxygen"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -15803,6 +15837,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.436.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -15810,6 +15845,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "cold_hp_oxygen"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -30178,6 +30223,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.674.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30185,6 +30231,18 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14720,
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "index:3": 1,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
@@ -30213,6 +30271,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.675.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30227,6 +30286,10 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -30280,6 +30343,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.677.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30294,6 +30358,10 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -33001,9 +33069,9 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 64,
+              "Count:3": 1,
               "Damage:2": 15014,
-              "id:8": "gregtech:meta_wire_fine"
+              "id:8": "gregtech:meta_thread"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -36844,7 +36912,19 @@
       },
       "questID:3": 878,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 427,
+              "id:8": "gregtech:wire_single"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "879:10": {
       "preRequisites:11": [
@@ -36859,6 +36939,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.879.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36872,6 +36953,18 @@
               "Count:3": 1,
               "Damage:2": 427,
               "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 427,
+              "id:8": "gregtech:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -36965,6 +37058,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.882.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36979,6 +37073,10 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
@@ -44373,7 +44471,6 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
