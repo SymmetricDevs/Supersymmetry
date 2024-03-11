@@ -209,14 +209,14 @@ for (rubber in rubbers) {
     }
 }
 
-CoagulationRecipe(1, 400, 0)
-CoagulationRecipe(4, 1000, 1)
-CoagulationRecipe(16, 2500, 2)
+CoagulationRecipe(1, 400, 1)
+CoagulationRecipe(4, 1000, 2)
+CoagulationRecipe(16, 2500, 3)
 
 for (coagulant in coagulants) {
-    CoagulationRecipe(coagulant, 1, 400, 3)
-    CoagulationRecipe(coagulant, 4, 1000, 4)
-    CoagulationRecipe(coagulant, 16, 2500, 5)
+    CoagulationRecipe(coagulant, 1, 400, 4)
+    CoagulationRecipe(coagulant, 4, 1000, 5)
+    CoagulationRecipe(coagulant, 16, 2500, 6)
 }
 
 // Liquid Latex * 144
