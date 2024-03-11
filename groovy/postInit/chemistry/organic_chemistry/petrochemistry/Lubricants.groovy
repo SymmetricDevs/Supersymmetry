@@ -33,7 +33,6 @@ HEAT_EXCHANGER = recipemap('heat_exchanger')
 UV_LIGHT_BOX = recipemap('uv_light_box')
 BLENDER = recipemap('blender')
 PHASE_SEPARATOR = recipemap('phase_separator')
-DUMPER = recipemap('dumping')
 
 // Lubricant base oils
 
@@ -692,11 +691,6 @@ DUMPER = recipemap('dumping')
         .fluidOutputs(fluid('ortho_cresol') * 300)
         .duration(200)
         .EUt(240)
-        .buildAndRegister()
-
-    DUMPER.recipeBuilder()
-        .fluidInputs(fluid('ortho_cresol'))
-        .duration(50)
         .buildAndRegister()
 
     CSTR.recipeBuilder()

@@ -5,7 +5,6 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 
-def DUMPER = recipemap('dumping');
 def MIXER = recipemap('mixer');
 def CLARIFIER = recipemap('clarifier');
 def DRYER = recipemap('dryer');
@@ -139,7 +138,7 @@ BR.recipeBuilder()
 
 BCR.recipeBuilder()
         .fluidInputs(fluid('lithium_free_brine') * 50)
-        .fluidInputs(fluid('chlorine') * 10)
+        .fluidInputs(fluid('chlorine') * 25)
         .fluidOutputs(fluid('chlorinated_brine') * 50)
         .duration(1)
         .EUt(120)
@@ -148,7 +147,7 @@ BCR.recipeBuilder()
 VACUUM_CHAMBER.recipeBuilder()
         .fluidInputs(fluid('steam') * 250)
         .fluidInputs(fluid('chlorinated_brine') * 1000)
-        .fluidOutputs(fluid('impure_bromine') * 100)
+        .fluidOutputs(fluid('impure_bromine') * 500)
         .fluidOutputs(fluid('wastewater_sludge') * 500)
         .duration(120)
         .EUt(120)
@@ -222,11 +221,6 @@ PSA.recipeBuilder()
         .fluidOutputs(fluid('water') * 5000)
         .duration(40)
         .EUt(480)
-        .buildAndRegister()
-
-DUMPER.recipeBuilder()
-        .fluidInputs(fluid('wastewater_sludge') * 1000)
-        .duration(20)
         .buildAndRegister()
 
 FLUID_HEATER.recipeBuilder()
