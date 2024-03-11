@@ -75,13 +75,6 @@ EXTRUDER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('threadUltraHighMolecularWeightPolyethylene') * 8)
-    .outputs(metaitem('plateUltraHighMolecularWeightPolyethylene'))
-    .EUt(1920)
-    .duration(300)
-    .buildAndRegister()
-
 // Polypropylene
 
 POLYMERIZATION.recipeBuilder()
