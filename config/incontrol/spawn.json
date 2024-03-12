@@ -82,9 +82,5 @@
 	  "dimension": 10,
 	  "result": "deny"
 	},
-	{
-	  "mob": "minecraft:skeleton_horse",
-	  "result": "deny"
-	}
   ]
   
