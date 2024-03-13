@@ -16,6 +16,13 @@ import requests
 # Used to run questbook.py
 import questbook
 
+# used to map a projects classId on curseforge to a folder
+class_id_to_dir = {
+    6: "mods",
+    12: "resourcepacks",
+    -1: "other"
+}
+
 
 def parse_args():
     parser = argparse.ArgumentParser(prog="build", description=__doc__)
@@ -40,8 +47,9 @@ def build(args):
     modlist = []
     basePath = os.path.normpath(os.path.realpath(__file__)[:-7] + "..")
     copyDirs = ["/scripts", "/resources", "/config",
-                "/mods", "/structures", "/groovy", "/simple-rpc"]
-    serverCopyDirs = ["/scripts", "/config", "/mods", "/structures", "/groovy"]
+                "/mods", "/structures", "/groovy", "/simple-rpc", "/resourcepacks"]
+    serverCopyDirs = ["/scripts", "/config", "/mods",
+                      "/structures", "/groovy", "/resourcepacks"]
 
     if args.clean:
         shutil.rmtree(basePath + "/buildOut/client/overrides",
@@ -129,15 +137,18 @@ def build(args):
             'https://api.curseforge.com/v1/mods/{0}/files/{1}/download-url'.format(
                 mod["projectID"], mod["fileID"]),
             headers=headers)
+        mod_data_r = requests.get(
+            'https://api.curseforge.com/v1/mods/{0}'.format(mod["projectID"]), headers=headers)
+        mod_data = {}
+        if mod_data_r.text:
+            mod_data = mod_data_r.json()["data"]
+
         try:
-            metadata = json.loads(r.text)
+            metadata = r.json()
         except:
             print(
                 'https://api.curseforge.com/v1/mods/{0}/files/{1}/download-url'.format(mod["projectID"], mod["fileID"]))
-            cringe_r = requests.get(
-                'https://api.curseforge.com/v1/mods/{0}'.format(mod["projectID"]), headers=headers)
             try:
-                data = cringe_r.json()["data"]
                 cringe.append(
                     "https://www.curseforge.com/minecraft/mc-mods/{0}/files/{1}".format(data["slug"], mod["fileID"]))
             except:
@@ -154,13 +165,11 @@ def build(args):
         else:
             name = metadata["data"].split("/")[-1]
         url = metadata["data"]
-        clientOnly = False
-        try:
-            clientOnly = mod["clientOnly"]
-        except:
-            clientOnly = False
+        clientOnly = mod.get("clientOnly", False)
+        catagory = mod_data.get("classId", 6)  # 6 is the class id of a mod
 
-        modlist.append({"name": name, "url": url, "clientOnly": clientOnly})
+        modlist.append({"name": name, "url": url,
+                       "clientOnly": clientOnly, "class": catagory})
 
     print("modlist compiled")
     with open(basePath + "/buildOut/modlist.html", "w") as file:
@@ -181,19 +190,25 @@ def build(args):
                             "/buildOut/server" + dir)
         except Exception as e:
             print("Directory exists, skipping")
+
+    for dir in class_id_to_dir.values():
+        mkdirs(f"{basePath}/buildOut/server/{dir}")
+
     print("directories copied to buildOut/server")
     for mod in modlist:
-        jarname = mod["url"].split("/")[-1]
+        filename = mod["url"].split("/")[-1]
         if (mod["clientOnly"] == True):
             continue
 
-        if os.path.exists(os.path.join(cachepath, jarname)):
-            shutil.copy2(os.path.join(cachepath, jarname),
-                         os.path.join(basePath, "buildOut", "server", "mods", jarname))
+        if os.path.exists(os.path.join(cachepath, filename)):
+            shutil.copy2(os.path.join(cachepath, filename),
+                         os.path.join(basePath, "buildOut", "server", "mods", filename))
             print("%s loaded from cache" % (mod))
             continue
 
-        with open(basePath + "/buildOut/server/mods/" + jarname, "w+b") as jar:
+        folder = class_id_to_dir.get(mod["class"], "other")
+
+        with open(f"{basePath}/buildOut/server/{folder}/{filename}", "w+b") as jar:
             r = requests.get(mod["url"])
             jar.write(r.content)
             print(mod["name"] + " Downloaded")
@@ -266,11 +281,9 @@ def build(args):
             print("directories copied to buildOut/mmc/minecraft")
 
         for mod in modlist:
-            jarname = mod["name"].split("/")[-1]
-            if (modClientOnly[i] == False):
-                break
+            filename = mod["name"].split("/")[-1]
 
-            with open(basePath + "/buildOut/mmc/minecraft/mods/" + jarname, "w+b") as jar:
+            with open(basePath + "/buildOut/mmc/minecraft/mods/" + filename, "w+b") as jar:
                 r = requests.get(mod["url"])
                 jar.write(r.content)
                 print(mod["name"] + " Downloaded")
