@@ -292,8 +292,8 @@ for (refrigerant in Refrigerants) {
 
     //Radiative Cooling
     recipemap('radiator').recipeBuilder()
-            .fluidInputs(liquid(refrigerant.hot_refrigerant) * refrigerant.amount_to_use)
-            .fluidOutputs(liquid(refrigerant.comp_refrigerant) * refrigerant.amount_to_use)
+            .fluidInputs(liquid(refrigerant.hot_refrigerant) * refrigerant.amount_to_use / 10)
+            .fluidOutputs(liquid(refrigerant.comp_refrigerant) * refrigerant.amount_to_use / 10)
             .duration(refrigerant.duration_radiator)
             .buildAndRegister();
 
@@ -315,8 +315,8 @@ for (refrigerant in Refrigerants) {
 //Coolant recipes generation
 for (coolant in Coolants) {
     recipemap('radiator').recipeBuilder()
-            .fluidInputs(liquid(coolant.warm_coolant) * coolant.amount_to_use)
-            .fluidOutputs(liquid(coolant.cold_coolant) * coolant.amount_to_use)
+            .fluidInputs(liquid(coolant.warm_coolant) * coolant.amount_to_use / 10)
+            .fluidOutputs(liquid(coolant.cold_coolant) * coolant.amount_to_us / 10)
             .duration(coolant.duration_radiator)
             .buildAndRegister();
 
@@ -374,8 +374,8 @@ for (cryogas in CryoGases) {
 
     //Radiative Cooling
     recipemap('radiator').recipeBuilder()
-            .fluidInputs(liquid(cryogas.hot_high_pressure_gas) * cryogas.amount_to_use)
-            .fluidOutputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
+            .fluidInputs(liquid(cryogas.hot_high_pressure_gas) * cryogas.amount_to_use / 10)
+            .fluidOutputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use / 10)
             .duration((int)(cryogas.duration_heat_exchanger * 5 / 2))
             .buildAndRegister();
 
@@ -796,8 +796,8 @@ for (WorkingFluid in WorkingFluids) {
             .buildAndRegister();
 
     recipemap('radiator').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor * 16))
-            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use * 16))
+            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor * 2))
+            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use * 2))
             .duration(WorkingFluid.duration)
             .EUt(8)
             .buildAndRegister();
