@@ -57,6 +57,7 @@ def CHEMICAL_BATH = recipemap('chemical_bath')
 def BCR = recipemap('bubble_column_reactor')
 def FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
 def FBR = recipemap('fixed_bed_reactor')
+def PYROLYSE_OVEN = recipemap('pyrolyse_oven');
 
 FERMENTER.recipeBuilder()
         .fluidInputs(fluid('gtfo_red_grapes_must') * 8000)
@@ -522,6 +523,23 @@ DISTILLERY.recipeBuilder()
         .EUt(8)
         .buildAndRegister()
 
+//Re-added the roasted coffee bean recipes
+PYROLYSE_OVEN.recipeBuilder()
+	.inputs(ore('gemChippedGradedCoffeeSmall'))
+	.outputs(item('gregtechfoodoption:gtfo_oredict_item:1018'))
+	.fluidOutputs(fluid('water') * 100)
+	.duration(40)
+	.EUt(120)
+	.buildAndRegister()
+	
+PYROLYSE_OVEN.recipeBuilder()
+	.inputs(ore('gemChippedGradedCoffeeLarge'))
+	.outputs(item('gregtechfoodoption:gtfo_oredict_item:1019'))
+	.fluidOutputs(fluid('water') * 200)
+	.duration(80)
+	.EUt(120)
+	.buildAndRegister()
+	
 // Force GTFO skewers to be made with only long rods
 // Skewer * 16
 mods.gregtech.lathe.removeByInput(200, [metaitem('stickTitanium')], null)
