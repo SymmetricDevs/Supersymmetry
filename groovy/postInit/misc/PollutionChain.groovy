@@ -1,6 +1,5 @@
 import globals.Globals
 
-
 MIXER = recipemap('mixer')
 SIFTER = recipemap('sifter')
 ROASTER = recipemap('roaster')

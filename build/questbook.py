@@ -191,8 +191,6 @@ def build(args):
         for i in sorted(questKeys, key=key):
             file.write(i + "=" + questKeys[i] + "\n")
 
-    input("Press Enter to exit...")
-
 
 if (__name__ == "__main__"):
     build(parse_args())
