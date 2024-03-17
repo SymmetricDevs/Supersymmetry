@@ -80,7 +80,7 @@ uselessProps = {
     "bg_size:3": 256,
 
     # delete edit mode if its true
-    "editmode:1": 1,
+    #"editmode:1": 1, # Actually don't because edit mode is enabled by default
 }
 
 basePath = os.path.normpath(os.path.abspath(__file__ + "/../../"))
@@ -99,6 +99,7 @@ def nest(location: dict) -> dict:
             del location[entry]
         elif (isinstance(location[entry], dict)):
             location[entry] = nest(location[entry])
+
     return location
 
 
@@ -174,6 +175,7 @@ def build(args):
     except FileNotFoundError:
         print("lang file %s was not found" % (langFile))
 
+    questbook["questSettings:10"]["betterquesting:10"]["editmode:1"] = 0
 
     nest(questbook)
 
@@ -188,8 +190,6 @@ def build(args):
     with open(langFile, "w") as file:
         for i in sorted(questKeys, key=key):
             file.write(i + "=" + questKeys[i] + "\n")
-
-    input("Press Enter to exit...")
 
 
 if (__name__ == "__main__"):

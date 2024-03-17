@@ -1,6 +1,10 @@
+import globals.Globals
+import globals.GroovyUtils.*
+
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;
 
+import gregtech.api.recipes.ingredients.GTRecipeInput;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
@@ -1417,5 +1421,8 @@ crafting.replaceShaped("gregtech:multiblock_builder", metaitem('tool.multiblock_
         [ore('screwStainlessSteel'), ore('stickPolytetrafluoroethylene'), metaitem('robot.arm.ev')],
         [ore('stickPolytetrafluoroethylene'), ore('screwStainlessSteel'), ore('craftingToolScrewdriver')]
 ])
-//
 
+GroovyUtils.removeRecipesContainingFluid(mods.gregtech.assembler, fluid('polybenzimidazole'))
+GroovyUtils.removeRecipesContainingFluid(mods.gregtech.autoclave, fluid('polybenzimidazole'))
+GroovyUtils.removeRecipesContainingFluid(mods.gregtech.fluid_solidifier, fluid('polybenzimidazole'))
+GroovyUtils.removeRecipesContainingFluid(mods.gregtech.assembly_line, fluid('polybenzimidazole'))
