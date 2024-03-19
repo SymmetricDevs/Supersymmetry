@@ -1101,7 +1101,6 @@ BCR.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-
 // PVB
 
 BR.recipeBuilder()
@@ -4273,6 +4272,8 @@ DISTILLATION_TOWER.recipeBuilder()
 .fluidOutputs(fluid('di_tert_butyl_peroxide') * 1000)
 .duration(200)
 .EUt(120)
+.buildAndRegister()
+
 // Dimethylacetamide
 
 CSTR.recipeBuilder()
