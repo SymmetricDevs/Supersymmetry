@@ -3479,7 +3479,7 @@ CSTR.recipeBuilder()
         .fluidInputs(fluid('water') * 100)
         .fluidOutputs(fluid('brominated_sulfur_dioxide') * 150)
         .EUt(30)
-        .duration(15)
+        .duration(300)
         .buildAndRegister()
 
 DISTILLATION_TOWER.recipeBuilder()
