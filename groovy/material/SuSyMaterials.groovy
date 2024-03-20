@@ -1577,6 +1577,7 @@ class SuSyMaterials {
         public static Material Chlorotrifluoromethane;
         public static Material Chlorodifluoromethane;
         public static Material PolyvinylAlcohol;
+        public static Material EthylAcetate;
 
         // Third Degree Materials
 
