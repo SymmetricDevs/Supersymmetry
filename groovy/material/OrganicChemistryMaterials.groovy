@@ -2490,5 +2490,17 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 10, Hydrogen, 12)
                 .color(0x9c388b)
                 .build();
+
+        PolyvinylAlcohol = new Material.Builder(15404, SuSyUtility.susyId('polyvinyl_alcohol'))
+                .dust()
+                .components(Carbon, 2, Hydrogen, 4, Oxygen, 1)
+                .color(0xd4984e)
+                .build();
+
+        EthylAcetate = new Material.Builder(15405, SuSyUtility.susyId('ethyl_acetate'))
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 8, Oxygen, 2)
+                .color(0xa5c773)
+                .build();
     }
 }

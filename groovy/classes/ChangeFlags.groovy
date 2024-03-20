@@ -162,6 +162,8 @@ class ChangeFlags {
         BisphenolA.addFlags("no_unification");
         setupFluidType(BisphenolA, FluidStorageKeys.LIQUID, 428)
 
+        setupFluidType(PolyvinylAcetate, FluidStorageKeys.LIQUID, 385)
+
         OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
 
