@@ -3479,7 +3479,7 @@ CSTR.recipeBuilder()
         .fluidInputs(fluid('water') * 100)
         .fluidOutputs(fluid('brominated_sulfur_dioxide') * 150)
         .EUt(30)
-        .duration(300)
+        .duration(15)
         .buildAndRegister()
 
 DISTILLATION_TOWER.recipeBuilder()
@@ -4274,6 +4274,7 @@ DISTILLATION_TOWER.recipeBuilder()
 .duration(200)
 .EUt(120)
 .buildAndRegister()
+
 // Dimethylacetamide
 
 CSTR.recipeBuilder()
