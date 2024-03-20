@@ -61,7 +61,7 @@
 			"height": 20,
 			"imageWidth": 200,
 			"imageHeight": 20,
-			"tooltip": "§a#modsactive#§r/§e#modsloaded#§7 mods loaded.§r",
+			"tooltip": "§a#modsactive#§r/§e#modsloaded#§r",
 			"texture": "supersymmetry:mainmenu/button.png",
 			"hoverTextColor": 65484,
 			"clickSound": "block.lever.click",
@@ -71,7 +71,7 @@
 			}
 		},
 		"options": {
-			"text": "Options",
+			"text": "susy.menu.options",
 			"alignment": "center",
 			"posX": -150,
 			"posY": 35,
@@ -89,7 +89,7 @@
 		},
 		"quit": {
 			"text": "menu.quit",
-			"hoverText": "You can never escape Greg.",
+			"hoverText": "susy.menu.quit.hover",
 			"alignment": "center",
 			"posX": -150,
 			"posY": 55,
@@ -117,7 +117,7 @@
 			}
 		},
 		"discord": {
-			"text": "Discord Server",
+			"text": "susy.menu.discord",
 			"alignment": "center",
 			"posX": 0,
 			"posY": -25,
@@ -134,7 +134,7 @@
 			}
 		},
 		"github": {
-			"text": "Report A Bug",
+			"text": "susy.menu.reportabug",
 			"alignment": "center",
 			"posX": 0,
 			"posY": -5,
@@ -151,7 +151,7 @@
 			}
 		},
 		"open_folder": {
-			"text": "Open MC Folder",
+			"text": "susy.menu.openfolder",
 			"alignment": "center",
 			"posX": 0,
 			"posY": 15,
@@ -167,7 +167,7 @@
 			}
 		},
 		"refresh": {
-			"text": "Refresh Menu",
+			"text": "susy.menu.refresh",
 			"alignment": "center",
 			"posX": 0,
 			"posY": 35,
@@ -196,7 +196,7 @@
 			}
 		},
 		"replaymod": {
-			"text": "Replay Viewer",
+			"text": "susy.menu.replayviewer",
 			"posX": -115,
 			"posY": -25,
 			"alignment": "bottom_right",

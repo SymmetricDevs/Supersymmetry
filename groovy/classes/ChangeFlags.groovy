@@ -152,7 +152,8 @@ class ChangeFlags {
         setupFluidType(SiliconDioxide, FluidStorageKeys.LIQUID, 1986)
         setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
 
-        Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true))
+        Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
+        Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
         Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
@@ -710,6 +711,25 @@ class ChangeFlags {
         Beryllium.setProperty(PropertyKey.BLAST, new BlastProperty(1560, GasTier.LOW, 120, 200, -1, -1));
         Nickel.setProperty(PropertyKey.BLAST, new BlastProperty(1728, GasTier.LOW, 120, 120, -1, -1));
 
+        Naphtha.addFlags("flammable");
+        NaturalGas.addFlags("flammable");
+        Methane.addFlags("flammable");
+        Propane.addFlags("flammable");
+        Butane.addFlags("flammable");
+        Butadiene.addFlags("flammable");
+        Toluene.addFlags("flammable");
+        WoodGas.addFlags("flammable");
+        CoalGas.addFlags("flammable");
+        Ethylene.addFlags("flammable");
+        RefineryGas.addFlags("flammable");
+        Ammonia.addFlags("flammable");
+        Propene.addFlags("flammable");
+        Butene.addFlags("flammable");
+        Phenol.addFlags("flammable");
+        Benzene.addFlags("flammable");
+        Hydrogen.addFlags("flammable");
+        Methanol.addFlags("flammable");
+        Ethanol.addFlags("flammable");
         log.infoMC("Finished modifying flags")
     }
 }

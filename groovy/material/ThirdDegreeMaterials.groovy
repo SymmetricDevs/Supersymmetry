@@ -594,9 +594,15 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        DilutedButyllithium = new Material.Builder(15082, SuSyUtility.susyId('diluted_butyllithium'))
+        DilutedButyllithium = new Material.Builder(24095, SuSyUtility.susyId('diluted_butyllithium'))
                 .liquid()
                 .components(Butyllithium, 1, DiethylEther, 1)
+                .colorAverage()
+                .build();
+
+        SpentPBISolution = new Material.Builder(24096, SuSyUtility.susyId('spent_pbi_solution'))
+                .liquid()
+                .components(Dimethylacetamide, 1)
                 .colorAverage()
                 .build();
     }
