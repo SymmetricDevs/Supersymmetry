@@ -114,7 +114,7 @@ public class OrganicChemistryMaterials {
                 .build()
                 
         Rayon.setFormula('C6H5(OH)4OH', true)
-        Rayon.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
+        Rayon.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false, true))
 
         AlkaliCellulose = new Material.Builder(15015, SuSyUtility.susyId('alkali_cellulose'))
                 .dust()
@@ -893,7 +893,7 @@ public class OrganicChemistryMaterials {
                 .build()
 
         Kevlar.setFormula('[COC6H4CONHC6H4NH]n', true)
-        Kevlar.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
+        Kevlar.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false, true))
 
         BiphenylTetracarboxylicAcidDianhydride = new Material.Builder(15155, SuSyUtility.susyId('biphenyl_tetracarboxylic_acid_dianhydride'))
                 .dust()
@@ -906,7 +906,7 @@ public class OrganicChemistryMaterials {
                 .color(0xd4c9ab)
                 .build()
 
-        CelluloseAcetate.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+        CelluloseAcetate.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false, false))
 
         Pyridine = new Material.Builder(15158, SuSyUtility.susyId('pyridine'))
                 .liquid()
@@ -1753,7 +1753,7 @@ public class OrganicChemistryMaterials {
                 .color(0x7e9e8e)
                 .build();
 
-        PolyethyleneTerephthalate.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true))
+        PolyethyleneTerephthalate.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
 
         AmocoTerephthalicAcid = new Material.Builder(15290, SuSyUtility.susyId('amoco_terephthalic_acid'))
                 .dust()
@@ -2321,7 +2321,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         Nomex.setFormula('[COC6H4CONHC6H4NH]n', true)
-        Nomex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false))
+        Nomex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false, true))
 
         UltraHighMolecularWeightPolyethylene = new Material.Builder(15380, SuSyUtility.susyId('ultra_high_molecular_weight_polyethylene'))
                 .dust().liquid(new FluidBuilder().temperature(425))
@@ -2332,7 +2332,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         UltraHighMolecularWeightPolyethylene.setFormula('[C2H4]n', true)
-        UltraHighMolecularWeightPolyethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true))
+        UltraHighMolecularWeightPolyethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
 
         AdipicAcid = new Material.Builder(15381, SuSyUtility.susyId('adipic_acid'))
                 .dust()
@@ -2489,6 +2489,18 @@ public class OrganicChemistryMaterials {
                 .liquid(new FluidBuilder().temperature(306))
                 .components(Carbon, 10, Hydrogen, 12)
                 .color(0x9c388b)
+                .build();
+
+        PolyvinylAlcohol = new Material.Builder(15404, SuSyUtility.susyId('polyvinyl_alcohol'))
+                .dust()
+                .components(Carbon, 2, Hydrogen, 4, Oxygen, 1)
+                .color(0xd4984e)
+                .build();
+
+        EthylAcetate = new Material.Builder(15405, SuSyUtility.susyId('ethyl_acetate'))
+                .fluid()
+                .components(Carbon, 4, Hydrogen, 8, Oxygen, 2)
+                .color(0xa5c773)
                 .build();
     }
 }

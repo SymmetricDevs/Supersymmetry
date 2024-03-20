@@ -25,11 +25,13 @@ Special thanks to our volunteers:
 - StarL0st • [Space mod](https://github.com/SymmetricDevs/GregicalityStarbound)
 - super • Misc development
 - SuperObama • Consultant
-- trainvoi • Research/Playtesting
-- ZombieZilla • Research/Playtesting
-- Tian-mi • Chinese translation
+- trainvoi • Research and Quests
+- ZombieZilla • Research
+- Tian-mi • Chinese translation and misc development
 - Roque_Crafter • Portuguese translation
-- Lavinia • Textures
+- kubuus • Polish translation
+- Whatsapp • Structures, textures and feedback
+- Science Demon • Questbook work, German translation and bug fixes
 
 ## Building the pack
 You'll need python3 and python requests installed to build run the main.py script.
