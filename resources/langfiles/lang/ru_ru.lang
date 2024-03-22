@@ -165,3 +165,21 @@ susy.material.potassium_carbonate=Карбонат калия
 susy.material.calcium_carbide=Карбид кальция
 susy.material.sodium_silicate=Силикат натрия
 susy.material.sodium_aluminate=Алюминат натрия
+susy.material.gallium_phosphate=Фосфат галлия
+susy.material.polyvinylidene_fluoride=Поливинилиденфторид
+susy.material.lithium_bromide=Бромид лития
+susy.material.silicon_carbide=Карбид кремния
+susy.material.tungsten_trioxide=Триоксид вольфрама
+susy.material.asphalt=Асфальт
+susy.material.potassium_fluoride=Фторид калия
+susy.material.cellulose=Целлюлоза
+susy.material.polydimethylsiloxane=Полидиметилсилоксан
+susy.material.dimethyldichlorosilane=Диметилдихлорсилан
+
+# Solids
+
+susy.material.pig_iron=Чугун
+susy.material.aluminium_hydroxide=Гидроксид алюминия
+susy.material.aluminium_trifluoride=Трифторид алюминия
+susy.material.sodium_fluoride=Фторид натрия
+susy.material.lithium_niobate=Ниобат лития
