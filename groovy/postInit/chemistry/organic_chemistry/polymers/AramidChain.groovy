@@ -101,13 +101,6 @@ DISTILLERY.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('threadKevlar') * 8)
-    .outputs(metaitem('plateKevlar'))
-    .EUt(1920)
-    .duration(300)
-    .buildAndRegister()
-
 // m-Phenylenediamine
 
 CSTR.recipeBuilder()

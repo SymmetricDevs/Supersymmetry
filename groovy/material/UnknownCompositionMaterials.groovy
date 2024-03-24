@@ -1107,16 +1107,19 @@ public class UnknownCompositionMaterials {
         MidgradeGasoline = new Material.Builder(4222, SuSyUtility.susyId('midgrade_gasoline'))
                 .liquid()
                 .color(0xc49735)
+                .flags(FLAMMABLE)
                 .build();
 
         PremiumGasoline = new Material.Builder(4223, SuSyUtility.susyId('premium_gasoline'))
                 .liquid()
                 .color(0xdb8427)
+                .flags(FLAMMABLE)
                 .build();
 
         SupremeGasoline = new Material.Builder(4224, SuSyUtility.susyId('supreme_gasoline'))
                 .liquid()
                 .color(0xf26d1b)
+                .flags(FLAMMABLE)
                 .build();
 
         //FREE IDs: 4225-4231
@@ -1590,31 +1593,37 @@ public class UnknownCompositionMaterials {
         MidgradeDiesel = new Material.Builder(4361, SuSyUtility.susyId('midgrade_diesel'))
                 .liquid()
                 .color(0xc4a535)
+                .flags(FLAMMABLE)
                 .build();
 
         PremiumDiesel = new Material.Builder(4362, SuSyUtility.susyId('premium_diesel'))
                 .liquid()
                 .color(0xd1aa1d)
+                .flags(FLAMMABLE)
                 .build();
 
         SupremeDiesel = new Material.Builder(4363, SuSyUtility.susyId('supreme_diesel'))
                 .liquid()
                 .color(0xdb9a16)
+                .flags(FLAMMABLE)
                 .build();
 
         MidgradeKerosene = new Material.Builder(4364, SuSyUtility.susyId('midgrade_kerosene'))
                 .liquid()
                 .color(0xa8a44a)
+                .flags(FLAMMABLE)
                 .build();
 
         PremiumKerosene = new Material.Builder(4365, SuSyUtility.susyId('premium_kerosene'))
                 .liquid()
                 .color(0xbab541)
+                .flags(FLAMMABLE)
                 .build();
 
         SupremeKerosene = new Material.Builder(4366, SuSyUtility.susyId('supreme_kerosene'))
                 .liquid()
                 .color(0xd9c148)
+                .flags(FLAMMABLE)
                 .build();
 
         SAPOEleven = new Material.Builder(4367, SuSyUtility.susyId('sapo_eleven'))
@@ -1753,13 +1762,13 @@ public class UnknownCompositionMaterials {
                 .build();
 
         Cotton.setFormula('C6H5(OH)4OH', true)
-        Cotton.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+        Cotton.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false, false))
 
         Spandex = new Material.Builder(4394, SuSyUtility.susyId("spandex"))
                 .color(0x625f8a)
                 .build();
 
-        Spandex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+        Spandex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false, true))
 
         PolyurethanePolymerizationMix = new Material.Builder(4395, SuSyUtility.susyId("polyurethane_polymerization_mix"))
                 .liquid()
