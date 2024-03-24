@@ -129,16 +129,149 @@ mods.gregtech.bender.recipeBuilder()
 		.outputs(item('immersiverailroading:item_rail_part') * 10)
 		.duration(200)
 		.EUt(30)
-		.buildAndRegister()
+		.buildAndRegister();
 
+// supersymmetry train parts
+log.infoMC("Adding Train Wheels");
+
+//Train wheel steps:
+/*
+ * - Use the forge hammer on 4 double steel sheets to make the unshaped train wheel
+ * Creating a small wheel:
+   a. use the lathe to cut it into 4 small wheels
+   b. use the hammer, saw, and file to work it into 2 small wheels
+ * Creating the large drive wheel:
+   a. use the lathe to cut it into 2 drive wheels
+   b. use the hammer, saw, and file to cut it into 1 drive wheel
+*/
+mods.gregtech.forge_hammer.recipeBuilder()
+	.inputs(ore('plateDoubleSteel') * 4)
+	.outputs(metaitem('train_unshaped_wheel'))
+	.duration(200)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister();
+
+mods.gregtech.lathe.recipeBuilder()
+	.circuitMeta(1)
+	.inputs(metaitem('train_unshaped_wheel'))
+	.outputs(metaitem('train_small_wheel') * 4)
+	.duration(200)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister();
+
+mods.gregtech.lathe.recipeBuilder()
+	.circuitMeta(2)
+	.inputs(metaitem('train_unshaped_wheel'))
+	.outputs(metaitem('train_drive_wheel') * 2)
+	.duration(200)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(metaitem('train_small_wheel') * 4)
+	.inputs(metaitem('stickLongSteel') * 2)
+	.inputs(metaitem('plateSteel') * 2)
+	.inputs(metaitem('springSteel') * 1)
+	.outputs(metaitem('train_bogie'))
+	.duration(200)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister();
+
+crafting.addShaped("handcraft_train_bogie", metaitem('train_bogie'), [
+	[metaitem('train_small_wheel'), ore('plateSteel'), metaitem('train_small_wheel')],
+	[ore('stickLongSteel'), ore('springSteel'), ore('stickLongSteel')],
+	[metaitem('train_small_wheel'), ore('plateSteel'), metaitem('train_small_wheel')],
+]);
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(item('gregtech:machine', 2) * 1) // high pressure solid fuel boiler
+	.inputs(item('gregtech:boiler_casing', 1) * 4)
+	.inputs(item('gregtech:boiler_firebox_casing', 1) * 4)
+	.inputs(metaitem('steam.piston') * 2)
+	.inputs(metaitem('drum.steel'))
+	.outputs(metaitem('train_steam_boiler'))
+	.duration(200)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister();
+
+// steam trains
+// small(er) steam locomotive
+TagCompound tag = new TagCompound();
+
+tag.setString("defID", "rolling_stock/locomotives/rodgers_460.json");
+tag.setFloat("gauge", (float) Gauges.STANDARD);
+
+cam72cam.mod.item.ItemStack is = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+is.setTagCompound(tag);
+
+// 4-6-0 wheel config
+SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+		.circuitMeta(1)
+		.inputs(metaitem('train_steam_boiler'))
+		.inputs(metaitem('train_bogie'))
+		.inputs(metaitem('train_drive_wheel') * 6)
+		.inputs(ore('plateSteel') * 24)
+		.inputs(ore('stickLongSteel') * 6)
+		.inputs(item('minecraft:glass') * 2)
+		.inputs(ore('boltSteel') * 48)
+		.outputs(is.internal)
+		.EUt(30)
+		.duration(200)
+		.buildAndRegister();
+
+// large steam locomotive
+tag = new TagCompound();
+
+tag.setString("defID", "rolling_stock/locomotives/k4_pacific.json");
+tag.setFloat("gauge", (float) Gauges.STANDARD);
+
+is = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+is.setTagCompound(tag);
+
+// 4-6-2 wheel config
+SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+		.circuitMeta(1)
+		.inputs(metaitem('train_steam_boiler') * 2)
+		.inputs(metaitem('train_bogie'))
+		.inputs(metaitem('train_drive_wheel') * 6)
+		.inputs(metaitem('train_small_wheel') * 2)
+		.inputs(ore('plateSteel') * 32)
+		.inputs(ore('stickLongSteel') * 7)
+		.inputs(item('minecraft:glass') * 2)
+		.inputs(ore('boltSteel') * 64)
+		.outputs(is.internal)
+		.EUt(30)
+		.duration(200)
+		.buildAndRegister();
+
+// steam freight car
+tag = new TagCompound();
+
+tag.setString("defID", "rolling_stock/freight/usra_boxcar_classrr40.json");
+tag.setFloat("gauge", (float) Gauges.STANDARD);
+
+is = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+is.setTagCompound(tag);
+
+SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+		.circuitMeta(1)
+		.inputs(metaitem('train_bogie') * 2)
+		.inputs(ore('plateSteel') * 16)
+		.inputs(ore('boltSteel') * 32)
+		.outputs(is.internal)
+		.EUt(30)
+		.duration(200)
+		.buildAndRegister();
+
+// monorail trains (soldered)
 Globals.solders.each { key, val ->
-
-	TagCompound tag = new TagCompound();
+	// monorail locomotive
+	tag = new TagCompound();
 
 	tag.setString("defID", "rolling_stock/locomotives/monorail_engine.json");
 	tag.setFloat("gauge", (float) Gauges.STANDARD);
 
-	cam72cam.mod.item.ItemStack is = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+	is = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
 	is.setTagCompound(tag);
 
 	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
@@ -158,6 +291,7 @@ Globals.solders.each { key, val ->
 			.duration(400)
 			.buildAndRegister();
 
+	// monorail freight car
 	TagCompound tag2 = new TagCompound();
 
 	tag2.setString("defID", "rolling_stock/freight/monorail_item.json");
@@ -180,6 +314,7 @@ Globals.solders.each { key, val ->
 
 	TagCompound tag3 = new TagCompound();
 
+	// monorail passenger car
 	tag3.setString("defID", "rolling_stock/passenger/monorail_passenger.json");
 	tag3.setFloat("gauge", (float) Gauges.STANDARD);
 
@@ -201,6 +336,7 @@ Globals.solders.each { key, val ->
 
 	TagCompound tag4 = new TagCompound();
 
+	// monorail fluid car
 	tag4.setString("defID", "rolling_stock/tank/monorail_fluid.json");
 	tag4.setFloat("gauge", (float) Gauges.STANDARD);
 
