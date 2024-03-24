@@ -74,7 +74,7 @@ public class FirstDegreeMaterials {
         HighPurityCopper = generatePurifiedElement(Copper, 8020, false, false)
         HighPurityZinc = generatePurifiedElement(Zinc, 8021, false, false)
         HighPurityGallium = generatePurifiedElement(Gallium, 8022, true, false)
-        HighPurityGermanium = generatePurifiedElement(Germanium, 8023, true, false)
+        HighPurityGermanium = generatePurifiedElement(Germanium, 8023, true, true)
         HighPurityArsenic = generatePurifiedElement(Arsenic, 8024, true, false)
         HighPuritySelenium = generatePurifiedElement(Selenium, 8025, false, false)
         HighPurityRubidium = generatePurifiedElement(Rubidium, 8026, false, false)
@@ -3207,6 +3207,18 @@ public class FirstDegreeMaterials {
                 .fluid()
                 .components(Cadmium, 1, Sulfur, 1, Oxygen, 4, Water, 1)
                 .colorAverage()
+                .build()
+
+        GermaniumTetrachloride = new Material.Builder(8600, SuSyUtility.susyId('germanium_tetrachloride'))
+                .liquid()
+                .components(Germanium, 1, Chlorine, 4)
+                .color(0xbae6dd)
+                .build()
+        
+        GermaniumDioxide = new Material.Builder(8601, SuSyUtility.susyId('germanium_dioxide'))
+                .dust()
+                .components(Germanium, 1, Oxygen, 2)
+                .color(0x4b9485)
                 .build()
     }
 }

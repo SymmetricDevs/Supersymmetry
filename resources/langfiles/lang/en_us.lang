@@ -1275,10 +1275,9 @@ susy.material.zinc_leach=Zinc Leach
 susy.material.zinc_leach_residue=Zinc Leach Residue
 susy.material.hot_zinc_leach=Hot Zinc Leach
 susy.material.hot_zinc_leach_residue=Hot Zinc Leach Residue
-susy.material.zinc_rich_slag=Zinc-Rich Slag
+susy.material.waelz_slag=Waelz Slag
 susy.material.reduced_zinc_leach=Reduced Zinc Leach
 susy.material.waelz_oxide=Waelz Oxide
-susy.material.germanium_rich_slag=Germanium-Rich Slag
 susy.material.zinc_cementation_slurry=Zinc Cementation Slurry
 susy.material.precipitated_zinc_leach=Precipitated Zinc Leach
 susy.material.copper_cadmium_residue=Copper Cadmium Residue
@@ -1902,6 +1901,13 @@ susy.material.antimony_iii_oxide=Antimony III Oxide
 susy.material.impure_cadmium_sulfate_solution=Impure Cadmium Sulfate Solution
 susy.material.purified_cadmium_solution=Purified Cadmium Solution
 susy.material.spent_pbi_solution=Spent PBI Solution
+susy.material.tannic_acid_solution=Tannic Acid Solution
+susy.material.germanium_rich_oxide=Germanium Rich Oxide
+susy.material.germanium_tetrachloride=Germanium Tetrachloride
+susy.material.germanium_dioxide=Germanium Dioxide
+susy.material.germanium_leach=Germanium Leach
+susy.material.germanium_concentrate=Germanium Concentrate
+susy.material.impure_germanium_tetrachloride=Impure Germanium Tetrachloride
 
 # Isotopes
 

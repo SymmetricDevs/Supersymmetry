@@ -141,6 +141,8 @@ class ChangeFlags {
         Rutile.addFlags("generate_concentrate");
         setupSlurries(Sphalerite)
 
+        Germanium.setProperty(PropertyKey.Ingot, new IngotProperty());
+
         Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
         Asbestos.addFlags("generate_foil");
 

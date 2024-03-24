@@ -287,10 +287,9 @@ class SuSyMaterials {
         public static Material ZincLeachResidue;
         public static Material HotZincLeach;
         public static Material HotZincLeachResidue;
-        public static Material ZincRichSlag;
+        public static Material WaelzSlag;
         public static Material ReducedZincLeach;
         public static Material WaelzOxide;
-        public static Material GermaniumRichSlag;
         public static Material ZincCementationSlurry;
         public static Material PrecipitatedZincLeach;
         public static Material CopperCadmiumResidue;
@@ -480,6 +479,11 @@ class SuSyMaterials {
         public static Material TreatedCollagen;
         public static Material ImpureThalliumSulfateSolution;
         public static Material ImpureCadmiumSulfateSolution;
+        public static Material TannicAcidSolution;
+        public static Material GermaniumRichOxide;
+        public static Material GermaniumLeach;
+        public static Material GermaniumConcentrate;
+        public static Material ImpureGermaniumTetrachloride;
 
         // Petrochem Materials
 
@@ -1012,6 +1016,8 @@ class SuSyMaterials {
         public static Material ArsenicIIIOxide;
         public static Material AntimonyIIIOxide;
         public static Material PurifiedCadmiumSolution;
+        public static Material GermaniumTetrachloride;
+        public static Material GermaniumDioxide;
 
         // HP Materials
 

@@ -797,7 +797,10 @@ public class UnknownCompositionMaterials {
                 .color(0xdbaf48)
                 .build()
 
-        //FREE ID: 4153
+        GermaniumRichOxide = new Material.Builder(4153, SuSyUtility.susyId('germanium_rich_oxide'))
+                .dust()
+                .color(0x7b9a9e)
+                .build()
 
         UnprocessedSphaleriteSlurry = new Material.Builder(4154, SuSyUtility.susyId('unprocessed_sphalerite_slurry'))
                 .liquid()
@@ -843,7 +846,7 @@ public class UnknownCompositionMaterials {
                 .color(0x3b332d)
                 .build()
 
-        ZincRichSlag = new Material.Builder(4166, SuSyUtility.susyId('zinc_rich_slag'))
+        WaelzSlag = new Material.Builder(4166, SuSyUtility.susyId('waelz_slag'))
                 .dust()
                 .color(0x242323)
                 .build()
@@ -858,10 +861,7 @@ public class UnknownCompositionMaterials {
                 .color(0x475453)
                 .build()
 
-        GermaniumRichSlag = new Material.Builder(4169, SuSyUtility.susyId('germanium_rich_slag'))
-                .dust()
-                .color(0x2d2e27)
-                .build()
+        //FREE ID: 4169
 
         ZincCementationSlurry = new Material.Builder(4170, SuSyUtility.susyId('zinc_cementation_slurry'))
                 .liquid()
@@ -1799,6 +1799,26 @@ public class UnknownCompositionMaterials {
         ImpureCadmiumSulfateSolution = new Material.Builder(4400, SuSyUtility.susyId("impure_cadmium_sulfate_solution"))
                 .liquid()
                 .color(0x6f8485)
+                .build();
+
+        TannicAcidSolution = new Material.Builder(4401, SuSyUtility.susyId("tannic_acid_solution"))
+                .liquid()
+                .color(0x702507)
+                .build();
+
+        GermaniumLeach = new Material.Builder(4402, SuSyUtility.susyId("germanium"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x7ecccb)
+                .build();
+
+        GermaniumConcentrate = new Material.Builder(4403, SuSyUtility.susyId("germanium"))
+                .dust()
+                .color(0x6ca3a2)
+                .build();
+
+        ImpureGermaniumTetrachloride = new Material.Builder(4404, SuSyUtility.susyId("germanium"))
+                .gas(new FluidBuilder().temperature(360))
+                .color(0xc3ded9)
                 .build();
     }
 }
