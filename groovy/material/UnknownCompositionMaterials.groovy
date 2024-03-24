@@ -841,7 +841,7 @@ public class UnknownCompositionMaterials {
                 .color(0xb89e8a)
                 .build()
 
-        HotZincLeachResidue = new Material.Builder(4165, SuSyUtility.susyId('hot_zinc_leach_residue'))
+        LeadSilicaResidue = new Material.Builder(4165, SuSyUtility.susyId('lead_silica_residue'))
                 .dust()
                 .color(0x3b332d)
                 .build()
@@ -1819,6 +1819,36 @@ public class UnknownCompositionMaterials {
         ImpureGermaniumTetrachloride = new Material.Builder(4404, SuSyUtility.susyId("impure_germanium_tetrachloride"))
                 .gas(new FluidBuilder().temperature(360))
                 .color(0xc3ded9)
+                .build();
+
+        GermaniumOxalateLeach = new Material.Builder(4405, SuSyUtility.susyId("germanium_oxalate_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x476f91)
+                .build();
+
+        PurifiedGermaniumOxalateLeach = new Material.Builder(4406, SuSyUtility.susyId("purified_germanium_oxalate_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x52809c)
+                .build();
+
+        GermaniumGalliumExtractionMixture = new Material.Builder(4407, SuSyUtility.susyId("germanium_gallium_extraction_mixture"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x7657b5)
+                .build();
+
+        GermaniumGalliumExtract = new Material.Builder(4408, SuSyUtility.susyId("germanium_gallium_extract"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x5a56a3)
+                .build();
+
+        GermaniumExtract = new Material.Builder(4409, SuSyUtility.susyId("germanium_extract"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x6e59b5)
+                .build();
+
+        GermaniumOxalateSolution = new Material.Builder(4410, SuSyUtility.susyId("germanium_oxalate_solution"))
+                .liquid()
+                .color(0x8b78cc)
                 .build();
     }
 }

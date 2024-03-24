@@ -3220,5 +3220,11 @@ public class FirstDegreeMaterials {
                 .components(Germanium, 1, Oxygen, 2)
                 .color(0x4b9485)
                 .build()
+
+        IronOxalateDihydrate = new Material.Builder(8602, SuSyUtility.susyId('iron_oxalate_dihydrate'))
+                .dust()
+                .components(Iron, 1, Carbon, 2, Oxygen, 4, Water, 2)
+                .colorAverage()
+                .build()
     }
 }

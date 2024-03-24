@@ -1274,7 +1274,7 @@ susy.material.ethylamine_mix=Ethylamine Mix
 susy.material.zinc_leach=Zinc Leach
 susy.material.zinc_leach_residue=Zinc Leach Residue
 susy.material.hot_zinc_leach=Hot Zinc Leach
-susy.material.hot_zinc_leach_residue=Hot Zinc Leach Residue
+susy.material.lead_silica_residue=Lead-Silica Residue
 susy.material.waelz_slag=Waelz Slag
 susy.material.reduced_zinc_leach=Reduced Zinc Leach
 susy.material.waelz_oxide=Waelz Oxide
@@ -1908,6 +1908,15 @@ susy.material.germanium_dioxide=Germanium Dioxide
 susy.material.germanium_leach=Germanium Leach
 susy.material.germanium_concentrate=Germanium Concentrate
 susy.material.impure_germanium_tetrachloride=Impure Germanium Tetrachloride
+susy.material.germanium_oxalate_leach=Germanium Oxalate Leach
+susy.material.purified_germanium_oxalate_leach=Purified Germanium Oxalate Leach
+susy.material.germanium_gallium_extraction_mixture=Germanium-Gallium Extraction Mixture
+susy.material.germanium_gallium_extract=Germanium-Gallium Extract
+susy.material.germanium_extract=Germanium Extract
+susy.material.germanium_oxalate_solution=Germanium Oxalate Solution
+susy.material.gallium_sulfate_solution=Gallium Sulfate Solution
+susy.material.iron_oxalate_dihydrate=Iron Oxalate Dihydrate
+susy.material.oxalic_acid_solution=Oxalic Acid Solution
 
 # Isotopes
 

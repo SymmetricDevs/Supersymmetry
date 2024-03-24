@@ -286,7 +286,7 @@ class SuSyMaterials {
         public static Material ZincLeach;
         public static Material ZincLeachResidue;
         public static Material HotZincLeach;
-        public static Material HotZincLeachResidue;
+        public static Material LeadSilicaResidue;
         public static Material WaelzSlag;
         public static Material ReducedZincLeach;
         public static Material WaelzOxide;
@@ -484,6 +484,12 @@ class SuSyMaterials {
         public static Material GermaniumLeach;
         public static Material GermaniumConcentrate;
         public static Material ImpureGermaniumTetrachloride;
+        public static Material GermaniumOxalateLeach;
+        public static Material PurifiedGermaniumOxalateLeach;
+        public static Material GermaniumGalliumExtractionMixture;
+        public static Material GermaniumGalliumExtract;
+        public static Material GermaniumExtract;
+        public static Material GermaniumOxalateSolution;
 
         // Petrochem Materials
 
@@ -1018,6 +1024,7 @@ class SuSyMaterials {
         public static Material PurifiedCadmiumSolution;
         public static Material GermaniumTetrachloride;
         public static Material GermaniumDioxide;
+        public static Material IronOxalateDihydrate;
 
         // HP Materials
 
@@ -1689,10 +1696,12 @@ class SuSyMaterials {
         public static Material DilutedTwoEthylhexylNitrate;
         public static Material DilutedNitromethane;
         public static Material SpentPBISolution;
+        public static Material OxalicAcidSolution;
+        public static Material GalliumSulfateSolution;
 
         // Thermodynamics Materials
 
-                public static Material EarthlikeAir;
+        public static Material EarthlikeAir;
         public static Material HotHighPressureSteam;
         public static Material WasteGaseousNitrogen;
         public static Material ChillyWasteGaseousNitrogen;
