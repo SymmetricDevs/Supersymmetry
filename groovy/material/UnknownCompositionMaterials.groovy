@@ -1806,17 +1806,17 @@ public class UnknownCompositionMaterials {
                 .color(0x702507)
                 .build();
 
-        GermaniumLeach = new Material.Builder(4402, SuSyUtility.susyId("germanium"))
+        GermaniumLeach = new Material.Builder(4402, SuSyUtility.susyId("germanium_leach"))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0x7ecccb)
                 .build();
 
-        GermaniumConcentrate = new Material.Builder(4403, SuSyUtility.susyId("germanium"))
+        GermaniumConcentrate = new Material.Builder(4403, SuSyUtility.susyId("germanium_concentrate"))
                 .dust()
                 .color(0x6ca3a2)
                 .build();
 
-        ImpureGermaniumTetrachloride = new Material.Builder(4404, SuSyUtility.susyId("germanium"))
+        ImpureGermaniumTetrachloride = new Material.Builder(4404, SuSyUtility.susyId("impure_germanium_tetrachloride"))
                 .gas(new FluidBuilder().temperature(360))
                 .color(0xc3ded9)
                 .build();
