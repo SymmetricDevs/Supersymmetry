@@ -1,5 +1,6 @@
 import globals.Globals
 import static globals.CarbonGlobals.*
+import static globals.SinteringGlobals.*
 
 AUTOCLAVE = recipemap('autoclave')
 CHEMICAL_BATH = recipemap('chemical_bath')
@@ -9,6 +10,7 @@ BR = recipemap('batch_reactor')
 TUBE_FURNACE = recipemap('tube_furnace')
 ZONE_REFINER = recipemap('zone_refiner')
 MIXER = recipemap('mixer')
+BLENDER = recipemap('blender')
 CENTRIFUGE = recipemap('centrifuge')
 ROASTER = recipemap('roaster')
 
@@ -105,10 +107,10 @@ ROASTER.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-MIXER.recipeBuilder()
+BLENDER.recipeBuilder()
     .fluidInputs(fluid('kerosene') * 700)
     .fluidInputs(fluid('sulfuric_acid') * 200)
-    .fluidInputs(fluid('trioctyldecylamine') * 200)
+    .fluidInputs(fluid('tri_octyl_decyl_amine') * 200)
     .fluidInputs(fluid('tributyl_phosphate') * 100)
     .fluidOutputs(fluid('germanium_gallium_extraction_mixture') * 1000)
     .duration(200)
@@ -126,8 +128,7 @@ CENTRIFUGE.recipeBuilder()
 
 CENTRIFUGE.recipeBuilder()
     .fluidInputs(fluid('germanium_gallium_extract') * 1000)
-    .fluidInputs(fluid('sulfuric_acid') * 600)
-    .fluidInputs(fluid('distilled_water') * 300)
+    .fluidInputs(fluid('diluted_sulfuric_acid') * 600)
     .fluidOutputs(fluid('germanium_extract') * 1000)
     .fluidOutputs(fluid('gallium_sulfate_solution') * 300)
     .duration(200)
