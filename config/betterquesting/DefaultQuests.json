@@ -1,4 +1,5 @@
 {
+  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -29983,7 +29984,7 @@
                   "Durability:3": 0,
                   "HarvestLevel:3": 1,
                   "Material:8": "rubber",
-                  "MaxDurability:3": 256,
+                  "MaxDurability:3": 255,
                   "ToolSpeed:5": 4.0
                 },
                 "HideFlags:3": 2
