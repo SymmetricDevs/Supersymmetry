@@ -240,7 +240,7 @@ class SuSyMaterials {
         public static Material ImpureLithiumSulfateSolution;
         public static Material GalenaByproductsSlurry;
         public static Material SinteredLeadConcentrate;
-        public static Material CadmiumRichFlue;
+        public static Material OxideFume;
         public static Material BlackMetal;
         public static Material AntimonyArsenicFlueDust;
         public static Material BurnedBlackMetal;
@@ -278,7 +278,7 @@ class SuSyMaterials {
         public static Material HydratedPropene;
         public static Material EthylamineMix;
         public static Material UnprocessedSphaleriteSlurry;
-        public static Material ThalliumRichFlue;
+        public static Material ZincFlue;
         public static Material CrudeZinc;
         public static Material CadmiumRichZinc;
         public static Material ImpureSmithsoniteSlurry;
@@ -286,11 +286,10 @@ class SuSyMaterials {
         public static Material ZincLeach;
         public static Material ZincLeachResidue;
         public static Material HotZincLeach;
-        public static Material HotZincLeachResidue;
-        public static Material ZincRichSlag;
+        public static Material LeadSilicaResidue;
+        public static Material WaelzSlag;
         public static Material ReducedZincLeach;
         public static Material WaelzOxide;
-        public static Material GermaniumRichSlag;
         public static Material ZincCementationSlurry;
         public static Material PrecipitatedZincLeach;
         public static Material CopperCadmiumResidue;
@@ -300,9 +299,9 @@ class SuSyMaterials {
         public static Material FuselOil;
         public static Material AshSlurry;
         public static Material DesulfurizedFlueGas;
-        public static Material CadmiumRichFlueGas;
+        public static Material OxideFumeGas;
         public static Material AntimonyArsenicFlueGas;
-        public static Material ThalliumRichFlueGas;
+        public static Material ZincFlueGas;
         public static Material FluorinatedOctanoylChlorideMixture;
         public static Material ButyraldehydeMixture;
         public static Material PentanalMixture;
@@ -429,7 +428,6 @@ class SuSyMaterials {
 	public static Material OrganosiliconMixture;
 	public static Material ImpurePolydimethylsiloxaneMixture;
 	public static Material RawPolydimethylsiloxaneMixture;
-        public static Material WaferTreatmentAcid;
         public static Material LubricityAdditive;
         public static Material AntistaticAdditive;
         public static Material AntifoamingAdditive;
@@ -479,6 +477,19 @@ class SuSyMaterials {
         public static Material SpandexPolymerizationMix;
         public static Material AcrylicPhotoemulsion;
         public static Material TreatedCollagen;
+        public static Material ImpureThalliumSulfateSolution;
+        public static Material ImpureCadmiumSulfateSolution;
+        public static Material TannicAcidSolution;
+        public static Material GermaniumRichOxide;
+        public static Material GermaniumLeach;
+        public static Material GermaniumConcentrate;
+        public static Material ImpureGermaniumTetrachloride;
+        public static Material GermaniumOxalateLeach;
+        public static Material PurifiedGermaniumOxalateLeach;
+        public static Material GermaniumGalliumExtractionMixture;
+        public static Material GermaniumGalliumExtract;
+        public static Material GermaniumExtract;
+        public static Material GermaniumOxalateSolution;
 
         // Petrochem Materials
 
@@ -1004,6 +1015,16 @@ class SuSyMaterials {
         public static Material SaltyHydrofluoricAcid;
         public static Material SiliconTetrachloride;
         public static Material PurifiedSiliconTetrachloride;
+        public static Material ThalliumIChloride;
+        public static Material AcidicThalliumSulfateSolution;
+        public static Material ThalliumSulfateSolution;
+        public static Material WaferTreatmentAcid;
+        public static Material ArsenicIIIOxide;
+        public static Material AntimonyIIIOxide;
+        public static Material PurifiedCadmiumSolution;
+        public static Material GermaniumTetrachloride;
+        public static Material GermaniumDioxide;
+        public static Material IronOxalateDihydrate;
 
         // HP Materials
 
@@ -1675,10 +1696,12 @@ class SuSyMaterials {
         public static Material DilutedTwoEthylhexylNitrate;
         public static Material DilutedNitromethane;
         public static Material SpentPBISolution;
+        public static Material OxalicAcidSolution;
+        public static Material GalliumSulfateSolution;
 
         // Thermodynamics Materials
 
-                public static Material EarthlikeAir;
+        public static Material EarthlikeAir;
         public static Material HotHighPressureSteam;
         public static Material WasteGaseousNitrogen;
         public static Material ChillyWasteGaseousNitrogen;

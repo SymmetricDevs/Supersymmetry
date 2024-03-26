@@ -74,7 +74,7 @@ public class FirstDegreeMaterials {
         HighPurityCopper = generatePurifiedElement(Copper, 8020, false, false)
         HighPurityZinc = generatePurifiedElement(Zinc, 8021, false, false)
         HighPurityGallium = generatePurifiedElement(Gallium, 8022, true, false)
-        HighPurityGermanium = generatePurifiedElement(Germanium, 8023, true, false)
+        HighPurityGermanium = generatePurifiedElement(Germanium, 8023, true, true)
         HighPurityArsenic = generatePurifiedElement(Arsenic, 8024, true, false)
         HighPuritySelenium = generatePurifiedElement(Selenium, 8025, false, false)
         HighPurityRubidium = generatePurifiedElement(Rubidium, 8026, false, false)
@@ -3162,5 +3162,69 @@ public class FirstDegreeMaterials {
                 .components(Salt, 1, HydrofluoricAcid, 1)
                 .colorAverage()
                 .build();
+
+        WaferTreatmentAcid = new Material.Builder(8593, SuSyUtility.susyId("wafer_treatment_acid"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(HydrochloricAcid, 9, HydrofluoricAcid, 9, AceticAcid, 2)
+                .color(0x3e7d68)
+                .build();
+
+        ThalliumIChloride = new Material.Builder(8594, SuSyUtility.susyId("thallium_i_chloride"))
+                .dust()
+                .components(Thallium, 1, Chlorine, 1)
+                .colorAverage()
+                .build();
+
+        AcidicThalliumSulfateSolution = new Material.Builder(8595, SuSyUtility.susyId("acidic_thallium_sulfate_solution"))
+                .liquid()
+                .components(Thallium, 2, Sulfur, 1, Oxygen, 4, HydrogenChloride, 2, Water, 1)
+                .colorAverage()
+                .build();
+
+        AcidicThalliumSulfateSolution.setFormula("(Tl2SO4)(HCl)2(H2O)", true)
+
+        ThalliumSulfateSolution = new Material.Builder(8596, SuSyUtility.susyId("thallium_sulfate_solution"))
+                .liquid()
+                .components(Thallium, 2, Sulfur, 1, Oxygen, 4, Water, 1)
+                .colorAverage()
+                .build();
+
+        ThalliumSulfateSolution.setFormula("(Tl2SO4)(H2O)", true)
+
+        ArsenicIIIOxide = new Material.Builder(8597, SuSyUtility.susyId('arsenic_iii_oxide'))
+                .dust()
+                .components(Arsenic, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        AntimonyIIIOxide = new Material.Builder(8598, SuSyUtility.susyId('antimony_iii_oxide'))
+                .dust()
+                .components(Antimony, 2, Oxygen, 3)
+                .colorAverage()
+                .build()
+
+        PurifiedCadmiumSolution = new Material.Builder(8599, SuSyUtility.susyId('purified_cadmium_solution'))
+                .fluid()
+                .components(Cadmium, 1, Sulfur, 1, Oxygen, 4, Water, 1)
+                .colorAverage()
+                .build()
+
+        GermaniumTetrachloride = new Material.Builder(8600, SuSyUtility.susyId('germanium_tetrachloride'))
+                .liquid()
+                .components(Germanium, 1, Chlorine, 4)
+                .color(0xbae6dd)
+                .build()
+        
+        GermaniumDioxide = new Material.Builder(8601, SuSyUtility.susyId('germanium_dioxide'))
+                .dust()
+                .components(Germanium, 1, Oxygen, 2)
+                .color(0x4b9485)
+                .build()
+
+        IronOxalateDihydrate = new Material.Builder(8602, SuSyUtility.susyId('iron_oxalate_dihydrate'))
+                .dust()
+                .components(Iron, 1, Carbon, 2, Oxygen, 4, Water, 2)
+                .colorAverage()
+                .build()
     }
 }

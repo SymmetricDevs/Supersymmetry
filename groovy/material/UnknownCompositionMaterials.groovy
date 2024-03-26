@@ -612,7 +612,7 @@ public class UnknownCompositionMaterials {
                 .iconSet(SAND)
                 .build();
 
-        CadmiumRichFlue = new Material.Builder(4116, SuSyUtility.susyId('cadmium_rich_flue'))
+        OxideFume = new Material.Builder(4116, SuSyUtility.susyId('oxide_fume'))
                 .dust()
                 .color(0x757061)
                 .iconSet(DULL)
@@ -797,7 +797,10 @@ public class UnknownCompositionMaterials {
                 .color(0xdbaf48)
                 .build()
 
-        //FREE ID: 4153
+        GermaniumRichOxide = new Material.Builder(4153, SuSyUtility.susyId('germanium_rich_oxide'))
+                .dust()
+                .color(0x7b9a9e)
+                .build()
 
         UnprocessedSphaleriteSlurry = new Material.Builder(4154, SuSyUtility.susyId('unprocessed_sphalerite_slurry'))
                 .liquid()
@@ -806,7 +809,7 @@ public class UnknownCompositionMaterials {
 
         //FREE ID: 4155-4156
 
-        ThalliumRichFlue = new Material.Builder(4157, SuSyUtility.susyId('thallium_rich_flue'))
+        ZincFlue = new Material.Builder(4157, SuSyUtility.susyId('zinc_flue'))
                 .dust()
                 .color(0x26222e)
                 .build()
@@ -838,12 +841,12 @@ public class UnknownCompositionMaterials {
                 .color(0xb89e8a)
                 .build()
 
-        HotZincLeachResidue = new Material.Builder(4165, SuSyUtility.susyId('hot_zinc_leach_residue'))
+        LeadSilicaResidue = new Material.Builder(4165, SuSyUtility.susyId('lead_silica_residue'))
                 .dust()
                 .color(0x3b332d)
                 .build()
 
-        ZincRichSlag = new Material.Builder(4166, SuSyUtility.susyId('zinc_rich_slag'))
+        WaelzSlag = new Material.Builder(4166, SuSyUtility.susyId('waelz_slag'))
                 .dust()
                 .color(0x242323)
                 .build()
@@ -858,10 +861,7 @@ public class UnknownCompositionMaterials {
                 .color(0x475453)
                 .build()
 
-        GermaniumRichSlag = new Material.Builder(4169, SuSyUtility.susyId('germanium_rich_slag'))
-                .dust()
-                .color(0x2d2e27)
-                .build()
+        //FREE ID: 4169
 
         ZincCementationSlurry = new Material.Builder(4170, SuSyUtility.susyId('zinc_cementation_slurry'))
                 .liquid()
@@ -908,7 +908,7 @@ public class UnknownCompositionMaterials {
                 .color(0x151521)
                 .build()
 
-        CadmiumRichFlueGas = new Material.Builder(4179, SuSyUtility.susyId('cadmium_rich_flue_gas'))
+        OxideFumeGas = new Material.Builder(4179, SuSyUtility.susyId('oxide_fume_gas'))
                 .gas(new FluidBuilder().temperature(1000))
                 .color(0x757061)
                 .build();
@@ -918,7 +918,7 @@ public class UnknownCompositionMaterials {
                 .color(0x707063)
                 .build();
 
-        ThalliumRichFlueGas = new Material.Builder(4181, SuSyUtility.susyId('thallium_rich_flue_gas'))
+        ZincFlueGas = new Material.Builder(4181, SuSyUtility.susyId('zinc_flue_gas'))
                 .gas(new FluidBuilder().temperature(1000))
                 .color(0x26222e)
                 .build()
@@ -1796,10 +1796,59 @@ public class UnknownCompositionMaterials {
                 .iconSet(ROUGH)
                 .build();
 
-        WaferTreatmentAcid = new Material.Builder(4400, SuSyUtility.susyId("wafer_treatment_acid"))
+        ImpureCadmiumSulfateSolution = new Material.Builder(4400, SuSyUtility.susyId("impure_cadmium_sulfate_solution"))
+                .liquid()
+                .color(0x6f8485)
+                .build();
+
+        TannicAcidSolution = new Material.Builder(4401, SuSyUtility.susyId("tannic_acid_solution"))
+                .liquid()
+                .color(0x702507)
+                .build();
+
+        GermaniumLeach = new Material.Builder(4402, SuSyUtility.susyId("germanium_leach"))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(HydrochloricAcid, 9, HydrofluoricAcid, 9, AceticAcid, 2)
-                .color(0x3e7d68)
+                .color(0x7ecccb)
+                .build();
+
+        GermaniumConcentrate = new Material.Builder(4403, SuSyUtility.susyId("germanium_concentrate"))
+                .dust()
+                .color(0x6ca3a2)
+                .build();
+
+        ImpureGermaniumTetrachloride = new Material.Builder(4404, SuSyUtility.susyId("impure_germanium_tetrachloride"))
+                .gas(new FluidBuilder().temperature(360))
+                .color(0xc3ded9)
+                .build();
+
+        GermaniumOxalateLeach = new Material.Builder(4405, SuSyUtility.susyId("germanium_oxalate_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x476f91)
+                .build();
+
+        PurifiedGermaniumOxalateLeach = new Material.Builder(4406, SuSyUtility.susyId("purified_germanium_oxalate_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x52809c)
+                .build();
+
+        GermaniumGalliumExtractionMixture = new Material.Builder(4407, SuSyUtility.susyId("germanium_gallium_extraction_mixture"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x7657b5)
+                .build();
+
+        GermaniumGalliumExtract = new Material.Builder(4408, SuSyUtility.susyId("germanium_gallium_extract"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x5a56a3)
+                .build();
+
+        GermaniumExtract = new Material.Builder(4409, SuSyUtility.susyId("germanium_extract"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x6e59b5)
+                .build();
+
+        GermaniumOxalateSolution = new Material.Builder(4410, SuSyUtility.susyId("germanium_oxalate_solution"))
+                .liquid()
+                .color(0x8b78cc)
                 .build();
     }
 }

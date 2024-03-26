@@ -141,6 +141,8 @@ class ChangeFlags {
         Rutile.addFlags("generate_concentrate");
         setupSlurries(Sphalerite)
 
+        Germanium.setProperty(PropertyKey.INGOT, new IngotProperty());
+
         Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
         Asbestos.addFlags("generate_foil");
 
@@ -158,7 +160,7 @@ class ChangeFlags {
 
         Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
         setupFluidType(Cadmium, FluidStorageKeys.LIQUID, 600)
-
+        
         BisphenolA.setProperty(PropertyKey.DUST, new DustProperty());
         BisphenolA.addFlags("no_unification");
         setupFluidType(BisphenolA, FluidStorageKeys.LIQUID, 428)

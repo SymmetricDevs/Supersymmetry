@@ -117,6 +117,8 @@ eventManager.listen {
         customMetaItems.addItem(213, "glass_fibers")
         customMetaItems.addItem(214, "epoxy_lamina")
 
+        customMetaItems.addItem(215, "sponge.cadmium")
+
         customMetaItems.addItem(250, "beads.amberlyst_ch");
         customMetaItems.addItem(251, "beads.ag_fifty_w_x_eight");
         customMetaItems.addItem(252, "beads.rhenium_ion_exchange")
