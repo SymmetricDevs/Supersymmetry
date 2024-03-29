@@ -2480,7 +2480,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         Acrolein = new Material.Builder(15402, SuSyUtility.susyId('acrolein'))
-                .fluid()
+                .liquid()
                 .components(Carbon, 3, Hydrogen, 4, Oxygen, 1)
                 .color(0x389c7a)
                 .build();

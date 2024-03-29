@@ -3204,7 +3204,7 @@ public class FirstDegreeMaterials {
                 .build()
 
         PurifiedCadmiumSolution = new Material.Builder(8599, SuSyUtility.susyId('purified_cadmium_solution'))
-                .fluid()
+                .liquid()
                 .components(Cadmium, 1, Sulfur, 1, Oxygen, 4, Water, 1)
                 .colorAverage()
                 .build()
@@ -3228,7 +3228,7 @@ public class FirstDegreeMaterials {
                 .build()
 
         IndiumIIISulfateSolution = new Material.Builder(8603, SuSyUtility.susyId('indium_iii_sulfate_solution'))
-                .fluid()
+                .liquid()
                 .components(Indium, 2, Sulfur, 3, Oxygen, 12, Water, 6)
                 .color(0x8d18ad)
                 .build()
@@ -3236,11 +3236,47 @@ public class FirstDegreeMaterials {
         IndiumIIISulfateSolution.setFormula("(In2(SO4)3)(H2O)6", true);
 
         ZincSulfateSolution = new Material.Builder(8604, SuSyUtility.susyId('zinc_sulfate_solution'))
-                .fluid()
+                .liquid()
                 .components(Zinc, 1, Sulfur, 1, Oxygen, 4, Water, 2)
                 .colorAverage()
                 .build()
 
         ZincSulfateSolution.setFormula("(ZnSO4)(H2O)2", true);
+
+        SodiumSelenateSolution = new Material.Builder(8605, SuSyUtility.susyId('sodium_selenate_solution'))
+                .liquid()
+                .components(Sodium, 2, Selenium, 1, Oxygen, 4, Water, 1)
+                .color(0xb0bf97)
+                .build()
+
+        SodiumSelenateSolution.setFormula("(Na2SeO4)(H2O)", true);
+
+        SodiumSeleniteSolution = new Material.Builder(8606, SuSyUtility.susyId('sodium_selenite_solution'))
+                .liquid()
+                .components(Sodium, 2, Selenium, 1, Oxygen, 3, Water, 1)
+                .color(0x96a67c)
+                .build()
+
+        SodiumSelenateSolution.setFormula("(Na2SeO3)(H2O)", true);
+
+        HydrogenSelenide = new Material.Builder(8607, SuSyUtility.susyId('hydrogen_selenide'))
+                .gas()
+                .components(Hydrogen, 2, Selenium, 1)
+                .color(0xcadb93)
+                .build()
+
+        TelluriumDioxide = new Material.Builder(8608, SuSyUtility.susyId('tellurium_dioxide'))
+                .dust()
+                .components(Tellurium, 1, Oxygen, 2)
+                .color(0xb1d4b0)
+                .build()
+
+        SodiumTelluriteSolution = new Material.Builder(8609, SuSyUtility.susyId('sodium_tellurite_solution'))
+                .liquid()
+                .components(Sodium, 2, Tellurium, 1, Oxygen, 3, Water, 3)
+                .color(0xb0d4c6)
+                .build()
+
+        SodiumTelluriteSolution.setFormula("(Na2TeO3)(H2O)3")
     }
 }

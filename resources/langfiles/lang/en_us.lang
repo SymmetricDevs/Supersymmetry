@@ -1927,6 +1927,16 @@ susy.material.impure_indium_leach=Impure Indium Leach
 susy.material.zinc_hydrochloric_leach_residue=Zinc Hydrochloric Leach Residue
 susy.material.zinc_sulfate_solution=Zinc Sulfate Solution
 susy.material.indium_chloride_solution=Indium Chloride Solution
+susy.material.copper_anode_slime_paste=Copper Anode Slime Paste
+susy.material.selenium_tellurium_concentrate=Selenium-Tellurium Concentrate
+susy.material.tellurium_residue=Tellurium Residue
+susy.material.tellurium_slag=Tellurium Slag
+susy.material.sodium_selenate_solution=Sodium Selenate Solution
+susy.material.sodium_selenite_solution=Sodium Selenite Solution
+susy.material.hydrogen_selenide=Hydrogen Selenide
+susy.material.tellurium_dioxide=Tellurium Dioxide
+susy.material.sodium_tellurite_solution=Sodium Tellurite Solution
+susy.material.tellurium_liquor=Tellurium Liquor
 
 # Isotopes
 
@@ -2224,10 +2234,12 @@ metaitem.unrefined_boule.gallium_arsenide.name=Unrefined Gallium Arsenide Boule
 
 metaitem.zeolite_membrane_support.name=Zeolite Membrane Support
 metaitem.zeolite_membrane.name=Zeolite Membrane
+
 metaitem.anode_slime.silver.name=Silver Anode Slime
 metaitem.anode_slime.gold.name=Gold Anode Slime
 metaitem.anode_slime.copper.name=Copper Anode Slime
 metaitem.anode_slime.lead.name=Lead Anode Slime
+metaitem.anode_slime.decopperized.name=Decopperized Anode Slime
 
 metaitem.wafer.n_doped.silicon.name=n-Doped Silicon Wafer
 metaitem.wafer.alumina.name=Alumina Wafer

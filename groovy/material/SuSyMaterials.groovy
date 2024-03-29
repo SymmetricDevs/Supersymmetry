@@ -498,6 +498,10 @@ class SuSyMaterials {
         public static Material SulfatizedLeadSlime;
         public static Material ImpureIndiumLeach;
         public static Material ZincHydrochloricLeachResidue;
+        public static Material CopperAnodeSlimePaste;
+        public static Material SeleniumTelluriumConcentrate;
+        public static Material TelluriumResidue;
+        public static Material TelluriumSlag;
 
         // Petrochem Materials
 
@@ -1035,6 +1039,11 @@ class SuSyMaterials {
         public static Material IronOxalateDihydrate;
         public static Material IndiumIIISulfateSolution;
         public static Material ZincSulfateSolution;
+        public static Material SodiumSelenateSolution;
+        public static Material SodiumSeleniteSolution;
+        public static Material HydrogenSelenide;
+        public static Material TelluriumDioxide;
+        public static Material SodiumTelluriteSolution;
 
         // HP Materials
 
@@ -1214,6 +1223,7 @@ class SuSyMaterials {
         public static Material SupportedMolybdenumVanadium;
         public static Material ChlorinatedBeryl;
         public static Material IndiumChlorideSolution;
+        public static Material TelluriumLiquor;
 
         // Organic Chemistry Materials
 

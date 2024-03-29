@@ -156,9 +156,9 @@ public class SecondDegreeMaterials {
 
         SodiumSulfateSolution = new Material.Builder(13022, SuSyUtility.susyId('sodium_sulfate_solution'))
                 .liquid()
+                .components(SodiumSulfate, 1, Water, 1)
                 .color(0xb0b0bf)
                 .build()
-                .setFormula('(H2O)(Na2SO4)', true);
 
         ImpregnatedCopperOxideCatalyst = new Material.Builder(13023, SuSyUtility.susyId('impregnated_copper_oxide_catalyst'))
                 .dust()
@@ -331,9 +331,9 @@ public class SecondDegreeMaterials {
 
         DilutedSodiumSulfateSolution = new Material.Builder(13051, SuSyUtility.susyId('diluted_sodium_sulfate_solution'))
                 .liquid()
+                .components(SodiumSulfate, 1, Water, 2)
                 .color(0x9191b3)
                 .build()
-                .setFormula('(H2O)2(Na2SO4)', true);
 
         DilutedHydrofluoricAcid = new Material.Builder(13052, SuSyUtility.susyId('diluted_hydrofluoric_acid'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -658,6 +658,12 @@ public class SecondDegreeMaterials {
                 .liquid()
                 .components(IndiumChloride, 1, Water, 1)
                 .colorAverage()
+                .build();
+
+        TelluriumLiquor = new Material.Builder(13109, SuSyUtility.susyId("tellurium_liquor"))
+                .liquid()
+                .components(Hydrogen, 2, Tellurium, 1, Oxygen, 4, SodiumSulfate, 1, Water, 1)
+                .color(0x97bfb5)
                 .build();
     }
 }

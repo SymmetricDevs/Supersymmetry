@@ -69,11 +69,6 @@ eventManager.listen {
 
         customMetaItems.addItem(171, "cellulose_acetate_mesh");
 
-        customMetaItems.addItem(175, "anode_slime.gold")
-        customMetaItems.addItem(176, "anode_slime.silver")
-        customMetaItems.addItem(179, "anode_slime.lead")
-        customMetaItems.addItem(211, "anode_slime.copper")
-
         customMetaItems.addItem(177, "zeolite_membrane_support");
         customMetaItems.addItem(178, "zeolite_membrane");
 
@@ -283,6 +278,13 @@ eventManager.listen {
         customMetaItems.addItem(6206, "sponge.platinum")
         customMetaItems.addItem(6207, "sponge.cadmium")
         customMetaItems.addItem(6208, "sponge.indium")
+
+        // Anode slimes 6300-6400
+        customMetaItems.addItem(6300, "anode_slime.gold")
+        customMetaItems.addItem(6301, "anode_slime.silver")
+        customMetaItems.addItem(6302, "anode_slime.lead")
+        customMetaItems.addItem(6303, "anode_slime.copper")
+        customMetaItems.addItem(6304, "anode_slime.decopperized")
 
         //Seed crystals 7000-7500
 
