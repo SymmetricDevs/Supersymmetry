@@ -653,5 +653,11 @@ public class SecondDegreeMaterials {
                 .components(MolybdenumTrioxide, 1, VanadiumPentoxide, 1, Alumina, 1)
                 .colorAverage()
                 .build();
+
+        IndiumChlorideSolution = new Material.Builder(13108, SuSyUtility.susyId("indium_chloride_solution"))
+                .liquid()
+                .components(IndiumChloride, 1, Water, 1)
+                .colorAverage()
+                .build();
     }
 }

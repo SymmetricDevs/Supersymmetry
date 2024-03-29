@@ -814,7 +814,7 @@ susy.material.sodium_ethyl_xanthate=Sodium Ethyl Xanthate (SEX)
 susy.material.sodium_ethyl_xanthate_solution=Sodium Ethyl Xanthate Solution
 susy.material.galena_byproducts_slurry=Galena Byproducts Slurry
 susy.material.sintered_lead_concentrate=Sintered Lead Concentrate
-susy.material.oxide_fume=Oxide Fume
+susy.material.zinc_oxide_fume=Zinc Oxide Fume
 susy.material.copper_dross=Copper Dross
 susy.material.decoppered_lead=Decoppered Lead
 susy.material.dezinced_lead=Dezinced Lead
@@ -1293,7 +1293,7 @@ susy.material.titanium_dioxide=Titanium Dioxide
 susy.material.indium_oxide=Indium Oxide
 susy.material.ash_slurry=Ash Slurry
 susy.material.desulfurized_flue_gas=Desulfurized Flue Gas
-susy.material.oxide_fume_gas=Oxide Fume Gas
+susy.material.zinc_oxide_fume_gas=Zinc Oxide Fume Gas
 susy.material.antimony_arsenic_flue_gas=Antimony-Arsenic-Rich Flue Gas
 susy.material.zinc_flue_gas=Zinc Flue Gas
 susy.material.light_oily_brine=Light Oily Brine
@@ -1917,6 +1917,16 @@ susy.material.germanium_oxalate_solution=Germanium Oxalate Solution
 susy.material.gallium_sulfate_solution=Gallium Sulfate Solution
 susy.material.iron_oxalate_dihydrate=Iron Oxalate Dihydrate
 susy.material.oxalic_acid_solution=Oxalic Acid Solution
+susy.material.indium_residue=Indium Residue
+susy.material.indium_leach=Indium Leach
+susy.material.crude_indium_iii_hydroxide=Crude Indium III Hydroxide
+susy.material.crude_indium_iii_sulfate_solution=Crude Indium III Sulfate Solution
+susy.material.indium_iii_sulfate_solution=Indium III Sulfate Solution
+susy.material.sulfatized_lead_slime=Sulfatized Lead Slime
+susy.material.impure_indium_leach=Impure Indium Leach
+susy.material.zinc_hydrochloric_leach_residue=Zinc Hydrochloric Leach Residue
+susy.material.zinc_sulfate_solution=Zinc Sulfate Solution
+susy.material.indium_chloride_solution=Indium Chloride Solution
 
 # Isotopes
 
@@ -2283,6 +2293,7 @@ metaitem.sponge.zirconium.crude.name=Crude Zirconium Sponge
 metaitem.sponge.hafnium.name=Hafnium Sponge
 metaitem.sponge.hafnium.crude.name=Crude Hafnium Sponge
 metaitem.sponge.cadmium.name=Cadmium Sponge
+metaitem.sponge.indium.name=Indium Sponge
 
 metaitem.drone.lv.name=Basic Drone
 

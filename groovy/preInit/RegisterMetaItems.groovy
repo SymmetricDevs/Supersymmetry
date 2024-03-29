@@ -103,21 +103,11 @@ eventManager.listen {
         customMetaItems.addItem(201, "vti_rich_pig_iron");
         customMetaItems.addItem(202, "vt_slag");
 
-        customMetaItems.addItem(203, "sponge.titanium")
-        customMetaItems.addItem(204, "sponge.titanium.crude")
-        customMetaItems.addItem(205, "sponge.zirconium")
-        customMetaItems.addItem(206, "sponge.zirconium.crude")
-        customMetaItems.addItem(207, "sponge.hafnium")
-        customMetaItems.addItem(208, "sponge.hafnium.crude")
-        customMetaItems.addItem(209, "sponge.platinum")
-
 	customMetaItems.addItem(210, "bound_leather")
 
         customMetaItems.addItem(212, "drone.lv").setMaxStackSize(1).addComponents(ElectricStats.createRechargeableBattery(10000, GTValues.LV)).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
         customMetaItems.addItem(213, "glass_fibers")
         customMetaItems.addItem(214, "epoxy_lamina")
-
-        customMetaItems.addItem(215, "sponge.cadmium")
 
         customMetaItems.addItem(250, "beads.amberlyst_ch");
         customMetaItems.addItem(251, "beads.ag_fifty_w_x_eight");
@@ -282,6 +272,17 @@ eventManager.listen {
         customMetaItems.addItem(6118, "baseenrichednaquadahtriniumeuropiumduranide");
         customMetaItems.addItem(6119, "assemblyrutheniumtriniumamericiumneutronate");
         customMetaItems.addItem(6120, "baserutheniumtriniumamericiumneutronate");
+
+        //Metal sponges 6200-6300
+        customMetaItems.addItem(6200, "sponge.titanium")
+        customMetaItems.addItem(6201, "sponge.titanium.crude")
+        customMetaItems.addItem(6202, "sponge.zirconium")
+        customMetaItems.addItem(6203, "sponge.zirconium.crude")
+        customMetaItems.addItem(6204, "sponge.hafnium")
+        customMetaItems.addItem(6205, "sponge.hafnium.crude")
+        customMetaItems.addItem(6206, "sponge.platinum")
+        customMetaItems.addItem(6207, "sponge.cadmium")
+        customMetaItems.addItem(6208, "sponge.indium")
 
         //Seed crystals 7000-7500
 

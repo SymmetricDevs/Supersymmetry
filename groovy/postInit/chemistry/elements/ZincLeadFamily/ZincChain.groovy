@@ -332,8 +332,8 @@ ELECTROLYTIC_CELL.recipeBuilder()
 // From lead processing
 SIFTER.recipeBuilder()
         .notConsumable(metaitem('item_filter'))
-        .fluidInputs(fluid('oxide_fume_gas') * 1000)
-        .chancedOutput(metaitem('dustOxideFume'), 1000, 0)
+        .fluidInputs(fluid('zinc_oxide_fume_gas') * 1000)
+        .chancedOutput(metaitem('dustZincOxideFume'), 1000, 0)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .EUt(120)
         .duration(160)
@@ -343,7 +343,7 @@ for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         for (fuel in rotary_kiln_fuels) {
                 for (comburent in rotary_kiln_comburents) {
                         ROTARY_KILN.recipeBuilder()
-                                .inputs(ore('dustOxideFume') * 2)
+                                .inputs(ore('dustZincOxideFume') * 2)
                                 .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
                                 .outputs(metaitem('dustWaelzOxide'))
                                 .outputs(metaitem('dustWaelzSlag'))
