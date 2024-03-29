@@ -26,11 +26,14 @@ CHEMICAL_BATH.recipeBuilder()
 
 // Zinc hydrometallurgy route (primitive)
 
+oreDict.add('dustZincResidues', metaitem('dustZincHydrochloricLeachResidue'))
+oreDict.add('dustZincResidues', metaitem('dustZincLeachResidue'))
+
 for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
     for (fuel in rotary_kiln_fuels) {
         for (comburent in rotary_kiln_comburents) {
             ROTARY_KILN.recipeBuilder()
-                .inputs(ore('dustZincLeachResidue') * 8)
+                .inputs(ore('dustZincResidues') * 8)
                 .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
                 .outputs(metaitem('dustGermaniumRichOxide') )
                 .outputs(metaitem('dustWaelzSlag'))
@@ -142,6 +145,7 @@ ELECTROLYZER.recipeBuilder()
     .fluidInputs(fluid('gallium_sulfate_solution') * 3000)
     .outputs(metaitem('dustGallium') * 2)
     .outputs(metaitem('dustOxalicAcid') * 6)
+    .fluidOutputs(fluid('oxygen') * 3000)
     .fluidOutputs(fluid('sulfuric_acid') * 3000)
     .duration(300)
     .EUt(Globals.voltAmps[1])

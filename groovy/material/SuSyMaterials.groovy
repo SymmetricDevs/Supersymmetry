@@ -240,7 +240,7 @@ class SuSyMaterials {
         public static Material ImpureLithiumSulfateSolution;
         public static Material GalenaByproductsSlurry;
         public static Material SinteredLeadConcentrate;
-        public static Material OxideFume;
+        public static Material ZincOxideFume;
         public static Material BlackMetal;
         public static Material AntimonyArsenicFlueDust;
         public static Material BurnedBlackMetal;
@@ -299,7 +299,7 @@ class SuSyMaterials {
         public static Material FuselOil;
         public static Material AshSlurry;
         public static Material DesulfurizedFlueGas;
-        public static Material OxideFumeGas;
+        public static Material ZincOxideFumeGas;
         public static Material AntimonyArsenicFlueGas;
         public static Material ZincFlueGas;
         public static Material FluorinatedOctanoylChlorideMixture;
@@ -490,6 +490,14 @@ class SuSyMaterials {
         public static Material GermaniumGalliumExtract;
         public static Material GermaniumExtract;
         public static Material GermaniumOxalateSolution;
+        public static Material DilutedZincLeach;
+        public static Material IndiumResidue;
+        public static Material IndiumLeach;
+        public static Material CrudeIndiumIIIHydroxide;
+        public static Material CrudeIndiumIIISulfateSolution;
+        public static Material SulfatizedLeadSlime;
+        public static Material ImpureIndiumLeach;
+        public static Material ZincHydrochloricLeachResidue;
 
         // Petrochem Materials
 
@@ -1025,6 +1033,8 @@ class SuSyMaterials {
         public static Material GermaniumTetrachloride;
         public static Material GermaniumDioxide;
         public static Material IronOxalateDihydrate;
+        public static Material IndiumIIISulfateSolution;
+        public static Material ZincSulfateSolution;
 
         // HP Materials
 
@@ -1203,6 +1213,7 @@ class SuSyMaterials {
         public static Material MixedCyanideSolution;
         public static Material SupportedMolybdenumVanadium;
         public static Material ChlorinatedBeryl;
+        public static Material IndiumChlorideSolution;
 
         // Organic Chemistry Materials
 
