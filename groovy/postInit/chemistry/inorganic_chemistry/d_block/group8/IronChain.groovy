@@ -1,6 +1,13 @@
 import globals.Globals
 import static globals.CarbonGlobals.*
 
+FORGE_HAMMER = recipemap('forge_hammer')
+RF = recipemap('reaction_furnace')
+DISTILLERY = recipemap('distillery')
+ROASTER = recipemap('roaster')
+
+//PYROMETALLURGICAL PROCESSES
+
 //RECIPE REMOVALS
 mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('dustCoke')], null)
 mods.gregtech.primitive_blast_furnace.removeByInput(1, [metaitem('ingotWroughtIron'), metaitem('gemCoke')], null)
@@ -160,8 +167,6 @@ crafting.addShapeless('pig_iron_shearing', metaitem('ingotWroughtIron'), [
     metaitem('ingotPigIron')
 ])
 
-def FORGE_HAMMER = recipemap('forge_hammer')
-
 FORGE_HAMMER.recipeBuilder()
 .inputs(ore('ingotPigIron'))
 .outputs(metaitem('ingotWroughtIron'))
@@ -210,11 +215,7 @@ for (combustible in combustibles) {
     .buildAndRegister()
 }
 
-//High Purity Iron Chain
-
-RF = recipemap('reaction_furnace')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
+//HIGH PURITY IRON CHAIN
 
 RF.recipeBuilder()
     .inputs(ore('dustIron'))
@@ -225,11 +226,11 @@ RF.recipeBuilder()
 	.buildAndRegister()
 
 DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('crude_iron_pentacarbonyl') * 1000)
-        .fluidOutputs(fluid('iron_pentacarbonyl') * 1000)
-        .duration(300)
-        .EUt(30)
-        .buildAndRegister()
+    .fluidInputs(fluid('crude_iron_pentacarbonyl') * 1000)
+    .fluidOutputs(fluid('iron_pentacarbonyl') * 1000)
+    .duration(300)
+    .EUt(30)
+    .buildAndRegister()
 
 ROASTER.recipeBuilder()
     .fluidInputs(fluid('iron_pentacarbonyl') * 1000)
@@ -240,16 +241,15 @@ ROASTER.recipeBuilder()
 	.buildAndRegister()
 
 EBF_RECIPES.recipeBuilder()
-        .circuitMeta(1)
-        .inputs(ore('dustAnyPurityIron'))
-        .outputs(item('minecraft:iron_ingot'))
-        .duration(60)
-        .blastFurnaceTemp(1750)
-        .EUt(60)
-        .buildAndRegister()
+    .circuitMeta(1)
+    .inputs(ore('dustAnyPurityIron'))
+    .outputs(item('minecraft:iron_ingot'))
+    .duration(60)
+    .blastFurnaceTemp(1750)
+    .EUt(60)
+    .buildAndRegister()
 
 //HYDROXIDE PROCESSING
-def ROASTER = recipemap('roaster')
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustIronIiiHydroxide') * 14)
@@ -266,3 +266,23 @@ ROASTER.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .duration(200)
     .buildAndRegister()
+
+//IRON CHLORIDE PROCESSING
+BR.recipeBuilder()
+    .inputs(ore('dustIronIiiChloride') * 4)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
+    .outputs(metaitem('dustIronIiiHydroxide') * 7)
+    .fluidOutputs(fluid('salt_water') * 3000)
+    .duration(20)
+    .EUt(30)
+    .buildAndRegister()
+
+ELECTROLYZER.recipeBuilder()
+    .notConsumable(metaitem('graphite_electrode'))
+    .notConsumable(metaitem('stickIron'))
+    .fluidInputs(fluid('iron_iii_chloride') * 576)
+    .fluidOutputs(fluid('chlorine') * 3000)
+    .outputs(metaitem('dustIron'))
+    .EUt(120)
+    .duration(400)
+    .buildAndRegister()	

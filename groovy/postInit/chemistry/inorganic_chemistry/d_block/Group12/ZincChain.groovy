@@ -357,8 +357,6 @@ for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         }
 }
 
-
-
 CENTRIFUGE.recipeBuilder()
         .inputs(ore('dustWaelzSlag'))
         .chancedOutput(metaitem('dustHematite'), 5000, 0)
@@ -366,4 +364,14 @@ CENTRIFUGE.recipeBuilder()
         .chancedOutput(metaitem('dustSiliconDioxide') * 3, 2500, 0)
         .EUt(30)
         .duration(40)
+        .buildAndRegister()
+
+ELECTROLYZER.recipeBuilder()
+        .notConsumable(metaitem('graphite_electrode'))
+        .notConsumable(metaitem('stickZinc'))
+        .fluidInputs(fluid('zinc_chloride') * 432)
+        .fluidOutputs(fluid('chlorine') * 2000)
+        .outputs(metaitem('dustZinc'))
+        .EUt(30)
+        .duration(300)
         .buildAndRegister()
