@@ -612,7 +612,7 @@ public class UnknownCompositionMaterials {
                 .iconSet(SAND)
                 .build();
 
-        OxideFume = new Material.Builder(4116, SuSyUtility.susyId('oxide_fume'))
+        ZincOxideFume = new Material.Builder(4116, SuSyUtility.susyId('zinc_oxide_fume'))
                 .dust()
                 .color(0x757061)
                 .iconSet(DULL)
@@ -908,7 +908,7 @@ public class UnknownCompositionMaterials {
                 .color(0x151521)
                 .build()
 
-        OxideFumeGas = new Material.Builder(4179, SuSyUtility.susyId('oxide_fume_gas'))
+        ZincOxideFumeGas = new Material.Builder(4179, SuSyUtility.susyId('zinc_oxide_fume_gas'))
                 .gas(new FluidBuilder().temperature(1000))
                 .color(0x757061)
                 .build();
@@ -1850,5 +1850,40 @@ public class UnknownCompositionMaterials {
                 .liquid()
                 .color(0x8b78cc)
                 .build();
+
+        CrudeIndiumIIIHydroxide = new Material.Builder(4411, SuSyUtility.susyId("crude_indium_iii_hydroxide"))
+                .dust()
+                .color(0x5618ad)
+                .build();
+
+        IndiumResidue = new Material.Builder(4412, SuSyUtility.susyId("indium_residue"))
+                .dust()
+                .color(0x7d41b5)
+                .build();
+
+        IndiumLeach = new Material.Builder(4413, SuSyUtility.susyId("indium_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x7418ad)
+                .build();
+
+        CrudeIndiumIIISulfateSolution = new Material.Builder(4414, SuSyUtility.susyId("crude_indium_iii_sulfate_solution"))
+                .liquid()
+                .color(0xab18ad)
+                .build();
+
+        SulfatizedLeadSlime = new Material.Builder(4415, SuSyUtility.susyId("sulfatized_lead_slime"))
+                .dust()
+                .color(0x522a44)
+                .build();
+
+        ImpureIndiumLeach = new Material.Builder(4416, SuSyUtility.susyId("impure_indium_leach"))
+                .liquid()
+                .color(0x853579)
+                .build();
+
+        ZincHydrochloricLeachResidue = new Material.Builder(4417, SuSyUtility.susyId('zinc_hydrochloric_leach_residue'))
+                .dust()
+                .color(0x4a3b2f)
+                .build()
     }
 }

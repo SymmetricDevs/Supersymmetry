@@ -344,7 +344,7 @@ for (def i = 0; i < 9; i++) {
 }
 
 ROASTER.recipeBuilder()
-        .inputs(ore('dustBarium') * 1)
+        .inputs(ore('dustAnyPurityBarium') * 1)
         .fluidInputs(liquid('oxygen') * 1000)
         .outputs(metaitem('dustBariumOxide') * 2)
         .duration(200)
@@ -370,9 +370,9 @@ MIXER.recipeBuilder()
         .buildAndRegister();
 
 TUBE_FURNACE.recipeBuilder()
-        .inputs(ore('dustSamarium'))
-        .inputs(ore('dustArsenic'))
-        .inputs(ore('dustIron'))
+        .inputs(ore('dustAnyPuritySamarium'))
+        .inputs(ore('dustAnyPurityArsenic'))
+        .inputs(ore('dustAnyPurityIron'))
         .fluidInputs(fluid('oxygen') * 1000)
         .outputs(metaitem('dustSamariumIronArsenicOxide') * 4)
         .duration(600)
@@ -381,8 +381,8 @@ TUBE_FURNACE.recipeBuilder()
 
 
 TUBE_FURNACE.recipeBuilder()
-        .inputs(ore('dustManganese'))
-        .inputs(ore('dustPhosphorus'))
+        .inputs(ore('dustAnyPurityManganese'))
+        .inputs(ore('dustAnyPurityPhosphorus'))
         .fluidInputs(fluid('nitrogen') * 1000)
         .outputs(metaitem('dustManganesePhosphide') * 4)
         .duration(200)
@@ -399,7 +399,7 @@ MIXER.recipeBuilder()
         .buildAndRegister();
 
 ROASTER.recipeBuilder()
-        .inputs(ore('dustIndium') * 1)
+        .inputs(ore('dustAnyPurityIndium') * 1)
         .fluidInputs(liquid('chlorine') * 3000)
         .outputs(metaitem('dustIndiumChloride') * 4)
         .duration(200)

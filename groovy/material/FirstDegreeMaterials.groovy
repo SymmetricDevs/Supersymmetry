@@ -89,7 +89,7 @@ public class FirstDegreeMaterials {
         HighPurityPalladium = generatePurifiedElement(Palladium, 8035, false, false)
         HighPuritySilver = generatePurifiedElement(Silver, 8036, false, false)
         HighPurityCadmium = generatePurifiedElement(Cadmium, 8037, false, false)
-        HighPurityIndium = generatePurifiedElement(Indium, 8038, false, false)
+        HighPurityIndium = generatePurifiedElement(Indium, 8038, false, false).addFlags(GENERATE_PLATE)
         HighPurityTin = generatePurifiedElement(Tin, 8039, false, false)
         HighPurityAntimony = generatePurifiedElement(Antimony, 8040, false, false)
         HighPurityTellurium = generatePurifiedElement(Tellurium, 8041, false, false)
@@ -3226,5 +3226,21 @@ public class FirstDegreeMaterials {
                 .components(Iron, 1, Carbon, 2, Oxygen, 4, Water, 2)
                 .colorAverage()
                 .build()
+
+        IndiumIIISulfateSolution = new Material.Builder(8603, SuSyUtility.susyId('indium_iii_sulfate_solution'))
+                .fluid()
+                .components(Indium, 2, Sulfur, 3, Oxygen, 12, Water, 6)
+                .color(0x8d18ad)
+                .build()
+
+        IndiumIIISulfateSolution.setFormula("(In2(SO4)3)(H2O)6", true);
+
+        ZincSulfateSolution = new Material.Builder(8604, SuSyUtility.susyId('zinc_sulfate_solution'))
+                .fluid()
+                .components(Zinc, 1, Sulfur, 1, Oxygen, 4, Water, 2)
+                .colorAverage()
+                .build()
+
+        ZincSulfateSolution.setFormula("(ZnSO4)(H2O)2", true);
     }
 }
