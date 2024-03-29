@@ -49,3 +49,17 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .buildAndRegister()
 
 // Further refining
+
+VACUUM_DT.recipeBuilder()
+    .inputs(ore('dustTellurium'))
+    .outputs(metaitem('dustHighPurityTellurium'))
+    .duration(1000)
+    .EUt(120)
+    .buildAndRegister()
+
+ZONE_REFINER.recipeBuilder()
+    .inputs(ore('ingotTellurium'))
+    .outputs(metaitem('ingotHighPurityTellurium'))
+    .duration(120)
+    .EUt(30)
+    .buildAndRegister()

@@ -143,6 +143,7 @@ class ChangeFlags {
         setupSlurries(Sphalerite)
 
         Germanium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Tellurium.setProperty(PropertyKey.INGOT, new IngotProperty());
 
         Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
         Asbestos.addFlags("generate_foil");

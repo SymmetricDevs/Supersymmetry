@@ -92,7 +92,7 @@ public class FirstDegreeMaterials {
         HighPurityIndium = generatePurifiedElement(Indium, 8038, false, false).addFlags(GENERATE_PLATE)
         HighPurityTin = generatePurifiedElement(Tin, 8039, false, false)
         HighPurityAntimony = generatePurifiedElement(Antimony, 8040, false, false)
-        HighPurityTellurium = generatePurifiedElement(Tellurium, 8041, false, false)
+        HighPurityTellurium = generatePurifiedElement(Tellurium, 8041, false, true)
         HighPurityIodine = generatePurifiedElement(Iodine, 8042, false, false)
         HighPurityCaesium = generatePurifiedElement(Caesium, 8043, false, false)
         HighPurityBarium = generatePurifiedElement(Barium, 8044, false, false)
