@@ -1,3 +1,5 @@
+import gregtech.api.recipes.chance.output.ChancedOutputLogic;
+
 AUTOCLAVE = recipemap("autoclave")
 MIXER = recipemap("mixer")
 ROASTER = recipemap("roaster")
@@ -5,6 +7,8 @@ CHEMICAL_BATH = recipemap("chemical_bath")
 BR = recipemap("batch_reactor")
 CSTR = recipemap('continuous_stirred_tank_reactor')
 BCR = recipemap("bubble_column_reactor")
+HT_DISTILLATION_TOWER = recipemap('high_temperature_distillation')
+REACTION_FURNACE = recipemap('reaction_furnace')
 
 AUTOCLAVE.recipeBuilder()
     .inputs(metaitem('anode_slime.copper'))
@@ -62,3 +66,27 @@ BR.recipeBuilder()
 
 // Further refining
 
+HT_DISTILLATION_TOWER.recipeBuilder()
+    .inputs(ore('dustSelenium'))
+    .chancedOutput(metaitem('dustSelenium'), 4000, 0)
+    .chancedOutput(metaitem('dustHighPuritySelenium'), 5000, 0)
+    .chancedOutputLogic(ChancedOutputLogic.XOR)
+    .duration(500)
+    .EUt(240)
+    .buildAndRegister()
+
+REACTION_FURNACE.recipeBuilder()
+    .inputs(ore('dustSelenium'))
+    .fluidInputs(fluid('hydrogen') * 2000)
+    .fluidOutputs(fluid('hydrogen_selenide') * 1000)
+    .duration(100)
+    .EUt(240)
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .fluidInputs(fluid('hydrogen_selenide') * 1000)
+    .chancedOutput(metaitem('dustHighPuritySelenium'), 9900, 0)
+    .fluidOutputs(fluid('hydrogen') * 2000)
+    .duration(100)
+    .EUt(240)
+    .buildAndRegister()
