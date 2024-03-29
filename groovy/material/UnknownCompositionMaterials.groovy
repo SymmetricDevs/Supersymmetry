@@ -1136,7 +1136,7 @@ public class UnknownCompositionMaterials {
                 .color(0xc88a41)
                 .build();
 
-        AcidicWastewater.setFormula('(H20)(?)', true);
+        AcidicWastewater.setFormula('(H2O)(?)', true);
 
         DirtyMolecularSieve = new Material.Builder(4234, SuSyUtility.susyId('dirty_molecular_sieve'))
                 .dust()
@@ -1881,9 +1881,29 @@ public class UnknownCompositionMaterials {
                 .color(0x853579)
                 .build();
 
-        ZincHydrochloricLeachResidue = new Material.Builder(4417, SuSyUtility.susyId('zinc_hydrochloric_leach_residue'))
+        ZincHydrochloricLeachResidue = new Material.Builder(4417, SuSyUtility.susyId("zinc_hydrochloric_leach_residue"))
                 .dust()
                 .color(0x4a3b2f)
+                .build()
+
+        CopperAnodeSlimePaste = new Material.Builder(4418, SuSyUtility.susyId("copper_anode_slime_paste"))
+                .liquid()
+                .color(0x706b36)
+                .build()
+
+        SeleniumTelluriumConcentrate = new Material.Builder(4419, SuSyUtility.susyId("selenium_tellurium_concentrate"))
+                .dust()
+                .color(0x9bbf77)
+                .build()
+
+        TelluriumResidue = new Material.Builder(4420, SuSyUtility.susyId("tellurium_residue"))
+                .dust()
+                .color(0x688767)
+                .build()
+
+        TelluriumSlag = new Material.Builder(4421, SuSyUtility.susyId("tellurium_slag"))
+                .dust()
+                .color(0x98bf97)
                 .build()
     }
 }
