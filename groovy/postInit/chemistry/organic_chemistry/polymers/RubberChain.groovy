@@ -122,8 +122,8 @@ def CoagulationRecipe(amount, duration){
 }
 
 def rubbers = [
-    new Rubber('dustLatex', 'Rubber', 1, 10 * 20, 1, false),
-    new Rubber('latex', 'Rubber', 32, 20 * 20, 1, true),
+    new Rubber('dustLatex', 'Rubber', 4, 40 * 20, 4, false),
+    new Rubber('latex', 'Rubber', 128, 80 * 20, 4, true),
     new Rubber('dustPolyisoprene', 'Rubber', 8, 225, 8, false),
     new Rubber('dustRawStyreneIsopreneRubber', 'StyreneIsopreneRubber', 4, 30 * 20, 4, false),
     new Rubber('dustRawStyreneButadieneRubber', 'StyreneButadieneRubber', 4, 30 * 20, 4, false)
