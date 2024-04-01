@@ -724,7 +724,7 @@ public class OrganicChemistryMaterials {
                 .build()
                 .setFormula('(CH3)2NCH', true);
 
-        CativaProcessCatalyst = new Material.Builder(15128, SuSyUtility.susyId('cativa_process_catalyst'))
+        CativaCatalyst = new Material.Builder(15128, SuSyUtility.susyId('cativa_catalyst'))
                 .dust()
                 .color(0x695449)
                 .build()

@@ -154,8 +154,8 @@ class SuSyMaterials {
         public static Material Asphalt;
         public static Material BlackAsh;
         public static Material ImpureAcetaldehyde;
-        public static Material CativaProcessPreparation;
-        public static Material CativaProcessSolution;
+        public static Material CativaCatalystPreparation;
+        public static Material CativaCatalystSolution;
         public static Material AcidicCumene;
         public static Material RearrangedCumene;
         public static Material AlkylatedButane;
@@ -1335,7 +1335,7 @@ class SuSyMaterials {
         public static Material PhthalicAnhydride;
         public static Material ImpureCaprolactam;
         public static Material Dimethylformamide;
-        public static Material CativaProcessCatalyst;
+        public static Material CativaCatalyst;
         public static Material TwoEthylanthraquinone;
         public static Material TwoEthylanthrahydroquinone;
         public static Material Butanone;

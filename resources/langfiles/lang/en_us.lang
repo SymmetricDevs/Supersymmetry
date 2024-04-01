@@ -537,7 +537,7 @@ susy.material.hydrobromic_acid=Hydrobromic Acid
 susy.material.hydrogen_cyanide=Hydrogen Cyanide
 
 susy.material.dimethylformamide=Dimethylformamide
-susy.material.cativa_process_catalyst=Cativa Process Catalyst
+susy.material.cativa_catalyst=Cativa Catalyst
 susy.material.two_ethylanthraquinone=2-Ethylanthraquinone
 susy.material.two_ethylanthrahydroquinone=2-Ethylanthrahydroquinone
 susy.material.butanone=Butanone
@@ -593,8 +593,8 @@ susy.material.ethylene_glycol_solution=Ethylene Glycol Solution
 susy.material.terephthalic_acid_slurry=Terephthalic Acid Slurry
 
 susy.material.impure_acetaldehyde=Impure Acetaldehyde
-susy.material.cativa_process_preparation=Cativa Process Preparation
-susy.material.cativa_process_solution=Cativa Process Solution
+susy.material.cativa_catalyst_preparation=Cativa Catalyst Preparation
+susy.material.cativa_catalyst_solution=Cativa Catalyst Solution
 susy.material.acidic_cumene=Acidic Cumene
 susy.material.rearranged_cumene=Rearranged Cumene
 susy.material.alkylated_butane=Alkylated Butane

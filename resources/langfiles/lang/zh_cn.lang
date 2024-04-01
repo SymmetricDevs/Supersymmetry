@@ -537,7 +537,6 @@ susy.material.hydrobromic_acid=氢溴酸
 susy.material.hydrogen_cyanide=氢氰酸
 
 susy.material.dimethylformamide=二甲基甲酰胺
-susy.material.cativa_process_catalyst=Cativa工艺催化剂
 susy.material.two_ethylanthraquinone=2-乙基蒽醌
 susy.material.two_ethylanthrahydroquinone=2-乙基蒽氢醌
 susy.material.butanone=丁酮
@@ -593,8 +592,6 @@ susy.material.ethylene_glycol_solution=乙二醇溶液
 susy.material.terephthalic_acid_slurry=对苯二甲酸浆液
 
 susy.material.impure_acetaldehyde=含杂乙醛
-susy.material.cativa_process_preparation=Cativa 工艺制剂
-susy.material.cativa_process_solution=Cativa 工艺溶液
 susy.material.acidic_cumene=酸性异丙苯
 susy.material.rearranged_cumene=重排异丙苯
 susy.material.alkylated_butane=烷基化丁烷
