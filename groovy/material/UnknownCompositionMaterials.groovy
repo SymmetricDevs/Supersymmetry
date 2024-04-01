@@ -717,8 +717,16 @@ public class UnknownCompositionMaterials {
                 .color(0xb03f5d)
                 .build();
 
-        //FREE ID: 4136-4137
-
+        CoconutOil = new Material.Builder(4136, SuSyUtility.susyId('coconut_oil'))
+                .liquid()
+                .color(0xd6d39a)
+                .build();
+                
+        CoconutAcid = new Material.Builder(4137, SuSyUtility.susyId('coconut_acid'))
+                .liquid()
+                .color(0xbdb280)
+                .build();
+                
         TwoEthylhexylPhosphoricAcidMix = new Material.Builder(4138, SuSyUtility.susyId('two_ethylhexyl_phosphoric_acid_mix'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xd1bb75)
@@ -807,8 +815,16 @@ public class UnknownCompositionMaterials {
                 .color(0xc7c991)
                 .build()
 
-        //FREE ID: 4155-4156
+        CocoAmine = new Material.Builder(4155, SuSyUtility.susyId('coco_amine'))
+                .liquid()
+                .color(0xb4d487)
+                .build()
 
+        CocoAmineAcetate = new Material.Builder(4156, SuSyUtility.susyId('coco_amine'))
+                .liquid()
+                .color(0xada67b)
+                .build()
+                
         ZincFlue = new Material.Builder(4157, SuSyUtility.susyId('zinc_flue'))
                 .dust()
                 .color(0x26222e)

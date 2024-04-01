@@ -502,6 +502,10 @@ class SuSyMaterials {
         public static Material SeleniumTelluriumConcentrate;
         public static Material TelluriumResidue;
         public static Material TelluriumSlag;
+        public static Material CoconutOil;
+        public static Material CoconutAcid;
+        public static Material CocoAmine;
+        public static Material CocoAmineAcetate;
 
         // Petrochem Materials
 

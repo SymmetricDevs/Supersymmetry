@@ -31,6 +31,7 @@ REACTION_FURNACE = recipemap('reaction_furnace')
 ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
 PSA = recipemap('pressure_swing_adsorption')
 SINTERING_OVEN = recipemap('sintering_oven')
+EXTRACTOR = recipemap('extractor')
 
 //LIXIVANTS
 //SODIUM CYANIDE
@@ -117,7 +118,7 @@ AUTOCLAVE.recipeBuilder()
     .duration(200)
     .buildAndRegister()
 
-CRYSTALLIZER.recipeBuilder()
+CRYSTALLIZER.recipeBuilder() //TODO: ADD LINOLEIC ACID
     .fluidInputs(fluid('fatty_acid_solution') * 1000)
     .fluidInputs(fluid('methanol') * 1000)
     .inputs(ore('dustUrea'))
@@ -140,6 +141,43 @@ MIXER.recipeBuilder()
     .fluidOutputs(fluid('alkaline_sodium_oleate_solution') * 1000)
     .EUt(30)
     .duration(80)
+    .buildAndRegister()
+
+furnace.add(metaitem('component.coconut'), metaitem('copra'))
+
+EXTRACTOR.recipeBuilder()
+    .inputs(metaitem('copra'))
+    .fluidOutputs(fluid('coconut_oil') * 50)
+    .EUt(30)
+    .duration(80)
+    .buildAndRegister()
+
+AUTOCLAVE.recipeBuilder()
+    .fluidInputs(fluid('distilled_water') * 3000)
+    .fluidInputs(fluid('seed_oil') * 1000)
+    .fluidOutputs(fluid('glycerol') * 1000)
+    .fluidOutputs(fluid('coconut_acid') * 3000)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister()
+
+//FATTY AMINES
+//COCOAMINE
+REACTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('coconut_acid') * 1000)
+    .fluidInputs(fluid('ammonia') * 1000)
+    .fluidOutputs(fluid('coco_amine') * 1000)
+    .fluidOutputs(fluid('steam') * 2000)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister()
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('coco_amine') * 50)
+    .fluidInputs(fluid('acetic_acid') * 50)
+    .fluidOutputs(fluid('coco_amine_acetate') * 50)
+    .EUt(30)
+    .duration(10)
     .buildAndRegister()
 
 //XANTHATES

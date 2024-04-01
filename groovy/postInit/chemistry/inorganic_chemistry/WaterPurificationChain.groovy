@@ -21,8 +21,13 @@ def BR = recipemap('batch_reactor');
 def BCR = recipemap('bubble_column_reactor');
 def CENTRIFUGE = recipemap('centrifuge');
 def SIFTER = recipemap('sifter');
+
 // Salt * 2
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('salt_water') * 1000])
+
+oreDict.add('dustFlocculant', metaitem('dustPotassiumAlum'))
+oreDict.add('dustFlocculant', metaitem('dustSodiumAlum'))
+oreDict.add('dustFlocculant', metaitem('dustAluminiumSulfate'))
 
 DISTILLERY.recipeBuilder()
         .fluidInputs(fluid('salt_water') * 1000)
@@ -232,7 +237,7 @@ FLUID_HEATER.recipeBuilder()
 
 MIXER.recipeBuilder()
         .fluidInputs(fluid('heated_wastewater') * 1000)
-        .inputs(ore('dustAluminiumSulfate') * 1)
+        .inputs(ore('dustFlocculant'))
         .fluidOutputs(fluid('flocculated_wastewater') * 1000)
         .duration(80)
         .EUt(30)

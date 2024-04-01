@@ -1937,6 +1937,10 @@ susy.material.hydrogen_selenide=Hydrogen Selenide
 susy.material.tellurium_dioxide=Tellurium Dioxide
 susy.material.sodium_tellurite_solution=Sodium Tellurite Solution
 susy.material.tellurium_liquor=Tellurium Liquor
+susy.material.coconut_oil=Coconut Oil
+susy.material.coconut_acid=Coconut Acid
+susy.material.coco_amine=Coco Amine
+susy.material.coco_amine_acetate=Coco Amine Acetate
 
 # Isotopes
 
@@ -2110,6 +2114,7 @@ metaitem.circuit.suprachronal.max.name=Supra-Chronal Maximum Circuit
 metaitem.circuit.suprachronal.max.tooltip=§fMAX-tier Circuit/n
 
 metaitem.sugar_cane_dust.name=Sugar Cane Dust
+metaitem.copra.name=Copra
 metaitem.washed_rotten_flesh.name=Washed Rotten Flesh
 
 metaitem.bitumen.name=Bitumen
