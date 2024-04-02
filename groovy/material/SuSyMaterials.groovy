@@ -117,7 +117,6 @@ class SuSyMaterials {
         // Roasted Ores
 
         public static Material RoastedSperrylite;
-        public static Material RoastedLepidolite;
         public static Material RoastedPetalite;
 
         // Ore Leach Residue

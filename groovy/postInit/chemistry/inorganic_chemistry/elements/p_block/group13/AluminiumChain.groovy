@@ -221,5 +221,12 @@ ROASTER.recipeBuilder()
 // .EUt(Globals.voltAmps[4])
 // .buildAndRegister()
 
-
-
+BR.recipeBuilder()      
+        .inputs(ore('dustAluminiumSulfate') * 17)
+        .fluidInputs(fluid('sodium_bicarbonate_solution') * 6000)
+        .outputs(metaitem('dustAluminiumHydroxide') * 14)
+        .fluidOutputs(fluid('diluted_sodium_sulfate_solution') * 6000)
+        .fluidOutputs(fluid('carbon_dioxide') * 6000)
+        .duration(120)
+        .EUt(200)
+        .buildAndRegister()

@@ -130,7 +130,7 @@ VACUUM_DT.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
-// Cesium Formate (for drilling fluid)
+// Caesium Formate (for drilling fluid)
 
 BR.recipeBuilder()
     .fluidInputs(fluid('caesium_sulfate_solution') * 1000)

@@ -535,11 +535,7 @@ public class UnknownCompositionMaterials {
                 .color(0xbaced6)
                 .build();
 
-        RoastedLepidolite = new Material.Builder(4102, SuSyUtility.susyId('roasted_lepidolite'))
-                .dust()
-                .color(0x443b45)
-                .iconSet(SAND)
-                .build();
+        // FREE ID: 4102
 
         LepidoliteLeach = new Material.Builder(4103, SuSyUtility.susyId('lepidolite_leach'))
                 .liquid()

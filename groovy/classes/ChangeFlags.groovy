@@ -87,14 +87,14 @@ class ChangeFlags {
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
         
-        setupFluidType(Iodine, FluidStorageKeys.GAS, 460)
         setupFluidType(AntimonyTrifluoride, FluidStorageKeys.LIQUID, 565)
         setupFluidType(LithiumChloride, FluidStorageKeys.LIQUID, 890)
         setupFluidType(SiliconDioxide, FluidStorageKeys.LIQUID, 1986)
-        setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
         setupFluidType(Caesium, FluidStorageKeys.LIQUID, 302)
         setupFluidType(Cadmium, FluidStorageKeys.LIQUID, 600)
         setupFluidType(BisphenolA, FluidStorageKeys.LIQUID, 428)
+        setupFluidType(Iodine, FluidStorageKeys.GAS, 460)
+        setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
 
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
@@ -132,6 +132,7 @@ class ChangeFlags {
         Brass.addFlags("generate_ring");
         Indium.addFlags("generate_plate");
         BisphenolA.addFlags("no_unification");
+        Phosphorus.addFlags("no_smelting");
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
@@ -149,15 +150,17 @@ class ChangeFlags {
         UraniumTriplatinum.addFlags("generate_fine_wire");
         RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
 
+        //Colors
+
+        Phosphorus.setMaterialRGB(0xfffed6);
+
         // Formulae
 
         DilutedHydrochloricAcid.setFormula("(H2O)2(HCl)", true);
         DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
         AquaRegia.setFormula("(HNO3)(HCl)3", true);
         Tantalite.setFormula("(Fe,Mn)Ta2O6", true);
-
-        Phosphorus.setMaterialRGB(0xfffed6);
-        Phosphorus.addFlags("no_smelting");
+        Lepidolite.setFormula("(K,Rb)AlLi2Si4O10(OH,F)2", true)
 
         // Ore Processing
         
