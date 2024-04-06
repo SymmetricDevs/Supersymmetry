@@ -131,6 +131,31 @@ mods.gregtech.bender.recipeBuilder()
 		.EUt(30)
 		.buildAndRegister()
 
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('stickSteel') * 8)
+		.inputs(ore('wireFineCopper') * 64)
+		.outputs(item('susy:meta_item', 5) * 2)
+		.duration(200)
+		.EUt(30)
+		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('stickSteel') * 8)
+		.inputs(ore('wireFineAluminium') * 32)
+		.outputs(item('susy:meta_item', 5) * 4)
+		.duration(200)
+		.EUt(120)
+		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('stickStainlessSteel') * 8)
+		.inputs(ore('wireFineAluminium') * 32)
+		.outputs(item('susy:meta_item', 5) * 8)
+		.duration(200)
+		.EUt(480)
+		.buildAndRegister()
+
+
 Globals.solders.each { key, val ->
 
 	TagCompound tag = new TagCompound();
