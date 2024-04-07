@@ -156,9 +156,9 @@ public class SecondDegreeMaterials {
 
         SodiumSulfateSolution = new Material.Builder(13022, SuSyUtility.susyId('sodium_sulfate_solution'))
                 .liquid()
+                .components(SodiumSulfate, 1, Water, 1)
                 .color(0xb0b0bf)
                 .build()
-                .setFormula('(H2O)(Na2SO4)', true);
 
         ImpregnatedCopperOxideCatalyst = new Material.Builder(13023, SuSyUtility.susyId('impregnated_copper_oxide_catalyst'))
                 .dust()
@@ -331,9 +331,9 @@ public class SecondDegreeMaterials {
 
         DilutedSodiumSulfateSolution = new Material.Builder(13051, SuSyUtility.susyId('diluted_sodium_sulfate_solution'))
                 .liquid()
+                .components(SodiumSulfate, 1, Water, 2)
                 .color(0x9191b3)
                 .build()
-                .setFormula('(H2O)2(Na2SO4)', true);
 
         DilutedHydrofluoricAcid = new Material.Builder(13052, SuSyUtility.susyId('diluted_hydrofluoric_acid'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -651,6 +651,42 @@ public class SecondDegreeMaterials {
                 .dust()
                 .flags(GENERATE_CATALYST_BED)
                 .components(MolybdenumTrioxide, 1, VanadiumPentoxide, 1, Alumina, 1)
+                .colorAverage()
+                .build();
+
+        IndiumChlorideSolution = new Material.Builder(13108, SuSyUtility.susyId("indium_chloride_solution"))
+                .liquid()
+                .components(IndiumChloride, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        TelluriumLiquor = new Material.Builder(13109, SuSyUtility.susyId("tellurium_liquor"))
+                .liquid()
+                .components(Hydrogen, 2, Tellurium, 1, Oxygen, 4, SodiumSulfate, 1, Water, 1)
+                .color(0x97bfb5)
+                .build();
+
+        CaesiumAluminaMixture = new Material.Builder(13110, SuSyUtility.susyId("caesium_alumina_mixture"))
+                .dust()
+                .components(Caesium, 2, Oxygen, 1, Alumina, 1)
+                .color(0x776ed4)
+                .build();
+
+        CaesiumChlorideSolution = new Material.Builder(13111, SuSyUtility.susyId("caesium_chloride_solution"))
+                .liquid()
+                .components(CaesiumChloride, 2, Water, 3)
+                .colorAverage()
+                .build();
+
+        RubidiumHydroxideSolution = new Material.Builder(13112, SuSyUtility.susyId("rubidium_hydroxide_solution"))
+                .liquid()
+                .components(RubidiumHydroxide, 1, Water, 4)
+                .colorAverage()
+                .build();
+
+        SodiumAlumSolution = new Material.Builder(13113, SuSyUtility.susyId("sodium_alum_solution"))
+                .liquid()
+                .components(SodiumAlum, 1, Water, 4)
                 .colorAverage()
                 .build();
     }
