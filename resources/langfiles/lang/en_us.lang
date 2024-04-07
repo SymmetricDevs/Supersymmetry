@@ -2059,6 +2059,11 @@ metaitem.bound_leather.name=Bound Leather
 
 metaitem.vacuum_tube_components.name=Vacuum Tube Components
 metaitem.mylar.name=Thin Mylar Sheet
+metaitem.train_unshaped_wheel.name=Unshaped Train Wheel
+metaitem.train_small_wheel.name=Small Train Wheel
+metaitem.train_drive_wheel.name=Train Drive Wheel
+metaitem.train_bogie.name=Train Bogie
+metaitem.train_steam_boiler.name=Train Steam Boiler
 
 metaitem.circuit.gooware_processor.name=Gooware Processor
 metaitem.circuit.gooware_processor.tooltip=Reaction-Diffusion Computation/n§2ZPM-tier Circuit
