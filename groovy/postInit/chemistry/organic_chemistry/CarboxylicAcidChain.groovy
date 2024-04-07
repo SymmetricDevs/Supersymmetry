@@ -2,7 +2,7 @@ import globals.Globals
 
 FBR = recipemap('fixed_bed_reactor')
 DISTILLATION_TOWER = recipemap('distillation_tower')
-FERMENTER = recipemap('fermenter')
+FERMENTER = recipemap('vat_fermentation');
 MIXER = recipemap('mixer')
 ROASTER = recipemap('roaster')
 LCR = recipemap('large_chemical_reactor')

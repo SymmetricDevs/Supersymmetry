@@ -197,7 +197,7 @@ for (carbon in CarbonGlobals.sources) {
 
 ROASTER.recipeBuilder()
 .fluidInputs(fluid('oxygen') * 10000)
-.inputs(ore('dustAnyPurityPhosphorus') * 4)
+.inputs(ore('dustPhosphorus') * 4)
 .outputs(metaitem('dustPhosphorusPentoxide') * 14)
 .duration(40)
 .EUt(30)

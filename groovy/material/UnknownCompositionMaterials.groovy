@@ -816,7 +816,7 @@ public class UnknownCompositionMaterials {
                 .color(0xb4d487)
                 .build()
 
-        CocoAmineAcetate = new Material.Builder(4156, SuSyUtility.susyId('coco_amine'))
+        CocoAmineAcetate = new Material.Builder(4156, SuSyUtility.susyId('coco_amine_acetate'))
                 .liquid()
                 .color(0xada67b)
                 .build()
@@ -1916,6 +1916,16 @@ public class UnknownCompositionMaterials {
         TelluriumSlag = new Material.Builder(4421, SuSyUtility.susyId("tellurium_slag"))
                 .dust()
                 .color(0x98bf97)
+                .build()
+
+        PolluciteLeach = new Material.Builder(4422, SuSyUtility.susyId("pollucite_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x8fa8cf)
+                .build()
+
+        CaesiumRubidiumAlumMixture = new Material.Builder(4423, SuSyUtility.susyId("caesium_rubidium_alum_mixture"))
+                .dust()
+                .color(0x631a87)
                 .build()
     }
 }

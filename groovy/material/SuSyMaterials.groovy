@@ -505,6 +505,8 @@ class SuSyMaterials {
         public static Material CoconutAcid;
         public static Material CocoAmine;
         public static Material CocoAmineAcetate;
+        public static Material PolluciteLeach;
+        public static Material CaesiumRubidiumAlumMixture;
 
         // Petrochem Materials
 
@@ -1047,6 +1049,15 @@ class SuSyMaterials {
         public static Material HydrogenSelenide;
         public static Material TelluriumDioxide;
         public static Material SodiumTelluriteSolution;
+        public static Material SodiumAlum;
+        public static Material CaesiumAlum;
+        public static Material RubidiumAlum;
+        public static Material CaesiumSulfateSolution;
+        public static Material CaesiumChloride;
+        public static Material ReducedCaesiumMixture;
+        public static Material CaesiumHydroxideSolution;
+        public static Material CaesiumFormateSolution;
+        public static Material RubidiumHydroxide;
 
         // HP Materials
 
@@ -1227,6 +1238,10 @@ class SuSyMaterials {
         public static Material ChlorinatedBeryl;
         public static Material IndiumChlorideSolution;
         public static Material TelluriumLiquor;
+        public static Material CaesiumAluminaMixture;
+        public static Material CaesiumChlorideSolution;
+        public static Material RubidiumHydroxideSolution;
+        public static Material SodiumAlumSolution;
 
         // Organic Chemistry Materials
 
@@ -1620,6 +1635,11 @@ class SuSyMaterials {
         public static Material Dichlorodifluoromethane;
         public static Material Chlorotrifluoromethane;
         public static Material Chlorodifluoromethane;
+        public static Material SodiumMethoxide;
+        public static Material NeutralizedMethylFormateSolution;
+        public static Material HydrolyzedMethylFormateSolution;
+        public static Material FormicAcid;
+        public static Material MethylFormateSolution;
 
         // Third Degree Materials
 
@@ -1722,6 +1742,7 @@ class SuSyMaterials {
         public static Material SpentPBISolution;
         public static Material OxalicAcidSolution;
         public static Material GalliumSulfateSolution;
+        public static Material FormicAcidWaterAzeotrope;
 
         // Thermodynamics Materials
 

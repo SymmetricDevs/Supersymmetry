@@ -216,8 +216,11 @@ public class FirstDegreeMaterials {
 
         PigIron = new Material.Builder(8115, SuSyUtility.susyId('pig_iron'))
                 .ingot().dust()
+                .components(Iron, 1)
                 .color(0x99918A)
                 .build();
+
+        PigIron.setFormula("(Fe)(?)", true)
 
         GreenCoke = new Material.Builder(8116, SuSyUtility.susyId('green_coke'))
                 .gem(1, 2000).ore(2, 1)
@@ -3278,5 +3281,67 @@ public class FirstDegreeMaterials {
                 .build()
 
         SodiumTelluriteSolution.setFormula("(Na2TeO3)(H2O)3")
+
+        SodiumAlum = new Material.Builder(8610, SuSyUtility.susyId("sodium_alum"))
+                .dust()
+                .components(Sodium, 1, Aluminium, 1, Sulfur, 2, Oxygen, 8)
+                .colorAverage()
+                .build()
+
+        SodiumAlum.setFormula("NaAl(SO4)2", true)
+
+        CaesiumAlum = new Material.Builder(8611, SuSyUtility.susyId("caesium_alum"))
+                .dust()
+                .components(Caesium, 1, Aluminium, 1, Sulfur, 2, Oxygen, 8)
+                .color(0x293c9e)
+                .build()
+
+        CaesiumAlum.setFormula("CsAl(SO4)2", true)
+
+        RubidiumAlum = new Material.Builder(8612, SuSyUtility.susyId("rubidium_alum"))
+                .dust()
+                .components(Rubidium, 1, Aluminium, 1, Sulfur, 2, Oxygen, 8)
+                .color(0xc72882)
+                .build()
+
+        RubidiumAlum.setFormula("RbAl(SO4)2", true)
+
+        CaesiumSulfateSolution = new Material.Builder(8613, SuSyUtility.susyId("caesium_sulfate_solution"))
+                .liquid()
+                .components(Caesium, 2, Sulfur, 1, Oxygen, 4)
+                .color(0x8528c7)
+                .build()
+
+        CaesiumChloride = new Material.Builder(8614, SuSyUtility.susyId("caesium_chloride"))
+                .dust()
+                .components(Caesium, 1, Chlorine, 1)
+                .color(0x2885c7)
+                .build()
+
+        ReducedCaesiumMixture = new Material.Builder(8615, SuSyUtility.susyId("reduced_caesium_mixture"))
+                .dust()
+                .components(Caesium, 2, CalciumChloride, 1)
+                .color(0xf7f7d0)
+                .build()
+
+        CaesiumHydroxideSolution = new Material.Builder(8616, SuSyUtility.susyId("caesium_hydroxide_solution"))
+                .liquid()
+                .components(Caesium, 1, Oxygen, 1, Hydrogen, 1, Water, 1)
+                .color(0x5458bf)
+                .build()
+
+        CaesiumHydroxideSolution.setFormula("(CsOH)(H2O)", true)
+
+        CaesiumFormateSolution = new Material.Builder(8617, SuSyUtility.susyId("caesium_formate_solution"))
+                .liquid()
+                .components(Caesium, 1, Carbon, 1, Hydrogen, 1, Oxygen, 2)
+                .color(0x7b54bf)
+                .build()
+
+        RubidiumHydroxide = new Material.Builder(8618, SuSyUtility.susyId("rubidium_hydroxide"))
+                .dust()
+                .components(Rubidium, 1, Oxygen, 1, Hydrogen, 1)
+                .color(0xbf54bb)
+                .build()
     }
 }

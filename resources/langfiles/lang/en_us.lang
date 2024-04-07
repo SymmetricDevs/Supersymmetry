@@ -1940,6 +1940,27 @@ susy.material.coconut_oil=Coconut Oil
 susy.material.coconut_acid=Coconut Acid
 susy.material.coco_amine=Coco Amine
 susy.material.coco_amine_acetate=Coco Amine Acetate
+susy.material.sodium_methoxide=Sodium Methoxide
+susy.material.neutralized_methyl_formate_solution=Neutralized Methyl Formate Solution
+susy.material.hydrolyzed_methyl_formate_solution=Hydrolyzed Methyl Formate Solution
+susy.material.formic_acid_water_azeotrope=Formic Acid-Water Azeotrope
+susy.material.formic_acid=Formic Acid
+susy.material.caesium_alumina_mixture=Caesium Alumina Mixture
+susy.material.caesium_chloride_solution=Caesium Chloride Solution
+susy.material.rubidium_hydroxide_solution=Rubidium Hydroxide Solution
+susy.material.sodium_alum_solution=Sodium Alum Solution
+susy.material.sodium_alum=Sodium Alum
+susy.material.caesium_alum=Caesium Alum
+susy.material.rubidium_alum=Rubidium Alum
+susy.material.caesium_sulfate_solution=Caesium Sulfate Solution
+susy.material.caesium_chloride=Caesium Chloride
+susy.material.reduced_caesium_mixture=Reduced Caesium Mixture
+susy.material.caesium_hydroxide_solution=Caesium Hydroxide Solution
+susy.material.caesium_formate_solution=Caesium Formate Solution
+susy.material.rubidium_hydroxide=Rubidium Hydroxide
+susy.material.pollucite_leach=Pollucite Leach
+susy.material.caesium_rubidium_alum_mixture=Caesium-Rubidium Alum Mixture
+susy.material.methyl_formate_solution=Methyl Formate Solution
 
 # Isotopes
 

@@ -143,7 +143,7 @@ MIXER.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
-furnace.add(metaitem('component.coconut'), metaitem('copra'))
+furnace.add(metaitem('gregtechfoodoption:component.coconut'), metaitem('copra'))
 
 EXTRACTOR.recipeBuilder()
     .inputs(metaitem('copra'))
@@ -154,7 +154,7 @@ EXTRACTOR.recipeBuilder()
 
 AUTOCLAVE.recipeBuilder()
     .fluidInputs(fluid('distilled_water') * 3000)
-    .fluidInputs(fluid('seed_oil') * 1000)
+    .fluidInputs(fluid('coconut_oil') * 1000)
     .fluidOutputs(fluid('glycerol') * 1000)
     .fluidOutputs(fluid('coconut_acid') * 3000)
     .EUt(30)
