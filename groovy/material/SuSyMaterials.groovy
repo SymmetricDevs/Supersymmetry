@@ -117,7 +117,6 @@ class SuSyMaterials {
         // Roasted Ores
 
         public static Material RoastedSperrylite;
-        public static Material RoastedLepidolite;
         public static Material RoastedPetalite;
 
         // Ore Leach Residue
@@ -154,8 +153,8 @@ class SuSyMaterials {
         public static Material Asphalt;
         public static Material BlackAsh;
         public static Material ImpureAcetaldehyde;
-        public static Material CativaProcessPreparation;
-        public static Material CativaProcessSolution;
+        public static Material CativaCatalystPreparation;
+        public static Material CativaCatalystSolution;
         public static Material AcidicCumene;
         public static Material RearrangedCumene;
         public static Material AlkylatedButane;
@@ -502,6 +501,12 @@ class SuSyMaterials {
         public static Material SeleniumTelluriumConcentrate;
         public static Material TelluriumResidue;
         public static Material TelluriumSlag;
+        public static Material CoconutOil;
+        public static Material CoconutAcid;
+        public static Material CocoAmine;
+        public static Material CocoAmineAcetate;
+        public static Material PolluciteLeach;
+        public static Material CaesiumRubidiumAlumMixture;
 
         // Petrochem Materials
 
@@ -1044,6 +1049,15 @@ class SuSyMaterials {
         public static Material HydrogenSelenide;
         public static Material TelluriumDioxide;
         public static Material SodiumTelluriteSolution;
+        public static Material SodiumAlum;
+        public static Material CaesiumAlum;
+        public static Material RubidiumAlum;
+        public static Material CaesiumSulfateSolution;
+        public static Material CaesiumChloride;
+        public static Material ReducedCaesiumMixture;
+        public static Material CaesiumHydroxideSolution;
+        public static Material CaesiumFormateSolution;
+        public static Material RubidiumHydroxide;
 
         // HP Materials
 
@@ -1224,6 +1238,10 @@ class SuSyMaterials {
         public static Material ChlorinatedBeryl;
         public static Material IndiumChlorideSolution;
         public static Material TelluriumLiquor;
+        public static Material CaesiumAluminaMixture;
+        public static Material CaesiumChlorideSolution;
+        public static Material RubidiumHydroxideSolution;
+        public static Material SodiumAlumSolution;
 
         // Organic Chemistry Materials
 
@@ -1331,7 +1349,7 @@ class SuSyMaterials {
         public static Material PhthalicAnhydride;
         public static Material ImpureCaprolactam;
         public static Material Dimethylformamide;
-        public static Material CativaProcessCatalyst;
+        public static Material CativaCatalyst;
         public static Material TwoEthylanthraquinone;
         public static Material TwoEthylanthrahydroquinone;
         public static Material Butanone;
@@ -1617,6 +1635,11 @@ class SuSyMaterials {
         public static Material Dichlorodifluoromethane;
         public static Material Chlorotrifluoromethane;
         public static Material Chlorodifluoromethane;
+        public static Material SodiumMethoxide;
+        public static Material NeutralizedMethylFormateSolution;
+        public static Material HydrolyzedMethylFormateSolution;
+        public static Material FormicAcid;
+        public static Material MethylFormateSolution;
 
         // Third Degree Materials
 
@@ -1719,6 +1742,7 @@ class SuSyMaterials {
         public static Material SpentPBISolution;
         public static Material OxalicAcidSolution;
         public static Material GalliumSulfateSolution;
+        public static Material FormicAcidWaterAzeotrope;
 
         // Thermodynamics Materials
 

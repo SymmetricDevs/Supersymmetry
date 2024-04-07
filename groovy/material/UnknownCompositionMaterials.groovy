@@ -169,12 +169,12 @@ public class UnknownCompositionMaterials {
                 .color(0x6e6e6e)
                 .build();
 
-        CativaProcessPreparation = new Material.Builder(4028, SuSyUtility.susyId('cativa_process_preparation'))
+        CativaCatalystPreparation = new Material.Builder(4028, SuSyUtility.susyId('cativa_catalyst_preparation'))
                 .liquid()
                 .color(0x9c8275)
                 .build();
 
-        CativaProcessSolution = new Material.Builder(4029, SuSyUtility.susyId('cativa_process_solution'))
+        CativaCatalystSolution = new Material.Builder(4029, SuSyUtility.susyId('cativa_catalyst_solution'))
                 .liquid()
                 .color(0x75665e)
                 .build();
@@ -535,11 +535,7 @@ public class UnknownCompositionMaterials {
                 .color(0xbaced6)
                 .build();
 
-        RoastedLepidolite = new Material.Builder(4102, SuSyUtility.susyId('roasted_lepidolite'))
-                .dust()
-                .color(0x443b45)
-                .iconSet(SAND)
-                .build();
+        // FREE ID: 4102
 
         LepidoliteLeach = new Material.Builder(4103, SuSyUtility.susyId('lepidolite_leach'))
                 .liquid()
@@ -717,8 +713,16 @@ public class UnknownCompositionMaterials {
                 .color(0xb03f5d)
                 .build();
 
-        //FREE ID: 4136-4137
-
+        CoconutOil = new Material.Builder(4136, SuSyUtility.susyId('coconut_oil'))
+                .liquid()
+                .color(0xd6d39a)
+                .build();
+                
+        CoconutAcid = new Material.Builder(4137, SuSyUtility.susyId('coconut_acid'))
+                .liquid()
+                .color(0xbdb280)
+                .build();
+                
         TwoEthylhexylPhosphoricAcidMix = new Material.Builder(4138, SuSyUtility.susyId('two_ethylhexyl_phosphoric_acid_mix'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xd1bb75)
@@ -807,8 +811,16 @@ public class UnknownCompositionMaterials {
                 .color(0xc7c991)
                 .build()
 
-        //FREE ID: 4155-4156
+        CocoAmine = new Material.Builder(4155, SuSyUtility.susyId('coco_amine'))
+                .liquid()
+                .color(0xb4d487)
+                .build()
 
+        CocoAmineAcetate = new Material.Builder(4156, SuSyUtility.susyId('coco_amine_acetate'))
+                .liquid()
+                .color(0xada67b)
+                .build()
+                
         ZincFlue = new Material.Builder(4157, SuSyUtility.susyId('zinc_flue'))
                 .dust()
                 .color(0x26222e)
@@ -1904,6 +1916,16 @@ public class UnknownCompositionMaterials {
         TelluriumSlag = new Material.Builder(4421, SuSyUtility.susyId("tellurium_slag"))
                 .dust()
                 .color(0x98bf97)
+                .build()
+
+        PolluciteLeach = new Material.Builder(4422, SuSyUtility.susyId("pollucite_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x8fa8cf)
+                .build()
+
+        CaesiumRubidiumAlumMixture = new Material.Builder(4423, SuSyUtility.susyId("caesium_rubidium_alum_mixture"))
+                .dust()
+                .color(0x631a87)
                 .build()
     }
 }

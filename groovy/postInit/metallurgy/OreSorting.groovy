@@ -44,6 +44,7 @@ def orthomagmatic_tier_3 = [
     'gregtech:ore_molybdenite_0' : 10000,
     'gregtech:ore_cassiterite_0' : 10000,
     'gregtech:ore_tantalite_0' : 10000,
+    'gregtech:ore_columbite_0' : 10000,
     'gregtech:ore_pollucite_0' : 10000
 ];
 
@@ -65,6 +66,7 @@ def orthomagmatic_tier_4 = [
     'gregtech:ore_molybdenite_0' : 10000,
     'gregtech:ore_cassiterite_0' : 10000,
     'gregtech:ore_tantalite_0' : 10000,
+    'gregtech:ore_columbite_0' : 10000,
     'gregtech:ore_pollucite_0' : 10000
 ];
 

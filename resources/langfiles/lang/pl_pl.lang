@@ -537,7 +537,7 @@ susy.material.hydrobromic_acid=Bromowodór
 susy.material.hydrogen_cyanide=Cyjanowodór
 
 susy.material.dimethylformamide=Dimetyloformamid
-susy.material.cativa_process_catalyst=Katalizator Procesu Cativa
+susy.material.cativa_catalyst=Katalizator Cativa
 susy.material.two_ethylanthraquinone=2-Etylantrachinon
 susy.material.two_ethylanthrahydroquinone=2-Etylantrawodorochinon
 susy.material.butanone=Butanon
@@ -593,8 +593,8 @@ susy.material.ethylene_glycol_solution=Roztwór Glikolu Etylenowego
 susy.material.terephthalic_acid_slurry=Zawiesina Kwas Tereftalowego
 
 susy.material.impure_acetaldehyde=Zanieczyszcony Aldehyd Octowy
-susy.material.cativa_process_preparation=Preparat Procesu Cativa
-susy.material.cativa_process_solution=Roztwór Procesu Cativa
+susy.material.cativa_catalyst_preparation=Preparat Katalizator Cativa
+susy.material.cativa_catalyst_solution=Roztwór Katalizator Cativa
 susy.material.acidic_cumene=Kwasowy Kumen
 susy.material.rearranged_cumene=Przestawiony Kumen
 susy.material.alkylated_butane=Zalkilowany Butan
@@ -763,7 +763,6 @@ susy.material.alkali_alum_mix=Alkali Alum Mix
 susy.material.oleic_acid=Oleic Acid
 susy.material.linoleic_acid=Linoleic Acid
 susy.material.amblygonite_leach=Amblygonite Leach
-susy.material.roasted_lepidolite=Roasted Lepidolite
 susy.material.lepidolite_leach=Lepidolite Leach
 susy.material.neutralized_lepidolite_leach=Neutralized Lepidolite Leach
 susy.material.aluminium_free_lepidolite_leach=Aluminium-Free Lepidolite Leach

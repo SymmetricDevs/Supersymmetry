@@ -549,7 +549,7 @@ susy.material.hydrobromic_acid=Ácido Bromídrico
 susy.material.hydrogen_cyanide=Cianeto de Hidrogénio
 
 susy.material.dimethylformamide=Dimetilformamida
-susy.material.cativa_process_catalyst=Catalisador de Processo Cativa
+susy.material.cativa_catalyst=Catalisador de Processo Cativa
 susy.material.two_ethylanthraquinone=2-Etilantraquinona
 susy.material.two_ethylanthrahydroquinone=2-Etilantrahidroquinona
 susy.material.butanone=Butanona
@@ -608,7 +608,7 @@ susy.material.ethylene_glycol_solution=Solução de Etileno Glicerol
 susy.material.terephthalic_acid_slurry=Pasta Ácida de Tereftálico
 
 susy.material.impure_acetaldehyde=Acetaldeído Impuro
-susy.material.cativa_process_preparation=Preparação Processada de Cativa
+susy.material.cativa_catalyst_preparation=Preparação Catalisador de Cativa
 susy.material.acidic_cumene=Cumeno Acídico
 susy.material.rearranged_cumene=Cumeno Rearranjado
 susy.material.alkylated_butane=Butano Alquilado
@@ -780,7 +780,6 @@ susy.material.oleic_acid=Oleic Acid
 susy.material.linoleic_acid=Linoleic Acid
 susy.material.palmitic_acid=Palmitic Acid
 susy.material.amblygonite_leach=Amblygonite Leach
-susy.material.roasted_lepidolite=Roasted Lepidolite
 susy.material.lepidolite_leach=Lepidolite Leach
 susy.material.neutralized_lepidolite_leach=Neutralized Lepidolite Leach
 susy.material.aluminium_free_lepidolite_leach=Aluminium-Free Lepidolite Leach

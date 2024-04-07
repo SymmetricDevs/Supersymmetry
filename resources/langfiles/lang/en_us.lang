@@ -537,7 +537,7 @@ susy.material.hydrobromic_acid=Hydrobromic Acid
 susy.material.hydrogen_cyanide=Hydrogen Cyanide
 
 susy.material.dimethylformamide=Dimethylformamide
-susy.material.cativa_process_catalyst=Cativa Process Catalyst
+susy.material.cativa_catalyst=Cativa Catalyst
 susy.material.two_ethylanthraquinone=2-Ethylanthraquinone
 susy.material.two_ethylanthrahydroquinone=2-Ethylanthrahydroquinone
 susy.material.butanone=Butanone
@@ -593,8 +593,8 @@ susy.material.ethylene_glycol_solution=Ethylene Glycol Solution
 susy.material.terephthalic_acid_slurry=Terephthalic Acid Slurry
 
 susy.material.impure_acetaldehyde=Impure Acetaldehyde
-susy.material.cativa_process_preparation=Cativa Process Preparation
-susy.material.cativa_process_solution=Cativa Process Solution
+susy.material.cativa_catalyst_preparation=Cativa Catalyst Preparation
+susy.material.cativa_catalyst_solution=Cativa Catalyst Solution
 susy.material.acidic_cumene=Acidic Cumene
 susy.material.rearranged_cumene=Rearranged Cumene
 susy.material.alkylated_butane=Alkylated Butane
@@ -763,7 +763,6 @@ susy.material.alkali_alum_mix=Alkali Alum Mix
 susy.material.oleic_acid=Oleic Acid
 susy.material.linoleic_acid=Linoleic Acid
 susy.material.amblygonite_leach=Amblygonite Leach
-susy.material.roasted_lepidolite=Roasted Lepidolite
 susy.material.lepidolite_leach=Lepidolite Leach
 susy.material.neutralized_lepidolite_leach=Neutralized Lepidolite Leach
 susy.material.aluminium_free_lepidolite_leach=Aluminium-Free Lepidolite Leach
@@ -1937,6 +1936,31 @@ susy.material.hydrogen_selenide=Hydrogen Selenide
 susy.material.tellurium_dioxide=Tellurium Dioxide
 susy.material.sodium_tellurite_solution=Sodium Tellurite Solution
 susy.material.tellurium_liquor=Tellurium Liquor
+susy.material.coconut_oil=Coconut Oil
+susy.material.coconut_acid=Coconut Acid
+susy.material.coco_amine=Coco Amine
+susy.material.coco_amine_acetate=Coco Amine Acetate
+susy.material.sodium_methoxide=Sodium Methoxide
+susy.material.neutralized_methyl_formate_solution=Neutralized Methyl Formate Solution
+susy.material.hydrolyzed_methyl_formate_solution=Hydrolyzed Methyl Formate Solution
+susy.material.formic_acid_water_azeotrope=Formic Acid-Water Azeotrope
+susy.material.formic_acid=Formic Acid
+susy.material.caesium_alumina_mixture=Caesium Alumina Mixture
+susy.material.caesium_chloride_solution=Caesium Chloride Solution
+susy.material.rubidium_hydroxide_solution=Rubidium Hydroxide Solution
+susy.material.sodium_alum_solution=Sodium Alum Solution
+susy.material.sodium_alum=Sodium Alum
+susy.material.caesium_alum=Caesium Alum
+susy.material.rubidium_alum=Rubidium Alum
+susy.material.caesium_sulfate_solution=Caesium Sulfate Solution
+susy.material.caesium_chloride=Caesium Chloride
+susy.material.reduced_caesium_mixture=Reduced Caesium Mixture
+susy.material.caesium_hydroxide_solution=Caesium Hydroxide Solution
+susy.material.caesium_formate_solution=Caesium Formate Solution
+susy.material.rubidium_hydroxide=Rubidium Hydroxide
+susy.material.pollucite_leach=Pollucite Leach
+susy.material.caesium_rubidium_alum_mixture=Caesium-Rubidium Alum Mixture
+susy.material.methyl_formate_solution=Methyl Formate Solution
 
 # Isotopes
 
@@ -2110,6 +2134,7 @@ metaitem.circuit.suprachronal.max.name=Supra-Chronal Maximum Circuit
 metaitem.circuit.suprachronal.max.tooltip=§fMAX-tier Circuit/n
 
 metaitem.sugar_cane_dust.name=Sugar Cane Dust
+metaitem.copra.name=Copra
 metaitem.washed_rotten_flesh.name=Washed Rotten Flesh
 
 metaitem.bitumen.name=Bitumen
