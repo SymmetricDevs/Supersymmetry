@@ -1422,6 +1422,19 @@ crafting.replaceShaped("gregtech:multiblock_builder", metaitem('tool.multiblock_
         [ore('stickPolytetrafluoroethylene'), ore('screwStainlessSteel'), ore('craftingToolScrewdriver')]
 ])
 
+// Glue * 2500
+mods.gregtech.mixer.removeByInput(7, null, [fluid('polyvinyl_acetate') * 1000, fluid('methyl_acetate') * 1500])
+// Glue * 2500
+mods.gregtech.mixer.removeByInput(7, null, [fluid('polyvinyl_acetate') * 1000, fluid('acetone') * 1500])
+
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('polyvinyl_acetate') * 144)
+        .fluidInputs(fluid('methyl_acetate') * 1500)
+        .fluidOutputs(fluid('glue') * 1500)
+        .duration(50)
+        .EUt(7)
+        .buildAndRegister();
+
 GroovyUtils.removeRecipesContainingFluid(mods.gregtech.assembler, fluid('polybenzimidazole'))
 GroovyUtils.removeRecipesContainingFluid(mods.gregtech.autoclave, fluid('polybenzimidazole'))
 GroovyUtils.removeRecipesContainingFluid(mods.gregtech.fluid_solidifier, fluid('polybenzimidazole'))

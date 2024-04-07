@@ -1,3 +1,5 @@
+import gregtech.api.recipes.ingredients.nbtmatch.*
+
 def solder = fluid('soldering_alloy') * 72
 
 def name_removals = [
@@ -445,7 +447,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('power_unit.mv'))
+		.inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
 		.inputs(ore('cableGtSingleCopper') * 4)
 		.inputs(ore('screwAluminium') * 2)
 		.inputs(ore('plateAluminium') * 4)
@@ -458,7 +460,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('power_unit.hv'))
+		.inputNBT(metaitem('power_unit.hv').item, 1, metaitem('power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
 		.inputs(ore('plateStainlessSteel') * 4)
 		.inputs(ore('screwStainlessSteel') * 2)
 		.inputs(ore('cableGtSingleGold') * 4)
@@ -471,7 +473,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('power_unit.mv'))
+		.inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
 		.inputs(ore('cableGtSingleCopper') * 2)
 		.inputs(ore('plateAluminium') * 1)
 		.inputs(item('opencomputers:component', 3))
@@ -483,7 +485,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('power_unit.hv'))
+		.inputNBT(metaitem('power_unit.hv').item, 1, metaitem('power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
 		.inputs(ore('plateStainlessSteel') * 4)
 		.inputs(ore('cableGtSingleGold') * 4)
 		.inputs(item('opencomputers:component', 4))
@@ -495,7 +497,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('power_unit.mv'))
+		.inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
 		.inputs(ore('cableGtSingleCopper') * 2)
 		.inputs(ore('plateAluminium') * 1)
 		.inputs(item('opencomputers:material', 20))
@@ -508,7 +510,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('power_unit.hv'))
+		.inputNBT(metaitem('power_unit.hv').item, 1, metaitem('power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
 		.inputs(ore('plateStainlessSteel') * 4)
 		.inputs(ore('cableGtSingleGold') * 4)
 		.inputs(item('opencomputers:material', 21))
@@ -541,7 +543,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('power_unit.mv'))
+		.inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
 		.inputs(ore('cableGtSingleCopper') * 1)
 		.inputs(ore('plateAluminium') * 2)
 		.inputs(metaitem('sensor.mv'))
@@ -554,7 +556,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('power_unit.mv'))
+		.inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
 		.inputs(item('opencomputers:card', 7))
 		.inputs(ore('plateAluminium') * 2)
 		.inputs(metaitem('monitor_screen'))
@@ -900,7 +902,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('power_unit.mv'))
+		.inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
 		.inputs(metaitem('circuit_board.good'))
 		.fluidInputs(solder)
 		.circuitMeta([1])
@@ -910,7 +912,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-		.inputs(metaitem('power_unit.hv'))
+		.inputNBT(metaitem('power_unit.hv').item, 1, metaitem('power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
 		.inputs(metaitem('circuit_board.plastic'))
 		.fluidInputs(solder)
 		.circuitMeta([2])

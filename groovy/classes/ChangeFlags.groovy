@@ -186,6 +186,8 @@ class ChangeFlags {
         setupSlurries(Sphalerite)
         setupSlurries(Pollucite)
 
+        setupFluidType(PolyvinylAcetate, FluidStorageKeys.LIQUID, 385)
+
         OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
 

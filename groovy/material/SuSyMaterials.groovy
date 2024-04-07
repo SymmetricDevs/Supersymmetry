@@ -1635,6 +1635,8 @@ class SuSyMaterials {
         public static Material Dichlorodifluoromethane;
         public static Material Chlorotrifluoromethane;
         public static Material Chlorodifluoromethane;
+        public static Material PolyvinylAlcohol;
+        public static Material EthylAcetate;
         public static Material SodiumMethoxide;
         public static Material NeutralizedMethylFormateSolution;
         public static Material HydrolyzedMethylFormateSolution;

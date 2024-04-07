@@ -2507,7 +2507,11 @@ public class OrganicChemistryMaterials {
                 .color(0x91436e)
                 .build();
 
-        // FREE ID: 15407
+        EthylAcetate = new Material.Builder(15407, SuSyUtility.susyId('ethyl_acetate'))
+                .liquid()
+                .components(Carbon, 4, Hydrogen, 8, Oxygen, 2)
+                .color(0xa5c773)
+                .build();
 
         FormicAcid = new Material.Builder(15408, SuSyUtility.susyId('formic_acid'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -2518,6 +2522,12 @@ public class OrganicChemistryMaterials {
         MethylFormateSolution = new Material.Builder(15409, SuSyUtility.susyId('methyl_formate_solution'))
                 .liquid()
                 .color(0x915161)
+                .build();
+
+        PolyvinylAlcohol = new Material.Builder(15410, SuSyUtility.susyId('polyvinyl_alcohol'))
+                .dust()
+                .components(Carbon, 2, Hydrogen, 4, Oxygen, 1)
+                .color(0xd4984e)
                 .build();
     }
 }
