@@ -159,7 +159,7 @@ for (rubber in rubbers) {
             for (catalyser in catalysers) {
                     if(rubber.isFluid)  {
                         VULCANIZING_RECIPES.recipeBuilder()
-                        .fluidInputs(fluid(rubber.name) * rubber.amount_required * 4000)
+                        .fluidInputs(fluid(rubber.name) * rubber.amount_required * 1000)
                         .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
                         .notConsumable(ore(catalyser.name))
                         .notConsumable(metaitem('shape.extruder.' + shape.name))
@@ -182,7 +182,7 @@ for (rubber in rubbers) {
                 }
                 if(rubber.isFluid)  {
                     VULCANIZING_RECIPES.recipeBuilder()
-                    .fluidInputs(fluid(rubber.name) * rubber.amount_required * 4000)
+                    .fluidInputs(fluid(rubber.name) * rubber.amount_required * 1000)
                     .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
                     .notConsumable(metaitem('shape.extruder.' + shape.name))
                     .circuitMeta(2)
