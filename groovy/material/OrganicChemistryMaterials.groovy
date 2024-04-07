@@ -2508,9 +2508,10 @@ public class OrganicChemistryMaterials {
                 .build();
 
         EthylAcetate = new Material.Builder(15407, SuSyUtility.susyId('ethyl_acetate'))
-                .fluid()
+                .liquid()
                 .components(Carbon, 4, Hydrogen, 8, Oxygen, 2)
                 .color(0xa5c773)
+                .build();
 
         FormicAcid = new Material.Builder(15408, SuSyUtility.susyId('formic_acid'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
