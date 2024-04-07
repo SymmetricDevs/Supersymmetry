@@ -89,14 +89,13 @@ class Shape {
     }
 }
 
-def CoagulationRecipe(coagulant, amount, duration, circ){
+def CoagulationRecipe(coagulant, amount, duration){
     def COAGULATION_RECIPES = recipemap("coagulation_tank")
 
     if(coagulant.isFluid){
         COAGULATION_RECIPES.recipeBuilder()
         .fluidInputs(fluid('latex') * (1000 * amount))
         .notConsumable(fluid(coagulant.name) * (coagulant.amount_required * amount))
-        .circuitMeta(circ)
         .outputs(metaitem('dustLatex') * (coagulant.yield_bonus * amount))
         .duration(duration.intdiv(coagulant.speed_bonus))
         .buildAndRegister()
@@ -105,18 +104,16 @@ def CoagulationRecipe(coagulant, amount, duration, circ){
         COAGULATION_RECIPES.recipeBuilder()
         .fluidInputs(fluid('latex') * (1000 * amount))
         .notConsumable(ore(coagulant.name) * (coagulant.amount_required * amount))
-        .circuitMeta(circ)
         .outputs(metaitem('dustLatex') * (coagulant.yield_bonus * amount))
         .duration(duration.intdiv(coagulant.speed_bonus))
         .buildAndRegister()
     }
 }
 
-def CoagulationRecipe(amount, duration, circ){
+def CoagulationRecipe(amount, duration){
     def COAGULATION_RECIPES = recipemap("coagulation_tank")
 
     COAGULATION_RECIPES.recipeBuilder()
-    .circuitMeta(circ)
     .fluidInputs(fluid('latex') * (1000 * amount))
     .notConsumable(ore('stickIron'))
     .outputs(metaitem('dustLatex') * amount)
@@ -125,8 +122,7 @@ def CoagulationRecipe(amount, duration, circ){
 }
 
 def rubbers = [
-    new Rubber('dustLatex', 'Rubber', 4, 10 * 20, 4, false),
-    new Rubber('latex', 'Rubber', 32, 20 * 20, 4, true),
+    new Rubber('dustLatex', 'Rubber', 4, 40 * 20, 4, false),
     new Rubber('dustPolyisoprene', 'Rubber', 8, 225, 8, false),
     new Rubber('dustRawStyreneIsopreneRubber', 'StyreneIsopreneRubber', 4, 30 * 20, 4, false),
     new Rubber('dustRawStyreneButadieneRubber', 'StyreneButadieneRubber', 4, 30 * 20, 4, false)
@@ -209,14 +205,10 @@ for (rubber in rubbers) {
     }
 }
 
-CoagulationRecipe(1, 400, 1)
-CoagulationRecipe(4, 1000, 2)
-CoagulationRecipe(16, 2500, 3)
+CoagulationRecipe(1, 150)
 
 for (coagulant in coagulants) {
-    CoagulationRecipe(coagulant, 1, 400, 4)
-    CoagulationRecipe(coagulant, 4, 1000, 5)
-    CoagulationRecipe(coagulant, 16, 2500, 6)
+    CoagulationRecipe(coagulant, 1, 150)
 }
 
 // Liquid Latex * 144
