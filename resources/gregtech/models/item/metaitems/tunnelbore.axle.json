@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "gregtech:items/metaitems/locomotive.axle"
+      "layer0": "gregtech:items/metaitems/tunnelbore.axle"
     }
   }
