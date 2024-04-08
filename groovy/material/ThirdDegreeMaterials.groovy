@@ -605,5 +605,25 @@ public class ThirdDegreeMaterials {
                 .components(Dimethylacetamide, 1)
                 .colorAverage()
                 .build();
+
+        OxalicAcidSolution = new Material.Builder(24097, SuSyUtility.susyId('oxalic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(OxalicAcid, 1, Water, 1)
+                .colorAverage()
+                .build();
+
+        GalliumSulfateSolution = new Material.Builder(24098, SuSyUtility.susyId('gallium_sulfate_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Gallium, 2, Sulfur, 3, Oxygen, 12, OxalicAcid, 6, Water, 3)
+                .colorAverage()
+                .build();
+
+        GalliumSulfateSolution.setFormula("(Ga2(SO4)3)(H2C2O4)6(H2O)3")
+
+        FormicAcidWaterAzeotrope = new Material.Builder(24099, SuSyUtility.susyId('formic_acid_water_azeotrope'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(FormicAcid, 6, Water, 4)
+                .color(0xbf3983)
+                .build();
     }
 }

@@ -131,6 +131,61 @@ mods.gregtech.bender.recipeBuilder()
 		.EUt(30)
 		.buildAndRegister()
 
+mods.gregtech.assembler.recipeBuilder()
+		.fluidInputs(fluid('concrete') * 144)
+		.inputs(ore('stickSteel') * 8)
+		.inputs(ore('plateSteel') * 2)
+		.outputs(item('susy:meta_item', 5) * 2)
+		.duration(200)
+		.EUt(30)
+		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+		.fluidInputs(fluid('concrete') * 144)
+		.inputs(ore('stickAluminium') * 8)
+		.inputs(ore('plateAluminium') * 2)
+		.outputs(item('susy:meta_item', 5) * 4)
+		.duration(200)
+		.EUt(120)
+		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+		.fluidInputs(fluid('concrete') * 144)
+		.inputs(ore('stickStainlessSteel') * 8)
+		.inputs(ore('plateStainlessSteel') * 2)
+		.outputs(item('susy:meta_item', 5) * 8)
+		.duration(200)
+		.EUt(480)
+		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('component.grinder.diamond') * 4)
+		.inputs(ore('gearSteel') * 4)
+		.inputs(ore('plateDoubleSteel') * 16)
+		.outputs(metaitem('tunnelbore.drillhead'))
+		.duration(200)
+		.EUt(120)
+		.buildAndRegister()
+
+mods.gregtech.forge_hammer.recipeBuilder()
+		.inputs(ore('stickLongSteel') * 16)
+		.outputs(metaitem('tunnelbore.axle'))
+		.duration(200)
+		.EUt(120)
+		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('electric.motor.mv') * 8)
+		.inputs(ore('wireFineCopper') * 64)
+		.inputs(ore('gearAluminium') * 4)
+		.inputs(ore('gearSmallAluminium') * 4)
+		.inputs(ore('plateSteel') * 8)
+		.fluidInputs(fluid('lubricant') * 8000)
+		.outputs(metaitem('tunnelbore.engine'))
+		.duration(200)
+		.EUt(120)
+		.buildAndRegister()
+		
 Globals.solders.each { key, val ->
 
 	TagCompound tag = new TagCompound();
@@ -219,4 +274,33 @@ Globals.solders.each { key, val ->
 			.EUt(30)
 			.duration(400)
 			.buildAndRegister();
+
+	TagCompound tag5 = new TagCompound();
+
+	tag5.setString("defID", "rolling_stock/tunnel_bore/black_mesa_tunnel_bore.json");
+	tag5.setFloat("gauge", (float) Gauges.STANDARD);
+
+	cam72cam.mod.item.ItemStack is5 = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+	is5.setTagCompound(tag5);
+
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+		.circuitMeta(5)
+		.inputs(ore('gearSmallSteel') * 12)
+		.inputs(metaitem('minecart_wheels.steel') * 4)
+		.inputs(metaitem('electric.motor.lv') * 4)
+		.inputs(metaitem('electric.piston.lv') * 4)
+		.inputs(metaitem('battery_buffer.lv.4'))
+		.inputs(metaitem('conveyor.module.lv') * 8)
+		.inputs(metaitem('crate.steel'))
+		.inputs(ore('plateSteel') * 16)
+		.inputs(ore('stickLongSteel') * 8)
+		.inputs(metaitem('tunnelbore.axle'))
+		.inputs(metaitem('tunnelbore.drillhead'))
+		.inputs(metaitem('tunnelbore.engine'))
+		.fluidInputs(fluid(key) * (val * 10))
+		.outputs(is5.internal)
+		.EUt(30)
+		.duration(400)
+		.buildAndRegister();
+
 }
