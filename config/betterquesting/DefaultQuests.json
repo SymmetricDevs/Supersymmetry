@@ -1,4 +1,5 @@
 {
+  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -3292,6 +3293,7 @@
           "ismain:1": 1,
           "name:8": "susy.quest.db.78.title",
           "questlogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -8114,7 +8116,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 39,
-              "id:8": "gregtech:meta_dust_tiny"
+              "id:8": "gregtech:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -13251,7 +13253,6 @@
     "372:10": {
       "preRequisites:11": [
         181,
-        410,
         786
       ],
       "properties:10": {
@@ -13957,6 +13958,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.390.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -13964,6 +13966,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "liquid_oxygen"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -14705,7 +14717,7 @@
     },
     "409:10": {
       "preRequisites:11": [
-        407
+        373
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -15611,6 +15623,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.432.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -15618,6 +15631,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hot_hp_oxygen"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -15738,6 +15761,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.435.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -15745,6 +15769,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hp_oxygen"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -15765,6 +15799,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.436.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -15772,6 +15807,16 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "cold_hp_oxygen"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "index:3": 1,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -29939,7 +29984,7 @@
                   "Durability:3": 0,
                   "HarvestLevel:3": 1,
                   "Material:8": "rubber",
-                  "MaxDurability:3": 256,
+                  "MaxDurability:3": 255,
                   "ToolSpeed:5": 4.0
                 },
                 "HideFlags:3": 2
@@ -30140,6 +30185,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.674.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30147,6 +30193,18 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14720,
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "index:3": 1,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
@@ -32973,9 +33031,9 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 64,
+              "Count:3": 1,
               "Damage:2": 15014,
-              "id:8": "gregtech:meta_wire_fine"
+              "id:8": "gregtech:meta_thread"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -34096,7 +34154,6 @@
     },
     "789:10": {
       "preRequisites:11": [
-        786,
         373
       ],
       "properties:10": {
@@ -36447,13 +36504,11 @@
     "866:10": {
       "preRequisiteTypes:7": [
         1,
-        1,
-        0
+        1
       ],
       "preRequisites:11": [
         243,
-        232,
-        871
+        232
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -36609,48 +36664,6 @@
     },
     "870:10": {
       "preRequisites:11": [
-        870
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "desc:8": "susy.quest.db.871.desc",
-          "icon:10": {
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "gtfo_aniline"
-            }
-          },
-          "ignoresview:1": 0,
-          "name:8": "susy.quest.db.871.title",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 871,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "nitrobenzene"
-            },
-            "1:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "gtfo_aniline"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
-        },
-        "1:10": {
-          "index:3": 1,
-          "taskID:8": "bq_standard:checkbox"
-        }
-      }
-    },
-    "871:10": {
-      "preRequisites:11": [
         865,
         864,
         873
@@ -36671,7 +36684,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "872:10": {
+    "871:10": {
       "preRequisites:11": [
         870
       ],
@@ -36694,7 +36707,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "873:10": {
+    "872:10": {
       "preRequisites:11": [
         791
       ],
@@ -36722,7 +36735,7 @@
         }
       }
     },
-    "874:10": {
+    "873:10": {
       "preRequisites:11": [
         550
       ],
@@ -36743,7 +36756,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "875:10": {
+    "874:10": {
       "preRequisites:11": [
         875
       ],
@@ -36763,7 +36776,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "876:10": {
+    "875:10": {
       "preRequisites:11": [
         880
       ],
@@ -36796,7 +36809,7 @@
         }
       }
     },
-    "877:10": {
+    "876:10": {
       "preRequisites:11": [
         876,
         879,
@@ -36817,9 +36830,21 @@
       },
       "questID:3": 878,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 427,
+              "id:8": "gregtech:wire_single"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
-    "878:10": {
+    "877:10": {
       "preRequisites:11": [
         550
       ],
@@ -36832,6 +36857,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.879.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36848,10 +36874,22 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 427,
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
-    "879:10": {
+    "878:10": {
       "preRequisites:11": [
         404,
         881
@@ -36885,7 +36923,7 @@
         }
       }
     },
-    "880:10": {
+    "879:10": {
       "preRequisites:11": [
         199
       ],
@@ -36922,7 +36960,7 @@
         }
       }
     },
-    "881:10": {
+    "880:10": {
       "preRequisites:11": [
         673
       ],
@@ -39758,41 +39796,34 @@
           "y:3": 12
         },
         "141:10": {
-          "id:3": 871,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 294,
-          "y:3": 42
-        },
-        "142:10": {
           "id:3": 872,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": 132
         },
-        "143:10": {
+        "142:10": {
           "id:3": 873,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": 42
         },
-        "144:10": {
+        "143:10": {
           "id:3": 877,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 234,
           "y:3": 72
         },
-        "145:10": {
+        "144:10": {
           "id:3": 880,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 72
         },
-        "146:10": {
+        "145:10": {
           "id:3": 881,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -41159,244 +41190,237 @@
           "y:3": -144
         },
         "43:10": {
-          "id:3": 410,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": -192
-        },
-        "44:10": {
           "id:3": 411,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": -288
         },
-        "45:10": {
+        "44:10": {
           "id:3": 414,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": -240
         },
-        "46:10": {
+        "45:10": {
           "id:3": 415,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": -192
         },
-        "47:10": {
+        "46:10": {
           "id:3": 416,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": -192
         },
-        "48:10": {
+        "47:10": {
           "id:3": 417,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -144
         },
-        "49:10": {
+        "48:10": {
           "id:3": 443,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": -336
         },
-        "50:10": {
+        "49:10": {
           "id:3": 446,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 90
         },
-        "51:10": {
+        "50:10": {
           "id:3": 447,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 90
         },
-        "52:10": {
+        "51:10": {
           "id:3": 453,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -336
         },
-        "53:10": {
+        "52:10": {
           "id:3": 454,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": -336
         },
-        "54:10": {
+        "53:10": {
           "id:3": 455,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 108,
           "y:3": -336
         },
-        "55:10": {
+        "54:10": {
           "id:3": 473,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 288,
           "y:3": -72
         },
-        "56:10": {
+        "55:10": {
           "id:3": 474,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 342,
           "y:3": -72
         },
-        "57:10": {
+        "56:10": {
           "id:3": 482,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -234,
           "y:3": -84
         },
-        "58:10": {
+        "57:10": {
           "id:3": 483,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -186,
           "y:3": -144
         },
-        "59:10": {
+        "58:10": {
           "id:3": 484,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -186,
           "y:3": -84
         },
-        "60:10": {
+        "59:10": {
           "id:3": 485,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -234,
           "y:3": -144
         },
-        "61:10": {
+        "60:10": {
           "id:3": 486,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -138,
           "y:3": -84
         },
-        "62:10": {
+        "61:10": {
           "id:3": 510,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -228,
           "y:3": 48
         },
-        "63:10": {
+        "62:10": {
           "id:3": 515,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 114
         },
-        "64:10": {
+        "63:10": {
           "id:3": 516,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 102,
           "y:3": 126
         },
-        "65:10": {
+        "64:10": {
           "id:3": 517,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 150,
           "y:3": 126
         },
-        "66:10": {
+        "65:10": {
           "id:3": 519,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 132
         },
-        "67:10": {
+        "66:10": {
           "id:3": 520,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 132
         },
-        "68:10": {
+        "67:10": {
           "id:3": 553,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
           "y:3": 42
         },
-        "69:10": {
+        "68:10": {
           "id:3": 565,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
           "y:3": 78
         },
-        "70:10": {
+        "69:10": {
           "id:3": 569,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -120,
           "y:3": 48
         },
-        "71:10": {
+        "70:10": {
           "id:3": 659,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": -192
         },
-        "72:10": {
+        "71:10": {
           "id:3": 710,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -144,
           "y:3": -24
         },
-        "73:10": {
+        "72:10": {
           "id:3": 719,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -228,
           "y:3": -24
         },
-        "74:10": {
+        "73:10": {
           "id:3": 726,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 372,
           "y:3": -288
         },
-        "75:10": {
+        "74:10": {
           "id:3": 727,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 312,
           "y:3": -300
         },
-        "76:10": {
+        "75:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": -288
         },
-        "77:10": {
+        "76:10": {
           "id:3": 729,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -44235,104 +44259,111 @@
           "y:3": 144
         },
         "5:10": {
+          "id:3": 410,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 180,
+          "y:3": 48
+        },
+        "6:10": {
           "id:3": 438,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 96
         },
-        "6:10": {
+        "7:10": {
           "id:3": 580,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": -48
         },
-        "7:10": {
+        "8:10": {
           "id:3": 686,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 96
         },
-        "8:10": {
+        "9:10": {
           "id:3": 718,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 336,
           "y:3": 144
         },
-        "9:10": {
+        "10:10": {
           "id:3": 775,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 336,
           "y:3": 48
         },
-        "10:10": {
+        "11:10": {
           "id:3": 781,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": -96
         },
-        "11:10": {
+        "12:10": {
           "id:3": 782,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 192,
           "y:3": -144
         },
-        "12:10": {
+        "13:10": {
           "id:3": 784,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 48
         },
-        "13:10": {
+        "14:10": {
           "id:3": 786,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 0
         },
-        "14:10": {
+        "15:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 0
         },
-        "15:10": {
+        "16:10": {
           "id:3": 788,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 336,
           "y:3": 0
         },
-        "16:10": {
+        "17:10": {
           "id:3": 789,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": -144
         },
-        "17:10": {
+        "18:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
+          "x:3": 252,
           "y:3": 48
         },
-        "18:10": {
+        "19:10": {
           "id:3": 791,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 336,
           "y:3": 96
         },
-        "19:10": {
+        "20:10": {
           "id:3": 874,
           "sizeX:3": 24,
           "sizeY:3": 24,
