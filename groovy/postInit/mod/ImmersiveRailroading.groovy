@@ -123,6 +123,12 @@ crafting.addShaped("ir_speed_retarder", item('immersiverailroading:item_augment'
 		[null, null, null]
 ]);
 
+// Black Mesa Tunnel Bore * 1
+mods.gregtech.railroad_engineering_station.removeByInput(1920, [metaitem('plateSteel'), metaitem('plateIron')], null)
+// Black Mesa Tunnel Bore * 1
+mods.gregtech.railroad_engineering_station.removeByInput(1920, [item('immersiverailroading:item_rolling_stock')], null)
+
+
 mods.gregtech.bender.recipeBuilder()
 		.circuitMeta(3)
 		.inputs(ore('plateSteel'))
