@@ -65,7 +65,7 @@ def name_removals = [
         "icbmclassic:explosives/emp",
         "icbmclassic:explosives/exothermie",
         "icbmclassic:explosives/endothermic",
-        "icbmclassic:explosives/antigravitational",
+        "icbmclassic:explosives/anti_grav",
         "icbmclassic:explosives/ender",
         "icbmclassic:explosives/hypersonic",
         "icbmclassic:explosives/antimatter",
