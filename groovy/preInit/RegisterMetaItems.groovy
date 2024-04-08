@@ -328,5 +328,11 @@ eventManager.listen {
         customMetaItems.addItem(9001, "crop.cotton");
         customMetaItems.addItem(9002, "stem.cotton");
 
+        // Train Stuff 10000-10100
+
+        customMetaItems.addItem(10000, "tunnelbore.axle")
+        customMetaItems.addItem(10001, "tunnelbore.engine")
+        customMetaItems.addItem(10002, "tunnelbore.drillhead")
+
         log.infoMC("Finished adding metaitems")
 }
