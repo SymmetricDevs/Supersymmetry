@@ -169,12 +169,12 @@ public class UnknownCompositionMaterials {
                 .color(0x6e6e6e)
                 .build();
 
-        CativaProcessPreparation = new Material.Builder(4028, SuSyUtility.susyId('cativa_process_preparation'))
+        CativaCatalystPreparation = new Material.Builder(4028, SuSyUtility.susyId('cativa_catalyst_preparation'))
                 .liquid()
                 .color(0x9c8275)
                 .build();
 
-        CativaProcessSolution = new Material.Builder(4029, SuSyUtility.susyId('cativa_process_solution'))
+        CativaCatalystSolution = new Material.Builder(4029, SuSyUtility.susyId('cativa_catalyst_solution'))
                 .liquid()
                 .color(0x75665e)
                 .build();
@@ -535,11 +535,7 @@ public class UnknownCompositionMaterials {
                 .color(0xbaced6)
                 .build();
 
-        RoastedLepidolite = new Material.Builder(4102, SuSyUtility.susyId('roasted_lepidolite'))
-                .dust()
-                .color(0x443b45)
-                .iconSet(SAND)
-                .build();
+        // FREE ID: 4102
 
         LepidoliteLeach = new Material.Builder(4103, SuSyUtility.susyId('lepidolite_leach'))
                 .liquid()
@@ -612,7 +608,7 @@ public class UnknownCompositionMaterials {
                 .iconSet(SAND)
                 .build();
 
-        CadmiumRichFlue = new Material.Builder(4116, SuSyUtility.susyId('cadmium_rich_flue'))
+        ZincOxideFume = new Material.Builder(4116, SuSyUtility.susyId('zinc_oxide_fume'))
                 .dust()
                 .color(0x757061)
                 .iconSet(DULL)
@@ -717,8 +713,16 @@ public class UnknownCompositionMaterials {
                 .color(0xb03f5d)
                 .build();
 
-        //FREE ID: 4136-4137
-
+        CoconutOil = new Material.Builder(4136, SuSyUtility.susyId('coconut_oil'))
+                .liquid()
+                .color(0xd6d39a)
+                .build();
+                
+        CoconutAcid = new Material.Builder(4137, SuSyUtility.susyId('coconut_acid'))
+                .liquid()
+                .color(0xbdb280)
+                .build();
+                
         TwoEthylhexylPhosphoricAcidMix = new Material.Builder(4138, SuSyUtility.susyId('two_ethylhexyl_phosphoric_acid_mix'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xd1bb75)
@@ -797,16 +801,27 @@ public class UnknownCompositionMaterials {
                 .color(0xdbaf48)
                 .build()
 
-        //FREE ID: 4153
+        GermaniumRichOxide = new Material.Builder(4153, SuSyUtility.susyId('germanium_rich_oxide'))
+                .dust()
+                .color(0x7b9a9e)
+                .build()
 
         UnprocessedSphaleriteSlurry = new Material.Builder(4154, SuSyUtility.susyId('unprocessed_sphalerite_slurry'))
                 .liquid()
                 .color(0xc7c991)
                 .build()
 
-        //FREE ID: 4155-4156
+        CocoAmine = new Material.Builder(4155, SuSyUtility.susyId('coco_amine'))
+                .liquid()
+                .color(0xb4d487)
+                .build()
 
-        ThalliumRichFlue = new Material.Builder(4157, SuSyUtility.susyId('thallium_rich_flue'))
+        CocoAmineAcetate = new Material.Builder(4156, SuSyUtility.susyId('coco_amine_acetate'))
+                .liquid()
+                .color(0xada67b)
+                .build()
+                
+        ZincFlue = new Material.Builder(4157, SuSyUtility.susyId('zinc_flue'))
                 .dust()
                 .color(0x26222e)
                 .build()
@@ -838,12 +853,12 @@ public class UnknownCompositionMaterials {
                 .color(0xb89e8a)
                 .build()
 
-        HotZincLeachResidue = new Material.Builder(4165, SuSyUtility.susyId('hot_zinc_leach_residue'))
+        LeadSilicaResidue = new Material.Builder(4165, SuSyUtility.susyId('lead_silica_residue'))
                 .dust()
                 .color(0x3b332d)
                 .build()
 
-        ZincRichSlag = new Material.Builder(4166, SuSyUtility.susyId('zinc_rich_slag'))
+        WaelzSlag = new Material.Builder(4166, SuSyUtility.susyId('waelz_slag'))
                 .dust()
                 .color(0x242323)
                 .build()
@@ -858,10 +873,7 @@ public class UnknownCompositionMaterials {
                 .color(0x475453)
                 .build()
 
-        GermaniumRichSlag = new Material.Builder(4169, SuSyUtility.susyId('germanium_rich_slag'))
-                .dust()
-                .color(0x2d2e27)
-                .build()
+        //FREE ID: 4169
 
         ZincCementationSlurry = new Material.Builder(4170, SuSyUtility.susyId('zinc_cementation_slurry'))
                 .liquid()
@@ -908,7 +920,7 @@ public class UnknownCompositionMaterials {
                 .color(0x151521)
                 .build()
 
-        CadmiumRichFlueGas = new Material.Builder(4179, SuSyUtility.susyId('cadmium_rich_flue_gas'))
+        ZincOxideFumeGas = new Material.Builder(4179, SuSyUtility.susyId('zinc_oxide_fume_gas'))
                 .gas(new FluidBuilder().temperature(1000))
                 .color(0x757061)
                 .build();
@@ -918,7 +930,7 @@ public class UnknownCompositionMaterials {
                 .color(0x707063)
                 .build();
 
-        ThalliumRichFlueGas = new Material.Builder(4181, SuSyUtility.susyId('thallium_rich_flue_gas'))
+        ZincFlueGas = new Material.Builder(4181, SuSyUtility.susyId('zinc_flue_gas'))
                 .gas(new FluidBuilder().temperature(1000))
                 .color(0x26222e)
                 .build()
@@ -1107,16 +1119,19 @@ public class UnknownCompositionMaterials {
         MidgradeGasoline = new Material.Builder(4222, SuSyUtility.susyId('midgrade_gasoline'))
                 .liquid()
                 .color(0xc49735)
+                .flags(FLAMMABLE)
                 .build();
 
         PremiumGasoline = new Material.Builder(4223, SuSyUtility.susyId('premium_gasoline'))
                 .liquid()
                 .color(0xdb8427)
+                .flags(FLAMMABLE)
                 .build();
 
         SupremeGasoline = new Material.Builder(4224, SuSyUtility.susyId('supreme_gasoline'))
                 .liquid()
                 .color(0xf26d1b)
+                .flags(FLAMMABLE)
                 .build();
 
         //FREE IDs: 4225-4231
@@ -1133,7 +1148,7 @@ public class UnknownCompositionMaterials {
                 .color(0xc88a41)
                 .build();
 
-        AcidicWastewater.setFormula('(H20)(?)', true);
+        AcidicWastewater.setFormula('(H2O)(?)', true);
 
         DirtyMolecularSieve = new Material.Builder(4234, SuSyUtility.susyId('dirty_molecular_sieve'))
                 .dust()
@@ -1590,31 +1605,37 @@ public class UnknownCompositionMaterials {
         MidgradeDiesel = new Material.Builder(4361, SuSyUtility.susyId('midgrade_diesel'))
                 .liquid()
                 .color(0xc4a535)
+                .flags(FLAMMABLE)
                 .build();
 
         PremiumDiesel = new Material.Builder(4362, SuSyUtility.susyId('premium_diesel'))
                 .liquid()
                 .color(0xd1aa1d)
+                .flags(FLAMMABLE)
                 .build();
 
         SupremeDiesel = new Material.Builder(4363, SuSyUtility.susyId('supreme_diesel'))
                 .liquid()
                 .color(0xdb9a16)
+                .flags(FLAMMABLE)
                 .build();
 
         MidgradeKerosene = new Material.Builder(4364, SuSyUtility.susyId('midgrade_kerosene'))
                 .liquid()
                 .color(0xa8a44a)
+                .flags(FLAMMABLE)
                 .build();
 
         PremiumKerosene = new Material.Builder(4365, SuSyUtility.susyId('premium_kerosene'))
                 .liquid()
                 .color(0xbab541)
+                .flags(FLAMMABLE)
                 .build();
 
         SupremeKerosene = new Material.Builder(4366, SuSyUtility.susyId('supreme_kerosene'))
                 .liquid()
                 .color(0xd9c148)
+                .flags(FLAMMABLE)
                 .build();
 
         SAPOEleven = new Material.Builder(4367, SuSyUtility.susyId('sapo_eleven'))
@@ -1753,13 +1774,13 @@ public class UnknownCompositionMaterials {
                 .build();
 
         Cotton.setFormula('C6H5(OH)4OH', true)
-        Cotton.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+        Cotton.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false, false))
 
         Spandex = new Material.Builder(4394, SuSyUtility.susyId("spandex"))
                 .color(0x625f8a)
                 .build();
 
-        Spandex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false))
+        Spandex.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, false, true))
 
         PolyurethanePolymerizationMix = new Material.Builder(4395, SuSyUtility.susyId("polyurethane_polymerization_mix"))
                 .liquid()
@@ -1787,10 +1808,124 @@ public class UnknownCompositionMaterials {
                 .iconSet(ROUGH)
                 .build();
 
-        WaferTreatmentAcid = new Material.Builder(4400, SuSyUtility.susyId("wafer_treatment_acid"))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(HydrochloricAcid, 9, HydrofluoricAcid, 9, AceticAcid, 2)
-                .color(0x3e7d68)
+        ImpureCadmiumSulfateSolution = new Material.Builder(4400, SuSyUtility.susyId("impure_cadmium_sulfate_solution"))
+                .liquid()
+                .color(0x6f8485)
                 .build();
+
+        TannicAcidSolution = new Material.Builder(4401, SuSyUtility.susyId("tannic_acid_solution"))
+                .liquid()
+                .color(0x702507)
+                .build();
+
+        GermaniumLeach = new Material.Builder(4402, SuSyUtility.susyId("germanium_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x7ecccb)
+                .build();
+
+        GermaniumConcentrate = new Material.Builder(4403, SuSyUtility.susyId("germanium_concentrate"))
+                .dust()
+                .color(0x6ca3a2)
+                .build();
+
+        ImpureGermaniumTetrachloride = new Material.Builder(4404, SuSyUtility.susyId("impure_germanium_tetrachloride"))
+                .gas(new FluidBuilder().temperature(360))
+                .color(0xc3ded9)
+                .build();
+
+        GermaniumOxalateLeach = new Material.Builder(4405, SuSyUtility.susyId("germanium_oxalate_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x476f91)
+                .build();
+
+        PurifiedGermaniumOxalateLeach = new Material.Builder(4406, SuSyUtility.susyId("purified_germanium_oxalate_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x52809c)
+                .build();
+
+        GermaniumGalliumExtractionMixture = new Material.Builder(4407, SuSyUtility.susyId("germanium_gallium_extraction_mixture"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x7657b5)
+                .build();
+
+        GermaniumGalliumExtract = new Material.Builder(4408, SuSyUtility.susyId("germanium_gallium_extract"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x5a56a3)
+                .build();
+
+        GermaniumExtract = new Material.Builder(4409, SuSyUtility.susyId("germanium_extract"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x6e59b5)
+                .build();
+
+        GermaniumOxalateSolution = new Material.Builder(4410, SuSyUtility.susyId("germanium_oxalate_solution"))
+                .liquid()
+                .color(0x8b78cc)
+                .build();
+
+        CrudeIndiumIIIHydroxide = new Material.Builder(4411, SuSyUtility.susyId("crude_indium_iii_hydroxide"))
+                .dust()
+                .color(0x5618ad)
+                .build();
+
+        IndiumResidue = new Material.Builder(4412, SuSyUtility.susyId("indium_residue"))
+                .dust()
+                .color(0x7d41b5)
+                .build();
+
+        IndiumLeach = new Material.Builder(4413, SuSyUtility.susyId("indium_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x7418ad)
+                .build();
+
+        CrudeIndiumIIISulfateSolution = new Material.Builder(4414, SuSyUtility.susyId("crude_indium_iii_sulfate_solution"))
+                .liquid()
+                .color(0xab18ad)
+                .build();
+
+        SulfatizedLeadSlime = new Material.Builder(4415, SuSyUtility.susyId("sulfatized_lead_slime"))
+                .dust()
+                .color(0x522a44)
+                .build();
+
+        ImpureIndiumLeach = new Material.Builder(4416, SuSyUtility.susyId("impure_indium_leach"))
+                .liquid()
+                .color(0x853579)
+                .build();
+
+        ZincHydrochloricLeachResidue = new Material.Builder(4417, SuSyUtility.susyId("zinc_hydrochloric_leach_residue"))
+                .dust()
+                .color(0x4a3b2f)
+                .build()
+
+        CopperAnodeSlimePaste = new Material.Builder(4418, SuSyUtility.susyId("copper_anode_slime_paste"))
+                .liquid()
+                .color(0x706b36)
+                .build()
+
+        SeleniumTelluriumConcentrate = new Material.Builder(4419, SuSyUtility.susyId("selenium_tellurium_concentrate"))
+                .dust()
+                .color(0x9bbf77)
+                .build()
+
+        TelluriumResidue = new Material.Builder(4420, SuSyUtility.susyId("tellurium_residue"))
+                .dust()
+                .color(0x688767)
+                .build()
+
+        TelluriumSlag = new Material.Builder(4421, SuSyUtility.susyId("tellurium_slag"))
+                .dust()
+                .color(0x98bf97)
+                .build()
+
+        PolluciteLeach = new Material.Builder(4422, SuSyUtility.susyId("pollucite_leach"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x8fa8cf)
+                .build()
+
+        CaesiumRubidiumAlumMixture = new Material.Builder(4423, SuSyUtility.susyId("caesium_rubidium_alum_mixture"))
+                .dust()
+                .color(0x631a87)
+                .build()
     }
 }

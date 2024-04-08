@@ -286,14 +286,14 @@ for (refrigerant in Refrigerants) {
     recipemap('fluid_decompressor').recipeBuilder()
             .fluidInputs(liquid(refrigerant.comp_refrigerant) * refrigerant.amount_to_use)
             .fluidOutputs(liquid(refrigerant.cold_refrigerant) * refrigerant.amount_to_use)
-            .EUt(8)
+            .EUt(Globals.voltAmps[0])
             .duration(refrigerant.duration)
             .buildAndRegister();
 
     //Radiative Cooling
     recipemap('radiator').recipeBuilder()
-            .fluidInputs(liquid(refrigerant.hot_refrigerant) * refrigerant.amount_to_use)
-            .fluidOutputs(liquid(refrigerant.comp_refrigerant) * refrigerant.amount_to_use)
+            .fluidInputs(liquid(refrigerant.hot_refrigerant) * (refrigerant.amount_to_use / 10))
+            .fluidOutputs(liquid(refrigerant.comp_refrigerant) * (refrigerant.amount_to_use / 10))
             .duration(refrigerant.duration_radiator)
             .buildAndRegister();
 
@@ -301,22 +301,22 @@ for (refrigerant in Refrigerants) {
             .fluidInputs(liquid(refrigerant.hot_refrigerant) * refrigerant.amount_to_use)
             .fluidOutputs(liquid(refrigerant.comp_refrigerant) * refrigerant.amount_to_use)
             .duration((int) (refrigerant.duration_radiator / 2))
-            .EUt(480)
+            .EUt(Globals.voltAmps[3])
             .buildAndRegister();
 
     recipemap('cooling_unit').recipeBuilder()
             .fluidInputs(liquid(refrigerant.comp_refrigerant) * refrigerant.amount_to_use)
             .fluidOutputs(liquid(refrigerant.cold_refrigerant) * refrigerant.amount_to_use)
             .duration((int) (refrigerant.duration_radiator / 2))
-            .EUt(480)
+            .EUt(Globals.voltAmps[3])
             .buildAndRegister();
 }
 
 //Coolant recipes generation
 for (coolant in Coolants) {
     recipemap('radiator').recipeBuilder()
-            .fluidInputs(liquid(coolant.warm_coolant) * coolant.amount_to_use)
-            .fluidOutputs(liquid(coolant.cold_coolant) * coolant.amount_to_use)
+            .fluidInputs(liquid(coolant.warm_coolant) * (coolant.amount_to_use / 10))
+            .fluidOutputs(liquid(coolant.cold_coolant) * (coolant.amount_to_use / 10))
             .duration(coolant.duration_radiator)
             .buildAndRegister();
 
@@ -361,21 +361,31 @@ for (cryogas in CryoGases) {
             .fluidInputs(liquid(cryogas.cold_high_pressure_gas) * 1280)
             .fluidOutputs(liquid(cryogas.liquid_gas) * 20)
             .duration(20)
-            .EUt(8)
+            .EUt(Globals.voltAmps[0])
             .buildAndRegister();
 
     //Reheating
     recipemap('fluid_heater').recipeBuilder()
+            .circuitMeta(1)
             .fluidInputs(liquid(cryogas.liquid_gas) * 20)
             .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * 1280)
             .duration(20)
-            .EUt(8)
+            .EUt(Globals.voltAmps[0])
+            .buildAndRegister();
+
+    //Boiling
+    recipemap('fluid_heater').recipeBuilder()
+            .circuitMeta(2)
+            .fluidInputs(liquid(cryogas.liquid_gas) * 20)
+            .fluidOutputs(liquid(cryogas.normal_gas) * 1280)
+            .duration(2)
+            .EUt(Globals.voltAmps[3])
             .buildAndRegister();
 
     //Radiative Cooling
     recipemap('radiator').recipeBuilder()
-            .fluidInputs(liquid(cryogas.hot_high_pressure_gas) * cryogas.amount_to_use)
-            .fluidOutputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
+            .fluidInputs(liquid(cryogas.hot_high_pressure_gas) * (cryogas.amount_to_use / 10))
+            .fluidOutputs(liquid(cryogas.high_pressure_gas) * (cryogas.amount_to_use / 10))
             .duration((int)(cryogas.duration_heat_exchanger * 5 / 2))
             .buildAndRegister();
 
@@ -383,7 +393,7 @@ for (cryogas in CryoGases) {
             .fluidInputs(liquid(cryogas.hot_high_pressure_gas) * cryogas.amount_to_use)
             .fluidOutputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
             .duration(cryogas.duration_heat_exchanger)
-            .EUt(480)
+            .EUt(Globals.voltAmps[3])
             .buildAndRegister();
 
     /*if (!cryogas.needsAdvancedCooling) {
@@ -391,7 +401,7 @@ for (cryogas in CryoGases) {
         .fluidInputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
         .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * cryogas.amount_to_use)
         .duration(cryogas.duration_heat_exchanger * 2)
-        .EUt(480)
+        .EUt(Globals.voltAmps[3])
         .buildAndRegister();
 
     } else {
@@ -796,8 +806,8 @@ for (WorkingFluid in WorkingFluids) {
             .buildAndRegister();
 
     recipemap('radiator').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor * 16))
-            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use * 16))
+            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor * 2))
+            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use * 2))
             .duration(WorkingFluid.duration)
             .EUt(8)
             .buildAndRegister();

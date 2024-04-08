@@ -119,6 +119,7 @@ public class PetrochemistryMaterials {
         Kerosene = new Material.Builder(20020, SuSyUtility.susyId('kerosene'))
                 .liquid()
                 .color(0xd6cf3a)
+                .flags(FLAMMABLE)
                 .build();
 
         SulfuricGasoline = new Material.Builder(20021, SuSyUtility.susyId('sulfuric_gasoline'))
@@ -134,11 +135,13 @@ public class PetrochemistryMaterials {
         FuelOil = new Material.Builder(20023, SuSyUtility.susyId('fuel_oil'))
                 .liquid()
                 .color(0x9e9a4f)
+                .flags(FLAMMABLE)
                 .build();
 
         LubricatingOil = new Material.Builder(20024, SuSyUtility.susyId('lubricating_oil'))
                 .liquid()
                 .color(0x858146)
+                .flags(FLAMMABLE)
                 .build();
 
         SlackWax = new Material.Builder(20025, SuSyUtility.susyId('slack_wax'))
@@ -249,6 +252,7 @@ public class PetrochemistryMaterials {
         Syngas = new Material.Builder(20061, SuSyUtility.susyId('syngas'))
                 .gas()
                 .color(0xf2ecdc)
+                .flags(FLAMMABLE)
                 .build()
                 .setFormula('(H)6(CO)', true);
 
@@ -318,12 +322,12 @@ public class PetrochemistryMaterials {
                 .build();
 
         CFiveFraction = new Material.Builder(20075, SuSyUtility.susyId('c_five_fraction'))
-                .fluid()
+                .liquid()
                 .color(0x9c8638)
                 .build();
 
         DimerizedCFiveFraction = new Material.Builder(20076, SuSyUtility.susyId('dimerized_c_five_fraction'))
-                .fluid()
+                .liquid()
                 .color(0x9c9538)
                 .build();
     }

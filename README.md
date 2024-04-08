@@ -13,6 +13,7 @@ Based off of ideas by [Zalgo](https://github.com/Zalgo239), [Gaming](https://git
 [Core mod](https://github.com/SymmetricDevs/Susy-Core) work by [MTBO](https://github.com/loxoDev), [beanie](https://github.com/BestMod), [Gaming](https://github.com/swagxdragonslayer46yt), [Eight](https://github.com/EightXOR8) and [bruberu](https://github.com/bruberu).
 Quests by [Regian](https://github.com/Regian24) et al.
 Textures and artwork by [GDCM05](https://github.com/gdcm05) et al.
+Part of the main menu music (menu3.ogg and menu4.ogg) by [Ayden George](https://www.youtube.com/@ayden_george_official).
 
 Special thanks to our volunteers:
 - tots • Research
@@ -25,11 +26,13 @@ Special thanks to our volunteers:
 - StarL0st • [Space mod](https://github.com/SymmetricDevs/GregicalityStarbound)
 - super • Misc development
 - SuperObama • Consultant
-- trainvoi • Research/Playtesting
-- ZombieZilla • Research/Playtesting
-- Tian-mi • Chinese translation
+- trainvoi • Research and Quests
+- ZombieZilla • Research
+- Tian-mi • Chinese translation and misc development
 - Roque_Crafter • Portuguese translation
-- Lavinia • Textures
+- kubuus • Polish translation
+- Whatsapp • Structures, textures and feedback
+- Science Demon • Questbook work, German translation and bug fixes
 
 ## Building the pack
 You'll need python3 and python requests installed to build run the main.py script.
