@@ -158,30 +158,36 @@ mods.gregtech.assembler.recipeBuilder()
 		.EUt(480)
 		.buildAndRegister()
 
-
-mods.gregtech.forge_hammer.recipeBuilder()
-		.inputs(ore('stickLongSteel') * 2)
-		.outputs(metaitem('tunnelbore.axle'))
-		.duration(300)
-		.EUt(30)
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('component.grinder.diamond') * 4)
+		.inputs(ore('gearSteel') * 4)
+		.inputs(ore('plateDoubleSteel') * 16)
+		.outputs(metaitem('tunnelbore.drillhead'))
+		.duration(200)
+		.EUt(120)
 		.buildAndRegister()
 
-mods.gregtech.
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('stickAluminium') * 32)
+		.inputs(ore('gearAluminium') * 4)
+		.inputs(ore('gearSmallAluminium') * 4)
+		.outputs(metaitem('tunnelbore.axle'))
+		.duration(200)
+		.EUt(120)
+		.buildAndRegister()
 
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('electric.motor.mv') * 8)
+		.inputs(ore('wireFineCopper') * 64)
+		.inputs(ore('gearAluminium') * 4)
+		.inputs(ore('gearSmallAluminium') * 4)
+		.fluidInputs(fluid('lubricant') * 8000)
+		.outputs(metaitem('tunnelbore.engine'))
+		.duration(200)
+		.EUt(120)
+		.buildAndRegister()
+		
 Globals.solders.each { key, val ->
-
-	mods.gregtech.assembler.recipeBuilder()
-			.fluidInputs(fluid(key) * (val * 4))
-			.inputs(ore('wireGtSingleCopper') * 128)
-			.inputs(metaitem('stickSteelMagnetic') * 4)
-			.inputs(ore('plateSteel') * 12)
-			.inputs(ore('gearSteel'))
-			.inputs(ore('gearSmallSteel'))
-			.inputs(ore('stickSteel') * 2)
-			.outputs(metaitem('tunnelbore.engine'))
-			.duration(100)
-			.EUt(30)
-			.buildAndRegister()
 
 	TagCompound tag = new TagCompound();
 
@@ -289,7 +295,6 @@ Globals.solders.each { key, val ->
 		.inputs(metaitem('crate.steel'))
 		.inputs(ore('plateSteel') * 16)
 		.inputs(ore('stickLongSteel') * 8)
-		// TODO: Add axle, drillbit and high duty engine to craft
 		.inputs(metaitem('tunnelbore.axle'))
 		.inputs(metaitem('tunnelbore.drillhead'))
 		.inputs(metaitem('tunnelbore.engine'))
