@@ -158,6 +158,34 @@ mods.gregtech.assembler.recipeBuilder()
 		.EUt(480)
 		.buildAndRegister()
 
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('component.grinder.diamond') * 4)
+		.inputs(ore('gearSteel') * 4)
+		.inputs(ore('plateDoubleSteel') * 16)
+		.outputs(metaitem('locomotive.drillhead'))
+		.duration(200)
+		.EUt(120)
+		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('stickAluminium') * 32)
+		.inputs(ore('gearAluminium') * 4)
+		.inputs(ore('gearSmallAluminium') * 4)
+		.outputs(metaitem('locomotive.axle'))
+		.duration(200)
+		.EUt(120)
+		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('electric.motor.mv') * 8)
+		.inputs(ore('wireFineCopper') * 64)
+		.inputs(ore('gearAluminium') * 4)
+		.inputs(ore('gearSmallAluminium') * 4)
+		.fluidInputs(fluid('lubricant') * 8000)
+		.duration(200)
+		.EUt(120)
+		.buildAndRegister()
+		
 
 Globals.solders.each { key, val ->
 
@@ -265,9 +293,11 @@ Globals.solders.each { key, val ->
 		.inputs(metaitem('battery_buffer.lv.4'))
 		.inputs(metaitem('conveyor.module.lv') * 8)
 		.inputs(metaitem('crate.steel'))
+		.inputs(metaitem('locomotive.engine'))
+		.inputs(metaitem('locomotive.axle'))
+		.inputs(metaitem('locomotive.drillhead'))
 		.inputs(ore('plateSteel') * 16)
 		.inputs(ore('stickLongSteel') * 8)
-		// TODO: Add axle, drillbit and high duty engine to craft
 		.fluidInputs(fluid(key) * (val * 10))
 		.outputs(is5.internal)
 		.EUt(30)
