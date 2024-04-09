@@ -2135,22 +2135,6 @@ metaitem.drone.lv.name=Basic Drone
 metaitem.glass_fibers.name=Glass Fibers
 metaitem.epoxy_lamina.name=Epoxy Lamina
 
-# Multiblocked
-
-tile.multiblocked.item_input.name=Small Input Bus
-tile.multiblocked.item_output.name=Small Output Bus
-tile.multiblocked.fluid_input.name=Small Input Hatch
-tile.multiblocked.fluid_output.name=Small Output Hatch
-
-tile.multiblocked.item_input.description=Item Input for Multiblocked Multiblocks
-tile.multiblocked.item_output.description=Item Output Multiblocked Multiblocks
-tile.multiblocked.fluid_input.description=Fluid Input for Multiblocked Multiblocks
-tile.multiblocked.fluid_output.description=Fluid Output for Multiblocked Multiblocks
-
-tile.multiblocked.ore_sorter.name=Ore Sorter
-multiblocked.ore_sorter.name=Ore Sorter
-multiblocked.ore_sorter.description=Sorts Ores.
-
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
 tile.magma.name=Magma-Infused Netherrack
