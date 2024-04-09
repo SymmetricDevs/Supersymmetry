@@ -2351,6 +2351,10 @@ metaitem.stencil.pcb.name=PCB Stencil
 metaitem.stencil.ulpic.name=ULPIC Stencil
 metaitem.stencil.lpic.name=LPIC Stencil
 
+metaitem.tunnelbore.axle.name=Drilling Axle
+metaitem.tunnelbore.engine.name=Heavy Duty Drilling Engine
+metaitem.tunnelbore.drillhead.name=Tunnel Bore Drill Head
+
 # Multiblocked
 
 tile.multiblocked.item_input.name=Small Input Bus

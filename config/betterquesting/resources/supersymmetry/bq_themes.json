@@ -16,21 +16,21 @@
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [40, 24, 8, 8],
 				"padding": [2, 2, 2, 2],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:btn_normal_1": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [32, 24, 8, 8],
 				"padding": [2, 2, 2, 2],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:btn_normal_2": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [32, 32, 8, 8],
 				"padding": [2, 2, 2, 2],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:scroll_v_bg": {
 				"textureType": "betterquesting:texture_sliced",
@@ -100,77 +100,77 @@
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [32, 24, 8, 8],
 				"padding": [2, 2, 2, 2],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:panel_inner": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [32, 24, 8, 8],
 				"padding": [2, 2, 2, 2],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:tooltip_bg": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [32, 24, 8, 8],
 				"padding": [2, 2, 2, 2],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:quest_norm_0": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [0, 0, 24, 24],
 				"padding": [8, 8, 8, 8],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:quest_norm_1": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [0, 0, 24, 24],
 				"padding": [8, 8, 8, 8],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:quest_norm_2": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [0, 0, 24, 24],
 				"padding": [8, 8, 8, 8],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:quest_norm_3": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [0, 0, 24, 24],
 				"padding": [8, 8, 8, 8],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:quest_main_0": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [24, 0, 24, 24],
 				"padding": [11, 5, 11, 5],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:quest_main_1": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [24, 0, 24, 24],
 				"padding": [11, 5, 11, 5],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:quest_main_2": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [24, 0, 24, 24],
 				"padding": [11, 5, 11, 5],
-				"sliceMode": 1
+				"sliceMode": 2
 			},
 			"betterquesting:quest_main_3": {
 				"textureType": "betterquesting:texture_sliced",
 				"atlas": "supersymmetry:textures/gui/supersymmetry_gui.png",
 				"bounds": [24, 0, 24, 24],
 				"padding": [11, 5, 11, 5],
-				"sliceMode": 1
+				"sliceMode": 2
 			}
 		},
 		"colors": {
