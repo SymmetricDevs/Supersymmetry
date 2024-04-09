@@ -3280,7 +3280,7 @@ public class FirstDegreeMaterials {
                 .color(0xb0d4c6)
                 .build()
 
-        SodiumTelluriteSolution.setFormula("(Na2TeO3)(H2O)3")
+        SodiumTelluriteSolution.setFormula("(Na2TeO3)(H2O)3", true)
 
         SodiumAlum = new Material.Builder(8610, SuSyUtility.susyId("sodium_alum"))
                 .dust()
