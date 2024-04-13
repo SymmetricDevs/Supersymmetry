@@ -724,7 +724,7 @@ public class OrganicChemistryMaterials {
                 .build()
                 .setFormula('(CH3)2NCH', true);
 
-        CativaProcessCatalyst = new Material.Builder(15128, SuSyUtility.susyId('cativa_process_catalyst'))
+        CativaCatalyst = new Material.Builder(15128, SuSyUtility.susyId('cativa_catalyst'))
                 .dust()
                 .color(0x695449)
                 .build()
@@ -2480,7 +2480,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         Acrolein = new Material.Builder(15402, SuSyUtility.susyId('acrolein'))
-                .fluid()
+                .liquid()
                 .components(Carbon, 3, Hydrogen, 4, Oxygen, 1)
                 .color(0x389c7a)
                 .build();
@@ -2489,6 +2489,45 @@ public class OrganicChemistryMaterials {
                 .liquid(new FluidBuilder().temperature(306))
                 .components(Carbon, 10, Hydrogen, 12)
                 .color(0x9c388b)
+                .build();
+
+        SodiumMethoxide = new Material.Builder(15404, SuSyUtility.susyId('sodium_methoxide'))
+                .dust()
+                .components(Carbon, 1, Hydrogen, 3, Oxygen, 1, Sodium, 1)
+                .color(0xd19c21)
+                .build();
+
+        NeutralizedMethylFormateSolution = new Material.Builder(15405, SuSyUtility.susyId('neutralized_methyl_formate_solution'))
+                .liquid()
+                .color(0x6b3f58)
+                .build();
+
+        HydrolyzedMethylFormateSolution = new Material.Builder(15406, SuSyUtility.susyId('hydrolyzed_methyl_formate_solution'))
+                .liquid(new FluidBuilder().attributes(FluidAttributes.ACID))
+                .color(0x91436e)
+                .build();
+
+        EthylAcetate = new Material.Builder(15407, SuSyUtility.susyId('ethyl_acetate'))
+                .liquid()
+                .components(Carbon, 4, Hydrogen, 8, Oxygen, 2)
+                .color(0xa5c773)
+                .build();
+
+        FormicAcid = new Material.Builder(15408, SuSyUtility.susyId('formic_acid'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Carbon, 1, Hydrogen, 2, Oxygen, 2)
+                .color(0xbf395b)
+                .build();
+
+        MethylFormateSolution = new Material.Builder(15409, SuSyUtility.susyId('methyl_formate_solution'))
+                .liquid()
+                .color(0x915161)
+                .build();
+
+        PolyvinylAlcohol = new Material.Builder(15410, SuSyUtility.susyId('polyvinyl_alcohol'))
+                .dust()
+                .components(Carbon, 2, Hydrogen, 4, Oxygen, 1)
+                .color(0xd4984e)
                 .build();
     }
 }

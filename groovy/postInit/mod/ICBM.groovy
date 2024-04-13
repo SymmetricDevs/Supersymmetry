@@ -2,7 +2,8 @@ import classes.*;
 import globals.Globals
 
 def name_removals = [
-        "icbmclassic:missile/vanilla/missile.module",
+        "icbmclassic:missile/missile.module",
+        "icbmclassic:parts/vanilla/saltpeter",
         "icbmclassic:launcher/base/base.tier.1",
         "icbmclassic:launcher/base/base.tier.2",
         "icbmclassic:launcher/base/base.tier.3",
@@ -12,86 +13,95 @@ def name_removals = [
         "icbmclassic:launcher/screen/screen.tier.1",
         "icbmclassic:launcher/screen/screen.tier.2",
         "icbmclassic:launcher/screen/screen.tier.3",
-        "icbmclassic:missile/ex/missile.anvil",
-        "icbmclassic:missile/ex/missile.replusive", //This mispelling is intentional since the ICBM creator mispelled it
-        "icbmclassic:missile/ex/missile.attractive",
-        "icbmclassic:missile/ex/missile.deblitationl", //This mispelling is intentional since the ICBM creator mispelled it
-        "icbmclassic:missile/ex/missile.sonic",
-        "icbmclassic:missile/ex/missile.antimatter",
-        "icbmclassic:missile/ex/missile.incendiary",
-        "icbmclassic:missile/ex/missile.redmatter",
-        "icbmclassic:missile/ex/missile.fragmentation",
-        "icbmclassic:missile/ex/missile.breaching",
-        "icbmclassic:missile/ex/missile.thermobaric",
-        "icbmclassic:missile/ex/missile.exothermic",
-        "icbmclassic:missile/ex/missile.shrapnel",
-        "icbmclassic:missile/ex/missile.ender",
-        "icbmclassic:missile/ex/missile.emp",
-        "icbmclassic:missile/ex/missile.endothermic",
-        "icbmclassic:missile/ex/missile.contagious",
-        "icbmclassic:missile/ex/missile.debilitation",
-        "icbmclassic:missile/ex/missile.nuclear",
-        "icbmclassic:missile/ex/missile.conventional",
-        "icbmclassic:missile/ex/missile.anti_grav",
-        "icbmclassic:missile/ex/missile.chemical",
-        "icbmclassic:missile/ex/missile.hypersonic",
+        "icbmclassic:missile/ex/condensed",
+        "icbmclassic:missile/ex/shrapnel",
+        "icbmclassic:missile/ex/incendiary",
+        "icbmclassic:missile/ex/debilitation",
+        "icbmclassic:missile/ex/chemical",
+        "icbmclassic:missile/ex/anvil",
+        "icbmclassic:missile/ex/repulsive",
+        "icbmclassic:missile/ex/attractive",
+        "icbmclassic:missile/ex/fragmentation",
+        "icbmclassic:missile/ex/contagious",
+        "icbmclassic:missile/ex/sonic",
+        "icbmclassic:missile/ex/breaching",
+        "icbmclassic:missile/ex/colors",
+        "icbmclassic:missile/ex/thermobaric",
+        "icbmclassic:missile/ex/smoke",
+        "icbmclassic:missile/ex/nuclear",
+        "icbmclassic:missile/ex/emp",
+        "icbmclassic:missile/ex/exothermie",
+        "icbmclassic:missile/ex/endothermic",
+        "icbmclassic:missile/ex/antigravitational",
+        "icbmclassic:missile/ex/ender",
+        "icbmclassic:missile/ex/hypersonic",
+        "icbmclassic:missile/ex/antimatter",
+        "icbmclassic:missile/ex/redmatter",
+        "icbmclassic:missile/special/missile.anti_ballistic",
         "icbmclassic:tools/defuser",
         "icbmclassic:tools/radargun",
         "icbmclassic:tools/rpg",
         "icbmclassic:tools/tracker",
         "icbmclassic:tools/remote",
         "icbmclassic:tools/laser",
+        "icbmclassic:machine/radar",
         "icbmclassic:machine/cruiselauncher",
         "icbmclassic:explosives/condensed",
         "icbmclassic:explosives/shrapnel",
         "icbmclassic:explosives/incendiary",
-        "icbmclassic:explosives/attractive",
-        "icbmclassic:explosives/repulsive",
-        "icbmclassic:explosives/anvil",
-        "icbmclassic:explosives/fragmentation",
-        "icbmclassic:explosives/nuclear",
-        "icbmclassic:explosives/antimatter",
         "icbmclassic:explosives/debilitation",
         "icbmclassic:explosives/chemical",
+        "icbmclassic:explosives/anvil",
+        "icbmclassic:explosives/repulsive",
+        "icbmclassic:explosives/attractive",
+        "icbmclassic:explosives/fragmentation",
         "icbmclassic:explosives/contagious",
         "icbmclassic:explosives/sonic",
         "icbmclassic:explosives/breaching",
+        "icbmclassic:explosives/colors",
         "icbmclassic:explosives/thermobaric",
-        "icbmclassic:explosives/exothermic",
+        "icbmclassic:explosives/smoke",
+        "icbmclassic:explosives/nuclear",
+        "icbmclassic:explosives/emp",
+        "icbmclassic:explosives/exothermie",
         "icbmclassic:explosives/endothermic",
         "icbmclassic:explosives/anti_grav",
         "icbmclassic:explosives/ender",
         "icbmclassic:explosives/hypersonic",
-        "icbmclassic:grenades/grenade",
-        "icbmclassic:grenades/grenade.1",
-        "icbmclassic:grenades/grenade.2",
-        "icbmclassic:grenades/grenade.3",
-        "icbmclassic:grenades/grenade.4",
-        "icbmclassic:grenades/grenade.5",
-        "icbmclassic:grenades/grenade.6",
-        "icbmclassic:grenades/grenade.7",
+        "icbmclassic:explosives/antimatter",
+        "icbmclassic:explosives/redmatter",
+        "icbmclassic:grenades/condensed",
+        "icbmclassic:grenades/shrapnel",
+        "icbmclassic:grenades/incendiary",
+        "icbmclassic:grenades/debilitation",
+        "icbmclassic:grenades/chemical",
+        "icbmclassic:grenades/anvil",
+        "icbmclassic:grenades/repulsive",
+        "icbmclassic:grenades/attractive",
+        "icbmclassic:grenades/colors",
+        "icbmclassic:grenades/smoke",
         "icbmclassic:antidote",
         "icbmclassic:concrete",
         "icbmclassic:concrete.1",
-        "icbmclassic:concrete.2"
+        "icbmclassic:concrete.2",
 ]
 
 for (item in name_removals) {
-    crafting.remove(item);
+        crafting.remove(item);
 }
 
 for (var i = 0; i < 8; i++) {
-    recipemap('weapons_factory').recipeBuilder()
-            .inputs([
-                    item('icbmclassic:explosives', i),
-                    metaitem('plateSteel'),
-                    metaitem('ringSteel') * 2,
-                    metaitem('boltSteel')
-            ])
-            .outputs(item('icbmclassic:grenade', i))
-            .duration(80)
-            .EUt(30)
-            .buildAndRegister();
+        recipemap('weapons_factory').recipeBuilder()
+                .inputs([
+                        item('icbmclassic:explosives', i),
+                        metaitem('plateSteel'),
+                        metaitem('ringSteel') * 2,
+                        metaitem('boltSteel')
+                ])
+                .outputs(item('icbmclassic:grenade', i))
+                .duration(80)
+                .EUt(30)
+                .buildAndRegister();
 }
 
 //Explosives tier 1
@@ -125,16 +135,16 @@ def flammable_liquids = [
 ];
 
 for (liquid in flammable_liquids) {
-    recipemap('weapons_factory').recipeBuilder()
-            .inputs([
-                    item('icbmclassic:explosives:0'),
-                    metaitem('fluid_cell')
-            ])
-            .fluidInputs(liquid)
-            .outputs(item('icbmclassic:explosives:2'))
-            .duration(20)
-            .EUt(16)
-            .buildAndRegister();
+        recipemap('weapons_factory').recipeBuilder()
+                .inputs([
+                        item('icbmclassic:explosives:0'),
+                        metaitem('fluid_cell')
+                ])
+                .fluidInputs(liquid)
+                .outputs(item('icbmclassic:explosives:2'))
+                .duration(20)
+                .EUt(16)
+                .buildAndRegister();
 }
 
 recipemap('weapons_factory').recipeBuilder()
@@ -157,29 +167,29 @@ def poisons = [
 ];
 
 for (poison in poisons) {
-    recipemap('weapons_factory').recipeBuilder()
-            .inputs([
-                    item('icbmclassic:explosives:0'),
-                    metaitem('fluid_cell')
-            ])
-            .fluidInputs(poison)
-            .outputs(item('icbmclassic:explosives:4'))
-            .duration(20)
-            .EUt(16)
-            .buildAndRegister();
+        recipemap('weapons_factory').recipeBuilder()
+                .inputs([
+                        item('icbmclassic:explosives:0'),
+                        metaitem('fluid_cell')
+                ])
+                .fluidInputs(poison)
+                .outputs(item('icbmclassic:explosives:4'))
+                .duration(20)
+                .EUt(16)
+                .buildAndRegister();
 }
 
 recipemap('weapons_factory').recipeBuilder()
-            .inputs([
-                    item('icbmclassic:explosives:0'),
-                    ore('dustPicricAcid') * 7,
-                    metaitem('sensor.lv')
-                    //Rationale: air burst explosion with high explosives to create repulsive forces
-            ])
-            .outputs(item('icbmclassic:explosives:6'))
-            .duration(20)
-            .EUt(16)
-            .buildAndRegister();
+        .inputs([
+                item('icbmclassic:explosives:0'),
+                ore('dustPicricAcid') * 7,
+                metaitem('sensor.lv')
+                //Rationale: air burst explosion with high explosives to create repulsive forces
+        ])
+        .outputs(item('icbmclassic:explosives:6'))
+        .duration(20)
+        .EUt(16)
+        .buildAndRegister();
 
 //Explosives tier 2
 recipemap('weapons_factory').recipeBuilder()
@@ -198,17 +208,17 @@ def thermobaric_fuels = [
 ];
 
 for (fuel in thermobaric_fuels) {
-    recipemap('weapons_factory').recipeBuilder()
-            .inputs([
-                    metaitem('fluid_cell')*8,
-                    item('icbmclassic:explosives:6'),
-                    ore('plateAluminium')*4
-            ])
-            .fluidInputs(fuel)
-            .outputs(item('icbmclassic:explosives:13'))
-            .duration(400)
-            .EUt(60)
-            .buildAndRegister();
+        recipemap('weapons_factory').recipeBuilder()
+                .inputs([
+                        metaitem('fluid_cell')*8,
+                        item('icbmclassic:explosives:6'),
+                        ore('plateAluminium')*4
+                ])
+                .fluidInputs(fuel)
+                .outputs(item('icbmclassic:explosives:13'))
+                .duration(400)
+                .EUt(60)
+                .buildAndRegister();
 }
 
 /*recipemap('weapons_factory').recipeBuilder()
@@ -298,7 +308,7 @@ Globals.solders.each { key, val ->
                         .EUt(300)
                         .buildAndRegister();
         }
-}        
+}
 
 //Concrete
 mods.gregtech.assembler.recipeBuilder()
@@ -506,15 +516,15 @@ Globals.solders.each { key, val ->
                         for (var i = 0; i < 8; i++) {
                                 recipemap('large_weapons_factory').recipeBuilder()
                                         .inputs([ore('stickAluminium')*4,
-                                                        ore('ringAluminium')*2,
-                                                        ore('plateAluminium')*2,
-                                                        ore('foilAluminium')*16,
-                                                        s_oxy*16,
-                                                        s_fuel*16,
-                                                        item('icbmclassic:explosives:' + i)
+                                                 ore('ringAluminium')*2,
+                                                 ore('plateAluminium')*2,
+                                                 ore('foilAluminium')*16,
+                                                 s_oxy*16,
+                                                 s_fuel*16,
+                                                 item('icbmclassic:explosives:' + i)
                                         ])
                                         .fluidInputs(fluid(key) * val)
-                                        .outputs(item('icbmclassic:missile:' + i))
+                                        .outputs(item('icbmclassic:explosive_missile:' + i))
                                         .duration(200)
                                         .EUt(30)
                                         .buildAndRegister();
@@ -579,20 +589,20 @@ Globals.solders.each { key, val ->
 
                 for (l_oxy in liquidoxys) {
                         for (var j = 8; j < 14; j++) {
-                        recipemap('large_weapons_factory').recipeBuilder()
-                                .inputs([ore('stickStainlessSteel')*4,
-                                                ore('ringStainlessSteel')*2,
-                                                ore('plateStainlessSteel')*2,
-                                                ore('foilStainlessSteel')*16,
-                                                s_fuel*16,
-                                                item('icbmclassic:explosives:' + j)
-                                ])
-                                .fluidInputs(fluid(key) * val)
-                                .fluidInputs(l_oxy*2000)
-                                .outputs(item('icbmclassic:missile:' + j))
-                                .duration(200)
-                                .EUt(120)
-                                .buildAndRegister();
+                                recipemap('large_weapons_factory').recipeBuilder()
+                                        .inputs([ore('stickStainlessSteel')*4,
+                                                 ore('ringStainlessSteel')*2,
+                                                 ore('plateStainlessSteel')*2,
+                                                 ore('foilStainlessSteel')*16,
+                                                 s_fuel*16,
+                                                 item('icbmclassic:explosives:' + j)
+                                        ])
+                                        .fluidInputs(fluid(key) * val)
+                                        .fluidInputs(l_oxy*2000)
+                                        .outputs(item('icbmclassic:explosive_missile:' + j))
+                                        .duration(200)
+                                        .EUt(120)
+                                        .buildAndRegister();
                         }
                 }
         }
@@ -602,15 +612,15 @@ Globals.solders.each { key, val ->
                         for (var k = 15; k < 24; k++) {
                                 recipemap('large_weapons_factory').recipeBuilder()
                                         .inputs([ore('stickTitanium')*4,
-                                                        ore('ringTitanium')*2,
-                                                        ore('plateTitanium')*2,
-                                                        ore('foilTitanium')*16,
-                                                        item('icbmclassic:explosives:' + k)
+                                                 ore('ringTitanium')*2,
+                                                 ore('plateTitanium')*2,
+                                                 ore('foilTitanium')*16,
+                                                 item('icbmclassic:explosives:' + k)
                                         ])
                                         .fluidInputs(fluid(key) * val)
                                         .fluidInputs(h_oxy_1*4000)
                                         .fluidInputs(h_fuel*2000)
-                                        .outputs(item('icbmclassic:missile:' + k))
+                                        .outputs(item('icbmclassic:explosive_missile:' + k))
                                         .duration(200)
                                         .EUt(500)
                                         .buildAndRegister();
