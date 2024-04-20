@@ -419,7 +419,7 @@ crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metaitem('gr
 //         .inputs(ore('dustSulfur'))
 //         .outputs(metaitem('dustRubber'))
 //         .duration(400)
-//         .EUt(8)
+//         .EUt(7)
 //         .buildAndRegister();
 
 furnace.add(metaitem('dustLimestone'), metaitem('dustQuicklime'))
@@ -1185,7 +1185,7 @@ mods.gregtech.macerator.recipeBuilder()
         .outputs(metaitem('dustSteel') * 6)
         .outputs(metaitem('dustConcrete'))
         .duration(150)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister();
         
 // Wireless Digital Interface * 1
@@ -1278,7 +1278,7 @@ mods.gregtech.macerator.recipeBuilder()
         .inputs(item('gregtech:metal_casing', 4))
         .outputs(metaitem('dustSteel') * 2)
         .duration(220)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister()
 
 mods.gregtech.arc_furnace.recipeBuilder()
@@ -1294,7 +1294,7 @@ mods.gregtech.macerator.recipeBuilder()
         .inputs(item('gregtech:boiler_casing', 1))
         .outputs(metaitem('dustSteel') * 4)
         .duration(220)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister()
 
 mods.gregtech.arc_furnace.recipeBuilder()
@@ -1310,7 +1310,7 @@ mods.gregtech.macerator.recipeBuilder()
         .inputs(item('gregtech:boiler_firebox_casing', 1))
         .outputs(metaitem('dustSteel') * 2)
         .duration(220)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister()
 
 mods.gregtech.arc_furnace.recipeBuilder()
@@ -1325,7 +1325,7 @@ mods.gregtech.macerator.recipeBuilder()
         .inputs(metaitem('frameSteel'))
         .outputs(metaitem('dustSteel') * 1)
         .duration(220)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister()
 
 mods.gregtech.arc_furnace.recipeBuilder()
