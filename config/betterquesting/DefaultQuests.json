@@ -7337,7 +7337,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 290,
+              "Damage:2": 17035,
               "id:8": "gregtech:machine"
             }
           },
@@ -10874,7 +10874,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
+              "Count:3": 16,
               "Damage:2": 122,
               "id:8": "gregtech:meta_dust"
             }
@@ -11394,7 +11394,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
+              "Count:3": 16,
               "Damage:2": 77,
               "id:8": "gregtech:meta_dust"
             }
@@ -11580,7 +11580,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
+              "Count:3": 16,
               "Damage:2": 106,
               "id:8": "gregtech:meta_dust"
             }
@@ -12033,7 +12033,17 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "taskID:8": "bq_standard:checkbox"
+          "entryLogic:8": "AND",
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 16,
+              "Damage:2": 110,
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -16194,9 +16204,9 @@
     },
     "438:10": {
       "preRequisites:11": [
-        66,
         369,
-        787
+        787,
+        105
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16206,6 +16216,8 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.438.title",
+          "questlogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -37061,6 +37073,7 @@
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.864.title",
           "questlogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -37607,6 +37620,7 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.881.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -37728,6 +37742,23 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "885:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "susy.quest.db.885.desc",
+          "icon:10": {
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "name:8": "susy.quest.db.885.title",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 885,
+      "rewards:9": {},
+      "tasks:9": {}
     }
   },
   "questLines:9": {
