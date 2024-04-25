@@ -869,7 +869,7 @@ public class UnknownCompositionMaterials {
                 .build()
 
         WaelzOxide = new Material.Builder(4168, SuSyUtility.susyId('waelz_oxide'))
-                .dust() #.liquid(new FluidBuilder().temperature(700))
+                .dust() //.liquid(new FluidBuilder().temperature(700))
                 .color(0x475453)
                 .build()
 
