@@ -7337,7 +7337,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 17035,
+              "Damage:2": 290,
               "id:8": "gregtech:machine"
             }
           },
@@ -10874,7 +10874,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 16,
+              "Count:3": 1,
               "Damage:2": 122,
               "id:8": "gregtech:meta_dust"
             }
@@ -11394,7 +11394,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 16,
+              "Count:3": 1,
               "Damage:2": 77,
               "id:8": "gregtech:meta_dust"
             }
@@ -11580,7 +11580,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 16,
+              "Count:3": 1,
               "Damage:2": 106,
               "id:8": "gregtech:meta_dust"
             }
@@ -12033,17 +12033,7 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "entryLogic:8": "AND",
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 110,
-              "id:8": "gregtech:meta_dust"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -16204,9 +16194,9 @@
     },
     "438:10": {
       "preRequisites:11": [
+        66,
         369,
-        787,
-        105
+        787
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16216,8 +16206,6 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.438.title",
-          "questlogic:8": "OR",
-          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30918,7 +30906,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 6202,
+              "Damage:2": 206,
               "id:8": "gregtech:meta_item_2"
             }
           },
@@ -37073,7 +37061,6 @@
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.864.title",
           "questlogic:8": "OR",
-          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -37122,21 +37109,7 @@
       },
       "questID:3": 865,
       "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "dimethyl_terephthalate"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
-        },
-        "1:10": {
-          "index:3": 1,
-          "taskID:8": "bq_standard:checkbox"
-        }
-      }
+      "tasks:9": {}
     },
     "866:10": {
       "preRequisites:11": [
@@ -37399,20 +37372,7 @@
       },
       "questID:3": 872,
       "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "entryLogic:8": "AND",
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 15289,
-              "id:8": "gregtech:meta_dust"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
+      "tasks:9": {}
     },
     "873:10": {
       "preRequisites:11": [
@@ -37647,7 +37607,6 @@
           },
           "ignoresview:1": 0,
           "name:8": "susy.quest.db.881.title",
-          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
