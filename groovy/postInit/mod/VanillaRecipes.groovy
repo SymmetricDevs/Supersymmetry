@@ -82,17 +82,7 @@ def recipesToRemove = [
 	'minecraft:andesite',
 	'minecraft:minecart',
 	'quark:trapdoor',
-	'minecraft:golden_apple',
-	'chisel:uncraft_blockcopper',
-	'chisel:uncraft_blocksteel',
-	'chisel:uncraft_blocktin',
-	'chisel:uncraft_blockbronze',
-	'chisel:redstone',
-	'chisel:emerald',
-	'chisel:coal',
-	'chisel:charcoal',
-	'quark:charcoal_block'
-
+	'minecraft:golden_apple'
 ]
 
 for(name in recipesToRemove) {
