@@ -1,5 +1,6 @@
 import globals.Globals
 import static globals.SinteringGlobals.*
+import gregtech.api.recipes.ingredients.GTRecipeItemInput;
 
 AUTOCLAVE = recipemap('autoclave')
 CHEMICAL_BATH = recipemap('chemical_bath')

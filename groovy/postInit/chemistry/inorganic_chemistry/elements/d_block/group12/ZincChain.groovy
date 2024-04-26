@@ -1,6 +1,7 @@
 import globals.Globals
 import static globals.CarbonGlobals.*
 import static globals.SinteringGlobals.*
+import gregtech.api.recipes.ingredients.GTRecipeItemInput;
 
 FLOTATION = recipemap('froth_flotation')
 CLARIFIER = recipemap('clarifier')
