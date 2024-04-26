@@ -73,7 +73,7 @@ for (apatite in apatites) {
         .inputs(ore('dustStone'))
         .outputs(metaitem('gregtechfoodoption:bone_china_clay_dust') * 4)
         .duration(40)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister()
 }
 

@@ -2266,22 +2266,6 @@ metaitem.stencil.pcb.name=红膜原图（PCB）
 metaitem.stencil.ulpic.name=红膜原图（ULPIC）
 metaitem.stencil.lpic.name=红膜原图（LPIC）
 
-# Multiblocked
-
-tile.multiblocked.item_input.name=小型输入总线
-tile.multiblocked.item_output.name=小型输出总线
-tile.multiblocked.fluid_input.name=小型输入仓
-tile.multiblocked.fluid_output.name=小型输出仓
-
-tile.multiblocked.item_input.description=为Multiblocked模组的多方块结构输入物品
-tile.multiblocked.item_output.description=为Multiblocked模组的多方块结构输出物品
-tile.multiblocked.fluid_input.description=为Multiblocked模组的多方块结构输入流体
-tile.multiblocked.fluid_output.description=为Multiblocked模组的多方块结构输入流体
-
-tile.multiblocked.ore_sorter.name=矿石拣选机
-multiblocked.ore_sorter.name=矿石拣选机
-multiblocked.ore_sorter.description=分拣矿石
-
 # Vanilla MC
 tile.hellsand.name=富矿沙
 tile.magma.name=熔岩下界岩

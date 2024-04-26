@@ -3194,17 +3194,9 @@ public class FirstDegreeMaterials {
 
         ThalliumSulfateSolution.setFormula("(Tl2SO4)(H2O)", true)
 
-        ArsenicIIIOxide = new Material.Builder(8597, SuSyUtility.susyId('arsenic_iii_oxide'))
-                .dust()
-                .components(Arsenic, 2, Oxygen, 3)
-                .colorAverage()
-                .build()
+        //FREE ID: 8597
 
-        AntimonyIIIOxide = new Material.Builder(8598, SuSyUtility.susyId('antimony_iii_oxide'))
-                .dust()
-                .components(Antimony, 2, Oxygen, 3)
-                .colorAverage()
-                .build()
+        //FREE ID: 8598
 
         PurifiedCadmiumSolution = new Material.Builder(8599, SuSyUtility.susyId('purified_cadmium_solution'))
                 .liquid()
