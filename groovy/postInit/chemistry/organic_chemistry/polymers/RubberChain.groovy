@@ -138,7 +138,7 @@ def catalysers = [
 ]
 
 def coagulants = [
-    new Coagulant('dustCalciumChloride', 2, 1, 4, false),
+    new Coagulant('dustCalciumChloride', 2, 1, 1, false),
     new Coagulant('acetic_acid', 250, 4, 1, true),
     new Coagulant('sulfuric_acid', 125, 2, 1, true)
 ]
@@ -213,13 +213,6 @@ for (coagulant in coagulants) {
 
 // Liquid Latex * 144
 mods.gregtech.extractor.removeByInput(30, [metaitem('dustLatex')], null)
-
-EXTRACTOR.recipeBuilder()
-.inputs(ore('dustLatex'))
-.fluidOutputs(fluid('latex') * 1000)
-.duration(98)
-.EUt(30)
-.buildAndRegister()
 
 // Polyisoprene
 POLYMERIZATION_TANK.recipeBuilder()
