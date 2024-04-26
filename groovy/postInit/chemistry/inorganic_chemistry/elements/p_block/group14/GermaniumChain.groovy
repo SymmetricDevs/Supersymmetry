@@ -1,5 +1,4 @@
 import globals.Globals
-import static globals.CarbonGlobals.*
 import static globals.SinteringGlobals.*
 
 AUTOCLAVE = recipemap('autoclave')
@@ -29,22 +28,26 @@ CHEMICAL_BATH.recipeBuilder()
 oreDict.add('dustZincResidues', metaitem('dustZincHydrochloricLeachResidue'))
 oreDict.add('dustZincResidues', metaitem('dustZincLeachResidue'))
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
-    for (fuel in rotary_kiln_fuels) {
-        for (comburent in rotary_kiln_comburents) {
-            ROTARY_KILN.recipeBuilder()
-                .inputs(ore('dustZincResidues') * 8)
-                .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
-                .outputs(metaitem('dustGermaniumRichOxide') )
-                .outputs(metaitem('dustWaelzSlag'))
-                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                .duration(fuel.duration + comburent.duration)
-                .EUt(120)
-                .buildAndRegister()
-        }
-    }
+carbons = new ItemStack[]{
+        metaitem('dustCarbon'),
+        metaitem('dustHighPurityCarbon'),
+        metaitem('dustCoke')
+}
+
+for (fuel in rotary_kiln_fuels) {
+	for (comburent in rotary_kiln_comburents) {
+		ROTARY_KILN.recipeBuilder()
+			.inputs(ore('dustZincResidues') * 8)
+			.input(new GTRecipeItemInput(carbons, 1))
+			.outputs(metaitem('dustGermaniumRichOxide') )
+			.outputs(metaitem('dustWaelzSlag'))
+			.fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+			.fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+			.fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+			.duration(fuel.duration + comburent.duration)
+			.EUt(120)
+			.buildAndRegister()
+	}
 }
 
 AUTOCLAVE.recipeBuilder()
