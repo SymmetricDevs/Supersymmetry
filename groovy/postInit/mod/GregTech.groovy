@@ -419,7 +419,7 @@ crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metaitem('gr
 //         .inputs(ore('dustSulfur'))
 //         .outputs(metaitem('dustRubber'))
 //         .duration(400)
-//         .EUt(8)
+//         .EUt(7)
 //         .buildAndRegister();
 
 furnace.add(metaitem('dustLimestone'), metaitem('dustQuicklime'))
@@ -1008,52 +1008,61 @@ mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plast
 mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('soldering_alloy') * 72])
 // Microprocessor * 6
 mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('tin') * 144])
+	
+Globals.solders.each { key, val ->
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.good'))
+		.inputs(metaitem('plate.integrated_logic_circuit'))
+		.inputs(ore('boltRedAlloy') * 2)
+		.inputs(ore('wireFineTin') * 2)
+		.fluidInputs(fluid(key) * val)
+		.outputs(metaitem('circuit.nand_chip') * 16)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+}
 
-mods.gregtech.assembler.recipeBuilder()
-        .inputs(metaitem('circuit_board.good'))
-        .inputs(metaitem('plate.integrated_logic_circuit'))
-        .inputs(ore('boltRedAlloy') * 2)
-        .inputs(ore('wireFineTin') * 2)
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(metaitem('circuit.nand_chip') * 16)
-        .duration(10)
-        .EUt(16)
-        .buildAndRegister();
+Globals.solders.each { key, val ->
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.plastic'))
+		.inputs(metaitem('plate.integrated_logic_circuit'))
+		.inputs(ore('boltRedAlloy') * 2)
+		.inputs(ore('wireFineTin') * 2)
+		.fluidInputs(fluid(key) * val)
+		.outputs(metaitem('circuit.nand_chip') * 24)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+}
 
-mods.gregtech.assembler.recipeBuilder()
-        .inputs(metaitem('circuit_board.plastic'))
-        .inputs(metaitem('plate.integrated_logic_circuit'))
-        .inputs(ore('boltRedAlloy') * 2)
-        .inputs(ore('wireFineTin') * 2)
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(metaitem('circuit.nand_chip') * 24)
-        .duration(10)
-        .EUt(16)
-        .buildAndRegister();
+Globals.solders.each { key, val ->
+	mods.gregtech.circuit_assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.plastic'))
+		.inputs(metaitem('plate.central_processing_unit'))
+		.inputs(ore('componentResistor') * 2)
+		.inputs(ore('componentCapacitor') * 2)
+		.inputs(ore('componentTransistor') * 2)
+		.inputs(ore('wireFineCopper') * 2)
+		.fluidInputs(fluid(key) * val)
+		.outputs(metaitem('circuit.microprocessor') * 5)
+		.duration(200)
+		.EUt(60)
+		.buildAndRegister();
+}
 
-mods.gregtech.circuit_assembler.recipeBuilder()
-        .inputs(metaitem('circuit_board.plastic'))
-        .inputs(metaitem('plate.central_processing_unit'))
-        .inputs(ore('componentResistor') * 2)
-        .inputs(ore('componentCapacitor') * 2)
-        .inputs(ore('componentTransistor') * 2)
-        .inputs(ore('wireFineCopper') * 2)
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(metaitem('circuit.microprocessor') * 5)
-        .duration(200)
-        .EUt(60)
-        .buildAndRegister();
+Globals.solders.each { key, val ->
+	mods.gregtech.circuit_assembler.recipeBuilder()
+		.inputs(metaitem('circuit_board.plastic'))
+		.inputs(metaitem('plate.system_on_chip'))
+		.inputs(ore('wireFineCopper') * 2)
+		.inputs(ore('boltTin') * 2)
+		.fluidInputs(fluid(key) * val)
+		.outputs(metaitem('circuit.microprocessor') * 10)
+		.duration(50)
+		.EUt(600)
+		.buildAndRegister();
+}
 
-mods.gregtech.circuit_assembler.recipeBuilder()
-        .inputs(metaitem('circuit_board.plastic'))
-        .inputs(metaitem('plate.system_on_chip'))
-        .inputs(ore('wireFineCopper') * 2)
-        .inputs(ore('boltTin') * 2)
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(metaitem('circuit.microprocessor') * 10)
-        .duration(50)
-        .EUt(600)
-        .buildAndRegister();
 
 mods.gregtech.centrifuge.recipeBuilder()
 		.fluidInputs(fluid('gtfo_soybean_oil') * 1000)
@@ -1176,7 +1185,7 @@ mods.gregtech.macerator.recipeBuilder()
         .outputs(metaitem('dustSteel') * 6)
         .outputs(metaitem('dustConcrete'))
         .duration(150)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister();
         
 // Wireless Digital Interface * 1
@@ -1269,7 +1278,7 @@ mods.gregtech.macerator.recipeBuilder()
         .inputs(item('gregtech:metal_casing', 4))
         .outputs(metaitem('dustSteel') * 2)
         .duration(220)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister()
 
 mods.gregtech.arc_furnace.recipeBuilder()
@@ -1285,7 +1294,7 @@ mods.gregtech.macerator.recipeBuilder()
         .inputs(item('gregtech:boiler_casing', 1))
         .outputs(metaitem('dustSteel') * 4)
         .duration(220)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister()
 
 mods.gregtech.arc_furnace.recipeBuilder()
@@ -1301,7 +1310,7 @@ mods.gregtech.macerator.recipeBuilder()
         .inputs(item('gregtech:boiler_firebox_casing', 1))
         .outputs(metaitem('dustSteel') * 2)
         .duration(220)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister()
 
 mods.gregtech.arc_furnace.recipeBuilder()
@@ -1316,7 +1325,7 @@ mods.gregtech.macerator.recipeBuilder()
         .inputs(metaitem('frameSteel'))
         .outputs(metaitem('dustSteel') * 1)
         .duration(220)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister()
 
 mods.gregtech.arc_furnace.recipeBuilder()

@@ -540,14 +540,14 @@ CENTRIFUGE.recipeBuilder()
         .inputs(ore('dustQuartzite'))
         .outputs(metaitem('dustSiliconDioxide'))
         .duration(60)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder()
         .inputs(ore('dustNetherQuartz'))
         .outputs(metaitem('dustSiliconDioxide'))
         .duration(60)
-        .EUt(8)
+        .EUt(7)
         .buildAndRegister()
 
 // Antimony trifluoride

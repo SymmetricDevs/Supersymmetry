@@ -82,7 +82,17 @@ def recipesToRemove = [
 	'minecraft:andesite',
 	'minecraft:minecart',
 	'quark:trapdoor',
-	'minecraft:golden_apple'
+	'minecraft:golden_apple',
+	'chisel:uncraft_blockcopper',
+	'chisel:uncraft_blocksteel',
+	'chisel:uncraft_blocktin',
+	'chisel:uncraft_blockbronze',
+	'chisel:redstone',
+	'chisel:emerald',
+	'chisel:coal',
+	'chisel:charcoal',
+	'quark:charcoal_block'
+
 ]
 
 for(name in recipesToRemove) {
@@ -494,7 +504,7 @@ mods.gregtech.centrifuge.recipeBuilder()
 		.outputs(metaitem('dustWood') * 1)
 		.fluidOutputs(fluid('sugary_water') * 250)
 		.duration(100)
-		.EUt(8)
+		.EUt(7)
 		.buildAndRegister()
 
 //Chemical bath
@@ -541,14 +551,14 @@ recipemap('crystallizer').recipeBuilder()
 		.fluidInputs(fluid('clarified_sugary_water') * 1000)
 		.outputs(item('minecraft:sugar') * 6)
 		.duration(200)
-		.EUt(8)
+		.EUt(7)
 		.buildAndRegister()
 
 recipemap('crystallizer').recipeBuilder()
 		.fluidInputs(fluid('sugary_water') * 1000)
 		.outputs(item('minecraft:sugar') * 3)
 		.duration(300)
-		.EUt(8)
+		.EUt(7)
 		.buildAndRegister()
 
 //Extractor
@@ -556,7 +566,7 @@ mods.gregtech.extractor.recipeBuilder()
     .inputs(item('quark:glass_shards:0'))
     .fluidOutputs(fluid('glass') * 36)
     .duration(20)
-    .EUt(8)
+    .EUt(7)
     .buildAndRegister()
 
 //Macerator
@@ -587,7 +597,7 @@ mods.gregtech.mixer.recipeBuilder()
     .inputs(ore('dustMagnesium'))
     .outputs(item('minecraft:fire_charge') * 3)
     .duration(20)
-    .EUt(8)
+    .EUt(7)
     .buildAndRegister()
 
 mods.gregtech.mixer.recipeBuilder()
@@ -595,7 +605,7 @@ mods.gregtech.mixer.recipeBuilder()
 		.fluidInputs(fluid('sugary_water') * 10000)
 		.fluidOutputs(fluid('clarified_sugary_water') * 10000)
 		.duration(400)
-		.EUt(8)
+		.EUt(7)
 		.buildAndRegister()
 
 crafting.replaceShaped('minecraft:cobblestone_slab', item('minecraft:stone_slab', 3) * 6, [
