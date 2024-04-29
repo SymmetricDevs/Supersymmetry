@@ -780,6 +780,13 @@ mods.gregtech.packer.recipeBuilder()
         .EUt(7)
         .buildAndRegister();
 
+mods.gregtech.packer.recipeBuilder()
+        .inputs(metaitem('sand.dust') * 4)
+        .outputs(item('minecraft:sand'))
+        .duration(20)
+        .EUt(7)
+        .buildAndRegister();
+
 crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [
         [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')],
         [ore('foilZinc'), ore('plateBrass'), ore('foilZinc')],
