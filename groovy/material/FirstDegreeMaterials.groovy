@@ -3252,7 +3252,7 @@ public class FirstDegreeMaterials {
                 .color(0x96a67c)
                 .build()
 
-        SodiumSelenateSolution.setFormula("(Na2SeO3)(H2O)", true);
+        SodiumSeleniteSolution.setFormula("(Na2SeO3)(H2O)", true);
 
         HydrogenSelenide = new Material.Builder(8607, SuSyUtility.susyId('hydrogen_selenide'))
                 .gas()
