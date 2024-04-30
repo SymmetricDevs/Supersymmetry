@@ -30420,7 +30420,7 @@
                 "Durability:3": 0,
                 "HarvestLevel:3": 1,
                 "Material:8": "rubber",
-                "MaxDurability:3": 256,
+                "MaxDurability:3": 255,
                 "ToolSpeed:5": 4.0
               },
               "HideFlags:3": 2
