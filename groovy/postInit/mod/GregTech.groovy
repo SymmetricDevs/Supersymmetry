@@ -893,7 +893,15 @@ CENTRIFUGE.recipeBuilder()
         .duration(40)
         .EUt(30)
         .buildAndRegister();
-		
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(ore('dustMagnalium') * 3)
+        .outputs(metaitem('dustMagnesium'))
+        .outputs(metaitem('dustAluminium') * 2)
+        .duration(72)
+        .EUt(30)
+        .buildAndRegister();
+
 // Fix distillation tower being too difficult (4 EV circuits? Seriously?)
 
 
