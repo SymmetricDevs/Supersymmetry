@@ -126,7 +126,7 @@ for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         .inputs(ore('dustIlmenite'))
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
         .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
-        .fluidOutputs(fluid('gaseous_iron_iii_chloride') * 1000)
+        .fluidOutputs(fluid('gaseous_iron_iii_chloride') * 800)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .outputs(metaitem('dustRutile') * 3)
         .duration(100 * highPurityCombustible.duration)
