@@ -2562,11 +2562,7 @@ public class FirstDegreeMaterials {
                 .color(0xbda51b)
                 .build();
 
-        GaseousIronIIIChloride = new Material.Builder(8493, SuSyUtility.susyId('gaseous_iron_iii_chloride'))
-                .gas(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(590))
-                .components(Iron3Chloride, 1)
-                .color(0xba8f49)
-                .build();
+        //FREE IDs: 8493
 
         GaseousTitaniumTetrachloride = new Material.Builder(8494, SuSyUtility.susyId('gaseous_titanium_tetrachloride'))
                 .gas(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(1180))
@@ -2580,13 +2576,7 @@ public class FirstDegreeMaterials {
                 .color(0x887866)
                 .build();
 
-        GaseousAluminiumChloride = new Material.Builder(8496, SuSyUtility.susyId('gaseous_aluminium_chloride'))
-                .gas(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(460))
-                .components(AluminiumChloride, 1)
-                .colorAverage()
-                .build();
-
-        //FREE IDs: 8497-8498
+        //FREE IDs: 8496-8498
 
         SodiumNitrite = new Material.Builder(8499, SuSyUtility.susyId('sodium_nitrite'))
                 .dust().liquid(new FluidBuilder().temperature(544))
