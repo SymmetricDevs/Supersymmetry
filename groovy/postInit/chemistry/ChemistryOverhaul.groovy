@@ -4311,3 +4311,15 @@ DISTILLERY.recipeBuilder()
         .duration(30)
         .EUt(200)
         .buildAndRegister()
+
+// Nitration Mixture * 2000
+mods.gregtech.mixer.removeByInput(2, null, [fluid('nitric_acid') * 1000, fluid('sulfuric_acid') * 1000])
+
+
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('nitric_acid') * 1000)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('nitration_mixture') * 2000)
+        .EUt(30)
+        .duration(160)
+        .buildAndRegister()
