@@ -4315,7 +4315,6 @@ DISTILLERY.recipeBuilder()
 // Nitration Mixture * 2000
 mods.gregtech.mixer.removeByInput(2, null, [fluid('nitric_acid') * 1000, fluid('sulfuric_acid') * 1000])
 
-
 MIXER.recipeBuilder()
         .fluidInputs(fluid('nitric_acid') * 1000)
         .fluidInputs(fluid('sulfuric_acid') * 1000)
