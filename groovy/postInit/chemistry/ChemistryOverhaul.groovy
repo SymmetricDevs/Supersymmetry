@@ -3996,7 +3996,7 @@ CSTR.recipeBuilder()
 PHASE_SEPARATOR.recipeBuilder()
         .fluidInputs(fluid('acidic_nitrobenzene_mixture') * 3000)
         .fluidOutputs(fluid('nitrobenzene') * 1000)
-        .fluidOutputs(fluid('diluted_sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
         .duration(50)
         .buildAndRegister()
 
