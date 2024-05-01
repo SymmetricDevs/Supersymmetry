@@ -1783,6 +1783,10 @@ class SuSyMaterials {
         public static Material PartiallyLiquefiedArgon;
         public static Material SupercriticalCarbonDioxide;
 
+		public static void changeFormulas() {
+			Phosphorus.setFormula("P4", true);
+			log.infoMC("Changing Formulas!");
+		}
 
         public static void init() {
                 ElementMaterials.register();
@@ -1795,5 +1799,6 @@ class SuSyMaterials {
                 PetrochemistryMaterials.register();
                 ThirdDegreeMaterials.register();
                 ThermodynamicsMaterials.register();
+				changeFormulas();
         }
 }
