@@ -4285,6 +4285,15 @@ MIXER.recipeBuilder()
         .duration(100)
         .buildAndRegister()
 
+MIXER.recipeBuilder()
+        .inputs(ore('dustQuicklime') * 2)
+        .circuitMeta(2)
+        .fluidInputs(fluid('water') * 2000)
+        .fluidOutputs(fluid('calcium_hydroxide_slurry') * 1000)
+        .EUt(16)
+        .duration(100)
+        .buildAndRegister()
+
 // Zinc chloride soln.
 
 MIXER.recipeBuilder()
