@@ -451,8 +451,9 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('plateEnderPearl') * 9, met
 
 crafting.addShapeless('convert_old_slaked_lime', metaitem('dustCalciumHydroxide'), [metaitem('slaked_lime')])
 
-mods.gregtech.chemical_bath.recipeBuilder()
+mods.gregtech.mixer.recipeBuilder()
         .inputs(ore('dustQuicklime') * 2)
+        .circuitMeta(1)
         .fluidInputs(fluid('water') * 1000)
         .outputs(metaitem('dustCalciumHydroxide') * 5)
         .duration(20)
