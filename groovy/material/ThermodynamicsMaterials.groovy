@@ -481,6 +481,5 @@ class ThermodynamicsMaterials {
                 .components(CarbonDioxide, 1)
                 .colorAverage()
                 .build();
-
     }
 }
