@@ -14957,7 +14957,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "seed_oil"
+              "FluidName:8": "glyceryl_trinitrate"
             }
           },
           "taskID:8": "bq_standard:fluid"
