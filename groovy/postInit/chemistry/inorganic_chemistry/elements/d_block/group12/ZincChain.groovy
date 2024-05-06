@@ -1,6 +1,7 @@
 import globals.Globals
 import static globals.CarbonGlobals.*
 import static globals.SinteringGlobals.*
+import gregtech.api.recipes.ingredients.GTRecipeItemInput;
 
 FLOTATION = recipemap('froth_flotation')
 CLARIFIER = recipemap('clarifier')
@@ -339,22 +340,26 @@ SIFTER.recipeBuilder()
         .duration(160)
         .buildAndRegister()
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
-        for (fuel in rotary_kiln_fuels) {
-                for (comburent in rotary_kiln_comburents) {
-                        ROTARY_KILN.recipeBuilder()
-                                .inputs(ore('dustZincOxideFume') * 2)
-                                .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
-                                .outputs(metaitem('dustWaelzOxide'))
-                                .outputs(metaitem('dustWaelzSlag'))
-                                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                                .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-                                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                                .duration(fuel.duration + comburent.duration)
-                                .EUt(120)
-                                .buildAndRegister()
-                }
-        }
+carbons = new ItemStack[]{
+        metaitem('dustCarbon'),
+        metaitem('dustHighPurityCarbon'),
+        metaitem('dustCoke')
+}
+
+for (fuel in rotary_kiln_fuels) {
+	for (comburent in rotary_kiln_comburents) {
+		ROTARY_KILN.recipeBuilder()
+			.inputs(ore('dustZincOxideFume') * 2)
+			.input(new GTRecipeItemInput(carbons, 1))
+			.outputs(metaitem('dustWaelzOxide'))
+			.outputs(metaitem('dustWaelzSlag'))
+			.fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+			.fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+			.fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+			.duration(fuel.duration + comburent.duration)
+			.EUt(120)
+			.buildAndRegister()
+	}
 }
 
 CENTRIFUGE.recipeBuilder()
