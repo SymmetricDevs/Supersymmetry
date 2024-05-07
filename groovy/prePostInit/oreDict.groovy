@@ -136,7 +136,7 @@ def unify (ore, p) {
             ItemStack item = ore.getAt(i)
             if (item.getItem().getRegistryName().getNamespace() != Globals.mod_priority[pos]) {
                 ore.remove(item)
-                mods.jei.hide(item)
+                mods.jei.ingredient.hide(item)
             }
         }
     } else if (pos < Globals.mod_priority.size() - 1) {
@@ -186,7 +186,7 @@ oreDictRemovals = [
 
 oreDictRemovals.each { key, val ->
     ore(val).remove(item(key))
-    mods.jei.hide(item(key))
+    mods.jei.ingredient.hide(item(key))
 }
 
 susycobble = SuSyBlocks.SUSY_STONE_BLOCKS.get(SusyStoneVariantBlock.StoneVariant.COBBLE)
@@ -246,21 +246,21 @@ ore('dustCinnabar').remove(item('tardis:cinnabar'))
 ore('dustSaltpeter').remove(item('icbmclassic:saltpeter'))
 
 //Hide ALL TechGuns recipes, they are impossible anyways since the machines needed are uncraftable
-mods.jei.hideCategory('minecraft.brewing')
-mods.jei.hideCategory('techguns.ammopress')
-mods.jei.hideCategory('techguns.metalpress')
-mods.jei.hideCategory('techguns.chemlab')
-mods.jei.hideCategory('techguns.fabricator')
-mods.jei.hideCategory('techguns.chargingstation')
-mods.jei.hideCategory('techguns.reactionchamber')
-mods.jei.hideCategory('techguns.oredrill')
-mods.jei.hideCategory('techguns.blastfurnace')
-mods.jei.hideCategory('techguns.grinder')
-mods.jei.hideCategory('techguns.camobench')
+mods.jei.category.hideCategory('minecraft.brewing')
+mods.jei.category.hideCategory('techguns.ammopress')
+mods.jei.category.hideCategory('techguns.metalpress')
+mods.jei.category.hideCategory('techguns.chemlab')
+mods.jei.category.hideCategory('techguns.fabricator')
+mods.jei.category.hideCategory('techguns.chargingstation')
+mods.jei.category.hideCategory('techguns.reactionchamber')
+mods.jei.category.hideCategory('techguns.oredrill')
+mods.jei.category.hideCategory('techguns.blastfurnace')
+mods.jei.category.hideCategory('techguns.grinder')
+mods.jei.category.hideCategory('techguns.camobench')
 
-mods.jei.hideCategory('gregtech:combustion_generator')
+mods.jei.category.hideCategory('gregtech:combustion_generator')
 
-mods.jei.hideCategory('minecraft.anvil')
+mods.jei.category.hideCategory('minecraft.anvil')
 
 //Dust oredicting
 elements = [
