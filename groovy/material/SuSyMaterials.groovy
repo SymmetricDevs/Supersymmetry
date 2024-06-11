@@ -241,7 +241,6 @@ class SuSyMaterials {
         public static Material SinteredLeadConcentrate;
         public static Material ZincOxideFume;
         public static Material BlackMetal;
-        public static Material AntimonyArsenicFlueDust;
         public static Material BurnedBlackMetal;
         public static Material LithargeSlag;
         public static Material HarrisSlag;
