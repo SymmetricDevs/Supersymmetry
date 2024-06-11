@@ -1964,6 +1964,9 @@ susy.material.caesium_rubidium_alum_mixture=Caesium-Rubidium Alum Mixture
 susy.material.methyl_formate_solution=Methyl Formate Solution
 susy.material.acidic_thallium_sulfate_solution=Acidic Thallium Sulfate Solution
 susy.material.ethyl_acetate=Ethyl Acetate
+susy.material.sodium_thioantimonite_solution=Sodium Thioantimonite Solution
+susy.material.purified_antimony_trichloride=Purified Antimony Trichloride
+susy.material.purified_antimony_iii_oxide=Purified Antimony III Oxide
 
 # Isotopes
 

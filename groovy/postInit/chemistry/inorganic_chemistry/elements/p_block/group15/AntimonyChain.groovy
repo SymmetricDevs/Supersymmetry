@@ -7,6 +7,7 @@ FLOTATION = recipemap('froth_flotation')
 CLARIFIER = recipemap('clarifier')
 EBF = recipemap('electric_blast_furnace')
 BR = recipemap('batch_reactor')
+REACTION_FURNACE = recipemap('reaction_furnace')
 
 // BENEFICIATION
 
@@ -32,7 +33,7 @@ BR = recipemap('batch_reactor')
         .buildAndRegister()
 
     FLOTATION.recipeBuilder()
-        .fluidInputs(fluid('impure_galena_slurry') * 2000)
+        .fluidInputs(fluid('impure_stibnite_slurry') * 2000)
         .notConsumable(metaitem('dustSodiumIsobutylXanthate'))
         .notConsumable(metaitem('dustLeadNitrate'))
         .notConsumable(fluid('sodium_cyanide_solution') * 100)
@@ -134,4 +135,31 @@ ROASTER.recipeBuilder()
     .fluidOutputs(fluid('steam') * 9000)
     .EUt(Globals.voltAmps[2])
     .duration(200)
+    .buildAndRegister()
+
+// REFINING
+
+VACUUM_DT.recipeBuilder()
+    .fluidInputs(fluid('antimony_trichloride') * 1000)
+    .fluidOutputs(fluid('purified_antimony_trichloride') * 1000)
+    .EUt(Globals.voltAmps[2])
+    .duration(200)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('purified_antimony_trichloride') * 2000)
+    .fluidInputs(fluid('ultrapure_water') * 6000)
+    .outputs(metaitem('dustPurifiedAntimonyIiiOxide') * 5)
+    .fluidOutputs(fluid('hydrochloric_acid') * 3000)
+    .EUt(Globals.voltAmps[2])
+    .duration(400)
+    .buildAndRegister()
+
+REACTION_FURNACE.recipeBuilder()
+    .inputs(ore('dustPurifiedAntimonyIiiOxide') * 5)
+    .fluidInputs(fluid('hydrogen') * 6000)
+    .outputs(metaitem('dustHighPurityAntimony') * 2)
+    .fluidOutputs(fluid('steam') * 3000)
+    .EUt(Globals.voltAmps[2])
+    .duration(400)
     .buildAndRegister()

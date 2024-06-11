@@ -527,7 +527,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 8165
+        SodiumThioantimoniteSolution = new Material.Builder(8165, SuSyUtility.susyId('sodium_thioantimonite_solution'))
+                .liquid()
+                .components(Sodium, 12, Antimony, 4, Sulfur, 12, Water, 12)
+                .colorAverage()
+                .build();
 
         AmmoniaSolution = new Material.Builder(8166, SuSyUtility.susyId('ammonia_solution'))
                 .liquid()
@@ -676,7 +680,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        //FREE ID: 8191
+        AntimonyIIIOxide = new Material.Builder(8192, SuSyUtility.susyId('antimony_iii_oxide'))
+                .dust()
+                .components(Antimony, 2, Oxygen, 3)
+                .color(0x7bb6b8)
+                .build();
 
         SperryliteWaste = new Material.Builder(8193, SuSyUtility.susyId('sperrylite_waste'))
                 .liquid()
@@ -779,7 +787,17 @@ public class FirstDegreeMaterials {
                 .color(0xa9aec4)
                 .build()
 
-        //FREE IDs: 8208-8209
+        PurifiedAntimonyTrichloride = new Material.Builder(8208, SuSyUtility.susyId('purified_antimony_trichloride'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(347))
+                .components(Antimony, 1, Chlorine, 3)
+                .color(0x83b87b)
+                .build();
+
+        PurifiedAntimonyIIIOxide = new Material.Builder(8209, SuSyUtility.susyId('purified_antimony_iii_oxide'))
+                .dust()
+                .components(Antimony, 2, Oxygen, 3)
+                .color(0x92d1d4)
+                .build();
 
         DicobaltOctacarbonyl = new Material.Builder(8210, SuSyUtility.susyId('dicobalt_octacarbonyl'))
                 .dust()
