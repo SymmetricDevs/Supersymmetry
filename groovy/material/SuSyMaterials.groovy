@@ -1058,6 +1058,9 @@ class SuSyMaterials {
         public static Material CaesiumHydroxideSolution;
         public static Material CaesiumFormateSolution;
         public static Material RubidiumHydroxide;
+        public static Material SodiumThioantimoniteSolution;
+        public static Material PurifiedAntimonyTrichloride;
+        public static Material PurifiedAntimonyIIIOxide;
 
         // HP Materials
 
