@@ -2,6 +2,11 @@ import globals.Globals
 
 BR = recipemap('batch_reactor')
 ROASTER = recipemap('roaster')
+MIXER = recipemap('mixer')
+FLOTATION = recipemap('froth_flotation')
+CLARIFIER = recipemap('clarifier')
+EBF = recipemap('electric_blast_furnace')
+BR = recipemap('batch_reactor')
 
 // BENEFICIATION
 
@@ -70,6 +75,39 @@ ROASTER.recipeBuilder()
     .inputs(ore('dustAnyPurityCarbon') * 3)
     .outputs(metaitem('dustAntimony') * 2)
     .fluidOutputs(fluid('carbon_monoxide') * 3000)
+    .EUt(Globals.voltAmps[2])
+    .duration(200)
+    .buildAndRegister()
+
+EBF.recipeBuilder()
+    .inputs(ore('dustStibnite'))
+    .fluidInputs(fluid('oxygen') * 6000)
+    .outputs(metaitem('ingotAntimony') * 2)
+    .fluidOutputs(fluid('sulfur_dioxide') * 3000)
+    .EUt(Globals.voltAmps[2] * 2)
+    .duration(200)
+    .buildAndRegister()
+
+// TETRAHEDRITE PROCESSING
+
+BR.recipeBuilder()
+    .notConsumable(ore('springCupronickel'))
+    .inputs(ore('dustTetrahedrite') * 4)
+    .inputs(ore('dustSodiumSulfide') * 18)
+    .fluidInputs(fluid('gtfo_heated_water') * 12000)
+    .outputs(metaitem('dustCopperISulfide') * 15)
+    .outputs(metaitem('dustCopperIiSulfide') * 4)
+    .fluidOutputs(fluid('sodium_thioantimonite_solution') * 12000)
+    .EUt(Globals.voltAmps[2])
+    .duration(200)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('sodium_thioantimonite_solution') * 12000)
+    .fluidInputs(fluid('hydrochloric_acid') * 12000)
+    .outputs(metaitem('dustAntimonyIiiSulfide') * 10)
+    .fluidOutputs(fluid('diluted_saltwater') * 24000)
+    .fluidOutputs(fluid('hydrogen_sulfide') * 6000)
     .EUt(Globals.voltAmps[2])
     .duration(200)
     .buildAndRegister()
