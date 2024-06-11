@@ -134,6 +134,7 @@ class ChangeFlags {
         Indium.addFlags("generate_plate");
         BisphenolA.addFlags("no_unification");
         Phosphorus.addFlags("no_smelting");
+        Tetrahedrite.addFlags("no_smelting");
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
@@ -162,6 +163,7 @@ class ChangeFlags {
         AquaRegia.setFormula("(HNO3)(HCl)3", true);
         Tantalite.setFormula("(Fe,Mn)Ta2O6", true);
         Lepidolite.setFormula("(K,Rb)AlLi2Si4O10(OH,F)2", true);
+        Tetrahedrite.setFormula("Cu12Sb4S13", true);
         IndiumGalliumPhosphide.setFormula("InGaP2", true);
 
         // Ore Processing
