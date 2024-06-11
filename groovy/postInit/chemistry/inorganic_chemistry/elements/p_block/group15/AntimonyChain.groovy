@@ -89,6 +89,15 @@ EBF.recipeBuilder()
     .duration(200)
     .buildAndRegister()
 
+EBF.recipeBuilder()
+    .inputs(ore('dustAntimonyIiiSulfide') * 5)
+    .fluidInputs(fluid('oxygen') * 6000)
+    .outputs(metaitem('ingotAntimony') * 2)
+    .fluidOutputs(fluid('sulfur_dioxide') * 3000)
+    .EUt(Globals.voltAmps[2] * 2)
+    .duration(200)
+    .buildAndRegister()
+
 // TETRAHEDRITE PROCESSING
 
 BR.recipeBuilder()
@@ -128,7 +137,7 @@ BR.recipeBuilder()
 // FROM LEAD (ANODE SLIME)
 
 ROASTER.recipeBuilder()
-    .inputs(ore('dustAntimonyArsenicFlue') * 5)
+    .inputs(ore('dustAntimonyArsenicFlueDust') * 5)
     .inputs(ore('dustSodiumHydroxide') * 54)
     .outputs(metaitem('dustAntimony') * 4)
     .outputs(metaitem('dustSodiumArsenate') * 48)

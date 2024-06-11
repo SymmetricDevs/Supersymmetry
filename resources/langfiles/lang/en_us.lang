@@ -1967,6 +1967,8 @@ susy.material.ethyl_acetate=Ethyl Acetate
 susy.material.sodium_thioantimonite_solution=Sodium Thioantimonite Solution
 susy.material.purified_antimony_trichloride=Purified Antimony Trichloride
 susy.material.purified_antimony_iii_oxide=Purified Antimony III Oxide
+susy.material.copper_i_sulfide=Copper I Sulfide
+susy.material.copper_ii_sulfide=Copper II Sulfide
 
 # Isotopes
 
