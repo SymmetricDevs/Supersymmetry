@@ -619,6 +619,12 @@ public class UnknownCompositionMaterials {
                 .color(0x3d3440)
                 .build();
 
+        AntimonyArsenicFlueDust = new Material.Builder(4118, SuSyUtility.susyId('antimony_arsenic_flue_dust'))
+                .dust()
+                .color(0x707063)
+                .iconSet(DULL)
+                .build();
+
         BurnedBlackMetal = new Material.Builder(4119, SuSyUtility.susyId('burned_black_metal'))
                 .dust()
                 .color(0x3d3440)
