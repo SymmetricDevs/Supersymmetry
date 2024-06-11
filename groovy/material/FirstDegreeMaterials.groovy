@@ -533,6 +533,8 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
+        SodiumThioantimoniteSolution.setFormula("(Na3SbS3)12(H2O)12", true)
+
         AmmoniaSolution = new Material.Builder(8166, SuSyUtility.susyId('ammonia_solution'))
                 .liquid()
                 .components(Ammonia, Water)
@@ -557,7 +559,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 8170
+        CopperISulfide = new Material.Builder(8170, SuSyUtility.susyId('copper_i_sulfide'))
+                .dust()
+                .components(Copper, 2, Sulfur, 1)
+                .color(0x1a1101)
+                .build();
 
         Cryolite = new Material.Builder(8171, SuSyUtility.susyId('cryolite'))
                 .dust().liquid(new FluidBuilder().temperature(1285))
@@ -671,7 +677,11 @@ public class FirstDegreeMaterials {
                 .build()
                 .setFormula("(Fe(NO3)2)3(H3AsO4)3(H2O)3", true)
 
-        //FREE ID: 8190
+        CopperIISulfide = new Material.Builder(8190, SuSyUtility.susyId('copper_ii_sulfide'))
+                .dust()
+                .components(Copper, 1, Sulfur, 1)
+                .color(0x262626)
+                .build()
 
         ArsenicTrichloride = new Material.Builder(8191, SuSyUtility.susyId('arsenic_trichloride'))
                 .liquid()

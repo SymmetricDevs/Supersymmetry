@@ -1061,6 +1061,8 @@ class SuSyMaterials {
         public static Material SodiumThioantimoniteSolution;
         public static Material PurifiedAntimonyTrichloride;
         public static Material PurifiedAntimonyIIIOxide;
+        public static Material CopperISulfide;
+        public static Material CopperIISulfide;
 
         // HP Materials
 
