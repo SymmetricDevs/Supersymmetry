@@ -618,7 +618,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        GalliumSulfateSolution.setFormula("(Ga2(SO4)3)(H2C2O4)6(H2O)3")
+        GalliumSulfateSolution.setFormula("(Ga2(SO4)3)(H2C2O4)6(H2O)3", true)
 
         FormicAcidWaterAzeotrope = new Material.Builder(24099, SuSyUtility.susyId('formic_acid_water_azeotrope'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))

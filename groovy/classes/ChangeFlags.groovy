@@ -95,6 +95,7 @@ class ChangeFlags {
         setupFluidType(BisphenolA, FluidStorageKeys.LIQUID, 428)
         setupFluidType(Iodine, FluidStorageKeys.GAS, 460)
         setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
+        setupFluidType(Selenium, FluidStorageKeys.LIQUID, 494)
 
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
@@ -160,7 +161,8 @@ class ChangeFlags {
         DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
         AquaRegia.setFormula("(HNO3)(HCl)3", true);
         Tantalite.setFormula("(Fe,Mn)Ta2O6", true);
-        Lepidolite.setFormula("(K,Rb)AlLi2Si4O10(OH,F)2", true)
+        Lepidolite.setFormula("(K,Rb)AlLi2Si4O10(OH,F)2", true);
+        IndiumGalliumPhosphide.setFormula("InGaP2", true);
 
         // Ore Processing
         

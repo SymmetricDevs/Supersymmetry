@@ -1,4 +1,4 @@
-import gregtech.api.recipes.chance.output.ChancedOutputLogic;
+//import gregtech.api.recipes.chance.output.ChancedOutputLogic;
 
 AUTOCLAVE = recipemap("autoclave")
 MIXER = recipemap("mixer")
@@ -9,6 +9,7 @@ CSTR = recipemap('continuous_stirred_tank_reactor')
 BCR = recipemap("bubble_column_reactor")
 HT_DISTILLATION_TOWER = recipemap('high_temperature_distillation')
 REACTION_FURNACE = recipemap('reaction_furnace')
+FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 
 // Composition of slime: 15% Se, 5% Te, 40% Ag/Au, 40% Cu
 AUTOCLAVE.recipeBuilder()
@@ -69,11 +70,27 @@ BR.recipeBuilder()
 
 HT_DISTILLATION_TOWER.recipeBuilder()
     .inputs(ore('dustSelenium'))
-    .chancedOutput(metaitem('dustSelenium'), 4000, 0)
-    .chancedOutput(metaitem('dustHighPuritySelenium'), 5000, 0)
-    .chancedOutputLogic(ChancedOutputLogic.XOR)
+    .fluidOutputs(fluid('selenium') * 60)
+    .fluidOutputs(fluid('high_purity_selenium') * 72)
+    //.chancedOutput(metaitem('dustSelenium'), 4000, 0)
+    //.chancedOutput(metaitem('dustHighPuritySelenium'), 5000, 0)
+    //.chancedOutputLogic(ChancedOutputLogic.XOR)
     .duration(500)
     .EUt(240)
+    .buildAndRegister()
+
+FLUID_SOLIDIFIER.recipeBuilder()
+    .fluidInputs(fluid('selenium') * 144)
+    .outputs(metaitem('dustSelenium'))
+    .duration(20)
+    .EUt(30)
+    .buildAndRegister()
+
+FLUID_SOLIDIFIER.recipeBuilder()
+    .fluidInputs(fluid('high_purity_selenium') * 144)
+    .outputs(metaitem('dustHighPuritySelenium'))
+    .duration(20)
+    .EUt(30)
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()

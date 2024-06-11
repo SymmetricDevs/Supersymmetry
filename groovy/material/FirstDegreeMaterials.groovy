@@ -76,7 +76,7 @@ public class FirstDegreeMaterials {
         HighPurityGallium = generatePurifiedElement(Gallium, 8022, true, false)
         HighPurityGermanium = generatePurifiedElement(Germanium, 8023, true, true)
         HighPurityArsenic = generatePurifiedElement(Arsenic, 8024, true, false)
-        HighPuritySelenium = generatePurifiedElement(Selenium, 8025, false, false)
+        HighPuritySelenium = generatePurifiedElement(Selenium, 8025, true, false)
         HighPurityRubidium = generatePurifiedElement(Rubidium, 8026, false, false)
         HighPurityStronium = generatePurifiedElement(Strontium, 8027, false, false)
         HighPurityYttrium = generatePurifiedElement(Yttrium, 8028, false, false)
@@ -3194,17 +3194,9 @@ public class FirstDegreeMaterials {
 
         ThalliumSulfateSolution.setFormula("(Tl2SO4)(H2O)", true)
 
-        ArsenicIIIOxide = new Material.Builder(8597, SuSyUtility.susyId('arsenic_iii_oxide'))
-                .dust()
-                .components(Arsenic, 2, Oxygen, 3)
-                .colorAverage()
-                .build()
+        //FREE ID: 8597
 
-        AntimonyIIIOxide = new Material.Builder(8598, SuSyUtility.susyId('antimony_iii_oxide'))
-                .dust()
-                .components(Antimony, 2, Oxygen, 3)
-                .colorAverage()
-                .build()
+        //FREE ID: 8598
 
         PurifiedCadmiumSolution = new Material.Builder(8599, SuSyUtility.susyId('purified_cadmium_solution'))
                 .liquid()
@@ -3280,7 +3272,7 @@ public class FirstDegreeMaterials {
                 .color(0xb0d4c6)
                 .build()
 
-        SodiumTelluriteSolution.setFormula("(Na2TeO3)(H2O)3")
+        SodiumTelluriteSolution.setFormula("(Na2TeO3)(H2O)3", true)
 
         SodiumAlum = new Material.Builder(8610, SuSyUtility.susyId("sodium_alum"))
                 .dust()
