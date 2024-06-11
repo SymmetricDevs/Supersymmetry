@@ -176,6 +176,7 @@ class ChangeFlags {
         Tantalite.addFlags("generate_sifted", "generate_flotated", "generate_concentrate");
         setupSlurries(Tantalite)
         setupSlurries(Galena)
+        setupSlurries(Stibnite)
         setupSlurries(Cinnabar)
         Ilmenite.addFlags("generate_flotated", "generate_concentrate");
         setupSlurries(Ilmenite)
