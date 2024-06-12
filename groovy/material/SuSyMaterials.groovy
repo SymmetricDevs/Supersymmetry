@@ -1036,8 +1036,6 @@ class SuSyMaterials {
         public static Material AcidicThalliumSulfateSolution;
         public static Material ThalliumSulfateSolution;
         public static Material WaferTreatmentAcid;
-        public static Material ArsenicIIIOxide;
-        public static Material AntimonyIIIOxide;
         public static Material PurifiedCadmiumSolution;
         public static Material GermaniumTetrachloride;
         public static Material GermaniumDioxide;
@@ -1060,7 +1058,7 @@ class SuSyMaterials {
         public static Material RubidiumHydroxide;
         public static Material SodiumThioantimoniteSolution;
         public static Material PurifiedAntimonyTrichloride;
-        public static Material PurifiedAntimonyIIIOxide;
+        public static Material PurifiedAntimonyTrioxide;
         public static Material CopperISulfide;
         public static Material CopperIISulfide;
 
