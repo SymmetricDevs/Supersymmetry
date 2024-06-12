@@ -690,11 +690,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        AntimonyIIIOxide = new Material.Builder(8192, SuSyUtility.susyId('antimony_iii_oxide'))
-                .dust()
-                .components(Antimony, 2, Oxygen, 3)
-                .color(0x7bb6b8)
-                .build();
+        // FREE ID: 8192
 
         SperryliteWaste = new Material.Builder(8193, SuSyUtility.susyId('sperrylite_waste'))
                 .liquid()
@@ -803,7 +799,7 @@ public class FirstDegreeMaterials {
                 .color(0x83b87b)
                 .build();
 
-        PurifiedAntimonyIIIOxide = new Material.Builder(8209, SuSyUtility.susyId('purified_antimony_iii_oxide'))
+        PurifiedAntimonyTrioxide = new Material.Builder(8209, SuSyUtility.susyId('purified_antimony_trioxide'))
                 .dust()
                 .components(Antimony, 2, Oxygen, 3)
                 .color(0x92d1d4)
