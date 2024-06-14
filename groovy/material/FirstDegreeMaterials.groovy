@@ -873,7 +873,11 @@ public class FirstDegreeMaterials {
                 .color(0x54362c)
                 .build()
 
-        //FREE ID: 8220
+        LeadFreeSolder = new Material.Builder(8220, SuSyUtility.susyId('lead_free_solder'))
+                .ingot().liquid(new FluidBuilder().temperature(411))
+                .components(Bismuth, 6, Tin, 4)
+                .colorAverage()
+                .build()
 
         ThionylChloride = new Material.Builder(8221, SuSyUtility.susyId('thionyl_chloride'))
                 .liquid()
@@ -1271,7 +1275,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        // FREE ID: 8286
+        CryogenicSolder = new Material.Builder(8286, SuSyUtility.susyId('cryogenic_solder'))
+                .dust().ingot().liquid(new FluidBuilder().temperature(430))
+                .components(Indium, 97, Silver, 3)
+                .color(0x8967bf)
+                .build();
 
         LithiumCobaltOxide = new Material.Builder(8287, SuSyUtility.susyId('lithium_cobalt_oxide'))
                 .dust()
