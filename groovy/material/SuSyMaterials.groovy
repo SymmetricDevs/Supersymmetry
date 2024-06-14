@@ -1061,6 +1061,7 @@ class SuSyMaterials {
         public static Material PurifiedAntimonyTrioxide;
         public static Material CopperISulfide;
         public static Material CopperIISulfide;
+        public static Material PotassiumPermanganate;
 
         // HP Materials
 

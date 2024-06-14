@@ -690,7 +690,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 8192
+                PotassiumPermanganate = new Material.Builder(8192, SuSyUtility.susyId('potassium_permanganate'))
+                .dust()
+                .components(Potassium, 2, Manganese, 1, Oxygen, 4)
+                .color(0x320354)
+                .build();
 
         SperryliteWaste = new Material.Builder(8193, SuSyUtility.susyId('sperrylite_waste'))
                 .liquid()

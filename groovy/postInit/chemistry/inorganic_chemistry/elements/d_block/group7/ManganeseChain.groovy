@@ -200,3 +200,15 @@ ROASTER.recipeBuilder()
     .duration(200)
     .EUt(30)
     .buildAndRegister()
+
+// Potassium permanganate
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustManganeseDioxide') * 3)
+    .fluidInputs(fluid('potassium_hydroxide') * 864)
+    .fluidInputs(fluid('oxygen') * 1000)
+    .outputs(metaitem('dustPotassiumPermanganate') * 7)
+    .fluidOutputs(fluid('steam') * 2000)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister()
