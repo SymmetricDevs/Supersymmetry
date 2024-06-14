@@ -190,6 +190,7 @@ class ChangeFlags {
         Rutile.addFlags("generate_concentrate");
         setupSlurries(Sphalerite)
         setupSlurries(Pollucite)
+        setupSlurries(Arsenopyrite)
 
         setupFluidType(PolyvinylAcetate, FluidStorageKeys.LIQUID, 385)
 
