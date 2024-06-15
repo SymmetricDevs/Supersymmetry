@@ -845,7 +845,11 @@ public class FirstDegreeMaterials {
                 .color(0x54362c)
                 .build()
 
-        //FREE ID: 8220
+        HeavyNetherGases = new Material.Builder(8220, SuSyUtility.susyId('heavy_nether_gases'))
+                .gas()
+                .components(CarbonDioxide, 3, HydrogenSulfide, 1)
+                .colorAverage()
+                .build();
 
         ThionylChloride = new Material.Builder(8221, SuSyUtility.susyId('thionyl_chloride'))
                 .liquid()

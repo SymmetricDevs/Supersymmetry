@@ -1181,7 +1181,13 @@ public class UnknownCompositionMaterials {
                 .color(0xcfa532)
                 .build();
 
-        //FREE IDs: 4240-4241
+        NetherMolecularSieve = new Material.Builder(4240, SuSyUtility.susyId('nether_molecular_sieve'))
+                .dust()
+                .color(0x6e6565)
+                .iconSet(DULL)
+                .build();
+
+        //FREE ID: 4241
 
         GraniteTailingSlurry = new Material.Builder(4242, SuSyUtility.susyId('granite_tailing_slurry'))
                 .liquid()

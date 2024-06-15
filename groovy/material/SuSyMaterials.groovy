@@ -507,6 +507,7 @@ class SuSyMaterials {
         public static Material CocoAmineAcetate;
         public static Material PolluciteLeach;
         public static Material CaesiumRubidiumAlumMixture;
+        public static Material NetherMolecularSieve;
 
         // Petrochem Materials
 
@@ -1058,6 +1059,7 @@ class SuSyMaterials {
         public static Material CaesiumHydroxideSolution;
         public static Material CaesiumFormateSolution;
         public static Material RubidiumHydroxide;
+        public static Material HeavyNetherGases;
 
         // HP Materials
 
