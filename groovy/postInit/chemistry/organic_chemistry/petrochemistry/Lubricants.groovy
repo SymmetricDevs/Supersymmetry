@@ -1012,7 +1012,7 @@ def pourPointDepressantMap = [
 // calcium_phenate: 3
 
 def detergentMap = [
-    'dustCalciumDodecylbenzeneSulfonate': 1,
+    'dustSmallCalciumDodecylbenzeneSulfonate': 1,
     'dustCalciumSalicylate': 2,
     'dustPolyisobuteneSuccinicAnhydride': 4
 ]
@@ -1108,7 +1108,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
     BLENDER.recipeBuilder()
         .inputs(ore(ppd))
         .fluidInputs(fluid('calcium_phenate') * 1000)
-        .inputs(ore('dustSmallCalciumDidodecylbenzeneSulfonate'))
+        .inputs(ore('dustTinyCalciumDidodecylbenzeneSulfonate'))
         .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * 3 * 4))
         .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * 3 * 4))
         .duration(200)
@@ -1129,7 +1129,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
         BLENDER.recipeBuilder()
             .inputs(ore(det))
             .inputs(ore(ppd))
-            .inputs(ore('dustSmallCalciumDidodecylbenzeneSulfonate'))
+            .inputs(ore('dustTinyCalciumDidodecylbenzeneSulfonate'))
             .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .duration(200)
@@ -1139,7 +1139,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
         BLENDER.recipeBuilder()
             .inputs(ore(det))
             .inputs(ore(ppd))
-            .inputs(ore('dustFourNonylphenoxyaceticAcid'))
+            .inputs(ore('dustSmallFourNonylphenoxyaceticAcid'))
             .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .duration(200)
