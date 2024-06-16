@@ -1364,7 +1364,11 @@ public class OrganicChemistryMaterials {
                 .color(0x403c32)
                 .build();
 
-        //FREE ID: 15226
+        TriethyleneGlycol = new Material.Builder(15226, SuSyUtility.susyId('triethylene_glycol'))
+                .liquid()
+                .components(Carbon, 6, Hydrogen, 14, Oxygen, 4)
+                .color(0x27a8a2)
+                .build()
 
         Ferrocene = new Material.Builder(15227, SuSyUtility.susyId('ferrocene'))
                 .dust()
@@ -1421,7 +1425,10 @@ public class OrganicChemistryMaterials {
                 .color(0xd13485)
                 .build();
 
-        //FREE ID: 15235
+        AcidicRichAmine = new Material.Builder(15114, SuSyUtility.susyId('acidic_rich_amine'))
+                .liquid()
+                .color(0x6ca0ab)
+                .build();
       
         OctylHydroxamicAcid = new Material.Builder(15236, SuSyUtility.susyId('octyl_hydroxamic_acid'))
                 .dust()

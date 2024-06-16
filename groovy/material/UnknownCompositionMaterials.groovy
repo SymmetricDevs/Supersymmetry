@@ -1188,7 +1188,10 @@ public class UnknownCompositionMaterials {
                 .color(0xc48072)
                 .build();
 
-        //FREE ID: 4243
+        HydratedTriethyleneGlycol = new Material.Builder(4243, SuSyUtility.susyId('hydrated_triethylene_glycol'))
+                .liquid()
+                .color(0x2795a8)
+                .build()
 
         SphaleriteByproductSlurry = new Material.Builder(4244, SuSyUtility.susyId('sphalerite_byproduct_slurry'))
                 .liquid()

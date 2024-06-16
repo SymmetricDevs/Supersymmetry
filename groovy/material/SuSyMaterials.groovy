@@ -507,6 +507,7 @@ class SuSyMaterials {
         public static Material CocoAmineAcetate;
         public static Material PolluciteLeach;
         public static Material CaesiumRubidiumAlumMixture;
+        public static Material HydratedTriethyleneGlycol;
 
         // Petrochem Materials
 
@@ -1642,6 +1643,8 @@ class SuSyMaterials {
         public static Material HydrolyzedMethylFormateSolution;
         public static Material FormicAcid;
         public static Material MethylFormateSolution;
+        public static Material TriethyleneGlycol;
+        public static Material AcidicRichAmine;
 
         // Third Degree Materials
 

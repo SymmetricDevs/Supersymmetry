@@ -314,16 +314,6 @@ REACTION_FURNACE.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-// Natural Gas Processing
-
-CENTRIFUGE.recipeBuilder()
-.fluidInputs(fluid('crude_natural_gas') * 1000)
-.fluidOutputs(fluid('oil') * 50)
-.fluidOutputs(fluid('sulfuric_natural_gas') * 1000)
-.duration(400)
-.EUt(30)
-.buildAndRegister()
-
 // Sulfuric Oil Residue Processing
 
     // Solvent Dewaxing
@@ -608,40 +598,6 @@ DT.recipeBuilder()
         .duration(600)
         .EUt(Globals.voltAmps[1] * 2)
         .buildAndRegister()
-
-// Natural / Refinery -> Gasoline
-
-CSTR.recipeBuilder()
-.fluidInputs(fluid('sulfuric_acid') * 250)
-.fluidInputs(fluid('natural_gas') * 50)
-.fluidOutputs(fluid('alkylated_natural_gas') * 300)
-.duration(5)
-.EUt(Globals.voltAmps[1])
-.buildAndRegister()
-
-CSTR.recipeBuilder()
-.fluidInputs(fluid('sulfuric_acid') * 250)
-.fluidInputs(fluid('refinery_gas') * 50)
-.fluidOutputs(fluid('alkylated_refinery_gas') * 300)
-.duration(5)
-.EUt(Globals.voltAmps[1])
-.buildAndRegister()
-
-DT.recipeBuilder()
-.fluidInputs(fluid('alkylated_natural_gas') * 3000)
-.fluidOutputs(fluid('sulfuric_acid') * 2500)
-.fluidOutputs(fluid('gasoline') * 500)
-.duration(200)
-.EUt(Globals.voltAmps[1] * 2)
-.buildAndRegister()
-
-DT.recipeBuilder()
-.fluidInputs(fluid('alkylated_refinery_gas') * 3000)
-.fluidOutputs(fluid('sulfuric_acid') * 2500)
-.fluidOutputs(fluid('gasoline') * 500)
-.duration(200)
-.EUt(Globals.voltAmps[1] * 2)
-.buildAndRegister()
 
 // Natural Gas Distillation
 

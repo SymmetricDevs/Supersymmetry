@@ -1,0 +1,40 @@
+MIXER = recipemap('mixer')
+FLUID_HEATER = recipemap('fluid_heater')
+
+// Water removal 
+
+MIXER.recipeBuilder()
+.fluidInputs(fluid('crude_natural_gas') * 1000)
+.fluidInputs(fluid('triethylene_glycol') * 1000)
+.fluidOutputs(fluid('sulfuric_natural_gas') * 1000)
+.fluidOutputs(fluid('hydrated_triethylene_glycol') * 1000)
+.duration(10)
+.EUt(30)
+.buildAndRegister()
+
+FLUID_HEATER.recipeBuilder()
+.fluidInputs(fluid('hydrated_triethylene_glycol') * 1000)
+.fluidOutputs(fluid('triethylene_glycol') * 1000)
+.duration(10)
+.EUt(30)
+.buildAndRegister()
+
+// Acid gas removal (H2S, CO2)
+
+CENTRIFUGE.recipeBuilder()
+.fluidInputs(fluid('sulfuric_natural_gas') * 10000)
+.fluidInputs(fluid('ethanolamine_mix') * 1000)
+.fluidOutputs(fluid('natural_gas') * 8000)
+.fluidOutputs(fluid('acidic_rich_amine') * 1000)
+.duration(40)
+.EUt(120)
+.buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+.fluidInputs(fluid('acidic_rich_amine') * 1000)
+.fluidOutputs(fluid('hydrogen_sulfide') * 1000)
+.fluidOutputs(fluid('carbon_dioxide') * 1000)
+.fluidOutputs(fluid('ethanolamine_mix') * 1000)
+.duration(160)
+.EUt(120)
+.buildAndRegister()
