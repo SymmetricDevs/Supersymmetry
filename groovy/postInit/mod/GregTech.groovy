@@ -399,6 +399,18 @@ crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metaitem('gr
 		[metaitem('wireGtSingleGold'), metaitem('gregtech:hull.mv'), metaitem('wireGtSingleGold')],
 		[ore('circuitMv'), metaitem('cableGtSingleCopper'), ore('circuitMv')]
 ])
+//jetpack recipe fix
+crafting.addShaped('gregtech:electric_jetpack1', metaitem('gregtech:electric_jetpack'), [
+    [ore('toolWireCutter'), ore('circuitMv'), ore('toolScrewdriver')],
+    [metaitem('power_thruster'), metaitem('battery.re.mv.cadmium'), metaitem('power_thruster')],
+    [ore('wireGtDoubleAnnealedCopper'), null, ore('wireGtDoubleAnnealedCopper')]
+])
+
+crafting.addShaped('gregtech:electric_jetpack2', metaitem('gregtech:electric_jetpack'), [
+    [ore('toolWireCutter'), ore('circuitMv'), ore('toolScrewdriver')],
+    [metaitem('power_thruster'), metaitem('battery.re.mv.sodium'), metaitem('power_thruster')],
+    [ore('wireGtDoubleAnnealedCopper'), null, ore('wireGtDoubleAnnealedCopper')]
+])
 
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
 //     [ore('craftingToolFile'), null, null],
