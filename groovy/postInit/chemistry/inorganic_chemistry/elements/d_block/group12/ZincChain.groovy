@@ -147,7 +147,7 @@ FLUIDIZEDBR.recipeBuilder()
         .buildAndRegister()
 
 // Conversion to metal via pyrometallurgy
-for (combustible in CarbonGlobals.combustibles()) {
+for (combustible in combustibles()) {
     ROASTER.recipeBuilder()
             .inputs(ore('dustZincite') * 2)
             .inputs(ore(combustible.name) * combustible.equivalent(1))
@@ -159,7 +159,7 @@ for (combustible in CarbonGlobals.combustibles()) {
             .buildAndRegister()
 }
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
         ROASTER.recipeBuilder()
             .inputs(ore('dustZincOxide') * 2)
             .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))

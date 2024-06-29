@@ -39,7 +39,7 @@ ROASTER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
                 .inputs(ore('dustHafniumDioxide'))
                 .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
