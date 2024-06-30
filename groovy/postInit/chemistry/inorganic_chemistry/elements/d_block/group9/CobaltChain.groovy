@@ -3,7 +3,7 @@ import static globals.CarbonGlobals.*
 
 ROASTER = recipemap('roaster')
 
-for (combustible in CarbonGlobals.combustibles()) {
+for (combustible in combustibles()) {
     ROASTER.recipeBuilder()
         .inputs(ore('dustCobaltOxide') * 2)
         .inputs(ore(combustible.name) * combustible.equivalent(1))

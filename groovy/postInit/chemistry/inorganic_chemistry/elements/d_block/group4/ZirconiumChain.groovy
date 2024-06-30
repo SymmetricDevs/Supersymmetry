@@ -82,7 +82,7 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
         .buildAndRegister()
 
 // Carbochlorination (100%)
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
                 .inputs(ore('dustConcentrateZircon'))
                 .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(4))
@@ -143,7 +143,7 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 // Carbochlorination (100%)
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
                 .inputs(ore('dustBaddeleyite'))
                 .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
@@ -203,7 +203,7 @@ BR.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
                 .inputs(ore('dustZirconiumDioxide'))
                 .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))

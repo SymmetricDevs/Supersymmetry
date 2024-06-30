@@ -7,19 +7,19 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.recipes.GTRecipeHandler.*;
 
 //Removed to make way for overhauls
-removeAllRecipes(RecipeMaps.DISTILLERY_RECIPES);
-removeAllRecipes(RecipeMaps.DISTILLATION_RECIPES);
-removeAllRecipes(RecipeMaps.CRACKING_RECIPES);
-removeAllRecipes(RecipeMaps.BREWING_RECIPES);
-removeAllRecipes(RecipeMaps.CHEMICAL_RECIPES);
-removeAllRecipes(RecipeMaps.LARGE_CHEMICAL_RECIPES);
-removeAllRecipes(RecipeMaps.FERMENTING_RECIPES);
-removeAllRecipes(RecipeMaps.PYROLYSE_RECIPES);
-removeAllRecipes(RecipeMaps.IMPLOSION_RECIPES);
-removeAllRecipes(RecipeMaps.LASER_ENGRAVER_RECIPES);
-removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES);
-removeAllRecipes(RecipeMaps.VACUUM_RECIPES);
-removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.DISTILLERY_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.DISTILLATION_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.CRACKING_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.BREWING_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.CHEMICAL_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.LARGE_CHEMICAL_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.FERMENTING_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.PYROLYSE_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.IMPLOSION_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.LASER_ENGRAVER_RECIPES);
+GTRecipeHandler.removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.VACUUM_RECIPES);
+GTRecipeHandler.removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES);
 
 //Add mixer recipes to blender
 
@@ -78,8 +78,6 @@ mods.gregtech.centrifuge.removeByInput(480, [metaitem('dustPlatinumGroupSludge')
 mods.gregtech.centrifuge.removeByInput(80, [item('minecraft:glowstone_dust') * 2], null)
 // Small Pile of Quartzite Dust * 1
 mods.gregtech.centrifuge.removeByInput(120, [metaitem('dustStone')], null)
-// Raw Rubber Pulp * 3
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('rubber_drop')], null)
 // Sulfur Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustCinnabar') * 2], null)
 // Aluminium Dust * 2
