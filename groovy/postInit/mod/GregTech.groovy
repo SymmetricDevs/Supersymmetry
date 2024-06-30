@@ -1,5 +1,5 @@
 import globals.Globals
-import globals.GroovyUtils.*
+import globals.GroovyUtils
 
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;

@@ -1,0 +1,22 @@
+{
+  "client": {
+    "colorAccuracy": 0,
+    "showAgain": false
+  },
+  "tapeMeasure": {
+    "measurementName": [
+      "m",
+      "mm",
+      "cm",
+      "in",
+      "feet"
+    ],
+    "measurementEquation": [
+      "M * 1",
+      "M * 1000",
+      "M * 100",
+      "M * 39.3700787",
+      "M * 3.28084"
+    ]
+  }
+}
