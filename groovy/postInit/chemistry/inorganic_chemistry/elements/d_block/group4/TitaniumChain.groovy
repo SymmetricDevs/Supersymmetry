@@ -120,7 +120,7 @@ BR.recipeBuilder()
 
 // Chloride Ilmenite Process
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 3000)
         .inputs(ore('dustIlmenite'))

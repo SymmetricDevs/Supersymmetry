@@ -17,7 +17,7 @@ ROASTER.recipeBuilder()
         .duration(120)
         .buildAndRegister()
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
         ROASTER.recipeBuilder()
                 .inputs(ore('dustBismuthIiiOxide') * 5)
                 .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(3))

@@ -70,7 +70,7 @@ CHEMICAL_BATH.recipeBuilder()
         .buildAndRegister()
 
 //SMELTING
-for (combustible in CarbonGlobals.combustibles()) {
+for (combustible in combustibles()) {
     REACTION_FURNACE.recipeBuilder()
             .inputs(ore('dustConcentrateCassiterite'))
             .inputs(ore(combustible.name) * combustible.equivalent(2))

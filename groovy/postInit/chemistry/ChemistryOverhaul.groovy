@@ -1,5 +1,5 @@
 import globals.Globals
-import globals.CarbonGlobals
+import static globals.CarbonGlobals.*
 
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
@@ -156,7 +156,7 @@ DISTILLERY.recipeBuilder()
 
 // Carbon Monoxide roaster
 // TODO: set output according to carbon amount?
-for (carbon in CarbonGlobals.sources) {
+for (carbon in sources) {
     ROASTER.recipeBuilder()
         .fluidInputs(fluid('oxygen') * 1000)
         .inputs(ore(carbon.name) * carbon.equivalent(1))
@@ -169,7 +169,7 @@ for (carbon in CarbonGlobals.sources) {
 
 // Carbon Dioxide roaster
 // TODO: set output according to carbon amount?
-for (carbon in CarbonGlobals.sources) {
+for (carbon in sources) {
     ROASTER.recipeBuilder()
         .fluidInputs(fluid('oxygen') * 2000)
         .inputs(ore(carbon.name) * carbon.equivalent(1))
@@ -182,7 +182,7 @@ for (carbon in CarbonGlobals.sources) {
 
 //CARBON DISULFIDE
 
-for (carbon in CarbonGlobals.sources) {
+for (carbon in sources) {
     ROASTER.recipeBuilder()
         .inputs(ore(carbon.name) * carbon.equivalent(1))
         .inputs(ore('dustAnyPuritySulfur') * 2)
@@ -1669,7 +1669,7 @@ DISTILLERY.recipeBuilder()
 
 //acetylene
 
-for (carbon in CarbonGlobals.sources) {
+for (carbon in sources) {
     ADVANCED_ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustQuicklime') * 2)
             .inputs(ore(carbon.name) * carbon.equivalent(3))
@@ -2003,7 +2003,7 @@ ROASTER.recipeBuilder()
 
 //Silicon & Graphite
 
-for (carbon in CarbonGlobals.dusts()) {
+for (carbon in dusts()) {
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustSiliconDioxide') * 3)
             .inputs(ore(carbon.name) * carbon.equivalent(2))

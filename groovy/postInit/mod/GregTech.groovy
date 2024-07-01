@@ -1,5 +1,5 @@
 import globals.Globals
-import globals.GroovyUtils.*
+import globals.GroovyUtils
 
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;
@@ -1324,7 +1324,7 @@ mods.gregtech.arc_furnace.recipeBuilder()
 //Steel Fireboxes
 mods.gregtech.macerator.recipeBuilder()
         .inputs(item('gregtech:boiler_firebox_casing', 1))
-        .outputs(metaitem('dustSteel') * 2)
+        .outputs(metaitem('dustSmallSteel') * 7)
         .duration(220)
         .EUt(7)
         .buildAndRegister()
@@ -1332,7 +1332,7 @@ mods.gregtech.macerator.recipeBuilder()
 mods.gregtech.arc_furnace.recipeBuilder()
         .inputs(item('gregtech:boiler_firebox_casing', 1))
         .fluidInputs(fluid('oxygen') * 224)
-        .outputs(metaitem('ingotSteel') * 2)
+        .outputs(metaitem('nuggetSteel') * 15)
         .duration(220)
         .EUt(30)
         .buildAndRegister()
