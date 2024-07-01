@@ -25,6 +25,18 @@ mods.gregtech.assembler.removeByInput(6, [metaitem('dustCharcoal'), metaitem('wi
 // Resistor * 4
 mods.gregtech.assembler.removeByInput(6, [metaitem('dustCarbon'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100])
 
+//Remove steel plates from electronic circuits since they were unnecessary
+
+crafting.replaceShaped("gregtech:electronic_circuit_lv", metaitem('circuit.electronic'), [
+        [metaitem('component.resistor'), ore('craftingToolWireCutter'), metaitem('component.resistor')],
+        [metaitem('circuit.vacuum_tube'), metaitem('circuit_board.basic'), metaitem('circuit.vacuum_tube')],
+        [ore('cableGtSingleRedAlloy'), ore('cableGtSingleRedAlloy'), ore('cableGtSingleRedAlloy')]])
+
+crafting.replaceShaped("gregtech:electronic_circuit_mv", metaitem('circuit.good_electronic'), [
+        [metaitem('component.diode'), ore('craftingToolWireCutter'), metaitem('component.diode')],
+        [metaitem('circuit.electronic'), metaitem('circuit_board.good'), metaitem('circuit.electronic')],
+        [ore('wireGtSingleCopper'), metaitem('circuit.electronic'), ore('wireGtSingleCopper')]])
+
 crafting.removeByOutput(metaitem('component.resistor')) 
 
 carbons = new ItemStack[]{

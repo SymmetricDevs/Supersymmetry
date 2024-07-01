@@ -543,6 +543,16 @@ for (major_solvent in major_solvents) {
                 .buildAndRegister()
         }
 
+        BLENDER.recipeBuilder()
+            .inputs(ore('dustFerrocene'))
+            .fluidInputs(fluid(major_solvent) * 1500)
+            .fluidInputs(fluid(minor_solvent) * 500)
+            .fluidOutputs(fluid('antiknock') * 1000)
+            .duration(200)
+            .EUt(120)
+            .buildAndRegister()
+
+
         def antioxidantPairs = getUniquePairs(AntioxidantMap)
 
         for (pair in antioxidantPairs) {
