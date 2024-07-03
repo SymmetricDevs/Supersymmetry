@@ -1058,6 +1058,7 @@ class SuSyMaterials {
         public static Material CaesiumHydroxideSolution;
         public static Material CaesiumFormateSolution;
         public static Material RubidiumHydroxide;
+        public static Material DenseSteam;
 
         // HP Materials
 
