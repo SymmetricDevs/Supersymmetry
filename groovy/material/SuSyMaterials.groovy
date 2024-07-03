@@ -509,16 +509,19 @@ class SuSyMaterials {
         public static Material CaesiumRubidiumAlumMixture;
         public static Material HydratedTriethyleneGlycol;
 
-        // Petrochem Materials
+        // Petrochem Materials   
 
         public static Material DilutedOil;
         public static Material DesaltedOil;
+        public static Material HeatedOil;
 
         public static Material DilutedOilLight;
         public static Material DesaltedOilLight;
+        public static Material HeatedOilLight;
 
         public static Material DilutedOilHeavy;
         public static Material DesaltedOilHeavy;
+        public static Material HeatedOilHeavy;
 
         public static Material FuelOil;
         public static Material CrudeFuelOil;

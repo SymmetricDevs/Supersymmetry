@@ -1970,6 +1970,9 @@ susy.material.acidic_rich_amine=Acidic Rich Amine
 susy.material.crude_kerosene=Crude Kerosene
 susy.material.crude_diesel=Crude Diesel
 susy.material.crude_fuel_oil=Crude Fuel Oil
+susy.material.heated_oil=Heated Oil
+susy.material.heated_oil_light=Heated Light Oil
+susy.material.heated_oil_heavy=Heated Heavy Oil
 
 # Isotopes
 

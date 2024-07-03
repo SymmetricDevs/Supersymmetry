@@ -345,5 +345,20 @@ public class PetrochemistryMaterials {
                 .liquid()
                 .color(0x706d2c)
                 .build();
+
+        HeatedOilLight = new Material.Builder(20080, SuSyUtility.susyId('heated_oil_light'))
+                .liquid()
+                .color(0x2d2f3b)
+                .build();
+
+        HeatedOil = new Material.Builder(20081, SuSyUtility.susyId('heated_oil'))
+                .liquid()
+                .color(0x2d2f3b)
+                .build();
+
+        HeatedOilHeavy = new Material.Builder(20082, SuSyUtility.susyId('heated_oil_heavy'))
+                .liquid()
+                .color(0x2d2f3b)
+                .build();
     }
 }           
