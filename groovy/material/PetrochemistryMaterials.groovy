@@ -330,5 +330,20 @@ public class PetrochemistryMaterials {
                 .liquid()
                 .color(0x9c9538)
                 .build();
+
+        CrudeKerosene = new Material.Builder(20077, SuSyUtility.susyId('crude_kerosene'))
+                .liquid()
+                .color(0xa8a225)
+                .build();
+
+        CrudeDiesel = new Material.Builder(20078, SuSyUtility.susyId('crude_diesel'))
+                .liquid()
+                .color(0x96912c)
+                .build();
+        
+        CrudeFuelOil = new Material.Builder(20079, SuSyUtility.susyId('crude_fuel_oil'))
+                .liquid()
+                .color(0x706d2c)
+                .build();
     }
 }           

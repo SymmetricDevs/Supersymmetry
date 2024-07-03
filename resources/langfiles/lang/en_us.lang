@@ -1967,6 +1967,9 @@ susy.material.ethyl_acetate=Ethyl Acetate
 susy.material.triethylene_glycol=Triethylene Glycol
 susy.material.hydrated_triethylene_glycol=Hydrated Triethylene Glycol
 susy.material.acidic_rich_amine=Acidic Rich Amine
+susy.material.crude_kerosene=Crude Kerosene
+susy.material.crude_diesel=Crude Diesel
+susy.material.crude_fuel_oil=Crude Fuel Oil
 
 # Isotopes
 

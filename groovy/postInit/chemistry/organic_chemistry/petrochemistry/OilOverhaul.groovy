@@ -67,6 +67,10 @@ class OilFraction {
         this.upgrade_name = upgrade_name
     }
 
+    def getCrude(int amount) {
+        return fluid('crude_' + this.name) * amount
+    }
+
     def getTreatedSulfuric(int amount) {
         return fluid('treated_sulfuric_' + this.name) * amount
     }
@@ -209,12 +213,14 @@ CENTRIFUGE.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+// Atmospheric distillation
+
 DT.recipeBuilder()
 .fluidInputs(oils.oil.getDesalted(1000))
 .fluidOutputs(fluid('sulfuric_oil_residue') * 150)
-.fluidOutputs(fractions.fuel_oil.getSulfuric(150))
-.fluidOutputs(fractions.diesel.getSulfuric(200))
-.fluidOutputs(fractions.kerosene.getSulfuric(100))
+.fluidOutputs(fractions.fuel_oil.getCrude(150))
+.fluidOutputs(fractions.diesel.getCrude(200))
+.fluidOutputs(fractions.kerosene.getCrude(100))
 .fluidOutputs(fractions.naphtha.getSulfuric(200))
 .fluidOutputs(fractions.gasoline.getSulfuric(100))
 .fluidOutputs(fractions.refinery_gas.getSulfuric(500))
@@ -225,9 +231,9 @@ DT.recipeBuilder()
 DT.recipeBuilder()
 .fluidInputs(oils.oil_light.getDesalted(1000))
 .fluidOutputs(fluid('sulfuric_oil_residue') * 50)
-.fluidOutputs(fractions.fuel_oil.getSulfuric(100))
-.fluidOutputs(fractions.diesel.getSulfuric(150))
-.fluidOutputs(fractions.kerosene.getSulfuric(100))
+.fluidOutputs(fractions.fuel_oil.getCrude(100))
+.fluidOutputs(fractions.diesel.getCrude(150))
+.fluidOutputs(fractions.kerosene.getCrude(100))
 .fluidOutputs(fractions.naphtha.getSulfuric(250))
 .fluidOutputs(fractions.gasoline.getSulfuric(150))
 .fluidOutputs(fractions.refinery_gas.getSulfuric(1000))
@@ -238,15 +244,44 @@ DT.recipeBuilder()
 DT.recipeBuilder()
 .fluidInputs(oils.oil_heavy.getDesalted(1000))
 .fluidOutputs(fluid('sulfuric_oil_residue') * 300)
-.fluidOutputs(fractions.fuel_oil.getSulfuric(200))
-.fluidOutputs(fractions.diesel.getSulfuric(150))
-.fluidOutputs(fractions.kerosene.getSulfuric(100))
+.fluidOutputs(fractions.fuel_oil.getCrude(200))
+.fluidOutputs(fractions.diesel.getCrude(150))
+.fluidOutputs(fractions.kerosene.getCrude(100))
 .fluidOutputs(fractions.naphtha.getSulfuric(100))
 .fluidOutputs(fractions.gasoline.getSulfuric(50))
 .fluidOutputs(fractions.refinery_gas.getSulfuric(250))
 .duration(100)
 .EUt(30)
 .buildAndRegister()
+
+// Stripping of contaminants using steam
+
+BCR.recipeBuilder()
+    .fluidInputs(fractions.kerosene.getCrude(50))
+    .fluidInputs(fluid('steam') * 160)
+    .fluidOutputs(fractions.kerosene.getSulfuric(50))
+    .fluidOutputs(fluid('wastewater') * 1)
+    .duration(2)
+    .EUt(30)
+    .buildAndRegister()
+
+BCR.recipeBuilder()
+    .fluidInputs(fractions.diesel.getCrude(50))
+    .fluidInputs(fluid('steam') * 160)
+    .fluidOutputs(fractions.diesel.getSulfuric(50))
+    .fluidOutputs(fluid('wastewater') * 1)
+    .duration(2)
+    .EUt(30)
+    .buildAndRegister()
+
+BCR.recipeBuilder()
+    .fluidInputs(fractions.fuel_oil.getCrude(50))
+    .fluidInputs(fluid('steam') * 160)
+    .fluidOutputs(fractions.fuel_oil.getSulfuric(50))
+    .fluidOutputs(fluid('wastewater') * 1)
+    .duration(2)
+    .EUt(30)
+    .buildAndRegister()
 
 fractions.each { _, fraction -> {
         FBR.recipeBuilder()
