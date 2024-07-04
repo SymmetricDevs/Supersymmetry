@@ -44,6 +44,7 @@ VACUUM_DT = recipemap('vacuum_distillation')
 CRACKER = recipemap('cracker')
 FLUID_HEATER = recipemap('fluid_heater')
 PHASE_SEPARATOR = recipemap('phase_separator')
+CONDENSER = recipemap('condenser')
 
 ASSEMBLER.recipeBuilder()
         .inputs(ore('stickIron') * 4)
@@ -4301,4 +4302,20 @@ DISTILLERY.recipeBuilder()
         .outputs(metaitem('dustSodiumSulfate') * 7)
         .duration(30)
         .EUt(200)
+        .buildAndRegister()
+
+// Dense steam processing
+
+FLUID_HEATER.recipeBuilder()
+        .circuitMeta(1)
+        .fluidInput(fluid('water') * 1000)
+        .fluidOutputs(fluid('dense_steam') * 1000)
+        .duration(10)
+        .EUt(30)
+        .buildAndRegister()
+
+CONDENSER.recipeBuilder()
+        .fluidInputs(fluid('dense_steam') * 1000)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(5)
         .buildAndRegister()
