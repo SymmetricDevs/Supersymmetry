@@ -2512,7 +2512,7 @@ public class FirstDegreeMaterials {
 
         DenseSteam = new Material.Builder(8480, SuSyUtility.susyId('dense_steam'))
                 .gas(new FluidBuilder().temperature(373))
-                .components(Water, 1)
+                .components(Water)
                 .color(0xcaddfa)
                 .build();
 

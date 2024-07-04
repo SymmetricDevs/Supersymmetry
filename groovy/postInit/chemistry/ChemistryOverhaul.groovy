@@ -4308,7 +4308,7 @@ DISTILLERY.recipeBuilder()
 
 FLUID_HEATER.recipeBuilder()
         .circuitMeta(1)
-        .fluidInput(fluid('water') * 1000)
+        .fluidInputs(fluid('water') * 1000)
         .fluidOutputs(fluid('dense_steam') * 1000)
         .duration(80)
         .EUt(30)
