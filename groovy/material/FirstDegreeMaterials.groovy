@@ -1277,7 +1277,7 @@ public class FirstDegreeMaterials {
 
         CryogenicSolder = new Material.Builder(8286, SuSyUtility.susyId('cryogenic_solder'))
                 .dust().ingot().liquid(new FluidBuilder().temperature(430))
-                .components(Indium * 97, Silver * 1)
+                .components(Indium * 27, Silver * 1)
                 .color(0x8967bf)
                 .build();
 
