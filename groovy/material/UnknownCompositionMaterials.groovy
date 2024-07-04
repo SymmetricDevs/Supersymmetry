@@ -1750,10 +1750,14 @@ public class UnknownCompositionMaterials {
                 .color(0x423900)
                 .build();
 
+        ZincDialkyldithiophospate.setFormula("Zn[(S2P(OR)2]2", true)
+
         MolybdenumDialkyldithiophosphate = new Material.Builder(4388, SuSyUtility.susyId('molybdenum_dialkyldithiophosphate'))
                 .dust()
                 .color(0x244200)
                 .build();
+
+        MolybdenumDialkyldithiophosphate.setFormula("Mo[(S2P(OR)2]2", true)
                 
         MidgradeLubricant = new Material.Builder(4389, SuSyUtility.susyId('midgrade_lubricant'))
                 .liquid()

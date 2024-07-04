@@ -1,3 +1,5 @@
+package globals
+
 class SinteringGlobals {
 
     public static void main (String[] args) {

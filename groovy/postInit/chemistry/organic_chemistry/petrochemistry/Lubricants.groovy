@@ -900,8 +900,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
     // Benzotriazole
 
     BR.recipeBuilder()
-        .inputs(ore('dustTwoChloronitrobenzene'))
-        .fluidInputs(fluid('toluene') * 1000)
+        .fluidInputs(fluid('two_chloronitrobenzene') * 144)
         .fluidInputs(fluid('ammonia') * 2000)
         .outputs(metaitem('dustAmmoniumChloride') * 6)
         .fluidOutputs(fluid('two_nitroaniline_solution') * 1000)

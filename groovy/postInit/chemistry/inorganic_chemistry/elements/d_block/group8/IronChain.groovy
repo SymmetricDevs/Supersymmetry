@@ -29,7 +29,8 @@ mods.gregtech.electric_blast_furnace.removeByInput(1920, [metaitem('dustIron') *
 mods.gregtech.electric_blast_furnace.removeByInput(1920, [metaitem('dustWroughtIron') * 4, metaitem('dustCarbon')], null)
 
 
-class Blastable {
+// Should replace inner classes with closures if possible
+class BlastableIron {
     String name
     int amount_required
     int amount_produced
@@ -37,7 +38,7 @@ class Blastable {
     int reductant_required
     int duration
 
-    Blastable(name, amount_required, amount_produced, reductant_required, duration) {
+    BlastableIron(name, amount_required, amount_produced, reductant_required, duration) {
         this.name = name
         this.amount_required = amount_required
         this.amount_produced = amount_produced
@@ -46,12 +47,13 @@ class Blastable {
     }
 }
 
-class Reductant {
+// Should replace inner classes with closures if possible
+class ReductantIron {
     String name
     String byproduct
     int amount_required
     int byproduct_amount
-    Reductant(name, byproduct, amount_required, byproduct_amount) {
+    ReductantIron(name, byproduct, amount_required, byproduct_amount) {
         this.name = name
         this.byproduct = byproduct
         this.amount_required = 1000 * amount_required
@@ -63,27 +65,27 @@ def PBF_RECIPES = recipemap("primitive_blast_furnace")
 def EBF_RECIPES = recipemap("electric_blast_furnace")
 
 def blastables = [
-    new Blastable('dustMagnetite', 2, 6, 4, 80),
-    new Blastable('dustBandedIron', 2, 4, 3, 80),
-    new Blastable('dustHematite', 2, 4, 3, 80),
-    new Blastable('dustIronIiiOxide', 5, 2, 3, 20),
-    new Blastable('dustIronIiOxide', 2, 1, 1, 20),
-    new Blastable('dustGraniticMineralSand', 2, 6, 4, 80),
-    new Blastable('oreIron', 2, 2, 2, 60),
-    new Blastable('oreMagnetite', 1, 3, 4, 60),
-    new Blastable('oreBandedIron', 1, 2, 3, 60),
-    new Blastable('oreNetherrackMagnetite', 1, 6, 4, 60),
-    new Blastable('oreNetherrackBandedIron', 1, 4, 3, 60),
-    new Blastable('oreEndstoneMagnetite', 1, 6, 4, 60),
-    new Blastable('oreEndstoneBandedIron', 1, 4, 3, 60)
+    new BlastableIron('dustMagnetite', 2, 6, 4, 80),
+    new BlastableIron('dustBandedIron', 2, 4, 3, 80),
+    new BlastableIron('dustHematite', 2, 4, 3, 80),
+    new BlastableIron('dustIronIiiOxide', 5, 2, 3, 20),
+    new BlastableIron('dustIronIiOxide', 2, 1, 1, 20),
+    new BlastableIron('dustGraniticMineralSand', 2, 6, 4, 80),
+    new BlastableIron('oreIron', 2, 2, 2, 60),
+    new BlastableIron('oreMagnetite', 1, 3, 4, 60),
+    new BlastableIron('oreBandedIron', 1, 2, 3, 60),
+    new BlastableIron('oreNetherrackMagnetite', 1, 6, 4, 60),
+    new BlastableIron('oreNetherrackBandedIron', 1, 4, 3, 60),
+    new BlastableIron('oreEndstoneMagnetite', 1, 6, 4, 60),
+    new BlastableIron('oreEndstoneBandedIron', 1, 4, 3, 60)
 ]
 
 def reductants = [
-    new Reductant('carbon_monoxide', 'carbon_dioxide', 1, 1),
-    new Reductant('hydrogen', 'steam', 2, 1)
+    new ReductantIron('carbon_monoxide', 'carbon_dioxide', 1, 1),
+    new ReductantIron('hydrogen', 'steam', 2, 1)
 ]
 
-def combustibles = CarbonGlobals.combustibles()
+def combustibles = combustibles()
 
 for (blastable in blastables) {
     for (combustible in combustibles) {
@@ -276,13 +278,3 @@ BR.recipeBuilder()
     .duration(20)
     .EUt(30)
     .buildAndRegister()
-
-ELECTROLYZER.recipeBuilder()
-    .notConsumable(metaitem('graphite_electrode'))
-    .notConsumable(metaitem('stickIron'))
-    .fluidInputs(fluid('iron_iii_chloride') * 576)
-    .fluidOutputs(fluid('chlorine') * 3000)
-    .outputs(metaitem('dustIron'))
-    .EUt(120)
-    .duration(400)
-    .buildAndRegister()	

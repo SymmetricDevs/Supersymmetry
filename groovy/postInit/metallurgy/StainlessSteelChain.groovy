@@ -79,7 +79,7 @@ EBF.recipeBuilder()
 //     .EUt(Globals.voltAmps[3])
 //     .buildAndRegister()
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
     EBF.recipeBuilder()
     .inputs(ore('dustSiliconDioxide') * 3)
     .inputs(ore('dustIron') * 3)
