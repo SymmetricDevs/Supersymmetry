@@ -1970,8 +1970,10 @@ susy.material.purified_antimony_trioxide=Purified Antimony Trioxide
 susy.material.copper_i_sulfide=Copper I Sulfide
 susy.material.copper_ii_sulfide=Copper II Sulfide
 susy.material.potassium_permanganate=Potassium Permanganate
+susy.material.potassium_manganate=Potassium Manganate
 susy.material.lead_free_solder=Lead-Free Solder
 susy.material.cryogenic_solder=Cryogenic Solder
+susy.material.oxidized_manganate_solution=Oxidized Manganate Solution
 
 # Isotopes
 

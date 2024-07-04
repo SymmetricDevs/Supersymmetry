@@ -690,9 +690,9 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        PotassiumManganate = new Material.Builder(8192, SuSyUtility.susyId('potassium_manganate'))
+        PotassiumPermanganate = new Material.Builder(8192, SuSyUtility.susyId('potassium_permanganate'))
                 .dust()
-                .components(Potassium * 2, Manganese, Oxygen * 4)
+                .components(Potassium, Manganese, Oxygen * 4)
                 .color(0x320354)
                 .build();
 
@@ -1589,7 +1589,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //8332 is free
+        PotassiumManganate = new Material.Builder(8332, SuSyUtility.susyId('potassium_manganate'))
+                .dust()
+                .components(Potassium * 2, Manganese, Oxygen * 4)
+                .color(0x071c06)
+                .build();
 
         RutheniumIVOxide = new Material.Builder(8333, SuSyUtility.susyId('ruthenium_iv_oxide'))
                 .dust()

@@ -1064,6 +1064,7 @@ class SuSyMaterials {
         public static Material CopperISulfide;
         public static Material CopperIISulfide;
         public static Material PotassiumManganate;
+        public static Material PotassiumPermanganate;
         public static Material LeadFreeSolder;
         public static Material CryogenicSolder;
 
@@ -1250,6 +1251,7 @@ class SuSyMaterials {
         public static Material CaesiumChlorideSolution;
         public static Material RubidiumHydroxideSolution;
         public static Material SodiumAlumSolution;
+        public static Material OxidizedManganateSolution;
 
         // Organic Chemistry Materials
 
