@@ -906,7 +906,7 @@ crafting.addShaped("gregtech:bath_condenser", metaitem('bath_condenser'), [
 
 // Phase Separator
 
-crafting.addShaped("gregtech:phase_separator", metaitem('phase_separator.lv'), [
+crafting.addShaped("gregtech:phase_separator", metaitem('phase_separator'), [
 	[metaitem('frameStainlessSteel'), metaitem('drum.stainless_steel'), metaitem('pipeSmallFluidStainlessSteel')],
 	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('hull.hv'), metaitem('pipeSmallFluidStainlessSteel')],
 	[null, null, null]
