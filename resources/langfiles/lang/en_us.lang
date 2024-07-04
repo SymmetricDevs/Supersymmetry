@@ -1824,7 +1824,7 @@ susy.material.acidic_tricresyl_phosphate=Acidic Tricresyl Phosphate
 susy.material.tricresyl_phosphate=Tricresyl Phosphate
 susy.material.diisopropyldithiophosphoric_acid=Diisopropyldithiophosphoric Acid
 susy.material.dibutyldithiophosphoric_acid=Dibutyldithiophosphoric Acid
-susy.material.zinc_dialkyldithiophosphate=Zinc Dialkyldithiophospate
+susy.material.zinc_dialkyldithiophosphate=Zinc Dialkyldithiophosphate
 susy.material.molybdenum_dialkyldithiophosphate=Molybdenum Dialkyldithiophosphate
 susy.material.diamylamine=Diamylamine
 susy.material.sodium_diamyldithiocarbamate_solution=Sodium Diamylthiocarbamate Solution
@@ -1896,8 +1896,6 @@ susy.material.polyvinyl_alcohol=Polyvinyl Alcohol
 susy.material.impure_thallium_sulfate_solution=Impure Thallium Sulfate Solution
 susy.material.thallium_i_chloride=Thallium I Chloride
 susy.material.thallium_sulfate_solution=Thallium Sulfate Solution
-susy.material.arsenic_iii_oxide=Arsenic III Oxide
-susy.material.antimony_iii_oxide=Antimony III Oxide
 susy.material.impure_cadmium_sulfate_solution=Impure Cadmium Sulfate Solution
 susy.material.purified_cadmium_solution=Purified Cadmium Solution
 susy.material.spent_pbi_solution=Spent PBI Solution
@@ -1965,6 +1963,18 @@ susy.material.methyl_formate_solution=Methyl Formate Solution
 susy.material.acidic_thallium_sulfate_solution=Acidic Thallium Sulfate Solution
 susy.material.ethyl_acetate=Ethyl Acetate
 susy.material.dense_steam=Dense Steam
+susy.material.nether_molecular_sieve=Nether Molecular Sieve
+susy.material.heavy_nether_gases=Heavy Nether Gases
+susy.material.sodium_thioantimonite_solution=Sodium Thioantimonite Solution
+susy.material.purified_antimony_trichloride=Purified Antimony Trichloride
+susy.material.purified_antimony_trioxide=Purified Antimony Trioxide
+susy.material.copper_i_sulfide=Copper I Sulfide
+susy.material.copper_ii_sulfide=Copper II Sulfide
+susy.material.potassium_permanganate=Potassium Permanganate
+susy.material.potassium_manganate=Potassium Manganate
+susy.material.lead_free_solder=Lead-Free Solder
+susy.material.cryogenic_solder=Cryogenic Solder
+susy.material.oxidized_manganate_solution=Oxidized Manganate Solution
 
 # Isotopes
 
