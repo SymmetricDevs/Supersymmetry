@@ -96,6 +96,7 @@ class ChangeFlags {
         setupFluidType(Iodine, FluidStorageKeys.GAS, 460)
         setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
         setupFluidType(Selenium, FluidStorageKeys.LIQUID, 494)
+        //setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
 
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
@@ -165,6 +166,7 @@ class ChangeFlags {
         Lepidolite.setFormula("(K,Rb)AlLi2Si4O10(OH,F)2", true);
         Tetrahedrite.setFormula("Cu12Sb4S13", true);
         IndiumGalliumPhosphide.setFormula("InGaP2", true);
+        NetherAir.setFormula("(N78O21Ar9)24(CO2)2(H2S)(SO2)", true)
 
         // Ore Processing
         

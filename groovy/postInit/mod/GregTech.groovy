@@ -451,8 +451,9 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('plateEnderPearl') * 9, met
 
 crafting.addShapeless('convert_old_slaked_lime', metaitem('dustCalciumHydroxide'), [metaitem('slaked_lime')])
 
-mods.gregtech.chemical_bath.recipeBuilder()
+mods.gregtech.mixer.recipeBuilder()
         .inputs(ore('dustQuicklime') * 2)
+        .circuitMeta(1)
         .fluidInputs(fluid('water') * 1000)
         .outputs(metaitem('dustCalciumHydroxide') * 5)
         .duration(20)
@@ -780,6 +781,13 @@ mods.gregtech.packer.recipeBuilder()
         .EUt(7)
         .buildAndRegister();
 
+mods.gregtech.packer.recipeBuilder()
+        .inputs(metaitem('sand.dust') * 4)
+        .outputs(item('minecraft:sand'))
+        .duration(20)
+        .EUt(7)
+        .buildAndRegister();
+
 crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [
         [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')],
         [ore('foilZinc'), ore('plateBrass'), ore('foilZinc')],
@@ -886,7 +894,15 @@ CENTRIFUGE.recipeBuilder()
         .duration(40)
         .EUt(30)
         .buildAndRegister();
-		
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(ore('dustMagnalium') * 3)
+        .outputs(metaitem('dustMagnesium'))
+        .outputs(metaitem('dustAluminium') * 2)
+        .duration(72)
+        .EUt(30)
+        .buildAndRegister();
+
 // Fix distillation tower being too difficult (4 EV circuits? Seriously?)
 
 
@@ -1276,7 +1292,7 @@ mods.gregtech.extractor.removeByInput(120, [metaitem('frameSteel')], null)
 //Solid Steel Casing
 mods.gregtech.macerator.recipeBuilder()
         .inputs(item('gregtech:metal_casing', 4))
-        .outputs(metaitem('dustSteel') * 2)
+        .outputs(metaitem('dustSmallSteel') * 7)
         .duration(220)
         .EUt(7)
         .buildAndRegister()
@@ -1284,7 +1300,7 @@ mods.gregtech.macerator.recipeBuilder()
 mods.gregtech.arc_furnace.recipeBuilder()
         .inputs(item('gregtech:metal_casing', 4))
         .fluidInputs(fluid('oxygen') * 224)
-        .outputs(metaitem('ingotSteel') * 2)
+        .outputs(metaitem('nuggetSteel') * 15)
         .duration(220)
         .EUt(30)
         .buildAndRegister()
@@ -1308,7 +1324,7 @@ mods.gregtech.arc_furnace.recipeBuilder()
 //Steel Fireboxes
 mods.gregtech.macerator.recipeBuilder()
         .inputs(item('gregtech:boiler_firebox_casing', 1))
-        .outputs(metaitem('dustSteel') * 2)
+        .outputs(metaitem('dustSmallSteel') * 7)
         .duration(220)
         .EUt(7)
         .buildAndRegister()
@@ -1316,7 +1332,7 @@ mods.gregtech.macerator.recipeBuilder()
 mods.gregtech.arc_furnace.recipeBuilder()
         .inputs(item('gregtech:boiler_firebox_casing', 1))
         .fluidInputs(fluid('oxygen') * 224)
-        .outputs(metaitem('ingotSteel') * 2)
+        .outputs(metaitem('nuggetSteel') * 15)
         .duration(220)
         .EUt(30)
         .buildAndRegister()

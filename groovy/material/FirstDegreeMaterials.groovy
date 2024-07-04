@@ -873,11 +873,11 @@ public class FirstDegreeMaterials {
                 .color(0x54362c)
                 .build()
 
-        LeadFreeSolder = new Material.Builder(8220, SuSyUtility.susyId('lead_free_solder'))
-                .ingot().liquid(new FluidBuilder().temperature(411))
-                .components(Bismuth, 6, Tin, 4)
+        HeavyNetherGases = new Material.Builder(8220, SuSyUtility.susyId('heavy_nether_gases'))
+                .gas()
+                .components(CarbonDioxide * 3, HydrogenSulfide)
                 .colorAverage()
-                .build()
+                .build();
 
         ThionylChloride = new Material.Builder(8221, SuSyUtility.susyId('thionyl_chloride'))
                 .liquid()
@@ -2616,13 +2616,7 @@ public class FirstDegreeMaterials {
                 .color(0x887866)
                 .build();
 
-        GaseousAluminiumChloride = new Material.Builder(8496, SuSyUtility.susyId('gaseous_aluminium_chloride'))
-                .gas(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(460))
-                .components(AluminiumChloride)
-                .colorAverage()
-                .build();
-
-        //FREE IDs: 8497-8498
+        //FREE IDs: 8496-8498
 
         SodiumNitrite = new Material.Builder(8499, SuSyUtility.susyId('sodium_nitrite'))
                 .dust().liquid(new FluidBuilder().temperature(544))
@@ -3288,7 +3282,7 @@ public class FirstDegreeMaterials {
                 .color(0x96a67c)
                 .build()
 
-        SodiumSelenateSolution.setFormula("(Na2SeO3)(H2O)", true);
+        SodiumSeleniteSolution.setFormula("(Na2SeO3)(H2O)", true);
 
         HydrogenSelenide = new Material.Builder(8607, SuSyUtility.susyId('hydrogen_selenide'))
                 .gas()
