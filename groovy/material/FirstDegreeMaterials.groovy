@@ -2580,13 +2580,7 @@ public class FirstDegreeMaterials {
                 .color(0x887866)
                 .build();
 
-        GaseousAluminiumChloride = new Material.Builder(8496, SuSyUtility.susyId('gaseous_aluminium_chloride'))
-                .gas(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(460))
-                .components(AluminiumChloride)
-                .colorAverage()
-                .build();
-
-        //FREE IDs: 8497-8498
+        //FREE IDs: 8496-8498
 
         SodiumNitrite = new Material.Builder(8499, SuSyUtility.susyId('sodium_nitrite'))
                 .dust().liquid(new FluidBuilder().temperature(544))
@@ -3252,7 +3246,7 @@ public class FirstDegreeMaterials {
                 .color(0x96a67c)
                 .build()
 
-        SodiumSelenateSolution.setFormula("(Na2SeO3)(H2O)", true);
+        SodiumSeleniteSolution.setFormula("(Na2SeO3)(H2O)", true);
 
         HydrogenSelenide = new Material.Builder(8607, SuSyUtility.susyId('hydrogen_selenide'))
                 .gas()
