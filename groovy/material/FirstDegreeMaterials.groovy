@@ -529,7 +529,7 @@ public class FirstDegreeMaterials {
 
         SodiumThioantimoniteSolution = new Material.Builder(8165, SuSyUtility.susyId('sodium_thioantimonite_solution'))
                 .liquid()
-                .components(Sodium, 12, Antimony, 4, Sulfur, 12, Water, 12)
+                .components(Sodium * 12, Antimony * 4, Sulfur * 12, Water * 12)
                 .colorAverage()
                 .build();
 
@@ -561,7 +561,7 @@ public class FirstDegreeMaterials {
 
         CopperISulfide = new Material.Builder(8170, SuSyUtility.susyId('copper_i_sulfide'))
                 .dust()
-                .components(Copper, 2, Sulfur, 1)
+                .components(Copper * 2, Sulfur)
                 .color(0x1a1101)
                 .build();
 
@@ -679,7 +679,7 @@ public class FirstDegreeMaterials {
 
         CopperIISulfide = new Material.Builder(8190, SuSyUtility.susyId('copper_ii_sulfide'))
                 .dust()
-                .components(Copper, 1, Sulfur, 1)
+                .components(Copper, Sulfur)
                 .color(0x262626)
                 .build()
 
@@ -690,9 +690,9 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-                PotassiumPermanganate = new Material.Builder(8192, SuSyUtility.susyId('potassium_permanganate'))
+        PotassiumManganate = new Material.Builder(8192, SuSyUtility.susyId('potassium_manganate'))
                 .dust()
-                .components(Potassium, 2, Manganese, 1, Oxygen, 4)
+                .components(Potassium * 2, Manganese, Oxygen * 4)
                 .color(0x320354)
                 .build();
 
@@ -799,13 +799,13 @@ public class FirstDegreeMaterials {
 
         PurifiedAntimonyTrichloride = new Material.Builder(8208, SuSyUtility.susyId('purified_antimony_trichloride'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(347))
-                .components(Antimony, 1, Chlorine, 3)
+                .components(Antimony * 1, Chlorine * 3)
                 .color(0x83b87b)
                 .build();
 
         PurifiedAntimonyTrioxide = new Material.Builder(8209, SuSyUtility.susyId('purified_antimony_trioxide'))
                 .dust()
-                .components(Antimony, 2, Oxygen, 3)
+                .components(Antimony * 2, Oxygen * 3)
                 .color(0x92d1d4)
                 .build();
 
@@ -1277,9 +1277,12 @@ public class FirstDegreeMaterials {
 
         CryogenicSolder = new Material.Builder(8286, SuSyUtility.susyId('cryogenic_solder'))
                 .dust().ingot().liquid(new FluidBuilder().temperature(430))
-                .components(Indium, 97, Silver, 3)
+                .components(Indium * 27, Silver * 1)
                 .color(0x8967bf)
                 .build();
+
+        CryogenicSolder.setFormula("In97Ag3", true)
+
 
         LithiumCobaltOxide = new Material.Builder(8287, SuSyUtility.susyId('lithium_cobalt_oxide'))
                 .dust()
@@ -1669,7 +1672,11 @@ public class FirstDegreeMaterials {
                 .color(0x2c733a)
                 .build();
 
-        //FREE ID: 8346
+        LeadFreeSolder = new Material.Builder(8346, SuSyUtility.susyId('lead_free_solder'))
+                .ingot().liquid(new FluidBuilder().temperature(411))
+                .components(Bismuth * 6, Tin * 4)
+                .colorAverage()
+                .build()
 
         CopperDross = new Material.Builder(8347, SuSyUtility.susyId('copper_dross'))
                 .dust()

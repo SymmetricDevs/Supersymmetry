@@ -1063,7 +1063,7 @@ class SuSyMaterials {
         public static Material PurifiedAntimonyTrioxide;
         public static Material CopperISulfide;
         public static Material CopperIISulfide;
-        public static Material PotassiumPermanganate;
+        public static Material PotassiumManganate;
         public static Material LeadFreeSolder;
         public static Material CryogenicSolder;
 
