@@ -1973,6 +1973,7 @@ susy.material.crude_fuel_oil=Crude Fuel Oil
 susy.material.heated_oil=Heated Oil
 susy.material.heated_oil_light=Heated Light Oil
 susy.material.heated_oil_heavy=Heated Heavy Oil
+susy.material.dense_steam=Dense Steam
 
 # Isotopes
 

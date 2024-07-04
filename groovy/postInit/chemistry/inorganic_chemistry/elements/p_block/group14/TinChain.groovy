@@ -70,7 +70,7 @@ CHEMICAL_BATH.recipeBuilder()
         .buildAndRegister()
 
 //SMELTING
-for (combustible in CarbonGlobals.combustibles()) {
+for (combustible in combustibles()) {
     REACTION_FURNACE.recipeBuilder()
             .inputs(ore('dustConcentrateCassiterite'))
             .inputs(ore(combustible.name) * combustible.equivalent(2))
@@ -131,7 +131,7 @@ ROASTER.recipeBuilder()
         .inputs(ore('dustPurifiedTinIiOxide') * 2)
         .fluidInputs(fluid('hydrogen') * 2000)
         .outputs(metaitem('dustHighPurityTin'))
-        .fluidOutputs(fluid('steam') * 1000)
+        .fluidOutputs(fluid('dense_steam') * 1000)
         .EUt(120)
         .duration(120)
         .buildAndRegister()

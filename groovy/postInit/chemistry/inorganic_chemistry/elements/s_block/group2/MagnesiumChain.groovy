@@ -49,7 +49,7 @@ EBF.recipeBuilder()
         .blastFurnaceTemp(1370)
         .buildAndRegister()
 
-for (combustible in CarbonGlobals.combustibles()) {
+for (combustible in combustibles()) {
     EBF.recipeBuilder()
         .inputs(ore('dustMagnesia') * 2)
         .inputs(ore(combustible.name) * combustible.equivalent(1))
@@ -71,7 +71,7 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 //IG FARBEN CHLORINATION
-for (combustible in CarbonGlobals.combustibles()) {
+for (combustible in combustibles()) {
     REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustMagnesia') * 2)
         .inputs(ore(combustible.name) * combustible.equivalent(1))
@@ -139,7 +139,7 @@ ROASTER.recipeBuilder()
 ROASTER.recipeBuilder()
         .inputs(ore('dustKieserite') * 7)
         .outputs(metaitem('dustMagnesiumSulfate') * 6)
-        .fluidOutputs(fluid('steam') * 1000)
+        .fluidOutputs(fluid('dense_steam') * 1000)
         .EUt(30)
         .duration(160)
         .buildAndRegister()

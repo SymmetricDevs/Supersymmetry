@@ -418,7 +418,7 @@ BR.recipeBuilder()
 ROASTER.recipeBuilder()
         .inputs(ore('dustIndiumHydroxide') * 14)
         .outputs(metaitem('dustIndiumOxide') * 5)
-        .fluidOutputs(liquid('steam') * 3000)
+        .fluidOutputs(liquid('dense_steam') * 3000)
         .duration(200)
         .EUt(120)
         .buildAndRegister();

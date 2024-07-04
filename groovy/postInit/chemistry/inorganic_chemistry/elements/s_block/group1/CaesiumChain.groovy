@@ -77,7 +77,7 @@ CRYSTALLIZER.recipeBuilder()
 
 // Refining into metal
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
     ROASTER.recipeBuilder()
     .inputs(ore('dustCaesiumAlum') * 24)
     .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))

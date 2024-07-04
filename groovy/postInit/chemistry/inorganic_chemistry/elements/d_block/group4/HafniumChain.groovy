@@ -33,13 +33,13 @@ CENTRIFUGE.recipeBuilder()
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('hafnium_sulfate_solution') * 2000)
         .outputs(metaitem('dustHafniumDioxide') * 3)
-        .fluidOutputs(fluid('steam') * 2000)
+        .fluidOutputs(fluid('dense_steam') * 2000)
         .fluidOutputs(fluid('sulfur_trioxide') * 2000)
         .EUt(Globals.voltAmps[1])
         .duration(20)
         .buildAndRegister()
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
                 .inputs(ore('dustHafniumDioxide'))
                 .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))

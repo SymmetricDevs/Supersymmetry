@@ -117,7 +117,7 @@ CSTR.recipeBuilder()
 ROASTER.recipeBuilder()
         .inputs(ore('dustLithiumCarbonate') * 6)
         .fluidInputs(fluid('hydrogen_fluoride') * 2000)
-        .fluidOutputs(fluid('steam') * 1000)
+        .fluidOutputs(fluid('dense_steam') * 1000)
         .fluidOutputs(fluid('carbon_dioxide') * 1000)
         .outputs(metaitem('dustLithiumFluoride') * 4)
         .duration(140)
@@ -288,12 +288,12 @@ mods.gregtech.autoclave.removeByInput(320, [metaitem('dustLapotron') * 15], [flu
 mods.gregtech.autoclave.removeByInput(256, [metaitem('dustLapotron') * 15], [fluid('blue_steel') * 288])
 mods.gregtech.autoclave.removeByInput(192, [metaitem('dustLapotron') * 15], [fluid('red_steel') * 72])
 
-mods.jei.removeAndHide(metaitem('energy_crystal'));
-mods.jei.removeAndHide(metaitem('lapotron_crystal'));
+mods.jei.ingredient.removeAndHide(metaitem('energy_crystal'));
+mods.jei.ingredient.removeAndHide(metaitem('lapotron_crystal'));
 
-mods.jei.removeAndHide(metaitem('energy.lapotronic_orb'));
-mods.jei.removeAndHide(metaitem('energy.lapotronic_orb_cluster'));
-mods.jei.removeAndHide(metaitem('energy.module'));
-mods.jei.removeAndHide(metaitem('energy.cluster'));
-mods.jei.removeAndHide(metaitem('max.battery'));
+mods.jei.ingredient.removeAndHide(metaitem('energy.lapotronic_orb'));
+mods.jei.ingredient.removeAndHide(metaitem('energy.lapotronic_orb_cluster'));
+mods.jei.ingredient.removeAndHide(metaitem('energy.module'));
+mods.jei.ingredient.removeAndHide(metaitem('energy.cluster'));
+mods.jei.ingredient.removeAndHide(metaitem('max.battery'));
 

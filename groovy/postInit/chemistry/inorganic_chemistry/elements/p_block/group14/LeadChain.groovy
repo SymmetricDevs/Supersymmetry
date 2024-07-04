@@ -162,7 +162,7 @@ for (fuel in rotary_kiln_fuels) {
 }
 
 //SINTER-ROAST PROCESS (UNIVERSAL, 200%)
-def combustibles = CarbonGlobals.combustibles()
+def combustibles = combustibles()
 
 for (combustible in combustibles) {
     EBF.recipeBuilder()
@@ -262,7 +262,7 @@ BR.recipeBuilder()
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('salty_arsenic_acid') * 6000)
         .outputs(metaitem('dustSaltyArsenicPentoxide') * 7)
-        .fluidOutputs(fluid('steam') * 9000)
+        .fluidOutputs(fluid('dense_steam') * 9000)
         .EUt(120)
         .duration(200)
         .buildAndRegister()
@@ -295,7 +295,7 @@ BR.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-for (carbon in CarbonGlobals.sources) {
+for (carbon in sources) {
     ROASTER.recipeBuilder()
             .inputs(ore('dustAntimonyVOxide') * 7)
             .inputs(ore(carbon.name) * carbon.equivalent(5))
@@ -499,7 +499,7 @@ ELECTROLYZER.recipeBuilder()
 ROASTER.recipeBuilder()
         .inputs(ore('dustLeadIiHydroxide') * 5)
         .outputs(metaitem('dustLeadOxide') * 2)
-        .fluidOutputs(fluid('steam') * 1000)
+        .fluidOutputs(fluid('dense_steam') * 1000)
         .duration(80)
         .EUt(30)
         .buildAndRegister()

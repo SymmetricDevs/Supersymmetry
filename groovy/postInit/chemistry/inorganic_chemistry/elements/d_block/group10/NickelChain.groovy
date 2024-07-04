@@ -1,4 +1,5 @@
 import globals.Globals
+import globals.CarbonGlobals
 import static globals.CarbonGlobals.*
 
 PRIMITIVEBLASTFURNACE = recipemap('primitive_blast_furnace')
@@ -20,7 +21,7 @@ EBF.recipeBuilder()
         .duration(40)
         .buildAndRegister()
 
-for (combustible in CarbonGlobals.combustibles()) {
+for (combustible in combustibles()) {
     PRIMITIVEBLASTFURNACE.recipeBuilder()
             .inputs(ore('dustAnyPurityNickel'))
             .inputs(ore(combustible.name) * combustible.equivalent(1))
@@ -90,7 +91,7 @@ REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustGarnierite'))
         .fluidInputs(fluid('hydrogen') * 2000)
         .outputs(metaitem('dustNickel'))
-        .fluidOutputs(fluid('steam') * 1000)
+        .fluidOutputs(fluid('dense_steam') * 1000)
         .EUt(30)
         .duration(40)
         .buildAndRegister()
