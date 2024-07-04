@@ -4316,7 +4316,7 @@ DISTILLERY.recipeBuilder()
 // Dense steam processing
 
 FLUID_HEATER.recipeBuilder()
-        .circuitMeta(1)
+        .circuitMeta(3)
         .fluidInputs(fluid('water') * 1000)
         .fluidOutputs(fluid('dense_steam') * 1000)
         .duration(80)
