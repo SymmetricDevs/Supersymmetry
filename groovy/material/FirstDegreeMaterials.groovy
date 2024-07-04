@@ -2557,7 +2557,13 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE IDs: 8480-8485
+        DenseSteam = new Material.Builder(8480, SuSyUtility.susyId('dense_steam'))
+                .gas(new FluidBuilder().temperature(373))
+                .components(Water)
+                .color(0xcaddfa)
+                .build();
+
+        //FREE IDs: 8481-8485
 
         UltramaficTailingSlurry = new Material.Builder(8486, SuSyUtility.susyId('ultramafic_tailing_slurry'))
                 .liquid()
