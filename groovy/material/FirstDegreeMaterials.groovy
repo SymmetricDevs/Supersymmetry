@@ -847,7 +847,7 @@ public class FirstDegreeMaterials {
 
         HeavyNetherGases = new Material.Builder(8220, SuSyUtility.susyId('heavy_nether_gases'))
                 .gas()
-                .components(CarbonDioxide, 3, HydrogenSulfide, 1)
+                .components(CarbonDioxide * 3, HydrogenSulfide)
                 .colorAverage()
                 .build();
 
