@@ -2562,7 +2562,11 @@ public class FirstDegreeMaterials {
                 .color(0xbda51b)
                 .build();
 
-        //FREE IDs: 8493
+        GaseousIronIIIChloride = new Material.Builder(8493, SuSyUtility.susyId('gaseous_iron_iii_chloride'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(590))
+                .components(Iron3Chloride)
+                .color(0xba8f49)
+                .build();
 
         GaseousTitaniumTetrachloride = new Material.Builder(8494, SuSyUtility.susyId('gaseous_titanium_tetrachloride'))
                 .gas(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(1180))

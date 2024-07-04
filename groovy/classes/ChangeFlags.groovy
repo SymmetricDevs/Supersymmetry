@@ -96,7 +96,7 @@ class ChangeFlags {
         setupFluidType(Iodine, FluidStorageKeys.GAS, 460)
         setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
         setupFluidType(Selenium, FluidStorageKeys.LIQUID, 494)
-        setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
+        //setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
 
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
