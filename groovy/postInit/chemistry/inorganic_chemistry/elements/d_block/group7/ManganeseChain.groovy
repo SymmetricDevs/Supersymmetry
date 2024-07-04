@@ -16,7 +16,7 @@ ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 //PYROMETALLUGRICAL METHODS (75%)
 
-for (combustible in CarbonGlobals.combustibles()) {
+for (combustible in combustibles()) {
     EBF.recipeBuilder()
         .inputs(ore('dustPyrolusite'))
         .inputs(ore(combustible.name) * combustible.equivalent(2))
@@ -37,7 +37,7 @@ ROASTER.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
     ROASTER.recipeBuilder()
         .inputs(ore('dustManganeseIiOxide') * 2)
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
@@ -50,13 +50,14 @@ for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
 }
 
 //PARTIAL REDUCTION OF PYROLUSITE FOR SULFURIC ACID LEACH
-class Reductant {
+// Should replace inner classes with closures if possible
+class ReductantManganese {
     String name
     String byproduct
     int amount_required
     int byproduct_amount
 
-    Reductant(name, byproduct, amount_required, byproduct_amount) {
+    ReductantManganese(name, byproduct, amount_required, byproduct_amount) {
         this.name = name
         this.byproduct = byproduct
         this.amount_required = amount_required
@@ -65,13 +66,13 @@ class Reductant {
 }
 
 def hydrocarbonReductants = [
-    new Reductant('fuel_oil', 'carbon_dioxide', 67, 288),
-    new Reductant('natural_gas', 'carbon_dioxide', 167, 234)
+    new ReductantManganese('fuel_oil', 'carbon_dioxide', 67, 288),
+    new ReductantManganese('natural_gas', 'carbon_dioxide', 167, 234)
 ]
 
 def reductants = [
-    new Reductant('carbon_monoxide', 'carbon_dioxide', 1000, 1000),
-    new Reductant('hydrogen', 'steam', 2000, 1000)
+    new ReductantManganese('carbon_monoxide', 'carbon_dioxide', 1000, 1000),
+    new ReductantManganese('hydrogen', 'steam', 2000, 1000)
 ]
 
 /*
@@ -207,7 +208,7 @@ ROASTER.recipeBuilder()
     .inputs(ore('dustManganeseDioxide') * 3)
     .fluidInputs(fluid('potassium_hydroxide') * 864)
     .fluidInputs(fluid('oxygen') * 1000)
-    .outputs(metaitem('dustPotassiumPermanganate') * 7)
+    .outputs(metaitem('dustPotassiumManganate') * 7)
     .fluidOutputs(fluid('steam') * 2000)
     .duration(200)
     .EUt(30)

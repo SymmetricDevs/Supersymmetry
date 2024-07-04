@@ -424,9 +424,9 @@ class SuSyMaterials {
         public static Material ImpureCelestineSlurry;
         public static Material CelestineSlurry;
         public static Material BariumResidue;
-	public static Material OrganosiliconMixture;
-	public static Material ImpurePolydimethylsiloxaneMixture;
-	public static Material RawPolydimethylsiloxaneMixture;
+        public static Material OrganosiliconMixture;
+        public static Material ImpurePolydimethylsiloxaneMixture;
+        public static Material RawPolydimethylsiloxaneMixture;
         public static Material LubricityAdditive;
         public static Material AntistaticAdditive;
         public static Material AntifoamingAdditive;
@@ -507,6 +507,7 @@ class SuSyMaterials {
         public static Material CocoAmineAcetate;
         public static Material PolluciteLeach;
         public static Material CaesiumRubidiumAlumMixture;
+        public static Material NetherMolecularSieve;
 
         // Petrochem Materials
 
@@ -1056,12 +1057,13 @@ class SuSyMaterials {
         public static Material CaesiumHydroxideSolution;
         public static Material CaesiumFormateSolution;
         public static Material RubidiumHydroxide;
+        public static Material HeavyNetherGases;
         public static Material SodiumThioantimoniteSolution;
         public static Material PurifiedAntimonyTrichloride;
         public static Material PurifiedAntimonyTrioxide;
         public static Material CopperISulfide;
         public static Material CopperIISulfide;
-        public static Material PotassiumPermanganate;
+        public static Material PotassiumManganate;
         public static Material LeadFreeSolder;
         public static Material CryogenicSolder;
 
@@ -1789,6 +1791,10 @@ class SuSyMaterials {
         public static Material PartiallyLiquefiedArgon;
         public static Material SupercriticalCarbonDioxide;
 
+        public static void changeFormulas() {
+            log.infoMC("Changing Formulas!");
+            Phosphorus.setFormula("P4", true);
+        }
 
         public static void init() {
                 ElementMaterials.register();
@@ -1801,5 +1807,6 @@ class SuSyMaterials {
                 PetrochemistryMaterials.register();
                 ThirdDegreeMaterials.register();
                 ThermodynamicsMaterials.register();
+                changeFormulas();
         }
 }

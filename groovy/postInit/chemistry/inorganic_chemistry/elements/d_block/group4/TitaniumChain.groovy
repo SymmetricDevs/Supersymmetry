@@ -120,13 +120,13 @@ BR.recipeBuilder()
 
 // Chloride Ilmenite Process
 
-for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
+for (highPurityCombustible in highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 3000)
         .inputs(ore('dustIlmenite'))
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
         .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
-        .fluidOutputs(fluid('gaseous_iron_iii_chloride') * 480)
+        .fluidOutputs(fluid('gaseous_iron_iii_chloride') * 800)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .outputs(metaitem('dustRutile') * 3)
         .duration(100 * highPurityCombustible.duration)
@@ -148,7 +148,14 @@ for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
         .inputs(ore('dustRutile') * 3)
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
-        .fluidInputs(fluid('chlorine') * 4700)
+        .fluidInputs(fluid('chlorine') * 5000)
+		/*calculation:	 1000 TiCl4	* 4
+						+50 AlCl3	* 3
+						+1/4 FeCl3	* 20%	* 3000
+						+1/4 VOCl2	* 60%	* 2000
+						+50 SnCl4	*4
+						+50	SiCl4	*4
+		*/
         .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
         .fluidOutputs(fluid('gaseous_titanium_tetrachloride') * 1000)
         .fluidOutputs(fluid('carbon_monoxide') * 2000)
@@ -158,15 +165,15 @@ for (highPurityCombustible in CarbonGlobals.highPurityCombustibles()) {
 }
 
 VACUUM_FREEZER.recipeBuilder()
-        .fluidInputs(fluid('gaseous_iron_iii_chloride') * 144)
-        .outputs(metaitem('dustIronIiiChloride'))
+        .fluidInputs(fluid('gaseous_iron_iii_chloride') * 1000)
+        .outputs(metaitem('dustIronIiiChloride') * 4)
         .duration(200)
         .EUt(Globals.voltAmps[1] * 2)
         .buildAndRegister()
 
 VACUUM_FREEZER.recipeBuilder()
-        .fluidInputs(fluid('gaseous_aluminium_chloride') * 144)
-        .outputs(metaitem('dustAluminiumChloride'))
+        .fluidInputs(fluid('aluminium_chloride') * 1000)
+        .outputs(metaitem('dustAluminiumChloride') * 4)
         .duration(200)
         .EUt(Globals.voltAmps[1] * 2)
         .buildAndRegister()
@@ -199,9 +206,9 @@ FIXED_BED_REACTOR.recipeBuilder()
 
 DISTILLATION_TOWER.recipeBuilder()
         .fluidInputs(fluid('vanadium_free_titanium_tetrachloride') * 1000)
-        .fluidOutputs(fluid('gaseous_aluminium_chloride') * 50)
+        .fluidOutputs(fluid('aluminium_chloride') * 50)
         .fluidOutputs(fluid('titanium_tetrachloride') * 1000)
-        .chancedOutput(metaitem('dustIronIiiChloride'), 2000, 250)
+        .chancedOutput(metaitem('dustIronIiiChloride'), 2000, 0)
         .duration(300)
         .EUt(Globals.voltAmps[2] * 2)
         .buildAndRegister()
@@ -216,7 +223,7 @@ for (inertGas in Globals.inertGases) {
                 .inputs(ore('dustMagnesium') * 2)
                 .outputs(metaitem('sponge.titanium.crude'))
                 .fluidOutputs(fluid('magnesium_chloride') * 756)
-                .chancedOutput(metaitem('dustMagnesium'), 1250, 0)
+                .chancedOutput(metaitem('dustMagnesium'), 2500, 0)
                 .blastFurnaceTemp(2150)
                 .duration(100 * inertGas.duration)
                 .EUt(Globals.voltAmps[3] * 2)

@@ -1,5 +1,5 @@
 import globals.Globals
-import globals.CarbonGlobals
+import static globals.CarbonGlobals.*
 
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
@@ -156,7 +156,7 @@ DISTILLERY.recipeBuilder()
 
 // Carbon Monoxide roaster
 // TODO: set output according to carbon amount?
-for (carbon in CarbonGlobals.sources) {
+for (carbon in sources) {
     ROASTER.recipeBuilder()
         .fluidInputs(fluid('oxygen') * 1000)
         .inputs(ore(carbon.name) * carbon.equivalent(1))
@@ -169,7 +169,7 @@ for (carbon in CarbonGlobals.sources) {
 
 // Carbon Dioxide roaster
 // TODO: set output according to carbon amount?
-for (carbon in CarbonGlobals.sources) {
+for (carbon in sources) {
     ROASTER.recipeBuilder()
         .fluidInputs(fluid('oxygen') * 2000)
         .inputs(ore(carbon.name) * carbon.equivalent(1))
@@ -182,7 +182,7 @@ for (carbon in CarbonGlobals.sources) {
 
 //CARBON DISULFIDE
 
-for (carbon in CarbonGlobals.sources) {
+for (carbon in sources) {
     ROASTER.recipeBuilder()
         .inputs(ore(carbon.name) * carbon.equivalent(1))
         .inputs(ore('dustAnyPuritySulfur') * 2)
@@ -651,9 +651,9 @@ DISTILLATION_TOWER.recipeBuilder()
 .buildAndRegister()
 
 CSTR.recipeBuilder()
-.fluidInputs(fluid('chloromethane') * 15)
-.fluidInputs(fluid('chlorine') * 60)
-.fluidOutputs(fluid('chlorinated_chloromethane_mixture') * 50)
+.fluidInputs(fluid('chloromethane') * 45)
+.fluidInputs(fluid('chlorine') * 180)
+.fluidOutputs(fluid('chlorinated_chloromethane_mixture') * 150)
 .duration(5)
 .EUt(30)
 .buildAndRegister()
@@ -1669,7 +1669,7 @@ DISTILLERY.recipeBuilder()
 
 //acetylene
 
-for (carbon in CarbonGlobals.sources) {
+for (carbon in sources) {
     ADVANCED_ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustQuicklime') * 2)
             .inputs(ore(carbon.name) * carbon.equivalent(3))
@@ -2003,7 +2003,7 @@ ROASTER.recipeBuilder()
 
 //Silicon & Graphite
 
-for (carbon in CarbonGlobals.dusts()) {
+for (carbon in dusts()) {
     ARC_FURNACE.recipeBuilder()
             .inputs(ore('dustSiliconDioxide') * 3)
             .inputs(ore(carbon.name) * carbon.equivalent(2))
@@ -3996,7 +3996,7 @@ CSTR.recipeBuilder()
 PHASE_SEPARATOR.recipeBuilder()
         .fluidInputs(fluid('acidic_nitrobenzene_mixture') * 3000)
         .fluidOutputs(fluid('nitrobenzene') * 1000)
-        .fluidOutputs(fluid('diluted_sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
         .duration(50)
         .buildAndRegister()
 
@@ -4281,8 +4281,17 @@ MIXER.recipeBuilder()
         .inputs(ore('dustCalciumHydroxide') * 5)
         .fluidInputs(fluid('water') * 1000)
         .fluidOutputs(fluid('calcium_hydroxide_slurry') * 1000)
-        .EUt(16)
+        .EUt(30)
         .duration(100)
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustQuicklime') * 2)
+        .circuitMeta(2)
+        .fluidInputs(fluid('water') * 2000)
+        .fluidOutputs(fluid('calcium_hydroxide_slurry') * 1000)
+        .EUt(30)
+        .duration(120)
         .buildAndRegister()
 
 // Zinc chloride soln.
@@ -4301,4 +4310,15 @@ DISTILLERY.recipeBuilder()
         .outputs(metaitem('dustSodiumSulfate') * 7)
         .duration(30)
         .EUt(200)
+        .buildAndRegister()
+
+// Nitration Mixture * 2000
+mods.gregtech.mixer.removeByInput(2, null, [fluid('nitric_acid') * 1000, fluid('sulfuric_acid') * 1000])
+
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('nitric_acid') * 1000)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('nitration_mixture') * 2000)
+        .EUt(30)
+        .duration(160)
         .buildAndRegister()

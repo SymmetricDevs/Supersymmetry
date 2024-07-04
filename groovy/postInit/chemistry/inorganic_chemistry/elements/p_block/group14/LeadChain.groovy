@@ -162,7 +162,7 @@ for (fuel in rotary_kiln_fuels) {
 }
 
 //SINTER-ROAST PROCESS (UNIVERSAL, 200%)
-def combustibles = CarbonGlobals.combustibles()
+def combustibles = combustibles()
 
 for (combustible in combustibles) {
     EBF.recipeBuilder()
@@ -295,7 +295,7 @@ BR.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-for (carbon in CarbonGlobals.sources) {
+for (carbon in sources) {
     ROASTER.recipeBuilder()
             .inputs(ore('dustAntimonyVOxide') * 7)
             .inputs(ore(carbon.name) * carbon.equivalent(5))
