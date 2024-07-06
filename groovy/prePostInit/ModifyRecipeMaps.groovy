@@ -1,9 +1,15 @@
 package prePostInit;
 
+import gregtech.api.GregTechAPI;
+import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ingredients.GTRecipeInput;
+import gregtech.api.unification.material.properties.PropertyKey;
+import gregtech.api.unification.OreDictUnifier;
+import gregtech.api.unification.ore.OrePrefix;
 import gregtechfoodoption.recipe.GTFORecipeMaps;
+import supersymmetry.api.fluids.SusyFluidStorageKeys;
 import supersymmetry.api.recipes.SuSyRecipeMaps;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.recipes.GTRecipeHandler.*;
@@ -39,6 +45,14 @@ RecipeMaps.MIXER_RECIPES.onRecipeBuild(recipeBuilder -> {
                 .buildAndRegister();
 });
 
+GregTechAPI.materialManager.getRegisteredMaterials().forEach(material -> {
+        if (material.hasProperty(PropertyKey.FLUID) && material.getProperty(PropertyKey.FLUID).getPrimaryKey() == SusyFluidStorageKeys.SLURRY) {
+                Recipe recipe = RecipeMaps.EXTRACTOR_RECIPES.findRecipe(Integer.MAX_VALUE, Collections.singletonList(OreDictUnifier.get(OrePrefix.dust, material)), Collections.emptyList(), false);
+                if (recipe != null) {
+                        RecipeMaps.EXTRACTOR_RECIPES.removeRecipe(recipe);
+                }
+        }
+});
 //Removal of certain centrifuging recipes
 
 // LPG * 370
