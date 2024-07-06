@@ -34,7 +34,6 @@ class ChangeFlags {
 		property.enqueueRegistration(SusyFluidStorageKeys.SLURRY, new FluidBuilder())
 		property.enqueueRegistration(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
 
-		property.enqueueRegistration(FluidStorageKeys.LIQUID, new FluidBuilder())
 		mat.setProperty(PropertyKey.FLUID, property)
 	}
 	
