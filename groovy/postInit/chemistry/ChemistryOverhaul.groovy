@@ -1196,7 +1196,7 @@ CSTR.recipeBuilder()
 .fluidInputs(fluid('nitric_oxide') * 50)
 .fluidOutputs(fluid('nitrogen_dioxide') * 50)
 .duration(8)
-.EUt(30)
+.EUt(7)
 .buildAndRegister()
 
 CSTR.recipeBuilder()
@@ -1205,7 +1205,7 @@ CSTR.recipeBuilder()
 .fluidOutputs(fluid('nitric_acid') * 100)
 .fluidOutputs(fluid('nitric_oxide') * 50)
 .duration(12)
-.EUt(30)
+.EUt(7)
 .buildAndRegister()
 
 // Methyl Acetate
