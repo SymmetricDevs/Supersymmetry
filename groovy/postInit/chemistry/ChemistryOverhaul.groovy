@@ -1378,10 +1378,6 @@ DISTILLERY.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-.duration(200)
-.EUt(7)
-.buildAndRegister()
-
 // Saltpeter and Sodium Hydroxide Solution
 
 MIXER.recipeBuilder()
