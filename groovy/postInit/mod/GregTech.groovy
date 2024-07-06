@@ -16,7 +16,7 @@ import supersymmetry.api.capability.impl.PseudoMultiRecipeLogic;
 import supersymmetry.api.recipes.builders.PseudoMultiRecipeBuilder;
 import net.minecraft.init.Blocks;
 
-println("Running GregTech.groovy...")
+log.infoMC("Running GregTech.groovy...")
 
 //REMOVALS
 

@@ -1,3 +1,5 @@
+package prePostInit;
+
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ingredients.GTRecipeInput;
