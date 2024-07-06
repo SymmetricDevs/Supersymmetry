@@ -378,6 +378,15 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .EUt(240)
         .buildAndRegister()
 
+    CSTR.recipeBuilder()
+        .notConsumable(ore('springKanthal'))
+        .fluidInputs(fluid('fish_oil') * 50)
+        .fluidInputs(fluid('glycerol') * 100)
+        .fluidOutputs(fluid('monoglycerides') * 150)
+        .duration(10)
+        .EUt(240)
+        .buildAndRegister()
+
     /*Tribochemical FMs:
     saturated fatty acids, phosphoric and thiophosphoric
     acid esters, xanthates, sulfurized fatty
@@ -964,6 +973,7 @@ BR.recipeBuilder()
 
 def baseOilMap = [
     'seed_oil': 0.5,
+    'fish_oil': 0.5,
     'lubricating_oil': 1,
     'polybutene': 1.5,
     'polyalphaolefin': 2.5,
