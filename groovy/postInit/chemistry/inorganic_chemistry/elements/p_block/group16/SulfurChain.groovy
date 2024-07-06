@@ -5,20 +5,64 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 
-def ROASTER_RECIPES = recipemap('roaster');
 
-ROASTER_RECIPES.recipeBuilder()
-.inputs(ore('dustPyrite') * 2)
-.outputs(metaitem('dustIronIiiSulfate'))
-.outputs(metaitem('dustSulfur'))
-.duration(80)
-.EUt(7)
-.buildAndRegister()
+// Banded Iron Dust * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustPyrite')], [fluid('oxygen') * 3000])
 
-ROASTER_RECIPES.recipeBuilder()
-.inputs(ore('dustIronIiiSulfate'))
-.outputs(metaitem('dustBandedIron'))
-.fluidOutputs(fluid('sulfur_trioxide') * 3000)
-.duration(160)
-.EUt(7)
-.buildAndRegister()
+
+ROASTER = recipemap('roaster')
+CRYSTALLIZER = recipemap('crystallizer')
+
+
+ROASTER.recipeBuilder()
+	.inputs(ore('dustAnglesite'))
+	.outputs(metaitem('dustMassicot') * 2)
+	.fluidOutputs(fluid('sulfur_trioxide') * 1000)
+	.duration(400)
+	.EUt(30)
+	.buildAndRegister()
+
+
+ROASTER.recipeBuilder()
+	.circuitMeta(1)
+	.inputs(ore('dustPyrite') * 1)
+	.outputs(metaitem('dustIronIISulfide') * 2)
+	.outputs(metaitem('dustSulfur'))
+	.duration(80)
+	.EUt(16)
+	.buildAndRegister()
+
+ROASTER.recipeBuilder()
+	.circuitMeta(1)
+	.inputs(ore('dustIronIISulfide') * 2)
+	.outputs(metaitem('dustBandedIron') * 2)
+	.fluidOutputs(fluid('sulfur_dioxide') * 1000)
+	.duration(80)
+	.EUt(30)
+	.buildAndRegister()
+
+ROASTER.recipeBuilder()
+	.inputs(ore('dustPyrite') * 1)
+	.fluidInputs(fluid('oxygen') * 5000)
+	.outputs(metaitem('dustBandedIron') * 2)
+	.fluidOutputs(fluid('sulfur_dioxide') * 2000)
+	.duration(160)
+	.EUt(30)
+	.buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+	.inputs(ore('dustPyrite') * 2)
+	//.fluidInputs(fluid('oxygen') * 15000) //technically this process is done by using air but you can't fit 45k air or 15k oxygen into an LV crystallizer
+	.outputs(metaitem('dustIronIiiSulfate') * 17)
+	.fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
+	.duration(160)
+	.EUt(30)
+	.buildAndRegister()
+
+ROASTER.recipeBuilder()
+	.inputs(ore('dustIronIiiSulfate') * 17)
+	.outputs(metaitem('dustBandedIron') * 2)
+	.fluidOutputs(fluid('sulfur_trioxide') * 3000)
+	.duration(160)
+	.EUt(30)
+	.buildAndRegister()
