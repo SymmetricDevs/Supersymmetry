@@ -12,6 +12,7 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustPyrite')]
 
 ROASTER = recipemap('roaster')
 CRYSTALLIZER = recipemap('crystallizer')
+CSTR = recipemap('continuous_stirred_tank_reactor')
 
 //Steam-Age source of SO3/H2SO4
 ROASTER.recipeBuilder()
@@ -76,5 +77,16 @@ ROASTER.recipeBuilder()
 	.notConsumable(ore('dustVanadiumPentoxide'))
 	.fluidOutputs(fluid('sulfur_trioxide') * 4000)
 	.duration(200)
+	.EUt(7)
+	.buildAndRegister()
+
+//Lead chamber process
+
+CSTR.recipeBuilder()
+	.fluidInputs(fluid('sulfur_dioxide') * 50)
+	.fluidInputs(fluid('nitrogen_dioxide') * 50)
+	.fluidOutputs(fluid('sulfuric_acid') * 50)
+	.fluidOutputs(fluid('nitric_oxide') * 50)
+	.duration(4)
 	.EUt(7)
 	.buildAndRegister()
