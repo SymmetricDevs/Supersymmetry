@@ -2194,11 +2194,15 @@ public class OrganicChemistryMaterials {
                 .color(0x857714)
                 .build();
 
+        DiisopropyldithiophosphoricAcid.setFormula("(C3H7O)2PS2H", true)
+
         DibutyldithiophosphoricAcid = new Material.Builder(15357, SuSyUtility.susyId('dibutyldithiophosphoric_acid'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(Carbon * 8, Hydrogen * 34, Oxygen * 2, Phosphorus * 1, Sulfur * 2)
+                .components(Carbon * 8, Hydrogen * 19, Oxygen * 2, Phosphorus * 1, Sulfur * 2)
                 .color(0x856914)
                 .build();
+
+        DibutyldithiophosphoricAcid.setFormula("(C4H9O)2PS2H", true)
 
         TwoButoxyethanol = new Material.Builder(15358, SuSyUtility.susyId('two_butoxyethanol'))
                 .liquid()
@@ -2316,11 +2320,15 @@ public class OrganicChemistryMaterials {
                 .color(0x1c718a)
                 .build();
 
+        OneThreeDinitrobenzene.setFormula("C6H4(NO2)2", true)
+
         MetaPhenylenediamine = new Material.Builder(15378, SuSyUtility.susyId('meta_phenylenediamine'))
                 .dust()
                 .components(Carbon * 6, Hydrogen * 8, Nitrogen * 2)
                 .color(0x1e89a8)
                 .build();
+
+        MetaPhenylenediamine.setFormula("C6H4(NH2)2", true)
 
         Nomex = new Material.Builder(15379, SuSyUtility.susyId('nomex'))
                 .components(Carbon * 14, Hydrogen * 10, Nitrogen * 2, Oxygen * 2)
