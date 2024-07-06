@@ -1,6 +1,5 @@
 package prePostInit;
 
-import java.util.ArrayList;
 import gregtech.api.GregTechAPI;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMaps;
@@ -10,7 +9,6 @@ import gregtech.api.unification.material.properties.PropertyKey;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtechfoodoption.recipe.GTFORecipeMaps;
-import net.minecraftforge.fluids.FluidStack;
 import supersymmetry.api.fluids.SusyFluidStorageKeys;
 import supersymmetry.api.recipes.SuSyRecipeMaps;
 import static gregtech.api.recipes.RecipeMaps.*;
@@ -47,9 +45,9 @@ RecipeMaps.MIXER_RECIPES.onRecipeBuild(recipeBuilder -> {
                 .buildAndRegister();
 });
 
-GregTechAPI.materialManager.getRegisteredMaterials().stream().forEach(material -> {
+GregTechAPI.materialManager.getRegisteredMaterials().forEach(material -> {
         if (material.hasProperty(PropertyKey.FLUID) && material.getProperty(PropertyKey.FLUID).getPrimaryKey() == SusyFluidStorageKeys.SLURRY) {
-                Recipe recipe = RecipeMaps.EXTRACTOR_RECIPES.findRecipe(Integer.MAX_VALUE, Collections.singletonList(OreDictUnifier.get(OrePrefix.dust, material)), new ArrayList<FluidStack>(), false);
+                Recipe recipe = RecipeMaps.EXTRACTOR_RECIPES.findRecipe(Integer.MAX_VALUE, Collections.singletonList(OreDictUnifier.get(OrePrefix.dust, material)), Collections.emptyList(), false);
                 if (recipe != null) {
                         RecipeMaps.EXTRACTOR_RECIPES.removeRecipe(recipe);
                 }
