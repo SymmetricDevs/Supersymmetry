@@ -31,41 +31,35 @@ import supersymmetry.api.unification.material.properties.FiberProperty;
 class ChangeFlags {
 	private static void setupSlurries(Material mat) {
 		def property = new FluidProperty()
-		property.getStorage().enqueueRegistration(SusyFluidStorageKeys.SLURRY, new FluidBuilder())
-		property.getStorage().enqueueRegistration(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+		property.enqueueRegistration(SusyFluidStorageKeys.SLURRY, new FluidBuilder())
+		property.enqueueRegistration(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
 
-		property.getStorage().enqueueRegistration(FluidStorageKeys.LIQUID, new FluidBuilder())
+		property.enqueueRegistration(FluidStorageKeys.LIQUID, new FluidBuilder())
 		mat.setProperty(PropertyKey.FLUID, property)
 	}
 	
 	private static void setupFluidType(Material mat, FluidStorageKey key, int temp) {
         if (mat.getProperty(PropertyKey.FLUID) == null) {
             def property = new FluidProperty();
-		    property.getStorage().enqueueRegistration(key, new FluidBuilder().temperature(temp))
+		    property.enqueueRegistration(key, new FluidBuilder().temperature(temp))
 		    mat.setProperty(PropertyKey.FLUID, property)
         } else {
             def property = mat.getProperty(PropertyKey.FLUID)
-            if (property.getStorage().getQueuedBuilder(key) != null) {
-                property.getStorage().getQueuedBuilder(key).temperature(temp)
+            if (property.getQueuedBuilder(key) != null) {
+                property.getQueuedBuilder(key).temperature(temp)
             } else {
-                property.getStorage().enqueueRegistration(key, new FluidBuilder().temperature(temp))
+                property.enqueueRegistration(key, new FluidBuilder().temperature(temp))
             }
-        }
-        if (mat.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) == null) {
-            setupFluidType(mat, FluidStorageKeys.LIQUID, temp)
         }
 	}
 	private static void setupFluidType(Material mat, FluidStorageKey key) {
         if (mat.getProperty(PropertyKey.FLUID) == null) {
             def property = new FluidProperty();
-		    property.getStorage().enqueueRegistration(key, new FluidBuilder())
+		    property.enqueueRegistration(key, new FluidBuilder())
 		    mat.setProperty(PropertyKey.FLUID, property)
         } else {
             def property = mat.getProperty(PropertyKey.FLUID)
-		    property.getStorage().enqueueRegistration(key, new FluidBuilder())
-        }
-        if (mat.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) == null) {
-            setupFluidType(mat, FluidStorageKeys.LIQUID)
+		    property.enqueueRegistration(key, new FluidBuilder())
         }
 	}
 
