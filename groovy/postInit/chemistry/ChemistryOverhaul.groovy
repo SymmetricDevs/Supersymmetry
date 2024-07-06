@@ -1378,14 +1378,6 @@ DISTILLERY.recipeBuilder()
 .EUt(30)
 .buildAndRegister()
 
-// Sulfur Trioxide
-
-ROASTER.recipeBuilder()
-.fluidInputs(fluid('oxygen') * 1000)
-.fluidInputs(fluid('sulfur_dioxide') * 1000)
-.notConsumable(ore('dustVanadiumPentoxide'))
-.fluidOutputs(fluid('sulfur_trioxide') * 1000)
-
 .duration(200)
 .EUt(7)
 .buildAndRegister()

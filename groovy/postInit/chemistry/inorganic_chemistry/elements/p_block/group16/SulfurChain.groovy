@@ -67,3 +67,11 @@ ROASTER.recipeBuilder()
 	.duration(160)
 	.EUt(30)
 	.buildAndRegister()
+
+// Sulfur Trioxide
+
+ROASTER.recipeBuilder()
+	.fluidInputs(fluid('oxygen') * 1000)
+	.fluidInputs(fluid('sulfur_dioxide') * 1000)
+	.notConsumable(ore('dustVanadiumPentoxide'))
+	.fluidOutputs(fluid('sulfur_trioxide') * 1000)
