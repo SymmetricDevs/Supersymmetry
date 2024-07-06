@@ -13,7 +13,7 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustPyrite')]
 ROASTER = recipemap('roaster')
 CRYSTALLIZER = recipemap('crystallizer')
 
-
+//Steam-Age source of SO3/H2SO4
 ROASTER.recipeBuilder()
 	.inputs(ore('dustAnglesite'))
 	.outputs(metaitem('dustMassicot') * 2)
@@ -22,7 +22,7 @@ ROASTER.recipeBuilder()
 	.EUt(30)
 	.buildAndRegister()
 
-
+//Pyrite roasting for SO2
 ROASTER.recipeBuilder()
 	.circuitMeta(1)
 	.inputs(ore('dustPyrite') * 1)
@@ -50,6 +50,7 @@ ROASTER.recipeBuilder()
 	.EUt(30)
 	.buildAndRegister()
 
+//Wet Oxidation of Pyrite
 CRYSTALLIZER.recipeBuilder()
 	.inputs(ore('dustPyrite') * 2)
 	//.fluidInputs(fluid('oxygen') * 15000) //technically this process is done by using air but you can't fit 45k air or 15k oxygen into an LV crystallizer
