@@ -1,7 +1,7 @@
 /*
 import nc.radiation.RadSources;
 
-println("Running Radiation.groovy...")
+log.infoMC("Running Radiation.groovy...")
 
 private void addRadiationToDusts (String materialName, double baseRadiation){
     RadSources.addToStackMap(metaitem("dust" + materialName), baseRadiation);

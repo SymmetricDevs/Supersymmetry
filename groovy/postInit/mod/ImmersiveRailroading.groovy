@@ -1,4 +1,4 @@
-println("Running ImmersiveRailroading.groovy...")
+log.infoMC("Running ImmersiveRailroading.groovy...")
 
 import globals.Globals
 import supersymmetry.api.recipes.SuSyRecipeMaps;
