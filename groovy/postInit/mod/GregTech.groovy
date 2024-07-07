@@ -90,6 +90,14 @@ mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 13) * 3, metait
 mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 14) * 3, metaitem('plateWood') * 3], null)
 // Black Bed * 1
 mods.gregtech.assembler.removeByInput(7, [item('minecraft:wool', 15) * 3, metaitem('plateWood') * 3], null)
+// Long Distance Item Pipeline Endpoint * 2
+mods.gregtech.assembler.removeByInput(16, [metaitem('pipeLargeItemTin') * 2, metaitem('plateSteel') * 8, metaitem('gearSteel') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('tin') * 144])
+// Long Distance Fluid Pipeline Endpoint * 2
+mods.gregtech.assembler.removeByInput(16, [metaitem('pipeLargeFluidBronze') * 2, metaitem('plateSteel') * 8, metaitem('gearSteel') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('tin') * 144])
+// Long Distance Item Pipe * 64
+mods.gregtech.assembler.removeByInput(24, [metaitem('pipeLargeItemTin') * 2, metaitem('plateSteel') * 8, metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('tin') * 144])
+// Long Distance Fluid Pipe * 64
+mods.gregtech.assembler.removeByInput(24, [metaitem('pipeLargeFluidBronze') * 2, metaitem('plateSteel') * 8, metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('tin') * 144])
 
 def name_removals = [
 	'gregtech:cover_fluid_voiding',
