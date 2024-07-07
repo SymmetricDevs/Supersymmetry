@@ -2109,6 +2109,7 @@
           "ignoresview:1": 0,
           "ismain:1": 1,
           "name:8": "susy.quest.db.44.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
