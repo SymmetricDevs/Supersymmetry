@@ -73,7 +73,6 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), met
 
 // Ferrite Mixture Dust * 6
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
-mods.gregtech.blender.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 
 // Nickel Zinc Ferrite Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustFerriteMixture')], [fluid('oxygen') * 2000])
