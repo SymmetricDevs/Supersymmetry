@@ -161,8 +161,6 @@
                     <str>storm$f</str>
                 </if>
 		
-	    <str>, $e{humidity}%$f humidity </str>
-		
       </line>
       <line>
 	  	      <icon>
