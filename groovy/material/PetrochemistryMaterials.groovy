@@ -372,5 +372,29 @@ public class PetrochemistryMaterials {
                 .color(0xb0ac58)
                 .flags(FLAMMABLE)
                 .build();
+
+        CrudeNaphtha = new Material.Builder(20085, SuSyUtility.susyId('crude_naphtha'))
+                .liquid()
+                .color(0xa6a21f)
+                .flags(FLAMMABLE)
+                .build();
+
+        AtmosphericOverheads = new Material.Builder(2008, SuSyUtility.susyId('atmospheric_overheads'))
+                .gas(new FluidBuilder().temperature(600))
+                .color(0xe3e6a3)
+                .flags(FLAMMABLE)
+                .build();
+
+        HeavyAtmosphericOverheads = new Material.Builder(2008, SuSyUtility.susyId('heavy_atmospheric_overheads'))
+                .gas(new FluidBuilder().temperature(600))
+                .color(0xe8ebb5)
+                .flags(FLAMMABLE)
+                .build();
+
+        LightAtmosphericOverheads = new Material.Builder(2008, SuSyUtility.susyId('light_atmospheric_overheads'))
+                .gas(new FluidBuilder().temperature(600))
+                .color(0xdce090)
+                .flags(FLAMMABLE)
+                .build();
     }
 }           

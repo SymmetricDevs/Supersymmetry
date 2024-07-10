@@ -1027,7 +1027,11 @@ public class UnknownCompositionMaterials {
                 .color(0x69675b)
                 .build();
 
-        //FREE IDs: 4202
+        HydrotreatingCatalyst = new Material.Builder(4202, SuSyUtility.susyId('hydrotreating_catalyst'))
+                .dust()
+                .color(0xb5dea4)
+                .flags(GENERATE_CATALYST_BED)
+                .build();
 
         VTSlag = new Material.Builder(4203, SuSyUtility.susyId('vt_slag'))
                 .dust()

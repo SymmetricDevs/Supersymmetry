@@ -55,6 +55,10 @@ class Petrochemistry = {
             return fluid('sulfuric_' + this.name) * amount
         }
 
+        def getHeated(int amount) {
+            return fluid('heated_' + this.name) * amount
+        }
+
         def getUpgraded(int amount) {
             return fluid(this.upgrade_name) * amount
         }

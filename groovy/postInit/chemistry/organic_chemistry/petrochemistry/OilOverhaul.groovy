@@ -28,52 +28,6 @@ HEAT_EXCHANGER = recipemap('heat_exchanger')
 UV_LIGHT_BOX = recipemap('uv_light_box')
 BR = recipemap('batch_reactor')
 
-// Sour gas processing
-
-CENTRIFUGE.recipeBuilder()
-.fluidInputs(fluid('sour_gas') * 3000)
-.fluidInputs(fluid('ethanolamine_mix') * 1000)
-.fluidOutputs(fluid('hydrogen') * 1000)
-.fluidOutputs(fluid('rich_amine') * 1000)
-.duration(40)
-.EUt(120)
-.buildAndRegister()
-
-CENTRIFUGE.recipeBuilder()
-.fluidInputs(fluid('rich_amine') * 1000)
-.fluidOutputs(fluid('hydrogen_sulfide') * 1000)
-.fluidOutputs(fluid('ethanolamine_mix') * 1000)
-.duration(10)
-.EUt(120)
-.buildAndRegister()
-
-REACTION_FURNACE.recipeBuilder()
-.fluidInputs(fluid('hydrogen_sulfide') * 3000)
-.fluidInputs(fluid('oxygen') * 3000)
-.fluidOutputs(fluid('uncatalyzed_sulfurous_gases') * 3000)
-.outputs(metaitem('dustSulfur'))
-.duration(150)
-.EUt(30)
-.buildAndRegister()
-
-REACTION_FURNACE.recipeBuilder()
-.fluidInputs(fluid('hydrogen_sulfide') * 3000)
-.fluidInputs(fluid('air') * 9000)
-.fluidOutputs(fluid('uncatalyzed_sulfurous_gases') * 3000)
-.outputs(metaitem('dustSulfur'))
-.duration(150)
-.EUt(30)
-.buildAndRegister()
-
-REACTION_FURNACE.recipeBuilder()
-.notConsumable(metaitem('catalystBedAlumina'))
-.fluidInputs(fluid('uncatalyzed_sulfurous_gases') * 3000)
-.fluidOutputs(fluid('steam') * 2000)
-.outputs(metaitem('dustSulfur') * 2)
-.duration(150)
-.EUt(30)
-.buildAndRegister()
-
 // Cracking: Ethane, Propane Butane
 
 ROASTER.recipeBuilder()

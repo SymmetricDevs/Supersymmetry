@@ -23,8 +23,6 @@ COKING = recipemap('coking_tower')
         .EUt(30)
         .buildAndRegister()
 
-
-
 // Slack wax Processing
 
 CRYSTALLIZER.recipeBuilder()

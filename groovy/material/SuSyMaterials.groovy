@@ -509,6 +509,7 @@ class SuSyMaterials {
         public static Material CaesiumRubidiumAlumMixture;
         public static Material HydratedTriethyleneGlycol;
         public static Material NetherMolecularSieve;
+        public static Material HydrotreatingCatalyst;
 
         // Petrochem Materials   
 
@@ -563,6 +564,7 @@ class SuSyMaterials {
         public static Material LightlyHydrocrackedGasoline;
         public static Material SeverelyHydrocrackedGasoline;
 
+        public static Material CrudeNaphtha;
         public static Material TreatedSulfuricNaphtha;
         public static Material LightlySteamcrackedNaphtha;
         public static Material SeverelySteamcrackedNaphtha;
@@ -570,6 +572,10 @@ class SuSyMaterials {
         public static Material SeverelyHydrocrackedNaphtha;
         public static Material NaphthaReformate;
         public static Material UpgradedNaphthaMix;
+
+        public static Material AtmosphericOverheads;
+        public static Material HeavyAtmosphericOverheads;
+        public static Material LightAtmosphericOverheads;
 
         public static Material LubricatingOil;
         public static Material UpgradedLubricatingOilMix;
@@ -1262,6 +1268,7 @@ class SuSyMaterials {
         public static Material RubidiumHydroxideSolution;
         public static Material SodiumAlumSolution;
         public static Material OxidizedManganateSolution;
+        public static Material SupportedNickel;
 
         // Organic Chemistry Materials
 

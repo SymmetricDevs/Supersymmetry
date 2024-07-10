@@ -1,5 +1,7 @@
 MIXER = recipemap('mixer')
 FLUID_HEATER = recipemap('fluid_heater')
+BCR = recipemap('bubble_column_reactor')
+DT = recipemap('distillation_tower')
 
 // Water removal 
 
@@ -21,7 +23,7 @@ FLUID_HEATER.recipeBuilder()
 
 // Acid gas removal (H2S, CO2)
 
-CENTRIFUGE.recipeBuilder()
+BCR.recipeBuilder()
 .fluidInputs(fluid('sulfuric_natural_gas') * 10000)
 .fluidInputs(fluid('ethanolamine_mix') * 1000)
 .fluidOutputs(fluid('natural_gas') * 8000)
@@ -30,7 +32,7 @@ CENTRIFUGE.recipeBuilder()
 .EUt(120)
 .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder()
+BCR.recipeBuilder()
 .fluidInputs(fluid('acidic_rich_amine') * 1000)
 .fluidOutputs(fluid('hydrogen_sulfide') * 1000)
 .fluidOutputs(fluid('carbon_dioxide') * 1000)

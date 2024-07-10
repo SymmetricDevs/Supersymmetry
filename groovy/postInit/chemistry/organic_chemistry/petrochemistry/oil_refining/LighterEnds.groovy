@@ -6,12 +6,12 @@ BCR = recipemap('bubble_column_reactor')
 // Debutanization
 DT.recipeBuilder()
     .fluidInputs(fluid('crude_naphtha') * 10000)
-    .fluidOutputs(fluid('debutanized_naphtha') * 8000)
+    .fluidOutputs(fluid('sulfuric_naphtha') * 8000)
     .fluidOutputs(fluid('sulfuric_lpg') * 2000)
     .duration(400)
     .buildAndRegister()
 
-// Naphtha separation (light -> isomerate, heavy -> reformate)
+// Naphtha hydrotreatment
 DT.recipeBuilder()
     .fluidInputs(fluid('debutanized_naphtha') * 10000)
     .fluidOutputs(fluid('sulfuric_heavy_naphtha') * )

@@ -1985,6 +1985,12 @@ susy.material.potassium_manganate=Potassium Manganate
 susy.material.lead_free_solder=Lead-Free Solder
 susy.material.cryogenic_solder=Cryogenic Solder
 susy.material.oxidized_manganate_solution=Oxidized Manganate Solution
+susy.material.crude_naphtha=Crude Naphtha
+susy.material.atmospheric_overheads=Atmospheric Overheads
+susy.material.heavy_atmospheric_overheads=Heavy Atmospheric Overheads
+susy.material.light_atmospheric_overheads=Light Atmospheric Overheads
+susy.material.hydrotreating_catalyst=Hydrotreating Catalyst
+susy.material.supported_nickel=Supported Nickel
 
 # Isotopes
 
