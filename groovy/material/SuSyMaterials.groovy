@@ -525,10 +525,11 @@ class SuSyMaterials {
         public static Material HeatedOilHeavy;
 
         public static Material FuelOil;
-        public static Material CrudeFuelOil;
-        public static Material SulfuricFuelOil;
-        public static Material TreatedSulfuricFuelOil;
-        public static Material UpgradedFuelOilMix;
+        public static Material HeavyFuelOil;
+        public static Material CrudeHeavyFuelOil;
+        public static Material SulfuricHeavyFuelOil;
+        public static Material TreatedSulfuricHeavyFuelOil;
+        public static Material UpgradedHeavyFuelOilMix;
 
         public static Material CrudeNaturalGas;
         public static Material SulfuricNaturalGas;
@@ -539,10 +540,11 @@ class SuSyMaterials {
         public static Material TreatedSulfuricRefineryGas;
         public static Material AlkylatedRefineryGas;
 
-        public static Material CrudeDiesel;
-        public static Material SulfuricDiesel;
-        public static Material TreatedSulfuricDiesel;
-        public static Material UpgradedDieselMix;
+        public static Material LightFuelOil;
+        public static Material CrudeLightFuelOil;
+        public static Material SulfuricLightFuelOil;
+        public static Material TreatedSulfuricLightFuelOil;
+        public static Material UpgradedLightFuelOilMix;
 
         public static Material Kerosene;
         public static Material CrudeKerosene;

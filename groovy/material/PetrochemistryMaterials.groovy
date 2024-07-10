@@ -61,12 +61,12 @@ public class PetrochemistryMaterials {
                 .color(0x59572b)
                 .build();
 
-        SulfuricFuelOil = new Material.Builder(20009, SuSyUtility.susyId('sulfuric_fuel_oil'))
+        SulfuricHeavyFuelOil = new Material.Builder(20009, SuSyUtility.susyId('sulfuric_heavy_fuel_oil'))
                 .liquid()
                 .color(0x858135)
                 .build();
 
-        TreatedSulfuricFuelOil = new Material.Builder(20010, SuSyUtility.susyId('treated_sulfuric_fuel_oil'))
+        TreatedSulfuricHeavyFuelOil = new Material.Builder(20010, SuSyUtility.susyId('treated_sulfuric_heavy_fuel_oil'))
                 .liquid()
                 .color(0x9e9a4f)
                 .build();
@@ -96,12 +96,12 @@ public class PetrochemistryMaterials {
                 .color(0xebeba4)
                 .build();
 
-        SulfuricDiesel = new Material.Builder(20016, SuSyUtility.susyId('sulfuric_diesel'))
+        SulfuricLightFuelOil = new Material.Builder(20016, SuSyUtility.susyId('sulfuric_light_fuel_oil'))
                 .liquid()
                 .color(0xa8a232)
                 .build();
 
-        TreatedSulfuricDiesel = new Material.Builder(20017, SuSyUtility.susyId('treated_sulfuric_diesel'))
+        TreatedSulfuricLightFuelOil = new Material.Builder(20017, SuSyUtility.susyId('treated_sulfuric_light_fuel_oil'))
                 .liquid()
                 .color(0xc2bb42)
                 .build();
@@ -219,12 +219,12 @@ public class PetrochemistryMaterials {
                 .color(0x948f43)
                 .build();
 
-        UpgradedFuelOilMix = new Material.Builder(20055, SuSyUtility.susyId('upgraded_fuel_oil_mix'))
+        UpgradedHeavyFuelOilMix = new Material.Builder(20055, SuSyUtility.susyId('upgraded_heavy_fuel_oil_mix'))
                 .liquid(new FluidBuilder().temperature(773))
                 .color(0x918d33)
                 .build();
 
-        UpgradedDieselMix = new Material.Builder(20056, SuSyUtility.susyId('upgraded_diesel_mix'))
+        UpgradedLightFuelOilMix = new Material.Builder(20056, SuSyUtility.susyId('upgraded_light_fuel_oil_mix'))
                 .liquid(new FluidBuilder().temperature(773))
                 .color(0xbab32f)
                 .build();
@@ -341,7 +341,7 @@ public class PetrochemistryMaterials {
                 .color(0x96912c)
                 .build();
         
-        CrudeFuelOil = new Material.Builder(20079, SuSyUtility.susyId('crude_fuel_oil'))
+        CrudeHeavyFuelOil = new Material.Builder(20079, SuSyUtility.susyId('crude_heavy_fuel_oil'))
                 .liquid()
                 .color(0x706d2c)
                 .build();
@@ -359,6 +359,18 @@ public class PetrochemistryMaterials {
         HeatedOilHeavy = new Material.Builder(20082, SuSyUtility.susyId('heated_oil_heavy'))
                 .liquid()
                 .color(0x2d2f3b)
+                .build();
+
+        HeavyFuelOil = new Material.Builder(20083, SuSyUtility.susyId('heavy_fuel_oil'))
+                .liquid()
+                .color(0x878444)
+                .flags(FLAMMABLE)
+                .build();
+
+        LightFuelOil = new Material.Builder(20084, SuSyUtility.susyId('light_fuel_oil'))
+                .liquid()
+                .color(0xb0ac58)
+                .flags(FLAMMABLE)
                 .build();
     }
 }           
