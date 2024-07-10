@@ -74,7 +74,7 @@ DT.recipeBuilder()
 
 PHASE_SEPARATOR.recipeBuilder()
     .fluidInputs(fluid('atmospheric_overheads') * 5000)
-    .fluidOutputs(fluid('crude_naphtha') * 5000)
+    .fluidOutputs(fractions.naphtha.getCrude(5000))
     .fluidOutputs(fluid('wastewater') * 10000)
     .duration(400)
     .buildAndRegister()

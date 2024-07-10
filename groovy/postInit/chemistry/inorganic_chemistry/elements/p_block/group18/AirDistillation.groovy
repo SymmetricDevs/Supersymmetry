@@ -1,7 +1,6 @@
 import globals.Globals
 
 SIFTER = recipemap('sifter')
-MIXER = recipemap('mixer')
 VACUUM_CHAMBER = recipemap('vacuum_chamber')
 FLUID_COMPRESSOR = recipemap('fluid_compressor')
 FLUID_DECOMPRESSOR = recipemap('fluid_decompressor')
@@ -12,7 +11,6 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
 SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT = recipemap('single_column_cryogenic_distillation')
 BATH_CONDENSER = recipemap('bath_condenser')
 FBR = recipemap('fixed_bed_reactor')
-SINTERING_OVEN = recipemap('sintering_oven')
 CENTRIFUGE = recipemap('centrifuge')
 FLUID_HEATER = recipemap('fluid_heater')
 DT = recipemap('distillation_tower')
@@ -315,23 +313,6 @@ BATH_CONDENSER.recipeBuilder()
     .buildAndRegister()
 
 //DEOXYGENATION
-MIXER.recipeBuilder()
-    .inputs(ore('dustAmmoniumHexachloroplatinate') * 17)
-    .fluidInputs(fluid('phosphoric_acid') * 1000)
-    .fluidOutputs(fluid('platinum_precursor_solution') * 1000)
-    .duration(100)
-    .EUt(Globals.voltAmps[3])
-    .buildAndRegister()
-
-SINTERING_OVEN.recipeBuilder()
-    .inputs(ore('dustAlumina') * 5)
-    .fluidInputs(fluid('platinum_precursor_solution') * 1000)
-    .outputs(metaitem('dustSupportedPlatinum'))
-    .fluidOutputs(fluid('phosphoric_acid') * 1000)
-    .duration(100)
-    .EUt(Globals.voltAmps[3])
-    .buildAndRegister()
-
 FBR.recipeBuilder()
     .fluidInputs(fluid('liquid_crude_argon') * 50)
     .fluidInputs(fluid('hydrogen') * 24)
