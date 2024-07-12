@@ -17,7 +17,7 @@ FLUIDIZED_BED_REACTOR.recipeBuilder()
     .inputs(ore('dustSilicon'))
     .fluidOutputs(fluid('organosilicon_mixture') * 2000)
     .duration(160)
-    .EUt(Globals.voltAmps[3] * 2)
+    .EUt(Globals.voltAmps[1] * 2)
     .buildAndRegister()
 
 DISTILLATION_TOWER.recipeBuilder()
