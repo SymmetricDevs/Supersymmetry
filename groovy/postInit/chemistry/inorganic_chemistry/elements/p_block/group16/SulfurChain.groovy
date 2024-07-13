@@ -77,7 +77,7 @@ ROASTER.recipeBuilder()
 	.fluidInputs(fluid('sulfur_dioxide') * 4000)
 	.notConsumable(ore('dustVanadiumPentoxide'))
 	.fluidOutputs(fluid('sulfur_trioxide') * 4000)
-	.duration(200)
+	.duration(40)
 	.EUt(30)
 	.buildAndRegister()
 
