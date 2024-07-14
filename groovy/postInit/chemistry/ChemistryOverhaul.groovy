@@ -2001,65 +2001,6 @@ ROASTER.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-//Silicon & Graphite
-
-for (carbon in dusts()) {
-    ARC_FURNACE.recipeBuilder()
-            .inputs(ore('dustSiliconDioxide') * 3)
-            .inputs(ore(carbon.name) * carbon.equivalent(2))
-            .outputs(metaitem('dustSilicon'))
-            .circuitMeta(1)
-            .fluidOutputs(fluid('carbon_monoxide') * 2000)
-            .EUt(30)
-            .duration(300)
-            .buildAndRegister()
-
-    ARC_FURNACE.recipeBuilder()
-            .inputs(ore('dustQuartzite') * 3)
-            .inputs(ore(carbon.name) * carbon.equivalent(2))
-            .outputs(metaitem('dustSilicon'))
-            .fluidOutputs(fluid('carbon_monoxide') * 2000)
-            .EUt(30)
-            .duration(300)
-            .buildAndRegister()
-
-    ARC_FURNACE.recipeBuilder()
-            .inputs(ore('dustCertusQuartz') * 3)
-            .inputs(ore(carbon.name) * carbon.equivalent(2))
-            .outputs(metaitem('dustSilicon'))
-            .fluidOutputs(fluid('carbon_monoxide') * 2000)
-            .EUt(30)
-            .duration(300)
-            .buildAndRegister()
-
-    ARC_FURNACE.recipeBuilder()
-            .inputs(ore('dustNetherQuartz') * 3)
-            .inputs(ore(carbon.name) * carbon.equivalent(2))
-            .outputs(metaitem('dustSilicon'))
-            .fluidOutputs(fluid('carbon_monoxide') * 2000)
-            .EUt(30)
-            .duration(300)
-            .buildAndRegister()
-
-    ARC_FURNACE.recipeBuilder()
-            .inputs(ore('dustSiliconDioxide') * 3)
-            .inputs(ore(carbon.name) * carbon.equivalent(3))
-            .circuitMeta(2)
-            .outputs(metaitem('dustSiliconCarbide') * 2)
-            .fluidOutputs(fluid('carbon_monoxide') * 2000)
-            .EUt(60)
-            .duration(300)
-            .buildAndRegister()
-}
-
-ARC_FURNACE.recipeBuilder()
-        .inputs(ore('dustSiliconCarbide') * 2)
-        .outputs(metaitem('dustSilicon'))
-        .outputs(metaitem('dustGraphite'))
-        .EUt(60)
-        .duration(270)
-        .buildAndRegister()
-
 //CELLULOSE ACETATE
 
 CSTR.recipeBuilder()
