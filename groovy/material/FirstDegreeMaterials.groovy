@@ -527,7 +527,13 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 8165
+        SodiumThioantimoniteSolution = new Material.Builder(8165, SuSyUtility.susyId('sodium_thioantimonite_solution'))
+                .liquid()
+                .components(Sodium * 12, Antimony * 4, Sulfur * 12, Water * 12)
+                .colorAverage()
+                .build();
+
+        SodiumThioantimoniteSolution.setFormula("(Na3SbS3)12(H2O)12", true)
 
         AmmoniaSolution = new Material.Builder(8166, SuSyUtility.susyId('ammonia_solution'))
                 .liquid()
@@ -553,7 +559,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 8170
+        CopperISulfide = new Material.Builder(8170, SuSyUtility.susyId('copper_i_sulfide'))
+                .dust()
+                .components(Copper * 2, Sulfur)
+                .color(0x1a1101)
+                .build();
 
         Cryolite = new Material.Builder(8171, SuSyUtility.susyId('cryolite'))
                 .dust().liquid(new FluidBuilder().temperature(1285))
@@ -667,7 +677,11 @@ public class FirstDegreeMaterials {
                 .build()
                 .setFormula("(Fe(NO3)2)3(H3AsO4)3(H2O)3", true)
 
-        //FREE ID: 8190
+        CopperIISulfide = new Material.Builder(8190, SuSyUtility.susyId('copper_ii_sulfide'))
+                .dust()
+                .components(Copper, Sulfur)
+                .color(0x262626)
+                .build()
 
         ArsenicTrichloride = new Material.Builder(8191, SuSyUtility.susyId('arsenic_trichloride'))
                 .liquid()
@@ -676,7 +690,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        //FREE ID: 8191
+        PotassiumPermanganate = new Material.Builder(8192, SuSyUtility.susyId('potassium_permanganate'))
+                .dust()
+                .components(Potassium, Manganese, Oxygen * 4)
+                .color(0x320354)
+                .build();
 
         SperryliteWaste = new Material.Builder(8193, SuSyUtility.susyId('sperrylite_waste'))
                 .liquid()
@@ -779,7 +797,17 @@ public class FirstDegreeMaterials {
                 .color(0xa9aec4)
                 .build()
 
-        //FREE IDs: 8208-8209
+        PurifiedAntimonyTrichloride = new Material.Builder(8208, SuSyUtility.susyId('purified_antimony_trichloride'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(347))
+                .components(Antimony * 1, Chlorine * 3)
+                .color(0x83b87b)
+                .build();
+
+        PurifiedAntimonyTrioxide = new Material.Builder(8209, SuSyUtility.susyId('purified_antimony_trioxide'))
+                .dust()
+                .components(Antimony * 2, Oxygen * 3)
+                .color(0x92d1d4)
+                .build();
 
         DicobaltOctacarbonyl = new Material.Builder(8210, SuSyUtility.susyId('dicobalt_octacarbonyl'))
                 .dust()
@@ -845,7 +873,11 @@ public class FirstDegreeMaterials {
                 .color(0x54362c)
                 .build()
 
-        //FREE ID: 8220
+        HeavyNetherGases = new Material.Builder(8220, SuSyUtility.susyId('heavy_nether_gases'))
+                .gas()
+                .components(CarbonDioxide * 3, HydrogenSulfide)
+                .colorAverage()
+                .build();
 
         ThionylChloride = new Material.Builder(8221, SuSyUtility.susyId('thionyl_chloride'))
                 .liquid()
@@ -1243,7 +1275,14 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        // FREE ID: 8286
+        CryogenicSolder = new Material.Builder(8286, SuSyUtility.susyId('cryogenic_solder'))
+                .dust().ingot().liquid(new FluidBuilder().temperature(430))
+                .components(Indium * 27, Silver * 1)
+                .color(0x8967bf)
+                .build();
+
+        CryogenicSolder.setFormula("In97Ag3", true)
+
 
         LithiumCobaltOxide = new Material.Builder(8287, SuSyUtility.susyId('lithium_cobalt_oxide'))
                 .dust()
@@ -1550,7 +1589,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //8332 is free
+        PotassiumManganate = new Material.Builder(8332, SuSyUtility.susyId('potassium_manganate'))
+                .dust()
+                .components(Potassium * 2, Manganese, Oxygen * 4)
+                .color(0x071c06)
+                .build();
 
         RutheniumIVOxide = new Material.Builder(8333, SuSyUtility.susyId('ruthenium_iv_oxide'))
                 .dust()
@@ -1633,7 +1676,11 @@ public class FirstDegreeMaterials {
                 .color(0x2c733a)
                 .build();
 
-        //FREE ID: 8346
+        LeadFreeSolder = new Material.Builder(8346, SuSyUtility.susyId('lead_free_solder'))
+                .ingot().liquid(new FluidBuilder().temperature(411))
+                .components(Bismuth * 6, Tin * 4)
+                .colorAverage()
+                .build()
 
         CopperDross = new Material.Builder(8347, SuSyUtility.susyId('copper_dross'))
                 .dust()
@@ -2510,7 +2557,13 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE IDs: 8480-8485
+        DenseSteam = new Material.Builder(8480, SuSyUtility.susyId('dense_steam'))
+                .gas(new FluidBuilder().temperature(373))
+                .components(Water)
+                .color(0xcaddfa)
+                .build();
+
+        //FREE IDs: 8481-8485
 
         UltramaficTailingSlurry = new Material.Builder(8486, SuSyUtility.susyId('ultramafic_tailing_slurry'))
                 .liquid()

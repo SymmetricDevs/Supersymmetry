@@ -25,7 +25,7 @@ LCR.recipeBuilder().EUt(480).duration(200)
 	.fluidInputs(fluid('impure_semiheavy_hydrogen_sulfide') * 2000)
 	.fluidInputs(fluid('impure_semiheavy_water') * 1000)
 	.fluidOutputs(fluid('semiheavy_hydrogen_sulfide') * 2000)
-	.fluidOutputs(fluid('steam') * 1000)
+	.fluidOutputs(fluid('dense_steam') * 1000)
 	.circuitMeta(2)
 	.buildAndRegister()
 

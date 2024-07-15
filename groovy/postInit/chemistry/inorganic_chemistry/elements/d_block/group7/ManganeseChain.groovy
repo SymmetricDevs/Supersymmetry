@@ -72,7 +72,7 @@ def hydrocarbonReductants = [
 
 def reductants = [
     new ReductantManganese('carbon_monoxide', 'carbon_dioxide', 1000, 1000),
-    new ReductantManganese('hydrogen', 'steam', 2000, 1000)
+    new ReductantManganese('hydrogen', 'dense_steam', 2000, 1000)
 ]
 
 /*
@@ -86,7 +86,7 @@ for (reductant in hydrocarbonReductants) {
         .fluidInputs(fluid(reductant.name) * reductant.amount_required)
         .outputs(metaitem('dustManganeseIiOxide') * 2)
         .fluidOutputs(fluid(reductant.byproduct) * reductant.byproduct_amount)
-        .fluidOutputs(fluid('steam') * (1000 - reductant.byproduct_amount))
+        .fluidOutputs(fluid('dense_steam') * (1000 - reductant.byproduct_amount))
         .duration(120)
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
@@ -196,8 +196,39 @@ ROASTER.recipeBuilder()
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustManganeseIiHydroxide') * 5)
-    .fluidOutputs(fluid('steam') * 1000)
+    .fluidOutputs(fluid('dense_steam') * 1000)
     .outputs(metaitem('dustManganeseIiOxide') * 2)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister()
+
+// Potassium permanganate
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustManganeseDioxide') * 3)
+    .fluidInputs(fluid('potassium_hydroxide') * 864)
+    .fluidInputs(fluid('oxygen') * 1000)
+    .outputs(metaitem('dustPotassiumManganate') * 7)
+    .fluidOutputs(fluid('steam') * 2000)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister()
+
+ELECTROLYTIC_CELL.recipeBuilder()
+    .notConsumable(ore('plateNickel') * 4)
+    .notConsumable(ore('plateIron') * 4)
+    .inputs(ore('dustPotassiumManganate') * 7)
+    .fluidInputs(fluid('distilled_water') * 2000)
+    .fluidOutputs(fluid('oxidized_manganate_solution') * 1000)
+    .fluidOutputs(fluid('hydrogen') * 1000)
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+    .fluidInputs(fluid('oxidized_manganate_solution') * 1000)
+    .outputs(metaitem('dustPotassiumPermanganate') * 6)
+    .fluidOutputs(fluid('potassium_hydroxide_solution') * 1000)
     .duration(200)
     .EUt(30)
     .buildAndRegister()

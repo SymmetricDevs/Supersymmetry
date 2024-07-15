@@ -34,7 +34,7 @@ MIXER.recipeBuilder()
 ROASTER.recipeBuilder()
     .fluidInputs(fluid('copper_anode_slime_paste') * 1000)
     .outputs(metaitem('dustSeleniumTelluriumConcentrate')) // 0.75 Na2SeO4, 0.25 Na2TeO4, 2 Ag/Au
-    .fluidOutputs(fluid('steam') * 1000)
+    .fluidOutputs(fluid('dense_steam') * 1000)
     .duration(600)
     .EUt(120)
     .buildAndRegister()
