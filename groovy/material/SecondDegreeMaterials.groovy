@@ -379,7 +379,11 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
         
-        //FREE ID: 13059
+        OxidizedManganateSolution = new Material.Builder(13059, SuSyUtility.susyId('oxidized_manganate_solution'))
+                .liquid()
+                .components(PotassiumPermanganate, PotassiumHydroxide, Water)
+                .color(0x48065e)
+                .build();
 
         CopperSulfateSolution = new Material.Builder(13060, SuSyUtility.susyId('copper_sulfate_solution'))
                 .liquid()
