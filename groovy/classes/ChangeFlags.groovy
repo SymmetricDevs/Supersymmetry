@@ -1,5 +1,3 @@
-package classes
-
 import net.minecraftforge.fml.common.eventhandler.EventPriority
 
 import gregtech.api.unification.material.Material;
@@ -31,34 +29,41 @@ import supersymmetry.api.unification.material.properties.FiberProperty;
 class ChangeFlags {
 	private static void setupSlurries(Material mat) {
 		def property = new FluidProperty()
-		property.enqueueRegistration(SusyFluidStorageKeys.SLURRY, new FluidBuilder())
-		property.enqueueRegistration(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+		property.getStorage().enqueueRegistration(SusyFluidStorageKeys.SLURRY, new FluidBuilder())
+		property.getStorage().enqueueRegistration(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
 
+		property.getStorage().enqueueRegistration(FluidStorageKeys.LIQUID, new FluidBuilder())
 		mat.setProperty(PropertyKey.FLUID, property)
 	}
 	
 	private static void setupFluidType(Material mat, FluidStorageKey key, int temp) {
         if (mat.getProperty(PropertyKey.FLUID) == null) {
             def property = new FluidProperty();
-		    property.enqueueRegistration(key, new FluidBuilder().temperature(temp))
+		    property.getStorage().enqueueRegistration(key, new FluidBuilder().temperature(temp))
 		    mat.setProperty(PropertyKey.FLUID, property)
         } else {
             def property = mat.getProperty(PropertyKey.FLUID)
-            if (property.getQueuedBuilder(key) != null) {
-                property.getQueuedBuilder(key).temperature(temp)
+            if (property.getStorage().getQueuedBuilder(key) != null) {
+                property.getStorage().getQueuedBuilder(key).temperature(temp)
             } else {
-                property.enqueueRegistration(key, new FluidBuilder().temperature(temp))
+                property.getStorage().enqueueRegistration(key, new FluidBuilder().temperature(temp))
             }
+        }
+        if (mat.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) == null) {
+            setupFluidType(mat, FluidStorageKeys.LIQUID, temp)
         }
 	}
 	private static void setupFluidType(Material mat, FluidStorageKey key) {
         if (mat.getProperty(PropertyKey.FLUID) == null) {
             def property = new FluidProperty();
-		    property.enqueueRegistration(key, new FluidBuilder())
+		    property.getStorage().enqueueRegistration(key, new FluidBuilder())
 		    mat.setProperty(PropertyKey.FLUID, property)
         } else {
             def property = mat.getProperty(PropertyKey.FLUID)
-		    property.enqueueRegistration(key, new FluidBuilder())
+		    property.getStorage().enqueueRegistration(key, new FluidBuilder())
+        }
+        if (mat.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) == null) {
+            setupFluidType(mat, FluidStorageKeys.LIQUID)
         }
 	}
 
@@ -91,11 +96,11 @@ class ChangeFlags {
         setupFluidType(Iodine, FluidStorageKeys.GAS, 460)
         setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
         setupFluidType(Selenium, FluidStorageKeys.LIQUID, 494)
-        //setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
+        setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
 
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
-        Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
+        Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         Tantalum.setProperty(PropertyKey.BLAST, new BlastProperty(3293, GasTier.MID, 480, 240, -1, -1));
         Molybdenum.setProperty(PropertyKey.BLAST, new BlastProperty(2890, GasTier.MID, 480, 240, -1, -1));
@@ -130,7 +135,6 @@ class ChangeFlags {
         Indium.addFlags("generate_plate");
         BisphenolA.addFlags("no_unification");
         Phosphorus.addFlags("no_smelting");
-        Tetrahedrite.addFlags("no_smelting");
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
@@ -159,9 +163,7 @@ class ChangeFlags {
         AquaRegia.setFormula("(HNO3)(HCl)3", true);
         Tantalite.setFormula("(Fe,Mn)Ta2O6", true);
         Lepidolite.setFormula("(K,Rb)AlLi2Si4O10(OH,F)2", true);
-        Tetrahedrite.setFormula("Cu12Sb4S13", true);
         IndiumGalliumPhosphide.setFormula("InGaP2", true);
-        NetherAir.setFormula("(N78O21Ar9)24(CO2)2(H2S)(SO2)", true)
 
         // Ore Processing
         
@@ -175,7 +177,6 @@ class ChangeFlags {
         Tantalite.addFlags("generate_sifted", "generate_flotated", "generate_concentrate");
         setupSlurries(Tantalite)
         setupSlurries(Galena)
-        setupSlurries(Stibnite)
         setupSlurries(Cinnabar)
         Ilmenite.addFlags("generate_flotated", "generate_concentrate");
         setupSlurries(Ilmenite)
@@ -187,7 +188,6 @@ class ChangeFlags {
         Rutile.addFlags("generate_concentrate");
         setupSlurries(Sphalerite)
         setupSlurries(Pollucite)
-        setupSlurries(Arsenopyrite)
 
         setupFluidType(PolyvinylAcetate, FluidStorageKeys.LIQUID, 385)
 

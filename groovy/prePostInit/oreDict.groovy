@@ -1,5 +1,3 @@
-package prePostInit;
-
 import static globals.Globals.*
 
 import supersymmetry.common.blocks.SuSyBlocks

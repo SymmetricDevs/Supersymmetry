@@ -31,10 +31,13 @@ EBF.recipeBuilder()
 
 // Ruby Slurry * 3000
 mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedRuby') * 2], [fluid('aqua_regia') * 3000])
+mods.gregtech.blender.removeByInput(1920, [metaitem('crushedRuby') * 2], [fluid('aqua_regia') * 3000])
 // Sapphire Slurry * 3000
 mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedSapphire') * 2], [fluid('aqua_regia') * 3000])
+mods.gregtech.blender.removeByInput(1920, [metaitem('crushedSapphire') * 2], [fluid('aqua_regia') * 3000])
 // Green Sapphire Slurry * 3000
 mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedGreenSapphire') * 2], [fluid('aqua_regia') * 3000])
+mods.gregtech.blender.removeByInput(1920, [metaitem('crushedGreenSapphire') * 2], [fluid('aqua_regia') * 3000])
 
 // Bauxite -> Red Mud
 
@@ -80,7 +83,7 @@ CRYSTALLIZER.recipeBuilder()
 
 EBF.recipeBuilder()
 .inputs(ore('dustAluminiumHydroxide') * 14)
-.fluidOutputs(fluid('dense_steam') * 3000)
+.fluidOutputs(fluid('steam') * 3000)
 .outputs(metaitem('dustAlumina') * 5)
 .duration(100)
 .blastFurnaceTemp(1400)
@@ -118,7 +121,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 ROASTER.recipeBuilder()
 .fluidInputs(fluid('hydrofluoric_acid') * 6000)
 .inputs(ore('dustAlumina') * 5)
-.fluidOutputs(fluid('dense_steam') * 9000)
+.fluidOutputs(fluid('steam') * 9000)
 .outputs(metaitem('dustAluminiumTrifluoride') * 8)
 .duration(300)
 .EUt(16)

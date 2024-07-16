@@ -6,7 +6,7 @@ import appeng.api.features.IGrinderRecipeBuilder;
 
 final IGrinderRegistry reg = AEApi.instance().registries().grinder();
 
-log.infoMC("Running StartingAge.groovy...")
+println("Running StartingAge.groovy...")
 
 def name_removals = [
         "notreepunching:tools/iron_saw",

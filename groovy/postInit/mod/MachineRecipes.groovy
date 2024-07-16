@@ -906,7 +906,7 @@ crafting.addShaped("gregtech:bath_condenser", metaitem('bath_condenser'), [
 
 // Phase Separator
 
-crafting.addShaped("gregtech:phase_separator", metaitem('phase_separator'), [
+crafting.addShaped("gregtech:phase_separator", metaitem('phase_separator.lv'), [
 	[metaitem('frameStainlessSteel'), metaitem('drum.stainless_steel'), metaitem('pipeSmallFluidStainlessSteel')],
 	[metaitem('pipeSmallFluidStainlessSteel'), metaitem('hull.hv'), metaitem('pipeSmallFluidStainlessSteel')],
 	[null, null, null]
@@ -1038,7 +1038,6 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('electric.pump.hv') * 4)
 		.inputs(ore('plateAluminium') * 4)
 		.inputs(metaitem('mineral_wool') * 64)
-		.fluidInputs(fluid('cryogenic_solder') * 1296)
 		.outputs(metaitem('single_column_cryogenic_distillation_plant'))
 		.EUt(30)
 		.duration(600)
@@ -1053,7 +1052,6 @@ recipemap('assembler').recipeBuilder()
 		.inputs(ore('plateAluminium') * 4)
 		.inputs(item('susy:serpentine') * 6)
 		.inputs(metaitem('mineral_wool') * 64)
-		.fluidInputs(fluid('cryogenic_solder') * 1296)
 		.outputs(metaitem('low_pressure_cryogenic_distillation_plant'))
 		.EUt(30)
 		.duration(600)
@@ -1067,7 +1065,6 @@ recipemap('assembler').recipeBuilder()
 		.inputs(metaitem('electric.pump.hv') * 8)
 		.inputs(ore('plateAluminium') * 4)
 		.inputs(metaitem('mineral_wool') * 64)
-		.fluidInputs(fluid('cryogenic_solder') * 1296)
 		.outputs(metaitem('high_pressure_cryogenic_distillation_plant'))
 		.EUt(30)
 		.duration(600)

@@ -126,7 +126,7 @@ for (highPurityCombustible in highPurityCombustibles()) {
         .inputs(ore('dustIlmenite'))
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
         .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
-        .fluidOutputs(fluid('gaseous_iron_iii_chloride') * 800)
+        .fluidOutputs(fluid('iron_iii_chloride') * 800)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .outputs(metaitem('dustRutile') * 3)
         .duration(100 * highPurityCombustible.duration)
@@ -165,7 +165,7 @@ for (highPurityCombustible in highPurityCombustibles()) {
 }
 
 VACUUM_FREEZER.recipeBuilder()
-        .fluidInputs(fluid('gaseous_iron_iii_chloride') * 1000)
+        .fluidInputs(fluid('iron_iii_chloride') * 1000)
         .outputs(metaitem('dustIronIiiChloride') * 4)
         .duration(200)
         .EUt(Globals.voltAmps[1] * 2)
