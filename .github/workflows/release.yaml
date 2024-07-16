@@ -49,8 +49,8 @@ jobs:
 
     - name: Rename file 
       run: |
-        mv buildOut/client.zip buildOut/supersymmetry-"${{steps.get-version.outputs.result}}".zip
-        mv buildOut/server.zip buildOut/server-"${{steps.get-version.outputs.result}}".zip
+        mv buildOut/client.zip buildOut/supersymmetry-${{steps.get-version.outputs.result}}.zip
+        mv buildOut/server.zip buildOut/server-${{steps.get-version.outputs.result}}.zip
         rm -f buildOut/client.zip
         rm -f buildOut/server.zip
 
@@ -62,7 +62,7 @@ jobs:
           prerelease: false
           title: ${{ steps.get-version.outputs.result }}
           files: |
-            buildOut/client.zip
-            buildOut/server.zip
+            buildOut/supersymmetry-${{steps.get-version.outputs.result}}.zip
+            buildOut/server-${{steps.get-version.outputs.result}}.zip
             buildOut/modlist.html
     
