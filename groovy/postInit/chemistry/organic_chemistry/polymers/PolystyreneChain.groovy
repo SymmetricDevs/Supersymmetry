@@ -11,7 +11,7 @@ POLYMERIZATION = recipemap('polymerization_tank')
 
 FBR.recipeBuilder()
     .fluidInputs(fluid('ethylbenzene') * 50)
-    .fluidInputs(fluid('dense_steam') * 50)
+    .fluidInputs(fluid('steam') * 50)
     .notConsumable(ore('catalystBedIronIiiOxide'))
     .fluidOutputs(fluid('crude_styrene') * 50)
     .fluidOutputs(fluid('hydrogen') * 90)

@@ -1,5 +1,3 @@
-package preInit;
-
 import gregtech.api.GTValues;
 import gregtech.api.GregTechAPI;
 import gregtech.api.items.metaitem.*;

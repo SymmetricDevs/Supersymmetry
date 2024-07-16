@@ -1,5 +1,3 @@
-package prePostInit;
-
 import classes.*;
 import globals.Globals;
 

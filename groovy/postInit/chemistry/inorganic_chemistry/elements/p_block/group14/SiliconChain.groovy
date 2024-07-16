@@ -1,5 +1,6 @@
 import globals.Globals
 import static globals.SinteringGlobals.*
+import static globals.CarbonGlobals.*
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
@@ -41,16 +42,67 @@ mods.gregtech.cutter.removeByInput(64, [metaitem('boule.silicon')], [fluid('wate
 // Fix Hot Silicon Ingot conflict with dust
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSiliconDioxide') * 3, metaitem('dustCarbon') * 2], null)
 
-EBF.recipeBuilder()
-        .circuitMeta(2)
-        .inputs(ore('dustSiliconDioxide') * 3)
-        .inputs(ore('dustAnyPurityCarbon') * 2)
+//Silicon & Graphite
+
+for (carbon in dusts()) {
+    ARC_FURNACE.recipeBuilder()
+            .inputs(ore('dustSiliconDioxide') * 3)
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
+            .notConsumable(fluid('air') * 1000)
+            .outputs(metaitem('dustSilicon'))
+            .circuitMeta(1)
+            .fluidOutputs(fluid('carbon_monoxide') * 2000)
+            .EUt(30)
+            .duration(300)
+            .buildAndRegister()
+
+    ARC_FURNACE.recipeBuilder()
+            .inputs(ore('dustQuartzite') * 3)
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
+            .notConsumable(fluid('air') * 1000)
+            .outputs(metaitem('dustSilicon'))
+            .fluidOutputs(fluid('carbon_monoxide') * 2000)
+            .EUt(30)
+            .duration(300)
+            .buildAndRegister()
+
+    ARC_FURNACE.recipeBuilder()
+            .inputs(ore('dustCertusQuartz') * 3)
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
+            .notConsumable(fluid('air') * 1000)
+            .outputs(metaitem('dustSilicon'))
+            .fluidOutputs(fluid('carbon_monoxide') * 2000)
+            .EUt(30)
+            .duration(300)
+            .buildAndRegister()
+
+    ARC_FURNACE.recipeBuilder()
+            .inputs(ore('dustNetherQuartz') * 3)
+            .inputs(ore(carbon.name) * carbon.equivalent(2))
+            .notConsumable(fluid('air') * 1000)
+            .outputs(metaitem('dustSilicon'))
+            .fluidOutputs(fluid('carbon_monoxide') * 2000)
+            .EUt(30)
+            .duration(300)
+            .buildAndRegister()
+
+    ARC_FURNACE.recipeBuilder()
+            .inputs(ore('dustSiliconDioxide') * 3)
+            .inputs(ore(carbon.name) * carbon.equivalent(3))
+            .circuitMeta(2)
+            .outputs(metaitem('dustSiliconCarbide') * 2)
+            .fluidOutputs(fluid('carbon_monoxide') * 2000)
+            .EUt(60)
+            .duration(300)
+            .buildAndRegister()
+}
+
+ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustSiliconCarbide') * 2)
         .outputs(metaitem('dustSilicon'))
-        .outputs(metaitem('dustTinyAsh'))
-        .fluidOutputs(fluid('carbon_monoxide') * 2000)
-        .blastFurnaceTemp(1200)
-        .duration(240)
-        .EUt(120)
+        .outputs(metaitem('dustGraphite'))
+        .EUt(60)
+        .duration(270)
         .buildAndRegister()
 
 ROASTER.recipeBuilder()

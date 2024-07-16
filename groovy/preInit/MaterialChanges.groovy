@@ -1,5 +1,3 @@
-package preInit;
-
 import net.minecraftforge.fml.common.eventhandler.EventPriority
 import gregtech.api.unification.material.event.MaterialEvent;
 

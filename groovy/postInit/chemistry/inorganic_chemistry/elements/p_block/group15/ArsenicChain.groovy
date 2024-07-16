@@ -19,34 +19,6 @@ ROASTER = recipemap('roaster')
 DISTILLERY = recipemap('distillery')
 DT = recipemap('distillation_tower')
 
-//BENEFICIATION
-
-MIXER.recipeBuilder()
-        .inputs(ore('dustImpureArsenopyrite') * 8)
-        .fluidInputs(fluid('distilled_water') * 2000)
-        .fluidOutputs(fluid('impure_arsenopyrite_slurry') * 2000)
-        .EUt(Globals.voltAmps[3])
-        .duration(80)
-        .buildAndRegister()
-
-FLOTATION.recipeBuilder()
-        .fluidInputs(fluid('impure_arsenopyrite_slurry') * 2000)
-        .notConsumable(metaitem('dustSodiumEthylXanthate'))
-        .notConsumable(metaitem('dustPotassiumPermanganate') * 6)
-        .fluidOutputs(fluid('arsenopyrite_slurry') * 1000)
-        .fluidOutputs(fluid('pyrite_slurry') * 1000)
-        .EUt(Globals.voltAmps[3])
-        .duration(80)
-        .buildAndRegister()
-
-CLARIFIER.recipeBuilder()
-        .fluidInputs(fluid('arsenopyrite_slurry') * 1000)
-        .outputs(metaitem('dustArsenopyrite') * 16)
-        .fluidOutputs(fluid('wastewater') * 1000)
-        .EUt(Globals.voltAmps[1])
-        .duration(20)
-        .buildAndRegister()
-
 //ROAST RECOVERY OF As2O3 (75% EFFICIENCY)
 //COBALTITE MODIFICATION
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCobaltite')], [fluid('oxygen') * 3000])
@@ -96,19 +68,7 @@ EBF.recipeBuilder()
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
-//ENARGITE SMELTING
-EBF.recipeBuilder()
-    .inputs(ore('dustEnargite') * 2)
-    .fluidInputs(fluid('oxygen') * 19000)
-    .outputs(metaitem('ingotBlisterCopper'))
-    .outputs(metaitem('dustArsenicTrioxide') * 5)
-    .fluidOutputs(fluid('sulfur_dioxide') * 8000)
-    .blastFurnaceTemp(1200)
-    .EUt(480)
-    .duration(40)
-    .buildAndRegister()
-
-//NOTE: PROUSTITE CANNOT BE PYROMETALLURGICALLY TREATED TO FORM SIGNIFICANT QUANTITES OF ARSENIC TRIOXIDE.
+//NOTE: ENARGITE AND PROUSTITE CANNOT BE PYROMETALLURGICALLY TREATED TO FORM SIGNIFICANT QUANTITES OF ARSENIC TRIOXIDE.
 
 //ARSENOPYRITE AND COBALTITE ACID LEACHING
 def tab_MAsS = ["Cobaltite", "Arsenopyrite"]
@@ -147,7 +107,7 @@ for (ore in tab_MAsS) {
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('acidic_arsenate_v_solution') * 2000)
         .outputs(metaitem('dustArsenicVOxide') * 21)
-        .fluidOutputs(fluid('dense_steam') * 15000)
+        .fluidOutputs(fluid('steam') * 15000)
         .fluidOutputs(fluid('nitrogen_dioxide') * 12000)
         .fluidOutputs(fluid('oxygen') * 6000)
         .duration(120)
@@ -371,7 +331,7 @@ BATCH_REACTOR.recipeBuilder()
 ROASTER.recipeBuilder()
         .fluidInputs(fluid('acidic_copper_solution') * 2000)
         .outputs(metaitem('dustCopperSulfate') * 24)
-        .fluidOutputs(fluid('dense_steam') * (8000 + 2000))
+        .fluidOutputs(fluid('steam') * (8000 + 2000))
         .fluidOutputs(fluid('oxygen') * 1000)
         .fluidOutputs(fluid('nitrogen_dioxide') * 4000)
         .duration(120)
