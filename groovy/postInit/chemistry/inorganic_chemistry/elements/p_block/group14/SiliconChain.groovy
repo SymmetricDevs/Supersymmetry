@@ -1,5 +1,6 @@
 import globals.Globals
 import static globals.SinteringGlobals.*
+import static globals.CarbonGlobals.*
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
