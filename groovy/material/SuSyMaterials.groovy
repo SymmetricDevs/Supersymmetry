@@ -507,6 +507,7 @@ class SuSyMaterials {
         public static Material CocoAmineAcetate;
         public static Material PolluciteLeach;
         public static Material CaesiumRubidiumAlumMixture;
+        public static Material NetherMolecularSieve;
 
         // Petrochem Materials
 
@@ -1036,8 +1037,6 @@ class SuSyMaterials {
         public static Material AcidicThalliumSulfateSolution;
         public static Material ThalliumSulfateSolution;
         public static Material WaferTreatmentAcid;
-        public static Material ArsenicIIIOxide;
-        public static Material AntimonyIIIOxide;
         public static Material PurifiedCadmiumSolution;
         public static Material GermaniumTetrachloride;
         public static Material GermaniumDioxide;
@@ -1058,6 +1057,17 @@ class SuSyMaterials {
         public static Material CaesiumHydroxideSolution;
         public static Material CaesiumFormateSolution;
         public static Material RubidiumHydroxide;
+        public static Material DenseSteam;
+        public static Material HeavyNetherGases;
+        public static Material SodiumThioantimoniteSolution;
+        public static Material PurifiedAntimonyTrichloride;
+        public static Material PurifiedAntimonyTrioxide;
+        public static Material CopperISulfide;
+        public static Material CopperIISulfide;
+        public static Material PotassiumManganate;
+        public static Material PotassiumPermanganate;
+        public static Material LeadFreeSolder;
+        public static Material CryogenicSolder;
 
         // HP Materials
 
@@ -1242,6 +1252,7 @@ class SuSyMaterials {
         public static Material CaesiumChlorideSolution;
         public static Material RubidiumHydroxideSolution;
         public static Material SodiumAlumSolution;
+        public static Material OxidizedManganateSolution;
 
         // Organic Chemistry Materials
 

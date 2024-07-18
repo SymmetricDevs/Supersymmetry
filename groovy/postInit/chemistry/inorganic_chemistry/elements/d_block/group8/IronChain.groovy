@@ -82,7 +82,7 @@ def blastables = [
 
 def reductants = [
     new ReductantIron('carbon_monoxide', 'carbon_dioxide', 1, 1),
-    new ReductantIron('hydrogen', 'steam', 2, 1)
+    new ReductantIron('hydrogen', 'dense_steam', 2, 1)
 ]
 
 def combustibles = combustibles()
@@ -256,7 +256,7 @@ EBF_RECIPES.recipeBuilder()
 ROASTER.recipeBuilder()
     .inputs(ore('dustIronIiiHydroxide') * 14)
     .outputs(metaitem('dustIronIiiOxide') * 5)
-    .fluidOutputs(fluid('steam') * 3000)
+    .fluidOutputs(fluid('dense_steam') * 3000)
     .duration(80)
     .EUt(30)
     .buildAndRegister()
@@ -264,7 +264,7 @@ ROASTER.recipeBuilder()
 ROASTER.recipeBuilder()
     .inputs(ore('dustIronIiHydroxide') * 5)
     .outputs(metaitem('dustIronIiOxide') * 2)
-    .fluidOutputs(fluid('steam') * 1000)
+    .fluidOutputs(fluid('dense_steam') * 1000)
     .EUt(Globals.voltAmps[1])
     .duration(200)
     .buildAndRegister()

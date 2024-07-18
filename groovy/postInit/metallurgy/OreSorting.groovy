@@ -1,7 +1,7 @@
 import classes.*
 import globals.Globals
 
-println("Running OreSorting.groovy...")
+log.infoMC("Running OreSorting.groovy...")
 
 int fluid_amount = 100;
 
