@@ -8,7 +8,7 @@ fractions.each { _, fraction -> {
         
         FBR.recipeBuilder()
             .fluidInputs(fraction.getSulfuric(1000))
-            .fluidInputs(fluid('hydrogen') * 250)
+            .fluidInputs(fluid('hydrogen') * 125)
             .notConsumable(metaitem('catalystBedHydrotreatingCatalyst'))
             .fluidOutputs(fraction.getTreatedSulfuric(1000))
             .duration(15)
@@ -18,7 +18,7 @@ fractions.each { _, fraction -> {
         DT.recipeBuilder()
             .fluidInputs(fraction.getTreatedSulfuric(1000))
             .fluidOutputs(fraction.get(1000))
-            .fluidOutputs(fluid('sour_gas') * 250)
+            .fluidOutputs(fluid('sour_gas') * 125)
             .duration(50)
             .EUt(30)
             .buildAndRegister()
