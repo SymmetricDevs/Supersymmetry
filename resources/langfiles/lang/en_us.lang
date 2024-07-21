@@ -1991,6 +1991,16 @@ susy.material.heavy_atmospheric_overheads=Heavy Atmospheric Overheads
 susy.material.light_atmospheric_overheads=Light Atmospheric Overheads
 susy.material.hydrotreating_catalyst=Hydrotreating Catalyst
 susy.material.supported_nickel=Supported Nickel
+susy.material.debutanized_naphtha=Debutanized Naphtha
+susy.material.sulfuric_lpg=SulfuricLPG
+susy.material.sulfuric_butane_lpg=SulfuricButaneLPG
+susy.material.sulfuric_propane_lpg=SulfuricPropaneLPG
+susy.material.sulfuric_light_naphtha=SulfuricLightNaphtha
+susy.material.sulfuric_heavy_naphtha=SulfuricHeavyNaptha
+susy.material.light_naphtha=LightNaphtha
+susy.material.heavy_naphtha=HeavyNaphtha
+susy.material.butane_lpg=ButaneLPG
+susy.material.propane_lpg=PropaneLPG
 
 # Isotopes
 

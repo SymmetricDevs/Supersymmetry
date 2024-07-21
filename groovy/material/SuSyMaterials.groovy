@@ -557,13 +557,6 @@ class SuSyMaterials {
         public static Material SeverelyHydrocrackedKerosene;
         public static Material UpgradedKeroseneMix;
 
-        public static Material SulfuricGasoline;
-        public static Material TreatedSulfuricGasoline;
-        public static Material LightlySteamcrackedGasoline;
-        public static Material SeverelySteamcrackedGasoline;
-        public static Material LightlyHydrocrackedGasoline;
-        public static Material SeverelyHydrocrackedGasoline;
-
         public static Material CrudeNaphtha;
         public static Material TreatedSulfuricNaphtha;
         public static Material LightlySteamcrackedNaphtha;
@@ -572,6 +565,18 @@ class SuSyMaterials {
         public static Material SeverelyHydrocrackedNaphtha;
         public static Material NaphthaReformate;
         public static Material UpgradedNaphthaMix;
+
+        public static Material DebutanizedNaphtha;
+        public static Material SulfuricLightNaphtha;
+        public static Material SulfuricHeavyNaptha;
+        public static Material LightNaphtha;
+        public static Material HeavyNaphtha;
+;
+        public static Material SulfuricLPG;
+        public static Material SulfuricButaneLPG;
+        public static Material SulfuricPropaneLPG;
+        public static Material ButaneLPG;
+        public static Material PropaneLPG;
 
         public static Material AtmosphericOverheads;
         public static Material HeavyAtmosphericOverheads;

@@ -46,7 +46,7 @@ class Petrochemistry = {
         }
     }
 
-    trait Sulfuric extends Heatable {
+    trait Sulfuric {
         def getTreatedSulfuric(int amount) {
             return fluid('treated_sulfuric_' + this.name) * amount
         }
@@ -56,15 +56,17 @@ class Petrochemistry = {
         }
     }
 
+    trait Crude {
+        def getCrude(int amount) {
+            return fluid('crude_' + this.name) * amount
+        }
+    }
+
     public static class OilFraction {
         String name
 
         OilFraction(String name) {
             this.name = name
-        }
-
-        def getCrude(int amount) {
-            return fluid('crude_' + this.name) * amount
         }
 
         def get(int amount) {
@@ -114,10 +116,12 @@ class Petrochemistry = {
 
     public static fractions = [
         lubricating_oil : new OilFraction('lubricating_oil').withTraits(Sulfuric)
-        heavy_fuel_oil : new OilFraction('heavy_fuel_oil').withTraits(CatalyticCrackable, Sulfuric).tap { upgrade_name = 'light_fuel_oil' },
-        light_fuel_oil : new OilFraction('light_fuel_oil').withTraits(CatalyticCrackable, Sulfuric).tap { upgrade_name = 'kerosene' },
-        kerosene : new OilFractionCrackable('kerosene').withTraits(CatalyticCrackable, Sulfuric).tap { upgrade_name = 'naphtha' },
-        naphtha : new OilFractionCrackable('naphtha').withTraits(CatalyticCrackable, Sulfuric),
+        heavy_fuel_oil : new OilFraction('heavy_fuel_oil').withTraits(CatalyticCrackable, Sulfuric, Heatable).tap { upgrade_name = 'light_fuel_oil' },
+        light_fuel_oil : new OilFraction('light_fuel_oil').withTraits(CatalyticCrackable, Sulfuric, Heatable).tap { upgrade_name = 'kerosene' },
+        kerosene : new OilFractionCrackable('kerosene').withTraits(CatalyticCrackable, Sulfuric, Heatable).tap { upgrade_name = 'naphtha' },
+        naphtha : new OilFractionCrackable('naphtha').withTraits(Crude),
+        light_naphtha : new OilFractionCrackable('light_naphtha').withTraits(Sulfuric, Heatable),
+        heavy_naphtha : new OilFractionCrackable('heavy_naphtha').withTraits(Sulfuric, Heatable),
         refinery_gas : new OilFraction('refinery_gas')
     ]
 
