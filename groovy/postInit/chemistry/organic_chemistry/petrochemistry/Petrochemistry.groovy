@@ -28,36 +28,8 @@ class Petrochemistry = {
         }
     }
 
-    public static class OilFraction {
-        String name
-        Boolean isUpgradable = false
+    trait CatalyticCrackable {
         String upgrade_name = ""
-
-        OilFraction(String name) {
-            this.name = name
-        }
-
-        OilFraction(String name, String upgrade_name) {
-            this.name = name
-            this.isUpgradable = true
-            this.upgrade_name = upgrade_name
-        }
-
-        def getCrude(int amount) {
-            return fluid('crude_' + this.name) * amount
-        }
-
-        def getTreatedSulfuric(int amount) {
-            return fluid('treated_sulfuric_' + this.name) * amount
-        }
-
-        def getSulfuric(int amount) {
-            return fluid('sulfuric_' + this.name) * amount
-        }
-
-        def getHeated(int amount) {
-            return fluid('heated_' + this.name) * amount
-        }
 
         def getUpgraded(int amount) {
             return fluid(this.upgrade_name) * amount
@@ -65,6 +37,34 @@ class Petrochemistry = {
 
         def getUpgradedMix(int amount) {
             return fluid('upgraded_' + this.name + '_mix') * amount
+        }
+    }
+
+    trait Heatable {
+        def getHeated(int amount) {
+            return fluid('heated_' + this.name) * amount
+        }
+    }
+
+    trait Sulfuric extends Heatable {
+        def getTreatedSulfuric(int amount) {
+            return fluid('treated_sulfuric_' + this.name) * amount
+        }
+
+        def getSulfuric(int amount) {
+            return fluid('sulfuric_' + this.name) * amount
+        }
+    }
+
+    public static class OilFraction {
+        String name
+
+        OilFraction(String name) {
+            this.name = name
+        }
+
+        def getCrude(int amount) {
+            return fluid('crude_' + this.name) * amount
         }
 
         def get(int amount) {
@@ -76,10 +76,6 @@ class Petrochemistry = {
 
         OilFractionCrackable(String name){
             super(name)
-        }
-
-        OilFractionCrackable(String name, String upgrade_name){
-            super(name, upgrade_name)
         }
 
         def getLightlyHydro(int amount) {
@@ -117,13 +113,11 @@ class Petrochemistry = {
     }
 
     public static fractions = [
-        heavy_fuel_oil : new OilFraction('heavy_fuel_oil', 'light_fuel_oil'),
-        light_fuel_oil : new OilFraction('light_fuel_oil', 'kerosene'),
-        kerosene : new OilFractionCrackable('kerosene', 'naphtha'),
-        naphtha : new OilFractionCrackable('naphtha', 'gasoline'),
-        gasoline : new OilFractionCrackable('gasoline'),
-        refinery_gas : new OilFraction('refinery_gas'),
-        natural_gas : new OilFraction('natural_gas')
+        heavy_fuel_oil : new OilFraction('heavy_fuel_oil').withTraits(CatalyticCrackable, Sulfuric).tap { upgrade_name = 'light_fuel_oil' },
+        light_fuel_oil : new OilFraction('light_fuel_oil').withTraits(CatalyticCrackable, Sulfuric).tap { upgrade_name = 'kerosene' },
+        kerosene : new OilFractionCrackable('kerosene').withTraits(CatalyticCrackable, Sulfuric).tap { upgrade_name = 'naphtha' },
+        naphtha : new OilFractionCrackable('naphtha').withTraits(CatalyticCrackable, Sulfuric),
+        refinery_gas : new OilFraction('refinery_gas')
     ]
 
     public static oils = [
