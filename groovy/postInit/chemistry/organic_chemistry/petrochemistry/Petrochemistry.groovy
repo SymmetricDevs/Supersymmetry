@@ -6,9 +6,11 @@ class Petrochemistry = {
 
     public static class Oil {
         String name
+        String brine
 
-        Oil(String name) {
+        Oil(String name, String brine) {
             this.name = name
+            this.brine = brine
         }
         
         def getDiluted(int amount) {
@@ -21,6 +23,10 @@ class Petrochemistry = {
 
         def getHeated(int amount) {
             return fluid('heated_' + this.name) * amount
+        }
+
+        def getBrine(int amount) {
+            return this.brine
         }
 
         def get(int amount) {
@@ -126,8 +132,8 @@ class Petrochemistry = {
     ]
 
     public static oils = [
-        oil: new Oil('oil'),
-        oil_light: new Oil('oil_light'),
-        oil_heavy: new Oil('oil_heavy') 
+        oil: new Oil('oil', 'oily_brine'),
+        oil_light: new Oil('oil_light', 'light_oily_brine'),
+        oil_heavy: new Oil('oil_heavy', 'heavy_oily_brine') 
     ]
 }
