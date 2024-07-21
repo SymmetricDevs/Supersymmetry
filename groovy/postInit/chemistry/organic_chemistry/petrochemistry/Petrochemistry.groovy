@@ -68,8 +68,13 @@ class Petrochemistry = {
         }
     }
 
+    trait Strippable extends Crude {
+        strippable = true
+    }
+
     public static class OilFraction {
         String name
+        String strippable = false
 
         OilFraction(String name) {
             this.name = name
@@ -121,14 +126,14 @@ class Petrochemistry = {
     }
 
     public static fractions = [
-        lubricating_oil : new OilFraction('lubricating_oil').withTraits(Sulfuric, Crude)
-        heavy_fuel_oil : new OilFraction('heavy_fuel_oil').withTraits(CatalyticCrackable, Sulfuric, Heatable, Crude).tap { upgrade_name = 'light_fuel_oil' },
-        light_fuel_oil : new OilFraction('light_fuel_oil').withTraits(CatalyticCrackable, Sulfuric, Heatable, Crude).tap { upgrade_name = 'kerosene' },
-        kerosene : new OilFractionCrackable('kerosene').withTraits(CatalyticCrackable, Sulfuric, Heatable, Crude).tap { upgrade_name = 'naphtha' },
+        lubricating_oil : new OilFraction('lubricating_oil').withTraits(Sulfuric, Crude),
+        heavy_fuel_oil : new OilFraction('heavy_fuel_oil').withTraits(CatalyticCrackable, Sulfuric, Heatable, Strippable).tap { upgrade_name = 'light_fuel_oil' },
+        light_fuel_oil : new OilFraction('light_fuel_oil').withTraits(CatalyticCrackable, Sulfuric, Heatable, Strippable).tap { upgrade_name = 'kerosene' },
+        kerosene : new OilFractionCrackable('kerosene').withTraits(CatalyticCrackable, Sulfuric, Heatable, Strippable).tap { upgrade_name = 'naphtha' },
         naphtha : new OilFractionCrackable('naphtha').withTraits(Crude),
         light_naphtha : new OilFractionCrackable('light_naphtha').withTraits(Sulfuric, Heatable),
         heavy_naphtha : new OilFractionCrackable('heavy_naphtha').withTraits(Sulfuric, Heatable),
-        refinery_gas : new OilFraction('refinery_gas')
+        refinery_gas : new OilFraction('refinery_gas').withTraits(Sulfuric)
     ]
 
     public static oils = [
