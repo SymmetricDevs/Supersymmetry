@@ -62,7 +62,7 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricOilResidue = new Material.Builder(20007, SuSyUtility.susyId('sulfuric_oil_residue'))
+        AtmosphericOilResidue = new Material.Builder(20007, SuSyUtility.susyId('atmospheric_oil_residue'))
                 .liquid(new FluidBuilder().temperature(620))
                 .color(0x59572b)
                 .flags(FLAMMABLE)

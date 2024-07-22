@@ -587,7 +587,7 @@ class SuSyMaterials {
         public static Material OilyBrine;
         public static Material LightOilyBrine;
         public static Material HeavyOilyBrine;
-        public static Material SulfuricOilResidue;
+        public static Material AtmosphericOilResidue;
         public static Material HeatedOilResidue;
         public static Material OilResidue;
         public static Material LightBitumenSolution;

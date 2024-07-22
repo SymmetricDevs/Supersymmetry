@@ -136,7 +136,6 @@ class Petrochemistry = {
         naphtha : new OilFractionCrackable('naphtha').withTraits(Crude),
         light_naphtha : new OilFractionCrackable('light_naphtha').withTraits(Sulfuric, Heatable),
         heavy_naphtha : new OilFractionCrackable('heavy_naphtha').withTraits(Sulfuric, Heatable),
-        oil_residue : new OilFraction('oil_residue').withTraits(Sulfuric, Heatable),
         refinery_gas : new OilFraction('refinery_gas').withTraits(Sulfuric)
     ]
 
