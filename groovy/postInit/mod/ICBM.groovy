@@ -396,58 +396,6 @@ mods.gregtech.assembler.recipeBuilder()
 
 mods.gregtech.assembler.recipeBuilder()
         .inputs([
-                ore('plateAluminium')*3,
-                ore('frameGtAluminium')*2,
-                ore('stickLongAluminium')*2,
-                ore('circuitHv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherbase:1'))
-        .duration(400)
-        .EUt(60)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
-                ore('plateAluminium')*2,
-                ore('stickAluminium')*2,
-                ore('paneGlassColorless'),
-                ore('circuitHv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherscreen:1'))
-        .duration(400)
-        .EUt(60)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
-                ore('plateStainlessSteel')*3,
-                ore('frameGtStainlessSteel')*2,
-                ore('stickLongStainlessSteel')*2,
-                ore('circuitEv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherbase:2'))
-        .duration(400)
-        .EUt(260)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
-                ore('plateStainlessSteel')*2,
-                ore('stickStainlessSteel')*2,
-                ore('paneGlassColorless'),
-                ore('circuitEv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherscreen:2'))
-        .duration(400)
-        .EUt(260)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
                 ore('frameGtSteel')*3,
                 ore('stickLongSteel')*3,
                 metaitem('sensor.lv')
@@ -456,30 +404,6 @@ mods.gregtech.assembler.recipeBuilder()
         .outputs(item('icbmclassic:launcherframe:0'))
         .duration(400)
         .EUt(30)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
-                ore('frameGtAluminium')*3,
-                ore('stickLongAluminium')*3,
-                metaitem('sensor.mv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherframe:1'))
-        .duration(400)
-        .EUt(60)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
-                ore('frameGtStainlessSteel')*3,
-                ore('stickLongStainlessSteel')*3,
-                metaitem('sensor.hv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherframe:2'))
-        .duration(400)
-        .EUt(260)
         .buildAndRegister();
 
 //Missiles
