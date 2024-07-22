@@ -564,11 +564,10 @@ class SuSyMaterials {
         public static Material LightlyHydrocrackedNaphtha;
         public static Material SeverelyHydrocrackedNaphtha;
         public static Material NaphthaReformate;
-        public static Material UpgradedNaphthaMix;
 
         public static Material DebutanizedNaphtha;
         public static Material SulfuricLightNaphtha;
-        public static Material SulfuricHeavyNaptha;
+        public static Material SulfuricHeavyNaphtha;
         public static Material LightNaphtha;
         public static Material HeavyNaphtha;
 ;
@@ -583,13 +582,13 @@ class SuSyMaterials {
         public static Material LightAtmosphericOverheads;
 
         public static Material LubricatingOil;
-        public static Material UpgradedLubricatingOilMix;
+        public static Material TreatedSulfuricLubricatingOil;
 
         public static Material OilyBrine;
         public static Material LightOilyBrine;
         public static Material HeavyOilyBrine;
         public static Material SulfuricOilResidue;
-        public static Material TreatedSulfuricOilResidue;
+        public static Material HeatedOilResidue;
         public static Material OilResidue;
         public static Material LightBitumenSolution;
         public static Material BitumenSolution;

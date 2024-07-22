@@ -63,7 +63,7 @@ public class PetrochemistryMaterials {
                 .build();
 
         SulfuricOilResidue = new Material.Builder(20007, SuSyUtility.susyId('sulfuric_oil_residue'))
-                .liquid()
+                .liquid(new FluidBuilder().temperature(620))
                 .color(0x59572b)
                 .flags(FLAMMABLE)
                 .build();
@@ -212,13 +212,7 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        //FREE IDs: 20035-20053
-
-        UpgradedLubricatingOilMix = new Material.Builder(20054, SuSyUtility.susyId('upgraded_lubricating_oil_mix'))
-                .liquid(new FluidBuilder().temperature(773))
-                .color(0x948f43)
-                .flags(FLAMMABLE)
-                .build();
+        //FREE IDs: 20035-20054
 
         UpgradedHeavyFuelOilMix = new Material.Builder(20055, SuSyUtility.susyId('upgraded_heavy_fuel_oil_mix'))
                 .liquid(new FluidBuilder().temperature(773))
@@ -414,65 +408,76 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        DebutanizedNaphtha = new Material.Builder(20, SuSyUtility,susyId())
+        DebutanizedNaphtha = new Material.Builder(2009, SuSyUtility.susyId('debutanized_naphtha'))
                 .liquid(new FluidBuilder().temperature(450))
                 .color(0xeaff00)
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricLPG = new Material.Builder(20, SuSyUtility,susyId())
+        SulfuricLPG = new Material.Builder(2010, SuSyUtility.susyId('sulfuric_lpg'))
                 .gas(new FluidBuilder().temperature(340))
                 .color(0xccb20a)
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricButaneLPG = new Material.Builder(20, SuSyUtility,susyId())
+        SulfuricButaneLPG = new Material.Builder(2011, SuSyUtility.susyId('sulfuric_butane_lpg'))
                 .liquid()
                 .color(0xcca50a)
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricPropaneLPG = new Material.Builder(20, SuSyUtility,susyId())
+        SulfuricPropaneLPG = new Material.Builder(2012, SuSyUtility.susyId('sulfuric_propane_lpg'))
                 .gas()
                 .color(0xe0d041)
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricLightNaphtha = new Material.Builder(20, SuSyUtility,susyId())
+        SulfuricLightNaphtha = new Material.Builder(2013, SuSyUtility.susyId('sulfuric_light_naphtha'))
                 .liquid(new FluidBuilder().temperature(360))
                 .color(0xfff812)
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricHeavyNaptha = new Material.Builder(20, SuSyUtility,susyId())
+        SulfuricHeavyNaphtha = new Material.Builder(2014, SuSyUtility.susyId('sulfuric_heavy_naphtha'))
                 .liquid(new FluidBuilder().temperature(340))
                 .color(0xe3dc00)
                 .flags(FLAMMABLE)
                 .build();
 
-        LightNaphtha = new Material.Builder(20, SuSyUtility,susyId())
+        LightNaphtha = new Material.Builder(2015, SuSyUtility.susyId('light_naphtha'))
                 .liquid()
                 .color(0xfff512)
                 .flags(FLAMMABLE)
                 .build();
 
-        HeavyNaphtha = new Material.Builder(20, SuSyUtility,susyId())
+        HeavyNaphtha = new Material.Builder(2016, SuSyUtility.susyId('heavy_naphtha'))
                 .liquid()
                 .color(0xebe100)
                 .flags(FLAMMABLE)
                 .build();
 
-        ButaneLPG = new Material.Builder(20, SuSyUtility,susyId())
+        ButaneLPG = new Material.Builder(2017, SuSyUtility.susyId('butane_lpg'))
                 .gas()
                 .color(0xb64c1e)
                 .flags(FLAMMABLE)
                 .build();
 
-        PropaneLPG = new Material.Builder(20, SuSyUtility,susyId())
+        PropaneLPG = new Material.Builder(2018, SuSyUtility.susyId('propane_lpg'))
                 .gas()
                 .color(0xf5dc42)
                 .flags(FLAMMABLE)
                 .build();
-                
+        
+        HeatedOilResidue = new Material.Builder(2019, SuSyUtility.susyId('heated_oil_residue'))
+                .liquid(new FluidBuilder().temperature(680))
+                .color(0x5c5628)
+                .flags(FLAMMABLE)
+                .build();
+
+        TreatedSulfuricLubricatingOil = new Material.Builder(20074, SuSyUtility.susyId('treated_sulfuric_lubricating_oil'))
+                .liquid()
+                .color(0x857f2c)
+                .flags(FLAMMABLE)
+                .build();
     }
 }           

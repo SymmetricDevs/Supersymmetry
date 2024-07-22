@@ -77,15 +77,6 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .EUt(30)
         .buildAndRegister()
 
-    FBR.recipeBuilder()
-        .fluidInputs(fluid('sulfuric_lubricating_oil') * 180)
-        .fluidInputs(fluid('hydrogen') * 45)
-        .notConsumable(metaitem('catalystBedAlumina'))
-        .fluidOutputs(fluid('lubricating_oil') * 180)
-        .duration(20)
-        .EUt(30)
-        .buildAndRegister()
-
         // Hydrodewaxing catalyst
 
         LCR.recipeBuilder()
