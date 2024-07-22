@@ -194,7 +194,6 @@ class ThermodynamicsMaterials {
                         .build();
         }
     
-    
     public static void register() {
 
                 log.infoMC("Registering Thermodynamics Materials!");

@@ -272,6 +272,21 @@ def Refrigerants = [
         ChlorodifluoromethaneRefrigerant
 ];
 
+def CarbonDioxideSupercritical = new ISupercriticalFluid("compressed_carbon_dioxide", "supercritical_carbon_dioxide");
+CarbonDioxideSupercritical.setPowerToCompress(240);
+CarbonDioxideSupercritical.setDurationToCompress(200);
+CarbonDioxideSupercritical.setCriticalTemperature(304);
+
+def PropaneSupercritical = new ISupercriticalFluid("compressed_propane", "supercritical_propane");
+PropaneSupercritical.setPowerToCompress(480);
+PropaneSupercritical.setDurationToCompress(100);
+PropaneSupercritical.setCriticalTemperature(370);
+
+def SupercriticalFluids = [
+        CarbonDioxideSupercritical,
+        PropaneSupercritical
+]
+
 //Refrigerant recipes generation
 for (refrigerant in Refrigerants) {
     //Compression
@@ -841,3 +856,14 @@ recipemap('heat_exchanger').recipeBuilder()
         .fluidOutputs(liquid('chilled_lava') * 3)
         .duration(10)
         .buildAndRegister();
+
+// Supercritical fluid compression
+
+for (scfluid in SupercriticalFluids) {
+        recipemap('fluid_compressor').recipeBuilder()
+            .fluidInputs(gas(scfluid.getStartingGas()) * 1280)
+            .fluidOutputs(fluid(scfluid.getSupercriticalFluid()) * 20)
+            .EUt(scfluid.getPowerToCompress())
+            .duration(refrigerant.getDurationToCompress())
+            .buildAndRegister();
+}
