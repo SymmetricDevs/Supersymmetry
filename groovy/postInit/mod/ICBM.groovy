@@ -84,6 +84,7 @@ def name_removals = [
         "icbmclassic:concrete",
         "icbmclassic:concrete.1",
         "icbmclassic:concrete.2",
+        "icbmclassic:grenade:0",
 ]
 
 for (item in name_removals) {
