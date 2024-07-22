@@ -130,9 +130,9 @@ class Petrochemistry = {
 
     public static fractions = [
         lubricating_oil : new OilFraction('lubricating_oil').withTraits(Sulfuric, Crude),
-        heavy_fuel_oil : new OilFraction('heavy_fuel_oil').withTraits(CatalyticCrackable, Sulfuric, Heatable, Strippable).tap { upgrade_name = 'light_fuel_oil' },
-        light_fuel_oil : new OilFraction('light_fuel_oil').withTraits(CatalyticCrackable, Sulfuric, Heatable, Strippable).tap { upgrade_name = 'kerosene' },
-        kerosene : new OilFractionCrackable('kerosene').withTraits(CatalyticCrackable, Sulfuric, Heatable, Strippable).tap { upgrade_name = 'naphtha' },
+        heavy_gas_oil : new OilFraction('heavy_gas_oil').withTraits(CatalyticCrackable, Sulfuric, Heatable, Strippable).tap { upgrade_name = 'naphtha' },
+        light_gas_oil : new OilFraction('light_gas_oil').withTraits(CatalyticCrackable, Sulfuric, Heatable, Strippable).tap { upgrade_name = 'naphtha' },
+        kerosene : new OilFractionCrackable('kerosene').withTraits(Sulfuric, Heatable, Strippable),
         naphtha : new OilFractionCrackable('naphtha').withTraits(Crude),
         light_naphtha : new OilFractionCrackable('light_naphtha').withTraits(Sulfuric, Heatable),
         heavy_naphtha : new OilFractionCrackable('heavy_naphtha').withTraits(Sulfuric, Heatable),

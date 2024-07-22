@@ -388,7 +388,7 @@ CRACKER.recipeBuilder()
 
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('upgraded_lubricating_oil_mix') * 1000)
-        .fluidOutputs(fluid('sulfuric_heavy_fuel_oil') * 1000)
+        .fluidOutputs(fluid('sulfuric_heavy_gas_oil') * 1000)
         .outputs(metaitem('spent_cracking_catalyst'))
         .duration(160)
         .EUt(Globals.voltAmps[1])

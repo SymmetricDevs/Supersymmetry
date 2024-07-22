@@ -1129,13 +1129,13 @@ mods.gregtech.semi_fluid_generator.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.semi_fluid_generator.recipeBuilder()
-		.fluidInputs(fluid('sulfuric_heavy_fuel_oil') * 16)
+		.fluidInputs(fluid('sulfuric_heavy_gas_oil') * 16)
 		.duration(7)
 		.EUt(-32)
 		.buildAndRegister();
 
 mods.gregtech.semi_fluid_generator.recipeBuilder()
-		.fluidInputs(fluid('fuel_oil') * 8)
+		.fluidInputs(fluid('heavy_fuel_oil') * 8)
 		.duration(21)
 		.EUt(-32)
 		.buildAndRegister();

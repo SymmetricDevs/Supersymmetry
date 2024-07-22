@@ -542,11 +542,11 @@ LiquidNaturalGas.setAmountToBurn(10);
 LiquidNaturalGas.setByproductAmount(1250);
 LiquidNaturalGas.setIsRefinedFuel(true);
 
-def FuelOil = new IFluidFuel('fuel_oil', 'flue_gas');
-FuelOil.setDuration(100);
-FuelOil.setAmountToBurn(10);
-FuelOil.setByproductAmount(2000);
-FuelOil.setIsRefinedFuel(true);
+def HeavyGasOil = new IFluidFuel('heavy_gas_oil', 'flue_gas');
+HeavyGasOil.setDuration(100);
+HeavyGasOil.setAmountToBurn(10);
+HeavyGasOil.setByproductAmount(2000);
+HeavyGasOil.setIsRefinedFuel(true);
 
 def BioDiesel = new IFluidFuel('bio_diesel', 'flue_gas');
 BioDiesel.setDuration(75);
@@ -649,7 +649,7 @@ def FluidFuels = [
         Methanol,
         Ethanol,
         LiquidNaturalGas,
-        FuelOil,
+        HeavyFuelOil,
         BioDiesel,
         Diesel,
         MidgradeDiesel,

@@ -68,13 +68,13 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricHeavyFuelOil = new Material.Builder(20009, SuSyUtility.susyId('sulfuric_heavy_fuel_oil'))
+        SulfuricHeavyGasOil = new Material.Builder(20009, SuSyUtility.susyId('sulfuric_heavy_gas_oil'))
                 .liquid()
                 .color(0x858135)
                 .flags(FLAMMABLE)
                 .build();
 
-        TreatedSulfuricHeavyFuelOil = new Material.Builder(20010, SuSyUtility.susyId('treated_sulfuric_heavy_fuel_oil'))
+        TreatedSulfuricHeavyGasOil = new Material.Builder(20010, SuSyUtility.susyId('treated_sulfuric_heavy_gas_oil'))
                 .liquid()
                 .color(0x9e9a4f)
                 .flags(FLAMMABLE)
@@ -109,13 +109,13 @@ public class PetrochemistryMaterials {
                 .color(0xebeba4)
                 .build();
 
-        SulfuricLightFuelOil = new Material.Builder(20016, SuSyUtility.susyId('sulfuric_light_fuel_oil'))
+        SulfuricLightGasOil = new Material.Builder(20016, SuSyUtility.susyId('sulfuric_light_gas_oil'))
                 .liquid()
                 .color(0xa8a232)
                 .flags(FLAMMABLE)
                 .build();
 
-        TreatedSulfuricLightFuelOil = new Material.Builder(20017, SuSyUtility.susyId('treated_sulfuric_light_fuel_oil'))
+        TreatedSulfuricLightGasOil = new Material.Builder(20017, SuSyUtility.susyId('treated_sulfuric_light_gas_oil'))
                 .liquid()
                 .color(0xc2bb42)
                 .flags(FLAMMABLE)
@@ -139,9 +139,15 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        //FREE IDs: 20021-20022
+        VacuumOilResidue = new Material.Builder(20021, SuSyUtility.susyId('vacuum_oil_residue'))
+                .liquid(new FluidBuilder().temperature(770))
+                .color(0x21211c)
+                .flags(FLAMMABLE)
+                .build();
 
-        FuelOil = new Material.Builder(20023, SuSyUtility.susyId('fuel_oil'))
+        //FREE ID: 20022
+
+        HeavyGasOil = new Material.Builder(20023, SuSyUtility.susyId('heavy_gas_oil'))
                 .liquid()
                 .color(0x9e9a4f)
                 .flags(FLAMMABLE)
@@ -214,13 +220,13 @@ public class PetrochemistryMaterials {
 
         //FREE IDs: 20035-20054
 
-        UpgradedHeavyFuelOilMix = new Material.Builder(20055, SuSyUtility.susyId('upgraded_heavy_fuel_oil_mix'))
+        UpgradedHeavyGasOilMix = new Material.Builder(20055, SuSyUtility.susyId('upgraded_heavy_gas_oil_mix'))
                 .liquid(new FluidBuilder().temperature(773))
                 .color(0x918d33)
                 .flags(FLAMMABLE)
                 .build();
 
-        UpgradedLightFuelOilMix = new Material.Builder(20056, SuSyUtility.susyId('upgraded_light_fuel_oil_mix'))
+        UpgradedLightGasOilMix = new Material.Builder(20056, SuSyUtility.susyId('upgraded_light_gas_oil_mix'))
                 .liquid(new FluidBuilder().temperature(773))
                 .color(0xbab32f)
                 .flags(FLAMMABLE)
@@ -337,19 +343,19 @@ public class PetrochemistryMaterials {
                 .build();
 
         CrudeKerosene = new Material.Builder(20077, SuSyUtility.susyId('crude_kerosene'))
-                .liquid()
+                .liquid(new FluidBuilder().temperature(480))
                 .color(0xa8a225)
                 .flags(FLAMMABLE)
                 .build();
 
-        CrudeDiesel = new Material.Builder(20078, SuSyUtility.susyId('crude_diesel'))
+        CrudeLightGasOil = new Material.Builder(20078, SuSyUtility.susyId('crude_light_gas_oil'))
                 .liquid()
                 .color(0x96912c)
                 .flags(FLAMMABLE)
                 .build();
         
-        CrudeHeavyFuelOil = new Material.Builder(20079, SuSyUtility.susyId('crude_heavy_fuel_oil'))
-                .liquid()
+        CrudeHeavyGasOil = new Material.Builder(20079, SuSyUtility.susyId('crude_heavy_gas_oil'))
+                .liquid(new FluidBuilder().temperature(610))
                 .color(0x706d2c)
                 .flags(FLAMMABLE)
                 .build();
@@ -372,38 +378,38 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        HeavyFuelOil = new Material.Builder(20083, SuSyUtility.susyId('heavy_fuel_oil'))
+        HeavyGasOil = new Material.Builder(20083, SuSyUtility.susyId('heavy_gas_oil'))
                 .liquid()
                 .color(0x878444)
                 .flags(FLAMMABLE)
                 .build();
 
-        LightFuelOil = new Material.Builder(20084, SuSyUtility.susyId('light_fuel_oil'))
-                .liquid()
+        LightGasOil = new Material.Builder(20084, SuSyUtility.susyId('light_gas_oil'))
+                .liquid(new FluidBuilder().temperature(540))
                 .color(0xb0ac58)
                 .flags(FLAMMABLE)
                 .build();
 
         CrudeNaphtha = new Material.Builder(20085, SuSyUtility.susyId('crude_naphtha'))
-                .liquid()
+                .liquid(new FluidBuilder().temperature(460))
                 .color(0xa6a21f)
                 .flags(FLAMMABLE)
                 .build();
 
         AtmosphericOverheads = new Material.Builder(2008, SuSyUtility.susyId('atmospheric_overheads'))
-                .gas(new FluidBuilder().temperature(600))
+                .gas(new FluidBuilder().temperature(460))
                 .color(0xe3e6a3)
                 .flags(FLAMMABLE)
                 .build();
 
         HeavyAtmosphericOverheads = new Material.Builder(2008, SuSyUtility.susyId('heavy_atmospheric_overheads'))
-                .gas(new FluidBuilder().temperature(600))
+                .gas(new FluidBuilder().temperature(460))
                 .color(0xe8ebb5)
                 .flags(FLAMMABLE)
                 .build();
 
         LightAtmosphericOverheads = new Material.Builder(2008, SuSyUtility.susyId('light_atmospheric_overheads'))
-                .gas(new FluidBuilder().temperature(600))
+                .gas(new FluidBuilder().temperature(460))
                 .color(0xdce090)
                 .flags(FLAMMABLE)
                 .build();

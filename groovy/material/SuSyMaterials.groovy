@@ -525,12 +525,11 @@ class SuSyMaterials {
         public static Material DesaltedOilHeavy;
         public static Material HeatedOilHeavy;
 
-        public static Material FuelOil;
-        public static Material HeavyFuelOil;
-        public static Material CrudeHeavyFuelOil;
-        public static Material SulfuricHeavyFuelOil;
-        public static Material TreatedSulfuricHeavyFuelOil;
-        public static Material UpgradedHeavyFuelOilMix;
+        public static Material HeavyGasOil;
+        public static Material CrudeHeavyGasOil;
+        public static Material SulfuricHeavyGasOil;
+        public static Material TreatedSulfuricHeavyGasOil;
+        public static Material UpgradedHeavyGasOilMix;
 
         public static Material CrudeNaturalGas;
         public static Material SulfuricNaturalGas;
@@ -541,11 +540,11 @@ class SuSyMaterials {
         public static Material TreatedSulfuricRefineryGas;
         public static Material AlkylatedRefineryGas;
 
-        public static Material LightFuelOil;
-        public static Material CrudeLightFuelOil;
-        public static Material SulfuricLightFuelOil;
-        public static Material TreatedSulfuricLightFuelOil;
-        public static Material UpgradedLightFuelOilMix;
+        public static Material LightGasOil;
+        public static Material CrudeLightGasOil;
+        public static Material SulfuricLightGasOil;
+        public static Material TreatedSulfuricLightGasOil;
+        public static Material UpgradedLightGasOilMix;
 
         public static Material Kerosene;
         public static Material CrudeKerosene;
@@ -588,6 +587,7 @@ class SuSyMaterials {
         public static Material LightOilyBrine;
         public static Material HeavyOilyBrine;
         public static Material AtmosphericOilResidue;
+        public static Material VacuumOilResidue;
         public static Material HeatedOilResidue;
         public static Material OilResidue;
         public static Material LightBitumenSolution;
