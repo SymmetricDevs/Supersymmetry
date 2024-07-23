@@ -90,6 +90,7 @@ def name_removals = [
         "icbmclassic:launcher/screen",
         "icbmclassic:launcher/connector",
         "icbmclassic:bomblet/bomblet",
+        "icbmclassic:bomblet/condensed",
 ]
 
 for (item in name_removals) {
@@ -584,3 +585,16 @@ recipemap('large_weapons_factory').recipeBuilder()
                         .duration(300)
                         .EUt(30)
                         .buildAndRegister();
+//filled bomblets
+for (var i = 0; i < 15; i++) {
+        recipemap('large_weapons_factory').recipeBuilder()
+                .inputs([
+                        item('icbmclassic:explosives', i),
+                        item('icbmclassic:empty_bomblet')
+                ])
+                .outputs(item('icbmclassic:explosive_bomblet', i))
+                .duration(300)
+                .EUt(30)
+                .buildAndRegister();
+}
+
