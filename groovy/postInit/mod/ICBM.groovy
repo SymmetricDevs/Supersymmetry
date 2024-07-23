@@ -572,7 +572,7 @@ mods.gregtech.assembler.recipeBuilder()
 
         ])
         .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcher_connector'))
+        .outputs(item('icbmclassic:launcher_connector')*4)
         .duration(400)
         .EUt(30)
         .buildAndRegister();
@@ -583,6 +583,18 @@ recipemap('large_weapons_factory').recipeBuilder()
                                 ore('circuitLv'),
                                 ore('frameGtSteel')*2
                         ])
+                        .fluidInputs(fluid('tin') * 144)
+                        .outputs(item('icbmclassic:empty_bomblet'))
+                        .duration(300)
+                        .EUt(30)
+                        .buildAndRegister();
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('plateSteel')*8,
+                                ore('circuitLv'),
+                                ore('frameGtSteel')*2
+                        ])
+                        .fluidInputs(fluid('soldering_alloy') * 72)
                         .outputs(item('icbmclassic:empty_bomblet'))
                         .duration(300)
                         .EUt(30)
