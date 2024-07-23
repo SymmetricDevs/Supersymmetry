@@ -89,6 +89,7 @@ def name_removals = [
         "icbmclassic:launcher/base",
         "icbmclassic:launcher/screen",
         "icbmclassic:launcher/connector",
+        "icbmclassic:bomblet/bomblet",
 ]
 
 for (item in name_removals) {
@@ -572,3 +573,14 @@ mods.gregtech.assembler.recipeBuilder()
         .duration(400)
         .EUt(30)
         .buildAndRegister();
+//empty bomblet
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('plateSteel')*8,
+                                ore('circuitLv'),
+                                ore('frameGtSteel')*2
+                        ])
+                        .outputs(item('icbmclassic:empty_bomblet'))
+                        .duration(300)
+                        .EUt(30)
+                        .buildAndRegister();
