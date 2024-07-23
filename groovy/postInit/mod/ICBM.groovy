@@ -63,7 +63,7 @@ def name_removals = [
         "icbmclassic:explosives/smoke",
         "icbmclassic:explosives/nuclear",
         "icbmclassic:explosives/emp",
-        "icbmclassic:explosives/exothermie",
+        "icbmclassic:explosives/exothermic",
         "icbmclassic:explosives/endothermic",
         "icbmclassic:explosives/anti_grav",
         "icbmclassic:explosives/ender",
@@ -633,4 +633,28 @@ mods.gregtech.assembler.recipeBuilder()
         .duration(50)
         .EUt(30)
         .buildAndRegister();
-
+//missile module (empty missile)
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('stickAluminium')*4,
+                                ore('ringAluminium')*2,
+                                ore('plateAluminium')*2,
+                                ore('foilAluminium')*16,
+                        ])  
+                        .fluidInputs(fluid('tin') * 144)
+                        .outputs(item('icbmclassic:explosive_missile:' + 24))
+                        .duration(300)
+                        .EUt(30)
+                        .buildAndRegister();
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('stickAluminium')*4,
+                                ore('ringAluminium')*2,
+                                ore('plateAluminium')*2,
+                                ore('foilAluminium')*16,
+                        ])
+                        .fluidInputs(fluid('soldering_alloy') * 72)
+                        .outputs(item('icbmclassic:explosive_missile:' + 24))
+                        .duration(300)
+                        .EUt(30)
+                        .buildAndRegister();
