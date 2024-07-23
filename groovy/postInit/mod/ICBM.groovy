@@ -30,7 +30,7 @@ def name_removals = [
         "icbmclassic:missile/ex/smoke",
         "icbmclassic:missile/ex/nuclear",
         "icbmclassic:missile/ex/emp",
-        "icbmclassic:missile/ex/exothermie",
+        "icbmclassic:missile/ex/exothermic",
         "icbmclassic:missile/ex/endothermic",
         "icbmclassic:missile/ex/antigravitational",
         "icbmclassic:missile/ex/ender",
