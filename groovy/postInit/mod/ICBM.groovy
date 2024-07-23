@@ -658,3 +658,26 @@ recipemap('large_weapons_factory').recipeBuilder()
                         .duration(300)
                         .EUt(30)
                         .buildAndRegister();
+//cluster missile
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('screwAluminium')*4,
+                                metaitem('crate.aluminium'),
+                                item('icbmclassic:explosive_missile:' + 24)
+                        ])  
+                        .fluidInputs(fluid('tin') * 144)
+                        .outputs(item('icbmclassic:cluster_missile'))
+                        .duration(400)
+                        .EUt(30)
+                        .buildAndRegister();
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('screwAluminium')*4,
+                                metaitem('crate.aluminium'),
+                                item('icbmclassic:explosive_missile:' + 24)
+                        ])
+                        .fluidInputs(fluid('soldering_alloy') * 72)
+                        .outputs(item('icbmclassic:cluster_missile'))
+                        .duration(400)
+                        .EUt(30)
+                        .buildAndRegister();
