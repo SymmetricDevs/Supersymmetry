@@ -91,6 +91,7 @@ def name_removals = [
         "icbmclassic:launcher/connector",
         "icbmclassic:bomblet/bomblet",
         "icbmclassic:bomblet/condensed",
+        "icbmclassic:parachute",
 ]
 
 for (item in name_removals) {
@@ -597,4 +598,15 @@ for (var i = 0; i < 15; i++) {
                 .EUt(30)
                 .buildAndRegister();
 }
+//empty payload parachute
+mods.gregtech.assembler.recipeBuilder()
+        .inputs([
+                item('techguns:itemshared:60')*6,
+                item('minecraft:string')*4
+
+        ])
+        .outputs(item('icbmclassic:parachute'))
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister();
 
