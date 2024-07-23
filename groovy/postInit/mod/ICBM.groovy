@@ -92,6 +92,7 @@ def name_removals = [
         "icbmclassic:bomblet/bomblet",
         "icbmclassic:bomblet/condensed",
         "icbmclassic:parachute",
+        "icbmclassic:balloon",
 ]
 
 for (item in name_removals) {
@@ -607,6 +608,17 @@ mods.gregtech.assembler.recipeBuilder()
         ])
         .outputs(item('icbmclassic:parachute'))
         .duration(200)
+        .EUt(30)
+        .buildAndRegister();
+//payload baloon
+mods.gregtech.assembler.recipeBuilder()
+        .inputs([
+                item('minecraft:carpet')*3,
+                item('minecraft:string')*2
+
+        ])
+        .outputs(item('icbmclassic:balloon'))
+        .duration(50)
         .EUt(30)
         .buildAndRegister();
 
