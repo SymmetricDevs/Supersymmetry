@@ -557,3 +557,18 @@ Globals.solders.each { key, val ->
                 }
         }
 }
+//launcher connector
+mods.gregtech.assembler.recipeBuilder()
+        .inputs([
+                ore('plateSteel')*6,
+                metaitem('plateWroughtIron')*8,
+                ore('circuitLv'),
+                metaitem('conveyor.module.lv'),
+                metaitem('cableGtSingleCopper')*3
+
+        ])
+        .fluidInputs(fluid('soldering_alloy') * 72)
+        .outputs(item('icbmclassic:launcher_connector'))
+        .duration(400)
+        .EUt(30)
+        .buildAndRegister();
