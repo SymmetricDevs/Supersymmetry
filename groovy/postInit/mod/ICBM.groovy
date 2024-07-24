@@ -93,11 +93,19 @@ def name_removals = [
         "icbmclassic:bomblet/condensed",
         "icbmclassic:parachute",
         "icbmclassic:balloon",
+        "icbmclassic:missile/special/missile.cluster",
+        "icbmclassic:spikes",
+        "icbmclassic:spikes.1",
+        "icbmclassic:spikes.2",
+        "icbmclassic:powder.poison",
+        "icbmclassic:saltpeter_ball",
 ]
 
 for (item in name_removals) {
         crafting.remove(item);
 }
+
+furnace.removeByInput(item('icbmclassic:saltpeter_ball'))
 
 for (var i = 0; i < 8; i++) {
         recipemap('weapons_factory').recipeBuilder()
