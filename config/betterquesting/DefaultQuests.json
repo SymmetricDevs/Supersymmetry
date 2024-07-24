@@ -14844,56 +14844,53 @@
       }
     },
     "405:10": {
-  "preRequisiteTypes:7": [
-    0,
-    1
-  ],
-  "preRequisites:11": [
-    593,
-    478
-  ],
-  "properties:10": {
-    "betterquesting:10": {
-      "autoclaim:1": 0,
-      "desc:8": "susy.quest.db.406.desc",
-      "frame:8": "ROUNDED_SQUARE",
-      "globalshare:1": 0,
-      "icon:10": {
-        "Count:3": 1,
-        "Damage:2": 11,
-        "ForgeCaps:10": {
-          "Parent:10": {
-            "explosive:10": {
-              "customizations:9": {}
-            }
-          }
-        },
-        "OreDict:8": "",
-        "id:8": "icbmclassic:explosive_missile"
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
+      "preRequisites:11": [
+        593,
+        478
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "susy.quest.db.406.desc",
+          "icon:10": {
+            "Damage:2": 1,
+            "id:8": "icbmclassic:launcherscreen"
+          },
+          "ignoresview:1": 0,
+          "name:8": "susy.quest.db.406.title",
+          "visibility:8": "ALWAYS"
+        }
       },
-      "ignoresview:1": 0,
-      "ismain:1": 0,
-      "issilent:1": 0,
-      "lockedprogress:1": 0,
-      "name:8": "susy.quest.db.406.title",
-      "questlogic:8": "AND",
-      "repeat_relative:1": 1,
-      "repeattime:3": -1,
-      "simultaneous:1": 0,
-      "snd_complete:8": "minecraft:entity.player.levelup",
-      "snd_update:8": "minecraft:entity.player.levelup",
-      "tasklogic:8": "AND",
-      "visibility:8": "ALWAYS"
-    }
-  },
-  "rewards:9": {},
-  "tasks:9": {
-    "0:10": {
-      "index:3": 0,
-      "taskID:8": "bq_standard:checkbox"
-    }
-  }
-},
+      "questID:3": 406,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "entryLogic:8": "AND",
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "id:8": "icbmclassic:launcherbase"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "id:8": "icbmclassic:launcherframe"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "id:8": "icbmclassic:launcherscreen"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
     "406:10": {
       "preRequisites:11": [
         409
@@ -31705,51 +31702,48 @@
       }
     },
     "704:10": {
-  "preRequisites:11": [
-    703
-  ],
-  "properties:10": {
-    "betterquesting:10": {
-      "autoclaim:1": 0,
-      "desc:8": "susy.quest.db.705.desc",
-      "frame:8": "ROUNDED_SQUARE",
-      "globalshare:1": 0,
-      "icon:10": {
-        "Count:3": 1,
-        "Damage:2": 18,
-        "ForgeCaps:10": {
-          "Parent:10": {
-            "explosive:10": {
-              "customizations:9": {}
-            }
-          }
-        },
-        "OreDict:8": "",
-        "id:8": "icbmclassic:explosive_missile"
+      "preRequisites:11": [
+        703
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "susy.quest.db.705.desc",
+          "icon:10": {
+            "Damage:2": 2,
+            "id:8": "icbmclassic:launcherscreen"
+          },
+          "ignoresview:1": 0,
+          "name:8": "susy.quest.db.705.title",
+          "visibility:8": "ALWAYS"
+        }
       },
-      "ignoresview:1": 0,
-      "ismain:1": 0,
-      "issilent:1": 0,
-      "lockedprogress:1": 0,
-      "name:8": "susy.quest.db.705.title",
-      "questlogic:8": "AND",
-      "repeat_relative:1": 1,
-      "repeattime:3": -1,
-      "simultaneous:1": 0,
-      "snd_complete:8": "minecraft:entity.player.levelup",
-      "snd_update:8": "minecraft:entity.player.levelup",
-      "tasklogic:8": "AND",
-      "visibility:8": "ALWAYS"
-    }
-  },
-  "rewards:9": {},
-  "tasks:9": {
-    "0:10": {
-      "index:3": 0,
-      "taskID:8": "bq_standard:checkbox"
-    }
-  }
-},
+      "questID:3": 705,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "entryLogic:8": "AND",
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "id:8": "icbmclassic:launcherframe"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "id:8": "icbmclassic:launcherbase"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "id:8": "icbmclassic:launcherscreen"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
     "705:10": {
       "preRequisites:11": [
         679
