@@ -341,9 +341,6 @@ susy.material.desalted_oil_heavy=Odoslony Mazut
 susy.material.brine=Solanka
 susy.material.warm_brine=Ciepła Solanka
 susy.material.oily_brine=Oleista Solanka
-susy.material.light_bitumen_solution=Roztwór Lekkiego Bitumu
-susy.material.bitumen_solution=Roztwór Bitumu
-susy.material.heavy_bitumen_solution=Roztwór Ciężkiego Bitumu
 susy.material.crude_natural_gas=Surowy Gaz Ziemny
 susy.material.sulfuric_natural_gas=Zasiarczony Gaz Ziemny
 susy.material.treated_sulfuric_natural_gas=Uzdatniony Zasiarczony Gaz Ziemny
@@ -2065,7 +2062,6 @@ metaitem.sugar_cane_dust.name=Sugar Cane Dust
 metaitem.washed_rotten_flesh.name=Washed Rotten Flesh
 
 metaitem.bitumen.name=Bitumen
-metaitem.bituminous_residue.name=Bituminous Residue
 metaitem.paraffin_wax.name=Paraffin Wax
 metaitem.spent_cracking_catalyst.name=Spent Cracking Catalyst
 metaitem.cracking_catalyst.name=Cracking Catalyst

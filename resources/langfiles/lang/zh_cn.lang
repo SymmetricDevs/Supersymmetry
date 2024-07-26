@@ -341,9 +341,6 @@ susy.material.desalted_oil_heavy=脱盐重油
 susy.material.brine=卤水
 susy.material.warm_brine=温卤水
 susy.material.oily_brine=石油盐水
-susy.material.light_bitumen_solution=沥青轻油溶液
-susy.material.bitumen_solution=沥青石油溶液
-susy.material.heavy_bitumen_solution=沥青重油溶液
 susy.material.crude_natural_gas=未处理天然气
 susy.material.sulfuric_natural_gas=含硫天然气
 susy.material.treated_sulfuric_natural_gas=氢化含硫天然气
@@ -2055,7 +2052,6 @@ metaitem.sugar_cane_dust.name=甘蔗浆
 metaitem.washed_rotten_flesh.name=洗净腐肉
 
 metaitem.bitumen.name=沥青
-metaitem.bituminous_residue.name=沥青渣
 metaitem.paraffin_wax.name=石蜡
 metaitem.spent_cracking_catalyst.name=枯竭裂化催化剂
 metaitem.cracking_catalyst.name=裂化催化剂

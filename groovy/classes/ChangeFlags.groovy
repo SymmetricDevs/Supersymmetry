@@ -98,6 +98,9 @@ class ChangeFlags {
         setupFluidType(Selenium, FluidStorageKeys.LIQUID, 494)
         //setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
 
+        setupFluidType(CarbonDioxide, SusyFluidStorageKeys.SUPERCRITICAL, 304)
+        setupFluidType(Propane, SusyFluidStorageKeys.SUPERCRITICAL, 370)
+
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
         Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());

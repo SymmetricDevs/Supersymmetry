@@ -4,7 +4,7 @@ VACUUM_DT = recipemap('vacuum_distillation')
 CRYSTALLIZER = recipemap('crystallizer')
 EXTRACTOR = recipemap('extractor')
 MIXER = recipemap('mixer')
-CENTRIFUGE = recipemap('centrifuge')
+PHASE_SEPARATOR = recipemap('phase_separator')
 ROTARY_KILN = recipemap('rotary_kiln')
 COKING = recipemap('coking_tower')
 
@@ -52,52 +52,20 @@ EXTRACTOR.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-// Bituminous Residue Processing
+// Deasphalting
 
 MIXER.recipeBuilder()
-    .fluidInputs(fluid('oil') * 500)
-    .inputs(metaitem('bitumen'))
-    .fluidOutputs(fluid('bitumen_solution') * 1000)
+    .fluidInputs(fluid('vacuum_oil_residue') * 300)
+    .fluidInputs(fluid('supercritical_propane') * 300)
+    .fluidOutputs(fluid('asphaltene_extract') * 1000)
     .duration(100)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder()
-    .fluidInputs(fluid('bitumen_solution') * 1000)
-    .fluidOutputs(fluid('oil') * 650)
+PHASE_SEPARATOR.recipeBuilder()
+    .fluidInputs(fluid('bitumen_extract') * 1000)
     .outputs(metaitem('dustAsphalt') * 4)
-    .duration(150)
-    .EUt(Globals.voltAmps[0])
-    .buildAndRegister()
-
-MIXER.recipeBuilder()
-    .fluidInputs(fluid('oil_light') * 500)
-    .inputs(metaitem('bitumen'))
-    .fluidOutputs(fluid('light_bitumen_solution') * 1000)
-    .duration(100)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
-CENTRIFUGE.recipeBuilder()
-    .fluidInputs(fluid('light_bitumen_solution') * 1000)
-    .fluidOutputs(fluid('oil_light') * 650)
-    .outputs(metaitem('dustAsphalt') * 4)
-    .duration(150)
-    .EUt(Globals.voltAmps[0])
-    .buildAndRegister()
-
-MIXER.recipeBuilder()
-    .fluidInputs(fluid('oil_heavy') * 500)
-    .inputs(metaitem('bitumen'))
-    .fluidOutputs(fluid('heavy_bitumen_solution') * 1000)
-    .duration(100)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
-CENTRIFUGE.recipeBuilder()
-    .fluidInputs(fluid('heavy_bitumen_solution') * 1000)
-    .fluidOutputs(fluid('oil_heavy') * 650)
-    .outputs(metaitem('dustAsphalt') * 4)
+    .fluidOutputs(fluid('supercritical_propane') * 300)
     .duration(150)
     .EUt(Globals.voltAmps[0])
     .buildAndRegister()
@@ -110,39 +78,4 @@ MIXER.recipeBuilder()
     .EUt(16)
     .buildAndRegister()
 
-// Bituminous Residue -> Coke
-
-COKING.recipeBuilder()
-    .fluidInputs(fluid('steam') * 1000)
-    .inputs(metaitem('bituminous_residue'))
-    .fluidOutputs(fluid('atmospheric_oil_residue') * 150)
-    .outputs(metaitem('dustGreenCoke') * 4)
-    .duration(300)
-    .EUt(Globals.voltAmps[1] * 2)
-    .buildAndRegister()
-
-for (fuel in sintering_fuels) {
-    if (!fuel.isPlasma) {
-        for (comburent in sintering_comburents) {
-            ROTARY_KILN.recipeBuilder()
-                .inputs(ore('dustGreenCoke'))
-                .outputs(metaitem('dustCoke'))
-                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                .duration(fuel.duration + comburent.duration)
-                .EUt(60)
-                .buildAndRegister()
-
-            ROTARY_KILN.recipeBuilder()
-                .inputs(metaitem('bituminous_residue'))
-                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-                .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-                .outputs(metaitem('bitumen'))
-                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-                .duration(fuel.duration + comburent.duration)
-                .EUt(60)
-                .buildAndRegister()
-        }
-    }
-}
+//

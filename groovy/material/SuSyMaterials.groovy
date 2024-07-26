@@ -590,9 +590,7 @@ class SuSyMaterials {
         public static Material VacuumOilResidue;
         public static Material HeatedOilResidue;
         public static Material OilResidue;
-        public static Material LightBitumenSolution;
-        public static Material BitumenSolution;
-        public static Material HeavyBitumenSolution;
+        public static Material AsphalteneExtract;
         public static Material SourGas;
         public static Material SlackWax;
         public static Material Resin;

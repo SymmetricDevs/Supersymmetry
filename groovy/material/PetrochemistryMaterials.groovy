@@ -282,23 +282,13 @@ public class PetrochemistryMaterials {
                 .color(0x4f4e37)
                 .build();
 
-        LightBitumenSolution = new Material.Builder(20067, SuSyUtility.susyId('light_bitumen_solution'))
+        AsphalteneExtract = new Material.Builder(20067, SuSyUtility.susyId('asphaltene_extract'))
                 .liquid()
                 .color(0x1e2021)
                 .flags(FLAMMABLE)
                 .build();
 
-        BitumenSolution = new Material.Builder(20068, SuSyUtility.susyId('bitumen_solution'))
-                .liquid()
-                .color(0x1e2021)
-                .flags(FLAMMABLE)
-                .build();
-
-        HeavyBitumenSolution = new Material.Builder(20069, SuSyUtility.susyId('heavy_bitumen_solution'))
-                .liquid()
-                .color(0x1e2021)
-                .flags(FLAMMABLE)
-                .build();
+        //FREE IDs: 20068-20069
 
         CrudeLubricatingOil = new Material.Builder(20070, SuSyUtility.susyId('crude_lubricating_oil'))
                 .liquid()

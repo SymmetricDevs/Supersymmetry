@@ -352,9 +352,6 @@ susy.material.warm_brine=Salmoura Quente
 susy.material.oily_brine=Salmoura Oleosa
 susy.material.oil_residue=Resíduos de Óleo
 susy.material.high_pressure_water=Água em Alta Pressão
-susy.material.light_bitumen_solution=Solução de Betume Leve
-susy.material.bitumen_solution=Solução de Betume
-susy.material.heavy_bitumen_solution=Solução de Betume Pesado
 susy.material.crude_natural_gas=Gás Natural Bruto
 susy.material.sulfuric_natural_gas=Gás Natural Sulfúrico
 susy.material.treated_sulfuric_natural_gas=Gás Natural Sulfúrico Tratado
@@ -1937,7 +1934,6 @@ metaitem.sugar_cane_dust.name=Sugar Cane Dust
 metaitem.washed_rotten_flesh.name=Washed Rotten Flesh
 
 metaitem.bitumen.name=Bitumen
-metaitem.bituminous_residue.name=Bituminous Residue
 metaitem.paraffin_wax.name=Paraffin Wax
 metaitem.spent_cracking_catalyst.name=Spent Cracking Catalyst
 metaitem.cracking_catalyst.name=Cracking Catalyst
