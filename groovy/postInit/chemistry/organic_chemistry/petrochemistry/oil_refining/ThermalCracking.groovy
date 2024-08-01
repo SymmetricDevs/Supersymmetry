@@ -4,6 +4,8 @@ CRACKER = recipemap('cracker')
 DT = recipemap('distillation_tower')
 COKING = recipemap('coking_tower')
 TUBE_FURNACE = recipemap('tube_furnace')
+FLBR = recipemap('fluidized_bed_reactors')
+PHASE_SEPARATOR = recipemap('phase_separator')
 
 /* Thermal Cracking
     // Single Stage
@@ -117,4 +119,44 @@ TUBE_FURNACE = recipemap('tube_furnace')
             .buildAndRegister()
             
     // Fluid Coking
+        FLBR.recipeBuilder()
+            .fluidInputs(fluid('vacuum_oil_residue') * 1000)
+            .inputs(ore('dustHeatedGreenCoke'))
+            .fluidOutputs(fluid('coke_fines'))
+            .duration(200)
+            .EUt(30)
+            .buildAndRegister()
+
+        PHASE_SEPARATOR.recipeBuilder()
+            .fluidInputs(fluid('coke_fines'))
+            .outputs(metaitem('dustGreenCoke'))
+            .fluidOutputs(fluid('fluid_cracked_vacuum_oil_residue'))
+            .duration(20)
+            .buildAndRegister()
+
+        TUBE_FURNACE.recipeBuilder()
+            .inputs(ore('dustGreenCoke'))
+            .outputs(ore('dustHeatedGreenCoke'))
+            .duration(200)
+            .EUt(30)
+            .buildAndRegister()
+
+        DT.recipeBuilder()
+            .fluidInputs(fluid('fluid_cracked_vacuum_oil_residue') * 1000)
+            .fluidOutputs(fractions.heavy_gas_oil.getCrude())
+            .fluidOutputs(fractions.light_gas_oil.getCrude())
+            .fluidOutputs(fractions.naphtha.getCrude())
+            .fluidOutputs(fractions.refinery_gas.getSulfuric())
+            .duration(200)
+            .EUt(30)
+            .buildAndRegister()
+
+    // Flexicoking
+        PYROLYSE_OVEN.recipeBuilder()
+            .inputs(ore('dustGreenCoke'))
+            .outputs(ore('dustHeatedGreenCoke'))
+            .fluidOutputs(fluid('syngas'))
+            .duration(200)
+            .EUt(30)
+            .buildAndRegister()
 */
