@@ -6,7 +6,6 @@ EXTRACTOR = recipemap('extractor')
 MIXER = recipemap('mixer')
 PHASE_SEPARATOR = recipemap('phase_separator')
 ROTARY_KILN = recipemap('rotary_kiln')
-COKING = recipemap('coking_tower')
 
 // Atmospheric residue processing
 
@@ -77,5 +76,3 @@ MIXER.recipeBuilder()
     .duration(30)
     .EUt(16)
     .buildAndRegister()
-
-//
