@@ -55,3 +55,23 @@ ROASTER.recipeBuilder()
     .duration(100)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
+
+/* Isomerization catalysts
+
+BR.recipeBuilder()
+    .inputs(ore('dustAlumina') * 5)
+    .fluidInputs(fluid('hydrogen_chloride') * 100)
+    .outputs(metaitem('dustChloridedAlumina'))
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustZirconiumDioxide') * 3)
+    .fluidInputs(fluid('dustAluminiumSulfate'))
+    .outputs(metaitem('dustSulfatedMetalOxide'))
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+*/

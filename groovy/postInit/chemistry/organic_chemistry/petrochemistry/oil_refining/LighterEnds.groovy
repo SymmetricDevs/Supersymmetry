@@ -14,8 +14,8 @@ DT.recipeBuilder()
 // Naphtha hydrotreatment
 DT.recipeBuilder()
     .fluidInputs(fluid('debutanized_naphtha') * 10000)
-    .fluidOutputs(fluid('sulfuric_heavy_naphtha') * 400)
-    .fluidOutputs(fluid('sulfuric_light_naphtha') * 600)
+    .fluidOutputs(fluid('sulfuric_heavy_naphtha') * 4000)
+    .fluidOutputs(fluid('sulfuric_light_naphtha') * 6000)
     .duration(400)
     .buildAndRegister()
 
