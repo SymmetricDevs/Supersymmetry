@@ -1,8 +1,0 @@
-{
-  "path": "mod_harvestcraft/mutations/kiwi_mutation.json",
-  "enabled": true,
-  "chance": 0.5,
-  "child": "harvestcraft:kiwi_plant",
-  "parent1": "harvestcraft:cantaloupe_plant",
-  "parent2": "harvestcraft:strawberry_plant"
-}
