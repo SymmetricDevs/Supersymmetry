@@ -75,7 +75,7 @@ crafting.addShaped("xnet_routing_connector", item('xnet:connector:4'), [
         [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('wireFineRedAlloy')]
 ]);
 
-crafting.addShaped("xnet_connector_upgrade", item('xnet:connector_upgrade'), [
+crafting.addShaped("xnet_connector_upgrade", item('xnet:connector_upgrade') * 4, [
         [ore('plateAluminium'), ore('plateAluminium'), ore('plateAluminium')],
         [metaitem('robot.arm.mv'), ore('circuitMv'), metaitem('electric.pump.mv')],
         [ore('plateAluminium'), ore('plateAluminium'), ore('plateAluminium')]
