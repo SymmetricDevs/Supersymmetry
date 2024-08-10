@@ -57,6 +57,15 @@ for (name in name_removals) {
 	crafting.remove(name)
 }
 
+mods.jei.category.hideCategory("industrialrenewal.lathe");
+
+mods.jei.ingredient.yeet( // hide IR materials
+		item('industrialrenewal:ingot_steel'),
+		item('industrialrenewal:stick_iron'),
+		item('industrialrenewal:stick_steel'),
+		item('industrialrenewal:steam')
+)
+
 crafting.replaceShaped("industrialrenewal:screwdrive", item('industrialrenewal:screwdrive'), [
 	[ore('screwSteel'), ore('stickSteel'), metaitem('electric.motor.lv')],
 	[null, item('minecraft:stone_button'), ore('plateSteel')],
