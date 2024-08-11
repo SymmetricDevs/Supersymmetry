@@ -1,7 +1,15 @@
+package prePostInit;
+
+import gregtech.api.GregTechAPI;
+import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ingredients.GTRecipeInput;
+import gregtech.api.unification.material.properties.PropertyKey;
+import gregtech.api.unification.OreDictUnifier;
+import gregtech.api.unification.ore.OrePrefix;
 import gregtechfoodoption.recipe.GTFORecipeMaps;
+import supersymmetry.api.fluids.SusyFluidStorageKeys;
 import supersymmetry.api.recipes.SuSyRecipeMaps;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.recipes.GTRecipeHandler.*;
@@ -21,22 +29,14 @@ GTRecipeHandler.removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES);
 GTRecipeHandler.removeAllRecipes(RecipeMaps.VACUUM_RECIPES);
 GTRecipeHandler.removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES);
 
-//Add mixer recipes to blender
-
-RecipeMaps.MIXER_RECIPES.onRecipeBuild(recipeBuilder -> {
-        recipeBuilder.invalidateOnBuildAction();
-        SuSyRecipeMaps.BLENDER_RECIPES.recipeBuilder()
-                .inputs(recipeBuilder.getInputs().toArray(new GTRecipeInput[0]))
-                .fluidInputs(recipeBuilder.getFluidInputs())
-                .outputs(recipeBuilder.getOutputs())
-                .chancedOutputs(recipeBuilder.getChancedOutputs())
-                .fluidOutputs(recipeBuilder.getFluidOutputs())
-                .cleanroom(recipeBuilder.getCleanroom())
-                .duration((int) (recipeBuilder.duration / 4))
-                .EUt(recipeBuilder.EUt)
-                .buildAndRegister();
+GregTechAPI.materialManager.getRegisteredMaterials().forEach(material -> {
+        if (material.hasProperty(PropertyKey.FLUID) && material.getProperty(PropertyKey.FLUID).getPrimaryKey() == SusyFluidStorageKeys.SLURRY) {
+                Recipe recipe = RecipeMaps.EXTRACTOR_RECIPES.findRecipe(Integer.MAX_VALUE, Collections.singletonList(OreDictUnifier.get(OrePrefix.dust, material)), Collections.emptyList(), false);
+                if (recipe != null) {
+                        RecipeMaps.EXTRACTOR_RECIPES.removeRecipe(recipe);
+                }
+        }
 });
-
 //Removal of certain centrifuging recipes
 
 // LPG * 370

@@ -1,3 +1,5 @@
+package classes
+
 import net.minecraftforge.fml.common.eventhandler.EventPriority
 
 import gregtech.api.unification.material.Material;
@@ -29,41 +31,34 @@ import supersymmetry.api.unification.material.properties.FiberProperty;
 class ChangeFlags {
 	private static void setupSlurries(Material mat) {
 		def property = new FluidProperty()
-		property.getStorage().enqueueRegistration(SusyFluidStorageKeys.SLURRY, new FluidBuilder())
-		property.getStorage().enqueueRegistration(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+		property.enqueueRegistration(SusyFluidStorageKeys.SLURRY, new FluidBuilder())
+		property.enqueueRegistration(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
 
-		property.getStorage().enqueueRegistration(FluidStorageKeys.LIQUID, new FluidBuilder())
 		mat.setProperty(PropertyKey.FLUID, property)
 	}
 	
 	private static void setupFluidType(Material mat, FluidStorageKey key, int temp) {
         if (mat.getProperty(PropertyKey.FLUID) == null) {
             def property = new FluidProperty();
-		    property.getStorage().enqueueRegistration(key, new FluidBuilder().temperature(temp))
+		    property.enqueueRegistration(key, new FluidBuilder().temperature(temp))
 		    mat.setProperty(PropertyKey.FLUID, property)
         } else {
             def property = mat.getProperty(PropertyKey.FLUID)
-            if (property.getStorage().getQueuedBuilder(key) != null) {
-                property.getStorage().getQueuedBuilder(key).temperature(temp)
+            if (property.getQueuedBuilder(key) != null) {
+                property.getQueuedBuilder(key).temperature(temp)
             } else {
-                property.getStorage().enqueueRegistration(key, new FluidBuilder().temperature(temp))
+                property.enqueueRegistration(key, new FluidBuilder().temperature(temp))
             }
-        }
-        if (mat.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) == null) {
-            setupFluidType(mat, FluidStorageKeys.LIQUID, temp)
         }
 	}
 	private static void setupFluidType(Material mat, FluidStorageKey key) {
         if (mat.getProperty(PropertyKey.FLUID) == null) {
             def property = new FluidProperty();
-		    property.getStorage().enqueueRegistration(key, new FluidBuilder())
+		    property.enqueueRegistration(key, new FluidBuilder())
 		    mat.setProperty(PropertyKey.FLUID, property)
         } else {
             def property = mat.getProperty(PropertyKey.FLUID)
-		    property.getStorage().enqueueRegistration(key, new FluidBuilder())
-        }
-        if (mat.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) == null) {
-            setupFluidType(mat, FluidStorageKeys.LIQUID)
+		    property.enqueueRegistration(key, new FluidBuilder())
         }
 	}
 
@@ -100,7 +95,7 @@ class ChangeFlags {
 
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
-        Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
 
         Tantalum.setProperty(PropertyKey.BLAST, new BlastProperty(3293, GasTier.MID, 480, 240, -1, -1));
         Molybdenum.setProperty(PropertyKey.BLAST, new BlastProperty(2890, GasTier.MID, 480, 240, -1, -1));
