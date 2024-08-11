@@ -792,11 +792,51 @@ crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [
         [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')]
 ])
 
-crafting.addShaped('gregtech:brass_drum', metaitem('drum.brass'), [
-        [null, ore('craftingToolHardHammer'), null],
-        [metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')],
-        [metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')]
+// SuSy drums
+crafting.addShaped("drum_lead", metaitem('drum.lead'), [
+		[null,ore('craftingToolHardHammer'),null],
+		[metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')],
+		[metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')]
 ])
+
+crafting.addShaped('gregtech:brass_drum', metaitem('drum.brass'), [
+		[null, ore('craftingToolHardHammer'), null],
+		[metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')],
+		[metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')]
+])
+
+//ModHandler.addShapelessNBTClearingRecipe("drum_nbt_lead", metaitem('drum.lead'),
+//		metaitem('drum.lead')
+//)
+//ModHandler.addShapelessNBTClearingRecipe("drum_nbt_brass", metaitem('drum.brass'),
+//		metaitem('drum.brass')
+//)
+
+// ModHandler.addShapelessNBTClearingRecipe() is not reloadable, just using these seems fine, and we indeed have tooltips.
+crafting.addShapeless("drum_nbt_lead", metaitem('drum.lead'), [
+		metaitem('drum.lead').noreturn()
+]);
+crafting.addShapeless("drum_nbt_brass", metaitem('drum.brass'), [
+		metaitem('drum.brass').noreturn()
+]);
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('stickLongLead') * 2)
+		.inputs(ore('plateLead') * 4)
+		.outputs(metaitem('drum.lead'))
+		.duration(200)
+		.EUt(16)
+		.circuitMeta(2)
+		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('stickLongBrass') * 2)
+		.inputs(ore('plateBrass') * 4)
+		.outputs(metaitem('drum.brass'))
+		.duration(200)
+		.EUt(16)
+		.circuitMeta(2)
+		.buildAndRegister()
 
 // Electrolytic Cell
 crafting.addShaped('gregtech:electrolytic_cell', metaitem('electrolytic_cell'), [
@@ -1461,3 +1501,15 @@ GroovyUtils.removeRecipesContainingFluid(mods.gregtech.assembler, fluid('polyben
 GroovyUtils.removeRecipesContainingFluid(mods.gregtech.autoclave, fluid('polybenzimidazole'))
 GroovyUtils.removeRecipesContainingFluid(mods.gregtech.fluid_solidifier, fluid('polybenzimidazole'))
 GroovyUtils.removeRecipesContainingFluid(mods.gregtech.assembly_line, fluid('polybenzimidazole'))
+
+crafting.addShaped('gregtech:electric_jetpack1', metaitem('gregtech:electric_jetpack'), [
+    [ore('toolWireCutter'), ore('circuitMv'), ore('toolScrewdriver')],
+    [metaitem('power_thruster'), metaitem('battery.re.mv.cadmium'), metaitem('power_thruster')],
+    [ore('wireGtDoubleAnnealedCopper'), null, ore('wireGtDoubleAnnealedCopper')]
+])
+
+crafting.addShaped('gregtech:electric_jetpack2', metaitem('gregtech:electric_jetpack'), [
+    [ore('toolWireCutter'), ore('circuitMv'), ore('toolScrewdriver')],
+    [metaitem('power_thruster'), metaitem('battery.re.mv.sodium'), metaitem('power_thruster')],
+    [ore('wireGtDoubleAnnealedCopper'), null, ore('wireGtDoubleAnnealedCopper')]
+])

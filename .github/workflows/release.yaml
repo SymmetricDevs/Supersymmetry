@@ -1,0 +1,68 @@
+name: Release
+
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+    name: "Release"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Declare some variables
+      id: vars
+      shell: bash
+      run: |
+        echo "::set-output name=sha_short::$(git rev-parse --short $GITHUB_SHA)"
+    - name: Install requests
+      run: |
+       pip install requests
+    - uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt' # See 'Supported distributions' for available options
+        java-version: '8'
+    - run: java -version
+    - name: Run Build
+      run: |
+        python build/main.py
+      env:
+        CFAPIKEY: ${{ secrets.CFAPIKEY }}
+    - id: get-version
+      uses: actions/github-script@v6
+      with:
+            result-encoding: string
+            script: |
+                try {
+                    const fs = require('fs')
+                    const jsonString = fs.readFileSync('./manifest.json')
+                    var apps = JSON.parse(jsonString)
+                    return apps.version
+                } catch(err) {
+                    core.error("Error while reading or parsing the JSON")
+                    core.setFailed(err)
+                }
+    - run: echo "${{steps.get-version.outputs.result}}"
+
+    - name: Rename file 
+      run: |
+        mv buildOut/client.zip buildOut/supersymmetry-${{steps.get-version.outputs.result}}.zip
+        mv buildOut/server.zip buildOut/server-${{steps.get-version.outputs.result}}.zip
+        rm -f buildOut/client.zip
+        rm -f buildOut/server.zip
+
+    - name: Automatic Releases
+      uses: marvinpinto/action-automatic-releases@latest
+      with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: ${{ steps.get-version.outputs.result }}
+          prerelease: false
+          title: ${{ steps.get-version.outputs.result }}
+          files: |
+            buildOut/supersymmetry-${{steps.get-version.outputs.result}}.zip
+            buildOut/server-${{steps.get-version.outputs.result}}.zip
+            buildOut/modlist.html
+    

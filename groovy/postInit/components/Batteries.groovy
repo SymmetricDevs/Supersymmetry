@@ -54,20 +54,6 @@ crafting.addShaped("anode_lead", metaitem('anode.lead'), [
         [null,null,null]
 ]);
 
-crafting.addShaped("drum_lead", metaitem('drum.lead'), [
-        [null,ore('craftingToolHardHammer'),null],
-        [metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')],
-        [metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')]
-]);
-
-crafting.addShapeless("drum_nbt_lead", metaitem('drum.lead'), [
-        metaitem('drum.lead').noreturn()
-]);
-crafting.addShapeless("drum_nbt_brass", metaitem('drum.brass'), [
-        metaitem('drum.brass').noreturn()
-]);
-// Note: this is a temporary fix to clear brass drum.
-
 mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('battery.hull.lv'))
         .inputs(ore('plateLead') * 2)
@@ -75,15 +61,6 @@ mods.gregtech.assembler.recipeBuilder()
         .outputs(metaitem('battery.lead_acid'))
         .duration(100)
         .EUt(16)
-        .buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs(ore('stickLongLead') * 2)
-        .inputs(ore('plateLead') * 4)
-        .outputs(metaitem('drum.lead'))
-        .duration(200)
-        .EUt(16)
-        .circuitMeta(2)
         .buildAndRegister()
 
 MIXER_RECIPES.recipeBuilder()

@@ -1,8 +1,0 @@
-{
-  "path": "mod_harvestcraft/mutations/bean_mutation.json",
-  "enabled": true,
-  "chance": 0.5,
-  "child": "harvestcraft:bean_plant",
-  "parent1": "vanilla:pumpkin_plant",
-  "parent2": "vanilla:potato_plant"
-}

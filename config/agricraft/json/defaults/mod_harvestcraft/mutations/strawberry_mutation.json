@@ -1,8 +1,0 @@
-{
-  "path": "mod_harvestcraft/mutations/strawberry_mutation.json",
-  "enabled": true,
-  "chance": 0.5,
-  "child": "harvestcraft:strawberry_plant",
-  "parent1": "harvestcraft:radish_plant",
-  "parent2": "harvestcraft:soybean_plant"
-}
