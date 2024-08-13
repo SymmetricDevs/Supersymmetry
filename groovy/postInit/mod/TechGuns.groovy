@@ -175,6 +175,23 @@ for (name in name_removals) {
 	crafting.remove(name);
 }
 
+mods.jei.ingredient.yeet( // hide techguns plates, ingots, and ores
+		item('techguns:itemshared', 46),
+		item('techguns:itemshared', 47),
+		item('techguns:itemshared', 48),
+		item('techguns:itemshared', 49),
+		item('techguns:itemshared', 50),
+		item('techguns:itemshared', 52),
+		item('techguns:itemshared', 54),
+		item('techguns:itemshared', 78),
+		item('techguns:itemshared', 79),
+		item('techguns:itemshared', 80),
+		item('techguns:itemshared', 81),
+		item('techguns:itemshared', 82),
+		item('techguns:itemshared', 83),
+		item('techguns:itemshared', 85)
+)
+
 crafting.replaceShaped("techguns:stielgranate", item('techguns:stielgranate'), [
 		[null, null, null],
 		[null, item('techguns:itemshared', 5), null],
