@@ -1,4 +1,3 @@
-import crafttweaker.api.item.IItemStack;
 import Globals.*
 import appeng.api.AEApi;
 import appeng.api.features.IGrinderRegistry;

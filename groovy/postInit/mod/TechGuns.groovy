@@ -1,6 +1,6 @@
-import techguns.items.guns.GenericGun;
-import techguns.plugins.crafttweaker.GunStatTweaker;
 import globals.Globals
+import techguns.items.guns.GenericGun;
+import techguns.plugins.crafttweaker.EnumGunStat;
 
 def name_removals = [
 	"techguns:basicmachine_0_ammo_press",
@@ -1286,70 +1286,76 @@ recipemap('canner').recipeBuilder()
 //MV weapons: 32 DPS
 //HV weapons: 64 DPS
 
+SetWeaponStat = { String weapon, String stat, float value ->
+	def gun = (GenericGun) item('techguns:' + weapon).getItem();
+	gun.setGunStat(EnumGunStat.parseFromString(stat), value);
+}
+
+
 //Handcannon (1 shot per 1.5 seconds)
-GunStatTweaker.setWeaponStat("handcannon","DAMAGE",13);
-GunStatTweaker.setWeaponStat("handcannon","DAMAGE_MIN",11);
+SetWeaponStat("handcannon","DAMAGE",13);
+SetWeaponStat("handcannon","DAMAGE_MIN",11);
 
 //Bolt Action (1 shot per second)
-GunStatTweaker.setWeaponStat("boltaction","DAMAGE",10);
-GunStatTweaker.setWeaponStat("boltaction","DAMAGE_MIN",8);
+SetWeaponStat("boltaction","DAMAGE",10);
+SetWeaponStat("boltaction","DAMAGE_MIN",8);
 
 //Pistol (4 shots per second)
-GunStatTweaker.setWeaponStat("pistol","DAMAGE",5);
-GunStatTweaker.setWeaponStat("pistol","DAMAGE_MIN",4);
+SetWeaponStat("pistol","DAMAGE",5);
+SetWeaponStat("pistol","DAMAGE_MIN",4);
 
 //Double Barrel Shotgun (8 bullets per shot, 1 shot per second)
-GunStatTweaker.setWeaponStat("sawedoff","DAMAGE",2.4);
-GunStatTweaker.setWeaponStat("sawedoff","DAMAGE_MIN",2);
+SetWeaponStat("sawedoff","DAMAGE",2.4);
+SetWeaponStat("sawedoff","DAMAGE_MIN",2);
 
 //Revolver (2.5 shots per second)
-GunStatTweaker.setWeaponStat("revolver","DAMAGE",6);
-GunStatTweaker.setWeaponStat("revolver","DAMAGE_MIN",4);
+SetWeaponStat("revolver","DAMAGE",6);
+SetWeaponStat("revolver","DAMAGE_MIN",4);
 
 //Combat Shotgun (8 bullets per shot, 1 shot per second)
-GunStatTweaker.setWeaponStat("combatshotgun","DAMAGE",2.4);
-GunStatTweaker.setWeaponStat("combatshotgun","DAMAGE_MIN",2);
+SetWeaponStat("combatshotgun","DAMAGE",2.4);
+SetWeaponStat("combatshotgun","DAMAGE_MIN",2);
 
 //Thompson SMG (6 shots per second)
-GunStatTweaker.setWeaponStat("thompson","DAMAGE",6);
-GunStatTweaker.setWeaponStat("thompson","DAMAGE_MIN",5);
+SetWeaponStat("thompson","DAMAGE",6);
+SetWeaponStat("thompson","DAMAGE_MIN",5);
 
 //AK47 (6 shots per second)
-GunStatTweaker.setWeaponStat("ak47","DAMAGE",6);
-GunStatTweaker.setWeaponStat("ak47","DAMAGE_MIN",5);
+SetWeaponStat("ak47","DAMAGE",6);
+SetWeaponStat("ak47","DAMAGE_MIN",5);
 
 //M4 (6 shots per second)
-GunStatTweaker.setWeaponStat("m4","DAMAGE",6);
-GunStatTweaker.setWeaponStat("m4","DAMAGE_MIN",5);
+SetWeaponStat("m4","DAMAGE",6);
+SetWeaponStat("m4","DAMAGE_MIN",5);
 
 //Infiltrator (6 shots per second)
-GunStatTweaker.setWeaponStat("m4_infiltrator","DAMAGE",6);
-GunStatTweaker.setWeaponStat("m4_infiltrator","DAMAGE_MIN",5);
+SetWeaponStat("m4_infiltrator","DAMAGE",6);
+SetWeaponStat("m4_infiltrator","DAMAGE_MIN",5);
 
 //Mac-10 (6 shots per second)
-GunStatTweaker.setWeaponStat("mac10","DAMAGE", 6);
-GunStatTweaker.setWeaponStat("mac10","DAMAGE_MIN", 5);
+SetWeaponStat("mac10","DAMAGE", 6);
+SetWeaponStat("mac10","DAMAGE_MIN", 5);
 
 //AUG (6 shots per second)
-GunStatTweaker.setWeaponStat("aug","DAMAGE", 12);
-GunStatTweaker.setWeaponStat("aug","DAMAGE_MIN", 10);
+SetWeaponStat("aug","DAMAGE", 12);
+SetWeaponStat("aug","DAMAGE_MIN", 10);
 
 //LMG (10 shots per second)
-GunStatTweaker.setWeaponStat("lmg","DAMAGE", 7);
-GunStatTweaker.setWeaponStat("lmg","DAMAGE_MIN", 6);
+SetWeaponStat("lmg","DAMAGE", 7);
+SetWeaponStat("lmg","DAMAGE_MIN", 6);
 
 //AS50 (2 shots per second)
-GunStatTweaker.setWeaponStat("as50","DAMAGE", 34);
-GunStatTweaker.setWeaponStat("as50","DAMAGE_MIN", 30);
+SetWeaponStat("as50","DAMAGE", 34);
+SetWeaponStat("as50","DAMAGE_MIN", 30);
 
 //Vector (10 shots per second)
-GunStatTweaker.setWeaponStat("vector","DAMAGE", 7);
-GunStatTweaker.setWeaponStat("vector","DAMAGE_MIN", 6);
+SetWeaponStat("vector","DAMAGE", 7);
+SetWeaponStat("vector","DAMAGE_MIN", 6);
 
 //Scar (5 shots per second)
-GunStatTweaker.setWeaponStat("scar","DAMAGE", 14);
-GunStatTweaker.setWeaponStat("scar","DAMAGE_MIN", 12);
+SetWeaponStat("scar","DAMAGE", 14);
+SetWeaponStat("scar","DAMAGE_MIN", 12);
 
 //Minigun (20 shots per second)
-GunStatTweaker.setWeaponStat("minigun","DAMAGE", 5);
-GunStatTweaker.setWeaponStat("minigun","DAMAGE_MIN", 4);
+SetWeaponStat("minigun","DAMAGE", 5);
+SetWeaponStat("minigun","DAMAGE_MIN", 4);
