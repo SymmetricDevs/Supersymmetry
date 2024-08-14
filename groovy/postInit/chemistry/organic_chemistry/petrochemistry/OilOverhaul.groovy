@@ -167,16 +167,6 @@ fractions.each { _, fraction -> {
 
 }
 
-EBF.recipeBuilder()
-.fluidInputs(fluid('oxygen') * 1000)
-.inputs(metaitem('spent_cracking_catalyst') * 4)
-.fluidOutputs(fluid('flue_gas') * 1000)
-.outputs(metaitem('cracking_catalyst') * 4)
-.blastFurnaceTemp(1200)
-.duration(100)
-.EUt(Globals.voltAmps[1] * 2)
-.buildAndRegister()
-
 // Cracked Distillation
 
 // Kerosene
@@ -354,43 +344,6 @@ DT.recipeBuilder()
 .duration(400)
 .EUt(Globals.voltAmps[1] * 2)
 .buildAndRegister()
-
-fractions.each { _, fraction -> {
-        if (fraction.isUpgradable) {
-            CRACKER.recipeBuilder()
-            .fluidInputs(fraction.get(1000))
-            .inputs(metaitem('cracking_catalyst'))
-            .fluidOutputs(fraction.getUpgradedMix(1000))
-            .duration(200)
-            .EUt(Globals.voltAmps[1] * 2)
-            .buildAndRegister()
-
-            CENTRIFUGE.recipeBuilder()
-            .fluidInputs(fraction.getUpgradedMix(1000))
-            .fluidOutputs(fraction.getUpgraded(1000))
-            .outputs(metaitem('spent_cracking_catalyst'))
-            .duration(160)
-            .EUt(Globals.voltAmps[1])
-            .buildAndRegister()
-        }
-    }
-}
-
-CRACKER.recipeBuilder()
-        .fluidInputs(fluid('lubricating_oil') * 1000)
-        .inputs(metaitem('cracking_catalyst'))
-        .fluidOutputs(fluid('upgraded_lubricating_oil_mix') * 1000)
-        .duration(200)
-        .EUt(Globals.voltAmps[1] * 2)
-        .buildAndRegister()
-
-CENTRIFUGE.recipeBuilder()
-        .fluidInputs(fluid('upgraded_lubricating_oil_mix') * 1000)
-        .fluidOutputs(fluid('sulfuric_heavy_gas_oil') * 1000)
-        .outputs(metaitem('spent_cracking_catalyst'))
-        .duration(160)
-        .EUt(Globals.voltAmps[1])
-        .buildAndRegister()
 
 BR.recipeBuilder()
 .inputs(ore('dustDicobaltOctacarbonyl') * 18)

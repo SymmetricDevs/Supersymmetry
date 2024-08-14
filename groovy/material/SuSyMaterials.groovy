@@ -529,22 +529,20 @@ class SuSyMaterials {
         public static Material CrudeHeavyGasOil;
         public static Material SulfuricHeavyGasOil;
         public static Material TreatedSulfuricHeavyGasOil;
-        public static Material UpgradedHeavyGasOilMix;
+        public static Material CatalyticallyCrackedHeavyGasOil;
 
         public static Material CrudeNaturalGas;
         public static Material SulfuricNaturalGas;
         public static Material TreatedSulfuricNaturalGas;
-        public static Material AlkylatedNaturalGas;
 
         public static Material SulfuricRefineryGas;
         public static Material TreatedSulfuricRefineryGas;
-        public static Material AlkylatedRefineryGas;
 
         public static Material LightGasOil;
         public static Material CrudeLightGasOil;
         public static Material SulfuricLightGasOil;
         public static Material TreatedSulfuricLightGasOil;
-        public static Material UpgradedLightGasOilMix;
+        public static Material CatalyticallyCrackedLightGasOil;
 
         public static Material Kerosene;
         public static Material CrudeKerosene;

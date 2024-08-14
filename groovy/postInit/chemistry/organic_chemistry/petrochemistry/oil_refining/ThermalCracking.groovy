@@ -7,17 +7,22 @@ TUBE_FURNACE = recipemap('tube_furnace')
 FLBR = recipemap('fluidized_bed_reactors')
 PHASE_SEPARATOR = recipemap('phase_separator')
 
+/*fractions.each { _, fraction -> {
+        if fraction.thermal_crackable {
+            CRACKER.recipeBuilder()
+                .fluidInputs(fraction.get(1000))
+                .fluidOutputs(fraction.getThermallyCracked(1000))
+                .duration(200)
+                .EUt(Globals.voltAmps[3] * 2)
+                .buildAndRegister()
+        }
+    }
+}*/
+
 /* Thermal Cracking
     // Single Stage
-        CRACKER.recipeBuilder()
-            .fluidInputs(fluid('atmospheric_oil_residue') * 1000)
-            .fluidOutputs(fluid('thermally_cracked_atmospheric_oil_residue') * 1000)
-            .duration(200)
-            .EUt(Globals.voltAmps[3] * 2)
-            .buildAndRegister()
-
         DT.recipeBuilder()
-            .fluidInputs(fluid('thermally_cracked_atmospheric_oil_residue') * 1000)
+            .fluidInputs(fractions.atmospheric_oil_residue.getThermallyCracked(1000))
             .fluidOutputs(fluid('thermal_cracking_residue'))
             .fluidOutputs(fluid('cracked_heavy_gas_oil'))
             .fluidOutputs(fractions.light_gas_oil.getCrude())
@@ -29,7 +34,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
 
     // Two Stage
         CRACKER.recipeBuilder()
-            .fluidInputs(fluid('cracked_heavy_gas_oil') * 1000)
+            .fluidInputs(fractions.heavy_gas_oil.getThermallyCracked(1000))
             .fluidOutputs(fluid('doubly_cracked_heavy_gas_oil') * 1000)
             .duration(200)
             .EUt(Globals.voltAmps[3] * 2)
@@ -49,17 +54,10 @@ PHASE_SEPARATOR = recipemap('phase_separator')
 */
 
 /* Visbreaking
-    // Single Stage
-        CRACKER.recipeBuilder()
-            .fluidInputs(fluid('vacuum_oil_residue') * 1000)
-            .fluidOutputs(fluid('thermally_cracked_vacuum_oil_residue') * 1000)
-            .duration(200)
-            .EUt(Globals.voltAmps[3] * 2)
-            .buildAndRegister()
-        
+    // Single Stage  
         MIXER.recipeBuilder()
-            .fluidInputs(fluid('thermally_cracked_vacuum_oil_residue') * 1000)
-            .fluidInputs(fluid('vacuum_oil_residue') * 1000)
+            .fluidInputs(fractions.vacuum_oil_residue.getThermallyCracked(1000))
+            .fluidInputs(fractions.vacuum_oil_residue.get(1000))
             .fluidOutputs(fluid('quenched_vacuum_oil_residue') * 2000)
             .duration(40)
             .EUt(30)
@@ -93,7 +91,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
 /* Coking
     // Delayed Coking
         VACUUM_DT.recipeBuilder()
-            .fluidInputs(fluid('atmospheric_oil_residue') * 1000)
+            .fluidInputs(fractions.atmospheric_oil_residue.get(1000))
             .fluidOutputs(fluid('coking_residue'))
             .fluidOutputs(fractions.heavy_gas_oil.getCrude())
             .fluidOutputs(fractions.light_gas_oil.getCrude())
@@ -120,7 +118,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
             
     // Fluid Coking
         FLBR.recipeBuilder()
-            .fluidInputs(fluid('vacuum_oil_residue') * 1000)
+            .fluidInputs(fractions.vacuum_oil_residue.get(1000))
             .inputs(ore('dustHeatedGreenCoke'))
             .fluidOutputs(fluid('coke_fines'))
             .duration(200)
