@@ -6,16 +6,30 @@ BCR = recipemap('bubble_column_reactor')
 // Debutanization
 DT.recipeBuilder()
     .fluidInputs(fractions.naphtha.getCrude(10000))
-    .fluidOutputs(fractions.naphtha.getSulfuric(8000))
+    .fluidOutputs(fluid('sulfuric_debutanized_naphtha') * 8000)
     .fluidOutputs(fluid('sulfuric_lpg') * 2000)
     .duration(400)
     .buildAndRegister()
 
-// Naphtha hydrotreatment
 DT.recipeBuilder()
-    .fluidInputs(fluid('debutanized_naphtha') * 10000)
+    .fluidInputs(fractions.naphtha.get(10000))
+    .fluidOutputs(fluid('debutanized_naphtha') * 8000)
+    .fluidOutputs(fluid('lpg') * 2000)
+    .duration(400)
+    .buildAndRegister()
+
+// Naphtha hydrotreatment/splitting
+DT.recipeBuilder()
+    .fluidInputs(fluid('sulfuric_debutanized_naphtha') * 10000)
     .fluidOutputs(fluid('sulfuric_heavy_naphtha') * 4000)
     .fluidOutputs(fluid('sulfuric_light_naphtha') * 6000)
+    .duration(400)
+    .buildAndRegister()
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('naphtha') * 10000)
+    .fluidOutputs(fluid('heavy_naphtha') * 4000)
+    .fluidOutputs(fluid('light_naphtha') * 6000)
     .duration(400)
     .buildAndRegister()
 
@@ -24,6 +38,13 @@ DT.recipeBuilder()
     .fluidInputs(fluid('sulfuric_lpg') * 1000)
     .fluidOutputs(fluid('sulfuric_butane_lpg') * 600)
     .fluidOutputs(fluid('sulfuric_propane_lpg') * 400)
+    .duration(40)
+    .buildAndRegister()
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('lpg') * 1000)
+    .fluidOutputs(fluid('butane_lpg') * 600)
+    .fluidOutputs(fluid('propane_lpg') * 400)
     .duration(40)
     .buildAndRegister()
     

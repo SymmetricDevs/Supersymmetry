@@ -1977,6 +1977,7 @@ susy.material.light_atmospheric_overheads=Light Atmospheric Overheads
 susy.material.hydrotreating_catalyst=Hydrotreating Catalyst
 susy.material.supported_nickel=Supported Nickel
 susy.material.debutanized_naphtha=Debutanized Naphtha
+susy.material.sulfuric_debutanized_naphtha=Debutanized Naphtha
 susy.material.sulfuric_lpg=Sulfuric LPG
 susy.material.sulfuric_butane_lpg=Sulfuric Butane LPG
 susy.material.sulfuric_propane_lpg=Sulfuric Propane LPG

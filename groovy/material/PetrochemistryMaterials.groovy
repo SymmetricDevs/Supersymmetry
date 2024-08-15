@@ -470,9 +470,15 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        TreatedSulfuricLubricatingOil = new Material.Builder(20074, SuSyUtility.susyId('treated_sulfuric_lubricating_oil'))
+        TreatedSulfuricLubricatingOil = new Material.Builder(2020, SuSyUtility.susyId('treated_sulfuric_lubricating_oil'))
                 .liquid()
                 .color(0x857f2c)
+                .flags(FLAMMABLE)
+                .build();
+
+        SulfuricDebutanizedNaphtha = new Material.Builder(2021, SuSyUtility.susyId('sulfuric_ebutanized_naphtha'))
+                .liquid(new FluidBuilder().temperature(450))
+                .color(0xeaff00)
                 .flags(FLAMMABLE)
                 .build();
     }

@@ -564,6 +564,7 @@ class SuSyMaterials {
         public static Material NaphthaReformate;
 
         public static Material DebutanizedNaphtha;
+        public static Material SulfuricDebutanizedNaphtha;
         public static Material SulfuricLightNaphtha;
         public static Material SulfuricHeavyNaphtha;
         public static Material LightNaphtha;
