@@ -937,6 +937,7 @@ BR.recipeBuilder()
 def baseOilMap = [
     'seed_oil': 0.5,
     'lubricating_oil': 1,
+    //'cycle_oil' : 1,
     'polybutene': 1.5,
     'polyalphaolefin': 2.5,
     'ester_base_oil': 3
