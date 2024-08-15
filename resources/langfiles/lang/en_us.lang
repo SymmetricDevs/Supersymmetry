@@ -1988,6 +1988,7 @@ susy.material.butane_lpg=Butane LPG
 susy.material.propane_lpg=Propane LPG
 susy.material.heated_oil_residue=Heated Oil Residue
 susy.material.vacuum_oil_residue=Vacuum Oil Residue
+susy.material.sour_water=Sour Water
 
 # Isotopes
 

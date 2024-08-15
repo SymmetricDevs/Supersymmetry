@@ -1944,5 +1944,10 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0x631a87)
                 .build()
+
+        SourWater = new Material.Builder(4424, SuSyUtility.susyId("sour_water"))
+                .fluid()
+                .color(0x281757)
+                .build()
     }
 }

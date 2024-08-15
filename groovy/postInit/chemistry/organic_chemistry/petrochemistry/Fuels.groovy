@@ -35,7 +35,7 @@ BLENDER = recipemap('blender')
 
 def major_solvents = [
     'xylene',
-    'naphtha',
+    'light_naphtha',
     'toluene'
 ]
 

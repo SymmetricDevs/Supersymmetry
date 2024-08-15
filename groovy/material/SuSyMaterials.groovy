@@ -510,6 +510,7 @@ class SuSyMaterials {
         public static Material HydratedTriethyleneGlycol;
         public static Material NetherMolecularSieve;
         public static Material HydrotreatingCatalyst;
+        public static Material SourWater;
 
         // Petrochem Materials   
 
@@ -567,7 +568,7 @@ class SuSyMaterials {
         public static Material SulfuricHeavyNaphtha;
         public static Material LightNaphtha;
         public static Material HeavyNaphtha;
-;
+
         public static Material SulfuricLPG;
         public static Material SulfuricButaneLPG;
         public static Material SulfuricPropaneLPG;
