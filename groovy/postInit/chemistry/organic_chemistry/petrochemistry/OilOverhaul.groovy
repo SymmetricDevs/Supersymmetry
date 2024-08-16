@@ -447,4 +447,3 @@ REFORMER.recipeBuilder()
         .duration(60)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
-*/

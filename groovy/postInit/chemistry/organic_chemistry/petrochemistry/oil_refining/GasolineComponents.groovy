@@ -11,6 +11,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .fluidInputs(fluid('hydrogen'))
         .fluidOutputs(fluid('isomerization_mixture'))
         .duration(100)
+        .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
     FBR.recipeBuilder()
@@ -19,6 +20,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .fluidOutputs(fluid('isomerate'))
         .fluidOutputs(fluid('hydrogen'))
         .duration(200)
+        .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
     FBR.recipeBuilder()
@@ -27,11 +29,44 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .fluidOutputs(fluid('isomerate'))
         .fluidOutputs(fluid('hydrogen'))
         .duration(100)
+        .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 */
 
 /* Alkylation
-    
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('hydrofluoric_acid') * 50)
+        .fluidInputs(fluid('isobutane') * 1000)
+        .fluidInputs(fluid('catalytic_olefin_rich_mixture') * 100)
+        .fluidOutputs(fluid('acidic_alkylate_mixture') * 1150)
+        .duration(10)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+    PHASE_SEPARATOR.recipeBuilder()
+        .fluidInputs(fluid('acidic_alkylate_mixture') * 1150)
+        .fluidOutputs(fluid('hydrofluoric_acid') * 45)
+        .fluidOutputs(fluid('alkylate_mixture') * 1105)
+        .duration(5)
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('alkylate_mixture') * 1105)
+        .fluidOutputs(fluid('alkylate') * 100)
+        .fluidOutputs(fluid('butane') * 90)
+        .fluidOutputs(fluid('crude_isobutane') * 915)
+        .duration(10)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('crude_isobutane') * 915)
+        .fluidOutputs(fluid('isobutane') * 900)
+        .fluidOutputs(fluid('hydrofluoric_acid') * 5)
+        .fluidOutputs(fluid('propane') * 10)
+        .duration(10)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
 */
 
 /* Dimerization
