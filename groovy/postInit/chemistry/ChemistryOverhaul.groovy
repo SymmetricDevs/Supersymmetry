@@ -2357,22 +2357,6 @@ REACTION_FURNACE.recipeBuilder()
 
 // Isobutylene
 
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('butane') * 50)
-    .fluidInputs(fluid('sulfuric_acid') * 50)
-    .fluidOutputs(fluid('alkylated_butane') * 100)
-    .duration(100)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
-DISTILLATION_TOWER.recipeBuilder()
-    .fluidInputs(fluid('alkylated_butane') * 100)
-    .fluidOutputs(fluid('sulfuric_acid') * 50)
-    .fluidOutputs(fluid('isobutane') * 50)
-    .duration(300)
-    .EUt(Globals.voltAmps[1] * 2)
-    .buildAndRegister()
-
 FBR.recipeBuilder()
     .fluidInputs(fluid('isobutane') * 50)
     .notConsumable(ore('catalystBedChromiumTrioxide') * 1)

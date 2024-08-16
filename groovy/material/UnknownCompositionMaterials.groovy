@@ -189,10 +189,7 @@ public class UnknownCompositionMaterials {
                 .color(0x4f2f27)
                 .build();
 
-        AlkylatedButane = new Material.Builder(4032, SuSyUtility.susyId('alkylated_butane'))
-                .liquid()
-                .color(0x6e4c2c)
-                .build();
+        //FREE ID: 4032
 
         ImpureKaptonK = new Material.Builder(4033, SuSyUtility.susyId('impure_kapton_k'))
                 .liquid()

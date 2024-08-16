@@ -157,7 +157,6 @@ class SuSyMaterials {
         public static Material CativaCatalystSolution;
         public static Material AcidicCumene;
         public static Material RearrangedCumene;
-        public static Material AlkylatedButane;
         public static Material ImpureKaptonK;
         public static Material KaptonEPreparation;
         public static Material ImpureKaptonE;
