@@ -954,7 +954,7 @@ susy.material.liquid_krypton=Liquid Krypton
 susy.material.liquid_xenon=Liquid Xenon
 susy.material.liquid_nitrogen=Liquid Nitrogen
 susy.material.liquid_refinery_gas=Liquid Refinery Gas
-susy.material.liquid_natural_gas=Liquid Natural Gas (LNG)
+susy.material.liquid_natural_gas=Liquified Natural Gas (LNG)
 susy.material.liquid_methane=Liquid Methane
 susy.material.liquid_decarburized_air=Liquid Decarburized Air
 
@@ -1985,6 +1985,7 @@ susy.material.sulfuric_light_naphtha=Sulfuric Light Naphtha
 susy.material.sulfuric_heavy_naphtha=Sulfuric Heavy Naphtha
 susy.material.light_naphtha=Light Naphtha
 susy.material.heavy_naphtha=Heavy Naphtha
+susy.material.fuel_gas=FuelGas
 susy.material.butane_fuel_gas=Butane Fuel Gas
 susy.material.propane_fuel_gas=Propane Fuel Gas
 susy.material.heated_oil_residue=Heated Oil Residue

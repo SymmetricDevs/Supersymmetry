@@ -570,6 +570,7 @@ class SuSyMaterials {
         public static Material LightNaphtha;
         public static Material HeavyNaphtha;
 
+        public static Material FuelGas;
         public static Material SulfuricFuelGas;
         public static Material SulfuricButaneFuelGas;
         public static Material SulfuricPropaneFuelGas;

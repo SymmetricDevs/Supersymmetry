@@ -481,5 +481,11 @@ public class PetrochemistryMaterials {
                 .color(0xeaff00)
                 .flags(FLAMMABLE)
                 .build();
+
+        FuelGas = new Material.Builder(2022, SuSyUtility.susyId('fuel_gas'))
+                .gas()
+                .color(0xcca20a)
+                .flags(FLAMMABLE)
+                .build();
     }
 }           

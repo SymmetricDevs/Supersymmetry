@@ -172,15 +172,15 @@ CryoNetherAir.setDurationHX(5);
 CryoNetherAir.setDurationRadiator(200);
 CryoNetherAir.setTemperature(80);
 
-def CryoRefineryGas = new ICryoGas('refinery_gas', 'hot_hp_refinery_gas', 'hp_refinery_gas', 'cold_hp_refinery_gas', 'liquid_refinery_gas');
-CryoRefineryGas.setEUt(60);
-CryoRefineryGas.setDuration(100);
-CryoRefineryGas.setPowerHX(100);
-CryoRefineryGas.setDurationHX(5);
-CryoRefineryGas.setDurationRadiator(200);
-CryoRefineryGas.setTemperature(80);
-
 def CryoNaturalGas = new ICryoGas('natural_gas', 'hot_hp_natural_gas', 'hp_natural_gas', 'cold_hp_natural_gas', 'liquid_natural_gas');
+CryoNaturalGas.setEUt(60);
+CryoNaturalGas.setDuration(100);
+CryoNaturalGas.setPowerHX(100);
+CryoNaturalGas.setDurationHX(5);
+CryoNaturalGas.setDurationRadiator(200);
+CryoNaturalGas.setTemperature(80);
+
+def CryoPetroleumGas = new ICryoGas('fuel_gas', 'hot_hp_fuel_gas', 'hp_fuel_gas', 'cold_hp_fuel_gas', 'lpg');
 CryoNaturalGas.setEUt(60);
 CryoNaturalGas.setDuration(100);
 CryoNaturalGas.setPowerHX(100);
@@ -208,8 +208,8 @@ def CryoGases = [
         CryoAir,
         CryoDecarburizedAir,
         CryoNetherAir,
-        CryoRefineryGas,
         CryoNaturalGas,
+        CryoPetroleumGas,
         CryoMethane
 ];
 
