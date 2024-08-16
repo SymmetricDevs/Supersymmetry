@@ -45,3 +45,14 @@ BCR.recipeBuilder()
     .duration(10)
     .EUt(120)
     .buildAndRegister()
+
+// FCC overhead desulfurization
+
+/*BCR.recipeBuilder()
+    .fluidInputs(fluid('sulfuric_catalytic_overheads') * 1000)
+    .fluidInputs(fluid('ethanolamine_mix') * 1000)
+    .fluidOutputs(fluid('catalyic_overheads') * 1000)
+    .fluidOutputs(fluid('rich_amine') * 1000)
+    .duration(40)
+    .EUt(120)
+    .buildAndRegister()*/
