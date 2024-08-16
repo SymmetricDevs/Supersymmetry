@@ -1,0 +1,40 @@
+{
+  "weight": 30,
+  "density": 0.9,
+  "max_height": 70,
+  "min_height": 58,
+  "block": "minecraft:sand",
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "diatomite"
+  },
+  "biome_modifier": {
+    "type": "biome_map",
+    "desert": 400,
+    "river": 300
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      20,
+      20
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:diatomite"
+      },
+      {
+        "secondary": "ore:diatomite"
+      },
+      {
+        "between": "ore:diatomite"
+      },
+      {
+        "sporadic": "ore:diatomite"
+      }
+    ]
+  }
+}
