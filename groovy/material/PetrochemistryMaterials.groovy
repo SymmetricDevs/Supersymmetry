@@ -410,19 +410,19 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricLPG = new Material.Builder(2010, SuSyUtility.susyId('sulfuric_lpg'))
+        SulfuricFuelGas = new Material.Builder(2010, SuSyUtility.susyId('sulfuric_fuel_gas'))
                 .gas(new FluidBuilder().temperature(340))
                 .color(0xccb20a)
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricButaneLPG = new Material.Builder(2011, SuSyUtility.susyId('sulfuric_butane_lpg'))
+        SulfuricButaneFuelGas = new Material.Builder(2011, SuSyUtility.susyId('sulfuric_butane_fuel_gas'))
                 .liquid()
                 .color(0xcca50a)
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricPropaneLPG = new Material.Builder(2012, SuSyUtility.susyId('sulfuric_propane_lpg'))
+        SulfuricPropaneFuelGas = new Material.Builder(2012, SuSyUtility.susyId('sulfuric_propane_fuel_gas'))
                 .gas()
                 .color(0xe0d041)
                 .flags(FLAMMABLE)
@@ -452,13 +452,13 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        ButaneLPG = new Material.Builder(2017, SuSyUtility.susyId('butane_lpg'))
+        ButaneFuelGas = new Material.Builder(2017, SuSyUtility.susyId('butane_fuel_gas'))
                 .gas()
                 .color(0xb64c1e)
                 .flags(FLAMMABLE)
                 .build();
 
-        PropaneLPG = new Material.Builder(2018, SuSyUtility.susyId('propane_lpg'))
+        PropaneFuelGas = new Material.Builder(2018, SuSyUtility.susyId('propane_fuel_gas'))
                 .gas()
                 .color(0xf5dc42)
                 .flags(FLAMMABLE)

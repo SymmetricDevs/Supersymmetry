@@ -570,11 +570,11 @@ class SuSyMaterials {
         public static Material LightNaphtha;
         public static Material HeavyNaphtha;
 
-        public static Material SulfuricLPG;
-        public static Material SulfuricButaneLPG;
-        public static Material SulfuricPropaneLPG;
-        public static Material ButaneLPG;
-        public static Material PropaneLPG;
+        public static Material SulfuricFuelGas;
+        public static Material SulfuricButaneFuelGas;
+        public static Material SulfuricPropaneFuelGas;
+        public static Material ButaneFuelGas;
+        public static Material PropaneFuelGas;
 
         public static Material AtmosphericOverheads;
         public static Material HeavyAtmosphericOverheads;
