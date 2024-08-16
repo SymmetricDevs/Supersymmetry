@@ -69,8 +69,8 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .buildAndRegister()
 */
 
-/* Dimerization
-
+/* Polymerization
+    
 */
 
 /* Reforming
