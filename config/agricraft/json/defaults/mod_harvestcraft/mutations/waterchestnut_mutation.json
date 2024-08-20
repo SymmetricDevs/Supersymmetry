@@ -1,8 +1,0 @@
-{
-  "path": "mod_harvestcraft/mutations/waterchestnut_mutation.json",
-  "enabled": true,
-  "chance": 0.5,
-  "child": "harvestcraft:waterchestnut_plant",
-  "parent1": "harvestcraft:sesameseed_plant",
-  "parent2": "harvestcraft:seaweed_plant"
-}

@@ -1181,7 +1181,13 @@ public class UnknownCompositionMaterials {
                 .color(0xcfa532)
                 .build();
 
-        //FREE IDs: 4240-4241
+        NetherMolecularSieve = new Material.Builder(4240, SuSyUtility.susyId('nether_molecular_sieve'))
+                .dust()
+                .color(0x6e6565)
+                .iconSet(DULL)
+                .build();
+
+        //FREE ID: 4241
 
         GraniteTailingSlurry = new Material.Builder(4242, SuSyUtility.susyId('granite_tailing_slurry'))
                 .liquid()
@@ -1744,10 +1750,14 @@ public class UnknownCompositionMaterials {
                 .color(0x423900)
                 .build();
 
+        ZincDialkyldithiophospate.setFormula("Zn[(S2P(OR)2]2", true)
+
         MolybdenumDialkyldithiophosphate = new Material.Builder(4388, SuSyUtility.susyId('molybdenum_dialkyldithiophosphate'))
                 .dust()
                 .color(0x244200)
                 .build();
+
+        MolybdenumDialkyldithiophosphate.setFormula("Mo[(S2P(OR)2]2", true)
                 
         MidgradeLubricant = new Material.Builder(4389, SuSyUtility.susyId('midgrade_lubricant'))
                 .liquid()

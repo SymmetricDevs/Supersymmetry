@@ -16,7 +16,7 @@ import supersymmetry.api.capability.impl.PseudoMultiRecipeLogic;
 import supersymmetry.api.recipes.builders.PseudoMultiRecipeBuilder;
 import net.minecraft.init.Blocks;
 
-println("Running GregTech.groovy...")
+log.infoMC("Running GregTech.groovy...")
 
 //REMOVALS
 
@@ -26,7 +26,6 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustCoal')], null)
 mods.gregtech.extractor.removeByInput(64, [metaitem('dustMonazite')], null)
 // Graphene Dust * 1
 mods.gregtech.mixer.removeByInput(480, [metaitem('dustGraphite'), metaitem('dustSilicon'), metaitem('dustCarbon') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
-mods.gregtech.blender.removeByInput(480, [metaitem('dustGraphite'), metaitem('dustSilicon'), metaitem('dustCarbon') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 // Wrought Iron Ingot * 2
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustIlmenite') * 10, metaitem('dustCarbon') * 4], null)
 // Stone Slab * 2
@@ -53,7 +52,6 @@ mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:turbine_casing', 5)]
 mods.gregtech.macerator.removeByInput(8, [item('gregtech:turbine_casing', 5)], null)
 // Gelatin Mixture * 4000
 mods.gregtech.mixer.removeByInput(480, [metaitem('dustCollagen') * 4], [fluid('phosphoric_acid') * 1000, fluid('water') * 3000])
-mods.gregtech.blender.removeByInput(480, [metaitem('dustCollagen') * 4], [fluid('phosphoric_acid') * 1000, fluid('water') * 3000])
 // Phosphorus Dust * 1
 mods.gregtech.centrifuge.removeByInput(480, null, [fluid('gelatin_mixture') * 6000])
 // Reservoir Hatch * 1
@@ -451,8 +449,9 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('plateEnderPearl') * 9, met
 
 crafting.addShapeless('convert_old_slaked_lime', metaitem('dustCalciumHydroxide'), [metaitem('slaked_lime')])
 
-mods.gregtech.chemical_bath.recipeBuilder()
+mods.gregtech.mixer.recipeBuilder()
         .inputs(ore('dustQuicklime') * 2)
+        .circuitMeta(1)
         .fluidInputs(fluid('water') * 1000)
         .outputs(metaitem('dustCalciumHydroxide') * 5)
         .duration(20)
@@ -780,17 +779,64 @@ mods.gregtech.packer.recipeBuilder()
         .EUt(7)
         .buildAndRegister();
 
+mods.gregtech.packer.recipeBuilder()
+        .inputs(metaitem('sand.dust') * 4)
+        .outputs(item('minecraft:sand'))
+        .duration(20)
+        .EUt(7)
+        .buildAndRegister();
+
 crafting.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [
         [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')],
         [ore('foilZinc'), ore('plateBrass'), ore('foilZinc')],
         [ore('foilZinc'), ore('foilZinc'), ore('foilZinc')]
 ])
 
-crafting.addShaped('gregtech:brass_drum', metaitem('drum.brass'), [
-        [null, ore('craftingToolHardHammer'), null],
-        [metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')],
-        [metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')]
+// SuSy drums
+crafting.addShaped("drum_lead", metaitem('drum.lead'), [
+		[null,ore('craftingToolHardHammer'),null],
+		[metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')],
+		[metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')]
 ])
+
+crafting.addShaped('gregtech:brass_drum', metaitem('drum.brass'), [
+		[null, ore('craftingToolHardHammer'), null],
+		[metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')],
+		[metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')]
+])
+
+//ModHandler.addShapelessNBTClearingRecipe("drum_nbt_lead", metaitem('drum.lead'),
+//		metaitem('drum.lead')
+//)
+//ModHandler.addShapelessNBTClearingRecipe("drum_nbt_brass", metaitem('drum.brass'),
+//		metaitem('drum.brass')
+//)
+
+// ModHandler.addShapelessNBTClearingRecipe() is not reloadable, just using these seems fine, and we indeed have tooltips.
+crafting.addShapeless("drum_nbt_lead", metaitem('drum.lead'), [
+		metaitem('drum.lead').noreturn()
+]);
+crafting.addShapeless("drum_nbt_brass", metaitem('drum.brass'), [
+		metaitem('drum.brass').noreturn()
+]);
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('stickLongLead') * 2)
+		.inputs(ore('plateLead') * 4)
+		.outputs(metaitem('drum.lead'))
+		.duration(200)
+		.EUt(16)
+		.circuitMeta(2)
+		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('stickLongBrass') * 2)
+		.inputs(ore('plateBrass') * 4)
+		.outputs(metaitem('drum.brass'))
+		.duration(200)
+		.EUt(16)
+		.circuitMeta(2)
+		.buildAndRegister()
 
 // Electrolytic Cell
 crafting.addShaped('gregtech:electrolytic_cell', metaitem('electrolytic_cell'), [
@@ -835,7 +881,6 @@ LATEX_COLLECTOR.recipeBuilder()
 //TODO: ADD GRAVITY SEPARATOR STUFF
 // Construction Foam * 8000
 mods.gregtech.mixer.removeByInput(16, [metaitem('dustRawRubber')], [fluid('concrete') * 576])
-mods.gregtech.blender.removeByInput(16, [metaitem('dustRawRubber')], [fluid('concrete') * 576])
 
 MIXER.recipeBuilder()
         .inputs(ore('dustRubber'))
@@ -886,7 +931,15 @@ CENTRIFUGE.recipeBuilder()
         .duration(40)
         .EUt(30)
         .buildAndRegister();
-		
+
+CENTRIFUGE.recipeBuilder()
+        .inputs(ore('dustMagnalium') * 3)
+        .outputs(metaitem('dustMagnesium'))
+        .outputs(metaitem('dustAluminium') * 2)
+        .duration(72)
+        .EUt(30)
+        .buildAndRegister();
+
 // Fix distillation tower being too difficult (4 EV circuits? Seriously?)
 
 
@@ -1276,7 +1329,7 @@ mods.gregtech.extractor.removeByInput(120, [metaitem('frameSteel')], null)
 //Solid Steel Casing
 mods.gregtech.macerator.recipeBuilder()
         .inputs(item('gregtech:metal_casing', 4))
-        .outputs(metaitem('dustSteel') * 2)
+        .outputs(metaitem('dustSmallSteel') * 7)
         .duration(220)
         .EUt(7)
         .buildAndRegister()
@@ -1284,7 +1337,7 @@ mods.gregtech.macerator.recipeBuilder()
 mods.gregtech.arc_furnace.recipeBuilder()
         .inputs(item('gregtech:metal_casing', 4))
         .fluidInputs(fluid('oxygen') * 224)
-        .outputs(metaitem('ingotSteel') * 2)
+        .outputs(metaitem('nuggetSteel') * 15)
         .duration(220)
         .EUt(30)
         .buildAndRegister()
@@ -1308,7 +1361,7 @@ mods.gregtech.arc_furnace.recipeBuilder()
 //Steel Fireboxes
 mods.gregtech.macerator.recipeBuilder()
         .inputs(item('gregtech:boiler_firebox_casing', 1))
-        .outputs(metaitem('dustSteel') * 2)
+        .outputs(metaitem('dustSmallSteel') * 7)
         .duration(220)
         .EUt(7)
         .buildAndRegister()
@@ -1316,7 +1369,7 @@ mods.gregtech.macerator.recipeBuilder()
 mods.gregtech.arc_furnace.recipeBuilder()
         .inputs(item('gregtech:boiler_firebox_casing', 1))
         .fluidInputs(fluid('oxygen') * 224)
-        .outputs(metaitem('ingotSteel') * 2)
+        .outputs(metaitem('nuggetSteel') * 15)
         .duration(220)
         .EUt(30)
         .buildAndRegister()
@@ -1448,3 +1501,15 @@ GroovyUtils.removeRecipesContainingFluid(mods.gregtech.assembler, fluid('polyben
 GroovyUtils.removeRecipesContainingFluid(mods.gregtech.autoclave, fluid('polybenzimidazole'))
 GroovyUtils.removeRecipesContainingFluid(mods.gregtech.fluid_solidifier, fluid('polybenzimidazole'))
 GroovyUtils.removeRecipesContainingFluid(mods.gregtech.assembly_line, fluid('polybenzimidazole'))
+
+crafting.addShaped('gregtech:electric_jetpack1', metaitem('gregtech:electric_jetpack'), [
+    [ore('toolWireCutter'), ore('circuitMv'), ore('toolScrewdriver')],
+    [metaitem('power_thruster'), metaitem('battery.re.mv.cadmium'), metaitem('power_thruster')],
+    [ore('wireGtDoubleAnnealedCopper'), null, ore('wireGtDoubleAnnealedCopper')]
+])
+
+crafting.addShaped('gregtech:electric_jetpack2', metaitem('gregtech:electric_jetpack'), [
+    [ore('toolWireCutter'), ore('circuitMv'), ore('toolScrewdriver')],
+    [metaitem('power_thruster'), metaitem('battery.re.mv.sodium'), metaitem('power_thruster')],
+    [ore('wireGtDoubleAnnealedCopper'), null, ore('wireGtDoubleAnnealedCopper')]
+])

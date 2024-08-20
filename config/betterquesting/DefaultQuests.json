@@ -3375,6 +3375,7 @@
           "ismain:1": 1,
           "name:8": "susy.quest.db.78.title",
           "questlogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -14957,7 +14958,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "seed_oil"
+              "FluidName:8": "glyceryl_trinitrate"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -30420,7 +30421,7 @@
                 "Durability:3": 0,
                 "HarvestLevel:3": 1,
                 "Material:8": "rubber",
-                "MaxDurability:3": 256,
+                "MaxDurability:3": 255,
                 "ToolSpeed:5": 4.0
               },
               "HideFlags:3": 2

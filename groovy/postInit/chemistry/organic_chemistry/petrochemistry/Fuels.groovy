@@ -460,10 +460,8 @@ def getUniquePairs(Map materialsMap) {
 
 // Cetane-Boosted Diesel * 750
 mods.gregtech.mixer.removeByInput(480, null, [fluid('bio_diesel') * 1000, fluid('tetranitromethane') * 40])
-mods.gregtech.blender.removeByInput(480, null, [fluid('bio_diesel') * 1000, fluid('tetranitromethane') * 40])
 // Cetane-Boosted Diesel * 1000
 mods.gregtech.mixer.removeByInput(480, null, [fluid('diesel') * 1000, fluid('tetranitromethane') * 20])
-mods.gregtech.blender.removeByInput(480, null, [fluid('diesel') * 1000, fluid('tetranitromethane') * 20])
 for (major_solvent in major_solvents) {
     for (minor_solvent in minor_solvents) {
         BLENDER.recipeBuilder()
@@ -543,6 +541,16 @@ for (major_solvent in major_solvents) {
                 .buildAndRegister()
         }
 
+        BLENDER.recipeBuilder()
+            .inputs(ore('dustFerrocene'))
+            .fluidInputs(fluid(major_solvent) * 1500)
+            .fluidInputs(fluid(minor_solvent) * 500)
+            .fluidOutputs(fluid('antiknock') * 1000)
+            .duration(200)
+            .EUt(120)
+            .buildAndRegister()
+
+
         def antioxidantPairs = getUniquePairs(AntioxidantMap)
 
         for (pair in antioxidantPairs) {
@@ -583,7 +591,7 @@ for (pair in oxygenatePairs) {
         .buildAndRegister()
 }
 
-println("Registered oxygenate pairs")
+log.infoMC("Registered oxygenate pairs")
 
 // Gasoline final blending
 
