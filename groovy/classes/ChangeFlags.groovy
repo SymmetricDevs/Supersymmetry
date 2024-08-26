@@ -4,6 +4,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority
 
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
+import gregtech.api.GTValues;
 
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -104,6 +105,17 @@ class ChangeFlags {
         Cobalt.setProperty(PropertyKey.BLAST, new BlastProperty(1750, GasTier.LOW, 120, 200, -1, -1));
         Beryllium.setProperty(PropertyKey.BLAST, new BlastProperty(1560, GasTier.LOW, 120, 200, -1, -1));
         Nickel.setProperty(PropertyKey.BLAST, new BlastProperty(1728, GasTier.LOW, 120, 120, -1, -1));
+
+        // Supercons, max amps multiplied by 4.
+        ManganesePhosphide.getProperty(PropertyKey.WIRE).setAmperage(8);
+        MagnesiumDiboride.getProperty(PropertyKey.WIRE).setAmperage(16);
+        MercuryBariumCalciumCuprate.getProperty(PropertyKey.WIRE).setAmperage(16);
+        UraniumTriplatinum.getProperty(PropertyKey.WIRE).setAmperage(24);
+        SamariumIronArsenicOxide.getProperty(PropertyKey.WIRE).setAmperage(24);
+        IndiumTinBariumTitaniumCuprate.getProperty(PropertyKey.WIRE).setAmperage(32);
+        UraniumRhodiumDinaquadide.getProperty(PropertyKey.WIRE).setAmperage(32);
+        EnrichedNaquadahTriniumEuropiumDuranide.getProperty(PropertyKey.WIRE).setAmperage(64);
+        RutheniumTriniumAmericiumNeutronate.getProperty(PropertyKey.WIRE).setAmperage(96);
 
         // Flags
 
