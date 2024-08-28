@@ -169,6 +169,9 @@ def name_removals = [
 	"techguns:itemshared_149_upgrade_blast_protection_1",
 	"techguns:itemshared_152_upgrade_blast_protection_2",
 	"techguns:itemshared_155_upgrade_blast_protection_3",
+	"techguns:itemshared_86_nuggetcopper",
+	"techguns:itemshared_87_nuggetlead",
+	"techguns:itemshared_88_nuggetsteel"
 ]
 
 for (name in name_removals) {
