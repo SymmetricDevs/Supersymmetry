@@ -265,77 +265,87 @@ def magmatic_hydrothermal_tier_4 = [
 ];
 
 def hydrothermal_tier_1 = [
-    'gregtech:ore_fluorite_0' : 10000,
-    'gregtech:ore_pyrolusite_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_cobaltite_0' : 10000,
-    'gregtech:ore_bornite_0' : 10000,
-    'gregtech:ore_realgar_0' : 10000,
-    'gregtech:ore_arsenopyrite_0' : 10000,
-    'gregtech:ore_proustite_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000,
-    'gregtech:ore_acanthite_0' : 10000,
-    'gregtech:ore_stibnite_0' : 10000,
-    'gregtech:ore_cinnabar_0' : 10000,
-    'gregtech:ore_galena_0' : 10000
+    //T1
+    'gregtech:ore_acanthite_0' : 5000,
+    'gregtech:ore_arsenopyrite_0' : 1500,
+    'gregtech:ore_bornite_0' : 7500,
+    'gregtech:ore_cassiterite_0' : 2500,
+    'gregtech:ore_cinnabar_0' : 33333,
+    'gregtech:ore_cobaltite_0' : 1500,
+    'gregtech:ore_fluorite_0' : 1000,
+    'gregtech:ore_galena_0' : 7500,
+    'gregtech:ore_proustite_0' : 7500,
+    'gregtech:ore_pyrite_0' : 2500,
+    'gregtech:ore_pyrolusite_0' : 1000,
+    'gregtech:ore_realgar_0' : 1500,
+    'gregtech:ore_stibnite_0' : 3333
 ];
 
 def hydrothermal_tier_2 = [
-    'gregtech:ore_fluorite_0' : 10000,
-    'gregtech:ore_vanadinite_0' : 10000,
-    'gregtech:ore_pyrolusite_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_cobaltite_0' : 10000,
-    'gregtech:ore_bornite_0' : 10000,
-    'gregtech:ore_realgar_0' : 10000,
-    'gregtech:ore_arsenopyrite_0' : 10000,
-    'gregtech:ore_proustite_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000,
-    'gregtech:ore_acanthite_0' : 10000,
-    'gregtech:ore_stibnite_0' : 10000,
-    'gregtech:ore_cinnabar_0' : 10000,
-    'gregtech:ore_galena_0' : 10000
+        //T1
+    'gregtech:ore_acanthite_0' : 7500,
+    'gregtech:ore_arsenopyrite_0' : 1500,
+    'gregtech:ore_bornite_0' : 7500,
+    'gregtech:ore_cassiterite_0' : 2500,
+    'gregtech:ore_cinnabar_0' : 33333,
+    'gregtech:ore_cobaltite_0' : 1500,
+    'gregtech:ore_fluorite_0' : 2500,
+    'gregtech:ore_galena_0' : 7500,
+    'gregtech:ore_proustite_0' : 9500,
+    'gregtech:ore_pyrite_0' : 2500,
+    'gregtech:ore_pyrolusite_0' : 1000,
+    'gregtech:ore_realgar_0' : 1500,
+    'gregtech:ore_stibnite_0' : 3333,
+    //T2
+    'gregtech:ore_vanadinite_0' : 5000
 ];
 
 def hydrothermal_tier_3 = [
-    'gregtech:ore_fluorite_0' : 10000,
-    'gregtech:ore_vanadinite_0' : 10000,
-    'gregtech:ore_pyrolusite_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_cobaltite_0' : 10000,
-    'gregtech:ore_bornite_0' : 10000,
-    'gregtech:ore_realgar_0' : 10000,
-    'gregtech:ore_arsenopyrite_0' : 10000,
-    'gregtech:ore_proustite_0' : 10000,
-    'gregtech:ore_strontianite_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000,
-    'gregtech:ore_acanthite_0' : 10000,
-    'gregtech:ore_stibnite_0' : 10000,
-    'gregtech:ore_witherite_0' : 10000,
-    'gregtech:ore_cinnabar_0' : 10000,
-    'gregtech:ore_galena_0' : 10000,
-    'gregtech:ore_bismuthinite_0' : 10000
+        //T1
+    'gregtech:ore_acanthite_0' : 7500,
+    'gregtech:ore_arsenopyrite_0' : 1500,
+    'gregtech:ore_bornite_0' : 7500,
+    'gregtech:ore_cassiterite_0' : 2500,
+    'gregtech:ore_cinnabar_0' : 33333,
+    'gregtech:ore_cobaltite_0' : 1500,
+    'gregtech:ore_fluorite_0' : 2500,
+    'gregtech:ore_galena_0' : 7500,
+    'gregtech:ore_proustite_0' : 9500,
+    'gregtech:ore_pyrite_0' : 2500,
+    'gregtech:ore_pyrolusite_0' : 1000,
+    'gregtech:ore_realgar_0' : 1500,
+    'gregtech:ore_stibnite_0' : 3333,
+    //T2
+    'gregtech:ore_vanadinite_0' : 5000,
+    //T3
+    'gregtech:ore_witherite_0' : 2500,
+    'gregtech:ore_bismuthinite_0' : 7500
+    //'gregtech:ore_strontianite_0' : 10000 TODO: Fix #971
 ];
 
 def hydrothermal_tier_4 = [
-    'gregtech:ore_fluorite_0' : 10000,
-    'susy:resource_block:9' : 10000,
-    'gregtech:ore_vanadinite_0' : 10000,
-    'gregtech:ore_pyrolusite_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_cobaltite_0' : 10000,
-    'gregtech:ore_bornite_0' : 10000,
-    'gregtech:ore_realgar_0' : 10000,
-    'gregtech:ore_arsenopyrite_0' : 10000,
-    'gregtech:ore_proustite_0' : 10000,
-    'gregtech:ore_strontianite_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000,
-    'gregtech:ore_acanthite_0' : 10000,
-    'gregtech:ore_stibnite_0' : 10000,
-    'gregtech:ore_witherite_0' : 10000,
-    'gregtech:ore_cinnabar_0' : 10000,
-    'gregtech:ore_galena_0' : 10000,
-    'gregtech:ore_bismuthinite_0' : 10000,
+        //T1
+    'gregtech:ore_acanthite_0' : 7500,
+    'gregtech:ore_arsenopyrite_0' : 1500,
+    'gregtech:ore_bornite_0' : 7500,
+    'gregtech:ore_cassiterite_0' : 2500,
+    'gregtech:ore_cinnabar_0' : 33333,
+    'gregtech:ore_cobaltite_0' : 1500,
+    'gregtech:ore_fluorite_0' : 2500,
+    'gregtech:ore_galena_0' : 7500,
+    'gregtech:ore_proustite_0' : 9500,
+    'gregtech:ore_pyrite_0' : 2500,
+    'gregtech:ore_pyrolusite_0' : 1000,
+    'gregtech:ore_realgar_0' : 1500,
+    'gregtech:ore_stibnite_0' : 3333,
+    //T2
+    'gregtech:ore_vanadinite_0' : 5000,
+    //T3
+    'gregtech:ore_witherite_0' : 2500,
+    'gregtech:ore_bismuthinite_0' : 7500
+    //'gregtech:ore_strontianite_0' : 10000 TODO: Fix #971
+    //T4
+    //'susy:resource_block:9' : 10000,
 ];
 
 def alluvial_tier_1 = [
