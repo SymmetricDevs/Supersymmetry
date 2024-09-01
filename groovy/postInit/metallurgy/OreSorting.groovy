@@ -349,29 +349,37 @@ def hydrothermal_tier_4 = [
 ];
 
 def alluvial_tier_1 = [
-    'gregtech:ore_cassiterite_0' : 10000
+    //T1
+    'gregtech:ore_cassiterite_0' : 9500,
+    'susy:resource_block:10' : 100,
+    'susy:resource_block:11' : 1000
 ];
 
 def alluvial_tier_2 = [
+    //T1.2
     'gregtech:ore_cassiterite_0' : 10000,
-    'susy:resource_block:10' : 100,
+    'susy:resource_block:10' : 200,
     'susy:resource_block:11' : 5000
 ];
 
 
 def alluvial_tier_3 = [
-    'minecraft:soul_sand' : 10000,
+    //T1.3
     'gregtech:ore_cassiterite_0' : 10000,
-    'susy:resource_block:10' : 100,
-    'susy:resource_block:11' : 5000
+    'susy:resource_block:10' : 500,
+    'susy:resource_block:11' : 7500
+    //T3
+    'minecraft:soul_sand' : 10000,
 ];
 
 def alluvial_tier_4 = [
-    'susy:resource_block:6' : 10000,
-    'minecraft:soul_sand' : 10000,
+    //T1.4
     'gregtech:ore_cassiterite_0' : 10000,
-    'susy:resource_block:10' : 10000,
+    'susy:resource_block:10' : 1000,
     'susy:resource_block:11' : 10000
+    //T4
+    'minecraft:soul_sand' : 100,
+    'susy:resource_block:6' : 75000,
 ];
 
 //FORMAT: BASE ROCK, WASHING FLUID, WASTE FLUID, ORE OUTPUT LISTS, STARTING VOLTAGE TIER
