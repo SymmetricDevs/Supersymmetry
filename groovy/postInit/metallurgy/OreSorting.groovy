@@ -7,7 +7,7 @@ int fluid_amount = 100;
 
 //FORMAT: ORE NAME : CHANCE (out of 10000)
 //REBALANCING MAY BE DONE AS WE GO ON
-
+//Divine Ray commented out unused/worthless ores 
 
 // #TODO: #967 Tweak all OreSorting.groovy recipes to be appropriate to their utility
 def orthomagmatic_tier_1 = [
@@ -52,7 +52,7 @@ def orthomagmatic_tier_3 = [
     'gregtech:ore_columbite_0' : 500,
     'gregtech:ore_perovskite_0' : 7500,
     'minecraft:soul_sand' : 100,
-    'gregtech:ore_vanadiferous_titanomagnetite_0' :7500
+    'gregtech:ore_vanadiferous_titanomagnetite_0' : 7500
 
     //'gregtech:ore_thortveitite_0' : 10000,
 ];
@@ -86,7 +86,7 @@ def orthomagmatic_tier_4 = [
 def metamorphic_tier_1 = [
     //T1
     'gregtech:ore_arsenopyrite_0' : 7500,
-    'gregtech:ore_cinnabar_0' : 2500
+    'gregtech:ore_cinnabar_0' : 2500,
     'gregtech:ore_cobaltite_0' : 1000,
     'gregtech:ore_magnetite_0' : 10000,
     'gregtech:ore_pyrargyrite_0' : 5000,
@@ -131,68 +131,78 @@ def metamorphic_tier_3 = [
 ];
 
 def sedimentary_tier_1 = [
-    'gregtech:ore_coal_0' : 10000,
-    'gregtech:ore_saltpeter_0' : 10000,
-    'susy:resource_block:12' : 10000,
-    'gregtech:ore_banded_iron_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_malachite_0' : 10000,
-    'gregtech:ore_cinnabar_0' : 10000,
-    'gregtech:ore_fluorite_0' : 10000,
-    'susy:resource_block:0' : 10000,
-    'gregtech:ore_pyrolusite_0' : 10000
+    //T1
+    'gregtech:ore_banded_iron_0' : 7500,
+    'gregtech:ore_cinnabar_0' : 2000,
+    'gregtech:ore_coal_0' : 9000,
+    'gregtech:ore_fluorite_0' : 2000,
+    'gregtech:ore_malachite_0' : 2500,
+    'gregtech:ore_pyrite_0' : 2500,
+    'gregtech:ore_pyrolusite_0' : 5000,
+    'gregtech:ore_saltpeter_0' : 5000,
+    'susy:resource_block:0' : 7500,
+    'susy:resource_block:12' : 5000
 ];
 
 def sedimentary_tier_2 = [
-    'gregtech:ore_coal_0' : 10000,
-    'gregtech:ore_saltpeter_0' : 10000,
-    'susy:resource_block:12' : 10000,
-    'gregtech:ore_banded_iron_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_malachite_0' : 10000,
-    'gregtech:ore_cinnabar_0' : 10000,
-    'gregtech:ore_fluorite_0' : 10000,
-    'gregtech:ore_magnesite_0' : 10000,
-    'susy:resource_block:0' : 10000,
-    'gregtech:ore_pyrolusite_0' : 10000
+    //T1
+    'gregtech:ore_banded_iron_0' : 7500,
+    'gregtech:ore_cinnabar_0' : 2000,
+    'gregtech:ore_coal_0' : 9000,
+    'gregtech:ore_fluorite_0' : 2000,
+    'gregtech:ore_malachite_0' : 2500,
+    'gregtech:ore_pyrite_0' : 2500,
+    'gregtech:ore_pyrolusite_0' : 5000,
+    'gregtech:ore_saltpeter_0' : 5000,
+    'susy:resource_block:0' : 7500,
+    'susy:resource_block:12' : 5000,
+    //T2
+    'gregtech:ore_magnesite_0' : 2000
 ];
 
 def sedimentary_tier_3 = [
-    'gregtech:ore_coal_0' : 10000,
-    'gregtech:ore_saltpeter_0' : 10000,
-    'susy:resource_block:12' : 10000,
-    'gregtech:ore_banded_iron_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_malachite_0' : 10000,
-    'gregtech:ore_celestine_0' : 10000,
-    'gregtech:ore_barite_0' : 10000,
-    'gregtech:ore_cinnabar_0' : 10000,
-    'gregtech:ore_fluorite_0' : 10000,
-    'gregtech:ore_magnesite_0' : 10000,
-    'susy:resource_block:0' : 10000,
-    'gregtech:ore_ilmenite_0' : 10000,
-    'susy:resource_block:1' : 10000,
-    'gregtech:ore_pyrolusite_0' : 10000
+    //T1
+    'gregtech:ore_banded_iron_0' : 7500,
+    'gregtech:ore_cinnabar_0' : 2000,
+    'gregtech:ore_coal_0' : 9000,
+    'gregtech:ore_fluorite_0' : 2000,
+    'gregtech:ore_malachite_0' : 2500,
+    'gregtech:ore_pyrite_0' : 2500,
+    'gregtech:ore_pyrolusite_0' : 5000,
+    'gregtech:ore_saltpeter_0' : 5000,
+    'susy:resource_block:0' : 7500,
+    'susy:resource_block:12' : 5000,
+    //T2
+    'gregtech:ore_magnesite_0' : 2000,
+    //T3
+    'gregtech:ore_ilmenite_0' : 1000,
+    //'susy:resource_block:1' : 10000,
+    'gregtech:ore_celestine_0' : 500,
+    'gregtech:ore_barite_0' : 2500,
 ];
 
 def sedimentary_tier_4 = [
-    'gregtech:ore_coal_0' : 10000,
-    'gregtech:ore_saltpeter_0' : 10000,
-    'susy:resource_block:12' : 10000,
-    'gregtech:ore_banded_iron_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_malachite_0' : 10000,
-    'gregtech:ore_celestine_0' : 10000,
-    'gregtech:ore_barite_0' : 10000,
-    'gregtech:ore_cinnabar_0' : 10000,
-    'gregtech:ore_uraninite_0' : 10000,
-    'gregtech:ore_fluorite_0' : 10000,
-    'gregtech:ore_magnesite_0' : 10000,
-    'susy:resource_block:0' : 10000,
-    'gregtech:ore_ilmenite_0' : 10000,
-    'susy:resource_block:1' : 10000,
-    'gregtech:ore_pyrolusite_0' : 10000,
-    'gregtech:ore_carnotite_0' : 10000
+        //T1
+    'gregtech:ore_banded_iron_0' : 7500,
+    'gregtech:ore_cinnabar_0' : 2000,
+    'gregtech:ore_coal_0' : 9000,
+    'gregtech:ore_fluorite_0' : 2000,
+    'gregtech:ore_malachite_0' : 2500,
+    'gregtech:ore_pyrite_0' : 2500,
+    'gregtech:ore_pyrolusite_0' : 5000,
+    'gregtech:ore_saltpeter_0' : 5000,
+    'susy:resource_block:0' : 7500,
+    'susy:resource_block:12' : 5000,
+    //T2
+    'gregtech:ore_magnesite_0' : 2000,
+    //T3
+    'gregtech:ore_ilmenite_0' : 1000,
+    //'susy:resource_block:1' : 10000,
+    'gregtech:ore_celestine_0' : 500,
+    'gregtech:ore_barite_0' : 2500,
+    //T4
+    'gregtech:ore_carnotite_0' : 100
+    //'gregtech:ore_uraninite_0' : 750,
 ];
 
 def magmatic_hydrothermal_tier_1 = [
