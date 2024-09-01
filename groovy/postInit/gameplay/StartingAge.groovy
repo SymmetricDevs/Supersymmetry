@@ -2,8 +2,20 @@ import Globals.*
 import appeng.api.AEApi;
 import appeng.api.features.IGrinderRegistry;
 import appeng.api.features.IGrinderRecipeBuilder;
+import net.minecraftforge.event.world.BlockEvent;
+import gregtech.api.GTValues;
+import gregtech.common.blocks.BlockSurfaceRock;
 
 final IGrinderRegistry reg = AEApi.instance().registries().grinder();
+
+// Add rocks to ceu surface rock drops, and remove tiny dusts.
+event_manager.listen { BlockEvent.HarvestDropsEvent event ->
+    if (event.getState().getBlock() instanceof BlockSurfaceRock) {
+        int amount = 1 + GTValues.RNG.nextInt(2);
+        event.getDrops().clear()
+        event.getDrops().add(item('pyrotech:rock') * amount)
+    }
+}
 
 log.infoMC("Running StartingAge.groovy...")
 
