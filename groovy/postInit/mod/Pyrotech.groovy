@@ -102,3 +102,15 @@ mods.jei.ingredient.yeet(
 )
 
 mods.pyrotech.soaking_pot.remove("pyrotech:living_tar")
+
+crafting.replaceShaped("pyrotech:tech/machine/mechanical_hopper", item('pyrotech:mechanical_hopper'), [
+        [item('pyrotech:material', 16), null, item('pyrotech:material', 16)],
+        [item('pyrotech:material', 16), null, item('pyrotech:material', 16)],
+        [null, item('pyrotech:material', 16), null]
+])
+
+crafting.addShaped("pyrotech:tech/machine/mechanical_hopper_with_gear", item('pyrotech:mechanical_hopper').withNbt(['BlockEntityTag': ['id': 'pyrotech:tile.tilestonehopper', 'ForgeCaps': [], 'cogStackHandler': ['Items': [['Slot': 0, 'id': 'pyrotech:cog_stone', 'Count': 1, 'Damage': (short) 0]], 'Size': 1]], 'display': ['Lore': ['(+NBT)']]]), [
+        [item('pyrotech:material', 16), null, item('pyrotech:material', 16)],
+        [item('pyrotech:material', 16), item('pyrotech:cog_stone'), item('pyrotech:material', 16)],
+        [null, item('pyrotech:material', 16), null]
+])
