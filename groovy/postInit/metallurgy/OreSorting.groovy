@@ -8,66 +8,79 @@ int fluid_amount = 100;
 //FORMAT: ORE NAME : CHANCE (out of 10000)
 //REBALANCING MAY BE DONE AS WE GO ON
 
+
+// #TODO: #967 Tweak all OreSorting.groovy recipes to be appropriate to their utility
 def orthomagmatic_tier_1 = [
-    'gregtech:ore_spodumene_0' : 10000,
-    'gregtech:ore_lepidolite_0' : 10000,
+    //Tier 1
+    'gregtech:ore_spodumene_0' : 5000,
+    'gregtech:ore_lepidolite_0' : 1000,
     'gregtech:ore_magnetite_0' : 10000,
-    'gregtech:ore_chalcopyrite_0' : 10000,
-    'gregtech:ore_sphalerite_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000
+    'gregtech:ore_chalcopyrite_0' : 7500,
+    'gregtech:ore_sphalerite_0' : 1000,
+    'gregtech:ore_cassiterite_0' : 8000
 ];
 
 def orthomagmatic_tier_2 = [
-    'gregtech:ore_spodumene_0' : 10000,
-    'gregtech:ore_lepidolite_0' : 10000,
-    'gregtech:ore_chromite_0' : 10000,
+    //Tier 1
+    'gregtech:ore_spodumene_0' : 5000,
+    'gregtech:ore_lepidolite_0' : 1000,
     'gregtech:ore_magnetite_0' : 10000,
-    'gregtech:ore_chalcopyrite_0' : 10000,
-    'gregtech:ore_sphalerite_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000,
-    'gregtech:ore_pollucite_0' : 10000
+    'gregtech:ore_chalcopyrite_0' : 7500,
+    'gregtech:ore_sphalerite_0' : 1000,
+    'gregtech:ore_cassiterite_0' : 8000,
+    //Tier 2
+    'gregtech:ore_chromite_0' : 5000,
+    'gregtech:ore_pollucite_0' : 100
 ];
 
 def orthomagmatic_tier_3 = [
-    'gregtech:ore_spodumene_0' : 10000,
-    'gregtech:ore_lepidolite_0' : 10000,
-    'gregtech:ore_thortveitite_0' : 10000,
-    'gregtech:ore_vanadiferous_titanomagnetite_0' : 10000,
-    'gregtech:ore_perovskite_0' : 10000,
-    'minecraft:soul_sand' : 10000,
-    'gregtech:ore_chromite_0' : 10000,
+    //Tier 1
+    'gregtech:ore_spodumene_0' : 5000,
+    'gregtech:ore_lepidolite_0' : 1000,
     'gregtech:ore_magnetite_0' : 10000,
-    'gregtech:ore_pentlandite_0' : 10000,
-    'gregtech:ore_chalcopyrite_0' : 10000,
-    'gregtech:ore_sphalerite_0' : 10000,
-    'gregtech:ore_pyrochlore_0' : 10000,
-    'gregtech:ore_molybdenite_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000,
-    'gregtech:ore_tantalite_0' : 10000,
-    'gregtech:ore_columbite_0' : 10000,
-    'gregtech:ore_pollucite_0' : 10000
+    'gregtech:ore_chalcopyrite_0' : 7500,
+    'gregtech:ore_sphalerite_0' : 1000,
+    'gregtech:ore_cassiterite_0' : 8000,
+    //Tier 2
+    'gregtech:ore_chromite_0' : 5000,
+    'gregtech:ore_pollucite_0' : 100,
+    //T3
+    'gregtech:ore_pentlandite_0' : 6000,
+    'gregtech:ore_pyrochlore_0' : 2000,
+    'gregtech:ore_molybdenite_0' : 1000,
+    'gregtech:ore_tantalite_0' : 1000,
+    'gregtech:ore_columbite_0' : 500,
+    'gregtech:ore_perovskite_0' : 7500,
+    'minecraft:soul_sand' : 100,
+    'gregtech:ore_vanadiferous_titanomagnetite_0' :7500
+
+    //'gregtech:ore_thortveitite_0' : 10000,
 ];
 
 def orthomagmatic_tier_4 = [
-    'gregtech:ore_spodumene_0' : 10000,
-    'gregtech:ore_lepidolite_0' : 10000,
-    'susy:resource_block:8' : 10000,
-    'gregtech:ore_thortveitite_0' : 10000,
-    'gregtech:ore_vanadiferous_titanomagnetite_0' : 10000,
-    'gregtech:ore_perovskite_0' : 10000,
-    'minecraft:soul_sand' : 10000,
-    'gregtech:ore_baddeleyite_0' : 10000,
-    'gregtech:ore_chromite_0' : 10000,
+    //T1
+    'gregtech:ore_spodumene_0' : 5000,
+    'gregtech:ore_lepidolite_0' : 1000,
     'gregtech:ore_magnetite_0' : 10000,
-    'gregtech:ore_pentlandite_0' : 10000,
-    'gregtech:ore_chalcopyrite_0' : 10000,
-    'gregtech:ore_sphalerite_0' : 10000,
-    'gregtech:ore_pyrochlore_0' : 10000,
-    'gregtech:ore_molybdenite_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000,
-    'gregtech:ore_tantalite_0' : 10000,
-    'gregtech:ore_columbite_0' : 10000,
-    'gregtech:ore_pollucite_0' : 10000
+    'gregtech:ore_chalcopyrite_0' : 7500,
+    'gregtech:ore_sphalerite_0' : 1000,
+    'gregtech:ore_cassiterite_0' : 8000,
+    //T2
+    'gregtech:ore_chromite_0' : 5000,
+    'gregtech:ore_pollucite_0' : 100,
+    //T3
+     'gregtech:ore_pentlandite_0' : 6000,
+    'gregtech:ore_pyrochlore_0' : 2000,
+    'gregtech:ore_molybdenite_0' : 1000,
+    'gregtech:ore_tantalite_0' : 1000,
+    'gregtech:ore_columbite_0' : 500,
+    'gregtech:ore_perovskite_0' : 7500,
+    'minecraft:soul_sand' : 100,
+    'gregtech:ore_vanadiferous_titanomagnetite_0' :7500
+    //T4
+    'gregtech:ore_baddeleyite_0' : 200,
+    //'susy:resource_block:8' : 10000,
+    //'gregtech:ore_thortveitite_0' : 10000,
 ];
 
 def metamorphic_tier_1 = [
