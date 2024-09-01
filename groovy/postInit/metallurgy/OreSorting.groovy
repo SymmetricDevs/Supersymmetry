@@ -206,55 +206,62 @@ def sedimentary_tier_4 = [
 ];
 
 def magmatic_hydrothermal_tier_1 = [
-    'gregtech:ore_magnetite_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_cobaltite_0' : 10000,
-    'gregtech:ore_chalcopyrite_0' : 10000,
-    'gregtech:ore_sphalerite_0' : 10000,
-    'gregtech:ore_enargite_0' : 10000,
-    'gregtech:ore_redstone_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000
+    //T1
+    'gregtech:ore_cassiterite_0' : 5000,
+    'gregtech:ore_chalcopyrite_0' : 7500,
+    'gregtech:ore_cobaltite_0' : 2500,
+    'gregtech:ore_enargite_0' : 5000,
+    'gregtech:ore_magnetite_0' : 7500,
+    'gregtech:ore_pyrite_0' : 5000,
+    'gregtech:ore_redstone_0' : 2500,
+    'gregtech:ore_sphalerite_0' : 7500
 ];
 
 def magmatic_hydrothermal_tier_2 = [
-    'gregtech:ore_magnetite_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_cobaltite_0' : 10000,
-    'gregtech:ore_chalcopyrite_0' : 10000,
-    'gregtech:ore_sphalerite_0' : 10000,
-    'gregtech:ore_enargite_0' : 10000,
-    'gregtech:ore_redstone_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000
+    //T1 but better
+    'gregtech:ore_cassiterite_0' : 7500,
+    'gregtech:ore_chalcopyrite_0' : 5500,
+    'gregtech:ore_cobaltite_0' : 5000,
+    'gregtech:ore_enargite_0' : 7500,
+    'gregtech:ore_magnetite_0' : 9000,
+    'gregtech:ore_pyrite_0' : 7500,
+    'gregtech:ore_redstone_0' : 5000,
+    'gregtech:ore_sphalerite_0' : 9000
 ];
 
 def magmatic_hydrothermal_tier_3 = [
-    'gregtech:ore_magnetite_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_cobaltite_0' : 10000,
-    'gregtech:ore_chalcopyrite_0' : 10000,
-    'gregtech:ore_sphalerite_0' : 10000,
-    'gregtech:ore_enargite_0' : 10000,
-    'gregtech:ore_pyrochlore_0' : 10000,
-    'gregtech:ore_wolframite_0' : 10000,
-    'gregtech:ore_scheelite_0' : 10000,
-    'gregtech:ore_redstone_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000
+        //T1 but better
+    'gregtech:ore_cassiterite_0' : 7500,
+    'gregtech:ore_chalcopyrite_0' : 5500,
+    'gregtech:ore_cobaltite_0' : 5000,
+    'gregtech:ore_enargite_0' : 7500,
+    'gregtech:ore_magnetite_0' : 9000,
+    'gregtech:ore_pyrite_0' : 7500,
+    'gregtech:ore_pyrochlore_0' : 1000,
+    'gregtech:ore_redstone_0' : 5000,
+    'gregtech:ore_sphalerite_0' : 9000,
+    //T3
+    'gregtech:ore_scheelite_0' : 1250,
+    'gregtech:ore_wolframite_0' : 1000
 ];
 
 def magmatic_hydrothermal_tier_4 = [
-    'susy:resource_block:7' : 10000,
-    'gregtech:ore_magnetite_0' : 10000,
-    'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_cobaltite_0' : 10000,
-    'gregtech:ore_chalcopyrite_0' : 10000,
-    'gregtech:ore_sphalerite_0' : 10000,
-    'gregtech:ore_enargite_0' : 10000,
-    'gregtech:ore_pyrochlore_0' : 10000,
-    'gregtech:ore_wolframite_0' : 10000,
-    'gregtech:ore_scheelite_0' : 10000,
-    'gregtech:ore_redstone_0' : 10000,
-    'gregtech:ore_cassiterite_0' : 10000,
-    'gregtech:ore_uraninite_0' : 10000
+            //T1 but better
+    'gregtech:ore_cassiterite_0' : 7500,
+    'gregtech:ore_chalcopyrite_0' : 5500,
+    'gregtech:ore_cobaltite_0' : 5000,
+    'gregtech:ore_enargite_0' : 7500,
+    'gregtech:ore_magnetite_0' : 9000,
+    'gregtech:ore_pyrite_0' : 7500,
+    'gregtech:ore_pyrochlore_0' : 1000,
+    'gregtech:ore_redstone_0' : 5000,
+    'gregtech:ore_sphalerite_0' : 9000,
+    //T3
+    'gregtech:ore_scheelite_0' : 1250,
+    'gregtech:ore_wolframite_0' : 1000,
+    //T4
+    //'susy:resource_block:7' : 10000,
+    'gregtech:ore_uraninite_0' : 500
 ];
 
 def hydrothermal_tier_1 = [
