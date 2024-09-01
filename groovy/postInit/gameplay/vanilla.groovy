@@ -7,5 +7,3 @@ mods.jei.ingredient.hide(item('minecraft:enchanting_table'));
 
 //Remove Potions
 mods.jei.ingredient.hide(item('minecraft:brewing_stand'));
-
-item('biomesoplenty:mudball').Item.setMaxStackSize(64)
