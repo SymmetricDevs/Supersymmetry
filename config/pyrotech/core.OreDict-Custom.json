@@ -119,13 +119,7 @@
       "pyrotech:dense_nether_coal_ore"
     ],
     "rock": [
-      "pyrotech:rock:0",
-      "pyrotech:rock:2",
-      "pyrotech:rock:1",
-      "pyrotech:rock:3",
-      "pyrotech:rock:6",
-      "pyrotech:rock:8",
-      "pyrotech:rock:10"
+      "pyrotech:rock:0"
     ],
     "rockLimestone": [
       "pyrotech:rock:8"
