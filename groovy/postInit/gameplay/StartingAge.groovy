@@ -41,6 +41,34 @@ crafting.addShapeless("gregtech:mud_from_dirt", item('biomesoplenty:mud'), [
         ore('dirt')
 ])
 
+// Stone Tools
+crafting.replaceShaped("gregtech:axe_stone", item('gregtech:axe').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 95, 'Durability': 0, 'ToolSpeed': 1.0F, 'HarvestLevel': 1, 'AttackDamage': 6.0F, 'AttackSpeed': -3.2F], 'HideFlags': 2, 'GT.Behaviours': ['DisableShields': (byte) 1, 'TreeFelling': (byte) 1]]), [
+        [ore('rock'), item('pyrotech:material', 12)],
+        [ore('rock'), ore("stickWood")]
+])
+
+crafting.replaceShaped("gregtech:hoe_stone", item('gregtech:hoe').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 95, 'Durability': 0, 'AttackDamage': 0.0F, 'AttackSpeed': -1.0F, 'HarvestLevel': 1], 'HideFlags': 2, 'GT.Behaviours': []]), [
+        [item('pyrotech:material', 12), ore('rock')],
+        [ore("stickWood"), null]
+])
+
+crafting.replaceShaped("gregtech:pickaxe_stone", item('gregtech:pickaxe').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 95, 'Durability': 0, 'ToolSpeed': 2.0F, 'HarvestLevel': 1, 'AttackDamage': 2.0F, 'AttackSpeed': -2.8F], 'HideFlags': 2, 'GT.Behaviours': ['TorchPlacing': (byte) 1]]), [
+        [ore('rock'), item('pyrotech:material', 12)],
+        [ore("stickWood"), ore('rock')]
+])
+
+crafting.replaceShaped("gregtech:shovel_stone", item('gregtech:shovel').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 95, 'Durability': 0, 'ToolSpeed': 2.0F, 'HarvestLevel': 1, 'AttackDamage': 2.5F, 'AttackSpeed': -3.0F], 'HideFlags': 2, 'GT.Behaviours': []]), [
+        [ore('rock'), item('pyrotech:material', 12)],
+        [ore("stickWood"), null]
+])
+
+crafting.replaceShaped("gregtech:hammer_stone", item('gregtech:hammer').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 95, 'Durability': 0, 'ToolSpeed': 3.0F, 'HarvestLevel': 1, 'AttackDamage': 5.0F, 'AttackSpeed': -3.8F], 'HideFlags': 2, 'GT.Behaviours': []]), [
+        [ore('rock'), ore('rock')],
+        [ore("stickWood"), item('pyrotech:material', 12)]
+])
+
+// Flint Tools
+
 //Magnetite Chunk Crafting
 crafting.addShapeless("magnetite_chunk", metaitem('chunk.magnetite'), [ore('oreMagnetite'), ore('rock')]);
 crafting.addShapeless("magnetite_chunk_1", metaitem('chunk.magnetite'), [ore('oreVanadiumMagnetite'), ore('rock')]);
