@@ -1,12 +1,55 @@
 package postInit.mod
 
+import com.codetaylor.mc.pyrotech.modules.tech.basic.ModuleTechBasic;
+import com.codetaylor.mc.pyrotech.modules.tech.basic.block.BlockKilnPit;
+import net.minecraft.util.EnumHand;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.world.BlockEvent;
+
+import static com.codetaylor.mc.pyrotech.modules.tech.basic.block.BlockKilnPit.VARIANT;
+
 log.infoMC("Running Pyrotech.groovy...")
+
+// Make it easier to create a pit kiln
+event_manager.listen { PlayerInteractEvent.RightClickBlock event ->
+    EnumFacing facing = event.getFace();
+    ItemStack stack = event.getItemStack();
+    if (facing == EnumFacing.UP && stack.isItemEqual(item('pyrotech:material', 2))) {
+        World world = event.getWorld();
+        BlockPos pos = event.getPos();
+        EntityPlayer player = event.getEntityPlayer();
+        IBlockState state = world.getBlockState(pos);
+        if (state == ModuleTechBasic.Blocks.KILN_PIT.getDefaultState().withProperty(VARIANT, BlockKilnPit.EnumType.EMPTY) && stack.getCount() >= 3) {
+            world.setBlockState(pos, state.withProperty(VARIANT, BlockKilnPit.EnumType.THATCH));
+            stack.setCount(stack.getCount() - 3);
+        } else if (player.isSneaking() && state.isSideSolid(world, pos, facing) && world.isAirBlock(pos.offset(facing))) {
+            world.setBlockState(pos.offset(facing), ModuleTechBasic.Blocks.KILN_PIT.getDefaultState().withProperty(VARIANT, BlockKilnPit.EnumType.EMPTY));
+            stack.setCount(stack.getCount() - 1);
+        } else {
+            return;
+        }
+        event.setCanceled(true);
+        if (event.getSide().isClient()) {
+            player.swingArm(EnumHand.MAIN_HAND);
+        }
+    }
+}
+
+// Re-balance pit kiln drops
+event_manager.listen { BlockEvent.HarvestDropsEvent event ->
+    if (event.getState().getBlock() instanceof BlockKilnPit) {
+        event.getDrops().replaceAll(stack -> stack.isItemEqual(item('pyrotech:kiln_pit')) ? (item('pyrotech:material', 2) * stack.getCount()) :
+                stack.isItemEqual(item('pyrotech:thatch')) ? (item('pyrotech:material', 2) * (3 * stack.getCount())) : stack); // Yeah I know this is caused but it works so :clueless:
+    }
+}
 
 def name_removals = [
         "pyrotech:crude_hammer",
         "pyrotech:tech/basic/worktable",
         "pyrotech:tech/basic/worktable_stone",
         "pyrotech:tech/basic/anvil_obsidian",
+        "pyrotech:tech/basic/dried_plant_fibers_from_pit_kiln",
+        "pyrotech:tech/basic/kiln_pit",
         "pyrotech:crafting_table"
 ]
 
@@ -26,6 +69,8 @@ for (item in categories_hides) {
 }
 
 mods.jei.catalyst.add("pyrotech.anvil.granite", item('pyrotech:anvil_iron_plated'))
+mods.jei.catalyst.remove("pyrotech.pit.kiln", item('pyrotech:kiln_pit'))
+mods.jei.catalyst.add("pyrotech.pit.kiln", item('pyrotech:material', 2), item('pyrotech:kiln_pit'))
 
 mods.jei.ingredient.yeet(
         item('pyrotech:living_tar'),
