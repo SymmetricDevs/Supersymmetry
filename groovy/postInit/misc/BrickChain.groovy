@@ -69,7 +69,7 @@ CompressBrickRecipes('dustFireclay', 'compressed.fireclay')
 def mudbrick_mix_ingredients = [
     item('biomesoplenty:mudball'),
     metaitem("sand.dust"),
-    metaitem('straw'),
+    item('pyrotech:material', 2),
     item('minecraft:clay_ball')
 ]
 
