@@ -103,6 +103,8 @@ mods.jei.ingredient.yeet(
 
 mods.pyrotech.soaking_pot.remove("pyrotech:living_tar")
 
+mods.pyrotech.soaking_pot.add("supersymmetry:slaked_lime", item('gregtech:meta_dust', 360), fluid('water') * 50, item('gregtech:meta_dust', 8100), 0)
+
 crafting.replaceShaped("pyrotech:tech/machine/mechanical_hopper", item('pyrotech:mechanical_hopper'), [
         [item('pyrotech:material', 16), null, item('pyrotech:material', 16)],
         [item('pyrotech:material', 16), null, item('pyrotech:material', 16)],
