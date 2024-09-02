@@ -47,6 +47,7 @@ def name_removals = [
         "pyrotech:tech/basic/worktable",
         "pyrotech:tech/basic/worktable_stone",
         "pyrotech:tech/basic/anvil_obsidian",
+        "pyrotech:tech/basic/anvil_iron_plated",
         "pyrotech:tech/basic/dried_plant_fibers_from_pit_kiln",
         "pyrotech:tech/basic/kiln_pit",
         "pyrotech:crafting_table",
@@ -58,7 +59,8 @@ def name_removals = [
         "pyrotech:obsidian_hammer",
         "pyrotech:tech/bloomery/tongs_obsidian",
         "pyrotech:tech/machine/sawmill_blade_obsidian",
-        "pyrotech:tech/machine/cog_obsidian"
+        "pyrotech:tech/machine/cog_obsidian",
+        "pyrotech:pyrotech:straw_bed"
 ]
 
 for (item in name_removals) {
@@ -76,7 +78,6 @@ for (item in categories_hides) {
     mods.jei.category.hideCategory(item);
 }
 
-mods.jei.catalyst.add("pyrotech.anvil.granite", item('pyrotech:anvil_iron_plated'))
 mods.jei.catalyst.remove("pyrotech.pit.kiln", item('pyrotech:kiln_pit'))
 mods.jei.catalyst.add("pyrotech.pit.kiln", item('pyrotech:material', 2), item('pyrotech:kiln_pit'))
 
@@ -105,6 +106,7 @@ mods.jei.ingredient.yeet(
         item('pyrotech:rock_grass'),
         item('pyrotech:rock_netherrack'),
         item('pyrotech:anvil_obsidian'),
+        item('pyrotech:anvil_iron_plated'),
         item('pyrotech:obsidian_hammer'),
         item('pyrotech:tongs_obsidian'),
         item('pyrotech:sawmill_blade_obsidian'),
@@ -115,27 +117,54 @@ mods.jei.ingredient.yeet(
         item('pyrotech:bucket_wood'),
         item('pyrotech:bucket_stone'),
         item('pyrotech:matchstick'),
-        item('pyrotech:flint_and_tinder')
+        item('pyrotech:flint_and_tinder'),
+        item('pyrotech:straw_bed')
 )
 
 mods.pyrotech.soaking_pot.remove("pyrotech:living_tar")
 
-mods.pyrotech.soaking_pot.add("supersymmetry:slaked_lime", item('gregtech:meta_dust', 360), fluid('water') * 50, item('gregtech:meta_dust', 8100), 0)
+// Slaked lime
+mods.pyrotech.soaking_pot.recipeBuilder()
+        .name("supersymmetry:slaked_lime")
+        .input(item('gregtech:meta_dust', 360))
+        .fluidInput(fluid('water') * 50)
+        .output(item('gregtech:meta_dust', 8100))
+        .time(1)
+        .campfireRequired(false)
+        .register()
 
 // Clay
 // Clay to brick
 mods.pyrotech.kiln.remove("pyrotech:pit_kiln/brick")
-mods.pyrotech.kiln.add("pyrotech:pit_kiln/brick", item('gregtech:meta_item_1', 349), item('minecraft:brick'), 16800, 0.33, [
-        item('pyrotech:material', 7),
-        item('pyrotech:material', 6),
-        item('pyrotech:material')
-])
+mods.pyrotech.kiln.recipeBuilder()
+        .name("pyrotech:pit_kiln/brick")
+        .input(item('gregtech:meta_item_1', 349))
+        .output(item('minecraft:brick'))
+        .burnTime(16800)
+        .failureChance(0.33)
+        .failureOutput(
+                item('pyrotech:material', 7),
+                item('pyrotech:material', 6),
+                item('pyrotech:material')
+        )
+        .register()
 
 // Straw
 crafting.addShapeless("supersymmetry:cutting_wheat", item('pyrotech:material', 2), [
         item('minecraft:wheat'),
         ore('craftingToolKnife')
 ])
+
+// Masonry brick
+mods.pyrotech.anvil.remove("pyrotech:brick_stone")
+mods.pyrotech.anvil.recipeBuilder()
+        .name("pyrotech:brick_stone")
+        .input(ore('stone'))
+        .output(item('pyrotech:material', 16) * 4)
+        .typePickaxe()
+        .hits(4)
+        .tierGranite()
+        .register()
 
 // Bow drill
 crafting.replaceShaped("pyrotech:ignition/bow_drill", item('pyrotech:bow_drill'), [
