@@ -67,6 +67,11 @@ crafting.replaceShaped("gregtech:hammer_stone", item('gregtech:hammer').withNbt(
         [ore("stickWood"), item('pyrotech:material', 12)]
 ])
 
+crafting.replaceShaped("gregtech:knife_stone", item('gregtech:knife').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 95, 'Durability': 0, 'AttackDamage': 1.0F, 'AttackSpeed': 2.5F], 'HideFlags': 2, 'GT.Behaviours': []]), [
+        [null, ore('rock')],
+        [ore("stickWood"), item('pyrotech:material', 12)]
+])
+
 // Flint Tools
 
 //Magnetite Chunk Crafting
