@@ -50,7 +50,10 @@ def name_removals = [
         "pyrotech:tech/basic/anvil_obsidian",
         "pyrotech:tech/basic/dried_plant_fibers_from_pit_kiln",
         "pyrotech:tech/basic/kiln_pit",
-        "pyrotech:crafting_table"
+        "pyrotech:crafting_table",
+        "pyrotech:unfired_brick",
+        "pyrotech:bucket/bucket_wood",
+        "pyrotech:bucket/bucket_stone"
 ]
 
 for (item in name_removals) {
@@ -98,13 +101,29 @@ mods.jei.ingredient.yeet(
         item('pyrotech:rock_netherrack'),
         item('pyrotech:anvil_obsidian'),
         item('pyrotech:worktable'),
-        item('pyrotech:worktable_stone')
+        item('pyrotech:worktable_stone'),
+        item('pyrotech:material', 24),
+        item('pyrotech:bucket_wood'),
+        item('pyrotech:bucket_stone')
 )
 
 mods.pyrotech.soaking_pot.remove("pyrotech:living_tar")
 
 mods.pyrotech.soaking_pot.add("supersymmetry:slaked_lime", item('gregtech:meta_dust', 360), fluid('water') * 50, item('gregtech:meta_dust', 8100), 0)
 
+// Clay
+// Clay to brick
+mods.pyrotech.kiln.remove("pyrotech:pit_kiln/brick")
+
+mods.pyrotech.kiln.add("pyrotech:pit_kiln/brick", item('gregtech:meta_item_1', 349), item('minecraft:brick'), 16800, 0.33, [item('pyrotech:material', 7), item('pyrotech:material', 6), item('pyrotech:material')])
+
+// Clay bucket
+crafting.replaceShaped("pyrotech:bucket/bucket_clay_unfired", item('pyrotech:bucket_clay_unfired'), [
+        [item('gregtech:meta_item_1', 349), null, item('gregtech:meta_item_1', 349)],
+        [null, item('gregtech:meta_item_1', 349), null]
+])
+
+// Mechanical hopper
 crafting.replaceShaped("pyrotech:tech/machine/mechanical_hopper", item('pyrotech:mechanical_hopper'), [
         [item('pyrotech:material', 16), null, item('pyrotech:material', 16)],
         [item('pyrotech:material', 16), null, item('pyrotech:material', 16)],
