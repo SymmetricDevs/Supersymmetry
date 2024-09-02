@@ -76,52 +76,58 @@ def orthomagmatic_tier_4 = [
     'gregtech:ore_columbite_0' : 500,
     'gregtech:ore_perovskite_0' : 7500,
     'minecraft:soul_sand' : 100,
-    'gregtech:ore_vanadiferous_titanomagnetite_0' :7500
+    'gregtech:ore_vanadiferous_titanomagnetite_0' :7500,
     //T4
-    'gregtech:ore_baddeleyite_0' : 200,
+    'gregtech:ore_baddeleyite_0' : 200
     //'susy:resource_block:8' : 10000,
     //'gregtech:ore_thortveitite_0' : 10000,
 ];
 
 def metamorphic_tier_1 = [
+    //T1
+    'gregtech:ore_arsenopyrite_0' : 7500,
+    'gregtech:ore_cinnabar_0' : 2500
+    'gregtech:ore_cobaltite_0' : 1000,
     'gregtech:ore_magnetite_0' : 10000,
+    'gregtech:ore_pyrargyrite_0' : 5000,
     'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_cobaltite_0' : 10000,
-    'gregtech:ore_realgar_0' : 10000,
-    'gregtech:ore_arsenopyrite_0' : 10000,
-    'gregtech:ore_pyrargyrite_0' : 10000,
-    'gregtech:ore_redstone_0' : 10000,
-    'gregtech:ore_tetrahedrite_0' : 10000,
-    'gregtech:ore_cinnabar_0' : 10000
+    'gregtech:ore_realgar_0' : 7500,
+    'gregtech:ore_redstone_0' : 7500,
+    'gregtech:ore_tetrahedrite_0' : 9000
 ];
 
 def metamorphic_tier_2 = [
-    'gregtech:ore_magnesite_0' : 10000,
+        //T1
+    'gregtech:ore_arsenopyrite_0' : 7500,
+    'gregtech:ore_cinnabar_0' : 2500,
+    'gregtech:ore_cobaltite_0' : 1000,
     'gregtech:ore_magnetite_0' : 10000,
+    'gregtech:ore_pyrargyrite_0' : 5000,
     'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_cobaltite_0' : 10000,
-    'gregtech:ore_realgar_0' : 10000,
-    'gregtech:ore_arsenopyrite_0' : 10000,
-    'gregtech:ore_pyrargyrite_0' : 10000,
-    'gregtech:ore_stephanite_0' : 10000,
-    'gregtech:ore_redstone_0' : 10000,
-    'gregtech:ore_tetrahedrite_0' : 10000,
-    'gregtech:ore_cinnabar_0' : 10000
+    'gregtech:ore_realgar_0' : 7500,
+    'gregtech:ore_redstone_0' : 7500,
+    'gregtech:ore_tetrahedrite_0' : 9000,
+    //T2
+    'gregtech:ore_stephanite_0' : 5000,
+    'gregtech:ore_magnesite_0' : 7500
 ];
 
 def metamorphic_tier_3 = [
-    'gregtech:ore_magnesite_0' : 10000,
-    'gregtech:ore_ilmenite_0' : 10000,
+    //T1
+    'gregtech:ore_arsenopyrite_0' : 7500,
+    'gregtech:ore_cinnabar_0' : 2500,
+    'gregtech:ore_cobaltite_0' : 1000,
     'gregtech:ore_magnetite_0' : 10000,
+    'gregtech:ore_pyrargyrite_0' : 5000,
     'gregtech:ore_pyrite_0' : 10000,
-    'gregtech:ore_cobaltite_0' : 10000,
-    'gregtech:ore_realgar_0' : 10000,
-    'gregtech:ore_arsenopyrite_0' : 10000,
-    'gregtech:ore_pyrargyrite_0' : 10000,
-    'gregtech:ore_stephanite_0' : 10000,
-    'gregtech:ore_redstone_0' : 10000,
-    'gregtech:ore_tetrahedrite_0' : 10000,
-    'gregtech:ore_cinnabar_0' : 10000
+    'gregtech:ore_realgar_0' : 7500,
+    'gregtech:ore_redstone_0' : 7500,
+    'gregtech:ore_tetrahedrite_0' : 9000,
+    //T2
+    'gregtech:ore_stephanite_0' : 5000,
+    'gregtech:ore_magnesite_0' : 7500,
+    //T3
+    'gregtech:ore_ilmenite_0' : 5000
 ];
 
 def sedimentary_tier_1 = [
