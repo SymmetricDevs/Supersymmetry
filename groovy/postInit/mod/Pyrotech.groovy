@@ -17,12 +17,11 @@ event_manager.listen { PlayerInteractEvent.RightClickBlock event ->
     if (facing == EnumFacing.UP && stack.isItemEqual(item('pyrotech:material', 2))) {
         World world = event.getWorld();
         BlockPos pos = event.getPos();
-        EntityPlayer player = event.getEntityPlayer();
         IBlockState state = world.getBlockState(pos);
         if (state == ModuleTechBasic.Blocks.KILN_PIT.getDefaultState().withProperty(VARIANT, BlockKilnPit.EnumType.EMPTY) && stack.getCount() >= 3) {
             world.setBlockState(pos, state.withProperty(VARIANT, BlockKilnPit.EnumType.THATCH));
             stack.setCount(stack.getCount() - 3);
-        } else if (player.isSneaking() && state.isSideSolid(world, pos, facing) && world.isAirBlock(pos.offset(facing))) {
+        } else if (state.isSideSolid(world, pos, facing) && world.isAirBlock(pos.offset(facing))) {
             world.setBlockState(pos.offset(facing), ModuleTechBasic.Blocks.KILN_PIT.getDefaultState().withProperty(VARIANT, BlockKilnPit.EnumType.EMPTY));
             stack.setCount(stack.getCount() - 1);
         } else {
@@ -30,7 +29,7 @@ event_manager.listen { PlayerInteractEvent.RightClickBlock event ->
         }
         event.setCanceled(true);
         if (event.getSide().isClient()) {
-            player.swingArm(EnumHand.MAIN_HAND);
+            event.getEntityPlayer().swingArm(EnumHand.MAIN_HAND);
         }
     }
 }
