@@ -53,7 +53,13 @@ def name_removals = [
         "pyrotech:crafting_table",
         "pyrotech:unfired_brick",
         "pyrotech:bucket/bucket_wood",
-        "pyrotech:bucket/bucket_stone"
+        "pyrotech:bucket/bucket_stone",
+        "pyrotech:ignition/matchstick",
+        "pyrotech:ignition/flint_and_tinder",
+        "pyrotech:obsidian_hammer",
+        "pyrotech:tech/bloomery/tongs_obsidian",
+        "pyrotech:tech/machine/sawmill_blade_obsidian",
+        "pyrotech:tech/machine/cog_obsidian"
 ]
 
 for (item in name_removals) {
@@ -100,11 +106,17 @@ mods.jei.ingredient.yeet(
         item('pyrotech:rock_grass'),
         item('pyrotech:rock_netherrack'),
         item('pyrotech:anvil_obsidian'),
+        item('pyrotech:obsidian_hammer'),
+        item('pyrotech:tongs_obsidian'),
+        item('pyrotech:sawmill_blade_obsidian'),
+        item('pyrotech:cog_obsidian'),
         item('pyrotech:worktable'),
         item('pyrotech:worktable_stone'),
         item('pyrotech:material', 24),
         item('pyrotech:bucket_wood'),
-        item('pyrotech:bucket_stone')
+        item('pyrotech:bucket_stone'),
+        item('pyrotech:matchstick'),
+        item('pyrotech:flint_and_tinder')
 )
 
 mods.pyrotech.soaking_pot.remove("pyrotech:living_tar")
@@ -114,8 +126,24 @@ mods.pyrotech.soaking_pot.add("supersymmetry:slaked_lime", item('gregtech:meta_d
 // Clay
 // Clay to brick
 mods.pyrotech.kiln.remove("pyrotech:pit_kiln/brick")
+mods.pyrotech.kiln.add("pyrotech:pit_kiln/brick", item('gregtech:meta_item_1', 349), item('minecraft:brick'), 16800, 0.33, [
+        item('pyrotech:material', 7),
+        item('pyrotech:material', 6),
+        item('pyrotech:material')
+])
 
-mods.pyrotech.kiln.add("pyrotech:pit_kiln/brick", item('gregtech:meta_item_1', 349), item('minecraft:brick'), 16800, 0.33, [item('pyrotech:material', 7), item('pyrotech:material', 6), item('pyrotech:material')])
+// Straw
+crafting.addShapeless("supersymmetry:cutting_wheat", item('pyrotech:material', 2), [
+        item('minecraft:wheat'),
+        ore('craftingToolKnife')
+])
+
+// Bow drill
+crafting.replaceShaped("pyrotech:ignition/bow_drill", item('pyrotech:bow_drill'), [
+        [item('pyrotech:material', 14), ore('stickWood'), ore('craftingToolKnife')],
+        [item('pyrotech:material', 14), ore('stickLongWood'), ore('stickWood')],
+        [item('pyrotech:material', 14), ore('stickWood'), null]
+])
 
 // Clay bucket
 crafting.replaceShaped("pyrotech:bucket/bucket_clay_unfired", item('pyrotech:bucket_clay_unfired'), [
@@ -130,6 +158,7 @@ crafting.replaceShaped("pyrotech:tech/machine/mechanical_hopper", item('pyrotech
         [null, item('pyrotech:material', 16), null]
 ])
 
+// Mechanical hopper with a stone gear
 crafting.addShaped("pyrotech:tech/machine/mechanical_hopper_with_gear", item('pyrotech:mechanical_hopper').withNbt(['BlockEntityTag': ['id': 'pyrotech:tile.tilestonehopper', 'ForgeCaps': [], 'cogStackHandler': ['Items': [['Slot': 0, 'id': 'pyrotech:cog_stone', 'Count': 1, 'Damage': (short) 0]], 'Size': 1]], 'display': ['Lore': ['(+NBT)']]]), [
         [item('pyrotech:material', 16), null, item('pyrotech:material', 16)],
         [item('pyrotech:material', 16), item('pyrotech:cog_stone'), item('pyrotech:material', 16)],
