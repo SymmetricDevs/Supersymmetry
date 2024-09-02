@@ -6,8 +6,6 @@ import net.minecraft.util.EnumHand;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 
-import static com.codetaylor.mc.pyrotech.modules.tech.basic.block.BlockKilnPit.VARIANT;
-
 log.infoMC("Running Pyrotech.groovy...")
 
 // Make it easier to create a pit kiln
@@ -18,11 +16,11 @@ event_manager.listen { PlayerInteractEvent.RightClickBlock event ->
         World world = event.getWorld();
         BlockPos pos = event.getPos();
         IBlockState state = world.getBlockState(pos);
-        if (state == ModuleTechBasic.Blocks.KILN_PIT.getDefaultState().withProperty(VARIANT, BlockKilnPit.EnumType.EMPTY) && stack.getCount() >= 3) {
-            world.setBlockState(pos, state.withProperty(VARIANT, BlockKilnPit.EnumType.THATCH));
+        if (state == ModuleTechBasic.Blocks.KILN_PIT.getDefaultState().withProperty(BlockKilnPit.VARIANT, BlockKilnPit.EnumType.EMPTY) && stack.getCount() >= 3) {
+            world.setBlockState(pos, state.withProperty(BlockKilnPit.VARIANT, BlockKilnPit.EnumType.THATCH));
             stack.setCount(stack.getCount() - 3);
         } else if (state.isSideSolid(world, pos, facing) && world.isAirBlock(pos.offset(facing))) {
-            world.setBlockState(pos.offset(facing), ModuleTechBasic.Blocks.KILN_PIT.getDefaultState().withProperty(VARIANT, BlockKilnPit.EnumType.EMPTY));
+            world.setBlockState(pos.offset(facing), ModuleTechBasic.Blocks.KILN_PIT.getDefaultState().withProperty(BlockKilnPit.VARIANT, BlockKilnPit.EnumType.EMPTY));
             stack.setCount(stack.getCount() - 1);
         } else {
             return;
@@ -60,7 +58,16 @@ def name_removals = [
         "pyrotech:tech/bloomery/tongs_obsidian",
         "pyrotech:tech/machine/sawmill_blade_obsidian",
         "pyrotech:tech/machine/cog_obsidian",
-        "pyrotech:pyrotech:straw_bed"
+        "pyrotech:straw_bed",
+        "pyrotech:clay",
+        "pyrotech:cobbled_limestone",
+        "pyrotech:cobbled_andesite",
+        "pyrotech:cobbled_diorite",
+        "pyrotech:cobbled_granite",
+        "pyrotech:leather_leggings_fireproof",
+        "pyrotech:leather_helmet_fireproof",
+        "pyrotech:leather_chestplate_fireproof",
+        "pyrotech:leather_boots_fireproof"
 ]
 
 for (item in name_removals) {
@@ -113,15 +120,54 @@ mods.jei.ingredient.yeet(
         item('pyrotech:cog_obsidian'),
         item('pyrotech:worktable'),
         item('pyrotech:worktable_stone'),
+        item('pyrotech:material', 8),
+        item('pyrotech:material', 22),
         item('pyrotech:material', 24),
+        item('pyrotech:material', 28),
+        item('pyrotech:cobblestone', 3),
         item('pyrotech:bucket_wood'),
         item('pyrotech:bucket_stone'),
         item('pyrotech:matchstick'),
         item('pyrotech:flint_and_tinder'),
-        item('pyrotech:straw_bed')
+        item('pyrotech:straw_bed'),
+        item('pyrotech:limestone')
 )
 
+def furnace_removals = [
+        item('pyrotech:cobblestone', 3),
+        item('pyrotech:material', 28)
+]
+
+for (item in furnace_removals) {
+        furnace.removeByInput(item);
+}
+
+// Util closures
+def kiln_remove = { String string ->
+        mods.pyrotech.kiln.remove("pyrotech:" + string)
+        mods.pyrotech.kiln.remove("pyrotech:pit_kiln/" + string) // TODO
+        mods.pyrotech.kiln.remove("pyrotech:stone_kiln/pit_kiln/" + string) // TODO
+}
+
 mods.pyrotech.soaking_pot.remove("pyrotech:living_tar")
+
+// Remove pyrotech limestone
+mods.pyrotech.anvil.remove("pyrotech:limestone_to_cobbled")
+mods.pyrotech.anvil.remove("pyrotech:cobbled_limestone_to_rocks")
+mods.pyrotech.anvil.remove("pyrotech:limestone_rocks_to_crushed_limestone")
+mods.pyrotech.soaking_pot.remove("pyrotech:slaked_lime")
+kiln_remove("quicklime") // TODO: add a recipe for SuSy quicklime
+kiln_remove("limestone")
+
+// Limestone dust
+mods.pyrotech.anvil.recipeBuilder()
+        .name("supersymmetry:limestone_dust")
+        .input(item('susy:susy_stone_cobble', 2))
+        .output(item('gregtech:meta_dust', 27202))
+        .typeHammer()
+        .hits(2)
+        .tierGranite()
+        .register()
 
 // Slaked lime
 mods.pyrotech.soaking_pot.recipeBuilder()
@@ -135,7 +181,7 @@ mods.pyrotech.soaking_pot.recipeBuilder()
 
 // Clay
 // Clay to brick
-mods.pyrotech.kiln.remove("pyrotech:pit_kiln/brick")
+kiln_remove("brick")
 mods.pyrotech.kiln.recipeBuilder()
         .name("pyrotech:pit_kiln/brick")
         .input(item('gregtech:meta_item_1', 349))
@@ -191,4 +237,10 @@ crafting.addShaped("pyrotech:tech/machine/mechanical_hopper_with_gear", item('py
         [item('pyrotech:material', 16), null, item('pyrotech:material', 16)],
         [item('pyrotech:material', 16), item('pyrotech:cog_stone'), item('pyrotech:material', 16)],
         [null, item('pyrotech:material', 16), null]
+])
+
+// Refractory clay
+crafting.replaceShaped("pyrotech:refractory_clay_ball", item('pyrotech:material', 4) * 2, [
+        [ore('dustCalciumHydroxide'), item('pyrotech:material')],
+        [ore('dustFlint'), ore('ingotClay')]
 ])
