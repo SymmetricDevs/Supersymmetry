@@ -367,7 +367,7 @@ def alluvial_tier_3 = [
     //T1.3
     'gregtech:ore_cassiterite_0' : 10000,
     'susy:resource_block:10' : 500,
-    'susy:resource_block:11' : 7500
+    'susy:resource_block:11' : 7500,
     //T3
     'minecraft:soul_sand' : 10000,
 ];
@@ -376,7 +376,7 @@ def alluvial_tier_4 = [
     //T1.4
     'gregtech:ore_cassiterite_0' : 10000,
     'susy:resource_block:10' : 1000,
-    'susy:resource_block:11' : 10000
+    'susy:resource_block:11' : 10000,
     //T4
     'minecraft:soul_sand' : 100,
     'susy:resource_block:6' : 75000,
