@@ -2,6 +2,7 @@ package postInit.mod
 
 import com.codetaylor.mc.pyrotech.modules.tech.basic.ModuleTechBasic;
 import com.codetaylor.mc.pyrotech.modules.tech.basic.block.BlockKilnPit;
+import com.cleanroommc.groovyscript.api.IIngredient;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
@@ -143,10 +144,64 @@ for (item in furnace_removals) {
 }
 
 // Util closures
-def kiln_remove = { String string ->
-        mods.pyrotech.kiln.remove("pyrotech:" + string)
-        mods.pyrotech.kiln.remove("pyrotech:pit_kiln/" + string) // TODO
-        mods.pyrotech.kiln.remove("pyrotech:stone_kiln/pit_kiln/" + string) // TODO
+def kiln_remove = { String string, int tier = 0 ->
+
+        def domain = "pyrotech:"
+        def prefix = ""
+        switch (tier) {
+                case 0:
+                        mods.pyrotech.pit_kiln.remove(domain + prefix + string)
+                        prefix = "pit_kiln/" + prefix
+                case 1:
+                        mods.pyrotech.stone_kiln.remove(domain + prefix + string)
+                        prefix = "stone_kiln/" + prefix
+                default:
+                        mods.pyrotech.brick_kiln.remove(domain + prefix + string)
+        }
+}
+
+def kiln_add = { String name, IIngredient itemInput, ItemStack output, int burnTime, ArrayList<ItemStack> failureOutput,
+                 ArrayList<Float> failureChance = [0.33, 0.08, 0.02], int tier = 0, boolean isSuSyRecipe = false ->
+
+        def domain = isSuSyRecipe ? "supersymmetry:" : "pyrotech:"
+        def prefix = ""
+        switch(tier) {
+                case 0:
+                        mods.pyrotech.pit_kiln.recipeBuilder()
+                                .name(domain + prefix + name)
+                                .input(itemInput)
+                                .output(output)
+                                .burnTime(burnTime)
+                                .failureChance(failureChance[0])
+                                .failureOutput(failureOutput)
+                                .register()
+                        prefix = "pit_kiln/" + prefix
+                case 1:
+                        mods.pyrotech.stone_kiln.recipeBuilder()
+                                .name(domain + prefix + name)
+                                .input(itemInput)
+                                .output(output)
+                                .burnTime(burnTime.intdiv(2))
+                                .failureChance(failureChance[1])
+                                .failureOutput(failureOutput)
+                                .register()
+                        prefix = "stone_kiln/" + prefix
+                default:
+                        mods.pyrotech.brick_kiln.recipeBuilder()
+                                .name(domain + prefix + name)
+                                .input(itemInput)
+                                .output(output)
+                                .burnTime(burnTime.intdiv(4))
+                                .failureChance(failureChance[2])
+                                .failureOutput(failureOutput)
+                                .register()
+        }
+}
+
+def kiln_replace = { String name, IIngredient itemInput, ItemStack output, int burnTime, ArrayList<ItemStack> failureOutput,
+                     ArrayList<Float> failureChance = [0.33, 0.08, 0.02], int tier = 0 ->
+        kiln_remove(name, tier)
+        kiln_add(name, itemInput, output, burnTime, failureOutput, failureChance, tier)
 }
 
 mods.pyrotech.soaking_pot.remove("pyrotech:living_tar")
@@ -156,8 +211,10 @@ mods.pyrotech.anvil.remove("pyrotech:limestone_to_cobbled")
 mods.pyrotech.anvil.remove("pyrotech:cobbled_limestone_to_rocks")
 mods.pyrotech.anvil.remove("pyrotech:limestone_rocks_to_crushed_limestone")
 mods.pyrotech.soaking_pot.remove("pyrotech:slaked_lime")
-kiln_remove("quicklime") // TODO: add a recipe for SuSy quicklime
 kiln_remove("limestone")
+
+// Quicklime
+kiln_replace("quicklime", ore('dustLimestone'), item('gregtech:meta_dust', 360), 4800, [item('gregtech:meta_dust', 254)], [0.0, 0.0, 0.0], 1)
 
 // Limestone dust
 mods.pyrotech.anvil.recipeBuilder()
@@ -186,19 +243,11 @@ crafting.addShapeless("supersymmetry:ash_to_ashes", item('gregtech:meta_dust', 2
 
 // Clay
 // Clay to brick
-kiln_remove("brick")
-mods.pyrotech.kiln.recipeBuilder()
-        .name("pyrotech:pit_kiln/brick")
-        .input(item('gregtech:meta_item_1', 349))
-        .output(item('minecraft:brick'))
-        .burnTime(16800)
-        .failureChance(0.33)
-        .failureOutput(
-                item('pyrotech:material', 7),
-                item('pyrotech:material', 6),
-                item('gregtech:meta_dust', 254)
-        )
-        .register()
+kiln_replace("brick", item('gregtech:meta_item_1', 349), item('minecraft:brick'), 4800, [
+        item('pyrotech:material', 7),
+        item('pyrotech:material', 6),
+        item('gregtech:meta_dust', 254)
+])
 
 // Straw
 crafting.addShapeless("supersymmetry:cutting_wheat", item('pyrotech:material', 2), [
