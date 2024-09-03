@@ -227,7 +227,7 @@ mods.pyrotech.soaking_pot.remove("pyrotech:slaked_lime")
 kiln_remove("limestone")
 
 // Quicklime
-kiln_replace("quicklime", ore('dustLimestone'), item('gregtech:meta_dust', 360), 4800, [
+kiln_replace("quicklime", ore('dustLimestone'), item('gregtech:meta_dust', 360), 2400, [
         item('gregtech:meta_dust', 254)
 ], [0.0, 0.0, 0.0], 1)
 
@@ -258,7 +258,7 @@ crafting.addShapeless("supersymmetry:ash_to_ashes", item('gregtech:meta_dust', 2
 
 // Clay
 // Clay to brick
-kiln_replace("brick", item('gregtech:meta_item_1', 349), item('minecraft:brick'), 4800, [
+kiln_replace("brick", item('gregtech:meta_item_1', 349), item('minecraft:brick'), 2400, [
         item('pyrotech:material', 7),
         item('pyrotech:material', 6),
         item('gregtech:meta_dust', 254)
@@ -328,7 +328,7 @@ crafting.addShaped("pyrotech:refractory_brick_unfired_8", item('pyrotech:materia
 ])
 
 // Refractory brick
-kiln_replace("refractory_brick", item('pyrotech:material', 9), item('pyrotech:material', 5), 6000, [
+kiln_replace("refractory_brick", item('pyrotech:material', 9), item('pyrotech:material', 5), 3000, [
         item('pyrotech:material', 7),
         item('pyrotech:material', 6),
         item('gregtech:meta_dust', 254)
