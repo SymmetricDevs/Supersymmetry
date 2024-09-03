@@ -55,9 +55,11 @@ def name_removals = [
         "pyrotech:bucket/bucket_stone",
         "pyrotech:ignition/matchstick",
         "pyrotech:ignition/flint_and_tinder",
+        "pyrotech:stone_hammer",
         "pyrotech:obsidian_hammer",
         "pyrotech:tech/bloomery/tongs_obsidian",
         "pyrotech:tech/machine/sawmill_blade_obsidian",
+        "pyrotech:tech/machine/cog_wood",
         "pyrotech:tech/machine/cog_obsidian",
         "pyrotech:straw_bed",
         "pyrotech:clay",
@@ -65,6 +67,7 @@ def name_removals = [
         "pyrotech:cobbled_andesite",
         "pyrotech:cobbled_diorite",
         "pyrotech:cobbled_granite",
+        "pyrotech:crafting_table_template",
         "pyrotech:leather_leggings_fireproof",
         "pyrotech:leather_helmet_fireproof",
         "pyrotech:leather_chestplate_fireproof",
@@ -115,9 +118,12 @@ mods.jei.ingredient.yeet(
         item('pyrotech:rock_netherrack'),
         item('pyrotech:anvil_obsidian'),
         item('pyrotech:anvil_iron_plated'),
+        item('pyrotech:crude_hammer'),
+        item('pyrotech:stone_hammer'),
         item('pyrotech:obsidian_hammer'),
         item('pyrotech:tongs_obsidian'),
         item('pyrotech:sawmill_blade_obsidian'),
+        item('pyrotech:cog_wood'),
         item('pyrotech:cog_obsidian'),
         item('pyrotech:worktable'),
         item('pyrotech:worktable_stone'),
@@ -125,10 +131,14 @@ mods.jei.ingredient.yeet(
         item('pyrotech:material', 22),
         item('pyrotech:material', 24),
         item('pyrotech:material', 28),
+        item('pyrotech:material', 33),
+        item('pyrotech:material', 36),
+        item('pyrotech:material', 37),
         item('pyrotech:cobblestone', 3),
         item('pyrotech:bucket_wood'),
         item('pyrotech:bucket_stone'),
         item('pyrotech:matchstick'),
+        item("pyrotech:crafting_table_template"),
         item('pyrotech:flint_and_tinder'),
         item('pyrotech:straw_bed'),
         item('pyrotech:limestone')
@@ -204,7 +214,10 @@ def kiln_replace = { String name, IIngredient itemInput, ItemStack output, int b
         kiln_add(name, itemInput, output, burnTime, failureOutput, failureChance, tier)
 }
 
+// Misc removals
 mods.pyrotech.soaking_pot.remove("pyrotech:living_tar")
+mods.pyrotech.anvil.remove("pyrotech:quartz_from_dense_quartz")
+mods.pyrotech.anvil.remove("pyrotech:redstone_dust_from_dense_redstone")
 
 // Remove pyrotech limestone
 mods.pyrotech.anvil.remove("pyrotech:limestone_to_cobbled")
@@ -214,7 +227,9 @@ mods.pyrotech.soaking_pot.remove("pyrotech:slaked_lime")
 kiln_remove("limestone")
 
 // Quicklime
-kiln_replace("quicklime", ore('dustLimestone'), item('gregtech:meta_dust', 360), 4800, [item('gregtech:meta_dust', 254)], [0.0, 0.0, 0.0], 1)
+kiln_replace("quicklime", ore('dustLimestone'), item('gregtech:meta_dust', 360), 4800, [
+        item('gregtech:meta_dust', 254)
+], [0.0, 0.0, 0.0], 1)
 
 // Limestone dust
 mods.pyrotech.anvil.recipeBuilder()
@@ -293,8 +308,28 @@ crafting.addShaped("pyrotech:tech/machine/mechanical_hopper_with_gear", item('py
         [null, item('pyrotech:material', 16), null]
 ])
 
+// Refractory
 // Refractory clay
 crafting.replaceShaped("pyrotech:refractory_clay_ball", item('pyrotech:material', 4) * 2, [
         [ore('dustCalciumHydroxide'), ore('dustAsh')],
         [ore('dustFlint'), ore('ingotClay')]
 ])
+
+// Unfired refractory brick
+crafting.replaceShapeless("pyrotech:refractory_brick_unfired", item('pyrotech:material', 9), [
+        item('gregtech:meta_item_1', 348),
+        item('pyrotech:material', 4)
+])
+
+crafting.addShaped("pyrotech:refractory_brick_unfired_8", item('pyrotech:material', 9) * 8, [
+        [item('pyrotech:material', 4), item('pyrotech:material', 4), item('pyrotech:material', 4)],
+        [item('pyrotech:material', 4), item('gregtech:meta_item_1', 348), item('pyrotech:material', 4)],
+        [item('pyrotech:material', 4), item('pyrotech:material', 4), item('pyrotech:material', 4)]
+])
+
+// Refractory brick
+kiln_replace("refractory_brick", item('pyrotech:material', 9), item('pyrotech:material', 5), 6000, [
+        item('pyrotech:material', 7),
+        item('pyrotech:material', 6),
+        item('gregtech:meta_dust', 254)
+], [1, 0.05, 0.01], 1)

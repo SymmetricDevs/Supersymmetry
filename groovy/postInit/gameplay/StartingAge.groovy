@@ -41,6 +41,12 @@ crafting.addShapeless("gregtech:mud_from_dirt", item('biomesoplenty:mud'), [
         ore('dirt')
 ])
 
+crafting.addShaped("gregtech:compressed_clay_8", item('gregtech:meta_item_1', 349) * 8, [
+        [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')],
+        [ore('ingotClay'), item('gregtech:meta_item_1', 348), ore('ingotClay')],
+        [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')]
+])
+
 // Stone Tools
 crafting.replaceShaped("gregtech:axe_stone", item('gregtech:axe').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 95, 'Durability': 0, 'ToolSpeed': 1.0F, 'HarvestLevel': 1, 'AttackDamage': 6.0F, 'AttackSpeed': -3.2F], 'HideFlags': 2, 'GT.Behaviours': ['DisableShields': (byte) 1, 'TreeFelling': (byte) 1]]), [
         [ore('rock'), item('pyrotech:material', 12)],
