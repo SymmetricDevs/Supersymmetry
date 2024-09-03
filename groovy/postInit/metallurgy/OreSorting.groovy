@@ -270,7 +270,7 @@ def hydrothermal_tier_1 = [
     'gregtech:ore_arsenopyrite_0' : 1500,
     'gregtech:ore_bornite_0' : 7500,
     'gregtech:ore_cassiterite_0' : 2500,
-    'gregtech:ore_cinnabar_0' : 33333,
+    'gregtech:ore_cinnabar_0' : 3333,
     'gregtech:ore_cobaltite_0' : 1500,
     'gregtech:ore_fluorite_0' : 1000,
     'gregtech:ore_galena_0' : 7500,
@@ -287,7 +287,7 @@ def hydrothermal_tier_2 = [
     'gregtech:ore_arsenopyrite_0' : 1500,
     'gregtech:ore_bornite_0' : 7500,
     'gregtech:ore_cassiterite_0' : 2500,
-    'gregtech:ore_cinnabar_0' : 33333,
+    'gregtech:ore_cinnabar_0' : 3333,
     'gregtech:ore_cobaltite_0' : 1500,
     'gregtech:ore_fluorite_0' : 2500,
     'gregtech:ore_galena_0' : 7500,
@@ -306,7 +306,7 @@ def hydrothermal_tier_3 = [
     'gregtech:ore_arsenopyrite_0' : 1500,
     'gregtech:ore_bornite_0' : 7500,
     'gregtech:ore_cassiterite_0' : 2500,
-    'gregtech:ore_cinnabar_0' : 33333,
+    'gregtech:ore_cinnabar_0' : 3333,
     'gregtech:ore_cobaltite_0' : 1500,
     'gregtech:ore_fluorite_0' : 2500,
     'gregtech:ore_galena_0' : 7500,
@@ -329,7 +329,7 @@ def hydrothermal_tier_4 = [
     'gregtech:ore_arsenopyrite_0' : 1500,
     'gregtech:ore_bornite_0' : 7500,
     'gregtech:ore_cassiterite_0' : 2500,
-    'gregtech:ore_cinnabar_0' : 33333,
+    'gregtech:ore_cinnabar_0' : 3333,
     'gregtech:ore_cobaltite_0' : 1500,
     'gregtech:ore_fluorite_0' : 2500,
     'gregtech:ore_galena_0' : 7500,
@@ -369,7 +369,7 @@ def alluvial_tier_3 = [
     'susy:resource_block:10' : 500,
     'susy:resource_block:11' : 7500,
     //T3
-    'minecraft:soul_sand' : 10000,
+    'minecraft:soul_sand' : 100
 ];
 
 def alluvial_tier_4 = [
@@ -379,7 +379,7 @@ def alluvial_tier_4 = [
     'susy:resource_block:11' : 10000,
     //T4
     'minecraft:soul_sand' : 100,
-    'susy:resource_block:6' : 75000,
+    'susy:resource_block:6' : 7500
 ];
 
 //FORMAT: BASE ROCK, WASHING FLUID, WASTE FLUID, ORE OUTPUT LISTS, STARTING VOLTAGE TIER
