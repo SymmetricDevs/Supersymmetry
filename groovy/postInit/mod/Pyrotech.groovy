@@ -201,7 +201,7 @@ def kiln_add = { String name, IIngredient itemInput, ItemStack output, int burnT
                                 .name(domain + prefix + name)
                                 .input(itemInput)
                                 .output(output)
-                                .burnTime(burnTime.intdiv(4))
+                                .burnTime(burnTime.intdiv(5))
                                 .failureChance(failureChance[2])
                                 .failureOutput(failureOutput)
                                 .register()
