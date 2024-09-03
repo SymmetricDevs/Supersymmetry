@@ -179,6 +179,11 @@ mods.pyrotech.soaking_pot.recipeBuilder()
         .campfireRequired(false)
         .register()
 
+// Ash
+crafting.addShapeless("supersymmetry:ash_to_ashes", item('gregtech:meta_dust', 254), [
+        item('pyrotech:material')
+])
+
 // Clay
 // Clay to brick
 kiln_remove("brick")
@@ -191,7 +196,7 @@ mods.pyrotech.kiln.recipeBuilder()
         .failureOutput(
                 item('pyrotech:material', 7),
                 item('pyrotech:material', 6),
-                item('pyrotech:material')
+                item('gregtech:meta_dust', 254)
         )
         .register()
 
@@ -241,6 +246,6 @@ crafting.addShaped("pyrotech:tech/machine/mechanical_hopper_with_gear", item('py
 
 // Refractory clay
 crafting.replaceShaped("pyrotech:refractory_clay_ball", item('pyrotech:material', 4) * 2, [
-        [ore('dustCalciumHydroxide'), item('pyrotech:material')],
+        [ore('dustCalciumHydroxide'), ore('dustAsh')],
         [ore('dustFlint'), ore('ingotClay')]
 ])
