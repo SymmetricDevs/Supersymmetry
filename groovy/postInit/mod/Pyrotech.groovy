@@ -127,10 +127,12 @@ mods.jei.ingredient.yeet(
         item('pyrotech:cog_obsidian'),
         item('pyrotech:worktable'),
         item('pyrotech:worktable_stone'),
+        item('pyrotech:material', 3),
         item('pyrotech:material', 8),
         item('pyrotech:material', 22),
         item('pyrotech:material', 24),
         item('pyrotech:material', 28),
+        item('pyrotech:material', 31),
         item('pyrotech:material', 33),
         item('pyrotech:material', 36),
         item('pyrotech:material', 37),
@@ -152,6 +154,13 @@ def furnace_removals = [
 for (item in furnace_removals) {
         furnace.removeByInput(item);
 }
+
+// Misc removals
+mods.pyrotech.soaking_pot.remove("pyrotech:living_tar")
+mods.pyrotech.soaking_pot.remove("pyrotech:flint_clay")
+mods.pyrotech.anvil.remove("pyrotech:quartz_from_dense_quartz")
+mods.pyrotech.anvil.remove("pyrotech:crushed_flint_from_flint_shard")
+mods.pyrotech.anvil.remove("pyrotech:redstone_dust_from_dense_redstone")
 
 // Util closures
 def kiln_remove = { String string, int tier = 0 ->
@@ -213,11 +222,6 @@ def kiln_replace = { String name, IIngredient itemInput, ItemStack output, int b
         kiln_remove(name, tier)
         kiln_add(name, itemInput, output, burnTime, failureOutput, failureChance, tier)
 }
-
-// Misc removals
-mods.pyrotech.soaking_pot.remove("pyrotech:living_tar")
-mods.pyrotech.anvil.remove("pyrotech:quartz_from_dense_quartz")
-mods.pyrotech.anvil.remove("pyrotech:redstone_dust_from_dense_redstone")
 
 // Remove pyrotech limestone
 mods.pyrotech.anvil.remove("pyrotech:limestone_to_cobbled")
