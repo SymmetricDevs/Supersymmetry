@@ -41,10 +41,17 @@ crafting.addShapeless("gregtech:mud_from_dirt", item('biomesoplenty:mud'), [
         ore('dirt')
 ])
 
+// 8 * compressed clay
 crafting.addShaped("gregtech:compressed_clay_8", item('gregtech:meta_item_1', 349) * 8, [
         [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')],
         [ore('ingotClay'), item('gregtech:meta_item_1', 348), ore('ingotClay')],
         [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')]
+])
+
+// Long wood stick
+crafting.replaceShaped("gregtech:stick_long_stick_wood", item('gregtech:meta_stick_long', 1617), [
+        [null, ore('craftingToolKnife'), null],
+        [ore('stickWood'), ore('craftingToolHardHammer'), ore('stickWood')]
 ])
 
 // Stone Tools
