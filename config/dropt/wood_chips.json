@@ -1,0 +1,28 @@
+{
+  "rules": [
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "pyrotech:rock:7"
+          ]
+        },
+        "drops": {
+          "drops": [
+            "pyrotech:rock:7"
+          ]
+        }
+      },
+      "replaceStrategy": "REPLACE_ITEMS",
+      "drops": [
+        {
+          "item": {
+            "items": [
+              "gregtech:meta_dust:1617"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
