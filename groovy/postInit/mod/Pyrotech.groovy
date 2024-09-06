@@ -73,6 +73,7 @@ def name_removals = [
         "pyrotech:crafting_table_template",
         "pyrotech:furnace_core",
         "pyrotech:furnace",
+        "pyrotech:refractory_brick_block",
         "pyrotech:pyroberry_seeds",
         "pyrotech:gloamberry_seeds",
         "pyrotech:freckleberryberry_seeds",
@@ -80,6 +81,21 @@ def name_removals = [
         "pyrotech:gloamberry_wine",
         "pyrotech:freckleberry_wine",
         "pyrotech:pyroberry_cocktail",
+        "pyrotech:refractory_clay_ball",
+        "pyrotech:refractory_brick_unfired",
+        "pyrotech:refractory_clay_lump_from_unfired_refractory_brick",
+        "pyrotech:refractory_clay_lump",
+        "pyrotech:bucket/bucket_refractory_unfired",
+        "pyrotech:tech/bloomery/bloomery",
+        "pyrotech:tech/bloomery/wither_forge",
+        "pyrotech:tech/refractory/tar_drain_brick",
+        "pyrotech:tech/refractory/tar_collector_brick",
+        "pyrotech:ignition/igniter_brick",
+        "pyrotech:refractory_glass",
+        "pyrotech:refractory_door",
+        "pyrotech:storage/brick_tank",
+        "pyrotech:storage/brick_tank_empty",
+        "pyrotech:storage/brick_faucet",
         "pyrotech:leather_leggings_fireproof",
         "pyrotech:leather_helmet_fireproof",
         "pyrotech:leather_chestplate_fireproof",
@@ -97,6 +113,7 @@ def categories_hides = [
         "pyrotech.mechanical.compacting.bin",
         "pyrotech.stone.crucible",
         "pyrotech.brick.crucible",
+        "pyrotech.refractory.burn",
         "pyrotech.worktable"
 ]
 
@@ -145,26 +162,39 @@ mods.jei.ingredient.yeet(
         item('pyrotech:stone_crucible'),
         item('pyrotech:brick_crucible'),
         item('pyrotech:worktable_stone'),
+        item('pyrotech:material', 1),
         item('pyrotech:material', 3),
+        item('pyrotech:material', 4),
+        item('pyrotech:material', 5),
         item('pyrotech:material', 8),
+        item('pyrotech:material', 9),
         item('pyrotech:material', 22),
         item('pyrotech:material', 24),
         item('pyrotech:material', 25),
         item('pyrotech:material', 28),
         item('pyrotech:material', 31),
         item('pyrotech:material', 33),
+        item('pyrotech:material', 35),
         item('pyrotech:material', 36),
         item('pyrotech:material', 37),
         item('pyrotech:material', 54),
         item('pyrotech:cobblestone', 3),
         item('pyrotech:bucket_wood'),
         item('pyrotech:bucket_stone'),
+        item('pyrotech:bucket_refractory_unfired'),
+        item('pyrotech:bucket_refractory'),
         item('pyrotech:matchstick'),
         item("pyrotech:crafting_table_template"),
         item('pyrotech:flint_and_tinder'),
         item('pyrotech:straw_bed'),
         item('pyrotech:limestone'),
         item('pyrotech:furnace_core'),
+        item('pyrotech:refractory_door'),
+        item('pyrotech:igniter', 1),
+        item('pyrotech:brick_tank'),
+        item('pyrotech:faucet_brick'),
+        item('pyrotech:tar_collector', 1),
+        item('pyrotech:tar_drain', 1),
         item('pyrotech:pyroberry_seeds'),
         item('pyrotech:gloamberry_seeds'),
         item('pyrotech:freckleberry_seeds'),
@@ -187,6 +217,7 @@ mods.jei.ingredient.yeet(
 )
 
 def furnace_removals = [
+        item('pyrotech:bucket_refractory_unfired'),
         item('pyrotech:cobblestone', 3),
         item('pyrotech:rock', 7),
         item('pyrotech:material', 9),
@@ -361,6 +392,7 @@ mods.pyrotech.anvil.remove("pyrotech:redstone_dust_from_dense_redstone")
 mods.pyrotech.barrel.removeAll()
 drying_remove("paper")
 kiln_remove("charcoal_flakes")
+kiln_remove("refractory_brick", 1)
 
 // Remove pyrotech limestone
 mods.pyrotech.anvil.remove("pyrotech:limestone_to_cobbled")
@@ -476,31 +508,11 @@ crafting.addShaped("pyrotech:tech/machine/mechanical_hopper_with_gear", item('py
         [null, item('pyrotech:material', 16), null]
 ])
 
-// Refractory
-// Refractory clay
-crafting.replaceShaped("pyrotech:refractory_clay_ball", item('pyrotech:material', 4) * 2, [
-        [ore('dustCalciumHydroxide'), ore('dustAsh')],
-        [ore('dustFlint'), ore('ingotClay')]
-])
-
-// Unfired refractory brick
-crafting.replaceShapeless("pyrotech:refractory_brick_unfired", item('pyrotech:material', 9), [
-        item('gregtech:meta_item_1', 348),
-        item('pyrotech:material', 4)
-])
-
-crafting.addShaped("pyrotech:refractory_brick_unfired_8", item('pyrotech:material', 9) * 8, [
-        [item('pyrotech:material', 4), item('pyrotech:material', 4), item('pyrotech:material', 4)],
-        [item('pyrotech:material', 4), item('gregtech:meta_item_1', 348), item('pyrotech:material', 4)],
-        [item('pyrotech:material', 4), item('pyrotech:material', 4), item('pyrotech:material', 4)]
-])
-
 // Refractory brick
-kiln_replace("refractory_brick", item('pyrotech:material', 9), item('pyrotech:material', 5), 3000, [
-        item('pyrotech:material', 7),
-        item('pyrotech:material', 6),
-        item('gregtech:meta_dust', 254)
-], [1, 0.05, 0.01], 1)
+// Inter-conversion using Chisel
+mods.chisel.carving.addGroup("fire_bricks")
+mods.chisel.carving.addVariation("fire_bricks", item('gregtech:metal_casing', 1))
+mods.chisel.carving.addVariation("fire_bricks", item('pyrotech:refractory_brick_block'))
 
 // Mud brick
 drying_add("mudbrick", item('gregtechfoodoption:gtfo_meta_item', 43), item('gregtechfoodoption:gtfo_meta_item', 44), 14400, true, 1, true)
@@ -518,3 +530,48 @@ kiln_add("fire_brick", item('gregtech:meta_item_1', 351), item('gregtech:meta_it
         item('gregtech:meta_dust', 2525),
         item('gregtech:meta_dust', 254)
 ], [1, 0.8, 0.02], 1, true)
+
+// Machines
+// Stone machines
+// Stone sawmill
+crafting.replaceShaped("pyrotech:tech/machine/stone_sawmill", item('pyrotech:stone_sawmill'), [
+        [item('pyrotech:masonry_brick_block'), item('pyrotech:cog_stone'), item('pyrotech:masonry_brick_block')],
+        [item('pyrotech:masonry_brick_block'), ore('craftingToolHardHammer'), item('pyrotech:masonry_brick_block')],
+        [item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block')]
+])
+
+// Stone oven
+crafting.replaceShaped("pyrotech:tech/machine/stone_oven", item('pyrotech:stone_oven'), [
+        [item('pyrotech:masonry_brick_block'), item('pyrotech:material', 16), item('pyrotech:masonry_brick_block')],
+        [item('pyrotech:masonry_brick_block'), ore('craftingToolHardHammer'), item('pyrotech:masonry_brick_block')],
+        [item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block')]
+])
+
+// Stone kiln
+crafting.replaceShaped("pyrotech:tech/machine/stone_kiln", item('pyrotech:stone_kiln'), [
+        [item('pyrotech:masonry_brick_block'), ore('stickStone'), item('pyrotech:masonry_brick_block')],
+        [item('pyrotech:masonry_brick_block'), ore('craftingToolHardHammer'), item('pyrotech:masonry_brick_block')],
+        [item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block')]
+])
+
+// Brick machines
+// Brick sawmill
+crafting.replaceShaped("pyrotech:tech/machine/brick_sawmill", item('pyrotech:brick_sawmill'), [
+        [ore('plateIron'), ore('gearSmallIron'), ore('plateIron')],
+        [item('gregtech:metal_casing', 1), ore('craftingToolHardHammer'), item('gregtech:metal_casing', 1)],
+        [ore('plateIron'), item('gregtech:metal_casing', 1), ore('plateIron')]
+])
+
+// Brick oven
+crafting.replaceShaped("pyrotech:tech/machine/brick_oven", item('pyrotech:brick_oven'), [
+        [ore('plateIron'), item('gregtech:meta_item_1', 352), ore('plateIron')],
+        [item('gregtech:metal_casing', 1), ore('craftingToolHardHammer'), item('gregtech:metal_casing', 1)],
+        [ore('plateIron'), item('gregtech:metal_casing', 1), ore('plateIron')]
+])
+
+// Brick kiln
+crafting.replaceShaped("pyrotech:tech/machine/brick_kiln", item('pyrotech:brick_kiln'), [
+        [ore('plateIron'), ore('frameGtIron'), ore('plateIron')],
+        [item('gregtech:metal_casing', 1), ore('craftingToolHardHammer'), item('gregtech:metal_casing', 1)],
+        [ore('plateIron'), item('gregtech:metal_casing', 1), ore('plateIron')]
+])
