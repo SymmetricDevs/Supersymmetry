@@ -625,8 +625,8 @@ class Ore {
         return ore(prefix.name + name) * 8
     }
 
-    ItemStack getOutput() {
-        return metaitem("ingot" + output) * output_multiplier * 8
+    ItemStack getOutput(Prefix prefix) {
+        return metaitem("ingot" + output) * ((prefix.name == "ore" ? output_multiplier : 1) * 8)
     }
 
     int getDuration(Reductant reductant, Prefix prefix) {
@@ -702,7 +702,7 @@ reductants.forEach { reductant ->
                     .inputs(oreIn.get(prefix))
                     .inputs(reductant.get())
                     .duration(oreIn.getDuration(reductant, prefix))
-                    .outputs(oreIn.getOutput())
+                    .outputs(oreIn.getOutput(prefix))
             if (oreIn.getByproduct() != null) {
                     builder.outputs(oreIn.getByproduct())
             }
