@@ -5,7 +5,7 @@ import com.codetaylor.mc.pyrotech.modules.tech.basic.block.BlockKilnPit;
 import com.cleanroommc.groovyscript.api.IIngredient;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.event.world.BlockEvent
 
 log.infoMC("Running Pyrotech.groovy...")
 
@@ -689,3 +689,137 @@ crafting.replaceShaped("pyrotech:tech/machine/brick_kiln", item('pyrotech:brick_
         [item('gregtech:metal_casing', 1), ore('craftingToolHardHammer'), item('gregtech:metal_casing', 1)],
         [ore('plateIron'), item('gregtech:metal_casing', 1), ore('plateIron')]
 ])
+
+// Smelter recipes
+// Ore metallurgy
+oreDict.add("flakeCoal", item('pyrotech:material', 15))
+oreDict.add("flakeCharcoal", item('pyrotech:material', 21))
+
+class Reductant {
+    String name
+    int consumption
+    float duration_multiplier
+    Reductant(String name, int consumption, float multiplier) {
+        this.name = name
+        this.consumption = consumption
+        this.duration_multiplier = multiplier
+    }
+
+    IIngredient get() {
+        return ore(name) * consumption
+    }
+}
+
+class Prefix {
+    String name
+    float duration_multiplier
+    Prefix(String name, float multiplier) {
+        this.name = name
+        this.duration_multiplier = multiplier
+    }
+}
+
+class Ore {
+    String name
+    String output
+    int duration
+    int output_multiplier
+    String byproduct
+    int byproduct_amount
+    Ore(String name, String output, int duration = 400, int output_multiplier = 1, String byproduct = null, int byproduct_amount = 0) {
+        this.name = name
+        this.output = output
+        this.duration = duration
+        this.output_multiplier = output_multiplier
+        this.byproduct = byproduct
+        this.byproduct_amount = byproduct_amount
+    }
+
+    IIngredient get(Prefix prefix) {
+        return ore(prefix.name + name) * 8
+    }
+
+    ItemStack getOutput() {
+        return metaitem("ingot" + output) * output_multiplier * 8
+    }
+
+    int getDuration(Reductant reductant, Prefix prefix) {
+        return  (int) duration * reductant.duration_multiplier * prefix.duration_multiplier
+    }
+
+    ItemStack getByproduct() {
+        return byproduct == null ? null : (item(byproduct) * byproduct_amount)
+    }
+}
+
+def reductants = [
+        new Reductant("charcoal", 12, 1),
+        new Reductant("gemCoal", 10, 1), // Standard consumption, 10 = 8 + 2
+        new Reductant("gemLigniteCoke", 12, 1.2),
+        new Reductant("fuelCoke", 8, 0.8),
+        new Reductant("gemAnthracite", 8, 0.75),
+        new Reductant("dustCharcoal", 12, 0.95),
+        new Reductant("dustCoal", 10, 0.9),
+        new Reductant("dustLigniteCoke", 12, 1),
+        new Reductant("dustCoke", 8, 0.75),
+        new Reductant("dustAnthracite", 8, 0.7),
+        new Reductant("flakeCharcoal", 96, 0.95),
+        new Reductant("flakeCoal", 80, 0.9)
+]
+
+def prefixes = [
+        new Prefix("ore", 1),
+        new Prefix("crushed", 0.5)
+]
+
+def ores = [
+        // Copper ores
+        new Ore("Malachite", "Copper"),
+        new Ore("Tetrahedrite", "Copper"),
+//        new Ore("Chalcopyrite", "Copper"),
+        new Ore("Bornite", "Copper"),
+        new Ore("Chalcocite", "Copper"),
+
+        // Lead ores
+        new Ore("Cerussite", "Lead"),
+        new Ore("Anglesite", "Lead"),
+        new Ore("Galena", "Lead"),
+
+        // Zinc ores
+        new Ore("Smithsonite", "Zinc"),
+        new Ore("Sphalerite", "Zinc")
+]
+
+// Ore smashing
+ores.forEach { oreIn ->
+    mods.pyrotech.anvil.recipeBuilder()
+            .name("supersymmetry:" + oreIn.name.toLowerCase())
+            .input(ore("ore" + oreIn.name))
+            .output(metaitem("crushed" + oreIn.name))
+            .typeHammer()
+            .hits(2)
+            .tierGranite()
+            .register()
+}
+
+// Actual ore smelting
+SMELTER = recipemap('primitive_smelter')
+
+reductants.forEach { reductant ->
+    ores.forEach { oreIn ->
+        prefixes.forEach { prefix ->
+            def builder = SMELTER.recipeBuilder()
+                    .inputs(oreIn.get(prefix))
+                    .inputs(reductant.get())
+                    .duration(oreIn.getDuration(reductant, prefix))
+                    .outputs(oreIn.getOutput())
+            if (oreIn.getByproduct() != null) {
+                    builder.outputs(oreIn.getByproduct())
+            }
+            builder.buildAndRegister()
+        }
+    }
+}
+
+// Smelter alloying recipes
+// Bronze
