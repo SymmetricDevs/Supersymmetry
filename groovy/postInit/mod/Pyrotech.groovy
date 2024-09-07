@@ -722,15 +722,15 @@ class Prefix {
 class Ore {
     String name
     String output
-    int duration
     int output_multiplier
+    int duration
     String byproduct
     int byproduct_amount
-    Ore(String name, String output, int duration = 400, int output_multiplier = 1, String byproduct = null, int byproduct_amount = 0) {
+    Ore(String name, String output, int output_multiplier = 1, int duration = 400, String byproduct = null, int byproduct_amount = 0) {
         this.name = name
         this.output = output
-        this.duration = duration
         this.output_multiplier = output_multiplier
+        this.duration = duration
         this.byproduct = byproduct
         this.byproduct_amount = byproduct_amount
     }
@@ -787,7 +787,11 @@ def ores = [
 
         // Zinc ores
         new Ore("Smithsonite", "Zinc"),
-        new Ore("Sphalerite", "Zinc")
+        new Ore("Sphalerite", "Zinc"),
+
+        // Tin ores
+        new Ore("CassiteriteSand", "Tin", 2),
+        new Ore("Cassiterite", "Tin", 2)
 ]
 
 // Ore smashing
@@ -795,7 +799,7 @@ ores.forEach { oreIn ->
     mods.pyrotech.anvil.recipeBuilder()
             .name("supersymmetry:" + oreIn.name.toLowerCase())
             .input(ore("ore" + oreIn.name))
-            .output(metaitem("crushed" + oreIn.name))
+            .output(metaitem("crushed" + oreIn.name) * oreIn.output_multiplier)
             .typeHammer()
             .hits(2)
             .tierGranite()
