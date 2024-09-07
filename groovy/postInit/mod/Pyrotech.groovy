@@ -628,6 +628,12 @@ crafting.replaceShaped("pyrotech:tech/machine/stone_kiln", item('pyrotech:stone_
         [item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block')]
 ])
 
+// Primitive smelter
+crafting.addShaped("susy:primitive_smelter", item('gregtech:machine', 14800), [
+        [ore('craftingToolHardHammer')],
+        [item('pyrotech:masonry_brick_block')]
+])
+
 // Misc machines
 // Trip Hammer
 crafting.replaceShaped("pyrotech:tech/machine/trip_hammer", item('pyrotech:trip_hammer'), [
@@ -797,7 +803,7 @@ def ores = [
 // Ore smashing
 ores.forEach { oreIn ->
     mods.pyrotech.anvil.recipeBuilder()
-            .name("supersymmetry:" + oreIn.name.toLowerCase())
+            .name("susy:" + oreIn.name.toLowerCase())
             .input(ore("ore" + oreIn.name))
             .output(metaitem("crushed" + oreIn.name) * oreIn.output_multiplier)
             .typeHammer()
