@@ -609,5 +609,11 @@ public class OreMaterials{
                 .flags(NO_UNIFICATION)
                 .color(0x91835d)
                 .build();
+
+        CoalDeposit = new Material.Builder(7082, SuSyUtility.susyId("coal_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x2c2c2c)
+                .build();
     }
 }

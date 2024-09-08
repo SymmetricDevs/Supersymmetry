@@ -720,6 +720,16 @@ crafting.replaceShaped("pyrotech:tech/machine/brick_kiln", item('pyrotech:brick_
         [ore('plateIron'), item('gregtech:metal_casing', 1), ore('plateIron')]
 ])
 
+// Coal
+mods.pyrotech.anvil.recipeBuilder()
+        .name("susy:coal_deposit")
+        .input(ore('oreCoalDeposit'))
+        .output(item('minecraft:coal') * 8)
+        .typeHammer()
+        .hits(2)
+        .tierGranite()
+        .register()
+
 // Smelter recipes
 // Ore metallurgy
 

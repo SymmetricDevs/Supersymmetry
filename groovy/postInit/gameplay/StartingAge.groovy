@@ -154,6 +154,7 @@ def GrindstoneMap = [
         'susy:resource_block:3': "dustSalt",
         'susy:resource_block:4': "dustSalt",
         'susy:resource_block:5': "dustSalt",
+        'susy:resource_block:15': "dustCoal",
         'gregtech:ore_cassiterite_0': "crushedCassiterite",
         'gregtech:ore_cerussite_0': "crushedCerussite",
         'gregtech:ore_cinnabar_0': "crushedCinnabar",
