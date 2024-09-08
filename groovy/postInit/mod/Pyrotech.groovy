@@ -608,6 +608,7 @@ crafting.replaceShaped("pyrotech:tech/machine/brick_kiln", item('pyrotech:brick_
 
 // Smelter recipes
 // Ore metallurgy
+
 oreDict.add("flakeCoal", item('pyrotech:material', 15))
 oreDict.add("flakeCharcoal", item('pyrotech:material', 21))
 
@@ -757,24 +758,37 @@ def alloying_prefixes = [
         prefix_dust
 ]
 
+def fuels = [
+        "gemCoal",
+        "fuelCoke",
+        "gemAnthracite",
+        "dustCoal",
+        "dustCoke",
+        "dustAnthracite"
+]
+
 def alloy_add = {String output, int amount, int duration, ArrayList inputs ->
         int recipe_multiplier = Math.ceil(8 / amount)
         def size = inputs.size().intdiv(2)
         def real = ([alloying_prefixes] * size).combinations()
-        real.forEach { bad ->
+        fuels.forEach { fuel ->
+            real.forEach { bad ->
                 def builder = SMELTER.recipeBuilder()
                 double multiplier_sum = 0
                 int count = 0
                 for (int i = 0; i < size; i++) {
-                        int amountIn = inputs[ 2 * i + 1 ]
-                        multiplier_sum += bad[i].duration_multiplier * amountIn
-                        count += amountIn
-                        builder.inputs(ore(bad[i].name + inputs[ 2 * i ]) * (amountIn * recipe_multiplier))
+                    int amountIn = inputs[ 2 * i + 1 ]
+                    multiplier_sum += bad[i].duration_multiplier * amountIn
+                    count += amountIn
+                    builder.inputs(ore(bad[i].name + inputs[ 2 * i ]) * (amountIn * recipe_multiplier))
                 }
-                builder.outputs(metaitem("ingot" + output) * (amount * recipe_multiplier))
+                builder.inputs(ore(fuel) * (count * recipe_multiplier))
+                        .outputs(metaitem("ingot" + output) * (amount * recipe_multiplier))
                         .duration((int) (duration *  multiplier_sum / count) * recipe_multiplier)
                         .buildAndRegister()
+            }
         }
+
 }
 
 // Smelter alloying recipes
