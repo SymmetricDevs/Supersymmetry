@@ -555,9 +555,33 @@ crafting.replaceShaped("pyrotech:tech/machine/stone_kiln", item('pyrotech:stone_
 ])
 
 // Primitive smelter
+// Controller
 crafting.addShaped("susy:primitive_smelter", item('gregtech:machine', 14800), [
         [ore('craftingToolHardHammer')],
         [item('pyrotech:masonry_brick_block')]
+])
+
+// Export
+crafting.addShaped("susy:primitive_item_export_bus", item('gregtech:machine', 14802), [
+        [item('pyrotech:masonry_brick_block')],
+        [item('pyrotech:mechanical_hopper')]
+])
+
+// Import
+crafting.addShaped("susy:primitive_item_import_bus", item('gregtech:machine', 14801), [
+        [item('pyrotech:mechanical_hopper')],
+        [item('pyrotech:masonry_brick_block')]
+])
+
+// Interconversion
+crafting.addShaped("susy:primitive_bus_import_to_export", item('gregtech:machine', 14802), [
+        [ore('craftingToolHardHammer')],
+        [item('gregtech:machine', 14801)]
+])
+
+crafting.addShaped("susy:primitive_bus_export_to_import", item('gregtech:machine', 14801), [
+        [ore('craftingToolHardHammer')],
+        [item('gregtech:machine', 14802)]
 ])
 
 // Brick machines
@@ -659,9 +683,20 @@ def reductants = [
         new Reductant("flakeCoal", 80, 0.9)
 ]
 
-def prefixes = [
-        new Prefix("ore", 1),
-        new Prefix("crushed", 0.5)
+
+def prefix_ore = new Prefix("ore", 1)
+def prefix_crushed = new Prefix("crushed", 0.75)
+def prefix_crushed_purified = new Prefix("crushedPurified", 0.75)
+def prefix_dust_impure = new Prefix("dustImpure", 0.5)
+def prefix_dust = new Prefix("dust", 0.5)
+def prefix_ingot = new Prefix("ingot", 1)
+
+def smelting_prefixes = [
+        prefix_ore,
+        prefix_crushed,
+        prefix_crushed_purified,
+        prefix_dust_impure,
+        prefix_dust
 ]
 
 def ores = [
@@ -703,7 +738,7 @@ SMELTER = recipemap('primitive_smelter')
 
 reductants.forEach { reductant ->
     ores.forEach { oreIn ->
-        prefixes.forEach { prefix ->
+        smelting_prefixes.forEach { prefix ->
             def builder = SMELTER.recipeBuilder()
                     .inputs(oreIn.get(prefix))
                     .inputs(reductant.get())
@@ -717,5 +752,46 @@ reductants.forEach { reductant ->
     }
 }
 
+def alloying_prefixes = [
+        prefix_ingot,
+        prefix_dust
+]
+
+def alloy_add = {String output, int amount, int duration, ArrayList inputs ->
+        int recipe_multiplier = Math.ceil(8 / amount)
+        def size = inputs.size().intdiv(2)
+        def real = ([alloying_prefixes] * size).combinations()
+        real.forEach { bad ->
+                def builder = SMELTER.recipeBuilder()
+                double multiplier_sum = 0
+                int count = 0
+                for (int i = 0; i < size; i++) {
+                        int amountIn = inputs[ 2 * i + 1 ]
+                        multiplier_sum += bad[i].duration_multiplier * amountIn
+                        count += amountIn
+                        builder.inputs(ore(bad[i].name + inputs[ 2 * i ]) * (amountIn * recipe_multiplier))
+                }
+                builder.outputs(metaitem("ingot" + output) * (amount * recipe_multiplier))
+                        .duration((int) (duration *  multiplier_sum / count) * recipe_multiplier)
+                        .buildAndRegister()
+        }
+}
+
 // Smelter alloying recipes
 // Bronze
+alloy_add("Bronze", 4, 400, [
+        "Copper", 3,
+        "Tin", 1
+])
+
+// Brass
+alloy_add("Brass", 4, 400, [
+        "Copper", 3,
+        "Zinc", 1
+])
+
+// SnFe
+alloy_add("TinAlloy", 2, 200, [
+        "Iron", 1,
+        "Tin", 1
+])
