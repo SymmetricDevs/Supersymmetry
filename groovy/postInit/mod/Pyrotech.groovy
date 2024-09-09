@@ -730,6 +730,14 @@ mods.pyrotech.anvil.recipeBuilder()
         .tierGranite()
         .register()
 
+def materials = [
+        "Stone",
+        "Flint",
+        "Iron",
+        "Gold",
+        "Diamond"
+]
+
 // Smelter recipes
 // Ore metallurgy
 
