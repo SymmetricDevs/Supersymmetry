@@ -31130,6 +31130,7 @@
       "tasks:9": {
         "0:10": {
           "entryLogic:8": "AND",
+          "ignoreNBT:1": 1,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
@@ -31143,7 +31144,7 @@
                   "Durability:3": 0,
                   "HarvestLevel:3": 1,
                   "Material:8": "rubber",
-                  "MaxDurability:3": 256,
+                  "MaxDurability:3": 255,
                   "ToolSpeed:5": 4.0
                 },
                 "HideFlags:3": 2
