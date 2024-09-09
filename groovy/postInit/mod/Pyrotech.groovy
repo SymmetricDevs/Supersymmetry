@@ -254,7 +254,7 @@ def kiln_remove = { String name, int tier = 0 ->
 def kiln_add = { String name, IIngredient itemInput, ItemStack output, int burnTime, ArrayList<ItemStack> failureOutput,
                  ArrayList<Float> failureChance = [0.33, 0.08, 0.02], int tier = 0, boolean isSuSyRecipe = false ->
 
-        def domain = isSuSyRecipe ? "supersymmetry:" : "pyrotech:"
+        def domain = isSuSyRecipe ? "susy:" : "pyrotech:"
         def prefix = ""
         switch(tier) {
                 case 0:
@@ -315,7 +315,7 @@ def oven_remove = { String name, int tier = 0 ->
 def oven_add = { String name, IIngredient itemInput, ItemStack output, int duration,
                  boolean isSuSyRecipe = false ->
 
-    def domain = isSuSyRecipe ? "supersymmetry:" : "pyrotech:"
+    def domain = isSuSyRecipe ? "susy:" : "pyrotech:"
     def prefix = ""
     duration = duration.intdiv(8)
     mods.pyrotech.stone_oven.recipeBuilder()
@@ -355,7 +355,7 @@ def drying_remove = { String name, int tier = 0 ->
 def drying_add = { String name, IIngredient itemInput, ItemStack output, int dryTime,
                    boolean addOvenRecipe = false, int tier = 0, boolean isSuSyRecipe = false ->
 
-        def domain = isSuSyRecipe ? "supersymmetry:" : "pyrotech:"
+        def domain = isSuSyRecipe ? "susy:" : "pyrotech:"
         def prefix = ""
         switch(tier) {
                 case 0:
@@ -409,7 +409,7 @@ kiln_replace("quicklime", ore('dustLimestone'), item('gregtech:meta_dust', 360),
 
 // Limestone dust
 mods.pyrotech.anvil.recipeBuilder()
-        .name("supersymmetry:limestone_dust")
+        .name("susy:limestone_dust")
         .input(item('susy:susy_stone_cobble', 2))
         .output(item('gregtech:meta_dust', 27202))
         .typeHammer()
@@ -419,7 +419,7 @@ mods.pyrotech.anvil.recipeBuilder()
 
 // Slaked lime
 mods.pyrotech.soaking_pot.recipeBuilder()
-        .name("supersymmetry:slaked_lime")
+        .name("susy:slaked_lime")
         .input(item('gregtech:meta_dust', 360))
         .fluidInput(fluid('water') * 50)
         .output(item('gregtech:meta_dust', 8100))
@@ -429,13 +429,13 @@ mods.pyrotech.soaking_pot.recipeBuilder()
 
 // Ash
 // Ash -> ceu ash
-crafting.addShapeless("supersymmetry:ash_to_ashes", item('gregtech:meta_dust', 254), [
+crafting.addShapeless("susy:ash_to_ashes", item('gregtech:meta_dust', 254), [
         item('pyrotech:material')
 ])
 
 // Wood chips
 // Wood chips -> ceu wood pulp
-crafting.addShapeless("supersymmetry:wood_chips_to_wood_plup", item('gregtech:meta_dust', 1617), [
+crafting.addShapeless("susy:wood_chips_to_wood_plup", item('gregtech:meta_dust', 1617), [
         item('pyrotech:rock', 7)
 ])
 
@@ -445,7 +445,7 @@ mods.pyrotech.compacting_bin.add("pyrotech:pile_wood_chips", item('gregtech:meta
 
 // Paper chad from wood pulp
 mods.pyrotech.soaking_pot.recipeBuilder()
-        .name("supersymmetry:chad_from_wood")
+        .name("susy:chad_from_wood")
         .input(item('gregtech:meta_dust', 1617))
         .fluidInput(fluid('water') * 200)
         .output(item('gregtech:meta_dust', 1618))
@@ -462,7 +462,7 @@ kiln_replace("brick", item('gregtech:meta_item_1', 349), item('minecraft:brick')
 ])
 
 // Straw
-crafting.addShapeless("supersymmetry:cutting_wheat", item('pyrotech:material', 2), [
+crafting.addShapeless("susy:cutting_wheat", item('pyrotech:material', 2), [
         item('minecraft:wheat'),
         ore('craftingToolKnife')
 ])
