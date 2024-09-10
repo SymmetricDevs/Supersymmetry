@@ -109,6 +109,7 @@ for (item in name_removals) {
 }
 
 def categories_hides = [
+        "pyrotech.bloomery",
         "pyrotech.wither.forge",
         "pyrotech.anvil.ironclad",
         "pyrotech.anvil.obsidian",
@@ -199,6 +200,8 @@ mods.jei.ingredient.yeet(
         item('pyrotech:faucet_brick'),
         item('pyrotech:tar_collector', 1),
         item('pyrotech:tar_drain', 1),
+        item('pyrotech:bloomery'),
+        item('pyrotech:wither_forge'),
         item('pyrotech:pyroberry_seeds'),
         item('pyrotech:gloamberry_seeds'),
         item('pyrotech:freckleberry_seeds'),
