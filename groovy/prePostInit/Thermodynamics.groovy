@@ -174,15 +174,15 @@ CryoNetherAir.setDurationHX(5);
 CryoNetherAir.setDurationRadiator(200);
 CryoNetherAir.setTemperature(80);
 
-def CryoRefineryGas = new ICryoGas('refinery_gas', 'hot_hp_refinery_gas', 'hp_refinery_gas', 'cold_hp_refinery_gas', 'liquid_refinery_gas');
-CryoRefineryGas.setEUt(60);
-CryoRefineryGas.setDuration(100);
-CryoRefineryGas.setPowerHX(100);
-CryoRefineryGas.setDurationHX(5);
-CryoRefineryGas.setDurationRadiator(200);
-CryoRefineryGas.setTemperature(80);
-
 def CryoNaturalGas = new ICryoGas('natural_gas', 'hot_hp_natural_gas', 'hp_natural_gas', 'cold_hp_natural_gas', 'liquid_natural_gas');
+CryoNaturalGas.setEUt(60);
+CryoNaturalGas.setDuration(100);
+CryoNaturalGas.setPowerHX(100);
+CryoNaturalGas.setDurationHX(5);
+CryoNaturalGas.setDurationRadiator(200);
+CryoNaturalGas.setTemperature(80);
+
+def CryoPetroleumGas = new ICryoGas('fuel_gas', 'hot_hp_fuel_gas', 'hp_fuel_gas', 'cold_hp_fuel_gas', 'lpg');
 CryoNaturalGas.setEUt(60);
 CryoNaturalGas.setDuration(100);
 CryoNaturalGas.setPowerHX(100);
@@ -210,8 +210,8 @@ def CryoGases = [
         CryoAir,
         CryoDecarburizedAir,
         CryoNetherAir,
-        CryoRefineryGas,
         CryoNaturalGas,
+        CryoPetroleumGas,
         CryoMethane
 ];
 
@@ -273,6 +273,21 @@ def Refrigerants = [
         ChlorotrifluoromethaneRefrigerant,
         ChlorodifluoromethaneRefrigerant
 ];
+
+def CarbonDioxideSupercritical = new ISupercriticalFluid("compressed_carbon_dioxide", "supercritical_carbon_dioxide");
+CarbonDioxideSupercritical.setPowerToCompress(240);
+CarbonDioxideSupercritical.setDurationToCompress(200);
+CarbonDioxideSupercritical.setCriticalTemperature(304);
+
+def PropaneSupercritical = new ISupercriticalFluid("compressed_propane", "supercritical_propane");
+PropaneSupercritical.setPowerToCompress(480);
+PropaneSupercritical.setDurationToCompress(100);
+PropaneSupercritical.setCriticalTemperature(370);
+
+def SupercriticalFluids = [
+        CarbonDioxideSupercritical,
+        PropaneSupercritical
+]
 
 //Refrigerant recipes generation
 for (refrigerant in Refrigerants) {
@@ -544,11 +559,11 @@ LiquidNaturalGas.setAmountToBurn(10);
 LiquidNaturalGas.setByproductAmount(1250);
 LiquidNaturalGas.setIsRefinedFuel(true);
 
-def FuelOil = new IFluidFuel('fuel_oil', 'flue_gas');
-FuelOil.setDuration(100);
-FuelOil.setAmountToBurn(10);
-FuelOil.setByproductAmount(2000);
-FuelOil.setIsRefinedFuel(true);
+def HeavyGasOil = new IFluidFuel('heavy_gas_oil', 'flue_gas');
+HeavyGasOil.setDuration(100);
+HeavyGasOil.setAmountToBurn(10);
+HeavyGasOil.setByproductAmount(2000);
+HeavyGasOil.setIsRefinedFuel(true);
 
 def BioDiesel = new IFluidFuel('bio_diesel', 'flue_gas');
 BioDiesel.setDuration(75);
@@ -651,7 +666,7 @@ def FluidFuels = [
         Methanol,
         Ethanol,
         LiquidNaturalGas,
-        FuelOil,
+        HeavyFuelOil,
         BioDiesel,
         Diesel,
         MidgradeDiesel,
@@ -843,3 +858,14 @@ recipemap('heat_exchanger').recipeBuilder()
         .fluidOutputs(liquid('chilled_lava') * 3)
         .duration(10)
         .buildAndRegister();
+
+// Supercritical fluid compression
+
+for (scfluid in SupercriticalFluids) {
+        recipemap('fluid_compressor').recipeBuilder()
+            .fluidInputs(gas(scfluid.getStartingGas()) * 1280)
+            .fluidOutputs(fluid(scfluid.getSupercriticalFluid()) * 20)
+            .EUt(scfluid.getPowerToCompress())
+            .duration(refrigerant.getDurationToCompress())
+            .buildAndRegister();
+}

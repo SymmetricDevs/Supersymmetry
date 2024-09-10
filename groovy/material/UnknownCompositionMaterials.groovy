@@ -189,10 +189,7 @@ public class UnknownCompositionMaterials {
                 .color(0x4f2f27)
                 .build();
 
-        AlkylatedButane = new Material.Builder(4032, SuSyUtility.susyId('alkylated_butane'))
-                .liquid()
-                .color(0x6e4c2c)
-                .build();
+        //FREE ID: 4032
 
         ImpureKaptonK = new Material.Builder(4033, SuSyUtility.susyId('impure_kapton_k'))
                 .liquid()
@@ -1027,7 +1024,11 @@ public class UnknownCompositionMaterials {
                 .color(0x69675b)
                 .build();
 
-        //FREE IDs: 4202
+        HydrotreatingCatalyst = new Material.Builder(4202, SuSyUtility.susyId('hydrotreating_catalyst'))
+                .dust()
+                .color(0xb5dea4)
+                .flags(GENERATE_CATALYST_BED)
+                .build();
 
         VTSlag = new Material.Builder(4203, SuSyUtility.susyId('vt_slag'))
                 .dust()
@@ -1194,7 +1195,10 @@ public class UnknownCompositionMaterials {
                 .color(0xc48072)
                 .build();
 
-        //FREE ID: 4243
+        HydratedTriethyleneGlycol = new Material.Builder(4243, SuSyUtility.susyId('hydrated_triethylene_glycol'))
+                .liquid()
+                .color(0x2795a8)
+                .build()
 
         SphaleriteByproductSlurry = new Material.Builder(4244, SuSyUtility.susyId('sphalerite_byproduct_slurry'))
                 .liquid()
@@ -1936,6 +1940,11 @@ public class UnknownCompositionMaterials {
         CaesiumRubidiumAlumMixture = new Material.Builder(4423, SuSyUtility.susyId("caesium_rubidium_alum_mixture"))
                 .dust()
                 .color(0x631a87)
+                .build()
+
+        SourWater = new Material.Builder(4424, SuSyUtility.susyId("sour_water"))
+                .fluid()
+                .color(0x281757)
                 .build()
     }
 }

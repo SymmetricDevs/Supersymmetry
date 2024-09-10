@@ -66,7 +66,7 @@ class ReductantManganese {
 }
 
 def hydrocarbonReductants = [
-    new ReductantManganese('fuel_oil', 'carbon_dioxide', 67, 288),
+    new ReductantManganese('heavy_gas_oil', 'carbon_dioxide', 67, 288),
     new ReductantManganese('natural_gas', 'carbon_dioxide', 167, 234)
 ]
 

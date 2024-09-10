@@ -35,7 +35,7 @@ BLENDER = recipemap('blender')
 
 def major_solvents = [
     'xylene',
-    'naphtha',
+    'light_naphtha',
     'toluene'
 ]
 
@@ -50,8 +50,9 @@ def minor_solvents = [
 // Methyl-tert-butyl ether
 
     FBR.recipeBuilder()
+        .notConsumable(ore('catalystBedChloridedAlumina'))
+        .notConsumable(fluid('hydrogen') * 50)
         .fluidInputs(fluid('butane') * 50)
-        .notConsumable(ore('dustAluminiumChloride'))
         .fluidOutputs(fluid('isobutane') * 50)
         .duration(5)
         .EUt(30)

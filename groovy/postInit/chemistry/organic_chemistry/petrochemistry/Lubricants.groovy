@@ -15,9 +15,7 @@ VACUUM_DT = recipemap('vacuum_distillation')
 CRYSTALLIZER = recipemap('crystallizer')
 EXTRACTOR = recipemap('extractor')
 ROTARY_KILN = recipemap('rotary_kiln')
-COKING = recipemap('coking_tower')
 CSTR = recipemap('continuous_stirred_tank_reactor')
-CRACKER = recipemap('cracker')
 EBF = recipemap('electric_blast_furnace')
 REFORMER = recipemap('catalytic_reformer_recipes')
 REACTION_FURNACE = recipemap('reaction_furnace')
@@ -39,8 +37,8 @@ PHASE_SEPARATOR = recipemap('phase_separator')
     // Straight run lubricating oil
 
     MIXER.recipeBuilder()
-        .fluidInputs(fluid('dichloroethane') * 1000)
-        .fluidInputs(fluid('dichloromethane') * 1000)
+        .fluidInputs(fluid('butanone') * 1000)
+        .fluidInputs(fluid('methyl_isobutyl_ketone') * 1000)
         .fluidOutputs(fluid('dewaxing_solvent') * 2000)
         .duration(20)
         .EUt(30)
@@ -73,15 +71,6 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .fluidInputs(fluid('dewaxed_lubricant_mixture') * 2500)
         .fluidOutputs(fluid('sulfuric_lubricating_oil') * 500)
         .fluidOutputs(fluid('dewaxing_solvent') * 2000)
-        .duration(20)
-        .EUt(30)
-        .buildAndRegister()
-
-    FBR.recipeBuilder()
-        .fluidInputs(fluid('sulfuric_lubricating_oil') * 180)
-        .fluidInputs(fluid('hydrogen') * 45)
-        .notConsumable(metaitem('catalystBedAlumina'))
-        .fluidOutputs(fluid('lubricating_oil') * 180)
         .duration(20)
         .EUt(30)
         .buildAndRegister()
@@ -127,6 +116,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
             .fluidInputs(fluid('hydrogen') * 315)
             .notConsumable(metaitem('catalystBedPlatinumSapoEleven'))
             .fluidOutputs(fluid('lubricating_oil') * 850)
+            .fluidOutputs(fluid('sour_gas') * 315)
             .duration(20)
             .EUt(30)
             .buildAndRegister()
@@ -209,23 +199,6 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .fluidOutputs(fluid('wastewater') * 1000)
         .duration(40)
         .EUt(Globals.voltAmps[2])
-        .buildAndRegister()
-
-    MIXER.recipeBuilder()
-        .inputs(ore('dustPalladiumChloride') * 3)
-        .fluidInputs(fluid('phosphoric_acid') * 1000)
-        .fluidOutputs(fluid('palladium_precursor_solution') * 1000)
-        .duration(100)
-        .EUt(Globals.voltAmps[3])
-        .buildAndRegister()
-
-    SINTERING_OVEN.recipeBuilder()
-        .inputs(ore('dustAlumina') * 5)
-        .fluidInputs(fluid('palladium_precursor_solution') * 1000)
-        .outputs(metaitem('dustSupportedPalladium'))
-        .fluidOutputs(fluid('phosphoric_acid') * 1000)
-        .duration(100)
-        .EUt(Globals.voltAmps[3])
         .buildAndRegister()
 
     FBR.recipeBuilder()
@@ -965,6 +938,7 @@ BR.recipeBuilder()
 def baseOilMap = [
     'seed_oil': 0.5,
     'lubricating_oil': 1,
+    //'cycle_oil' : 1,
     'polybutene': 1.5,
     'polyalphaolefin': 2.5,
     'ester_base_oil': 3
@@ -1011,7 +985,7 @@ def pourPointDepressantMap = [
 // calcium_phenate: 3
 
 def detergentMap = [
-    'dustCalciumDodecylbenzeneSulfonate': 1,
+    'dustSmallCalciumDodecylbenzeneSulfonate': 1,
     'dustCalciumSalicylate': 2,
     'dustPolyisobuteneSuccinicAnhydride': 4
 ]
@@ -1071,7 +1045,7 @@ solidAntiwearMap.each { saw, multiplier ->
         
     BLENDER.recipeBuilder()
         .inputs(ore(saw))
-        .inputs(ore('dustCalciumDinonylnaphthaleneSulfonate'))
+        .inputs(ore('dustSmallCalciumDinonylnaphthaleneSulfonate'))
         .fluidInputs(fluid('lubricant') * (1000 * multiplier * 4))
         .fluidInputs(fluid('antifoaming_additive') * 1000)
         .fluidOutputs(fluid('midgrade_lubricant') * (1000 * multiplier * 4))
@@ -1092,7 +1066,7 @@ liquidAntiwearMap.each { law, multiplier ->
         .buildAndRegister()
 
     BLENDER.recipeBuilder()
-        .inputs(ore('dustCalciumDinonylnaphthaleneSulfonate'))
+        .inputs(ore('dustSmallCalciumDinonylnaphthaleneSulfonate'))
         .fluidInputs(fluid('lubricant') * (1000 * multiplier * 4))
         .fluidInputs(fluid('antifoaming_additive') * 1000)
         .fluidInputs(fluid(law) * 1000)
@@ -1107,7 +1081,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
     BLENDER.recipeBuilder()
         .inputs(ore(ppd))
         .fluidInputs(fluid('calcium_phenate') * 1000)
-        .inputs(ore('dustCalciumDidodecylbenzeneSulfonate'))
+        .inputs(ore('dustTinyCalciumDidodecylbenzeneSulfonate'))
         .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * 3 * 4))
         .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * 3 * 4))
         .duration(200)
@@ -1117,7 +1091,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
     BLENDER.recipeBuilder()
         .inputs(ore(ppd))
         .fluidInputs(fluid('calcium_phenate') * 1000)
-        .inputs(ore('dustFourNonylphenoxyaceticAcid'))
+        .inputs(ore('dustSmallFourNonylphenoxyaceticAcid'))
         .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * 3 * 4 * 1.5))
         .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * 3 * 4 * 1.5))
         .duration(200)
@@ -1128,7 +1102,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
         BLENDER.recipeBuilder()
             .inputs(ore(det))
             .inputs(ore(ppd))
-            .inputs(ore('dustCalciumDidodecylbenzeneSulfonate'))
+            .inputs(ore('dustTinyCalciumDidodecylbenzeneSulfonate'))
             .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .duration(200)
@@ -1138,7 +1112,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
         BLENDER.recipeBuilder()
             .inputs(ore(det))
             .inputs(ore(ppd))
-            .inputs(ore('dustFourNonylphenoxyaceticAcid'))
+            .inputs(ore('dustSmallFourNonylphenoxyaceticAcid'))
             .fluidInputs(fluid('midgrade_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .duration(200)

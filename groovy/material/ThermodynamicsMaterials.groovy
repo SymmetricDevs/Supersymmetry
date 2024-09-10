@@ -194,7 +194,6 @@ class ThermodynamicsMaterials {
                         .build();
         }
     
-    
     public static void register() {
 
                 log.infoMC("Registering Thermodynamics Materials!");
@@ -225,7 +224,7 @@ class ThermodynamicsMaterials {
 
                 generateHighPressureGases(NetherAir, 22036, true);
 
-                generateHighPressureGases(RefineryGas, 22039, true);
+                generateHighPressureGases(FuelGas, 22039, true);
 
                 generateHighPressureGases(Methane, 22042, true);
 
@@ -245,7 +244,7 @@ class ThermodynamicsMaterials {
 
                 generateLiquidFromGas(Nitrogen, 22106, 77);
 
-                generateLiquidFromGas(RefineryGas, 22107, 112);
+                // FREE ID: 22107
 
                 generateLiquidFromGas(Methane, 22108, 112);
 

@@ -37,7 +37,7 @@ public class ThirdDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        FurfuralSolution = new Material.Builder(24003, SuSyUtility.susyId('furfural_solution'))
+        AcidicFurfuralSolution = new Material.Builder(24003, SuSyUtility.susyId('acidic_furfural_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(Furfural * 1, SulfuricAcid * 1, Water * 3)
                 .colorAverage()

@@ -157,7 +157,6 @@ class SuSyMaterials {
         public static Material CativaCatalystSolution;
         public static Material AcidicCumene;
         public static Material RearrangedCumene;
-        public static Material AlkylatedButane;
         public static Material ImpureKaptonK;
         public static Material KaptonEPreparation;
         public static Material ImpureKaptonE;
@@ -507,38 +506,46 @@ class SuSyMaterials {
         public static Material CocoAmineAcetate;
         public static Material PolluciteLeach;
         public static Material CaesiumRubidiumAlumMixture;
+        public static Material HydratedTriethyleneGlycol;
         public static Material NetherMolecularSieve;
+        public static Material HydrotreatingCatalyst;
+        public static Material SourWater;
 
-        // Petrochem Materials
+        // Petrochem Materials   
 
         public static Material DilutedOil;
         public static Material DesaltedOil;
+        public static Material HeatedOil;
 
         public static Material DilutedOilLight;
         public static Material DesaltedOilLight;
+        public static Material HeatedOilLight;
 
         public static Material DilutedOilHeavy;
         public static Material DesaltedOilHeavy;
+        public static Material HeatedOilHeavy;
 
-        public static Material FuelOil;
-        public static Material SulfuricFuelOil;
-        public static Material TreatedSulfuricFuelOil;
-        public static Material UpgradedFuelOilMix;
+        public static Material HeavyGasOil;
+        public static Material CrudeHeavyGasOil;
+        public static Material SulfuricHeavyGasOil;
+        public static Material TreatedSulfuricHeavyGasOil;
+        public static Material CatalyticallyCrackedHeavyGasOil;
 
         public static Material CrudeNaturalGas;
         public static Material SulfuricNaturalGas;
         public static Material TreatedSulfuricNaturalGas;
-        public static Material AlkylatedNaturalGas;
 
         public static Material SulfuricRefineryGas;
         public static Material TreatedSulfuricRefineryGas;
-        public static Material AlkylatedRefineryGas;
 
-        public static Material SulfuricDiesel;
-        public static Material TreatedSulfuricDiesel;
-        public static Material UpgradedDieselMix;
+        public static Material LightGasOil;
+        public static Material CrudeLightGasOil;
+        public static Material SulfuricLightGasOil;
+        public static Material TreatedSulfuricLightGasOil;
+        public static Material CatalyticallyCrackedLightGasOil;
 
         public static Material Kerosene;
+        public static Material CrudeKerosene;
         public static Material SulfuricKerosene;
         public static Material TreatedSulfuricKerosene;
         public static Material LightlySteamcrackedKerosene;
@@ -547,33 +554,43 @@ class SuSyMaterials {
         public static Material SeverelyHydrocrackedKerosene;
         public static Material UpgradedKeroseneMix;
 
-        public static Material SulfuricGasoline;
-        public static Material TreatedSulfuricGasoline;
-        public static Material LightlySteamcrackedGasoline;
-        public static Material SeverelySteamcrackedGasoline;
-        public static Material LightlyHydrocrackedGasoline;
-        public static Material SeverelyHydrocrackedGasoline;
-
+        public static Material CrudeNaphtha;
         public static Material TreatedSulfuricNaphtha;
         public static Material LightlySteamcrackedNaphtha;
         public static Material SeverelySteamcrackedNaphtha;
         public static Material LightlyHydrocrackedNaphtha;
         public static Material SeverelyHydrocrackedNaphtha;
         public static Material NaphthaReformate;
-        public static Material UpgradedNaphthaMix;
+
+        public static Material DebutanizedNaphtha;
+        public static Material SulfuricDebutanizedNaphtha;
+        public static Material SulfuricLightNaphtha;
+        public static Material SulfuricHeavyNaphtha;
+        public static Material LightNaphtha;
+        public static Material HeavyNaphtha;
+
+        public static Material FuelGas;
+        public static Material SulfuricFuelGas;
+        public static Material SulfuricButaneFuelGas;
+        public static Material SulfuricPropaneFuelGas;
+        public static Material ButaneFuelGas;
+        public static Material PropaneFuelGas;
+
+        public static Material AtmosphericOverheads;
+        public static Material HeavyAtmosphericOverheads;
+        public static Material LightAtmosphericOverheads;
 
         public static Material LubricatingOil;
-        public static Material UpgradedLubricatingOilMix;
+        public static Material TreatedSulfuricLubricatingOil;
 
         public static Material OilyBrine;
         public static Material LightOilyBrine;
         public static Material HeavyOilyBrine;
-        public static Material SulfuricOilResidue;
-        public static Material TreatedSulfuricOilResidue;
+        public static Material AtmosphericOilResidue;
+        public static Material VacuumOilResidue;
+        public static Material HeatedOilResidue;
         public static Material OilResidue;
-        public static Material LightBitumenSolution;
-        public static Material BitumenSolution;
-        public static Material HeavyBitumenSolution;
+        public static Material AsphalteneExtract;
         public static Material SourGas;
         public static Material SlackWax;
         public static Material Resin;
@@ -1253,6 +1270,7 @@ class SuSyMaterials {
         public static Material RubidiumHydroxideSolution;
         public static Material SodiumAlumSolution;
         public static Material OxidizedManganateSolution;
+        public static Material SupportedNickel;
 
         // Organic Chemistry Materials
 
@@ -1653,6 +1671,8 @@ class SuSyMaterials {
         public static Material HydrolyzedMethylFormateSolution;
         public static Material FormicAcid;
         public static Material MethylFormateSolution;
+        public static Material TriethyleneGlycol;
+        public static Material AcidicRichAmine;
 
         // Third Degree Materials
 
@@ -1792,7 +1812,6 @@ class SuSyMaterials {
         public static Material LiquidDeoxygenatedArgon;
         public static Material LiquidWasteNitrogen;
         public static Material PartiallyLiquefiedArgon;
-        public static Material SupercriticalCarbonDioxide;
 
         public static void changeFormulas() {
             log.infoMC("Changing Formulas!");
