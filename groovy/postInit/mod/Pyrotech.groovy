@@ -58,14 +58,32 @@ def name_removals = [
         "pyrotech:stone_hammer",
         "pyrotech:obsidian_hammer",
         "pyrotech:tech/bloomery/tongs_obsidian",
+        "pyrotech:tech/machine/sawmill_blade_stone",
+        "pyrotech:tech/machine/sawmill_blade_flint",
         "pyrotech:tech/machine/sawmill_blade_bone",
+        "pyrotech:tech/machine/sawmill_blade_iron",
+        "pyrotech:tech/machine/sawmill_blade_gold",
+        "pyrotech:tech/machine/sawmill_blade_diamond",
         "pyrotech:tech/machine/sawmill_blade_obsidian",
+        "pyrotech:tech/machine/stone_sawmill",
+        "pyrotech:tech/machine/brick_sawmill",
         "pyrotech:tech/machine/cog_wood",
         "pyrotech:tech/machine/cog_bone",
         "pyrotech:tech/machine/cog_obsidian",
         "pyrotech:tech/machine/mechanical_compacting_bin",
+        "pyrotech:tech/machine/bellows",
+        "pyrotech:tech/machine/mechanical_bellows",
+        "pyrotech:tech/machine/mechanical_spreader",
         "pyrotech:tech/machine/stone_crucible",
         "pyrotech:tech/machine/brick_crucible",
+        "pyrotech:boat_spruce",
+        "pyrotech:boat_oak",
+        "pyrotech:boat_jungle",
+        "pyrotech:boat_dark_oak",
+        "pyrotech:boat_birch",
+        "pyrotech:boat_acacia",
+        "pyrotech:dough",
+        "pyrotech:bread_dough",
         "pyrotech:straw_bed",
         "pyrotech:clay",
         "pyrotech:cobbled_limestone",
@@ -92,9 +110,12 @@ def name_removals = [
         "pyrotech:tech/bloomery/wither_forge",
         "pyrotech:tech/refractory/tar_drain_brick",
         "pyrotech:tech/refractory/tar_collector_brick",
+        "pyrotech:ignition/igniter_stone",
         "pyrotech:ignition/igniter_brick",
         "pyrotech:refractory_glass",
         "pyrotech:refractory_door",
+        "pyrotech:storage/stone_tank",
+        "pyrotech:storage/stone_tank_empty",
         "pyrotech:storage/brick_tank",
         "pyrotech:storage/brick_tank_empty",
         "pyrotech:storage/brick_faucet",
@@ -115,7 +136,9 @@ def categories_hides = [
         "pyrotech.anvil.obsidian",
         "pyrotech.mechanical.compacting.bin",
         "pyrotech.stone.crucible",
+        "pyrotech.stone.mill",
         "pyrotech.brick.crucible",
+        "pyrotech.brick.mill",
         "pyrotech.refractory.burn",
         "pyrotech.worktable"
 ]
@@ -125,7 +148,7 @@ for (item in categories_hides) {
 }
 
 mods.jei.catalyst.remove("pyrotech.pit.kiln", item('pyrotech:kiln_pit'))
-mods.jei.catalyst.add("pyrotech.pit.kiln", item('pyrotech:material', 2), item('pyrotech:kiln_pit'))
+mods.jei.catalyst.add("pyrotech.pit.kiln", item('pyrotech:material', 2))
 
 mods.jei.ingredient.yeet(
         item('pyrotech:living_tar'),
@@ -157,13 +180,24 @@ mods.jei.ingredient.yeet(
         item('pyrotech:stone_hammer'),
         item('pyrotech:obsidian_hammer'),
         item('pyrotech:tongs_obsidian'),
+        item('pyrotech:sawmill_blade_stone'),
+        item('pyrotech:sawmill_blade_flint'),
         item('pyrotech:sawmill_blade_bone'),
+        item('pyrotech:sawmill_blade_iron'),
+        item('pyrotech:sawmill_blade_gold'),
+        item('pyrotech:sawmill_blade_diamond'),
         item('pyrotech:sawmill_blade_obsidian'),
+        item('pyrotech:stone_sawmill'),
+        item('pyrotech:brick_sawmill'),
+        item('pyrotech:kiln_pit'),
         item('pyrotech:cog_wood'),
         item('pyrotech:cog_bone'),
         item('pyrotech:cog_obsidian'),
         item('pyrotech:worktable'),
         item('pyrotech:mechanical_compacting_bin'),
+        item('pyrotech:bellows'),
+        item('pyrotech:mechanical_bellows'),
+        item('pyrotech:mechanical_mulch_spreader'),
         item('pyrotech:stone_crucible'),
         item('pyrotech:brick_crucible'),
         item('pyrotech:worktable_stone'),
@@ -173,7 +207,9 @@ mods.jei.ingredient.yeet(
         item('pyrotech:material', 5),
         item('pyrotech:material', 8),
         item('pyrotech:material', 9),
+        item('pyrotech:material', 20),
         item('pyrotech:material', 22),
+        item('pyrotech:material', 23),
         item('pyrotech:material', 24),
         item('pyrotech:material', 25),
         item('pyrotech:material', 28),
@@ -182,6 +218,10 @@ mods.jei.ingredient.yeet(
         item('pyrotech:material', 35),
         item('pyrotech:material', 36),
         item('pyrotech:material', 37),
+        item('pyrotech:material', 49),
+        item('pyrotech:material', 50),
+        item('pyrotech:material', 51),
+        item('pyrotech:material', 52),
         item('pyrotech:material', 54),
         item('pyrotech:cobblestone', 3),
         item('pyrotech:bucket_wood'),
@@ -195,7 +235,10 @@ mods.jei.ingredient.yeet(
         item('pyrotech:limestone'),
         item('pyrotech:furnace_core'),
         item('pyrotech:refractory_door'),
+        item('pyrotech:refractory_glass'),
+        item('pyrotech:igniter'),
         item('pyrotech:igniter', 1),
+        item('pyrotech:stone_tank'),
         item('pyrotech:brick_tank'),
         item('pyrotech:faucet_brick'),
         item('pyrotech:tar_collector', 1),
@@ -228,40 +271,25 @@ def furnace_removals = [
         item('pyrotech:cobblestone', 3),
         item('pyrotech:rock', 7),
         item('pyrotech:material', 9),
-        item('pyrotech:material', 28)
+        item('pyrotech:material', 28),
+        item('pyrotech:material', 52)
 ]
 
 for (item in furnace_removals) {
         furnace.removeByInput(item);
 }
 
+mods.pyrotech.pit_kiln.removeAll()
+mods.pyrotech.stone_kiln.removeAll()
+mods.pyrotech.brick_kiln.removeAll()
+mods.pyrotech.anvil.removeAll()
+mods.pyrotech.barrel.removeAll()
+
 // Util closures
-def kiln_remove = { String name, int tier = 0 ->
-
-        def domain = "pyrotech:"
-        def prefix = ""
-        switch (tier) {
-                case 0:
-                        try {
-                                mods.pyrotech.pit_kiln.remove(domain + prefix + name)
-                        } catch (Exception ignored) {}
-                        prefix = "pit_kiln/" + prefix
-                case 1:
-                        try {
-                                mods.pyrotech.stone_kiln.remove(domain + prefix + name)
-                        } catch (Exception ignored) {}
-                        prefix = "stone_kiln/" + prefix
-                default:
-                        try {
-                                mods.pyrotech.brick_kiln.remove(domain + prefix + name)
-                        } catch (Exception ignored) {}
-        }
-}
-
 def kiln_add = { String name, IIngredient itemInput, ItemStack output, int burnTime, ArrayList<ItemStack> failureOutput,
-                 ArrayList<Float> failureChance = [0.33, 0.08, 0.02], int tier = 0, boolean isSuSyRecipe = false ->
+                 ArrayList<Float> failureChance = [0.33, 0.08, 0.02], int tier = 0 ->
 
-        def domain = isSuSyRecipe ? "susy:" : "pyrotech:"
+        def domain = "susy:"
         def prefix = ""
         switch(tier) {
                 case 0:
@@ -294,12 +322,6 @@ def kiln_add = { String name, IIngredient itemInput, ItemStack output, int burnT
                                 .failureOutput(failureOutput)
                                 .register()
         }
-}
-
-def kiln_replace = { String name, IIngredient itemInput, ItemStack output, int burnTime, ArrayList<ItemStack> failureOutput,
-                     ArrayList<Float> failureChance = [0.33, 0.08, 0.02], int tier = 0 ->
-        kiln_remove(name, tier)
-        kiln_add(name, itemInput, output, burnTime, failureOutput, failureChance, tier)
 }
 
 def oven_remove = { String name, int tier = 0 ->
@@ -387,42 +409,36 @@ def drying_add = { String name, IIngredient itemInput, ItemStack output, int dry
         }
 }
 
+def anvil_add = { String name, IIngredient itemInput, ItemStack output, int hits, boolean requiresHammer = true ->
+
+        def domain = "susy:"
+        def builder = mods.pyrotech.anvil.recipeBuilder()
+                .name(domain + name)
+                .input(itemInput)
+                .output(output)
+                .hits(hits)
+                .tierGranite()
+        if (requiresHammer) {
+                builder.typeHammer()
+        } else {
+                builder.typePickaxe()
+        }
+        builder.register()
+}
+
 // Misc removals
 mods.pyrotech.soaking_pot.remove("pyrotech:living_tar")
 mods.pyrotech.soaking_pot.remove("pyrotech:flint_clay")
 mods.pyrotech.soaking_pot.remove("pyrotech:clay_blasting")
 mods.pyrotech.soaking_pot.remove("pyrotech:pulp_from_reeds")
 mods.pyrotech.soaking_pot.remove("pyrotech:pulp_from_wood_chips")
-mods.pyrotech.anvil.remove("pyrotech:quartz_from_dense_quartz")
-mods.pyrotech.anvil.remove("pyrotech:crushed_flint_from_flint_shard")
-mods.pyrotech.anvil.remove("pyrotech:redstone_dust_from_dense_redstone")
-mods.pyrotech.barrel.removeAll()
+mods.pyrotech.soaking_pot.remove("pyrotech:board_tarred")
+mods.pyrotech.soaking_pot.remove("pyrotech:dough")
 drying_remove("paper")
-kiln_remove("charcoal_flakes")
-kiln_remove("refractory_brick", 1)
 
 // Remove pyrotech limestone
-mods.pyrotech.anvil.remove("pyrotech:limestone_to_cobbled")
-mods.pyrotech.anvil.remove("pyrotech:cobbled_limestone_to_rocks")
-mods.pyrotech.anvil.remove("pyrotech:limestone_rocks_to_crushed_limestone")
 mods.pyrotech.soaking_pot.remove("pyrotech:slaked_lime")
 mods.pyrotech.compacting_bin.remove("pyrotech:ash_pile")
-kiln_remove("limestone")
-
-// Quicklime
-kiln_replace("quicklime", ore('dustLimestone'), item('gregtech:meta_dust', 360), 2400, [
-        item('gregtech:meta_dust', 254)
-], [0.0, 0.0, 0.0], 1)
-
-// Limestone dust
-mods.pyrotech.anvil.recipeBuilder()
-        .name("susy:limestone_dust")
-        .input(item('susy:susy_stone_cobble', 2))
-        .output(item('gregtech:meta_dust', 27202))
-        .typeHammer()
-        .hits(2)
-        .tierGranite()
-        .register()
 
 // Slaked lime
 mods.pyrotech.soaking_pot.recipeBuilder()
@@ -460,30 +476,23 @@ mods.pyrotech.soaking_pot.recipeBuilder()
         .campfireRequired(false)
         .register()
 
-// Clay
-// Clay to brick
-kiln_replace("brick", item('gregtech:meta_item_1', 349), item('minecraft:brick'), 2400, [
-        item('pyrotech:material', 7),
-        item('pyrotech:material', 6),
-        item('gregtech:meta_dust', 254)
-])
-
 // Straw
 crafting.addShapeless("susy:cutting_wheat", item('pyrotech:material', 2), [
         item('minecraft:wheat'),
         ore('craftingToolKnife')
 ])
 
-// Masonry brick
-mods.pyrotech.anvil.remove("pyrotech:brick_stone")
-mods.pyrotech.anvil.recipeBuilder()
-        .name("pyrotech:brick_stone")
-        .input(ore('stone'))
-        .output(item('pyrotech:material', 16) * 4)
-        .typePickaxe()
-        .hits(4)
-        .tierGranite()
-        .register()
+crafting.replaceShaped("pyrotech:straw", item('pyrotech:material', 2) * 4, [
+        [item('pyrotech:material', 13), item('pyrotech:material', 13), item('pyrotech:material', 13)],
+        [item('pyrotech:material', 13), ore('twine'), item('pyrotech:material', 13)],
+        [item('pyrotech:material', 13), item('pyrotech:material', 13), item('pyrotech:material', 13)]
+])
+
+// Durable spindle
+crafting.replaceShaped("pyrotech:bow_drill_durable_stick", item('pyrotech:material', 48), [
+        [item('pyrotech:material', 39)],
+        [ore('stickLongWood')]
+])
 
 // Bow drill
 crafting.replaceShaped("pyrotech:ignition/bow_drill", item('pyrotech:bow_drill'), [
@@ -524,28 +533,86 @@ mods.chisel.carving.addVariation("fire_bricks", item('pyrotech:refractory_brick_
 // Mud brick
 drying_add("mudbrick", item('gregtechfoodoption:gtfo_meta_item', 43), item('gregtechfoodoption:gtfo_meta_item', 44), 14400, true, 1, true)
 
-// Coke oven brick
-kiln_add("coke_oven_brick", item('gregtech:meta_item_1', 350), item('gregtech:meta_item_1', 353), 2400, [
-        item('gregtech:meta_item_1', 350),
-        item('gregtech:meta_dust', 2063),
-        item('gregtech:meta_dust', 254)
-], [1, 0.05, 0.01], 1, true)
+// Kiln recipes
+def kiln_recipes = [
+        // Brick
+        ["brick", item('gregtech:meta_item_1', 349), item('minecraft:brick'), 2400, [
+                item('pyrotech:material', 7), item('pyrotech:material', 6), item('gregtech:meta_dust', 254) * 2
+        ]],
 
-// Fire brick
-kiln_add("fire_brick", item('gregtech:meta_item_1', 351), item('gregtech:meta_item_1', 352), 3000, [
-        item('gregtech:meta_item_1', 351),
-        item('gregtech:meta_dust', 2525),
-        item('gregtech:meta_dust', 254)
-], [1, 0.8, 0.02], 1, true)
+        // Coke oven brick
+        ["coke_oven_brick", item('gregtech:meta_item_1', 350), item('gregtech:meta_item_1', 353), 2400, [
+                item('gregtech:meta_item_1', 350), item('gregtech:meta_dust', 2063), item('gregtech:meta_dust', 254) * 2
+        ], [1, 0.05, 0.01], 1],
+
+        // Fire brick
+        ["fire_brick", item('gregtech:meta_item_1', 351), item('gregtech:meta_item_1', 352), 3000, [
+                item('gregtech:meta_item_1', 351), item('gregtech:meta_dust', 2525), item('gregtech:meta_dust', 254) * 2
+        ], [1, 0.15, 0.02], 1],
+
+        // Quicklime
+        ["quicklime", ore('dustLimestone'), item('gregtech:meta_dust', 360), 2400, [
+                item('gregtech:meta_dust', 254) * 2
+        ], [0.0, 0.0, 0.0], 1],
+
+        // Misc recipes
+        ["cob", item('pyrotech:cob_wet'), item('pyrotech:cob_dry'), 2400, [
+                item('biomesoplenty:mudball') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone", item('minecraft:cobblestone'), item('minecraft:stone'), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_andesite", item('pyrotech:cobblestone'), item('minecraft:stone', 5), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_granite", item('pyrotech:cobblestone', 2), item('minecraft:stone', 1), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_diorite", item('pyrotech:cobblestone', 1), item('minecraft:stone', 3), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["hardened_clay", item('minecraft:clay'), item('minecraft:hardened_clay'), 2400, [
+                item('pyrotech:material', 7), item('pyrotech:material', 6), item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["bucket_clay", item('pyrotech:bucket_clay_unfired'), item('pyrotech:bucket_clay'), 2400, [
+                item('pyrotech:material', 7), item('pyrotech:material', 6), item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_slab", item('minecraft:stone_slab', 3), item('minecraft:stone_slab'), 2400, [
+                item('minecraft:stone_slab', 3), item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]]
+]
+
+kiln_recipes.forEach { recipe ->
+        kiln_add(*recipe)
+}
+
+// Misc anvil recipes
+def anvil_recipes = [
+        ["andesite_to_cobbled", item('minecraft:stone', 5), item('pyrotech:cobblestone'), 2],
+        ["granite_to_cobbled", item('minecraft:stone', 1), item('pyrotech:cobblestone', 2), 2],
+        ["diorite_to_cobbled", item('minecraft:stone', 3), item('pyrotech:cobblestone', 1), 2],
+        ["flour_from_wheat", ore('itemWheat').or(ore('cropWheat')), metaitem('dustWheat'), 1],
+        ["brick_stone", ore('stone'), item('pyrotech:material', 16) * 4, 2, false],
+        ["stick_stone", item('pyrotech:material', 16), item('pyrotech:material', 27) * 2, 2, false],
+        ["bone_shard", ore('bone'), item('pyrotech:material', 11) * 3, 2],
+        ["iron_shard", ore('ingotIron'), item('pyrotech:material', 19) * 9, 2],
+        ["gold_shard", ore('ingotGold'), item('pyrotech:material', 34) * 9, 2],
+        ["diamond_shard", ore('gemDiamond'), item('pyrotech:material', 18) * 9, 4],
+        ["coal_pieces", ore('gemCoal'), item('pyrotech:material', 21) * 8, 2],
+        ["charcoal_flakes", ore('charcoal'), item('pyrotech:material', 15) * 8, 2],
+        ["cobblestone_to_rocks", ore('cobblestone'), item('pyrotech:rock') * 8, 2, false],
+        ["limestone_to_cobbled", ore('stoneLimestone'), item('susy:susy_stone_cobble', 2), 2],
+        ["limestone_dust", item('susy:susy_stone_cobble', 2), item('gregtech:meta_dust', 27202), 2],
+        ["pottery_shard_to_dust", item('pyrotech:material', 7), metaitem('dustSmallBrick') * 2, 1],
+        ["pottery_fragments_to_dust", item('pyrotech:material', 6), metaitem('dustSmallBrick') * 2, 1]
+]
+
+anvil_recipes.forEach { recipe ->
+        anvil_add(*recipe)
+}
 
 // Machines
 // Stone machines
-// Stone sawmill
-crafting.replaceShaped("pyrotech:tech/machine/stone_sawmill", item('pyrotech:stone_sawmill'), [
-        [item('pyrotech:masonry_brick_block'), item('pyrotech:cog_stone'), item('pyrotech:masonry_brick_block')],
-        [item('pyrotech:masonry_brick_block'), ore('craftingToolHardHammer'), item('pyrotech:masonry_brick_block')],
-        [item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block')]
-])
 
 // Stone oven
 crafting.replaceShaped("pyrotech:tech/machine/stone_oven", item('pyrotech:stone_oven'), [
@@ -561,14 +628,54 @@ crafting.replaceShaped("pyrotech:tech/machine/stone_kiln", item('pyrotech:stone_
         [item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block')]
 ])
 
-// Brick machines
-// Brick sawmill
-crafting.replaceShaped("pyrotech:tech/machine/brick_sawmill", item('pyrotech:brick_sawmill'), [
-        [ore('plateIron'), ore('gearSmallIron'), ore('plateIron')],
-        [item('gregtech:metal_casing', 1), ore('craftingToolHardHammer'), item('gregtech:metal_casing', 1)],
-        [ore('plateIron'), item('gregtech:metal_casing', 1), ore('plateIron')]
+// Misc machines
+// Trip Hammer
+crafting.replaceShaped("pyrotech:tech/machine/trip_hammer", item('pyrotech:trip_hammer'), [
+        [item('pyrotech:material', 16), ore('plankTreatedWood'), item('pyrotech:material', 16)],
+        [ore('plankTreatedWood'),  ore('gearSmallBronze'), ore('plankTreatedWood')],
+        [item('pyrotech:masonry_brick_block'), ore('springSmallCopper'), item('pyrotech:masonry_brick_block')]
 ])
 
+// Soaking pot
+crafting.replaceShaped("pyrotech:tech/basic/soaking_pot", item('pyrotech:soaking_pot'), [
+        [item('pyrotech:material', 16),  null, item('pyrotech:material', 16)],
+        [ore('plankWood'), item('pyrotech:material', 16), ore('plankWood')]
+])
+
+// Barrel lid
+crafting.replaceShaped("pyrotech:tech/basic/barrel_lid", item('pyrotech:barrel_lid'), [
+        [ore('craftingToolSaw')],
+        [ore('slabTreatedWood')]
+])
+
+// Barrel
+crafting.replaceShaped("pyrotech:tech/basic/barrel", item('pyrotech:barrel'), [
+        [ore('plankTreatedWood'), null, ore('plankTreatedWood')],
+        [ore('plankTreatedWood'), ore('craftingToolSaw'), ore('plankTreatedWood')],
+        [ore('plankTreatedWood'), ore('plankTreatedWood'), ore('plankTreatedWood')]
+])
+
+// Durable stash
+crafting.replaceShaped("pyrotech:storage/stash_durable", item('pyrotech:stash_stone'), [
+        [ore('slabTreatedWood'), null, ore('slabTreatedWood')],
+        [item('pyrotech:material', 16), ore('slabTreatedWood'), item('pyrotech:material', 16)]
+])
+
+// Durable shelf
+crafting.replaceShaped("pyrotech:storage/shelf_durable", item('pyrotech:shelf_stone'), [
+        [item('pyrotech:material', 16), ore('slabTreatedWood'), item('pyrotech:material', 16)],
+        [ore('plankTreatedWood'), ore('slabTreatedWood'), ore('plankTreatedWood')],
+        [item('pyrotech:material', 16), ore('slabTreatedWood'), item('pyrotech:material', 16)]
+])
+
+// Durable crate
+crafting.replaceShaped("pyrotech:storage/crate_durable", item('pyrotech:crate_stone'), [
+        [item('pyrotech:material', 16), ore('plankTreatedWood'), item('pyrotech:material', 16)],
+        [ore('plankTreatedWood'), ore('slabTreatedWood'), ore('plankTreatedWood')],
+        [item('pyrotech:material', 16), ore('plankTreatedWood'), item('pyrotech:material', 16)]
+])
+
+// Brick machines
 // Brick oven
 crafting.replaceShaped("pyrotech:tech/machine/brick_oven", item('pyrotech:brick_oven'), [
         [ore('plateIron'), item('gregtech:meta_item_1', 352), ore('plateIron')],

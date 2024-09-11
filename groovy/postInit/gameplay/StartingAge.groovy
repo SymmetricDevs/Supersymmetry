@@ -55,7 +55,7 @@ crafting.replaceShaped("gregtech:stick_long_stick_wood", item('gregtech:meta_sti
 ])
 
 // Stone Tools
-crafting.replaceShaped("gregtech:axe_stone", item('gregtech:axe').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 95, 'Durability': 0, 'ToolSpeed': 1.0F, 'HarvestLevel': 1, 'AttackDamage': 6.0F, 'AttackSpeed': -3.2F], 'HideFlags': 2, 'GT.Behaviours': ['DisableShields': (byte) 1, 'TreeFelling': (byte) 1]]), [
+crafting.replaceShaped("gregtech:axe_stone", item('gregtech:axe').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 31, 'Durability': 0, 'ToolSpeed': 1.0F, 'HarvestLevel': 1, 'AttackDamage': 6.0F, 'AttackSpeed': -3.2F], 'HideFlags': 2, 'GT.Behaviours': ['DisableShields': (byte) 1, 'TreeFelling': (byte) 1]]), [
         [ore('rock'), item('pyrotech:material', 12)],
         [ore('rock'), ore("stickWood")]
 ])
@@ -80,12 +80,53 @@ crafting.replaceShaped("gregtech:hammer_stone", item('gregtech:hammer').withNbt(
         [ore("stickWood"), item('pyrotech:material', 12)]
 ])
 
-crafting.replaceShaped("gregtech:knife_stone", item('gregtech:knife').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 95, 'Durability': 0, 'AttackDamage': 1.0F, 'AttackSpeed': 2.5F], 'HideFlags': 2, 'GT.Behaviours': []]), [
+crafting.replaceShaped("gregtech:knife_stone", item('gregtech:knife').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 31, 'Durability': 0, 'AttackDamage': 1.0F, 'AttackSpeed': 2.5F], 'HideFlags': 2, 'GT.Behaviours': []]), [
         [null, ore('rock')],
         [ore("stickWood"), item('pyrotech:material', 12)]
 ])
 
+// Granite Mortar
+crafting.replaceShaped("gregtech:mortar_granite", item('gregtech:mortar').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:granite', 'MaxDurability': 95, 'Durability': 0, 'AttackDamage': 0.0F, 'AttackSpeed': -2.4F], 'HideFlags': 2, 'GT.Behaviours': []]), [
+        [null, ore('stoneGranite'), null],
+        [ore('stone'), ore('stoneGranite'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')],
+])
+
 // Flint Tools
+crafting.replaceShaped("gregtech:axe_flint", item('gregtech:axe').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:flint', 'MaxDurability': 95, 'Durability': 0, 'ToolSpeed': 2.0F, 'HarvestLevel': 1, 'AttackDamage': 6.0F, 'AttackSpeed': -3.2F], 'HideFlags': 2, 'GT.Behaviours': ['DisableShields': (byte) 1, 'TreeFelling': (byte) 1]]), [
+        [item('pyrotech:material', 10), item('pyrotech:material', 10), null],
+        [item('pyrotech:material', 10), ore("stickWood"), ore('twine')],
+        [ore("stickWood"), null, null]
+])
+
+crafting.replaceShaped("gregtech:hoe_flint", item('gregtech:hoe').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:flint', 'MaxDurability': 31, 'Durability': 0, 'AttackDamage': 0.0F, 'AttackSpeed': -1.0F, 'HarvestLevel': 1], 'HideFlags': 2, 'GT.Behaviours': []]), [
+        [item('pyrotech:material', 10), item('pyrotech:material', 10), ore('twine')],
+        [null, ore("stickWood"), null],
+        [ore("stickWood"), null, null]
+])
+
+crafting.replaceShaped("gregtech:pickaxe_flint", item('gregtech:pickaxe').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:flint', 'MaxDurability': 31, 'Durability': 0, 'ToolSpeed': 4.0F, 'HarvestLevel': 1, 'AttackDamage': 2.0F, 'AttackSpeed': -2.8F], 'HideFlags': 2, 'GT.Behaviours': ['TorchPlacing': (byte) 1]]), [
+        [item('pyrotech:material', 10), item('pyrotech:material', 10), ore('twine')],
+        [null, ore("stickWood"), item('pyrotech:material', 10)],
+        [ore("stickWood"), null, item('pyrotech:material', 10)]
+])
+
+crafting.replaceShaped("gregtech:shovel_flint", item('gregtech:shovel').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:flint', 'MaxDurability': 31, 'Durability': 0, 'ToolSpeed': 4.0F, 'HarvestLevel': 1, 'AttackDamage': 2.5F, 'AttackSpeed': -3.0F], 'HideFlags': 2, 'GT.Behaviours': []]), [
+        [null, ore('twine'), item('pyrotech:material', 10)],
+        [null, ore("stickWood"), null],
+        [ore("stickWood"), null, null]
+])
+
+crafting.replaceShaped("gregtech:knife_flint", item('gregtech:knife').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:flint', 'MaxDurability': 95, 'Durability': 0, 'AttackDamage': 1.0F, 'AttackSpeed': 3.0F], 'HideFlags': 2, 'ench': [['id': (short) 20, 'lvl': (short) 2]], 'GT.Behaviours': []]), [
+        [item('pyrotech:material', 10), ore('twine')],
+        [null, ore("stickWood")]
+])
+
+crafting.replaceShaped("gregtech:sword_flint", item('gregtech:sword').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:flint', 'MaxDurability': 95, 'Durability': 0, 'AttackDamage': 4.0F, 'AttackSpeed': -2.4F, 'HarvestLevel': 1], 'HideFlags': 2, 'ench': [['id': (short) 20, 'lvl': (short) 2]], 'GT.Behaviours': []]), [
+        [null, null, item('pyrotech:material', 10)],
+        [ore('twine'), item('pyrotech:material', 10), null],
+        [ore("stickWood"), ore('twine'), null]
+])
 
 //Magnetite Chunk Crafting
 crafting.addShapeless("magnetite_chunk", metaitem('chunk.magnetite'), [ore('oreMagnetite'), ore('rock')]);
