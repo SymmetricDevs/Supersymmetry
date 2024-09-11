@@ -5,7 +5,7 @@ import com.codetaylor.mc.pyrotech.modules.tech.basic.block.BlockKilnPit;
 import com.cleanroommc.groovyscript.api.IIngredient;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.world.BlockEvent
+import net.minecraftforge.event.world.BlockEvent;
 
 log.infoMC("Running Pyrotech.groovy...")
 
