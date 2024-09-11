@@ -595,6 +595,7 @@ def anvil_recipes = [
         ["brick_stone", ore('stone'), item('pyrotech:material', 16) * 4, 2, false],
         ["stick_stone", item('pyrotech:material', 16), item('pyrotech:material', 27) * 2, 2, false],
         ["bone_shard", ore('bone'), item('pyrotech:material', 11) * 3, 2],
+        ["flint_shard", ore('gemFlint'), item('pyrotech:material', 10) * 3, 2],
         ["iron_shard", ore('ingotIron'), item('pyrotech:material', 19) * 9, 2],
         ["gold_shard", ore('ingotGold'), item('pyrotech:material', 34) * 9, 2],
         ["diamond_shard", ore('gemDiamond'), item('pyrotech:material', 18) * 9, 4],
