@@ -860,7 +860,6 @@ def ores = [
 
         // Lead ores
         new Ore("Cerussite", "Lead"),
-        new Ore("Anglesite", "Lead"),
         new Ore("Galena", "Lead"),
 
         // Zinc ores
