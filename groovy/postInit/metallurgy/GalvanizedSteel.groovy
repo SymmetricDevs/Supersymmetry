@@ -1,9 +1,5 @@
-
-
-import static gregtech.api.unification.material.Materials.*;
-import gregtech.api.unification.material.MarkerMaterials;
-import static gregtech.api.unification.ore.OrePrefix.dye;
-
+import globals.Globals
+import static globals.CarbonGlobals.*
 
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 
