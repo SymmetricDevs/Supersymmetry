@@ -815,7 +815,7 @@ class Ore {
     }
 
     ItemStack getByproduct(Prefix prefix) {
-        int amount = prefix.byproduct_amount * output_multiplier
+        int amount = prefix.byproduct_amount * output_multiplier * 8
         return (byproduct == null || amount == 0) ? null : (item(byproduct) * amount)
     }
 }
@@ -903,6 +903,7 @@ reductants.forEach { reductant ->
     }
 }
 
+// Alloy smelting
 def alloying_prefixes = [
         prefix_ingot,
         prefix_dust
