@@ -2395,6 +2395,8 @@ item.chisel.chisel_diamond.name=Steel Chisel
 tooltip.computronics.waila.tape.notapeinserted=No Tape Inserted
 tooltip.computronics.waila.tape.tapeinserted=Tape Inserted
 item.chesttransporter_copper.name=Bronze Chest Transporter
+tile.pyrotech.anvil_granite.name=Stone Anvil
+gui.pyrotech.jei.category.anvil.granite=Stone Anvil
 
 # Material Renaming
 item.susy.material.ultra_high_molecular_weight_polyethylene.dustTiny=Tiny Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp
