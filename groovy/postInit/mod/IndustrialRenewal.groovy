@@ -628,7 +628,7 @@ mods.jei.ingredient.yeet( // hide IR materials
 )
 
 mods.gregtech.assembler.recipeBuilder()
-	.inputs(metaitem('stickAnnealedCopper') * 4)
+	.inputs(metaitem('stickSteel'))
 	.inputs(ore('plateSteel'))
 	.fluidInputs(fluid('glass') * 576)
 	.outputs(item('industrialrenewal:isolator_hv'))
