@@ -942,20 +942,17 @@ def alloy_add = {String output, int amount, int duration, ArrayList inputs ->
 }
 
 // Smelter alloying recipes
-// Bronze
-alloy_add("Bronze", 4, 400, [
-        "Copper", 3,
-        "Tin", 1
-])
+alloying_recipes = [
+        // Bronze
+        ["Bronze", 4, 400, ["Copper", 3, "Tin", 1]],
+        // Brass
+        ["Brass", 4, 400, ["Copper", 3, "Zinc", 1]],
+        // SnFe
+        ["TinAlloy", 2, 200, ["Iron", 1, "Tin", 1]],
+        // Kovar
+        ["Kovar", 2, 200, ["Iron", 2, "Nickel", 1, "CobaltMatte", 1]]
+]
 
-// Brass
-alloy_add("Brass", 4, 400, [
-        "Copper", 3,
-        "Zinc", 1
-])
-
-// SnFe
-alloy_add("TinAlloy", 2, 200, [
-        "Iron", 1,
-        "Tin", 1
-])
+alloying_recipes.forEach { recipe ->
+    alloy_add(*recipe)
+}
