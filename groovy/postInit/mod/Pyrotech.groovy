@@ -54,7 +54,6 @@ def name_removals = [
         "pyrotech:bucket/bucket_wood",
         "pyrotech:bucket/bucket_stone",
         "pyrotech:ignition/matchstick",
-        "pyrotech:ignition/flint_and_tinder",
         "pyrotech:stone_hammer",
         "pyrotech:obsidian_hammer",
         "pyrotech:tech/bloomery/tongs_obsidian",
@@ -230,7 +229,6 @@ mods.jei.ingredient.yeet(
         item('pyrotech:bucket_refractory'),
         item('pyrotech:matchstick'),
         item("pyrotech:crafting_table_template"),
-        item('pyrotech:flint_and_tinder'),
         item('pyrotech:straw_bed'),
         item('pyrotech:limestone'),
         item('pyrotech:furnace_core'),
@@ -704,6 +702,11 @@ crafting.replaceShaped("pyrotech:storage/crate_durable", item('pyrotech:crate_st
         [item('pyrotech:material', 16), ore('plankTreatedWood'), item('pyrotech:material', 16)],
         [ore('plankTreatedWood'), ore('slabTreatedWood'), ore('plankTreatedWood')],
         [item('pyrotech:material', 16), ore('plankTreatedWood'), item('pyrotech:material', 16)]
+])
+
+// Anvil
+crafting.replaceShapeless("pyrotech:tech/basic/anvil_granite", item('pyrotech:anvil_granite'), [
+        ore('slabStone')
 ])
 
 // Brick machines

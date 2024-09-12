@@ -2398,6 +2398,8 @@ item.chisel.chisel_diamond.name=Steel Chisel
 tooltip.computronics.waila.tape.notapeinserted=No Tape Inserted
 tooltip.computronics.waila.tape.tapeinserted=Tape Inserted
 item.chesttransporter_copper.name=Bronze Chest Transporter
+tile.pyrotech.anvil_granite.name=Stone Anvil
+gui.pyrotech.jei.category.anvil.granite=Stone Anvil
 gregtech.universal.tooltip.terrain_resist=§eWill not explode from water, lava, fire or rain.
 
 # Material Renaming
