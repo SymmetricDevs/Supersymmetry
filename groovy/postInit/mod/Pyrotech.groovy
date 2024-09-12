@@ -780,9 +780,11 @@ class Reductant {
 class Prefix {
     String name
     float duration_multiplier
-    Prefix(String name, float multiplier) {
+    int byproduct_amount
+    Prefix(String name, float multiplier, int byproduct_amount = 0) {
         this.name = name
         this.duration_multiplier = multiplier
+        this.byproduct_amount = byproduct_amount
     }
 }
 
@@ -792,14 +794,12 @@ class Ore {
     int output_multiplier
     int duration
     String byproduct
-    int byproduct_amount
-    Ore(String name, String output, int output_multiplier = 1, int duration = 400, String byproduct = null, int byproduct_amount = 0) {
+    Ore(String name, String output, int output_multiplier = 1, String byproduct = "pyrotech:slag", int duration = 400) {
         this.name = name
         this.output = output
         this.output_multiplier = output_multiplier
         this.duration = duration
         this.byproduct = byproduct
-        this.byproduct_amount = byproduct_amount
     }
 
     IIngredient get(Prefix prefix) {
@@ -814,8 +814,9 @@ class Ore {
         return  (int) duration * reductant.duration_multiplier * prefix.duration_multiplier
     }
 
-    ItemStack getByproduct() {
-        return byproduct == null ? null : (item(byproduct) * byproduct_amount)
+    ItemStack getByproduct(Prefix prefix) {
+        int amount = prefix.byproduct_amount * output_multiplier
+        return (byproduct == null || amount == 0) ? null : (item(byproduct) * amount)
     }
 }
 
@@ -834,9 +835,9 @@ def reductants = [
         new Reductant("flakeCoal", 80, 0.9)
 ]
 
-def prefix_ore = new Prefix("ore", 1)
-def prefix_crushed = new Prefix("crushed", 0.75)
-def prefix_crushed_purified = new Prefix("crushedPurified", 0.75)
+def prefix_ore = new Prefix("ore", 1, 2)
+def prefix_crushed = new Prefix("crushed", 0.75, 1)
+def prefix_crushed_purified = new Prefix("crushedPurified", 0.75, 1)
 def prefix_dust_impure = new Prefix("dustImpure", 0.5)
 def prefix_dust = new Prefix("dust", 0.5)
 def prefix_ingot = new Prefix("ingot", 1)
@@ -894,8 +895,8 @@ reductants.forEach { reductant ->
                     .inputs(reductant.get())
                     .duration(oreIn.getDuration(reductant, prefix))
                     .outputs(oreIn.getOutput(prefix))
-            if (oreIn.getByproduct() != null) {
-                    builder.outputs(oreIn.getByproduct())
+            if (oreIn.getByproduct(prefix) != null) {
+                    builder.outputs(oreIn.getByproduct(prefix))
             }
             builder.buildAndRegister()
         }
