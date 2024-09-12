@@ -693,5 +693,11 @@ public class SecondDegreeMaterials {
                 .components(SodiumAlum * 1, Water * 4)
                 .colorAverage()
                 .build();
+
+        GalvanizedSteel = new Material.Builder(13114, SuSyUtility.susyId("galvanized_steel"))
+                .dust().flags(GENERATE_FINE_WIRE)
+                .components(Iron * 8, Zinc * 1)
+                .colorAverage()
+                .build();
     }
 }
