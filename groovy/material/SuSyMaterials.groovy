@@ -509,6 +509,7 @@ class SuSyMaterials {
         public static Material PolluciteLeach;
         public static Material CaesiumRubidiumAlumMixture;
         public static Material NetherMolecularSieve;
+        public static Material CobaltMatte;
 
         // Petrochem Materials
 
@@ -1069,6 +1070,7 @@ class SuSyMaterials {
         public static Material PotassiumPermanganate;
         public static Material LeadFreeSolder;
         public static Material CryogenicSolder;
+        public static Material Kovar;
 
         // HP Materials
 
