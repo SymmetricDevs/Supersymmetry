@@ -234,6 +234,8 @@ mods.jei.ingredient.yeet(
         item('pyrotech:furnace_core'),
         item('pyrotech:refractory_door'),
         item('pyrotech:refractory_glass'),
+        item('pyrotech:mud_layer'),
+        item('pyrotech:mud'),
         item('pyrotech:igniter'),
         item('pyrotech:igniter', 1),
         item('pyrotech:stone_tank'),
@@ -432,6 +434,7 @@ mods.pyrotech.soaking_pot.remove("pyrotech:pulp_from_reeds")
 mods.pyrotech.soaking_pot.remove("pyrotech:pulp_from_wood_chips")
 mods.pyrotech.soaking_pot.remove("pyrotech:board_tarred")
 mods.pyrotech.soaking_pot.remove("pyrotech:dough")
+mods.pyrotech.soaking_pot.remove("pyrotech:mud_clump")
 drying_remove("paper")
 
 // Remove pyrotech limestone
@@ -447,6 +450,17 @@ mods.pyrotech.soaking_pot.recipeBuilder()
         .time(1)
         .campfireRequired(false)
         .register()
+
+// Wet Cob
+crafting.replaceShaped("pyrotech:cob_3x3", item('pyrotech:cob_wet') * 4, [
+        [ore('ballMud'), ore('ballMud'), ore('ballMud')],
+        [ore('ballMud'), ore('straw'), ore('ballMud')],
+        [ore('ballMud'), ore('ballMud'), ore('ballMud')]
+])
+
+crafting.replaceShapeless("pyrotech:cob_2x2b", item('pyrotech:cob_wet') * 16, [
+        item('pyrotech:thatch'), ore('blockMud'), ore('blockMud'), ore('blockMud')
+])
 
 // Ash
 // Ash -> ceu ash
