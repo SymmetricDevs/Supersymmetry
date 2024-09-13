@@ -1,8 +1,0 @@
-{
-  "path": "mod_harvestcraft/mutations/cactusfruit_mutation.json",
-  "enabled": true,
-  "chance": 0.5,
-  "child": "harvestcraft:cactusfruit_plant",
-  "parent1": "harvestcraft:kiwi_plant",
-  "parent2": "harvestcraft:bambooshoot_plant"
-}

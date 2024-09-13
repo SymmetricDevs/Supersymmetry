@@ -1253,6 +1253,7 @@ class SuSyMaterials {
         public static Material RubidiumHydroxideSolution;
         public static Material SodiumAlumSolution;
         public static Material OxidizedManganateSolution;
+        public static Material GalvanizedSteel;
 
         // Organic Chemistry Materials
 

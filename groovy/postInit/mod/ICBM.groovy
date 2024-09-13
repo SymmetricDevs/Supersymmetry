@@ -30,7 +30,7 @@ def name_removals = [
         "icbmclassic:missile/ex/smoke",
         "icbmclassic:missile/ex/nuclear",
         "icbmclassic:missile/ex/emp",
-        "icbmclassic:missile/ex/exothermie",
+        "icbmclassic:missile/ex/exothermic",
         "icbmclassic:missile/ex/endothermic",
         "icbmclassic:missile/ex/antigravitational",
         "icbmclassic:missile/ex/ender",
@@ -63,7 +63,7 @@ def name_removals = [
         "icbmclassic:explosives/smoke",
         "icbmclassic:explosives/nuclear",
         "icbmclassic:explosives/emp",
-        "icbmclassic:explosives/exothermie",
+        "icbmclassic:explosives/exothermic",
         "icbmclassic:explosives/endothermic",
         "icbmclassic:explosives/anti_grav",
         "icbmclassic:explosives/ender",
@@ -84,11 +84,28 @@ def name_removals = [
         "icbmclassic:concrete",
         "icbmclassic:concrete.1",
         "icbmclassic:concrete.2",
+        "icbmclassic:grenade:0",
+        "icbmclassic:launcher/support",
+        "icbmclassic:launcher/base",
+        "icbmclassic:launcher/screen",
+        "icbmclassic:launcher/connector",
+        "icbmclassic:bomblet/bomblet",
+        "icbmclassic:bomblet/condensed",
+        "icbmclassic:parachute",
+        "icbmclassic:balloon",
+        "icbmclassic:missile/special/missile.cluster",
+        "icbmclassic:spikes",
+        "icbmclassic:spikes.1",
+        "icbmclassic:spikes.2",
+        "icbmclassic:powder.poison",
+        "icbmclassic:saltpeter_ball",
 ]
 
 for (item in name_removals) {
         crafting.remove(item);
 }
+
+furnace.removeByInput(item('icbmclassic:saltpeter_ball'))
 
 for (var i = 0; i < 8; i++) {
         recipemap('weapons_factory').recipeBuilder()
@@ -391,58 +408,6 @@ mods.gregtech.assembler.recipeBuilder()
 
 mods.gregtech.assembler.recipeBuilder()
         .inputs([
-                ore('plateAluminium')*3,
-                ore('frameGtAluminium')*2,
-                ore('stickLongAluminium')*2,
-                ore('circuitHv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherbase:1'))
-        .duration(400)
-        .EUt(60)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
-                ore('plateAluminium')*2,
-                ore('stickAluminium')*2,
-                ore('paneGlassColorless'),
-                ore('circuitHv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherscreen:1'))
-        .duration(400)
-        .EUt(60)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
-                ore('plateStainlessSteel')*3,
-                ore('frameGtStainlessSteel')*2,
-                ore('stickLongStainlessSteel')*2,
-                ore('circuitEv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherbase:2'))
-        .duration(400)
-        .EUt(260)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
-                ore('plateStainlessSteel')*2,
-                ore('stickStainlessSteel')*2,
-                ore('paneGlassColorless'),
-                ore('circuitEv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherscreen:2'))
-        .duration(400)
-        .EUt(260)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
                 ore('frameGtSteel')*3,
                 ore('stickLongSteel')*3,
                 metaitem('sensor.lv')
@@ -451,30 +416,6 @@ mods.gregtech.assembler.recipeBuilder()
         .outputs(item('icbmclassic:launcherframe:0'))
         .duration(400)
         .EUt(30)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
-                ore('frameGtAluminium')*3,
-                ore('stickLongAluminium')*3,
-                metaitem('sensor.mv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherframe:1'))
-        .duration(400)
-        .EUt(60)
-        .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs([
-                ore('frameGtStainlessSteel')*3,
-                ore('stickLongStainlessSteel')*3,
-                metaitem('sensor.hv')
-        ])
-        .fluidInputs(fluid('soldering_alloy') * 72)
-        .outputs(item('icbmclassic:launcherframe:2'))
-        .duration(400)
-        .EUt(260)
         .buildAndRegister();
 
 //Missiles
@@ -628,3 +569,123 @@ Globals.solders.each { key, val ->
                 }
         }
 }
+//launcher connector
+mods.gregtech.assembler.recipeBuilder()
+        .inputs([
+                ore('plateSteel')*6,
+                metaitem('plateWroughtIron')*8,
+                ore('circuitLv'),
+                metaitem('conveyor.module.lv'),
+                metaitem('cableGtSingleCopper')*3
+
+        ])
+        .fluidInputs(fluid('soldering_alloy') * 72)
+        .outputs(item('icbmclassic:launcher_connector')*4)
+        .duration(400)
+        .EUt(30)
+        .buildAndRegister();
+//empty bomblet
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('plateSteel')*8,
+                                ore('circuitLv'),
+                                ore('frameGtSteel')*2
+                        ])
+                        .fluidInputs(fluid('tin') * 144)
+                        .outputs(item('icbmclassic:empty_bomblet'))
+                        .duration(300)
+                        .EUt(30)
+                        .buildAndRegister();
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('plateSteel')*8,
+                                ore('circuitLv'),
+                                ore('frameGtSteel')*2
+                        ])
+                        .fluidInputs(fluid('soldering_alloy') * 72)
+                        .outputs(item('icbmclassic:empty_bomblet'))
+                        .duration(300)
+                        .EUt(30)
+                        .buildAndRegister();
+//filled bomblets
+for (var i = 0; i < 15; i++) {
+        recipemap('large_weapons_factory').recipeBuilder()
+                .inputs([
+                        item('icbmclassic:explosives', i),
+                        item('icbmclassic:empty_bomblet')
+                ])
+                .outputs(item('icbmclassic:explosive_bomblet', i))
+                .duration(300)
+                .EUt(30)
+                .buildAndRegister();
+}
+//empty payload parachute
+mods.gregtech.assembler.recipeBuilder()
+        .inputs([
+                item('techguns:itemshared:60')*6,
+                item('minecraft:string')*4
+
+        ])
+        .outputs(item('icbmclassic:parachute'))
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister();
+//payload baloon
+mods.gregtech.assembler.recipeBuilder()
+        .inputs([
+                item('minecraft:carpet')*3,
+                item('minecraft:string')*2
+
+        ])
+        .outputs(item('icbmclassic:balloon'))
+        .duration(50)
+        .EUt(30)
+        .buildAndRegister();
+//missile module (empty missile)
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('stickAluminium')*4,
+                                ore('ringAluminium')*2,
+                                ore('plateAluminium')*2,
+                                ore('foilAluminium')*16,
+                        ])  
+                        .fluidInputs(fluid('tin') * 144)
+                        .outputs(item('icbmclassic:explosive_missile:' + 24))
+                        .duration(300)
+                        .EUt(30)
+                        .buildAndRegister();
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('stickAluminium')*4,
+                                ore('ringAluminium')*2,
+                                ore('plateAluminium')*2,
+                                ore('foilAluminium')*16,
+                        ])
+                        .fluidInputs(fluid('soldering_alloy') * 72)
+                        .outputs(item('icbmclassic:explosive_missile:' + 24))
+                        .duration(300)
+                        .EUt(30)
+                        .buildAndRegister();
+//cluster missile
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('screwAluminium')*4,
+                                metaitem('crate.aluminium'),
+                                item('icbmclassic:explosive_missile:' + 24)
+                        ])  
+                        .fluidInputs(fluid('tin') * 144)
+                        .outputs(item('icbmclassic:cluster_missile'))
+                        .duration(400)
+                        .EUt(30)
+                        .buildAndRegister();
+recipemap('large_weapons_factory').recipeBuilder()
+                        .inputs([
+                                ore('screwAluminium')*4,
+                                metaitem('crate.aluminium'),
+                                item('icbmclassic:explosive_missile:' + 24)
+                        ])
+                        .fluidInputs(fluid('soldering_alloy') * 72)
+                        .outputs(item('icbmclassic:cluster_missile'))
+                        .duration(400)
+                        .EUt(30)
+                        .buildAndRegister();

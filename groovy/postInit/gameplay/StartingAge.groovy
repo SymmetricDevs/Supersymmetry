@@ -1,4 +1,3 @@
-import crafttweaker.api.item.IItemStack;
 import Globals.*
 import appeng.api.AEApi;
 import appeng.api.features.IGrinderRegistry;
@@ -47,6 +46,11 @@ crafting.addShapeless("fiber_from_leaves", item('notreepunching:grass_fiber'), [
 crafting.replaceShapeless("gregtech:clay_ball_to_dust", metaitem('dustClay'), [
         ore('craftingToolMortar'),
         ore('ingotClay')
+])
+
+crafting.replaceShapeless("gregtech:clay_block_to_dust", metaitem('dustClay') * 4, [
+        ore('craftingToolMortar'),
+        item('minecraft:clay')
 ])
 
 crafting.addShapeless("gregtech:mud_block_to_ball", item('biomesoplenty:mudball') * 4, [

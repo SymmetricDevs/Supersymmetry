@@ -58,6 +58,22 @@ crafting.replaceShaped('chisel:laboratory', item('chisel:laboratory', 0) * 32, [
         [ore('stone'), ore('stone'), ore('stone')]
 ])
 
+for (def i = 0; i < 16; i++) {
+    crafting.removeByOutput(item('chisel:glasspane', i))
+
+    crafting.addShaped('chisel:glass_' + i, item('chisel:glasspane', i) * 2, [
+            [ore('craftingToolSaw'), item('chisel:glass', i)]
+    ])
+}
+
+for (def i = 0; i < 2; i++) {
+    crafting.removeByOutput(item('chisel:glasspane1', i))
+
+    crafting.addShaped('chisel:glass1_' + i, item('chisel:glasspane1', i) * 2, [
+            [ore('craftingToolSaw'), item('chisel:glass1', i)]
+    ])
+}
+
 ASSEMBLER = recipemap('assembler')
 
 ASSEMBLER.recipeBuilder()

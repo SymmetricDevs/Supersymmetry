@@ -1975,6 +1975,7 @@ susy.material.potassium_manganate=Potassium Manganate
 susy.material.lead_free_solder=Lead-Free Solder
 susy.material.cryogenic_solder=Cryogenic Solder
 susy.material.oxidized_manganate_solution=Oxidized Manganate Solution
+susy.material.galvanized_steel=Galvanized Steel
 
 # Isotopes
 

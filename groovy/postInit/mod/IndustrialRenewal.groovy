@@ -57,6 +57,15 @@ for (name in name_removals) {
 	crafting.remove(name)
 }
 
+mods.jei.category.hideCategory("industrialrenewal.lathe");
+
+mods.jei.ingredient.yeet( // hide IR materials
+		item('industrialrenewal:ingot_steel'),
+		item('industrialrenewal:stick_iron'),
+		item('industrialrenewal:stick_steel'),
+		item('industrialrenewal:steam')
+)
+
 crafting.replaceShaped("industrialrenewal:screwdrive", item('industrialrenewal:screwdrive'), [
 	[ore('screwSteel'), ore('stickSteel'), metaitem('electric.motor.lv')],
 	[null, item('minecraft:stone_button'), ore('plateSteel')],
@@ -609,6 +618,58 @@ mods.gregtech.assembler.recipeBuilder()
 	.EUt(Globals.voltAmps[1])
 	.buildAndRegister()
 
+/* ULTRA-HV THINGS*/
+
+
+
+mods.jei.ingredient.yeet( // hide IR materials
+		metaitem('plateGalvanizedSteel'),
+		metaitem('foilGalvanizedSteel')
+)
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(metaitem('stickSteel'))
+	.inputs(ore('plateSteel'))
+	.fluidInputs(fluid('glass') * 576)
+	.outputs(item('industrialrenewal:isolator_hv'))
+	.duration(200)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(metaitem('wireFineGalvanizedSteel') * 64)
+	.inputs(metaitem('wireFineGalvanizedSteel') * 64)
+	.inputs(metaitem('wireFineCopper') * 64)
+	.inputs(metaitem('wireFineCopper') * 64)
+	.inputs(metaitem('plateWood') * 2 )
+	.inputs(metaitem('stickSteel'))
+	.outputs(item('industrialrenewal:coil_hv') * 2)
+	.duration(800)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(metaitem('wireFineGalvanizedSteel') * 64)
+	.inputs(metaitem('wireFineGalvanizedSteel') * 64)
+	.inputs(metaitem('wireFineAluminium') * 64)
+	.inputs(metaitem('wireFineAluminium') * 64)
+	.inputs(metaitem('plateWood') * 2 )
+	.inputs(metaitem('stickSteel'))
+	.outputs(item('industrialrenewal:coil_hv') * 8)
+	.duration(800)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('circuitLV') * 4)
+	.inputs(metaitem('transformer.adjustable.lv'))
+	.inputs(item('industrialrenewal:energy_level'))
+	.inputs(item('gregtech:metal_casing', 4) * 8)
+	.inputs(item('industrialrenewal:isolator_hv'))
+	.outputs(item('industrialrenewal:transformer_hv'))
+	.duration(800)
+	.EUt(Globals.voltAmps[1])
+	.buildAndRegister()
 /*
 
 ArrayList<String> name_removals = [
