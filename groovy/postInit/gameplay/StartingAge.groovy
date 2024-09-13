@@ -65,7 +65,7 @@ crafting.replaceShaped("gregtech:hoe_stone", item('gregtech:hoe').withNbt(['Disa
         [ore("stickWood"), null]
 ])
 
-crafting.replaceShaped("gregtech:pickaxe_stone", item('gregtech:pickaxe').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 95, 'Durability': 0, 'ToolSpeed': 2.0F, 'HarvestLevel': 1, 'AttackDamage': 2.0F, 'AttackSpeed': -2.8F], 'HideFlags': 2, 'GT.Behaviours': ['TorchPlacing': (byte) 1]]), [
+crafting.replaceShaped("gregtech:pickaxe_stone", item('gregtech:pickaxe').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:stone', 'MaxDurability': 95, 'Durability': 0, 'ToolSpeed': 4.5F, 'HarvestLevel': 1, 'AttackDamage': 2.0F, 'AttackSpeed': -2.8F], 'HideFlags': 2, 'GT.Behaviours': ['TorchPlacing': (byte) 1]]), [
         [ore('rock'), item('pyrotech:material', 12)],
         [ore("stickWood"), ore('rock')]
 ])
