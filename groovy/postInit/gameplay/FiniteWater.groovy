@@ -7,6 +7,9 @@ import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.eventhandler.Event;
 
+/**
+ * Adapted from UniversalTweaks
+ **/
 event_manager.listen { BlockEvent.CreateFluidSourceEvent event ->
     World world = event.getWorld();
     BlockPos pos = event.getPos();
