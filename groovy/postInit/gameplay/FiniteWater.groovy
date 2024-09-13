@@ -15,7 +15,9 @@ event_manager.listen { BlockEvent.CreateFluidSourceEvent event ->
         return;
     }
     Biome biome = world.getBiomeForCoordsBody(pos);
-    if (BiomeDictionary.hasType(biome, BiomeDictionary.Type.OCEAN) || BiomeDictionary.hasType(biome, BiomeDictionary.Type.RIVER)) return;
+    if (BiomeDictionary.hasType(biome, BiomeDictionary.Type.OCEAN)
+            || BiomeDictionary.hasType(biome, BiomeDictionary.Type.RIVER)
+            || BiomeDictionary.hasType(biome, BiomeDictionary.Type.BEACH)) return;
     IBlockState state = event.getState();
     if (state.getMaterial() == Material.WATER) {
         event.setResult(Event.Result.DENY)
