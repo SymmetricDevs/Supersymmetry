@@ -829,8 +829,8 @@ class Reductant {
         this.duration_multiplier = multiplier
     }
 
-    IIngredient get() {
-        return ore(name) * consumption
+    IIngredient get(Ore oreIn, Prefix prefix) {
+        return ore(name) * (consumption * (prefix.name == "ore" ? oreIn.output_multiplier : 1))
     }
 }
 
@@ -851,7 +851,7 @@ class Ore {
     int output_multiplier
     int duration
     String byproduct
-    Ore(String name, String output, int output_multiplier = 1, String byproduct = "pyrotech:slag", int duration = 400) {
+    Ore(String name, String output, int output_multiplier = 1, String byproduct = "pyrotech:slag", int duration = 200) {
         this.name = name
         this.output = output
         this.output_multiplier = output_multiplier
@@ -868,7 +868,7 @@ class Ore {
     }
 
     int getDuration(Reductant reductant, Prefix prefix) {
-        return  (int) duration * reductant.duration_multiplier * prefix.duration_multiplier
+        return  (int) duration * reductant.duration_multiplier * prefix.duration_multiplier * (prefix.name == "ore" ? output_multiplier : 1)
     }
 
     ItemStack getByproduct(Prefix prefix) {
@@ -948,7 +948,7 @@ reductants.forEach { reductant ->
         smelting_prefixes.forEach { prefix ->
             def builder = SMELTER.recipeBuilder()
                     .inputs(oreIn.get(prefix))
-                    .inputs(reductant.get())
+                    .inputs(reductant.get(oreIn, prefix))
                     .duration(oreIn.getDuration(reductant, prefix))
                     .outputs(oreIn.getOutput(prefix))
             if (oreIn.getByproduct(prefix) != null) {
@@ -1001,13 +1001,13 @@ def alloy_add = {String output, int amount, int duration, ArrayList inputs ->
 // Smelter alloying recipes
 alloying_recipes = [
         // Bronze
-        ["Bronze", 4, 400, ["Copper", 3, "Tin", 1]],
+        ["Bronze", 4, 200, ["Copper", 3, "Tin", 1]],
         // Brass
-        ["Brass", 4, 400, ["Copper", 3, "Zinc", 1]],
+        ["Brass", 4, 200, ["Copper", 3, "Zinc", 1]],
         // SnFe
-        ["TinAlloy", 2, 200, ["Iron", 1, "Tin", 1]],
+        ["TinAlloy", 2, 100, ["Iron", 1, "Tin", 1]],
         // Kovar
-        ["Kovar", 2, 200, ["Iron", 2, "Nickel", 1, "CobaltMatte", 1]]
+        ["Kovar", 2, 100, ["Iron", 2, "Nickel", 1, "CobaltMatte", 1]]
 ]
 
 alloying_recipes.forEach { recipe ->
