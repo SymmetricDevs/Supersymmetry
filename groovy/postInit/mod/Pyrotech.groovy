@@ -542,6 +542,16 @@ mods.chisel.carving.addGroup("fire_bricks")
 mods.chisel.carving.addVariation("fire_bricks", item('gregtech:metal_casing', 1))
 mods.chisel.carving.addVariation("fire_bricks", item('pyrotech:refractory_brick_block'))
 
+// Masonry brick slab
+crafting.addShaped("susy:masonry_brick_slab", item('pyrotech:masonry_brick_slab'), [
+        [item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block')]
+])
+
+// Refractory brick slab
+crafting.addShaped("susy:refractory_brick_slab", item('pyrotech:refractory_brick_slab'), [
+        [item('pyrotech:refractory_brick_block'), item('pyrotech:refractory_brick_block'), item('pyrotech:refractory_brick_block')]
+])
+
 // Mud brick
 drying_add("mudbrick", item('gregtechfoodoption:gtfo_meta_item', 43), item('gregtechfoodoption:gtfo_meta_item', 44), 14400, true, 1, true)
 
