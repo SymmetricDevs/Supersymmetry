@@ -1013,3 +1013,63 @@ alloying_recipes = [
 alloying_recipes.forEach { recipe ->
     alloy_add(*recipe)
 }
+
+// Coke oven buff
+
+// Removals
+// Charcoal * 1
+mods.gregtech.coke_oven.removeByInput(1, [item('minecraft:log:*')], null)
+// Coke * 1
+mods.gregtech.coke_oven.removeByInput(1, [item('minecraft:coal')], null)
+// Block of Coke * 1
+mods.gregtech.coke_oven.removeByInput(1, [item('minecraft:coal_block')], null)
+
+// Re-add recipes
+// Log -> charcoal
+mods.gregtech.coke_oven.recipeBuilder()
+        .inputs(ore('logWood'))
+        .outputs(item('minecraft:coal', 1))
+        .fluidOutputs(fluid('creosote') * 250)
+        .duration(100)
+        .buildAndRegister()
+
+// Coal -> coke
+mods.gregtech.coke_oven.recipeBuilder()
+        .inputs(ore('gemCoal'))
+        .outputs(metaitem('gemCoke'))
+        .fluidOutputs(fluid('creosote') * 500)
+        .duration(100)
+        .buildAndRegister()
+
+// Coal block -> coke block
+mods.gregtech.coke_oven.recipeBuilder()
+        .inputs(ore('blockCoal'))
+        .outputs(metaitem('blockCoke'))
+        .fluidOutputs(fluid('creosote') * 4500)
+        .duration(900)
+        .buildAndRegister()
+
+// Additional recipes
+// Log pile -> charcoal, with extra 1/9 output as a bonus
+mods.gregtech.coke_oven.recipeBuilder()
+        .inputs(item('pyrotech:log_pile'))
+        .outputs(item('minecraft:coal', 1) * 10)
+        .fluidOutputs(fluid('creosote') * 2500)
+        .duration(900)
+        .buildAndRegister()
+
+// Lignite -> lignite coke
+mods.gregtech.coke_oven.recipeBuilder()
+        .inputs(ore('gemLignite'))
+        .outputs(ore('gemLigniteCoke').getFirst())
+        .fluidOutputs(fluid('creosote') * 250)
+        .duration(100)
+        .buildAndRegister()
+
+// Lignite block -> lignite coke block
+mods.gregtech.coke_oven.recipeBuilder()
+        .inputs(ore('blockLignite'))
+        .outputs(ore('blockLigniteCoke').getFirst())
+        .fluidOutputs(fluid('creosote') * 2250)
+        .duration(900)
+        .buildAndRegister()
