@@ -577,10 +577,7 @@ def kiln_recipes = [
                 item('gregtech:meta_dust', 254) * 2
         ], [0.0, 0.0, 0.0], 1],
 
-        // Misc recipes
-        ["cob", item('pyrotech:cob_wet'), item('pyrotech:cob_dry'), 2400, [
-                item('biomesoplenty:mudball') * 3, item('gregtech:meta_dust', 254) * 2
-        ]],
+        // Stone recipes
         ["stone", item('minecraft:cobblestone'), item('minecraft:stone'), 2400, [
                 item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
         ]],
@@ -592,6 +589,56 @@ def kiln_recipes = [
         ]],
         ["stone_diorite", item('pyrotech:cobblestone', 1), item('minecraft:stone', 3), 2400, [
                 item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_black_granite", item('gregtech:stone_cobble'), item('gregtech:stone_smooth'), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_red_granite", item('gregtech:stone_cobble', 1), item('gregtech:stone_smooth', 1), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_marble", item('gregtech:stone_cobble', 2), item('gregtech:stone_smooth', 2), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_basalt", item('gregtech:stone_cobble', 3), item('gregtech:stone_smooth', 3), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_concrete_light", item('gregtech:stone_cobble', 4), item('gregtech:stone_smooth', 4), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_concrete_dark", item('gregtech:stone_cobble', 5), item('gregtech:stone_smooth', 5), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_gabbro", item('susy:susy_stone_cobble'), item('susy:susy_stone_smooth'), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_gneiss", item('susy:susy_stone_cobble', 1), item('susy:susy_stone_smooth', 1), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_limestone", item('susy:susy_stone_cobble', 2), item('susy:susy_stone_smooth', 2), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_phyllite", item('susy:susy_stone_cobble', 3), item('susy:susy_stone_smooth', 3), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_quartite", item('susy:susy_stone_cobble', 4), item('susy:susy_stone_smooth', 4), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_shale", item('susy:susy_stone_cobble', 5), item('susy:susy_stone_smooth', 5), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_shate", item('susy:susy_stone_cobble', 6), item('susy:susy_stone_smooth', 6), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_soapstone", item('susy:susy_stone_cobble', 7), item('susy:susy_stone_smooth', 7), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+        ["stone_kimberlite", item('susy:susy_stone_cobble', 8), item('susy:susy_stone_smooth', 8), 2400, [
+                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+        ]],
+
+        // Misc recipes
+        ["cob", item('pyrotech:cob_wet'), item('pyrotech:cob_dry'), 2400, [
+                item('biomesoplenty:mudball') * 3, item('gregtech:meta_dust', 254) * 2
         ]],
         ["hardened_clay", item('minecraft:clay'), item('minecraft:hardened_clay'), 2400, [
                 item('pyrotech:material', 7), item('pyrotech:material', 6), item('gregtech:meta_dust', 254) * 2
