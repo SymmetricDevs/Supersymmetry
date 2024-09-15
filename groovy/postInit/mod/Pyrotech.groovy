@@ -92,6 +92,7 @@ def name_removals = [
         "pyrotech:crafting_table_template",
         "pyrotech:furnace_core",
         "pyrotech:furnace",
+        "pyrotech:cookie_dough",
         "pyrotech:refractory_brick_block",
         "pyrotech:pyroberry_seeds",
         "pyrotech:gloamberry_seeds",
@@ -221,6 +222,7 @@ mods.jei.ingredient.yeet(
         item('pyrotech:material', 50),
         item('pyrotech:material', 51),
         item('pyrotech:material', 52),
+        item('pyrotech:material', 53),
         item('pyrotech:material', 54),
         item('pyrotech:cobblestone', 3),
         item('pyrotech:bucket_wood'),
@@ -272,7 +274,8 @@ def furnace_removals = [
         item('pyrotech:rock', 7),
         item('pyrotech:material', 9),
         item('pyrotech:material', 28),
-        item('pyrotech:material', 52)
+        item('pyrotech:material', 52),
+        item('pyrotech:material', 53)
 ]
 
 for (item in furnace_removals) {
@@ -284,6 +287,8 @@ mods.pyrotech.stone_kiln.removeAll()
 mods.pyrotech.brick_kiln.removeAll()
 mods.pyrotech.anvil.removeAll()
 mods.pyrotech.barrel.removeAll()
+mods.pyrotech.stone_oven.removeAll()
+mods.pyrotech.brick_oven.removeAll()
 
 // Util closures
 def kiln_add = { String name, IIngredient itemInput, ItemStack output, int burnTime, ArrayList<ItemStack> failureOutput,
@@ -324,29 +329,10 @@ def kiln_add = { String name, IIngredient itemInput, ItemStack output, int burnT
         }
 }
 
-def oven_remove = { String name, int tier = 0 ->
+def oven_add = { String name, IIngredient itemInput, ItemStack output, int duration ->
 
-        def domain = "pyrotech:"
-        def prefix = ""
-        switch (tier) {
-                case 0:
-                        try {
-                                mods.pyrotech.stone_oven.remove(domain + prefix + name)
-                        } catch (Exception ignored) {}
-                        prefix = "stone_oven/" + prefix
-                default:
-                        try {
-                                mods.pyrotech.brick_oven.remove(domain + prefix + name)
-                        } catch (Exception ignored) {}
-        }
-}
-
-def oven_add = { String name, IIngredient itemInput, ItemStack output, int duration,
-                 boolean isSuSyRecipe = false ->
-
-    def domain = isSuSyRecipe ? "susy:" : "pyrotech:"
+    def domain = "susy:"
     def prefix = ""
-    duration = duration.intdiv(8)
     mods.pyrotech.stone_oven.recipeBuilder()
             .name(domain + prefix + name)
                     .input(itemInput)
@@ -377,7 +363,6 @@ def drying_remove = { String name, int tier = 0 ->
                                 mods.pyrotech.drying_rack.remove(domain + prefix + name)
                         } catch (Exception ignored) {}
                         prefix = "drying_rack/" + prefix
-                        oven_remove(prefix + name)
         }
 }
 
@@ -404,7 +389,7 @@ def drying_add = { String name, IIngredient itemInput, ItemStack output, int dry
                                 .register()
                         if (addOvenRecipe) {
                                 prefix = "drying_rack/" + prefix
-                                oven_add(prefix + name, itemInput, output, dryTime, isSuSyRecipe)
+                                oven_add(prefix + name, itemInput, output, dryTime)
                         }
         }
 }
@@ -444,9 +429,9 @@ mods.pyrotech.compacting_bin.remove("pyrotech:ash_pile")
 // Slaked lime
 mods.pyrotech.soaking_pot.recipeBuilder()
         .name("susy:slaked_lime")
-        .input(item('gregtech:meta_dust', 360))
+        .input(metaitem('dustQuicklime'))
         .fluidInput(fluid('water') * 50)
-        .output(item('gregtech:meta_dust', 8100))
+        .output(metaitem('dustCalciumHydroxide'))
         .time(1)
         .campfireRequired(false)
         .register()
@@ -464,26 +449,26 @@ crafting.replaceShapeless("pyrotech:cob_2x2b", item('pyrotech:cob_wet') * 16, [
 
 // Ash
 // Ash -> ceu ash
-crafting.addShapeless("susy:ash_to_ashes", item('gregtech:meta_dust', 254), [
+crafting.addShapeless("susy:ash_to_ashes", metaitem('dustAsh'), [
         item('pyrotech:material')
 ])
 
 // Wood chips
 // Wood chips -> ceu wood pulp
-crafting.addShapeless("susy:wood_chips_to_wood_plup", item('gregtech:meta_dust', 1617), [
+crafting.addShapeless("susy:wood_chips_to_wood_plup", metaitem('dustWood'), [
         item('pyrotech:rock', 7)
 ])
 
 // Wood pulp compating
 mods.pyrotech.compacting_bin.remove("pyrotech:pile_wood_chips")
-mods.pyrotech.compacting_bin.add("pyrotech:pile_wood_chips", item('gregtech:meta_dust', 1617) * 4, item('pyrotech:pile_wood_chips'), 4)
+mods.pyrotech.compacting_bin.add("pyrotech:pile_wood_chips", metaitem('dustWood') * 4, item('pyrotech:pile_wood_chips'), 4)
 
 // Paper chad from wood pulp
 mods.pyrotech.soaking_pot.recipeBuilder()
         .name("susy:chad_from_wood")
-        .input(item('gregtech:meta_dust', 1617))
+        .input(metaitem('dustWood'))
         .fluidInput(fluid('water') * 200)
-        .output(item('gregtech:meta_dust', 1618))
+        .output(metaitem('dustPaper'))
         .time(1)
         .campfireRequired(false)
         .register()
@@ -515,8 +500,8 @@ crafting.replaceShaped("pyrotech:ignition/bow_drill", item('pyrotech:bow_drill')
 
 // Clay bucket
 crafting.replaceShaped("pyrotech:bucket/bucket_clay_unfired", item('pyrotech:bucket_clay_unfired'), [
-        [item('gregtech:meta_item_1', 349), null, item('gregtech:meta_item_1', 349)],
-        [null, item('gregtech:meta_item_1', 349), null]
+        [metaitem('compressed.clay'), null, metaitem('compressed.clay')],
+        [null, metaitem('compressed.clay'), null]
 ])
 
 // Mechanical hopper
@@ -552,102 +537,132 @@ crafting.addShaped("susy:refractory_brick_slab", item('pyrotech:refractory_brick
         [item('pyrotech:refractory_brick_block'), item('pyrotech:refractory_brick_block'), item('pyrotech:refractory_brick_block')]
 ])
 
-// Mud brick
-drying_add("mudbrick", item('gregtechfoodoption:gtfo_meta_item', 43), item('gregtechfoodoption:gtfo_meta_item', 44), 14400, true, 1, true)
+// Oven recipes
+def oven_recipes = [
+        // Mud brick
+        ["mudbrick", item('gregtechfoodoption:gtfo_meta_item', 44), item('gregtechfoodoption:gtfo_meta_item', 43), 2400],
+
+        // Misc recipes
+        ["straw", ore('cropWheat'), item('pyrotech:material', 2), 800],
+        ["dried_fibers_from_fibers", item('pyrotech:material', 12), item('pyrotech:material', 13), 600],
+        ["dried_fibers_from_saplings", ore('treeSapling'), item('pyrotech:material', 13), 600],
+        ["sponge", item('minecraft:sponge', 1), item('minecraft:sponge'), 2400],
+
+        // Food recipes
+        ["cooked_mince_meat_dust", metaitem('dustMeat'), item('gregtechfoodoption:gtfo_oredict_item', 1129), 4800],
+        ["cooked_meat_ingot", item('gregtechfoodoption:gtfo_oredict_item', 1116), item('gregtechfoodoption:gtfo_oredict_item', 1120), 4800],
+        ["bacon", item('gregtechfoodoption:gtfo_meta_item', 108), item('gregtechfoodoption:gtfo_meta_item', 22), 4800],
+        ["baked_potato", ore('cropPotato'), item('minecraft:baked_potato'), 4800],
+        ["cooked_beef", item('minecraft:beef'), item('minecraft:cooked_beef'), 4800],
+        ["cooked_porkchop", item('minecraft:porkchop'), item('minecraft:cooked_porkchop'), 4800],
+        ["cooked_mutton", item('minecraft:mutton'), item('minecraft:cooked_mutton'), 4800],
+        ["cooked_chicken", item('minecraft:chicken'), item('minecraft:cooked_chicken'), 4800],
+        ["cooked_rabbit", item('minecraft:rabbit'), item('minecraft:cooked_rabbit'), 4800],
+        ["cooked_fish", item('minecraft:fish'), item('minecraft:cooked_fish'), 4800],
+        ["cooked_salmon", item('minecraft:fish', 1), item('minecraft:cooked_fish', 1), 4800],
+        ["toast", item('gregtechfoodoption:gtfo_meta_item', 210), item('gregtechfoodoption:gtfo_meta_item', 211), 4800],
+        ["bun", item('gregtechfoodoption:gtfo_meta_item', 83), item('gregtechfoodoption:gtfo_meta_item', 87), 4800],
+        ["baguette", item('gregtechfoodoption:gtfo_meta_item', 48), item('gregtechfoodoption:gtfo_meta_item', 51), 4800],
+        ["bread", item('gregtechfoodoption:gtfo_meta_item', 47), item('minecraft:bread'), 4800]
+]
+
+oven_recipes.forEach { recipe ->
+    oven_add(*recipe)
+}
 
 // Kiln recipes
 def kiln_recipes = [
         // Brick
-        ["brick", item('gregtech:meta_item_1', 349), item('minecraft:brick'), 2400, [
-                item('pyrotech:material', 7), item('pyrotech:material', 6), item('gregtech:meta_dust', 254) * 2
+        ["brick", metaitem('compressed.clay'), item('minecraft:brick'), 2400, [
+                item('pyrotech:material', 7), item('pyrotech:material', 6), metaitem('dustAsh') * 2
         ]],
 
         // Coke oven brick
-        ["coke_oven_brick", item('gregtech:meta_item_1', 350), item('gregtech:meta_item_1', 353), 2400, [
-                item('gregtech:meta_item_1', 350), item('gregtech:meta_dust', 2063), item('gregtech:meta_dust', 254) * 2
+        ["coke_oven_brick", metaitem('compressed.coke_clay'), metaitem('brick.coke'), 2400, [
+                metaitem('compressed.coke_clay'), metaitem('dustClay'), metaitem('dustAsh') * 2
         ], [1, 0.05, 0.01], 1],
 
         // Fire brick
-        ["fire_brick", item('gregtech:meta_item_1', 351), item('gregtech:meta_item_1', 352), 3000, [
-                item('gregtech:meta_item_1', 351), item('gregtech:meta_dust', 2525), item('gregtech:meta_dust', 254) * 2
+        ["fire_brick", metaitem('compressed.fireclay'), metaitem('brick.fireclay'), 3000, [
+                metaitem('compressed.fireclay'), metaitem('dustFireclay'), metaitem('dustAsh') * 2
         ], [1, 0.15, 0.02], 1],
 
         // Quicklime
-        ["quicklime", ore('dustLimestone'), item('gregtech:meta_dust', 360), 2400, [
-                item('gregtech:meta_dust', 254) * 2
+        ["quicklime", ore('dustLimestone'), metaitem('dustQuicklime'), 2400, [
+                metaitem('dustAsh') * 2
         ], [0.0, 0.0, 0.0], 1],
 
         // Stone recipes
         ["stone", item('minecraft:cobblestone'), item('minecraft:stone'), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_andesite", item('pyrotech:cobblestone'), item('minecraft:stone', 5), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_granite", item('pyrotech:cobblestone', 2), item('minecraft:stone', 1), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_diorite", item('pyrotech:cobblestone', 1), item('minecraft:stone', 3), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_black_granite", item('gregtech:stone_cobble'), item('gregtech:stone_smooth'), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_red_granite", item('gregtech:stone_cobble', 1), item('gregtech:stone_smooth', 1), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_marble", item('gregtech:stone_cobble', 2), item('gregtech:stone_smooth', 2), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_basalt", item('gregtech:stone_cobble', 3), item('gregtech:stone_smooth', 3), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_concrete_light", item('gregtech:stone_cobble', 4), item('gregtech:stone_smooth', 4), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_concrete_dark", item('gregtech:stone_cobble', 5), item('gregtech:stone_smooth', 5), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_gabbro", item('susy:susy_stone_cobble'), item('susy:susy_stone_smooth'), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_gneiss", item('susy:susy_stone_cobble', 1), item('susy:susy_stone_smooth', 1), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_limestone", item('susy:susy_stone_cobble', 2), item('susy:susy_stone_smooth', 2), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_phyllite", item('susy:susy_stone_cobble', 3), item('susy:susy_stone_smooth', 3), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_quartite", item('susy:susy_stone_cobble', 4), item('susy:susy_stone_smooth', 4), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_shale", item('susy:susy_stone_cobble', 5), item('susy:susy_stone_smooth', 5), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_shate", item('susy:susy_stone_cobble', 6), item('susy:susy_stone_smooth', 6), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_soapstone", item('susy:susy_stone_cobble', 7), item('susy:susy_stone_smooth', 7), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
         ["stone_kimberlite", item('susy:susy_stone_cobble', 8), item('susy:susy_stone_smooth', 8), 2400, [
-                item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]],
 
         // Misc recipes
         ["cob", item('pyrotech:cob_wet'), item('pyrotech:cob_dry'), 2400, [
-                item('biomesoplenty:mudball') * 3, item('gregtech:meta_dust', 254) * 2
+                item('biomesoplenty:mudball') * 3, metaitem('dustAsh') * 2
         ]],
         ["hardened_clay", item('minecraft:clay'), item('minecraft:hardened_clay'), 2400, [
-                item('pyrotech:material', 7), item('pyrotech:material', 6), item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:material', 7), item('pyrotech:material', 6), metaitem('dustAsh') * 2
         ]],
         ["bucket_clay", item('pyrotech:bucket_clay_unfired'), item('pyrotech:bucket_clay'), 2400, [
-                item('pyrotech:material', 7), item('pyrotech:material', 6), item('gregtech:meta_dust', 254) * 2
+                item('pyrotech:material', 7), item('pyrotech:material', 6), metaitem('dustAsh') * 2
         ]],
         ["stone_slab", item('minecraft:stone_slab', 3), item('minecraft:stone_slab'), 2400, [
-                item('minecraft:stone_slab', 3), item('pyrotech:rock') * 3, item('gregtech:meta_dust', 254) * 2
+                item('minecraft:stone_slab', 3), item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
         ]]
 ]
 
@@ -672,7 +687,7 @@ def anvil_recipes = [
         ["charcoal_flakes", ore('charcoal'), item('pyrotech:material', 15) * 8, 2],
         ["cobblestone_to_rocks", ore('cobblestone'), item('pyrotech:rock') * 8, 2, false],
         ["limestone_to_cobbled", ore('stoneLimestone'), item('susy:susy_stone_cobble', 2), 2],
-        ["limestone_dust", item('susy:susy_stone_cobble', 2), item('gregtech:meta_dust', 27202), 2],
+        ["limestone_dust", item('susy:susy_stone_cobble', 2), metaitem('dustLimestone'), 2],
         ["pottery_shard_to_dust", item('pyrotech:material', 7), metaitem('dustSmallBrick') * 2, 1],
         ["pottery_fragments_to_dust", item('pyrotech:material', 6), metaitem('dustSmallBrick') * 2, 1]
 ]
@@ -753,7 +768,7 @@ crafting.replaceShapeless("pyrotech:tech/basic/anvil_granite", item('pyrotech:an
 // Brick machines
 // Brick oven
 crafting.replaceShaped("pyrotech:tech/machine/brick_oven", item('pyrotech:brick_oven'), [
-        [ore('plateIron'), item('gregtech:meta_item_1', 352), ore('plateIron')],
+        [ore('plateIron'), metaitem('brick.fireclay'), ore('plateIron')],
         [item('gregtech:metal_casing', 1), ore('craftingToolHardHammer'), item('gregtech:metal_casing', 1)],
         [ore('plateIron'), item('gregtech:metal_casing', 1), ore('plateIron')]
 ])
