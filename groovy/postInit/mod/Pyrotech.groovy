@@ -592,6 +592,11 @@ def kiln_recipes = [
                 metaitem('dustAsh') * 2
         ], [0.0, 0.0, 0.0], 1],
 
+        // Wood ash
+        ["wood_ash", ore('dustWood'), metaitem('dustWoodAsh'), 2400, [
+                metaitem('dustSmallWoodAsh'), metaitem('dustTinyWoodAsh') * 3, metaitem('dustAsh') * 2
+        ], [0.5, 0.15, 0.05]],
+
         // Stone recipes
         ["stone", item('minecraft:cobblestone'), item('minecraft:stone'), 2400, [
                 item('pyrotech:rock') * 3, metaitem('dustAsh') * 2
