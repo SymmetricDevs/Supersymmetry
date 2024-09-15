@@ -546,7 +546,7 @@ def oven_recipes = [
         ["straw", ore('cropWheat'), item('pyrotech:material', 2), 800],
         ["dried_fibers_from_fibers", item('pyrotech:material', 12), item('pyrotech:material', 13), 600],
         ["dried_fibers_from_saplings", ore('treeSapling'), item('pyrotech:material', 13), 600],
-        ["sponge", item('minecraft:sponge', 1), item('minecraft:sponge'), 2400],
+        ["sponge", item('minecraft:sponge', 1), item('minecraft:sponge'), 800],
 
         // Food recipes
         ["cooked_mince_meat_dust", metaitem('dustMeat'), item('gregtechfoodoption:gtfo_oredict_item', 1129), 4800],
