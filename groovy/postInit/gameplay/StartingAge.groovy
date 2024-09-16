@@ -86,7 +86,7 @@ crafting.replaceShaped("gregtech:knife_stone", item('gregtech:knife').withNbt(['
 ])
 
 // Granite Mortar
-crafting.replaceShaped("gregtech:mortar_granite", item('gregtech:mortar').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:granite', 'MaxDurability': 95, 'Durability': 0, 'AttackDamage': 0.0F, 'AttackSpeed': -2.4F], 'HideFlags': 2, 'GT.Behaviours': []]), [
+crafting.replaceShaped("gregtech:mortar_granite", item('gregtech:mortar').withNbt(['DisallowContainerItem': (byte) 0, 'GT.Tool': ['Material': 'gregtech:granite', 'MaxDurability': 191, 'Durability': 0, 'AttackDamage': 0.0F, 'AttackSpeed': -2.4F], 'HideFlags': 2, 'GT.Behaviours': []]), [
         [null, ore('stoneGranite'), null],
         [ore('stone'), ore('stoneGranite'), ore('stone')],
         [ore('stone'), ore('stone'), ore('stone')],
