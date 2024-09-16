@@ -528,12 +528,12 @@ mods.chisel.carving.addVariation("fire_bricks", item('gregtech:metal_casing', 1)
 mods.chisel.carving.addVariation("fire_bricks", item('pyrotech:refractory_brick_block'))
 
 // Masonry brick slab
-crafting.addShaped("susy:masonry_brick_slab", item('pyrotech:masonry_brick_slab'), [
+crafting.addShaped("susy:masonry_brick_slab", item('pyrotech:masonry_brick_slab') * 6, [
         [item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block'), item('pyrotech:masonry_brick_block')]
 ])
 
 // Refractory brick slab
-crafting.addShaped("susy:refractory_brick_slab", item('pyrotech:refractory_brick_slab'), [
+crafting.addShaped("susy:refractory_brick_slab", item('pyrotech:refractory_brick_slab') * 6, [
         [item('pyrotech:refractory_brick_block'), item('pyrotech:refractory_brick_block'), item('pyrotech:refractory_brick_block')]
 ])
 
