@@ -426,6 +426,13 @@ drying_remove("paper")
 mods.pyrotech.soaking_pot.remove("pyrotech:slaked_lime")
 mods.pyrotech.compacting_bin.remove("pyrotech:ash_pile")
 
+// Stack size changes
+item('pyrotech:cog_stone').Item.setMaxStackSize(16)
+item('pyrotech:cog_flint').Item.setMaxStackSize(16)
+item('pyrotech:cog_iron').Item.setMaxStackSize(16)
+item('pyrotech:cog_gold').Item.setMaxStackSize(16)
+item('pyrotech:cog_diamond').Item.setMaxStackSize(16)
+
 // Slaked lime
 mods.pyrotech.soaking_pot.recipeBuilder()
         .name("susy:slaked_lime")
