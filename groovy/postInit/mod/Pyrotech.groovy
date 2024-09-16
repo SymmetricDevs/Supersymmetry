@@ -936,7 +936,7 @@ def smelting_prefixes = [
 
 def ores = [
         // Copper ores
-        new Ore("Malachite", "Copper"),
+        new Ore("Malachite", "Copper", 2),
         new Ore("Tetrahedrite", "Copper"),
 //        new Ore("Chalcopyrite", "Copper"),
         new Ore("Bornite", "Copper"),
@@ -983,6 +983,22 @@ reductants.forEach { reductant ->
             }
             builder.buildAndRegister()
         }
+    }
+}
+
+// Extra smelting recipes
+def extra_smelting_recipes = [
+        [ore('gemMalachite'), metaitem('ingotCopper'),  2, 150]
+]
+
+extra_smelting_recipes.forEach { recipe ->
+    reductants.forEach { reductant ->
+        SMELTER.recipeBuilder()
+                .inputs(recipe[0] * 8)
+                .inputs(ore(reductant.name) * 8)
+                .outputs(recipe[1] * (recipe[2] * 8))
+                .duration((int) (recipe[3] * reductant.duration_multiplier * recipe[2]))
+                .buildAndRegister()
     }
 }
 
