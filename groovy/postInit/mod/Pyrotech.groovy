@@ -759,7 +759,7 @@ crafting.addShaped("susy:primitive_bus_export_to_import", item('gregtech:machine
 // Trip Hammer
 crafting.replaceShaped("pyrotech:tech/machine/trip_hammer", item('pyrotech:trip_hammer'), [
         [item('pyrotech:material', 16), ore('plankTreatedWood'), item('pyrotech:material', 16)],
-        [ore('plankTreatedWood'),  ore('gearSmallBronze'), ore('plankTreatedWood')],
+        [ore('plankTreatedWood'),  null, ore('plankTreatedWood')],
         [item('pyrotech:masonry_brick_block'), ore('springSmallCopper'), item('pyrotech:masonry_brick_block')]
 ])
 
