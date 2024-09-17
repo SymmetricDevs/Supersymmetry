@@ -24,7 +24,7 @@
       "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 1,
+          "Count:3": 8,
           "Damage:2": 352,
           "id:8": "gregtech:meta_item_1"
         }

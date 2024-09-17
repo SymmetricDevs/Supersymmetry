@@ -18,12 +18,17 @@
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
+      "entryLogic:8": "OR",
       "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 16,
+          "Count:3": 32,
           "id:8": "minecraft:coal"
+        },
+        "1:10": {
+          "Count:3": 8,
+          "Damage:2": 15,
+          "id:8": "susy:resource_block"
         }
       },
       "taskID:8": "bq_standard:retrieval"

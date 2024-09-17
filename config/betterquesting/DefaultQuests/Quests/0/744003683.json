@@ -1,6 +1,7 @@
 {
   "preRequisites:11": [
-    87
+    87,
+    456863075
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -16,5 +17,24 @@
     }
   },
   "rewards:9": {},
-  "tasks:9": {}
+  "tasks:9": {
+    "0:10": {
+      "entryLogic:8": "AND",
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 4,
+          "Damage:2": 2,
+          "id:8": "pyrotech:material"
+        },
+        "1:10": {
+          "Count:3": 3,
+          "Damage:2": 3,
+          "OreDict:8": "logWood",
+          "id:8": "minecraft:log"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
 }

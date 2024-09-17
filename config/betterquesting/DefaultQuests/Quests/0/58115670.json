@@ -15,5 +15,17 @@
     }
   },
   "rewards:9": {},
-  "tasks:9": {}
+  "tasks:9": {
+    "0:10": {
+      "entryLogic:8": "AND",
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "pyrotech:stone_oven"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
 }
