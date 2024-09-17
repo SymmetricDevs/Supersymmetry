@@ -939,7 +939,7 @@ def ores = [
         new Ore("Malachite", "Copper", 2),
         new Ore("Tetrahedrite", "Copper"),
 //        new Ore("Chalcopyrite", "Copper"),
-        new Ore("Bornite", "Copper"),
+//        new Ore("Bornite", "Copper"),
         new Ore("Chalcocite", "Copper"),
 
         // Lead ores
