@@ -4,64 +4,39 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "autoclaim:1": 0,
       "desc:8": "susy.quest.db.773.desc",
       "frame:8": "ROUNDED_SQUARE",
-      "globalshare:1": 0,
       "icon:10": {
-        "Count:3": 0,
         "Damage:2": 5111,
-        "OreDict:8": "",
         "id:8": "gregtech:meta_item_2"
       },
       "ignoresview:1": 0,
-      "ismain:1": 0,
-      "issilent:1": 0,
-      "lockedprogress:1": 0,
       "name:8": "susy.quest.db.773.title",
-      "questlogic:8": "AND",
-      "repeat_relative:1": 1,
-      "repeattime:3": -1,
-      "simultaneous:1": 0,
-      "snd_complete:8": "minecraft:entity.player.levelup",
-      "snd_update:8": "minecraft:entity.player.levelup",
-      "tasklogic:8": "AND",
       "visibility:8": "ALWAYS"
     }
   },
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
       "entryLogic:8": "AND",
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
-      "index:3": 0,
       "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
           "Damage:2": 5009,
-          "OreDict:8": "",
           "id:8": "gregtech:meta_item_2"
         }
       },
       "taskID:8": "bq_standard:retrieval"
     },
     "1:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
       "entryLogic:8": "AND",
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
       "index:3": 1,
       "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
           "Damage:2": 5111,
-          "OreDict:8": "",
           "id:8": "gregtech:meta_item_2"
         }
       },

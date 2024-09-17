@@ -4,208 +4,132 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "autoclaim:1": 0,
       "desc:8": "susy.quest.db.246.desc",
       "frame:8": "ROUNDED_SQUARE",
-      "globalshare:1": 0,
       "icon:10": {
-        "Count:3": 0,
-        "Damage:2": 0,
-        "OreDict:8": "",
         "id:8": "xtones:agon"
       },
       "ignoresview:1": 0,
-      "ismain:1": 0,
-      "issilent:1": 0,
-      "lockedprogress:1": 0,
       "name:8": "susy.quest.db.246.title",
-      "questlogic:8": "AND",
-      "repeat_relative:1": 1,
-      "repeattime:3": -1,
-      "simultaneous:1": 0,
-      "snd_complete:8": "minecraft:entity.player.levelup",
-      "snd_update:8": "minecraft:entity.player.levelup",
-      "tasklogic:8": "AND",
       "visibility:8": "ALWAYS"
     }
   },
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
       "entryLogic:8": "AND",
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
-      "index:3": 0,
       "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:agon"
         },
         "1:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:azur"
         },
         "2:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:bitt"
         },
         "3:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:cray"
         },
         "4:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:jelt"
         },
         "5:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:glaxx"
         },
         "6:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:iszm"
         },
         "7:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:cray"
         },
         "8:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:korp"
         },
         "9:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:kryp"
         },
         "10:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:lair"
         },
         "11:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:lave"
         },
         "12:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:mint"
         },
         "13:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:myst"
         },
         "14:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:reds"
         },
         "15:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:roen"
         },
         "16:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:sols"
         },
         "17:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:sync"
         },
         "18:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:tank"
         },
         "19:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:vect"
         },
         "20:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:vena"
         },
         "21:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:zane"
         },
         "22:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:zech"
         },
         "23:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:zeta"
         },
         "24:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:zion"
         },
         "25:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:zone"
         },
         "26:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:zkul"
         },
         "27:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
           "id:8": "xtones:zoea"
         }
       },

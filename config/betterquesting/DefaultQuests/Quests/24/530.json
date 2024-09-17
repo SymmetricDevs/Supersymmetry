@@ -4,28 +4,15 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "autoclaim:1": 0,
       "desc:8": "susy.quest.db.530.desc",
       "frame:8": "ROUNDED_SQUARE",
-      "globalshare:1": 0,
       "icon:10": {
-        "Count:3": 0,
         "Damage:2": 13,
-        "OreDict:8": "",
         "id:8": "opencomputers:material"
       },
       "ignoresview:1": 0,
-      "ismain:1": 0,
-      "issilent:1": 0,
-      "lockedprogress:1": 0,
       "name:8": "susy.quest.db.530.title",
-      "questlogic:8": "AND",
-      "repeat_relative:1": 1,
       "repeattime:3": 15,
-      "simultaneous:1": 0,
-      "snd_complete:8": "minecraft:entity.player.levelup",
-      "snd_update:8": "minecraft:entity.player.levelup",
-      "tasklogic:8": "AND",
       "visibility:8": "ALWAYS"
     }
   },
@@ -35,7 +22,6 @@
         "0:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "display:10": {
@@ -51,7 +37,6 @@
         "1:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "display:10": {
@@ -67,7 +52,6 @@
         "2:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "display:10": {
@@ -83,7 +67,6 @@
         "3:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "display:10": {
@@ -99,7 +82,6 @@
         "4:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "display:10": {
@@ -115,7 +97,6 @@
         "5:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "display:10": {
@@ -131,7 +112,6 @@
         "6:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "display:10": {
@@ -147,7 +127,6 @@
         "7:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "display:10": {
@@ -163,7 +142,6 @@
         "8:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "display:10": {
@@ -179,7 +157,6 @@
         "9:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "display:10": {
@@ -195,7 +172,6 @@
         "10:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "display:10": {
@@ -211,7 +187,6 @@
         "11:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "oc:color:3": 15,
@@ -224,7 +199,6 @@
         "12:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "oc:color:3": 1,
@@ -237,7 +211,6 @@
         "13:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "oc:color:3": 2,
@@ -250,7 +223,6 @@
         "14:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage",
           "tag:10": {
             "oc:color:3": 4,
@@ -261,24 +233,18 @@
           }
         }
       },
-      "index:3": 0,
       "rewardID:8": "bq_standard:choice"
     }
   },
   "tasks:9": {
     "0:10": {
-      "autoConsume:1": 0,
       "consume:1": 1,
       "entryLogic:8": "AND",
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
-      "index:3": 0,
       "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
           "Damage:2": 1,
-          "OreDict:8": "",
           "id:8": "opencomputers:storage"
         }
       },
