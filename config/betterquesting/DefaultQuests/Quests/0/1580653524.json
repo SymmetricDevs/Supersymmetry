@@ -1,0 +1,20 @@
+{
+  "preRequisites:11": [
+    744003683
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1580653524.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "OreDict:8": "stoneSmooth",
+        "id:8": "minecraft:stone"
+      },
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.1580653524.title",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "rewards:9": {},
+  "tasks:9": {}
+}

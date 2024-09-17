@@ -1,0 +1,20 @@
+{
+  "preRequisites:11": [
+    87
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.744003683.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 2,
+        "id:8": "pyrotech:material"
+      },
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.744003683.title",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "rewards:9": {},
+  "tasks:9": {}
+}
