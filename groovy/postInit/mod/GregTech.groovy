@@ -1513,3 +1513,21 @@ crafting.addShaped('gregtech:electric_jetpack2', metaitem('gregtech:electric_jet
     [metaitem('power_thruster'), metaitem('battery.re.mv.sodium'), metaitem('power_thruster')],
     [ore('wireGtDoubleAnnealedCopper'), null, ore('wireGtDoubleAnnealedCopper')]
 ])
+
+crafting.replaceShaped('gregtech:electric_jetpack_advanced', metaitem('advanced_electric_jetpack'), [
+    [ore('toolWireCutter'), metaitem('electric_jetpack'), ore('toolScrewdriver')],
+    [metaitem('power_thruster_advanced'), metaitem('battery.re.hv.sodium'), metaitem('power_thruster_advanced')],
+    [metaitem('wireGtQuadrupleGold'), ore('circuitHv'), metaitem('wireGtQuadrupleGold')]
+])
+
+crafting.addShaped('gregtech:electric_jetpack_advanced1', metaitem('advanced_electric_jetpack'), [
+    [ore('toolWireCutter'), metaitem('electric_jetpack'), ore('toolScrewdriver')],
+    [metaitem('power_thruster_advanced'), metaitem('battery.re.hv.lithium'), metaitem('power_thruster_advanced')],
+    [metaitem('wireGtQuadrupleGold'), ore('circuitHv'), metaitem('wireGtQuadrupleGold')]
+])
+
+crafting.addShaped('gregtech:electric_jetpack_advanced2', metaitem('advanced_electric_jetpack'), [
+    [ore('toolWireCutter'), metaitem('electric_jetpack'), ore('toolScrewdriver')],
+    [metaitem('power_thruster_advanced'), metaitem('battery.re.hv.cadmium'), metaitem('power_thruster_advanced')],
+    [metaitem('wireGtQuadrupleGold'), ore('circuitHv'), metaitem('wireGtQuadrupleGold')]
+])
