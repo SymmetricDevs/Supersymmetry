@@ -170,8 +170,8 @@ log.infoMC("Adding Roaster Craft")
 //Roaster
 crafting.addShaped("gregtech:roaster.ulv", metaitem('roaster.bronze'), [
 	[ore('pipeSmallFluidBronze'), ore('rotorBronze'), ore('pipeSmallFluidBronze')],
-	[ore('pipeSmallFluidBronze'), item('gregtech:steam_casing', 1), ore('pipeSmallFluidBronze')],
-	[ore('pipeSmallFluidBronze'), ore('craftingFurnace'), ore('pipeSmallFluidBronze')]
+	[ore('pipeSmallFluidBronze'), ore('plateBronze'), ore('pipeSmallFluidBronze')],
+	[ore('pipeSmallFluidBronze'), item('gregtech:steam_casing', 1), ore('pipeSmallFluidBronze')]
 ])
 
 for (i = 1; i <= 8; i++) {

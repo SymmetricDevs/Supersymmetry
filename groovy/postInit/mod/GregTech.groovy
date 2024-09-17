@@ -400,6 +400,38 @@ crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metaitem('gr
 		[ore('circuitMv'), metaitem('cableGtSingleCopper'), ore('circuitMv')]
 ])
 
+// Steam machine recipes (due to furnace removal)
+crafting.replaceShaped("gregtech:steam_boiler_coal_bronze", item('gregtech:machine', 1), [
+        [ore('plateBronze'), ore('plateBronze'), ore('plateBronze')],
+        [ore('plateBronze'), ore('toolWrench'), ore('plateBronze')],
+        [ore('blockBrick'), ore('blockBrick'), ore('blockBrick')]
+])
+
+crafting.replaceShaped("gregtech:steam_boiler_coal_steel", item('gregtech:machine', 2), [
+        [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
+        [ore('plateSteel'), ore('toolWrench'), ore('plateSteel')],
+        [ore('blockBrick'), ore('blockBrick'), ore('blockBrick')]
+])
+
+crafting.replaceShaped("gregtech:steam_furnace_bronze", item('gregtech:machine', 15), [
+        [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
+        [ore('pipeSmallFluidBronze'), ore('plateBronze'), ore('pipeSmallFluidBronze')],
+        [ore('pipeSmallFluidBronze'), item('gregtech:steam_casing', 1), ore('pipeSmallFluidBronze')]
+])
+
+crafting.replaceShaped("gregtech:steam_alloy_smelter_bronze", item('gregtech:machine', 17), [
+        [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
+        [ore('plateBronze'), item('gregtech:steam_casing', 1),  ore('plateBronze')],
+		[ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
+])
+
+// Multi smelter recipe (due to furnace removal)
+crafting.replaceShaped("gregtech:multi_furnace", item('gregtech:machine', 1006), [
+		[ore('frameGtInvar'), ore('frameGtInvar'), ore('frameGtInvar')],
+		[ore('circuitHv'), item('gregtech:metal_casing', 2),  ore('circuitHv')],
+		[ore('cableGtSingleCopper'), ore('circuitHv'), ore('cableGtSingleCopper')]
+])
+
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
 //     [ore('craftingToolFile'), null, null],
 //     [null, ore('ingotRubber'), null],
