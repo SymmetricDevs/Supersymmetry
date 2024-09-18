@@ -126,8 +126,7 @@ def i18n(output: dict, id: int, entry: dict, place: str, prefix: str):
         output[desc] = convertToLang(entry["properties:10"]["betterquesting:10"]["desc:8"])
         entry["properties:10"]["betterquesting:10"]["desc:8"] = desc.rstrip()
 
-    if (len(alreadyKnownKeys) > 0):
-        print("Already knew %s keys " % (len(alreadyKnownKeys)))
+    return len(alreadyKnownKeys)
 
 
 def delIconCount(entry: dict):
@@ -154,13 +153,14 @@ def build(args):
     questKeys = {}
     
     try:
-        with open(langFile, "r") as file:
+        with open(langFile, "r", errors="ignore") as file:
             for line in file.readlines():
                 questKeys[line.split("=", 1)[0]] = line.split("=", 1)[1].rstrip()
     except FileNotFoundError:
         print("lang file %s was not found" % (langFile))
 
     # Read the quest files
+    knowKeys = 0
     for root, dirs, files in os.walk(defaultQuests):
         for filename in files:
             with open(os.path.join(root, filename), "r") as file:
@@ -176,13 +176,17 @@ def build(args):
                 delIconCount(currentquest)
                 
                 if root.endswith("QuestLines"): 
-                    i18n(output=questKeys, id=entryid, entry=currentquest, place="ql", prefix=args.prefix)
+                    knowKeys += i18n(output=questKeys, id=entryid, entry=currentquest, place="ql", prefix=args.prefix)
                 else:
-                    i18n(output=questKeys, id=entryid, entry=currentquest, place="db", prefix=args.prefix)
+                    knowKeys += i18n(output=questKeys, id=entryid, entry=currentquest, place="db", prefix=args.prefix)
 
             with open(os.path.join(root, filename), "w") as file:
                 json.dump(currentquest, file, indent=2)
-
+    
+    
+    if (knowKeys > 0):
+        print("Already knew %s keys " % knowKeys)
+    
     with open(langFile, "w") as file:
         for i in sorted(questKeys, key=key):
             file.write(i + "=" + questKeys[i] + "\n")
