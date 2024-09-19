@@ -505,6 +505,12 @@ crafting.replaceShaped("pyrotech:ignition/bow_drill", item('pyrotech:bow_drill')
         [item('pyrotech:material', 14), ore('stickWood'), null]
 ])
 
+// Empty wooden form
+crafting.addShaped("susy:wooden_form_from_chopping", metaitem('wooden_form.empty'), [
+        [ore('toolAxe')],
+        [ore('plankWood')]
+])
+
 // Clay bucket
 crafting.replaceShaped("pyrotech:bucket/bucket_clay_unfired", item('pyrotech:bucket_clay_unfired'), [
         [metaitem('compressed.clay'), null, metaitem('compressed.clay')],
