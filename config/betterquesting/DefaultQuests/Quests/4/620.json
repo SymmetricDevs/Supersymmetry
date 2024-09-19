@@ -1,0 +1,56 @@
+{
+  "preRequisites:11": [
+    621,
+    614,
+    697
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.620.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 1035,
+        "id:8": "gregtech:machine"
+      },
+      "ignoresview:1": 0,
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.620.title",
+      "questlogic:8": "OR",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "entryLogic:8": "AND",
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1035,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 64,
+          "id:8": "gregtech:cleanroom_casing"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 1302,
+          "id:8": "gregtech:machine"
+        },
+        "3:10": {
+          "Count:3": 8,
+          "Damage:2": 1,
+          "id:8": "gregtech:cleanroom_casing"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "Damage:2": 1654,
+          "id:8": "gregtech:machine"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

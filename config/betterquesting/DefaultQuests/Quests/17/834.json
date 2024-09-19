@@ -1,0 +1,26 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    2,
+    0
+  ],
+  "preRequisites:11": [
+    67,
+    70,
+    832
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.834.desc",
+      "frame:8": "ROUNDED_SQUARE",
+      "icon:10": {
+        "id:8": "biomesoplenty:hard_ice"
+      },
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.834.title",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "rewards:9": {},
+  "tasks:9": {}
+}

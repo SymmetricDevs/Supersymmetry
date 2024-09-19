@@ -1,0 +1,28 @@
+{
+  "preRequisites:11": [
+    98
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.851.desc",
+      "frame:8": "ROUNDED_SQUARE",
+      "icon:10": {
+        "Damage:2": 5,
+        "id:8": "chisel:andesite1"
+      },
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.851.title",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "biome:8": "Phobos",
+      "dimension:3": 0,
+      "name:8": "Phobos",
+      "range:3": -1,
+      "taskID:8": "bq_standard:location"
+    }
+  }
+}

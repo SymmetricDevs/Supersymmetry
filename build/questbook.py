@@ -84,7 +84,7 @@ uselessProps = {
 }
 
 basePath = os.path.normpath(os.path.abspath(__file__ + "/../../"))
-defaultQuests = basePath + "/config/betterquesting/DefaultQuests.json"
+defaultQuests = basePath + "/config/betterquesting/DefaultQuests"
 lang = basePath + "/config/betterquesting/resources/supersymmetry/lang"
 
 def convertToLang(line: str) -> str:
@@ -103,54 +103,42 @@ def nest(location: dict) -> dict:
     return location
 
 
-def i18n(output: dict, book: dict, location: str, place: str, prefix: str):
+def i18n(output: dict, id: int, entry: dict, place: str, prefix: str):
     """converts questbook title/desc into lang file"""
 
     start = "%s.quest" % prefix
 
     alreadyKnownKeys = []
-    for entry in dict(book[location]):
-        if ("questID:3" in book[location][entry]):
-            id = book[location][entry]["questID:3"]
-        elif ("lineID:3" in book[location][entry]):
-            id = book[location][entry]["lineID:3"]
-        else:
-            print("Could not find questid or lineid for location %s %s" % (location, entry))
-            continue
+    
+    key = "%s.%s.%s" % (start, place, id)
+    title = key + ".title"
+    desc = key + ".desc"
 
-        key = "%s.%s.%s" % (start, place, id)
-        title = key + ".title"
-        desc = key + ".desc"
+    if (entry["properties:10"]["betterquesting:10"]["name:8"].startswith(start)):
+        alreadyKnownKeys.append(title)
+    else:
+        output[title] = convertToLang(entry["properties:10"]["betterquesting:10"]["name:8"])
+        entry["properties:10"]["betterquesting:10"]["name:8"] = title.rstrip()
+        
+    if (entry["properties:10"]["betterquesting:10"]["desc:8"].startswith(start)):
+        alreadyKnownKeys.append(desc)
+    else:
+        output[desc] = convertToLang(entry["properties:10"]["betterquesting:10"]["desc:8"])
+        entry["properties:10"]["betterquesting:10"]["desc:8"] = desc.rstrip()
 
-        if (book[location][entry]["properties:10"]["betterquesting:10"]["name:8"].startswith(start)):
-            alreadyKnownKeys.append(title)
-        else:
-            output[title] = convertToLang(book[location][entry]["properties:10"]["betterquesting:10"]["name:8"])
-            book[location][entry]["properties:10"]["betterquesting:10"]["name:8"] = title.rstrip()
-
-        if (book[location][entry]["properties:10"]["betterquesting:10"]["desc:8"].startswith(start)):
-            alreadyKnownKeys.append(desc)
-        else:
-            output[desc] = convertToLang(book[location][entry]["properties:10"]["betterquesting:10"]["desc:8"])
-            book[location][entry]["properties:10"]["betterquesting:10"]["desc:8"] = desc.rstrip()
-
-    if (len(alreadyKnownKeys) > 0):
-        print("Already knew %s keys " % (len(alreadyKnownKeys)))
+    return len(alreadyKnownKeys)
 
 
-def delIconCount(book: dict):
+def delIconCount(entry: dict):
     """delete count property for icons"""
-
-    for entry in dict(book["questDatabase:9"]):
-        try:
-            del book["questDatabase:9"][entry]["properties:10"]["betterquesting:10"]["icon:10"]["Count:3"]
-        except:
-            pass
-    for entry in dict(book["questLines:9"]):
-        try:
-            del book["questLines:9"][entry]["properties:10"]["betterquesting:10"]["icon:10"]["Count:3"]
-        except:
-            pass
+    try:
+        del entry["properties:10"]["betterquesting:10"]["icon:10"]["Count:3"]
+    except:
+        pass
+    try:
+        del entry["properties:10"]["betterquesting:10"]["icon:10"]["Count:3"]
+    except:
+        pass
 
 
 def key(entry):
@@ -163,30 +151,42 @@ def build(args):
     os.makedirs(lang, exist_ok=True)
     langFile = lang + "/" + args.lang + ".lang"
     questKeys = {}
-
-    # Read the questbook file
-    with open(defaultQuests, "r") as file:
-        questbook = json.load(file)
-
+    
     try:
-        with open(langFile, "r") as file:
+        with open(langFile, "r", errors="ignore") as file:
             for line in file.readlines():
                 questKeys[line.split("=", 1)[0]] = line.split("=", 1)[1].rstrip()
     except FileNotFoundError:
         print("lang file %s was not found" % (langFile))
 
-    questbook["questSettings:10"]["betterquesting:10"]["editmode:1"] = 0
+    # Read the quest files
+    knowKeys = 0
+    for root, dirs, files in os.walk(defaultQuests):
+        for filename in files:
+            with open(os.path.join(root, filename), "r") as file:
+                currentquest = json.load(file)
+                
+            if filename == "QuestSettings.json": 
+                currentquest["betterquesting:10"]["editmode:1"] = 0
+            else:
+            
+                entryid = int(filename.rstrip('.json'))
+                nest(currentquest)
 
-    nest(questbook)
+                delIconCount(currentquest)
+                
+                if root.endswith("QuestLines"): 
+                    knowKeys += i18n(output=questKeys, id=entryid, entry=currentquest, place="ql", prefix=args.prefix)
+                else:
+                    knowKeys += i18n(output=questKeys, id=entryid, entry=currentquest, place="db", prefix=args.prefix)
 
-    delIconCount(questbook)
-
-    i18n(output=questKeys, book=questbook, location="questLines:9", place="ql", prefix=args.prefix)
-    i18n(output=questKeys, book=questbook, location="questDatabase:9", place="db", prefix=args.prefix)
-
-    with open(defaultQuests, "w") as file:
-        json.dump(questbook, file, indent=2)
-
+            with open(os.path.join(root, filename), "w") as file:
+                json.dump(currentquest, file, indent=2)
+    
+    
+    if (knowKeys > 0):
+        print("Already knew %s keys " % knowKeys)
+    
     with open(langFile, "w") as file:
         for i in sorted(questKeys, key=key):
             file.write(i + "=" + questKeys[i] + "\n")

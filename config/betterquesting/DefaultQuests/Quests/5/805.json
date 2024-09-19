@@ -1,0 +1,62 @@
+{
+  "preRequisites:11": [
+    785,
+    793
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.805.desc",
+      "frame:8": "ROUNDED_SQUARE",
+      "icon:10": {
+        "Damage:2": 318,
+        "id:8": "gregtech:meta_dust_sifted"
+      },
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.805.title",
+      "questlogic:8": "OR",
+      "tasklogic:8": "OR",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "entryLogic:8": "AND",
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 4303,
+          "id:8": "gregtech:meta_dust"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "entryLogic:8": "AND",
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 7060,
+          "id:8": "gregtech:meta_dust_flotated"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "2:10": {
+      "entryLogic:8": "AND",
+      "index:3": 2,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 318,
+          "id:8": "gregtech:meta_dust_flotated"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}
