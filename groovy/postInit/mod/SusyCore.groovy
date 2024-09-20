@@ -103,3 +103,46 @@ mods.gregtech.assembler.recipeBuilder()
 mods.gregtech.forge_hammer.removeByInput(16, [item('gregtech:ore_sulfur_0')], null)
 // Crushed Sulfur Ore * 2
 mods.gregtech.macerator.removeByInput(2, [item('gregtech:ore_sulfur_0')], null)
+
+// Armors
+crafting.addShaped("susy:simple_gas_mask", item('susy:susy_armor_item').withNbt(['damage': 0.0D]), [
+    [item('gregtech:meta_item_1', 438), item('minecraft:paper'), item('gregtech:meta_item_1', 438)],
+    [ore('string'), item('gregtech:meta_dust', 271), ore('string')],
+    [null, item('minecraft:paper'), null]
+])
+
+crafting.addShaped("susy:gas_mask", item('susy:susy_armor_item', 1), [
+    [item('minecraft:leather'), ore('plateGlass'), item('minecraft:leather')]
+    [item('minecraft:leather'), item('minecraft:leather'), item('minecraft:leather')]
+    [null, ore('pipeTinyFluidRubber'), ore('ringRubber')]
+])
+crafting.addShaped("susy:gas_tank", item('susy:susy_armor_item', 2).withNbt(['maxOxygen': 1200.0D, 'oxygen': 0.0D]), [
+    [null, ore('pipeTinyFluidRubber'), ore('ringRubber')]
+    [item('minecraft:leather'), item('gregtech:meta_item_1', 78), item('minecraft:leather')]
+    [null, null, null]
+])
+crafting.addShapeless("susy:gas_tank_fill", item('susy:susy_armor_item', 2).withNbt(['maxOxygen': 1200.0D, 'oxygen': 1200.0D]), item('susy:susy_armor_item', 2), item('gregtech:meta_item_1', 78).withNbt(['Fluid': ['FluidName': 'air', 'Amount': 1000]]))
+
+mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta()
+    .inputs(item('minecraft:leather_helmet'))
+    .inputs(ore('pipeTinyFluidRubber'))
+    .inputs(item('gregtech:meta_item_2', 169) * 5)
+    .inputs(ore('foilAsbestos'))
+    .fluidInputs(fluid('glass') * 144)
+    .outputs(item('susy:susy_armor_item', 3).withNbt(['damage': 0.0D]))
+    .duration(400)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta()
+    .inputs(item('minecraft:leather_helmet'))
+    .inputs(ore('pipeTinyFluidRubber'))
+    .inputs(item('gregtech:meta_item_2', 169) * 5)
+    .inputs(ore('foilAsbestos'))
+    .fluidInputs(fluid('glass') * 144)
+    .outputs(item('susy:susy_armor_item', 4).withNbt(['maxOxygen': 1200.0D, 'oxygen': 1200.0D]))
+    .duration(400)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()

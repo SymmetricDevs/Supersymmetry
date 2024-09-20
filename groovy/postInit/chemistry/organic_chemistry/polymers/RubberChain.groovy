@@ -81,10 +81,18 @@ class Coagulant {
 
 class Shape {
     String name
+    String shapeName
     int yield
 
     Shape(name, yield){
         this.name = name
+        this.shapeName = name
+        this.yield = yield
+    }
+    
+    Shape(name, shapeName, yield) {
+        this.name = name
+        this.shapeName = shapeName
         this.yield = yield
     }
 }
@@ -148,7 +156,10 @@ def shapes = [
     new Shape('ring', 4),
     new Shape('foil', 4),
     new Shape('ingot', 1),
+    new Shape('tinyPipe', 'pipe.tiny', 2)
 ]
+
+
 
 def VULCANIZING_RECIPES = recipemap("vulcanizing_press")
 
@@ -161,8 +172,8 @@ for (rubber in rubbers) {
                         .fluidInputs(fluid(rubber.name) * rubber.amount_required * 1000)
                         .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
                         .notConsumable(ore(catalyser.name))
-                        .notConsumable(metaitem('shape.extruder.' + shape.name))
-                        .outputs(metaitem(shape.name + rubber.output) * (rubber.yield * shape.yield))
+                        .notConsumable(metaitem('shape.extruder.' + shape.shapeName))
+                        .outputs(ore(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
                         .duration(rubber.duration.intdiv(catalyser.speed_bonus))
                         .EUt(7)
                         .buildAndRegister()
@@ -172,8 +183,8 @@ for (rubber in rubbers) {
                         .inputs(ore(rubber.name) * rubber.amount_required)
                         .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
                         .notConsumable(ore(catalyser.name))
-                        .notConsumable(metaitem('shape.extruder.' + shape.name))
-                        .outputs(metaitem(shape.name + rubber.output) * (rubber.yield * shape.yield))
+                        .notConsumable(metaitem('shape.extruder.' + shape.shapeName))
+                        .outputs(ore(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
                         .duration(rubber.duration.intdiv(catalyser.speed_bonus))
                         .EUt(7)
                         .buildAndRegister()
@@ -183,9 +194,9 @@ for (rubber in rubbers) {
                     VULCANIZING_RECIPES.recipeBuilder()
                     .fluidInputs(fluid(rubber.name) * rubber.amount_required * 1000)
                     .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
-                    .notConsumable(metaitem('shape.extruder.' + shape.name))
+                    .notConsumable(metaitem('shape.extruder.' + shape.shapeName))
                     .circuitMeta(2)
-                    .outputs(metaitem(shape.name + rubber.output) * (rubber.yield * shape.yield))
+                    .outputs(ore(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
                     .duration(rubber.duration)
                     .EUt(7)
                     .buildAndRegister()
@@ -194,9 +205,9 @@ for (rubber in rubbers) {
                     VULCANIZING_RECIPES.recipeBuilder()
                     .inputs(ore(rubber.name) * rubber.amount_required)
                     .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
-                    .notConsumable(metaitem('shape.extruder.' + shape.name))
+                    .notConsumable(metaitem('shape.extruder.' + shape.shapeName))
                     .circuitMeta(2)
-                    .outputs(metaitem(shape.name + rubber.output) * (rubber.yield * shape.yield))
+                    .outputs(ore(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
                     .duration(rubber.duration)
                     .EUt(7)
                     .buildAndRegister()
