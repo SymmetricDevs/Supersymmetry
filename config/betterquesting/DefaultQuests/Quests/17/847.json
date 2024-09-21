@@ -1,0 +1,20 @@
+{
+  "preRequisites:11": [
+    834
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.847.desc",
+      "frame:8": "ROUNDED_SQUARE",
+      "icon:10": {
+        "Damage:2": 5,
+        "id:8": "susy:susy_stone_smooth"
+      },
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.847.title",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "rewards:9": {},
+  "tasks:9": {}
+}

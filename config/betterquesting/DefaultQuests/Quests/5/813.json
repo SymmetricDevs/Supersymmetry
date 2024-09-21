@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    809,
+    810,
+    801,
+    803,
+    797,
+    815
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.813.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 3003,
+        "id:8": "gregtech:meta_ingot"
+      },
+      "ignoresview:1": 0,
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.813.title",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

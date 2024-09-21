@@ -1,0 +1,25 @@
+{
+  "preRequisiteTypes:7": [
+    2,
+    0
+  ],
+  "preRequisites:11": [
+    70,
+    67
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.739.desc",
+      "frame:8": "ROUNDED_SQUARE",
+      "icon:10": {
+        "Damage:2": 2,
+        "id:8": "chisel:endstone1"
+      },
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.739.title",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "rewards:9": {},
+  "tasks:9": {}
+}

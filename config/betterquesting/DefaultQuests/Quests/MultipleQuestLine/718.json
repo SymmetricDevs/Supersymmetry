@@ -1,0 +1,31 @@
+{
+  "preRequisites:11": [
+    479,
+    394,
+    775
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.718.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "forge:bucketfilled",
+        "tag:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "supreme_gasoline"
+        }
+      },
+      "ignoresview:1": 0,
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.718.title",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 1,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

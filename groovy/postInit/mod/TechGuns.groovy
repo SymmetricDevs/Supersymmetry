@@ -169,6 +169,9 @@ def name_removals = [
 	"techguns:itemshared_149_upgrade_blast_protection_1",
 	"techguns:itemshared_152_upgrade_blast_protection_2",
 	"techguns:itemshared_155_upgrade_blast_protection_3",
+	"techguns:itemshared_86_nuggetcopper",
+	"techguns:itemshared_87_nuggetlead",
+	"techguns:itemshared_88_nuggetsteel"
 ]
 
 for (name in name_removals) {
@@ -1286,76 +1289,77 @@ recipemap('canner').recipeBuilder()
 //MV weapons: 32 DPS
 //HV weapons: 64 DPS
 
-SetWeaponStat = { String weapon, String stat, float value ->
-	def gun = (GenericGun) item('techguns:' + weapon).getItem();
-	gun.setGunStat(EnumGunStat.parseFromString(stat), value);
-}
-
-
-//Handcannon (1 shot per 1.5 seconds)
-SetWeaponStat("handcannon","DAMAGE",13);
-SetWeaponStat("handcannon","DAMAGE_MIN",11);
-
-//Bolt Action (1 shot per second)
-SetWeaponStat("boltaction","DAMAGE",10);
-SetWeaponStat("boltaction","DAMAGE_MIN",8);
-
-//Pistol (4 shots per second)
-SetWeaponStat("pistol","DAMAGE",5);
-SetWeaponStat("pistol","DAMAGE_MIN",4);
-
-//Double Barrel Shotgun (8 bullets per shot, 1 shot per second)
-SetWeaponStat("sawedoff","DAMAGE",2.4);
-SetWeaponStat("sawedoff","DAMAGE_MIN",2);
-
-//Revolver (2.5 shots per second)
-SetWeaponStat("revolver","DAMAGE",6);
-SetWeaponStat("revolver","DAMAGE_MIN",4);
-
-//Combat Shotgun (8 bullets per shot, 1 shot per second)
-SetWeaponStat("combatshotgun","DAMAGE",2.4);
-SetWeaponStat("combatshotgun","DAMAGE_MIN",2);
-
-//Thompson SMG (6 shots per second)
-SetWeaponStat("thompson","DAMAGE",6);
-SetWeaponStat("thompson","DAMAGE_MIN",5);
-
-//AK47 (6 shots per second)
-SetWeaponStat("ak47","DAMAGE",6);
-SetWeaponStat("ak47","DAMAGE_MIN",5);
-
-//M4 (6 shots per second)
-SetWeaponStat("m4","DAMAGE",6);
-SetWeaponStat("m4","DAMAGE_MIN",5);
-
-//Infiltrator (6 shots per second)
-SetWeaponStat("m4_infiltrator","DAMAGE",6);
-SetWeaponStat("m4_infiltrator","DAMAGE_MIN",5);
-
-//Mac-10 (6 shots per second)
-SetWeaponStat("mac10","DAMAGE", 6);
-SetWeaponStat("mac10","DAMAGE_MIN", 5);
-
-//AUG (6 shots per second)
-SetWeaponStat("aug","DAMAGE", 12);
-SetWeaponStat("aug","DAMAGE_MIN", 10);
-
-//LMG (10 shots per second)
-SetWeaponStat("lmg","DAMAGE", 7);
-SetWeaponStat("lmg","DAMAGE_MIN", 6);
-
-//AS50 (2 shots per second)
-SetWeaponStat("as50","DAMAGE", 34);
-SetWeaponStat("as50","DAMAGE_MIN", 30);
-
-//Vector (10 shots per second)
-SetWeaponStat("vector","DAMAGE", 7);
-SetWeaponStat("vector","DAMAGE_MIN", 6);
-
-//Scar (5 shots per second)
-SetWeaponStat("scar","DAMAGE", 14);
-SetWeaponStat("scar","DAMAGE_MIN", 12);
-
-//Minigun (20 shots per second)
-SetWeaponStat("minigun","DAMAGE", 5);
-SetWeaponStat("minigun","DAMAGE_MIN", 4);
+// TODO: Waiting for grs update
+//SetWeaponStat = { String weapon, String stat, float value ->
+//	def gun = (GenericGun) item('techguns:' + weapon).getItem();
+//	gun.setGunStat(EnumGunStat.parseFromString(stat), value);
+//}
+//
+//
+////Handcannon (1 shot per 1.5 seconds)
+//SetWeaponStat("handcannon","DAMAGE",13);
+//SetWeaponStat("handcannon","DAMAGE_MIN",11);
+//
+////Bolt Action (1 shot per second)
+//SetWeaponStat("boltaction","DAMAGE",10);
+//SetWeaponStat("boltaction","DAMAGE_MIN",8);
+//
+////Pistol (4 shots per second)
+//SetWeaponStat("pistol","DAMAGE",5);
+//SetWeaponStat("pistol","DAMAGE_MIN",4);
+//
+////Double Barrel Shotgun (8 bullets per shot, 1 shot per second)
+//SetWeaponStat("sawedoff","DAMAGE",2.4);
+//SetWeaponStat("sawedoff","DAMAGE_MIN",2);
+//
+////Revolver (2.5 shots per second)
+//SetWeaponStat("revolver","DAMAGE",6);
+//SetWeaponStat("revolver","DAMAGE_MIN",4);
+//
+////Combat Shotgun (8 bullets per shot, 1 shot per second)
+//SetWeaponStat("combatshotgun","DAMAGE",2.4);
+//SetWeaponStat("combatshotgun","DAMAGE_MIN",2);
+//
+////Thompson SMG (6 shots per second)
+//SetWeaponStat("thompson","DAMAGE",6);
+//SetWeaponStat("thompson","DAMAGE_MIN",5);
+//
+////AK47 (6 shots per second)
+//SetWeaponStat("ak47","DAMAGE",6);
+//SetWeaponStat("ak47","DAMAGE_MIN",5);
+//
+////M4 (6 shots per second)
+//SetWeaponStat("m4","DAMAGE",6);
+//SetWeaponStat("m4","DAMAGE_MIN",5);
+//
+////Infiltrator (6 shots per second)
+//SetWeaponStat("m4_infiltrator","DAMAGE",6);
+//SetWeaponStat("m4_infiltrator","DAMAGE_MIN",5);
+//
+////Mac-10 (6 shots per second)
+//SetWeaponStat("mac10","DAMAGE", 6);
+//SetWeaponStat("mac10","DAMAGE_MIN", 5);
+//
+////AUG (6 shots per second)
+//SetWeaponStat("aug","DAMAGE", 12);
+//SetWeaponStat("aug","DAMAGE_MIN", 10);
+//
+////LMG (10 shots per second)
+//SetWeaponStat("lmg","DAMAGE", 7);
+//SetWeaponStat("lmg","DAMAGE_MIN", 6);
+//
+////AS50 (2 shots per second)
+//SetWeaponStat("as50","DAMAGE", 34);
+//SetWeaponStat("as50","DAMAGE_MIN", 30);
+//
+////Vector (10 shots per second)
+//SetWeaponStat("vector","DAMAGE", 7);
+//SetWeaponStat("vector","DAMAGE_MIN", 6);
+//
+////Scar (5 shots per second)
+//SetWeaponStat("scar","DAMAGE", 14);
+//SetWeaponStat("scar","DAMAGE_MIN", 12);
+//
+////Minigun (20 shots per second)
+//SetWeaponStat("minigun","DAMAGE", 5);
+//SetWeaponStat("minigun","DAMAGE_MIN", 4);

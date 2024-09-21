@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.345.desc",
+      "frame:8": "ROUNDED_SQUARE",
+      "icon:10": {
+        "id:8": "betterquesting:placeholder"
+      },
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.345.title",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}
