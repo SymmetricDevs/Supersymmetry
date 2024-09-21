@@ -31,7 +31,7 @@ GTRecipeHandler.removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES);
 
 //Add mixer recipes to blender
 
-RecipeMaps.MIXER_RECIPES.onRecipeBuild(recipeBuilder -> {
+/*RecipeMaps.MIXER_RECIPES.onRecipeBuild(recipeBuilder -> {
         recipeBuilder.invalidateOnBuildAction();
         SuSyRecipeMaps.BLENDER_RECIPES.recipeBuilder()
                 .inputs(recipeBuilder.getInputs().toArray(new GTRecipeInput[0]))
@@ -43,7 +43,7 @@ RecipeMaps.MIXER_RECIPES.onRecipeBuild(recipeBuilder -> {
                 .duration((int) (recipeBuilder.duration / 4))
                 .EUt(recipeBuilder.EUt)
                 .buildAndRegister();
-});
+});*/
 
 GregTechAPI.materialManager.getRegisteredMaterials().forEach(material -> {
         if (material.hasProperty(PropertyKey.FLUID) && material.getProperty(PropertyKey.FLUID).getPrimaryKey() == SusyFluidStorageKeys.SLURRY) {

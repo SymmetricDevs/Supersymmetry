@@ -59,24 +59,6 @@ def FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
 def FBR = recipemap('fixed_bed_reactor')
 def PYROLYSE_OVEN = recipemap('pyrolyse_oven');
 
-crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.lv", metaitem('gregtechfoodoption:gregtechfoodoption.machine.slicer.lv'), [
-    [metaitem('electric.piston.lv'), ore('circuitLv'), metaitem('cableGtSingleTin')],
-	[metaitem('toolHeadBuzzSawSteel'), metaitem('gregtech:hull.lv'), , ore('circuitLv')],
-	[metaitem('plateSteel'), metaitem('conveyor.module.lv'), metaitem('cableGtSingleTin')]
-])
-
-crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.mv", metaitem('gregtechfoodoption:gregtechfoodoption.machine.slicer.mv'), [
-    [metaitem('electric.piston.mv'), ore('circuitMv'), metaitem('cableGtSingleCopper')],
-	[metaitem('toolHeadBuzzSawAluminium'), metaitem('gregtech:hull.mv'), , ore('circuitMv')],
-	[metaitem('plateDenseAluminium'), metaitem('conveyor.module.mv'), metaitem('cableGtSingleCopper')]
-])
-
-crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.hv", metaitem('gregtechfoodoption:gregtechfoodoption.machine.slicer.hv'), [
-    [metaitem('electric.piston.hv'), ore('circuitHv'), metaitem('cableGtSingleGold')],
-	[metaitem('toolHeadBuzzSawVanadiumSteel'), metaitem('gregtech:hull.hv'), , ore('circuitHv')],
-	[metaitem('plateDenseVanadiumSteel'), metaitem('conveyor.module.hv'), metaitem('cableGtSingleGold')]
-])
-
 FERMENTER.recipeBuilder()
         .fluidInputs(fluid('gtfo_red_grapes_must') * 8000)
         .fluidOutputs(fluid('gtfo_fermented_red_grapes_must') * 8000)

@@ -95,7 +95,6 @@ class ChangeFlags {
         setupFluidType(OsmiumTetroxide, FluidStorageKeys.LIQUID, 404)
         OsmiumTetroxide.addFlags("NO_UNIFICATION")
         //setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
-        OsmiumTetroxide.setProperty(PropertyKey.FLUID, new FluidProperty(FluidTypes.GAS, false));
         OsmiumTetroxide.getProperty(PropertyKey.FLUID).setFluidTemperature(404);
         OsmiumTetroxide.addFlags("NO_UNIFICATION")
 
