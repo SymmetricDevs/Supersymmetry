@@ -550,3 +550,5 @@ mods.gregtech.lathe.removeByInput(30, [metaitem('stickSteel')], null)
 // Skewer * 8
 mods.gregtech.lathe.removeByInput(40, [metaitem('stickStainlessSteel')], null)
 
+// Baking Soda Solution * 1000
+mods.gregtech.blender.removeByInput(8, [metaitem('dustSodiumBicarbonate')], [fluid('water') * 1000])
