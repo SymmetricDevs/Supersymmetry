@@ -100,6 +100,8 @@ eventManager.listen {
         customMetaItems.addItem(201, "vti_rich_pig_iron");
         customMetaItems.addItem(202, "vt_slag");
 
+        customMetaItems.addItem(203, "white_matte")
+
 	customMetaItems.addItem(210, "bound_leather")
 
         customMetaItems.addItem(212, "drone.lv").setMaxStackSize(1).addComponents(ElectricStats.createRechargeableBattery(10000, GTValues.LV)).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
@@ -280,6 +282,7 @@ eventManager.listen {
         customMetaItems.addItem(6206, "sponge.platinum")
         customMetaItems.addItem(6207, "sponge.cadmium")
         customMetaItems.addItem(6208, "sponge.indium")
+        customMetaItems.addItem(6209, "sponge.osmium")
 
         // Anode slimes 6300-6400
         customMetaItems.addItem(6300, "anode_slime.gold")
