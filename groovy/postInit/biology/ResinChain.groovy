@@ -31,8 +31,6 @@ FLUID_SOLIDIFIER.recipeBuilder()
         .EUt(2)
         .buildAndRegister()
 
-// Raw Rubber Pulp * 3
-mods.gregtech.centrifuge.removeByInput(5, [metaitem('rubber_drop')], null)
 CENTRIFUGE.recipeBuilder()
         .inputs(metaitem('rubber_drop'))
         .fluidOutputs(fluid('resin') * 250)
