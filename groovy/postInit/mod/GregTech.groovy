@@ -1489,8 +1489,10 @@ crafting.replaceShaped("gregtech:multiblock_builder", metaitem('tool.multiblock_
 
 // Glue * 2500
 mods.gregtech.mixer.removeByInput(7, null, [fluid('polyvinyl_acetate') * 1000, fluid('methyl_acetate') * 1500])
+mods.gregtech.blender.removeByInput(7, null, [fluid('polyvinyl_acetate') * 1000, fluid('methyl_acetate') * 1500])
 // Glue * 2500
 mods.gregtech.mixer.removeByInput(7, null, [fluid('polyvinyl_acetate') * 1000, fluid('acetone') * 1500])
+mods.gregtech.blender.removeByInput(7, null, [fluid('polyvinyl_acetate') * 1000, fluid('acetone') * 1500])
 
 MIXER.recipeBuilder()
         .fluidInputs(fluid('polyvinyl_acetate') * 144)
