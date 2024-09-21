@@ -1769,7 +1769,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 8360
+        SeleniumDioxide = new Material.Builder(8360, SuSyUtility.susyId("selenium_dioxide"))
+                .dust()
+                .components(Selenium * 1, Oxygen * 2)
+                .colorAverage()
+                .build();
 
         CrudeTin = new Material.Builder(8361, SuSyUtility.susyId('crude_tin'))
                 .liquid(new FluidBuilder().temperature(600))
@@ -2083,7 +2087,11 @@ public class FirstDegreeMaterials {
 
         TreatedSamariumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumAlloyMagnetic);
 
-        //FREE ID: 8406
+        CobaltSulfate = new Material.Builder(8406, SuSyUtility.susyId("cobalt_sulfate"))
+                .fluid()
+                .components(Cobalt * 1, Sulfur * 1, Oxygen * 4)
+                .colorAverage()
+                .build();
 
         Dichlorosilane = new Material.Builder(8407, SuSyUtility.susyId('dichlorosilane'))
                 .gas()

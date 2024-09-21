@@ -93,6 +93,9 @@ class ChangeFlags {
         setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
         setupFluidType(Selenium, FluidStorageKeys.LIQUID, 494)
         //setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
+        OsmiumTetroxide.setProperty(PropertyKey.FLUID, new FluidProperty(FluidTypes.GAS, false));
+        OsmiumTetroxide.getProperty(PropertyKey.FLUID).setFluidTemperature(404);
+        OsmiumTetroxide.addFlags("NO_UNIFICATION")
 
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
@@ -200,6 +203,8 @@ class ChangeFlags {
         setupSlurries(Sphalerite)
         setupSlurries(Pollucite)
         setupSlurries(Arsenopyrite)
+        Pentlandite.addFlags("generate_sifted", "generate_flotated");
+		setupSlurries(Pentlandite)
 
         setupFluidType(PolyvinylAcetate, FluidStorageKeys.LIQUID, 385)
 

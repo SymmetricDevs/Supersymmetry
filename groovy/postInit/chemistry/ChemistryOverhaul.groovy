@@ -885,6 +885,17 @@ BR.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+// Ethanol
+
+FBR.recipeBuilder()
+.fluidInputs(fluid('gtfo_acetaldehyde') * 100)
+.fluidInputs(fluid('hydrogen') * 100)
+.notConsumable(ore('catalystBedPlatinum'))
+.fluidOutputs(fluid('ethanol') * 100)
+.duration(5)
+.EUt(30)
+.buildAndRegister()
+
 // Nitrous Oxide
 
 ROASTER.recipeBuilder()
