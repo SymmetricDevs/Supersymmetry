@@ -287,6 +287,31 @@ BR.recipeBuilder()
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
+//diisobutylene production
+// https://patents.google.com/patent/US7414164B2/en
+// mostly from this patent: https://patents.google.com/patent/US5877372A/en
+BR.recipeBuilder()
+        //.notConsumable(ore('dustAluminiumSilicate'))
+        .notConsumable(metaitem('beads.ag_fifty_w_x_eight')) 
+        //dry sulfonic acid ion exchange resin like Amberlyst 15 or zeolite-based catalysts
+        .notConsumable(fluid('tert_butyl_alcohol') * 1) //1 to 30 wt %
+        .notConsumable(fluid('isooctane') * 1) //diluent, 90% isooctane and 10% isododecane/2,2,4,4,6 pentamethyl heptane
+        .fluidInputs(fluid('isobutylene') * 1000)
+        .fluidOutputs(fluid('diisobutyleneMixture') * 1000)
+        .duration(200)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder() //90% yield converted to diisobutytlene?
+        .fluidInputs(fluid('diisobutyleneMixture') * 1000)
+        .fluidOutputs(fluid('isobutylene') * 90)
+        .fluidOutputs(fluid('diisobutylene') * 400)
+        .fluidOutputs(fluid('triisobutylene') * 20)
+        .notConsumable(fluid('tert_butyl_alcohol') * 50) //not all tBuOH and isobutent reacts in the dimerization process
+        .duration(800)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
 // Need some way to make diisobutylene got no clue tbh
 //source for trimethylpentylphosphinic acid WO2013083047A1
 BR.recipeBuilder()
@@ -651,10 +676,15 @@ BR.recipeBuilder()
 //Output: H2(IrCl6) extract
 //Output: Solution Rh,Ru
 
-//
-//
-//
-//
+/*BCR.recipeBuilder()
+        .fluidInputs(fluid('chlorine') )
+        .fluidInputs(fluid('tributylphosphate') )
+        .fluidInputs(fluid('distilled_water'))
+        .fluidOutputs(fluid('rhodium_ruthenium_solution') )
+        .fluidOutputs(fluid('hexachloroiridium_acid') )
+        .duration(20)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()*/
 
 //RHODIUM
 
@@ -662,10 +692,13 @@ BR.recipeBuilder()
 //Output: (NH4)3(RhCl6) crystals
 //Output: Solution, Ru
 
-//
-//
-//
-//
+/*CRYSTALLIZER.recipeBuilder
+        .fluidInputs(fluid('rhodium_ruthenium_solution') )
+        .output(metaitem.ammoniumHexachlororhodateCrystal) //IDK
+        .fluidOutputs(fluid(ruthenium_solution) )
+        .duration(200)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()*/
 
 //RUTHENIUM
 
