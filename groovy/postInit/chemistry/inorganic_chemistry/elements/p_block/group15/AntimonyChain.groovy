@@ -63,7 +63,7 @@ ROASTER.recipeBuilder()
     .buildAndRegister()
     
 // Antimony Trioxide Dust * 1
-mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustStibnite')], [fluid('oxygen') * 3000 * 3000])
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustStibnite')], [fluid('oxygen') * 3000])
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustStibnite'))
