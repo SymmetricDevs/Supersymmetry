@@ -2051,7 +2051,7 @@ public class UnknownCompositionMaterials {
                 .color(0xe60e0e)
                 .build();
 
-        OsmiumFreePGMSolution = new Material.Builder(4446, SuSyUtility.susyId("osmium_free_pgm_soluion"))
+        OsmiumFreePGMSolution = new Material.Builder(4446, SuSyUtility.susyId("osmium_free_pgm_solution"))
                 .fluid()
                 .color(0xe0dcb6)
                 .build();
