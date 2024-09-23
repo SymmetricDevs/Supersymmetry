@@ -214,8 +214,8 @@ class SuSyMaterials {
         public static Material PolyhaliteLeach;
         public static Material CarnalliteLeach;
         public static Material KainiteLeach;
-        public static Material Zeolite13XSolution;
-        public static Material Zeolite13X;
+        public static Material TypeXZeoliteSolution;
+        public static Material TypeXZeolite;
         public static Material LTSCatalyst;
         public static Material HTSCatalyst;
         public static Material SpentBismuthCatalyst;
@@ -510,6 +510,8 @@ class SuSyMaterials {
         public static Material NetherMolecularSieve;
         public static Material HydrotreatingCatalyst;
         public static Material SourWater;
+        public static Material TypeYZeoliteSolution;
+        public static Material TypeYZeolite;
 
         // Petrochem Materials   
 

@@ -54,10 +54,7 @@ public class UnknownCompositionMaterials {
                 .colorAverage()
                 .build();
 
-        RawMolecularSieve = new Material.Builder(4005, SuSyUtility.susyId('raw_molecular_sieve'))
-                .liquid()
-                .color(0x8c94a8)
-                .build();
+        // FREE ID: 4005
 
         FlueGas = new Material.Builder(4006, SuSyUtility.susyId('flue_gas'))
                 .gas(new FluidBuilder().temperature(1000))
@@ -474,13 +471,13 @@ public class UnknownCompositionMaterials {
                 .color(0xadb07f)
                 .build();
 
-        Zeolite13X = new Material.Builder(4091, SuSyUtility.susyId('zeolite_13'))
+        TypeXZeolite = new Material.Builder(4091, SuSyUtility.susyId('type_x_zeolite'))
                 .dust()
                 .iconSet(SHINY)
                 .color(0xe4e8bc)
                 .build();
 
-        Zeolite13XSolution = new Material.Builder(4092, SuSyUtility.susyId('zeolite_13_solution'))
+        TypeXZeoliteSolution = new Material.Builder(4092, SuSyUtility.susyId('type_x_zeolite_solution'))
                 .liquid()
                 .color(0xe4e8bc)
                 .build();
@@ -1946,5 +1943,16 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x281757)
                 .build()
+
+        TypeYZeolite = new Material.Builder(4425, SuSyUtility.susyId('type_y_zeolite'))
+                .dust()
+                .iconSet(SHINY)
+                .color(0xc8cca1)
+                .build();
+
+        TypeYZeoliteSolution = new Material.Builder(4426, SuSyUtility.susyId('type_y_zeolite_solution'))
+                .liquid()
+                .color(0xc8cca1)
+                .build();
     }
 }

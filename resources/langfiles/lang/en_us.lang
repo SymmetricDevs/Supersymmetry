@@ -91,7 +91,6 @@ susy.material.diluted_potassium_carbonate_solution=Diluted Potassium Carbonate S
 susy.material.potassium_hydroxide_solution=Potassium Hydroxide Solution
 susy.material.calcium_hydroxide_slurry=Calcium Hydroxide Slurry
 susy.material.sodium_silicate_solution=Sodium Silicate Solution
-susy.material.raw_molecular_sieve=Raw Molecular Sieve
 susy.material.acetylene=Acetylene
 susy.material.ammonia_solution=Ammonia Solution
 susy.material.formaldehyde=Formaldehyde
@@ -708,8 +707,6 @@ susy.material.langbeinite_leach=Langbeinite Leach
 susy.material.polyhalite_leach=Polyhalite Leach
 susy.material.concentrated_polyhalite_leach=Concentrated Polyhalite Leach
 susy.material.kainite_leach=Kainite Leach
-susy.material.zeolite_13x=Zeolite 13X
-susy.material.zeolite_13x_solution=Zeolite 13X Solution
 susy.material.lts_catalyst=LTS Catalyst
 susy.material.hts_catalyst=HTS Catalyst
 susy.material.spent_bismuth_catalyst=Spent Bismuth Catalyst
@@ -1284,8 +1281,8 @@ susy.material.light_oily_brine=Light Oily Brine
 susy.material.heavy_oily_brine=Heavy Oily Brine
 susy.material.calcium_sulfite=Calcium Sulfite
 susy.material.sodium_amide=Sodium Amide
-susy.material.zeolite_13=Zeolite 13X
-susy.material.zeolite_13_solution=Zeolite 13X Solution
+susy.material.type_x_zeolite=Type X Zeolite
+susy.material.type_x_zeolite_solution=Type X Zeolite Solution
 susy.material.sienna=Sienna
 susy.material.burnt_sienna=Burnt Sienna
 susy.material.lead_chromate=Lead Chromate
@@ -1990,6 +1987,8 @@ susy.material.propane_fuel_gas=Propane Fuel Gas
 susy.material.heated_oil_residue=Heated Oil Residue
 susy.material.vacuum_oil_residue=Vacuum Oil Residue
 susy.material.sour_water=Sour Water
+susy.material.type_y_zeolite=Type Y Zeolite
+susy.material.type__zeolite_solution=Type Y Zeolite Solution
 
 # Isotopes
 
