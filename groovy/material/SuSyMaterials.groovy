@@ -608,6 +608,7 @@ class SuSyMaterials {
         public static Material DewaxedLubricantMixture;
         public static Material CFiveFraction;
         public static Material DimerizedCFiveFraction;
+        public static Material PyrolysisGasoline;
 
         // First Degree Materials
 

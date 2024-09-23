@@ -1989,6 +1989,7 @@ susy.material.vacuum_oil_residue=Vacuum Oil Residue
 susy.material.sour_water=Sour Water
 susy.material.type_y_zeolite=Type Y Zeolite
 susy.material.type__zeolite_solution=Type Y Zeolite Solution
+susy.material.pyrolysis_gasoline=Pyrolysis Gasoline
 
 # Isotopes
 

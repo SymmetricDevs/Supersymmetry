@@ -288,7 +288,13 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        //FREE IDs: 20068-20069
+        PyrolysisGasoline = new Material.Builder(20068, SuSyUtility.susyId('pyrolysis_gasoline'))
+                .liquid()
+                .color(0xe6ba5c)
+                .flags(FLAMMABLE)
+                .build();
+
+        //FREE ID: 20069
 
         CrudeLubricatingOil = new Material.Builder(20070, SuSyUtility.susyId('crude_lubricating_oil'))
                 .liquid()
