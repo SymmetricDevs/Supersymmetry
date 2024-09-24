@@ -321,7 +321,7 @@ susy.material.crude_gallium_arsenide=粗砷化镓
 susy.material.gallium_arsenide=纯净砷化镓
 
 susy.material.monocalcium_phosphate=磷酸二氢钙
-susy.material.calcium_phosphite=亚磷酸钙
+susy.material.calcium_metaphosphate=偏磷酸钙
 susy.material.phosphorus=白磷
 susy.material.hydroxyapatite=羟基磷灰石
 susy.material.calcium_metasilicate=偏硅酸钙
