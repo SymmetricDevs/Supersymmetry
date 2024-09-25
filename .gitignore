@@ -1,5 +1,5 @@
 mods/
-*buildOut/*
+buildOut/
 *client.zip
 .mixin.out/
 armourers_workshop/
@@ -8,6 +8,7 @@ fonts/
 journeymap/
 logs/
 saves/
+build/buildOut/
 
 .curseclient
 usercache.json
