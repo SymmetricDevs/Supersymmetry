@@ -598,6 +598,25 @@ println("Registered oxygenate pairs")
 
 // Gasoline final blending
 
+def gasolineFeedstocks = [
+    'naphtha',
+    'light_naphtha',
+    'naphtha_reformate',
+    'polymerate',
+    'isomerate',
+    'alkylate',
+    'pyrolysis_gasoline'
+]
+
+for (feedstock in gasolineFeedstocks) {
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid(feedstock) * 1000)
+        .fluidOutputs(fluid('gasoline') * 1000)
+        .duration(2)
+        .EUt(120)
+        .buildAndRegister()
+}
+
 BLENDER.recipeBuilder()
     .fluidInputs(fluid('gasoline') * 1000)
     .fluidInputs(fluid('oxygenates') * 100)
@@ -626,6 +645,13 @@ BLENDER.recipeBuilder()
     .buildAndRegister()
 
 // Diesel final blending
+
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('light_gas_oil') * 1000)
+    .fluidOutputs(fluid('gasoline') * 1000)
+    .duration(2)
+    .EUt(120)
+    .buildAndRegister()
 
 BLENDER.recipeBuilder()
     .fluidInputs(fluid('diesel') * 1000)
