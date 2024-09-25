@@ -70,7 +70,20 @@ PHASE_SEPARATOR = recipemap('phase_separator')
 */
 
 /* Polymerization
-    
+    FBR.recipeBuilder()
+        .notConsumable('ore('catalystBedSolidPhosphoricAcid')')
+        .fluidInputs(fluid('catalytic_olefin_rich_mixture') * 1000)
+        .fluidOutputs(fluid('raw_gasoline_polymerate') * 500)
+        .duration(200)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+    PHASE_SEPARATOR.recipeBuilder()
+        .fluidInputs(fluid('raw_gasoline_polymerate') * 500)
+        .fluidOutputs(fluid('gasoline_polymerate') * 250)
+        .fluidOutputs(fluid('lpg') * 250)
+        .duration(50)
+        .buildAndRegister()
 */
 
 /* Reforming

@@ -294,7 +294,7 @@ ROASTER.recipeBuilder()
         
     DRYER.recipeBuilder()
         .inputs(ore('dustWetSolidPhosphoricAcidCatalyst')
-        .outputs(ore('dustSolidPohpshoricAcidCatalyst')
+        .outputs(ore('dustSolidPhopshoricAcidCatalyst')
         .duration(200)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()*/
