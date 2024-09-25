@@ -18,16 +18,7 @@
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 8,
-          "Damage:2": 158,
-          "id:8": "gregtechfoodoption:gtfo_meta_item"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:checkbox"
     }
   }
 }
