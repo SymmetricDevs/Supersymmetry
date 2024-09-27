@@ -156,7 +156,7 @@ def shapes = [
     new Shape('ring', 4),
     new Shape('foil', 4),
     new Shape('ingot', 1),
-    new Shape('tinyPipe', 'pipe.tiny', 2)
+    new Shape('pipeTinyFluid', 'pipe.tiny', 2)
 ]
 
 
@@ -166,6 +166,9 @@ def VULCANIZING_RECIPES = recipemap("vulcanizing_press")
 for (rubber in rubbers) {
     for (sulfurSource in sulfurSources) { 
         for(shape in shapes) {
+            if (oreDict.getItems(shape.name + rubber.output).size() == 0) {
+                continue;
+            }
             for (catalyser in catalysers) {
                     if(rubber.isFluid)  {
                         VULCANIZING_RECIPES.recipeBuilder()
