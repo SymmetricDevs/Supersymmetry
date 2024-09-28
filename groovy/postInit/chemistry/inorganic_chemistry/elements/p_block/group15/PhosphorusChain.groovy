@@ -68,6 +68,29 @@ ROASTER.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
+// 2 Ca3(PO4)2 + 6 SiO2 + 10 C -> 6 CaSiO3 + 10 CO + P4
+EBF.recipeBuilder()
+        .inputs(ore('dustTricalciumPhosphate') * 26)
+        .inputs(ore('dustSiliconDioxide') * 18)
+        .inputs(ore('dustAnyPurityCarbon') * 10)
+        .outputs(metaitem('dustPhosphorus') * 4)
+        .outputs(metaitem('dustCalciumMetasilicate') * 30)
+        .fluidOutputs(fluid('carbon_monoxide') * 10000)
+        .blastFurnaceTemp(1200)
+        .duration(480)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+// 3 Ca(OH)2 + 2 H3PO4 -> Ca3(PO4)2 + 6H2O
+BATCH_REACTOR.recipeBuilder()
+        .inputs(ore('dustCalciumHydroxide') * 15)
+        .fluidInputs(fluid('phosphoric_acid') * 2000)
+        .outputs(metaitem('dustTricalciumPhosphate') * 15)
+        .fluidOutputs(fluid('water') * 6000)
+        .duration(200)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
 //UNIVERSAL (MV)
 //REMOVE APATITE RECIPES
 
@@ -127,16 +150,6 @@ DISTILLATION_TOWER.recipeBuilder()
     .fluidInputs(fluid('diluted_phosphoric_acid') * 4000)
     .fluidOutputs(fluid('phosphoric_acid') * 3000)
     .fluidOutputs(fluid('water') * 1000)
-    .duration(200)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
-//CONVERSION TO WHITE PHOSPHORUS
-BATCH_REACTOR.recipeBuilder()
-    .inputs(ore('dustCalciumHydroxide') * 5)
-    .fluidInputs(fluid('phosphoric_acid') * 2000)
-    .outputs(metaitem('dustMonocalciumPhosphate') * 15)
-    .fluidOutputs(fluid('water') * 2000)
     .duration(200)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
