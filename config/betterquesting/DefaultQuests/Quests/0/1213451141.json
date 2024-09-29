@@ -22,7 +22,7 @@
       "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 32,
+          "Count:3": 8,
           "Damage:2": 122,
           "id:8": "gregtech:meta_ingot"
         }
