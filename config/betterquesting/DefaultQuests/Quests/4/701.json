@@ -18,6 +18,7 @@
       },
       "ignoresview:1": 0,
       "name:8": "susy.quest.db.701.title",
+      "tasklogic:8": "OR",
       "visibility:8": "ALWAYS"
     }
   },
