@@ -492,34 +492,6 @@ Globals.solders.each { key, val ->
                                         s_fuel,
                                         ore('wireFineRedAlloy')
                                 ])
-                                .circuitMeta(2)
-                                .fluidInputs(fluid(key) * val)
-                                .outputs(item('techguns:itemshared', 7)*8)
-                                .duration(20)
-                                .EUt(200)
-                                .buildAndRegister();
-
-                        recipemap('weapons_factory').recipeBuilder()
-                                .inputs([
-                                        ore('plateStainlessSteel') * 2,
-                                        s_oxy * 2,
-                                        s_fuel * 2,
-                                        ore('wireFineRedAlloy')
-                                ])
-                                .circuitMeta(3)
-                                .fluidInputs(fluid(key) * val)
-                                .outputs(item('techguns:itemshared', 145)*8)
-                                .duration(20)
-                                .EUt(200)
-                                .buildAndRegister();
-
-                        recipemap('weapons_factory').recipeBuilder()
-                                .inputs([
-                                        ore('plateStainlessSteel') * 2,
-                                        s_oxy,
-                                        s_fuel,
-                                        ore('wireFineRedAlloy')
-                                ])
                                 .circuitMeta(4)
                                 .fluidInputs(fluid(key) * val)
                                 .outputs(item('minecraft:fireworks') * 16)

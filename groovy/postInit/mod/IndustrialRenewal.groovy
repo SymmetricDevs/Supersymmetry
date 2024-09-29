@@ -188,7 +188,7 @@ crafting.replaceShaped("industrialrenewal:flame_detector", item('industrialrenew
 
 crafting.replaceShaped("industrialrenewal:bunker_hatch", item('industrialrenewal:bunker_hatch'), [
 	[item('minecraft:stone_slab'), item('minecraft:stone_slab'), item('minecraft:stone_slab')],
-	[item('techguns:item_bunkerdoor'), null, item('techguns:item_bunkerdoor')],
+	[item('minecraft:iron_door'), null, item('minecraft:iron_door')],
 	[item('minecraft:stone_slab'), item('minecraft:stone_slab'), item('minecraft:stone_slab')]
 ])
 
