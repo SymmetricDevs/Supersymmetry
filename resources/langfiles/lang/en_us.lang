@@ -1108,6 +1108,7 @@ item.susy.material.hydrothermal_deposit.ore=Hydrothermal Deposit
 item.susy.material.alluvial_deposit.ore=Alluvial Deposit
 item.susy.material.magmatic_hydrothermal_deposit.ore=Magmatic Hydrothermal Deposit
 item.susy.material.coal_deposit.ore=Coal Deposit
+item.susy.material.native_copper_deposit.ore=Native Copper Deposit
 
 susy.material.orthomagmatic_deposit=Orthomagmatic Deposit
 susy.material.metamorphic_deposit=Metamorphic Deposit
@@ -2048,7 +2049,7 @@ metaitem.hot_iron_rod.name=Hot Iron Rod
 metaitem.voltaic_pile.name=Voltaic Pile
 metaitem.electrolyte_paper.name=Electrolyte Paper
 metaitem.sand.dust.name=Fine Pile of Sand
-metaitem.straw.name=Straw
+metaitem.native_copper.name=Native Copper
 metaitem.mudbrick_mix.name=Mudbrick Mix
 metaitem.slaked_lime.name=Slaked Lime
 

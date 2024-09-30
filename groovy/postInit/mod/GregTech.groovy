@@ -772,6 +772,27 @@ mods.gregtech.forge_hammer.recipeBuilder()
 		.EUt(16)
 		.buildAndRegister();
 
+mods.gregtech.macerator.recipeBuilder()
+		.inputs(item('susy:resource_block_1'))
+		.outputs(metaitem('dustCopper') * 8)
+		.duration(240)
+		.EUt(7)
+		.buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+		.inputs(metaitem('native_copper'))
+		.outputs(metaitem('dustCopper'))
+		.duration(30)
+		.EUt(7)
+		.buildAndRegister();
+
+mods.gregtech.forge_hammer.recipeBuilder()
+		.inputs(item('susy:resource_block_1'))
+		.outputs(metaitem('native_copper') * 8)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
 mods.gregtech.sifter.recipeBuilder()
         .inputs(ore('dustNonMarineEvaporite'))
         .chancedOutput(metaitem('dustSalt'), 8000, 500)

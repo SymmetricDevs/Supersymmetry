@@ -838,6 +838,16 @@ mods.pyrotech.anvil.recipeBuilder()
         .tierGranite()
         .register()
 
+// Native Copper
+mods.pyrotech.anvil.recipeBuilder()
+        .name("susy:native_copper_deposit")
+        .input(ore('oreNativeCopperDeposit'))
+        .output(metaitem('native_copper') * 8)
+        .typeHammer()
+        .hits(2)
+        .tierGranite()
+        .register()
+
 def materials = [
         "Stone",
         "Flint",
@@ -945,7 +955,7 @@ def ores = [
         new Ore("Malachite", "Copper", 2),
         new Ore("Tetrahedrite", "Copper"),
 //        new Ore("Chalcopyrite", "Copper"),
-//        new Ore("Bornite", "Copper"),
+        new Ore("Bornite", "Copper"),
         new Ore("Chalcocite", "Copper"),
 
         // Lead ores
@@ -994,15 +1004,19 @@ reductants.forEach { reductant ->
 
 // Extra smelting recipes
 def extra_smelting_recipes = [
-        [ore('gemMalachite'), metaitem('ingotCopper'),  2, 150]
+        [[ore('gemMalachite') * 8], [metaitem('ingotCopper') * 16], 2,  150],
+        [[metaitem('native_copper') * 6, ore('ingotTin') * 2], [metaitem('ingotBronze') * 8], 1,  350],
+        [[metaitem('native_copper') * 6, ore('dustTin') * 2], [metaitem('ingotBronze') * 8], 1,  300],
+        [[ore('ingotPigIron') * 8], [item('minecraft:iron_ingot') * 8, item('pyrotech:slag')], 1,  400],
+        [[ore('ingotPigIron') * 8, ore('dustLimestone')], [item('minecraft:iron_ingot') * 8, item('pyrotech:slag') * 2], 1,  200]
 ]
 
 extra_smelting_recipes.forEach { recipe ->
     reductants.forEach { reductant ->
         SMELTER.recipeBuilder()
-                .inputs(recipe[0] * 8)
+                .inputs(*(recipe[0]))
                 .inputs(ore(reductant.name) * 8)
-                .outputs(recipe[1] * (recipe[2] * 8))
+                .outputs(*(recipe[1]))
                 .duration((int) (recipe[3] * reductant.duration_multiplier * recipe[2]))
                 .buildAndRegister()
     }
@@ -1078,7 +1092,7 @@ mods.gregtech.coke_oven.removeByInput(1, [item('minecraft:coal_block')], null)
 mods.gregtech.coke_oven.recipeBuilder()
         .inputs(ore('logWood'))
         .outputs(item('minecraft:coal', 1))
-        .fluidOutputs(fluid('creosote') * 50)
+        .fluidOutputs(fluid('creosote') * 250)
         .duration(100)
         .buildAndRegister()
 
@@ -1086,7 +1100,7 @@ mods.gregtech.coke_oven.recipeBuilder()
 mods.gregtech.coke_oven.recipeBuilder()
         .inputs(ore('gemCoal'))
         .outputs(metaitem('gemCoke'))
-        .fluidOutputs(fluid('creosote') * 100)
+        .fluidOutputs(fluid('creosote') * 500)
         .duration(100)
         .buildAndRegister()
 
@@ -1094,7 +1108,7 @@ mods.gregtech.coke_oven.recipeBuilder()
 mods.gregtech.coke_oven.recipeBuilder()
         .inputs(ore('blockCoal'))
         .outputs(metaitem('blockCoke'))
-        .fluidOutputs(fluid('creosote') * 900)
+        .fluidOutputs(fluid('creosote') * 4500)
         .duration(900)
         .buildAndRegister()
 
@@ -1103,7 +1117,7 @@ mods.gregtech.coke_oven.recipeBuilder()
 mods.gregtech.coke_oven.recipeBuilder()
         .inputs(item('pyrotech:log_pile'))
         .outputs(item('minecraft:coal', 1) * 10)
-        .fluidOutputs(fluid('creosote') * 500)
+        .fluidOutputs(fluid('creosote') * 2500)
         .duration(900)
         .buildAndRegister()
 
@@ -1111,7 +1125,7 @@ mods.gregtech.coke_oven.recipeBuilder()
 mods.gregtech.coke_oven.recipeBuilder()
         .inputs(ore('gemLignite'))
         .outputs(ore('gemLigniteCoke').getFirst())
-        .fluidOutputs(fluid('creosote') * 50)
+        .fluidOutputs(fluid('creosote') * 250)
         .duration(100)
         .buildAndRegister()
 
@@ -1119,6 +1133,6 @@ mods.gregtech.coke_oven.recipeBuilder()
 mods.gregtech.coke_oven.recipeBuilder()
         .inputs(ore('blockLignite'))
         .outputs(ore('blockLigniteCoke').getFirst())
-        .fluidOutputs(fluid('creosote') * 450)
+        .fluidOutputs(fluid('creosote') * 2250)
         .duration(900)
         .buildAndRegister()

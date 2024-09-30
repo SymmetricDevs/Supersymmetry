@@ -81,7 +81,19 @@ def RedundantOreRemovals = [
         ore('dustPureCoalDeposit'),
         ore('dustCoalDeposit'),
         ore('dustSmallCoalDeposit'),
-        ore('dustTinyCoalDeposit')
+        ore('dustTinyCoalDeposit'),
+
+        item('gregtech:ore_native_copper_deposit_0'),
+        ore('oreNetherrackNativeCopperDeposit'),
+        ore('oreEndstoneNativeCopperDeposit'),
+        ore('crushedNativeCopperDeposit'),
+        ore('crushedPurifiedNativeCopperDeposit'),
+        ore('crushedCentrifugedNativeCopperDeposit'),
+        ore('dustImpureNativeCopperDeposit'),
+        ore('dustPureNativeCopperDeposit'),
+        ore('dustNativeCopperDeposit'),
+        ore('dustSmallNativeCopperDeposit'),
+        ore('dustTinyNativeCopperDeposit')
 ]
 
 for (entry in RedundantOreRemovals) {

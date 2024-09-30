@@ -114,6 +114,7 @@ class SuSyMaterials {
         public static Material AlluvialDeposit;
         public static Material MagmaticHydrothermalDeposit;
         public static Material CoalDeposit;
+        public static Material NativeCopperDeposit;
 
         // Roasted Ores
 

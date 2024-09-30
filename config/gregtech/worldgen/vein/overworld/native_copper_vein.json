@@ -1,0 +1,46 @@
+{
+  "weight": 30,
+  "density": 0.25,
+  "max_height": 80,
+  "min_height": 50,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "copper"
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      4,
+      12
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": {
+          "block":"susy:resource_block_1",
+          "variant":"native_copper"
+        }
+      },
+      {
+        "secondary": {
+          "block":"susy:resource_block_1",
+          "variant":"native_copper"
+        }
+      },
+      {
+        "between": {
+          "block":"susy:resource_block_1",
+          "variant":"native_copper"
+        }
+      },
+      {
+        "sporadic": {
+          "block":"susy:resource_block_1",
+          "variant":"native_copper"
+        }
+      }
+    ]
+  }
+}

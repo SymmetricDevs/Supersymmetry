@@ -615,5 +615,11 @@ public class OreMaterials{
                 .flags(NO_UNIFICATION)
                 .color(0x2c2c2c)
                 .build();
+
+        NativeCopperDeposit = new Material.Builder(7083, SuSyUtility.susyId("native_copper_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0xbb5f09)
+                .build();
     }
 }

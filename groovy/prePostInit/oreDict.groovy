@@ -92,6 +92,7 @@ ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust')
 ore('oreBauxite').add(item('susy:resource_block:0'))
 ore('oreSulfur').add(item('susy:resource_block:14'))
 ore('oreCoalDeposit').add(item('susy:resource_block:15'))
+ore('oreNativeCopperDeposit').add(item('susy:resource_block_1:0'))
 
 ore('oreOrthomagmaticDeposit').add(item('susy:deposit_block:0'))
 ore('oreMetamorphicDeposit').add(item('susy:deposit_block:1'))

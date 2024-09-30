@@ -39,7 +39,7 @@ eventManager.listen {
         customMetaItems.addItem(150, "mudbrick_mix")
         customMetaItems.addItem(151, "slaked_lime")
         customMetaItems.addItem(152, "sand.dust")
-        // Free id 153, from straw replacement
+        customMetaItems.addItem(153, "native_copper")
 
         customMetaItems.addItem(154, "washed_rotten_flesh");
 
