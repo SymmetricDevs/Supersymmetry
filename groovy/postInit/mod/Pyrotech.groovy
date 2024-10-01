@@ -1005,6 +1005,8 @@ reductants.forEach { reductant ->
 // Extra smelting recipes
 def extra_smelting_recipes = [
         [[ore('gemMalachite') * 8], [metaitem('ingotCopper') * 16], 2,  150],
+        [[metaitem('native_copper') * 8], [metaitem('ingotCopper') * 8], 1,  100],
+        [[ore('oreNativeCopperDeposit')], [metaitem('ingotCopper') * 8], 1,  150],
         [[metaitem('native_copper') * 6, ore('ingotTin') * 2], [metaitem('ingotBronze') * 8], 1,  350],
         [[metaitem('native_copper') * 6, ore('dustTin') * 2], [metaitem('ingotBronze') * 8], 1,  300],
         [[ore('ingotPigIron') * 8], [item('minecraft:iron_ingot') * 8, item('pyrotech:slag')], 1,  400],
