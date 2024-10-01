@@ -454,8 +454,6 @@ crafting.replaceShaped("gregtech:multi_furnace", item('gregtech:machine', 1006),
 //         .EUt(7)
 //         .buildAndRegister();
 
-furnace.add(metaitem('dustLimestone'), metaitem('dustQuicklime'))
-
 //TechGuns carbon plate removal
 // Carbon Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('carbon') * 144])
