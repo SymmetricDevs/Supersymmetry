@@ -4,14 +4,15 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.1213451141.desc",
+      "desc:8": "susy.quest.db.23.desc",
       "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "Damage:2": 122,
+        "OreDict:8": "ingotZinc",
         "id:8": "gregtech:meta_ingot"
       },
       "ignoresview:1": 0,
-      "name:8": "susy.quest.db.1213451141.title",
+      "name:8": "susy.quest.db.23.title",
       "visibility:8": "ALWAYS"
     }
   },
@@ -24,6 +25,7 @@
         "0:10": {
           "Count:3": 8,
           "Damage:2": 122,
+          "OreDict:8": "ingotZinc",
           "id:8": "gregtech:meta_ingot"
         }
       },
