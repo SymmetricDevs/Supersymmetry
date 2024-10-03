@@ -2117,9 +2117,6 @@ metaitem.fused_quartz.name=Fused Quartz Plate
 metaitem.crucible.quartz.name=Quartz Crucible
 metaitem.crucible.graphite.name=Graphite Crucible
 
-metaitem.seed.cotton.name=Cotton Seed
-metaitem.crop.cotton.name=Cotton
-
 metaitem.vti_rich_pig_iron.name=Vanadium/Titanium-Rich Pig Iron
 metaitem.vt_slag.name=Vanadium/Titanium-Rich Slag
 metaitem.sponge.titanium.name=Titanium Sponge
