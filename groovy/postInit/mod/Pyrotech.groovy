@@ -1005,12 +1005,12 @@ reductants.forEach { reductant ->
 // Extra smelting recipes
 def extra_smelting_recipes = [
         [[ore('gemMalachite') * 8], [metaitem('ingotCopper') * 16], 2,  150],
-        [[metaitem('native_copper') * 8, ore('dustSmallLimestone')], [metaitem('ingotCopper') * 8, item('pyrotech:slag')], 1,  100],
-        [[ore('oreNativeCopperDeposit'), ore('dustSmallLimestone')], [metaitem('ingotCopper') * 8, item('pyrotech:slag')], 1,  150],
+        [[metaitem('native_copper') * 8, ore('dustTinyLimestone')], [metaitem('ingotCopper') * 8, item('pyrotech:slag')], 1,  100],
+        [[ore('oreNativeCopperDeposit'), ore('dustTinyLimestone')], [metaitem('ingotCopper') * 8, item('pyrotech:slag')], 1,  150],
         [[metaitem('native_copper') * 6, ore('ingotTin') * 2], [metaitem('ingotBronze') * 8, item('pyrotech:slag')], 1,  350],
         [[metaitem('native_copper') * 6, ore('dustTin') * 2], [metaitem('ingotBronze') * 8, item('pyrotech:slag')], 1,  300],
         [[ore('ingotPigIron') * 8], [item('minecraft:iron_ingot') * 8, item('pyrotech:slag')], 1,  400],
-        [[ore('ingotPigIron') * 8, ore('dustLimestone')], [item('minecraft:iron_ingot') * 8, item('pyrotech:slag') * 2], 1,  200]
+        [[ore('ingotPigIron') * 8, ore('dustTinyLimestone')], [item('minecraft:iron_ingot') * 8, item('pyrotech:slag') * 2], 1,  200]
 ]
 
 extra_smelting_recipes.forEach { recipe ->
