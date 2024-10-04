@@ -625,5 +625,18 @@ public class ThirdDegreeMaterials {
                 .components(FormicAcid * 6, Water * 4)
                 .color(0xbf3983)
                 .build();
+
+        LithiumHydroxideMotherLiquor = new Material.Builder(24100, SuSyUtility.susyId('lithium_hydroxide_mother_liquor'))
+                .liquid()
+                .components(LithiumHydroxide * 1, Water * 10)
+                .colorAverage()
+                .build();
+
+        LithiumHydroxideMonohydrate = new Material.Builder(24101, SuSyUtility.susyId('lithium_hydroxide_monohydrate'))
+                .dust()
+                .components(LithiumHydroxide * 1, Water * 1)
+                .colorAverage()
+                .build();
+
     }
 }
