@@ -44,7 +44,7 @@ eventManager.listen {
         customMetaItems.addItem(155, "sugar_cane_dust");
 
         customMetaItems.addItem(156, "bitumen");
-        //FREE ID: 157
+        customMetaItems.addItem(157, "hydrocracking_catalyst")
         customMetaItems.addItem(158, "paraffin_wax");
         customMetaItems.addItem(159, "spent_cracking_catalyst");
 

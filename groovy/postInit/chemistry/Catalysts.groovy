@@ -298,3 +298,31 @@ ROASTER.recipeBuilder()
         .duration(200)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()*/
+
+    // Hydrocracking catalyst
+
+    /*AUTOCLAVE.recipeBuilder()
+        .fluidInputs(fluid('sodium_silicate_solution') * 1000)
+        .fluidInputs(fluid('aluminium_sulfate_solution') * 100)
+        .outputs(metaitem('dustAmorphousSilicaAlumina'))
+        .fluidOutputs(fluid('wastewater') * 1100)
+        .duration(200)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustCobaltOxide') * 2)
+        .fluidInputs(fluid('nitric_acid') * 2000)
+        .fluidOutputs(fluid('cobalt_nitrate_solution') * 1000)
+        .duration(60)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
+    ROASTER.recipeBuilder()
+        .inputs(ore('dustAmorphousSilicaAlumina') * 3)
+        .fluidInputs(fluid('ammonium_molybdate_solution') * 2000)
+        .fluidInputs(fluid('cobalt_nitrate_solution') * 1000)
+        .outputs(metaitem('hydrocracking_catalyst') * 3)
+        .duration(200)
+        .EUt(Globals.voltAmps[3])
+        .buildAndRegister()
