@@ -752,7 +752,7 @@ class SuSyMaterials {
         public static Material IronPentacarbonyl;
         public static Material DilutedPhosphoricAcid;
         public static Material MonocalciumPhosphate;
-        public static Material CalciumPhosphite;
+        public static Material CalciumMetaphosphate;
         public static Material AluminiumSulfate;
         public static Material DemineralizedWater;
         public static Material DeaeratedWater;

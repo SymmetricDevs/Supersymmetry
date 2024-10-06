@@ -2290,14 +2290,14 @@ public class FirstDegreeMaterials {
 
         MonocalciumPhosphate.setFormula("Ca(H2PO4)2", true)
 
-        CalciumPhosphite = new Material.Builder(8439, SuSyUtility.susyId('calcium_phosphite'))
+        CalciumMetaphosphate = new Material.Builder(8439, SuSyUtility.susyId('calcium_metaphosphate'))
                 .dust()
-                .components(Calcium * 3, Phosphorus * 2, Oxygen * 6)
+                .components(Calcium * 1, Phosphorus * 2, Oxygen * 6)
                 .color(0xa2a832)
                 .iconSet(CERTUS)
                 .build()
 
-        CalciumPhosphite.setFormula("Ca3(PO3)2", true)
+        CalciumMetaphosphate.setFormula("Ca(PO3)2", true)
 
         SulfurTrioxideReactionMixture = new Material.Builder(8440, SuSyUtility.susyId('sulfur_trioxide_reaction_mixture'))
                 .gas()
