@@ -194,57 +194,43 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        LightlySteamcrackedKerosene = new Material.Builder(20031, SuSyUtility.susyId('lightly_steamcracked_kerosene'))
+        SteamcrackedLightNaphtha = new Material.Builder(20031, SuSyUtility.susyId('steamcracked_light_naphtha'))
                 .liquid(new FluidBuilder().temperature(773))
                 .color(0xe3dd59)
                 .flags(FLAMMABLE)
                 .build();
 
-        SeverelySteamcrackedKerosene = new Material.Builder(20032, SuSyUtility.susyId('severely_steamcracked_kerosene'))
+        SteamcrackedHeavyNaphtha = new Material.Builder(20032, SuSyUtility.susyId('steamcracked_heavy_naphtha'))
                 .liquid(new FluidBuilder().temperature(773))
                 .color(0xf2ed83)
                 .flags(FLAMMABLE)
                 .build();
 
-        LightlyHydrocrackedKerosene = new Material.Builder(20033, SuSyUtility.susyId('lightly_hydrocracked_kerosene'))
+        HydrocrackedLightNaphtha = new Material.Builder(20033, SuSyUtility.susyId('hydrocracked_light_naphtha'))
                 .liquid(new FluidBuilder().temperature(773))
                 .color(0xc4bf51)
                 .flags(FLAMMABLE)
                 .build();
 
-        SeverelyHydrocrackedKerosene = new Material.Builder(20034, SuSyUtility.susyId('severely_hydrocracked_kerosene'))
+        HydrocrackedHeavyNaphtha = new Material.Builder(20034, SuSyUtility.susyId('hydrocracked_heavy_naphtha'))
                 .liquid(new FluidBuilder().temperature(773))
                 .color(0xbab65f)
                 .flags(FLAMMABLE)
                 .build();
 
-        //FREE IDs: 20035-20054
-
-        UpgradedHeavyGasOilMix = new Material.Builder(20055, SuSyUtility.susyId('upgraded_heavy_gas_oil_mix'))
+        SteamcrackedLightGasOil = new Material.Builder(20035, SuSyUtility.susyId('steamcracked_light_gas_oil'))
                 .liquid(new FluidBuilder().temperature(773))
-                .color(0x918d33)
+                .color(0xb09046)
                 .flags(FLAMMABLE)
                 .build();
 
-        UpgradedLightGasOilMix = new Material.Builder(20056, SuSyUtility.susyId('upgraded_light_gas_oil_mix'))
+        SteamcrackedHeavyGasOil = new Material.Builder(20036, SuSyUtility.susyId('steamcracked_heavy_gas_oil'))
                 .liquid(new FluidBuilder().temperature(773))
-                .color(0xbab32f)
+                .color(0x997b37)
                 .flags(FLAMMABLE)
                 .build();
 
-        UpgradedKeroseneMix = new Material.Builder(20057, SuSyUtility.susyId('upgraded_kerosene_mix'))
-                .liquid(new FluidBuilder().temperature(773))
-                .color(0xe3db30)
-                .flags(FLAMMABLE)
-                .build();
-
-        UpgradedNaphthaMix = new Material.Builder(20058, SuSyUtility.susyId('upgraded_naphtha_mix'))
-                .liquid(new FluidBuilder().temperature(773))
-                .color(0xf0e83e)
-                .flags(FLAMMABLE)
-                .build();
-
-        // FREE IDs: 20059-20060
+        //FREE IDs: 20035-20060
 
         Syngas = new Material.Builder(20061, SuSyUtility.susyId('syngas'))
                 .gas()

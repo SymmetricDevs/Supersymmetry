@@ -35,6 +35,8 @@ class Petrochemistry = {
     }
 
     trait CatalyticCrackable {
+        catalytic_crackable = true
+
         def getCatalyticallyCracked(int amount) {
             return fluid('catalytically_cracked_' + this.name) * amount
         }
@@ -49,6 +51,22 @@ class Petrochemistry = {
 
         def getThermallyCracked(int amount) {
             return fluid('thermally_cracked_' + this.name) * amount
+        }
+    }
+
+    trait HydroCrackable {
+        hydro_crackable = true
+
+        def getHydro(int amount) {
+            return fluid('hydrocracked_' + this.name) * amount
+        }
+    }
+
+    trait SteamCrackable {
+        steam_crackable = true
+
+        def getSteam(int amount) {
+            return fluid('steamcracked_' + this.name) * amount
         }
     }
 
@@ -84,7 +102,6 @@ class Petrochemistry = {
         String name
         String strippable = false
         String sulfuric = false
-        String thermal_crackable = false
 
         OilFraction(String name) {
             this.name = name
@@ -95,57 +112,43 @@ class Petrochemistry = {
         }
     }
 
-    public static class OilFractionCrackable extends OilFraction {
+    public static class Crackable {
+        String name
+        String thermal_crackable = false
+        String hydro_crackable = false
+        String steam_crackable = false
+        String catalytic_crackable = false
 
-        OilFractionCrackable(String name){
-            super(name)
+        Crackable(String name) {
+            this.name = name
         }
 
-        def getLightlyHydro(int amount) {
-            return fluid('lightly_hydrocracked_' + this.name) * amount
+        def get(int amount) {
+            return fluid(this.name) * amount
         }
-
-        def getSeverelyHydro(int amount) {
-            return fluid('severely_hydrocracked_' + this.name) * amount
-        }
-
-        def getLightlySteam(int amount) {
-            return fluid('lightly_steamcracked_' + this.name) * amount
-        }
-
-        def getSeverelySteam(int amount) {
-            return fluid('severely_steamcracked_' + this.name) * amount
-        }
-
-        def getLightlyHydroMix(int amount) {
-        return fluid('lightly_hydrocracked_' + this.name + '_mix') * amount
-        }
-
-        def getSeverelyHydroMix(int amount) {
-            return fluid('severely_hydrocracked_' + this.name + '_mix') * amount
-        }
-
-        def getLightlySteamMix(int amount) {
-            return fluid('lightly_steamcracked_' + this.name + '_mix') * amount
-        }
-
-        def getSeverelySteamMix(int amount) {
-            return fluid('severely_steamcracked_' + this.name + '_mix') * amount
-        }
-
     }
 
     public static fractions = [
-        vacuum_oil_residue : new OilFraction('vacuum_oil_residue').withTraits(CatalyticCrackable, ThermalCrackable),
-        atmospheric_oil_residue : new OilFraction('atmospheric_oil_residue').withTraits(CatalyticCrackable, ThermalCrackable),
         lubricating_oil : new OilFraction('lubricating_oil').withTraits(Sulfuric, Crude),
-        heavy_gas_oil : new OilFraction('heavy_gas_oil').withTraits(CatalyticCrackable, Sulfuric, Heatable, Strippable),
+        heavy_gas_oil : new OilFraction('heavy_gas_oil').withTraits(Sulfuric, Heatable, Strippable),
         light_gas_oil : new OilFraction('light_gas_oil').withTraits(Sulfuric, Heatable, Strippable),
         kerosene : new OilFractionCrackable('kerosene').withTraits(Sulfuric, Heatable, Strippable),
         heavy_naphtha : new OilFractionCrackable('heavy_naphtha').withTraits(Sulfuric, Heatable),
         naphtha : new OilFractionCrackable('naphtha').withTraits(Crude),
         light_naphtha : new OilFractionCrackable('light_naphtha').withTraits(Sulfuric, Heatable),
         refinery_gas : new OilFraction('refinery_gas').withTraits(Sulfuric)
+    ]
+
+    public static crackables = [
+        vacuum_oil_residue : new Crackable('vacuum_oil_residue').withTraits(CatalyticCrackable, ThermalCrackable),
+        atmospheric_oil_residue : new Crackable('atmospheric_oil_residue').withTraits(CatalyticCrackable, ThermalCrackable),
+        light_gas_oil : new Crackable('light_gas_oil').withTraits(HydroCrackable, SteamCrackable)
+        heavy_gas_oil : new Crackable('heavy_gas_oil').withTraits(CatalyticCrackable, HydroCrackable, SteamCrackable),
+        ethane : new Crackable('ethane').withTraits(SteamCrackable),
+        propane : new Crackable('propane').withTraits(SteamCrackable),
+        butane : new Crackable('butane').withTraits(SteamCrackable),
+        light_naphtha : new Crackable('light_naphtha').withTraits(SteamCrackable, HydroCrackable),
+        heavy_naphtha : new Crackable('heavy_naphtha').withTraits(SteamCrackable, HydroCrackable),
     ]
 
     public static oils = [
