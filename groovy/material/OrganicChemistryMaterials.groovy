@@ -252,7 +252,7 @@ public class OrganicChemistryMaterials {
         DiIsobutylene = new Material.Builder(15038, SuSyUtility.susyId('diisobutylene'))
                 .fluid()
                 .components(Carbon * 8, Hydrogen * 16)
-                .colorAverage()
+                .color(0xa79781)
                 .build();
 
         MethylAcetateSolution = new Material.Builder(15039, SuSyUtility.susyId('methyl_acetate_solution'))
@@ -514,7 +514,13 @@ public class OrganicChemistryMaterials {
                 .color(0x332e2c)
                 .build();
 
-        //FREE ID: 15084-15085
+        TriIsobutylene = new Material.Builder(15084, SuSyUtility.susyId('triisobutylene'))
+                .fluid()
+                .components(Carbon * 12, Hydrogen * 24)
+                .color(0xb9ac9a)
+                .build();
+
+        // FREE ID: 15085
 
         Acetylene = new Material.Builder(15086, SuSyUtility.susyId('acetylene'))
                 .gas()

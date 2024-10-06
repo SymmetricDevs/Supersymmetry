@@ -297,17 +297,18 @@ BR.recipeBuilder()
         .notConsumable(fluid('tert_butyl_alcohol') * 1) //1 to 30 wt %
         .notConsumable(fluid('isooctane') * 1) //diluent, 90% isooctane and 10% isododecane/2,2,4,4,6 pentamethyl heptane
         .fluidInputs(fluid('isobutylene') * 1000)
-        .fluidOutputs(fluid('diisobutyleneMixture') * 1000)
+        .fluidOutputs(fluid('diisobutylene_mixture') * 1000)
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
 DISTILLATION_TOWER.recipeBuilder() //90% yield converted to diisobutytlene?
-        .fluidInputs(fluid('diisobutyleneMixture') * 1000)
+        .fluidInputs(fluid('diisobutylene_mixture') * 1000)
         .fluidOutputs(fluid('isobutylene') * 90)
-        .fluidOutputs(fluid('diisobutylene') * 400) //material
-        .fluidOutputs(fluid('triisobutylene') * 20) //material
-        .notConsumable(fluid('tert_butyl_alcohol') * 50) //not all tBuOH and isobutent reacts in the dimerization process
+        .fluidOutputs(fluid('diisobutylene') * 400)
+        .fluidOutputs(fluid('triisobutylene') * 20)
+//        ↓ this is not doable currently due to DT input restrictions
+//        .notConsumable(fluid('tert_butyl_alcohol') * 50) //not all tBuOH and isobutent reacts in the dimerization process
         .duration(800)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
