@@ -3382,5 +3382,15 @@ public class FirstDegreeMaterials {
                 .components(Rubidium, Oxygen, Hydrogen)
                 .color(0xbf54bb)
                 .build()
+
+        Kovar = new Material.Builder(8619, SuSyUtility.susyId('kovar'))
+                .ingot()
+                .iconSet(SHINY)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_UNIFICATION)
+                .components(Iron * 2, Nickel * 1, Cobalt * 1)
+                .colorAverage()
+                .build();
+
+        Kovar.setFormula("Fe10Ni5Co3", true)
     }
 }

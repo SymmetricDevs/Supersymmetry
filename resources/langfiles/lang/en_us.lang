@@ -1107,6 +1107,8 @@ item.susy.material.sedimentary_deposit.ore=Sedimentary Deposit
 item.susy.material.hydrothermal_deposit.ore=Hydrothermal Deposit
 item.susy.material.alluvial_deposit.ore=Alluvial Deposit
 item.susy.material.magmatic_hydrothermal_deposit.ore=Magmatic Hydrothermal Deposit
+item.susy.material.coal_deposit.ore=Coal Deposit
+item.susy.material.native_copper_deposit.ore=Native Copper Deposit
 
 susy.material.orthomagmatic_deposit=Orthomagmatic Deposit
 susy.material.metamorphic_deposit=Metamorphic Deposit
@@ -1114,6 +1116,7 @@ susy.material.sedimentary_deposit=Sedimentary Deposit
 susy.material.hydrothermal_deposit=Hydrothermal Deposit
 susy.material.alluvial_deposit=Alluvial Deposit
 susy.material.magmatic_hydrothermal_deposit=Magmatic Hydrothermal Deposit
+susy.material.coal_deposit=Coal Deposit
 
 susy.material.corundum=Corundum
 susy.material.tourmaline=Tourmaline
@@ -1947,6 +1950,7 @@ susy.material.formic_acid=Formic Acid
 susy.material.caesium_alumina_mixture=Caesium Alumina Mixture
 susy.material.caesium_chloride_solution=Caesium Chloride Solution
 susy.material.rubidium_hydroxide_solution=Rubidium Hydroxide Solution
+susy.material.kovar=Kovar
 susy.material.sodium_alum_solution=Sodium Alum Solution
 susy.material.sodium_alum=Sodium Alum
 susy.material.caesium_alum=Caesium Alum
@@ -1959,6 +1963,7 @@ susy.material.caesium_formate_solution=Caesium Formate Solution
 susy.material.rubidium_hydroxide=Rubidium Hydroxide
 susy.material.pollucite_leach=Pollucite Leach
 susy.material.caesium_rubidium_alum_mixture=Caesium-Rubidium Alum Mixture
+susy.material.cobalt_matte=Cobalt Matte
 susy.material.methyl_formate_solution=Methyl Formate Solution
 susy.material.acidic_thallium_sulfate_solution=Acidic Thallium Sulfate Solution
 susy.material.ethyl_acetate=Ethyl Acetate
@@ -2044,7 +2049,7 @@ metaitem.hot_iron_rod.name=Hot Iron Rod
 metaitem.voltaic_pile.name=Voltaic Pile
 metaitem.electrolyte_paper.name=Electrolyte Paper
 metaitem.sand.dust.name=Fine Pile of Sand
-metaitem.straw.name=Straw
+metaitem.native_copper.name=Native Copper
 metaitem.mudbrick_mix.name=Mudbrick Mix
 metaitem.slaked_lime.name=Slaked Lime
 
@@ -2396,6 +2401,8 @@ item.chisel.chisel_diamond.name=Steel Chisel
 tooltip.computronics.waila.tape.notapeinserted=No Tape Inserted
 tooltip.computronics.waila.tape.tapeinserted=Tape Inserted
 item.chesttransporter_copper.name=Bronze Chest Transporter
+tile.pyrotech.anvil_granite.name=Stone Anvil
+gui.pyrotech.jei.category.anvil.granite=Stone Anvil
 gregtech.universal.tooltip.terrain_resist=§eWill not explode from water, lava, fire or rain.
 
 # Material Renaming

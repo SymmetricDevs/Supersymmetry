@@ -7,7 +7,8 @@
       "desc:8": "susy.quest.db.118.desc",
       "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
-        "id:8": "gregtechfoodoption:gtfo_casing"
+        "Damage:2": 44,
+        "id:8": "gregtechfoodoption:gtfo_meta_item"
       },
       "ignoresview:1": 0,
       "name:8": "susy.quest.db.118.title",
