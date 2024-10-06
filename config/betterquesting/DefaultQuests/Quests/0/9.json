@@ -41,38 +41,54 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "id:8": "gregtech:pickaxe",
+          "id:8": "gregtech:axe",
           "tag:10": {
             "DisallowContainerItem:1": 0,
             "GT.Behaviours:10": {
-              "TorchPlacing:1": 1
+              "DisableShields:1": 1,
+              "TreeFelling:1": 1
             },
             "GT.Tool:10": {
-              "AttackDamage:5": 2.0,
-              "AttackSpeed:5": -2.8,
+              "AttackDamage:5": 6.0,
+              "AttackSpeed:5": -3.2,
               "Durability:3": 0,
               "HarvestLevel:3": 1,
               "Material:8": "gregtech:flint",
-              "MaxDurability:3": 63,
-              "ToolSpeed:5": 4.0
+              "MaxDurability:3": 95,
+              "ToolSpeed:5": 2.0
             },
             "HideFlags:3": 2
           }
         },
         "1:10": {
           "Count:3": 1,
-          "id:8": "gregtech:shovel",
+          "id:8": "gregtech:sword",
           "tag:10": {
             "DisallowContainerItem:1": 0,
             "GT.Behaviours:10": {},
             "GT.Tool:10": {
-              "AttackDamage:5": 2.5,
-              "AttackSpeed:5": -3.0,
+              "AttackDamage:5": 4.0,
+              "AttackSpeed:5": -2.4,
               "Durability:3": 0,
               "HarvestLevel:3": 1,
               "Material:8": "gregtech:flint",
-              "MaxDurability:3": 63,
-              "ToolSpeed:5": 4.0
+              "MaxDurability:3": 95
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:knife",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 1.0,
+              "AttackSpeed:5": 3.0,
+              "Durability:3": 0,
+              "Material:8": "gregtech:flint",
+              "MaxDurability:3": 95
             },
             "HideFlags:3": 2
           }
