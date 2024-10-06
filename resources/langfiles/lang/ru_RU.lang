@@ -2331,9 +2331,6 @@ metaitem.fused_quartz.name=Пластина из плавленого кварц
 metaitem.crucible.quartz.name=Кварцевый тигель
 metaitem.crucible.graphite.name=Графитовый тигель
 
-metaitem.seed.cotton.name=Семена хлопка
-metaitem.crop.cotton.name=Хлопок
-
 metaitem.vti_rich_pig_iron.name=Чугун с высоким содержанием ванадия и титана
 metaitem.vt_slag.name=Шлак с высоким содержанием ванадия/титана
 metaitem.sponge.titanium.name=Титановая губка
