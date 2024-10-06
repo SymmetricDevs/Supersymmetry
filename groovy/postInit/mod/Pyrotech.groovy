@@ -553,7 +553,7 @@ crafting.addShaped("susy:refractory_brick_slab", item('pyrotech:refractory_brick
 // Oven recipes
 def oven_recipes = [
         // Mud brick
-        ["mudbrick", item('gregtechfoodoption:gtfo_meta_item', 44), item('gregtechfoodoption:gtfo_meta_item', 43), 1200],
+        ["mudbrick", metaitem('gregtechfoodoption:brick.adobe'), metaitem('gregtechfoodoption:brick.adobe_fired'), 1200],
 
         // Misc recipes
         ["straw", ore('cropWheat'), item('pyrotech:material', 2), 800],
@@ -562,9 +562,9 @@ def oven_recipes = [
         ["sponge", item('minecraft:sponge', 1), item('minecraft:sponge'), 800],
 
         // Food recipes
-        ["cooked_mince_meat_dust", metaitem('dustMeat'), item('gregtechfoodoption:gtfo_oredict_item', 1129), 2400],
-        ["cooked_meat_ingot", item('gregtechfoodoption:gtfo_oredict_item', 1116), item('gregtechfoodoption:gtfo_oredict_item', 1120), 2400],
-        ["bacon", item('gregtechfoodoption:gtfo_meta_item', 108), item('gregtechfoodoption:gtfo_meta_item', 22), 2400],
+        ["cooked_mince_meat_dust", metaitem('dustMeat'), metaitem('gregtechfoodoption:cooked_mince_meat_dust'), 2400],
+        ["cooked_meat_ingot", metaitem('gregtechfoodoption:tough_meat_dust'), metaitem('gregtechfoodoption:cooked_meat_ingot'), 2400],
+        ["bacon", metaitem('gregtechfoodoption:component.bacon'), metaitem('gregtechfoodoption:food.bacon'), 2400],
         ["baked_potato", ore('cropPotato'), item('minecraft:baked_potato'), 2400],
         ["cooked_beef", item('minecraft:beef'), item('minecraft:cooked_beef'), 2400],
         ["cooked_porkchop", item('minecraft:porkchop'), item('minecraft:cooked_porkchop'), 2400],
@@ -573,10 +573,10 @@ def oven_recipes = [
         ["cooked_rabbit", item('minecraft:rabbit'), item('minecraft:cooked_rabbit'), 2400],
         ["cooked_fish", item('minecraft:fish'), item('minecraft:cooked_fish'), 2400],
         ["cooked_salmon", item('minecraft:fish', 1), item('minecraft:cooked_fish', 1), 2400],
-        ["toast", item('gregtechfoodoption:gtfo_meta_item', 210), item('gregtechfoodoption:gtfo_meta_item', 211), 2400],
-        ["bun", item('gregtechfoodoption:gtfo_meta_item', 83), item('gregtechfoodoption:gtfo_meta_item', 87), 2400],
-        ["baguette", item('gregtechfoodoption:gtfo_meta_item', 48), item('gregtechfoodoption:gtfo_meta_item', 51), 2400],
-        ["bread", item('gregtechfoodoption:gtfo_meta_item', 47), item('minecraft:bread'), 2400]
+        ["toast", metaitem('gregtechfoodoption:food.bread_slice'), metaitem('gregtechfoodoption:food.toast'), 2400],
+        ["bun", metaitem('gregtechfoodoption:component.bun'), metaitem('gregtechfoodoption:food.bun'), 2400],
+        ["baguette", metaitem('gregtechfoodoption:component.baguette'), metaitem('gregtechfoodoption:food.baguette'), 2400],
+        ["bread", metaitem('gregtechfoodoption:component.bread'), item('minecraft:bread'), 2400]
 ]
 
 oven_recipes.forEach { recipe ->
