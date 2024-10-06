@@ -2092,6 +2092,7 @@ public class FirstDegreeMaterials {
                 .components(Cobalt * 1, Sulfur * 1, Oxygen * 4)
                 .colorAverage()
                 .build();
+
         CobaltSulfateSolution.setFormula("(CoSO4)(H2O)", true)
 
         Dichlorosilane = new Material.Builder(8407, SuSyUtility.susyId('dichlorosilane'))
