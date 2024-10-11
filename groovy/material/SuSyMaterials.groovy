@@ -527,13 +527,6 @@ class SuSyMaterials {
         public static Material DesaltedOilHeavy;
         public static Material HeatedOilHeavy;
 
-        public static Material HeavyGasOil;
-        public static Material CrudeHeavyGasOil;
-        public static Material SulfuricHeavyGasOil;
-        public static Material TreatedSulfuricHeavyGasOil;
-        public static Material CatalyticallyCrackedHeavyGasOil;
-        public static Material SteamcrackedHeavyGasOil
-
         public static Material CrudeNaturalGas;
         public static Material SulfuricNaturalGas;
         public static Material TreatedSulfuricNaturalGas;
@@ -541,32 +534,52 @@ class SuSyMaterials {
         public static Material SulfuricRefineryGas;
         public static Material TreatedSulfuricRefineryGas;
 
-        public static Material LightGasOil;
-        public static Material CrudeLightGasOil;
-        public static Material SulfuricLightGasOil;
-        public static Material TreatedSulfuricLightGasOil;
-        public static Material CatalyticallyCrackedLightGasOil;
-        public static Material SteamcrackedLightGasOil;
+        public static Material LightNaphtha;
+        public static Material SulfuricLightNaphtha;
+        public static Material SteamcrackedLightNaphtha;
+        public static Material HydrocrackedLightNaphtha;
+
+        public static Material HeavyNaphtha;
+        public static Material SulfuricHeavyNaphtha;
+        public static Material SteamcrackedHeavyNaphtha;
+        public static Material HydrocrackedHeavyNaphtha;
+        public static Material NaphthaReformate;
 
         public static Material Kerosene;
         public static Material CrudeKerosene;
         public static Material SulfuricKerosene;
         public static Material TreatedSulfuricKerosene;
 
+        public static Material LightGasOil;
+        public static Material CrudeLightGasOil;
+        public static Material SulfuricLightGasOil;
+        public static Material TreatedSulfuricLightGasOil;
+        public static Material CatalyticallyCrackedLightGasOil;
+        public static Material SteamcrackedLightGasOil;
+        public static Material HydrocrackedLightGasOil;
+
+        public static Material HeavyGasOil;
+        public static Material CrudeHeavyGasOil;
+        public static Material SulfuricHeavyGasOil;
+        public static Material TreatedSulfuricHeavyGasOil;
+        public static Material CatalyticallyCrackedHeavyGasOil;
+        public static Material SteamcrackedHeavyGasOil;
+        public static Material HydrocrackedHeavyGasOil;
+
         public static Material CrudeNaphtha;
         public static Material TreatedSulfuricNaphtha;
-        public static Material SteamcrackedLightNaphtha;
-        public static Material SteamcrackedHeavyNaphtha;
-        public static Material HydrocrackedLightNaphtha;
-        public static Material HydrocrackedHeavyNaphtha;
-        public static Material NaphthaReformate;
-
         public static Material DebutanizedNaphtha;
         public static Material SulfuricDebutanizedNaphtha;
-        public static Material SulfuricLightNaphtha;
-        public static Material SulfuricHeavyNaphtha;
-        public static Material LightNaphtha;
-        public static Material HeavyNaphtha;
+
+        public static Material AtmosphericOilResidue;
+        public static Material CatalyticallyCrackedAtmosphericOilResidue;
+        public static Material HydrocrackedAtmosphericOilResidue;
+        public static Material ThermallyCrackedAtmosphericOilResidue;
+
+        public static Material VacuumOilResidue;
+        public static Material CatalyticallyCrackedVacuumOilResidue;
+        public static Material HydrocrackedVacuumOilResidue;
+        public static Material ThermallyCrackedVacuumOilResidue;
 
         public static Material FuelGas;
         public static Material SulfuricFuelGas;
@@ -574,6 +587,10 @@ class SuSyMaterials {
         public static Material SulfuricPropaneFuelGas;
         public static Material ButaneFuelGas;
         public static Material PropaneFuelGas;
+
+        public static Material SteamcrackedEthane;
+        public static Material SteamcrackedPropane;
+        public static Material SteamcrackedButane;
 
         public static Material AtmosphericOverheads;
         public static Material HeavyAtmosphericOverheads;
@@ -585,10 +602,6 @@ class SuSyMaterials {
         public static Material OilyBrine;
         public static Material LightOilyBrine;
         public static Material HeavyOilyBrine;
-        public static Material AtmosphericOilResidue;
-        public static Material VacuumOilResidue;
-        public static Material HeatedOilResidue;
-        public static Material OilResidue;
         public static Material AsphalteneExtract;
         public static Material SourGas;
         public static Material SlackWax;

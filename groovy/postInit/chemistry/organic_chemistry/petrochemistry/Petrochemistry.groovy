@@ -140,8 +140,8 @@ class Petrochemistry = {
     ]
 
     public static crackables = [
-        vacuum_oil_residue : new Crackable('vacuum_oil_residue').withTraits(CatalyticCrackable, ThermalCrackable),
-        atmospheric_oil_residue : new Crackable('atmospheric_oil_residue').withTraits(CatalyticCrackable, ThermalCrackable),
+        vacuum_oil_residue : new Crackable('vacuum_oil_residue').withTraits(CatalyticCrackable, HydroCrackable, ThermalCrackable),
+        atmospheric_oil_residue : new Crackable('atmospheric_oil_residue').withTraits(CatalyticCrackable, HydroCrackable, ThermalCrackable),
         light_gas_oil : new Crackable('light_gas_oil').withTraits(HydroCrackable, SteamCrackable)
         heavy_gas_oil : new Crackable('heavy_gas_oil').withTraits(CatalyticCrackable, HydroCrackable, SteamCrackable),
         ethane : new Crackable('ethane').withTraits(SteamCrackable),
