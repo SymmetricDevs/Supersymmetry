@@ -41,8 +41,8 @@ class Petrochemistry = {
             return fluid('catalytically_cracked_' + this.name) * amount
         }
 
-        def getCatalyticallyCrackedMix(int amount) {
-            return fluid('catalytically_cracked_' + this.name + '_mix') * amount
+        def getCrudeCatalyticallyCracked(int amount) {
+            return fluid('crude_catalytically_cracked_' + this.name) * amount
         }
     }
 
@@ -149,6 +149,10 @@ class Petrochemistry = {
         butane : new Crackable('butane').withTraits(SteamCrackable),
         light_naphtha : new Crackable('light_naphtha').withTraits(SteamCrackable, HydroCrackable),
         heavy_naphtha : new Crackable('heavy_naphtha').withTraits(SteamCrackable, HydroCrackable),
+        light_cycle_oil : new Crackable('light_cycle_oil').withTraits(HydroCrackable),
+        heavy_cycle_oil : new Crackable('heavy_cycle_oil').withTraits(HydroCrackable),
+        slurry_oil : new Crackable('slurry_oil').withTraits(HydroCrackable),
+        deasphalted_oil : new Crackable('deasphalted_oil').withTraits(HydroCrackable)                  nbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbhhhh
     ]
 
     public static oils = [

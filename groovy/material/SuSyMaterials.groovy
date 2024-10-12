@@ -554,7 +554,6 @@ class SuSyMaterials {
         public static Material CrudeLightGasOil;
         public static Material SulfuricLightGasOil;
         public static Material TreatedSulfuricLightGasOil;
-        public static Material CatalyticallyCrackedLightGasOil;
         public static Material SteamcrackedLightGasOil;
         public static Material HydrocrackedLightGasOil;
 
@@ -563,6 +562,7 @@ class SuSyMaterials {
         public static Material SulfuricHeavyGasOil;
         public static Material TreatedSulfuricHeavyGasOil;
         public static Material CatalyticallyCrackedHeavyGasOil;
+        public static Material CrudeCatalyticallyCrackedHeavyGasOil;
         public static Material SteamcrackedHeavyGasOil;
         public static Material HydrocrackedHeavyGasOil;
 
@@ -573,11 +573,13 @@ class SuSyMaterials {
 
         public static Material AtmosphericOilResidue;
         public static Material CatalyticallyCrackedAtmosphericOilResidue;
+        public static Material CrudeCatalyticallyCrackedAtmosphericOilResidue;
         public static Material HydrocrackedAtmosphericOilResidue;
         public static Material ThermallyCrackedAtmosphericOilResidue;
 
         public static Material VacuumOilResidue;
         public static Material CatalyticallyCrackedVacuumOilResidue;
+        public static Material CrudeCatalyticallyCrackedVacuumOilResidue;
         public static Material HydrocrackedVacuumOilResidue;
         public static Material ThermallyCrackedVacuumOilResidue;
 
@@ -598,6 +600,21 @@ class SuSyMaterials {
 
         public static Material LubricatingOil;
         public static Material TreatedSulfuricLubricatingOil;
+
+        public static Material LightCycleOil;
+        public static Material HydrocrackedLightCycleOil;
+
+        public static Material HeavyCycleOil;
+        public static Material HydricrackedHeavyCycleOil;
+
+        public static Material SlurryOil;
+        public static Material HydrocrackedSlurryOil;
+
+        public static Material DeasphaltedOil;
+        public static Material HydrocrackedDeasphaltedOil;
+
+        public static Material CatalyticOverheads;
+        public static Material SulfuricCatalyticOverheads;
 
         public static Material OilyBrine;
         public static Material LightOilyBrine;
