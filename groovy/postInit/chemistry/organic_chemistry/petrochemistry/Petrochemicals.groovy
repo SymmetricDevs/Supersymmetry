@@ -59,3 +59,30 @@
         .EUt(30)
         .buildAndRegister()
 */
+
+// Steam-cracked naphtha C5-fraction separation
+
+    // Dimerization of CPD
+    
+    FLUID_HEATER.recipeBuilder()
+        .fluidInputs(fluid('c_five_fraction') * 1000)
+        .fluidOutputs(fluid('dimerized_c_five_fraction') * 875)
+        .duration(60)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('dimerized_c_five_fraction') * 875)
+        .fluidOutputs(fluid('dicyclopentadiene') * 125)
+        .fluidOutputs(fluid('pentane') * 375)
+        .fluidOutputs(fluid('isoprene') * 375)
+        .duration(60)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
+    FLUID_HEATER.recipeBuilder()
+        .fluidInputs(fluid('dicyclopentadiene') * 1000)
+        .fluidOutputs(fluid('cyclopentadiene') * 2000)
+        .duration(60)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
