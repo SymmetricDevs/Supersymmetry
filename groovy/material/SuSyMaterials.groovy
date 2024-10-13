@@ -113,6 +113,8 @@ class SuSyMaterials {
         public static Material HydrothermalDeposit;
         public static Material AlluvialDeposit;
         public static Material MagmaticHydrothermalDeposit;
+        public static Material CoalDeposit;
+        public static Material NativeCopperDeposit;
 
         // Roasted Ores
 
@@ -508,6 +510,7 @@ class SuSyMaterials {
         public static Material PolluciteLeach;
         public static Material CaesiumRubidiumAlumMixture;
         public static Material NetherMolecularSieve;
+        public static Material CobaltMatte;
 
         // Petrochem Materials
 
@@ -1068,6 +1071,7 @@ class SuSyMaterials {
         public static Material PotassiumPermanganate;
         public static Material LeadFreeSolder;
         public static Material CryogenicSolder;
+        public static Material Kovar;
 
         // HP Materials
 

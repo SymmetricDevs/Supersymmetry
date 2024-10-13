@@ -1,8 +1,8 @@
 {
   "preRequisites:11": [
-    14,
-    15,
-    13
+    13,
+    97148971,
+    14
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -25,25 +25,7 @@
       "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 3,
-          "Damage:2": 25,
-          "OreDict:8": "dustCopper",
-          "id:8": "gregtech:meta_dust"
-        },
-        "1:10": {
-          "Count:3": 1,
-          "Damage:2": 112,
-          "OreDict:8": "dustTin",
-          "id:8": "gregtech:meta_dust"
-        },
-        "2:10": {
-          "Count:3": 3,
-          "Damage:2": 260,
-          "OreDict:8": "dustBronze",
-          "id:8": "gregtech:meta_dust"
-        },
-        "3:10": {
-          "Count:3": 3,
+          "Count:3": 32,
           "Damage:2": 260,
           "id:8": "gregtech:meta_ingot"
         }

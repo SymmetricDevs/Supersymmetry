@@ -1,0 +1,30 @@
+{
+  "rules": [
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "minecraft:log:*",
+            "biomesoplenty:log_0:*",
+            "biomesoplenty:log_1:*",
+            "biomesoplenty:log_2:*",
+            "biomesoplenty:log_3:*",
+            "biomesoplenty:log_4:*",
+            "gregtech:rubber_log:*",
+            "gregtechfoodoption:gtfo_log_0:*",
+            "gregtechfoodoption:gtfo_log_1:*",
+            "gregtechfoodoption:gtfo_log_2:*"
+          ]
+        },
+        "harvester": {
+          "type": "PLAYER",
+          "heldItemMainHand": {
+            "type": "BLACKLIST",
+            "harvestLevel": "axe;0;-1"
+          }
+        }
+      },
+      "drops": [{}]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "preRequisites:11": [
-    12
+    87
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -30,8 +30,8 @@
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "ignoreNBT:1": 1,
+      "entryLogic:8": "OR",
+      "index:3": 1,
       "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
@@ -46,6 +46,23 @@
               "Durability:3": 0,
               "Material:8": "gregtech:flint",
               "MaxDurability:3": 63
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:mortar",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 0.0,
+              "AttackSpeed:5": -2.4,
+              "Durability:3": 0,
+              "HarvestLevel:3": 0,
+              "Material:8": "gregtech:granite",
+              "MaxDurability:3": 191
             },
             "HideFlags:3": 2
           }

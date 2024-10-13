@@ -1,12 +1,12 @@
 {
   "preRequisites:11": [
-    16,
-    21
+    302928877,
+    16
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.20.desc",
-      "frame:8": "GATE",
+      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "Damage:2": 1017,
         "id:8": "gregtech:machine"

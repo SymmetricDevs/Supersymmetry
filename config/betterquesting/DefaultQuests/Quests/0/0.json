@@ -5,28 +5,19 @@
       "desc:8": "susy.quest.db.0.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "OreDict:8": "rockStone",
-        "id:8": "notreepunching:rock/stone"
+        "id:8": "biomesoplenty:earth"
       },
       "ignoresview:1": 0,
       "ismain:1": 1,
       "name:8": "susy.quest.db.0.title",
+      "questlogic:8": "NAND",
       "visibility:8": "ALWAYS"
     }
   },
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "OreDict:8": "rock",
-          "id:8": "notreepunching:rock/stone"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:checkbox"
     }
   }
 }
