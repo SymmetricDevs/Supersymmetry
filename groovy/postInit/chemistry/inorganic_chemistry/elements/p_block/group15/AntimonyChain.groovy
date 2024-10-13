@@ -96,7 +96,7 @@ EBF.recipeBuilder()
 
 BR.recipeBuilder()
     .notConsumable(ore('springCupronickel'))
-    .inputs(ore('dustTetrahedrite') * 4)
+    .inputs(ore('dustTetrahedrite') * 1)
     .inputs(ore('dustSodiumSulfide') * 18)
     .fluidInputs(fluid('gtfo_heated_water') * 12000)
     .outputs(metaitem('dustCopperISulfide') * 15)
