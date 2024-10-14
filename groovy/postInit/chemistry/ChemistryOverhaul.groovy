@@ -1207,7 +1207,7 @@ CSTR.recipeBuilder()
 .fluidInputs(fluid('nitric_oxide') * 50)
 .fluidOutputs(fluid('nitrogen_dioxide') * 50)
 .duration(8)
-.EUt(30)
+.EUt(7)
 .buildAndRegister()
 
 CSTR.recipeBuilder()
@@ -1216,7 +1216,7 @@ CSTR.recipeBuilder()
 .fluidOutputs(fluid('nitric_acid') * 100)
 .fluidOutputs(fluid('nitric_oxide') * 50)
 .duration(12)
-.EUt(30)
+.EUt(7)
 .buildAndRegister()
 
 // Methyl Acetate
@@ -1387,18 +1387,6 @@ DISTILLERY.recipeBuilder()
 .outputs(metaitem('dustTnt') * 7)
 .duration(300)
 .EUt(30)
-.buildAndRegister()
-
-// Sulfur Trioxide
-
-ROASTER.recipeBuilder()
-.fluidInputs(fluid('oxygen') * 1000)
-.fluidInputs(fluid('sulfur_dioxide') * 1000)
-.notConsumable(ore('dustVanadiumPentoxide'))
-.fluidOutputs(fluid('sulfur_trioxide') * 1000)
-
-.duration(200)
-.EUt(7)
 .buildAndRegister()
 
 // Saltpeter and Sodium Hydroxide Solution
