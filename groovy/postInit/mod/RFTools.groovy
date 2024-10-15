@@ -13,6 +13,7 @@ def name_removals = [
         "rftools:screen",
         "rftools:builder",
         "rftools:screen_controller",
+        "rftools:machineinformation_module",
         "rftools:syringe",
         "rftools:modifier_module",
         "rftools:tablet_with_storage_module_6",

@@ -1938,6 +1938,12 @@ public class UnknownCompositionMaterials {
                 .color(0x631a87)
                 .build()
 
+        CobaltMatte = new Material.Builder(4424, SuSyUtility.susyId("cobalt_matte"))
+                .ingot()
+                .flags(NO_UNIFICATION)
+                .color(0x7070d6)
+                .build()
+      
         GreenMatte = new Material.Builder(4425, SuSyUtility.susyId("green_matte"))
                 .dust()
                 .color(0xa18922)

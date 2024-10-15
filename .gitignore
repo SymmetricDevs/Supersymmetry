@@ -1,5 +1,5 @@
 mods/
-*buildOut/*
+buildOut/
 *client.zip
 .mixin.out/
 armourers_workshop/
@@ -8,6 +8,7 @@ fonts/
 journeymap/
 logs/
 saves/
+build/buildOut/
 
 .curseclient
 usercache.json
@@ -91,6 +92,7 @@ jarmods/
 visualores/
 
 *__pycache__*
+
 .idea/material_theme_project_new.xml
 .idea/discord.xml
 .idea/workspace.xml

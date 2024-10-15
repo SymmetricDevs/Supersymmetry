@@ -1,14 +1,15 @@
 {
   "preRequisites:11": [
-    93
+    18799598,
+    577792334
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.74.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Damage:2": 153,
-        "id:8": "gregtech:meta_item_2"
+        "Damage:2": 8100,
+        "id:8": "gregtech:meta_dust"
       },
       "ignoresview:1": 0,
       "ismain:1": 1,

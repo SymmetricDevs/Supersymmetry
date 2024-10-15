@@ -39,7 +39,7 @@ eventManager.listen {
         customMetaItems.addItem(150, "mudbrick_mix")
         customMetaItems.addItem(151, "slaked_lime")
         customMetaItems.addItem(152, "sand.dust")
-        customMetaItems.addItem(153, "straw")
+        customMetaItems.addItem(153, "native_copper")
 
         customMetaItems.addItem(154, "washed_rotten_flesh");
 
@@ -334,9 +334,8 @@ eventManager.listen {
 
         //Crops 9000-10000
 
-        customMetaItems.addItem(9000, "seed.cotton");
-        customMetaItems.addItem(9001, "crop.cotton");
-        customMetaItems.addItem(9002, "stem.cotton");
+        // 9000 & 9001
+        customMetaItems.addItem(9000, "stem.cotton");
 
         // Train Stuff 10000-10100
 

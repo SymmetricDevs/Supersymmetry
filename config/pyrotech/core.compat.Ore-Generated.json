@@ -1,0 +1,204 @@
+{
+  "__comments": [
+    "WARNING: All changes should be made to the file with the name Custom",
+    "in the title. Changes made to the Generated file will be overwritten.",
+    "",
+    "This file defines ore compatibility.",
+    "",
+    "Slag content will be generated for each oredict entry.",
+    "",
+    "The first valid key in each langKey list will be chosen; reorder keys",
+    "to change which key is selected.",
+    "",
+    "The first valid nugget in each output list will be chosen; reorder nuggets",
+    "to change which nugget is selected.",
+    "",
+    "Slag color is a hex color code without the #",
+    "",
+    "Lang keys are in the format: (domain):(key)",
+    "",
+    "Output item strings are in the format: (domain):(path):(meta)"
+  ],
+  "oredict": {
+    "oreCobalt": {
+      "slagColor": "1c5bc1",
+      "langKey": [
+        "gregtech:tile.ore_block"
+      ],
+      "output": [
+        "gregtech:meta_nugget:23"
+      ],
+      "bloomYieldMinMax": [
+        12,
+        15
+      ],
+      "slagBloomYieldMinMax": [
+        12,
+        15
+      ]
+    },
+    "oreCopper": {
+      "slagColor": "ffaa1c",
+      "langKey": [
+        "gregtech:tile.ore_block",
+        "techguns:tile.techguns.basicore.0"
+      ],
+      "output": [
+        "gregtech:meta_nugget:25",
+        "techguns:itemshared:86"
+      ],
+      "bloomYieldMinMax": [
+        12,
+        15
+      ],
+      "slagBloomYieldMinMax": [
+        12,
+        15
+      ]
+    },
+    "oreGold": {
+      "slagColor": "fcee4b",
+      "langKey": [
+        "gregtech:tile.ore_block",
+        "minecraft:tile.oreGold"
+      ],
+      "output": [
+        "minecraft:gold_nugget:0"
+      ],
+      "bloomYieldMinMax": [
+        12,
+        15
+      ],
+      "slagBloomYieldMinMax": [
+        12,
+        15
+      ]
+    },
+    "oreIron": {
+      "slagColor": "d8af93",
+      "langKey": [
+        "gregtech:tile.ore_block",
+        "industrialrenewal:item.industrialrenewal.chunk_hematite",
+        "industrialrenewal:tile.industrialrenewal.orevein_hematite",
+        "minecraft:tile.oreIron"
+      ],
+      "output": [
+        "minecraft:iron_nugget:0"
+      ],
+      "bloomYieldMinMax": [
+        12,
+        15
+      ],
+      "slagBloomYieldMinMax": [
+        12,
+        15
+      ]
+    },
+    "oreLead": {
+      "slagColor": "95afee",
+      "langKey": [
+        "gregtech:tile.ore_block",
+        "techguns:tile.techguns.basicore.2"
+      ],
+      "output": [
+        "gregtech:meta_nugget:55",
+        "techguns:itemshared:87"
+      ],
+      "bloomYieldMinMax": [
+        12,
+        15
+      ],
+      "slagBloomYieldMinMax": [
+        12,
+        15
+      ]
+    },
+    "oreNickel": {
+      "slagColor": "e4e5d8",
+      "langKey": [
+        "gregtech:tile.ore_block"
+      ],
+      "output": [
+        "gregtech:meta_nugget:69"
+      ],
+      "bloomYieldMinMax": [
+        12,
+        15
+      ],
+      "slagBloomYieldMinMax": [
+        12,
+        15
+      ]
+    },
+    "orePlatinum": {
+      "slagColor": "55f3ff",
+      "langKey": [
+        "gregtech:tile.ore_block"
+      ],
+      "output": [
+        "gregtech:meta_nugget:80"
+      ],
+      "bloomYieldMinMax": [
+        12,
+        15
+      ],
+      "slagBloomYieldMinMax": [
+        12,
+        15
+      ]
+    },
+    "oreSilver": {
+      "slagColor": "e8f6fd",
+      "langKey": [
+        "gregtech:tile.ore_block"
+      ],
+      "output": [
+        "gregtech:meta_nugget:100"
+      ],
+      "bloomYieldMinMax": [
+        12,
+        15
+      ],
+      "slagBloomYieldMinMax": [
+        12,
+        15
+      ]
+    },
+    "oreTin": {
+      "slagColor": "c3e9ff",
+      "langKey": [
+        "gregtech:tile.ore_block",
+        "techguns:tile.techguns.basicore.1"
+      ],
+      "output": [
+        "gregtech:meta_nugget:112"
+      ],
+      "bloomYieldMinMax": [
+        12,
+        15
+      ],
+      "slagBloomYieldMinMax": [
+        12,
+        15
+      ]
+    },
+    "oreUranium": {
+      "slagColor": "5c734b",
+      "langKey": [
+        "tardis:item.tardis.power_cell",
+        "techguns:tile.techguns.basicore.4"
+      ],
+      "output": [
+        "gregtech:meta_nugget:116"
+      ],
+      "bloomYieldMinMax": [
+        12,
+        15
+      ],
+      "slagBloomYieldMinMax": [
+        12,
+        15
+      ]
+    }
+  }
+}

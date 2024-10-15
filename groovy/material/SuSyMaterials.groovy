@@ -113,6 +113,8 @@ class SuSyMaterials {
         public static Material HydrothermalDeposit;
         public static Material AlluvialDeposit;
         public static Material MagmaticHydrothermalDeposit;
+        public static Material CoalDeposit;
+        public static Material NativeCopperDeposit;
 
         // Roasted Ores
 
@@ -542,7 +544,7 @@ class SuSyMaterials {
         public static Material ChlorinatedPGMConcentrate;
         public static Material PalladiumExtract;
         public static Material PalladiumFreePGMSolution;
-
+        public static Material CobaltMatte;
         // Petrochem Materials
 
         public static Material DilutedOil;
@@ -783,7 +785,7 @@ class SuSyMaterials {
         public static Material IronPentacarbonyl;
         public static Material DilutedPhosphoricAcid;
         public static Material MonocalciumPhosphate;
-        public static Material CalciumPhosphite;
+        public static Material CalciumMetaphosphate;
         public static Material AluminiumSulfate;
         public static Material DemineralizedWater;
         public static Material DeaeratedWater;
@@ -1104,7 +1106,7 @@ class SuSyMaterials {
         public static Material CryogenicSolder;
         public static Material SeleniumDioxide;
         public static Material CobaltSulfateSolution; 
-
+        public static Material Kovar;
 
         // HP Materials
 

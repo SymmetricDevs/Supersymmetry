@@ -321,7 +321,7 @@ susy.material.crude_gallium_arsenide=粗砷化镓
 susy.material.gallium_arsenide=纯净砷化镓
 
 susy.material.monocalcium_phosphate=磷酸二氢钙
-susy.material.calcium_phosphite=亚磷酸钙
+susy.material.calcium_metaphosphate=偏磷酸钙
 susy.material.phosphorus=白磷
 susy.material.hydroxyapatite=羟基磷灰石
 susy.material.calcium_metasilicate=偏硅酸钙
@@ -2237,8 +2237,6 @@ metaitem.fused_quartz.name=烧结石英板
 metaitem.crucible.quartz.name=石英坩埚
 metaitem.crucible.graphite.name=石墨坩埚
 
-metaitem.seed.cotton.name=棉花种子
-metaitem.crop.cotton.name=棉花
 
 metaitem.vti_rich_pig_iron.name=富钒-钛生铁
 metaitem.vt_slag.name=富钒-钛渣

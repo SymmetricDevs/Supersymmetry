@@ -400,6 +400,38 @@ crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metaitem('gr
 		[ore('circuitMv'), metaitem('cableGtSingleCopper'), ore('circuitMv')]
 ])
 
+// Steam machine recipes (due to furnace removal)
+crafting.replaceShaped("gregtech:steam_boiler_coal_bronze", item('gregtech:machine', 1), [
+        [ore('plateBronze'), ore('plateBronze'), ore('plateBronze')],
+        [ore('plateBronze'), ore('toolWrench'), ore('plateBronze')],
+        [ore('blockBrick'), ore('blockBrick'), ore('blockBrick')]
+])
+
+crafting.replaceShaped("gregtech:steam_boiler_coal_steel", item('gregtech:machine', 2), [
+        [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
+        [ore('plateSteel'), ore('toolWrench'), ore('plateSteel')],
+        [ore('blockBrick'), ore('blockBrick'), ore('blockBrick')]
+])
+
+crafting.replaceShaped("gregtech:steam_furnace_bronze", item('gregtech:machine', 15), [
+        [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
+        [ore('pipeSmallFluidBronze'), ore('plateBronze'), ore('pipeSmallFluidBronze')],
+        [ore('pipeSmallFluidBronze'), item('gregtech:steam_casing', 1), ore('pipeSmallFluidBronze')]
+])
+
+crafting.replaceShaped("gregtech:steam_alloy_smelter_bronze", item('gregtech:machine', 17), [
+        [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
+        [ore('plateBronze'), item('gregtech:steam_casing', 1),  ore('plateBronze')],
+		[ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
+])
+
+// Multi smelter recipe (due to furnace removal)
+crafting.replaceShaped("gregtech:multi_furnace", item('gregtech:machine', 1006), [
+		[ore('frameGtInvar'), ore('frameGtInvar'), ore('frameGtInvar')],
+		[ore('circuitHv'), item('gregtech:metal_casing', 2),  ore('circuitHv')],
+		[ore('cableGtSingleCopper'), ore('circuitHv'), ore('cableGtSingleCopper')]
+])
+
 // crafting.addShaped("rubber_rod_manual", metaitem('stickRubber'), [
 //     [ore('craftingToolFile'), null, null],
 //     [null, ore('ingotRubber'), null],
@@ -421,8 +453,6 @@ crafting.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metaitem('gr
 //         .duration(400)
 //         .EUt(7)
 //         .buildAndRegister();
-
-furnace.add(metaitem('dustLimestone'), metaitem('dustQuicklime'))
 
 //TechGuns carbon plate removal
 // Carbon Plate * 1
@@ -724,6 +754,41 @@ mods.gregtech.macerator.recipeBuilder()
 		.outputs(metaitem('dustSulfur') * 8)
 		.duration(240)
 		.EUt(7)
+		.buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+		.inputs(item('susy:resource_block', 15))
+		.outputs(metaitem('dustCoal') * 8)
+		.duration(240)
+		.EUt(7)
+		.buildAndRegister();
+
+mods.gregtech.forge_hammer.recipeBuilder()
+		.inputs(item('susy:resource_block', 15))
+		.outputs(item('minecraft:coal') * 8)
+		.duration(10)
+		.EUt(16)
+		.buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+		.inputs(item('susy:resource_block_1'))
+		.outputs(metaitem('dustCopper') * 8)
+		.duration(240)
+		.EUt(7)
+		.buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+		.inputs(metaitem('native_copper'))
+		.outputs(metaitem('dustCopper'))
+		.duration(30)
+		.EUt(7)
+		.buildAndRegister();
+
+mods.gregtech.forge_hammer.recipeBuilder()
+		.inputs(item('susy:resource_block_1'))
+		.outputs(metaitem('native_copper') * 8)
+		.duration(10)
+		.EUt(16)
 		.buildAndRegister();
 
 mods.gregtech.sifter.recipeBuilder()
