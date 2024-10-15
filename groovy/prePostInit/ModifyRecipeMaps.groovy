@@ -29,6 +29,22 @@ GTRecipeHandler.removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES);
 GTRecipeHandler.removeAllRecipes(RecipeMaps.VACUUM_RECIPES);
 GTRecipeHandler.removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES);
 
+//Add mixer recipes to blender
+
+/*RecipeMaps.MIXER_RECIPES.onRecipeBuild(recipeBuilder -> {
+        recipeBuilder.invalidateOnBuildAction();
+        SuSyRecipeMaps.BLENDER_RECIPES.recipeBuilder()
+                .inputs(recipeBuilder.getInputs().toArray(new GTRecipeInput[0]))
+                .fluidInputs(recipeBuilder.getFluidInputs())
+                .outputs(recipeBuilder.getOutputs())
+                .chancedOutputs(recipeBuilder.getChancedOutputs())
+                .fluidOutputs(recipeBuilder.getFluidOutputs())
+                .cleanroom(recipeBuilder.getCleanroom())
+                .duration((int) (recipeBuilder.duration / 4))
+                .EUt(recipeBuilder.EUt)
+                .buildAndRegister();
+});*/
+
 GregTechAPI.materialManager.getRegisteredMaterials().forEach(material -> {
         if (material.hasProperty(PropertyKey.FLUID) && material.getProperty(PropertyKey.FLUID).getPrimaryKey() == SusyFluidStorageKeys.SLURRY) {
                 Recipe recipe = RecipeMaps.EXTRACTOR_RECIPES.findRecipe(Integer.MAX_VALUE, Collections.singletonList(OreDictUnifier.get(OrePrefix.dust, material)), Collections.emptyList(), false);

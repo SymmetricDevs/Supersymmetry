@@ -173,8 +173,12 @@ public class OrganicChemistryMaterials {
                 .components(Chloromethane * 1, Water * 1)
                 .colorAverage()
                 .build();
-        
-        //FREE ID: 15025
+
+        TrimethylpentylphosphinicAcid = new Material.Builder(15025, SuSyUtility.susyId('trimethylpentylphosphinic_acid'))
+                .fluid()
+                .components(Carbon * 16, Hydrogen * 35, Oxygen * 2, Phosphorus * 1)
+                .colorAverage()
+                .build();
 
         AcidicTetrafluoroethylene = new Material.Builder(15026, SuSyUtility.susyId('acidic_tetrafluoroethylene'))
                 .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -245,7 +249,11 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 15038
+        DiIsobutylene = new Material.Builder(15038, SuSyUtility.susyId('diisobutylene'))
+                .fluid()
+                .components(Carbon * 8, Hydrogen * 16)
+                .color(0xa79781)
+                .build();
 
         MethylAcetateSolution = new Material.Builder(15039, SuSyUtility.susyId('methyl_acetate_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -276,7 +284,11 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 15044
+        SodiumHypophosphiteSolution = new Material.Builder(15044, SuSyUtility.susyId('sodium_hypophosphite_solution'))
+                .fluid()
+                .components(SodiumHypophosphite * 1, AceticAcid * 1)
+                .colorAverage()
+                .build();
 
         DichlorobenzidineSolution = new Material.Builder(15045, SuSyUtility.susyId('dichlorobenzidine_solution'))
                 .liquid()
@@ -326,7 +338,11 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 15053
+        OneHexanethiol = new Material.Builder(15053, SuSyUtility.susyId('one_hexanethiol'))
+                .fluid()
+                .components(Carbon * 6, Hydrogen * 14, Sulfur * 1)
+                .colorAverage()
+                .build();
 
         PBIFoam = new Material.Builder(15054, SuSyUtility.susyId('pbi_foam'))
                 .dust()
@@ -403,7 +419,11 @@ public class OrganicChemistryMaterials {
 
         Methyltrichlorosilane.setFormula("CH3SiCl3", true)
 
-        //FREE ID: 15066
+        OneBromohexane = new Material.Builder(15066, SuSyUtility.susyId('one_bromohexane'))
+                .fluid()
+                .components(Carbon * 6, Hydrogen * 13, Bromine * 1)
+                .colorAverage()
+                .build();
 
         VinylChlorideSuspension = new Material.Builder(15067, SuSyUtility.susyId('vinyl_chloride_suspension'))
                 .liquid()
@@ -477,7 +497,11 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 15080
+        DiNHexylsulfide = new Material.Builder(15080, SuSyUtility.susyId('di_n_hexyl_sulfide'))
+                .fluid()
+                .components(Carbon * 12, Hydrogen * 26, Sulfur * 1)
+                .colorAverage()
+                .build();
 
         Butyllithium = new Material.Builder(15081, SuSyUtility.susyId('butyllithium'))
                 .liquid()
@@ -490,7 +514,13 @@ public class OrganicChemistryMaterials {
                 .color(0x332e2c)
                 .build();
 
-        //FREE ID: 15084-15085
+        TriIsobutylene = new Material.Builder(15084, SuSyUtility.susyId('triisobutylene'))
+                .fluid()
+                .components(Carbon * 12, Hydrogen * 24)
+                .color(0xb9ac9a)
+                .build();
+
+        // FREE ID: 15085
 
         Acetylene = new Material.Builder(15086, SuSyUtility.susyId('acetylene'))
                 .gas()
