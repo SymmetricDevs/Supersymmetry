@@ -1,0 +1,115 @@
+import globals.Globals
+
+import static gregtech.api.unification.material.Materials.*;
+import gregtech.api.unification.material.MarkerMaterials;
+import static gregtech.api.unification.ore.OrePrefix.dye;
+
+DRYER = recipemap('dryer')
+BCR = recipemap('bubble_column_reactor')
+ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
+FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
+MIXER = recipemap('mixer')
+DISTILLERY = recipemap('distillery')
+VACUUM_DT = recipemap('vacuum_distillation')
+TUBE_FURNACE = recipemap('tube_furnace')
+CLARIFIER = recipemap('clarifier')
+
+//Molten Salt Method
+
+DRYER.recipeBuilder()
+    .inputs(ore('dustLithiumChloride'))
+    .outputs(metaitem('dustAnhydrousLithiumChloride'))
+    .duration(20)
+    .EUt(16)
+    .buildAndRegister()
+
+ELECTROLYTIC_CELL.recipeBuilder()
+    .inputs(metaitem("graphite_electrode"))
+    .notConsumable(metaitem('stickMolybdenum'))
+    .notConsumable(metaitem('crucible.graphite'))
+    .fluidInputs(fluid('anhydrous_lithium_chloride') * 576)
+    .fluidOutputs(fluid('impure_lithium_carbonate') * 1008)
+    .duration(20)
+    .EUt(Globals.voltAmps[4])
+    .buildAndRegister()
+
+FLUID_SOLIDIFIER.recipeBuilder()
+    .notConsumable(metaitem('shape.mold.ball'))
+    .fluidInputs(fluid('impure_lithium_carbonate') * 144)
+    .outputs(metaitem('dustImpureLithiumCarbonate'))
+    .duration(20)
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustImpureLithiumCarbonate') * 7)
+    .fluidInputs(fluid('distilled_water') * 1000)
+    .fluidOutputs(fluid('impure_lithium_carbonate_solution') * 1000)
+    .duration(20)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+CLARIFIER.recipeBuilder()
+    .fluidInputs(fluid('impure_lithium_carbonate_solution') * 10000)
+    .outputs(metaitem('dustWashedGraphene') * 10)
+    .fluidOutputs(fluid('lithium_carbonate_solution') * 10000)
+    .duration(20)
+    .EUt(Globals.voltAmps[3])
+    .buildAndRegister()
+
+VACUUM_DT.recipeBuilder()
+    .inputs(ore('dustWashedGraphene'))
+    .outputs(metaitem('dustDistilledGraphene'))
+    .duration(20)
+    .EUt(Globals.voltAmps[4])
+    .buildAndRegister()
+
+DRYER.recipeBuilder()
+    .inputs(ore('dustDistilledGraphene'))
+    .outputs(metaitem('dustDriedGraphene'))
+    .duration(20)
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister()
+
+TUBE_FURNACE.recipeBuilder()
+    .inputs(ore('dustDriedGraphene'))
+    .fluidInputs(fluid('nitrogen') * 500)
+    .outputs(metaitem('dustGraphene'))
+    .duration(200)
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister()
+
+TUBE_FURNACE.recipeBuilder()
+    .inputs(ore('dustDriedGraphene'))
+    .fluidInputs(fluid('argon') * 50)
+    .outputs(metaitem('dustGraphene'))
+    .duration(200)
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('lithium_carbonate_solution') * 1000)
+    .outputs(metaitem('gregtechfoodoption:lithium_carbonate_dust') * 6)
+    .fluidOutputs(fluid('water') * 1000)
+    .duration(20)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+//Argon preparation and recycling
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('argon') * 50)
+    .fluidInputs(fluid('water') * 50)
+    .fluidOutputs(fluid('moist_argon') * 100)
+    .duration(2)
+    .EUt(16)
+    .buildAndRegister()
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('acidic_argon') * 50)
+    .fluidInputs(fluid('water') * 100)
+    .fluidOutputs(fluid('argon') * 50)
+    .fluidOutputs(fluid('diluted_hydrochloric_acid') * 100)
+    .duration(2)
+    .EUt(16)
+    .buildAndRegister()

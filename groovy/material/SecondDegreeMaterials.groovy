@@ -699,5 +699,19 @@ public class SecondDegreeMaterials {
                 .components(Iron * 8, Zinc * 1)
                 .colorAverage()
                 .build();
+
+        ImpureLithiumCarbonateSolution = new Material.Builder(13115, SuSyUtility.susyId("impure_lithium_carbonate_solution"))
+                .liquid()
+                .components(Carbon * 2, Lithium * 2, Oxygen * 3, Water)
+                .colorAverage()
+                .build()
+                .setFormula("(C)(Li2CO3)(H2O)", true);
+
+        LithiumCarbonateSolution = new Material.Builder(13116, SuSyUtility.susyId("lithium_carbonate_solution"))
+                .liquid()
+                .components(Lithium * 2, Carbon * 1, Oxygen * 3, Water)
+                .colorAverage()
+                .build()
+                .setFormula("(Li2CO3)(H2O)", true);
     }
 }

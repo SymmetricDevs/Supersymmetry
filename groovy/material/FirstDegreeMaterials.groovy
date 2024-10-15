@@ -3392,5 +3392,57 @@ public class FirstDegreeMaterials {
                 .build();
 
         Kovar.setFormula("Fe10Ni5Co3", true)
+
+        AnhydrousLithiumChloride = new Material.Builder(8620, SuSyUtility.susyId("anhydrous_lithium_chloride"))
+                .dust().liquid(new FluidBuilder().temperature(890))
+                .components(Lithium, Chlorine)
+                .color(0xa8a89d)
+                .build();
+
+        ImpureLithiumCarbonate = new Material.Builder(8621, SuSyUtility.susyId("impure_lithium_carbonate"))
+                .dust().liquid(new FluidBuilder().temperature(1000))
+                .components(Carbon * 2, Lithium * 2, Oxygen * 3)
+                .color(0x4f5c6c)
+                .build()
+                .setFormula("(C)(Li2CO3)", true);
+
+        WashedGraphene = new Material.Builder(8622, SuSyUtility.susyId("washed_graphene"))
+                .dust()
+                .components(Carbon)
+                .color(0x595999)
+                .build();
+
+        DistilledGraphene = new Material.Builder(8623, SuSyUtility.susyId("distilled_graphene"))
+                .dust()
+                .components(Carbon)
+                .color(0x595959)
+                .build();
+
+        DriedGraphene = new Material.Builder(8624, SuSyUtility.susyId("dried_graphene"))
+                .dust()
+                .components(Carbon)
+                .color(0x797979)
+                .build();
+
+        AcidicArgon = new Material.Builder(8625, SuSyUtility.susyId("acidic_argon"))
+                .gas()
+                .components(Argon, HydrogenChloride)
+                .colorAverage()
+                .build()
+                .setFormula("(Ar)(HCl)");
+
+        MoistArgon = new Material.Builder(8627, SuSyUtility.susyId("moist_argon"))
+                .gas()
+                .components(Argon, Water)
+                .colorAverage()
+                .build()
+                .setFormula("(Ar)(H2O)")
+
+        ArgonHydrogenMixture = new Material.Builder(8628, SuSyUtility.susyId("argon_hydrogen_mixture"))
+                .gas()
+                .components(Argon, Hydrogen * 4)
+                .colorAverage()
+                .build()
+                .setFormula("(Ar)(H2)2")
     }
 }
