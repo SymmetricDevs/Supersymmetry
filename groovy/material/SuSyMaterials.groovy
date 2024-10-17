@@ -1072,12 +1072,10 @@ class SuSyMaterials {
         public static Material LeadFreeSolder;
         public static Material CryogenicSolder;
         public static Material Kovar;
-        public static Material AnhydrousLithiumChloride;
         public static Material ImpureLithiumCarbonate;
         public static Material WashedGraphene;
         public static Material DistilledGraphene;
         public static Material DriedGraphene;
-        public static Material AcidicArgon;
         public static Material MoistArgon;
         public static Material ArgonHydrogenMixture;
 
@@ -1268,6 +1266,8 @@ class SuSyMaterials {
         public static Material GalvanizedSteel;
         public static Material ImpureLithiumCarbonateSolution;
         public static Material LithiumCarbonateSolution;
+        public static Material AcidicArgonHydrogenMixture;
+        public static Material AmmoniacalArgonHydrogenMixture;
 
         // Organic Chemistry Materials
 
@@ -1807,6 +1807,8 @@ class SuSyMaterials {
         public static Material LiquidWasteNitrogen;
         public static Material PartiallyLiquefiedArgon;
         public static Material SupercriticalCarbonDioxide;
+        public static Material CooledAmmoniacalArgonHydrogenMixture;
+        public static Material PartiallyLiquefiedArgonHydrogenMixture;
 
         public static void changeFormulas() {
             log.infoMC("Changing Formulas!");
