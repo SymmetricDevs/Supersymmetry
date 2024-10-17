@@ -152,7 +152,7 @@ class Petrochemistry = {
         light_cycle_oil : new Crackable('light_cycle_oil').withTraits(HydroCrackable),
         heavy_cycle_oil : new Crackable('heavy_cycle_oil').withTraits(HydroCrackable),
         slurry_oil : new Crackable('slurry_oil').withTraits(HydroCrackable),
-        deasphalted_oil : new Crackable('deasphalted_oil').withTraits(HydroCrackable)                  nbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbhhhh
+        deasphalted_oil : new Crackable('deasphalted_oil').withTraits(HydroCrackable)
     ]
 
     public static oils = [

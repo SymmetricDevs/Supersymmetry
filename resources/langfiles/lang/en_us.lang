@@ -957,10 +957,6 @@ susy.material.hot_hp_decarburized_air=Hot High-Pressure Decarburized Air
 susy.material.hp_decarburized_air=High-Pressure Decarburized Air
 susy.material.cold_hp_decarburized_air=Cold High-Pressure Decarburized Air
 
-susy.material.hot_hp_refinery_gas=Hot High-Pressure Refinery Gas
-susy.material.hp_refinery_gas=High-Pressure Refinery Gas
-susy.material.cold_hp_refinery_gas=Cold High-Pressure Refinery Gas
-
 susy.material.hot_hp_natural_gas=Hot High-Pressure Natural Gas
 susy.material.hp_natural_gas=High-Pressure Natural Gas
 susy.material.cold_hp_natural_gas=Cold High-Pressure Natural Gas

@@ -7,7 +7,7 @@ TUBE_FURNACE = recipemap('tube_furnace')
 FLBR = recipemap('fluidized_bed_reactors')
 PHASE_SEPARATOR = recipemap('phase_separator')
 
-/*fractions.each { _, fraction -> {
+fractions.each { _, fraction -> {
         if fraction.thermal_crackable {
             CRACKER.recipeBuilder()
                 .fluidInputs(fraction.get(1000))
@@ -17,7 +17,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
                 .buildAndRegister()
         }
     }
-}*/
+}
 
 /* Thermal Cracking
     // Single Stage
