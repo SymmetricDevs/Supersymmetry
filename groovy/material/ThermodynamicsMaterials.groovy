@@ -233,6 +233,8 @@ class ThermodynamicsMaterials {
 
                 generateHighPressureGases(DecarburizedAir, 22048, true);
 
+                generateHighPressureGases(ArgonHydrogenMixture, 22051, true);
+
                 generateLiquidFromGas(Hydrogen, 22100, 14);
 
                 generateLiquidFromGas(Neon, 22102, 27);
@@ -481,5 +483,19 @@ class ThermodynamicsMaterials {
                 .components(CarbonDioxide)
                 .colorAverage()
                 .build();
+
+        CooledAmmoniacalArgonHydrogenMixture = new Material.Builder(22844, SuSyUtility.susyId('cooled_ammoniacal_argon_hydrogen_mixture'))
+                .gas(new FluidBuilder().temperature(220))
+                .components(ArgonHydrogenMixture, Ammonia)
+                .colorAverage()
+                .build()
+                .setFormula("(Ar)(NH3)(H)")
+
+        PartiallyLiquefiedArgonHydrogenMixture = new Material.Builder(22845, SuSyUtility.susyId('partially_liquefied_argon_hydrogen_mixture'))
+                .liquid(new FluidBuilder().temperature(73))
+                .components(Argon, Hydrogen * 4)
+                .colorAverage()
+                .build()
+                .setFormula("(Ar)(H)")
     }
 }

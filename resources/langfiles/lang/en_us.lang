@@ -960,6 +960,10 @@ susy.material.hp_benzene=High-Pressure Benzene
 susy.material.hot_hp_carbon_monoxide=Hot High-Pressure Carbon Monoxide
 susy.material.hp_carbon_monoxide=High-Pressure Carbon Monoxide
 
+susy.material.hot_hp_argon_hydrogen_mixture=Hot High Pressure Argon-Hydrogen Mixture
+susy.material.hp_argon_hydrogen_mixture=High Pressure Argon Hydrogen Mixture
+susy.material.cold_hp_argon_hydrogen_mixture=Cold High Pressure Argon Hydrogen Mixture
+
 susy.material.liquid_hydrogen=Liquid Hydrogen
 susy.material.liquid_helium=Liquid Helium
 susy.material.liquid_neon=Liquid Neon
@@ -1981,6 +1985,21 @@ susy.material.lead_free_solder=Lead-Free Solder
 susy.material.cryogenic_solder=Cryogenic Solder
 susy.material.oxidized_manganate_solution=Oxidized Manganate Solution
 susy.material.galvanized_steel=Galvanized Steel
+
+# Graphene Chain
+susy.material.moist_argon=Moist Argon
+susy.material.argon_hydrogen_mixture=Argon Hydrogen Mixture
+susy.material.ammoniacal_argon_hydrogen_mixture=Ammoniacal Argon Hydrogen Mixture
+susy.material.acidic_argon_hydrogen_mixture=Acidic Argon Hydrogen Mixture
+susy.material.partially_liquefied_argon_hydrogen_mixture=Partially Liquefied Argon Hydrogen Mixture
+susy.material.cooled_ammoniacal_argon_hydrogen_mixture=Cooled Ammoniacal Argon Hydrogen Mixture
+susy.material.lithium_carbonate_solution=Lithium Carbonate Solution
+susy.material.impure_lithium_carbonate_solution=Impure Lithium Carbonate Solution
+
+susy.material.impure_lithium_carbonate=Impure Lithium Carbonate
+susy.material.washed_graphene=Washed Graphene
+susy.material.distilled_graphene=Distilled Graphene
+susy.material.dried_graphene=Dried Graphene
 
 # Isotopes
 
