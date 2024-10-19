@@ -86,20 +86,20 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .buildAndRegister()
 */
 
-/* Reforming
+Reforming
     REFORMER.recipeBuilder()
         .fluidInputs(fluid('heavy_naphtha') * 1000)
-        .fluidInputs(fluid('hydrogen') * 1000)
+        .fluidInputs(fluid('hydrogen') * 5000)
         .notConsumable(ore('catalystBedSupportedPlatinum'))
-        .fluidOutputs(fluid('naphtha_reformate') * 4000)
+        .fluidOutputs(fluid('naphtha_reformate') * 9000)
         .duration(25)
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()
 
     PHASE_SEPARATOR.recipeBuilder()
-        .fluidInputs(fluid('naphtha_reformate') * 4000)
+        .fluidInputs(fluid('naphtha_reformate') * 9000)
         .fluidOutputs(fluid('reforming_liquids') * 1000)
-        .fluidOutputs(fluid('reforming_effluent') * 3000)
+        .fluidOutputs(fluid('hydrogen') * 8000)
         .duration(25)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
@@ -111,4 +111,3 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .fluidOutputs(fluid('refinery_gas') * 200)
         .duration(400)
         .buildAndRegister()
-*/

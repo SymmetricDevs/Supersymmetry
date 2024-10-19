@@ -3,7 +3,7 @@
         .fluidInputs(fluid('reformate') * 1000)
         .fluidInputs(fluid('furfural') * 100)
         .fluidOutputs(fluid('btex_extract') * 800)
-        .fluidOutputs(fluid('raffinate') * 300)
+        .fluidOutputs(fluid('reformate_raffinate') * 300)
         .duration(25)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()

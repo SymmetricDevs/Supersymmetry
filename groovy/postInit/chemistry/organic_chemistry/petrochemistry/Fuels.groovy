@@ -601,7 +601,7 @@ println("Registered oxygenate pairs")
 def gasolineFeedstocks = [
     'naphtha',
     'light_naphtha',
-    'naphtha_reformate',
+    'reformate',
     'polymerate',
     'isomerate',
     'alkylate',

@@ -622,5 +622,22 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
+        ReformingLiquids = new Material.Builder(20107, SuSyUtility.susyId('reforming_liquids'))
+                .liquid()
+                .color(0xcfc369)
+                .flags(FLAMMABLE)
+                .build();
+
+        Reformate = new Material.Builder(20108, SuSyUtility.susyId('reformate'))
+                .liquid()
+                .color(0xd1a63b)
+                .flags(FLAMMABLE)
+                .build();
+
+        ReformateRaffinate = new Material.Builder(20109, SuSyUtility.susyId('reformate_raffinate'))
+                .liquid()
+                .color(0xf0e171)
+                .flags(FLAMMABLE)
+                .build();
     }
-}           
+}          

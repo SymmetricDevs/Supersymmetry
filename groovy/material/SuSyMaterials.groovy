@@ -616,6 +616,11 @@ class SuSyMaterials {
         public static Material CatalyticOverheads;
         public static Material SulfuricCatalyticOverheads;
 
+        public static ReformingLiquids;
+        public static ReformingEffluent;
+        public static Reformate;
+        public static ReformateRaffinate;
+
         public static Material OilyBrine;
         public static Material LightOilyBrine;
         public static Material HeavyOilyBrine;
