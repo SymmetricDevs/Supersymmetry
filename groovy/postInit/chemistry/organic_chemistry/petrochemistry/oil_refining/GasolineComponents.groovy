@@ -86,7 +86,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .buildAndRegister()
 */
 
-Reforming
+// Reforming
     REFORMER.recipeBuilder()
         .fluidInputs(fluid('heavy_naphtha') * 1000)
         .fluidInputs(fluid('hydrogen') * 5000)

@@ -37,24 +37,25 @@ public class UnknownCompositionMaterials {
         BlackAsh = new Material.Builder(4002, SuSyUtility.susyId('black_ash'))
                 .dust()
                 .color(0x000000)
-                .colorAverage()
                 .build();
 
         MolecularSieve = new Material.Builder(4003, SuSyUtility.susyId('molecular_sieve'))
                 .dust()
                 .iconSet(SHINY)
                 .color(0x737373)
-                .colorAverage()
                 .build();
 
         WetMolecularSieve = new Material.Builder(4004, SuSyUtility.susyId('wet_molecular_sieve'))
                 .dust()
                 .iconSet(SHINY)
                 .color(0x5c5c5c)
-                .colorAverage()
                 .build();
 
-        // FREE ID: 4005
+        ChloridedAlumina = new Material.Builder(4005, SuSyUtility,susyId('chlorided_alumina'))
+                .dust()
+                .color(0x86bf99)
+                .flags(GENERATE_CATALYST_BED)
+                build();
 
         FlueGas = new Material.Builder(4006, SuSyUtility.susyId('flue_gas'))
                 .gas(new FluidBuilder().temperature(1000))
@@ -186,7 +187,11 @@ public class UnknownCompositionMaterials {
                 .color(0x4f2f27)
                 .build();
 
-        //FREE ID: 4032
+        SulfatedMetalOxide = new Material.BUilder(4032, SuSyUtility.susyId('sulfated_metal_oxide'))
+                .dust()
+                .color(0xc7f089)
+                .flags(GENERATE_CATALYST_BED)
+                .build();
 
         ImpureKaptonK = new Material.Builder(4033, SuSyUtility.susyId('impure_kapton_k'))
                 .liquid()
@@ -529,7 +534,12 @@ public class UnknownCompositionMaterials {
                 .color(0xbaced6)
                 .build();
 
-        // FREE ID: 4102
+        SolidPhosphoricAcid = new Material.Builder(4102, SuSyUtility.susyId('solid_phosphoric_acid'))
+                .dust()
+                .iconSet(DULL)
+                .color(0xd7de9e)
+                .flags(GENERATE_WET_DUST, GENERATE_CATALYST_BED)
+                .build();
 
         LepidoliteLeach = new Material.Builder(4103, SuSyUtility.susyId('lepidolite_leach'))
                 .liquid()
@@ -830,7 +840,8 @@ public class UnknownCompositionMaterials {
                 .color(0x80849c)
                 .build()
 
-        //FREE ID: 4160-4161
+        AmorphousSilicaAlumina
+        CobaltNitrateSolution
 
         ZincLeach = new Material.Builder(4162, SuSyUtility.susyId('zinc_leach'))
                 .liquid()
@@ -863,11 +874,15 @@ public class UnknownCompositionMaterials {
                 .build()
 
         WaelzOxide = new Material.Builder(4168, SuSyUtility.susyId('waelz_oxide'))
-                .dust() //.liquid(new FluidBuilder().temperature(700))
+                .dust()
                 .color(0x475453)
                 .build()
 
-        //FREE ID: 4169
+        HydrocrackingCatalyst = new Material.Builder(4169, SuSyUtility.susyId('hydrocracking_catalyst'))
+                .dust()
+                .color(0x5884db)
+                .flags(GENERATE_CATALYST_BED)
+                .build()
 
         ZincCementationSlurry = new Material.Builder(4170, SuSyUtility.susyId('zinc_cementation_slurry'))
                 .liquid()

@@ -129,6 +129,7 @@ class SuSyMaterials {
         public static Material RawMolecularSieve;
         public static Material MolecularSieve;
         public static Material WetMolecularSieve;
+        public static Material ChloridedAlumina;
         public static Material FlueGas;
         public static Material ExhaustSteam;
         public static Material SmokeBombMix;
@@ -157,6 +158,7 @@ class SuSyMaterials {
         public static Material CativaCatalystSolution;
         public static Material AcidicCumene;
         public static Material RearrangedCumene;
+        public static Material SulfatedMetalOxide;
         public static Material ImpureKaptonK;
         public static Material KaptonEPreparation;
         public static Material ImpureKaptonE;
@@ -225,6 +227,7 @@ class SuSyMaterials {
         public static Material AluminiumSilicateLeach;
         public static Material AlkaliAlumMix;
         public static Material AmblygoniteLeach;
+        public static Material SolidPhosphoricAcid;
         public static Material LepidoliteLeach;
         public static Material NeutralizedLepidoliteLeach;
         public static Material AluminiumFreeLepidoliteLeach;
@@ -279,6 +282,8 @@ class SuSyMaterials {
         public static Material ZincFlue;
         public static Material CrudeZinc;
         public static Material CadmiumRichZinc;
+        public static Material AmorphousSilicaAlumina;
+        public static Material CobaltNitrateSolution;
         public static Material ImpureSmithsoniteSlurry;
         public static Material SmithsoniteSlurry;
         public static Material ZincLeach;
@@ -288,6 +293,7 @@ class SuSyMaterials {
         public static Material WaelzSlag;
         public static Material ReducedZincLeach;
         public static Material WaelzOxide;
+        public static Material HydrocrackingCatalyst;
         public static Material ZincCementationSlurry;
         public static Material PrecipitatedZincLeach;
         public static Material CopperCadmiumResidue;

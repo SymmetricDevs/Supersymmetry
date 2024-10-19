@@ -86,3 +86,13 @@
         .duration(60)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
+
+// Butenes separation
+DISTILLATION_TOWER.recipeBuilder()
+        .fluidInputs(fluid('butene') * 1000)
+        .fluidOutputs(fluid('isobutylene') * 500)
+        .fluidOutputs(fluid('one_butene') * 300)
+        .fluidOutputs(fluid('two_butene') * 200)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()
