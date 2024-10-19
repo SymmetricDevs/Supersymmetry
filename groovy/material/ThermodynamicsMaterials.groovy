@@ -481,5 +481,26 @@ class ThermodynamicsMaterials {
                 .components(CarbonDioxide)
                 .colorAverage()
                 .build();
+
+        ColdAmmoniacalArgonHydrogenMixture = new Material.Builder(22844, SuSyUtility.susyId('cold_ammoniacal_argon_hydrogen_mixture'))
+                .gas(new FluidBuilder().temperature(220))
+                .components(Argon, Hydrogen, Ammonia)
+                .colorAverage()
+                .build()
+                .setFormula("(Ar)(NH3)(H)")
+
+        ColdArgonHydrogenMixture = new Material.Builder(22845, SuSyUtility.susyId('cold_argon_hydrogen_mixture'))
+                .gas(new FluidBuilder().temperature(220))
+                .components(Argon, Hydrogen)
+                .color(0x20a591)
+                .build()
+                .setFormula("(Ar)(H)")
+
+        PartiallyLiquefiedArgonHydrogenMixture = new Material.Builder(22846, SuSyUtility.susyId('partially_liquefied_argon_hydrogen_mixture'))
+                .liquid(new FluidBuilder().temperature(73))
+                .components(Argon, Hydrogen)
+                .color(0x20aa91)
+                .build()
+                .setFormula("(Ar)(H)")
     }
 }
