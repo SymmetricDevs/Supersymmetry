@@ -1807,7 +1807,8 @@ class SuSyMaterials {
         public static Material LiquidWasteNitrogen;
         public static Material PartiallyLiquefiedArgon;
         public static Material SupercriticalCarbonDioxide;
-        public static Material CooledAmmoniacalArgonHydrogenMixture;
+        public static Material ColdAmmoniacalArgonHydrogenMixture;
+        public static Material ColdArgonHydrogenMixture;
         public static Material PartiallyLiquefiedArgonHydrogenMixture;
 
         public static void changeFormulas() {

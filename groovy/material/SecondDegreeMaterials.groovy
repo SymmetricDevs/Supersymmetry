@@ -715,7 +715,7 @@ public class SecondDegreeMaterials {
                 .setFormula("(Li2CO3)(H2O)", true);
 
         AcidicArgonHydrogenMixture = new Material.Builder(8626, SuSyUtility.susyId("acidic_argon_hydrogen_mixture"))
-                .gas()
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(Argon, Hydrogen * 4, HydrogenChloride)
                 .colorAverage()
                 .build()

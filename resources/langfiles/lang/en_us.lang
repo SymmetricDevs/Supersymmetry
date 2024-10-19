@@ -1992,7 +1992,8 @@ susy.material.argon_hydrogen_mixture=Argon Hydrogen Mixture
 susy.material.ammoniacal_argon_hydrogen_mixture=Ammoniacal Argon Hydrogen Mixture
 susy.material.acidic_argon_hydrogen_mixture=Acidic Argon Hydrogen Mixture
 susy.material.partially_liquefied_argon_hydrogen_mixture=Partially Liquefied Argon Hydrogen Mixture
-susy.material.cooled_ammoniacal_argon_hydrogen_mixture=Cooled Ammoniacal Argon Hydrogen Mixture
+susy.material.cold_ammoniacal_argon_hydrogen_mixture=Cold Ammoniacal Argon Hydrogen Mixture
+susy.material.cold_argon_hydrogen_mixture=Cold Argon Hydrogen Mixture
 susy.material.lithium_carbonate_solution=Lithium Carbonate Solution
 susy.material.impure_lithium_carbonate_solution=Impure Lithium Carbonate Solution
 
