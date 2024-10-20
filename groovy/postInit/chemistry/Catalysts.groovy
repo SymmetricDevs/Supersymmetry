@@ -11,6 +11,7 @@ AUTOCLAVE = recipemap('autoclave')
 ION_EXCHANGE = recipemap('ion_exchange_column')
 
 // Alumina supports
+
 MIXER.recipeBuilder()
     .inputs(ore('dustAmmoniumHexachloroplatinate') * 17)
     .fluidInputs(fluid('phosphoric_acid') * 1000)
@@ -62,10 +63,10 @@ ROASTER.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-/* Isomerization catalysts
+// Isomerization catalysts
 
 BR.recipeBuilder()
-    .inputs(ore('dustAlumina') * 5)
+    .inputs(ore('dustSupportedPlatinum') * 5)
     .fluidInputs(fluid('hydrogen_chloride') * 100)
     .outputs(metaitem('dustChloridedAlumina'))
     .duration(100)
@@ -75,12 +76,11 @@ BR.recipeBuilder()
 BR.recipeBuilder()
     .inputs(ore('dustZirconiumDioxide') * 3)
     .fluidInputs(fluid('dustAluminiumSulfate'))
+    .fluidInputs(fluid('dustPlatinum'))
     .outputs(metaitem('dustSulfatedMetalOxide'))
     .duration(100)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
-
-*/
 
 // Zeolites
 
@@ -119,6 +119,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 // Type X zeolite (molecular sieve, 9 angstrom)
+
 AUTOCLAVE.recipeBuilder()
     .fluidInputs(fluid('diluted_sodium_silicate_solution') * 4000)
     .inputs(ore('dustSodiumAluminate') * 4)
@@ -284,24 +285,24 @@ ROASTER.recipeBuilder()
 
     // SPA catalysts for gasoline polymerate
 
-    /*MIXER.recipeBuilder()
-        .inputs(ore('dustDiatomaceousEarth'))
+    MIXER.recipeBuilder()
+        .inputs(ore('dustDiatomite'))
         .fluidInputs(fluid('phosphoric_acid') * 1700)
-        .outputs(metaitem('dustWetSolidPhosphoricAcidCatalyst'))
+        .outputs(metaitem('dustWetSolidPhosphoricAcid'))
         .duration(200)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
         
     DRYER.recipeBuilder()
-        .inputs(ore('dustWetSolidPhosphoricAcidCatalyst')
-        .outputs(ore('dustSolidPhopshoricAcidCatalyst')
+        .inputs(ore('dustWetSolidPhosphoricAcid'))
+        .outputs(ore('dustSolidPhopshoricAcid'))
         .duration(200)
         .EUt(Globals.voltAmps[1])
-        .buildAndRegister()*/
+        .buildAndRegister()
 
     // Hydrocracking catalyst
 
-    /*AUTOCLAVE.recipeBuilder()
+    AUTOCLAVE.recipeBuilder()
         .fluidInputs(fluid('sodium_silicate_solution') * 1000)
         .fluidInputs(fluid('aluminium_sulfate_solution') * 100)
         .outputs(metaitem('dustAmorphousSilicaAlumina'))
@@ -322,7 +323,7 @@ ROASTER.recipeBuilder()
         .inputs(ore('dustAmorphousSilicaAlumina') * 3)
         .fluidInputs(fluid('ammonium_molybdate_solution') * 2000)
         .fluidInputs(fluid('cobalt_nitrate_solution') * 1000)
-        .outputs(metaitem('hydrocracking_catalyst') * 3)
+        .outputs(metaitem('dustHydrocrackingCatalyst') * 3)
         .duration(200)
         .EUt(Globals.voltAmps[3])
         .buildAndRegister()

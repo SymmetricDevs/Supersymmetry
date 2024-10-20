@@ -622,10 +622,14 @@ class SuSyMaterials {
         public static Material CatalyticOverheads;
         public static Material SulfuricCatalyticOverheads;
 
-        public static ReformingLiquids;
-        public static ReformingEffluent;
-        public static Reformate;
-        public static ReformateRaffinate;
+        public static Material ReformingLiquids;
+        public static Material ReformingEffluent;
+        public static Material Reformate;
+        public static Material ReformateRaffinate;
+
+        public static Material RawIsomerate;
+        public static Material IsohexaneRichStream;
+        public static Material Isomerate;
 
         public static Material OilyBrine;
         public static Material LightOilyBrine;

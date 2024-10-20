@@ -639,5 +639,23 @@ public class PetrochemistryMaterials {
                 .color(0xf0e171)
                 .flags(FLAMMABLE)
                 .build();
+
+        RawIsomerate = new Material.Builder(2011, SuSyUtility.susyId('raw_isomerate'))
+                .liquid()
+                .color(0xc76a42)
+                .flags(FLAMMABLE)
+                .build();
+
+        IsohexaneRichStream = new Material.Builder(2011, SuSyUtility.susyId('isohexane_rich_stream'))
+                .liquid()
+                .color(0x91401d)
+                .flags(FLAMMABLE)
+                .build();
+
+        Isomerate = new Material.Builder(2011, SuSyUtility.susyId('isomerate'))
+                .liquid()
+                .color(0xdb6b3b)
+                .flags(FLAMMABLE)
+                .build();
     }
 }          
