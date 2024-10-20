@@ -840,8 +840,17 @@ public class UnknownCompositionMaterials {
                 .color(0x80849c)
                 .build()
 
-        AmorphousSilicaAlumina
-        CobaltNitrateSolution
+        AmorphousSilicaAlumina = new Material.Builder(4160, SuSyUtility.susyId('amorphous_silica_alumina'))
+                .dust()
+                .color(0x)
+                .iconSet(DULL)
+                .build()
+
+        HydrocrackingCatalyst = new Material.Builder(4161, SuSyUtility.susyId('hydrocracking_catalyst'))
+                .dust()
+                .color(0x5884db)
+                .flags(GENERATE_CATALYST_BED)
+                .build()
 
         ZincLeach = new Material.Builder(4162, SuSyUtility.susyId('zinc_leach'))
                 .liquid()
@@ -878,11 +887,7 @@ public class UnknownCompositionMaterials {
                 .color(0x475453)
                 .build()
 
-        HydrocrackingCatalyst = new Material.Builder(4169, SuSyUtility.susyId('hydrocracking_catalyst'))
-                .dust()
-                .color(0x5884db)
-                .flags(GENERATE_CATALYST_BED)
-                .build()
+        // FREE ID: 4169
 
         ZincCementationSlurry = new Material.Builder(4170, SuSyUtility.susyId('zinc_cementation_slurry'))
                 .liquid()

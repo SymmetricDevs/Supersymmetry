@@ -283,7 +283,7 @@ class SuSyMaterials {
         public static Material CrudeZinc;
         public static Material CadmiumRichZinc;
         public static Material AmorphousSilicaAlumina;
-        public static Material CobaltNitrateSolution;
+        public static Material HydrocrackingCatalyst;
         public static Material ImpureSmithsoniteSlurry;
         public static Material SmithsoniteSlurry;
         public static Material ZincLeach;
@@ -293,7 +293,6 @@ class SuSyMaterials {
         public static Material WaelzSlag;
         public static Material ReducedZincLeach;
         public static Material WaelzOxide;
-        public static Material HydrocrackingCatalyst;
         public static Material ZincCementationSlurry;
         public static Material PrecipitatedZincLeach;
         public static Material CopperCadmiumResidue;
@@ -578,12 +577,14 @@ class SuSyMaterials {
         public static Material SulfuricDebutanizedNaphtha;
 
         public static Material AtmosphericOilResidue;
+        public static Material SulfuricAtmosphericOilResidue;
         public static Material CatalyticallyCrackedAtmosphericOilResidue;
         public static Material CrudeCatalyticallyCrackedAtmosphericOilResidue;
         public static Material HydrocrackedAtmosphericOilResidue;
         public static Material ThermallyCrackedAtmosphericOilResidue;
 
         public static Material VacuumOilResidue;
+        public static Material SulfuricVacuumOilResidue;
         public static Material CatalyticallyCrackedVacuumOilResidue;
         public static Material CrudeCatalyticallyCrackedVacuumOilResidue;
         public static Material HydrocrackedVacuumOilResidue;
@@ -1316,6 +1317,7 @@ class SuSyMaterials {
         public static Material SodiumAlumSolution;
         public static Material OxidizedManganateSolution;
         public static Material SupportedNickel;
+        public static Material CobaltNitrateSolution;
 
         // Organic Chemistry Materials
 

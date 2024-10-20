@@ -129,6 +129,8 @@ class Petrochemistry = {
     }
 
     public static fractions = [
+        vacuum_oil_residue : new OilFraction('vacuum_oil_residue').withTraits(Sulfuric),
+        atmospheric_oil_residue : new OilFraction('atmospheric_oil_residue').withTraits(Sulfuric),
         lubricating_oil : new OilFraction('lubricating_oil').withTraits(Sulfuric, Crude),
         heavy_gas_oil : new OilFraction('heavy_gas_oil').withTraits(Sulfuric, Heatable, Strippable),
         light_gas_oil : new OilFraction('light_gas_oil').withTraits(Sulfuric, Heatable, Strippable),

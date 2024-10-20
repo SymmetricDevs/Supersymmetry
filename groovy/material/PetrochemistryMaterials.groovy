@@ -640,22 +640,35 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        RawIsomerate = new Material.Builder(2011, SuSyUtility.susyId('raw_isomerate'))
+        RawIsomerate = new Material.Builder(20110, SuSyUtility.susyId('raw_isomerate'))
                 .liquid()
                 .color(0xc76a42)
                 .flags(FLAMMABLE)
                 .build();
 
-        IsohexaneRichStream = new Material.Builder(2011, SuSyUtility.susyId('isohexane_rich_stream'))
+        IsohexaneRichStream = new Material.Builder(20111, SuSyUtility.susyId('isohexane_rich_stream'))
                 .liquid()
                 .color(0x91401d)
                 .flags(FLAMMABLE)
                 .build();
 
-        Isomerate = new Material.Builder(2011, SuSyUtility.susyId('isomerate'))
+        Isomerate = new Material.Builder(20112, SuSyUtility.susyId('isomerate'))
                 .liquid()
                 .color(0xdb6b3b)
                 .flags(FLAMMABLE)
                 .build();
+
+        SulfuricAtmosphericOilResidue = new Material.Builder(2011, SuSyUtility.susyId('sulfuric__oil_residue'))
+                .liquid(new FluidBuilder().temperature(620))
+                .color(0x615e2a)
+                .flags(FLAMMABLE)
+                .build();
+
+        SulfuricVacuumOilResidue = new Material.Builder(2011, SuSyUtility.susyId('sulfuric__oil_residue'))
+                .liquid(new FluidBuilder().temperature(770))
+                .color(0x24241a)
+                .flags(FLAMMABLE)
+                .build();
+
     }
 }          
