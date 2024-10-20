@@ -622,6 +622,11 @@ class SuSyMaterials {
 
         public static Material CatalyticOverheads;
         public static Material SulfuricCatalyticOverheads;
+        public static Material CatalyticOlefinRichMixture;
+        public static Material CatalyticCFourFraction;
+        public static Material CatalyticCThreeFraction;
+        public static Material CatalyticLightGases;
+        public static Material CatalyticButeneMixture;
 
         public static Material ReformingLiquids;
         public static Material ReformingEffluent;

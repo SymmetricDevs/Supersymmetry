@@ -658,17 +658,47 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricAtmosphericOilResidue = new Material.Builder(2011, SuSyUtility.susyId('sulfuric__oil_residue'))
+        SulfuricAtmosphericOilResidue = new Material.Builder(20113, SuSyUtility.susyId('sulfuric_atmospheric_oil_residue'))
                 .liquid(new FluidBuilder().temperature(620))
                 .color(0x615e2a)
                 .flags(FLAMMABLE)
                 .build();
 
-        SulfuricVacuumOilResidue = new Material.Builder(2011, SuSyUtility.susyId('sulfuric__oil_residue'))
-                .liquid(new FluidBuilder().temperature(770))
+        SulfuricVacuumOilResidue = new Material.Builder(20114, SuSyUtility.susyId('sulfuric_vacuum_oil_residue'))
+                .liquid(new FluidBuilder().temperature(770))x
                 .color(0x24241a)
                 .flags(FLAMMABLE)
                 .build();
 
+        CatalyticOlefinRichMixture = new Material.Builder(20115, SuSyUtility.susyId('catalytic_olefin_rich_mixture'))
+                .gas()
+                .color(0xf5e2ae)
+                .flags(FLAMMABLE)
+                .build();
+
+        CatalyticCFourFraction = new Material.Builder(20116, SuSyUtility.susyId('catalytic_c_four_fraction'))
+                .gas()
+                .color(0xedb672)
+                .flags(FLAMMABLE)
+                .build();
+
+        CatalyticCThreeFraction = new Material.Builder(20117, SuSyUtility.susyId('catalytic_c_three_fraction'))
+                .gas()
+                .color(0xede372)
+                .flags(FLAMMABLE)
+                .build();
+
+        CatalyticLightGases = new Material.Builder(20118, SuSyUtility.susyId('catalytic_light_gases'))
+                .gas()
+                .color(0xe5ebca)
+                .flags(FLAMMABLE)
+                .build();
+
+        CatalyticButeneMixture = new Material.Builder(20119, SuSyUtility.susyId('catalytic_butene_mixture'))
+                .gas()
+                .color(0xd48c35)
+                .flags(FLAMMABLE)
+                .build();
+                
     }
 }          
