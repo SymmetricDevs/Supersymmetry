@@ -30,7 +30,7 @@ mods.gregtech.assembler.removeByInput(6, [metaitem('dustCarbon'), metaitem('wire
 crafting.replaceShaped("gregtech:electronic_circuit_lv", metaitem('circuit.electronic'), [
         [metaitem('component.resistor'), ore('craftingToolWireCutter'), metaitem('component.resistor')],
         [metaitem('circuit.vacuum_tube'), metaitem('circuit_board.basic'), metaitem('circuit.vacuum_tube')],
-        [ore('cableGtSingleRedAlloy'), ore('cableGtSingleRedAlloy'), ore('cableGtSingleRedAlloy')]])
+        [ore('wireGtSingleCopper'), ore('wireGtSingleCopper'), ore('wireGtSingleCopper')]])
 
 crafting.replaceShaped("gregtech:electronic_circuit_mv", metaitem('circuit.good_electronic'), [
         [metaitem('component.diode'), ore('craftingToolWireCutter'), metaitem('component.diode')],
@@ -148,4 +148,25 @@ mods.gregtech.assembler.recipeBuilder()
         .outputs(metaitem('component.diode') * 16)
         .duration(400)
         .EUt(30)
+        .buildAndRegister();
+
+mods.gregtech.mixer.recipeBuilder()
+        .inputs(ore('dustInvar') * 15)
+        .inputs(ore('dustCobalt') * 3)
+        .outputs(ore('dustKovar') * 18)
+        .circuitMeta(2)
+        .duration(220)
+        .EUt(16)
+        .buildAndRegister();
+
+// This is faster, and the previous recipe catches people not paying attention. :)
+
+mods.gregtech.mixer.recipeBuilder()
+        .inputs(ore('dustIron') * 10)
+        .inputs(ore('dustNickel') * 5)
+        .inputs(ore('dustCobalt') * 3)
+        .outputs(ore('dustKovar') * 18)
+        .circuitMeta(3)
+        .duration(800)
+        .EUt(16)
         .buildAndRegister();
