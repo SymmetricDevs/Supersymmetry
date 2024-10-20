@@ -140,7 +140,7 @@ REACTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
-    .inputs(ore('dustWitherite') * 5)
+    .inputs(ore('dustWitherite') * 1)
     .outputs(metaitem('dustBariumOxide') * 2)
     .fluidOutputs(fluid('carbon_dioxide') * 1000)
     .EUt(Globals.voltAmps[3])

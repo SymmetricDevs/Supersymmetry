@@ -154,7 +154,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 //THIOSULFATE LEACHING (SPECIALIZED) (100%)
 //PYRARGYRITE
 BATCH_REACTOR.recipeBuilder()
-    .inputs(ore('dustPyrargyrite') * 7)
+    .inputs(ore('dustPyrargyrite') * 1)
     .inputs(ore('dustSodiumThiosulfate') * 42)
     .fluidInputs(fluid('distilled_water') * 5000)
     .fluidOutputs(fluid('pyrargyrite_thiosulfate_leach_solution') * 1000)
@@ -200,7 +200,7 @@ DISTILLERY.recipeBuilder()
 
 //PROUSTITE
 BATCH_REACTOR.recipeBuilder()
-    .inputs(ore('dustProustite') * 7)
+    .inputs(ore('dustProustite') * 1)
     .inputs(ore('dustSodiumThiosulfate') * 42)
     .fluidInputs(fluid('distilled_water') * 5000)
     .fluidOutputs(fluid('proustite_thiosulfate_leach_solution') * 1000)
