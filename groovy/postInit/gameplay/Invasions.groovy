@@ -28,7 +28,8 @@ new MobHordeEvent((player) -> {Bandit bandit = new Bandit(player.world); bandit.
 	.setTimer(72000, 216000)	        // 1 - 3 hours
 
 new MobHordeEvent((player) -> {EntityCyberZombie zombie = new EntityCyberZombie(player.world);
-			        zombie.addPotionEffect(new PotionEffect(MobEffects.SPEED, 999999, 1));
+					zombie.addPotionEffect(new PotionEffect(MobEffects.SPEED, 999999, 1));
+					zombie.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 999999, 1));
 				return zombie;}, 5, 10, "cyberzombie_medium")
 //	.setAdvancementUnlock(new ResourceLocation("gregtech:steam/4_bronze_boiler")) // Their fault for coming to the nether.
 	.setTimer(72000, 216000)	        // 1 - 3 hours
