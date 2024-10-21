@@ -52,7 +52,7 @@ byNames(['dustLignite', 'gemLignite']).each { input ->
         .buildAndRegister()
 }
 
-byNames(['dustCoke', 'gemCoke']).each { input ->
+byNames(['dustCoke', 'dustGreenCoke', 'gemCoke']).each { input ->
     def output = byName(input.pyrolysis_product)
     PYROLYSE_OVEN.recipeBuilder()
         .inputs(ore(input.name) * 16)

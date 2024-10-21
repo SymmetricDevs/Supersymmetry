@@ -64,6 +64,10 @@ class CarbonGlobals {
             duration = 2
             pyrolysis_product = 'dustCarbon'
         },
+        new CarbonSource('dustGreenCoke', 100, 'dustTinyAsh').withTraits(HighPurityCombustible, Pyrolyzable).tap {
+            duration = 2
+            pyrolysis_product = 'dustCarbon'
+        },
         new CarbonSource('gemAnthracite', 90, 'dustTinyAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 2
             pyrolysis_product = 'gemCoke'
