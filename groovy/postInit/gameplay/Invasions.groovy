@@ -3,7 +3,6 @@ import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 import techguns.entities.npcs.Bandit;
-import flaxbeard.cyberware.common.entity.EntityCyberZombie;
 
 new MobHordeEvent((player) -> {EntityZombie zombie = new EntityZombie(player.world);
 			        zombie.addPotionEffect(new PotionEffect(MobEffects.SPEED, 999999, 1));
