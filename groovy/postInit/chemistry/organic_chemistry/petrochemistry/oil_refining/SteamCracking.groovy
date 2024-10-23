@@ -2,6 +2,7 @@ import petrochemistry.Petrochemistry
 
 ROASTER = recipemap('roaster')
 CRACKER = recipemap('cracker')
+DT = recipemap('distillation_tower')
 
 crackables.each { _, crackable -> {
     if (crackable.steam_crackable) {
@@ -27,8 +28,8 @@ crackables.each { _, crackable -> {
 
 /* ASSUMPTIONS:
 - Pyrolysis gas: 7 carbons per mol
-- Light fuel oil: 12 carbons per mol
-- Heavy fuel oil: 16.5 carbons per mol
+- Light gas oil: 12 carbons per mol
+- Heavy gas oil: 16.5 carbons per mol
 - Light naphtha: 5.5 carbons per mol
 - Heavy naphtha: 9 carbons per mol */
 

@@ -348,6 +348,18 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
+        QuenchedAtmosphericOilResidue = new Material.Builder(20056, SuSyUtility.susyId('quenched_atmospheric_oil_residue'))
+                .gas(new FluidBuilder().temperature(873))
+                .color(0x4a4718)
+                .flags(FLAMMABLE)
+                .build()
+
+        QuenchedVacuumOilResidue = new Material.Builder(20057, SuSyUtility.susyId('quenched_vacuum_oil_residue'))
+                .gas(new FluidBuilder().temperature(873))
+                .color(0x292917)
+                .flags(FLAMMABLE)
+                .build()
+
         //FREE IDs: 20056-20060
 
         Syngas = new Material.Builder(20061, SuSyUtility.susyId('syngas'))
@@ -700,5 +712,10 @@ public class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build();
                 
+        VisbreakingResidue = new Material.Builder(20120, SuSyUtility.susyId('visbreaking_residue'))
+                .liquid()
+                .color(0x1a190b)
+                .flags(FLAMMABLE)
+                .build();
     }
 }          

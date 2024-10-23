@@ -9,7 +9,7 @@ fractions.each { _, fraction -> {
         
             FBR.recipeBuilder()
                 .fluidInputs(fraction.getSulfuric(1000))
-                .fluidInputs(fluid('hydrogen') * 125)
+                .fluidInputs(fluid('hydrogen') * 100)
                 .notConsumable(metaitem('catalystBedHydrotreatingCatalyst'))
                 .fluidOutputs(fraction.getTreatedSulfuric(1000))
                 .duration(15)
@@ -19,7 +19,7 @@ fractions.each { _, fraction -> {
             DT.recipeBuilder()
                 .fluidInputs(fraction.getTreatedSulfuric(1000))
                 .fluidOutputs(fraction.get(1000))
-                .fluidOutputs(fluid('sour_gas') * 125)
+                .fluidOutputs(fluid('sour_gas') * 100)
                 .duration(50)
                 .EUt(30)
                 .buildAndRegister()
@@ -30,7 +30,7 @@ fractions.each { _, fraction -> {
 // Sour gas processing
 
 BCR.recipeBuilder()
-    .fluidInputs(fluid('sour_gas') * 3000)
+    .fluidInputs(fluid('sour_gas') * 2000)
     .fluidInputs(fluid('ethanolamine_mix') * 1000)
     .fluidOutputs(fluid('hydrogen') * 1000)
     .fluidOutputs(fluid('rich_amine') * 1000)
@@ -40,7 +40,7 @@ BCR.recipeBuilder()
 
 BCR.recipeBuilder()
     .fluidInputs(fluid('rich_amine') * 1000)
-    .fluidOutputs(fluid('hydrogen_sulfide') * 1000)
+    .fluidOutputs(fluid('hydrogen_sulfide') * 500)
     .fluidOutputs(fluid('ethanolamine_mix') * 1000)
     .duration(10)
     .EUt(120)
@@ -48,11 +48,11 @@ BCR.recipeBuilder()
 
 // FCC overhead desulfurization
 
-/*BCR.recipeBuilder()
+BCR.recipeBuilder()
     .fluidInputs(fluid('sulfuric_catalytic_overheads') * 1000)
-    .fluidInputs(fluid('ethanolamine_mix') * 1000)
+    .fluidInputs(fluid('ethanolamine_mix') * 100)
     .fluidOutputs(fluid('catalyic_overheads') * 1000)
-    .fluidOutputs(fluid('rich_amine') * 1000)
+    .fluidOutputs(fluid('rich_amine') * 100)
     .duration(40)
     .EUt(120)
-    .buildAndRegister()*/
+    .buildAndRegister()

@@ -52,6 +52,10 @@ class Petrochemistry = {
         def getThermallyCracked(int amount) {
             return fluid('thermally_cracked_' + this.name) * amount
         }
+
+        def getQuenched(int amouunt) {
+            return fluid('quenched_' + this.name) * amount
+        }
     }
 
     trait HydroCrackable {
@@ -128,6 +132,18 @@ class Petrochemistry = {
         }
     }
 
+    /* Data on fractions
+        - Fuel gas: 3.56 carbons per mol        51.8 g/mol
+        - Light naphtha: 5.5 carbons per mol    75 g/mol
+        - Full naphtha: 6.5 carbons per mol     97.2 g/mol
+        - Heavy naphtha: 9 carbons per mol      120 g/mol
+        - Kerosene: 11.5 carbons per mol        161.6 g/mol
+        - Light gas oil: 15.5 carbons per mol   215.6 g/mol
+        - Heavy gas oil: 20 carbons per mol     270.2 g/mol
+        - Atm. residuum: 40 carbons per mol     547.6 g/mol
+        - Vac. residuum: 45 carbons per mol     603.0 g/mol
+    */
+
     public static fractions = [
         vacuum_oil_residue : new OilFraction('vacuum_oil_residue').withTraits(Sulfuric),
         atmospheric_oil_residue : new OilFraction('atmospheric_oil_residue').withTraits(Sulfuric),
@@ -138,7 +154,7 @@ class Petrochemistry = {
         heavy_naphtha : new OilFractionCrackable('heavy_naphtha').withTraits(Sulfuric, Heatable),
         naphtha : new OilFractionCrackable('naphtha').withTraits(Crude),
         light_naphtha : new OilFractionCrackable('light_naphtha').withTraits(Sulfuric, Heatable),
-        refinery_gas : new OilFraction('refinery_gas').withTraits(Sulfuric)
+        fuel_gas : new OilFraction('fuel_gas').withTraits(Sulfuric)
     ]
 
     public static crackables = [

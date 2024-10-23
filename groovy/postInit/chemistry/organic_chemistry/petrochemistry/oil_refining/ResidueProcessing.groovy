@@ -10,8 +10,8 @@ ROTARY_KILN = recipemap('rotary_kiln')
 // Atmospheric residue processing
 
 VACUUM_DT.recipeBuilder()
-    .fluidInputs(fluid('atmospheric_oil_residue') * 1000)
-    .fluidOutputs(fluid('vacuum_oil_residue') * 300)
+    .fluidInputs(fractions.atmospheric_oil_residue.getSulfuric(1000))
+    .fluidOutputs(fractions.vacuum_oil_residue.getSulfuric(1000))
     .fluidOutputs(fractions.lubricating_oil.getCrude(300))
     .fluidOutputs(fractions.heavy_gas_oil.getSulfuric(250))
     .fluidOutputs(fractions.light_gas_oil.getSulfuric(150))
@@ -54,7 +54,7 @@ EXTRACTOR.recipeBuilder()
 // Deasphalting
 
 MIXER.recipeBuilder()
-    .fluidInputs(fluid('vacuum_oil_residue') * 300)
+    .fluidInputs(fractions.vacuum_oil_residue.getSulfuric(300))
     .fluidInputs(fluid('supercritical_propane') * 300)
     .fluidOutputs(fluid('asphaltene_extract') * 300)
     .fluidOutputs(fluid('deasphalted_oil') * 250)

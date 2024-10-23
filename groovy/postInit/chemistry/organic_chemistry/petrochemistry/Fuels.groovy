@@ -602,6 +602,7 @@ def gasolineFeedstocks = [
     'naphtha',
     'light_naphtha',
     'reformate',
+    'reformate_raffinate',
     'polymerate',
     'isomerate',
     'alkylate',
