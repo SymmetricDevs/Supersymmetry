@@ -1,28 +1,23 @@
-import globals.Globals
+import globals.RecyclingHelper
+import gregtechfoodoption.utils.GTFOUtils
 
-import gregtech.api.recipes.ModHandler;
-import gregtech.api.unification.material.Materials;
-import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.unification.stack.UnificationEntry;
-
-import gregtechfoodoption.utils.GTFOUtils;
-import static gregtechfoodoption.utils.GTFOUtils.*;
+import static gregtechfoodoption.utils.GTFOUtils.*
 
 // MACHINE RECIPES
 
-crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.lv", metaitem('gregtechfoodoption:slicer.lv'), [
+RecyclingHelper.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.lv", metaitem('gregtechfoodoption:slicer.lv'), [
 		[metaitem('electric.piston.lv'), ore('circuitLv'), ore('cableGtSingleTin')],
 		[ore('toolHeadBuzzSawSteel'), metaitem('gregtech:hull.lv'), ore('circuitLv')],
 		[ore('plateSteel'), metaitem('conveyor.module.lv'), ore('cableGtSingleTin')]
 ])
 
-crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.mv", metaitem('gregtechfoodoption:slicer.mv'), [
+RecyclingHelper.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.mv", metaitem('gregtechfoodoption:slicer.mv'), [
 		[metaitem('electric.piston.mv'), ore('circuitMv'), ore('cableGtSingleCopper')],
 		[ore('toolHeadBuzzSawAluminium'), metaitem('gregtech:hull.mv'), ore('circuitMv')],
 		[ore('plateAluminium'), metaitem('conveyor.module.mv'), ore('cableGtSingleCopper')]
 ])
 
-crafting.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.hv", metaitem('gregtechfoodoption:slicer.hv'), [
+RecyclingHelper.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.hv", metaitem('gregtechfoodoption:slicer.hv'), [
 		[metaitem('electric.piston.hv'), ore('circuitHv'), ore('cableGtSingleGold')],
 		[ore('toolHeadBuzzSawVanadiumSteel'), metaitem('gregtech:hull.hv'), ore('circuitHv')],
 		[ore('plateVanadiumSteel'), metaitem('conveyor.module.hv'), ore('cableGtSingleGold')]
