@@ -302,7 +302,7 @@ mods.gregtech.assembler.recipeBuilder()
         .duration(100)
         .EUt(30)
         .buildAndRegister();
-		
+
 //Steam Conveyor (no recipe for now)
 
 
