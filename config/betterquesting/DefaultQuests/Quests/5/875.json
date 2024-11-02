@@ -10,12 +10,10 @@
         "Damage:2": 2,
         "id:8": "gregtech:warning_sign"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.875.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.875.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 875,
   "tasks:9": {}
 }

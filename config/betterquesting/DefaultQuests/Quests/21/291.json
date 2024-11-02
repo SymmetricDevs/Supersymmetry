@@ -1,5 +1,4 @@
 {
-  "preRequisites:11": [],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.291.desc",
@@ -8,13 +7,11 @@
         "Damage:2": 14,
         "id:8": "opencomputers:upgrade"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.291.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.291.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 291,
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

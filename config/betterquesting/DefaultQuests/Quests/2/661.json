@@ -13,13 +13,11 @@
           "FluidName:8": "sperrylite_waste"
         }
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.661.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.661.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 661,
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

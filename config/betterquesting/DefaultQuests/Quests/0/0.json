@@ -1,5 +1,4 @@
 {
-  "preRequisites:11": [],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.0.desc",
@@ -7,14 +6,12 @@
       "icon:10": {
         "id:8": "biomesoplenty:earth"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
       "name:8": "susy.quest.db.0.title",
-      "questlogic:8": "NAND",
-      "visibility:8": "ALWAYS"
+      "questlogic:8": "NAND"
     }
   },
-  "rewards:9": {},
+  "questID:3": 0,
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

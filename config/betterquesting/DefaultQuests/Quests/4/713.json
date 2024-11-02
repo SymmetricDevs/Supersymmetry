@@ -13,13 +13,11 @@
           "FluidName:8": "coal_tar"
         }
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.713.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.713.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 713,
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

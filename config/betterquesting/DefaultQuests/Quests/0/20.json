@@ -6,22 +6,18 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.20.desc",
-      "frame:8": "ROUNDED_SQUARE",
+      "frame:8": "GATE",
       "icon:10": {
         "Damage:2": 1017,
         "id:8": "gregtech:machine"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.20.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.20.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 20,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 25,

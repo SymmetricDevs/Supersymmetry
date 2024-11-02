@@ -10,22 +10,18 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.98.desc",
-      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "Damage:2": 1,
         "id:8": "minecraft:sand"
       },
-      "ignoresview:1": 0,
-      "name:8": "susy.quest.db.98.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.98.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 98,
   "tasks:9": {
     "0:10": {
       "dimension:3": 32,
       "name:8": "Mars",
-      "range:3": -1,
       "taskID:8": "bq_standard:location"
     }
   }

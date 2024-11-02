@@ -6,7 +6,6 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.137.desc",
-      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "id:8": "gregtech:butchery_knife",
         "tag:10": {
@@ -28,17 +27,13 @@
           }
         }
       },
-      "ignoresview:1": 0,
-      "name:8": "susy.quest.db.137.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.137.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 137,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
       "ignoreNBT:1": 1,
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

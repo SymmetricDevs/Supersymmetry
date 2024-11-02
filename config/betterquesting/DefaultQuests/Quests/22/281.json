@@ -1,9 +1,7 @@
 {
-  "preRequisites:11": [],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.281.desc",
-      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "id:8": "forge:bucketfilled",
         "tag:10": {
@@ -11,13 +9,11 @@
           "FluidName:8": "bromine"
         }
       },
-      "ignoresview:1": 0,
       "name:8": "susy.quest.db.281.title",
-      "questlogic:8": "NAND",
-      "visibility:8": "ALWAYS"
+      "questlogic:8": "NAND"
     }
   },
-  "rewards:9": {},
+  "questID:3": 281,
   "tasks:9": {
     "0:10": {
       "requiredFluids:9": {

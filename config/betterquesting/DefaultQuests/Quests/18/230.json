@@ -14,18 +14,14 @@
           }
         }
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.230.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.230.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 230,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
       "index:3": 1,
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

@@ -11,17 +11,13 @@
         "OreDict:8": "ingotTin",
         "id:8": "gregtech:meta_ingot"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.14.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.14.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 14,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 10,
