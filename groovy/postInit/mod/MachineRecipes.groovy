@@ -1087,9 +1087,9 @@ recipemap('assembler').recipeBuilder()
 		.buildAndRegister()
 
 RecyclingHelper.addShaped('gregtech:large_fluid_pump', metaitem('large_fluid_pump'), [
-		[metaitem('rotorBronze'), ore('circuitlv')), metaitem('rotorBronze')],
+		[metaitem('rotorBronze'), ore('circuitLv'), metaitem('rotorBronze')],
 		[metaitem('cableGtQuadrupleTin'), metaitem('hull.lv'), metaitem('cableGtQuadrupleTin')],
-		[metaitem('rotorBronze'), ore('circuitlv'), metaitem('rotorBronze')]
+		[metaitem('rotorBronze'), ore('circuitLv'), metaitem('rotorBronze')]
 ])
 
 crafting.addShapeless("gregtech:ocean_pumper_switching", metaitem('large_fluid_pump'), [metaitem('ocean_pumper')]);
