@@ -5,6 +5,7 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.572.desc",
+      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "Damage:2": 1,
         "id:8": "opencomputers:misc",
@@ -76,13 +77,17 @@
           "oc:tier:1": 3
         }
       },
-      "name:8": "susy.quest.db.572.title"
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.572.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 572,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
+      "entryLogic:8": "AND",
       "index:3": 1,
+      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

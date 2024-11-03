@@ -1,7 +1,9 @@
 {
+  "preRequisites:11": [],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.301.desc",
+      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "id:8": "forge:bucketfilled",
         "tag:10": {
@@ -9,10 +11,12 @@
           "FluidName:8": "xenon"
         }
       },
-      "name:8": "susy.quest.db.301.title"
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.301.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 301,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
       "requiredFluids:9": {

@@ -10,11 +10,13 @@
         "Damage:2": 51,
         "id:8": "gregtech:meta_gear"
       },
+      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.135.title"
+      "name:8": "susy.quest.db.135.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 135,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

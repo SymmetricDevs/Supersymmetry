@@ -6,13 +6,16 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.784.desc",
+      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "Damage:2": 1,
         "id:8": "gregtech:machine"
       },
-      "name:8": "susy.quest.db.784.title"
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.784.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 784,
+  "rewards:9": {},
   "tasks:9": {}
 }

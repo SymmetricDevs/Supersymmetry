@@ -11,13 +11,17 @@
         "OreDict:8": "ingotCopper",
         "id:8": "gregtech:meta_ingot"
       },
+      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.13.title"
+      "name:8": "susy.quest.db.13.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 13,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
+      "entryLogic:8": "AND",
+      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 30,

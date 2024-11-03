@@ -10,11 +10,12 @@
         "Damage:2": 274,
         "id:8": "gregtechfoodoption:gtfo_meta_item"
       },
+      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.425.title"
+      "name:8": "susy.quest.db.425.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 425,
   "rewards:9": {
     "0:10": {
       "rewardID:8": "bq_standard:item",

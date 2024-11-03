@@ -13,13 +13,15 @@
           "FluidName:8": "chloroform"
         }
       },
+      "ignoresview:1": 0,
       "ismain:1": 1,
       "name:8": "susy.quest.db.642.title",
       "questlogic:8": "OR",
-      "tasklogic:8": "OR"
+      "tasklogic:8": "OR",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 642,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
       "requiredFluids:9": {

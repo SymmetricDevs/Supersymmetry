@@ -15,7 +15,8 @@
           "oc:lootFactory:8": "openglasses:wavefront objects"
         }
       },
-      "name:8": "susy.quest.ql.24.title"
+      "name:8": "susy.quest.ql.24.title",
+      "visibility:8": "ALWAYS"
     }
   },
   "quests:9": {

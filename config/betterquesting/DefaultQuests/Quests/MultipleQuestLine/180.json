@@ -13,11 +13,13 @@
           "FluidName:8": "treated_sulfuric_diesel"
         }
       },
+      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.180.title"
+      "name:8": "susy.quest.db.180.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 180,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

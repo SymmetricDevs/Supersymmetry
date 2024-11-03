@@ -12,7 +12,8 @@
           }
         }
       },
-      "name:8": "susy.quest.ql.26.title"
+      "name:8": "susy.quest.ql.26.title",
+      "visibility:8": "ALWAYS"
     }
   },
   "quests:9": {

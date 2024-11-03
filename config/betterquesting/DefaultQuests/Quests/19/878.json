@@ -12,10 +12,12 @@
         "Damage:2": 427,
         "id:8": "gregtech:wire_single"
       },
+      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.878.title"
+      "name:8": "susy.quest.db.878.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 878,
+  "rewards:9": {},
   "tasks:9": {}
 }

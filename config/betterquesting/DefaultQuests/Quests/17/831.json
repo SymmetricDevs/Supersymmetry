@@ -12,12 +12,15 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.831.desc",
+      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "id:8": "gregtech:borderless_yellow_lamp"
       },
-      "name:8": "susy.quest.db.831.title"
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.831.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 831,
+  "rewards:9": {},
   "tasks:9": {}
 }

@@ -11,12 +11,16 @@
         "Damage:2": 2,
         "id:8": "pyrotech:material"
       },
-      "name:8": "susy.quest.db.744003683.title"
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.744003683.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 744003683,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
+      "entryLogic:8": "AND",
+      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 4,

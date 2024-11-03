@@ -13,12 +13,14 @@
           "FluidName:8": "ultrapure_water"
         }
       },
+      "ignoresview:1": 0,
       "ismain:1": 1,
       "name:8": "susy.quest.db.459.title",
-      "tasklogic:8": "OR"
+      "tasklogic:8": "OR",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 459,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
       "requiredFluids:9": {

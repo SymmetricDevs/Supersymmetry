@@ -8,7 +8,8 @@
         "Damage:2": 1610,
         "id:8": "gregtech:machine"
       },
-      "name:8": "susy.quest.ql.25.title"
+      "name:8": "susy.quest.ql.25.title",
+      "visibility:8": "ALWAYS"
     }
   },
   "quests:9": {

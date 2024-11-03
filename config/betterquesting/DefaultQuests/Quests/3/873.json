@@ -5,6 +5,7 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.873.desc",
+      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "id:8": "forge:bucketfilled",
         "tag:10": {
@@ -12,9 +13,11 @@
           "FluidName:8": "ortho_para_xylene_mixture"
         }
       },
-      "name:8": "susy.quest.db.873.title"
+      "ignoresview:1": 0,
+      "name:8": "susy.quest.db.873.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 873,
+  "rewards:9": {},
   "tasks:9": {}
 }

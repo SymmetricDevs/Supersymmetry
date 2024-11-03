@@ -13,11 +13,13 @@
         "Damage:2": 1,
         "id:8": "susy:meta_item"
       },
+      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.367.title"
+      "name:8": "susy.quest.db.367.title",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 367,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

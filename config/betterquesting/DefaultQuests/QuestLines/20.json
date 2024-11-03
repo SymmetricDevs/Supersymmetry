@@ -13,7 +13,8 @@
           "raw_cast:1": 0
         }
       },
-      "name:8": "susy.quest.ql.20.title"
+      "name:8": "susy.quest.ql.20.title",
+      "visibility:8": "ALWAYS"
     }
   },
   "quests:9": {

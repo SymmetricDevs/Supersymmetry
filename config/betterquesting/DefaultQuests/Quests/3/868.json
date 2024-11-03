@@ -15,12 +15,14 @@
           "FluidName:8": "acrylic_photoemulsion"
         }
       },
+      "ignoresview:1": 0,
       "ismain:1": 1,
       "name:8": "susy.quest.db.868.title",
-      "tasklogic:8": "OR"
+      "tasklogic:8": "OR",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 868,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
       "requiredFluids:9": {

@@ -10,12 +10,14 @@
         "Damage:2": 8103,
         "id:8": "gregtech:meta_dust"
       },
+      "ignoresview:1": 0,
       "ismain:1": 1,
       "name:8": "susy.quest.db.460.title",
-      "tasklogic:8": "OR"
+      "tasklogic:8": "OR",
+      "visibility:8": "ALWAYS"
     }
   },
-  "questID:3": 460,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
       "requiredFluids:9": {
