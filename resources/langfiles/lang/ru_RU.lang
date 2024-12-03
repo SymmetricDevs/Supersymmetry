@@ -1975,6 +1975,7 @@ susy.material.potassium_manganate=Манганат калия
 susy.material.lead_free_solder=Припой без свинца
 susy.material.cryogenic_solder=Криогенный припой
 susy.material.oxidized_manganate_solution=Раствор окисленного манганата
+susy.material.manganese_dioxide_cathode=Диоксид-марганцевый катод
 
 # Изотопы
 

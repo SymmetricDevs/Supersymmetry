@@ -13,30 +13,10 @@ import gregtech.api.unification.stack.UnificationEntry;
 
 CSTR = recipemap('continuous_stirred_tank_reactor')
 ROASTER = recipemap('roaster')
+MIXER = recipemap('mixer')
 BR = recipemap('batch_reactor')
 BCR = recipemap('bubble_column_reactor')
 BENDER = recipemap('bender')
-CANNER = recipemap('canner')
-
-// REMOVALS
-// Small Sodium Battery * 1
-CANNER.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustSodium') * 2], null)
-// Medium Sodium Battery * 1
-CANNER.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustSodium') * 8], null)
-// Large Sodium Battery * 1
-CANNER.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustSodium') * 16], null)
-// Small Lithium Battery * 1
-CANNER.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustLithium') * 2], null)
-// Medium Lithium Battery * 1
-CANNER.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustLithium') * 8], null)
-// Large Lithium Battery * 1
-CANNER.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustLithium') * 16], null)
-// Small Cadmium Battery * 1
-CANNER.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustCadmium') * 2], null)
-// Medium Cadmium Battery * 1
-CANNER.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustCadmium') * 8], null)
-// Large Cadmium Battery * 1
-CANNER.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustCadmium') * 16], null)
 
 crafting.addShaped("battery_lead_acid", metaitem('battery.lead_acid'), [
         [metaitem('plateBatteryAlloy'), metaitem('cableGtSingleTin'), metaitem('plateBatteryAlloy')],
@@ -266,7 +246,36 @@ BENDER.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+// MnO2 cathode line
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustManganeseDioxide') * 27) // MnO2 * 9
+        .inputs(ore('dustGraphite'))
+        .outputs(metaitem('dustManganeseDioxideCathode') * 28)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
 // Remove Batteries
+
+// Small Sodium Battery * 1
+mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustSodium') * 2], null)
+// Medium Sodium Battery * 1
+mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustSodium') * 8], null)
+// Large Sodium Battery * 1
+mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustSodium') * 16], null)
+// Small Lithium Battery * 1
+mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustLithium') * 2], null)
+// Medium Lithium Battery * 1
+mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustLithium') * 8], null)
+// Large Lithium Battery * 1
+mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustLithium') * 16], null)
+// Small Cadmium Battery * 1
+mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustCadmium') * 2], null)
+// Medium Cadmium Battery * 1
+mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustCadmium') * 8], null)
+// Large Cadmium Battery * 1
+mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustCadmium') * 16], null)
 
 mods.gregtech.autoclave.removeByInput(480, [metaitem('energium_dust') * 9], [fluid('water') * 1000])
 mods.gregtech.autoclave.removeByInput(320, [metaitem('energium_dust') * 9], [fluid('distilled_water') * 1000])

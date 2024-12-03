@@ -1985,6 +1985,7 @@ susy.material.lead_free_solder=Lead-Free Solder
 susy.material.cryogenic_solder=Cryogenic Solder
 susy.material.oxidized_manganate_solution=Oxidized Manganate Solution
 susy.material.galvanized_steel=Galvanized Steel
+susy.material.manganese_dioxide_cathode=Manganese Dioxide Cathode
 
 susy.material.incoloy_twenty=Incoloy 20
 susy.material.incoloy_eight_two_five=Incoloy 825

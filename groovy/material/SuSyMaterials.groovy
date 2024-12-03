@@ -1277,6 +1277,7 @@ class SuSyMaterials {
         public static Material LithiumCarbonateSolution;
         public static Material AcidicArgonHydrogenMixture;
         public static Material AmmoniacalArgonHydrogenMixture;
+        public static Material ManganeseDioxideCathode;
 
         // Organic Chemistry Materials
 

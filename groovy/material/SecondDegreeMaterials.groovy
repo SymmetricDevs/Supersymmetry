@@ -726,6 +726,12 @@ public class SecondDegreeMaterials {
                 .components(Argon, Hydrogen * 4, Ammonia)
                 .colorAverage()
                 .build()
-                .setFormula("(Ar)(NH3)(H)", true)
+                .setFormula("(Ar)(NH3)(H)", true);
+
+        ManganeseDioxideCathode = new Material.Builder(13119, SuSyUtility.susyId("manganese_dioxide_cathode"))
+                .dust()
+                .components(ManganeseDioxide * 9, Graphite * 1)
+                .colorAverage()
+                .build();
     }
 }
