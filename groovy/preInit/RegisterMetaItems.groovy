@@ -100,7 +100,7 @@ eventManager.listen {
         customMetaItems.addItem(201, "vti_rich_pig_iron");
         customMetaItems.addItem(202, "vt_slag");
 
-	customMetaItems.addItem(210, "bound_leather")
+        customMetaItems.addItem(210, "bound_leather")
 
         customMetaItems.addItem(212, "drone.lv").setMaxStackSize(1).addComponents(ElectricStats.createRechargeableBattery(10000, GTValues.LV)).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
         customMetaItems.addItem(213, "glass_fibers")
