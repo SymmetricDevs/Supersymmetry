@@ -1,4 +1,5 @@
 import globals.Globals
+//import globals.GroovyUtils
 
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;
@@ -10,31 +11,32 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 
-//REMOVALS
-// Small Sodium Battery * 1
-mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustSodium') * 2], null)
-// Medium Sodium Battery * 1
-mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustSodium') * 8], null)
-// Large Sodium Battery * 1
-mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustSodium') * 16], null)
-// Small Lithium Battery * 1
-mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustLithium') * 2], null)
-// Medium Lithium Battery * 1
-mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustLithium') * 8], null)
-// Large Lithium Battery * 1
-mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustLithium') * 16], null)
-// Small Cadmium Battery * 1
-mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustCadmium') * 2], null)
-// Medium Cadmium Battery * 1
-mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustCadmium') * 8], null)
-// Large Cadmium Battery * 1
-mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustCadmium') * 16], null)
-
-
 CSTR = recipemap('continuous_stirred_tank_reactor')
 ROASTER = recipemap('roaster')
 BR = recipemap('batch_reactor')
 BCR = recipemap('bubble_column_reactor')
+BENDER = recipemap('bender')
+CANNER = recipemap('canner')
+
+// REMOVALS
+// Small Sodium Battery * 1
+CANNER.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustSodium') * 2], null)
+// Medium Sodium Battery * 1
+CANNER.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustSodium') * 8], null)
+// Large Sodium Battery * 1
+CANNER.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustSodium') * 16], null)
+// Small Lithium Battery * 1
+CANNER.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustLithium') * 2], null)
+// Medium Lithium Battery * 1
+CANNER.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustLithium') * 8], null)
+// Large Lithium Battery * 1
+CANNER.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustLithium') * 16], null)
+// Small Cadmium Battery * 1
+CANNER.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustCadmium') * 2], null)
+// Medium Cadmium Battery * 1
+CANNER.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustCadmium') * 8], null)
+// Large Cadmium Battery * 1
+CANNER.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustCadmium') * 16], null)
 
 crafting.addShaped("battery_lead_acid", metaitem('battery.lead_acid'), [
         [metaitem('plateBatteryAlloy'), metaitem('cableGtSingleTin'), metaitem('plateBatteryAlloy')],
@@ -58,6 +60,7 @@ mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('battery.hull.lv'))
         .inputs(ore('plateLead') * 2)
         .fluidInputs(fluid('sulfuric_acid') * 1000)
+//        .outputs(GroovyUtils.makeCharged(metaitem('battery.lead_acid')))
         .outputs(metaitem('battery.lead_acid'))
         .duration(100)
         .EUt(16)
@@ -133,33 +136,6 @@ ROASTER.recipeBuilder()
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .outputs(metaitem('dustLithiumCobaltOxide') * 8)
         .duration(140)
-        .EUt(30)
-        .buildAndRegister()
-
-ROASTER.recipeBuilder()
-        .inputs(ore('dustNickel') * 1)
-        .fluidInputs(fluid('chlorine') * 2000)
-        .outputs(metaitem('dustNickelChloride') * 3)
-        .duration(100)
-        .EUt(30)
-        .buildAndRegister()
-
-BR.recipeBuilder()
-        .inputs(ore('dustNickelChloride') * 3)
-        .fluidInputs(fluid('potassium_hydroxide_solution') * 2000)
-        .outputs(metaitem('dustNickelHydroxide') * 5)
-        .fluidOutputs(fluid('potassium_chloride_solution') * 2000)
-        .duration(100)
-        .EUt(30)
-        .buildAndRegister()
-
-BR.recipeBuilder()
-        .inputs(ore('dustNickelHydroxide') * 10)
-        .fluidInputs(fluid('potassium_hydroxide_solution') * 2000)
-        .fluidInputs(fluid('chlorine') * 2000)
-        .outputs(metaitem('dustNickelOxideHydroxide') * 8)
-        .fluidOutputs(fluid('diluted_rock_salt_solution') * 4000)
-        .duration(100)
         .EUt(30)
         .buildAndRegister()
 
@@ -251,6 +227,43 @@ mods.gregtech.assembler.recipeBuilder()
         .outputs(metaitem('battery.re.hv.cadmium'))
         .duration(400)
         .EUt(16)
+        .buildAndRegister()
+
+// NiO(OH) cathode line
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustNickel') * 1)
+        .fluidInputs(fluid('chlorine') * 2000)
+        .outputs(metaitem('dustNickelChloride') * 3)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .inputs(ore('dustNickelChloride') * 3)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 2000)
+        .outputs(metaitem('dustNickelHydroxide') * 5)
+        .fluidOutputs(fluid('potassium_chloride_solution') * 2000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+BR.recipeBuilder()
+        .inputs(ore('dustNickelHydroxide') * 5)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
+        .fluidInputs(fluid('chlorine') * 1000)
+        .outputs(metaitem('dustNickelOxideHydroxide') * 4)
+        .fluidOutputs(fluid('diluted_rock_salt_solution') * 2000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+BENDER.recipeBuilder()
+        .inputs(ore('foilNickel'))
+        .inputs(ore('dustSmallNickelOxideHydroxide'))
+        .outputs(metaitem('cathode.niooh'))
+        .duration(200)
+        .EUt(30)
         .buildAndRegister()
 
 // Remove Batteries
