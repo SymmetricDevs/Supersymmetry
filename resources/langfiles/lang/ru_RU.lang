@@ -2063,6 +2063,7 @@ metaitem.cathode.lead.name=Свинцовый катод
 metaitem.anode.lead.name=Свинцовый анод
 metaitem.battery.lead_acid.name=Свинцово-кислотная батарея
 metaitem.cathode.niooh.name=Никель-оксид-гидроксидный катод
+metaitem.battery.ni_fe.name=Железо-никелевая батарея
 metaitem.battery.ram.name=Перезаряжаемая щелочная батарея
 
 metaitem.steam.piston.name=Паровой поршень

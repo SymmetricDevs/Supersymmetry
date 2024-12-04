@@ -246,6 +246,18 @@ BENDER.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+// NiFe Battery
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('battery.hull.mv'))
+        .inputs(ore('plateIron'))
+        .inputs(ore('dustNickelOxideHydroxide') * 4)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
+        .outputs(GroovyUtils.makeCharged(metaitem('battery.ni_fe')))
+        .duration(400)
+        .EUt(30)
+        .buildAndRegister()
+
 // MnO2 cathode line
 
 MIXER.recipeBuilder()

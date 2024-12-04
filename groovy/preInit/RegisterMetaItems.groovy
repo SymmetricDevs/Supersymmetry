@@ -196,7 +196,11 @@ eventManager.listen {
         //customMetaItems.addItem(4003, "cathode.lead_paste");
         //customMetaItems.addItem(4004, "cathode.pb_pbo2")
         customMetaItems.addItem(4005, "cathode.niooh");
-        //customMetaItems.addItem(4006, "battery.fe_ni");
+        customMetaItems.addItem(4006, "battery.ni_fe")
+            .addComponents(ElectricStats.createRechargeableBattery(120000, GTValues.MV))
+            .setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV)
+            .setModelAmount(8)
+            .setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
         //customMetaItems.addItem(4007, "battery.ni_cd");
         customMetaItems.addItem(4008, "battery.ram")
             .addComponents(ElectricStats.createRechargeableBattery(240000, GTValues.MV))
