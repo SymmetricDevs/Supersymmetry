@@ -207,6 +207,7 @@ eventManager.listen {
             .setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV)
             .setModelAmount(8)
             .setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4009, "anode.calcium_zincate");
 
         customMetaItems.addItem(4101, "vacuum_tube_components");
 

@@ -1976,6 +1976,8 @@ susy.material.lead_free_solder=Припой без свинца
 susy.material.cryogenic_solder=Криогенный припой
 susy.material.oxidized_manganate_solution=Раствор окисленного манганата
 susy.material.manganese_dioxide_cathode=Диоксид-марганцевый катод
+susy.material.calcium_zincate=Цинкат кальция
+susy.material.calcium_zincate_suspension=Суспензия цинката кальция
 
 # Изотопы
 
@@ -2065,6 +2067,7 @@ metaitem.battery.lead_acid.name=Свинцово-кислотная батаре
 metaitem.cathode.niooh.name=Никель-оксид-гидроксидный катод
 metaitem.battery.ni_fe.name=Железо-никелевая батарея
 metaitem.battery.ram.name=Перезаряжаемая щелочная батарея
+metaitem.anode.calcium_zincate.name=Цинкат-кальциевый анод
 
 metaitem.steam.piston.name=Паровой поршень
 metaitem.steam.motor.name=Паровой двигатель

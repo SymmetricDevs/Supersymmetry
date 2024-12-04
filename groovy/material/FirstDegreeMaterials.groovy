@@ -3513,5 +3513,12 @@ public class FirstDegreeMaterials {
                 .components(Iron * 24, Nickel * 5, Chrome * 8, Manganese, Molybdenum * 2)
                 .colorAverage()
                 .build()
+
+        CalciumZincate = new Material.Builder(8636, SuSyUtility.susyId('calcium_zincate'))
+                .dust()
+                .components(Calcium, Zinc * 2, Oxygen * 6, Hydrogen * 6, Water * 2)
+                .color(0xfffefa)
+                .build()
+                .setFormula("Ca[Zn(OH)3]2 * (H2O)2", true);
     }
 }

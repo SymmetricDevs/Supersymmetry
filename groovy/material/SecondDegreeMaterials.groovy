@@ -728,10 +728,17 @@ public class SecondDegreeMaterials {
                 .build()
                 .setFormula("(Ar)(NH3)(H)", true);
 
-        ManganeseDioxideCathode = new Material.Builder(13119, SuSyUtility.susyId("manganese_dioxide_cathode"))
+        ManganeseDioxideCathode = new Material.Builder(13119, SuSyUtility.susyId('manganese_dioxide_cathode'))
                 .dust()
                 .components(ManganeseDioxide * 9, Graphite * 1)
                 .colorAverage()
                 .build();
+
+        CalciumZincateSuspension = new Material.Builder(13120, SuSyUtility.susyId('calcium_zincate_suspension'))
+                .liquid()
+                .components(Calcium, Zinc * 2, Oxygen * 6, Hydrogen * 6, Water * 2)
+                .color(0xfffefa)
+                .build()
+                .setFormula("Ca[Zn(OH)3]2(H2O)2", true);
     }
 }

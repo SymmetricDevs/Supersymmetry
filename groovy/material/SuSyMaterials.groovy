@@ -1087,6 +1087,7 @@ class SuSyMaterials {
         public static Material StelliteSix;
         public static Material HSLAEightyX;
         public static Material FoodGradeStainlessSteel;
+        public static Material CalciumZincate;
 
         // HP Materials
 
@@ -1278,6 +1279,7 @@ class SuSyMaterials {
         public static Material AcidicArgonHydrogenMixture;
         public static Material AmmoniacalArgonHydrogenMixture;
         public static Material ManganeseDioxideCathode;
+        public static Material CalciumZincateSuspension;
 
         // Organic Chemistry Materials
 

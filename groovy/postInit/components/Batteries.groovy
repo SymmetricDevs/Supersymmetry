@@ -18,6 +18,8 @@ BR = recipemap('batch_reactor')
 BCR = recipemap('bubble_column_reactor')
 BENDER = recipemap('bender')
 ASSEMBLER = recipemap('assembler')
+CRYSTALLIZER = recipemap('crystallizer')
+EXTRUDER = recipemap('extruder')
 
 crafting.addShaped("battery_lead_acid", metaitem('battery.lead_acid'), [
         [metaitem('plateBatteryAlloy'), metaitem('cableGtSingleTin'), metaitem('plateBatteryAlloy')],
@@ -278,6 +280,32 @@ ASSEMBLER.recipeBuilder()
         .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
         .outputs(GroovyUtils.makeCharged(metaitem('battery.ram')))
         .duration(200)
+        .EUt(120)
+        .buildAndRegister()
+
+// Calcium Zincate anode line
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustCalciumHydroxide') * 5)
+        .inputs(ore('dustZincOxide') * 4)
+        .fluidInputs(fluid('demineralized_water') * 4000)
+        .fluidOutputs(fluid('calcium_zincate_suspension') * 4000)
+        .duration(200)
+        .EUt(480)
+        .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+        .fluidInputs(fluid('calcium_zincate_suspension') * 4000)
+        .outputs(metaitem('dustCalciumZincate') * 21)
+        .duration(1200)
+        .EUt(30)
+        .buildAndRegister()
+
+EXTRUDER.recipeBuilder()
+        .inputs(ore('dustCalciumZincate') * 21)
+        .inputs(ore('foilPlastic') * 4)
+        .outputs(metaitem('anode.calcium_zincate') * 4)
+        .duration(100)
         .EUt(120)
         .buildAndRegister()
 

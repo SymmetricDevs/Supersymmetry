@@ -1986,6 +1986,8 @@ susy.material.cryogenic_solder=Cryogenic Solder
 susy.material.oxidized_manganate_solution=Oxidized Manganate Solution
 susy.material.galvanized_steel=Galvanized Steel
 susy.material.manganese_dioxide_cathode=Manganese Dioxide Cathode
+susy.material.calcium_zincate=Calcium Zincate
+susy.material.calcium_zincate_suspension=Calcium Zincate Suspension
 
 susy.material.incoloy_twenty=Incoloy 20
 susy.material.incoloy_eight_two_five=Incoloy 825
@@ -2101,6 +2103,7 @@ metaitem.battery.lead_acid.name=Lead Acid Battery
 metaitem.cathode.niooh.name=Nickel Oxide Hydroxide Cathode
 metaitem.battery.ni_fe.name=NiFe Battery
 metaitem.battery.ram.name=RAM Battery
+metaitem.anode.calcium_zincate.name=Calcium Zincate Anode
 
 metaitem.steam.piston.name=Steam Piston
 metaitem.steam.motor.name=Steam Motor
