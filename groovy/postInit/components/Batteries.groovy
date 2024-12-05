@@ -251,7 +251,7 @@ BENDER.recipeBuilder()
 // NiFe Battery
 
 ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('battery.hull.mv'))
+        .inputs(metaitem('battery.primitivehull.mv'))
         .inputs(ore('plateIron'))
         .inputs(ore('dustNickelOxideHydroxide') * 4)
         .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
@@ -273,7 +273,7 @@ MIXER.recipeBuilder()
 // RAM Battery
 
 ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('battery.hull.mv'))
+        .inputs(metaitem('battery.primitivehull.mv'))
         .inputs(ore('foilZinc') * 4)
         .inputs(ore('dustManganeseDioxideCathode') * 7)
         .inputs(item('minecraft:paper'))
@@ -308,6 +308,9 @@ EXTRUDER.recipeBuilder()
         .duration(100)
         .EUt(120)
         .buildAndRegister()
+
+// Hulls
+
 
 // Remove Batteries
 

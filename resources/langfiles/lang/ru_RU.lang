@@ -2069,13 +2069,13 @@ metaitem.battery.ni_fe.name=Железо-никелевая батарея
 metaitem.battery.ram.name=Перезаряжаемая щелочная батарея
 metaitem.anode.calcium_zincate.name=Цинкат-кальциевый анод
 
-metaitem.battery.hull1.lv=Примитивный корпус LV-батареи
-metaitem.battery.hull1.mv=Примитивный корпус MV-батареи
-metaitem.battery.hull2.lv=Корпус LV-батареи
-metaitem.battery.hull2.mv=Корпус MV-батареи
-metaitem.battery.hull2.hv=Корпус HV-батареи
-metaitem.battery.hull2.ev=Корпус EV-батареи
-metaitem.battery.hull2.iv=Корпус IV-батареи
+metaitem.battery.primitivehull.lv.name=Примитивный корпус LV-батареи
+metaitem.battery.primitivehull.mv.name=Примитивный корпус MV-батареи
+metaitem.battery.hull.lv.name=Корпус LV-батареи
+metaitem.battery.hull.mv.name=Корпус MV-батареи
+metaitem.battery.hull.hv.name=Корпус HV-батареи
+metaitem.battery.hull.ev.name=Корпус EV-батареи
+metaitem.battery.hull.iv.name=Корпус IV-батареи
 
 metaitem.steam.piston.name=Паровой поршень
 metaitem.steam.motor.name=Паровой двигатель
