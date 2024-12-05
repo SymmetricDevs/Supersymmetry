@@ -2105,6 +2105,14 @@ metaitem.battery.ni_fe.name=NiFe Battery
 metaitem.battery.ram.name=RAM Battery
 metaitem.anode.calcium_zincate.name=Calcium Zincate Anode
 
+metaitem.battery.hull1.lv=Primitive LV Battery Hull
+metaitem.battery.hull1.mv=Primitive MV Battery Hull
+metaitem.battery.hull2.lv=LV Battery Hull
+metaitem.battery.hull2.mv=MV Battery Hull
+metaitem.battery.hull2.hv=HV Battery Hull
+metaitem.battery.hull2.ev=EV Battery Hull
+metaitem.battery.hull2.iv=IV Battery Hull
+
 metaitem.steam.piston.name=Steam Piston
 metaitem.steam.motor.name=Steam Motor
 metaitem.steam.pump.name=Steam Pump

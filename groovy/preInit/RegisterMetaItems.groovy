@@ -208,6 +208,15 @@ eventManager.listen {
             .setModelAmount(8)
             .setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
         customMetaItems.addItem(4009, "anode.calcium_zincate");
+        // Hulls 4080-4100
+        customMetaItems.addItem(4080, "battery.hull1.lv");
+        customMetaItems.addItem(4081, "battery.hull1.mv");
+        customMetaItems.addItem(4082, "battery.hull2.lv");
+        customMetaItems.addItem(4083, "battery.hull2.mv");
+        customMetaItems.addItem(4084, "battery.hull2.hv");
+        customMetaItems.addItem(4085, "battery.hull2.ev");
+        customMetaItems.addItem(4086, "battery.hull2.iv");
+
 
         customMetaItems.addItem(4101, "vacuum_tube_components");
 
