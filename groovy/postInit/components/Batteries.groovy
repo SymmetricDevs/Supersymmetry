@@ -312,7 +312,7 @@ EXTRUDER.recipeBuilder()
 
 /*
  * Hulls
-*/
+ */
 
 for (voltage in ['lv', 'mv', 'hv', 'ev', 'iv']) {
     crafting.remove('gregtech:battery_hull_' + voltage)
@@ -452,8 +452,14 @@ RecyclingHelper.handleRecycling(metaitem('battery.primitivehull.mv'),
         [ore('plateBatteryAlloy') * 3, metaitem('cableGtSingleCopper') * 2])
 
 
-// Remove Batteries
+/*
+ * Remove legacy batteries
+ */
 
+// Hulls
+mods.jei.ingredient.removeAndHide(metaitem('battery.hull.luv'))
+mods.jei.ingredient.removeAndHide(metaitem('battery.hull.zpm'))
+mods.jei.ingredient.removeAndHide(metaitem('battery.hull.uv'))
 // Sodium Battery
 mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustSodium') * 2], null)
 mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustSodium') * 8], null)
@@ -466,23 +472,37 @@ mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('du
 mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustCadmium') * 2], null)
 mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustCadmium') * 8], null)
 mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustCadmium') * 16], null)
+// Vanadium Battery
+mods.gregtech.canner.removeByInput(480, [metaitem('battery.hull.ev'), metaitem('dustVanadium') * 2], null)
+mods.gregtech.canner.removeByInput(1024, [metaitem('battery.hull.iv'), metaitem('dustVanadium') * 8], null)
+mods.gregtech.canner.removeByInput(1920, [metaitem('battery.hull.luv'), metaitem('dustVanadium') * 16], null)
+mods.gregtech.extractor.removeByInput(2, [metaitem('battery.luv.vanadium')], null)
+mods.jei.ingredient.removeAndHide(metaitem('battery.ev.vanadium'))
+mods.jei.ingredient.removeAndHide(metaitem('battery.iv.vanadium'))
+mods.jei.ingredient.removeAndHide(metaitem('battery.luv.vanadium'))
+// Naquadria Battery
+mods.gregtech.canner.removeByInput(4096, [metaitem('battery.hull.zpm'), metaitem('dustNaquadria') * 8], null)
+mods.gregtech.canner.removeByInput(7680, [metaitem('battery.hull.uv'), metaitem('dustNaquadria') * 16], null)
+mods.gregtech.extractor.removeByInput(2, [metaitem('battery.zpm.naquadria')], null)
+mods.gregtech.extractor.removeByInput(2, [metaitem('battery.uv.naquadria')], null)
+mods.jei.ingredient.removeAndHide(metaitem('battery.zpm.naquadria'))
+mods.jei.ingredient.removeAndHide(metaitem('battery.uv.naquadria'))
 // Energy crystal
 mods.gregtech.autoclave.removeByInput(480, [metaitem('energium_dust') * 9], [fluid('water') * 1000])
 mods.gregtech.autoclave.removeByInput(320, [metaitem('energium_dust') * 9], [fluid('distilled_water') * 1000])
 mods.gregtech.autoclave.removeByInput(256, [metaitem('energium_dust') * 9], [fluid('black_steel') * 288])
 mods.gregtech.autoclave.removeByInput(192, [metaitem('energium_dust') * 9], [fluid('blue_steel') * 72])
+mods.jei.ingredient.removeAndHide(metaitem('energy_crystal'))
 // Lapotron
 mods.gregtech.autoclave.removeByInput(480, [metaitem('dustLapotron') * 15], [fluid('water') * 1000])
 mods.gregtech.autoclave.removeByInput(320, [metaitem('dustLapotron') * 15], [fluid('distilled_water') * 1000])
 mods.gregtech.autoclave.removeByInput(256, [metaitem('dustLapotron') * 15], [fluid('blue_steel') * 288])
 mods.gregtech.autoclave.removeByInput(192, [metaitem('dustLapotron') * 15], [fluid('red_steel') * 72])
+mods.jei.ingredient.removeAndHide(metaitem('lapotron_crystal'))
 
-mods.jei.ingredient.removeAndHide(metaitem('energy_crystal'));
-mods.jei.ingredient.removeAndHide(metaitem('lapotron_crystal'));
-
-mods.jei.ingredient.removeAndHide(metaitem('energy.lapotronic_orb'));
-mods.jei.ingredient.removeAndHide(metaitem('energy.lapotronic_orb_cluster'));
-mods.jei.ingredient.removeAndHide(metaitem('energy.module'));
-mods.jei.ingredient.removeAndHide(metaitem('energy.cluster'));
-mods.jei.ingredient.removeAndHide(metaitem('max.battery'));
+mods.jei.ingredient.removeAndHide(metaitem('energy.lapotronic_orb'))
+mods.jei.ingredient.removeAndHide(metaitem('energy.lapotronic_orb_cluster'))
+mods.jei.ingredient.removeAndHide(metaitem('energy.module'))
+mods.jei.ingredient.removeAndHide(metaitem('energy.cluster'))
+mods.jei.ingredient.removeAndHide(metaitem('max.battery'))
 
