@@ -786,7 +786,7 @@ mods.gregtech.forge_hammer.recipeBuilder()
 
 mods.gregtech.macerator.recipeBuilder()
 		.inputs(item('susy:resource_block_1', 2))
-		.outputs(metaitem('dustgemAnthracite') * 8)
+		.outputs(metaitem('dustLignite') * 8)
 		.duration(240)
 		.EUt(7)
 		.buildAndRegister();
