@@ -1283,6 +1283,7 @@ class SuSyMaterials {
         public static Material LithiumCarbonateSolution;
         public static Material AcidicArgonHydrogenMixture;
         public static Material AmmoniacalArgonHydrogenMixture;
+        public static Material OxideCoatedLead;
         public static Material ManganeseDioxideCathode;
         public static Material CalciumZincateSuspension;
 

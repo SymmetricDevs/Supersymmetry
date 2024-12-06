@@ -727,14 +727,21 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
                 .setFormula("(Ar)(NH3)(H)", true);
+        
+        OxideCoatedLead = new Material.Builder(13120, SuSyUtility.susyId('oxide_coated_lead'))
+                .ingot()
+                .flags(NO_UNIFICATION, GENERATE_PLATE)
+                .color(0x1d0b25)
+                .build()
+                .setFormula("(Pb)(PbO2)", true) 
 
-        ManganeseDioxideCathode = new Material.Builder(13119, SuSyUtility.susyId('manganese_dioxide_cathode'))
+        ManganeseDioxideCathode = new Material.Builder(13121, SuSyUtility.susyId('manganese_dioxide_cathode'))
                 .dust()
                 .components(ManganeseDioxide * 9, Graphite * 1)
                 .colorAverage()
                 .build();
 
-        CalciumZincateSuspension = new Material.Builder(13120, SuSyUtility.susyId('calcium_zincate_suspension'))
+        CalciumZincateSuspension = new Material.Builder(13122, SuSyUtility.susyId('calcium_zincate_suspension'))
                 .liquid()
                 .components(Calcium, Zinc * 2, Oxygen * 6, Hydrogen * 6, Water * 2)
                 .color(0xfffefa)

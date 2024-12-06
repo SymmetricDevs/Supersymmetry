@@ -1985,6 +1985,7 @@ susy.material.lead_free_solder=Lead-Free Solder
 susy.material.cryogenic_solder=Cryogenic Solder
 susy.material.oxidized_manganate_solution=Oxidized Manganate Solution
 susy.material.galvanized_steel=Galvanized Steel
+susy.material.oxide_coated_lead=Oxide-Coated Lead
 susy.material.manganese_dioxide_cathode=Manganese Dioxide Cathode
 susy.material.calcium_zincate=Calcium Zincate
 susy.material.calcium_zincate_suspension=Calcium Zincate Suspension
@@ -2102,6 +2103,7 @@ metaitem.storage.segment.name=Storage Segment
 
 metaitem.gun.barrel.steel.name=Steel Barrel
 
+metaitem.cathode.lead_paste.name=Lead Cathode Paste
 metaitem.cathode.lead.name=Lead Cathode
 metaitem.anode.lead.name=Lead Anode
 metaitem.battery.lead_acid.name=Lead Acid Battery

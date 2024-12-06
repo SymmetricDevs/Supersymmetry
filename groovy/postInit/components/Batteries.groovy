@@ -21,33 +21,7 @@ BENDER = recipemap('bender')
 ASSEMBLER = recipemap('assembler')
 CRYSTALLIZER = recipemap('crystallizer')
 EXTRUDER = recipemap('extruder')
-
-crafting.addShaped("battery_lead_acid", metaitem('battery.lead_acid'), [
-        [metaitem('plateBatteryAlloy'), metaitem('cableGtSingleTin'), metaitem('plateBatteryAlloy')],
-        [metaitem('cathode.lead'),fluid('sulfuric_acid') * 1000, metaitem('anode.lead')],
-        [metaitem('plateBatteryAlloy'), metaitem('plateBatteryAlloy'), metaitem('plateBatteryAlloy')]
-]);
-
-crafting.addShaped("cathode_lead", metaitem('cathode.lead'), [
-        [null,null,null],
-        [metaitem('cableGtSingleTin'), metaitem('plateLead'),null],
-        [null,null,null]
-]);
-
-crafting.addShaped("anode_lead", metaitem('anode.lead'), [
-        [null,null,null],
-        [null,metaitem('plateLead'),metaitem('cableGtSingleTin')],
-        [null,null,null]
-]);
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs(metaitem('battery.hull.lv'))
-        .inputs(ore('plateLead') * 2)
-        .fluidInputs(fluid('sulfuric_acid') * 1000)
-        .outputs(metaitem('battery.lead_acid'))
-        .duration(100)
-        .EUt(16)
-        .buildAndRegister()
+ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 MIXER_RECIPES.recipeBuilder()
         .fluidInputs(Materials.SulfurTrioxide.getFluid(1000))
@@ -186,6 +160,36 @@ mods.gregtech.assembler.recipeBuilder()
  * Components
  */
 
+// Pb anode & PbO2 cathode line
+
+crafting.addShapeless("anode_lead", metaitem('anode.lead'), [
+        metaitem('plateLead'), metaitem('cableGtSingleTin')
+]);
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustLead'))
+        .fluidInputs(fluid('diluted_sulfuric_acid') * 1000)
+        .outputs(metaitem('cathode.lead_paste'))
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(100)
+        .EUt(16)
+        .buildAndRegister()
+
+crafting.addShapeless("cathode_lead", metaitem('cathode.lead'), [
+        metaitem('anode.lead'), metaitem('cathode.lead_paste')
+]);
+
+ELECTROLYTIC_CELL.recipeBuilder()
+        .inputs(ore('plateLead'))
+        .fluidInputs(fluid('water') * 2000)
+        .notConsumable(metaitem('plateCopper'))
+        .notConsumable(fluid('sulfuric_acid') * 1000)
+        .outputs(metaitem('plateOxideCoatedLead'))
+        .fluidOutputs(fluid('hydrogen') * 2000)
+        .duration(80)
+        .EUt(30)
+        .buildAndRegister()
+
 // Ni(OH)2 & NiO(OH) cathode line
 
 BENDER.recipeBuilder()
@@ -265,6 +269,24 @@ ASSEMBLER.recipeBuilder()
 /*
  * Batteries
  */
+
+// Lead-Acid Battery
+
+crafting.addShaped("battery_lead_acid", metaitem('battery.lead_acid'), [
+        [metaitem('plateBatteryAlloy'), metaitem('cableGtSingleTin'), metaitem('plateBatteryAlloy')],
+        [metaitem('cathode.lead'), fluid('diluted_sulfuric_acid') * 1000, metaitem('anode.lead')],
+        [metaitem('plateBatteryAlloy'), metaitem('plateBatteryAlloy'), metaitem('plateBatteryAlloy')]
+]);
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('battery.primitivehull.lv'))
+        .inputs(ore('plateLead'))
+        .inputs(ore('plateOxideCoatedLead'))
+        .fluidInputs(fluid('diluted_sulfuric_acid') * 1000)
+        .outputs(metaitem('battery.lead_acid'))
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
 
 // NiFe Battery
 

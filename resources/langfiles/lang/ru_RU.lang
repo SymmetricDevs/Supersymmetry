@@ -1975,6 +1975,7 @@ susy.material.potassium_manganate=Манганат калия
 susy.material.lead_free_solder=Припой без свинца
 susy.material.cryogenic_solder=Криогенный припой
 susy.material.oxidized_manganate_solution=Раствор окисленного манганата
+susy.material.oxide_coated_lead=Окисленный свинец
 susy.material.manganese_dioxide_cathode=Диоксид-марганцевый катод
 susy.material.calcium_zincate=Цинкат кальция
 susy.material.calcium_zincate_suspension=Суспензия цинката кальция
@@ -2066,6 +2067,7 @@ metaitem.storage.segment.name=Сегмент хранения
 
 metaitem.gun.barrel.steel.name=Стальной ствол
 
+metaitem.cathode.lead_paste.name=Свинцовая катодная паста
 metaitem.cathode.lead.name=Свинцовый катод
 metaitem.anode.lead.name=Свинцовый анод
 metaitem.battery.lead_acid.name=Свинцово-кислотный аккумулятор
