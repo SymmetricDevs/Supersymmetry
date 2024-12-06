@@ -2107,6 +2107,7 @@ metaitem.anode.lead.name=Lead Anode
 metaitem.battery.lead_acid.name=Lead Acid Battery
 metaitem.cathode.nioh2.name=Nickel Hydroxide Cathode
 metaitem.cathode.niooh.name=Nickel Oxide Hydroxide Cathode
+metaitem.anode.cadmium_hydroxide.name=Cadmium Hydroxide Anode
 metaitem.anode.calcium_zincate.name=Calcium Zincate Anode
 metaitem.battery.ni_fe.name=NiFe Battery
 metaitem.battery.ram.name=RAM Battery

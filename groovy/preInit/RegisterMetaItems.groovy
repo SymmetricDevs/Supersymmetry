@@ -197,19 +197,20 @@ eventManager.listen {
         //customMetaItems.addItem(4004, "cathode.pb_pbo2")
         customMetaItems.addItem(4005, "cathode.nioh2");
         customMetaItems.addItem(4006, "cathode.niooh");
-        customMetaItems.addItem(4007, "anode.calcium_zincate");
-        customMetaItems.addItem(4008, "battery.ni_fe")
+        customMetaItems.addItem(4007, "anode.cadmium_hydroxide");
+        customMetaItems.addItem(4008, "anode.calcium_zincate");
+        customMetaItems.addItem(4009, "battery.ni_fe")
             .addComponents(ElectricStats.createRechargeableBattery(120000, GTValues.MV))
             .setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV)
             .setModelAmount(8)
             .setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4009, "battery.ram")
+        customMetaItems.addItem(4010, "battery.ram")
             .addComponents(ElectricStats.createRechargeableBattery(240000, GTValues.MV))
             .setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV)
             .setModelAmount(8)
             .setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-        customMetaItems.addItem(4010, "battery.ni_cd")
-            .addComponents(ElectricStats.createRechargeableBattery(360000, GTValues.MV))
+        customMetaItems.addItem(4011, "battery.ni_cd")
+            .addComponents(ElectricStats.createRechargeableBattery(480000, GTValues.MV))
             .setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV)
             .setModelAmount(8)
             .setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);

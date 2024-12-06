@@ -244,6 +244,16 @@ MIXER.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
+// Cd(OH)2 anode line
+
+BENDER.recipeBuilder()
+        .inputs(ore('foilIron'))
+        .inputs(ore('dustSmallCadmiumHydroxide'))
+        .outputs(metaitem('anode.cadmium_hydroxide'))
+        .duration(200)
+        .EUt(60)
+        .buildAndRegister()
+
 // Calcium Zincate anode line
 
 MIXER.recipeBuilder()
@@ -300,18 +310,17 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 // NiCd Battery
-/*
+
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('battery.hull.mv'))
-        .inputs(ore('foilCadmium') * 2)
+        .inputs(metaitem('anode.cadmium_hydroxide') * 4)
         .inputs(metaitem('cathode.nioh2') * 4)
         .inputs(ore('foilPlastic') * 4)
         .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
-        .outputs(GroovyUtils.makeCharged(metaitem('battery.ni_cd')))
+        .outputs(metaitem('battery.ni_cd'))
         .duration(400)
         .EUt(120)
         .buildAndRegister()
-*/
 
 /*
  * Hulls

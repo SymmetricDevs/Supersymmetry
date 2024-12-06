@@ -144,6 +144,7 @@ class ChangeFlags {
         Phosphorus.addFlags("no_smelting");
         Tetrahedrite.addFlags("no_smelting");
         Gold.addFlags("generate_gear");
+        Iron.addFlags("generate_foil");
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
