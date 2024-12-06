@@ -2068,14 +2068,18 @@ metaitem.gun.barrel.steel.name=Стальной ствол
 
 metaitem.cathode.lead.name=Свинцовый катод
 metaitem.anode.lead.name=Свинцовый анод
-metaitem.battery.lead_acid.name=Свинцово-кислотная батарея
+metaitem.battery.lead_acid.name=Свинцово-кислотный аккумулятор
 metaitem.cathode.nioh2.name=Никель-гидроксидный катод
 metaitem.cathode.niooh.name=Никель-оксид-гидроксидный катод
 metaitem.anode.cadmium_hydroxide.name=Кадмий-гидроксидный анод
 metaitem.anode.calcium_zincate.name=Цинкат-кальциевый анод
-metaitem.battery.ni_fe.name=Железо-никелевая батарея
+metaitem.battery.ni_fe.name=Железо-никелевый аккумулятор
 metaitem.battery.ram.name=Перезаряжаемая щелочная батарея
-metaitem.battery.ni_cd.name=Никель-кадмиевая батарея
+metaitem.battery.ni_cd.name=NiCd аккумулятор
+metaitem.battery.ni_mh.mv.name=NiMH MV аккумулятор
+metaitem.battery.ni_mh.hv.name=NiMH HV аккумулятор
+metaitem.battery.ni_zn.mv.name=NiZn MV аккумулятор
+metaitem.battery.ni_zn.hv.name=NiZn HV аккумулятор
 
 metaitem.battery.primitivehull.lv.name=Примитивный корпус LV-батареи
 metaitem.battery.primitivehull.mv.name=Примитивный корпус MV-батареи

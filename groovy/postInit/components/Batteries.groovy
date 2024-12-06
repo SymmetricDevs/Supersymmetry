@@ -292,6 +292,56 @@ ASSEMBLER.recipeBuilder()
         .EUt(120)
         .buildAndRegister()
 
+// NiMH Battery
+// Currently unobtainable - no La
+/*
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('battery.hull.mv'))
+        .inputs(metaitem('anode.la_ni5'))
+        .inputs(metaitem('cathode.nioh2') * 4)
+        .inputs(ore('foilPlastic') * 4)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
+        .outputs(metaitem('battery.ni_mh.mv'))
+        .duration(400)
+        .EUt(120)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('battery.hull.hv'))
+        .inputs(metaitem('anode.la_ni5'))
+        .inputs(metaitem('cathode.nioh2') * 8)
+        .inputs(ore('foilPlastic') * 8)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 2000)
+        .outputs(metaitem('battery.ni_mh.hv'))
+        .duration(400)
+        .EUt(480)
+        .buildAndRegister()
+*/
+
+// NiZn Battery
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('battery.hull.mv'))
+        .inputs(metaitem('anode.calcium_zincate') * 4)
+        .inputs(metaitem('cathode.niooh') * 4)
+        .inputs(ore('foilPlastic') * 4)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
+        .outputs(GroovyUtils.makeCharged(metaitem('battery.ni_zn.mv')))
+        .duration(400)
+        .EUt(480)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('battery.hull.hv'))
+        .inputs(metaitem('anode.calcium_zincate') * 8)
+        .inputs(metaitem('cathode.niooh') * 8)
+        .inputs(ore('foilPlastic') * 8)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 2000)
+        .outputs(GroovyUtils.makeCharged(metaitem('battery.ni_zn.hv')))
+        .duration(400)
+        .EUt(480)
+        .buildAndRegister()
+
 /*
  * Hulls
  */

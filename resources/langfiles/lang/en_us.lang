@@ -2112,6 +2112,10 @@ metaitem.anode.calcium_zincate.name=Calcium Zincate Anode
 metaitem.battery.ni_fe.name=NiFe Battery
 metaitem.battery.ram.name=RAM Battery
 metaitem.battery.ni_cd.name=NiCd Battery
+metaitem.battery.ni_mh.mv.name=NiMH MV Battery
+metaitem.battery.ni_mh.hv.name=NiMH HV Battery
+metaitem.battery.ni_zn.mv.name=NiZn MV Battery
+metaitem.battery.ni_zn.hv.name=NiZn HV Battery
 
 metaitem.battery.primitivehull.lv.name=Primitive LV Battery Hull
 metaitem.battery.primitivehull.mv.name=Primitive MV Battery Hull
