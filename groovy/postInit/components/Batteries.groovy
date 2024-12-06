@@ -212,52 +212,25 @@ mods.gregtech.assembler.recipeBuilder()
         .EUt(16)
         .buildAndRegister()
 
-// NiO(OH) cathode line
+/*
+ * Components
+ */
 
-ROASTER.recipeBuilder()
-        .inputs(ore('dustNickel') * 1)
-        .fluidInputs(fluid('chlorine') * 2000)
-        .outputs(metaitem('dustNickelChloride') * 3)
-        .duration(100)
-        .EUt(30)
-        .buildAndRegister()
+// Ni(OH)2 & NiO(OH) cathode line
 
-BR.recipeBuilder()
-        .inputs(ore('dustNickelChloride') * 3)
-        .fluidInputs(fluid('potassium_hydroxide_solution') * 2000)
-        .outputs(metaitem('dustNickelHydroxide') * 5)
-        .fluidOutputs(fluid('potassium_chloride_solution') * 2000)
-        .duration(100)
-        .EUt(30)
-        .buildAndRegister()
-
-BR.recipeBuilder()
-        .inputs(ore('dustNickelHydroxide') * 5)
-        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
-        .fluidInputs(fluid('chlorine') * 1000)
-        .outputs(metaitem('dustNickelOxideHydroxide') * 4)
-        .fluidOutputs(fluid('diluted_rock_salt_solution') * 2000)
-        .duration(100)
+BENDER.recipeBuilder()
+        .inputs(ore('foilNickel'))
+        .inputs(ore('dustSmallNickelHydroxide') * 5)
+        .outputs(metaitem('cathode.nioh2'))
+        .duration(200)
         .EUt(30)
         .buildAndRegister()
 
 BENDER.recipeBuilder()
         .inputs(ore('foilNickel'))
-        .inputs(ore('dustSmallNickelOxideHydroxide'))
+        .inputs(ore('dustNickelOxideHydroxide'))
         .outputs(metaitem('cathode.niooh'))
         .duration(200)
-        .EUt(30)
-        .buildAndRegister()
-
-// NiFe Battery
-
-ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('battery.primitivehull.mv'))
-        .inputs(ore('plateIron'))
-        .inputs(ore('dustNickelOxideHydroxide') * 4)
-        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
-        .outputs(GroovyUtils.makeCharged(metaitem('battery.ni_fe')))
-        .duration(400)
         .EUt(30)
         .buildAndRegister()
 
@@ -269,19 +242,6 @@ MIXER.recipeBuilder()
         .outputs(metaitem('dustManganeseDioxideCathode') * 28)
         .duration(200)
         .EUt(30)
-        .buildAndRegister()
-
-// RAM Battery
-
-ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('battery.primitivehull.mv'))
-        .inputs(ore('foilZinc') * 4)
-        .inputs(ore('dustManganeseDioxideCathode') * 7)
-        .inputs(item('minecraft:paper'))
-        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
-        .outputs(GroovyUtils.makeCharged(metaitem('battery.ram')))
-        .duration(200)
-        .EUt(120)
         .buildAndRegister()
 
 // Calcium Zincate anode line
@@ -309,6 +269,49 @@ EXTRUDER.recipeBuilder()
         .duration(100)
         .EUt(120)
         .buildAndRegister()
+
+/*
+ * Batteries
+ */
+
+// NiFe Battery
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('battery.primitivehull.mv'))
+        .inputs(ore('plateIron'))
+        .inputs(ore('dustNickelOxideHydroxide') * 4)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
+        .outputs(GroovyUtils.makeCharged(metaitem('battery.ni_fe')))
+        .duration(400)
+        .EUt(30)
+        .buildAndRegister()
+
+// RAM Battery
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('battery.primitivehull.mv'))
+        .inputs(ore('foilZinc') * 4)
+        .inputs(ore('dustManganeseDioxideCathode') * 7)
+        .inputs(item('minecraft:paper'))
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
+        .outputs(GroovyUtils.makeCharged(metaitem('battery.ram')))
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister()
+
+// NiCd Battery
+/*
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('battery.hull.mv'))
+        .inputs(ore('foilCadmium') * 2)
+        .inputs(metaitem('cathode.nioh2') * 4)
+        .inputs(ore('foilPlastic') * 4)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
+        .outputs(GroovyUtils.makeCharged(metaitem('battery.ni_cd')))
+        .duration(400)
+        .EUt(120)
+        .buildAndRegister()
+*/
 
 /*
  * Hulls

@@ -96,3 +96,35 @@ REACTION_FURNACE.recipeBuilder()
         .duration(40)
         .buildAndRegister()
 
+// NiCl2
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustNickel') * 1)
+        .fluidInputs(fluid('chlorine') * 2000)
+        .outputs(metaitem('dustNickelChloride') * 3)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+// Ni(OH)2
+
+BR.recipeBuilder()
+        .inputs(ore('dustNickelChloride') * 3)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 2000)
+        .outputs(metaitem('dustNickelHydroxide') * 5)
+        .fluidOutputs(fluid('potassium_chloride_solution') * 2000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+// NiO(OH)
+
+BR.recipeBuilder()
+        .inputs(ore('dustNickelHydroxide') * 5)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 1000)
+        .fluidInputs(fluid('chlorine') * 1000)
+        .outputs(metaitem('dustNickelOxideHydroxide') * 4)
+        .fluidOutputs(fluid('diluted_rock_salt_solution') * 2000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
