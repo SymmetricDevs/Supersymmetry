@@ -1113,6 +1113,8 @@ item.susy.material.alluvial_deposit.ore=Alluvial Deposit
 item.susy.material.magmatic_hydrothermal_deposit.ore=Magmatic Hydrothermal Deposit
 item.susy.material.coal_deposit.ore=Coal Deposit
 item.susy.material.native_copper_deposit.ore=Native Copper Deposit
+item.susy.material.anthracite_deposit.ore=Anthracite Deposit
+item.susy.material.lignite_deposit.ore=Lignite Deposit
 
 susy.material.orthomagmatic_deposit=Orthomagmatic Deposit
 susy.material.metamorphic_deposit=Metamorphic Deposit
