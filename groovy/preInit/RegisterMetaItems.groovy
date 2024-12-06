@@ -234,6 +234,7 @@ eventManager.listen {
             .setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV)
             .setModelAmount(8)
             .setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(4016, "separator.polyolefin");
         // Hulls 4090-4100
         customMetaItems.addItem(4090, "battery.primitivehull.lv");
         customMetaItems.addItem(4091, "battery.primitivehull.mv");

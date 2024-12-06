@@ -250,6 +250,18 @@ EXTRUDER.recipeBuilder()
         .EUt(120)
         .buildAndRegister()
 
+// Polyolefin separator
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(ore('foilPlastic'))
+        .inputs(ore('foilPolypropylene'))
+        .fluidInputs(fluid('glue') * 100)
+        .outputs(metaitem('separator.polyolefin'))
+        .duration(80)
+        .EUt(120)
+        .buildAndRegister()
+
 /*
  * Batteries
  */

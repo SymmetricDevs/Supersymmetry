@@ -2080,6 +2080,7 @@ metaitem.battery.ni_mh.mv.name=NiMH MV аккумулятор
 metaitem.battery.ni_mh.hv.name=NiMH HV аккумулятор
 metaitem.battery.ni_zn.mv.name=NiZn MV аккумулятор
 metaitem.battery.ni_zn.hv.name=NiZn HV аккумулятор
+metaitem.separator.polyolefin.name=Полиолефиновый разделитель
 
 metaitem.battery.primitivehull.lv.name=Примитивный корпус LV-батареи
 metaitem.battery.primitivehull.mv.name=Примитивный корпус MV-батареи

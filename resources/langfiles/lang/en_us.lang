@@ -2116,6 +2116,7 @@ metaitem.battery.ni_mh.mv.name=NiMH MV Battery
 metaitem.battery.ni_mh.hv.name=NiMH HV Battery
 metaitem.battery.ni_zn.mv.name=NiZn MV Battery
 metaitem.battery.ni_zn.hv.name=NiZn HV Battery
+metaitem.separator.polyolefin.name=Polyolefin separator
 
 metaitem.battery.primitivehull.lv.name=Primitive LV Battery Hull
 metaitem.battery.primitivehull.mv.name=Primitive MV Battery Hull
