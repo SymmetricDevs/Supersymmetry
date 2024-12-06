@@ -182,36 +182,6 @@ mods.gregtech.assembler.recipeBuilder()
         .EUt(16)
         .buildAndRegister()
 
-mods.gregtech.assembler.recipeBuilder()
-        .inputs(metaitem('battery.hull.lv'))
-        .inputs(ore('dustCadmium'))
-        .inputs(ore('dustNickelOxideHydroxide'))
-        .fluidInputs(fluid('potassium_hydroxide_solution') * 100)
-        .outputs(metaitem('battery.re.lv.cadmium'))
-        .duration(100)
-        .EUt(16)
-        .buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs(metaitem('battery.hull.mv'))
-        .inputs(ore('dustCadmium') * 2)
-        .inputs(ore('dustNickelOxideHydroxide') * 2)
-        .fluidInputs(fluid('potassium_hydroxide_solution') * 200)
-        .outputs(metaitem('battery.re.mv.cadmium'))
-        .duration(200)
-        .EUt(16)
-        .buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs(metaitem('battery.hull.hv'))
-        .inputs(ore('dustCadmium') * 4)
-        .inputs(ore('dustNickelOxideHydroxide') * 4)
-        .fluidInputs(fluid('potassium_hydroxide_solution') * 500)
-        .outputs(metaitem('battery.re.hv.cadmium'))
-        .duration(400)
-        .EUt(16)
-        .buildAndRegister()
-
 /*
  * Components
  */
@@ -484,6 +454,9 @@ mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('du
 mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.lv'), metaitem('dustCadmium') * 2], null)
 mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.mv'), metaitem('dustCadmium') * 8], null)
 mods.gregtech.canner.removeByInput(2, [metaitem('battery.hull.hv'), metaitem('dustCadmium') * 16], null)
+mods.jei.ingredient.removeAndHide(metaitem('battery.re.lv.cadmium'))
+mods.jei.ingredient.removeAndHide(metaitem('battery.re.mv.cadmium'))
+mods.jei.ingredient.removeAndHide(metaitem('battery.re.hv.cadmium'))
 // Vanadium Battery
 mods.gregtech.canner.removeByInput(480, [metaitem('battery.hull.ev'), metaitem('dustVanadium') * 2], null)
 mods.gregtech.canner.removeByInput(1024, [metaitem('battery.hull.iv'), metaitem('dustVanadium') * 8], null)
