@@ -15,16 +15,28 @@
     "type": "layered",
     "values": [
       {
-        "primary": "ore:anthracite"
+        "primary": {
+          "block":"susy:resource_block_1",
+          "variant":"anthracite"
+        }
       },
       {
-        "secondary": "ore:anthracite"
+        "secondary": {
+          "block":"susy:resource_block_1",
+          "variant":"anthracite"
+        }
       },
       {
-        "between": "ore:anthracite"
+        "between": {
+          "block":"susy:resource_block_1",
+          "variant":"anthracite"
+        }
       },
       {
-        "sporadic": "ore:anthracite"
+        "sporadic": {
+          "block":"susy:resource_block_1",
+          "variant":"anthracite"
+        }
       }
     ]
   }

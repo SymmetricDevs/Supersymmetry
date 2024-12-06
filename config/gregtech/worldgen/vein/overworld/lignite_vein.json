@@ -18,16 +18,28 @@
     "type": "layered",
     "values": [
       {
-        "primary": "ore:lignite"
+        "primary": {
+          "block":"susy:resource_block_1",
+          "variant":"lignite"
+        }
       },
       {
-        "secondary": "ore:lignite"
+        "secondary": {
+          "block":"susy:resource_block_1",
+          "variant":"lignite"
+        }
       },
       {
-        "between": "ore:lignite"
+        "between": {
+          "block":"susy:resource_block_1",
+          "variant":"lignite"
+        }
       },
       {
-        "sporadic": "ore:lignite"
+        "sporadic": {
+          "block":"susy:resource_block_1",
+          "variant":"lignite"
+        }
       }
     ]
   }
