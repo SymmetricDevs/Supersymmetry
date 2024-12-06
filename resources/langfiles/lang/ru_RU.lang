@@ -1978,6 +1978,11 @@ susy.material.oxidized_manganate_solution=Раствор окисленного 
 susy.material.manganese_dioxide_cathode=Диоксид-марганцевый катод
 susy.material.calcium_zincate=Цинкат кальция
 susy.material.calcium_zincate_suspension=Суспензия цинката кальция
+susy.material.cadmium_oxide=Оксид кадмия
+susy.material.cadmium_nitrate_anhydrous=Ангидрид нитрата кадмия
+susy.material.cadmium_nitrate_tetrahydrate=Тетрагидрат нитрата кадмия
+susy.material.cadmium_hydroxide_raw=Сырой гидроксид кадмия
+susy.material.cadmium_hydroxide=Гидроксид кадмия
 
 # Изотопы
 

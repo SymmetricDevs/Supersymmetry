@@ -1,4 +1,8 @@
 BR = recipemap('batch_reactor')
+ROASTER = recipemap('roaster')
+CRYSTALLIZER = recipemap('crystallizer')
+ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
+VACUUM_DT = recipemap('vacuum_distillation')
 
 // From zinc pyrometallurgy
 BR.recipeBuilder()
@@ -59,4 +63,54 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .fluidOutputs(fluid('sulfuric_acid') * 1000)
     .EUt(30)
     .duration(160)
+    .buildAndRegister()
+
+// CdO
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustCadmium'))
+    .fluidInputs(fluid('oxygen') * 500)
+    .outputs(metaitem('dustCadmiumOxide') * 2)
+    .EUt(120)
+    .duration(80)
+    .buildAndRegister()
+
+// Cd(NO3)2
+
+BR.recipeBuilder()
+    .inputs(ore('dustCadmiumOxide') * 2)
+    .fluidInputs(fluid('nitric_acid') * 2000)
+    .outputs(metaitem('dustCadmiumNitrateAnhydrous') * 9)
+    .fluidOutputs(fluid('water') * 1000)
+    .EUt(120)
+    .duration(80)
+    .buildAndRegister()
+
+// Cd(NO3)2 * (H2O)4
+
+CRYSTALLIZER.recipeBuilder()
+    .inputs(ore('dustCadmiumNitrateAnhydrous') * 9)
+    .fluidInputs(fluid('water') * 4000)
+    .outputs(metaitem('dustCadmiumNitrateTetrahydrate') * 21)
+    .EUt(120)
+    .duration(160)
+    .buildAndRegister()
+
+// Cd(OH)2
+
+BR.recipeBuilder()
+    .inputs(ore('dustCadmiumNitrateTetrahydrate') * 21)
+    .fluidInputs(fluid('sodium_hydroxide') * 864)
+    .outputs(metaitem('dustCadmiumHydroxideRaw') * 5)
+    .outputs(metaitem('dustSodiumNitrate') * 10)
+    .fluidOutputs(fluid('dense_steam') * 5000)
+    .EUt(120)
+    .duration(80)
+    .buildAndRegister()
+
+VACUUM_DT.recipeBuilder()
+    .inputs(ore('dustCadmiumHydroxideRaw'))
+    .outputs(metaitem('dustCadmiumHydroxide'))
+    .EUt(120)
+    .duration(80)
     .buildAndRegister()

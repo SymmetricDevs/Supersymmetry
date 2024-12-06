@@ -1988,6 +1988,11 @@ susy.material.galvanized_steel=Galvanized Steel
 susy.material.manganese_dioxide_cathode=Manganese Dioxide Cathode
 susy.material.calcium_zincate=Calcium Zincate
 susy.material.calcium_zincate_suspension=Calcium Zincate Suspension
+susy.material.cadmium_oxide=Cadmium Oxide
+susy.material.cadmium_nitrate_anhydrous=Cadmium Nitrate Anhydrous
+susy.material.cadmium_nitrate_tetrahydrate=Cadmium Nitrate Tetrahydrate
+susy.material.cadmium_hydroxide_raw=Raw Cadmium Hydroxide
+susy.material.cadmium_hydroxide=Cadmium Hydroxide
 
 susy.material.incoloy_twenty=Incoloy 20
 susy.material.incoloy_eight_two_five=Incoloy 825
