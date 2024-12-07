@@ -125,7 +125,7 @@ class ChangeFlags {
         Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");
         Lead.addFlags("generate_round");
         Aluminium.addFlags("generate_round");
-        Nickel.addFlags("generate_foil", "generate_rod");
+        Nickel.addFlags("generate_rod");
         Tungsten.addFlags("generate_fine_wire");
         Molybdenum.addFlags("generate_fine_wire");
         Tantalum.addFlags("generate_rod");

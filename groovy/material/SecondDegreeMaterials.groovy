@@ -728,7 +728,7 @@ public class SecondDegreeMaterials {
                 .build()
                 .setFormula("(Ar)(NH3)(H)", true);
         
-        OxideCoatedLead = new Material.Builder(13120, SuSyUtility.susyId('oxide_coated_lead'))
+        DioxideCoatedLead = new Material.Builder(13120, SuSyUtility.susyId('dioxide_coated_lead'))
                 .ingot()
                 .flags(NO_UNIFICATION, GENERATE_PLATE)
                 .color(0x1d0b25)
