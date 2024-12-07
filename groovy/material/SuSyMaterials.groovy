@@ -1089,9 +1089,9 @@ class SuSyMaterials {
         public static Material FoodGradeStainlessSteel;
         public static Material CalciumZincate;
         public static Material CadmiumOxide;
-        public static Material CadmiumNitrateAnhydrous;
+        public static Material AnhydrousCadmiumNitrate;
         public static Material CadmiumNitrateTetrahydrate;
-        public static Material CadmiumHydroxideRaw;
+        public static Material RawCadmiumHydroxide;
         public static Material CadmiumHydroxide;
 
         // HP Materials

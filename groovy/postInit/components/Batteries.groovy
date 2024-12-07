@@ -21,7 +21,7 @@ BENDER = recipemap('bender')
 ASSEMBLER = recipemap('assembler')
 CRYSTALLIZER = recipemap('crystallizer')
 EXTRUDER = recipemap('extruder')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
+ELECTROLYZER = recipemap('electrolyzer')
 
 MIXER_RECIPES.recipeBuilder()
         .fluidInputs(Materials.SulfurTrioxide.getFluid(1000))
@@ -179,7 +179,7 @@ crafting.addShapeless("cathode_lead", metaitem('cathode.lead'), [
         metaitem('anode.lead'), metaitem('cathode.lead_paste')
 ]);
 
-ELECTROLYTIC_CELL.recipeBuilder()
+ELECTROLYZER.recipeBuilder()
         .inputs(ore('plateLead'))
         .fluidInputs(fluid('water') * 2000)
         .notConsumable(metaitem('plateCopper'))

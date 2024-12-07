@@ -3519,7 +3519,7 @@ public class FirstDegreeMaterials {
                 .components(Calcium, Zinc * 2, Oxygen * 6, Hydrogen * 6, Water * 2)
                 .color(0xfffefa)
                 .build()
-                .setFormula("Ca[Zn(OH)3]2 * (H2O)2", true)
+                .setFormula("(Ca[Zn(OH)3]2)(H2O)2", true)
 
         CadmiumOxide = new Material.Builder(8637, SuSyUtility.susyId('cadmium_oxide'))
                 .dust()
@@ -3527,7 +3527,7 @@ public class FirstDegreeMaterials {
                 .color(0x541606)
                 .build()
 
-        CadmiumNitrateAnhydrous = new Material.Builder(8638, SuSyUtility.susyId('cadmium_nitrate_anhydrous'))
+        AnhydrousCadmiumNitrate = new Material.Builder(8638, SuSyUtility.susyId('anhydrous_cadmium_nitrate'))
                 .dust()
                 .components(Cadmium, Nitrogen * 2, Oxygen * 6)
                 .color(0xf5f9ff)
@@ -3539,9 +3539,9 @@ public class FirstDegreeMaterials {
                 .components(Cadmium, Nitrogen * 2, Oxygen * 6, Water * 4)
                 .color(0xf5f9ff).iconSet(SHINY)
                 .build()
-                .setFormula("Cd(NO3)2 * (H2O)4", true)
+                .setFormula("(Cd(NO3)2)(H2O)4", true)
 
-        CadmiumHydroxideRaw = new Material.Builder(8640, SuSyUtility.susyId('cadmium_hydroxide_raw'))
+        RawCadmiumHydroxide = new Material.Builder(8640, SuSyUtility.susyId('raw_cadmium_hydroxide'))
                 .dust()
                 .components(Cadmium, Oxygen * 2, Hydrogen * 2)
                 .color(0xededeb)

@@ -1980,9 +1980,9 @@ susy.material.manganese_dioxide_cathode=Диоксид-марганцевый к
 susy.material.calcium_zincate=Цинкат кальция
 susy.material.calcium_zincate_suspension=Суспензия цинката кальция
 susy.material.cadmium_oxide=Оксид кадмия
-susy.material.cadmium_nitrate_anhydrous=Ангидрид нитрата кадмия
+susy.material.anhydrous_cadmium_nitrate=Ангидрид нитрата кадмия
 susy.material.cadmium_nitrate_tetrahydrate=Тетрагидрат нитрата кадмия
-susy.material.cadmium_hydroxide_raw=Сырой гидроксид кадмия
+susy.material.raw_cadmium_hydroxide=Сырой гидроксид кадмия
 susy.material.cadmium_hydroxide=Гидроксид кадмия
 
 # Изотопы
