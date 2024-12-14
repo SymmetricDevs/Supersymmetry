@@ -42,7 +42,7 @@ mods.jei.ingredient.yeet(
 
 for (i = 1; i <= 13; i++) {
 	mods.jei.ingredient.yeet(
-		metaitem('world_accelerator.' + Globals.voltageTiers[i])
+		metaitem('chemical_reactor.' + Globals.voltageTiers[i])
 	)
 }
 for (i = 1; i <= 9; i++) {
