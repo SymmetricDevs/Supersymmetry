@@ -1999,6 +1999,7 @@ susy.material.pyrolysis_gasoline=Pyrolysis Gasoline
 susy.material.galvanized_steel=Galvanized Steel
 susy.material.cobalt_sulfate=Cobalt Sulfate
 susy.material.cobalt_sulfate_solution=Cobalt Sulfate Solution
+susy.material.lithium_nitrate=Lithium Nitrate
 susy.material.chlorided_alumina=Chlorided Alumina
 susy.material.sulfated_metal_oxide=Sulfated Metal Oxide (SMO)
 susy.material.solid_phosphoric_acid=Solid Phosphoric Acid (SPA)

@@ -3580,5 +3580,11 @@ public class FirstDegreeMaterials {
                 .components(CobaltSulfate * 1, Water * 1)
                 .colorAverage()
                 .build()
+
+        LithiumNitrate = new Material.Builder(8638, SuSyUtility.susyId('lithium_nitrate'))
+                .dust()
+                .components(Lithium * 1, Nitrogen * 1, Oxygen * 3)
+                .color(0xffffff)
+                .build()
     }
 }
