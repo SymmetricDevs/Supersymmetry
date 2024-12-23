@@ -115,7 +115,7 @@ for (solder in soldering_alloys) {
                     ore('circuitLv'),
                     metaitem('electric.motor.lv') * 2,
             ])
-            .inputNBT(item('techguns:pistol').getItem(), NBTMatcher.ANY, NBTCondition.ANY)
+            //.inputNBT(item('techguns:pistol').getItem(), NBTMatcher.ANY, NBTCondition.ANY) // REPLACE: PISTOL
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:machine_gun_turret'))
             .duration(200)
@@ -259,7 +259,7 @@ for (solder in soldering_alloys) {
     recipemap('weapons_factory').recipeBuilder()
             .inputs([
                     ore('plateSteel')*6,
-                    item('techguns:itemshared:39')
+                    //item('techguns:itemshared:39') REPLACE OBSIDIAN STEEL BARREL
             ])
             .circuitMeta(1)
             .fluidInputs(solder)
@@ -271,7 +271,7 @@ for (solder in soldering_alloys) {
     recipemap('weapons_factory').recipeBuilder()
             .inputs([
                     ore('plateAluminium')*6,
-                    item('techguns:itemshared:39')
+                    //item('techguns:itemshared:39') REPLACE OBSIDIAN STEEL BARREL
             ])
             .circuitMeta(1)
             .fluidInputs(solder)
@@ -283,7 +283,7 @@ for (solder in soldering_alloys) {
     recipemap('weapons_factory').recipeBuilder()
             .inputs([
                     ore('plateStainlessSteel')*6,
-                    item('techguns:itemshared:39')
+                    //item('techguns:itemshared:39') REPLACE OBSIDIAN STEEL BARREL
             ])
             .circuitMeta(1)
             .fluidInputs(solder)
@@ -314,14 +314,14 @@ crafting.replaceShaped("openmodularturrets:upgrade_meta_0_vanilla", item('openmo
 ])
 
 crafting.replaceShaped("openmodularturrets:upgrade_meta_2_vanilla", item('openmodularturrets:upgrade_meta', 2), [
-        [null, item('techguns:itemshared', 39), null],
-        [item('techguns:itemshared', 39), metaitem('electric.motor.mv'), item('techguns:itemshared', 39)],
+        [null, /*item('techguns:itemshared', 39)*/ null, null],
+        [/*item('techguns:itemshared', 39)*/null, metaitem('electric.motor.mv'), null/*item('techguns:itemshared', 39)*/],
         [null, item('openmodularturrets:intermediate_regular'), null]
 ])
 
 crafting.replaceShaped("openmodularturrets:upgrade_meta_3_vanilla", item('openmodularturrets:upgrade_meta', 3), [
-        [null, item('techguns:itemshared', 39), null],
-        [metaitem('electric.piston.mv'), item('techguns:itemshared', 39), metaitem('electric.piston.mv')],
+        [null, null/*item('techguns:itemshared', 39)*/, null],
+        [metaitem('electric.piston.mv'), null/*item('techguns:itemshared', 39)*/, metaitem('electric.piston.mv')],
         [null, item('openmodularturrets:intermediate_regular'), null]
 ])
 

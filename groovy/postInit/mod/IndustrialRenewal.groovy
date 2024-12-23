@@ -265,20 +265,20 @@ crafting.replaceShaped("industrialrenewal:dam_outflow", item('industrialrenewal:
 ])
 
 crafting.replaceShaped("industrialrenewal:catwalk_ladder", item('industrialrenewal:catwalk_ladder') * 6, [
-	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')],
-	[ore('dyeYellow'), item('techguns:ladder0', 8), ore('dyeBlack')],
-	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')]
+	[ore('stickLongSteel'), ore('stickSteel'), ore('stickLongSteel')],
+	[ore('dyeYellow'), ore('stickSteel'), ore('dyeBlack')],
+	[ore('stickLongSteel'), ore('stickSteel'), ore('stickLongSteel')]
 ])
 
 crafting.replaceShaped("industrialrenewal:catwalk_ladder_steel", item('industrialrenewal:catwalk_ladder_steel') * 6, [
-	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')],
-	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')],
-	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')]
+	[ore('stickLongSteel'), ore('stickSteel'), ore('stickLongSteel')],
+	[ore('stickLongSteel'), ore('stickSteel'), ore('stickLongSteel')],
+	[ore('stickLongSteel'), ore('stickSteel'), ore('stickLongSteel')]
 ])
 
 crafting.replaceShaped("industrialrenewal:catwalk_hatch", item('industrialrenewal:catwalk_hatch'), [
 	[ore('boltSteel'), ore('plateSteel'), ore('boltSteel')],
-	[ore('stickSteel'), item('techguns:ladder0', 8), ore('stickSteel')],
+	[ore('stickSteel'), item('industrialrenewal:catwalk_ladder_steel'), ore('stickSteel')],
 	[ore('stickSteel'), ore('stickSteel'), ore('stickSteel')]
 ])
 

@@ -749,13 +749,13 @@ for (FluidFuel in FluidFuels) {
             .EUt(1)
             .buildAndRegister();
 
-    recipemap('canner').recipeBuilder()
+    /*recipemap('canner').recipeBuilder()
             .fluidInputs(liquid(FluidFuel.liquid_fuel) * 500)
             .inputs(item('techguns:itemshared', 28))
             .outputs(item('techguns:itemshared', 27))
             .duration(80)
             .EUt(7)
-            .buildAndRegister();
+            .buildAndRegister();*/
 }
 
 for (WorkingFluid in WorkingFluids) {

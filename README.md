@@ -7,7 +7,7 @@ Progression defies the well-established GT power tiers, as the pack aims to brea
 ## Implemented Content
 As time of writing, following systems and mechanics have been added or modified from default state:
 - Custom Chemical Reactors
-- Weaponry and Military (Derived from TechGuns and ICBM)
+- Weaponry and Military (Derived from MW3 and ICBM)
 - Infinite Ore Deposits with related processing
 - Froth Floatation
 - Catalysts

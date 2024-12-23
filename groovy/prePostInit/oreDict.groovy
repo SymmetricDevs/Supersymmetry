@@ -9,12 +9,6 @@ import gregtech.common.blocks.StoneVariantBlock
 
 import net.minecraftforge.oredict.OreDictionary
 
-//Prevent TechGuns from crashing servers
-ore('ingotCopper').remove(item('techguns:itemshared', 79))
-ore('ingotTin').remove(item('techguns:itemshared', 80))
-ore('ingotSteel').remove(item('techguns:itemshared', 83))
-ore('ingotTitanium').remove(item('techguns:itemshared', 85))
-
 //Force stick to exist
 ore('stickWood').add(item('minecraft:stick'))
 
@@ -238,19 +232,6 @@ ore('ingotSteel').remove(item('industrialrenewal:ingot_steel'))
 ore('dustCoal').remove(item('threng:material', 3))
 ore('dustCinnabar').remove(item('tardis:cinnabar'))
 ore('dustSaltpeter').remove(item('icbmclassic:saltpeter'))
-
-//Hide ALL TechGuns recipes, they are impossible anyways since the machines needed are uncraftable
-mods.jei.category.hideCategory('minecraft.brewing')
-mods.jei.category.hideCategory('techguns.ammopress')
-mods.jei.category.hideCategory('techguns.metalpress')
-mods.jei.category.hideCategory('techguns.chemlab')
-mods.jei.category.hideCategory('techguns.fabricator')
-mods.jei.category.hideCategory('techguns.chargingstation')
-mods.jei.category.hideCategory('techguns.reactionchamber')
-mods.jei.category.hideCategory('techguns.oredrill')
-mods.jei.category.hideCategory('techguns.blastfurnace')
-mods.jei.category.hideCategory('techguns.grinder')
-mods.jei.category.hideCategory('techguns.camobench')
 
 mods.jei.category.hideCategory('gregtech:combustion_generator')
 

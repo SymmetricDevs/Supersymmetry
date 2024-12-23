@@ -437,10 +437,6 @@ RecyclingHelper.replaceShaped("gregtech:multi_furnace", item('gregtech:machine',
 //         .EUt(7)
 //         .buildAndRegister();
 
-//TechGuns carbon plate removal
-// Carbon Plate * 1
-mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('carbon') * 144])
-
 //Remove old rubber recipes
 // Rubber Bar * 1
 mods.gregtech.alloy_smelter.removeByInput(7, [metaitem('dustSulfur'), metaitem('dustRawRubber') * 3], null)

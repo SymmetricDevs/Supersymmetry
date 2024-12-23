@@ -46,19 +46,6 @@
 	},
 	{
 	  "dimension": 0,
-	  "mob": [
-		  "techguns:outcast"
-	  ],
-	  "spawner": true,
-	  "maxcount": {
-		  "amount": 2,
-		  "perplayer": true
-	  },
-	  "result": "default",
-	  "angry": true
-	},
-	{
-	  "dimension": 0,
 	  "result": "deny"
 	},
 	{

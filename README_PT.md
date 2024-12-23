@@ -7,7 +7,7 @@ A progressão desafia também os níveis de poder de GT bem definidos, como o _p
 Aquando da escrita, os sistemas e as mecânicas seguintes já se encontram adicionadas ou modificadas do seu estado inicial:
 
     Reatores Químicos Costumisáveis
-    Armas e Exército (Derivado dos _mods_ TechGuns e ICBM)
+    Armas e Exército (Derivado dos _mods_ MW3 e ICBM)
     Depósitos de materiais infinitos com o relativo processamento
     Flutuação de espuma
     Catalisadores

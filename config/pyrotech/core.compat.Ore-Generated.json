@@ -41,11 +41,9 @@
       "slagColor": "ffaa1c",
       "langKey": [
         "gregtech:tile.ore_block",
-        "techguns:tile.techguns.basicore.0"
       ],
       "output": [
         "gregtech:meta_nugget:25",
-        "techguns:itemshared:86"
       ],
       "bloomYieldMinMax": [
         12,
@@ -98,11 +96,9 @@
       "slagColor": "95afee",
       "langKey": [
         "gregtech:tile.ore_block",
-        "techguns:tile.techguns.basicore.2"
       ],
       "output": [
         "gregtech:meta_nugget:55",
-        "techguns:itemshared:87"
       ],
       "bloomYieldMinMax": [
         12,
@@ -168,7 +164,6 @@
       "slagColor": "c3e9ff",
       "langKey": [
         "gregtech:tile.ore_block",
-        "techguns:tile.techguns.basicore.1"
       ],
       "output": [
         "gregtech:meta_nugget:112"
@@ -186,7 +181,6 @@
       "slagColor": "5c734b",
       "langKey": [
         "tardis:item.tardis.power_cell",
-        "techguns:tile.techguns.basicore.4"
       ],
       "output": [
         "gregtech:meta_nugget:116"
