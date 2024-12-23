@@ -3591,7 +3591,7 @@ public class FirstDegreeMaterials {
 
         LithiumNitrateSolution = new Material.Builder(8640, SuSyUtility.susyId('lithium_nitrate_solution'))
                 .liquid()
-                .components(LithiumNitrate * 1, Water * 1)
+                .components(LithiumNitrate * 2, Water * 1)
                 .colorAverage()
                 .build()
     }
