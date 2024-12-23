@@ -91,6 +91,10 @@ ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust')
 
 ore('oreBauxite').add(item('susy:resource_block:0'))
 ore('oreSulfur').add(item('susy:resource_block:14'))
+ore('oreCoalDeposit').add(item('susy:resource_block:15'))
+ore('oreNativeCopperDeposit').add(item('susy:resource_block_1:0'))
+ore('oreAnthraciteDeposit').add(item('susy:resource_block_1:1'))
+ore('oreLigniteDeposit').add(item('susy:resource_block_1:2'))
 
 ore('oreOrthomagmaticDeposit').add(item('susy:deposit_block:0'))
 ore('oreMetamorphicDeposit').add(item('susy:deposit_block:1'))
@@ -222,18 +226,6 @@ for (type in StoneVariantBlock.StoneType.values()) {
 
     OreDictionary.registerOre('stone', variant)
 }
-
-//Saw oredict
-
-ore('toolSaw').remove(item('notreepunching:saw/iron'))
-ore('toolSaw').remove(item('notreepunching:saw/gold'))
-ore('toolSaw').remove(item('notreepunching:saw/diamond'))
-
-//No tree punching knife fixes
-
-ore('toolKnife').remove(item('notreepunching:knife/iron'))
-ore('toolKnife').remove(item('notreepunching:knife/gold'))
-ore('toolKnife').remove(item('notreepunching:knife/diamond'))
 
 //Manual Fixes
 ore('stickWood').add(item('minecraft:stick'))

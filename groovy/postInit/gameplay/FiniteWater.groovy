@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.eventhandler.Event;
 event_manager.listen { BlockEvent.CreateFluidSourceEvent event ->
     World world = event.getWorld();
     BlockPos pos = event.getPos();
-    if (pos.getY() > 63) {
+    if (pos.getY() > 62) {
         event.setResult(Event.Result.DENY);
         return;
     }

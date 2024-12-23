@@ -5,15 +5,12 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.849.desc",
-      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "id:8": "biomesoplenty:white_sand"
       },
-      "ignoresview:1": 0,
-      "name:8": "susy.quest.db.849.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.849.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 849,
   "tasks:9": {}
 }

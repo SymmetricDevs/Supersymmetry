@@ -13,13 +13,10 @@
           "FluidName:8": "diesel"
         }
       },
-      "ignoresview:1": 0,
-      "ismain:1": 1,
-      "name:8": "susy.quest.db.181.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.181.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 181,
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

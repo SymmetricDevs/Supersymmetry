@@ -251,3 +251,22 @@ CRYSTALLIZER.recipeBuilder()
         .duration(120)
         .EUt(200)
         .buildAndRegister()
+
+// LiNO3
+
+BR.recipeBuilder()
+        .inputs(ore('dustLithiumCarbonate') * 6)
+        .fluidInputs(fluid('nitric_acid') * 2000)
+        .fluidOutputs(fluid('lithium_nitrate_solution') * 1000)
+        .fluidOutputs(fluid('carbon_dioxide') * 1000)
+        .EUt(30)
+        .duration(80)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('lithium_nitrate_solution') * 1000)
+        .outputs(metaitem('dustLithiumNitrate') * 10)
+        .fluidOutputs(fluid('water') * 1000)
+        .EUt(30)
+        .duration(80)
+        .buildAndRegister()

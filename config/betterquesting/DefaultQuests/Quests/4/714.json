@@ -1,6 +1,7 @@
 {
   "preRequisites:11": [
-    647
+    326901357,
+    823
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -10,17 +11,13 @@
         "Damage:2": 1004,
         "id:8": "gregtech:meta_ring"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.714.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.714.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 714,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

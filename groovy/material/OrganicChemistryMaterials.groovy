@@ -174,7 +174,11 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
         
-        //FREE ID: 15025
+        OneTwoDichloroethylene = new Material.Builder(15025, SuSyUtility.susyId('one_two_dichloroethylene'))
+                .liquid()
+                .components(Carbon * 2, Hydrogen * 2, Chlorine * 2)
+                .colorAverage()
+                .build();
 
         AcidicTetrafluoroethylene = new Material.Builder(15026, SuSyUtility.susyId('acidic_tetrafluoroethylene'))
                 .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -296,7 +300,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        Dichloroethane = new Material.Builder(15048, SuSyUtility.susyId('dichloroethane'))
+        OneTwoDichloroethane = new Material.Builder(15048, SuSyUtility.susyId('one_two_dichloroethane'))
                 .liquid()
                 .components(Carbon * 2, Hydrogen * 4, Chlorine * 2)
                 .colorAverage()
@@ -316,7 +320,7 @@ public class OrganicChemistryMaterials {
 
         DiphenylIsophthalateSolution = new Material.Builder(15051, SuSyUtility.susyId('diphenyl_isophthalate_solution'))
                 .liquid()
-                .components(DiphenylIsophtalate * 1, Dichloroethane * 1)
+                .components(DiphenylIsophtalate * 1, OneTwoDichloroethane * 1)
                 .colorAverage()
                 .build();
 
@@ -326,7 +330,11 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 15053
+        OneOneTwoTwoTetrachloroethane = new Material.Builder(15053, SuSyUtility.susyId('one_one_two_two_tetrachloroethane'))
+                .liquid()
+                .components(Carbon * 2, Hydrogen * 2, Chlorine * 4)
+                .colorAverage()
+                .build();
 
         PBIFoam = new Material.Builder(15054, SuSyUtility.susyId('pbi_foam'))
                 .dust()
@@ -363,7 +371,7 @@ public class OrganicChemistryMaterials {
 
         Cyclohexanone = new Material.Builder(15060, SuSyUtility.susyId('cyclohexanone'))
                 .liquid()
-                .components(Hydrogen * 3, Nitrogen * 1, Oxygen * 1)
+                .components(Carbon * 6, Hydrogen * 10, Oxygen * 1)
                 .color(0x2b1e11)
                 .build();
 
@@ -403,7 +411,10 @@ public class OrganicChemistryMaterials {
 
         Methyltrichlorosilane.setFormula("CH3SiCl3", true)
 
-        //FREE ID: 15066
+        CrackedOneTwoDichloroethaneMix = new Material.Builder(15066, SuSyUtility.susyId('cracked_one_two_dichloroethane_mix'))
+                .liquid()
+                .color(0x72afad)
+                .build();
 
         VinylChlorideSuspension = new Material.Builder(15067, SuSyUtility.susyId('vinyl_chloride_suspension'))
                 .liquid()
@@ -477,7 +488,11 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE ID: 15080
+        TwoFourFiveXylenolMixture = new Material.Builder(15080, SuSyUtility.susyId('two_four_five_xylenol_mixture'))
+                .liquid(new FluidBuilder().temperature(400))
+                .components(Carbon * 8, Hydrogen * 10, Oxygen * 1)
+                .color(0x6e3632)
+                .build();
 
         Butyllithium = new Material.Builder(15081, SuSyUtility.susyId('butyllithium'))
                 .liquid()
@@ -490,7 +505,17 @@ public class OrganicChemistryMaterials {
                 .color(0x332e2c)
                 .build();
 
-        //FREE ID: 15084-15085
+        TwoFourFiveXylenolMixture = new Material.Builder(15084, SuSyUtility.susyId('two_four_five_xylenol_mixture'))
+                .liquid(new FluidBuilder().temperature(400))
+                .components(Carbon * 8, Hydrogen * 10, Oxygen * 1)
+                .color(0x6e3632)
+                .build();
+      
+        TwoSixXylenol = new Material.Builder(15085, SuSyUtility.susyId('two_six_xylenol'))
+                .liquid(new FluidBuilder().temperature(400))
+                .components(Carbon * 8, Hydrogen * 10, Oxygen * 1)
+                .color(0x572d2a)
+                .build();
 
         Acetylene = new Material.Builder(15086, SuSyUtility.susyId('acetylene'))
                 .gas()
@@ -545,8 +570,12 @@ public class OrganicChemistryMaterials {
                 .components(Carbon * 4, Hydrogen * 6, Oxygen * 2)
                 .color(0x4242f5)
                 .build();
-
-        //FREE ID: 15095
+         
+        OneOneDichloroethane = new Material.Builder(15095, SuSyUtility.susyId('one_one_dichloroethane'))
+                .liquid()
+                .components(Carbon * 2, Hydrogen * 4, Chlorine * 2)
+                .colorAverage()
+                .build();
 
         DimethyldichlorosilaneEmulsion = new Material.Builder(15096, SuSyUtility.susyId('dimethyldichlorosilane_emulsion'))
                 .liquid()
@@ -1364,7 +1393,12 @@ public class OrganicChemistryMaterials {
                 .color(0x403c32)
                 .build();
 
-        //FREE ID: 15226
+        HexamethylenetetramineSolution = new Material.Builder(15226, SuSyUtility.susyId('hexamethylenetetramine_solution'))
+                .liquid()
+                .components(Carbon * 6, Hydrogen * 12, Nitrogen * 4, Water * 4)
+                .colorAverage()
+                .build()
+                .setFormula("(C6H12N4)(H2O)4", true)
 
         Ferrocene = new Material.Builder(15227, SuSyUtility.susyId('ferrocene'))
                 .dust()
@@ -1421,7 +1455,10 @@ public class OrganicChemistryMaterials {
                 .color(0xd13485)
                 .build();
 
-        //FREE ID: 15235
+        AcidicRichAmine = new Material.Builder(15235, SuSyUtility.susyId('acidic_rich_amine'))
+                .liquid()
+                .color(0x6ca0ab)
+                .build();
       
         OctylHydroxamicAcid = new Material.Builder(15236, SuSyUtility.susyId('octyl_hydroxamic_acid'))
                 .dust()
@@ -2029,7 +2066,11 @@ public class OrganicChemistryMaterials {
                 .color(0xd3d4ae)
                 .build();
 
-        //FREE ID: 15332
+        TriethyleneGlycol = new Material.Builder(15332, SuSyUtility.susyId('triethylene_glycol'))
+                .liquid()
+                .components(Carbon * 6, Hydrogen * 14, Oxygen * 4)
+                .color(0x27a8a2)
+                .build()
 
         OneNitronaphthalene = new Material.Builder(15333, SuSyUtility.susyId('one_nitronaphthalene'))
                 .dust()
@@ -2536,6 +2577,24 @@ public class OrganicChemistryMaterials {
                 .dust()
                 .components(Carbon * 2, Hydrogen * 4, Oxygen * 1)
                 .color(0xd4984e)
+                .build();
+
+        CompoundedPolyisoprene = new Material.Builder(15411, SuSyUtility.susyId('compounded_polyisoprene'))
+                .dust()
+                .components(Isoprene)
+                .color(0x121212)
+                .build();
+
+        CompoundedStyreneIsopreneRubber = new Material.Builder(15412, SuSyUtility.susyId('compounded_styrene_isoprene_rubber'))
+                .dust()
+                .components(Isoprene * 3, Styrene * 1)
+                .color(0x260418)
+                .build();
+
+        CompoundedStyreneButadieneRubber = new Material.Builder(15413, SuSyUtility.susyId('compounded_styrene_butadiene_rubber'))
+                .dust()
+                .components(Butadiene * 3, Styrene * 1)
+                .color(0x3b2d2b)
                 .build();
     }
 }

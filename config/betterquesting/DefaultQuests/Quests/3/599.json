@@ -5,46 +5,41 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.599.desc",
-      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "Damage:2": 4,
         "id:8": "gregtech:meta_block_frame_20"
       },
-      "ignoresview:1": 0,
-      "name:8": "susy.quest.db.599.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.599.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 599,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 17011,
+          "Damage:2": 17021,
           "id:8": "gregtech:machine"
         },
         "1:10": {
-          "Count:3": 36,
+          "Count:3": 9,
           "Damage:2": 1,
           "id:8": "gregtech:boiler_casing"
         },
         "2:10": {
-          "Count:3": 16,
-          "Damage:2": 2,
-          "id:8": "gregtech:multiblock_casing"
-        },
-        "3:10": {
-          "Count:3": 91,
+          "Count:3": 28,
           "Damage:2": 4,
           "id:8": "gregtech:metal_casing"
         },
-        "4:10": {
-          "Count:3": 300,
+        "3:10": {
+          "Count:3": 4,
           "Damage:2": 4,
           "id:8": "gregtech:meta_block_frame_20"
+        },
+        "4:10": {
+          "Count:3": 2,
+          "Damage:2": 1,
+          "id:8": "gregtech:turbine_casing"
         }
       },
       "taskID:8": "bq_standard:retrieval"

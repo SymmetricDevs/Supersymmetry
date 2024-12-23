@@ -14,14 +14,11 @@
           "FluidName:8": "desalted_oil_light"
         }
       },
-      "ignoresview:1": 0,
-      "ismain:1": 1,
       "name:8": "susy.quest.db.175.title",
-      "tasklogic:8": "OR",
-      "visibility:8": "ALWAYS"
+      "tasklogic:8": "OR"
     }
   },
-  "rewards:9": {},
+  "questID:3": 175,
   "tasks:9": {
     "0:10": {
       "requiredFluids:9": {

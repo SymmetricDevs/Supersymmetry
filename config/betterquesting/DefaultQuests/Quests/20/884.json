@@ -7,7 +7,6 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.884.desc",
-      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "id:8": "immersiverailroading:item_rolling_stock",
         "tag:10": {
@@ -15,12 +14,10 @@
           "gauge:6": 1.435
         }
       },
-      "ignoresview:1": 0,
-      "name:8": "susy.quest.db.884.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.884.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 884,
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

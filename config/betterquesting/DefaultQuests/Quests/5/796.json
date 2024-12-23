@@ -5,7 +5,6 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.796.desc",
-      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "id:8": "forge:bucketfilled",
         "tag:10": {
@@ -13,14 +12,12 @@
           "FluidName:8": "tungsten_extraction_mixture"
         }
       },
-      "ignoresview:1": 0,
       "name:8": "susy.quest.db.796.title",
       "questlogic:8": "OR",
-      "tasklogic:8": "OR",
-      "visibility:8": "ALWAYS"
+      "tasklogic:8": "OR"
     }
   },
-  "rewards:9": {},
+  "questID:3": 796,
   "tasks:9": {
     "0:10": {
       "requiredFluids:9": {

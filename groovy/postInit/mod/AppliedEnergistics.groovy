@@ -55,6 +55,7 @@ def name_removals = [
         'appliedenergistics2:network/cells/spatial_storage_cell_2_cubed',
         'appliedenergistics2:network/cells/spatial_storage_cell_16_cubed',
         'appliedenergistics2:network/cells/spatial_storage_cell_128_cubed',
+        'appliedenergistics2:network/cells/view_cell',
         'extracells:storagecells/item/owncasing/256k',
         'extracells:storagecells/item/owncasing/1024k',
         'extracells:storagecells/item/owncasing/4096k',

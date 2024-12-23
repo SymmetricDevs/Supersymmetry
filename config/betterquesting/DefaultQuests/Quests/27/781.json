@@ -6,16 +6,13 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.781.desc",
-      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "id:8": "susy:drill_head"
       },
-      "ignoresview:1": 0,
-      "name:8": "susy.quest.db.781.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.781.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 781,
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

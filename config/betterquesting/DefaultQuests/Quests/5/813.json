@@ -15,13 +15,11 @@
         "Damage:2": 3003,
         "id:8": "gregtech:meta_ingot"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.813.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.813.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 813,
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

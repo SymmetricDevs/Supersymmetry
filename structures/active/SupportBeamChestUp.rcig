@@ -1,0 +1,127 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "SupportBeamChest",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_block_frame_20",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_bolt",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 1103,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 1102,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.11158588528633118,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "susy:meta_item",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.08515378087759018,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "susy:meta_item",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 5,
+      "item": {
+        "id": "industrialrenewal:brace_steel",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 2,
+      "max": 8,
+      "item": {
+        "id": "industrialrenewal:catwalk_steel_pillar",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "industrialrenewal:frame",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 2,
+      "max": 12,
+      "item": {
+        "id": "industrialrenewal:catwalk_column_steel",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

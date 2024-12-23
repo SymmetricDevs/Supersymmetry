@@ -1,0 +1,28 @@
+{
+  "preRequisites:11": [
+    87
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1902566957.desc",
+      "icon:10": {
+        "Damage:2": 1,
+        "id:8": "pyrotech:drying_rack"
+      },
+      "name:8": "susy.quest.db.1902566957.title"
+    }
+  },
+  "questID:3": 1902566957,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "pyrotech:drying_rack"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

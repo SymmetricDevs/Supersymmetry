@@ -10,7 +10,9 @@ import static globals.CarbonGlobals.*
 
 EBF = recipemap('electric_blast_furnace')
 ROASTER = recipemap('roaster')
-BATCH_REACTOR = recipemap('batch_reactor')
+BR = recipemap('batch_reactor')
+MIXER = recipemap('mixer')
+DISTILLERY = recipemap('distillery')
 REACTION_FURNACE = recipemap('reaction_furnace')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
@@ -39,7 +41,7 @@ ROASTER.recipeBuilder()
 
 for (highPurityCombustible in highPurityCombustibles()) {
     ROASTER.recipeBuilder()
-        .inputs(ore('dustManganeseIiOxide') * 2)
+        .inputs(ore('dustCrudeManganeseIiOxide') * 2)
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
         .chancedOutput(metaitem('dustManganese'), 8500, 0)
         .chancedOutput(metaitem(highPurityCombustible.byproduct), 1000, 0)
@@ -66,7 +68,7 @@ class ReductantManganese {
 }
 
 def hydrocarbonReductants = [
-    new ReductantManganese('fuel_oil', 'carbon_dioxide', 67, 288),
+    new ReductantManganese('heavy_gas_oil', 'carbon_dioxide', 67, 288),
     new ReductantManganese('natural_gas', 'carbon_dioxide', 167, 234)
 ]
 
@@ -84,7 +86,7 @@ for (reductant in hydrocarbonReductants) {
     REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustPyrolusite'))
         .fluidInputs(fluid(reductant.name) * reductant.amount_required)
-        .outputs(metaitem('dustManganeseIiOxide') * 2)
+        .outputs(metaitem('dustCrudeManganeseIiOxide') * 2)
         .fluidOutputs(fluid(reductant.byproduct) * reductant.byproduct_amount)
         .fluidOutputs(fluid('dense_steam') * (1000 - reductant.byproduct_amount))
         .duration(120)
@@ -96,7 +98,7 @@ for (reductant in reductants) {
     REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustPyrolusite'))
         .fluidInputs(fluid(reductant.name) * reductant.amount_required)
-        .outputs(metaitem('dustManganeseIiOxide') * 2)
+        .outputs(metaitem('dustCrudeManganeseIiOxide') * 2)
         .fluidOutputs(fluid(reductant.byproduct) * reductant.byproduct_amount)
         .duration(120)
         .EUt(Globals.voltAmps[3])
@@ -104,15 +106,15 @@ for (reductant in reductants) {
 }
 
 //HYDROMETALLURGICAL MANGANESE PROCESSING
-BATCH_REACTOR.recipeBuilder()
-    .inputs(ore('dustManganeseIiOxide'))
+BR.recipeBuilder()
+    .inputs(ore('dustCrudeManganeseIiOxide') * 2)
     .fluidInputs(fluid('sulfuric_acid') * 1000)
     .fluidOutputs(fluid('crude_manganese_ii_sulfate_solution') * 1000)
     .duration(120)
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
-BATCH_REACTOR.recipeBuilder()
+BR.recipeBuilder()
     .inputs(ore('dustTinySodiumHydroxide') * 2)
     .fluidInputs(fluid('crude_manganese_ii_sulfate_solution') * 4000)
     .chancedOutput(metaitem('dustIronIiiHydroxide') * 7, 500, 0)
@@ -129,6 +131,32 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .fluidOutputs(fluid('sulfuric_acid') * 1000)
     .duration(480)
     .EUt(Globals.voltAmps[2])
+    .buildAndRegister()
+
+// MnSO4
+
+BR.recipeBuilder()
+    .inputs(ore('dustManganeseIiOxide') * 2)
+    .fluidInputs(fluid('sulfuric_acid') * 1000)
+    .fluidOutputs(fluid('manganese_ii_sulfate_solution') * 1000)
+    .duration(80)
+    .EUt(30)
+    .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('manganese_ii_sulfate_solution') * 1000)
+    .fluidOutputs(fluid('water') * 1000)
+    .outputs(metaitem('dustManganeseIiSulfate') * 6)
+    .duration(80)
+    .EUt(30)
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustManganeseIiSulfate') * 6)
+    .fluidInputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('manganese_ii_sulfate_solution') * 1000)
+    .duration(80)
+    .EUt(30)
     .buildAndRegister()
 
 // MnCl2
@@ -174,10 +202,31 @@ DISTILLERY.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-// MnO2
+// Manganese Nitrate process developed by IG Farbenindustrie
+// doi:10.1002/14356007.a16_123
 
 BR.recipeBuilder()
     .inputs(ore('dustPyrolusite') * 3)
+    .fluidInputs(fluid('nitrogen_dioxide') * 2000)
+    .fluidInputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('crude_manganese_ii_nitrate_solution') * 1000)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .fluidInputs(fluid('crude_manganese_ii_nitrate_solution') * 1000)
+    .outputs(metaitem('dustManganeseDioxide') * 3)
+    .fluidOutputs(fluid('nitrogen_dioxide') * 2000)
+    .fluidOutputs(fluid('dense_steam') * 1000)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
+
+// MnO2 & Mn(NO3)2
+
+BR.recipeBuilder()
+    .inputs(ore('dustManganeseDioxide') * 3)
     .fluidInputs(fluid('nitrogen_dioxide') * 2000)
     .outputs(metaitem('dustManganeseIiNitrate') * 9)
     .duration(100)
@@ -192,13 +241,67 @@ ROASTER.recipeBuilder()
     .EUt(120)
     .buildAndRegister()
 
-// Manganese hydroxide calcination
+ROASTER.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(ore('dustManganese') * 1)
+    .fluidInputs(fluid('oxygen') * 2000)
+    .outputs(metaitem('dustManganeseDioxide') * 3)
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
+
+// MnO
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustManganeseIiHydroxide') * 5)
     .fluidOutputs(fluid('dense_steam') * 1000)
     .outputs(metaitem('dustManganeseIiOxide') * 2)
     .duration(200)
+    .EUt(30)
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .circuitMeta(1)
+    .inputs(ore('dustManganese') * 1)
+    .fluidInputs(fluid('oxygen') * 1000)
+    .outputs(metaitem('dustManganeseIiOxide') * 2)
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
+
+REACTION_FURNACE.recipeBuilder()
+    .inputs(ore('dustManganeseDioxide') * 3)
+    .fluidInputs(fluid('hydrogen') * 2000)
+    .outputs(metaitem('dustManganeseIiOxide') * 2)
+    .fluidOutputs(fluid('dense_steam') * 1000)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
+
+REACTION_FURNACE.recipeBuilder()
+    .inputs(ore('dustManganeseDioxide') * 3)
+    .fluidInputs(fluid('carbon_monoxide') * 1000)
+    .outputs(metaitem('dustManganeseIiOxide') * 2)
+    .fluidOutputs(fluid('carbon_dioxide') * 1000)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
+
+// MnO & Mn(NO3)2
+
+BR.recipeBuilder()
+    .inputs(ore('dustManganeseIiOxide') * 2)
+    .fluidInputs(fluid('nitric_acid') * 2000)
+    .fluidOutputs(fluid('manganese_ii_nitrate_solution') * 1000)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('manganese_ii_nitrate_solution') * 1000)
+    .fluidOutputs(fluid('water') * 1000)
+    .outputs(metaitem('dustManganeseIiNitrate') * 9)
+    .duration(80)
     .EUt(30)
     .buildAndRegister()
 

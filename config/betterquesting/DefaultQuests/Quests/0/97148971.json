@@ -1,0 +1,47 @@
+{
+  "preRequisites:11": [
+    1958019111
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.97148971.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 14800,
+        "id:8": "gregtech:machine"
+      },
+      "name:8": "susy.quest.db.97148971.title"
+    }
+  },
+  "questID:3": 97148971,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 14800,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 2,
+          "Damage:2": 14801,
+          "id:8": "gregtech:machine"
+        },
+        "2:10": {
+          "Count:3": 2,
+          "Damage:2": 14802,
+          "id:8": "gregtech:machine"
+        },
+        "3:10": {
+          "Count:3": 4,
+          "id:8": "pyrotech:masonry_brick_slab"
+        },
+        "4:10": {
+          "Count:3": 14,
+          "id:8": "pyrotech:masonry_brick_block"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

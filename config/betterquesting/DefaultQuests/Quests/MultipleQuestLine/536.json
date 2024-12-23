@@ -5,7 +5,6 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.536.desc",
-      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "OreDict:8": "drawerBasic",
         "id:8": "storagedrawers:basicdrawers",
@@ -13,24 +12,19 @@
           "material:8": "spruce"
         }
       },
-      "ignoresview:1": 0,
-      "name:8": "susy.quest.db.536.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.536.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 536,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
+      "ignoreNBT:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
           "OreDict:8": "drawerBasic",
           "id:8": "storagedrawers:basicdrawers",
-          "tag:10": {
-            "material:8": "oak"
-          }
+          "tag:10": {}
         }
       },
       "taskID:8": "bq_standard:retrieval"

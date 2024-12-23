@@ -1,0 +1,20 @@
+{
+  "preRequisites:11": [
+    870
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.873.desc",
+      "icon:10": {
+        "id:8": "forge:bucketfilled",
+        "tag:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "ortho_para_xylene_mixture"
+        }
+      },
+      "name:8": "susy.quest.db.873.title"
+    }
+  },
+  "questID:3": 873,
+  "tasks:9": {}
+}

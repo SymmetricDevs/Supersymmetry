@@ -28,30 +28,17 @@ mods.gregtech.assembler.removeByInput(24, [metaitem('gregtechfoodoption:cupric_h
 
 //COTTON RECIPES
 
-crafting.addShaped("susy:cotton_seeds", metaitem('seed.cotton') * 2, [
-        [null, null, null],
-        [null, null, null],
-        [null, metaitem('gregtechfoodoption:seed.unknown'), metaitem('gregtechfoodoption:seed.unknown')]
-])
-
 EXTRUDER.recipeBuilder()
-        .inputs(metaitem('crop.cotton') * 20)
+        .inputs(metaitem('gregtechfoodoption:component.cotton') * 20)
         .notConsumable(ore('gearSteel') * 8)
-        .outputs(metaitem('seed.cotton') * 5)
+        .outputs(metaitem('gregtechfoodoption:seed.cotton') * 5)
         .outputs(metaitem('stem.cotton') * 5)
         .outputs(metaitem('fiberCotton') * 40)
         .EUt(7)
         .duration(80)
         .buildAndRegister()
 
-EXTRACTOR.recipeBuilder()
-        .inputs(metaitem('seed.cotton'))
-        .fluidOutputs(fluid('seed_oil') * 10)
-        .EUt(2)
-        .duration(32)
-        .buildAndRegister()
-
-crafting.addShapeless('string.cotton', item('minecraft:string'), [
+crafting.addShapeless('string.cotton', item('minecraft:string') * 4, [
     metaitem('threadCotton')
 ]) 
 
@@ -913,4 +900,4 @@ generateGreenhouseCropRecipes('warm_humid_greenhouse_gases', metaitem('gregtechf
 
 //CUSTOM CROPS
 
-generateGreenhouseCropRecipes('warm_humid_greenhouse_gases', metaitem('seed.cotton'), metaitem('crop.cotton'), 20)
+generateGreenhouseCropRecipes('warm_humid_greenhouse_gases', metaitem('gregtechfoodoption:seed.cotton'), metaitem('gregtechfoodoption:component.cotton'), 20)

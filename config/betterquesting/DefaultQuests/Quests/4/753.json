@@ -10,17 +10,12 @@
         "Damage:2": 172,
         "id:8": "gregtech:meta_item_2"
       },
-      "ignoresview:1": 0,
-      "ismain:1": 1,
-      "name:8": "susy.quest.db.753.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.753.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 753,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

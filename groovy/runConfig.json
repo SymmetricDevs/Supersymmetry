@@ -12,6 +12,7 @@
     "classes/IQuenchingFluid.groovy",
     "classes/IRefrigerant.groovy",
     "classes/IWorkingFluid.groovy",
+    "classes/ISupercriticalFluid.groovy",
     "globals/",
     "material/"
   ],

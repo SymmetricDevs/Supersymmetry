@@ -1,6 +1,10 @@
 {
   "preRequisites:11": [
-    78
+    78,
+    42,
+    43,
+    77,
+    1458175841
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -10,17 +14,13 @@
         "Damage:2": 516,
         "id:8": "gregtech:meta_item_1"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.54.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.54.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 54,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

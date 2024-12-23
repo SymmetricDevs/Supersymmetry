@@ -1,8 +1,15 @@
 {
+  "preRequisiteTypes:7": [
+    1,
+    0,
+    0,
+    0
+  ],
   "preRequisites:11": [
     479,
     394,
-    775
+    775,
+    2096017803
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -15,13 +22,11 @@
           "FluidName:8": "supreme_gasoline"
         }
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.718.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.718.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 718,
   "tasks:9": {
     "0:10": {
       "index:3": 1,

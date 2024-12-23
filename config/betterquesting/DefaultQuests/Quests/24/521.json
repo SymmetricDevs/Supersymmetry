@@ -9,12 +9,11 @@
       "icon:10": {
         "id:8": "opencomputers:case1"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.521.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.521.title"
     }
   },
+  "questID:3": 521,
   "rewards:9": {
     "0:10": {
       "rewardID:8": "bq_standard:item",
@@ -29,8 +28,6 @@
   },
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

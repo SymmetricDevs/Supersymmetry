@@ -10,40 +10,47 @@
         "Damage:2": 22,
         "id:8": "gregtech:meta_item_1"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.34.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.34.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 34,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 16,
+          "Damage:2": 18,
           "id:8": "gregtech:meta_item_1"
         },
         "1:10": {
-          "Count:3": 1,
-          "Damage:2": 12,
-          "id:8": "gregtech:meta_item_1"
-        },
-        "2:10": {
-          "Count:3": 1,
-          "Damage:2": 13,
-          "id:8": "gregtech:meta_item_1"
-        },
-        "3:10": {
           "Count:3": 1,
           "Damage:2": 17,
           "id:8": "gregtech:meta_item_1"
         }
       },
       "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 13,
+          "id:8": "gregtech:meta_item_1"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 23,
+          "id:8": "gregtech:meta_item_1"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 16,
+          "id:8": "gregtech:meta_item_1"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

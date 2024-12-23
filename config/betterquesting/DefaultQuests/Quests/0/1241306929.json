@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    7
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1241306929.desc",
+      "icon:10": {
+        "id:8": "pyrotech:chopping_block"
+      },
+      "name:8": "susy.quest.db.1241306929.title"
+    }
+  },
+  "questID:3": 1241306929,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "pyrotech:chopping_block"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

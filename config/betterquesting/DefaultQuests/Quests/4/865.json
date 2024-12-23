@@ -1,0 +1,32 @@
+{
+  "preRequisites:11": [
+    864
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.865.desc",
+      "icon:10": {
+        "Damage:2": 15288,
+        "id:8": "gregtech:meta_dust"
+      },
+      "name:8": "susy.quest.db.865.title",
+      "tasklogic:8": "OR"
+    }
+  },
+  "questID:3": 865,
+  "tasks:9": {
+    "0:10": {
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "dimethyl_terephthalate"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    },
+    "1:10": {
+      "index:3": 1,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

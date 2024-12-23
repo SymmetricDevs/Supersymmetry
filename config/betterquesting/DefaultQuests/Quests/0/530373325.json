@@ -1,0 +1,28 @@
+{
+  "preRequisites:11": [
+    58115670
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.530373325.desc",
+      "icon:10": {
+        "Damage:2": 13,
+        "id:8": "pyrotech:material"
+      },
+      "name:8": "susy.quest.db.530373325.title"
+    }
+  },
+  "questID:3": 530373325,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 64,
+          "Damage:2": 13,
+          "id:8": "pyrotech:material"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

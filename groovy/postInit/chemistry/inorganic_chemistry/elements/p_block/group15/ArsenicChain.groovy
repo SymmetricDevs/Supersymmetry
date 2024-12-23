@@ -47,21 +47,6 @@ CLARIFIER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-//ROAST RECOVERY OF As2O3 (75% EFFICIENCY)
-//COBALTITE MODIFICATION
-mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCobaltite')], [fluid('oxygen') * 3000])
-
-EBF.recipeBuilder()
-    .inputs(ore('dustCobaltite') * 2)
-    .fluidInputs(fluid('oxygen') * (3000 + 4000 + 2000))
-    .outputs(metaitem('dustCobaltOxide') * 4)
-    .chancedOutput(metaitem('dustArsenicTrioxide') * 5, 7500, 0)
-    .fluidOutputs(fluid('sulfur_dioxide') * 2000)
-    .blastFurnaceTemp(1200)
-    .duration(120)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
-
 //SPERRYLITE ROASTING
 EBF.recipeBuilder()
     .inputs(ore('dustSperrylite'))
@@ -175,10 +160,11 @@ ROASTER.recipeBuilder()
 
 //PROUSTITE ALKALINE LEACHING (90% EFFICIENT)
 BATCH_REACTOR.recipeBuilder()
-        .inputs(ore('dustProustite') * 7)
+        .inputs(ore('dustProustite') * 1)
         .inputs(ore('dustSalt') * 6)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
-        .fluidInputs(fluid('distilled_water') * 5000)
+        .fluidInputs(fluid('distilled_water') * 5000) 
+		//where does the distilled water go in the fluid output? 
         .outputs(metaitem('dustSilverChloride') * 6) //TO SILVER PROCESSING
         .fluidOutputs(fluid('proustite_alkaline_leach_solution') * 1000)
         .duration(240)
@@ -187,12 +173,12 @@ BATCH_REACTOR.recipeBuilder()
 
 //ENARGITE ALKALINE SULFIDE LEACHING
 BATCH_REACTOR.recipeBuilder()
-        .inputs(ore('dustEnargite') * 14)
+        .inputs(ore('dustEnargite') * 2)
         .inputs(ore('dustSodiumSulfide') * 9)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
         .fluidInputs(fluid('distilled_water') * 4000)
         .outputs(metaitem('dustEnargiteResidue') * 6)
-        .fluidOutputs(fluid('enargite_sulfide_leach_solution') * 1000)
+        .fluidOutputs(fluid('enargite_sulfide_leach_solution') * 2000)
         .duration(240)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()

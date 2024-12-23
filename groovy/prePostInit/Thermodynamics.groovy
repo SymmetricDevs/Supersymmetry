@@ -11,7 +11,6 @@ mods.gregtech.steam_turbine.removeByInput(32, null, [fluid('steam') * 640])
 mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('coal_gas')])
 mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('ethylene')])
 mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('natural_gas') * 8])
-mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('refinery_gas')])
 mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('sulfuric_naphtha') * 4])
 mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('propene')])
 mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('wood_gas') * 8])
@@ -174,15 +173,15 @@ CryoNetherAir.setDurationHX(5);
 CryoNetherAir.setDurationRadiator(200);
 CryoNetherAir.setTemperature(80);
 
-def CryoRefineryGas = new ICryoGas('refinery_gas', 'hot_hp_refinery_gas', 'hp_refinery_gas', 'cold_hp_refinery_gas', 'liquid_refinery_gas');
-CryoRefineryGas.setEUt(60);
-CryoRefineryGas.setDuration(100);
-CryoRefineryGas.setPowerHX(100);
-CryoRefineryGas.setDurationHX(5);
-CryoRefineryGas.setDurationRadiator(200);
-CryoRefineryGas.setTemperature(80);
-
 def CryoNaturalGas = new ICryoGas('natural_gas', 'hot_hp_natural_gas', 'hp_natural_gas', 'cold_hp_natural_gas', 'liquid_natural_gas');
+CryoNaturalGas.setEUt(60);
+CryoNaturalGas.setDuration(100);
+CryoNaturalGas.setPowerHX(100);
+CryoNaturalGas.setDurationHX(5);
+CryoNaturalGas.setDurationRadiator(200);
+CryoNaturalGas.setTemperature(80);
+
+def CryoPetroleumGas = new ICryoGas('fuel_gas', 'hot_hp_fuel_gas', 'hp_fuel_gas', 'cold_hp_fuel_gas', 'lpg');
 CryoNaturalGas.setEUt(60);
 CryoNaturalGas.setDuration(100);
 CryoNaturalGas.setPowerHX(100);
@@ -210,8 +209,8 @@ def CryoGases = [
         CryoAir,
         CryoDecarburizedAir,
         CryoNetherAir,
-        CryoRefineryGas,
         CryoNaturalGas,
+        CryoPetroleumGas,
         CryoMethane
 ];
 
@@ -273,6 +272,21 @@ def Refrigerants = [
         ChlorotrifluoromethaneRefrigerant,
         ChlorodifluoromethaneRefrigerant
 ];
+
+def CarbonDioxideSupercritical = new ISupercriticalFluid("compressed_carbon_dioxide", "supercritical_carbon_dioxide");
+CarbonDioxideSupercritical.setPowerToCompress(240);
+CarbonDioxideSupercritical.setDurationToCompress(200);
+CarbonDioxideSupercritical.setCriticalTemperature(304);
+
+def PropaneSupercritical = new ISupercriticalFluid("compressed_propane", "supercritical_propane");
+PropaneSupercritical.setPowerToCompress(480);
+PropaneSupercritical.setDurationToCompress(100);
+PropaneSupercritical.setCriticalTemperature(370);
+
+def SupercriticalFluids = [
+        CarbonDioxideSupercritical,
+        PropaneSupercritical
+]
 
 //Refrigerant recipes generation
 for (refrigerant in Refrigerants) {
@@ -431,11 +445,6 @@ for (refrigerant in Refrigerants) {
             .buildAndRegister();
 }
 
-def Naphtha = new IFluidFuel('naphtha', 'flue_gas');
-Naphtha.setDuration(160);
-Naphtha.setAmountToBurn(10);
-Naphtha.setByproductAmount(1000);
-
 def NaturalGas = new IFluidFuel('natural_gas', 'flue_gas');
 NaturalGas.setDuration(100);
 NaturalGas.setAmountToBurn(160);
@@ -491,11 +500,6 @@ Ethylene.setDuration(85);
 Ethylene.setAmountToBurn(160);
 Ethylene.setByproductAmount(500);
 
-def RefineryGas = new IFluidFuel('refinery_gas', 'flue_gas');
-RefineryGas.setDuration(100);
-RefineryGas.setAmountToBurn(160);
-RefineryGas.setByproductAmount(750);
-
 def Ammonia = new IFluidFuel('ammonia', 'nitrogen');
 Ammonia.setDuration(70);
 Ammonia.setAmountToBurn(160);
@@ -545,7 +549,7 @@ LiquidNaturalGas.setByproductAmount(1250);
 LiquidNaturalGas.setIsRefinedFuel(true);
 
 def FuelOil = new IFluidFuel('fuel_oil', 'flue_gas');
-FuelOil.setDuration(100);
+FuelOil.setDuration(150);
 FuelOil.setAmountToBurn(10);
 FuelOil.setByproductAmount(2000);
 FuelOil.setIsRefinedFuel(true);
@@ -629,7 +633,6 @@ SupremeKerosene.setByproductAmount(5000);
 SupremeKerosene.setIsRefinedFuel(true);
 
 def FluidFuels = [
-        Naphtha,
         NaturalGas,
         Methane,
         Ethane,
@@ -641,7 +644,6 @@ def FluidFuels = [
         CoalGas,
         Syngas,
         Ethylene,
-        RefineryGas,
         Ammonia,
         Propene,
         Butene,
@@ -843,3 +845,14 @@ recipemap('heat_exchanger').recipeBuilder()
         .fluidOutputs(liquid('chilled_lava') * 3)
         .duration(10)
         .buildAndRegister();
+
+// Supercritical fluid compression
+
+for (scfluid in SupercriticalFluids) {
+        recipemap('fluid_compressor').recipeBuilder()
+            .fluidInputs(fluid(scfluid.getStartingGas()) * 1280)
+            .fluidOutputs(fluid(scfluid.getSupercriticalFluid()) * 20)
+            .EUt(scfluid.getPowerToCompress())
+            .duration(scfluid.getDurationToCompress())
+            .buildAndRegister();
+}

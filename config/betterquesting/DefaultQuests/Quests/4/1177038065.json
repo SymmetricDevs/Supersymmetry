@@ -1,0 +1,56 @@
+{
+  "preRequisites:11": [
+    175
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1177038065.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "forge:bucketfilled",
+        "tag:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "desalted_oil_light"
+        }
+      },
+      "name:8": "susy.quest.db.1177038065.title",
+      "tasklogic:8": "OR"
+    }
+  },
+  "questID:3": 1177038065,
+  "tasks:9": {
+    "0:10": {
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "heated_oil_light"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "heated_oil"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    },
+    "2:10": {
+      "index:3": 2,
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "heated_oil_heavy"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    },
+    "3:10": {
+      "index:3": 3,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

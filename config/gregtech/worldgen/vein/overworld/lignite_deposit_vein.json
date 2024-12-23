@@ -1,0 +1,46 @@
+{
+  "weight": 180,
+  "density": 1,
+  "max_height": 255,
+  "min_height": 60,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "lignite"
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      20,
+      20
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": {
+          "block":"susy:resource_block_1",
+          "variant":"lignite"
+        }
+      },
+      {
+        "secondary": {
+          "block":"susy:resource_block_1",
+          "variant":"lignite"
+        }
+      },
+      {
+        "between": {
+          "block":"susy:resource_block_1",
+          "variant":"lignite"
+        }
+      },
+      {
+        "sporadic": {
+          "block":"susy:resource_block_1",
+          "variant":"lignite"
+        }
+      }
+    ]
+  }
+}

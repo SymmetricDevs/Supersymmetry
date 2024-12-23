@@ -1,6 +1,11 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    1
+  ],
   "preRequisites:11": [
-    653
+    653,
+    498154717
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -10,17 +15,14 @@
         "Damage:2": 1212,
         "id:8": "gregtech:machine"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
       "name:8": "susy.quest.db.498.title",
-      "visibility:8": "ALWAYS"
+      "questlogic:8": "OR"
     }
   },
-  "rewards:9": {},
+  "questID:3": 498,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

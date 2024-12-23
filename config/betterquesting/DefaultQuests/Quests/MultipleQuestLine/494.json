@@ -3,7 +3,11 @@
     480,
     492,
     493,
-    491
+    491,
+    634,
+    633,
+    632,
+    458
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -13,17 +17,13 @@
         "Damage:2": 628,
         "id:8": "gregtech:meta_item_1"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.494.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.494.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 494,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

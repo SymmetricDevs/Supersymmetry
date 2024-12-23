@@ -1,0 +1,51 @@
+{
+  "rules": [
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "minecraft:leaves:*",
+            "minecraft:leaves2:*",
+            "biomesoplenty:leaves_0:*",
+            "biomesoplenty:leaves_1:*",
+            "biomesoplenty:leaves_2:*",
+            "biomesoplenty:leaves_3:*",
+            "biomesoplenty:leaves_4:*",
+            "biomesoplenty:leaves_5:*",
+            "gregtech:rubber_leaves:*",
+            "gregtechfoodoption:gtfo_leaves_0:*",
+            "gregtechfoodoption:gtfo_leaves_1:*",
+            "gregtechfoodoption:gtfo_leaves_2:*",
+            "quark:variant_leaves:*"
+          ]
+        }
+      },
+      "replaceStrategy": "ADD",
+      "drops": [
+        {
+          "selector": {
+            "weight": {
+              "value": 80
+            }
+          }
+        },
+        {
+          "selector": {
+            "weight": {
+              "value": 20
+            }
+          },
+          "item": {
+            "items": [
+              "minecraft:stick"
+            ],
+            "quantity": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

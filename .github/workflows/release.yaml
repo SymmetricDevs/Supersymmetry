@@ -21,11 +21,6 @@ jobs:
     - name: Install requests
       run: |
        pip install requests
-    - uses: actions/setup-java@v2
-      with:
-        distribution: 'adopt' # See 'Supported distributions' for available options
-        java-version: '8'
-    - run: java -version
     - name: Run Build
       run: |
         python build/main.py

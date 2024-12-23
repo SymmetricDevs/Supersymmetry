@@ -37,26 +37,24 @@ public class UnknownCompositionMaterials {
         BlackAsh = new Material.Builder(4002, SuSyUtility.susyId('black_ash'))
                 .dust()
                 .color(0x000000)
-                .colorAverage()
                 .build();
 
         MolecularSieve = new Material.Builder(4003, SuSyUtility.susyId('molecular_sieve'))
                 .dust()
                 .iconSet(SHINY)
                 .color(0x737373)
-                .colorAverage()
                 .build();
 
         WetMolecularSieve = new Material.Builder(4004, SuSyUtility.susyId('wet_molecular_sieve'))
                 .dust()
                 .iconSet(SHINY)
                 .color(0x5c5c5c)
-                .colorAverage()
                 .build();
 
-        RawMolecularSieve = new Material.Builder(4005, SuSyUtility.susyId('raw_molecular_sieve'))
-                .liquid()
-                .color(0x8c94a8)
+        ChloridedAlumina = new Material.Builder(4005, SuSyUtility.susyId('chlorided_alumina'))
+                .dust()
+                .color(0x86bf99)
+                .flags(GENERATE_CATALYST_BED)
                 .build();
 
         FlueGas = new Material.Builder(4006, SuSyUtility.susyId('flue_gas'))
@@ -189,9 +187,10 @@ public class UnknownCompositionMaterials {
                 .color(0x4f2f27)
                 .build();
 
-        AlkylatedButane = new Material.Builder(4032, SuSyUtility.susyId('alkylated_butane'))
-                .liquid()
-                .color(0x6e4c2c)
+        SulfatedMetalOxide = new Material.Builder(4032, SuSyUtility.susyId('sulfated_metal_oxide'))
+                .dust()
+                .color(0xc7f089)
+                .flags(GENERATE_CATALYST_BED)
                 .build();
 
         ImpureKaptonK = new Material.Builder(4033, SuSyUtility.susyId('impure_kapton_k'))
@@ -477,13 +476,13 @@ public class UnknownCompositionMaterials {
                 .color(0xadb07f)
                 .build();
 
-        Zeolite13X = new Material.Builder(4091, SuSyUtility.susyId('zeolite_13'))
+        TypeXZeolite = new Material.Builder(4091, SuSyUtility.susyId('type_x_zeolite'))
                 .dust()
                 .iconSet(SHINY)
                 .color(0xe4e8bc)
                 .build();
 
-        Zeolite13XSolution = new Material.Builder(4092, SuSyUtility.susyId('zeolite_13_solution'))
+        TypeXZeoliteSolution = new Material.Builder(4092, SuSyUtility.susyId('type_x_zeolite_solution'))
                 .liquid()
                 .color(0xe4e8bc)
                 .build();
@@ -535,7 +534,12 @@ public class UnknownCompositionMaterials {
                 .color(0xbaced6)
                 .build();
 
-        // FREE ID: 4102
+        SolidPhosphoricAcid = new Material.Builder(4102, SuSyUtility.susyId('solid_phosphoric_acid'))
+                .dust()
+                .iconSet(DULL)
+                .color(0xd7de9e)
+                .flags(GENERATE_WET_DUST, GENERATE_CATALYST_BED)
+                .build();
 
         LepidoliteLeach = new Material.Builder(4103, SuSyUtility.susyId('lepidolite_leach'))
                 .liquid()
@@ -836,7 +840,13 @@ public class UnknownCompositionMaterials {
                 .color(0x80849c)
                 .build()
 
-        //FREE ID: 4160-4161
+        AmorphousSilicaAlumina = new Material.Builder(4160, SuSyUtility.susyId('amorphous_silica_alumina'))
+                .dust()
+                .color(0x7ea3ed)
+                .iconSet(DULL)
+                .build()
+
+        // FREE ID: 4161
 
         ZincLeach = new Material.Builder(4162, SuSyUtility.susyId('zinc_leach'))
                 .liquid()
@@ -869,11 +879,14 @@ public class UnknownCompositionMaterials {
                 .build()
 
         WaelzOxide = new Material.Builder(4168, SuSyUtility.susyId('waelz_oxide'))
-                .dust() //.liquid(new FluidBuilder().temperature(700))
+                .dust()
                 .color(0x475453)
                 .build()
 
-        //FREE ID: 4169
+        CarbonBlack = new Material.Builder(4169, SuSyUtility.susyId('carbon_black'))
+                .dust()
+                .color(0x140f02)
+                .build()
 
         ZincCementationSlurry = new Material.Builder(4170, SuSyUtility.susyId('zinc_cementation_slurry'))
                 .liquid()
@@ -1020,14 +1033,26 @@ public class UnknownCompositionMaterials {
                 .color(0x662e2e)
                 .build();
 
-        //FREE IDs: 4199-4200
+        CresolNovolacsOligomer = new Material.Builder(4199, SuSyUtility.susyId('cresol_novolacs_oligomer'))
+                .liquid(new FluidBuilder().temperature(488))
+                .color(0x9c745c)
+                .build();
+
+        EpoxyCresolNovolacs = new Material.Builder(4200, SuSyUtility.susyId('epoxy_cresol_novolacs'))
+                .polymer()
+                .color(0xe8cda5)
+                .flags(GENERATE_WET_DUST, GENERATE_PLATE, GENERATE_FOIL)
+                .build();
 
         SiliconDioxideSlurry = new Material.Builder(4201, SuSyUtility.susyId('silicon_dioxide_slurry'))
                 .liquid()
                 .color(0x69675b)
                 .build();
 
-        //FREE IDs: 4202
+        OrthoCresylicAcidMixture = new Material.Builder(4202, SuSyUtility.susyId('ortho_cresylic_acid_mixture'))
+                .liquid()
+                .color(0xb5a991)
+                .build();
 
         VTSlag = new Material.Builder(4203, SuSyUtility.susyId('vt_slag'))
                 .dust()
@@ -1114,7 +1139,11 @@ public class UnknownCompositionMaterials {
                 .color(0x48485e)
                 .build();
 
-        //FREE ID: 4221
+        HydrotreatingCatalyst = new Material.Builder(4221, SuSyUtility.susyId('hydrotreating_catalyst'))
+                .dust()
+                .color(0xb5dea4)
+                .flags(GENERATE_CATALYST_BED)
+                .build();
 
         MidgradeGasoline = new Material.Builder(4222, SuSyUtility.susyId('midgrade_gasoline'))
                 .liquid()
@@ -1141,7 +1170,7 @@ public class UnknownCompositionMaterials {
                 .color(0x74561d)
                 .build();
 
-        TitanylSulfateSolution.setFormula('(H20)(TiO[SO4])(?)', true);
+        TitanylSulfateSolution.setFormula('(H2O)(TiO[SO4])(?)', true);
 
         AcidicWastewater = new Material.Builder(4233, SuSyUtility.susyId('acidic_wastewater'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -1194,7 +1223,10 @@ public class UnknownCompositionMaterials {
                 .color(0xc48072)
                 .build();
 
-        //FREE ID: 4243
+        HydratedTriethyleneGlycol = new Material.Builder(4243, SuSyUtility.susyId('hydrated_triethylene_glycol'))
+                .liquid()
+                .color(0x2795a8)
+                .build()
 
         SphaleriteByproductSlurry = new Material.Builder(4244, SuSyUtility.susyId('sphalerite_byproduct_slurry'))
                 .liquid()
@@ -1937,5 +1969,21 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0x631a87)
                 .build()
+
+        SourWater = new Material.Builder(4424, SuSyUtility.susyId("sour_water"))
+                .fluid()
+                .color(0x281757)
+                .build()
+
+        TypeYZeolite = new Material.Builder(4425, SuSyUtility.susyId('type_y_zeolite'))
+                .dust()
+                .iconSet(SHINY)
+                .color(0xc8cca1)
+                .build();
+
+        TypeYZeoliteSolution = new Material.Builder(4426, SuSyUtility.susyId('type_y_zeolite_solution'))
+                .liquid()
+                .color(0xc8cca1)
+                .build();
     }
 }

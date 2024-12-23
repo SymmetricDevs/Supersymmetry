@@ -292,6 +292,42 @@ mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:cookie')], null)
 mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:cooked_mutton')], null)
 // Methane * 43
 mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:carrot')], null)
+// Methane Gas * 78
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:apple_baked')], null)
+// Methane Gas * 86
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:carrot_roasted')], null)
+// Methane Gas * 86
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:egg_roasted')], null)
+// Methane Gas * 72
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:mushroom_brown_roasted')], null)
+// Methane Gas * 72
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:mushroom_red_roasted')], null)
+// Methane Gas * 34
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:beetroot_roasted')], null)
+// Methane Gas * 20
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:burned_food')], null)
+// Methane Gas * 22
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:strange_tuber')], null)
+// Methane Gas * 10
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:pyroberry_wine')], null)
+// Methane Gas * 10
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:gloamberry_wine')], null)
+// Methane Gas * 10
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:freckleberry_wine')], null)
+// Methane Gas * 9
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:tainted_meat')], null)
+// Methane Gas * 20
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:pyroberries')], null)
+// Methane Gas * 20
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:gloamberries')], null)
+// Methane Gas * 20
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:freckleberries')], null)
+// Methane Gas * 9
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:marshmallow')], null)
+// Methane Gas * 20
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:marshmallow_roasted')], null)
+// Methane Gas * 9
+mods.gregtech.centrifuge.removeByInput(5, [item('pyrotech:marshmallow_burned')], null)
 // Iron Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustYellowLimonite') * 4], null)
 // Iron Dust * 1

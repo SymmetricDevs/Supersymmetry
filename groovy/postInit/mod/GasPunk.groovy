@@ -29,47 +29,55 @@ ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
 PSA = recipemap('pressure_swing_adsorption')
 
 def name_removals = [
-        "gaspunk:diffuser",
-        "gaspunk:grenade",
-        "gaspunk:vapor_grenade",
-        "gaspunk:grenade_refill",
-        "gaspunk:grenade_recycling",
-        "gaspunk:inhaler",
-        "gp_inhaler:empty_inhaler",
-        "gp_inhaler:vapor_inhaler",
-        "gp_inhaler:inhaler",
-        "gaspunk:vapor_inhaler",
-        "gaspunk:gas_mask"
+    "gaspunk:diffuser",
+    "gaspunk:grenade",
+    "gaspunk:vapor_grenade",
+    "gaspunk:grenade_refill",
+    "gaspunk:grenade_recycling",
+    "gaspunk:inhaler",
+    "gp_inhaler:empty_inhaler",
+    "gp_inhaler:vapor_inhaler",
+    "gp_inhaler:inhaler",
+    "gaspunk:vapor_inhaler",
+    "gaspunk:gas_mask"
 ]
 
 for (item in name_removals) {
     crafting.remove(item);
 }
 
+def rubber_rings = [
+    'ringRubber',
+    'ringSiliconeRubber',
+    'ringStyreneButadieneRubber',
+]
+
 Globals.solders.each { key, val ->
+    for (rubber_ring in rubber_rings) {
         recipemap('weapons_factory').recipeBuilder()
-                .inputs([
-                        ore('ringRubber')*4,
-                        ore('platePlastic'),
-                        ore('plateSteel')
-                ])
-                .fluidInputs(fluid(key) * val)
-                .outputs(item('gaspunk:diffuser'))
-                .duration(200)
-                .EUt(60)
-                .buildAndRegister();
+            .inputs([
+                ore(rubber_ring)*4,
+                ore('platePlastic'),
+                ore('plateSteel')
+            ])
+            .fluidInputs(fluid(key) * val)
+            .outputs(item('gaspunk:diffuser'))
+            .duration(200)
+            .EUt(60)
+            .buildAndRegister();
 
         recipemap('weapons_factory').recipeBuilder()
-                .inputs([
-                        ore('ringRubber')*4,
-                        metaitem('component.glass.tube'),
-                        ore('plateSteel')
-                ])
-                .fluidInputs(fluid(key) * val)
-                .outputs(item('gp_inhaler:empty_inhaler'))
-                .duration(200)
-                .EUt(60)
-                .buildAndRegister();
+            .inputs([
+                ore(rubber_ring)*4,
+                metaitem('component.glass.tube'),
+                ore('plateSteel')
+            ])
+            .fluidInputs(fluid(key) * val)
+            .outputs(item('gp_inhaler:empty_inhaler'))
+            .duration(200)
+            .EUt(60)
+            .buildAndRegister();
+    }
 }
 
 recipemap('assembler').recipeBuilder()
