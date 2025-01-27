@@ -186,7 +186,7 @@ BATCH_REACTOR.recipeBuilder()
     .fluidInputs(fluid('thiosulfate_thioantimonite_solution') * 5000)
     .fluidInputs(fluid('iron_iii_chloride_solution') * 1000)
     .outputs(metaitem('dustIronThioantimonite') * 5)
-    .outputs(metaitem('dustSalt') * 3) //this should be dissolved in the sodium thiosulfate solution.
+    .outputs(metaitem('dustSalt') * 12) //this should be dissolved in the sodium thiosulfate solution.
     .fluidOutputs(fluid('sodium_thiosulfate_solution') * 6000)
     .duration(120)
     .EUt(Globals.voltAmps[2])
@@ -233,7 +233,7 @@ BATCH_REACTOR.recipeBuilder()
     .fluidInputs(fluid('thiosulfate_thioarsenite_solution') * 5000)
     .fluidInputs(fluid('iron_iii_chloride_solution') * 1000)
     .outputs(metaitem('dustIronThioarsenite') * 5)
-    .outputs(metaitem('dustSalt') * 3) //this should be dissolved in the sodium thiosulfate solution.
+    .outputs(metaitem('dustSalt') * 12) //this should be dissolved in the sodium thiosulfate solution.
     .fluidOutputs(fluid('sodium_thiosulfate_solution') * 6000)
     .duration(120)
     .EUt(Globals.voltAmps[2])
