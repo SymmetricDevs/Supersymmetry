@@ -239,6 +239,16 @@ eventManager.listen {
         customMetaItems.addItem(5305, "etched.silicon_dioxide");
         customMetaItems.addItem(5306, "etched.polysilicon");
         customMetaItems.addItem(5307, "etched.silicon_nitride");
+        customMetaItems.addItem(5400, "shadowmask.ram");
+        customMetaItems.addItem(5401, "shadowmask.uplic");
+        customMetaItems.addItem(5402, "shadowmask.ic");
+        customMetaItems.addItem(5403, "shadowmask.cpu");
+        customMetaItems.addItem(5404, "shadowmask.lpic");
+        customMetaItems.addItem(5405, "shadowmask.chromium_layer");
+        customMetaItems.addItem(5406, "shadowmask.metal");
+        customMetaItems.addItem(5407, "shadowmask.chrome_on_glass");
+        customMetaItems.addItem(5408, "shadowmask.nand");
+        customMetaItems.addItem(5409, "shadowmask.nor");
 
         //Light Sources 6000-6100
         customMetaItems.addItem(6000, "carbon_arc_lamp");
