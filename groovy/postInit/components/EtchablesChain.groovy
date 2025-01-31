@@ -567,3 +567,36 @@ ASSEMBLER.recipeBuilder()
         .duration(200)
         .EUt(120)
         .buildAndRegister()
+
+// CPU * 8
+mods.gregtech.laser_engraver.removeByInput(120, [metaitem('wafer.central_processing_unit')], null)
+// ULPIC * 6
+mods.gregtech.laser_engraver.removeByInput(120, [metaitem('wafer.ultra_low_power_integrated_circuit')], null)
+// Integrated Circuit * 8
+mods.gregtech.laser_engraver.removeByInput(120, [metaitem('wafer.integrated_logic_circuit')], null)
+// RAM * 32
+mods.gregtech.laser_engraver.removeByInput(120, [metaitem('wafer.random_access_memory')], null)
+// LPIC * 4
+mods.gregtech.laser_engraver.removeByInput(480, [metaitem('wafer.low_power_integrated_circuit')], null)
+// PIC * 4
+mods.gregtech.laser_engraver.removeByInput(1920, [metaitem('wafer.power_integrated_circuit')], null)
+// NAND * 32
+mods.gregtech.laser_engraver.removeByInput(480, [metaitem('wafer.nand_memory_chip')], null)
+// NOR * 16
+mods.gregtech.laser_engraver.removeByInput(480, [metaitem('wafer.nor_memory_chip')], null)
+// Patterned Phenolic Circuit Board * 1
+mods.gregtech.laser_engraver.removeByInput(30, [metaitem('laminated.board.phenolic'), metaitem('circuit.integrated').withNbt(['Configuration': 0])], [fluid('novolacs') * 12 * 12])
+// Patterned Phenolic Circuit Board * 1
+mods.gregtech.laser_engraver.removeByInput(30, [metaitem('laminated.board.phenolic'), metaitem('circuit.integrated').withNbt(['Configuration': 0])], [fluid('hydrogen_silsesquioxane_photoresist') * 6 * 6])
+// Patterned Phenolic Circuit Board * 1
+mods.gregtech.laser_engraver.removeByInput(30, [metaitem('laminated.board.phenolic'), metaitem('circuit.integrated').withNbt(['Configuration': 0])], [fluid('pmma') * 4 * 4])
+// Patterned Phenolic Circuit Board * 1
+mods.gregtech.laser_engraver.removeByInput(30, [metaitem('laminated.board.phenolic'), metaitem('circuit.integrated').withNbt(['Configuration': 0])], [fluid('su_eight') * 4 * 4])
+// Patterned Plastic Circuit Board * 1
+mods.gregtech.laser_engraver.removeByInput(120, [metaitem('board.plastic'), metaitem('circuit.integrated').withNbt(['Configuration': 0])], [fluid('novolacs') * 12 * 12])
+// Patterned Plastic Circuit Board * 1
+mods.gregtech.laser_engraver.removeByInput(120, [metaitem('board.plastic'), metaitem('circuit.integrated').withNbt(['Configuration': 0])], [fluid('hydrogen_silsesquioxane_photoresist') * 6 * 6])
+// Patterned Plastic Circuit Board * 1
+mods.gregtech.laser_engraver.removeByInput(120, [metaitem('board.plastic'), metaitem('circuit.integrated').withNbt(['Configuration': 0])], [fluid('pmma') * 4 * 4])
+// Patterned Plastic Circuit Board * 1
+mods.gregtech.laser_engraver.removeByInput(120, [metaitem('board.plastic'), metaitem('circuit.integrated').withNbt(['Configuration': 0])], [fluid('su_eight') * 4 * 4])
