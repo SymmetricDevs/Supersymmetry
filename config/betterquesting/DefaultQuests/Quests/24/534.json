@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    533
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.534.desc",
+      "icon:10": {
+        "id:8": "opensecurity:entity_detector"
+      },
+      "name:8": "susy.quest.db.534.title"
+    }
+  },
+  "questID:3": 534,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "opensecurity:entity_detector"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

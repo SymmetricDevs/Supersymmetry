@@ -1,0 +1,145 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditWeapons",
+  "items": [
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:revolver",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 6
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:goldenrevolver",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 6
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 13,
+      "max": 22,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:boltaction",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 6
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 4,
+      "max": 6,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 8,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 7,
+      "max": 14,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 60,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0976562350988388,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:m4_infiltrator",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 30
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

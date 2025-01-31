@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    580
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.788.desc",
+      "icon:10": {
+        "Damage:2": 988,
+        "id:8": "gregtech:machine"
+      },
+      "name:8": "susy.quest.db.788.title"
+    }
+  },
+  "questID:3": 788,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

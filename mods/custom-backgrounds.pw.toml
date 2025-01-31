@@ -1,0 +1,13 @@
+name = "Custom Backgrounds"
+filename = "CustomBackgrounds-MC1.12-1.1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "930bb07c5f3d11364f7f5f16561c72da10a6a01d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2445809
+project-id = 225928

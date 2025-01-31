@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    525
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.528.desc",
+      "icon:10": {
+        "id:8": "opencomputers:cable"
+      },
+      "name:8": "susy.quest.db.528.title"
+    }
+  },
+  "questID:3": 528,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "opencomputers:cable"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

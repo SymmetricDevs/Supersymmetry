@@ -14,6 +14,7 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustRawElectrum') * 2], nu
 
 // Aqua Regia * 3000
 mods.gregtech.mixer.removeByInput(30, null, [fluid('nitric_acid') * 1000, fluid('hydrochloric_acid') * 2000])
+mods.gregtech.blender.removeByInput(30, null, [fluid('nitric_acid') * 1000, fluid('hydrochloric_acid') * 2000])
 
 //GOLD AMALGAMATION (50% EFFICIENCY)
 MIXER.recipeBuilder()

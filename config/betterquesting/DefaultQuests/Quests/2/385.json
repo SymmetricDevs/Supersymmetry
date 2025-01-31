@@ -1,0 +1,38 @@
+{
+  "preRequisites:11": [
+    384
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.385.desc",
+      "icon:10": {
+        "Damage:2": 2,
+        "id:8": "icbmclassic:explosives"
+      },
+      "name:8": "susy.quest.db.385.title"
+    }
+  },
+  "questID:3": 385,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "id:8": "icbmclassic:explosives"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 4,
+          "id:8": "icbmclassic:explosives"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 3,
+          "id:8": "icbmclassic:explosives"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

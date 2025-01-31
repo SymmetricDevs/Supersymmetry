@@ -1,0 +1,29 @@
+{
+  "preRequisiteTypes:7": [
+    1
+  ],
+  "preRequisites:11": [
+    33
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.670.desc",
+      "icon:10": {
+        "id:8": "minecraft:paper"
+      },
+      "name:8": "susy.quest.db.670.title"
+    }
+  },
+  "questID:3": 670,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:paper"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

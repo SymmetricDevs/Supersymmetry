@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "HeliPadLootOutside1",
+  "items": [
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtech:fluid_pipe_small",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:fluid_pipe_small",
+        "damage": 1012,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:item_pipe_normal",
+        "damage": 1007,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 142,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 127,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

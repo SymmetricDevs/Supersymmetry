@@ -1,0 +1,43 @@
+{
+  "preRequisites:11": [
+    104
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.683.desc",
+      "icon:10": {
+        "Damage:2": 4,
+        "id:8": "gregtech:meta_block_frame_20"
+      },
+      "name:8": "susy.quest.db.683.title"
+    }
+  },
+  "questID:3": 683,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 14635,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 39,
+          "Damage:2": 4,
+          "id:8": "gregtech:meta_block_frame_20"
+        },
+        "2:10": {
+          "Count:3": 21,
+          "Damage:2": 4,
+          "id:8": "gregtech:metal_casing"
+        },
+        "3:10": {
+          "Count:3": 30,
+          "Damage:2": 1,
+          "id:8": "gregtech:boiler_casing"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

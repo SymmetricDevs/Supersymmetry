@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    742
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.743.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "immersiverailroading:item_rolling_stock",
+        "tag:10": {
+          "defID:8": "rolling_stock/locomotives/monorail_engine.json",
+          "gauge:6": 1.435
+        }
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.743.title"
+    }
+  },
+  "questID:3": 743,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+name = "Hunger In Peace"
+filename = "HungerInPeace-mc1.12-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "cdbb97e482b0aac5e0481280f7a8bef92233d1c7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2442631
+project-id = 224473

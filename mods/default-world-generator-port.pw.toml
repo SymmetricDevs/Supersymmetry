@@ -1,0 +1,13 @@
+name = "Default World Generator (port)"
+filename = "DefaultWorldGenerator-port-1.12-2.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d3f19e09346849b71a447b5e6253f9b2cd110756"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2499252
+project-id = 241140

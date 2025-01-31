@@ -1,0 +1,29 @@
+{
+  "preRequisites:11": [
+    708
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.707.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 2,
+        "id:8": "gregtech:wire_coil"
+      },
+      "name:8": "susy.quest.db.707.title"
+    }
+  },
+  "questID:3": 707,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 16,
+          "Damage:2": 2,
+          "id:8": "gregtech:wire_coil"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

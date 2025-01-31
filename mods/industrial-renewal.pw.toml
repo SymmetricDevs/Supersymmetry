@@ -1,0 +1,13 @@
+name = "Industrial Renewal"
+filename = "IndustrialRenewal_1.12.2-0.21.8.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3d3d77cc3eb341200c81e0c3ef2dec69ffc69521"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3340876
+project-id = 299849

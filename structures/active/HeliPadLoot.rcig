@@ -1,0 +1,154 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "HeliPadLoot",
+  "items": [
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "industrialrenewal:screwdrive",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 5,
+      "max": 15,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 502,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0068187713623047,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 735,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 120000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 217,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 232,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:wire_cutter_hv",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:vanadium_steel"
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 1535
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                },
+                "ToolSpeed": {
+                  "nbtType": "float",
+                  "nbt": 13.0
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 3
+                },
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 2.0
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.6000001
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            },
+            "MaxCharge": {
+              "nbtType": "long",
+              "nbt": 1600000
+            },
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_foil",
+        "damage": 1012,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 1012,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

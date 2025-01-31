@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditIngots",
+  "items": [
+    {
+      "weight": 1.0950840711593628,
+      "min": 19,
+      "max": 27,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 260,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 1,
+      "max": 17,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 55,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 6,
+      "max": 14,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 112,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 9,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 25,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 19,
+      "max": 27,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 9,
+      "max": 18,
+      "item": {
+        "id": "minecraft:iron_ingot",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 6,
+      "max": 13,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 335,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

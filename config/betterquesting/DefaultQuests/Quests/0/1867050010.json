@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    25
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1867050010.desc",
+      "icon:10": {
+        "id:8": "pyrotech:brick_kiln"
+      },
+      "name:8": "susy.quest.db.1867050010.title"
+    }
+  },
+  "questID:3": 1867050010,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "pyrotech:brick_kiln"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

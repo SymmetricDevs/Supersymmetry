@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    546
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.581.desc",
+      "icon:10": {
+        "id:8": "opencomputers:geolyzer"
+      },
+      "name:8": "susy.quest.db.581.title"
+    }
+  },
+  "questID:3": 581,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "opencomputers:geolyzer"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

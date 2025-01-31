@@ -1,0 +1,57 @@
+{
+  "preRequisites:11": [
+    81
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.885.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 343,
+        "id:8": "gregtechfoodoption:gtfo_meta_item"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.885.title"
+    }
+  },
+  "questID:3": 885,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 8581,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 11,
+          "Damage:2": 1,
+          "id:8": "gregtech:boiler_casing"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 343,
+          "id:8": "gregtechfoodoption:gtfo_meta_item"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "entryLogic:8": "OR",
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 12,
+          "Damage:2": 2,
+          "id:8": "gregtechfoodoption:gtfo_casing"
+        },
+        "1:10": {
+          "Count:3": 12,
+          "Damage:2": 3,
+          "id:8": "gregtechfoodoption:gtfo_casing"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

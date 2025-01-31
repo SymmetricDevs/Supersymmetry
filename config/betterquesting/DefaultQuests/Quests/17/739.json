@@ -1,0 +1,22 @@
+{
+  "preRequisiteTypes:7": [
+    2,
+    0
+  ],
+  "preRequisites:11": [
+    70,
+    67
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.739.desc",
+      "icon:10": {
+        "Damage:2": 2,
+        "id:8": "chisel:endstone1"
+      },
+      "name:8": "susy.quest.db.739.title"
+    }
+  },
+  "questID:3": 739,
+  "tasks:9": {}
+}

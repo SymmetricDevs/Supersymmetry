@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    703
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.705.desc",
+      "icon:10": {
+        "Damage:2": 17,
+        "id:8": "icbmclassic:explosive_missile"
+      },
+      "name:8": "susy.quest.db.705.title"
+    }
+  },
+  "questID:3": 705,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

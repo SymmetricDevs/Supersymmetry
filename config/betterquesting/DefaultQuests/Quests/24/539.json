@@ -1,0 +1,28 @@
+{
+  "preRequisites:11": [
+    540
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.539.desc",
+      "icon:10": {
+        "Damage:2": 6,
+        "id:8": "opencomputers:card"
+      },
+      "name:8": "susy.quest.db.539.title"
+    }
+  },
+  "questID:3": 539,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 6,
+          "id:8": "opencomputers:card"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

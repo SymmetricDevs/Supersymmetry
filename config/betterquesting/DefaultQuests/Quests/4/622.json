@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    614
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.622.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 112,
+        "id:8": "gregtech:machine"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.622.title"
+    }
+  },
+  "questID:3": 622,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 112,
+          "id:8": "gregtech:machine"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+name = "SerializationIsBad"
+filename = "serializationisbad-1.5.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "da05f7344986d425c858decb36cf776b3fe53dad"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5187152
+project-id = 896591

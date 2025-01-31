@@ -7,6 +7,8 @@ EBF = recipemap('electric_blast_furnace')
 ROASTER = recipemap('roaster')
 REACTION_FURNACE = recipemap('reaction_furnace')
 BR = recipemap('batch_reactor')
+DISTILLERY = recipemap('distillery')
+MIXER = recipemap('mixer')
 
 // Garnierite Dust * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustPentlandite')], [fluid('oxygen') * 3000])
@@ -58,16 +60,16 @@ for (combustible in combustibles()) {
 }
 
 ELECTROLYTIC_CELL.recipeBuilder()
-    .fluidInputs(fluid('nickel_sulfate_solution') * 1000)
-    .fluidInputs(fluid('water') * 2000)
-    .notConsumable(metaitem('stickNickel'))
-    .notConsumable(metaitem('graphite_electrode'))
-    .outputs(metaitem('dustNickel'))
-    .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
-    .fluidOutputs(fluid('oxygen') * 1000)
-    .duration(240)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        .fluidInputs(fluid('nickel_sulfate_solution') * 1000)
+        .fluidInputs(fluid('water') * 2000)
+        .notConsumable(metaitem('stickNickel'))
+        .notConsumable(metaitem('graphite_electrode'))
+        .outputs(metaitem('dustNickel'))
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
+        .fluidOutputs(fluid('oxygen') * 1000)
+        .duration(240)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
 
 //MOND PROCESS
 
@@ -96,3 +98,67 @@ REACTION_FURNACE.recipeBuilder()
         .duration(40)
         .buildAndRegister()
 
+// NiCl2
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustNickel') * 1)
+        .fluidInputs(fluid('chlorine') * 2000)
+        .outputs(metaitem('dustNickelChloride') * 3)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+// Ni(OH)2
+
+BR.recipeBuilder()
+        .inputs(ore('dustNickelChloride') * 3)
+        .fluidInputs(fluid('potassium_hydroxide_solution') * 2000)
+        .outputs(metaitem('dustNickelHydroxide') * 5)
+        .fluidOutputs(fluid('potassium_chloride_solution') * 2000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
+// NiO
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustNickel'))
+        .fluidInputs(fluid('oxygen') * 1000)
+        .outputs(metaitem('dustNickelIiOxide') * 2)
+        .duration(200)
+        .EUt(30)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .inputs(ore('dustNickelHydroxide') * 5)
+        .outputs(metaitem('dustNickelIiOxide') * 2)
+        .fluidOutputs(fluid('dense_steam') * 1000)
+        .EUt(30)
+        .duration(200)
+        .buildAndRegister()
+
+// NiSO4
+
+BR.recipeBuilder()
+        .inputs(ore('dustNickelIiOxide') * 2)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('nickel_sulfate_solution') * 1000)
+        .duration(80)
+        .EUt(30)
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('nickel_sulfate_solution') * 1000)
+        .fluidOutputs(fluid('water') * 1000)
+        .outputs(metaitem('dustNickelSulfate') * 6)
+        .duration(80)
+        .EUt(30)
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustNickelSulfate') * 6)
+        .fluidInputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('nickel_sulfate_solution') * 1000)
+        .duration(80)
+        .EUt(30)
+        .buildAndRegister()

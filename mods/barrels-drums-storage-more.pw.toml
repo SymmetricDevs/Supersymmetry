@@ -1,0 +1,13 @@
+name = "Barrels, Drums, Storage & More"
+filename = "BarrelsDrumsStorageAndMore-0.0.24.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "743e31ac3ebd76f0f5be1df55915ad64762a8b81"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2708193
+project-id = 319404

@@ -1,0 +1,39 @@
+{
+  "preRequisites:11": [
+    116,
+    121
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.119.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "susy:sintering_brick"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.119.title"
+    }
+  },
+  "questID:3": 119,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 14521,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 72,
+          "id:8": "susy:sintering_brick"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 3,
+          "id:8": "susy:susy_multiblock_casing"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

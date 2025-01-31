@@ -1,10 +1,11 @@
-log.infoMC("Running ImmersiveRailroading.groovy...")
 
+import cam72cam.immersiverailroading.IRItems
+import cam72cam.mod.serialization.TagCompound
 import globals.Globals
-import supersymmetry.api.recipes.SuSyRecipeMaps;
-import cam72cam.immersiverailroading.IRItems;
-import cam72cam.mod.serialization.TagCompound;
-import trackapi.lib.Gauges;
+import supersymmetry.api.recipes.SuSyRecipeMaps
+import trackapi.lib.Gauges
+
+log.infoMC("Running ImmersiveRailroading.groovy...")
 
 ArrayList<String> name_removals = [
 		"immersiverailroading:item_manual",
@@ -204,7 +205,7 @@ Globals.solders.each { key, val ->
 			.inputs(metaitem('electric.motor.lv') * 4)
 			.inputs(metaitem('electric.piston.lv') * 4)
 			.inputs(item('gregtech:boiler_firebox_casing', 1) * 2)
-			.inputs(item('minecraft:glass') * 4)
+			.inputs(ore('blockGlass') * 4)
 			.inputs(ore('plateSteel') * 16)
 			.inputs(ore('stickLongSteel') * 8)
 			.fluidInputs(fluid(key) * (val * 10))
@@ -247,7 +248,7 @@ Globals.solders.each { key, val ->
 			.inputs(metaitem('minecart_wheels.steel') * 4)
 			.inputs(ore('plateSteel') * 20)
 			.inputs(ore('stickLongSteel') * 6)
-			.inputs(item('minecraft:glass') * 4)
+			.inputs(ore('blockGlass') * 4)
 			.fluidInputs(fluid(key) * (val * 10))
 			.outputs(is3.internal)
 			.EUt(30)

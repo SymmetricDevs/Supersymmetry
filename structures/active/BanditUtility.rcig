@@ -1,0 +1,206 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditUtility",
+  "items": [
+    {
+      "weight": 2.540874481201172,
+      "min": 4,
+      "max": 14,
+      "item": {
+        "id": "minecraft:string",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 3,
+      "max": 9,
+      "item": {
+        "id": "minecraft:wool",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 3,
+      "max": 8,
+      "item": {
+        "id": "minecraft:leather",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.2900550961494446,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "travelersbackpack:travelers_backpack",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "toolbelt:belt",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {}
+        }
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "toolbelt:belt",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Size": {
+              "nbtType": "int",
+              "nbt": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.23224952816963196,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "toolbelt:belt",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Size": {
+              "nbtType": "int",
+              "nbt": 4
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.11158588528633118,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "toolbelt:belt",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Size": {
+              "nbtType": "int",
+              "nbt": 5
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "toolbelt:pouch",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 446,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 100000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 4002,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 120000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 77,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 212,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 502,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 505,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

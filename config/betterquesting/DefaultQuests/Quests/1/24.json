@@ -1,0 +1,48 @@
+{
+  "preRequisites:11": [
+    23,
+    13,
+    15,
+    670
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.24.desc",
+      "icon:10": {
+        "Damage:2": 1004,
+        "id:8": "gregtech:meta_item_2"
+      },
+      "name:8": "susy.quest.db.24.title"
+    }
+  },
+  "questID:3": 24,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1005,
+          "id:8": "gregtech:meta_item_2"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 25,
+          "OreDict:8": "plateCopper",
+          "id:8": "gregtech:meta_plate"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 122,
+          "OreDict:8": "plateZinc",
+          "id:8": "gregtech:meta_plate"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 1004,
+          "id:8": "gregtech:meta_item_2"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

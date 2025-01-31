@@ -37,13 +37,14 @@ def name_removals = [
         'appliedenergistics2:materials/annihilationcore',
         'appliedenergistics2:materials/basiccard',
         'appliedenergistics2:materials/advancedcard',
-        'extracells:storagecomponent/item/256k',
-        'extracells:storagecomponent/item/1024k',
-        'extracells:storagecomponent/item/4096k',
-        'extracells:storagecomponent/item/16384k',
-        'extracells:storagecomponent/fluid/256k',
-        'extracells:storagecomponent/fluid/1024k',
-        'extracells:storagecomponent/fluid/4096k',
+        'nae2:item/material/storage/cell_part_256k',
+        'nae2:item/material/storage/cell_part_1024k',
+        'nae2:item/material/storage/cell_part_4096k',
+        'nae2:item/material/storage/cell_part_16384k',
+        'nae2:item/material/storage/cell_part_fluid_256k',
+        'nae2:item/material/storage/cell_part_fluid_1024k',
+        'nae2:item/material/storage/cell_part_fluid_4096k',
+        'nae2:item/material/storage/cell_part_fluid_16384k',
         'appliedenergistics2:network/cells/storage_cell_1k',
         'appliedenergistics2:network/cells/storage_cell_4k',
         'appliedenergistics2:network/cells/storage_cell_16k',
@@ -55,15 +56,7 @@ def name_removals = [
         'appliedenergistics2:network/cells/spatial_storage_cell_2_cubed',
         'appliedenergistics2:network/cells/spatial_storage_cell_16_cubed',
         'appliedenergistics2:network/cells/spatial_storage_cell_128_cubed',
-        'extracells:storagecells/item/owncasing/256k',
-        'extracells:storagecells/item/owncasing/1024k',
-        'extracells:storagecells/item/owncasing/4096k',
-        'extracells:storagecells/item/owncasing/16384k',
-        'extracells:storagecells/fluid/owncasing/256k',
-        'extracells:storagecells/fluid/owncasing/1024k',
-        'extracells:storagecells/fluid/owncasing/4096k',
-        'extracells:storagecells/case/fluid',
-        'extracells:storagecells/case/item',
+        'appliedenergistics2:network/cells/view_cell',
         'appliedenergistics2:network/parts/export_bus',
         'appliedenergistics2:network/parts/export_bus_fluid',
         'appliedenergistics2:network/cells/empty_storage_cell',
@@ -82,10 +75,13 @@ def name_removals = [
         'appliedenergistics2:network/parts/planes_annihilatition_identity',
         'appliedenergistics2:network/parts/import_bus_fluid',
         'appliedenergistics2:network/parts/import_bus',
-        'extracpus:crafting_storage_256k',
-        'extracpus:crafting_storage_1024k',
-        'extracpus:crafting_storage_4096k',
-        'extracpus:crafting_storage_16384k',
+        'nae2:block/crafting/storage_256k',
+        'nae2:block/crafting/storage_1024k',
+        'nae2:block/crafting/storage_4096k',
+        'nae2:block/crafting/storage_16384k',
+        'nae2:block/crafting/4x_coprocessor',
+        'nae2:block/crafting/16x_coprocessor',
+        'nae2:block/crafting/64x_coprocessor',
         'appliedenergistics2:network/blocks/crystal_processing_quartz_growth_accelerator',
         'appliedenergistics2:network/blocks/energy_vibration_chamber',
         'appliedenergistics2:network/blocks/quantum_link',
@@ -344,6 +340,8 @@ mods.gregtech.assembler.recipeBuilder()
         .EUt(Globals.voltAmps[4])
         .buildAndRegister()
 
+/*
+replaced NAE2 without Advanced Storage Housing
 mods.gregtech.assembler.recipeBuilder()
         .inputs(ore('plateNaquadahAlloy') * 4)
         .inputs(ore('wireFineGold') * 4)
@@ -355,6 +353,7 @@ mods.gregtech.assembler.recipeBuilder()
         .duration(80)
         .EUt(Globals.voltAmps[5])
         .buildAndRegister()
+*/
 
 mods.gregtech.assembler.recipeBuilder()
         .inputs(ore('circuitEv'))
@@ -669,14 +668,14 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 
 //TODO: Replace wafers with advanced memory plates 
 
-//Extracells item storage
+//NAE2 item storage
 mods.gregtech.circuit_assembler.recipeBuilder()
         .inputs(ore('circuitUv'))
         .inputs(ore('wireFineSilver') * 4)
         .inputs(metaitem('plate.advanced_random_access_memory') * 1)
         .inputs(metaitem('storage.segment') * 1)
         .circuitMeta(1)
-        .outputs(item('extracells:storage.component:0'))
+        .outputs(item('nae2:material:1'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(200)
         .EUt(Globals.voltAmps[8])
@@ -688,7 +687,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
         .inputs(metaitem('plate.advanced_random_access_memory') * 4)
         .inputs(metaitem('storage.segment') * 1)
         .circuitMeta(1)
-        .outputs(item('extracells:storage.component:1'))
+        .outputs(item('nae2:material:2'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(200)
         .EUt(Globals.voltAmps[9])
@@ -700,7 +699,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
         .inputs(metaitem('plate.advanced_random_access_memory') * 16)
         .inputs(metaitem('storage.segment') * 1)
         .circuitMeta(1)
-        .outputs(item('extracells:storage.component:2'))
+        .outputs(item('nae2:material:3'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(200)
         .EUt(Globals.voltAmps[10])
@@ -712,7 +711,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
         .inputs(metaitem('plate.advanced_random_access_memory') * 64)
         .inputs(metaitem('storage.segment') * 1)
         .circuitMeta(1)
-        .outputs(item('extracells:storage.component:3'))
+        .outputs(item('nae2:material:4'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(200)
         .EUt(Globals.voltAmps[11])
@@ -768,14 +767,14 @@ mods.gregtech.circuit_assembler.recipeBuilder()
         .EUt(Globals.voltAmps[7])
         .buildAndRegister()
 
-//Extracells fluid storage
+//NAE2 fluid storage
 mods.gregtech.circuit_assembler.recipeBuilder()
         .inputs(ore('circuitUv'))
         .inputs(ore('wireFineSilver') * 4)
         .inputs(metaitem('plate.advanced_random_access_memory') * 1)
         .inputs(metaitem('storage.segment') * 1)
         .circuitMeta(2)
-        .outputs(item('extracells:storage.component:8'))
+        .outputs(item('nae2:material:5'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(200)
         .EUt(Globals.voltAmps[8])
@@ -787,7 +786,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
         .inputs(metaitem('plate.advanced_random_access_memory') * 4)
         .inputs(metaitem('storage.segment') * 1)
         .circuitMeta(2)
-        .outputs(item('extracells:storage.component:9'))
+        .outputs(item('nae2:material:6'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(200)
         .EUt(Globals.voltAmps[9])
@@ -799,10 +798,22 @@ mods.gregtech.circuit_assembler.recipeBuilder()
         .inputs(metaitem('plate.advanced_random_access_memory') * 1)
         .inputs(metaitem('storage.segment') * 1)
         .circuitMeta(2)
-        .outputs(item('extracells:storage.component:10'))
+        .outputs(item('nae2:material:7'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(200)
         .EUt(Globals.voltAmps[10])
+        .buildAndRegister()
+
+mods.gregtech.circuit_assembler.recipeBuilder()
+        .inputs(ore('circuitUiv'))
+        .inputs(ore('wireFineSilver') * 4)
+        .inputs(metaitem('plate.advanced_random_access_memory') * 1)
+        .inputs(metaitem('storage.segment') * 1)
+        .circuitMeta(2)
+        .outputs(item('nae2:material:8'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(200)
+        .EUt(Globals.voltAmps[11])
         .buildAndRegister()
 
 
@@ -925,44 +936,44 @@ mods.gregtech.assembler.recipeBuilder()
         .buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
-        .inputs(item('extracells:storage.component', 0))
+        .inputs(item('nae2:material', 1))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
         .fluidInputs(solder)
-        .outputs(item('extracpus:crafting_storage_256k'))
+        .outputs(item('nae2:storage_crafting_256k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
         .EUt(1920)
         .buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
-        .inputs(item('extracells:storage.component', 1))
+        .inputs(item('nae2:material', 2))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
         .fluidInputs(solder)
-        .outputs(item('extracpus:crafting_storage_1024k'))
+        .outputs(item('nae2:storage_crafting_1024k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
         .EUt(1920)
         .buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
-        .inputs(item('extracells:storage.component', 2))
+        .inputs(item('nae2:material', 3))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
         .fluidInputs(solder)
-        .outputs(item('extracpus:crafting_storage_4096k'))
+        .outputs(item('nae2:storage_crafting_4096k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
         .EUt(1920)
         .buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
-        .inputs(item('extracells:storage.component', 3))
+        .inputs(item('nae2:material', 4))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
         .fluidInputs(solder)
-        .outputs(item('extracpus:crafting_storage_16384k'))
+        .outputs(item('nae2:storage_crafting_16384k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
         .EUt(1920)

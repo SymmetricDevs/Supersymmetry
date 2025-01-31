@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    0
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.138.desc",
+      "icon:10": {
+        "id:8": "minecraft:wheat"
+      },
+      "name:8": "susy.quest.db.138.title"
+    }
+  },
+  "questID:3": 138,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 16,
+          "id:8": "minecraft:wheat"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

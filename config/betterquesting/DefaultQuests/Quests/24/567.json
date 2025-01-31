@@ -1,0 +1,66 @@
+{
+  "preRequisites:11": [
+    549
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.567.desc",
+      "icon:10": {
+        "id:8": "openglasses:openglasses",
+        "tag:10": {
+          "Energy:3": 0,
+          "EnergyCapacity:3": 50000,
+          "UUIDLeast:4": -8008510319657539887,
+          "UUIDMost:4": -3837972173196932816,
+          "radarRange:3": 0,
+          "regeneration:arch:10": {
+            "arch_status:8": "NORMAL_ITEM",
+            "regenAmount:3": 0,
+            "skin:8": "NONE",
+            "skinType:8": "STEVE",
+            "trait:8": "regeneration:boring"
+          },
+          "upkeepCost:3": 1,
+          "widgetLimit:3": 9
+        }
+      },
+      "name:8": "susy.quest.db.567.title"
+    }
+  },
+  "questID:3": 567,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "openglasses:openglassesterminal"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "openglasses:openglasses",
+          "tag:10": {
+            "Energy:3": 0,
+            "EnergyCapacity:3": 50000,
+            "UUIDLeast:4": -8008510319657539887,
+            "UUIDMost:4": -3837972173196932816,
+            "radarRange:3": 0,
+            "regeneration:arch:10": {
+              "arch_status:8": "NORMAL_ITEM",
+              "regenAmount:3": 0,
+              "skin:8": "NONE",
+              "skinType:8": "STEVE",
+              "trait:8": "regeneration:boring"
+            },
+            "upkeepCost:3": 1,
+            "widgetLimit:3": 9
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "openglasses:openglasses_card"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

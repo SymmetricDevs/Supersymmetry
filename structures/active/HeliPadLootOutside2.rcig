@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "HeliPadLootOutside2",
+  "items": [
+    {
+      "weight": 0.7755888104438782,
+      "min": 2,
+      "max": 10,
+      "item": {
+        "id": "susy:meta_block_sheeted_frame_81",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 9,
+      "max": 16,
+      "item": {
+        "id": "gregtech:metal_sheet",
+        "damage": 7,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 1068,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.9243392944335938,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtech:meta_block_frame_20",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 4,
+      "max": 19,
+      "item": {
+        "id": "engineersdecor:steel_mesh_fence",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

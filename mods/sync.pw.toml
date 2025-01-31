@@ -1,0 +1,13 @@
+name = "Sync"
+filename = "Sync-1.12.2-7.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "325ccca4a1f2b52161acfcd31224aab3e8e6cf5a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2682824
+project-id = 229090

@@ -1,0 +1,17 @@
+{
+  "preRequisites:11": [
+    832
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.843.desc",
+      "icon:10": {
+        "Damage:2": 10,
+        "id:8": "chisel:certus"
+      },
+      "name:8": "susy.quest.db.843.title"
+    }
+  },
+  "questID:3": 843,
+  "tasks:9": {}
+}

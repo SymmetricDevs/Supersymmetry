@@ -1,0 +1,207 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LabShapedMats",
+  "items": [
+    {
+      "weight": 0.4400899410247803,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_gem_flawless",
+        "damage": 278,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 3,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_rotor",
+        "damage": 112,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 4,
+      "max": 7,
+      "item": {
+        "id": "gregtech:meta_rotor",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 3,
+      "max": 5,
+      "item": {
+        "id": "gregtech:meta_rotor",
+        "damage": 260,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 8,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 277,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 5,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 5,
+      "max": 17,
+      "item": {
+        "id": "gregtech:meta_wire_fine",
+        "damage": 41,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 10,
+      "max": 20,
+      "item": {
+        "id": "gregtech:meta_wire_fine",
+        "damage": 25,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 12,
+      "max": 19,
+      "item": {
+        "id": "gregtech:meta_wire_fine",
+        "damage": 252,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 7,
+      "max": 22,
+      "item": {
+        "id": "gregtech:cable_single",
+        "damage": 112,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 14,
+      "max": 32,
+      "item": {
+        "id": "gregtech:cable_single",
+        "damage": 25,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 16,
+      "max": 26,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 51,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.124999523162842,
+      "min": 22,
+      "max": 26,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 2,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_dust_small",
+        "damage": 96,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 4,
+      "max": 8,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 2036,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 7,
+      "max": 11,
+      "item": {
+        "id": "susy:susy_multiblock_casing",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 15397,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 6,
+      "max": 15,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 1004,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 4,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_spring",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.366908550262451,
+      "min": 26,
+      "max": 32,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 335,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

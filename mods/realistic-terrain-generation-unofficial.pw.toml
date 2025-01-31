@@ -1,0 +1,13 @@
+name = "Realistic Terrain Generation Unofficial"
+filename = "RTGU-1.12.2-1.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "c92f573c2f7c6f391658060d77031a3d400563c3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4696300
+project-id = 648514

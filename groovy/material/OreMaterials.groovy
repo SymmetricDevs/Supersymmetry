@@ -609,5 +609,29 @@ public class OreMaterials{
                 .flags(NO_UNIFICATION)
                 .color(0x91835d)
                 .build();
+
+        CoalDeposit = new Material.Builder(7082, SuSyUtility.susyId("coal_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x2c2c2c)
+                .build();
+
+        NativeCopperDeposit = new Material.Builder(7083, SuSyUtility.susyId("native_copper_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0xbb5f09)
+                .build();
+
+        AnthraciteDeposit = new Material.Builder(7084, SuSyUtility.susyId("anthracite_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x241212)
+                .build();
+
+        LigniteDeposit = new Material.Builder(7085, SuSyUtility.susyId("lignite_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x644646)
+                .build();
     }
 }

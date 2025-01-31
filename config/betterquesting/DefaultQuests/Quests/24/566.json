@@ -1,0 +1,28 @@
+{
+  "preRequisites:11": [
+    549
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.566.desc",
+      "icon:10": {
+        "Damage:2": 30,
+        "id:8": "opencomputers:upgrade"
+      },
+      "name:8": "susy.quest.db.566.title"
+    }
+  },
+  "questID:3": 566,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 30,
+          "id:8": "opencomputers:upgrade"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

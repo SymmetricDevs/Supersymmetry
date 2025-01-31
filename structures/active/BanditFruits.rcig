@@ -1,0 +1,207 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditFruits",
+  "items": [
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "minecraft:apple",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 32,
+      "item": {
+        "id": "minecraft:melon",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 17,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 18,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0976562350988388,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 73,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 122,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 32,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 124,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0976562350988388,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 125,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0976562350988388,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 126,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 329,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 330,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 331,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 332,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 333,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 334,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 335,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 32,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 320,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 326,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 327,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 328,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

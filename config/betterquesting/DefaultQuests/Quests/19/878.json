@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    876,
+    879,
+    677
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.878.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 427,
+        "id:8": "gregtech:wire_single"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.878.title"
+    }
+  },
+  "questID:3": 878,
+  "tasks:9": {}
+}

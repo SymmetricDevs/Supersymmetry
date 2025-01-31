@@ -11,9 +11,9 @@ jobs:
     name: "Pre Release"
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python 3.9
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: 3.9
     - name: Declare some variables
@@ -23,8 +23,8 @@ jobs:
         echo "::set-output name=sha_short::$(git rev-parse --short $GITHUB_SHA)"
     - name: Install requests
       run: |
-       pip install requests
-    - uses: actions/setup-java@v2
+        pip install requests
+    - uses: actions/setup-java@v4
       with:
         distribution: 'adopt' # See 'Supported distributions' for available options
         java-version: '8'
@@ -32,8 +32,6 @@ jobs:
     - name: Run Build
       run: |
         python build/main.py
-      env:
-        CFAPIKEY: ${{ secrets.CFAPIKEY }}
     - name: Automatic Releases
       uses: marvinpinto/action-automatic-releases@latest
       with:

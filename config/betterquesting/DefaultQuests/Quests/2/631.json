@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    191
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.631.desc",
+      "icon:10": {
+        "Damage:2": 110,
+        "id:8": "techguns:itemshared"
+      },
+      "name:8": "susy.quest.db.631.title"
+    }
+  },
+  "questID:3": 631,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

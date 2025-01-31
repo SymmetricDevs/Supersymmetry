@@ -1,0 +1,17 @@
+{
+  "preRequisites:11": [
+    834
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.848.desc",
+      "icon:10": {
+        "Damage:2": 7,
+        "id:8": "chisel:basalt2"
+      },
+      "name:8": "susy.quest.db.848.title"
+    }
+  },
+  "questID:3": 848,
+  "tasks:9": {}
+}

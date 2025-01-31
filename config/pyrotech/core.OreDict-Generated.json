@@ -1,0 +1,226 @@
+{
+  "__comments": [
+    "WARNING: All changes should be made to the file with the name Custom",
+    "in the title. Changes made to the Generated file will be overwritten.",
+    "",
+    "This file defines the oreDict entries for this module.",
+    "Item strings are in the format: (domain):(path):(meta)"
+  ],
+  "oreDict": {
+    "blockCharcoal": [
+      "pyrotech:charcoal_block"
+    ],
+    "blockFuelCoke": [
+      "pyrotech:coal_coke_block"
+    ],
+    "blockGlass": [
+      "pyrotech:refractory_glass",
+      "pyrotech:slag_glass"
+    ],
+    "blockWool": [
+      "minecraft:wool:0",
+      "minecraft:wool:1",
+      "minecraft:wool:2",
+      "minecraft:wool:3",
+      "minecraft:wool:4",
+      "minecraft:wool:5",
+      "minecraft:wool:6",
+      "minecraft:wool:7",
+      "minecraft:wool:8",
+      "minecraft:wool:9",
+      "minecraft:wool:10",
+      "minecraft:wool:11",
+      "minecraft:wool:12",
+      "minecraft:wool:13",
+      "minecraft:wool:14",
+      "minecraft:wool:15"
+    ],
+    "cobblestone": [
+      "pyrotech:cobblestone:0",
+      "pyrotech:cobblestone:1",
+      "pyrotech:cobblestone:2",
+      "pyrotech:cobblestone:3"
+    ],
+    "cobblestoneAndesite": [
+      "pyrotech:cobblestone:0"
+    ],
+    "cobblestoneDiorite": [
+      "pyrotech:cobblestone:1"
+    ],
+    "cobblestoneGranite": [
+      "pyrotech:cobblestone:2"
+    ],
+    "cobblestoneLimestone": [
+      "pyrotech:cobblestone:3"
+    ],
+    "dustFlint": [
+      "pyrotech:material:31"
+    ],
+    "dustLimestone": [
+      "pyrotech:material:28"
+    ],
+    "dustWheat": [
+      "pyrotech:material:51"
+    ],
+    "foodDough": [
+      "pyrotech:material:50"
+    ],
+    "fuelCoke": [
+      "pyrotech:material:1"
+    ],
+    "hideScrapeable": [
+      "pyrotech:pelt_cow",
+      "pyrotech:pelt_horse",
+      "pyrotech:pelt_mooshroom",
+      "pyrotech:pelt_polar_bear",
+      "pyrotech:pelt_sheep_black",
+      "pyrotech:pelt_sheep_blue",
+      "pyrotech:pelt_sheep_blue_light",
+      "pyrotech:pelt_sheep_brown",
+      "pyrotech:pelt_sheep_cyan",
+      "pyrotech:pelt_sheep_gray",
+      "pyrotech:pelt_sheep_gray_light",
+      "pyrotech:pelt_sheep_green",
+      "pyrotech:pelt_sheep_lime",
+      "pyrotech:pelt_sheep_magenta",
+      "pyrotech:pelt_sheep_orange",
+      "pyrotech:pelt_sheep_pink",
+      "pyrotech:pelt_sheep_purple",
+      "pyrotech:pelt_sheep_red",
+      "pyrotech:pelt_sheep_white",
+      "pyrotech:pelt_sheep_yellow",
+      "pyrotech:hide_pig",
+      "pyrotech:hide_sheep_sheared",
+      "pyrotech:hide_llama",
+      "pyrotech:pelt_llama_white",
+      "pyrotech:pelt_llama_creamy",
+      "pyrotech:pelt_llama_gray",
+      "pyrotech:pelt_llama_brown",
+      "pyrotech:pelt_wolf"
+    ],
+    "hideSmallScrapeable": [
+      "pyrotech:pelt_bat",
+      "minecraft:rabbit_hide"
+    ],
+    "kitRepairLeather": [
+      "pyrotech:leather_repair_kit:*",
+      "pyrotech:leather_durable_repair_kit:*"
+    ],
+    "leatherDurable": [
+      "pyrotech:material:41"
+    ],
+    "milk": [
+      "minecraft:milk_bucket",
+      "pyrotech:bucket_wood:1",
+      "pyrotech:bucket_clay:1",
+      "pyrotech:bucket_stone:1"
+    ],
+    "oreNetherCoal": [
+      "pyrotech:dense_nether_coal_ore"
+    ],
+    "rock": [
+      "pyrotech:rock:0",
+      "pyrotech:rock:2",
+      "pyrotech:rock:1",
+      "pyrotech:rock:3",
+      "pyrotech:rock:6",
+      "pyrotech:rock:8",
+      "pyrotech:rock:10"
+    ],
+    "rockLimestone": [
+      "pyrotech:rock:8"
+    ],
+    "shard": [
+      "pyrotech:material:7",
+      "pyrotech:material:11",
+      "pyrotech:material:10",
+      "pyrotech:material:32",
+      "pyrotech:material:34",
+      "pyrotech:material:18",
+      "pyrotech:material:19",
+      "pyrotech:material:33"
+    ],
+    "stickStone": [
+      "pyrotech:material:27"
+    ],
+    "stoneLimestone": [
+      "pyrotech:limestone"
+    ],
+    "straw": [
+      "pyrotech:material:2"
+    ],
+    "toolAxe": [
+      "minecraft:stone_axe:*",
+      "minecraft:iron_axe:*",
+      "minecraft:golden_axe:*",
+      "minecraft:diamond_axe:*",
+      "pyrotech:crude_axe:*",
+      "pyrotech:flint_axe:*",
+      "pyrotech:bone_axe:*",
+      "pyrotech:obsidian_axe:*",
+      "pyrotech:redstone_axe:*"
+    ],
+    "toolHammer": [
+      "pyrotech:bone_hammer_durable:*",
+      "pyrotech:flint_hammer_durable:*",
+      "pyrotech:bone_hammer:*",
+      "pyrotech:flint_hammer:*",
+      "pyrotech:crude_hammer:*",
+      "pyrotech:diamond_hammer:*",
+      "pyrotech:gold_hammer:*",
+      "pyrotech:iron_hammer:*",
+      "pyrotech:stone_hammer:*",
+      "pyrotech:obsidian_hammer:*"
+    ],
+    "toolHuntersKnife": [
+      "pyrotech:flint_hunters_knife:*",
+      "pyrotech:bone_hunters_knife:*",
+      "pyrotech:stone_hunters_knife:*",
+      "pyrotech:iron_hunters_knife:*",
+      "pyrotech:gold_hunters_knife:*",
+      "pyrotech:diamond_hunters_knife:*",
+      "pyrotech:obsidian_hunters_knife:*"
+    ],
+    "toolSharp": [
+      "minecraft:stone_axe:*",
+      "minecraft:iron_axe:*",
+      "minecraft:golden_axe:*",
+      "minecraft:diamond_axe:*",
+      "pyrotech:crude_axe:*",
+      "pyrotech:flint_axe:*",
+      "pyrotech:bone_axe:*",
+      "pyrotech:obsidian_axe:*",
+      "pyrotech:redstone_axe:*",
+      "minecraft:stone_sword:*",
+      "minecraft:iron_sword:*",
+      "minecraft:golden_sword:*",
+      "minecraft:diamond_sword:*",
+      "pyrotech:flint_sword:*",
+      "pyrotech:bone_sword:*",
+      "pyrotech:obsidian_sword:*",
+      "pyrotech:redstone_sword:*",
+      "pyrotech:flint_hunters_knife:*",
+      "pyrotech:bone_hunters_knife:*",
+      "pyrotech:stone_hunters_knife:*",
+      "pyrotech:iron_hunters_knife:*",
+      "pyrotech:gold_hunters_knife:*",
+      "pyrotech:diamond_hunters_knife:*",
+      "pyrotech:obsidian_hunters_knife:*"
+    ],
+    "toolShears": [
+      "minecraft:shears:*",
+      "pyrotech:clay_shears:*",
+      "pyrotech:stone_shears:*",
+      "pyrotech:bone_shears:*",
+      "pyrotech:flint_shears:*",
+      "pyrotech:gold_shears:*",
+      "pyrotech:diamond_shears:*",
+      "pyrotech:obsidian_shears:*"
+    ],
+    "twine": [
+      "minecraft:string",
+      "pyrotech:material:14",
+      "pyrotech:material:26"
+    ]
+  }
+}

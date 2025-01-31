@@ -1,0 +1,13 @@
+name = "Chameleon"
+filename = "Chameleon-1.12-4.1.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "5ed3dd5fd1ebded57bfe525b4ece11232bd14e5e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2450900
+project-id = 230497

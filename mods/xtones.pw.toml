@@ -1,0 +1,13 @@
+name = "Xtones"
+filename = "Xtones-1.2.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "0e4d2c453000370722e384eaca047958f898996f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3248033
+project-id = 257573

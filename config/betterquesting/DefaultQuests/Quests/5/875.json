@@ -1,0 +1,19 @@
+{
+  "preRequisites:11": [
+    550
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.875.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 2,
+        "id:8": "gregtech:warning_sign"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.875.title"
+    }
+  },
+  "questID:3": 875,
+  "tasks:9": {}
+}

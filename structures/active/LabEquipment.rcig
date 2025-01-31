@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LabEquipment",
+  "items": [
+    {
+      "weight": 3.124999523162842,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "geneticsreborn:glasssyringe",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

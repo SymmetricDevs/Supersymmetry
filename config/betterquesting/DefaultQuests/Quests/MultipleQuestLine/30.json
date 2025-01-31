@@ -1,0 +1,35 @@
+{
+  "preRequisites:11": [
+    25
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.30.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "OreDict:8": "ingotSteel",
+        "id:8": "betterquesting:placeholder",
+        "tag:10": {
+          "orig_id:8": "machinemod:steelingot",
+          "orig_meta:3": 0
+        }
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.30.title"
+    }
+  },
+  "questID:3": 30,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 8,
+          "Damage:2": 324,
+          "OreDict:8": "ingotSteel",
+          "id:8": "gregtech:meta_ingot"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

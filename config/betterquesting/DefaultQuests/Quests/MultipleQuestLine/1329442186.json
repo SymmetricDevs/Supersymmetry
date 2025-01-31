@@ -1,0 +1,88 @@
+{
+  "preRequisites:11": [
+    798
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1329442186.desc",
+      "icon:10": {
+        "id:8": "simple_trophies:trophy",
+        "tag:10": {
+          "TrophyColorBlue:3": 200,
+          "TrophyColorGreen:3": 152,
+          "TrophyColorRed:3": 146,
+          "TrophyItem:10": {
+            "Count:3": 1,
+            "id:8": "simple_trophies:trophy",
+            "tag:10": {
+              "TrophyColorBlue:3": 200,
+              "TrophyColorGreen:3": 152,
+              "TrophyColorRed:3": 146,
+              "TrophyItem:10": {
+                "Count:3": 1,
+                "Damage:2": 2013,
+                "id:8": "gregtech:meta_ingot"
+              },
+              "TrophyName:8": "Certainty and Strength",
+              "TrophyShowsTooltip:1": 1,
+              "TrophyVariant:8": "classic"
+            }
+          },
+          "TrophyName:8": "The Purity of the Blessed Machine",
+          "TrophyShowsTooltip:1": 1,
+          "TrophyVariant:8": "classic"
+        }
+      },
+      "name:8": "susy.quest.db.1329442186.title"
+    }
+  },
+  "questID:3": 1329442186,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 200,
+            "TrophyColorGreen:3": 152,
+            "TrophyColorRed:3": 146,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "id:8": "simple_trophies:trophy",
+              "tag:10": {
+                "TrophyColorBlue:3": 200,
+                "TrophyColorGreen:3": 152,
+                "TrophyColorRed:3": 146,
+                "TrophyItem:10": {
+                  "Count:3": 1,
+                  "Damage:2": 2013,
+                  "id:8": "gregtech:meta_ingot"
+                },
+                "TrophyName:8": "Certainty and Strength",
+                "TrophyShowsTooltip:1": 1,
+                "TrophyVariant:8": "classic"
+              }
+            },
+            "TrophyName:8": "The Purity of the Blessed Machine",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 512,
+          "Damage:2": 2013,
+          "id:8": "gregtech:meta_ingot"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

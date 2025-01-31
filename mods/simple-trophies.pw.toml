@@ -1,0 +1,13 @@
+name = "Simple Trophies"
+filename = "simpletrophies-1.2.2.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "81d5842dbaeb7402add957daf91e5ad1a84942bf"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2863053
+project-id = 301310

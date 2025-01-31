@@ -1,0 +1,29 @@
+{
+  "preRequisites:11": [
+    97148971,
+    32
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.518.desc",
+      "icon:10": {
+        "Damage:2": 2037,
+        "id:8": "gregtech:fluid_pipe_normal"
+      },
+      "name:8": "susy.quest.db.518.title"
+    }
+  },
+  "questID:3": 518,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 2037,
+          "id:8": "gregtech:fluid_pipe_normal"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

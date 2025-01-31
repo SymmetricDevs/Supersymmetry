@@ -1,0 +1,13 @@
+name = "ReFinedTools"
+filename = "refinedtools-7.75.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "1dbb580ac09c7e292dca63dfdc1df44de91c4194"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5644169
+project-id = 1085014

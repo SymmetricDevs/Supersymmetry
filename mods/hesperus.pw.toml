@@ -1,0 +1,13 @@
+name = "燐/Hesperus"
+filename = "phosphor-1.12.2-0.2.9.3-SNAPSHOT.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ddeddd44e33fd636a6a36fbac001bbc91c518f19"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4724647
+project-id = 620262

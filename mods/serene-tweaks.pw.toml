@@ -1,0 +1,13 @@
+name = "Serene Tweaks"
+filename = "SereneTweaks-1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a730ba27c83ceba9fd1d847b3f7cbe928c93cd7b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3152093
+project-id = 408195

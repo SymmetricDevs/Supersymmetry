@@ -1,0 +1,13 @@
+name = "GroovyScript"
+filename = "groovyscript-1.2.0-hotfix1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "0c4968eb7eabd4ed6bc60bb2276f1691fb99f7da"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5789690
+project-id = 687577

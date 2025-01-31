@@ -1,0 +1,13 @@
+name = "ScalingGUIs"
+filename = "scalingguis-1.12.2-1.0.3.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "db3fac6aea75fe4aece010659a3d9d6c05d65248"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5150678
+project-id = 319656

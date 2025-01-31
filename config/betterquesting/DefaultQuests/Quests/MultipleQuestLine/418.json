@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    12
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.418.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 4,
+        "id:8": "minecraft:dye"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.418.title"
+    }
+  },
+  "questID:3": 418,
+  "tasks:9": {
+    "0:10": {
+      "ignoreNBT:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:ore_lapis_0"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

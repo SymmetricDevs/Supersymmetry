@@ -1,0 +1,13 @@
+name = "Flare"
+filename = "flare-0.2.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a73f17443ceedaeda2f483c091e6ca353f21bfd8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5694983
+project-id = 692142

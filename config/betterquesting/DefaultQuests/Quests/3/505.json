@@ -1,0 +1,39 @@
+{
+  "preRequisites:11": [
+    599,
+    685
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.505.desc",
+      "icon:10": {
+        "Damage:2": 17006,
+        "id:8": "gregtech:machine"
+      },
+      "name:8": "susy.quest.db.505.title",
+      "questlogic:8": "OR"
+    }
+  },
+  "questID:3": 505,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 17006,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "susy:evaporation_bed"
+        },
+        "2:10": {
+          "Count:3": 26,
+          "Damage:2": 4,
+          "id:8": "gregtech:stone_smooth"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

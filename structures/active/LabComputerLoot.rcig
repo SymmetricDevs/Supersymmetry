@@ -1,0 +1,160 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LabComputerLoot",
+  "items": [
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 632,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 633,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:optical_pipe_normal",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "appliedenergistics2:part",
+        "damage": 36,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:storage_cell_1k",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {}
+        }
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1040,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 307,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 468,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 1000000000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.0403180830180645,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1575,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "opencomputers:component",
+        "damage": 10,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "opencomputers:component",
+        "damage": 11,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "opencomputers:component",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "opencomputers:storage",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "opencomputers:card",
+        "damage": 3,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

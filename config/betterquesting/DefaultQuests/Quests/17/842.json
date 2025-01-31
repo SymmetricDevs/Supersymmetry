@@ -1,0 +1,16 @@
+{
+  "preRequisites:11": [
+    832
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.842.desc",
+      "icon:10": {
+        "id:8": "quark:snow_bricks"
+      },
+      "name:8": "susy.quest.db.842.title"
+    }
+  },
+  "questID:3": 842,
+  "tasks:9": {}
+}

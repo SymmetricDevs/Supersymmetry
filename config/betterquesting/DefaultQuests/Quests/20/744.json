@@ -1,0 +1,42 @@
+{
+  "preRequisites:11": [
+    743
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.744.desc",
+      "icon:10": {
+        "id:8": "immersiverailroading:item_augment",
+        "tag:10": {
+          "augment:3": 4,
+          "gauge:6": 1.435
+        }
+      },
+      "name:8": "susy.quest.db.744.title"
+    }
+  },
+  "questID:3": 744,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "immersiverailroading:item_augment",
+          "tag:10": {
+            "augment:3": 4,
+            "gauge:6": 1.435
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "immersiverailroading:item_augment",
+          "tag:10": {
+            "augment:3": 3,
+            "gauge:6": 1.435
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

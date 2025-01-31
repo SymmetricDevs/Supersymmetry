@@ -1,0 +1,53 @@
+{
+  "preRequisites:11": [
+    158
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.159.desc",
+      "icon:10": {
+        "id:8": "techguns:steam_helmet",
+        "tag:10": {
+          "power:3": 0
+        }
+      },
+      "name:8": "susy.quest.db.159.title"
+    }
+  },
+  "questID:3": 159,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "techguns:steam_helmet",
+          "tag:10": {
+            "power:3": 0
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "techguns:steam_chestplate",
+          "tag:10": {
+            "power:3": 0
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "techguns:steam_leggings",
+          "tag:10": {
+            "power:3": 0
+          }
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "techguns:steam_boots",
+          "tag:10": {
+            "power:3": 0
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

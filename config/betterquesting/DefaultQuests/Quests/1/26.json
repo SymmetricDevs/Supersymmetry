@@ -1,0 +1,32 @@
+{
+  "preRequisites:11": [
+    27,
+    25,
+    24
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.26.desc",
+      "icon:10": {
+        "Damage:2": 395,
+        "id:8": "gregtech:meta_stick"
+      },
+      "name:8": "susy.quest.db.26.title",
+      "questlogic:8": "OR"
+    }
+  },
+  "questID:3": 26,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 4,
+          "Damage:2": 395,
+          "OreDict:8": "stickIronMagnetic",
+          "id:8": "gregtech:meta_stick"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

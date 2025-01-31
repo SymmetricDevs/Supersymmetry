@@ -1,0 +1,20 @@
+{
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.291.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 14,
+        "id:8": "opencomputers:upgrade"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.291.title"
+    }
+  },
+  "questID:3": 291,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

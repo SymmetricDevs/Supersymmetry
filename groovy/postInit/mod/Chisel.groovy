@@ -24,7 +24,7 @@ crafting.replaceShaped('chisel:offsettool', item('chisel:offsettool'), [
 
 crafting.replaceShaped('chisel:autochisel', item('chisel:auto_chisel'), [
     [ore('blockGlass'), ore('blockGlass'), ore('blockGlass')],
-    [metaitem('electric.motor.lv'), metaitem('hull.lv'), metaitem('circuit.electronic')],
+    [metaitem('electric.motor.lv'), metaitem('hull.lv'), ore('circuitLv')],
     [ore('plateIron'), ore('plateIron'), ore('plateIron')]
 ])
 

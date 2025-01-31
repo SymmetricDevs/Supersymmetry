@@ -77,3 +77,6 @@ POLYMERIZATION.recipeBuilder()
     .duration(100)
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()
+
+// Liquid Polydimethylsiloxane * 144
+mods.gregtech.extractor.removeByInput(30, [metaitem('dustPolydimethylsiloxane')], null)

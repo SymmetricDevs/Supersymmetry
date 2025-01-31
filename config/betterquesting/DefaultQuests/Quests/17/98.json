@@ -1,0 +1,28 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    2
+  ],
+  "preRequisites:11": [
+    67,
+    70
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.98.desc",
+      "icon:10": {
+        "Damage:2": 1,
+        "id:8": "minecraft:sand"
+      },
+      "name:8": "susy.quest.db.98.title"
+    }
+  },
+  "questID:3": 98,
+  "tasks:9": {
+    "0:10": {
+      "dimension:3": 32,
+      "name:8": "Mars",
+      "taskID:8": "bq_standard:location"
+    }
+  }
+}

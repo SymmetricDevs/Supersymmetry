@@ -1,0 +1,13 @@
+name = "LittleTiles 3D Importer & Exporter"
+filename = "lt3dimporter-0.7.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2d880e541c392c3a2a290c9f0a6b6a3d96da9814"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4276828
+project-id = 430195

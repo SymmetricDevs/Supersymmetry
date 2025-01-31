@@ -1,5 +1,5 @@
-mods/
-*buildOut/*
+buildOut/
+build/server
 *client.zip
 .mixin.out/
 armourers_workshop/
@@ -14,6 +14,7 @@ usercache.json
 usernamecache.json
 minecraftinstance.json
 instance.json
+index.toml
 
 *.log
 *.txt
@@ -80,7 +81,7 @@ screenshots/
 
 backups/
 
-resourcepacks/
+# resourcepacks/
 
 local/
 
@@ -89,8 +90,3 @@ disabledmods/
 jarmods/
 
 visualores/
-
-*__pycache__*
-.idea/material_theme_project_new.xml
-.idea/discord.xml
-.idea/workspace.xml

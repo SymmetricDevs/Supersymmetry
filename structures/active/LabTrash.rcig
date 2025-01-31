@@ -1,0 +1,117 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LabTrash",
+  "items": [
+    {
+      "weight": 1.39763605594635,
+      "min": 4,
+      "max": 10,
+      "item": {
+        "id": "minecraft:web",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 42,
+      "max": 56,
+      "item": {
+        "id": "minecraft:planks",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 13,
+      "max": 40,
+      "item": {
+        "id": "minecraft:planks",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 4.333380699157715,
+      "min": 53,
+      "max": 64,
+      "item": {
+        "id": "minecraft:netherrack",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 27,
+      "max": 45,
+      "item": {
+        "id": "minecraft:dirt",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 24,
+      "max": 53,
+      "item": {
+        "id": "minecraft:brick",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 8,
+      "max": 27,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 349,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.5707483291625977,
+      "min": 47,
+      "max": 64,
+      "item": {
+        "id": "xtones:kryp",
+        "damage": 6,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.366908550262451,
+      "min": 43,
+      "max": 61,
+      "item": {
+        "id": "xtones:lair",
+        "damage": 9,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 32,
+      "max": 50,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 254,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 6,
+      "max": 13,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 15,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

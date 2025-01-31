@@ -1,0 +1,38 @@
+{
+  "preRequisites:11": [
+    149
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.91.desc",
+      "icon:10": {
+        "Damage:2": 1597,
+        "id:8": "gregtech:machine"
+      },
+      "name:8": "susy.quest.db.91.title"
+    }
+  },
+  "questID:3": 91,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 2,
+          "Damage:2": 1596,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 1597,
+          "id:8": "gregtech:machine"
+        },
+        "2:10": {
+          "Count:3": 23,
+          "Damage:2": 5,
+          "id:8": "gregtech:steam_casing"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

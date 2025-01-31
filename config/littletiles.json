@@ -1,0 +1,62 @@
+{
+  "core": {
+    "defaultSize": 16,
+    "minSize": 1,
+    "scale": 6,
+    "exponent": 2,
+    "forceToSaveDefaultSize": false
+  },
+  "general": {
+    "allowFlowingWater": true,
+    "allowFlowingLava": true,
+    "storagePerPixel": 1.0,
+    "enableBed": true,
+    "enableAnimationCollision": true,
+    "enableCollisionMotion": true,
+    "dyeVolume": 2.0,
+    "maxAllowedDensity": 2048,
+    "maxDoorDistance": 512,
+    "allowConverationToChiselsAndBits": true
+  },
+  "build": {
+    "default": {
+      "limitAffectedBlocks": true,
+      "maxAffectedBlocks": 0,
+      "harvestLevelBlock": 0,
+      "editUnbreakable": false,
+      "minimumTransparency": 0,
+      "limitEditBlocks": true,
+      "maxEditBlocks": 0,
+      "limitPlaceBlocks": true,
+      "maxPlaceBlocks": 0,
+      "limitRecipeSize": false,
+      "recipeBlocksLimit": 16
+    },
+    "survival": {
+      "limitAffectedBlocks": true,
+      "maxAffectedBlocks": 2,
+      "harvestLevelBlock": 1,
+      "editUnbreakable": false,
+      "minimumTransparency": 255,
+      "limitEditBlocks": true,
+      "maxEditBlocks": 10,
+      "limitPlaceBlocks": true,
+      "maxPlaceBlocks": 10,
+      "limitRecipeSize": false,
+      "recipeBlocksLimit": 16
+    },
+    "creative": {
+      "limitAffectedBlocks": false,
+      "maxAffectedBlocks": 2,
+      "harvestLevelBlock": 4,
+      "editUnbreakable": true,
+      "minimumTransparency": 0,
+      "limitEditBlocks": false,
+      "maxEditBlocks": 10,
+      "limitPlaceBlocks": false,
+      "maxPlaceBlocks": 10,
+      "limitRecipeSize": false,
+      "recipeBlocksLimit": 16
+    }
+  }
+}

@@ -1,0 +1,13 @@
+name = "Better Questing Unofficial Tweaker (BQUTweaker)"
+filename = "BQUTweaker-1.3.7.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "9881ba600aa4f0100c28b769b45e834f87ebcbfd"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4733466
+project-id = 905701

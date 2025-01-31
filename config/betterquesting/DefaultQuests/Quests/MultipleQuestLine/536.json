@@ -1,0 +1,33 @@
+{
+  "preRequisites:11": [
+    31
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.536.desc",
+      "icon:10": {
+        "OreDict:8": "drawerBasic",
+        "id:8": "storagedrawers:basicdrawers",
+        "tag:10": {
+          "material:8": "spruce"
+        }
+      },
+      "name:8": "susy.quest.db.536.title"
+    }
+  },
+  "questID:3": 536,
+  "tasks:9": {
+    "0:10": {
+      "ignoreNBT:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "OreDict:8": "drawerBasic",
+          "id:8": "storagedrawers:basicdrawers",
+          "tag:10": {}
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

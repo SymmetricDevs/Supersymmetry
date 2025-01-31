@@ -1,0 +1,13 @@
+name = "Engineer's Decor"
+filename = "engineersdecor-1.12.2-1.1.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ffcb09e3c64e424f0dcd3f2ca8220f5050f90e72"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3783239
+project-id = 313866

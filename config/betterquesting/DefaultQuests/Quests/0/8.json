@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    87
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.8.desc",
+      "icon:10": {
+        "id:8": "minecraft:bow"
+      },
+      "name:8": "susy.quest.db.8.title"
+    }
+  },
+  "questID:3": 8,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:bow"
+        },
+        "1:10": {
+          "Count:3": 4,
+          "id:8": "minecraft:arrow"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

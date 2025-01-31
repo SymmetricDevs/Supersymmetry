@@ -1,0 +1,157 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditMachines",
+  "items": [
+    {
+      "weight": 0.0976562350988388,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1000,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.124999523162842,
+      "min": 6,
+      "max": 18,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 352,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1181,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1196,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1151,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1166,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 4,
+      "max": 8,
+      "item": {
+        "id": "gregtech:metal_casing",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.25986868143081665,
+      "min": 5,
+      "max": 8,
+      "item": {
+        "id": "gregtech:machine_casing",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 986,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 14800,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 14801,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 14802,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1648,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1649,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0068187713623047,
+      "min": 6,
+      "max": 10,
+      "item": {
+        "id": "gregtech:planks",
+        "damage": 1,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

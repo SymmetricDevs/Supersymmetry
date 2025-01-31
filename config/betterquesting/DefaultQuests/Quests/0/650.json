@@ -1,0 +1,20 @@
+{
+  "preRequisites:11": [
+    213
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.650.desc",
+      "icon:10": {
+        "id:8": "betterbuilderswands:wanddiamond"
+      },
+      "name:8": "susy.quest.db.650.title"
+    }
+  },
+  "questID:3": 650,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

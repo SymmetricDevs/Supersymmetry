@@ -1,3 +1,19 @@
+<blockquote>
+  <details>
+    <summary>
+      <code>あ ←→ A</code>
+    </summary>
+    <!--Head-->
+    &emsp;&ensp;<sub><b>Supersymmetry</b> supports the following languages. </sub>
+    <br />
+    <!--Body-->
+    <br />
+    &emsp;&ensp;English
+    <br />
+    &emsp;&ensp;<a href="/README_PT.md">Português</a>
+  </details>
+</blockquote>
+
 # Supersymmetry
 Supersymmetry is a complex tech-centered modpack based around GregTech that integrates chemical and physical processes from reality into its progression. This means having many different crafting chains that imitate manufacturing processes used in real life.
 
@@ -34,6 +50,7 @@ Based off of ideas by [Zalgo](https://github.com/Zalgo239), [Gaming](https://git
 [Core mod](https://github.com/SymmetricDevs/Susy-Core) work by [MTBO](https://github.com/loxoDev), [beanie](https://github.com/BestMod), [Gaming](https://github.com/swagxdragonslayer46yt), [Eight](https://github.com/EightXOR8) and [bruberu](https://github.com/bruberu).
 Quests by [Regian](https://github.com/Regian24) et al.
 Textures and artwork by [GDCM05](https://github.com/gdcm05) et al.
+Structures and world generation work by [oliwier509](https://github.com/oliwier509) et al.
 Part of the main menu music (menu3.ogg and menu4.ogg) by [Ayden George](https://www.youtube.com/@ayden_george_official).
 
 Special thanks to our volunteers:
@@ -54,6 +71,19 @@ Special thanks to our volunteers:
 - kubuus • Polish translation
 - Whatsapp • Structures, textures and feedback
 - Science Demon • Questbook work, German translation and bug fixes
+- [Siryeet3000](https://github.com/Siryeet3000) • Structures
+- Celeryman • Structures
+
+## Development Tips
+> [Full Usage - Packwiz Tutorial](https://packwiz.infra.link/tutorials/creating/getting-started/)
+- Add mod: `packwiz cf add <project name>` ([Full Usage](https://packwiz.infra.link/tutorials/creating/adding-mods/))
+- Refresh Hash: `packwiz refresh`
+- Print modlist: `packwiz list`
+- Update pack version: rewrite version number in [pack.toml](pack.toml)
+- Update mod version: `packwiz update <mod>/--all`
+- Client only mod: [rewrite <mod>.pw.toml#side manually](https://packwiz.infra.link/reference/pack-format/mod-toml/#properties)
 
 ## Building the pack
-You'll need python3 and python requests installed to build run the main.py script.
+1. Run `pip install requests` first to install required package.
+2. Run `python build/main.py`.
+3. Check `buildOut` folder.

@@ -1,0 +1,166 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LabBuildMatsLoot",
+  "items": [
+    {
+      "weight": 1.6340234279632568,
+      "min": 4,
+      "max": 14,
+      "item": {
+        "id": "xtones:korp",
+        "damage": 12,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 8,
+      "max": 29,
+      "item": {
+        "id": "chisel:technical",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 13,
+      "max": 41,
+      "item": {
+        "id": "chisel:laboratory",
+        "damage": 9,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.540874481201172,
+      "min": 18,
+      "max": 51,
+      "item": {
+        "id": "chisel:laboratory",
+        "damage": 5,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 18,
+      "max": 26,
+      "item": {
+        "id": "srparasites:parasitestain",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.9194812774658203,
+      "min": 6,
+      "max": 29,
+      "item": {
+        "id": "srparasites:parasiterubbledense",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 8,
+      "max": 32,
+      "item": {
+        "id": "srparasites:parasiterubbledense",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 4.333380699157715,
+      "min": 17,
+      "max": 40,
+      "item": {
+        "id": "minecraft:brick_block",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.5707483291625977,
+      "min": 15,
+      "max": 38,
+      "item": {
+        "id": "minecraft:stonebrick",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 8,
+      "max": 14,
+      "item": {
+        "id": "industrialrenewal:fence_big_wire",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "industrialrenewal:fence_big_corner",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.540874481201172,
+      "min": 11,
+      "max": 18,
+      "item": {
+        "id": "industrialrenewal:razor_wire",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 10,
+      "max": 20,
+      "item": {
+        "id": "industrialrenewal:catwalk_steel",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 6,
+      "max": 13,
+      "item": {
+        "id": "industrialrenewal:light",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 283,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "RepairCost": {
+              "nbtType": "int",
+              "nbt": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

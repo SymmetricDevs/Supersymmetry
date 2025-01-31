@@ -648,14 +648,6 @@ CSTR.recipeBuilder()
         .EUt(120)
         .buildAndRegister()
 
-BR.recipeBuilder()
-        .fluidInputs(fluid('diborane') * 500)
-        .inputs(ore('dustSodiumCyanide') * 6)
-        .outputs(metaitem('dustSodiumCyanoborohydride') * 14)
-        .duration(160)
-        .EUt(120)
-        .buildAndRegister()
-
 LCR.recipeBuilder()
         .inputs(ore('dustSodiumCyanoborohydride') * 7)
         .fluidInputs(fluid('nine_octadecanone') * 3000)
@@ -769,28 +761,6 @@ FBR.recipeBuilder()
         .buildAndRegister()
 
 //RHENIUM EXTRACTION
-
-FBR.recipeBuilder()
-        .notConsumable(ore('catalystBedAlumina'))
-        .fluidInputs(fluid('n_butanol') * 50)
-        .fluidInputs(fluid('ammonia') * 50)
-        .fluidOutputs(fluid('n_butylamine') * 50)
-        .fluidOutputs(fluid('water') * 50)
-        .duration(3)
-        .EUt(Globals.voltAmps[1])
-        .buildAndRegister()
-
-BR.recipeBuilder()
-        .inputs(ore('dustSiliconDioxide') * 6)
-        .inputs(ore('dustAluminiumSulfate') * 51)
-        .inputs(ore('dustSodiumHydroxide'))
-        .fluidInputs(fluid('ethanol') * 100)
-        .fluidInputs(fluid('demineralized_water') * 1800)
-        .fluidInputs(fluid('n_butylamine') * 100)
-        .outputs(metaitem('dustHzsmFive'))
-        .duration(500)
-        .EUt(480)
-        .buildAndRegister();
 
 FBR.recipeBuilder()
         .notConsumable(ore('catalystBedHzsmFive'))

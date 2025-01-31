@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "biomes": "biomesoplenty:shrubland"
+    },
+    {
+      "biomes": "biomesoplenty:dead_forest"
+    },
+    {
+      "biomes": "biomesoplenty:brushland"
+    },
+    {
+      "biomes": "biomesoplenty:flower_field"
+    },
+    {
+      "biomes": "biomesoplenty:steppe"
+    },
+    {
+      "biomes": "biomesoplenty:xeric_shrubland"
+    },
+    {
+      "biomes": "biomesoplenty:wasteland"
+    },
+    {
+      "biomes": "biomesoplenty:shield"
+    },
+    {
+      "biomes": "biomesoplenty:pasture"
+    },
+    {
+      "biomes": "minecraft:savanna"
+    },
+    {
+      "biomes": "minecraft:plains"
+    },
+    {
+      "biomes": "minecraft:desert"
+    }
+  ],
+  "metadata": {
+    "title": "BanditBiomes",
+    "description": [
+      "Biomes in which the Bandit Camp can spawn in"
+    ]
+  }
+}

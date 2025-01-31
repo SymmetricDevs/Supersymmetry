@@ -1,0 +1,13 @@
+name = "ItemZoom"
+filename = "itemzoom_1.12.2-1.11.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "230cbdd018b71a44d96685e556839f33d8b44fd9"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2643616
+project-id = 261725

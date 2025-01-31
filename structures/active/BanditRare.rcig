@@ -1,0 +1,157 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditRare",
+  "items": [
+    {
+      "weight": 0.1442086547613144,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 621,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.23224952816963196,
+      "min": 2,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 516,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 4,
+      "max": 10,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 1068,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 9,
+      "max": 17,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 8,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 12,
+      "max": 17,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 260,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 6,
+      "max": 12,
+      "item": {
+        "id": "gregtech:wire_single",
+        "damage": 112,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 12,
+      "max": 16,
+      "item": {
+        "id": "gregtech:wire_single",
+        "damage": 25,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 16,
+      "max": 24,
+      "item": {
+        "id": "minecraft:brick",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0472542829811573,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "minecraft:bucket",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0472542829811573,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "minecraft:water_bucket",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 4,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 519,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 3,
+      "max": 11,
+      "item": {
+        "id": "gregtech:cable_single",
+        "damage": 112,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 7,
+      "max": 23,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 4,
+      "max": 15,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 260,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

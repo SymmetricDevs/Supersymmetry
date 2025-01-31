@@ -1,0 +1,13 @@
+name = "Not Enough Energistics"
+filename = "NotEnoughEnergistics-1.12.2-2.0.7.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "73831135cde6afd3c9cc71048376aad971121c3f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5234732
+project-id = 515565

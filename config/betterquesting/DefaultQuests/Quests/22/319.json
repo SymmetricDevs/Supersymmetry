@@ -1,0 +1,26 @@
+{
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.319.desc",
+      "icon:10": {
+        "id:8": "appliedenergistics2:dummy_fluid_item",
+        "tag:10": {
+          "FluidName:8": "radon"
+        }
+      },
+      "name:8": "susy.quest.db.319.title"
+    }
+  },
+  "questID:3": 319,
+  "tasks:9": {
+    "0:10": {
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "radon"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    }
+  }
+}

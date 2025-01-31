@@ -1,0 +1,38 @@
+{
+  "preRequisites:11": [
+    125
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.86.desc",
+      "icon:10": {
+        "Damage:2": 142,
+        "id:8": "gregtechfoodoption:gtfo_meta_item"
+      },
+      "name:8": "susy.quest.db.86.title"
+    }
+  },
+  "questID:3": 86,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 135,
+          "id:8": "gregtechfoodoption:gtfo_meta_item"
+        },
+        "1:10": {
+          "Count:3": 6,
+          "Damage:2": 141,
+          "id:8": "gregtechfoodoption:gtfo_meta_item"
+        },
+        "2:10": {
+          "Count:3": 6,
+          "Damage:2": 142,
+          "id:8": "gregtechfoodoption:gtfo_meta_item"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

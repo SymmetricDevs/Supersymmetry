@@ -5,6 +5,7 @@ FORGE_HAMMER = recipemap('forge_hammer')
 RF = recipemap('reaction_furnace')
 DISTILLERY = recipemap('distillery')
 ROASTER = recipemap('roaster')
+ALLOY_SMELTER = recipemap('alloy_smelter')
 
 //PYROMETALLURGICAL PROCESSES
 
@@ -139,7 +140,16 @@ for (blastable in blastables) {
 
 furnace.add(metaitem('dustBrownLimonite'), metaitem('dustBandedIron'))
 furnace.add(metaitem('dustYellowLimonite'), metaitem('dustBandedIron'))
-furnace.add(metaitem('ingotWroughtIron'), item('minecraft:iron_ingot'))
+
+//Adding Pig Iron -> Iron recipe
+ALLOY_SMELTER.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.ingot'))
+        .inputs(ore('ingotPigIron'))
+        .outputs(item('minecraft:iron_ingot'))
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
+
 
 //Deleting old Steel Dust -> Steel Ingot recipe
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSteel')], null)

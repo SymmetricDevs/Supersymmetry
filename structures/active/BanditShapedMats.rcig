@@ -1,0 +1,167 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditShapedMats",
+  "items": [
+    {
+      "weight": 1.763644814491272,
+      "min": 7,
+      "max": 26,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 4,
+      "max": 18,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 260,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 2,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 51,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 7,
+      "max": 15,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 335,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 112,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.11158588528633118,
+      "min": 5,
+      "max": 13,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 1068,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 6,
+      "max": 10,
+      "item": {
+        "id": "gregtech:meta_ring",
+        "damage": 1068,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 5,
+      "max": 15,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 335,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 7,
+      "max": 25,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 4,
+      "max": 21,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 260,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 12,
+      "max": 23,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 51,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 6,
+      "max": 17,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 112,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 14,
+      "max": 33,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 3,
+      "max": 9,
+      "item": {
+        "id": "gregtech:meta_bolt",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 5,
+      "max": 13,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 260,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 9,
+      "max": 19,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 112,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

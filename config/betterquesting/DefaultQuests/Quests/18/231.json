@@ -1,0 +1,46 @@
+{
+  "preRequisites:11": [
+    22
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.231.desc",
+      "icon:10": {
+        "id:8": "industrialrenewal:catwalk_stair"
+      },
+      "name:8": "susy.quest.db.231.title"
+    }
+  },
+  "questID:3": 231,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:catwalk_stair"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:catwalk"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:electric_fence"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:electric_gate"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:catwalk_steel"
+        },
+        "5:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:catwalk_ladder_steel"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

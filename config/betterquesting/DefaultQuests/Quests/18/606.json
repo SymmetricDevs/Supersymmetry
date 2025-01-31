@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    602
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.606.desc",
+      "icon:10": {
+        "id:8": "torchmaster:dread_lamp"
+      },
+      "name:8": "susy.quest.db.606.title"
+    }
+  },
+  "questID:3": 606,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "torchmaster:dread_lamp"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

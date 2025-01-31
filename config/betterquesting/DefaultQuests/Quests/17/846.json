@@ -1,0 +1,16 @@
+{
+  "preRequisites:11": [
+    834
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.846.desc",
+      "icon:10": {
+        "id:8": "susy:susy_stone_smooth"
+      },
+      "name:8": "susy.quest.db.846.title"
+    }
+  },
+  "questID:3": 846,
+  "tasks:9": {}
+}

@@ -1,0 +1,58 @@
+{
+  "preRequisites:11": [
+    78,
+    42,
+    43,
+    77,
+    1458175841
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.54.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 516,
+        "id:8": "gregtech:meta_item_1"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.54.title"
+    }
+  },
+  "questID:3": 54,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 67,
+            "TrophyColorGreen:3": 101,
+            "TrophyColorRed:3": 151,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "Damage:2": 516,
+              "id:8": "gregtech:meta_item_1"
+            },
+            "TrophyName:8": "The Triode",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 516,
+          "id:8": "gregtech:meta_item_1"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

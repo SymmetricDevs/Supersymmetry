@@ -1,3 +1,19 @@
+<blockquote>
+  <details>
+    <summary>
+      <code>あ ←→ A</code>
+    </summary>
+    <!--Head-->
+    &emsp;&ensp;<sub><b>Supersymmetry</b> supports the following languages. </sub>
+    <br />
+    <!--Body-->
+    <br />
+    &emsp;&ensp;Português
+    <br />
+    &emsp;&ensp;<a href="/README.md">English</a>
+  </details>
+</blockquote>
+
 # Supersymmetry
 Supersymmetry é um modpack centrado em tecnologia baseado no GregTech, que inclui processos químicos e físicos da realidade à sua progressão. Isto significa que contém muitas redes de contrução que imitam processos de manofaturação usados na vida real.
 Grande parte do _pack_ está em desenvolvimento, com elementos PvE (Jogador contra ambiente) tais como fatores ambientais e invasões de facções enimigas planeadas. Nós temos intenções de adicionar o nosso próprio _mod_ de exploração do espaço também.

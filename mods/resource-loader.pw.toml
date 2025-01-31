@@ -1,0 +1,13 @@
+name = "Resource Loader"
+filename = "ResourceLoader-MC1.12.1-1.5.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d8c10e6e29df5f9bc51e468642d9b3cae5f2f8e4"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2477566
+project-id = 226447

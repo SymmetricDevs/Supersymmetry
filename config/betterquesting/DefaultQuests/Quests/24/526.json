@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    525
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.526.desc",
+      "icon:10": {
+        "id:8": "opencomputers:diskdrive"
+      },
+      "name:8": "susy.quest.db.526.title"
+    }
+  },
+  "questID:3": 526,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "opencomputers:diskdrive"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

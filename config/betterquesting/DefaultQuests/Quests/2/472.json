@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    99
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.472.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 69,
+        "id:8": "gregtech:meta_ingot"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.472.title"
+    }
+  },
+  "questID:3": 472,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 16,
+          "Damage:2": 69,
+          "id:8": "gregtech:meta_ingot"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

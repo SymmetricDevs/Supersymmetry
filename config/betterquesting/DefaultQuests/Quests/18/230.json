@@ -1,0 +1,63 @@
+{
+  "preRequisites:11": [
+    51
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.230.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "buildinggadgets:buildingtool",
+        "tag:10": {
+          "blockstate:10": {
+            "Name:8": "minecraft:air"
+          }
+        }
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.230.title"
+    }
+  },
+  "questID:3": 230,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "buildinggadgets:buildingtool",
+          "tag:10": {
+            "blockstate:10": {
+              "Name:8": "minecraft:air"
+            }
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "buildinggadgets:exchangertool",
+          "tag:10": {
+            "blockstate:10": {
+              "Name:8": "minecraft:air"
+            }
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "buildinggadgets:copypastetool",
+          "tag:10": {
+            "mode:8": "Copy"
+          }
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "buildinggadgets:destructiontool",
+          "tag:10": {
+            "fuzzy:1": 1,
+            "overlay:1": 1
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

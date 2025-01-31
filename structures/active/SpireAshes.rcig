@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "SpireAshes",
+  "items": [
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "minecraft:diamond",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "minecraft:sand",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 7,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_dust_small",
+        "damage": 254,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 2,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 254,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

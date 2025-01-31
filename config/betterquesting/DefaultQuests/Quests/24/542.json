@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    541
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.542.desc",
+      "icon:10": {
+        "Damage:2": 20,
+        "id:8": "opencomputers:component"
+      },
+      "name:8": "susy.quest.db.542.title"
+    }
+  },
+  "questID:3": 542,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

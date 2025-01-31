@@ -1,0 +1,47 @@
+{
+  "preRequisiteTypes:7": [
+    1
+  ],
+  "preRequisites:11": [
+    224
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.188.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 1001,
+        "id:8": "gregtech:machine"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.188.title"
+    }
+  },
+  "questID:3": 188,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1001,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 16,
+          "id:8": "gregtech:wire_coil"
+        },
+        "2:10": {
+          "Count:3": 10,
+          "Damage:2": 2,
+          "id:8": "gregtech:metal_casing"
+        },
+        "3:10": {
+          "Count:3": 2,
+          "Damage:2": 1211,
+          "id:8": "gregtech:machine"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

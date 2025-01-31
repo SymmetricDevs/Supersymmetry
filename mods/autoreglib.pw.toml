@@ -1,0 +1,13 @@
+name = "AutoRegLib"
+filename = "AutoRegLib-1.3-32.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "267269ca7f1a71fb3bb35bdb8e61702a4da6263e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2746011
+project-id = 250363

@@ -1,0 +1,33 @@
+{
+  "preRequisites:11": [
+    33
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.147.desc",
+      "icon:10": {
+        "Damage:2": 1025,
+        "id:8": "gregtech:machine"
+      },
+      "name:8": "susy.quest.db.147.title",
+      "tasklogic:8": "OR"
+    }
+  },
+  "questID:3": 147,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1025,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 22,
+          "id:8": "gregtech:metal_casing"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

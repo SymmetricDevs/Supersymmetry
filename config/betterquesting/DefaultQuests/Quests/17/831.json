@@ -1,0 +1,23 @@
+{
+  "preRequisiteTypes:7": [
+    2,
+    2,
+    2
+  ],
+  "preRequisites:11": [
+    67,
+    70,
+    830
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.831.desc",
+      "icon:10": {
+        "id:8": "gregtech:borderless_yellow_lamp"
+      },
+      "name:8": "susy.quest.db.831.title"
+    }
+  },
+  "questID:3": 831,
+  "tasks:9": {}
+}

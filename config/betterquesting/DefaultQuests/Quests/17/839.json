@@ -1,0 +1,17 @@
+{
+  "preRequisites:11": [
+    835
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.839.desc",
+      "icon:10": {
+        "Damage:2": 7,
+        "id:8": "chisel:andesite"
+      },
+      "name:8": "susy.quest.db.839.title"
+    }
+  },
+  "questID:3": 839,
+  "tasks:9": {}
+}

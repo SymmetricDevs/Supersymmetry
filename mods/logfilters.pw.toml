@@ -1,0 +1,13 @@
+name = "LogFilters"
+filename = "LogFilters-1.12.2-1.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "5f07b683ea1cdb3b89fb8d2bae50c276aa8fcb4a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2711828
+project-id = 272562

@@ -1,0 +1,48 @@
+{
+  "preRequisiteTypes:7": [
+    1,
+    0,
+    1,
+    1,
+    0
+  ],
+  "preRequisites:11": [
+    32,
+    48,
+    88,
+    38,
+    68
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1112000445.desc",
+      "icon:10": {
+        "Damage:2": 2,
+        "id:8": "susy:susy_armor"
+      },
+      "name:8": "susy.quest.db.1112000445.title"
+    }
+  },
+  "questID:3": 1112000445,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "id:8": "susy:susy_armor"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 3,
+          "id:8": "susy:susy_armor",
+          "tag:10": {
+            "maxOxygen:6": 1200.0,
+            "oxygen:6": 1200.0
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

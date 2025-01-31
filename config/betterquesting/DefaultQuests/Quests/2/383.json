@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    380
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.383.desc",
+      "icon:10": {
+        "id:8": "icbmclassic:explosive_missile"
+      },
+      "name:8": "susy.quest.db.383.title"
+    }
+  },
+  "questID:3": 383,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "icbmclassic:explosive_missile"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LabLootP",
+  "items": [
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gaspunk:grenade",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:tear_gas"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gaspunk:grenade",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:hydrofluoric_acid"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 14541,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 80,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.9194812774658203,
+      "min": 8,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 85,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 96,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 97,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 98,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 142,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 736,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 420000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 735,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 120000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 628,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 3,
+      "max": 8,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 627,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 187,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 14,
+      "max": 26,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 16,
+      "max": 37,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 8,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.3419337272644043,
+      "min": 25,
+      "max": 36,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 710,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 8,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 80,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Fluid": {
+              "nbtType": "compound",
+              "nbt": {
+                "FluidName": {
+                  "nbtType": "string",
+                  "nbt": "hydrogen_peroxide"
+                },
+                "Amount": {
+                  "nbtType": "int",
+                  "nbt": 8000
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 9,
+      "max": 18,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 80,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Fluid": {
+              "nbtType": "compound",
+              "nbt": {
+                "FluidName": {
+                  "nbtType": "string",
+                  "nbt": "sterilized_growth_medium"
+                },
+                "Amount": {
+                  "nbtType": "int",
+                  "nbt": 8000
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 8,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 80,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Fluid": {
+              "nbtType": "compound",
+              "nbt": {
+                "FluidName": {
+                  "nbtType": "string",
+                  "nbt": "gtfo_sludge"
+                },
+                "Amount": {
+                  "nbtType": "int",
+                  "nbt": 8000
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 5.2210845947265625,
+      "min": 35,
+      "max": 58,
+      "item": {
+        "id": "cyberware:neuropozyne",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 16,
+      "max": 22,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 134,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 78,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Fluid": {
+              "nbtType": "compound",
+              "nbt": {
+                "FluidName": {
+                  "nbtType": "string",
+                  "nbt": "gtfo_lactic_acid_bacteria"
+                },
+                "Amount": {
+                  "nbtType": "int",
+                  "nbt": 1000
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

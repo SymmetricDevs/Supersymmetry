@@ -73,6 +73,7 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), met
 
 // Ferrite Mixture Dust * 6
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
+mods.gregtech.blender.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
 
 // Nickel Zinc Ferrite Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustFerriteMixture')], [fluid('oxygen') * 2000])
@@ -237,22 +238,6 @@ ROASTER.recipeBuilder()
         .inputs(ore('dustLead'))
         .fluidInputs(fluid('oxygen') * 1000)
         .outputs(metaitem('dustLeadOxide') * 2)
-        .duration(200)
-        .EUt(30)
-        .buildAndRegister()
-
-ROASTER.recipeBuilder()
-        .inputs(ore('dustNickel'))
-        .fluidInputs(fluid('oxygen') * 1000)
-        .outputs(metaitem('dustNickelIiOxide') * 2)
-        .duration(200)
-        .EUt(30)
-        .buildAndRegister()
-
-ROASTER.recipeBuilder()
-        .inputs(ore('dustCobalt'))
-        .fluidInputs(fluid('oxygen') * 1000)
-        .outputs(metaitem('dustCobaltOxide') * 2)
         .duration(200)
         .EUt(30)
         .buildAndRegister()
@@ -422,7 +407,7 @@ CHEMICAL_BATH.recipeBuilder()
 
 BR.recipeBuilder()
         .inputs(metaitem('raw_smd_capacitor') * 16)
-        .fluidInputs(fluid('polydimethylsiloxane') * 72)
+        .fluidInputs(fluid('polydimethylsiloxane') * 500)
         .outputs(metaitem('component.smd.capacitor') * 16)
         .duration(40)
         .EUt(240)

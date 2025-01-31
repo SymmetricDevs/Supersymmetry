@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "biomes": "$PLAINS"
+    },
+    {
+      "biomes": "$SANDY"
+    }
+  ],
+  "metadata": {
+    "title": "FlatBiomes",
+    "description": [
+      "Flat biomes for bandit camp"
+    ]
+  }
+}

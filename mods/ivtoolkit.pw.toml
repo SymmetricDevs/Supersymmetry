@@ -1,0 +1,13 @@
+name = "IvToolkit"
+filename = "IvToolkit-1.3.3-1.12.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "522e60b48721b558f6dea1fdfa2b235162366649"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2443253
+project-id = 224535

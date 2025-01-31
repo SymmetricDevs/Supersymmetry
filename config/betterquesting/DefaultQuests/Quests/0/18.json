@@ -1,0 +1,32 @@
+{
+  "preRequisites:11": [
+    21
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.18.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "appliedenergistics2:grindstone"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.18.title"
+    }
+  },
+  "questID:3": 18,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "appliedenergistics2:grindstone"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "appliedenergistics2:crank"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

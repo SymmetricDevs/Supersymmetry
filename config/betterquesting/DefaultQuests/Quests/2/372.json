@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    188
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.372.desc",
+      "icon:10": {
+        "id:8": "minecraft:iron_ingot"
+      },
+      "name:8": "susy.quest.db.372.title"
+    }
+  },
+  "questID:3": 372,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 128,
+          "id:8": "minecraft:iron_ingot"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

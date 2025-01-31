@@ -1,0 +1,97 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditVegetables",
+  "items": [
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 24,
+      "item": {
+        "id": "minecraft:carrot",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 24,
+      "item": {
+        "id": "minecraft:potato",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "minecraft:beetroot",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 76,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 32,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 79,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "minecraft:wheat",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 77,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 309,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 308,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

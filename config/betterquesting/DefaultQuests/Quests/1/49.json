@@ -1,0 +1,32 @@
+{
+  "preRequisites:11": [
+    35
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.49.desc",
+      "icon:10": {
+        "Damage:2": 14501,
+        "id:8": "gregtech:machine"
+      },
+      "name:8": "susy.quest.db.49.title"
+    }
+  },
+  "questID:3": 49,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 24,
+          "id:8": "susy:coagulation_tank_wall"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 14501,
+          "id:8": "gregtech:machine"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

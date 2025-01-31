@@ -1,32 +1,23 @@
 package classes
 
-import net.minecraftforge.fml.common.eventhandler.EventPriority
+import gregtech.api.fluids.FluidBuilder
+import gregtech.api.fluids.attribute.FluidAttributes
+import gregtech.api.fluids.store.FluidStorageKey
+import gregtech.api.fluids.store.FluidStorageKeys
+import gregtech.api.recipes.RecipeMaps
+import gregtech.api.unification.material.Material
+import gregtech.api.unification.material.properties.*
+import gregtech.api.unification.material.properties.BlastProperty.GasTier
+import gregtech.api.unification.material.properties.OreProperty
+import gregtech.api.unification.material.properties.PropertyKey
+import supersymmetry.api.fluids.SusyFluidStorageKeys
+import supersymmetry.api.recipes.SuSyRecipeMaps
+import supersymmetry.api.unification.material.properties.FiberProperty
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 
-import gregtech.api.unification.material.Material;
-import gregtech.api.GregTechAPI;
-import gregtech.api.GTValues;
-
-import static gregtech.api.unification.material.info.MaterialFlags.*;
-import static gregtech.api.unification.material.Materials.*;
+import static gregtech.api.unification.material.Materials.*
+import static gregtech.api.unification.material.info.MaterialFlags.*
 import static material.SuSyMaterials.*
-
-import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.unification.material.info.MaterialFlag;
-import gregtech.api.unification.material.properties.*;
-import gregtech.api.unification.material.properties.OreProperty;
-import gregtech.api.unification.material.properties.PropertyKey;
-import gregtech.api.unification.material.properties.BlastProperty.GasTier;
-import gregtech.api.recipes.RecipeMap;
-import gregtech.api.recipes.RecipeMaps;
-import gregtech.api.fluids.FluidBuilder;
-import gregtech.api.fluids.FluidState;
-import gregtech.api.fluids.store.FluidStorageKeys;
-import gregtech.api.fluids.store.FluidStorageKey;
-
-import supersymmetry.api.fluids.SusyFluidStorageKeys;
-import supersymmetry.api.recipes.SuSyRecipeMaps;
-import supersymmetry.api.unification.material.properties.SuSyPropertyKey;
-import supersymmetry.api.unification.material.properties.FiberProperty;
 
 //eventManager.listen(EventPriority.LOWEST)
 class ChangeFlags {
@@ -82,6 +73,8 @@ class ChangeFlags {
         BisphenolA.setProperty(PropertyKey.DUST, new DustProperty());
 
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
+        Rubber.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(593, 50, true, false, false, false));
+
         
         setupFluidType(AntimonyTrifluoride, FluidStorageKeys.LIQUID, 565)
         setupFluidType(LithiumChloride, FluidStorageKeys.LIQUID, 890)
@@ -93,6 +86,9 @@ class ChangeFlags {
         setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
         setupFluidType(Selenium, FluidStorageKeys.LIQUID, 494)
         //setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
+
+        setupFluidType(CarbonDioxide, SusyFluidStorageKeys.SUPERCRITICAL, 304)
+        setupFluidType(Propane, SusyFluidStorageKeys.SUPERCRITICAL, 370)
 
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
@@ -117,6 +113,11 @@ class ChangeFlags {
         EnrichedNaquadahTriniumEuropiumDuranide.getProperty(PropertyKey.WIRE).setAmperage(64);
         RutheniumTriniumAmericiumNeutronate.getProperty(PropertyKey.WIRE).setAmperage(96);
 
+        // Allow PE & PTFE to carry acidic/cyro fluids. Used in plastic cans
+        Polyethylene.getProperty(PropertyKey.FLUID_PIPE).setCryoProof(true);
+        Polyethylene.getProperty(PropertyKey.FLUID_PIPE).setCanContain(FluidAttributes.ACID, true);
+        Polytetrafluoroethylene.getProperty(PropertyKey.FLUID_PIPE).setCryoProof(true);
+
         // Flags
 
         Asbestos.addFlags("generate_foil");
@@ -124,8 +125,8 @@ class ChangeFlags {
         Steel.addFlags("generate_spring", "generate_spring_small");
         Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");
         Lead.addFlags("generate_round");
-        Aluminium.addFlags("generate_round");
-        Nickel.addFlags("generate_rod");
+        Nickel.addFlags("generate_rod", "generate_foil");
+        Aluminium.addFlags("generate_round", "generate_rotor");
         Tungsten.addFlags("generate_fine_wire");
         Molybdenum.addFlags("generate_fine_wire");
         Tantalum.addFlags("generate_rod");
@@ -138,11 +139,13 @@ class ChangeFlags {
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
         Nickel.addFlags("generate_catalyst_bed");
+        Magnesia.addFlags("generate_catalyst_bed");
         Brass.addFlags("generate_ring");
         Indium.addFlags("generate_plate");
         BisphenolA.addFlags("no_unification");
         Phosphorus.addFlags("no_smelting");
         Tetrahedrite.addFlags("no_smelting");
+        Gold.addFlags("generate_gear");
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
@@ -173,7 +176,8 @@ class ChangeFlags {
         Lepidolite.setFormula("(K,Rb)AlLi2Si4O10(OH,F)2", true);
         Tetrahedrite.setFormula("Cu12Sb4S13", true);
         IndiumGalliumPhosphide.setFormula("InGaP2", true);
-        NetherAir.setFormula("(N78O21Ar9)24(CO2)2(H2S)(SO2)", true)
+        NetherAir.setFormula("(N78O21Ar9)24(CO2)2(H2S)(SO2)", true);
+        Diatomite.setFormula("(SiO2)8(Fe2O3)(Al2O3)", true);
 
         // Ore Processing
         
@@ -689,6 +693,12 @@ class ChangeFlags {
 
         oreProp = Amblygonite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+
+        oreProp = Vanadinite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+
+        oreProp = Carnotite.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
 
         oreProp = Cerussite.getProperty(PropertyKey.ORE);
         oreProp.setDirectSmeltResult(Lead);

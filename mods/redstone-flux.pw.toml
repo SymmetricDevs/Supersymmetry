@@ -1,0 +1,13 @@
+name = "Redstone Flux"
+filename = "RedstoneFlux-1.12-2.1.1.1-universal.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "7835c1dcc006e5d4a406a6b0615012b825e25044"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2920436
+project-id = 270789

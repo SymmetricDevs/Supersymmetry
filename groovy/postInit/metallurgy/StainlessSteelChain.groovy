@@ -8,8 +8,10 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
 //REMOVE OLD RECIPES
 // Stainless Steel Dust * 9
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustIron') * 6, metaitem('dustNickel'), metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 3])], null)
+mods.gregtech.blender.removeByInput(120, [metaitem('dustIron') * 6, metaitem('dustNickel'), metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 3])], null)
 // Stainless Steel Dust * 9
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustIron') * 4, metaitem('dustInvar') * 3, metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+mods.gregtech.blender.removeByInput(120, [metaitem('dustIron') * 4, metaitem('dustInvar') * 3, metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
 EBF = recipemap('electric_blast_furnace')
 MIXER = recipemap('mixer')
@@ -26,7 +28,7 @@ EBF.recipeBuilder()
     .buildAndRegister()
 
 EBF.recipeBuilder()
-    .inputs(ore('dustMagnetite') * 14)
+    .inputs(ore('dustMagnetite') * 2)
     .inputs(ore('dustNickel'))
     .inputs(ore('dustTinyManganese') * 2)
     .fluidOutputs(fluid('carburized_stainless_steel') * 1440)
@@ -36,7 +38,7 @@ EBF.recipeBuilder()
     .buildAndRegister()
 
 EBF.recipeBuilder()
-    .inputs(ore('dustBandedIron') * 15)
+    .inputs(ore('dustBandedIron') * 3)
     .inputs(ore('dustNickel'))
     .inputs(ore('dustTinyManganese') * 2)
     .fluidOutputs(fluid('carburized_stainless_steel') * 1440)
@@ -56,7 +58,7 @@ EBF.recipeBuilder()
     .buildAndRegister()
 
 EBF.recipeBuilder()
-    .inputs(ore('dustGraniticMineralSand') * 30)
+    .inputs(ore('dustGraniticMineralSand') * 2)
     .inputs(ore('dustNickel'))
     .inputs(ore('dustTinyManganese') * 2)
     .fluidOutputs(fluid('carburized_stainless_steel') * 1440)

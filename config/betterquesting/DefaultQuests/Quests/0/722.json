@@ -1,0 +1,38 @@
+{
+  "preRequisites:11": [
+    25
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.722.desc",
+      "icon:10": {
+        "id:8": "minecraft:chainmail_chestplate"
+      },
+      "name:8": "susy.quest.db.722.title"
+    }
+  },
+  "questID:3": 722,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:chainmail_helmet"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:chainmail_chestplate"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:chainmail_leggings"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:chainmail_boots"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

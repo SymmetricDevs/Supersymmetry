@@ -1,0 +1,13 @@
+name = "LagGoggles"
+filename = "LagGoggles-1.12.2-5.9-140.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ef22439d92e38e4fc79df4ff95b2e8708f645db8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4493884
+project-id = 283525

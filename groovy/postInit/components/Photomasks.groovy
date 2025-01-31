@@ -120,7 +120,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('glue') * 100)
     .outputs(metaitem('rubylith'))
     .duration(200)
-    .EUt(120)
+    .EUt(480)
     .buildAndRegister()
 
 // Early lithography masks

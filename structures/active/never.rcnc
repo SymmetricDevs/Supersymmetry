@@ -1,0 +1,11 @@
+{
+  "generationInfos": [],
+  "defaultSpawnChance": 0.0,
+  "spawnDistanceMultiplier": 0.0,
+  "spawnDistanceMultiplierCap": 0.0,
+  "selectableInGUI": true,
+  "title": "Never",
+  "tooltip": [
+    "Never generates naturally"
+  ]
+}

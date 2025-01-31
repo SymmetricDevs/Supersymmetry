@@ -1,0 +1,27 @@
+{
+  "preRequisites:11": [
+    398
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.621.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "gregtech:cleanroom_casing"
+      },
+      "name:8": "susy.quest.db.621.title"
+    }
+  },
+  "questID:3": 621,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:cleanroom_casing"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -380,3 +380,12 @@ ELECTROLYZER.recipeBuilder()
         .EUt(30)
         .duration(300)
         .buildAndRegister()
+
+// Compounds
+ROASTER.recipeBuilder()
+        .inputs(ore('dustAnyPurityZinc'))
+        .fluidInputs(fluid('oxygen') * 1000)
+        .outputs(metaitem('dustZincOxide') * 2)
+        .duration(300)
+        .EUt(30)
+        .buildAndRegister()

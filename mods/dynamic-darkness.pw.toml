@@ -1,0 +1,13 @@
+name = "Dynamic Darkness"
+filename = "darkness-forge-1.12.x-0.5.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e305092922affc619e2a7206a4949c24363fbf3d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4118829
+project-id = 363102
