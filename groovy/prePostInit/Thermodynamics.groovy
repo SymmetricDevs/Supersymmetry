@@ -86,7 +86,7 @@ def Coolants = [
 ];
 
 def CryoHydrogen = new ICryoGas('hydrogen', 'hot_hp_hydrogen', 'hp_hydrogen', 'cold_hp_hydrogen', 'liquid_hydrogen');
-CryoHydrogen.setEUt(240);
+CryoHydrogen.setEUt(60);
 CryoHydrogen.setDuration(100);
 CryoHydrogen.setPowerHX(100);
 CryoHydrogen.setDurationHX(5);
@@ -142,7 +142,7 @@ CryoXenon.setDurationRadiator(200);
 CryoXenon.setTemperature(165);
 
 def CryoAir = new ICryoGas('air', 'hot_hp_air', 'hp_air', 'cold_hp_air', 'liquid_air');
-CryoAir.setEUt(60);
+CryoAir.setEUt(30);
 CryoAir.setDuration(100);
 CryoAir.setPowerHX(100);
 CryoAir.setDurationHX(5);
