@@ -2526,13 +2526,13 @@ public class OrganicChemistryMaterials {
                 .build();
 
         Dichlorodifluoromethane = new Material.Builder(15399, SuSyUtility.susyId('dichlorodifluoromethane'))
-                .gas()
+                .gas(new FluidBuilder().temperature(244))
                 .components(Carbon * 1, Chlorine * 2, Fluorine * 2)
                 .color(0xd14d4d)
                 .build();
 
         Chlorotrifluoromethane = new Material.Builder(15400, SuSyUtility.susyId('chlorotrifluoromethane'))
-                .gas()
+                .gas(new FluidBuilder().temperature(232))
                 .components(Carbon * 1, Chlorine * 1, Fluorine * 3)
                 .color(0xbf3232)
                 .build();
