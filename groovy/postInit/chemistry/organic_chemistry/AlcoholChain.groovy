@@ -9,15 +9,6 @@ SIEVE_DT = recipemap('sieve_distillation')
 
 // Methanol
 
-ROASTER.recipeBuilder()
-    .inputs(ore('dustCopperCarbonate') * 10)
-    .inputs(ore('dustZincCarbonate') * 5)
-    .inputs(ore('dustChromiumTrioxide') * 4)
-    .outputs(metaitem('dustCopperZincChromiumOxide'))
-    .duration(40)
-    .EUt(40)
-    .buildAndRegister()
-
 FBR.recipeBuilder()
     .fluidInputs(fluid('hydrogen_rich_syngas') * 4800)
     .fluidInputs(fluid('carbon_monoxide') * 500)

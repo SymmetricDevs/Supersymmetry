@@ -576,6 +576,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .flags(GENERATE_CATALYST_BED)
                 .build()
+                .setFormula('(Al2O3)(PtCl4)', true)
 
         CrudeManganeseIISulfateSolution = new Material.Builder(13093, SuSyUtility.susyId('crude_manganese_ii_sulfate_solution'))
                 .liquid()
@@ -719,8 +720,9 @@ public class SecondDegreeMaterials {
                 .liquid()
                 .components(Carbon * 2, Lithium * 2, Oxygen * 3, Water)
                 .colorAverage()
-                .build()
-                .setFormula("(C)(Li2CO3)(H2O)", true);
+                .build();
+
+        ImpureLithiumCarbonateSolution.setFormula("(C)(Li2CO3)(H2O)", true)
 
         LithiumCarbonateSolution = new Material.Builder(13116, SuSyUtility.susyId("lithium_carbonate_solution"))
                 .liquid()
@@ -733,22 +735,25 @@ public class SecondDegreeMaterials {
                 .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(Argon, Hydrogen * 4, HydrogenChloride)
                 .colorAverage()
-                .build()
-                .setFormula("(Ar)(HCl)(H)", true);
+                .build();
+
+        AcidicArgonHydrogenMixture.setFormula("(Ar)(HCl)(H)", true);
 
         AmmoniacalArgonHydrogenMixture = new Material.Builder(13118, SuSyUtility.susyId("ammoniacal_argon_hydrogen_mixture"))
                 .gas()
                 .components(Argon, Hydrogen * 4, Ammonia)
                 .colorAverage()
-                .build()
-                .setFormula("(Ar)(NH3)(H)", true)
+                .build();
+
+        AmmoniacalArgonHydrogenMixture.setFormula("(Ar)(NH3)(H)", true);
 
         AcidicHydrogenVapor = new Material.Builder(13119, SuSyUtility.susyId("acidic_hydrogen_vapor"))
                 .gas()
                 .components(Hydrogen * 6, CarbonDioxide * 1)
                 .color(0x003c74)
-                .build()
-                .setFormula("(H)8(CO2)", true);
+                .build();
+
+        AcidicHydrogenVapor.setFormula("(H)8(CO2)", true);
 
         SodiumHydroxideMethanolSolution = new Material.Builder(13120, SuSyUtility.susyId("sodium_hydroxide_methanol_solution"))
                 .fluid()

@@ -58,14 +58,6 @@ def minor_solvents = [
         .EUt(30)
         .buildAndRegister()
 
-    FBR.recipeBuilder()
-        .fluidInputs(fluid('isobutane') * 50)
-        .notConsumable(ore('dustChromiumTrioxide'))
-        .fluidOutputs(fluid('isobutylene') * 50)
-        .duration(5)
-        .EUt(30)
-        .buildAndRegister()
-
     CSTR.recipeBuilder()
         .fluidInputs(fluid('methanol') * 50)
         .fluidInputs(fluid('isobutylene') * 50)

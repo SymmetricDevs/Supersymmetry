@@ -307,7 +307,7 @@ public class UnknownCompositionMaterials {
                 .build();
 
         AcidicCelluloseSolution = new Material.Builder(4055, SuSyUtility.susyId('acidic_cellulose_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xb7bd60)
                 .build();
 

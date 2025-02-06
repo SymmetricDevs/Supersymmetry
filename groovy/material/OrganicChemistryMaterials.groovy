@@ -170,7 +170,7 @@ public class OrganicChemistryMaterials {
 
         ChloromethaneSolution = new Material.Builder(15024, SuSyUtility.susyId('chloromethane_solution'))
                 .liquid()
-                .components(Chloromethane * 1, Water * 1)
+                .components(Chloromethane * 1, Water * 2)
                 .colorAverage()
                 .build();
         

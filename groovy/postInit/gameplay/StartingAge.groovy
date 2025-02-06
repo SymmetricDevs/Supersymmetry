@@ -181,10 +181,6 @@ for (mat_name in GrindstoneOreList)
     def mat_cap = mat.toCamelCaseString()
     mat_cap = mat_cap.substring(0, 1).toUpperCase() + mat_cap.substring(1);
 
-    log.info(mat)
-    log.info(mat_cap)
-    log.info(mat.oreMultiplier())
-
     builder.withInput(item("gregtech:ore_" + mat + "_0") * 2)
     builder.withOutput(metaitem('crushed' + mat_cap) * (int)(mat.oreMultiplier() * 3))
     builder.withTurns(5)

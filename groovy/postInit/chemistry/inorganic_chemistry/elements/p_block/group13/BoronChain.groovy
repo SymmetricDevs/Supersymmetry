@@ -143,14 +143,6 @@ for (blanket in sintering_blankets) {
         .buildAndRegister()
 }
 
-FORMINGPRESS.recipeBuilder()
-    .inputs(ore('dustBoronCarbide'))
-    .notConsumable(metaitem('shape.mold.rod'))
-    .outputs(metaitem('stickBoronCarbide'))
-    .duration(120)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
 //ELECTROLYSIS OF B2O3
 ELECTROLYTIC_CELL.recipeBuilder()
     .inputs(ore('dustBoronTrioxide') * 5)

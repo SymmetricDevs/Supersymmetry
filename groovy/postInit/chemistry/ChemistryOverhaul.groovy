@@ -3921,3 +3921,12 @@ mods.gregtech.fluid_solidifier.recipeBuilder()
         .duration(6)
         .EUt(7)
         .buildAndRegister()
+
+// Iron III Nitrate Solution
+BR.recipeBuilder()
+        .inputs(metaitem('dustIronIiiHydroxide') * 7)
+        .fluidInputs(fluid('nitric_acid') * 3000)
+        .fluidOutputs(fluid('iron_iii_nitrate_solution') * 3000)
+        .duration(100)
+        .EUt(30)
+        .buildAndRegister()
