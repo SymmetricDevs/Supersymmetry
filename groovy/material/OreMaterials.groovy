@@ -132,7 +132,7 @@ public class OreMaterials{
                 .build();
 
         Arsenopyrite = new Material.Builder(7013, SuSyUtility.susyId('arsenopyrite'))
-                .dust().ore()
+                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
                 .color(0x7d7269)
