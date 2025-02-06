@@ -1714,7 +1714,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         FlameRetardantEpoxy = new Material.Builder(15276, SuSyUtility.susyId('flame_retardant_epoxy'))
-                .dust().liquid(new FluidBuilder().temperature(452)
+                .dust().liquid(new FluidBuilder().temperature(452))
                 .components(Carbon * 21, Hydrogen * 21, Bromine * 4, Chlorine * 1, Oxygen * 5)
                 .color(0xc86b14)
                 .build();
