@@ -87,6 +87,22 @@ class ChangeFlags {
         setupFluidType(Selenium, FluidStorageKeys.LIQUID, 494)
         //setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
 
+        setupFluidType(Sodium, FluidStorageKeys.LIQUID, 371)
+        setupFluidType(SodiumHydroxide, FluidStorageKeys.LIQUID, 591)
+        setupFluidType(Polydimethylsiloxane, FluidStorageKeys.LIQUID, 293)
+        setupFluidType(Glass, FluidStorageKeys.LIQUID, 1750)
+        setupFluidType(PolyvinylButyral, FluidStorageKeys.LIQUID, 430)
+        setupFluidType(Nitrochlorobenzene, FluidStorageKeys.LIQUID, 326)
+        setupFluidType(Iron3Chloride, FluidStorageKeys.LIQUID, 577)
+        setupFluidType(Dichlorobenzidine, FluidStorageKeys.LIQUID, 438)
+        setupFluidType(Diaminobenzidine, FluidStorageKeys.LIQUID, 450)
+        setupFluidType(Dichlorobenzidine, FluidStorageKeys.LIQUID, 1043)
+        setupFluidType(PhthalicAcid, FluidStorageKeys.LIQUID, 1043)
+        setupFluidType(DiphenylIsophtalate, FluidStorageKeys.LIQUID, 1043)
+        setupFluidType(Dichlorobenzene, FluidStorageKeys.LIQUID, 256)
+        setupFluidType(SiliconeRubber, FluidStorageKeys.LIQUID, 400)
+        setupFluidType(StyreneButadieneRubber, FluidStorageKeys.LIQUID, 450)
+
         setupFluidType(CarbonDioxide, SusyFluidStorageKeys.SUPERCRITICAL, 304)
         setupFluidType(Propane, SusyFluidStorageKeys.SUPERCRITICAL, 370)
 
