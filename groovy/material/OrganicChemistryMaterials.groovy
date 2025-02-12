@@ -871,7 +871,7 @@ public class OrganicChemistryMaterials {
 
         PolystyreneSulfonate = new Material.Builder(15146, SuSyUtility.susyId('polystyrene_sulfonate'))
                 .polymer(1)
-                .liquid(new FluidBuilder().temperature(274))
+                .liquid(new FluidBuilder().temperature(293))
                 .color(0x8f795e)
                 .build()
                 .setFormula('(CH2CHC6H4SO3H)', true)
@@ -1140,13 +1140,13 @@ public class OrganicChemistryMaterials {
         NHexadecanol.setFormula('C16H33OH', true)
 
         OleicAcid = new Material.Builder(15187, SuSyUtility.susyId('oleic_acid'))
-                .dust().liquid(new FluidBuilder().temperature(286))
+                .dust().liquid(new FluidBuilder().temperature(293))
                 .components(Carbon * 18, Hydrogen * 34, Oxygen * 2)
                 .color(0xb1d1ae)
                 .build()
 
         LinoleicAcid = new Material.Builder(15188, SuSyUtility.susyId('linoleic_acid'))
-                .dust().liquid(new FluidBuilder().temperature(268))
+                .dust().liquid(new FluidBuilder().temperature(293))
                 .components(Carbon * 18, Hydrogen * 32, Oxygen * 2)
                 .color(0xbfd1a3)
                 .build()
@@ -1515,7 +1515,7 @@ public class OrganicChemistryMaterials {
                 .build();
 
         ParaXylene = new Material.Builder(15243, SuSyUtility.susyId('para_xylene'))
-                .dust().liquid(new FluidBuilder().temperature(286))
+                .dust().liquid(new FluidBuilder().temperature(293))
                 .flags(NO_UNIFICATION)
                 .components(Carbon * 8, Hydrogen * 10)
                 .color(0x1a1611)
