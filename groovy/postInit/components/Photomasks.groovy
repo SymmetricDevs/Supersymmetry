@@ -6,7 +6,7 @@ FBR = recipemap('fixed_bed_reactor')
 REACTION_FURNACE = recipemap('reaction_furnace')
 ROASTER = recipemap('roaster')
 MIXER = recipemap('mixer')
-UV_LIGHT_BOX = recipemap('uv_light_box')
+LASER_ENGRAVER = recipemap('laser_engraver')
 
 // Acrylic Acid
 
@@ -148,7 +148,7 @@ crafting.addShaped("rubylith_ram", metaitem('stencil.ram'), [
     [null, null, null]
 ]);
 
-UV_LIGHT_BOX.recipeBuilder()
+LASER_ENGRAVER.recipeBuilder()
     .inputs(metaitem('stencil.ram'))
     .inputs(metaitem('mask.blank'))
     .outputs(metaitem('mask.ram'))
@@ -162,7 +162,7 @@ crafting.addShaped("rubylith_ic", metaitem('stencil.ic'), [
     [null, null, null]
 ]);
 
-UV_LIGHT_BOX.recipeBuilder()
+LASER_ENGRAVER.recipeBuilder()
     .inputs(metaitem('stencil.ic'))
     .inputs(metaitem('mask.blank'))
     .outputs(metaitem('mask.ic'))
@@ -176,7 +176,7 @@ crafting.addShaped("rubylith_pcb", metaitem('stencil.pcb'), [
     [null, null, null]
 ]);
 
-UV_LIGHT_BOX.recipeBuilder()
+LASER_ENGRAVER.recipeBuilder()
     .inputs(metaitem('stencil.pcb'))
     .inputs(metaitem('mask.blank'))
     .outputs(metaitem('mask.pcb'))
@@ -190,7 +190,7 @@ crafting.addShaped("rubylith_ulpic", metaitem('stencil.ulpic'), [
     [null, null, null]
 ]);
 
-UV_LIGHT_BOX.recipeBuilder()
+LASER_ENGRAVER.recipeBuilder()
     .inputs(metaitem('stencil.ulpic'))
     .inputs(metaitem('mask.blank'))
     .outputs(metaitem('mask.ulpic'))
@@ -204,7 +204,7 @@ crafting.addShaped("rubylith_lpic", metaitem('stencil.lpic'), [
     [null, null, null]
 ]);
 
-UV_LIGHT_BOX.recipeBuilder()
+LASER_ENGRAVER.recipeBuilder()
     .inputs(metaitem('stencil.lpic'))
     .inputs(metaitem('mask.blank'))
     .outputs(metaitem('mask.lpic'))
@@ -218,7 +218,7 @@ crafting.addShaped("rubylith_cpu", metaitem('stencil.cpu'), [
     [ore('craftingToolKnife'), null, null]
 ]);
 
-UV_LIGHT_BOX.recipeBuilder()
+LASER_ENGRAVER.recipeBuilder()
     .inputs(metaitem('stencil.cpu'))
     .inputs(metaitem('mask.blank'))
     .outputs(metaitem('mask.cpu'))
