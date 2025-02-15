@@ -21,19 +21,19 @@ import static material.SuSyMaterials.*
 
 //eventManager.listen(EventPriority.LOWEST)
 class ChangeFlags {
-	private static void setupSlurries(Material mat) {
-		def property = new FluidProperty()
-		property.enqueueRegistration(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293))
-		property.enqueueRegistration(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
+    private static void setupSlurries(Material mat) {
+        def property = new FluidProperty()
+        property.enqueueRegistration(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293))
+        property.enqueueRegistration(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
 
-		mat.setProperty(PropertyKey.FLUID, property)
-	}
-	
-	private static void setupFluidType(Material mat, FluidStorageKey key, int temp) {
+        mat.setProperty(PropertyKey.FLUID, property)
+    }
+    
+    private static void setupFluidType(Material mat, FluidStorageKey key, int temp) {
         if (mat.getProperty(PropertyKey.FLUID) == null) {
             def property = new FluidProperty();
-		    property.enqueueRegistration(key, new FluidBuilder().temperature(temp))
-		    mat.setProperty(PropertyKey.FLUID, property)
+            property.enqueueRegistration(key, new FluidBuilder().temperature(temp))
+            mat.setProperty(PropertyKey.FLUID, property)
         } else {
             def property = mat.getProperty(PropertyKey.FLUID)
             if (property.getQueuedBuilder(key) != null) {
@@ -42,17 +42,17 @@ class ChangeFlags {
                 property.enqueueRegistration(key, new FluidBuilder().temperature(temp))
             }
         }
-	}
-	private static void setupFluidType(Material mat, FluidStorageKey key) {
+    }
+    private static void setupFluidType(Material mat, FluidStorageKey key) {
         if (mat.getProperty(PropertyKey.FLUID) == null) {
             def property = new FluidProperty();
-		    property.enqueueRegistration(key, new FluidBuilder())
-		    mat.setProperty(PropertyKey.FLUID, property)
+            property.enqueueRegistration(key, new FluidBuilder())
+            mat.setProperty(PropertyKey.FLUID, property)
         } else {
             def property = mat.getProperty(PropertyKey.FLUID)
-		    property.enqueueRegistration(key, new FluidBuilder())
+            property.enqueueRegistration(key, new FluidBuilder())
         }
-	}
+    }
 
     public static void init() {
     //MaterialEvent event ->
@@ -199,11 +199,11 @@ class ChangeFlags {
         
         Borax.setProperty(PropertyKey.ORE, new OreProperty());
         Scheelite.addFlags("generate_sifted", "generate_flotated");
-		setupSlurries(Scheelite)
+        setupSlurries(Scheelite)
         Pyrochlore.addFlags("generate_sifted", "generate_flotated", "generate_concentrate");
-		setupSlurries(Pyrochlore)
+        setupSlurries(Pyrochlore)
         Molybdenite.addFlags("generate_flotated");
-		setupSlurries(Molybdenite)
+        setupSlurries(Molybdenite)
         Tantalite.addFlags("generate_sifted", "generate_flotated", "generate_concentrate");
         setupSlurries(Tantalite)
         setupSlurries(Galena)
