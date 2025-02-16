@@ -1237,6 +1237,7 @@ class SuSyMaterials {
         public static Material FoodGradeStainlessSteel;
         public static Material CobaltSulfate;
         public static Material CobaltSulfateSolution;
+        public static Material CobaltTwoThreeOxide;
         public static Material LithiumNitrate;
         public static Material LithiumNitrateSolution;
         public static Material ZincCarbonate;

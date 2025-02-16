@@ -3591,7 +3591,11 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // 8638: Co3O4
+        CobaltTwoThreeOxide = new Material.Builder(8638, SuSyUtility.susyId('cobalt_two_three_oxide'))
+                .dust()
+                .components(Cobalt * 3, Oxygen * 4)
+                .color(0x242424)
+                .build()
 
         LithiumNitrate = new Material.Builder(8639, SuSyUtility.susyId('lithium_nitrate'))
                 .dust()

@@ -89,9 +89,21 @@ cobalt_matte_recipes.forEach { recipe ->
 // CoO
 
 ROASTER.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('dustCobalt'))
         .fluidInputs(fluid('oxygen') * 1000)
         .outputs(metaitem('dustCobaltOxide') * 2)
+        .duration(120)
+        .EUt(30)
+        .buildAndRegister()
+
+// Co3O4
+
+ROASTER.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(ore('dustCobalt') * 3)
+        .fluidInputs(fluid('oxygen') * 4000)
+        .outputs(metaitem('dustCobaltTwoThreeOxide') * 7)
         .duration(120)
         .EUt(30)
         .buildAndRegister()
