@@ -367,7 +367,7 @@ public class OreMaterials{
                 .build();
 
         Zircon = new Material.Builder(7047, SuSyUtility.susyId('zircon')) // TODO: remove liquid for 2.8.6
-                .gem().ore().liquid().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
+                .gem().ore().liquid(new FluidBuilder().temperature(2990)).fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
                 .iconSet(SHINY)
                 .flags(GENERATE_SIFTED, GENERATE_FLOTATED, GENERATE_CONCENTRATE)
                 .color(0xf05c51)

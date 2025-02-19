@@ -101,6 +101,11 @@ class ChangeFlags {
         setupFluidType(Dichlorobenzene, FluidStorageKeys.LIQUID, 256)
         setupFluidType(SiliconeRubber, FluidStorageKeys.LIQUID, 400)
         setupFluidType(StyreneButadieneRubber, FluidStorageKeys.LIQUID, 450)
+        setupFluidType(HighPurityGermanium, FluidStorageKeys.LIQUID, 1211)
+        setupFluidType(HighPurityArsenic, FluidStorageKeys.LIQUID, 1090)
+        setupFluidType(HighPuritySelenium, FluidStorageKeys.LIQUID, 494)
+        setupFluidType(BlackSteel, FluidStorageKeys.LIQUID, 1728)
+        setupFluidType(Polytetrafluoroethylene, FluidStorageKeys.LIQUID, 293)
 
         setupFluidType(CarbonDioxide, SusyFluidStorageKeys.SUPERCRITICAL, 304)
         setupFluidType(Propane, SusyFluidStorageKeys.SUPERCRITICAL, 370)
