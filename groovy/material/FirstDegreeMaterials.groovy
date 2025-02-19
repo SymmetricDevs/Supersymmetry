@@ -662,7 +662,7 @@ public class FirstDegreeMaterials {
                 .build()
 
         EnargiteSulfideLeachSolution = new Material.Builder(8187, SuSyUtility.susyId('enargite_sulfide_leach_solution'))
-                .liquid().liquid(new FluidBuilder().temperature(368))
+                .liquid(new FluidBuilder().temperature(368))
                 .components(Sodium * 3, Arsenic, Sulfur * 4, Water)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
@@ -670,7 +670,7 @@ public class FirstDegreeMaterials {
                 .setFormula("(Na3AsS4)(H2O)", true)
 
         CobaltiteLeachSolution = new Material.Builder(8188, SuSyUtility.susyId('cobaltite_leach_solution'))
-                .liquid().liquid(new FluidBuilder().temperature(343))
+                .liquid(new FluidBuilder().temperature(343))
                 .components(Cobalt * 3, Nitrogen * 6, Oxygen * 30, Hydrogen * 9, Arsenic * 3, Water * 3)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
