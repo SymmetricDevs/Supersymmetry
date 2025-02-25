@@ -1551,7 +1551,7 @@ public class FirstDegreeMaterials {
         ChromiumIIIHydroxide.setFormula("Cr(OH)3", true)
 
         DisassociatedAmmoniumFluoride = new Material.Builder(8325, SuSyUtility.susyId('disassociated_ammonium_fluoride'))
-                .gas(new FluidBuilder().temperature(1200))
+                .gas(new FluidBuilder().temperature(373))
                 
                 .components(Ammonia, HydrogenFluoride)
                 .colorAverage()
