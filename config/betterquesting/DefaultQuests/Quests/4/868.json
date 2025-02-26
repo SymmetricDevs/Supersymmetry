@@ -32,7 +32,14 @@
     },
     "1:10": {
       "index:3": 1,
-      "taskID:8": "bq_standard:checkbox"
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 5003,
+          "id:8": "gregtech:meta_item_2"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }

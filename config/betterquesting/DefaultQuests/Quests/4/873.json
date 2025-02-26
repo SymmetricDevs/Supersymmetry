@@ -1,6 +1,11 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    1
+  ],
   "preRequisites:11": [
-    870
+    870,
+    823
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -11,9 +16,25 @@
           "FluidName:8": "ortho_para_xylene_mixture"
         }
       },
-      "name:8": "susy.quest.db.873.title"
+      "name:8": "susy.quest.db.873.title",
+      "questlogic:8": "OR",
+      "tasklogic:8": "OR"
     }
   },
   "questID:3": 873,
-  "tasks:9": {}
+  "tasks:9": {
+    "0:10": {
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "para_xylene"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    },
+    "1:10": {
+      "index:3": 1,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
 }

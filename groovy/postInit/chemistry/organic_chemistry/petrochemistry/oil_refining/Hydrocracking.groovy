@@ -9,7 +9,7 @@ crackables.each { _, crackable ->
         CRACKER.recipeBuilder()
             .notConsumable(metaitem('hydrocracking_catalyst'))
             .fluidInputs(crackable.get(4000))
-            .fluidInputs(fluid('hot_hp_hydrogen') * (4 * crackable.hydrogen_consumed))
+            .fluidInputs(fluid('hydrogen') * (4 * crackable.hydrogen_consumed))
             .fluidOutputs(crackable.getHydro(4000))
             .fluidOutputs(fluid('fuel_gas') * (4 * crackable.gas_produced))
             .duration(200)

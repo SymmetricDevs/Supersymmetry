@@ -1,7 +1,13 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    0,
+    1
+  ],
   "preRequisites:11": [
     865,
-    873
+    864,
+    443
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -16,11 +22,22 @@
   "questID:3": 872,
   "tasks:9": {
     "0:10": {
+      "entryLogic:8": "OR",
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
           "Damage:2": 15289,
           "id:8": "gregtech:meta_dust"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 15289,
+          "id:8": "gregtech:meta_foil"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 302,
+          "id:8": "gregtech:meta_item_2"
         }
       },
       "taskID:8": "bq_standard:retrieval"

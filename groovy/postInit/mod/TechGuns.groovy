@@ -1029,15 +1029,20 @@ crafting.addShaped("iron_barrel", item('techguns:itemshared:38'), [
 		[ore('craftingToolScrewdriver'), ore('stickIron'), ore('craftingToolHardHammer')]
 ]);
 
+crafting.addShaped("steel_barrel", metaitem('gun.barrel.steel'), [
+		[null, ore('craftingToolFile'), null],
+		[ore('craftingToolScrewdriver'), ore('stickSteel'), ore('craftingToolHardHammer')]
+]);
+
+crafting.addShaped("hardened_barrel", item('techguns:itemshared:39'), [
+		[ore('foilSteel'), ore('craftingToolFile'), ore('foilSteel')],
+		[ore('craftingToolScrewdriver'), item('techguns:itemshared:38'), ore('craftingToolHardHammer')]
+]);
+
 crafting.addShaped("heavy_cloth", item('techguns:itemshared:60')*6, [
 		[ore('platePolycaprolactam'), ore('platePolycaprolactam'), ore('platePolycaprolactam')],
 		[ore('wireFineSteel'), ore('wireFineSteel'), ore('wireFineSteel')],
 		[ore('platePolycaprolactam'), ore('platePolycaprolactam'), ore('platePolycaprolactam')]
-]);
-
-crafting.addShaped("steel_barrel", item('techguns:itemshared:39'), [
-		[null, ore('craftingToolFile'), null],
-		[ore('craftingToolScrewdriver'), ore('stickLongSteel'), ore('craftingToolHardHammer')]
 ]);
 
 crafting.addShaped("techguns_iron_receiver", item('techguns:itemshared:33'), [

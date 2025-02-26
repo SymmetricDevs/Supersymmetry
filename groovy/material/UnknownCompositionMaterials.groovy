@@ -1085,7 +1085,7 @@ public class UnknownCompositionMaterials {
                 .color(0x696840)
                 .build();
 
-        UraniumVanadiumExtractionMixture = new Material.Builder(4210, SuSyUtility.susyId('uranium_vanadium_extraction_mixture'))
+        UraniumExtractionMixture = new Material.Builder(4210, SuSyUtility.susyId('uranium_extraction_mixture'))
                 .liquid()
                 .color(0xd4d03f)
                 .build();
@@ -1181,7 +1181,22 @@ public class UnknownCompositionMaterials {
                 .flags(GENERATE_CATALYST_BED)
                 .build();
 
-        //FREE IDs: 4228-4231
+        CrudeCarnotiteLeach = new Material.Builder(4228, SuSyUtility.susyId('crude_carnotite_leach'))
+                .liquid()
+                .color(0x697043)
+                .build();
+
+        CrudePitchblendeLeach = new Material.Builder(4229, SuSyUtility.susyId('crude_pitchblende_leach'))
+                .liquid()
+                .color(0x1d1f15)
+                .build();
+
+        PitchblendeLeach = new Material.Builder(4230, SuSyUtility.susyId('pitchblende_leach'))
+                .liquid()
+                .color(0x2a2e1c)
+                .build();
+
+        //FREE ID: 4231
 
         TitanylSulfateSolution = new Material.Builder(4232, SuSyUtility.susyId('titanyl_sulfate_solution'))
                 .liquid()
@@ -2003,6 +2018,195 @@ public class UnknownCompositionMaterials {
                 .liquid()
                 .color(0xc8cca1)
                 .build();
+      
+
+        //FREE ID: 4427
+
+        OxidizedPGMLeach = new Material.Builder(4428, SuSyUtility.susyId("oxidized_pgm_leach"))
+                .fluid()
+                .color(0x1b261d)
+                .build();
+
+        ImpureNickelSulfateSolution = new Material.Builder(4429, SuSyUtility.susyId("impure_nickel_sulfate_solution"))
+                .fluid()
+                .color(0x1b4a1f)
+                .build();
+
+        CopperRichPGMSolids = new Material.Builder(4430, SuSyUtility.susyId("copper_rich_pgm_solids"))
+                .dust()
+                .color(0x374529)
+                .build();
+
+        PGMCopperLeachSlurry = new Material.Builder(4431, SuSyUtility.susyId("pgm_copper_leach_slurry"))
+                .fluid()
+                .color(0x334520)
+                .build();
+
+        PGMFreeCopperLeach = new Material.Builder(4432, SuSyUtility.susyId("pgm_free_copper_leach"))
+                .fluid()
+                .color(0xb35f1b)
+                .build();
+
+        PGMConcentrate = new Material.Builder(4433, SuSyUtility.susyId("pgm_concentrate"))
+                .dust()
+                .color(0xe60e0e)
+                .iconSet(SHINY)
+                .build();
+
+        SulfidicCopperLeach = new Material.Builder(4434, SuSyUtility.susyId("sulfidic_copper_leach"))
+                .fluid()
+                .color(0xb3562b)
+                .build();
+
+        CopperSelenideTelluride = new Material.Builder(4435, SuSyUtility.susyId("copper_selenide_telluride"))
+                .dust()
+                .color(0xafc474)
+                .build();
+
+        ChalcogenFreeCopperLeach = new Material.Builder(4436, SuSyUtility.susyId("chalcogen_free_copper_leach"))
+                .fluid()
+                .color(0xf57242)
+                .build();
+
+        MixedChalcogenDioxide = new Material.Builder(4437, SuSyUtility.susyId("mixed_chalcogen_dioxide"))
+                .dust()
+                .color(0x657d85)
+                .build();
+
+        NickelCobaltSulfate = new Material.Builder(4438, SuSyUtility.susyId("nickel_cobalt_sulfate"))
+                .dust()
+                .color(0xe60e0e)
+                .components(Nickel * 1, Cobalt * 1, Sulfur, Oxygen * 4)
+                .build();
+
+        NickelCobaltSulfateSolution = new Material.Builder(4439, SuSyUtility.susyId("nickel_cobalt_sulfate_solution"))
+                .fluid()
+                .color(0x48852c)
+                .build();
+
+        //FREE ID: 4440-4441
+
+        CobaltExtract = new Material.Builder(4442, SuSyUtility.susyId("cobalt_extract"))
+                .fluid()
+                .color(0x5e8e8e)
+                .build();
+
+        CrudeTrimethylpentylphosphinicAcid = new Material.Builder(4443, SuSyUtility.susyId("crude_trimethylpentylphosphinic_acid"))
+                .fluid()
+                .color(0xc4a335)
+                .build();
+
+        AlkalineTrimethylpentylphosphinicAcid = new Material.Builder(4444, SuSyUtility.susyId("alkaline_trimethylpentylphosphinic_acid"))
+                .fluid()
+                .color(0x360e0e)
+                .build();
+
+        AcidifiedTrimethylpentylphosphinicAcid = new Material.Builder(4445, SuSyUtility.susyId("acidified_trimethylpentylphosphinic_acid"))
+                .fluid()
+                .color(0x663e1e)
+                .build();
+
+        DehydratedTrimethylpentylphosphinicAcid = new Material.Builder(4446, SuSyUtility.susyId("dehydrated_trimethylpentylphosphinic_acid"))
+                .fluid()
+                .color(0x663e00)
+                .build();
+
+        OsmiumRutheniumFreePGMSolution = new Material.Builder(4447, SuSyUtility.susyId("os_ru_free_pgm_solution"))
+                .fluid()
+                .color(0xe0dcb6)
+                .build();
+
+        SilverFreePGMSolution = new Material.Builder(4448, SuSyUtility.susyId("silver_free_pgm_solution"))
+                .fluid()
+                .color(0xa3a18b)
+                .build();
+
+        GoldFreePGMSolution = new Material.Builder(4449, SuSyUtility.susyId("gold_free_pgm_solution"))
+                .fluid()
+                .color(0x82806b)
+                .build();
+
+        GoldExtract = new Material.Builder(4450, SuSyUtility.susyId("gold_extract"))
+                .fluid()
+                .color(0xe3d76b)
+                .build();
+
+        ScrubbedGoldExtract = new Material.Builder(4451, SuSyUtility.susyId("scrubbed_gold_extract"))
+                .fluid()
+                .color(0xf5e65f)
+                .build();
+
+        PlatinumFreePGMSolution = new Material.Builder(4452, SuSyUtility.susyId("platinum_free_pgm_solution"))
+                .fluid()
+                .color(0xbfb984)
+                .build();
+
+        ChlorinatedRhodiumIridiumSolution = new Material.Builder(4453, SuSyUtility.susyId("chlorinated_rh_ir_solution"))
+                .fluid()
+                .color(0xa39bb8)
+                .build();
+
+        ChlorateTreatedPGMSolution = new Material.Builder(4454, SuSyUtility.susyId("chlorate_treated_pgm_solution"))
+                .fluid()
+                .color(0xccc9a9)
+                .build();
+
+        IridiumExtract = new Material.Builder(4455, SuSyUtility.susyId("iridium_extract"))
+                .fluid()
+                .color(0x8e8e8e)
+                .build();
+
+        // FREE ID: 4456
+
+        PalladiumExtract = new Material.Builder(4457, SuSyUtility.susyId("palladium_extract"))
+                .fluid()
+                .color(0xaba07e)
+                .build();
+
+        DiisobutyleneMixture = new Material.Builder(4458, SuSyUtility.susyId('diisobutylene_mixture'))
+                .fluid()
+                .color(0x5d503e)
+                .build();
+
+        GreenMatte = new Material.Builder(4459, SuSyUtility.susyId("green_matte"))
+                .dust()
+                .color(0xa18922)
+                .iconSet(DULL)
+                .build();
+
+        WhiteMatte = new Material.Builder(4460, SuSyUtility.susyId("white_matte"))
+                .dust()
+                .color(0xd1bf71)
+                .iconSet(DULL)
+                .build();
+
+        // FREE IDs: 4461-4469
+
+        RhodiumIridiumSolution = new Material.Builder(4470, SuSyUtility.susyId("rh_ir_solution"))
+                .fluid()
+                .color(0x9177a1)
+                .build();
+
+        RhodiumIridiumExtractionMixture = new Material.Builder(4471, SuSyUtility.susyId("rh_ir_extraction_mixture"))
+                .fluid()
+                .color(0xb3abb8)
+                .build();
+
+        OsmiumRutheniumTetroxideMixture = new Material.Builder(4472, SuSyUtility.susyId("os_ru_tetroxide_mixture"))
+                .gas()
+                .color(0x8e8e8e)
+                .build();
+
+        OsmiumRutheniumSolution = new Material.Builder(4473, SuSyUtility.susyId("os_ru_solution"))
+                .fluid()
+                .color(0x7e8e8e)
+                .build();
+
+        ReducedGoldFreePGMSolution = new Material.Builder(4474, SuSyUtility.susyId("reduced_gold_free_pgm_solution"))
+                .fluid()
+                .color(0x82806b)
+                .build();
+
 
         // Skipped IDs : 4426-4499 for gtl & plat chain
 

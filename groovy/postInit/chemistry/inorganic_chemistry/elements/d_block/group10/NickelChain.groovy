@@ -13,8 +13,59 @@ MIXER = recipemap('mixer')
 // Garnierite Dust * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustPentlandite')], [fluid('oxygen') * 3000])
 
+// Beneficiation
+
+//MODERN SEPARATION PROCESSES
+GRAVITY_SEPARATOR.recipeBuilder() 
+        .inputs(ore('dustPentlandite'))
+        .outputs(metaitem('dustSiftedPentlandite'))
+        .chancedOutput(metaitem('dustUltramaficTailings'), 2500, 0)
+        .EUt(Globals.voltAmps[1])
+        .duration(40)
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustSiftedPentlandite') * 8)
+        .fluidInputs(fluid('distilled_water') * 2000)
+        .fluidOutputs(fluid('impure_pentlandite_slurry') * 2000)
+        .EUt(Globals.voltAmps[3])
+        .duration(80)
+        .buildAndRegister()
+
+FF.recipeBuilder()
+        .fluidInputs(fluid('impure_pentlandite_slurry') * 2000)
+        .notConsumable(ore('dustSodiumIsobutylXanthate'))
+        .notConsumable(fluid('copper_sulfate_solution') * 100)
+        .notConsumable(fluid('cresol') * 100)
+        .fluidOutputs(fluid('pentlandite_slurry') * 1000)
+        .fluidOutputs(fluid('ultramafic_tailing_slurry') * 1000)
+        .EUt(Globals.voltAmps[3])
+        .duration(80)
+        .buildAndRegister()
+
+CLARIFIER.recipeBuilder()
+        .fluidInputs(fluid('pentlandite_slurry') * 1000)
+        .outputs(metaitem('dustFlotatedPentlandite') * 16)
+        .fluidOutputs(fluid('wastewater') * 1000)
+        .duration(20)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
+// Furnace conversion
+
 EBF.recipeBuilder()
         .inputs(ore('dustPentlandite'))
+        .fluidInputs(fluid('oxygen') * 3000)
+        .outputs(metaitem('dustGarnierite'))
+        .fluidOutputs(fluid('sulfur_dioxide') * 1000)
+        .EUt(30)
+        .blastFurnaceTemp(1728)
+        .duration(40)
+        .buildAndRegister()
+
+EBF.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(ore('dustFlotatedPentlandite'))
         .fluidInputs(fluid('oxygen') * 3000)
         .outputs(metaitem('dustGarnierite'))
         .fluidOutputs(fluid('sulfur_dioxide') * 1000)

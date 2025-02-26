@@ -8,15 +8,15 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.1766408250.desc",
+      "desc:8": "susy.quest.db.887.desc",
       "icon:10": {
         "id:8": "betterquesting:placeholder"
       },
-      "name:8": "susy.quest.db.1766408250.title",
+      "name:8": "susy.quest.db.887.title",
       "questlogic:8": "OR"
     }
   },
-  "questID:3": 1766408250,
+  "questID:3": 887,
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

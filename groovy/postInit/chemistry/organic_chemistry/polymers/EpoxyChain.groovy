@@ -48,7 +48,7 @@ curingAgents = [
 ION_EXCHANGE.recipeBuilder()
     .fluidInputs(fluid('phenol') * 2000)
     .fluidInputs(fluid('acetone') * 1000)
-    .notConsumable(metaitem('beads.ag_fifty_w_x_eight'))
+    .notConsumable(metaitem('beads.strong_acidic_cation_exchange'))
     .fluidOutputs(fluid('water') * 1000)
     .outputs(metaitem('dustBisphenolA'))
     .EUt(480)

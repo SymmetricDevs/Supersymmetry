@@ -643,5 +643,11 @@ public class ThirdDegreeMaterials {
                 .components(LithiumHydroxide * 1, Water * 1)
                 .colorAverage()
                 .build();
+
+        IsopropylamineSolution = new Material.Builder(24103, SuSyUtility.susyId('isopropylamine_solution'))
+                .liquid()
+                .components(Isopropylamine, Water)
+                .colorAverage()
+                .build();
     }
 }

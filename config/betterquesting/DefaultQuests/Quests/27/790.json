@@ -9,7 +9,7 @@
       "icon:10": {
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
-          "FluidName:8": "syngas"
+          "FluidName:8": "hydrogen_rich_syngas"
         }
       },
       "name:8": "susy.quest.db.790.title",
@@ -22,16 +22,23 @@
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,
-          "FluidName:8": "betterquesting.placeholder",
-          "Tag:10": {
-            "orig_id:8": "syngas"
-          }
+          "FluidName:8": "hydrogen_rich_syngas"
         }
       },
       "taskID:8": "bq_standard:fluid"
     },
     "1:10": {
-      "index:3": 1,
+      "index:3": 2,
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "monoxide_rich_syngas"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    },
+    "2:10": {
+      "index:3": 3,
       "taskID:8": "bq_standard:checkbox"
     }
   }

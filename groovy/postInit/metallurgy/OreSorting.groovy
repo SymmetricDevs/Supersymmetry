@@ -202,7 +202,6 @@ def sedimentary_tier_4 = [
     'gregtech:ore_barite_0' : 2500,
     //T4
     'gregtech:ore_carnotite_0' : 100
-    //'gregtech:ore_uraninite_0' : 750,
 ];
 
 def magmatic_hydrothermal_tier_1 = [
@@ -261,7 +260,7 @@ def magmatic_hydrothermal_tier_4 = [
     'gregtech:ore_wolframite_0' : 1000,
     //T4
     //'susy:resource_block:7' : 10000,
-    'gregtech:ore_uraninite_0' : 500
+    'gregtech:ore_pitchblende_0' : 500
 ];
 
 def hydrothermal_tier_1 = [
@@ -342,7 +341,8 @@ def hydrothermal_tier_4 = [
     'gregtech:ore_vanadinite_0' : 5000,
     //T3
     'gregtech:ore_witherite_0' : 2500,
-    'gregtech:ore_bismuthinite_0' : 7500
+    'gregtech:ore_bismuthinite_0' : 7500,
+    'gregtech:ore_pitchblende_0' : 1000
     //'gregtech:ore_strontianite_0' : 10000 TODO: Fix #971
     //T4
     //'susy:resource_block:9' : 10000,

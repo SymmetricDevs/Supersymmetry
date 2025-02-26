@@ -336,9 +336,12 @@ class SuSyMaterials {
         public static Material TitaniaSlag;
         public static Material TitanylSulfateSolution;
         public static Material RutileSlurry;
+        public static Material CrudeCarnotiteLeach;
         public static Material CarnotiteLeach;
         public static Material ReducedCarnotiteLeach;
-        public static Material UraniumVanadiumExtractionMixture;
+        public static Material CrudePitchblendeLeach;
+        public static Material PitchblendeLeach;
+        public static Material UraniumExtractionMixture;
         public static Material UraniumVanadiumExtract;
         public static Material UraniumExtract;
         public static Material AcidicVanadylSolution;
@@ -527,10 +530,49 @@ class SuSyMaterials {
         public static Material SourWater;
         public static Material TypeYZeoliteSolution;
         public static Material TypeYZeolite;
+        public static Material GreenMatte;
+        public static Material WhiteMatte;
+        public static Material OxidizedPGMLeach;
+        public static Material ImpureNickelSulfateSolution;
+        public static Material CopperRichPGMSolids;
+        public static Material PGMCopperLeachSlurry;
+        public static Material PGMFreeCopperLeach;
+        public static Material PGMConcentrate;
+        public static Material SulfidicCopperLeach;
+        public static Material ChalcogenFreeCopperLeach; 
+        public static Material MixedChalcogenDioxide;
+        public static Material CopperSelenideTelluride;
+        public static Material NickelExtractionMixture;
+        public static Material NickelCobaltSulfate;
+        public static Material NickelCobaltSulfateSolution;
+        public static Material CobaltExtractionMixture;
+        public static Material CobaltExtract;
+        public static Material CrudeTrimethylpentylphosphinicAcid;
+        public static Material AlkalineTrimethylpentylphosphinicAcid;
+        public static Material AcidifiedTrimethylpentylphosphinicAcid;
+        public static Material DehydratedTrimethylpentylphosphinicAcid;
+        public static Material OsmiumRutheniumFreePGMSolution;
+        public static Material SilverFreePGMSolution;
+        public static Material GoldFreePGMSolution;
+        public static Material ReducedGoldFreePGMSolution;
+        public static Material GoldExtract;
+        public static Material PlatinumFreePGMSolution;
+        public static Material PalladiumFreePGMSolution;
+        public static Material ChlorinatedPGMSolution;
+        public static Material ChlorateTreatedPGMSolution;
+        public static Material ScrubbedGoldExtract;
+        public static Material ChlorinatedPGMConcentrate;
+        public static Material PalladiumExtract;
+        public static Material RhodiumIridiumSolution;
+        public static Material RhodiumIridiumExtractionMixture;
         public static Material CobaltMatte;
         public static Material OrthoCresylicAcidMixture;
         public static Material CresolNovolacsOligomer;
         public static Material EpoxyCresolNovolacs;
+        public static Material OsmiumRutheniumTetroxideMixture;
+        public static Material OsmiumRutheniumSolution;
+        public static Material ChlorinatedRhodiumIridiumSolution;
+        public static Material IridiumExtract;
         public static Material DeacidifiedLipid;
         public static Material GlycerolMethanolSolution;
         public static Material GlycerolEthanolSolution;
@@ -551,7 +593,9 @@ class SuSyMaterials {
         public static Material DistilledNParaffin;
         public static Material IsomerizedParaffin;
         public static Material SodiumHydroxideMethanolSolution;
-        // Petrochem Materials   
+        public static Material DiisobutyleneMixture;
+
+        // Petrochem Materials
 
         public static Material DilutedOil;
         public static Material DesaltedOil;
@@ -1219,6 +1263,8 @@ class SuSyMaterials {
         public static Material PotassiumPermanganate;
         public static Material LeadFreeSolder;
         public static Material CryogenicSolder;
+        public static Material SeleniumDioxide;
+        public static Material CobaltSulfateSolution; 
         public static Material Kovar;
         public static Material ImpureLithiumCarbonate;
         public static Material WashedGraphene;
@@ -1236,11 +1282,15 @@ class SuSyMaterials {
         public static Material HSLAEightyX;
         public static Material FoodGradeStainlessSteel;
         public static Material CobaltSulfate;
-        public static Material CobaltSulfateSolution;
         public static Material LithiumNitrate;
         public static Material LithiumNitrateSolution;
         public static Material ZincCarbonate;
         public static Material CopperCarbonate;
+        public static Material AmmoniumHexachlororuthenate;
+        public static Material AmmoniumHexachlororhodate;
+        public static Material AmmoniumHexachloroiridate;
+        public static Material PotassiumOsmate;
+        public static Material SodiumHydrosulfide;
 
         // HP Materials
 
@@ -1434,6 +1484,13 @@ class SuSyMaterials {
         public static Material LithiumCarbonateSolution;
         public static Material AcidicArgonHydrogenMixture;
         public static Material AmmoniacalArgonHydrogenMixture;
+        public static Material PotassiumPersulfateSolution;
+        public static Material HexachloroiridicAcidSolution;
+        public static Material HexachlororhodicAcidSolution;
+        public static Material HexachlororuthenicAcidSolution;
+        public static Material TetraamminepalladiumDichlorideSolution;
+        public static Material IronIIChlorideSolution;
+        public static Material SodiumHydrosulfideSolution;
 
         // Organic Chemistry Materials
 
@@ -1554,7 +1611,7 @@ class SuSyMaterials {
         public static Material Durene;
         public static Material PyromelliticDianhydride;
         public static Material FourFourOxydianiline;
-        public static Material FourFourOxydianilineSlurry
+        public static Material FourFourOxydianilineSlurry;
         public static Material KaptonK;
         public static Material KaptonE;
         public static Material BiphenylTetracarboxylicAcidDianhydride;
@@ -1849,8 +1906,14 @@ class SuSyMaterials {
         public static Material CompoundedStyreneButadieneRubber;
         public static Material TwoSixXylenol;
         public static Material TwoFourFiveXylenolMixture;
+        public static Material TrimethylpentylphosphinicAcid;
+        public static Material Diisobutylene;
+        //public static Material Triisobutylene;
+        public static Material SodiumHypophosphiteSolution;
+        public static Material OneHexanethiol;
+        public static Material OneBromohexane;
+        public static Material DiNHexylsulfide;
         public static Material Isopropylamine;
-        public static Material IsopropylamineSolution;
 
         // Third Degree Materials
 
@@ -1957,6 +2020,7 @@ class SuSyMaterials {
         public static Material FormicAcidWaterAzeotrope;
         public static Material LithiumHydroxideMotherLiquor;
         public static Material LithiumHydroxideMonohydrate;
+        public static Material IsopropylamineSolution;
 
         // Thermodynamics Materials
 

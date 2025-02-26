@@ -2618,11 +2618,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        IsopropylamineSolution = new Material.Builder(15415, SuSyUtility.susyId('isopropylamine_solution'))
-                .liquid()
-                .components(Isopropylamine, Water)
-                .colorAverage()
-                .build();
+        //FREE ID: 15415
 
         ImpureSodiumBorohydride = new Material.Builder(15416, SuSyUtility.susyId('impure_sodium_borohydride'))
                 .dust()
@@ -2635,5 +2631,56 @@ public class OrganicChemistryMaterials {
                 .components(SodiumBorohydride, Isopropylamine)
                 .colorAverage()
                 .build();
+
+        TrimethylpentylphosphinicAcid = new Material.Builder(15418, SuSyUtility.susyId('trimethylpentylphosphinic_acid'))
+                .fluid()
+                .components(Carbon * 16, Hydrogen * 35, Oxygen * 2, Phosphorus * 1)
+                .colorAverage()
+                .build();
+
+        Diisobutylene = new Material.Builder(15419, SuSyUtility.susyId('diisobutylene'))
+                .fluid()
+                .components(Carbon * 8, Hydrogen * 16)
+                .color(0xa79781)
+                .build();
+
+        SodiumHypophosphiteSolution = new Material.Builder(15420, SuSyUtility.susyId('sodium_hypophosphite_solution'))
+                .fluid()
+                .components(SodiumHypophosphite * 1, AceticAcid * 1)
+                .colorAverage()
+                .build();
+
+        OneHexanethiol = new Material.Builder(15421, SuSyUtility.susyId('one_hexanethiol'))
+                .fluid()
+                .components(Carbon * 6, Hydrogen * 14, Sulfur * 1)
+                .colorAverage()
+                .build();
+
+        OneBromohexane = new Material.Builder(15422, SuSyUtility.susyId('one_bromohexane'))
+                .fluid()
+                .components(Carbon * 6, Hydrogen * 13, Bromine * 1)
+                .colorAverage()
+                .build();
+        
+        DiNHexylsulfide = new Material.Builder(15423, SuSyUtility.susyId('di_n_hexyl_sulfide'))
+                .fluid()
+                .components(Carbon * 12, Hydrogen * 26, Sulfur * 1)
+                .colorAverage()
+                .build();
+
+        /*Triisobutylene = new Material.Builder(15424, SuSyUtility.susyId('triisobutylene'))
+                .fluid()
+                .components(Carbon * 12, Hydrogen * 24)
+                .color(0xb9ac9a)
+                .build();*/
+
+        CobaltExtractionMixture = new Material.Builder(15425, SuSyUtility.susyId("cobalt_extraction_mixture"))
+                .fluid()
+                .components(TrimethylpentylphosphinicAcid * 1, OrthoXylene * 1)
+                .colorAverage()
+                .build();
+
+        CobaltExtractionMixture.setFormula("(C8H10)(C16H35O2P)", true)
+
     }
 }

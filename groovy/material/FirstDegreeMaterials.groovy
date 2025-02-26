@@ -57,7 +57,7 @@ public class FirstDegreeMaterials {
         HighPurityCarbon = generatePurifiedElement(Carbon, 8003, false, false)
         HighPuritySodium = generatePurifiedElement(Sodium, 8004, false, false)
         HighPurityMagnesium = generatePurifiedElement(Magnesium, 8005, false, false)
-        HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, false, false)
+        HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, false, true)
         HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, false)
         HighPurityPhosphorus = generatePurifiedElement(Phosphorus, 8008, true, true)
         HighPuritySulfur = generatePurifiedElement(Sulfur, 8009, false, false)
@@ -736,7 +736,7 @@ public class FirstDegreeMaterials {
         HexachloroiridicAcid = new Material.Builder(8197, SuSyUtility.susyId('hexachloroiridic_acid'))
                 .dust()
                 .iconSet(SHINY)
-                .components(Chlorine * 6, Hydrogen * 2, Iridium)
+                .components(Hydrogen * 2, Iridium, Chlorine * 6)
                 .colorAverage()
                 .build()
 
@@ -1453,7 +1453,7 @@ public class FirstDegreeMaterials {
         IronSulfate = new Material.Builder(8310, SuSyUtility.susyId('iron_sulfate'))
                 .dust()
                 .components(Iron, Sulfur, Oxygen * 4)
-                .colorAverage()
+                .color(0x42f578)
                 .build();
 
         RoastedPetalite = new Material.Builder(8311, SuSyUtility.susyId('roasted_petalite'))
@@ -1776,6 +1776,7 @@ public class FirstDegreeMaterials {
                 .components(Antimony * 2, Oxygen * 5)
                 .colorAverage()
                 .build();
+
 
         ImpureCobaltOxide = new Material.Builder(8360, SuSyUtility.susyId('impure_cobalt_oxide'))
                 .dust()
@@ -2689,11 +2690,23 @@ public class FirstDegreeMaterials {
                 .color(0x887866)
                 .build();
 
-        //FREE IDs: 8496-8497
+        SeleniumDioxide = new Material.Builder(8496, SuSyUtility.susyId("selenium_dioxide"))
+                .dust().gas(new FluidBuilder().temperature(623))
+                .components(Selenium, Oxygen * 2)
+                .colorAverage()
+                .build();
+
+        CobaltSulfateSolution = new Material.Builder(8497, SuSyUtility.susyId("cobalt_sulfate_solution"))
+                .fluid()
+                .components(Cobalt, Sulfur, Oxygen * 4)
+                .colorAverage()
+                .build();
+
+        CobaltSulfateSolution.setFormula("(CoSO4)(H2O)", true)
 
         NickelSulfate = new Material.Builder(8498, SuSyUtility.susyId('nickel_sulfate'))
                 .dust()
-                .components(Nickel * 1, Sulfur * 1, Oxygen * 4)
+                .components(Nickel, Sulfur, Oxygen * 4)
                 .color(0xcad3a7)
                 .build()
 
@@ -2790,7 +2803,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE IDs: 8513-8516
+        //FREE IDs: 8514-8516
 
         MolybdenumTrisulfide = new Material.Builder(8517, SuSyUtility.susyId('molybdenum_trisulfide'))
                 .dust()
@@ -3585,12 +3598,6 @@ public class FirstDegreeMaterials {
                 .color(0xbb7694)
                 .build()
 
-        CobaltSulfateSolution = new Material.Builder(8637, SuSyUtility.susyId('cobalt_sulfate_solution'))
-                .liquid()
-                .components(CobaltSulfate * 1, Water * 1)
-                .colorAverage()
-                .build()
-
         // 8638: Co3O4
 
         LithiumNitrate = new Material.Builder(8639, SuSyUtility.susyId('lithium_nitrate'))
@@ -3614,6 +3621,44 @@ public class FirstDegreeMaterials {
         CopperCarbonate = new Material.Builder(8642, SuSyUtility.susyId("copper_carbonate"))
                 .dust()
                 .components(Copper, Carbon, Oxygen * 3)
+                .colorAverage()
+                .build();
+
+        AmmoniumHexachlororuthenate = new Material.Builder(8643, SuSyUtility.susyId('ammonium_hexachlororuthenate'))
+                .dust()
+                .components(Nitrogen * 2, Hydrogen * 8, Ruthenium * 1, Chlorine * 6, Water * 1)
+                .colorAverage()
+                .build();
+
+        AmmoniumHexachlororuthenate.setFormula('(NH4)2[RuCl6]', true)
+
+        PotassiumOsmate = new Material.Builder(8644, SuSyUtility.susyId('potassium_osmate'))
+                .dust()
+                .components(Potassium * 2, Osmium, Oxygen * 6, Hydrogen * 4)
+                .color(0xbf21a0)
+                .build();
+
+        PotassiumOsmate.setFormula("K2[OsO2(OH)4]", true)
+
+        AmmoniumHexachlororhodate = new Material.Builder(8645, SuSyUtility.susyId('ammonium_hexachlororhodate'))
+                .dust()
+                .components(Nitrogen * 3, Hydrogen * 12, Rhodium * 1, Chlorine * 6)
+                .colorAverage()
+                .build();
+
+        AmmoniumHexachlororhodate.setFormula('(NH4)3(RhCl6)', true);
+
+        AmmoniumHexachloroiridate = new Material.Builder(8646, SuSyUtility.susyId('ammonium_hexachloroiridate'))
+                .dust()
+                .components(Nitrogen * 3, Hydrogen * 12, Iridium * 1, Chlorine * 6)
+                .colorAverage()
+                .build();
+        
+        AmmoniumHexachloroiridate.setFormula('(NH4)2(IrCl6)', true);
+
+        SodiumHydrosulfide = new Material.Builder(8647, SuSyUtility.susyId('sodium_hydrosulfide'))
+                .dust()
+                .components(Sodium, Sulfur, Hydrogen)
                 .colorAverage()
                 .build();
     }

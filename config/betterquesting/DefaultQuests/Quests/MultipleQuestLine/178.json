@@ -14,12 +14,65 @@
           "FluidName:8": "sulfuric_naphtha"
         }
       },
-      "name:8": "susy.quest.db.178.title"
+      "name:8": "susy.quest.db.178.title",
+      "tasklogic:8": "OR"
     }
   },
   "questID:3": 178,
   "tasks:9": {
     "0:10": {
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "crude_heavy_gas_oil"
+        },
+        "1:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "crude_light_gas_oil"
+        },
+        "2:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "crude_kerosene"
+        },
+        "3:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "light_atmospheric_overheads"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "sulfuric_heavy_gas_oil"
+        },
+        "1:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "sulfuric_light_gas_oil"
+        },
+        "2:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "sulfuric_kerosene"
+        },
+        "3:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "sulfuric_light_naphtha"
+        },
+        "4:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "sulfuric_heavy_naphtha"
+        },
+        "5:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "sulfuric_fuel_gas"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    },
+    "2:10": {
+      "index:3": 2,
       "taskID:8": "bq_standard:checkbox"
     }
   }

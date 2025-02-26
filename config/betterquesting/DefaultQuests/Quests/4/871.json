@@ -1,6 +1,11 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    1
+  ],
   "preRequisites:11": [
-    870
+    870,
+    713
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -12,6 +17,7 @@
         }
       },
       "name:8": "susy.quest.db.871.title",
+      "questlogic:8": "OR",
       "tasklogic:8": "OR"
     }
   },
@@ -20,10 +26,6 @@
     "0:10": {
       "requiredFluids:9": {
         "0:10": {
-          "Amount:3": 1000,
-          "FluidName:8": "nitrobenzene"
-        },
-        "1:10": {
           "Amount:3": 1000,
           "FluidName:8": "gtfo_aniline"
         }

@@ -1323,7 +1323,7 @@ susy.material.alkali_vt_slag=碱性钒钛渣
 susy.material.titania_slag=钛渣
 susy.material.carnotite_leach=钒钾铀矿浸出液
 susy.material.reduced_carnotite_leach=还原钒钾铀矿浸出液
-susy.material.uranium_vanadium_extraction_mixture=铀-钒萃取剂
+susy.material.uranium_extraction_mixture=铀萃取液
 susy.material.uranium_vanadium_extract=铀-钒萃取液
 susy.material.uranium_extract=铀萃取液
 susy.material.acidic_vanadyl_solution=酸性钒酰溶液
@@ -2213,10 +2213,11 @@ metaitem.chip.insulated_silicon_germanium.name=表面绝缘硅化锗晶片
 metaitem.chip.n_doped_silicon.name=N型掺杂硅晶片
 metaitem.chip.silicon_dioxide.name=二氧化硅晶片
 
-metaitem.beads.ag_fifty_w_x_eight.name=AG 50W-X8离子交换树脂颗粒
 metaitem.beads.amberlyst_ch.name=Amberlyst CH-43离子交换树脂颗粒
-metaitem.beads.rhenium_ion_exchange.name=铼离子交换树脂颗粒
+metaitem.beads.weak_basic_cation_exchange.name=弱碱性阳离子交换树脂颗粒
 metaitem.beads.loaded_rhenium_ion_exchange.name=铼吸附离子交换树脂颗粒
+metaitem.beads.strong_acidic_cation_exchange.name=强酸性阳离子交换树脂颗粒
+metaitem.beads.strong_basic_anion_exchange.name=强碱性阴离子交换树脂颗粒
 
 metaitem.fused_quartz.name=烧结石英板
 metaitem.crucible.quartz.name=石英坩埚

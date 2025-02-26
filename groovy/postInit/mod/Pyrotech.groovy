@@ -1255,24 +1255,24 @@ def alloying_prefixes = [
         prefix_dust
 ]
 
-def alloy_add = {String output, int amount, int duration, ArrayList inputs ->
-        int recipe_multiplier = Math.ceil(8 / amount)
-        def size = inputs.size().intdiv(2)
-        def real = ([alloying_prefixes] * size).combinations()
+def alloy_add = {String outputAlloy, int outputAmount, int recipeDuration, ArrayList materialInputs ->
+        int recipeMultiplier = Math.ceil(8 / outputAmount)
+        def numUniqueInputs = materialInputs.size().intdiv(2)
+        def uniqueCombinations = ([alloying_prefixes] * numUniqueInputs).combinations()
         reductants.forEach { reductant ->
-            real.forEach { bad ->
+            uniqueCombinations.forEach { uniqueCombination ->
                 def builder = SMELTER.recipeBuilder()
-                double multiplier_sum = 0
-                int count = 0
-                for (int i = 0; i < size; i++) {
-                    int amountIn = inputs[ 2 * i + 1 ]
-                    multiplier_sum += bad[i].duration_multiplier * amountIn
-                    count += amountIn
-                    builder.inputs(ore(bad[i].name + inputs[ 2 * i ]) * (amountIn * recipe_multiplier))
+                double fuel_duration_multiplier = 0
+                int fuelCount = 0
+                for (int i = 0; i < numUniqueInputs; i++) {
+                    int numInput = materialInputs[ 2 * i + 1 ] //this gets the amount of used metal for the recipe
+                    fuel_duration_multiplier += uniqueCombination[i].duration_multiplier * numInput
+                    fuelCount += numInput
+                    builder.inputs(ore(uniqueCombination[i].name + materialInputs[ 2 * i ]) * (numInput * recipeMultiplier))
                 }
-                builder.inputs(ore(reductant.name) * (count * recipe_multiplier))
-                        .outputs(metaitem("ingot" + output) * (amount * recipe_multiplier))
-                        .duration((int) (duration *  multiplier_sum / count) * recipe_multiplier)
+                builder.inputs(ore(reductant.name) * (fuelCount * recipeMultiplier))
+                        .outputs(metaitem("ingot" + outputAlloy) * (outputAmount * recipeMultiplier))
+                        .duration((int) (recipeDuration * fuel_duration_multiplier / fuelCount) * recipeMultiplier)
                         .buildAndRegister()
             }
         }
@@ -1288,7 +1288,7 @@ alloying_recipes = [
         // SnFe
         ["TinAlloy", 2, 100, ["Iron", 1, "Tin", 1]],
         // Potin
-        ["Potin", 9, 100, ["Bronze", 8, "Lead", 1]],
+        ["Potin", 9, 450, ["Bronze", 8, "Lead", 1]],
         // Kovar
         ["Kovar", 2, 100, ["Iron", 2, "Nickel", 1, "CobaltMatte", 1]]
 ]

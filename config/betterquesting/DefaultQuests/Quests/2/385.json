@@ -15,6 +15,7 @@
   "questID:3": 385,
   "tasks:9": {
     "0:10": {
+      "entryLogic:8": "OR",
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

@@ -142,7 +142,7 @@ CryoXenon.setDurationRadiator(200);
 CryoXenon.setTemperature(165);
 
 def CryoAir = new ICryoGas('air', 'hot_hp_air', 'hp_air', 'cold_hp_air', 'liquid_air');
-CryoAir.setEUt(60);
+CryoAir.setEUt(30);
 CryoAir.setDuration(100);
 CryoAir.setPowerHX(100);
 CryoAir.setDurationHX(5);
@@ -774,12 +774,23 @@ for (WorkingFluid in WorkingFluids) {
             .buildAndRegister();
 
     recipemap('heat_exchanger').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.normal_fluid) * ((WorkingFluid.amount_to_use)))
+            .circuitMeta(1)
+            .fluidInputs(liquid(WorkingFluid.normal_fluid) * WorkingFluid.amount_to_use)
             .fluidInputs(liquid('flue_gas') * 500)
-            .fluidOutputs(liquid(WorkingFluid.heated_fluid) * ((WorkingFluid.amount_to_use * WorkingFluid.conversion_factor)))
+            .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))
             .fluidOutputs(liquid('chilled_flue_gas') * 500)
             .duration((int) (WorkingFluid.duration))
             .buildAndRegister();
+
+    recipemap('heat_exchanger').recipeBuilder()
+            .circuitMeta(2)
+            .fluidInputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use * 16))
+            .fluidInputs(liquid('flue_gas') * 8000)
+            .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor * 16))
+            .fluidOutputs(liquid('chilled_flue_gas') * 8000)
+            .duration((int) (WorkingFluid.duration))
+            .buildAndRegister();
+
 
     recipemap('steam_turbine').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor))

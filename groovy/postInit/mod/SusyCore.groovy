@@ -1,6 +1,7 @@
 import globals.Globals
 import globals.RecyclingHelper
 import gregtech.api.recipes.ingredients.nbtmatch.*
+
 ASSEMBLER = recipemap('assembler')
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 CVD = recipemap('cvd')
@@ -350,7 +351,7 @@ ASSEMBLER.recipeBuilder()
 FLUID_SOLIDIFIER.recipeBuilder()
     .inputs(ore('frameGTSteel'))
     .fluidInputs(fluid('concrete') * 576)
-    .outputs(item('susy:susy_stone_smooth', 9) * 43)
+    .outputs(item('susy:susy_stone_smooth', 9) * 32)
     .duration(100)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()

@@ -100,6 +100,8 @@ eventManager.listen {
         customMetaItems.addItem(201, "vti_rich_pig_iron");
         customMetaItems.addItem(202, "vt_slag");
 
+        customMetaItems.addItem(203, "white_matte")
+
 	    customMetaItems.addItem(210, "bound_leather")
 
         customMetaItems.addItem(212, "drone.lv").setMaxStackSize(1).addComponents(ElectricStats.createRechargeableBattery(10000, GTValues.LV)).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
@@ -107,9 +109,11 @@ eventManager.listen {
         customMetaItems.addItem(214, "epoxy_lamina")
 
         customMetaItems.addItem(250, "beads.amberlyst_ch");
-        customMetaItems.addItem(251, "beads.ag_fifty_w_x_eight");
-        customMetaItems.addItem(252, "beads.rhenium_ion_exchange")
-        customMetaItems.addItem(253, "beads.loaded_rhenium_ion_exchange")
+        customMetaItems.addItem(251, "beads.strong_acidic_cation_exchange");
+        customMetaItems.addItem(252, "beads.weak_basic_anion_exchange");
+        customMetaItems.addItem(253, "beads.loaded_rhenium_anion_exchange");
+        customMetaItems.addItem(254, "beads.strong_basic_anion_exchange");
+        customMetaItems.addItem(255, "beads.loaded_uranium_anion_exchange");
 
         customMetaItems.addItem(300, "mylar")
         customMetaItems.addItem(301, "spinneret")
@@ -290,6 +294,10 @@ eventManager.listen {
         customMetaItems.addItem(6206, "sponge.platinum")
         customMetaItems.addItem(6207, "sponge.cadmium")
         customMetaItems.addItem(6208, "sponge.indium")
+        customMetaItems.addItem(6209, "sponge.osmium")
+        customMetaItems.addItem(6210, "sponge.ruthenium")
+        customMetaItems.addItem(6211, "sponge.rhodium")
+        customMetaItems.addItem(6212, "sponge.iridium")
 
         // Anode slimes 6300-6400
         customMetaItems.addItem(6300, "anode_slime.gold")
