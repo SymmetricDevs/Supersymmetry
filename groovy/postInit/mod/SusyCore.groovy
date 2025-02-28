@@ -349,7 +349,7 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 FLUID_SOLIDIFIER.recipeBuilder()
-    .inputs(ore('frameGTSteel'))
+    .inputs(metaitem('frameSteel'))
     .fluidInputs(fluid('concrete') * 576)
     .outputs(item('susy:susy_stone_smooth', 9) * 32)
     .duration(100)
