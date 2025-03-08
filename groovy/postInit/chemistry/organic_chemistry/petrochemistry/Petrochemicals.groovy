@@ -119,7 +119,7 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('isobutylene') * 500)
     .fluidOutputs(fluid('one_butene') * 300)
     .fluidOutputs(fluid('two_butene') * 200)
-    .duration(300)
+    .duration(60)
     .EUt(30)
     .buildAndRegister()
 
