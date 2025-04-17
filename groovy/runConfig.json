@@ -12,7 +12,8 @@
     ],
     "postInit": [
       "prePostInit/",
-      "postInit/"
+      "postInit/",
+      "postInit/utils/RecyclingReloader.groovy"
     ]
   }
 }
