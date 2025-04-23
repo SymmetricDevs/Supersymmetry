@@ -29,8 +29,8 @@ class RecyclingHelper {
         removeRecyclingRecipes(output)
     }
 
-    static def handleRecycling(ItemStack output, List<List<IIngredient>> recipe) {
-        OreDictUnifier.registerOre(output, RecyclingHandler.getRecyclingIngredients(recipe.trim(), output.getCount()))
+    static def handleRecycling(ItemStack output, List<?> recipe) {
+        OreDictUnifier.registerOre(output, RecyclingHandler.getRecyclingIngredients(recipe.trimIng(), output.count))
     }
 
     static def removeRecyclingRecipes(ItemStack output) {

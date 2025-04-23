@@ -16,22 +16,21 @@ def recyclingRecipeMaps = [
 ]
 
 recyclingRecipeMaps.each { map ->
-    map.getGroovyScriptRecipeMap()
-            .streamRecipes()
-            .removeIf {
-                it.getRecipeCategory().getName().endsWith('_recycling')
-            }
+    map.groovyScriptRecipeMap.streamRecipes()
+            .removeIf { it.recipeCategory.name.endsWith('_recycling') }
 }
 
-// Reloads every recycling recipes
-MaterialRegistryManager.getInstance().getRegisteredMaterials().each { mat ->
-    if (mat.hasProperty(PropertyKey.DUST) && !mat.hasFlag('no_unification')) {
-        OrePrefix.values().each { ore ->
-            if (!OreDictUnifier.get(ore, mat).isEmpty()) {
+// Reload every recycling recipes
+// Reload MetaPrefixItems
+OrePrefix.values().each { ore ->
+    if (ore.shouldRecycle()) {
+        MaterialRegistryManager.instance.registeredMaterials.each { mat ->
+            if (mat.hasDust() && !mat.hasFlag('no_unification') && !OreDictUnifier.get(ore, mat).empty) {
                 RecyclingRecipeHandler.processCrushing(ore, mat, mat.getProperty(PropertyKey.DUST))
             }
         }
     }
 }
 
+// Reload other items
 RecyclingRecipes.init()
