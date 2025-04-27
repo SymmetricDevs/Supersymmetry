@@ -256,6 +256,7 @@ eventManager.listen {
 
         //Light Sources 6000-6100
         customMetaItems.addItem(6000, "lamp.carbon_filament");
+        customMetaItems.addItem(6001, "lamp.carbon_filament.unfilled");
         customMetaItems.addItem(6001, "lamp.incandescent");
         customMetaItems.addItem(6002, "lamp.halogen");
         customMetaItems.addItem(6003, "lamp.fluorescent");

@@ -17,7 +17,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('wireFineCopper') * 2)
     .inputs(ore('wireFineCarbon'))
     .inputs(metaitem('component.glass.tube') * 2)
-    .outputs(metaitem('lamp.carbon_filament') * 2)
+    .outputs(metaitem('lamp.carbon_filament.unfilled') * 2)
     .duration(400)
     .EUt(16)
     .buildAndRegister();
