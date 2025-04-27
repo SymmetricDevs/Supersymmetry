@@ -14,6 +14,7 @@ public class ElementMaterials {
     public static void register() {
         log.infoMC("Registering Element Materials!");
         
+        Carbon.addFlags(GENERATE_FINE_WIRE)
         
 
 

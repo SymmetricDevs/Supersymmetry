@@ -2465,11 +2465,11 @@ metaitem.wafer.treated.silicon.name=Кремниевая пластина, об�
 metaitem.seed_crystal.silicon.name=Кристалл кремния
 metaitem.seed_crystal.gallium_arsenide.name=Затравочный кристалл арсенида галлия
 
-metaitem.carbon_arc_lamp.name=Карбоновая дуговая лампа
-metaitem.incandescent_light.name=Лампочка накаливания
-metaitem.halogen_light.name=Галогеновая лампочка
-metaitem.fluorescent_light.name=Флуоресцентная лампочка
-metaitem.led_light.name=Светодиод
+metaitem.lamp.carbon_filament.name=Лампа с угольной нитью
+metaitem.lamp.incandescent.name=Лампочка накаливания
+metaitem.lamp.halogen.name=Галогеновая лампочка
+metaitem.lamp.fluorescent.name=Флуоресцентная лампочка
+metaitem.lamp.led.name=Светодиод
 
 metaitem.mineral_wool.name=Минеральная вата
 metaitem.hepa_filter.name=Фильтр H.E.P.A.

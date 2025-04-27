@@ -30,7 +30,7 @@ mods.gregtech.assembler.removeByInput(24, [metaitem('gregtechfoodoption:cupric_h
 
 EXTRUDER.recipeBuilder()
         .inputs(metaitem('gregtechfoodoption:component.cotton') * 20)
-        .notConsumable(ore('gearSteel') * 8)
+        .notConsumable(ore('gearSmallSteel') * 8)
         .outputs(metaitem('gregtechfoodoption:seed.cotton') * 5)
         .outputs(metaitem('stem.cotton') * 5)
         .outputs(metaitem('fiberCotton') * 40)

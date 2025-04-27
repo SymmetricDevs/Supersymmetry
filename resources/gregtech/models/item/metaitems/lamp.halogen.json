@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "gregtech:items/metaitems/carbon_arc_lamp"
+      "layer0": "gregtech:items/metaitems/lamp.halogen"
     }
   }

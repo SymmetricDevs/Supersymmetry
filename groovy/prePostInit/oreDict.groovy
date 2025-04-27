@@ -19,11 +19,11 @@ ore('ingotTitanium').remove(item('techguns:itemshared', 85))
 ore('stickWood').add(item('minecraft:stick'))
 
 //Light oredict
-ore('gtLight').add(metaitem('incandescent_light'))
-ore('gtLight').add(metaitem('halogen_light'))
-ore('gtLight').add(metaitem('fluorescent_light'))
-ore('gtLight').add(metaitem('led_light'))
-ore('gtLight').add(metaitem('carbon_arc_lamp'))
+ore('gtLight').add(metaitem('lamp.carbon_filament'))
+ore('gtLight').add(metaitem('lamp.incandescent'))
+ore('gtLight').add(metaitem('lamp.halogen'))
+ore('gtLight').add(metaitem('lamp.fluorescent'))
+ore('gtLight').add(metaitem('lamp.led'))
 
 //Coke block
 

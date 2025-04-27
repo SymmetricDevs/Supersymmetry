@@ -2492,11 +2492,11 @@ metaitem.wafer.treated.silicon.name=Acid Treated Silicon Wafer
 metaitem.seed_crystal.silicon.name=Silicon Seed Crystal
 metaitem.seed_crystal.gallium_arsenide.name=Gallium Arsenide Seed Crystal
 
-metaitem.carbon_arc_lamp.name=Carbon Arc Lamp
-metaitem.incandescent_light.name=Incandescent Lightbulb
-metaitem.halogen_light.name=Halogen Lightbulb
-metaitem.fluorescent_light.name=Fluorescent Lightbulb
-metaitem.led_light.name=L.E.D. Lights
+metaitem.lamp.carbon_filament.name=Carbon Filament Lamp
+metaitem.lamp.incandescent.name=Incandescent Lightbulb
+metaitem.lamp.halogen.name=Halogen Lightbulb
+metaitem.lamp.fluorescent.name=Fluorescent Lightbulb
+metaitem.lamp.led.name=L.E.D. Lights
 
 metaitem.mineral_wool.name=Mineral Wool Sheet
 metaitem.hepa_filter.name=H.E.P.A. Filter

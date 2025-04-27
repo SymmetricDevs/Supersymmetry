@@ -255,11 +255,11 @@ eventManager.listen {
         customMetaItems.addItem(5907, "voltage_regulator.hv");
 
         //Light Sources 6000-6100
-        customMetaItems.addItem(6000, "carbon_arc_lamp");
-        customMetaItems.addItem(6001, "incandescent_light");
-        customMetaItems.addItem(6002, "halogen_light");
-        customMetaItems.addItem(6003, "fluorescent_light");
-        customMetaItems.addItem(6004, "led_light");
+        customMetaItems.addItem(6000, "lamp.carbon_filament");
+        customMetaItems.addItem(6001, "lamp.incandescent");
+        customMetaItems.addItem(6002, "lamp.halogen");
+        customMetaItems.addItem(6003, "lamp.fluorescent");
+        customMetaItems.addItem(6004, "lamp.led");
 
         //Superconductors 6100-6200
         customMetaItems.addItem(6100, "assemblymanganesephosphide");

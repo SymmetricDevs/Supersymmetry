@@ -2467,11 +2467,11 @@ metaitem.wafer.treated.silicon.name=酸处理硅晶圆
 metaitem.seed_crystal.silicon.name=硅晶种
 metaitem.seed_crystal.gallium_arsenide.name=砷化镓晶种
 
-metaitem.carbon_arc_lamp.name=碳弧灯
-metaitem.incandescent_light.name=白炽灯
-metaitem.halogen_light.name=卤素灯
-metaitem.fluorescent_light.name=荧光灯
-metaitem.led_light.name=LED灯
+metaitem.lamp.carbon_filament.name=碳丝灯
+metaitem.lamp.incandescent.name=白炽灯
+metaitem.lamp.halogen.name=卤素灯
+metaitem.lamp.fluorescent.name=荧光灯
+metaitem.lamp.led.name=LED灯
 
 metaitem.mineral_wool.name=矿棉板
 metaitem.hepa_filter.name=高效微粒空气过滤器
