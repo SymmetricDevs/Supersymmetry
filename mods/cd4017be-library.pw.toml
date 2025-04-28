@@ -1,0 +1,13 @@
+name = "CD4017BE Library"
+filename = "CD4017BE_lib-1.12.2-6.5.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b5820b90f0dab4d30d58298d54fda04385b6f674"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3004631
+project-id = 229208

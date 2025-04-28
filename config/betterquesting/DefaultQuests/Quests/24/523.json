@@ -1,0 +1,28 @@
+{
+  "preRequisites:11": [
+    521
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.523.desc",
+      "icon:10": {
+        "Damage:2": 6,
+        "id:8": "opencomputers:component"
+      },
+      "name:8": "susy.quest.db.523.title"
+    }
+  },
+  "questID:3": 523,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 2,
+          "Damage:2": 6,
+          "id:8": "opencomputers:component"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

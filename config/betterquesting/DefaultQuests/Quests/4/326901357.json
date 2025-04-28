@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    647,
+    1837809262
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.326901357.desc",
+      "icon:10": {
+        "id:8": "industrialrenewal:steam"
+      },
+      "name:8": "susy.quest.db.326901357.title"
+    }
+  },
+  "questID:3": 326901357,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

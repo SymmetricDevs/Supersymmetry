@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    191
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.384.desc",
+      "icon:10": {
+        "id:8": "icbmclassic:explosives"
+      },
+      "name:8": "susy.quest.db.384.title"
+    }
+  },
+  "questID:3": 384,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "icbmclassic:explosives"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

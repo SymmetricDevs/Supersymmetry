@@ -1,5 +1,9 @@
+import globals.Globals
+
 EBF = recipemap('electric_blast_furnace')
 FBR = recipemap('fluidized_bed_reactor')
+ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
+PYROLYSE = recipemap('pyrolyse_oven')
 
 EBF.recipeBuilder()
         .inputs(ore('dustCeriumIvOxide') * 12)
@@ -18,3 +22,20 @@ FBR.recipeBuilder()
         .EUt(1920)
         .duration(20)
         .buildAndRegister()
+
+PYROLYSE.recipeBuilder()
+    .fluidInputs(fluid('methane') * 1000)
+    .fluidOutputs(fluid('hydrogen') * 4000)
+    .inputs(ore('dustAnyPurityBismuth'))
+    .outputs(metaitem('dustSpentBismuthCatalyst') * 2)
+    .duration(10)
+    .EUt(Globals.voltAmps[3] * 2)
+    .buildAndRegister()
+
+ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
+    .inputs(ore('dustSpentBismuthCatalyst') * 2)
+    .outputs(metaitem('dustBismuth') * 1)
+    .outputs(metaitem('dustCarbon') * 1)
+    .duration(20)
+    .EUt(480)
+    .buildAndRegister()

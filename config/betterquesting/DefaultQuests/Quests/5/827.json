@@ -1,0 +1,52 @@
+{
+  "preRequisites:11": [
+    828
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.827.desc",
+      "icon:10": {
+        "Damage:2": 1013,
+        "id:8": "gregtech:meta_dust"
+      },
+      "name:8": "susy.quest.db.827.title"
+    }
+  },
+  "questID:3": 827,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 43,
+            "TrophyColorGreen:3": 128,
+            "TrophyColorRed:3": 200,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "Damage:2": 1013,
+              "id:8": "gregtech:meta_dust"
+            },
+            "TrophyName:8": "Your New Best Friend",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1013,
+          "id:8": "gregtech:meta_dust"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

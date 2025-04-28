@@ -1,0 +1,13 @@
+name = "Gravity Gun"
+filename = "GravityGun-1.12.2-7.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2bf4c3f8c7d67bf0dee9ee6d64349d2d6191218c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2801274
+project-id = 229072

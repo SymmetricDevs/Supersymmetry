@@ -15,10 +15,6 @@
     {
       "biomes": "$JUNGLE",
       "weight": 0.25
-    },
-    {
-      "biomes": "",
-      "weight": 0.1
     }
   ],
   "metadata": {

@@ -20,16 +20,17 @@ mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), meta
 
 
 crafting.addShaped("vacuum_tube_components", metaitem('vacuum_tube_components') * 4, [
-    [null, metaitem('wireFineRedAlloy'), null],
-    [metaitem('wireGtSingleCopper'), metaitem('ringSteel'), metaitem('wireGtSingleCopper')],
+    [null, metaitem('wireFineCupronickel'), null],
+    [metaitem('plateNickel'), metaitem('ringSteel'), metaitem('foilNickel')],
     [null, metaitem('boltSteel'), null]
 ])
 
-crafting.addShaped("vacuum_tube_components_annealed", metaitem('vacuum_tube_components') * 6, [
-    [null, metaitem('wireFineRedAlloy'), null],
-    [metaitem('wireGtSingleAnnealedCopper'), metaitem('ringSteel'), metaitem('wireGtSingleAnnealedCopper')],
+crafting.addShaped("vacuum_tube_components_oxide", metaitem('vacuum_tube_components') * 6, [
+    [null, metaitem('wireFineCupronickel'), metaitem('dustSmallQuicklime')],
+    [metaitem('plateNickel'), metaitem('ringSteel'), metaitem('foilNickel')],
     [null, metaitem('boltSteel'), null]
 ])
+
 
 def ASSEMBLER_RECIPES = recipemap('assembler')
 def VACUUM_RECIPES = recipemap('vacuum_chamber')
@@ -37,8 +38,38 @@ def VACUUM_RECIPES = recipemap('vacuum_chamber')
 VACUUM_RECIPES.recipeBuilder()
 .inputs(metaitem('component.glass.tube'))
 .inputs(metaitem('vacuum_tube_components'))
-.inputs(ore('ringSteel'))
+.inputs(ore('ringKovar'))
 .outputs(metaitem('circuit.vacuum_tube'))
 .EUt(7)
 .duration(200)
 .buildAndRegister()
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('wireFineCupronickel'))
+    .inputs(metaitem('foilNickel') * 2)
+    .inputs(metaitem('boltSteel') * 4)
+    .inputs(metaitem('dustSmallQuicklime'))
+    .outputs(metaitem('vacuum_tube_components') * 8)
+    .EUt(16)
+    .duration(400)
+    .buildAndRegister()
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('wireFineTungsten'))
+    .inputs(metaitem('foilNickel') * 2)
+    .inputs(metaitem('boltSteel') * 4)
+    .inputs(metaitem('dustSmallQuicklime'))
+    .outputs(metaitem('vacuum_tube_components') * 12)
+    .EUt(16)
+    .duration(400)
+    .buildAndRegister()
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('wireFineTungsten'))
+    .inputs(metaitem('foilMolybdenum') * 2)
+    .inputs(metaitem('boltSteel') * 4)
+    .inputs(metaitem('dustSmallQuicklime'))
+    .outputs(metaitem('vacuum_tube_components') * 16)
+    .EUt(16)
+    .duration(400)
+    .buildAndRegister()

@@ -1,0 +1,50 @@
+{
+  "preRequisites:11": [
+    205
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.409.desc",
+      "icon:10": {
+        "id:8": "appliedenergistics2:dummy_fluid_item",
+        "tag:10": {
+          "FluidName:8": "seed_oil"
+        }
+      },
+      "name:8": "susy.quest.db.409.title",
+      "tasklogic:8": "OR"
+    }
+  },
+  "questID:3": 409,
+  "tasks:9": {
+    "0:10": {
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "gtfo_olive_oil"
+        },
+        "1:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "gtfo_soybean_oil"
+        },
+        "2:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "coconut_oil"
+        },
+        "3:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "seed_oil"
+        },
+        "4:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "deacidified_lipid"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    },
+    "1:10": {
+      "index:3": 1,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

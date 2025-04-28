@@ -1,0 +1,25 @@
+{
+  "preRequisites:11": [
+    680,
+    710
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1807049983.desc",
+      "icon:10": {
+        "id:8": "appliedenergistics2:dummy_fluid_item",
+        "tag:10": {
+          "FluidName:8": "methanol"
+        }
+      },
+      "name:8": "susy.quest.db.1807049983.title"
+    }
+  },
+  "questID:3": 1807049983,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 1,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

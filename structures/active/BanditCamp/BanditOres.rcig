@@ -1,0 +1,87 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditOres",
+  "items": [
+    {
+      "weight": 1.763644814491272,
+      "min": 12,
+      "max": 35,
+      "item": {
+        "id": "gregtech:ore_cassiterite_0",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 6,
+      "max": 26,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 263,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 15,
+      "max": 33,
+      "item": {
+        "id": "gregtech:ore_chalcopyrite_0",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 7,
+      "max": 21,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 265,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 21,
+      "max": 34,
+      "item": {
+        "id": "gregtech:ore_magnetite_0",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 18,
+      "max": 24,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 292,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 16,
+      "max": 25,
+      "item": {
+        "id": "gregtech:ore_pyrite_0",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 12,
+      "max": 28,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 306,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

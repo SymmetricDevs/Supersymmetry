@@ -1,0 +1,13 @@
+name = "InGame Info XML - Serene Seasons"
+filename = "igisereneseasons-1.0.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "00c24dbf86c9b946542bbdbfa6686400291b3c02"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2668213
+project-id = 313146

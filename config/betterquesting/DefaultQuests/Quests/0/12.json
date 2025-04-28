@@ -1,0 +1,160 @@
+{
+  "preRequisites:11": [
+    3,
+    19,
+    6
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.12.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "gregtech:axe",
+        "tag:10": {
+          "DisallowContainerItem:1": 0,
+          "GT.Behaviours:10": {
+            "DisableShields:1": 1,
+            "TreeFelling:1": 1
+          },
+          "GT.Tool:10": {
+            "AttackDamage:5": 6.0,
+            "AttackSpeed:5": -3.2,
+            "Durability:3": 0,
+            "HarvestLevel:3": 1,
+            "Material:8": "gregtech:stone",
+            "MaxDurability:3": 31,
+            "ToolSpeed:5": 1.0
+          },
+          "HideFlags:3": 2
+        }
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.12.title"
+    }
+  },
+  "questID:3": 12,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:axe",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {
+              "DisableShields:1": 1,
+              "TreeFelling:1": 1
+            },
+            "GT.Tool:10": {
+              "AttackDamage:5": 6.0,
+              "AttackSpeed:5": -3.2,
+              "Durability:3": 0,
+              "HarvestLevel:3": 1,
+              "Material:8": "gregtech:stone",
+              "MaxDurability:3": 31,
+              "ToolSpeed:5": 1.0
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:pickaxe",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {
+              "TorchPlacing:1": 1
+            },
+            "GT.Tool:10": {
+              "AttackDamage:5": 2.0,
+              "AttackSpeed:5": -2.8,
+              "Durability:3": 0,
+              "HarvestLevel:3": 1,
+              "Material:8": "gregtech:stone",
+              "MaxDurability:3": 95,
+              "ToolSpeed:5": 6.0
+            },
+            "HideFlags:3": 2
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:shovel",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 2.5,
+              "AttackSpeed:5": -3.0,
+              "Durability:3": 0,
+              "HarvestLevel:3": 1,
+              "Material:8": "gregtech:stone",
+              "MaxDurability:3": 95,
+              "ToolSpeed:5": 2.0
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:hoe",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 0.0,
+              "AttackSpeed:5": -1.0,
+              "Durability:3": 0,
+              "HarvestLevel:3": 1,
+              "Material:8": "gregtech:stone",
+              "MaxDurability:3": 95
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:hammer",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 5.0,
+              "AttackSpeed:5": -3.8,
+              "Durability:3": 0,
+              "HarvestLevel:3": 1,
+              "Material:8": "gregtech:stone",
+              "MaxDurability:3": 95,
+              "ToolSpeed:5": 3.0
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:knife",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 1.0,
+              "AttackSpeed:5": 2.5,
+              "Durability:3": 0,
+              "HarvestLevel:3": 0,
+              "Material:8": "gregtech:stone",
+              "MaxDurability:3": 31
+            },
+            "HideFlags:3": 2
+          }
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    }
+  }
+}

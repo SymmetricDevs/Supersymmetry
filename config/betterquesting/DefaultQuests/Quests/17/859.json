@@ -1,0 +1,17 @@
+{
+  "preRequisites:11": [
+    834
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.859.desc",
+      "icon:10": {
+        "Damage:2": 7,
+        "id:8": "minecraft:concrete_powder"
+      },
+      "name:8": "susy.quest.db.859.title"
+    }
+  },
+  "questID:3": 859,
+  "tasks:9": {}
+}

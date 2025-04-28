@@ -1,0 +1,79 @@
+{
+  "rules": [
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "minecraft:stone:1"
+          ]
+        },
+        "harvester": {
+          "type": "PLAYER",
+          "heldItemMainHand": {
+            "type": "WHITELIST",
+            "harvestLevel": "pickaxe;0;-1"
+          }
+        }
+      },
+      "drops": [
+        {
+          "item": {
+            "items": [
+              "pyrotech:cobblestone:2"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "minecraft:stone:5"
+          ]
+        },
+        "harvester": {
+          "type": "PLAYER",
+          "heldItemMainHand": {
+            "type": "WHITELIST",
+            "harvestLevel": "pickaxe;0;-1"
+          }
+        }
+      },
+      "drops": [
+        {
+          "item": {
+            "items": [
+              "pyrotech:cobblestone:0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "minecraft:stone:3"
+          ]
+        },
+        "harvester": {
+          "type": "PLAYER",
+          "heldItemMainHand": {
+            "type": "WHITELIST",
+            "harvestLevel": "pickaxe;0;-1"
+          }
+        }
+      },
+      "drops": [
+        {
+          "item": {
+            "items": [
+              "pyrotech:cobblestone:1"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

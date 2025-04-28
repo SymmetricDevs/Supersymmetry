@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    66
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.244.desc",
+      "icon:10": {
+        "id:8": "jecalculation:item_calculator"
+      },
+      "name:8": "susy.quest.db.244.title"
+    }
+  },
+  "questID:3": 244,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "jecalculation:item_calculator"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

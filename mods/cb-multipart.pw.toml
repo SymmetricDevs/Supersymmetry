@@ -1,0 +1,13 @@
+name = "CB Multipart"
+filename = "ForgeMultipart-1.12.2-2.6.2.83-universal.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3306ea22380bc9b6a0170b23fa0251085d5a6e25"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2755790
+project-id = 258426

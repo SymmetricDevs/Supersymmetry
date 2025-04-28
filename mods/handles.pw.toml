@@ -1,0 +1,13 @@
+name = "Handles"
+filename = "handles-1.12.2-1.6.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "23d683771bc8471bc46d4be47a7bbfba8c03661d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2904725
+project-id = 304727

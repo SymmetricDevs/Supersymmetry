@@ -1,0 +1,13 @@
+name = "FindMyItemsAndFluids"
+filename = "findme-1.12.2-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "f1b5417b09bc8f7eb74afdfa03c4bacc6d283de2"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3748963
+project-id = 610085

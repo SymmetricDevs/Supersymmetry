@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    647,
+    1056118460
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1837809262.desc",
+      "icon:10": {
+        "id:8": "industrialrenewal:fire"
+      },
+      "name:8": "susy.quest.db.1837809262.title"
+    }
+  },
+  "questID:3": 1837809262,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

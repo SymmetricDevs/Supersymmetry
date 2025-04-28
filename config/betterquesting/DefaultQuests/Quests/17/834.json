@@ -1,0 +1,23 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    2,
+    0
+  ],
+  "preRequisites:11": [
+    67,
+    70,
+    832
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.834.desc",
+      "icon:10": {
+        "id:8": "biomesoplenty:hard_ice"
+      },
+      "name:8": "susy.quest.db.834.title"
+    }
+  },
+  "questID:3": 834,
+  "tasks:9": {}
+}

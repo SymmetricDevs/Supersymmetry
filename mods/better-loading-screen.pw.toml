@@ -1,0 +1,13 @@
+name = "Custom Loading Screen"
+filename = "CustomLoadingScreen-1.12.2-1.5.8.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b18ec02512ce7e63cd70731e8716818385252a5d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5825891
+project-id = 229302

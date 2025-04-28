@@ -1,3 +1,5 @@
+package preInit;
+
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.event.MaterialEvent;
 
@@ -11,8 +13,8 @@ import static gregtech.api.unification.material.Materials.*;
 eventManager.listen {
     MaterialEvent event ->
 
-        println("Running RegisterElements.groovy...")
-        println("Groovy starting modifying isotopes")
+        log.infoMC("Running RegisterElements.groovy...")
+        log.infoMC("Groovy starting modifying isotopes")
 
         def mystery = new Material.Builder(32000, "mystery")
                 .dust()
@@ -22,6 +24,6 @@ eventManager.listen {
         mystery.setFormula("?", false);
         
 
-        println("Groovy finished modifying isotopes")
+        log.infoMC("Groovy finished modifying isotopes")
 }
 */

@@ -12,6 +12,7 @@ DISTILLERY = recipemap('distillery')
 EMSEPARATOR = recipemap('electromagnetic_separator')
 ELECTROLYZER = recipemap('electrolyzer')
 CRYSTALLIZER = recipemap('crystallizer')
+ZONE_REFINER = recipemap('zone_refiner')
 
 // Aluminium Nugget * 3
 mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('dustRuby')], null)
@@ -20,13 +21,22 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 //EBF recipe with Al dust re-enabled:
 EBF.recipeBuilder()
-		.inputs(ore('dustAnyPurityAluminium'))
-		.outputs(metaitem('ingotAluminium'))
-		.duration(240)
-		.blastFurnaceTemp(933)
-		.EUt(120)
-		.buildAndRegister()
+    .inputs(ore('dustAluminium'))
+    .outputs(metaitem('ingotAluminium'))
+    .duration(240)
+    .blastFurnaceTemp(933)
+    .EUt(120)
+    .buildAndRegister()
 
+// remove auto generated furnace recipe, split into separate normal/pure recipes.
+furnace.removeByInput(metaitem('dustHighPurityAluminium'))
+EBF.recipeBuilder()
+    .inputs(ore('dustHighPurityAluminium'))
+    .outputs(metaitem('ingotHighPurityAluminium'))
+    .duration(240)
+    .blastFurnaceTemp(933)
+    .EUt(120)
+    .buildAndRegister()
 
 
 // Ruby Slurry * 3000
@@ -230,3 +240,11 @@ BR.recipeBuilder()
         .duration(120)
         .EUt(200)
         .buildAndRegister()
+
+// Ullman's - Aluminium Ch. 5. Hall-Heroult makes like 99.9% pure already so not making it a chanced output.
+ZONE_REFINER.recipeBuilder()
+    .inputs(ore('ingotAluminium'))
+    .outputs(metaitem('ingotHighPurityAluminium'))
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister()

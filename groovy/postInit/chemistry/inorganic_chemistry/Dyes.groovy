@@ -11,13 +11,16 @@ BR.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-MIXER.recipeBuilder()
-        .inputs(ore('dustManganeseIiOxide'))
-        .inputs(ore('dustIronIiiOxide'))
-        .outputs(metaitem('dustSienna') * 2)
-        .EUt(30)
-        .duration(200)
-        .buildAndRegister()
+def mn_ii_oxides = ['dustManganeseIiOxide', 'dustCrudeManganeseIiOxide']
+for (mn_ii_oxide in mn_ii_oxides) {
+    MIXER.recipeBuilder()
+            .inputs(ore(mn_ii_oxide))
+            .inputs(ore('dustIronIiiOxide'))
+            .outputs(metaitem('dustSienna') * 2)
+            .EUt(30)
+            .duration(200)
+            .buildAndRegister()
+}
 
 furnace.add(metaitem('dustSienna'), metaitem('dustBurntSienna'))
 

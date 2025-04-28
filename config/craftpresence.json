@@ -1,6 +1,4 @@
 {
-  "_README": "https://gitlab.com/CDAGaming/CraftPresence/-/wikis/home",
-  "_SOURCE": "https://gitlab.com/CDAGaming/CraftPresence",
   "_schemaVersion": 6,
   "_lastMCVersionId": 340,
   "generalSettings": {
@@ -16,7 +14,6 @@
     "clientId": "1204111633148940299",
     "defaultIcon": "grass",
     "enableJoinRequests": false,
-    "partyPrivacyLevel": 1,
     "preferredClientLevel": 3,
     "resetTimeOnInit": false,
     "autoRegister": false
@@ -39,6 +36,9 @@
         "data": {
           "enabled": false,
           "useAsMain": true,
+          "isInstance": false,
+          "activityType": 0,
+          "partyPrivacy": 1,
           "details": "{player.name} is in The Overworld",
           "gameState": "",
           "largeImageKey": "overworld",
@@ -59,6 +59,9 @@
         "data": {
           "enabled": false,
           "useAsMain": true,
+          "isInstance": false,
+          "activityType": 0,
+          "partyPrivacy": 1,
           "details": "{player.name} is in The Nether",
           "gameState": "",
           "largeImageKey": "nether",
@@ -79,6 +82,9 @@
         "data": {
           "enabled": false,
           "useAsMain": true,
+          "isInstance": false,
+          "activityType": 0,
+          "partyPrivacy": 1,
           "details": "{player.name} is in The End",
           "gameState": "",
           "largeImageKey": "end",
@@ -107,6 +113,9 @@
         "data": {
           "enabled": true,
           "useAsMain": true,
+          "isInstance": false,
+          "activityType": 0,
+          "partyPrivacy": 1,
           "details": "Playing Multiplayer",
           "gameState": "",
           "largeImageKey": "susy_logo",
@@ -123,7 +132,9 @@
           }
         }
       }
-    }
+    },
+    "pingRateInterval": 5,
+    "pingRateUnit": "minutes"
   },
   "statusMessages": {
     "mainMenuData": {
@@ -131,6 +142,9 @@
       "data": {
         "enabled": true,
         "useAsMain": true,
+        "isInstance": false,
+        "activityType": 0,
+        "partyPrivacy": 1,
         "details": "In the Main Menu",
         "gameState": "",
         "largeImageKey": "susy_logo",
@@ -152,6 +166,9 @@
       "data": {
         "enabled": true,
         "useAsMain": true,
+        "isInstance": false,
+        "activityType": 0,
+        "partyPrivacy": 1,
         "details": "Game is starting...",
         "gameState": "",
         "largeImageKey": "susy_logo",
@@ -176,6 +193,9 @@
       "data": {
         "enabled": true,
         "useAsMain": true,
+        "isInstance": false,
+        "activityType": 0,
+        "partyPrivacy": 1,
         "details": "Playing Singleplayer",
         "gameState": "",
         "largeImageKey": "susy_logo",
@@ -191,6 +211,9 @@
           }
         }
       }
+    },
+    "realmData": {
+      "textOverride": "Playing on {server.motd.raw}"
     }
   },
   "advancedSettings": {
@@ -209,6 +232,9 @@
           "data": {
             "enabled": false,
             "useAsMain": true,
+            "isInstance": false,
+            "activityType": 0,
+            "partyPrivacy": 1,
             "details": "{player.name} is joining a game",
             "gameState": "Joining Game",
             "largeImageKey": "susy_logo",
@@ -232,6 +258,9 @@
           "data": {
             "enabled": false,
             "useAsMain": true,
+            "isInstance": false,
+            "activityType": 0,
+            "partyPrivacy": 1,
             "details": "{player.name} is looking for a Realm",
             "gameState": "Browsing Realms",
             "largeImageKey": "susy_logo",
@@ -252,6 +281,9 @@
           "data": {
             "enabled": false,
             "useAsMain": true,
+            "isInstance": false,
+            "activityType": 0,
+            "partyPrivacy": 1,
             "details": "{player.name} is joining a game",
             "gameState": "Joining Game",
             "largeImageKey": "susy_logo",
@@ -272,6 +304,9 @@
           "data": {
             "enabled": false,
             "useAsMain": true,
+            "isInstance": false,
+            "activityType": 0,
+            "partyPrivacy": 1,
             "details": "{player.name} is looking for a server",
             "gameState": "Searching for friends",
             "largeImageKey": "susy_logo",
@@ -310,65 +345,24 @@
     "serverIconEndpoint": "https://api.mcsrvstat.us/icon/{server.address.short}",
     "playerSkinEndpoint": "https://mc-heads.net/avatar/{getOrDefault(player.uuid.short, player.name)}",
     "allowDuplicatePackets": false,
-    "maxConnectionAttempts": 10
+    "maxConnectionAttempts": 10,
+    "enableClassGraph": false,
+    "useClassLoader": true
   },
   "accessibilitySettings": {
-    "tooltipBackground": {
-      "start": {
-        "red": 16,
-        "green": 0,
-        "blue": 16,
-        "alpha": 240
-      }
-    },
-    "tooltipBorder": {
-      "start": {
-        "red": 80,
-        "green": 0,
-        "blue": 255,
-        "alpha": 80
-      },
-      "end": {
-        "red": 40,
-        "green": 0,
-        "blue": 127,
-        "alpha": 80
-      }
-    },
-    "guiBackground": {
-      "start": {
-        "red": 64,
-        "green": 64,
-        "blue": 64,
-        "alpha": 255
-      },
-      "texLocation": "minecraft:textures/gui/options_background.png"
-    },
-    "altGuiBackground": {
-      "start": {
-        "red": 16,
-        "green": 16,
-        "blue": 16,
-        "alpha": 192
-      },
-      "end": {
-        "red": 16,
-        "green": 16,
-        "blue": 16,
-        "alpha": 208
-      }
-    },
     "languageId": "en_us",
     "stripTranslationColors": false,
     "stripTranslationFormatting": false,
     "stripExtraGuiElements": false,
-    "renderTooltips": true,
     "configKeyCode": 0
   },
   "displaySettings": {
     "presenceData": {
       "enabled": true,
       "useAsMain": true,
+      "isInstance": false,
+      "activityType": 0,
+      "partyPrivacy": 1,
       "details": "",
       "gameState": "",
       "largeImageKey": "susy_logo",

@@ -1,0 +1,249 @@
+{
+  "preRequisites:11": [
+    527
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.530.desc",
+      "icon:10": {
+        "Damage:2": 13,
+        "id:8": "opencomputers:material"
+      },
+      "name:8": "susy.quest.db.530.title",
+      "repeattime:3": 15
+    }
+  },
+  "questID:3": 530,
+  "rewards:9": {
+    "0:10": {
+      "choices:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "Plan9k (Operating System)"
+            },
+            "oc:color:3": 1,
+            "oc:data:10": {
+              "oc:fs.label:8": "plan9k"
+            },
+            "oc:lootFactory:8": "opencomputers:plan9k"
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "Network (Network Stack)"
+            },
+            "oc:color:3": 10,
+            "oc:data:10": {
+              "oc:fs.label:8": "network"
+            },
+            "oc:lootFactory:8": "opencomputers:network"
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "OpenOS (Operating System)"
+            },
+            "oc:color:3": 2,
+            "oc:data:10": {
+              "oc:fs.label:8": "openos"
+            },
+            "oc:lootFactory:8": "opencomputers:openos"
+          }
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "Data Card Software"
+            },
+            "oc:color:3": 9,
+            "oc:data:10": {
+              "oc:fs.label:8": "data"
+            },
+            "oc:lootFactory:8": "opencomputers:data"
+          }
+        },
+        "4:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "OpenLoader (Boot Loader)"
+            },
+            "oc:color:3": 13,
+            "oc:data:10": {
+              "oc:fs.label:8": "openloader"
+            },
+            "oc:lootFactory:8": "opencomputers:openloader"
+          }
+        },
+        "5:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "Builder"
+            },
+            "oc:color:3": 11,
+            "oc:data:10": {
+              "oc:fs.label:8": "builder"
+            },
+            "oc:lootFactory:8": "opencomputers:builder"
+          }
+        },
+        "6:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "Generator Upgrade Software"
+            },
+            "oc:color:3": 5,
+            "oc:data:10": {
+              "oc:fs.label:8": "generator"
+            },
+            "oc:lootFactory:8": "opencomputers:generator"
+          }
+        },
+        "7:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "OPPM (Package Manager)"
+            },
+            "oc:color:3": 6,
+            "oc:data:10": {
+              "oc:fs.label:8": "oppm"
+            },
+            "oc:lootFactory:8": "opencomputers:oppm"
+          }
+        },
+        "8:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "Digger"
+            },
+            "oc:color:3": 3,
+            "oc:data:10": {
+              "oc:fs.label:8": "dig"
+            },
+            "oc:lootFactory:8": "opencomputers:dig"
+          }
+        },
+        "9:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "Mazer"
+            },
+            "oc:color:3": 14,
+            "oc:data:10": {
+              "oc:fs.label:8": "maze"
+            },
+            "oc:lootFactory:8": "opencomputers:maze"
+          }
+        },
+        "10:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "OpenIRC (IRC Client)"
+            },
+            "oc:color:3": 12,
+            "oc:data:10": {
+              "oc:fs.label:8": "irc"
+            },
+            "oc:lootFactory:8": "opencomputers:irc"
+          }
+        },
+        "11:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "oc:color:3": 15,
+            "oc:data:10": {
+              "oc:fs.label:8": "tape"
+            },
+            "oc:lootFactory:8": "computronics:tape"
+          }
+        },
+        "12:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "oc:color:3": 1,
+            "oc:data:10": {
+              "oc:fs.label:8": "explode"
+            },
+            "oc:lootFactory:8": "computronics:explode"
+          }
+        },
+        "13:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "oc:color:3": 2,
+            "oc:data:10": {
+              "oc:fs.label:8": "openGlasses Demo"
+            },
+            "oc:lootFactory:8": "openglasses:openGlasses Demo"
+          }
+        },
+        "14:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "oc:color:3": 4,
+            "oc:data:10": {
+              "oc:fs.label:8": "wavefront objects"
+            },
+            "oc:lootFactory:8": "openglasses:wavefront objects"
+          }
+        }
+      },
+      "rewardID:8": "bq_standard:choice"
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

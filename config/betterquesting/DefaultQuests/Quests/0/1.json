@@ -1,0 +1,22 @@
+{
+  "preRequisites:11": [
+    0
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "minecraft:book"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.1.title"
+    }
+  },
+  "questID:3": 1,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

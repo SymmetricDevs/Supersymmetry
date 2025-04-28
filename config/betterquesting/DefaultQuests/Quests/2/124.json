@@ -1,0 +1,29 @@
+{
+  "preRequisites:11": [
+    127,
+    381
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.124.desc",
+      "icon:10": {
+        "Damage:2": 165,
+        "id:8": "gregtech:meta_item_2"
+      },
+      "name:8": "susy.quest.db.124.title"
+    }
+  },
+  "questID:3": 124,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 165,
+          "id:8": "gregtech:meta_item_2"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

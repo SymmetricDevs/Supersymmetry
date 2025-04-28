@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditBPFLoot",
+  "items": [
+    {
+      "weight": 1.0068187713623047,
+      "min": 3,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_gem",
+        "damage": 319,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 12,
+      "max": 24,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 292,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 12,
+      "max": 18,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 280,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0472542829811573,
+      "min": 6,
+      "max": 9,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 69,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 12,
+      "max": 36,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 8115,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.9194812774658203,
+      "min": 2,
+      "max": 3,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 254,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.9194812774658203,
+      "min": 6,
+      "max": 9,
+      "item": {
+        "id": "gregtech:meta_dust_tiny",
+        "damage": 254,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

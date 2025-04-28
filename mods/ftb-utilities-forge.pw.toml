@@ -1,0 +1,13 @@
+name = "FTB Utilities (Forge)"
+filename = "FTBUtilities-5.4.1.131.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d1f6545ac58ad895f2c8bcd0d4963d92f14b1938"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3157548
+project-id = 237102

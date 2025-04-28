@@ -1,0 +1,16 @@
+{
+  "preRequisites:11": [
+    836
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.849.desc",
+      "icon:10": {
+        "id:8": "biomesoplenty:white_sand"
+      },
+      "name:8": "susy.quest.db.849.title"
+    }
+  },
+  "questID:3": 849,
+  "tasks:9": {}
+}

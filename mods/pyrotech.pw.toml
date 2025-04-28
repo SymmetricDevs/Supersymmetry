@@ -1,0 +1,13 @@
+name = "Pyrotech"
+filename = "pyrotech-1.12.2-1.6.19.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "117ce9f4b28349e39d3d8020d6920f3b66262b0c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6253355
+project-id = 306676

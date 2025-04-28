@@ -50,9 +50,9 @@ class SinteringGlobals {
 
     public static sintering_fuels = [
         new Combustible('methane', false, 10, 50, 'carbon_dioxide', 5),
-        new Combustible('syngas', false, 10, 50, 'carbon_dioxide', 5),
+        new Combustible('hydrogen_rich_syngas', false, 10, 50, 'carbon_dioxide', 5),
+        new Combustible('monoxide_rich_syngas', false, 10, 50, 'carbon_dioxide', 5),
         new Combustible('natural_gas', false, 10, 50, 'carbon_dioxide', 5),
-        new Combustible('refinery_gas', false, 10, 50, 'carbon_dioxide', 5),
         new Combustible('plasma.helium', true, 10, 5, 'helium', 10)
     ]
 
@@ -68,8 +68,7 @@ class SinteringGlobals {
     public static rotary_kiln_fuels = [
         new Combustible('methane', false, 25, 50, 'carbon_dioxide', 25),
         new Combustible('natural_gas', false, 8, 50, 'carbon_dioxide', 25),
-        new Combustible('refinery_gas', false, 8, 50, 'carbon_dioxide', 25),
-        new Combustible('fuel_oil', false, 4, 50, 'carbon_dioxide', 25)
+        new Combustible('light_gas_oil', false, 4, 50, 'carbon_dioxide', 25),
     ]
 
     public static rotary_kiln_comburents = [

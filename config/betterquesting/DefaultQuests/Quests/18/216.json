@@ -1,0 +1,27 @@
+{
+  "preRequisites:11": [
+    213
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.216.desc",
+      "icon:10": {
+        "Damage:2": 3,
+        "id:8": "chisel:futura"
+      },
+      "name:8": "susy.quest.db.216.title"
+    }
+  },
+  "questID:3": 216,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "chisel:futura"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

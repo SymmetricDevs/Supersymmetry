@@ -1,0 +1,97 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LabScrapMeat",
+  "items": [
+    {
+      "weight": 2.202605724334717,
+      "min": 20,
+      "max": 26,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 134,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 8,
+      "max": 16,
+      "item": {
+        "id": "minecraft:beef",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 10,
+      "max": 14,
+      "item": {
+        "id": "minecraft:porkchop",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 6,
+      "max": 12,
+      "item": {
+        "id": "minecraft:rabbit",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 6,
+      "max": 11,
+      "item": {
+        "id": "minecraft:chicken",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 10,
+      "max": 10,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 325,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.3419337272644043,
+      "min": 27,
+      "max": 47,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 118,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 40,
+      "max": 53,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 117,
+        "count": 1
+      }
+    },
+    {
+      "weight": 5.889627456665039,
+      "min": 41,
+      "max": 56,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 156,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

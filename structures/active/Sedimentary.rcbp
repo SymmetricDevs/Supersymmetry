@@ -19,10 +19,6 @@
     {
       "biomes": "$MESA",
       "weight": 0.9
-    },
-    {
-      "biomes": "",
-      "weight": 0.1
     }
   ],
   "metadata": {

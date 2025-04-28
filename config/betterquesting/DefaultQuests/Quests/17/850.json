@@ -1,0 +1,17 @@
+{
+  "preRequisites:11": [
+    833
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.850.desc",
+      "icon:10": {
+        "Damage:2": 7,
+        "id:8": "chisel:cobblestone"
+      },
+      "name:8": "susy.quest.db.850.title"
+    }
+  },
+  "questID:3": 850,
+  "tasks:9": {}
+}

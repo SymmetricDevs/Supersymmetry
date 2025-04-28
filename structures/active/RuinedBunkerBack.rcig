@@ -1,0 +1,105 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "RuinedBunkerBack",
+  "items": [
+    {
+      "weight": 0.4400899410247803,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 132,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gaspunk:empty_grenade",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "grenade_skin": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.9243392944335938,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 325,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 90,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "usesLeft": {
+              "nbtType": "int",
+              "nbt": 16
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 118,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "minecraft:coal",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "travelersbackpack:travelers_backpack",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

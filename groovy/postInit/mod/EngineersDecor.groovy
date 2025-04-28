@@ -8,7 +8,7 @@ def name_removals = [
 		"engineersdecor:alternative/small_block_breaker_recipe_standalone",
 		"engineersdecor:alternative/small_tree_cutter_recipe_standalone",
 		"engineersdecor:alternative/small_waste_incinerator_recipe_standalone",
-		"engineersdecor:alternative/small_solar_panel_standalone",
+		"engineersdecor:alternative/small_solar_panel_recipe_standalone",
 		"engineersdecor:alternative/small_mineral_smelter_recipe_standalone",
 		"engineersdecor:alternative/straight_pipe_valve_recipe_standalone",
 		"engineersdecor:alternative/straight_pipe_valve_redstone_recipe_standalone",
@@ -102,6 +102,30 @@ crafting.replaceShaped('engineersdecor:independent/gas_concrete_stairs_recipe', 
 	[item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete'), null],
 	[item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete')]
 ])
+
+// Stairs rework
+
+def stair_materials = [
+	"clinker_brick",
+	"clinker_brick_stained",
+	"slag_brick",
+	"rebar_concrete",
+	"rebar_concrete_tile",
+	"gas_concrete"
+]
+
+for (name in stair_materials) {
+	def stair = item("engineersdecor:${name}_stairs")
+	def block = stair_materials.indexOf(name) > 2 ? item("engineersdecor:${name}") : item("engineersdecor:${name}_block")
+	crafting.replaceShaped("engineersdecor:independent/${name}_stairs_recipe_decompose", block * 3,
+		[
+			[stair, stair, null],
+			[stair, stair, null],
+			[null, null, null]
+		]
+	)
+}
+
 
 // Concrete
 

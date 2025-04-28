@@ -1,0 +1,23 @@
+{
+  "preRequisites:11": [
+    87
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.227.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 32767,
+        "id:8": "betterbuilderswands:wanddiamond"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.227.title"
+    }
+  },
+  "questID:3": 227,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "path": "mod_harvestcraft/mutations/garlic_mutation.json",
-  "enabled": true,
-  "chance": 0.5,
-  "child": "harvestcraft:garlic_plant",
-  "parent1": "harvestcraft:onion_plant",
-  "parent2": "harvestcraft:ginger_plant"
-}

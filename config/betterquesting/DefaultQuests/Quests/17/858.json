@@ -1,0 +1,16 @@
+{
+  "preRequisites:11": [
+    832
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.858.desc",
+      "icon:10": {
+        "id:8": "tardis:gallifreyan_grass_snow"
+      },
+      "name:8": "susy.quest.db.858.title"
+    }
+  },
+  "questID:3": 858,
+  "tasks:9": {}
+}

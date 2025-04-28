@@ -1,3 +1,5 @@
+ASSEMBLER = recipemap('assembler')
+
 def name_removals = [
         "rftools:machine_frame",
         "rftools:machine_base",
@@ -11,8 +13,9 @@ def name_removals = [
         "rftools:dialing_device",
         "rftools:destination_analyzer",
         "rftools:screen",
-        "rftools:builder",
         "rftools:screen_controller",
+        "rftools:builder",
+        "rftools:machineinformation_module",
         "rftools:syringe",
         "rftools:modifier_module",
         "rftools:tablet_with_storage_module_6",
@@ -52,6 +55,7 @@ def name_removals = [
         "rftools:storage_terminal",
         "rftools:level_emitter",
         "rftools:simple_dialer",
+        "rftools:elevator_button_module"
 ]
 
 for (item in name_removals) {
@@ -108,55 +112,55 @@ crafting.replaceShaped('rftools:storage_module_2', item('rftools:storage_module'
 
 crafting.replaceShaped('rftools:redstone_transmitter_block', item('rftools:redstone_transmitter_block'), [
         [null, null, null],
-        [metaitem('wireFineRedAlloy'), metaitem('circuit.electronic'), metaitem('emitter.lv')],
+        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('emitter.lv')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:redstone_receiver_block', item('rftools:redstone_receiver_block'), [
         [null, null, null],
-        [metaitem('sensor.lv'), metaitem('circuit.electronic'), metaitem('wireFineRedAlloy')],
+        [metaitem('sensor.lv'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:sequencer_block', item('rftools:sequencer_block'), [
         [null, item('minecraft:redstone_torch'), null],
-        [metaitem('wireFineRedAlloy'), metaitem('circuit.electronic'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:counter_block', item('rftools:counter_block'), [
         [null, item('minecraft:comparator'), null],
-        [metaitem('wireFineRedAlloy'), metaitem('circuit.electronic'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:logic_block', item('rftools:logic_block'), [
-        [metaitem('wireFineRedAlloy'), metaitem('circuit.electronic'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
         [item('minecraft:comparator'), metaitem('plateStone'), item('minecraft:comparator')],
         [metaitem('wireFineRedAlloy'), item('minecraft:comparator'), metaitem('wireFineRedAlloy')]
 ])
 
 crafting.replaceShaped('rftools:invchecker_block', item('rftools:invchecker_block'), [
         [null, null, null],
-        [item('minecraft:comparator'), metaitem('circuit.electronic'), metaitem('sensor.mv')],
+        [item('minecraft:comparator'), ore('circuitLv'), metaitem('sensor.mv')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:sensor_block', item('rftools:sensor_block'), [
         [null, null, null],
-        [item('minecraft:comparator'), metaitem('circuit.electronic'), metaitem('camera')],
+        [item('minecraft:comparator'), ore('circuitLv'), metaitem('camera')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:analog_block', item('rftools:analog_block'), [
         [null, metaitem('wireFineRedAlloy'), null],
-        [metaitem('wireFineRedAlloy'), metaitem('circuit.electronic'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:digit_block', item('rftools:digit_block'), [
         [null, ore('paneGlass'), null],
-        [metaitem('wireFineRedAlloy'), metaitem('circuit.electronic'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
         [null, metaitem('plateStone'), null]
 ])
 
@@ -227,9 +231,9 @@ crafting.replaceShaped('rftools:shield_template_block', item('rftools:shield_tem
 ])
 
 crafting.replaceShaped('rftools:item_filter', item('rftools:item_filter'), [
-        [metaitem('circuit.electronic'), metaitem('pipeSmallItemTin'), metaitem('item_filter')],
+        [ore('circuitLv'), metaitem('pipeSmallItemTin'), metaitem('item_filter')],
         [metaitem('pipeSmallItemTin'), metaitem('hull.lv'), metaitem('pipeSmallItemTin')],
-        [metaitem('item_filter'), metaitem('pipeSmallItemTin'), metaitem('circuit.electronic')]
+        [metaitem('item_filter'), metaitem('pipeSmallItemTin'), ore('circuitLv')]
 ])
 
 crafting.replaceShaped('rftools:filter_module', item('rftools:filter_module'), [
@@ -255,3 +259,40 @@ crafting.replaceShaped('rftools:storage_scanner', item('rftools:storage_scanner'
         [ore('chest'), metaitem('hull.lv'), ore('chest')],
         [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')]
 ])
+
+crafting.replaceShaped('rftools:storage_scanner', item('rftools:storage_scanner'), [
+        [ore('plateSteel'), metaitem('sensor.lv'), ore('plateSteel')],
+        [ore('chest'), metaitem('hull.lv'), ore('chest')],
+        [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')]
+])
+
+crafting.replaceShaped('rftools:screen_controller', item('rftools:screen_controller'), [
+        [metaitem('emitter.lv'), ore('plateSteel'), metaitem('emitter.lv')],
+        [ore('circuitLv'), metaitem('hull.lv'), ore('circuitLv')],
+        [ore('plateSteel'), ore('cableGtSingleTin'), ore('plateSteel')]
+])
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('cover.screen'))
+        .inputs(metaitem('sensor.lv'))
+        .inputs(ore('plateSteel') * 3)
+        .inputs(ore('screwSteel') * 4)
+        .outputs(item('rftools:screen'))
+        .duration(100)
+	.EUt(30)
+	.buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('circuitLv'))
+        .inputs(item('minecraft:stone_button') * 4)
+        .outputs(item('rftools:elevator_button_module'))
+        .duration(100)
+	.EUt(30)
+	.buildAndRegister()
+
+crafting.replaceShaped('rftools:elevator', item('rftools:elevator'), [
+        [metaitem('electric.motor.lv'), ore('cableGtSingleTin'), metaitem('electric.motor.lv')],
+        [ore('gearSmallSteel'), metaitem('hull.lv'), ore('gearSmallSteel')],
+        [ore('wireFineSteel'), ore('circuitLv'), ore('wireFineSteel')]
+])
+

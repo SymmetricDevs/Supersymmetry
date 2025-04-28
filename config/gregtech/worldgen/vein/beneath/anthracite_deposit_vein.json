@@ -1,0 +1,43 @@
+{
+  "weight": 60,
+  "density": 1,
+  "max_height": 255,
+  "min_height": 0,
+  "dimension_filter": ["dimension_id:10"],
+  "generator": {
+    "type": "layered",
+    "radius": [
+      25,
+      25
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": {
+          "block":"susy:resource_block_1",
+          "variant":"anthracite"
+        }
+      },
+      {
+        "secondary": {
+          "block":"susy:resource_block_1",
+          "variant":"anthracite"
+        }
+      },
+      {
+        "between": {
+          "block":"susy:resource_block_1",
+          "variant":"anthracite"
+        }
+      },
+      {
+        "sporadic": {
+          "block":"susy:resource_block_1",
+          "variant":"anthracite"
+        }
+      }
+    ]
+  }
+}

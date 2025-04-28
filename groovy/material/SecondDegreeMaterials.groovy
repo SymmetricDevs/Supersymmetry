@@ -160,9 +160,10 @@ public class SecondDegreeMaterials {
                 .color(0xb0b0bf)
                 .build()
 
-        ImpregnatedCopperOxideCatalyst = new Material.Builder(13023, SuSyUtility.susyId('impregnated_copper_oxide_catalyst'))
+        CopperZincChromiumOxide = new Material.Builder(13023, SuSyUtility.susyId('copper_zinc_chromium_oxide')) 
                 .dust()
-                .components(CupricOxide * 1, Alumina * 1)
+                .components(CupricOxide * 2, ZincOxide, ChromiumTrioxide)
+                .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build()
 
@@ -231,14 +232,14 @@ public class SecondDegreeMaterials {
                 .color(0x5880c7)
                 .build()
 
-        SodiumPerchlorateSolution.setFormula('(H2O)(NaClO4)', true);
+        SodiumPerchlorateSolution.setFormula('(NaClO4)(H2O)', true);
 
         SodiumChlorateSolution = new Material.Builder(13036, SuSyUtility.susyId('sodium_chlorate_solution'))
                 .liquid()
                 .color(0x315fe8)
                 .build()
 
-        SodiumChlorateSolution.setFormula('(H2O)(NaClO3)', true);
+        SodiumChlorateSolution.setFormula('(NaClO3)(H2O)', true);
 
         DilutedAniline = new Material.Builder(13037, SuSyUtility.susyId('diluted_aniline'))
                 .liquid()
@@ -450,7 +451,25 @@ public class SecondDegreeMaterials {
                 .color(0x70cc6e)
                 .build();
 
-        //FREE IDs: 13072-13074
+        SupportedNickel = new Material.Builder(13072, SuSyUtility.susyId('supported_nickel'))
+                .dust()
+                .components(NickelIINitrate * 1, Alumina * 1)
+                .colorAverage()
+                .flags(GENERATE_CATALYST_BED)
+                .build()
+
+        AmmoniumMetatungstateSolution = new Material.Builder(13073, SuSyUtility.susyId('ammonium_metatungstate_solution'))
+                .liquid()
+                .components(AmmoniumMetatungstate, Ammonia * 4, Water * 4)
+                .color(0x340959)
+                .build()
+
+        DilutedSodiumChlorateSolution = new Material.Builder(13074, SuSyUtility.susyId('diluted_sodium_chlorate_solution'))
+                .liquid()
+                .color(0x5f81e8)
+                .build()
+
+        DilutedSodiumChlorateSolution.setFormula('(NaClO3)(H2O)2', true);
 
         DilutedAmmoniumSulfateSolution = new Material.Builder(13075, SuSyUtility.susyId('diluted_ammonium_sulfate_solution'))
                 .liquid()
@@ -548,7 +567,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        AlluvialPlatinumMotherLiquor.setFormula('(H2PdCl4)(ZnCl2)(HCl)4(H2O)14', true)
+        AlluvialDivalentPalladiumSolution.setFormula('(H2PdCl4)(ZnCl2)(HCl)4(H2O)14', true)
 
         PlatinumPrecursorSolution = new Material.Builder(13091, SuSyUtility.susyId('platinum_precursor_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -559,8 +578,10 @@ public class SecondDegreeMaterials {
         SupportedPlatinum = new Material.Builder(13092, SuSyUtility.susyId('supported_platinum'))
                 .dust()
                 .components(Alumina * 1, Platinum * 1, Chlorine * 4)
+                .colorAverage()
                 .flags(GENERATE_CATALYST_BED)
                 .build()
+                .setFormula('(Al2O3)(PtCl4)', true)
 
         CrudeManganeseIISulfateSolution = new Material.Builder(13093, SuSyUtility.susyId('crude_manganese_ii_sulfate_solution'))
                 .liquid()
@@ -578,7 +599,7 @@ public class SecondDegreeMaterials {
 
         DilutedZincChlorideSolution = new Material.Builder(13095, SuSyUtility.susyId("diluted_zinc_chloride_solution"))
                 .liquid()
-                .components(ZincChloride * 1, Water * 2)
+                .components(ZincChloride * 1, Water * 3)
                 .colorAverage()
                 .build();
 
@@ -693,5 +714,139 @@ public class SecondDegreeMaterials {
                 .components(SodiumAlum * 1, Water * 4)
                 .colorAverage()
                 .build();
+
+        GalvanizedSteel = new Material.Builder(13114, SuSyUtility.susyId("galvanized_steel"))
+                .dust().flags(GENERATE_FINE_WIRE)
+                .components(Iron * 8, Zinc * 1)
+                .colorAverage()
+                .build();
+
+        ImpureLithiumCarbonateSolution = new Material.Builder(13115, SuSyUtility.susyId("impure_lithium_carbonate_solution"))
+                .liquid()
+                .components(Carbon * 2, Lithium * 2, Oxygen * 3, Water)
+                .colorAverage()
+                .build();
+
+        ImpureLithiumCarbonateSolution.setFormula("(C)(Li2CO3)(H2O)", true)
+
+        LithiumCarbonateSolution = new Material.Builder(13116, SuSyUtility.susyId("lithium_carbonate_solution"))
+                .liquid()
+                .components(Lithium * 2, Carbon * 1, Oxygen * 3, Water)
+                .colorAverage()
+                .build()
+                .setFormula("(Li2CO3)(H2O)", true);
+
+        AcidicArgonHydrogenMixture = new Material.Builder(13117, SuSyUtility.susyId("acidic_argon_hydrogen_mixture"))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Argon, Hydrogen * 4, HydrogenChloride)
+                .colorAverage()
+                .build();
+
+        AcidicArgonHydrogenMixture.setFormula("(Ar)(HCl)(H)", true);
+
+        AmmoniacalArgonHydrogenMixture = new Material.Builder(13118, SuSyUtility.susyId("ammoniacal_argon_hydrogen_mixture"))
+                .gas()
+                .components(Argon, Hydrogen * 4, Ammonia)
+                .colorAverage()
+                .build();
+
+        AmmoniacalArgonHydrogenMixture.setFormula("(Ar)(NH3)(H)", true);
+
+        AcidicHydrogenVapor = new Material.Builder(13119, SuSyUtility.susyId("acidic_hydrogen_vapor"))
+                .gas()
+                .components(Hydrogen * 6, CarbonDioxide * 1)
+                .color(0x003c74)
+                .build();
+
+        AcidicHydrogenVapor.setFormula("(H)8(CO2)", true);
+
+        SodiumHydroxideMethanolSolution = new Material.Builder(13120, SuSyUtility.susyId("sodium_hydroxide_methanol_solution"))
+                .fluid()
+                .components(SodiumHydroxide, Methanol)
+                .colorAverage()
+                .build();
+
+        TetraamminepalladiumDichlorideSolution = new Material.Builder(13121, SuSyUtility.susyId("tetraamminepalladium_dichloride_solution"))
+                .fluid()
+                .components(Chlorine * 2, Hydrogen * 12, Nitrogen * 4, Palladium, Water * 4)
+                .colorAverage()
+                .build();
+
+        TetraamminepalladiumDichlorideSolution.setFormula("([Pd(NH3)4]Cl2)(H2O)4", true)
+
+        // FREE ID: 13122-13129
+
+        HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(HexachloroiridicAcid * 1, Water * 2)
+                .colorAverage()
+                .build();
+
+        HexachlororhodicAcidSolution = new Material.Builder(13131, SuSyUtility.susyId('hexachlororhodic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Hydrogen * 3, Rhodium * 1, Chlorine * 6, Water * 18)
+                .colorAverage()
+                .build();
+
+        HexachlororhodicAcidSolution.setFormula("(H3RhCl6)(H2O)18", true); //it's actually (H3RhCl6)10(H2O)179
+
+        HexachlororuthenicAcidSolution = new Material.Builder(13132, SuSyUtility.susyId('hexachlororuthenic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Hydrogen * 2, Ruthenium * 1, Chlorine * 6, Water * 1)
+                .colorAverage()
+                .build();
+
+        HexachlororuthenicAcidSolution.setFormula('(H2RuCl6)2(H2O)35', true)
+
+        IronIIChlorideSolution = new Material.Builder(13133, SuSyUtility.susyId('iron_ii_chloride_solution'))
+                .liquid()
+                .components(IronIIChloride, Water * 2)
+                .colorAverage()
+                .build();
+
+        // FREE ID: 13134
+
+        PotassiumPersulfateSolution = new Material.Builder(13135, SuSyUtility.susyId('potassium_persulfate_solution'))
+                .fluid()
+                .components(PotassiumPersulfate * 1, Water * 1)
+                .colorAverage()
+                .build();
+
+        PotassiumPersulfateSolution.setFormula("(K2S2O8)(H2O)", true)
+
+        SodiumHydrosulfideSolution = new Material.Builder(13136, SuSyUtility.susyId('sodium_hydrosulfide_solution'))
+                .fluid()
+                .components(SodiumHydrosulfide * 1, Water * 2)
+                .colorAverage()
+                .build();
+
+        CobaltSulfateSolution = new Material.Builder(13137, SuSyUtility.susyId("cobalt_sulfate_solution"))
+                .fluid()
+                .components(CobaltSulfate, Water * 1)
+                .colorAverage()
+                .build();
+
+        CobaltSulfateSolution.setFormula("(CoSO4)(H2O)", true)
+
+        DilutedAmmoniumChlorideSolution = new Material.Builder(13138, SuSyUtility.susyId('diluted_ammonium_chloride_solution'))
+                .liquid()
+                .components(AmmoniumChloride * 1, Water * 2)
+                .colorAverage()
+                .build();
+
+        SodiumSulfateAcetoneSolution = new Material.Builder(13139, SuSyUtility.susyId('sodium_sulfate_acetone_solution'))
+                .liquid()
+                .components(SodiumSulfate * 6, Acetone, Water * 9)
+                .color(0x2c733a)
+                .build();
+
+        ChromiumSulfateSolution = new Material.Builder(13140, SuSyUtility.susyId('chromium_sulfate_solution'))
+                .liquid()
+                .components(Chrome * 4, Sulfur * 6, Oxygen * 24, Acetone, Water * 9)
+                .color(0x2c733a)
+                .build();
+
+        ChromiumSulfateSolution.setFormula("(Cr2(SO4)3)2(C3H6O)(H2O)9", true)
+
     }
 }

@@ -54,20 +54,6 @@ crafting.addShaped("anode_lead", metaitem('anode.lead'), [
         [null,null,null]
 ]);
 
-crafting.addShaped("drum_lead", metaitem('drum.lead'), [
-        [null,ore('craftingToolHardHammer'),null],
-        [metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')],
-        [metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')]
-]);
-
-crafting.addShapeless("drum_nbt_lead", metaitem('drum.lead'), [
-        metaitem('drum.lead').noreturn()
-]);
-crafting.addShapeless("drum_nbt_brass", metaitem('drum.brass'), [
-        metaitem('drum.brass').noreturn()
-]);
-// Note: this is a temporary fix to clear brass drum.
-
 mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem('battery.hull.lv'))
         .inputs(ore('plateLead') * 2)
@@ -75,15 +61,6 @@ mods.gregtech.assembler.recipeBuilder()
         .outputs(metaitem('battery.lead_acid'))
         .duration(100)
         .EUt(16)
-        .buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs(ore('stickLongLead') * 2)
-        .inputs(ore('plateLead') * 4)
-        .outputs(metaitem('drum.lead'))
-        .duration(200)
-        .EUt(16)
-        .circuitMeta(2)
         .buildAndRegister()
 
 MIXER_RECIPES.recipeBuilder()
@@ -102,15 +79,6 @@ mods.gregtech.electric_blast_furnace.recipeBuilder()
         .outputs(metaitem('dustSodiumCathodeAlloy') * 10)
         .blastFurnaceTemp(1250)
         .duration(300)
-        .EUt(30)
-        .buildAndRegister()
-
-CSTR.recipeBuilder()
-        .fluidInputs(fluid('phosgene') * 50)
-        .fluidInputs(fluid('methanol') * 100)
-        .fluidOutputs(fluid('dimethyl_carbonate') * 50)
-        .fluidOutputs(fluid('hydrogen_chloride') * 100)
-        .duration(1)
         .EUt(30)
         .buildAndRegister()
 
@@ -134,14 +102,6 @@ BR.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-BCR.recipeBuilder()
-        .fluidInputs(fluid('ethylene_oxide') * 50)
-        .fluidInputs(fluid('carbon_dioxide') * 50)
-        .fluidOutputs(fluid('ethylene_carbonate') * 50)
-        .duration(5)
-        .EUt(30)
-        .buildAndRegister()
-
 MIXER_RECIPES.recipeBuilder()
         .inputs(ore('dustLithiumHexafluorophosphate') * 8)
         .fluidInputs(fluid('ethylene_carbonate') * 1000)
@@ -152,27 +112,10 @@ MIXER_RECIPES.recipeBuilder()
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustLithiumCarbonate') * 6)
-        .inputs(ore('dustCobaltOxide') * 4)
+        .inputs(ore('dustHighPurityCobaltOxide') * 4)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .outputs(metaitem('dustLithiumCobaltOxide') * 8)
         .duration(140)
-        .EUt(30)
-        .buildAndRegister()
-
-ROASTER.recipeBuilder()
-        .inputs(ore('dustNickel') * 1)
-        .fluidInputs(fluid('chlorine') * 2000)
-        .outputs(metaitem('dustNickelChloride') * 3)
-        .duration(100)
-        .EUt(30)
-        .buildAndRegister()
-
-BR.recipeBuilder()
-        .inputs(ore('dustNickelChloride') * 3)
-        .fluidInputs(fluid('potassium_hydroxide_solution') * 2000)
-        .outputs(metaitem('dustNickelHydroxide') * 5)
-        .fluidOutputs(fluid('potassium_chloride_solution') * 2000)
-        .duration(100)
         .EUt(30)
         .buildAndRegister()
 

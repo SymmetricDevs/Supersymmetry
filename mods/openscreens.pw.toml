@@ -1,0 +1,13 @@
+name = "OpenScreens"
+filename = "openscreens-1.12.2-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ba8baa9401376fd233ad24c128569c71cb873a34"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2754959
+project-id = 325357

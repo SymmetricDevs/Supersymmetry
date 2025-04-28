@@ -35,7 +35,7 @@ BLENDER = recipemap('blender')
 
 def major_solvents = [
     'xylene',
-    'naphtha',
+    'light_naphtha',
     'toluene'
 ]
 
@@ -50,17 +50,10 @@ def minor_solvents = [
 // Methyl-tert-butyl ether
 
     FBR.recipeBuilder()
+        .notConsumable(ore('catalystBedChloridedAlumina'))
+        .notConsumable(fluid('hydrogen') * 50)
         .fluidInputs(fluid('butane') * 50)
-        .notConsumable(ore('dustAluminiumChloride'))
         .fluidOutputs(fluid('isobutane') * 50)
-        .duration(5)
-        .EUt(30)
-        .buildAndRegister()
-
-    FBR.recipeBuilder()
-        .fluidInputs(fluid('isobutane') * 50)
-        .notConsumable(ore('dustChromiumTrioxide'))
-        .fluidOutputs(fluid('isobutylene') * 50)
         .duration(5)
         .EUt(30)
         .buildAndRegister()
@@ -97,11 +90,11 @@ def minor_solvents = [
         .EUt(120)
         .buildAndRegister()
 
-    // 2,4-Dimethyl-6-tert-butylphenol
+    // 2,4/5-Dimethyl-6-tert-butylphenol
 
     CSTR.recipeBuilder()
         .fluidInputs(fluid('isobutylene') * 50)
-        .fluidInputs(fluid('xylenol') * 50)
+        .fluidInputs(fluid('two_four_five_xylenol_mixture') * 50)
         .notConsumable(fluid('sulfuric_acid') * 50)
         .fluidOutputs(fluid('dimethyl_tert_butylphenol') * 50)
         .duration(5)
@@ -222,7 +215,7 @@ CSTR.recipeBuilder()
         .fluidInputs(fluid('sodium') * 288)
         .fluidInputs(fluid('methylcyclopentadiene') * 2000)
         .fluidInputs(fluid('diglyme') * 1000)
-        .fluidOutputs(fluid('bismethylcyclopentadienylmanganese_solution') * 2000)
+        .fluidOutputs(fluid('bismethylcyclopentadienylmanganese_solution') * 1000)
         .duration(100)
         .EUt(120)
         .buildAndRegister()
@@ -370,7 +363,7 @@ BR.recipeBuilder()
         .duration(50)
         .buildAndRegister()
 
-    // Wax antisetlling agent (N,N-dihexadecyl phthalic acid amide)
+    // Wax antisettling agent (not implemented)(N,N-dihexadecyl phthalic acid amide)
 
     FBR.recipeBuilder()
         .notConsumable(metaitem('catalystBedAlumina'))
@@ -593,14 +586,45 @@ for (pair in oxygenatePairs) {
         .buildAndRegister()
 }
 
-println("Registered oxygenate pairs")
+log.infoMC("Registered oxygenate pairs")
 
 // Gasoline final blending
 
+def GasolineFeedstocks = [
+    'naphtha' : 1,
+    'light_naphtha' : 1,
+    'dehexanized_naphtha' : 1,
+    'reformate' : 3,
+    'reformate_raffinate' : 2.5,
+    'polymerate' : 2,
+    'isomerate' : 3,
+    'alkylate' : 2.5,
+    'pyrolysis_gasoline' : 1.5,
+    'pyrolysis_raffinate' : 1
+]
+
+GasolineFeedstocks.each { key, val ->
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid(key) * 1000)
+        .fluidOutputs(fluid('gasoline') * ((int)(1000 * val)))
+        .circuitMeta(10)
+        .duration(4)
+        .EUt(120)
+        .buildAndRegister()
+
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid(key) * 10000)
+        .fluidOutputs(fluid('gasoline') * ((int)(10000 * val)))
+        .circuitMeta(11)
+        .duration(40)
+        .EUt(120)
+        .buildAndRegister()
+}
+
 BLENDER.recipeBuilder()
     .fluidInputs(fluid('gasoline') * 1000)
-    .fluidInputs(fluid('oxygenates') * 100)
-    .fluidInputs(fluid('antiknock') * 100)
+    .fluidInputs(fluid('oxygenates') * 50)
+    .fluidInputs(fluid('antiknock') * 50)
     .fluidOutputs(fluid('midgrade_gasoline') * 1000)
     .duration(10)
     .EUt(120)
@@ -608,8 +632,8 @@ BLENDER.recipeBuilder()
 
 BLENDER.recipeBuilder()
     .fluidInputs(fluid('midgrade_gasoline') * 1000)
-    .fluidInputs(fluid('methyl_carbitol') * 100)
-    .fluidInputs(fluid('corrosion_inhibitor') * 100)
+    .fluidInputs(fluid('methyl_carbitol') * 50)
+    .fluidInputs(fluid('corrosion_inhibitor') * 50)
     .fluidOutputs(fluid('premium_gasoline') * 1000)
     .duration(10)
     .EUt(120)
@@ -617,8 +641,8 @@ BLENDER.recipeBuilder()
 
 BLENDER.recipeBuilder()
     .fluidInputs(fluid('premium_gasoline') * 1000)
-    .fluidInputs(fluid('antioxidants') * 100)
-    .fluidInputs(fluid('metal_deactivator') * 100)
+    .fluidInputs(fluid('antioxidants') * 50)
+    .fluidInputs(fluid('metal_deactivator') * 50)
     .fluidOutputs(fluid('supreme_gasoline') * 1000)
     .duration(10)
     .EUt(120)
@@ -626,10 +650,36 @@ BLENDER.recipeBuilder()
 
 // Diesel final blending
 
+def dieselFeedstocks = [
+    'light_cycle_oil',
+    'medium_liquefaction_oil'
+]
+
+// Fuel Oil (marine and bunker fuels)
+
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('light_gas_oil') * 1000)
+    .fluidOutputs(fluid('diesel') * 1000)
+    .circuitMeta(1)
+    .duration(2)
+    .EUt(120)
+    .buildAndRegister()
+
+for (diesel in dieselFeedstocks) {
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid('light_gas_oil') * 700)
+        .fluidInputs(fluid(diesel) * 300)
+        .fluidOutputs(fluid('diesel') * 1000)
+        .circuitMeta(2)
+        .duration(2)
+        .EUt(120)
+        .buildAndRegister()
+}
+
 BLENDER.recipeBuilder()
     .fluidInputs(fluid('diesel') * 1000)
-    .fluidInputs(fluid('ignition_improver') * 100)
-    .fluidInputs(fluid('cold_flow_improver') * 100)
+    .fluidInputs(fluid('ignition_improver') * 75)
+    .fluidInputs(fluid('cold_flow_improver') * 75)
     .fluidOutputs(fluid('midgrade_diesel') * 1000)
     .duration(10)
     .EUt(120)
@@ -637,8 +687,8 @@ BLENDER.recipeBuilder()
 
 BLENDER.recipeBuilder()
     .fluidInputs(fluid('midgrade_diesel') * 1000)
-    .fluidInputs(fluid('antistatic_additive') * 100)
-    .fluidInputs(fluid('lubricity_additive') * 100)
+    .fluidInputs(fluid('antistatic_additive') * 75)
+    .fluidInputs(fluid('lubricity_additive') * 75)
     .fluidOutputs(fluid('premium_diesel') * 1000)
     .duration(10)
     .EUt(120)
@@ -646,8 +696,8 @@ BLENDER.recipeBuilder()
 
 BLENDER.recipeBuilder()
     .fluidInputs(fluid('premium_diesel') * 1000)
-    .fluidInputs(fluid('antioxidants') * 100)
-    .fluidInputs(fluid('antifoaming_additive') * 100)
+    .fluidInputs(fluid('antioxidants') * 75)
+    .fluidInputs(fluid('antifoaming_additive') * 75)
     .fluidOutputs(fluid('supreme_diesel') * 1000)
     .duration(10)
     .EUt(120)
@@ -657,8 +707,8 @@ BLENDER.recipeBuilder()
 
 BLENDER.recipeBuilder()
     .fluidInputs(fluid('kerosene') * 1000)
-    .fluidInputs(fluid('methyl_carbitol') * 100)
-    .fluidInputs(fluid('antistatic_additive') * 100)
+    .fluidInputs(fluid('methyl_carbitol') * 25)
+    .fluidInputs(fluid('antistatic_additive') * 25)
     .fluidOutputs(fluid('midgrade_kerosene') * 1000)
     .duration(10)
     .EUt(120)
@@ -666,8 +716,8 @@ BLENDER.recipeBuilder()
 
 BLENDER.recipeBuilder()
     .fluidInputs(fluid('midgrade_kerosene') * 1000)
-    .fluidInputs(fluid('lubricity_additive') * 100)
-    .fluidInputs(fluid('antioxidants') * 100)
+    .fluidInputs(fluid('lubricity_additive') * 25)
+    .fluidInputs(fluid('antioxidants') * 25)
     .fluidOutputs(fluid('premium_kerosene') * 1000)
     .duration(10)
     .EUt(120)
@@ -675,9 +725,52 @@ BLENDER.recipeBuilder()
 
 BLENDER.recipeBuilder()
     .fluidInputs(fluid('premium_kerosene') * 1000)
-    .fluidInputs(fluid('corrosion_inhibitor') * 100)
-    .fluidInputs(fluid('metal_deactivator') * 100)
+    .fluidInputs(fluid('corrosion_inhibitor') * 25)
+    .fluidInputs(fluid('metal_deactivator') * 25)
     .fluidOutputs(fluid('supreme_kerosene') * 1000)
     .duration(10)
     .EUt(120)
     .buildAndRegister()
+
+// RP-1
+
+FBR.recipeBuilder()
+    .fluidInputs(fluid('supreme_kerosene') * 1000)
+    .fluidInputs(fluid('hydrogen') * 1000)
+    .notConsumable(metaitem('catalystBedHydrotreatingCatalyst'))
+    .fluidOutputs(fluid('rp_one') * 1000)
+    .duration(100)
+    .EUt(480)
+    .buildAndRegister()
+
+// Diesel * 6000
+mods.gregtech.mixer.removeByInput(120, null, [fluid('light_fuel') * 5000 * 5000, fluid('heavy_fuel') * 1000 * 1000])
+
+def residueFeedstocks = [
+    'atmospheric_oil_residue',
+    'vacuum_oil_residue',
+    'visbreaking_residue',
+    'deasphalted_oil',
+    'clarified_slurry_oil'
+]
+
+// Fuel Oil (marine and bunker fuels)
+
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('heavy_gas_oil') * 1000)
+    .fluidOutputs(fluid('fuel_oil') * 1000)
+    .circuitMeta(1)
+    .duration(2)
+    .EUt(120)
+    .buildAndRegister()
+
+for (residue in residueFeedstocks) {
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid('heavy_gas_oil') * 500)
+        .fluidInputs(fluid(residue) * 500)
+        .fluidOutputs(fluid('fuel_oil') * 1000)
+        .circuitMeta(2)
+        .duration(2)
+        .EUt(120)
+        .buildAndRegister()
+}

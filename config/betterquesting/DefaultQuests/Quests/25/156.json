@@ -1,0 +1,78 @@
+{
+  "preRequisites:11": [
+    25
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.156.desc",
+      "icon:10": {
+        "id:8": "bdsandm:wood_barrel",
+        "tag:10": {
+          "barrelCap:10": {
+            "count:3": 0,
+            "locked:1": 0,
+            "maxCap:3": 1024,
+            "objColors:11": [
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "oreDict:1": 0,
+            "overflow:1": 0,
+            "refFluid:10": {},
+            "refStack:10": {
+              "Count:3": 1,
+              "id:8": "minecraft:air",
+              "tag:10": {
+                "context0:3": 4
+              }
+            },
+            "stackCap:3": 64
+          }
+        }
+      },
+      "name:8": "susy.quest.db.156.title"
+    }
+  },
+  "questID:3": 156,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "bdsandm:wood_barrel",
+          "tag:10": {
+            "barrelCap:10": {
+              "count:3": 0,
+              "locked:1": 0,
+              "maxCap:3": 1024,
+              "objColors:11": [
+                -1,
+                -1,
+                -1,
+                -1
+              ],
+              "oreDict:1": 0,
+              "overflow:1": 0,
+              "refFluid:10": {},
+              "refStack:10": {
+                "Count:3": 1,
+                "id:8": "minecraft:air",
+                "tag:10": {
+                  "context0:3": 4
+                }
+              },
+              "stackCap:3": 64
+            }
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "bdsandm:upgrade"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

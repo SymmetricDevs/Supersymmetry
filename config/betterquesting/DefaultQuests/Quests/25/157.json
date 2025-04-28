@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    30
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.157.desc",
+      "icon:10": {
+        "id:8": "bdsandm:shipping_container"
+      },
+      "name:8": "susy.quest.db.157.title"
+    }
+  },
+  "questID:3": 157,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "bdsandm:shipping_container"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

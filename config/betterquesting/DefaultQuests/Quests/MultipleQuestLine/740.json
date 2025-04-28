@@ -1,0 +1,35 @@
+{
+  "preRequisites:11": [
+    222
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.740.desc",
+      "icon:10": {
+        "id:8": "multistorage:vault"
+      },
+      "name:8": "susy.quest.db.740.title"
+    }
+  },
+  "questID:3": 740,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "multistorage:vault"
+        },
+        "1:10": {
+          "Count:3": 16,
+          "Damage:2": 1,
+          "id:8": "multistorage:vault",
+          "tag:10": {
+            "color:8": "silver",
+            "cvalue:3": 10329495
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

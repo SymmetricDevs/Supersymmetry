@@ -1,0 +1,61 @@
+{
+  "preRequisites:11": [
+    525
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.527.desc",
+      "icon:10": {
+        "Damage:2": 1,
+        "id:8": "opencomputers:storage",
+        "tag:10": {
+          "display:10": {
+            "Name:8": "OpenOS (Operating System)"
+          },
+          "oc:color:3": 2,
+          "oc:data:10": {
+            "oc:fs.label:8": "openos"
+          },
+          "oc:lootFactory:8": "opencomputers:openos"
+        }
+      },
+      "name:8": "susy.quest.db.527.title",
+      "repeattime:3": 900
+    }
+  },
+  "questID:3": 527,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "OpenOS (Operating System)"
+            },
+            "oc:color:3": 2,
+            "oc:data:10": {
+              "oc:fs.label:8": "openos"
+            },
+            "oc:lootFactory:8": "opencomputers:openos"
+          }
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "opencomputers:storage"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

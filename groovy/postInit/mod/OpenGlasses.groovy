@@ -2,7 +2,7 @@ def solder = fluid('soldering_alloy') * 72
 
 def name_removals = [
 "openglasses:items/openglasses_card",
-"openglasses:blocks/openglasses_terminal",
+"openglasses:blocks/openglassesterminal",
 "openglasses:items/openglasses"
 ]
 

@@ -1,8 +1,0 @@
-{
-  "path": "resource/mutations/quartzanthemum_mutation.json",
-  "enabled": false,
-  "chance": 0.5,
-  "child": "resource:quartzanthemum_plant",
-  "parent1": "resource:redstodendron_plant",
-  "parent2": "resource:nitorwart_plant"
-}

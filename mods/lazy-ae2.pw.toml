@@ -1,0 +1,13 @@
+name = "Lazy AE2"
+filename = "lazy-ae2-1.12.2-1.1.26.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "731b5f7b0b6071c0f2281a8e79be37b8499f4eb6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3254160
+project-id = 322347

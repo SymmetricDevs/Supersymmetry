@@ -1,0 +1,13 @@
+name = "Opencomputers ICBM-Classic Addon"
+filename = "OpenComputersICBMAddon-1.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e3d5a4ae8322073f688409dbb00df5a808f51cb9"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3196137
+project-id = 370697

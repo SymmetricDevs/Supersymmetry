@@ -1,0 +1,13 @@
+name = "Nutrition Unofficial Extended Life"
+filename = "Nutrition-UEL-4.16.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "eb353bb4aea78b1ce030ad5bf4fb15f830b3701d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6095757
+project-id = 964516

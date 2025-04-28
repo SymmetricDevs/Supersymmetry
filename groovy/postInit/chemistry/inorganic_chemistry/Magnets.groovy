@@ -67,16 +67,6 @@ mods.gregtech.electrolyzer.recipeBuilder()
 
 //SAMARIUM MAGNETS
 
-ABS.recipeBuilder()
-        .inputs(ore('dustSamarium'))
-        .inputs(ore('dustCobalt') * 5)
-        .fluidInputs(fluid('argon') * 300)
-        .fluidOutputs(fluid('samarium_alloy') * 864)
-        .blastFurnaceTemp(1800)
-        .duration(300)
-        .EUt(1920)
-        .buildAndRegister();
-
 FORMING_PRESS.recipeBuilder()
         .notConsumable(metaitem('shape.mold.long_rod'))
         .inputs(ore('dustSamariumAlloy'))

@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    559
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.558.desc",
+      "icon:10": {
+        "id:8": "opensecurity:mag_card"
+      },
+      "name:8": "susy.quest.db.558.title"
+    }
+  },
+  "questID:3": 558,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "opensecurity:mag_card"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "opensecurity:mag_reader"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

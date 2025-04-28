@@ -22,7 +22,8 @@ mods.gregtech.extractor.removeByInput(2, [item('gregtech:rubber_sapling')], null
 mods.gregtech.extractor.removeByInput(2, [item('gregtech:rubber_leaves') * 16], null)
 // Raw Rubber Pulp * 1
 mods.gregtech.extractor.removeByInput(2, [item('gregtech:rubber_log')], null)
-
+// Liquid Latex * 144
+mods.gregtech.extractor.removeByInput(30, [metaitem('dustLatex')], null)
 
 //DEFINITIONS
 class Catalyser {
@@ -81,26 +82,33 @@ class Coagulant {
 
 class Shape {
     String name
+    String shapeName
     int yield
 
     Shape(name, yield){
         this.name = name
+        this.shapeName = name
+        this.yield = yield
+    }
+    
+    Shape(name, shapeName, yield) {
+        this.name = name
+        this.shapeName = shapeName
         this.yield = yield
     }
 }
 
-def CoagulationRecipe(coagulant, amount, duration){
+def CoagulationRecipe(coagulant, amount, duration) {
     def COAGULATION_RECIPES = recipemap("coagulation_tank")
 
-    if(coagulant.isFluid){
+    if (coagulant.isFluid) {
         COAGULATION_RECIPES.recipeBuilder()
         .fluidInputs(fluid('latex') * (1000 * amount))
         .notConsumable(fluid(coagulant.name) * (coagulant.amount_required * amount))
         .outputs(metaitem('dustLatex') * (coagulant.yield_bonus * amount))
         .duration(duration.intdiv(coagulant.speed_bonus))
         .buildAndRegister()
-    }
-    else{
+    } else {
         COAGULATION_RECIPES.recipeBuilder()
         .fluidInputs(fluid('latex') * (1000 * amount))
         .notConsumable(ore(coagulant.name) * (coagulant.amount_required * amount))
@@ -123,9 +131,9 @@ def CoagulationRecipe(amount, duration){
 
 def rubbers = [
     new Rubber('dustLatex', 'Rubber', 4, 40 * 20, 4, false),
-    new Rubber('dustPolyisoprene', 'Rubber', 8, 225, 8, false),
-    new Rubber('dustRawStyreneIsopreneRubber', 'StyreneIsopreneRubber', 4, 30 * 20, 4, false),
-    new Rubber('dustRawStyreneButadieneRubber', 'StyreneButadieneRubber', 4, 30 * 20, 4, false)
+    new Rubber('dustCompoundedPolyisoprene', 'Rubber', 8, 225, 8, false),
+    new Rubber('dustCompoundedStyreneIsopreneRubber', 'StyreneIsopreneRubber', 4, 30 * 20, 4, false),
+    new Rubber('dustCompoundedStyreneButadieneRubber', 'StyreneButadieneRubber', 4, 30 * 20, 4, false)
 ]
 
 def sulfurSources = [
@@ -148,45 +156,50 @@ def shapes = [
     new Shape('ring', 4),
     new Shape('foil', 4),
     new Shape('ingot', 1),
+    new Shape('pipeTinyFluid', 'pipe.tiny', 2)
 ]
+
+
 
 def VULCANIZING_RECIPES = recipemap("vulcanizing_press")
 
 for (rubber in rubbers) {
     for (sulfurSource in sulfurSources) { 
         for(shape in shapes) {
+            if (oreDict.getItems(shape.name + rubber.output).size() == 0) {
+                continue;
+            }
+            if (rubber.isFluid)  {
+                VULCANIZING_RECIPES.recipeBuilder()
+                .fluidInputs(fluid(rubber.name) * rubber.amount_required * 1000)
+                .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
+                .notConsumable(metaitem('shape.extruder.' + shape.shapeName))
+                .circuitMeta(2)
+                .outputs(ore(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
+                .duration(rubber.duration)
+                .EUt(7)
+                .buildAndRegister()
+            } 
+            else {
+                VULCANIZING_RECIPES.recipeBuilder()
+                .inputs(ore(rubber.name) * rubber.amount_required)
+                .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
+                .notConsumable(metaitem('shape.extruder.' + shape.shapeName))
+                .circuitMeta(2)
+                .outputs(ore(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
+                .duration(rubber.duration)
+                .EUt(7)
+                .buildAndRegister()
+            }
             for (catalyser in catalysers) {
-                    if(rubber.isFluid)  {
-                        VULCANIZING_RECIPES.recipeBuilder()
-                        .fluidInputs(fluid(rubber.name) * rubber.amount_required * 1000)
-                        .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
-                        .notConsumable(ore(catalyser.name))
-                        .notConsumable(metaitem('shape.extruder.' + shape.name))
-                        .outputs(metaitem(shape.name + rubber.output) * (rubber.yield * shape.yield))
-                        .duration(rubber.duration.intdiv(catalyser.speed_bonus))
-                        .EUt(7)
-                        .buildAndRegister()
-                    } 
-                    else {
-                        VULCANIZING_RECIPES.recipeBuilder()
-                        .inputs(ore(rubber.name) * rubber.amount_required)
-                        .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
-                        .notConsumable(ore(catalyser.name))
-                        .notConsumable(metaitem('shape.extruder.' + shape.name))
-                        .outputs(metaitem(shape.name + rubber.output) * (rubber.yield * shape.yield))
-                        .duration(rubber.duration.intdiv(catalyser.speed_bonus))
-                        .EUt(7)
-                        .buildAndRegister()
-                    }
-                }
                 if(rubber.isFluid)  {
                     VULCANIZING_RECIPES.recipeBuilder()
                     .fluidInputs(fluid(rubber.name) * rubber.amount_required * 1000)
                     .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
-                    .notConsumable(metaitem('shape.extruder.' + shape.name))
-                    .circuitMeta(2)
-                    .outputs(metaitem(shape.name + rubber.output) * (rubber.yield * shape.yield))
-                    .duration(rubber.duration)
+                    .notConsumable(metaitem('shape.extruder.' + shape.shapeName))
+                    .notConsumable(ore(catalyser.name))
+                    .outputs(ore(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
+                    .duration(rubber.duration.intdiv(catalyser.speed_bonus))
                     .EUt(7)
                     .buildAndRegister()
                 } 
@@ -194,14 +207,15 @@ for (rubber in rubbers) {
                     VULCANIZING_RECIPES.recipeBuilder()
                     .inputs(ore(rubber.name) * rubber.amount_required)
                     .inputs(ore(sulfurSource.name) * sulfurSource.amount_required)
-                    .notConsumable(metaitem('shape.extruder.' + shape.name))
-                    .circuitMeta(2)
-                    .outputs(metaitem(shape.name + rubber.output) * (rubber.yield * shape.yield))
-                    .duration(rubber.duration)
+                    .notConsumable(metaitem('shape.extruder.' + shape.shapeName))
+                    .notConsumable(ore(catalyser.name))
+                    .outputs(ore(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
+                    .duration(rubber.duration.intdiv(catalyser.speed_bonus))
                     .EUt(7)
                     .buildAndRegister()
+                }
             }
-        }    
+        }
     }
 }
 
@@ -211,10 +225,8 @@ for (coagulant in coagulants) {
     CoagulationRecipe(coagulant, 1, 150)
 }
 
-// Liquid Latex * 144
-mods.gregtech.extractor.removeByInput(30, [metaitem('dustLatex')], null)
-
 // Polyisoprene
+
 POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('isoprene') * 1000)
     .outputs(metaitem('dustPolyisoprene') * 4)
@@ -247,65 +259,89 @@ POLYMERIZATION_TANK.recipeBuilder()
     .EUt(120)
     .buildAndRegister()
 
-// Styrene - Isoprene rubber
+MIXER.recipeBuilder()
+    .inputs(ore('dustPolyisoprene') * 8)
+    .inputs(ore('dustCarbonBlack') * 2)
+    .outputs(metaitem('dustCompoundedPolyisoprene') * 10)
+    .EUt(120)
+    .duration(250)
+    .buildAndRegister()
+
+// Styrene-Isoprene rubber
 
 MIXER.recipeBuilder()
-.fluidInputs(fluid('styrene') * 1000)
-.fluidInputs(fluid('isoprene') * 3000)
-.fluidInputs(fluid('ethanol') * 1000)
-.fluidOutputs(fluid('styrene_isoprene_solution') * 5000)
-.EUt(60)
-.duration(200)
-.buildAndRegister()
+    .fluidInputs(fluid('styrene') * 1000)
+    .fluidInputs(fluid('isoprene') * 3000)
+    .fluidInputs(fluid('ethanol') * 1000)
+    .fluidOutputs(fluid('styrene_isoprene_solution') * 5000)
+    .EUt(60)
+    .duration(200)
+    .buildAndRegister()
 
 POLYMERIZATION.recipeBuilder()
-.fluidInputs(fluid('styrene_isoprene_solution') * 5000)
-.notConsumable(fluid('butyllithium') * 100)
-.fluidOutputs(fluid('polymerized_styrene_isoprene_solution') * 5000)
-.EUt(120)
-.duration(533)
-.buildAndRegister()
+    .fluidInputs(fluid('styrene_isoprene_solution') * 5000)
+    .notConsumable(fluid('butyllithium') * 100)
+    .fluidOutputs(fluid('polymerized_styrene_isoprene_solution') * 5000)
+    .EUt(120)
+    .duration(533)
+    .buildAndRegister()
 
 DRYER.recipeBuilder()
-.fluidInputs(fluid('polymerized_styrene_isoprene_solution') * 5000)
-.fluidOutputs(fluid('ethanol') * 1000)
-.outputs(metaitem('dustRawStyreneIsopreneRubber') * 16)
-.EUt(120)
-.duration(533)
-.buildAndRegister()
+    .fluidInputs(fluid('polymerized_styrene_isoprene_solution') * 5000)
+    .fluidOutputs(fluid('ethanol') * 1000)
+    .outputs(metaitem('dustRawStyreneIsopreneRubber') * 16)
+    .EUt(120)
+    .duration(533)
+    .buildAndRegister()
 
-// Styrene - Butadiene rubber
+MIXER.recipeBuilder()
+    .inputs(ore('dustRawStyreneIsopreneRubber') * 8)
+    .inputs(ore('dustCarbonBlack') * 2)
+    .outputs(metaitem('dustCompoundedStyreneIsopreneRubber') * 10)
+    .EUt(120)
+    .duration(250)
+    .buildAndRegister()
+
+// Styrene-Butadiene rubber
 
 SIFTER.recipeBuilder()
-.fluidInputs(fluid('ethanol_water_azeotrope') * 1000)
-.inputs(ore('dustMolecularSieve')* 4)
-.fluidOutputs(fluid('ethanol') * 900)
-.outputs(metaitem('dustWetMolecularSieve') * 4)
-.EUt(30)
-.duration(200)
-.buildAndRegister()
+    .fluidInputs(fluid('ethanol_water_azeotrope') * 1000)
+    .inputs(ore('dustMolecularSieve')* 4)
+    .fluidOutputs(fluid('ethanol') * 900)
+    .outputs(metaitem('dustWetMolecularSieve') * 4)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister()
 
 MIXER.recipeBuilder()
-.fluidInputs(fluid('styrene') * 1000)
-.fluidInputs(fluid('butadiene') * 3000)
-.fluidInputs(fluid('ethanol') * 1000)
-.fluidOutputs(fluid('styrene_butadiene_solution') * 5000)
-.EUt(60)
-.duration(200)
-.buildAndRegister()
+    .fluidInputs(fluid('styrene') * 1000)
+    .fluidInputs(fluid('butadiene') * 3000)
+    .fluidInputs(fluid('ethanol') * 1000)
+    .fluidOutputs(fluid('styrene_butadiene_solution') * 5000)
+    .EUt(60)
+    .duration(200)
+    .buildAndRegister()
 
 POLYMERIZATION.recipeBuilder()
-.fluidInputs(fluid('styrene_butadiene_solution') * 5000)
-.notConsumable(fluid('butyllithium') * 100)
-.fluidOutputs(fluid('polymerized_styrene_butadiene_solution') * 5000)
-.EUt(120)
-.duration(533)
-.buildAndRegister()
+    .fluidInputs(fluid('styrene_butadiene_solution') * 5000)
+    .notConsumable(fluid('butyllithium') * 100)
+    .fluidOutputs(fluid('polymerized_styrene_butadiene_solution') * 5000)
+    .EUt(120)
+    .duration(533)
+    .buildAndRegister()
 
 DRYER.recipeBuilder()
-.fluidInputs(fluid('polymerized_styrene_butadiene_solution') * 5000)
-.fluidOutputs(fluid('ethanol') * 1000)
-.outputs(metaitem('dustRawStyreneButadieneRubber') * 16)
-.EUt(120)
-.duration(533)
-.buildAndRegister()
+    .fluidInputs(fluid('polymerized_styrene_butadiene_solution') * 5000)
+    .fluidOutputs(fluid('ethanol') * 1000)
+    .outputs(metaitem('dustRawStyreneButadieneRubber') * 16)
+    .EUt(120)
+    .duration(533)
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustRawStyreneButadieneRubber') * 8)
+    .inputs(ore('dustCarbonBlack') * 2)
+    .outputs(metaitem('dustCompoundedStyreneButadieneRubber') * 10)
+    .EUt(120)
+    .duration(250)
+    .buildAndRegister()

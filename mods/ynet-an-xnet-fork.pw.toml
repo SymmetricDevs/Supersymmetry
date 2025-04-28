@@ -1,0 +1,13 @@
+name = "YNet [XNet Fork]"
+filename = "xnet-1.12-1.8.4-ynet.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d5886bc1e309a5d31fd251fa37c4c622e50dd715"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5665405
+project-id = 999559

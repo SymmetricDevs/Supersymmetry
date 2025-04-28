@@ -1,6 +1,6 @@
 package classes
 
-class ICryoGas{
+class ICryoGas {
 
     public String normal_gas;
     public String hot_high_pressure_gas;

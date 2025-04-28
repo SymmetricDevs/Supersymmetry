@@ -1,0 +1,13 @@
+name = "Dropt"
+filename = "dropt-1.12.2-1.19.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "7e64ac572a30161b42d698aacfd5b842ab99d742"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5405050
+project-id = 284973

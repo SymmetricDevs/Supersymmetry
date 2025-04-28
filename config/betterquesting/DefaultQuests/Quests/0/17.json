@@ -1,0 +1,20 @@
+{
+  "preRequisites:11": [
+    0
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.17.desc",
+      "icon:10": {
+        "id:8": "minecraft:torch"
+      },
+      "name:8": "susy.quest.db.17.title"
+    }
+  },
+  "questID:3": 17,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

@@ -75,7 +75,7 @@ public class OreMaterials{
         Fluorapatite.setFormula('Ca5(PO4)3F', true);
 
         VanadiferousTitanomagnetite = new Material.Builder(7006, SuSyUtility.susyId('vanadiferous_titanomagnetite'))
-                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder()).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
                 .flags(NO_SMELTING, GENERATE_FLOTATED)
                 .color(0x87685c)
                 .components(Vanadium, Iron, Titanium, Oxygen * 4)
@@ -103,14 +103,14 @@ public class OreMaterials{
         Vanadinite.setFormula('Pb5(VO4)3Cl', true);
 
         Cerussite = new Material.Builder(7009, SuSyUtility.susyId('cerussite'))
-                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder()).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
                 .flags(NO_SMELTING)
                 .color(0xe0d9ba)
                 .components(Lead, Carbon, Oxygen * 3)
                 .build();
 
         Anglesite = new Material.Builder(7010, SuSyUtility.susyId('anglesite'))
-                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder()).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
                 .flags(NO_SMELTING)
                 .color(0xe0ded5)
                 .components(Lead, Sulfur, Oxygen * 4)
@@ -125,14 +125,14 @@ public class OreMaterials{
                 .build();
 
         Smithsonite = new Material.Builder(7012, SuSyUtility.susyId('smithsonite'))
-                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder()).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
                 .flags(NO_SMELTING)
                 .color(0x6aadab)
                 .components(Zinc, Carbon, Oxygen * 3)
                 .build();
 
         Arsenopyrite = new Material.Builder(7013, SuSyUtility.susyId('arsenopyrite'))
-                .dust().ore()
+                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
                 .flags(NO_SMELTING)
                 .iconSet(SHINY)
                 .color(0x7d7269)
@@ -195,7 +195,7 @@ public class OreMaterials{
                 .build();
 
         Wolframite = new Material.Builder(7021, SuSyUtility.susyId('wolframite'))
-                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder()).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+                .dust().ore().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
                 .flags(NO_SMELTING, GENERATE_SIFTED, GENERATE_FLOTATED)
                 .color(0x1e1c36)
                 .components(Iron, Manganese, Tungsten, Oxygen * 4)
@@ -367,7 +367,7 @@ public class OreMaterials{
                 .build();
 
         Zircon = new Material.Builder(7047, SuSyUtility.susyId('zircon')) // TODO: remove liquid for 2.8.6
-                .gem().ore().liquid().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder()).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+                .gem().ore().liquid(new FluidBuilder().temperature(2990)).fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
                 .iconSet(SHINY)
                 .flags(GENERATE_SIFTED, GENERATE_FLOTATED, GENERATE_CONCENTRATE)
                 .color(0xf05c51)
@@ -463,7 +463,7 @@ public class OreMaterials{
                 .build();
 
         Columbite = new Material.Builder(7060, SuSyUtility.susyId('columbite'))
-                .ore().dust().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder()).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+                .ore().dust().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
                 .color(0x574f2f)
                 .iconSet(SHINY)
                 .flags(GENERATE_SIFTED, GENERATE_FLOTATED, GENERATE_CONCENTRATE)
@@ -608,6 +608,30 @@ public class OreMaterials{
                 .ore()
                 .flags(NO_UNIFICATION)
                 .color(0x91835d)
+                .build();
+
+        CoalDeposit = new Material.Builder(7082, SuSyUtility.susyId("coal_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x2c2c2c)
+                .build();
+
+        NativeCopperDeposit = new Material.Builder(7083, SuSyUtility.susyId("native_copper_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0xbb5f09)
+                .build();
+
+        AnthraciteDeposit = new Material.Builder(7084, SuSyUtility.susyId("anthracite_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x241212)
+                .build();
+
+        LigniteDeposit = new Material.Builder(7085, SuSyUtility.susyId("lignite_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x644646)
                 .build();
     }
 }

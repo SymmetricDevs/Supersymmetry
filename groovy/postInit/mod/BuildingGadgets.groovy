@@ -12,29 +12,29 @@ for (name in name_removals) {
 
 // Building Gadget
 crafting.addShaped('buildinggadgets:buildingtool', item('buildinggadgets:buildingtool'), [
-    [null, metaitem('electric.piston.hv'), null],
-    [ore('plateStainlessSteel'), metaitem('power_unit.hv'), ore('plateStainlessSteel')],
-    [ore('plateStainlessSteel'), ore('circuitHv'), ore('plateStainlessSteel')]
+    [null, metaitem('electric.piston.lv'), null],
+    [ore('plateSteel'), metaitem('power_unit.lv'), ore('plateSteel')],
+    [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')]
 ])
 
 // Exchanging Gadget
 crafting.addShaped('buildinggadgets:exchangertool', item('buildinggadgets:exchangertool'), [
-    [null, metaitem('robot.arm.hv'), null],
-    [ore('plateStainlessSteel'), metaitem('power_unit.hv'), ore('plateStainlessSteel')],
-    [ore('plateStainlessSteel'), ore('circuitHv'), ore('plateStainlessSteel')]
+    [null, metaitem('robot.arm.lv'), null],
+    [ore('plateSteel'), metaitem('power_unit.lv'), ore('plateSteel')],
+    [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')]
 ])
 
 // Copy Paste Gadget
 crafting.addShaped('buildinggadgets:copypastetool', item('buildinggadgets:copypastetool'), [
-    [null, metaitem('electric.piston.hv'), ore('gearSmallStainlessSteel')],
-    [ore('plateStainlessSteel'), metaitem('power_unit.hv'), ore('plateStainlessSteel')],
-    [ore('plateStainlessSteel'), ore('circuitHv'), ore('plateStainlessSteel')]
+    [null, metaitem('electric.piston.lv'), ore('plateSteel')],
+    [ore('plateSteel'), metaitem('power_unit.lv'), ore('plateSteel')],
+    [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')]
 ])
 
 crafting.replaceShaped('buildinggadgets:templatemanager', item('buildinggadgets:templatemanager'), [
-        [null, metaitem('electric.piston.hv'), null],
-        [item('minecraft:paper'), metaitem('hull.hv'), item('minecraft:paper')],
-        [ore('plateStainlessSteel'), ore('circuitHv'), ore('plateStainlessSteel')]
+        [null, metaitem('electric.piston.lv'), null],
+        [item('minecraft:paper'), metaitem('hull.lv'), item('minecraft:paper')],
+        [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')]
 ])
 
 CENTRIFUGE.recipeBuilder()

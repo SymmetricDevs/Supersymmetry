@@ -1,0 +1,31 @@
+{
+  "preRequisites:11": [
+    624
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.626.desc",
+      "icon:10": {
+        "id:8": "openmodularturrets:rocket_turret"
+      },
+      "name:8": "susy.quest.db.626.title"
+    }
+  },
+  "questID:3": 626,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "openmodularturrets:rocket_turret"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 4,
+          "id:8": "openmodularturrets:ammo_meta"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

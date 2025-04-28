@@ -1,0 +1,13 @@
+name = "Baubley Elytra"
+filename = "Baubley-Elytra-v1.3.3-mc1.12.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e604328e3ac289710971713be25825db1ecf8b63"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4399994
+project-id = 658616

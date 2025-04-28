@@ -68,7 +68,7 @@ DISTILLERY.recipeBuilder()
 
 CRYSTALLIZER.recipeBuilder()
     .inputs(ore('dustCaesiumRubidiumAlumMixture'))
-    .fluidOutputs(fluid('gtfo_heated_water') * 10000)
+    .fluidOutputs(fluid('gtfo_heated_water') * 2000)
     .chancedOutput(metaitem('dustCaesiumAlum') * 12, 9500, 0)
     .chancedOutput(metaitem('dustRubidiumAlum') * 12, 500, 0)
     .EUt(Globals.voltAmps[1])

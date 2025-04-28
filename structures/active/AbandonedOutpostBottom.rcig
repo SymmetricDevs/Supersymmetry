@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "AbandonedOutpostBottom",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 10,
+      "max": 25,
+      "item": {
+        "id": "gregtech:stone_smooth",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 6,
+      "max": 15,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 3,
+      "max": 11,
+      "item": {
+        "id": "gregtech:meta_block_frame_20",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 4,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_bolt",
+        "damage": 324,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

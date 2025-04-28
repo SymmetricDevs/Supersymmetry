@@ -326,7 +326,6 @@ for (def i = 0; i < 9; i++) {
                 'liquid_krypton': 120,
                 'liquid_xenon': 165,
                 'liquid_nitrogen': 77,
-                'liquid_refinery_gas': 80,
                 'liquid_natural_gas': 80
         ];
 

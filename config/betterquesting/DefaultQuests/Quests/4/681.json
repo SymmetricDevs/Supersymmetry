@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    645
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.681.desc",
+      "icon:10": {
+        "id:8": "minecraft:fireworks"
+      },
+      "name:8": "susy.quest.db.681.title"
+    }
+  },
+  "questID:3": 681,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:fireworks"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

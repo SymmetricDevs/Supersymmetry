@@ -45,7 +45,6 @@ def cryoLiquids = [
         'liquid_krypton': 120,
         'liquid_xenon': 165,
         'liquid_nitrogen': 77,
-        'liquid_refinery_gas': 80,
         'liquid_natural_gas': 80
 ];
 

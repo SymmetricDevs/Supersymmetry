@@ -1,0 +1,31 @@
+{
+  "preRequisites:11": [
+    87
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.442.desc",
+      "icon:10": {
+        "id:8": "minecraft:boat"
+      },
+      "name:8": "susy.quest.db.442.title",
+      "tasklogic:8": "OR"
+    }
+  },
+  "questID:3": 442,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:boat"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "index:3": 1,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

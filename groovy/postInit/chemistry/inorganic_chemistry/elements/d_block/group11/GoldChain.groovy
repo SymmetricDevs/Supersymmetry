@@ -14,6 +14,7 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustRawElectrum') * 2], nu
 
 // Aqua Regia * 3000
 mods.gregtech.mixer.removeByInput(30, null, [fluid('nitric_acid') * 1000, fluid('hydrochloric_acid') * 2000])
+mods.gregtech.blender.removeByInput(30, null, [fluid('nitric_acid') * 1000, fluid('hydrochloric_acid') * 2000])
 
 //GOLD AMALGAMATION (50% EFFICIENCY)
 MIXER.recipeBuilder()
@@ -242,7 +243,7 @@ BATCH_REACTOR.recipeBuilder()
     .fluidInputs(fluid('spent_wohlwill_electrolyte') * 2000)
     .fluidInputs(fluid('sulfur_dioxide') * 3000)
     .outputs(metaitem('dustGold'))
-    .fluidOutputs(fluid('sulfuric_pgm_solution') * 1000)
+    .fluidOutputs(fluid('acidic_wastewater') * 1000)
     .duration(120)
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()
@@ -253,15 +254,6 @@ BATCH_REACTOR.recipeBuilder()
     //in solution containing 2 H+, 8 Cl-, 4 HCl
     //added products: 3 SO4 2-, 12 H+
     //final solution: 12 HCl, 3 H2SO4, 8 H2O
-
-BATCH_REACTOR.recipeBuilder()
-    .inputs(ore('dustCalciumHydroxide') * 15)
-    .fluidInputs(fluid('sulfuric_pgm_solution') * 1000)
-    .outputs(metaitem('dustCalciumSulfate') * 18)
-    .fluidOutputs(fluid('pgm_solution') * 1000)
-    .duration(120)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
 
 //ANODE SLIME PROCESSING
 BATCH_REACTOR.recipeBuilder()
@@ -275,7 +267,7 @@ BATCH_REACTOR.recipeBuilder()
 BATCH_REACTOR.recipeBuilder()
     .inputs(metaitem('anode_slime.gold'))
     .fluidInputs(fluid('nitric_acid') * 2000)
-    .fluidOutputs(fluid('pgm_solution') * 1000)
+    .chancedOutput(metaitem('dustPgmConcentrate'), 1000, 0)
     .fluidOutputs(fluid('silver_nitrate_solution') * 1000)
     .fluidOutputs(fluid('nitrogen_dioxide') * 1000)
     .duration(240)

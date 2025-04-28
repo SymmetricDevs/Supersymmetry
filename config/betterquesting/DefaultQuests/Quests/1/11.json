@@ -1,0 +1,43 @@
+{
+  "preRequisites:11": [
+    88,
+    38
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.11.desc",
+      "icon:10": {
+        "id:8": "minecraft:leather_helmet"
+      },
+      "name:8": "susy.quest.db.11.title"
+    }
+  },
+  "questID:3": 11,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:leather_helmet",
+          "tag:10": {}
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:leather_chestplate",
+          "tag:10": {}
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:leather_leggings",
+          "tag:10": {}
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:leather_boots",
+          "tag:10": {}
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

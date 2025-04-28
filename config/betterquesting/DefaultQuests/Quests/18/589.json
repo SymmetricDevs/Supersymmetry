@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    521
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.589.desc",
+      "icon:10": {
+        "id:8": "opensecurity:rolldoor_controller"
+      },
+      "name:8": "susy.quest.db.589.title"
+    }
+  },
+  "questID:3": 589,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "opensecurity:rolldoor_controller"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "opensecurity:rolldoor"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

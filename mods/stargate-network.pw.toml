@@ -1,0 +1,13 @@
+name = "Stargate Network"
+filename = "SGCraft-2.0.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b4ad825a66379bd8331e3c4e7b6466728e9beec1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3044648
+project-id = 289115

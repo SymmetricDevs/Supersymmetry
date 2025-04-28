@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    97148971
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.23.desc",
+      "icon:10": {
+        "Damage:2": 122,
+        "OreDict:8": "ingotZinc",
+        "id:8": "gregtech:meta_ingot"
+      },
+      "name:8": "susy.quest.db.23.title"
+    }
+  },
+  "questID:3": 23,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 8,
+          "Damage:2": 122,
+          "OreDict:8": "ingotZinc",
+          "id:8": "gregtech:meta_ingot"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

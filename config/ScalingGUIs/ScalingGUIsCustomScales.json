@@ -1,0 +1,10 @@
+{
+  "guiScale": 4,
+  "hudScale": 4,
+  "tooltipScale": 4,
+  "customIndividualGuiScales": {},
+  "customGroupGuiScales": {},
+  "loggedGuiClassNames": [],
+  "blacklistGuiClassNames": [],
+  "dynamicGuiScales": []
+}

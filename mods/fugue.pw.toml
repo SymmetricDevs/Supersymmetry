@@ -1,0 +1,13 @@
+name = "Fugue"
+filename = "+Fugue-0.18.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a868870e15b4647c5da21e2e0d954d60ff9e9d5f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6382947
+project-id = 1005815

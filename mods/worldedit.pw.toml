@@ -1,0 +1,13 @@
+name = "WorldEdit"
+filename = "worldedit-forge-mc1.12.2-6.1.10-dist.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "17314bdab33678478af060d2156338ee34db8a09"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2941712
+project-id = 225608

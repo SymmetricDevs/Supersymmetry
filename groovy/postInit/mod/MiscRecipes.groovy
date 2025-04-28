@@ -37,12 +37,6 @@ crafting.replaceShaped('naturescompass:natures_compass', item('naturescompass:na
         [null, ore('circuitHv'), null]
 ])
 
-crafting.replaceShaped('travelersbackpack:travelers_backpack_standard', item('travelersbackpack:travelers_backpack'), [
-        [item('minecraft:leather'), metaitem('workbench'), item('minecraft:leather')],
-        [metaitem('large_fluid_cell.steel'), item('minecraft:chest'), metaitem('large_fluid_cell.steel')],
-        [item('minecraft:leather'), item('minecraft:bed'), item('minecraft:leather')]
-])
-
 crafting.addShaped('quark:redstone_randomizer', item('quark:redstone_randomizer'), [
         [null, metaitem('wireFineRedAlloy'), null],
         [null, ore('circuitLv'), null],

@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LabLoot",
+  "items": [
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "geneticsreborn:glasssyringe",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 5.547300815582275,
+      "min": 16,
+      "max": 24,
+      "item": {
+        "id": "minecraft:paper",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 8,
+      "max": 16,
+      "item": {
+        "id": "minecraft:book",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 2,
+      "max": 3,
+      "item": {
+        "id": "industrialrenewal:medkit",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.11158588528633118,
+      "min": 2,
+      "max": 5,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 191,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "rs_ctr:signal_probe",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.11158588528633118,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "industrialrenewal:item_fire_extinguisher",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 15,
+      "max": 25,
+      "item": {
+        "id": "cyberware:neuropozyne",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.011213661171495914,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 91,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Fluid": {
+              "nbtType": "compound",
+              "nbt": {
+                "FluidName": {
+                  "nbtType": "string",
+                  "nbt": "butane"
+                },
+                "Amount": {
+                  "nbtType": "int",
+                  "nbt": 100
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gp_inhaler:inhaler",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:healing_vapor"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

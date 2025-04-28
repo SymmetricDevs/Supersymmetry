@@ -1,63 +1,57 @@
-println("Running ImmersiveRailroading.groovy...")
 
+import cam72cam.immersiverailroading.IRItems
+import cam72cam.mod.serialization.TagCompound
 import globals.Globals
-import supersymmetry.api.recipes.SuSyRecipeMaps;
-import cam72cam.immersiverailroading.IRItems;
-import cam72cam.mod.serialization.TagCompound;
-import trackapi.lib.Gauges;
+import supersymmetry.api.recipes.SuSyRecipeMaps
+import trackapi.lib.Gauges
+
+log.infoMC("Running ImmersiveRailroading.groovy...")
 
 ArrayList<String> name_removals = [
-		"immersiverailroading:item_manual",
-		"immersiverailroading:item_conductor_whistle",
-		"immersiverailroading:item_paint_brush",
-		"immersiverailroading:item_golden_spike",
-		"immersiverailroading:item_radio_control_card",
-		"immersiverailroading:item_switch_key",
-		"immersiverailroading:item_track_exchanger",
-		"immersiverailroading:item_large_wrench"
+		"immersiverailroading:item_manual"
 ];
 
 for (item in name_removals) {
 	crafting.remove(item);
 }
 
-crafting.addShaped("ir_conductor_whistle", item('immersiverailroading:item_conductor_whistle'), [
+crafting.replaceShaped("immersiverailroading:item_conductor_whistle", item('immersiverailroading:item_conductor_whistle'), [
 		[ore('foilGold'), ore('foilGold'), null],
 		[ore('foilGold'), ore('foilGold'), null],
 		[ore('foilGold'), ore('foilGold'), null]
 ]);
 
-crafting.addShaped("ir_paint_brush", item('immersiverailroading:item_paint_brush'), [
+crafting.replaceShaped("immersiverailroading:item_paint_brush", item('immersiverailroading:item_paint_brush'), [
 		[null, ore('wool'), null],
 		[null, ore('plateSteel'), null],
 		[null, ore('stickWood'), null]
 ]);
 
-crafting.addShaped("ir_large_wrench", item('immersiverailroading:item_large_wrench'), [
+crafting.replaceShaped("immersiverailroading:item_large_wrench", item('immersiverailroading:item_large_wrench'), [
 		[null, ore('plateSteel'), null],
 		[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
 		[ore('plateSteel'), ore('craftingToolHardHammer'), ore('plateSteel')]
 ]);
 
-crafting.addShaped("ir_gold_spike", item('immersiverailroading:item_golden_spike'), [
+crafting.replaceShaped("immersiverailroading:item_golden_spike", item('immersiverailroading:item_golden_spike'), [
 		[ore('plateGold'), ore('plateGold'), null],
 		[ore('stickGold'), null, null],
 		[ore('stickGold'), null, null]
 ]);
 
-crafting.addShaped("ir_switch_key", item('immersiverailroading:item_switch_key'), [
+crafting.replaceShaped("immersiverailroading:item_switch_key", item('immersiverailroading:item_switch_key'), [
 		[null, ore('stickSteel'), null],
 		[ore('craftingToolFile'), ore('stickSteel'), null],
 		[null, ore('ringSteel'), null]
 ]);
 
-crafting.addShaped("ir_track_exchanger", item('immersiverailroading:item_track_exchanger'), [
+crafting.replaceShaped("immersiverailroading:item_track_exchanger", item('immersiverailroading:item_track_exchanger'), [
 		[ore('paneGlass'), ore('paneGlass'), ore('paneGlass')],
 		[item('immersiverailroading:item_large_wrench'), ore('plateSteel'), item('immersiverailroading:item_rail')],
 		[ore('paneGlass'), ore('wireFineRedAlloy'), ore('paneGlass')]
 ]);
 
-crafting.addShaped("ir_item_hook", item('immersiverailroading:item_hook'), [
+crafting.replaceShaped("immersiverailroading:item_hook", item('immersiverailroading:item_hook'), [
 		[null, null, metaitem('ringSteel')],
 		[null, metaitem('stickSteel'), null],
 		[metaitem('stickSteel'), null, null]
@@ -122,12 +116,6 @@ crafting.addShaped("ir_speed_retarder", item('immersiverailroading:item_augment'
 		[metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
 		[null, null, null]
 ]);
-
-// Black Mesa Tunnel Bore * 1
-mods.gregtech.railroad_engineering_station.removeByInput(1920, [metaitem('plateSteel'), metaitem('plateIron')], null)
-// Black Mesa Tunnel Bore * 1
-mods.gregtech.railroad_engineering_station.removeByInput(1920, [item('immersiverailroading:item_rolling_stock')], null)
-
 
 mods.gregtech.bender.recipeBuilder()
 		.circuitMeta(3)
@@ -210,7 +198,7 @@ Globals.solders.each { key, val ->
 			.inputs(metaitem('electric.motor.lv') * 4)
 			.inputs(metaitem('electric.piston.lv') * 4)
 			.inputs(item('gregtech:boiler_firebox_casing', 1) * 2)
-			.inputs(item('minecraft:glass') * 4)
+			.inputs(ore('blockGlass') * 4)
 			.inputs(ore('plateSteel') * 16)
 			.inputs(ore('stickLongSteel') * 8)
 			.fluidInputs(fluid(key) * (val * 10))
@@ -253,7 +241,7 @@ Globals.solders.each { key, val ->
 			.inputs(metaitem('minecart_wheels.steel') * 4)
 			.inputs(ore('plateSteel') * 20)
 			.inputs(ore('stickLongSteel') * 6)
-			.inputs(item('minecraft:glass') * 4)
+			.inputs(ore('blockGlass') * 4)
 			.fluidInputs(fluid(key) * (val * 10))
 			.outputs(is3.internal)
 			.EUt(30)

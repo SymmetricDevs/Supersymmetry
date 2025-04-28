@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    546
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.554.desc",
+      "icon:10": {
+        "id:8": "opensecurity:biometric_reader"
+      },
+      "name:8": "susy.quest.db.554.title"
+    }
+  },
+  "questID:3": 554,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "opensecurity:biometric_reader"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+name = "Genetics Reborn"
+filename = "geneticsreborn-1.12-1.32.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "0d80ebe91368db8eadf047b1573875cab136fd98"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3149033
+project-id = 256989

@@ -7,7 +7,7 @@ BR = recipemap('batch_reactor')
 
 CRYSTALLIZER.recipeBuilder()
     .inputs(ore('dustAlkaliAlumMix'))
-    .fluidOutputs(fluid('gtfo_heated_water') * 10000)
+    .fluidOutputs(fluid('gtfo_heated_water') * 2000)
     .chancedOutput(metaitem('dustPotassiumAlum') * 12, 9000, 0)
     .chancedOutput(metaitem('dustRubidiumAlum') * 12, 500, 0)
     .EUt(Globals.voltAmps[1])

@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    25
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1677924297.desc",
+      "icon:10": {
+        "id:8": "pyrotech:brick_oven"
+      },
+      "name:8": "susy.quest.db.1677924297.title"
+    }
+  },
+  "questID:3": 1677924297,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "pyrotech:brick_oven"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

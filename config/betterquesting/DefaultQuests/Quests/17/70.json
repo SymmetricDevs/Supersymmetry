@@ -1,0 +1,23 @@
+{
+  "preRequisites:11": [
+    67
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.70.desc",
+      "icon:10": {
+        "id:8": "tardis:moon_dirt"
+      },
+      "name:8": "susy.quest.db.70.title"
+    }
+  },
+  "questID:3": 70,
+  "tasks:9": {
+    "0:10": {
+      "dimension:3": 8,
+      "name:8": "Luna",
+      "range:3": 0,
+      "taskID:8": "bq_standard:location"
+    }
+  }
+}

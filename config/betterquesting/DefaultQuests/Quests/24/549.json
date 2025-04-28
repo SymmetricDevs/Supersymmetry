@@ -1,0 +1,43 @@
+{
+  "preRequisites:11": [
+    546,
+    550
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.549.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "opencomputers:case3"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.549.title"
+    }
+  },
+  "questID:3": 549,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "opencomputers:case3"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "id:8": "opencomputers:component"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 10,
+          "id:8": "opencomputers:component"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "opencomputers:screen3"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

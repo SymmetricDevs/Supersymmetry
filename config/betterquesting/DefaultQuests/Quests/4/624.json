@@ -1,0 +1,28 @@
+{
+  "preRequisites:11": [
+    614
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.624.desc",
+      "icon:10": {
+        "Damage:2": 15028,
+        "id:8": "gregtech:machine"
+      },
+      "name:8": "susy.quest.db.624.title"
+    }
+  },
+  "questID:3": 624,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 15028,
+          "id:8": "gregtech:machine"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+name = "Nutrition: GTCEu"
+filename = "Nutrition-GTCEu-1.12.2-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "022ae066140229d4e3db80d017ff98a11d700e36"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5047422
+project-id = 964594

@@ -1,0 +1,28 @@
+{
+  "preRequisites:11": [
+    25
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.738.desc",
+      "icon:10": {
+        "Damage:2": 9,
+        "id:8": "techguns:simplemachine"
+      },
+      "name:8": "susy.quest.db.738.title"
+    }
+  },
+  "questID:3": 738,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 9,
+          "id:8": "techguns:simplemachine"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

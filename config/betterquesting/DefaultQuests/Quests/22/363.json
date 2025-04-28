@@ -1,0 +1,18 @@
+{
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.363.desc",
+      "icon:10": {
+        "id:8": "betterquesting:placeholder"
+      },
+      "name:8": "susy.quest.db.363.title"
+    }
+  },
+  "questID:3": 363,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 1,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

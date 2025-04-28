@@ -65,6 +65,12 @@ crafting.replaceShaped('cd4017be_lib:rs_ctr/wire', item('rs_ctr:wire') * 8, [
         [metaitem('wireFineRedAlloy'), metaitem('wireFineRedAlloy'), metaitem('wireFineRedAlloy')]
 ])
 
+crafting.replaceShaped('cd4017be_lib:rs_ctr/wire_e', item('rs_ctr:wire_e'), [
+        [null, null, null],
+        [item('rs_ctr:wire'), item('gregtech:meta_foil', 41), item('rs_ctr:wire')],
+        [null, null, null]
+])
+
 crafting.replaceShaped('cd4017be_lib:rs_ctr/wireless', item('rs_ctr:wireless'), [
         [null, null, null],
         [item('rs_ctr:wire'), ore('circuitLv'), metaitem('sensor.hv')],
@@ -133,7 +139,7 @@ crafting.replaceShaped('cd4017be_lib:rs_ctr/assembler', item('rs_ctr:assembler')
 
 crafting.replaceShaped('cd4017be_lib:rs_ctr/editor', item('rs_ctr:editor'), [
         [null, ore('paneGlass'), null],
-        [metaitem('circuit.electronic'), metaitem('plateSteel'), metaitem('circuit.electronic')],
+        [ore('circuitLv'), metaitem('plateSteel'), ore('circuitLv')],
         [null, metaitem('workbench'), null]
 ])
 
@@ -144,14 +150,14 @@ crafting.replaceShaped('cd4017be_lib:rs_ctr/processor3', item('rs_ctr:processor3
 ])
 
 crafting.replaceShaped('cd4017be_lib:cd4017be_lib/m_404', item('cd4017be_lib:m', 404), [
-        [item('cd4017be_lib:m', 403), item('cd4017be_lib:m', 403), item('cd4017be_lib:m', 403)],
+        [null, item('cd4017be_lib:m', 403), null],
         [item('cd4017be_lib:m', 403), item('rs_ctr:wire'), item('cd4017be_lib:m', 403)],
-        [item('cd4017be_lib:m', 403), item('cd4017be_lib:m', 403), item('cd4017be_lib:m', 403)]
+        [null, item('cd4017be_lib:m', 403), null]
 ])
 
-crafting.replaceShaped('cd4017be_lib:cd4017be_lib/m_403', item('cd4017be_lib:m', 403), [
+crafting.replaceShaped('cd4017be_lib:cd4017be_lib/m_403', item('cd4017be_lib:m', 403) * 8, [
         [null, null, item('rs_ctr:wire')],
-        [null, metaitem('ringIron'), null],
+        [null, metaitem('ringIronMagnetic'), null],
         [item('rs_ctr:wire'), null, null]
 ])
 
@@ -164,7 +170,7 @@ crafting.replaceShaped('cd4017be_lib:rs_ctr/panel', item('rs_ctr:panel'), [
 crafting.replaceShaped('cd4017be_lib:rs_ctr/slider', item('rs_ctr:slider'), [
         [null, null, null],
         [item('minecraft:redstone_torch'), metaitem('stickSteel'), item('rs_ctr:wire')],
-        [null, metaitem('circuit.electronic'), null]
+        [null, ore('circuitLv'), null]
 ])
 
 crafting.replaceShaped('cd4017be_lib:rs_ctr/seg7_0', item('rs_ctr:seg7'), [
@@ -189,4 +195,29 @@ crafting.replaceShaped('cd4017be_lib:rs_ctr/power_hub', item('rs_ctr:power_hub')
         [null, metaitem('wireGtSingleTin'), null],
         [metaitem('wireGtSingleTin'), metaitem('plateStone'), metaitem('wireGtSingleTin')],
         [null, metaitem('wireGtSingleTin'), null]
+])
+crafting.replaceShaped('cd4017be_lib:rs_ctr/ram_b', item('rs_ctr:ram', 5), [
+        [item('cd4017be_lib:m', 404), item('rs_ctr:ram'), item('cd4017be_lib:m', 404)],
+        [item('rs_ctr:ram'), item('cd4017be_lib:m', 404), item('rs_ctr:ram')],
+        [item('cd4017be_lib:m', 404), item('rs_ctr:ram'), item('cd4017be_lib:m', 404)]
+])
+crafting.replaceShaped('cd4017be_lib:rs_ctr/ram_c', item('rs_ctr:ram', 7), [
+        [item('cd4017be_lib:m', 404), item('rs_ctr:ram', 5), item('cd4017be_lib:m', 404)],
+        [item('rs_ctr:ram', 5), item('cd4017be_lib:m', 404), item('rs_ctr:ram', 5)],
+        [item('cd4017be_lib:m', 404), item('rs_ctr:ram', 5), item('cd4017be_lib:m', 404)]
+])
+crafting.replaceShaped('cd4017be_lib:rs_ctr/ram_d', item('rs_ctr:ram', 9), [
+        [ item('cd4017be_lib:m', 405), item('rs_ctr:ram', 7),  item('cd4017be_lib:m', 405)],
+        [item('rs_ctr:ram', 7),  item('cd4017be_lib:m', 405), item('rs_ctr:ram', 7)],
+        [ item('cd4017be_lib:m', 405), item('rs_ctr:ram', 7),  item('cd4017be_lib:m', 405)]
+])
+crafting.replaceShaped('cd4017be_lib:rs_ctr/ram_e', item('rs_ctr:ram', 11), [
+        [item('cd4017be_lib:m', 405), item('rs_ctr:ram', 9), item('cd4017be_lib:m', 405)],
+        [item('rs_ctr:ram', 9), item('cd4017be_lib:m', 405), item('rs_ctr:ram', 9)],
+        [item('cd4017be_lib:m', 405), item('rs_ctr:ram', 9), item('cd4017be_lib:m', 405)]
+])
+crafting.replaceShaped('cd4017be_lib:rs_ctr/ram_f', item('rs_ctr:ram', 13), [
+        [item('cd4017be_lib:m', 405), item('rs_ctr:ram', 11), item('cd4017be_lib:m', 405)],
+        [item('rs_ctr:ram', 11), item('cd4017be_lib:m', 405), item('rs_ctr:ram', 11)],
+        [item('cd4017be_lib:m', 405), item('rs_ctr:ram', 11), item('cd4017be_lib:m', 405)]
 ])

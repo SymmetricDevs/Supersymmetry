@@ -1,0 +1,22 @@
+{
+  "preRequisites:11": [
+    33
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.55.desc",
+      "icon:10": {
+        "Damage:2": 337,
+        "OreDict:8": "dustImpureYellowLimonite",
+        "id:8": "gregtech:meta_dust_impure"
+      },
+      "name:8": "susy.quest.db.55.title"
+    }
+  },
+  "questID:3": 55,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}
