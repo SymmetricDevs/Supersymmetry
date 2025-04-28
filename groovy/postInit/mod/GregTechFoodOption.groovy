@@ -1,6 +1,23 @@
 import postInit.utils.RecyclingHelper
 import gregtechfoodoption.utils.GTFOUtils
 
+ASSEMBLER = recipemap('assembler')
+DISTILLERY = recipemap('distillery')
+MIXER = recipemap('mixer')
+LCR = recipemap('large_chemical_reactor')
+BR = recipemap('batch_reactor')
+CSTR = recipemap('continuous_stirred_tank_reactor')
+FERMENTER = recipemap('vat_fermentation')
+ELECTROLYZER = recipemap('electrolyzer')
+CENTRIFUGE = recipemap('centrifuge')
+ROASTER = recipemap('roaster')
+CHEMICAL_BATH = recipemap('chemical_bath')
+BCR = recipemap('bubble_column_reactor')
+FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
+FBR = recipemap('fixed_bed_reactor')
+PYROLYSE_OVEN = recipemap('pyrolyse_oven')
+VACUUM_FREEZER = recipemap('vacuum_freezer')
+
 // MACHINE RECIPES
 
 RecyclingHelper.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.slicer.lv", metaitem('gregtechfoodoption:slicer.lv'), [
@@ -24,7 +41,7 @@ RecyclingHelper.replaceShaped("gregtechfoodoption:gregtechfoodoption.machine.sli
 // Greenhouse * 1
 mods.gregtech.assembler.removeByInput(120, [metaitem('hull.mv'), metaitem('electric.pump.mv') * 2, metaitem('circuit.advanced_integrated') * 4, metaitem('frameSteel'), metaitem('plateSterlingSilver') * 6, metaitem('circuit.integrated').withNbt(["Configuration": 3])], null)
 
-mods.gregtech.assembler.recipeBuilder()
+ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.mv'))
     .inputs(metaitem('electric.pump.mv') * 2)
     .inputs(ore('circuitMv'))
@@ -36,21 +53,6 @@ mods.gregtech.assembler.recipeBuilder()
     .buildAndRegister()
 
 // FOOD RECIPES
-
-def DISTILLERY = recipemap('distillery');
-def MIXER = recipemap('mixer');
-def LCR = recipemap('large_chemical_reactor')
-def BR = recipemap('batch_reactor')
-def CSTR = recipemap('continuous_stirred_tank_reactor');
-def FERMENTER = recipemap('vat_fermentation');
-def ELECTROLYZER = recipemap('electrolyzer');
-def CENTRIFUGE = recipemap('centrifuge');
-def ROASTER = recipemap('roaster')
-def CHEMICAL_BATH = recipemap('chemical_bath')
-def BCR = recipemap('bubble_column_reactor')
-def FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-def FBR = recipemap('fixed_bed_reactor')
-def PYROLYSE_OVEN = recipemap('pyrolyse_oven');
 
 FERMENTER.recipeBuilder()
     .fluidInputs(fluid('gtfo_red_grapes_must') * 8000)
@@ -166,7 +168,7 @@ for (ItemStack fish : GTFOUtils.getFish()) {
     .outputs(metaitem('gregtechfoodoption:food.fried_fish'))
     .EUt(16)
     .duration(400)
-    .buildAndRegister();
+    .buildAndRegister()
 
     FERMENTER.recipeBuilder()
     .fluidInputs(fluid('water') * 100)
@@ -174,7 +176,7 @@ for (ItemStack fish : GTFOUtils.getFish()) {
     .outputs(metaitem('gregtechfoodoption:food.fish_rotten'))
     .EUt(7)
     .duration(100)
-    .buildAndRegister();
+    .buildAndRegister()
 }
 
 MIXER.recipeBuilder()
@@ -254,7 +256,7 @@ for (ItemStack meat : GTFOUtils.getMeat()) {
     .outputs(metaitem('gregtechfoodoption:food.meat_rotten'))
     .EUt(7)
     .duration(100)
-    .buildAndRegister();
+    .buildAndRegister()
 
     LCR.recipeBuilder()
     .fluidInputs(fluid('methanol') * 4000)
@@ -266,7 +268,7 @@ for (ItemStack meat : GTFOUtils.getMeat()) {
     .fluidOutputs(fluid('gtfo_sludge') * 12000)
     .EUt(256)
     .duration(1000)
-    .buildAndRegister();
+    .buildAndRegister()
 }
 
 LCR.recipeBuilder()
@@ -279,7 +281,7 @@ LCR.recipeBuilder()
     .fluidOutputs(fluid('gtfo_sludge') * 16000)
     .EUt(256)
     .duration(1000)
-    .buildAndRegister();
+    .buildAndRegister()
 
 CHEMICAL_BATH.recipeBuilder()
     .inputs(metaitem('gregtechfoodoption:component.scrap_meat'))
@@ -545,3 +547,18 @@ mods.gregtech.lathe.removeByInput(40, [metaitem('stickStainlessSteel')], null)
 
 // Baking Soda Solution * 1000
 mods.gregtech.blender.removeByInput(8, [metaitem('dustSodiumBicarbonate')], [fluid('water') * 1000])
+
+
+VACUUM_FREEZER.recipeBuilder()
+	.inputs(metaitem('gregtechfoodoption:matter_graham_hot_plate'))
+	.outputs(metaitem('gregtechfoodoption:cracker_graham_ungraded_plate'))
+	.EUt(60)
+	.duration(20)
+	.buildAndRegister()
+
+VACUUM_FREEZER.recipeBuilder()
+	.inputs(metaitem('gregtechfoodoption:hot_apple_hard_candy_plate'))
+	.outputs(metaitem('gregtechfoodoption:food.apple_hard_candy'))
+	.EUt(5)
+	.duration(200)
+	.buildAndRegister()
