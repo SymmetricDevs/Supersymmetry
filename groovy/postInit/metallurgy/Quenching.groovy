@@ -147,7 +147,16 @@ def fluidMap = [
         'molten.tantalum_carbide':'TantalumCarbide',
         'molten.molybdenum_disilicide':'MolybdenumDisilicide',
         'molten.titanium_tungsten_carbide':'TitaniumTungstenCarbide',
-        'molten.incoloy_ma_956':'IncoloyMa956'
+        'molten.incoloy_ma_956':'IncoloyMa956',
+        'molten.incoloy_20':'Incoloy20',
+        'molten.incoloy_825':'Incoloy825',
+        'molten.incoloy_908':'Incoloy908',
+        'molten.rene_n_5':'ReneN5',
+        'molten.monel_500':'Monel500',
+        'molten.stellite_j':'StelliteJ',
+        'molten.stellite_6':'Stellite6',
+        'molten.hsla_980_x':'Hsla980X',
+        'molten.food_grade_stainless_steel':'FoodGradeStainlessSteel'
 ]
 
 for (entry in fluidMap) {

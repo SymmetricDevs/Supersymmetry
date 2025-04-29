@@ -1,13 +1,13 @@
 name = "VintageFix"
-filename = "vintagefix-0.5.4.jar"
+filename = "vintagefix-0.5.5.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "87c66bc2b3ee25768ace0c114314bb71f1e5bf55"
+hash = "41502020bc47004cd4370dcd3aa8bf3ead875857"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6257508
+file-id = 6300725
 project-id = 871198

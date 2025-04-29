@@ -3,26 +3,14 @@
   "packId": "supersymmetry",
   "version": "1.0.0",
   "debug": false,
-  "classes": [
-    "classes/ChangeFlags.groovy",
-    "classes/ICoolant.groovy",
-    "classes/ICryoGas.groovy",
-    "classes/IFluidFuel.groovy",
-    "classes/IOreRock.groovy",
-    "classes/IQuenchingFluid.groovy",
-    "classes/IRefrigerant.groovy",
-    "classes/IWorkingFluid.groovy",
-    "classes/ISupercriticalFluid.groovy",
-    "globals/",
-    "material/"
-  ],
   "loaders": {
     "preInit": [
+      "classes/",
+      "globals/",
       "material/",
       "preInit/"
     ],
     "postInit": [
-      "globals/",
       "prePostInit/",
       "postInit/"
     ]

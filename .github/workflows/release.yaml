@@ -18,11 +18,6 @@ jobs:
         shell: bash
         run: |
           echo "::set-output name=sha_short::$(git rev-parse --short $GITHUB_SHA)"
-      - name: Bootstrap
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'adopt'
-          java-version: '8'
       - name: Install requests
         run: |
           pip install requests
@@ -46,7 +41,28 @@ jobs:
                 core.error("Error while reading or parsing the TOML")
                 core.setFailed(err)
             }
-      - run: echo "${{steps.get-version.outputs.result}}"
+
+      - name: Extract changelog for version
+        id: extract-changelog
+        env:
+          VERSION: ${{ steps.get-version.outputs.result }}
+        run: |
+          chmod +x .github/scripts/extract_changelog.py
+          python .github/scripts/extract_changelog.py
+      - run: echo "${{ steps.extract-changelog.outputs.changelog }}"
+
+
+      - name: Check if release tag already exists
+        id: check-tag
+        uses: mukunku/tag-exists-action@v1.6.0
+        with: 
+          tag: "${{ steps.get-version.outputs.result }}"
+
+      - name: If so, fail workflow
+        if: steps.check-tag.outputs.exists == 'true'
+        run: |
+          echo "Error: Tag ${{ steps.get-version.outputs.result }} already exists! Please update pack.toml to change the version number."
+          exit 1
 
       - name: Rename file
         run: |
@@ -54,15 +70,35 @@ jobs:
           mv buildOut/server.zip buildOut/server-${{steps.get-version.outputs.result}}.zip
           rm -f buildOut/client.zip
           rm -f buildOut/server.zip
-
-      - name: Automatic Releases
-        uses: marvinpinto/action-automatic-releases@latest
+    
+      - name: Publish to Curseforge
+        id: curseforge-upload
+        uses: itsmeow/curseforge-upload@v3
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: ${{ steps.get-version.outputs.result }}
-          prerelease: false
-          title: ${{ steps.get-version.outputs.result }}
-          files: |
+          file_path: "buildOut/supersymmetry-${{steps.get-version.outputs.result}}.zip"
+          game_endpoint: "minecraft"
+          game_versions: "Minecraft 1.12:1.12.2"
+          project_id: "849321"
+          token: "${{ secrets.CFAPIKEY }}"
+          changelog: "${{ steps.extract-changelog.outputs.changelog }}"
+          changelog_type: "markdown"
+
+      - name: Publish to GitHub
+        uses: ncipollo/release-action@v1
+        with:
+          body: "${{ steps.extract-changelog.outputs.changelog }}\nThis will also be available in a few minutes on [CurseForge](https://www.curseforge.com/minecraft/modpacks/supersymmetry/files/${{ steps.curseforge-upload.outputs.id }})."
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ steps.get-version.outputs.result }}
+          commit: ${{ github.ref }}
+          artifacts: |
             buildOut/supersymmetry-${{steps.get-version.outputs.result}}.zip
             buildOut/server-${{steps.get-version.outputs.result}}.zip
             buildOut/modlist.html
+          name: Release ${{ steps.get-version.outputs.result }}
+
+      - name: Publish to Discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@0.3.2
+        with: 
+          args: "<@&881244321062481950>\n${{ steps.extract-changelog.outputs.changelog }}\nThis will also be available in a few minutes on [CurseForge](https://www.curseforge.com/minecraft/modpacks/supersymmetry/files/${{ steps.curseforge-upload.outputs.id }})."

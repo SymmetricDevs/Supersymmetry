@@ -7,10 +7,6 @@
     {
       "biomes": "$HILLS",
       "weight": 0.4
-    },
-    {
-      "biomes": "",
-      "weight": 0.1
     }
   ],
   "metadata": {

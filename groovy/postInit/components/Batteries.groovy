@@ -112,7 +112,7 @@ MIXER_RECIPES.recipeBuilder()
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustLithiumCarbonate') * 6)
-        .inputs(ore('dustCobaltOxide') * 4)
+        .inputs(ore('dustHighPurityCobaltOxide') * 4)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .outputs(metaitem('dustLithiumCobaltOxide') * 8)
         .duration(140)

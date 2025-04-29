@@ -285,7 +285,7 @@ public class ThirdDegreeMaterials {
 
         IsophthalicAcidSlurry = new Material.Builder(24044, SuSyUtility.susyId('isophthalic_acid_slurry'))
                 .liquid()
-                .components(Water * 1, OneTwoDichloroethane * 1, IsophthalicAcid * 1)
+                .components(Water * 1, AceticAcid * 1, IsophthalicAcid * 1)
                 .colorAverage()
                 .build()
 

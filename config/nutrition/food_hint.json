@@ -1,0 +1,30 @@
+{
+  "hints": [
+    {
+      "id": "extraplanets:canned_food",
+      "meta": 0,
+      "heal_amount": 16
+    },
+    {
+      "id": "extraplanets:canned_food",
+      "meta": 1,
+      "heal_amount": 4
+    },
+    {
+      "id": "extraplanets:canned_food",
+      "meta": 2,
+      "heal_amount": 4
+    },
+    {
+      "id": "extraplanets:canned_food",
+      "meta": 3,
+      "heal_amount": 12
+    },
+    {
+      "id": "minecraft:coal",
+      "meta": 1,
+      "heal_amount": 12,
+      "nutrient_application_phase": "on_right_click"
+    }
+  ]
+}

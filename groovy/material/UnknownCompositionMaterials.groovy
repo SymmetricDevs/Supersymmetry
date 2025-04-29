@@ -847,7 +847,10 @@ public class UnknownCompositionMaterials {
                 .iconSet(DULL)
                 .build()
 
-        // FREE ID: 4161
+        ImpureUranylSulfateSolution = new Material.Builder(4161, SuSyUtility.susyId('impure_uranyl_sulfate_solution'))
+                .liquid()
+                .color(0x9c8f30)
+                .build();
 
         ZincLeach = new Material.Builder(4162, SuSyUtility.susyId('zinc_leach'))
                 .liquid()
@@ -2018,7 +2021,6 @@ public class UnknownCompositionMaterials {
                 .liquid()
                 .color(0xc8cca1)
                 .build();
-      
 
         //FREE ID: 4427
 
@@ -2078,6 +2080,8 @@ public class UnknownCompositionMaterials {
                 .color(0xe60e0e)
                 .components(Nickel * 1, Cobalt * 1, Sulfur, Oxygen * 4)
                 .build();
+
+        NickelCobaltSulfate.setFormula('(Ni,Co)(SO4)', true)
 
         NickelCobaltSulfateSolution = new Material.Builder(4439, SuSyUtility.susyId("nickel_cobalt_sulfate_solution"))
                 .fluid()
@@ -2187,10 +2191,7 @@ public class UnknownCompositionMaterials {
                 .color(0x9177a1)
                 .build();
 
-        RhodiumIridiumExtractionMixture = new Material.Builder(4471, SuSyUtility.susyId("rh_ir_extraction_mixture"))
-                .fluid()
-                .color(0xb3abb8)
-                .build();
+        // FREE ID: 4471
 
         OsmiumRutheniumTetroxideMixture = new Material.Builder(4472, SuSyUtility.susyId("os_ru_tetroxide_mixture"))
                 .gas()

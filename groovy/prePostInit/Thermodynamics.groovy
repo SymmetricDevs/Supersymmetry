@@ -143,10 +143,10 @@ CryoXenon.setTemperature(165);
 
 def CryoAir = new ICryoGas('air', 'hot_hp_air', 'hp_air', 'cold_hp_air', 'liquid_air');
 CryoAir.setEUt(30);
-CryoAir.setDuration(100);
-CryoAir.setPowerHX(100);
-CryoAir.setDurationHX(5);
-CryoAir.setDurationRadiator(200);
+CryoAir.setDuration(10);
+CryoAir.setPowerHX(50);
+CryoAir.setDurationHX(1);
+CryoAir.setDurationRadiator(10);
 CryoAir.setTemperature(80);
 
 def CryoDecarburizedAir = new ICryoGas('decarburized_air', 'hot_hp_decarburized_air', 'hp_decarburized_air', 'cold_hp_decarburized_air', 'liquid_decarburized_air');

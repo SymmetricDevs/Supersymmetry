@@ -67,7 +67,7 @@ Special thanks to our volunteers:
 - trainvoi • Research and Quests
 - ZombieZilla • Research
 - Tian-mi • Chinese translation and misc development
-- Roque_Crafter • Portuguese translation
+- RoqueSystem.exe (Roque_Crafter) • Portuguese translation
 - kubuus • Polish translation
 - Whatsapp • Structures, textures and feedback
 - Science Demon • Questbook work, German translation and bug fixes

@@ -78,16 +78,16 @@ INIT() {
 	
 	!processor assembly materials
 	!add("circuitMat", <item>, baseCmp, advCmp, memory, -size, gain, cap);
-	add("circuitMat", ore("dustRedstone"),   2,  0,  0,  -2,  1,  8); !1.0  cmp/size, 0.5 gain/cmp, 2.0  cmp/it
-	add("circuitMat", ore("blockRedstone"), 16,  0,  0, -24, 16, 64); !0.67 cmp/size, 1.0 gain/cmp, 1.78 cmp/it
-	add("circuitMat", ore("gemQuartz"),      0,  4,  0,  -4,  2,  8); !1.0  cmp/size, 0.5 gain/cmp, 4.0  cmp/it
-	add("circuitMat", ore("blockQuartz"),    0, 12,  0, -16, 12, 24); !0.75 cmp/size, 1.0 gain/cmp, 3.0  cmp/it
-	add("circuitMat", ore("nuggetIron"),     0,  0,  1,  -1,  0,  0); !1.0  mem/size, 9.0  mem/ing
-	add("circuitMat", ore("ingotIron"),      0,  0,  8,  -6,  0,  0); !1.33 mem/size, 8.0  mem/ing
-	add("circuitMat", ore("blockIron"),      0,  0, 48, -30,  0,  0); !1.6  mem/size, 5.33 mem/ing
-	add("circuitMat", ore("dustGlowstone"),  0,  0,  0,  -1,  2,  1); !2.0 gain/size, 2.0  gain/it
-	add("circuitMat", it("minecraft:glowstone"),0,0, 0,  -2,  5,  2); !2.5 gain/size, 1.25 gain/it
-	add("circuitMat", it("minecraft:redstone_torch"),3,0,0,-2,1,  4); !1.5 cmp/size, 0.33 gain/cmp, 3.0 cmp/it
+	!add("circuitMat", ore("dustRedstone"),   2,  0,  0,  -2,  1,  8); !1.0  cmp/size, 0.5 gain/cmp, 2.0  cmp/it
+	!add("circuitMat", ore("blockRedstone"), 16,  0,  0, -24, 16, 64); !0.67 cmp/size, 1.0 gain/cmp, 1.78 cmp/it
+	!add("circuitMat", ore("gemQuartz"),      0,  4,  0,  -4,  2,  8); !1.0  cmp/size, 0.5 gain/cmp, 4.0  cmp/it
+	!add("circuitMat", ore("blockQuartz"),    0, 12,  0, -16, 12, 24); !0.75 cmp/size, 1.0 gain/cmp, 3.0  cmp/it
+	!add("circuitMat", ore("nuggetIron"),     0,  0,  1,  -1,  0,  0); !1.0  mem/size, 9.0  mem/ing
+	!add("circuitMat", ore("ingotIron"),      0,  0,  8,  -6,  0,  0); !1.33 mem/size, 8.0  mem/ing
+	!add("circuitMat", ore("blockIron"),      0,  0, 48, -30,  0,  0); !1.6  mem/size, 5.33 mem/ing
+	!add("circuitMat", ore("dustGlowstone"),  0,  0,  0,  -1,  2,  1); !2.0 gain/size, 2.0  gain/it
+	!add("circuitMat", it("minecraft:glowstone"),0,0, 0,  -2,  5,  2); !2.5 gain/size, 1.25 gain/it
+	!add("circuitMat", it("minecraft:redstone_torch"),3,0,0,-2,1,  4); !1.5 cmp/size, 0.33 gain/cmp, 3.0 cmp/it
 	add("circuitMat", it("minecraft:repeater"),8,0,  1,  -4,  2,  8); !2.0 cmp/size, 0.25 gain/cmp, 2.67 cmp/it(rs)
 	add("circuitMat", it("minecraft:comparator"),0,8,0,  -4,  2,  8); !2.0 cmp/size, 0.25 gain/cmp, 8.0 cmp/it(qu)
 	add("circuitMat", it("tile.logic_comb"),24,  0,  0,  -8,  4, 16); !3.0 cmp/size, 0.17 gain/cmp, 3.4 cmp/it(rs)
@@ -221,16 +221,16 @@ moddedRecipes() {
 	}
 	if (hasmod("opencomputers")) {
 		add("shaped", it("tile.oc_adapter"), "5 3/014/523", it("opencomputers:card"):6, it("opencomputers:material"):11, it("opencomputers:component"):6, it("tile.processor2"), it("opencomputers:card"):4, it("item.wire_e"));
-		add("battery", it("opencomputers:capacitor"), 1600 * energy_unit_OC); !CAPACITOR
-		add("circuitMat", it("opencomputers:material"):6, 3, 0, 0, -2, 1, 3); !transistor
-		add("circuitMat", it("opencomputers:material"):7, 1, 3, 0, -1, 0, 4); !chip T1
-		add("circuitMat", it("opencomputers:material"):8, 3, 7, 0, -2, 0, 10); !chip T2
-		add("circuitMat", it("opencomputers:material"):9, 12, 16, 0, -4, 0, 28); !chip T3
-		add("circuitMat", it("opencomputers:material"):10, 12, 8, 0, -4, 0, 20); !ALU
+		!add("battery", it("opencomputers:capacitor"), 1600 * energy_unit_OC); !CAPACITOR
+		!add("circuitMat", it("opencomputers:material"):6, 3, 0, 0, -2, 1, 3); !transistor
+		!add("circuitMat", it("opencomputers:material"):7, 1, 3, 0, -1, 0, 4); !chip T1
+		!add("circuitMat", it("opencomputers:material"):8, 3, 7, 0, -2, 0, 10); !chip T2
+		!add("circuitMat", it("opencomputers:material"):9, 12, 16, 0, -4, 0, 28); !chip T3
+		!add("circuitMat", it("opencomputers:material"):10, 12, 8, 0, -4, 0, 20); !ALU
 		add("circuitMat", it("opencomputers:storage"):0, 0, 0, 16, -8, -2, 0); !EEPROM
 		add("circuitMat", it("opencomputers:component"):6, 0, 0, 32, -8, -8, 16); !RAM T1
 		add("circuitMat", it("opencomputers:component"):7, 0, 0, 48, -8, -16, 32); !RAM T1.5
-		add("circuitMat", it("opencomputers:capacitor"), 0, 0, 0, -8, 1, 160000); !CAPACITOR (only 1/10 cap here)
+		!add("circuitMat", it("opencomputers:capacitor"), 0, 0, 0, -8, 1, 160000); !CAPACITOR (only 1/10 cap here)
 	}
 	if (hasmod("mekanism")) {
 		add("shaped", it("item.wireless_b"), "121/020", it("item.wireless"), it("m.telekin_alloy"), it("mekanism:machineblock3"));
@@ -244,6 +244,31 @@ moddedRecipes() {
 	if (hasmod("draconicevolution")) {
 		add("battery", it("draconicevolution:wyvern_energy_core"), 8e6 * energy_unit_FE);
 		add("battery", it("draconicevolution:draconic_energy_core"), 32e6 * energy_unit_FE);
+	}
+	if (hasmod("gregtech")) {
+		!add("circuitMat", <item>, baseCmp, advCmp, memory, -size, gain, cap);
+		!Replace Redstone dust, block and torch
+		add("circuitMat", ore("wireGtSingleRedAlloy"), 2, 0, 0, -2, 1, 8); !1.0 cmp/size, 0.5 gain/cmp, 2.0 cmp/it
+		!add("circuitMat", ore("wireGtDoubleRedAlloy"), 4, 0, 0, -4, 2, 16); !1.0 cmp/size, 0.5 gain/cmp, 2.0 cmp/it
+		add("circuitMat", ore("wireGtQuadrupleRedAlloy"), 8, 0, 0, -8, 4, 24); !1.0 cmp/size, 0.5 gain/cmp, 2.0 cmp/it
+		!add("circuitMat", ore("wireGtOctalRedAlloy"), 16, 0, 0, -16, 8, 32); !1.0 cmp/size, 0.5 gain/cmp, 2.0 cmp/it
+		!add("circuitMat", ore("wireGtHexRedAlloy"), 32, 0, 0, -32, 16, 64); !1.0 cmp/size, 0.5 gain/cmp, 2.0 cmp/it
+		!Replace Quartz
+		add("circuitMat", ore("plateCertusQuartz"), 0, 4, 0, -4, 2, 8); !1.0  cmp/size, 0.5 gain/cmp, 4.0  cmp/it
+		add("circuitMat", ore("plateQuartzite"), 0, 4, 0, -4, 2, 8); !1.0  cmp/size, 0.5 gain/cmp, 4.0  cmp/it
+		add("circuitMat", ore("plateNetherQuartz"), 0, 4, 0, -4, 2, 8); !1.0  cmp/size, 0.5 gain/cmp, 4.0  cmp/it
+		!Replace OCU chips
+		add("circuitMat", ore("circuitUlv"), 12, 16, 4, -3, 1, 2); !ULV circuit
+		add("circuitMat", ore("circuitLv"),	24, 32, 8, -6, 1, 4); !LV circuit
+		add("circuitMat", ore("circuitMv"),	48, 64, 16, -10, 1, 10); !MV circuit
+		!Replace Iron nugget, ingot, block
+		add("circuitMat", it("cd4017be_lib:m"):404,	0,  0, 1, -1, 0, 0); !1 mem/size
+		add("circuitMat", it("cd4017be_lib:m"):405,	0,  0, 4, -4, 0, 0); !1 mem/size
+		!Replace OC Capacitor
+		add("battery", ore("componentCapacitor"), 4000 * energy_unit_EU);
+		add("circuitMat", ore("componentCapacitor"), 0, 0, 0, -8, 1, 400 * energy_unit_EU);
+		!Replace OC Transistor
+		add("circuitMat", ore("componentTransistor"), 16, 24, 0, -4, 1, 3);
 	}
 }
 

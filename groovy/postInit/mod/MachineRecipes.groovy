@@ -1,7 +1,5 @@
 import globals.Globals
-import globals.RecyclingHelper
-
-import static gregtech.api.unification.material.Materials.*
+import postInit.utils.RecyclingHelper
 
 def name_removals = [
 	'gregtech:gregtech.machine.fisher.lv',

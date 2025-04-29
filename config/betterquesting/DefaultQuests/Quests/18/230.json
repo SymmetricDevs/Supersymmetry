@@ -7,6 +7,7 @@
       "desc:8": "susy.quest.db.230.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "buildinggadgets:buildingtool",
         "tag:10": {
           "blockstate:10": {
@@ -46,14 +47,6 @@
           "id:8": "buildinggadgets:copypastetool",
           "tag:10": {
             "mode:8": "Copy"
-          }
-        },
-        "3:10": {
-          "Count:3": 1,
-          "id:8": "buildinggadgets:destructiontool",
-          "tag:10": {
-            "fuzzy:1": 1,
-            "overlay:1": 1
           }
         }
       },

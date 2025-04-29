@@ -58,6 +58,30 @@ crafting.replaceShaped('chisel:laboratory', item('chisel:laboratory', 0) * 32, [
         [ore('stone'), ore('stone'), ore('stone')]
 ])
 
+crafting.replaceShaped('chisel:valentines', item('chisel:valentines') * 32, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), ore('dyePink'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])
+
+crafting.replaceShaped(item('chisel:voidstone') * 32, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), ore('dyePurple'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])   
+
+crafting.replaceShaped(item('chisel:lavastone') * 8, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), item('minecraft:lava_bucket'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])  
+
+crafting.replaceShaped(item('chisel:waterstone') * 8, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), item('minecraft:water_bucket'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])  
+
 for (def i = 0; i < 16; i++) {
     crafting.removeByOutput(item('chisel:glasspane', i))
 

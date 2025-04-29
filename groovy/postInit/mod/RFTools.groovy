@@ -1,3 +1,5 @@
+ASSEMBLER = recipemap('assembler')
+
 def name_removals = [
         "rftools:machine_frame",
         "rftools:machine_base",
@@ -11,8 +13,8 @@ def name_removals = [
         "rftools:dialing_device",
         "rftools:destination_analyzer",
         "rftools:screen",
-        "rftools:builder",
         "rftools:screen_controller",
+        "rftools:builder",
         "rftools:machineinformation_module",
         "rftools:syringe",
         "rftools:modifier_module",
@@ -53,6 +55,7 @@ def name_removals = [
         "rftools:storage_terminal",
         "rftools:level_emitter",
         "rftools:simple_dialer",
+        "rftools:elevator_button_module"
 ]
 
 for (item in name_removals) {
@@ -256,3 +259,40 @@ crafting.replaceShaped('rftools:storage_scanner', item('rftools:storage_scanner'
         [ore('chest'), metaitem('hull.lv'), ore('chest')],
         [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')]
 ])
+
+crafting.replaceShaped('rftools:storage_scanner', item('rftools:storage_scanner'), [
+        [ore('plateSteel'), metaitem('sensor.lv'), ore('plateSteel')],
+        [ore('chest'), metaitem('hull.lv'), ore('chest')],
+        [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')]
+])
+
+crafting.replaceShaped('rftools:screen_controller', item('rftools:screen_controller'), [
+        [metaitem('emitter.lv'), ore('plateSteel'), metaitem('emitter.lv')],
+        [ore('circuitLv'), metaitem('hull.lv'), ore('circuitLv')],
+        [ore('plateSteel'), ore('cableGtSingleTin'), ore('plateSteel')]
+])
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('cover.screen'))
+        .inputs(metaitem('sensor.lv'))
+        .inputs(ore('plateSteel') * 3)
+        .inputs(ore('screwSteel') * 4)
+        .outputs(item('rftools:screen'))
+        .duration(100)
+	.EUt(30)
+	.buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('circuitLv'))
+        .inputs(item('minecraft:stone_button') * 4)
+        .outputs(item('rftools:elevator_button_module'))
+        .duration(100)
+	.EUt(30)
+	.buildAndRegister()
+
+crafting.replaceShaped('rftools:elevator', item('rftools:elevator'), [
+        [metaitem('electric.motor.lv'), ore('cableGtSingleTin'), metaitem('electric.motor.lv')],
+        [ore('gearSmallSteel'), metaitem('hull.lv'), ore('gearSmallSteel')],
+        [ore('wireFineSteel'), ore('circuitLv'), ore('wireFineSteel')]
+])
+

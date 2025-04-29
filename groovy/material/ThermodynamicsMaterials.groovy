@@ -501,5 +501,66 @@ class ThermodynamicsMaterials {
                 .color(0x20aa91)
                 .build()
                 .setFormula("(Ar)(H)", true)
+
+        TreatedLiquidNitrogen = new Material.Builder(22847, SuSyUtility.susyId('treated_liquid_nitrogen'))
+                .liquid(new FluidBuilder().temperature(75))
+                .color(0x05a8ab)
+                .build();
+
+        TreatedLiquidOxygen = new Material.Builder(22848, SuSyUtility.susyId('treated_liquid_oxygen'))
+                .liquid(new FluidBuilder().temperature(55))
+                .color(0x51b1e0)
+                .build();
+
+        HeliumNeonConcentrate = new Material.Builder(22849, SuSyUtility.susyId('helium_neon_concentrate'))
+                .gas(new FluidBuilder().temperature(60))
+                .color(0x08a83b)
+                .build()
+        
+        DehydrogenatedHeliumNeonConcentrate = new Material.Builder(22850, SuSyUtility.susyId('dehydrogenated_helium_neon_concentrate'))
+                .gas(new FluidBuilder().temperature(70))
+                .color(0x13a12b)
+                .build()
+
+        DemoisturizedHeliumNeonConcentrate = new Material.Builder(22851, SuSyUtility.susyId('demoisturized_helium_neon_concentrate'))
+                .gas(new FluidBuilder().temperature(70))
+                .color(0x47a113)
+                .build()
+
+        CompressedHeliumNeonConcentrate = new Material.Builder(22852, SuSyUtility.susyId('compressed_helium_neon_concentrate'))
+                .gas(new FluidBuilder().temperature(85))
+                .color(0x58b821)
+                .build()
+
+        HeliumNeonMixture = new Material.Builder(22853, SuSyUtility.susyId('helium_neon_mixture'))
+                .gas(new FluidBuilder().temperature(75))
+                .components(Helium * 3, Neon * 7)
+                .colorAverage()
+                .build()
+
+        KryptonXenonRichLiquid = new Material.Builder(22854, SuSyUtility.susyId('krypton_xenon_rich_liquid'))
+                .liquid(new FluidBuilder().temperature(110))
+                .color(0x19a0b5)
+                .build()
+
+        CombustedKryptonXenonConcentrate = new Material.Builder(22855, SuSyUtility.susyId('combusted_krypton_xenon_concentrate'))
+                .gas(new FluidBuilder().temperature(150))
+                .color(0x23b5cc)
+                .build()
+
+        PurifiedKryptonXenonConcentrate = new Material.Builder(22856, SuSyUtility.susyId('purified_krypton_xenon_concentrate'))
+                .gas(new FluidBuilder().temperature(150))
+                .color(0x24c9e3)
+                .build()
+
+        LiquidCrudeXenon = new Material.Builder(22857, SuSyUtility.susyId('liquid_crude_xenon'))
+                .liquid(new FluidBuilder().temperature(165))
+                .color(0x18e9f0)
+                .build();
+
+        OxidizedXenon = new Material.Builder(22858, SuSyUtility.susyId('oxidized_xenon'))
+                .gas(new FluidBuilder().temperature(180))
+                .color(0x0af0f7)
+                .build()
     }
 }

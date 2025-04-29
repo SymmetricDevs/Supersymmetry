@@ -1,4 +1,4 @@
-package globals
+package postInit.utils
 
 import com.cleanroommc.groovyscript.api.IIngredient
 import gregtech.api.recipes.RecipeMap
@@ -16,6 +16,7 @@ import it.unimi.dsi.fastutil.objects.Object2LongOpenHashMap
 import java.util.stream.Collectors
 
 /**
+ * TODO: refactor this
  * An utility class that handles recycling recipes,
  * with many codes copied from CEu itself.
  * Note: This DOES NOT work with extractor,

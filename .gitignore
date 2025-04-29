@@ -99,3 +99,8 @@ visualores/
 .idea/workspace.xml
 servers.dat
 mods/*.jar
+/mods/1.12.2
+/mods/memory_repo
+/resourcepacks
+vintagefix/transformerCache/jarDiscoverer.cache
+/journeymap

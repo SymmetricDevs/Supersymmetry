@@ -62,11 +62,24 @@ Agradecimentos especiais aos nossos voluntários:
 - trainvoi • Pesquisa
 - ZombieZilla • Pesquisa
 - Tian-mi • Tradução para Chinês (Mandarim)
-- Roque_Crafter • Tradução para Português (Oláá)
+- RoqueSystem.exe (Roque_Crafter) • Tradução para Português (Oláá)
 - Lavinia • Texturas
 - kubuus • Tradução para Polaco
 - Whatsapp • Estruturas, texturas e *feedback*
 - Science Demon • Trabalho no *Livro de tarefas*, tradução para Alemão e *bug fixing*
+- Siryeet3000 • Estruturas
+- Celeryman • Estruturas
+
+## Dicas de Desenvolvimento
+> [*Full Usage* - Tutorial de Packwiz](https://packwiz.infra.link/tutorials/creating/getting-started/)
+- Adicionar um *mod*: `packwiz cf add <project name>` ([*Full Usage*](https://packwiz.infra.link/tutorials/creating/adding-mods/))
+- Atualizar *Hash*: `packwiz refresh`
+- Imprimir (mostrar) a lista de *mods*: `packwiz list`
+- Atualizar a versão do *pack*: reescrever o número da versão em [pack.toml](pack.toml)
+- Atualizar a versão de um *mod*: `packwiz update <mod>/--all`
+- *Mod* apenas cliente: [rewrite <mod>.pw.toml#side manually](https://packwiz.infra.link/reference/pack-format/mod-toml/#properties)
 
 ## Construção do *pack*
-Vais precisar dos requerimentos python3 e python instalados para rodar o *script* de construção *main.py*.
+1. Corre `pip install requests` primeiro para instalar a *package* requerida.
+2. Corre `python build/main.py`.
+3. Verifica a pasta `buildOut`.

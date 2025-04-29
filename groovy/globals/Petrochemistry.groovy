@@ -167,6 +167,8 @@ class Petrochemistry {
         butane : new Crackable('butane').withTraits(SteamCrackable),
         light_cycle_oil : new Crackable('light_cycle_oil').withTraits(HydroCrackable).tap { hydrogen_consumed = 1100; gas_produced = 1290 },
         synthetic_wax : new Crackable('synthetic_wax').withTraits(HydroCrackable).tap { hydrogen_consumed = 7530; gas_produced = 1410 },
+        heavy_naphtha : new Crackable('heavy_naphtha').withTraits(SteamCrackable),
+        light_naphtha : new Crackable('light_naphtha').withTraits(SteamCrackable),
     ]
 
     public static oils = [

@@ -12,10 +12,6 @@
     {
       "biomes": "$RIVER",
       "weight": 2.5
-    },
-    {
-      "biomes": "",
-      "weight": 0.1
     }
   ],
   "metadata": {

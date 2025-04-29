@@ -47,6 +47,8 @@ mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wir
 
 // SMD Inductor * 16
 mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineCupronickel') * 4], [fluid('plastic') * 144])
+// SMD Inductor * 32
+mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 144])
 
 // SMD Resistor * 16
 mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineElectrum') * 4], [fluid('plastic') * 288])
@@ -295,7 +297,7 @@ BR.recipeBuilder()
         .fluidInputs(fluid('sodium_hydroxide_solution') * 6000)
         .fluidInputs(fluid('chlorine') * 4000)
         .outputs(metaitem('dustSodiumBismuthate') * 10)
-        .fluidOutputs(fluid('diluted_saltwater') * 8000)
+        .fluidOutputs(fluid('diluted_salt_water') * 8000)
         .duration(100)
         .EUt(240)
         .buildAndRegister()
@@ -778,7 +780,7 @@ ROASTER.recipeBuilder()
 
 CVD.recipeBuilder()
         .inputs(metaitem('wafer.silicon'))
-        .fluidInputs(fluid('zirconium_tetrachloride') * 180)
+        .fluidInputs(fluid('zirconium_tetrachloride') * 72)
         .fluidInputs(fluid('water') * 500)
         .outputs(metaitem('wafer.insulated_silicon'))
         .fluidOutputs(fluid('hydrogen_chloride') * 1000)
@@ -789,7 +791,7 @@ CVD.recipeBuilder()
 
 CVD.recipeBuilder()
         .inputs(metaitem('wafer.silicon_germanium'))
-        .fluidInputs(fluid('zirconium_tetrachloride') * 180)
+        .fluidInputs(fluid('zirconium_tetrachloride') * 72)
         .fluidInputs(fluid('water') * 500)
         .outputs(metaitem('wafer.insulated_silicon_germanium'))
         .fluidOutputs(fluid('hydrogen_chloride') * 1000)

@@ -26,6 +26,7 @@
   "questID:3": 1112000445,
   "tasks:9": {
     "0:10": {
+      "ignoreNBT:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

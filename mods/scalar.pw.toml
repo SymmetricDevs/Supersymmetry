@@ -1,0 +1,13 @@
+name = "Scalar"
+filename = "scalar-1.12.2-2.11.1-3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "5ea811b41e0c5cc3bdaace91cfae102f4080aad9"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6130572
+project-id = 1012168

@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.63.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "techguns:revolver",
         "tag:10": {
           "ammo:2": 6,
@@ -19,13 +20,9 @@
   "questID:3": 63,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 1,
-          "Damage:2": 1,
-          "id:8": "techguns:itemshared"
-        },
-        "1:10": {
           "Count:3": 1,
           "id:8": "techguns:revolver",
           "tag:10": {
@@ -33,6 +30,11 @@
             "ammovariant:8": "default",
             "camo:1": 0
           }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "techguns:itemshared"
         }
       },
       "taskID:8": "bq_standard:retrieval"

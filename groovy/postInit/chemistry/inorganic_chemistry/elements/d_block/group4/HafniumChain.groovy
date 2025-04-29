@@ -41,7 +41,7 @@ ROASTER.recipeBuilder()
 
 for (highPurityCombustible in highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
-                .inputs(ore('dustHafniumDioxide'))
+                .inputs(ore('dustHafniumDioxide') * 3)
                 .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
                 .fluidInputs(fluid('chlorine') * 4000)
                 .outputs(metaitem('dustImpureHafniumTetrachloride') * 5)

@@ -1,6 +1,5 @@
-import globals.Globals
 import globals.GroovyUtils
-import globals.RecyclingHelper
+import postInit.utils.RecyclingHelper
 import gregtech.common.blocks.MetaBlocks
 import gregtech.common.blocks.MetaBlocks.*
 import net.minecraft.init.Blocks
@@ -11,6 +10,7 @@ ASSEMBLER = recipemap('assembler')
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 MIXER = recipemap('mixer')
 AUTOCLAVE = recipemap('autoclave')
+CHEMICAL_BATH = recipemap('chemical_bath')
 
 //REMOVALS
 
@@ -290,7 +290,7 @@ for (fluid in fluid_removals) {
 //ADDITIONS
 
 //CONSUMES IRON BUCKET ONLY BECAUSE THE OUTPUT IS IN AN IRON BUCKET
-crafting.addShapeless('gregtech:salt_water_bucket', item('forge:bucketfilled').withNbt(["FluidName": "salt_water", "Amount": 1000]), [item('minecraft:water_bucket').noreturn(), metaitem('dustSalt'), metaitem('dustSalt')])
+crafting.addShapeless('gregtech:salt_water_bucket', item('forge:bucketfilled').withNbt(["FluidName": "salt_water", "Amount": 1000]), [item('minecraft:water_bucket').noReturn(), metaitem('dustSalt'), metaitem('dustSalt')])
 
 RecyclingHelper.replaceShaped('gregtech:large_steel_boiler', metaitem('large_boiler.steel'), [
     [ore('cableGtSingleCopper'), ore('circuitMv'), ore('cableGtSingleCopper')],
@@ -377,7 +377,7 @@ ASSEMBLER.recipeBuilder()
 
 RecyclingHelper.addShaped("gregtech:steam_pump", metaitem('susy:pump.steam'), [
     [ore('screwBronze'), ore('rotorBronze'), ore('ringIron')],
-    [ore('toolScrewdriver'), ore('pipeTinyFluidBronze'), ore('toolWrench')],
+    [ore('craftingToolScrewdriver'), ore('pipeTinyFluidBronze'), ore('craftingToolWrench')],
     [ore('ringIron'), metaitem('steam.motor'), ore('pipeTinyFluidBronze')]
 ])
 
@@ -970,27 +970,27 @@ RecyclingHelper.handleRecycling(metaitem('drum.uhmwpe'), [metaitem('plateUltraHi
 
 // ModHandler.addShapelessNBTClearingRecipe() is not reloadable, just using these seems fine, and we indeed have tooltips.
 crafting.addShapeless("drum_nbt_lead", metaitem('drum.lead'), [
-        metaitem('drum.lead').noreturn()
+        metaitem('drum.lead').noReturn()
 ]);
 
 crafting.addShapeless("drum_nbt_brass", metaitem('drum.brass'), [
-        metaitem('drum.brass').noreturn()
+        metaitem('drum.brass').noReturn()
 ]);
 
 crafting.addShapeless("drum_nbt_pe", metaitem('drum.pe'), [
-        metaitem('drum.pe').noreturn()
+        metaitem('drum.pe').noReturn()
 ]);
 
 crafting.addShapeless("drum_nbt_pp", metaitem('drum.pp'), [
-        metaitem('drum.pp').noreturn()
+        metaitem('drum.pp').noReturn()
 ]);
 
 crafting.addShapeless("drum_nbt_ptfe", metaitem('drum.ptfe'), [
-        metaitem('drum.ptfe').noreturn()
+        metaitem('drum.ptfe').noReturn()
 ]);
 
 crafting.addShapeless("drum_nbt_uhmwpe", metaitem('drum.uhmwpe'), [
-        metaitem('drum.uhmwpe').noreturn()
+        metaitem('drum.uhmwpe').noReturn()
 ]);
 
 ASSEMBLER.recipeBuilder()
@@ -1181,13 +1181,6 @@ RecyclingHelper.addShaped('gregtech:electrolytic_cell', metaitem('electrolytic_c
         [ore('circuitLv'), ore('cableGtSingleTin'), ore('circuitLv')]
 ])
 
-// Prospector
-crafting.addShaped('gregtech:prospector_lead_acid', metaitem('prospector.lv'), [
-        [metaitem('emitter.lv'), ore('plateSteel'), metaitem('sensor.lv')],
-        [ore('circuitLv'), ore('plateGlass'), ore('circuitLv')],
-        [ore('plateSteel'), metaitem('battery.lead_acid'), ore('plateSteel')]
-])
-
 LATEX_COLLECTOR = recipemap('latex_collector')
 
 LATEX_COLLECTOR.recipeBuilder()
@@ -1294,19 +1287,91 @@ RecyclingHelper.replaceShaped('gregtech:distillation_tower', metaitem('distillat
 
 // Item Magnet with Lead Acid battery
 
-crafting.replaceShaped('gregtech:lv_magnet_lead_acid', metaitem('item_magnet.lv'), [
+crafting.shapedBuilder()
+	.name('gregtech:lv_magnet_lead_acid') 
+	.output(metaitem('item_magnet.lv').withNbt(['MaxCharge': 120000L]))
+	.shape([
         [ore('stickSteelMagnetic'), ore('toolWrench'), ore('stickSteelMagnetic')],
-        [ore('stickSteelMagnetic'), metaitem('battery.lead_acid'), ore('stickSteelMagnetic')],
+        [ore('stickSteelMagnetic'), metaitem('battery.lead_acid').mark('battery'), ore('stickSteelMagnetic')],
         [ore('cableGtSingleTin'), ore('plateSteel'), ore('cableGtSingleTin')]
-])
+	])
+        .recipeFunction { output, inputs, info -> 
+                def batteryTag = inputs['battery']?.getTagCompound()
+                if (batteryTag != null) {
+                        output.getTagCompound().setLong("Charge", batteryTag.getLong("Charge"))
+                }
+        }
+	.register()
 
 // Power Unit with Lead Acid Battery
 
-crafting.replaceShaped('gregtech:lv_power_unit_lead_acid', metaitem('power_unit.lv'), [
+crafting.shapedBuilder()
+	.name('gregtech:lv_power_unit_lead_acid') 
+	.output(metaitem('power_unit.lv').withNbt(['MaxCharge': 120000L]))
+	.shape([
         [ore('screwSteel'), null, ore('toolScrewdriver')],
         [ore('gearSmallSteel'), metaitem('electric.motor.lv'), ore('gearSmallSteel')],
-        [ore('plateSteel'), metaitem('battery.lead_acid'), ore('plateSteel')]
-])
+        [ore('plateSteel'), metaitem('battery.lead_acid').mark('battery'), ore('plateSteel')]
+	])
+	.recipeFunction { output, inputs, info -> 
+                def batteryTag = inputs['battery']?.getTagCompound()
+                if (batteryTag != null) {
+                        output.getTagCompound().setLong("Charge", batteryTag.getLong("Charge"))
+                }
+        }
+	.register()
+
+// Prospector's Scanner with Lead Acid battery
+
+crafting.shapedBuilder()
+        .name("gregtech:prospector_lead_acid")
+        .output(metaitem('prospector.lv').withNbt(['MaxCharge': 120000L]))
+        .shape([
+	[metaitem('emitter.lv'), ore('plateSteel'), metaitem('sensor.lv')],
+        [ore('circuitLv'), ore('plateGlass'), ore('circuitLv')],
+        [ore('plateSteel'), metaitem('battery.lead_acid').mark('battery'), ore('plateSteel')]
+	])
+	.recipeFunction { output, inputs, info -> 
+                def batteryTag = inputs['battery']?.getTagCompound()
+                if (batteryTag != null) {
+                        output.getTagCompound().setLong("Charge", batteryTag.getLong("Charge"))
+                }
+        }
+	.register()
+
+// NightVision Goggles with other batteries
+
+crafting.shapedBuilder()
+	.name('gregtech:nightvision_lithium')
+	.output(metaitem('nightvision_goggles').withNbt([MaxCharge: 120000L])) 
+	.shape([
+		[ore('circuitUlv'), metaitem('screwSteel'), ore('circuitUlv')],
+		[metaitem('ringRubber'), metaitem('battery.re.lv.lithium').mark('battery'), metaitem('ringRubber')],
+		[metaitem('lensGlass'), ore('toolScrewdriver'), metaitem('lensGlass')]
+	])
+	.recipeFunction { output, inputs, info -> 
+                def batteryTag = inputs['battery']?.getTagCompound()
+                if (batteryTag != null) {
+                        output.getTagCompound().setLong("Charge", batteryTag.getLong("Charge"))
+                }
+        }
+	.register()
+
+crafting.shapedBuilder()
+	.name('gregtech:nightvision_cadmium')
+	.output(metaitem('nightvision_goggles').withNbt([MaxCharge: 100000L])) 
+	.shape([
+		[ore('circuitUlv'), metaitem('screwSteel'), ore('circuitUlv')],
+		[metaitem('ringRubber'), metaitem('battery.re.lv.cadmium').mark('battery'), metaitem('ringRubber')],
+		[metaitem('lensGlass'), ore('toolScrewdriver'), metaitem('lensGlass')]
+	])
+	.recipeFunction { output, inputs, info -> 
+                def batteryTag = inputs['battery']?.getTagCompound()
+                if (batteryTag != null) {
+                        output.getTagCompound().setLong("Charge", batteryTag.getLong("Charge"))
+                }
+        }
+	.register()
 
 // Stone oredict stuff
 
@@ -1826,7 +1891,7 @@ RecyclingHelper.handleRecycling(metaitem('wing.small'), [
 
 // Small turbojet
 ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('rotorRene') * 4)
+        .inputs(metaitem('rotorReneN5') * 4)
         .inputs(ore('stickLongTitanium'))
         .inputs(ore('plateTitanium') * 2)
         .inputs(ore('boltTitanium') * 4)
@@ -1838,7 +1903,7 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister();
 
 RecyclingHelper.handleRecycling(metaitem('turbojet.small'), [
-        metaitem('rotorRene') * 4,
+        metaitem('rotorReneN5') * 4,
         ore('stickLongTitanium'),
         ore('plateTitanium') * 2,
         ore('boltTitanium') * 4,
@@ -1892,3 +1957,95 @@ JET_WINGPACK.recipeBuilder()
         .fluidInputs(fluid('supreme_kerosene') * 1)
         .duration(80)
         .buildAndRegister()
+        
+def lamp_colors = [
+	'white',
+	'orange',
+	'magenta',
+	'light_blue',
+	'yellow',
+	'lime',
+	'pink',
+	'gray',
+	'cyan',
+	'purple',
+	'blue',
+	'brown',
+	'green',
+	'red',
+	'black',
+]       
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateGlass') * 6)
+	.inputs(ore('gtLight'))
+	.inputs(ore('frameGtSteel'))
+	.outputs(item('gregtech:white_lamp') * 4)
+	.circuitMeta(1)
+	.duration(40)
+	.EUt(7)
+	.buildAndRegister()
+			
+ASSEMBLER.recipeBuilder()
+	.inputs(metaitem('plateGlass') * 6)
+	.inputs(ore('gtLight'))
+	.inputs(ore('frameGtAluminium'))
+	.outputs(item('gregtech:white_lamp') * 8)
+	.circuitMeta(1)
+	.duration(40)
+	.EUt(7)
+	.buildAndRegister()
+			
+ASSEMBLER.recipeBuilder()
+       .inputs(metaitem('plateGlass') * 6)
+        .inputs(ore('gtLight'))
+	.inputs(ore('frameGtStainlessSteel'))
+	.outputs(item('gregtech:white_lamp') * 16)
+	.circuitMeta(1)
+	.duration(40)
+	.EUt(7)
+	.buildAndRegister()
+			
+ASSEMBLER.recipeBuilder()
+	.inputs(metaitem('plateGlass') * 6) 
+	.inputs(ore('gtLight'))
+	.inputs(ore('frameGtTitanium'))
+	.outputs(item('gregtech:white_lamp') * 32)
+	.circuitMeta(1)
+	.duration(40)
+	.EUt(7)
+	.buildAndRegister()
+
+for(color in lamp_colors) {
+	for(int i = 0; i < 8; i++) {
+		mods.gregtech.assembler.removeByInput(7, [metaitem('plateGlass') * 6, item('minecraft:glowstone_dust'), metaitem('circuit.integrated').withNbt(['Configuration': i+1])], [fluid('dye_'+color) * 144 * 144])
+		mods.gregtech.assembler.removeByInput(7, [metaitem('plateGlass') * 6, item('minecraft:glowstone_dust'), metaitem('circuit.integrated').withNbt(['Configuration': i+9])], [fluid('dye_'+color) * 144 * 144])
+	}
+	if(color == 'white') { continue }
+	
+	CHEMICAL_BATH.recipeBuilder()
+			.fluidInputs(fluid('dye_'+color) * 18)
+			.inputs(item('gregtech:white_lamp')) 
+			.outputs(item('gregtech:'+color+'_lamp'))
+			.duration(10)
+			.EUt(7)
+			.buildAndRegister()
+       
+}
+
+
+//do this separately for light gray lamps because they are called silver for some reason?
+for(int i = 0; i < 8; i++) {
+	mods.gregtech.assembler.removeByInput(7, [metaitem('plateGlass') * 6, item('minecraft:glowstone_dust'), metaitem('circuit.integrated').withNbt(['Configuration': i+1])], [fluid('dye_light_gray') * 144 * 144])
+	mods.gregtech.assembler.removeByInput(7, [metaitem('plateGlass') * 6, item('minecraft:glowstone_dust'), metaitem('circuit.integrated').withNbt(['Configuration': i+9])], [fluid('dye_light_gray') * 144 * 144])
+}
+
+CHEMICAL_BATH.recipeBuilder()
+	.fluidInputs(fluid('dye_light_gray') * 18)
+	.inputs(item('gregtech:white_lamp')) 
+	.outputs(item('gregtech:silver_lamp'))
+        .duration(10)
+	.EUt(7)
+	.buildAndRegister()
+
+

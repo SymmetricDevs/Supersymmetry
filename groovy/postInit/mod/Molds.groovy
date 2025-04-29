@@ -1,4 +1,4 @@
-import globals.RecyclingHelper
+import postInit.utils.RecyclingHelper
 
 def FORMINGPRESS = recipemap('forming_press')
 

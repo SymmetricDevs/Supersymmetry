@@ -14,5 +14,8 @@ public class ElementMaterials {
     public static void register() {
         log.infoMC("Registering Element Materials!");
         
+        
+
+
     }
 }

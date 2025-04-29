@@ -7,6 +7,7 @@
       "desc:8": "susy.quest.db.822.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 14638,
         "id:8": "gregtech:machine"
       },
@@ -16,6 +17,7 @@
   "questID:3": 822,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
@@ -24,8 +26,8 @@
         },
         "1:10": {
           "Count:3": 27,
-          "Damage:2": 7,
-          "id:8": "gregtech:turbine_casing"
+          "Damage:2": 5,
+          "id:8": "gregtech:metal_casing"
         },
         "2:10": {
           "Count:3": 4,
