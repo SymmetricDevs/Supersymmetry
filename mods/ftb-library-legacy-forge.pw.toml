@@ -1,0 +1,13 @@
+name = "FTB Library (Forge) (Legacy)"
+filename = "FTBLib-5.4.7.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "7c20cd223bc2334edf153e074f35acdbcab3c976"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2985811
+project-id = 237167

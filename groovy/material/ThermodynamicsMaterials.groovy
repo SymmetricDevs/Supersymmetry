@@ -1,43 +1,48 @@
 package material;
 
 import static material.SuSyMaterials.*;
+import static globals.Globals.determineTemperatureGas;
+import static globals.Globals.determineTemperatureLiquid;
 
 import gregtech.api.unification.material.Material;
 import gregtech.api.GregTechAPI;
-import gregtech.api.fluids.fluidType.FluidTypes;
+import gregtech.api.fluids.attribute.FluidAttributes;
+import gregtech.api.fluids.FluidBuilder;
+import gregtech.api.fluids.store.FluidStorageKeys;
 import gregtech.api.unification.material.properties.*
 
+import supersymmetry.api.util.SuSyUtility;
+
+import static gregtech.api.fluids.FluidConstants.*;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
-
 class ThermodynamicsMaterials {
-    
-    private static void generateHighPressureGases(Material materialName, int id, boolean generateCold){
+
+
+        private static void generateHighPressureGases(Material materialName, int id, boolean generateCold){
                 var color = materialName.getMaterialRGB();
 
-                new Material.Builder(id, "hot_hp_" + materialName.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(323)
+                new Material.Builder(id, SuSyUtility.susyId("hot_hp_" + materialName.toString()))
+                        .gas(new FluidBuilder().temperature(323))
                         .color(color)
-                        .components(materialName, 1)
+                        .components(materialName)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
-                new Material.Builder(id + 1, "hp_" + materialName.toString())
-                        .fluid(FluidTypes.GAS)
+                new Material.Builder(id + 1, SuSyUtility.susyId("hp_" + materialName.toString()))
+                        .gas()
                         .color(color)
-                        .components(materialName, 1)
+                        .components(materialName)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
                 if (generateCold) {
-                        new Material.Builder(id + 2, "cold_hp_" + materialName.toString())
-                                .fluid(FluidTypes.GAS)
-                                .fluidTemp(223)
+                        new Material.Builder(id + 2, SuSyUtility.susyId("cold_hp_" + materialName.toString()))
+                                .gas(new FluidBuilder().temperature(223))
                                 .color(color)
-                                .components(materialName, 1)
+                                .components(materialName)
                                 .flags(DISABLE_DECOMPOSITION)
                                 .build();
                 }
@@ -46,11 +51,10 @@ class ThermodynamicsMaterials {
         private static void generateLiquidFromGas(Material materialName, int id, int boilingTemperature){
                 var color = materialName.getMaterialRGB();
 
-                new Material.Builder(id, "liquid_" + materialName.toString())
-                        .fluid()
-                        .fluidTemp(boilingTemperature)
+                new Material.Builder(id, SuSyUtility.susyId("liquid_" + materialName.toString()))
+                        .liquid(new FluidBuilder().temperature(boilingTemperature))
                         .color(color)
-                        .components(materialName, 1)
+                        .components(materialName)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
         }
@@ -58,34 +62,31 @@ class ThermodynamicsMaterials {
         private static void generateThermoRefrigerant(Material materialName, int id){
                 var color = materialName.getMaterialRGB();
 
-                new Material.Builder(id, "hot_compressed_" + materialName.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(323)
+                new Material.Builder(id, SuSyUtility.susyId("hot_compressed_" + materialName.toString()))
+                        .gas(new FluidBuilder().temperature(323))
                         .color(color)
-                        .components(materialName, 1)
+                        .components(materialName)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
-                new Material.Builder(id + 1, "compressed_" + materialName.toString())
-                        .fluid(FluidTypes.GAS)
+                new Material.Builder(id + 1, SuSyUtility.susyId("compressed_" + materialName.toString()))
+                        .gas()
                         .color(color)
-                        .components(materialName, 1)
+                        .components(materialName)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
-                new Material.Builder(id + 2, "cold_compressed_" + materialName.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(223)
+                new Material.Builder(id + 2, SuSyUtility.susyId("cold_compressed_" + materialName.toString()))
+                        .gas(new FluidBuilder().temperature(223))
                         .color(color)
-                        .components(materialName, 1)
+                        .components(materialName)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
-                new Material.Builder(id + 3, "cold_" + materialName.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(223)
+                new Material.Builder(id + 3, SuSyUtility.susyId("cold_" + materialName.toString()))
+                        .gas(new FluidBuilder().temperature(223))
                         .color(color)
-                        .components(materialName, 1)
+                        .components(materialName)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
         }
@@ -93,11 +94,10 @@ class ThermodynamicsMaterials {
         private static void generateCoolant(Material materialName, int id){
                 var color = materialName.materialRGB;
 
-                new Material.Builder(id, "warm_" + materialName.toString())
-                        .fluid()
-                        .fluidTemp(303)
+                new Material.Builder(id, SuSyUtility.susyId("warm_" + materialName.toString()))
+                        .liquid(new FluidBuilder().temperature(303))
                         .color(color)
-                        .components(materialName, 1)
+                        .components(materialName)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
@@ -106,11 +106,10 @@ class ThermodynamicsMaterials {
         private static void generateHotGas(Material material, int id) {
                 var color = material.materialRGB;
 
-                new Material.Builder(id, "hot_" + material.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() + 100)
+                new Material.Builder(id, SuSyUtility.susyId("hot_" + material.toString()))
+                        .gas(new FluidBuilder().temperature(determineTemperatureGas(material) + 100))
                         .color(color)
-                        .components(material, 1)
+                        .components(material)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
         }
@@ -118,67 +117,59 @@ class ThermodynamicsMaterials {
         private static void generateGreenhouseGases(Material material, int id) {
                 var color = material.materialRGB;
 
-                new Material.Builder(id, "warm_dry_" + material.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() + 20)
+                new Material.Builder(id, SuSyUtility.susyId("warm_dry_" + material.toString()))
+                        .gas(new FluidBuilder().temperature(determineTemperatureGas(material) + 20))
                         .color(color)
-                        .components(material, 1)
+                        .components(material)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
-                new Material.Builder(id + 1, "warm_" + material.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() + 20)
+                new Material.Builder(id + 1, SuSyUtility.susyId("warm_" + material.toString()))
+                        .gas(new FluidBuilder().temperature(determineTemperatureGas(material) + 20))
                         .color(color)
-                        .components(material, 1)
+                        .components(material)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
-                new Material.Builder(id + 2, "warm_humid_" + material.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() + 20)
+                new Material.Builder(id + 2, SuSyUtility.susyId("warm_humid_" + material.toString()))
+                        .gas(new FluidBuilder().temperature(determineTemperatureGas(material) + 20))
                         .color(color)
-                        .components(material, 1)
+                        .components(material)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
-                new Material.Builder(id + 3, "dry_" + material.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                new Material.Builder(id + 3, SuSyUtility.susyId("dry_" + material.toString()))
+                        .gas(new FluidBuilder().temperature(determineTemperatureGas(material)))
                         .color(color)
-                        .components(material, 1)
+                        .components(material)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
-                new Material.Builder(id + 4, "humid_" + material.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                new Material.Builder(id + 4, SuSyUtility.susyId("humid_" + material.toString()))
+                        .gas(new FluidBuilder().temperature(determineTemperatureGas(material)))
                         .color(color)
-                        .components(material, 1)
+                        .components(material)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
-                new Material.Builder(id + 5, "cool_dry_" + material.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() - 20)
+                new Material.Builder(id + 5, SuSyUtility.susyId("cool_dry_" + material.toString()))
+                        .gas(new FluidBuilder().temperature(determineTemperatureGas(material) - 20))
                         .color(color)
-                        .components(material, 1)
+                        .components(material)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
-                new Material.Builder(id + 6, "cool_" + material.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() - 20)
+                new Material.Builder(id + 6, SuSyUtility.susyId("cool_" + material.toString()))
+                        .gas(new FluidBuilder().temperature(determineTemperatureGas(material) - 20))
                         .color(color)
-                        .components(material, 1)
+                        .components(material)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
 
-                new Material.Builder(id + 7, "cool_humid_" + material.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature() - 20)
+                new Material.Builder(id + 7, SuSyUtility.susyId("cool_humid_" + material.toString()))
+                        .gas(new FluidBuilder().temperature(determineTemperatureGas(material) - 20))
                         .color(color)
-                        .components(material, 1)
+                        .components(material)
                         .flags(DISABLE_DECOMPOSITION)
                         .build();
         }
@@ -186,25 +177,22 @@ class ThermodynamicsMaterials {
         private static void generatePurifiedGas(Material material, int id) {
                 var color = material.materialRGB;
 
-                new Material.Builder(id, "high_purity_" + material.toString())
-                        .fluid(FluidTypes.GAS)
-                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                new Material.Builder(id, SuSyUtility.susyId("high_purity_" + material.toString()))
+                        .gas(new FluidBuilder().temperature(determineTemperatureGas(material)))
                         .color(color)
-                        .components(material, 1)
+                        .components(material)
                         .build();
         }
 
         private static void generatePurifiedLiquid(Material material, int id) {
                 var color = material.materialRGB;
 
-                new Material.Builder(id, "high_purity_" + material.toString())
-                        .fluid()
-                        .fluidTemp(material.getProperties().getProperty(PropertyKey.FLUID).getFluidTemperature())
+                new Material.Builder(id, SuSyUtility.susyId("high_purity_" + material.toString()))
+                        .liquid(new FluidBuilder().temperature(determineTemperatureLiquid(material)))
                         .color(color)
-                        .components(material, 1)
+                        .components(material)
                         .build();
         }
-    
     
     public static void register() {
 
@@ -236,15 +224,15 @@ class ThermodynamicsMaterials {
 
                 generateHighPressureGases(NetherAir, 22036, true);
 
-                generateHighPressureGases(RefineryGas, 22039, true);
+                generateHighPressureGases(FuelGas, 22039, true);
 
                 generateHighPressureGases(Methane, 22042, true);
 
                 generateHighPressureGases(NaturalGas, 22045, true);
 
-                generateLiquidFromGas(Hydrogen, 22100, 14);
+                generateHighPressureGases(DecarburizedAir, 22048, true);
 
-                generateLiquidFromGas(Helium, 22101, 5);
+                generateLiquidFromGas(Hydrogen, 22100, 14);
 
                 generateLiquidFromGas(Neon, 22102, 27);
 
@@ -256,11 +244,13 @@ class ThermodynamicsMaterials {
 
                 generateLiquidFromGas(Nitrogen, 22106, 77);
 
-                generateLiquidFromGas(RefineryGas, 22107, 112);
+                // FREE ID: 22107
 
                 generateLiquidFromGas(Methane, 22108, 112);
 
                 generateLiquidFromGas(NaturalGas, 22109, 110);
+
+                generateLiquidFromGas(DecarburizedAir, 22110, 80)
 
                 generateThermoRefrigerant(Ammonia, 22150);
 
@@ -320,232 +310,257 @@ class ThermodynamicsMaterials {
 
                 generateGreenhouseGases(EarthGreenhouseGas, 22700)
 
-                EarthlikeAir = new Material.Builder(22800, "earth_like_air")
-                        .fluid(FluidTypes.GAS)
-                        .color(0x8fbfe3)
-                        .build();
+        EarthlikeAir = new Material.Builder(22800, SuSyUtility.susyId("earth_like_air"))
+                .gas()
+                .color(0x8fbfe3)
+                .build();
 
-        HotHighPressureSteam = new Material.Builder(22801, "hot_hp_steam")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(1200)
+        HotHighPressureSteam = new Material.Builder(22801, SuSyUtility.susyId("hot_hp_steam"))
+                .gas(new FluidBuilder().temperature(1200))
                 .color(0xffffff)
                 .build();
 
-        CompressedAir = new Material.Builder(22802, "compressed_air")
-                .fluid(FluidTypes.GAS)
-                .color(0x95bee6)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
-                .build();
-
-        ChilledAir = new Material.Builder(22803, "chilled_air")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(273)
-                .color(0x7ea7cf)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
-                .build();
-
-        PurifiedAir = new Material.Builder(22804, "purified_air")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(273)
-                .color(0x6b97c2)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
-                .build();
-
-        BoostedAir = new Material.Builder(22805, "boosted_air")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(273)
-                .color(0x598ec2)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
-                .build();
-
-        ColdWater = new Material.Builder(22806, "cold_water")
-                .fluid()
-                .fluidTemp(273)
-                .color(0x6293e3)
-                .components(Hydrogen, 2, Oxygen, 1)
-                .build();
-
-        WasteGaseousNitrogen = new Material.Builder(22807, "waste_gaseous_nitrogen")
-                .fluid(FluidTypes.GAS)
+        WasteGaseousNitrogen = new Material.Builder(22807, SuSyUtility.susyId("waste_gaseous_nitrogen"))
+                .gas()
                 .color(0x29a4a6)
                 .build();
 
-        PurfiedWasteGaseousNitrogen = new Material.Builder(22808, "purified_waste_gaseous_nitrogen")
-                .fluid(FluidTypes.GAS)
-                .color(0x37b1b3)
-                .build();
-
-        ChilledBoostedAir = new Material.Builder(22809, "chilled_boosted_air")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(203)
-                .color(0x4679ab)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
-                .build();
-
-        PartiallyLiquifiedAir = new Material.Builder(22810, "partially_liquified_air")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(100)
-                .color(0x4679ab)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
-                .build();
-
-        GaseousAirFeedstock = new Material.Builder(22811, "gaseous_air_feedstock")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(150)
-                .color(0x3b72a8)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
-                .build();
-
-        LiquidAirFeedstock = new Material.Builder(22812, "liquid_air_feedstock")
-                .fluid()
-                .fluidTemp(80)
-                .color(0x3b72a8)
-                .components(Nitrogen, 78, Oxygen, 21, Argon, 9)
-                .build();
-
-        ChillyWasteGaseousNitrogen = new Material.Builder(22813, "chilly_waste_gaseous_nitrogen")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(243)
+        ChillyWasteGaseousNitrogen = new Material.Builder(22813, SuSyUtility.susyId('chilly_waste_gaseous_nitrogen'))
+                .gas(new FluidBuilder().temperature(243))
                 .color(0x3f9d9e)
                 .build();
 
-        SubcooledLiquidNitrogen = new Material.Builder(22814, "subcooled_liquid_nitrogen")
-                .fluid()
-                .fluidTemp(60)
+        SubcooledLiquidNitrogen = new Material.Builder(22814, SuSyUtility.susyId('subcooled_liquid_nitrogen'))
+                .liquid(new FluidBuilder().temperature(60))
                 .color(0x009a9c)
                 .build();
 
-        ColdWasteGaseousNitrogen = new Material.Builder(22815, "cold_waste_gaseous_nitrogen")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(223)
+        ColdWasteGaseousNitrogen = new Material.Builder(22815, SuSyUtility.susyId('cold_waste_gaseous_nitrogen'))
+                .gas(new FluidBuilder().temperature(223))
                 .color(0x367f80)
                 .build();
 
-        UntreatedLiquidOxygen = new Material.Builder(22816, "untreated_liquid_oxygen")
-                .fluid()
-                .fluidTemp(55)
+        UntreatedLiquidOxygen = new Material.Builder(22816, SuSyUtility.susyId('untreated_liquid_oxygen'))
+                .liquid(new FluidBuilder().temperature(55))
                 .color(0x49a4d1)
                 .build();
 
-        UntreatedLiquidNitrogen = new Material.Builder(22817, "untreated_liquid_nitrogen")
-                .fluid()
-                .fluidTemp(60)
+        UntreatedLiquidNitrogen = new Material.Builder(22817, SuSyUtility.susyId('untreated_liquid_nitrogen'))
+                .liquid(new FluidBuilder().temperature(60))
                 .color(0x029799)
                 .build();
 
-        OxygenRichLiquid = new Material.Builder(22818, "oxygen_rich_liquid")
-                .fluid()
-                .fluidTemp(55)
+        OxygenRichLiquid = new Material.Builder(22818, SuSyUtility.susyId('oxygen_rich_liquid'))
+                .liquid(new FluidBuilder().temperature(55))
                 .color(0x67c6e0)
                 .build();
 
-        OxygenRichGas = new Material.Builder(22819, "oxygen_rich_gas")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(90)
+        OxygenRichGas = new Material.Builder(22819, SuSyUtility.susyId('oxygen_rich_gas'))
+                .gas(new FluidBuilder().temperature(90))
                 .color(0x78d2eb)
                 .build();
 
-        NitrogenRichGas = new Material.Builder(22820, "nitrogen_rich_gas")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(120)
+        NitrogenRichGas = new Material.Builder(22820, SuSyUtility.susyId('nitrogen_rich_gas'))
+                .gas(new FluidBuilder().temperature(120))
                 .color(0x7ee0dd)
                 .build();
 
-        ArgonRichGas = new Material.Builder(22821, "argon_rich_gas")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(140)
+        ArgonRichGas = new Material.Builder(22821, SuSyUtility.susyId('argon_rich_gas'))
+                .gas(new FluidBuilder().temperature(140))
                 .color(0x6bc9aa)
                 .build();
 
-        OxygenRichVapor = new Material.Builder(22822, "oxygen_rich_vapor")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(170)
+        OxygenRichVapor = new Material.Builder(22822, SuSyUtility.susyId('oxygen_rich_vapor'))
+                .gas(new FluidBuilder().temperature(170))
                 .color(0x92e1f7)
                 .build();
 
-        CrudeArgonVapor = new Material.Builder(22823, "crude_argon_vapor")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(160)
+        CrudeArgonVapor = new Material.Builder(22823, SuSyUtility.susyId('crude_argon_vapor'))
+                .gas(new FluidBuilder().temperature(160))
                 .color(0x78e3c0)
                 .build();
 
-        SubcooledOxygenRichLiquid = new Material.Builder(22824, "subcooled_oxygen_rich_liquid")
-                .fluid()
-                .fluidTemp(90)
+        SubcooledOxygenRichLiquid = new Material.Builder(22824, SuSyUtility.susyId('subcooled_oxygen_rich_liquid'))
+                .gas(new FluidBuilder().temperature(90))
                 .color(0x0dba0d)
                 .build();
 
-        CrudeLiquidKrypton = new Material.Builder(22825, "crude_liquid_krypton")
-                .fluid()
-                .fluidTemp(120)
+        CrudeLiquidKrypton = new Material.Builder(22825, SuSyUtility.susyId('crude_liquid_krypton'))
+                .liquid(new FluidBuilder().temperature(120))
                 .color(0x579e57)
                 .build();
 
-        RareGasRichFraction = new Material.Builder(22826, "rare_gas_rich_fraction")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(80)
+        RareGasRichFraction = new Material.Builder(22826, SuSyUtility.susyId('rare_gas_rich_fraction'))
+                .gas(new FluidBuilder().temperature(80))
                 .color(0xd3eb94)
                 .build();
 
-        CondensedRareGasRichFraction = new Material.Builder(22827, "condensed_rare_gas_rich_fraction")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(60)
+        CondensedRareGasRichFraction = new Material.Builder(22827, SuSyUtility.susyId('condensed_rare_gas_rich_fraction'))
+                .gas(new FluidBuilder().temperature(60))
                 .color(0xe3a56b)
                 .build();
 
-        CrudeNeonVapor = new Material.Builder(22828, "crude_neon_vapor")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(40)
+        CrudeNeonVapor = new Material.Builder(22828, SuSyUtility.susyId('crude_neon_vapor'))
+                .gas(new FluidBuilder().temperature(40))
                 .color(0xc77b7b)
                 .build();
 
-        GaseousCrudeKrypton = new Material.Builder(22829, "gaseous_crude_krypton")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(160)
+        GaseousCrudeKrypton = new Material.Builder(22829, SuSyUtility.susyId('gaseous_crude_krypton'))
+                .gas(new FluidBuilder().temperature(160))
                 .color(0x579e57)
                 .build();
 
-        ColdLiquidOxygen = new Material.Builder(22830, "cold_liquid_oxygen")
-                .fluid()
-                .fluidTemp(40)
+        ColdLiquidOxygen = new Material.Builder(22830, SuSyUtility.susyId('cold_liquid_oxygen'))
+                .liquid(new FluidBuilder().temperature(40))
                 .color(0x1f729c)
                 .build();
 
-        CompressedCrudeNeon = new Material.Builder(22831, "compressed_crude_neon")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(40)
+        CompressedCrudeNeon = new Material.Builder(22831, SuSyUtility.susyId('compressed_crude_neon'))
+                .gas(new FluidBuilder().temperature(40))
                 .color(0xa65e5e)
                 .build();
 
-        PartiallyLiquefiedCrudeNeon = new Material.Builder(22832, "partially_liquefied_crude_neon")
-                .fluid()
-                .fluidTemp(30)
+        PartiallyLiquefiedCrudeNeon = new Material.Builder(22832, SuSyUtility.susyId('partially_liquefied_crude_neon'))
+                .liquid(new FluidBuilder().temperature(30))
                 .color(0xb35959)
                 .build();
 
-        GaseousCrudeNeon = new Material.Builder(22833, "gaseous_crude_neon")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(35)
+        GaseousCrudeNeon = new Material.Builder(22833, SuSyUtility.susyId('gaseous_crude_neon'))
+                .gas(new FluidBuilder().temperature(35))
                 .color(0xbd5757)
                 .build();
 
-        LiquidCrudeNeon = new Material.Builder(22834, "liquid_crude_neon")
-                .fluid()
-                .fluidTemp(25)
+        LiquidCrudeNeon = new Material.Builder(22834, SuSyUtility.susyId('liquid_crude_neon'))
+                .liquid(new FluidBuilder().temperature(25))
                 .color(0x944444)
                 .build();
 
-        LiquidCrudeArgon = new Material.Builder(22835, "liquid_crude_argon")
-                .fluid()
-                .fluidTemp(90)
+        LiquidCrudeArgon = new Material.Builder(22835, SuSyUtility.susyId('liquid_crude_argon'))
+                .liquid(new FluidBuilder().temperature(90))
                 .color(0x0dba0d)
                 .build();
 
-        ColdGaseousNitrogen = new Material.Builder(22836, "cold_gaseous_nitrogen")
-                .fluid(FluidTypes.GAS)
-                .fluidTemp(140)
+        ColdGaseousNitrogen = new Material.Builder(22836, SuSyUtility.susyId('cold_gaseous_nitrogen'))
+                .gas(new FluidBuilder().temperature(140))
                 .color(0x23b9ba)
                 .build();
+
+        LiquidArgonProduct = new Material.Builder(22837, SuSyUtility.susyId('liquid_argon_product'))
+                .liquid(new FluidBuilder().temperature(87))
+                .color(0x0ecc0e)
+                .build();
+
+        LiquidOxygenProduct = new Material.Builder(22838, SuSyUtility.susyId('liquid_oxygen_product'))
+                .liquid(new FluidBuilder().temperature(90))
+                .color(0x459fcc)
+                .build();
+
+        LiquidNitrogenProduct = new Material.Builder(22839, SuSyUtility.susyId('liquid_nitrogen_product'))
+                .liquid(new FluidBuilder().temperature(77))
+                .color(0x0b9a9c)
+                .build();
+
+        LiquidDeoxygenatedArgon = new Material.Builder(22840, SuSyUtility.susyId('liquid_deoxygenated_argon'))
+                .liquid(new FluidBuilder().temperature(87))
+                .color(0x3de03d)
+                .build();
+
+        LiquidWasteNitrogen = new Material.Builder(22841, SuSyUtility.susyId('liquid_waste_nitrogen'))
+                .liquid(new FluidBuilder().temperature(77))
+                .color(0x379394)
+                .build();
+
+        PartiallyLiquefiedArgon = new Material.Builder(22842, SuSyUtility.susyId('partially_liquefied_argon'))
+                .liquid(new FluidBuilder().temperature(120))
+                .color(0x56bf56)
+                .build();
+
+        SupercriticalCarbonDioxide = new Material.Builder(22843, SuSyUtility.susyId('supercritical_carbon_dioxide'))
+                .liquid(new FluidBuilder().temperature(373))
+                .components(CarbonDioxide)
+                .colorAverage()
+                .build();
+
+        ColdAmmoniacalArgonHydrogenMixture = new Material.Builder(22844, SuSyUtility.susyId('cold_ammoniacal_argon_hydrogen_mixture'))
+                .gas(new FluidBuilder().temperature(220))
+                .components(Argon, Hydrogen, Ammonia)
+                .colorAverage()
+                .build()
+                .setFormula("(Ar)(NH3)(H)", true)
+
+        ColdArgonHydrogenMixture = new Material.Builder(22845, SuSyUtility.susyId('cold_argon_hydrogen_mixture'))
+                .gas(new FluidBuilder().temperature(220))
+                .components(Argon, Hydrogen)
+                .color(0x20a591)
+                .build()
+                .setFormula("(Ar)(H)", true)
+
+        PartiallyLiquefiedArgonHydrogenMixture = new Material.Builder(22846, SuSyUtility.susyId('partially_liquefied_argon_hydrogen_mixture'))
+                .liquid(new FluidBuilder().temperature(73))
+                .components(Argon, Hydrogen)
+                .color(0x20aa91)
+                .build()
+                .setFormula("(Ar)(H)", true)
+
+        TreatedLiquidNitrogen = new Material.Builder(22847, SuSyUtility.susyId('treated_liquid_nitrogen'))
+                .liquid(new FluidBuilder().temperature(75))
+                .color(0x05a8ab)
+                .build();
+
+        TreatedLiquidOxygen = new Material.Builder(22848, SuSyUtility.susyId('treated_liquid_oxygen'))
+                .liquid(new FluidBuilder().temperature(55))
+                .color(0x51b1e0)
+                .build();
+
+        HeliumNeonConcentrate = new Material.Builder(22849, SuSyUtility.susyId('helium_neon_concentrate'))
+                .gas(new FluidBuilder().temperature(60))
+                .color(0x08a83b)
+                .build()
+        
+        DehydrogenatedHeliumNeonConcentrate = new Material.Builder(22850, SuSyUtility.susyId('dehydrogenated_helium_neon_concentrate'))
+                .gas(new FluidBuilder().temperature(70))
+                .color(0x13a12b)
+                .build()
+
+        DemoisturizedHeliumNeonConcentrate = new Material.Builder(22851, SuSyUtility.susyId('demoisturized_helium_neon_concentrate'))
+                .gas(new FluidBuilder().temperature(70))
+                .color(0x47a113)
+                .build()
+
+        CompressedHeliumNeonConcentrate = new Material.Builder(22852, SuSyUtility.susyId('compressed_helium_neon_concentrate'))
+                .gas(new FluidBuilder().temperature(85))
+                .color(0x58b821)
+                .build()
+
+        HeliumNeonMixture = new Material.Builder(22853, SuSyUtility.susyId('helium_neon_mixture'))
+                .gas(new FluidBuilder().temperature(75))
+                .components(Helium * 3, Neon * 7)
+                .colorAverage()
+                .build()
+
+        KryptonXenonRichLiquid = new Material.Builder(22854, SuSyUtility.susyId('krypton_xenon_rich_liquid'))
+                .liquid(new FluidBuilder().temperature(110))
+                .color(0x19a0b5)
+                .build()
+
+        CombustedKryptonXenonConcentrate = new Material.Builder(22855, SuSyUtility.susyId('combusted_krypton_xenon_concentrate'))
+                .gas(new FluidBuilder().temperature(150))
+                .color(0x23b5cc)
+                .build()
+
+        PurifiedKryptonXenonConcentrate = new Material.Builder(22856, SuSyUtility.susyId('purified_krypton_xenon_concentrate'))
+                .gas(new FluidBuilder().temperature(150))
+                .color(0x24c9e3)
+                .build()
+
+        LiquidCrudeXenon = new Material.Builder(22857, SuSyUtility.susyId('liquid_crude_xenon'))
+                .liquid(new FluidBuilder().temperature(165))
+                .color(0x18e9f0)
+                .build();
+
+        OxidizedXenon = new Material.Builder(22858, SuSyUtility.susyId('oxidized_xenon'))
+                .gas(new FluidBuilder().temperature(180))
+                .color(0x0af0f7)
+                .build()
     }
 }
-

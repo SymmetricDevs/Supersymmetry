@@ -1,0 +1,97 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditCokenOven",
+  "items": [
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "minecraft:coal",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "minecraft:log",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "minecraft:log",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "minecraft:log",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0472542829811573,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "minecraft:log",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0472542829811573,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "minecraft:log2",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0472542829811573,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "minecraft:log2",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.009064221754670143,
+      "min": 4,
+      "max": 12,
+      "item": {
+        "id": "minecraft:coal",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0976562350988388,
+      "min": 8,
+      "max": 32,
+      "item": {
+        "id": "gregtech:meta_gem",
+        "damage": 319,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

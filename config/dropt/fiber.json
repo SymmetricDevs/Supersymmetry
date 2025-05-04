@@ -1,0 +1,252 @@
+{
+  "rules": [
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "minecraft:tallgrass:1",
+            "minecraft:tallgrass:2",
+            "minecraft:double_plant:2",
+            "minecraft:double_plant:3",
+            "biomesoplenty:plant_0:0",
+            "biomesoplenty:plant_0:1",
+            "biomesoplenty:plant_0:7",
+            "biomesoplenty:plant_0:8",
+            "biomesoplenty:plant_0:9",
+            "biomesoplenty:plant_1:7"
+          ]
+        },
+        "harvester": {
+          "type": "PLAYER",
+          "heldItemMainHand": {
+            "type": "BLACKLIST",
+            "harvestLevel": "shears;0;-1",
+            "items": [
+              "gregtech:knife"
+            ]
+          }
+        }
+      },
+      "replaceStrategy": "ADD",
+      "drops": [
+        {
+          "selector": {
+            "weight": {
+              "value": 80
+            }
+          }
+        },
+        {
+          "selector": {
+            "weight": {
+              "value": 35
+            }
+          },
+          "item": {
+            "items": [
+              "pyrotech:material:12"
+            ],
+            "quantity": {
+              "min": 1,
+              "max": 2
+            }
+          }
+        },
+        {
+          "selector": {
+            "weight": {
+              "value": 10
+            }
+          },
+          "item": {
+            "items": [
+              "pyrotech:material:13"
+            ],
+            "quantity": {
+              "min": 1,
+              "max": 2
+            }
+          }
+        },
+        {
+          "selector": {
+            "weight": {
+              "value": 2
+            }
+          },
+          "item": {
+            "items": [
+              "pyrotech:strange_tuber"
+            ],
+            "quantity": {
+              "min": 1,
+              "max": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "minecraft:tallgrass:1",
+            "minecraft:tallgrass:2",
+            "minecraft:double_plant:2",
+            "minecraft:double_plant:3",
+            "biomesoplenty:plant_0:0",
+            "biomesoplenty:plant_0:1",
+            "biomesoplenty:plant_0:7",
+            "biomesoplenty:plant_0:8",
+            "biomesoplenty:plant_0:9",
+            "biomesoplenty:plant_1:7"
+          ]
+        },
+        "harvester": {
+          "type": "PLAYER",
+          "heldItemMainHand": {
+            "type": "WHITELIST",
+            "items": [
+              "gregtech:knife"
+            ]
+          }
+        }
+      },
+      "drops": [
+        {
+          "selector": {
+            "weight": {
+              "value": 80
+            }
+          },
+          "item": {
+            "items": [
+              "pyrotech:material:12"
+            ],
+            "quantity": {
+              "min": 1,
+              "max": 2
+            }
+          }
+        },
+        {
+          "selector": {
+            "weight": {
+              "value": 15
+            }
+          },
+          "item": {
+            "items": [
+              "pyrotech:material:13"
+            ],
+            "quantity": {
+              "min": 1,
+              "max": 2
+            }
+          }
+        },
+        {
+          "selector": {
+            "weight": {
+              "value": 5
+            }
+          },
+          "item": {
+            "items": [
+              "pyrotech:strange_tuber"
+            ],
+            "quantity": {
+              "min": 1,
+              "max": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "biomesoplenty:plant_0:13",
+            "biomesoplenty:plant_0:14",
+            "biomesoplenty:plant_1:0"
+          ]
+        },
+        "harvester": {
+          "type": "PLAYER",
+          "heldItemMainHand": {
+            "type": "BLACKLIST",
+            "harvestLevel": "shears;0;-1",
+            "items": [
+              "gregtech:knife"
+            ]
+          }
+        }
+      },
+      "drops": [
+        {
+          "selector": {
+            "weight": {
+              "value": 80
+            }
+          }
+        },
+        {
+          "selector": {
+            "weight": {
+              "value": 25
+            }
+          },
+          "item": {
+            "items": [
+              "pyrotech:material:13"
+            ],
+            "quantity": {
+              "min": 1,
+              "max": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "match": {
+        "blocks": {
+          "blocks": [
+            "biomesoplenty:plant_0:13",
+            "biomesoplenty:plant_0:14",
+            "biomesoplenty:plant_1:0"
+          ]
+        },
+        "harvester": {
+          "type": "PLAYER",
+          "heldItemMainHand": {
+            "type": "WHITELIST",
+            "items": [
+              "gregtech:knife"
+            ]
+          }
+        }
+      },
+      "replaceStrategy": "ADD",
+      "drops": [
+        {
+          "selector": {
+            "weight": {
+              "value": 40
+            }
+          },
+          "item": {
+            "items": [
+              "pyrotech:material:13"
+            ],
+            "quantity": {
+              "min": 1,
+              "max": 2
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

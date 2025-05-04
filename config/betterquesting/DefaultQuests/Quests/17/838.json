@@ -1,0 +1,17 @@
+{
+  "preRequisites:11": [
+    835
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.838.desc",
+      "icon:10": {
+        "Damage:2": 14,
+        "id:8": "susy:resource_block"
+      },
+      "name:8": "susy.quest.db.838.title"
+    }
+  },
+  "questID:3": 838,
+  "tasks:9": {}
+}

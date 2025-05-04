@@ -1,15 +1,18 @@
-import gregtech.integration.groovy.GroovyScriptCompat
+package globals
 
 import com.cleanroommc.groovyscript.api.IIngredient
+import gregtech.api.fluids.store.FluidStorageKeys;
+import gregtech.api.fluids.store.FluidStorage;
+import gregtech.api.unification.material.properties.*
+import gregtech.api.unification.material.Material;
+
+
+import static gregtech.api.fluids.FluidConstants.*;
 
 class Globals {
 
     public static void main (String[] args) {
 
-    }
-
-    public static IIngredient circuit(int x) {
-        return GroovyScriptCompat.getMetaItem('circuit.integrated').withNbt([Configuration: x])
     }
 
     public static voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
@@ -38,36 +41,6 @@ class Globals {
         "biomesoplenty"
     ]
 
-    public static class Combustible {
-        String name
-        String byproduct
-        int amount_required
-        int duration
-        Combustible(name, amount_required, duration, byproduct) {
-            this.name = name
-            this.amount_required = amount_required
-            this.duration = duration
-            this.byproduct = byproduct
-        }
-    }
-
-    public static combustibles = [
-        new Combustible('gemCoke', 1, 3, 'dustTinyAsh'),
-        new Combustible('dustCoke', 1, 3, 'dustTinyAsh'),
-        new Combustible('gemAnthracite', 1, 2, 'dustTinyAsh'),
-        new Combustible('dustAnthracite', 1, 2, 'dustTinyAsh'),
-        new Combustible('gemCoal', 2, 4, 'dustTinyDarkAsh'),
-        new Combustible('dustCoal', 2, 4, 'dustTinyDarkAsh'),
-        new Combustible('gemCharcoal', 2, 4, 'dustTinyDarkAsh'),
-        new Combustible('dustCharcoal', 2, 4, 'dustTinyDarkAsh'),
-        new Combustible('dustCarbon', 1, 1, 'dustTinyAsh')
-    ]
-
-    public static highPurityCombustibles = [
-        new Combustible('dustCoke', 1, 2, 'dustTinyAsh'),
-        new Combustible('dustCarbon', 1, 1, 'dustTinyAsh')
-    ]
-
     public static class InertGas {
         String name
         int amount_required
@@ -84,4 +57,56 @@ class Globals {
         new InertGas('helium', 4000, 2),
         new InertGas('argon', 1000, 1)
     ]
+
+    public static class Lubricant {
+        String name
+        int amount_required
+        double boost
+        Lubricant(name, amount_required, boost) {
+            this.name = name
+            this.amount_required = amount_required
+            this.boost = boost
+        }
+    }
+
+    public static lubricants = [
+        new Lubricant('lubricating_oil', 1, 1.1),
+        new Lubricant('lubricant', 2, 1.2),
+        new Lubricant('midgrade_lubricant', 2, 1.3),
+        new Lubricant('premium_lubricant', 1, 1.4),
+        new Lubricant('supreme_lubricant', 1, 1.5)
+    ]
+
+    public static int determineTemperatureGas(Material material) {
+    	if (material.getProperty(PropertyKey.FLUID) != null && material.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.GAS) != null) {
+    		def current = material.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.GAS).temperature
+  		if (current != -1) {
+    			return current
+    		}
+    	}
+        BlastProperty property = material.getProperty(PropertyKey.BLAST)
+       	if (property == null) {
+        	return ROOM_TEMPERATURE
+    	} else {
+        	return property.getBlastTemperature() + GAS_TEMPERATURE_OFFSET
+    	}
+    }
+
+    private static int determineTemperatureLiquid(Material material) {
+    	if (material.getProperty(PropertyKey.FLUID) != null && material.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID) != null) {
+    		def current = material.getProperty(PropertyKey.FLUID).getStorage().getQueuedBuilder(FluidStorageKeys.LIQUID).temperature
+  		if (current != -1) {
+    			return current
+    		}
+    	}
+        BlastProperty property = material.getProperty(PropertyKey.BLAST);
+        if (property == null) {
+        	if (material.hasProperty(PropertyKey.DUST)) {
+           		return SOLID_LIQUID_TEMPERATURE;
+        	}
+        	return ROOM_TEMPERATURE;
+        } else {
+        	return property.getBlastTemperature() + LIQUID_TEMPERATURE_OFFSET
+        }
+    }
 }

@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    240
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.684.desc",
+      "icon:10": {
+        "id:8": "minecraft:name_tag"
+      },
+      "name:8": "susy.quest.db.684.title"
+    }
+  },
+  "questID:3": 684,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:name_tag"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

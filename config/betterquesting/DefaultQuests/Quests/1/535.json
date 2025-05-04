@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    518
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.535.desc",
+      "icon:10": {
+        "Damage:2": 2037,
+        "id:8": "gregtech:fluid_pipe_quadruple"
+      },
+      "name:8": "susy.quest.db.535.title"
+    }
+  },
+  "questID:3": 535,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

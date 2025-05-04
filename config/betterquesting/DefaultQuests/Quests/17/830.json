@@ -1,0 +1,24 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    2,
+    0
+  ],
+  "preRequisites:11": [
+    67,
+    70,
+    739
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.830.desc",
+      "icon:10": {
+        "Damage:2": 5,
+        "id:8": "minecraft:stone"
+      },
+      "name:8": "susy.quest.db.830.title"
+    }
+  },
+  "questID:3": 830,
+  "tasks:9": {}
+}

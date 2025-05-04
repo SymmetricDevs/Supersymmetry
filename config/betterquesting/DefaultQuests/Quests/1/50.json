@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    48
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.50.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 112,
+        "id:8": "gregtech:cable_single"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.50.title"
+    }
+  },
+  "questID:3": 50,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 4,
+          "Damage:2": 112,
+          "id:8": "gregtech:cable_single"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

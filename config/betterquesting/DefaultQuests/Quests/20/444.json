@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    22
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.444.desc",
+      "icon:10": {
+        "id:8": "industrialrenewal:normal_rail"
+      },
+      "name:8": "susy.quest.db.444.title"
+    }
+  },
+  "questID:3": 444,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:normal_rail"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:booster_rail"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

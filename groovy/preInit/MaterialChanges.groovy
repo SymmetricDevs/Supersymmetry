@@ -1,13 +1,21 @@
+package preInit;
+
 import net.minecraftforge.fml.common.eventhandler.EventPriority
-import gregtech.api.GregTechAPI
+import gregtech.api.unification.material.event.MaterialEvent;
 
 import material.SuSyMaterials
 import classes.ChangeFlags
+import gregtech.api.unification.material.properties.MaterialProperties;
+import supersymmetry.api.unification.material.properties.FiberProperty;
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey;
 
 log.infoMC("Registering new material event listener")
 
 eventManager.listen(EventPriority.LOWEST) {
-    GregTechAPI.MaterialEvent event ->
+    MaterialEvent event ->
+        log.infoMC("Registering new properties")
+
+        MaterialProperties.addBaseType(SuSyPropertyKey.FIBER)
 
         log.infoMC("Starting new material registration")
         
@@ -20,6 +28,4 @@ eventManager.listen(EventPriority.LOWEST) {
         ChangeFlags.init()
 
         log.infoMC("Finished modifying material flags")
-        
-
 }

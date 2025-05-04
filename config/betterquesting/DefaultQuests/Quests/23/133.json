@@ -1,0 +1,82 @@
+{
+  "preRequisites:11": [
+    16
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.133.desc",
+      "icon:10": {
+        "id:8": "gregtech:scythe",
+        "tag:10": {
+          "DisallowContainerItem:1": 0,
+          "GT.Behaviours:10": {
+            "AoEColumn:3": 2,
+            "AoELayer:3": 2,
+            "AoERow:3": 2,
+            "MaxAoEColumn:3": 2,
+            "MaxAoELayer:3": 2,
+            "MaxAoERow:3": 2
+          },
+          "GT.Tool:10": {
+            "AttackDamage:5": 7.0,
+            "AttackSpeed:5": -3.0,
+            "Durability:3": 0,
+            "HarvestLevel:3": 2,
+            "Material:8": "iron",
+            "MaxDurability:3": 768,
+            "ToolSpeed:5": 6.0
+          },
+          "HideFlags:3": 2,
+          "ench:9": {
+            "0:10": {
+              "id:2": 21,
+              "lvl:2": 5
+            }
+          }
+        }
+      },
+      "name:8": "susy.quest.db.133.title"
+    }
+  },
+  "questID:3": 133,
+  "tasks:9": {
+    "0:10": {
+      "ignoreNBT:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "OreDict:8": "toolScythe",
+          "id:8": "gregtech:scythe",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {
+              "AoEColumn:3": 2,
+              "AoELayer:3": 2,
+              "AoERow:3": 2,
+              "MaxAoEColumn:3": 2,
+              "MaxAoELayer:3": 2,
+              "MaxAoERow:3": 2
+            },
+            "GT.Tool:10": {
+              "AttackDamage:5": 7.0,
+              "AttackSpeed:5": -3.0,
+              "Durability:3": 0,
+              "HarvestLevel:3": 2,
+              "Material:8": "iron",
+              "MaxDurability:3": 768,
+              "ToolSpeed:5": 6.0
+            },
+            "HideFlags:3": 2,
+            "ench:9": {
+              "0:10": {
+                "id:2": 21,
+                "lvl:2": 5
+              }
+            }
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

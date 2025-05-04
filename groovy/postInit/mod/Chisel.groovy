@@ -24,7 +24,7 @@ crafting.replaceShaped('chisel:offsettool', item('chisel:offsettool'), [
 
 crafting.replaceShaped('chisel:autochisel', item('chisel:auto_chisel'), [
     [ore('blockGlass'), ore('blockGlass'), ore('blockGlass')],
-    [metaitem('electric.motor.lv'), metaitem('hull.lv'), metaitem('circuit.electronic')],
+    [metaitem('electric.motor.lv'), metaitem('hull.lv'), ore('circuitLv')],
     [ore('plateIron'), ore('plateIron'), ore('plateIron')]
 ])
 
@@ -45,6 +45,58 @@ crafting.replaceShaped('chisel:temple', item('chisel:temple') * 32, [
         [ore('stone'), ore('dyeCyan'), ore('stone')],
         [ore('stone'), ore('stone'), ore('stone')]
 ])
+
+crafting.replaceShaped('chisel:futura', item('chisel:futura', 0) * 32, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), ore('dustRedstone'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])
+
+crafting.replaceShaped('chisel:laboratory', item('chisel:laboratory', 0) * 32, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), ore('dyeWhite'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])
+
+crafting.replaceShaped('chisel:valentines', item('chisel:valentines') * 32, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), ore('dyePink'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])
+
+crafting.replaceShaped(item('chisel:voidstone') * 32, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), ore('dyePurple'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])   
+
+crafting.replaceShaped(item('chisel:lavastone') * 8, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), item('minecraft:lava_bucket'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])  
+
+crafting.replaceShaped(item('chisel:waterstone') * 8, [
+        [ore('stone'), ore('stone'), ore('stone')],
+        [ore('stone'), item('minecraft:water_bucket'), ore('stone')],
+        [ore('stone'), ore('stone'), ore('stone')]
+])  
+
+for (def i = 0; i < 16; i++) {
+    crafting.removeByOutput(item('chisel:glasspane', i))
+
+    crafting.addShaped('chisel:glass_' + i, item('chisel:glasspane', i) * 2, [
+            [ore('craftingToolSaw'), item('chisel:glass', i)]
+    ])
+}
+
+for (def i = 0; i < 2; i++) {
+    crafting.removeByOutput(item('chisel:glasspane1', i))
+
+    crafting.addShaped('chisel:glass1_' + i, item('chisel:glasspane1', i) * 2, [
+            [ore('craftingToolSaw'), item('chisel:glass1', i)]
+    ])
+}
 
 ASSEMBLER = recipemap('assembler')
 

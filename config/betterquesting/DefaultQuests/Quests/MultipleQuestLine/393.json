@@ -1,0 +1,39 @@
+{
+  "preRequisites:11": [
+    104
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.393.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 14639,
+        "id:8": "gregtech:machine"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.393.title"
+    }
+  },
+  "questID:3": 393,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 14639,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 46,
+          "id:8": "gregtech:machine_casing"
+        },
+        "2:10": {
+          "Count:3": 4,
+          "Damage:2": 4,
+          "id:8": "gregtech:meta_block_frame_20"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

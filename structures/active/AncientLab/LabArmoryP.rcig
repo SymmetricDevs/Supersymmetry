@@ -1,0 +1,389 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LabArmoryP",
+  "items": [
+    {
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:lmg",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 100
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 8,
+      "max": 14,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 15,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 5,
+      "max": 8,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 116,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 3,
+      "max": 8,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 78,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Fluid": {
+              "nbtType": "compound",
+              "nbt": {
+                "FluidName": {
+                  "nbtType": "string",
+                  "nbt": "oxygen"
+                },
+                "Amount": {
+                  "nbtType": "int",
+                  "nbt": 1000
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "openmodularturrets:turret_base",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "openmodularturrets:intermediate_tiered",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "openmodularturrets:upgrade_meta",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "openmodularturrets:upgrade_meta",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "openmodularturrets:upgrade_meta",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.3419337272644043,
+      "min": 43,
+      "max": 64,
+      "item": {
+        "id": "openmodularturrets:ammo_meta",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "openmodularturrets:intermediate_tiered",
+        "damage": 7,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "openmodularturrets:expander",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:ak47",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 30
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 4.6146769523620605,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gp_inhaler:inhaler",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:healing_vapor"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 10,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 325,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 281,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gtfoStats": {
+              "nbtType": "compound",
+              "nbt": {
+                "17aaqe0i1q/1/2/3/7/10/": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 281,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "RepairCost": {
+              "nbtType": "int",
+              "nbt": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 283,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gtfoStats": {
+              "nbtType": "compound",
+              "nbt": {
+                "5dkcap/2/4/": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 283,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "RepairCost": {
+              "nbtType": "int",
+              "nbt": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 25,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.11158588528633118,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:biogun",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 30
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.05511390045285225,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 450,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 25600000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.11158588528633118,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 448,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 1600000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 14,
+      "max": 25,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 13,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

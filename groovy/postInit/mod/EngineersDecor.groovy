@@ -8,7 +8,7 @@ def name_removals = [
 		"engineersdecor:alternative/small_block_breaker_recipe_standalone",
 		"engineersdecor:alternative/small_tree_cutter_recipe_standalone",
 		"engineersdecor:alternative/small_waste_incinerator_recipe_standalone",
-		"engineersdecor:alternative/small_solar_panel_standalone",
+		"engineersdecor:alternative/small_solar_panel_recipe_standalone",
 		"engineersdecor:alternative/small_mineral_smelter_recipe_standalone",
 		"engineersdecor:alternative/straight_pipe_valve_recipe_standalone",
 		"engineersdecor:alternative/straight_pipe_valve_redstone_recipe_standalone",
@@ -16,25 +16,26 @@ def name_removals = [
 		"engineersdecor:alternative/straight_pipe_valve_redstone_analog_recipe",
 		"engineersdecor:alternative/small_fluid_funnel_recipe_standalone",
 		"engineersdecor:alternative/passive_fluid_accumulator_recipe_standalone",
-		"engineersdecor:alternative/small_milking_machine_recipe_standalone"
-];
+		"engineersdecor:alternative/small_milking_machine_recipe_standalone",
+		"engineersdecor:alternative/rebar_concrete_block_recipe_standalone",
+		"engineersdecor:alternative/gas_concrete_block_recipe_standalone"
+]
 
 for (item in name_removals) {
-    crafting.remove(item);
-};
+    crafting.remove(item)
+}
+
+def oreRod = [
+		'stickSteel',
+		'stickIron',
+		'stickWroughtIron'
+]
 
 crafting.replaceShaped('engineersdecor:independent/clinker_brick_block_recipe', item('engineersdecor:clinker_brick_block') * 2, [
     [ore('ingotBrick'), metaitem('cement.clinker'), ore('ingotBrick')],
     [metaitem('cement.clinker'), ore('ingotBrick'), metaitem('cement.clinker')],
     [ore('ingotBrick'), metaitem('cement.clinker'), ore('ingotBrick')]
 ])
-
-crafting.replaceShaped('engineersdecor:alternative/rebar_concrete_block_recipe_standalone', item('engineersdecor:rebar_concrete') * 9, [
-    [ore('blockConcrete'), ore('stickSteel'), ore('blockConcrete')],
-    [ore('stickSteel'), ore('blockConcrete'), ore('stickSteel')],
-    [ore('blockConcrete'), ore('stickSteel'), ore('blockConcrete')]
-])
-
 
 crafting.replaceShaped('engineersdecor:independent/slag_brick_block_recipe', item('engineersdecor:slag_brick_block') * 9, [
     [ore('ingotBrick'), ore('dustTinyAsh'), ore('ingotBrick')],
@@ -95,3 +96,91 @@ crafting.replaceShaped('engineersdecor:independent/gas_concrete_stairs_recipe', 
     [item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete'), null],
     [item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete')]
 ])
+
+crafting.replaceShaped('engineersdecor:independent/gas_concrete_stairs_recipe', item('engineersdecor:gas_concrete_stairs') * 8, [
+	[item('engineersdecor:gas_concrete'), null, null],
+	[item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete'), null],
+	[item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete'), item('engineersdecor:gas_concrete')]
+])
+
+// Stairs rework
+
+def stair_materials = [
+	"clinker_brick",
+	"clinker_brick_stained",
+	"slag_brick",
+	"rebar_concrete",
+	"rebar_concrete_tile",
+	"gas_concrete"
+]
+
+for (name in stair_materials) {
+	def stair = item("engineersdecor:${name}_stairs")
+	def block = stair_materials.indexOf(name) > 2 ? item("engineersdecor:${name}") : item("engineersdecor:${name}_block")
+	crafting.replaceShaped("engineersdecor:independent/${name}_stairs_recipe_decompose", block * 3,
+		[
+			[stair, stair, null],
+			[stair, stair, null],
+			[null, null, null]
+		]
+	)
+}
+
+
+// Concrete
+
+mods.gregtech.cutter.recipeBuilder()
+		.inputs(item('engineersdecor:rebar_concrete'))
+		.outputs(item('engineersdecor:rebar_concrete_slab') * 2)
+		.duration(25)
+		.EUt(7)
+		.buildAndRegister();
+
+mods.gregtech.cutter.recipeBuilder()
+		.inputs(item('engineersdecor:rebar_concrete_slab'))
+		.outputs(item('engineersdecor:halfslab_rebar_concrete') * 4)
+		.duration(25)
+		.EUt(7)
+		.buildAndRegister();
+
+mods.gregtech.cutter.recipeBuilder()
+		.inputs(item('engineersdecor:rebar_concrete_tile'))
+		.outputs(item('engineersdecor:rebar_concrete_tile_slab') * 2)
+		.duration(25)
+		.EUt(7)
+		.buildAndRegister();
+
+mods.gregtech.cutter.recipeBuilder()
+		.inputs(item('engineersdecor:gas_concrete'))
+		.outputs(item('engineersdecor:gas_concrete_slab') * 2)
+		.duration(25)
+		.EUt(7)
+		.buildAndRegister();
+
+mods.gregtech.cutter.recipeBuilder()
+		.inputs(item('engineersdecor:gas_concrete_slab'))
+		.outputs(item('engineersdecor:halfslab_gas_concrete') * 4)
+		.duration(25)
+		.EUt(7)
+		.buildAndRegister();
+
+for (name in oreRod) {
+	mods.gregtech.assembler.recipeBuilder()
+			.circuitMeta(2)
+			.fluidInputs(fluid('concrete') * 144)
+			.inputs(ore('dustPolypropylene'))
+			.inputs(ore(name) * 4)
+			.outputs(item('engineersdecor:rebar_concrete') * 2)
+			.duration(40)
+			.EUt(120)
+			.buildAndRegister();
+}
+
+mods.gregtech.autoclave.recipeBuilder()
+		.fluidInputs(fluid('concrete') * 144)
+		.inputs(ore('dustQuartzite'))
+		.inputs(ore('dustTinyAluminium'))
+		.outputs(item('engineersdecor:gas_concrete') * 8)
+		.duration(80)
+		.EUt(120)
+		.buildAndRegister();

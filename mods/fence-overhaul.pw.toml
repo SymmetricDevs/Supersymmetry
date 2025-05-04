@@ -1,0 +1,13 @@
+name = "Fence Overhaul"
+filename = "FenceOverhaul-1.3.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "184761844c8d6ebac0ed7304d114f5dfd1589b9c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2531068
+project-id = 246222

@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    22
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.134.desc",
+      "icon:10": {
+        "id:8": "minecraft:fish"
+      },
+      "name:8": "susy.quest.db.134.title"
+    }
+  },
+  "questID:3": 134,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "minecraft:fishing_rod"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "preRequisites:11": [
+    444
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.445.desc",
+      "icon:10": {
+        "id:8": "industrialrenewal:fluid_container"
+      },
+      "name:8": "susy.quest.db.445.title"
+    }
+  },
+  "questID:3": 445,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:passenger_car"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:cart_hopper"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:fluid_container"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "industrialrenewal:log_cart"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

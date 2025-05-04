@@ -6,9 +6,9 @@
     "max": 500
   },
   "depletion": {
-    "amount": 1,
-    "chance": 100,
-    "depleted_yield": 15
+    "amount": 0,
+    "chance": 0,
+    "depleted_yield": 250
   },
   "fluid": "brine"
 }

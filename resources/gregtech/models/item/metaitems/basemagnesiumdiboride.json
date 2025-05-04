@@ -1,6 +1,6 @@
 {
-    "parent": "item/generated",
-    "textures": {
-      "layer0": "gregtech:items/metaitems/basemagnesiumdiboride"
-    }
+  "parent": "gregtech:item/metaitems/pipelike_2x2",
+  "textures": {
+    "all": "gregtech:items/metaitems/basemagnesiumdiboride"
   }
+}

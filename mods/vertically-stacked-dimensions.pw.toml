@@ -1,0 +1,13 @@
+name = "Vertically Stacked Dimensions"
+filename = "VerticallyStackedDimensions-1.12.2-0.1.9.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "91a0696178f1e80b1ed172a57cf50a10cffbb38b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2937031
+project-id = 310992

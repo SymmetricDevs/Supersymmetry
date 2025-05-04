@@ -67,6 +67,24 @@ def name_removals = [
 for (name in name_removals) {
     crafting.remove(name)
 }
+mods.jei.ingredient.yeet( // hide fluids
+		fluid('concrete_yellow'),
+		fluid('concrete_orange'),
+		fluid('concrete_purple'),
+		fluid('concrete_green'),
+		fluid('concrete_lime'),
+		fluid('concrete_brown'),
+		fluid('concrete_magenta'),
+		fluid('concrete_white'),
+		fluid('concrete_pink'),
+		fluid('concrete_light_blue'),
+		fluid('concrete_cyan'),
+		fluid('multistorage:concrete'),
+		fluid('concrete_gray'),
+		fluid('concrete_blue'),
+		fluid('concrete_red'),
+		fluid('concrete_silver')
+)
 
 def cvalues = [10329495, 16351261, 8439583, 15961002, 11546150, 16383998, 3847130, 16701501, 8606770, 3949738, 4673362, 1481884, 6192150, 13061821, 1908001, 8991416]
 def vaultcolors = ["silver", "orange", "lime", "pink", "red", "white", "light_blue", "yellow", "brown", "blue", "gray", "cyan", "green", "magenta", "black", "purple"]

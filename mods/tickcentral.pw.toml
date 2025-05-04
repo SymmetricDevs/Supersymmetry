@@ -1,0 +1,13 @@
+name = "TickCentral"
+filename = "TickCentral-3.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "79bcdbd58175111c7541a08e8d512ba6bf6ceb93"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3140670
+project-id = 377201

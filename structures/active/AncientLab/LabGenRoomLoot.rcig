@@ -1,0 +1,155 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LabGenRoomLoot",
+  "items": [
+    {
+      "weight": 1.9013646841049194,
+      "min": 12,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 424,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 4,
+      "max": 6,
+      "item": {
+        "id": "gregtech:wire_double",
+        "damage": 424,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 6,
+      "max": 10,
+      "item": {
+        "id": "gregtech:wire_single",
+        "damage": 424,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1271,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 5,
+      "max": 8,
+      "item": {
+        "id": "gregtech:wire_single",
+        "damage": 425,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:wire_quadruple",
+        "damage": 425,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.9243392944335938,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 602,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.32298368215560913,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 16001,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 603,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 82,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Fluid": {
+              "nbtType": "compound",
+              "nbt": {
+                "FluidName": {
+                  "nbtType": "string",
+                  "nbt": "liquid_oxygen"
+                },
+                "Amount": {
+                  "nbtType": "int",
+                  "nbt": 1500
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 130,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.2900550961494446,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1345,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1344,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

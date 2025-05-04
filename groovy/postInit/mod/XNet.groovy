@@ -27,25 +27,25 @@ for (item in name_removals) {
 crafting.addShapeless("xnet_redstone_proxy_1", item('xnet:redstone_proxy'), [item('xnet:redstone_proxy_upd')]);
 crafting.addShapeless("xnet_redstone_proxy_2", item('xnet:redstone_proxy_upd'), [item('xnet:redstone_proxy')]);
 
-crafting.addShaped("xnet_cable", item('xnet:netcable:0')*24, [
+crafting.addShaped("xnet_cable", item('xnet:netcable:0') * 24, [
         [ore('cableGtSingleTin'), ore('cableGtSingleTin'), ore('cableGtSingleTin')],
         [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
         [metaitem('pipeTinyFluidSteel'), metaitem('pipeTinyFluidSteel'), metaitem('pipeTinyFluidSteel')]
 ]);
 
-crafting.addShaped("xnet_cable_routing", item('xnet:netcable:4')*48, [
+crafting.addShaped("xnet_cable_routing", item('xnet:netcable:4') * 48, [
         [ore('cableGtQuadrupleTin'), ore('cableGtQuadrupleTin'), ore('cableGtQuadrupleTin')],
         [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
         [metaitem('pipeNormalFluidSteel'), metaitem('pipeNormalFluidSteel'), metaitem('pipeNormalFluidSteel')]
 ]);
 
-crafting.addShaped("xnet_connector", item('xnet:connector:0'), [
+crafting.addShaped("xnet_connector", item('xnet:connector:0') * 4, [
         [null, ore('circuitLv'), null],
         [metaitem('robot.arm.lv'), metaitem('hull.lv'), metaitem('electric.pump.lv')],
         [null, ore('wireGtSingleTin'), null]
 ]);
 
-crafting.addShaped("xnet_connector_advanced", item('xnet:advanced_connector:0'), [
+crafting.addShaped("xnet_connector_advanced", item('xnet:advanced_connector:0') * 4, [
         [null, ore('circuitMv'), null],
         [metaitem('robot.arm.mv'), metaitem('hull.mv'), metaitem('electric.pump.mv')],
         [null, ore('wireGtSingleAnnealedCopper'), null]
@@ -75,9 +75,9 @@ crafting.addShaped("xnet_routing_connector", item('xnet:connector:4'), [
         [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('wireFineRedAlloy')]
 ]);
 
-crafting.addShaped("xnet_connector_upgrade", item('xnet:connector_upgrade'), [
+crafting.addShaped("xnet_connector_upgrade", item('xnet:connector_upgrade') * 4, [
         [ore('plateAluminium'), ore('plateAluminium'), ore('plateAluminium')],
-        [metaitem('robot.arm.mv'), ore('circuitMv'), metaitem('pump.mv')],
+        [metaitem('robot.arm.mv'), ore('circuitMv'), metaitem('electric.pump.mv')],
         [ore('plateAluminium'), ore('plateAluminium'), ore('plateAluminium')]
 ]);
 

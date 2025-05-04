@@ -1,13 +1,16 @@
+package preInit;
+
 import gregtech.api.GTValues;
 import gregtech.api.GregTechAPI;
 import gregtech.api.items.metaitem.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.ore.OrePrefix;
 import net.minecraft.util.text.TextFormatting;
+import gregtech.api.unification.material.event.PostMaterialEvent;
 import gregtech.common.items.behaviors.TooltipBehavior;
 
 eventManager.listen {
-    GregTechAPI.PostMaterialEvent event ->
+    PostMaterialEvent event ->
 
         log.infoMC("Adding metaitems...")
 
@@ -36,28 +39,22 @@ eventManager.listen {
         customMetaItems.addItem(150, "mudbrick_mix")
         customMetaItems.addItem(151, "slaked_lime")
         customMetaItems.addItem(152, "sand.dust")
-        customMetaItems.addItem(153, "straw")
+        customMetaItems.addItem(153, "native_copper")
 
         customMetaItems.addItem(154, "washed_rotten_flesh");
 
         customMetaItems.addItem(155, "sugar_cane_dust");
 
-        customMetaItems.addItem(156, "bitumen");
-
-        customMetaItems.addItem(157, "bituminous_residue");
-
+        // FREE ID: 156
+        customMetaItems.addItem(157, "hydrocracking_catalyst")
         customMetaItems.addItem(158, "paraffin_wax");
-
         customMetaItems.addItem(159, "spent_cracking_catalyst");
 
         customMetaItems.addItem(160, "red_mud_slag");
-
         customMetaItems.addItem(161, "leached_red_mud_slag");
 
         customMetaItems.addItem(162, "pitch_binder");
-
         customMetaItems.addItem(163, "raw_electrode");
-
         customMetaItems.addItem(164, "graphite_electrode");
 
         customMetaItems.addItem(165, "rydberg_atom_array");
@@ -72,42 +69,25 @@ eventManager.listen {
 
         customMetaItems.addItem(170, "raw_diamond");
 
-        customMetaItems.addItem(171, "cellulose_acetate_mesh");
-
-        customMetaItems.addItem(175, "gold_anode_slime")
-        
-        customMetaItems.addItem(176, "silver_anode_slime")
+        customMetaItems.addItem(171, "mesh.cellulose_acetate");
+        customMetaItems.addItem(172, "mesh.platinum");
+        customMetaItems.addItem(173, "mesh.platinum_rhodium");
 
         customMetaItems.addItem(177, "zeolite_membrane_support");
-
         customMetaItems.addItem(178, "zeolite_membrane");
 
-        customMetaItems.addItem(179, "lead_anode_slime")
-
         customMetaItems.addItem(180, "patterned_thick_film_substrate_wafer");
-
         customMetaItems.addItem(181, "thick_film_resistor_wafer");
-
         customMetaItems.addItem(182, "metallized_plastic_film");
-
         customMetaItems.addItem(183, "metallized_plastic_square");
-
         customMetaItems.addItem(184, "raw_smd_capacitor");
-
         customMetaItems.addItem(185, "raw_capacitor_roll");
-
         customMetaItems.addItem(186, "aluminium_electrolytic_capacitor");
-
         customMetaItems.addItem(187, "tantalum_chip");
-
         customMetaItems.addItem(188, "anodized_tantalum_chip");
-
         customMetaItems.addItem(189, "manganized_tantalum_chip");
-
         customMetaItems.addItem(190, "ferroelectric_ceramic_foil");
-
         customMetaItems.addItem(191, "stacked_ceramic_capacitor");
-
         customMetaItems.addItem(192, "raw_ceramic_capacitor");
 
         customMetaItems.addItem(193, "chip.insulated_silicon");
@@ -117,30 +97,34 @@ eventManager.listen {
 
         customMetaItems.addItem(197, "fused_quartz");
 
-        customMetaItems.addItem(198, "amberlyst_ch_beads");
-
-        customMetaItems.addItem(199, "ag_fifty_w_x_eight_beads");
-
         customMetaItems.addItem(200, "thick_film_substrate_wafer");
 
         customMetaItems.addItem(201, "vti_rich_pig_iron");
-
         customMetaItems.addItem(202, "vt_slag");
 
-        customMetaItems.addItem(203, "sponge.titanium")
-        customMetaItems.addItem(204, "sponge.titanium.crude")
+        customMetaItems.addItem(203, "white_matte")
 
-        customMetaItems.addItem(205, "sponge.zirconium")
-        customMetaItems.addItem(206, "sponge.zirconium.crude")
+        customMetaItems.addItem(210, "bound_leather")
 
-        customMetaItems.addItem(207, "sponge.hafnium")
-        customMetaItems.addItem(208, "sponge.hafnium.crude")
+        customMetaItems.addItem(212, "drone.lv").setMaxStackSize(1).addComponents(ElectricStats.createRechargeableBattery(10000, GTValues.LV)).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+        customMetaItems.addItem(213, "glass_fibers")
+        customMetaItems.addItem(214, "epoxy_lamina")
 
-        customMetaItems.addItem(215, "sponge.platinum")
-		
-		customMetaItems.addItem(210, "bound_leather")
+        customMetaItems.addItem(250, "beads.amberlyst_ch");
+        customMetaItems.addItem(251, "beads.strong_acidic_cation_exchange");
+        customMetaItems.addItem(252, "beads.weak_basic_anion_exchange");
+        customMetaItems.addItem(253, "beads.loaded_rhenium_anion_exchange");
+        customMetaItems.addItem(254, "beads.strong_basic_anion_exchange");
+        customMetaItems.addItem(255, "beads.loaded_uranium_anion_exchange");
 
-        customMetaItems.addItem(211, "copper_anode_slime")
+        customMetaItems.addItem(300, "mylar")
+        customMetaItems.addItem(301, "spinneret")
+
+        customMetaItems.addItem(400, "engine.spark_plug")
+        customMetaItems.addItem(401, "engine.piston")
+        customMetaItems.addItem(402, "engine.crankshaft")
+
+        customMetaItems.addItem(500, "sintered_alumina.insulator")
 
         customMetaItems.addItem(1000, "chunk.magnetite")
         customMetaItems.addItem(1001, "hot_iron_rod")
@@ -151,12 +135,16 @@ eventManager.listen {
         customMetaItems.addItem(1101, "steam.motor")
 
         customMetaItems.addItem(2000, "spaceship.me.scrap")
+
         customMetaItems.addItem(2001, "wafer.pattern.processor")
         customMetaItems.addItem(2002, "wafer.pattern.memory")
+
         customMetaItems.addItem(2003, "plate.pattern.processor")
         customMetaItems.addItem(2004, "plate.pattern.memory")
+
         customMetaItems.addItem(2005, "pattern.processor")
         customMetaItems.addItem(2006, "pattern.memory")
+
         customMetaItems.addItem(2007, "storage.segment")
 
         customMetaItems.addItem(2500, "gun.barrel.steel")
@@ -206,33 +194,42 @@ eventManager.listen {
         customMetaItems.addItem(3035, "wafer.advanced_random_access_memory");
         customMetaItems.addItem(3036, "plate.advanced_random_access_memory");
 
+        //Organics 3500-4000
+        customMetaItems.addItem(3500, "copra")
+
         //Batteries 4000-4100
         customMetaItems.addItem(4000, "battery.lead_acid").addComponents(ElectricStats.createRechargeableBattery(120000, GTValues.LV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
         customMetaItems.addItem(4001, "cathode.lead");
         customMetaItems.addItem(4002, "anode.lead");
-
         //customMetaItems.addItem(4003, "battery.mv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(480000, GTValues.MV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
         //customMetaItems.addItem(4004, "battery.hv.lead_acid").addComponents(ElectricStats.createRechargeableBattery(1440000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-
         //customMetaItems.addItem(4005, "battery.mv.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(600000, GTValues.MV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.MV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
         //customMetaItems.addItem(4006, "battery.hv.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(2400000, GTValues.HV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.HV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
         //customMetaItems.addItem(4007, "battery.ev.lithium_ion").addComponents(ElectricStats.createRechargeableBattery(9600000, GTValues.EV)).setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.EV).setModelAmount(8).setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
-
-
         customMetaItems.addItem(4101, "vacuum_tube_components");
 
+        //Dusts & Pulps 4500-4999
+        
         //Circuit Stuff 5000-6000
-
-        customMetaItems.addItem(5000, "mask.ic");
-        customMetaItems.addItem(5001, "mask.cpu");
-        customMetaItems.addItem(5002, "mask.ram");
-        customMetaItems.addItem(5003, "mask.pcb");
-        customMetaItems.addItem(5004, "mask.ulpic");
-        customMetaItems.addItem(5005, "mask.lpic");
-        customMetaItems.addItem(5006, "mask.nand");
-        customMetaItems.addItem(5007, "mask.nor");
-        customMetaItems.addItem(5008, "mask.advanced");
-
+        //Photomasks 5000-5099
+        customMetaItems.addItem(5000, "rubylith")
+        customMetaItems.addItem(5001, "rubylith_film")
+        customMetaItems.addItem(5002, "stencil.ic")
+        customMetaItems.addItem(5003, "stencil.cpu")
+        customMetaItems.addItem(5004, "stencil.ram")
+        customMetaItems.addItem(5005, "stencil.pcb")
+        customMetaItems.addItem(5006, "stencil.ulpic")
+        customMetaItems.addItem(5007, "stencil.lpic")
+        customMetaItems.addItem(5020, "mask.blank")
+        customMetaItems.addItem(5021, "mask.ic");
+        customMetaItems.addItem(5022, "mask.cpu");
+        customMetaItems.addItem(5023, "mask.ram");
+        customMetaItems.addItem(5024, "mask.pcb");
+        customMetaItems.addItem(5025, "mask.ulpic");
+        customMetaItems.addItem(5026, "mask.lpic");
+        customMetaItems.addItem(5027, "mask.nand");
+        customMetaItems.addItem(5028, "mask.nor");
+        customMetaItems.addItem(5029, "mask.advanced");
         customMetaItems.addItem(5100, "patterned.ic");
         customMetaItems.addItem(5101, "patterned.cpu");
         customMetaItems.addItem(5102, "patterned.ram");
@@ -245,9 +242,7 @@ eventManager.listen {
         customMetaItems.addItem(5109, "patterned.nor");
         customMetaItems.addItem(5150, "patterned.board.phenolic");
         customMetaItems.addItem(5151, "patterned.board.plastic");
-
         customMetaItems.addItem(5200, "laminated.board.phenolic");
-
         customMetaItems.addItem(5300, "etched.ic");
         customMetaItems.addItem(5301, "etched.cpu");
         customMetaItems.addItem(5302, "etched.ram");
@@ -256,6 +251,16 @@ eventManager.listen {
         customMetaItems.addItem(5305, "etched.silicon_dioxide");
         customMetaItems.addItem(5306, "etched.polysilicon");
         customMetaItems.addItem(5307, "etched.silicon_nitride");
+        
+        //Good Circuit Components 5900-6000
+        customMetaItems.addItem(5900, "op_amp");
+        customMetaItems.addItem(5901, "heat_sink");
+        customMetaItems.addItem(5902, "protector_chip");
+        customMetaItems.addItem(5903, "zener_diode");
+        customMetaItems.addItem(5904, "fuse.hv");
+        customMetaItems.addItem(5905, "voltage_regulator.hv.unsealed");
+        customMetaItems.addItem(5906, "voltage_regulator.mv");
+        customMetaItems.addItem(5907, "voltage_regulator.hv");
 
         //Light Sources 6000-6100
         customMetaItems.addItem(6000, "carbon_arc_lamp");
@@ -287,6 +292,28 @@ eventManager.listen {
         customMetaItems.addItem(6119, "assemblyrutheniumtriniumamericiumneutronate");
         customMetaItems.addItem(6120, "baserutheniumtriniumamericiumneutronate");
 
+        //Metal sponges 6200-6300
+        customMetaItems.addItem(6200, "sponge.titanium")
+        customMetaItems.addItem(6201, "sponge.titanium.crude")
+        customMetaItems.addItem(6202, "sponge.zirconium")
+        customMetaItems.addItem(6203, "sponge.zirconium.crude")
+        customMetaItems.addItem(6204, "sponge.hafnium")
+        customMetaItems.addItem(6205, "sponge.hafnium.crude")
+        customMetaItems.addItem(6206, "sponge.platinum")
+        customMetaItems.addItem(6207, "sponge.cadmium")
+        customMetaItems.addItem(6208, "sponge.indium")
+        customMetaItems.addItem(6209, "sponge.osmium")
+        customMetaItems.addItem(6210, "sponge.ruthenium")
+        customMetaItems.addItem(6211, "sponge.rhodium")
+        customMetaItems.addItem(6212, "sponge.iridium")
+
+        // Anode slimes 6300-6400
+        customMetaItems.addItem(6300, "anode_slime.gold")
+        customMetaItems.addItem(6301, "anode_slime.silver")
+        customMetaItems.addItem(6302, "anode_slime.lead")
+        customMetaItems.addItem(6303, "anode_slime.copper")
+        customMetaItems.addItem(6304, "anode_slime.decopperized")
+
         //Seed crystals 7000-7500
 
         customMetaItems.addItem(7000, "seed_crystal.silicon");
@@ -294,6 +321,7 @@ eventManager.listen {
         customMetaItems.addItem(7002, "seed_crystal.alumina");
         customMetaItems.addItem(7003, "seed_crystal.beryllium_oxide");
         customMetaItems.addItem(7004, "seed_crystal.emerald");
+        customMetaItems.addItem(7005, "seed_crystal.lithium_niobate");
 
         //Boules 7500-8000
 
@@ -306,6 +334,7 @@ eventManager.listen {
         customMetaItems.addItem(7506, "boule.sapphire");
         customMetaItems.addItem(7507, "boule.ruby");
         customMetaItems.addItem(7508, "boule.silicon_germanium");
+        customMetaItems.addItem(7509, "boule.lithium_niobate");
 
         //Wafers 8000-9000
 
@@ -323,11 +352,24 @@ eventManager.listen {
         customMetaItems.addItem(8011, "wafer.silicon_nitride");
         customMetaItems.addItem(8012, "wafer.nickel");
         customMetaItems.addItem(8013, "wafer.gallium_arsenide");
+        customMetaItems.addItem(8014, "wafer.raw.silicon");
+        customMetaItems.addItem(8015, "wafer.treated.silicon");
 
         //Crops 9000-10000
 
-        customMetaItems.addItem(9000, "seed.cotton");
-        customMetaItems.addItem(9001, "crop.cotton");
+        // 9000 & 9001
+        customMetaItems.addItem(9000, "stem.cotton");
+
+        // Train Stuff 10000-10100
+
+        customMetaItems.addItem(10000, "tunnelbore.axle")
+        customMetaItems.addItem(10001, "tunnelbore.engine")
+        customMetaItems.addItem(10002, "tunnelbore.drillhead")
+
+        // Misc Crafting Components 10100-10200
+        customMetaItems.addItem(10100, "turbojet.small")
+        customMetaItems.addItem(10101, "wing_panel.fiber_reinforced_epoxy")
+        customMetaItems.addItem(10102, "wing.small")
 
         log.infoMC("Finished adding metaitems")
 }

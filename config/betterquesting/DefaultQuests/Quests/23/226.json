@@ -1,0 +1,28 @@
+{
+  "preRequisites:11": [
+    142
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.226.desc",
+      "icon:10": {
+        "Damage:2": 65,
+        "id:8": "gregtechfoodoption:gtfo_meta_item"
+      },
+      "name:8": "susy.quest.db.226.title"
+    }
+  },
+  "questID:3": 226,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 65,
+          "id:8": "gregtechfoodoption:gtfo_meta_item"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

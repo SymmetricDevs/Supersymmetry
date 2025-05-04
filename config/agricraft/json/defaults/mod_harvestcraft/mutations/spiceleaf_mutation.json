@@ -1,8 +1,0 @@
-{
-  "path": "mod_harvestcraft/mutations/spiceleaf_mutation.json",
-  "enabled": true,
-  "chance": 0.5,
-  "child": "harvestcraft:spiceleaf_plant",
-  "parent1": "harvestcraft:tea_plant",
-  "parent2": "harvestcraft:chilipepper_plant"
-}

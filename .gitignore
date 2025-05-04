@@ -1,5 +1,5 @@
-mods/
-*buildOut/*
+buildOut/
+build/server
 *client.zip
 .mixin.out/
 armourers_workshop/
@@ -8,12 +8,14 @@ fonts/
 journeymap/
 logs/
 saves/
+mods/*.jar
 
 .curseclient
 usercache.json
 usernamecache.json
 minecraftinstance.json
 instance.json
+index.toml
 
 *.log
 *.txt
@@ -30,6 +32,7 @@ config/BiomeTweaker/output/*
 config/AppliedEnergistics2/CustomRecipes.cfg
 config/AppliedEnergistics2/items.csv
 config/AppliedEnergistics2/VersionChecker.cfg
+config/gregtech/terminal/*
 
 hei_bookmarks.ini
 
@@ -79,10 +82,25 @@ screenshots/
 
 backups/
 
-resourcepacks/
+# resourcepacks/
 
 local/
 
 disabledmods/
 
 jarmods/
+
+visualores/
+
+*__pycache__*
+
+.idea/material_theme_project_new.xml
+.idea/discord.xml
+.idea/workspace.xml
+servers.dat
+mods/*.jar
+/mods/1.12.2
+/mods/memory_repo
+/resourcepacks
+vintagefix/transformerCache/jarDiscoverer.cache
+/journeymap

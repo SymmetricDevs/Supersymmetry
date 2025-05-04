@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    31,
+    580
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.781.desc",
+      "icon:10": {
+        "id:8": "susy:drill_head"
+      },
+      "name:8": "susy.quest.db.781.title"
+    }
+  },
+  "questID:3": 781,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

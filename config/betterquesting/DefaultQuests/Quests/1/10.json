@@ -1,0 +1,29 @@
+{
+  "preRequisites:11": [
+    12
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.10.desc",
+      "icon:10": {
+        "OreDict:8": "oreMagnetite",
+        "id:8": "gregtech:ore_magnetite_0"
+      },
+      "name:8": "susy.quest.db.10.title"
+    }
+  },
+  "questID:3": 10,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 32,
+          "Damage:2": 3,
+          "OreDict:8": "oreMagnetite",
+          "id:8": "gregtech:ore_magnetite_0"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

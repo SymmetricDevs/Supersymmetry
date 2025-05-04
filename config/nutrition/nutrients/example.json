@@ -1,0 +1,19 @@
+{
+	"name": "example",            // Unique nutrient ID
+	"icon": "minecraft:carrot",   // Item drawn in nutrient GUI
+	"color": "72dd5a",            // Hexadecimal color used to draw the nutrient bar
+	"decay": 2.5,                 // Override global decay multiplier (-100 to 100)
+	"visible": true,              // Will this nutrient be visible in the GUI and tooltips
+	"enabled": false,             // Will this nutrient be loaded in-game
+	"food": {                     //
+		"oredict": [              // List of ore dictionary entries that are included in this nutrient
+			"listAllveggie",      //
+			"listAllgreenveggie"  //
+		],                        //
+		"items": [                // List of item IDs for foods that are included in this nutrient
+			"minecraft:carrot",   //
+			"minecraft:apple:1",  //
+			"minecraft:cake"      //
+		]
+	}
+}

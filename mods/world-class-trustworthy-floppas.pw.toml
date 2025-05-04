@@ -1,0 +1,13 @@
+name = "World-Class Trustworthy Floppas"
+filename = "caracalsmod-1.0.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2c4713ab674fd3d8c297e0f2e23323c508662d87"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4723473
+project-id = 870211

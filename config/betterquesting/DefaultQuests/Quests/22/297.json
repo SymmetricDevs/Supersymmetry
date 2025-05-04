@@ -1,0 +1,25 @@
+{
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.297.desc",
+      "icon:10": {
+        "Damage:2": 112,
+        "id:8": "gregtech:meta_dust"
+      },
+      "name:8": "susy.quest.db.297.title"
+    }
+  },
+  "questID:3": 297,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 16,
+          "Damage:2": 112,
+          "id:8": "gregtech:meta_dust"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

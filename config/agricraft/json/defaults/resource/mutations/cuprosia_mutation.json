@@ -1,8 +1,0 @@
-{
-  "path": "resource/mutations/cuprosia_mutation.json",
-  "enabled": false,
-  "chance": 0.25,
-  "child": "resource:cuprosia_plant",
-  "parent1": "resource:ferranium_plant",
-  "parent2": "vanilla:carrot_plant"
-}

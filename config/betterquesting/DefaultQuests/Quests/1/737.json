@@ -1,0 +1,43 @@
+{
+  "preRequisites:11": [
+    66
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.737.desc",
+      "icon:10": {
+        "Damage:2": 9,
+        "id:8": "techguns:simplemachine2"
+      },
+      "name:8": "susy.quest.db.737.title"
+    }
+  },
+  "questID:3": 737,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 9,
+          "id:8": "techguns:simplemachine2"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 147,
+          "id:8": "techguns:itemshared"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 148,
+          "id:8": "techguns:itemshared"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 149,
+          "id:8": "techguns:itemshared"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

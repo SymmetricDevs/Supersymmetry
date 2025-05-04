@@ -1,3 +1,5 @@
+package prePostInit;
+
 import static globals.Globals.*
 
 import supersymmetry.common.blocks.SuSyBlocks
@@ -83,7 +85,33 @@ ore('dyeGreen').add(metaitem('dustMalachite'))
 ore('dyeBlue').add(metaitem('dustCobaltAluminate'))
 ore('dyeWhite').add(metaitem('dustLeadNitrate'))
 ore('dyeBlack').add(metaitem('dustCarbon'))
-ore('dyeGreen').add(metaitem('cupric_hydrogen_arsenite_dust'))
+ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust'))
+
+//Add non traditional ore blocks to scanner
+
+ore('oreBauxite').add(item('susy:resource_block:0'))
+ore('oreSulfur').add(item('susy:resource_block:14'))
+ore('oreCoalDeposit').add(item('susy:resource_block:15'))
+ore('oreNativeCopperDeposit').add(item('susy:resource_block_1:0'))
+ore('oreAnthraciteDeposit').add(item('susy:resource_block_1:1'))
+ore('oreLigniteDeposit').add(item('susy:resource_block_1:2'))
+
+ore('oreOrthomagmaticDeposit').add(item('susy:deposit_block:0'))
+ore('oreMetamorphicDeposit').add(item('susy:deposit_block:1'))
+ore('oreSedimentaryDeposit').add(item('susy:deposit_block:2'))
+ore('oreHydrothermalDeposit').add(item('susy:deposit_block:3'))
+ore('oreAlluvialDeposit').add(item('susy:deposit_block:4'))
+ore('oreMagmaticHydrothermalDeposit').add(item('susy:deposit_block:5'))
+
+//Concrete
+
+ore('dustCement').add(metaitem('cement.dust'))
+ore('blockConcrete').add(item('industrialrenewal:concrete'))
+ore('blockConcrete').add(item('engineersdecor:rebar_concrete'))
+ore('blockConcrete').add(item('engineersdecor:rebar_concrete_tile'))
+ore('blockConcrete').add(item('engineersdecor:gas_concrete'))
+ore('blockConcrete').add(item('icbmclassic:concrete'))
+
 
 //Ore dict changes and unification
 //DISABLED FOR NOW DUE TO SERVER CRASHES
@@ -114,7 +142,7 @@ def unify (ore, p) {
             ItemStack item = ore.getAt(i)
             if (item.getItem().getRegistryName().getNamespace() != Globals.mod_priority[pos]) {
                 ore.remove(item)
-                mods.jei.hide(item)
+                mods.jei.ingredient.hide(item)
             }
         }
     } else if (pos < Globals.mod_priority.size() - 1) {
@@ -152,26 +180,7 @@ unify_oredicts(dicts_gears)
 //MANUAL OREDICT REMOVAL DUE TO THE ABOVE CODE CRASHING SERVERS
 
 oreDictRemovals = [
-        'libvulpes:productingot:10': 'ingotIridium',
-        'libvulpes:productingot:7': 'ingotTitanium',
-        'libvulpes:productingot:6': 'ingotSteel',
-        'libvulpes:productingot:5': 'ingotTin',
-        'libvulpes:productingot:4': 'ingotCopper',
-        'libvulpes:productingot:3': 'ingotSilicon',
         'sgcraft:naquadahingot': 'ingotNaquadahAlloy',
-        'libvulpes:productplate:10': 'plateIridium',
-        'libvulpes:productplate:7': 'plateTitanium',
-        'libvulpes:productplate:6': 'plateSteel',
-        'libvulpes:productplate:5': 'plateTin',
-        'libvulpes:productplate:4': 'plateCopper',
-        'libvulpes:productplate:3': 'plateSilicon',
-        'libvulpes:productplate:2': 'plateGold',
-        'libvulpes:productplate:1': 'plateIron',
-        'libvulpes:productrod:10': 'stickIridium',
-        'libvulpes:productrod:7': 'stickTitanium',
-        'libvulpes:productrod:6': 'stickSteel',
-        'libvulpes:productrod:4': 'stickCopper',
-        'libvulpes:productrod:1': 'stickIron',
         'appliedenergistics2:material:2': 'dustCertusQuartz',
         'appliedenergistics2:material:3': 'dustNetherQuartz',
         'appliedenergistics2:material:8': 'dustFluix',
@@ -179,33 +188,11 @@ oreDictRemovals = [
         'appliedenergistics2:material:49': 'dustIron',
         'appliedenergistics2:material:51': 'dustGold',
         'portalgun:item_dust_ender_pearl': 'dustEnderPearl',
-        'libvulpes:productdust': 'dustDilithium',
-        'libvulpes:productdust:1': 'dustIron',
-        'libvulpes:productdust:2': 'dustGold',
-        'libvulpes:productdust:3': 'dustSilicon',
-        'libvulpes:productdust:4': 'dustCopper',
-        'libvulpes:productdust:5': 'dustTin',
-        'libvulpes:productdust:6': 'dustSteel',
-        'libvulpes:productdust:7': 'dustTitanium',
-        'libvulpes:productdust:10': 'dustIridium',
-        'libvulpes:productgear:6': 'gearSteel',
-        'libvulpes:productgear:7': 'gearTitanium',
-        'libvulpes:productnugget:10': 'nuggetIridium',
-        'libvulpes:productnugget:6': 'nuggetSteel',
-        'libvulpes:productnugget:7': 'nuggetTitanium',
-        'libvulpes:productnugget:5': 'nuggetTin',
-        'libvulpes:productnugget:4': 'nuggetCopper',
-        'libvulpes:productnugget:3': 'nuggetSilicon',
-        'libvulpes:metal0:10': 'blockIridium',
-        'libvulpes:metal0:6': 'blockSteel',
-        'libvulpes:metal0:7': 'blockTitanium',
-        'libvulpes:metal0:5': 'blockTin',
-        'libvulpes:metal0:4': 'blockCopper'
 ]
 
 oreDictRemovals.each { key, val ->
     ore(val).remove(item(key))
-    mods.jei.hide(item(key))
+    mods.jei.ingredient.hide(item(key))
 }
 
 susycobble = SuSyBlocks.SUSY_STONE_BLOCKS.get(SusyStoneVariantBlock.StoneVariant.COBBLE)
@@ -240,24 +227,14 @@ for (type in StoneVariantBlock.StoneType.values()) {
     OreDictionary.registerOre('stone', variant)
 }
 
-//Saw oredict
-
-ore('toolSaw').remove(item('notreepunching:saw/iron'))
-ore('toolSaw').remove(item('notreepunching:saw/gold'))
-ore('toolSaw').remove(item('notreepunching:saw/diamond'))
-
-//No tree punching knife fixes
-
-ore('toolKnife').remove(item('notreepunching:knife/iron'))
-ore('toolKnife').remove(item('notreepunching:knife/gold'))
-ore('toolKnife').remove(item('notreepunching:knife/diamond'))
-
 //Manual Fixes
 ore('stickWood').add(item('minecraft:stick'))
-ore('blockConcrete').add(item('industrialrenewal:concrete'))
 ore('stickIron').remove(item('industrialrenewal:stick_iron'))
 ore('stickSteel').remove(item('industrialrenewal:stick_steel'))
 ore('ingotSteel').remove(item('industrialrenewal:ingot_steel'))
+ore('blockConcrete').remove(item('susy:susy_stone_smooth:9'))
+ore('stone').remove(item('susy:susy_stone_smooth:9'))
+ore('cobblestone').remove(item('susy:susy_stone_cobble:9'))
 
 //Misc Fixes
 
@@ -266,21 +243,42 @@ ore('dustCinnabar').remove(item('tardis:cinnabar'))
 ore('dustSaltpeter').remove(item('icbmclassic:saltpeter'))
 
 //Hide ALL TechGuns recipes, they are impossible anyways since the machines needed are uncraftable
-mods.jei.hideCategory('minecraft.brewing')
-mods.jei.hideCategory('techguns.ammopress')
-mods.jei.hideCategory('techguns.metalpress')
-mods.jei.hideCategory('techguns.chemlab')
-mods.jei.hideCategory('techguns.fabricator')
-mods.jei.hideCategory('techguns.chargingstation')
-mods.jei.hideCategory('techguns.reactionchamber')
-mods.jei.hideCategory('techguns.oredrill')
-mods.jei.hideCategory('techguns.blastfurnace')
-mods.jei.hideCategory('techguns.grinder')
-mods.jei.hideCategory('techguns.camobench')
+mods.jei.category.hideCategory('minecraft.brewing')
+mods.jei.category.hideCategory('techguns.ammopress')
+mods.jei.category.hideCategory('techguns.metalpress')
+mods.jei.category.hideCategory('techguns.chemlab')
+mods.jei.category.hideCategory('techguns.fabricator')
+mods.jei.category.hideCategory('techguns.chargingstation')
+mods.jei.category.hideCategory('techguns.reactionchamber')
+mods.jei.category.hideCategory('techguns.oredrill')
+mods.jei.category.hideCategory('techguns.blastfurnace')
+mods.jei.category.hideCategory('techguns.grinder')
+mods.jei.category.hideCategory('techguns.camobench')
 
-mods.jei.hideCategory('gregtech:combustion_generator')
+mods.jei.category.hideCategory('minecraft.anvil')
 
-mods.jei.hideCategory('minecraft.anvil')
+//Dust oredicting
+elements = [
+    'Lithium', 'Beryllium', 'Boron', 'Carbon', 'Sodium', 'Magnesium', 'Aluminium', 'Silicon',
+    'Phosphorus', 'Sulfur', 'Potassium', 'Calcium', 'Scandium', 'Titanium', 'Vanadium', 'Chrome',
+    'Manganese', 'Iron', 'Cobalt', 'Nickel', 'Copper', 'Zinc', 'Gallium', 'Germanium', 'Arsenic',
+    'Selenium', 'Rubidium', 'Strontium', 'Yttrium', 'Ruthenium', 'Zirconium', 'Niobium', 'Molybdenum', 'Technetium',
+    'Rhenium', 'Rhodium', 'Palladium', 'Silver', 'Cadmium', 'Indium', 'Tin', 'Antimony', 'Tellurium',
+    'Iodine', 'Caesium', 'Barium', 'Lanthanum', 'Hafnium', 'Tantalum', 'Tungsten', 'Osmium',
+    'Iridium', 'Platinum', 'Gold', 'Thallium', 'Lead', 'Bismuth', 'Cerium', 'Praseodymium',
+    'Neodymium', 'Samarium', 'Europium', 'Gadolinium', 'Terbium', 'Dysprosium', 'Holmium', 'Erbium',
+    'Thulium', 'Ytterbium', 'Lutetium', 'Thorium'
+]
+
+elements.each { element ->
+    String anyPurityDust = "dustAnyPurity${element}"
+    String highPurityDust = "dustHighPurity${element}"
+    String normalDust = "dust${element}"
+
+    // Add both high purity and normal dust to the anyPurity dust ore dictionary entry
+    ore(anyPurityDust).add(metaitem(highPurityDust))
+    ore(anyPurityDust).add(metaitem(normalDust))
+}
 
 //NTP knives
 /* //custom oredicts break with custom transforms, will report this bug today
@@ -294,3 +292,25 @@ for (knife in name_knifeNTP) {
     ore('knifeNTP').add(item(knife))
 }
 */
+
+// Nitrogen Nutrients
+ore('nutrientNitrogen').add(metaitem('dustAmmoniumChloride'))
+ore('nutrientNitrogen').add(metaitem('dustAmmoniumNitrate'))
+ore('nutrientNitrogen').add(metaitem('dustAmmoniumSulfate'))
+ore('nutrientNitrogen').add(metaitem('dustUrea'))
+
+// Potassium Nutrients
+ore('nutrientPotassium').add(metaitem('dustAsh'))
+ore('nutrientPotassium').add(metaitem('dustCharcoal'))
+ore('nutrientPotassium').add(metaitem('dustRockSalt'))
+ore('nutrientPotassium').add(metaitem('dustPotassiumCarbonate'))
+ore('nutrientPotassium').add(metaitem('dustPotash'))
+
+// Phosphorous Nutrients
+ore('nutrientPhosphorous').add(metaitem('dustChlorapatite'))
+ore('nutrientPhosphorous').add(metaitem('dustHydroxyapatite'))
+ore('nutrientPhosphorous').add(metaitem('dustFluorapatite'))
+ore('nutrientPhosphorous').add(metaitem('dustTricalciumPhosphate'))
+ore('nutrientPhosphorous').add(metaitem('dustPhosphorus'))
+ore('nutrientPhosphorous').add(metaitem('dustPhosphorite'))
+ore('nutrientPhosphorous').add(item('minecraft:dye', 15))

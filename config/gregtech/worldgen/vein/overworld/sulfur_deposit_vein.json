@@ -1,0 +1,51 @@
+{
+  "weight": -1,
+  "density": 0.75,
+  "max_height": 170,
+  "min_height": 62,
+  "block": "minecraft:sand",
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "sulfur"
+  },
+  "biome_modifier": {
+    "type": "biome_map",
+    "biomesoplenty:volcanic_island": 400
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      16,
+      16
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": {
+          "block":"susy:resource_block",
+          "variant":"sulfur"
+        }
+      },
+      {
+        "secondary": {
+          "block":"susy:resource_block",
+          "variant":"sulfur"
+        }
+      },
+      {
+        "between": {
+          "block":"susy:resource_block",
+          "variant":"sulfur"
+        }
+      },
+      {
+        "sporadic": {
+          "block":"susy:resource_block",
+          "variant":"sulfur"
+        }
+      }
+    ]
+  }
+}

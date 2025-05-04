@@ -1,0 +1,15 @@
+{
+  "lineID:3": 15,
+  "order:3": 15,
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.ql.15.desc",
+      "icon:10": {
+        "Damage:2": 3036,
+        "id:8": "gregtech:meta_item_2"
+      },
+      "name:8": "susy.quest.ql.15.title"
+    }
+  },
+  "quests:9": {}
+}

@@ -1,0 +1,18 @@
+{
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.337.desc",
+      "icon:10": {
+        "Damage:2": 27,
+        "id:8": "gregtech:meta_dust"
+      },
+      "name:8": "susy.quest.db.337.title"
+    }
+  },
+  "questID:3": 337,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

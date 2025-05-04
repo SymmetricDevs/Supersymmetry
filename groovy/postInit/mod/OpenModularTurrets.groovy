@@ -1,3 +1,7 @@
+import gregtech.api.recipes.ingredients.nbtmatch.*
+
+
+
 def soldering_alloys = [
         liquid('tin') * 144,
         liquid('soldering_alloy') * 72
@@ -51,7 +55,6 @@ for (item in name_removals) {
 }
 
 for (solder in soldering_alloys) {
-
     recipemap('weapons_factory').recipeBuilder()
             .inputs([
                     ore('plateSteel')*4,
@@ -111,8 +114,8 @@ for (solder in soldering_alloys) {
                     item('openmodularturrets:intermediate_regular:0'),
                     ore('circuitLv'),
                     metaitem('electric.motor.lv') * 2,
-                    item('techguns:pistol')
             ])
+            .inputNBT(item('techguns:pistol').getItem(), NBTMatcher.ANY, NBTCondition.ANY)
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:machine_gun_turret'))
             .duration(200)
@@ -258,6 +261,7 @@ for (solder in soldering_alloys) {
                     ore('plateSteel')*6,
                     item('techguns:itemshared:39')
             ])
+            .circuitMeta(1)
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:intermediate_tiered:11'))
             .duration(200)
@@ -269,6 +273,7 @@ for (solder in soldering_alloys) {
                     ore('plateAluminium')*6,
                     item('techguns:itemshared:39')
             ])
+            .circuitMeta(1)
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:intermediate_tiered:12'))
             .duration(200)
@@ -280,6 +285,7 @@ for (solder in soldering_alloys) {
                     ore('plateStainlessSteel')*6,
                     item('techguns:itemshared:39')
             ])
+            .circuitMeta(1)
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:intermediate_tiered:13'))
             .duration(200)
@@ -288,9 +294,7 @@ for (solder in soldering_alloys) {
 }
 
 recipemap('mixer').recipeBuilder()
-        .inputs([
-                ore('dustClay')
-        ])
+        .inputs(ore('dustClay'))
         .fluidInputs(liquid('gasoline')*1000)
         .outputs(item('openmodularturrets:ammo_meta:0')*32)
         .duration(20)

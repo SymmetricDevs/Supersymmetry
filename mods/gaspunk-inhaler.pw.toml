@@ -1,0 +1,13 @@
+name = "Gaspunk Inhaler"
+filename = "Gaspunk-Inhaler-1.12.2-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a06ba64e94c5a5d63612508edff9b65f6cc973c3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2597275
+project-id = 293583

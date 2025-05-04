@@ -1,0 +1,44 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    1
+  ],
+  "preRequisites:11": [
+    800,
+    826
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.802.desc",
+      "icon:10": {
+        "Damage:2": 255,
+        "id:8": "gregtech:meta_item_2"
+      },
+      "name:8": "susy.quest.db.802.title",
+      "tasklogic:8": "OR"
+    }
+  },
+  "questID:3": 802,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 254,
+          "id:8": "gregtech:meta_item_2"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "ammonium_perrhenate_solution"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    }
+  }
+}

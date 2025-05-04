@@ -15,6 +15,7 @@ def name_removals = [
         "sync:treadmill",
         "weeping-angels:timey_wimey_dectecterino",
         "weeping-angels:chronodyne_generator",
+        'quark:redstone_randomizer',
         "gravitygun:gravitygun",
         "gravitygun:supercharged_gravitygun",
         "portalgun:portalgun"
@@ -36,14 +37,20 @@ crafting.replaceShaped('naturescompass:natures_compass', item('naturescompass:na
         [null, ore('circuitHv'), null]
 ])
 
-crafting.replaceShaped('travelersbackpack:travelers_backpack_standard', item('travelersbackpack:travelers_backpack'), [
-        [item('minecraft:leather'), metaitem('workbench'), item('minecraft:leather')],
-        [metaitem('large_fluid_cell.steel'), item('minecraft:chest'), metaitem('large_fluid_cell.steel')],
-        [item('minecraft:leather'), item('minecraft:bed'), item('minecraft:leather')]
-])
-
 crafting.addShaped('quark:redstone_randomizer', item('quark:redstone_randomizer'), [
         [null, metaitem('wireFineRedAlloy'), null],
         [null, ore('circuitLv'), null],
         [null, item('minecraft:comparator'), null]
 ])
+
+crafting.replaceShaped('toolbelt:pouch', item('toolbelt:pouch'), [
+        [metaitem('boltGold'), null, metaitem('boltGold')],
+        [metaitem('bound_leather'), null, metaitem('bound_leather')],
+        [item('minecraft:string'), metaitem('bound_leather'), item('minecraft:string')]
+]) 
+
+crafting.replaceShaped('toolbelt:belt', item('toolbelt:belt'), [
+        [item('minecraft:string'), metaitem('bound_leather'), item('minecraft:string')],
+        [metaitem('bound_leather'), null, metaitem('bound_leather')],
+        [item('toolbelt:pouch'), metaitem('ringSteel'), item('toolbelt:pouch')]
+]) 

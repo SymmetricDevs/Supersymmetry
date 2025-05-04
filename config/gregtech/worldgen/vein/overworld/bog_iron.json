@@ -9,7 +9,7 @@
   },
   "biome_modifier": {
     "type": "biome_map",
-    "swamp": 300
+    "swampland": 300
   },
   "generator": {
     "type": "layered",

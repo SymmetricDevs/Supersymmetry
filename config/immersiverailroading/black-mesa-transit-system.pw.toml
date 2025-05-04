@@ -1,0 +1,13 @@
+name = "Black Mesa Transit System"
+filename = "Black_Mesa.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "9712614440deafa815aab6a4107a5463c5ee37e6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6280168
+project-id = 885673

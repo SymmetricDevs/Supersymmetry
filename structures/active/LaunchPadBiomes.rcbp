@@ -8,6 +8,9 @@
     },
     {
       "biomes": "$WASTELAND"
+    },
+    {
+      "biomes": "$SANDY"
     }
   ],
   "metadata": {

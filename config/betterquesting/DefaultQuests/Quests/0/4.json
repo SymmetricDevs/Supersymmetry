@@ -1,0 +1,132 @@
+{
+  "preRequisites:11": [
+    0
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.4.desc",
+      "icon:10": {
+        "id:8": "akashictome:tome"
+      },
+      "name:8": "susy.quest.db.4.title"
+    }
+  },
+  "questID:3": 4,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "akashictome:tome",
+          "tag:10": {
+            "akashictome:data:10": {
+              "engineersdecor:10": {
+                "Count:1": 1,
+                "id:8": "patchouli:guide_book",
+                "tag:10": {
+                  "akashictome:definedMod:8": "engineersdecor",
+                  "patchouli:book:8": "engineersdecor:engineersdecor_manual"
+                }
+              },
+              "immersiveengineering:10": {
+                "Count:1": 1,
+                "Damage:2": 3,
+                "id:8": "immersiveengineering:tool",
+                "tag:10": {
+                  "akashictome:definedMod:8": "immersiveengineering"
+                }
+              },
+              "immersiverailroading:10": {
+                "Count:1": 1,
+                "id:8": "immersiverailroading:item_manual",
+                "tag:10": {
+                  "akashictome:definedMod:8": "immersiverailroading"
+                }
+              },
+              "industrialrenewal:10": {
+                "Count:1": 1,
+                "id:8": "industrialrenewal:ir_manual",
+                "tag:10": {
+                  "akashictome:definedMod:8": "industrialrenewal"
+                }
+              },
+              "nuclearcraft:10": {
+                "Count:1": 1,
+                "id:8": "patchouli:guide_book",
+                "tag:10": {
+                  "akashictome:definedMod:8": "nuclearcraft",
+                  "patchouli:book:8": "nuclearcraft:guide"
+                }
+              },
+              "opencomputers:10": {
+                "Count:1": 1,
+                "Damage:2": 4,
+                "id:8": "opencomputers:tool",
+                "tag:10": {
+                  "akashictome:definedMod:8": "opencomputers"
+                }
+              },
+              "qmd:10": {
+                "Count:1": 1,
+                "id:8": "patchouli:guide_book",
+                "tag:10": {
+                  "akashictome:definedMod:8": "qmd",
+                  "patchouli:book:8": "qmd:guide"
+                }
+              },
+              "questbook:10": {
+                "Count:1": 1,
+                "id:8": "questbook:itemquestbook",
+                "tag:10": {
+                  "akashictome:definedMod:8": "questbook"
+                }
+              },
+              "rftools:10": {
+                "Count:1": 1,
+                "id:8": "rftools:rftools_manual",
+                "tag:10": {
+                  "akashictome:definedMod:8": "rftools"
+                }
+              },
+              "rftools1:10": {
+                "Count:1": 1,
+                "id:8": "rftools:rftools_shape_manual",
+                "tag:10": {
+                  "akashictome:definedMod:8": "rftools1"
+                }
+              },
+              "tardis:10": {
+                "Count:1": 1,
+                "id:8": "tardis:tardis_manual",
+                "tag:10": {
+                  "akashictome:definedMod:8": "tardis"
+                }
+              },
+              "techguns:10": {
+                "Count:1": 1,
+                "id:8": "patchouli:guide_book",
+                "tag:10": {
+                  "akashictome:definedMod:8": "techguns",
+                  "patchouli:book:8": "techguns:techguns_manual"
+                }
+              },
+              "xnet:10": {
+                "Count:1": 1,
+                "id:8": "xnet:xnet_manual",
+                "tag:10": {
+                  "akashictome:definedMod:8": "xnet"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

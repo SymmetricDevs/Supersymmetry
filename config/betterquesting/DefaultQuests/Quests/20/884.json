@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    883,
+    742,
+    82
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.884.desc",
+      "icon:10": {
+        "id:8": "immersiverailroading:item_rolling_stock",
+        "tag:10": {
+          "defID:8": "rolling_stock/tunnel_bore/black_mesa_tunnel_bore.json",
+          "gauge:6": 1.435
+        }
+      },
+      "name:8": "susy.quest.db.884.title"
+    }
+  },
+  "questID:3": 884,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

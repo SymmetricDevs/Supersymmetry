@@ -1,0 +1,11 @@
+{
+  "generationInfos": [],
+  "defaultSpawnChance": 0.0067,
+  "spawnDistanceMultiplier": 0.0,
+  "spawnDistanceMultiplierCap": 1.0,
+  "selectableInGUI": true,
+  "title": "150 Chunks",
+  "tooltip": [
+    "Random structure each 150 chunks"
+  ]
+}

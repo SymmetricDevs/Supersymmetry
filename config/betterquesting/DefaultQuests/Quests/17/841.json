@@ -1,0 +1,17 @@
+{
+  "preRequisites:11": [
+    832
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.841.desc",
+      "icon:10": {
+        "Damage:2": 10,
+        "id:8": "chisel:stonebrick"
+      },
+      "name:8": "susy.quest.db.841.title"
+    }
+  },
+  "questID:3": 841,
+  "tasks:9": {}
+}

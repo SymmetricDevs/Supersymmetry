@@ -1,0 +1,54 @@
+{
+  "preRequisites:11": [
+    31
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.562.desc",
+      "icon:10": {
+        "id:8": "rsgauges:flatgauge6"
+      },
+      "name:8": "susy.quest.db.562.title"
+    }
+  },
+  "questID:3": 562,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "rsgauges:bistableswitch2"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "rsgauges:bistableswitch1"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "rsgauges:pulseswitch1"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "rsgauges:pulseswitch3"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "id:8": "rsgauges:contactmat1"
+        },
+        "5:10": {
+          "Count:3": 1,
+          "id:8": "rsgauges:automaticswitch4"
+        },
+        "6:10": {
+          "Count:3": 1,
+          "id:8": "rsgauges:indicator1"
+        },
+        "7:10": {
+          "Count:3": 1,
+          "id:8": "rsgauges:bistableswitch_rustic3"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

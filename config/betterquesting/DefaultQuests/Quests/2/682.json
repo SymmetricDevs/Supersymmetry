@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    377
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.682.desc",
+      "icon:10": {
+        "Damage:2": 257,
+        "id:8": "gregtech:meta_crushed_centrifuged"
+      },
+      "name:8": "susy.quest.db.682.title"
+    }
+  },
+  "questID:3": 682,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

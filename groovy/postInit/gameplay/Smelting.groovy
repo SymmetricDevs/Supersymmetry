@@ -8,7 +8,7 @@ def oreDictSmeltingRemovals = [
 	ore('crushedCentrifugedIron'),
 	ore('dustImpureIron'),
 	ore('dustPureIron'),
-	ore('dustIron'),
+	metaitem('dustIron'),
 
 	ore('oreBandedIron'),
 	ore('oreNetherrackBandedIron'),
@@ -96,9 +96,6 @@ def itemSmeltingRemovals = [
 		item('techguns:itemshared', 96),
 		item('techguns:itemshared', 39),
 		item('biomesoplenty:white_sand'),
-		item('gregtechfoodoption:gtfo_log_0'),
-		item('gregtechfoodoption:gtfo_log_1'),
-		item('gregtechfoodoption:gtfo_log_2'),
 		item('biomesoplenty:log_0', 4),
 		item('biomesoplenty:log_0', 5),
 		item('biomesoplenty:log_0', 6),

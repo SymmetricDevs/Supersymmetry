@@ -1,9 +1,10 @@
+import globals.Globals
+
 CSTR = recipemap('continuous_stirred_tank_reactor')
 TBR = recipemap('trickle_bed_reactor')
 FBR = recipemap('fixed_bed_reactor')
 BCR = recipemap('bubble_column_reactor')
 BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
 FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
 DISTILLATION_TOWER = recipemap('distillation_tower')
 DISTILLERY = recipemap('distillery')
@@ -28,29 +29,36 @@ ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
 PSA = recipemap('pressure_swing_adsorption')
 
 def name_removals = [
-        "gaspunk:diffuser",
-        "gaspunk:grenade",
-        "gaspunk:vapor_grenade",
-        "gaspunk:grenade_refill",
-        "gaspunk:grenade_recycling",
-        "gaspunk:inhaler",
-        "gp_inhaler:empty_inhaler",
-        "gp_inhaler:vapor_inhaler",
-        "gp_inhaler:inhaler",
-        "gaspunk:vapor_inhaler",
-        "gaspunk:gas_mask"
+    "gaspunk:diffuser",
+    "gaspunk:grenade",
+    "gaspunk:vapor_grenade",
+    "gaspunk:grenade_refill",
+    "gaspunk:grenade_recycling",
+    "gaspunk:inhaler",
+    "gp_inhaler:empty_inhaler",
+    "gp_inhaler:vapor_inhaler",
+    "gp_inhaler:inhaler",
+    "gaspunk:vapor_inhaler",
+    "gaspunk:gas_mask"
 ]
 
 for (item in name_removals) {
     crafting.remove(item);
 }
 
+def rubber_rings = [
+    'ringRubber',
+    'ringSiliconeRubber',
+    'ringStyreneButadieneRubber',
+]
+
 Globals.solders.each { key, val ->
-    recipemap('weapons_factory').recipeBuilder()
+    for (rubber_ring in rubber_rings) {
+        recipemap('weapons_factory').recipeBuilder()
             .inputs([
-                    ore('ringRubber')*4,
-                    ore('platePlastic'),
-                    ore('plateSteel')
+                ore(rubber_ring)*4,
+                ore('platePlastic'),
+                ore('plateSteel')
             ])
             .fluidInputs(fluid(key) * val)
             .outputs(item('gaspunk:diffuser'))
@@ -58,32 +66,33 @@ Globals.solders.each { key, val ->
             .EUt(60)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+        recipemap('weapons_factory').recipeBuilder()
             .inputs([
-                    ore('ringRubber')*4,
-                    metaitem('component.glass.tube'),
-                    ore('plateSteel')
+                ore(rubber_ring)*4,
+                metaitem('component.glass.tube'),
+                ore('plateSteel')
             ])
             .fluidInputs(fluid(key) * val)
             .outputs(item('gp_inhaler:empty_inhaler'))
             .duration(200)
             .EUt(60)
             .buildAndRegister();
-
-    recipemap('assembler').recipeBuilder()
-            .inputs([
-                    ore('ringRubber') * 2,
-                    ore('platePlastic') * 2,
-                    metaitem('wireFineCopper') * 4,
-                    metaitem('dustCarbon') * 2,
-                    metaitem('plateGlass')
-            ])
-            .fluidInputs(fluid(key) * val)
-            .outputs(item('gaspunk:gas_mask'))
-            .duration(200)
-            .EUt(60)
-            .buildAndRegister();
+    }
 }
+
+recipemap('assembler').recipeBuilder()
+        .inputs([
+                ore('ringRubber') * 2,
+                ore('platePlastic') * 2,
+                metaitem('wireFineCopper') * 4,
+                metaitem('dustCarbon') * 2,
+                metaitem('plateGlass')
+        ])
+        .fluidInputs(fluid('soldering_alloy') * 72)
+        .outputs(item('gaspunk:gas_mask'))
+        .duration(200)
+        .EUt(60)
+        .buildAndRegister();
 
 mods.gregtech.mixer.recipeBuilder()
         .inputs(ore('dustPhosphorus') * 4)
@@ -147,7 +156,7 @@ CSTR.recipeBuilder()
         .buildAndRegister();
 
 FBR.recipeBuilder()
-        .notConsumable(metaitem('catalystBedAluminiumTrichloride'))
+        .notConsumable(metaitem('catalystBedAluminiumChloride'))
         .fluidInputs(fluid('ethylene_oxide') * 50)
         .fluidInputs(fluid('diisopropylamine') * 50)
         .fluidOutputs(fluid('diisopropylaminoethanol') * 50)
@@ -156,7 +165,7 @@ FBR.recipeBuilder()
         .buildAndRegister();
 
 LCR.recipeBuilder()
-        .notConsumable(metaitem('dustAluminiumTrichloride') * 4)
+        .notConsumable(metaitem('dustAluminiumChloride') * 4)
         .inputs(ore('dustIron') * 1)
         .fluidInputs(fluid('phosphorus_trichloride') * 1000)
         .fluidInputs(fluid('chloromethane') * 1000)
@@ -230,7 +239,7 @@ ROASTER.recipeBuilder()
 
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('ethanol') * 1000)
-        .inputs(metaitem('black_pepper_dust'))
+        .inputs(metaitem('gregtechfoodoption:black_pepper_dust'))
         .fluidOutputs(fluid('capsaicin_solution') * 1000)
         .duration(200)
         .EUt(120)
@@ -255,7 +264,7 @@ MIXER.recipeBuilder()
 FBR.recipeBuilder()
         .notConsumable(metaitem('catalystBedCuprousOxide'))
         .fluidInputs(fluid('acetone') * 100)
-        .fluidInputs(fluid('hydrogen') * 100)
+        .fluidInputs(fluid('hydrogen') * 400)
         .fluidInputs(fluid('ammonia') * 50)
         .fluidOutputs(fluid('diluted_diisopropylamine') * 150)
         .duration(3)

@@ -1,0 +1,13 @@
+name = "AssetMover"
+filename = "assetmover-2.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b147ada093f5552fdedee9b7ee0de1d99b6f3c06"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4430763
+project-id = 571482

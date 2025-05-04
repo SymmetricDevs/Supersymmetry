@@ -1,5 +1,5 @@
 import classes.*;
-import static globals.Globals.*
+import globals.Globals
 
 def circuit(x) {
     return metaitem('circuit.integrated').withNbt([Configuration: x])
@@ -15,7 +15,11 @@ def recipesToRemove = [
     'quark:gravisand',
     'quark:ender_watcher',
     'quark:redstone_inductor',
-    'quark:redstone_randomizer',
+	'minecraft:stone_sword',
+	'minecraft:stone_shovel',
+	'minecraft:stone_pickaxe',
+	'minecraft:stone_axe',
+	'minecraft:stone_hoe',
     'minecraft:fermented_spider_eye',
     'minecraft:speckled_melon',
     'minecraft:magma_cream',
@@ -83,7 +87,17 @@ def recipesToRemove = [
 	'minecraft:andesite',
 	'minecraft:minecart',
 	'quark:trapdoor',
-	'minecraft:golden_apple'
+	'minecraft:golden_apple',
+	'chisel:uncraft_blockcopper',
+	'chisel:uncraft_blocksteel',
+	'chisel:uncraft_blocktin',
+	'chisel:uncraft_blockbronze',
+	'chisel:redstone',
+	'chisel:emerald',
+	'chisel:coal',
+	'chisel:charcoal',
+	'quark:charcoal_block'
+
 ]
 
 for(name in recipesToRemove) {
@@ -302,23 +316,28 @@ crafting.replaceShaped('quark:chain', item('quark:chain') * 3, [
     [null, null, ore('ringIron')]
 ])
 
-crafting.replaceShaped('minecraft:torchLig', item('minecraft:torch') *2, [
+crafting.replaceShaped('minecraft:torchLig', item('minecraft:torch') * 2, [
     [metaitem('gemLignite')],
     [ore('stickWood')]
 ])
 
-crafting.replaceShaped('minecraft:torchLigDust', item('minecraft:torch') *2, [
+crafting.replaceShaped('minecraft:torchLigDust', item('minecraft:torch') * 2, [
     [metaitem('dustLignite')],
     [ore('stickWood')]
 ])
 
-crafting.replaceShaped('minecraft:torchAnth', item('minecraft:torch') *8, [
+crafting.replaceShaped('minecraft:torchAnth', item('minecraft:torch') * 8, [
     [metaitem('gemAnthracite')],
     [ore('stickWood')]
 ])
 
-crafting.replaceShaped('minecraft:torchAnthDust', item('minecraft:torch') *8, [
+crafting.replaceShaped('minecraft:torchAnthDust', item('minecraft:torch') * 8, [
     [metaitem('dustAnthracite')],
+    [ore('stickWood')]
+])
+
+crafting.addShaped('minecraft:torchCarbonDust', item('minecraft:torch') * 8, [
+    [metaitem('dustCarbon')],
     [ore('stickWood')]
 ])
 
@@ -398,6 +417,7 @@ mods.gregtech.arc_furnace.recipeBuilder()
     .buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(10)
     .inputs(ore('cobblestone') * 4)
     .inputs(ore('plankWood') * 3)
     .inputs(ore('wireFineRedAlloy'))
@@ -410,6 +430,7 @@ mods.gregtech.assembler.recipeBuilder()
 // Dispenser * 1
 mods.gregtech.assembler.removeByInput(30, [item('minecraft:cobblestone') * 7, item('minecraft:bow'), item('minecraft:redstone'), circuit(1)], null)
 mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(11)
     .inputs(ore('cobblestone'))
     .inputs(ore('springSteel'))
     .inputs(ore('string'))
@@ -423,6 +444,7 @@ mods.gregtech.assembler.recipeBuilder()
 // Dropper * 1
 mods.gregtech.assembler.removeByInput(30, [item('minecraft:cobblestone') * 7, item('minecraft:redstone'), circuit(2)], null)
 mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(12)
     .inputs(ore('cobblestone'))
     .inputs(ore('wireFineRedAlloy'))
     .inputs(metaitem('electric.piston.lv'))
@@ -487,7 +509,7 @@ mods.gregtech.centrifuge.recipeBuilder()
 		.outputs(metaitem('dustWood') * 1)
 		.fluidOutputs(fluid('sugary_water') * 250)
 		.duration(100)
-		.EUt(8)
+		.EUt(7)
 		.buildAndRegister()
 
 //Chemical bath
@@ -534,14 +556,14 @@ recipemap('crystallizer').recipeBuilder()
 		.fluidInputs(fluid('clarified_sugary_water') * 1000)
 		.outputs(item('minecraft:sugar') * 6)
 		.duration(200)
-		.EUt(8)
+		.EUt(7)
 		.buildAndRegister()
 
 recipemap('crystallizer').recipeBuilder()
 		.fluidInputs(fluid('sugary_water') * 1000)
 		.outputs(item('minecraft:sugar') * 3)
 		.duration(300)
-		.EUt(8)
+		.EUt(7)
 		.buildAndRegister()
 
 //Extractor
@@ -549,7 +571,7 @@ mods.gregtech.extractor.recipeBuilder()
     .inputs(item('quark:glass_shards:0'))
     .fluidOutputs(fluid('glass') * 36)
     .duration(20)
-    .EUt(8)
+    .EUt(7)
     .buildAndRegister()
 
 //Macerator
@@ -567,17 +589,20 @@ mods.gregtech.macerator.recipeBuilder()
 //Mixer
 // Fermented Spider Eye * 1
 mods.gregtech.mixer.removeByInput(7, [item('minecraft:sugar'), item('minecraft:red_mushroom'), item('minecraft:spider_eye')], null)
+mods.gregtech.blender.removeByInput(7, [item('minecraft:sugar'), item('minecraft:red_mushroom'), item('minecraft:spider_eye')], null)
 // Fermented Spider Eye * 1
 mods.gregtech.mixer.removeByInput(7, [item('minecraft:sugar'), item('minecraft:brown_mushroom'), item('minecraft:spider_eye')], null)
+mods.gregtech.blender.removeByInput(7, [item('minecraft:sugar'), item('minecraft:brown_mushroom'), item('minecraft:spider_eye')], null)
 // Fire Charge * 3
 mods.gregtech.mixer.removeByInput(30, [metaitem('dustCoal'), item('minecraft:gunpowder'), item('minecraft:blaze_powder')], null)
+mods.gregtech.blender.removeByInput(30, [metaitem('dustCoal'), item('minecraft:gunpowder'), item('minecraft:blaze_powder')], null)
 mods.gregtech.mixer.recipeBuilder()
     .inputs(ore('dustCoal'))
     .inputs(ore('dustGunpowder'))
     .inputs(ore('dustMagnesium'))
     .outputs(item('minecraft:fire_charge') * 3)
     .duration(20)
-    .EUt(8)
+    .EUt(7)
     .buildAndRegister()
 
 mods.gregtech.mixer.recipeBuilder()
@@ -585,7 +610,7 @@ mods.gregtech.mixer.recipeBuilder()
 		.fluidInputs(fluid('sugary_water') * 10000)
 		.fluidOutputs(fluid('clarified_sugary_water') * 10000)
 		.duration(400)
-		.EUt(8)
+		.EUt(7)
 		.buildAndRegister()
 
 crafting.replaceShaped('minecraft:cobblestone_slab', item('minecraft:stone_slab', 3) * 6, [
@@ -642,19 +667,17 @@ crafting.replaceShaped('minecraft:stone_slab', item('minecraft:stone_slab') * 6,
 		[null, null, null]
 ])
 
-Globals.solders.each { key, val ->
-	recipemap('assembler').recipeBuilder()
-			.inputs([
-					metaitem('platePolytetrafluoroethylene') * 2,
-					metaitem('plateStainlessSteel'),
-					metaitem('ringStainlessSteel') * 2
-			])
-			.fluidInputs(fluid(key) * val)
-			.outputs(item('minecraft:elytra'))
-			.duration(200)
-			.EUt(240)
-			.buildAndRegister();
-}
+recipemap('assembler').recipeBuilder()
+        .inputs([
+                metaitem('platePolytetrafluoroethylene') * 2,
+                metaitem('plateStainlessSteel'),
+                metaitem('ringStainlessSteel') * 2
+        ])
+        .fluidInputs(fluid('soldering_alloy') * 72)
+        .outputs(item('minecraft:elytra'))
+        .duration(200)
+        .EUt(240)
+        .buildAndRegister();
 
 crafting.replaceShaped('minecraft:leather_helmet', item('minecraft:leather_helmet'), [
 		[metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],
@@ -727,6 +750,9 @@ crafting.addShaped('minecraft:arrow_from_paper', item('minecraft:arrow') * 8, [
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCarbon') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCharcoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+mods.gregtech.blender.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCarbon') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+mods.gregtech.blender.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+mods.gregtech.blender.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCharcoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
 recipemap('mixer').recipeBuilder()
 			.inputs(ore('dustSaltpeter') * 2)

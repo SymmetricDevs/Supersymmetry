@@ -1,0 +1,13 @@
+name = "Techguns"
+filename = "techguns-1.12.2-2.0.2.0_pre3.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "65a5cc41422bc665ec4b7d5e115efc7d95b002d7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2958103
+project-id = 244201

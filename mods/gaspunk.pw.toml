@@ -1,0 +1,13 @@
+name = "Gaspunk | Gas grenades"
+filename = "gaspunk-1.12.2-1.4.8.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a66d6c36b0b009b4673d3d22d602c1dfd934fecb"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3048663
+project-id = 286505

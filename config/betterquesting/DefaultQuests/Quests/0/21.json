@@ -1,0 +1,148 @@
+{
+  "preRequisites:11": [
+    16
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.21.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "gregtech:hammer",
+        "tag:10": {
+          "DisallowContainerItem:1": 0,
+          "GT.Behaviours:10": {},
+          "GT.Tool:10": {
+            "AttackDamage:5": 3.0,
+            "AttackSpeed:5": -2.8,
+            "Durability:3": 0,
+            "HarvestLevel:3": 2,
+            "LastCraftingUse:3": -1178761476,
+            "Material:8": "gregtech:bronze",
+            "MaxDurability:3": 191,
+            "ToolSpeed:5": 7.0
+          },
+          "HideFlags:3": 2
+        }
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.21.title",
+      "tasklogic:8": "OR"
+    }
+  },
+  "questID:3": 21,
+  "tasks:9": {
+    "0:10": {
+      "ignoreNBT:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:hammer",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 3.0,
+              "AttackSpeed:5": -2.8,
+              "Durability:3": 0,
+              "HarvestLevel:3": 2,
+              "LastCraftingUse:3": -1178761476,
+              "Material:8": "gregtech:bronze",
+              "MaxDurability:3": 191,
+              "ToolSpeed:5": 7.0
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:file",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 0.0,
+              "AttackSpeed:5": -2.4,
+              "Durability:3": 0,
+              "LastCraftingUse:3": -1178761476,
+              "Material:8": "gregtech:bronze",
+              "MaxDurability:3": 191
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:saw",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {
+              "HarvestIce:1": 1
+            },
+            "GT.Tool:10": {
+              "AttackDamage:5": 1.0,
+              "AttackSpeed:5": -2.6,
+              "Durability:3": 0,
+              "Material:8": "gregtech:bronze",
+              "MaxDurability:3": 191
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:screwdriver",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 1.0,
+              "AttackSpeed:5": 3.0,
+              "Durability:3": 0,
+              "LastCraftingUse:3": -1178761476,
+              "Material:8": "gregtech:bronze",
+              "MaxDurability:3": 191
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "4:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:wrench",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 3.0,
+              "AttackSpeed:5": -2.8,
+              "Durability:3": 0,
+              "HarvestLevel:3": 2,
+              "Material:8": "gregtech:bronze",
+              "MaxDurability:3": 191,
+              "ToolSpeed:5": 7.0
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "5:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:wire_cutter",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 1.0,
+              "AttackSpeed:5": -2.4,
+              "Durability:3": 0,
+              "HarvestLevel:3": 2,
+              "Material:8": "gregtech:bronze",
+              "MaxDurability:3": 191,
+              "ToolSpeed:5": 7.0
+            },
+            "HideFlags:3": 2
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

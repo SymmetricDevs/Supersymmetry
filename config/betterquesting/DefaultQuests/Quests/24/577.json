@@ -1,0 +1,33 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    1
+  ],
+  "preRequisites:11": [
+    574,
+    546
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.577.desc",
+      "icon:10": {
+        "Damage:2": 19,
+        "id:8": "opencomputers:component"
+      },
+      "name:8": "susy.quest.db.577.title"
+    }
+  },
+  "questID:3": 577,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 19,
+          "id:8": "opencomputers:component"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "preRequisites:11": [
+    98
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.852.desc",
+      "icon:10": {
+        "Damage:2": 7,
+        "id:8": "chisel:sandstoneyellow"
+      },
+      "name:8": "susy.quest.db.852.title"
+    }
+  },
+  "questID:3": 852,
+  "tasks:9": {}
+}

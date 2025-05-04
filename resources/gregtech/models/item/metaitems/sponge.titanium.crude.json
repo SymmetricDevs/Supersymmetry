@@ -1,6 +1,6 @@
 {
-    "parent": "item/generated",
-    "textures": {
-      "layer0": "gregtech:items/metaitems/sponge.titanium.crude"
-    }
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "gregtech:items/metaitems/sponge.titanium.crude"
   }
+}

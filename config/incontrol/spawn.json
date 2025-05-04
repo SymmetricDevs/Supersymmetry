@@ -1,85 +1,86 @@
 [
-  {
-	"dimension": 0,
-	"mob": [
-		"minecraft:pig",
-		"minecraft:cow",
-		"minecraft:sheep",
-		"minecraft:rabbit",
-		"minecraft:llama",
-		"minecraft:chicken",
-		"minecraft:horse",
-		"minecraft:squid"
-	],
-	"mintime": 0,
-	"maxtime": 12000,
-	"maxcount": {
-		"amount": 2,
-		"perplayer": true
+	{
+	  "dimension": 0,
+	  "mob": [
+		  "minecraft:pig",
+		  "minecraft:cow",
+		  "minecraft:sheep",
+		  "minecraft:rabbit",
+		  "minecraft:llama",
+		  "minecraft:chicken",
+		  "minecraft:horse",
+		  "minecraft:squid"
+	  ],
+	  "mintime": 0,
+	  "maxtime": 12000,
+	  "maxcount": {
+		  "amount": 2,
+		  "perplayer": true
+	  },
+	  "result": "default"
 	},
-	"result": "default"
-  },
-  {
-	"dimension": 0,
-	"mod": "caracalsmod",
-	"maxcount": {
-		"amount": 1,
-		"perplayer": true
+	{
+	  "dimension": 0,
+	  "mod": "caracalsmod",
+	  "maxcount": {
+		  "amount": 1,
+		  "perplayer": true
+	  },
+	  "result": "default"
 	},
-	"result": "default"
-  },
-  {
-	"dimension": 0,
-	"mob": [
-		"minecraft:zombie"
-	],
-	"mintime": 14000,
-	"maxtime": 23999,
-	"seesky": true,
-	"maxcount": {
-		"amount": 2,
-		"perplayer": true
+	{
+	  "dimension": 0,
+	  "mob": [
+		  "minecraft:zombie"
+	  ],
+	  "mintime": 14000,
+	  "maxtime": 23999,
+	  "seesky": true,
+	  "maxcount": {
+		  "amount": 2,
+		  "perplayer": true
+	  },
+	  "result": "default",
+	  "damagemultiply": 3,
+	  "angry": true
 	},
-	"result": "default",
-	"damagemultiply": 3,
-	"angry": true
-  },
-  {
-	"dimension": 0,
-	"mob": [
-		"techguns:outcast"
-	],
-	"spawner": true,
-	"maxcount": {
-		"amount": 2,
-		"perplayer": true
+	{
+	  "dimension": 0,
+	  "mob": [
+		  "techguns:outcast"
+	  ],
+	  "spawner": true,
+	  "maxcount": {
+		  "amount": 2,
+		  "perplayer": true
+	  },
+	  "result": "default",
+	  "angry": true
 	},
-	"result": "default",
-	"angry": true
-  },
-  {
-	"dimension": 0,
-    "result": "deny"
-  },
-  {
-	"dimension": -1,
-    "result": "deny"
-  },
-  {
-	"dimension": 10,
-	"mob": [
-		"minecraft:spider",
-		"beneath:shadow",
-		"weeping-angels:weepingangel"
-	],
-	"maxcount": {
-		"amount": 1,
-		"perplayer": true
+	{
+	  "dimension": 0,
+	  "result": "deny"
 	},
-	"result": "default"
-  },
-  {
-	"dimension": 10,
-	"result": "deny"
-  }
-]
+	{
+	  "dimension": -1,
+	  "result": "deny"
+	},
+	{
+	  "dimension": 10,
+	  "mob": [
+		  "minecraft:spider",
+		  "beneath:shadow",
+		  "weeping-angels:weepingangel"
+	  ],
+	  "maxcount": {
+		  "amount": 1,
+		  "perplayer": true
+	  },
+	  "result": "default"
+	},
+	{
+	  "dimension": 10,
+	  "result": "deny"
+	}
+  ]
+  

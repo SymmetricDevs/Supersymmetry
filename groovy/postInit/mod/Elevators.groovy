@@ -36,7 +36,7 @@ for (name in name_removals) {
     crafting.remove(name)
 }
 
-crafting.replaceShaped('elevatorid:elevator_white', item('elevatorid:elevator_white'), [
+crafting.replaceShaped('elevatorid:elevator_white', item('elevatorid:elevator_white') * 2, [
         [metaitem('stickSteel'), metaitem('electric.motor.lv'), metaitem('stickSteel')],
         [metaitem('wireFineSteel'), null, metaitem('wireFineSteel')],
         [metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')]
@@ -78,14 +78,6 @@ CHEMICAL_BATH.recipeBuilder()
         .fluidInputs(fluid('dye_lime') * 144)
         .inputs(ore('blockElevator'))
         .outputs(item('elevatorid:elevator_lime'))
-        .duration(20)
-        .EUt(7)
-        .buildAndRegister();
-
-CHEMICAL_BATH.recipeBuilder()
-        .fluidInputs(fluid('dye_pink') * 144)
-        .inputs(ore('blockElevator'))
-        .outputs(item('elevatorid:elevator_pink'))
         .duration(20)
         .EUt(7)
         .buildAndRegister();

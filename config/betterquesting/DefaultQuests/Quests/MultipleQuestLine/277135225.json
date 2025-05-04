@@ -1,0 +1,88 @@
+{
+  "preRequisites:11": [
+    827
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.277135225.desc",
+      "icon:10": {
+        "id:8": "simple_trophies:trophy",
+        "tag:10": {
+          "TrophyColorBlue:3": 43,
+          "TrophyColorGreen:3": 128,
+          "TrophyColorRed:3": 200,
+          "TrophyItem:10": {
+            "Count:3": 1,
+            "id:8": "simple_trophies:trophy",
+            "tag:10": {
+              "TrophyColorBlue:3": 43,
+              "TrophyColorGreen:3": 128,
+              "TrophyColorRed:3": 200,
+              "TrophyItem:10": {
+                "Count:3": 1,
+                "Damage:2": 1013,
+                "id:8": "gregtech:meta_dust"
+              },
+              "TrophyName:8": "Your New Best Friend",
+              "TrophyShowsTooltip:1": 1,
+              "TrophyVariant:8": "classic"
+            }
+          },
+          "TrophyName:8": "More Than Kin, Less Than Kind",
+          "TrophyShowsTooltip:1": 1,
+          "TrophyVariant:8": "classic"
+        }
+      },
+      "name:8": "susy.quest.db.277135225.title"
+    }
+  },
+  "questID:3": 277135225,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 43,
+            "TrophyColorGreen:3": 128,
+            "TrophyColorRed:3": 200,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "id:8": "simple_trophies:trophy",
+              "tag:10": {
+                "TrophyColorBlue:3": 43,
+                "TrophyColorGreen:3": 128,
+                "TrophyColorRed:3": 200,
+                "TrophyItem:10": {
+                  "Count:3": 1,
+                  "Damage:2": 1013,
+                  "id:8": "gregtech:meta_dust"
+                },
+                "TrophyName:8": "Your New Best Friend",
+                "TrophyShowsTooltip:1": 1,
+                "TrophyVariant:8": "classic"
+              }
+            },
+            "TrophyName:8": "More Than Kin, Less Than Kind",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 512,
+          "Damage:2": 1013,
+          "id:8": "gregtech:meta_dust"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

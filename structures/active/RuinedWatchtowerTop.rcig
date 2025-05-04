@@ -1,0 +1,107 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "RuinedWatchtowerTop",
+  "items": [
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "minecraft:vine",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_oredict_item",
+        "damage": 1098,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 118,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 5,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 134,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_bolt",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "minecraft:coal",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 254,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 4,
+      "max": 13,
+      "item": {
+        "id": "gregtech:meta_dust_tiny",
+        "damage": 254,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 3,
+      "max": 5,
+      "item": {
+        "id": "minecraft:string",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

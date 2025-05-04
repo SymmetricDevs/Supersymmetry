@@ -1,9 +1,10 @@
 /*
+package preInit;
+
 import gregtech.api.unification.material.Material;
-import gregtech.api.GregTechAPI;
 import gregtech.api.unification.Element;
-import gregtech.api.fluids.fluidType.FluidTypes;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
+import gregtech.api.unification.material.event.MaterialEvent;
 
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -39,11 +40,11 @@ private void addNuclearFuelMaterials (Material materialName, int startingInt) {
 }
 
 eventManager.listen {
-    GregTechAPI.MaterialEvent event ->
+    MaterialEvent event ->
 
-        println("Running RegisterIsotopes.groovy...")
+        log.infoMC("Running RegisterIsotopes.groovy...")
 
-        println("Groovy starting modifying elements")
+        log.infoMC("Groovy starting modifying elements")
 
         def Tc_99 = new Element(43, 55, -1, null, "Technetium-99", "Tc-99", true);
 
@@ -544,6 +545,6 @@ eventManager.listen {
                 .color(0xa8a432)
                 .build();
 
-        println("Groovy finished modifying elements")
+        log.infoMC("Groovy finished modifying elements")
 }
 */

@@ -22,6 +22,6 @@ crafting.replaceShaped('architecturecraft:item.architecturecraft.chisel3', item(
 
 crafting.replaceShaped('architecturecraft:item.architecturecraft.hammer4', item('architecturecraft:hammer'), [
         [null, null, null],
-        [metaitem('plateIron'), metaitem('plateIron'), metaitem('plateIron')],
-        [ore('craftingToolFile'), item('minecraft:stick'), ore('craftingToolHammer')]
+        [ore('plateIron'), ore('plateIron'), ore('plateIron')],
+        [ore('craftingToolFile'), item('minecraft:stick'), ore('craftingToolHardHammer')]
 ])

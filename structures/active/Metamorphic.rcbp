@@ -1,13 +1,12 @@
 {
   "data": [
     {
-      "biomes": "$FOREST"
+      "biomes": "$FOREST",
+      "weight": 0.75
     },
     {
-      "biomes": "$MOUNTAIN"
-    },
-    {
-      "biomes": "$HILLS"
+      "biomes": "$HILLS",
+      "weight": 0.4
     }
   ],
   "metadata": {

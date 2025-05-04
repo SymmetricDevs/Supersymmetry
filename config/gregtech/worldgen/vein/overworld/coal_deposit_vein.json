@@ -1,0 +1,46 @@
+{
+  "weight": 180,
+  "density": 1,
+  "max_height": 60,
+  "min_height": 0,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "coal"
+  },
+  "generator": {
+    "type": "layered",
+    "radius": [
+      20,
+      20
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": {
+          "block":"susy:resource_block",
+          "variant":"coal"
+        }
+      },
+      {
+        "secondary": {
+          "block":"susy:resource_block",
+          "variant":"coal"
+        }
+      },
+      {
+        "between": {
+          "block":"susy:resource_block",
+          "variant":"coal"
+        }
+      },
+      {
+        "sporadic": {
+          "block":"susy:resource_block",
+          "variant":"coal"
+        }
+      }
+    ]
+  }
+}
