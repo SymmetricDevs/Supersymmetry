@@ -1210,7 +1210,7 @@ RecyclingHelper.addShaped("gregtech:sieve_distillation_tower", metaitem('sieve_d
 
 // COMBUSTION ENGINES
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
 		.inputs(metaitem('hull.Lv'))
 		.inputs(ore('springCopper'))
 		.inputs(ore('springSmallCopper'))
@@ -1236,7 +1236,7 @@ RecyclingHelper.handleRecycling(metaitem('combustion_generator.lv'), [
 		ore('pipeHugeFluidSteel'),
 ])
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
 		.inputs(metaitem('hull.Mv'))
 		.inputs(ore('springCopper'))
 		.inputs(ore('springSmallCopper'))
@@ -1262,7 +1262,7 @@ RecyclingHelper.handleRecycling(metaitem('combustion_generator.mv'), [
 		ore('pipeHugeFluidAluminium'),
 ])
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
 		.inputs(metaitem('hull.Hv'))
 		.inputs(ore('springCopper'))
 		.inputs(ore('springSmallCopper'))
