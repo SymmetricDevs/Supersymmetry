@@ -8,7 +8,6 @@
       "frame:8": "GATE",
       "icon:10": {
         "Damage:2": 25,
-        "OreDict:8": "ingotCopper",
         "id:8": "gregtech:meta_ingot"
       },
       "ismain:1": 1,

@@ -7,7 +7,6 @@
       "desc:8": "susy.quest.db.230.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "buildinggadgets:buildingtool",
         "tag:10": {
           "blockstate:10": {

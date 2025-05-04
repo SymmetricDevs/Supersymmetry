@@ -2097,6 +2097,7 @@ susy.material.compounded_styrene_butadiene_rubber=Compounded Styrene Butadiene R
 susy.material.fuel_oil=Fuel Oil
 susy.material.isopropylamine=Isopropylamine
 susy.material.isopropylamine_solution=Isopropylamine Solution
+susy.material.platinum_rhodium=Platinum-Rhodium
 
 susy.material.incoloy_20=Incoloy 20
 susy.material.incoloy_825=Incoloy 825
@@ -2223,6 +2224,12 @@ susy.material.sodium_hydroxide_methanol_solution=Sodium Hydroxide-Methanol Solut
 susy.material.dehexanized_naphtha=Dehexanized Naphtha
 susy.material.sodium_hydrosulfide=Sodium Hydrosulfide
 susy.material.sodium_hydrosulfide_solution=Sodium Hydrosulfide Solution
+susy.material.nitrogen_oxide_mixture=Nitrogen Oxide Mixture
+susy.material.hot_nitrogen_oxide_mixture=Hot Nitrogen Oxide Mixture
+susy.material.nitrogen_oxide_mixture_rich_air=Nitrogen Oxide Mixture-Rich Air
+susy.material.hot_nitrogen_oxide_mixture_rich_air=Hot Nitrogen Oxide Mixture-Rich Air
+susy.material.nitrogen_dioxide_rich_air=Nitrogen Dioxide-Rich Air
+susy.material.nitric_oxide_rich_air=Nitric Oxide-Rich Air
 susy.material.potassium_iodate=Potassium Iodate
 susy.material.uranium_tetrafluoride=Uranium Tetrafluoride
 susy.material.uranium_dioxide=Uranium Dioxide
@@ -2249,6 +2256,18 @@ susy.material.leu_235_uranium_dioxide=LEU-235 Uranium Dioxide
 susy.material.haleu_235_uranium_dioxide=HALEU-235 Uranium Dioxide
 susy.material.heu_235_uranium_dioxide=HEU-235 Uranium Dioxide
 susy.material.weapons_grade_uranium_dioxide=Weapons Grade Uranium Dioxide
+susy.material.treated_liquid_nitrogen=Treated Liquid Nitrogen
+susy.material.treated_liquid_oxygen=Treated Liquid Oxygen
+susy.material.helium_neon_concentrate=Helium-Neon Concentrate
+susy.material.dehydrogenated_helium_neon_concentrate=Dehydrogenated Helium-Neon Concentrate
+susy.material.demoisturized_helium_neon_concentrate=Demoisturized Helium-Neon Concentrate
+susy.material.compressed_helium_neon_concentrate=Compressed Helium-Neon Concentrate
+susy.material.helium_neon_mixture=Helium-Neon Mixture
+susy.material.krypton_xenon_rich_liquid=Krypton-Xenon Rich Liquid
+susy.material.combusted_krypton_xenon_concentrate=Combusted Krypton-Xenon Concentrate
+susy.material.purified_krypton_xenon_concentrate=Purified Krypton-Xenon Concentrate
+susy.material.liquid_crude_xenon=Liquid Crude Xenon
+susy.material.oxidized_xenon=Oxidized Xenon
 
 # GregTech RecipeMaps
 
@@ -2532,7 +2551,9 @@ metaitem.baserutheniumtriniumamericiumneutronate.name=Base Ruthenium Trinium Ame
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
 metaitem.raw_diamond.name=Raw Diamond
-metaitem.cellulose_acetate_mesh.name=Cellulose Acetate Mesh
+metaitem.mesh.cellulose_acetate.name=Cellulose Acetate Mesh
+metaitem.mesh.platinum.name=Platinum Mesh
+metaitem.mesh.platinum_rhodium.name=Platinum-Rhodium Mesh
 
 metaitem.shape.mold.crucible.name=Mold (Crucible)
 metaitem.crucible.boron.nitride.name=Pyrolytic Boron Nitride Crucible
@@ -2626,6 +2647,11 @@ metaitem.glass_fibers.name=Glass Fibers
 metaitem.epoxy_lamina.name=Epoxy Lamina
 metaitem.stem.cotton.name=Cotton Stem
 metaitem.spinneret.name=Spinneret
+
+metaitem.engine.spark_plug.name=Spark Plug
+metaitem.engine.piston.name=Piston
+metaitem.engine.crankshaft.name=Crankshaft
+metaitem.sintered_alumina.insulator.name=Sintered Alumina Insulator
 
 metaitem.rubylith.name=Rubylith
 metaitem.rubylith_film.name=Rubylith Film

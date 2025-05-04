@@ -8,6 +8,7 @@ import java.lang.Math;
 //REMOVALS
 
 mods.gregtech.steam_turbine.removeByInput(32, null, [fluid('steam') * 640])
+mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('refinery_gas')])
 mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('coal_gas')])
 mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('ethylene')])
 mods.gregtech.gas_turbine.removeByInput(32, null, [fluid('natural_gas') * 8])
@@ -143,10 +144,10 @@ CryoXenon.setTemperature(165);
 
 def CryoAir = new ICryoGas('air', 'hot_hp_air', 'hp_air', 'cold_hp_air', 'liquid_air');
 CryoAir.setEUt(30);
-CryoAir.setDuration(100);
-CryoAir.setPowerHX(100);
-CryoAir.setDurationHX(5);
-CryoAir.setDurationRadiator(200);
+CryoAir.setDuration(10);
+CryoAir.setPowerHX(50);
+CryoAir.setDurationHX(1);
+CryoAir.setDurationRadiator(10);
 CryoAir.setTemperature(80);
 
 def CryoDecarburizedAir = new ICryoGas('decarburized_air', 'hot_hp_decarburized_air', 'hp_decarburized_air', 'cold_hp_decarburized_air', 'liquid_decarburized_air');
@@ -705,6 +706,12 @@ for (FluidFuel in FluidFuels) {
                     .duration((int) (FluidFuel.duration * 1.5))
                     .EUt(128)
                     .buildAndRegister();
+
+            recipemap('combustion_generator').recipeBuilder()
+                    .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                    .duration((int) (FluidFuel.duration * 3))
+                    .EUt(32)
+                    .buildAndRegister();
         } else {
             recipemap('gas_turbine').recipeBuilder()
                     .circuitMeta(1)
@@ -747,13 +754,6 @@ for (FluidFuel in FluidFuels) {
             }
         }
     }
-
-    //THIS IS ONLY ADDED SO THAT IT IS A VALID JETPACK FUEL
-    recipemap('combustion_generator').recipeBuilder()
-            .fluidInputs(liquid(FluidFuel.liquid_fuel) * 25)
-            .duration(100)
-            .EUt(1)
-            .buildAndRegister();
 
     recipemap('canner').recipeBuilder()
             .fluidInputs(liquid(FluidFuel.liquid_fuel) * 500)

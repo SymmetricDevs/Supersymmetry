@@ -2191,10 +2191,7 @@ public class UnknownCompositionMaterials {
                 .color(0x9177a1)
                 .build();
 
-        RhodiumIridiumExtractionMixture = new Material.Builder(4471, SuSyUtility.susyId("rh_ir_extraction_mixture"))
-                .fluid()
-                .color(0xb3abb8)
-                .build();
+        // FREE ID: 4471
 
         OsmiumRutheniumTetroxideMixture = new Material.Builder(4472, SuSyUtility.susyId("os_ru_tetroxide_mixture"))
                 .gas()
@@ -2293,6 +2290,7 @@ public class UnknownCompositionMaterials {
                 .liquid()
                 .color(0xf6f6ef)
                 .build();
+
         DistilledNParaffin = new Material.Builder(4516, SuSyUtility.susyId('distilled_n_paraffin'))
                 .liquid()
                 .color(0xeff6f6)
@@ -2301,6 +2299,44 @@ public class UnknownCompositionMaterials {
         IsomerizedParaffin = new Material.Builder(4517, SuSyUtility.susyId('isomerized_paraffin'))
                 .liquid()
                 .color(0xffebbb)
+                .build();
+
+        NitrogenOxideMixture = new Material.Builder(4518, SuSyUtility.susyId('nitrogen_oxide_mixture'))
+                .gas()
+                .components(NitricOxide, NitrogenDioxide)
+                .colorAverage()
+                .build();
+
+        NitrogenOxideMixture.setFormula('NOx', true)
+
+        HotNitrogenOxideMixture = new Material.Builder(4519, SuSyUtility.susyId('hot_nitrogen_oxide_mixture'))
+                .gas(new FluidBuilder().temperature(1300))
+                .components(NitrogenOxideMixture)
+                .colorAverage()
+                .build();
+
+        NitrogenOxideMixtureRichAir = new Material.Builder(4520, SuSyUtility.susyId('nitrogen_oxide_mixture_rich_air'))
+                .gas()
+                .components(NitrogenOxideMixture * 2, Oxygen, Air * 10)
+                .colorAverage()
+                .build();
+
+        HotNitrogenOxideMixtureRichAir = new Material.Builder(4521, SuSyUtility.susyId('hot_nitrogen_oxide_mixture_rich_air'))
+                .gas(new FluidBuilder().temperature(1300))
+                .components(NitrogenOxideMixtureRichAir)
+                .colorAverage()
+                .build();
+
+        NitrogenDioxideRichAir = new Material.Builder(4522, SuSyUtility.susyId('nitrogen_dioxide_rich_air'))
+                .gas(new FluidBuilder().temperature(500))
+                .components(NitrogenDioxide, Air * 5)
+                .colorAverage()
+                .build();
+
+        NitricOxideRichAir = new Material.Builder(4523, SuSyUtility.susyId('nitric_oxide_rich_air'))
+                .gas()
+                .components(NitricOxide, Air * 15)
+                .colorAverage()
                 .build();
     }
 }

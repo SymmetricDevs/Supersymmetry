@@ -1168,25 +1168,6 @@ DISTILLERY.recipeBuilder()
     .EUt(120)
     .buildAndRegister()
 
-// Nitric Acid, Nitrogen Dioxide
-
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('oxygen') * 50)
-    .fluidInputs(fluid('nitric_oxide') * 50)
-    .fluidOutputs(fluid('nitrogen_dioxide') * 50)
-    .duration(8)
-    .EUt(30)
-    .buildAndRegister()
-
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('water') * 50)
-    .fluidInputs(fluid('nitrogen_dioxide') * 150)
-    .fluidOutputs(fluid('nitric_acid') * 100)
-    .fluidOutputs(fluid('nitric_oxide') * 50)
-    .duration(12)
-    .EUt(30)
-    .buildAndRegister()
-
 // Methyl Acetate
 
 CSTR.recipeBuilder()
@@ -1924,7 +1905,7 @@ DRYER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('threadCelluloseAcetate') * 16)
-    .outputs(metaitem('cellulose_acetate_mesh'))
+    .outputs(metaitem('mesh.cellulose_acetate'))
     .EUt(120)
     .duration(160)
     .buildAndRegister()
@@ -1956,69 +1937,6 @@ DISTILLATION_TOWER.recipeBuilder()
     .fluidOutputs(fluid('water') * 3000)
     .duration(240)
     .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
-// Graphene
-
-// Ammonia (Haber Process)
-
-REACTION_FURNACE.recipeBuilder()
-    .fluidInputs(fluid('hot_hp_air') * 1500)
-    .fluidInputs(fluid('hydrogen') * 3000)
-    .notConsumable(ore('dustWustiteCatalyst'))
-    .fluidOutputs(fluid('ammonia_rich_gas') * 4000)
-    .duration(160)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
-
-REACTION_FURNACE.recipeBuilder()
-    .fluidInputs(fluid('hot_hp_nitrogen') * 1000)
-    .fluidInputs(fluid('hydrogen') * 3000)
-    .notConsumable(ore('dustWustiteCatalyst'))
-    .fluidOutputs(fluid('ammonia_rich_gas') * 4000)
-    .duration(100)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
-
-REACTION_FURNACE.recipeBuilder()
-    .fluidInputs(fluid('ammonia_reaction_mix') * 4000)
-    .notConsumable(ore('dustWustiteCatalyst'))
-    .fluidOutputs(fluid('ammonia_rich_gas') * 4000)
-    .duration(100)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
-
-MIXER.recipeBuilder()
-    .fluidInputs(fluid('ammonia_rich_gas') * 4000)
-    .fluidInputs(fluid('water') * 500)
-    .fluidOutputs(fluid('ammonia_solution') * 500)
-    .fluidOutputs(fluid('ammonia_reaction_mix') * 2000)
-    .duration(100)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
-ROASTER.recipeBuilder()
-    .fluidInputs(fluid('monoxide_rich_syngas') * 1000)
-    .inputs(ore('dustIronIiiOxide') * 5)
-    .outputs(metaitem('dustWustiteCatalyst') * 5)
-    .duration(400)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
-
-ROASTER.recipeBuilder()
-    .fluidInputs(fluid('hydrogen_rich_syngas') * 1000)
-    .inputs(ore('dustIronIiiOxide') * 5)
-    .outputs(metaitem('dustWustiteCatalyst') * 5)
-    .duration(400)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
-
-DISTILLATION_TOWER.recipeBuilder()
-    .fluidInputs(fluid('ammonia_solution') * 1000)
-    .fluidOutputs(fluid('water') * 1000)
-    .fluidOutputs(fluid('ammonia') * 1000)
-    .duration(150)
-    .EUt(30)
     .buildAndRegister()
 
 // Butadiene without oil
@@ -2141,16 +2059,6 @@ DISTILLATION_TOWER.recipeBuilder()
     .disableDistilleryRecipes()
     .duration(10)
     .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
-// Nitrogen Dioxide
-
-REACTION_FURNACE.recipeBuilder()
-    .fluidInputs(fluid('nitrogen') * 1000)
-    .fluidInputs(fluid('oxygen') * 2000)
-    .fluidOutputs(fluid('nitrogen_dioxide') * 1000)
-    .duration(60)
-    .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
 // Isobutylene

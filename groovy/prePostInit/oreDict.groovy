@@ -255,8 +255,6 @@ mods.jei.category.hideCategory('techguns.blastfurnace')
 mods.jei.category.hideCategory('techguns.grinder')
 mods.jei.category.hideCategory('techguns.camobench')
 
-mods.jei.category.hideCategory('gregtech:combustion_generator')
-
 mods.jei.category.hideCategory('minecraft.anvil')
 
 //Dust oredicting

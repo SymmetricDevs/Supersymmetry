@@ -1275,6 +1275,14 @@ CENTRIFUGE.recipeBuilder()
     .EUt(30)
     .buildAndRegister();
 
+CENTRIFUGE.recipeBuilder()
+        .inputs(ore('dustNiobiumNitride') * 2)
+        .outputs(metaitem('dustNiobium'))
+        .fluidOutputs(fluid('nitrogen') * 1000)
+        .duration(96)
+        .EUt(30)
+        .buildAndRegister();
+
 // Fix distillation tower being too difficult (4 EV circuits? Seriously?)
 
 RecyclingHelper.replaceShaped('gregtech:distillation_tower', metaitem('distillation_tower'), [
