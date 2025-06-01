@@ -362,3 +362,23 @@ mods.gregtech.macerator.removeByInput(2, [item('susy:susy_stone_smooth', 9)], nu
 // Concrete Dust * 1
 mods.gregtech.macerator.removeByInput(2, [item('susy:susy_stone_cobble', 9)], null)
 
+def ULVRockBreakerRecipes = [0, 1, 3, 5, 6] //Gabbro, Gneiss, Phyllite, Shale, Slate
+def HVRockBreakerRecipes = [2, 4, 7] //Marble, Quartzite, Soapstone
+
+for(stone in ULVRockBreakerRecipes){
+    ROCK_BREAKER.recipeBuilder()
+            .notConsumable(item('susy:susy_stone_smooth',stone))
+            .outputs(item('susy:susy_stone_smooth', stone))
+            .duration(16)
+            .EUt(7)
+            .buildAndRegister()
+}
+
+for(stone in HVRockBreakerRecipes){
+    ROCK_BREAKER.recipeBuilder()
+            .notConsumable(item('susy:susy_stone_smooth',stone))
+            .outputs(item('susy:susy_stone_smooth', stone))
+            .duration(16)
+            .EUt(240)
+            .buildAndRegister()
+}
