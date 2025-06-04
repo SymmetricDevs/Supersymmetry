@@ -126,7 +126,6 @@ for (fuel in sintering_fuels) {
                 .outputs(metaitem('plateAlumina'))
                 .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
                 .duration(fuel.duration)
-                .EUt(240)
                 .buildAndRegister()
 
         SINTERING_RECIPES.recipeBuilder()
@@ -136,7 +135,6 @@ for (fuel in sintering_fuels) {
                 .outputs(metaitem('plateBerylliumOxide'))
                 .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
                 .duration(fuel.duration)
-                .EUt(240)
                 .buildAndRegister()
 
         SINTERING_RECIPES.recipeBuilder()
@@ -146,7 +144,6 @@ for (fuel in sintering_fuels) {
                 .outputs(metaitem('tantalum_chip') * 32)
                 .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
                 .duration(fuel.duration)
-                .EUt(240)
                 .buildAndRegister()
 
     } else {
@@ -161,7 +158,6 @@ for (fuel in sintering_fuels) {
                     .outputs(metaitem('plateAlumina'))
                     .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
                     .duration(fuel.duration + comburent.duration)
-                    .EUt(240)
                     .buildAndRegister()
 
             SINTERING_RECIPES.recipeBuilder()
@@ -172,7 +168,6 @@ for (fuel in sintering_fuels) {
                     .outputs(metaitem('plateBerylliumOxide'))
                     .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
                     .duration(fuel.duration + comburent.duration)
-                    .EUt(240)
                     .buildAndRegister()
 
             SINTERING_RECIPES.recipeBuilder()
@@ -183,7 +178,6 @@ for (fuel in sintering_fuels) {
                     .outputs(metaitem('tantalum_chip') * 32)
                     .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
                     .duration(fuel.duration + comburent.duration)
-                    .EUt(240)
                     .buildAndRegister()
         }
     }

@@ -28,7 +28,6 @@ for (fuel in sintering_fuels) {
         .outputs(metaitem('hot.cement.clinker'))
         .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
         .duration(fuel.duration)
-        .EUt(Globals.voltAmps[3])
         .buildAndRegister()
 
         SINTERING_RECIPES.recipeBuilder()
@@ -41,7 +40,6 @@ for (fuel in sintering_fuels) {
         .chancedOutput(metaitem('hot.cement.clinker'), 5000, 0)
         .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
         .duration(fuel.duration)
-        .EUt(Globals.voltAmps[3])
         .buildAndRegister()
 
     } else {
@@ -55,7 +53,6 @@ for (fuel in sintering_fuels) {
             .outputs(metaitem('hot.cement.clinker'))
             .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
             .duration(fuel.duration + comburent.duration)
-            .EUt(Globals.voltAmps[0])
             .buildAndRegister()
 
             SINTERING_RECIPES.recipeBuilder()
@@ -69,7 +66,6 @@ for (fuel in sintering_fuels) {
             .chancedOutput(metaitem('hot.cement.clinker'), 5000, 0)
             .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
             .duration(fuel.duration + comburent.duration)
-            .EUt(Globals.voltAmps[0])
             .buildAndRegister()
         }
     }
