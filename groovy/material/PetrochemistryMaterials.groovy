@@ -913,5 +913,29 @@ public class PetrochemistryMaterials {
                 .color(0xdec887)
                 .flags(FLAMMABLE)
                 .build();
+
+        HeatedLightLiquefactionOil = new Material.Builder(20157, SuSyUtility.susyId('heated_light_liquefaction_oil'))
+                .liquid(new FluidBuilder().temperature(340))
+                .color(0x4c4e63)
+                .flags(FLAMMABLE)
+                .build();
+
+        HeatedMediumLiquefactionOil = new Material.Builder(20158, SuSyUtility.susyId('heated_medium_liquefaction_oil'))
+                .liquid(new FluidBuilder().temperature(500))
+                .color(0x272a3b)
+                .flags(FLAMMABLE)
+                .build();
+
+        TreatedSulfuricLightLiquefactionOil = new Material.Builder(20159, SuSyUtility.susyId('treated_sulfuric_light_liquefaction_oil'))
+                .liquid()
+                .color(0x62647a)
+                .flags(FLAMMABLE)
+                .build();
+
+        TreatedSulfuricMediumLiquefactionOil = new Material.Builder(20160, SuSyUtility.susyId('treated_sulfuric_medium_liquefaction_oil'))
+                .liquid()
+                .color(0x3e435c)
+                .flags(FLAMMABLE)
+                .build();
     }
 }          

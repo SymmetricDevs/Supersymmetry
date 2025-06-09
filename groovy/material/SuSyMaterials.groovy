@@ -857,8 +857,12 @@ class SuSyMaterials {
 
         public static Material LiquefactionOil;
         public static Material LightLiquefactionOil;
+        public static Material HeatedLightLiquefactionOil;
+        public static Material TreatedSulfuricLightLiquefactionOil;
         public static Material CrudeMediumLiquefactionOil;
         public static Material MediumLiquefactionOil;
+        public static Material HeatedMediumLiquefactionOil;
+        public static Material TreatedSulfuricMediumLiquefactionOil;
 
         public static Material RawLtSyncrude;
         public static Material LtSyncrude;
