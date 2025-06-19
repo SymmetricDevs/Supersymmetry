@@ -1,5 +1,6 @@
 package classes
 
+import gregicality.multiblocks.api.unification.properties.GCYMPropertyKey;
 import gregtech.api.fluids.FluidBuilder
 import gregtech.api.fluids.attribute.FluidAttributes
 import gregtech.api.fluids.store.FluidStorageKey
@@ -12,6 +13,7 @@ import gregtech.api.unification.material.properties.OreProperty
 import gregtech.api.unification.material.properties.PropertyKey
 import supersymmetry.api.fluids.SusyFluidStorageKeys
 import supersymmetry.api.recipes.SuSyRecipeMaps
+import supersymmetry.api.unification.material.properties.DummyABSProperty;
 import supersymmetry.api.unification.material.properties.FiberProperty
 import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 
@@ -140,6 +142,12 @@ class ChangeFlags {
         Polyethylene.getProperty(PropertyKey.FLUID_PIPE).setCryoProof(true);
         Polyethylene.getProperty(PropertyKey.FLUID_PIPE).setCanContain(FluidAttributes.ACID, true);
         Polytetrafluoroethylene.getProperty(PropertyKey.FLUID_PIPE).setCryoProof(true);
+
+        // Dummy properties for continuous casting
+        Copper.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
+        Steel.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
+        Aluminium.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
+
 
         // Flags
 
